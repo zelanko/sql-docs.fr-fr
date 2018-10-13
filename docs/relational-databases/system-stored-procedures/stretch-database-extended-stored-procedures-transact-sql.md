@@ -14,12 +14,12 @@ ms.assetid: bda29952-4b8b-4295-ab78-f24dcb0b03c6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7f96a07b6106667a06c492a368799994849cae10
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cf276d4abc28edc6f6d8d99f351752fb0c71856b
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704800"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48905735"
 ---
 # <a name="stretch-database-extended-stored-procedures-transact-sql"></a>Stretch Database (Transact-SQL) de procédures stockées étendue
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "47704800"
  [sys.sp_rda_reconcile_batch](../../relational-databases/system-stored-procedures/sys-sp-rda-reconcile-batch-transact-sql.md)  
  Rapproche l’ID de lot stocké dans la table compatible Stretch SQL Server pour les données migrées le plus récemment avec l’ID de lot stocké dans la table Azure distante. 
  
-[Sys.sp_rda_reconcile_columns](../../relational-databases/system-stored-procedures/sys-sp-rda-reconcile-columns-transact-sql.md) rapproche les colonnes dans la table Azure distante les colonnes dans la la table compatible Stretch SQL Server.
+[Sys.sp_rda_reconcile_columns](../../relational-databases/system-stored-procedures/sys-sp-rda-reconcile-columns-transact-sql.md) rapproche les colonnes dans la table Azure distante les colonnes dans la table compatible Stretch SQL Server.
  
  [Sys.sp_rda_reconcile_indexes](../../relational-databases/system-stored-procedures/sys-sp-rda-reconcile-indexes-transact-sql.md) files d’attente d’une tâche de schéma pour réconcilier les index sur la table distante.
  

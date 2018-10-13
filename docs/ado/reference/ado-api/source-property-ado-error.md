@@ -18,12 +18,12 @@ ms.assetid: 4044ba15-f013-4c4c-9fe1-b4410fe9a778
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 50294b936f211b3a841deb57e55b53f0994517a8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 63407f75c5bee03d24b5b3f69c2ef94cb38e177e
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611583"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49168719"
 ---
 # <a name="source-property-ado-error"></a>Source, propriété (objet Error ADO)
 Indique le nom de l’objet ou l’application qui a généré une erreur.  
@@ -32,7 +32,7 @@ Indique le nom de l’objet ou l’application qui a généré une erreur.
  Retourne un **chaîne** valeur qui indique le nom d’un objet ou l’application.  
   
 ## <a name="remarks"></a>Notes  
- Utilisez le **Source** propriété sur une [erreur](../../../ado/reference/ado-api/error-object.md) objet pour déterminer le nom de l’objet ou l’application qui a généré une erreur. Il peut s’agir de l’objet nom de la classe ou l’ID programmatique. Pour les erreurs dans ADO, la valeur de propriété sera **ADODB. *** ObjectName*, où *ObjectName* est le nom de l’objet qui a déclenché l’erreur. Pour ADOX et ADO MD, la valeur sera **ADOX. *** ObjectName* et **ADOMD. *** ObjectName,* respectivement.  
+ Utilisez le **Source** propriété sur une [erreur](../../../ado/reference/ado-api/error-object.md) objet pour déterminer le nom de l’objet ou l’application qui a généré une erreur. Il peut s’agir de l’objet nom de la classe ou l’ID programmatique. Pour les erreurs dans ADO, la valeur de propriété sera **ADODB.** _ObjectName_, où *ObjectName* est le nom de l’objet qui a déclenché l’erreur. Pour ADOX et ADO MD, la valeur sera **ADOX.** _ObjectName_ et **ADOMD.** _ObjectName_, respectivement.  
   
  Selon la documentation de l’erreur à partir de la **Source**, [nombre](../../../ado/reference/ado-api/number-property-ado.md), et [Description](../../../ado/reference/ado-api/description-property.md) propriétés de **erreur** objets, vous pouvez écrire du code qui gère l’erreur en conséquence.  
   

@@ -7,12 +7,12 @@ manager: craigg
 ms.date: 10/01/2018
 ms.topic: quickstart
 ms.prod: sql
-ms.openlocfilehash: e44e6588cb58148c1474bc9e5ddda7527737ebba
-ms.sourcegitcommit: 8aecafdaaee615b4cd0a9889f5721b1c7b13e160
+ms.openlocfilehash: 5781b3acfd2262b3a3be540abb331839dfcc56c6
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48817987"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120456"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Démarrage rapide : Déployer le cluster de données volumineux de SQL Server sur Azure Kubernetes Service (AKS)
 
@@ -50,17 +50,12 @@ pip3 install --index-url https://private-repo.microsoft.com/python/ctp-2.0 mssql
 
 Définition des variables d’environnement requises pour le déploiement de cluster de données volumineux légèrement diffère selon que vous utilisez un client Windows ou Linux/Mac OS.  Choisissez les étapes ci-dessous, selon le système d’exploitation que vous utilisez.
 
-> [!IMPORTANT]
-> Assurez-vous que vous encapsulez les mots de passe entre guillemets s’il contient des caractères spéciaux. Notez que les délimiteurs de guillemets doubles ne fonctionnent que dans les commandes bash.
->
-> Vous pouvez définir les variables d’environnement le mot de passe à comme vous le souhaitez, mais assurez-vous qu’ils sont suffisamment complexes et n’utilisent pas le `!`, `&`, ou `‘` caractères.
+Avant de continuer, notez les instructions importantes suivantes :
 
-[!IMPORTANT]
-Le **SA** compte est un administrateur système sur l’instance principale de SQL Server qui est créé pendant l’installation. Après que la création de votre conteneur de SQL Server, la variable d’environnement MSSQL_SA_PASSWORD que vous avez spécifié est détectable en exécutant l’écho MSSQL_SA_PASSWORD $ dans le conteneur. Pour des raisons de sécurité, modifier votre mot de passe SA conformément aux bonnes pratiques documentées [ici](https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker?view=sql-server-2017#change-the-sa-password).
-
-
-> [!NOTE]
-> Pour la version CTP 2.0, ne modifiez pas les ports par défaut.
+- Assurez-vous que vous encapsulez les mots de passe entre guillemets s’il contient des caractères spéciaux. Notez que les délimiteurs de guillemets doubles ne fonctionnent que dans les commandes bash.
+- Vous pouvez définir les variables d’environnement le mot de passe à comme vous le souhaitez, mais assurez-vous qu’ils sont suffisamment complexes et n’utilisent pas le `!`, `&`, ou `‘` caractères.
+- Pour la version CTP 2.0, ne modifiez pas les ports par défaut.
+- Le **SA** compte est un administrateur système sur l’instance principale de SQL Server qui est créé pendant l’installation. Après que la création de votre conteneur de SQL Server, la variable d’environnement MSSQL_SA_PASSWORD que vous avez spécifié est détectable en exécutant l’écho MSSQL_SA_PASSWORD $ dans le conteneur. Pour des raisons de sécurité, modifier votre mot de passe SA conformément aux bonnes pratiques documentées [ici](https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker?view=sql-server-2017#change-the-sa-password).
 
 Initialiser les variables d’environnement suivantes.  Ils sont requis pour le déploiement d’un cluster de données volumineuses :
 
@@ -109,7 +104,7 @@ export DOCKER_PRIVATE_REGISTRY="1"
 > [!NOTE]
 > Pendant la préversion publique limitée, les informations d’identification de Docker pour télécharger les images de cluster SQL Server Big Data sont fournies pour chaque client par Microsoft. Pour demander l’accès, vous devez inscrire [ici](https://aka.ms/eapsignup)et spécifiez votre intérêt pour essayer les clusters de données volumineuses de SQL Server.
 
-## <a name="deploy-sql-server-big-data-cluster"></a>Déployer le CLuster SQL Server Big Data
+## <a name="deploy-a-big-data-cluster"></a>Déployer un cluster de données volumineuses
 
 Pour déployer un cluster SQL Server 2019 CTP 2.0 de données volumineux sur votre cluster Kubernetes, exécutez la commande suivante :
 
@@ -146,7 +141,7 @@ kubectl get svc service-proxy-lb -n <name of your cluster>
 > Vous verrez un avertissement de sécurité lorsque vous accédez à la page web dans la mesure où nous utilisons des certificats SSL générés automatiquement. Dans les futures versions, nous fournirons la capacité de fournir vos propres certificats auto-signés.
  
 
-## <a name="connect-to-sql-server-master-instance-and-sql-server-big-data-cluster-hdfsspark-end-points"></a>Se connecter à l’instance principale de SQL Server et les points de terminaison de SQL Server des données big cluster HDFS/Spark
+## <a name="connect-to-the-big-data-cluster"></a>Connectez-vous au cluster big data
 
 Une fois le script de déploiement terminée, vous pouvez obtenir l’adresse IP de l’instance principale de SQL Server et les points de terminaison Spark/HDFS à l’aide de la procédure décrite ci-dessous. Tous les points de terminaison de cluster sont affichés dans la section points de terminaison de Service dans le portail d’Administration de Cluster ainsi qu’à faciliter la référence.
 
@@ -157,9 +152,9 @@ kubectl get svc service-master-pool-lb -n <name of your cluster>
 kubectl get svc service-security-lb -n <name of your cluster>
 ```
 
-Recherchez le **External-IP** valeur assignée aux services. Se connecter à l’instance principale de SQL Server à l’aide de l’adresse IP pour le `service-master-pool-lb` au port 31433 (Ex :  **\<ip-address\>, 31433**) et pour le point de terminaison cluster de données SQL Server à l’aide de l’IP externe pour le `service-security-lb` service.   Que le point de terminaison de cluster big data est où vous vous pouvez interagir avec HDFS et Spark de soumettre des travaux via Knox.
+Recherchez le **External-IP** valeur assignée aux services. Se connecter à l’instance principale de SQL Server à l’aide de l’adresse IP pour le `service-master-pool-lb` au port 31433 (Ex :  **\<ip-address\>, 31433**) et pour le point de terminaison cluster de données SQL Server à l’aide de l’IP externe pour le `service-security-lb` service.   Que le point de terminaison de cluster big data est où vous pouvez interagir avec HDFS et envoyer des travaux Spark via Knox.
 
-# <a name="next-steps"></a>Étapes suivantes
+## <a name="next-steps"></a>Étapes suivantes
 
 Maintenant que le cluster de données volumineuses de SQL Server est déployé, essayez certaines des nouvelles fonctionnalités :
 

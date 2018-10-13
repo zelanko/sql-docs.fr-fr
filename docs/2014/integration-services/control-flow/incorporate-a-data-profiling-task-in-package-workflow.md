@@ -13,12 +13,12 @@ ms.assetid: 39a51586-6977-4c45-b80b-0157a54ad510
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9ac9b22a6f7157123ab233a6c10f24846eaca8fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 74e2ca64c47aaf1b0388fa0d58a3e76f2ec9d20e
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147569"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085515"
 ---
 # <a name="incorporate-a-data-profiling-task-in-package-workflow"></a>Incorporer une tâche de profilage des données dans le flux de travail du package
   Le profilage des données et le nettoyage des données ne sont pas des candidats pour un processus automatisé à leur stade initial. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], la sortie de la tâche de profilage des données doit habituellement faire l’objet d’une analyse visuelle et d’un jugement personnel pour qu’il soit déterminé si les violations signalées sont significatives ou excessives. Même après avoir reconnu des problèmes de qualité des données, un plan soigneusement pensé doit être appliqué pour déterminer la meilleure approche pour le nettoyage.  
@@ -265,13 +265,13 @@ ms.locfileid: "48147569"
 8.  Fermez l'environnement de développement de script, puis l'éditeur de tâche de script.  
   
 #### <a name="alternative-codereading-the-profile-output-from-a-variable"></a>Code alternatif – Lecture de la sortie du profil à partir d'une variable  
- La procédure précédente montre comment charger la sortie de la tâche de profilage des données à partir d'un fichier. Toutefois, une méthode alternative consiste à charger cette sortie à partir d'une variable de package. Pour charger la sortie à partir d'une variable, vous devez apporter les modifications suivantes dans l'exemple de code :  
+ La procédure précédente montre comment charger la sortie de la tâche de profilage des données à partir d’un fichier. Toutefois, une méthode alternative consiste à charger cette sortie à partir d'une variable de package. Pour charger la sortie à partir d'une variable, vous devez apporter les modifications suivantes dans l'exemple de code :  
   
--   Appelez le `LoadXml` méthode de la `XmlDocument` classe au lieu du `Load` (méthode).  
+-   Appelez la méthode `LoadXml` de la classe `XmlDocument` à la place de la méthode `Load`.  
   
--   Dans l’éditeur de tâche de Script, ajoutez le nom de la variable de package qui contient la sortie du profil de la tâche `ReadOnlyVariables` liste.  
+-   Dans l'éditeur de tâche de script, ajoutez le nom de la variable de package qui contient la sortie du profil dans la liste `ReadOnlyVariables` de la tâche.  
   
--   Passez la valeur de chaîne de la variable à la `LoadXML` méthode, comme indiqué dans l’exemple de code suivant. (Cet exemple utilise "ProfileOutput" comme nom de la variable de package qui contient la sortie du profil.)  
+-   Passez la valeur de chaîne de la variable à la méthode `LoadXML`, comme indiqué dans l'exemple de code suivant. (Cet exemple utilise "ProfileOutput" comme nom de la variable de package qui contient la sortie du profil.)  
   
     ```vb  
     Dim outputString As String  
@@ -329,7 +329,7 @@ ms.locfileid: "48147569"
 7.  Dans les contraintes de précédence qui connectent la tâche de script aux branches situées en aval dans le flux de travail, écrivez des expressions qui utilisent les valeurs des variables pour diriger le flux de travail.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Configuration des tâche de profilage des données](data-profiling-task.md)   
+ [Configuration de la tâche de profilage des données](data-profiling-task.md)   
  [Visionneuse du profil des données](data-profile-viewer.md)  
   
   

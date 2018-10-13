@@ -16,17 +16,17 @@ ms.assetid: b6341a73-172f-4632-a9e9-cc79fed3f36b
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 84afc267fe7b61ee850395750128a5cad15f716f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 80baae6ca56757c8723934102341352f34cb0709
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063469"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48905230"
 ---
 # <a name="report-viewer-web-part-on-a-sharepoint-site"></a>Composant WebPart Visionneuse de rapports sur un site SharePoint
-  Le composant WebPart Visionneuse de rapports est un composant WebPart personnalisé qui est installé par le complément [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] pour les produits SharePoint. Vous pouvez utiliser le composant WebPart pour afficher les rapports, naviguer parmi ces derniers, les imprimer et les exporter sur un serveur de rapports configuré pour s'exécuter en mode intégré SharePoint. Le composant WebPart Visionneuse de rapports est associé aux fichiers de définition (.rdl) de rapports qui sont traités par un [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] serveur de rapports. Vous ne pouvez pas l'utiliser avec d'autres documents de rapport que vous créez dans d'autres produits logiciels.  
+  Le composant WebPart Visionneuse de rapports est un composant WebPart personnalisé qui est installé par le complément [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] pour les produits SharePoint. Vous pouvez utiliser le composant WebPart pour afficher les rapports, naviguer parmi ces derniers, les imprimer et les exporter sur un serveur de rapports configuré pour s'exécuter en mode intégré SharePoint. Le composant WebPart Visionneuse de rapports est associé aux fichiers de définition de rapport (.rdl) traités par un serveur de rapports [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Vous ne pouvez pas l'utiliser avec d'autres documents de rapport que vous créez dans d'autres produits logiciels.  
   
- Pour installer le composant WebPart, vous devez exécuter le programme d'installation du complément [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Vous ne devez pas installer ou désinstaller le composant WebPart indépendamment. Celui-ci fait partie du complément et ne peut être installé que par le package d'installation du complément. Le nom de fichier du composant WebPart Visionneuse de rapports est ReportViewer.dwp. Ce fichier est situé dans le dossier Program Files\Fichiers communs\Microsoft Shared\web server extensions\12\template\features\reportserver et ne doit pas être déplacé vers d'autres dossiers.  
+ Pour installer le composant WebPart, vous devez exécuter le programme d'installation du complément [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Vous ne devez pas installer ou désinstaller le composant WebPart indépendamment. Celui-ci fait partie du complément et ne peut être installé que par le package d'installation du complément. Le nom de fichier du composant WebPart Visionneuse de rapports est ReportViewer.dwp. Ce fichier est situé dans le dossier Program Files\Fichiers communs\Microsoft Shared\web server extensions\12\template\features\reportserver et ne doit pas être déplacé vers d'autres dossiers.  
   
  Pour pouvoir utiliser le composant WebPart, vous devez avoir installé et configuré le complément [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] et avoir configuré le serveur de rapports pour l'intégration SharePoint. Vous devez également disposer de rapports à afficher dans la visionneuse. Vous ne pouvez ouvrir que les rapports qui se trouvent dans une bibliothèque, un dossier de bibliothèque ou un historique de rapport, ou ceux qui sont liés entre un composant WebPart de bibliothèque et un composant WebPart Visionneuse de rapports. Vous ne pouvez pas ouvrir les rapports enregistrés en tant que pièces jointes d'un élément dans une liste personnalisée.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "48063469"
  Dans le menu**Exporter** , la commande **Exporter** affiche les formats d’application associés aux extensions de rendu déployées sur un serveur de rapports. Pour déterminer si un format spécifique est disponible, vous pouvez ajouter ou supprimer une extension de rendu sur le serveur de rapports ; par ailleurs, vous pouvez également modifier les paramètres de configuration afin de supprimer un format d'exportation particulier de la liste. Vous pouvez également spécifier des paramètres de configuration sur le serveur de rapports afin de contrôler les formats disponibles. Vous pouvez modifier le comportement par défaut d'un format spécifique en ajoutant et en modifiant les paramètres de configuration de l'extension de rendu correspondante.  
   
 ### <a name="print-action-on-the-report-toolbar"></a>Action d'impression sur la barre d'outils Rapport  
- **Imprimer** sur le **Actions** menu est les fonctionnalités d’impression personnalisées via [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Quand vous cliquez sur **Imprimer**, un contrôle d’impression ActiveX côté client est téléchargé sur l’ordinateur client. Dans la plupart des cas, l’utilisateur qui clique sur **Imprimer** doit avoir les autorisations d’administrateur sur l’ordinateur local. Il est usuel de restreindre les téléchargements de contrôles ActiveX aux utilisateurs qui disposent d'autorisations d'administrateur. Vous pouvez utiliser l'Administration centrale de SharePoint pour activer ou désactiver le téléchargement du contrôle d'impression côté client.  
+ La commande**Imprimer** du menu **Actions** fournit des fonctionnalités d’impression personnalisées via [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Quand vous cliquez sur **Imprimer**, un contrôle d’impression ActiveX côté client est téléchargé sur l’ordinateur client. Dans la plupart des cas, l’utilisateur qui clique sur **Imprimer** doit avoir les autorisations d’administrateur sur l’ordinateur local. Il est usuel de restreindre les téléchargements de contrôles ActiveX aux utilisateurs qui disposent d'autorisations d'administrateur. Vous pouvez utiliser l’Administration centrale de SharePoint pour activer ou désactiver le téléchargement du contrôle d’impression côté client.  
   
 ### <a name="find-action-on-the-report-toolbar"></a>Action de Recherche sur la barre d'outils Rapport  
  La commande**Rechercher** du menu **Actions** permet d’accéder à un emplacement cible dans le rapport. Vous pouvez rechercher un contenu dans un rapport en tapant un mot ou une expression que vous souhaitez rechercher. La valeur maximale d'une chaîne de recherche est 256 caractères. Si votre recherche trouve une valeur correspondante dans le rapport, le focus est placé sur la partie du rapport qui contient cette valeur.  
@@ -65,12 +65,12 @@ ms.locfileid: "48063469"
  Les volets**Informations d’identification** et **Paramètres** apparaissent en regard de la zone d’affichage. Le volet**Informations d’identification** s’affiche quand la connexion à la source de données du rapport est configurée pour inviter l’utilisateur à entrer un compte et un mot de passe ayant des droits d’accès à la source de données. Le volet**Paramètres** s’affiche quand le rapport accepte une entrée utilisateur liée aux paramètres définis dans le rapport.  
   
 ### <a name="setting-properties-on-the-report-viewer-web-part"></a>Définition des propriétés du composant WebPart Visionneuse de rapports  
- Les propriétés du composant WebPart incluent des propriétés personnalisées qui sont propres à la visionneuse de rapports et des propriétés générales que vous pouvez définir pour n'importe quel composant WebPart. Pour plus d’informations, consultez [personnaliser le composant WebPart Visionneuse de rapports](../../2014/reporting-services/customize-the-report-viewer-web-part.md).  
+ Les propriétés du composant WebPart incluent des propriétés personnalisées qui sont propres à la visionneuse de rapports et des propriétés générales que vous pouvez définir pour n'importe quel composant WebPart. Pour plus d’informations, consultez [Personnaliser le composant WebPart Visionneuse de rapports](../../2014/reporting-services/customize-the-report-viewer-web-part.md).  
   
  Par défaut, les rapports s'ouvrent en mode page entière. Le mode page entière permet d'afficher la barre d'outils qui fournit les fonctionnalités de navigation entre les pages, de recherche, etc. Vous pouvez personnaliser le composant WebPart afin de modifier l'apparence ou le comportement par défaut.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Installer ou désinstaller le complément Services Reporting pour SharePoint &#40;SharePoint 2010 et SharePoint 2013&#41;](install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)   
- [Ajouter le composant WebPart Visionneuse de rapports à une Page Web &#40;Reporting Services dans SharePoint Mode intégré&#41;](report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)  
+ [Ajouter le composant WebPart Visionneuse de rapports à une page web &#40;Reporting Services en mode intégré SharePoint&#41;](report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)  
   
   

@@ -1,7 +1,7 @@
 ---
 title: sp_setapprole (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 10/12/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -18,33 +18,34 @@ ms.assetid: cf0901c0-5f90-42d4-9d5b-8772c904062d
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: b41d79d287c266ad3534b89713998d89b8eb5d92
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 78cf616c0b09d1404f0c7e7fe5f3b382f08d59a8
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854180"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49168810"
 ---
 # <a name="spsetapprole-transact-sql"></a>sp_setapprole (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Active les autorisations associées à un rôle d'application dans la base de données active.  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
+
+```sql
 sp_setapprole [ @rolename = ] 'role',  
-    [ @password = ] { encrypt N'password' }   
+    [ @password = ] { encrypt N'password' }
       |  
         'password' [ , [ @encrypt = ] { 'none' | 'odbc' } ]  
         [ , [ @fCreateCookie = ] true | false ]  
     [ , [ @cookie = ] @cookie OUTPUT ]  
-```  
-  
-## <a name="arguments"></a>Arguments  
+```
+
+## <a name="arguments"></a>Arguments
+
  [  **@rolename =** ] **'***rôle***'**  
  Nom du rôle d'application défini dans la base de données active. *rôle* est **sysname**, sans valeur par défaut. *rôle* doit exister dans la base de données actuelle.  
   
@@ -54,7 +55,7 @@ sp_setapprole [ @rolename = ] 'role',
  L’option encrypt n’est pas pris en charge sur les connexions qui utilisent **SqlClient**.  
   
 > [!IMPORTANT]  
->  ODBC **chiffrer** fonction ne fournit pas de chiffrement. Vous ne devez pas compter sur cette fonction pour protéger des mots de passe transmis sur un réseau. Si de telles informations doivent être transmises sur un réseau, utilisez SSL ou IPSec.  
+> ODBC **chiffrer** fonction ne fournit pas de chiffrement. Vous ne devez pas compter sur cette fonction pour protéger des mots de passe transmis sur un réseau. Si de telles informations doivent être transmises sur un réseau, utilisez SSL ou IPSec.
   
  **@encrypt = 'none'**  
  Indique qu'aucun codage ne doit être utilisé. Le mot de passe est transmis à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sous forme de texte brut. Il s'agit du paramètre par défaut.  
@@ -69,38 +70,42 @@ sp_setapprole [ @rolename = ] 'role',
  Spécifie le paramètre de sortie qui doit contenir le cookie. Le cookie est généré uniquement si la valeur de **@fCreateCookie** est **true**. **varbinary(8000)**  
   
 > [!NOTE]  
->  Le paramètre **OUTPUT** de cookie pour **sp_setapprole** est actuellement documenté comme **varbinary(8000)** , ce qui correspond à la longueur maximale correcte. Cependant, l’implémentation actuelle retourne **varbinary(50)**. Les applications doivent continuer à réserver **varbinary (8000)** afin que l’application continue à fonctionner correctement si le cookie de taille de retour augmente dans une version ultérieure.  
+> Le paramètre **OUTPUT** de cookie pour **sp_setapprole** est actuellement documenté comme **varbinary(8000)** , ce qui correspond à la longueur maximale correcte. Cependant, l’implémentation actuelle retourne **varbinary(50)**. Les applications doivent continuer à réserver **varbinary (8000)** afin que l’application continue à fonctionner correctement si le cookie de taille de retour augmente dans une version ultérieure.
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Valeurs des codes de retour
+
  0 (succès) et 1 (échec)  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes
+
  Après une application le rôle est activé à l’aide de **sp_setapprole**, le rôle reste actif jusqu'à ce que l’utilisateur se déconnecte du serveur ou exécute **sp_unsetapprole**. **sp_setapprole** peuvent être exécutées directement par [!INCLUDE[tsql](../../includes/tsql-md.md)] instructions. **sp_setapprole** ne peut pas être exécutée dans une autre procédure stockée ou dans une transaction définie par l’utilisateur.  
   
  Pour une vue d’ensemble des rôles d’application, consultez [rôles d’Application](../../relational-databases/security/authentication-access/application-roles.md).  
   
 > [!IMPORTANT]  
->  Pour protéger le mot de passe d'un rôle d'application lors de sa transmission sur un réseau, vous devez toujours utiliser une connexion chiffrée pour activer un rôle d'application.  
->   
->  Le [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC **chiffrer** option n’est pas pris en charge par **SqlClient**. Si vous devez stocker des informations d'identification, chiffrez-les à l'aide des fonctions API de chiffrement. Le paramètre *mot de passe* est stocké sous la forme d’un hachage unidirectionnel. Pour préserver la compatibilité avec les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], stratégie de complexité de mot de passe n’est pas appliquée par **sp_addapprole**. Pour appliquer la stratégie de complexité de mot de passe, utilisez [CREATE APPLICATION ROLE](../../t-sql/statements/create-application-role-transact-sql.md).  
+> Pour protéger le mot de passe de rôle d’application lors de sa transmission sur un réseau, vous devez toujours utiliser une connexion chiffrée lors de l’activation d’un rôle d’application.
+> Le [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC **chiffrer** option n’est pas pris en charge par **SqlClient**. Si vous devez stocker des informations d'identification, chiffrez-les à l'aide des fonctions API de chiffrement. Le paramètre *mot de passe* est stocké sous la forme d’un hachage unidirectionnel. Pour préserver la compatibilité avec les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], stratégie de complexité de mot de passe n’est pas appliquée par **sp_addapprole**. Pour appliquer la stratégie de complexité de mot de passe, utilisez [CREATE APPLICATION ROLE](../../t-sql/statements/create-application-role-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
- Nécessite l’appartenance au **public** et connaissance du mot de passe pour le rôle.  
+## <a name="permissions"></a>Permissions
+
+Nécessite l’appartenance au **public** et connaissance du mot de passe pour le rôle.  
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-activating-an-application-role-without-the-encrypt-option"></a>A. Activation d'un rôle d'application sans l'option encrypt  
- Dans l'exemple ci-dessous, un rôle d'application nommé `SalesAppRole` est activé avec le mot de passe en texte brut `AsDeF00MbXX`, créé avec les autorisations spécialement conçues pour l'application utilisée par l'utilisateur en cours.  
-  
-```  
+### <a name="a-activating-an-application-role-without-the-encrypt-option"></a>A. Activation d'un rôle d'application sans l'option encrypt
+
+ Dans l'exemple ci-dessous, un rôle d'application nommé `SalesAppRole` est activé avec le mot de passe en texte brut `AsDeF00MbXX`, créé avec les autorisations spécialement conçues pour l'application utilisée par l'utilisateur en cours.
+
+```sql
 EXEC sys.sp_setapprole 'SalesApprole', 'AsDeF00MbXX';  
-GO  
-```  
-  
-### <a name="b-activating-an-application-role-with-a-cookie-and-then-reverting-to-the-original-context"></a>B. Activation d'un rôle d'application avec un cookie, puis retour au contexte d'origine  
+GO
+```
+
+### <a name="b-activating-an-application-role-with-a-cookie-and-then-reverting-to-the-original-context"></a>B. Activation d'un rôle d'application avec un cookie, puis retour au contexte d'origine
+
  Dans l'exemple ci-dessous, le rôle d'application `Sales11` est activé avec le mot de passe `fdsd896#gfdbfdkjgh700mM` et un cookie est créé. L'exemple retourne le nom de l'utilisateur actuel, puis revient au contexte d'origine en exécutant `sp_unsetapprole`.  
-  
-```  
+
+```sql
 DECLARE @cookie varbinary(8000);  
 EXEC sys.sp_setapprole 'Sales11', 'fdsd896#gfdbfdkjgh700mM'  
     , @fCreateCookie = true, @cookie = @cookie OUTPUT;  
@@ -112,15 +117,10 @@ EXEC sys.sp_unsetapprole @cookie;
 -- The original context has now been restored.  
 GO  
 SELECT USER_NAME();  
--- This will return the name of the original user.   
-GO   
-```  
-  
-## <a name="see-also"></a>Voir aussi  
- [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Procédures stockées de sécurité &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [CREATE APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
- [DROP APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-application-role-transact-sql.md)   
- [sp_unsetapprole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-unsetapprole-transact-sql.md)  
-  
-  
+-- This will return the name of the original user.
+GO
+```
+
+## <a name="see-also"></a>Voir aussi
+
+ [Procédures stockées système &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md) [procédures stockées de sécurité &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md) [CREATE APPLICATION ROLE &#40;Transact-SQL&#41; ](../../t-sql/statements/create-application-role-transact-sql.md) [DROP APPLICATION ROLE &#40;Transact-SQL&#41; ](../../t-sql/statements/drop-application-role-transact-sql.md) [sp_unsetapprole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-unsetapprole-transact-sql.md)

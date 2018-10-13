@@ -20,12 +20,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 147276d31ee08a0dc5908a49cd65925e62c3bae9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 32303301fb01e381fee0e28cfedb2cd299658c88
+ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47796207"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48851884"
 ---
 # <a name="spgetapplock-transact-sql"></a>sp_getapplock (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
  Propriétaire du verrou, qui est la valeur de *lock_owner* lorsque le verrou a été demandé. *lock_owner* est de type **nvarchar(32)**. La valeur peut être **Transaction** (valeur par défaut) ou **Session**. Lorsque le *lock_owner* valeur est **Transaction**, par défaut ou spécifié explicitement, sp_getapplock doit être exécutée à partir d’une transaction.  
   
  [ @LockTimeout=] '*valeur*'  
- Valeur de délai d'attente de verrou, en millisecondes. La valeur par défaut est identique à la valeur retournée par@LOCK_TIMEOUT. Pour indiquer qu'une demande de verrou doit retourner une erreur plutôt que d'attendre le verrou quand elle ne peut pas être accordée immédiatement, spécifiez 0.  
+ Valeur de délai d'attente de verrou, en millisecondes. La valeur par défaut est identique à la valeur retournée par@LOCK_TIMEOUT. Pour indiquer qu’une demande de verrou doit retourner un Code de retour-1 plutôt que d’attendre le verrou lors de la demande ne peut pas être accordée immédiatement, spécifiez 0.  
   
  [ @DbPrincipal=] '*database_principal*'  
  Utilisateur, rôle ou rôle d'application qui dispose d'autorisations sur un objet d'une base de données. L’appelant de la fonction doit être un membre du *database_principal*, dbo ou db_owner de rôle de base de données pour pouvoir appeler la fonction fixe. La valeur par défaut est public.  

@@ -17,15 +17,15 @@ ms.assetid: 7a94643c-6460-4baf-bb31-0cb99eaf970d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b5a2bde2933c8495da25c87da3aa6a40a9585b96
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 07fc15bf088cf48e0a1b9a30cd68d5c10254d345
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072929"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072104"
 ---
 # <a name="configure-server-startup-options-sql-server-configuration-manager"></a>Configurer les options de démarrage du serveur (Gestionnaire de configuration SQL Server)
-  Cette rubrique explique comment configurer les options de démarrage à utiliser à chaque démarrage du [!INCLUDE[ssDE](../../includes/ssde-md.md)] dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide du Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour obtenir la liste des options de démarrage, consultez [Options de démarrage du service moteur de base de données](database-engine-service-startup-options.md).  
+  Cette rubrique décrit comment configurer les options de démarrage qui seront utilisées chaque fois que le [!INCLUDE[ssDE](../../includes/ssde-md.md)] démarre dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l’aide de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager. Pour obtenir la liste des options de démarrage, consultez [Options de démarrage du service moteur de base de données](database-engine-service-startup-options.md).  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
@@ -53,7 +53,7 @@ ms.locfileid: "48072929"
     >  Étant donné que le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est un composant logiciel enfichable pour le programme [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console et non pas un programme autonome, le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n’apparaît pas en tant qu’application dans les versions plus récentes de Windows.  
     >   
     >  -   **Windows 10**:  
-    >          Pour ouvrir [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager, dans le **Page de démarrage**, entrez SQLServerManager12.msc (pour [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]). Pour les versions précédentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] remplacez 12 par un nombre plus petit. Cliquez sur SQLServerManager12.msc pour ouvrir le Gestionnaire de Configuration. Pour épingler le Gestionnaire de Configuration pour la Page de démarrage ou de la barre des tâches, cliquez sur SQLServerManager12.msc, puis cliquez sur **ouvrir l’emplacement du fichier**. Dans l’Explorateur de fichiers Windows, cliquez sur SQLServerManager12.msc, puis cliquez sur **épingler au menu Démarrer** ou **épingler à la barre des tâches**.  
+    >          Pour ouvrir [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager, dans le **Page de démarrage**, entrez SQLServerManager12.msc (pour [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]). Pour les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , remplacez 12 par un nombre plus petit. Cliquez sur SQLServerManager12.msc pour ouvrir le Gestionnaire de Configuration. Pour épingler le Gestionnaire de Configuration pour la Page de démarrage ou de la barre des tâches, cliquez sur SQLServerManager12.msc, puis cliquez sur **ouvrir l’emplacement du fichier**. Dans l’Explorateur de fichiers Windows, cliquez sur SQLServerManager12.msc, puis cliquez sur **épingler au menu Démarrer** ou **épingler à la barre des tâches**.  
     > -   **Windows 8**:  
     >          Pour ouvrir [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager, dans le **recherche** icône sous **applications**, type **SQLServerManager\<version > .msc** tels que `SQLServerManager12.msc`, puis appuyez sur **entrée**.  
   

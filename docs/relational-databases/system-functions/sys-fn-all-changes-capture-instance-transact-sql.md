@@ -21,12 +21,12 @@ ms.assetid: 564fae96-b88c-4f22-9338-26ec168ba6f5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 03e6fd79540a4657f5f3d35ca7f3bfcff361d57d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 77da6b8a6b4b81f6f7d05e6a64c58834a01b65c0
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761729"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072053"
 ---
 # <a name="sysfnallchangesltcaptureinstancegt-transact-sql"></a>Sys.fn_all_changes_&lt;capture_instance&gt; (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
   
 -   @closed_high_end_point = 0  
   
-     Seules les lignes dans la table de modifications cdc.instance_capture_CT qui ont une heure de validation associée strictement inférieure à end_time sont incluses dans le jeu de résultats.  
+     Seules les lignes dans le CDC.instance_capture_ct table de modifications qui ont une heure de validation associée strictement inférieure à end_time sont incluses dans le résultat défini.  
   
  Si une valeur NULL est fournie pour cet argument, le point de terminaison supérieur de la plage de requêtes correspond au point de terminaison supérieur de la plage valide pour l'instance de capture.  
   

@@ -14,12 +14,12 @@ ms.assetid: 4abc0e10-96fd-4e46-93d6-d7ee03eec844
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 70f3a447b4398bbd1141a357ea878966d5a443ac
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ad6b28f2e133abcc872186adc57fdd422687ddc5
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130611"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906249"
 ---
 # <a name="launching-database-engine-tuning-advisor"></a>Lancement de l'Assistant Paramétrage du moteur de base de données
   Pour commencer, ouvrez l'interface utilisateur graphique de l'Assistant Paramétrage du moteur de base de données. Pour la première utilisation, un membre du rôle serveur fixe **sysadmin** doit lancer l’Assistant Paramétrage du moteur de base de données pour initialiser l’application. Après l’initialisation, les membres du rôle de base de données fixe **db_owner** peuvent utiliser l’Assistant Paramétrage du moteur de base de données pour paramétrer les bases de données dont ils sont propriétaires. Pour plus d’informations sur l’initialisation de l’Assistant Paramétrage du moteur de base de données, consultez [Démarrer et utiliser l’Assistant Paramétrage du moteur de base de données](../../relational-databases/performance/database-engine-tuning-advisor.md).  
@@ -35,7 +35,7 @@ ms.locfileid: "48130611"
  ![Fenêtre par défaut de l’Assistant Paramétrage du moteur de base de données](media/defaultdtagui.gif "fenêtre par défaut de l’Assistant Paramétrage du moteur de base de données")  
   
 > [!NOTE]  
->  L’onglet et la zone **Nom de session** affichent le nom de votre ordinateur et de l’instance à laquelle vous êtes connecté. L'onglet et la zone affichent également la date et l'heure actuelles.  
+>  L’onglet et **nom de Session** zone affiche le nom de votre ordinateur et de l’instance que vous êtes connecté. L'onglet et la zone affichent également la date et l'heure actuelles.  
   
  Lorsque l'Assistant Paramétrage du moteur de base de données s'ouvre pour la première fois, deux volets principaux s'affichent.  
   

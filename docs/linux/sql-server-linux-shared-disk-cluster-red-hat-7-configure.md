@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
-ms.openlocfilehash: 79525e1127bdef20c85e1098b040de5d5eb7a60e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 179bc0379e508954c93464b6f1075334756dd250
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739465"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085485"
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Configurer un cluster de disque partagé de Red Hat Enterprise Linux pour SQL Server
 
@@ -121,7 +121,7 @@ Il existe un large éventail de solutions pour fournir un stockage partagé. Cet
 
 Sur le serveur NFS, procédez comme suit :
 
-1. Installation de `nfs-utils`.
+1. Installer `nfs-utils`.
 
    ```bash
    sudo yum -y install nfs-utils
@@ -176,7 +176,7 @@ Sur le serveur NFS, procédez comme suit :
 
 Procédez comme suit sur tous les nœuds de cluster.
 
-1.  Installation de `nfs-utils`.
+1.  Installer `nfs-utils`.
 
    ```bash
    sudo yum -y install nfs-utils

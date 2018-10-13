@@ -18,12 +18,12 @@ ms.assetid: b2018116-cf1a-4e54-b29c-39e0ca2bda77
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 3b4bf77cc626f78014ab139d3e27377c8f139e0c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: da531e62f2067ff1ae217a313d1fdd0eb8ce24a7
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48162239"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120116"
 ---
 # <a name="data-alert-designer"></a>Concepteur d’alertes de données
   Vous pouvez créer et modifier les définitions d'alerte de données dans le Concepteur d'alertes de données. Une définition d'alerte est une collection de métadonnées, comprenant les données de rapport qui vous intéressent, les règles que les données de rapport doivent satisfaire pour créer des instances d'alerte de données et pour envoyer des messages d'alerte de données, les destinataires du message d'alerte, etc.  
@@ -45,7 +45,7 @@ ms.locfileid: "48162239"
 > [!NOTE]  
 >  Les alertes de données [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] sont disponibles uniquement si vous installez [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] en mode SharePoint. Le rapport qui fait l’objet de l’alerte doit donc être enregistré, déployé ou chargé dans une bibliothèque de documents SharePoint.  
 >   
->  Les alertes de données ne peuvent pas être créées sur des rapports qui utilisent l'authentification intégrée Windows ou les invites pour les informations d'identification. Les rapports doivent utiliser des informations d'identification stockées. Pour plus d’informations, consultez [spécifier les informations d’identification et les informations de connexion pour les Sources de données de rapport](report-data/specify-credential-and-connection-information-for-report-data-sources.md).  
+>  Les alertes de données ne peuvent pas être créées sur des rapports qui utilisent l'authentification intégrée Windows ou les invites pour les informations d'identification. Les rapports doivent utiliser des informations d'identification stockées. Pour plus d’informations, consultez [Spécifier des informations d’identification et de connexion pour les sources de données de rapport](report-data/specify-credential-and-connection-information-for-report-data-sources.md).  
   
  Pour ouvrir le Concepteur d’alertes de données, cliquez sur l’option **Nouvelle alerte de données** dans le menu **Actions** de la barre d’outils Rapport. Si vous ne voyez pas l’option **Nouvelle alerte de données** , cela signifie que le rapport n’est pas configuré pour utiliser les informations d’identification stockées. Vous pouvez mettre à jour le type d'informations d'identification en mettant à jour la source des données de rapport depuis la bibliothèque SharePoint.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "48162239"
 ### <a name="alert-name"></a>Nom de l'alerte  
  Par défaut, la définition d'alerte a le même nom que le rapport. Vous pouvez remplacer le nom de l'alerte par un autre nom plus explicite. Cela permet de simplifier la gestion de vos alertes et de déterminer quelles alertes doivent être mises à jour, supprimées et ainsi de suite.  
   
- Vous pouvez créer plusieurs alertes sur un rapport. Il est possible d'avoir plusieurs définitions d'alerte avec le même nom, mais il est recommandé de donner un nom unique à l'alerte. Cela facilite la différenciation et la gestion des définitions d'alerte. Vous pouvez consulter la liste de toutes les alertes que vous avez créées dans le Gestionnaire des alertes de données. Pour plus d’informations, consultez [Gestionnaire des alertes de données pour les administrateurs d’alertes](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md) et [gérer mes alertes de données dans le Gestionnaire des alertes de données](manage-my-data-alerts-in-data-alert-manager.md).  
+ Vous pouvez créer plusieurs alertes sur un rapport. Il est possible d'avoir plusieurs définitions d'alerte avec le même nom, mais il est recommandé de donner un nom unique à l'alerte. Cela facilite la différenciation et la gestion des définitions d'alerte. Vous pouvez consulter la liste de toutes les alertes que vous avez créées dans le Gestionnaire des alertes de données. Pour plus d’informations, consultez [Gestionnaire des alertes de données pour les administrateurs d’alertes](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md) et [Gérer mes alertes de données dans le Gestionnaire des alertes de données](manage-my-data-alerts-in-data-alert-manager.md).  
   
 ### <a name="rules-and-clauses"></a>Règles et clauses  
  L'étendue des modifications apportées aux données et les règles de l'alerte définissent les modifications qui déclenchent l'alerte. Les types de modifications apportées aux données sont les suivants :  
@@ -172,7 +172,7 @@ ms.locfileid: "48162239"
  Pour plus d’informations sur la façon dont l’e-mail est généré, consultez [Alertes de données Reporting Services](../ssms/agent/alerts.md).  
   
 ##  <a name="CreateAlert"></a> Créer une définition d'alerte de données  
- Si vous avez accordé des autorisations permettant de consulter des éléments et de créer des alertes dans SharePoint, vous pouvez créer une définition d'alerte de données pour tout rapport que vous êtes autorisé à afficher, tant que le rapport utilise des informations d'identification stockées ou bien aucune information d'identification. Vous exécutez le rapport à partir d'une bibliothèque SharePoint. Les données que vous pouvez utiliser dans le Concepteur d'alertes de données proviennent du rapport. Si le rapport est paramétré, vous devrez peut-être exécuter le rapport en utilisant des valeurs de paramètre différentes pour vous assurer que les données qui vous intéressent s'affichent dans le rapport. Après avoir ouvert le rapport, cliquez sur l’option **Nouvelle alerte de données** dans le menu **Actions** de la barre d’outils Rapport pour ouvrir le Concepteur d’alertes de données. L'image suivante vous indique comment ouvrir le Concepteur d'alertes de données.  
+ Si vous avez accordé des autorisations permettant de consulter des éléments et de créer des alertes dans SharePoint, vous pouvez créer une définition d'alerte de données pour tout rapport que vous êtes autorisé à afficher, tant que le rapport utilise des informations d'identification stockées ou bien aucune information d'identification. Vous exécutez le rapport à partir d'une bibliothèque SharePoint. Les données que vous pouvez utiliser dans le Concepteur d'alertes de données proviennent du rapport. Si le rapport est paramétré, vous devrez peut-être exécuter le rapport à l’aide de différentes valeurs de paramètre pour garantir que les données qui vous intéressez s’affiche dans le rapport. Après avoir ouvert le rapport, cliquez sur l’option **Nouvelle alerte de données** dans le menu **Actions** de la barre d’outils Rapport pour ouvrir le Concepteur d’alertes de données. L'image suivante vous indique comment ouvrir le Concepteur d'alertes de données.  
   
  ![Ouvrir le Concepteur d’alertes à partir de la bibliothèque SharePoint](media/rs-openalertdesigneriw.gif "Ouvrir le Concepteur d’alertes à partir de la bibliothèque SharePoint")  
   
@@ -201,13 +201,13 @@ ms.locfileid: "48162239"
 ##  <a name="HowTo"></a> Tâches associées  
  Cette section répertorie les procédures qui vous indiquent comment créer et modifier des alertes.  
   
--   [Modifier une alerte de données dans le concepteur d'alertes](edit-a-data-alert-in-alert-designer.md)  
+-   [Modifier une alerte de données dans le Concepteur d’alertes](edit-a-data-alert-in-alert-designer.md)  
   
 -   [Créer une alerte de données dans le concepteur d’alertes de données](create-a-data-alert-in-data-alert-designer.md)  
   
   
 ## <a name="see-also"></a>Voir aussi  
  [Alertes de données Reporting Services](../ssms/agent/alerts.md)   
- [Gestionnaire des alertes de données pour les administrateurs d'alertes](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md)  
+ [Gestionnaire des alertes de données pour les administrateurs d’alertes](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md)  
   
   

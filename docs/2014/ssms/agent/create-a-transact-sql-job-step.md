@@ -14,12 +14,12 @@ ms.assetid: 69c571a7-debe-4063-9d38-e4b6a1e8e84c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a0cb55f71c38a0911b38b52fea426f0e09f47fef
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 698e2d52746cd641a962e51bdc613b093ac6f9fb
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076279"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119506"
 ---
 # <a name="create-a-transact-sql-job-step"></a>Créer une étape de travail Transact-SQL
   Cette rubrique indique comment créer une étape de travail de l'Agent [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui exécute des scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]ou de SQL Server Management Objects.  
@@ -43,13 +43,13 @@ ms.locfileid: "48076279"
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
 ###  <a name="Security"></a> Sécurité  
- Pour plus d'informations, consultez [Implémenter la sécurité de SQL Server Agent](implement-sql-server-agent-security.md).  
+ Pour plus d'informations, consultez [Implement SQL Server Agent Security](implement-sql-server-agent-security.md).  
   
 ##  <a name="SSMS"></a> Utilisation de SQL Server Management Studio  
   
 #### <a name="to-create-a-transact-sql-job-step"></a>Pour créer une étape de travail Transact-SQL  
   
-1.  Dans l' **Explorateur d'objets** , connectez-vous à une instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]et développez-la.  
+1.  Dans **l’Explorateur d'objets** , connectez-vous à une instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]et développez-la.  
   
 2.  Développez **SQL Server Agent**, créez un travail ou cliquez avec le bouton droit de la souris sur un travail existant, puis cliquez sur **Propriétés**.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "48076279"
 3.  Copiez et collez l'exemple suivant dans la fenêtre de requête, puis cliquez sur **Exécuter**.  
   
     ```  
-    -- creates a job step that that uses Transact-SQL  
+    -- creates a job step that uses Transact-SQL  
     USE msdb;  
     GO  
     EXEC sp_add_jobstep  
@@ -98,6 +98,6 @@ ms.locfileid: "48076279"
 ##  <a name="SMO"></a> À l’aide de SQL Server Management Objects  
  **Pour créer une étape de travail Transact-SQL**  
   
- Utilisez la `JobStep` classe à l’aide d’un langage de programmation que vous choisissez, tel que Visual Basic, Visual c# ou PowerShell.  
+ Utilisez la classe `JobStep` à l'aide d'un langage de programmation que vous choisissez, tel que Visual Basic, Visual C# ou PowerShell.  
   
   

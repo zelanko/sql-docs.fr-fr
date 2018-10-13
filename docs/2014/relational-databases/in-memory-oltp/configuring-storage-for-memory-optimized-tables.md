@@ -10,12 +10,12 @@ ms.assetid: 6e005de0-3a77-4b91-b497-14cc0f9f6605
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 574188dc87c9d89e370cb0187c44d30cd5dc3158
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 93698be4738ef2a28c79581d0957f695b036c911
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076809"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119168"
 ---
 # <a name="configuring-storage-for-memory-optimized-tables"></a>Configuration du stockage des tables optimisées en mémoire
   Vous devez configurer des opérations d'entrée/sortie par seconde (IOPS) et la capacité de stockage.  
@@ -28,7 +28,7 @@ ms.locfileid: "48076809"
   
 -   Lorsque vous migrez des tables sur disque vers des tables mémoire optimisées, vérifiez que le journal des transactions se trouve sur un support de stockage capable de prendre en charge le surcroît d'activité du journal des transactions. Par exemple, si votre support de stockage prend en charge des opérations du journal des transactions à 100 Mo/s et que les tables mémoire optimisées offrent des performances cinq fois supérieures, le support de stockage du journal des transactions doit être en mesure de prendre en charge une amélioration des performances cinq fois supérieure, pour empêcher l'activité du journal des transactions de devenir un goulot d'étranglement des performances.  
   
--   Les tables mémoire optimisées sont conservées dans des fichiers distribués sur un ou plusieurs conteneurs. Chaque conteneur doit généralement être mappé à son propre axe, et est utilisé pour augmenter la capacité de stockage et améliorer les performances. Vous devez vous assurer que ces IOPS séquentielles du support de stockage peuvent prendre en charge une augmentation 3 fois supérieure dans le débit du journal des transactions.  
+-   Les tables mémoire optimisées sont conservées dans des fichiers distribués sur un ou plusieurs conteneurs. Chaque conteneur doit généralement être mappé à son propre axe, et est utilisé pour augmenter la capacité de stockage et améliorer les performances. Vous devez vous assurer que les IOPS séquentielles du support de stockage peut prendre en charge un 3 fois augmentent de débit du journal des transactions.  
   
      Par exemple, si les tables mémoire optimisées génèrent 500 Mo/sec d’activité dans le journal des transactions, le stockage des tables optimisées en mémoire doit prendre en charge 1,5 Go/s. La nécessité de prendre en charge un 3 fois augmentation du débit de journaux de transaction proviennent de l’observation que les paires de fichiers de données et delta sont d’abord écrites avec les données initiales et puis doivent être lues/réécrites dans le cadre d’une opération de fusion.  
   

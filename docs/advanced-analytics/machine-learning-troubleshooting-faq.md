@@ -1,5 +1,5 @@
 ---
-title: Résolution des problèmes et Forum aux questions pour l’apprentissage dans SQL Server | Documents Microsoft
+title: Résolution des problèmes et Forum aux questions sur machine learning dans SQL Server | Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 05/31/2018
@@ -7,19 +7,19 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 6ef72ae56973e695b96f0dfac7c0a3414bca5225
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: dc04f74c4db5c05840795caea87efb9b0001171c
+ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34707357"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48877922"
 ---
-# <a name="troubleshoot-machine-learning-in-sql-server"></a>Résoudre les problèmes d’apprentissage dans SQL Server
+# <a name="troubleshoot-machine-learning-in-sql-server"></a>Résoudre les problèmes de machine learning dans SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Utilisez cette page comme point de départ pour le travail sur des problèmes connus.
+Utilisez cette page comme point de départ pour étudier des problèmes connus.
 
-**S’applique à :** SQL Server 2016 R Services, SQL Server 2017 d’apprentissage Services (R et Python)
+**S’applique à :** SQL Server 2016 R Services, SQL Server 2017 Machine Learning Services (R et Python)
 
 ## <a name="known-issues"></a>Problèmes connus
 
@@ -31,26 +31,26 @@ Les articles suivants décrivent les problèmes connus avec les versions actuell
 
 ## <a name="how-to-gather-system-information"></a>Comment recueillir des informations système
 
-Si vous avez rencontré une erreur, ou que vous devez comprendre un problème dans votre environnement, il est important de collecter des informations connexes systématiquement. L’article suivant fournit une liste d’informations qui facilite le dépannage élaborés d’auto-assistance ou d’une demande de support technique.
+Si vous avez rencontré une erreur ou que vous devez comprendre un problème dans votre environnement, il est important que vous collectez des informations connexes systématiquement. L’article suivant fournit une liste d’informations qui facilite la résolution des problèmes d’auto-assistance ou d’une demande de support technique.
 
 + [Collecte de données pour la résolution des problèmes de l’apprentissage](data-collection-ml-troubleshooting-process.md)
 
 ## <a name="setup-and-configuration-guides"></a>Guides d’installation et configuration
 
-Si vous n’avez pas configuré apprentissage avec SQL Server, ou si vous souhaitez ajouter la fonctionnalité, commencez ici :
+Commencez ici si vous n’avez pas configuré de machine learning avec SQL Server, ou si vous souhaitez ajouter la fonctionnalité :
 
-+ [Installer SQL Server 2017 Machine Learning Services (de-de base de données)](install/sql-machine-learning-services-windows-install.md)
++ [Installation de SQL Server 2017 Machine Learning Services (en base de données)](install/sql-machine-learning-services-windows-install.md)
 + [Installer SQL Server 2017 Machine Learning Server (autonome)](install/sql-machine-learning-standalone-windows-install.md)
-+ [Installer SQL Server 2016 R Services (de-de base de données)](install/sql-r-services-windows-install.md)
++ [Installer SQL Server 2016 R Services (en base de données)](install/sql-r-services-windows-install.md)
 + [Installer SQL Server 2016 R Server (autonome)](install/sql-r-standalone-windows-install.md)
-+ [Programme d’installation de ligne de commande](install/sql-ml-component-commandline-install.md)
++ [Programme d’installation de l’invite de commandes](install/sql-ml-component-commandline-install.md)
 + [Configuration en mode hors connexion (sans Internet)](install/sql-ml-component-install-without-internet-access.md)
 
 ### <a name="configuration"></a>Configuration
 
-Les articles suivants contiennent des informations sur les valeurs par défaut et comment personnaliser la configuration pour l’apprentissage sur une instance :
+Les articles suivants contiennent des informations sur les valeurs par défaut et comment personnaliser la configuration pour l’apprentissage automatique sur une instance :
 
-+ [Modifier le pool de comptes d’utilisateur pour SQL Server R Services](r/modify-the-user-account-pool-for-sql-server-r-services.md)  
++ [Exécution simultanée de mise à l’échelle de scripts externes dans SQL Server Machine Learning Services](administration/modify-user-account-pool.md)   
 + [Configurer et gérer les extensions d’analytique avancée](r/configure-and-manage-advanced-analytics-extensions.md)  
 + [Comment créer un pool de ressources](r/how-to-create-a-resource-pool-for-r.md)
 + [Optimisation pour les charges de travail R](r/operationalizing-your-r-code.md)

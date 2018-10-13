@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bb82c69119fd899410bb1fd8f24be65cc07dac4e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5dd11fcb72496465685ce763f48518f7bcd0c2c6
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47852543"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072213"
 ---
 # <a name="large-clr-user-defined-types-odbc"></a>Types CLR volumineux définis par l’utilisateur (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -168,7 +168,7 @@ ms.locfileid: "47852543"
  Cette section indique les modifications apportées aux fonctions ODBC SQL Server Native Client au niveau des types CLR volumineux définis par l'utilisateur.  
   
 ### <a name="sqlbindcol"></a>SQLBindCol  
- Les valeurs de colonnes de résultats de l'UDT sont converties du type de données SQL en type de données C comme décrit dans la section « Liaisons et conversions » de cette rubrique.  
+ Valeurs de colonnes de résultats UDT sont converties à partir de SQL pour les types de données C comme décrit dans la section « Liaisons et Conversions », plus haut dans cette rubrique.  
   
 ### <a name="sqlbindparameter"></a>SQLBindParameter  
  Les valeurs requises pour les UDT sont les suivantes :  
@@ -201,13 +201,13 @@ ms.locfileid: "47852543"
 |SQL_SS_UDT<br /><br /> (longueur supérieure à 8 000 octets)|SQL_SS_UDT|SQL_SS_LENGTH_UNLIMITED (0)|0|  
   
 ### <a name="sqlfetch"></a>SQLFetch  
- Les valeurs de colonnes de résultats de l'UDT sont converties du type de données SQL en type de données C comme décrit dans la section « Liaisons et conversions » de cette rubrique.  
+ Valeurs de colonnes de résultats UDT sont converties à partir de SQL pour les types de données C comme décrit dans la section « Liaisons et Conversions », plus haut dans cette rubrique.  
   
 ### <a name="sqlfetchscroll"></a>SQLFetchScroll  
- Les valeurs de colonnes de résultats de l'UDT sont converties du type de données SQL en type de données C comme décrit dans la section « Liaisons et conversions » de cette rubrique.  
+ Valeurs de colonnes de résultats UDT sont converties à partir de SQL pour les types de données C comme décrit dans la section « Liaisons et Conversions », plus haut dans cette rubrique.  
   
 ### <a name="sqlgetdata"></a>SQLGetData  
- Les valeurs de colonnes de résultats de l'UDT sont converties du type de données SQL en type de données C comme décrit dans la section « Liaisons et conversions » de cette rubrique.  
+ Valeurs de colonnes de résultats UDT sont converties à partir de SQL pour les types de données C comme décrit dans la section « Liaisons et Conversions », plus haut dans cette rubrique.  
   
 ### <a name="sqlgetdescfield"></a>SQLGetDescField  
  Les champs de descripteur disponibles avec les nouveaux types sont décrits dans les sections « Champs de descripteur pour les paramètres » et « Champs de descripteur pour les résultats », plus haut dans cette rubrique.  
@@ -227,7 +227,7 @@ ms.locfileid: "47852543"
  Les valeurs retournées pour les UDT sont celles décrites dans la section « Métadonnées de colonne retournées par SQLColumns et SQLProcedureColumns (métadonnées de catalogue) », plus haut dans cette rubrique.  
   
 ### <a name="sqlputdata"></a>SQLPutData  
- Les valeurs de paramètre UDT sont converties du type de données C en type de données SQL, comme décrit dans la section « Liaisons et conversions » de cette rubrique.  
+ Les valeurs de paramètre UDT sont converties à partir de C pour les types de données SQL comme décrit dans la section « Liaisons et Conversions », plus haut dans cette rubrique.  
   
 ### <a name="sqlsetdescfield"></a>SQLSetDescField  
  Les champs de descripteur disponibles avec les nouveaux types sont décrits dans les sections « Champs de descripteur pour les paramètres » et « Champs de descripteur pour els résultats », plus haut dans cette rubrique.  

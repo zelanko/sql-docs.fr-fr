@@ -22,12 +22,12 @@ ms.assetid: b7442cff-e616-475a-9c5a-5a765089e5f2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 809b0229e1f5d37ed285b8c5783f8c73a4af6056
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2923591c64eceab59424ddaadaaa7f243f2f1575
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108579"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906439"
 ---
 # <a name="enable-compression-on-a-table-or-index"></a>Activer la compression sur une table ou un index
   Cette rubrique explique comment activer la compression sur une table ou un index dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -223,7 +223,7 @@ ms.locfileid: "48108579"
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   
-3.  Copiez et collez l'exemple suivant dans la fenêtre de requête, puis cliquez sur **Exécuter**. Dans l'exemple, l'affichage catalogue `sys.indexes` est d'abord interrogé pour retourner le nom et l' `index_id` de chaque index de la table `Production.TransactionHistory` . La procédure stockée `sp_estimate_data_compression_savings` est ensuite exécutée pour retourner la taille estimée de l'ID d'index spécifié selon le paramètre de compression PAGE. Enfin, l'exemple reconstruit ID d'index 2 (`IX_TransactionHistory_ProductID`), en spécifiant la compression PAGE.  
+3.  Copiez et collez l'exemple suivant dans la fenêtre de requête, puis cliquez sur **Exécuter**. Dans l'exemple, l'affichage catalogue `sys.indexes` est d'abord interrogé pour retourner le nom et l' `index_id` de chaque index de la table `Production.TransactionHistory` . Ensuite, il exécute la procédure stockée `sp_estimate_data_compression_savings` pour retourner la taille estimée de l’ID d’index spécifié, s’il s’agissait d’utiliser le paramètre de compression de PAGE. Enfin, l'exemple reconstruit ID d'index 2 (`IX_TransactionHistory_ProductID`), en spécifiant la compression PAGE.  
   
     ```  
     USE AdventureWorks2012;   

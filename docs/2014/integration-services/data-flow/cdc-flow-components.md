@@ -11,12 +11,12 @@ ms.assetid: 5ae69ddf-27c3-467c-9af1-c89ec383f661
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 47eb98f064cfecf7cf18ddf0ba20023eda320346
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5df2aac01300c006858a84097bf346875f175c82
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195629"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120137"
 ---
 # <a name="cdc-flow-components"></a>Composants de flux CDC
   Les composants CDC par Attunity destinés aux développeurs SSIS d'aide Microsoft [!INCLUDE[ssISCurrent](../../../includes/ssiscurrent-md.md)] fonctionnent avec la capture de données modifiées (CDC) et réduisent la complexité des packages CDC.  
@@ -58,20 +58,20 @@ ms.locfileid: "48195629"
 -   Windows Server 2008 R2 64-bit (x64)  
   
 ### <a name="running-the-installation-program"></a>Exécution du programme d'installation  
- Avant d’exécuter l’Assistant installation, assurez-vous que le [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] est fermé. Suivez les instructions dans l'assistant d'installation.  
+ Avant d’exécuter l’Assistant Installation, assurez-vous que [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] est fermé. Suivez les instructions dans l'assistant d'installation.  
   
 ### <a name="restart-ssis"></a>Redémarrer SSIS  
- Après avoir installé les composants CDC, vous devez redémarrer le service SSIS pour être sûr que les composants fonctionnent correctement lors du développement des packages dans SQL [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)].  
+ Après avoir installé les composants CDC, vous devez redémarrer le service SSIS pour être sûr que les composants fonctionnent correctement lors du développement des packages dans [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)].  
   
  Un message s'affiche après avoir installé les composants. Cliquez sur **Oui** lorsque vous y êtes invité.  
   
 ### <a name="uninstalling-the-microsoft-cdc-components"></a>Désinstallation des composants CDC Microsoft  
  Vous désinstallez la source CDC, le séparateur CDC ou la tâche de contrôle CDC à l'aide de l'assistant de désinstallation. Avant de désinstaller les composants vous devez vous assurer de ce qui suit :  
   
- Si vous utilisez le [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] pour le développement de packages, vérifiez que le [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] est fermé avant d’exécuter l’Assistant de désinstallation.  
+ Si vous utilisez [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] pour le développement de packages, vérifiez que [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] est fermé avant d’exécuter l’Assistant Désinstallation.  
   
 ## <a name="benefits"></a>Avantages  
- Les composants CDC pour [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] composants permettent aux développeurs SSIS de construire facilement des packages SSIS traitant les données modifiées. Ils aident les développeurs SSIS à traiter la capture des données modifiées (CDC) et à réduire la complexité des packages CDC.  
+ Les composants CDC pour les composants de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] permettent aux développeurs SSIS de construire facilement des packages SSIS traitant les données modifiées. Ils aident les développeurs SSIS à traiter la capture des données modifiées (CDC) et à réduire la complexité des packages CDC.  
   
  Les composants CDC SSIS servent à fournir les données modifiées de façon à faciliter leur traitement ultérieur pour la réplication, la charge d'un entrepôt de données, la mise à jour des dimensions à variation lente pour OLAP, les modifications d'audit ou pour d'autres utilisations possibles. Le type de traitement ultérieur utilisé est déterminé par le développeur SSIS.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "48195629"
   
  ![Flux de contrôle d’un package de traitement à flux progressif](../media/tricklefeedprocessing.gif "Flux de contrôle d’un package de traitement à flux progressif")  
   
- Cela [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] flux de contrôle contient deux tâches de contrôle de capture de données modifiées et la tâche de flux de données. La première tâche appelée **Obtenir la plage de traitement CDC** définit la plage des numéros séquentiels dans le journal (LSN) pour les modifications traitées dans la tâche de flux de données appelée **Modifications des processus**. Cette plage est établie en fonction de ce qui a été traité pendant la dernière exécution de package et de ce qui a été enregistré dans un magasin persistant.  
+ Ce flux de contrôle [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] contient deux tâches de contrôle CDC et la tâche de flux de données. La première tâche appelée **Obtenir la plage de traitement CDC** définit la plage des numéros séquentiels dans le journal (LSN) pour les modifications traitées dans la tâche de flux de données appelée **Modifications des processus**. Cette plage est établie en fonction de ce qui a été traité pendant la dernière exécution de package et de ce qui a été enregistré dans un magasin persistant.  
   
  Pour plus d'informations sur l'utilisation de la tâche de contrôle CDC, consultez [CDC Control Task](../control-flow/cdc-control-task.md) et [CDC Control Task Editor](../cdc-control-task-editor.md).  
   
@@ -102,11 +102,11 @@ ms.locfileid: "48195629"
   
  [Source CDC](cdc-source.md)  
   
- [Éditeur de Source CDC &#40;Page Gestionnaire de connexions&#41;](../cdc-source-editor-connection-manager-page.md)  
+ [Éditeur de source CDC &#40;page Gestionnaire de connexions&#41;](../cdc-source-editor-connection-manager-page.md)  
   
- [Éditeur de Source CDC &#40;Page colonnes&#41;](../cdc-source-editor-columns-page.md)  
+ [Éditeur de source CDC &#40;page Colonnes&#41;](../cdc-source-editor-columns-page.md)  
   
- [Éditeur de Source CDC &#40;Page sortie d’erreur&#41;](../cdc-source-editor-error-output-page.md)  
+ [Éditeur de source CDC &#40;page Sortie d’erreur&#41;](../cdc-source-editor-error-output-page.md)  
   
  Pour plus d'informations sur le séparateur CDC, consultez :  
   
@@ -201,7 +201,7 @@ ms.locfileid: "48195629"
   
 -   [Diriger le flux de capture de données modifiées en fonction du type de modification](direct-the-cdc-stream-according-to-the-type-of-change.md)  
   
--   [Définir une variable d’état](define-a-state-variable.md)  
+-   [Définir une variable d'état](define-a-state-variable.md)  
   
 ## <a name="related-content"></a>Contenu associé  
   

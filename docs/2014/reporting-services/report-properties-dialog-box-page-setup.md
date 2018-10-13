@@ -14,15 +14,15 @@ ms.assetid: f9d406dd-a87c-4321-bf23-339d90654062
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: de2261820fd7e35c44c6d70562ca9751c370bc11
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c9331aede0a02f0f84bd2ae76998efeb8edc075b
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094689"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48905069"
 ---
 # <a name="report-properties-dialog-box-page-setup"></a>Boîte de dialogue Propriétés du rapport, Mise en page
-  Sélectionnez **Mise en page** dans la boîte de dialogue **Propriétés du rapport**, pour définir les options de page pour l'intégralité du rapport.  
+  Sélectionnez **mise en Page** sur le **propriétés du rapport**, boîte de dialogue pour définir les options de page pour l’intégralité du rapport.  
   
 ## <a name="options"></a>Options  
  **Pouces**  

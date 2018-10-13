@@ -20,12 +20,12 @@ ms.assetid: bedc3372-50eb-40f2-bcf2-d6db6a63b7e6
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6faf51099d0a5eced6543704d5f45b6fc922f522
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: acb2fe2d6c6b439295c0a6f0b7a4e233c23cb337
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47697118"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119747"
 ---
 # <a name="creating-user-defined-types---requirements"></a>Création de types définis par l’utilisateur - Exigences
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ ms.locfileid: "47697118"
   
  **bool**, **byte**, **sbyte**, **short**, **ushort**, **int**, **uint**, **long**, **ulong**, **float**, **double**, **SqlByte**, **SqlInt16**, **SqlInt32**, **SqlInt64**, **SqlDateTime**, **SqlSingle**, **SqlDouble**, **SqlMoney**, **SqlBoolean**  
   
- Types de valeur qui sont composés de champs des types ci-dessus sont de bons candidats pour **natif** mettre en forme, telles que **structs** en Visual c# (ou **Structures** qu’elles sont connues dans Visual Basic). Par exemple, un UDT spécifié avec le **natif** format de sérialisation peut contenir un champ d’un autre UDT également spécifié avec le **natif** format. Si la définition de l’UDT est plus complexe et contient des types de données pas dans la liste ci-dessus, vous devez spécifier le **UserDefined** format de sérialisation à la place.  
+ Les types valeur sont composés de champs des types ci-dessus sont de bons candidats pour **natif** mettre en forme, telles que **structs** en Visual c# (ou **Structures** qu’elles sont connues dans Visual Basic). Par exemple, un UDT spécifié avec le **natif** format de sérialisation peut contenir un champ d’un autre UDT également spécifié avec le **natif** format. Si la définition de l’UDT est plus complexe et contient des types de données pas dans la liste ci-dessus, vous devez spécifier le **UserDefined** format de sérialisation à la place.  
   
  Le **natif** format exige les éléments suivants :  
   

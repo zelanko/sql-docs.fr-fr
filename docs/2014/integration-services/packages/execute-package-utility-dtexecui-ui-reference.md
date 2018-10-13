@@ -24,12 +24,12 @@ ms.assetid: 3d71df39-126b-4c8e-bd77-128bbd5b0887
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 45fe288818c6234b61226311226cdbc6a471146b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8745874d47d173160848ea385d0479ccbbfb7173
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217429"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169320"
 ---
 # <a name="execute-package-utility-dtexecui-ui-reference"></a>Référence de l'interface utilisateur de l'utilitaire d'exécution de package (DtExecUI)
   Utilisez l' **Utilitaire d'exécution de package** pour exécuter des packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . L’utilitaire exécute les packages stockés à l’un des trois emplacements suivants : la base de données [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , le magasin de packages [!INCLUDE[ssIS](../../includes/ssis-md.md)] et le système de fichiers. Cette interface utilisateur, qui peut être ouverte à partir de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou en tapant `dtexecui` à l’invite de commandes, est une alternative à l’exécution des packages à l’aide de la **DTExec** outil d’invite de commandes.  
@@ -52,7 +52,7 @@ ms.locfileid: "48217429"
   
 ### <a name="to-open-the-execute-package-utility-at-the-command-prompt"></a>Pour ouvrir l'Utilitaire d'exécution de package à l'invite de commandes  
   
--   Dans une fenêtre d’invite de commandes, exécutez `dtexecui`.  
+-   Dans une fenêtre d'invite de commandes, exécutez `dtexecui`.  
   
  Les sections suivantes décrivent les pages de la boîte de dialogue **Utilitaire d'exécution de package** .  
   
@@ -283,7 +283,7 @@ ms.locfileid: "48217429"
  Ferme la boîte de dialogue **Utilitaire d’exécution de package** .  
   
 ## <a name="logging-page"></a>Page Enregistrement  
- La page **Enregistrement** de la boîte de dialogue **Utilitaire d'exécution de package** permet de créer des modules fournisseur d'informations mis à disposition du package au moment de l'exécution du programme. Vous devez fournir le type du module fournisseur d'informations du package ainsi que la chaîne de connexion afin de pouvoir vous connecter au journal. Chaque entrée de module fournisseur d’informations ajoute une option **/LOGGER***classid* à l’invite de commandes.  
+ La page **Enregistrement** de la boîte de dialogue **Utilitaire d'exécution de package** permet de créer des modules fournisseur d'informations mis à disposition du package au moment de l'exécution du programme. Vous devez fournir le type du module fournisseur d'informations du package ainsi que la chaîne de connexion afin de pouvoir vous connecter au journal. Chaque entrée de module fournisseur d’informations ajoute une option **/LOGGER**_ID_classe_ à l’invite de commandes.  
   
 ### <a name="options"></a>Options  
  **Module fournisseur d’informations**  
@@ -302,7 +302,7 @@ ms.locfileid: "48217429"
  Ferme la boîte de dialogue **Utilitaire d’exécution de package** .  
   
 ## <a name="set-values-page"></a>Page Valeurs définies  
- Utilisez la page **Valeurs définies** de la boîte de dialogue **Utilitaire d'exécution de package** pour définir les valeurs des propriétés des packages, des fichiers exécutables, des connexions, des variables et des modules fournisseur d'informations. Pour cela, tapez les chemins d'accès aux propriétés et leurs valeurs. Chaque entrée de chemin ajoute une option **/SET***propertypath;value* à l’invite de commandes.  
+ Utilisez la page **Valeurs définies** de la boîte de dialogue **Utilitaire d'exécution de package** pour définir les valeurs des propriétés des packages, des fichiers exécutables, des connexions, des variables et des modules fournisseur d'informations. Pour cela, tapez les chemins d'accès aux propriétés et leurs valeurs. Chaque entrée de chemin d’accès ajoute une option **/SET**_chemin_propriété;valeur_ à l’invite de commandes.  
   
 ### <a name="options"></a>Options  
  **Chemin de la propriété**  

@@ -17,12 +17,12 @@ ms.assetid: 6953d8b7-bad8-4b64-bf7b-12fa4f10f65c
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3296807e7470c84a4df2f3960ea01185c5915048
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 469b4dece1dca9aca2aa584e60bd502034fc8645
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47597058"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119086"
 ---
 # <a name="xqueries-involving-hierarchy"></a>Requêtes XQuery impliquant une hiérarchie
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "47597058"
   
  Chaque élément <`Location`> dispose de son propre ensemble d'attributs et d'un élément enfant <`step`>. Cet élément enfant <`step`> représente la première étape de fabrication réalisée sur le poste de travail.  
   
-```  
+```sql
 SELECT Instructions.query('  
      declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
    \<ManuInstr  ProdModelID = "{sql:column("Production.ProductModel.ProductModelID") }"   
@@ -69,7 +69,7 @@ WHERE ProductModelID=7
   
  Voici un extrait du résultat :  
   
-```  
+```xml
 <ManuInstr ProdModelID="7" ProductModelName="HL Touring Frame">  
    <Location LocationID="10" SetupHours="0.5"   
             MachineHours="3" LaborHours="2.5" LotSize="100">  
@@ -88,7 +88,7 @@ WHERE ProductModelID=7
 ### <a name="b-find-all-telephone-numbers-in-the-additionalcontactinfo-column"></a>B. Recherche de tous les numéros de téléphone de la colonne AdditionalContactInfo  
  La requête suivante récupère tous les numéros de téléphone supplémentaires définis pour un contact client spécifique en recherchant l'élément <`telephoneNumber`> dans l'ensemble de la hiérarchie. Dans la mesure où l'élément <`telephoneNumber`> peut apparaître n'importe où dans la hiérarchie, la requête utilise l'opérateur descendant-and-self (//) dans la recherche.  
   
-```  
+```sql
 SELECT AdditionalContactInfo.query('  
  declare namespace ci="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactInfo";  
  declare namespace act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes";  
@@ -102,7 +102,7 @@ WHERE ContactID = 1
   
  Voici le résultat obtenu :  
   
-```  
+```xml
 \<act:number   
   xmlns:act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">  
   111-111-1111  

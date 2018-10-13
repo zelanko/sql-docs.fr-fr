@@ -15,18 +15,18 @@ ms.assetid: a6abcb75-524e-4e0a-a375-c10475ac0a9d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4dcf25989915a7fc9c10b63b3521d7c0eb31a68c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c39ec7718ee2d79ab95c13ebfd3e30afc189d805
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200979"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120036"
 ---
 # <a name="mining-model-content-for-linear-regression-models-analysis-services---data-mining"></a>Contenu du modèle d'exploration de données pour les modèles de régression linéaire (Analysis Services - Exploration de données)
-  Cette rubrique décrit le contenu du modèle d'exploration de données spécifique aux modèles qui utilisent l'algorithme MLR ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression). Pour obtenir une explication générale du contenu du modèle d’exploration de données pour tous les types de modèles, consultez [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
+  Cette rubrique décrit le contenu du modèle d'exploration de données spécifique aux modèles qui utilisent l'algorithme MLR ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression). Pour obtenir une explication générale du contenu du modèle d’exploration de données pour tous les types de modèles, consultez [Contenu du modèle d’exploration &#40;Analysis Services – Exploration de données&#41;](mining-model-content-analysis-services-data-mining.md).  
   
 ## <a name="understanding-the-structure-of-a-linear-regression-model"></a>Présentation de la structure d'un modèle de régression linéaire  
- Un modèle de régression linéaire a une structure extrêmement simple. Chaque modèle possède un nœud parent unique qui représente le modèle et ses métadonnées, ainsi qu'un nœud d'arbre de régression (NODE_TYPE = 25) contenant la formule de régression pour chaque attribut prédictible.  
+ Un modèle de régression linéaire a une structure extrêmement simple. Chaque modèle possède un nœud parent unique qui représente le modèle et ses métadonnées, ainsi qu’un nœud d’arbre de régression (NODE_TYPE = 25) qui contient la formule de régression pour chaque attribut prédictible.  
   
  ![Structure du modèle de régression linéaire](../media/modelcontentstructure-linreg.gif "Structure du modèle de régression linéaire")  
   
@@ -188,9 +188,9 @@ ms.locfileid: "48200979"
  Par conséquent, en supposant que l'âge moyen se situe autour de 45 ans, l'interception (VALUETYPE = 11) pour la formule de régression indique le revenu moyen.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Contenu du modèle d’exploration de données &#40;Analysis Services - Exploration de données&#41;](mining-model-content-analysis-services-data-mining.md)   
- [Algorithme Microsoft Linear Regression](microsoft-linear-regression-algorithm.md)   
- [Référence technique de Microsoft Linear Regression algorithme](microsoft-linear-regression-algorithm-technical-reference.md)   
+ [Contenu du modèle d’exploration &#40;Analysis Services – Exploration de données&#41;](mining-model-content-analysis-services-data-mining.md)   
+ [Algorithme MLR (Microsoft Linear Regression)](microsoft-linear-regression-algorithm.md)   
+ [Références techniques relatives à l'algorithme MLR (Microsoft Linear Regression)](microsoft-linear-regression-algorithm-technical-reference.md)   
  [Exemples de requête de modèle de régression linéaire](linear-regression-model-query-examples.md)  
   
   

@@ -11,12 +11,12 @@ ms.assetid: 860a80dc-bac0-4ef0-bf7f-7a9b430d7aa3
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 67a6dbe4b9133f5ce31d12b1f361cea859026b53
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9bafb97065c86a4d227f79b62c3d388d45c1445f
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195919"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120378"
 ---
 # <a name="modify-the-trace-results-view"></a>Modifier la vue des résultats de trace
   Cette rubrique explique comment modifier la vue des résultats de trace d'une session événements étendus dans [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] en effectuant les tâches suivantes.  
@@ -228,7 +228,7 @@ ms.locfileid: "48195919"
   
     -   **Colonnes de table**. Utilisez cette option pour rechercher toutes les colonnes visibles dans la fenêtre de trace.  
   
-    -   **Détails**. Utilisez cette option pour rechercher toutes les colonnes (promues et non promues) dans la fenêtre de trace qui ont été sélectionnées avant d'ouvrir la boîte de dialogue **Rechercher dans les événements étendus** .  
+    -   **Détails**. Utilisez cette option pour rechercher toutes les colonnes (promues et non promues) dans la fenêtre de trace qui ont été sélectionnées avant d’ouvrir le **rechercher dans les événements étendus** boîte de dialogue.  
   
     -   **\<Nom de colonne d’événement >**. Utilisez cette option pour effectuer une recherche dans une colonne d'événement spécifique dans la liste déroulante.  
   

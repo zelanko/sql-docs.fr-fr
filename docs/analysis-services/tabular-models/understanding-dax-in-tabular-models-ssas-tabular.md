@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: af0bb90170445cbfb073adeb8bfc8f8e4e478efe
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 959189dbc1bae49c15fd23e49b5cdef98973a559
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38984491"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906499"
 ---
 # <a name="dax-in-tabular-models"></a>DAX dans les modèles tabulaires 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -389,8 +389,8 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
  Le [Centre de ressources DAX](http://go.microsoft.com/fwlink/?LinkID=220966&clcid=0x409) fournit des informations internes et externes sur DAX, notamment de nombreuses solutions DAX soumises par des professionnels Business Intelligence.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence de Data Analysis Expressions (DAX)](http://msdn.microsoft.com/70a82136-0926-4a91-bcb3-e18e82593b0d)   
- [Mesures](../../analysis-services/tabular-models/measures-ssas-tabular.md)   
+ [Référence DAX (Data Analysis Expressions)](http://msdn.microsoft.com/70a82136-0926-4a91-bcb3-e18e82593b0d)   
+ [mesures](../../analysis-services/tabular-models/measures-ssas-tabular.md)   
  [Colonnes calculées](../../analysis-services/tabular-models/ssas-calculated-columns.md)   
  [Rôles](../../analysis-services/tabular-models/roles-ssas-tabular.md)   
  [Indicateurs de performance clés](../../analysis-services/tabular-models/kpis-ssas-tabular.md)   

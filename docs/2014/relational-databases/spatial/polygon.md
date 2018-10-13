@@ -14,49 +14,49 @@ ms.assetid: b6a21c3c-fdb8-4187-8229-1c488454fdfb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a78f615493ad531b8607abb0764891ffcb2805f3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 28bbf84564060e2840e0f8c35c5e4679c085a29c
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194479"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906129"
 ---
 # <a name="polygon"></a>Polygon
-  Un `Polygon` est une surface à deux dimensions stockée sous forme de séquence de points définissant un anneau englobant extérieur et zéro ou plusieurs anneaux intérieurs.  
+  Un `Polygon` est une surface à deux dimensions stockée en tant que séquence de points définissant un anneau englobant extérieur et zéro ou plusieurs anneaux intérieurs.  
   
 ## <a name="polygon-instances"></a>Instances Polygon  
- Un `Polygon` instance peut être formée à partir d’un anneau qui possède au moins trois points distincts. Un `Polygon` instance peut également être vide.  
+ Une instance `Polygon` peut être formée à partir d'un anneau qui possède au moins trois points distincts. Une instance `Polygon` peut également être vide.  
   
- Les anneaux extérieurs et intérieurs d’un `Polygon` définissent sa limite. L'espace dans les anneaux définit l'intérieur du `Polygon`.  
+ Les anneaux extérieurs et intérieurs d'un `Polygon` définissent sa limite. L'espace dans les anneaux définit l'intérieur du `Polygon`.  
   
- L’illustration ci-dessous montre des exemples de `Polygon` instances.  
+ L'illustration suivante montre des exemples d'instances `Polygon`.  
   
  ![Exemples d’instances Polygon géométriques](../../database-engine/media/polygon.gif "Exemples d’instances Polygon géométriques")  
   
  Comme indiqué par l'illustration :  
   
-1.  Figure 1 est un `Polygon` instance dont la limite est définie par un anneau extérieur.  
+1.  La Figure 1 est une instance `Polygon` dont la limite est définie par un anneau extérieur.  
   
 2.  La Figure 2 est une instance `Polygon` dont la limite est définie par un anneau extérieur et deux anneaux intérieurs. La zone à l'intérieur des anneaux intérieurs fait partie de l'extérieur de l'instance `Polygon`.  
   
 3.  La Figure 3 est une instance `Polygon` valide car ses anneaux intérieurs se croisent à un point tangent unique.  
   
 ### <a name="accepted-instances"></a>Instances acceptées  
- Les instances `Polygon` acceptées sont des instances qui peuvent être stockées dans une variable `geometry` ou `geography` sans lever d'exception. Les éléments suivants sont acceptés `Polygon` instances :  
+ Les instances `Polygon` acceptées sont des instances qui peuvent être stockées dans une variable `geometry` ou `geography` sans lever d'exception. Les instances `Polygon` suivantes sont acceptées :  
   
--   Vide `Polygon` instance  
+-   Instance `Polygon` vide  
   
 -   Instance `Polygon` qui a un anneau extérieur acceptable et zéro ou plusieurs anneaux intérieurs acceptables  
   
  Les critères suivants sont nécessaires pour qu'un anneau soit acceptable.  
   
--   Le `LineString` instance doit être acceptée.  
+-   L'instance `LineString` doit être acceptée.  
   
 -   L'instance `LineString` doit avoir au moins quatre points.  
   
 -   Les points de début et de fin de l'instance `LineString` doivent être les mêmes.  
   
- L’exemple suivant montre accepté `Polygon` instances.  
+ L'exemple suivant illustre des instances `Polygon` acceptées.  
   
 ```  
 DECLARE @g1 geometry = 'POLYGON EMPTY';  
@@ -66,7 +66,7 @@ DECLARE @g4 geometry = 'POLYGON((-5 -5, -5 5, 5 5, 5 -5, -5 -5),(3 0, 6 0, 6 3, 
 DECLARE @g5 geometry = 'POLYGON((1 1, 1 1, 1 1, 1 1))';  
 ```  
   
- Comme le montrent `@g4` and `@g5`, une instance `Polygon` acceptée peut ne pas être une instance `Polygon` valide. `@g5` montre également qu’une instance Polygon doit contenir uniquement un anneau avec quatre points quelconques à accepter.  
+ Comme le montrent `@g4` and `@g5`, une instance `Polygon` acceptée peut ne pas être une instance `Polygon` valide. `@g5` montre également qu'une instance Polygon doit contenir uniquement un anneau avec quatre points quelconques à accepter.  
   
  Les exemples suivants lèvent une `System.FormatException` parce que les instances `Polygon` ne sont pas acceptées.  
   
@@ -82,9 +82,9 @@ DECLARE @g geometry = 'POLYGON((-5 -5, -5 5, 5 5, 5 -5, -5 -5),(0 0, 3 0, 0 0))'
 ```  
   
 ### <a name="valid-instances"></a>Instances valides  
- Les anneaux intérieurs d’un `Polygon` peuvent se toucher eux-mêmes et l’autre à tangents uniques des points, mais si les anneaux intérieurs d’un `Polygon` croisent, l’instance n’est pas valide.  
+ Les anneaux intérieurs d'un `Polygon` peuvent se toucher eux-mêmes et l'un l'autre à des points tangents uniques, mais si les anneaux intérieurs d'un `Polygon` se croisent, l'instance n'est pas valide.  
   
- L’exemple suivant montre valide `Polygon` instances.  
+ L'exemple suivant montre des instances `Polygon` valides.  
   
 ```  
 DECLARE @g1 geometry = 'POLYGON((-20 -20, -20 20, 20 20, 20 -20, -20 -20))';  
@@ -93,7 +93,7 @@ DECLARE @g3 geometry = 'POLYGON((-20 -20, -20 20, 20 20, 20 -20, -20 -20), (10 0
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid();  
 ```  
   
- `@g3` est valide parce que les deux anneaux intérieurs se touchent à un point unique et ne se croisent pas l’un l’autre. L'exemple suivant montre des instances `Polygon` qui ne sont pas valides.  
+ `@g3` est valide parce que les deux anneaux intérieurs se touchent à un point unique et ne se croisent pas l'un l'autre. L'exemple suivant montre des instances `Polygon` qui ne sont pas valides.  
   
 ```  
 DECLARE @g1 geometry = 'POLYGON((-20 -20, -20 20, 20 20, 20 -20, -20 -20), (20 0, 0 10, 0 -20, 20 0))';  

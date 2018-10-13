@@ -17,12 +17,12 @@ ms.assetid: ea8b7d66-e5a1-402f-9928-8f7310e84f5c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4d10eb18560574e647c443caf4887b8e893d7501
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 63515340bb09598841904e5ef70a54eed8e077bc
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48132109"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906489"
 ---
 # <a name="upgrade-a-sql-server-failover-cluster-instance-setup"></a>Mettre à niveau une instance de cluster de basculement SQL Server (programme d'installation)
   Vous pouvez mettre à niveau un cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vers un cluster de basculement [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] à l'aide de l'Assistant Installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou à partir de l'invite de commandes.  
@@ -44,7 +44,7 @@ ms.locfileid: "48132109"
   
 -   Le programme d'installation installe le .NET Framework 4.0 sur un système d'exploitation en cluster. Pour réduire les temps morts possibles, envisagez d'installer le .NET Framework 4.0 avant d'exécuter le programme d'installation.  
   
--   Pour vous assurer que le composant de Visual Studio peut être installé correctement, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vous oblige à installer une mise à jour. Le programme d'installation [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vérifie si cette la présence de cette mise à jour, puis vous demande de télécharger et d'installer la mise à jour avant de vous laisser poursuivre l'installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Pour éviter l’interruption pendant [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] le programme d’installation, vous pouvez télécharger et installer la mise à jour avant d’exécuter [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] le programme d’installation comme décrit ci-dessous (ou installer les mises à jour pour .NET 3.5 SP1 disponibles sur Windows Update) :  
+-   Pour garantir l'installation correcte du composant Visual Studio, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vous oblige à installer une mise à jour. Le programme d'installation [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vérifie si cette la présence de cette mise à jour, puis vous demande de télécharger et d'installer la mise à jour avant de vous laisser poursuivre l'installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Pour éviter l'interruption pendant l'installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , vous pouvez télécharger et installer la mise à jour avant d'exécuter le programme d'installation [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , tel que décrit ci-dessous (ou installer toutes les mises à jour de .NET 3.5 SP1 disponibles sur Windows Update) :  
   
      Si vous installez [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] sur un ordinateur avec le système d’exploitation Windows Server 2008 SP2, vous pouvez obtenir la mise à jour obligatoire à partir de [ici](http://go.microsoft.com/fwlink/?LinkId=198093)  
   
@@ -59,7 +59,7 @@ ms.locfileid: "48132109"
      Pour déplacer une instance autonome de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vers un cluster de basculement [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)], installez un nouveau cluster de basculement [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)], puis migrez les bases de données utilisateur depuis l'instance autonome à l'aide de l'Assistant Copie de base de données. Pour plus d'informations, consultez [Use the Copy Database Wizard](../../../relational-databases/databases/use-the-copy-database-wizard.md).  
   
 ## <a name="rolling-upgrades"></a>Mises à niveau propagées  
- Pour mettre à niveau un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de cluster de basculement à [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)], vous devez exécuter le programme d’installation avec l’action de mise à niveau sur chaque nœud de cluster de basculement, un à la fois, en commençant par les nœuds passifs. Lorsque vous mettez à niveau chaque nœud, celui-ci est écarté de la liste des propriétaires possibles du cluster de basculement. En cas de basculement inattendu, les nœuds mis à niveau ne participent pas au basculement tant que la propriété du groupe de ressources de cluster n'est pas transférée vers un nœud mis à niveau par le programme d'installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ Pour mettre à niveau un cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vers [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)], vous devez exécuter le programme d'installation avec l'action de mise à niveau sur chacun des nœuds de cluster de basculement, un par un, en commençant par les nœuds passifs. Lorsque vous mettez à niveau chaque nœud, celui-ci est écarté de la liste des propriétaires possibles du cluster de basculement. En cas de basculement inattendu, les nœuds mis à niveau ne participent pas au basculement tant que la propriété du groupe de ressources de cluster n'est pas transférée vers un nœud mis à niveau par le programme d'installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  Par défaut, le programme d'installation détermine automatiquement le moment où le basculement doit être effectué vers un nœud mis à niveau. Cela dépend du nombre total de nœuds dans l'instance de cluster de basculement et du nombre de nœuds qui ont déjà été mis à niveau. Lorsque la moitié des nœuds ou plus a déjà été mise à niveau, le programme d'installation provoque un basculement vers un nœud mis à niveau lorsque vous effectuez une mise à niveau du nœud suivant. Lors du basculement vers un nœud mis à niveau, le groupe de clusters est déplacé vers un nœud mis à niveau. Tous les nœuds mis à niveau sont placés dans la liste des propriétaires possibles ; par ailleurs, tous les nœuds qui ne sont pas encore mis à niveau sont retirés de la liste des propriétaires possibles. Lorsque vous mettez à niveau chaque nœud restant, celui-ci est ajouté aux propriétaires possibles du cluster de basculement.  
   

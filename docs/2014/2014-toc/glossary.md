@@ -24,12 +24,12 @@ ms.assetid: 0e8a7967-b407-4e01-b8c4-3eabe2820df5
 author: heidisteen
 ms.author: heidist
 manager: craigg
-ms.openlocfilehash: e606d82d50d1293c9149476e9c976bfcea61201a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5338e17678f31a4bcdef1a6f7a73696f903bb76a
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085529"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120476"
 ---
 # <a name="glossary"></a>Glossaire
   
@@ -1377,7 +1377,7 @@ ms.locfileid: "48085529"
 |rsconfig (utilitaire)|Outil de gestion des connexions au serveur.|  
 |rsconfig.exe|Outil de gestion des connexions au serveur.|  
 |activation de règle|Processus consistant à exécuter l'une des règles d'application (règles de chronique d'événements, règles d'événement d'abonnement et règles d'abonnements planifiées) définies dans le fichier de définition d'application.|  
-|perte de contrôle de requête|Requête avec un temps d'exécution excessif, pouvant mener à un problème de blocage. Les pertes de contrôle de requête n'utilisent habituellement pas de requête ou de délai d'attente de verrouillage.|  
+|perte de contrôle de requête|Requête avec un temps d'exécution excessif, pouvant mener à un problème de blocage. Généralement, les requêtes de perte de contrôle n’utilisent pas d’un délai de verrouillage.|  
 |erreur d'exécution|Erreur logicielle qui se produit lors de l'exécution d'un programme, détectée par un compilateur ou par un autre programme de supervision.|  
 |code sécurisé|Code exécuté par l'environnement du Common Language Runtime plutôt que directement par le système d'exploitation. Les applications de code managé bénéficient des services Common Language Runtime tels que les opérations garbage collection automatiques, la vérification du type au moment de l'exécution et la prise en charge de la sécurité, etc. Grâce à ces services, les applications de code managé ont un comportement uniforme, indépendant de la plateforme (et du langage).|  
 |échantillonnage|Processus statistique qui permet une connaissance déductive sur un remplissage ou un jeu de données d'intérêt dans son ensemble en observant ou en analysant une partie du remplissage ou du jeu de données.|  
@@ -1472,7 +1472,7 @@ ms.locfileid: "48085529"
 |profil de carte à puce|Profil CLM créé lorsqu'une demande est effectuée à l'aide d'un modèle de profil qui comprend uniquement des modèles de certificats basés sur les cartes à puce.|  
 |lecteur de carte à puce|Périphérique installé dans les ordinateurs afin de permettre l'utilisation de cartes à puce pour les fonctionnalités de sécurité améliorées.|  
 |Smart Card Self Service Control|Logiciel installé sur un ordinateur client qui permet aux utilisateurs finaux et aux administrateurs de gérer des cartes à puce en fournissant une connexion de l'ordinateur client à la carte à puce.|  
-|déblocage de carte à puce|Liaison d'une carte à puce avec des informations d'identification d'administration pour réinitialiser le compteur d'essais de code confidentiel (PIN).|  
+|déblocage de carte à puce|Compteur d’essais de l’action de la liaison d’une carte à puce en tant qu’administrateur pour réinitialiser le numéro d’identification personnel (PIN).|  
 |SMO|Interface de programmation d'applications qui prend en charge l'incorporation de l'administration SQL Server dans toute application COM ou OLE Automation.|  
 |SMTP|Membre de la suite TCP/IP de protocoles qui détermine l'échange de courrier électronique entre des agents de transfert de messages.|  
 |composant logiciel enfichable|Type d'outil que vous pouvez ajouter à une console prise en charge par MMC (Microsoft Management Console). Un composant logiciel enfichable autonome peut être ajouté par lui-même ; un composant logiciel enfichable d'extension peut être ajouté uniquement pour étendre la fonction d'un autre composant logiciel enfichable.|  

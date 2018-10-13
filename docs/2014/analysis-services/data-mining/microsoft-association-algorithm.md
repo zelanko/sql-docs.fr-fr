@@ -31,12 +31,12 @@ ms.assetid: 8b6b8247-62f9-4f6f-b1af-d01dab290e4c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 962060d5b057feddcc5b9366fdfdd7131ee9c67f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4ce0fdddd09dd3145949d56727ae4c3e8b853602
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185029"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120026"
 ---
 # <a name="microsoft-association-algorithm"></a>Algorithme Microsoft Association
   L'algorithme [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association est un algorithme d'association fourni par [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] qui est utile pour les moteurs de recommandation. Un moteur de recommandation recommande des produits aux clients en se basant sur les éléments qu'ils ont déjà achetés ou pour lesquels ils ont manifesté un intérêt. L’algorithme [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association est utile également pour l’analyse du panier d’achat. Pour obtenir un exemple d’une analyse de panier d’achat, consultez [leçon 3 : génération d’un scénario de panier &#40;didacticiel d’exploration de données intermédiaire&#41; ](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md) dans le didacticiel d’exploration de données.  
@@ -79,7 +79,7 @@ ms.locfileid: "48185029"
  Pour des informations générales sur la création d’une requête sur un modèle d’exploration de données, consultez [Requêtes d’exploration de données](data-mining-queries.md).  
   
 ## <a name="performance"></a>Performances  
- Le processus de création de jeux d'éléments et de comptage des corrélations peut être fastidieux. Bien que le [!INCLUDE[msCoName](../../includes/msconame-md.md)] algorithme de règles d’Association utilise des techniques d’optimisation pour économiser de l’espace et accélérer le traitement, vous devez savoir que les problèmes de performances peuvent se produire dans des conditions telles que les suivantes :  
+ Le processus de création de jeux d'éléments et de comptage des corrélations peut être fastidieux. Bien que le [!INCLUDE[msCoName](../../includes/msconame-md.md)] algorithme de règles d’Association utilise des techniques d’optimisation pour économiser de l’espace et accélérer le traitement, vous devez savoir que les problèmes de performances peuvent se produire dans des conditions telles que les éléments suivants :  
   
 -   Le jeu de données est important et comprend de nombreux éléments individuels.  
   
@@ -99,9 +99,9 @@ ms.locfileid: "48185029"
   
 ## <a name="see-also"></a>Voir aussi  
  [Algorithmes d’exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
- [Explorer un modèle à l’aide de la visionneuse de règles Microsoft Association](browse-a-model-using-the-microsoft-association-rules-viewer.md)   
- [Contenu pour les modèles d’Association du modèle d’exploration de données &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)   
- [Référence technique d’algorithme Microsoft Association](microsoft-association-algorithm-technical-reference.md)   
+ [Explorer un modèle à l'aide de la visionneuse de l'algorithme MAR (Microsoft Association Rules)](browse-a-model-using-the-microsoft-association-rules-viewer.md)   
+ [Contenu du modèle d’exploration de données pour les modèles d’association &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)   
+ [Références techniques relatives à l’algorithme Microsoft Association](microsoft-association-algorithm-technical-reference.md)   
  [Exemples de requêtes de modèle d’association](association-model-query-examples.md)  
   
   

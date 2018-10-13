@@ -13,17 +13,17 @@ ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 7e245b5b97a9a65182a68dcc78102eaa6f33fe66
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fe561dcba4a0cff5b58ef7810b27f30b1c95e228
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122379"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906299"
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>Reporting Services dans les outils de données SQL Server (SSDT)
   [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] est un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] environnement avec les fonctions améliorées conçues spécifiquement pour les solutions décisionnelles. [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] est inclus dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Utilisez [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)]pour la création et la gestion de solutions et de projets pour des rapports et des éléments de rapports de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] offre l’environnement de création du Concepteur de rapports. Dans le Concepteur de rapports, vous pouvez ouvrir, modifier, afficher un aperçu, enregistrer, et déployer des définitions de rapport, des sources de données partagées, des datasets partagés et des parties de rapports.  
+ Utilisez [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] pour la création et la gestion de solutions et de projets pour des rapports et des éléments de rapports de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] . [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] offre l'environnement de création du Concepteur de rapports. Dans le Concepteur de rapports, vous pouvez ouvrir, modifier, afficher un aperçu, enregistrer, et déployer des définitions de rapport, des sources de données partagées, des datasets partagés et des parties de rapports.  
   
  Cette rubrique décrit les solutions, les projets, les modèles de projet, et les configurations de [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] utilisés pour [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], ainsi que les vues, les menus, les barres d'outils et les raccourcis que vous pouvez utiliser dans le Concepteur de rapports.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "48122379"
 ##  <a name="bkmk_ReportServerProjects"></a> Projets Report Server  
  Lorsque vous installez [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], les modèles de projet suivants sont disponibles dans [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]:  
   
--   **Projet Report Server.** Lorsque vous sélectionnez un projet Report Server, le Concepteur de rapports s'ouvre. Un projet Report Server est un modèle de projets Business Intelligence installé par [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] qui est disponible à partir de la **nouveau projet** boîte de dialogue. Pour plus d’information, consultez [Ajouter un nouveau rapport ou un rapport existant à un projet de rapport &#40;SSRS&#41;](add-a-new-or-existing-report-to-a-report-project-ssrs.md). Les propriétés du projet Report Server s’appliquent à tous les rapports et à toutes les sources de données partagées au sein d’un projet [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]. Ces propriétés incluent l'URL du serveur de rapports et les noms des dossiers des rapports et des sources de données partagées. Pour afficher les propriétés actuelles du projet, ouvrez la boîte de dialogue **Pages de propriétés du projet** . Pour ouvrir cette boîte de dialogue, dans le **projet** menu, cliquez sur  *\<nom_projet >* **propriétés**.  
+-   **Projet Report Server.** Lorsque vous sélectionnez un projet Report Server, le Concepteur de rapports s'ouvre. Un projet Report Server est un modèle de projets Business Intelligence installé par [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] et disponible dans la boîte de dialogue **Nouveaux projets** . Pour plus d’information, consultez [Ajouter un nouveau rapport ou un rapport existant à un projet de rapport &#40;SSRS&#41;](add-a-new-or-existing-report-to-a-report-project-ssrs.md). Les propriétés du projet Report Server s’appliquent à tous les rapports et à toutes les sources de données partagées au sein d’un projet [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]. Ces propriétés incluent l'URL du serveur de rapports et les noms des dossiers des rapports et des sources de données partagées. Pour afficher les propriétés actuelles du projet, ouvrez la boîte de dialogue **Pages de propriétés du projet** . Pour ouvrir cette boîte de dialogue, dans le **projet** menu, cliquez sur  *\<nom_projet >* **propriétés**.  
   
 -   **Assistant Projet Report Server.** Lorsque vous sélectionnez l'Assistant Projet Report Server, un projet de serveur de rapports est automatiquement créé et l'Assistant Rapport s'ouvre. Dans l'Assistant, pour créer un rapport, suivez les instructions de chaque page pour créer une chaîne de connexion dans une source de données, définir les informations d'identification de la source de données, créer une requête, ajouter une région de données de table ou de matrice, spécifier des données de rapport et des groupes, choisir une police et un style de couleur, publier le rapport sur un serveur de rapports et afficher un aperçu local du rapport. Après avoir créé un rapport au moyen de l'Assistant, vous pouvez modifier les données du rapport et le Concepteur de rapports à l'aide de l'outil Concepteur de rapports dans le projet Report Server.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "48122379"
  ![Icône de flèche utilisée avec le lien Retour au début](../../2014-toc/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour au début") [Retour au début](#bkmk_Top)  
   
 ##  <a name="bkmk_ReportDesignerWindowsandPanes"></a> Fenêtres et volets du Concepteur de rapports  
- Le Concepteur de rapports prend en charge deux modes : le mode **Conception** définit les données et la mise en page du rapport ; le mode **Aperçu** affiche un rendu du rapport. Chaque mode vous permet d'afficher plusieurs fenêtres pour vous aider à concevoir un rapport ou générer son rendu.  
+ Concepteur prend en charge deux vues de rapport : **conception** pour définir les données de rapport et la disposition du rapport, et **aperçu** affiche un rendu du rapport. Chaque mode vous permet d'afficher plusieurs fenêtres pour vous aider à concevoir un rapport ou générer son rendu.  
   
 ###  <a name="bkmk_ReportDataPane"></a> Données du rapport, volet  
  Le volet des données de rapport affiche des champs intégrés, des sources de données, des datasets, des collections de champs, des paramètres de rapport et des images.  
@@ -252,7 +252,7 @@ ms.locfileid: "48122379"
  ![Icône de flèche utilisée avec le lien Retour au début](../../2014-toc/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour au début") [Retour au début](#bkmk_Top)  
   
 ##  <a name="bkmk_SourceControl"></a> contrôle de code source ;  
- [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] peut intégrer des plug-ins de source. Utilisez les pages Projets et Solutions de la boîte de dialogue **Options** pour spécifier le plug-in et configurer les paramètres.  
+ [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] peut intégrer des plug-ins de source. Utilisez les pages Projets et Solutions de la boîte de dialogue Options** pour spécifier le plug-in et configurer les paramètres.  
   
 ##  <a name="bkmk_CustomReportTemplates"></a> Modèles de rapports personnalisés  
  Pour utiliser des rapports personnalisés comme modèles pour de nouveaux rapports, il suffit de les copier dans le dossier ReportProject sur l'ordinateur sur lequel [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] est installé. Par défaut, ce dossier se trouve dans \<lecteur > : \Program Files\Microsoft Visual Studio 10.0\Common7\IDE\Private Assemblies\ProjectItems\ReportProject. Lorsque vous ajoutez un nouvel élément au projet de rapport, votre rapport personnalisé s'affiche dans le volet Modèles.  
@@ -268,7 +268,7 @@ ms.locfileid: "48122379"
   
 -   Au moins un jeu de propriétés de configuration, par exemple, Debug ou Release.  
   
- Pour plus d’informations, consultez [Publishing Data Sources and Reports](../reports/publishing-data-sources-and-reports.md).  
+ Pour plus d'informations, consultez [Publishing Data Sources and Reports](../reports/publishing-data-sources-and-reports.md).  
   
  Pour un projet de serveur de rapports, vous pouvez spécifier les options suivantes à partir de la ligne de commande :  
   
@@ -295,7 +295,7 @@ ms.locfileid: "48122379"
 ##  <a name="bkmk_KeyboardShortcuts"></a> Raccourcis clavier dans Reporting Services  
  Utilisez les raccourcis clavier pour :  
   
--   Contrôler les fenêtres et les modes dans [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] :  
+-   Contrôler les fenêtres et les modes dans [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)]:  
   
     |Description|Combinaison de touches|  
     |-----------------|---------------------|  
@@ -327,6 +327,6 @@ ms.locfileid: "48122379"
  [Explorateur de solutions](../../ssms/solution/solution-explorer.md)   
  [Rapports Reporting Services &#40;SSRS&#41;](../reports/reporting-services-reports-ssrs.md)   
  [Langage de définition de rapport &#40;SSRS, Report Definition Language&#41;](../reports/report-definition-language-ssrs.md)   
- [Déploiement et prise en charge des versions dans SQL Server Data Tools &#40;SSRS&#41;](deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  
+ [Déploiement et prise en charge des versions dans les outils de données SQL Server &#40;SSRS&#41;](deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  
   
   

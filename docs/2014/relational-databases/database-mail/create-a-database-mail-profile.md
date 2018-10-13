@@ -15,12 +15,12 @@ ms.assetid: 58ae749d-6ada-4f9c-bf00-de7c7a992a2d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4b8d8daec2367212b405f2cf39b8f4229cc7dace
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 667dbd4e0b323f50721af716a30709ba9ea6d5c8
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144239"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49071813"
 ---
 # <a name="create-a-database-mail-profile"></a>Créer un profil de messagerie de base de données
   Utilisez l' **Assistant Configuration de la messagerie de base de données** ou [!INCLUDE[tsql](../../includes/tsql-md.md)] pour créer des profils privés et publics de messagerie de base de données.  
@@ -191,7 +191,7 @@ EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
   
      *@is_default* = '*état_du_profil_par_défaut* '  
   
-     où *@profile_name* est le nom du profil, et *@principal_name* indique s’il s’agit d’un profil public, et *@is_default* détermine si ce profil est ou non le paramètre par défaut pour le rôle ou l’utilisateur de base de données.  
+     où *@profile_name* est le nom du profil, et *@principal_name* pour indiquer il s’agit d’un profil public, *@is_default* détermine si cela profil est la valeur par défaut pour le rôle ou un utilisateur de base de données.  
   
  L'exemple suivant crée un compte et un profil privé de messagerie de base de données, puis ajoute le compte au profil et octroie l'accès public au profil.  
   

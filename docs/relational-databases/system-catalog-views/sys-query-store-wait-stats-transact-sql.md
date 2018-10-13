@@ -16,40 +16,42 @@ helpviewer_keywords:
 - query_store_wait_stats catalog view
 - sys.query_store_wait_stats catalog view
 ms.assetid: ccf7a57c-314b-450c-bd34-70749a02784a
-author: AndrejsAnt
-ms.author: AndrejsAnt
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4972618d10d6d9e0f03a6211423fc1cd8628eeb8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 96f6b91d68159bd1326b30ffc8b7e89e61cb8402
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47640507"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169139"
 ---
 # <a name="sysquerystorewaitstats-transact-sql"></a>Sys.query_store_wait_stats (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
   Contient des informations sur les informations d’attente pour la requête.  
   
 |Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**wait_stats_id**|**bigint**|Identificateur de la ligne représentant les statistiques d’attente pour le plan_id runtime_stats_interval_id, execution_type et wait_category. Il est unique seulement pour les intervalles de statistiques de runtime passées. Pour l’intervalle actuellement actif peut être plusieurs lignes représentant des statistiques d’attente pour le plan référencé par plan_id, avec le type d’exécution représenté par execution_type et la catégorie d’attente représenté par wait_category. En règle générale, une ligne représente les statistiques d’attente sont vidés sur le disque, tandis que les autres (s) représentent l’état en mémoire. Pour obtenir l’état réel pour chaque intervalle vous devez donc d’agréger les mesures, regroupement par plan_id, runtime_stats_interval_id, execution_type et wait_category. |  
+|**wait_stats_id**|**bigint**|Identificateur de la ligne représentant les statistiques d’attente pour le plan_id runtime_stats_interval_id, execution_type et wait_category. Il est unique seulement pour les intervalles de statistiques de runtime passées. Pour l’intervalle actuellement actif, il existe peut-être plusieurs lignes représentant des statistiques d’attente pour le plan référencé par plan_id, avec le type d’exécution représenté par execution_type et la catégorie d’attente représenté par wait_category. En règle générale, une ligne représente les statistiques d’attente sont vidés sur le disque, tandis que les autres (s) représentent l’état en mémoire. Pour obtenir l’état réel pour chaque intervalle vous devez donc d’agréger les mesures, regroupement par plan_id, runtime_stats_interval_id, execution_type et wait_category. |  
 |**plan_id**|**bigint**|Clé étrangère. Joint à [sys.query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md).|  
 |**runtime_stats_interval_id**|**bigint**|Clé étrangère. Joint à [sys.query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md).|  
-|**wait_category**|**tinyint**|Types d’attente sont classés à l’aide de la table ci-dessous, et ensuite les temps d’attente est agrégé dans ces catégories d’attente. Différentes catégories d’attente nécessitent une analyse de suivi différente pour résoudre le problème, mais les types d’attente d’une même catégorie entraînent des expériences de résolution de problèmes très similaires à condition que la requête affectée au dessus des attentes soit l’élément manquant de la plupart de ces expériences.|
-|**wait_category_desc**|**nvarchar(128)**|Pour une description textuelle du champ de catégorie d’attente, consultez le tableau ci-dessous.|
+|**wait_category**|**tinyint**|Types d’attente sont classés à l’aide de la table ci-dessous, et ensuite les temps d’attente est agrégé dans ces catégories d’attente. Différentes catégories d’attente nécessitent une analyse de suivi différente pour résoudre le problème, mais les types à partir du même prospect de catégorie à des expériences de résolution des problèmes similaires d’attente, et en fournissant la requête affectée en outre à des attentes est la pièce manquante pour terminer le majorité de ces expériences avec succès.|
+|**wait_category_desc**|**nvarchar(128)**|Pour obtenir une description textuelle du champ de catégorie d’attente, consultez le tableau ci-dessous.|
 |**execution_type**|**tinyint**|Détermine le type d’exécution de requête :<br /><br /> 0 – exécution normale (achevée correctement)<br /><br /> 3 – initié par le client annulé l’exécution<br /><br /> 4 - exception abandonnée de l’exécution|  
 |**execution_type_desc**|**nvarchar(128)**|Description textuelle du champ de type d’exécution :<br /><br /> 0 – standard<br /><br /> 3 – abandonnée<br /><br /> 4 - exception|  
-|**total_query_wait_time_ms**|**bigint**|Temps processeur total délai d’attente pour le plan de requête dans l’intervalle d’agrégation et de catégorie (indiqué en millisecondes) d’attente.|
+|**total_query_wait_time_ms**|**bigint**|Total `CPU wait` heure pour le plan de requête dans l’intervalle d’agrégation et de catégorie (indiqué en millisecondes) d’attente.|
 |**avg_query_wait_time_ms**|**float**|Durée du plan de requête par l’exécution dans la catégorie d’intervalle et l’attente d’agrégation (indiquée en millisecondes) d’attente moyen.|
 |**last_query_wait_time_ms**|**bigint**|Dernière durée du plan de requête dans l’intervalle d’agrégation d’attente et la catégorie (indiqué en millisecondes) d’attente.|
-|**min_query_wait_time_ms**|**bigint**|Processeur minimal temps d’attente pour le plan de requête dans l’intervalle d’agrégation et de catégorie (indiqué en millisecondes) d’attente.|
-|**max_query_wait_time_ms**|**bigint**|Processeur maximal temps d’attente pour le plan de requête dans l’intervalle d’agrégation et la catégorie (indiqué en millisecondes) d’attente.|
-|**stdev_query_wait_time_ms**|**float**|Attendre la durée écart type pour le plan de requête dans l’intervalle d’agrégation de requêtes et de catégorie (indiqué en millisecondes) d’attente.|
+|**min_query_wait_time_ms**|**bigint**|Minimum `CPU wait` heure pour le plan de requête dans l’intervalle d’agrégation et de catégorie (indiqué en millisecondes) d’attente.|
+|**max_query_wait_time_ms**|**bigint**|Attente du processeur maximal '''' du temps pour le plan de requête dans l’intervalle d’agrégation et catégorie (indiqué en millisecondes) d’attente.|
+|**stdev_query_wait_time_ms**|**float**|`Query wait` écart de durée de la requête planifier au sein de l’intervalle d’agrégation et catégorie (indiqué en millisecondes) d’attente.|
 
- ## <a name="wait-categories-mapping-table"></a>Table de mappage des catégories d’attente  
-  *« % » est utilisé comme un caractère générique*
+## <a name="wait-categories-mapping-table"></a>Table de mappage des catégories d’attente
+
+« % » est utilisé comme un caractère générique
   
 |Valeur entière|Catégorie d’attente|Incluent des types d’attente dans la catégorie|  
 |-----------------|---------------|-----------------|  
@@ -78,21 +80,20 @@ ms.locfileid: "47640507"
 |**22**|**Réplication**|SE_REPL_ %, REPL_ %, HADR_ % **(mais pas HADR_THROTTLE_LOG_RATE_GOVERNOR)**, PWAIT_HADR_ %, REPLICA_WRITES, FCB_REPLICA_WRITE, FCB_REPLICA_READ, PWAIT_HADRSIM|
 |**23**|**Administrateur du taux de journal**|LOG_RATE_GOVERNOR, POOL_LOG_RATE_GOVERNOR, HADR_THROTTLE_LOG_RATE_GOVERNOR, INSTANCE_LOG_RATE_GOVERNOR|
 
-***Compilation** catégorie d’attente n’est actuellement pas pris en charge. 
+**Compilation** catégorie d’attente n’est actuellement pas pris en charge.
 
-  
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permissions
+
  Nécessite le **VIEW DATABASE STATE** autorisation.  
   
-## <a name="see-also"></a>Voir aussi  
- [sys.database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
- [sys.query_context_settings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)   
- [sys.query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)   
- [Sys.query_store_query &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)   
- [sys.query_store_query_text &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)   
- [sys.query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
- [Analyse des performances à l'aide du magasin de requêtes](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
- [Affichages catalogue &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Procédures stockées de Query Store &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)  
-  
-  
+## <a name="see-also"></a>Voir aussi
+
+- [sys.database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)
+- [sys.query_context_settings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)
+- [sys.query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)
+- [sys.query_store_query &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)
+- [sys.query_store_query_text &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)
+- [sys.query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)
+- [Analyse des performances à l'aide du magasin de requêtes](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)
+- [Affichages catalogue &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)
+- [Procédures stockées de Query Store &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)  

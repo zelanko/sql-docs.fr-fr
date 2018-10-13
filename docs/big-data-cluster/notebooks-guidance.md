@@ -7,12 +7,12 @@ manager: craigg
 ms.date: 10/05/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 989ee419406d0f69cd7bda26485d3d44cbf56550
-ms.sourcegitcommit: c7d3a903eb7f410db3a0230101d24de0af17621a
+ms.openlocfilehash: 137da00959f6f8d3498bb3d063ceb21337266aef
+ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48827330"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48878012"
 ---
 # <a name="how-to-use-notebooks-in-sql-server-2019-preview"></a>Comment utiliser des blocs-notes en version préliminaire de SQL Server 2019
 
@@ -76,6 +76,9 @@ Lorsque vous sélectionnez une de ces noyaux, nous allons installer ce noyau dan
 La sélection pour attacher fournit le contexte pour le noyau à attacher. Lorsque vous êtes connecté pour le point de terminaison du cluster volumineuses de données SQL Server, la sélection par défaut à attacher sera ce point de terminaison du cluster.
 
 ![image7](media/notebooks-guidance/image7.png)
+
+> [!NOTE]
+> Par défaut, l’application Spark est configurée avec le 1 pilote et 3 exécuteurs qui prendront environ 8,5 Go de mémoire. La configuration recommandée pour exécuter plusieurs sessions de spark est pour chaque serveur dans le cluster pour avoir au moins 32 Go de mémoire (par exemple, dans un environnement AKS utiliser **Standard_D8_v3** tailles de machines virtuelles, qui ont de 32 Go de mémoire).
 
 ## <a name="hello-world-in-the-different-contexts"></a>Hello world dans les différents contextes
 

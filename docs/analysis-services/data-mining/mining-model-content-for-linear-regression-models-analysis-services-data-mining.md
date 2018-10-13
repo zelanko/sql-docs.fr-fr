@@ -1,5 +1,5 @@
 ---
-title: Contenu du modèle pour les modèles de régression linéaire d’exploration de données | Documents Microsoft
+title: Contenu du modèle pour les modèles de régression linéaire d’exploration de données | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,19 +9,19 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 8d1bfeedf1bcd394970b4c6f3e907926f53c54e1
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: c016d54d9272409e3edc3d6fc379980b952dd917
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019396"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120179"
 ---
 # <a name="mining-model-content-for-linear-regression-models-analysis-services---data-mining"></a>Contenu du modèle d'exploration de données pour les modèles de régression linéaire (Analysis Services - Exploration de données)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Cette rubrique décrit le contenu du modèle d'exploration de données spécifique aux modèles qui utilisent l'algorithme MLR ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression). Pour obtenir une explication générale du contenu du modèle d’exploration de données pour tous les types de modèles, consultez [Contenu du modèle d’exploration &#40;Analysis Services – Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
   
 ## <a name="understanding-the-structure-of-a-linear-regression-model"></a>Présentation de la structure d'un modèle de régression linéaire  
- Un modèle de régression linéaire a une structure extrêmement simple. Chaque modèle possède un nœud parent unique qui représente le modèle et ses métadonnées, ainsi qu'un nœud d'arbre de régression (NODE_TYPE = 25) contenant la formule de régression pour chaque attribut prédictible.  
+ Un modèle de régression linéaire a une structure extrêmement simple. Chaque modèle possède un nœud parent unique qui représente le modèle et ses métadonnées, ainsi qu’un nœud d’arbre de régression (NODE_TYPE = 25) qui contient la formule de régression pour chaque attribut prédictible.  
   
  ![Structure du modèle de régression linéaire](../../analysis-services/data-mining/media/modelcontentstructure-linreg.gif "Structure du modèle de régression linéaire")  
   
@@ -54,7 +54,7 @@ ms.locfileid: "34019396"
  NODE_TYPE  
  Un modèle de régression linéaire génère les types de nœuds suivants :  
   
-|ID du type de nœud|Type| Description|  
+|ID du type de nœud|Type|Description|  
 |------------------|----------|-----------------|  
 |25|Racine de l'arbre de régression|Contient la formule qui décrit la relation entre la variable d’entrée et la variable de sortie.|  
   
@@ -183,9 +183,9 @@ ms.locfileid: "34019396"
  Par conséquent, en supposant que l'âge moyen se situe autour de 45 ans, l'interception (VALUETYPE = 11) pour la formule de régression indique le revenu moyen.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Contenu du modèle d’exploration de données & #40 ; Analysis Services - Exploration de données & #41 ;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
- [Algorithme de régression linéaire Microsoft](../../analysis-services/data-mining/microsoft-linear-regression-algorithm.md)   
- [Référence technique de Microsoft Linear Regression algorithme](../../analysis-services/data-mining/microsoft-linear-regression-algorithm-technical-reference.md)   
+ [Contenu du modèle d’exploration &#40;Analysis Services – Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
+ [Algorithme MLR (Microsoft Linear Regression)](../../analysis-services/data-mining/microsoft-linear-regression-algorithm.md)   
+ [Références techniques relatives à l'algorithme MLR (Microsoft Linear Regression)](../../analysis-services/data-mining/microsoft-linear-regression-algorithm-technical-reference.md)   
  [Exemples de requête de modèle de régression linéaire](../../analysis-services/data-mining/linear-regression-model-query-examples.md)  
   
   

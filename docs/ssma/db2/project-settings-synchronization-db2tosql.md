@@ -10,12 +10,12 @@ ms.assetid: a5629a72-8c17-46a4-bb4d-19d51a0b98a2
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 0aa572611a522e1a83f334e13c36a7fc178c6090
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5dce11338b2d67412df1259e48d50c0734778d0d
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47791767"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49071763"
 ---
 # <a name="project-settingssynchronization-db2tosql"></a>Projet (synchronisation) (DB2ToSQL)
 La page de synchronisation de la **paramètres du projet** boîte de dialogue contient des paramètres qui personnalisent le SSMA charge et les actualisations de la base de données objets, tels que les tables et procédures stockées, dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -57,7 +57,7 @@ Spécifie le paramètre par défaut dans la boîte de dialogue de synchronisatio
 **Action lorsque les métadonnées de l’objet local sont manquantes**  
 Spécifie le paramètre par défaut dans la boîte de dialogue de synchronisation lorsque les métadonnées locales sont manquante. Ensemble de valeur par défaut est **Actualiser à partir de la base de données**.  
   
--   Si vous sélectionnez **Actualiser à partir de la base de données**, SSMA SSMA chargera les définitions de base de données dans les métadonnées lorsque la condition est remplie.  
+-   Si vous sélectionnez **Actualiser à partir de la base de données**, SSMA chargera les définitions de base de données dans les métadonnées lorsque la condition est remplie.  
   
 -   Si vous sélectionnez **Skip**, SSMA n’effectuera pas les actions d’actualisation.  
   

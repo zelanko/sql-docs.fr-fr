@@ -1,5 +1,5 @@
 ---
-title: L’extraction sur les modèles d’exploration de données | Documents Microsoft
+title: Extraction sur les modèles d’exploration de données | Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,21 +9,21 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 2abd3430c1882148cd564c973ecf5824f3a55d4a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: ccb3e36739043684f2a86a082dd04ab749a0b031
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014806"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085435"
 ---
 # <a name="drillthrough-on-mining-models"></a>Extraction sur des modèles d'exploration de données
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   *L'extraction* désigne la capacité d'interroger un modèle d'exploration de données ou une structure d'exploration de données pour obtenir des informations détaillées qui ne sont pas exposées dans le modèle.  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]fournit deux options différentes pour l’extraction des données de cas. Vous pouvez extraire les cas utilisés pour générer les données ou les cas de la structure d'exploration de données.  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] fournit deux options différentes pour l'extraction des données de cas. Vous pouvez extraire les cas utilisés pour générer les données ou les cas de la structure d'exploration de données.  
   
 ## <a name="drillthrough-to-model-cases-vs-drillthrough-to-structure"></a>Extraction dans des cas de modèle et dans la structure  
- L'extraction dans des **cas de modèle** est utile pour rechercher des informations supplémentaires sur les règles, les modèles ou les clusters dans un modèle. Par exemple, vous n'utiliseriez pas les informations de contact client pour une analyse dans un modèle de clustering, même si les données étaient disponibles, mais à l'aide de l'extraction, vous pouvez accéder à ces informations à partir du modèle.  
+ L'extraction dans des **cas de modèle** est utile pour rechercher des informations supplémentaires sur les règles, les modèles ou les clusters dans un modèle. Par exemple, vous utiliseriez pas les informations de contact client pour l’analyse dans un modèle de clustering, même si les données étaient disponibles, à l’aide d’extraction, vous pouvez accéder à ces informations à partir du modèle.  
   
  Par opposition, **l'extraction dans les données de la structure** est conçue pour fournir un accès aux informations qui n'ont pas été mises à disposition dans le modèle. Par exemple, certaines colonnes de structure peuvent avoir été exclues d'un modèle, car le type de données était incompatible ou les données ne présentaient aucune utilité pour l'analyse.  
   
@@ -56,13 +56,13 @@ ms.locfileid: "34014806"
   
 |Tâches|Liens|  
 |-----------|-----------|  
-|Utiliser l'extraction dans les visionneuses de modèle d'exploration de données|[Utiliser l’extraction des visionneuses de modèle](../../analysis-services/data-mining/use-drillthrough-from-the-model-viewers.md)|  
-|Récupérer les données de cas pour un modèle à l'aide de l'extraction|[Extraction des données de cas à partir d’un modèle d’exploration de données](../../analysis-services/data-mining/drill-through-to-case-data-from-a-mining-model.md)|  
+|Utiliser l'extraction dans les visionneuses de modèle d'exploration de données|[Utiliser l'extraction des visionneuses de modèle](../../analysis-services/data-mining/use-drillthrough-from-the-model-viewers.md)|  
+|Récupérer les données de cas pour un modèle à l'aide de l'extraction|[Extraire des données de cas à partir d'un modèle d'exploration de données](../../analysis-services/data-mining/drill-through-to-case-data-from-a-mining-model.md)|  
 |Activer l'extraction sur un modèle d'exploration de données existant|[Activer l’extraction pour un modèle d’exploration de données](../../analysis-services/data-mining/enable-drillthrough-for-a-mining-model.md)|  
 |Consulter les exemples de requêtes d'extraction pour les types de modèles spécifiques.|[Requêtes d’exploration de données](../../analysis-services/data-mining/data-mining-queries.md)|  
 |Activer l'extraction dans l'Assistant Modèle d'exploration de données|[Fin de l’Assistant &#40;Assistant Exploration de données&#41;](http://msdn.microsoft.com/library/6aef1548-35eb-42fd-ae87-63650a79eda1).|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Extraction sur les Structures d’exploration de données](../../analysis-services/data-mining/drillthrough-on-mining-structures.md)  
+ [Extraction sur des structures d’exploration de données](../../analysis-services/data-mining/drillthrough-on-mining-structures.md)  
   
   

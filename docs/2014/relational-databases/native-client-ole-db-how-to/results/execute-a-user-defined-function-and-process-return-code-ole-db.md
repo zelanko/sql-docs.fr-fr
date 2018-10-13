@@ -12,12 +12,12 @@ ms.assetid: d96c33fd-ed17-4713-8921-bf2dc3347f78
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 57b54049542c08042a3edbca8310af9c16f9c62d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 34b81207ab9d633bf8e110b3e3ed0c29e70a3b5b
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172249"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49084939"
 ---
 # <a name="execute-a-user-defined-function-and-process-return-code-ole-db"></a>Exécuter une fonction définie par l'utilisateur et traiter le code de retour (OLE DB)
   Dans cet exemple, une fonction définie par l'utilisateur est exécutée et le code de retour est imprimé. Cet exemple n'est pas pris en charge sur la plateforme IA64.  
@@ -30,7 +30,7 @@ ms.locfileid: "48172249"
 ## <a name="example"></a>Exemple  
  Exécutez la première liste de code ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) pour créer la procédure stockée utilisée par l'application.  
   
- Compilez avec ole32.lib oleaut32.lib et exécutez la deuxième liste de code (C++). Cette application vous permet de vous connecter à l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] par défaut de votre ordinateur. Sur certains systèmes d'exploitation Windows, vous devrez remplacer (localhost) ou (local) par le nom de votre instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Pour vous connecter à une instance nommée, changez la chaîne de connexion de L"(local)" en L"(local)\\\nom", où nom correspond à l’instance nommée. Par défaut, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express est installé dans une instance nommée. Assurez-vous que votre variable d'environnement INCLUDE inclut le répertoire qui contient sqlncli.h.  
+ Compilez avec ole32.lib oleaut32.lib et exécutez la deuxième liste de code (C++). Cette application vous permet de vous connecter à l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] par défaut de votre ordinateur. Sur certains systèmes d'exploitation Windows, vous devrez remplacer (localhost) ou (local) par le nom de votre instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Pour vous connecter à une instance nommée, changez la chaîne de connexion de L"(local)" en L"(local)\\\nom", où nom correspond à l’instance nommée. Par défaut, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express est installé dans une instance nommée. Assurez-vous que votre variable d'environnement INCLUDE inclut le répertoire qui contient sqlncli.h.  
   
  Exécutez la troisième liste de code ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) pour supprimer la procédure stockée utilisée par l'application.  
   
@@ -264,7 +264,7 @@ int main() {
   
    if (FAILED(pIDBInitialize->Uninitialize()))  
       // Uninitialize is not required, but it fails if an interface  
-      // has not not been released.  This can be used for debugging.  
+      // has not been released.  This can be used for debugging.  
       cout << "Problem uninitializing\n";  
   
    pIDBInitialize->Release();  

@@ -15,12 +15,12 @@ ms.assetid: 0093b43c-c6b5-4574-9b30-3a0e91e1a1f9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6ea98b28fc53f73635313663354df1b9ab43b9bf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bc7f87e7e648e81b4af7411a9f9474b6cc9818da
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48115685"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48905912"
 ---
 # <a name="configure-a-windows-firewall-for-database-engine-access"></a>Configurer un pare-feu Windows pour accéder au moteur de base de données
   Cette rubrique explique comment configurer un pare-feu Windows pour l'accès du moteur de base de données dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide du Gestionnaire de configuration SQL Server. Les systèmes de pare-feu empêchent les accès non autorisés aux ressources de l'ordinateur. Pour accéder à une instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] par le biais d'un pare-feu, vous devez configurer le pare-feu de l'ordinateur exécutant [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour autoriser l'accès.  
@@ -47,7 +47,7 @@ ms.locfileid: "48115685"
   
      [Sécurité](#Security)  
   
--   **Pour configurer un pare-feu Windows pour l'accès au moteur de base de données, utilisez :**  
+-   **Pour configurer un pare-feu Windows pour accéder au moteur de base de données de, à l’aide de :**  
   
      [Gestionnaire de configuration SQL Server](#SSMSProcedure)  
   

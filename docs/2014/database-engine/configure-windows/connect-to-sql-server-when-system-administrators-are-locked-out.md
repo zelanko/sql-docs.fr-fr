@@ -15,12 +15,12 @@ ms.assetid: c0c0082e-b867-480f-a54b-79f2a94ceb67
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6805a64e8f7fd27513d87bfdb87dec7087addfa7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f7dada71a017f37969f94382e23cd07ad75dd356
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171989"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119786"
 ---
 # <a name="connect-to-sql-server-when-system-administrators-are-locked-out"></a>Se connecter à SQL Server lorsque les administrateurs système n'y ont plus accès
   Cette rubrique explique comment avoir à nouveau accès à [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] en tant qu’administrateur système. Un administrateur système peut perdre l'accès à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour l'une des raisons suivantes :  
@@ -62,11 +62,11 @@ ms.locfileid: "48171989"
 5.  Sur le **paramètres de démarrage** sous l’onglet le **spécifier un paramètre de démarrage** , tapez `-m` puis cliquez sur `Add`. (Il s'agit d'un trait d'union suivi d'un m minuscule)  
   
     > [!NOTE]  
-    >  Certaines versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'ont pas d'onglet **Paramètres de démarrage** . Dans ce cas, sous l’onglet **Avancé** , double-cliquez sur **Paramètres de démarrage**. Les paramètres s'ouvrent dans une fenêtre très petite. Veillez à ne pas modifier les paramètres existants. À la fin, ajoutez un nouveau paramètre `;-m` puis cliquez sur `OK`. (Il s'agit d'un point-virgule, suivi d'un trait d'union et d'un m minuscule.)  
+    >  Certaines versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'ont pas d'onglet **Paramètres de démarrage** . Dans ce cas, sous l’onglet Avancé** , double-cliquez sur **Paramètres de démarrage**. Les paramètres s'ouvrent dans une fenêtre très petite. Veillez à ne pas modifier les paramètres existants. Tout en bas, ajoutez un nouveau paramètre `;-m`, puis cliquez sur `OK`. (Il s'agit d'un point-virgule, suivi d'un trait d'union et d'un m minuscule.)  
   
 6.  Cliquez sur `OK`et après le message de redémarrage, le bouton droit sur votre serveur, puis cliquez sur **redémarrer**.  
   
-7.  Après le redémarrage de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , votre serveur passe en mode mono-utilisateur. Vérifiez que l’Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n’est pas en cours d’exécution. S'il est démarré, il utilise votre unique connexion.  
+7.  Après le redémarrage de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , votre serveur passe en mode mono-utilisateur. Assurez-vous que l’option [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent n’est pas en cours d’exécution. S'il est démarré, il utilise votre unique connexion.  
   
 8.  Sur l'écran de démarrage de Windows 8, cliquez avec le bouton droit sur l'icône de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Au bas de l'écran, sélectionnez **Exécuter en tant qu'administrateur**. (Cette opération transfère vos informations d'identification d'administrateur à SSMS.)  
   
@@ -110,7 +110,7 @@ ms.locfileid: "48171989"
 11. Sur le **paramètres de démarrage** sous l’onglet le **paramètres existants** boîte, sélectionnez `-m` puis cliquez sur `Remove`.  
   
     > [!NOTE]  
-    >  Certaines versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'ont pas d'onglet **Paramètres de démarrage** . Dans ce cas, sous l’onglet **Avancé** , double-cliquez sur **Paramètres de démarrage**. Les paramètres s'ouvrent dans une fenêtre très petite. Supprimer le `;-m` que vous avez ajouté précédemment, puis cliquez sur `OK`.  
+    >  Certaines versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'ont pas d'onglet **Paramètres de démarrage** . Dans ce cas, sous l’onglet Avancé** , double-cliquez sur **Paramètres de démarrage**. Les paramètres s'ouvrent dans une fenêtre très petite. Supprimer le `;-m` que vous avez ajouté précédemment, puis cliquez sur `OK`.  
   
 12. Cliquez avec le bouton droit sur le nom de votre serveur, puis cliquez sur **Redémarrer**.  
   

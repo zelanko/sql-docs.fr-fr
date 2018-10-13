@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e4c538f7433034744e5a2799c38e6b5f5826ba48
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 317defb8c3efd99274421f169424cc09ec4caf58
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705877"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072063"
 ---
 # <a name="spdescribefirstresultset-transact-sql"></a>sp_describe_first_result_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -75,8 +75,8 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 |**system_type_id**|**int non NULL**|Contient le system_type_id du type de données de la colonne comme spécifié dans sys.types. Pour les types CLR, bien que la colonne system_type_name retourne NULL, cette colonne retournera la valeur 240.|  
 |**system_type_name**|**nvarchar (256) NULL**|Contient le nom et les arguments (tels que la longueur, la précision, l'échelle) spécifiés pour le type de données de la colonne. Si le type de données est un type d'alias défini par l'utilisateur, le type de système sous-jacent est spécifié ici. S'il s'agit d'un type clr défini par l'utilisateur, NULL est retourné dans cette colonne.|  
 |**max_length**|**smallint non NULL**|Longueur maximale (en octets) de la colonne.<br /><br /> -1 = la colonne est de type de données **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, ou **xml**.<br /><br /> Pour **texte** colonnes, le **max_length** valeur sera 16 ou la valeur définie par **sp_tableoption 'text in row'**.|  
-|**Précision**|**tinyint non NULL**|Précision de la colonne si elle est numérique. Dans le cas contraire, retourne la valeur 0.|  
-|**Mise à l’échelle**|**tinyint non NULL**|Échelle de la colonne si elle est numérique. Dans le cas contraire, retourne la valeur 0.|  
+|**precision**|**tinyint non NULL**|Précision de la colonne si elle est numérique. Dans le cas contraire, retourne la valeur 0.|  
+|**scale**|**tinyint non NULL**|Échelle de la colonne si elle est numérique. Dans le cas contraire, retourne la valeur 0.|  
 |**collation_name**|**sysname NULL**|Nom du classement de la colonne si elle est basée sur les caractères. Sinon, retourne NULL.|  
 |**user_type_id**|**int NULL**|Pour les types d'alias et CLR, contient l'information user_type_id du type de données de la colonne comme spécifié dans sys.types. Sinon, a la valeur NULL.|  
 |**user_type_database**|**sysname NULL**|Pour les types d'alias et CLR, contient le nom de la base de données dans laquelle le type est défini. Sinon, a la valeur NULL.|  
@@ -113,7 +113,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
   
  Le nom, la possibilité de valeur NULL et le type de données peuvent différer. Si **sp_describe_first_result_set** retourne un jeu de résultats vide, la garantie est que l’exécution du lot retournera des jeux sans résultats.  
   
- Cette garantie suppose qu'aucune modification de schéma pertinente n'a lieu sur le serveur. Modifications de schéma pertinentes sur le serveur de ne pas inclure la création de tables temporaires ou variables de table dans le lot A entre le moment qui **sp_describe_first_result_set** est appelée et l’heure à laquelle le jeu de résultats est retourné pendant exécution, y compris les modifications de schéma effectuées par le lot B.  
+ Cette garantie présume qu’il n’existe aucune modification de schéma pertinentes sur le serveur. Modifications de schéma pertinentes sur le serveur de ne pas inclure la création de tables temporaires ou variables de table dans le lot A entre le moment qui **sp_describe_first_result_set** est appelée et l’heure à laquelle le jeu de résultats est retourné pendant exécution, y compris les modifications de schéma effectuées par le lot B.  
   
  **sp_describe_first_result_set** retourne une erreur dans chacun des cas suivants.  
   

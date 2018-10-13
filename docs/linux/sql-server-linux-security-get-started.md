@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: ecc72850-8b01-492e-9a27-ec817648f0e0
 ms.custom: sql-linux
-ms.openlocfilehash: cd4f7b3f447d5a7d05ed08fa07ecf36a685a10ac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: feae91ed25dafa499026b2cadf72a2eafa0c63ae
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47786967"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906229"
 ---
 # <a name="walkthrough-for-the-security-features-of-sql-server-on-linux"></a>Procédure pas à pas pour les fonctionnalités de sécurité de SQL Server sur Linux
 
@@ -67,7 +67,7 @@ La connexion Larry pouvez désormais créer des connexions plus et l’utilisate
 
 ## <a name="granting-access-with-least-privileges"></a>Octroi de l’accès avec des privilèges minimum
 
-Les premières personnes à se connecter à une base de données utilisateur seront l’administrateur et les comptes de propriétaire de base de données. Ces utilisateurs possèdent toutes les autorisations disponibles sur la base de données. C'est plus que la plupart des utilisateurs devraient avoir. 
+Les premières personnes à se connecter à une base de données utilisateur seront l’administrateur et les comptes de propriétaire de base de données. Toutefois, ces utilisateurs ont toutes les autorisations sur la base de données. C'est plus que la plupart des utilisateurs devraient avoir. 
 
 Lorsque vous venez de démarrer, vous pouvez affecter des catégories générales d’autorisations à l’aide intégrée *les rôles de base de données fixes*. Par exemple, le `db_datareader` rôle de base de données fixe peut lire toutes les tables dans la base de données, mais n’apportez aucune modification. Accorder une appartenance à un rôle de base de données fixe à l’aide de la [ALTER ROLE](../t-sql/statements/alter-role-transact-sql.md) instruction. L’exemple suivant ajouter l’utilisateur `Jerry` à la `db_datareader` rôle de base de données fixe.   
    
@@ -250,7 +250,7 @@ Pour supprimer le chiffrement transparent des données, exécutez `ALTER DATABAS
 Les opérations de chiffrement et de déchiffrement sont planifiées sur des threads d’arrière-plan par SQL Server. Vous pouvez consulter l'état de ces opérations à l'aide des affichages catalogue et des vues de gestion dynamique mentionnés dans la liste fournie plus loin dans cette rubrique.   
 
 >  [!WARNING]
->  Les fichiers de sauvegarde des bases de données pour lesquelles le chiffrement transparent des données est activé sont également chiffrés à l'aide de la clé de chiffrement de base de données. En conséquence, lorsque vous restaurez ces sauvegardes, le certificat qui protège la clé de chiffrement de base de données doit être disponible. Cela signifie qu'en plus de sauvegarder la base de données, vous devez vous assurer que vous conservez des sauvegardes des certificats du serveur pour empêcher toute perte de données. Une perte de données interviendra si le certificat n'est plus disponible. Pour plus d’informations, consultez [SQL Server Certificates and Asymmetric Keys](../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md).  
+>  Les fichiers de sauvegarde des bases de données pour lesquelles le chiffrement transparent des données est activé sont également chiffrés à l'aide de la clé de chiffrement de base de données. En conséquence, lorsque vous restaurez ces sauvegardes, le certificat qui protège la clé de chiffrement de base de données doit être disponible. Cela signifie qu'en plus de sauvegarder la base de données, vous devez vous assurer que vous conservez des sauvegardes des certificats du serveur pour empêcher toute perte de données. Une perte de données interviendra si le certificat n'est plus disponible. Pour plus d'informations, consultez [SQL Server Certificates and Asymmetric Keys](../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md).  
 
 Pour plus d’informations sur le chiffrement transparent des données, consultez [Transparent Data Encryption (TDE)](../relational-databases/security/encryption/transparent-data-encryption-tde.md).   
 
@@ -282,7 +282,7 @@ WITH
 GO  
 ```
 
-Pour plus d’informations, consultez [chiffrement de sauvegarde](../relational-databases/backup-restore/backup-encryption.md).
+Pour plus d'informations, consultez [Chiffrement de sauvegarde](../relational-databases/backup-restore/backup-encryption.md).
 
 
 ## <a name="next-steps"></a>Étapes suivantes

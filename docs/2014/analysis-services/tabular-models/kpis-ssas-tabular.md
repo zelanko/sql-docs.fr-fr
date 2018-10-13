@@ -11,12 +11,12 @@ ms.assetid: a0524602-5239-45a7-8c44-2477302a3637
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 596fc7d8ebdbdac3795920948b5082a0e066ba0d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 142cdef210c541fb1394b84c8297823f36358ea0
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104619"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906059"
 ---
 # <a name="kpis-ssas-tabular"></a>Indicateurs de performance clés (SSAS Tabulaire)
   Un *indicateur de performance clé* (KPI), dans un modèle tabulaire, permet de mesurer les performances d’une valeur, définies par une mesure de *base* par rapport à une valeur *cible*, également définie par une mesure ou par une valeur absolue. Cette rubrique fournit aux concepteurs de modèles tabulaires une présentation de base des indicateurs de performance clés dans un modèle tabulaire.  
@@ -46,7 +46,7 @@ ms.locfileid: "48104619"
  Un seuil d'état est défini par la plage entre un seuil minimal et un seuil maximal, ou par une valeur fixe. Le seuil d'état s'affiche sous la forme d'un graphique pour aider les utilisateurs à déterminer facilement l'état de la valeur de base comparée à la valeur cible.  
   
 ##  <a name="bkmk_example"></a> Exemple  
- La responsable commerciale d'AdventureWorks souhaite créer un tableau croisé dynamique qu'elle pourra utiliser pour déterminer rapidement si ses commerciaux atteignent leurs quotas de vente pendant une période donnée (généralement annuelle). Pour chaque commercial, elle souhaite que le tableau croisé dynamique affiche le montant total des ventes en dollars, le montant du quota des ventes en dollars et un graphique simple indiquant l'état de l'employé, c'est-à-dire où il se situe par rapport au quota des ventes. Elle souhaite obtenir des données annuelles.  
+ La responsable commerciale d'AdventureWorks souhaite créer un tableau croisé dynamique qu'elle pourra utiliser pour déterminer rapidement si ses commerciaux atteignent leurs quotas de vente pendant une période donnée (généralement annuelle). Pour chaque employé, elle souhaite que le tableau croisé dynamique pour afficher le montant des ventes réel en dollars, la quantité de quota de ventes en dollars et un affichage graphique simple indiquant l’état de chaque employé soit ou non ci-dessous, sur ou au-dessus de leur quota de ventes. Elle souhaite obtenir des données annuelles.  
   
  Pour cela, la directrice commerciale demande l'aide du développeur de solutions de décisionnel de son organisation pour ajouter un KPI Ventes au modèle tabulaire AdventureWorks. La directrice commerciale utilise ensuite [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] pour se connecter au modèle tabulaire Adventure Works comme source de données et créer un tableau croisé dynamique avec des champs (mesures et KPI) et des segments pour analyser si la force de vente atteint ses objectifs.  
   
@@ -84,10 +84,10 @@ Target SalesAmountQuota:=Sum(FactSalesQuota[SalesAmountQuota])
   
 |Rubrique|Description|  
 |-----------|-----------------|  
-|[Créer et gérer des indicateurs de performance clés &#40;SSAS tabulaire&#41;](kpis-ssas-tabular.md)|Décrit comment créer un indicateur de performance clé avec une mesure de base, une mesure cible et des seuils d'état.|  
+|[Créer et gérer les indicateurs de performance clés &#40;SSAS Tabulaire&#41;](kpis-ssas-tabular.md)|Décrit comment créer un indicateur de performance clé avec une mesure de base, une mesure cible et des seuils d'état.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Mesures &#40;SSAS tabulaire&#41;](measures-ssas-tabular.md)   
- [Perspectives &#40;SSAS tabulaire&#41;](perspectives-ssas-tabular.md)  
+ [Mesures &#40;SSAS Tabulaire&#41;](measures-ssas-tabular.md)   
+ [Perspectives &#40;SSAS Tabulaire&#41;](perspectives-ssas-tabular.md)  
   
   

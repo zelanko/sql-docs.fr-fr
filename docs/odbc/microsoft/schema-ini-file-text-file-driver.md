@@ -14,12 +14,12 @@ ms.assetid: 0c4625c4-c730-4984-b430-9051b7bc0451
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6d6a86d2d45cecc2dce3275e28ca0fb9e06e0cba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8afb8b22ae2c6563641491b3bfe4289aa86e73e2
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713207"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169219"
 ---
 # <a name="schemaini-file-text-file-driver"></a>Fichier Schema.ini (pilote du fichier texte)
 Lorsque le pilote de texte est utilisé, le format du fichier texte est déterminé à l’aide d’un fichier d’informations de schéma. Le fichier d’informations de schéma est toujours nommé Schema.ini et toujours conservé dans le même répertoire que la source de données de texte. Le fichier d’informations de schéma fournit la méthode IISAM avec des informations sur le format général du fichier, le nom de colonne et les informations de type de données et plusieurs autres caractéristiques de données. Un fichier Schema.ini est toujours requis pour accéder aux données de longueur fixe. Vous devez utiliser un fichier Schema.ini lorsque votre table de texte contient la date/heure, devise, ou données Decimal ou à tout moment que vous souhaitez contrôler davantage la gestion des données dans la table.  
@@ -80,14 +80,14 @@ ColNameHeader=True
 MaxScanRows=0  
 ```  
   
- L’entrée suivante désigne les champs dans une table en utilisant le numéro de colonne (**Col *** n*) option, qui est facultatif pour les fichiers délimités par un caractère et requis pour les fichiers de longueur fixe. L’exemple montre les entrées Schema.ini pour deux champs, un champ de texte CustomerNumber 10 caractères et un champ de texte CustomerName 30 caractères :  
+ L’entrée suivante désigne les champs dans une table en utilisant le numéro de colonne (**Col**_n_) option, qui est facultatif pour les fichiers délimités par un caractère et requis pour les fichiers de longueur fixe. L’exemple montre les entrées Schema.ini pour deux champs, un champ de texte CustomerNumber 10 caractères et un champ de texte CustomerName 30 caractères :  
   
 ```  
 Col1=CustomerNumber Text Width 10  
 Col2=CustomerName Text Width 30  
 ```  
   
- La syntaxe de **Col *** n* est :  
+ La syntaxe de **Col**_n_ est :  
   
 ```  
   

@@ -15,12 +15,12 @@ ms.assetid: c2c460c3-e749-4efd-aa02-0f8a98ddbc76
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: f51c538b050e746a3d806e5a226eaa77eba1c8b4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 31ff1f88e55905e8d67dd96c91cd80c8b6677fe2
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054079"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48905979"
 ---
 # <a name="about-url-reservations-and-registration--ssrs-configuration-manager"></a>À propos des réservations et de l’inscription d’URL (Gestionnaire de configuration de SSRS)
   Les URL pour les applications Reporting Services sont définies en tant que réservations d'URL dans HTTP.SYS. Une réservation d'URL définit la syntaxe d'un point de terminaison URL à une application Web. Les réservations d'URL sont définies pour le service Web Report Server et pour le Gestionnaire de rapports lorsque vous configurez les applications sur le serveur de rapports. Les réservations d'URL sont créées automatiquement pour vous lors de la configuration d'URL par le biais du programme d'installation ou de l'outil de configuration [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] :  
@@ -51,7 +51,7 @@ ms.locfileid: "48054079"
 >  Cette rubrique ne décrit pas l'accès par le biais d'URL au Générateur de rapports ou à des rapports spécifiques stockés sur le serveur de rapports. Pour plus d’informations sur l’accès à ces éléments par le biais d’URL, consultez [Accéder à des éléments de serveur de rapports à l’aide de l’accès URL](../access-report-server-items-using-url-access.md) dans la documentation en ligne [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ##  <a name="URLreservation"></a> Réservation et inscription d'URL  
- Une réservation d'URL définit les URL pouvant être utilisées pour accéder à une application [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] réserve une ou plusieurs URL pour le service Web Report Server et le Gestionnaire de rapports dans HTTP. SYS, puis les inscrit au démarrage du service. Les URL du Générateur de rapport et des rapports sont basés sur la réservation d'URL du service Web Report Server. En ajoutant des paramètres à l'URL, vous pouvez ouvrir le Générateur de rapport ou des rapports par le biais du service Web. Les réservations et l'inscription sont fournies par HTTP.SYS. Pour plus d'informations, consultez [Namespace Reservations, Registration, and Routing](http://go.microsoft.com/fwlink/?LinkId=92653) sur MSDN.  
+ Une réservation d'URL définit les URL pouvant être utilisées pour accéder à une application [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] réserve une ou plusieurs pour le service Web Report Server et le Gestionnaire de rapports dans HTTP.SYS, puis les inscrit au démarrage du service. Les URL du Générateur de rapport et des rapports sont basés sur la réservation d'URL du service Web Report Server. En ajoutant des paramètres à l'URL, vous pouvez ouvrir le Générateur de rapport ou des rapports par le biais du service Web. Les réservations et l'inscription sont fournies par HTTP.SYS. Pour plus d'informations, consultez [Namespace Reservations, Registration, and Routing](http://go.microsoft.com/fwlink/?LinkId=92653) sur MSDN.  
   
  La*réservation d'URL* est un processus par lequel un point de terminaison URL à une application Web est créé et stocké dans HTTP.SYS. HTTP.SYS est la base de données de référentiel commune de toutes les réservations d'URL qui sont définies sur un ordinateur ; elle définit un jeu de règles communes qui garantissent des réservations d'URL uniques.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "48054079"
   
  Les inscriptions des URL sont annulées si vous arrêtez le service ou si vous recyclez le service Web ou le domaine d'application du Gestionnaire de rapports. Si vous modifiez une réservation d'URL pendant que le service s'exécute, le serveur de rapports recycle immédiatement le domaine d'application afin que l'ancienne URL puisse être désinscrite et que la nouvelle puisse être utilisée.  
   
- Quelques exemples simples illustrent le concept de réservation d'URL et sa relation avec les adresses URL utilisées pour les applications [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Un point clé à noter est que la réservation d'URL a une syntaxe différente de l'URL que vous utilisez pour accéder à l'application :  
+ Quelques exemples simples illustrent le concept de réservation d'URL et sa relation avec les adresses URL utilisées pour les applications [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Un point important à noter est que la réservation d’URL a une syntaxe différente de l’URL que vous utilisez pour accéder à l’application :  
   
 |Réservation d'URL dans HTTP.SYS|URL|Explication|  
 |---------------------------------|---------|-----------------|  
@@ -70,7 +70,7 @@ ms.locfileid: "48054079"
  Si vous installez [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dans la configuration par défaut, le programme d'installation réserve des URL pour le service Web Report Server et pour le Gestionnaire de rapports. Vous pouvez également accepter ces valeurs par défaut lorsque vous définissez des réservations d'URL dans l'outil de configuration [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Les URL par défaut incluront un nom d'instance si vous installez [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] ou si vous installez [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en tant qu'instance nommée.  
   
 > [!IMPORTANT]  
->  Le caractère d’instance est un caractère de soulignement (`_`).  
+>  Le caractère d'instance est un trait de soulignement (`_`).  
   
  Les réservations d'URL incluent un numéro de port. Les systèmes d'exploitation suivants permettent à plusieurs applications web de partager un port :  
   
@@ -98,14 +98,14 @@ ms.locfileid: "48054079"
   
  Le compte de service n'a aucune valeur par défaut. Toutefois, la spécification d'un compte de service est requise pendant l'installation et est spécifiée dans `URLReservation` dans RSReportServer.config même si vous installez le serveur en mode fichiers uniquement. Les valeurs valides pour le compte de service incluent un compte d'utilisateur de domaine, `LocalSystem` ou `NetworkService`.  
   
- L’accès anonyme est désactivée, car la sécurité par défaut est `RSWindowsNegotiate`. Pour l'accès intranet, les URL de serveur de rapports utilisent des noms d'ordinateurs réseau. Si vous souhaitez configurer [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour des connexions Internet, vous devez utiliser des paramètres différents. Pour plus d’informations sur l’authentification, consultez [Authentification avec le serveur de rapports](../security/authentication-with-the-report-server.md) dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ L'accès anonyme est désactivé car la sécurité par défaut est `RSWindowsNegotiate`. Pour l'accès intranet, les URL de serveur de rapports utilisent des noms d'ordinateurs réseau. Si vous souhaitez configurer [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour des connexions Internet, vous devez utiliser des paramètres différents. Pour plus d’informations sur l’authentification, consultez [Authentification avec le serveur de rapports](../security/authentication-with-the-report-server.md) dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ##  <a name="URLlocalAdmin"></a> URL pour l'administration locale  
  Vous pouvez utiliser http://localhost/reportserver ou http://localhost/reports si vous avez spécifié un caractère générique fort ou faible pour la réservation d’URL.  
   
  L’URL http://localhost est interprétée comme http://127.0.0.1. Si vous avez lié la réservation d'URL à un nom d'ordinateur ou une adresse IP unique, vous ne pouvez pas utiliser localhost, à moins de créer une réservation supplémentaire pour 127.0.0.1 sur l'ordinateur local. De même, si localhost ou 127.0.0.1 est désactivé sur votre ordinateur, vous ne pouvez pas utiliser cette URL.  
   
- [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)] et [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] incluent de nouvelles fonctionnalités de sécurité pour réduire le risque d’exécution accidentelle de programmes avec des privilèges élevés. Des étapes supplémentaires sont nécessaires pour activer l'administration locale sur ces systèmes d'exploitation. Pour plus d’informations, consultez [Configurer un serveur de rapports en mode natif pour l’administration locale &#40;SSRS&#41;](../report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
+ [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)] et [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] incluent de nouvelles fonctionnalités de sécurité destinées à réduire le risque d'exécution accidentelle de programmes avec des privilèges élevés. Des étapes supplémentaires sont nécessaires pour activer l'administration locale sur ces systèmes d'exploitation. Pour plus d’informations, consultez [Configurer un serveur de rapports en mode natif pour l’administration locale &#40;SSRS&#41;](../report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
   
 ##  <a name="URLSharePoint"></a> URL pour le serveur de rapports en Mode intégré SharePoint  
  Si un serveur de rapports autonome est configuré pour s'exécuter au sein d'un déploiement plus vaste d'un produit ou d'une technologie SharePoint, la construction d'URL et de répertoires virtuels sera affectée de plusieurs manières :  
@@ -123,7 +123,7 @@ ms.locfileid: "48054079"
  Si vous avez intégré un déploiement de serveur de rapports avec montée en puissance parallèle pour s'exécuter au sein d'un déploiement plus vaste d'un produit ou d'une technologie SharePoint, vous devez équilibrer la charge des nœuds du serveur de rapports et définir une URL de serveur virtuel unique pour le déploiement avec montée en puissance parallèle. Les paramètres d'intégration Report Server vous permettent uniquement de spécifier une URL de serveur de rapports unique. Dans le cas d'un déploiement avec montée en puissance parallèle, l'URL doit être le point d'accès pour les nœuds de serveur dans le déploiement avec montée en puissance parallèle.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Configurer une URL &#40;Gestionnaire de Configuration de SSRS&#41;](configure-a-url-ssrs-configuration-manager.md)   
- [Syntaxe de réservation d’URL &#40;Gestionnaire de Configuration de SSRS&#41;](url-reservation-syntax-ssrs-configuration-manager.md)  
+ [Configurer une URL &#40;Gestionnaire de configuration de SSRS&#41;](configure-a-url-ssrs-configuration-manager.md)   
+ [Syntaxe de réservation d’URL &#40;Gestionnaire de configuration de SSRS&#41;](url-reservation-syntax-ssrs-configuration-manager.md)  
   
   

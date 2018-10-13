@@ -13,12 +13,12 @@ ms.assetid: 2733ed78-6d33-4bf9-94da-60c3141b87c8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2fd0f2ae6efce8eba2229df199025bc09eaec64b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 23dd1efa80cab8301c0a361c4e8486f036baf6f7
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147371"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906369"
 ---
 # <a name="manage-and-monitor-full-text-search-for-a-server-instance"></a>Gérer et surveiller la recherche en texte intégral pour une instance de serveur
   L'administration de la recherche en texte intégral pour une instance de serveur comprend :  
@@ -76,7 +76,7 @@ ms.locfileid: "48147371"
 |--------------|-----------------|--------------|  
 |`IsFullTextInstalled`|Indique si le composant de texte intégral est installé avec l'instance actuelle de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|[FULLTEXTSERVICEPROPERTY](/sql/t-sql/functions/fulltextserviceproperty-transact-sql)<br /><br /> [SERVERPROPERTY](/sql/t-sql/functions/serverproperty-transact-sql)|  
 |`LoadOSResources`|Indique si les analyseurs lexicaux et les filtres du système d'exploitation sont inscrits et utilisés avec cette instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|FULLTEXTSERVICEPROPERTY|  
-|`VerifySignature`|Indique si seuls les fichiers binaires signés sont chargés par le Moteur d'indexation et de recherche en texte intégral.|FULLTEXTSERVICEPROPERTY|  
+|`VerifySignature`|Indique si seuls les fichiers binaires signés sont chargés par le Moteur d’indexation et de recherche en texte intégral.|FULLTEXTSERVICEPROPERTY|  
   
 ##  <a name="monitor"></a> Surveillance de l'activité de recherche en texte intégral  
  Plusieurs vues et fonctions de gestion dynamique sont utiles pour la surveillance de l'activité de recherche en texte intégral sur une instance de serveur.  

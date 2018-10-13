@@ -17,12 +17,12 @@ ms.assetid: 0cc60267-3c56-4a88-8ad7-bb07f0255d56
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b9a8ef18dca7bf61907219d4a09882c62deb2712
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a80c7f690a4b24ef82cb3da34dea50c98cf836f4
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833357"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119656"
 ---
 # <a name="aggregate-functions---avg"></a>Fonctions d’agrégation : avg
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ fn:avg($arg as xdt:anyAtomicType*) as xdt:anyAtomicType?
 ## <a name="remarks"></a>Notes  
  Tous les types de valeurs atomisées transmises à **avg()** doivent être un sous-type d’exactement un des trois types de base numériques intégrés ou xdt : untypedAtomic. Ils ne peuvent pas être un mélange. Les valeurs de type xdt:untypedAtomic sont traitées comme valeurs xs:double. Le résultat de **avg()** reçoit le type de base des types transmis, tels que xs : double dans le cas de xdt : untypedAtomic.  
   
- Si l'entrée est vide statiquement, le caractère vide en est déduit et une erreur statique est générée.  
+ Si l'entrée est vide (valeur empty) de façon statique, « empty » est alors implicite et une erreur statique est émise.  
   
  Le **avg()** fonction retourne la moyenne des nombres calculés. Exemple :  
   

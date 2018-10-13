@@ -15,15 +15,15 @@ ms.assetid: 222288fe-ffc0-4567-b624-5d91485d70f0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c7ea5731811b1ac6c0e6dcde82fc80a7844cdab1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b5afd389288de04ec77f3258706bf8fd31b228ec
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177790"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120336"
 ---
 # <a name="perform-a-forced-manual-failover-of-an-availability-group-sql-server"></a>Effectuer un basculement manuel forcé d'un groupe de disponibilité (SQL Server)
-  Cette rubrique explique comment effectuer un basculement forcé (avec perte de données potentielle) sur un groupe de disponibilité AlwaysOn à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] ou de PowerShell dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Un basculement forcé est une forme du basculement manuel qui est destiné exclusivement à la récupération d'urgence, lorsqu'un [basculement manuel planifié](perform-a-planned-manual-failover-of-an-availability-group-sql-server.md) n'est pas possible. Si vous forcez le basculement vers un réplica secondaire qui n'est pas synchronisé, une perte de données est possible. Par conséquent, nous vous recommandons fortement de forcer le basculement uniquement si vous devez restaurer immédiatement un service dans le groupe de disponibilité et si vous êtes prêt à prendre le risque de perdre des données.  
+  Cette rubrique explique comment effectuer un basculement forcé (avec perte de données potentielle) sur un groupe de disponibilité AlwaysOn à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou de PowerShell dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Un basculement forcé est une forme du basculement manuel qui est destiné exclusivement à la récupération d'urgence, lorsqu'un [basculement manuel planifié](perform-a-planned-manual-failover-of-an-availability-group-sql-server.md) n'est pas possible. Si vous forcez le basculement vers un réplica secondaire qui n'est pas synchronisé, une perte de données est possible. Par conséquent, nous vous recommandons fortement de forcer le basculement uniquement si vous devez restaurer immédiatement un service dans le groupe de disponibilité et si vous êtes prêt à prendre le risque de perdre des données.  
   
  Après un basculement forcé, la cible de basculement vers laquelle le groupe de disponibilité a basculé devient le nouveau réplica principal. Les bases de données secondaires dans les réplicas secondaires restants sont suspendues et vous devez les reprendre manuellement. Lorsque l'ancien réplica principal devient disponible, il adopte le rôle secondaire, et les anciennes bases de données primaires deviennent les bases de données secondaires et passent à l'état SUSPENDED. Avant de reprendre une base de données secondaire donnée, vous pouvez récupérer les données perdues de celle-ci. Toutefois, notez que la troncation du journal des transactions est retardée sur une base de données primaire donnée, lorsque l'une de ses bases de données secondaires est interrompue.  
   
@@ -132,7 +132,7 @@ ms.locfileid: "48177790"
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
  **Pour forcer le basculement (avec possible perte de données)**  
   
-1.  Connectez-vous à une instance de serveur qui héberge un réplica dont le rôle se trouve dans l'état SECONDARY ou RESOLVING dans le groupe de disponibilité devant être basculé.  
+1.  Se connecter à une instance de serveur qui héberge un réplica dont le rôle est dans l’état SECONDARY ou RESOLVING dans le groupe de disponibilité qui doit être basculé.  
   
 2.  Utilisez l'instruction [ALTER AVAILABILITY GROUP](/sql/t-sql/statements/alter-availability-group-transact-sql) , comme suit :  
   
@@ -151,15 +151,15 @@ ms.locfileid: "48177790"
 ##  <a name="PowerShellProcedure"></a> Utilisation de PowerShell  
  **Pour forcer le basculement (avec possible perte de données)**  
   
-1.  Changez le répertoire (`cd`) en une instance de serveur qui héberge un réplica dont le rôle se trouve dans l'état SECONDARY ou RESOLVING dans le groupe de disponibilité devant être basculé.  
+1.  Accédez au répertoire (`cd`) à une instance de serveur qui héberge un réplica dont le rôle est dans l’état SECONDARY ou RESOLVING dans le groupe de disponibilité qui doit être basculé.  
   
 2.  Utilisez l'applet de commande `Switch-SqlAvailabilityGroup` avec le paramètre `AllowDataLoss` dans l'un des formats suivants :  
   
     -   `-AllowDataLoss`  
   
-         Par défaut, avec le paramètre `-AllowDataLoss`, `Switch-SqlAvailabilityGroup` vous rappelle que le basculement forcé peut provoquer la perte de transactions non validées et vous demande confirmation. Pour continuer, entrez `Y`; pour annuler l’opération, entrez `N`.  
+         Par défaut, avec le paramètre `-AllowDataLoss`, `Switch-SqlAvailabilityGroup` vous rappelle que le basculement forcé peut provoquer la perte de transactions non validées et vous demande confirmation. Pour continuer, entrez `Y` ; pour annuler l’opération, entrez `N`.  
   
-         L’exemple suivant exécute un basculement forcé (avec perte de données possible) du groupe de disponibilité `MyAg` vers le réplica secondaire sur l’instance de serveur nommée `SecondaryServer\InstanceName`. Vous êtes invité à confirmer cette opération.  
+         L'exemple suivant exécute un basculement forcé (avec possible perte de données) du groupe de disponibilité `MyAg` vers le réplica secondaire sur l'instance de serveur nommée `SecondaryServer\InstanceName`. Vous êtes invité à confirmer cette opération.  
   
         ```  
         Switch-SqlAvailabilityGroup `  
@@ -169,7 +169,7 @@ ms.locfileid: "48177790"
   
     -   **-AllowDataLoss-Force**  
   
-         Pour démarrer un basculement forcé sans confirmation, spécifiez à la fois les paramètres `-AllowDataLoss` et `-Force`. Cela est utile si vous souhaitez inclure la commande dans un script et l'exécuter sans intervention de l'utilisateur.  Toutefois, utiliser le `-Force` option avec précaution, car un basculement forcé peut provoquer la perte de données à partir de bases de données appartenant au groupe de disponibilité.  
+         Pour démarrer un basculement forcé sans confirmation, spécifiez à la fois les paramètres `-AllowDataLoss` et `-Force`. Cela est utile si vous souhaitez inclure la commande dans un script et l'exécuter sans intervention de l'utilisateur.  Toutefois, utilisez l'option `-Force` avec précaution, car un basculement forcé peut se traduire par une perte de données des bases de données participant au groupe de disponibilité.  
   
          L’exemple suivant exécute un basculement forcé (avec perte de données possible) du groupe de disponibilité `MyAg` vers l’instance de serveur nommée `SecondaryServer\InstanceName`. L'option `-Force` supprime la confirmation de cette opération.  
   
@@ -180,7 +180,7 @@ ms.locfileid: "48177790"
         ```  
   
     > [!NOTE]  
-    >  Pour afficher la syntaxe d’une applet de commande, utilisez le `Get-Help` applet de commande dans le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] environnement PowerShell. Pour en savoir plus, voir [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
+    >  Pour afficher la syntaxe d'une applet de commande, utilisez l'applet de commande `Get-Help` dans l'environnement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Pour en savoir plus, voir [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
 3.  Après avoir forcé un groupe de disponibilité à basculer, effectuez les étapes de suivi nécessaires. Pour plus d'informations, consultez [Suivi : Tâches essentielles après un basculement forcé](#FollowUp), plus loin dans cette rubrique.  
   

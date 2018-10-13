@@ -13,15 +13,15 @@ ms.assetid: fb420903-df54-4016-bab6-49e6dfbdedc7
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 55c88228de170336fec7ecd24f5acb17851fdea1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e255d37a5f6fff65b223d889755bab4cf70d0687
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48132939"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072273"
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>Déplacer une base de données protégée par le chiffrement transparent des données vers un autre serveur SQL Server
-  Cette rubrique explique comment protéger une base de données à l'aide du chiffrement transparent des données (TDE), puis la déplacer vers une autre instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Le chiffrement transparent des données effectue le chiffrement et le déchiffrement d'E/S en temps réel des données et des fichiers journaux. Le chiffrement utilise une clé de chiffrement de base de données (DEK), stockée dans l'enregistrement de démarrage de base de données pour être disponible pendant la récupération. La clé de chiffrement de base de données est une clé symétrique sécurisée à l'aide d'un certificat stocké dans la base de données `master` du serveur ou une clé asymétrique protégée par un module de gestion de clés extensible.  
+  Cette rubrique explique comment protéger une base de données à l’aide du chiffrement transparent des données (TDE), puis déplacer la base de données vers une autre instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à l’aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Le chiffrement transparent des données effectue le chiffrement et le déchiffrement d'E/S en temps réel des données et des fichiers journaux. Le chiffrement utilise une clé de chiffrement de base de données (DEK), stockée dans l'enregistrement de démarrage de base de données pour être disponible pendant la récupération. La clé de chiffrement de base de données est une clé symétrique sécurisée à l'aide d'un certificat stocké dans la base de données `master` du serveur ou une clé asymétrique protégée par un module de gestion de clés extensible.  
   
  **Dans cette rubrique**  
   
@@ -61,7 +61,7 @@ ms.locfileid: "48132939"
   
 -   Requiert `CREATE CERTIFICATE` autorisation sur le `master` base de données pour créer le certificat qui protège la clé DEK.  
   
--   Requiert `CONTROL DATABASE` autorisation sur la base de données chiffrée et `VIEW DEFINITION` autorisation sur le certificat ou une clé asymétrique qui sert à chiffrer la clé de chiffrement de base de données.  
+-   Requiert l'autorisation `CONTROL DATABASE` sur la base de données chiffrée et l'autorisation `VIEW DEFINITION` sur le certificat ou la clé asymétrique qui sert à chiffrer la clé de chiffrement de la base de données.  
   
 ##  <a name="SSMSProcedure"></a> Pour créer une base de données protégée par le chiffrement transparent des données  
   
@@ -84,7 +84,7 @@ ms.locfileid: "48132939"
      Les options suivantes sont disponibles dans la boîte de dialogue **Gérer le chiffrement de base de données** .  
   
      **Algorithme de chiffrement**  
-     Affiche ou définit l'algorithme à utiliser pour le chiffrement de la base de données. `AES128` est l’algorithme par défaut. Ce champ ne peut pas être vide. Pour plus d'informations sur les algorithmes de chiffrement, consultez [Choose an Encryption Algorithm](choose-an-encryption-algorithm.md).  
+     Affiche ou définit l'algorithme à utiliser pour le chiffrement de la base de données. `AES128` est l'algorithme par défaut. Ce champ ne peut pas être vide. Pour plus d'informations sur les algorithmes de chiffrement, consultez [Choose an Encryption Algorithm](choose-an-encryption-algorithm.md).  
   
      **Utilisez un certificat de serveur**  
      Définit le chiffrement à sécuriser par un certificat. Sélectionnez une option dans la liste. Si vous n'avez pas l'autorisation `VIEW DEFINITION` sur les certificats de serveur, cette liste sera vide. Si une méthode de chiffrement de certificat est sélectionnée, cette valeur ne peut pas être vide. Pour plus d'informations sur les certificats, consultez [SQL Server Certificates and Asymmetric Keys](../sql-server-certificates-and-asymmetric-keys.md).  
@@ -99,7 +99,7 @@ ms.locfileid: "48132939"
   
 ###  <a name="TsqlCreate"></a> Utilisation de Transact-SQL  
   
-1.  Dans l'**Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   
@@ -272,7 +272,7 @@ ms.locfileid: "48132939"
   
 ###  <a name="TsqlMove"></a> Utilisation de Transact-SQL  
   
-1.  Dans l'**Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   

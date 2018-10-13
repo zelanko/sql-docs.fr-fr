@@ -18,12 +18,12 @@ ms.assetid: a828e55c-633a-41cf-9769-a0698b446e6c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0e62a0452a5e7e31591d368cbbcb2050272df5da
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ce8549b95348085699694c17027c2dd393f5b1f5
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47734727"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169179"
 ---
 # <a name="sysmailaddprofilesp-transact-sql"></a>sysmail_add_profile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,13 +42,13 @@ sysmail_add_profile_sp [ @profile_name = ] 'profile_name'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ **@profile_name** =] **'***profile_name***'**  
+ [ **@profile_name** =] **'**_profil\_nom_**'**  
  Nom du nouveau profil. *nom_profil* est **sysname**, sans valeur par défaut.  
   
- [ **@description** =] **'***description***'**  
+ [ **@description** =] **'**_description_**'**  
  Description facultative du nouveau profil. *Description* est **nvarchar (256)**, sans valeur par défaut.  
   
- [ **@profile_id** =] *new_profile_id *** sortie**  
+ [ **@profile_id** =] _nouveau\_profil\_id_**sortie**  
  Retourne l'ID du nouveau profil. *new_profile_id* est **int**, avec NULL comme valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  

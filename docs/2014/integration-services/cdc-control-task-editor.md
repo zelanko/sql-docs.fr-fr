@@ -13,12 +13,12 @@ ms.assetid: 4f09d040-9ec8-4aaa-b684-f632d571f0a8
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 97d47bda8f3ceb98449392cda22d2a8152e08b7f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 89062160d4836596dacaf9df88c0e87feb383129
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201299"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072163"
 ---
 # <a name="cdc-control-task-editor"></a>Éditeur de tâche de contrôle CDC
   Utilisez la boîte de dialogue **Éditeur de tâche de contrôle CDC** pour configurer la tâche de contrôle CDC. La configuration de la tâche de contrôle CDC inclut la définition d'une connexion à la base de données CDC, l'opération de la tâche CDC et des informations de gestion d'état.  
@@ -46,7 +46,7 @@ ms.locfileid: "48201299"
   
      Si vous sélectionnez **Marquer la fin de la charge initiale** quand vous travaillez sur la capture de données modifiées [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] (autrement dit, hors d’Oracle) l’utilisateur spécifié dans le gestionnaire de connexions doit être  **db_owner** ou **sysadmin**.  
   
--   **Marquer le début CDC**: cette opération est utilisée lorsque la charge initiale est effectuée à partir d'un fichier de base de données d'instantanés ou d'une base de données d'arrêt inactive. Elle est appelée à n'importe quel stade du package de charge initiale. L'opération accepte un paramètre qui peut être un numéro LSN d'instantané, un nom de base de données d'instantanés (de laquelle le numéro LSN d'instantané dérive automatiquement) ou qui peut être laissé vide, auquel cas le numéro LSN de la base de données actuelle est utilisé comme dernier numéro LSN pour le package de traitement des modifications.  
+-   **Marquer le début CDC**: cette opération est utilisée lorsque la charge initiale est effectuée à partir d’une base de données de capture instantanée ou d’une base de données mise en veille. Elle est appelée à n'importe quel stade du package de charge initiale. L'opération accepte un paramètre qui peut être un numéro LSN d'instantané, un nom de base de données d'instantanés (de laquelle le numéro LSN d'instantané dérive automatiquement) ou qui peut être laissé vide, auquel cas le numéro LSN de la base de données actuelle est utilisé comme dernier numéro LSN pour le package de traitement des modifications.  
   
      Cette opération est utilisée à la place des opérations Marquer le début/la fin de la charge initiale.  
   

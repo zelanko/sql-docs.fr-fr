@@ -16,12 +16,12 @@ ms.assetid: 37c07446-1264-4814-b4f5-9c66d333bb24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bd9ed39459d5302fa721c2e0eab176768bb66bc9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 43bd1337b811472cca53d4f89d51d668d3799a1a
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130679"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48905243"
 ---
 # <a name="excel-destination"></a>Destination Excel
   La destination Excel charge les données dans des feuilles de calcul ou des plages au sein de classeurs [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel.  
@@ -49,7 +49,7 @@ ms.locfileid: "48130679"
   
      Pour plus d'informations sur la façon d'inclure l'apostrophe, consultez le billet de blog, [Une apostrophe est ajoutée à toutes les chaînes quand des données sont transformées dans excel lors de l'utilisation d'un composant de flux de données de destination Excel dans un package SSIS](http://go.microsoft.com/fwlink/?LinkId=400876), sur msdn.com.  
   
--   **Enregistrement des données mémo (ntext)**. Avant de pouvoir enregistrer des chaînes dépassant 255 caractères dans une colonne Excel, le pilote doit reconnaître le type de données de la colonne de destination comme **mémo** et non comme **chaîne**. Si la table de destination contient déjà des lignes de données, les premières lignes échantillonnées par le pilote doivent contenir au moins une instance d'une valeur dépassant 255 caractères dans la colonne mémo. Si la table de destination est créée pendant la conception du package ou au moment de l'exécution, l'instruction CREATE TABLE doit utiliser LONGTEXT (ou un de ses synonymes) comme type de données de la colonne mémo.  
+-   **Enregistrement des données mémo (ntext)**. Avant de pouvoir enregistrer des chaînes dépassant 255 caractères dans une colonne Excel, le pilote doit reconnaître le type de données de la colonne de destination comme **mémo** et non comme **chaîne**. Si la table de destination contient déjà des lignes de données, les premières lignes échantillonnées par le pilote doivent contenir au moins une instance d'une valeur dépassant 255 caractères dans la colonne mémo. Si la table de destination est créée pendant la conception du package ou au moment de l’exécution, l’instruction CREATE TABLE doit utiliser LONGTEXT (ou un de ses synonymes) comme type de données de la colonne Mémo.  
   
 -   **Types de données système**. Le pilote Excel ne reconnaît qu'un ensemble limité de types de données. Par exemple, toutes les colonnes numériques sont interprétées comme doubles (DT_R8) et toutes les colonnes de type chaîne (autres que les colonnes mémo) comme des chaînes Unicode de 255 caractères (DT_WSTR). [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] mappe les types de données Excel de la façon suivante :  
   
@@ -82,11 +82,11 @@ ms.locfileid: "48130679"
   
  Pour plus d'informations sur les propriétés définissables dans la boîte de dialogue **Éditeur de destination Excel** , cliquez sur l'une des rubriques suivantes :  
   
--   [Éditeur de Destination Excel &#40;Page Gestionnaire de connexions&#41;](../excel-destination-editor-connection-manager-page.md)  
+-   [Éditeur de destination Excel &#40;page Gestionnaire de connexions&#41;](../excel-destination-editor-connection-manager-page.md)  
   
--   [Éditeur de Destination Excel &#40;Page mappages&#41;](../excel-destination-editor-mappings-page.md)  
+-   [Éditeur de destination Excel &#40;page Mappages&#41;](../excel-destination-editor-mappings-page.md)  
   
--   [Éditeur de Destination Excel &#40;Page sortie d’erreur&#41;](../excel-destination-editor-error-output-page.md)  
+-   [Éditeur de destination Excel &#40;page Sortie d’erreur&#41;](../excel-destination-editor-error-output-page.md)  
   
  La boîte de dialogue **Éditeur avancé** reflète toutes les propriétés qui peuvent être définies par programmation. Pour plus d'informations sur les propriétés définissables dans la boîte de dialogue **Éditeur avancé** ou par programmation, cliquez sur l'une des rubriques suivantes :  
   
@@ -114,7 +114,7 @@ ms.locfileid: "48130679"
   
 ## <a name="see-also"></a>Voir aussi  
  [Source Excel](excel-source.md)   
- [Integration Services &#40;SSIS&#41; Variables](../integration-services-ssis-variables.md)   
+ [Variables Integration Services &#40;SSIS&#41;](../integration-services-ssis-variables.md)   
  [Flux de données](data-flow.md)   
  [Utilisation de fichiers Excel avec la tâche de script](../extending-packages-scripting-task-examples/working-with-excel-files-with-the-script-task.md)  
   

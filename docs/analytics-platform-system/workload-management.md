@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 3e5ff998bc153921d9976e3996465c6cbd92f023
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: e602cacff0c8f92b2a7748f4113a5a2ec2f34947
+ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40394287"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49100378"
 ---
 # <a name="workload-management-in-analytics-platform-system"></a>Gestion de la charge de travail d’Analytique Platform System
 
@@ -107,7 +107,7 @@ Pour chaque connexion, les paramètres de classe de ressource sont appliqués au
   
 Avant que SQL Server PDW exécute une instruction, il tente d’acquérir les emplacements de concurrence nécessaires à la demande. Si elle ne peut pas acquérir suffisamment d’emplacements de concurrence, SQL Server PDW déplace la demande dans un état d’attente pour exécution. Tous les systèmes de ressources qui ont été allouées à la demande sont retournées au système.  
   
-La plupart des instructions SQL doivent toujours les allocations de ressources par défaut et par conséquent n’est pas contrôlée par les classes de ressources. Par exemple, CREATE LOGIN uniquement a besoin d’une petite quantité de ressources et est alloué les ressources par défaut même si la connexion de l’appel de CREATE LOGIN est membre d’une une classe de ressource.  Par exemple, si Anna est un membre de la classe de ressources largerc et elle envoie une instruction CREATE LOGIN, l’instruction CREATE LOGIN s’exécuter avec le nombre de ressources par défaut.  
+La plupart des instructions SQL doivent toujours les allocations de ressources par défaut et par conséquent n’est pas contrôlée par les classes de ressources. Par exemple, CREATE LOGIN uniquement a besoin d’une petite quantité de ressources et est alloué les ressources par défaut même si la connexion de l’appel de CREATE LOGIN est un membre d’une classe de ressource.  Par exemple, si Anna est un membre de la classe de ressources largerc et elle envoie une instruction CREATE LOGIN, l’instruction CREATE LOGIN s’exécuter avec le nombre de ressources par défaut.  
   
 Instructions SQL et opérations régies par des classes de ressources :  
   

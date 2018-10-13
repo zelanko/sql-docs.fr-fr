@@ -18,12 +18,12 @@ ms.assetid: 1e3be259-d453-4802-b2f5-6b81ef607edf
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 964c6dace976f54e053947c301b3093de5aa921f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6e60abee965bd78dd25c5db053bfbb679b153e4d
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217949"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119325"
 ---
 # <a name="report-and-snapshot-size-limits"></a>Limites de taille des instantanés et des rapports
   Les administrateurs qui gèrent un déploiement de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] peuvent utiliser les informations figurant dans cette rubrique pour comprendre les limites de taille lorsque le rapport est publié sur un serveur de rapports, rendu lors de l'exécution et enregistré dans le système de fichiers. Cette rubrique fournit également des conseils pratiques expliquant comment mesurer la taille d'une base de données de serveur de rapports, et elle décrit l'incidence de la taille des instantanés sur les performances des serveurs.  
@@ -35,7 +35,7 @@ ms.locfileid: "48217949"
   
  [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] impose une limite maximale aux fichiers publiés pour minimiser les attaques par déni de service lancées à l’encontre du serveur. L'augmentation de la valeur de la limite supérieure amoindrit une partie de la protection que cette limite fournit. Augmentez cette valeur uniquement si vous êtes certain que l'avantage de cette opération compense tout risque de sécurité éventuel.  
   
- N'oubliez pas que la valeur que vous définissez pour l'élément `maxRequestLength` doit être supérieure à la taille maximale réelle que vous souhaitez appliquer. Vous devez augmenter cette valeur afin de tenir compte de l'augmentation inévitable de la taille des requêtes HTTP qui se produit après que tous les paramètres ont été encapsulés dans une enveloppe SOAP, et l'encodage Base64 a été appliqué à certains paramètres, tels que le paramètre Définition des méthodes <xref:ReportService2010.ReportingService2010.CreateReportEditSession%2A> et <xref:ReportService2010.ReportingService2010.CreateCatalogItem%2A>. L'encodage Base64 augmente la taille des données d'origine d'environ 33 %. Par conséquent, la valeur spécifiée pour le `maxRequestLength` élément doit être environ 33 % supérieure à la taille réelle utilisée par l’élément. Par exemple, si vous spécifiez une valeur de 64 Mo pour `maxRequestLength`, la taille maximale des fichiers de rapport publiés sur le serveur de rapports sera d'environ 48 Mo.  
+ N'oubliez pas que la valeur que vous définissez pour l'élément `maxRequestLength` doit être supérieure à la taille maximale réelle que vous souhaitez appliquer. Vous devez augmenter cette valeur afin de tenir compte de l'augmentation inévitable de la taille des requêtes HTTP qui se produit après que tous les paramètres ont été encapsulés dans une enveloppe SOAP, et l'encodage Base64 a été appliqué à certains paramètres, tels que le paramètre Définition des méthodes <xref:ReportService2010.ReportingService2010.CreateReportEditSession%2A> et <xref:ReportService2010.ReportingService2010.CreateCatalogItem%2A>. L'encodage Base64 augmente la taille des données d'origine d'environ 33 %. Par conséquent, la valeur spécifiée pour l'élément `maxRequestLength` doit être environ 33 % supérieure à la taille réelle utilisée par l'élément. Par exemple, si vous spécifiez une valeur de 64 Mo pour `maxRequestLength`, la taille maximale des fichiers de rapport publiés sur le serveur de rapports sera d'environ 48 Mo.  
   
 ## <a name="report-size-in-memory"></a>Taille de rapport en mémoire  
  Lorsque vous exécutez un rapport, la taille du rapport est égale à la quantité de données qui est retournée dans le rapport plus la taille du flux de sortie. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] n'impose pas de limite maximale sur la taille d'un rapport rendu. La mémoire système détermine la limite supérieure en matière de taille (par défaut, un serveur de rapports utilise toute la mémoire configurée disponible lors du rendu d'un rapport), mais vous pouvez spécifier des paramètres de configuration pour définir des seuils de mémoire et des stratégies de gestion de mémoire. Pour plus d’informations, consultez [Configurer la mémoire disponible pour les applications du serveur de rapports](../report-server/configure-available-memory-for-report-server-applications.md).  
@@ -60,7 +60,7 @@ ms.locfileid: "48217949"
   
  Par défaut, les bases de données **reportserver** et **reportservertempdb** sont configurées pour permettre une croissance automatique. La taille d'une base de données peut augmenter automatiquement, mais elle ne peut en aucun cas diminuer automatiquement. Si la base de données **reportserver** dispose d'une capacité excédentaire car vous avez supprimé des instantanés, vous devez la réduire manuellement pour récupérer de l'espace sur le disque. De même, si la taille de la base de données **reportservertempdb** a augmenté pour gérer un volume anormalement élevé de rapports interactifs, l'allocation de l'espace disque restera à ce paramètre tant que vous ne l'aurez pas diminué.  
   
- Pour mesurer la taille des bases de données du serveur de rapports, vous pouvez exécuter les commandes [!INCLUDE[tsql](../../includes/tsql-md.md)] suivantes. Si vous calculez régulièrement la taille totale des bases de données, vous pourrez évaluer avec justesse comment allouer au fur et à mesure de l'espace à la base de données du serveur de rapports. Les instructions suivantes mesurent la quantité d'espace actuellement utilisée (les instructions partent du principe que vous utilisez les noms de base de données par défaut) :  
+ Pour mesurer la taille des bases de données du serveur de rapports, vous pouvez exécuter les commandes [!INCLUDE[tsql](../../includes/tsql-md.md)] suivantes. Si vous calculez régulièrement la taille totale des bases de données, vous pourrez évaluer avec justesse comment allouer au fur et à mesure de l'espace à la base de données du serveur de rapports. Les instructions suivantes mesurent la quantité d’espace actuellement utilisée (les instructions supposent que vous utilisez des noms de base de données par défaut) :  
   
 ```  
 USE ReportServer  
@@ -81,8 +81,8 @@ EXEC sp_spaceused
  La quantité d'instantanés qui est stockée dans une base de données de serveur de rapports n'est pas, en soi, un facteur de performances. Vous pouvez stocker un grand nombre d'instantanés sans aucune incidence sur les performances. Vous pouvez conserver les instantanés indéfiniment. Sachez cependant que l'historique de rapport est configurable. Si un administrateur de serveur de rapports abaisse la limite de l'historique de rapport, vous risquez de perdre des rapports que vous comptiez garder. Si vous supprimez le rapport, tout l'historique est également supprimé.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Définir les propriétés de traitement de rapport](set-report-processing-properties.md)   
- [Serveur de base de données rapports &#40;SSRS en Mode natif&#41;](report-server-database-ssrs-native-mode.md)   
+ [Définir les propriétés de traitement d’un rapport](set-report-processing-properties.md)   
+ [Base de données du serveur de rapports &#40;SSRS en mode natif&#41;](report-server-database-ssrs-native-mode.md)   
  [Traiter les rapports volumineux](process-large-reports.md)  
   
   

@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 53d2563c050fc1567d396e9526505c5d4dd813a8
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 935d2559705aba64ecb1f19cb25bebf174d995cb
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38033337"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906209"
 ---
 # <a name="general-properties"></a>Propriétés générales
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "38033337"
  Propriété de type chaîne qui spécifie dans une liste délimitée les dossiers qui peuvent être parcourus en enregistrant, en ouvrant, puis en recherchant les fichiers dans les boîtes de dialogue Analysis Services. Le compte de service Analysis Services doit disposer d'autorisations de lecture et d'écriture sur tous les dossiers que vous ajoutez à la liste.  
   
  **BackupDir**  
- Propriété de type chaîne qui définit le nom du répertoire où les fichiers de sauvegarde sont stockés par défaut, lorsqu'aucun chemin d'accès n'est spécifié dans la commande Backup.  
+ Une propriété de chaîne qui définit le nom du répertoire où les fichiers de sauvegarde sont stockés par défaut, lorsqu’un chemin d’accès n’est pas spécifié dans le cadre de la commande Backup.  
   
  **CollationName**  
  Propriété de type chaîne qui identifie le classement du serveur. Pour plus d’informations, consultez [Langues et classements &#40;Analysis Services&#41;](../../analysis-services/languages-and-collations-analysis-services.md).  
@@ -71,7 +71,7 @@ ms.locfileid: "38033337"
 |Valeur|Description|  
 |-----------|-----------------|  
 |0|Il s'agit de la valeur par défaut. Elle spécifie le mode multidimensionnel, utilisé pour servir les bases de données multidimensionnelles qui utilisent le stockage MOLAP, HOLAP et ROLAP, ainsi que les modèles d'exploration de données.|  
-| 1|Spécifie des instances d’Analysis Services installées dans le cadre d’un déploiement [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint. Ne modifiez pas la propriété du mode de déploiement de l’instance Analysis Services qui fait partie d’une installation [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ne s’exécuteront plus sur le serveur si vous modifiez le mode.|  
+|1|Spécifie des instances d’Analysis Services installées dans le cadre d’un déploiement [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint. Ne modifiez pas la propriété du mode de déploiement de l’instance Analysis Services qui fait partie d’une installation [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ne s’exécuteront plus sur le serveur si vous modifiez le mode.|  
 |2|Spécifie le mode tabulaire utilisé pour héberger les bases de données model tabulaires qui utilisent le stockage en mémoire ou le stockage DirectQuery.|  
   
  Chaque mode est exclusif pour l'autre. Un serveur configuré pour le mode tabulaire ne peut pas exécuter des bases de données Analysis Services qui contiennent des cubes et des dimensions. Si le matériel informatique sous-jacent peut prendre cela en charge, vous pouvez installer plusieurs instances d'Analysis Services sur le même ordinateur et configurer chaque instance pour utiliser un mode de déploiement différent. Souvenez-vous qu'Analysis Services est une application qui consommée beaucoup de ressources. Le déploiement de plusieurs instances sur le même système est recommandé uniquement pour les serveurs haut de gamme.  

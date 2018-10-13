@@ -13,15 +13,15 @@ ms.assetid: 731a4576-09c1-47f0-a8f6-edd0b55679f4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 30bb3496a2bd68ac94a702b6d7713b53cbc40bfb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d206821fe3a54f71c61d383c19a0a0479a8321f0
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057689"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072183"
 ---
 # <a name="specify-computed-columns-in-a-table"></a>Spécifier les colonnes calculées dans une table
-  Une colonne calculée est une colonne virtuelle qui n'est pas stockée physiquement dans la table, à moins que la colonne ne soit indiquée comme PERSISTED. Une expression de colonne calculée peut utiliser des données d'autres colonnes afin de calculer une valeur pour la colonne à laquelle elle appartient. Vous pouvez spécifier une expression pour une colonne calculée dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  Une colonne calculée est une colonne virtuelle qui n'est pas stockée physiquement dans la table, à moins que la colonne ne soit indiquée comme PERSISTED. Une expression de colonne calculée peut utiliser des données d'autres colonnes afin de calculer une valeur pour la colonne à laquelle elle appartient. Vous pouvez spécifier une expression pour une colonne calculée dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **Dans cette rubrique**  
   
@@ -63,7 +63,7 @@ ms.locfileid: "48057689"
 4.  Dans la propriété enfant **(Formule)** , entrez l’expression pour cette colonne dans la cellule de grille située à droite. Par exemple, dans une colonne `SalesTotal` , la formule que vous écrivez peut être `SubTotal+TaxAmt+Freight`, qui ajoute la valeur dans ces colonnes pour chaque ligne de la table.  
   
     > [!IMPORTANT]  
-    >  Lorsqu'une formule combine deux expressions de type de données différents, les règles de priorité des types de données spécifient que le type ayant une priorité plus faible est converti dans un type ayant une priorité plus élevée. Si la conversion n'est pas prise en charge en tant que conversion implicite, l'erreur «`Error validating the formula for column column_name.`» est retournée. Utilisez la fonction CAST ou CONVERT pour résoudre le conflit de type de données. Par exemple, si une colonne de type `nvarchar` est associée à une colonne de type `int`, le type d’entier doit être converti en `nvarchar` comme indiqué dans cette formule `('Prod'+CONVERT(nvarchar(23),ProductID))`. Pour plus d’informations, consultez [CAST et CONVERT &#40;Transact-SQL&#41;](/sql/t-sql/functions/cast-and-convert-transact-sql).  
+    >  Lorsqu'une formule combine deux expressions de type de données différents, les règles de priorité des types de données spécifient que le type ayant une priorité plus faible est converti dans un type ayant une priorité plus élevée. Si la conversion n'est pas prise en charge en tant que conversion implicite, l'erreur «`Error validating the formula for column column_name.`» est retournée. Utilisez la fonction CAST ou CONVERT pour résoudre le conflit de type de données. Par exemple, si une colonne de type `nvarchar` est associée à une colonne de type `int`, le type entier doit être converti en `nvarchar` comme indiqué dans cette formule `('Prod'+CONVERT(nvarchar(23),ProductID))`. Pour plus d’informations, consultez [CAST et CONVERT &#40;Transact-SQL&#41;](/sql/t-sql/functions/cast-and-convert-transact-sql).  
   
 5.  Indiquez si les données doivent être enregistrées en choisissant **Oui** ou **Non** dans la liste déroulante de la propriété enfant **Is Persisted** .  
   

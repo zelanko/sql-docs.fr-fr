@@ -18,18 +18,18 @@ ms.assetid: f3f5d85f-9359-4508-bc5a-7f78a3cf7421
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: d658c424acd5491acbd86cdcdd01905f12a6479a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fae03147c4e5364ae7c41590c88c9b6791a6370c
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085539"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119986"
 ---
 # <a name="report-server-web-service-endpoints"></a>Points de terminaison du service Web Report Server
   Le service Web Report Server fournit plusieurs points de terminaison pour la gestion d’un serveur de rapports aussi bien que l'exécution de rapports et la navigation dans ces derniers.  
   
 ## <a name="the-management-endpoints"></a>Points de terminaison de gestion  
- Trois points de terminaison sont disponibles pour la gestion des objets sur un serveur de rapports, <xref:ReportService2005>, <xref:ReportService2006> et <xref:ReportService2010>. Le point de terminaison <xref:ReportService2005> permet de gérer des objets sur un serveur de rapports qui est configuré pour le mode natif. Le point de terminaison <xref:ReportService2006> permet de gérer des objets sur un serveur de rapports qui est configuré pour le mode intégré SharePoint. Le point de terminaison <xref:ReportService2010> fusionne les fonctionnalités de <xref:ReportService2005> et <xref:ReportService2006> et peut gérer des objets sur un serveur de rapports configuré pour le mode natif ou intégré SharePoint.  
+ Trois points de terminaison sont disponibles pour la gestion des objets sur un serveur de rapports, <xref:ReportService2005>, <xref:ReportService2006> et <xref:ReportService2010>. Le point de terminaison <xref:ReportService2005> permet de gérer des objets sur un serveur de rapports qui est configuré pour le mode natif. Le point de terminaison <xref:ReportService2006> permet de gérer des objets sur un serveur de rapports qui est configuré pour le mode intégré SharePoint. Le <xref:ReportService2010> point de terminaison fusionne les fonctionnalités de <xref:ReportService2005> et <xref:ReportService2006> et peut gérer des objets sur un serveur de rapports qui sont configurés pour le mode natif ou mode intégré SharePoint.  
   
 > [!IMPORTANT]  
 >  Lorsqu'un serveur de rapports est configuré pour le mode intégré SharePoint, les API <xref:ReportService2005> renvoient une erreur `rsOperationNotSupportedSharePointMode`. Si le serveur de rapports est configuré pour le mode natif, les API <xref:ReportService2006> retournent une erreur `rsOperationNotSupportedNativeMode`. De la même façon, lorsque les API spécifiques au mode dans <xref:ReportService2010> sont utilisées sur des modes involontaires, les API retourneront les erreurs correspondantes.  

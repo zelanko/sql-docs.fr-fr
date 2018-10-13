@@ -17,12 +17,12 @@ ms.assetid: e8f67bdf-b489-49a9-9d0f-2069c1750467
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 75980cf457d1422bba783c02f9978bdd9263f220
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 17703c8a4c4839b977da9f4583a90ea3c3583b52
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47627707"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119886"
 ---
 # <a name="xquery-extension-functions---sqlcolumn"></a>Fonctions d’extension XQuery : sql:column()
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ sql:column("columnName")
   
  La requête construit du code XML se présentant sous la forme suivante :  
   
-```  
+```xml
 <Product ProductID="771" ProductName="Mountain-100 Silver, 38" ProductPrice="3399.99" ProductModelID="19"   
   ProductModelName="Mountain 100" />  
 ```  
@@ -67,7 +67,7 @@ sql:column("columnName")
   
 -   Pour rendre la requête plus intéressante, la **ProductModelName** valeur d’attribut est obtenue à partir de la **CatalogDescription** colonne de **type xml**. Comme les informations du catalogue de modèles de produits XML ne sont pas stockées pour tous les modèles de produits, l'instruction `if` ne permet de récupérer la valeur que si elle existe.  
   
-    ```  
+    ```sql
     SELECT P.ProductID, CatalogDescription.query('  
     declare namespace pd="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
            <Product   
@@ -109,7 +109,7 @@ ProductID               Result
   
  La requête suivante construit du code XML contenant des informations spécifiques à chaque produit. Ces informations comprennent les colonnes ProductID (correspondant à l'identificateur du produit), ProductName (le nom du produit), ProductPrice (son prix) et le cas échéant, ProductModelName (le nom de son modèle) pour les produits appartenant à un modèle donné ; dans le cas présenté ci-dessous, ProductModelID = 19. Le code XML est ensuite assigné à la @x variable de **xml** type.  
   
-```  
+```sql
 declare @x xml  
 SELECT @x = CatalogDescription.query('  
 declare namespace pd="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
@@ -136,7 +136,7 @@ select @x
  [Comparer du XML typé et du XML non typé](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [Données XML &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
  [Créer des instances de données XML](../relational-databases/xml/create-instances-of-xml-data.md)   
- [Méthodes des types de données xml](../t-sql/xml/xml-data-type-methods.md)   
+ [méthodes de type de données xml](../t-sql/xml/xml-data-type-methods.md)   
  [Langage de manipulation de données XML &#40;DML XML&#41;](../t-sql/xml/xml-data-modification-language-xml-dml.md)  
   
   

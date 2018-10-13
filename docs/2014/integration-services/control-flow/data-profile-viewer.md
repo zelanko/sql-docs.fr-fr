@@ -14,12 +14,12 @@ ms.assetid: b9043428-ce26-45bb-910c-588d07579565
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 01213b9d909ec9f9b2f47e1515015e64d2b958f7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 009ac57e854323c1340d600063dd1aee7fda2875
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125629"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48905741"
 ---
 # <a name="data-profile-viewer"></a>Visionneuse du profil des données
   L'affichage et l'analyse des profils des données sont les étapes suivantes du processus de profilage des données. Pour afficher ces profils, vous devez avoir exécuté la tâche de profilage des données dans un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] et avoir calculé les profils des données. Pour plus d’informations sur la configuration et l’exécution des tâches de profilage des données, consultez [Configuration de la tâche de profilage des données](data-profiling-task.md).  
@@ -61,7 +61,7 @@ ms.locfileid: "48125629"
 > [!IMPORTANT]  
 >  La fonction d'exploration vers le bas disponible dans la visionneuse du profil des données envoie des requêtes actives à la source de données d'origine. Ces requêtes peuvent avoir un impact négatif sur les performances du serveur.  
 >   
->  Si vous effectuez une exploration vers le bas à partir d'un fichier de sortie qui n'a pas été créé récemment, les requêtes d'exploration risquent de retourner un autre ensemble de lignes que celui à partir duquel la sortie d'origine a été calculée.  
+>  Si vous explorez à partir d’un fichier de sortie qui n’a pas été créé récemment, les requêtes d’exploration vers le bas peuvent retourner un autre ensemble de lignes que celui sur lequel la sortie d’origine a été calculée.  
   
  Pour plus d’informations sur l’interface utilisateur de la visionneuse du profil des données, consultez [Aide F1 de la visionneuse du profil des données](../data-profile-viewer-f1-help.md).  
   

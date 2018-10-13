@@ -15,12 +15,12 @@ ms.assetid: c9ba2589-139e-42bc-99e1-94546717c64d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 40f53007ac70cce216e0dc30c9d72ce830050504
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c4402cd9e7c02b598c47a851c8318e7c840bfbc3
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123749"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120366"
 ---
 # <a name="use-the-alwayson-dashboard-sql-server-management-studio"></a>Utiliser le tableau de bord AlwaysOn (SQL Server Management Studio)
   Les administrateurs de base de données utilisent le tableau de bord AlwaysOn pour afficher l'intégrité d'un groupe de disponibilité AlwaysOn et de ses réplicas de disponibilité et bases de données dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Parmi les utilisations courantes du tableau de bord AlwaysOn, citons :  
@@ -151,7 +151,7 @@ ms.locfileid: "48123749"
  Énonce le nom du problème. Cette valeur est affichée par défaut. Pour obtenir la liste de tous les problèmes de stratégie AlwaysOn, consultez [stratégies AlwaysOn pour les problèmes opérationnels avec des groupes de disponibilité AlwaysOn (SQL Server)](always-on-policies-for-operational-issues-always-on-availability.md).  
   
  **Mode de disponibilité**  
- Indique que la propriété de réplica que vous définissez séparément pour chaque réplica de disponibilité. Cette valeur est masquée par défaut. Les valeurs possibles sont les suivantes :  
+ Indique la propriété de réplica que vous définissez séparément pour chaque réplica de disponibilité. Cette valeur est masquée par défaut. Les valeurs possibles sont les suivantes :  
   
 -   **Asynchrone**. Le réplica secondaire n'est jamais synchronisé avec le réplica principal.  
   

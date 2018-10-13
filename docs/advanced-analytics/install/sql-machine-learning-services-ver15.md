@@ -8,12 +8,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f007549021fc246d943929f73a763e6343c5641a
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: 2bd03c4c1dfb019238785b5284b4cceffc95c3a2
+ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46715026"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48878152"
 ---
 # <a name="differences-in-sql-server-machine-learning-services-installation-in-sql-server-2019"></a>Différences dans l’installation de SQL Server Machine Learning Services dans SQL Server 2019  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -52,7 +52,7 @@ Comme avec les versions précédentes, le **SQLRUserGroup** continue à fournir 
 
 ## <a name="implied-authentication"></a>Authentification implicite
 
-Comme auparavant, une configuration supplémentaire est toujours requise pour *l’authentification implicite* au cas où le script ou code possède pour se connecter à SQL Server à l’aide de l’authentification approuvée pour récupérer des données ou ressources. La configuration supplémentaire implique la création d’une connexion de base de données pour **SQLRUserGroup**, dont seul le membre est désormais le compte de service SQL Server Launchpad unique au lieu de plusieurs comptes de travail. Pour plus d’informations sur cette tâche, consultez [SQLRUserGroup d’ajouter en tant qu’un utilisateur de base de données](../r/add-sqlrusergroup-to-database.md).
+Comme auparavant, une configuration supplémentaire est toujours requise pour *l’authentification implicite* au cas où le script ou code possède pour se connecter à SQL Server à l’aide de l’authentification approuvée pour récupérer des données ou ressources. La configuration supplémentaire implique la création d’une connexion de base de données pour **SQLRUserGroup**, dont seul le membre est désormais le compte de service SQL Server Launchpad unique au lieu de plusieurs comptes de travail. Pour plus d’informations sur cette tâche, consultez [SQLRUserGroup d’ajouter en tant qu’un utilisateur de base de données](../security/add-sqlrusergroup-to-database.md).
 
 
 ## <a name="symbolic-link-created-by-setup"></a>Lien symbolique créé par le programme d’installation

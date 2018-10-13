@@ -7,12 +7,12 @@ manager: craigg
 ms.date: 10/05/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 1f20f2adc916a456e4a1975804fac1640ee95f69
-ms.sourcegitcommit: 8aecafdaaee615b4cd0a9889f5721b1c7b13e160
+ms.openlocfilehash: a01d7e1f0162d4dc5cc1d604d5c780cf101646a5
+ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48818047"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49100340"
 ---
 # <a name="configure-minikube-for-sql-server-2019-ctp-20"></a>Configurer Minikube pour SQL Server 2019 CTP 2.0
 
@@ -23,7 +23,7 @@ Minikube est un outil qui facilite l’exécution de Kubernetes sur un seul ordi
 - Pour exécuter un cluster Minikube pour SQL Server 2019 CTP 2.0 dans une configuration de cluster SQL Big Data, il est recommandé que votre ordinateur soit au moins 32 Go de RAM.
 
    > [!TIP] 
-   > Si l’ordinateur possède une mémoire insuffisante, puis modifier la configuration de cluster telles qu’uniquement 3 instances sont créées : une seule instance maître et deux instances de calcul.
+   > Si l’ordinateur possède uniquement le minimum recommandé de mémoire, puis configurez le déploiement du cluster que 1 seule instance de pool de calcul, 1 instance de pool de données et instance de pool de stockage de 1. Cette configuration ne doit être utilisée pour les environnements d’évaluation où la durabilité et la disponibilité des données sont sans importance. Consultez le [documentation relative au déploiement](deployment-guidance.md#define-environment-variables) pour plus d’informations sur les variables d’environnement à définir pour configurer le nombre de réplicas pour les pools de données, de calcul, pools et les pools de stockage.
 
 - La virtualisation x VT ou AMD-v doit être activée dans le BIOS de votre ordinateur.
 

@@ -16,12 +16,12 @@ ms.assetid: 04f9863c-ba0b-47c5-af91-f2d41b078a23
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: dce3ca08855925e9ef4825cc9f5017b99722ed6c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b6abc8e9e025bc24b4f456b58e0e9625e66b4b71
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215549"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072023"
 ---
 # <a name="upgrade-integration-services"></a>Mettre à niveau Integration Services
   Si [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] ou [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] est installé sur votre ordinateur, vous pouvez effectuer une mise à niveau vers [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)].  
@@ -37,7 +37,7 @@ ms.locfileid: "48215549"
  Nous vous avons recommandé d'exécuter le Conseiller de mise à niveau avant de procéder à la mise à niveau vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Le Conseiller de mise à niveau signale des problèmes que vous pouvez rencontrer si vous effectuez une migration de packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] existants vers le nouveau format de package que [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilise. Pour plus d'informations, consultez [Use Upgrade Advisor to Prepare for Upgrades](../../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md).  
   
 > [!NOTE]  
->  La prise en charge de la migration ou de l’exécution des packages DTS (Data Transformation Services) a été suspendue dans la version actuelle de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Les fonctionnalités DTS suivantes ne sont plus disponibles.  
+>  Prise en charge de la migration ou l’exécution de packages de Services DTS (Data Transformation) a été supprimé dans la version actuelle de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Les fonctionnalités DTS suivantes ne sont plus disponibles.  
 >   
 >  -   Runtime DTS ;  
 > -   DTS API ;  

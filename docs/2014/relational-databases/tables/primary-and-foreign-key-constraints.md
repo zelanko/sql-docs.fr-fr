@@ -16,12 +16,12 @@ ms.assetid: 31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e7cc4dcb033a7baa86b81619f6e1dbb6dc37ddb1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b90a461af4969c9404af77bfbac75ebf7cad0fbc
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063441"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120356"
 ---
 # <a name="primary-and-foreign-key-constraints"></a>Contraintes de clé primaire et de clé étrangère
   Les clés primaires et les clés étrangères sont deux types de contraintes qui peuvent être utilisées pour appliquer l'intégrité des données dans des tables [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Ce sont des objets de base de données importants.  
@@ -79,7 +79,7 @@ ms.locfileid: "48063441"
  Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] déclenche une erreur et la suppression ou la mise à jour de la ligne dans la table parente est restaurée.  
   
  CASCADE  
- Les lignes correspondantes sont mises à jour ou supprimées dans la table de référence si la ligne de la table parent est mise à jour ou supprimée. CASCADE ne peut pas être spécifié si un `timestamp` colonne fait partie de la clé étrangère ou la clé référencée. L'action ON DELETE CASCADE ne peut pas être spécifiée pour une table possédant un déclencheur INSTEAD OF DELETE. L'action ON UPDATE CASCADE ne peut pas être spécifiée pour les tables possédant des déclencheurs INSTEAD OF UPDATE.  
+ Les lignes correspondantes sont mises à jour ou supprimées dans la table de référence si la ligne de la table parent est mise à jour ou supprimée. La valeur CASCADE ne peut pas être spécifiée si une colonne `timestamp` fait partie de la clé étrangère ou de la clé référencée. L'action ON DELETE CASCADE ne peut pas être spécifiée pour une table possédant un déclencheur INSTEAD OF DELETE. L'action ON UPDATE CASCADE ne peut pas être spécifiée pour les tables possédant des déclencheurs INSTEAD OF UPDATE.  
   
  SET NULL  
  Toutes les valeurs composant la clé étrangère sont définies sur NULL si la ligne correspondante se trouvant dans la table parente est mise à jour ou supprimée. Pour que cette contrainte s'applique, les colonnes clés étrangères doivent pouvoir cependant être définies sur NULL. Les actions suivantes ne peuvent pas être spécifiées pour les tables possédant des déclencheurs INSTEAD OF UPDATE.  

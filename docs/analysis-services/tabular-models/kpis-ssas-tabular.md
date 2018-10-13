@@ -1,5 +1,5 @@
 ---
-title: Indicateurs de performance clés | Documents Microsoft
+title: Indicateurs de performance clés | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6eaaf0fc4589fb07484dd10479ded4956650b245
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 8c718c3f8501a56b9ba02062e9457ca0cd67ad56
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34043723"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906429"
 ---
 # <a name="kpis"></a>Indicateurs de performance clés
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  Un *indicateur de performance clé* (KPI), dans un modèle tabulaire, permet de mesurer les performances d’une valeur, définies par une mesure de *base* par rapport à une valeur *cible* , également définie par une mesure ou par une valeur absolue. Cet article fournit des concepteurs de modèles tabulaires une présentation de base des indicateurs de performance clés dans un modèle tabulaire.  
+  Un *indicateur de performance clé* (KPI), dans un modèle tabulaire, permet de mesurer les performances d’une valeur, définies par une mesure de *base* par rapport à une valeur *cible* , également définie par une mesure ou par une valeur absolue. Cet article fournit aux auteurs de modèles tabulaires une compréhension élémentaire des indicateurs de performance clés dans un modèle tabulaire.  
   
 ##  <a name="bkmk_benefits"></a> Avantages  
  Dans la terminologie d'entreprise, un indicateur de performance clé (KPI) est une mesure quantifiable des performances d'objectifs économiques. Un KPI est fréquemment évalué dans le temps. Par exemple, le service commercial d'une organisation peut utiliser un KPI pour mesurer tous les mois la marge brute réelle par rapport à la marge brute planifiée. Le service comptable peut mesurer tous les mois les dépenses par rapport aux recettes pour évaluer les coûts ; et le service des ressources humaines peut mesurer tous les trimestres le taux de rotation du personnel. Chacun est un exemple de KPI. Les décideurs utilisent fréquemment des KPI qui sont regroupés dans un tableau de bord de l'entreprise pour obtenir une synthèse historique rapide et précise de l'activité ou déterminer les tendances.  
@@ -35,9 +35,9 @@ ms.locfileid: "34043723"
  Un seuil d'état est défini par la plage entre un seuil minimal et un seuil maximal, ou par une valeur fixe. Le seuil d'état s'affiche sous la forme d'un graphique pour aider les utilisateurs à déterminer facilement l'état de la valeur de base comparée à la valeur cible.  
   
 ##  <a name="bkmk_example"></a> Exemple  
- La responsable commerciale d'AdventureWorks souhaite créer un tableau croisé dynamique qu'elle pourra utiliser pour déterminer rapidement si ses commerciaux atteignent leurs quotas de vente pendant une période donnée (généralement annuelle). Pour chaque commercial, elle souhaite que le tableau croisé dynamique affiche le montant total des ventes en dollars, le montant du quota des ventes en dollars et un graphique simple indiquant l'état de l'employé, c'est-à-dire où il se situe par rapport au quota des ventes. Elle souhaite obtenir des données annuelles.  
+ La responsable commerciale d'AdventureWorks souhaite créer un tableau croisé dynamique qu'elle pourra utiliser pour déterminer rapidement si ses commerciaux atteignent leurs quotas de vente pendant une période donnée (généralement annuelle). Pour chaque employé, elle souhaite que le tableau croisé dynamique pour afficher le montant des ventes réel en dollars, la quantité de quota de ventes en dollars et un affichage graphique simple indiquant l’état de chaque employé soit ou non ci-dessous, sur ou au-dessus de leur quota de ventes. Elle souhaite obtenir des données annuelles.  
   
- Pour cela, la directrice commerciale demande l'aide du développeur de solutions de décisionnel de son organisation pour ajouter un KPI Ventes au modèle tabulaire AdventureWorks. Le directeur des ventes utilise Excel pour vous connecter pour le modèle tabulaire Adventure Works comme source de données et créer un tableau croisé dynamique avec les champs (mesures et KPI) et les segments pour analyser ou non de la force de vente atteint ses quotas.  
+ Pour cela, la directrice commerciale demande l'aide du développeur de solutions de décisionnel de son organisation pour ajouter un KPI Ventes au modèle tabulaire AdventureWorks. Le responsable des ventes sera ensuite utiliser Excel pour vous connecter pour le modèle tabulaire Adventure Works comme source de données et créer un tableau croisé dynamique avec les champs (mesures et KPI) et les segments pour analyser ou non la force de vente atteint ses quotas.  
   
  Dans le modèle, une mesure de la colonne SalesAmount dans la table FactResellerSales est créée, indiquant le montant des ventes réel en dollars pour chaque employé. Cette mesure va définir la valeur de base du KPI.  
   
@@ -71,12 +71,12 @@ Target SalesAmountQuota:=Sum(FactSalesQuota[SalesAmountQuota])
   
 ##  <a name="bkmk_related_tasks"></a> Tâches associées  
   
-|Rubrique| Description|  
+|Rubrique|Description|  
 |-----------|-----------------|  
 |[Créer et gérer des indicateurs de performance clés](../../analysis-services/tabular-models/create-and-manage-kpis-ssas-tabular.md)|Décrit comment créer un indicateur de performance clé avec une mesure de base, une mesure cible et des seuils d'état.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Mesures](../../analysis-services/tabular-models/measures-ssas-tabular.md)   
+ [mesures](../../analysis-services/tabular-models/measures-ssas-tabular.md)   
  [Perspectives](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)  
   
   

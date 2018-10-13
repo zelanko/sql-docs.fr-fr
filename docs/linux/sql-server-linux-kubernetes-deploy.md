@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 776b4390c78a6bd228989b94dd76d4a269f94126
-ms.sourcegitcommit: 8aecafdaaee615b4cd0a9889f5721b1c7b13e160
+ms.openlocfilehash: e062f97f5fe63966cf3b03b9727cd13a509d3ae5
+ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48818057"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48878102"
 ---
 # <a name="deploy-a-sql-server-always-on-availability-group-on-kubernetes-cluster"></a>Déployer un serveur SQL Server Always On de groupe de disponibilité sur un Cluster Kubernetes
 
@@ -39,7 +39,7 @@ Sur Kubernetes le déploiement inclut un opérateur de SQL Server, les conteneur
   >Vous pouvez utiliser n’importe quel type de cluster Kubernetes. Pour créer un cluster Kubernetes sur Azure Kubernetes Service (AKS), consultez [créer un cluster AKS](http://docs.microsoft.com/azure/aks/create-cluster).
   > Le script suivant crée un cluster à quatre nœuds Kubernetes dans Azure.
   >```azure-cli
-  az aks create --resource-group myResourceGroup --name myAKSCluster --node-count 4 --kubernetes-version 1.11.3
+  az aks create --resource-group myResourceGroup --name myAKSCluster --node-count 4 --kubernetes-version 1.11.3 --generate-ssh-keys
   >```
 
 ## <a name="deploy-the-operator-sql-server-containers-and-load-balancing-services"></a>Déployer l’opérateur, les conteneurs de SQL Server et les services d’équilibrage de charge

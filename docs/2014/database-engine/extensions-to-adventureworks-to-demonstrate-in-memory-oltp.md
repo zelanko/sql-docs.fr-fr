@@ -10,24 +10,24 @@ ms.assetid: 0186b7f2-cead-4203-8360-b6890f37cde8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7ba04ced0358af468818bb755b1f3f2e9e14e0f9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bea792099543df1cf33bf98b256f7dbc3f39c23c
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192189"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120382"
 ---
 # <a name="extensions-to-adventureworks-to-demonstrate-in-memory-oltp"></a>Extensions à AdventureWorks pour présenter l'OLTP en mémoire
     
 ## <a name="overview"></a>Vue d'ensemble  
- Cet exemple présente les nouvelles [!INCLUDE[hek_2](../includes/hek-2-md.md)] fonctionnalité, qui fait partie de [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. Il affiche les nouvelles tables optimisées en mémoire et les procédures stockées compilées en mode natif et peut être utilisé pour démontrer les avantages de performances de [!INCLUDE[hek_2](../includes/hek-2-md.md)].  
+ Cet exemple présente les nouvelles fonctionnalités d'[!INCLUDE[hek_2](../includes/hek-2-md.md)], qui fait partie de [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. Il présente les tables optimisées en mémoire et les procédures stockées compilées en mode natif, et illustre les performances d' [!INCLUDE[hek_2](../includes/hek-2-md.md)].  
   
 > [!NOTE]  
 >  Pour afficher cette rubrique pour SQL Server 2016, consultez [Extensions à AdventureWorks pour présenter l’OLTP en mémoire](https://msdn.microsoft.com/en-US/library/mt465764.aspx)  
   
  Dans l'exemple, 5 tables de la base de données AdventureWorks sont migrées vers des tables optimisées en mémoire, et une charge de travail de démonstration est incluse pour le traitement des commandes. Utilisez cette charge de travail de démonstration pour voir le gain de performances obtenu en utilisant [!INCLUDE[hek_2](../includes/hek-2-md.md)] sur votre serveur.  
   
- Dans la description de l'exemple, nous aborderons les différents facteurs à prendre en compte lors de la migration des tables vers [!INCLUDE[hek_2](../includes/hek-2-md.md)], notamment les fonctionnalités qui ne sont pas encore prises en charge pour les tables optimisées en mémoire dans [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
+ Dans la description de l'exemple, nous aborderons les différents facteurs à prendre en compte lors de la migration des tables vers [!INCLUDE[hek_2](../includes/hek-2-md.md)] , notamment les fonctionnalités qui ne sont pas encore prises en charge pour les tables optimisées en mémoire dans [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
   
  La documentation de l'exemple est structurée comme suit :  
   
@@ -43,7 +43,7 @@ ms.locfileid: "48192189"
   
 ##  <a name="Prerequisites"></a> Conditions préalables  
   
--   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM – édition Evaluation, Developer ou Enterprise  
+-   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM – Édition Evaluation, Developer ou Enterprise  
   
 -   Pour tester les performances, un serveur avec des caractéristiques semblables dans votre environnement de production. Pour cet exemple spécifique, vous devez disposer d'au moins 16 Go de mémoire disponible sur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Pour des recommandations générales concernant le matériel pour [!INCLUDE[hek_2](../includes/hek-2-md.md)], consultez le blog suivant :[http://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx](http://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx)  
   
@@ -81,15 +81,15 @@ ms.locfileid: "48192189"
      GO  
     ```  
   
-4.  Remplacez le propriétaire de base de données par une connexion sur votre serveur, en exécutant la commande suivante dans la fenêtre de requête de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] :  
+4.  Remplacez le propriétaire de base de données par une connexion sur votre serveur, en exécutant la commande suivante dans la fenêtre de requête de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]:  
   
     ```  
     ALTER AUTHORIZATION ON DATABASE::AdventureWorks2014 TO [<NewLogin>]  
     ```  
   
-5.  Télécharger l’exemple de script «[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample.sql » à partir de [SQL Server 2014 RTM In-Memory OLTP exemple](http://go.microsoft.com/fwlink/?LinkID=396372) dans un dossier local.  
+5.  Téléchargez l'exemple de script «[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample.sql » depuis l' [Exemple d'OLTP en mémoire SQL Server 2014 RTM](http://go.microsoft.com/fwlink/?LinkID=396372) vers un dossier local.  
   
-6.  Mettez à jour la valeur « checkpoint_files_location » dans le script « [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample.sql », pour pointer à l'emplacement cible des fichiers de point de contrôle d'[!INCLUDE[hek_2](../includes/hek-2-md.md)]. Les fichiers de point de contrôle doivent être placés sur un lecteur avec de bonnes performances d'E/S séquentielles.  
+6.  Mettez à jour la valeur « checkpoint_files_location » dans le script «[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample.sql », pour pointer à l'emplacement cible des fichiers de point de contrôle d' [!INCLUDE[hek_2](../includes/hek-2-md.md)] . Les fichiers de point de contrôle doivent être placés sur un lecteur avec de bonnes performances d'E/S séquentielles.  
   
      Mettez à jour la valeur pour la variable 'database_name' afin qu'elle pointe vers la base de données AdventureWorks2014.  
   
@@ -113,7 +113,7 @@ ms.locfileid: "48192189"
   
     2.  En utilisant Management Studio :  
   
-        1.  Ouvrez le script « [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample.sql » dans une fenêtre de requête.  
+        1.  Ouvrez le script «[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample.sql » dans une fenêtre de requête.  
   
         2.  Connectez-vous au serveur cible qui contient la base de données AdventureWorks2014.  
   
@@ -188,7 +188,7 @@ ms.locfileid: "48192189"
   
 -   *Colonnes calculées[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] : les colonnes calculées SalesOrderNumber et TotalDue sont omises, car*  ne prend pas en charge les colonnes calculées dans les tables optimisées en mémoire. La nouvelle vue Sales.vSalesOrderHeader_extended_inmem reflète les colonnes SalesOrderNumber et TotalDue. Par conséquent, vous pouvez utiliser cette vue si ces colonnes sont nécessaires.  
   
--   *Contraintes de clé étrangère* ne sont pas pris en charge pour les tables mémoire optimisées dans [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. En outre, SalesOrderHeader_inmem est une table très sollicitée dans l'exemple de charge de travail, et les contraintes de clé étrangère nécessitent un traitement supplémentaire pour toutes les opérations DML, avec des recherches dans les autres tables référencées dans ces contraintes. Par conséquent, on formule l'hypothèse que l'application garantit l'intégrité référentielle, et celle-ci n'est pas validée lorsque des lignes sont insérées. L'intégrité référentielle des données de cette table peut être vérifiée à l'aide de la procédure stockée dbo.usp_ValidateIntegrity, en utilisant le script suivant :  
+-   Les*contraintes de clé étrangère* ne sont pas prises en charge pour les tables optimisées en mémoire dans [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. En outre, SalesOrderHeader_inmem est une table très sollicitée dans l'exemple de charge de travail, et les contraintes de clé étrangère nécessitent un traitement supplémentaire pour toutes les opérations DML, avec des recherches dans les autres tables référencées dans ces contraintes. Par conséquent, on formule l'hypothèse que l'application garantit l'intégrité référentielle, et celle-ci n'est pas validée lorsque des lignes sont insérées. L'intégrité référentielle des données de cette table peut être vérifiée à l'aide de la procédure stockée dbo.usp_ValidateIntegrity, en utilisant le script suivant :  
   
     ```  
     DECLARE @o int = object_id(N'Sales.SalesOrderHeader_inmem')  
@@ -223,7 +223,7 @@ ms.locfileid: "48192189"
   
 -   *Types définis par l’utilisateur (UDT) alias* : la table d’origine utilise le type de données défini par l’utilisateur dbo.Flag, qui est équivalent au bit de type de données système. La table migrée utilise le type de données bit à la place.  
   
--   *Classement BIN2* – les colonnes et Name et ProductNumber sont incluses dans les clés d’index et doit avoir les classements BIN2 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. Ici, l'hypothèse est que l'application ne tient pas compte des spécificités du classement, comme le non-respect de la casse.  
+-   *Classements BIN2* – Les colonnes et Name et ProductNumber sont incluses dans les clés d'index, et doivent avoir les classements BIN2 dans [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. Ici, l'hypothèse est que l'application ne tient pas compte des spécificités du classement, comme le non-respect de la casse.  
   
 -   *Rowguid* : la colonne ROWGUID est omise. Pour plus d'informations consultez la description de la table SalesOrderHeader.  
   
@@ -412,7 +412,7 @@ ms.locfileid: "48192189"
   
 -   -S Nom de l’instance [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à laquelle se connecter  
   
--   -E Utilisez l'authentification Windows pour la connexion (valeur par défaut) ; si vous utilisez l'authentification [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , utilisez les options – U et – P pour spécifier le nom d'utilisateur et le mot de passe, respectivement  
+-   -E Utilisez l'authentification Windows pour la connexion (valeur par défaut) ; si vous utilisez l'authentification [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], utilisez les options – U et – P pour spécifier le nom d'utilisateur et le mot de passe, respectivement  
   
 -   -d Nom de la base de données, pour cet exemple AdventureWorks2014  
   
@@ -647,7 +647,7 @@ WHERE t.type='U'
 |SpecialOfferProduct_inmem|64|3712|  
 |DemoSalesOrderHeaderSeed|1984|5504|  
   
- Nous pouvons voir un total d'environ 6,5 Go de données. Notez que la taille des index sur la table SalesOrderHeader_inmem et SalesOrderDetail_inmem est la même que la taille des index avant d'insérer les commandes. La taille de l'index n'a pas changé car les deux tables utilisent des index de hachage, qui sont statiques.  
+ Nous pouvons voir un total d'environ 6,5 Go de données. Notez que la taille des index sur la table SalesOrderHeader_inmem et SalesOrderDetail_inmem est identique à la taille des index avant d’insérer les commandes client. La taille de l'index n'a pas changé car les deux tables utilisent des index de hachage, qui sont statiques.  
   
 #### <a name="after-demo-reset"></a>Après la réinitialisation de la démonstration  
  La procédure stockée Demo.usp_DemoReset peut être utilisée pour réinitialiser la démonstration. Elle supprime les données dans les tables SalesOrderHeader_inmem et SalesOrderDetail_inmem, puis réinsère les données à partir des tables d'origine SalesOrderHeader et SalesOrderDetail.  

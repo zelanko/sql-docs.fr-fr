@@ -7,12 +7,12 @@ manager: craigg
 ms.date: 10/01/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: ea1ab30f9b3b8ef77834a56b059b2a56de4467b5
-ms.sourcegitcommit: 448106b618fe243e418bbfc3daae7aee8d8553d2
+ms.openlocfilehash: 6c245365c231264f1aa56e2f1fad8ac17446ec5b
+ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48796259"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48877932"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-2019-ctp-20"></a>Configurer Azure Kubernetes Service pour SQL Server 2019 CTP 2.0
 
@@ -24,7 +24,10 @@ Cet article décrit les étapes pour déployer Kubernetes sur AKS à l’aide d�
 
 ## <a name="prerequisites"></a>Prérequis
 
-- Pour un environnement AKS, la condition minimale de la machine virtuelle est au moins deux agent machines virtuelles (en plus de master) d’une taille minimale Standard_DS3_V2. Ressources minimales requises par machine virtuelle sont de 4 processeurs et 14 Go de mémoire.
+- Pour un environnement AKS, la condition minimale de la machine virtuelle est au moins deux agent machines virtuelles (en plus de master) d’une taille minimale [Standard_DS3_v2](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-general#dsv2-series). Ressources minimales requises par machine virtuelle sont de 4 processeurs et 14 Go de mémoire.
+  
+   > [!NOTE]
+   > Si vous projetez d’exécuter des tâches de big data ou de plusieurs applications Spark, la taille minimale est [Standard_D8_v3](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-general#dv3-series-sup1sup), et les ressources minimales requises par machine virtuelle sont 8 processeurs et 32 Go de mémoire.
 
 - Cette section, vous devez être en cours d’exécution Azure CLI version 2.0.4 ou version ultérieure. Si vous avez besoin installer ou mettre à niveau, consultez [installer Azure CLI 2.0](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli). Exécutez `az --version` pour trouver la version, si nécessaire.
 
@@ -80,7 +83,7 @@ Un groupe de ressources Azure est un groupe logique dans Azure les ressources so
     --kubernetes-version 1.10.7
     ```
 
-    Vous pouvez augmenter ou diminuer le nombre d’agents par défaut en ajoutant `--node-count <n>` à la az aks Créer commande où `<n>` est le nombre de nœuds d’agent que vous souhaitez effectuer.
+    Vous pouvez augmenter ou réduire le nombre d’agents par défaut en modifiant le `--node-count <n>` où `<n>` est le nombre de nœuds d’agent que vous souhaitez effectuer.
 
     Après quelques minutes, la commande se termine et retourne des informations formatées JSON sur le cluster.
 

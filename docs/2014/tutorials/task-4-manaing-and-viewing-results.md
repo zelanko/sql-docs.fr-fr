@@ -13,12 +13,12 @@ ms.assetid: ecc3ba7e-fecf-478f-8825-6e4764b00e99
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c298daa69c57c7771787c181cc0087927ff83f68
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fb0cc2f091ce6365e91dd285e553498cc595c76e
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163499"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119869"
 ---
 # <a name="task-4-manaing-and-viewing-results"></a>Tâche 4 : Gestion et affichage des résultats
   Dans cette tâche, vous allez examiner les résultats du nettoyage assisté par ordinateur, et vous allez également effectuer un nettoyage interactif des données du fournisseur. Consultez [étape de nettoyage interactif](http://msdn.microsoft.com/library/hh213061.aspx#Interactive) pour plus d’informations.  
@@ -55,7 +55,7 @@ ms.locfileid: "48163499"
   
     1.  Notez que **A. Datum Corp.** est corrigé par **A. Datum Corporation** et **raison** a la valeur **relation de base de termes. A. datum Corporation** est une valeur de domaine connu et DQS, car il a été détecté pendant le processus de découverte de connaissances. Par conséquent, DQS est **sûr à 100 %** sur cette correction.  
   
-    2.  Notez que qui **Lazy Country Storex** est corrigé par **Lazy Country Store**, **niveau de confiance** a la valeur **100 %** et le  **Raison** a la valeur **valeur de domaine**. Pendant le processus de découverte de connaissances, vous définissez **Lazy Country Storex** en tant qu’erreur avec **Lazy Country Store** en tant que le **correction**, et DQS **100 % certain** effectuer la correction.  
+    2.  Notez que **Lazy Country Storex** est corrigé par **Lazy Country Store**, **niveau de confiance** a la valeur **100 %** et le **Raison** a la valeur **valeur de domaine**. Pendant le processus de découverte de connaissances, vous définissez **Lazy Country Storex** en tant qu’erreur avec **Lazy Country Store** en tant que le **correction**, et DQS **100 % certain** effectuer la correction.  
   
     3.  DQS n’est pas familiarisé avec les autres valeurs dans la liste, mais il trouve les corrections de ces valeurs en utilisant la **vérificateur orthographique** et propose les corrections appropriées. DQS est **pas 100 %** inspire ces corrections, mais le niveau de confiance est supérieure à 80 %, ce qui est le niveau de seuil pour apporter des corrections, donc DQS suggère les corrections.  
   

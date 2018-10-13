@@ -19,12 +19,12 @@ ms.assetid: 3c3cb865-7a4d-4d66-98f2-5935e28929fc
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 32a750ead87e8d775388d93c2ddc84ed12f2ca98
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 321bcbc0c07d4de2d5e9a7f930cb21c0995ce79b
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147931"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169399"
 ---
 # <a name="tablediff-utility"></a>tablediff (utilitaire)
   L’utilitaire **tablediff** sert à comparer les données dans deux tables et à identifier une non-convergence. Il est particulièrement utile pour résoudre des problèmes de non-convergence dans une topologie de réplication. Cet utilitaire peut être employé à partir de l'invite de commandes ou dans un fichier de commandes pour effectuer les tâches suivantes :  
@@ -77,8 +77,8 @@ ms.locfileid: "48147931"
  [ **-?** ]  
  Retour de la liste des paramètres pris en charge.  
   
- **-sourceserver** *source_server_name*[**\\***instance_name*]  
- Nom du serveur source. Spécifiez *source_server_name* pour l’instance par défaut de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Spécifiez *source_server_name***\\***instance_name* pour une instance nommée de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ **-sourceserver** *source_server_name*[**\\**_instance_name_]  
+ Nom du serveur source. Spécifiez _source\_server\_nom_ pour l’instance par défaut de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Spécifiez _source\_server\_nom_**\\**_instance\_nom_ pour une instance nommée de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  **-sourcedatabase** *source_database*  
  Nom de la base de données source.  
@@ -101,8 +101,8 @@ ms.locfileid: "48147931"
  **-sourcelocked**  
  Durant la comparaison, la table source est verrouillée à l'aide des indicateurs de table TABLOCK et HOLDLOCK.  
   
- **-destinationserver** *destination_server_name*[**\\***instance_name*]  
- Nom du serveur de destination. Spécifiez *destination_server_name* pour l’instance par défaut de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Spécifiez *destination_server_name***\\***instance_name* pour une instance nommée de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ **-destinationserver** *destination_server_name*[**\\**_instance\_nom_]  
+ Nom du serveur de destination. Spécifiez *destination_server_name* pour l’instance par défaut de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Spécifiez _destination\_server\_nom_**\\**_instance\_nom_ pour une instance nommée de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  **-destinationdatabase** *subscription_database*  
  Nom de la base de données de destination.  
@@ -126,7 +126,7 @@ ms.locfileid: "48147931"
  Durant la comparaison, la table de destination est verrouillée à l'aide des indicateurs de table TABLOCK et HOLDLOCK.  
   
  **-b** *large_object_bytes*  
- Est le nombre d’octets à comparer pour des colonnes de type de données LOB, ce qui inclut : `text`, `ntext`, `image`, `varchar(max)`, `nvarchar(max)` et `varbinary(max)`. *large_object_bytes* a comme valeur par défaut la taille de la colonne. Toutes les données au-dessus de *large_object_bytes* ne sont pas comparées.  
+ Nombre d'octets à comparer pour des colonnes de types de données d'objet volumineuses, notamment : `text`, `ntext`, `image`, `varchar(max)`, `nvarchar(max)` et `varbinary(max)`. *large_object_bytes* a comme valeur par défaut la taille de la colonne. Toutes les données au-dessus de *large_object_bytes* ne sont pas comparées.  
   
  **-bf**  *number_of_statements*  
  Nombre d’instructions [!INCLUDE[tsql](../includes/tsql-md.md)] à écrire dans le fichier de script [!INCLUDE[tsql](../includes/tsql-md.md)] actuel lorsque l’option **-f** est utilisée. Quand le nombre d’instructions [!INCLUDE[tsql](../includes/tsql-md.md)] dépasse *number_of_statements*, un fichier de script [!INCLUDE[tsql](../includes/tsql-md.md)] est créé.  
@@ -172,7 +172,7 @@ ms.locfileid: "48147931"
 ## <a name="remarks"></a>Notes  
  L’utilitaire **tablediff** ne peut pas être utilisé avec des serveurs non-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
- Tables avec `sql_variant` les colonnes de type de données ne sont pas pris en charge.  
+ Les tables comprenant des colonnes de types de données `sql_variant` ne sont pas prises en charge.  
   
  Par défaut, l’utilitaire **tablediff** prend en charge les mappages de types de données suivants entre les colonnes source et de destination.  
   

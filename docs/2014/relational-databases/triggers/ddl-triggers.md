@@ -12,12 +12,12 @@ ms.assetid: 1a4a6564-9820-4a14-9305-2c0e9ea37454
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d9f3033aefbb01787fe0001a860a870960d98f15
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 25559152ebb3b748cee44a3a04dec2c23b7432b8
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141569"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072033"
 ---
 # <a name="ddl-triggers"></a>Déclencheurs DDL
   Les déclencheurs DDL sont activés en réponse à différents événements DDL (Data Definition Language). Ces événements correspondent principalement à des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] commençant par les mots clés CREATE, ALTER, DROP, GRANT, DENY, REVOKE ou UPDATE STATISTICS. Certaines procédures stockées système qui effectuent des opérations de type DDL peuvent également activer des déclencheurs DDL.  
@@ -35,14 +35,14 @@ ms.locfileid: "48141569"
   
 ## <a name="types-of-ddl-triggers"></a>Types de déclencheurs DDL  
  Déclencheur Transact-SQL DDL  
- Type spécial de procédure stockée [!INCLUDE[tsql](../../includes/tsql-md.md)] qui exécute une ou plusieurs instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] en réponse à un événement d'étendue de serveur ou de base de données. Par exemple, un déclencheur DDL peut être activé si une instruction comme ALTER SERVER CONFIGURATION est exécutée ou si une table est supprimée à l'aide de DROP TABLE.  
+ Un type spécial de [!INCLUDE[tsql](../../includes/tsql-md.md)] procédure stockée qui exécute une ou plusieurs [!INCLUDE[tsql](../../includes/tsql-md.md)] instructions en réponse à un événement de l’étendue de base de données ou de serveur. Par exemple, un déclencheur DDL peut être activé si une instruction comme ALTER SERVER CONFIGURATION est exécutée ou si une table est supprimée à l'aide de DROP TABLE.  
   
  Déclencheur DDL CLR  
  Au lieu d'exécuter une procédure stockée [!INCLUDE[tsql](../../includes/tsql-md.md)] , un déclencheur CLR exécute une ou plusieurs méthodes écrites en code managé que les membres d'un assembly ont créées dans .NET Framework et téléchargées dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Les déclencheurs DDL ne s'activent qu'après l'exécution des instructions DDL de déclenchement. Les déclencheurs DDL ne peuvent pas être utilisés comme déclencheurs INSTEAD OF. Les déclencheurs DDL ne sont pas activés en réponse à des événements qui concernent les tables et les procédures stockées temporaires locales ou globales.  
   
- Déclencheurs DDL ne créent pas spéciale `inserted` et `deleted` tables.  
+ Les déclencheurs DDL ne créent pas les tables `inserted` et `deleted` spéciales.  
   
  Les informations sur un événement déclenché par un déclencheur DDL, ainsi que les modifications qui s'ensuivent, sont capturées au moyen de la fonction EVENTDATA.  
   

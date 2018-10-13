@@ -11,12 +11,12 @@ ms.assetid: cf2e2c84-0a69-4cdd-90a1-fb4021936513
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: eded16b19f9645444c8161e04c63c8a283673b26
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3282f801e8ced6ab51d0188e74eb854631c399c1
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108185"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120226"
 ---
 # <a name="configure-http-access-to-analysis-services-on-internet-information-services-iis-80"></a>Configurer l'accès HTTP à Analysis Services sur Internet Information Services (IIS) 8.0
   Cet article explique comment configurer un point de terminaison HTTP pour accéder à une instance Analysis Services. Vous pouvez activer l'accès HTTP en configurant MSMDPUMP.dll, une extension ISAPI qui s'exécute dans Internet Information Services (IIS) et qui pompe des données entre des applications clientes et un serveur Analysis Services. Cette approche constitue une alternative à la connexion à Analysis Services lorsque votre solution de décisionnel nécessite les capacités suivantes :  
@@ -130,7 +130,7 @@ ms.locfileid: "48108185"
     -   \<drive>:\inetpub\wwwroot\OLAP\Resources  
   
 ##  <a name="bkmk_appPool"></a> Étape 2 : créer un pool d'applications et un répertoire virtuel dans IIS  
- Ensuite, créez un pool d'applications et un point de terminaison pour la pompe.  
+ Ensuite, créez un pool d’applications et un point de terminaison pour la pompe.  
   
 #### <a name="create-an-application-pool"></a>Créer un pool d'applications  
   
@@ -300,9 +300,9 @@ ms.locfileid: "48108185"
   
 ## <a name="see-also"></a>Voir aussi  
  [Publication de forum (accès http à l'aide de msmdpump et de l'authentification de base)](http://social.msdn.microsoft.com/Forums/en/sqlanalysisservices/thread/79d2f225-df35-46da-aa22-d06e98f7d658)   
- [Configurer le pare-feu Windows pour autoriser l’accès à Analysis Services](configure-the-windows-firewall-to-allow-analysis-services-access.md)   
- [Autoriser l’accès aux objets et aux opérations &#40;Analysis Services&#41;](../multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)   
- [Méthodes d’authentification IIS](http://go.microsoft.com/fwlink/?LinkdID=208461)   
- [Procédure pour configurer SSL sur IIS 7](http://go.microsoft.com/fwlink/?LinkId=207562)  
+ [Configure the Windows Firewall to Allow Analysis Services Access](configure-the-windows-firewall-to-allow-analysis-services-access.md)   
+ [Autorisation de l’accès à des objets et des opérations (Analysis Services)](../multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)   
+ [Méthodes d'authentification IIS](http://go.microsoft.com/fwlink/?LinkdID=208461)   
+ [Procédure de configuration de SSL sur IIS 7](http://go.microsoft.com/fwlink/?LinkId=207562)  
   
   

@@ -18,12 +18,12 @@ ms.assetid: 74bc40bb-9f57-44e4-8988-1d69c0585eb6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 039961b8c2811d32fcf8544f395c527e7981abb0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 117391f9cbefeb7ed7fbc76d2c1d93376e5a1fa6
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073009"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085335"
 ---
 # <a name="configure-backup-on-availability-replicas-sql-server"></a>Configurer la sauvegarde sur des réplicas de disponibilité (SQL Server)
   Cette rubrique explique comment configurer la sauvegarde sur des réplicas secondaires pour un groupe de disponibilité AlwaysOn à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], de [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou de PowerShell dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
@@ -111,7 +111,7 @@ ms.locfileid: "48073009"
 ##  <a name="PowerShellProcedure"></a> Utilisation de PowerShell  
  **Pour configurer la sauvegarde sur les réplicas secondaires**  
   
-1.  Définir par défaut (`cd`) à l’instance de serveur qui héberge le réplica principal.  
+1.  Définissez la valeur par défaut (`cd`) sur l'instance de serveur qui héberge le réplica principal.  
   
 2.  Éventuellement, configurez la priorité de sauvegarde de chaque réplica de disponibilité que vous ajoutez ou modifiez. Cette priorité est utilisée par l'instance de serveur qui héberge le réplica principal pour décider quel réplica doit traiter une demande de sauvegarde automatique sur une base de données dans le groupe de disponibilité (le réplica avec la priorité la plus élevée est choisi). Cette priorité peut être tout nombre compris entre 0 et 100 (inclus). Une priorité de 0 indique que le réplica ne doit pas être considéré comme candidat pour le traitement des demandes de sauvegarde.  La valeur par défaut est 50.  
   
@@ -126,7 +126,7 @@ ms.locfileid: "48073009"
   
 3.  Éventuellement, configurez la préférence de sauvegarde automatique pour le groupe de disponibilité que vous créez ou modifiez. Cette préférence indique la manière dont un travail de sauvegarde doit évaluer le réplica principal lorsqu'on choisit où effectuer des sauvegardes. Le paramètre par défaut est de préférer les réplicas secondaires.  
   
-     Lors de la création d'un groupe de disponibilité, utilisez l'applet de commande `New-SqlAvailabilityGroup`. Quand vous modifiez un groupe de disponibilité existant, utilisez la `Set-SqlAvailabilityGroup` applet de commande. Dans les deux cas, spécifiez la `AutomatedBackupPreference` paramètre.  
+     Lors de la création d'un groupe de disponibilité, utilisez l'applet de commande `New-SqlAvailabilityGroup`. Lorsque vous modifiez un groupe de disponibilité existant, utilisez l'applet de commande `Set-SqlAvailabilityGroup`. Dans les deux cas, spécifiez le paramètre `AutomatedBackupPreference`.  
   
      où :  
   
@@ -157,7 +157,7 @@ ms.locfileid: "48073009"
     ```  
   
 > [!NOTE]  
->  Pour afficher la syntaxe d’une applet de commande, utilisez le `Get-Help` applet de commande dans le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] environnement PowerShell. Pour en savoir plus, voir [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
+>  Pour afficher la syntaxe d'une applet de commande, utilisez l'applet de commande `Get-Help` dans l'environnement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Pour en savoir plus, voir [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
  **Pour configurer et utiliser le fournisseur SQL Server PowerShell**  
   

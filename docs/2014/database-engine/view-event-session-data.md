@@ -11,12 +11,12 @@ ms.assetid: ac742a01-2a95-42c7-b65e-ad565020dc49
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d25e4c745ba7cd5d937ed558283c21a49d6ec0a5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: befef498ab4cda12ce38a34678b78a2b5dcd278c
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159489"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120296"
 ---
 # <a name="view-event-session-data"></a>Afficher des données de session d'événements
   Cette rubrique décrit l'utilisation de l'interface utilisateur pour afficher et analyser les données d'événements étendus :  
@@ -45,7 +45,7 @@ ms.locfileid: "48159489"
   
 -   Pour une cible event_file, affichez les données cibles du fichier (fichier .XEL) à l'aide de l'une des méthodes suivantes :  
   
-    -   Utiliser un fichier -> Ouvrir dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
+    -   Utilisez Fichier -> Ouvrir dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
     -   Faites glisser le fichier dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
@@ -86,7 +86,7 @@ ms.locfileid: "48159489"
  Le volet **Détails** affiche toutes les colonnes de l'événement sélectionné, notamment les champs et les actions. Vous pouvez ajouter une colonne à la table de données cible en cliquant avec le bouton droit sur une ligne dans le volet **Détails** et en sélectionnant **Afficher la colonne dans la table**.  
   
 ### <a name="create-modify-or-delete-merged-columns"></a>Créer, modifier ou supprimer des colonnes fusionnées  
- Une colonne fusionnée vous permet de combiner un ensemble de champs à afficher dans une colonne unique. La colonne fusionnée affiche les données du premier champ non NULL en fonction de l'ordre dans lequel ils sont ajoutés à la liste de champs. Ceci est similaire à ce que vous voyez dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Profiler, où une colonne spécifique peut afficher des données différentes selon l’événement (l’exemple le plus courant de ce est le champ TextData dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Profiler). Pour obtenir un exemple, vous pouvez fusionner les champs d'instruction et de batch_text des événements sql_statement_completed et sql_batch_completed, respectivement, dans un champ nommé myStatement. Lorsque vous affichez la colonne myStatement dans la table, elle affiche les données appropriées pour l'événement associé.  
+ Une colonne fusionnée vous permet de combiner un ensemble de champs à afficher dans une colonne unique. La colonne fusionnée affiche les données du premier champ non NULL en fonction de l'ordre dans lequel ils sont ajoutés à la liste de champs. Cela s'apparente à ce que vous voyez dans le Générateur de profils de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , où une colonne spécifique peut afficher des données différentes selon l'événement (l'exemple le plus courant est le champ TextData dans le Générateur de profils de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ). Pour obtenir un exemple, vous pouvez fusionner les champs d'instruction et de batch_text des événements sql_statement_completed et sql_batch_completed, respectivement, dans un champ nommé myStatement. Lorsque vous affichez la colonne myStatement dans la table, elle affiche les données appropriées pour l'événement associé.  
   
  Vous pouvez créer, modifier ou supprimer des colonnes fusionnées :  
   
@@ -125,7 +125,7 @@ ms.locfileid: "48159489"
  Si vous avez regroupé des colonnes, le tri de la colonne ne concerne que les données du groupe.  
   
 ### <a name="group-results"></a>Regrouper les résultats  
- Résultats groupés sont équivalents aux fonctionnalités de la `GROUP BY` clause dans [!INCLUDE[tsql](../includes/tsql-md.md)]. La table de données cible affiche les données regroupées et vous permet de développer/réduire les données.  
+ Les résultats groupés sont équivalents aux fonctionnalités de la clause `GROUP BY` dans [!INCLUDE[tsql](../includes/tsql-md.md)]. La table de données cible affiche les données regroupées et vous permet de développer/réduire les données.  
   
  Vous devez regrouper les données avant de pouvoir les agréger. Par exemple, vous pouvez regrouper sur la base de la valeur de query_hash, effectuer un tri décroissant en fonction de la durée, obtenir la durée moyenne de chaque groupe, puis effectuer un tri décroissant sur l'agrégation.  Cela génère une liste qui affiche les instructions uniques de la plus longue à la plus courte durée moyenne. Lorsque vous développez le groupe supérieur, vous pouvez voir les différentes exécutions de cette requête spécifique triées de la plus longue à la plus courte.  
   
@@ -175,7 +175,7 @@ ms.locfileid: "48159489"
   
     -   Colonnes de table. Utilisez cette option pour rechercher toutes les colonnes visibles dans la fenêtre de trace.  
   
-    -   Détails. Utilisez cette option pour rechercher toutes les colonnes (promues et non promues) dans la fenêtre de trace qui ont été sélectionnées avant d'ouvrir la boîte de dialogue **Rechercher dans les événements étendus** .  
+    -   Détails. Utilisez cette option pour rechercher toutes les colonnes (promues et non promues) dans la fenêtre de trace qui ont été sélectionnées avant d’ouvrir le **rechercher dans les événements étendus** boîte de dialogue.  
   
     -   *Event_column_name*. Utilisez cette option pour effectuer une recherche dans une colonne d'événement spécifique dans la liste déroulante.  
   
@@ -220,7 +220,7 @@ ms.locfileid: "48159489"
   
  Pour copier les résultats de trace, sélectionnez une cellule ou une ou plusieurs lignes, cliquez avec le bouton droit sur **Copier** , puis sélectionnez **Cellule**, **Ligne**ou **Détails**. Les événements étendus prennent en charge la copie jusqu'à un maximum de 1 000 lignes.  
   
- Vous pouvez exporter les résultats de trace à un. XEL fichier, table, ou. Fichier CSV en sélectionnant **exporter vers** à partir de la **événements étendus** option de menu dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
+ Vous pouvez exporter les résultats de trace dans un fichier .XEL, une table ou un fichier .CSV en sélectionnant **Exporter vers** dans l'option de menu **Événements étendus** dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
 ### <a name="view-a-deadlock-graph-and-query-plans"></a>Afficher un graphique d'interblocage et les plans de requête  
  Vous pouvez afficher le graphique du blocage pour **xml_deadlock_report** dans le volet Détails afin de résoudre les blocages. Vous pouvez également afficher des graphiques de plan de requête pour les événements suivants :  

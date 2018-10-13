@@ -16,12 +16,12 @@ ms.assetid: 0bc15bdb-f19f-4537-ac6c-f249f42cf07f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 80d0b21a54e8249007d961cd6eb26e4334fb361a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f9694a5f54d740e298b9c6af4ab3169a3eb8ab14
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176619"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169375"
 ---
 # <a name="converting-from-db-library-to-odbc-bulk-copy"></a>Conversion à partir de la bibliothèque de bases de données vers une copie en bloc ODBC
   Conversion d’un programme de copie en bloc DB-Library pour ODBC est facile, car la majeure partie copier les fonctions prises en charge par le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client sont similaires pour les fonctions de copie en bloc DB-Library, avec les exceptions suivantes :  
@@ -37,7 +37,7 @@ ms.locfileid: "48176619"
   
 -   Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client ne prend pas en charge les gestionnaires d’erreurs et les messages de DB-Library ; vous devez appeler **SQLGetDiagRec** pour obtenir des erreurs et messages déclenchés par les fonctions de copie en bloc ODBC. Les versions ODBC de fonctions de copie en bloc retournent les codes de retour de copie en bloc standard de SUCCEED ou FAILED, et non les codes de retour de style ODBC, tels que SQL_SUCCESS ou SQL_ERROR.  
   
--   Les valeurs spécifiées pour la bibliothèque DB-Library [bcp_bind](../native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)*varlen* paramètre sont interprétés différemment ODBC **bcp_bind *** cbData* paramètre.  
+-   Les valeurs spécifiées pour la bibliothèque DB-Library [bcp_bind](../native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)*varlen* paramètre sont interprétés différemment ODBC **bcp_bind**_cbData_paramètre.  
   
     |Condition indiquée|DB-Library *varlen* valeur|ODBC *cbData* valeur|  
     |-------------------------|--------------------------------|-------------------------|  
@@ -47,7 +47,7 @@ ms.locfileid: "48176619"
   
      Dans DB-Library, un *varlen* valeur -1 indique que les données de longueur variable sont fournies, qui, dans ODBC *cbData* est interprété comme signifiant que seules des valeurs NULL sont fournies. Modifier n’importe quel DB-Library *varlen* spécifications de -1 en SQL_VARLEN_DATA et les *varlen* spécifications de 0 en SQL_NULL_DATA.  
   
--   La bibliothèque DB-Library  **bcp_colfmt *** file_collen* et ODBC [bcp_colfmt](../native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)* cbUserData * ont le même problème que le **bcp_bind *** varlen*et *cbData* paramètres indiqués ci-dessus. Modifier n’importe quel DB-Library *file_collen* spécifications de -1 en SQL_VARLEN_DATA et les *file_collen* spécifications de 0 en SQL_NULL_DATA.  
+-   La bibliothèque DB-Library **bcp\_colfmt**_fichier\_longueur de colonne_ et ODBC [bcp_colfmt](../native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)*cbUserData* ont le même problème comme le **bcp_bind**_varlen_ et *cbData* paramètres indiqués ci-dessus. Modifier n’importe quel DB-Library *file_collen* spécifications de -1 en SQL_VARLEN_DATA et les *file_collen* spécifications de 0 en SQL_NULL_DATA.  
   
 -   Le *iValue* paramètre de ODBC [bcp_control](../native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) fonction est un pointeur void. Dans DB-Library, *iValue* était un entier. Convertir les valeurs pour ODBC *iValue* en void *.  
   

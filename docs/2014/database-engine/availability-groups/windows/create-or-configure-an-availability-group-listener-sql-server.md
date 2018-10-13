@@ -15,12 +15,12 @@ ms.assetid: 2bc294f6-2312-4b6b-9478-2fb8a656e645
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 265bf3544f427f2dc23a437bc864cbac6dc53f1c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3d2a18c1f9f425ec7531c46299a5cf4c78278437
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48052369"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120406"
 ---
 # <a name="create-or-configure-an-availability-group-listener-sql-server"></a>Créer ou configurer un écouteur de groupe de disponibilité (SQL Server)
   Cette rubrique explique comment créer ou configurer un *écouteur de groupe de disponibilité* unique pour un groupe de disponibilité AlwaysOn à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], de [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou de PowerShell dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
@@ -160,7 +160,7 @@ ms.locfileid: "48052369"
      `New-SqlAvailabilityGroupListener`  
      Crée un écouteur de groupe de disponibilité et l'attache à un groupe de disponibilité existant.  
   
-     Par exemple, ce qui suit `New-SqlAvailabilityGroupListener` commande crée un écouteur de groupe de disponibilité nommé `MyListener` pour le groupe de disponibilité `MyAg`. Cet écouteur utilise l’adresse IPv4 passée au `-StaticIp` paramètre en tant que son adresse IP virtuelle.  
+     Par exemple, la commande `New-SqlAvailabilityGroupListener` suivante crée un écouteur de groupe de disponibilité nommé `MyListener` pour le groupe de disponibilité `MyAg`. Cet écouteur utilise l'adresse IPv4 passée au paramètre `-StaticIp` comme adresse IP virtuelle.  
   
     ```  
     New-SqlAvailabilityGroupListener -Name MyListener `   
@@ -196,7 +196,7 @@ ms.locfileid: "48052369"
   
  **Pour configurer et utiliser le fournisseur SQL Server PowerShell**  
   
--   [Fournisseur SQL Server PowerShell](../../../powershell/sql-server-powershell-provider.md)  
+-   [fournisseur PowerShell SQL Server](../../../powershell/sql-server-powershell-provider.md)  
   
 ## <a name="troubleshooting"></a>Dépannage  
   
@@ -210,7 +210,7 @@ ms.locfileid: "48052369"
 ##  <a name="FollowUp"></a> Suivi : après avoir créé un écouteur de groupe de disponibilité  
   
 ###  <a name="MultiSubnetFailover"></a> Mot clé MultiSubnetFailover et fonctionnalités associées  
- `MultiSubnetFailover` un nouveau mot clé de chaîne de connexion est utilisé pour permettre un basculement plus rapide avec les groupes de disponibilité AlwaysOn et les Instances de Cluster de basculement AlwaysOn dans SQL Server 2012. Les trois sous-fonctionnalités suivantes sont activées lorsque `MultiSubnetFailover=True` est défini dans la chaîne de connexion :  
+ `MultiSubnetFailover` est un nouveau mot clé de chaîne de connexion utilisé pour permettre un basculement plus rapide avec les groupes de disponibilité AlwaysOn et les instances de cluster de basculement AlwaysOn dans SQL Server 2012. Les trois sous-fonctionnalités suivantes sont activées lorsque `MultiSubnetFailover=True` est défini dans la chaîne de connexion :  
   
 -   Basculement plus rapide de sous-réseaux multiples vers un écouteur de sous-réseaux multiples pour un groupe de disponibilité AlwaysOn ou des instances de cluster de basculement.  
   
@@ -241,11 +241,11 @@ ms.locfileid: "48052369"
      **Inconvénient :** en cas de basculement entre sous-réseaux, le temps de récupération du client peut être de 15 minutes ou plus, en fonction de votre `HostRecordTTL` et le paramètre de votre planification de réplication DNS/AD entre sites.  
   
 ###  <a name="RegisterAllProvidersIP"></a> Paramètre RegisterAllProvidersIP  
- Lorsque vous utilisez [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], ou PowerShell pour créer un écouteur de groupe de disponibilité, le Point d’accès Client est créé dans WSFC avec le `RegisterAllProvidersIP` propriété définie sur 1 (true). L'effet de cette valeur de propriété dépend de la chaîne de connexion du client, comme suit :  
+ Lorsque vous utilisez [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] ou PowerShell pour créer un écouteur de groupe de disponibilité, le point d'accès client est créé dans WSFC avec la propriété `RegisterAllProvidersIP` ayant la valeur 1 (True). L'effet de cette valeur de propriété dépend de la chaîne de connexion du client, comme suit :  
   
 -   Chaînes de connexion qui affectent la valeur True à `MultiSubnetFailover`  
   
-     [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] définit le `RegisterAllProvidersIP` propriété sur 1 pour réduire le temps de reconnexion après un basculement pour les clients dont les chaînes de connexion client spécifient `MultiSubnetFailover = True`, comme recommandé. Notez que pour tirer parti des fonctionnalités de sous-réseaux multiples d'écouteur, les clients peuvent nécessiter un fournisseur de données qui prend en charge le mot clé `MultiSubnetFailover`. Pour plus d’informations sur la prise en charge du pilote pour le basculement de plusieurs sous-réseaux, consultez [Connectivité client AlwaysOn &#40;SQL Server&#41;](always-on-client-connectivity-sql-server.md).  
+     [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] affecte la valeur 1 à la propriété `RegisterAllProvidersIP` pour réduire le temps de reconnexion après un basculement pour les clients dont les chaînes de connexion client spécifient `MultiSubnetFailover = True`, comme cela est recommandé. Notez que pour tirer parti des fonctionnalités de sous-réseaux multiples d'écouteur, les clients peuvent nécessiter un fournisseur de données qui prend en charge le mot clé `MultiSubnetFailover`. Pour plus d’informations sur la prise en charge du pilote pour le basculement de plusieurs sous-réseaux, consultez [Connectivité client AlwaysOn &#40;SQL Server&#41;](always-on-client-connectivity-sql-server.md).  
   
      Pour plus d’informations sur le clustering de sous-réseaux multiples, consultez [Clustering de sous-réseaux multiples SQL Server &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/sql-server-multi-subnet-clustering-sql-server.md).  
   
@@ -258,16 +258,16 @@ ms.locfileid: "48052369"
   
 -   Chaînes de connexion qui n'affectent pas la valeur True à `MultiSubnetFailover`  
   
-     Lorsque `RegisterAllProvidersIP = 1`, tous les clients dont les chaînes de connexion n'utilisent pas `MultiSubnetFailover = True`rencontreront des connexions à latence élevée. Cela est dû au fait que les clients essaient de se connecter à toutes les adresses IP de manière séquentielle. En revanche, si `RegisterAllProvidersIP` est changé en 0, l'adresse IP active est inscrite dans le point d'accès client du cluster WSFC, ce qui réduit la latence pour les clients hérités. Par conséquent, si vous possédez des clients hérités qui doivent se connecter à un écouteur du groupe de disponibilité et ne peuvent pas utiliser la propriété `MultiSubnetFailover`, nous vous recommandons de changer `RegisterAllProvidersIP` en 0.  
+     Lorsque `RegisterAllProvidersIP = 1`, tous les clients dont les chaînes de connexion n'utilisent pas `MultiSubnetFailover = True` rencontreront des connexions à latence élevée. Cela est dû au fait que les clients essaient de se connecter à toutes les adresses IP de manière séquentielle. En revanche, si `RegisterAllProvidersIP` est changé en 0, l'adresse IP active est enregistrée dans le point d'accès client du cluster WSFC, ce qui réduit la latence pour les clients hérités. Par conséquent, si vous possédez des clients hérités qui doivent se connecter à un écouteur de groupe de disponibilité et ne pouvez pas utiliser le `MultiSubnetFailover` propriété, nous vous recommandons de modifier `RegisterAllProvidersIP` à 0.  
   
     > [!IMPORTANT]  
-    >  Lorsque vous créez un écouteur de groupe de disponibilité dans le cluster WSFC (GUI du Gestionnaire du Cluster de basculement), `RegisterAllProvidersIP` est égal à 0 (false) par défaut.  
+    >  Lorsque vous créez un écouteur de groupe de disponibilité dans le cluster WSFC (interface utilisateur du gestionnaire du cluster de basculement), `RegisterAllProvidersIP` a la valeur 0 (False) par défaut.  
   
 ###  <a name="HostRecordTTL"></a> Paramètre HostRecordTTL  
- Par défaut, le service DNS en cluster du cache des clients enregistre pendant 20 minutes.  En réduisant `HostRecordTTL`, la valeur de durée de vie (TTL) de l'enregistrement mis en cache, les clients hérités peuvent se reconnecter plus rapidement.  Toutefois, réduire le paramètre `HostRecordTTL` peut également entraîner une augmentation du trafic vers les serveurs DN.  
+ Par défaut, le service DNS en cluster du cache des clients enregistre pendant 20 minutes.  En réduisant `HostRecordTTL` (la durée de vie (TTL)) de l'enregistrement mis en cache, les clients hérités peuvent se reconnecter plus rapidement.  Cependant, la réduction du paramètre `HostRecordTTL` peut également entraîner une augmentation du trafic vers les serveurs DN.  
   
 ###  <a name="SampleScript"></a> Exemple de script PowerShell pour désactiver RegisterAllProvidersIP et réduire TTL  
- L'exemple PowerShell suivant montre comment configurer à la fois les paramètres de cluster `RegisterAllProvidersIP` et `HostRecordTTL` pour la ressource d'écouteur.  L'enregistrement DNS sera mis en cache pendant 5 minutes plutôt que pendant 20 minutes (valeur par défaut).  La modification des deux paramètres de cluster peut réduire le temps de connexion à l'adresse IP correcte après un basculement pour les clients hérités qui ne peuvent pas utiliser le paramètre `MultiSubnetFailover`.  Remplacez `yourListenerName` par le nom de l'écouteur que vous modifiez.  
+ L'exemple PowerShell suivant explique comment configurer les paramètres de cluster `RegisterAllProvidersIP` et `HostRecordTTL` pour la ressource d'écouteur.  L'enregistrement DNS sera mis en cache pendant 5 minutes plutôt que pendant 20 minutes (valeur par défaut).  La modification des deux paramètres de cluster peut réduire le temps de connexion à l'adresse IP correcte après un basculement pour les clients hérités qui ne peuvent pas utiliser le paramètre `MultiSubnetFailover`.  Remplacez `yourListenerName` par le nom de l'écouteur que vous modifiez.  
   
 ```  
 Import-Module FailoverClusters  

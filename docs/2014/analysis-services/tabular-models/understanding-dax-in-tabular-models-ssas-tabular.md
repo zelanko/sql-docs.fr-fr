@@ -11,12 +11,12 @@ ms.assetid: b2693985-1bea-4861-a100-cea4761ba809
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7ecc95a89d3db446122d1da4e9701d1555028fe5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4bc835d09f02e170c3b5595495eb6554c1319df5
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136019"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906379"
 ---
 # <a name="understanding-dax-in-tabular-models-ssas-tabular"></a>Fonctionnement de DAX dans les modèles tabulaires (SSAS Tabulaire)
   DAX (Data Analysis Expressions) est le langage de formule utilisé pour créer des calculs personnalisés dans [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour les classeurs Microsoft Excel et les modèles tabulaires de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Les formules DAX comportent des fonctions, des opérateurs, et des valeurs pour effectuer des calculs avancés sur les données des tables et des colonnes.  
@@ -91,7 +91,7 @@ ms.locfileid: "48136019"
   
  Les filtres de lignes s'appliquent aux lignes spécifiées ainsi qu'aux lignes connexes. Lorsqu'une table contient plusieurs relations, les filtres appliquent la sécurité de la relation qui est active. Les filtres de lignes se croisent avec d'autres filtres de ligne définis pour les tables associées.  
   
- Pour plus d’informations, consultez [Roles &#40;SSAS Tabular&#41;](roles-ssas-tabular.md).  
+ Pour plus d’informations, consultez [Rôles &#40;SSAS tabulaire&#41;](roles-ssas-tabular.md).  
   
 ##  <a name="bkmk_DAX_datatypes"></a> Types de données DAX  
  Vous pouvez importer des données dans un modèle à partir de nombreuses sources de données différentes, qui peuvent prendre en charge des types de données différents. Lorsque vous importez des données dans un modèle, les données sont converties en un des types de données de modèle tabulaire. Quand les données du modèle sont utilisées dans un calcul, les données sont converties en un type de données DAX pour la durée et le résultat du calcul. Lorsque vous créez une formule DAX, les termes utilisés dans la formule déterminent automatiquement le type de données de valeur retournées.  
@@ -219,7 +219,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
 -   Les fonctions DAX intègrent une grande diversité de fonctions *Time Intelligence* . Ces fonctions vous permettent de définir ou de sélectionner des plages de dates, et effectuer des calculs dynamiques basés sur ces dates ou plages. Par exemple, vous pouvez comparer les sommes sur des périodes parallèles.  
   
 ### <a name="date-and-time-functions"></a>Fonctions de date et d'heure  
- Les fonctions de date et d'heure de DAX sont semblables à celles de Microsoft Excel. Toutefois, les fonctions DAX sont basées sur le `datetime` types de données utilisés par Microsoft SQL Server. Pour plus d’informations, consultez [Date and Time Functions &#40;DAX&#41;](https://msdn.microsoft.com/library/ee634786(v=sql.120).aspx).  
+ Les fonctions de date et d'heure de DAX sont semblables à celles de Microsoft Excel. Toutefois, les fonctions DAX sont basées sur les types de données `datetime` utilisés par Microsoft SQL Server. Pour plus d’informations, consultez [Date and Time Functions &#40;DAX&#41;](https://msdn.microsoft.com/library/ee634786(v=sql.120).aspx).  
   
 ### <a name="filter-functions"></a>Fonctions de filtrage  
  Les fonctions de filtrage de DAX permettent de retourner des types de données spécifiques, de rechercher des valeurs dans les tables associées et de procéder à un filtrage par valeurs associées. Les fonctions de recherche s'appuient sur des tables et des relations, comme une base de données. Les fonctions de filtrage vous permettent de manipuler le contexte de données pour créer des calculs dynamiques. Pour plus d’informations, consultez [fonctions de filtre &#40;DAX&#41;](https://msdn.microsoft.com/library/ee634807(v=sql.120).aspx).  
@@ -393,7 +393,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
  Le traitement et le recalcul n'ont aucun effet sur les formules de filtre de lignes à moins que le résultat d'un nouveau calcul retourne une valeur différente, ce qui rend la ligne interrogeable ou non interrogeable par les membres du rôle.  
   
- Pour plus d’informations, consultez [Traiter les données &#40;SSAS tabulaire&#41;](../process-data-ssas-tabular.md).  
+ Pour plus d’informations, consultez [Traiter les données &#40;SSAS Tabulaire&#41;](../process-data-ssas-tabular.md).  
   
 ##  <a name="bkmk_troubleshoot"></a> Résolution des erreurs dans les formules  
  Si vous obtenez une erreur lorsque vous définissez une formule, la formule peut contenir une *erreur syntaxique*, une *erreur sémantique*ou une *erreur de calcul*.  
@@ -423,10 +423,10 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
 ## <a name="see-also"></a>Voir aussi  
  [Data Analysis Expressions &#40;DAX&#41; référence](https://msdn.microsoft.com/library/gg413422(v=sql.120).aspx)   
- [Mesures &#40;SSAS tabulaire&#41;](measures-ssas-tabular.md)   
+ [Mesures &#40;SSAS Tabulaire&#41;](measures-ssas-tabular.md)   
  [Colonnes calculées &#40;SSAS tabulaire&#41;](ssas-calculated-columns.md)   
  [Rôles &#40;SSAS tabulaire&#41;](roles-ssas-tabular.md)   
  [Indicateurs de performance clés &#40;SSAS tabulaire&#41;](kpis-ssas-tabular.md)   
- [Sources de données prises en charge &#40;SSAS Tabulaire&#41;](data-sources-supported-ssas-tabular.md)  
+ [Sources de données prises en charge &#40;SSAS tabulaire&#41;](data-sources-supported-ssas-tabular.md)  
   
   

@@ -12,12 +12,12 @@ ms.assetid: 72daf008-f9ea-4077-b217-5048e7759d3e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5fe3e08d1d423afd6f54310dd3ba349c10534cf2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 864859365dac094377ab00cb6848f3fb7c3a81f7
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217879"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906219"
 ---
 # <a name="alert-properties-new-alert-response-page"></a>Alerte de propriétés de nouvelle alerte (Page réponse)
   Utilisez cette page pour spécifier un travail que vous souhaitez exécuter et pour obtenir une liste d'opérateurs à notifier en réponse à une alerte de l'Agent [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -51,12 +51,12 @@ ms.locfileid: "48217879"
  Affiche la boîte de dialogue **Nouvel opérateur** , que vous pouvez utiliser pour créer un opérateur.  
   
  **Afficher l'opérateur**  
- Affiche la boîte de dialogue **Propriétés** pour l’opérateur sélectionné. Vous pouvez afficher et modifier les propriétés d'opérateur dans la boîte de dialogue **Propriétés Opérateur** .  
+ Affiche la boîte de dialogue **Propriétés** pour l’opérateur sélectionné. Vous pouvez afficher et modifier les propriétés de l’opérateur dans le **propriétés opérateur** boîte de dialogue.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Alertes](alerts.md)   
+ [Alerts](alerts.md)   
  [Créer une alerte à l’aide de la gravité de niveau](create-an-alert-using-severity-level.md)   
- [Alertes](alerts.md)   
+ [Alerts](alerts.md)   
  [Modifier une alerte](edit-an-alert.md)   
  [Delete an Alert](delete-an-alert.md)  
   

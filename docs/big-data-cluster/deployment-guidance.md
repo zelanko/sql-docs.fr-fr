@@ -4,15 +4,15 @@ description: ''
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/01/2018
+ms.date: 10/08/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 4db726ac3ceab7649b0a3c04b2c4647b83c7e660
-ms.sourcegitcommit: 8aecafdaaee615b4cd0a9889f5721b1c7b13e160
+ms.openlocfilehash: 02a1aa7299173315e4f4d6a60eae5f166e8fcdfe
+ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48818067"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48877892"
 ---
 # <a name="how-to-deploy-sql-server-big-data-cluster-on-kubernetes"></a>Comment déployer un cluster SQL Server Big Data sur Kubernetes
 
@@ -24,11 +24,12 @@ Cluster de données volumineux de SQL Server peut être déployé en tant que co
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
-## <a name="kubernetes-prerequisistes"></a>Prerequisistes de Kubernetes
+## <a id="prereqs"></a> Prérequis du cluster Kubernetes
 
 Cluster de SQL Server Big Data requiert une version 1.10 d’edgeos minimale pour Kubernetes, pour le serveur et client. Pour installer une version spécifique sur le client kubectl, consultez [installer kubectl binaire via curl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl).  Dernières versions de minikube et AKS sont au moins 1.10. Pour AKS, vous devez utiliser `--kubernetes-version` paramètre pour spécifier une version différente de celle par défaut.
 
-En outre, notez que la version de Kubernetes client/serveur incliner qui est pris en charge est +/-1 version mineure. La documentation de Kubernetes indique que « un client doit être décalées ne plusieurs versions mineures du serveur maître, mais peut entraîner le maître par jusqu'à une version mineure. Par exemple, un serveur maître v1.3 doit fonctionner avec les nœuds v1.3 v1.1 et v1.2 et doit fonctionner avec v1.2 v1.3, clients et v1.4. » Pour plus d’informations, consultez [Kubernetes pris en charge les versions et composant de décalage](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/release/versioning.md#supported-releases-and-component-skew).
+> [!NOTE]
+> Notez que les versions Kubernetes client et le serveur doivent être de version mineure + 1 ou -1. Pour plus d’informations, consultez [Kubernetes pris en charge les versions et composant de décalage](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/release/versioning.md#supported-releases-and-component-skew).
 
 ## <a id="kubernetes"></a> Configuration du cluster Kubernetes
 
@@ -49,11 +50,11 @@ Pour obtenir des conseils sur la configuration d’une de ces options de cluster
 
 ## <a id="deploy"></a> Déployer le cluster de SQL Server Big Data
 
-Une fois que vous avez configuré votre cluster Kubernetes, vous pouvez poursuivre le déploiement de cluster de SQL Server Big Data. Pour déployer un cluster Aris avec toutes les configurations par défaut pour un environnement de développement/test, suivez les instructions de cet article :
+Une fois que vous avez configuré votre cluster Kubernetes, vous pouvez poursuivre le déploiement de cluster de SQL Server Big Data. Pour déployer un cluster de données volumineux avec toutes les configurations par défaut pour un environnement de développement/test, suivez les instructions de cet article :
 
-[Démarrage rapide : Déployer SQL Server Aris sur Kubernetes](quickstart-big-data-cluster-deploy.md)
+[Démarrage rapide : Déployer SQL Server du Cluster Big Data sur Kubernetes](quickstart-big-data-cluster-deploy.md)
 
-Si vous souhaitez personnaliser votre configuration Aris, selon vos besoins de la charge de travail, suivez l’ensemble suivant d’instructions.
+Si vous souhaitez personnaliser votre configuration de cluster big data, en fonction des besoins de votre charge de travail, suivez l’ensemble suivant d’instructions.
 
 ## <a name="verify-kubernetes-configuration"></a>Vérifier la configuration de kubernetes
 

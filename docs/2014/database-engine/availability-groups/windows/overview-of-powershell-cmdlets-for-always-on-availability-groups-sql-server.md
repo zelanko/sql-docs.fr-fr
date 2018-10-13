@@ -14,15 +14,15 @@ ms.assetid: b3fef0d5-b6d7-4386-a0f0-d06c165ad4de
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: db840abbf4caed344a1be055afd6432b4d2b18e4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4996a1026b4c85b105efc09b8381913f7a47942a
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209479"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169199"
 ---
 # <a name="overview-of-powershell-cmdlets-for-alwayson-availability-groups-sql-server"></a>Vue d'ensemble des applets de commande PowerShell pour les groupes de disponibilité AlwaysOn (SQL Server)
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] PowerShell est un interpréteur de ligne de commande et un langage de script basé sur des tâches tout spécialement conçu pour l’administration système. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] fournit un ensemble d'applets de commande PowerShell dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] qui vous permet de déployer, gérer et surveiller des groupes de disponibilité, des réplicas de disponibilité et des bases de données de disponibilité.  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] PowerShell est un interpréteur de ligne de commande et un langage de script basé sur des tâches et conçu tout spécialement pour l'administration système. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] fournit un ensemble d'applets de commande PowerShell dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] qui vous permet de déployer, gérer et surveiller des groupes de disponibilité, des réplicas de disponibilité et des bases de données de disponibilité.  
   
 > [!NOTE]  
 >  Une applet de commande PowerShell peut s'effectuer en initiant correctement une action. Cela n'indique pas si le travail prévu, tel que le basculement d'un groupe de disponibilité, est terminé. Lors de l'écriture sous forme de script d'une séquence d'actions, vous devrez peut-être vérifier l'état des actions et attendre la fin de leur exécution.  
@@ -60,7 +60,7 @@ ms.locfileid: "48209479"
 |Applets de commande|Description|Prise en charge sur|  
 |-------------|-----------------|------------------|  
 |`Backup-SqlDatabase`|Crée une sauvegarde de données ou de journal.|Base de données en ligne (pour [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], base de données sur l'instance de serveur qui héberge le réplica principal)|  
-|`Restore-SqlDatabase`|Restaure une sauvegarde.|Instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (pour [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], instance de serveur qui héberge un réplica secondaire)<br /><br /> **\*\* Important \* \***  lorsque vous préparez une base de données secondaire, vous devez utiliser le `-NoRecovery` paramètre dans chaque `Restore-SqlDatabase` commande.|  
+|`Restore-SqlDatabase`|Restaure une sauvegarde.|Instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (pour [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], instance de serveur qui héberge un réplica secondaire)<br /><br /> **&#42;&#42;Important &#42; &#42;**  lorsque vous préparez une base de données secondaire, vous devez utiliser le `-NoRecovery` paramètre dans chaque `Restore-SqlDatabase` commande.|  
   
  Pour plus d’informations sur l’utilisation de ces applets de commande pour préparer une base de données secondaire, consultez [Préparer manuellement une base de données secondaire pour un groupe de disponibilité &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md).  
   
@@ -85,7 +85,7 @@ ms.locfileid: "48209479"
   
 |Applets de commande|Description|Prise en charge sur|  
 |-------------|-----------------|------------------|  
-|**New-SqlAvailabilityReplica**|Crée un réplica de disponibilité. Vous pouvez utiliser le `-AsTemplate` paramètre pour créer un objet réplica de disponibilité en mémoire pour chaque nouveau réplica de disponibilité.|Instance de serveur qui héberge le réplica principal|  
+|**New-SqlAvailabilityReplica**|Crée un réplica de disponibilité. Vous pouvez utiliser le paramètre `-AsTemplate` pour créer un objet en mémoire du réplica de disponibilité pour chaque nouveau réplica de disponibilité.|Instance de serveur qui héberge le réplica principal|  
 |`Join-SqlAvailabilityGroup`|Joint un réplica secondaire au groupe de disponibilité.|Instance de serveur qui héberge le réplica secondaire.|  
 |**Remove-SqlAvailabilityReplica**|Supprime un réplica de disponibilité.|Instance de serveur qui héberge le réplica principal|  
 |`Set-SqlAvailabilityReplica`|Définit les propriétés d'un réplica de disponibilité.|Instance de serveur qui héberge le réplica principal|  

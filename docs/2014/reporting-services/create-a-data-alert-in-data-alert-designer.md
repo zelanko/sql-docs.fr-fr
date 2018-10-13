@@ -11,12 +11,12 @@ ms.assetid: 8464ab9d-afe1-4490-955f-9f3319bcbf8d
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 9edb241dab5b2a1aaeefb5c11c53726f1e46498d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 02e1222b289d4cb081335a3575b0e1948fb37728
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144419"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49071843"
 ---
 # <a name="create-a-data-alert-in-data-alert-designer"></a>Créer une alerte de données dans le Concepteur d’alertes
   Vous pouvez créer les définitions d'alerte de données dans le Concepteur d'alertes de données. Après les avoir enregistrées, vous pouvez les rouvrir, les modifier, puis les enregistrer de nouveau dans le Concepteur d'alertes de données. Pour plus d’informations sur la modification des définitions d’alerte, consultez [Gérer mes alertes de données dans le Gestionnaire des alertes de données](manage-my-data-alerts-in-data-alert-manager.md) et [Modifier une alerte de données dans le Concepteur d’alertes](edit-a-data-alert-in-alert-designer.md).  
@@ -55,7 +55,7 @@ ms.locfileid: "48144419"
   
      Le nom par défaut de la définition d'alerte est le nom du rapport. Les noms des définitions d'alerte ne sont pas nécessairement uniques ; par conséquent, ils peuvent être difficiles à distinguer lorsque vous consulterez ultérieurement la liste de vos alertes dans le Gestionnaire des alertes de données. Il est recommandé d'utiliser des noms explicites et uniques pour vos définitions d'alerte.  
   
-6.  Éventuellement, modifiez l’option des données par défaut en remplaçant l’option **toutes les données dans le flux de données ont** par l’option **aucune donnée dans le flux de données n’a**.  
+6.  Éventuellement, modifiez l’option de données par défaut à partir de **toutes les données dans le flux de données ont** à **aucune donnée dans le flux de données a**.  
   
 7.  Cliquez sur **Ajouter une règle**.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "48144419"
      Par défaut, un message d'alerte n'a pas de date d'arrêt.  
   
     > [!NOTE]  
-    >  L'arrêt d'un message d'alerte ne supprime pas la définition d'alerte. Une fois que vous avez arrêté un message d'alerte, vous pouvez le redémarrer en mettant à jour les dates de début et de fin. Pour plus d’informations sur la suppression des définitions d’alerte, consultez [gérer mes alertes de données dans le Gestionnaire des alertes de données](manage-my-data-alerts-in-data-alert-manager.md).  
+    >  L'arrêt d'un message d'alerte ne supprime pas la définition d'alerte. Une fois que vous avez arrêté un message d'alerte, vous pouvez le redémarrer en mettant à jour les dates de début et de fin. Pour plus d’informations sur la suppression des définitions d’alerte, consultez [Gérer mes alertes de données dans le Gestionnaire des alertes de données](manage-my-data-alerts-in-data-alert-manager.md).  
   
 18. Éventuellement, décochez la case **Envoyer un message seulement si les résultats changent** .  
   
@@ -117,8 +117,8 @@ ms.locfileid: "48144419"
 22. Cliquez sur **Enregistrer**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Concepteur d’alertes de données](../../2014/reporting-services/data-alert-designer.md)   
- [Gestionnaire des alertes de données pour les administrateurs d’alertes](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md)   
+ [Concepteur d'alertes de données](../../2014/reporting-services/data-alert-designer.md)   
+ [Gestionnaire des alertes de données pour les administrateurs d'alertes](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md)   
  [Alertes de données Reporting Services](../ssms/agent/alerts.md)  
   
   

@@ -39,12 +39,12 @@ ms.assetid: 88a8117c-396a-469f-a62d-c6f262504021
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: dab367196f1d4d80f965a2ff400fd6193b6e3508
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2ad086a7d6ee677fc54241f45d1dbe81e5c4c2d5
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171179"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48905759"
 ---
 # <a name="general-properties"></a>Propriétés générales
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] prend en charge les propriétés de serveur répertoriées dans les tableaux suivants. Cette rubrique décrit les propriétés de serveur qui se trouvent dans le fichier msmdsrv.ini et qui ne font pas l'objet d'une section spécifique, traitant par exemple de la sécurité, du réseau ou de ThreadPool. Pour plus d'informations sur les autres propriétés de serveur et la façon de les configurer, consultez [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  
@@ -61,7 +61,7 @@ ms.locfileid: "48171179"
  Propriété de type chaîne qui spécifie dans une liste délimitée les dossiers qui peuvent être parcourus en enregistrant, en ouvrant, puis en recherchant les fichiers dans les boîtes de dialogue Analysis Services. Le compte de service Analysis Services doit disposer d'autorisations de lecture et d'écriture sur tous les dossiers que vous ajoutez à la liste.  
   
  `BackupDir`  
- Propriété de type chaîne qui définit le nom du répertoire où les fichiers de sauvegarde sont stockés par défaut, lorsqu'aucun chemin d'accès n'est spécifié dans la commande Backup.  
+ Une propriété de chaîne qui définit le nom du répertoire où les fichiers de sauvegarde sont stockés par défaut, lorsqu’un chemin d’accès n’est pas spécifié dans le cadre de la commande Backup.  
   
  `CollationName`  
  Propriété de type chaîne qui identifie le classement du serveur. Pour plus d’informations, consultez [Langues et classements &#40;Analysis Services&#41;](../languages-and-collations-analysis-services.md).  
@@ -117,7 +117,7 @@ ms.locfileid: "48171179"
  La valeur par défaut de cette propriété est 3600 (secondes).  
   
  `ExternalConnectionTimeout`  
- Propriété dont la valeur est un entier qui spécifie le délai d’attente en secondes de la création des connexions aux serveurs externes, notamment les sources de données relationnelles et les serveurs [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] externes. Cette propriété est ignorée si un délai de connexion est spécifié dans la chaîne de connexion.  
+ Propriété dont la valeur est un entier qui spécifie le délai d'attente en secondes de la création des connexions aux serveurs externes, notamment les sources de données relationnelles et les serveurs [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] externes. Cette propriété est ignorée si un délai de connexion est spécifié dans la chaîne de connexion.  
   
  La valeur par défaut de cette propriété est 60 (secondes).  
   
@@ -132,7 +132,7 @@ ms.locfileid: "48171179"
  Pour plus d’informations sur cette propriété, consultez le [guide des opérations de SQL Server 2008 R2 Analysis Services](http://go.microsoft.com/fwlink/?LinkID=225539).  
   
 > [!IMPORTANT]  
->  `ForceCommitTimeout` s’applique aux commandes de traitement de cube aux opérations d’écriture différée.  
+>  `ForceCommitTimeout` s'applique aux commandes de traitement de cube et aux opérations d'écriture différée.  
   
  `IdleConnectionTimeout`  
  Propriété dont la valeur est un entier qui spécifie le délai, en secondes, pour les connexions qui sont inactives.  
@@ -179,6 +179,6 @@ ms.locfileid: "48171179"
   
 ## <a name="see-also"></a>Voir aussi  
  [Configurer les propriétés du serveur dans Analysis Services](server-properties-in-analysis-services.md)   
- [Déterminer le mode serveur d’une instance Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
+ [Déterminer le mode serveur d'une instance Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   

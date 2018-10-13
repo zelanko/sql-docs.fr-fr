@@ -18,12 +18,12 @@ ms.assetid: 1b28f280-8ef9-48e9-bd99-ec14d79abaca
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 514b713b8970ecf38536da7e00b791dcef8a059a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7f41f7b31f928a60342deefcc85a8f71bc707dba
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761967"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49168859"
 ---
 # <a name="spaltermessage-transact-sql"></a>sp_altermessage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,13 +45,13 @@ sp_altermessage [ @message_id = ] message_number   ,[ @parameter = ]'write_to_lo
  [ **@message_id =** ] *message_number*  
  Numéro d’erreur du message à modifier à partir de **sys.messages**. *message_number* est **int** sans valeur par défaut.  
   
- [  **@parameter =** ] **' *** écriture_dans_journal*'  
+ [  **@parameter =** ] **'**_écrire\_à\_journal_'  
  Est utilisé avec **@parameter_value** pour indiquer que le message doit être écrit dans le [!INCLUDE[msCoName](../../includes/msconame-md.md)] journal des applications Windows. *écriture_dans_journal* est **sysname** sans valeur par défaut. *écriture_dans_journal* doit être définie sur WITH_LOG ou NULL. Si *écriture_dans_journal* est définie sur WITH_LOG ou NULL et la valeur de **@parameter_value** est **true**, le message est écrit dans le journal des applications Windows. Si *écriture_dans_journal* est définie sur WITH_LOG ou NULL et la valeur de **@parameter_value** est **false**, le message n’est pas automatiquement écrite dans le journal des applications Windows, mais peut être écrit selon la façon dont elle a été déclenchée. Si *écriture_dans_journal* est spécifié, la valeur de **@parameter_value** doit également être spécifié.  
   
 > [!NOTE]  
 >  Si un message est écrit dans le journal des applications Windows, il est également écrite dans le [!INCLUDE[ssDE](../../includes/ssde-md.md)] fichier journal des erreurs.  
   
- [  **@parameter_value =** ] **' *** valeur*'  
+ [  **@parameter_value =** ]**'**_valeur_'  
  Est utilisé avec **@parameter** pour indiquer que l’erreur doit être écrite dans le [!INCLUDE[msCoName](../../includes/msconame-md.md)] journal des applications Windows. *valeur* est **varchar (5)**, sans valeur par défaut. Si **true**, l’erreur est automatiquement écrite dans le journal des applications Windows. Si **false**, l’erreur n’est pas automatiquement écrite dans le journal des applications Windows, mais peut être écrit selon la façon dont elle a été déclenchée. Si *valeur* est spécifié, *écriture_dans_journal* pour **@parameter** doit également être spécifié.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  

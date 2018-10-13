@@ -11,21 +11,21 @@ ms.assetid: 2422b1e2-822f-4379-9d7f-9afebb350e3f
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 642be62739a87a0fff4990f574a2c6f57f6e5c91
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 60bfb038d6712f44d6a0b5cd6cc57863f0f76ade
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136489"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48904979"
 ---
 # <a name="display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs"></a>Afficher des en-têtes de ligne et de colonne sur plusieurs pages (Générateur de rapports et SSRS)
   Vous pouvez décider de répéter les en-têtes de ligne et de colonne sur chaque page pour une région de données de tableau matriciel qui couvre plusieurs pages. Une région de données de tableau matriciel peut être une table, une matrice ou une liste.  
   
  La façon dont vous contrôlez les lignes et les colonnes varie selon que la région de données de tableau matriciel possède ou non des en-têtes de groupes. Lorsque vous cliquez dans une région de données du tableau matriciel qui possède des en-têtes de groupes, une ligne pointillée indique les zones de tableau matriciel, comme illustré sur la figure suivante :  
   
- ![Zones de région de données de tableau matriciel](../media/rs-tablixareas.gif "zones de région de données de tableau matriciel")  
+ ![Tablix data region areas](../media/rs-tablixareas.gif "Tablix data region areas")  
   
- Les en-têtes de groupe de lignes et de colonnes sont créés automatiquement lorsque vous ajoutez des groupes à l'aide de l'Assistant Nouveau tableau ou nouvelle matrice ou de l'Assistant Nouveau graphique, en ajoutant des champs au volet Regroupement ou à l'aide des menus contextuels. Si la région de données de tableau matriciel ne possède qu'un corps de tableau matriciel et aucun en-tête de groupe, les lignes et colonnes sont des membres du tableau matriciel.  
+ En-têtes de groupes de lignes et de colonnes sont créées automatiquement lorsque vous ajoutez des groupes à l’aide de l’Assistant nouveau tableau ou nouvelle matrice ou l’Assistant Nouveau graphique, en ajoutant des champs au volet regroupement ou à l’aide des menus contextuels. Si la région de données de tableau matriciel ne possède qu'un corps de tableau matriciel et aucun en-tête de groupe, les lignes et colonnes sont des membres du tableau matriciel.  
   
  Pour les membres statiques, vous pouvez afficher les lignes supérieures adjacentes ou les colonnes latérales adjacentes sur plusieurs pages.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "48136489"
 ## <a name="see-also"></a>Voir aussi  
  [Recherche, affichage et gestion des rapports &#40;Générateur de rapports et SSRS&#41;](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Exportation de rapports &#40;Générateur de rapports et SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)   
- [Page de contrôle des sauts, des en-têtes, colonnes et lignes &#40;Générateur de rapports et SSRS&#41;](controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   
+ [Contrôle des sauts de page, des en-têtes, des colonnes et des lignes &#40;Générateur de rapports et SSRS&#41;](controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   
  [Afficher des en-têtes et des pieds de page de groupe &#40;Générateur de rapports et SSRS&#41;](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)   
  [Laisser les en-têtes visibles lors du défilement d’un rapport &#40;Générateur de rapports et SSRS&#41;](keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md)  
   

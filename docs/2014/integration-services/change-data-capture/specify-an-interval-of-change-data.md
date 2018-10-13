@@ -13,15 +13,15 @@ ms.assetid: 17899078-8ba3-4f40-8769-e9837dc3ec60
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f8b839a64feb81a538f943d403733fee3772cce7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ecf61c3a073e43dc8ee5b385bf3d84a96d79332a
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116377"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119837"
 ---
 # <a name="specify-an-interval-of-change-data"></a>Spécifier un intervalle de données modifiées
-  Dans le flux de contrôle d’un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] qui effectue un charge incrémentielle de données modifiées, la première tâche consiste à calculer les points de terminaison de l’intervalle de modification. Ces points de terminaison sont `datetime` valeurs et seront stockées dans des variables de package pour une utilisation ultérieure dans le package.  
+  Dans le flux de contrôle d'un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] qui effectue un chargement incrémentiel des données modifiées, la première tâche consiste à calculer les points de terminaison de l'intervalle de modification. Ces points de terminaison sont des valeurs `datetime` qui seront stockées dans des variables de package pour une utilisation ultérieure dans le package.  
   
 > [!NOTE]  
 >  Pour obtenir une description du processus d’ensemble de la conception du flux de contrôle, consultez [Capture de données modifiées &#40;SSIS&#41;](change-data-capture-ssis.md).  
@@ -35,44 +35,44 @@ ms.locfileid: "48116377"
   
 2.  Dans la fenêtre **Variables** , créez les variables suivantes :  
   
-    1.  Créer une variable avec le `datetime` type de données pour contenir le point de départ de l’intervalle.  
+    1.  Créez une variable du type de données `datetime` pour contenir le point de départ de l'intervalle.  
   
          Cet exemple utilise le nom de variable ExtractStartTime.  
   
-    2.  Créez une autre variable avec le `datetime` type de données pour contenir le point de fin de l’intervalle.  
+    2.  Créez une autre variable du type de données `datetime` pour contenir le point de fin pour l'intervalle.  
   
          Cet exemple utilise le nom de variable ExtractEndTime.  
   
  Si vous calculez les points de terminaison dans un package principal qui exécute plusieurs packages enfants, vous pouvez utiliser des configurations Variable de package parent pour passer les valeurs de ces variables à chaque package enfant. Pour plus d’informations, consultez [Tâche d’exécution de package](../control-flow/execute-package-task.md) et [Utiliser les valeurs des variables et des paramètres dans un package enfant](../use-the-values-of-variables-and-parameters-in-a-child-package.md).  
   
 ## <a name="calculate-a-starting-point-and-an-ending-point-for-change-data"></a>Calculer un point de départ et un point de fin pour les données modifiées  
- Après avoir configuré les variables de package pour les points de terminaison d'intervalle, vous pouvez calculer les valeurs réelles pour ces points de terminaison et mapper ces valeurs aux variables de package correspondantes. Ces points de terminaison étant des valeurs `datetime`, vous devez utiliser des fonctions capables de calculer ou d'exploiter des valeurs `datetime`. Les deux le [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] langage d’expression et Transact-SQL ont des fonctions qui fonctionnent avec `datetime` valeurs :  
+ Après avoir configuré les variables de package pour les points de terminaison d'intervalle, vous pouvez calculer les valeurs réelles pour ces points de terminaison et mapper ces valeurs aux variables de package correspondantes. Ces points de terminaison étant des valeurs `datetime`, vous devez utiliser des fonctions capables de calculer ou d'exploiter des valeurs `datetime`. Le langage d'expression [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] et Transact-SQL possèdent des fonctions qui prennent en charge les valeurs `datetime` :  
   
- Fonctions dans le [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] langage d’expression qui fonctionnent avec `datetime` valeurs  
- -   [DATEADD &#40;SSIS Expression&#41;](../expressions/dateadd-ssis-expression.md)  
+ Fonctions en langage d'expression [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] qui prennent en charge les valeurs `datetime`  
+ -   [DATEADD &#40;expression SSIS&#41;](../expressions/dateadd-ssis-expression.md)  
   
--   [DATEDIFF &#40;SSIS Expression&#41;](../expressions/datediff-ssis-expression.md)  
+-   [DATEDIFF &#40;expression SSIS&#41;](../expressions/datediff-ssis-expression.md)  
   
--   [DATEPART &#40;SSIS Expression&#41;](../expressions/datepart-ssis-expression.md)  
+-   [DATEPART &#40;expression SSIS&#41;](../expressions/datepart-ssis-expression.md)  
   
--   [JOUR &#40;SSIS Expression&#41;](../expressions/day-ssis-expression.md)  
+-   [DAY &#40;expression SSIS&#41;](../expressions/day-ssis-expression.md)  
   
--   [GETDATE &#40;SSIS Expression&#41;](../expressions/getdate-ssis-expression.md)  
+-   [GETDATE &#40;expression SSIS&#41;](../expressions/getdate-ssis-expression.md)  
   
--   [GETUTCDATE &#40;SSIS Expression&#41;](../expressions/getutcdate-ssis-expression.md)  
+-   [GETUTCDATE &#40;expression SSIS&#41;](../expressions/getutcdate-ssis-expression.md)  
   
--   [MOIS &#40;SSIS Expression&#41;](../expressions/month-ssis-expression.md)  
+-   [MONTH &#40;expression SSIS&#41;](../expressions/month-ssis-expression.md)  
   
--   [ANNÉE &#40;SSIS Expression&#41;](../expressions/year-ssis-expression.md)  
+-   [YEAR &#40;expression SSIS&#41;](../expressions/year-ssis-expression.md)  
   
- Fonctions dans Transact-SQL qui fonctionnent avec `datetime` valeurs  
+ Fonctions en Transact-SQL qui prennent en charge les valeurs `datetime`  
  [Types de données et fonctions de date et d’heure &#40;Transact-SQL&#41;](/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql).  
   
  Avant d'utiliser l'une de ces fonctions `datetime` pour calculer les points de terminaison, vous devez déterminer si l'intervalle est fixe et s'il a lieu selon une planification régulière. En général, vous appliquez les modifications qui se sont produites dans les tables sources aux tables de destination selon une planification régulière. Par exemple, vous pouvez appliquer ces modifications toutes les heures, tous les jours ou toutes les semaines.  
   
  Après avoir déterminé si votre intervalle de modification est fixe ou plus aléatoire, vous pouvez calculer les points de terminaison :  
   
--   **Calcul de la date et de l’heure de début**. Vous utilisez la date et l'heure de fin du chargement précédent comme date et heure de début actuelles. Si vous utilisez un intervalle fixe pour les chargements incrémentiels, vous pouvez calculer cette valeur à l’aide de la `datetime` fonctions Transact-SQL ou de la [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] langage d’expression. Autrement, vous devrez peut-être rendre les points de terminaison persistants entre les exécutions et utilisez une tâche d'exécution SQL ou une tâche de script pour charger le point de terminaison précédent.  
+-   **Calcul de la date et de l’heure de début**. Vous utilisez la date et l'heure de fin du chargement précédent comme date et heure de début actuelles. Si vous utilisez un intervalle fixe pour les chargements incrémentiels, vous pouvez calculer cette valeur en utilisant les fonctions `datetime` de Transact-SQL ou du langage d'expression [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Autrement, vous devrez peut-être rendre les points de terminaison persistants entre les exécutions et utilisez une tâche d'exécution SQL ou une tâche de script pour charger le point de terminaison précédent.  
   
 -   **Calcul de la date et de l’heure de fin**. Si vous utilisez un intervalle fixe pour les chargements incrémentiels, calculez la date et l'heure de fin actuelles sur la base d'un décalage par rapport à la date et à l'heure de début. Là encore, vous pouvez calculer cette valeur à l’aide de la `datetime` fonctions Transact-SQL ou de la [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] langage d’expression.  
   
@@ -101,7 +101,7 @@ ms.locfileid: "48116377"
 3.  Dans la page **Ensemble de résultats** de **Éditeur de tâche d’exécution de requêtes SQL**, mappez le résultat d’ExtractStartTime à la variable de package ExtractStartTime, et le résultat d’ExtractEndTime à la variable de package ExtractEndTime.  
   
     > [!NOTE]  
-    >  Quand vous utilisez une expression pour définir la valeur d’une variable [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , l’expression est évaluée chaque fois que la valeur de la variable fait l’objet d’un accès.  
+    >  Lorsque vous utilisez une expression pour définir la valeur d’une [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] variable, l’expression est évaluée chaque fois que la valeur de la variable est accessible.  
   
 ## <a name="next-step"></a>Étape suivante  
  Une fois que vous avez calculé le point de départ et le point de fin pour une plage de modifications, l'étape suivante consiste à déterminer si les données modifiées sont prêtes.  
@@ -109,9 +109,9 @@ ms.locfileid: "48116377"
  **Rubrique suivante :** [Déterminer si les données modifiées sont prêtes](determine-whether-the-change-data-is-ready.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Utiliser des Variables dans des Packages](../use-variables-in-packages.md)   
+ [Utiliser des variables dans des packages](../use-variables-in-packages.md)   
  [Expressions Integration Services &#40;SSIS&#41;](../expressions/integration-services-ssis-expressions.md)   
- [Exécution de requêtes SQL, tâche](../control-flow/execute-sql-task.md)   
+ [Tache d'exécution de requêtes SQL](../control-flow/execute-sql-task.md)   
  [Tâche de script](../control-flow/script-task.md)  
   
   

@@ -14,12 +14,12 @@ ms.assetid: c7317eec-c0e9-479e-a4a7-83b6b6c58d59
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: deda1f440b12fc46b4d3e3e9e6fe5731995273a9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3eced987f2f19e5379ab14ebc88eca37b8e19d8a
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200877"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49084968"
 ---
 # <a name="modify-or-rename-dml-triggers"></a>Modifier ou renommer les déclencheurs DML
   Cette rubrique explique comment modifier ou renommer un déclencheur DML dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -48,7 +48,7 @@ ms.locfileid: "48200877"
   
 ###  <a name="Recommendations"></a> Recommandations  
   
--   Nous vous recommandons de ne pas utiliser la procédure stockée [sp_rename](/sql/relational-databases/system-stored-procedures/sp-rename-transact-sql) pour renommer un déclencheur. La modification d'une partie du nom de l'objet peut provoquer des problèmes dans des scripts et des procédures stockées. Le fait de renommer un déclencheur ne modifie pas le nom de l’objet correspondant dans la colonne de définition de l’affichage catalogue [sys.sql_modules](/sql/relational-databases/system-catalog-views/sys-sql-modules-transact-sql) . Nous vous recommandons plutôt de supprimer et de recréer le déclencheur.  
+-   Nous vous recommandons de ne pas utiliser la procédure stockée [sp_rename](/sql/relational-databases/system-stored-procedures/sp-rename-transact-sql) pour renommer un déclencheur. La modification d'une partie du nom de l'objet peut provoquer des problèmes dans des scripts et des procédures stockées. Le fait de renommer un déclencheur ne modifie pas le nom de l’objet correspondant dans la colonne de définition de l’affichage catalogue [sys.sql_modules](/sql/relational-databases/system-catalog-views/sys-sql-modules-transact-sql) . Nous recommandons que vous supprimez et recréez le déclencheur à la place.  
   
 -   Si vous changez le nom d'un objet référencé par un déclencheur DML, vous devez modifier le déclencheur pour que sa définition se réfère au nouveau nom de l'objet. Par conséquent, avant de renommer un objet, affichez les dépendances de l'objet pour savoir si des déclencheurs peuvent être concernés par la modification projetée.  
   

@@ -19,12 +19,12 @@ ms.assetid: 3f0defd0-478d-4e7f-96be-8795c9de4e3f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ee801da96f6281e5bf1775df1233ee85712ff74a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8acb2fae0aa0edadf1995a0a103ff60b66a912a9
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856967"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072133"
 ---
 # <a name="sysdmserverservices-transact-sql"></a>sys.dm_server_services (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "47856967"
 |filename|**nvarchar (256)**|Chemin d'accès et nom de fichier de l'exécutable du service. Ne peut pas avoir la valeur null.|  
 |is_clustered|**nvarchar(1)**|Indique si le service est installé en tant que ressource d'un serveur en cluster. Ne peut pas avoir la valeur null.|  
 |cluster_nodename|**nvarchar (256)**|Nom du nœud de cluster sur lequel le service est installé. Autorise la valeur NULL.|
-|instant_file_initialization_enabled|**nvarchar(1)**|Spécifie si l’initialisation instantanée des fichiers est activée pour le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] service.<br /><br />Y = initialisation instantanée des fichiers est activée pour le service.<br /><br />N = initialisation instantanée des fichiers est désactivée pour le service.<br /><br /> Autorise la valeur NULL.<br /><br /> **Remarque :** ne s’applique pas aux autres services tels que l’Agent SQL Server.<br /><br /> **S’applique à :** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (en commençant par [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4, et [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 via via [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).|  
+|instant_file_initialization_enabled|**nvarchar(1)**|Spécifie si l’initialisation instantanée des fichiers est activée pour le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] service.<br /><br />Y = initialisation instantanée des fichiers est activée pour le service.<br /><br />N = initialisation instantanée des fichiers est désactivée pour le service.<br /><br /> Autorise la valeur NULL.<br /><br /> **Remarque :** ne s’applique pas aux autres services tels que l’Agent SQL Server.<br /><br /> **S’applique à :** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (en commençant par [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4, et [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 via [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).|  
 
 ## <a name="security"></a>Sécurité  
   

@@ -18,12 +18,12 @@ ms.assetid: cbdfea38-9e42-47f3-8fc8-5978b82e2623
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4371609b9d0c72d9d589d37f0edacc4d37a2996c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5fd6986a245d960a96592c8c63c9744b741fa5ff
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47651557"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119686"
 ---
 # <a name="spupdatejob-transact-sql"></a>sp_update_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,27 +61,27 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
  Numéro d'identification du travail à mettre à jour. *job_id*est **uniqueidentifier**.  
   
  [  **@job_name =**] **'***nom_travail***'**  
- Nom du travail. *job_name*est **nvarchar (128)**.  
+ Nom du travail. *job_name* est **nvarchar (128)**.  
   
 > **Remarque :** soit *job_id* ou *nom_travail* doit être spécifié, mais ne peut pas être spécifiés.  
   
  [  **@new_name =**] **'***nouveau_nom***'**  
- Nouveau nom du travail. *new_name*est **nvarchar (128)**.  
+ Nouveau nom du travail. *new_name* est **nvarchar (128)**.  
   
  [  **@enabled =**] *activé*  
- Spécifie si le travail est activé (**1**) ou désactivée (**0**). *activé*est **tinyint**.  
+ Spécifie si le travail est activé (**1**) ou désactivée (**0**). *activé* est **tinyint**.  
   
  [  **@description =**] **'***description***'**  
  Description du travail. *Description* est **nvarchar (512)**.  
   
  [ **@start_step_id =**] *step_id*  
- Numéro d'identification de la première étape à exécuter pour le travail. *l’argument id_étape*est **int**.  
+ Numéro d'identification de la première étape à exécuter pour le travail. *l’argument id_étape* est **int**.  
   
  [  **@category_name =**] **'***catégorie***'**  
- La catégorie du travail. *catégorie*est **nvarchar (128)**.  
+ La catégorie du travail. *catégorie* est **nvarchar (128)**.  
   
  [  **@owner_login_name =**] **'***connexion***'**  
- Nom du compte de connexion propriétaire du travail. *connexion*est **nvarchar (128)** seuls les membres de la **sysadmin** rôle serveur fixe peut modifier l’appartenance des travaux.  
+ Nom du compte de connexion propriétaire du travail. *connexion* est **nvarchar (128)** seuls les membres de la **sysadmin** rôle serveur fixe peut modifier l’appartenance des travaux.  
   
  [  **@notify_level_eventlog =**] *niveau_journal_événements*  
  Indique le moment auquel une entrée doit être ajoutée pour ce travail dans le journal des applications Microsoft Windows. *niveau_journal_événements*est **int**, et peut prendre l’une des valeurs suivantes.  
@@ -100,7 +100,7 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
  Indique le moment où un message doit être envoyé sur le réseau à la fin de ce travail. *niveau_message_réseau*est **int**. *niveau_message_réseau*utilise les mêmes valeurs que *niveau_journal_événements*.  
   
  [  **@notify_level_page =**] *niveau_page*  
- Indique le moment où un message par radiomessagerie doit être envoyé à la fin de ce travail. *niveau_page*est **int**. *niveau_page*utilise les mêmes valeurs que *niveau_journal_événements*.  
+ Indique le moment où un message par radiomessagerie doit être envoyé à la fin de ce travail. *niveau_page* est **int**. *niveau_page*utilise les mêmes valeurs que *niveau_journal_événements*.  
   
  [  **@notify_email_operator_name =**] **'***nom_opérateur***'**  
  Le nom de l’opérateur auquel le message électronique est envoyé une fois *niveau_courrier_électronique* est atteinte. *nom_adresse* est **nvarchar (128)**.  

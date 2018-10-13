@@ -11,12 +11,12 @@ ms.assetid: f8a485d5-47ed-4dd5-bb66-ef4d6d463845
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f75599c201c4c34fe2b22f7ddb27308c4d69a38f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a30991f6104263d4c6f497a721cee340f3dc9e2b
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213879"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085475"
 ---
 # <a name="exploring-the-sequence-clustering-model-intermediate-data-mining-tutorial"></a>Exploration du modèle Sequence Clustering (Didacticiel intermédiaire sur l'exploration de données)
   Maintenant que vous avez créé le **Sequence Clustering avec Region** modèle, vous pouvez le parcourir à l’aide de la [!INCLUDE[msCoName](../includes/msconame-md.md)] visionneuse de Clustering de séquence dans le **visionneuse de modèle d’exploration de données** onglet du Concepteur d’exploration de données. Le [!INCLUDE[msCoName](../includes/msconame-md.md)] msc contient cinq onglets : **diagramme de Cluster**, **profils du Cluster**, **caractéristiques du Cluster**,  **ClusterDiscrimination**, et **Transitions d’état**. Pour plus d’informations sur l’utilisation de cette visionneuse, consultez [Explorer un modèle à l’aide de la séquence de Microsoft Cluster Viewer](../../2014/analysis-services/data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md).  
@@ -47,7 +47,7 @@ ms.locfileid: "48213879"
   
 2.  Sélectionnez **Cycling Cap** dans le **état** liste.  
   
-     Le diagramme est mis à jour pour afficher la concentration du produit sélectionné dans chacun des clusters. Le cluster le plus foncé contient la plus grande densité de casquettes de cyclisme. Vous pouvez modifier la variable d'ombrage pour utiliser l'état de n'importe quelle colonne d'entrée.  
+     Le diagramme est mis à jour pour afficher la concentration du produit sélectionné dans chacun des clusters. Le cluster le plus foncé contient la plus grande densité de casquettes de cyclisme. Vous pouvez modifier la variable d’ombrage pour utiliser n’importe quel état de n’importe quelle colonne d’entrée.  
   
 3.  Dans le **Variable d’ombrage** liste, sélectionnez **Population**.  
   
@@ -257,7 +257,7 @@ ms.locfileid: "48213879"
  [Création d’un modèle Sequence Clustering associé &#40;didacticiel d’exploration de données intermédiaire&#41;](../../2014/tutorials/creating-a-related-sequence-clustering-model-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Algorithme de Clustering de séquence de Microsoft](../../2014/analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
- [Exemples de requêtes de modèle Sequence Clustering](../../2014/analysis-services/data-mining/sequence-clustering-model-query-examples.md)  
+ [Microsoft Sequence Clustering Algorithm](../../2014/analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
+ [Exemples de requêtes de modèle MSC (Sequence Clustering)](../../2014/analysis-services/data-mining/sequence-clustering-model-query-examples.md)  
   
   

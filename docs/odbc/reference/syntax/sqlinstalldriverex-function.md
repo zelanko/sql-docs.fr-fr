@@ -20,12 +20,12 @@ ms.assetid: 1dd74544-f4e9-46e1-9b5f-c11d84fdab4c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d6e034ff8b17852b40a604beb8ce1d38bdd1612b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4b6bae692efdb1d89642eea52e499b0fb2800377
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47802463"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169322"
 ---
 # <a name="sqlinstalldriverex-function"></a>SQLInstallDriverEx, fonction
 **Conformité**  
@@ -100,9 +100,9 @@ BOOL SQLInstallDriverEx(
 ## <a name="comments"></a>Commentaires  
  Le *lpszDriver* argument est une liste d’attributs sous la forme de paires mot clé-valeur. Chaque paire se termine par un octet null, et la liste entière se termine avec un octet null. (Autrement dit, deux octets null marquent la fin de la liste.) Le format de cette liste est la suivante :  
   
- *pilote-desc* **\\**0Driver**=***pilote-DLL-filename***\\**0 [le programme d’installation **= ***le programme d’installation-DLL-filename***\\**0]  
+ _pilote-desc_ **\\**0Driver**=**_pilote-DLL-filename_ **\\**0 [le programme d’installation**=**_le programme d’installation-DLL-filename_<b>\\</b>0]  
   
- [*pilote-attr-mot-Clé1***=*** value1 ***\\**0] [* pilote-attr-MotClé2***=*** value2 ***\\**0]... **\\**0  
+ [_pilote-attr-mot-Clé1_**=**_value1_<b>\\</b>0] [_pilote-attr-MotClé2_  **=** _value2_<b>\\</b>0]... <b> \\ </b>0  
   
  où \0 est un octet null et *pilote-attr-keywordn* est n’importe quel attribut de pilote mot clé. Les mots clés doivent apparaître dans l’ordre spécifié. Par exemple, supposons qu’un pilote pour les fichiers de texte mis en forme possède de pilote séparé et le programme d’installation DLL et pouvez utiliser des fichiers avec les extensions .txt et .csv. Le *lpszDriver* argument pour ce pilote peut être comme suit :  
   

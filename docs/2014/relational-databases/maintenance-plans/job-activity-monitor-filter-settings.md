@@ -13,12 +13,12 @@ ms.assetid: 89cb0055-5262-447f-8464-7203d4caba78
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 07a8a8f04257e68b5294bb7ee0b0757ffc048fbb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 285d4863cfb3b3ccd812d7e0b4894d4446257562
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207555"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49168820"
 ---
 # <a name="job-activity-monitor-filter-settings"></a>Moniteur d'activité des travaux (Paramètres du filtre)
   Cette page vous permet de réduire le nombre de lignes visibles dans le Moniteur d'activité des travaux. Entrez des critères dans une ou plusieurs des zones disponibles, pour afficher uniquement les lignes qui correspondent aux valeurs spécifiées. Certaines zones, telles que **État** ou **Type de blocage** , proposent un nombre défini de valeurs possibles, fournies dans une liste déroulante. D’autres, telles que **Application** , permettent d’entrer n’importe quelle valeur et autant de valeurs que vous le souhaitez, sous la forme d’une liste dont les valeurs sont séparées par une virgule. Les icônes de la barre d'outils vous permettent de trier les zones disponibles par catégorie ou par ordre alphabétique. Cliquez sur des critères pour afficher une brève description de chacun d'eux.  
@@ -60,7 +60,7 @@ ms.locfileid: "48207555"
  Cette zone sans nom fournit une brève description des critères lors de leur sélection.  
   
  **Appliquer le filtre**  
- Pour appliquer le filtre, cliquez sur **Appliquer****le filtre** , puis sur **OK**. Pour conserver les paramètres du filtre dans la boîte de dialogue **Paramètres****du filtre** , sans les appliquer, désactivez l’option **Appliquer****le filtre**, puis cliquez sur **OK**, pour afficher toutes les lignes.  
+ Pour appliquer le filtre, cliquez sur **appliquer le filtre** puis cliquez sur **OK**. Pour conserver les paramètres de filtre dans le **paramètres de filtre** boîte de dialogue zone, mais pas les appliquer, décochez la case **appliquer le filtre**, puis cliquez sur **OK**, pour afficher toutes les lignes.  
   
  **Désactiver**  
  Rétablit les paramètres par défaut du filtre.  

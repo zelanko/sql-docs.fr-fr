@@ -19,12 +19,12 @@ ms.assetid: 48dd6ad9-0d36-4370-8a12-4921d0df4b86
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bc48ab35ce0a2897b0167fd8609c21f46926966a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3e8545fe1d612991eb79a7e75e896089b525a996
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47802897"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906349"
 ---
 # <a name="sysdmosmemorybrokers-transact-sql"></a>sys.dm_os_memory_brokers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "47802897"
 |**predicted_allocations_kb**|**bigint**|Quantité prédite de mémoire allouée par le gestionnaire d'allocation mémoire. Cette valeur est basée sur le modèle d'utilisation de la mémoire.|  
 |**target_allocations_kb**|**bigint**|Quantité recommandée de mémoire allouée, en kilo-octet (Ko), basée sur les paramètres actuels et le modèle d'utilisation de la mémoire. Ce gestionnaire d'allocation mémoire doit augmenter ou diminuer la quantité pour obtenir cette valeur.|  
 |**future_allocations_kb**|**bigint**|Nombre projeté d'allocations, en kilo-octet (Ko), qui seront effectuées dans les prochaines secondes.|  
-|**overall_limit_kb**|**bigint**|Quantité maximale de mémoire, en kilo-octets (Ko), que le gestionnaire d'allocation mémoire peut allouer.|  
+|**overall_limit_kb**|**bigint**|Quantité maximale de mémoire, en kilo-octets (Ko), que le service broker peut allouer.|  
 |**last_notification**|**nvarchar(60)**|Recommandation relative à l'utilisation de la mémoire basée sur les paramètres actuels et le modèle d'utilisation. Les valeurs valides sont les suivantes :<br /><br /> grow<br /><br /> shrink<br /><br /> stable|  
 |**pdw_node_id**|**Int**|**S’applique aux**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L’identificateur pour le nœud se trouvant sur cette distribution.|  
   

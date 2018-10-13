@@ -13,12 +13,12 @@ ms.assetid: edeb5c75-fb13-467e-873a-ab3aad88ab72
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 44138cf39e7ed07120b85da6dfd708dee3e90182
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 657f808d28c8b3a6a1c8964dccb5959a67c9cb47
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222589"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120216"
 ---
 # <a name="reporting-services-with-alwayson-availability-groups-sql-server"></a>Reporting Services avec les groupes de disponibilité AlwaysOn (SQL Server)
   Cette rubrique contient des informations sur la configuration de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] en vue d'une utilisation avec [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] (groupes de disponibilité) dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Les trois possibilités d'utilisation de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] et de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] sont les bases de données pour les sources de données de rapport, les bases de données de serveur de rapports et la conception de rapports. Les fonctionnalités prises en charge et la configuration requise diffèrent dans les trois cas.  
@@ -127,7 +127,7 @@ ms.locfileid: "48222589"
 > [!NOTE]  
 >  Les serveurs de rapports en mode SharePoint utilisent un processus de synchronisation entre les bases de données d'application de service [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] et les bases de données de contenu SharePoint. Il est important de conserver les bases de données de serveur de rapports et les bases de données de contenu ensemble. Pensez à les configurer dans les mêmes groupes de disponibilité afin qu'elles soient basculées et récupérées en tant qu'ensemble. Examinez le cas suivant :  
 >   
->  -   Vous effectuez la restauration ou le basculement vers une copie des la base de données de contenu qui n'a pas reçu les mêmes mises à jour récentes que celles reçues par la base de données de serveur de rapports.  
+>  -   Restauration ou le basculement vers une copie de la base de données de contenu qui n’a pas reçu la même récentes mises à jour de la base de données de serveur de rapports a reçu.  
 > -   Le processus de synchronisation de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] détecte les différences entre la liste des éléments dans la base de données de contenu et celle des bases de données de serveur de rapports.  
 > -   Le processus de synchronisation supprime ou met à jour les éléments dans la base de données de contenu.  
   

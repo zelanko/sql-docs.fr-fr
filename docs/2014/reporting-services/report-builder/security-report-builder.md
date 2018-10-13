@@ -11,12 +11,12 @@ ms.assetid: ed38291a-6afe-449f-9f32-3ae04502bd6f
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 19d471febe43640325ae4f218dc1d0e66c3e0c9e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c33524c5b526a0523fe866b6307e00cd52cf8003
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074651"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48905813"
 ---
 # <a name="security-report-builder"></a>Sécurité (Générateur de rapports)
   Le Générateur de rapports est une application cliente de création de rapports conçue pour être utilisée conjointement avec un serveur de rapports [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Le serveur de rapports peut être configuré pour être utilisé en mode natif en tant que serveur autonome ou en mode intégré SharePoint afin de prendre en charge les rapports sur un site SharePoint.  
@@ -115,7 +115,7 @@ ms.locfileid: "48074651"
   
 -   N'utilisez pas de paramètres basés sur des paramètres de requête et qui sont de type **Texte** , à moins que vous ne fournissiez des valeurs valides. Une liste de valeurs disponibles aide l'utilisateur à choisir uniquement des valeurs valides. Sans une liste de valeurs disponibles, vous ne pouvez pas restreindre les valeurs qu'un utilisateur peut entrer.  
   
--   N'utilisez pas la valeur globale [&UserID] pour sécuriser des données privées. En tant que paramètre de rapport, cette valeur peut être spécifiée dans une URL de rapport à l'aide de la syntaxe d'accès URL. L'utilisation de cette valeur dans une expression d'un dataset partagé empêche le dataset d'être mis en cache. Pour plus d’informations, consultez [Référence de paramètre d’accès URL](../url-access-parameter-reference.md) dans la section [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de la [documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]](http://go.microsoft.com/fwlink/?linkid=121312).  
+-   N’utilisez pas le globale [& UserID] pour sécuriser les données privées. En tant que paramètre de rapport, cette valeur peut être spécifiée dans une URL de rapport à l'aide de la syntaxe d'accès URL. L'utilisation de cette valeur dans une expression d'un dataset partagé empêche le dataset d'être mis en cache. Pour plus d’informations, consultez [Référence de paramètre d’accès URL](../url-access-parameter-reference.md) dans la section [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de la [documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]](http://go.microsoft.com/fwlink/?linkid=121312).  
   
  Une fois les éléments publiés sur un serveur de rapports, l'administrateur du serveur de rapports peut contribuer à les sécuriser à l'aide d'une sécurité basée sur les rôles ou d'une sécurité au niveau des éléments et des dossiers. Pour plus d’informations, consultez [Sécuriser des rapports et des ressources](../security/secure-reports-and-resources.md) dans la documentation relative à [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dans la [documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]](http://go.microsoft.com/fwlink/?linkid=121312).  
   

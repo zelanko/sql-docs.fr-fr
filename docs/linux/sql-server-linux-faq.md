@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 6725f986a66020d0560c4e3f17be5da12a2cd3f1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0eb32296c0122709ff1dc6c83deda70d88293d38
+ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745747"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48851844"
 ---
 # <a name="sql-server-on-linux-frequently-asked-questions-faq"></a>SQL Server sur Linux Forum aux Questions (FAQ)
 
@@ -103,7 +103,7 @@ Les sections suivantes fournissent des questions et réponses pour SQL Server s�
 
 1. **SQL Server sur Linux prend-il en charge plusieurs instances sur le même hôte ?**
 
-   Nous vous recommandons d’exécuter plusieurs conteneurs sur un ordinateur hôte d’avoir plusieurs instances distinctes. Chaque conteneur doit écouter sur un port différent. Pour plus d’informations, consultez [exécuter plusieurs conteneurs de SQL Server](sql-server-linux-configure-docker.md#run-multiple-sql-server-containers).
+   Nous vous recommandons d’exécuter plusieurs conteneurs sur un ordinateur hôte d’avoir plusieurs instances distinctes. Pour cela, à l’aide de docker, mais chaque conteneur doit écouter sur un port différent. Pour plus d’informations, consultez [exécuter plusieurs conteneurs de SQL Server](sql-server-linux-configure-docker.md#run-multiple-sql-server-containers).
 
 1. **Authentification Active Directory est prise en charge sur Linux ?**
 

@@ -18,12 +18,12 @@ ms.assetid: 3228065d-de8f-4ece-a9b1-e06d3dca9310
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3837e800bc1193a4f72b58bc0d78c0cb314e6076
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1d4026596d06941286b137a60201ba0ee6489c34
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152021"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120206"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>Créer des serveurs liés (moteur de base de données SQL Server)
   Cette rubrique indique comment créer un serveur lié et accéder aux données provenant d'un autre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. En créant un serveur lié, vous pouvez utiliser des données provenant de plusieurs sources. Il n'est pas nécessaire que le serveur lié soit une autre instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mais il s'agit d'un scénario courant.  
@@ -82,7 +82,7 @@ ms.locfileid: "48152021"
     > [!NOTE]  
     >  Si l'instance de **SQL Server** est l'instance par défaut, entrez le nom de l'ordinateur qui héberge l'instance de **SQL Server**. Si l’instance de **SQL Server** est une instance nommée, entrez le nom de l’ordinateur et le nom de l’instance, par exemple **Accounting\SQLExpress**.  
   
-3.  Dans la zone **Type de serveur** , sélectionnez **SQL Server** pour indiquer que le serveur lié est une autre instance de **SQL Server**.  
+3.  Dans le **type de serveur** zone, sélectionnez **SQL Server** pour indiquer que le serveur lié est une autre instance de **SQL Server**.  
   
 4.  Dans la page **Sécurité** , spécifiez le contexte de sécurité qui sera utilisé lorsque le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] d'origine se connectera au serveur lié. Dans un environnement de domaine où les utilisateurs se connectent à l'aide de leurs connexions de domaine, sélectionner **Seront effectuées dans le contexte de sécurité de la connexion actuelle** est souvent le meilleur choix. Lorsque les utilisateurs se connectent au **SQL Server** d'origine en utilisant un compte de connexion **SQL Server** , le meilleur choix est souvent de sélectionner **Seront effectuées dans ce contexte de sécurité**, puis de fournir les informations d'identification nécessaires pour l'authentification sur le serveur lié.  
   
@@ -179,7 +179,7 @@ ms.locfileid: "48152021"
      Seules les interfaces OLE DB de niveau 0 sont invoquées pour le fournisseur.  
   
      **Autoriser inprocess**  
-     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autorise l’instanciation du fournisseur en tant que serveur in-process. Lorsque cette option n'est pas définie, le comportement par défaut consiste à instancier le fournisseur en dehors du processus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . L'instanciation du fournisseur en dehors du processus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] protège le processus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] des erreurs contenues dans le fournisseur. Lorsque le fournisseur est instancié en dehors de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] traiter, les mises à jour ou insertions faisant référence à des colonnes longues (`text`, `ntext`, ou `image`) ne sont pas autorisés.  
+     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autorise l’instanciation du fournisseur en tant que serveur in-process. Lorsque cette option n'est pas définie, le comportement par défaut consiste à instancier le fournisseur en dehors du processus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . L'instanciation du fournisseur en dehors du processus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] protège le processus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] des erreurs contenues dans le fournisseur. Lorsque le fournisseur est instancié en dehors du processus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les mises à jour ou insertions faisant référence à des colonnes longues (`text`, `ntext` ou `image`) ne sont pas autorisées.  
   
      **Mises à jour non transactionnelles**  
      [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autorise les mises à jour, même si **ITransactionLocal** n’est pas disponible. Si cette option est activée, les mises à jour du fournisseur ne sont pas récupérables puisque celui-ci ne prend pas en charge les transactions.  

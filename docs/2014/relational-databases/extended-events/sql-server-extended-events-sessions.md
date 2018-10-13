@@ -15,12 +15,12 @@ ms.assetid: c3c92544-351a-4bce-a06a-1f2a47e494e9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e5fc2c924249518ecc40d363722ba6a6b1e882d8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 17062493d2c07e7dfbf1625aad584823953f043d
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051359"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120256"
 ---
 # <a name="sql-server-extended-events-sessions"></a>Sessions Événements étendus SQL Server
   Une session Événements étendus [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] est créée dans le processus [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui héberge le moteur des Événements étendus. Les aspects suivants d'une session Événements étendus fournissent le contexte nécessaire pour comprendre l'infrastructure des Événements étendus et le processus global qui est en cours :  
@@ -55,7 +55,7 @@ ms.locfileid: "48051359"
   
  Faisant référence à l'illustration précédente, notez les points suivants :  
   
--   Le mappage entre des objets de packages et des sessions est de type plusieurs-à-plusieurs, ce qui signifie qu'un objet peut apparaître dans plusieurs sessions et qu'une session peut contenir plusieurs objets.  
+-   Le mappage entre les objets de package et de sessions est plusieurs à plusieurs, ce qui signifie qu’un objet peut apparaître dans plusieurs sessions, et une session peut contenir plusieurs objets.  
   
 -   Un même événement (Événement 1) ou une même cible (Cible 1) peuvent être activés dans plusieurs sessions.  
   

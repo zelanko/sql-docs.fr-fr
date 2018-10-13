@@ -20,12 +20,12 @@ ms.assetid: 978b8205-535b-461c-91f3-af9b08eca467
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 91973f7c98409df52afa18db09dfbdac689a34d4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a9264ed33ffeea224f69b8a880e235753ead1467
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47842677"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169337"
 ---
 # <a name="dbosysjobsteps-transact-sql"></a>dbo.sysjobsteps (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "47842677"
 |**retry_attempts**|**Int**|Nombre de tentatives de reprise en cas d'échec de l'étape|  
 |**retry_interval**|**Int**|Délai d'attente entre chaque tentative de reprise|  
 |**os_run_priority**|**Int**|Réservé.|  
-|**output_file_name**|**nvarchar(200)**|Nom du fichier dans lequel le résultat de l’étape est enregistré lorsque **sous-système** TSQL, PowerShell, ou **CmdExec ***.*|  
+|**output_file_name**|**nvarchar(200)**|Nom du fichier dans lequel le résultat de l’étape est enregistré lorsque **sous-système** TSQL, PowerShell, ou **CmdExec**_._|  
 |**last_run_outcome**|**Int**|Issue de l'exécution précédente de l'étape du travail<br /><br /> **0** = Échec<br /><br /> **1** = a réussi<br /><br /> **2** = nouvelle tentative<br /><br /> **3** = annulée<br /><br /> **5** = inconnu|  
 |**last_run_duration**|**Int**|Durée (hhmmss) de l'étape lors de sa dernière exécution.|  
 |**last_run_retries**|**Int**|Nombre de tentatives de reprises lors de la dernière exécution de l'étape du travail|  

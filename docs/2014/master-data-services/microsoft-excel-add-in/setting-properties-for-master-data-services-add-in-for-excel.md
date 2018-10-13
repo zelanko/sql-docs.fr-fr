@@ -11,12 +11,12 @@ ms.assetid: cab1c662-5d40-4c16-9f5c-36ff9608810b
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 50b08b56a203a5a7e9be2e53dee9eab607dcac9f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 56d3b122b7a458bad7522c766559e1d775b31ef7
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154799"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48905931"
 ---
 # <a name="setting-properties-for-master-data-services-add-in-for-excel"></a>Définition des propriétés pour le complément Master Data Services pour Excel
   Les paramètres du complément Master Data Services pour Excel déterminent la façon dont les données sont chargées à partir de MDS dans le complément Excel et la façon dont les données sont publiées du complément Excel vers MDS.  
@@ -30,7 +30,7 @@ ms.locfileid: "48154799"
 |Onglet et section|Paramètre|Description|  
 |Paramètres : Publication|Afficher la boîte de dialogue **Publier et annoter** lors de la publication|Sélectionnez cette option pour afficher la boîte de dialogue **Publier et annoter** lorsque vous cliquez sur **Publier**, ce qui vous permet d'entrer une seule annotation pour toutes les modifications ou d'entrer une annotation pour chaque modification.<br /><br /> Désélectionnez cette option pour indiquer que le processus de publication est initialisé sans la boîte de dialogue **Publier et annoter** . Vous n'aurez pas la possibilité d'entrer une annotation.|  
 |Paramètres : Version|Sélection de la version|Sélectionnez la version des données maîtres chargées dans le complément Excel. Valeurs possibles :<br /><br /> **Aucune** pour ne pas appliquer une valeur de version par défaut<br /><br /> **Plus ancienne** pour utiliser par défaut la version la plus ancienne **Plus récente** pour utiliser par défaut la version la plus récente.|  
-|Paramètres : Journalisation|Activer la journalisation détaillée|Activez la journalisation pour le chargement des données maîtres à partir de MDS dans le complément Excel, de telle façon que le résultat de chaque commande du service est enregistré.|  
+|Paramètres : Journalisation|Activer la journalisation détaillée|Activer la journalisation pour le processus de chargement des données de référence à partir de MDS dans le complément Excel, telles que le résultat de chaque commande dans le service est connecté.|  
 |Paramètres : Taille du traitement par lot|Nombre de cellules à charger|Sélectionnez un nombre pour indiquer le nombre de milliers de cellules chargées dans un lot transféré du serveur MDS vers Excel. Le nombre par défaut est de 50 000 cellules.|  
 |Paramètres : Taille du traitement par lot|Nombre de cellules à publier|Sélectionnez un nombre pour indiquer le nombre de milliers de cellules publiées dans un lot retourné d'Excel vers le serveur. Le nombre par défaut est de 50 000 cellules.|  
 |Paramètres : Serveurs ajoutés à la liste approuvée|Effacer tout|Cliquez pour effacer la liste des connexions qui ont été désignées comme sûres lorsque le fichier de requête de raccourci associé a été ouvert.|  

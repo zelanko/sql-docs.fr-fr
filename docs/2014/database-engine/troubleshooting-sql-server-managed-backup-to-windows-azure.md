@@ -10,12 +10,12 @@ ms.assetid: a34d35b0-48eb-4ed1-9f19-ea14754650da
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 00d66f99c09292046f2372621faf65e01757b80c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a4feb316cf43524fa84734d85bf62631833e26d0
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48121748"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120066"
 ---
 # <a name="troubleshooting-sql-server-managed--backup-to-windows-azure"></a>Dépannage de la sauvegarde managée de SQL Server sur Microsoft Azure
   Cette rubrique décrit les tâches et les outils que vous pouvez utiliser pour résoudre les erreurs qui peuvent se produire lors des opérations de [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)].  
@@ -56,7 +56,7 @@ ms.locfileid: "48121748"
   
 1.  **Erreurs lors de l’activation ou la configuration [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]:**  
   
-     Erreur : « Impossible d'accéder à l'URL de stockage… Fournissez une SQL informations d’identification valides... » : Vous pouvez voir cela et autres erreurs similaires qui fait référence aux informations d’identification SQL.  Dans ces cas de figure, vérifiez le nom indiqué dans les informations d'identification SQL fournies et les autres informations stockées, notamment, le nom du compte de stockage et la clé d'accès au stockage, puis assurez-vous que les informations sont actuelles et valides.  
+     Erreur : « Impossible d'accéder à l'URL de stockage… Fournissez une SQL informations d’identification valides... » : Vous pouvez voir cela et autres erreurs similaires qui fait référence aux informations d’identification SQL.  Dans ce cas, passez en revue le nom de l’information d’identification SQL que vous avez fourni, ainsi que les informations stockées dans les informations d’identification SQL : le nom de compte de stockage et la clé d’accès de stockage et assurez-vous qu’ils sont en cours et valide.  
   
      Erreur : »... Impossible de configurer la base de données … car il s’agit d’une base de données système » : vous verrez cette erreur si vous essayez d’activer [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] pour une base de données système.  La [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] ne prend pas en charge les bases de données système.  Pour configurer la sauvegarde d'une base de données système, utilisez d'autres technologies de sauvegarde SQL Server, comme les plans de maintenance.  
   
