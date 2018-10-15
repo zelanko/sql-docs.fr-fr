@@ -302,7 +302,7 @@ GO
   
 -   Il existe des restrictions pour la mise à jour de la clé primaire des tables répliquées en une table mémoire optimisée sur un abonné. Pour plus d’informations, consultez [réplication des modifications à une clé primaire](#PrimaryKey).  
   
--   La clé étrangère, la contrainte unique, les déclencheurs, les modifications de schéma, ROWGUIDCOL, les colonnes calculées, la compression de données, les types de données d'alias, le contrôle de version et les verrous ne sont pas pris en charge dans les tables mémoire optimisées. Consultez [Transact-SQL Constructs Not Supported by In-Memory OLTP](../in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md) pour plus d’informations.  
+-   La clé étrangère, la contrainte unique, les déclencheurs, les modifications de schéma, ROWGUIDCOL, les colonnes calculées, la compression de données, les types de données d'alias, le contrôle de version et les verrous ne sont pas pris en charge dans les tables mémoire optimisées. Pour plus d’informations, consultez [Constructions Transact-SQL non prises en charge par OLTP en mémoire](../in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md).  
   
 ##  <a name="Schema"></a> Modification d'un fichier de schéma  
   
