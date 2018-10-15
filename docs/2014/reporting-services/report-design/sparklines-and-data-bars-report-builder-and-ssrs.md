@@ -26,7 +26,7 @@ ms.locfileid: "48074807"
   
  ![rs_SparklineExample](../media/rs-sparklineexample.gif "rs_SparklineExample")  
   
- Pour une prise en main rapide des graphiques sparkline, consultez [Tutorial: Add a Sparkline to Your Report &#40;Report Builder&#41;](../tutorial-add-a-sparkline-to-your-report-report-builder.md) , ainsi que les vidéos [Procédure : créer un graphique sparkline dans une table](http://go.microsoft.com/fwlink/?LinkId=197092) et [Sparklines, Bar Charts, et Indicators in Report Builder](http://technet.microsoft.com/bi/video/ff877165) .  
+ Pour une prise en main rapide des graphiques sparkline, consultez [Didacticiel : ajouter un graphique sparkline à un rapport &#40;Générateur de rapports et SSRS&#41;](../tutorial-add-a-sparkline-to-your-report-report-builder.md) , ainsi que les vidéos [Procédure : créer un graphique sparkline dans une table](http://go.microsoft.com/fwlink/?LinkId=197092) et [Graphiques sparkline, graphiques à barres et indicateurs dans le Générateur de rapports](http://technet.microsoft.com/bi/video/ff877165) .  
   
 > [!NOTE]  
 >  Vous pouvez publier des graphiques sparkline et des barres de données avec leur table, matrice ou liste parente indépendamment d'un rapport en tant que partie de rapport. [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  

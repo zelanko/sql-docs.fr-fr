@@ -64,7 +64,7 @@ ms.locfileid: "49169199"
   
  Pour plus d’informations sur l’utilisation de ces applets de commande pour préparer une base de données secondaire, consultez [Préparer manuellement une base de données secondaire pour un groupe de disponibilité &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md).  
   
-##  <a name="DeployManageAGs"></a> Creating and Managing an Availability Group  
+##  <a name="DeployManageAGs"></a> Création et gestion d’un groupe de disponibilité  
   
 |Applets de commande|Description|Prise en charge sur|  
 |-------------|-----------------|------------------|  
@@ -73,7 +73,7 @@ ms.locfileid: "49169199"
 |`Set-SqlAvailabilityGroup`|Définit les propriétés d'un groupe de disponibilité ; met un groupe de disponibilité en ligne/hors connexion|Instance de serveur qui héberge le réplica principal|  
 |`Switch-SqlAvailabilityGroup`|Démarre l'une des formes de basculement suivantes :<br /><br /> Basculement forcé d'un groupe de disponibilité (avec possible perte de données).<br /><br /> Basculement manuel d'un groupe de disponibilité.|Instance de serveur qui héberge le réplica secondaire cible.|  
   
-##  <a name="AGlisteners"></a> Creating and Managing an Availability Group Listener  
+##  <a name="AGlisteners"></a> Création et gestion d’un écouteur de groupe de disponibilité  
   
 |Applet de commande|Description|Prise en charge sur|  
 |------------|-----------------|------------------|  
@@ -81,7 +81,7 @@ ms.locfileid: "49169199"
 |`Set-SqlAvailabilityGroupListener`|Modifie le paramètre de port sur un écouteur de groupe de disponibilité existant.|Instance de serveur qui héberge le réplica principal|  
 |`Add-SqlAvailabilityGroupListenerStaticIp`|Ajoute une adresse IP statique à une configuration existante d'écouteur de groupe de disponibilité. L'adresse IP peut être une adresse IPv4 avec sous-réseau ou une adresse IPv6.|Instance de serveur qui héberge le réplica principal|  
   
-##  <a name="DeployManageARs"></a> Creating and Managing an Availability Replica  
+##  <a name="DeployManageARs"></a> Création et gestion d’un réplica de disponibilité  
   
 |Applets de commande|Description|Prise en charge sur|  
 |-------------|-----------------|------------------|  
@@ -90,7 +90,7 @@ ms.locfileid: "49169199"
 |**Remove-SqlAvailabilityReplica**|Supprime un réplica de disponibilité.|Instance de serveur qui héberge le réplica principal|  
 |`Set-SqlAvailabilityReplica`|Définit les propriétés d'un réplica de disponibilité.|Instance de serveur qui héberge le réplica principal|  
   
-##  <a name="DeployManageDbs"></a> Adding and Managing an Availability Database  
+##  <a name="DeployManageDbs"></a> Ajout et gestion d’une base de données de disponibilité  
   
 |Applets de commande|Description|Prise en charge sur|  
 |-------------|-----------------|------------------|  
@@ -99,7 +99,7 @@ ms.locfileid: "49169199"
 |`Resume-SqlAvailabilityDatabase`|Reprend le déplacement des données pour une base de données de disponibilité interrompue.|Instance de serveur sur laquelle la base de données a été interrompue.|  
 |`Suspend-SqlAvailabilityDatabase`|Interrompt le déplacement des données pour une base de données de disponibilité.|Instance de serveur qui héberge un réplica de disponibilité.|  
   
-##  <a name="MonitorTblshtAGs"></a> Monitoring Availability Group Health  
+##  <a name="MonitorTblshtAGs"></a> Surveillance de l’intégrité du groupe de disponibilité  
  Les applets de commande [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] suivantes vous permettent de surveiller l'intégrité d'un groupe de disponibilité et de ses réplicas et bases de données.  
   
 > [!IMPORTANT]  

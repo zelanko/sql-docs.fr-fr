@@ -20,7 +20,7 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47738340"
 ---
-# <a name="manage-an-oracle-cdc-service"></a>Manage an Oracle CDC Service
+# <a name="manage-an-oracle-cdc-service"></a>Gérer un Service de capture de données modifiées Oracle
   Vous pouvez utiliser la console de configuration du service de capture de données modifiées pour gérer un service de capture de données modifiées spécifique.  
   
  **Pour sélectionner le service de capture de données modifiées à utiliser**  
@@ -29,7 +29,7 @@ ms.locfileid: "47738340"
   
 2.  Sélectionnez le service de capture de données modifiées à utiliser.  
   
-     Vous pouvez également cliquer avec le bouton droit sur le service de capture de données modifiées que vous souhaitez utiliser et sélectionner l'action souhaitée. Consultez [What can you do with a CDC Service](../../integration-services/change-data-capture/manage-an-oracle-cdc-service.md#BKMK_WhatcandowithCDCService).  
+     Vous pouvez également cliquer avec le bouton droit sur le service de capture de données modifiées que vous souhaitez utiliser et sélectionner l'action souhaitée. Consultez [Opérations possibles avec un service de capture de données modifiées](../../integration-services/change-data-capture/manage-an-oracle-cdc-service.md#BKMK_WhatcandowithCDCService).  
   
  **OR**  
   
@@ -39,7 +39,7 @@ ms.locfileid: "47738340"
   
      Vous pouvez également cliquer avec le bouton droit sur le service de capture de données modifiées que vous souhaitez utiliser et sélectionner l'action souhaitée. Consultez [Opérations possibles avec un service de capture de données modifiées](../../integration-services/change-data-capture/manage-an-oracle-cdc-service.md#BKMK_WhatcandowithCDCService).  
   
-##  <a name="BKMK_WhatcandowithCDCService"></a> What can you do with a CDC Service  
+##  <a name="BKMK_WhatcandowithCDCService"></a> Que pouvez-vous faire avec un Service de capture de données modifiées  
  Vous pouvez effectuer les actions suivantes lorsque vous utilisez un service de capture de données modifiées.  
   
 ### <a name="delete-the-service"></a>Supprimer le service  
