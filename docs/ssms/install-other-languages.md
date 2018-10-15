@@ -10,16 +10,16 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: febb1feb9a26f4f9e969d568975b331bc522c14b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 706615794b7f3e88cc5228f56de1e388501494b5
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47722867"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48904917"
 ---
 # <a name="install-non-english-language-versions-of-sql-server-management-studio-ssms"></a>Installer des versions de SQL Server Management Studio (SSMS) dans d’autres langues que l’anglais 
 
-[SSMS est disponible dans plusieurs langues](download-sql-server-management-studio-ssms.md#available-languages), mais le programme d’installation de SSMS bloque l’installation sur les ordinateurs dont les paramètres régionaux système ne correspondent pas à la langue de SSMS. 
+[SSMS est disponible dans plusieurs langues](download-sql-server-management-studio-ssms.md#available-languages-ssms-180-preview), mais le programme d’installation de SSMS bloque l’installation sur les ordinateurs dont les paramètres régionaux système ne correspondent pas à la langue de SSMS. 
 
 Les instructions suivantes dépendent de la version de Windows. Celles qui sont présentées ici valent pour Windows 10.
 
@@ -28,7 +28,7 @@ Les instructions suivantes dépendent de la version de Windows. Celles qui sont 
 1. Installez le module linguistique de Windows associé à la langue que SSMS devra utiliser : 
    - **Paramètres** > **Heure et langue** > **Région et langue** > **Ajouter une langue** 
 2. Définissez maintenant les paramètres régionaux système afin d’utiliser le module linguistique installé à l’étape précédente en cliquant sur la langue que vous venez d’installer, puis sélectionnez **Définir comme valeur par défaut**. (Après l’installation de SSMS, vous pourrez sélectionner à nouveau l’anglais dans les paramètres régionaux système.)
-3. Lorsque votre système d’exploitation fonctionne dans la langue souhaitée, [installez la version SSMS dans cette langue](download-sql-server-management-studio-ssms.md#available-languages). La première fois que vous installez une nouvelle langue SSMS, utilisez le package complet. Vous pourrez utiliser le package de mise à niveau pour les installations suivantes.
+3. Lorsque votre système d’exploitation fonctionne dans la langue souhaitée, [installez la version SSMS dans cette langue](download-sql-server-management-studio-ssms.md#available-languages-ssms-180-preview). La première fois que vous installez une nouvelle langue SSMS, utilisez le package complet. Vous pourrez utiliser le package de mise à niveau pour les installations suivantes.
 4. Exécutez SSMS ; il devrait s’afficher dans la langue installée à l’étape précédente.
 5. Sélectionnez à nouveau l’anglais dans les paramètres régionaux système de votre ordinateur.
 
@@ -37,7 +37,7 @@ Les instructions suivantes dépendent de la version de Windows. Celles qui sont 
 1. Installez le module linguistique de Windows associé à la langue que SSMS devra utiliser : 
    - **Paramètres** > **Heure et langue** > **Région et langue** > **Ajouter une langue** 
 2. Définissez maintenant les paramètres régionaux système afin d’utiliser le module linguistique installé à l’étape précédente en cliquant sur la langue que vous venez d’installer, puis sélectionnez **Définir comme valeur par défaut**. 
-3. Lorsque votre système d’exploitation fonctionne dans la langue souhaitée, [installez la version SSMS dans cette langue](download-sql-server-management-studio-ssms.md#available-languages). La première fois que vous installez une nouvelle langue SSMS, utilisez le package complet. Vous pourrez utiliser le package de mise à niveau pour les installations suivantes.
+3. Lorsque votre système d’exploitation fonctionne dans la langue souhaitée, [installez la version SSMS dans cette langue](download-sql-server-management-studio-ssms.md#available-languages-ssms-180-preview). La première fois que vous installez une nouvelle langue SSMS, utilisez le package complet. Vous pourrez utiliser le package de mise à niveau pour les installations suivantes.
 4. Pour chaque langue à installer qui ne correspond pas à la langue de la première version de SSMS installée, installez le module linguistique Visual Studio 2015 Shell (isolé) correspondant :
    - Accédez à [ https://connect.microsoft.com/VisualStudio/ExtendVS ](https://connect.microsoft.com/VisualStudio/ExtendVS) (vous devrez peut-être vous connecter et effectuer la procédure de *connexion d’inscription*).
    - Téléchargez le module linguistique Visual Studio 2015 Shell (isolé) souhaité, et installez-le.
