@@ -5,9 +5,7 @@ ms.date: 6/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE_EXTERNAL_TABLE
@@ -20,17 +18,16 @@ helpviewer_keywords:
 - External, table create
 - PolyBase, external table
 ms.assetid: 6a6fd8fe-73f5-4639-9908-2279031abdec
-caps.latest.revision: 30
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f30febe9ab31ac58bbdd993a3e5034e5abcb427c
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 0dc1fdb499855be399f0d2dc77b44eae452615b6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43077303"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47649372"
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -147,37 +144,8 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
   
  \<column_definition> [ ,...*n* ] CREATE EXTERNAL TABLE autorise une ou plusieurs définitions de colonne. CREATE EXTERNAL TABLE et CREATE TABLE utilisent la même syntaxe pour définir une colonne. Il existe toutefois une exception à cela : vous ne pouvez pas utiliser DEFAULT CONSTRAINT sur des tables externes. Pour plus d’informations sur les définitions de colonne et leurs types de données, consultez [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md) et [CREATE TABLE dans Azure SQL Database](http://msdn.microsoft.com/library/d53c529a-1d5f-417f-9a77-64ccc6eddca1).  
   
- Les définitions de colonne, y compris les types de données et le nombre de colonnes, doivent correspondre aux données des fichiers externes. En cas de non correspondance, les lignes du fichier sont rejetées lors de l’interrogation des données.  
+ Les définitions de colonne, notamment les types de données et le nombre de colonnes, doivent correspondre aux données des fichiers externes. En cas de non correspondance, les lignes du fichier sont rejetées lors de l’interrogation des données. Pour plus d’informations sur la façon de mapper des types de données de différentes sources de données externes, consultez [Mappage de types avec PolyBase](../../relational-databases/polybase/polybase-type-mapping.md).  
   
- Pour les tables externes qui référencent des fichiers provenant de sources de données externes, les définitions de colonne et de type doivent correspondre exactement au schéma du fichier externe. Lorsque vous définissez des types de données qui référencent des données stockées dans Hadoop/Hive, utilisez les mappages suivants entre les types de données SQL et Hive, et castez le type en un type de données SQL lorsque vous sélectionnez des données. Les types incluent toutes les versions de Hive, sauf indication contraire.
-
-> [!NOTE]  
->  SQL Server ne prend pas en charge la valeur de données _infinie_ Hive lors des conversions. Si vous l’utilisez, PolyBase échoue et émet une erreur de conversion de type de données.
-
-
-|Type de données SQL|Type de données .NET|Type de données Hive|Type de données Hadoop/Java|Commentaires|  
-|-------------------|--------------------|--------------------|----------------------------|--------------|  
-|TINYINT|Byte|TINYINT|ByteWritable|Pour les nombres non signés.|  
-|SMALLINT|Int16|SMALLINT|ShortWritable||  
-|INT|Int32|INT|IntWritable||  
-|BIGINT|Int64|BIGINT|LongWritable||  
-|bit|Booléen|boolean|BooleanWritable||  
-|FLOAT|Double|double|DoubleWritable||  
-|REAL|Unique|FLOAT|FloatWritable||  
-|money|Décimal|double|DoubleWritable||  
-|SMALLMONEY|Décimal|double|DoubleWritable||  
-|NCHAR|String<br /><br /> Char[]|chaîne|texte||  
-|NVARCHAR|String<br /><br /> Char[]|chaîne|Texte||  
-|char|String<br /><br /> Char[]|chaîne|Texte||  
-|varchar|String<br /><br /> Char[]|chaîne|Texte||  
-|binary|Byte[]|binary|BytesWritable|S’applique à Hive 0.8 et versions ultérieures|  
-|varbinary|Byte[]|binary|BytesWritable|S’applique à Hive 0.8 et versions ultérieures|  
-|Date|DateTime|TIMESTAMP|TimestampWritable||  
-|smalldatetime|DateTime|TIMESTAMP|TimestampWritable||  
-|datetime2|DateTime|TIMESTAMP|TimestampWritable||  
-|DATETIME|DateTime|TIMESTAMP|TimestampWritable||  
-|time|TimeSpan|TIMESTAMP|TimestampWritable||  
-|Décimal|Décimal|Décimal|BigDecimalWritable|S’applique à Hive 0.11 et versions ultérieures|  
   
  LOCATION =  '*folder_or_filepath*'  
  Spécifie le dossier, ou le chemin et le nom du fichier, où se trouvent les données Hadoop ou Azure Blob Storage. L’emplacement commence au dossier racine. Le dossier racine est l’emplacement de données qui est spécifié dans la source de données externe.  

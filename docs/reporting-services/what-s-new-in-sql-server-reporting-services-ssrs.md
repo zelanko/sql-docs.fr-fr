@@ -1,19 +1,18 @@
 ---
 title: Nouveautés de SQL Server Reporting Services (SSRS) | Microsoft Docs
-ms.date: 05/24/2018
+ms.date: 09/06/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: reporting-services
-ms.suite: pro-bi
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5e427312fcc73596c709d54252b27286d09372ce
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 59b0d8acbf6f0b99b3437dc866435595af00ab55
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43268087"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47639777"
 ---
 # <a name="whats-new-in-sql-server-reporting-services-ssrs"></a>Nouveautés de SQL Server Reporting Services (SSRS)
 
@@ -21,17 +20,22 @@ ms.locfileid: "43268087"
 
 Découvrez les nouveautés de SQL Server [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Cette rubrique, qui aborde les fonctionnalités majeures, est mise à jour à mesure de la sortie de nouveaux éléments.
 
-  Pour plus d’informations sur les nouveautés concernant d’autres aspects de SQL Server, consultez [Nouveautés de SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md) ou [Nouveautés de SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md).
-
- **Télécharger** ![download](../analysis-services/media/download.png "download")
-
-- Pour télécharger SQL Server 2017 Reporting Services, accédez au **[Centre de téléchargement Microsoft](https://www.microsoft.com/download/details.aspx?id=55252)**.
-
 Pour obtenir les dernières notes de publication, consultez [Notes de publication de SQL Server 2017](../sql-server/sql-server-2017-release-notes.md). 
 
 Pour plus d’informations sur Power BI Report Server, consultez [Qu’est-ce que Power BI Report Server ?](https://docs.microsoft.com/power-bi/report-server/get-started).
 
-## <a name="whats-new-in-sql-server-2017"></a>Nouveautés de SQL Server 2017
+**Télécharger** ![download](../analysis-services/media/download.png "download")
+
+Pour télécharger SQL Server 2017 Reporting Services, accédez au **[Centre de téléchargement Microsoft](https://www.microsoft.com/download/details.aspx?id=55252)**.
+
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+## <a name="sql-server-2019-ctp-20-reporting-services"></a>SQL Server 2019 CTP 2.0 Reporting Services
+
+SQL Server vNext CTP 2.0 Reporting Services n’est pas disponible en préversion. Installez la version actuelle, [SQL Server 2017 Reporting Services](install-windows/install-reporting-services.md). 
+::: moniker-end
+
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+## <a name="ssrs-2017"></a>SSRS 2017
 
 ### <a name="comments-on-reports"></a>Commentaires sur les rapports
 
@@ -49,9 +53,9 @@ Dans les dernières versions du Générateur de rapports et SQL Server Data Tool
 
 Pour permettre le développement d’applications modernes et la personnalisation, SQL Server Reporting Services prend désormais en charge une API RESTful entièrement conforme à OpenAPI. La spécification et la documentation complètes de l’API se trouvent désormais sur [swaggerhub](https://app.swaggerhub.com/apis/microsoft-rs/SSRS/2.0).
 
-## <a name="query-designer-support-for-dax-now-in-report-builder-and-sql-server-data-tools"></a>Prise en charge du Concepteur de requêtes pour DAX désormais disponible dans le Générateur de rapports et SQL Server Data Tools
+### <a name="query-designer-support-for-dax-now-in-report-builder-and-sql-server-data-tools"></a>Prise en charge du Concepteur de requêtes pour DAX désormais disponible dans le Générateur de rapports et SQL Server Data Tools
 
-Dans les dernières versions du Générateur de rapports et de SQL Server Data Tools (version Release Candidate), vous pouvez maintenant créer des requêtes DAX natives sur des modèles de données tabulaires SQL Server Analysis Services pris en charge. Vous pouvez utiliser le Concepteur de requêtes dans ces deux outils pour faire glisser et déplacer les champs souhaités et faire en sorte que la requête DAX soit générée au lieu de l’écrire vous-même.  
+Dans le Générateur de rapports et de SQL Server Data Tools, vous pouvez maintenant créer des requêtes DAX natives sur des modèles de données tabulaires SQL Server Analysis Services pris en charge. Vous pouvez utiliser le Concepteur de requêtes dans ces deux outils pour faire glisser et déplacer les champs souhaités et faire en sorte que la requête DAX soit générée au lieu de l’écrire vous-même.  
  
 Des informations supplémentaires sont disponibles dans le [blog de Reporting Services](https://blogs.msdn.microsoft.com/sqlrsteamblog/2017/03/09/query-designer-support-for-dax-now-available-in-report-builder-and-sql-server-data-tools/).
 
@@ -59,8 +63,9 @@ Des informations supplémentaires sont disponibles dans le [blog de Reporting Se
 * Téléchargez [SSDT (SQL Server Data Tools) - Version Release Candidate](https://docs.microsoft.com/sql/ssdt/sql-server-data-tools-ssdt-release-candidate).
 
 > **Remarque** : Vous pouvez utiliser le Concepteur de requêtes pour DAX uniquement avec des sources de données tabulaires SSAS générés dans SQL Server 2016+.
+::: moniker-end
  
-## <a name="whats-new-in-sql-server-2016"></a>Nouveautés de SQL Server 2016
+## <a name="ssrs-2016"></a>SSRS 2016
   
 ### <a name="reporting-services-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd"></a>[!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)]  
  Un nouveau [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] est disponible. Il s’agit d’un portail mis à jour et moderne qui inclut des indicateurs de performance clés, des rapports mobiles, des rapports paginés, ainsi que des fichiers Excel et Power BI Desktop. Le [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] remplace le Gestionnaire de rapports des versions antérieures. Vous pouvez également télécharger l’Éditeur de rapports mobiles et le Générateur de rapports à partir du [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] sans avoir besoin de la technologie ClickOnce.
@@ -186,7 +191,6 @@ http://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportf
 ## <a name="next-steps"></a>Étapes suivantes
 
 [Nouveautés d’Analysis Services](http://msdn.microsoft.com/aa69c299-b8f4-4969-86d8-b3292fe13f08)  
-[Notes de publication de SQL Server 2016](../sql-server/sql-server-2016-release-notes.md)   
 [Compatibilité descendante](reporting-services-backward-compatibility.md)   
 [Fonctionnalités Reporting Services prises en charge par les éditions de SQL Server 2016](http://msdn.microsoft.com/39f03d2d-6e48-4b34-a9d3-07f86313b937)   
 [Mettre à niveau et migrer Reporting Services](../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   

@@ -1,22 +1,22 @@
 ---
 title: Service d’émission de jetons Revendications vers Windows (C2WTS) et Reporting Services | Microsoft Docs
-ms.date: 09/15/2017
-ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint
-ms.suite: pro-bi
-ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a4092aa6f801d1f3f521cffc088e8b345495267b
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+manager: kfile
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint
+ms.topic: conceptual
+ms.date: 09/15/2017
+ms.openlocfilehash: d201fb9d134f4066e0504056c208d2c1c0507fa3
+ms.sourcegitcommit: 2da0c34f981c83d7f1d37435c80aea9d489724d1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43275606"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48782288"
 ---
 # <a name="claims-to-windows-token-service-c2wts-and-reporting-services"></a>Service d'émission de jetons Revendications vers Windows (C2WTS) et Reporting Services
 
-[!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)])
+[!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
 Le service d’émission de jetons Revendications vers Windows (C2WTS) de SharePoint est nécessaire si vous souhaitez afficher les rapports en mode natif dans le [composant WebPart Visionneuse de rapports SQL Server Reporting Services](../report-server-sharepoint/deploy-report-viewer-web-part.md).
 
@@ -25,11 +25,16 @@ Il est également nécessaire avec le mode SharePoint de SQL Server Reporting S
 > [!NOTE]
 > L’intégration de Reporting Services à SharePoint n’est plus disponible après SQL Server 2016.
 
-## <a name="report-viewer-web-part-configuration"></a>Configuration du composant WebPart Visionneuse de rapports
+## <a name="report-viewer-native-mode-web-part-configuration"></a>Configuration du composant WebPart Visionneuse de rapports (mode natif)
 
-Le composant WebPart Visionneuse de rapports peut être utilisé pour incorporer des rapports SQL Server Reporting Services en mode natif dans votre site SharePoint. Ce composant WebPart est disponible pour SharePoint 2013 et SharePoint 2016. SharePoint 2013 et SharePoint 2016 utilisent tous deux l’authentification basée sur les revendications. SQL Server Reporting Services (mode natif) utilise par défaut l’authentification Windows. Par conséquent, C2WTS doit être correctement configuré pour que les rapports s’affichent comme il se doit.
+Le composant WebPart Visionneuse de rapports peut être utilisé pour incorporer des rapports SQL Server Reporting Services en mode natif dans votre site SharePoint. Ce composant WebPart est disponible pour SharePoint 2013 et SharePoint 2016. SharePoint 2013 et SharePoint 2016 utilisent tous deux l’authentification basée sur les revendications. Par conséquent, C2WTS doit être configuré correctement et Reporting Services doit être configuré avec l’authentification Kerberos pour que les rapports s’affichent correctement.
 
-## <a name="sharepoint-mode-integaration"></a>Intégration du mode SharePoint
+1. Configurez votre instance Reporting Services (mode natif) pour l’authentification Kerberos en spécifiant le compte de service SSRS, en définissant un SPN et en mettant à jour le fichier rsreportserver.config pour utiliser le type d’authentification RSWindowsNegotiate. [Enregistrer un nom de principal du service (SPN) pour un serveur de rapports](https://docs.microsoft.com/en-us/sql/reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server)
+
+2. Suivez les étapes dans [Étapes nécessaires pour configurer C2WTS](https://docs.microsoft.com/en-us/sql/reporting-services/install-windows/claims-to-windows-token-service-c2wts-and-reporting-services?view=sql-server-2017#steps-needed-to-configure-c2wts)
+ 
+
+## <a name="sharepoint-mode-integration"></a>Intégration du mode SharePoint
 
 **Cette section s’applique uniquement à SQL Server 2016 Reporting Services et antérieur.**
 
@@ -37,14 +42,25 @@ Le service d’émission de jetons Revendications vers Windows (C2WTS) SharePoin
 
 ## <a name="steps-needed-to-configure-c2wts"></a>Étapes nécessaires pour configurer C2WTS
 
-Les jetons créés par C2WTS fonctionnent uniquement avec la délégation contrainte (contraint à des services spécifiques) et l'option de configuration « Utiliser tout protocole d'authentification ». Comme indiqué précédemment, si vos sources de données sont sur le même ordinateur que le service partagé, la délégation contrainte n'est pas nécessaire.
+Les jetons créés par C2WTS ne fonctionnent qu’avec la délégation contrainte (pour certains services uniquement) et l’option de configuration « avec n’importe quel protocole d’authentification » (transition de protocole).
 
 Si votre environnement utilise la délégation contrainte Kerberos, le service SharePoint server et les sources de données externes doivent résider dans le même domaine Windows. Tout service qui s’appuie sur le service d’émission de jetons Revendications vers Windows (C2WTS) doit utiliser la délégation **contrainte** Kerberos pour permettre à C2WTS d’utiliser une transition de protocole Kerberos dans la conversion de revendications en informations d’identification Windows. Ces exigences s'appliquent à tous les services partagés SharePoint. Pour plus d’informations, consultez [Planifier l’authentification Kerberos dans SharePoint 2013](http://technet.microsoft.com/library/ee806870.aspx).  
 
-1. Configurez le compte de service C2WTS. Ajoutez le compte de service au groupe Administrateurs local sur chaque serveur d’applications sur lequel C2WTS sera utilisé.
+1. Configurez le compte de domaine de service C2WTS. 
 
-    Pour le **Composant WebPart Visionneuse de rapports**, il s’agit des serveurs web frontaux. Pour le **mode intégré SharePoint**, il s’agit des serveurs d’applications sur lesquels le service Reporting Services s’exécute.
+    **Comme bonne pratique, C2WTS doit s’exécuter sous sa propre identité de domaine.**
 
+    * Créez un compte Active Directory et inscrivez-le comme compte géré dans SharePoint Server. Pour en savoir plus sur les comptes gérés, consultez [Managed Accounts in Sharepoint](https://blogs.technet.microsoft.com/wbaer/2010/04/11/managed-accounts-in-sharepoint-2010/).
+   
+    * Configurez le service C2WTS pour utiliser le compte géré via l’Administration centrale de SharePoint > Sécurité > Configurer les comptes de service > Service Windows - Service d’émission de jetons Revendications vers Windows
+
+    Ajoutez le compte de service C2WTS au groupe Administrateurs local sur chaque serveur d’applications sur lequel C2WTS sera utilisé. Pour le **Composant WebPart Visionneuse de rapports**, il s’agit des serveurs web frontaux. Pour le **mode intégré SharePoint**, il s’agit des serveurs d’applications sur lesquels le service Reporting Services s’exécute.
+    * Accordez au compte C2WTS les autorisations suivantes dans la stratégie de sécurité locale sous Stratégies locales > Attribution des droits utilisateur :
+        * Agir en tant que partie du système d'exploitation
+        * Emprunter l'identité d'un client après authentification
+        * Ouvrir une session en tant que service
+
+    
 2. Configurez la délégation pour le compte de service C2WTS.
 
     Le compte a besoin de la délégation contrainte avec transition de protocole; ainsi que d’autorisations de déléguer aux services avec lesquelles il doit communiquer (par exemple, moteur de base de données SQL Server, SQL Server Analysis Services). Pour configurer la délégation, vous pouvez utiliser le composant Utilisateurs et ordinateurs Active Directory et devez être administrateur du domaine.
@@ -65,9 +81,10 @@ Si votre environnement utilise la délégation contrainte Kerberos, le service S
 
     * Sélectionnez **Ajouter** pour ajouter un service auquel déléguer.
 
-    * Sélectionnez **Utilisateurs ou ordinateurs** * et entrez le compte qui héberge le service. Par exemple, si un serveur SQL Server s’exécute sous un compte nommé *sqlservice*, entrez `sqlservice`. 
+    * Sélectionnez **Utilisateurs ou ordinateurs...&#42;** et entrez le compte qui héberge le service. Par exemple, si un serveur SQL Server s’exécute sous un compte nommé *sqlservice*, entrez `sqlservice`. 
+      Pour le **composant WebPart Visionneuse de rapports**, il s’agit du compte de service pour l’instance Reporting Services (mode natif).
 
-    * Sélectionnez la liste des services. Les SPN disponibles sur ce compte s’affichent. Si vous ne voyez pas le service sur ce compte, il est peut-être manquant ou placé sur un autre compte. Vous pouvez utiliser l’utilitaire SetSPN pour ajuster les SPN.
+    * Sélectionnez la liste des services. Les SPN disponibles sur ce compte s’affichent. Si vous ne voyez pas le service sur ce compte, il est peut-être manquant ou placé sur un autre compte. Vous pouvez utiliser l’utilitaire SetSPN pour ajuster les SPN. Pour le **composant WebPart Visionneuse de rapports**, vous verrez le SPN HTTP configuré dans [Configuration du composant WebPart Visionneuse de rapports](https://docs.microsoft.com/en-us/sql/reporting-services/install-windows/claims-to-windows-token-service-c2wts-and-reporting-services?view=sql-server-2017#report-viewer-web-part-configuration).
 
     * Cliquez sur OK pour fermer les boîtes de dialogue.
 
@@ -96,6 +113,6 @@ Si votre environnement utilise la délégation contrainte Kerberos, le service S
     </configuration>
     ```
 
-4. Démarrez les revendications SharePoint vers Windows Token Service via l’Administration centrale de SharePoint sur la page **Gérer les services sur le serveur**. Le service doit être démarré sur le serveur qui effectuera l'action. Par exemple si vous avez un serveur web frontal et un serveur d’applications exécutant le service partagé SQL Server Reporting Services, il vous suffit de démarrer C2WTS sur le serveur d’applications. C2WTS est obligatoire sur un serveur web frontal uniquement si vous utilisez le composant WebPart Visionneuse de rapports.
+4. Démarrez (arrêtez et démarrez si déjà démarré) les revendications SharePoint vers Windows Token Service via l’Administration centrale de SharePoint dans la page **Gérer les services sur le serveur**. Le service doit être démarré sur le serveur qui effectuera l'action. Par exemple si vous avez un serveur web frontal et un serveur d’applications exécutant le service partagé SQL Server Reporting Services, il vous suffit de démarrer C2WTS sur le serveur d’applications. C2WTS est obligatoire sur un serveur web frontal uniquement si vous utilisez le composant WebPart Visionneuse de rapports.
 
 D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

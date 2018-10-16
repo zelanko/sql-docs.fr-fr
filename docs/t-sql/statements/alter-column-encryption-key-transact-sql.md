@@ -1,13 +1,11 @@
 ---
 title: ALTER COLUMN ENCRYPTION KEY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 10/28/2015
+ms.date: 09/24/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER COLUMN ENCRYPTION
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - column encryption key, alter
 - ALTER COLUMN ENCRYPTION KEY statement
 ms.assetid: c79a220d-e178-4091-a330-c924cc0f0ae0
-caps.latest.revision: 15
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: af850156a7600acde614849c897bbb69df0dfa1b
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 8f76bfc903eaf18978c2c77803cdd7054d384ace
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38016109"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47839527"
 ---
 # <a name="alter-column-encryption-key-transact-sql"></a>ALTER COLUMN ENCRYPTION KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -60,15 +57,21 @@ ALTER COLUMN ENCRYPTION KEY key_name
  Nom de l’algorithme de chiffrement utilisé pour chiffrer la valeur. L’algorithme des fournisseurs de système doit être **RSA_OAEP**. Cet argument n’est pas valide lors de la suppression d’une valeur de clé de chiffrement de colonne.  
   
  *varbinary_literal*  
- Objet blob de la clé CEK chiffré avec la clé de chiffrement principale spécifiée. . Cet argument n’est pas valide lors de la suppression d’une valeur de clé de chiffrement de colonne.  
+ Objet blob de la clé CEK chiffré avec la clé de chiffrement principale spécifiée. Cet argument n’est pas valide lors de la suppression d’une valeur de clé de chiffrement de colonne.  
   
 > [!WARNING]  
 >  Ne passez jamais des valeurs de clé CEK en texte clair dans cette instruction. Cela compromet l’avantage de cette fonctionnalité.  
   
 ## <a name="remarks"></a>Notes   
- En général, une clé de chiffrement de colonne est créée avec une seule valeur chiffrée. Quand une clé principale de colonne doit être permutée (c’est-à-dire quand la clé principale de colonne actuelle doit être remplacée par la nouvelle clé principale de colonne), vous pouvez ajouter une nouvelle valeur de la clé de chiffrement de colonne, chiffrée avec la nouvelle clé principale de colonne. Cela vous permet de garantir que les applications clientes peuvent accéder aux données chiffrées avec la clé de chiffrement de colonne, tandis que la nouvelle clé principale de colonne est mise à la disposition des applications clientes. Un pilote avec Always Encrypted dans une application cliente qui n’a pas accès à la nouvelle clé principale peut utiliser la valeur de la clé de chiffrement de colonne chiffrée avec l’ancienne clé principale de colonne pour accéder aux données sensibles. Les algorithmes de chiffrement pris en charge par Always Encrypted exigent que la valeur de texte en clair comporte 256 bits. Une valeur chiffrée doit être générée à l’aide d’un fournisseur de magasin de clés qui encapsule le magasin de clés contenant la clé principale de colonne.  
-  
- Pour afficher des informations sur les clés de chiffrement de colonne, utilisez [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md), [sys.column_encryption_keys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md) et [sys.column_encryption_key_values &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md).  
+ En général, une clé de chiffrement de colonne est créée avec une seule valeur chiffrée. Quand une clé principale de colonne doit être permutée (c’est-à-dire quand la clé principale de colonne actuelle doit être remplacée par la nouvelle clé principale de colonne), vous pouvez ajouter une nouvelle valeur de la clé de chiffrement de colonne, chiffrée avec la nouvelle clé principale de colonne. Ce workflow vous permet de garantir que les applications clientes peuvent accéder aux données chiffrées avec la clé de chiffrement de colonne, tandis que la nouvelle clé principale de colonne est mise à la disposition des applications clientes. Un pilote avec Always Encrypted dans une application cliente qui n’a pas accès à la nouvelle clé principale peut utiliser la valeur de la clé de chiffrement de colonne chiffrée avec l’ancienne clé principale de colonne pour accéder aux données sensibles. Les algorithmes de chiffrement pris en charge par Always Encrypted exigent que la valeur de texte en clair comporte 256 bits. Une valeur chiffrée doit être générée à l’aide d’un fournisseur de magasin de clés qui encapsule le magasin de clés contenant la clé principale de colonne.  
+
+ Les clés principales de colonne sont permutées pour les raisons suivantes :
+- Les réglementations de conformité peuvent exiger que les clés soient permutées régulièrement.
+- Une clé principale de colonne est compromise et doit être permutée pour des raisons de sécurité.
+- Pour activer ou désactiver le partage de clés de chiffrement de colonne avec une enclave sécurisée côté serveur. Par exemple, si votre clé principale de colonne actuelle ne prend pas en charge les calculs d’enclave (n’a pas été définie avec la propriété ENCLAVE_COMPUTATIONS) et que vous souhaitez activer les calculs d’enclave sur les colonnes protégées avec une clé de chiffrement de colonne que chiffre votre clé principale de colonne, vous devez remplacer la clé principale de colonne par la nouvelle clé avec la propriété ENCLAVE_COMPUTATIONS. Pour plus d’informations, consultez [Always Encrypted avec enclaves sécurisées](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
+
+
+Pour afficher des informations sur les clés de chiffrement de colonne, utilisez [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md), [sys.column_encryption_keys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md) et [sys.column_encryption_key_values &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md).  
   
 ## <a name="permissions"></a>Permissions  
  Exige l’autorisation **ALTER ANY COLUMN ENCRYPTION KEY** sur la base de données.  
