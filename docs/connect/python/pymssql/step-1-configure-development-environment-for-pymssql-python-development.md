@@ -11,12 +11,12 @@ ms.assetid: 6d392a5e-b08e-4b35-9e99-61260888fc41
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b60c7aa0f53be6d9c9a249c69ace6780a318e6f3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: d883a74e8e783ed289917b9970cc1c5956f4b0be
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47787447"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48905802"
 ---
 # <a name="step-1-configure-development-environment-for-pymssql-python-development"></a>Étape 1 : Configurer l’environnement de développement pour le développement Python pymssql
 Vous devez configurer votre environnement de développement avec la configuration requise pour développer une application en utilisant le pilote Python pour SQL Server.    
@@ -32,7 +32,7 @@ c. Exécuter une fois téléchargé le fichier msi pour installer le runtime Pyt
   
 2. **Télécharger le module de pymssql** de [ici](http://www.lfd.uci.edu/~gohlke/pythonlibs/#pymssql)  
   
-    Veillez à que choisir le fichier whl correct.  Par exemple : Si vous utilisez Python 2.7 sur un ordinateur 64 bits : pymssql‑2.1.1‑cp27‑none‑win_amd64.whl. Une fois que vous téléchargez le fichier .whl placez-le dans le dossier C:/Python27.  
+    Veillez à que choisir le fichier whl correct.  Par exemple : Si vous utilisez Python 2.7 sur un ordinateur 64 bits : pymssql‑2.1.1‑cp27‑none‑win_amd64.whl. Une fois que vous téléchargez le fichier .whl le placer dans le dossier C:/Python27.  
       
 3. **Ouvrez cmd.exe**  
   

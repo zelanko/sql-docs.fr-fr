@@ -13,12 +13,12 @@ ms.assetid: 9b608b0b-6b38-42da-bb83-79df8c170cd7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9a812aacbbbd87ba8fc38479be7d62a0fc9401b6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 75c6f352a962232b2109861b2a264d458af05e70
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731367"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119802"
 ---
 # <a name="step-4-connect-resiliently-to-sql-with-adonet"></a>Étape 4 : Connexion résiliente à SQL avec ADO.NET
 
@@ -39,7 +39,7 @@ Les classes ADO.NET pour se connecter à votre serveur Microsoft SQL Server loca
   
 Votre programme doit faire la distinction entre les erreurs temporaires et les erreurs persistantes. Erreurs temporaires sont des conditions d’erreur qui peuvent résoudre sur une courte période de temps, telles que des problèmes réseau temporaires.  Un exemple d’une erreur permanente lors serait, si votre programme a mal orthographié le nom de la base de données cible, dans ce cas, l’erreur « Aucune base de données trouvée » soit persistant et ne risque pas d’effacer les sur une courte période de temps.  
   
-La liste des numéros d’erreur qui sont classés comme des erreurs temporaires est disponible à l’adresse à [messages d’erreur pour les applications clientes SQL Database](http://docs.microsoft.com/azure/sql-database/sql-database-develop-error-messages/)  
+La liste des numéros d’erreur qui sont classés comme des erreurs temporaires est disponible à l’adresse [messages d’erreur pour les applications clientes SQL Database](http://docs.microsoft.com/azure/sql-database/sql-database-develop-error-messages/)  
   
 ## <a name="step-2-create-and-run-sample-application"></a>Étape 2 : Créer et exécuter l’exemple d’application  
   
