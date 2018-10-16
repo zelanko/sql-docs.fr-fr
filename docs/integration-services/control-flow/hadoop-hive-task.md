@@ -13,12 +13,12 @@ ms.assetid: 10ff37c0-9f3f-442a-889b-c351afbdc74c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ba25c8b70ad39c073c713a79381b058ece4599ec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 72962fd498057ccb53126f31c13f91acac96b5eb
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749771"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906195"
 ---
 # <a name="hadoop-hive-task"></a>Tâche Hive Hadoop
   Utilisez la tâche Hive Hadoop pour exécuter le script Hive sur un cluster Hadoop.  
@@ -32,7 +32,7 @@ ms.locfileid: "47749771"
   
 |Champ|Description|  
 |-----------|-----------------|  
-|**Connexion Hadoop**|Spécifiez un gestionnaire de connexions Hadoop existant ou créez-en un. Ce gestionnaire de connexions indique où se trouve le service WebHCat.|  
+|**Connexion Hadoop**|Spécifiez un gestionnaire de connexions Hadoop existant ou créez-en un. Ce gestionnaire de connexions indique où le service WebHCat est hébergé.|  
 |**SourceType**|Spécifiez le type de source de la requête. Les valeurs disponibles sont **ScriptFile** et **DirectInput**.|  
 |**InlineScript**|Lorsque la valeur de **SourceType** est **DirectInput**, spécifiez le script Hive.|  
 |**HadoopScriptFilePath**|Lorsque **SourceType** présente la valeur **ScriptFile**, spécifiez le chemin d’accès au fichier de script sur Hadoop.|  

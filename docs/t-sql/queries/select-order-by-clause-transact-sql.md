@@ -40,12 +40,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2cbe41975f57e0294d936e0b8554b5d936f1474b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b0c960d3c0477420868e0d1cfaee50ee51252ef9
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47839997"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906512"
 ---
 # <a name="select---order-by-clause-transact-sql"></a>SELECT - Clause ORDER BY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -208,7 +208,7 @@ ORDER BY order_by_expression
 #### <a name="a-specifying-a-single-column-defined-in-the-select-list"></a>A. Spécification d'une colonne unique définie dans la liste de sélection  
  L'exemple suivant classe le jeu de résultats selon la colonne `ProductID` numérique. Étant donné qu'aucun ordre de tri spécifique n'est spécifié, la valeur par défaut (ordre croissant) est utilisée.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT ProductID, Name FROM Production.Product  
@@ -219,7 +219,7 @@ ORDER BY ProductID;
 #### <a name="b-specifying-a-column-that-is-not-defined-in-the-select-list"></a>B. Spécification d'une colonne qui n'est pas définie dans la liste de sélection  
  L'exemple suivant classe le jeu de résultats selon une colonne qui n'est pas incluse dans la liste de sélection, mais est définie dans la table spécifiée dans la clause FROM.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT ProductID, Name, Color  
@@ -231,7 +231,7 @@ ORDER BY ListPrice;
 #### <a name="c-specifying-an-alias-as-the-sort-column"></a>C. Spécification d'un alias comme colonne de tri  
  L'exemple suivant spécifie l'alias de colonne `SchemaName` comme colonne d'ordre de tri.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT name, SCHEMA_NAME(schema_id) AS SchemaName  
@@ -244,7 +244,7 @@ ORDER BY SchemaName;
 #### <a name="d-specifying-an-expression-as-the-sort-column"></a>D. Spécification d'une expression comme colonne de tri  
  L'exemple suivant utilise une expression comme colonne de tri. L'expression est définie en utilisant la fonction DATEPART pour trier le jeu de résultats selon l'année au cours de laquelle les employés ont été embauchés.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT BusinessEntityID, JobTitle, HireDate  
@@ -258,7 +258,7 @@ ORDER BY DATEPART(year, HireDate);
 #### <a name="a-specifying-a-descending-order"></a>A. Spécification d'un ordre de tri décroissant  
  L'exemple suivant classe le jeu de résultats selon la colonne `ProductID` numérique par ordre décroissant.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT ProductID, Name FROM Production.Product  
@@ -270,7 +270,7 @@ ORDER BY ProductID DESC;
 #### <a name="b-specifying-an-ascending-order"></a>B. Spécification d’un ordre croissant  
  L'exemple suivant classe le jeu de résultats selon la colonne `Name` dans l'ordre croissant. Les caractères sont triés par ordre alphabétique, et non par ordre numérique. Autrement dit, 10 arrive avant 2.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT ProductID, Name FROM Production.Product  
@@ -282,7 +282,7 @@ ORDER BY Name ASC ;
 #### <a name="c-specifying-both-ascending-and-descending-order"></a>C. Spécification d'un ordre de tri croissant et décroissant  
  L'exemple suivant classe le jeu de résultats selon deux colonnes. Le jeu de résultats de la requête fait d'abord l'objet d'un tri par ordre croissant selon la colonne `FirstName`, suivi d'un second tri par ordre décroissant selon la colonne `LastName`.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT LastName, FirstName FROM Person.Person  
@@ -294,7 +294,7 @@ ORDER BY FirstName ASC, LastName DESC ;
 ###  <a name="Collation"></a> Spécification d’un classement  
  L'exemple suivant indique comment la spécification d'un classement dans la clause ORDER BY peut modifier l'ordre dans lequel les résultats de la requête sont retournés. Une table contenant une colonne définie à l'aide d'un classement non sensible à la casse et ne tenant pas compte des accents est créée. Les valeurs sont insérées selon différentes variantes d'accent et de casse. Étant donné qu'aucun classement n'est spécifié dans la clause ORDER BY, la première requête utilise le classement de la colonne lors du tri des valeurs. Dans la deuxième requête, un classement sensible à la casse et tenant compte des accents est spécifié dans la clause ORDER BY, ce qui modifie l'ordre dans lequel les lignes sont retournées.  
   
-```  
+```sql
 USE tempdb;  
 GO  
 CREATE TABLE #t1 (name nvarchar(15) COLLATE Latin1_General_CI_AI)  
@@ -315,7 +315,7 @@ ORDER BY name COLLATE Latin1_General_CS_AS;
 ###  <a name="Case"></a> Spécification d’un ordre conditionnel  
  Les exemples suivants utilisent l’expression CASE dans une clause ORDER BY pour déterminer de façon conditionnelle l’ordre de tri des lignes d’après la valeur d’une colonne donnée. Dans le premier exemple, la valeur de la colonne `SalariedFlag` de la table `HumanResources.Employee` est évaluée. Les employés pour lesquels `SalariedFlag` a la valeur 1 sont retournés par ordre décroissant d'`BusinessEntityID`. Les employés pour lesquels `SalariedFlag` a la valeur 0 sont retournés par ordre croissant d'`BusinessEntityID`. Dans le deuxième exemple, le jeu de résultats est classé par la colonne `TerritoryName` lorsque la colonne `CountryRegionName` est égale à « United States » et par `CountryRegionName` pour toutes les autres lignes.  
   
-```  
+```sql
 SELECT BusinessEntityID, SalariedFlag  
 FROM HumanResources.Employee  
 ORDER BY CASE SalariedFlag WHEN 1 THEN BusinessEntityID END DESC  
@@ -324,7 +324,7 @@ GO
   
 ```  
   
-```  
+```sql
 SELECT BusinessEntityID, LastName, TerritoryName, CountryRegionName  
 FROM Sales.vSalesPerson  
 WHERE TerritoryName IS NOT NULL  
@@ -336,7 +336,7 @@ ORDER BY CASE CountryRegionName WHEN 'United States' THEN TerritoryName
 ###  <a name="Rank"></a> Utilisation de la clause ORDER BY dans une fonction de classement  
  L'exemple suivant utilise la clause ORDER BY dans les fonctions de classement ROW_NUMBER, RANK, DENSE_RANK et NTILE.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT p.FirstName, p.LastName  
@@ -362,7 +362,7 @@ WHERE TerritoryID IS NOT NULL AND SalesYTD <> 0;
 #### <a name="a-specifying-integer-constants-for-offset-and-fetch-values"></a>A. Spécification de constantes entières pour les valeurs OFFSET et FETCH  
  L'exemple suivant spécifie une constante entière comme valeur pour les clauses OFFSET et FETCH. La première requête retourne toutes les lignes triées selon la colonne `DepartmentID`. Comparez les résultats retournés par cette requête avec les résultats des deux requêtes qui la suivent. La requête suivante utilise la clause `OFFSET 5 ROWS` pour ignorer les 5 premières lignes et retourner toutes les lignes restantes. La dernière requête utilise la clause `OFFSET 0 ROWS` pour démarrer avec la première ligne, puis utilise `FETCH NEXT 10 ROWS ONLY` pour limiter les lignes retournées à 10 depuis le jeu de résultats trié.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 -- Return all rows sorted by the column DepartmentID.  
@@ -387,7 +387,7 @@ ORDER BY DepartmentID
 #### <a name="b-specifying-variables-for-offset-and-fetch-values"></a>B. Spécification de variables pour les valeurs OFFSET et FETCH  
  L'exemple suivant déclare les variables `@StartingRowNumber` et `@FetchRows`, puis spécifie ces variables dans les clauses OFFSET et FETCH.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 -- Specifying variables for OFFSET and FETCH values    
@@ -404,7 +404,7 @@ ORDER BY DepartmentID ASC
 #### <a name="c-specifying-expressions-for-offset-and-fetch-values"></a>C. Spécification d'expressions pour les valeurs OFFSET et FETCH  
  L'exemple suivant utilise l'expression `@StartingRowNumber - 1` pour spécifier la valeur OFFSET et l'expression `@EndingRowNumber - @StartingRowNumber + 1` pour spécifier la valeur FETCH. De plus, l'indicateur de requête, OPTIMIZE FOR, est spécifié. Cet indicateur permet d'attribuer à une variable locale une valeur déterminée lors de la compilation et de l'optimisation de la requête. Cette valeur n'est utilisée que pendant l'optimisation de la requête, et non pas lors de son exécution. Pour plus d’informations, consultez [Indicateurs de requête &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
   
@@ -423,7 +423,7 @@ OPTION ( OPTIMIZE FOR (@StartingRowNumber = 1, @EndingRowNumber = 20) );
 #### <a name="d-specifying-a-constant-scalar-subquery-for-offset-and-fetch-values"></a>D. Spécification d'une sous-requête scalaire constante pour les valeurs OFFSET et FETCH  
  L'exemple suivant utilise une sous-requête scalaire constante pour définir la valeur de la clause FETCH. Le sous-requête retourne une valeur unique de la colonne `PageSize` dans la table `dbo.AppSettings`.  
   
-```  
+```sql
 -- Specifying a constant scalar subquery  
 USE AdventureWorks2012;  
 GO  
@@ -443,7 +443,7 @@ ORDER BY DepartmentID ASC
 #### <a name="e-running-multiple-queries-in-a-single-transaction"></a>E. Exécution de plusieurs requêtes dans une transaction unique  
  L'exemple suivant affiche une méthode d'implémentation d'une solution de pagination qui garantit le retour de résultats stables dans toutes les demandes émanant de la requête. La requête est exécutée dans une transaction unique à l'aide du niveau d'isolement d'instantané, et la colonne spécifiée dans la clause ORDER BY garantit l'unicité de colonne.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
   
@@ -487,7 +487,7 @@ GO
 ###  <a name="Union"></a> Utilisation de la clause ORDER BY avec UNION, EXCEPT et INTERSECT  
  Lorsqu'une requête utilise les opérateurs UNION, EXCEPT ou INTERSECT, la clause ORDER BY doit être spécifiée à la fin de l'instruction et les résultats des requêtes combinées sont triés. L'exemple suivant retourne tous les produits qui sont rouges ou jaunes et effectue le tri de cette liste combinée selon la colonne `ListPrice`.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT Name, Color, ListPrice  
@@ -505,7 +505,7 @@ ORDER BY ListPrice ASC;
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  L’exemple suivant illustre le tri d’un jeu de résultats par ordre croissant selon la colonne `EmployeeKey` numérique.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT EmployeeKey, FirstName, LastName FROM DimEmployee  
@@ -515,7 +515,7 @@ ORDER BY EmployeeKey;
   
  L’exemple suivant trie un jeu de résultats par ordre décroissant selon la colonne `EmployeeKey` numérique.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT EmployeeKey, FirstName, LastName FROM DimEmployee  
@@ -525,7 +525,7 @@ ORDER BY EmployeeKey DESC;
   
  L’exemple suivant trie un jeu de résultats sur la colonne `LastName`.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT EmployeeKey, FirstName, LastName FROM DimEmployee  
@@ -535,7 +535,7 @@ ORDER BY LastName;
   
  L’exemple suivant trie un jeu de résultats sur deux colonnes. Cette requête effectue un premier tri par ordre croissant selon la colonne `FirstName`, puis elle trie les valeurs `FirstName` communes par ordre décroissant selon la colonne `LastName`.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT EmployeeKey, FirstName, LastName FROM DimEmployee  

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 5599300d-6bcd-4704-aba5-fa98e01c78a9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 921322126bc11642bd2140784efb6ea4ae6a8550
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 59d4ffbb3c2088ae4b517ab99e0b2705ffccd047
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703767"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085445"
 ---
 # <a name="finding-viewing-and-managing-reports-report-builder-and-ssrs-"></a>Recherche, affichage et gestion des rapports (Générateur de rapports et SSRS)
   Le Générateur de rapports vous permet de parcourir les dossiers d'un serveur de rapports ou site SharePoint pour y rechercher des rapports, des sources de données partagées, des modèles et d'autres éléments de rapport connexes, ainsi que de parcourir votre ordinateur pour trouver des rapports en local. Pour faciliter la recherche de rapports, le Générateur de rapports gère une liste de serveurs et sites récemment utilisés, et fournit l'accès direct aux dossiers Bureau, Mes documents et Poste de travail dans le système de fichiers de votre ordinateur.  
@@ -67,7 +67,7 @@ ms.locfileid: "47703767"
   
  Certaines de ces tâches peuvent être effectuées pour vous par l'administrateur du serveur de rapports. Pour en savoir plus sur les tâches effectuées sur un serveur de rapports, consultez [Serveur de rapports Reporting Services &#40;mode natif&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md).  
   
- Le Gestionnaire de rapports contient en général des dossiers, des rapports, des sources de données et des modèles de rapport, ainsi que le dossier Mes rapports. Le dossier Mes rapports est un espace de travail personnel où vous pouvez stocker et utiliser les rapports dont vous êtes propriétaire. Les autres dossiers du serveur de rapports sont publics et nécessitent généralement que les utilisateurs disposent d'autorisations avancées pour ajouter ou modifier du contenu. Vous pouvez créer des dossiers dans Mes rapports pour organiser davantage vos rapports. Pour plus d’informations, consultez [Utilisation du dossier Mes rapports &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/using-my-reports-report-builder-and-ssrs.md).  
+ Le Gestionnaire de rapports contient en général des dossiers, des rapports, des sources de données et des modèles de rapport, ainsi que le dossier Mes rapports. Le dossier Mes rapports est un espace de travail personnel où vous pouvez stocker et utiliser les rapports dont vous êtes propriétaire. Les autres dossiers du serveur de rapports sont publics et nécessitent généralement que les utilisateurs disposent d'autorisations avancées pour ajouter ou modifier du contenu. Vous pouvez créer des dossiers dans Mes rapports pour organiser davantage vos rapports.  
   
  Le Gestionnaire de rapports affiche les rapports dans la visionneuse HTML Reporting Services. La visionneuse HTML fournit une infrastructure pour l'affichage des rapports au format HTML et inclut une barre d'outils Rapports, une section de paramétrage, une section sur les informations d'identification et un explorateur de documents. La barre d'outils Rapports fournit les fonctions de navigation entre les pages, de zoom, d'actualisation, de recherche, d'exportation, d'impression et de flux de données. La barre d'outils Rapport apparaît également dans les fenêtres des navigateurs, en haut des rapports, lorsque vous accédez aux rapports au moyen d'une URL. La fonction d'impression est facultative et doit être activée par votre administrateur. Lorsqu'elle est disponible, l'icône Imprimante s'affiche dans la barre d'outils. Les illustrations suivantes montrent la barre d'outils Rapport dans une fenêtre du Gestionnaire de rapports et un agrandissement des fonctionnalités de la barre d'outils Rapport.  
   
@@ -141,12 +141,6 @@ Barre d'outils Rapports
   
  [Recherche et affichage de rapports à l’aide d’un navigateur &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs.md)  
  Explique comment utiliser une URL pour rechercher et afficher un rapport.  
-  
- [Recherche de rapports et d’autres éléments &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/searching-for-reports-and-other-items-report-builder-and-ssrs.md)  
- Explique comment utiliser la fonctionnalité de recherche dans le Gestionnaire de rapports pour rechercher des éléments sur le serveur de rapports.  
-  
- [Utilisation du dossier Mes rapports &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/using-my-reports-report-builder-and-ssrs.md)  
- Explique comment utiliser le dossier Mes rapports comme espace de travail personnel pour stocker et utiliser les rapports dont vous êtes propriétaire.  
   
  [Aperçu des rapports dans le Générateur de rapports](../../reporting-services/report-builder/previewing-reports-in-report-builder.md)  
  Décrit comment afficher un aperçu des rapports lorsque vous les créez ou les mettez à jour.  

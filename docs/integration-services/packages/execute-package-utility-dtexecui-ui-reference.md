@@ -24,12 +24,12 @@ ms.assetid: 3d71df39-126b-4c8e-bd77-128bbd5b0887
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9ae6db2bfa011defe472054b98243062b5bc93d2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ae61a794d9eea4a9fbd0aae72ec0bcdd1d636988
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669427"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169109"
 ---
 # <a name="execute-package-utility-dtexecui"></a>Utilitaire d’exécution de package (dtexecui)
   Utilisez l' **Utilitaire d'exécution de package** pour exécuter des packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . L’utilitaire exécute les packages stockés à l’un des trois emplacements suivants : la base de données [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , le magasin de packages [!INCLUDE[ssIS](../../includes/ssis-md.md)] et le système de fichiers. Cette interface utilisateur, qui peut être ouverte à partir de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou en tapant **dtexecui** à partir d’une invite de commandes, offre un autre moyen d’exécuter des packages à l’aide de l’outil d’invite de commandes **DTExec** .  
@@ -283,7 +283,7 @@ ms.locfileid: "47669427"
  Ferme la boîte de dialogue **Utilitaire d’exécution de package** .  
   
 ## <a name="logging-page"></a>Page Enregistrement  
- La page **Enregistrement** de la boîte de dialogue **Utilitaire d'exécution de package** permet de créer des modules fournisseur d'informations mis à disposition du package au moment de l'exécution du programme. Vous devez fournir le type du module fournisseur d'informations du package ainsi que la chaîne de connexion afin de pouvoir vous connecter au journal. Chaque entrée de module fournisseur d’informations ajoute une option **/LOGGER***classid* à l’invite de commandes.  
+ La page **Enregistrement** de la boîte de dialogue **Utilitaire d'exécution de package** permet de créer des modules fournisseur d'informations mis à disposition du package au moment de l'exécution du programme. Vous devez fournir le type du module fournisseur d'informations du package ainsi que la chaîne de connexion afin de pouvoir vous connecter au journal. Chaque entrée de module fournisseur d’informations ajoute une option **/LOGGER**_ID_classe_ à l’invite de commandes.  
   
 ### <a name="options"></a>Options  
  **Module fournisseur d’informations**  
@@ -302,7 +302,7 @@ ms.locfileid: "47669427"
  Ferme la boîte de dialogue **Utilitaire d’exécution de package** .  
   
 ## <a name="set-values-page"></a>Page Valeurs définies  
- Utilisez la page **Valeurs définies** de la boîte de dialogue **Utilitaire d'exécution de package** pour définir les valeurs des propriétés des packages, des fichiers exécutables, des connexions, des variables et des modules fournisseur d'informations. Pour cela, tapez les chemins d'accès aux propriétés et leurs valeurs. Chaque entrée de chemin ajoute une option **/SET***propertypath;value* à l’invite de commandes.  
+ Utilisez la page **Valeurs définies** de la boîte de dialogue **Utilitaire d'exécution de package** pour définir les valeurs des propriétés des packages, des fichiers exécutables, des connexions, des variables et des modules fournisseur d'informations. Pour cela, tapez les chemins d'accès aux propriétés et leurs valeurs. Chaque entrée de chemin d’accès ajoute une option **/SET**_chemin_propriété;valeur_ à l’invite de commandes.  
   
 ### <a name="options"></a>Options  
  **Chemin de la propriété**  
