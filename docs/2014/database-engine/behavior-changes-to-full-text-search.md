@@ -14,12 +14,12 @@ ms.assetid: 573444e8-51bc-4f3d-9813-0037d2e13b8f
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: ff65938770d14d5f1084b33421f89bf8744031ae
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b269c4c3decfa2a4d7523666841e7cb04b441b3f
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198689"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461014"
 ---
 # <a name="behavior-changes-to-full-text-search"></a>Changements de comportement pour la recherche en texte intégral
   Cette rubrique décrit les changements de comportement de la recherche en texte intégral. Les modifications de comportement affectent le mode de fonctionnement ou d'interaction des fonctionnalités dans [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] par rapport aux versions précédentes de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -28,12 +28,12 @@ ms.locfileid: "48198689"
  Informations qui seront fournies par la suite.  
   
 ## <a name="behavior-changes-in-full-text-search-in-includesssql11includessssql11-mdmd"></a>Modifications du comportement de la recherche en texte intégral dans [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
- [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] installe une nouvelle version des analyseurs lexicaux et des générateurs de formes dérivés pour l'anglais américain (LCID 1033) et l'anglais du Royaume-Uni (LCID 2057). Toutefois, vous pouvez revenir à la version précédente de ces composants si vous souhaitez conserver le comportement précédent. Pour plus d’informations, consultez [modifier l’analyseur lexical utilisé pour l’anglais (États-Unis) et anglais du Royaume-Uni](../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md).  
+ [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] installe une nouvelle version des analyseurs lexicaux et des générateurs de formes dérivés pour l'anglais américain (LCID 1033) et l'anglais du Royaume-Uni (LCID 2057). Toutefois, vous pouvez revenir à la version précédente de ces composants si vous souhaitez conserver le comportement précédent. Pour plus d’informations, consultez [Modifier l’analyseur lexical utilisé pour l’anglais des États-Unis et l’anglais du Royaume-Uni](../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md).  
   
 ### <a name="new-word-breakers-and-stemmers-installed"></a>Nouveaux analyseurs lexicaux et générateurs de formes dérivées installés  
  [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] met à jour les analyseurs lexicaux et générateurs de formes dérivées utilisés par la recherche en texte intégral et la recherche sémantique. Pour des raisons de cohérence entre le contenu des index et les résultats des requêtes, nous vous recommandons de réalimenter les index de recherche en texte intégral existants.  
   
-1.  Il existe de nouveaux analyseurs lexicaux pour l'anglais. Si vous devez conserver le comportement précédent, consultez [modifier l’analyseur lexical utilisé pour l’anglais (États-Unis) et anglais du Royaume-Uni](../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md).  
+1.  Il existe de nouveaux analyseurs lexicaux pour l'anglais. Si vous devez conserver le comportement antérieur, consultez [Modifier l’analyseur lexical utilisé pour l’anglais des États-Unis et l’anglais du Royaume-Uni](../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md).  
   
 2.  Les analyseurs lexicaux tiers pour le danois, le polonais et le turc qui étaient inclus avec les versions antérieures de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ont été remplacés par les composants [!INCLUDE[msCoName](../includes/msconame-md.md)] . Les nouveaux composants sont activés par défaut.  
   
@@ -103,7 +103,7 @@ ms.locfileid: "48198689"
      Le moteur de texte intégral indexe le contenu des objets blob FILESTREAM. L'indexation de fichiers tels que des images peut ne pas être utile. Lorsqu'un objet blob FILESTREAM est mis à jour, il est réindexé.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Recherche en texte intégral] ((.. / relational-databases/search/full-text-search.md)   
+ [Recherche en texte intégral](../relational-databases/search/full-text-search.md)   
  [Compatibilité descendante de recherche en texte intégral](../../2014/database-engine/full-text-search-backward-compatibility.md)   
  [Mise à niveau de la recherche en texte intégral](../relational-databases/search/upgrade-full-text-search.md)   
  [Commencer à utiliser la recherche en texte intégral](../relational-databases/search/get-started-with-full-text-search.md)  

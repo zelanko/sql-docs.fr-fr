@@ -4,7 +4,7 @@ description: Cet article décrit la réplication SQL Server sur Linux.
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.date: 03/20/2018
+ms.date: 10/17/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -13,12 +13,12 @@ ms.technology: database-engine
 ms.assetid: ''
 ms.workload: On Demand
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a6c4bad8947944d59208a0516e5950d36f64a84e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2bef97eb018e35179f0f9288f18bf170b04ae630
+ms.sourcegitcommit: 97463ffe99915f3bbdf298e6e6b8d170e738ea7a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47734127"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49390841"
 ---
 # <a name="sql-server-replication-on-linux"></a>Réplication SQL Server sur Linux
 
@@ -34,7 +34,7 @@ Une instance de SQL Server peut participer à n’importe quel rôle de réplica
 * Serveur de distribution
 * Abonné
 
-Un schéma de réplication pouvez combiner des plateformes de système d’exploitation. Par exemple, un schéma de réplication peut utiliser des instances de SQL Server sur Linux pour le serveur de publication et serveur de distribution et les abonnés peuvent inclure des instances de SQL Server sur Windows.
+Un schéma de réplication pouvez combiner des plateformes de système d’exploitation. Par exemple, un schéma de réplication peut inclure une instance de SQL Server sur Linux pour le serveur de publication et serveur de distribution et les abonnés incluant des instances de SQL Server sur Windows, ainsi que Linux.
 
 Les instances de SQL Server sur Linux peuvent participer à n’importe quel type de réplication.
 
@@ -62,6 +62,7 @@ Pour [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] les fonctionnalité
 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] ne prend pas en charge les fonctionnalités suivantes :
 
 * Abonnés de mise à jour immédiate
+* Publication Oracle
 
 ## <a name="next-steps"></a>Étapes suivantes
 

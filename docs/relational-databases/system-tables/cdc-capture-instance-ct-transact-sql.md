@@ -18,12 +18,12 @@ ms.assetid: 979c8110-3c54-4e76-953c-777194bc9751
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7b13f890063246c1557d11a504ccf229bb162057
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 346fea411891f04e4b4742ff50c2dd9cce6f1587
+ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47621027"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49336248"
 ---
 # <a name="cdcltcaptureinstancegtct-transact-sql"></a>capture de données modifiées. &lt;capture_instance&gt;_CT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ Le `__$command_id` colonne a été de colonne a été introduite dans une mise �
 3.  Modifiez la table source en spécifiant le nouveau type de données. La modification du type de données est propagée avec succès à la table de modifications.  
   
 ## <a name="data-manipulation-language-modifications"></a>Modifications du langage de manipulation de données  
- Lorsque des opérations d'insertion, de mise à jour et de suppression sont effectuées sur une table source où la capture de données modifiées est activée, un enregistrement de ces opérations DML apparaît dans le journal des transactions de la base de données. Le processus de capture de la capture de données modifiées récupère les informations sur ces modifications dans le journal des transactions et ajoute une ou deux lignes à la table de modifications pour enregistrer la modification. Les entrées sont ajoutées à la table de modifications selon l'ordre dans lequel elles ont été validées dans la table source, même si la validation d'entrées de table de modifications doit en général être effectuée sur un groupe de modifications plutôt que sur une entrée unique.  
+ Lorsque des opérations d'insertion, de mise à jour et de suppression sont effectuées sur une table source où la capture de données modifiées est activée, un enregistrement de ces opérations DML apparaît dans le journal des transactions de la base de données. Le processus de capture de données modifiées récupère des informations sur ces modifications dans le journal des transactions et ajoute une ou deux lignes dans la table de modifications pour enregistrer la modification. Les entrées sont ajoutées à la table de modifications selon l'ordre dans lequel elles ont été validées dans la table source, même si la validation d'entrées de table de modifications doit en général être effectuée sur un groupe de modifications plutôt que sur une entrée unique.  
   
  Dans l’entrée de table de modifications, la **__ $start_lsn** colonne est utilisée pour enregistrer la numéro LSN qui est associé à la modification apportée à la table source, de validation et la **colonne __ $seqval** est utilisé pour classer la modification dans sa transaction. Ensemble, ces colonnes de métadonnées peuvent être utilisées pour faire en sorte que l'ordre de validation des modifications de source soit conservé. Dans la mesure où le processus de capture obtient ses informations de modification du journal des transactions, il est important de noter que les entrées de table de modifications n'apparaissent pas de façon synchrone avec leurs modifications correspondantes de la table source. Les modifications apparaissent en effet de façon asynchrone, une fois que le processus de capture a traité les entrées de modification pertinentes du journal des transactions.  
   

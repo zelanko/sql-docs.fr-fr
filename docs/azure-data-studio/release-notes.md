@@ -4,22 +4,36 @@ description: Notes de publication Azure Data Studio
 ms.custom: tools|sos
 ms.date: 09/24/2018
 ms.prod: sql
+ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
-ms.prod_service: sql-tools
 ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 94a271991314225a80850ee2156a37b6134e10a7
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: dfa3636ddba734d9c6ee6c9d9da4560a3cd61304
+ms.sourcegitcommit: ef115025e57ec342c14ed3151ce006f484d1fadc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072303"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49411196"
 ---
 # <a name="azure-data-studio-release-notes"></a>Notes de publication Azure Data Studio
 
-**[Télécharger la septembre *générale* version (GA) !](download.md)**
+**[Téléchargez la version d’octobre !](download.md)**
+
+## <a name="october-2018-october-release"></a>Octobre 2018 (version d’octobre)
+
+date de publication : 18 octobre 2018  
+version : 1.1.3
+
+- Présentation de l’Explorateur de ressources Azure pour parcourir les bases de données SQL Azure
+- Améliorer la robustesse de connectivité de l’Explorateur d’objets et de l’éditeur de requête
+- Améliorations des extensions de l’Agent SQL
+- Mettre à jour vers la [extension de la version préliminaire de SQL Server 2019](https://docs.microsoft.com/sql/azure-data-studio/sql-server-2019-extension?view=sql-server-ver15)
+
+### <a name="bug-fixes"></a>Correctifs de bogues
+
+Pour plus d’informations, consultez le [journal des modifications](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md), et [versions](https://github.com/Microsoft/azuredatastudio/releases).
 
 ## <a name="september-2018-september-ga-release"></a>Septembre 2018 (version de septembre GA)
 

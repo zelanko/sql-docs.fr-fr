@@ -16,12 +16,12 @@ ms.assetid: 9e512c3c-f89b-45f3-8281-cdb8f35a2b1f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b88d3ec75e73329f8de1e97f7b9936203e745946
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fe0d9ebeea4693eeacebe9d0747bf71f26f85ad5
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48062175"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460194"
 ---
 # <a name="extend-a-dataset-by-using-the-merge-join-transformation"></a>Étendre un dataset à l'aide de la transformation de jointure de fusion
   Pour pouvoir ajouter et configurer une transformation de jointure de fusion, le package doit inclure au moins une tâche de flux de données et deux composants de flux de données qui fournissent des entrées à la transformation de jointure de fusion.  
@@ -62,9 +62,9 @@ ms.locfileid: "48062175"
 11. Pour enregistrer le package mis à jour, cliquez sur **Enregistrer les éléments sélectionnés** dans le menu **Fichier** .  
   
 ## <a name="see-also"></a>Voir aussi  
- [Transformation de jointure de fusion](merge-join-transformation.md)   
+ [Merge Join Transformation](merge-join-transformation.md)   
  [Transformations Integration Services](integration-services-transformations.md)   
- [Chemins Integration Services](../integration-services-paths.md)   
- [Tâche de flux de données] ((.. /.. /Control-Flow/Data-Flow-Task.MD)  
+ [Chemins d'accès d'Integration Services](../integration-services-paths.md)   
+ [tâche de flux de données](../../control-flow/data-flow-task.md)  
   
   

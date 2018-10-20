@@ -1,7 +1,7 @@
 ---
 title: Bike Buyer DMX Tutorial | Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
+ms.date: 10/19/2018
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology:
@@ -17,12 +17,12 @@ ms.assetid: 4b634cc1-86dc-42ec-9804-a19292fe8448
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2d5b77952cd3476adddcdf0a528c2e12ab30cc2b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 25ca6a8a5769da023da506c25c858a012b7f7a7c
+ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074959"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49462015"
 ---
 # <a name="bike-buyer-dmx-tutorial"></a>Didacticiel DMX Bike Buyer
   Dans ce didacticiel, vous allez apprendre à créer, assimiler et explorer des modèles d'exploration de données à l'aide du langage de requête DMX (Data Mining Extensions). Vous utiliserez ensuite ces modèles pour créer des tâches de prédiction déterminant si un client envisage ou non d'acheter un vélo.  
@@ -36,7 +36,7 @@ ms.locfileid: "48074959"
   
 -   Recueillir en guise de données une liste de clients potentiels et les caractéristiques de ces clients, puis déterminer les clients susceptibles d'acheter des vélos.  
   
- Dans le premier cas, les données des clients proviennent d'une page d'enregistrement des clients ; dans le deuxième cas, une liste de clients potentiels est obtenue auprès du service marketing de [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)].  
+ Dans le premier cas, les données des clients proviennent d'une page d'enregistrement des clients ; dans le deuxième cas, une liste de clients potentiels est obtenue auprès du service marketing de [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] .  
   
  Qui plus est, le service marketing demande s'il est possible de regrouper des clients existants par catégories selon diverses caractéristiques, notamment le lieu de résidence, le nombre d'enfants à charge et la distance parcourue pour se rendre au travail et en revenir. Les responsables de ce service souhaitent savoir s'il est possible d'utiliser ces clusters pour cibler des catégories précises de clients. Cette recherche exige un autre modèle d'exploration de données.  
   
@@ -44,16 +44,16 @@ ms.locfileid: "48074959"
   
 -   Langage de requête DMX  
   
--   Le [Microsoft Decision Trees algorithme](../../2014/analysis-services/data-mining/microsoft-decision-trees-algorithm.md) et le [algorithme de gestion de clusters Microsoft](../../2014/analysis-services/data-mining/microsoft-clustering-algorithm.md)  
+-   Algorithmes [Microsoft Decision Trees](../../2014/analysis-services/data-mining/microsoft-decision-trees-algorithm.md) et [Microsoft Clustering](../../2014/analysis-services/data-mining/microsoft-clustering-algorithm.md)  
   
 -   Éditeur de requête dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]  
   
- Le langage de requête DMX (Data Mining Extensions) fourni par [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] permet de créer et d'utiliser des modèles d'exploration de données. L'algorithme MDT ([!INCLUDE[msCoName](../includes/msconame-md.md)] Decision Trees) permet de créer des modèles que vous pouvez utiliser pour prévoir les intentions d'achat de vélo d'une personne. Le modèle obtenu permet d'exploiter un seul client ou un ensemble de clients en guise de données. L'algorithme [!INCLUDE[msCoName](../includes/msconame-md.md)] Clustering permet de créer des groupes de clients sur la base de caractéristiques communes. L'objectif de ce didacticiel est de fournir des scripts DMX à utiliser dans l'application personnalisée.  
+ Le langage de requête DMX (Data Mining Extensions) fourni par [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] permet de créer et d'utiliser des modèles d'exploration de données. L'algorithme MDT ([!INCLUDE[msCoName](../includes/msconame-md.md)] Decision Trees) permet de créer des modèles que vous pouvez utiliser pour prévoir les intentions d'achat de vélo d'une personne. Le modèle obtenu permet d'exploiter un seul client ou un ensemble de clients en guise de données. L'algorithme [!INCLUDE[msCoName](../includes/msconame-md.md)] Clustering permet de créer des groupes de clients sur la base de caractéristiques communes. L'objectif de ce didacticiel est de fournir des scripts DMX à utiliser dans l'application personnalisée.  
   
  **Pour plus d’informations :** [Solutions d’exploration de données](../../2014/analysis-services/data-mining/data-mining-solutions.md)  
   
 ## <a name="mining-structure-and-mining-models"></a>Structure et modèles d'exploration de données  
- Avant de créer des instructions DMX, il est primordial de comprendre les objets principaux auxquels [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fait appel pour créer des modèles d'exploration de données. La structure d'exploration de données est une structure de données qui définit le domaine de données à partir duquel les modèles d'exploration de données sont créés. Une structure d'exploration de données unique peut contenir plusieurs de ces modèles partageant le même domaine. Un modèle d'exploration applique un algorithme de modèle d'exploration aux données qui sont représentées par une structure d'exploration de données.  
+ Avant de créer des instructions DMX, il est primordial de comprendre les objets principaux auxquels [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fait appel pour créer des modèles d'exploration de données. La structure d'exploration de données est une structure de données qui définit le domaine de données à partir duquel les modèles d'exploration de données sont créés. Une structure d'exploration de données unique peut contenir plusieurs de ces modèles partageant le même domaine. Un modèle d'exploration applique un algorithme de modèle d'exploration aux données qui sont représentées par une structure d'exploration de données.  
   
  Les composants constituant la structure d'exploration de données sont les colonnes de structure d'exploration de données qui décrivent les données inscrites dans la source de données. Ces colonnes contiennent des informations, telles que le type de données, le type de contenu et le mode de distribution des données.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "48074959"
  ALTER MINING STRUCTURE  
  Utilisez cette instruction pour ajouter un modèle d'exploration de données à une structure d'exploration de données existant déjà sur le serveur. Cette instruction est utile si vous souhaitez créer une structure d'exploration de données abritant plusieurs modèles d'exploration de données différents. Plusieurs raisons peuvent vous inciter à ajouter plusieurs modèles d'exploration de données dans une structure d'exploration de données unique. Par exemple, vous pouvez créer plusieurs modèles d'exploration de données utilisant différents algorithmes pour savoir lequel fonctionne le mieux. Vous pouvez créer plusieurs modèles d'exploration de données utilisant le même algorithme, mais avec un paramètre défini différemment pour chaque modèle, afin de trouver la meilleure définition pour ce paramètre.  
   
- Pour plus d’informations, consultez [ALTER MINING STRUCTURE &#40;DMX&#41;] ((~/dmx/alter-mining-structure-dmx.md).  
+ Pour plus d’informations, consultez [ALTER MINING STRUCTURE &#40;DMX&#41;](/sql/dmx/alter-mining-structure-dmx?view=sql-server-2016).  
   
  Puisque vous allez créer une structure d'exploration de données dotée de plusieurs modèles d'exploration de données, vous devrez adopter la deuxième méthode de ce didacticiel.  
   
@@ -102,7 +102,7 @@ ms.locfileid: "48074959"
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASversion2005](../includes/ssasversion2005-md.md)], [!INCLUDE[ssASversion10](../includes/ssasversion10-md.md)], [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)], ou [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]  
   
--   La base de données [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]. Pour des raisons de sécurité, les bases de données exemples ne sont pas installées par défaut. Pour installer les bases de données exemples officiels pour [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], visitez le [Microsoft SQL Sample Databases](http://go.microsoft.com/fwlink/?LinkId=88417) page et sélectionnez les bases de données que vous souhaitez installer...  
+-   La base de données [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] . Pour des raisons de sécurité, les bases de données exemples ne sont pas installées par défaut. Pour installer des exemples de bases de données officielles pour [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], visitez la page d' [exemples de bases de données Microsoft SQL](http://go.microsoft.com/fwlink/?LinkId=88417) (en anglais) et sélectionnez les bases de données que vous voulez installer.  
   
 > [!NOTE]  
 >  Lorsque vous parcourez les didacticiels, il est recommandé d'ajouter les boutons **Rubrique suivante** et **Rubrique précédente** dans la barre d'outils de l'afficheur de document.  

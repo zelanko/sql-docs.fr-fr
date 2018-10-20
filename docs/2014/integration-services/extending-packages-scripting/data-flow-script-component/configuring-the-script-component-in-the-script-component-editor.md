@@ -19,12 +19,12 @@ ms.assetid: 586dd799-f383-4d6d-b1a1-f09233d14f0a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 433354cb123e8240bac47dcbb2e7dce82c4a0d64
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f2b36eef7c358fde58316bafc06697c992f3918b
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116689"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461026"
 ---
 # <a name="configuring-the-script-component-in-the-script-component-editor"></a>Configuration du composant Script dans l'éditeur de composant de script
   Avant d’écrire du code personnalisé dans le composant Script, vous devez sélectionner le type de composant de flux de données que vous souhaitez créer (source, transformation ou destination), puis configurer les métadonnées et propriétés du composant dans l’**Éditeur de transformation de script**.  
@@ -105,7 +105,7 @@ Dim currentCustomerName as String = CustomerInput.CustomerName
  La valeur booléenne de la propriété `ValidateExternalMetadata` spécifie si le composant doit procéder à une validation par rapport à des sources de données externes au moment de la conception, ou s'il doit reporter la validation jusqu'à moment de l'exécution. Par défaut, cette propriété a la valeur `True` ; c'est à dire que les métadonnées externes sont validées au moment de la conception et au moment de l'exécution. Vous pouvez attribuer à cette propriété la valeur `False` lorsqu'une source de données externe n'est pas disponible au moment de la conception : par exemple, lorsque le package télécharge la source ou crée la destination uniquement au moment de l'exécution.  
   
 #### <a name="readonlyvariables-and-readwritevariables-properties"></a>Propriétés ReadOnlyVariables et ReadWriteVariables  
- Vous pouvez entrer des listes délimitées par des virgules de variables existantes comme valeurs de ces propriétés pour rendre les variables accessibles en lecture seule ou en lecture/écriture dans le code du composant Script. Les variables sont accessibles dans le code par le biais des propriétés <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ReadOnlyVariables%2A> et <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ReadWriteVariables%2A> de la classe de base générée automatiquement. Pour plus d’informations, consultez [utilisation de Variables dans le Script Component]((using-variables-in-the-script-component.md).  
+ Vous pouvez entrer des listes délimitées par des virgules de variables existantes comme valeurs de ces propriétés pour rendre les variables accessibles en lecture seule ou en lecture/écriture dans le code du composant Script. Les variables sont accessibles dans le code par le biais des propriétés <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ReadOnlyVariables%2A> et <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ReadWriteVariables%2A> de la classe de base générée automatiquement. Pour plus d’informations, consultez [Utilisation de variables dans le composant Script](using-variables-in-the-script-component.md).  
   
 > [!NOTE]  
 >  Les noms de variable respectent la casse.  
@@ -114,7 +114,7 @@ Dim currentCustomerName as String = CustomerInput.CustomerName
  Vous pouvez sélectionner [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic ou [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# comme langage de programmation du composant Script.  
   
 #### <a name="edit-script-button"></a>Bouton Modifier le script  
- Le bouton **Modifier le script** permet d’ouvrir l’environnement de développement intégré [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) dans lequel vous écrivez votre script personnalisé. Pour plus d’informations, consultez [codage et débogage de la Component]((coding-and-debugging-the-script-component.md) de Script.  
+ Le bouton **Modifier le script** permet d’ouvrir l’environnement de développement intégré [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) dans lequel vous écrivez votre script personnalisé. Pour plus d’informations, consultez [Codage et débogage du composant Script](coding-and-debugging-the-script-component.md).  
   
 ### <a name="connection-managers-page-of-the-script-transformation-editor"></a>Page Gestionnaires de connexions de l'Éditeur de transformation de script  
  La page **Gestionnaires de connexions** de l’**Éditeur de transformation de script** vous permet d’ajouter et de supprimer des gestionnaires de connexions que vous souhaitez utiliser dans votre script personnalisé. En principe, vous devez référencer des gestionnaires de connexions lorsque vous créez un composant source ou un composant de destination.  
@@ -126,11 +126,11 @@ Dim myADONETConnectionManager As IDTSConnectionManager100 = _
     Me.Connections.MyADONETConnection  
 ```  
   
- Pour plus d’informations, consultez [connexion à des Sources de données dans le Script Component]((connecting-to-data-sources-in-the-script-component.md).  
+ Pour plus d’informations, consultez [Connexion aux sources de données dans le composant Script](connecting-to-data-sources-in-the-script-component.md).  
   
-![Icône Integration Services (petite)](../../media/dts-16.gif "icône Integration Services (petite)")**rester jusqu'à la Date avec Integration Services** <br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
+![Icône Integration Services (petite)](../../media/dts-16.gif "icône Integration Services (petite)")**rester jusqu'à la Date avec Integration Services**<br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Codage et débogage du composant Script] ((coding-and-debugging-the-script-component.md)  
+ [Codage et débogage du composant Script](coding-and-debugging-the-script-component.md)  
   
   

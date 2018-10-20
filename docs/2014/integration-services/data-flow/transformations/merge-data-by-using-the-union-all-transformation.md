@@ -17,12 +17,12 @@ ms.assetid: 78304403-a81c-4101-b87e-ec80ddfdac98
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0a2225e9d504cd019016c1ff8cffb742112aeecc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 76245adffaf5dfdacaf2ee8c234b81cfbaae9523
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134725"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460364"
 ---
 # <a name="merge-data-by-using-the-union-all-transformation"></a>Fusionner des données à l'aide de la transformation d'union totale
   Pour pouvoir ajouter et configurer une transformation d'union totale, le package doit inclure au moins une tâche de flux de données et deux sources de données.  
@@ -58,7 +58,7 @@ ms.locfileid: "48134725"
 ## <a name="see-also"></a>Voir aussi  
  [Union All Transformation](union-all-transformation.md)   
  [Transformations Integration Services](integration-services-transformations.md)   
- [Chemins Integration Services](../integration-services-paths.md)   
- [Tâche de flux de données] ((.. /.. /Control-Flow/Data-Flow-Task.MD)  
+ [Chemins d'accès d'Integration Services](../integration-services-paths.md)   
+ [tâche de flux de données](../../control-flow/data-flow-task.md)  
   
   

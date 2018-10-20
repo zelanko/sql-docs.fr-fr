@@ -11,12 +11,12 @@ ms.assetid: 03fe44c5-6452-4ed0-95f6-9682670c0f52
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7c4191d74e2c9a9e4e84bf87bfd0137a241407d6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7bcc33e35ff0cdfcd46a73f939083ea23091673d
+ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222609"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49462045"
 ---
 # <a name="lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure"></a>Leçon 2 : Ajout de modèles d'exploration de données à la structure d'exploration de données Bike Buyer
   Dans cette leçon, vous allez ajouter deux modèles d’exploration de données à la structure d’exploration de données Bike Buyer que vous avez créé [leçon 1 : création de la Structure d’exploration de données Bike Buyer](../../2014/tutorials/lesson-1-creating-the-bike-buyer-mining-structure.md). Vous pourrez utiliser ces modèles pour explorer des données avec l'un et créer des tâches de prédiction avec l'autre.  
@@ -26,7 +26,7 @@ ms.locfileid: "48222609"
  Pour prédire si un client potentiel est susceptible d’acheter un vélo, vous allez créer un modèle d’exploration de données basé sur le [algorithme d’arbres de décision de Microsoft](../../2014/analysis-services/data-mining/microsoft-decision-trees-algorithm.md). Cet algorithme examine les informations relatives à chaque client potentiel et recherche des caractéristiques à même de l'aider à prévoir et identifier d'éventuels acheteurs de vélos. Il compare alors les valeurs des caractéristiques de précédents acheteurs avec celles de potentiels nouveaux clients pour déterminer si ces derniers sont susceptibles d'acheter un vélo.  
   
 ## <a name="alter-mining-structure-statement"></a>Instruction ALTER MINING STRUCTURE  
- Pour ajouter un modèle d’exploration de données à la structure d’exploration de données, vous utilisez le [ALTER MINING STRUCTURE &#40;DMX&#41;] (instruction (~/dmx/alter-mining-structure-dmx.md). Le code dans l’instruction peut être divisé en parties suivantes :  
+ Pour ajouter un modèle d’exploration de données à la structure d’exploration de données, vous utilisez le [ALTER MINING STRUCTURE &#40;DMX&#41; ](/sql/dmx/alter-mining-structure-dmx?view=sql-server-2016) instruction. Le code dans l’instruction peut être divisé en parties suivantes :  
   
 -   Identification de la structure d'exploration de données  
   

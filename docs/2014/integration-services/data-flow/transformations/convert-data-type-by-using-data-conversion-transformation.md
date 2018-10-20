@@ -15,12 +15,12 @@ ms.assetid: 4aabbe4f-7666-4672-865a-9627bd25fbfd
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: aa23f7b520fd224323122f7f3674bbafd25eb53c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f120b4c582be95662a889ab1ee003faae37cdafb
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069159"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460626"
 ---
 # <a name="convert-data-to-a-different-data-type-by-using-the-data-conversion-transformation"></a>Convertir des données en un type différent à l'aide de la transformation de conversion de données
   Pour pouvoir ajouter et configurer une transformation de conversion de données, le package doit inclure au moins une tâche de flux de données et une source.  
@@ -55,10 +55,10 @@ ms.locfileid: "48069159"
 12. Pour enregistrer le package mis à jour, cliquez sur **Enregistrer les éléments sélectionnés** dans le menu **Fichier** .  
   
 ## <a name="see-also"></a>Voir aussi  
- [Transformation de Conversion de données](data-conversion-transformation.md)   
+ [Data Conversion Transformation](data-conversion-transformation.md)   
  [Transformations Integration Services](integration-services-transformations.md)   
  [Chemins Integration Services](../integration-services-paths.md)   
  [Types de données d’Integration Services](../integration-services-data-types.md)   
- [Tâche de flux de données] ((.. /.. /Control-Flow/Data-Flow-Task.MD)  
+ [tâche de flux de données](../../control-flow/data-flow-task.md)  
   
   

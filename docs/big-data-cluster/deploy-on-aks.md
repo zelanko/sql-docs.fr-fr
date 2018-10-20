@@ -7,12 +7,12 @@ manager: craigg
 ms.date: 10/01/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 6c245365c231264f1aa56e2f1fad8ac17446ec5b
-ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
+ms.openlocfilehash: ee1faae6d43cbf2cc6c8a23086600241ad15e061
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48877932"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460894"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-2019-ctp-20"></a>Configurer Azure Kubernetes Service pour SQL Server 2019 CTP 2.0
 
@@ -22,6 +22,9 @@ Cela vous permet d’utiliser vos compétences existantes ou de faire appel à u
 
 Cet article décrit les étapes pour déployer Kubernetes sur AKS à l’aide d’Azure CLI. Si vous n’avez pas un abonnement Azure, créez un compte gratuit avant de commencer.
 
+> [!TIP] 
+> Pour un exemple de script python qui déploie le cluster de données volumineux AKS et SQL Server, consultez [déployer un serveur SQL Server sur Azure Kubernetes Service (ACS) de cluster de données volumineuses](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/aks).
+
 ## <a name="prerequisites"></a>Prérequis
 
 - Pour un environnement AKS, la condition minimale de la machine virtuelle est au moins deux agent machines virtuelles (en plus de master) d’une taille minimale [Standard_DS3_v2](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-general#dsv2-series). Ressources minimales requises par machine virtuelle sont de 4 processeurs et 14 Go de mémoire.
@@ -29,7 +32,7 @@ Cet article décrit les étapes pour déployer Kubernetes sur AKS à l’aide d�
    > [!NOTE]
    > Si vous projetez d’exécuter des tâches de big data ou de plusieurs applications Spark, la taille minimale est [Standard_D8_v3](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-general#dv3-series-sup1sup), et les ressources minimales requises par machine virtuelle sont 8 processeurs et 32 Go de mémoire.
 
-- Cette section, vous devez être en cours d’exécution Azure CLI version 2.0.4 ou version ultérieure. Si vous avez besoin installer ou mettre à niveau, consultez [installer Azure CLI 2.0](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli). Exécutez `az --version` pour trouver la version, si nécessaire.
+- Cette section, vous devez être en cours d’exécution Azure CLI version 2.0.4 ou version ultérieure. Si vous avez besoin installer ou mettre à niveau, consultez [installer Azure CLI 2.0](https://docs.microsoft.com/cli/azure/install-azure-cli). Exécutez `az --version` pour trouver la version, si nécessaire.
 
 - Installer [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/). Cluster de SQL Server Big Data requiert toute version mineure dans la plage de 1.10 version pour Kubernetes, pour le serveur et client. Pour installer une version spécifique sur le client kubectl, consultez [installer kubectl binaire via curl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl). Pour AKS, vous devez utiliser `--kubernetes-version` paramètre pour spécifier une version différente de celle par défaut. Notez qu’à la période de mise en production CTP2.0, AKS prend uniquement en charge les versions 1.10.7 et 1.10.8. 
 
@@ -91,7 +94,7 @@ Un groupe de ressources Azure est un groupe logique dans Azure les ressources so
 
 ## <a name="connect-to-the-cluster"></a>Connectez-vous au cluster
 
-1. Pour configurer kubectl pour vous connecter à votre cluster Kubernetes, exécutez le [az aks get-credentials](https://docs.microsoft.com/en-us/cli/azure/aks?view=azure-cli-latest#az-aks-get-credentials) commande. Cette étape télécharge les informations d’identification et configure l’interface CLI pour les utiliser kubectl.
+1. Pour configurer kubectl pour vous connecter à votre cluster Kubernetes, exécutez le [az aks get-credentials](https://docs.microsoft.com/cli/azure/aks?view=azure-cli-latest#az-aks-get-credentials) commande. Cette étape télécharge les informations d’identification et configure l’interface CLI pour les utiliser kubectl.
 
    ```bash
    az aks get-credentials --resource-group=sqlbigdatagroup --name kubcluster

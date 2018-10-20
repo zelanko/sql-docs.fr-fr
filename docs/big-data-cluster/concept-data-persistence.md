@@ -7,12 +7,12 @@ manager: craigg
 ms.date: 10/01/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 629d7fd887e96013b17a5686ce82eb966044f240
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 942442bca18e836c4f8711abc808a89649ff8593
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48796203"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460574"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-on-kubernetes"></a>Persistance des données avec un cluster volumineux de données SQL Server sur Kubernetes
 
@@ -23,6 +23,7 @@ ms.locfileid: "48796203"
 Le cluster de données volumineux de SQL Server consomme ces volumes persistants consiste à l’aide de [Classes de stockage](https://kubernetes.io/docs/concepts/storage/storage-classes/). Vous pouvez créer des classes de stockage différents pour différents types de stockage et les spécifier au moment du déploiement de cluster big data. Vous pouvez configurer la classe de stockage à utiliser dans quel but (pool). Cluster de données volumineux de SQL Server crée [les revendications de volume persistant](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistentvolumeclaims) avec le nom de classe de stockage spécifié pour chaque pod qui nécessite des volumes persistants. Ensuite, elle monte l’ou les volumes persistant correspondant dans le pod.
 
 > [!NOTE]
+
 > Pour CTP 2.0, uniquement `ReadWriteOnce` mode d’accès pour l’ensemble du cluster est prise en charge.
 
 ## <a name="deployment-settings"></a>Paramètres de déploiement
@@ -36,11 +37,20 @@ Si vous définissez l’indicateur sur true, vous devez également fournir **STO
 
 ## <a name="aks-storage-classes"></a>Classes de stockage AKS
 
-ACS est fourni avec [deux classes de stockage intégrée](https://docs.microsoft.com/en-us/azure/aks/azure-disks-dynamic-pv) **par défaut** et **premium-stockage** , ainsi que le fournisseur dynamique pour eux. Vous pouvez spécifier des deux ou créer votre propre classe de stockage pour le déploiement de cluster de données volumineux avec le stockage persistant est activé.
+ACS est fourni avec [deux classes de stockage intégrée](https://docs.microsoft.com/azure/aks/azure-disks-dynamic-pv) **par défaut** et **premium managed** , ainsi que le fournisseur dynamique pour eux. Vous pouvez spécifier des deux ou créer votre propre classe de stockage pour le déploiement de cluster de données volumineux avec le stockage persistant est activé.
 
 ## <a name="minikube-storage-class"></a>Classe de stockage Minikube
 
-Minikube est fourni avec une classe de stockage intégré appelée **standard** ainsi que d’un fournisseur dynamique pour celui-ci.
+Minikube est fourni avec une classe de stockage intégré appelée **standard** ainsi que d’un fournisseur dynamique pour celui-ci. Notez que sur Minikube, si USE_PERSISTENT_VOLUME = true (valeur par défaut), vous devez également substituer la valeur par défaut pour la variable d’environnement STORAGE_CLASS_NAME car la valeur par défaut est différente. Définissez la valeur sur `standard`: 
+```
+SET STORAGE_CLASS_NAME=standard
+```
+
+Ou bien, vous pouvez supprimer à l’aide de volumes persistants sur Minikube :
+```
+SET USE_PERSISTENT_VOLUME=false
+```
+
 
 ## <a name="kubeadm"></a>Kubeadm
 
@@ -61,7 +71,7 @@ Vous pouvez également avoir différentes configurations pour les paramètres de
 
 ```bash
 export STORAGE_POOL_USE_PERSISTENT_VOLUME=true
-export STORAGE_POOL_STORAGE_CLASS_NAME=premium-storage
+export STORAGE_POOL_STORAGE_CLASS_NAME=managed-premium
 export STORAGE_POOL_STORAGE_SIZE=100Gi
 ```
 

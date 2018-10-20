@@ -1,3 +1,3 @@
 ## <a name="edit-contentmediaedit-topic-pencilpng-contribute-sql-documentation"></a>![modifier contenu](../media/edit-topic-pencil.png) Contribuer à la documentation SQL
-
+Saviez-vous que vous pouvez modifier le contenu vous-même ? Si vous procédez ainsi, non seulement améliore notre documentation, mais vous allez également déduits en tant que contributeur à la page.
 - [Guide pratique pour contribuer à la documentation SQL Server](https://docs.microsoft.com/sql/sql-server/sql-server-docs-contribute)

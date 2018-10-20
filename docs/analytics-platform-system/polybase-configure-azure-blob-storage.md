@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 09bac30e30a6549dd572b8594e5efeec6473ef2a
-ms.sourcegitcommit: 5afec8b4b73ce1727e4e5cf875d1e1ce9df50eab
+ms.openlocfilehash: 7bbf2dface759da63bd6b9845f4e62321b1cbe76
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47450350"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460630"
 ---
 # <a name="configure-polybase-to-access-external-data-in-azure-blob-storage"></a>Configurer PolyBase pour accéder aux données externes dans le stockage Blob Azure
 
@@ -179,7 +179,5 @@ Dans SQL Server Data Tools, les tables externes sont affichées dans un dossier 
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Explorez les autres façons d’utiliser et surveiller PolyBase dans les articles suivants :
-
-[Mappage de type avec PolyBase](../relational-databases/polybase/polybase-type-mapping.md).  
+Pour plus d’informations sur PolyBase, consultez le [What ' s PolyBase ?](../relational-databases/polybase/polybase-guide.md). 
 

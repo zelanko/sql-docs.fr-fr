@@ -16,12 +16,12 @@ ms.assetid: ffcb41a6-e23d-49ea-8c32-ac980e3dc495
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cfe08cf1c21a4187008bb80a1f742ba35da7e9ad
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0c9538a492ae6f2da0c4a5adeceb86bd7985d539
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131759"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460284"
 ---
 # <a name="identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation"></a>Identifier des lignes de données semblables à l'aide de la transformation de regroupement probable
   Pour ajouter et configurer une transformation de regroupement probable, le package doit déjà inclure au moins une tâche de flux de données et une source.  
@@ -81,9 +81,9 @@ ms.locfileid: "48131759"
 20. Pour enregistrer le package mis à jour, cliquez sur **Enregistrer les éléments sélectionnés** dans le menu **Fichier** .  
   
 ## <a name="see-also"></a>Voir aussi  
- [Transformation de regroupement probable](fuzzy-grouping-transformation.md)   
+ [Fuzzy Grouping Transformation](fuzzy-grouping-transformation.md)   
  [Transformations Integration Services](integration-services-transformations.md)   
- [Chemins Integration Services](../integration-services-paths.md)   
- [Tâche de flux de données] ((.. /.. /Control-Flow/Data-Flow-Task.MD)  
+ [Chemins d'accès d'Integration Services](../integration-services-paths.md)   
+ [tâche de flux de données](../../control-flow/data-flow-task.md)  
   
   

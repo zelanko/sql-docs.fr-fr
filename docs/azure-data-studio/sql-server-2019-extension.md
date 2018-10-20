@@ -5,18 +5,18 @@ ms.custom: tools|sos
 ms.date: 10/11/2018
 ms.reviewer: alayu; sstein
 ms.prod: sql
-ms.prod_service: sql-tools
+ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d73f4a0d55cbe3fe3bacc0b2bb68f191046fe01b
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 6624f2efb14f5d056ee0ac052fa9396535ebb239
+ms.sourcegitcommit: ef115025e57ec342c14ed3151ce006f484d1fadc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49168789"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49411166"
 ---
 # <a name="sql-server-2019-extension-preview"></a>Extension de SQL Server 2019 (version préliminaire)
 
@@ -28,11 +28,11 @@ Pour installer l’extension de SQL Server 2019 (version préliminaire), téléc
 
 1. Télécharger le fichier .vsix d’extension (version préliminaire) SQL Server 2019 dans un répertoire local :
 
-   |Plateforme|Télécharger|Date de publication|
-   |:---|:---|:---|
-   |Windows|[.VSIX](https://go.microsoft.com/fwlink/?linkid=2024911)|24 septembre 2018|
-   |macOS|[.VSIX](https://go.microsoft.com/fwlink/?linkid=2024587)|24 septembre 2018 |
-   |Linux|[.VSIX](https://go.microsoft.com/fwlink/?linkid=2024841)|24 septembre 2018 |
+   |Plateforme|Télécharger|Date de publication|Version
+   |:---|:---|:---|:---|
+   |Windows|[.VSIX](https://go.microsoft.com/fwlink/?LinkId=2031539)|18 octobre 2018|0.7.2
+   |macOS|[.VSIX](https://go.microsoft.com/fwlink/?LinkId=2031717)|18 octobre 2018 |0.7.2
+   |Linux|[.VSIX](https://go.microsoft.com/fwlink/?LinkId=2031538)|18 octobre 2018 |0.7.2
 
 1. Dans Azure Data Studio choisissez **installer l’Extension à partir du Package VSIX** à partir de la **fichier** menu et sélectionnez le fichier .vsix téléchargé.
 
@@ -41,6 +41,18 @@ Pour installer l’extension de SQL Server 2019 (version préliminaire), téléc
 1. Sélectionnez **recharger** pour activer l’extension (uniquement obligatoire la première fois que vous installez une extension).
 
 1. Après le rechargement, l’extension installera les dépendances. Vous pouvez voir la progression dans la fenêtre Sortie, et il peut prendre plusieurs minutes.
+
+## <a name="release-notes-v072"></a>Notes de publication (v0.7.2)
+* Explorateur de ressources Azure est désormais intégré à Azure Data Studio et a été supprimé de cette extension. Nous vous remercions pour vos commentaires sur ce !
+* Amélioration des performances des ordinateurs portables avec beaucoup de cellules Markdown.
+* Cellules de code de redimensionnement automatique dans le bloc-notes. Cela a toujours une taille minimale basée sur la barre d’outils de la cellule.
+* Informez l’utilisateur lors de l’installation des dépendances de bloc-notes. Sur Windows cela peut en particulier prendre beaucoup de temps, afin de notifications sont maintenant affichées dans la vue tâches.
+* Prise en charge la réinstallation des dépendances de bloc-notes. Cela est utile si l’utilisateur précédemment fermés Azure Data Studio en cours via l’installation.
+* Prise en charge l’annulation de l’exécution de cellule dans le bloc-notes.
+* Fiabilité améliorée lorsque vous utilisez l’Assistant de création de données externe, en particulier lorsque les erreurs de connexion se produisent.
+* Bloquer l’utilisation de l’Assistant de création de données externe si Polybase n’est pas activé ni en cours d’exécution sur le serveur cible.
+* Vérificateur d’orthographe et d’affectation de noms correctifs liés à SQL Server 2019 et créer des données externes.
+* Supprimé un grand nombre d’erreurs à partir de la console de débogage Azure Data Studio.
 
 ##  <a name="sql-server-2019-big-data-cluster-support"></a>Prise en charge du Cluster de données volumineuses de SQL Server 2019
 
@@ -70,16 +82,6 @@ Pour plus d’informations, consultez [Big Data Clusters](../big-data-cluster/bi
 * Choisissez un point de terminaison du cluster de données volumineuses de SQL Server pour se connecter à si l’exécution à distance (cela n’est pas nécessaire pour le développement local avec Python 3).
 * Ajouter des cellules de code ou markdown via les boutons dans l’en-tête du bloc-notes. Supprimer les cellules avec l’icône Corbeille à gauche de chaque cellule.
 * Exécution des cellules avec le bouton de lecture pour les cellules de code et d’activer/désactiver l’édition avec markdown et d’aperçu avec l’icône représentant un œil
-
-
-## <a name="azure-resource-explorer"></a>Explorateur de ressources Azure
-
-* Pour vous connecter à Azure, cliquez sur l’icône de personne dans la partie inférieure gauche de Studio de données Azure et suivez les boîtes de dialogue se connecter à Azure.
-* Une fois connecté, cliquez sur l’icône Azure triangulaire dans le gauche barre d’Azure Data Studio et développez l’arborescence pour afficher les ressources SQL associées à vos abonnements.
-* Avec le bouton droit ou cliquez sur l’icône de connexion sur la base de données SQL ou SQL Server pour ouvrir la boîte de dialogue de connexion. Entrez votre mot de passe pour vous connecter et d’ajouter la ressource à l’Explorateur d’objets Azure Data Studio.
-
-Pour plus d’informations, consultez [Azure Resource Explorer](azure-resource-explorer.md).
-
 
 ## <a name="polybase-create-external-table-wizard"></a>Table externe Assistant de création de Polybase
 

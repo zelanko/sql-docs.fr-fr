@@ -3,17 +3,17 @@ title: Architecture d’extensibilité dans SQL Server Machine Learning Services
 description: Le code externe prise en charge pour le moteur de base de données SQL Server, avec une architecture double pour l’exécution de script R et Python sur des données relationnelles.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/05/2018
+ms.date: 10/17/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 2a09f5ddfe39a122205f132b6901d8c8a99e5ad2
-ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
+ms.openlocfilehash: c2ada06ce41cd9a5faf3237ce2b9bac6fc40291d
+ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48878182"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49419217"
 ---
 # <a name="extensibility-architecture-in-sql-server-machine-learning-services"></a>Architecture d’extensibilité dans SQL Server Machine Learning Services 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -52,7 +52,7 @@ Composants incluent un **Launchpad** utilisée pour appeler le langage (R ou Pyt
 
 ## <a name="launchpad"></a>Launchpad
 
-Le Launchpad approuvé de SQL Server est un service qui gère et exécute des scripts externes, similaires à la façon dont le service d’indexation et de requête de recherche en texte intégral lance un hôte distinct pour le traitement des requêtes de recherche en texte intégral. Le service Launchpad peut démarrer uniquement les lanceurs approuvés qui sont publiés par Microsoft, ou qui ont été certifiés par Microsoft comme répondant aux exigences pour la gestion des ressources et des performances.
+Le [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] est un service qui gère et exécute des scripts externes, similaires à la façon dont le service d’indexation et de requête de recherche en texte intégral lance un hôte distinct pour le traitement des requêtes de recherche en texte intégral. Le service Launchpad peut démarrer uniquement les lanceurs approuvés qui sont publiés par Microsoft, ou qui ont été certifiés par Microsoft comme répondant aux exigences pour la gestion des ressources et des performances.
 
 | Lanceurs approuvés | Extension | Versions de SQL Server |
 |-------------------|-----------|---------------------|
@@ -60,6 +60,8 @@ Le Launchpad approuvé de SQL Server est un service qui gère et exécute des sc
 | Pythonlauncher.dll pour Python 3.5 | [Extension Python](extension-python.md) | SQL Server 2017 |
 
 Le service [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] s’exécute sous son propre compte d’utilisateur. Si vous modifiez le compte qui exécute Launchpad, veillez à le faire à l’aide du Gestionnaire de Configuration SQL Server pour vous assurer que les modifications sont écrites dans les fichiers associés.
+
+Distinct [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] service est créé pour chaque instance du moteur de base de données à laquelle vous avez ajouté SQL Server Machine Learning Services. Il existe un Launchpad service pour chaque instance du moteur de base de données, donc si vous avez plusieurs instances avec prise en charge de script externe, vous aura un service Launchpad pour chacun d'entre eux. Une instance du moteur de base de données est liée au service Launchpad créé pour lui. Tous les appels de script externe dans une procédure stockée ou un résultat de T-SQL dans le service SQL Server d’appeler le service Launchpad créé pour la même instance.
 
 Pour exécuter des tâches dans une langue prise en charge spécifique, le Launchpad Obtient un compte de travail sécurisé à partir du pool et démarre un processus satellite pour gérer le runtime externe. Chaque processus satellite hérite le compte d’utilisateur de Launchpad et utilise ce compte de travail pendant la durée de l’exécution du script. Si le script utilise les traitements parallèles, ils sont créés sous le compte de travail de même, unique.
 

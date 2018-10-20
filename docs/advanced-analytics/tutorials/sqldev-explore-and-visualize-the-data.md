@@ -1,21 +1,21 @@
 ---
-title: Leçon 3 Explorer et visualiser des données à l’aide de R et T-SQL (SQL Server Machine Learning) | Microsoft Docs
+title: Leçon 1 Explorer et visualiser des données à l’aide de R et T-SQL (SQL Server Machine Learning) | Microsoft Docs
 description: Didacticiel expliquant comment incorporer R dans SQL Server des procédures stockées et fonctions T-SQL
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 06/07/2018
+ms.date: 10/19/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 3fcf73193c44b72c46adb3300085650b20495a9d
-ms.sourcegitcommit: 7d702a1d01ef72ad5e133846eff6b86ca2edaff1
+ms.openlocfilehash: e3e32fef767193f8cf9a33553163f301da3cfa4d
+ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48798587"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461985"
 ---
-# <a name="lesson-3-explore-and-visualize-the-data"></a>Leçon 3 : Explorer et visualiser les données
+# <a name="lesson-1-explore-and-visualize-the-data"></a>Leçon 1 : Explorer et visualiser les données
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Cet article fait partie d’un didacticiel pour les développeurs SQL sur l’utilisation de R dans SQL Server.
@@ -279,8 +279,8 @@ Pour afficher le tracé, ouvrez le dossier de destination et examinez les fichie
 
 ## <a name="next-lesson"></a>Leçon suivante
 
-[Leçon 3 : Créer des fonctionnalités de données à l’aide de T-SQL](sqldev-create-data-features-using-t-sql.md)
+[Leçon 2 : Créer des fonctionnalités de données à l’aide de T-SQL](sqldev-create-data-features-using-t-sql.md)
 
 ## <a name="previous-lesson"></a>Leçon précédente
 
-[Leçon 1 : Configurer les données de démonstration NYC Taxi](sqldev-download-the-sample-data.md)
+[Définir les données de démonstration NYC Taxi](demo-data-nyctaxi-in-sql.md)

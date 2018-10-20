@@ -15,12 +15,12 @@ ms.assetid: 01b81c0f-d5e0-483b-81b2-73800a6945ac
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 490c8bc5c2a045f911a3bbe0a5a372a81d49a08e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6d0d415a9dd8dbb891892fce083b65745dd27ff3
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48115076"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460304"
 ---
 # <a name="aggregate-values-in-a-dataset-by-using-the-aggregate-transformation"></a>Agréger les valeurs dans un dataset à l'aide de la transformation d'agrégation
   Pour pouvoir ajouter et configurer une transformation d'agrégation, le package doit inclure au moins une tâche de flux de données et une source.  
@@ -70,9 +70,9 @@ ms.locfileid: "48115076"
 15. Pour enregistrer le package mis à jour, cliquez sur **Enregistrer les éléments sélectionnés** dans le menu **Fichier** .  
   
 ## <a name="see-also"></a>Voir aussi  
- [Transformation d’agrégation](aggregate-transformation.md)   
+ [Transformation d'agrégation](aggregate-transformation.md)   
  [Transformations Integration Services](integration-services-transformations.md)   
- [Chemins Integration Services](../integration-services-paths.md)   
- [Tâche de flux de données] ((.. /.. /Control-Flow/Data-Flow-Task.MD)  
+ [Chemins d'accès d'Integration Services](../integration-services-paths.md)   
+ [tâche de flux de données](../../control-flow/data-flow-task.md)  
   
   

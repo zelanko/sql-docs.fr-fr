@@ -1,5 +1,5 @@
 ---
-title: Étape 2 importer des données dans SQL Server à l’aide de PowerShell | Documents Microsoft
+title: Étape 2 importer des données dans SQL Server à l’aide de PowerShell | Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 06/07/2018
@@ -7,29 +7,29 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 14606b42d17acdd56527795d2d475a263d918d7d
-ms.sourcegitcommit: b52b5d972b1a180e575dccfc4abce49af1a6b230
+ms.openlocfilehash: f8b90a18c0cdce9c4c2c73db4b599e488570f018
+ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35249992"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461865"
 ---
-# <a name="step-2-import-data-to-sql-server-using-powershell"></a>Étape 2 : Importer des données vers SQL Server à l’aide de PowerShell
+# <a name="step-2-import-data-to-sql-server-using-powershell"></a>Étape 2 : Importer des données dans SQL Server à l’aide de PowerShell
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Cet article fait partie d’un didacticiel, [analytique Python de la base de données pour les développeurs SQL](sqldev-in-database-python-for-sql-developers.md). 
+Cet article fait partie d’un didacticiel, [analytique en base de données Python pour les développeurs SQL](sqldev-in-database-python-for-sql-developers.md). 
 
-Dans cette étape, vous exécutez un des scripts téléchargés pour créer les objets de base de données requis pour la procédure pas à pas. Le script crée plusieurs procédures stockées et télécharge les exemples de données à une table dans la base de données que vous avez spécifié.
+Dans cette étape, vous exécutez un des scripts téléchargés pour créer les objets de base de données requis pour la procédure pas à pas. Le script crée plusieurs procédures stockées et transfère les données d’exemple à une table dans la base de données que vous avez spécifié.
 
 ## <a name="create-database-objects-and-load-data"></a>Créer des objets de base de données et charger des données
 
-Parmi les fichiers téléchargés, vous devez voir un script PowerShell, `RunSQL_SQL_Walkthrough.ps1`. L’objectif de ce script est pour préparer l’environnement pour la procédure pas à pas.
+Parmi les fichiers téléchargés, vous devez voir un script PowerShell, `RunSQL_SQL_Walkthrough.ps1`. L’objectif de ce script consiste à préparer l’environnement pour la procédure pas à pas.
 
 Le script effectue les actions suivantes :
 
 - Installe les utilitaires de ligne de commande SQL, SQL Native Client si pas déjà installé. Ces utilitaires sont nécessaires pour le chargement en bloc des données sur la base de données à l’aide de **bcp**.
 
-- Crée une base de données et une table sur le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance et -insertions en bloc des données dans la table.
+- Crée une base de données et une table sur le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance et en bloc-insère les données dans la table.
 
 - Crée plusieurs fonctions SQL et les procédures stockées.
 
@@ -53,24 +53,24 @@ bcp $db_tb in $csvfilepath -t ',' -S $server -f taxiimportfmt.xml -F 2 -C "RAW" 
 
 2. Le script vous invite à entrer les informations suivantes :
 
-    - Le nom ou l’adresse d’un [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] instance où la Machine Learning Services avec Python a été installé.
-    - Les nom d’utilisateur et mot de passe d’un compte sur l’instance. Le compte que vous utilisez doit avoir la possibilité de créer des bases de données, créer des tables et des procédures stockées et en bloc des données de charge pour les tables. 
+    - Le nom ou l’adresse d’un [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] instance sur laquelle les Services Machine Learning avec Python a été installé.
+    - Les nom d’utilisateur et mot de passe d’un compte sur l’instance. Le compte que vous utilisez doit avoir la possibilité de créer des bases de données, créer des tables et procédures stockées et en bloc des données de charge dans les tables. 
     - Si vous ne fournissez pas de nom d’utilisateur et mot de passe, votre identité Windows est utilisée pour se connecter à SQL Server.
     - Le chemin et le nom du fichier de données exemple que vous venez de télécharger. Par exemple, `C:\temp\pysql\nyctaxi1pct.csv`
 
     > [!NOTE]
-    > Pour charger les données correctement, le fichier xmlrw.dll bibliothèque doit être dans le même dossier que bcp.exe.
+    > Pour charger les données avec succès, le fichier xmlrw.dll bibliothèque doit être dans le même dossier que bcp.exe.
 
 3. Le script modifie également la [!INCLUDE[tsql](../../includes/tsql-md.md)] scripts que vous avez téléchargé précédemment, et des espaces réservés remplace avec le nom de la base de données et l’utilisateur nom que vous fournissent.
   
-4. Lorsque le script terminé, connectez-vous à le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance à l’aide de la connexion spécifiée, pour vérifier que la base de données, tables, les fonctions et procédures stockées ont été créés. L’illustration suivante montre les objets dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
+4. Lorsque le script terminé, connectez-vous à la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance à l’aide de la connexion spécifiée, pour vérifier que la base de données, tables, des fonctions et procédures stockées ont été créés. L’illustration suivante montre les objets dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
 
-    ![Parcourir les tables dans SSMS](media/sqldev-python-browsetables1.png "afficher les tables dans SSMS")
+    ![Parcourir les tables dans SSMS](media/sqldev-python-browsetables1.png "afficher des tables dans SSMS")
 
     > [!NOTE]
     > Si les objets de base de données existaient déjà, ils ne peuvent pas être créés à nouveau.
     > 
-    > Si une table existante du même nom et du schéma est trouvé, les données seront ajoutées, ne pas remplacés. Par conséquent, veillez à supprimer ou tronquer des tables existantes avant d’exécuter le script.
+    > Si une table existante du même nom et du schéma est trouvé, les données sont ajoutées, ne pas remplacées. Par conséquent, veillez à supprimer ou tronquer des tables existantes avant d’exécuter le script.
 
 ## <a name="list-of-stored-procedures-and-functions"></a>Liste des procédures stockées et fonctions
 
@@ -92,8 +92,8 @@ Dans la dernière partie de cette procédure pas à pas, vous créez ces procéd
 |**Nom de fichier de script SQL**|**Fonction**|
 |------|------|
 |SerializePlots.sql|Crée une procédure stockée pour l’exploration des données. Cette procédure stockée crée un graphique à l’aide de Python et puis sérialiser les objets de graphique.|
-|TrainTipPredictionModelSciKitPy.sql|Crée une procédure stockée qui effectue l’apprentissage d’un modèle de régression logistique (scikit-en savoir plus). Le modèle prédit la valeur de la colonne pourboires et est formé à l’aide d’un sélectionné de façon aléatoire de 60 % des données. La sortie de la procédure stockée représente le modèle formé, qui est enregistré dans la table nyc_taxi_models.|
-|TrainTipPredictionModelRxPy.sql|Crée une procédure stockée qui effectue l’apprentissage d’un modèle de régression logistique (revoscalepy). Le modèle prédit la valeur de la colonne pourboires et est formé à l’aide d’un sélectionné de façon aléatoire de 60 % des données. La sortie de la procédure stockée représente le modèle formé, qui est enregistré dans la table nyc_taxi_models.|
+|TrainTipPredictionModelSciKitPy.sql|Crée une procédure stockée qui effectue l’apprentissage d’un modèle de régression logistique (scikit-en savoir plus). Le modèle prédit la valeur de la colonne tipped et est formé à l’aide d’un hasard 60 % des données. La sortie de la procédure stockée représente le modèle formé, qui est enregistré dans la table nyc_taxi_models.|
+|TrainTipPredictionModelRxPy.sql|Crée une procédure stockée qui effectue l’apprentissage d’un modèle de régression logistique (revoscalepy). Le modèle prédit la valeur de la colonne tipped et est formé à l’aide d’un hasard 60 % des données. La sortie de la procédure stockée représente le modèle formé, qui est enregistré dans la table nyc_taxi_models.|
 
 ## <a name="next-step"></a>Étape suivante
 
@@ -101,5 +101,5 @@ Dans la dernière partie de cette procédure pas à pas, vous créez ces procéd
 
 ## <a name="previous-step"></a>Étape précédente
 
-[Étape 1 : Télécharger les exemples de données](sqldev-py1-download-the-sample-data.md)
+[Étape 1 : Télécharger les exemples de données](demo-data-nyctaxi-in-sql.md)
 

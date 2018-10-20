@@ -1,44 +1,44 @@
 ---
-title: Leçon 4 fonctionnalités données créez à l’aide des fonctions de T-SQL (SQL Server Machine Learning) | Documents Microsoft
-description: Le didacticiel expliquant comment incorporer R dans SQL Server procédures stockées et fonctions T-SQL
+title: Leçon 2 fonctionnalités de données créez à l’aide des fonctions T-SQL (SQL Server Machine Learning) | Microsoft Docs
+description: Didacticiel expliquant comment incorporer R dans SQL Server des procédures stockées et fonctions T-SQL
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 06/07/2018
+ms.date: 10/19/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 98182e8e602b8bba8ca7d7fd58cf23f3fcaaa435
-ms.sourcegitcommit: b52b5d972b1a180e575dccfc4abce49af1a6b230
+ms.openlocfilehash: f5427772ea438a198b1236a865e8cdbdd0b09d70
+ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35249542"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49462095"
 ---
-# <a name="lesson-4-create-data-features-using-r-and-t-sql"></a>Leçon 4 : Créer des fonctionnalités de données à l’aide de R et T-SQL
+# <a name="lesson-2-create-data-features-using-r-and-t-sql"></a>Leçon 2 : Créer des fonctionnalités de données à l’aide de R et T-SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Cet article fait partie d’un didacticiel pour les développeurs SQL sur la façon d’utiliser R dans SQL Server.
+Cet article fait partie d’un didacticiel pour les développeurs SQL sur l’utilisation de R dans SQL Server.
 
 Lors de cette étape, vous allez découvrir comment créer des caractéristiques à partir de données brutes en utilisant une fonction [!INCLUDE[tsql](../../includes/tsql-md.md)] . Ensuite, vous appellerez cette fonction à partir d’une procédure stockée pour créer une table qui contient les valeurs des caractéristiques.
 
-## <a name="about-feature-engineering"></a>À propos de l’ingénierie de fonctionnalité
+## <a name="about-feature-engineering"></a>À propos de l’ingénierie
 
-Après plusieurs séries d’exploration de données, vous avez recueilli des informations utiles grâce aux données et vous êtes prêt à passer à *l’ingénierie des caractéristiques*. Ce processus de création de fonctionnalités significatives à partir des données brutes est une étape essentielle dans la création de modèles analytiques.
+Après plusieurs séries d’exploration de données, vous avez recueilli des informations utiles grâce aux données et vous êtes prêt à passer à *l’ingénierie des caractéristiques*. Ce processus de création de caractéristiques significatives à partir des données brutes est une étape essentielle dans la création de modèles analytiques.
 
-Dans ce jeu de données, les valeurs de distance sont basés sur la distance de compteur signalé et ne pas nécessairement la distance géographique ou la distance réelle traversée. Ainsi, vous devrez calculer la distance directe entre les lieux de prise en charge et de dépose, en utilisant les coordonnées disponibles dans le dataset source « NYC Taxi ». Vous pouvez pour cela utiliser la [formule de Haversine](https://en.wikipedia.org/wiki/Haversine_formula) dans une fonction [!INCLUDE[tsql](../../includes/tsql-md.md)] personnalisée.
+Dans ce jeu de données, les valeurs de distance sont basés sur la distance signalée au compteur et ne représentent pas nécessairement distance géographique ou la distance réelle parcourus. Ainsi, vous devrez calculer la distance directe entre les lieux de prise en charge et de dépose, en utilisant les coordonnées disponibles dans le dataset source « NYC Taxi ». Vous pouvez pour cela utiliser la [formule de Haversine](https://en.wikipedia.org/wiki/Haversine_formula) dans une fonction [!INCLUDE[tsql](../../includes/tsql-md.md)] personnalisée.
 
 Vous allez utiliser une fonction T-SQL personnalisée, _fnCalculateDistance_, pour calculer la distance à l’aide de la formule de Haversine, et utiliser une seconde fonction T-SQL personnalisée, _fnEngineerFeatures_, pour créer une table contenant toutes les caractéristiques.
 
-Le processus global est la suivante :
+Le processus global est comme suit :
 
-- Créez la fonction de T-SQL qui effectue les calculs
+- Créez la fonction T-SQL qui effectue les calculs
 
 - Appelez la fonction pour générer les données de fonctionnalité
 
 - Enregistrer les données de fonctionnalité dans une table
 
-## <a name="calculate-trip-distance-using-fncalculatedistance"></a>Calculer la distance de déplacement à l’aide de fnCalculateDistance
+## <a name="calculate-trip-distance-using-fncalculatedistance"></a>Calculer la distance de course à l’aide de fnCalculateDistance
 
 La fonction _fnCalculateDistance_ doit avoir téléchargé et enregistré avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans le cadre de la préparation de ce didacticiel. Prenez une minute pour examiner le code.
   
@@ -76,7 +76,7 @@ La fonction _fnCalculateDistance_ doit avoir téléchargé et enregistré avec [
 
 ## <a name="generate-the-features-using-fnengineerfeatures"></a>Générer les fonctionnalités à l’aide de _fnEngineerFeatures_
 
-Pour ajouter les valeurs calculées dans une table qui peut être utilisée pour l’apprentissage du modèle, vous allez utiliser une autre fonction, _fnEngineerFeatures_. La nouvelle fonction appelle la fonction de T-SQL créée précédemment, _fnCalculateDistance_, afin d’obtenir la distance directe entre les emplacements de prélèvement et de remise. 
+Pour ajouter les valeurs calculées dans une table qui peut être utilisée pour l’apprentissage du modèle, vous allez utiliser une autre fonction, _fnEngineerFeatures_. La nouvelle fonction appelle la fonction T-SQL créée précédemment, _fnCalculateDistance_, afin d’obtenir la distance directe entre les emplacements de prélèvement et de débarquement. 
 
 1. Prenez une minute pour examiner le code de la fonction T-SQL personnalisée, _fnEngineerFeatures_, qui doit avoir été créé pour vous dans le cadre de la préparation de cette procédure pas à pas.
   
@@ -104,11 +104,11 @@ Pour ajouter les valeurs calculées dans une table qui peut être utilisée pour
     GO
     ```
 
-    + Cette fonction table accepte plusieurs colonnes comme entrées et génère une table avec plusieurs colonnes de fonctionnalités.
+    + Cette fonction table qui prend plusieurs colonnes comme entrées et génère une table avec plusieurs colonnes de fonctionnalité.
 
     + L’objectif de cette fonction consiste à créer de nouvelles fonctionnalités pour une utilisation dans la création d’un modèle.
 
-2.  Pour vérifier que cette fonction fonctionne, vous devez l’utiliser pour calculer la distance géographique pour les boucles où la distance limitée était 0, mais les emplacements de prise en charge et remise étaient différents.
+2.  Pour vérifier que cette fonction fonctionne, vous devez l’utiliser pour calculer la distance géographique pour les trajets où la distance au compteur était égale à 0, mais les emplacements de prélèvement et de dépose étaient différents.
   
     ```SQL
         SELECT tipped, fare_amount, passenger_count,(trip_time_in_secs/60) as TripMinutes,
@@ -119,12 +119,12 @@ Pour ajouter les valeurs calculées dans une table qui peut être utilisée pour
         ORDER BY trip_time_in_secs DESC
     ```
   
-    Comme vous pouvez le voir, la distance signalée par le compteur ne correspond pas toujours à la distance géographique. C’est pourquoi l’ingénierie des caractéristiques est si importante. Vous pouvez utiliser ces fonctionnalités de données améliorées pour l’apprentissage d’un modèle d’apprentissage à l’aide de R.
+    Comme vous pouvez le voir, la distance signalée par le compteur ne correspond pas toujours à la distance géographique. C’est pourquoi l’ingénierie des caractéristiques est si importante. Vous pouvez utiliser ces fonctionnalités de données améliorées pour former un modèle d’apprentissage à l’aide de R.
 
 ## <a name="next-lesson"></a>Leçon suivante
 
-[Leçon 5 : L’apprentissage et enregistrez un modèle à l’aide de T-SQL](../r/sqldev-train-and-save-a-model-using-t-sql.md)
+[Leçon 3 : Former et enregistrer un modèle à l’aide de T-SQL](sqldev-train-and-save-a-model-using-t-sql.md)
 
 ## <a name="previous-lesson"></a>Leçon précédente
 
-[Leçon 3 : Explorer et visualiser les données à l’aide de R et des procédures stockées](../tutorials/sqldev-explore-and-visualize-the-data.md)
+[Leçon 1 : Explorer et visualiser les données à l’aide de R et des procédures stockées](sqldev-explore-and-visualize-the-data.md)

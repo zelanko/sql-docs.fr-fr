@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e062f97f5fe63966cf3b03b9727cd13a509d3ae5
-ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
+ms.openlocfilehash: 3d4a2786a795b20e9c2f943824027859230b2c85
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48878102"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460464"
 ---
 # <a name="deploy-a-sql-server-always-on-availability-group-on-kubernetes-cluster"></a>Déployer un serveur SQL Server Always On de groupe de disponibilité sur un Cluster Kubernetes
 
@@ -109,7 +109,7 @@ Sur Kubernetes le déploiement inclut un opérateur de SQL Server, les conteneur
 
 ### <a name="monitor-the-deployment"></a>Surveiller le déploiement
 
-Vous pouvez utiliser [tableau de bord Kubernetes avec Azure Kubernetes Service (AKS)](https://docs.microsoft.com/en-us/azure/aks/kubernetes-dashboard) pour surveiller le déploiement.
+Vous pouvez utiliser [tableau de bord Kubernetes avec Azure Kubernetes Service (AKS)](https://docs.microsoft.com/azure/aks/kubernetes-dashboard) pour surveiller le déploiement.
 
 Utilisez `az aks browse` pour lancer le tableau de bord. 
 

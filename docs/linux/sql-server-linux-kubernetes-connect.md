@@ -10,33 +10,32 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6092f15fe64c96ed004d352408ae6cdac034def9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7fcad17522f4372e696a26a99d4ce1a4af92ea15
+ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47852157"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49356100"
 ---
 # <a name="connect-to-a-sql-server-always-on-availability-group-on-kubernetes"></a>Se connecter à un serveur SQL Server Always On de groupe de disponibilité sur Kubernetes
 
-Pour vous connecter aux instances de SQL Server dans des conteneurs sur un cluster Kubernetes, créez un [service d’équilibrage de charge](http://kubernetes.io/docs/concepts/services-networking/service/#loadbalancer). L’équilibreur de charge transmet les demandes pour l’adresse IP sur le pod qui exécute l’instance de SQL Server.
+Pour vous connecter aux instances de SQL Server dans des conteneurs sur un cluster Kubernetes, créez un [service d’équilibrage de charge](http://kubernetes.io/docs/concepts/services-networking/service/#loadbalancer). L’équilibreur de charge est un point de terminaison. Il conserve une adresse IP et transfère les demandes pour l’adresse IP sur le pod qui exécute l’instance de SQL Server.
 
-Pour vous connecter à un réplica de groupe de disponibilité, créez un service pour les types de réplicas différents. Vous pouvez voir des exemples de services pour différents types de réplicas dans [sql-server-samples](https://github.com/Microsoft/sql-server-samples/blob/master/samples/features/high%20availability/Kubernetes/sample-manifest-files/ag-services.yaml).
+Pour vous connecter à un réplica de groupe de disponibilité, créez un service pour les types de réplicas différents. Vous pouvez voir des exemples de services pour différents types de réplicas dans [sql-server-samples/groupe de disponibilité-services.yaml](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-manifest-files).
 
 * `ag1-primary` pointe vers le réplica principal.
-* `ag1-secondary-sync` pointe vers le réplica secondaire synchrone.
-* `ag1-secondary-async` pointe vers un réplica secondaire asynchrone.
+* `ag1-secondary` pointe vers un réplica secondaire.
 
-Si plusieurs réplicas secondaires du même type existe, Kubernetes achemine votre connexion pour les différents réplicas de manière alternée.
+Si plus d’un réplica secondaire, Kubernetes achemine votre connexion pour les différents réplicas de manière alternée.
 
 ## <a name="create-a-load-balancer-service"></a>Créer un service d’équilibrage de charge
 
-Pour créer un service d’équilibrage de charge pour le réplica principal, copiez `ag1-primary.yaml` de [sql-server-samples]()et mettez-le à jour pour votre groupe de disponibilité.
+Pour créer des services d’équilibrage de charge pour le serveur principal et les réplicas, copiez [ `ag1-services.yaml` ](https://github.com/Microsoft/sql-server-samples/blob/master/samples/features/high%20availability/Kubernetes/sample-manifest-files/ag-services.yaml) de [sql-server-samples](https://github.com/Microsoft/sql-server-samples/blob/master/samples/features/high%20availability/Kubernetes/sample-manifest-file) et mettez-le à jour pour votre groupe de disponibilité.
 
-La commande suivante s’applique le fichier .yaml à votre cluster :
+La commande suivante applique la configuration de le `.yaml` fichier au cluster :
 
 ```kubectl
-kubectl apply -f ag1-primary.yaml
+kubectl apply -f ag1-services.yaml --namespace ag1
 ```
 
 ## <a name="get-the-ip-address-for-your-load-balancer-service"></a>Obtenir l’adresse IP pour votre service d’équilibrage de charge

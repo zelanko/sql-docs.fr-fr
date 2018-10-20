@@ -7,12 +7,12 @@ manager: craigg
 ms.date: 10/08/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 02a1aa7299173315e4f4d6a60eae5f166e8fcdfe
-ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
+ms.openlocfilehash: f998c9f9df91f08d3a4e1877942b901ae5d96aeb
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48877892"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460654"
 ---
 # <a name="how-to-deploy-sql-server-big-data-cluster-on-kubernetes"></a>Comment déployer un cluster SQL Server Big Data sur Kubernetes
 
@@ -47,6 +47,9 @@ Pour obtenir des conseils sur la configuration d’une de ces options de cluster
 
    - [Configurer Minikube](deploy-on-minikube.md)
    - [Configurer Kubernetes sur Azure Kubernetes Service](deploy-on-aks.md)
+   
+> [!TIP]
+> Pour un exemple de script python qui déploie le cluster de données volumineux AKS et SQL Server, consultez [déployer un serveur SQL Server sur Azure Kubernetes Service (ACS) de cluster de données volumineuses](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/aks).
 
 ## <a id="deploy"></a> Déployer le cluster de SQL Server Big Data
 
@@ -108,8 +111,8 @@ La configuration du cluster peut être personnalisée à l’aide d’un ensembl
 | **CONTROLLER_PASSWORD** | Oui | Néant | Le mot de passe pour l’administrateur de cluster. |
 | **KNOX_PASSWORD** | Oui | Néant | Le mot de passe utilisateur de Knox. |
 | **MSSQL_SA_PASSWORD** | Oui | Néant | Le mot de passe de l’utilisateur d’association de sécurité pour l’instance principale de SQL. |
-| **USE_PERSISTENT_VOLUME** | non | true | `true` Pour utiliser les revendications de Volume persistant Kubernetes pour le stockage de pod.  `false` Pour utiliser le stockage éphémère hôte pour le stockage de pod. Consultez le [persistance des données](concept-data-persistence.md) rubrique pour plus d’informations. |
-| **STORAGE_CLASS_NAME** | non | par défaut | Si `USE_PERSISTENT_VOLUME` est `true` cela indique le nom de la classe de stockage Kubernetes à utiliser. Consultez le [persistance des données](concept-data-persistence.md) rubrique pour plus d’informations. |
+| **USE_PERSISTENT_VOLUME** | non | true | `true` Pour utiliser les revendications de Volume persistant Kubernetes pour le stockage de pod.  `false` Pour utiliser le stockage éphémère hôte pour le stockage de pod. Consultez le [persistance des données](concept-data-persistence.md) rubrique pour plus d’informations. Si vous déployez SQL Server du cluster big data sur minikube et USE_PERSISTENT_VOLUME = true, vous devez définir la valeur de `STORAGE_CLASS_NAME=standard`. |
+| **STORAGE_CLASS_NAME** | non | par défaut | Si `USE_PERSISTENT_VOLUME` est `true` cela indique le nom de la classe de stockage Kubernetes à utiliser. Consultez le [persistance des données](concept-data-persistence.md) rubrique pour plus d’informations. Notez que si vous déployez des données volumineuses de cluster sur minikube de SQL Server, le nom de classe de stockage par défaut est différent et vous devez le remplacer en définissant `STORAGE_CLASS_NAME=standard`. |
 | **MASTER_SQL_PORT** | non | 31433 | Port TCP/IP utilisé par l’instance SQL principale est à l’écoute sur le réseau public. |
 | **KNOX_PORT** | non | 30443 | Le port TCP/IP que Apache Knox écoute sur le réseau public. |
 | **GRAFANA_PORT** | non | 30888 | Le port TCP/IP que l’application de surveillance de Grafana écoute sur le réseau public. |
@@ -122,7 +125,7 @@ La configuration du cluster peut être personnalisée à l’aide d’un ensembl
 >1. Pour un cluster local généré avec kubeadm, la valeur de variable d’environnement `CLUSTER_PLATFORM` est `kubernetes`. Également, lorsque USE_PERSISTENT_STORAGE = true, vous devez préconfigurer une classe de stockage Kubernetes et passer d’à l’aide de la STORAGE_CLASS_NAME.
 >1. Assurez-vous que vous encapsulez les mots de passe entre guillemets s’il contient des caractères spéciaux. Vous pouvez définir le MSSQL_SA_PASSWORD sur comme vous le souhaitez, mais assurez-vous qu’ils sont suffisamment complexes et n’utilisent pas le `!`, `&` ou `‘` caractères. Notez que les délimiteurs de guillemets doubles ne fonctionnent que dans les commandes bash.
 >1. Le nom de votre cluster doit être uniquement alphanumériques minuscules, sans espaces. Tous les artefacts de Kubernetes (conteneurs, pods, les jeux avec état, services) pour le cluster seront créées dans un espace de noms avec le même nom que le cluster de nom spécifié.
->1. Le **SA** compte est un administrateur système sur l’instance principale de SQL Server qui est créé pendant l’installation. Après que la création de votre conteneur de SQL Server, la variable d’environnement MSSQL_SA_PASSWORD que vous avez spécifié est détectable en exécutant l’écho MSSQL_SA_PASSWORD $ dans le conteneur. Pour des raisons de sécurité, modifier votre mot de passe SA conformément aux bonnes pratiques documentées [ici](https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker?view=sql-server-2017#change-the-sa-password).
+>1. Le **SA** compte est un administrateur système sur l’instance principale de SQL Server qui est créé pendant l’installation. Après que la création de votre conteneur de SQL Server, la variable d’environnement MSSQL_SA_PASSWORD que vous avez spécifié est détectable en exécutant l’écho MSSQL_SA_PASSWORD $ dans le conteneur. Pour des raisons de sécurité, modifier votre mot de passe SA conformément aux bonnes pratiques documentées [ici](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker?view=sql-server-2017#change-the-sa-password).
 
 Définir les variables d’environnement requises pour le déploiement Aris cluster diffère selon que vous utilisez un client Windows ou Linux.  Choisissez les étapes ci-dessous, selon le système d’exploitation que vous utilisez.
 
@@ -149,6 +152,15 @@ SET DOCKER_EMAIL=<your Docker email, use same as username provided>
 SET DOCKER_PRIVATE_REGISTRY="1"
 ```
 
+Sur minikube, si USE_PERSISTENT_VOLUME = true (valeur par défaut), vous devez également remplacer la valeur par défaut pour la variable d’environnement STORAGE_CLASS_NAME :
+```
+SET STORAGE_CLASS_NAME=standard
+```
+
+Vous pouvez également supprimer à l’aide de volumes persistants sur minikube :
+```
+SET USE_PERSISTENT_VOLUME=false
+```
 ### <a name="linux"></a>Linux
 
 Initialiser les variables d’environnement suivantes :
@@ -170,6 +182,15 @@ export DOCKER_EMAIL=<your Docker email, use same as username provided>
 export DOCKER_PRIVATE_REGISTRY="1"
 ```
 
+Sur minikube, si USE_PERSISTENT_VOLUME = true (valeur par défaut), vous devez également remplacer la valeur par défaut pour la variable d’environnement STORAGE_CLASS_NAME :
+```
+SET STORAGE_CLASS_NAME=standard
+```
+
+Vous pouvez également supprimer à l’aide de volumes persistants sur minikube :
+```
+SET USE_PERSISTENT_VOLUME=false
+```
 ## <a name="deploy-sql-server-big-data-cluster"></a>Déployer le cluster de SQL Server Big Data
 
 L’API de création de cluster est utilisé pour initialiser l’espace de noms Kubernetes et de déployer tous les pods d’application dans l’espace de noms. Pour déployer un cluster SQL Server Big Data sur votre cluster Kubernetes, exécutez la commande suivante :

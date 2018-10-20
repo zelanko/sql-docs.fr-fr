@@ -14,17 +14,17 @@ ms.assetid: 96de63ab-ff48-4e7e-89e0-ffd6a89c63b6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a44f21359f5d35661115582ffc76a00365d2fe8b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2943855784fccd869124a3dad1bc2dc72f6a8cf6
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215859"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460644"
 ---
 # <a name="connecting-to-data-sources-in-the-script-component"></a>Connexion aux sources de données dans le composant Script
   Un gestionnaire de connexions est une unité pratique qui encapsule et stocke les informations requises pour se connecter à une source de données d'un type particulier. Pour plus d’informations, consultez [Connexions Integration Services &#40;SSIS&#41;](../../connection-manager/integration-services-ssis-connections.md).  
   
- Vous pouvez faire en sorte que des gestionnaires de connexions existants soient accessibles par le script personnalisé compris dans le composant source ou de destination en cliquant sur les boutons **Ajouter** et **Supprimer** de la page **Gestionnaires de connexions** de l’**Éditeur de transformation de script**. Toutefois, vous devez écrire votre propre code personnalisé pour charger ou enregistrer vos données et éventuellement ouvrir et fermer la connexion à la source de données. Pour plus d’informations sur la **gestionnaires de connexions** page de la **éditeur de Transformation de Script**, consultez [Configuration du composant Script dans l’éditeur de composant Script] (() Configuring-the-Script-Component-in-the-Script-Component-Editor.MD) et [éditeur de Transformation de Script &#40;Page gestionnaires de connexions&#41;](../../script-transformation-editor-connection-managers-page.md).  
+ Vous pouvez faire en sorte que des gestionnaires de connexions existants soient accessibles par le script personnalisé compris dans le composant source ou de destination en cliquant sur les boutons **Ajouter** et **Supprimer** de la page **Gestionnaires de connexions** de l’**Éditeur de transformation de script**. Toutefois, vous devez écrire votre propre code personnalisé pour charger ou enregistrer vos données et éventuellement ouvrir et fermer la connexion à la source de données. Pour plus d’informations sur la page **Gestionnaires de connexions** de l’**Éditeur de transformation de script**, consultez [Configuration du composant Script dans l’Éditeur de composant de script](configuring-the-script-component-in-the-script-component-editor.md) et [Éditeur de transformation de script &#40;Page Gestionnaires de connexions&#41;](../../script-transformation-editor-connection-managers-page.md).  
   
  Le composant Script crée une classe de collection `Connections` dans l'élément de projet `ComponentWrapper` qui contient un accesseur fortement typé pour chaque gestionnaire de connexions qui porte le même nom que le gestionnaire de connexions lui-même. Cette collection est exposée via la propriété `Connections` de la classe `ScriptMain`. La propriété de l'accesseur renvoie une référence au gestionnaire de connexions sous forme d'instance de l'objet <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.IDTSConnectionManager100>. Par exemple, si vous avez ajouté un gestionnaire de connexion nommé `MyADONETConnection` dans la page Gestionnaires de connexions de la boîte de dialogue, vous pouvez obtenir une référence à ce dernier dans votre script en ajoutant le code suivant :  
   
@@ -56,7 +56,7 @@ ms.locfileid: "48215859"
   
  Pour plus d’informations sur l’utilisation des gestionnaires de connexions avec le composant Script, consultez [Création d’une source avec le composant Script](../../extending-packages-scripting-data-flow-script-component-types/creating-a-source-with-the-script-component.md) et [Création d’une destination avec le composant Script](../../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md).  
   
-![Icône Integration Services (petite)](../../media/dts-16.gif "icône Integration Services (petite)")**rester jusqu'à la Date avec Integration Services** <br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
+![Icône Integration Services (petite)](../../media/dts-16.gif "icône Integration Services (petite)")**rester jusqu'à la Date avec Integration Services**<br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Connexions Integration Services &#40;SSIS&#41;](../../connection-manager/integration-services-ssis-connections.md)   

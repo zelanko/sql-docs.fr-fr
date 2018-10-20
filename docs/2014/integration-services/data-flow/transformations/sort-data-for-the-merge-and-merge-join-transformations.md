@@ -14,12 +14,12 @@ ms.assetid: 22ce3f5d-8a88-4423-92c2-60a8f82cd4fd
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f8ced7cfaef647fb8aaa93a477c69f1d690d0328
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e9ed22ac35505515bfd1f4f1863bb55c59f70bef
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213449"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460594"
 ---
 # <a name="sort-data-for-the-merge-and-merge-join-transformations"></a>Trier des données pour les transformations de fusion et de jointure de fusion
   Dans [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], les transformations de fusion et de jointure de fusion nécessitent des données triées pour leurs entrées. Les données d'entrée doivent être triés physiquement et les options de tri doivent être définies sur les sorties et les colonnes de sortie dans la source ou dans la transformation amont. Si les options de tri indiquent que les données sont triées alors qu'elles ne le sont pas en réalité, les résultats de l'opération de fusion ou de jointure de fusion sont imprévisibles.  
@@ -49,14 +49,14 @@ ms.locfileid: "48213449"
 ## <a name="setting-sort-options-on-the-data"></a>Définition d'options de tri sur les données  
  Deux propriétés de tri importantes doivent être définies pour la source ou la transformation amont qui fournit des données aux transformations de fusion et de jointure de fusion :  
   
--   La propriété `IsSorted` de la sortie qui indique si les données ont été triées. Cette propriété doit être définie sur `True`.  
+-   La propriété `IsSorted` de la sortie qui indique si les données ont été triées. Cette propriété doit avoir la valeur `True`.  
   
     > [!IMPORTANT]  
-    >  Définition de la valeur de la `IsSorted` propriété `True` ne trie pas les données. Cette propriété indique uniquement aux composants en aval que les données ont été précédemment triées.  
+    >  La définition de la propriété `IsSorted` à la valeur `True` ne permet pas de trier les données. Cette propriété indique uniquement aux composants en aval que les données ont été précédemment triées.  
   
--   Le `SortKeyPosition` propriété des colonnes de sortie qui indique si une colonne est triée, ordre de tri de la colonne et la séquence dans laquelle plusieurs colonnes sont triées. Cette propriété doit être définie pour chaque colonne de données triées.  
+-   La Propriété `SortKeyPosition` des colonnes de sortie qui indique si une colonne est triée, son ordre de tri et la séquence dans laquelle plusieurs colonnes sont triées. Cette propriété doit être définie pour chaque colonne de données triées.  
   
- Si vous utilisez une transformation de tri pour trier les données, elle définit ces deux propriétés tel que requis par la transformation de fusion ou de jointure de fusion. Autrement dit, la transformation de tri définit la `IsSorted` propriété de sa sortie à `True`et définit le `SortKeyPosition` propriétés de ses colonnes de sortie.  
+ Si vous utilisez une transformation de tri pour trier les données, elle définit ces deux propriétés tel que requis par la transformation de fusion ou de jointure de fusion. Autrement dit, la transformation de tri définit la propriété `IsSorted` de sa sortie à `True`, puis définit les propriétés `SortKeyPosition` de ses colonnes de sortie.  
   
  Toutefois, si vous n'utilisez pas de transformation de tri pour trier les données, vous devez définir ces propriétés de tri manuellement sur la source ou la transformation amont. Pour définir manuellement les propriétés de tri sur la source ou la transformation en amont, appliquez la procédure suivante.  
   
@@ -75,11 +75,11 @@ ms.locfileid: "48213449"
 6.  Cliquez sur  **\<nom du composant > sortie**et définissez le `IsSorted` propriété `True`.  
   
     > [!NOTE]  
-    >  Si vous définissez manuellement la `IsSorted` propriété de la sortie à `True` et les données ne sont pas triées, il peut être des données manquantes ou les comparaisons de données incorrectes dans la transformation de fusion ou de jointure de fusion en aval lorsque vous exécutez le package.  
+    >  Si vous définissez manuellement la propriété `IsSorted` de la sortie à `True` et que les données ne sont pas triées, il se peut que des données soient manquantes ou que des comparaisons de données incorrectes figurent dans la transformation de fusion ou de jointure de fusion en aval lors de l'exécution du package.  
   
 7.  Développez **Colonnes de sortie**.  
   
-8.  Cliquez sur la colonne que vous souhaitez identifier comme triée et définissez son `SortKeyPosition` propriété une valeur entière non nulle en suivant ces instructions :  
+8.  Cliquez sur la colonne que vous souhaitez identifier comme triée et définissez sa propriété `SortKeyPosition` sur une valeur entière non nulle conformément aux indications suivantes :  
   
     -   La valeur entière doit représenter une séquence numérique, partant de 1 et incrémentée de 1.  
   
@@ -93,13 +93,13 @@ ms.locfileid: "48213449"
   
      `SELECT * FROM MyTable ORDER BY ColumnA, ColumnB DESC, ColumnC`  
   
-     Pour cette instruction, vous devez définir le `SortKeyPosition` propriété pour chaque colonne comme suit :  
+     Pour cette instruction, vous définissez la propriété `SortKeyPosition` de chaque colonne comme suit :  
   
     -   Définissez la propriété `SortKeyPosition` de ColumnA à 1. Cela indique que ColumnA est la première colonne à trier et dans l'ordre croissant.  
   
     -   Définissez la propriété `SortKeyPosition` de ColumnB à -2. Cela indique que ColumnB est la deuxième colonne à trier et dans l'ordre décroissant.  
   
-    -   Définir le `SortKeyPosition` propriété de ColumnC à 3. Cela indique que ColumnC est la troisième colonne à trier et dans l'ordre croissant.  
+    -   Définissez la propriété `SortKeyPosition` de ColumnC à 3. Cela indique que ColumnC est la troisième colonne à trier et dans l'ordre croissant.  
   
 9. Répétez l'étape 8 pour chaque colonne triée.  
   
@@ -111,7 +111,7 @@ ms.locfileid: "48213449"
  [Transformation de fusion](merge-transformation.md)   
  [Transformation de jointure de fusion](merge-join-transformation.md)   
  [Transformations Integration Services](integration-services-transformations.md)   
- [Chemins Integration Services](../integration-services-paths.md)   
- [Tâche de flux de données] ((.. /.. /Control-Flow/Data-Flow-Task.MD)  
+ [Chemins d'accès d'Integration Services](../integration-services-paths.md)   
+ [tâche de flux de données](../../control-flow/data-flow-task.md)  
   
   

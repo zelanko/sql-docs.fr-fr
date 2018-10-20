@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 7adfda1c31bd1fc32dc4149a568cfdd2149ab0b3
-ms.sourcegitcommit: 9d0ff4f3e40db48fc01788684d34719065d159b6
+ms.openlocfilehash: 651e529bf0aa4cd4b4fab7e292e570dbb78e89d5
+ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44724303"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461885"
 ---
 # <a name="tutorial-learn-in-database-analytics-using-r-in-sql-server"></a>: Didacticiel analytique en base de données à l’aide de R dans SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -32,15 +32,15 @@ Le processus de création d’une solution de bout en bout généralement se com
 
 Toutefois, une fois que la solution est créée, vous pouvez facilement la déployer sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’aide de procédures stockées [!INCLUDE[tsql](../../includes/tsql-md.md)] dans l’environnement familier de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].
 
-- [Leçon 1 : Configurer les données de démonstration NYC Taxi](../tutorials/sqldev-download-the-sample-data.md)
+- [Configurer la base de données NYC Taxi](demo-data-nyctaxi-in-sql.md)
 
-- [Leçon 2 : Explorer et visualiser la forme de données et la distribution en appelant des fonctions R dans les procédures stockées](../tutorials/sqldev-explore-and-visualize-the-data.md)
+- [Leçon 1 : Explorer et visualiser la forme de données et la distribution en appelant des fonctions R dans les procédures stockées](../tutorials/sqldev-explore-and-visualize-the-data.md)
 
-- [Leçon 3 : Créer des fonctionnalités de données à l’aide de R dans les fonctions T-SQL](../tutorials/sqldev-create-data-features-using-t-sql.md)
+- [Leçon 2 : Créer des fonctionnalités de données à l’aide de R dans les fonctions T-SQL](sqldev-create-data-features-using-t-sql.md)
   
-- [Leçon 4 : Former et enregistrer un modèle R à l’aide des fonctions et procédures stockées](../r/sqldev-train-and-save-a-model-using-t-sql.md)
+- [Leçon 3 : Former et enregistrer un modèle R à l’aide des fonctions et procédures stockées](sqldev-train-and-save-a-model-using-t-sql.md)
   
-- [Leçon 5 : Code de retour à la ligne R dans une procédure stockée pour l’Opérationnalisation](../tutorials/sqldev-operationalize-the-model.md). 
+- [Leçon 4 : Code de retour à la ligne R dans une procédure stockée pour l’Opérationnalisation](../tutorials/sqldev-operationalize-the-model.md). 
   Une fois que le modèle a été enregistré dans la base de données, appelez-le pour la prédiction dans [!INCLUDE[tsql](../../includes/tsql-md.md)] à l’aide de procédures stockées.
 
 ## <a name="prerequisites"></a>Prérequis
@@ -60,4 +60,4 @@ Avant de commencer le didacticiel :
 ## <a name="next-steps"></a>Étapes suivantes
 
 > [!div class="nextstepaction"]
-> [Leçon 1 : Télécharger les exemples de données](../tutorials/sqldev-download-the-sample-data.md)
+> [Configurer la base de données NYC Taxi](demo-data-nyctaxi-in-sql.md)

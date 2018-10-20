@@ -16,12 +16,12 @@ ms.assetid: 36af59d7-ce96-4a02-8598-ffdd78cdc948
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dde4eb098dd034bf136c9885d3da37305068b016
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ed3c5436a8c3a922ea1a118714c1b429dcc9f286
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129789"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461074"
 ---
 # <a name="contained-databases"></a>Bases de données autonomes
   Une *base de données autonome* est une base de données qui est isolée d'autres bases de données et de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui héberge cette base de données.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] aide l'utilisateur à isoler sa base de données de l'instance de 4 manières différentes.  
@@ -34,7 +34,7 @@ ms.locfileid: "48129789"
   
 -   L'environnement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (DMV, XEvents, etc.) signale des informations relatives à la relation contenant-contenu et peut interagir sur celles-ci.  
   
- Certaines fonctionnalités de bases de données partiellement autonomes, telles que le stockage des métadonnées dans la base de données, s'appliquent à toutes les bases de données [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Certains avantages des bases de données partiellement autonomes, tels que l'authentification de niveau base de données et le classement de catalogue, doivent être activés pour pouvoir être disponibles. Relation contenant-contenu partielle est activée à l’aide de la `CREATE DATABASE` et `ALTER DATABASE` instructions ou à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Pour plus d'informations sur l'activation de l’autonomie de base de données partielle, consultez [Migrer vers une base de données partiellement autonome](migrate-to-a-partially-contained-database.md).  
+ Certaines fonctionnalités de bases de données partiellement autonomes, telles que le stockage des métadonnées dans la base de données, s'appliquent à toutes les bases de données [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Certains avantages des bases de données partiellement autonomes, tels que l'authentification de niveau base de données et le classement de catalogue, doivent être activés pour pouvoir être disponibles. La relation contenant-contenu partielle est activée à l'aide des instructions `CREATE DATABASE` et `ALTER DATABASE` ou de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Pour plus d'informations sur l'activation de l’autonomie de base de données partielle, consultez [Migrer vers une base de données partiellement autonome](migrate-to-a-partially-contained-database.md).  
   
  Cette rubrique contient les sections suivantes.  
   
@@ -126,7 +126,7 @@ ms.locfileid: "48129789"
 ### <a name="benefit-of-contained-database-users-with-alwayson"></a>Avantage des utilisateurs de base de données autonome avec AlwaysOn  
  En réduisant les liens à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les bases de données partiellement autonomes peuvent être utiles pendant le basculement lorsque vous utilisez [!INCLUDE[ssHADR](../../includes/sshadr-md.md)].  
   
- La création d'utilisateurs autonomes permet à l'utilisateur de se connecter directement à la base de données autonome. Il s'agit d'une fonctionnalité très importante dans les scénarios de haute disponibilité et de récupération d'urgence, notamment dans le cadre d'une solution AlwaysOn. Si les utilisateurs sont des utilisateurs à relation contenant-contenu, en cas de basculement, les personnes peuvent se connecter au serveur secondaire sans créer de connexions sur l'instance hébergeant le serveur secondaire. Ceci constitue un avantage immédiat. Pour plus d’informations, consultez [vue d’ensemble des groupes de disponibilité AlwaysOn &#40;SQL Server&#41; ](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) et [prérequis, Restrictions et recommandations pour les groupes de disponibilité AlwaysOn &#40;SQL Server&#41;] ((.. /.. / database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
+ La création d'utilisateurs autonomes permet à l'utilisateur de se connecter directement à la base de données autonome. Il s'agit d'une fonctionnalité très importante dans les scénarios de haute disponibilité et de récupération d'urgence, notamment dans le cadre d'une solution AlwaysOn. Si les utilisateurs sont des utilisateurs à relation contenant-contenu, en cas de basculement, les personnes peuvent se connecter au serveur secondaire sans créer de connexions sur l'instance hébergeant le serveur secondaire. Ceci constitue un avantage immédiat. Pour plus d’informations, consultez [Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) et [Conditions préalables requises, restrictions et recommandations pour les groupes de disponibilité Always On &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
 ### <a name="initial-database-development"></a>Développement initial de la base de données  
  Étant donné qu'un développeur ne peut pas savoir où une nouvelle base de données sera déployée, diminuer les impacts environnementaux déployés sur la base de données réduit le travail et les difficultés du développeur. Dans le modèle sans relation contenant-contenu, le développeur doit prendre en considération les impacts environnementaux potentiels sur la nouvelle base de données et le nouveau programme. Toutefois, en utilisant des bases de données partiellement autonomes, les développeurs peuvent détecter les impacts au niveau de l'instance sur la base de données et les difficultés au niveau de l'instance pour le développeur.  

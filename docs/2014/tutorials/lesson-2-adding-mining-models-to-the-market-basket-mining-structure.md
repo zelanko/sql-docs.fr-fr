@@ -11,12 +11,12 @@ ms.assetid: d96a7a7d-35d7-4b34-abb5-f0822c256253
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 376f93db5b4dbac672846226229858c8ee84f19d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2265baf4c4a342692ae67afcbcc50a0bb0d0a283
+ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107479"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461975"
 ---
 # <a name="lesson-2-adding-mining-models-to-the-market-basket-mining-structure"></a>Leçon 2 : Ajout de modèles d'exploration de données à la structure d'exploration de données Market Basket
   Dans cette leçon, vous allez ajouter deux modèles d’exploration de données à la structure d’exploration de données Market Basket que vous avez créé dans [leçon 1 : création de la Structure d’exploration de données de panier](../../2014/tutorials/lesson-1-creating-the-market-basket-mining-structure.md). Ces modèles d'exploration de données vous permettent de créer des prédictions.  
@@ -28,7 +28,7 @@ ms.locfileid: "48107479"
  Vous examinerez l’effet de la modification de la *MINIMUM_PROBABILTY* paramètre dans une leçon ultérieure.  
   
 ## <a name="alter-mining-structure-statement"></a>Instruction ALTER MINING STRUCTURE  
- Pour ajouter un modèle d’exploration de données qui contient une table imbriquée à une structure d’exploration de données, vous utilisez le [ALTER MINING STRUCTURE &#40;DMX&#41;] (instruction (~/dmx/alter-mining-structure-dmx.md). Le code dans l’instruction peut être divisé en parties suivantes :  
+ Pour ajouter un modèle d’exploration de données qui contient une table imbriquée à une structure d’exploration de données, vous utilisez le [ALTER MINING STRUCTURE &#40;DMX&#41; ](/sql/dmx/alter-mining-structure-dmx?view=sql-server-2016) instruction. Le code dans l’instruction peut être divisé en parties suivantes :  
   
 -   Identification de la structure d'exploration de données  
   
