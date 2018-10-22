@@ -62,8 +62,7 @@ Pour vous connecter, utilisez les étapes fondamentales suivantes :
    | **Type de serveur** | La valeur par défaut est le moteur de base de données ; ne modifiez pas cette valeur. |
    | **Nom du serveur** | Entrez le nom de l’ordinateur Linux SQL Server cible ou son adresse IP. |
    | **Authentification** | Pour SQL Server sur Linux, utilisez **l’authentification SQL Server**. |
-   | **Connexion** | Entrez le nom d'un utilisateur ayant accès à une base de données sur le serveur (par exemple, le compte **AS** par défaut créé pendant la configuration).
- |
+   | **Connexion** | Entrez le nom d'un utilisateur ayant accès à une base de données sur le serveur (par exemple, le compte **AS** par défaut créé pendant la configuration). |
    | **Mot de passe** | Saisissez le mot de passe pour l'utilisateur spécifié (pour le compte **AS** que vous avez créé pendant la configuration). |
 
     ![SQL Server Management Studio : Se connecter au serveur de base de données SQL](./media/sql-server-linux-manage-ssms/connect.png)
