@@ -9,12 +9,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: ce7561130f6d8864dc36b6ab2760a9e5f555afc4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3628c3b8e3e740beb93c5da744f0336a1409d167
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773588"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461064"
 ---
 # <a name="how-to-contribute-to-sql-server-documentation"></a>Guide pratique pour contribuer à la documentation SQL Server
 
@@ -99,8 +99,8 @@ Pour trouver le fichier include applies-to approprié à votre article, utilisez
 
 ## <a name="contributor-resources"></a>Ressources pour les contributeurs
 
-- [Guide des contributeurs pour docs.microsoft.com](https://docs.microsoft.com/en-us/contribute/)
-- [Guide de style de Microsoft](https://docs.microsoft.com/en-us/teamblog/style-guide)
+- [Guide des contributeurs pour docs.microsoft.com](https://docs.microsoft.com/contribute/)
+- [Guide de style de Microsoft](https://docs.microsoft.com/teamblog/style-guide)
 - [Principes de base de Markdown](https://help.github.com/articles/getting-started-with-writing-and-formatting-on-github/)
 
 > [!TIP]
