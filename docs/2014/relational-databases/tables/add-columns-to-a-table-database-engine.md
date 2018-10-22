@@ -69,7 +69,7 @@ ms.locfileid: "48124309"
     > [!NOTE]  
     >  Les valeurs par défaut des propriétés des colonnes sont ajoutées lorsque vous créez une nouvelle colonne, mais vous pouvez les modifier sous l’onglet **Propriétés de la colonne** .  
   
-6.  Lorsque vous avez fini d’ajouter des colonnes, dans le **fichier** menu, choisissez **enregistrer *** nom_table*.  
+6.  Lorsque vous avez fini d’ajouter des colonnes, dans le **fichier** menu, choisissez **enregistrer ** * nom_table*.  
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
