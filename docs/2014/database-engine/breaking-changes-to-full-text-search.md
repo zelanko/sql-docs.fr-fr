@@ -15,12 +15,12 @@ ms.assetid: c55a6748-e5d9-4fdb-9a1f-714475a419c5
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 64c8fc3b51cbf6c96b25218a3ea53be4eac12f21
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 45b13c29af6a9c5e82533a4b66213d1cb1b9dd15
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122399"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460694"
 ---
 # <a name="breaking-changes-to-full-text-search"></a>Modifications importantes apportées à la recherche en texte intégral
   Cette rubrique décrit les modifications importantes apportées à la recherche en texte intégral. Ces modifications peuvent interrompre les applications, scripts ou fonctionnalités fondés sur les versions antérieures de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Il se peut que vous rencontriez ces problèmes lors d'une mise à niveau. Pour plus d'informations, consultez [Use Upgrade Advisor to Prepare for Upgrades](../../2014/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md).  
@@ -31,7 +31,7 @@ ms.locfileid: "48122399"
 ## <a name="breaking-changes-in-full-text-search-in-includesssql11includessssql11-mdmd"></a>Modifications importantes de la recherche en texte intégral dans [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
   
 ### <a name="collation-changed-for-name-column-in-sysfulltextlanguages"></a>Classement modifié pour la colonne de nom dans sys.fulltext_languages  
- Le classement de la langue **nom** colonne dans l’affichage catalogue [sys.fulltext_languages &#40;Transact-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql) a été remplacé par le classement fixe de la base de données de ressource pour le par défaut le classement sélectionné pour l’instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Cette modification permet de comparer les valeurs dans le **nom** colonne lorsque vous joignez le [sys.syslanguages &#40;Transact-SQL&#41; ](/sql/relational-databases/system-compatibility-views/sys-syslanguages-transact-sql) afficher avec **sys.fulltext_languages** . Par exemple, vous pouvez définir des requêtes toutes les bases de données dont la langue de texte intégral par défaut est différente de la langue de la base de données par défaut.  
+ Le classement de la colonne **name** de la langue dans l’affichage catalogue [sys.fulltext_languages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql) est passé d’un classement fixe de la base de données de ressources au classement par défaut sélectionné pour l’instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Cette modification permet de comparer les valeurs dans la colonne **name** au moment où vous joignez la vue [sys.syslanguages &#40;Transact-SQL&#41;](/sql/relational-databases/system-compatibility-views/sys-syslanguages-transact-sql) et **sys.fulltext_languages**. Par exemple, vous pouvez définir des requêtes toutes les bases de données dont la langue de texte intégral par défaut est différente de la langue de la base de données par défaut.  
   
 ## <a name="breaking-changes-in-full-text-search-in-sql-server-2008"></a>Dernières modifications dans la recherche en texte intégral dans SQL Server 2008  
  Les modifications décrites ci-dessous s'appliquent à la recherche en texte intégral entre [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] et [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] et les versions ultérieures.  
@@ -59,6 +59,6 @@ ms.locfileid: "48122399"
   
 ## <a name="see-also"></a>Voir aussi  
  [Changements de comportement pour la recherche en texte intégral](../relational-databases/search/full-text-search.md)   
- [Recherche en texte intégral] ((.. / relational-databases/search/full-text-search.md)  
+ [Recherche en texte intégral](../relational-databases/search/full-text-search.md)  
   
   
