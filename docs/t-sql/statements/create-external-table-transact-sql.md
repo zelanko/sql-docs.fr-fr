@@ -22,12 +22,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0dc1fdb499855be399f0d2dc77b44eae452615b6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 803b1a72edb5a6c0a951eb9d199a4d7ff27526fe
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649372"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460939"
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -144,8 +144,7 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
   
  \<column_definition> [ ,...*n* ] CREATE EXTERNAL TABLE autorise une ou plusieurs définitions de colonne. CREATE EXTERNAL TABLE et CREATE TABLE utilisent la même syntaxe pour définir une colonne. Il existe toutefois une exception à cela : vous ne pouvez pas utiliser DEFAULT CONSTRAINT sur des tables externes. Pour plus d’informations sur les définitions de colonne et leurs types de données, consultez [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md) et [CREATE TABLE dans Azure SQL Database](http://msdn.microsoft.com/library/d53c529a-1d5f-417f-9a77-64ccc6eddca1).  
   
- Les définitions de colonne, notamment les types de données et le nombre de colonnes, doivent correspondre aux données des fichiers externes. En cas de non correspondance, les lignes du fichier sont rejetées lors de l’interrogation des données. Pour plus d’informations sur la façon de mapper des types de données de différentes sources de données externes, consultez [Mappage de types avec PolyBase](../../relational-databases/polybase/polybase-type-mapping.md).  
-  
+ Les définitions de colonne, notamment les types de données et le nombre de colonnes, doivent correspondre aux données des fichiers externes. En cas de non correspondance, les lignes du fichier sont rejetées lors de l’interrogation des données.  
   
  LOCATION =  '*folder_or_filepath*'  
  Spécifie le dossier, ou le chemin et le nom du fichier, où se trouvent les données Hadoop ou Azure Blob Storage. L’emplacement commence au dossier racine. Le dossier racine est l’emplacement de données qui est spécifié dans la source de données externe.  

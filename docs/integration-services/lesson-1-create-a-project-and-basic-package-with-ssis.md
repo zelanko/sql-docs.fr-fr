@@ -11,16 +11,14 @@ ms.assetid: 84d0b877-603f-4f8e-bb6b-671558ade5c2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c3626fb6bb6c3ef42d465aa21e8eed9086c161d1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 98f2039da862c64e8f223afdedba7889627a5116
+ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608447"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49384074"
 ---
 # <a name="lesson-1-create-a-project-and-basic-package-with-ssis"></a>Leçon 1 : Créer un projet et un package de base avec SSIS
-
- > Pour accéder au contenu relatif aux versions précédentes de SQL Server, consultez [Leçon 1 : Création du package de base et du package du projet](lesson-1-create-a-project-and-basic-package-with-ssis.md).
 
 Au cours de cette leçon, vous allez créer un package ETL simple qui extrait des données d'une seule source de fichier plat, transforme ces données en utilisant deux composants de transformation de recherche et les écrit dans la table de faits **FactCurrency** de la base de données **AdventureWorksDW2012**. Dans le cadre de cette leçon, vous allez apprendre à créer de nouveaux packages, ajouter et configurer des sources de données et des destinations et enfin, à utiliser le nouveau flux de contrôle et les composants de flux de données.  
   
@@ -30,7 +28,7 @@ Au cours de cette leçon, vous allez créer un package ETL simple qui extrait de
 ## <a name="understanding-the-package-requirements"></a>Connaissances préalables à la création d'un package  
 Ce didacticiel nécessite Microsoft SQL Server Data Tools.  
   
-Pour plus d'informations sur l'installation de SQL Server Data Tools, consultez [Téléchargement de SQL Server Data Tools](http://msdn.microsoft.com/data/hh297027).  
+Pour plus d’informations sur l’installation de SQL Server Data Tools, consultez [Téléchargement de SQL Server Data Tools](http://msdn.microsoft.com/data/hh297027).  
   
 Avant de créer un package, vous devez maîtriser les connaissances relatives au formatage utilisé pour les données sources et la destination. Une fois ces connaissances maîtrisées, vous êtes prêt à définir les transformations nécessaires pour mapper les données source avec les données de destination.  
   

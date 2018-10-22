@@ -8,10 +8,10 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 59b0d8acbf6f0b99b3437dc866435595af00ab55
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
+ms.lasthandoff: 10/16/2018
 ms.locfileid: "47639777"
 ---
 # <a name="whats-new-in-sql-server-reporting-services-ssrs"></a>Nouveautés de SQL Server Reporting Services (SSRS)
@@ -87,7 +87,7 @@ Vous pouvez créer directement dans le [!INCLUDE[ssRSWebPortal-Non-Markdown](../
   
  ![ssrs-webportal-kpi](../reporting-services/media/ssrs-webportal-kpi.png)
  
- Pour plus d’informations, consultez [Utilisation des indicateurs de performance clés dans le portail web](http://msdn.microsoft.com/a28cf500-6d47-4268-a248-04837e7a09eb).
+ Pour plus d’informations, consultez [Utilisation des indicateurs de performance clés dans le portail web](http://msdn.microsoft.com/a28cf500-6d47-4268-a248-04837e7a09eb)
   
  
  ### <a name="mobile-reports"></a>Rapports mobiles
@@ -95,7 +95,7 @@ Vous pouvez créer directement dans le [!INCLUDE[ssRSWebPortal-Non-Markdown](../
 Les rapports mobiles Reporting Services sont des rapports dédiés qui sont optimisés pour un grand nombre de facteurs de forme et qui permettent aux utilisateurs d’accéder de manière optimale aux rapports sur les appareils mobiles. Les rapports mobiles sont dotés d’un large éventail de visualisations, allant des graphiques de temps, à catégories et de comparaison aux cartes personnalisées, en passant par les arborescences. Connectez vos rapports mobiles à de nombreuses sources de données, notamment des données multidimensionnelles et tabulaires SQL Server Analysis Services locales. Disposez vos rapports mobiles sur une aire de conception avec des lignes et des colonnes de grille réglables et des éléments de rapport mobile flexibles bien adaptés à la taille de votre écran. Ensuite, enregistrez ces rapports mobiles sur un serveur Reporting Services, puis affichez-les et exploitez-les dans un navigateur ou dans l’application mobile Power BI sur un appareil iPad, iPhone, Windows 10 ou sur un téléphone Android.
   
 #### <a name="mobile-report-publisher"></a>Éditeur de rapports mobiles  
- L’[!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)] vous permet de créer et de publier des rapports mobiles SQL Server sur votre [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
+ L’ [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)]vous permet de créer et de publier des rapports mobiles SQL Server sur votre [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)].  
   
  ![SS_MRP_LayoutTabSmall](../reporting-services/media/ss-mrp-layouttabsm.png "SS_MRP_LayoutTabSmall")  
   
@@ -170,7 +170,7 @@ http://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportf
 
 ### <a name="report-builder-improvements"></a>Améliorations du Générateur de rapports
 
-**Nouvelle interface utilisateur du Générateur de rapports :** la principale interface utilisateur du [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)] a maintenant une apparence moderne avec des éléments simplifiés.  
+**Nouvelle interface utilisateur du Générateur de rapports :** la principale interface utilisateur du [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)] a maintenant une apparence moderne avec des éléments simplifiés.  
   
 |||  
 |-|-|  

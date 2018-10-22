@@ -20,17 +20,16 @@ ms.assetid: 2b6b5c61-c5bd-49d2-8c0c-b7cf15857906
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5dd4d957386cc352bf218e72204f91e937d9605d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f1aa8edf745211beb04a52d3d7c3b7f8363d7988
+ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668687"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49383534"
 ---
 # <a name="for-xml-sql-server"></a>FOR XML (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
- > Pour accéder au contenu relatif aux versions précédentes de SQL Server, consultez [FOR XML (SQL Server)](for-xml-sql-server.md).
-
+ 
   Une requête SELECT retourne les résultats sous la forme d'un ensemble de lignes. Vous pouvez si vous le souhaitez récupérer les résultats d'une requête SQL sous forme de code XML en spécifiant la clause FOR XML dans la requête. La clause FOR XML peut être utilisée dans les requêtes de premier niveau et dans les sous-requêtes. La clause FOR XML de premier niveau ne peut être utilisée que dans l'instruction SELECT. Dans les sous-requêtes, FOR XML peut être utilisée dans les instructions INSERT, UPDATE et DELETE. Elle peut être également utilisée dans les instructions d'assignation.  
   
  Dans une clause FOR XML, vous spécifiez l'un des modes suivants :  
