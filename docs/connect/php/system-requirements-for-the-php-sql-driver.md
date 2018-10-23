@@ -13,12 +13,12 @@ ms.assetid: 5db4b75f-c605-4785-9560-399a533c0fc9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2c01d4f6af72fdc487b559a12f31bfcb447971cb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3784a3ba9b05bde0fafea486ddfdf3a968f96914
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603799"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461124"
 ---
 # <a name="system-requirements-for-the-microsoft-drivers-for-php-for-sql-server"></a>Configuration système requise pour Microsoft Drivers for PHP for SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -53,7 +53,7 @@ Pour plus d’informations sur le téléchargement et l’installation des derni
 
 ## <a name="odbc-driver"></a>Pilote ODBC
 
-La version correcte du pilote Microsoft ODBC pour SQL Server est requis sur l’ordinateur sur lequel s’exécute PHP. Vous pouvez télécharger tout pris en charge les versions du pilote pour les plateformes prises en charge sur [cette page](https://docs.microsoft.com/en-us/sql/connect/odbc/download-odbc-driver-for-sql-server?view=sql-server-2017).
+La version correcte du pilote Microsoft ODBC pour SQL Server est requis sur l’ordinateur sur lequel s’exécute PHP. Vous pouvez télécharger tout pris en charge les versions du pilote pour les plateformes prises en charge sur [cette page](https://docs.microsoft.com/sql/connect/odbc/download-odbc-driver-for-sql-server?view=sql-server-2017).
 
 Si vous téléchargez la version Windows du pilote sur une version 64 bits de Windows, le programme d’installation ODBC 64 bits installe des pilotes ODBC 32 bits et 64 bits. Si vous utilisez une version 32 bits de Windows, utilisez ODBC x86 programme d’installation. Sur les plateformes non Windows, les versions 64 bits uniquement du pilote sont disponibles.
 

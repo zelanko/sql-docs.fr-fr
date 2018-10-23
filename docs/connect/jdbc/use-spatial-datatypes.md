@@ -11,18 +11,18 @@ ms.assetid: ''
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 726711458f62011fc7bcaef268887813c9c9c3d9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0a51d15875051fbe2a2a034526a95c16bed076db
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47842003"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460544"
 ---
 # <a name="using-spatial-datatypes"></a>Utilisation des types de données spatiales
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Les types de données spatiales (géométrie et géographie) sont pris en charge préversion de pilote JDBC 6.5.0. Types de données spatiales ne sont actuellement pas pris en charge avec des procédures stockées, les paramètres à valeurs de Table (TVP), copie en bloc et Always Encrypted. Cette page affiche les que différents cas d’usage des types de données Geometry et Geography avec le pilote JDBC. Pour une vue d’ensemble sur les types de données spatiales, consultez [vue d’ensemble des Types de données spatiales](https://docs.microsoft.com/en-us/sql/relational-databases/spatial/spatial-data-types-overview) page.
+Les types de données spatiales (géométrie et géographie) sont pris en charge préversion de pilote JDBC 6.5.0. Types de données spatiales ne sont actuellement pas pris en charge avec des procédures stockées, les paramètres à valeurs de Table (TVP), copie en bloc et Always Encrypted. Cette page affiche les que différents cas d’usage des types de données Geometry et Geography avec le pilote JDBC. Pour une vue d’ensemble sur les types de données spatiales, consultez [vue d’ensemble des Types de données spatiales](https://docs.microsoft.com/sql/relational-databases/spatial/spatial-data-types-overview) page.
 
 ## <a name="creating-a-geometry--geography-object"></a>Création d’une géométrie / objet géographique
 

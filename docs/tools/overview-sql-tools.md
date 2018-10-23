@@ -13,12 +13,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 1ff16d7a8b2253fc793db00cb46282539415ff86
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 359144187de1b1a780ba3d866f4a4881c2444442
+ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767367"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49643937"
 ---
 # <a name="sql-tools-and-utilities-for-sql-server-azure-sql-database-and-azure-sql-data-warehouse"></a>Outils SQL et des utilitaires pour SQL Server, base de données SQL Azure et Azure SQL Data Warehouse
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -72,6 +72,7 @@ Les principaux outils de ligne de commande sont les suivantes :
 |:--|:--|
 | [Gestionnaire de configuration](../tools/configuration-manager/sql-server-configuration-manager-help.md) | Utilisez le Gestionnaire de Configuration SQL Server pour configurer les services SQL Server et de configurer la connectivité réseau. Configuration Manager s’exécute sur Windows|
 | [Assistant de migration SQL Server](../ssma/sql-server-migration-assistant.md) | Utilisez l’Assistant Migration SQL Server pour automatiser la migration de bases de données vers SQL Server à partir de Microsoft Access, DB2, MySQL, Oracle et Sybase.|
+| [Assistant Expérimentation de base de données](../dea/database-experimentation-assistant-overview.md) | Utiliser l’Assistant expérimentation de base de données pour évaluer la version ciblée de SQL pour une charge de travail donnée. |
 | [Distributed Replay](../tools/distributed-replay/install-distributed-replay-overview.md) | Utilisez la fonctionnalité de Distributed Replay pour vous aider à évaluer l’impact de futures mises à niveau de SQL Server. Distributed Replay permet également de vous aider à évaluer l’impact du matériel et de mises à niveau du système d’exploitation et de réglage de SQL Server. |
 | [ssbdiagnose](../tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md) | L’utilitaire ssbdiagnose signale des problèmes dans les conversations Service Broker ou la configuration des services de Service Broker. |
 

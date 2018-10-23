@@ -30,17 +30,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 94a3adf850c633f3ba825da86a70ff560fb1edf4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8455d2c3681b78fe892e91d20857ee2ad7a7dfb2
+ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47600527"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49383844"
 ---
 # <a name="bcp-utility"></a>Utilitaire bcp
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-
- > Pour accéder au contenu relatif aux versions précédentes de SQL Server, consultez [Utilitaire bcp](bcp-utility.md).
 
  > Pour obtenir la dernière version de l’utilitaire bcp, consultez [14.0 d’utilitaires de ligne de commande Microsoft pour SQL Server ](http://go.microsoft.com/fwlink/?LinkID=825643)
 
@@ -133,7 +131,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  **-b** _**batch\_size**_<a name="b"></a>  
  Nombre de lignes par lot de données importées. Chaque lot est importé et consigné dans un journal comme transaction distincte important le lot complet avant d'être validée. Par défaut, toutes les lignes du fichier de données sont importées comme un lot. Pour distribuer les lignes entre les différents lots, spécifiez une valeur de *batch_size* inférieure au nombre de lignes du fichier de données. Si la transaction d'un lot échoue, seules les insertions du lot actif sont restaurées. Les lots dont l'importation a été effectuée par des transactions validées ne sont pas affectés par une défaillance ultérieure.  
   
- N’utilisez pas cette option avec l’option **-h "** ROWS_PER_BATCH **=**_bb_**"**.  
+ N’utilisez pas cette option avec l’option **-h "** ROWS_PER_BATCH **=**_bb_**"** .  
  
  **-c**<a name="c"></a>  
  Effectue l'opération en utilisant un type de données caractères. Cette option n’affiche aucune invite pour aucun champ, mais utilise le type de données **char** comme type de stockage, n’ajoute pas de préfixe et emploie **\t** (tabulation) comme séparateur de champ et **\r\n** (nouvelle ligne) comme indicateur de fin de ligne. **-c** n’est pas compatible avec **-w**.  
@@ -323,7 +321,7 @@ Copie en bloc en faisant appel aux types de données natifs (base de données) d
  Pour plus d’informations, consultez la section [Notes](#remarks), plus loin dans cette rubrique.  
   
  **r -**  _**ligne\_terme**_<a name="r"></a>  
- Spécifie l’indicateur de fin de ligne. Par défaut, il s’agit du caractère de saut de ligne ( **\n** ). Utilisez ce paramètre pour remplacer l'indicateur de fin de ligne par défaut. Pour plus d’informations, consultez [Specify Field and Row Terminators &#40;SQL Server&#41;](../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md).  
+ Spécifie l’indicateur de fin de ligne. Par défaut, il s’agit du caractère de saut de ligne ( **\n** ). Utilisez ce paramètre pour remplacer l'indicateur de fin de ligne par défaut. Pour plus d’informations, consultez [Spécifier des indicateurs de fin de champ et de fin de ligne &#40;SQL Server&#41;](../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md).  
   
  Si vous spécifiez l'indicateur de fin de ligne en notation hexadécimale dans une commande bcp.exe, la valeur sera tronquée à 0x00. Par exemple, si vous spécifiez 0x410041, 0x41 sera utilisé.  
   
@@ -559,7 +557,7 @@ bcp WideWorldImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTrans
 ```  
   
 ### <a name="d-copying-data-from-a-file-to-a-table"></a>D. Copie de données depuis un fichier dans une table  
-Les exemples suivants illustrent l’option **in** sur la table `WideWorldImporters.Warehouse.StockItemTransactions_bcp`, à l’aide de fichiers créés précédemment.
+Les exemples suivants illustrent l’option **in** sur la table `WideWorldImporters.Warehouse.StockItemTransactions_bcp` , à l’aide de fichiers créés précédemment.
   
 - **Basic**  
 Cet exemple utilise le fichier de données `StockItemTransactions_character.bcp` créé précédemment.
