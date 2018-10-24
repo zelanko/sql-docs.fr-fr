@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 67d8513e-8a70-464b-b87f-e91d010cfd82
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1c1af1b9b6e1e9f78469522a90cf589f484f2964
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 97a3cac8090852d39f1b995cc414e43666246aa8
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47741507"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906479"
 ---
 # <a name="tutorial-format-text-report-builder"></a>Didacticiel : mettre en forme du texte (Générateur de rapports)
 
@@ -197,7 +197,7 @@ Créez ce tableau dans lequel vous pourrez placer les liens hypertexte et le tex
   
 8.  Cliquez sur **Conception** pour repasser en mode Conception.  
   
-9. Sélectionnez la cellule **Total** dans la colonne **LinkText** , puis maintenez la touche Maj enfoncée et sélectionnez les deux cellules à sa droite : la cellule vide dans la colonne **Product** et la cellule `[Sum(Sales)]` dans la colonne **Sales** .  
+9. Sélectionnez la cellule **Total** dans la colonne **LinkText** , puis maintenez la touche MAJ enfoncée et sélectionnez les deux cellules à sa droite : la cellule vide dans la colonne **Product** et la cellule `[Sum(Sales)]` dans la colonne **Sales**.  
   
 11. Ces trois cellules étant sélectionnées, cliquez avec le bouton droit sur l’une d’elles et cliquez sur **Supprimer la ligne**.  
 

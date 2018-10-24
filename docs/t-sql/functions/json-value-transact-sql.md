@@ -5,9 +5,7 @@ ms.date: 07/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: douglasl
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - JSON_VALUE
@@ -20,12 +18,12 @@ ms.assetid: cd016e14-11eb-4eaf-bf05-c7cfcc820a10
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
-ms.openlocfilehash: 8a688156d1d31a7f3b0dfaa90390dc091eeea950
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: b311660253d893673927966ffe6309d2f3530d79
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38023019"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47687299"
 ---
 # <a name="jsonvalue-transact-sql"></a>JSON_VALUE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -46,7 +44,7 @@ JSON_VALUE ( expression , path )
  *expression*  
  Expression. En règle générale, nom d’une variable ou d’une colonne qui contient du texte JSON.  
  
- Si **JSON_VALUE** trouve des données JSON non valides dans *expression* avant de rechercher la valeur identifiée par *path*, la fonction retourne une erreur. Si **JSON_VALUE* ne trouve pas la valeur identifiée par *path*, la fonction analyse l’intégralité du texte et retourne une erreur si elle trouve des données JSON non valides, n’importe où dans *expression*.
+ Si **JSON_VALUE** trouve des données JSON non valides dans *expression* avant de rechercher la valeur identifiée par *path*, la fonction retourne une erreur. Si **JSON_VALUE** ne trouve pas la valeur identifiée par *path*, la fonction analyse l’intégralité du texte et retourne une erreur si elle trouve des données JSON non valides n’importe où dans *expression*.
   
  *path*  
  Chemin JSON qui spécifie la propriété à extraire. Pour plus d’informations, consultez [Expressions de chemin JSON &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md).  

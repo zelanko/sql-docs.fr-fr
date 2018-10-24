@@ -5,23 +5,20 @@ ms.date: 03/02/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: configuration
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - default language option
 ms.assetid: c08c26d8-5a62-487e-a4ee-4c529e4f9287
-caps.latest.revision: 27
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d23377ab94d14be40be698089aea48b71b1ed906
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e15ad7915b33c67e09325a38b7975430c5c8ce85
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32866254"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47784457"
 ---
 # <a name="configure-the-default-language-server-configuration-option"></a>Configurer l'option de configuration de serveur default language
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +45,7 @@ ms.locfileid: "32866254"
   
 ###  <a name="Recommendations"></a> Recommandations  
   
--   La langue par défaut pour une session ouverte peut être remplacée en utilisant CREATE LOGIN ou ALTER LOGIN. Elle correspond à celle définie dès l'ouverture de la session, à moins qu’elle ne soit remplacée à chaque session à l’aide des API ODBC (Open Database Connectivity) ou OLE DB. Remarque : Vous ne pouvez définir l’option **default language** que sur un identificateur de langue existant dans [sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) (0-32). Lorsque vous utilisez des bases de données à relation contenant-contenu, il est possible de définir une langue par défaut pour une base de données à l'aide de CREATE DATABASE ou de ALTER DATABASE, et pour les utilisateurs de bases de données à relation contenant-contenu, à l'aide de CREATE USER ou de ALTER USER. La langue par défaut dans une base de données à relation contenant-contenu peut être définie à l'aide de la valeur **langid** , du nom de la langue, ou d'un alias de langue répertorié dans **sys.syslanguages**.  
+-   La langue par défaut pour une session ouverte peut être remplacée en utilisant CREATE LOGIN ou ALTER LOGIN. Elle correspond à celle définie dès l'ouverture de la session, à moins qu’elle ne soit remplacée à chaque session à l’aide des API ODBC (Open Database Connectivity) ou OLE DB. Remarque : Vous ne pouvez définir l’option **default language** que sur un identificateur de langue existant dans [sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) (0-32). Lorsque vous utilisez des bases de données autonomes, il est possible de définir une langue par défaut pour une base de données à l'aide de CREATE DATABASE ou de ALTER DATABASE, et pour les utilisateurs de bases de données autonomes, à l'aide de CREATE USER ou de ALTER USER. La langue par défaut dans une base de données autonome peut être définie à l'aide de la valeur **langid**, du nom de la langue, ou d'un alias de langue répertorié dans **sys.syslanguages**.  
   
 ###  <a name="Security"></a> Sécurité  
   
@@ -59,11 +56,11 @@ ms.locfileid: "32866254"
   
 #### <a name="to-configure-the-default-language-option"></a>Pour configurer l'option default language  
   
-1.  Dans l’Explorateur d’objets, cliquez avec le bouton droit sur un serveur, puis sélectionnez **Propriétés**.  
+1.  Dans l’Explorateur d’objets, cliquez avec le bouton droit sur un serveur et sélectionnez **Propriétés**.  
   
-2.  Cliquez sur l’onglet **Paramètres généraux** .  
+2.  Cliquez sur l’onglet **Avancé**.  
   
-3.  Dans la zone **Langue par défaut pour l'utilisateur** , sélectionnez la langue dans laquelle [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit afficher les messages système.  
+3.  Dans la zone **Langue par défaut**, sélectionnez la langue dans laquelle [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit afficher les messages système.  
   
      La langue par défaut est l'anglais.  
   

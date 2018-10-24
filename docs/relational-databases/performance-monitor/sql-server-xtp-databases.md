@@ -14,12 +14,12 @@ ms.assetid: 488ff55e-173f-43f6-9bdb-67b35e7cebfe
 author: dagiro
 ms.author: v-dagir
 manager: craigg
-ms.openlocfilehash: c06b0b8a55be4d231ce6593538168fad440f08c5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 27d270866846b055c73eb5801c0a7aa8a41088b7
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47852171"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906259"
 ---
 # <a name="sql-server-xtp-databases"></a>Bases de données SQL Server XTP
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,11 +41,11 @@ Le tableau suivant décrit les compteurs **Bases de données SQL Server XTP** .
 |**E/S de vidage des threads figés/s (256 Ko)**|Nombre de demandes d’E/S de 256 Ko rencontrées lors du traitement de la page de vidage situées au-dessus du seuil de blocage et qui ne peuvent par conséquent pas être émises.|
 |**E/S de vidage des threads figés/s (4 Ko)**|Nombre de demandes d’E/S de 4 Ko rencontrées lors du traitement de la page de vidage situées au-dessus du seuil de blocage et qui ne peuvent par conséquent pas être émises.|
 |**E/S de vidage des threads figés/s (64 Ko)**|Nombre de demandes d’E/S de 64 Ko rencontrées lors du traitement de la page de vidage situées au-dessus du seuil de blocage et qui ne peuvent par conséquent pas être émises.|
-|**Nombre de listes libres IoPagePool256K**|Nombre de pages dans la liste libre du pool de pages d’E/S de 256 Ko. Si cette valeur tombe à zéro, un nombre plus important de pages est alloué à partir de l’allocateur principal. Il s'agit d'un compteur de très bas niveau, non destiné au client.|
+|**Nombre de listes libres IoPagePool256K**|Nombre de pages dans la liste libre du pool de pages de 256 000 E/S. Si cette valeur tombe à zéro, un nombre plus important de pages est alloué à partir de l’allocateur principal. Il s'agit d'un compteur de très bas niveau, non destiné au client.|
 |**IoPagePool256K alloués au total**|Nombre total de pages allouées et détenues par le pool de page d’E/S de 256 Ko à partir de l’allocateur principal. Il s'agit d'un compteur de très bas niveau, non destiné au client.|
-|**Nombre de listes libres IoPagePool4K**|Nombre de pages dans la liste libre du pool de pages d’E/S de 4 Ko. Si cette valeur tombe à zéro, un nombre plus important de pages est alloué à partir de l’allocateur principal. Il s'agit d'un compteur de très bas niveau, non destiné au client.|
+|**Nombre de listes libres IoPagePool4K**|Nombre de pages dans la liste libre du pool de pages de 4 000 E/S. Si cette valeur tombe à zéro, un nombre plus important de pages est alloué à partir de l’allocateur principal. Il s'agit d'un compteur de très bas niveau, non destiné au client.|
 |**IoPagePool4K alloués au total**|Nombre total de pages allouées et détenues par le pool de pages d’E/S de 4 Ko à partir de l’allocateur principal. Il s'agit d'un compteur de très bas niveau, non destiné au client.|
-|**Nombre de listes libres IoPagePool64K**|Nombre de pages dans la liste libre du pool de pages d’E/S de 64 Ko. Si cette valeur tombe à zéro, un nombre plus important de pages est alloué à partir de l’allocateur principal. Il s'agit d'un compteur de très bas niveau, non destiné au client.|
+|**Nombre de listes libres IoPagePool64K**|Nombre de pages dans la liste libre du pool de pages de 64 000 E/S. Si cette valeur tombe à zéro, un nombre plus important de pages est alloué à partir de l’allocateur principal. Il s'agit d'un compteur de très bas niveau, non destiné au client.|
 |**IoPagePool64K alloués au total**|Nombre total de pages allouées et détenues par le pool de pages d’E/S de 64 Ko à partir de l’allocateur principal. Il s'agit d'un compteur de très bas niveau, non destiné au client.|
 |**Nombre de développements 256 Ko MtLog**|Nombre de fois qu’un 256 Ko MtLog a été développé. Il s'agit d'un compteur de très bas niveau, non destiné au client.|
 |**E/S 256 Ko MtLog en suspens**|Nombre de demandes d’E/S de 256 Ko en suspens émises par MtLog.|

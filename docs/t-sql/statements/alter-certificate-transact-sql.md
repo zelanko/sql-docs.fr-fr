@@ -5,9 +5,7 @@ ms.date: 06/18/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER_CERTIFICATE_TSQL
@@ -22,17 +20,16 @@ helpviewer_keywords:
 - ALTER CERTIFICATE statement
 - certificates [SQL Server], modifying
 ms.assetid: da4dc25e-72e0-4036-87ce-22de83160836
-caps.latest.revision: 46
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1d73be79f224a4d95e7c397b55ee1441d5d0cdd9
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 1e83bc2c83f654ae82ed5a84c33f5801c5a06549
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43071364"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47781337"
 ---
 # <a name="alter-certificate-transact-sql"></a>ALTER CERTIFICATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
@@ -73,13 +70,13 @@ ALTER CERTIFICATE certificate_name
  *certificate_name*  
  Nom unique sous lequel le certificat est connu dans la base de données.  
   
- FILE **='***path_to_private_key***'**  
+ FILE **='**_path\_to\_private\_key_**'**  
  Spécifie le chemin d'accès complet, y compris le nom du fichier, à la clé privée. Ce paramètre peut être un chemin d'accès local ou un chemin d'accès UNC à un emplacement réseau. L'accès au fichier a lieu dans le contexte de sécurité du compte de service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Lorsque vous utilisez cette option, vous devez vérifier que le compte de service a accès au fichier spécifié.  
   
- DECRYPTION BY PASSWORD **='***key_password***'**  
+ DECRYPTION BY PASSWORD **='**_key\_password_**'**  
  Spécifie le mot de passe exigé pour déchiffrer la clé privée.  
   
- ENCRYPTION BY PASSWORD **='***password***'**  
+ ENCRYPTION BY PASSWORD **='**_password_**'**  
  Spécifie le mot de passe utilisé pour chiffrer la clé privée du certificat dans la base de données. *password* doit satisfaire aux critères de la stratégie de mot de passe Windows de l’ordinateur qui exécute l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d'informations, consultez [Password Policy](../../relational-databases/security/password-policy.md).  
   
  REMOVE PRIVATE KEY  

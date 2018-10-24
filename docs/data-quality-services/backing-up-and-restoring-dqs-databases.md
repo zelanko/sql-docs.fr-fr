@@ -12,12 +12,12 @@ ms.assetid: f3091f62-2234-4a80-a615-cf14c2a1da85
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 86e7ba74fa6b5a3cfc1a551edf16ad91c1f2e5af
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b2ff315ef171a93a00c3e251b60ceb147e6637aa
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47672647"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119816"
 ---
 # <a name="backing-up-and-restoring-dqs-databases"></a>Sauvegarde et restauration de bases de données DQS
 
@@ -29,7 +29,7 @@ ms.locfileid: "47672647"
   
 ###  <a name="Prerequisites"></a> Conditions préalables  
   
--   Vous devez connaître ou mémoriser le mot de passe de la clé principale de base de données que vous avez fourni pendant l'installation du serveur DQS.  
+-   Vous devez connaître ou mémoriser le mot de passe de la clé principale de base de données que vous avez fournie pendant l'installation du serveur DQS.  
   
 -   Vérifiez qu'aucune activité ou aucun processus n'est en cours d'exécution dans DQS. Pour ce faire, utilisez l'écran **Analyse des activités** . Pour plus d'informations sur l'utilisation de cet écran, consultez [Monitor DQS Activities](../data-quality-services/monitor-dqs-activities.md).  
   

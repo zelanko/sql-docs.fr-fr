@@ -5,24 +5,21 @@ ms.date: 05/17/2016
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Windows authentication [SQL Server]
 - database mirroring [SQL Server], security
 ms.assetid: 143c68a5-589f-4e7f-be59-02707e1a430a
-caps.latest.revision: 77
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2d3c44a31a25379e142b87428ad8ef3f2e60b8b8
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: fd3762adabe4098d48bfd5352a0a159672b76ecd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38020802"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47599097"
 ---
 # <a name="database-mirroring---establish-session---windows-authentication"></a>Mise en miroir de base de données - Établir une session - Authentification Windows
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -68,15 +65,15 @@ ms.locfileid: "38020802"
   
 4.  Pour définir le serveur principal comme partenaire sur la base de données miroir, connectez-vous au serveur miroir et exécutez l'instruction suivante :  
   
-     ALTER DATABASE *<database_name>* SET PARTNER **=***<server_network_address>*  
+     ALTER DATABASE *\<nom_base_de_données\>* SET PARTNER **=**_\<adresse\_réseau\_serveur\>_  
   
-     où *<nom_base_de_données>* correspond au nom de la base de données à mettre en miroir (ce nom est identique sur les deux partenaires) et *<adresse_réseau_serveur>* est l’adresse réseau du serveur principal.  
+     où _\<nom\_base_de_données\>_ correspond au nom de la base de données à mettre en miroir (ce nom est identique sur les deux partenaires) et _\<adresse\_réseau\_serveur\>_ est l’adresse réseau du serveur principal.  
   
      La syntaxe pour une adresse réseau de serveur est la suivante :  
   
-     TCP **://**\<*system-address>***:**\<* port>*  
+     TCP<b>\://</b>_\<adresse_système\>_<b>\:</b>_\<port\>_  
   
-     où \<*adresse-système>* est une chaîne qui identifie de façon non ambiguë l’ordinateur de destination et \<*port>* est le numéro de port utilisé par le point de terminaison de la mise en miroir de l’instance de serveur partenaire. Pour plus d’informations, consultez [Spécifier une adresse réseau de serveur &#40;mise en miroir de bases de données&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md).  
+     où _\<adresse-système>_ est une chaîne qui identifie de façon non ambiguë l’ordinateur de destination et _\<port>_ est le numéro de port utilisé par le point de terminaison de la mise en miroir de l’instance de serveur partenaire. Pour plus d’informations, consultez [Spécifier une adresse réseau de serveur &#40;mise en miroir de bases de données&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md).  
   
      Par exemple, sur l'instance de serveur miroir, l'instruction ALTER DATABASE suivante définit le partenaire comme instance de serveur principal d'origine. Le nom de la base de données est **AdventureWorks**, l'adresse système est DBSERVER1 (nom du système du partenaire) et le port utilisé par le point de terminaison de la mise en miroir de la base de données du partenaire est 7022 :  
   
@@ -89,7 +86,7 @@ ms.locfileid: "38020802"
   
 5.  Pour définir le serveur miroir comme partenaire sur la base de données principale, connectez-vous au serveur principal et exécutez l'instruction suivante :  
   
-     ALTER DATABASE *<database_name>* SET PARTNER **=***<server_network_address>*  
+     ALTER DATABASE _\<nom\_base_de_données\>_ SET PARTNER **=**_\<adresse\_réseau\_serveur\>_  
   
      Pour plus d'informations, consultez l'étape 4.  
   

@@ -5,9 +5,7 @@ ms.date: 07/29/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DATEPART_TSQL
@@ -26,17 +24,16 @@ helpviewer_keywords:
 - DATEPART function [SQL Server]
 - dates [SQL Server], dateparts
 ms.assetid: 15f1a5bc-4c0c-4c48-848d-8ec03473e6c1
-caps.latest.revision: 57
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2f9b488375cbedcb9790ab954cf9ce9109c0b303
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: ab79910472860ed7986621c095a4ccc939a2b3af
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43058938"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47596647"
 ---
 # <a name="datepart-transact-sql"></a>DATEPART (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -122,7 +119,7 @@ Le tableau suivant répertorie tous les arguments *datepart*, avec les valeurs r
 ## <a name="week-and-weekday-datepart-arguments"></a>Arguments des parties de date semaine et jour ouvrable
 Pour un argument *datepart* ayant la valeur **week** (**wk**, **ww**) ou **weekday** (**dw**), la valeur de retour `DATEPART` dépend de la valeur définie par [SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md).
   
-Le 1er janvier d’une année définit le numéro de départ de **week***datepart*. Exemple :
+Le 1er janvier d’une année définit le numéro de départ de **week**_datepart_. Exemple :
 
 DATEPART (**wk**, 'Jan 1, *xxx*x') = 1
 

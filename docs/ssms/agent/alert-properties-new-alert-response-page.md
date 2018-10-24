@@ -14,12 +14,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c6a9385a4b783409f66d924f29a719897bc7bdc8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4a8d46d0d43d3e1fd1e56b6774976640b690c7d7
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804567"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906175"
 ---
 # <a name="alert-properties---new-alert-response-page"></a>Propriétés de l’alerte - Nouvelle alerte (page Réponse)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ Utilisez **net send** pour notifier l’opérateur.
 Affiche la boîte de dialogue **Nouvel opérateur** , que vous pouvez utiliser pour créer un opérateur.  
   
 **Afficher l'opérateur**  
-Affiche la boîte de dialogue **Propriétés** pour l’opérateur sélectionné. Vous pouvez afficher et modifier les propriétés d'opérateur dans la boîte de dialogue **Propriétés Opérateur** .  
+Affiche la boîte de dialogue **Propriétés** pour l’opérateur sélectionné. Vous pouvez afficher et modifier les propriétés d’opérateur dans la boîte de dialogue **Propriétés Opérateur**.  
   
 ## <a name="see-also"></a> Voir aussi  
 [Alertes](../../ssms/agent/alerts.md)  

@@ -13,12 +13,12 @@ ms.assetid: c4c1e94f-4f5f-431e-8b5b-d5ff97baf723
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8011b61d86f91506cc7e194e8521415816310131
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: eb0117203d290c32c22691f665a7717a68bb5465
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47784317"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072143"
 ---
 # <a name="scm-services---connect-to-another-computer"></a>Services SCM - Se connecter à un autre ordinateur
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "47784317"
   
 10. Cliquez avec le bouton droit sur **Gestionnaire de configuration SQL Server**, puis cliquez sur **Nouvelle fenêtre à partir d’ici**.  
   
-11. Dans le menu **Fenêtre** , cliquez sur **Racine de la console**pour revenir à la première fenêtre et supprimez la fenêtre.  
+11. Dans le menu **Fenêtre**, cliquez sur **Racine de la console** pour revenir à la première fenêtre et supprimez-la.  
   
 12. Dans le menu **Fichier** , cliquez sur **Enregistrer sous**, et enregistrez le fichier dans le dossier souhaité en lui donnant un nom approprié et l’extension de fichier **.msc** . Fermez [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console.  
   

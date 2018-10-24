@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 08/24/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: databases
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - contained database
@@ -17,17 +14,16 @@ helpviewer_keywords:
 - partially contained database
 - contained database, understanding
 ms.assetid: 36af59d7-ce96-4a02-8598-ffdd78cdc948
-caps.latest.revision: 37
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 24e5cc8b801a80b754b7aaed9ab72b69ae9e93fc
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: a2799865b5c04403ac62f3ed3352d1f0b0d545b4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43107972"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47849188"
 ---
 # <a name="contained-databases"></a>Bases de données autonomes
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -44,9 +40,7 @@ ms.locfileid: "43107972"
   
  Certaines fonctionnalités de bases de données partiellement autonomes, telles que le stockage des métadonnées dans la base de données, s'appliquent à toutes les bases de données [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Certains avantages des bases de données partiellement autonomes, tels que l'authentification de niveau base de données et le classement de catalogue, doivent être activés pour pouvoir être disponibles. La relation contenant-contenu partielle est activée à l’aide des instructions **CREATE DATABASE** et **ALTER DATABASE** ou de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Pour plus d'informations sur l'activation de l’autonomie de base de données partielle, consultez [Migrer vers une base de données partiellement autonome](../../relational-databases/databases/migrate-to-a-partially-contained-database.md).  
   
-##  
-  <a name="Concepts">
-  </a> Concepts relatifs aux bases de données partiellement autonomes  
+##  <a name="Concepts"></a> Concepts relatifs aux bases de données partiellement autonomes  
  Une base de données autonome complète inclut tous les paramètres et métadonnées requis pour définir la base de données ; sa configuration ne dépend pas de l'instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] où la base de données est installée. Dans les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la séparation d'une base de données de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pouvait être fastidieuse et nécessiter une connaissance détaillée de la relation entre la base de données et l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les bases de données partiellement autonomes simplifient la séparation d'une base de données de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et des autres bases de données.  
   
  La base de données autonome considère les fonctionnalités en termes d’autonomie. Toute entité définie par l'utilisateur qui ne s'appuie que sur des fonctions résidant dans la base de données est considérée comme entièrement à relation contenant-contenu. Toute entité définie par l'utilisateur qui s'appuie sur des fonctions résidant hors de la base de données est considérée sans relation contenant-contenu. (Pour plus d’informations, consultez la section [Relation contenant-contenu](#containment) , plus loin dans cette rubrique.)  
@@ -71,8 +65,7 @@ ms.locfileid: "43107972"
  Utilisateur contenu  
  Il existe deux types d'utilisateurs pour les bases de données autonomes.  
   
--   
-  **Utilisateur de base de données autonome avec mot de passe**  
+-   **Utilisateur de base de données autonome avec mot de passe**  
   
      Les utilisateurs de base de données autonome avec mots de passe sont authentifiés par la base de données. Pour plus d’informations, consultez [Utilisateurs de base de données autonome - Rendre votre base de données portable](../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
   
@@ -80,7 +73,7 @@ ms.locfileid: "43107972"
   
      Les utilisateurs Windows autorisés et les membres de groupes Windows autorisés peuvent se connecter directement à la base de données et n'ont pas besoin de connexions dans la base de données **master** . La base de données fait confiance au processus d'authentification effectué par Windows.  
   
- Les utilisateurs, selon les connexions dans la base de données **master** , peuvent bénéficier de l'accès à une base de données autonome, mais cela créerait une dépendance sur l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Par conséquent, pour la création d'utilisateurs basés sur des connexions, reportez-vous au commentaire relatif aux bases de données partiellement autonomes.  
+ Les utilisateurs, selon les connexions dans la base de données **master** , peuvent bénéficier de l'accès à une base de données autonome, mais cela créerait une dépendance sur l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ainsi, la création d’utilisateurs sur la base des connexions nécessite donc une autonomie partielle.
   
 > [!IMPORTANT]  
 >  L'activation de bases de données autonomes partielle transfère le contrôle de l'accès à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aux propriétaires de la base de données. Pour plus d'informations, consultez [Meilleures pratiques de sécurité recommandées avec les bases de données autonomes](../../relational-databases/databases/security-best-practices-with-contained-databases.md).  
@@ -101,9 +94,7 @@ ms.locfileid: "43107972"
   
 -   Entités d’utilisateur sans relation contenant-contenu (celles qui dépassent la limite de base de données), par exemple sys.server_principals ou un principal de serveur (connexion) lui-même. Tout code qui utilise ces entités ou toute fonction qui les référence est sans relation contenant-contenu.  
   
-###  
-  <a name="partial">
-  </a> Base de données partiellement autonome  
+###  <a name="partial"></a> Base de données partiellement autonome  
  La fonctionnalité de base de données autonome est actuellement disponible uniquement dans un état partiel. Une base de données partiellement autonome est une base de données autonome qui autorise l'utilisation de fonctionnalités sans autonomie.  
   
  Utilisez les vues [sys.dm_db_uncontained_entities](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md) et [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) pour retourner des informations sur des objets ou des fonctionnalités sans relation contenant-contenu. En déterminant l'état de la relation contenant-contenu des éléments de votre base de données, vous pouvez découvrir les objets ou les fonctionnalités qui doivent être remplacés ou modifiés pour promouvoir la relation contenant-contenu.  
@@ -113,9 +104,7 @@ ms.locfileid: "43107972"
   
  Le comportement des bases de données partiellement autonomes est très différent de celui des bases de données non autonomes en termes de classement. Pour plus d'informations sur les problèmes de classement, consultez [Classements de base de données autonome](../../relational-databases/databases/contained-database-collations.md).  
   
-##  
-  <a name="benefits">
-  </a> Avantages de l'utilisation de bases de données partiellement autonomes  
+##  <a name="benefits"></a> Avantages de l'utilisation de bases de données partiellement autonomes  
  Les problèmes et les complications associés aux bases de données non autonomes peuvent être résolus à l'aide d'une base de données partiellement autonome.  
   
 ### <a name="database-movement"></a>Déplacement de base de données  
@@ -164,12 +153,9 @@ ms.locfileid: "43107972"
   
 ## <a name="see-also"></a> Voir aussi  
  [Fonctionnalités modifiées &#40;base de données à relation contenant-contenu&#41;](../../relational-databases/databases/modified-features-contained-database.md)   
- 
-  [Classements de base de données autonome](../../relational-databases/databases/contained-database-collations.md)   
- 
-  [Meilleures pratiques de sécurité recommandées avec les bases de données autonomes](../../relational-databases/databases/security-best-practices-with-contained-databases.md)   
- 
-  [Migrer vers une base de données partiellement autonome](../../relational-databases/databases/migrate-to-a-partially-contained-database.md)   
+ [Classements de base de données autonome](../../relational-databases/databases/contained-database-collations.md)   
+ [Meilleures pratiques de sécurité recommandées avec les bases de données autonomes](../../relational-databases/databases/security-best-practices-with-contained-databases.md)   
+ [Migrer vers une base de données partiellement autonome](../../relational-databases/databases/migrate-to-a-partially-contained-database.md)   
  [Utilisateurs de base de données autonome - Rendre votre base de données portable](../../relational-databases/security/contained-database-users-making-your-database-portable.md)  
   
   

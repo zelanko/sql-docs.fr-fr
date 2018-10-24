@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: e918986c-af15-48f6-8178-256aed829c6a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0c2acade2ac4e0a4def5bc136d0faa5a11c4815a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 99689619610e3237d9c57627229ba3eb3f1f62e1
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47795297"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48905734"
 ---
 # <a name="configure-the-web-portal"></a>Configurer le portail web
 
@@ -35,7 +35,7 @@ Pour utiliser le portail web, vous devez satisfaire aux prérequis suivants :
 
 Le portail web est une application web à laquelle les utilisateurs accèdent via un navigateur web. Vous devez au minimum définir l'URL utilisée pour ouvrir l'application dans une fenêtre de navigateur. L'URL est formée d'un nom d'hôte, d'un port et d'un répertoire virtuel. Les valeurs par défaut de cette URL utilisent les valeurs de nom d'hôte et de port que vous avez définies pour l'URL du service Web Report Server, plus le nom du répertoire virtuel **rapports** . Si vous disposez d’une instance nommée, le répertoire virtuel est **reports_instance**, où **instance** est le nom de votre instance [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .
 
-Par défaut, l’URL du portail web est formée d’un nom de répertoire virtuel unique, plus le port et le nom d’hôte défini pour le service web Report Server qui s’exécute dans la même instance. Dans la plupart des cas, le nom d'hôte est le nom de réseau du serveur de rapports, mais il peut également s'agir d'une adresse IP ou d'un en-tête d'hôte qui résout l'ordinateur. Pour configurer le portail web de sorte qu’il utilise l’URL par défaut, utilisez la page **URL du portail web** dans l’outil de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].
+Par défaut, l’URL du portail web est formée d’un nom de répertoire virtuel unique, plus le port et le nom d’hôte définis pour le service web Report Server qui s’exécute dans la même instance. Dans la plupart des cas, le nom d'hôte est le nom de réseau du serveur de rapports, mais il peut également s'agir d'une adresse IP ou d'un en-tête d'hôte qui résout l'ordinateur. Pour configurer le portail web de sorte qu’il utilise l’URL par défaut, utilisez la page **URL du portail web** dans l’outil de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].
 
 > [!TIP]
 > Si vous essayez d’accéder au portail web sur un ordinateur distant et que vous obtenez des erreurs de connexion dans votre navigateur, les paramètres du pare-feu sont généralement en cause. Pour plus d’informations, consultez [Configurer un pare-feu pour accéder au serveur de rapports](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md).

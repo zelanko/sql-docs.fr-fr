@@ -6,20 +6,17 @@ ms.date: 02/09/2017
 ms.prod: sql
 ms.technology: ssdt
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d44935ce-63bf-46df-976a-5a54866c8119
-caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4938666c0a8a23aca2760b55d94bc3d7e03947f3
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 6e3501dc7245d583c0fa30e6c50aabcdd9e2e5e2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39086281"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47669877"
 ---
 # <a name="walkthrough-extend-database-project-build-to-generate-model-statistics"></a>Procédure pas à pas : étendre la génération du projet de base de données à la génération de statistiques de modèle
 Vous pouvez créer un contributeur de génération pour effectuer des actions personnalisées lorsque vous générez un projet de base de données. Dans cette procédure pas à pas, vous allez créer un contributeur de génération nommé ModelStatistics qui génère des statistiques de base de données SQL lorsque vous créez un projet de base de données. Ce contributeur de génération acceptant des paramètres lorsque vous effectuez la génération, quelques étapes supplémentaires sont nécessaires.  
@@ -59,12 +56,12 @@ Voici certaines commandes utilisées par l'exemple de contributeur dans cette pr
   
 |**Classe**|**Méthode/propriété**|**Description**|  
 |-------------|------------------------|-------------------|  
-|[TSqlModel](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.dac.model.tsqlmodel.aspx)|GetObjects()|Interroge le modèle d'objets, est le point d'entrée principal à l'API du modèle. Seuls les types de niveau supérieur tels que Table ou Vue peuvent être interrogés – les types tels que Colonnes sont trouvés uniquement en parcourant le modèle. Si aucun filtre ModelTypeClass n'est spécifié, tous les types de niveau supérieur sont retournés.|  
-|[TSqlObject](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.dac.model.tsqlobject.aspx)|GetReferencedRelationshipInstances()|Recherche des relations aux éléments référencés par TSqlObject actuel. Par exemple, pour une table, cette méthode retourne des objets comme des colonnes de la table. Dans ce cas, un filtre ModelRelationshipClass peut être utilisé pour spécifier les relations exactes à interroger (par exemple le filtre « Table.Columns » garantirait que seules des colonnes soient retournées).<br /><br />Il existe plusieurs méthodes semblables, telles que GetReferencingRelationshipInstances, GetChildren et GetParent. Pour plus d'informations, consultez la documentation relative à API.|  
+|[TSqlModel](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlmodel.aspx)|GetObjects()|Interroge le modèle d'objets, est le point d'entrée principal à l'API du modèle. Seuls les types de niveau supérieur tels que Table ou Vue peuvent être interrogés – les types tels que Colonnes sont trouvés uniquement en parcourant le modèle. Si aucun filtre ModelTypeClass n'est spécifié, tous les types de niveau supérieur sont retournés.|  
+|[TSqlObject](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx)|GetReferencedRelationshipInstances()|Recherche des relations aux éléments référencés par TSqlObject actuel. Par exemple, pour une table, cette méthode retourne des objets comme des colonnes de la table. Dans ce cas, un filtre ModelRelationshipClass peut être utilisé pour spécifier les relations exactes à interroger (par exemple le filtre « Table.Columns » garantirait que seules des colonnes soient retournées).<br /><br />Il existe plusieurs méthodes semblables, telles que GetReferencingRelationshipInstances, GetChildren et GetParent. Pour plus d'informations, consultez la documentation relative à API.|  
   
 **Identifier un collaborateur de manière unique**  
   
-Lors de la génération, les contributeurs personnalisés sont chargés à partir d'un répertoire d'extension standard. Les contributeurs de génération sont identifiés par un attribut [ExportBuildContributor](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.dac.deployment.exportbuildcontributorattribute.aspx) . Cet attribut est requis afin que les contributeurs puissent être découverts. Cet attribut doit présenter un aspect similaire au suivant :  
+Lors de la génération, les contributeurs personnalisés sont chargés à partir d'un répertoire d'extension standard. Les contributeurs de génération sont identifiés par un attribut [ExportBuildContributor](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.exportbuildcontributorattribute.aspx). Cet attribut est requis afin que les contributeurs puissent être découverts. Cet attribut doit présenter un aspect similaire au suivant :  
   
 ```  
 [ExportBuildContributor("ExampleContributors.ModelStatistics", "1.0.0.0")]  
@@ -78,7 +75,7 @@ Pour créer un contributeur de génération, vous devez effectuer les tâches su
   
 -   Créez un projet Bibliothèque de classes et ajoutez les références requises.  
   
--   Définissez une classe nommée ModelStatistics qui hérite de [BuildContributor](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.dac.deployment.buildcontributor.aspx).  
+-   Définissez une classe nommée ModelStatistics qui hérite de [BuildContributor](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.buildcontributor.aspx).  
   
 -   Remplacer la méthode OnExecute.  
   

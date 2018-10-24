@@ -5,9 +5,7 @@ ms.date: 09/12/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE SYMMETRIC KEY
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - symmetric keys [SQL Server], creating
 - symmetric keys [SQL Server]
 ms.assetid: b5d23572-b79d-4cf1-9eef-d648fa3b1358
-caps.latest.revision: 72
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: bb214529ca2762fb8b269c6d07ce766cfb72e054
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: d2d54483e85e92915182593140ca74bf8e872991
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38035829"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47849522"
 ---
 # <a name="create-symmetric-key-transact-sql"></a>CREATE SYMMETRIC KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -85,13 +82,13 @@ CREATE SYMMETRIC KEY key_name
 > [!NOTE]  
 >  Cette option n'est pas disponible dans une base de données autonome.  
   
- KEY_SOURCE **='***pass_phrase***'**  
+ KEY_SOURCE **='**_pass\_phrase_**'**  
  Spécifie une phrase secrète à partir de laquelle la clé doit être dérivée.  
   
- IDENTITY_VALUE **='***identity_phrase***'**  
+ IDENTITY_VALUE **='**_identity\_phrase_**'**  
  Spécifie une expression relative à l'identité à partir de laquelle un GUID doit être généré pour baliser les données qui sont chiffrées à l'aide d'une clé temporaire.  
   
- PROVIDER_KEY_NAME **='***key_name_in_provider***'**  
+ PROVIDER_KEY_NAME **='**_key\_name\_in\_provider_**'**  
  Spécifie le nom référencé dans le fournisseur EKM (Extensible Key Management).  
   
 > [!NOTE]  

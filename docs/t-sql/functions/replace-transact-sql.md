@@ -5,9 +5,7 @@ ms.date: 08/23/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - REPLACE_TSQL
@@ -21,17 +19,16 @@ helpviewer_keywords:
 - second string expressions [SQL Server]
 - REPLACE function
 ms.assetid: 8a7aaaf2-62e3-46c0-8e44-fa22290dd86b
-caps.latest.revision: 39
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 53b477a36a99a1bb17035024d8c1fae842e52c12
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: d15805342b06baf55751d399eb64335084db76f5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43084945"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47792663"
 ---
 # <a name="replace-transact-sql"></a>REPLACE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -50,10 +47,10 @@ REPLACE ( string_expression , string_pattern , string_replacement )
  *string_expression*  
  [Expression](../../t-sql/language-elements/expressions-transact-sql.md) de chaîne à rechercher. *string_expression* peut être de type de données binaire ou caractère.  
   
- *string_* pattern  
+ *string\_pattern*  
  Sous-chaîne à rechercher. *string_pattern* peut être de type de données binaire ou caractère. *string_pattern* ne peut pas être une chaîne vide ('') et ne doit pas dépasser le nombre maximal d’octets tenant sur une page.  
   
- *string_* replacement  
+ *string\_replacement*  
  Chaîne de remplacement. *string_replacement* peut être de type de données binaire ou caractère.  
   
 ## <a name="return-types"></a>Types de retour  

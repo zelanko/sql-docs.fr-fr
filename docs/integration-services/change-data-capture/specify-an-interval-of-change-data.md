@@ -13,12 +13,12 @@ ms.assetid: 17899078-8ba3-4f40-8769-e9837dc3ec60
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: dcf5d6989b7485ddd993b39d3f9f0f35c1f357ce
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0a06d6b029a4d64f52d9d939e3935fed32d7b37b
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654427"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120326"
 ---
 # <a name="specify-an-interval-of-change-data"></a>Spécifier un intervalle de données modifiées
   Dans le flux de contrôle d’un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] qui effectue un charge incrémentielle de données modifiées, la première tâche consiste à calculer les points de terminaison de l’intervalle de modification. Ces points de terminaison sont des valeurs **datetime** qui seront stockées dans des variables de package pour une utilisation ultérieure dans le package.  
@@ -111,7 +111,7 @@ ms.locfileid: "47654427"
 ## <a name="see-also"></a> Voir aussi  
  [Utiliser des variables dans des packages](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)   
  [Expressions Integration Services &#40;SSIS&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md)   
- [Exécution de requêtes SQL, tâche](../../integration-services/control-flow/execute-sql-task.md)   
+ [Tache d'exécution de requêtes SQL](../../integration-services/control-flow/execute-sql-task.md)   
  [Tâche de script](../../integration-services/control-flow/script-task.md)  
   
   

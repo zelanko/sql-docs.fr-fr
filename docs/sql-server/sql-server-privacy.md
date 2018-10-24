@@ -3,21 +3,19 @@ title: Avenant à la déclaration de confidentialité de SQL Server | Microsoft 
 ms.date: 4/24/2018
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.custom: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords: ''
 helpviewer_keywords: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 40c6bfb24ea3e711ca6b14509921d5599b316ebf
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 9d0db88d84effcc76c97addeeab6e9d6c104aa5f
+ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37975286"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48878112"
 ---
 # <a name="sql-server-privacy-supplement"></a>Avenant à la déclaration de confidentialité de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +25,7 @@ Cet article récapitule le comportement des différents objets de données utili
 - Azure SQL Database
 - SQL Server Management Studio (SSMS)
 - Outils de données SQL Server (SSDT)
-- SQL Operations Studio
+- Azure Data Studio
 - Database Migration Assistant
 - Assistant de migration SQL Server
 - Extension MS-SQL
@@ -130,6 +128,7 @@ Les éléments suivants sont considérés comme des métadonnées système quand
 - Données de configuration du serveur, par exemple les paramètres de sp_configure
 - Données de configuration des fonctionnalités
 - Noms d’événement et codes d’erreur
+- Paramètres matériels et identification, tels que le fabricant OEM
 
 Microsoft examine les valeurs des noms d’application définies par d’autres programmes qui utilisent SQL Server (exemple : Sharepoint ou des programmes packagés tiers et inclut ces informations dans Métadonnées système qui sont envoyées à Microsoft quand Données d’utilisation est activé). Les clients ne doivent pas placer de données personnelles, comme les informations d’identification de l’utilisateur final, dans les champs Métadonnées système ni créer d’applications conçues pour stocker des données personnelles dans ces champs. 
 

@@ -15,12 +15,12 @@ ms.assetid: 83075cdf-f059-4646-8ba2-19be8202f130
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 2b5d840a5b6073a7026806ee084dffc0ca51af7b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 387aaeb28e0dfc976bce72c33dd50d8b865bb432
+ms.sourcegitcommit: 8dccf20d48e8db8fe136c4de6b0a0b408191586b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47801697"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48874367"
 ---
 # <a name="system-settings-master-data-services"></a>Paramètres système (Master Data Services)
 
@@ -102,6 +102,7 @@ ms.locfileid: "47801697"
 |-----------------------------------|--------------------|-----------------|  
 |**Nombre par lequel les nouvelles règles d'entreprise sont incrémentées**|**BusinessRuleDefaultPriorityIncrement**|Dans la zone fonctionnelle [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **de** , nombre par lequel la priorité de chaque nouvelle règle d'entreprise est incrémentée. La valeur par défaut est de **10**.|  
 |**Nombre de membres auxquels appliquer des règles d'entreprise**|**BusinessRuleRealtimeMemberCount**|Dans la zone fonctionnelle [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **de** , nombre maximal de membres dans la grille auxquels appliquer des règles d'entreprise. Dans [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)], nombre maximal de membres dans la feuille de calcul active auxquels appliquer des règles d'entreprise. La valeur par défaut est de **10 000**.|  
+|**Le script utilisateur de règles métier s’exécute en premier**|**BusinessRuleUserScriptExecuteFirst**|Normalement, une action de règle métier s’exécute avec la séquence « Valeur par défaut », « Valeur de modification », « Validation », « Action externe », « Script d’action défini par l’utilisateur ». Si ce paramètre est changé en **1**, « Script d’action défini par l’utilisateur » est la première étape pour l’exécution de l’action de règle métier. Ce paramètre est un paramètre masqué. La valeur par défaut est **0**.|  
   
  Pour plus d’informations, consultez [Règles d’entreprise &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md).  
   

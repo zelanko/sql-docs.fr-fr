@@ -1,23 +1,22 @@
 ---
 title: Se connecter au catalogue SSIS (SSISDB) dans Azure | Microsoft Docs
 description: Découvrez les informations de connexion nécessaires pour se connecter au catalogue SSIS (SSISDB) hébergé sur un serveur Azure SQL Database.
-ms.date: 09/25/2017
+ms.date: 09/23/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
-ms.suite: sql
 ms.custom: ''
 ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
 ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: 571fe7755803dcb3ef76a678969295864436f16a
-ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.openlocfilehash: c498f71be24d3f9e26aa1f6854dc048e0c9d6b89
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36798264"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47698117"
 ---
 # <a name="connect-to-the-ssis-catalog-ssisdb-in-azure"></a>Se connecter au catalogue SSIS (SSISDB) dans Azure
 
@@ -30,7 +29,7 @@ Découvrez les informations de connexion nécessaires pour se connecter au catal
 > À l’heure actuelle, il n’est pas possible de créer la base de données du catalogue SSISDB dans Azure SQL Database indépendamment de la création d’Azure-SSIS Integration Runtime dans Azure Data Factory. Le runtime d’intégration Azure-SSIS est l’environnement d’exécution qui exécute les packages SSIS sur Azure. Pour une procédure pas à pas du processus, consultez [Déployer et exécuter un package SSIS dans Azure](https://docs.microsoft.com/azure/data-factory/tutorial-create-azure-ssis-runtime-portal). 
 
 ## <a name="prerequisites"></a>Conditions préalables requises
-Avant de commencer, veillez à disposer de la version 17.2 ou ultérieure de SQL Server Management Studio (SSMS). Si la base de données de catalogue SSISDB est hébergée sur SQL Database Managed Instance (préversion), assurez-vous d’avoir la version 17.6 ou ultérieure de SSMS. Pour télécharger la dernière version de SSMS, consultez [Télécharger SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+Avant de commencer, veillez à disposer de la version 17.2 ou ultérieure de SQL Server Management Studio (SSMS). Si la base de données du catalogue SSISDB est hébergée sur SQL Database Managed Instance, vérifiez que vous avez la version 17.6 ou ultérieure de SSMS. Pour télécharger la dernière version de SSMS, consultez [Télécharger SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 
 ## <a name="get-the-connection-info-from-the-azure-portal"></a>Obtenir les informations de connexion à partir du portail Azure
 1. Connectez-vous au [portail Azure](https://portal.azure.com/).

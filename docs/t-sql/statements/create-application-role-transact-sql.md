@@ -24,12 +24,12 @@ ms.assetid: 647386da-ee80-41cf-86c9-dd590f9d66b6
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: b880607c133225a3dd85dc2f4abd6fc051ef931a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f434bd06f06071b61d037ce68f8a69edbb8c2977
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753377"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49168934"
 ---
 # <a name="create-application-role-transact-sql"></a>CREATE APPLICATION ROLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,10 +50,10 @@ CREATE APPLICATION ROLE application_role_name
  *application_role_name*  
  Indique le nom du rôle d'application. Ce nom ne doit pas être déjà utilisé pour référencer un principal dans la base de données.  
   
- PASSWORD **='***password***'**  
+ PASSWORD **='**_password_**'**  
  Spécifie le mot de passe que les utilisateurs de base de données doivent utiliser pour activer le rôle d'application. Vous devez toujours utiliser des mots de passe forts. *password* doit satisfaire aux critères de la stratégie de mot de passe Windows de l’ordinateur qui exécute l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- DEFAULT_SCHEMA **=***schema_name*  
+ DEFAULT_SCHEMA **=**_schéma\_nom_  
  Indique le premier schéma dans lequel le serveur doit effectuer des recherches lorsqu'il résout les noms des objets pour ce rôle. Si DEFAULT_SCHEMA n'est pas défini, le rôle d'application utilise DBO comme schéma par défaut. *schema_name* peut être un schéma qui n’existe pas dans la base de données.  
   
 ## <a name="remarks"></a>Notes   

@@ -15,12 +15,12 @@ ms.assetid: 0093b43c-c6b5-4574-9b30-3a0e91e1a1f9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5a221283f40f53260f9ebe8903b87d19da2963cd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c6df640eb9b9efd4e5b67f6cc7829135b356e9cd
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828507"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906069"
 ---
 # <a name="configure-a-windows-firewall-for-database-engine-access"></a>Configurer un pare-feu Windows pour accéder au moteur de base de données
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "47828507"
   
      [Sécurité](#Security)  
   
--   **Pour configurer un pare-feu Windows pour l'accès au moteur de base de données, utilisez :**  
+-   **Pour configurer un pare-feu Windows donnant accès au moteur de base de données avec :**  
   
      [Gestionnaire de configuration SQL Server](#SSMSProcedure)  
   

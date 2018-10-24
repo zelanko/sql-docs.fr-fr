@@ -5,9 +5,7 @@ ms.date: 08/10/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - RESTORE_REWINDONLY_TSQL
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - rewinding backup devices
 - RESTORE REWINDONLY statement
 ms.assetid: 7f825b40-2264-4608-9809-590d0f09d882
-caps.latest.revision: 50
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 486715799d2fee564c51336bd958eb603cd1b490
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 0ba43b04bc5c77d060fd2f8edda25d8a925a2856
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38038657"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47602287"
 ---
 # <a name="restore-statements---rewindonly-transact-sql"></a>RESTORE Statements - REWINDONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,9 +61,11 @@ FROM <backup_device> [ ,...n ]
   
  Spécifie les unités de sauvegarde logiques ou physiques à utiliser pour l'opération de restauration.  
   
- { *logical_backup_device_name* | **@***logical_backup_device_name_var* } Correspond au nom logique, qui doit respecter les règles applicables aux identificateurs, des unités de sauvegarde créées par **sp_addumpdevice** et à partir desquelles la base de données est restaurée. S’il est fourni comme variable (**@***logical_backup_device_name_var*), le nom de l’unité de sauvegarde peut être spécifié sous la forme d’une constante de chaîne (**@***logical_backup_device_name_var* = *logical_backup_device_name*) ou d’une variable de type de données chaîne de caractères, sauf pour les types de données **ntext** ou **text**.  
+ { *logical_backup_device_name* | **@**_logical\_backup\_device\_name\_var_ }  
+ Nom logique, qui doit respecter les règles applicables aux identificateurs, de l'unité de sauvegarde créée par **sp_addumpdevice** et à partir de laquelle est restaurée la base de données. S’il est fourni comme variable (**@**_logical\_backup\_device\_name\_var_), le nom de l’unité de sauvegarde peut être spécifié sous la forme d’une constante de chaîne (**@**_logical\_backup\_device\_name\_var_ = _logical\_backup\_device\_name_) ou d’une variable de type de données chaîne de caractères, sauf pour les types de données **ntext** ou **text**.  
   
- {DISK | TAPE } **=** { **'***physical_backup_device_name***'** | **@***physical_backup_device_name_var* } Permet la restauration de sauvegardes à partir de l’unité de disque ou de bande spécifiée. Les types de périphérique de disque et de bande doivent être spécifiés avec le nom de l’unité (par exemple, le chemin complet et le nom de fichier) : DISK = 'C:\Program Files\Microsoft SQL Server\MSSQL\BACKUP\Mybackup.bak' ou TAPE = '\\\\.\TAPE0'. S’il est fourni comme variable (**@***physical_backukp_device_name_var*), le nom de l’unité de sauvegarde peut être spécifié sous la forme d’une constante de chaîne (**@***physical_backup_device_name_var* = '* physcial_backup_device_name*') ou d’une variable de type de données chaîne de caractères, sauf pour les types de données **ntext** ou **text**.  
+ {DISK | TAPE } **=** { **'**_physical\_backup\_device\_name_**'** | **@**_physical\_backup\_device\_name\_var_ }  
+ Permet la restauration de sauvegardes à partir de l'unité de disque ou de bande spécifiée. Les types de périphérique de disque et de bande doivent être spécifiés avec le nom de l’unité (par exemple, le chemin complet et le nom de fichier) : DISK = 'C:\Program Files\Microsoft SQL Server\MSSQL\BACKUP\Mybackup.bak' ou TAPE = '\\\\.\TAPE0'. S’il est spécifié comme variable (**@**_physical\_backup\_device\_name\_var_), le nom de l’unité de sauvegarde peut être spécifié sous la forme d’une constante de chaîne (**@**_physical\_backup\_device\_name\_var_ = '*physcial_backup_device_name*') ou d’une variable de type de données chaîne de caractères, sauf pour les types de données **ntext** ou **text**.  
   
  Si vous utilisez un serveur réseau pourvu d'un nom UNC (qui doit contenir le nom de l'ordinateur), spécifiez le type d'unité DISK. Pour plus d’informations sur l’utilisation de noms UNC, consultez [Unités de sauvegarde &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
   

@@ -172,7 +172,7 @@ Une instance existante qui contient un ou plusieurs groupes de disponibilité pe
 
 Si l’objectif est de migrer vers de nouveaux serveurs et de ne pas changer la configuration (y compris le système d’exploitation ou la version de SQL Server), ces serveurs peuvent être ajoutés sous forme de nœuds au cluster sous-jacent existant et ajoutés au groupe de disponibilité. Une fois que le ou les réplicas sont dans l’état souhaité, vous pouvez basculer manuellement sur un nouveau serveur, puis l’ancien peut être supprimé du groupe de disponibilité et désactivé. 
 
-Les groupes de disponibilité distribués permettent eux aussi de migrer vers une nouvelle configuration ou de mettre à niveau SQL Server. Parce qu’un groupe de disponibilité distribué prend en charge différents groupes de disponibilité sous-jacents sur différentes architectures, vous pouvez, par exemple, passer de SQL Server 2016 exécuté sur Windows Server 2012 R2 à SQL Server 2017 exécuté sur Windows Server 2016. 
+Les groupes de disponibilité distribués permettent eux aussi de migrer vers une nouvelle configuration ou de mettre à niveau SQL Server. Comme un groupe de disponibilité distribué prend en charge différents groupes de disponibilité sous-jacents sur différentes architectures, vous pouvez par exemple passer de SQL Server 2016 exécuté sur Windows Server 2012 R2 à SQL Server 2017 exécuté sur Windows Server 2016. 
 
 ![Groupe de disponibilité distribué][image10]
 

@@ -1,13 +1,11 @@
 ---
 title: column_definition (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/17/2018
+ms.date: 09/24/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - column_definition
@@ -20,17 +18,16 @@ helpviewer_keywords:
 - column properties [SQL Server]
 - column definitions [SQL Server]
 ms.assetid: a1742649-ca29-4d9b-9975-661cdbf18f78
-caps.latest.revision: 78
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c0cdf8b03a5169d5067bdfc07dbd3f3cc99d2d58
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 820a11940cfd3ee904979420acb0c766a6b32fb0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43080013"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47664047"
 ---
 # <a name="alter-table-columndefinition-transact-sql"></a>ALTER TABLE column_definition (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -208,9 +205,11 @@ SPARSE
 ENCRYPTION_TYPE = { DETERMINISTIC | RANDOMIZED }  
  Le**chiffrement déterministe** utilise une méthode qui génère toujours la même valeur chiffrée pour une valeur de texte brut donnée. L’utilisation du chiffrement déterministe permet d’effectuer des recherches à l’aide de la comparaison d’égalité, d’effectuer des regroupements et de joindre des tables à l’aide de jointures d’égalité sur la base de valeurs chiffrées, mais elle peut aussi permettre à des utilisateurs non autorisés de deviner des informations concernant les valeurs chiffrées en examinant les séquences dans la colonne chiffrée. Joindre deux tables sur des colonnes chiffrées de façon déterministe n’est possible que si les deux colonnes sont chiffrées à l’aide de la même clé de chiffrement de colonne. Le chiffrement déterministe doit utiliser un classement de colonne avec un ordre de tri binaire 2 pour les colonnes de type caractère.  
   
- Le**chiffrement aléatoire** utilise une méthode qui chiffre les données de manière moins prévisible. Le chiffrement aléatoire est plus sécurisé, mais il empêche les recherches d’égalité, le regroupement et la jointure sur des colonnes chiffrées. Les colonnes utilisant le chiffrement aléatoire ne peuvent pas être indexées.  
+ Le**chiffrement aléatoire** utilise une méthode qui chiffre les données de manière moins prévisible. Le chiffrement aléatoire est plus sécurisé, mais il empêche tout calcul et indexation sur les colonnes chiffrées, sauf si votre instance de SQL Server prend en charge [Always Encrypted avec enclaves sécurisées](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
   
- Utilisez le chiffrement déterministe pour les colonnes qui seront des paramètres de recherche ou de regroupement, par exemple un numéro d’identification gouvernemental. Utilisez le chiffrement aléatoire pour les données telles qu’un numéro de carte de crédit, qui ne sont pas regroupées avec d’autres enregistrements, ou utilisées pour joindre des tables, et qui ne sont pas soumises à des recherches car vous utilisez d’autres colonnes (par exemple un numéro de transaction) pour rechercher la ligne qui contient la colonne chiffrée qui vous intéresse.  
+ Si vous utilisez Always Encrypted (sans enclaves sécurisées), utilisez le chiffrement déterministe pour les colonnes dans lesquelles effectuer des recherches avec des paramètres ou des paramètres de regroupement, par exemple un numéro d’identification gouvernemental. Utilisez le chiffrement aléatoire pour les données telles qu’un numéro de carte de crédit, qui ne sont pas regroupées avec d’autres enregistrements, ou utilisées pour joindre des tables, et qui ne sont pas soumises à des recherches car vous utilisez d’autres colonnes (par exemple un numéro de transaction) pour rechercher la ligne qui contient la colonne chiffrée qui vous intéresse.  
+
+ Si vous utilisez Always Encrypted avec enclaves sécurisées, le chiffrement aléatoire est un type de chiffrement recommandé.  
   
  Les colonnes doivent être d’un type de données qualifié.  
   

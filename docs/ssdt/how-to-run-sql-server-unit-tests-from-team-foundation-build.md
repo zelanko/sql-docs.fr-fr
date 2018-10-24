@@ -6,20 +6,17 @@ ms.date: 02/09/2017
 ms.prod: sql
 ms.technology: ssdt
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 24f5b85d-d6f9-415f-b09f-933b78dc0b67
-caps.latest.revision: 14
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d0c53627cbf6d113c68aca95be187d521d580476
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 12908c9a880e09f08cc4903032243128025dbb3e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39087141"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47797353"
 ---
 # <a name="how-to-run-sql-server-unit-tests-from-team-foundation-build"></a>Procédure : exécuter des tests unitaires SQL Server en utilisant Team Foundation Build
 Utilisez Team Foundation Build pour exécuter vos tests unitaires SQL Server dans un test de vérification de la génération. Configurez les tests unitaires pour déployer la base de données, générer des données de test, puis exécuter les tests sélectionnés. Si vous n'êtes pas familiarisé avec Team Foundation Build, vous devez vérifier les informations suivantes avant de suivre les procédures de cette rubrique :  
@@ -118,7 +115,7 @@ Par défaut, Team Foundation Build crée un fichier de configuration à partir d
   
 3.  Cliquez avec le bouton droit sur le fichier nommé **Copie de app.config**, puis cliquez sur Renommer.  
   
-4.  Tapez *BuildComputer***.sqlunitttest.config*, puis appuyez sur Entrée, où *BuildComputer* est le nom de l'ordinateur sur lequel l'agent de build s'exécute.  
+4.  Tapez _BuildComputer_**.sqlunitttest.config**, puis appuyez sur Entrée, où *BuildComputer* est le nom de l’ordinateur sur lequel l’agent de build s’exécute.  
   
 5.  Double-cliquez sur *BuildComputer*.sqlunitttest.config.  
   
@@ -277,7 +274,7 @@ Dans cette procédure, vous archivez tous les fichiers de la solution. Ces fichi
   
 1.  Dans Team Explorer, développez le nœud du projet d'équipe, développez le nœud Builds, cliquez avec le bouton droit sur la définition de build à exécuter, puis cliquez sur Mettre en file d'attente une nouvelle build.  
   
-    La boîte de dialogue **Mettre en file d'attente la build {***TeamProjectName***}** s'affiche avec la liste de tous les types de build existants.  
+    La boîte de dialogue **Mettre en file d’attente la build {**_TeamProjectName_**}** s’affiche avec la liste de tous les types de build existants.  
   
 2.  Si nécessaire, dans **Définition de build**, cliquez sur la nouvelle définition de build.  
   

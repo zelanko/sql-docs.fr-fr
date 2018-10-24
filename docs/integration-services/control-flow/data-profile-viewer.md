@@ -16,12 +16,12 @@ ms.assetid: b9043428-ce26-45bb-910c-588d07579565
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fd3a3c2b4461a08a9945af2536a572fb8369f7cc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f47900bba2230acb18b5e5459c6849b5b9b2c7c8
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733903"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48905989"
 ---
 # <a name="data-profile-viewer"></a>Visionneuse du profil des données
   L'affichage et l'analyse des profils des données sont les étapes suivantes du processus de profilage des données. Pour afficher ces profils, vous devez avoir exécuté la tâche de profilage des données dans un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] et avoir calculé les profils des données. Pour plus d’informations sur la configuration et l’exécution des tâches de profilage des données, consultez [Configuration de la tâche de profilage des données](../../integration-services/control-flow/setup-of-the-data-profiling-task.md).  
@@ -63,7 +63,7 @@ ms.locfileid: "47733903"
 > [!IMPORTANT]  
 >  La fonction d'exploration vers le bas disponible dans la visionneuse du profil des données envoie des requêtes actives à la source de données d'origine. Ces requêtes peuvent avoir un impact négatif sur les performances du serveur.  
 >   
->  Si vous effectuez une exploration vers le bas à partir d'un fichier de sortie qui n'a pas été créé récemment, les requêtes d'exploration risquent de retourner un autre ensemble de lignes que celui à partir duquel la sortie d'origine a été calculée.  
+>  Si vous descendez dans la hiérarchie à partir d'un fichier de sortie qui n'a pas été créé récemment, les requêtes d'exploration risquent de retourner un autre ensemble de lignes que celui à partir duquel la sortie d'origine a été calculée.  
   
  Pour plus d’informations sur l’interface utilisateur de la visionneuse du profil des données, consultez [Aide F1 de la visionneuse du profil des données](../../integration-services/control-flow/data-profile-viewer-f1-help.md).  
   
@@ -170,7 +170,7 @@ ms.locfileid: "47733903"
  **Value**  
  Affiche les valeurs distinctes trouvées dans la colonne profilée.  
   
- **Count**  
+ **Compter**  
  Affiche le nombre de lignes dans lesquelles la colonne profilée a la valeur affichée dans la colonne **Valeur** .  
   
  **Pourcentage**  
@@ -189,7 +189,7 @@ ms.locfileid: "47733903"
  **\<colonne1>, \<colonne2>, etc.**  
  Affiche les valeurs dupliquées qui ont été détectées dans la colonne profilée.  
   
- **Count**  
+ **Compter**  
  Affiche le nombre de lignes dans lesquelles la colonne spécifiée possède la valeur affichée dans la première colonne.  
   
 #### <a name="profile-type--functional-dependency-profile"></a>Type de profil = Profil de dépendance fonctionnelle  
@@ -240,6 +240,6 @@ ms.locfileid: "47733903"
  **\<colonne1>, \<colonne2>, etc.**  
  Affiche les valeurs de la colonne ou des colonnes du sous-ensemble qui étaient introuvables dans la colonne ou les colonnes du sur-ensemble.  
   
- **Count**  
+ **Compter**  
  Affiche le nombre de lignes dans lesquelles la colonne spécifiée possède la valeur affichée dans la première colonne.  
   

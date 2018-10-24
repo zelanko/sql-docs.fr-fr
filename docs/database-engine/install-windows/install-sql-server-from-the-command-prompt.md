@@ -85,12 +85,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 172c7c1bfd6cf312ddf47d8d6e6eb8b34052a67f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 37d50985338f6ac0e3cabdebf53b289e77716e39
+ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47784447"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48852094"
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>Installer SQL Server à partir de l'invite de commandes
 
@@ -273,8 +273,8 @@ Utilisez les instructions suivantes pour développer des commandes d'installatio
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCACCOUNT<br /><br /> **Obligatoire**|Spécifie le compte de démarrage pour [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCPASSWORD<br /><br /> [Obligatoire](#Accounts)|Spécifie le mot de passe du compte de démarrage pour le service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCStartupType<br /><br /> **Ce paramètre est facultatif**|Spécifie le mode de [démarrage](#Accounts) pour [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|  
-|Python/Machine Learning Services (dans la base de données)|MPYCACHEDIRECTORY|Utilisez ce paramètre pour spécifier le répertoire de cache pour la prise en charge des fonctionnalités Python dans SQL Server 2017 Machine Learning Services ou Machine Learning Server (autonome). Ce paramètre est généralement utilisé pendant l’installation des composants Python à partir de la [ligne de commande sur un ordinateur sans accès à Internet](https://docs.microsoft.com/sql/advanced-analytics/r-services/installing-r-components-without-internet-access).|  
-|R/Machine Learning Services (dans la base de données)|MRCACHEDIRECTORY|Utilisez ce paramètre pour spécifier le répertoire de cache pour la prise en charge de Microsoft R Open, SQL Server 2016 R Services, SQL Server 2016 R Server (autonome) ou de la fonctionnalité R dans SQL Server 2017 Machine Learning Services ou Machine Learning Server (autonome). Ce paramètre est généralement utilisé pendant l’installation des composants R à partir de la [ligne de commande sur un ordinateur sans accès à Internet](https://docs.microsoft.com/sql/advanced-analytics/r-services/installing-r-components-without-internet-access).|  
+|Python/Machine Learning Services (dans la base de données)|MPYCACHEDIRECTORY|Utilisez ce paramètre afin de spécifier le répertoire du cache pour la prise en charge des fonctionnalités Python dans SQL Server 2017 Machine Learning Services ou Machine Learning Server (autonome). Ce paramètre est généralement utilisé pendant l’installation des composants Python à partir de la [ligne de commande sur un ordinateur sans accès à Internet](https://docs.microsoft.com/sql/advanced-analytics/r-services/installing-r-components-without-internet-access).|  
+|R/Machine Learning Services (dans la base de données)|MRCACHEDIRECTORY|Utilisez ce paramètre afin de spécifier le répertoire du cache pour la prise en charge de Microsoft R Open, SQL Server 2016 R Services, SQL Server 2016 R Server (autonome) ou de la fonctionnalité R dans SQL Server 2017 Machine Learning Services ou Machine Learning Server (autonome). Ce paramètre est généralement utilisé pendant l’installation des composants R à partir de la [ligne de commande sur un ordinateur sans accès à Internet](https://docs.microsoft.com/sql/advanced-analytics/r-services/installing-r-components-without-internet-access).|  
   
 ###### <a name="sample-syntax"></a>Exemple de syntaxe :  
  Pour installer une nouvelle instance autonome avec les composants [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], Réplication et Recherche en texte intégral et activer l’initialisation instantanée de fichiers pour [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. 

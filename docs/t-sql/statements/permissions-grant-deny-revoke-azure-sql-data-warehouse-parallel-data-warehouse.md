@@ -5,24 +5,21 @@ ms.date: 08/10/2017
 ms.prod: sql
 ms.prod_service: sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 5a3b7424-408e-4cb0-8957-667ebf4596fc
-caps.latest.revision: 9
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 8afad612e639d11a47c3c1bed4d5ac66404405a4
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 734d7558f8193879d13c4567d75a7ba269c114fc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40405192"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47613127"
 ---
 # <a name="permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse"></a>Autorisations : GRANT, DENY, REVOKE (Azure SQL Data Warehouse, Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -86,7 +83,7 @@ REVOKE
   
  ON [ \<class_type> :: ] *securable* La clause **ON** décrit le paramètre de l’élément sécurisable pour lequel accorder, refuser ou révoquer des autorisations.  
   
- \<class_type> Type de classe de l’élément sécurisable. Il peut s’agir de **LOGIN**, **DATABASE**, **OBJECT**, **SCHEMA**, **ROLE**, or **USER**. Les autorisations peuvent également être accordées à **SERVER***class_type*, mais **SERVER** n’est pas spécifié pour ces autorisations. **DATABASE** n’est pas spécifié quand l’autorisation comprend le mot **DATABASE** (par exemple, **ALTER ANY DATABASE**). Quand aucun *class_type* n’est spécifié et que le type d’autorisation n’est pas limité au serveur ou à la classe de base de données, la classe est assimilée à **OBJECT**.  
+ \<class_type> Type de classe de l’élément sécurisable. Il peut s’agir de **LOGIN**, **DATABASE**, **OBJECT**, **SCHEMA**, **ROLE**, or **USER**. Les autorisations peuvent également être accordées à **SERVER**_class\_type_, mais **SERVER** n’est pas spécifié pour ces autorisations. **DATABASE** n’est pas spécifié quand l’autorisation comprend le mot **DATABASE** (par exemple, **ALTER ANY DATABASE**). Quand aucun *class_type* n’est spécifié et que le type d’autorisation n’est pas limité au serveur ou à la classe de base de données, la classe est assimilée à **OBJECT**.  
   
  *securable*  
  Nom de l’objet (connexion, base de données, table, vue, schéma, procédure, rôle ou utilisateur) pour lequel accorder, refuser ou révoquer des autorisations. Le nom de l’objet peut être spécifié avec les règles de nommage en trois parties qui sont décrites dans [Conventions de la syntaxe Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  

@@ -5,9 +5,7 @@ ms.date: 2/20/2018
 ms.prod: sql
 ms.prod_service: sql-data-warehouse, pdw, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE EXTERNAL FILE FORMAT
@@ -19,17 +17,16 @@ helpviewer_keywords:
 - External, file format
 - PolyBase, external file format
 ms.assetid: abd5ec8c-1a0e-4d38-a374-8ce3401bc60c
-caps.latest.revision: 25
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5c316c7a1e2e2913c5f0b4ce2e2bb4f63a2f5246
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 7e96392c4dfd81e8b875227403b315a78419f318
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43084307"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47719257"
 ---
 # <a name="create-external-file-format-transact-sql"></a>CREATE EXTERNAL FILE FORMAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -303,7 +300,7 @@ Remarques sur ce tableau :
 ## <a name="performance"></a>Performances
  L’utilisation de fichiers compressés présente l’inconvénient de devoir transférer moins de données entre la source de données externe et SQL Server, tout en augmentant l’utilisation du processeur pour compresser et décompresser les données.
   
- Les fichiers texte compressés avec GZip ne sont pas fractionnables. Pour améliorer les performances des fichiers texte compressés avec Gzip, nous vous recommandons de générer plusieurs fichiers et de les stocker dans le même répertoire de la source de données externe. Cette structure de fichiers permet à PolyBase de lire et de décompresser les données plus rapidement à l’aide de plusieurs processus de lecture et de décompression. Le nombre idéal de fichiers compressés correspond au nombre maximal de processus de lecteur de données par nœud de calcul. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], le nombre maximal de processus de lecteur de données est de 8 par nœud dans la version actuelle. Dans [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], le nombre maximal de processus de lecteur de données par nœud varie selon les objectifs du contrat. Pour plus d’informations, consultez [Azure SQL Data Warehouse loading patterns and strategies](https://blogs.msdn.microsoft.com/sqlcat/2016/02/06/azure-sql-data-warehouse-loading-patterns-and-strategies/).  
+ Les fichiers texte compressés avec GZip ne sont pas fractionnables. Pour améliorer les performances des fichiers texte compressés avec Gzip, nous vous recommandons de générer plusieurs fichiers et de les stocker dans le même répertoire de la source de données externe. Cette structure de fichiers permet à PolyBase de lire et de décompresser les données plus rapidement à l’aide de plusieurs processus de lecture et de décompression. Le nombre idéal de fichiers compressés correspond au nombre maximal de processus de lecteur de données par nœud de calcul. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], le nombre maximal de processus de lecteur de données est de 8 par nœud, sauf pour Azure SQL Data Warehouse Gen2 (20 lecteurs par nœud). Dans [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], le nombre maximal de processus de lecteur de données par nœud varie selon les objectifs du contrat. Pour plus d’informations, consultez [Azure SQL Data Warehouse loading patterns and strategies](https://blogs.msdn.microsoft.com/sqlcat/2017/05/17/azure-sql-data-warehouse-loading-patterns-and-strategies/).  
   
 ## <a name="examples"></a>Exemples  
   

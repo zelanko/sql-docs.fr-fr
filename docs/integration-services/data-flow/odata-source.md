@@ -1,13 +1,11 @@
 ---
 title: Source OData | Microsoft Docs
-ms.date: 03/01/2017
+ms.date: 09/17/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.custom: ''
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.DTS.DESIGNER.ODATASOURCE.F1
@@ -15,29 +13,40 @@ f1_keywords:
 - sql13.dts.designer.odatasource.columns.f1
 - sql13.dts.designer.odatasource.erroroutput.f1
 ms.assetid: cc9003c9-638e-432b-867e-e949d50cec90
-caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5d00e25ec5c03101ea71d6d45063d2248a0c3404
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 8b0a2404d61f9eaeffae606cec86cedb1ecb491f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35401431"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47692127"
 ---
 # <a name="odata-source"></a>Source OData
-Utilisez le composant source OData dans un package SSIS pour consommer les données provenant d’un service OData (Open Data Protocol). Le composant prend en charge les protocoles OData v3 et v4.  
+Utilisez le composant source OData dans un package SSIS pour consommer les données provenant d’un service OData (Open Data Protocol).
+
+## <a name="supported-protocols-and-data-formats"></a>Protocoles et formats de données pris en charge
+
+Le composant prend en charge les protocoles OData v3 et v4.  
   
 -   Pour le protocole OData V3, le composant prend en charge les formats de données JSON et ATOM.  
   
 -   Pour le protocole OData V4, le composant prend en charge le format de données JSON.  
 
+## <a name="supported-data-sources"></a>Sources de données prises en charge
+
 La source OData prend en charge les sources de données suivantes :
 -   Microsoft Dynamics AX Online et Microsoft Dynamics CRM Online,
 -   Listes SharePoint. Pour visualiser toutes les listes d’un serveur SharePoint, utilisez l’URL suivante : http://\<serveur>/_vti_bin/ListData.svc. Pour plus d'informations sur les conventions d'URL SharePoint, consultez [Interface REST de SharePoint Foundation](http://msdn.microsoft.com/library/ff521587.aspx).
 
-> [!NOTE]
+## <a name="supported-data-types"></a>Types de données pris en charge
+
+La source OData prend en charge les types de données simples suivants : int, byte[], bool, byte, DateTime, DateTimeOffset, decimal, double, Guid, Int16, Int32, Int64, sbyte, float, string et TimeSpan.
+
+Pour découvrir les types de données des colonnes dans votre source de données, consultez la page `http://<OData feed endpoint>/$metadata`.
+
+> [!IMPORTANT]
 > Le composant Source OData ne prend pas en charge les types complexes, comme les éléments à choix multiple, dans des listes SharePoint.
 
 ## <a name="odata-format-and-performance"></a>Format OData et performances

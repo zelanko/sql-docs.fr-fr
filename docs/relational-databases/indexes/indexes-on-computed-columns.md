@@ -18,12 +18,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5f3144520a5473a913dbc50f6002f69954042bcd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ff278b06fcc964ec95b57bfc8f4685d22c420e0a
+ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789853"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48851874"
 ---
 # <a name="indexes-on-computed-columns"></a>Index sur les colonnes calculées
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ Toutes les références de fonctions dans la colonne calculée doivent avoir le 
 > [!IMPORTANT]  
 >  Une expression est déterministe lorsqu'elle retourne toujours le même résultat pour un ensemble donné d'entrées. La propriété **IsDeterministic** de la fonction [COLUMNPROPERTY](../../t-sql/functions/columnproperty-transact-sql.md) indique si un paramètre *computed_column_expression* est déterministe ou non.  
   
- Le paramètre *computed_column_expression* doit être déterministe. Un paramètre *computed_column_expression* est déterministe quand une ou plusieurs des conditions suivantes sont remplies :  
+ Le paramètre *computed_column_expression* doit être déterministe. Une *expression_de_colonne_calculée* est déterministe quand toutes les conditions suivantes sont vraies :  
   
 -   Toutes les fonctions référencées par l'expression sont déterministes et précises, notamment les fonctions définies par l'utilisateur et les fonctions intégrées. Pour plus d’informations, consultez [Fonctions déterministes et non déterministes](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md). Les fonctions peuvent être imprécises si la colonne calculée est de type PERSISTED. Pour plus d’informations, consultez [Création d’index sur des colonnes calculées persistantes](#BKMK_persisted) , plus loin dans cette rubrique.  
   

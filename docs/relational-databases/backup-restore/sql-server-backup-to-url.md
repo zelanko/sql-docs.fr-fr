@@ -5,21 +5,18 @@ ms.date: 11/17/2017
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
-caps.latest.revision: 44
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d4d0071cbb32207d97d4df9c3bd4e69c91046691
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 71766cb569c2a9f6302783472f564636368e1bae
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40175296"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072223"
 ---
 # <a name="sql-server-backup-to-url"></a>Sauvegarde SQL Server vers une URL
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -62,6 +59,18 @@ ms.locfileid: "40175296"
   
  La création d’un compte de stockage Microsoft Azure dans votre abonnement Azure est la première étape de ce processus. Ce compte de stockage est un compte d’administrateur disposant des autorisations administratives complètes sur tous les conteneurs et objets créés avec le compte de stockage. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut soit utiliser le nom du compte de stockage Microsoft Azure et la valeur de sa clé d’accès pour s’authentifier, ainsi qu’écrire et lire des objets blob dans le service de stockage d’objets blob Microsoft Azure, soit utiliser un jeton de signature d’accès partagé généré sur des conteneurs spécifiques lui octroyant des droits de lecture et d’écriture. Pour plus d’informations sur les comptes Azure Storage, voir [À propos des comptes de stockage Azure](http://azure.microsoft.com/documentation/articles/storage-create-storage-account/) et, pour plus d’informations sur les signatures d’accès partagé, voir [Signatures d’accès partagé, partie 1 : présentation du modèle SAP](http://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/). Les informations d'identification de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stockent ces informations et sont utilisées lors des opérations de sauvegarde ou de restauration.  
   
+###  <a name="blockbloborpageblob"></a> Sauvegarde sur un objet blob de blocs vs un objet blob de pages 
+ Deux types d’objets blob peuvent être stockés dans le service de stockage d’objets blob Microsoft Azure : les objets blob de blocs et les objets blob de pages. La sauvegarde SQL Server peut utiliser l'un ou l'autre type de blob selon la syntaxe Transact-SQL utilisée : si la clé de stockage est utilisée dans les informations d’identification, l’objet blob de pages sera utilisé ; si la signature d’accès partagé est utilisée, l’objet blob de blocs sera utilisé.
+ 
+ La sauvegarde sur un objet blob de blocs est uniquement disponible dans SQL Server 2016 ou version ultérieure. Nous vous recommandons de sauvegarder sur un objet blob de blocs au lieu d’un objet blob de pages si vous exécutez SQL Server 2016 ou version ultérieure. Les principales raisons sont les suivantes :
+- La signature d’accès partagé est un moyen plus sûr que la clé de stockage pour autoriser l’accès aux objets blob.
+- Vous pouvez sauvegarder sur plusieurs objets blob de blocs pour obtenir une meilleure sauvegarde, restaurer les performances et prendre en charge la sauvegarde de bases de données plus volumineuses.
+- Un [objet blob de blocs](https://azure.microsoft.com/pricing/details/storage/blobs/) est moins cher qu’un [objet blob de pages](https://azure.microsoft.com/pricing/details/storage/page-blobs/). 
+
+Lorsque vous sauvegardez sur un objet blob de blocs, vous pouvez spécifier une taille maximum des blocs de 4 Mo. La taille maximale d’un fichier d’objet blob de blocs est de 4 Mo * 50 000 = 195 Go. Si votre base de données est supérieure à 195 Go, nous vous recommandons ce qui suit :
+- Utiliser la compression de la sauvegarde
+- Sauvegarder sur plusieurs objets blob de blocs
+
 ###  <a name="Blob"></a> Service de stockage d’objets blob Microsoft Azure  
  **Compte de stockage :** le compte de stockage constitue le point de départ de tous les services de stockage. Pour accéder au service de stockage d’objets blob Microsoft Azure, commencez par créer un compte de stockage Microsoft Azure. Pour plus d’informations, voir [Créez un compte de stockage](http://azure.microsoft.com/documentation/articles/storage-create-storage-account/).  
   
@@ -394,7 +403,7 @@ Après avoir exécuté le script, copiez la commande `CREATE CREDENTIAL` dans un
   
   
 ###  <a name="PITR"></a> Restauration jusqu'à une date et heure en utilisant STOPAT  
- L’exemple suivant restaure la base de données exemple AdventureWorks2016 dans l’état où elle était à un point dans le temps, et illustre une opération de restauration.  
+ L’exemple suivant restaure l’exemple de base de données AdventureWorks2016 dans l’état où elle était à un moment donné et montre une opération de restauration.  
   
 1.  **À partir d’une URL en utilisant une signature d’accès partagé**  
   

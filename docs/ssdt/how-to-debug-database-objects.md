@@ -11,17 +11,17 @@ ms.assetid: f5d4584f-e85f-4558-b056-83681c365978
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bda792731bbaf97732575453a284865bd243a84d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8652ebfdcdf5604cebc995ef7ecf2a5f3944b9e7
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47636127"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49071712"
 ---
 # <a name="how-to-debug-database-objects"></a>Procédure : déboguer des objets de base de données
 Un test unitaire SQL Server inclut les éléments suivants :  
   
--   Code de test unitaire écrit dans Visual C\# ou dans Visual Basic. Ce code, généré par le Concepteur de test unitaire SQL Server, est chargé d'envoyer le script Transact\-SQL qui forme le corps du test.  
+-   Code de test unitaire écrit en Visual C\# ou en Visual Basic. Ce code, généré par le Concepteur de test unitaire SQL Server, est chargé d'envoyer le script Transact\-SQL qui forme le corps du test.  
   
 -   Une ou plusieurs conditions de test, écrites en Visual C\# ou en Visual Basic. Pour déboguer les conditions de test, suivez la procédure de débogage d'un test unitaire, tel que le décrit dans [Procédure : déboguer lors de l'exécution d'un test (Visual Studio 2010)](http://msdn.microsoft.com/library/ms182484(VS.100).aspx) ou [Procédure : déboguer lors de l'exécution d'un test (Visual Studio 2012)](http://msdn.microsoft.com/library/ms182484.aspx).  
   

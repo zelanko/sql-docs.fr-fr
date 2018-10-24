@@ -12,12 +12,12 @@ ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 90107457214d5edec92c45620d70f4e48504ab6f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 968bb1f3a96ab769b8ad7a837edb5876477c1324
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47672247"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072249"
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Installation et configuration de Master Data Services
 
@@ -120,7 +120,7 @@ Si vous souhaitez apporter des modifications à l’installation de [!INCLUDE[ss
 
  
 > [!WARNING]  
-    >  Vous devez [installer IIS](#InstallIIS) avant de lancer le Gestionnaire de configuration [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]. Sinon, le Gestionnaire de configuration affiche une erreur IIS, vous empêchant de créer l’application web [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)].  
+    >  Vous devez [installer IIS](#InstallIIS) avant de lancer le Gestionnaire de configuration [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]. Sinon,Configuration Manager affiche une erreur IIS, vous empêchant de créer l’application web [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)].  
     
 > **Condition requise pour le navigateur**
 >>L’application web [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] fonctionne uniquement dans Internet Explorer 9 ou version ultérieure. Internet Explorer 8 et versions antérieures, Microsoft Edge et Chrome ne sont pas pris en charge.    

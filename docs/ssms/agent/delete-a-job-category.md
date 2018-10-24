@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms-agent
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent jobs, categories
@@ -17,17 +14,16 @@ helpviewer_keywords:
 - categories [SQL Server Agent jobs]
 - removing job category
 ms.assetid: 47a7640b-20b3-4639-ab37-b6fc73575e6c
-caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e0ec3e7ae9771d4cb3f63e3f2bc9f670a47ac3b2
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 77bb74d2337864e5a7542e3c9b1da44f5885380c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42775248"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47705150"
 ---
 # <a name="delete-a-job-category"></a>Supprimer une catégorie de travaux
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -73,13 +69,13 @@ Pour plus d'informations, consultez [Implement SQL Server Agent Security](../../
   
 3.  Cliquez avec le bouton droit sur le dossier **Travaux** et sélectionnez **Gérer les catégories de travaux**.  
   
-4.  Dans la boîte de dialogue**Gérer les catégories de travaux***nom_serveur*, sélectionnez la catégorie de travaux à supprimer.  
+4.  Dans la boîte de dialogue **Gérer les catégories de travaux**_nom\_serveur_, sélectionnez la catégorie de travaux à supprimer.  
   
 5.  Cliquez sur **Supprimer**.  
   
 6.  Dans la boîte de dialogue **Catégories de travaux** , cliquez sur **Oui**.  
   
-7.  Fermez la boîte de dialogue **Gérer les catégories de travaux***nom_serveur*.  
+7.  Fermez la boîte de dialogue **Gérer les catégories de travaux**_nom\_serveur_.  
   
 ## <a name="TSQL"></a>Utilisation de Transact-SQL  
   

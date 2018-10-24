@@ -15,12 +15,12 @@ ms.assetid: 378d2d63-50b9-420b-bafb-d375543fda17
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a51069c347ac22d2dbb45f854e182995507bbf7f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 847516f3bb32f32bd20f039252b99946c63f4c7d
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47783567"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906329"
 ---
 # <a name="failover-and-failover-modes-always-on-availability-groups"></a>Basculement et modes de basculement (groupes de disponibilité Always On)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -262,7 +262,7 @@ ms.locfileid: "47783567"
 |Validation synchrone|non|Oui|  
 |Validation asynchrone|non|Oui|  
   
- Les bases de données secondaires suivent uniquement deux branchements de récupération. Par conséquent, si vous exécutez plusieurs basculements forcés, il est possible que certaines bases de données secondaires qui ont démarré la synchronisation des données avec le basculement forcé précédent, ne puissent pas être reprises. Si cela se produit, les bases de données secondaires qui ne peuvent pas être reprises devront être supprimées du groupe de disponibilité, restaurées au moment approprié et rejoindre le groupe de disponibilité. Une restauration ne fonctionnera pas entre plusieurs branchements de récupération, par conséquent, vous devez veiller à sauvegarder le journal après l'exécution de plus d'un basculement forcé.  
+ Les bases de données secondaires suivent uniquement deux branchements de récupération. Par conséquent, si vous exécutez plusieurs basculements forcés, il est possible que certaines bases de données secondaires qui ont démarré la synchronisation des données avec le basculement forcé précédent, ne puissent pas être reprises. Si cela se produit, les bases de données secondaires qui ne peuvent pas être reprises devront être supprimées du groupe de disponibilité, restaurées au moment approprié et rejoindre le groupe de disponibilité. L’erreur 1408 avec état 103 peut être observée dans ce scénario (erreur : 1408, gravité : 16, état : 103). Une restauration ne fonctionnera pas entre plusieurs branchements de récupération, par conséquent, vous devez veiller à sauvegarder le journal après l'exécution de plus d'un basculement forcé.  
   
 ###  <a name="WhyFFoPostForcedQuorum"></a> Raisons pour lesquelles le basculement forcé est requis après avoir forcé le quorum  
  Après avoir forcé le quorum sur le cluster WSFC (*quorum forcé*), vous devez forcer le basculement de chaque groupe de disponibilité (avec perte possible de données). Le basculement forcé est requis, car l'état réel des valeurs de cluster WSFC peut avoir été perdu. Il est nécessaire d'empêcher les basculements normaux après un quorum forcé, car un réplica secondaire non synchronisé pourrait apparaître comme synchronisé sur le cluster WSFC reconfiguré.  

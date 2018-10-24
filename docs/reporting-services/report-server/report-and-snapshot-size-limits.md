@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1e3be259-d453-4802-b2f5-6b81ef607edf
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8c402cbbf3dca4a34b8e60b9b5482dc63051b63d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ea7504d459d14dec64d4192185b23279091e70e2
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47842877"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119937"
 ---
 # <a name="report-and-snapshot-size-limits"></a>Limites de taille des instantanés et des rapports
   Les administrateurs qui gèrent un déploiement de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] peuvent utiliser les informations figurant dans cette rubrique pour comprendre les limites de taille lorsque le rapport est publié sur un serveur de rapports, rendu lors de l'exécution et enregistré dans le système de fichiers. Cette rubrique fournit également des conseils pratiques expliquant comment mesurer la taille d'une base de données de serveur de rapports, et elle décrit l'incidence de la taille des instantanés sur les performances des serveurs.  
@@ -57,7 +57,7 @@ ms.locfileid: "47842877"
   
  Par défaut, les bases de données **reportserver** et **reportservertempdb** sont configurées pour permettre une croissance automatique. La taille d'une base de données peut augmenter automatiquement, mais elle ne peut en aucun cas diminuer automatiquement. Si la base de données **reportserver** dispose d'une capacité excédentaire car vous avez supprimé des instantanés, vous devez la réduire manuellement pour récupérer de l'espace sur le disque. De même, si la taille de la base de données **reportservertempdb** a augmenté pour gérer un volume anormalement élevé de rapports interactifs, l'allocation de l'espace disque restera à ce paramètre tant que vous ne l'aurez pas diminué.  
   
- Pour mesurer la taille des bases de données du serveur de rapports, vous pouvez exécuter les commandes [!INCLUDE[tsql](../../includes/tsql-md.md)] suivantes. Si vous calculez régulièrement la taille totale des bases de données, vous pourrez évaluer avec justesse comment allouer au fur et à mesure de l'espace à la base de données du serveur de rapports. Les instructions suivantes mesurent la quantité d'espace actuellement utilisée (les instructions partent du principe que vous utilisez les noms de base de données par défaut) :  
+ Pour mesurer la taille des bases de données du serveur de rapports, vous pouvez exécuter les commandes [!INCLUDE[tsql](../../includes/tsql-md.md)] suivantes. Si vous calculez régulièrement la taille totale des bases de données, vous pourrez évaluer avec justesse comment allouer au fur et à mesure de l'espace à la base de données du serveur de rapports. Les instructions suivantes mesurent la quantité d'espace actuellement utilisée (les instructions partent du principe que vous utilisez les noms de base de données par défaut) :  
   
 ```  
 USE ReportServer  
@@ -78,7 +78,7 @@ EXEC sp_spaceused
  La quantité d'instantanés qui est stockée dans une base de données de serveur de rapports n'est pas, en soi, un facteur de performances. Vous pouvez stocker un grand nombre d'instantanés sans aucune incidence sur les performances. Vous pouvez conserver les instantanés indéfiniment. Sachez cependant que l'historique de rapport est configurable. Si un administrateur de serveur de rapports abaisse la limite de l'historique de rapport, vous risquez de perdre des rapports que vous comptiez garder. Si vous supprimez le rapport, tout l'historique est également supprimé.  
   
 ## <a name="see-also"></a> Voir aussi  
- [Définir les propriétés de traitement d'un rapport](../../reporting-services/report-server/set-report-processing-properties.md)   
+ [Définir les propriétés de traitement d’un rapport](../../reporting-services/report-server/set-report-processing-properties.md)   
  [Base de données du serveur de rapports &#40;SSRS en mode natif&#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
  [Traiter les rapports volumineux](../../reporting-services/report-server/process-large-reports.md)  
   

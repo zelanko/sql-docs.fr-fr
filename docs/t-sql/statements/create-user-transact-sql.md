@@ -5,9 +5,7 @@ ms.date: 07/28/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - WITHOUT_LOGIN_TSQL
@@ -28,17 +26,16 @@ helpviewer_keywords:
 - users [SQL Server], adding
 - users [SQL Server]
 ms.assetid: 01de7476-4b25-4d58-85b7-1118fe64aa80
-caps.latest.revision: 111
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f5e044f1555019aca5f50694f1367ee79b6237cc
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 533622016967deef4f1fbcb4ead0c17975910899
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43094853"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47618087"
 ---
 # <a name="create-user-transact-sql"></a>CREATE USER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -165,7 +162,7 @@ CREATE USER user_name
  Spécifie le nom qui identifie l'utilisateur dans cette base de données. *user_name* est de type **sysname**. Il peut comporter jusqu'à 128 caractères. Lors de la création d'un utilisateur basé sur un principal Windows, le nom du principal Windows devient le nom d'utilisateur sauf si un autre nom d'utilisateur est spécifié.  
   
  LOGIN *login_name*  
- Spécifie le compte de connexion pour lequel l'utilisateur de base de données est créé. *login_name* doit être un compte de connexion valide sur le serveur. Peut être un compte de connexion basé sur un principal Windows (utilisateur ou groupe), ou un compte de connexion utilisant l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Lorsque ce compte de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] accède à la base de données, il prend le nom et l'ID de l'utilisateur de base de données que vous créez. Quand vous créez un compte de connexion mappé à partir d’un principal Windows, utilisez le format **[***\<NomDomaine>***\\***\<NomCompteConnexion>***]**. Pour obtenir des exemples, consultez [Résumé de syntaxe](#SyntaxSummary).  
+ Spécifie le compte de connexion pour lequel l'utilisateur de base de données est créé. *login_name* doit être un compte de connexion valide sur le serveur. Peut être un compte de connexion basé sur un principal Windows (utilisateur ou groupe), ou un compte de connexion utilisant l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Lorsque ce compte de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] accède à la base de données, il prend le nom et l'ID de l'utilisateur de base de données que vous créez. Quand vous créez un compte de connexion mappé à partir d’un principal Windows, utilisez le format **[**_\<nom_domaine\>_**\\**_\<nom_connexion\>_**]**. Pour obtenir des exemples, consultez [Résumé de syntaxe](#SyntaxSummary).  
   
  Si l'instruction CREATE USER est la seule instruction d'un lot SQL, Microsoft Azure SQL Database prend en charge la clause WITH LOGIN. Si l'instruction CREATE USER n'est pas la seule instruction d'un lot SQL ou est exécutée en SQL dynamique, la clause WITH LOGIN n'est pas prise en charge.  
   
@@ -173,7 +170,7 @@ CREATE USER user_name
  Spécifie le premier schéma que le serveur doit interroger pour résoudre les noms des objets associés à cet utilisateur de base de données.  
   
  '*windows_principal*'  
- Spécifie le principal Windows pour lequel l'utilisateur de la base de données est créé. *windows_principal* peut être un utilisateur Windows ou un groupe Windows. L’utilisateur est créé même si le *windows_principal* ne dispose pas de compte de connexion. Lors de la connexion à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], si *windows_principal* ne dispose pas de compte de connexion, le principal Windows doit s’authentifier auprès du [!INCLUDE[ssDE](../../includes/ssde-md.md)] via l’appartenance à un groupe Windows qui dispose d’un compte de connexion, ou la chaîne de connexion doit spécifier la base de données autonome comme catalogue initial. Quand vous créez un utilisateur à partir d’un principal Windows, utilisez le format **[***\<NomDomaine>***\\***\<NomCompteConnexion>***]**. Pour obtenir des exemples, consultez [Résumé de syntaxe](#SyntaxSummary). Les utilisateurs basés sur des utilisateurs Active Directory sont limités aux noms de moins de 21 caractères.    
+ Spécifie le principal Windows pour lequel l'utilisateur de la base de données est créé. *windows_principal* peut être un utilisateur Windows ou un groupe Windows. L’utilisateur est créé même si le *windows_principal* ne dispose pas de compte de connexion. Lors de la connexion à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], si *windows_principal* ne dispose pas de compte de connexion, le principal Windows doit s’authentifier auprès du [!INCLUDE[ssDE](../../includes/ssde-md.md)] via l’appartenance à un groupe Windows qui dispose d’un compte de connexion, ou la chaîne de connexion doit spécifier la base de données autonome comme catalogue initial. Quand vous créez un utilisateur à partir d’un principal Windows, utilisez le format **[**_\<nom_domaine\>_**\\**_\<nom_connexion\>_**]**. Pour obtenir des exemples, consultez [Résumé de syntaxe](#SyntaxSummary). Les utilisateurs basés sur des utilisateurs Active Directory sont limités aux noms de moins de 21 caractères.    
   
  '*Azure_Active_Directory_principal*'  
  **S’applique à** : [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)], [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)].  
@@ -216,8 +213,7 @@ DEFAULT_LANGUAGE = *{ NONE | \<lcid> | \<language name> | \<language alias> }*
  Spécifie la langue par défaut du nouvel utilisateur. Si une langue par défaut est spécifiée pour l'utilisateur et que la langue par défaut de la base de données est changée ultérieurement, la langue par défaut des utilisateurs reste comme spécifié. Si aucune langue par défaut n'est spécifiée, la langue par défaut de l'utilisateur correspondra à la langue par défaut de la base de données. Si la langue par défaut n'est pas spécifiée pour l'utilisateur et que la langue par défaut de la base de données est changée ultérieurement, la langue par défaut de l'utilisateur est remplacée par la nouvelle langue par défaut de la base de données.  
   
 > [!IMPORTANT]  
->  
-  *DEFAULT_LANGUAGE* est utilisé uniquement pour un utilisateur de base de données autonome.  
+>  *DEFAULT_LANGUAGE* est utilisé uniquement pour un utilisateur de base de données autonome.  
   
 SID = *sid*  
  **S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -457,8 +453,7 @@ Vous pouvez également [octroyer (GRANT) des autorisations sur un objet](../../t
  [DROP USER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-user-transact-sql.md)   
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
- 
-  [Bases de données autonomes](../../relational-databases/databases/contained-databases.md)   
+ [Bases de données autonomes](../../relational-databases/databases/contained-databases.md)   
  [Connexion à la base de données SQL à l’aide de l’authentification Azure Active Directory](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication)   
  [Prise en main des autorisations du moteur de base de données](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)  
   

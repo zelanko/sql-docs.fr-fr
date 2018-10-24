@@ -5,9 +5,7 @@ ms.date: 07/29/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DATEDIFF_BIG
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - functions [SQL Server], date and time
 - time [SQL Server], functions
 ms.assetid: 19ac1693-3cfa-400d-bf83-20a9cb46599a
-caps.latest.revision: 7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b309bb7411d3c75aa1c98a219123efffc5dbca3e
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 4516965f66256e21e5e68310f7668770e17cabb9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38063617"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47644847"
 ---
 # <a name="datediffbig-transact-sql"></a>DATEDIFF_BIG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -79,7 +76,7 @@ Expression qui peut être résolue en valeur, parmi les suivantes :
 + **smalldatetime**
 + **time**
 
-Pour *date*, `DATEDIFF_BIG` accepte une expression de colonne, une expression, un littéral de chaîne ou une variable définie par l’utilisateur. Une valeur de littéral de chaîne doit être résolue en **datetime**. Pour éviter toute ambiguïté, utilisez des années à quatre chiffres. `DATEDIFF_BIG` soustrait *enddate* de *startdate*. Pour éviter toute ambiguïté, représentez les années à l'aide de quatre chiffres. Pour obtenir des informations sur les années à deux chiffres, consultez [Configurer l’option de configuration du serveur two digit year cutoff](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md).
+Pour *date*, `DATEDIFF_BIG` accepte une expression de colonne, une expression, un littéral de chaîne ou une variable définie par l’utilisateur. Une valeur de littéral de chaîne doit être résolue en **datetime**. Pour éviter toute ambiguïté, utilisez des années à quatre chiffres. `DATEDIFF_BIG` soustrait *startdate* de *enddate*. Pour éviter toute ambiguïté, représentez les années à l'aide de quatre chiffres. Pour obtenir des informations sur les années à deux chiffres, consultez [Configurer l’option de configuration du serveur two digit year cutoff](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md).
   
 *enddate*  
 Consultez *startdate*.
@@ -92,7 +89,7 @@ Consultez *startdate*.
 Retourne le nombre (valeur entière très grande signée) des limites datepart spécifiées, traversées entre les valeurs startdate et enddate spécifiées.
 -   Chaque *datepart* spécifique et les abréviations pour ce *datepart* retournent la même valeur.  
   
-Si une valeur de retour est hors limites pour **bigint** (-9 223 372 036 854 775 808 à +9 223 372 036 854 775 807), `DATEDIFF_BIG` retourne une erreur. Pour **millisecond**, la différence maximale entre *startdate* et *enddate* est de 24 jours, 20 heures, 31 minutes et 23,647 secondes. Pour **second**, la différence maximale est de 68 ans.
+Si une valeur de retour est hors limites pour **bigint** (-9 223 372 036 854 775 808 à +9 223 372 036 854 775 807), `DATEDIFF_BIG` retourne une erreur. Pour **millisecond**, la différence maximale entre *enddate* et *startdate* est de 24 jours, 20 heures, 31 minutes et 23,647 secondes. Pour **second**, la différence maximale est de 68 ans.
   
 Si *startdate* et *enddate* se voient tous les deux assigner uniquement une valeur d’heure et que *datepart* n’est pas un *datepart* d’heure, `DATEDIFF_BIG` retourne 0.
   
@@ -121,7 +118,7 @@ SELECT DATEDIFF_BIG(millisecond, '2005-12-31 23:59:59.9999999', '2006-01-01 00:0
 ```
   
 ## <a name="remarks"></a>Notes   
-Utilisez `DATEDIFF_BIG` dans les clauses SELECT <list>, WHERE, HAVING, GROUP BY et ORDER BY.
+Utilisez `DATEDIFF_BIG` dans les clauses SELECT, <list>WHERE, HAVING, GROUP BY et ORDER BY.
   
 `DATEDIFF_BIG` caste implicitement les littéraux de chaîne en type **datetime2**. Cela signifie que `DATEDIFF_BIG` ne prend pas en charge le format YDM quand la date est passée comme chaîne. Vous devez caster explicitement la chaîne en type **datetime** ou **smalldatetime** pour utiliser le format AJM.
   
