@@ -9,12 +9,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5b3e6d4e898e00682a67084d70b6706af3951fa4
-ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
+ms.openlocfilehash: 03294cce7e8c800d51b5a333e92d611cf8b694fe
+ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49336368"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49384094"
 ---
 # <a name="sql-server-help-and-feedback"></a>Aide et commentaires pour SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -77,10 +77,9 @@ Il existe quelques médias sociaux qui peuvent vous permettre de contacter l’�
 - [MashaMSFT Twitter](https://twitter.com/mashamsft)
 - [MikeRayMSFT Twitter](https://twitter.com/mncray)
 
+## <a name="i-want-to-provide-feedback-for-sql-docs-content"></a>Je souhaite fournir des commentaires sur le contenu des documents SQL
 
-## <a name="i-want-to-provide-feedback-for-sql-docs-content"></a>Je souhaite fournir des commentaires sur le contenu des documents SQL 
-
-### <a name="editing-content"></a>Modification du contenu
+### <a name="edit-contentincludesmediaedit-topic-pencilpng-editing-content"></a>![modifier contenu](../includes/media/edit-topic-pencil.png) Modification du contenu
 Avez-vous trouvé du contenu erroné dans notre documentation ? Saviez-vous que vous pouvez modifier le contenu vous-même ? Dans ce cas, non seulement notre documentation sera améliorée, mais vous serez également cité en tant que contributeur à la page ! Pour plus d’informations, consultez [http://aka.ms/editsqldocs](http://aka.ms/editsqldocs). 
 
 ### <a name="surveys"></a>Enquêtes

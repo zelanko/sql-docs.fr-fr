@@ -10,12 +10,12 @@ ms.assetid: 04ba51b6-cdc7-409c-8d7e-26ead13e614d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d6f418b5f9456b2863abba5d63c25dd224977dfb
-ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
+ms.openlocfilehash: a6507c72a325871fa4ec2e075a00dc458ac64ba3
+ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49100540"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49384174"
 ---
 # <a name="database-engine-errors"></a>Erreurs du moteur de base de données
 Ce tableau contient les numéros des messages d’erreur et leur description, qui correspond au texte du message d’erreur dans la vue de catalogue sys.messages. 
@@ -1290,6 +1290,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   2597    |   10  |   non  |   Indicateur de trace %d ignoré. Il s'agit soit d'un indicateur de trace non valide, soit d'un indicateur de trace qui peut uniquement être spécifié pendant le démarrage du serveur.    |
 |   2599    |   16  |   non  |   Impossible de basculer en texte dans la ligne sur la table "%.*ls".  |
 |   2601    |   14  |   non  |   Impossible d’insérer une ligne de clé en double dans l’objet '%*ls' avec un index unique '%.* ls'.    |
+|   2628    |   16  |   non  |   Les données de chaîne ou binaires seront tronquées dans la table '%.*ls', colonne '%.* ls'. Valeur tronquée : '%.*ls'.|
 |   2627    |   14  |   non  |   Violation de la contrainte %ls '%.*ls'. Impossible d’insérer une clé en double dans l’objet '%.* ls'. |
 |   2701    |   10  |   non  |   Le nom de base de données '%.*ls' est ignoré, qui fait référence à un objet de tempdb.    |
 |   2702    |   16  |   non  |   La base de données '%.*ls' n'existe pas.    |
