@@ -1,7 +1,7 @@
 ---
 title: Création d’une destination ODBC à l’aide du composant Script | Microsoft Docs
 ms.custom: ''
-ms.date: 03/17/2017
+ms.date: 10/10/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -16,12 +16,12 @@ ms.assetid: d198c866-78f4-4a50-ae15-333160645815
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 20cef2b6e736a54d92d18e2a63cf0db9be294b9d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4678c0230a58f53bd56aa973db94fb97f753dbd1
+ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47816255"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49100440"
 ---
 # <a name="creating-an-odbc-destination-with-the-script-component"></a>Création d'une destination ODBC à l'aide du composant Script
   Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], vous enregistrez généralement les données dans une destination ODBC en utilisant une destination [!INCLUDE[vstecado](../../includes/vstecado-md.md)] et le fournisseur de données [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] pour ODBC. Toutefois, vous pouvez également créer une destination ODBC ad hoc à utiliser dans un package unique. Pour créer cette destination ODBC ad hoc, vous utilisez le composant Script comme indiqué dans l'exemple suivant.  
@@ -38,7 +38,7 @@ ms.locfileid: "47816255"
   
 -   **OdbcCommand** attend des paramètres positionnels. Les positions des paramètres sont indiquées par les points d'interrogation (?) dans le texte de la commande. (Par opposition, un objet **SqlCommand** attend des paramètres nommés.)  
   
- Cet exemple utilise la table **Person.Address** de l’exemple de base de données **AdventureWorks**. L’exemple passe la première colonne et la quatrième colonne, à savoir les colonnes **int*AddressID*** et **nvarchar(30)City**, de cette table dans le flux de données. Ces mêmes données sont utilisées dans les exemples de sources, transformations et destinations de la rubrique [Développement de types spécifiques de composants Script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md).  
+ Cet exemple utilise la table **Person.Address** de l’exemple de base de données **AdventureWorks**. L’exemple passe la première colonne et la quatrième colonne, à savoir les colonnes **int _AddressID_** et **nvarchar(30) _City_**, de cette table dans le flux de données. Ces mêmes données sont utilisées dans les exemples de sources, transformations et destinations de la rubrique [Développement de types spécifiques de composants Script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md).  
   
 #### <a name="to-configure-this-script-component-example"></a>Pour configurer cet exemple de composant Script  
   
@@ -167,6 +167,6 @@ ms.locfileid: "47816255"
     ```  
   
 ## <a name="see-also"></a> Voir aussi  
- [Création d’une destination à l’aide du composant Script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)  
+ [Création d’une destination à l’aide du composant Script](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)  
   
   

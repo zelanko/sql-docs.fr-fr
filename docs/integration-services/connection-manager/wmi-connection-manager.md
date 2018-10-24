@@ -17,12 +17,12 @@ ms.assetid: fbfa4ba7-3d0d-4d6b-94ad-50741a88d03d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 781ead456884bd5b0f36a65155329e5df24b6cfe
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 426faaf74fce61361f07ee6936c7a6a140753950
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724257"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119594"
 ---
 # <a name="wmi-connection-manager"></a>Gestionnaire de connexions WMI
   Un gestionnaire de connexions WMI permet à un package d'utiliser WMI (Windows Management Instrumentation) pour gérer des informations dans un environnement d'entreprise. La tâche de service web incluse dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] utilise un gestionnaire de connexions WMI.  

@@ -1,17 +1,17 @@
 ---
 layout: HubPage
 hide_bc: true
-title: Documentation de Microsoft Azure
-description: Découvrez comment générer et gérer des applications puissantes à l’aide des services cloud Microsoft Azure. Obtenez de la documentation, des exemples de code, des tutoriels et bien plus encore.
+title: Continuité de l’activité SQL Server
+description: Explorez les différentes fonctionnalités de SQL Server pour la haute disponibilité, la récupération d’urgence et la continuité de votre activité, quelles que soient les circonstances.
 ms.topic: hub-page
 featureFlags:
 - clicktale
-ms.openlocfilehash: 673c50c9c37a8dbe061e9695b8529e720b94217d
-ms.sourcegitcommit: 615f8b5063aed679495d92a04ffbe00451d34a11
+ms.openlocfilehash: 72f1eecdbf419685a747489a3eca95e8a386cf31
+ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48797431"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49336188"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -205,10 +205,16 @@ ms.locfileid: "48797431"
         <h2>Restez en contact avec nous</h2>
         <ul class="links">
            <li>
-                <a href="http://aka.ms/editsqldocs" data-linktype="external"> Contribuer aux documents SQL </a>
+                <a href="http://aka.ms/editsqldocs" data-linktype="external"> Collaborer </a>
             </li>
            <li>
-                <a href="http://aka.ms/sqldocsurvey" data-linktype="external"> Commentaires relatifs à SQL Docs </a>
+                <a href="https://docs.microsoft.com/sql/sql-server/sql-server-get-help" data-linktype="external"> Obtenir de l’aide </a>
+            </li>
+           <li>
+                <a href="http://aka.ms/sqldocsfeedback" data-linktype="external"> Commentaires </a>
+            </li>
+           <li>
+                <a href="http://aka.ms/sqldocsurvey" data-linktype="external"> Enquête </a>
             </li>
            <li>
                 <a href="https://cloudblogs.microsoft.com/sqlserver/" data-linktype="external"> Blog </a>

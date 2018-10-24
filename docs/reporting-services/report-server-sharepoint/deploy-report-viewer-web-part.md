@@ -7,16 +7,16 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 566b8c860f097ae46de84076b0f355f8115bde6a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0cd9678c06e69b185c75b95d6095e238df8d0937
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47769007"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085175"
 ---
 # <a name="deploy-the-sql-server-reporting-services-report-viewer-web-part-on-a-sharepoint-site"></a>Déployer le composant WebPart Visionneuse de rapports de SQL Server Reporting Services sur un site SharePoint
 
-[!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)])
+[!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
 Le composant WebPart Visionneuse de rapports est un composant WebPart personnalisé qui peut être utilisé pour afficher des rapports SQL Server Reporting Services (mode natif) au sein de votre site SharePoint. Vous pouvez l’utiliser pour afficher, parcourir, imprimer et exporter des rapports sur un serveur de rapports. Le composant WebPart Visionneuse de rapports est associé aux fichiers de définition de rapport (.rdl) qui sont traités par un serveur de rapports SQL Server Reporting Services ou un serveur Power BI Report Server. Il ne peut pas être utilisé avec les rapports Power BI hébergés dans Power BI Report Server.
 
@@ -27,7 +27,8 @@ Utilisez les instructions suivantes pour déployer manuellement le package de so
 ## <a name="requirements"></a>Spécifications
 
 > [!IMPORTANT]
-> Vous ne pouvez pas installer ce composant WebPart si vous avez déjà configuré le mode intégré SharePoint de Reporting Services.
+> Depuis la version « 15.X.X.X », vous pouvez installer ReportViewerWebPart côte à côte avec vos applications de services partagés en mode intégré Reporting Services SharePoint.
+> Avec cette mise à jour de la solution .wsp nous avons introduit de nouveaux fichiers et la solution précédente doit être retirée et la nouvelle solution .wsp doit être redéployée à l’aide des cmdlets Uninstall-SPSolution et Install-SPSolution, respectivement.
 >
 
 **Versions SharePoint Server prises en charge :**

@@ -20,12 +20,12 @@ ms.assetid: 1867c5f8-d57c-46d3-933d-3642ab0a8e24
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 53849f61b723d3881716a4ef24e3f0054871eaf1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 323560bbca3b4914dd9f72bad6f781973d3a34e7
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47606600"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119703"
 ---
 # <a name="view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql"></a>Afficher la taille du fichier partiellement alloué d'un instantané de base de données (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "47606600"
 > [!NOTE]  
 >  La taille d’un fichier partiellement alloué augmente par incréments de 64 kilo-octets (Ko). Il s’agit donc toujours d’un multiple de 64 Ko.  
   
- Pour afficher le nombre d’octets utilisés actuellement sur le disque par chaque fichier partiellement alloué d’un instantané, interrogez la colonne **size_on_disk_bytes** de la vue de gestion dynamique [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][sys.dm_io_virtual_file_stats](../../relational-databases/system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql.md) .  
+ Pour afficher le nombre d’octets utilisés actuellement sur le disque par chaque fichier partiellement alloué d’un instantané, interrogez la colonne **size_on_disk_bytes** de la vue de gestion dynamique [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [sys.dm_io_virtual_file_stats](../../relational-databases/system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql.md).  
   
  Pour afficher l’espace disque occupé par un fichier partiellement alloué, cliquez avec le bouton droit sur le fichier dans Microsoft Windows, cliquez sur **Propriétés**et notez la valeur indiquée dans **Taille sur le disque** .  
   
@@ -62,7 +62,7 @@ ms.locfileid: "47606600"
   
     2.  Sélectionnez le fichier partiellement alloué, ouvrez la boîte de dialogue **Propriétés** dans Windows et relevez la valeur du champ **Taille** .  
   
--   Sur l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
+-   Sur l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
      Sélectionnez la colonne **size** soit dans **sys.database_files** dans l’instantané de la base de données, soit dans **sys.master_files**. La valeur de la colonne **size** reflète l'espace maximal que l'instantané peut utiliser en pages SQL. Cette valeur correspond à celle du champ **Taille** de Windows, sauf qu'elle est exprimée en termes de nombre de pages SQL dans le fichier ; la taille en octets étant :  
   

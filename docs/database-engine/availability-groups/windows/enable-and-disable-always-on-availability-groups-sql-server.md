@@ -15,12 +15,12 @@ ms.assetid: 7c326958-5ae9-4761-9c57-905972276a8f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bcd22dedf4d70734098f0fac9886e99c89169eba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f74904fe4e7576e7400c661a1523f6d29d64425e
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806866"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120316"
 ---
 # <a name="enable-and-disable-always-on-availability-groups-sql-server"></a>Activer et désactiver les groupes de disponibilité Always On (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -219,7 +219,7 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance
     ```  
   
     > [!IMPORTANT]  
-    >  Pour plus d’informations sur la manière de contrôler si l’applet de commande **Disable-SqlAlwaysOn** redémarre le service [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], consultez [À quel moment une applet de commande redémarre-t-elle le service SQL Server ?](#WhenCmdletRestartsSQL), plus loin dans cette rubrique.  
+    >  Pour plus d’informations sur la manière de contrôler si l’applet de commande **Disable-SqlAlwaysOn** redémarre le service [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , consultez [À quel moment une applet de commande redémarre-t-elle le service SQL Server ?](#WhenCmdletRestartsSQL), plus loin dans cette rubrique.  
   
      Pour voir la syntaxe d’une applet de commande, utilisez l’applet de commande **Get-Help** dans l’environnement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Pour en savoir plus, voir [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md).  
   

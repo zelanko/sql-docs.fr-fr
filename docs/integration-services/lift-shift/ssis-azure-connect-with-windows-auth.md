@@ -1,7 +1,7 @@
 ---
 title: Se connecter à des sources de données et des partages de fichiers avec l’authentification Windows | Microsoft Docs
 description: Découvrez comment configurer le catalogue SSIS dans Azure SQL Database et Azure-SSIS Integration Runtime pour exécuter des packages qui se connectent à des sources de données et à des partages de fichiers avec l’authentification Windows.
-ms.date: 06/27/2018
+ms.date: 10/11/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
@@ -11,12 +11,12 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: 4dfe14abd938e456a1b1415226ff6d903e0b5b07
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 612c118fe490afe8de7c794c1f1ff6327766a508
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608635"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119976"
 ---
 # <a name="connect-to-data-sources-and-file-shares-with-windows-authentication-from-ssis-packages-in-azure"></a>Se connecter à des sources de données et à des partages de fichiers avec l’authentification Windows à partir de packages SSIS sur Azure
 Vous pouvez utiliser l’authentification Windows pour vous connecter à des sources de données et à des partages de fichiers dans le même réseau virtuel qu’Azure-SSIS Integration Runtime (IR), aussi bien localement/sur des machines virtuelles Azure que dans Azure Files. Il existe trois moyens de se connecter à des sources de données et à des partages de fichiers avec l’authentification Windows à partir de packages SSIS en cours d’exécution dans Azure-SSIS IR :
@@ -34,7 +34,7 @@ Vous pouvez utiliser l’authentification Windows pour vous connecter à des sou
 La suite de cet article explique comment configurer le catalogue SSIS dans Azure SQL Database pour exécuter des packages qui utilisent l’authentification Windows afin de se connecter à des sources de données et à des partages de fichiers. 
 
 ## <a name="you-can-only-use-one-set-of-credentials"></a>Vous ne pouvez utiliser qu’un seul jeu d’informations d’identification
-Avec cette méthode, vous ne pourrez utiliser qu’un seul jeu d’informations d’identification dans un package. Jusqu’à ce que vous les changiez ou les supprimiez, les informations d’identification de domaine que vous indiquez en suivant les étapes de cet article s’appliquent à toutes les exécutions de packages, interactives ou planifiées, sur votre runtime Azure-SSIS IR. Si votre package doit se connecter à plusieurs sources de données et à plusieurs partages de fichiers avec différents jeux d’informations d’identification, il peut être intéressant de se tourner vers les autres méthodes décrites ci-dessus.
+Lorsque vous utilisez l’authentification Windows dans un package SSIS, vous ne pouvez utiliser qu’un seul jeu d’informations d’identification dans un package. Jusqu’à ce que vous les changiez ou les supprimiez, les informations d’identification de domaine que vous indiquez en suivant les étapes de cet article s’appliquent à toutes les exécutions de packages, interactives ou planifiées, sur votre runtime Azure-SSIS IR. Si votre package doit se connecter à plusieurs sources de données et à plusieurs partages de fichiers avec différents jeux d’informations d’identification, il peut être intéressant de se tourner vers les autres méthodes décrites ci-dessus.
 
 ## <a name="provide-domain-credentials-for-windows-authentication"></a>Fournir des informations d’identification de domaine pour l’authentification Windows
 Pour indiquer des informations d’identification de domaine qui permettent aux packages d’utiliser l’authentification Windows afin de se connecter à des sources de données/partages de fichiers locaux, effectuez les actions suivantes :
@@ -100,7 +100,7 @@ Pour vous connecter à un serveur SQL Server local à partir d’un package s’
 3.  Pour vous connecter avec l’authentification Windows, vérifiez que votre runtime Azure-SSIS IR appartient à un réseau virtuel qui inclut également le serveur SQL Server local.  Pour plus d’informations, consultez [Joindre un runtime d’intégration Azure SSIS à un réseau virtuel](https://docs.microsoft.com/azure/data-factory/join-azure-ssis-integration-runtime-virtual-network). Utilisez ensuite `catalog.set_execution_credential` pour fournir des informations d’identification comme décrit dans cet article.
 
 ## <a name="connect-to-an-on-premises-file-share"></a>Se connecter à un partage de fichiers local
-Pour vérifier si vous pouvez vous connecter à un partage de fichiers local, effectuez les actions suivantes :
+Pour tester si vous pouvez vous connecter à un partage de fichiers local, effectuez les actions suivantes :
 
 1.  Pour exécuter ce test, recherchez un ordinateur non membre d’un domaine.
 

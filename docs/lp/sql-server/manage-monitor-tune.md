@@ -1,17 +1,17 @@
 ---
 layout: HubPage
 hide_bc: true
-title: Documentation de Microsoft Azure
-description: Découvrez comment générer et gérer des applications puissantes à l’aide des services cloud Microsoft Azure. Obtenez de la documentation, des exemples de code, des tutoriels et bien plus encore.
+title: Gérer, surveiller et paramétrer SQL Server
+description: Découvrez les fonctionnalités qui vous aident à gérer, surveiller et paramétrer votre serveur SQL Server.
 ms.topic: hub-page
 featureFlags:
 - clicktale
-ms.openlocfilehash: 28f96825ac65d398afbba3f71f9dc9b243d21e1e
-ms.sourcegitcommit: 615f8b5063aed679495d92a04ffbe00451d34a11
+ms.openlocfilehash: ea070c1fbdbeb372bdd04bafb1705e1ad7ea77c4
+ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48797456"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49336138"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -465,10 +465,16 @@ ms.locfileid: "48797456"
         <h2>Restez en contact avec nous</h2>
         <ul class="links">
            <li>
-                <a href="http://aka.ms/editsqldocs" data-linktype="external"> Contribuer aux documents SQL </a>
+                <a href="http://aka.ms/editsqldocs" data-linktype="external"> Collaborer </a>
             </li>
            <li>
-                <a href="http://aka.ms/sqldocsurvey" data-linktype="external"> Commentaires relatifs à SQL Docs </a>
+                <a href="https://docs.microsoft.com/sql/sql-server/sql-server-get-help" data-linktype="external"> Obtenir de l’aide </a>
+            </li>
+           <li>
+                <a href="http://aka.ms/sqldocsfeedback" data-linktype="external"> Commentaires </a>
+            </li>
+           <li>
+                <a href="http://aka.ms/sqldocsurvey" data-linktype="external"> Enquête </a>
             </li>
            <li>
                 <a href="https://cloudblogs.microsoft.com/sqlserver/" data-linktype="external"> Blog </a>
@@ -484,4 +490,3 @@ ms.locfileid: "48797456"
             </li>
         </ul>
     </div>
-

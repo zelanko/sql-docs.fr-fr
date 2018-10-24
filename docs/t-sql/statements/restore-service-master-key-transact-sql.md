@@ -24,12 +24,12 @@ ms.assetid: a68fd0ee-70ce-4104-aca0-fcae5f41fc38
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 5353a53c8a7082d4f23c62fa48bc03bcbd27e0b9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dde847ead524e78c02aaad0544c0fec18ebe5c2f
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47607897"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169089"
 ---
 # <a name="restore-service-master-key-transact-sql"></a>RESTORE SERVICE MASTER KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,10 +47,10 @@ RESTORE SERVICE MASTER KEY FROM FILE = 'path_to_file'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- FILE **='***path_to_file***'**  
+ FILE **='**_path\_to\_file_**'**  
  Spécifie le chemin d'accès complet, y compris le nom de fichier, de la clé principale de service stockée. *path_to_file* peut être un chemin local ou un chemin UNC d’un emplacement réseau.  
   
- PASSWORD **='***password***'**  
+ PASSWORD **='**_password_**'**  
  Spécifie le mot de passe requis pour déchiffrer la clé principale de service à importer à partir d'un fichier.  
   
  FORCE  

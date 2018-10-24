@@ -23,12 +23,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 11534581d2c9dfab36aa8b3a75d6f425f11a67d9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 26a078bd0e34344cfa84abc336a125e79af18bab
+ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47776507"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49336218"
 ---
 # <a name="countbig--sql"></a>COUNT_BIG (-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,20 +40,12 @@ Cette fonction retourne le nombre d’éléments figurant dans un groupe. `COUNT
 ## <a name="syntax"></a>Syntaxe  
   
 ```sql
--- Syntax for SQL Server and Azure SQL Database  
-  
-COUNT_BIG ( { [ ALL | DISTINCT ] expression } | * )  
-   [ OVER ( [ partition_by_clause ] [ order_by_clause ] ) ]  
-```  
-  
-```sql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
 
 -- Aggregation Function Syntax  
 COUNT_BIG ( { [ [ ALL | DISTINCT ] expression ] | * } )  
   
 -- Analytic Function Syntax  
-COUNT_BIG ( { expression | * } ) OVER ( [ <partition_by_clause> ] )  
+COUNT_BIG ( [ ALL ] { expression | * } ) OVER ( [ <partition_by_clause> ] )  
 ```  
   
 ## <a name="arguments"></a>Arguments  
@@ -64,10 +56,10 @@ DISTINCT
 Précise que la fonction `COUNT_BIG` doit renvoyer le nombre de valeurs non nulles uniques.
   
 *expression*  
-[Expression](../../t-sql/language-elements/expressions-transact-sql.md) de tout type. Notez que `COUNT_BIG` ne prend pas en charge les fonctions d’agrégation ou sous-requêtes dans une expression.
+[Expression](../../t-sql/language-elements/expressions-transact-sql.md) de tout type. `COUNT_BIG` ne prend pas en charge les fonctions d’agrégation ou sous-requêtes dans une expression.
   
 *\**  
-Spécifie que `COUNT_BIG` doit compter toutes les lignes pour déterminer le nombre total de lignes de la table à retourner. `COUNT_BIG(*)` ne sélectionne aucun paramètre et ne prend pas en charge l’utilisation de DISTINCT. `COUNT_BIG(*)` ne nécessite pas de paramètre *expression* puisque, par définition, elle n’utilise les données d’aucune colonne en particulier. `COUNT_BIG(*)` retourne le nombre de lignes de la table spécifiée et conserve les doublons. Il compte chaque ligne séparément, y compris les lignes qui contiennent des valeurs NULL.
+Spécifie que `COUNT_BIG` doit compter toutes les lignes pour déterminer le nombre total de lignes de la table à retourner. `COUNT_BIG(*)` ne sélectionne aucun paramètre et ne prend pas en charge l’utilisation de DISTINCT. `COUNT_BIG(*)` ne nécessite pas de paramètre *expression* puisque, par définition, elle n’utilise les données d’aucune colonne en particulier. `COUNT_BIG(*)` retourne le nombre de lignes de la table spécifiée et conserve les doublons. Il compte chaque ligne, y compris les lignes qui contiennent des valeurs null.
   
 OVER **(** [ *partition_by_clause* ] [ *order_by_clause* ] **)**  
 *partition_by_clause* divise le jeu de résultats généré par la clause `FROM` en partitions auxquelles la fonction `COUNT_BIG` est appliquée. S'il n'est pas spécifié, la fonction gère toutes les lignes du jeu de résultats de la requête en un seul groupe. *order_by_clause* détermine l’ordre logique de l’opération. Consultez [Clause OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md) pour plus d’informations.
@@ -82,7 +74,7 @@ COUNT_BIG(ALL *expression*) évalue l’argument *expression* pour chaque ligne 
   
 COUNT_BIG (DISTINCT *expression*) évalue l’argument *expression* pour chaque ligne d’un groupe et retourne le nombre de valeurs non-NULL uniques.
   
-COUNT_BIG est une fonction déterministe lorsqu'elle est utilisée ***sans*** les clauses OVER et ORDER BY. Elle n'est pas déterministe lorsqu’elle est utilisée ***avec*** les clauses OVER et ORDER BY. Consultez [Fonctions déterministes et non déterministes](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md) pour plus d’informations.
+COUNT_BIG est une fonction déterministe lorsqu'elle est utilisée ***sans*** les clauses OVER et ORDER BY. COUNT_BIG n'est pas déterministe lorsqu’il est utilisé ***avec*** les clauses OVER et ORDER BY. Consultez [Fonctions déterministes et non déterministes](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md) pour plus d’informations.
   
 ## <a name="examples"></a>Exemples  
 Pour obtenir des exemples, consultez [COUNT &#40;Transact-SQL&#41;](../../t-sql/functions/count-transact-sql.md).

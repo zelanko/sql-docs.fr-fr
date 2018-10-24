@@ -15,12 +15,12 @@ ms.assetid: c9ba2589-139e-42bc-99e1-94546717c64d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e1a4e526fb8b2bb72bd670b1c21d6734b23ad601
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2d70825317f2dbc7a59857bebf533d4b617b97e0
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704514"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120196"
 ---
 # <a name="use-the-always-on-availability-group-dashboard-sql-server-management-studio"></a>Utiliser le tableau de bord du groupe de disponibilité Always On (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -324,6 +324,10 @@ Le volet **Réplica de disponibilité** affiche les colonnes suivantes :
  **Heure de dernière restauration par progression**  
  Indique l'heure à laquelle le dernier enregistrement du journal a été restauré sur la base de données secondaire. Cette valeur est masquée par défaut.  
  
+
+   > [!NOTE]  
+   >  La plupart des données repose sur sys.dm_hadr_database_replica_states, donc certaines restrictions peuvent s’appliquer. Pour plus d’informations, consultez [sys.dm_hadr_database_replica_states (Transact-SQL)](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md).
+
 
 ## <a name="always-on-availability-group-latency-reports"></a>Rapports de latence du groupe de disponibilité Always On
 Le rapport de latence du groupe de disponibilité est un outil de rapport basé dans le tableau de bord du groupe de disponibilité et disponible dans la version [SQL Server Management Studio 17.4](../../../ssms/download-sql-server-management-studio-ssms.md). Cette fonctionnalité fournit un rapport facile à comprendre qui détaille le temps passé dans les différentes phases du processus de transport de journal. Elle constitue un moyen de limiter la cause potentielle de la latence pendant le processus de synchronisation. 

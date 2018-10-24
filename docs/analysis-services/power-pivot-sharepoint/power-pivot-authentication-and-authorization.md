@@ -98,7 +98,7 @@ ms.locfileid: "38983464"
  Dans Excel Services, les paramètres de configuration de sécurité sont spécifiés sur des emplacements, des fournisseurs de données approuvés et des bibliothèques de connexions de données approuvés. Le tableau suivant décrit les paramètres qui activent ou améliorent l’accès aux données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Si un paramètre n’apparaît pas ici, c’est qu’il n’a aucun effet sur les connexions de serveur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Pour obtenir des instructions sur la façon de spécifier ces paramètres étape par étape, consultez la section « Activer Excel Services » dans [Configuration initiale (Power Pivot pour SharePoint)](http://msdn.microsoft.com/3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146).  
   
 > [!NOTE]  
->  La plupart des paramètres relatifs à la sécurité s'appliquent à des emplacements approuvés. Si vous voulez conserver les valeurs par défaut ou utiliser des valeurs différentes pour des sites différents, vous pouvez créer un emplacement approuvé supplémentaire pour les sites qui contiennent les données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , puis configurer les paramètres suivants uniquement pour ce site. Pour plus d’informations, voir [Create a trusted location for Power Pivot sites in Central Administration](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md).  
+>  La plupart des paramètres relatifs à la sécurité s'appliquent à des emplacements approuvés. Si vous voulez conserver les valeurs par défaut ou utiliser des valeurs différentes pour des sites différents, vous pouvez créer un emplacement approuvé supplémentaire pour les sites qui contiennent les données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , puis configurer les paramètres suivants uniquement pour ce site. Pour plus d’informations, voir [Créer un emplacement approuvé pour les sites Power Pivot dans l’Administration centrale](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md).  
   
 |Domaine|Paramètre|Description|  
 |----------|-------------|-----------------|  
@@ -113,7 +113,7 @@ ms.locfileid: "38983464"
 ## <a name="see-also"></a>Voir aussi  
  [Configuration des comptes de service Power Pivot](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts.md)   
  [Configurer le Power Pivot (Power Pivot pour SharePoint) de compte d’actualisation des données sans assistance](http://msdn.microsoft.com/81401eac-c619-4fad-ad3e-599e7a6f8493)   
- [Create a trusted location for Power Pivot sites in Central Administration](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
+ [Créer un emplacement approuvé pour les sites Power Pivot](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
  [Architecture de sécurité PowerPivot](http://go.microsoft.com/fwlink/?linkID=220970)  
   
   

@@ -1,17 +1,17 @@
 ---
 layout: HubPage
 hide_bc: true
-title: Documentation de Microsoft Azure
-description: Découvrez comment générer et gérer des applications puissantes à l’aide des services cloud Microsoft Azure. Obtenez de la documentation, des exemples de code, des tutoriels et bien plus encore.
+title: Conception de base de données SQL Server
+description: Découvrez les fonctionnalités de SQL Server qui vous aident à concevoir la base de données correspondant le mieux à vos besoins.
 ms.topic: hub-page
 featureFlags:
 - clicktale
-ms.openlocfilehash: 4e87c2ff5408394b3723083739c5fde0b5e5a771
-ms.sourcegitcommit: 615f8b5063aed679495d92a04ffbe00451d34a11
+ms.openlocfilehash: 3cae88b1597cc02fc87eeccc2300b7a1451d84bc
+ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48797426"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49336278"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -395,10 +395,16 @@ ms.locfileid: "48797426"
         <h2>Restez en contact avec nous</h2>
         <ul class="links">
            <li>
-                <a href="http://aka.ms/editsqldocs" data-linktype="external"> Contribuer aux documents SQL </a>
+                <a href="http://aka.ms/editsqldocs" data-linktype="external"> Collaborer </a>
             </li>
            <li>
-                <a href="http://aka.ms/sqldocsurvey" data-linktype="external"> Commentaires relatifs à SQL Docs </a>
+                <a href="https://docs.microsoft.com/sql/sql-server/sql-server-get-help" data-linktype="external"> Obtenir de l’aide </a>
+            </li>
+           <li>
+                <a href="http://aka.ms/sqldocsfeedback" data-linktype="external"> Commentaires </a>
+            </li>
+           <li>
+                <a href="http://aka.ms/sqldocsurvey" data-linktype="external"> Enquête </a>
             </li>
            <li>
                 <a href="https://cloudblogs.microsoft.com/sqlserver/" data-linktype="external"> Blog </a>
@@ -414,4 +420,3 @@ ms.locfileid: "48797426"
             </li>
         </ul>
     </div>
-

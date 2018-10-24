@@ -18,12 +18,12 @@ ms.assetid: 1c382c83-7500-4bae-bbdc-c1dbebd3d83f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8f3b28d6c3b731a25103c950c784594325f095a0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 94a05685d8bb2e71630f06f155b30e0bbaec7b44
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47853317"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906009"
 ---
 # <a name="logical-functions---choose-transact-sql"></a>Fonctions logiques - CHOOSE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -55,8 +55,11 @@ CHOOSE ( index, val_1, val_2 [, val_n ] )
  CHOOSE agit comme un index dans un tableau, où le tableau est composé des arguments qui suivent l'argument d'index. L'argument d'index détermine, parmi les valeurs suivantes, celle qui sera retournée.  
   
 ## <a name="examples"></a>Exemples  
+
+### <a name="a-simple-choose-example"></a>A. Exemple CHOOSE simple
+
  L'exemple suivant retourne le troisième élément de la liste de valeurs fournie.  
-  
+ 
 ```  
 SELECT CHOOSE ( 3, 'Manager', 'Director', 'Developer', 'Tester' ) AS Result;  
 ```  
@@ -70,7 +73,9 @@ Developer
   
 (1 row(s) affected)  
 ```  
-  
+
+### <a name="b-simple-choose-example-based-on-column"></a>B. Exemple CHOOSE simple basé sur la colonne
+
  L'exemple suivant retourne une chaîne de caractères simple en fonction de la valeur de la colonne `ProductCategoryID`.  
   
 ```  
@@ -94,8 +99,10 @@ ProductCategoryID Expression1
 (4 row(s) affected)  
   
 ```  
+
+### <a name="c-choose-in-combination-with-month"></a>C. CHOOSE en association avec MONTH
   
- L'exemple suivant retourne le trimestre au cours duquel l'employé a été embauché. La fonction MONTH est utilisée pour retourner la valeur de mois de la colonne `HireDate`.  
+ L'exemple suivant retourne la saison au cours de laquelle l'employé a été embauché. La fonction MONTH est utilisée pour retourner la valeur de mois de la colonne `HireDate`.  
   
 ```  
 USE AdventureWorks2012;  

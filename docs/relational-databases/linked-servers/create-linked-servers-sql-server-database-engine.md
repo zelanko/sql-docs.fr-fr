@@ -19,12 +19,12 @@ ms.assetid: 3228065d-de8f-4ece-a9b1-e06d3dca9310
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7c8caee5d7de5b348d6673636ac5cfc4704c3c51
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5c77e1d69a80e1c9d161adcf80f20f23b69b0261
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47625517"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120006"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>Créer des serveurs liés (moteur de base de données SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

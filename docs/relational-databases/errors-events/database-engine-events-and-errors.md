@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/27/2018
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 04ba51b6-cdc7-409c-8d7e-26ead13e614d
-caps.latest.revision: 20
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ac3d00cf51c5e01d3cb83ac4b3564f458a78b8c6
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: d6f418b5f9456b2863abba5d63c25dd224977dfb
+ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39088601"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49100540"
 ---
 # <a name="database-engine-errors"></a>Erreurs du moteur de base de données
 Ce tableau contient les numéros des messages d’erreur et leur description, qui correspond au texte du message d’erreur dans la vue de catalogue sys.messages. 
@@ -849,7 +846,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   1732    |   16  |   non  |   Impossible de créer le jeu de colonnes éparses '%.*ls' dans la table '%.* ls', car une table ne peut pas contenir plus d'un jeu de colonnes éparses. Modifiez l'instruction de sorte que seule une colonne soit spécifiée en tant que COLUMN_SET FOR ALL_SPARSE_COLUMNS.   |
 |   1733    |   16  |   non  |   Impossible de créer le jeu de colonnes éparses '%.*ls' dans la table '%.* ls' car un jeu de colonnes éparses doit être une colonne xml nullable. Modifiez la définition de colonne afin qu'elle autorise les valeurs Null.  |
 |   1734    |   16  |   non  |   Impossible de créer le jeu de colonnes éparses '%.*ls' dans la table '%.* ls', car la table contient déjà une ou plusieurs colonnes éparses. Un jeu de colonnes éparses ne peut pas être ajouté à une table si celle-ci contient une colonne éparse.   |
-|   1736    |   16  |   non  |   La colonne '%.*ls' de la table '%.* ls' ne peut pas être référencée dans une contrainte CHECK ou une définition de colonne calculée, car la colonne est un jeu de colonnes éparses. Un jeu de colonnes éparses ne peut pas être référencé dans une contrainte CHECK ou une définition de colonne calculée. |
+|   1736    |   16  |   non  |   La colonne '%.*ls' de la table '%.* ls' ne peut pas être référencée dans une contrainte CHECK ou une définition de colonne calculée, car la colonne est un jeu de colonnes éparses. Un jeu de colonnes éparses ne peut pas être référencé dans une contrainte CHECK ou une définition de colonne calculée.   |
 |   1738    |   10  |   non  |   Impossible de créer la table '%.*ls' avec une seule colonne de jeu de colonnes, et sans aucune colonne non calculée dans la table.    |
 |   1750    |   10  |   non  |   Impossible de créer la contrainte. Consultez les erreurs précédentes.   |
 |   1752    |   16  |   non  |   La colonne '%.*ls' de la table '%.* ls' n'est pas valide pour créer une contrainte par défaut.   |
@@ -1139,7 +1136,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   2325    |   16  |   non  |   %sLa balise de fin '%ls' ne correspond pas à la balise d'ouverture '%ls:%ls' à partir de la ligne %u    |
 |   2326    |   16  |   non  |   %sLa balise de fin '%ls:%ls' ne correspond pas à la balise d'ouverture '%ls:%ls' à partir de la ligne %u    |
 |   2327    |   16  |   non  |   %sIl manque le contenu ou la définition de <%ls>.    |
-|   2328    |   16  |   non  |   %sL'espace de noms du schéma '%ls' ne correspond pas à la directive '%ls' de <include>  |
+|   2328    |   16  |   non  |   %sL’espace de noms du schéma '%ls' ne correspond pas à <include> la directive '%ls'  |
 |   2329    |   16  |   non  |   %sLa chaîne '"%ls" n'est pas une valeur de durée valide.  |
 |   2331    |   16  |   non  |   %sLa redéfinition doit avoir elle-même comme type de base. Emplacement : '%ls'.    |
 |   2332    |   16  |   non  |   %s'%ls' ne peut pas être utilisé avec un opérande 'empty'. |
@@ -1378,6 +1375,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   2812    |   16  |   non  |   Procédure stockée ’%.*ls’ introuvable.    |
 |   2813    |   16  |   non  |   %.*ls n'est pas pris en charge sur cette version de SQL Server.   |
 |   [2814](mssqlserver-2814-database-engine-error.md)   |   10  |   non  |   Recompilation infinie détectée pour SQLHANDLE %hs, PlanHandle %hs, décalage de début %d, décalage de fin %d. Dernière raison de la recompilation : %d.   |
+|   2628    |   16  |   non  |   Les données de chaîne ou binaires seront tronquées dans la table '%.*ls', colonne '%.* ls'. Valeur tronquée : '%.*ls'.    |
 |   &nbsp;  |   &nbsp;  |&nbsp;     |   &nbsp;  |
 
 ## <a name="errors-3000---3999"></a>Erreurs 3000 -3999

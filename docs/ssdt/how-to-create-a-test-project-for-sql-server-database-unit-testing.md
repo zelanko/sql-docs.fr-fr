@@ -11,12 +11,12 @@ ms.assetid: 4b3e7ba8-b565-4689-af1a-34cc255b7c60
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f9e856bfbbcb8cba527d1f34f0f7bc99afadc023
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ec74cb8ed16fa7e49f5a941a903341a514d13932
+ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792877"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49336098"
 ---
 # <a name="how-to-create-a-test-project-for-sql-server-database-unit-testing"></a>Procédure : créer un projet de test pour un test unitaire de base de données SQL Server
 Avant de commencer à écrire des tests unitaires qui évaluent les objets de base de données, vous devez d'abord créer un projet de test. Ce projet contient des tests unitaires SQL Server, mais il pourrait en comporter d’autres types.  

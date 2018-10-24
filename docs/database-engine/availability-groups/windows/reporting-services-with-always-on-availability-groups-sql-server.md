@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, AlwaysOn Availability Groups
 - Availability Groups [SQL Server], interoperability
 ms.assetid: edeb5c75-fb13-467e-873a-ab3aad88ab72
-caps.latest.revision: 22
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: ce4f1a241959fcac09f6d8a41dad5a561e981ba3
-ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
+ms.openlocfilehash: f7b76775e501d2ba9c3c13191beb75973d9f6bbb
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40405643"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120286"
 ---
 # <a name="reporting-services-with-always-on-availability-groups-sql-server"></a>Reporting Services avec les groupes de disponibilité Always On (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +48,7 @@ ms.locfileid: "40405643"
     -   [Comportement d'un serveur de rapports en cas de basculement](#bkmk_failover_behavior)  
   
 ##  <a name="bkmk_requirements"></a> Conditions préalables requises pour l’utilisation de Reporting Services et des groupes de disponibilité Always On  
- [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] utilise le composant .Net Framework 4.0 et prend en charge les propriétés de chaîne de connexion [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] pour les utiliser avec des sources de données.  
+ [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] et Power BI Report Server utilisent le composant .Net Framework 4.0 et prennent en charge les propriétés de chaîne de connexion [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] pour les utiliser avec des sources de données.  
   
  Pour utiliser [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] avec  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 2014 et les versions antérieures, vous devez télécharger et installer un correctif logiciel pour .Net 3.5 SP1. Ce correctif ajoute une prise en charge au client SQL concernant les fonctionnalités de groupes de disponibilité et la prise en charge des propriétés de chaîne de connexion **ApplicationIntent** et **MultiSubnetFailover**. Si ce correctif n'est pas installé sur chaque ordinateur qui héberge un serveur de rapports, les utilisateurs qui essaient d'afficher un aperçu des rapports recevront un message d'erreur similaire à celui ci-dessous et ce message sera enregistré dans le fichier journal de traces du serveur de rapports :  
   
@@ -121,7 +118,7 @@ ms.locfileid: "40405643"
 > **Message d'erreur :** « Mot clé non pris en charge : applicationintent. »  
   
 ##  <a name="bkmk_reportserverdatabases"></a> Bases de données de serveur de rapports et groupes de disponibilité  
- Reporting Services offre une prise en charge limitée concernant l'utilisation de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] avec des bases de données de serveur de rapports. Les bases de données de serveur de rapports peuvent être configurées dans les groupes de disponibilité afin de les intégrer à un réplica ; toutefois, [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] n'utilisera pas automatiquement un réplica différent pour les bases de données de serveur de rapports en cas de basculement. L’utilisation de MultiSubnetFailover avec les bases de données du serveur de rapports n’est pas prise en charge.  
+ Reporting Services et Power BI Report Server offrent une prise en charge limitée concernant l'utilisation de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] avec des bases de données de serveur de rapports. Les bases de données de serveur de rapports peuvent être configurées dans les groupes de disponibilité afin de les intégrer à un réplica ; toutefois, [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] n'utilisera pas automatiquement un réplica différent pour les bases de données de serveur de rapports en cas de basculement. L’utilisation de MultiSubnetFailover avec les bases de données du serveur de rapports n’est pas prise en charge.  
   
  Il est nécessaire de recourir à des actions manuelles ou à des scripts d'automatisation personnalisés pour mener à bien le basculement et la récupération. Tant que ces actions n'ont pas été effectuées, certaines fonctionnalités du serveur de rapports peuvent ne pas fonctionner correctement après le basculement [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] .  
   

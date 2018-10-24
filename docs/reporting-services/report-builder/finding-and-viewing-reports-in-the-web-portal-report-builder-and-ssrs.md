@@ -8,17 +8,17 @@ ms.topic: conceptual
 ms.assetid: 8556807e-f2e2-4a7b-bb1b-ac5ea1872e51
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 82713867de363b65ab534c8dc518a7cd15a003b8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 45508c91bc75eb42be8cbd7c2c807c81e75c8075
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47683440"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085035"
 ---
 # <a name="finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs"></a>Recherche et affichage de rapports dans le portail web (Générateur de rapports et SSRS)
   Le Gestionnaire de rapports est un outil Web qui intègre des fonctionnalités d'affichage et de gestion des rapports. Il fait partie d'une installation du serveur de rapports. Pour ce faire, tapez l'URL du Gestionnaire de rapports dans une fenêtre du navigateur. Pour plus d’informations sur la configuration de navigateur requise, consultez [Browser Support for Reporting Services and Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)(Planification de la prise en charge des navigateurs pour Reporting Services et Power View). Pour plus d'informations sur la façon de configurer une URL de Gestionnaire de rapports sur votre serveur de rapports, contactez votre administrateur système. Pour plus d’informations, consultez [Configurer le Gestionnaire de rapports &#40;mode natif&#41;](../../reporting-services/report-server/configure-report-manager-native-mode.md).  
   
- Les autorisations définies par l'administrateur système sur le serveur de rapports déterminent ce que vous pouvez voir lorsque vous utilisez le Gestionnaire de rapports. Les autorisations sont accordées via une attribution de rôle. Pour rechercher et afficher des rapports, votre attribution de rôle doit inclure la tâche Afficher les rapports. Pour rechercher un rapport sur un serveur de rapports, recherchez son nom ou sa description, ou bien parcourez les dossiers du serveur de rapports. Vous ne pouvez rechercher ou parcourir que les rapports qui ont été publiés ou téléchargés sur le serveur de rapports. Pour plus d’informations sur la recherche d’un rapport, consultez [Recherche de rapports et d’autres éléments &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/searching-for-reports-and-other-items-report-builder-and-ssrs.md)(Planification de la prise en charge des navigateurs pour Reporting Services et Power View).  
+ Les autorisations définies par l'administrateur système sur le serveur de rapports déterminent ce que vous pouvez voir lorsque vous utilisez le Gestionnaire de rapports. Les autorisations sont accordées via une attribution de rôle. Pour rechercher et afficher des rapports, votre attribution de rôle doit inclure la tâche Afficher les rapports. Pour rechercher un rapport sur un serveur de rapports, recherchez son nom ou sa description, ou bien parcourez les dossiers du serveur de rapports. Vous ne pouvez rechercher ou parcourir que les rapports qui ont été publiés ou téléchargés sur le serveur de rapports.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -42,9 +42,9 @@ Ruban du Gestionnaire de rapports
   
  Tous les rapports visibles dans l'arborescence des dossiers ne sont pas accessibles immédiatement. Certains rapports peuvent exiger la saisie d'un nom d'utilisateur et d'un mot de passe afin de déterminer si vous êtes autorisé ou non à accéder à la source de données du rapport. Pour plus d’informations sur l’ouverture des rapports dans le Gestionnaire de rapports, consultez [Ouvrir et fermer un rapport &#40;Gestionnaire de rapports&#41;](../../reporting-services/reports/open-and-close-a-report-report-manager.md).  
   
- Vous pouvez également accéder à un rapport du serveur de rapports et l'ouvrir directement à partir du Générateur de rapports. Pour plus d’informations, consultez [Recherche de rapports et d’autres éléments &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/searching-for-reports-and-other-items-report-builder-and-ssrs.md)(Planification de la prise en charge des navigateurs pour Reporting Services et Power View).  
+ Vous pouvez également accéder à un rapport du serveur de rapports et l'ouvrir directement à partir du Générateur de rapports. 
   
-## <a name="to-search-for-a-items"></a>Pour rechercher des éléments  
+## <a name="to-search-for-items"></a>Pour rechercher des éléments  
   
 -   Pour rechercher des éléments dans le Gestionnaire de rapports, tapez une chaîne dans la zone de texte **Rechercher** en haut de la page. **(2)** dans l’illustration ci-dessus. La recherche débute par le nœud supérieur de l'arborescence des dossiers et se poursuit dans tous les niveaux. Si vous ne disposez pas des autorisations requises pour accéder à un niveau particulier, ce niveau est ignoré. Ceci concerne les dossiers Mes rapports qui appartiennent à d'autres utilisateurs et également ceux des autres dossiers qui ne sont généralement pas disponibles. Seuls les rapports et les éléments que vous êtes autorisé à visualiser sont inclus dans les résultats de la recherche.  
   
@@ -53,7 +53,6 @@ Ruban du Gestionnaire de rapports
 -   Pour rechercher un texte spécifique dans un rapport, utilisez la barre d'outils située dans la partie supérieure du rapport.  
   
 ## <a name="see-also"></a> Voir aussi  
- [Recherche de rapports et d’autres éléments &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/searching-for-reports-and-other-items-report-builder-and-ssrs.md)   
- [Recherche, affichage et gestion de rapports &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
+ [Recherche, affichage et gestion des rapports &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   
