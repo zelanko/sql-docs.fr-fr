@@ -1,7 +1,7 @@
 ---
 title: Nouveautés de SQL Server 2019 | Microsoft Docs
 ms.custom: ''
-ms.date: 09/26/2018
+ms.date: 09/27/2018
 ms.prod: sql-server-2018
 ms.reviewer: ''
 ms.technology:
@@ -11,12 +11,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 68a872164528bec49b0342f603107fb86e31fe50
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 015a6d65f1d225ab5a8752352d41fd2201f871b5
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678267"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461114"
 ---
 # <a name="whats-new-in-sql-server-2019"></a>Nouveautés de SQL Server 2019
 
@@ -233,7 +233,7 @@ Pour plus d’informations, consultez [Découverte et classification des donnée
 [L’audit](../relational-databases/security/auditing/sql-server-audit-database-engine.md) a également été amélioré pour inclure un nouveau champ dans le journal d’audit appelé `data_sensitivity_information`, qui journalise les classifications de sensibilité (étiquettes) des données réelles retournées par la requête. Pour plus d’informations et des exemples, consultez [ADD SENSITIVITY CLASSIFICATION](../t-sql/statements/add-sensitivity-classification-transact-sql.md).
 
 >[!NOTE]
->La façon dont l’audit est activé n’a fait l’objet d’aucune modification. Un nouveau champ a été ajouté aux enregistrements, `data_sensitivity_information`, qui journalise les classifications de sensibilité (étiquettes) des données réelles retournées par la requête. Consultez [Audit de l’accès aux données sensibles](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-data-discovery-and-classification#subheading-3).
+>La façon dont l’audit est activé n’a fait l’objet d’aucune modification. Un nouveau champ a été ajouté aux enregistrements, `data_sensitivity_information`, qui journalise les classifications de sensibilité (étiquettes) des données réelles retournées par la requête. Consultez [Audit de l’accès aux données sensibles](https://docs.microsoft.com/azure/sql-database/sql-database-data-discovery-and-classification#subheading-3).
 
 ### <a name="expanded-support-for-persistent-memory-devices"></a>Prise en charge étendue des appareils de mémoire persistante
 

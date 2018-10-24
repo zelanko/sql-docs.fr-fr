@@ -51,17 +51,15 @@ ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e8f10e1a42df80b66754bd8544fc560713cb90d9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d0093ef6c277198953a93c8f8f7ba21c17af3ebd
+ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694985"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49383804"
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>Configurer les comptes de service Windows et les autorisations
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
- > Pour accéder au contenu relatif aux versions précédentes de SQL Server, consultez [Configurer les comptes de service Windows et les autorisations](configure-windows-service-accounts-and-permissions.md).
-
 
   Chaque service de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] représente un processus ou un ensemble de processus permettant de gérer l'authentification des opérations de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec Windows. Cette rubrique décrit la configuration par défaut des services inclus dans cette version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ainsi que les options de configuration des services [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] susceptibles d'être définies durant l'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et par la suite. Cette rubrique permet aux utilisateurs expérimentés de comprendre les détails des comptes de service.  
   
