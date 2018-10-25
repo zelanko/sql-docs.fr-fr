@@ -1,13 +1,11 @@
 ---
 title: CREATE LOGIN (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/10/2018
+ms.date: 10/02/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE_LOGIN_TSQL
@@ -26,17 +24,16 @@ helpviewer_keywords:
 - re-hashing passwords
 - certificates [SQL Server], logins
 ms.assetid: eb737149-7c92-4552-946b-91085d8b1b01
-caps.latest.revision: 101
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6a5f2edc15c171a80c16ccc77f11bf7673571d53
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 5e7b598d4fe860c0d0eb1cb95730bb483be5470a
+ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43074472"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48252106"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 
@@ -53,11 +50,11 @@ Dans la ligne suivante, cliquez sur le nom du produit qui vous intéresse. Le cl
 > [!div class="mx-tdCol2BreakAll"]
 > ||||||
 > |-|-|-|-|-|
-> |**_\* SQL Server \*_**|[SQL Database<br />Logical Server](create-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />Managed Instance](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|[SQL Parallel<br />Data Warehouse](create-login-transact-sql.md?view=aps-pdw-2016)
+> |**_\* SQL Server \*_**|[SQL Database<br />Logical Server](create-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />Managed Instance](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](create-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
-# <a name="sql-server"></a>SQL Server
+## <a name="sql-server"></a>SQL Server
 
 ## <a name="syntax"></a>Syntaxe 
   
@@ -91,27 +88,27 @@ CREATE LOGIN login_name { WITH <option_list1> | FROM <sources> }
 *login_name*  
 Spécifie le nom de la connexion créée. Il existe quatre types de connexions : connexions SQL Server, connexions Windows, connexions mappées par certificat et connexions mappées par clé asymétrique. Quand vous créez des connexions mappées à partir d’un compte de domaine Windows, vous devez utiliser le nom d’ouverture de session de l’utilisateur antérieur à Windows 2000 en respectant le format [\<domainName>\\<login_name>]. Vous ne pouvez pas utiliser un nom UPN au format login_name@DomainName. Consultez l’exemple D plus loin dans cet article. Les connexions d’authentification  sont de type **sysname** et doivent se conformer aux règles applicables aux [identificateurs](../../relational-databases/databases/database-identifiers.md) et ne peuvent pas contenir de barre oblique inverse (**\\**). Les connexions Windows peuvent contenir une barre oblique inverse (**\\**). Les connexions basées sur les utilisateurs Active Directory sont limitées aux noms de moins de 21 caractères. 
 
-PASSWORD **='***password***'* S’applique uniquement aux connexions SQL Server. Spécifie le mot de passe de la connexion à créer. Il est recommandé d'utiliser un mot de passe fort. Pour plus d’informations, consultez [Mots de passe forts](../../relational-databases/security/strong-passwords.md) et [Stratégie de mot de passe](../../relational-databases/security/password-policy.md). À compter de SQL Server 2012 (11.x), les informations de mot de passe stockées sont calculées à l’aide de algorithme SHA-512 du mot de passe salé. 
+PASSWORD **='**_password_**'* S’applique uniquement aux connexions SQL Server. Spécifie le mot de passe de la connexion à créer. Il est recommandé d'utiliser un mot de passe fort. Pour plus d’informations, consultez [Mots de passe forts](../../relational-databases/security/strong-passwords.md) et [Stratégie de mot de passe](../../relational-databases/security/password-policy.md). À compter de SQL Server 2012 (11.x), les informations de mot de passe stockées sont calculées à l’aide de algorithme SHA-512 du mot de passe salé. 
   
 Les mots de passe respectent la casse. Les mots de passe doivent comporter au moins 8 caractères, et ne peuvent pas dépasser 128 caractères. Les mots de passe peuvent inclure les caractères de A à Z, en minuscules ou en majuscules, les chiffres de 0 à 9 et la plupart des caractères non alphanumériques. Les mots de passe ne peuvent pas contenir de guillemets simples, ni le *login_name*. 
   
-PASSWORD **=***hashed_password*  
+PASSWORD **=**_hashed\_password_  
 S'applique uniquement au mot clé HASHED. Spécifie la valeur hachée du mot de passe de la connexion créée. 
   
 HASHED S’applique uniquement aux connexions SQL Server. Spécifie que le mot de passe entré après l'argument PASSWORD est déjà haché. Si cette option n'est pas sélectionnée, la chaîne de caractères entrée comme mot de passe est hachée avant d'être stockée dans la base de données. Cette option doit être utilisée uniquement pour effectuer une migration de bases de données d'un serveur vers un autre. N'utilisez pas l'option HASHED pour créer des connexions. L’option HASHED ne peut pas être utilisée avec des hachages créés par SQL 7 ou antérieur.
 
 MUST_CHANGE S’applique uniquement aux connexions SQL Server. Si vous incluez cette option, SQL Server demande à l’utilisateur un nouveau mot de passe la première fois que la nouvelle connexion est utilisée. 
   
-CREDENTIAL **=***credential_name*  
+CREDENTIAL **=**_credential\_name_  
 Nom des informations d’identification à associer à la nouvelle connexion SQL Server. Les informations d'identification doivent déjà exister sur le serveur. À l'heure actuelle, cette option lie uniquement l'information d'authentification à une connexion. Les informations d’identification ne peuvent pas être mappées à la connexion de l’administrateur système. 
   
 SID = *sid*  
 Utilisé pour recréer une connexion. S’applique uniquement aux connexions d’authentification SQL Server, et non aux connexions d’authentification Windows. Spécifie le SID de la nouvelle connexion d’authentification SQL Server. Si cette option n’est pas sélectionnée, SQL Server attribue automatiquement un SID. La structure SID dépend de la version de SQL Server. SID de connexion SQL Server : valeur littérale 16 octets (**binary(16)**) basée sur un GUID. Par exemple, `SID = 0x14585E90117152449347750164BA00A7`. 
   
-DEFAULT_DATABASE **=***database*  
+DEFAULT_DATABASE **=**_database_  
 Spécifie la base de données par défaut à affecter à la connexion. Si cette option est omise, la base de données par défaut est master. 
   
-DEFAULT_LANGUAGE **=***language*  
+DEFAULT_LANGUAGE **=**_language_  
 Spécifie la langue par défaut à affecter à la connexion. Si cette option est omise, la langue par défaut est la langue par défaut actuellement définie pour le serveur. Si la langue par défaut du serveur est changée par la suite, la langue par défaut de la connexion reste la même. 
   
 CHECK_EXPIRATION **=** { ON | **OFF** }  
@@ -263,26 +260,13 @@ GO
 ::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
 
 > [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><a href="create-login-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th><strong><em>* SQL Database<br />Logical Server *</em></strong></th>
->   <th><a href="create-login-transact-sql.md?view=azuresqldb-mi-current">SQL Database<br />Managed Instance</a></th>
->   <th><a href="create-login-transact-sql.md?view=azure-sqldw-latest">SQL Data<br />Warehouse</a></th>
->   <th><a href="create-login-transact-sql.md?view=aps-pdw-2016">SQL Parallel<br />Data Warehouse</a></th>
-> </tr>
-> </table>
+> ||||||
+> |-|-|-|-|-|
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|**_\* SQL Database<br />serveur logique \*_**|[SQL Database<br />Managed Instance](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](create-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
-# <a name="azure-sql-database-logical-server"></a>Azure SQL Database Logical Server
+## <a name="azure-sql-database-logical-server"></a>Serveur logique Azure SQL Database
   
 ## <a name="syntax"></a>Syntaxe 
   
@@ -392,26 +376,13 @@ GO
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
 
 > [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><a href="create-login-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th><a href="create-login-transact-sql.md?view=azuresqldb-current">SQL Database<br />Logical Server</a></th>
->   <th><strong><em>* SQL Database<br />Managed Instance *</em></strong></th>
->   <th><a href="create-login-transact-sql.md?view=azure-sqldw-latest">SQL Data<br />Warehouse</a></th>
->   <th><a href="create-login-transact-sql.md?view=aps-pdw-2016">SQL Parallel<br />Data Warehouse</a></th>
-> </tr>
-> </table>
+> ||||||
+> |-|-|-|-|-|
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|[SQL Database<br />Logical Server](create-login-transact-sql.md?view=azuresqldb-current)|**_\* SQL Database<br />Managed Instance \*_**|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](create-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
-# <a name="azure-sql-database-managed-instance"></a>Azure SQL Database Managed Instance
+## <a name="azure-sql-database-managed-instance"></a>Azure SQL Database Managed Instance
 
 ## <a name="overview"></a>Vue d'ensemble
 
@@ -525,23 +496,13 @@ GO
 ::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
 
 > [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><a href="create-login-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th><a href="create-login-transact-sql.md?view=azuresqldb-current">SQL Database<br />Logical Server</a></th>>   <th><strong><em>* SQL Data<br />Warehouse *</em></strong></th>
->   <th><a href="create-login-transact-sql.md?view=aps-pdw-2016">SQL Parallel<br />Data Warehouse</a></th>
-> </tr>
-> </table>
+> ||||||
+> |-|-|-|-|-|
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|[SQL Database<br />Logical Server](create-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />Managed Instance]()|**_\* SQL Data<br />Warehouse \*_**|[Parallel<br />Data Warehouse](create-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
-# <a name="azure-sql-data-warehouse"></a>Azure SQL Data Warehouse
+## <a name="azure-sql-data-warehouse"></a>Azure SQL Data Warehouse.
   
 ## <a name="syntax"></a>Syntaxe 
   
@@ -644,27 +605,16 @@ GO
  [Créer un compte de connexion](../../relational-databases/security/authentication-access/create-a-login.md)  
   
 ::: moniker-end
-::: moniker range="=aps-pdw-2016||=sqlallproducts-allversions"
+::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
 
 > [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><a href="create-login-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th><a href="create-login-transact-sql.md?view=azuresqldb-current">SQL Database<br />Logical Server</a></th>
->   <th><a href="create-login-transact-sql.md?view=azure-sqldw-latest">SQL Data<br />Warehouse</a></th>
->   <th><strong><em>* SQL Parallel<br />Data Warehouse *</em></strong></th>
-> </tr>
-> </table>
+> ||||||
+> |-|-|-|-|-|
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|[SQL Database<br />Logical Server](create-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />Managed Instance]()|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|**_\* Parallel<br />Data Warehouse \*_**
 
 &nbsp;
 
-# <a name="sql-parallel-data-warehouse"></a>SQL Parallel Data Warehouse
+## <a name="parallel-data-warehouse"></a>Parallel Data Warehouse
 
   
 ## <a name="syntax"></a>Syntaxe 
@@ -686,7 +636,7 @@ CREATE LOGIN loginName { WITH <option_list1> | FROM WINDOWS }
 *login_name*  
 Spécifie le nom de la connexion créée. Il existe quatre types de connexions : connexions SQL Server, connexions Windows, connexions mappées par certificat et connexions mappées par clé asymétrique. Quand vous créez des connexions mappées à partir d’un compte de domaine Windows, vous devez utiliser le nom d’ouverture de session de l’utilisateur antérieur à Windows 2000 en respectant le format [\<domainName>\\<login_name>]. Vous ne pouvez pas utiliser un nom UPN au format login_name@DomainName. Consultez l’exemple D plus loin dans cet article. Les connexions d’authentification  sont de type **sysname** et doivent se conformer aux règles applicables aux [identificateurs](../../relational-databases/databases/database-identifiers.md) et ne peuvent pas contenir de barre oblique inverse (**\\**). Les connexions Windows peuvent contenir une barre oblique inverse (**\\**). Les connexions basées sur les utilisateurs Active Directory sont limitées aux noms de moins de 21 caractères. 
 
-PASSWORD **='***password***'* S’applique uniquement aux connexions SQL Server. Spécifie le mot de passe de la connexion à créer. Il est recommandé d'utiliser un mot de passe fort. Pour plus d’informations, consultez [Mots de passe forts](../../relational-databases/security/strong-passwords.md) et [Stratégie de mot de passe](../../relational-databases/security/password-policy.md). À compter de SQL Server 2012 (11.x), les informations de mot de passe stockées sont calculées à l’aide de algorithme SHA-512 du mot de passe salé. 
+PASSWORD **='**_password_**'* S’applique uniquement aux connexions SQL Server. Spécifie le mot de passe de la connexion à créer. Il est recommandé d'utiliser un mot de passe fort. Pour plus d’informations, consultez [Mots de passe forts](../../relational-databases/security/strong-passwords.md) et [Stratégie de mot de passe](../../relational-databases/security/password-policy.md). À compter de SQL Server 2012 (11.x), les informations de mot de passe stockées sont calculées à l’aide de algorithme SHA-512 du mot de passe salé. 
   
 Les mots de passe respectent la casse. Les mots de passe doivent comporter au moins 8 caractères, et ne peuvent pas dépasser 128 caractères. Les mots de passe peuvent inclure les caractères de A à Z, en minuscules ou en majuscules, les chiffres de 0 à 9 et la plupart des caractères non alphanumériques. Les mots de passe ne peuvent pas contenir de guillemets simples, ni le *login_name*. 
   

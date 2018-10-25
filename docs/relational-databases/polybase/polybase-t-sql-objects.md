@@ -1,13 +1,11 @@
 ---
-title: Objets T-SQL PolyBase | Microsoft Docs
+title: Informations de référence sur Transact-SQL PolyBase | Microsoft Docs
 ms.custom: ''
-ms.date: 08/15/2017
+ms.date: 09/24/2018
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: polybase
-ms.tgt_pltfrm: ''
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - PolyBase, fundamentals
 - PolyBase, SQL statements
@@ -15,41 +13,45 @@ helpviewer_keywords:
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d2c8dd55adf32bb835113073c79fcfcc00003371
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 0e50ec09c8986e042aa687363732c0c49b2bc883
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38983541"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47734677"
 ---
-# <a name="polybase-t-sql-objects"></a>Objets T-SQL PolyBase
-[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Pour utiliser PolyBase, vous devez créer des tables externes destinées à référencer vos données externes.  
+# <a name="polybase-transact-sql-reference"></a>Informations de référence sur Transact-SQL PolyBase
+
+[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+Pour utiliser PolyBase, vous devez créer des tables externes destinées à référencer vos données externes.  
   
- [CREATE DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)  
+[CREATE DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)  
   
- [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)  
+[CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)  
   
- [CREATE EXTERNAL FILE FORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-file-format-transact-sql.md)  
+[CREATE EXTERNAL FILE FORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-file-format-transact-sql.md)  
   
- [CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md)  
+[CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md)  
   
- [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)  
- 
+[CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)  
+
 > [!NOTE]
->  PolyBase dans SQL Server 2016 prend uniquement en charge les utilisateurs Windows. Si vous essayez d’utiliser un utilisateur SQL pour interroger une table externe PolyBase, la requête échoue.
+> PolyBase dans SQL Server 2016 prend uniquement en charge les utilisateurs Windows. Si vous essayez d’utiliser un utilisateur SQL pour interroger une table externe PolyBase, la requête échoue.
 
 ## <a name="prerequisites"></a>Conditions préalables requises  
- Configurez PolyBase. Consultez [PolyBase configuration](../../relational-databases/polybase/polybase-configuration.md).  
+
+Configurez PolyBase. Consultez [PolyBase configuration](../../relational-databases/polybase/polybase-configuration.md).  
   
 ## <a name="create-external-tables-for-hadoop"></a>Créer des tables externes pour Hadoop
+
 S’applique à : SQL Server (à compter de 2016), Parallel Data Warehouse
-  
- **1. Créer des informations d’identification incluses dans l’étendue de la base de données**  
-  
- Cette étape est uniquement requise pour les clusters Hadoop sécurisés par Kerberos.  
-  
-```sql  
+
+**1. Créer des informations d’identification incluses dans l’étendue de la base de données**
+
+Cette étape est uniquement requise pour les clusters Hadoop sécurisés par Kerberos.  
+
+```sql
 -- Create a master key on the database.  
 -- Required to encrypt the credential secret.  
   
@@ -61,11 +63,10 @@ CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo';
   
 CREATE DATABASE SCOPED CREDENTIAL HadoopUser1   
 WITH IDENTITY = '<hadoop_user_name>', Secret = '<hadoop_password>';  
-  
-```  
-  
- **2. Créer une source de données externes**  
-  
+```
+
+**2. Créer une source de données externes**
+
 ```sql  
 -- Create an external data source.  
 -- LOCATION (Required) : Hadoop Name Node IP address and port.  
@@ -78,11 +79,10 @@ CREATE EXTERNAL DATA SOURCE MyHadoopCluster WITH (
         RESOURCE_MANAGER_LOCATION = '10.xxx.xx.xxx:xxxx',   
         CREDENTIAL = HadoopUser1      
 );  
-  
-```  
-  
- **3. Créer un format de fichier externe**  
-  
+```
+
+**3. Créer un format de fichier externe**
+
 ```sql  
 -- Create an external file format.  
 -- FORMAT TYPE: Type of format in Hadoop (DELIMITEDTEXT,  RCFILE, ORC, PARQUET).  
@@ -93,9 +93,9 @@ CREATE EXTERNAL FILE FORMAT TextFileFormat WITH (
                 USE_TYPE_DEFAULT = TRUE)  
   
 ```  
-  
- **4. Créer une table externe**  
-  
+
+**4. Créer une table externe**  
+
 ```sql  
 -- Create an external table pointing to data stored in Hadoop.  
 -- LOCATION: path to file or directory that contains the data (relative to HDFS root).  
@@ -111,22 +111,20 @@ WITH (LOCATION='/Demo/',
         DATA_SOURCE = MyHadoopCluster,  
         FILE_FORMAT = TextFileFormat  
 );  
-  
 ```  
-  
- **5. Créer des statistiques**  
-  
+
+**5. Créer des statistiques**  
+
 ```sql  
 -- Create statistics on an external table.   
 CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)  
-  
 ```  
-  
+
 ## <a name="create-external-tables-for-azure-blob-storage"></a>Créer des tables externes pour le stockage d’objets blob Azure  
 S’applique à : SQL Server (à compter de 2016), Azure SQL Data Warehouse, Parallel Data Warehouse
 
- **1. Créer des informations d’identification incluses dans l’étendue de la base de données**  
-  
+**1. Créer des informations d’identification incluses dans l’étendue de la base de données**  
+
 ```sql  
 -- Create a master key on the database.  
 -- Required to encrypt the credential secret.  
@@ -139,11 +137,10 @@ CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo';
   
 CREATE DATABASE SCOPED CREDENTIAL AzureStorageCredential   
 WITH IDENTITY = 'user', Secret = '<azure_storage_account_key>';  
-  
 ```  
-  
- **2. Créer une source de données externes**  
-  
+
+**2. Créer une source de données externes**  
+
 ```sql  
 -- Create an external data source.  
 -- LOCATION:  Azure account storage account name and blob container name.  
@@ -156,9 +153,9 @@ CREATE EXTERNAL DATA SOURCE AzureStorage with (
 );  
   
 ```  
-  
- **3. Créer un format de fichier externe**  
-  
+
+**3. Créer un format de fichier externe**  
+
 ```sql  
 -- Create an external file format.  
 -- FORMAT TYPE: Type of format in Hadoop (DELIMITEDTEXT,  RCFILE, ORC, PARQUET).  
@@ -169,9 +166,9 @@ CREATE EXTERNAL FILE FORMAT TextFileFormat WITH (
                 USE_TYPE_DEFAULT = TRUE)  
   
 ```  
-  
- **4. Créer une table externe**  
-  
+
+**4. Créer une table externe**  
+
 ```sql  
 -- Create an external table pointing to data stored in Azure storage.  
 -- LOCATION: path to a file or directory that contains the data (relative to the blob container).  
@@ -188,23 +185,22 @@ WITH (LOCATION='/Demo/',
         DATA_SOURCE = AzureStorage,  
         FILE_FORMAT = TextFileFormat  
 );  
-  
 ```  
-  
- **5. Créer des statistiques**  
-  
+
+**5. Créer des statistiques**  
+
 ```sql  
 -- Create statistics on an external table.   
 CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)  
   
 ```  
- 
+
 ## <a name="create-external-tables-for-azure-data-lake-store"></a>Créer des tables externes pour Azure Data Lake Store
 S’applique à : Azure SQL Data Warehouse
 
 Pour plus d’informations, consultez [Charger avec Azure Data Lake Store](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store)
- 
- **1. Créer des informations d’identification incluses dans l’étendue de la base de données**   
+
+**1. Créer des informations d’identification incluses dans l’étendue de la base de données**   
 
 ```sql
 -- Create a Database Master Key.
@@ -224,9 +220,9 @@ WITH
     ,SECRET = '<key>'
 ;
 ```  
-  
- **2. Créer une source de données externes**  
-  
+
+**2. Créer une source de données externes**  
+
 ```sql  
 -- TYPE: HADOOP - PolyBase uses Hadoop APIs to access data in Azure Data Lake Store.
 -- LOCATION: Provide Azure storage account name and blob container name.
@@ -239,9 +235,9 @@ WITH (
     CREDENTIAL = AzureStorageCredential
 );
 ```  
-  
- **3. Créer un format de fichier externe**  
-  
+
+**3. Créer un format de fichier externe**  
+
 ```sql  
 -- FIELD_TERMINATOR: Marks the end of each field (column) in a delimited text file
 -- STRING_DELIMITER: Specifies the field terminator for data of type string in the text-delimited file.
@@ -258,9 +254,9 @@ WITH
                     )
 );
 ```  
-  
- **4. Créer une table externe**  
-  
+
+**4. Créer une table externe**  
+
 ```sql  
 -- LOCATION: Folder under the ADLS root folder.
 -- DATA_SOURCE: Specifies which Data Source Object to use.
@@ -284,18 +280,16 @@ WITH
 )
 ;
 ```  
-  
- **5. Créer des statistiques**  
-  
-```sql     
+
+**5. Créer des statistiques**
+
+```sql
 CREATE STATISTICS StatsForProduct on DimProduct_external(ProductKey)  
 ```  
 
 ## <a name="next-steps"></a>Étapes suivantes  
- Pour découvrir des exemples de requêtes, consultez [Requêtes PolyBase](../../relational-databases/polybase/polybase-queries.md).  
+Pour découvrir des exemples de requêtes, consultez [Requêtes PolyBase](../../relational-databases/polybase/polybase-queries.md).  
   
 ## <a name="see-also"></a> Voir aussi  
- [Prise en main de PolyBase](../../relational-databases/polybase/get-started-with-polybase.md)   
- [Guide de PolyBase](../../relational-databases/polybase/polybase-guide.md)  
-  
-  
+[Prise en main de PolyBase](../../relational-databases/polybase/get-started-with-polybase.md)   
+[Guide de PolyBase](../../relational-databases/polybase/polybase-guide.md)
