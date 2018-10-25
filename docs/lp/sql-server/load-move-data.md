@@ -2,16 +2,16 @@
 layout: HubPage
 hide_bc: true
 title: SQL Server - Charger et déplacer des données
-description: Explorez les fonctionnalités qui vous aident à déplacer, charger et gérer vos données avec SQL Server.
+description: Explorez les fonctionnalités qui vous aident à charger, déplacer et migrer des bases de données et des données avec SQL Server.
 ms.topic: hub-page
 featureFlags:
 - clicktale
-ms.openlocfilehash: 069e58327e32484d4ae1718130b469af1a0e51af
-ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
+ms.openlocfilehash: 50ad47c11ccba509399104f019aaa07080299fd8
+ms.sourcegitcommit: 97463ffe99915f3bbdf298e6e6b8d170e738ea7a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49336158"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49390851"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -142,6 +142,25 @@ ms.locfileid: "49336158"
                                     </div>
                                 </a>
                             </li>
+                            <li>
+                                <a href="/sql/dea/database-experimentation-assistant-overview">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="media/load-move-data/database-experimentation-assistant.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Assistant Expérimentation de base de données (DEA)</h3>
+                                                    <p>Aide à évaluer une version cible de SQL Server pour une charge de travail existante.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
                             <li class="fullSpan">
                                 <div class="container intro">
                                 <h2>Charger et déplacer des données</h2>
@@ -204,25 +223,6 @@ ms.locfileid: "49336158"
                                 </a>
                             </li>
                             <li>
-                                <a href="/sql/relational-databases/replication/sql-server-replication/">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage">
-                                                        <img src="media/load-move-data/replication.svg" alt="" />
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>REPLICATION</h3>
-                                                    <p> Ensemble de technologies qui permettent de copier et de distribuer des données et des objets de base de données d’une base de données vers une autre, puis de synchroniser les bases de données afin de maintenir leur cohérence.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
                                 <a href="/sql/integration-services/sql-server-integration-services">
                                     <div class="cardSize">
                                         <div class="cardPadding">
@@ -235,6 +235,25 @@ ms.locfileid: "49336158"
                                                 <div class="cardText">
                                                     <h3>SQL Server Integration Services (SSIS)</h3>
                                                     <p>Extraire et transformer des données provenant d’une grande variété de sources, par exemple des fichiers plats et des sources de données relationnelles, puis charger les données dans votre base de données SQL. </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/sql/relational-databases/replication/sql-server-replication/">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="media/load-move-data/replication.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>REPLICATION</h3>
+                                                    <p> Ensemble de technologies qui permettent de copier et de distribuer des données et des objets de base de données d’une base de données vers une autre, puis de synchroniser les bases de données afin de maintenir leur cohérence.</p>
                                                 </div>
                                             </div>
                                         </div>
