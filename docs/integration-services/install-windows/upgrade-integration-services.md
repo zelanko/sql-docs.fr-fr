@@ -145,6 +145,6 @@ ms.locfileid: "47753797"
 -   Vous ne pouvez pas utiliser les travaux de l’Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur des ordinateurs [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] pour exécuter les packages [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] stockés dans l’instance mise à niveau de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 ## <a name="external-resources"></a>Ressources externes  
- Entrée de blog [Making your Existing Custom SSIS Extensions and Applications Work in Denali](http://go.microsoft.com/fwlink/?LinkId=238157), sur blogs.msdn.com.  
+ Entrée de blog [Faire fonctionner vos extensions et applications SSIS personnalisées existantes à Denali](http://go.microsoft.com/fwlink/?LinkId=238157), sur blogs.msdn.com.  
   
   

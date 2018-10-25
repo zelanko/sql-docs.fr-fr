@@ -29,7 +29,7 @@ La haute disponibilité côté Scale Out Master peut aussi être obtenue au moye
 Pour configurer la haute disponibilité côté Scale Out Master à l’aide de la fonctionnalité Always On pour le catalogue SSIS, suivez les étapes ci-dessous :
 
 ## <a name="1-prerequisites"></a>1. Conditions préalables requises
-Configurez un cluster de basculement Windows. Pour obtenir des instructions, consultez le billet de blog [Installing the Failover Cluster Feature and Tools for Windows Server 2012](http://blogs.msdn.com/b/clustering/archive/2012/04/06/10291601.aspx). Installez la fonctionnalité et les outils sur tous les nœuds de cluster.
+Configurez un cluster de basculement Windows. Pour obtenir des instructions, consultez le billet de blog [Installation de la fonctionnalité de cluster de basculement et des outils pour Windows Server 2012](http://blogs.msdn.com/b/clustering/archive/2012/04/06/10291601.aspx). Installez la fonctionnalité et les outils sur tous les nœuds de cluster.
 
 ## <a name="2-install-scale-out-master-on-the-primary-node"></a>2. Installer Scale Out Master sur le nœud principal
 Installez les services SQL Server Moteur de base de données, Integration Services et Scale Out Master sur le nœud principal pour Scale Out Master. 

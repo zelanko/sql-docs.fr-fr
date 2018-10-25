@@ -31,7 +31,7 @@ ms.locfileid: "47800147"
 > [!NOTE]  
 >  Un dataset partagé doit être basé sur une source de données partagée. Si la source de données dont vous avez besoin n’est pas disponible, vous devez en créer une sur le serveur de rapports. Pour plus d’informations, consultez [Créer, modifier et supprimer des sources de données partagées &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md).  
   
- Pour plus d'informations, consultez [Data Connections, Data Sources, and Connection Strings in Report Builder](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34).  
+ Pour plus d'informations, consultez [Connexions de données, sources de données et chaînes de connexion](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34).  
   
 ### <a name="dataset"></a>Dataset  
  Utilisez le bouton **Définir les options** pour définir les propriétés de dataset partagé. Ces options en question sont les suivantes :  

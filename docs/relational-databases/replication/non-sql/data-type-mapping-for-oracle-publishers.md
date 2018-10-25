@@ -104,7 +104,7 @@ ms.locfileid: "47739187"
   
 -   Remplacer en totalité toutes les valeurs par défaut pour les prochains articles à l'aide de procédures stockées (les valeurs par défaut restent inchangées pour les articles existants).  
   
- Pour spécifier des mappages de types de données de remplacement, consultez [Specify Data Type Mappings for an Oracle Publisher](../../../relational-databases/replication/publish/specify-data-type-mappings-for-an-oracle-publisher.md).  
+ Pour spécifier des mappages de types de données de remplacement, consultez [Spécifier des mappages de types de données pour un Serveur de publication Oracle](../../../relational-databases/replication/publish/specify-data-type-mappings-for-an-oracle-publisher.md).  
   
 ## <a name="see-also"></a> Voir aussi  
  [Configurer un serveur de publication Oracle](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   

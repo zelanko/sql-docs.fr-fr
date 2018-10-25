@@ -113,7 +113,7 @@ ms.locfileid: "47770897"
   
 8.  Redémarrez le serveur de rapports pour effacer toutes les sessions qui sont actuellement ouvertes.  
   
-##  <a name="proxyfirewallRSWindowsNegotiate"></a> Resolving Kerberos Authentication Errors When Connecting to a Report Server  
+##  <a name="proxyfirewallRSWindowsNegotiate"></a> Résolution des erreurs d’authentification Kerberos lors de la connexion à un serveur de rapports  
  Sur un serveur de rapports qui est configuré pour l'authentification Negotiate ou Kerberos, une connexion client au serveur de rapports échouera en cas d'erreur d'authentification Kerberos. Les erreurs d'authentification Kerberos sont connues pour se produire dans les cas suivants :  
   
 -   Le service Report Server s'exécute en tant que compte d'utilisateur de domaine Windows et vous n'avez pas inscrit de nom de principal du service (SPN) pour le compte.  

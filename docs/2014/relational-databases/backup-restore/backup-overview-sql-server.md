@@ -86,7 +86,7 @@ ms.locfileid: "48049395"
  **Définitions et les termes du contrat de support de sauvegarde**  
   
  [Unité de sauvegarde](backup-devices-sql-server.md)  
- Unité de disque ou de bande sur laquelle les sauvegardes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont écrites et à partir de laquelle elles peuvent être restaurées. Les sauvegardes SQL Server peuvent être écrites dans un service de stockage d'objets blob Windows Azure, et le format d' **URL** est utilisé pour spécifier la destination et le nom du fichier de sauvegarde. Pour plus d'informations, voir [SQL Server Backup and Restore with Windows Azure Blob Storage Service](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+ Unité de disque ou de bande sur laquelle les sauvegardes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont écrites et à partir de laquelle elles peuvent être restaurées. Les sauvegardes SQL Server peuvent être écrites dans un service de stockage d'objets blob Windows Azure, et le format d' **URL** est utilisé pour spécifier la destination et le nom du fichier de sauvegarde. Pour plus d'informations, voir [Sauvegarde et restauration SQL Server avec le service de stockage d'objets blob Windows Azure](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
  [support de sauvegarde](media-sets-media-families-and-backup-sets-sql-server.md)  
  Une ou plusieurs bandes ou un ou plusieurs fichiers disque sur lesquels une ou plusieurs sauvegardes ont été écrites.  

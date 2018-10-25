@@ -50,7 +50,7 @@ ms.locfileid: "48194569"
   
 5.  Vérifiez l'instruction T-SQL et cliquez sur **Exécuter**.  
   
- Pour plus d’informations sur le service de stockage d’objets Blob Windows Azure pour les exigences et les concepts de sauvegarde, consultez [SQL Server Backup and Restore with Windows Azure Blob Storage Service](../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+ Pour plus d’informations sur le service de stockage d’objets Blob Windows Azure pour les exigences et les concepts de sauvegarde, consultez [Sauvegarde et restauration SQL Server avec le service de stockage d'objets blob Windows Azure](../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
 ### <a name="next-lesson"></a>Leçon suivante  
  [Leçon 3 : Écrire une sauvegarde de base de données complète dans le Service de stockage Windows Azure Blob](../../2014/tutorials/lesson-3-write-a-full-database-backup-to-the-windows-azure-blob-storage-service.md).  

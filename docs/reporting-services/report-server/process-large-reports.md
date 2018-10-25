@@ -31,7 +31,7 @@ ms.locfileid: "47651877"
   
  La taille des rapports contenant des données volatiles peut changer considérablement d'une exécution à l'autre. Dans ce cas, vous devez analyser la source des données pour déterminer de quelle façon la volatilité des données agit sur ces rapports, afin de savoir si vous devez suivre les recommandations prodiguées dans la présente rubrique.  
   
- Pour plus d’informations et de conseils sur le diagnostic des erreurs de délai d’attente et des erreurs d’insuffisance de mémoire, consultez l’article [How to diagnose issues when running reports in the report server](http://go.microsoft.com/fwlink/?LinkId=85634) sur blogs.msdn.com.  
+ Pour plus d’informations et de conseils sur le diagnostic des erreurs de délai d’attente et des erreurs d’insuffisance de mémoire, consultez l’article [Comment diagnostiquer des problèmes lors de l'exécution de rapports sur le serveur de rapports](http://go.microsoft.com/fwlink/?LinkId=85634) sur blogs.msdn.com.  
   
 ## <a name="configuration-recommendations"></a>Recommandations relatives à la configuration  
  Les recommandations concernant l'accès, l'exécution et le rendu des rapports sont les suivantes :  

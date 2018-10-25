@@ -25,7 +25,7 @@ ms.locfileid: "47744017"
   
  L'ordre des paramètres en cascade est important, car la requête de dataset d'un paramètre situé plus bas dans la liste comporte une référence à chaque paramètre situé plus haut dans la liste. Au moment de l'exécution, l'ordre des paramètres dans le volet des données de rapport détermine l'ordre d'apparition des requêtes de paramètre dans le rapport et, par conséquent, l'ordre dans lequel un utilisateur choisit chaque valeur de paramètre consécutive.  
   
- Pour plus d'informations sur la création de paramètres en cascade avec plusieurs valeurs et notamment la fonctionnalité Sélectionner tout, consultez [How to have a Select All Multivalue Cascading Parameter](http://go.microsoft.com/fwlink/?LinkId=184757)(en anglais).  
+ Pour plus d'informations sur la création de paramètres en cascade avec plusieurs valeurs et notamment la fonctionnalité Sélectionner tout, consultez [Comment avoir un paramètre Tout sélectionner en cascade à valeurs multiples](http://go.microsoft.com/fwlink/?LinkId=184757)(en anglais).  
   
 ## <a name="to-create-the-main-dataset-with-a-query-that-includes-multiple-related-parameters"></a>Pour créer le dataset principal avec une requête incluant plusieurs paramètres associés  
   

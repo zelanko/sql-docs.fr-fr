@@ -79,7 +79,7 @@ ms.locfileid: "47682447"
   
 ## <a name="connected-mode"></a>mode connecté
 
- Pour obtenir les dernières informations concernant l'utilisation de l'extension ADS avec le mode connecté de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , consultez [Access Services Report in SharePoint Site shows error in data extension "ADS"](http://social.technet.microsoft.com/wiki/contents/articles/25298.access-services-report-in-sharepoint-site-shows-error-in-data-extension-ads.aspx).  
+ Pour obtenir les dernières informations concernant l'utilisation de l'extension ADS avec le mode connecté de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , consultez [Le rapport Access Services dans le site SharePoint indique une erreur dans l'extension de données "ADS"](http://social.technet.microsoft.com/wiki/contents/articles/25298.access-services-report-in-sharepoint-site-shows-error-in-data-extension-ads.aspx).  
   
 ## <a name="see-also"></a>Voir aussi
 

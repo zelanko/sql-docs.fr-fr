@@ -41,7 +41,7 @@ ms.locfileid: "47855227"
   
  L’amélioration des performances vous permet de créer des modèles plus volumineux, de charger les données de façon plus efficace et d’obtenir de meilleures performances globales. Cette amélioration des performances concerne aussi le complément pour Microsoft Excel, qui a été amélioré pour réduire le temps de chargement des données et traiter des entités plus volumineuses.  
   
- Pour plus d’informations sur le complément pour Microsoft Excel, consultez [Master Data Services Add-in for Microsoft Excel](../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md).  
+ Pour plus d’informations sur le complément pour Microsoft Excel, consultez[Complément Master Data Services pour Microsoft Excel](../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md).  
   
  Les améliorations touchent également les fonctionnalités suivantes.  
   
