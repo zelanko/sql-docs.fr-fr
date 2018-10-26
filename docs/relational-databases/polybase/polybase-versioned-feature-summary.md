@@ -11,12 +11,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2052b098f0be7ab377cf38a36b896794d3caa07a
-ms.sourcegitcommit: 8dccf20d48e8db8fe136c4de6b0a0b408191586b
+ms.openlocfilehash: 8f7520a4e9bdc346113e4777bd6899f5ccc0e01c
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48874347"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460314"
 ---
 # <a name="polybase-features-and-limitations"></a>Fonctionnalités et limitations de PolyBase
 
@@ -80,13 +80,11 @@ PolyBase présente les limitations suivantes :
 - [PolyBase ne s’installe pas quand vous ajoutez un nœud à un cluster de basculement SQL Server 2016](https://support.microsoft.com/en-us/help/3173087/fix-polybase-feature-doesn-t-install-when-you-add-a-node-to-a-sql-server-2016-failover-cluster)
 
 ::: moniker-end
+
 - L’authentification intégrée n’est pas prise en charge. Seule l’authentification par nom d’utilisateur et mot de passe est prise en charge actuellement.  
-- Nous activons le chiffrement par défaut. Pour pouvoir désactiver le chiffrement, vous devez... (voir avec thanh)
-- [Limitations du mappage des types](polybase-type-mapping.md)
 
+- Le chiffrement est activé par défaut.
 
-## <a name="security-and-authentication"></a>Sécurité et authentification 
+## <a name="next-steps"></a>Étapes suivantes
 
-## <a name="see-also"></a> Voir aussi  
-
-[Guide de PolyBase](../../relational-databases/polybase/polybase-guide.md)  
+Pour plus d’informations sur PolyBase, consultez [Qu’est-ce que PolyBase ?](polybase-guide.md).

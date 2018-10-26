@@ -28,12 +28,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bc81d7a915a79af3406d5fc90ef9920d5e19055a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c0a6c44ddcf6a222db8db865896921ad29ea2f56
+ms.sourcegitcommit: 3fb1a740c0838d5f225788becd4e4790555707f2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47757048"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "49636478"
 ---
 # <a name="collation-and-unicode-support"></a>Prise en charge d’Unicode et du classement
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -58,7 +58,7 @@ Un classement désigne les modèles binaires qui représentent chaque caractère
     
 Le résultat d'une instruction[!INCLUDE[tsql](../../includes/tsql-md.md)] peut varier lorsque cette dernière est exécutée dans un contexte réunissant plusieurs bases de données dont chacune a un paramètre de classement différent. Dans la mesure du possible, choisissez un classement normalisé pour votre organisation. De cette manière, vous n'avez pas à spécifier explicitement le classement dans chaque caractère ou expression Unicode. Si vous devez utiliser des objets qui ont des paramètres de classement et de page de codes différents, codez vos requêtes conformément aux règles de priorité des classements. Pour plus d’informations, consultez [Priorité de classement (Transact-SQL)](../../t-sql/statements/collation-precedence-transact-sql.md).    
     
-Les options associées à un classement sont le respect de la casse, le respect des accents, le respect du jeu de caractères Kana, le respect de la largeur et le respect du sélecteur de variante. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] introduit une option supplémentaire pour l’encodage UTF-8. Pour spécifier ces options, vous devez les ajouter au nom du classement. Par exemple, le classement `Japanese_Bushu_Kakusu_100_CS_AS_KS_WS_UTF8` respecte la casse, les accents, le jeu de caractères Kana et la largeur, et il est encodé en UTF-8. Autre exemple : le classement `Japanese_Bushu_Kakusu_140_CI_AI_KS_WS_VSS` ne respecte pas la casse, ne respecte pas les accents, respecte le jeu de caractères Kana, respecte la largeur, respecte le sélecteur de variante et utilise un encodage non-Unicode. Le tableau suivant décrit le comportement associé à ces différentes options.    
+Les options associées à un classement sont le respect de la casse, le respect des accents, le respect du jeu de caractères Kana, le respect de la largeur et le respect du sélecteur de variante. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] introduit une option supplémentaire pour l’encodage [UTF-8](http://www.wikipedia.org/wiki/UTF-8). Pour spécifier ces options, vous devez les ajouter au nom du classement. Par exemple, le classement `Japanese_Bushu_Kakusu_100_CS_AS_KS_WS_UTF8` respecte la casse, les accents, le jeu de caractères Kana et la largeur, et il est encodé en UTF-8. Autre exemple : le classement `Japanese_Bushu_Kakusu_140_CI_AI_KS_WS_VSS` ne respecte pas la casse, ne respecte pas les accents, respecte le jeu de caractères Kana, respecte la largeur, respecte le sélecteur de variante et utilise un encodage non-Unicode. Le tableau suivant décrit le comportement associé à ces différentes options.    
     
 |Option|Description|    
 |------------|-----------------|    
@@ -257,7 +257,7 @@ Ces classements sont pris en charge dans les index de moteur de base de données
 |Décrit comment écrire des instructions Transact-SQL qui sont plus portables d’un langage à un autre ou qui prennent en charge plusieurs langages plus facilement.|[Rédiger des instructions Transact-SQL internationales](../../relational-databases/collations/write-international-transact-sql-statements.md)|    
 |Explique comment modifier la langue des messages d'erreur et des paramètres relatifs à l'utilisation et l'affichage de la date, de l'heure et des devises.|[Définir une langue de session](../../relational-databases/collations/set-a-session-language.md)|    
     
-##  <a name="Related_Content"></a> Contenu connexe    
+##  <a name="Related_Content"></a> Contenu associé    
 [SQL Server Best Practices Collation Change](http://go.microsoft.com/fwlink/?LinkId=113891)    
 [Utiliser le format de caractère Unicode pour importer ou exporter des données &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)        
 ["SQL Server Best Practices Migration to Unicode"](http://go.microsoft.com/fwlink/?LinkId=113890) - (Plus de support)   
