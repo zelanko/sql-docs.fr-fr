@@ -20,12 +20,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bb0294ccfb7a099cda01c698719e71141eb88005
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 256ec0931c0abb3b15947a9f04892c35a5066862
+ms.sourcegitcommit: 3fb1a740c0838d5f225788becd4e4790555707f2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716549"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "49636438"
 ---
 # <a name="nchar-transact-sql"></a>NCHAR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -42,9 +42,9 @@ NCHAR ( integer_expression )
   
 ## <a name="arguments"></a>Arguments  
  *integer_expression*  
- Lorsque le classement de la base de données ne contient pas d'indicateur de caractère supplémentaire (SC) , il s'agit d'un nombre entier positif compris entre 0 et 65535 (0 à 0xFFFF). Si une valeur à l'extérieur de cette plage est spécifiée, NULL est retourné. Pour plus d’informations sur les caractères supplémentaires, consultez [Prise en charge d’Unicode et du classement](../../relational-databases/collations/collation-and-unicode-support.md).  
+ Lorsque le classement de la base de données ne contient pas l'indicateur [Caractère supplémentaire (SC)](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters), c'est un entier positif de 0 à 65 535 (0 à 0xFFFF). Si une valeur à l'extérieur de cette plage est spécifiée, NULL est retourné. Pour plus d’informations sur les caractères supplémentaires, consultez [Prise en charge d’Unicode et du classement](../../relational-databases/collations/collation-and-unicode-support.md).  
   
- Lorsque le classement de base de données prend en charge l'indicateur de caractère supplémentaire (SC), c'est un nombre entier positif compris entre 0 et 1114111 (0 à 0x10FFFF). Si une valeur à l'extérieur de cette plage est spécifiée, NULL est retourné.  
+ Lorsque le classement de la base de données prend en charge l'indicateur SC, c'est un entier positif de 0 à 1 114 111 (0 à 0x10FFFF). Si une valeur à l'extérieur de cette plage est spécifiée, NULL est retourné.  
   
 ## <a name="return-types"></a>Types de retour  
  **nchar(1)** lorsque le classement de base de données par défaut ne prend pas en charge les caractères supplémentaires.  
@@ -53,7 +53,7 @@ NCHAR ( integer_expression )
   
  Si le paramètre *integer_expression* se trouve dans la plage 0 - 0xFFFF, un seul caractère est renvoyé. Pour les valeurs plus élevées, NCHAR retourne la paire de substitution correspondante. Ne construisez pas de paire de substitution à l'aide de `NCHAR(<High surrogate>) + NCHAR(\<Low Surrogate>)`. À la place, utilisez un classement de base de données qui prend en charge les caractères supplémentaires, puis spécifiez le point de code Unicode pour la paire de substitution. L'exemple suivant illustre la méthode classique de construction d'une paire de substitution et la méthode recommandée pour spécifier le point de code Unicode.  
   
-```  
+```sql  
 CREATE DATABASE test COLLATE Finnish_Swedish_100_CS_AS_SC;  
 DECLARE @d nvarchar(10) = N'𣅿';
 -- Old style method.  
@@ -71,7 +71,7 @@ SELECT NCHAR(UNICODE(@d));
 ### <a name="a-using-nchar-and-unicode"></a>A. Utilisation de NCHAR et UNICODE  
  Cet exemple fait appel aux fonctions `UNICODE` et `NCHAR` pour imprimer la valeur `UNICODE` et le caractère Unicode `NCHAR` du deuxième caractère de la chaîne de caractères `København` de façon à imprimer correctement celui-ci, soit `ø`.  
   
-```  
+```sql  
 DECLARE @nstring nchar(8);  
 SET @nstring = N'København';  
 SELECT UNICODE(SUBSTRING(@nstring, 2, 1)),   
@@ -90,7 +90,7 @@ GO
 ### <a name="b-using-substring-unicode-convert-and-nchar"></a>B. Utilisation de SUBSTRING, UNICODE, CONVERT et NCHAR  
  Cet exemple fait appel aux fonctions `SUBSTRING`, `UNICODE`, `CONVERT` et `NCHAR` pour imprimer le nombre de caractères, le caractère Unicode et la valeur UNICODE de chacun des caractères de la chaîne `København`.  
   
-```  
+```sql  
 -- The @position variable holds the position of the character currently  
 -- being processed. The @nstring variable is the Unicode character   
 -- string to process.  

@@ -24,12 +24,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ebeb314304edd0678e366ebc67ffe6caafc4a168
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 94720f617b9d2d8723ac6e9a28770291a966d4b3
+ms.sourcegitcommit: 93e3bb8941411b808e00daa31121367e96fdfda1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47656137"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49359326"
 ---
 # <a name="errorstate-transact-sql"></a>ERROR_STATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -70,7 +70,7 @@ ERROR_STATE ( )
 ### <a name="a-using-errorstate-in-a-catch-block"></a>A. Utilisation d'ERROR_STATE dans un bloc CATCH  
  L’exemple suivant montre une instruction `SELECT` qui génère une erreur de division par zéro. L'état de l'erreur est renvoyé.  
   
-```  
+```sql  
 BEGIN TRY  
     -- Generate a divide by zero error  
     SELECT 1/0;  
@@ -84,7 +84,7 @@ GO
 ### <a name="b-using-errorstate-in-a-catch-block-with-other-error-handling-tools"></a>B. Utilisation d'ERROR_STATE dans un bloc CATCH avec d'autres outils de gestion des erreurs  
  L’exemple suivant montre une instruction `SELECT` qui génère une erreur de division par zéro. Outre l'état de l'erreur, la procédure renvoie également les informations relatives à l'erreur.  
   
-```  
+```sql  
 BEGIN TRY  
     -- Generate a divide-by-zero error.  
     SELECT 1/0;  
@@ -106,7 +106,7 @@ GO
 ### <a name="c-using-errorstate-in-a-catch-block-with-other-error-handling-tools"></a>C. Utilisation d'ERROR_STATE dans un bloc CATCH avec d'autres outils de gestion des erreurs  
  L’exemple suivant montre une instruction `SELECT` qui génère une erreur de division par zéro. Outre l'état de l'erreur, la procédure renvoie également les informations relatives à l'erreur.  
   
-```  
+```sql  
 BEGIN TRY  
     -- Generate a divide-by-zero error.  
     SELECT 1/0;  
@@ -131,7 +131,8 @@ GO
  [ERROR_PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/functions/error-procedure-transact-sql.md)   
  [ERROR_SEVERITY &#40;Transact-SQL&#41;](../../t-sql/functions/error-severity-transact-sql.md)   
  [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)   
- [@@ERROR &#40;Transact-SQL&#41;](../../t-sql/functions/error-transact-sql.md)  
+ [@@ERROR &#40;Transact-SQL&#41;](../../t-sql/functions/error-transact-sql.md)    
+ [Guide de référence des erreurs et des événements &#40;Moteur de base de donnéese&#41;](../../relational-databases/errors-events/errors-and-events-reference-database-engine.md)     
   
-  
+    
 

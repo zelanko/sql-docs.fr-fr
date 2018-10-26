@@ -20,16 +20,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: db923d432be92abfea17ee12a2bcdf61601c9fc3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1076ee49f04e556dddb3639fa1e3e18e497bebf4
+ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47802917"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49419274"
 ---
 # <a name="execute-a-stored-procedure"></a>Exécuter une procédure stockée
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
- > Pour accéder au contenu relatif aux versions précédentes de SQL Server, consultez [Exécuter une procédure stockée](execute-a-stored-procedure.md).
 
   Cette rubrique explique comment exécuter une procédure stockée dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
@@ -69,7 +68,7 @@ ms.locfileid: "47802917"
   
 -   Exécution de procédures stockées système  
   
-     Les procédures système commencent par le préfixe **sp_**. Étant donné qu'elles figurent logiquement dans toutes les bases de données d'utilisateur et les bases de données définies par le système, elles peuvent être exécutés à partir de n'importe quelle base de données sans devoir qualifier entièrement le nom de la procédure. Cependant, nous vous conseillons de qualifier tous les noms de procédures système à l’aide du nom de schéma **sys** pour éviter les conflits de nom. L'exemple suivant illustre la méthode recommandée pour l'appel d'une procédure système.  
+     Les procédures système commencent par le préfixe **sp_**. Étant donné qu'elles figurent logiquement dans toutes les bases de données d'utilisateur et les bases de données définies par le système, elles peuvent être exécutées à partir de n'importe quelle base de données sans devoir qualifier entièrement le nom de la procédure. Cependant, nous vous conseillons de qualifier tous les noms de procédures système à l’aide du nom de schéma **sys** pour éviter les conflits de nom. L'exemple suivant illustre la méthode recommandée pour l'appel d'une procédure système.  
   
     ```sql  
     EXEC sys.sp_who;  

@@ -15,12 +15,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fdf4b9ba29155d3779f1c28b74b7ad8617be0d48
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 91d662dde7fe35ff74802ac9d899e03baaf8feb2
+ms.sourcegitcommit: 93e3bb8941411b808e00daa31121367e96fdfda1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717057"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49359346"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Surveillance des performances à l’aide du magasin de requêtes
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -66,6 +66,9 @@ Pour obtenir d’autres options de syntaxe relatives au Magasin des requêtes, c
  Les plans d’exécution d’une requête spécifique dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] évoluent généralement au fil du temps pour un certain nombre de raisons, telles que les modifications des statistiques, les modifications de schémas, la création/suppression d’index, etc. Le cache de procédures (où sont stockés les plans de requête mis en cache) stocke uniquement le dernier plan d'exécution. Les plans sont également supprimés du cache du plan en raison de la sollicitation de la mémoire. Par conséquent, les régressions des performances de requête provoquées par des modifications du plan d'exécution peuvent être significatives et longues à résoudre.  
   
  Comme le magasin de requêtes conserve plusieurs plans d'exécution par requête, il peut appliquer des stratégies pour indiquer au processeur de requêtes d'utiliser un plan d'exécution spécifique pour une requête. On parle alors de forçage de plan. Le forçage de plan dans un magasin de requêtes est fourni à l'aide d'un mécanisme semblable à l’indicateur de requête [USE PLAN](../../t-sql/queries/hints-transact-sql-query.md) , mais il ne nécessite pas d’apporter des modifications dans les applications utilisateur. Le forçage de plan peut résoudre une régression des performances de requête provoquée par une modification du plan dans un délai très court.  
+
+> [!NOTE]
+> Le magasin des requêtes collecte des plans pour les instructions DML telles que SELECT, INSERT, UPDATE, DELETE, MERGE et BULK INSERT.
 
  Les **statistiques d’attente** sont une autre source d’informations qui permet de résoudre les problèmes de performances dans SQL Server. Pendant longtemps, les statistiques d’attente étaient disponibles uniquement au niveau de l’instance, ce qui rendait difficile leur rétroaction sur la requête réelle. Dans SQL Server 2017 et Azure SQL Database, nous avons ajouté une autre dimension au Magasin des requêtes qui effectue le suivi des statistiques d’attente. 
 

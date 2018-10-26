@@ -17,16 +17,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c181aa25c7bf06a107ff4fc8a0b0bcd39f66cc2e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 90c5995a59cc226700ccdc0aea15a8fe16a28d75
+ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47775607"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49356140"
 ---
 # <a name="databases"></a>Bases de données
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , une base de données est constituée d'une collection de tables qui renferment un ensemble spécifique de données structurées. Une table se compose de lignes, également appelées enregistrements ou tuples, et de colonnes, également appelées attributs. Chaque colonne d'une table est conçue pour stocker un certain type d'informations, par exemple, des données, des noms, des valeurs monétaires ou des nombres.  
+  Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], une base de données est constituée d'une collection de tables qui renferment un ensemble spécifique de données structurées. Une table se compose de lignes, également appelées enregistrements ou tuples, et de colonnes, également appelées attributs. Chaque colonne d'une table est conçue pour stocker un certain type d'informations, par exemple, des données, des noms, des valeurs monétaires ou des nombres.  
   
 ## <a name="basic-information-about-databases"></a>Informations générales sur les bases de données  
  Une ou plusieurs instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peuvent être installées sur un ordinateur. Chaque instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut contenir une ou plusieurs bases de données.  Dans une base de données, il existe un ou plusieurs groupes d'appropriation d'objets appelés schémas. Chaque schéma contient divers objets de base de données tels que des tables, des vues et des procédures stockées. Certains objets, tels que les certificats et les clés asymétriques, sont présents dans une base de données, mais pas dans un schéma. Pour plus d’informations sur la création de tables, consultez [Tables](../../relational-databases/tables/tables.md).  
@@ -38,7 +38,7 @@ ms.locfileid: "47775607"
  Un utilisateur qui a accès à une base de données peut recevoir l'autorisation d'accéder aux objets de la base de données. Même si les autorisations peuvent être accordées aux utilisateurs de façon individuelle, nous vous recommandons de créer des rôles de base de données, d'ajouter les utilisateurs de la base de données aux rôles, puis d'accorder l'autorisation d'accès aux rôles. L'octroi d'autorisations à des rôles plutôt qu'aux utilisateurs contribue à garantir que les autorisations restent cohérentes et compréhensibles à mesure que le nombre d'utilisateurs augmente et évolue. Pour plus d’informations sur les autorisations des rôles, consultez [CREATE ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-role-transact-sql.md) et [Principaux &#40;moteur de base de données&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md).  
   
 ## <a name="working-with-databases"></a>Utilisation des bases de données  
- La plupart des personnes qui utilisent des bases de données emploient l'outil [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . L'outil [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] comporte une interface utilisateur graphique permettant de créer des bases de données et les objets à y inclure. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] fournit également un éditeur de requête permettant de rédiger des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] pour interagir avec les bases de données. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] peut être installé à partir du disque d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ou téléchargé à partir de MSDN.  
+ La plupart des personnes qui utilisent des bases de données emploient l'outil [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . L'outil [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] comporte une interface utilisateur graphique permettant de créer des bases de données et les objets à y inclure. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] fournit également un éditeur de requête permettant de rédiger des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] pour interagir avec les bases de données. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] peut être installé à partir du disque d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ou téléchargé à partir de MSDN. Pour plus d’informations sur l’outil [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], consultez la page [SQL Server Management Studio (SSMS)](../../ssms/sql-server-management-studio-ssms.md).
   
 ## <a name="in-this-section"></a>Dans cette section  
   

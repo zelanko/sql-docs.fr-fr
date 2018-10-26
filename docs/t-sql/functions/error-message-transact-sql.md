@@ -23,12 +23,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ab08801cb70dc2048e03e1be394e6fa897b087e2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c7b546e749c0ca7d695a4cd1b2cd2d25e8683a62
+ms.sourcegitcommit: 93e3bb8941411b808e00daa31121367e96fdfda1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47807257"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49359307"
 ---
 # <a name="errormessage-transact-sql"></a>ERROR_MESSAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -63,8 +63,7 @@ Dans des blocs `CATCH` imbriqués, `ERROR_MESSAGE` retourne le message d’erreu
 ### <a name="a-using-errormessage-in-a-catch-block"></a>A. Utilisation de ERROR_MESSAGE dans un bloc CATCH  
 L’exemple suivant montre une instruction `SELECT` qui génère une erreur de division par zéro. Le bloc `CATCH` retourne le message d’erreur.  
   
-```  
-  
+```sql   
 BEGIN TRY  
     -- Generate a divide-by-zero error.  
     SELECT 1/0;  
@@ -73,7 +72,9 @@ BEGIN CATCH
     SELECT ERROR_MESSAGE() AS ErrorMessage;  
 END CATCH;  
 GO  
-
+```
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)] 
+```
 -----------
 
 (0 row(s) affected)
@@ -89,7 +90,7 @@ Divide by zero error encountered.
 ### <a name="b-using-errormessage-in-a-catch-block-with-other-error-handling-tools"></a>B. Utilisation de ERROR_MESSAGE dans un bloc CATCH avec d'autres outils de traitement des erreurs  
 L’exemple suivant montre une instruction `SELECT` qui génère une erreur de division par zéro. Outre le message de l’erreur, le bloc `CATCH` retourne des informations relatives à cette erreur.  
   
-```  
+```sql  
 BEGIN TRY  
     -- Generate a divide-by-zero error.  
     SELECT 1/0;  
@@ -104,7 +105,9 @@ BEGIN CATCH
         ,ERROR_MESSAGE() AS ErrorMessage;  
 END CATCH;  
 GO  
-
+```
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)] 
+```
 -----------
 
 (0 row(s) affected)
@@ -117,4 +120,17 @@ ErrorNumber ErrorSeverity ErrorState  ErrorProcedure  ErrorLine  ErrorMessage
 
 ```
   
+## <a name="see-also"></a> Voir aussi  
+ [sys.messages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)   
+ [TRY...CATCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md)   
+ [ERROR_LINE &#40;Transact-SQL&#41;](../../t-sql/functions/error-line-transact-sql.md)   
+ [ERROR_MESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/error-message-transact-sql.md)   
+ [ERROR_PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/functions/error-procedure-transact-sql.md)   
+ [ERROR_SEVERITY &#40;Transact-SQL&#41;](../../t-sql/functions/error-severity-transact-sql.md)   
+ [ERROR_STATE &#40;Transact-SQL&#41;](../../t-sql/functions/error-state-transact-sql.md)   
+ [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)   
+ [@@ERROR &#40;Transact-SQL&#41;](../../t-sql/functions/error-transact-sql.md)     
+ [Guide de référence des erreurs et des événements &#40;Moteur de base de donnéese&#41;](../../relational-databases/errors-events/errors-and-events-reference-database-engine.md)     
+  
+    
 

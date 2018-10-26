@@ -44,7 +44,7 @@ ms.locfileid: "48169469"
   
  L'illustration comprend trois compartiments avec des lignes. Le deuxième compartiment supérieur contient les trois lignes rouges. La quatrième compartiment contient une seule ligne bleue. Le compartiment inférieur contient les deux lignes vertes. Il peut s'agir de versions différentes de la même ligne.  
   
- Pour plus d'informations sur les index des tables mémoire optimisées, consultez [Guidelines for Using Indexes on Memory-Optimized Tables](../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
+ Pour plus d'informations sur les index des tables mémoire optimisées, consultez [Instructions pour utiliser les index sur les tables optimisées en mémoire](../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Index sur des tables optimisées en mémoire](../../2014/database-engine/indexes-on-memory-optimized-tables.md)  

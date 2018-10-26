@@ -16,12 +16,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7e9b61ca423f79f95ab24ae59b398b5d4a834126
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5a961db30963ded59af447ad1a1cc916d663628e
+ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782847"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49643927"
 ---
 # <a name="sql-server-encryption"></a>Chiffrement SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ Vous pouvez utiliser le chiffrement dans [!INCLUDE[ssNoVersion](../../../include
  [Choisir un algorithme de chiffrement](../../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)  
  Informations sur la manière de sélectionner un algorithme de chiffrement efficace.  
   
- [Transparent Data Encryption &#40;TDE&#41;](../../../relational-databases/security/encryption/transparent-data-encryption.md)  
+ [Chiffrement transparent des données &#40;TDE&#41;](../../../relational-databases/security/encryption/transparent-data-encryption.md)  
  Informations générales sur la manière de chiffrer des données de façon transparente.  
   
  [SQL Server et clés de chiffrement de base de données &#40;moteur de base de données&#41;](../../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)  
@@ -60,6 +60,9 @@ Vous pouvez utiliser le chiffrement dans [!INCLUDE[ssNoVersion](../../../include
 ## <a name="related-content"></a>Contenu associé  
  [Sécurisation de SQL Server](../../../relational-databases/security/securing-sql-server.md)  
  Vue d'ensemble du processus permettant de mieux sécuriser la plateforme [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et du travail avec des utilisateurs et des objets sécurisables.  
+
+[Une vue d’ensemble des fonctionnalités de sécurité d’Azure SQL Database](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-security-overview)
+</br>Vue d’ensemble de la sécurité d’Azure SQL Database pour la protection des données, le contrôle d’accès et la surveillance proactive.
   
  [Fonctions de chiffrement &#40;Transact-SQL&#41;](../../../t-sql/functions/cryptographic-functions-transact-sql.md)  
  Informations sur la manière d'implémenter des fonctions de chiffrement.  
