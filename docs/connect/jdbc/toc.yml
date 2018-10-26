@@ -1,21 +1,24 @@
-- name: Pilote Microsoft JDBC pour SQL Server
-  href: microsoft-jdbc-driver-for-sql-server.md
-- name: Exemples de code JDBC +
-  href: ../../connect/jdbc/code-samples/sample-jdbc-driver-applications.md
-- name: Informations de référence sur l’API ODBC +
-  href: reference/jdbc-driver-api-reference.md
-- name: Bien démarrer avec le pilote JDBC
-  href: getting-started-with-the-jdbc-driver.md
+items:
+- name: 4.2 Microsoft JDBC Driver for SQL Server
   items:
-    - name: "Étape\_1\_: Configurer l’environnement de développement pour le développement Java"
+  - name: Microsoft JDBC Driver 4.2 pour SQL Server
+    href: microsoft-jdbc-driver-for-sql-server.md
+  - name: Exemples de code JDBC +
+    href: ../../connect/jdbc/code-samples/sample-jdbc-driver-applications.md
+  - name: Informations de référence sur l’API ODBC +
+    href: reference/jdbc-driver-api-reference.md
+  - name: Bien démarrer avec le pilote JDBC
+    href: getting-started-with-the-jdbc-driver.md
+    items:
+    - name: 'Étape 1 : Configurer l’environnement de développement pour le développement Java'
       href: step-1-configure-development-environment-for-java-development.md
-    - name: "Étape\_2\_: Créer une base de données SQL pour le développement Java"
+    - name: 'Étape 2 : Créer une base de données SQL pour le développement Java'
       href: step-2-create-a-sql-database-for-java-development.md
-    - name: "Étape\_3\_: Preuve de concept pour la connexion à SQL à l’aide de Java"
+    - name: 'Étape 3 : Preuve de concept pour la connexion à SQL à l’aide de Java'
       href: step-3-proof-of-concept-connecting-to-sql-using-java.md
-- name: Présentation du pilote JDBC
-  href: overview-of-the-jdbc-driver.md
-  items:
+  - name: Présentation du pilote JDBC
+    href: overview-of-the-jdbc-driver.md
+    items:
     - name: Télécharger Microsoft JDBC Driver pour SQL Server
       href: download-microsoft-jdbc-driver-for-sql-server.md
     - name: Notes de publication pour le pilote JDBC
@@ -38,9 +41,9 @@
       href: frequently-asked-questions-faq-for-jdbc-driver.md
     - name: Dépendances de fonctionnalité de Microsoft JDBC Driver pour SQL Server
       href: ../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md
-- name: Sécurisation des applications de pilote JDBC
-  href: securing-jdbc-driver-applications.md
-  items:
+  - name: Sécurisation des applications de pilote JDBC
+    href: securing-jdbc-driver-applications.md
+    items:
     - name: Sécurisation de chaînes de connexion
       href: securing-connection-strings.md
     - name: Validation de l'entrée utilisateur
@@ -52,15 +55,15 @@
     - name: Mode FIPS
       href: ../../connect/jdbc/fips-mode.md
       items:
-        - name: Fonctionnement de la prise en charge SSL
-          href: understanding-ssl-support.md
-        - name: Connexion avec le chiffrement SSL
-          href: connecting-with-ssl-encryption.md
-        - name: Configuration du client pour le chiffrement SSL
-          href: configuring-the-client-for-ssl-encryption.md
-- name: Amélioration des performances et de la fiabilité avec le pilote JDBC
-  href: improving-performance-and-reliability-with-the-jdbc-driver.md
-  items:
+      - name: Fonctionnement de la prise en charge SSL
+        href: understanding-ssl-support.md
+      - name: Connexion avec le chiffrement SSL
+        href: connecting-with-ssl-encryption.md
+      - name: Configuration du client pour le chiffrement SSL
+        href: configuring-the-client-for-ssl-encryption.md
+  - name: Amélioration des performances et de la fiabilité avec le pilote JDBC
+    href: improving-performance-and-reliability-with-the-jdbc-driver.md
+    items:
     - name: Fermeture d'objets inutilisés
       href: closing-objects-when-not-in-use.md
     - name: Gestion de la taille des transactions
@@ -73,9 +76,9 @@
       href: sparse-columns.md
     - name: Mise en cache des métadonnées d’instruction préparée pour le pilote JDBC
       href: prepared-statement-metadata-caching-for-the-jdbc-driver.md
-- name: Diagnostic de problèmes avec le pilote JDBC
-  href: diagnosing-problems-with-the-jdbc-driver.md
-  items:
+  - name: Diagnostic de problèmes avec le pilote JDBC
+    href: diagnosing-problems-with-the-jdbc-driver.md
+    items:
     - name: Gestion des erreurs
       href: handling-errors.md
     - name: Obtention de la version du pilote
@@ -86,57 +89,57 @@
       href: troubleshooting-connectivity.md
     - name: Accès aux informations de diagnostic dans le journal des événements étendus
       href: accessing-diagnostic-information-in-the-extended-events-log.md
-- name: Exemples d'applications du pilote JDBC
-  href: sample-jdbc-driver-applications.md
-  items:
+  - name: Exemples d'applications du pilote JDBC
+    href: sample-jdbc-driver-applications.md
+    items:
     - name: Connexion et extraction de données
       href: connecting-and-retrieving-data.md
       items:
-        - name: Exemple d'URL de connexion
-          href: connection-url-sample.md
-        - name: Exemple de source de données
-          href: data-source-sample.md
+      - name: Exemple d'URL de connexion
+        href: connection-url-sample.md
+      - name: Exemple de source de données
+        href: data-source-sample.md
     - name: Travail sur des types de données (JDBC)
       href: working-with-data-types-jdbc.md
       items:
-        - name: Exemple de types de données de base
-          href: basic-data-types-sample.md
-        - name: Exemple de type de données SQLXML
-          href: sqlxml-data-type-sample.md
-        - name: Exemple de types de données spatiales
-          href: spatial-data-types-sample.md
+      - name: Exemple de types de données de base
+        href: basic-data-types-sample.md
+      - name: Exemple de type de données SQLXML
+        href: sqlxml-data-type-sample.md
+      - name: Exemple de types de données spatiales
+        href: spatial-data-types-sample.md
     - name: Travail sur des jeux de résultats
       href: working-with-result-sets.md
       items:
-        - name: Extraction de l'exemple de données du jeu de résultats
-          href: retrieving-result-set-data-sample.md
-        - name: Modification de l'exemple de données du jeu de résultats
-          href: modifying-result-set-data-sample.md
-        - name: Mise en cache de l'exemple de données du jeu de résultats
-          href: caching-result-set-data-sample.md
+      - name: Extraction de l'exemple de données du jeu de résultats
+        href: retrieving-result-set-data-sample.md
+      - name: Modification de l'exemple de données du jeu de résultats
+        href: modifying-result-set-data-sample.md
+      - name: Mise en cache de l'exemple de données du jeu de résultats
+        href: caching-result-set-data-sample.md
     - name: Utilisation de données volumineuses
       href: working-with-large-data.md
       items:
-        - name: Exemple de lecture de données volumineuses
-          href: reading-large-data-sample.md
-        - name: Exemple de lecture de données volumineuses avec des procédures stockées
-          href: reading-large-data-with-stored-procedures-sample.md
-        - name: Exemple de mise à jour de données volumineuses
-          href: updating-large-data-sample.md
+      - name: Exemple de lecture de données volumineuses
+        href: reading-large-data-sample.md
+      - name: Exemple de lecture de données volumineuses avec des procédures stockées
+        href: reading-large-data-with-stored-procedures-sample.md
+      - name: Exemple de mise à jour de données volumineuses
+        href: updating-large-data-sample.md
     - name: Exemple de découverte et de classification des données
       href: data-discovery-classification-sample.md
-- name: Conformité et aspects juridiques pour le pilote JDBC SQL
-  href: compliance-and-legal-for-the-jdbc-sql-driver.md
-  items:
-    - name: "Compatibilité avec JDBC\_4.1 pour le pilote JDBC"
+  - name: Conformité et aspects juridiques pour le pilote JDBC SQL
+    href: compliance-and-legal-for-the-jdbc-sql-driver.md
+    items:
+    - name: Compatibilité avec JDBC 4.1 pour le pilote JDBC
       href: jdbc-4-1-compliance-for-the-jdbc-driver.md
-    - name: "Compatibilité avec JDBC\_4.2 pour le pilote JDBC"
+    - name: Compatibilité avec JDBC 4.2 pour le pilote JDBC
       href: jdbc-4-2-compliance-for-the-jdbc-driver.md
-    - name: "Conformité à JDBC\_4.3 pour le pilote JDBC"
+    - name: Conformité à JDBC 4.3 pour le pilote JDBC
       href: jdbc-4-3-compliance-for-the-jdbc-driver.md
-- name: Guide de programmation pour le pilote JDBC SQL
-  href: programming-guide-for-jdbc-sql-driver.md
-  items:
+  - name: Guide de programmation pour le pilote JDBC SQL
+    href: programming-guide-for-jdbc-sql-driver.md
+    items:
     - name: Connexion à SQL Server à l'aide du pilote JDBC
       href: connecting-to-sql-server-with-the-jdbc-driver.md
     - name: Présentation des types de données de pilote JDBC
@@ -153,117 +156,123 @@
       href: using-always-encrypted-with-the-jdbc-driver.md
     - name: Articles du guide
       items:
-        - name: Utilisation des instructions avec SQL
-          href: using-statements-with-sql.md
-        - name: Utilisation d'une instruction SQL pour modifier les objets de base de données
-          href: using-an-sql-statement-to-modify-database-objects.md
-        - name: Définition des propriétés de la source de données
-          href: setting-the-data-source-properties.md
-        - name: Définition des propriétés de connexion
-          href: setting-the-connection-properties.md
-        - name: Utilisation d'une procédure stockée sans paramètres
-          href: using-a-stored-procedure-with-no-parameters.md
-        - name: Utilisation des métadonnées de paramètre
-          href: using-parameter-metadata.md
-        - name: Utilisation des types de données de base
-          href: using-basic-data-types.md
-        - name: Utilisation des types de données spatiales
-          href: use-spatial-datatypes.md
-        - name: Présentation des transactions
-          href: understanding-transactions.md
-        - name: Utilisation d'une connexion
-          href: working-with-a-connection.md
-        - name: Caractéristiques internationales du pilote JDBC
-          href: international-features-of-the-jdbc-driver.md
-        - name: Utilisation des types de données avancés
-          href: using-advanced-data-types.md
-        - name: Différences entre les types de données
-          href: understanding-data-type-differences.md
-        - name: Utilisation de plusieurs jeux de résultats
-          href: using-multiple-result-sets.md
-        - name: Utilisation de la fonctionnalité de mise en attente
-          href: using-holdability.md
-        - name: Connexion avec l’authentification Azure Active Directory
-          href: connecting-using-azure-active-directory-authentication.md
-        - name: Conversions de types de données
-          href: understanding-data-type-conversions.md
-        - name: Fonctionnement du contrôle concurrentiel
-          href: understanding-concurrency-control.md
-        - name: Utilisation d'une procédure stockée avec des paramètres d'entrée
-          href: using-a-stored-procedure-with-input-parameters.md
-        - name: Utilisation des métadonnées de base de données
-          href: using-database-metadata.md
-        - name: Interface SQLXML
-          href: sqlxml-interface.md
-        - name: Gestion d'instructions complexes
-          href: handling-complex-statements.md
-        - name: Utilisation d'un regroupement de connexions
-          href: using-connection-pooling.md
-        - name: Informations de référence sur l’API Always Encrypted pour le pilote JDBC
-          href: always-encrypted-api-reference-for-the-jdbc-driver.md
-        - name: Utilisation de l’authentification intégrée Kerberos pour se connecter à SQL Server
-          href: using-kerberos-integrated-authentication-to-connect-to-sql-server.md
-        - name: Utilisation d'une procédure stockée avec un nombre de mises à jour
-          href: using-a-stored-procedure-with-an-update-count.md
-        - name: Présentation du verrouillage de ligne
-          href: understanding-row-locking.md
-        - name: "Pilote\_JDBC pour la prise en charge de la haute disponibilité et de la récupération d'urgence"
-          href: jdbc-driver-support-for-high-availability-disaster-recovery.md
-        - name: Utilisation des métadonnées du jeu de résultats
-          href: using-result-set-metadata.md
-        - name: Présentation des transactions XA
-          href: understanding-xa-transactions.md
-        - name: Utilisation de clés générées automatiquement
-          href: using-auto-generated-keys.md
-        - name: Utilisation de la mise en miroir de bases de données (JDBC)
-          href: using-database-mirroring-jdbc.md
-        - name: Prise en charge du jeu de caractères nationaux
-          href: national-character-set-support.md
-        - name: Fonctionnement des types de curseurs
-          href: understanding-cursor-types.md
-        - name: Programmation à l'aide de SQLXML
-          href: programming-with-sqlxml.md
-        - name: Utilisation d'une procédure stockée avec retour d'état
-          href: using-a-stored-procedure-with-a-return-status.md
-        - name: Utilisation d'une instruction SQL sans paramètres
-          href: using-an-sql-statement-with-no-parameters.md
-        - name: "Connexion à une base de données SQL\_Azure"
-          href: connecting-to-an-azure-sql-database.md
-        - name: Utilisation d'une instruction SQL pour modifier des données
-          href: using-an-sql-statement-to-modify-data.md
-        - name: Création de l'URL de connexion
-          href: building-the-connection-url.md
-        - name: Utilisation de points d'enregistrement
-          href: using-savepoints.md
-        - name: Utilisation de paramètres table
-          href: using-table-valued-parameters.md
-        - name: Prise en charge des données XML
-          href: supporting-xml-data.md
-        - name: Utilisation d'une instruction SQL avec paramètres
-          href: using-an-sql-statement-with-parameters.md
-        - name: Fonctionnement des niveaux d'isolement
-          href: understanding-isolation-levels.md
-        - name: Wrappers et interfaces
-          href: wrappers-and-interfaces.md
-        - name: Utilisation de la copie en bloc avec le pilote JDBC
-          href: using-bulk-copy-with-the-jdbc-driver.md
-        - name: Utilisation de l’API de copie en bloc pour l’opération d’insertion par lot
-          href: use-bulk-copy-api-batch-insert-operation.md
-        - name: Utilisation d'une procédure stockée avec des paramètres de sortie
-          href: using-a-stored-procedure-with-output-parameters.md
-        - name: Exécution d'opérations de traitement par lot
-          href: performing-batch-operations.md
-        - name: Types définis par l’utilisateur
-          href: user-defined-types.md
-        - name: Configuration du mode d'envoi des valeurs java.sql.Time au serveur
-          href: configuring-how-java-sql-time-values-are-sent-to-the-server.md
-        - name: Utilisation de séquences d'échappement SQL
-          href: using-sql-escape-sequences.md
-        - name: Utilisation d'instructions avec des procédures stockées
-          href: using-statements-with-stored-procedures.md
-        - name: "Exemple de version Azure Key Vault\_6.0.0"
-          href: azure-key-vault-sample-version-6.0.0.md
-        - name: "Exemple de version Azure Key Vault\_6.2.2"
-          href: azure-key-vault-sample-version-6.2.2.md
-        - name: "Exemple de version Azure Key Vault\_7.0.0"
-          href: azure-key-vault-sample-version-7-0-0.md
+      - name: Utilisation des instructions avec SQL
+        href: using-statements-with-sql.md
+      - name: Utilisation d'une instruction SQL pour modifier les objets de base de données
+        href: using-an-sql-statement-to-modify-database-objects.md
+      - name: Définition des propriétés de la source de données
+        href: setting-the-data-source-properties.md
+      - name: Définition des propriétés de connexion
+        href: setting-the-connection-properties.md
+      - name: Utilisation d'une procédure stockée sans paramètres
+        href: using-a-stored-procedure-with-no-parameters.md
+      - name: Utilisation des métadonnées de paramètre
+        href: using-parameter-metadata.md
+      - name: Utilisation des types de données de base
+        href: using-basic-data-types.md
+      - name: Utilisation des types de données spatiales
+        href: use-spatial-datatypes.md
+      - name: Présentation des transactions
+        href: understanding-transactions.md
+      - name: Utilisation d'une connexion
+        href: working-with-a-connection.md
+      - name: Caractéristiques internationales du pilote JDBC
+        href: international-features-of-the-jdbc-driver.md
+      - name: Utilisation des types de données avancés
+        href: using-advanced-data-types.md
+      - name: Différences entre les types de données
+        href: understanding-data-type-differences.md
+      - name: Utilisation de plusieurs jeux de résultats
+        href: using-multiple-result-sets.md
+      - name: Utilisation de la fonctionnalité de mise en attente
+        href: using-holdability.md
+      - name: Connexion avec l’authentification Azure Active Directory
+        href: connecting-using-azure-active-directory-authentication.md
+      - name: Conversions de types de données
+        href: understanding-data-type-conversions.md
+      - name: Fonctionnement du contrôle concurrentiel
+        href: understanding-concurrency-control.md
+      - name: Utilisation d'une procédure stockée avec des paramètres d'entrée
+        href: using-a-stored-procedure-with-input-parameters.md
+      - name: Utilisation des métadonnées de base de données
+        href: using-database-metadata.md
+      - name: Interface SQLXML
+        href: sqlxml-interface.md
+      - name: Gestion d'instructions complexes
+        href: handling-complex-statements.md
+      - name: Utilisation d'un regroupement de connexions
+        href: using-connection-pooling.md
+      - name: Informations de référence sur l’API Always Encrypted pour le pilote JDBC
+        href: always-encrypted-api-reference-for-the-jdbc-driver.md
+      - name: Utilisation de l’authentification intégrée Kerberos pour se connecter à SQL Server
+        href: using-kerberos-integrated-authentication-to-connect-to-sql-server.md
+      - name: Utilisation d'une procédure stockée avec un nombre de mises à jour
+        href: using-a-stored-procedure-with-an-update-count.md
+      - name: Présentation du verrouillage de ligne
+        href: understanding-row-locking.md
+      - name: Pilote JDBC pour la prise en charge de la haute disponibilité et de la récupération d'urgence
+        href: jdbc-driver-support-for-high-availability-disaster-recovery.md
+      - name: Utilisation des métadonnées du jeu de résultats
+        href: using-result-set-metadata.md
+      - name: Présentation des transactions XA
+        href: understanding-xa-transactions.md
+      - name: Utilisation de clés générées automatiquement
+        href: using-auto-generated-keys.md
+      - name: Utilisation de la mise en miroir de bases de données (JDBC)
+        href: using-database-mirroring-jdbc.md
+      - name: Prise en charge du jeu de caractères nationaux
+        href: national-character-set-support.md
+      - name: Fonctionnement des types de curseurs
+        href: understanding-cursor-types.md
+      - name: Programmation à l'aide de SQLXML
+        href: programming-with-sqlxml.md
+      - name: Utilisation d'une procédure stockée avec retour d'état
+        href: using-a-stored-procedure-with-a-return-status.md
+      - name: Utilisation d'une instruction SQL sans paramètres
+        href: using-an-sql-statement-with-no-parameters.md
+      - name: Connexion à une base de données SQL Azure
+        href: connecting-to-an-azure-sql-database.md
+      - name: Utilisation d'une instruction SQL pour modifier des données
+        href: using-an-sql-statement-to-modify-data.md
+      - name: Création de l'URL de connexion
+        href: building-the-connection-url.md
+      - name: Utilisation de points d'enregistrement
+        href: using-savepoints.md
+      - name: Utilisation de paramètres table
+        href: using-table-valued-parameters.md
+      - name: Prise en charge des données XML
+        href: supporting-xml-data.md
+      - name: Utilisation d'une instruction SQL avec paramètres
+        href: using-an-sql-statement-with-parameters.md
+      - name: Fonctionnement des niveaux d'isolement
+        href: understanding-isolation-levels.md
+      - name: Wrappers et interfaces
+        href: wrappers-and-interfaces.md
+      - name: Utilisation de la copie en bloc avec le pilote JDBC
+        href: using-bulk-copy-with-the-jdbc-driver.md
+      - name: Utilisation de l’API de copie en bloc pour l’opération d’insertion par lot
+        href: use-bulk-copy-api-batch-insert-operation.md
+      - name: Utilisation d'une procédure stockée avec des paramètres de sortie
+        href: using-a-stored-procedure-with-output-parameters.md
+      - name: Exécution d'opérations de traitement par lot
+        href: performing-batch-operations.md
+      - name: Types définis par l’utilisateur
+        href: user-defined-types.md
+      - name: Configuration du mode d'envoi des valeurs java.sql.Time au serveur
+        href: configuring-how-java-sql-time-values-are-sent-to-the-server.md
+      - name: Utilisation de séquences d'échappement SQL
+        href: using-sql-escape-sequences.md
+      - name: Utilisation d'instructions avec des procédures stockées
+        href: using-statements-with-stored-procedures.md
+      - name: Exemple de version Azure Key Vault 6.0.0
+        href: azure-key-vault-sample-version-6.0.0.md
+      - name: Exemple de version Azure Key Vault 6.2.2
+        href: azure-key-vault-sample-version-6.2.2.md
+      - name: Exemple de version Azure Key Vault 7.0.0
+        href: azure-key-vault-sample-version-7-0-0.md
+ms.openlocfilehash: 3c63ab259dc117d5f0d7a5193dacdcd4cdc90f9d
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50051131"
