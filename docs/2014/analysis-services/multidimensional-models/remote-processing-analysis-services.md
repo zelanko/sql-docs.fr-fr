@@ -11,12 +11,12 @@ ms.assetid: d58bcb3c-0b3f-4ab0-81eb-4fdcc86153af
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 16f7e8f89a2b5067f00ebd27fa1c59d1595a8c6f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0afcf50aea6efc0d52adf0b1a82a317e9ec94d08
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48173099"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146064"
 ---
 # <a name="remote-processing-analysis-services"></a>Traitement à distance (Analysis Services)
   Vous pouvez exécuter un traitement planifié ou sans assistance sur une instance [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . La demande de traitement proviendra d'un ordinateur, mais s'exécutera sur un autre ordinateur du même réseau.  
@@ -92,10 +92,10 @@ ms.locfileid: "48173099"
 2.  Dans la dernière étape, modifiez le travail pour qu'il soit exécuté selon la planification de votre choix, en ajoutant toutes les alertes ou notifications nécessaires à la gestion du travail. Vous pouvez également affiner le script de traitement ou créer plusieurs étapes au sein du travail pour traiter les objets indépendamment.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Composants SQL Server Agent](../../ssms/agent/sql-server-agent.md#Components)   
- [Planification des tâches administratives SSAS avec SQL Server Agent](../instances/schedule-ssas-administrative-tasks-with-sql-server-agent.md)   
+ [SQL Server Agent Components](../../ssms/agent/sql-server-agent.md#Components)   
+ [Planifier des tâches administratives SSAS avec SQL Server Agent](../instances/schedule-ssas-administrative-tasks-with-sql-server-agent.md)   
  [Traitement par lots &#40;Analysis Services&#41;](batch-processing-analysis-services.md)   
  [Traitement des objets de modèle multidimensionnel](processing-a-multidimensional-model-analysis-services.md)   
- [Traitement des objets &#40;XMLA&#41;](../xmla/xml-elements-objects.md)  
+ [Traitement d’objets &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-objects)  
   
   

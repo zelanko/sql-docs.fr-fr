@@ -10,12 +10,12 @@ ms.topic: overview
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 296274548b725a620d577916d2c76d31c923c4c0
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: e30906efb126b0c7fba225ff2aeb3308f0bf050c
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356530"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099781"
 ---
 # <a name="what-is-includename-sosincludesname-sosmd"></a>What ' s [!INCLUDE[name-sos](../includes/name-sos.md)]?
 
@@ -47,7 +47,7 @@ Les groupes de serveurs vous permettent d’organiser les informations de connex
 
 ## <a name="integrated-terminal"></a>Terminal intégré
 
-Utilisez vos outils de ligne de commande favoris (par exemple Bash, PowerShell, sqlcmd, bcp et ssh) dans la fenêtre du terminal intégré, directement dans l'interface utilisateur de [!INCLUDE[name-sos](../includes/name-sos-short.md)]. Pour en savoir plus sur le terminal intégré, consultez [terminal intégré] (terminal.md intégré).
+Utilisez vos outils de ligne de commande favoris (par exemple Bash, PowerShell, sqlcmd, bcp et ssh) dans la fenêtre du terminal intégré, directement dans l'interface utilisateur de [!INCLUDE[name-sos](../includes/name-sos-short.md)]. Pour en savoir plus sur le terminal intégré, consultez [terminal intégré](integrated-terminal.md).
 
 ## <a name="extensibility-and-extension-authoring"></a>Extensibilité et la création d’extensions
 

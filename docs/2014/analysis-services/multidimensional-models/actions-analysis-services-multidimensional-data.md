@@ -17,12 +17,12 @@ ms.assetid: 07229bb2-805c-427e-8455-69c9ca5d01e0
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 08f820ec9fd9dd38a578c9f71502dc469b476f0a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 47c289b312b411259e341ab0ef9cc01085f314f1
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193659"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146586"
 ---
 # <a name="actions-analysis-services---multidimensional-data"></a>Actions (Analysis Services - Données multidimensionnelles)
   Les actions peuvent être de types différents et doivent être créées en conséquence. Les actions peuvent être :  
@@ -33,13 +33,13 @@ ms.locfileid: "48193659"
   
 -   Des actions standard, qui retournent l'élément d'action (URL, HTML, DataSet, ensemble de lignes et autres éléments) associé à la section sélectionnée du cube où l'action se produit.  
   
- Une interface de requête, telle qu'ADOMD.NET, est utilisée par l'application cliente pour récupérer et exposer les actions à l'utilisateur final. Pour plus d’informations, consultez [Développement avec ADOMD.NET](adomd-net/developing-with-adomd-net.md).  
+ Une interface de requête, telle qu'ADOMD.NET, est utilisée par l'application cliente pour récupérer et exposer les actions à l'utilisateur final. Pour plus d’informations, consultez [Développement avec ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net).  
   
  Un objet <xref:Microsoft.AnalysisServices.Action> simple est composé des informations de base, de la cible où l’action doit se produire, d’une condition pour limiter la portée de l’action et du type. Les informations de base incluent le nom de l'action, la description de l'action, la légende suggérée pour l'action, et d'autres informations.  
   
  La cible est l'emplacement réel dans le cube où l'action doit se produire. La cible est composée d'un type de cible et d'un objet cible. Le type de cible représente le type d'objet, dans le cube, où l'action sera activée. Les types de cible peuvent être des membres de niveau, des cellules, une hiérarchie, des membres de hiérarchie, ou d'autres éléments. L'objet cible est un objet spécifique au type de cible ; si le type de cible est une hiérarchie, l'objet cible est n'importe laquelle des hiérarchies définies dans le cube.  
   
- La condition est une `Boolean` expression MDX qui est évaluée à l’événement d’action. Si la condition prend la valeur `true`, puis l’action est exécutée. Sinon, l'action n'est pas exécutée.  
+ La condition est une expression MDX `Boolean` évaluée à l'événement d'action. Si la condition prend la valeur `true`, alors l'action est exécutée. Sinon, l'action n'est pas exécutée.  
   
  Le type est la nature de l'action à exécuter. <xref:Microsoft.AnalysisServices.Action> est une classe abstraite. Par conséquent, pour l’utiliser, vous devez utiliser l’une des classes dérivées. Deux types d'actions sont prédéfinis : extraction et rapport. Ces messages ont des classes dérivées correspondantes : <xref:Microsoft.AnalysisServices.DrillThroughAction> et <xref:Microsoft.AnalysisServices.ReportAction>. D’autres actions sont couvertes dans la classe <xref:Microsoft.AnalysisServices.StandardAction> .  
   

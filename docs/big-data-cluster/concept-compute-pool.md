@@ -1,22 +1,22 @@
 ---
 title: Qu’est un pool de calcul de clusters SQL données volumineuses ? | Microsoft Docs
-description: ''
+description: Cet article décrit le pool de calcul dans un cluster de données volumineux de SQL Server 2019.
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 10/01/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: c17f6ac604edc021299f473137dcf6c5e470e3d4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 67f13687bf55a9e267582a0749043c51d2e2b3bf
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48796207"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50050793"
 ---
 # <a name="what-is-a-sql-big-data-clusters-compute-pool"></a>Qu’est un pool de calcul de clusters SQL données volumineuses ?
 
-Cet article décrit le rôle de *pools de calcul de SQL Server* un 2019 de serveur SQL preview cluster Big Data. Les pools de calcul fournissent la montée en puissance des ressources de calcul pour un cluster Big Data. Les sections suivantes décrivent l’architecture et les fonctionnalités d’un pool de calcul.
+Cet article décrit le rôle de *pools de calcul de SQL Server* dans un cluster de données volumineuses preview SQL Server 2019. Les pools de calcul fournissent la montée en puissance des ressources de calcul pour un cluster de données volumineux. Les sections suivantes décrivent l’architecture et les fonctionnalités d’un pool de calcul.
 
 ## <a name="compute-pool-architecture"></a>Architecture de pool de calcul
 
@@ -33,4 +33,4 @@ Un pool de calcul peut agir comme un groupe de scale-out PolyBase pour les requ�
 
 Pour en savoir plus sur les clusters de données volumineuses de SQL Server, consultez la présentation suivante :
 
-- [Qu’est SQL Server 2019 des clusters de données volumineuses ?](big-data-cluster-overview.md)
+- [Quelles sont les clusters SQL Server 2019 big data ?](big-data-cluster-overview.md)

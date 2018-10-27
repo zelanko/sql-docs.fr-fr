@@ -1,5 +1,5 @@
 ---
-title: Apprentissage et jeux de données de test | Documents Microsoft
+title: Apprentissage et jeux de données de test | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: fe6d39614bbeaca70f8e0e6d205be5cbcbc05bbc
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 15ee82c04372528d29289a3ed6c5c55271acf5fb
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018237"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145614"
 ---
 # <a name="training-and-testing-data-sets"></a>Jeux de données d'apprentissage et de test
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "34018237"
 ### <a name="modifying-structure-properties-to-create-a-test-data-set"></a>Modification des propriétés de structure pour créer un jeu de données de test  
  Si vous créez et traitez une structure d'exploration de données, puis décidez ultérieurement de mettre de côté un jeu de données de test, vous pouvez modifier les propriétés de la structure d'exploration de données. Pour changer la façon dont les données sont partitionnées, modifiez les propriétés suivantes :  
   
-|Propriété| Description|  
+|Propriété|Description|  
 |--------------|-----------------|  
 |**HoldoutMaxCases**|Spécifie le nombre maximal de scénarios à inclure dans le jeu de test.|  
 |**HoldoutMaxPercent**|Spécifie le nombre de cas à inclure dans le jeu de test en tant que pourcentage du jeu de données complet. Pour n'avoir aucun jeu de données, il convient de spécifier 0.|  
@@ -92,20 +92,20 @@ SELECT * from <structure>.CASES WHERE IsTestCase() AND <structure column name> =
   
 -   Outre les propriétés répertoriées dans le tableau précédent, une propriété en lecture seule, **HoldoutActualSize**, est fournie dans les objets AMO et le langage DDL XML. Toutefois, comme la taille réelle d'une partition ne peut pas être déterminée précisément avant le traitement de la structure, vous devez vérifier si le modèle a été traité avant de récupérer la valeur de la propriété **HoldoutActualSize** .  
   
-## <a name="related-content"></a>Contenu connexe  
+## <a name="related-content"></a>Contenu associé  
   
 |Rubriques|Liens|  
 |------------|-----------|  
 |Décrit comment les filtres sur un modèle interagissent avec les jeux de données d'apprentissage et de test.|[Filtres pour les modèles d’exploration de données &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)|  
-|Décrit comment l'utilisation des données d'apprentissage et de test affecte la validation croisée.|[La Validation croisée & #40 ; Analysis Services - Exploration de données & #41 ;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)|  
-|Fournit des informations sur les interfaces de programmation pour utiliser les jeux d'apprentissage et de test dans une structure d'exploration de données.|[Concepts et modèle objet AMO](../../analysis-services/multidimensional-models/analysis-management-objects/amo-concepts-and-object-model.md)<br /><br /> [Élément MiningStructure &#40;ASSL&#41;](../../analysis-services/scripting/objects/miningstructure-element-assl.md)|  
-|Fournit la syntaxe DMX pour créer des ensembles d'exclusion.|[CRÉER UNE STRUCTURE D’EXPLORATION DE DONNÉES & #40 ; DMX & #41 ;](../../dmx/create-mining-structure-dmx.md)|  
-|Récupérer des informations sur les cas dans les jeux d'apprentissage et de test.|[Ensembles de lignes de schéma d'exploration de données](../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)<br /><br /> [Ensembles de lignes de schéma d’exploration de données &#40;SSAs&#41;](../../analysis-services/data-mining/data-mining-schema-rowsets-ssas.md)|  
+|Décrit comment l'utilisation des données d'apprentissage et de test affecte la validation croisée.|[Validation croisée &#40;Analysis Services – Exploration de données&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)|  
+|Fournit des informations sur les interfaces de programmation pour utiliser les jeux d'apprentissage et de test dans une structure d'exploration de données.|[Concepts et modèle objet AMO](https://docs.microsoft.com/bi-reference/amo/amo-concepts-and-object-model)<br /><br /> [Élément MiningStructure &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/objects/miningstructure-element-assl)|  
+|Fournit la syntaxe DMX pour créer des ensembles d'exclusion.|[CREATE MINING STRUCTURE &#40;DMX&#41;](../../dmx/create-mining-structure-dmx.md)|  
+|Récupérer des informations sur les cas dans les jeux d'apprentissage et de test.|[Ensembles de lignes de schéma d'exploration de données](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/data-mining-schema-rowsets)<br /><br /> [Ensembles de lignes de schéma d’exploration de données &#40;SSAs&#41;](../../analysis-services/data-mining/data-mining-schema-rowsets-ssas.md)|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Outils d’exploration de données](../../analysis-services/data-mining/data-mining-tools.md)   
- [Concepts d’exploration de données](../../analysis-services/data-mining/data-mining-concepts.md)   
- [Solutions d’exploration de données](../../analysis-services/data-mining/data-mining-solutions.md)   
- [Test et Validation & #40 ; exploration de données & #41 ;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
+ [Outils d'exploration de données](../../analysis-services/data-mining/data-mining-tools.md)   
+ [Concepts d'exploration de données](../../analysis-services/data-mining/data-mining-concepts.md)   
+ [Solutions d'exploration de données](../../analysis-services/data-mining/data-mining-solutions.md)   
+ [Test et validation &#40;exploration de données&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   

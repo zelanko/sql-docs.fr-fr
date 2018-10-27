@@ -18,21 +18,21 @@ ms.assetid: 6c021b2e-6ad0-444e-b23f-4b5f72ce084b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1edd498468296f8f89309f18772a1e0b6617d699
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0f3b9c0ce529927e088e9f2153fadc3470dc36b7
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061159"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146084"
 ---
 # <a name="backing-up-restoring-and-synchronizing-databases-xmla"></a>Sauvegarde, restauration et synchronisation de bases de données (XMLA)
   XML for Analysis propose trois commandes qui permettent de sauvegarder, restaurer et synchroniser des bases de données :  
   
--   Le [sauvegarde](../xmla/xml-elements-commands/backup-element-xmla.md) commande sauvegarde un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] à l’aide de la base de données un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] le fichier de sauvegarde (.abf), comme décrit dans la section, [sauvegarde des bases de données](#backing_up_databases).  
+-   Le [sauvegarde](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/backup-element-xmla) commande sauvegarde un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] à l’aide de la base de données un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] le fichier de sauvegarde (.abf), comme décrit dans la section, [sauvegarde des bases de données](#backing_up_databases).  
   
--   Le [restaurer](../xmla/xml-elements-commands/restore-element-xmla.md) commande restaure un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de base de données à partir d’un fichier .abf, comme décrit dans la section, [restaurer les bases de données](#restoring_databases).  
+-   Le [restaurer](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/restore-element-xmla) commande restaure un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de base de données à partir d’un fichier .abf, comme décrit dans la section, [restaurer les bases de données](#restoring_databases).  
   
--   Le [synchroniser](../xmla/xml-elements-commands/synchronize-element-xmla.md) commande synchronise une [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de base de données avec les données et les métadonnées d’une autre base de données, comme décrit dans la section, [synchroniser les bases de données](#synchronizing_databases).  
+-   Le [synchroniser](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/synchronize-element-xmla) commande synchronise une [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de base de données avec les données et les métadonnées d’une autre base de données, comme décrit dans la section, [synchroniser les bases de données](#synchronizing_databases).  
   
 ##  <a name="backing_up_databases"></a> Sauvegarde des bases de données  
  Comme nous l'avons mentionné précédemment, la commande `Backup` permet de sauvegarder une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dans un fichier de sauvegarde. La commande `Backup` possède plusieurs propriétés qui permettent de spécifier la base de données à sauvegarder, le fichier de sauvegarde à utiliser, le mode de sauvegarde des définitions de sécurité, ainsi que les partitions distantes à sauvegarder.  
@@ -41,23 +41,23 @@ ms.locfileid: "48061159"
 >  Le compte de service Analysis Services doit avoir l'autorisation d'écrire dans l'emplacement de sauvegarde spécifié pour chaque fichier. Par ailleurs, l'utilisateur doit avoir l'un des rôles suivants : rôle d'administrateur sur l'instance [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ou membre d'un rôle de base de données avec les autorisations de contrôle total (Administrateur) sur la base de données à sauvegarder.  
   
 ### <a name="specifying-the-database-and-backup-file"></a>Spécification de la base de données et du fichier de sauvegarde  
- Pour spécifier la base de données à sauvegarder, vous définissez le [objet](../xmla/xml-elements-properties/object-element-xmla.md) propriété de la `Backup` commande. La propriété `Object` doit contenir un identificateur d'objet pour une base de données. Sinon, une erreur se produit.  
+ Pour spécifier la base de données à sauvegarder, vous définissez le [objet](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla) propriété de la `Backup` commande. La propriété `Object` doit contenir un identificateur d'objet pour une base de données. Sinon, une erreur se produit.  
   
- Pour spécifier le fichier qui doit être créé et utilisé par le processus de sauvegarde, vous définissez le [fichier](../xmla/xml-elements-properties/file-element-xmla.md) propriété de la `Backup` commande. La propriété `File` doit indiquer le chemin d'accès UNC et le nom du fichier de sauvegarde à créer.  
+ Pour spécifier le fichier qui doit être créé et utilisé par le processus de sauvegarde, vous définissez le [fichier](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/file-element-xmla) propriété de la `Backup` commande. La propriété `File` doit indiquer le chemin d'accès UNC et le nom du fichier de sauvegarde à créer.  
   
  En plus de spécifier le fichier à utiliser pour la sauvegarde, vous pouvez définir les options suivantes pour ce même fichier :  
   
--   Si vous définissez la [AllowOverwrite](../xmla/xml-elements-properties/allowoverwrite-element-xmla.md) sur true, le `Backup` commande remplace le fichier de sauvegarde si le fichier spécifié existe déjà. Si vous définissez la propriété `AllowOverwrite` à false, une erreur se produit si le fichier de sauvegarde spécifié existe déjà.  
+-   Si vous définissez la [AllowOverwrite](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/allowoverwrite-element-xmla) sur true, le `Backup` commande remplace le fichier de sauvegarde si le fichier spécifié existe déjà. Si vous définissez la propriété `AllowOverwrite` à false, une erreur se produit si le fichier de sauvegarde spécifié existe déjà.  
   
--   Si vous définissez la [ApplyCompression](../xmla/xml-elements-properties/applycompression-element-xmla.md) sur true, le fichier de sauvegarde est compressé après le fichier est créé.  
+-   Si vous définissez la [ApplyCompression](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/applycompression-element-xmla) sur true, le fichier de sauvegarde est compressé après le fichier est créé.  
   
--   Si vous définissez la [mot de passe](../xmla/xml-elements-properties/password-element-xmla.md) propriété une valeur non vide, le fichier de sauvegarde est chiffrée à l’aide du mot de passe spécifié.  
+-   Si vous définissez la [mot de passe](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/password-element-xmla) propriété une valeur non vide, le fichier de sauvegarde est chiffrée à l’aide du mot de passe spécifié.  
   
     > [!IMPORTANT]  
     >  Si les propriétés `ApplyCompression` et `Password` ne sont pas spécifiées, le fichier de sauvegarde stocke les noms et mots de passe utilisateur contenus dans les chaînes de connexion en texte clair. Les données stockées en texte en clair peuvent être récupérées. Pour plus de sécurité, utilisez les paramètres `ApplyCompression` et `Password` pour à la fois compresser et chiffrer le fichier de sauvegarde.  
   
 ### <a name="backing-up-security-settings"></a>Sauvegarde des paramètres de sécurité  
- Le [sécurité](../xmla/xml-elements-properties/security-element-xmla.md) propriété détermine si le `Backup` commande sauvegarde les définitions de sécurité, telles que les rôles et les autorisations, définies sur un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] base de données. La propriété `Security` détermine également si le fichier de sauvegarde inclut les comptes et groupes d'utilisateurs Windows définis comme membres des définitions de sécurité.  
+ Le [sécurité](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/security-element-xmla) propriété détermine si le `Backup` commande sauvegarde les définitions de sécurité, telles que les rôles et les autorisations, définies sur un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] base de données. La propriété `Security` détermine également si le fichier de sauvegarde inclut les comptes et groupes d'utilisateurs Windows définis comme membres des définitions de sécurité.  
   
  La valeur de la propriété `Security` est limitée à l'une des chaînes répertoriées dans le tableau suivant.  
   
@@ -68,9 +68,9 @@ ms.locfileid: "48061159"
 |*IgnoreSecurity*|Exclut les définitions de sécurité du fichier de sauvegarde.|  
   
 ### <a name="backing-up-remote-partitions"></a>Sauvegarde de partitions distantes  
- Pour sauvegarder des partitions distantes dans le [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] base de données, vous définissez le [BackupRemotePartitions](../xmla/xml-elements-properties/backupremotepartitions-element-xmla.md) propriété de la `Backup` commande sur true. Ce paramètre ordonne à la commande `Backup` de créer un fichier de sauvegarde distant pour chaque source de données distante utilisée pour stocker les partitions distantes de la base de données.  
+ Pour sauvegarder des partitions distantes dans le [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] base de données, vous définissez le [BackupRemotePartitions](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/backupremotepartitions-element-xmla) propriété de la `Backup` commande sur true. Ce paramètre ordonne à la commande `Backup` de créer un fichier de sauvegarde distant pour chaque source de données distante utilisée pour stocker les partitions distantes de la base de données.  
   
- Pour chaque source de données distante à sauvegarder, vous pouvez spécifier son fichier de sauvegarde correspondant en incluant un [emplacement](../xmla/xml-elements-properties/location-element-xmla.md) élément dans le [emplacements](../xmla/xml-elements-properties/locations-element-xmla.md) propriété de la `Backup` commande. Le `Location` élément doit avoir son `File` le nom de fichier et le chemin UNC du fichier de sauvegarde à distance, la valeur de propriété et sa [DataSourceID](../xmla/xml-elements-properties/id-element-xmla.md) propriété définie à l’identificateur de la source de données distante définie dans la base de données.  
+ Pour chaque source de données distante à sauvegarder, vous pouvez spécifier son fichier de sauvegarde correspondant en incluant un [emplacement](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/location-element-xmla) élément dans le [emplacements](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/locations-element-xmla) propriété de la `Backup` commande. Le `Location` élément doit avoir son `File` le nom de fichier et le chemin UNC du fichier de sauvegarde à distance, la valeur de propriété et sa [DataSourceID](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/id-element-xmla) propriété définie à l’identificateur de la source de données distante définie dans la base de données.  
   
 ##  <a name="restoring_databases"></a> Restauration des bases de données  
  La commande `Restore` permet de restaurer une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] spécifiée à partir d'un fichier de sauvegarde. La commande `Restore` comporte plusieurs propriétés qui permettent de spécifier la base de données à restaurer, le fichier de sauvegarde à utiliser, le mode de restauration des définitions de sécurité, les partitions distantes à stocker, ainsi que le déplacement d'objets ROLAP (Relational OLAP).  
@@ -98,13 +98,13 @@ ms.locfileid: "48061159"
 |*IgnoreSecurity*|Exclut les définitions de sécurité de la base de données.|  
   
 ### <a name="restoring-remote-partitions"></a>Restaration de partitions distantes  
- Pour chaque fichier de sauvegarde distant créé par une commande `Backup` précédente, vous pouvez restaurer sa partition distante associée en incluant un élément `Location` dans la propriété `Locations` de la commande `Restore`. Le [DataSourceType](../xmla/xml-elements-properties/type-element-xmla.md) propriété pour chaque `Location` élément doit être exclu ou explicitement la valeur *distant*.  
+ Pour chaque fichier de sauvegarde distant créé par une commande `Backup` précédente, vous pouvez restaurer sa partition distante associée en incluant un élément `Location` dans la propriété `Locations` de la commande `Restore`. Le [DataSourceType](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/type-element-xmla) propriété pour chaque `Location` élément doit être exclu ou explicitement la valeur *distant*.  
   
  Pour chaque élément `Location` spécifié, l'instance [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] contacte la source de données distante spécifiée dans la propriété `DataSourceID` pour restaurer les partitions définies dans le fichier de sauvegarde distant spécifié dans la propriété `File`. Outre les propriétés `DataSourceID` et `File`, les propriétés suivantes sont disponibles pour chaque élément `Location` utilisé pour restaurer une partition distante :  
   
 -   Pour remplacer la chaîne de connexion de la source de données distante spécifiée dans `DataSourceID`, vous pouvez définir une chaîne de connexion différente dans la propriété `ConnectionString` de l'élément `Location`. La commande `Restore` utilise alors la chaîne de connexion contenue dans la propriété `ConnectionString`. Si la propriété `ConnectionString` n'est pas spécifiée, la commande `Restore` utilise la chaîne de connexion stockée dans le fichier de sauvegarde pour la source de données distante spécifiée. Vous pouvez utiliser le paramètre `ConnectionString` pour déplacer une partition distante vers une autre instance distante. Toutefois, vous ne pouvez pas utiliser le paramètre `ConnectionString` pour restaurer une partition distante dans l'instance qui contient la base de données restaurée. En d'autres termes, vous ne pouvez pas utiliser la propriété `ConnectionString` pour transformer une partition distante en partition locale.  
   
--   Pour chaque dossier d’origine utilisé pour stocker les partitions distantes sur la source de données distante, vous pouvez spécifier un [dossier](../xmla/xml-elements-properties/folder-element-xmla.md) élément pour indiquer le nouveau dossier dans lequel restaurer toutes les partitions distantes stockées dans le dossier d’origine. Si aucun élément `Folder` n'est spécifié, la commande `Restore` utilise les dossiers d'origine spécifiés pour les partitions distantes contenues dans le fichier de sauvegarde distant.  
+-   Pour chaque dossier d’origine utilisé pour stocker les partitions distantes sur la source de données distante, vous pouvez spécifier un [dossier](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/folder-element-xmla) élément pour indiquer le nouveau dossier dans lequel restaurer toutes les partitions distantes stockées dans le dossier d’origine. Si aucun élément `Folder` n'est spécifié, la commande `Restore` utilise les dossiers d'origine spécifiés pour les partitions distantes contenues dans le fichier de sauvegarde distant.  
   
 ### <a name="relocating-rolap-objects"></a>Déplacement d'objets ROLAP  
  La commande `Restore` ne peut pas restaurer les agrégations ou les données d'objets qui utilisent le stockage ROLAP, car ces informations sont stockées dans des tables de source de données relationnelle sous-jacente. Toutefois, les métadonnées d'objets ROLAP peuvent être restaurées. Pour restaurer les métadonnées d'un objet ROLAP, la commande `Restore` recrée la structure des tables d'une source de données relationnelle.  
@@ -118,14 +118,14 @@ ms.locfileid: "48061159"
 >  La commande `Synchronize` ne peut être exécutée que par les administrateurs de serveur et les administrateurs de base de données. Les bases de données source et de destination doivent avoir le même niveau de compatibilité de base de données.  
   
 ### <a name="specifying-the-source-database"></a>Spécification de la base de données source  
- Le [Source](../xmla/xml-elements-properties/source-element-xmla.md) propriété de la `Synchronize` commande contient deux propriétés, `ConnectionString` et `Object`. La propriété `ConnectionString` contient la chaîne de connexion de l'instance qui contient la base de données source, tandis que la propriété `Object` contient l'identificateur d'objet de la base de données source.  
+ Le [Source](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/source-element-xmla) propriété de la `Synchronize` commande contient deux propriétés, `ConnectionString` et `Object`. La propriété `ConnectionString` contient la chaîne de connexion de l'instance qui contient la base de données source, tandis que la propriété `Object` contient l'identificateur d'objet de la base de données source.  
   
  La base de données de destination est la base de données active de la session dans laquelle s'exécute la commande `Synchronize`.  
   
  Si la propriété `ApplyCompression` de la commande `Synchronize` est définie à true, les informations destinées à être envoyées de la base de données source vers la base de données de destination sont compressées avant d'être envoyées.  
   
 ### <a name="synchronizing-security-settings"></a>Synchronisation des paramètres de sécurité  
- Le [SynchronizeSecurity](../xmla/xml-elements-properties/synchronizesecurity-element-xmla.md) propriété détermine si le `Synchronize` commande synchronise les définitions de sécurité, notamment les rôles et autorisations, définies dans la base de données source. La propriété `SynchronizeSecurity` détermine également si la commande `Sychronize` inclut les comptes et groupes d'utilisateurs Windows définis comme membres des définitions de sécurité.  
+ Le [SynchronizeSecurity](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/security-element-xmla) propriété détermine si le `Synchronize` commande synchronise les définitions de sécurité, notamment les rôles et autorisations, définies dans la base de données source. La propriété `SynchronizeSecurity` détermine également si la commande `Sychronize` inclut les comptes et groupes d'utilisateurs Windows définis comme membres des définitions de sécurité.  
   
  La valeur de cet élément est limitée à l'une des chaînes répertoriées dans le tableau suivant.  
   
@@ -148,9 +148,9 @@ ms.locfileid: "48061159"
  Vous pouvez utiliser l'élément `Location` dans une commande Synchronize pour synchroniser des objets ROLAP. Pour chaque `Location` élément utilisé pour déplacer une source de données, le `DataSourceType` propriété doit être définie explicitement sur *Local*. . Vous devez également définir la chaîne de connexion du nouvel emplacement dans la propriété `ConnectionString` de l'élément `Location`. Au cours de la synchronisation, la commande `Synchronize` remplace la chaîne de connexion de la source de données identifiée par la propriété `DataSourceID` de l'élément `Location` par la valeur de la propriété `ConnectionString` de l'élément `Location`.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Élément de sauvegarde &#40;XMLA&#41;](../xmla/xml-elements-commands/backup-element-xmla.md)   
- [Élément Restore &#40;XMLA&#41;](../xmla/xml-elements-commands/restore-element-xmla.md)   
- [Élément Synchronize &#40;XMLA&#41;](../xmla/xml-elements-commands/synchronize-element-xmla.md)   
+ [Élément Backup &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/backup-element-xmla)   
+ [Élément Restore &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/restore-element-xmla)   
+ [Élément Synchronize &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/synchronize-element-xmla)   
  [Sauvegarde et restauration de bases de données Analysis Services](../multidimensional-models/backup-and-restore-of-analysis-services-databases.md)  
   
   

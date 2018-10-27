@@ -7,12 +7,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 250d2efd6d212348083f5dc3bbc355c466f4811b
-ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
+ms.openlocfilehash: 26703f73312b5531490afc7d01319d4ac290bebe
+ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49461855"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49806759"
 ---
 # <a name="in-database-python-analytics-for-sql-developers"></a>Analytique en base de données Python pour les développeurs SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -37,30 +37,23 @@ Les données sont dans le jeu de données NYC Taxi bien connu. Pour effectuer ce
 
 Toutes les tâches peuvent être effectuées à l’aide [!INCLUDE[tsql](../../includes/tsql-md.md)] des procédures stockées dans l’environnement familier de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]
 
-- [Étape 1 : Télécharger les exemples de données](demo-data-nyctaxi-in-sql.md)
 
-    Téléchargez l’exemple de dataset et tous les fichiers de script sur un ordinateur local.
-
-- [Étape 2 : Importer des données dans SQL Server à l’aide de PowerShell](sqldev-py2-import-data-to-sql-server-using-powershell.md)
-
-    Exécuter un script PowerShell qui crée une base de données et une table sur l’instance spécifiée et charge les exemples de données à la table.
-
-- [Étape 3 : Explorer et visualiser les données à l’aide de Python](sqldev-py3-explore-and-visualize-the-data.md)
+- [Explorer et visualiser les données à l’aide de Python](sqldev-py3-explore-and-visualize-the-data.md)
 
     Effectuer l’exploration de données de base et la visualisation, en appelant Python à partir de [!INCLUDE[tsql](../../includes/tsql-md.md)] des procédures stockées.
 
-- [Étape 4 : Créer des fonctionnalités de données à l’aide de Python dans T-SQL](sqldev-py5-train-and-save-a-model-using-t-sql.md)
+- [Créer des caractéristiques de données à l’aide de Python dans T-SQL](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 
     Créez des caractéristiques de données à l’aide de fonctions personnalisées.
   
-- [Étape 5 : Former et enregistrer un modèle de Python à l’aide de T-SQL](sqldev-py5-train-and-save-a-model-using-t-sql.md)
+- [Former et enregistrer un modèle de Python à l’aide de T-SQL](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 
     Créer et enregistrer le modèle d’apprentissage automatique, à l’aide de Python dans les procédures stockées.
   
     Cette procédure pas à pas montre comment effectuer une tâche de classification binaire ; Vous pouvez également utiliser les données pour générer des modèles de régression ou la classification multiclasse.
 
   
--  [Étape 6 : Rendre opérationnel du modèle Python](sqldev-py6-operationalize-the-model.md)
+-  [ Opérationnaliser le modèle Python](sqldev-py6-operationalize-the-model.md)
 
     Une fois que le modèle a été enregistré dans la base de données, appelez le modèle pour la prédiction à l’aide [!INCLUDE[tsql](../../includes/tsql-md.md)].
 

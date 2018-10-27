@@ -24,12 +24,12 @@ ms.assetid: 3a1a62e4-9fb5-4cdb-a6c6-1b8b30d417ef
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4b1feb34dca2fba1bad8829edff24ef1ce54e1fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cc9d8f4396be64de2160b39b57374dd1ab1bf3cf
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161559"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099270"
 ---
 # <a name="data-mining-algorithms-sql-server-data-mining-add-ins"></a>Algorithmes d'exploration de données (Compléments d'exploration de données SQL Server)
   Les Compléments d'exploration de données pour Office prennent en charge la création de modèles analytiques utilisant les algorithmes d'exploration de données suivants. Tous les algorithmes reposent sur des méthodes d'apprentissage automatique connues et ont été implémentés par Microsoft Research.  
@@ -43,7 +43,7 @@ ms.locfileid: "48161559"
 |Algorithme MDT (Microsoft Decision Trees)|Identifiez les relations précédemment inconnues entre chaque élément de vos données afin de mieux éclairer vos décisions, ou recherchez les facteurs qui ont généré des résultats spécifiques.<br /><br /> [http://msdn.microsoft.com/library/ms174923.aspx](http://msdn.microsoft.com/library/ms174923.aspx)|  
 |Algorithme MLR (Microsoft Linear Regression)|Recherchez une formule mathématique décrivant les facteurs qui contribuent à un résultat numérique.<br /><br /> [http://msdn.microsoft.com/library/ms174824.aspx](http://msdn.microsoft.com/library/ms174824.aspx)|  
 |Algorithme MLR (Microsoft Logistic Regression)|Identifiez les facteurs qui contribuent à des résultats binaires et apprenez comment les utiliser pour affecter les résultats.<br /><br /> [http://msdn.microsoft.com/library/ms174828.aspx](http://msdn.microsoft.com/library/ms174828.aspx)|  
-|Algorithme MNB (Microsoft Naive Bayes)|Explorez les relations dans vos données et recherchez celles qui sont le plus étroitement corrélées avec un résultat.<br /><br /> [http://msdn.microsoft.com/en-us/library/ms174806.aspx](http://msdn.microsoft.com/library/ms174806.aspx)|  
+|Algorithme MNB (Microsoft Naive Bayes)|Explorez les relations dans vos données et recherchez celles qui sont le plus étroitement corrélées avec un résultat.<br /><br /> [http://msdn.microsoft.com/library/ms174806.aspx](http://msdn.microsoft.com/library/ms174806.aspx)|  
 |Algorithme MNN (Microsoft Neural Networks)|Recherchez des relations masquées entre plusieurs entrées et même entre plusieurs sorties. Utilisation pour l'exploration ou pour une prédiction.<br /><br /> [http://msdn.microsoft.com/library/ms174941.aspx](http://msdn.microsoft.com/library/ms174941.aspx)|  
 |Algorithme MTS (Microsoft Time Series)|Utilisez des données d'historique pour prédire des valeurs futures.<br /><br /> [http://msdn.microsoft.com/library/ms174923.aspx](http://msdn.microsoft.com/library/ms174923.aspx)|  
   

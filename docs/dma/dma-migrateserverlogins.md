@@ -2,7 +2,7 @@
 title: Migration des connexions SQL Server avec Data Migration Assistant | Microsoft Docs
 description: Découvrez comment migrer des connexions SQL Server avec Data Migration Assistant
 ms.custom: ''
-ms.date: 08/29/2018
+ms.date: 10/20/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: e52fdcd55cddea31e317afe04833f5413c006325
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3e9e6dad97bbfb2010f71e9e056da8a0912a4506
+ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836937"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49643807"
 ---
 # <a name="migrate-sql-server-logins-with-data-migration-assistant"></a>Migration des connexions SQL Server avec Data Migration Assistant
 
@@ -44,7 +44,7 @@ Cet article fournit une vue d’ensemble de la migration des connexions SQL Serv
 
 - Dans le cadre de la migration de connexion, Data Migration Assistant attribue les autorisations aux éléments sécurisables sur la cible de SQL Server tels qu’ils existent sur la source de SQL Server. 
 
-  Si la connexion existe déjà sur la cible de SQL Server, Data Migration Assistant migre uniquement les autorisations affectées aux éléments sécurisables et ne crée pas de nouveau la connexion entière.
+  Si la connexion existe déjà sur la cible de SQL Server, Data Migration Assistant migre uniquement les autorisations affectées aux éléments sécurisables et ne sont pas recréer la connexion entière.
 
 - Assistant Migration de données rend le meilleur effort pour mapper la connexion aux utilisateurs de base de données si la connexion existe déjà sur le serveur cible.
 

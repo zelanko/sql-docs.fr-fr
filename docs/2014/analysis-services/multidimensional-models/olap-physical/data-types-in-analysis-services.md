@@ -12,15 +12,15 @@ ms.assetid: 910be4f4-3010-41cd-9fdc-f0a79a0ce823
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 76be0dfb11e9b210adc4871ae0ed2d4d1fbf0c8e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5c697a0bcf7c7b338169100aeac0d65b341c86f5
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134059"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146354"
 ---
 # <a name="data-types-in-analysis-services"></a>Types de données dans Analysis Services
-  Pour toutes les <xref:Microsoft.AnalysisServices.DataItem> objets, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] prend en charge le sous-ensemble de `System.Data.OleDb.OleDbType`. Pour définir ou lire le type de données, utilisez [Type de données DataItem &#40;ASSL&#41;](../../scripting/data-type/dataitem-data-type-assl.md).  
+  Pour toutes les <xref:Microsoft.AnalysisServices.DataItem> objets, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] prend en charge le sous-ensemble de `System.Data.OleDb.OleDbType`. Pour définir ou lire le type de données, utilisez [Type de données DataItem &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/data-type/dataitem-data-type-assl).  
   
 ## <a name="supported-data-types"></a>Types de données pris en charge  
   

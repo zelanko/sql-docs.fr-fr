@@ -11,12 +11,12 @@ ms.assetid: b26fd6e3-7d87-4f66-ab47-5303b51b87da
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0f74492fc0d177ba87fe29dc73a5cd67e9663a61
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dd05bf3c19171229d806fa4f0f817255a4727c6c
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090969"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145894"
 ---
 # <a name="data-mining-services-and-data-sources"></a>Services d'exploration de données et sources de données
   L'exploration de données requiert une connexion à une instance de SQL Server Analysis Services. Les données d’un cube ne sont pas nécessaires pour l’exploration de données et l’utilisation de sources relationnelles est recommandée. Toutefois, l’exploration de données utilise des composants fournis par le moteur [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
@@ -78,7 +78,7 @@ ms.locfileid: "48090969"
 -   `AllowAdHocOpenRowsetQueries` Contrôle l’accès ad hoc aux fournisseurs OLE DB, qui sont chargés directement dans l’espace mémoire du serveur.  
   
     > [!IMPORTANT]  
-    >  Pour améliorer la sécurité, il est recommandé d'attribuer la valeur `false` à cette propriété. La valeur par défaut est `false`. Toutefois, même si cette propriété a la valeur `false`, les utilisateurs peuvent continuer à créer des requêtes singleton et utiliser la fonction OPENQUERY sur les sources de données autorisées.  
+    >  Pour améliorer la sécurité, il est recommandé d'attribuer la valeur `false` à cette propriété. La valeur par défaut est `false`. Cependant, même si cette propriété est affectée de la valeur `false`, les utilisateurs peuvent continuer à créer des requêtes singleton et utiliser la fonction OPENQUERY sur les sources de données autorisées.  
   
 -   **AllowedProvidersInOpenRowset** Spécifie le fournisseur, si l’accès ad hoc est activé. Vous pouvez spécifier plusieurs fournisseurs, en entrant une liste séparée par des virgules de ProgID.  
   
@@ -118,14 +118,14 @@ ms.locfileid: "48090969"
   
  Si la procédure retourne un dataset, le client reçoit un dataset ou datatable avec une table imbriquée contenant les lignes. Par exemple, si vous créez une requête sur le contenu d'un modèle, la requête retourne tout le modèle. Pour éviter de récupérer trop de lignes, vous pouvez écrire des procédures stockées en utilisant le modèle objet ADOMD+.  
   
- Pour écrire une procédure stockée de serveur, vous devez référencer l'espace de noms Microsoft.AnalysisServices.AdomdServer. Pour plus d’informations sur la création et l’utilisation des procédures stockées, consultez [Fonctions définies par l’utilisateur et procédures stockées](../multidimensional-models-adomd-net-server/user-defined-functions-and-stored-procedures.md).  
+ Pour écrire une procédure stockée de serveur, vous devez référencer l'espace de noms Microsoft.AnalysisServices.AdomdServer. Pour plus d’informations sur la création et l’utilisation des procédures stockées, consultez [Fonctions définies par l’utilisateur et procédures stockées](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/user-defined-functions-and-stored-procedures).  
   
 > [!NOTE]  
 >  Les procédures stockées ne peuvent pas être utilisées pour modifier la sécurité sur des objets serveur de données. Lorsque vous exécutez une procédure stockée, le contexte actuel de l'utilisateur est utilisé pour déterminer l'accès à tous les objets de serveur. Par conséquent, les utilisateurs doivent disposer des autorisations appropriées sur tous les objets de base de données auxquels ils accèdent.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Architecture physique &#40;Analysis Services - données multidimensionnelles&#41;](../multidimensional-models/olap-physical/understanding-microsoft-olap-physical-architecture.md)   
+ [Architecture physique &#40;Analysis Services - Données multidimensionnelles&#41;](../multidimensional-models/olap-physical/understanding-microsoft-olap-physical-architecture.md)   
  [Architecture physique &#40;Analysis Services - Exploration de données&#41;](physical-architecture-analysis-services-data-mining.md)   
- [Gestion des solutions et des objets d’exploration de données](management-of-data-mining-solutions-and-objects.md)  
+ [Gestion des solutions et des objets d'exploration de données](management-of-data-mining-solutions-and-objects.md)  
   
   

@@ -12,12 +12,12 @@ ms.assetid: 2fbdf621-a94d-4a55-a088-3d56d65016ac
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 45a1af97868260d103890c13ce7c7446dd8f01d6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 52d44a8c5f00f8f5c17f62ba0149738dc13712ae
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098139"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146515"
 ---
 # <a name="csdlbi-concepts"></a>Concepts CSDLBI
   Le langage CSDL (Conceptual Schema Definition Language) avec annotations Business Intelligence (CSDLBI) est basé sur l'infrastructure de données d'entités (Entity Data Framework), qui est une abstraction pour représenter différents types de données de façon à activer les jeux de données disparates pour qu'ils soient accessibles, interrogés ou exportés par programme. CSDLBI est utilisé pour représenter les modèles de données créés à l'aide d'[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], car il prend en charge les applications et la création de rapports complets pilotée par les données.  
@@ -131,7 +131,7 @@ ms.locfileid: "48098139"
   
  **Dimensions :** une dimension est représentée en CSDLBI en tant qu’entité (table) avec des colonnes et des propriétés. Notez que, même si elle n'est pas incluse dans une perspective, une dimension qui est incluse dans le modèle est représentée dans la sortie CSDL, marquée comme étant `Hidden`.  
   
- **Perspectives :** un client peut demander CSDL pour des perspectives individuelles. Pour plus d’informations, consultez [ensemble de lignes DISCOVER_CSDL_METADATA](../schema-rowsets/xml/discover-csdl-metadata-rowset.md).  
+ **Perspectives :** un client peut demander CSDL pour des perspectives individuelles. Pour plus d’informations, consultez [ensemble de lignes DISCOVER_CSDL_METADATA](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-csdl-metadata-rowset).  
   
  **Hiérarchies :** hiérarchies sont pris en charge et représentées en CSDLBI en tant qu’ensemble de niveaux.  
   
@@ -148,6 +148,6 @@ ms.locfileid: "48098139"
  **Limitations :** la sécurité de cellule n’est pas pris en charge.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Annotations CSDL pour Business Intelligence &#40;CSDLBI&#41;](csdl-annotations-for-business-intelligence-csdlbi.md)  
+ [Annotations CSDL pour Business Intelligence &#40;CSDLBI&#41;](https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi)  
   
   

@@ -14,12 +14,12 @@ ms.assetid: e52e1515-35a7-4dc3-9bbf-736d176ba0c7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3f334a0282a27d707e0c1ec99817ddee3d318fff
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e9b84fe6ed1b6b06eee783aef0f214017cca8bca
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48216649"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145874"
 ---
 # <a name="local-cubes-analysis-services---multidimensional-data"></a>Cubes locaux (Analysis Services - Données multidimensionnelles)
   Pour créer, mettre à jour ou supprimer des cubes locaux, vous devez écrire et exécuter un script ASSL ou un programme AMO.  
@@ -40,8 +40,8 @@ ms.locfileid: "48216649"
   
 |Source de données pour un cube local|Méthode de création|  
 |------------------------------------|---------------------|  
-|Cube serveur|Vous pouvez utiliser l’instruction CREATE GLOBAL CUBE ou un [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] script ASSL (Scripting Language) pour créer et remplir un cube à partir d’un cube basé sur le serveur. Pour plus d’informations, consultez [créer une instruction de CUBE GLOBAL &#40;MDX&#41; ](/sql/mdx/mdx-data-definition-create-global-cube) ou [Analysis Services Scripting Language &#40;ASSL&#41; référence](../../scripting/analysis-services-scripting-language-assl-for-xmla.md).|  
-|Source de données relationnelles|Vous utilisez un script ASSL pour créer et remplir un cube à partir d'une base de données relationnelle OLE DB. Pour créer un cube local via ASSL, il vous suffit de vous connecter à un fichier de cube local (*.cub) et d'exécuter le script ASSL de la même manière que vous exécutez un script ASSL sur une instance [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] pour créer un cube serveur. Pour plus d’informations, consultez [Analysis Services Scripting Language &#40;ASSL&#41; référence](../../scripting/analysis-services-scripting-language-assl-for-xmla.md).|  
+|Cube serveur|Vous pouvez utiliser l’instruction CREATE GLOBAL CUBE ou un [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] script ASSL (Scripting Language) pour créer et remplir un cube à partir d’un cube basé sur le serveur. Pour plus d’informations, consultez [créer une instruction de CUBE GLOBAL &#40;MDX&#41; ](/sql/mdx/mdx-data-definition-create-global-cube) ou [Analysis Services Scripting Language &#40;ASSL&#41; référence](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla).|  
+|Source de données relationnelles|Vous utilisez un script ASSL pour créer et remplir un cube à partir d'une base de données relationnelle OLE DB. Pour créer un cube local via ASSL, il vous suffit de vous connecter à un fichier de cube local (*.cub) et d'exécuter le script ASSL de la même manière que vous exécutez un script ASSL sur une instance [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] pour créer un cube serveur. Pour plus d’informations, consultez [Analysis Services Scripting Language &#40;ASSL&#41; référence](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla).|  
   
  Utilisez l'instruction REFRESH CUBE pour reconstruire un cube local et mettre à jour ses données. Pour plus d’informations, consultez [REFRESH CUBE Statement &#40;MDX&#41;](/sql/mdx/mdx-data-definition-refresh-cube).  
   
@@ -77,7 +77,7 @@ ms.locfileid: "48216649"
   
 ## <a name="see-also"></a>Voir aussi  
  [Instruction CREATE GLOBAL CUBE &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-global-cube)   
- [Développement avec Analysis Services Scripting Language &#40;ASSL&#41;](../scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)   
+ [Développement avec le langage de script Analysis Services &#40;ASSL&#41;](../scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)   
  [REFRESH CUBE Statement &#40;MDX&#41;](/sql/mdx/mdx-data-definition-refresh-cube)  
   
   

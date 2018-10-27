@@ -13,12 +13,12 @@ ms.assetid: 50dd0a0b-a407-4aeb-bc8b-b02a793aa30a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a4d16326f9bf8027360b83a70f8bf46ece4ef473
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8325e326ebcbf23a57e2362aa792b3076ec23922
+ms.sourcegitcommit: ef15fa253d98c62538bf9b6fe191af7f8ef8f6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48127419"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49991172"
 ---
 # <a name="database-engine-tuning-advisor"></a>Database Engine Tuning Advisor
   L'Assistant Paramétrage du moteur de base de données [!INCLUDE[msCoName](../../includes/msconame-md.md)] analyse les bases de données et émet des recommandations que vous pouvez utiliser pour optimiser les performances des requêtes. L'Assistant Paramétrage du moteur de base de données vous permet de sélectionner et de créer un ensemble optimal d'index, de vues indexées ou de partitions de table sans devoir être un expert familiarisé avec la structure de la base de données ou les mécanismes internes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Vous pouvez effectuer les tâches suivantes à l'aide de l'Assistant Paramétrage du moteur de base de données :  
@@ -94,7 +94,7 @@ ms.locfileid: "48127419"
   
     2.  Les index recommandés n'apporteraient pas d'amélioration suffisante aux performances des requêtes par rapport à la conception actuelle de la base de données physique.  
   
-    3.  L’utilisateur qui exécute l’Assistant Paramétrage du moteur de base de données n’est pas un membre de la `db_owner` rôle de base de données ou le `sysadmin` rôle serveur fixe. Les requêtes présentes dans la charge de travail sont analysées dans le contexte de sécurité de l'utilisateur qui exécute l'Assistant Paramétrage du moteur de base de données. L'utilisateur doit être membre du rôle de base de données `db_owner`.  
+    3.  L'utilisateur qui exécute l'Assistant Paramétrage du moteur de base de données n'est pas membre du rôle de base de données `db_owner` ni du rôle serveur fixe `sysadmin`. Les requêtes présentes dans la charge de travail sont analysées dans le contexte de sécurité de l'utilisateur qui exécute l'Assistant Paramétrage du moteur de base de données. L'utilisateur doit être membre du rôle de base de données `db_owner`.  
   
 -   L'Assistant Paramétrage du moteur de base de données stocke les données de la session de paramétrage et les autres données dans la base de données `msdb`. Si des changements sont apportés à la base de données `msdb`, vous risquez de perdre les données de la session de paramétrage. Pour éliminer ce risque, mettez en œuvre une stratégie de sauvegarde appropriée pour la base de données `msdb`.  
   
@@ -110,7 +110,7 @@ ms.locfileid: "48127419"
 ## <a name="dependency-on-xpmsver-extended-stored-procedure"></a>Dépendance vis-à-vis de la procédure stockée étendue xp_msver  
  Pour bénéficier de toutes ses fonctionnalités, l’Assistant Paramétrage du moteur de base de données fait appel à la procédure stockée étendue **xp_msver** . Cette procédure stockée étendue est activée par défaut. L'Assistant Paramétrage du moteur de base de données utilise cette procédure stockée étendue pour déterminer le nombre de processeurs et la quantité de mémoire disponibles sur l'ordinateur où réside la base de données que vous paramétrez. Si **xp_msver** n’est pas disponible, l’Assistant Paramétrage du moteur de base de données définit de façon arbitraire les caractéristiques matérielles de l’ordinateur sur lequel s’exécute l’Assistant Paramétrage du moteur de base de données. Si les caractéristiques matérielles de l'ordinateur sur lequel l'Assistant Paramétrage du moteur de base de données s'exécute ne sont pas disponibles, l'ordinateur est supposé être équipé d'un seul processeur et de 1024 mégaoctets (Mo) de mémoire.  
   
- Cette dépendance présente un impact sur les recommandations en matière de partitionnement, car le nombre de partitions recommandées dépend de ces deux valeurs (nombre de processeurs et quantité de mémoire disponible). Les résultats de votre paramétrage s'en trouvent également affectées lorsque vous paramétrez votre serveur de production par le biais d'un serveur de test. Dans ce scénario, l’Assistant Paramétrage du moteur de base de données utilise **xp_msver** pour déterminer les propriétés matérielles du serveur de production. Après avoir paramétré la charge de travail sur le serveur de test, l'Assistant Paramétrage du moteur de base de données se base sur ces propriétés matérielles pour générer une recommandation. Pour plus d’informations, consultez [xp_msver &#40;Transact-SQL&#41;] (~ / relational-databases/system-stored-procedures/xp-msver-transact-sql.md.  
+ Cette dépendance présente un impact sur les recommandations en matière de partitionnement, car le nombre de partitions recommandées dépend de ces deux valeurs (nombre de processeurs et quantité de mémoire disponible). Les résultats de votre paramétrage s'en trouvent également affectées lorsque vous paramétrez votre serveur de production par le biais d'un serveur de test. Dans ce scénario, l’Assistant Paramétrage du moteur de base de données utilise **xp_msver** pour déterminer les propriétés matérielles du serveur de production. Après avoir paramétré la charge de travail sur le serveur de test, l'Assistant Paramétrage du moteur de base de données se base sur ces propriétés matérielles pour générer une recommandation. Pour plus d’informations, consultez [xp_msver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/xp-msver-transact-sql).  
   
 ## <a name="database-engine-tuning-advisor-tasks"></a>Tâches de l'Assistant Paramétrage du moteur de base de données  
  Le tableau suivant répertorie les tâches courantes de l'Assistant Paramétrage du moteur de base de données et les rubriques qui décrivent comment les exécuter.  

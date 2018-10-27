@@ -14,12 +14,12 @@ ms.assetid: 19278f6a-6d58-4867-9d71-c6228040466e
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 5f4357e300e628f6d7af2f796d618a3535768652
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ce414e10afc316a478825441d41dc5601c043c3d
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47643347"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50098925"
 ---
 # <a name="generating-reports-sybasetosql"></a>Génération de rapports (SybaseToSQL)
 Les rapports de certaines activités effectuées à l’aide des commandes sont générées dans la Console SSMA au niveau d’arborescence objet.  
@@ -146,5 +146,5 @@ La commande **actualisation à partir de base de données** a **erreurs de rappo
 -   Échec-script  
   
 ## <a name="see-also"></a>Voir aussi  
-[Exécution de la Console SSMA (Sybasetosql)](http://msdn.microsoft.com/en-us/ea8950b7-fabc-4aa4-89f8-9573a2617d70)  
+[Exécution de la Console SSMA (Sybasetosql)](http://msdn.microsoft.com/ea8950b7-fabc-4aa4-89f8-9573a2617d70)  
   

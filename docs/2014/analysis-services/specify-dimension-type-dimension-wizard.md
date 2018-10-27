@@ -13,12 +13,12 @@ ms.assetid: 3215282a-532d-4ff2-b721-286f088967fc
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 166fae1cb6fb76587b6741b6f47449d2600bf8e8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 36e74f875b8306a8678e0197d95f1fe18c5ea7f6
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155858"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145584"
 ---
 # <a name="specify-dimension-type-dimension-wizard"></a>Spécifier le type de la dimension (Assistant Dimension)
   La page **Spécifier le type de la dimension** permet de définir le type de dimension et d'ajouter à la dimension des types d'attributs spéciaux associés au type de dimension sélectionné.  
@@ -57,7 +57,7 @@ ms.locfileid: "48155858"
  Permet d'inclure le type d'attribut dans la dimension.  
   
  **Type d’attribut**  
- Affiche le type d’attribut associé au **Type de dimension** sélectionné. Pour plus d’informations sur les types d’attributs, consultez [Élément Type &#40;DimensionAttribute&#41; &#40;ASSL&#41;](scripting/properties/type-element-dimensionattribute-assl.md).  
+ Affiche le type d’attribut associé au **Type de dimension** sélectionné. Pour plus d’informations sur les types d’attributs, consultez [Élément Type &#40;DimensionAttribute&#41; &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/type-element-dimensionattribute-assl).  
   
  **Attribut de dimension**  
  Sélectionnez l’attribut de dimension auquel l’Assistant Dimension affectera le type d’attribut spécial indiqué dans le champ **Type d’attribut**.  

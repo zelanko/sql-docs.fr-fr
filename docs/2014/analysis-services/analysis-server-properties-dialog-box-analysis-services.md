@@ -16,12 +16,12 @@ ms.assetid: b01ec658-c191-49c9-a6cb-549b21a368ab
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: afa6c20ccf591b4cea6917cd11817cb24c786abd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e9bcb19e10417c24b30b5ee6346d6d6a19d4bbcb
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078059"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145094"
 ---
 # <a name="analysis-server-properties-dialog-box-analysis-services"></a>Boîte de dialogue Propriétés de Analysis Server (Analysis Services)
   Utilisez la boîte de dialogue **Propriétés de Analysis Server** dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] pour définir les paramètres généraux, de langue/classement et de sécurité d’une instance [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Pour afficher la boîte de dialogue **Propriétés de Analysis Server**, cliquez avec le bouton droit de la souris sur une instance [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] dans **l’Explorateur d’objets**, puis sélectionnez **Propriétés** dans le menu contextuel. Cette boîte de dialogue **Propriétés de Analysis Server** contient les propriétés suivantes.  
@@ -35,7 +35,7 @@ ms.locfileid: "48078059"
   
 -   **1103** est le niveau de compatibilité par défaut pour les modes de déploiement 1 ou 2, pour les installations prenant en charge le mode tabulaire ou [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)].  
   
- Le serveur retourne cette valeur lorsqu'un client prenant en charge l'espace de noms demande DISCOVER_XML_METADATA. Pour plus d’informations, consultez [Ensemble de lignes DISCOVER_XML_METADATA](schema-rowsets/xml/discover-xml-metadata-rowset.md).  
+ Le serveur retourne cette valeur lorsqu'un client prenant en charge l'espace de noms demande DISCOVER_XML_METADATA. Pour plus d’informations, consultez [Ensemble de lignes DISCOVER_XML_METADATA](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-xml-metadata-rowset).  
   
 ## <a name="general-properties"></a>Propriétés générales  
  Cette page permet de définir les propriétés générales simples et avancées, telles que les emplacements de dossiers et les paramètres de réseau, relatives à une instance [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
@@ -96,9 +96,9 @@ ms.locfileid: "48078059"
  Cette page permet d'indiquer les comptes d'utilisateur et de groupe Windows appartenant au rôle d'administrateur du serveur pour toute instance [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . L'appartenance à ce rôle permet d'exécuter des tâches sur le serveur, comme créer ou traiter une base de données, modifier des propriétés du serveur, ajouter ou supprimer d'autres membres de ce rôle ou lancer une trace. Consultez [accorder des autorisations administrateur du serveur &#40;Analysis Services&#41; ](instances/grant-server-admin-rights-to-an-analysis-services-instance.md) pour plus d’informations.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Déterminer le Mode de serveur d’une Instance Analysis Services](instances/determine-the-server-mode-of-an-analysis-services-instance.md)   
+ [Déterminer le mode serveur d'une instance Analysis Services](instances/determine-the-server-mode-of-an-analysis-services-instance.md)   
  [Configurer les propriétés du serveur dans Analysis Services](server-properties/server-properties-in-analysis-services.md)   
- [Méthodologies d’authentification pris en charge par Analysis Services](instances/authentication-methodologies-supported-by-analysis-services.md)   
+ [Méthodologies d'authentification prises en charge par Analysis Services](instances/authentication-methodologies-supported-by-analysis-services.md)   
  [Rôles et autorisations &#40;Analysis Services&#41;](multidimensional-models/roles-and-permissions-analysis-services.md)   
  [Langues et classements &#40;Analysis Services&#41;](languages-and-collations-analysis-services.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Sécurité au niveau de l’objet de modèle tabulaire | Documents Microsoft
+title: Sécurité au niveau de l’objet de modèle tabulaire | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,24 +9,24 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 98caa08ef6c3dcba37043124d0263507097a4374
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 54384e050f4e45ad5d89d66111ecdcc851076d76
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34045693"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148204"
 ---
-# <a name="object-level-security"></a>Sécurité au niveau de l’objet
+# <a name="object-level-security"></a>Sécurité au niveau des objets
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-Sécurité de modèle de données commence par la mise en oeuvre efficace [rôles](../../analysis-services/tabular-models/roles-ssas-tabular.md) et des filtres au niveau des lignes pour définir les autorisations utilisateur sur les objets de modèle de données et des données. À partir de modèles tabulaires de 1400, vous pouvez également définir au niveau de l’objet de sécurité, qui inclut la sécurité au niveau de la table et la sécurité au niveau de la colonne dans la [objet rôles](../../analysis-services/tabular-models-scripting-language-objects/roles-object-tmsl.md).
+Sécurité de modèle de données commence par l’implémentation efficace de [rôles](../../analysis-services/tabular-models/roles-ssas-tabular.md) et les filtres au niveau des lignes pour définir les autorisations utilisateur sur les objets de modèle de données et des données. À partir de modèles tabulaires 1400, vous pouvez également définir au niveau de l’objet de sécurité, qui inclut la sécurité au niveau de la table et la sécurité au niveau des colonnes dans le [Roles, objet](https://docs.microsoft.com/bi-reference/tmsl/roles-object-tmsl).
 
 ## <a name="table-level-security"></a>Sécurité au niveau des tables
 
-Avec la sécurité au niveau de la table, vous pouvez restreindre pas uniquement l’accès aux données de table, mais également les noms de table sensibles, contribue à empêcher les utilisateurs malveillants de découvrir si une table existe. 
+Avec la sécurité au niveau de la table, vous pouvez restreindre pas uniquement l’accès aux données de table, mais également les noms de tables sensibles, aider à empêcher les utilisateurs malveillants de découvrir si une table existe. 
 
- Sécurité au niveau de la table est définie dans les métadonnées en fonction de JSON dans Model.bim, [TMSL Tabular Model Scripting Language ()](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md), ou [le modèle d’objet tabulaire (TOM)](../../analysis-services/tabular-model-programming-compatibility-level-1200/introduction-to-the-tabular-object-model-tom-in-analysis-services-amo.md). Définir le **metadataPermission** propriété de la **autorisations de table** classe dans le [objet rôles](../../analysis-services/tabular-models-scripting-language-objects/roles-object-tmsl.md) à **aucun**.
+ Sécurité au niveau de la table est définie dans les métadonnées basé sur JSON dans Model.bim, [tabulaire modèle Scripting Language (TMSL)](https://docs.microsoft.com/bi-reference/tmsl/tabular-model-scripting-language-tmsl-reference), ou [le modèle d’objet tabulaire (TOM)](https://docs.microsoft.com/bi-reference/tom/introduction-to-the-tabular-object-model-tom-in-analysis-services-amo). Définir le **metadataPermission** propriété de la **autorisations de table** classe dans le [Roles, objet](https://docs.microsoft.com/bi-reference/tmsl/roles-object-tmsl) à **aucun**.
 
-Dans cet exemple, la propriété metadataPermission de la classe d’autorisations de table pour la table Product est définie sur none :
+Dans cet exemple, la propriété metadatapermission alors que de la classe d’autorisations de table pour la table Product est définie sur none :
 
 ```
 "roles": [
@@ -45,11 +45,11 @@ Dans cet exemple, la propriété metadataPermission de la classe d’autorisatio
 
 ## <a name="column-level-security"></a>Sécurité au niveau de la colonne
 
-Similaire à la sécurité au niveau de la table, avec une sécurité au niveau des colonnes vous pas uniquement restreignent l’accès aux données de la colonne, mais également les noms de colonne sensible, contribue à empêcher les utilisateurs malveillants à partir de la détection d’une colonne.
+Similaire à la sécurité au niveau table, avec la sécurité au niveau de la colonne vous pas uniquement restreignent l’accès aux données de la colonne, mais également les noms des colonnes sensibles, aider à empêcher les utilisateurs malveillants de découvrir une colonne.
 
- Sécurité au niveau de la colonne est définie dans les métadonnées en fonction de JSON dans Model.bim, [TMSL Tabular Model Scripting Language ()](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md), ou [le modèle d’objet tabulaire (TOM)](../../analysis-services/tabular-model-programming-compatibility-level-1200/introduction-to-the-tabular-object-model-tom-in-analysis-services-amo.md). Définir le **metadataPermission** propriété de la **columnPermissions** classe dans le [objet rôles](../../analysis-services/tabular-models-scripting-language-objects/roles-object-tmsl.md) à **aucun**.
+ Sécurité au niveau de la colonne est définie dans les métadonnées basé sur JSON dans Model.bim, [tabulaire modèle Scripting Language (TMSL)](https://docs.microsoft.com/bi-reference/tmsl/tabular-model-scripting-language-tmsl-reference), ou [le modèle d’objet tabulaire (TOM)](https://docs.microsoft.com/bi-reference/tom/introduction-to-the-tabular-object-model-tom-in-analysis-services-amo). Définir le **metadataPermission** propriété de la **columnPermissions** classe dans le [Roles, objet](https://docs.microsoft.com/bi-reference/tmsl/roles-object-tmsl) à **aucun**.
 
-Dans cet exemple, la propriété metadataPermission de la classe columnPermissions pour la colonne de taux de Base dans la table Employees est définie sur none :
+Dans cet exemple, la propriété metadatapermission alors que de la classe columnPermissions pour la colonne de taux de Base dans la table Employees est définie sur none :
 
 ```
 "roles": [
@@ -74,24 +74,24 @@ Dans cet exemple, la propriété metadataPermission de la classe columnPermissio
 ## <a name="restrictions"></a>Restrictions
 
 *  Impossible de définir la sécurité au niveau de la table pour un modèle si elle s’arrête une chaîne de relation. Une erreur est générée au moment du design.
- Par exemple, s’il existe des relations entre des tables A et B et B et C, vous ne pouvez pas sécuriser b. Si la table B est sécurisée, une requête sur la table A ne peut pas transit les relations entre la table A et B et B et C. Dans ce cas, une relation distincte peut être configurée entre les tables A et B.
+ Par exemple, s’il existe des relations entre des tables A et B et B et C, vous ne pouvez pas sécuriser la table B. Si la table B est sécurisée, une requête sur la table A ne peuvent pas transiter les relations entre la table A et B et B et C. Dans ce cas, une relation distincte peut être configurée entre les tables A et B.
 
     ![Sécurité au niveau des tables](../../analysis-services/tabular-models/media/ssas-ols.png)  
 
 
-*  Sécurité de niveau ligne et la sécurité au niveau de l’objet ne peut pas être combinés à partir de différents rôles, car il peut introduire des accès involontaire à des données sécurisées. Une erreur est générée au moment de la requête pour les utilisateurs qui sont membres d’une telle combinaison des rôles.
+*  Sécurité de niveau ligne et la sécurité au niveau de l’objet ne peut pas être combinés à partir de différents rôles, car il pourrait induire l’accès involontaire à des données sécurisées. Une erreur est générée au moment de la requête pour les utilisateurs qui sont membres d’une telle combinaison des rôles.
 
-*  Des calculs dynamiques (mesures, indicateurs de performance clés, DetailRows) sont automatiquement restreints si elles font référence à une table sécurisée ou une colonne. Il n’existe aucun mécanisme pour explicitement sécuriser une mesure, il est possible pour implicitement sécuriser une mesure en mettant à jour de l’expression pour faire référence à une table sécurisée ou une colonne.
+*  Des calculs dynamiques (mesures, indicateurs de performance clés, DetailRows) sont automatiquement limitées si elles font référence à une table sécurisée ou une colonne. Il n’existe aucun mécanisme pour sécuriser explicitement une mesure, il est possible de sécuriser implicitement une mesure en mettant à jour de l’expression pour faire référence à une table sécurisée ou une colonne.
 
-*  Des relations qui font référence à une colonne sécurisée de travail fournie de la table dans la colonne n’est pas sécurisée.
+*  Les relations qui font référence à une colonne sécurisée de travail fournie par la table dans la colonne n’est pas sécurisée.
 
 
 
 
 ## <a name="see-also"></a>Voir aussi  
 [Roles](../../analysis-services/tabular-models/roles-ssas-tabular.md)  
-[Roles, objet (TMSL)](../../analysis-services/tabular-models-scripting-language-objects/roles-object-tmsl.md)  
-[Langage TMSL (Tabular Model Scripting Language)](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)  
-[Modèle d’objet tabulaire (TOM)](../../analysis-services/tabular-model-programming-compatibility-level-1200/introduction-to-the-tabular-object-model-tom-in-analysis-services-amo.md).
+[Roles, objet (TMSL)](https://docs.microsoft.com/bi-reference/tmsl/roles-object-tmsl)  
+[Langage TMSL (Tabular Model Scripting Language)](https://docs.microsoft.com/bi-reference/tmsl/tabular-model-scripting-language-tmsl-reference)  
+[Modèle d’objet tabulaire (TOM)](https://docs.microsoft.com/bi-reference/tom/introduction-to-the-tabular-object-model-tom-in-analysis-services-amo).
 
   

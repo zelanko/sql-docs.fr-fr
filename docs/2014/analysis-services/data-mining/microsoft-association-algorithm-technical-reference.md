@@ -21,12 +21,12 @@ ms.assetid: 50a22202-e936-4995-ae1d-4ff974002e88
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e8d5a8e800b961406231e0f0e515b250a17cb3ed
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4d709a575ddde6fe9d3f31e7d8a50b8f6dec83a5
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091079"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146014"
 ---
 # <a name="microsoft-association-algorithm-technical-reference"></a>Références techniques relatives à l’algorithme Microsoft Association
   L'algorithme MAR ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules) est une implémentation simple de l'algorithme Apriori bien connu.  
@@ -74,7 +74,7 @@ ms.locfileid: "48091079"
  L'algorithme MAR ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules) prend en charge plusieurs paramètres qui affectent le comportement, les performances et la précision du modèle d'exploration de données résultant.  
   
 ### <a name="setting-algorithm-parameters"></a>Définition des paramètres de l'algorithme  
- Vous pouvez modifier à tout moment les paramètres d'un modèle d'exploration de données à l'aide du Concepteur d'exploration de données dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Vous pouvez également modifier les paramètres par programmation à l’aide de la <xref:Microsoft.AnalysisServices.MiningModel.AlgorithmParameters%2A> collection dans AMO, ou en utilisant le [MiningModels élément &#40;ASSL&#41; ](../scripting/collections/miningmodels-element-assl.md) dans XMLA. La table ci-dessous décrit chaque paramètre.  
+ Vous pouvez modifier à tout moment les paramètres d'un modèle d'exploration de données à l'aide du Concepteur d'exploration de données dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Vous pouvez également modifier les paramètres par programmation à l’aide de la <xref:Microsoft.AnalysisServices.MiningModel.AlgorithmParameters%2A> collection dans AMO, ou en utilisant le [MiningModels élément &#40;ASSL&#41; ](https://docs.microsoft.com/bi-reference/assl/collections/miningmodels-element-assl) dans XMLA. La table ci-dessous décrit chaque paramètre.  
   
 > [!NOTE]  
 >  Vous ne pouvez pas modifier les paramètres dans un modèle existant à l’aide d’une instruction DMX ; vous devez spécifier les paramètres dans DMX CREATE MODEL ou ALTER STRUCTURE… ADD MODEL quand vous créez le modèle.  
@@ -164,7 +164,7 @@ ms.locfileid: "48091079"
   
 ## <a name="see-also"></a>Voir aussi  
  [Algorithme Microsoft Association](microsoft-association-algorithm.md)   
- [Exemples de requêtes de modèle association](association-model-query-examples.md)   
- [Contenu pour les modèles d’Association du modèle d’exploration de données &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)  
+ [Exemples de requêtes de modèle d'association](association-model-query-examples.md)   
+ [Contenu du modèle d’exploration de données pour les modèles d’association &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)  
   
   

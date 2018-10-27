@@ -17,12 +17,12 @@ ms.assetid: abf0fa24-f199-4273-9a1a-e8787ac9bee1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 98585ac8a3e504a2b73741559f4db839e6737154
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5e2c7a12c45a0732014a20a7471d664e808b5883
+ms.sourcegitcommit: ef15fa253d98c62538bf9b6fe191af7f8ef8f6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168689"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49991158"
 ---
 # <a name="remote-servers"></a>Serveurs distants
   Les serveurs distants sont pris en charge dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uniquement pour des raisons de compatibilité descendante. Il est préférable d'utiliser plutôt des serveurs liés dans les nouvelles applications. Pour plus d’informations, consultez [Serveurs liés &#40;moteur de base de données&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md).  
@@ -94,7 +94,7 @@ GO
 ```  
   
 ## <a name="viewing-local-or-remote-server-properties"></a>Affichage des propriétés des serveurs locaux ou distants  
- Vous pouvez utiliser la procédure stockée étendue **xp_msver** pour consulter les attributs des serveurs locaux ou distants. Ces attributs comprennent le numéro de version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le nombre de processeurs de l'ordinateur et leur type, ainsi que la version du système d'exploitation. À partir du serveur local, vous pouvez afficher les bases de données, les fichiers, les connexions et les outils d'un serveur distant. Pour plus d’informations, consultez [xp_msver &#40;Transact-SQL&#41;] (~ / relational-databases/system-stored-procedures/xp-msver-transact-sql.md.  
+ Vous pouvez utiliser la procédure stockée étendue **xp_msver** pour consulter les attributs des serveurs locaux ou distants. Ces attributs comprennent le numéro de version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le nombre de processeurs de l'ordinateur et leur type, ainsi que la version du système d'exploitation. À partir du serveur local, vous pouvez afficher les bases de données, les fichiers, les connexions et les outils d'un serveur distant. Pour plus d’informations, consultez [xp_msver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/xp-msver-transact-sql).  
   
 ## <a name="related-tasks"></a>Tâches associées  
  [Serveurs liés &#40;moteur de base de données&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)  

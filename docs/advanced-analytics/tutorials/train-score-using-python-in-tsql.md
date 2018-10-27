@@ -1,28 +1,43 @@
 ---
-title: Utiliser un modèle Python dans SQL Server pour la formation et des prédictions | Microsoft Docs
-description: Créer et former un modèle à l’aide de Python et le jeu de données Iris classique. Enregistrer le modèle dans SQL Server, puis l’utiliser pour générer les résultats prédits.
+title: Modèles de Python dans SQL Server pour la formation et des prédictions à l’aide de procédures stockées | Microsoft Docs
+description: Incorporer le code Python dans les procédures stockées SQL Server pour créer, former et utiliser un modèle Python avec le jeu de données Iris classique. Enregistrer un modèle formé dans SQL Server, puis l’utiliser pour générer les résultats prédits.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/18/2018
+ms.date: 10/23/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 839bcecdeaf7b5e2a7ea1297fe941353bffed20e
-ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
+ms.openlocfilehash: 3cdab7ab26166392724ee278cbaf76afd68b9472
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49461835"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099870"
 ---
-# <a name="use-a-python-model-in-sql-server-for-training-and-scoring"></a>Utiliser un modèle Python dans SQL Server pour l’apprentissage et notation
+# <a name="create-train-and-use-a-python-model-with-stored-procedures-in-sql-server"></a>Créer, former et utiliser un modèle Python avec des procédures stockées dans SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Dans cet exercice Python, découvrez un modèle courant pour la création, formation et à l’aide d’un modèle dans SQL Server. Cet exercice crée deux procédures stockées. Le premier d'entre eux génère un modèle de Naïve Bayes pour prédire une espèce Iris en fonction des caractéristiques de la fleur. La deuxième procédure est pour calculer les scores. Il appelle le modèle généré dans la première procédure pour un ensemble de prédictions de sortie. En parcourant cet exercice, vous allez apprendre les techniques de base sont fondamentaux pour l’exécution de code Python sur une instance du moteur de base de données SQL Server.
+Cet exercice montre l’intégration de Python avec SQL Server lorsque vous ajoutez le [Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) fonctionnalité à une instance du moteur de base de données. Dans ce cas, vous pouvez encapsuler le code Python à l’intérieur d’un [procédure stockée](../../relational-databases/stored-procedures/stored-procedures-database-engine.md) pour faire fonctionner votre script pour les charges de travail de production. La possibilité d’incorporer le code dans une procédure stockée a des avantages tangibles dans comment concevoir, tester et gérer des tâches d’apprentissage et de science des données. Elle rend votre script et les modèles accessible à toute application pouvant se connecter à SQL Server.
 
-Exemples de données utilisés dans cet exercice est la [jeu de données Iris](demo-data-iris-in-sql.md) dans le **irissql** base de données.
+Dans cet exercice Python, vous créer et exécuter deux procédures stockées. Le premier utilise le jeu de données Iris fleur classique et génère un modèle de Naïve Bayes pour prédire une espèce Iris en fonction des caractéristiques de la fleur. La deuxième procédure est pour calculer les scores. Il appelle le modèle généré dans la première procédure pour un ensemble de prédictions de sortie. En plaçant le code dans une procédure stockée, les opérations sont relation contenant-contenu, réutilisables et pouvant être appelées par d’autres procédures stockées et les applications clientes. 
 
-## <a name="create-a-model-using-a-sproc"></a>Créer un modèle à l’aide d’une procédure stockée
+En suivant ce didacticiel, vous allez apprendre :
+
+> [!div class="checklist"]
+> * Guide pratique pour incorporer le code Python dans une procédure stockée
+> * Comment passer des entrées dans votre code via des entrées sur la procédure stockée
+> * Comment les procédures stockées sont utilisées pour configurer les modèles
+
+## <a name="prerequisites"></a>Prérequis
+
+Exemples de données utilisés dans cet exercice est la [ **irissql** ](demo-data-iris-in-sql.md) base de données.
+
+Vous devez également un éditeur T-SQL, tel que [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-2017).
+
+## <a name="create-a-stored-procedure-that-generates-models"></a>Créer une procédure stockée qui génère des modèles
+
+Il est courant dans le développement de SQL Server pour organiser les opérations programmables dans les procédures stockées distinctes. Dans cette étape, vous allez créer une procédure stockée qui génère un modèle pour prévoir les résultats. 
 
 1. Ouvrez une nouvelle fenêtre de requête dans Management Studio, connecté à la **irissql** base de données. 
 
@@ -31,9 +46,15 @@ Exemples de données utilisés dans cet exercice est la [jeu de données Iris](d
     GO
     ```
 
-2. Exécutez le code suivant dans une nouvelle fenêtre de requête pour créer la procédure stockée qui génère et effectue l’apprentissage d’un modèle. Modèles qui sont stockés pour une réutilisation dans SQL Server sont sérialisées comme un flux d’octets et stockés dans une colonne varbinary (max) dans une table de base de données. Une fois créé, le modèle formé, sérialisé et enregistrés dans une base de données, elle peut être appelée par d’autres procédures ou par la fonction de prédire le T-SQL dans les scores de charges de travail.
+2. Copier dans le code suivant pour créer une nouvelle procédure stockée. 
 
-   Ce code utilise pickle pour sérialiser le modèle et le scikit pour fournir l’algorithme Naïve Bayes. Le modèle sera formé à l’aide de données à partir de colonnes entre 0 et 4 à partir de la **iris_data** table. Les paramètres que vous voyez dans la deuxième partie de la procédure formulez des entrées de données et sorties de modèle. 
+   Lors de l’exécution, cette procédure appelle [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) pour démarrer une session de Python. 
+   
+   Les entrées requises par votre code Python sont passées comme paramètres d’entrée sur cette procédure stockée. Sortie correspond à un modèle formé, selon les Python **scikit-Découvrez** bibliothèque pour l’algorithme d’apprentissage automatique. 
+
+   Ce code utilise [ **pickle** ](https://docs.python.org/2/library/pickle.html) pour sérialiser le modèle. Le modèle sera formé à l’aide de données à partir de colonnes entre 0 et 4 à partir de la **iris_data** table. 
+   
+   Les paramètres que vous voyez dans la deuxième partie de la procédure formulez des entrées de données et sorties de modèle. Autant que possible, vous souhaitez que le code Python en cours d’exécution dans une procédure stockée pour avoir défini clairement les entrées et sorties qui correspondent aux entrées de la procédure stockée et les sorties passées au moment de l’exécution. 
 
     ```sql
     CREATE PROCEDURE generate_iris_model (@trained_model varbinary(max) OUTPUT)
@@ -54,13 +75,17 @@ Exemples de données utilisés dans cet exercice est la [jeu de données Iris](d
     GO
     ```
 
-3. Vérifiez que la procédure stockée existe. Si le script T-SQL à partir de l’étape précédente s’est exécuté sans erreur, une nouvelle procédure stockée appelée **generate_iris_model** est créé et ajouté à la **irissql** base de données. Vous trouverez des procédures stockées dans Management Studio **Explorateur d’objets**, sous **programmabilité**.
+3. Vérifiez que la procédure stockée existe. 
 
-## <a name="execute-the-sproc-to-create-and-train-models"></a>Exécuter la procédure stockée pour créer et former des modèles
+   Si le script T-SQL à partir de l’étape précédente s’est exécuté sans erreur, une nouvelle procédure stockée appelée **generate_iris_model** est créé et ajouté à la **irissql** base de données. Vous trouverez des procédures stockées dans Management Studio **Explorateur d’objets**, sous **programmabilité**.
 
-1. Une fois la procédure stockée est créée, exécutez le code suivant ci-dessous pour l’exécuter. L’instruction spécifique pour l’exécution d’une procédure stockée est `EXEC` sur la cinquième ligne.
+## <a name="execute-the-procedure-to-create-and-train-models"></a>Exécutez la procédure pour créer et former des modèles
 
-   Ce script supprime un modèle existant portant le même nom (« Naive Bayes ») pour faire place aux nouveaux créée en exécutant de nouveau la même procédure. Sans la suppression du modèle, une erreur se produit indiquant que l’objet existe déjà. 
+Dans cette étape, exécutez la procédure pour exécuter le code incorporé, création d’un modèle formé et sérialisé en tant que sortie. Modèles qui sont stockés pour une réutilisation dans SQL Server sont sérialisées comme un flux d’octets et stockés dans une colonne varbinary (max) dans une table de base de données. Une fois que le modèle est créé, formé, sérialisé et enregistré dans une base de données, elle peut être appelée par d’autres procédures ou par le [T-SQL prédire](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) fonction dans les scores de charges de travail.
+
+1. Copiez le code suivant pour exécuter la procédure. L’instruction spécifique pour l’exécution d’une procédure stockée est `EXEC` sur la cinquième ligne.
+
+   Ce script supprime un modèle existant portant le même nom (« Naive Bayes ») pour faire place aux nouveaux créée en exécutant de nouveau la même procédure. Sans la suppression du modèle, une erreur se produit indiquant que l’objet existe déjà. Le modèle est stocké dans une table appelée **iris_models**, mis en service lorsque vous avez créé le **irissql** base de données.
 
     ```sql
     DECLARE @model varbinary(max);
@@ -82,7 +107,7 @@ Exemples de données utilisés dans cet exercice est la [jeu de données Iris](d
     | 1 | Naive Bayes     | 
 
 
-## <a name="create-and-execute-a-sproc-for-generating-predictions"></a>Créer et exécuter une procédure stockée pour générer des prédictions
+## <a name="create-and-execute-a-stored-procedure-for-generating-predictions"></a>Créer et exécuter une procédure stockée pour générer des prédictions
 
 Maintenant que vous avez créé, formé et enregistré un modèle, passez à l’étape suivante : création d’une procédure stockée qui génère des prédictions. Vous effectuerez cela en appelant sp_execute_external_script pour démarrer Python, puis passer dans le script Python qui charge un modèle sérialisé votre créé dans l’exercice précédent, puis lui donne des entrées de données dont calculer le score.
 
@@ -128,13 +153,14 @@ Maintenant que vous avez créé, formé et enregistré un modèle, passez à l�
 
 ## <a name="conclusion"></a>Conclusion
 
-Dans cet exercice, vous avez appris à créer des procédures stockées pour différentes tâches, où chaque procédure stockée utilisé la procédure stockée système [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) pour démarrer un processus Python. Entrées dans le processus de Python sont transmies au script de sp_execute_external en tant que paramètres. Le script Python proprement dit et les variables de données dans une base de données SQL Server sont passés en tant qu’entrées.
+Dans cet exercice, vous avez appris à créer des procédures stockées dédiés aux différentes tâches, où chaque procédure stockée utilisé la procédure stockée système [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) pour démarrer un processus Python. Entrées dans le processus de Python sont transmies au script de sp_execute_external en tant que paramètres. Le script Python proprement dit et les variables de données dans une base de données SQL Server sont passés en tant qu’entrées.
 
-Si vous êtes habitué à utiliser dans Python, vous pouvez être habitué pour le chargement des données, créer des synthèses et des graphiques, puis apprentissage d’un modèle et générer des scores toutes dans les mêmes 250 lignes de code. Cet article diffère des approches usuelles en organisant des opérations dans des procédures distinctes. Cette pratique est utile à plusieurs niveaux.
+Pour certains développeurs Python qui sont habitués à écrire de script complet, une plage d’opérations de gestion des, organisation des tâches dans des procédures distinctes peut sembler inutile. Mais d’apprentissage et de notation différents cas d’usage. En les séparant, vous pouvez placer chaque tâche sur planification différente et les autorisations de portée pour l’opération.
 
-L’un des avantages sont que vous pouvez séparer les processus en étapes reproductibles qui peuvent être modifiés à l’aide de paramètres. Autant que possible, vous souhaitez que le code Python que vous exécutez dans une procédure stockée pour ont eux-mêmes clairement défini des entrées et sorties qui correspondent à la procédure stockée entrées et sorties qui peuvent être passées au moment de l’exécution. Dans cet exercice, le code Python qui crée un modèle (nommé « Naive Bayes » dans cet exemple) est transmis en tant qu’entrée à une seconde procédure stockée qui appelle le modèle dans un processus de calcul de score.
+De même, vous pouvez également exploiter les ressources ou des fonctionnalités de SQL Server, telles que le traitement parallèle, la gouvernance des ressources, en écrivant votre script pour utiliser les algorithmes dans [revoscalepy](../python/what-is-revoscalepy.md) ou [MicrosoftML](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) qui prend en charge la diffusion en continu et en parallèle. En séparant l’apprentissage et l’évaluation, vous pouvez cibler les optimisations pour les charges de travail spécifiques.
 
-Un deuxième avantage est que la formation et de notation des processus peut être optimisée en tirant parti des fonctionnalités de SQL Server, telles que le traitement parallèle, la gouvernance des ressources, ou à l’aide des algorithmes dans [revoscalepy](../python/what-is-revoscalepy.md) ou [MicrosoftML ](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) qui prennent en charge la diffusion en continu et d’exécution en parallèle. En séparant l’apprentissage et l’évaluation, vous pouvez cibler les optimisations pour les charges de travail spécifiques.
+Un avantage final est que les processus peuvent être modifiées à l’aide de paramètres. Dans cet exercice, le code Python qui a créé le modèle (nommé « Naive Bayes » dans cet exemple) a été passé en tant qu’entrée à une procédure stockée deuxième appeler le modèle dans un processus de calcul de score. Cet exercice utilise uniquement un seul modèle, mais vous pouvez l’imaginer comment paramétrer le modèle dans une tâche de calcul de score rendrait ce script plus utile.
+
 
 ## <a name="next-steps"></a>Étapes suivantes
 

@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: c05e5d59dd303f6f0c74eaab0e749fe6c8252f32
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 76e9bedbd7807b78288a901d0b2a7674232c7e91
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38042357"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145984"
 ---
 # <a name="whats-new-in-sql-server-2017-analysis-services"></a>Quelles sont les nouveautés dans SQL Server 2017 Analysis Services
 [!INCLUDE[ssas-appliesto-sql2017](../includes/ssas-appliesto-sql2017.md)]
@@ -140,7 +140,7 @@ La requête DAX suivante retourne l’ensemble de lignes défini par l’express
 EVALUATE DETAILROWS([Internet Total Sales])
 ```
 
-## <a name="object-level-security"></a>Sécurité au niveau de l’objet
+## <a name="object-level-security"></a>Sécurité au niveau des objets
 Cette version introduit [sécurité au niveau de l’objet](../analysis-services/tabular-models/object-level-security.md) pour les tables et colonnes. En plus de restreindre l’accès aux données de table et de colonne, noms de table et de colonne sensibles peuvent être sécurisées. Cela permet d’empêcher qu’un utilisateur malveillant découvre l’existence de cette table.
 
 Sécurité au niveau de l’objet doit être définie en utilisant les métadonnées basé sur JSON, tabulaire modèle Scripting Language (TMSL) ou le modèle d’objet tabulaire (TOM). 
@@ -173,9 +173,9 @@ db.Update(UpdateOptions.ExpandFull);
 [Vues de gestion dynamique](../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md) dans SQL Server Profiler, les requêtes qui retournent des informations sur les opérations de serveur local et de l’intégrité du serveur.
 Cette version inclut les améliorations apportées à [vues de gestion dynamique](https://docs.microsoft.com/sql/analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services) (DMV) pour les modèles tabulaires aux niveaux de compatibilité 1200 et 1400.
 
-[DISCOVER_CALC_DEPENDENCY](../analysis-services/schema-rowsets/xml/discover-calc-dependency-rowset.md) fonctionne désormais avec les modèles tabulaires 1200 et 1400. Les modèles tabulaires 1400 affichent les dépendances entre les partitions M, les expressions M et les sources de données structurées. Pour plus d’informations, consultez le [blog Analysis Services](https://blogs.msdn.microsoft.com/analysisservices/2017/07/17/whats-new-in-sql-server-2017-rc1-for-analysis-services/).
+[DISCOVER_CALC_DEPENDENCY](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-calc-dependency-rowset) fonctionne désormais avec les modèles tabulaires 1200 et 1400. Les modèles tabulaires 1400 affichent les dépendances entre les partitions M, les expressions M et les sources de données structurées. Pour plus d’informations, consultez le [blog Analysis Services](https://blogs.msdn.microsoft.com/analysisservices/2017/07/17/whats-new-in-sql-server-2017-rc1-for-analysis-services/).
 
-[MDSCHEMA_MEASUREGROUP_DIMENSIONS](../analysis-services/schema-rowsets/ole-db-olap/mdschema-measuregroup-dimensions-rowset.md) améliorations sont incluses pour cette vue DMV, qui est utilisée par les outils clients différents pour afficher la dimensionnalité de mesure. Par exemple, la fonctionnalité Explorer dans les tableaux croisés dynamiques Excel permet à l’utilisateur à cross-extraction des dimensions associées pour les mesures sélectionnées. Cette version corrige les colonnes de cardinalité, qui ont été précédemment montrant les valeurs incorrectes.
+[MDSCHEMA_MEASUREGROUP_DIMENSIONS](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-measuregroup-dimensions-rowset) améliorations sont incluses pour cette vue DMV, qui est utilisée par les outils clients différents pour afficher la dimensionnalité de mesure. Par exemple, la fonctionnalité Explorer dans les tableaux croisés dynamiques Excel permet à l’utilisateur à cross-extraction des dimensions associées pour les mesures sélectionnées. Cette version corrige les colonnes de cardinalité, qui ont été précédemment montrant les valeurs incorrectes.
 
 ## <a name="dax-enhancements"></a>Améliorations DAX
 Cette version inclut la prise en charge des fonctionnalités et de nouvelles fonctions DAX. Pour tirer parti, vous devez utiliser la dernière version de SSDT. Pour plus d’informations, consultez [fonctions DAX nouvelle](https://msdn.microsoft.com/library/mt704075.aspx).

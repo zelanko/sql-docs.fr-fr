@@ -1,5 +1,5 @@
 ---
-title: Le vérificateur de cohérence (DBCC) pour Analysis Services de base de données | Documents Microsoft
+title: Le vérificateur de cohérence (DBCC) pour Analysis Services de base de données | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: cb131f76c839f446cbdc31dae51e98431bb87902
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 5314c18f7626ee631d7d0b59ad8d9c004a33148b
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019686"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147864"
 ---
 # <a name="database-consistency-checker-dbcc-for-analysis-services"></a>Vérificateur de cohérence de base de données (DBCC) pour Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -30,7 +30,7 @@ La commande prend une définition d’objet et retourne un jeu de résultats vid
   
 -   Les bases de données au niveau de compatibilité 1100 ou 1103 tabulaires antérieures à SQL Server 2016 et multidimensionnelles sont décrites dans des constructions de modélisation multidimensionnelle telles que **cubeID**, **measuregroupID**et **partitionID**.  
   
--   Les métadonnées des nouvelles bases de données de modèle tabulaire au niveau de compatibilité 1200 et supérieur se composent de descripteurs tels que **TableName** et **PartitionName**.  
+-   Métadonnées des nouvelles bases de données de modèle tabulaire au niveau de compatibilité 1200 et supérieur se composent de descripteurs tels que **TableName** et **PartitionName**.  
   
  DBCC pour Analysis Services s’exécute sur toute base de données Analysis Services à n’importe quel niveau de compatibilité, tant que la base de données s’exécute sur une instance de SQL Server 2016. Vérifiez simplement que vous utilisez la syntaxe de commande appropriée pour chaque type de base de données.  
   
@@ -43,7 +43,7 @@ La commande prend une définition d’objet et retourne un jeu de résultats vid
 ## <a name="command-syntax"></a>Syntaxe de commande 
  Bases de données tabulaires 1200 et les niveaux de compatibilité plus élevés utilisent des métadonnées tabulaires pour les définitions d’objet. La syntaxe complète de la commande DBCC pour une base de données tabulaire créée à un niveau fonctionnel SQL Server 2016 est illustrée dans l’exemple suivant.  
   
- Principales différences entre les deux syntaxes incluent un espace de noms XMLA plus récent, ne \<objet > élément et aucun \<modèle > élément (il est toujours un seul modèle par base de données).  
+ Principales différences entre les deux syntaxes incluent un espace de noms XMLA plus récent, ne \<objet > élément et aucun \<modèle > élément (il existe toujours un seul modèle par base de données).  
   
 ```  
 <DBCC xmlns="http://schemas.microsoft.com/analysisservices/2014/engine">  
@@ -58,7 +58,7 @@ La commande prend une définition d’objet et retourne un jeu de résultats vid
  Vous pouvez obtenir des noms d’objets et l’élément DatabaseID à partir de Management Studio, par le biais de la page de propriétés de chaque objet.  
   
 ## <a name="command-syntax-for-multidimensional-and-tabular-110x-databases"></a>Syntaxe de la commande pour les bases de données 110x tabulaires et multidimensionnelles  
- DBCC utilise une syntaxe identique pour les bases de données 1100 et 1103 tabulaires et multidimensionnelles. Vous pouvez exécuter DBCC sur des objets de base de données spécifiques, y compris sur la base de données entière. Pour plus d’informations sur la définition des objets, consultez [Élément Object &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-properties/object-element-xmla.md).  
+ DBCC utilise une syntaxe identique pour les bases de données 1100 et 1103 tabulaires et multidimensionnelles. Vous pouvez exécuter DBCC sur des objets de base de données spécifiques, y compris sur la base de données entière. Pour plus d’informations sur la définition des objets, consultez [Élément Object &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla).  
   
 ```  
 <DBCC xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
@@ -176,7 +176,7 @@ Execution complete
   
      Pour les deux sous-classes d’événements, consultez les valeurs **TextData** , qui peuvent contenir des messages retournés par DBCC.  
   
-     Messages d’état commencent par « la vérification de cohérence de \<objet > », « début de la vérification \<objet > », ou » terminé la vérification \<objet > ».  
+     Messages d’état commencent par « vérification de cohérence de \<objet > », « démarrer la vérification \<objet > », ou » terminé la vérification \<objet > ».  
   
     > [!NOTE]  
     >  Dans CTP 3.0, les objets sont identifiés par des noms internes. Par exemple, une hiérarchie Categories est articulée sous la forme H$ Categories -\<objectID >. Les noms internes devraient être remplacés par des noms conviviaux dans une prochaine version de CTP.  
@@ -196,7 +196,7 @@ Execution complete
   
 5.  Examinez les valeurs TextData, qui peuvent contenir des messages retournés par DBCC.  TextData est une propriété d’un champ d’événement et affiche les messages d’état et d’erreur retournés par l’événement.  
   
-     Messages d’état commencent par « la vérification de cohérence de \<objet > », « début de la vérification \<objet > », ou » terminé la vérification \<objet > ».  
+     Messages d’état commencent par « vérification de cohérence de \<objet > », « démarrer la vérification \<objet > », ou » terminé la vérification \<objet > ».  
   
      Les messages d’erreur sont répertoriés ci-dessous.  
   
@@ -220,27 +220,27 @@ Execution complete
 |**Objet**|**Description de la vérification DBCC**|**Erreur en cas d’échec**|  
 |Base de données|Vérifie le nombre de tables dans la base de données.  Une valeur inférieure à zéro indique un endommagement.|La couche de stockage est endommagée. La collection de tables de la base de données ’%{parent/}’ est endommagée.|  
 |Base de données|Vérifie la structure interne utilisée pour tracer l’intégrité référentielle et lève une erreur si la taille est incorrecte.|Les fichiers de base de données n’ont pas réussi les vérifications de cohérence.|  
-|Table|Vérifie la valeur interne utilisée pour déterminer si la table est une table de dimensions ou de faits.  Une valeur qui se situe en dehors de la plage connue indique un endommagement.|Échec des vérifications de cohérence de la base de données (DBCC) lors de la vérification des statistiques des tables.|  
-|Table|Vérifie que le nombre de partitions dans le mappage des segments de la table correspond au nombre de partitions définies pour la table.|La couche de stockage est endommagée. La collection de partitions de la table ’%{parent/}’ est endommagée.|  
-|Table|Si une base de données tabulaire a été créée ou importée à partir de PowerPivot pour Excel 2010 et qu’elle comporte plus d’une partition, une erreur est déclenchée, indiquant une corruption (la prise en charge des partitions a été ajoutée aux versions ultérieures).|Échec des vérifications de cohérence de la base de données (DBCC) lors de la vérification du mappage de segments.|  
+|Table de charge de travail|Vérifie la valeur interne utilisée pour déterminer si la table est une table de dimensions ou de faits.  Une valeur qui se situe en dehors de la plage connue indique un endommagement.|Échec des vérifications de cohérence de la base de données (DBCC) lors de la vérification des statistiques des tables.|  
+|Table de charge de travail|Vérifie que le nombre de partitions dans le mappage des segments de la table correspond au nombre de partitions définies pour la table.|La couche de stockage est endommagée. La collection de partitions de la table ’%{parent/}’ est endommagée.|  
+|Table de charge de travail|Si une base de données tabulaire a été créée ou importée à partir de PowerPivot pour Excel 2010 et qu’elle comporte plus d’une partition, une erreur est déclenchée, indiquant une corruption (la prise en charge des partitions a été ajoutée aux versions ultérieures).|Échec des vérifications de cohérence de la base de données (DBCC) lors de la vérification du mappage de segments.|  
 |Partition|Pour chaque partition, vérifie que le nombre de segments de données et le nombre d’enregistrements pour chaque segment de données dans le segment correspondent aux valeurs stockées dans l’index du segment.|Échec des vérifications de cohérence de la base de données (DBCC) lors de la vérification du mappage de segments.|  
 |Partition|Génère une erreur si le nombre total d’enregistrements, de segments ou d’enregistrements par segment n’est pas valide (inférieur à zéro), ou que le nombre de segments ne correspond pas au nombre calculé de segments nécessaires selon le nombre total d’enregistrements.|Échec des vérifications de cohérence de la base de données (DBCC) lors de la vérification du mappage de segments.|  
 |Relation|Génère une erreur si la structure utilisée pour stocker les données relatives à la relation ne contient aucun enregistrement ou que le nom de la table utilisée dans la relation est vide.|Échec des vérifications de cohérence de la base de données (DBCC) lors de la vérification des relations.|  
 |Relation|Vérifie que les noms de la table primaire, de la colonne primaire, de la table étrangère et de la colonne étrangère sont définis et que les colonnes et les tables impliquées dans la relation sont accessibles.<br /><br /> Vérifie que les types de colonnes impliqués sont valides et que l’index des valeurs clé étrangère-clé primaire aboutit à une structure de recherche valide.|Échec des vérifications de cohérence de la base de données (DBCC) lors de la vérification des relations.|  
-|Hiérarchie|Génère une erreur si l’ordre de tri pour la hiérarchie n’est pas une valeur reconnue.|Échec des vérifications de cohérence de la base de données (DBCC) lors de la vérification de la hiérarchie '%{hier/}'.|  
-|Hiérarchie|Les vérifications effectuées sur la hiérarchie varient selon le type interne du schéma de mappage de la hiérarchie utilisé.<br /><br /> Pour toutes les hiérarchies, il est vérifié que l’état de traitement est correct, que la banque de hiérarchie existe et, le cas échéant, que les structures de données utilisées pour une conversion d’ID de données en position dans la hiérarchie existent.<br /><br /> En supposant que toutes ces vérifications sont validées, la structure de la hiérarchie est parcourue pour vérifier que chaque position dans la hiérarchie pointe vers le membre approprié.<br />Si l’un de ces tests échoue, une erreur est générée.|Échec des vérifications de cohérence de la base de données (DBCC) lors de la vérification de la hiérarchie '%{hier/}'.|  
+|Hierarchy|Génère une erreur si l’ordre de tri pour la hiérarchie n’est pas une valeur reconnue.|Échec des vérifications de cohérence de la base de données (DBCC) lors de la vérification de la hiérarchie '%{hier/}'.|  
+|Hierarchy|Les vérifications effectuées sur la hiérarchie varient selon le type interne du schéma de mappage de la hiérarchie utilisé.<br /><br /> Pour toutes les hiérarchies, il est vérifié que l’état de traitement est correct, que la banque de hiérarchie existe et, le cas échéant, que les structures de données utilisées pour une conversion d’ID de données en position dans la hiérarchie existent.<br /><br /> En supposant que toutes ces vérifications sont validées, la structure de la hiérarchie est parcourue pour vérifier que chaque position dans la hiérarchie pointe vers le membre approprié.<br />Si l’un de ces tests échoue, une erreur est générée.|Échec des vérifications de cohérence de la base de données (DBCC) lors de la vérification de la hiérarchie '%{hier/}'.|  
 |Hiérarchie définie par l’utilisateur|Vérifie que les noms de niveaux de hiérarchie sont définis.<br /><br /> Si la hiérarchie a été traitée, vérifie que la banque de données de hiérarchie interne a le format correct.  Vérifie que la banque de hiérarchie interne ne contient pas de valeurs de données non valides.<br /><br /> Si la hiérarchie est marquée comme non traitée, vérifie que cet état s’applique aux anciennes structures de données et que tous les niveaux de la hiérarchie sont marqués comme étant vides.|Échec des vérifications de cohérence de la base de données (DBCC) lors de la vérification de la hiérarchie '%{hier/}'.|  
-|Colonne|Génère une erreur si l’encodage utilisé pour la colonne n’est pas défini sur une valeur connue.|Échec des vérifications de cohérence de la base de données (DBCC) lors de la vérification des statistiques des colonnes.|  
-|Colonne|Vérifie si la colonne a été compressée par le moteur en mémoire ou non.|Échec des vérifications de cohérence de la base de données (DBCC) lors de la vérification des statistiques des colonnes.|  
-|Colonne|Vérifie le type de compression sur la colonne pour les valeurs connues.|Échec des vérifications de cohérence de la base de données (DBCC) lors de la vérification des statistiques des colonnes.|  
-|Colonne|Quand la « création de jetons » pour la colonne n’est pas définie sur une valeur connue, génère une erreur.|Échec des vérifications de cohérence de la base de données (DBCC) lors de la vérification des statistiques des colonnes.|  
-|Colonne|Si la plage d’ID stockée pour un dictionnaire de données de colonnes ne correspond pas au nombre de valeurs dans le dictionnaire de données ou qu’elle se situe en dehors de la plage autorisée, génère une erreur.|Échec des vérifications de cohérence de la base de données (DBCC) lors de la vérification du dictionnaire de données.|  
-|Colonne|Vérifie que le nombre de segments de données pour une colonne correspond au nombre de segments de données pour la table à laquelle elle appartient.|La couche de stockage est endommagée. La collection de segments de la colonne '%{parent/}' est endommagée.|  
-|Colonne|Vérifie que le nombre de partitions pour une colonne de données correspond au nombre de partitions pour le mappage de segments de données pour la colonne.|Échec des vérifications de cohérence de la base de données (DBCC) lors de la vérification du mappage de segments.|  
-|Colonne|Vérifie que le nombre d’enregistrements dans un segment de colonne correspond au nombre d’enregistrements stocké dans l’index pour ce segment de colonne.|La couche de stockage est endommagée. La collection de segments de la colonne '%{parent/}' est endommagée.|  
-|Colonne|Si une colonne n’a aucune statistique de segment, génère une erreur.|Échec des vérifications de cohérence de la base de données (DBCC) lors de la vérification des statistiques des segments.|  
-|Colonne|Si une colonne est dépourvue d’informations de compression ou de stockage de segment, génère une erreur.|Les fichiers de base de données n’ont pas réussi les vérifications de cohérence.|  
-|Colonne|Signale une erreur si les statistiques de segment pour une colonne ne correspondent pas aux valeurs de colonne réelles pour l’ID de données minimal, l’ID de données maximal, le nombre de valeurs distinctes, nombre de lignes ou la présence de valeurs NULL.|Échec des vérifications de cohérence de la base de données (DBCC) lors de la vérification des statistiques des segments.|  
+|colonne|Génère une erreur si l’encodage utilisé pour la colonne n’est pas défini sur une valeur connue.|Échec des vérifications de cohérence de la base de données (DBCC) lors de la vérification des statistiques des colonnes.|  
+|colonne|Vérifie si la colonne a été compressée par le moteur en mémoire ou non.|Échec des vérifications de cohérence de la base de données (DBCC) lors de la vérification des statistiques des colonnes.|  
+|colonne|Vérifie le type de compression sur la colonne pour les valeurs connues.|Échec des vérifications de cohérence de la base de données (DBCC) lors de la vérification des statistiques des colonnes.|  
+|colonne|Quand la « création de jetons » pour la colonne n’est pas définie sur une valeur connue, génère une erreur.|Échec des vérifications de cohérence de la base de données (DBCC) lors de la vérification des statistiques des colonnes.|  
+|colonne|Si la plage d’ID stockée pour un dictionnaire de données de colonnes ne correspond pas au nombre de valeurs dans le dictionnaire de données ou qu’elle se situe en dehors de la plage autorisée, génère une erreur.|Échec des vérifications de cohérence de la base de données (DBCC) lors de la vérification du dictionnaire de données.|  
+|colonne|Vérifie que le nombre de segments de données pour une colonne correspond au nombre de segments de données pour la table à laquelle elle appartient.|La couche de stockage est endommagée. La collection de segments de la colonne '%{parent/}' est endommagée.|  
+|colonne|Vérifie que le nombre de partitions pour une colonne de données correspond au nombre de partitions pour le mappage de segments de données pour la colonne.|Échec des vérifications de cohérence de la base de données (DBCC) lors de la vérification du mappage de segments.|  
+|colonne|Vérifie que le nombre d’enregistrements dans un segment de colonne correspond au nombre d’enregistrements stocké dans l’index pour ce segment de colonne.|La couche de stockage est endommagée. La collection de segments de la colonne '%{parent/}' est endommagée.|  
+|colonne|Si une colonne n’a aucune statistique de segment, génère une erreur.|Échec des vérifications de cohérence de la base de données (DBCC) lors de la vérification des statistiques des segments.|  
+|colonne|Si une colonne est dépourvue d’informations de compression ou de stockage de segment, génère une erreur.|Les fichiers de base de données n’ont pas réussi les vérifications de cohérence.|  
+|colonne|Signale une erreur si les statistiques de segment pour une colonne ne correspondent pas aux valeurs de colonne réelles pour l’ID de données minimal, l’ID de données maximal, le nombre de valeurs distinctes, nombre de lignes ou la présence de valeurs NULL.|Échec des vérifications de cohérence de la base de données (DBCC) lors de la vérification des statistiques des segments.|  
 |Segment de colonne|Si les ID de données minimal ou maximal sont inférieurs à la valeur système réservée pour la valeur NULL, marque les informations de segment de colonne comme corrompues.|Échec des vérifications de cohérence de la base de données (DBCC) lors de la vérification des statistiques des segments.|  
 |Segment de colonne|S’il n’y a aucune ligne pour ce segment, les valeurs de données minimale et maximale pour la colonne doivent être définies sur la valeur système réservée pour la valeur NULL.  Si la valeur n’est pas NULL, génère une erreur.|Échec des vérifications de cohérence de la base de données (DBCC) lors de la vérification des statistiques des segments.|  
 |Segment de colonne|Si la colonne contient des lignes et au moins une valeur non NULL, vérifie que les ID de données minimal et maximal pour la colonne sont supérieurs à la valeur système réservée pour la valeur NULL.|Échec des vérifications de cohérence de la base de données (DBCC) lors de la vérification des statistiques des segments.|  
@@ -252,22 +252,22 @@ Execution complete
 |Table DBCC|Pour la table en cours de validation, vérifie si le nombre de colonnes est inférieur à zéro et génère une erreur si la valeur est true.  Une erreur se produit également si la banque des colonnes pour une colonne de la table est NULL.|La couche de stockage est endommagée. La collection de colonnes de la table '%{parent/}' est endommagée.|  
 |Partition DBCC|Vérifie la table à laquelle appartient la partition en cours de validation et, si le nombre de colonnes de la table est inférieur à zéro, indique que la collection de colonnes est endommagée pour la table. Une erreur se produit également si la banque des colonnes pour une colonne dans la table est NULL.|La couche de stockage est endommagée. La collection de colonnes de la table '%{parent/}' est endommagée.|  
 |Partition DBCC|Effectue une itération sur chaque colonne de la partition sélectionnée et vérifie que chaque segment de la partition possède un lien valide vers une structure de segment de colonne.  Si un segment possède un lien NULL, la partition est considérée comme endommagée.|La couche de stockage est endommagée. La collection de segments de la colonne '%{parent/}' est endommagée.|  
-|Colonne|Retourne une erreur si le type de colonne n’est pas valide.|Un type de segment incorrect a été rencontré.|  
-|Colonne|Renvoie une erreur si une colonne a un nombre négatif de segments dans une colonne ou que le pointeur vers la structure de segment de colonne pour un segment possède un lien NULL.|La couche de stockage est endommagée. La collection de segments de la colonne '%{parent/}' est endommagée.|  
-|Commande DBCC|La commande DBCC signale plusieurs messages d’état au fil de son traitement par DBCC.  Avant de démarrer et à l’issue de chaque vérification d’objet, elle indique un message d’état qui inclut le nom de base de données, de table ou de colonne de l’objet.|Vérification de la cohérence de la \<nomobjet > \<typeobjet >. Phase : prévérification.<br /><br /> Vérification de la cohérence de la \<nomobjet > \<typeobjet >. Phase : post-vérification.|  
+|colonne|Retourne une erreur si le type de colonne n’est pas valide.|Un type de segment incorrect a été rencontré.|  
+|colonne|Renvoie une erreur si une colonne a un nombre négatif de segments dans une colonne ou que le pointeur vers la structure de segment de colonne pour un segment possède un lien NULL.|La couche de stockage est endommagée. La collection de segments de la colonne '%{parent/}' est endommagée.|  
+|Commande DBCC|La commande DBCC signale plusieurs messages d’état au fil de son traitement par DBCC.  Avant de démarrer et à l’issue de chaque vérification d’objet, elle indique un message d’état qui inclut le nom de base de données, de table ou de colonne de l’objet.|Vérification de cohérence de la \<objectname > \<typeobjet >. Phase : prévérification.<br /><br /> Vérification de cohérence de la \<objectname > \<typeobjet >. Phase : post-vérification.|  
   
 ## <a name="common-resolutions-for-error-conditions"></a>Solutions courantes pour les conditions d’erreur  
  Les erreurs suivantes s’affichent dans SQL Server Management Studio ou dans les fichiers msmdsrv.log. Ces erreurs se produisent quand une ou plusieurs vérifications échouent. Selon l’erreur, la résolution recommandée consiste soit à traiter à nouveau un objet, à supprimer et à redéployer une solution, soit à restaurer la base de données.  
   
-|Erreur|Problème|Résolution|  
+|Error|Problème|Résolution|  
 |-----------|-----------|----------------|  
 |**Erreurs dans le gestionnaire de métadonnées**<br /><br /> La référence d’objet '\<objectID >' n’est pas valide. Elle ne correspond pas à la structure de la hiérarchie de classes de métadonnées.|Commande mal constituée|Vérifiez la syntaxe de la commande. Très probablement, vous avez inclus un objet de niveau inférieur sans spécifier un ou plusieurs de ses objets parents.|  
-|**Erreurs dans le gestionnaire de métadonnées**<br /><br /> Soit le \<objet > portant l’ID '\<objectID >' n’existe pas dans le \<parentobject > portant l’ID '\<parentobjectID >', ou l’utilisateur ne dispose pas des autorisations nécessaires pour accéder à l’objet.|Endommagement de l’index (multidimensionnel)|Retraitez l’objet et tous les objets dépendants.|  
-|**Une erreur s’est produite pendant la vérification de la cohérence de la partition**<br /><br /> Une erreur s’est produite lors de la vérification de cohérence de la \<-nom de la partition > partition de la \<nom de groupe de mesures > groupe de mesures pour le \<-nom du cube > du cube à partir de la \<nom de la base de données > base de données. Retraitez la partition ou les index pour résoudre le problème.|Endommagement de l’index (multidimensionnel)|Retraitez l’objet et tous les objets dépendants.|  
+|**Erreurs dans le gestionnaire de métadonnées**<br /><br /> Soit le \<objet > portant l’ID '\<objectID >' n’existe pas dans le \<parentobject > portant l’ID '\<Id_objet_parent >', ou l’utilisateur ne dispose pas des autorisations nécessaires pour accéder à l’objet.|Endommagement de l’index (multidimensionnel)|Retraitez l’objet et tous les objets dépendants.|  
+|**Une erreur s’est produite pendant la vérification de la cohérence de la partition**<br /><br /> Une erreur s’est produite lors de la vérification de cohérence de la \<-nom de la partition > partition de la \<nom de groupe de mesures > groupe de mesures pour le \<-nom du cube > cube à partir de la \<nom de la base de données > base de données. Retraitez la partition ou les index pour résoudre le problème.|Endommagement de l’index (multidimensionnel)|Retraitez l’objet et tous les objets dépendants.|  
 |**Statistiques des segments de partition endommagées**|Endommagement de l’index (multidimensionnel)|Retraitez l’objet et tous les objets dépendants.|  
 |**Segment de partition endommagé**|Endommagement des métadonnées (multidimensionnelles ou tabulaires)|Supprimez et redéployez le projet, ou effectuez une restauration à partir d’une sauvegarde et procédez de nouveau au traitement.<br /><br /> Pour obtenir des instructions, consultez le billet de blog [How to Deal with Corruption in Analysis Services](http://blogs.msdn.com/b/karang/archive/2010/08/11/how-to-deal-with-corruption-in-analysis-services.aspx) (Comment gérer l’endommagement dans Analysis Services).|  
 |**Endommagement des métadonnées de table**<br /><br /> Table \<table-name > fichier de métadonnées est endommagé. La table principale ne se trouve pas sous le nœud DataFileList.|Endommagement des métadonnées (tabulaires uniquement)|Supprimez et redéployez le projet, ou effectuez une restauration à partir d’une sauvegarde et procédez de nouveau au traitement.<br /><br /> Pour obtenir des instructions, consultez le billet de blog [How to Deal with Corruption in Analysis Services](http://blogs.msdn.com/b/karang/archive/2010/08/11/how-to-deal-with-corruption-in-analysis-services.aspx) (Comment gérer l’endommagement dans Analysis Services).|  
-|**Endommagement de la couche de stockage**<br /><br /> Une altération dans la couche de stockage : collection de \<type-name > dans \<parent-name > \<type de parent > est endommagé.|Endommagement des métadonnées (tabulaires uniquement)|Supprimez et redéployez le projet, ou effectuez une restauration à partir d’une sauvegarde et procédez de nouveau au traitement.<br /><br /> Pour obtenir des instructions, consultez le billet de blog [How to Deal with Corruption in Analysis Services](http://blogs.msdn.com/b/karang/archive/2010/08/11/how-to-deal-with-corruption-in-analysis-services.aspx) (Comment gérer l’endommagement dans Analysis Services).|  
+|**Endommagement de la couche de stockage**<br /><br /> Une altération dans la couche de stockage : collection de \<type-name > dans \<parent-name > \<nom_parent > est endommagé.|Endommagement des métadonnées (tabulaires uniquement)|Supprimez et redéployez le projet, ou effectuez une restauration à partir d’une sauvegarde et procédez de nouveau au traitement.<br /><br /> Pour obtenir des instructions, consultez le billet de blog [How to Deal with Corruption in Analysis Services](http://blogs.msdn.com/b/karang/archive/2010/08/11/how-to-deal-with-corruption-in-analysis-services.aspx) (Comment gérer l’endommagement dans Analysis Services).|  
 |**Table système manquante**<br /><br /> Table système \<table-name > est manquant.|Endommagement des objets (tabulaires uniquement)|Retraitez l’objet et tous les objets dépendants.|  
 |**Statistiques de table endommagées**<br /><br /> Statistiques de table système \<table-name > est manquant.|Endommagement des métadonnées (tabulaires uniquement)|Supprimez et redéployez le projet, ou effectuez une restauration à partir d’une sauvegarde et procédez de nouveau au traitement.<br /><br /> Pour obtenir des instructions, consultez le billet de blog [How to Deal with Corruption in Analysis Services](http://blogs.msdn.com/b/karang/archive/2010/08/11/how-to-deal-with-corruption-in-analysis-services.aspx) (Comment gérer l’endommagement dans Analysis Services).|  
   
@@ -299,8 +299,8 @@ Execution complete
 ## <a name="see-also"></a>Voir aussi  
  [Traiter une base de données, une table ou une partition &#40;Analysis Services&#41;](../../analysis-services/tabular-models/process-database-table-or-partition-analysis-services.md)   
  [Traitement d’un modèle multidimensionnel &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
- [Analyser une instance Analysis Services](../../analysis-services/instances/monitor-an-analysis-services-instance.md)   
+ [Monitor an Analysis Services Instance](../../analysis-services/instances/monitor-an-analysis-services-instance.md)   
  [Niveau de compatibilité pour les modèles tabulaires dans Analysis Services](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)   
- [Propriétés du serveur dans Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md)  
+ [propriétés du serveur dans Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md)  
   
   

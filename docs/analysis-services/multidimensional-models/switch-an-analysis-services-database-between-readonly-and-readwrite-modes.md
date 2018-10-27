@@ -1,5 +1,5 @@
 ---
-title: Basculer une base de données Analysis Services entre les modes ReadOnly et ReadWrite | Documents Microsoft
+title: Basculer une base de données Analysis Services entre les modes ReadOnly et ReadWrite | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 0df164b267043e4784260b30b039ecb58c2c4cc7
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: c6ede109d13c21686400c0f9ce99c22f1118eda9
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026726"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147914"
 ---
 # <a name="switch-an-analysis-services-database-between-readonly-and-readwrite-modes"></a>Basculer une base de données Analysis Services entre les modes ReadOnly et ReadWrite
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -129,11 +129,11 @@ private void SwitchReadWrite(Server server, string dbName, ReadWriteMode dbReadW
  <xref:Microsoft.AnalysisServices.Database.Detach%2A>   
  [Haute disponibilité et extensibilité dans Analysis Services](../../analysis-services/instances/high-availability-and-scalability-in-analysis-services.md)   
  [Attacher et détacher des bases de données Analysis Services](../../analysis-services/multidimensional-models/attach-and-detach-analysis-services-databases.md)   
- [Emplacement de stockage de base de données](../../analysis-services/multidimensional-models/database-storage-location.md)   
+ [Emplacement de stockage de la base de données](../../analysis-services/multidimensional-models/database-storage-location.md)   
  [Base de données ReadWriteModes](../../analysis-services/multidimensional-models/database-readwritemodes.md)   
- [Élément Attach](../../analysis-services/xmla/xml-elements-commands/attach-element.md)   
- [Élément Detach](../../analysis-services/xmla/xml-elements-commands/detach-element.md)   
- [Élément ReadWriteMode](../../analysis-services/xmla/xml-elements-properties/readwritemode-element.md)   
- [Élément DbStorageLocation](../../analysis-services/xmla/xml-elements-properties/dbstoragelocation-element.md)  
+ [Élément Attach](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/attach-element)   
+ [Élément Detach](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/detach-element)   
+ [Élément ReadWriteMode](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/readwritemode-element)   
+ [Élément StorageLocation](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/dbstoragelocation-element)  
   
   

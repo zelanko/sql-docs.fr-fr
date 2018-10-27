@@ -15,17 +15,17 @@ ms.assetid: c80ebe66-a8f8-4f24-9fe8-8288de9d13bc
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ae3e9f2d0ecf1a5a4fe41f053d8c6cc582663857
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d73461578a939c11771ba329524ef36d2b52cc83
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148759"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147474"
 ---
 # <a name="create-an-alias-for-a-model-column"></a>Créer un alias pour une colonne du modèle
   Dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], vous pouvez créer un alias pour une colonne du modèle. Cela peut se révéler utile lorsque le nom de la structure d'exploration de données est trop long pour l'utiliser aisément, ou lorsque vous souhaitez renommer la colonne pour que son contenu ou son utilisation dans le modèle soient mieux décrits. Par exemple, si vous faites une copie d'une colonne de structure, puis que vous discrétisez la colonne différemment pour un modèle particulier, vous pouvez renommer la colonne pour refléter le contenu de manière plus précise.  
   
- Pour créer un alias pour une colonne du modèle, utilisez le volet **Propriétés** et définissez la propriété [Name](../scripting/properties/name-element-assl.md) de la colonne.  
+ Pour créer un alias pour une colonne du modèle, utilisez le volet **Propriétés** et définissez la propriété [Name](https://docs.microsoft.com/bi-reference/assl/properties/name-element-assl) de la colonne.  
   
  Sous l’onglet **Modèles d’exploration de données** du Concepteur d’exploration de données, l’alias apparaît entre parenthèses à côté de l’étiquette d’utilisation de la colonne.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "48148759"
 2.  Dans la fenêtre **Propriétés** située à droite de l’écran, cliquez sur la cellule à côté de la propriété Name et supprimez la valeur actuelle. Tapez un nouveau nom pour la colonne.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Tâches du modèle d’exploration de données et procédures](mining-model-tasks-and-how-tos.md)   
- [Propriétés du modèle d’exploration de données](mining-model-properties.md)  
+ [Tâches du modèle d'exploration de données et procédures](mining-model-tasks-and-how-tos.md)   
+ [Propriétés du modèle d'exploration de données](mining-model-properties.md)  
   
   

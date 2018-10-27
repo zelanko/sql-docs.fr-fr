@@ -1,5 +1,5 @@
 ---
-title: Base de données ReadWriteModes | Documents Microsoft
+title: Base de données ReadWriteModes | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ec2aebbb202aadf69ccb9ab2c214d878aa0d9d9e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 7e80433c224f08b9074a8d1ef93ef96bdc157853
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022886"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147164"
 ---
 # <a name="database-readwritemodes"></a>Base de données ReadWriteModes
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "34022886"
  <xref:Microsoft.AnalysisServices.Database.Detach%2A>   
  [Attacher et détacher des bases de données Analysis Services](../../analysis-services/multidimensional-models/attach-and-detach-analysis-services-databases.md)   
  [Déplacer une base de données Analysis Services](../../analysis-services/multidimensional-models/move-an-analysis-services-database.md)   
- [Élément Detach](../../analysis-services/xmla/xml-elements-commands/detach-element.md)   
- [Attach, élément](../../analysis-services/xmla/xml-elements-commands/attach-element.md)  
+ [Élément Detach](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/detach-element)   
+ [Élément Attach](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/attach-element)  
   
   

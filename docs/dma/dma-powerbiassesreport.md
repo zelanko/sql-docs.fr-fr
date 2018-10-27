@@ -2,7 +2,7 @@
 title: Analyser les rapports d’évaluation de Data Migration Assistant consolidées avec Power BI (SQL Server) | Microsoft Docs
 description: Découvrez comment utiliser Power BI pour analyser les rapports d’évaluation de Migration de données que vous avez importé et consolidés dans SQL Server
 ms.custom: ''
-ms.date: 08/29/2018
+ms.date: 10/20/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -12,15 +12,15 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Assess
 ms.assetid: ''
-author: HJToland3
+author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 35cd161d29977d97ab3da650de5afdb46ab748a8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 07fdcf0e38f6b48e70140f1ce5c7d9e29d329267
+ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832232"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49643967"
 ---
 # <a name="analyze-consolidated-assessment-reports-created-by-data-migration-assistant-with-power-bi"></a>Analyser les rapports d’évaluation consolidée créés par l’Assistant Migration des données avec Power BI
 

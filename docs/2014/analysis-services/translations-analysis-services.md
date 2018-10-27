@@ -18,19 +18,19 @@ ms.assetid: 018471e0-3c82-49ec-aa16-467fb58a6d5f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e8454d379bcce879ed444a98bf5938e0736ea30e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e85f6ca82f11b9f19c14a020d879afb65a6d1775
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48153059"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145954"
 ---
 # <a name="translations-analysis-services"></a>Traductions (Analysis Services)
   **[!INCLUDE[applies](../includes/applies-md.md)]**  Multidimensionnel uniquement  
   
  Dans un modèle de données multidimensionnel [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , vous pouvez incorporer plusieurs traductions d'une légende pour fournir des chaînes spécifiques aux paramètres régionaux en fonction de l'identificateur LCID. Vous pouvez ajouter des traductions pour le nom de la base de données, les objets du cube et les objets de dimension de base de données.  
   
- La définition d'une traduction crée les métadonnées et la légende traduite à l'intérieur du modèle, mais pour restituer des chaînes localisées dans une application cliente, vous devez définir la propriété `Language` sur l'objet ou passer un paramètre `Locale Identifier` sur la chaîne de connexion (par exemple en définissant `LocaleIdentifier=1036` pour retourner des chaînes en français). Utilisez `Locale Identifier` si vous souhaitez prendre en charge plusieurs traductions simultanées du même objet dans différentes langues. Définition de la `Language` propriété fonctionne, mais cela affecte aussi le traitement et les requêtes, ce qui pourrait avoir des conséquences inattendues. Paramètre `Locale Identifier` constitue le meilleur choix car elle est uniquement utilisée pour retourner des chaînes traduites.  
+ La définition d'une traduction crée les métadonnées et la légende traduite à l'intérieur du modèle, mais pour restituer des chaînes localisées dans une application cliente, vous devez définir la propriété `Language` sur l'objet ou passer un paramètre `Locale Identifier` sur la chaîne de connexion (par exemple en définissant `LocaleIdentifier=1036` pour retourner des chaînes en français). Utilisez `Locale Identifier` si vous souhaitez prendre en charge plusieurs traductions simultanées du même objet dans différentes langues. Définir la propriété `Language` fonctionne, mais cela affecte aussi le traitement et les requêtes, ce qui pourrait avoir des conséquences inattendues. Définir `Locale Identifier` constitue le meilleur choix, car il est utilisé uniquement pour retourner des chaînes traduites.  
   
  Une traduction est composée d'un identificateur de paramètres régionaux (LCID), d'une légende traduite pour l'objet (par exemple le nom de la dimension ou de l'attribut) et éventuellement d'une liaison à une colonne qui fournit des valeurs de données dans la langue cible. Vous pouvez avoir plusieurs traductions, mais vous ne pouvez en utiliser qu'une seule pour une connexion donnée. Il n'existe aucune limite théorique quant au nombre de traductions que vous pouvez incorporer dans le modèle, mais chaque traduction ajoute une complexité au test et toutes les traductions doivent partager le même classement. Vous devez donc garder ces contraintes naturelles à l'esprit lors de la conception de votre solution.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "48153059"
   
 4.  Cliquez avec le bouton droit sur un champ et sélectionnez **Explorer les données**. Vous verrez des traductions en anglais, espagnol et français de chaque membre.  
   
- Les formats de date, d'heure et de devise ne sont pas implémentés dans les traductions. Pour fournir de manière dynamique des formats spécifiques à une culture en fonction des paramètres régionaux du client, utilisez l'Assistant Conversion monétaire et la propriété `FormatString`. Pour plus d’informations, consultez [Conversions monétaires &#40;Analysis Services&#41;](currency-conversions-analysis-services.md) et [Élément FormatString &#40;ASSL&#41;](scripting/properties/formatstring-element-assl.md).  
+ Les formats de date, d'heure et de devise ne sont pas implémentés dans les traductions. Pour fournir de manière dynamique des formats spécifiques à une culture en fonction des paramètres régionaux du client, utilisez l'Assistant Conversion monétaire et la propriété `FormatString`. Pour plus d’informations, consultez [Conversions monétaires &#40;Analysis Services&#41;](currency-conversions-analysis-services.md) et [Élément FormatString &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/formatstring-element-assl).  
   
  [Lesson 9: Defining Perspectives and Translations](lesson-9-defining-perspectives-and-translations.md) d ans le didacticiel Analysis Services décrit les étapes de création et de test des traductions.  
   
@@ -72,12 +72,12 @@ ms.locfileid: "48153059"
   
 4.  Générez et déployez le projet.  
   
-5.  Connectez-vous à la base de données à l'aide d'une application cliente, comme Excel, en modifiant la chaîne de connexion pour utiliser l'identificateur de paramètres régionaux. Pour plus d’informations, consultez [Conseils et meilleures pratiques en matière de globalisation &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md).  
+5.  Connectez-vous à la base de données à l'aide d'une application cliente, comme Excel, en modifiant la chaîne de connexion pour utiliser l'identificateur de paramètres régionaux. Pour plus d’informations, consultez [Conseils et meilleures pratiques en matière de globalisation &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md) .  
   
 ### <a name="add-translations-to-a-dimension-and-attributes"></a>Ajouter des traductions à une dimension et à des attributs  
  Vous pouvez ajouter des traductions à des dimensions de base de données, à des attributs, à des hiérarchies et à des niveaux au sein d'une hiérarchie.  
   
- Vous pouvez ajouter manuellement des légendes traduites au modèle à l'aide de votre clavier ou d'une opération copier-coller, mais pour les membres d'attributs de dimension, vous pouvez obtenir les valeurs traduites à partir d'une base de données externe. Plus précisément, le `CaptionColumn` propriété d’un attribut peut être liée à une colonne dans une vue de source de données.  
+ Vous pouvez ajouter manuellement des légendes traduites au modèle à l'aide de votre clavier ou d'une opération copier-coller, mais pour les membres d'attributs de dimension, vous pouvez obtenir les valeurs traduites à partir d'une base de données externe. Plus précisément, la propriété `CaptionColumn` d'un attribut peut être liée à une colonne dans une vue de source de données.  
   
  Au niveau de l'attribut, vous pouvez remplacer les paramètres de classement. Par exemple, vous souhaiterez peut-être ajuster le respect de la largeur ou utiliser un tri binaire pour un attribut spécifique. Dans [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], le classement est exposé là où les liaisons de données sont définies. Étant donné que vous liez une traduction d'attribut de dimension à une colonne source différente dans la vue de source de données, un paramètre de classement est disponible pour que vous puissiez spécifier le classement utilisé par la colonne source. Pour plus d'informations sur le classement de colonne dans la base de données relationnelle, voir [Set or Change the Column Collation](../relational-databases/collations/set-or-change-the-column-collation.md) .  
   
@@ -110,7 +110,7 @@ ms.locfileid: "48153059"
   
 2.  Dans Traductions, spécifiez la langue cible (résolue en un LCID), la légende traduite et la description traduite. La liste des langues est cohérente dans Analysis Services, que vous définissiez la langue du serveur dans Management Studio ou que vous ajoutiez une traduction de remplacement sur un attribut unique.  
   
-3.  Dans la page de propriétés de la base de données, définissez `Language` le même LCID que vous avez spécifié pour la traduction. Le cas échéant, définissez le `Collation` également si la valeur par défaut n’est plus justifiée.  
+3.  Dans la page Propriétés de la base de données, affectez à la propriété `Language` le même LCID que celui que vous avez spécifié pour la traduction. Si vous le souhaitez, vous pouvez aussi définir la propriété `Collation` si la valeur par défaut n'est plus justifiée.  
   
 4.  Générez et déployez la base de données.  
   
@@ -121,6 +121,6 @@ ms.locfileid: "48153059"
  [Scénarios de globalisation pour données multidimensionnelles Analysis Services](globalization-scenarios-for-analysis-services-multiidimensional.md)   
  [Langues et classements &#40;Analysis Services&#41;](languages-and-collations-analysis-services.md)   
  [Définir ou modifier le classement des colonnes](../relational-databases/collations/set-or-change-the-column-collation.md)   
- [Globalisation conseils et meilleures pratiques &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md)  
+ [Conseils et meilleures pratiques en matière de globalisation &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md)  
   
   

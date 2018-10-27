@@ -19,26 +19,26 @@ ms.assetid: 41887413-2d47-49b8-8614-553cb799fb18
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 44624d6e223c00d76142b2b0859e8b312647da9e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c73417ea9d74588c55177527abdbb42a33c4496e
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48186179"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50144914"
 ---
 # <a name="attach-and-detach-analysis-services-databases"></a>Attacher et détacher des bases de données Analysis Services
   Il existe souvent des cas où un administrateur de base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (dba) souhaite mettre une base de données hors connexion pendant un certain temps, puis la replacer en ligne sur la même (ou une autre) instance de serveur. Ces cas sont souvent motivés par des impératifs d’exploitation, tels que le déplacement de la base de données vers un autre disque afin d’obtenir de meilleures performances, le gain de place afin de permettre la croissance de la base de données, ou la mise à niveau d'un produit. Pour tous ces cas et bien plus encore, le `Attach` et `Detach` commandes activent le [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dba pour mettre la base de données hors connexion et la mettre en ligne avec peu d’efforts.  
   
 ## <a name="attach-and-detach-commands"></a>Commandes Attach et Detach  
- Le `Attach` commande vous permet de mettre en ligne une base de données qui a été mis hors connexion. Vous pouvez attacher la base de données à l'instance de serveur d'origine ou à une autre instance. Lorsque vous attachez une base de données, l'utilisateur peut spécifier le paramètre **ReadWriteMode** pour la base de données. La commande `Detach` permet de placer en mode hors connexion une base de données du serveur.  
+ La commande `Attach` permet de mettre en ligne une base de données placée en mode hors connexion. Vous pouvez attacher la base de données à l'instance de serveur d'origine ou à une autre instance. Lorsque vous attachez une base de données, l'utilisateur peut spécifier le paramètre **ReadWriteMode** pour la base de données. La commande `Detach` permet de placer en mode hors connexion une base de données du serveur.  
   
 ## <a name="attach-and-detach-usage"></a>Utilisation des commandes Attach et Detach  
- Le `Attach` commande est utilisée pour mettre en ligne une structure de base de données existante. Si la base de données est attachée en `ReadWrite` mode, il peut être jointe qu’une seule fois à une instance de serveur. Toutefois, si la base de données est attachée en `ReadOnly` mode, il peut être jointe plusieurs fois pour différentes instances de serveur. Par ailleurs, la même base de données ne peut pas être attachée plus d'une fois à la même instance de serveur. Une erreur est déclenchée en cas de tentative faite pour attacher la même base de données plusieurs fois, même si les données ont été copiées dans des dossiers distincts.  
+ La commande `Attach` est utilisée pour mettre en ligne une structure de base de données existante. Si la base de données est attachée en mode `ReadWrite`, elle ne peut être jointe qu'une seule fois à une instance de serveur. Toutefois, si la base de données est attachée en mode `ReadOnly`, elle peut être jointe plusieurs fois aux différentes instances de serveur. Par ailleurs, la même base de données ne peut pas être attachée plus d'une fois à la même instance de serveur. Une erreur est déclenchée en cas de tentative faite pour attacher la même base de données plusieurs fois, même si les données ont été copiées dans des dossiers distincts.  
   
 > [!IMPORTANT]  
 >  S'il a été demandé un mot de passe pour détacher la base de données, le même mot de passe est requis pour attacher la base de données.  
   
- Le `Detach` commande est utilisée pour mettre hors connexion une structure de base de données existante. Lorsqu'une base de données est détachée, vous devez fournir un mot de passe pour protéger les métadonnées confidentielles.  
+ La commande `Detach` est utilisée pour mettre hors connexion une structure de base de données existante. Lorsqu'une base de données est détachée, vous devez fournir un mot de passe pour protéger les métadonnées confidentielles.  
   
 > [!IMPORTANT]  
 >  Pour protéger le contenu des fichiers de données, vous devez utiliser une liste de contrôle d'accès pour le dossier, les sous-dossiers et les fichiers de données.  
@@ -52,7 +52,7 @@ ms.locfileid: "48186179"
  Les commandes `Attach` et `Detach` doivent être exécutées comme de simples opérations. Elles ne peuvent pas être combinées à d'autres opérations de la même transaction. En outre, le `Attach` et `Detach` commandes sont des commandes transactionnelles atomiques. Cela signifie que soit l'opération réussit, soit elle échoue. Aucune base de données ne demeurera dans un état inachevé.  
   
 > [!IMPORTANT]  
->  Serveur ou des privilèges d’administrateur de base de données sont nécessaires pour exécuter le `Detach` commande.  
+>  Les privilèges administrateur de serveur ou de base de données sont nécessaires pour exécuter la commande `Detach`.  
   
 > [!IMPORTANT]  
 >  Les privilèges d'administrateur de serveur sont requis pour exécuter la commande `Attach`.  
@@ -63,7 +63,7 @@ ms.locfileid: "48186179"
  [Déplacer une base de données Analysis Services](move-an-analysis-services-database.md)   
  [Base de données ReadWriteModes](database-readwritemodes.md)   
  [Basculer une base de données Analysis Services entre les modes ReadOnly et ReadWrite](switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)   
- [Élément Detach](../xmla/xml-elements-commands/detach-element.md)   
- [Attach, élément](../xmla/xml-elements-commands/attach-element.md)  
+ [Élément Detach](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/detach-element)   
+ [Élément Attach](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/attach-element)  
   
   

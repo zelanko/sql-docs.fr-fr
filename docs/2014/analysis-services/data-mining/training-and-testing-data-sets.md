@@ -16,12 +16,12 @@ ms.assetid: 5798fa48-ef3c-4e97-a17c-38274970fccd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9d6c44c63236a351a69b38ef66f14141441c61f7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6e4cf182d303d2fc671b5b6003483781e2d3a4aa
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120261"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50144994"
 ---
 # <a name="training-and-testing-data-sets"></a>Jeux de données d'apprentissage et de test
   La séparation des données en jeux d'apprentissage et jeux de test correspond à une partie importante de l'évaluation des modèles d'exploration de données. En général, lorsque vous séparez un jeu de données en un jeu d'apprentissage et un jeu de test, la plupart des données sont utilisées pour l'apprentissage et une plus petite partie des données est utilisée pour les tests. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] échantillonne de manière aléatoire les données afin de s'assurer que les jeux de test et d'apprentissage sont semblables. L'utilisation de données similaires pour l'apprentissage et les tests vous permet de minimiser les effets des différences de données et de mieux comprendre les caractéristiques du modèle.  
@@ -44,7 +44,7 @@ ms.locfileid: "48120261"
   
  Vous pouvez également configurer l'Assistant pour définir un nombre maximal de cas d'apprentissage ou vous pouvez associer les limites pour permettre un pourcentage maximal de cas jusqu'à un nombre maximal spécifié de cas. Lorsque vous spécifiez à la fois un pourcentage maximal de cas et un nombre maximal de cas, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilise la plus petite des deux limites comme taille du jeu de test. Par exemple, si vous spécifiez une exclusion de 30 % pour les scénarios de test et un nombre maximal de scénarios de test égal à 1000, la taille du jeu de test ne dépassera jamais 1 000 scénarios. Cela peut être utile si vous souhaitez garantir que la taille de votre jeu de test reste cohérente même si des données d'apprentissage supplémentaires sont ajoutées au modèle.  
   
- Si vous utilisez la même vue de source de données pour des structures d'exploration de données différentes et que vous souhaitez vous assurer que les données sont divisées approximativement de la même manière pour toutes les structures d'exploration de données et leurs modèles, vous devez spécifier la valeur de départ qui est utilisée pour initialiser l'échantillonnage aléatoire. Lorsque vous spécifiez une valeur pour `HoldoutSeed`, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilise cette valeur pour commencer l’échantillonnage. Dans le cas contraire, l'échantillonnage utilise un algorithme de hachage sur le nom de la structure d'exploration de données pour créer la valeur de départ.  
+ Si vous utilisez la même vue de source de données pour des structures d'exploration de données différentes et que vous souhaitez vous assurer que les données sont divisées approximativement de la même manière pour toutes les structures d'exploration de données et leurs modèles, vous devez spécifier la valeur de départ qui est utilisée pour initialiser l'échantillonnage aléatoire. Lorsque vous spécifiez une valeur pour `HoldoutSeed`, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilise cette valeur pour commencer l'échantillonnage. Dans le cas contraire, l'échantillonnage utilise un algorithme de hachage sur le nom de la structure d'exploration de données pour créer la valeur de départ.  
   
 > [!NOTE]  
 >  Si vous créez une copie de la structure d'exploration de données à l'aide des instructions `EXPORT` et `IMPORT`, la nouvelle structure d'exploration de données aura les mêmes jeux de données de test et d'apprentissage, car le processus d'exportation crée un nouvel ID mais utilise le même nom. Toutefois, si deux structures d'exploration de données utilisent la même source de données sous-jacente tout en ayant des noms différents, les jeux créés pour chaque structure d'exploration de données seront différents.  
@@ -88,7 +88,7 @@ SELECT * from <structure>.CASES WHERE IsTestCase() AND <structure column name> =
   
 ## <a name="limitations-on-the-use-of-holdout-data"></a>Limitations sur l'utilisation de données d'exclusion  
   
--   Pour utiliser l'exclusion, la propriété <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> de la structure d'exploration de données doit avoir la valeur par défaut, `KeepTrainingCases`. Si vous modifiez le `CacheMode` propriété `ClearAfterProcessing`, puis Retraitez la structure d’exploration de données, la partition seront perdue.  
+-   Pour utiliser l'exclusion, la propriété <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> de la structure d'exploration de données doit avoir la valeur par défaut, `KeepTrainingCases`. Si vous modifiez la propriété `CacheMode` en lui affectant `ClearAfterProcessing`, puis retraitez la structure d'exploration de données, la partition sera perdue.  
   
 -   Vous ne pouvez pas supprimer les données d'un modèle de série chronologique ; par conséquent, vous ne pouvez pas séparer les données sources en jeux d'apprentissage et de test. Si vous commencez par créer une structure d'exploration de données et un modèle, puis choisissez l'algorithme MTS ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series), l'option pour créer un jeu de données d'exclusion est désactivée. L'utilisation des données d'exclusion est également désactivée si la structure d'exploration de données contient une colonne KEY TIME au niveau du cas ou de la table imbriquée.  
   
@@ -96,22 +96,22 @@ SELECT * from <structure>.CASES WHERE IsTestCase() AND <structure column name> =
   
 -   Dans la plupart des cas, la valeur d'exclusion par défaut 30 fournit un bon équilibre entre les données d'apprentissage et de test. Il n'existe pas de méthode simple pour déterminer le volume minimal du jeu de données permettant de fournir un apprentissage suffisant ou le volume maximal du jeu d'apprentissage permettant d'éviter un surajustement. Toutefois, après avoir construit un modèle, vous pouvez utiliser la validation croisée pour évaluer le jeu de données par rapport à un modèle particulier.  
   
--   Outre les propriétés répertoriées dans le tableau précédent, une propriété en lecture seule, `HoldoutActualSize`, est fournie dans les objets AMO et le langage DDL XML. Toutefois, étant donné que la taille réelle d’une partition ne peut pas être déterminée précisément avant une fois que la structure a été traitée, vous devez vérifier si le modèle a été traité avant de récupérer la valeur de la `HoldoutActualSize` propriété.  
+-   Outre les propriétés répertoriées dans le tableau précédent, une propriété en lecture seule, `HoldoutActualSize`, est fournie dans les objets AMO et le langage DDL XML. Toutefois, comme la taille réelle d'une partition ne peut pas être déterminée précisément avant le traitement de la structure, vous devez vérifier si le modèle a été traité avant de récupérer la valeur de la propriété `HoldoutActualSize`.  
   
 ## <a name="related-content"></a>Contenu associé  
   
 |Rubriques|Liens|  
 |------------|-----------|  
 |Décrit comment les filtres sur un modèle interagissent avec les jeux de données d'apprentissage et de test.|[Filtres pour les modèles d’exploration de données &#40;Analysis Services - Exploration de données&#41;](mining-models-analysis-services-data-mining.md)|  
-|Décrit comment l'utilisation des données d'apprentissage et de test affecte la validation croisée.|[La Validation croisée &#40;Analysis Services - Exploration de données&#41;](cross-validation-analysis-services-data-mining.md)|  
-|Fournit des informations sur les interfaces de programmation pour utiliser les jeux d'apprentissage et de test dans une structure d'exploration de données.|[Concepts et modèle objet AMO](../multidimensional-models/analysis-management-objects/amo-concepts-and-object-model.md)<br /><br /> [Élément MiningStructure &#40;ASSL&#41;](../scripting/objects/miningstructure-element-assl.md)|  
-|Fournit la syntaxe DMX pour créer des ensembles d'exclusion.|[CRÉER LA STRUCTURE D’EXPLORATION DE &AMP;#40;DMX&AMP;#41;](/sql/dmx/create-mining-structure-dmx)|  
+|Décrit comment l'utilisation des données d'apprentissage et de test affecte la validation croisée.|[Validation croisée &#40;Analysis Services – Exploration de données&#41;](cross-validation-analysis-services-data-mining.md)|  
+|Fournit des informations sur les interfaces de programmation pour utiliser les jeux d'apprentissage et de test dans une structure d'exploration de données.|[Concepts et modèle objet AMO](https://docs.microsoft.com/bi-reference/amo/amo-concepts-and-object-model)<br /><br /> [Élément MiningStructure &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/objects/miningstructure-element-assl)|  
+|Fournit la syntaxe DMX pour créer des ensembles d'exclusion.|[CREATE MINING STRUCTURE &#40;DMX&#41;](/sql/dmx/create-mining-structure-dmx)|  
 |Récupérer des informations sur les cas dans les jeux d'apprentissage et de test.|[Ensembles de lignes de schéma d’exploration de données](../../relational-databases/native-client-ole-db-rowsets/rowsets.md)<br /><br /> [Interrogation des données d’exploration de données Schema Rowsets &#40;Analysis Services - Exploration de données&#41;](data-mining-schema-rowsets-ssas.md)|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Outils d’exploration de données](data-mining-tools.md)   
- [Concepts d’exploration de données](data-mining-concepts.md)   
- [Solutions d’exploration de données](data-mining-solutions.md)   
- [Test et Validation &#40;exploration de données&#41;](testing-and-validation-data-mining.md)  
+ [Outils d'exploration de données](data-mining-tools.md)   
+ [Concepts d'exploration de données](data-mining-concepts.md)   
+ [Solutions d'exploration de données](data-mining-solutions.md)   
+ [Test et validation &#40;exploration de données&#41;](testing-and-validation-data-mining.md)  
   
   

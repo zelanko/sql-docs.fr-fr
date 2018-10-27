@@ -1,5 +1,5 @@
 ---
-title: Référence technique d’algorithme Microsoft Association | Documents Microsoft
+title: Référence technique d’algorithme Microsoft Association | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: d9cba8f282e1f355b7b4265298890eccb0a4d613
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: b6b3d44410e4d3cf889bc99e7057b6c420f37d7a
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017386"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145904"
 ---
-# <a name="microsoft-association-algorithm-technical-reference"></a>Références techniques relatives à l'algorithme Microsoft Association
+# <a name="microsoft-association-algorithm-technical-reference"></a>Références techniques relatives à l’algorithme Microsoft Association
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  L'algorithme MAR ([!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules) est une implémentation simple de l'algorithme Apriori bien connu.  
+  L'algorithme MAR ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules) est une implémentation simple de l'algorithme Apriori bien connu.  
   
  Vous pouvez utiliser les algorithmes MDT ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees) et MAR ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules) pour analyser des associations, mais les règles identifiées par chaque algorithme peuvent différer. Dans un modèle d'arbres de décision, les divisions qui aboutissent à des règles spécifiques sont basées sur un gain d'informations, tandis que dans un modèle d'association, les règles sont entièrement basées sur la confiance. Par conséquent, dans un modèle d'association, une règle forte ou avec un niveau de confiance élevé n'est pas forcément intéressante car elle ne fournit pas de nouvelles informations.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "34017386"
  L'algorithme MAR ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules) prend en charge plusieurs paramètres qui affectent le comportement, les performances et la précision du modèle d'exploration de données résultant.  
   
 ### <a name="setting-algorithm-parameters"></a>Définition des paramètres de l'algorithme  
- Vous pouvez modifier à tout moment les paramètres d'un modèle d'exploration de données à l'aide du Concepteur d'exploration de données dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Vous pouvez également modifier les paramètres par programmation à l’aide de la <xref:Microsoft.AnalysisServices.MiningModel.AlgorithmParameters%2A> collection dans AMO, ou à l’aide de la [MiningModels élément &#40;ASSL&#41; ](../../analysis-services/scripting/collections/miningmodels-element-assl.md) dans XMLA. La table ci-dessous décrit chaque paramètre.  
+ Vous pouvez modifier à tout moment les paramètres d'un modèle d'exploration de données à l'aide du Concepteur d'exploration de données dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Vous pouvez également modifier les paramètres par programmation à l’aide de la <xref:Microsoft.AnalysisServices.MiningModel.AlgorithmParameters%2A> collection dans AMO, ou en utilisant le [MiningModels élément &#40;ASSL&#41; ](https://docs.microsoft.com/bi-reference/assl/collections/miningmodels-element-assl) dans XMLA. La table ci-dessous décrit chaque paramètre.  
   
 > [!NOTE]  
 >  Vous ne pouvez pas modifier les paramètres dans un modèle existant à l’aide d’une instruction DMX ; vous devez spécifier les paramètres dans DMX CREATE MODEL ou ALTER STRUCTURE… ADD MODEL quand vous créez le modèle.  
@@ -79,7 +79,7 @@ ms.locfileid: "34017386"
  *MAXIMUM_ITEMSET_SIZE*  
  Spécifie le nombre maximal d'éléments autorisés dans un jeu d'éléments. Une valeur de 0 spécifie qu'il n'y a pas de limite quant à la taille du jeu d'éléments.  
   
- La valeur par défaut est 3.  
+ La valeur par défaut est 3.  
   
 > [!NOTE]  
 >  Le fait de réduire cette valeur peut potentiellement accélérer la création du modèle, son traitement étant arrêté une fois la limite atteinte.  
@@ -102,7 +102,7 @@ ms.locfileid: "34017386"
  *MINIMUM_PROBABILITY*  
  Spécifie la probabilité minimale qu'une règle ait la valeur True.  
   
- Par exemple, l'attribution de la valeur 0,5 spécifie que toute règle ayant une probabilité inférieure à 50 % ne peut pas être générée.  
+ Par exemple, l'attribution de la valeur 0,5 spécifie que toute règle ayant une probabilité inférieure à 50 % ne peut pas être générée.  
   
  La valeur par défaut est 0,4.  
   
@@ -143,7 +143,7 @@ ms.locfileid: "34017386"
 ### <a name="input-and-predictable-columns"></a>Colonnes d'entrée et prédictibles  
  L'algorithme MAR ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules) prend en charge les colonnes d'entrée et les colonnes prédictibles répertoriées dans le tableau suivant. Pour plus d’informations sur la signification des types de contenu dans un modèle d’exploration de données, consultez [Types de contenu &#40;exploration de données&#41;](../../analysis-services/data-mining/content-types-data-mining.md).  
   
-|Colonne|Types de contenu|  
+|colonne|Types de contenu|  
 |------------|-------------------|  
 |Attribut d'entrée|Cyclique, discret, discrétisé, clé, table et trié|  
 |Attribut prédictible|Cyclique, discret, discrétisé, table et trié|  
@@ -153,7 +153,7 @@ ms.locfileid: "34017386"
   
 ## <a name="see-also"></a>Voir aussi  
  [Algorithme Microsoft Association](../../analysis-services/data-mining/microsoft-association-algorithm.md)   
- [Exemples de requêtes de modèle association](../../analysis-services/data-mining/association-model-query-examples.md)   
- [Contenu du modèle d’exploration de données pour les modèles d’Association & #40 ; Analysis Services - Exploration de données & #41 ;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)  
+ [Exemples de requêtes de modèle d'association](../../analysis-services/data-mining/association-model-query-examples.md)   
+ [Contenu du modèle d’exploration de données pour les modèles d’association &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)  
   
   

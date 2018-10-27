@@ -1,5 +1,5 @@
 ---
-title: DrilldownMember (MDX) | Documents Microsoft
+title: DrilldownMember (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7991ec4b9f1e4968060774825c08a7cb82fb49b7
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: f5ab4ee77bad08ab3883645ad5e2628a265aa4e9
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740488"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50144894"
 ---
 # <a name="drilldownmember-mdx"></a>DrilldownMember (MDX)
 
@@ -47,9 +47,9 @@ DrillDownMember(<Set_Expression1>, <Set_Expression2> [,[<Target_Hierarchy>]] [,[
  Mot clé permettant d'activer les membres calculés à inclure dans les résultats de l'extraction vers le bas.  
   
 ## <a name="remarks"></a>Notes  
- Cette fonction retourne un jeu de membres enfants classés par hiérarchie et inclut les membres spécifiés dans le premier jeu qui sont également présents dans le deuxième jeu. Les membres parents ne seront pas extraits vers le bas si le premier jeu contient le membre parent et un ou plusieurs enfants. Le premier jeu peut avoir n'importe quelle dimensionnalité mais le deuxième jeu doit contenir un jeu unidimensionnel. L'ordre est conservé parmi les membres d'origine dans le premier jeu, à ceci près que tous les membres enfants inclus dans l'ensemble de résultats de la fonction sont placés immédiatement après leur membre parent. La fonction construit l'ensemble de résultats en récupérant les enfants de chaque membre dans le premier jeu également présent dans le deuxième jeu. Si **récursive** est spécifié, la fonction continue de manière récursive comparer les membres du jeu sur le deuxième jeu, en récupérant les enfants de chaque membre dans le résultat de résultats défini qui est également présent dans le deuxième jeu jusqu'à ce que plus aucun membre du jeu de résultats ne sont accessibles dans le deuxième jeu.  
+ Cette fonction retourne un jeu de membres enfants classés par hiérarchie et inclut les membres spécifiés dans le premier jeu qui sont également présents dans le deuxième jeu. Les membres parents ne seront pas extraits vers le bas si le premier jeu contient le membre parent et un ou plusieurs enfants. Le premier jeu peut avoir n'importe quelle dimensionnalité mais le deuxième jeu doit contenir un jeu unidimensionnel. L'ordre est conservé parmi les membres d'origine dans le premier jeu, à ceci près que tous les membres enfants inclus dans l'ensemble de résultats de la fonction sont placés immédiatement après leur membre parent. La fonction construit l'ensemble de résultats en récupérant les enfants de chaque membre dans le premier jeu également présent dans le deuxième jeu. Si **récursive** est spécifié, la fonction continue à comparer de manière récursive les membres du résultat définis par rapport au deuxième jeu, récupérant les enfants de chaque membre du jeu de résultats qui est également présent dans le deuxième jeu jusqu'à ce que plus aucun Vous trouverez des membres du jeu de résultats dans le deuxième jeu.  
   
- Interrogez la propriété XMLA **MdpropMdxDrillFunctions** vous permet de vérifier le niveau de prise en charge par le serveur pour les fonctions d’extraction, consultez [pris en charge les propriétés XMLA &#40;XMLA&#41; ](../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)pour plus d’informations.  
+ Interrogez la propriété XMLA **MdpropMdxDrillFunctions** vous permet de vérifier le niveau de prise en charge fournis par le serveur pour les fonctions d’extraction ; consultez [propriétés XMLA prises en charge &#40;XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties)pour plus d’informations.  
   
  Le premier jeu peut contenir des tuples au lieu de membres. L'exploration vers le bas des tuples est une extension d'OLE DB et retourne un jeu de tuples à la place des membres.  
   
@@ -82,6 +82,6 @@ SELECT DrilldownMember
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guide de référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

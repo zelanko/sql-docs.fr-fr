@@ -10,12 +10,12 @@ ms.assetid: 0186b7f2-cead-4203-8360-b6890f37cde8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bea792099543df1cf33bf98b256f7dbc3f39c23c
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: a162bc882d65007a85032c234c37b769ee17b9ab
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120382"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50100410"
 ---
 # <a name="extensions-to-adventureworks-to-demonstrate-in-memory-oltp"></a>Extensions à AdventureWorks pour présenter l'OLTP en mémoire
     
@@ -23,7 +23,7 @@ ms.locfileid: "49120382"
  Cet exemple présente les nouvelles fonctionnalités d'[!INCLUDE[hek_2](../includes/hek-2-md.md)], qui fait partie de [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. Il présente les tables optimisées en mémoire et les procédures stockées compilées en mode natif, et illustre les performances d' [!INCLUDE[hek_2](../includes/hek-2-md.md)].  
   
 > [!NOTE]  
->  Pour afficher cette rubrique pour SQL Server 2016, consultez [Extensions à AdventureWorks pour présenter l’OLTP en mémoire](https://msdn.microsoft.com/en-US/library/mt465764.aspx)  
+>  Pour afficher cette rubrique pour SQL Server 2016, consultez [Extensions à AdventureWorks pour présenter l’OLTP en mémoire](https://msdn.microsoft.com/library/mt465764.aspx)  
   
  Dans l'exemple, 5 tables de la base de données AdventureWorks sont migrées vers des tables optimisées en mémoire, et une charge de travail de démonstration est incluse pour le traitement des commandes. Utilisez cette charge de travail de démonstration pour voir le gain de performances obtenu en utilisant [!INCLUDE[hek_2](../includes/hek-2-md.md)] sur votre serveur.  
   
@@ -647,7 +647,7 @@ WHERE t.type='U'
 |SpecialOfferProduct_inmem|64|3712|  
 |DemoSalesOrderHeaderSeed|1984|5504|  
   
- Nous pouvons voir un total d'environ 6,5 Go de données. Notez que la taille des index sur la table SalesOrderHeader_inmem et SalesOrderDetail_inmem est identique à la taille des index avant d’insérer les commandes client. La taille de l'index n'a pas changé car les deux tables utilisent des index de hachage, qui sont statiques.  
+ Nous pouvons voir un total d'environ 6,5 Go de données. Notez que la taille des index sur la table SalesOrderHeader_inmem et SalesOrderDetail_inmem est la même que la taille des index avant d'insérer les commandes. La taille de l'index n'a pas changé car les deux tables utilisent des index de hachage, qui sont statiques.  
   
 #### <a name="after-demo-reset"></a>Après la réinitialisation de la démonstration  
  La procédure stockée Demo.usp_DemoReset peut être utilisée pour réinitialiser la démonstration. Elle supprime les données dans les tables SalesOrderHeader_inmem et SalesOrderDetail_inmem, puis réinsère les données à partir des tables d'origine SalesOrderHeader et SalesOrderDetail.  

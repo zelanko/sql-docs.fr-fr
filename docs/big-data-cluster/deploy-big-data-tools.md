@@ -7,12 +7,12 @@ manager: craigg
 ms.date: 10/05/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 971fc2f8e8a77b00f3d2c5cd6390fec351ffc0f3
-ms.sourcegitcommit: c7d3a903eb7f410db3a0230101d24de0af17621a
+ms.openlocfilehash: 18df937cfed15d7302a58267eb392a1933d73052
+ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48827300"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49643787"
 ---
 # <a name="connect-to-a-sql-server-big-data-cluster-with-azure-data-studio"></a>Se connecter à un cluster SQL Server de données volumineux avec Azure Data Studio
 
@@ -32,22 +32,31 @@ Pour installer l’extension, consultez [installer l’extension de SQL Server 2
 
 Lorsque vous vous connectez à un cluster de données volumineux, vous pouvez vous connecter à SQL Server [instance principale](concept-master-instance.md) ou à la passerelle HDFS/Spark. Les sections suivantes montrent comment se connecter à chacun.
 
-## <a name="master-instance"></a>Instance principale
+## <a id="master"></a> Instance principale
 
 1. Dans Azure Data Studio, appuyez sur **F1** > **nouvelle connexion**.
+
 1. Dans **type de connexion**, sélectionnez **Microsoft SQL Server**.
+
 1. Tapez l’adresse IP de l’instance principale de SQL Server dans **nom du serveur** (par exemple :  **\<adresse IP\>, 31433**).
+
+1. Entrez un nom de connexion SQL **nom d’utilisateur** et **mot de passe**.
+
 1. Modifier le **nom de la base de données** à la **high_value_data** base de données.
 
    ![Se connecter à l’instance principale](./media/deploy-big-data-tools/connect-to-cluster.png)
 
 1. Appuyez sur **Connect**et le **tableau de bord Server** doit apparaître.
 
-## <a name="hdfsspark-gateway"></a>Passerelle HDFS/Spark
+## <a id="hdfs"></a> Passerelle HDFS/Spark
 
 1. Dans Azure Data Studio, appuyez sur **F1** > **nouvelle connexion**.
+
 1. Dans **type de connexion**, sélectionnez **cluster de données volumineux de SQL Server**.
+
 1. Tapez l’adresse IP du cluster big data dans **nom du serveur**.
+
+1. Entrez `root` pour le **utilisateur** et spécifiez le **mot de passe** à votre cluster big data.
 
    ![Se connecter à HDFS/Spark passerelle](./media/deploy-big-data-tools/connect-to-cluster-hdfs-spark.png)
 

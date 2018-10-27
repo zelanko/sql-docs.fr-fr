@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 859214876b5c62078ccdfee72bf23caf3904df07
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 70fb50abdd9411e5f34b704d53e66302270fdfd7
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38016086"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145994"
 ---
 # <a name="what39s-new-in-analysis-services"></a>Ce que&#39;nouveauté d’Analysis Services
 [!INCLUDE[ssas-appliesto-sql2016](../includes/ssas-appliesto-sql2016.md)]
@@ -94,7 +94,7 @@ Une *table calculée* est une construction de modèle uniquement qui est basée 
  ### <a name="powershell-for-tabular-models"></a>PowerShell pour les modèles tabulaires    
  Cette version inclut des améliorations de PowerShell pour les modèles tabulaires au niveau de compatibilité 1200. Vous pouvez utiliser toutes les applets de commande applicables, ainsi que les applets de commande spécifiques du mode tabulaire : [Invoke-ProcessASDatabase](../analysis-services/powershell/invoke-processasdatabase.md) et [Invoke-ProcessTable](../analysis-services/powershell/invoke-processtable-cmdlet.md).    
  ### <a name="ssms-scripting-database-operations"></a>Création de scripts SSMS pour les opérations de base de données    
- Dans la [dernière version de SQL Server Management Studio (SSMS)](http://msdn.microsoft.com/library/mt238290.aspx), la création de scripts est désormais possible pour les commandes de base de données, notamment Create, Alter, Delete, Backup, Restore, Attach et Detach. La sortie est en langage TMSL (Tabular Model Scripting Language) au format JSON. Pour plus d’informations, consultez [Tabular Model Scripting Language &#40;TMSL&#41; Reference](../analysis-services/tabular-model-scripting-language-tmsl-reference.md) (Informations de référence sur TMSL&#40;Tabular Model Scripting Language&#41;).    
+ Dans la [dernière version de SQL Server Management Studio (SSMS)](http://msdn.microsoft.com/library/mt238290.aspx), la création de scripts est désormais possible pour les commandes de base de données, notamment Create, Alter, Delete, Backup, Restore, Attach et Detach. La sortie est en langage TMSL (Tabular Model Scripting Language) au format JSON. Pour plus d’informations, consultez [Tabular Model Scripting Language &#40;TMSL&#41; Reference](https://docs.microsoft.com/bi-reference/tmsl/tabular-model-scripting-language-tmsl-reference) (Informations de référence sur TMSL&#40;Tabular Model Scripting Language&#41;).    
  ### <a name="analysis-services-execute-ddl-task"></a>Tâche DDL d'exécution de SQL Server Analysis Services    
  La[tâche DDL d’exécution Analysis Services](../integration-services/control-flow/analysis-services-execute-ddl-task.md) prend aussi désormais en charge les commandes en langage TMSL (Tabular Model Scripting Language).     
  ### <a name="ssas-powershell-cmdlet"></a>Applet de commande PowerShell de SSAS    
@@ -103,7 +103,7 @@ Pour plus d'informations, consultez [Analysis Services PowerShell Reference](../
  ### <a name="tabular-model-scripting-language-tmsl-supported-in-ssms"></a>Prise en charge du langage TMSL (Tabular Model Scripting Language) dans SSMS    
   Avec la [version la plus récente de SSMS](http://msdn.microsoft.com/library/mt238290.aspx), vous pouvez maintenant créer des scripts pour automatiser la plupart des tâches d’administration pour les modèles 1200 tabulaires. Actuellement, vous pouvez créer des scripts pour les tâches suivantes : Process à tous les niveaux, ainsi que CREATE, ALTER et DELETE au niveau de la base de données.    
     
- TMSL fonctionne de manière équivalente à l’extension ASSL de XMLA qui fournit les définitions des objets multidimensionnels. La différence est que TMSL utilise des descripteurs natifs, tels que **model**, **table**et **relationship** , pour décrire les métadonnées tabulaires. Pour plus d’informations sur le schéma, consultez [Tabular Model Scripting Language &#40;TMSL&#41; Reference](../analysis-services/tabular-model-scripting-language-tmsl-reference.md) (Informations de référence sur TMSL&#40;Tabular Model Scripting Language&#41;).    
+ TMSL fonctionne de manière équivalente à l’extension ASSL de XMLA qui fournit les définitions des objets multidimensionnels. La différence est que TMSL utilise des descripteurs natifs, tels que **model**, **table**et **relationship** , pour décrire les métadonnées tabulaires. Pour plus d’informations sur le schéma, consultez [Tabular Model Scripting Language &#40;TMSL&#41; Reference](https://docs.microsoft.com/bi-reference/tmsl/tabular-model-scripting-language-tmsl-reference) (Informations de référence sur TMSL&#40;Tabular Model Scripting Language&#41;).    
     
  Un script au format JSON créé pour un modèle tabulaire ressemble à ceci :    
     
@@ -121,7 +121,7 @@ Pour plus d'informations, consultez [Analysis Services PowerShell Reference](../
 }    
 ```    
 
-La charge utile est un document JSON qui peut être très simple, comme dans l’exemple ci-dessus, ou être beaucoup plus complet avec l’ensemble des définitions d’objet. Pour plus d’informations sur la syntaxe, consultez [Tabular Model Scripting Language &#40;TMSL&#41; Reference](../analysis-services/tabular-model-scripting-language-tmsl-reference.md) (Informations de référence sur TMSL&#40;Tabular Model Scripting Language&#41;).
+La charge utile est un document JSON qui peut être très simple, comme dans l’exemple ci-dessus, ou être beaucoup plus complet avec l’ensemble des définitions d’objet. Pour plus d’informations sur la syntaxe, consultez [Tabular Model Scripting Language &#40;TMSL&#41; Reference](https://docs.microsoft.com/bi-reference/tmsl/tabular-model-scripting-language-tmsl-reference) (Informations de référence sur TMSL&#40;Tabular Model Scripting Language&#41;).
 
 Au niveau de la base de données, le script TMSL pour les commandes CREATE, ALTER et DELETE est généré dans la fenêtre XMLA classique.  Dans cette version, d’autres commandes, telles que Process, peuvent également faire l’objet d’un script. La prise en charge des scripts pour de nombreuses autres actions pourrait être ajoutée dans une version ultérieure.    
 

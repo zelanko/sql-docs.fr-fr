@@ -1,24 +1,24 @@
 ---
-title: Configurer Azure Kubernetes Service pour les déploiements de SQL Server 2019 CTP 2.0 | Microsoft Docs
-description: ''
+title: Configurer Azure Kubernetes Service pour les déploiements de cluster SQL Server 2019 big data | Microsoft Docs
+description: Découvrez comment configurer Azure Kubernetes Service (AKS) pour les déploiements de cluster (version préliminaire) de SQL Server 2019 big data.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/01/2018
+ms.date: 10/23/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: ee1faae6d43cbf2cc6c8a23086600241ad15e061
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: 3a1cd6dcaf669071517f1a7c6196e22ce33f55ca
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460894"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50050911"
 ---
-# <a name="configure-azure-kubernetes-service-for-sql-server-2019-ctp-20"></a>Configurer Azure Kubernetes Service pour SQL Server 2019 CTP 2.0
+# <a name="configure-azure-kubernetes-service-for-sql-server-2019-preview-deployments"></a>Configurer Azure Kubernetes Service pour les déploiements de SQL Server 2019 (version préliminaire)
 
-Azure Kubernetes Service (AKS) permet de facilement créer, configurer et gérer un cluster de machines virtuelles qui sont préconfigurées avec un cluster Kubernetes pour exécuter des applications en conteneur. 
+Cet article décrit comment configurer Azure Kubernetes Service (AKS) pour les déploiements de cluster (version préliminaire) de SQL Server 2019 big data. 
 
-Cela vous permet d’utiliser vos compétences existantes ou de faire appel à une importante et croissante de la Communauté d’experts, pour déployer et gérer des applications en conteneur sur Microsoft Azure.
+AKS permet de facilement créer, configurer et gérer un cluster de machines virtuelles qui sont préconfigurées avec un cluster Kubernetes pour exécuter des applications en conteneur. Cela vous permet d’utiliser vos compétences existantes ou de faire appel à une importante et croissante de la Communauté d’experts, pour déployer et gérer des applications en conteneur sur Microsoft Azure.
 
 Cet article décrit les étapes pour déployer Kubernetes sur AKS à l’aide d’Azure CLI. Si vous n’avez pas un abonnement Azure, créez un compte gratuit avant de commencer.
 
@@ -34,7 +34,7 @@ Cet article décrit les étapes pour déployer Kubernetes sur AKS à l’aide d�
 
 - Cette section, vous devez être en cours d’exécution Azure CLI version 2.0.4 ou version ultérieure. Si vous avez besoin installer ou mettre à niveau, consultez [installer Azure CLI 2.0](https://docs.microsoft.com/cli/azure/install-azure-cli). Exécutez `az --version` pour trouver la version, si nécessaire.
 
-- Installer [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/). Cluster de SQL Server Big Data requiert toute version mineure dans la plage de 1.10 version pour Kubernetes, pour le serveur et client. Pour installer une version spécifique sur le client kubectl, consultez [installer kubectl binaire via curl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl). Pour AKS, vous devez utiliser `--kubernetes-version` paramètre pour spécifier une version différente de celle par défaut. Notez qu’à la période de mise en production CTP2.0, AKS prend uniquement en charge les versions 1.10.7 et 1.10.8. 
+- Installer [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/). Cluster de données volumineux de SQL Server requiert toute version mineure dans la plage de 1.10 version pour Kubernetes, pour le serveur et client. Pour installer une version spécifique sur le client kubectl, consultez [installer kubectl binaire via curl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl). Pour AKS, vous devez utiliser `--kubernetes-version` paramètre pour spécifier une version différente de celle par défaut. Notez qu’à la période de mise en production CTP2.0, AKS prend uniquement en charge les versions 1.10.7 et 1.10.8. 
 
 
 > [!NOTE]
@@ -108,6 +108,6 @@ Un groupe de ressources Azure est un groupe logique dans Azure les ressources so
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Les étapes décrites dans cet article configuré un cluster Kubernetes dans ACS. L’étape suivante consiste à déployer SQL Server 2019 Big Data dans le cluster.
+Les étapes décrites dans cet article configuré un cluster Kubernetes dans ACS. L’étape suivante consiste à déployer SQL Server 2019 des données volumineuses vers le cluster.
 
-[Déployer un cluster SQL Server 2019 Big Data sur Kubernetes](quickstart-big-data-cluster-deploy.md)
+[Démarrage rapide : Déployer le cluster de données volumineux de SQL Server sur Azure Kubernetes Service (AKS)](quickstart-big-data-cluster-deploy.md)

@@ -11,17 +11,17 @@ ms.assetid: 8de3c500-f881-42da-a096-b6c03300d58d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 36c92e5ebd4ad0e8757d47fd8ce2b58995140670
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f04abc5506e78e332b188cfc87c727b0000ca621
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171419"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147344"
 ---
 # <a name="lesson-4-browsing-the-bike-buyer-mining-models"></a>Leçon 4 : Exploration des modèles d'exploration de données Bike Buyer
   Dans cette leçon, vous allez utiliser le [SELECT (DMX)](/sql/dmx/select-dmx) instruction pour Explorer le contenu dans l’arbre de décision et clustering d’exploration de données que vous avez créé dans les modèles [leçon 2 : ajout de modèles d’exploration de données à la Structure d’exploration de données prédictive](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md).  
   
- Les colonnes figurant dans un modèle d'exploration de données ne sont pas les colonnes définies par la structure d'exploration de données ; elles forment plutôt un ensemble spécifique de colonnes décrivant des tendances et des modèles identifiés par l'algorithme. Ces colonnes du modèle d’exploration de données sont décrits dans le [de lignes DMSCHEMA_MINING_MODEL_CONTENT](../analysis-services/schema-rowsets/data-mining/dmschema-mining-model-content-rowset.md) ensemble de lignes de schéma. Par exemple, la colonne MODEL_NAME située dans l'ensemble de lignes du schéma contient le nom du modèle d'exploration de données. Dans le cadre d'un modèle d'exploration de données clustering, la colonne NODE_CAPTION renferme le nom de chaque cluster et la colonne NODE_DESCRIPTION contient une description des caractéristiques de chacun de ces clusters. Vous pouvez parcourir ces colonnes à l’aide de SELECT FROM \<modèle >. Instruction contenue dans DMX. Le recours à cette instruction est également possible si vous souhaitez explorer les données utilisées pour la création du modèle d'exploration de données. Pour utiliser cette instruction, vous devez activer la fonction d'extraction dans la structure d'exploration de données. Pour plus d’informations sur l’instruction, consultez [SELECT FROM &#60;modèle&#62;. CAS &#40;DMX&#41;](/sql/dmx/select-from-model-content-dmx).  
+ Les colonnes figurant dans un modèle d'exploration de données ne sont pas les colonnes définies par la structure d'exploration de données ; elles forment plutôt un ensemble spécifique de colonnes décrivant des tendances et des modèles identifiés par l'algorithme. Ces colonnes du modèle d’exploration de données sont décrits dans le [de lignes DMSCHEMA_MINING_MODEL_CONTENT](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-rowset) ensemble de lignes de schéma. Par exemple, la colonne MODEL_NAME située dans l'ensemble de lignes du schéma contient le nom du modèle d'exploration de données. Dans le cadre d'un modèle d'exploration de données clustering, la colonne NODE_CAPTION renferme le nom de chaque cluster et la colonne NODE_DESCRIPTION contient une description des caractéristiques de chacun de ces clusters. Vous pouvez parcourir ces colonnes à l’aide de SELECT FROM \<modèle >. Instruction contenue dans DMX. Le recours à cette instruction est également possible si vous souhaitez explorer les données utilisées pour la création du modèle d'exploration de données. Pour utiliser cette instruction, vous devez activer la fonction d'extraction dans la structure d'exploration de données. Pour plus d’informations sur l’instruction, consultez [SELECT FROM &#60;modèle&#62;. CAS &#40;DMX&#41;](/sql/dmx/select-from-model-content-dmx).  
   
  Vous pouvez également afficher tous les états d'une colonne discrète par le biais de l'instruction SELECT DISTINCT. Par exemple, si vous effectuez cette opération sur une colonne Sexe, la requête retourne les valeurs `male` et `female`.  
   
@@ -50,7 +50,7 @@ WHERE <where clause>
 SELECT <select list> FROM [<mining model].CONTENT  
 ```  
   
- La clause .CONTENT en regard du nom du modèle d'exploration de données précise que le contenu est retourné à partir du modèle d'exploration de données. Pour plus d’informations sur les colonnes contenues dans le modèle d’exploration de données, consultez [de lignes DMSCHEMA_MINING_MODEL_CONTENT](../analysis-services/schema-rowsets/data-mining/dmschema-mining-model-content-rowset.md).  
+ La clause .CONTENT en regard du nom du modèle d'exploration de données précise que le contenu est retourné à partir du modèle d'exploration de données. Pour plus d’informations sur les colonnes contenues dans le modèle d’exploration de données, consultez [de lignes DMSCHEMA_MINING_MODEL_CONTENT](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-rowset).  
   
  Vous pouvez éventuellement exploiter la dernière ligne du code pour filtrer les résultats retournés par l'instruction :  
   
@@ -86,7 +86,7 @@ WHERE NODE_SUPPORT > 100
     *  
     ```  
   
-     Vous pouvez également remplacer * avec une liste d’une des colonnes contenues dans le [de lignes DMSCHEMA_MINING_MODEL_CONTENT](../analysis-services/schema-rowsets/data-mining/dmschema-mining-model-content-rowset.md).  
+     Vous pouvez également remplacer * avec une liste d’une des colonnes contenues dans le [de lignes DMSCHEMA_MINING_MODEL_CONTENT](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-rowset).  
   
 4.  Remplacez le code suivant :  
   

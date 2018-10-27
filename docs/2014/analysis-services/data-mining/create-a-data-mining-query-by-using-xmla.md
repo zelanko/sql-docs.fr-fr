@@ -13,12 +13,12 @@ ms.assetid: 8f6b6008-006c-4792-9bd1-64c30dc3fd41
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: dae6b521b26158e8bf854fe357d7119ca3a3b4c2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: acec8d8bb72566d00593634d7d2ee27a41fd9688
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161749"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148084"
 ---
 # <a name="create-a-data-mining-query-by-using-xmla"></a>Créer une requête d’exploration de données en utilisant XMLA
   Vous pouvez créer diverses requêtes sur les objets d'exploration de données en utilisant AMO, DMX ou XML/A.  
@@ -100,7 +100,7 @@ ms.locfileid: "48161749"
      Le volet Résultats affiche la définition de schéma ainsi que les valeurs du modèle spécifié.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Contenu du modèle d’exploration de données &#40;Analysis Services - Exploration de données&#41;](mining-model-content-analysis-services-data-mining.md)   
- [Ensembles de lignes de schéma d’exploration de données](../schema-rowsets/data-mining/data-mining-schema-rowsets.md) 
+ [Contenu du modèle d’exploration &#40;Analysis Services - Exploration de données&#41;](mining-model-content-analysis-services-data-mining.md)   
+ [Data Mining Schema Rowsets](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/data-mining-schema-rowsets) 
   
   

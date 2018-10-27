@@ -2,7 +2,7 @@
 title: Identifier la référence SKU à base de données SQL Azure appropriée pour votre base de données locale (Data Migration Assistant) | Microsoft Docs
 description: Découvrez comment utiliser l’Assistant de Migration de données pour identifier le droit SKU de base de données SQL Azure pour votre base de données locale
 ms.custom: ''
-ms.date: 08/29/2018
+ms.date: 10/20/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -12,15 +12,15 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Assess
 ms.assetid: ''
-author: HJToland3
+author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 63a21ebfd11e9104a2a4b3722a6d54df57784f81
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 80d4ff4e6eae3d3e2d997bb4f851326a9caace73
+ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684447"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49643997"
 ---
 # <a name="identify-the-right-azure-sql-database-sku-for-your-on-premises-database"></a>Identifier la référence SKU à base de données SQL Azure appropriée pour votre base de données locale
 
@@ -141,7 +141,7 @@ Une description de chaque colonne suit.
 - **MetricValue** -recommandé de base de données SQL Azure référence (SKU).
 - **SQLMiEquivalentCores** -si vous souhaitez aller pour Azure SQL Database Managed Instance, vous pouvez utiliser cette valeur pour le nombre de cœurs.
 - **IsTierRecommended** -nous nous assurons une recommandation de référence (SKU) minimale pour chaque niveau. Nous appliquons ensuite les paramètres heuristiques pour déterminer le niveau approprié pour votre base de données. 
-- **ExclusionReasons** -cette valeur est vide si un niveau est recommandé. Pour chaque niveau qui n’est pas recommandé, nous fournissons les raisons pourquoi il n’était pas récupéré.
+- **ExclusionReasons** -cette valeur est vide si un niveau est recommandé. Pour chaque niveau qui n’est pas recommandé, nous fournissons les raisons pourquoi il n’a pas été récupéré.
 - **AppliedRules** -une notation courte des règles qui ont été appliquées.
 
 La valeur recommandée est la référence (SKU) minimale nécessaire pour vos requêtes à exécuter dans Azure avec un taux de réussite semblable à vos bases de données sur site. Par exemple, si la référence (SKU) minimale recommandée est S4 pour le niveau standard, puis en choisissant S3 ci-dessous sera provoquer l’expiration du délai des requêtes ou ne parviennent pas à exécuter.

@@ -13,12 +13,12 @@ ms.assetid: 8c7d9f8e-06bb-476c-bbd2-15b61d5bba3c
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: aab7c06903f334ee0b24907cb4189b56d620b49a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 903fd6b9af4bc363f5f37ea353ab9ddeb93e347c
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47842967"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099413"
 ---
 # <a name="managing-passwords-oracletosql"></a>Gestion des mots de passe (OracleToSQL)
 Cette section concerne la sécurisation des mots de passe de base de données et la procédure pour importer ou exporter les sur les serveurs :  
@@ -127,5 +127,5 @@ Exemple :
     Please confirm password: xxxxxxxx  
   
 ## <a name="see-also"></a>Voir aussi  
-[Exécution de la Console SSMA (Oracle)](http://msdn.microsoft.com/en-us/7228ccba-c69f-4b4c-8664-01a2750183c5)  
+[Exécution de la Console SSMA (Oracle)](http://msdn.microsoft.com/7228ccba-c69f-4b4c-8664-01a2750183c5)  
   

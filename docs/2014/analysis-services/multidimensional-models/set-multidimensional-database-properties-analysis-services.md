@@ -13,12 +13,12 @@ ms.assetid: a8be5b3f-3148-448a-976c-7222705155d9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5e08cccf573d86d7904e695afdab289084f65604
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 338eb4766573cf99d3070fe91cdd276721df79b8
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113430"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147974"
 ---
 # <a name="set-multidimensional-database-properties-analysis-services"></a>Définir les propriétés de base de données multidimensionnelle (Analysis Services)
   Vous pouvez configurer de nombreuses propriétés de base de données [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dans le Concepteur de bases de données [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] .  
@@ -38,7 +38,7 @@ ms.locfileid: "48113430"
   
 |Propriété|Description|  
 |--------------|-----------------|  
-|Préfixe d'agrégation|Préfixe commun pouvant être utilisé pour les noms d'agrégation de toutes les partitions d'une base de données. Pour plus d’informations, consultez [Élément AggregationPrefix &#40;ASSL&#41;](../scripting/properties/aggregationprefix-element-assl.md).|  
+|Préfixe d'agrégation|Préfixe commun pouvant être utilisé pour les noms d'agrégation de toutes les partitions d'une base de données. Pour plus d’informations, consultez [Élément AggregationPrefix &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/aggregationprefix-element-assl).|  
 |Classement|Si le projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] est déployé sur une instance [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , la base de données hérite de la propriété de classement du serveur, sauf si une valeur différente est spécifiée ici.|  
 |DataSourceImpersonationInfo|Indique le mode d'emprunt d'identité par défaut pour tous les objets de source de données dans la base de données. Il s’agit du mode utilisé par le service [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pendant le traitement des objets, la synchronisation des serveurs et l’exécution des instructions d’exploration de données OpenQuery et SystemOpenSchema.|  
 |Taille estimée|Fournit la taille estimée des fichiers de base de données sur le disque. Si les données sont stockées dans plusieurs emplacements, cette estimation sera limitée aux fichiers de données stockés sous le dossier de la base de données.<br /><br /> `EstimatedSize` peut également être utilisé comme base d'estimation de la mémoire. En général, la configuration requise pour la mémoire est supérieure à la taille des données sur le disque en raison des structures de données supplémentaires qui sont créées lors du chargement de la base de données dans la mémoire.<br /><br /> Pour affiner la configuration requise pour la mémoire, vous pouvez également utiliser le Gestionnaire des tâches afin d'examiner la mémoire de traitement Analysis Services avant et après le traitement de la base de données et observer la mémoire utilisée pour comprendre la configuration requise pour la mémoire de la base de données.|  
@@ -46,7 +46,7 @@ ms.locfileid: "48113430"
 |MasterDataSource ID|Utilisé avec les partitions distantes. Pour plus d’informations, consultez [Partitions distantes](../multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md).|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Boîte de dialogue Propriétés de base de données &#40;SSAS - multidimensionnel&#41;](../database-properties-dialog-box-ssas-multidimensional.md)   
- [Configurer les propriétés de projet Analysis Services &#40;SSDT&#41;](configure-analysis-services-project-properties-ssdt.md)  
+ [Boîte de dialogue Propriétés de la base de données &#40;SSAS - Multidimensionnelle&#41;](../database-properties-dialog-box-ssas-multidimensional.md)   
+ [Configurer les propriétés d’un projet Analysis Services &#40;SSDT&#41;](configure-analysis-services-project-properties-ssdt.md)  
   
   

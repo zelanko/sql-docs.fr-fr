@@ -1,5 +1,5 @@
 ---
-title: Générer des projets Analysis Services (SSDT) | Documents Microsoft
+title: Générer des projets Analysis Services (SSDT) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 18c906c7dea3b57b2760a7bb5f44e69834906e6a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: b00fecf6712d8ab1d4ba8b810485af6d432479ac
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022992"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147268"
 ---
 # <a name="build-analysis-services-projects-ssdt"></a>Générer des projets Analysis Services (SSDT)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "34022992"
   
  Une fois la validation terminée, [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] génère les fichiers XML. Après la génération, le dossier de sortie contient les fichiers décrits dans le tableau suivant.  
   
-|Fichiers (dans le dossier bin)| Description|  
+|Fichiers (dans le dossier bin)|Description|  
 |-----------------------------|-----------------|  
 |*nom_projet*.asdatabase|Contient les éléments ASSL qui définissent les métadonnées des objets du projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dans un fichier de script de déploiement. Ce fichier est utilisé par le moteur de déploiement pour déployer les objets dans une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
 |*nom_projet*.configsettings|Contient les paramètres de configuration utilisés pendant le déploiement que vous pouvez modifier directement ou dans l’Assistant Déploiement [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (par exemple, la chaîne de connexion pour les sources de données).|  
@@ -46,16 +46,16 @@ ms.locfileid: "34022992"
 |*nom_projet*.deploymentoptions|Contient plusieurs paramètres utilisés pendant le déploiement que vous pouvez modifier directement ou dans l’Assistant Déploiement [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (par exemple, les emplacements de stockage).|  
 |*nom_assembly*/*dllname.* DLL|Les dossiers sont distincts pour chaque assembly référencé ; chaque dossier contient la DLL de l'assembly, l'assembly référencé et les fichiers .pdb associés pour les informations de débogage de la sortie.|  
   
-|Fichiers (dans le dossier obj)| Description|  
+|Fichiers (dans le dossier obj)|Description|  
 |-----------------------------|-----------------|  
 |\<Nom de configuration > \LastBuilt.xml|Contient le cachet temporel et le code de hachage qui identifient la dernière fois où le projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] a été généré.|  
   
- Ces fichiers XML ne contiennent pas \<Create > et \<Alter > balises, qui sont créées lors du déploiement.  
+ Ces fichiers XML ne contiennent pas \<créer > et \<Alter > balises, qui sont créées au cours du déploiement.  
   
  Les assemblys référencés (à l'exception des assembly système standard et [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ) sont également copiés dans le répertoire de sortie. S'il existe des références à d'autres projets d'une solution, ces projets sont créés en premier lieu, à l'aide des dépendances de génération et de configuration du projet approprié établies par les références au projet, puis copiées dans le dossier de sortie du projet.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Langage de script Analysis Services &#40;ASSL pour XMLA&#41;](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)   
- [Déployer des projets Analysis Services & #40 ; SSDT & #41 ;](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
+ [Langage de script Analysis Services &#40;ASSL pour XMLA&#41;](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)   
+ [Déployer des projets Analysis Services &#40;SSDT&#41;](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
   
   

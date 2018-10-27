@@ -12,12 +12,12 @@ ms.assetid: 0ceb461e-12c1-44ea-97ac-b99bf308676b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d03d763bc0992973604f2b891492931d23415994
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 13b703abc7c95523de9c8e2a5e06e984711f50bd
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178649"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147934"
 ---
 # <a name="tabular-model-programming"></a>Programmation de modèle tabulaire
   Les modèles tabulaires utilisent des constructions relationnelles pour modéliser les données Analysis Services utilisées par les applications analytiques et de rapports. Ces modèles s'exécutent sur une instance Analysis Service qui est configurée pour le mode tabulaire, en utilisant un moteur d'analyse en mémoire pour le stockage et les analyses de table rapides qui agrègent et calculent des données à mesure qu'elles sont demandées.  
@@ -27,11 +27,11 @@ ms.locfileid: "48178649"
  Cette section fournit plus d'informations sur la façon dont vous pouvez programmer ces entités de modèle tabulaire et leurs propriétés.  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Annotations CSDL pour Business Intelligence &#40;CSDLBI&#41;](csdl-annotations-for-business-intelligence-csdlbi.md)  
+ [Annotations CSDL pour Business Intelligence &#40;CSDLBI&#41;](https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi)  
   
  [Présentation du modèle d’objet tabulaire](representation/understanding-tabular-object-model-at-levels-1050-through-1103.md)  
   
- [Informations techniques de référence sur les annotations pour le décisionnel dans CSDL](conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md)  
+ [Informations techniques de référence sur les annotations pour le décisionnel dans CSDL](https://docs.microsoft.com/bi-reference/csdl/technical-reference-for-bi-annotations-to-csdl)  
   
  [Interface IMDEmbedded](imdembeddeddata-interface.md)  
   

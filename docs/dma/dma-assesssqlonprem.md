@@ -2,7 +2,7 @@
 title: Effectuer une évaluation de migration de SQL Server (Assistant Migration de données) | Microsoft Docs
 description: Découvrez comment utiliser l’Assistant de Migration de données pour évaluer un serveur local SQL Server avant de migrer vers un autre serveur SQL ou à la base de données SQL Azure
 ms.custom: ''
-ms.date: 08/29/2018
+ms.date: 10/20/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -12,15 +12,15 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Assess
 ms.assetid: ''
-author: HJToland3
+author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 0131c267d3a26782d0f32df3a3555afcbc43d22d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d844f06ec7b043f2f43e7fe19e29121ad9efaae3
+ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706187"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49643977"
 ---
 # <a name="perform-a-sql-server-migration-assessment-with-data-migration-assistant"></a>Effectuer une évaluation de migration de SQL Server avec Data Migration Assistant
 
@@ -44,7 +44,7 @@ La procédure détaillée ci-dessous vous aider à effectuer votre évaluation p
 
 2. Sélectionnez le type de rapport.
 
-   Pendant l’évaluation de votre instance de SQL Server source pour la migration vers local SQL Server ou SQL Server hébergées sur les cibles de la machine virtuelle Azure, vous pouvez choisir une ou les deux types de rapport d’évaluation suivants :
+   Lorsque que vous évaluez votre instance de SQL Server source pour la migration vers local SQL Server ou SQL Server hébergées sur les cibles de la machine virtuelle Azure, vous pouvez choisir une ou les deux types de rapport d’évaluation suivants :
 
     -   **Problèmes de compatibilité**
 
@@ -52,7 +52,7 @@ La procédure détaillée ci-dessous vous aider à effectuer votre évaluation p
 
     ![Sélectionnez un type de rapport d’évaluation pour SQL Server cible](../dma/media/AssessmentTypes.png)
 
-   Pendant l’évaluation de votre instance de SQL Server source pour la migration vers Azure SQL Database, vous pouvez choisir une ou les deux types de rapport d’évaluation suivants :
+   Lorsque que vous évaluez votre instance de SQL Server source pour la migration vers Azure SQL Database, vous pouvez choisir une ou les deux types de rapport d’évaluation suivants :
 
     -   **Vérifier la compatibilité de base de données**
 
@@ -77,7 +77,7 @@ La procédure détaillée ci-dessous vous aider à effectuer votre évaluation p
 
 ## <a name="view-results"></a>Afficher les résultats
 
-La durée de l’évaluation varie selon le nombre de bases de données ajoutées et la taille du schéma de chaque base de données. Résultats sont affichés pour chaque base de données dès qu’ils sont disponibles.
+La durée de l’évaluation varie selon le nombre de bases de données ajoutées et la taille du schéma de chaque base de données. Résultats sont affichés pour chaque base de données dès qu’elles sont disponibles.
 
 1.  Sélectionnez la base de données qui a effectué l’évaluation et ensuite basculer entre les **les problèmes de compatibilité** et **recommandation de nouvelles fonctionnalités** en utilisant le sélecteur.
 

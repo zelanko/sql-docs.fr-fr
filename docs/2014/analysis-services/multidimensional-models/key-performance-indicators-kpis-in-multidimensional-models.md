@@ -20,19 +20,19 @@ ms.assetid: 73aee2da-da30-44f1-829c-0a4c078a7768
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2a12e1d65cf08edf31b7f40653e5de59020b9211
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2ba0c1cef60658bc5509ae1f29396d5797b3c435
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134009"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145218"
 ---
 # <a name="key-performance-indicators-kpis-in-multidimensional-models"></a>Indicateurs de performance clés (KPI) dans les modèles multidimensionnels
   Dans la terminologie d'entreprise, un indicateur de performance clé (KPI) est une mesure quantifiable des performances d'une activité économique.  
   
  Dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], un KPI est un ensemble de calculs associés à un groupe de mesures dans un cube qui servent à évaluer les performances de l’entreprise. Généralement, ces calculs sont une combinaison d'expressions MDX (Multidimensional Expressions) ou de membres calculés. Les indicateurs de performance clés contiennent également des métadonnées supplémentaires qui fournissent des informations sur la manière dont les applications clientes doivent afficher les résultats des calculs d'un indicateur de performance clé.  
   
- Un indicateur de performance clé gère des informations à propos d'un ensemble d'objectifs, de la formule réelle de la performance enregistrée dans le cube et de la mesure utilisée pour afficher la tendance et l'état de la performance. AMO est utilisé pour définir les formules et d'autres définitions à propos des valeurs d'un indicateur de performance clé. Une interface de requête, telle qu'ADOMD.NET, est utilisée par l'application cliente pour récupérer et exposer les valeurs KPI à l'utilisateur final. Pour plus d’informations, consultez [Développement avec ADOMD.NET](adomd-net/developing-with-adomd-net.md).  
+ Un indicateur de performance clé gère des informations à propos d'un ensemble d'objectifs, de la formule réelle de la performance enregistrée dans le cube et de la mesure utilisée pour afficher la tendance et l'état de la performance. AMO est utilisé pour définir les formules et d'autres définitions à propos des valeurs d'un indicateur de performance clé. Une interface de requête, telle qu'ADOMD.NET, est utilisée par l'application cliente pour récupérer et exposer les valeurs KPI à l'utilisateur final. Pour plus d’informations, consultez [Développement avec ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net).  
   
  Un objet <xref:Microsoft.AnalysisServices.Kpi> simple est composé d’informations de base, de l’objectif, de la valeur réelle atteinte, d’une valeur d’état, d’une valeur de tendance et d’un dossier où l’indicateur de performance clé est affiché. Les informations de base comprennent le nom et la description de l'indicateur de performance clé. L'objectif est une expression MDX qui prend la valeur d'un nombre. La valeur réelle est une expression MDX qui prend la valeur d'un nombre. Les valeurs d'état et de tendance sont des expressions MDX dont l'évaluation aboutit à un nombre. Le dossier est un emplacement suggéré pour l'indicateur de performance clé à présenter au client.  
   

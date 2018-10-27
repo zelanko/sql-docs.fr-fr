@@ -16,12 +16,12 @@ ms.assetid: b9fee2b9-05a5-4077-848d-d8457326dc27
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 92291282cfe763c33b548d85e65912b9f3ab6bf9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3b447531f813d55be8f5318b192909c21e42e78d
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084679"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146424"
 ---
 # <a name="actions-in-multidimensional-models"></a>Actions dans les modèles multidimensionnels
   Une action est une opération réalisée par un utilisateur final sur un cube (ou portion de cube) sélectionné. Cette opération peut soit démarrer une application en prenant comme paramètre l'élément sélectionné, soit extraire des informations relatives à l'élément sélectionné. Pour plus d’informations sur les d’actions, consultez [Actions &#40;Analysis Services - Données multidimensionnelles&#41;](actions-analysis-services-multidimensional-data.md).  
@@ -53,7 +53,7 @@ ms.locfileid: "48084679"
  Après avoir sélectionné le type de l’objet cible, sous **Objet cible**, sélectionnez l’objet de cube du type désigné.  
   
  **Condition (facultatif)**  
- Spécifiez une expression MDX (Multidimensional Expressions) facultative qui est résolue en valeur booléenne. Si la valeur est `True`, l’action est effectuée sur la cible spécifiée. Si la valeur est `False`, l’action n’est pas effectuée.  
+ Spécifiez une expression MDX (Multidimensional Expressions) facultative qui est résolue en valeur booléenne. Si la valeur est `True`, l'action est effectuée sur la cible spécifiée. Si la valeur est `False`, l'action n'est pas effectuée.  
   
  **Contenu d'action**  
  Sélectionnez le type d'action. Le tableau suivant récapitule les types disponibles.  
@@ -77,10 +77,10 @@ ms.locfileid: "48084679"
 |**Application**|Décrit l'application de l'action.|  
 |**Description**|Décrit l'action.|  
 |**Légende**|Fournit une légende qui s'affiche pour l'action. Si la légende est MDX, spécifiez `True` pour **légende est MDX**.|  
-|**La légende est MDX**|Spécifiez `True` si la légende est MDX ou `False` si elle n’est pas.|  
+|**La légende est MDX**|Spécifiez `True` si la légende est au format MDX ou `False` si ce n'est pas le cas.|  
   
 > [!NOTE]  
->  Vous devez utiliser le langage de script Analysis Services (ASSL) ou les objets AMO (Analysis Management Objects) pour définir les types d'action de ligne de commande et HTML. Pour plus d’informations, consultez [Élément Action &#40;ASSL&#41;](../scripting/objects/action-element-assl.md), [Élément Type &#40;Action&#41; &#40;ASSL&#41;](../scripting/properties/type-element-action-assl.md) et [Programmation d’objets OLAP AMO avancés](analysis-management-objects/programming-amo-olap-advanced-objects.md).  
+>  Vous devez utiliser le langage de script Analysis Services (ASSL) ou les objets AMO (Analysis Management Objects) pour définir les types d'action de ligne de commande et HTML. Pour plus d’informations, consultez [Élément Action &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/objects/action-element-assl), [Élément Type &#40;Action&#41; &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/type-element-action-assl) et [Programmation d’objets OLAP AMO avancés](https://docs.microsoft.com/bi-reference/amo/programming-amo-olap-advanced-objects).  
   
 ## <a name="creating-a-reporting-action"></a>Création d'une action de rapport  
  Le serveur de rapports répond aux demandes de rapports basées sur une URL. Pour créer une action de rapport, dans le menu **Cube** , cliquez sur **Nouvelle action de rapport**. Les options suivantes sont propres à une action de rapport.  

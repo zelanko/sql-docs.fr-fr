@@ -13,12 +13,12 @@ ms.assetid: 1dc56a7b-8e3a-4576-ad4f-47050bf7e28a
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 23594e24aef1722c43134c741f79bcf42b84e410
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 128148d4e1aeabcf0ea57ce7fac35702637afab6
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47651287"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099950"
 ---
 # <a name="creating-variable-value-files-mysqltosql"></a>Création de fichiers de valeurs de variables (MySQLToSQL)
 Fichier de valeurs variable est un fichier XML contenant les valeurs de paramètre des commandes telles que : le nom du serveur source ou de destination qui changent fréquemment à partir de la migration d’un serveur vers un autre. En cas d’un grand nombre de migrations de base de données, plusieurs fichiers de variables pour stocker la valeur de chaque serveur source seront créés et référencés dans un fichier de script principal avec la **– v** passer à la ligne de commande. Cela permet de conserver des valeurs statiques dans quelques fichiers de script avec les valeurs des variables dans plusieurs fichiers de variables.  
@@ -94,5 +94,5 @@ L’utilisateur peut valider facilement son fichier de la valeur de la variable 
 L’étape suivante de d’exploitation de la console est [création des fichiers de connexion de serveur &#40;MySQLToSQL&#41;](../../ssma/mysql/creating-the-server-connection-files-mysqltosql.md)  
   
 ## <a name="see-also"></a>Voir aussi  
-[Création des fichiers de connexion de serveur (MySQL)](http://msdn.microsoft.com/en-us/df0e970c-da0b-4118-b359-c9dcbbad16d6)  
+[Création des fichiers de connexion de serveur (MySQL)](http://msdn.microsoft.com/df0e970c-da0b-4118-b359-c9dcbbad16d6)  
   

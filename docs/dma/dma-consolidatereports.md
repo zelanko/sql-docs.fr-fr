@@ -2,7 +2,7 @@
 title: Évaluer une entreprise et consolider les rapports d’évaluation (SQL Server) | Microsoft Docs
 description: Découvrez comment utiliser le DMA pour évaluer une entreprise et consolider les rapports d’évaluation avant la mise à niveau de SQL Server ou la migration vers Azure SQL Database.
 ms.custom: ''
-ms.date: 09/21/2018
+ms.date: 10/22/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -12,15 +12,15 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Assess
 ms.assetid: ''
-author: HJToland3
+author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 573e704402cfc8680497ab3a9d45ab7bf3c4ebf1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b7212118f018b616b1f82f3ed91aced97482e9c6
+ms.sourcegitcommit: eddf8cede905d2adb3468d00220a347acd31ae8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721087"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49960783"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>Évaluer une entreprise et consolider les rapports d’évaluation avec le DMA
 
@@ -37,14 +37,14 @@ La procédure détaillée ci-dessous vous aider à utiliser l’Assistant Migrat
     - [Power BI desktop](https://docs.microsoft.com/power-bi/desktop-get-the-desktop).
 - Téléchargez et extrayez :
     - Le [modèle DMA rapports Power BI](https://msdnshared.blob.core.windows.net/media/2018/04/PowerBI-Reports1.zip).
-    - Le [LoadWarehouse script](https://msdnshared.blob.core.windows.net/media/2018/03/LoadWarehouse.zip).
+    - Le [LoadWarehouse script](https://msdnshared.blob.core.windows.net/media/2018/10/LoadWarehouse.zip).
 
 ## <a name="loading-the-powershell-modules"></a>Chargement des modules PowerShell
 Enregistrer les modules PowerShell dans le répertoire de modules PowerShell vous permet d’appeler les modules sans devoir les charger explicitement avant utilisation.
 
 Pour charger les modules, procédez comme suit :
 1. Accédez à C:\Program Files\WindowsPowerShell\Modules, puis créez un dossier nommé **DataMigrationAssistant**.
-2. Ouvrez le [-Modules PowerShell](https://msdnshared.blob.core.windows.net/media/2018/03/PowerShell-Modules.zip), puis enregistrez-les dans le dossier que vous avez créé.
+2. Ouvrez le [-Modules PowerShell](https://msdnshared.blob.core.windows.net/media/2018/10/PowerShell-Modules.zip), puis enregistrez-les dans le dossier que vous avez créé.
 
       ![Modules PowerShell](../dma/media//dma-consolidatereports/dma-powershell-modules.png)
 
@@ -62,7 +62,7 @@ Pour charger les modules, procédez comme suit :
 
     PowerShell doit maintenant se charger ces modules automatiquement au démarrage d’une nouvelle session PowerShell.
 
-## <a name="create-an-inventory-of-sql-servers"></a>Créer un inventaire des serveurs SQL
+## <a name="create-inventory"></a> Créer un inventaire des serveurs SQL
 Avant d’exécuter le script PowerShell afin d’évaluer vos serveurs SQL, vous devez créer un inventaire des serveurs SQL que vous souhaitez évaluer.
 
 Cet inventaire peut prendre l’une des deux formes :
@@ -98,9 +98,9 @@ Les paramètres associés à la fonction dmaDataCollector sont décrits dans le 
 
 |Paramètre  |Description
 |---------|---------|
-|**getServerListFrom** | Votre inventaire. Les valeurs possibles sont **SqlServer** et **CSV**. |
+|**getServerListFrom** | Votre inventaire. Les valeurs possibles sont **SqlServer** et **CSV**.<br/>Pour plus d’informations, consultez [créer un inventaire des serveurs SQL](#create-inventory). |
 |**serverName** | Le nom de l’instance SQL Server de l’inventaire lors de l’utilisation **SqlServer** dans le **getServerListFrom** paramètre. |
-|**DatabaseName** | La base de données qui héberge la table d’inventaire. |
+|**databaseName** | La base de données qui héberge la table d’inventaire. |
 |**AssessmentName** | Le nom de l’évaluation DMA. |
 |**TargetPlatform** | Le type de cible d’évaluation que vous souhaitez effectuer.  Les valeurs possibles sont **AzureSQLDatabase**, **SQLServer2012**, **SQLServer2014**, **SQLServer2016**,  **SQLServerLinux2017**, et **SQLServerWindows2017**. |
 |**AuthenticationMethod** | La méthode d’authentification pour la connexion aux cibles de SQL Server que vous souhaitez évaluer. Les valeurs possibles sont **SQLAuth** et **WindowsAuth**. |
@@ -121,10 +121,10 @@ Les paramètres associés à la fonction dmaProcessor sont décrits dans le tabl
 |Paramètre  |Description
 |---------|---------|
 |**processTo**  | L’emplacement auquel le fichier JSON sera traité. Les valeurs possibles sont **SQLServer** et **AzureSQLDatabase**. |
-|**serverName** | L’instance de SQL Server à laquelle les données sont traitées.  Si vous spécifiez **AzureSQLDatabase** pour le **processTo** paramètre, puis inclure uniquement le nom de SQL Server (n’incluez pas. database.windows.net). Vous serez invité pour les deux connexions lors du ciblage de base de données SQL Azure ; la première est vos informations d’identification du client Azure, tandis que la deuxième est votre connexion d’administrateur pour le serveur SQL Azure. |
-|**CreateDMAReporting** | La base de données intermédiaire à créer pour le traitement du fichier JSON.  Si la base de données que vous spécifiez existe et que vous définissez ce paramètre à une, puis objets ne pas créées.  Ce paramètre est utile pour recréer un objet unique qui a été supprimé. |
+|**serverName** | L’instance de SQL Server à laquelle les données sont traitées.  Si vous spécifiez **AzureSQLDatabase** pour le **processTo** paramètre, puis inclure uniquement le nom de SQL Server (n’incluez pas. database.windows.net). Vous devez entrer deux connexions lors du ciblage de base de données SQL Azure ; la première est vos informations d’identification du client Azure, tandis que la deuxième est votre connexion d’administrateur pour le serveur SQL Azure. |
+|**CreateDMAReporting** | La base de données intermédiaire à créer pour le traitement du fichier JSON.  Si la base de données que vous spécifiez existe et que vous définissez ce paramètre à une, les objets ne sont créés.  Ce paramètre est utile pour recréer un objet unique qui a été supprimé. |
 |**CreateDataWarehouse** | Crée l’entrepôt de données qui sera utilisé par le rapport Power BI. |
-|**DatabaseName** | Le nom de la base de données DMAReporting. |
+|**databaseName** | Le nom de la base de données DMAReporting. |
 |**warehouseName** | Le nom de la base de données de l’entrepôt de données. |
 |**jsonDirectory** | Le répertoire contenant le fichier d’évaluation de JSON.  S’il existe plusieurs fichiers JSON dans le répertoire, ils sont traités un par un. |
 

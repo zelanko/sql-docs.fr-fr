@@ -11,12 +11,12 @@ ms.assetid: fcc79e96-182a-45e9-8ae2-aeb440e9bedd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6455a83328f973004f6c0e7ff39f574413693d94
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b8f3cf856b7b4dbf77d4a426fcf35d969ce1a990
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111985"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145594"
 ---
 # <a name="impersonation-ssas-tabular"></a>Emprunt d'identité (SSAS Tabulaire)
   Cette rubrique explique aux créateurs de modèles tabulaires comment les informations d'identification d'ouverture de session sont utilisées par Analysis Services lors de la connexion à une source de données pour importer et traiter (actualiser) des données.  
@@ -71,7 +71,7 @@ ms.locfileid: "48111985"
 |**Le nom d’utilisateur Windows spécifique et le mot de passe** <sup>2</sup>|ImpersonateWindowsUserAccount|Cette option spécifie que le modèle utilise un compte d'utilisateur Windows pour importer ou traiter des données à partir de la source de données. Le domaine et le nom du compte d’utilisateur utilise le format suivant :**\<nom de domaine >\\< nom du compte utilisateur\>**. Lors de la création d'un modèle à l'aide de l'Assistant Importation de table, c'est l'option par défaut.|  
 |**Compte de service**|ImpersonateServiceAccount|Cette option spécifie que le modèle utilise les informations d'identification de sécurité associées à l'instance du service Analysis Services qui gère le modèle.|  
   
- <sup>1</sup>ImpersonationMode spécifie la valeur de la [DataSourceImpersonationInfo élément &#40;ASSL&#41; ](../scripting/properties/impersonationinfo-element-assl.md) propriété sur la source de données.  
+ <sup>1</sup>ImpersonationMode spécifie la valeur de la [DataSourceImpersonationInfo élément &#40;ASSL&#41; ](https://docs.microsoft.com/bi-reference/assl/properties/impersonationinfo-element-assl) propriété sur la source de données.  
   
  <sup>2</sup>lors de l’utilisation de cette option, si la base de données de l’espace de travail est supprimé de la mémoire, soit en raison d’un redémarrage ou le **rétention de l’espace de travail** propriété est définie sur **décharger de la mémoire** ou  **Supprimer à partir de l’espace de travail**, et le projet de modèle est fermé, dans la session suivante, si vous essayez de traiter les données de table, vous devrez entrer les informations d’identification pour chaque source de données. De la même façon, si une base de données model déployée est supprimée de la mémoire, vous serez invité à entrer les informations d'identification pour chaque source de données.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "48111985"
   
 ## <a name="see-also"></a>Voir aussi  
  [Mode DirectQuery &#40;SSAS Tabulaire&#41;](directquery-mode-ssas-tabular.md)   
- [Sources de données &#40;SSAS tabulaire&#41;](../data-sources-ssas-tabular.md)   
- [Déploiement de solutions de modèle tabulaire &#40;SSAS tabulaire&#41;](tabular-model-solution-deployment-ssas-tabular.md)  
+ [Sources de données &#40;SSAS Tabulaire&#41;](../data-sources-ssas-tabular.md)   
+ [Déploiement d’une solution de modèle tabulaire &#40;SSAS Tabulaire&#41;](tabular-model-solution-deployment-ssas-tabular.md)  
   
   

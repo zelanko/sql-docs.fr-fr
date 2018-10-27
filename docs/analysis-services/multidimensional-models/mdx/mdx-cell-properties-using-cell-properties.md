@@ -1,5 +1,5 @@
 ---
-title: À l’aide des propriétés de cellule (MDX) | Documents Microsoft
+title: À l’aide des propriétés de cellule (MDX) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 481d89abac98dee1095e55a9890cea100f6c4db6
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 42c107f371b2cc1d8159c5eb94f3a51e864cf61d
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023426"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145304"
 ---
-# <a name="mdx-cell-properties---using-cell-properties"></a>Propriétés de la cellule MDX - à l’aide des propriétés de cellule
+# <a name="mdx-cell-properties---using-cell-properties"></a>Propriétés de cellule MDX - utilisation des propriétés de cellule
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Les propriétés de cellule dans les expressions multidimensionnelles (MDX, Multidimensional Expressions) contiennent des informations sur le contenu et le format des cellules appartenant à une source de données multidimensionnelles, par exemple un cube.  
   
@@ -42,7 +42,7 @@ SELECT [<axis_specification>
 ## <a name="supported-intrinsic-cell-properties"></a>Propriétés de cellule intrinsèques prises en charge  
  Le tableau suivant dresse la liste des propriétés de cellule intrinsèques prises en charge utilisées dans la valeur `<property>` .  
   
-|Propriété| Description|  
+|Propriété|Description|  
 |--------------|-----------------|  
 |**ACTION_TYPE**|Masque binaire indiquant les types d'actions qui existent sur la cellule. Cette propriété peut prendre les valeurs suivantes :<br /><br /> **MDACTION_TYPE_URL**<br /><br /> **MDACTION_TYPE_HTML**<br /><br /> **MDACTION_TYPE_STATEMENT**<br /><br /> **MDACTION_TYPE_DATASET**<br /><br /> **MDACTION_TYPE_ROWSET**<br /><br /> **MDACTION_TYPE_COMMANDLINE**<br /><br /> **MDACTION_TYPE_PROPRIETARY**<br /><br /> **MDACTION_TYPE_REPORT**<br /><br /> **MDACTION_TYPE_DRILLTHROUGH**<br /><br /> <br /><br /> Remarque : les actions d’extraction des requêtes dont la clause Where contient un jeu ne sont pas comprises.|  
 |**BACK_COLOR**|Couleur d’arrière-plan utilisée pour afficher la propriété **VALUE** ou **FORMATTED_VALUE**. Pour plus d’informations, consultez [Contenu de FORE_COLOR et BACK_COLOR &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-fore-color-and-back-color-contents.md).|  
@@ -69,7 +69,7 @@ SELECT [<axis_specification>
 ||**CELL_UPDATE_NOT_ENABLED_INVALIDDIMENSIONTYPE** (0x10000009)   La cellule ne peut pas être mise à jour, car la mise à jour n’est pas prise en charge dans le modèle d’exploration de données, les dimensions indirectes et les dimensions d’exploration de données.|  
 |**VALUE**|Valeur sans mise en forme de la cellule.|  
   
- Seules les propriétés de cellule **CELL_ORDINAL**, **FORMATTED_VALUE**et **VALUE** sont obligatoires. Toutes les propriétés de cellule, intrinsèques ou propres aux fournisseurs, sont définies dans le jeu de lignes du schéma **PROPERTIES** , notamment les types de données et la prise en charge par un fournisseur. Pour plus d’informations sur l’ensemble de lignes du schéma **PROPERTIES** , consultez [Ensemble de lignes MDSCHEMA_PROPERTIES](../../../analysis-services/schema-rowsets/ole-db-olap/mdschema-properties-rowset.md).  
+ Seules les propriétés de cellule **CELL_ORDINAL**, **FORMATTED_VALUE**et **VALUE** sont obligatoires. Toutes les propriétés de cellule, intrinsèques ou propres aux fournisseurs, sont définies dans le jeu de lignes du schéma **PROPERTIES** , notamment les types de données et la prise en charge par un fournisseur. Pour plus d’informations sur l’ensemble de lignes du schéma **PROPERTIES** , consultez [Ensemble de lignes MDSCHEMA_PROPERTIES](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-properties-rowset).  
   
  Par défaut, si le mot clé **CELL PROPERTIES** n’est pas utilisé, les propriétés de cellule retournées sont **VALUE**, **FORMATTED_VALUE**et **CELL_ORDINAL** (dans cet ordre). Si le mot clé **CELL PROPERTIES** est utilisé, seules les propriétés de cellule explicitement spécifiées avec le mot clé sont retournées.  
   
@@ -101,6 +101,6 @@ CELL PROPERTIES VALUE, FORMATTED_VALUE, FORE_COLOR, BACK_COLOR, FONT_SIZE
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Principes de base de requête MDX & #40 ; Analysis Services & #41 ;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
+ [Principes de base des requêtes MDX &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   

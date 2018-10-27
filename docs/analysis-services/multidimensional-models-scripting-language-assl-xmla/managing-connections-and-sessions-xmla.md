@@ -1,5 +1,5 @@
 ---
-title: Gestion des connexions et Sessions (XMLA) | Documents Microsoft
+title: Gestion des connexions et Sessions (XMLA) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,17 +9,17 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 52351646759b6354411de094152c2faceb8fe598
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: ad9be579d37cc8c75375b373ae8ecb624067ad50
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023136"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50144884"
 ---
 # <a name="managing-connections-and-sessions-xmla"></a>Gestion des connexions et des sessions (XMLA)
-  *Conservation de l’état* est une condition pendant laquelle le serveur préserve l’identité et le contexte d’un client entre les appels de méthode. *Abandon de l’état* est une condition pendant laquelle le serveur ne retient pas l’identité et le contexte d’un client après un appel de méthode se termine.  
+  *Conservation de l’état* est une condition pendant laquelle le serveur préserve l’identité et le contexte d’un client entre les appels de méthode. *Abandon de l’état* est une condition pendant laquelle le serveur ne retient pas l’identité et le contexte d’un client après un appel de méthode.  
   
- Pour assurer la conservation de l’état, XML for Analysis (XMLA) prend en charge *sessions* qui autorisent une série d’instructions pour être exécutés simultanément. À titre d'exemple, une telle série d'instructions pourrait servir à créer le membre calculé à utiliser dans des requêtes ultérieures.  
+ Pour assurer la conservation de l’état, XML for Analysis (XMLA) prend en charge *sessions* qui permettent une série d’instructions pour être exécutées simultanément. À titre d'exemple, une telle série d'instructions pourrait servir à créer le membre calculé à utiliser dans des requêtes ultérieures.  
   
  En général, les sessions XMLA suivent le comportement suivant énoncé par la spécification OLE DB 2.6 :  
   
@@ -27,13 +27,13 @@ ms.locfileid: "34023136"
   
 -   Plusieurs commandes peuvent être exécutées dans le contexte d'une seule session.  
   
--   Prise en charge des transactions dans le contexte XMLA est grâce aux commandes spécifiques au fournisseur envoyées avec la [Execute](../../analysis-services/xmla/xml-elements-methods-execute.md) (méthode).  
+-   Prise en charge des transactions dans le contexte XMLA est par le biais des commandes spécifiques au fournisseur envoyées avec la [Execute](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute) (méthode).  
   
  XMLA définit une méthode de prise en charge des sessions dans un environnement Web selon un mode comparable à la méthode employée par le protocole DAV (Distributed Authoring and Versioning) pour implémenter le verrouillage dans un environnement faiblement couplé. Cette implémentation va de pair avec DAV en ce sens que le fournisseur est autorisé à faire expirer les sessions pour divers motifs (par exemple, dépassement de délai ou erreur de connexion). Lorsque les sessions sont prises en charge, les services Web doivent être en mesure de gérer des jeux de commandes interrompus qui doivent être redémarrés.  
   
  La spécification SOAP (Simple Object Access Protocol) du W3C (World Wide Web Consortium) recommande d'utiliser des en-têtes SOAP pour développer de nouveaux protocoles sur les messages SOAP. Le tableau suivant énumère les éléments et les attributs d'en-tête SOAP que XMLA définit pour initialiser, maintenir et fermer une session.  
   
-|En-tête SOAP| Description|  
+|En-tête SOAP|Description|  
 |-----------------|-----------------|  
 |BeginSession|Cet en-tête demande au fournisseur de créer une nouvelle session. Le fournisseur doit répondre en construisant une nouvelle session et en retournant l'ID de session dans l'en-tête Session de la réponse SOAP.|  
 |SessionId|La zone des valeurs contient l'ID de session qui doit être utilisé dans chaque appel de méthode pour le reste de la session. Le fournisseur spécifié dans la réponse SOAP envoie cette balise et le client doit également envoyer cet attribut avec chaque élément d'en-tête Session.|  

@@ -17,15 +17,15 @@ ms.assetid: 657e1d4d-6d50-40f8-a771-7b20c9d865f8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6be578d76164e597fe7057bc02f69bf9d9bcce74
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c459fcb3efc86566eef046df30d2d8ad9ea601b4
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142449"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145840"
 ---
 # <a name="merging-partitions-xmla"></a>Fusion de partitions (XMLA)
-  Si des partitions partagent la même conception d’agrégation et la structure, vous pouvez fusionner la partition à l’aide de la [MergePartitions](../xmla/xml-elements-commands/mergepartitions-element-xmla.md) commande XML for Analysis (XMLA). Dans le cadre de la gestion des partitions, il est important de fusionner les partitions, plus particulièrement les partitions qui contiennent des données historiques partitionnées par date.  
+  Si des partitions partagent la même conception d’agrégation et la structure, vous pouvez fusionner la partition à l’aide de la [MergePartitions](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/mergepartitions-element-xmla) commande XML for Analysis (XMLA). Dans le cadre de la gestion des partitions, il est important de fusionner les partitions, plus particulièrement les partitions qui contiennent des données historiques partitionnées par date.  
   
  Par exemple, un cube financier peut utiliser deux partitions :  
   
@@ -36,7 +36,7 @@ ms.locfileid: "48142449"
  Les deux partitions utilisent des paramètres de stockage différents, mais elles partagent la même conception d'agrégation. Au lieu de traiter le cube avec plusieurs années de données historiques à la fin de l'exercice, vous pouvez utiliser la commande `MergePartitions` pour fusionner la partition de l'exercice en cours dans la partition des exercices précédents. Cela préserve les données d'agrégation sans qu'il soit nécessaire de traiter entièrement le cube, une opération qui peut s'avérer fastidieuse.  
   
 ## <a name="specifying-partitions-to-merge"></a>Spécification des partitions à fusionner  
- Lorsque le `MergePartitions` commande est exécutée, les données d’agrégation stockées dans les partitions sources spécifiées dans le [Source](../xmla/xml-elements-properties/source-element-xmla.md) propriété est ajoutée à la partition cible spécifiée dans le [cible](../xmla/xml-elements-properties/target-element-xmla.md) propriété.  
+ Lorsque le `MergePartitions` commande est exécutée, les données d’agrégation stockées dans les partitions sources spécifiées dans le [Source](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/source-element-xmla) propriété est ajoutée à la partition cible spécifiée dans le [cible](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/target-element-xmla) propriété.  
   
 > [!NOTE]  
 >  La propriété `Source` peut contenir plusieurs références d'objet partition. En revanche, la propriété `Target` ne le peut pas.  

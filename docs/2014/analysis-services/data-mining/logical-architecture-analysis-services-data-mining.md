@@ -17,12 +17,12 @@ ms.assetid: 4e0cbf46-cc60-4e91-a292-9a69f29746f0
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4ed73dadb5f13a62e6dc39e43388a4e2427a92b8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fbfbdc87e7657f8d1d20e75186be2f3c0d79a900
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166249"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50144864"
 ---
 # <a name="logical-architecture-analysis-services---data-mining"></a>Architecture logique (Analysis Services - Exploration de données)
   L'exploration de données est un processus qui implique l'interaction de plusieurs composants.  
@@ -51,7 +51,7 @@ ms.locfileid: "48166249"
 ##  <a name="bkmk_Structures"></a> Mining Structures  
  Une structure d'exploration de données est un conteneur de données logiques qui définit le domaine de données à partir duquel les modèles d'exploration de données sont créés. Une structure d'exploration de données unique peut prendre en charge plusieurs modèles d'exploration de données.  
   
- Lorsque vous devez utiliser les données de la solution d'exploration de données, Analysis Services les lit à partir de la source et génère un cache d'agrégats et d'autres informations. Par défaut ce cache est persistant afin que les données d'apprentissage puissent être réutilisées pour prendre en charge les modèles supplémentaires. Si vous devez supprimer le cache, modifiez le `CacheMode` propriété sur l’objet de structure d’exploration de données à la valeur, `ClearAfterProcessing`. Pour plus d’informations, consultez [Classes d’exploration de données AMO](../multidimensional-models/analysis-management-objects/amo-data-mining-classes.md).  
+ Lorsque vous devez utiliser les données de la solution d'exploration de données, Analysis Services les lit à partir de la source et génère un cache d'agrégats et d'autres informations. Par défaut ce cache est persistant afin que les données d'apprentissage puissent être réutilisées pour prendre en charge les modèles supplémentaires. Si vous devez supprimer le cache, donnez à la propriété `CacheMode` sur l'objet de structure d'exploration de données la valeur `ClearAfterProcessing`. Pour plus d’informations, consultez [Classes d’exploration de données AMO](https://docs.microsoft.com/bi-reference/amo/amo-data-mining-classes).  
   
  [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] permet également de séparer vos données en jeux de données d’apprentissage et de test afin de tester vos modèles d’exploration de données sur un jeu de données représentatif et sélectionné aléatoirement. Les données ne sont pas réellement stockées séparément ; en revanche, les données de cas dans le cache de la structure sont identifiées par une propriété qui indique si ce cas particulier est utilisé pour l'apprentissage ou pour le test. Si le cache est supprimé, ces informations ne peuvent pas être récupérées.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "48166249"
  Pour plus d’informations, consultez [Gestion des assemblys de modèles multidimensionnels](../multidimensional-models/multidimensional-model-assemblies-management.md).  
   
  **Procédures stockées personnalisées**  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] exploration de données prend en charge l’utilisation de procédures stockées pour utiliser des objets d’exploration de données. Vous pouvez créer vos propres procédures stockées pour étendre les fonctionnalités et utiliser plus facilement les données retournées par des requêtes de prédiction et des requêtes de contenu.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] L’exploration de données prend en charge l’utilisation de procédures stockées pour utiliser des objets d’exploration de données. Vous pouvez créer vos propres procédures stockées pour étendre les fonctionnalités et utiliser plus facilement les données retournées par des requêtes de prédiction et des requêtes de contenu.  
   
  [Définition de procédures stockées](../multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)  
   
@@ -94,7 +94,7 @@ ms.locfileid: "48166249"
  En outre, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] contient de nombreuses procédures stockées système qui sont utilisées en interne pour l'exploration de données. Bien que les procédures stockées système sont réservées à un usage interne, elles peuvent s'avérer d'utiles raccourcis. Microsoft se réserve le droit de modifier ces procédures stockées si nécessaire ; par conséquent, dans un environnement de production, nous vous recommandons de créer des requêtes avec DMX, AMO, ou XMLA.  
   
  **Algorithmes de plug-in personnalisés**  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fournit un mécanisme pour créer vos propres algorithmes, puis ajouter les algorithmes sous un nouveau service d’exploration de données à l’instance de serveur.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fournit un mécanisme pour créer vos propres algorithmes, puis ajouter les algorithmes sous forme de nouveau service d’exploration de données à l’instance de serveur.  
   
  Analysis Services utilise ces interfaces COM pour communiquer avec les algorithmes de plug-in. Pour en savoir plus sur la manière d’implémenter de nouveaux algorithmes, consultez [Algorithmes de plug-in](plugin-algorithms.md).  
   
@@ -104,6 +104,6 @@ ms.locfileid: "48166249"
   
 ## <a name="see-also"></a>Voir aussi  
  [Traitement des objets de modèle multidimensionnel](../multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
- [Data Mining Extensions &#40;DMX&#41; référence](/sql/dmx/data-mining-extensions-dmx-reference)  
+ [Informations de référence sur le langage DMX &#40;Data Mining Extensions&#41;](/sql/dmx/data-mining-extensions-dmx-reference)  
   
   

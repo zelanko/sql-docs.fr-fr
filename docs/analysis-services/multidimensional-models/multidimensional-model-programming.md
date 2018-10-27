@@ -1,5 +1,5 @@
 ---
-title: Programmation de modèle multidimensionnel | Documents Microsoft
+title: Programmation de modèle multidimensionnel | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e7f34826746fa18cd0e741a5a904f0375a25ed68
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: f24376d93f09066d68610e7ac5463945a6db7abd
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026516"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147794"
 ---
 # <a name="multidimensional-model-programming"></a>Programmation de modèle multidimensionnel
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -23,20 +23,20 @@ ms.locfileid: "34026516"
 ## <a name="in-this-section"></a>Dans cette section  
  [Présentation de l’architecture Microsoft OLAP](../../analysis-services/multidimensional-models/olap-physical/understanding-microsoft-olap-architecture.md)  
   
- [Développement avec ADOMD.NET](../../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md)  
+ [Développement avec ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net)  
   
- [Développement avec Analysis Management Objects & #40 ; AMO & #41 ;](../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)  
+ [Développement avec AMO &#40;Analysis Management Objects&#41;](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)  
   
  [Développement avec XMLA dans Analysis Services](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
   
- [Développement avec Analysis Services Scripting Language & #40 ; ASSL & #41 ;](../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
+ [Développement avec le langage de script Analysis Services &#40;ASSL&#41;](../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
   
  [Extension des fonctionnalités OLAP](../../analysis-services/multidimensional-models/extending-olap/extending-olap-functionality.md)  
   
  [Fournisseur OLE DB Analysis Services &#40;Analysis Services – Données multidimensionnelles&#41;](http://msdn.microsoft.com/library/cdeecd50-1d91-4162-a4a2-01c7799b02a8)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Programmation de modèle tabulaire pour la compatibilité 1050 1103 via des niveaux](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md)   
- [Programmation d’exploration de données](../../analysis-services/data-mining-programming.md)  
+ [Programmation de modèle tabulaire pour assurer la compatibilité des niveaux 1050 à 1103](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md)   
+ [Programmation de l’exploration de données](../../analysis-services/data-mining-programming.md)  
   
   

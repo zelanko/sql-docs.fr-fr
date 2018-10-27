@@ -1,5 +1,5 @@
 ---
-title: Les requêtes d’extraction (exploration de données) | Documents Microsoft
+title: Requêtes d’extraction (exploration de données) | Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,18 +9,18 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e8b3afda19fbbf084223d0f597fe2893dce17049
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: f85c297c7ae8786d5cd387a2f25a81f507425dda
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018296"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148014"
 ---
 # <a name="drillthrough-queries-data-mining"></a>Requêtes d'extraction (exploration de données)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Une *requête d'extraction* vous permet de récupérer les détails des cas ou des données de structure sous-jacents, en envoyant une requête au modèle d'exploration de données. L'extraction est utile si vous souhaitez consulter les cas utilisés pour l'apprentissage du modèle, par opposition à ceux utilisés pour tester le modèle, ou si vous souhaitez consulter des détails supplémentaires à partir des données de cas.  
   
- L'exploration de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fournit deux options différentes pour l'extraction :  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fournit deux options différentes pour l'extraction :  
   
 -   Extraction des **cas du modèle**  
   
@@ -52,7 +52,7 @@ ms.locfileid: "34018296"
 ##  <a name="bkmk_DMX"></a> Création de requêtes d'extraction à l'aide de DMX  
  Vous pouvez extraire des données de cas en créant une requête DMX, si vous disposez des autorisations sur le modèle ou sur la structure. Pour des exemples de syntaxe pour la création de requêtes d'extraction dans DMX, consultez la rubrique suivante :  
   
- [Créer des requêtes d’extraction à l’aide de DMX](../../analysis-services/data-mining/create-drillthrough-queries-using-dmx.md)  
+ [Créer des requêtes d'extraction à l'aide de DMX](../../analysis-services/data-mining/create-drillthrough-queries-using-dmx.md)  
   
 ##  <a name="bkmk_Considerations"></a> Considérations sur l'utilisation de l'extraction  
   
@@ -65,7 +65,7 @@ ms.locfileid: "34018296"
 -   Si, contrairement au modèle d'exploration de données, la structure d'exploration de données ne vous autorise pas à extraire les données sous-jacentes, vous pouvez n'afficher les informations que des cas de modèle, mais non de la structure d'exploration de données.  
   
 ###  <a name="bkmk_Security"></a> Problèmes de sécurité pour l'extraction  
- Si vous souhaitez extraire les cas de structure du modèle, vous devez vérifier que la propriété [AllowDrillThrough](../../analysis-services/scripting/properties/allowdrillthrough-element-assl.md) de la structure d'exploration de données et du modèle d'exploration de données possède la valeur **True**. De plus, vous devez être membre d'un rôle ayant les autorisations d'extraction sur la structure et le modèle. Pour plus d’informations sur la façon de créer des rôles, consultez [Concepteur de rôle &#40;Analysis Services - Données multidimensionnelles&#41;](http://msdn.microsoft.com/library/e8ba42db-0565-4d68-b3ab-0c63d8d07192). consultez.  
+ Si vous souhaitez extraire les cas de structure du modèle, vous devez vérifier que la propriété [AllowDrillThrough](https://docs.microsoft.com/bi-reference/assl/properties/allowdrillthrough-element-assl) de la structure d'exploration de données et du modèle d'exploration de données possède la valeur **True**. De plus, vous devez être membre d'un rôle ayant les autorisations d'extraction sur la structure et le modèle. Pour plus d’informations sur la façon de créer des rôles, consultez [Concepteur de rôle &#40;Analysis Services - Données multidimensionnelles&#41;](http://msdn.microsoft.com/library/e8ba42db-0565-4d68-b3ab-0c63d8d07192). consultez.  
   
  Les autorisations d'extraction sont définies séparément sur la structure et le modèle. L'autorisation de modèle permet d'effectuer une extraction à partir du modèle, même si vous n'avez pas d'autorisations sur la structure. Les autorisations d’extraction sur la structure permettent en outre d’inclure des colonnes de structure dans les requêtes d’extraction à partir du modèle, à l’aide de la fonction [StructureColumn &#40;DMX&#41;](../../dmx/structurecolumn-dmx.md).  
   
@@ -89,10 +89,10 @@ ms.locfileid: "34018296"
   
 |Tâche|Lien|  
 |----------|----------|  
-|Procédure qui décrit l'utilisation de l'extraction dans le Concepteur d'exploration de données|[Extraction des données de cas à partir d’un modèle d’exploration de données](../../analysis-services/data-mining/drill-through-to-case-data-from-a-mining-model.md)|  
+|Procédure qui décrit l'utilisation de l'extraction dans le Concepteur d'exploration de données|[Extraire des données de cas à partir d’un modèle d’exploration de données](../../analysis-services/data-mining/drill-through-to-case-data-from-a-mining-model.md)|  
 |Pour modifier un modèle d'exploration de données existant afin d'autoriser l'extraction|[Activer l’extraction pour un modèle d’exploration de données](../../analysis-services/data-mining/enable-drillthrough-for-a-mining-model.md)|  
-|Activation de l'extraction sur une structure d'exploration de données à l'aide de la clause DMX WITH DRILLTHROUGH|[CRÉER UNE STRUCTURE D’EXPLORATION DE DONNÉES & #40 ; DMX & #41 ;](../../dmx/create-mining-structure-dmx.md)|  
-|Pour plus d'informations sur l'assignation d'autorisations qui s'appliquent à l'extraction sur des structures d'exploration de données et des modèles d'exploration de données|[Accorder des autorisations sur les structures d’exploration de données et modèles & #40 ; Analysis Services & #41 ;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)|  
+|Activation de l'extraction sur une structure d'exploration de données à l'aide de la clause DMX WITH DRILLTHROUGH|[CREATE MINING STRUCTURE &#40;DMX&#41;](../../dmx/create-mining-structure-dmx.md)|  
+|Pour plus d'informations sur l'assignation d'autorisations qui s'appliquent à l'extraction sur des structures d'exploration de données et des modèles d'exploration de données|[Octroyer des autorisations sur des modèles et des structures d’exploration de données &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Visionneuses de modèle d’exploration de données](../../analysis-services/data-mining/data-mining-model-viewers.md)   

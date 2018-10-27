@@ -1,26 +1,26 @@
 ---
 title: Concepts de sécurité pour le cluster de données volumineux de SQL Server | Microsoft Docs
-description: ''
+description: Cet article décrit les concepts de sécurité pour le cluster de données volumineux de SQL Server 2019.
 author: nelgson
 ms.author: negust
 manager: craigg
 ms.date: 10/01/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: bd9e49344108b65898e38065ed88fd06467803cf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 77ffea6b2507bde65b914c52eaf225e1fd1dbd31
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48796190"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50050881"
 ---
 # <a name="security-concepts-for-sql-server-big-data-cluster"></a>Concepts de sécurité pour le cluster de données volumineux de SQL Server
 
-Un cluster sécurisé de Big Data implique la prise en charge uniforme et cohérent pour les scénarios d’authentification et d’autorisation, sur SQL Server et HDFS/Spark. L’authentification est le processus de vérification de l’identité d’un utilisateur ou d’un service et garantir qu’ils sont qui ils sont prétendant être. Autorisation fait référence à l’octroi ou de refus d’accès à des ressources spécifiques en fonction de l’identité de l’utilisateur demandeur. Cette étape est effectuée une fois que l’utilisateur est identifié via l’authentification.
+Un cluster de sécuriser les données big implique la prise en charge uniforme et cohérent pour les scénarios d’authentification et d’autorisation, sur SQL Server et HDFS/Spark. L’authentification est le processus de vérification de l’identité d’un utilisateur ou d’un service et garantir qu’ils sont qui ils sont prétendant être. Autorisation fait référence à l’octroi ou de refus d’accès à des ressources spécifiques en fonction de l’identité de l’utilisateur demandeur. Cette étape est effectuée une fois que l’utilisateur est identifié via l’authentification.
 
 Autorisation dans le contexte de données volumineuses est généralement effectuée via les listes de contrôle d’accès (ACL), qui associent les identités des utilisateurs avec des autorisations spécifiques. HDFS prend en charge d’autorisation en limitant l’accès aux API de service, les fichiers HDFS et l’exécution du travail.
 
-Cet article décrit les concepts clés relatifs à la sécurité dans le cluster Big Data.
+Cet article décrit les concepts clés relatifs à la sécurité dans le cluster de données volumineux.
 
 ## <a name="cluster-endpoints"></a>Points de terminaison de cluster
 
@@ -80,5 +80,5 @@ Communication avec les services non-SQL au sein du cluster de données volumineu
 
 Pour en savoir plus sur les clusters de données volumineuses de SQL Server, consultez les articles suivants :
 
-- [Qu’est SQL Server 2019 des clusters de données volumineuses ?](big-data-cluster-overview.md)
+- [Quelles sont les clusters SQL Server 2019 big data ?](big-data-cluster-overview.md)
 - [Démarrage rapide : Déployer le cluster de données volumineux de SQL Server sur Kubernetes](quickstart-big-data-cluster-deploy.md)

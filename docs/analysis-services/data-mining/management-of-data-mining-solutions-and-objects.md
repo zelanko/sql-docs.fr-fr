@@ -1,5 +1,5 @@
 ---
-title: Gestion des Solutions d’exploration de données et des objets | Documents Microsoft
+title: Gestion des Solutions d’exploration de données et des objets | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ed8768dc456f1805b139138e8591f6f9749525eb
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: d7dd7de5aac016239c2b778a7afeee9447144259
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015816"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145684"
 ---
 # <a name="management-of-data-mining-solutions-and-objects"></a>Gestion des solutions et des objets d'exploration de données
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -42,13 +42,13 @@ ms.locfileid: "34015816"
   
  Les liens suivants permettent d'accéder à des informations sur la modification des objets d'exploration de données à l'aide de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]:  
   
--   [Modifier la vue de Source de données utilisée pour une Structure d’exploration de données](../../analysis-services/data-mining/edit-the-data-source-view-used-for-a-mining-structure.md)  
+-   [Modifier la vue de source de données utilisée pour une structure d’exploration de données](../../analysis-services/data-mining/edit-the-data-source-view-used-for-a-mining-structure.md)  
   
--   [Modifier les propriétés d’une Structure d’exploration de données](../../analysis-services/data-mining/change-the-properties-of-a-mining-structure.md)  
+-   [Modifier les propriétés d’une structure d’exploration de données](../../analysis-services/data-mining/change-the-properties-of-a-mining-structure.md)  
   
 -   [Modifier les propriétés d’un modèle d’exploration de données](../../analysis-services/data-mining/change-the-properties-of-a-mining-model.md)  
   
--   [Afficher ou modifier la modélisation des indicateurs & #40 ; exploration de données & #41 ;](../../analysis-services/data-mining/view-or-change-modeling-flags-data-mining.md)  
+-   [Afficher ou modifier les indicateurs de modélisation &#40;Exploration de données&#41;](../../analysis-services/data-mining/view-or-change-modeling-flags-data-mining.md)  
   
 -   [Afficher ou modifier les paramètres d'algorithme](../../analysis-services/data-mining/view-or-change-algorithm-parameters.md)  
   
@@ -72,7 +72,7 @@ ms.locfileid: "34015816"
 ### <a name="analysis-management-objects-amo"></a>Objets AMO (Analysis Management Objects)  
  Les objets AMO (Analysis Management Objects) sont un modèle objet reposant sur XMLA qui vous donne un contrôle total sur les objets d'exploration de données. En utilisant des objets AMO, vous pouvez créer, déployer et surveiller les structures et modèles d'exploration de données.  
   
--   [Concepts et modèle objet AMO](../../analysis-services/multidimensional-models/analysis-management-objects/amo-concepts-and-object-model.md)  
+-   [Concepts et modèle objet AMO](https://docs.microsoft.com/bi-reference/amo/amo-concepts-and-object-model)  
   
 -   <xref:Microsoft.AnalysisServices>  
   

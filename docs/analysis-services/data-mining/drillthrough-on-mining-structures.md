@@ -1,5 +1,5 @@
 ---
-title: L’extraction sur les Structures d’exploration de données | Documents Microsoft
+title: Extraction sur les Structures d’exploration de données | Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,18 +9,18 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: aadcc0025b8370d3827a9349ad577651121030de
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 6d2ea3d80496f84330802640ff99d951fd2416bb
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015106"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146485"
 ---
 # <a name="drillthrough-on-mining-structures"></a>Extraction sur des structures d'exploration de données
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   *L'extraction* désigne la capacité d'interroger un modèle d'exploration de données ou une structure d'exploration de données pour obtenir des informations détaillées qui ne sont pas exposées dans le modèle.  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]fournit deux options différentes pour l’extraction des données de cas. Vous pouvez extraire les données utilisées pour générer le modèle d'exploration de données ou les données sources de la structure d'exploration de données.  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] fournit deux options différentes pour l'extraction des données de cas. Vous pouvez extraire les données utilisées pour générer le modèle d'exploration de données ou les données sources de la structure d'exploration de données.  
   
 ## <a name="drillthrough-to-model-cases-vs-drillthrough-to-structure"></a>Extraction dans des cas de modèle et dans la structure  
  L'extraction dans des **cas de modèle** est utile pour rechercher des informations supplémentaires sur les règles, les modèles ou les clusters dans un modèle.  
@@ -38,7 +38,7 @@ ms.locfileid: "34015106"
   
 -   Le principe de l'extraction consiste à extraire des informations sur les cas d'apprentissage mis en cache lorsque vous avez traité la structure d'exploration de données. Ainsi, si vous effacez les données en cache après avoir traité la structure en modifiant la propriété <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> en **ClearAfterProcessing**, l’extraction ne fonctionne pas. Pour activer l’extraction aux colonnes de structure, vous devez modifier la propriété <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> en **KeepTrainingCases** , puis retraiter la structure.  
   
--   Vérifiez que pour la structure et le modèle d’exploration de données la propriété [AllowDrillThrough](../../analysis-services/scripting/properties/allowdrillthrough-element-assl.md) a la valeur **True**. De plus, vous devez être membre d'un rôle ayant les autorisations d'extraction sur la structure et le modèle.  
+-   Vérifiez que pour la structure et le modèle d’exploration de données la propriété [AllowDrillThrough](https://docs.microsoft.com/bi-reference/assl/properties/allowdrillthrough-element-assl) a la valeur **True**. De plus, vous devez être membre d'un rôle ayant les autorisations d'extraction sur la structure et le modèle.  
   
 ## <a name="security-issues-for-drillthrough"></a>Problèmes de sécurité pour l'extraction  
  Les autorisations d'extraction sont définies séparément sur la structure et le modèle. L'autorisation de modèle permet d'effectuer une extraction à partir du modèle, même si vous n'avez pas d'autorisations sur la structure. Les autorisations d’extraction sur la structure permettent en outre d’inclure des colonnes de structure dans les requêtes d’extraction à partir du modèle, à l’aide de la fonction [StructureColumn &#40;DMX&#41;](../../dmx/structurecolumn-dmx.md).  
@@ -53,11 +53,11 @@ ms.locfileid: "34015106"
   
 |||  
 |-|-|  
-|Utiliser l'extraction dans la structure des visionneuses de modèle d'exploration de données|[Utiliser l’extraction des visionneuses de modèle](../../analysis-services/data-mining/use-drillthrough-from-the-model-viewers.md)|  
+|Utiliser l'extraction dans la structure des visionneuses de modèle d'exploration de données|[Utiliser l’extraction dans les visionneuses de modèle](../../analysis-services/data-mining/use-drillthrough-from-the-model-viewers.md)|  
 |Consulter les exemples de requêtes d'extraction pour les types de modèles spécifiques.|[Requêtes d’exploration de données](../../analysis-services/data-mining/data-mining-queries.md)|  
-|Obtenir des informations sur l'assignation d'autorisations qui s'appliquent à des structures d'exploration de données et à des modèles d'exploration de données spécifiques.|[Accorder des autorisations sur les structures d’exploration de données et modèles & #40 ; Analysis Services & #41 ;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)|  
+|Obtenir des informations sur l'assignation d'autorisations qui s'appliquent à des structures d'exploration de données et à des modèles d'exploration de données spécifiques.|[Octroyer des autorisations sur des modèles et des structures d’exploration de données &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Extraction sur les modèles d’exploration de données](../../analysis-services/data-mining/drillthrough-on-mining-models.md)  
+ [Extraction sur des modèles d'exploration de données](../../analysis-services/data-mining/drillthrough-on-mining-models.md)  
   
   

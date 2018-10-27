@@ -10,12 +10,12 @@ ms.assetid: afa01165-39e0-4efe-ac0e-664edb8599fd
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fdffbcc946af91efd61a5e63da7f79087d3053f8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: af11bb2283db0561c176fb543ff21c3c04f676d3
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159799"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50100250"
 ---
 # <a name="sql-server-managed--backup-to-windows-azure"></a>Gestion de sauvegarde de SQL Server vers Microsoft Azure
   La [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] gère et automatise les sauvegardes SQL Server dans le service de stockage d'objets blob Windows Azure. La stratégie de sauvegarde utilisée par la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] est basée sur la période de rétention et la charge de travail transactionnelle sur la base de données. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] prend en charge la restauration limitée dans le temps pour la période de rétention spécifiée.   
@@ -42,7 +42,7 @@ La [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] peut être ac
  Une fonctionnalité SQL Server qui automatise la sauvegarde de bases de données et administre les sauvegardes en fonction de la période de rétention.  
   
  Période de rétention  
- La période de rétention est utilisée par [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] pour déterminer les fichiers de sauvegarde doivent être retenus dans le stockage pour restaurer une base de données à un point précis dans le laps de temps spécifié.  Les valeurs prises en charge s'échelonnent sur une plage de 1 à 30 jours.  
+ La période de rétention est utilisée par la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] pour déterminer les fichiers de sauvegarde qui doivent être retenus dans le stockage pour restaurer une base de données à un point précis dans le temps au cours d'une période spécifiée.  Les valeurs prises en charge s'échelonnent sur une plage de 1 à 30 jours.  
   
  Séquence de journaux de transactions consécutifs  
  Une séquence continue de sauvegardes de journaux s'appelle une séquence de journaux de transactions consécutifs. Une séquence de journaux de transactions consécutifs commence par une sauvegarde complète de la base de données.  
@@ -50,7 +50,7 @@ La [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] peut être ac
 ##  <a name="Concepts"></a> Configuration requise, Concepts et composants  
   
   
-###  <a name="Security"></a> Autorisations  
+###  <a name="Security"></a> Permissions  
  Transact-SQL est l'interface principale utilisée pour configurer et surveiller la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. En règle générale, pour exécuter la configuration de procédures stockées, **db_backupoperator** rôle de base de données avec **ALTER ANY CREDENTIAL** autorisations, et `EXECUTE` autorisations sur **sp_delete_ backuphistory** procédure stockée n’est requise.  Les procédures stockées et les fonctions utilisées pour passer en revue les informations nécessitent généralement des autorisations `Execute` sur la procédure stockée et `Select` sur la fonction, respectivement.  
   
 ###  <a name="Prereqs"></a> Conditions préalables  
@@ -72,7 +72,7 @@ La [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] peut être ac
 |-|-|  
 |Objet système|Description|  
 |**MSDB**|Stocke les métadonnées et l'historique de toutes les sauvegardes créées par la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|  
-|[smart_admin.set_db_backup &#40;Transact-SQL&#41;](https://msdn.microsoft.com/en-us/library/dn451013(v=sql.120).aspx)|Procédures stockées système pour activer et configurer la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] pour une base de données.|  
+|[smart_admin.set_db_backup &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/dn451013(v=sql.120).aspx)|Procédures stockées système pour activer et configurer la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] pour une base de données.|  
 |[smart_admin.set_instance_backup &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/dn451009(v=sql.120).aspx)|Procédures stockées système pour activer et configurer les paramètres par défaut [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] pour l’instance de SQL Server.|  
 |[smart_admin.sp_ backup_master_switch &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/managed-backup-sp-backup-master-switch-transact-sql)|Procédures stockées système pour interrompre et reprendre la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|  
 |[smart_admin.sp_set_parameter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/managed-backup-sp-set-parameter-transact-sql)|Procédures stockées système pour activer et configurer la surveillance pour la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Exemples : activer les événements étendus, les paramètres de courrier électronique pour les notifications.|  
@@ -140,7 +140,7 @@ La [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] peut être ac
   
 -   Le service de stockage Blob Windows Azure est la seule option de stockage de sauvegarde prise en charge. Les sauvegardes sur disque ou sur bande ne sont pas prises en charge.  
   
--   Actuellement, la taille maximale de fichier autorisée pour un objet blob de page dans le Stockage Microsoft Azure est 1 To. Les fichiers de sauvegarde d'une taille supérieure à 1 To échouent. Afin d'éviter cette situation, nous vous recommandons, pour les bases de données de grande taille, d'utiliser la compression et de tester la taille du fichier de sauvegarde avant de configurer la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Pour le test, effectuez une sauvegarde sur un disque local ou une sauvegarde manuelle dans le stockage Windows Azure à l'aide de l'instruction Transact-SQL `BACKUP TO URL`. Pour plus d'informations, consultez [SQL Server Backup to URL](sql-server-backup-to-url.md).  
+-   Actuellement, la taille maximale de fichier autorisée pour un objet blob de page dans le Stockage Microsoft Azure est 1 To. Les fichiers de sauvegarde d'une taille supérieure à 1 To échouent. Afin d'éviter cette situation, nous vous recommandons, pour les bases de données de grande taille, d'utiliser la compression et de tester la taille du fichier de sauvegarde avant de configurer la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Pour le test, effectuez une sauvegarde sur un disque local ou une sauvegarde manuelle dans le stockage Windows Azure à l'aide de l'instruction Transact-SQL `BACKUP TO URL`. Pour plus d’informations, consultez [SQL Server Backup to URL](sql-server-backup-to-url.md).  
   
 -   Modèles de récupération : seules les bases de données en mode de récupération complète ou en mode de récupération utilisant les journaux de transactions sont prises en charge.  Les bases de données utilisant le mode de récupération simple ne sont pas prises en charge.  
   

@@ -1,5 +1,5 @@
 ---
-title: Présentation de Power View pour les modèles multidimensionnels | Documents Microsoft
+title: Présentation de Power View pour les modèles multidimensionnels | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 899569bffcb0e521d6bcb36e0172498fa0da340c
-ms.sourcegitcommit: b3bb41424249de198f22d9c6d40df4996f083aa6
+ms.openlocfilehash: 23f30c2cebf7e048a8fb515edf370f4ab858bbff
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34300497"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147454"
 ---
 # <a name="understanding-power-view-for-multidimensional-models"></a>Présentation de Power View pour les modèles multidimensionnels
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "34300497"
   
  ![Power View pour les modèles multidimensionnels architecture](../../analysis-services/multidimensional-models/media/daxmd-architecture.gif "Power View pour les modèles multidimensionnels architecture")  
   
-## <a name="prerequisites"></a>Configuration requise  
+## <a name="prerequisites"></a>Prérequis  
  **Configuration requise au niveau du serveur**  
   
 -   Microsoft SQL Server 2016 Analysis Services exécuté en mode multidimensionnel.  
@@ -56,15 +56,15 @@ ms.locfileid: "34300497"
 |Objet multidimensionnel|Objet tabulaire|  
 |-----------------------------|--------------------|  
 |Cube|Modèle|  
-|Dimension de cube|Table|  
-|Attributs de dimension (clé, nom)|Colonne|  
-|Groupe de mesures|Table|  
+|Dimension de cube|Table de charge de travail|  
+|Attributs de dimension (clé, nom)|colonne|  
+|Groupe de mesures|Table de charge de travail|  
 |Measure|Measure|  
 |Mesure sans groupe de mesures|Dans un tableau nommé Mesures|  
 |Relations de dimension de cube de groupe de mesures|Relation|  
 |Perspective|Perspective|  
 |Indicateur de performance clé|Indicateur de performance clé|  
-|Hiérarchies parent-enfant/utilisateur|Hiérarchie|  
+|Hiérarchies parent-enfant/utilisateur|Hierarchy|  
 |Afficher le dossier|Afficher le dossier|  
   
 ## <a name="measures-measure-groups-and-kpis"></a>Mesures, groupes de mesures et indicateurs de performance clés  
@@ -174,7 +174,7 @@ ms.locfileid: "34300497"
   
  **Filtres épinglés**  
   
- ![Épinglé filtre](../../analysis-services/multidimensional-models/media/daxmd-pinnedfilterinpowerview.gif "épinglée de filtre")  
+ ![Épinglé filtre](../../analysis-services/multidimensional-models/media/daxmd-pinnedfilterinpowerview.gif "épinglé filtre")  
   
 ## <a name="unsupported-features"></a>Fonctionnalités non prises en charge  
  **Power View dans Excel 2013** ne prend pas en charge la connexion ni la création de rapports pour les modèles multidimensionnels. Toutefois, **Power View dans Excel 2016** ne prend pas en charge la connexion et la création de rapports pour les modèles multidimensionnels. Pour en savoir plus, voir [Power View et OLAP dans Excel 2016](https://support.office.com/en-us/article/power-view-and-olap-in-excel-2016-ea5ff7a5-ea5f-48d4-aeb0-98c89ab738ac).  
@@ -217,7 +217,7 @@ ms.locfileid: "34300497"
   
  La requête DISCOVER_CSDL_METADATA présente les restrictions suivantes :  
   
-|Nom|Requis| Description|  
+|Nom   |Requis|Description|  
 |----------|--------------|-----------------|  
 |CATALOG_NAME|Oui|Nom du catalogue\base de données.|  
 |PERSPECTIVE_NAME|Oui, si le cube contient plusieurs perspectives. Facultatif en présence d'un seul cube ou s'il existe une perspective par défaut.|Nom du cube ou de la perspective dans la base de données multidimensionnelle.|  
@@ -225,7 +225,7 @@ ms.locfileid: "34300497"
   
  Le document CSDL en sortie retourné représente le modèle en tant qu'espace de noms qui contient des entités, des associations et des propriétés.  
   
- Pour plus d’informations sur les annotations CSDLBI pour les modèles tabulaires, consultez [Guide de référence technique pour les annotations BI du langage CSDL](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md) sur MSDN et [\[MS-CSDLBI\]: Conceptual Schema Definitions File Format with Business Intelligence Annotations](http://msdn.microsoft.com/library/jj161299\(SQL.105\).aspx).  
+ Pour plus d’informations sur les annotations CSDLBI pour les modèles tabulaires, consultez [Guide de référence technique pour les annotations BI du langage CSDL](https://docs.microsoft.com/bi-reference/csdl/technical-reference-for-bi-annotations-to-csdl) sur MSDN et [\[MS-CSDLBI\]: Conceptual Schema Definitions File Format with Business Intelligence Annotations](http://msdn.microsoft.com/library/jj161299\(SQL.105\).aspx).  
   
 ## <a name="client-help-on-officecom"></a>Aide sur le client sur Office.com  
  Les articles suivants sont fournis sur Office.com pour aider les utilisateurs à en savoir plus sur la manière dont les objets de modèle multidimensionnel apparaissent dans Power View et sur la procédure de création d'un rapport d'exemple :  

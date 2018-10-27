@@ -1,5 +1,5 @@
 ---
-title: Propriétés de membre intrinsèques (MDX) | Documents Microsoft
+title: Propriétés de membre intrinsèques (MDX) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 97e1507617d710373dea39b546b74fc77a1d90de
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: a2e30dcf1875b09630516be9d9deb3248a95481e
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025736"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146164"
 ---
 # <a name="mdx-member-properties---intrinsic-member-properties"></a>Propriétés de membre MDX - propriétés de membre intrinsèques
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "34025736"
 ## <a name="context-sensitive-member-properties"></a>Propriétés de membre sensibles au contexte  
  Tous les membres de dimension ou de niveau prennent en charge une série de propriétés de membre intrinsèques sensibles au contexte. Le tableau suivant en dresse la liste.  
   
-|Propriété| Description|  
+|Propriété|Description|  
 |--------------|-----------------|  
 |**ID**|Identificateur géré en interne pour le membre.|  
 |**Key**|Valeur de la clé du membre dans le type de données d'origine. MEMBER_KEY est fournie à des fins de compatibilité descendante.  MEMBER_KEY a la même valeur que KEY0 pour les clés non composites et la propriété MEMBER_KEY est Null pour les clés composites.|  
@@ -85,9 +85,9 @@ ms.locfileid: "34025736"
  Le tableau suivant répertorie les propriétés intrinsèques non sensibles au contexte prises en charge par [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
 > [!NOTE]  
->  Les colonnes du jeu de lignes du schéma MEMBERS prennent en charge les propriétés de membre intrinsèques répertoriées dans le tableau suivant. Pour plus d’informations sur l’ensemble de lignes du schéma **MEMBERS** , consultez [Ensemble de lignes MDSCHEMA_MEMBERS](../../../analysis-services/schema-rowsets/ole-db-olap/mdschema-members-rowset.md).  
+>  Les colonnes du jeu de lignes du schéma MEMBERS prennent en charge les propriétés de membre intrinsèques répertoriées dans le tableau suivant. Pour plus d’informations sur l’ensemble de lignes du schéma **MEMBERS** , consultez [Ensemble de lignes MDSCHEMA_MEMBERS](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-members-rowset).  
   
-|Propriété| Description|  
+|Propriété|Description|  
 |--------------|-----------------|  
 |**CATALOG_NAME**|Nom du cube auquel ce membre appartient.|  
 |**CHILDREN_CARDINALITY**|Nombre d'enfants de ce membre. Ce nombre peut être une estimation, et ne doit pas être considéré comme le compte exact. Les fournisseurs doivent renvoyer la meilleure estimation possible.|  
@@ -205,15 +205,15 @@ FROM [Adventure Works]
   
 ## <a name="see-also"></a>Voir aussi  
  [PeriodsToDate &#40;MDX&#41;](../../../mdx/periodstodate-mdx.md)   
- [Enfants &#40;MDX&#41;](../../../mdx/children-mdx.md)   
- [Hierarchize & #40 ; MDX & #41 ;](../../../mdx/hierarchize-mdx.md)   
- [Nombre & #40 ; Définir le & #41 ; & #40 ; MDX & #41 ;](../../../mdx/count-set-mdx.md)   
- [Filtre & #40 ; MDX & #41 ;](../../../mdx/filter-mdx.md)   
- [AddCalculatedMembers & #40 ; MDX & #41 ;](../../../mdx/addcalculatedmembers-mdx.md)   
- [DrilldownLevel & #40 ; MDX & #41 ;](../../../mdx/drilldownlevel-mdx.md)   
- [Propriétés & #40 ; MDX & #41 ;](../../../mdx/properties-mdx.md)   
+ [Children &#40;MDX&#41;](../../../mdx/children-mdx.md)   
+ [Hierarchize &#40;MDX&#41;](../../../mdx/hierarchize-mdx.md)   
+ [Count &#40;Set&#41; &#40;MDX&#41;](../../../mdx/count-set-mdx.md)   
+ [Filter &#40;MDX&#41;](../../../mdx/filter-mdx.md)   
+ [AddCalculatedMembers &#40;MDX&#41;](../../../mdx/addcalculatedmembers-mdx.md)   
+ [DrilldownLevel &#40;MDX&#41;](../../../mdx/drilldownlevel-mdx.md)   
+ [Properties &#40;MDX&#41;](../../../mdx/properties-mdx.md)   
  [PrevMember &#40;MDX&#41;](../../../mdx/prevmember-mdx.md)   
- [À l’aide des propriétés de membre & #40 ; MDX & #41 ;](../../../analysis-services/multidimensional-models/mdx/mdx-member-properties.md)   
- [Référence des fonctions MDX & #40 ; MDX & #41 ;](../../../mdx/mdx-function-reference-mdx.md)  
+ [Utilisation des propriétés de membre &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-member-properties.md)   
+ [Guide de référence des fonctions MDX &#40;MDX&#41;](../../../mdx/mdx-function-reference-mdx.md)  
   
   

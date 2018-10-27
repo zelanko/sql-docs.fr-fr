@@ -1,5 +1,5 @@
 ---
-title: Déterminer le Mode de serveur d’analyse Services Instance | Documents Microsoft
+title: Déterminer le Mode de serveur d’analyse Services Instance | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 52f12b7d828f9d863f3efe29355e59b6a76d33ef
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 85501a0b8899e375965a7e999ce2d4e938f14cc0
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017456"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099716"
 ---
 # <a name="determine-the-server-mode-of-an-analysis-services-instance"></a>Déterminer le mode serveur d'une instance Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "34017456"
 ## <a name="server-icons-in-object-explorer"></a>Icônes de serveur dans l'Explorateur d'objets  
  La méthode la plus simple pour déterminer le mode serveur consiste à se connecter au serveur dans SQL Server Management Studio et à repérer l'icône située à côté du nom du serveur dans l'Explorateur d'objets. L’illustration suivante montre trois instances d’Analysis Services déployées en mode MDX, Tabulaire, et [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] :  
   
- ![Pour chaque mode serveur, les icônes de l’Explorateur de l’objet](../../analysis-services/instances/media/ssas-ssms-servermodes.gif "des icônes de l’Explorateur d’objets pour chaque mode serveur")  
+ ![Icônes de l’Explorateur pour chaque mode serveur de l’objet](../../analysis-services/instances/media/ssas-ssms-servermodes.gif "des icônes de l’Explorateur d’objets pour chaque mode serveur")  
   
 ## <a name="viewing-deploymentmode-property-in-msmdsrvini-file"></a>Affichage de la propriété DeploymentMode dans le fichier MSMDSRV.INI  
  Vous pouvez également vérifier la propriété **DeploymentMode** dans le fichier msmdsrv.ini inclus dans chaque instance Analysis Services. La valeur de cette propriété identifie le mode serveur. Les valeurs valides sont 0 (multidimensionnel), 1 (SharePoint) ou 2 (tabulaire). Vous devez être un administrateur d’ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (autrement dit, un membre du rôle Serveur) pour pouvoir ouvrir le fichier msmdsrv.ini. Ce fichier contient du code XML structuré. Vous pouvez utiliser le Bloc-notes ou un autre éditeur de texte pour afficher le fichier.  
@@ -40,9 +40,9 @@ ms.locfileid: "34017456"
   
  Les valeurs valides pour cette propriété sont les suivantes :  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
-|0|Ceci est la valeur par défaut. Elle spécifie le mode multidimensionnel, utilisé pour servir les bases de données multidimensionnelles qui utilisent le stockage MOLAP, HOLAP et ROLAP, ainsi que les modèles d'exploration de données.|  
+|0|Il s'agit de la valeur par défaut. Elle spécifie le mode multidimensionnel, utilisé pour servir les bases de données multidimensionnelles qui utilisent le stockage MOLAP, HOLAP et ROLAP, ainsi que les modèles d'exploration de données.|  
 |1|Spécifie des instances d’Analysis Services installées dans le cadre d’un déploiement [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint. Ne modifiez pas la propriété du mode de déploiement de l’instance Analysis Services qui fait partie d’une installation [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ne s’exécuteront plus sur le serveur si vous modifiez le mode.|  
 |2|Spécifie le mode tabulaire utilisé pour héberger les bases de données model tabulaires qui utilisent le stockage en mémoire ou le stockage DirectQuery.|  
   
@@ -51,10 +51,10 @@ ms.locfileid: "34017456"
 ## <a name="see-also"></a>Voir aussi  
  [Installer Analysis Services](../../analysis-services/instances/install-windows/install-analysis-services.md)   
  [Installer Analysis Services en mode multidimensionnel et exploration de données](http://msdn.microsoft.com/library/8a1f33e8-2bd6-4fb8-bd46-c86f2a067f60)   
- [Installation de Power Pivot pour SharePoint 2010](http://msdn.microsoft.com/en-us/8d47dde7-c941-4280-a934-e2fe3f9a938f)   
+ [Installation de Power Pivot pour SharePoint 2010](http://msdn.microsoft.com/8d47dde7-c941-4280-a934-e2fe3f9a938f)   
  [Se connecter à Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)   
  [Solutions de modèles tabulaires](../../analysis-services/tabular-models/tabular-models-ssas.md)   
  [Solutions de modèles multidimensionnels ](../../analysis-services/multidimensional-models/multidimensional-model-solutions-ssas.md)   
- [Les modèles d’exploration de données & #40 ; Analysis Services - Exploration de données & #41 ;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
+ [Modèles d’exploration de données &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
   
   

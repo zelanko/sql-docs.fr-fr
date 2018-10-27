@@ -1,18 +1,18 @@
 ---
 title: Nouveautés pour les clusters de données volumineuses de SQL Server maître instance ? | Microsoft Docs
-description: ''
+description: Cet article décrit l’instance principale dans un cluster de données volumineux de SQL Server 2019.
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 10/01/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: f3b17330f38d30400564171ba09328dc4f8c8be7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7c58d925e9d52ee4496f8a324eab91bbfa7ccaad
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48796183"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50051061"
 ---
 # <a name="what-is-the-sql-server-big-data-cluster-master-instance"></a>Quelles sont les données volumineuses de SQL Server cluster instance principale ?
 
@@ -63,6 +63,6 @@ Avec SQL Server 2019 des clusters de données volumineuses, vous pouvez en faire
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Pour en savoir plus sur les Clusters de données volumineuses de SQL Server, consultez la présentation suivante :
+Pour en savoir plus sur les clusters de données volumineuses de SQL Server, consultez la présentation suivante :
 
-- [Qu’est SQL Server 2019 Big Data Clusters ?](big-data-cluster-overview.md)
+- [Quelles sont les clusters SQL Server 2019 big data ?](big-data-cluster-overview.md)

@@ -1,5 +1,5 @@
 ---
-title: Référence d’Expressions multidimensionnelles (MDX) | Documents Microsoft
+title: Référence d’Expressions multidimensionnelles (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: cae2aba7475a987561bb089edc36410a4f08ab97
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: efed0e6e396e83ba13aa058639e47e37dd376dde
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742678"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145334"
 ---
 # <a name="multidimensional-expressions-mdx-reference"></a>Référence MDX (Multidimensional Expressions)
 
@@ -25,12 +25,12 @@ ms.locfileid: "34742678"
 |Rubrique|Description|  
 |-----------|-----------------|  
 |[Éléments de syntaxe MDX &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)|Décrit les divers éléments de syntaxe disponibles dans le langage MDX pour les expressions, instructions et scripts MDX.|  
-|[Référence du langage MDX &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)|Décrit les instructions, opérateurs et fonctions définissant le langage MDX.|  
+|[Guide de référence du langage MDX &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)|Décrit les instructions, opérateurs et fonctions définissant le langage MDX.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Interrogation de données multidimensionnelles avec MDX](../analysis-services/multidimensional-models/mdx/querying-multidimensional-data-with-mdx.md)   
- [Analysis Services Scripting Language &#40;ASSL de XMLA&#41;](../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)   
- [La récupération des données à partir d’une Source de données analytiques](../analysis-services/multidimensional-models-adomd-net-client/retrieving-data-from-an-analytical-data-source.md)   
+ [Langage de script Analysis Services &#40;ASSL pour XMLA&#41;](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)   
+ [Récupération des données à partir d’une Source de données analytiques](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/retrieving-data-from-an-analytical-data-source)   
  [Définir des attributions et d’autres commandes de script](../analysis-services/multidimensional-models/define-assignments-and-other-script-commands.md)  
   
   

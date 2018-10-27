@@ -1,5 +1,5 @@
 ---
-title: Actions dans les modèles multidimensionnels | Documents Microsoft
+title: Actions dans les modèles multidimensionnels | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6ed03893bbf3f18137329fc1792ecd0b30a77a68
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: c3bf71447581375fca06d8190cf6a5a863c136dc
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024276"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145704"
 ---
 # <a name="actions-in-multidimensional-models"></a>Actions dans les modèles multidimensionnels
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -36,11 +36,11 @@ ms.locfileid: "34024276"
   
 -   Membres de dimension  
   
--   Hiérarchie  
+-   Hierarchy  
   
 -   Membres de hiérarchie  
   
--   Niveau  
+-   Level  
   
 -   Membres de niveau  
   
@@ -52,7 +52,7 @@ ms.locfileid: "34024276"
  **Contenu d'action**  
  Sélectionnez le type d'action. Le tableau suivant récapitule les types disponibles.  
   
-|Type| Description|  
+|Type|Description|  
 |----------|-----------------|  
 |Jeu de données|Récupère un dataset.|  
 |Propriétaire|Effectue une opération en utilisant une interface différente de celles répertoriées dans ce tableau.|  
@@ -65,7 +65,7 @@ ms.locfileid: "34024276"
  **Propriétés supplémentaires**  
  Sélectionnez la propriété. Le tableau suivant répertorie les propriétés disponibles.  
   
-|Propriété| Description|  
+|Propriété|Description|  
 |--------------|-----------------|  
 |**Invocation**|Détermine le mode d'exécution de l'action. Le mode interactif, qui est celui par défaut, spécifie que l'action est exécutée lorsqu'un utilisateur accède à un objet. Les paramètres possibles sont :<br /><br /> Traitement<br /><br /> Interactif<br /><br /> À l’ouverture|  
 |**Application**|Décrit l'application de l'action.|  
@@ -74,7 +74,7 @@ ms.locfileid: "34024276"
 |**La légende est MDX**|Spécifiez **True** si la légende est au format MDX ou **False** si ce n’est pas le cas.|  
   
 > [!NOTE]  
->  Vous devez utiliser le langage de script Analysis Services (ASSL) ou les objets AMO (Analysis Management Objects) pour définir les types d'action de ligne de commande et HTML. Pour plus d’informations, consultez [Élément Action &#40;ASSL&#41;](../../analysis-services/scripting/objects/action-element-assl.md), [Élément Type &#40;Action&#41; &#40;ASSL&#41;](../../analysis-services/scripting/properties/type-element-action-assl.md) et [Programmation d’objets OLAP AMO avancés](../../analysis-services/multidimensional-models/analysis-management-objects/programming-amo-olap-advanced-objects.md).  
+>  Vous devez utiliser le langage de script Analysis Services (ASSL) ou les objets AMO (Analysis Management Objects) pour définir les types d'action de ligne de commande et HTML. Pour plus d’informations, consultez [Élément Action &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/objects/action-element-assl), [Élément Type &#40;Action&#41; &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/type-element-action-assl) et [Programmation d’objets OLAP AMO avancés](https://docs.microsoft.com/bi-reference/amo/programming-amo-olap-advanced-objects).  
   
 ## <a name="creating-a-reporting-action"></a>Création d'une action de rapport  
  Le serveur de rapports répond aux demandes de rapports basées sur une URL. Pour créer une action de rapport, dans le menu **Cube** , cliquez sur **Nouvelle action de rapport**. Les options suivantes sont propres à une action de rapport.  
@@ -82,7 +82,7 @@ ms.locfileid: "34024276"
  **Serveur de rapports**  
  Les propriétés décrites dans le tableau suivant sont spécifiées pour le serveur de rapports.  
   
-|Propriété| Description|  
+|Propriété|Description|  
 |--------------|-----------------|  
 |**Nom du serveur**|Nom de l'ordinateur exécutant le serveur de rapports.|  
 |**Chemin d'accès au serveur**|Chemin exposé par le serveur de rapports.|  
@@ -109,7 +109,7 @@ parametervalue1
 & ...  
 ```  
   
- Par exemple :  
+ Exemple :  
   
 ```  
 http://localhost/ReportServer/Sales/YearlySalesByCategory?rs:Command=Render&Region=West  

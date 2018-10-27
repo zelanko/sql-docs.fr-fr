@@ -1,5 +1,5 @@
 ---
-title: Power Pivot Management Dashboard and Usage Data | Documents Microsoft
+title: Power Pivot Management Dashboard and Usage Data | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 30f0e84ee388a8a452c855fbd045863f7e2389b0
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 0b2a6266f1a789c5475ac6551a2f52f1d0bd393f
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34030340"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099930"
 ---
 # <a name="power-pivot-management-dashboard-and-usage-data"></a>Tableau de bord de gestion Power Pivot et données d’utilisation
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "34030340"
 ##  <a name="items"></a> Présentation des différentes sections du tableau de bord  
  [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] contient des composants WebPart et des rapports incorporés qui explorent des catégories d’informations spécifiques. La liste suivante décrit chaque élément du tableau de bord :  
   
-|Tableau de bord| Description|  
+|Tableau de bord|Description|  
 |---------------|-----------------|  
 |Infrastructure - Intégrité du serveur|Affiche les tendances d'utilisation de l'UC, de consommation de mémoire et de temps de réponse aux requêtes au fil du temps afin que vous puissiez évaluer si les ressources système s'approchent de leur capacité maximale ou sont sous-utilisées.|  
 |Actions|Contient des liens vers d'autres pages de l'Administration centrale, notamment l'application de service actuelle, une liste des applications de service et la journalisation de l'utilisation.|  
@@ -68,7 +68,7 @@ ms.locfileid: "34030340"
   
 -   [Collecte des données d’utilisation Power Pivot](../../analysis-services/power-pivot-sharepoint/power-pivot-usage-data-collection.md)  
   
--   [Configurer la collecte des données d’utilisation &#40;PowerPivot pour SharePoint](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md)  
+-   [Configurer la collecte des données d’utilisation &#40;PowerPivot pour SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md)  
   
  Pour capturer des données sur le système du serveur Power Pivot, vérifiez que la messagerie d’événements, l’historique d’actualisation des données et les autres historiques d’utilisation sont activés pour chaque application de service Power Pivot. Les données sur le serveur et l'utilisation collectées lors du fonctionnement normal du serveur constituent la source de données utilisée dans le modèle de données interne. **Remarque :** si vous désactivez les historiques d'événements ou d'utilisation, les rapports composites seront incomplets ou erronés.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "34030340"
   
 5.  Ouvrez le fichier .odc dans un éditeur de texte.  
   
-6.  Dans le  **\<odc : ConnectionString >** élément, faites défiler jusqu'à la fin de la ligne et supprimez **données incorporées = False**, puis supprimez **Mode d’édition = 0**. Si le dernier caractère de la chaîne est un point-virgule, supprimez-le.  
+6.  Dans le  **\<odc : ConnectionString >** élément, faites défiler jusqu'à la fin de la ligne et supprimez **données incorporées = False**, puis supprimez **Edit Mode = 0**. Si le dernier caractère de la chaîne est un point-virgule, supprimez-le.  
   
 7.  Enregistrez le fichier. Les étapes restantes dépendent de la version de [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] et d’Excel que vous utilisez.  
   
@@ -138,7 +138,7 @@ ms.locfileid: "34030340"
     9. Dans Spécifier la requête MDX, cliquez sur **Conception** pour ouvrir le concepteur de requêtes MDX afin d'assembler les données avec lesquelles vous souhaitez travailler, puis créez des rapports de tableau croisé dynamique ou de graphique croisé dynamique pour visualiser les données dans Excel.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Actualisation des données Power Pivot avec SharePoint 2010](http://msdn.microsoft.com/en-us/01b54e6f-66e5-485c-acaa-3f9aa53119c9)   
+ [Actualisation des données Power Pivot avec SharePoint 2010](http://msdn.microsoft.com/01b54e6f-66e5-485c-acaa-3f9aa53119c9)   
  [Configurer la collecte des données d’utilisation &#40;PowerPivot pour SharePoint](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md)  
   
   

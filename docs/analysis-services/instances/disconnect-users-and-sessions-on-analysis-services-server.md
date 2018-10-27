@@ -1,5 +1,5 @@
 ---
-title: Déconnecter des utilisateurs et Sessions sur Analysis Services Server | Documents Microsoft
+title: Déconnecter des utilisateurs et Sessions sur Analysis Services Server | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 99072a36fe65679dbf81aa0ba3f4efdb3b487533
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 0e4868a7ff2e8b03835988cd4517909c722eaf4a
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014346"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50144769"
 ---
 # <a name="disconnect-users-and-sessions-on-analysis-services-server"></a>Déconnecter des utilisateurs et sessions sur un serveur Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -65,12 +65,12 @@ ms.locfileid: "34014346"
   
  Dans de rares cas, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ne fermera pas la connexion s’il n’arrive pas à effectuer le suivi de toutes les sessions et tous les SPID associés à la connexion (par exemple quand plusieurs sessions sont ouvertes dans un scénario HTTP).  
   
- Pour plus d’informations sur le code XMLA mentionné dans cette rubrique, consultez [Méthode Execute &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-methods-execute.md) et [Élément Cancel &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-commands/cancel-element-xmla.md).  
+ Pour plus d’informations sur le code XMLA mentionné dans cette rubrique, consultez [Méthode Execute &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute) et [Élément Cancel &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/cancel-element-xmla).  
   
 ## <a name="see-also"></a>Voir aussi  
- [La gestion des connexions et Sessions & #40 ; XMLA & #41 ;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md)   
- [Élément BeginSession & #40 ; XMLA & #41 ;](../../analysis-services/xmla/xml-elements-headers/beginsession-element-xmla.md)   
- [Élément EndSession & #40 ; XMLA & #41 ;](../../analysis-services/xmla/xml-elements-headers/endsession-element-xmla.md)   
- [Élément session & #40 ; XMLA & #41 ;](../../analysis-services/xmla/xml-elements-headers/session-element-xmla.md)  
+ [Gestion des connexions et des sessions &#40;XMLA&#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md)   
+ [Élément BeginSession &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-headers/beginsession-element-xmla)   
+ [Élément EndSession &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-headers/endsession-element-xmla)   
+ [Élément Session &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-headers/session-element-xmla)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: DrilldownMemberBottom (MDX) | Documents Microsoft
+title: DrilldownMemberBottom (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7b145ad7de1832012bd0d78faef58556dfc31d45
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 854f880cf9cb4f06ee4fc44fd18cec5f0ab99ca8
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740638"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145114"
 ---
 # <a name="drilldownmemberbottom-mdx"></a>DrilldownMemberBottom (MDX)
 
@@ -35,7 +35,7 @@ DrillDownMemberBottom(<Set_Expression1>, <Set_Expression2>, <Count> [,[<Numeric_
  *Set_Expression2*  
  Une expression MDX (Multidimensional Expressions) valide qui retourne un jeu.  
   
- *Nombre*  
+ *Compter*  
  Expression numérique valide qui précise le nombre de tuples à retourner.  
   
  *Numeric_expression*  
@@ -51,19 +51,19 @@ DrillDownMemberBottom(<Set_Expression1>, <Set_Expression2>, <Count> [,[<Numeric_
  Mot clé permettant d'activer les membres calculés à inclure dans les résultats de l'extraction vers le bas.  
   
 ## <a name="remarks"></a>Notes  
- Si une expression numérique est spécifiée, la **DrilldownMemberBottom** fonction trie, par ordre croissant, les enfants de chaque membre dans le premier jeu, en fonction de la valeur de l’expression numérique, telle qu’évaluée sur le jeu de membres enfants. Si aucune expression numérique n'est spécifiée, cette fonction trie, par ordre croissant, les enfants de chaque membre dans le premier jeu selon les valeurs des cellules représentées par le jeu des membres enfants, comme le détermine le contexte de la requête. Ce comportement est semblable aux fonctions BottomCount et Tail (MDX) qui retournent un jeu de membres dans l'ordre naturel, sans tri.  
+ Si une expression numérique est spécifiée, le **DrilldownMemberBottom** fonction trie, par ordre croissant, les enfants de chaque membre dans le premier jeu, en fonction de la valeur de l’expression numérique, telle qu’évaluée sur le jeu d’enfant membres. Si aucune expression numérique n'est spécifiée, cette fonction trie, par ordre croissant, les enfants de chaque membre dans le premier jeu selon les valeurs des cellules représentées par le jeu des membres enfants, comme le détermine le contexte de la requête. Ce comportement est semblable aux fonctions BottomCount et Tail (MDX) qui retournent un jeu de membres dans l'ordre naturel, sans tri.  
   
- Après le tri, le **DrilldownMemberBottom** fonction retourne un jeu qui contient les membres parents et le nombre de membres enfants spécifiés dans *Count,* avec la valeur la plus basse et contenues dans les deux ensembles.  
+ Après le tri, le **DrilldownMemberBottom** fonction retourne un jeu qui contient les membres parents et le nombre de membres enfants spécifiés dans *Count,* avec la valeur la plus basse et qui sont contenus dans les deux définit.  
   
  Si **récursive** est spécifié, la fonction trie le premier jeu comme décrit précédemment, puis compare de manière récursive les membres du premier jeu, organisées dans une hiérarchie, par rapport au deuxième jeu. La fonction extrait le nombre le plus faible d'enfants pour chaque membre du premier jeu également présent dans le deuxième jeu.  
   
  Le premier jeu peut contenir des tuples au lieu de membres. Descente de tuple est une extension de OLE DB et retourne un jeu de tuples au lieu de membres.  
   
- Le **DrilldownMemberBottom** fonction est similaire à la [DrilldownMember](../mdx/drilldownmember-mdx.md) de fonctionner, mais au lieu d’inclure tous les enfants de chaque membre dans le premier jeu est également présent dans le deuxième jeu, le **DrilldownMemberBottom** fonction retourne le nombre le plus faible de membres enfants pour chaque membre.  
+ Le **DrilldownMemberBottom** fonction est similaire à la [DrilldownMember](../mdx/drilldownmember-mdx.md) de fonctionner, mais au lieu d’inclure tous les enfants de chaque membre dans le premier jeu est également présent dans le deuxième jeu, le  **DrilldownMemberBottom** fonction retourne le nombre le plus faible de membres enfants pour chaque membre.  
   
- Interrogez la propriété XMLA MdpropMdxDrillFunctions vous permet de vérifier le niveau de prise en charge par le serveur pour les fonctions d’extraction ; consultez [pris en charge les propriétés XMLA &#40;XMLA&#41; ](../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) pour plus d’informations.  
+ Interrogez la propriété XMLA MdpropMdxDrillFunctions vous permet de vérifier le niveau de prise en charge fournis par le serveur pour les fonctions d’extraction ; consultez [propriétés XMLA prises en charge &#40;XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) pour plus d’informations.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guide de référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

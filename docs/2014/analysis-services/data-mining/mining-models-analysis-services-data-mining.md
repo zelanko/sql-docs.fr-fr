@@ -18,12 +18,12 @@ ms.assetid: cd4df273-0c6a-4b3e-9572-8a7e313111e8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 903c12bd13660af2cde0333e783d5dc22cc4a76a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4a328e2b7af2fb1e743c81e23a0f80e7530f3810
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207699"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146004"
 ---
 # <a name="mining-models-analysis-services---data-mining"></a>Modèles d'exploration de données (Analysis Services - Exploration de données)
   Un *modèle d’exploration de données* est créé en appliquant un algorithme aux données, mais c’est plus qu’un algorithme ou qu’un conteneur de métadonnées : il s’agit d’un jeu de données, de statistiques et de modèles qui peuvent être appliqués à de nouvelles données pour générer des prédictions et pour effectuer des inférences sur les relations.  
@@ -91,9 +91,9 @@ ms.locfileid: "48207699"
   
  De plus, chaque modèle d’exploration de données contient deux propriétés spéciales : <xref:Microsoft.AnalysisServices.MiningModel.Algorithm%2A> et <xref:Microsoft.AnalysisServices.MiningModelColumn.Usage%2A>.  
   
--   **Propriété Algorithme** : spécifie l’algorithme utilisé pour créer le modèle. Les algorithmes disponibles dépendent du fournisseur utilisé. Pour une liste des algorithmes inclus avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], consultez [Data Mining Algorithms &#40;Analysis Services - Data Mining&#41;](data-mining-algorithms-analysis-services-data-mining.md). La propriété `Algorithm` s'applique au modèle d'exploration de données et ne peut être définie qu'une seule fois pour chaque modèle. Vous pouvez modifier l'algorithme ultérieurement mais certaines colonnes du modèle d'exploration de données peuvent devenir non valides si elles ne sont pas prises en charge par l'algorithme choisi. Vous devez toujours retraiter le modèle suivant la modification de cette propriété.  
+-   **Propriété Algorithme** : spécifie l’algorithme utilisé pour créer le modèle. Les algorithmes disponibles dépendent du fournisseur utilisé. Pour une liste des algorithmes inclus avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], consultez [Algorithmes d’exploration de données &#40;Analysis Services – Exploration de données&#41;](data-mining-algorithms-analysis-services-data-mining.md). La propriété `Algorithm` s'applique au modèle d'exploration de données et ne peut être définie qu'une seule fois pour chaque modèle. Vous pouvez modifier l'algorithme ultérieurement mais certaines colonnes du modèle d'exploration de données peuvent devenir non valides si elles ne sont pas prises en charge par l'algorithme choisi. Vous devez toujours retraiter le modèle suivant la modification de cette propriété.  
   
--   **Propriété Utilisation** : définit la façon dont chaque colonne est utilisée par le modèle. Vous pouvez définir l’utilisation des colonnes en tant que `Input`, `Predict`, `Predict Only`, ou `Key`. La propriété `Usage` s'applique aux colonnes individuelles du modèle d'exploration de données et doit être définie individuellement pour chaque colonne incluse dans un modèle. Si la structure contient une colonne que vous n'utilisez pas dans le modèle, l'utilisation est définie sur `Ignore`. Les exemples de données que vous pouvez inclure dans la structure d'exploration de données mais pas utiliser dans l'analyse, peuvent être des noms de client ou des adresses de messagerie. De cette façon, vous pouvez les interroger ultérieurement sans avoir à les inclure dans la phase d'analyse.  
+-   **Propriété Utilisation** : définit la façon dont chaque colonne est utilisée par le modèle. Vous pouvez définir l'utilisation de colonne sur `Input`, `Predict` `Predict Only` ou `Key`. La propriété `Usage` s'applique aux colonnes individuelles du modèle d'exploration de données et doit être définie individuellement pour chaque colonne incluse dans un modèle. Si la structure contient une colonne que vous n'utilisez pas dans le modèle, l'utilisation est définie sur `Ignore`. Les exemples de données que vous pouvez inclure dans la structure d'exploration de données mais pas utiliser dans l'analyse, peuvent être des noms de client ou des adresses de messagerie. De cette façon, vous pouvez les interroger ultérieurement sans avoir à les inclure dans la phase d'analyse.  
   
  Après avoir créé un modèle d'exploration de données, vous pouvez modifier la valeur de ses propriétés. Toutefois, toute modification, même sur le nom du modèle d'exploration de données, requiert un traitement supplémentaire du modèle. Lorsque le modèle a été traité de nouveau, vous pouvez voir des résultats différents.  
   
@@ -126,10 +126,10 @@ ms.locfileid: "48207699"
   
 |Rubriques|Liens|  
 |------------|-----------|  
-|Apprendre à créer des structures d'exploration de données qui peuvent prendre en charge plusieurs modèles d'exploration de données. En savoir plus sur l'utilisation de colonnes dans les modèles.|[Colonnes de structure d’exploration de données](mining-structure-columns.md)<br /><br /> [Colonnes d’un modèle d’exploration de données](mining-model-columns.md)<br /><br /> [Types de contenu &#40;exploration de données&#41;](content-types-data-mining.md)|  
-|Découvrir les différents algorithmes et la manière dont le choix de l'algorithme affecte le contenu du modèle.|[Contenu du modèle d’exploration de données &#40;Analysis Services - Exploration de données&#41;](mining-model-content-analysis-services-data-mining.md)<br /><br /> [Algorithmes d’exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining-algorithms-analysis-services-data-mining.md)|  
-|Découvrir comment vous pouvez définir des propriétés sur le modèle qui affectent sa composition et son comportement.|[Propriétés du modèle d’exploration de données](mining-model-properties.md)<br /><br /> [Indicateurs de modélisation &#40;exploration de données&#41;](modeling-flags-data-mining.md)|  
-|En savoir plus sur les interfaces programmables pour l'exploration de données.|[Développement avec Analysis Management Objects &#40;AMO&#41;](../multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)<br /><br /> [Data Mining Extensions &#40;DMX&#41; référence](/sql/dmx/data-mining-extensions-dmx-reference)|  
+|Apprendre à créer des structures d'exploration de données qui peuvent prendre en charge plusieurs modèles d'exploration de données. En savoir plus sur l'utilisation de colonnes dans les modèles.|[Colonnes de structure d’exploration de données](mining-structure-columns.md)<br /><br /> [Colonnes d'un modèle d'exploration de données](mining-model-columns.md)<br /><br /> [Types de contenu &#40;exploration de données&#41;](content-types-data-mining.md)|  
+|Découvrir les différents algorithmes et la manière dont le choix de l'algorithme affecte le contenu du modèle.|[Contenu du modèle d’exploration &#40;Analysis Services – Exploration de données&#41;](mining-model-content-analysis-services-data-mining.md)<br /><br /> [Algorithmes d’exploration de données &#40;Analysis Services – Exploration de données&#41;](data-mining-algorithms-analysis-services-data-mining.md)|  
+|Découvrir comment vous pouvez définir des propriétés sur le modèle qui affectent sa composition et son comportement.|[Propriétés du modèle d'exploration de données](mining-model-properties.md)<br /><br /> [Indicateurs de modélisation &#40;exploration de données&#41;](modeling-flags-data-mining.md)|  
+|En savoir plus sur les interfaces programmables pour l'exploration de données.|[Développement avec AMO &#40;Analysis Management Objects&#41;](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)<br /><br /> [Informations de référence sur le langage DMX &#40;Data Mining Extensions&#41;](/sql/dmx/data-mining-extensions-dmx-reference)|  
 |Apprendre à utiliser les visionneuses personnalisées d'exploration de données dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|[Visionneuses de modèle d’exploration de données](data-mining-model-viewers.md)|  
 |Afficher des exemples de différents types de requête que vous pouvez utiliser sur des modèles d'exploration de données.|[Requêtes d’exploration de données](data-mining-queries.md)|  
   
@@ -138,14 +138,14 @@ ms.locfileid: "48207699"
   
 |Tâche|Lien|  
 |----------|----------|  
-|Ajouter et supprimer des modèles d'exploration de données|[Ajouter un modèle d’exploration de données à une structure d’exploration de données existante](add-a-mining-model-to-an-existing-mining-structure.md)<br /><br /> [Supprimer un modèle d’exploration de données dans une structure d’exploration de données](delete-a-mining-model-from-a-mining-structure.md)|  
-|Utiliser des colonnes de modèle d'exploration de données|[Exclure une colonne d’un modèle d’exploration de données](exclude-a-column-from-a-mining-model.md)<br /><br /> [Créer un alias pour une colonne du modèle](create-an-alias-for-a-model-column.md)<br /><br /> [Modifier la discrétisation d’une colonne dans un modèle d’exploration de données](change-the-discretization-of-a-column-in-a-mining-model.md)<br /><br /> [Spécifier une colonne à utiliser comme régresseur dans un modèle](specify-a-column-to-use-as-regressor-in-a-model.md)|  
+|Ajouter et supprimer des modèles d'exploration de données|[Ajouter un modèle d’exploration de données à une structure d’exploration de données existante](add-a-mining-model-to-an-existing-mining-structure.md)<br /><br /> [supprimer un modèle d'exploration de données d'une structure d'exploration de données](delete-a-mining-model-from-a-mining-structure.md)|  
+|Utiliser des colonnes de modèle d'exploration de données|[Exclure une colonne d'un modèle d'exploration de données](exclude-a-column-from-a-mining-model.md)<br /><br /> [Créer un alias pour une colonne du modèle](create-an-alias-for-a-model-column.md)<br /><br /> [Modifier la discrétisation d’une colonne dans un modèle d’exploration de données](change-the-discretization-of-a-column-in-a-mining-model.md)<br /><br /> [Spécifier une colonne à utiliser comme régresseur dans un modèle](specify-a-column-to-use-as-regressor-in-a-model.md)|  
 |Modifier les propriétés du modèle|[Modifier les propriétés d’un modèle d’exploration de données](change-the-properties-of-a-mining-model.md)<br /><br /> [Appliquer un filtre à un modèle d’exploration de données](apply-a-filter-to-a-mining-model.md)<br /><br /> [Supprimer un filtre d’un modèle d’exploration de données](delete-a-filter-from-a-mining-model.md)<br /><br /> [Activer l’extraction pour un modèle d’exploration de données](enable-drillthrough-for-a-mining-model.md)<br /><br /> [Afficher ou modifier les paramètres d’un algorithme](view-or-change-algorithm-parameters.md)|  
-|Copier, déplacer ou gérer les modèles|[Faire une copie d’un modèle d’exploration de données](make-a-copy-of-a-mining-model.md)<br /><br /> [Copier une vue d’un modèle d’exploration de données](copy-a-view-of-a-mining-model.md)<br /><br /> [EXPORTER &AMP;#40;DMX&AMP;#41;](/sql/dmx/export-dmx)<br /><br /> [IMPORTATION &AMP;#40;DMX&AMP;#41;](/sql/dmx/import-dmx)|  
+|Copier, déplacer ou gérer les modèles|[Faire une copie d’un modèle d’exploration de données](make-a-copy-of-a-mining-model.md)<br /><br /> [Copier une vue d’un modèle d’exploration de données](copy-a-view-of-a-mining-model.md)<br /><br /> [EXPORT &#40;DMX&#41;](/sql/dmx/export-dmx)<br /><br /> [IMPORT &#40;DMX&#41;](/sql/dmx/import-dmx)|  
 |Remplir les modèles avec des données ou mettre à jour des données dans un modèle|[Traiter un modèle d’exploration de données](process-a-mining-model.md)|  
 |Utiliser des modèles OLAP|[Créer une dimension d’exploration de données](create-a-data-mining-dimension.md)|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Objets de base de données &#40;Analysis Services - données multidimensionnelles&#41;](../multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
+ [Objets de bases de données &#40;Analysis Services – Données multidimensionnelles&#41;](../multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   
   

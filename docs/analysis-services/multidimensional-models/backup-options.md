@@ -1,5 +1,5 @@
 ---
-title: Options de sauvegarde | Documents Microsoft
+title: Options de sauvegarde | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 44251ff0abf155564102f0cf94ca8cd998718462
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 62f5bf26f80ea1018a5a3330efa0f055021ff0f5
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34020926"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145436"
 ---
 # <a name="backup-options"></a>Options de sauvegarde
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -27,9 +27,9 @@ ms.locfileid: "34020926"
 >  Le compte de service Analysis Services doit avoir l'autorisation d'écrire dans l'emplacement de sauvegarde spécifié pour chaque fichier. Par ailleurs, l'utilisateur doit avoir l'un des rôles suivants : rôle d'administrateur sur l'instance [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ou membre d'un rôle de base de données avec les autorisations de contrôle total (Administrateur) sur la base de données à sauvegarder.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Boîte de dialogue de sauvegarde de la base de données & #40 ; Analysis Services - données multidimensionnelles & #41 ;](http://msdn.microsoft.com/library/7811ce7d-6c37-4189-bfa6-ef36fb4932db)   
+ [Boîte de dialogue Sauvegarder la base de données &#40;Analysis Services - Données multidimensionnelles&#41;](http://msdn.microsoft.com/library/7811ce7d-6c37-4189-bfa6-ef36fb4932db)   
  [Sauvegarde et restauration de bases de données Analysis Services](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md)   
- [Élément Backup & #40 ; XMLA & #41 ;](../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md)   
- [Sauvegarde, restauration et synchronisation de bases de données & #40 ; XMLA & #41 ;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)  
+ [Élément Backup &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/backup-element-xmla)   
+ [Sauvegarde, restauration et synchronisation de bases de données &#40;XMLA&#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)  
   
   

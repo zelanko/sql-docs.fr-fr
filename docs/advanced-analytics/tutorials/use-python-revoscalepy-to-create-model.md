@@ -1,62 +1,60 @@
 ---
-title: Utilisation de Python avec revoscalepy pour créer un modèle | Microsoft Docs
+title: Utilisation de Python avec revoscalepy pour créer un modèle dans SQL Server | Microsoft Docs
+description: Écrire le script Python à l’aide de revoscalepy fonctions pour créer des modèles de science des données qui s’exécutent à distance dans SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 10/25/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 5c8ff387c3abda3f147700dce6349009a027a778
-ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
+ms.openlocfilehash: f554badcba282bad7fb386daf8c4c0f4106804b4
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49461955"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50100160"
 ---
-# <a name="use-python-with-revoscalepy-to-create-a-model"></a>Utilisation de Python avec revoscalepy pour créer un modèle
+# <a name="use-python-with-revoscalepy-to-create-a-model-that-runs-remotely-on-sql-server"></a>Utilisation de Python avec revoscalepy pour créer un modèle qui s’exécute à distance sur SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Dans cette leçon, vous allez apprendre à exécuter le code Python à partir d’un client de développement à distance, pour créer un modèle de régression linéaire dans SQL Server. 
+Le [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) bibliothèque Python à partir de Microsoft fournit des algorithmes de science des données pour l’exploration de données, de visualisation, de transformations et d’analyse. Cette bibliothèque a une importance stratégique dans les scénarios d’intégration de Python dans SQL Server. Sur un serveur multicœur, **revoscalepy** fonctions peuvent s’exécuter en parallèle. Dans une architecture distribuée avec une station de travail serveur et client centrale (séparer les ordinateurs physiques, tous ayant la même **revoscalepy** bibliothèque), vous pouvez écrire du code Python qui démarre localement, mais ensuite déplace l’exécution à un instance de SQL Server distante où les données résident.
+
+Vous pouvez trouver **revoscalepy** dans les distributions et les produits Microsoft suivants :
+
++ [SQL Server Machine Learning Services (en base de données)](../install/sql-machine-learning-services-windows-install.md)
++ [Microsoft Machine Learning Server (non-SQL, serveur autonome)](https://docs.microsoft.com/machine-learning-server/index)
++ [Bibliothèques de Python côté client (pour les stations de travail de développement)](https://docs.microsoft.com/machine-learning-server/install/python-libraries-interpreter) 
+
+Cet exercice montre comment créer un modèle de régression linéaire basé sur [rx_lin_mod](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-lin-mod), un des algorithmes dans **revoscalepy** qui accepte le contexte de calcul en tant qu’entrée. Le code dans cet exercice, vous allez exécuter déplace l’exécution de code à partir d’une variable locale pour environnement informatique distant, activée par **revoscalepy** contexte de calcul de fonctions qui permettent à un référentiel distant.
+
+En suivant ce didacticiel, vous allez apprendre comment :
+
+> [!div class="checklist"]
+> * Utilisez **revoscalepy** pour créer un modèle linéaire
+> * Déplacer les opérations de local au contexte de calcul à distance
 
 ## <a name="prerequisites"></a>Prérequis
 
-+ Cette leçon utilise les leçons précédentes des données différentes. Il est inutile d’effectuer les leçons précédentes en premier. Toutefois, si vous avez terminé les leçons précédentes et que vous disposez d’un serveur déjà configuré pour s’exécuter Python, utiliser ce serveur et la base de données en tant qu’un contexte de calcul.
-+ Pour exécuter le code Python à l’aide de SQL Server comme un calcul contexte nécessite SQL Server 2017 ou version ultérieure. En outre, vous devez installer explicitement et puis activez la fonctionnalité, **Machine Learning Services**, en choisissant l’option de langage Python.
+Exemples de données utilisés dans cet exercice est la [ **flightdata** ](demo-data-airlinedemo-in-sql.md) base de données.
 
-    Si vous avez installé une version préliminaire de SQL Server 2017, vous devez mettre à jour au moins la version RTM. Les versions ultérieures du service ont continué à développer et améliorer les fonctionnalités de Python. Certaines fonctionnalités de ce didacticiel ne peuvent pas fonctionner dans les premières versions préliminaires.
+Vous avez besoin d’un IDE pour exécuter l’exemple de code dans cet article, et l’IDE doit être lié à l’exécutable de Python.
 
-+ Cet exemple utilise un environnement Python prédéfini, nommé `PYTEST_SQL_SERVER`. L’environnement a été configuré pour qu’il contienne **revoscalepy** et d’autres bibliothèques requises. 
+Pour vous entraîner un changement de contexte de calcul, vous devez un [station de travail locale](../python/setup-python-client-tools-sql.md) et une instance du moteur de base de données SQL Server avec [Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) et Python est activée. 
 
-    Si vous n’avez pas d’un environnement configuré pour s’exécuter Python, vous devez le faire séparément. Plus d’informations créer ou modifier des environnements Python est hors de portée pour ce didacticiel. Pour plus d’informations sur la façon de configurer un client Python qui contient les bibliothèques corrects, consultez [client de l’installation de Python](https://docs.microsoft.com/machine-learning-server/install/python-libraries-interpreter) et [Python lien aux outils](https://docs.microsoft.com/machine-learning-server/python/quickstart-python-tools).
+> [!Tip]
+> Si vous n’avez pas deux ordinateurs, vous pouvez simuler un contexte de calcul à distance sur un ordinateur physique en installant des applications pertinentes. Tout d’abord, une installation de [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) fonctionne comme l’instance « distante ». Ensuite, une installation de la [opère des bibliothèques de client Python](../python/setup-python-client-tools-sql.md) que le client. Vous aurez deux copies de la même distribution de Python et les bibliothèques de Python de Microsoft sur le même ordinateur. Vous devrez effectuer le suivi des chemins de fichiers et de quelle copie de la Python.exe que vous utilisez pour terminer l’exercice avec succès.
 
 ## <a name="remote-compute-contexts-and-revoscalepy"></a>Revoscalepy et contextes de calcul à distance
 
-Cet exemple illustre le processus de création d’un modèle Python dans un référentiel distant _contexte de calcul_, qui vous permet de travailler à partir d’un client, mais choisissez un environnement distant, tel que SQL Server, Spark ou Machine Learning Server, où le les opérations sont effectuées. À l’aide des contextes de calcul rend plus facile à écrire du code une seule fois et déployez-la sur n’importe quel environnement pris en charge.
+Cet exemple montre le processus de création d’un modèle Python dans un contexte de calcul à distance, qui vous permet de travailler à partir d’un client, mais choisissez un environnement distant, tel que SQL Server, Spark ou Machine Learning Server, où les opérations sont effectuées. L’objectif de contexte de calcul à distance consiste à mettre le calcul sur lequel résident les données.
 
 Pour exécuter le code Python dans SQL Server nécessite le **revoscalepy** package. Il s’agit d’un package Python spécial fourni par Microsoft, similaire à la **RevoScaleR** package pour le langage R. Le **revoscalepy** package prend en charge de la création de contextes de calcul et fournit l’infrastructure pour le transfert des données et des modèles entre une station de travail locale et un serveur distant. Le **revoscalepy** fonction qui prend en charge l’exécution de code de la base de données est [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rxinsqlserver).
 
 Dans cette leçon, vous utilisez données dans SQL Server pour former un modèle linéaire selon [rx_lin_mod](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-lin-mod), une fonction dans **revoscalepy** qui prend en charge la régression sur les jeux de données très volumineux. 
 
-Cette leçon explique également comment configurer et utiliser ensuite un **contexte de calcul de SQL Server** dans Python. Pour plus d’informations des contextes de calcul fonctionnent avec d’autres plates-formes et contextes de calcul qui sont pris en charge, consultez [contexte de calcul pour l’exécution du script dans Machine Learning Server](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-compute-context)
+Cette leçon explique également comment configurer et utiliser ensuite un **contexte de calcul de SQL Server** dans Python. Pour plus d’informations des contextes de calcul fonctionnent avec d’autres plates-formes et contextes de calcul qui sont pris en charge, consultez [contexte de calcul pour l’exécution du script dans Machine Learning Server](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-compute-context).
 
-## <a name="prepare-the-database-and-sample-data"></a>Préparer les base de données et des exemples de données
-
-1. Cette leçon est basée sur la base de données **sqlpy**. Si vous n’avez pas effectué une des leçons précédentes, vous pouvez créer la base de données en exécutant le code suivant :
-
-    ```sql
-    CREATE DATABASE sqlpy;
-    GO
-    USE sqlpy;
-    GO
-    ```
-
-    > [!IMPORTANT]
-    > Si vous souhaitez utiliser une autre base de données, veillez à modifier l’exemple de code et de modifier le nom de la base de données dans la chaîne de connexion.
-
-2. Cet exemple utilise le jeu de données de compagnies aériennes, qui est disponible dans R et Python. Une fois que vous avez créé une base de données pour vos exemples Python, remplir une table avec les données comme décrit ici : [échantillonner des données dans RevoScaleR](https://docs.microsoft.com/machine-learning-server/r/sample-built-in-data).
-
-3. Modifiez le nom de cet environnement à utiliser un environnement disponible sur votre client.
 
 ## <a name="run-the-sample-code"></a>Exécutez l’exemple de code
 
@@ -126,7 +124,7 @@ def test_linmod_sql():
 
 ### <a name="defining-a-data-source-vs-defining-a-compute-context"></a>Définition d’une source de données et la définition d’un contexte de calcul
 
-Une source de données est différente à partir d’un contexte de calcul. Le _source de données_ définit les données utilisées dans votre code. Le _contexte de calcul_ définit où le code sera exécuté. Toutefois, ils utilisent certaines de ces mêmes informations :
+Une source de données est différente à partir d’un contexte de calcul. Le *source de données* définit les données utilisées dans votre code. Le contexte de calcul définit où le code sera exécuté. Toutefois, ils utilisent certaines de ces mêmes informations :
 
 + Variables de Python, tel que `sql_query` et `sql_connection_string`, définir la source de données. 
 
@@ -154,7 +152,7 @@ Dans cet exemple, vous définissez le contexte de calcul en utilisant un argumen
     
 `linmod = rx_lin_mod_ex("ArrDelay ~ DayOfWeek", data = data, compute_context = sql_compute_context)`
 
-Ce contexte de calcul est réutilisé dans l’appel à [rxsummary](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-summary):.
+Ce contexte de calcul est réutilisé dans l’appel à [rxsummary](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-summary):
 
 `summary = rx_summary("ArrDelay ~ DayOfWeek", data = data_source, compute_context = sql_compute_context)`
 
@@ -173,10 +171,9 @@ Pour les contextes de calcul de SQL Server, vous pouvez définir la taille de lo
 + L’exemple a été exécuté sur un ordinateur équipé de quatre processeurs, donc la `num_tasks` paramètre est défini à 4 pour autoriser l’utilisation maximale des ressources. 
 + Si vous définissez cette valeur sur 0, SQL Server utilise la valeur par défaut, qui consiste à s’exécuter autant de tâches en parallèle que possible, sous les paramètres MAXDOP actuels pour le serveur. Toutefois, le nombre exact de tâches qui peuvent être alloués dépend de nombreux autres facteurs, tels que les paramètres de serveur et d’autres tâches qui sont en cours d’exécution.
 
-## <a name="related-samples"></a>Exemples associés
+## <a name="next-steps"></a>Étapes suivantes
 
 Ces exemples Python supplémentaires et des didacticiels illustrent des scénarios de bout en bout à l’aide de sources de données plus complexes, ainsi que l’utilisation de contextes de calcul distants.
 
 + [Python dans base de données pour les développeurs SQL](sqldev-in-database-python-for-sql-developers.md)
-+ [Créer un modèle prédictif à l’aide de Python et SQL Server](https://microsoft.github.io/sql-ml-tutorials/python/rentalprediction/)
 + [Créer un modèle prédictif à l’aide de Python et SQL Server](https://microsoft.github.io/sql-ml-tutorials/python/rentalprediction/)

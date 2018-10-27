@@ -1,5 +1,5 @@
 ---
-title: DrilldownLevel (MDX) | Documents Microsoft
+title: DrilldownLevel (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,19 +9,19 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 2aa0ae2406b7e53445c9c84c98b4240f834f01c6
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: fbab3ea6efe0c1e5b896febeef4d1f38877b8965
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740218"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145654"
 ---
 # <a name="drilldownlevel-mdx"></a>DrilldownLevel (MDX)
 
 
   Explore les membres d'un jeu un niveau en dessous du niveau le plus bas représenté dans le jeu.  
   
- Spécifiant le niveau d’exploration dans bas est facultatif, mais si vous ne définissez pas le niveau, vous pouvez utiliser un **expression de niveau** ou **niveau d’index**. Ces arguments s'excluent mutuellement. Enfin, si des membres calculés sont présents dans la requête, vous pouvez spécifier un argument pour les inclure dans l'ensemble de lignes.  
+ Spécifiant le niveau à partir duquel extraire vers le bas est facultatif, mais si vous ne définissez pas le niveau, vous pouvez utiliser un **expression de niveau** ou **niveau d’index**. Ces arguments s'excluent mutuellement. Enfin, si des membres calculés sont présents dans la requête, vous pouvez spécifier un argument pour les inclure dans l'ensemble de lignes.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -43,9 +43,9 @@ DrilldownLevel(Set_Expression [,[Level_Expression] ,[Index]] [,INCLUDE_CALC_MEMB
  (Facultatif). Un indicateur spécifiant s'il faut inclure les membres calculés (s'ils existent) au niveau d'exploration.  
   
 ## <a name="remarks"></a>Notes  
- Le **DrilldownLevel** fonction retourne un jeu d’enfant de membres dans un ordre hiérarchique, basé sur les membres inclus dans le jeu spécifié. L'ordre est conservé parmi les membres d'origine dans le jeu spécifié, à ceci près que tous les membres enfants inclus dans le jeu de résultats de la fonction sont placés immédiatement sous leur membre parent.  
+ Le **DrilldownLevel** fonction retourne un jeu d’enfant de membres dans un ordre hiérarchique, en fonction des membres inclus dans le jeu spécifié. L'ordre est conservé parmi les membres d'origine dans le jeu spécifié, à ceci près que tous les membres enfants inclus dans le jeu de résultats de la fonction sont placés immédiatement sous leur membre parent.  
   
- Pour une structure de données hiérarchique multiniveau donnée, vous pouvez choisir explicitement un niveau jusqu'où explorer. Il y a deux moyens mutuellement exclusifs de spécifier le niveau. La première approche consiste à définir le **level_expression** argument à l’aide d’une expression MDX qui retourne le niveau, une autre approche consiste à spécifier le **index** argument, à l’aide d’une expression numérique qui spécifie le niveau par numéro.  
+ Pour une structure de données hiérarchique multiniveau donnée, vous pouvez choisir explicitement un niveau jusqu'où explorer. Il y a deux moyens mutuellement exclusifs de spécifier le niveau. La première approche consiste à définir le **level_expression** argument à l’aide d’une expression MDX qui retourne le niveau, une autre approche consiste à spécifier le **index** argument, à l’aide d’une expression numérique qui Spécifie le niveau par nombre.  
   
  Si une expression de niveau est spécifiée, la fonction construit un jeu dans un ordre hiérarchique en récupérant uniquement les enfants des membres situés au niveau spécifié. Si une expression de niveau est spécifiée et qu'il n'y a pas de membre à ce niveau, l'expression de niveau est ignorée.  
   
@@ -53,14 +53,14 @@ DrilldownLevel(Set_Expression [,[Level_Expression] ,[Index]] [,INCLUDE_CALC_MEMB
   
  Si aucune expression de niveau ou valeur d'index n'est spécifiée, la fonction génère un jeu dans l'ordre hiérarchique en extrayant uniquement les enfants des membres situés au niveau le plus bas de la première dimension référencée dans le jeu spécifié.  
   
- Interrogez la propriété XMLA MdpropMdxDrillFunctions vous permet de vérifier le niveau de prise en charge par le serveur pour les fonctions d’extraction ; consultez [pris en charge les propriétés XMLA &#40;XMLA&#41; ](../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) pour plus d’informations.  
+ Interrogez la propriété XMLA MdpropMdxDrillFunctions vous permet de vérifier le niveau de prise en charge fournis par le serveur pour les fonctions d’extraction ; consultez [propriétés XMLA prises en charge &#40;XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) pour plus d’informations.  
   
 ## <a name="examples"></a>Exemples  
  Vous pouvez essayer les exemples suivants dans la fenêtre de requête MDX dans SSMS, en utilisant le cube Adventure Works.  
   
  **Exemple 1 : utilisation d’une syntaxe minimale**  
   
- Le premier exemple montre la syntaxe minimale **DrilldownLevel**. Le seul argument requis est une expression définie. Notez que lorsque vous exécutez cette requête, vous obtenez le parent [All Categories] et les membres du niveau suivant vers le bas : [Accessories], [Bikes], et ainsi de suite. Bien que cet exemple soit simple, il illustre l’objectif de base de la **DrilldownLevel** fonction, qui est d’Explorer jusqu’au niveau inférieur suivant.  
+ Le premier exemple montre la syntaxe minimale **DrilldownLevel**. Le seul argument requis est une expression définie. Notez que lorsque vous exécutez cette requête, vous obtenez le parent [All Categories] et les membres du niveau suivant vers le bas : [Accessories], [Bikes], et ainsi de suite. Bien que cet exemple soit simple, il illustre l’objectif de base de la **DrilldownLevel** (fonction), qui est d’Explorer jusqu’au niveau inférieur suivant.  
   
 ```  
 SELECT DRILLDOWNLEVEL({[Product].[Product Categories]} * {[Sales Territory].[Sales Territory]}}) ON COLUMNS  
@@ -100,7 +100,7 @@ FROM [Adventure Works]
   
  **Exemple 4 : inclusion des membres calculés**  
   
- Le dernier exemple montre un membre calculé, qui apparaît au bas du résultat défini lorsque vous ajoutez le **include_calculated_members** indicateur. Notez que l'indicateur est spécifié comme quatrième paramètre.  
+ Le dernier exemple montre un membre calculé, qui apparaît en bas du résultat défini lorsque vous ajoutez le **include_calculated_members** indicateur. Notez que l'indicateur est spécifié comme quatrième paramètre.  
   
  Cet exemple fonctionne, car le membre calculé est au même niveau que les membres non calculés. Le membre calculé [West Coast] est composé de membres de [United States], plus tous les membres du niveau inférieur à [United States].  
   
@@ -118,6 +118,6 @@ FROM [Adventure Works]
  Si vous supprimez seulement l'indicateur et que vous réexécutez la requête, vous obtenez les mêmes résultats sans le membre calculé, [West Coast].  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guide de référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

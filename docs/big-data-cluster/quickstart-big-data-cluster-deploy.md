@@ -7,12 +7,12 @@ manager: craigg
 ms.date: 10/01/2018
 ms.topic: quickstart
 ms.prod: sql
-ms.openlocfilehash: 839823f9336a09b0790ee41b74793e548742c1d5
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: 899a02996e6415cbf35ed903c276ca23b78c6961
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49384104"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50050991"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Démarrage rapide : Déployer le cluster de données volumineux de SQL Server sur Azure Kubernetes Service (AKS)
 
@@ -26,9 +26,9 @@ Ce démarrage rapide nécessite que vous avez déjà configuré un cluster AKS a
 
 Sur l’ordinateur que vous utilisez pour exécuter les commandes pour installer le cluster de données volumineux de SQL Server, installez [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/). Cluster de données volumineux de SQL Server nécessite au minimum la version 1.10 pour Kubernetes, pour le serveur et le client (kubectl). Pour installer kubectl, consultez [installer kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl). 
 
-Pour installer le `mssqlctl` outil CLI pour gérer les données volumineuses de SQL Server du cluster sur votre ordinateur client, vous devez d’abord installer [Python](https://www.python.org/downloads/) v3.0 de version minimale et [pip3](https://pip.pypa.io/en/stable/installing/). `pip` est déjà installé si vous utilisez une version de Python au moins les 3.4 téléchargés à partir de [python.org](https://www.python.org/).
+Pour installer le **mssqlctl** outil CLI pour gérer les données volumineuses de SQL Server du cluster sur votre ordinateur client, vous devez d’abord installer [Python](https://www.python.org/downloads/) v3.0 de version minimale et [pip3](https://pip.pypa.io/en/stable/installing/). `pip` est déjà installé si vous utilisez une version de Python au moins les 3.4 téléchargés à partir de [python.org](https://www.python.org/).
 
-Si votre installation Python manque le `requests` package, vous devez installer `requests` à l’aide de `python -m pip install requests`. Si vous avez déjà un `requests` du package, mettez-la à niveau vers la dernière version à l’aide `python -m pip install requests --upgrade`.
+Si votre installation de Python est manquante le `requests` package, vous devez installer `requests` à l’aide de `python -m pip install requests` (utilisez `python3` pour ces commandes sur Linux). Si vous avez déjà un `requests` du package, mettez-la à niveau vers la dernière version à l’aide `python -m pip install requests --upgrade`.
 
 ## <a name="verify-aks-configuration"></a>Vérifier la configuration d’ACS
 
@@ -40,11 +40,14 @@ kubectl config view
 
 ## <a name="install-mssqlctl-cli-management-tool"></a>Installer l’outil de gestion mssqlctl CLI
 
-Exécutez la commande ci-dessous pour installer `mssqlctl` outil sur votre ordinateur client. La commande fonctionne à partir d’un Windows et un client Linux, mais que vous l’exécutez à partir d’une fenêtre cmd qui s’exécute avec des privilèges d’administrateur sur Windows ou faites-la précéder `sudo` sur Linux :
+Exécutez la commande ci-dessous pour installer **mssqlctl** outil sur votre ordinateur client. La commande fonctionne à partir d’un Windows et un client Linux, mais que vous l’exécutez à partir d’une fenêtre cmd qui s’exécute avec des privilèges d’administrateur sur Windows ou faites-la précéder `sudo` sur Linux :
 
 ```
 pip3 install --index-url https://private-repo.microsoft.com/python/ctp-2.0 mssqlctl  
 ```
+
+> [!TIP]
+> Si **mssqlctl** n’a pas été installé correctement, passez en revue les étapes requises dans l’article [installer mssqlctl](deployment-guidance.md#mssqlctl).
 
 ## <a name="define-environment-variables"></a>Définir des variables d’environnement
 
@@ -103,7 +106,7 @@ export DOCKER_PRIVATE_REGISTRY="1"
 ```
 
 > [!NOTE]
-> Pendant la préversion publique limitée, les informations d’identification de Docker pour télécharger les images de cluster SQL Server Big Data sont fournies pour chaque client par Microsoft. Pour demander l’accès, vous devez inscrire [ici](https://aka.ms/eapsignup)et spécifiez votre intérêt pour essayer les clusters de données volumineuses de SQL Server.
+> Pendant la préversion publique limitée, les informations d’identification de Docker pour télécharger les images de cluster de données volumineuses de SQL Server sont fournies pour chaque client par Microsoft. Pour demander l’accès, vous devez inscrire [ici](https://aka.ms/eapsignup)et spécifiez votre intérêt pour essayer les clusters de données volumineuses de SQL Server.
 
 ## <a name="deploy-a-big-data-cluster"></a>Déployer un cluster de données volumineuses
 

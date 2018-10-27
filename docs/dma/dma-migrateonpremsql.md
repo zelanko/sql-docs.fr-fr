@@ -2,7 +2,7 @@
 title: Mise à niveau SQL Server vers SQL Server ou SQL Server sur des machines virtuelles Azure à l’aide de l’Assistant Migration des données sur site | Microsoft Docs
 description: Découvrez comment utiliser Data Migration Assistant pour mettre à niveau un serveur local SQL Server vers une version ultérieure de SQL Server ou SQL Server sur des machines virtuelles Azure
 ms.custom: ''
-ms.date: 08/29/2018
+ms.date: 10/20/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -12,15 +12,15 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, on-premises SQL Server
 ms.assetid: ''
-author: HJToland3
+author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: f23edbbd6f7a1d051c7585b563cd2f3f1575b640
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e0d3ee1784653205feb4aa95a80a82d5ac27ec46
+ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833127"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49643837"
 ---
 # <a name="upgrade-on-premises-sql-server-to-sql-server-or-sql-server-on-azure-vms-using-the-data-migration-assistant"></a>Mise à niveau de SQL Server sur site vers SQL Server ou SQL Server sur des machines virtuelles Azure à l’aide de l’Assistant Migration des données
 
@@ -81,7 +81,7 @@ Cet article fournit des instructions détaillées pour la mise à niveau SQL Ser
 
 5. Sélectionnez **Suivant**.
 
-L’Assistant Migration de données effectue les validations sur les dossiers de sauvegarde, journal des fichiers de données et emplacements. Si aucune validation échoue, corrigez les options, puis sélectionnez **suivant**.
+L’Assistant Migration de données effectue les validations sur les dossiers de sauvegarde, les données et les emplacements des fichiers journaux. Si aucune validation échoue, corrigez les options, puis sélectionnez **suivant**.
 
 ## <a name="select-logins"></a>Sélectionnez les connexions
 

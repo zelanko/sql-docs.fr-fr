@@ -1,5 +1,5 @@
 ---
-title: Accorder des autorisations sur une dimension (Analysis Services) | Documents Microsoft
+title: Accorder des autorisations sur une dimension (Analysis Services) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 396969e35cff70f94bfe07ea1cf57d5221f485e2
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 834cfe3629aed196c27391c48829b6b66884b82d
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022576"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147724"
 ---
 # <a name="grant-permissions-on-a-dimension-analysis-services"></a>Octroyer des autorisations sur une dimension (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -51,20 +51,20 @@ ms.locfileid: "34022576"
 ## <a name="set-permissions-on-a-cube-dimension"></a>Définir des autorisations sur une dimension de cube  
  Les dimensions de cube sont des dimensions de base de données qui ont été ajoutées à un cube. En tant que telles, elles dépendent structurellement des groupes de mesures associés. Bien que vous puissiez traiter ces objets de manière atomique, en termes d'autorisation, il est plus logique de traiter le cube et les dimensions de cube comme une seule et même entité.  
   
-1.  Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], connectez-vous à l’instance d’[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], développez **Rôles** pour la base de données appropriée dans l’Explorateur d’objets, puis cliquez sur un rôle de base de données (ou créez un rôle de base de données).  
+1.  Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], connectez-vous à l’instance d’ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], développez **Rôles** pour la base de données appropriée dans l’Explorateur d’objets, puis cliquez sur un rôle de base de données (ou créez un rôle de base de données).  
   
-2.  Dans le **Dimensions** volet, affectez à la dimension est définie sur \<cube-name > **dimensions de cube**.  
+2.  Dans le **Dimensions** volet, affectez à la dimension la valeur est \<nom-cube > **dimensions du cube**.  
   
      Par défaut, les autorisations sont héritées à partir d'une dimension de base de données correspondante. Décochez la case **Hériter** pour remplacer les autorisations de **Lecture** par **Lecture/Écriture**. Avant d’utiliser **Lecture/Écriture**, veillez à lire la remarque de la section précédente.  
   
 > [!IMPORTANT]  
->  Si vous définissez des autorisations de rôle de base de données en utilisant AMO (Analysis Management Objects), les références à une dimension de cube dans l’attribut DimensionPermission d’un cube rompent l’héritage d’autorisation de l’attribut DimensionPermission de la base de données. Pour plus d’informations sur AMO, consultez [Développement avec AMO &#40;Analysis Management Objects&#41;](../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md).  
+>  Si vous définissez des autorisations de rôle de base de données en utilisant AMO (Analysis Management Objects), les références à une dimension de cube dans l’attribut DimensionPermission d’un cube rompent l’héritage d’autorisation de l’attribut DimensionPermission de la base de données. Pour plus d’informations sur AMO, consultez [Développement avec AMO &#40;Analysis Management Objects&#41;](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Rôles et autorisations &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md)   
- [Grant – octroi cube ou autorisations de modèle & #40 ; Analysis Services & #41 ;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)   
- [Accorder des autorisations sur les structures d’exploration de données et modèles &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
- [Octroyer un accès personnalisé à la dimension de données & #40 ; Analysis Services & #41 ;](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md)   
- [Octroyer un accès personnalisé à la cellule de données & #40 ; Analysis Services & #41 ;](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)  
+ [Octroyer des autorisations de cube ou de modèle &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)   
+ [Octroyer des autorisations sur des modèles et des structures d’exploration de données &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
+ [Octroyer un accès personnalisé à des données de dimension &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md)   
+ [Octroyer un accès personnalisé à des données de cellule &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)  
   
   

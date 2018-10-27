@@ -1,5 +1,5 @@
 ---
-title: Étape 4 fonctionnalités de données créer à l’aide de T-SQL | Documents Microsoft
+title: Créer des caractéristiques de données à l’aide de T-SQL | Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,19 +7,19 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 2a0f77a624a94ca78b92539d8f098506246ac45e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: eb63a00a2141fcc41194c48e56b9440340ab763a
+ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31202071"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49806679"
 ---
-# <a name="step-4-create-data-features-using-t-sql"></a>Étape 4 : Créer des fonctionnalités de données à l’aide de T-SQL
+# <a name="create-data-features-using-t-sql"></a>Créer des caractéristiques de données à l’aide de T-SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Après l’exploration de données et avoir collecté des informations à partir des données et êtes prêt à passer à *l’équipe d’ingénierie de fonctionnalité*. Ce processus de création de fonctionnalités à partir des données brutes peut être essentiel d’analytique avancée de modélisation.
+Après l’exploration de données, vous avez recueilli des informations à partir des données et êtes prêt à passer à *ingénierie*. Ce processus de création de caractéristiques à partir des données brutes peut être essentiel d’analytique avancée de modélisation.
 
-Cet article fait partie d’un didacticiel, [analytique Python de la base de données pour les développeurs SQL](sqldev-in-database-python-for-sql-developers.md). 
+Cet article fait partie d’un didacticiel, [analytique en base de données Python pour les développeurs SQL](sqldev-in-database-python-for-sql-developers.md). 
 
 Lors de cette étape, vous allez découvrir comment créer des caractéristiques à partir de données brutes en utilisant une fonction [!INCLUDE[tsql](../../includes/tsql-md.md)] . Ensuite, vous appellerez cette fonction à partir d’une procédure stockée pour créer une table qui contient les valeurs des caractéristiques.
 
@@ -29,7 +29,7 @@ Les valeurs de distance indiquées dans les données d’origine sont basées su
 
 Vous allez utiliser une fonction T-SQL personnalisée, _fnCalculateDistance_, pour calculer la distance à l’aide de la formule de Haversine, et utiliser une seconde fonction T-SQL personnalisée, _fnEngineerFeatures_, pour créer une table contenant toutes les caractéristiques.
 
-### <a name="calculate-trip-distance-using-fncalculatedistance"></a>Calculer la distance de déplacement à l’aide de fnCalculateDistance
+### <a name="calculate-trip-distance-using-fncalculatedistance"></a>Calculer la distance de course à l’aide de fnCalculateDistance
 
 1.  La fonction _fnCalculateDistance_ doit avoir été téléchargée et inscrite auprès de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans le cadre de la préparation de cette procédure pas à pas. Prenez une minute pour examiner le code.
   
@@ -66,7 +66,7 @@ Vous allez utiliser une fonction T-SQL personnalisée, _fnCalculateDistance_, po
 
 Pour ajouter la valeur calculée à une table qui peut être utilisée pour l’apprentissage du modèle, vous allez utiliser une autre fonction, _fnEngineerFeatures_.
 
-### <a name="save-the-features-using-fnengineerfeatures"></a>Enregistrez les fonctionnalités à l’aide de _fnEngineerFeatures_
+### <a name="save-the-features-using-fnengineerfeatures"></a>Enregistrer les fonctionnalités à l’aide de _fnEngineerFeatures_
 
 1.  Prenez une minute pour examiner le code de la fonction T-SQL personnalisée, _fnEngineerFeatures_, qui doit avoir été créé pour vous dans le cadre de la préparation de cette procédure pas à pas.
   
@@ -106,16 +106,16 @@ Pour ajouter la valeur calculée à une table qui peut être utilisée pour l’
         ORDER BY trip_time_in_secs DESC
     ```
   
-    Comme vous pouvez le voir, la distance signalée par le compteur ne correspond pas toujours à la distance géographique. C’est pourquoi l’ingénierie de fonctionnalité est importante.
+    Comme vous pouvez le voir, la distance signalée par le compteur ne correspond pas toujours à la distance géographique. C’est pourquoi l’ingénierie est important.
 
-Dans l’étape suivante, vous allez apprendre à utiliser ces fonctionnalités de données pour créer et effectuer l’apprentissage d’un modèle d’apprentissage automatique à l’aide de Python.
+Dans l’étape suivante, vous allez apprendre à utiliser ces fonctionnalités de données pour créer et former un modèle d’apprentissage automatique à l’aide de Python.
 
 ## <a name="next-step"></a>Étape suivante
 
-[Étape 5 : L’apprentissage et enregistrer un modèle de Python à l’aide de T-SQL](sqldev-py5-train-and-save-a-model-using-t-sql.md)
+[Former et enregistrer un modèle de Python à l’aide de T-SQL](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 
 ## <a name="previous-step"></a>Étape précédente
 
-[Étape 3 : Explorer et visualiser les données](sqldev-py3-explore-and-visualize-the-data.md)
+[Explorer et visualiser les données](sqldev-py3-explore-and-visualize-the-data.md)
 
 

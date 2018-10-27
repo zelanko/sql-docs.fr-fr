@@ -23,17 +23,17 @@ ms.assetid: a65b3249-303d-49c6-98af-6ac6eed11a03
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7fdfd3ce4393fef5ae2574e5ec151cd345f59bcf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 711909975507e7382fff80d9b83483d54aad4c6f
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117819"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145664"
 ---
 # <a name="processing-objects-xmla"></a>Traitement d'objets (XMLA)
   Dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], le traitement est l’étape ou série d’étapes qui transforme les données en informations destinées à l’analyse. Si le traitement varie selon le type d'objet, le traitement consiste toujours à transformer des données en informations.  
   
- Pour traiter un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de l’objet, vous pouvez utiliser la [processus](../xmla/xml-elements-commands/process-element-xmla.md) commande. La commande `Process` peut traiter les objets suivants dans une instance [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] :  
+ Pour traiter un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de l’objet, vous pouvez utiliser la [processus](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/process-element-xmla) commande. La commande `Process` peut traiter les objets suivants dans une instance [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] :  
   
 -   Cubes  
   
@@ -52,7 +52,7 @@ ms.locfileid: "48117819"
  Pour contrôler le traitement des objets, la commande `Process` propose plusieurs propriétés définissables. Les propriétés de la commande `Process` permettent de contrôler les éléments suivants : portée du traitement, types d'objets à traiter, utilisation ou non de liaisons hors ligne, gestion des erreurs et gestion des tables d'écriture différée.  
   
 ## <a name="specifying-processing-options"></a>Spécification d'options de traitement  
- Le [Type](../xmla/xml-elements-properties/type-element-xmla.md) propriété de la `Process` commande spécifie l’option de traitement à utiliser lors du traitement de l’objet. Pour plus d’informations sur les options de traitement, consultez [Options et paramètres de traitement &#40;Analysis Services&#41;](../multidimensional-models/processing-options-and-settings-analysis-services.md).  
+ Le [Type](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/type-element-xmla) propriété de la `Process` commande spécifie l’option de traitement à utiliser lors du traitement de l’objet. Pour plus d’informations sur les options de traitement, consultez [Options et paramètres de traitement &#40;Analysis Services&#41;](../multidimensional-models/processing-options-and-settings-analysis-services.md).  
   
  Le tableau suivant répertorie les constantes associées à la propriété `Type` et les différents objets qui peuvent être traités avec chaque constant.  
   
@@ -72,14 +72,14 @@ ms.locfileid: "48117819"
  Pour plus d’informations sur le traitement [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , consultez [traitement d’un objet de modèle multidimensionnel](../multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
   
 ## <a name="specifying-objects-to-be-processed"></a>Spécification des objets à traiter  
- Le [objet](../xmla/xml-elements-properties/object-element-xmla.md) propriété de la `Process` commande contient l’identificateur d’objet de l’objet à traiter. Seul un objet peut être spécifié dans une commande `Process`, mais le traitement d'un objet porte également sur les objets enfants. Par exemple, le traitement d'un groupe de mesures dans un cube englobe toutes les partitions de ce groupe de mesures. De même, le traitement d'une base de données porte sur tous ses objets, notamment les cubes, les dimensions et les structures d'exploration de données contenus dans la base de données.  
+ Le [objet](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla) propriété de la `Process` commande contient l’identificateur d’objet de l’objet à traiter. Seul un objet peut être spécifié dans une commande `Process`, mais le traitement d'un objet porte également sur les objets enfants. Par exemple, le traitement d'un groupe de mesures dans un cube englobe toutes les partitions de ce groupe de mesures. De même, le traitement d'une base de données porte sur tous ses objets, notamment les cubes, les dimensions et les structures d'exploration de données contenus dans la base de données.  
   
  Si vous définissez l'attribut `ProcessAffectedObjects` de la commande `Process` à true, les objets connexes affectés par le traitement de l'objet spécifié sont égalements traités. Par exemple, si une dimension est mise à jour incrémentielle à l’aide de la *ProcessUpdate* traitement option dans le `Process` n’importe quelle partition dont les agrégations sont invalidées en raison de membres ajouté ou supprimé est également de la commande traité par [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] si `ProcessAffectedObjects` est définie sur true. Dans ce cas, une seule commande `Process` peut traiter plusieurs objets dans une même instance [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], mais c'est [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] qui détermine quels sont les objets, outre l'objet unique spécifié dans la commande `Process`, qui doivent également être traités.  
   
  Toutefois, vous pouvez traiter simultanément plusieurs objets, tels que des dimensions, en utilisant plusieurs commandes `Process` au sein d'une commande `Batch`. Lorsqu'il s'agit de traiter les objets d'une instance [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en série ou en parallèle, les opérations de traitement par lot offrent un niveau de contrôle plus fin qu'en utilisant l'attribut `ProcessAffectedObjects`. Elles vous permettent en outre d'affiner votre approche de traitement pour les bases de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] plus volumineuses. Pour plus d’informations sur l’exécution d’opérations par lots, consultez [exécution d’opérations de traitement par lots &#40;XMLA&#41;](performing-batch-operations-xmla.md).  
   
 ## <a name="specifying-out-of-line-bindings"></a>Spécification de liaisons hors ligne  
- Si le `Process` commande n’est pas contenue dans un `Batch` commande, vous pouvez éventuellement spécifier les liaisons hors ligne dans le [liaisons](../xmla/xml-elements-properties/bindings-element-xmla.md), [DataSource](../xmla/xml-elements-properties/source-element-xmla.md), et [DataSourceView ](../xmla/xml-elements-properties/datasourceview-element-xmla.md) propriétés de la `Process` commande pour les objets à traiter. Les liaisons hors lignes sont des références à des sources de données, des vues de source de données et d'autres objets dans lesquels elles existent seulement le temps de l'exécution de la commande `Process`. Elles remplacent les liaisons existantes associées aux objets traités. Si aucune liaison hors ligne n'est spécifiée, les liaisons actuellement associées aux objets à traiter sont utilisées.  
+ Si le `Process` commande n’est pas contenue dans un `Batch` commande, vous pouvez éventuellement spécifier les liaisons hors ligne dans le [liaisons](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/bindings-element-xmla), [DataSource](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/source-element-xmla), et [DataSourceView ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/datasourceview-element-xmla) propriétés de la `Process` commande pour les objets à traiter. Les liaisons hors lignes sont des références à des sources de données, des vues de source de données et d'autres objets dans lesquels elles existent seulement le temps de l'exécution de la commande `Process`. Elles remplacent les liaisons existantes associées aux objets traités. Si aucune liaison hors ligne n'est spécifiée, les liaisons actuellement associées aux objets à traiter sont utilisées.  
   
  Les liaisons hors ligne sont utilisées dans les circonstances suivantes :  
   
@@ -101,7 +101,7 @@ ms.locfileid: "48117819"
  Pour plus d’informations sur la fusion de partitions à l’aide de XML for Analysis (XMLA), consultez [fusion de Partitions &#40;XMLA&#41;](merging-partitions-xmla.md).  
   
 ## <a name="handling-processing-errors"></a>Gestion des erreurs de traitement  
- Le [ErrorConfiguration](../xmla/xml-elements-properties/errorconfiguration-element-xmla.md) propriété de la `Process` commande vous permet de spécifier comment gérer les erreurs rencontrées lors du traitement d’un objet. Par exemple, lors du traitement d'une dimension, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] rencontre une valeur en double dans la colonne clé de l'attribut de clé. Du fait que les clés d'attribut doivent être uniques, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ignore les enregistrements en double. Selon le [KeyDuplicate](../scripting/properties/keyduplicate-element-assl.md) propriété du `ErrorConfiguration`, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] impossible :  
+ Le [ErrorConfiguration](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/errorconfiguration-element-xmla) propriété de la `Process` commande vous permet de spécifier comment gérer les erreurs rencontrées lors du traitement d’un objet. Par exemple, lors du traitement d'une dimension, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] rencontre une valeur en double dans la colonne clé de l'attribut de clé. Du fait que les clés d'attribut doivent être uniques, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ignore les enregistrements en double. Selon le [KeyDuplicate](https://docs.microsoft.com/bi-reference/assl/properties/keyduplicate-element-assl) propriété du `ErrorConfiguration`, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] impossible :  
   
 -   ignorer l'erreur et poursuivre le traitement de la dimension ;  
   
@@ -110,7 +110,7 @@ ms.locfileid: "48117819"
  Pendant l'exécution d'une commande `ErrorConfiguration`, `Process` peut proposer des options dans de nombreuses conditions similaires.  
   
 ## <a name="managing-writeback-tables"></a>Gestion des tables d'écriture différée  
- Si la commande `Process` rencontre une partition activée en écriture (ou un cube ou un groupe de mesures pour une partition de ce type) qui n'est pas déjà traitée en intégralité, il se peut qu'il n'existe pas encore de table d'écriture différée pour cette partition. Le [WritebackTableCreation](../xmla/xml-elements-properties/writebacktablecreation-element-xmla.md) propriété de la `Process` commande détermine si [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] doit créer une table d’écriture différée.  
+ Si la commande `Process` rencontre une partition activée en écriture (ou un cube ou un groupe de mesures pour une partition de ce type) qui n'est pas déjà traitée en intégralité, il se peut qu'il n'existe pas encore de table d'écriture différée pour cette partition. Le [WritebackTableCreation](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/writebacktablecreation-element-xmla) propriété de la `Process` commande détermine si [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] doit créer une table d’écriture différée.  
   
 ## <a name="examples"></a>Exemples  
   

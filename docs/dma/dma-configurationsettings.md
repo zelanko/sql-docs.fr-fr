@@ -2,7 +2,7 @@
 title: Configurer les paramètres de l’Assistant Migration de données (SQL Server) | Microsoft Docs
 description: Découvrez comment configurer les paramètres de l’Assistant Migration de données en mettant à jour les valeurs dans le fichier de configuration
 ms.custom: ''
-ms.date: 08/29/2018
+ms.date: 10/20/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -12,15 +12,15 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Assess
 ms.assetid: ''
-author: HJToland3
+author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 87e81a1b73ac8b3af9b9c35449dc4966fc4cf285
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9801afda1a876f486e7b7042d3dad082c70c99fa
+ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755577"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49643817"
 ---
 # <a name="configure-settings-for-data-migration-assistant"></a>Configurer les paramètres de l’Assistant Migration des données
 
@@ -87,15 +87,15 @@ Pendant l’évaluation, Data Migration Assistant extrait l’application de la 
 
 - commandTimeout
 
-   Cela définit la propriété IDbCommand.CommandTimeout *secondes*. (Par défaut = 60)
+   Ce paramètre définit la propriété IDbCommand.CommandTimeout *secondes*. (Par défaut = 60)
 
 - databaseLockTimeout
 
-   Cela équivaut à [verrou définir\_délai d’expiration du délai d’attente\_période ](../t-sql/statements/set-lock-timeout-transact-sql.md) dans *millisecondes*. (Par défaut = 5000)
+   Ce paramètre équivaut à [verrou définir\_délai d’expiration du délai d’attente\_période](../t-sql/statements/set-lock-timeout-transact-sql.md) dans *millisecondes*. (Par défaut = 5000)
 
 - maxDataReaderDegreeOfParallelism
 
-   Nombre de connexions de pool de connexion SQL à utiliser. (Par défaut = 8)
+  Ce paramètre définit le nombre de connexions de pool de connexion SQL à utiliser. (Par défaut = 8)
 
 ```
 <advisorGroup>
@@ -109,7 +109,6 @@ maxDataReaderDegreeOfParallelism="8"/>
 
 </advisorGroup>
 ```
-
 
 ## <a name="stretch-database-recommendation-threshold"></a>Stretch Database : Seuil de recommandation
 

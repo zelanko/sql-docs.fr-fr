@@ -11,12 +11,12 @@ ms.assetid: 54ad1954-22e2-4628-b334-8fad8e9433b8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b4860230697f5a65ada594060b738793ebea6202
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c5b33d4c3e7f5ea10efc89fc5b7234bf2faaf0c7
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143799"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146749"
 ---
 # <a name="use-analysis-services-templates-in-sql-server-management-studio"></a>Utiliser des modèles Analysis Services dans SQL Server Management Studio
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] fournit un ensemble de modèles qui vous aident à créer rapidement des scripts XMLA et des requêtes DMX ou MDX, à créer des indicateurs de performance clés dans un cube ou un modèle tabulaire, à générer des scripts pour les opérations de sauvegarde et de restauration et à effectuer de nombreuses autres tâches. Les modèles sont situés dans l' **Explorateur de modèles** de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
@@ -109,7 +109,7 @@ ms.locfileid: "48143799"
 5.  Double-cliquez sur le texte dans le \<fichier > élément. Tapez le chemin du fichier de sauvegarde suivi de l'extension de fichier .abf. Spécifiez le chemin d'accès de fichier complet si vous n'utilisez pas l'emplacement de sauvegarde par défaut. Pour plus d’informations, consultez [Sauvegarde, restauration et synchronisation de bases de données &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
   
 ##  <a name="bkmk_schemarowset"></a> Générer une requête d'ensemble de lignes de schéma à l'aide d'un modèle XMLA  
- L' **Explorateur de modèles** contient un seul modèle pour les requêtes d'ensemble de lignes de schéma. Pour utiliser ce modèle, vous devez connaître les spécifications de l'ensemble de lignes de schéma spécifique à utiliser, notamment les éléments requis et les colonnes qui peuvent être utilisées comme restrictions. Pour plus d’informations, consultez [Ensembles de lignes de schéma Analysis Services](../schema-rowsets/analysis-services-schema-rowsets.md).  
+ L' **Explorateur de modèles** contient un seul modèle pour les requêtes d'ensemble de lignes de schéma. Pour utiliser ce modèle, vous devez connaître les spécifications de l'ensemble de lignes de schéma spécifique à utiliser, notamment les éléments requis et les colonnes qui peuvent être utilisées comme restrictions. Pour plus d’informations, consultez [Ensembles de lignes de schéma Analysis Services](https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets).  
   
  Notez que de nombreux ensembles de lignes de schéma ont également été exposés sous forme de vues de gestion dynamiques (DMV) pour des raisons de simplification. En utilisant la vue DMV correspondante, vous pouvez interroger l'ensemble de lignes de schéma à l'aide d'une syntaxe telle que celle de Transact-SQL. Par exemple, les requêtes suivantes retournent les mêmes résultats, mais l'une est au format XML et l'autre au format tabulaire. Pour plus d’informations sur les vues DMV, consultez [Utiliser des vues de gestion dynamique &#40;DMV&#41; pour surveiller Analysis Services](use-dynamic-management-views-dmvs-to-monitor-analysis-services.md).  
   
@@ -144,7 +144,7 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
   
 2.  Ouvrez l' **Explorateur de modèles**, puis faites glisser le modèle, **Découvrir les ensembles de lignes du schéma**, dans la fenêtre de requête vide.  
   
-3.  Dans le modèle, remplacez le [RequestType élément &#40;XMLA&#41; ](../xmla/xml-elements-properties/type-element-xmla.md) élément avec le texte suivant : `<RequestType>MDSCHEMA_INPUT_DATASOURCES</RequestType>`  
+3.  Dans le modèle, remplacez le [RequestType élément &#40;XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/type-element-xmla) élément avec le texte suivant : `<RequestType>MDSCHEMA_INPUT_DATASOURCES</RequestType>`  
   
 4.  Cliquez sur **Exécuter**.  
   
@@ -196,39 +196,39 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 ||Prédiction de singleton imbriqué|Montre comment utiliser une instruction DMX SELECT FROM  *\<modèle >* clause NATURAL PREDICTION JOIN pour exécuter une requête de prédiction sur un modèle d’exploration de données en utilisant une seule valeur, explicitement spécifiée dans la requête de prédiction, dans une colonne dont le nom correspond à une colonne dans le modèle d’exploration de données et qui contient un ensemble de valeurs dans une table imbriquée, créé à l’aide d’une instruction UNION dont les noms correspondent également à des colonnes imbriquées dans le modèle d’exploration de données.|  
 ||Prédiction de singleton|Montre comment utiliser une instruction DMX SELECT FROM \<modèle > NATURAL PREDICTION JOIN d’instruction à exécuter une requête de prédiction sur un modèle d’exploration de données à l’aide d’une valeur unique, explicitement spécifiée dans la requête de prédiction, dans une colonne dont le nom correspond à une colonne dans le modèle d’exploration de données.|  
 ||Appel de procédure stockée|Indique comment utiliser l'instruction DMX CALL pour appeler une procédure stockée.|  
-|MDX\Expressions|Moyenne mobile-fixe|Montre comment utiliser l’expression MDX `ParallelPeriod` et `CurrentMember` fonctions avec un jeu naturellement ordonné pour créer une mesure calculée qui fournit une moyenne mobile d’une mesure sur un nombre fixe de périodes de temps contenu par une hiérarchie dans une dimension de temps.|  
-||Moyenne mobile-variable|Montre comment utiliser l’expression MDX `CASE` instruction dans le `Avg` fonction permettant de créer une mesure calculée qui fournit une moyenne mobile d’une mesure sur un nombre variable de périodes de temps contenu par une hiérarchie dans une dimension de temps.|  
+|MDX\Expressions|Moyenne mobile-fixe|Indique comment utiliser les fonctions MDX `ParallelPeriod` et `CurrentMember` avec un jeu naturellement ordonné pour créer une mesure calculée qui fournit une moyenne mobile d'une mesure sur un nombre fixe de périodes de temps contenu par une hiérarchie dans une dimension de temps.|  
+||Moyenne mobile-variable|Indique comment utiliser l'instruction MDX `CASE` au sein de la fonction `Avg` pour créer une mesure calculée qui fournit une moyenne mobile d'une mesure sur un nombre variable de périodes de temps contenu par une hiérarchie dans une dimension de temps.|  
 ||Cumul périodique jusqu'à ce jour|Indique comment utiliser la fonction MDX `PeriodsToDate` dans un membre calculé.|  
-||Ratio to Parent|Montre comment utiliser l’expression MDX `Parent` fonction permettant de créer une mesure calculée qui représente un pourcentage d’une mesure pour chaque enfant d’un membre parent dans une hiérarchie spécifiée.|  
+||Ratio to Parent|Indique comment utiliser la fonction MDX `Parent` pour créer une mesure calculée qui représente un pourcentage d'une mesure pour chaque enfant d'un membre parent dans une hiérarchie spécifiée.|  
 ||Ratio to Total|Indique comment utiliser le membre Tous pour créer une mesure calculée qui représente un pourcentage d'une mesure pour chaque membre dans une hiérarchie spécifiée.|  
 |MDX\Requêtes|Requête de base|Indique une instruction MDX SELECT de base à partir de laquelle vous pouvez générer une requête MDX.|  
-||Requête KPI|Montre comment utiliser l’expression MDX `KPIValue` et `KPIGoal` fonctions pour récupérer les informations d’indicateur de performance de performance clés dans une requête MDX.|  
+||Requête KPI|Indique comment utiliser les fonctions MDX `KPIValue` et `KPIGoal` pour récupérer les informations d'indicateur de performance clés dans une requête MDX.|  
 ||Requête sub-select|Indique comment créer une instruction MDX SELECT pour récupérer des informations d'un sous-cube défini par une autre instruction SELECT.|  
 ||Avec membre calculé|Indique comment utiliser la clause MDX WITH dans une instruction SELECT pour définir un membre calculé pour une requête MDX.|  
 ||Avec jeu nommé|Indique comment utiliser la clause MDX WITH dans une instruction SELECT pour définir un jeu nommé pour une requête MDX.|  
-|XMLA\Gestion|Backup|Montre comment utiliser le code XMLA `Backup` commande pour sauvegarder un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] base de données dans un fichier.|  
-||Annuler|Montre comment utiliser le code XMLA `Cancel` commande pour annuler toutes les opérations en cours d’exécution sur la session active (pour les utilisateurs autres que les administrateurs ou administrateurs de serveur), la base de données (pour les administrateurs) ou l’instance (pour les administrateurs de serveur.)|  
+|XMLA\Gestion|Backup|Indique comment utiliser la commande XMLA `Backup` pour sauvegarder une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dans un fichier.|  
+||Annuler|Indique comment utiliser la commande XMLA `Cancel` pour annuler toutes les opérations en cours d'exécution dans la session (pour les utilisateurs autres que les administrateurs ou les administrateurs de serveur), la base de données (pour les administrateurs) ou l'instance (pour les administrateurs de serveur) actuelle.|  
 ||Créer une base de données de partition distante|Indique comment utiliser la commande XMLA `Create` avec l'élément ASSL ([!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Scripting Language) Database pour créer une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] et une source de données pour stocker les partitions distantes.|  
-||DELETE|Montre comment utiliser le code XMLA `Delete` commande pour supprimer une existante [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] base de données.|  
+||DELETE|Indique comment utiliser la commande XMLA `Delete` pour supprimer une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] existante.|  
 ||Traiter la dimension|Indique comment utiliser la commande XMLA `Batch`, associée à l'élément `Parallel` et à la commande `Process`, pour mettre à jour les attributs d'une dimension en utilisant une opération de traitement par lots parallèle.|  
-||Traiter la partition|Montre comment utiliser le code XMLA `Batch` commande, combiné avec le `Parallel` élément et le `Process` commande, pour traiter complètement une partition à l’aide d’une opération de traitement par lots parallèle.|  
-||Restaurer|Montre comment utiliser le code XMLA `Restore` commande pour restaurer un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] base de données à partir d’un fichier de sauvegarde existant.|  
-||Synchroniser|Montre comment utiliser le code XMLA `Synchronize` commande pour synchroniser une autre [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] base de données avec actuel [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de base de données à l’aide de l’option SkipMembership pour la balise SynchronizeSecurity.|  
+||Traiter la partition|Indique comment utiliser la commande XMLA `Batch`, associée à l'élément `Parallel` et à la commande `Process`, pour traiter complètement une partition en utilisant une opération de traitement par lots parallèle.|  
+||Restaurer|Indique comment utiliser la commande XMLA `Restore` pour restaurer une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] à partir d'un fichier de sauvegarde existant.|  
+||Synchroniser|Indique comment utiliser la commande XMLA `Synchronize` pour synchroniser une autre base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] avec la base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] actuelle en utilisant l'option SkipMembership pour la balise SynchronizeSecurity.|  
 |XMLA\Ensembles de lignes du schéma|Découvrir les ensembles de lignes du schéma|Indique comment utiliser la méthode XMLA `Discover` pour récupérer le contenu de l'ensemble de lignes du schéma DISCOVER_SCHEMA_ROWSETS.|  
-|XMLA\État de serveur|Connexions|Montre comment utiliser le code XMLA `Discover` méthode pour récupérer le contenu de l’ensemble de lignes de schéma DISCOVER_CONNECTIONS.|  
-||travaux|Montre comment utiliser le code XMLA `Discover` méthode pour récupérer le contenu de l’ensemble de lignes du schéma DISCOVER_JOBS.|  
-||Emplacements|Montre comment utiliser le code XMLA `Discover` méthode pour récupérer le contenu de l’ensemble de lignes de schéma DISCOVER_LOCATIONS, en spécifiant le chemin de l’emplacement des fichiers de sauvegarde.|  
+|XMLA\État de serveur|Connexions|Indique comment utiliser la méthode XMLA `Discover` pour récupérer le contenu de l'ensemble de lignes du schéma DISCOVER_CONNECTIONS.|  
+||travaux|Indique comment utiliser la méthode XMLA `Discover` pour récupérer le contenu de l'ensemble de lignes du schéma DISCOVER_JOBS.|  
+||Emplacements|Indique comment utiliser la méthode XMLA `Discover` pour récupérer le contenu de l'ensemble de lignes du schéma DISCOVER_LOCATIONS, en spécifiant le chemin d'accès des fichiers de sauvegarde d'emplacement.|  
 ||Verrous|Indique comment utiliser la méthode XMLA `Discover` pour récupérer le contenu de l'ensemble de lignes du schéma DISCOVER_LOCKS.|  
 ||Mémoire octroyée|Indique comment utiliser la méthode XMLA `Discover` pour récupérer le contenu de l'ensemble de lignes du schéma DISCOVER_MEMORYGRANT.|  
-||Compteurs de performances|Montre comment utiliser le code XMLA `Discover` méthode pour récupérer le contenu de l’ensemble de lignes du schéma DISCOVER_PERFORMANCE_COUNTERS.|  
+||Compteurs de performances|Indique comment utiliser la méthode XMLA `Discover` pour récupérer le contenu de l'ensemble de lignes du schéma DISCOVER_PERFORMANCE_COUNTERS.|  
 ||Sessions|Indique comment utiliser la méthode XMLA `Discover` pour récupérer le contenu de l'ensemble de lignes du schéma DISCOVER_SESSIONS.|  
-||Traces|Montre comment utiliser le code XMLA `Discover` méthode pour récupérer le contenu de l’ensemble de lignes du schéma DISCOVER_TRACES.|  
-||Transactions|Montre comment utiliser le code XMLA `Discover` méthode pour récupérer le contenu de l’ensemble de lignes du schéma DISCOVER_TRANSACTIONS.|  
+||Traces|Indique comment utiliser la méthode XMLA `Discover` pour récupérer le contenu de l'ensemble de lignes du schéma DISCOVER_TRACES.|  
+||Transactions|Indique comment utiliser la méthode XMLA `Discover` pour récupérer le contenu de l'ensemble de lignes du schéma DISCOVER_TRANSACTIONS.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Expressions multidimensionnelles &#40;MDX&#41; référence](/sql/mdx/multidimensional-expressions-mdx-reference)   
- [Data Mining Extensions &#40;DMX&#41; référence](/sql/dmx/data-mining-extensions-dmx-reference)   
- [Analysis Services Scripting Language &#40;ASSL&#41; référence](../scripting/analysis-services-scripting-language-assl-for-xmla.md)   
- [Analysis Services Scripting Language &#40;ASSL&#41; référence](../scripting/analysis-services-scripting-language-assl-for-xmla.md)  
+ [Référence MDX &#40;Multidimensional Expressions&#41;](/sql/mdx/multidimensional-expressions-mdx-reference)   
+ [Référence DMX &#40;Data Mining Extensions&#41;](/sql/dmx/data-mining-extensions-dmx-reference)   
+ [Analysis Services Scripting Language &#40;ASSL&#41; référence](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)   
+ [Analysis Services Scripting Language &#40;ASSL&#41; référence](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)  
   
   

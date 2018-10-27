@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 198f2f184a703f270c4fb52a775c47330c68888b
-ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
+ms.openlocfilehash: b224b70c8985b23568d24f6230b138d6c43f5928
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45563845"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148164"
 ---
 # <a name="connection-string-properties-analysis-services"></a>Propriétés des chaînes de connexion (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "45563845"
 |**Sécurité intégrée**|L'identité Windows de l'appelant est utilisée pour la connexion à Analysis Services. Les valeurs possibles sont SSPI et BASIC ou aucune valeur.<br /><br /> **Integrated Security**=**SSPI** est la valeur par défaut pour les connexions TCP, ce qui autorise les authentifications NTLM, Kerberos ou anonyme. La valeur par défaut pour les connexions HTTP est vide.<br /><br /> Lorsque vous utilisez **SSPI**, **ProtectionLevel** doit être défini sur l'une des valeurs suivantes : **Connect**, **PktIntegrity**, **PktPrivacy**.|  
 |**Persist Encrypted**|Définissez cette propriété lorsque l'application cliente doit disposer de l'objet source de données pour conserver les informations d'authentification sensibles, telles qu'un mot de passe, sous forme chiffrée. Par défaut, les informations d'identification ne sont pas conservées.|  
 |**Persist Security Info**|Les valeurs valides sont True et False. Lorsque la valeur est True, les informations de sécurité, telles que l'identité de l'utilisateur ou le mot de passe spécifié précédemment dans la chaîne de connexion, figurent dans la connexion une fois celle-ci établie. La valeur par défaut est False.|  
-|**Niveau de protection**|Détermine le niveau de sécurité utilisé lors de la connexion. Les valeurs valides sont :<br /><br /> -   **None**. Unauthenticated or anonymous connections. N'effectue aucune authentification sur les données envoyées au serveur.<br />-   **Connect**. Authenticated connections. Effectue une authentification uniquement lorsque le client établit une relation avec un serveur.<br />-   **PktIntegrity**. Encrypted connections. Vérifie que toutes les données sont reçues du client et qu'elles n'ont pas été modifiées en cours de route.<br />-   **PktPrivacy**. Signed encryption, pris en charge uniquement pour XMLA. Vérifie que toutes les données sont reçues du client, qu'elles n'ont pas changées en cours de route et protège la confidentialité des données en les chiffrant.<br /><br /> Pour plus d'informations, consultez [Establishing Secure Connections in ADOMD.NET](../../analysis-services/multidimensional-models-adomd-net-client/connections-in-adomd-net-establishing-secure-connections.md)|  
+|**Niveau de protection**|Détermine le niveau de sécurité utilisé lors de la connexion. Les valeurs valides sont :<br /><br /> -   **None**. Unauthenticated or anonymous connections. N'effectue aucune authentification sur les données envoyées au serveur.<br />-   **Connect**. Authenticated connections. Effectue une authentification uniquement lorsque le client établit une relation avec un serveur.<br />-   **PktIntegrity**. Encrypted connections. Vérifie que toutes les données sont reçues du client et qu'elles n'ont pas été modifiées en cours de route.<br />-   **PktPrivacy**. Signed encryption, pris en charge uniquement pour XMLA. Vérifie que toutes les données sont reçues du client, qu'elles n'ont pas changées en cours de route et protège la confidentialité des données en les chiffrant.<br /><br /> Pour plus d'informations, consultez [Establishing Secure Connections in ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/connections-in-adomd-net-establishing-secure-connections)|  
 |**Roles**|Spécifiez une liste séparée par des virgules des rôles prédéfinis pour la connexion à un serveur ou une base de données à l'aide des autorisations données à ce rôle. Si cette propriété est omise, tous les rôles sont utilisés, et les autorisations effectives correspondent à la combinaison de tous les rôles. Définissez la propriété sur une valeur vide (par exemple, Roles=’ ‘) si la connexion cliente n'a aucune appartenance au rôle.<br /><br /> Un administrateur utilisant cette propriété se connecte à l'aide des autorisations données par le rôle. Certaines commandes risquent d'échouer si le rôle ne fournit pas d'autorisations suffisantes.|  
 |**SSPI**|Spécifie explicitement les packages de sécurité à utiliser pour l'authentification du client lorsque **Integrated Security** a la valeur **SSPI**. SSPI prend en charge plusieurs packages, mais cette propriété permet de spécifier un package particulier. Les valeurs valides sont Negotiate, Kerberos, NTLM et Anonymous User. Si propriété n'est pas définie, tous les packages sont disponibles pour la connexion.|  
 |**Use Encryption for Data**|Chiffre les transmissions de données. Les valeurs possibles sont True et False.|  

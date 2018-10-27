@@ -14,12 +14,12 @@ ms.assetid: a2eaaee8-7b06-48af-ba44-e21a3678c4c4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5940856a7d3c5854017af7169ab24939e3b4c3c8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0d168b898368aa2219fdf47faa1fed52152797b4
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084479"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145044"
 ---
 # <a name="understanding-microsoft-olap-architecture"></a>Présentation de l'architecture Microsoft OLAP
   Utilisez ces rubriques pour mieux comprendre les bases de données multidimensionnelles [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] et pour planifier la façon dont les données multidimensionnelles seront implémentées dans votre solution Business Intelligence.  
@@ -41,11 +41,11 @@ ms.locfileid: "48084479"
  [Plus…](understanding-microsoft-olap-physical-architecture.md)  
   
  ![Icône de dossier petit fichier](../../../integration-services/media/filefolder-small.gif "icône dossier de petits fichiers") **Architecture de programmation**  
- [Développement avec Analysis Management Objects &#40;AMO&#41;](../analysis-management-objects/developing-with-analysis-management-objects-amo.md)  
+ [Développement avec AMO &#40;Analysis Management Objects&#41;](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)  
   
- [Développement avec Analysis Services Scripting Language &#40;ASSL&#41;](../scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
+ [Développement avec le langage de script Analysis Services &#40;ASSL&#41;](../scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
   
- [Développement avec ADOMD.NET](../adomd-net/developing-with-adomd-net.md)  
+ [Développement avec ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net)  
   
  ![Icône de dossier petit fichier](../../../integration-services/media/filefolder-small.gif "icône dossier de petits fichiers") **observations à caractère International**  
  [Scénarios de globalisation pour données multidimensionnelles Analysis Services](../../../analysis-services/globalization-scenarios-for-analysis-services-multiidimensional.md)  

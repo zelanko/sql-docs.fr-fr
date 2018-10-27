@@ -1,5 +1,5 @@
 ---
-title: Synchroniser les bases de données Analysis Services | Documents Microsoft
+title: Synchroniser les bases de données Analysis Services | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b50cdb2a9b6a32fbd2794e3265dc009f6c6e6bd2
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: c1400d43f2736505e0b9ba2364909986d47923da
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025366"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145914"
 ---
 # <a name="synchronize-analysis-services-databases"></a>Synchroniser des base de données Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -37,12 +37,12 @@ ms.locfileid: "34025366"
 > [!NOTE]  
 >  Les livres blancs suivants, écrits pour les versions antérieures d'Analysis Services, s'appliquent également aux solutions multidimensionnelles évolutives créées à l'aide de SQL Server 2012. Pour plus d’informations, consultez [Scale-Out Querying with Analysis Services](http://go.microsoft.com/fwlink/?LinkId=253136) (Requêtes de scale-out avec Analysis Services) et [Scale-Out Querying for Analysis Services with Read-Only Databases](http://go.microsoft.com/fwlink/?LinkId=253137.)(Requêtes de scale-out pour Analysis Services avec des bases de données en lecture seule)  
   
-## <a name="prerequisites"></a>Configuration requise  
+## <a name="prerequisites"></a>Prérequis  
  Vous devez être membre du rôle d'administrateur de serveur Analysis Services sur le serveur de destination (ou cible) à partir duquel vous lancez la synchronisation de bases de données. Sur le serveur source, votre compte d'utilisateur Windows doit disposer des autorisations de contrôle total sur la base de données source. Si vous synchroniserez les bases de données de manière interactive, souvenez-vous que la synchronisation s'exécute sous le contexte de sécurité de votre identité d'utilisateur Windows. Si votre compte n'a pas accès à des objets spécifiques, ces objets seront exclus de l'opération. Pour plus d’informations sur les rôles d’administrateur de serveur et les autorisations de base de données, consultez [Accorder des droits d’administrateur de serveur à une instance Analysis Services](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md) et [Octroyer des autorisations de base de données &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-database-permissions-analysis-services.md).  
   
  Le port TCP 2383 doit être ouvert sur les deux serveurs pour autoriser les connexions distantes entre les instances par défaut. Pour plus d’informations sur la création d’une exception dans le Pare-feu Windows, consultez [Configurer le pare-feu Windows pour autoriser l’accès à Analysis Services](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
- Les serveurs source et de destination doivent être la même version et le service pack. Étant donné que les métadonnées du modèle sont également synchronisée, pour garantir la compatibilité de la build nombre pour les deux serveurs doit être le même. L'édition de chaque installation doit prendre en charge la synchronisation de bases de données. Dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], la synchronisation de bases de données est prise en charge dans les éditions Enterprise, Developer et Business Intelligence. Pour plus d’informations sur les fonctionnalités de chaque édition, consultez [éditions et les fonctionnalités prises en charge pour SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+ Les serveurs source et de destination doivent être la même version et le service pack. Étant donné que les métadonnées du modèle sont également synchronisée, pour garantir la compatibilité de la build nombre pour les deux serveurs doit être le même. L'édition de chaque installation doit prendre en charge la synchronisation de bases de données. Dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], la synchronisation de bases de données est prise en charge dans les éditions Enterprise, Developer et Business Intelligence. Pour plus d’informations sur les fonctionnalités de chaque édition, consultez [éditions et fonctionnalités prises en charge pour SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
  Le mode de déploiement du serveur doit être identique sur chaque serveur. Si la base de données que vous synchroniserez est multidimensionnelle, les serveurs source et de destination doivent être configurés pour le mode de serveur multidimensionnel. Pour plus d’informations sur les modes de déploiement, consultez [Déterminer le mode serveur d’une instance Analysis Services](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md).  
   
@@ -182,8 +182,8 @@ ms.locfileid: "34025366"
  Si vous n'avez pas synchronisé les rôles ou l'appartenance, n'oubliez pas de spécifier les autorisations d'accès utilisateur sur la base de données de destination.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Élément Synchronize &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md)   
- [Déployer des Solutions de modèle à l’aide de XMLA](../../analysis-services/multidimensional-models/deploy-model-solutions-using-xmla.md)   
- [Déployer des Solutions de modèle à l’aide de l’Assistant de déploiement](../../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md)  
+ [Élément Synchronize &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/synchronize-element-xmla)   
+ [Déployer des solutions de modèle à l'aide de XMLA](../../analysis-services/multidimensional-models/deploy-model-solutions-using-xmla.md)   
+ [Déployer des solutions de modèle à l’aide de l’Assistant Déploiement](../../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md)  
   
   

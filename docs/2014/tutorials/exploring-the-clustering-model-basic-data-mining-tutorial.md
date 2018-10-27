@@ -11,12 +11,12 @@ ms.assetid: ce8aa034-161b-473f-baec-9c29e0a8e5f5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 26869ca780bc74e3c9c56b38b39195b893dbf523
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2e56d1dc66e8e6ac73a3ae8b1888cbdee16c63df
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147769"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146739"
 ---
 # <a name="exploring-the-clustering-model-basic-data-mining-tutorial"></a>Exploration du modèle de clustering (Didacticiel sur l'exploration de données de base)
   Le [!INCLUDE[msCoName](../includes/msconame-md.md)] algorithme de Clustering regroupe des cas dans des clusters qui présentent des caractéristiques similaires. Ces regroupements sont utiles pour l'exploration des données, l'identification d'anomalies dans les données et la création de prédictions.  
@@ -89,7 +89,7 @@ ms.locfileid: "48147769"
  Avec le **caractéristiques du Cluster** onglet, vous pouvez examiner plus en détail les caractéristiques qui composent un cluster. Au lieu de comparer les caractéristiques de tous les clusters (comme dans l'onglet Profils du cluster), vous pouvez explorer un cluster à la fois. Par exemple, si vous sélectionnez **Bike Buyers High** à partir de la **Cluster** liste, vous pouvez consulter les caractéristiques des clients dans ce cluster. Même si l'affichage est différent de la visionneuse Profils du cluster, les conclusions sont les mêmes.  
   
 > [!NOTE]  
->  Sauf si vous définissez une valeur initiale pour **holdoutseed**, les résultats varient chaque fois que vous traitez le modèle. Pour plus d’informations, consultez [holdoutseed, élément](../analysis-services/scripting/properties/holdoutseed-element.md)  
+>  Sauf si vous définissez une valeur initiale pour **holdoutseed**, les résultats varient chaque fois que vous traitez le modèle. Pour plus d’informations, consultez [holdoutseed, élément](https://docs.microsoft.com/bi-reference/assl/properties/holdoutseed-element)  
   
 
   

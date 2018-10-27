@@ -1,5 +1,5 @@
 ---
-title: Afficher l’historique (PowerPivot pour SharePoint) d’actualisation des données | Documents Microsoft
+title: Afficher l’historique (Power Pivot pour SharePoint) d’actualisation des données | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 8b05a5f8fa173699aebe8567a329e7a93ee58975
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 355ade7f4c90b595356efc5d39c2fa7cf587b11b
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34028648"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099680"
 ---
 # <a name="view-data-refresh-history-power-pivot-for-sharepoint"></a>Afficher l’historique d’actualisation des données (Power Pivot pour SharePoint)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "34028648"
   
 |Élément|Description|  
 |----------|-----------------|  
-|Nom|Spécifie le nom de fichier du classeur Excel qui contient les données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .|  
+|Nom   |Spécifie le nom de fichier du classeur Excel qui contient les données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .|  
 |État actuel|Les valeurs possibles sont **Planifiée**, **Actualisation**, **Opération réussie**ou **Échec**.<br /><br /> **Planifiée** apparaît la première fois que vous créez la planification. Une fois la première actualisation des données effectuée, ce message d'état ne s'affiche plus.<br /><br /> **Actualisation** indique que l'actualisation des données est en cours. Une requête figure dans la file d'attente des processus ou s'exécute activement sur le serveur.<br /><br /> **Opération réussie** indique que la dernière opération d'actualisation des données est terminée et que le classeur mis à jour est archivé dans la bibliothèque SharePoint.<br /><br /> **Échec** indique que la dernière opération d'actualisation des données n'a pas réussi. Les données actualisées n'ont pas été enregistrées. Le classeur contient les mêmes données qu'avant l'opération d'actualisation des données.|  
 |Dernière actualisation réussie|Spécifie la date de dernière exécution réussie de l'actualisation des données.|  
 |Prochaine actualisation planifiée|Spécifie la date prévue pour la prochaine actualisation des données.<br /><br /> Le lien **Configurer la planification** vous dirige vers la page de définition de la planification. Si vous disposez d’autorisations de collaboration sur le classeur, vous pouvez cliquer sur ce lien pour visualiser et modifier les informations de planification qui contrôlent l’actualisation sans assistance des données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] du classeur.|  
@@ -68,7 +68,7 @@ ms.locfileid: "34028648"
   
 ## <a name="see-also"></a>Voir aussi  
  [Configurer la collecte des données d’utilisation &#40;PowerPivot pour SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md)   
- [Planifier une actualisation des données (PowerPivot pour SharePoint)](http://msdn.microsoft.com/en-us/8571208f-6aae-4058-83c6-9f916f5e2f9b)   
+ [Planifier une actualisation des données (PowerPivot pour SharePoint)](http://msdn.microsoft.com/8571208f-6aae-4058-83c6-9f916f5e2f9b)   
  [Actualisation des données Power Pivot](../../analysis-services/power-pivot-sharepoint/power-pivot-data-refresh.md)  
   
   

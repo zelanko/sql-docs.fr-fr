@@ -18,12 +18,12 @@ ms.assetid: be5b2746-0336-4b12-827e-131462bdf605
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8c230750377d2667d70d239a7a90a7a69d4ff209
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 20893db4e26824b06a1e21e47f74147312a7257d
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068329"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146324"
 ---
 # <a name="grant-permissions-on-a-dimension-analysis-services"></a>Octroyer des autorisations sur une dimension (Analysis Services)
   La sécurité de dimension sert à définir des autorisations sur un objet de dimension, et non sur ses données. En général, l'autorisation ou le refus de l'accès aux opérations de traitement est le principal objectif de la définition des autorisations sur une dimension.  
@@ -66,13 +66,13 @@ ms.locfileid: "48068329"
      Par défaut, les autorisations sont héritées à partir d'une dimension de base de données correspondante. Décochez la case **Hériter** pour remplacer les autorisations de **Lecture** par **Lecture/Écriture**. Avant d’utiliser **Lecture/Écriture**, veillez à lire la remarque de la section précédente.  
   
 > [!IMPORTANT]  
->  Si vous définissez des autorisations de rôle de base de données en utilisant AMO (Analysis Management Objects), les références à une dimension de cube dans l’attribut DimensionPermission d’un cube rompent l’héritage d’autorisation de l’attribut DimensionPermission de la base de données. Pour plus d’informations sur AMO, consultez [Développement avec AMO &#40;Analysis Management Objects&#41;](analysis-management-objects/developing-with-analysis-management-objects-amo.md).  
+>  Si vous définissez des autorisations de rôle de base de données en utilisant AMO (Analysis Management Objects), les références à une dimension de cube dans l’attribut DimensionPermission d’un cube rompent l’héritage d’autorisation de l’attribut DimensionPermission de la base de données. Pour plus d’informations sur AMO, consultez [Développement avec AMO &#40;Analysis Management Objects&#41;](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Rôles et autorisations &#40;Analysis Services&#41;](roles-and-permissions-analysis-services.md)   
- [Accorder des autorisations de cube ou modèle &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)   
- [Accorder des autorisations sur les structures d’exploration de données et modèles &#40;Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
- [Octroyer un accès personnalisé aux données de dimension &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md)   
- [Octroyer un accès personnalisé aux données des cellules &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)  
+ [Octroyer des autorisations de cube ou de modèle &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)   
+ [Octroyer des autorisations sur des modèles et des structures d’exploration de données &#40;Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
+ [Octroyer un accès personnalisé à des données de dimension &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md)   
+ [Octroyer un accès personnalisé à des données de cellule &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)  
   
   

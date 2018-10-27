@@ -1,6 +1,6 @@
 ---
 title: Télécharger des données de démonstration NYC Taxi et de scripts pour embedded R et Python (SQL Server Machine Learning) | Microsoft Docs
-description: Instructions de téléchargement des exemples de données New York City taxi et de création d’une base de données. Données sont utilisées dans les didacticiels de SQL Server montrant comment incorporer R et Python dans SQL Server des procédures stockées et fonctions T-SQL.
+description: Instructions de téléchargement des exemples de données New York City taxi et de création d’une base de données. Données sont utilisées dans les didacticiels de langage R et SQL Server Python montrant comment incorporer un script dans les procédures stockées SQL Server et des fonctions T-SQL.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/19/2018
@@ -8,14 +8,14 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 9359bb9a441551d16bc5de3f57f0158e56a98626
-ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
+ms.openlocfilehash: f9482a43a37f3c4feee497ae2fd93029143c84f9
+ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49463034"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49806709"
 ---
-# <a name="nyc-taxi-demo-data-for-sql-server"></a>Données de démonstration NYC Taxi pour SQL Server
+# <a name="nyc-taxi-demo-data-for-sql-server-python-and-r-tutorials"></a>Données de démonstration NYC Taxi pour les didacticiels de SQL Server Python et R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Cet article explique comment configurer une base de données exemple constitué de données publiques à partir de la [taxis de New York City et de Limousines Commission](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml). Ces données sont utilisées dans les didacticiels plusieurs R et Python pour l’analytique en base de données dans SQL Server. Les exemples de données est un pour cent du jeu de données public. Sur votre système, le fichier de sauvegarde de base de données est légèrement supérieure 90 Mo, fournissant des millions de 1.7 de lignes dans la table de données primaire.
@@ -26,7 +26,7 @@ Didacticiels et guides de démarrage rapide à l’aide de ce jeu de données so
 
 +  [Utiliser un modèle Python dans SQL Server pour l’apprentissage et notation](train-score-using-python-in-tsql.md)
 
-## <a name="download-demo-database"></a>Télécharger la base de données de démonstration
+## <a name="download-files"></a>Télécharger des fichiers
 
 La base de données est un fichier de sauvegarde hébergé par Microsoft. Téléchargement de fichiers commence immédiatement lorsque vous cliquez sur le lien. 
 
@@ -66,7 +66,7 @@ Le tableau suivant récapitule les objets créés dans la base de données de d�
 |**PredictTipSingleMode**  |procédure stockée| Créé par le script PredictTipSingleMode.sql. Appelle le modèle formé pour créer des prédictions à l’aide du modèle. Cette procédure stockée accepte une nouvelle observation comme entrée, avec des valeurs de caractéristiques passées comme paramètres inline, et retourne une valeur qui prédit l’issue de la nouvelle observation. Cette procédure stockée est utilisée dans [Opérationnaliser le modèle R](sqldev-operationalize-the-model.md).|
 |**TrainTipPredictionModel**  |procédure stockée|Créé par le script TrainTipPredictionModel.sql. Effectue l’apprentissage d’un modèle de régression logistique en appelant un package R. Le modèle prédit la valeur de la colonne tipped et est formé à l’aide d’un échantillon de 70 % des données sélectionné de façon aléatoire. La sortie de la procédure stockée représente le modèle formé, qui est enregistré dans la table nyc_taxi_models. Cette procédure stockée est utilisée dans [former et enregistrer un modèle](sqldev-train-and-save-a-model-using-t-sql.md).|
 
-## <a name="query-data-for-verification"></a>Interroger des données pour la vérification
+## <a name="query-the-data"></a>Interroger les données
 
 Comme une étape de validation, exécutez une requête pour confirmer que le téléchargement de données.
 

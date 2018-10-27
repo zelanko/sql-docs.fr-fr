@@ -14,28 +14,28 @@ ms.assetid: b338a60d-4802-4b68-862a-6dc6a3f75e48
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: abe054c97e13ffe5428eddfded09fa18b5060aa3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8cd63693c18b380d328a33ed4f7f947991787313
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063389"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147844"
 ---
 # <a name="object-naming-rules-analysis-services"></a>Règles d'attribution de noms aux objets (Analysis Services)
-  Cette rubrique décrit les conventions d'affectation des noms d'objet et les mots et caractères réservés qui ne peuvent être utilisés dans aucun nom d'objet, dans le code ni dans le script, dans [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+  Cette rubrique décrit les conventions d'attribution de noms aux objets, ainsi que les caractères et les mots réservés qui ne peuvent pas être utilisés dans un nom d'objet, dans le code ou dans un script dans [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
 ##  <a name="bkmk_Names"></a> Conventions d’affectation de noms  
- Chaque objet a une propriété `Name` et `ID` qui doit être unique dans l'étendue de la collection parente. Par exemple, deux dimensions peuvent porter le même nom dans la mesure où chacune réside dans une base de données différente.  
+ Chaque objet possède une propriété `Name` et une propriété `ID` qui doivent être uniques dans l'étendue de la collection parente. Par exemple, deux dimensions peuvent porter le même nom dans la mesure où chacune réside dans une base de données différente.  
   
- Bien que vous puissiez spécifier cela manuellement, l'`ID` est habituellement autogénéré lors de la création de l'objet. Vous ne devriez jamais modifier l'`ID` après avoir commencé à créer un modèle. Toutes les références d'objet dans un modèle sont basées sur l'`ID`. Par conséquent, le fait de modifier un `ID` entraîne facilement la corruption du modèle.  
+ Bien que vous puissiez le spécifier manuellement, l'`ID` est en principe généré automatiquement lorsque l'objet est créé. Vous ne devez jamais modifier l'`ID` une fois que vous avez démarré la création d'un modèle. Toutes les références d'objet d'un modèle sont basées sur l'`ID`. Par conséquent, modifier un `ID` peut facilement provoquer une altération du modèle.  
   
- Pour les objets `DataSource` et `DataSourceView`, des exceptions notables aux conventions d'affectation de noms s'appliquent. L'ID `DataSource` peut être défini comme un seul point (.), non unique, comme référence à la base de données active. Une seconde exception concerne `DataSourceView`, qui adhère aux conventions d'affectation de noms définies pour les objets `DataSet` dans le .NET Framework, où `Name` est utilisé comme identifiant.  
+ Pour les objets `DataSource` et `DataSourceView`, des exceptions notables aux conventions d'affectation de noms s'appliquent. L'ID `DataSource` peut être défini comme un seul point (.), non unique, comme référence à la base de données active. Une autre exception est `DataSourceView`, qui se conforme aux conventions d'attribution de noms définies pour les objets `DataSet` dans le .NET Framework, où `Name` est utilisé comme identificateur.  
   
- Les règles suivantes s’appliquent aux `Name` et `ID` propriétés.  
+ Les règles suivantes s'appliquent aux propriétés `Name` et `ID`.  
   
 -   Les noms ne respectent pas la casse. Vous ne pouvez pas avoir un cube nommé « ventes » et un autre nommé « Ventes » dans la même base de données.  
   
--   Aucun espace de début ou de fin n'est autorisé dans un nom d'objet, bien que vous puissiez inclure des espaces dans un nom. Les espaces de début ou de fin sont tronqués implicitement. Cela s'applique à `Name` et à `ID` à la fois pour un objet.  
+-   Aucun espace de début ou de fin n'est autorisé dans un nom d'objet, bien que vous puissiez inclure des espaces dans un nom. Les espaces de début ou de fin sont tronqués implicitement. Cela s'applique à la fois à `Name` et à l'`ID` d'un objet.  
   
 -   Le nombre maximal de caractères autorisé est de 100.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "48063389"
   
 |Objet|Caractères non valides|  
 |------------|------------------------|  
-|`Server`|Suivez les conventions d'attribution des noms de serveur Windows lorsque vous nommez un objet serveur. Consultez [Conventions d’affectation de noms (Windows)](/windows/desktop/DNS/naming-conventions) pour plus d’informations.|  
+|`Server`|Suivez les conventions d'attribution des noms de serveur Windows lorsque vous nommez un objet serveur. Pour plus d'informations, consultez [Conventions d'attribution des noms (Windows)](/windows/desktop/DNS/naming-conventions) .|  
 |`DataSource`|: / \ * &#124; ? « [] () {} <>|  
 |`Level` ou `Attribute`|. , ; ' ` : / \ * &#124; ? " & % $ ! + = [] {} \< >|  
 |`Dimension` ou `Hierarchy`|. , ; ' ` : / \ * &#124; ? " & % $ ! + = [] () {} \<, >|  
@@ -92,6 +92,6 @@ ms.locfileid: "48063389"
 ## <a name="see-also"></a>Voir aussi  
  [Mots réservés MDX](/sql/mdx/mdx-reserved-words)   
  [Traductions &#40;Analysis Services&#41;](../../../analysis-services/translations-analysis-services.md)   
- [Conformité XML for Analysis &#40;XMLA&#41;](../../xmla/xml-for-analysis-compliance-xmla.md)  
+ [Conformité XML for Analysis &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-compliance-xmla)  
   
   

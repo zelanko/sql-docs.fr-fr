@@ -15,15 +15,15 @@ ms.assetid: 4eff8181-08dd-4fad-b091-d400fc21a020
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b2f9b97122e157ffd356163de63b0ab96708f36a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7b271d597f9941e83e9ad8ce6993831a738108e7
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178199"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147874"
 ---
 # <a name="switch-an-analysis-services-database-between-readonly-and-readwrite-modes"></a>Basculer une base de données Analysis Services entre les modes ReadOnly et ReadWrite
-  Il existe souvent des situations lorsqu’un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] administrateur de base de données (dba) souhaite modifier le mode de lecture/écriture d’une base de données tabulaire ou multidimensionnel. Ces situations sont souvent justifiées par des exigences opérationnelles, telles que le partage de la base de données au sein d'un pool de serveurs [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pour un plus grand confort de l'utilisateur.  
+  Il existe souvent des situations où un administrateur de base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] souhaite modifier le mode lecture/écriture d'une base de données tabulaire ou multidimensionnelle. Ces situations sont souvent justifiées par des exigences opérationnelles, telles que le partage de la base de données au sein d'un pool de serveurs [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pour un plus grand confort de l'utilisateur.  
   
  Vous pouvez basculer d'un mode de base de données à un autre de différentes façons. Ce document explique les scénarios courants suivants :  
   
@@ -171,11 +171,11 @@ ms.locfileid: "48178199"
  <xref:Microsoft.AnalysisServices.Server.Attach%2A>   
  <xref:Microsoft.AnalysisServices.Database.Detach%2A>   
  [Attacher et détacher des bases de données Analysis Services](attach-and-detach-analysis-services-databases.md)   
- [Emplacement de stockage de base de données](database-storage-location.md)   
+ [Emplacement de stockage de la base de données](database-storage-location.md)   
  [Base de données ReadWriteModes](database-readwritemodes.md)   
- [Élément Attach](../xmla/xml-elements-commands/attach-element.md)   
- [Élément Detach](../xmla/xml-elements-commands/detach-element.md)   
- [Élément ReadWriteMode](../xmla/xml-elements-properties/readwritemode-element.md)   
- [DbStorageLocation, élément](../xmla/xml-elements-properties/dbstoragelocation-element.md)  
+ [Élément Attach](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/attach-element)   
+ [Élément Detach](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/detach-element)   
+ [Élément ReadWriteMode](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/readwritemode-element)   
+ [Élément StorageLocation](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/dbstoragelocation-element)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Actions (Analysis Services - données multidimensionnelles) | Documents Microsoft
+title: Actions (Analysis Services - données multidimensionnelles) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b7c4d8781aa316ab49fb3730dd783c77e2776441
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: fd1ae2b3dbf8ac93497bd4cfb2c875d9fe21b824
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34020486"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146364"
 ---
 # <a name="actions-analysis-services---multidimensional-data"></a>Actions (Analysis Services - Données multidimensionnelles)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "34020486"
   
 -   Des actions standard, qui retournent l'élément d'action (URL, HTML, DataSet, ensemble de lignes et autres éléments) associé à la section sélectionnée du cube où l'action se produit.  
   
- Une interface de requête, telle qu'ADOMD.NET, est utilisée par l'application cliente pour récupérer et exposer les actions à l'utilisateur final. Pour plus d’informations, consultez [Développement avec ADOMD.NET](../../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md).  
+ Une interface de requête, telle qu'ADOMD.NET, est utilisée par l'application cliente pour récupérer et exposer les actions à l'utilisateur final. Pour plus d’informations, consultez [Développement avec ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net).  
   
  Un objet <xref:Microsoft.AnalysisServices.Action> simple est composé des informations de base, de la cible où l’action doit se produire, d’une condition pour limiter la portée de l’action et du type. Les informations de base incluent le nom de l'action, la description de l'action, la légende suggérée pour l'action, et d'autres informations.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "34020486"
 |Propriétaire|Effectue une opération en utilisant une interface différente de celles répertoriées dans ce tableau.|  
 |Rapport|Soumet une demande paramétrable basée sur une URL à un serveur de rapports et renvoie un rapport à une application cliente.|  
 |Ensemble de lignes|Renvoie un ensemble de lignes à une application cliente.|  
-|Instruction|Exécute une commande OLE DB.|  
+|.|Exécute une commande OLE DB.|  
 |URL|Affiche une page web dynamique dans un navigateur Internet.|  
   
 ## <a name="resolving-and-executing-actions"></a>Résolution et exécution des actions  

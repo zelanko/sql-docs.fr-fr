@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: meet-bhagdev
 ms.author: meetb
 manager: craigg
-ms.openlocfilehash: 8bbd03d815594cfae850a94ae8067d37f0f5c744
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: d773810ebaa544e40af99de8b5559ac44c1f5d5f
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356320"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50098915"
 ---
 # <a name="connect-includename-sosincludesname-sos-shortmd-to-your-sql-server-using-windows-authentication---kerberos"></a>Se connecter [!INCLUDE[name-sos](../includes/name-sos-short.md)] à votre serveur SQL à l’aide de l’authentification Windows - Kerberos 
 
@@ -125,7 +125,7 @@ sudo realm join contoso.com -U 'user@CONTOSO.COM' -v
 
 ### <a name="macos"></a>macOS
 
-- Joindre votre macOS pour le contrôleur de domaine Active Directory [suit] (https://support.apple.com/kb/PH26282?viewlocale=en_US&locale=en_US).
+- Joindre votre macOS pour le contrôleur de domaine Active Directory par [procédez comme suit](https://support.apple.com/kb/PH26282?viewlocale=en_US&locale=en_US).
 
 
 

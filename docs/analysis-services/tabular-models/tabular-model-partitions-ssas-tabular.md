@@ -1,5 +1,5 @@
 ---
-title: Partitions de modèles tabulaires | Documents Microsoft
+title: Partitions de modèle tabulaire | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 55e056a0703e9f81d02138f2942d4782d81ee9b2
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: ca9ea54ace50740acf9f0be0ec923b86d1667683
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34045256"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146284"
 ---
 # <a name="tabular-model-partitions"></a>Partitions de modèle tabulaire 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "34045256"
   
 -   [Avantages](#bkmk_benefits)  
   
--   [Permissions](#bkmk_permissions)  
+-   [Autorisations](#bkmk_permissions)  
   
 -   [Traiter les partitions](#bkmk_process_partitions)  
   
@@ -58,15 +58,15 @@ ms.locfileid: "34045256"
 |----------------|-------------|  
 |Administrateur|Lire, traiter, créer, copier, fusionner, supprimer|  
 |Traiter|Lire, traiter|  
-|Lecture seule|Lecture|  
+|Lecture seule|Lire|  
   
- Pour en savoir plus sur la création de rôles pendant la création du modèle à l’aide de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], consultez [rôles](../../analysis-services/tabular-models/roles-ssas-tabular.md). Pour en savoir plus sur la gestion des membres du rôle de déployé les rôles de modèle tabulaire à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], consultez [des rôles de modèle tabulaire](../../analysis-services/tabular-models/tabular-model-roles-ssas-tabular.md).  
+ Pour en savoir plus sur la création des rôles pendant la création du modèle à l’aide de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], consultez [rôles](../../analysis-services/tabular-models/roles-ssas-tabular.md). Pour en savoir plus sur la gestion des membres du rôle de rôles de modèle tabulaire de déployés à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], consultez [rôles de modèles tabulaires](../../analysis-services/tabular-models/tabular-model-roles-ssas-tabular.md).  
   
 ##  <a name="bkmk_parallelProc"></a> Traitement parallèle  
-Analysis Services inclut le traitement parallèle pour les tables avec deux partitions ou plus, l’augmentation des performances de traitement. Il n’y a pas de paramètres de configuration pour le traitement parallèle (voir les remarques). Ce type de traitement se produit par défaut lorsque vous traitez une table ou sélectionnez plusieurs partitions pour la même table et le même processus. Vous pouvez toujours choisir de traiter les partitions d’une table de manière indépendante.  
+Analysis Services inclut un traitement parallèle pour les tables avec deux partitions ou plus, accroître les performances de traitement. Il n’y a pas de paramètres de configuration pour le traitement parallèle (voir les remarques). Ce type de traitement se produit par défaut lorsque vous traitez une table ou sélectionnez plusieurs partitions pour la même table et le même processus. Vous pouvez toujours choisir de traiter les partitions d’une table de manière indépendante.  
   
 > [!NOTE]  
->  Pour spécifier si les opérations d’actualisation s’exécutent séquentiellement ou en parallèle, vous pouvez utiliser l’option de propriété **maxParallism** avec la [commande Sequence (TMSL)](../../analysis-services/tabular-models-scripting-language-commands/sequence-command-tmsl.md).
+>  Pour spécifier si les opérations d’actualisation s’exécutent séquentiellement ou en parallèle, vous pouvez utiliser l’option de propriété **maxParallism** avec la [commande Sequence (TMSL)](https://docs.microsoft.com/bi-reference/tmsl/sequence-command-tmsl).
 
 > [!NOTE]  
 >  Si un nouvel encodage est détecté, le traitement parallèle peut entraîner une augmentation du taux d’utilisation des ressources système. En effet, les opérations de partition multiples doivent être interrompues, puis redémarrées, le nouvel encodage étant en parallèle.  
@@ -76,7 +76,7 @@ Analysis Services inclut le traitement parallèle pour les tables avec deux part
   
 |Mode|Description|  
 |----------|-----------------|  
-|Traiter par défaut|Détecte l'état de traitement d'un objet de partition et effectue le traitement nécessaire pour faire passer les objets de partition non traités ou traités partiellement dans un état de traitement complet. Les données des partitions et des tables vides sont chargées ; les hiérarchies, les colonnes calculées et les relations sont créées ou reconstruites.|  
+|Traiter par défaut|Détecte l'état de traitement d'un objet de partition et effectue le traitement nécessaire pour faire passer les objets de partition non traités ou traités partiellement dans un état de traitement complet. Les données des partitions et des tables vides sont chargées ; les hiérarchies, les colonnes calculées et les relations sont créées ou reconstruites.|  
 |Traiter entièrement|Traite un objet de partition et tous les objets qu'il contient. Lorsque la commande Traiter entièrement est exécutée pour un objet qui a déjà été traité, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supprime toutes les données de l'objet, puis traite l'objet. Ce type de traitement est obligatoire lorsqu'une modification structurelle a été apportée à un objet.|  
 |Traiter les données|Chargez les données dans une partition ou une table sans reconstruire les hiérarchies ou les relations ni recalculer les colonnes calculées et les mesures.|  
 |Traiter l'effacement|Supprime toutes les données d'une partition.|  
@@ -84,7 +84,7 @@ Analysis Services inclut le traitement parallèle pour les tables avec deux part
   
 ##  <a name="bkmk_related_tasks"></a> Tâches associées  
   
-|Tâche| Description|  
+|Tâche|Description|  
 |----------|-----------------|  
 |[Créer et gérer des partitions de modèles tabulaires](../../analysis-services/tabular-models/create-and-manage-tabular-model-partitions-ssas-tabular.md)|Explique comment créer et gérer des partitions dans un modèle tabulaire déployé à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|  
 |[Traiter les partitions de modèles tabulaires](../../analysis-services/tabular-models/process-tabular-model-partitions-ssas-tabular.md)|Explique comment traiter des partitions dans un modèle tabulaire déployé à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|  

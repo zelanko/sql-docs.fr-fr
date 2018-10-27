@@ -20,12 +20,12 @@ ms.assetid: 94e6c3e5-1f09-4616-9da2-4e44d066d494
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: be2320f3e13dc7bb2110f6bd05f0bccefda58464
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 50d488f4de5dc3581dae12655790bc935265d8f2
+ms.sourcegitcommit: ef15fa253d98c62538bf9b6fe191af7f8ef8f6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170779"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49991282"
 ---
 # <a name="considerations-for-using-test-servers"></a>Observations relatives à l'utilisation de serveurs de test
   L’utilisation d’un serveur de test pour paramétrer une base de données sur un serveur de production constitue un avantage important de l’Assistant Paramétrage de [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Avec cette fonctionnalité, vous pouvez transférer sur un serveur de test la charge de gestion du paramétrage sans copier les données réelles sur le serveur de test à partir du serveur de production.  
@@ -39,7 +39,7 @@ ms.locfileid: "48170779"
   
 -   L'utilisateur qui souhaite se servir d'un serveur de test pour paramétrer une base de données sur un serveur de production doit exister sur les deux serveurs, sinon ce scénario ne fonctionne pas.  
   
--   La procédure stockée étendue( **xp_msver**) doit être activée pour utiliser le scénario serveur de test/serveur de production. [!INCLUDE[ssDE](../../includes/ssde-md.md)] L’Assistant Paramétrage utilise cette procédure stockée étendue pour extraire le nombre de processeurs et la mémoire disponible du serveur de production à utiliser pendant le paramétrage du serveur de test. Si **xp_msver** n’est pas activée, l’Assistant Paramétrage du [!INCLUDE[ssDE](../../includes/ssde-md.md)] suppose les caractéristiques matérielles de l’ordinateur où l’Assistant Paramétrage du [!INCLUDE[ssDE](../../includes/ssde-md.md)] est exécuté. Si les caractéristiques matérielles de l'ordinateur où l'Assistant Paramétrage du [!INCLUDE[ssDE](../../includes/ssde-md.md)] est exécuté ne sont pas accessibles, la présence d'un processeur et de 1 024 mégaoctets (Mo) de mémoire est reconnue par défaut. Cette procédure stockée étendue est activée par défaut lors de l'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [Configuration de la surface](../security/surface-area-configuration.md) et [xp_msver &#40;Transact-SQL&#41;] (~ / relational-databases/system-stored-procedures/xp-msver-transact-sql.md.  
+-   La procédure stockée étendue( **xp_msver**) doit être activée pour utiliser le scénario serveur de test/serveur de production. [!INCLUDE[ssDE](../../includes/ssde-md.md)] L’Assistant Paramétrage utilise cette procédure stockée étendue pour extraire le nombre de processeurs et la mémoire disponible du serveur de production à utiliser pendant le paramétrage du serveur de test. Si **xp_msver** n’est pas activée, l’Assistant Paramétrage du [!INCLUDE[ssDE](../../includes/ssde-md.md)] suppose les caractéristiques matérielles de l’ordinateur où l’Assistant Paramétrage du [!INCLUDE[ssDE](../../includes/ssde-md.md)] est exécuté. Si les caractéristiques matérielles de l'ordinateur où l'Assistant Paramétrage du [!INCLUDE[ssDE](../../includes/ssde-md.md)] est exécuté ne sont pas accessibles, la présence d'un processeur et de 1 024 mégaoctets (Mo) de mémoire est reconnue par défaut. Cette procédure stockée étendue est activée par défaut lors de l'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [Configuration de la surface d’exposition](../security/surface-area-configuration.md) et [xp_msver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/xp-msver-transact-sql).  
   
 -   [!INCLUDE[ssDE](../../includes/ssde-md.md)] L’Assistant Paramétrage s’attend à ce que les versions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] soient les mêmes sur le serveur de test et sur le serveur de production. Si deux versions différentes sont utilisées, la version installée sur le serveur de test a la priorité. Par exemple, si le serveur de test exécute [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard, l'Assistant Paramétrage du [!INCLUDE[ssDE](../../includes/ssde-md.md)] n'inclut pas les vues indexées, le partitionnement et les opérations en ligne dans ses recommandations, même si le serveur de production exécute [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise.  
   

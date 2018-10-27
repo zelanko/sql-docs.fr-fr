@@ -1,5 +1,5 @@
 ---
-title: Présentation du modèle d’objet tabulaire au niveau 1050 via 1103 | Documents Microsoft
+title: Présentation du modèle d’objet tabulaire aux niveaux 1050 à 1103 | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,17 +9,17 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 5ff9348f28d8791d7a9cc6c571a3a4f05bbab58f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 16808ae1ceccd64a109a78c33d861ab45076b98d
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34045483"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146414"
 ---
-# <a name="understanding-tabular-object-model-at-levels-1050-through-1103"></a>Présentation du modèle d’objet tabulaire au niveau 1050 via 1103
+# <a name="understanding-tabular-object-model-at-levels-1050-through-1103"></a>Présentation du modèle objet tabulaire aux niveaux 1050 à 1103
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
 
-  Un modèle tabulaire est une représentation logique de tables, de relations, de hiérarchies, de perspectives, de mesures, et de performance clés. Cette section présente l'implémentation interne à l'aide d'objets AMO. Consultez [développement avec Analysis Management Objects &#40;AMO&#41; ](../../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md) si vous n’avez pas encore utilisé AMO.  
+  Un modèle tabulaire est une représentation logique de tables, de relations, de hiérarchies, de perspectives, de mesures, et de performance clés. Cette section présente l'implémentation interne à l'aide d'objets AMO. Consultez [développement avec Analysis Management Objects &#40;AMO&#41; ](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo) si vous n’avez jamais utilisé AMO avant.  
   
  L'approche ici est hiérarchisée, tous les objets appropriés dans le modèle tabulaire sont logiquement mappés aux objets AMO, et les interactions ou le flux de travail requis sont expliqués. Un exemple de code source pour créer un modèle tabulaire à l’aide d’AMO, AMO pour exemple tabulaire est disponible à partir de Codeplex. Remarque importante à propos du code dans l'exemple : le code est fourni uniquement comme un support aux concepts logiques expliqués ici et ne doit pas être utilisé dans un environnement de production, ni à des fins autres que pédagogiques. L'exemple est fourni sans prise en charge ni garantie.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "34045483"
 > [!NOTE]  
 >  Les objets `xref:Microsoft.AnalysisServices.Measure` n'ont aucune relation avec les mesures calculées dans les modèles tabulaires et ne sont pas pris en charge dans ces modèles.  
   
- Consultez [représentation de la mesure calculée &#40;tabulaire&#41; ](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/tables-calculated-measure-representation.md) pour une explication détaillée sur la façon de créer et manipuler la représentation sous forme de mesure calculée.  
+ Consultez [représentation d’une mesure calculée &#40;tabulaire&#41; ](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/tables-calculated-measure-representation.md) pour une explication détaillée sur la façon de créer et manipuler la représentation sous forme de mesure calculée.  
   
 ### <a name="hierarchy-representation"></a>Représentation d'une hiérarchie  
  Les hiérarchies permettent à l'utilisateur final d'explorer plus facilement les objets. En termes d'objets AMO, une représentation de hiérarchie a une relation de mappage un-à-un avec `xref:Microsoft.AnalysisServices.Hierarchy` et aucun autre objet AMO principal n'est requis. Il est important de noter que cela ne signifie pas que tous les objets contenus dans l'objet de base de données AMO peuvent être utilisés lors de la modélisation tabulaire.  
@@ -65,7 +65,7 @@ ms.locfileid: "34045483"
  Consultez [représentation d’indicateur de Performance clé &#40;tabulaire&#41; ](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/tables-key-performance-indicator-representation.md) pour une explication détaillée sur la façon de créer et manipuler la représentation sous forme de l’indicateur de performance clé.  
   
 ### <a name="partition-representation"></a>Représentation d'une partition  
- À des fins opérationnelles, une table peut être divisée en différents sous-ensembles de lignes qui, lorsqu’elles sont combinées ensemble, la table. Chacun de ces sous-ensembles est une partition de la table. En termes d’objets AMO, une représentation de partition a une relation de mappage avec `xref:Microsoft.AnalysisServices.Partition` et aucun autre objet AMO principal n’est requis. Il est important de noter que cela ne signifie pas que tous les objets contenus dans l'objet de base de données AMO peuvent être utilisés lors de la modélisation.  
+ À des fins opérationnelles, une table peut être divisée en différents sous-ensembles de lignes qui, lorsqu’elles sont combinées ensemble, forment la table. Chacun de ces sous-ensembles est une partition de la table. En termes d'objets AMO, une représentation de partition a une relation de mappage un-à-un avec `xref:Microsoft.AnalysisServices.Partition` et aucun autre objet AMO principal n'est requis. Il est important de noter que cela ne signifie pas que tous les objets contenus dans l'objet de base de données AMO peuvent être utilisés lors de la modélisation.  
   
  Consultez [représentation d’une Partition &#40;tabulaire&#41; ](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/tables-partition-representation.md) pour une explication détaillée sur la façon de créer et manipuler la représentation sous forme de partition.  
   
@@ -76,12 +76,12 @@ ms.locfileid: "34045483"
   
  En termes d'objets AMO, toutes les relations inactives ont une représentation d'une relation de mappage un-à-un avec `xref:Microsoft.AnalysisServices.Relationship` et aucun autre objet AMO principal n'est requis. Pour la relation active, d'autres conditions existent et un mappage à `xref:Microsoft.AnalysisServices.ReferenceMeasureGroupDimension` est également requis. Il est important de noter que cela ne signifie pas que tous les objets contenus dans la relation AMO ou l'objet referenceMeasureGroupDimension peuvent être utilisés lors de la modélisation.  
   
- Consultez [la représentation sous forme de relation &#40;tabulaire&#41; ](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/relationship-representation-tabular.md) pour une explication détaillée sur la façon de créer et manipuler la représentation sous forme de relation.  
+ Consultez [représentation d’une relation &#40;tabulaire&#41; ](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/relationship-representation-tabular.md) pour une explication détaillée sur la façon de créer et manipuler la représentation sous forme de relation.  
   
 ## <a name="perspective-representation"></a>Représentation d'une perspective  
  Une perspective est un mécanisme pour simplifier ou mieux cibler le mode. En termes d'objets AMO, une représentation de relation a une relation de mappage un-à-un avec `xref:Microsoft.AnalysisServices.Perspective` et aucun autre objet AMO principal n'est requis. Il est important de noter que cela ne signifie pas que tous les objets contenus dans l’objet de perspective AMO peuvent être utilisés lors de la modélisation tabulaire.  
   
- Consultez [représentation d’une Perspective &#40;tabulaire&#41; ](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/perspective-representation-tabular.md) pour une explication détaillée sur la façon de créer et manipuler la représentation sous forme de perspective.  
+ Consultez [représentation d’une Perspective &#40;tabulaire&#41; ](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/perspective-representation-tabular.md) pour une explication détaillée sur la façon de créer et manipuler la représentation sous forme de point de vue.  
   
 > [!WARNING]  
 >  Les perspectives ne sont pas un mécanisme de sécurité ; les objets en dehors de la perspective sont toujours accessibles à l'utilisateur via d'autres interfaces.  

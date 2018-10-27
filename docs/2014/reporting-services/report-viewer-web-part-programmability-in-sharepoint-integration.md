@@ -12,12 +12,12 @@ ms.assetid: 714017b7-1bd6-4950-a3c6-d0df8450a877
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 427acf4413bba023f8ff3c8300cfb7a53a4b0b0e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c42e12dc43febf4927ea2f559631b63c5ba4e143
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48062159"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50100170"
 ---
 # <a name="report-viewer-web-part-programmability-in-sharepoint-integration"></a>Programmabilité du composant WebPart Visionneuse de rapports dans l'intégration SharePoint
   Le composant WebPart de la visionneuse de rapports est un contrôle serveur `T:Microsoft.ReportingServices.SharePoint.UI.WebParts.ReportViewerWebPart` qui contient un ensemble d'interfaces de programmation d'applications publiques (API) permettant aux développeurs de créer des applications SharePoint personnalisées. Vous pouvez créer des composants WebPart personnalisés qui fournissent les paramètres et le chemin du rapport au composant WebPart Visionneuse de rapports à l’aide de connexions de composants WebPart. Vous pouvez également incorporer le composant WebPart dans une page WebPart SharePoint personnalisée et le personnaliser en utilisant l'API publique.  
@@ -61,6 +61,6 @@ ms.locfileid: "48062159"
     >  Vous pouvez connecter plusieurs composants WebPart `T:Microsoft.SharePoint.WebPartPages.IFilterValues` à la fois au composant WebPart Visionneuse de rapports. Toutefois, vous ne pouvez pas connecter simultanément un composant WebPart <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> et un composant WebPart `T:Microsoft.SharePoint.WebPartPages.IFilterValues` au composant WebPart Visionneuse de rapports.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Interface de IFilterValues](https://msdn.microsoft.com/en-us/library/office/microsoft.sharepoint.webpartpages.ifiltervalues\(v=office.15\).aspx)  
+ [Interface de IFilterValues](https://msdn.microsoft.com/library/office/microsoft.sharepoint.webpartpages.ifiltervalues\(v=office.15\).aspx)  
   
   

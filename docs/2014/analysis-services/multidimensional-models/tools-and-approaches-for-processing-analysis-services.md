@@ -14,12 +14,12 @@ ms.assetid: 82347a16-4145-4655-8adf-2a300f1fdf99
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: edddafdbc51c9f67beb7b0f92efddf1e14f9fc79
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c4d37cd9a4ef101f9243fbf5dafdc7df43dfa62c
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118469"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146304"
 ---
 # <a name="tools-and-approaches-for-processing-analysis-services"></a>Outils et approches de traitement (Analysis Services)
   Le traitement est une opération selon laquelle Analysis Services interroge les données provenant d'une source de données relationnelle et remplit des objets Analysis Services à l'aide de ces données.  
@@ -42,7 +42,7 @@ ms.locfileid: "48118469"
   
 -   Surveiller le traitement avec SQL Server Profiler  
   
--   Programmez une solution personnalisée à l'aide d'AMO. Pour plus d’informations, consultez [Programmation d’objets de base OLAP AMO](analysis-management-objects/programming-amo-olap-basic-objects.md).  
+-   Programmez une solution personnalisée à l'aide d'AMO. Pour plus d’informations, consultez [Programmation d’objets de base OLAP AMO](https://docs.microsoft.com/bi-reference/amo/programming-amo-olap-basic-objects).  
   
  Le traitement est une opération hautement configurable, contrôlée par un ensemble d'options de traitement qui déterminent si un traitement complet ou incrémentiel se produit au niveau de l'objet. Pour plus d’informations sur les options de traitement et sur le traitement des objets, consultez [Options et paramètres de traitement &#40;Analysis Services&#41;](processing-options-and-settings-analysis-services.md) et [Traitement des objets Analysis Services](processing-analysis-services-objects.md).  
   

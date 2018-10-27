@@ -13,12 +13,12 @@ ms.assetid: a5e6b9ff-69fa-4896-a840-de2b3e063ca9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2086fa86f65cd467b84bf77e57123ded51e3dd4a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: aacc0e61ca3db517b5f05aa93ed43b3268e40529
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161459"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50144614"
 ---
 # <a name="define-time-periods-data-source-dimension-wizard"></a>Définir des périodes (Source de données - Assistant Dimension)
   La page **Définir des périodes** permet de définir des attributs représentant des périodes dans la dimension de temps à l'aide de colonnes dans la table indiquée sur la page **Sélectionner le type de la dimension** .  
@@ -28,7 +28,7 @@ ms.locfileid: "48161459"
   
 ## <a name="options"></a>Options  
  **Nom de la propriété de temps**  
- Permet d'afficher les types d'attributs utilisés dans le but d'indiquer les périodes se trouvant dans les dimensions de temps. Pour plus d’informations sur les types d’attributs, consultez [Élément Type &#40;DimensionAttribute&#41; &#40;ASSL&#41;](scripting/properties/type-element-dimensionattribute-assl.md).  
+ Permet d'afficher les types d'attributs utilisés dans le but d'indiquer les périodes se trouvant dans les dimensions de temps. Pour plus d’informations sur les types d’attributs, consultez [Élément Type &#40;DimensionAttribute&#41; &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/type-element-dimensionattribute-assl).  
   
 > [!NOTE]  
 >  Le type `Date` ne doit être utilisé que pour les colonnes de type de données DateTime (date et heure).  

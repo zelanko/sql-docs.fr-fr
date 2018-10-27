@@ -14,12 +14,12 @@ ms.assetid: d83ad88f-818c-49fe-a9a9-299f704fca53
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 96897590a9d6b0607422ab98682cb6415f11e3d4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 68957668604e746f8f3a7d3392f934c66332523e
+ms.sourcegitcommit: ef15fa253d98c62538bf9b6fe191af7f8ef8f6c8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143129"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49991122"
 ---
 # <a name="monitor-system-activity-using-extended-events"></a>Surveiller l'activité système à l’aide d’événements étendus
   Cette procédure illustre l’utilisation des événements étendus avec le suivi d'événements pour Windows (ETW) pour surveiller l’activité système. Elle indique également comment utiliser les instructions CREATE EVENT SESSION, ALTER EVENT SESSION et DROP EVENT SESSION.  
@@ -120,7 +120,7 @@ ms.locfileid: "48143129"
  [CREATE EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-event-session-transact-sql)   
  [ALTER EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-event-session-transact-sql)   
  [DROP EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-event-session-transact-sql)   
- [Étendue des affichages catalogue des événements &#40;Transact-SQL&#41;] (~/relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql   
+ [Affichages catalogue des événements étendus &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql)  
  [Vues de gestion dynamique des Événements étendus](../views/views.md)   
  [Cibles des Événements étendus SQL Server](../../database-engine/sql-server-extended-events-targets.md)  
   

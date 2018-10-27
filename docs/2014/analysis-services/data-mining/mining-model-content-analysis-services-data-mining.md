@@ -21,12 +21,12 @@ ms.assetid: e7c039f6-3266-4d84-bfbd-f99b6858acf4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: db6b49c10441e08bb66256860550fc2447f6dcf3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 355bb7a964ae5b70dd0d8bd71f371766c25e413e
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120899"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148004"
 ---
 # <a name="mining-model-content-analysis-services---data-mining"></a>Contenu du modèle d’exploration de données (Analysis Services - Exploration de données)
   Après avoir conçu et traité un modèle d'exploration de données à l'aide de données provenant de la structure d'exploration de données sous-jacente, celui-ci est complet et présente un *contenu de modèle d'exploration de données*. Vous pouvez utiliser ce contenu pour faire des prédictions ou analyser vos données.  
@@ -55,7 +55,7 @@ ms.locfileid: "48120899"
  Selon l'algorithme utilisé pour créer le modèle, le nœud racine a un nombre variable de nœuds enfants. Les nœuds enfants ont des significations différentes et possèdent un contenu différent en fonction de l'algorithme, de la profondeur et de la complexité des données.  
   
 ##  <a name="bkmk_Nodes"></a> Nœuds dans le contenu du modèle d'exploration de données  
- Dans un modèle d'exploration de données, un nœud est un conteneur à usage général qui stocke une information sur l'ensemble ou une portion du modèle. La structure de chaque nœud est toujours la même et contient les colonnes définies par l'ensemble des lignes du schéma d'exploration de données. Pour plus d’informations, consultez [Ensemble de lignes DMSCHEMA_MINING_MODEL_CONTENT](../schema-rowsets/data-mining/dmschema-mining-model-content-rowset.md).  
+ Dans un modèle d'exploration de données, un nœud est un conteneur à usage général qui stocke une information sur l'ensemble ou une portion du modèle. La structure de chaque nœud est toujours la même et contient les colonnes définies par l'ensemble des lignes du schéma d'exploration de données. Pour plus d’informations, consultez [Ensemble de lignes DMSCHEMA_MINING_MODEL_CONTENT](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-rowset).  
   
  Chaque nœud inclut des métadonnées relatives au nœud, notamment un identificateur unique dans chaque modèle, l'ID du nœud parent et le nombre de nœuds enfants que possède le nœud. Les métadonnées identifient le modèle d'appartenance du nœud, et le catalogue de la base de données où ce modèle particulier est stocké. Le contenu supplémentaire fourni dans le nœud diffère selon le type d'algorithme utilisé pour créer le modèle, il peut contenir les éléments suivants :  
   
@@ -160,9 +160,9 @@ ms.locfileid: "48120899"
   
  Si le nom d'attribut est une colonne, puis dans le cas le plus simple, ATTRIBUTE_VALUE contient une des valeurs discrètes pour cette colonne.  
   
- Selon la façon dont l’algorithme traite les valeurs, ATTRIBUTE_VALUE peut également contenir un indicateur qui indique si une valeur existe pour l’attribut (`Existing`), ou si la valeur est null (`Missing`).  
+ Selon le mode de traitement des valeurs par l'algorithme, ATTRIBUTE_VALUE peut également contenir un indicateur qui indique si une valeur existe pour l'attribut (`Existing`), ou si la valeur est NULL (`Missing`).  
   
- Par exemple, si votre modèle est configuré pour rechercher des clients qui ont acheté un élément particulier au moins une fois, la colonne ATTRIBUTE_NAME peut contenir la paire attribut-valeur qui définit l’élément concerné, telle que `Model = 'Water bottle'`et la colonne ATTRIBUTE_VALUE contiendrait uniquement le mot clé `Existing` ou `Missing`.  
+ Par exemple, si votre modèle est configuré pour rechercher des clients qui ont acheté au moins une fois un article particulier, la colonne ATTRIBUTE_NAME peut contenir la paire attribut/valeur qui définit l'article en question, telle que `Model = 'Water bottle'`, et la colonne ATTRIBUTE_VALUE contiendrait uniquement le mot clé `Existing` ou `Missing`.  
   
  SUPPORT  
  Nombre de cas qui ont cette paire attribut/valeur, ou qui contiennent ce jeu d'éléments ou règle.  
@@ -214,7 +214,7 @@ ms.locfileid: "48120899"
   
 |ID VALUE_TYPE|Étiquette de valeur|Nom de type de valeur|  
 |--------------------|-----------------|---------------------|  
-|1|Missing|Indique que les données de cas ne contenaient pas de valeur pour cet attribut. Le `Missing` état est calculé séparément des attributs qui ont des valeurs.|  
+|1|Missing|Indique que les données de cas ne contenaient pas de valeur pour cet attribut. L'état `Missing` est calculé séparément des attributs qui ont des valeurs.|  
 |2|Existing|Indique que les données de cas contiennent une valeur pour cet attribut.|  
 |3|Continu|Indique que la valeur de l'attribut est une valeur numérique continue et par conséquent peut être représentée par une moyenne ainsi que la variance et l'écart type.|  
 |4|Discret|Indique une valeur, soit numérique, soit texte, traitée comme discrète.<br /><br /> **Remarque** Les valeurs discrètes peuvent être aussi manquantes ; toutefois, elles sont traitées différemment durant les calculs. Pour plus d’informations, consultez [Valeurs manquantes &#40;Analysis Services - Exploration de données&#41;](missing-values-analysis-services-data-mining.md).|  
@@ -273,15 +273,15 @@ ms.locfileid: "48120899"
   
 |Type d'algorithme ou de modèle|model content|Interrogation des modèles d'exploration de données|  
 |-----------------------------|-------------------|----------------------------|  
-|Modèles de règles d'association|[Contenu pour les modèles d’Association du modèle d’exploration de données &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)|[Exemples de requêtes de modèle d’association](association-model-query-examples.md)|  
-|Modèles de clustering|[Contenu pour les modèles d’arbre de décision du modèle d’exploration de données &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)|[Exemples de requêtes de modèle de clustering](clustering-model-query-examples.md)|  
-|Modèle d'arbres de décision|[Contenu pour les modèles d’arbre de décision du modèle d’exploration de données &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)|[Exemples de requêtes de modèle d’arbre de décision](decision-trees-model-query-examples.md)|  
-|Modèles de régression linéaire|[Contenu du modèle pour les modèles de régression linéaire d’exploration de données &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)|[Exemples de requête de modèle de régression linéaire](linear-regression-model-query-examples.md)|  
-|Modèles de régression logistique|[Contenu du modèle pour les modèles de régression logistique d’exploration de données &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-logistic-regression-models.md)|[Exemples de requête de modèle de régression linéaire](linear-regression-model-query-examples.md)|  
-|Modèles Naïve Bayes|[Pour les modèles Naive Bayes contenu du modèle d’exploration de données &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)|[Exemples de requêtes de modèle Naive Bayes](naive-bayes-model-query-examples.md)|  
-|Modèles de réseau neuronal|[Contenu du modèle pour les modèles de réseau neuronal d’exploration de données &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)|[Exemples de requêtes de modèle de réseau neuronal](neural-network-model-query-examples.md)|  
-|Sequence clustering|[Le contenu du modèle Sequence Clustering des modèles d’exploration de données &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-sequence-clustering-models.md)|[Exemples de requêtes de modèle Sequence Clustering](sequence-clustering-model-query-examples.md)|  
-|Modèles de séries chronologiques|[Contenu du modèle pour les modèles de série chronologique d’exploration de données &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)|[Exemples de requêtes de modèle de séries chronologiques](time-series-model-query-examples.md)|  
+|Modèles de règles d'association|[Contenu du modèle d’exploration de données pour les modèles d’association &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)|[Exemples de requêtes de modèle d’association](association-model-query-examples.md)|  
+|Modèles de clustering|[Contenu du modèle d’exploration de données pour les modèles d’arbre de décision &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)|[Exemples de requêtes de modèle de clustering](clustering-model-query-examples.md)|  
+|Modèle d'arbres de décision|[Contenu du modèle d’exploration de données pour les modèles d’arbre de décision &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)|[Exemples de requêtes de modèle d’arbre de décision](decision-trees-model-query-examples.md)|  
+|Modèles de régression linéaire|[Contenu du modèle d’exploration de données pour les modèles de régression linéaire &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)|[Exemples de requête de modèle de régression linéaire](linear-regression-model-query-examples.md)|  
+|Modèles de régression logistique|[Contenu du modèle d’exploration de données pour les modèles de régression logistique &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-logistic-regression-models.md)|[Exemples de requête de modèle de régression linéaire](linear-regression-model-query-examples.md)|  
+|Modèles Naïve Bayes|[Contenu du modèle d’exploration de données pour les modèles Naive Bayes &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)|[Exemples de requêtes de modèle Naive Bayes](naive-bayes-model-query-examples.md)|  
+|Modèles de réseau neuronal|[Contenu du modèle d’exploration de données pour les modèles de réseau neuronal &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)|[Exemples de requêtes de modèle de réseau neuronal](neural-network-model-query-examples.md)|  
+|Sequence clustering|[Contenu du modèle d’exploration de données pour les modèles Sequence Clustering &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-sequence-clustering-models.md)|[Exemples de requêtes de modèle MSC (Sequence Clustering)](sequence-clustering-model-query-examples.md)|  
+|Modèles de séries chronologiques|[Contenu du modèle d’exploration de données pour les modèles de séries chronologiques &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)|[Exemples de requêtes de modèle de série chronologique](time-series-model-query-examples.md)|  
   
 ##  <a name="bkmk_Viewing"></a> Outils pour afficher le contenu du modèle d'exploration de données  
  Lorsque vous parcourez ou explorez un modèle dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], vous pouvez consulter les informations dans la **Visionneuse de l'arborescence de contenu générique**qui est disponible dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] et [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  

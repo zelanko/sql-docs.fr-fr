@@ -17,21 +17,21 @@ ms.assetid: cdbfb984-18bd-4c4e-8fb7-d64ce298ed35
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bb8056842eb19bfa81cfdcf7494e058108f3e836
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 24af6f2ff33235321ef49732721042ab2227ca5f
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077879"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146464"
 ---
 # <a name="monitoring-traces-xmla"></a>Surveillance de traces (XMLA)
-  Vous pouvez utiliser la [s’abonner](../xmla/xml-elements-commands/subscribe-element-xmla.md) commande XML for Analysis (XMLA) pour surveiller une trace existante définie sur une instance de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. La commande `Subscribe` retourne les résultats d'une trace sous la forme d'un ensemble de lignes.  
+  Vous pouvez utiliser la [s’abonner](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/subscribe-element-xmla) commande XML for Analysis (XMLA) pour surveiller une trace existante définie sur une instance de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. La commande `Subscribe` retourne les résultats d'une trace sous la forme d'un ensemble de lignes.  
   
 ## <a name="specifying-a-trace"></a>Spécification d'une trace  
- Le [objet](../xmla/xml-elements-properties/object-element-xmla.md) propriété de la `Subscribe` commande doit contenir une référence d’objet à un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance ou une trace sur un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance. Si la propriété `Object` n'est pas spécifiée ou si aucun identificateur de trace n'y est `Object` spécifié, la commande `Subscribe` surveille la trace de session par défaut pour la session explicite spécifiée dans l'en-tête SOAP de la commande.  
+ Le [objet](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla) propriété de la `Subscribe` commande doit contenir une référence d’objet à un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance ou une trace sur un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance. Si la propriété `Object` n'est pas spécifiée ou si aucun identificateur de trace n'y est `Object` spécifié, la commande `Subscribe` surveille la trace de session par défaut pour la session explicite spécifiée dans l'en-tête SOAP de la commande.  
   
 ## <a name="returning-results"></a>Retour de résultats  
- La commande `Subscribe` retourne un ensemble de lignes contenant les événements de trace capturés par la trace spécifiée. Le `Subscribe` commande retourne les résultats de trace jusqu'à ce que la commande est annulée par le [Annuler](../xmla/xml-elements-commands/cancel-element-xmla.md) commande.  
+ La commande `Subscribe` retourne un ensemble de lignes contenant les événements de trace capturés par la trace spécifiée. Le `Subscribe` commande retourne les résultats de trace jusqu'à ce que la commande est annulée par le [Annuler](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/cancel-element-xmla) commande.  
   
  Cet ensemble de lignes se compose des colonnes répertoriées dans le tableau suivant.  
   

@@ -19,12 +19,12 @@ ms.assetid: b83bb3ff-09be-4fda-9d1d-6248e04ffb21
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 428eb8165a89cff4210096e993f3140066a8e759
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4932ca855d753577765cca2f262e1756352dda35
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48062803"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146234"
 ---
 # <a name="managing-connections-and-sessions-xmla"></a>Gestion des connexions et des sessions (XMLA)
   *Conservation de l’état* est une condition pendant laquelle le serveur préserve l’identité et le contexte d’un client entre les appels de méthode. *Abandon de l’état* est une condition pendant laquelle le serveur ne retient pas l’identité et le contexte d’un client après un appel de méthode.  
@@ -37,7 +37,7 @@ ms.locfileid: "48062803"
   
 -   Plusieurs commandes peuvent être exécutées dans le contexte d'une seule session.  
   
--   Prise en charge des transactions dans le contexte XMLA est par le biais des commandes spécifiques au fournisseur envoyées avec la [Execute](../xmla/xml-elements-methods-execute.md) (méthode).  
+-   Prise en charge des transactions dans le contexte XMLA est par le biais des commandes spécifiques au fournisseur envoyées avec la [Execute](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute) (méthode).  
   
  XMLA définit une méthode de prise en charge des sessions dans un environnement Web selon un mode comparable à la méthode employée par le protocole DAV (Distributed Authoring and Versioning) pour implémenter le verrouillage dans un environnement faiblement couplé. Cette implémentation va de pair avec DAV en ce sens que le fournisseur est autorisé à faire expirer les sessions pour divers motifs (par exemple, dépassement de délai ou erreur de connexion). Lorsque les sessions sont prises en charge, les services Web doivent être en mesure de gérer des jeux de commandes interrompus qui doivent être redémarrés.  
   

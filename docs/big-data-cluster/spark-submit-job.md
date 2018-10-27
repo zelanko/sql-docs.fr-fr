@@ -9,19 +9,19 @@ ms.reviewer: jroth
 ms.custom: ''
 ms.topic: conceptual
 ms.date: 10/01/2018
-ms.openlocfilehash: 93ddd7a049bfadd4b2a3ac9ab9db87742d557f3d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0787663b0c2eccfed33bf5c2cc681be4f2ef5edc
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48796026"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50050833"
 ---
 # <a name="submit-spark-job-on-sql-server-big-data-clusters-in-azure-data-studio"></a>Soumettre un travail Spark sur des clusters de données volumineuses de SQL Server dans Azure Data Studio
 
 Un des principaux scénarios consiste à soumettre un travail Spark pour SQL Server 2019 CTP 2.0. La fonctionnalité de soumission de travaux Spark vous permet de soumettre des fichiers Jar ou Py locaux avec des références à un cluster de données volumineux de SQL Server 2019. Il vous permet également d’exécuter des fichiers Jar ou Py, ce qui sont trouvent déjà dans le système de fichiers HDFS. 
 
 ## <a name="prerequisite"></a>Condition préalable 
-Installez les outils de big data pour SQL Server et vous connecter à un cluster Big Data avant d’envoyer le travail Spark. Pour les détails de l’installation, consultez pour créer un lien [déployer Big Data Tools](deploy-big-data-tools.md).
+Installez les outils de big data pour SQL Server et vous connecter à un cluster de données volumineux avant d’envoyer le travail Spark. Pour les détails de l’installation, consultez pour créer un lien [déployer big data Tools](deploy-big-data-tools.md).
 
 ## <a name="open-spark-job-submission-dialog"></a>Ouvrir la boîte de dialogue envoi de travaux Spark
 Il existe plusieurs manières d’ouvrir la boîte de dialogue envoi de travail Spark. Les méthodes incluent le tableau de bord, Menu contextuel dans l’Explorateur d’objets et commande lieu d’accueil.

@@ -1,5 +1,5 @@
 ---
-title: Indicateurs de Performance (KPI) dans les modèles multidimensionnels clés | Documents Microsoft
+title: Indicateurs de Performance (KPI) dans les modèles multidimensionnels clés | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7b7c036b09113711315ada3120538b5117931be7
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: bf1ee397ea32faadc191d90eed11a33861a71e5d
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027559"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147784"
 ---
 # <a name="key-performance-indicators-kpis-in-multidimensional-models"></a>Indicateurs de performance clés (KPI) dans les modèles multidimensionnels
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "34027559"
   
  Dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], un KPI est un ensemble de calculs associés à un groupe de mesures dans un cube qui servent à évaluer les performances de l’entreprise. Généralement, ces calculs sont une combinaison d'expressions MDX (Multidimensional Expressions) ou de membres calculés. Les indicateurs de performance clés contiennent également des métadonnées supplémentaires qui fournissent des informations sur la manière dont les applications clientes doivent afficher les résultats des calculs d'un indicateur de performance clé.  
   
- Un indicateur de performance clé gère des informations à propos d'un ensemble d'objectifs, de la formule réelle de la performance enregistrée dans le cube et de la mesure utilisée pour afficher la tendance et l'état de la performance. AMO est utilisé pour définir les formules et d'autres définitions à propos des valeurs d'un indicateur de performance clé. Une interface de requête, telle qu'ADOMD.NET, est utilisée par l'application cliente pour récupérer et exposer les valeurs KPI à l'utilisateur final. Pour plus d’informations, consultez [Développement avec ADOMD.NET](../../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md).  
+ Un indicateur de performance clé gère des informations à propos d'un ensemble d'objectifs, de la formule réelle de la performance enregistrée dans le cube et de la mesure utilisée pour afficher la tendance et l'état de la performance. AMO est utilisé pour définir les formules et d'autres définitions à propos des valeurs d'un indicateur de performance clé. Une interface de requête, telle qu'ADOMD.NET, est utilisée par l'application cliente pour récupérer et exposer les valeurs KPI à l'utilisateur final. Pour plus d’informations, consultez [Développement avec ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net).  
   
  Un objet <xref:Microsoft.AnalysisServices.Kpi> simple est composé d’informations de base, de l’objectif, de la valeur réelle atteinte, d’une valeur d’état, d’une valeur de tendance et d’un dossier où l’indicateur de performance clé est affiché. Les informations de base comprennent le nom et la description de l'indicateur de performance clé. L'objectif est une expression MDX qui prend la valeur d'un nombre. La valeur réelle est une expression MDX qui prend la valeur d'un nombre. Les valeurs d'état et de tendance sont des expressions MDX dont l'évaluation aboutit à un nombre. Le dossier est un emplacement suggéré pour l'indicateur de performance clé à présenter au client.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "34027559"
 |Terme|Définition|  
 |----------|----------------|  
 |Objectif|Expression numérique MDX ou calcul qui retourne la valeur cible du KPI.|  
-|Value|Expression numérique MDX qui retourne la valeur réelle du KPI.|  
+|Valeur|Expression numérique MDX qui retourne la valeur réelle du KPI.|  
 |État|Expression MDX qui représente l'état du KPI à un moment donné.<br /><br /> L'expression MDX d'état doit retourner une valeur normalisée comprise entre -1 et 1. Les valeurs inférieures ou égales à -1 sont considérées comme « mauvaises » ou « basses ». La valeur zéro (0) est considérée comme « acceptable » ou « moyenne ». Les valeurs supérieures ou égales à 1 sont considérées comme « bonnes » ou « élevées ».<br /><br /> Un nombre illimité de valeurs intermédiaires peut éventuellement être retourné, ces valeurs pouvant être utilisées pour afficher n'importe quel nombre d'états supplémentaires, si l'application cliente les prend en charge.|  
 |Tendance|Expression MDX qui évalue la valeur du KPI dans le temps. La tendance peut correspondre à n'importe quel critère de temps ayant une utilité dans un contexte d'entreprise.<br /><br /> L'expression MDX de tendance permet à un utilisateur professionnel de déterminer si le KPI s'améliore ou se dégrade au fil du temps.|  
 |Indicateur d’état|Élément visuel qui fournit une indication rapide de l'état d'un KPI. L'affichage de l'élément est déterminé par la valeur de l'expression MDX qui évalue l'état.|  
@@ -51,7 +51,7 @@ ms.locfileid: "34027559"
 ## <a name="parent-kpis"></a>KPI parents  
  Une entité peut suivre des mesures économiques différentes à différents niveaux. Par exemple, deux ou trois KPI peuvent être utilisés pour évaluer les performances économiques de l'ensemble de l'entreprise, mais ces KPI étendus à l'ensemble de l'entreprise peuvent être basés sur trois ou quatre autres KPI suivis par les différentes divisions de l'entreprise. En outre, les divisions de l'entreprise peuvent utiliser des statistiques différentes pour calculer un même KPI, le résultat étant cumulé avec le KPI étendu à l'entreprise.  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]permet de définir une relation parent-enfant entre les indicateurs de performance clés. Cette relation parent-enfant permet d'utiliser les résultats du KPI enfant pour calculer les résultats du KPI parent. Les applications clientes peuvent également utiliser cette relation pour afficher de manière approximative les KPI parents et enfants.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] permet de définir une relation parent-enfant entre les KPI. Cette relation parent-enfant permet d'utiliser les résultats du KPI enfant pour calculer les résultats du KPI parent. Les applications clientes peuvent également utiliser cette relation pour afficher de manière approximative les KPI parents et enfants.  
   
 ## <a name="weights"></a>Poids  
  Des poids peuvent également être affectés aux KPI enfants. Les poids permettent à [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] d'ajuster proportionnellement les résultats des KPI enfants lors du calcul du KPI parent.  
