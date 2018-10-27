@@ -12,15 +12,15 @@ ms.assetid: 6077b7e8-cb3e-4480-a5de-bb602cf9d69a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 615e36534923244202a6525f0a4881767ace9e57
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 12ea22b773613fc274af29de1a28ba214a10cce4
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164709"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148428"
 ---
 # <a name="understanding-the-tabular-object-model"></a>Présentation du modèle d'objet tabulaire
-  Un modèle tabulaire est une représentation logique de tables, de relations, de hiérarchies, de perspectives, de mesures, et de performance clés. Cette section présente l'implémentation interne à l'aide d'objets AMO. Consultez [développement avec Analysis Management Objects &#40;AMO&#41; ](../../multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md) si vous n’avez jamais utilisé AMO avant.  
+  Un modèle tabulaire est une représentation logique de tables, de relations, de hiérarchies, de perspectives, de mesures, et de performance clés. Cette section présente l'implémentation interne à l'aide d'objets AMO. Consultez [développement avec Analysis Management Objects &#40;AMO&#41; ](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo) si vous n’avez jamais utilisé AMO avant.  
   
  L'approche ici est hiérarchisée, tous les objets appropriés dans le modèle tabulaire sont logiquement mappés aux objets AMO, et les interactions ou le flux de travail requis sont expliqués. Un exemple de code source pour créer un modèle tabulaire à l'aide d'objets AMO, Objets AMO vers objets tabulaires est disponible dans Codeplex. Remarque importante à propos du code dans l'exemple : le code est fourni uniquement comme un support aux concepts logiques expliqués ici et ne doit pas être utilisé dans un environnement de production, ni à des fins autres que pédagogiques. L'exemple est fourni sans prise en charge ni garantie.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "48164709"
  Consultez [représentation d’indicateur de Performance clé &#40;tabulaire&#41; ](tables-key-performance-indicator-representation.md) pour une explication détaillée sur la façon de créer et manipuler la représentation sous forme de l’indicateur de performance clé.  
   
 ### <a name="partition-representation"></a>Représentation d'une partition  
- À des fins opérationnelles, une table peut être divisée en différents sous-ensembles de lignes qui une fois combinés forment la table. Chacun de ces sous-ensembles est une partition de la table. En termes d’objets AMO, une représentation de partition a une relation de mappage avec <xref:Microsoft.AnalysisServices.Partition> et aucun autre objet AMO principal n’est requis. Il est important de noter que cela ne signifie pas que tous les objets contenus dans l'objet de base de données AMO peuvent être utilisés lors de la modélisation.  
+ À des fins opérationnelles, une table peut être divisée en différents sous-ensembles de lignes qui une fois combinés forment la table. Chacun de ces sous-ensembles est une partition de la table. En termes d'objets AMO, une représentation de partition a une relation de mappage un-à-un avec <xref:Microsoft.AnalysisServices.Partition> et aucun autre objet AMO principal n'est requis. Il est important de noter que cela ne signifie pas que tous les objets contenus dans l'objet de base de données AMO peuvent être utilisés lors de la modélisation.  
   
  Consultez [représentation d’une Partition &#40;tabulaire&#41; ](tables-partition-representation.md) pour une explication détaillée sur la façon de créer et manipuler la représentation sous forme de partition.  
   

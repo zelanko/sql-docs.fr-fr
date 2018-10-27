@@ -15,12 +15,12 @@ ms.assetid: 2b62b05c-00fd-4e60-b77f-f707ba83a19b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a25bcc56bdd0a0f07c0ebaa6e59de0b44979661d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6fb601bdbf190c84401c64f5f469bc6b5b6956ef
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165849"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148264"
 ---
 # <a name="dimensions-in-multidimensional-models"></a>Dimensions dans les modèles multidimensionnels
   Une dimension de base de données est un ensemble d'objets associés, appelés attributs, qui peuvent être utilisés pour fournir des informations sur des données dans un ou plusieurs cubes. Par exemple, les attributs les plus courants dans une dimension de produit sont le nom, la catégorie, la gamme, la taille et le prix du produit. Ces objets sont liés à une ou plusieurs colonnes dans une ou plusieurs tables d'une vue de source de données. Par défaut, ces attributs sont visibles en tant que hiérarchies d'attributs et peuvent être utilisés pour comprendre les données de faits dans un cube. Les attributs peuvent être organisés en hiérarchies définies par l'utilisateur qui fournissent des chemins d'exploration pour aider les utilisateurs lorsqu'ils recherchent des données dans un cube.  
@@ -36,7 +36,7 @@ ms.locfileid: "48165849"
  Lorsque vous créez un cube, vous pouvez également ajouter au cube toute dimension existant déjà dans la base de données. Ces dimensions peuvent avoir été définies antérieurement pour un autre cube ou par l'Assistant Dimension. Une fois qu'une dimension de base de données a été définie, vous pouvez la modifier et la configurer dans le Concepteur de dimensions. Vous pouvez également personnaliser la dimension de cube, dans une certaine mesure, dans le Concepteur de cube.  
   
 > [!NOTE]  
->  Vous pouvez également concevoir et configurer des dimensions, des attributs et des hiérarchies par programme à l'aide de XMLA ou d'objets AMO (Analysis Management Objects). Pour plus d’informations, consultez [Analysis Services Scripting Language &#40;ASSL&#41; référence](../scripting/analysis-services-scripting-language-assl-for-xmla.md) et [développement avec Analysis Management Objects &#40;AMO&#41;](analysis-management-objects/developing-with-analysis-management-objects-amo.md).  
+>  Vous pouvez également concevoir et configurer des dimensions, des attributs et des hiérarchies par programme à l'aide de XMLA ou d'objets AMO (Analysis Management Objects). Pour plus d’informations, consultez [Analysis Services Scripting Language &#40;ASSL&#41; référence](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla) et [développement avec Analysis Management Objects &#40;AMO&#41;](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo).  
   
 ## <a name="in-this-section"></a>Dans cette section  
  Le tableau suivant décrit les rubriques de cette section.  
@@ -47,10 +47,10 @@ ms.locfileid: "48165849"
  [Référence des propriétés d’attribut de dimension](dimension-attribute-properties-reference.md)  
  Explique comment définir, modifier et configurer un attribut de dimension de base de données à l'aide du Concepteur de dimensions.  
   
- [Définir des relations d’attributs](attribute-relationships-define.md)  
+ [Définir des relations d'attributs](attribute-relationships-define.md)  
  Explique comment définir, modifier et configurer une relation d'attribut à l'aide du Concepteur de dimensions.  
   
- [Créer des hiérarchies définies par l’utilisateur](user-defined-hierarchies-create.md)  
+ [Créer des hiérarchies définies par l'utilisateur](user-defined-hierarchies-create.md)  
  Explique comment définir, modifier et configurer une hiérarchie d'attributs de dimension définie par l'utilisateur à l'aide du Concepteur de dimensions.  
   
  [Utiliser l’Assistant Business Intelligence pour améliorer des dimensions](../use-the-business-intelligence-wizard-to-enhance-dimensions.md)  

@@ -11,12 +11,12 @@ ms.assetid: 56283497-624c-45b5-8a0d-036b0e331d22
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 090a7cdb4958dacdaebcdcc0db176991d6bebaa1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a1b899348d947c842d66fa0245b8801ef1788bfb
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142699"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148294"
 ---
 # <a name="autoexists"></a>Autoexists
   La fonctionnalité d’auto-existence, ou *autoexists*, limite l’espace du cube aux cellules qui existent réellement dans le cube, par opposition à celles qui pourraient exister en créant toutes les combinaisons possibles de membres de la hiérarchie d’attribut à partir de la même hiérarchie. En effet, les membres d'une hiérarchie d'attribut ne peuvent coexister avec les membres d'une autre hiérarchie d'attribut au sein de la même dimension. Lorsque deux hiérarchies d'attribut, ou plus, de la même dimension sont utilisées dans une instruction SELECT, Analysis Services évalue les expressions des attributs pour s'assurer que les membres de ces attributs sont correctement limités afin de répondre aux critères de tous les autres attributs.  
@@ -89,7 +89,7 @@ WHERE (Measures.[Internet Sales Amount],
  Chacune des trois requêtes présentées ci-dessus illustre les effets du comportement de l’auto-existence dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
 ## <a name="deep-and-shallow-autoexists"></a>Fonctionnalités Deep Autoexists et Shallow Autoexists  
- Autoexists peut être appliquée en profondeur ou superficiellement aux expressions. `Deep Autoexists` signifie que toutes les expressions seront évaluées pour rencontrer l'espace le plus profond possible après l'application des expressions de découpage, des expressions de sous-sélection dans l'axe, etc. `Shallow Autoexists` signifie qu’évaluer les expressions externes avant l’expression actuelle et ces résultats sont transmis à l’expression actuelle. La fonctionnalité Deep Autoexists est paramétrée par défaut.  
+ Autoexists peut être appliquée en profondeur ou superficiellement aux expressions. `Deep Autoexists` signifie que toutes les expressions seront évaluées pour rencontrer l'espace le plus profond possible après l'application des expressions de découpage, des expressions de sous-sélection dans l'axe, etc. `Shallow Autoexists` permet d'évaluer les expressions externes avant l'expression actuelle et de passer ces résultats à l'expression actuelle. La fonctionnalité Deep Autoexists est paramétrée par défaut.  
   
  Le scénario et les exemples suivants illustrent les différents types de fonctionnalités Autoexists. Dans les exemples suivants, nous allons créer deux jeux : l'un sous forme d'expression calculée et l'autre sous forme d'expression constante.  
   
@@ -309,15 +309,15 @@ WHERE (Measures.[Internet Sales Amount],
 |**Mountain-100**|**8 568 958,27 $**|**139 393,27 $**|**1.63**|  
 |**HL Mountain Frame**|**3 365 069,27 $**|**$174.11**|**0.01**|  
   
- Comportement d’Autoexists peut être modifié à l’aide de la fonctionnalité AUTOEXISTS = [1 | 2 | 3] le paramètre dans la chaîne de connexion ; consultez [propriétés XMLA prises en charge &#40;XMLA&#41; ](../../xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) et <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> pour l’utilisation des paramètres.  
+ Comportement d’Autoexists peut être modifié à l’aide de la fonctionnalité AUTOEXISTS = [1 | 2 | 3] le paramètre dans la chaîne de connexion ; consultez [propriétés XMLA prises en charge &#40;XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) et <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> pour l’utilisation des paramètres.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Concepts clés pour MDX &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
+ [Concepts clés de MDX &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
  [Espace du cube](cube-space.md)   
  [Tuples](tuples.md)   
- [Utilisation de membres, Tuples et jeux &#40;MDX&#41;](working-with-members-tuples-and-sets-mdx.md)   
- [Les valeurs visibles et Non affichées](visual-totals-and-non-visual-totals.md)   
- [Référence du langage MDX &#40;MDX&#41;](/sql/mdx/mdx-language-reference-mdx)   
- [Expressions multidimensionnelles &#40;MDX&#41; référence](/sql/mdx/multidimensional-expressions-mdx-reference)  
+ [Utilisation de membres, de tuples et de jeux &#40;MDX&#41;](working-with-members-tuples-and-sets-mdx.md)   
+ [Valeurs totales affichées et non affichées](visual-totals-and-non-visual-totals.md)   
+ [Guide de référence du langage MDX &#40;MDX&#41;](/sql/mdx/mdx-language-reference-mdx)   
+ [Référence MDX &#40;Multidimensional Expressions&#41;](/sql/mdx/multidimensional-expressions-mdx-reference)  
   
   

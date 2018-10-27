@@ -15,12 +15,12 @@ ms.assetid: b74c6957-3f64-4e09-aa09-d06ee93f82fa
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 247be53e3811e721d05733320372caf7f1350032
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 71d89f9e8e80aa611d9c8077cf75f7f42af855da
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225019"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148224"
 ---
 # <a name="adomdnet-server-functionality"></a>Fonctionnalités serveur ADOMD.NET
   Tous les objets serveur ADOMD.NET fournissent un accès en lecture seule aux données et aux métadonnées présentes sur le serveur. Pour récupérer les données et les métadonnées, vous devez utiliser le modèle d'objet serveur ADOMD.NET, car le modèle d'objet serveur ne prend pas en charge les ensembles de lignes de schéma.  
@@ -63,6 +63,6 @@ CALL FinalSalesNumbers()
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Programmation du serveur ADOMD.NET](adomd-net-server-programming.md)  
+ [Programmation du serveur ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/adomd-net-server-programming)  
   
   

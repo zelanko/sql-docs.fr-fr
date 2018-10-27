@@ -11,12 +11,12 @@ ms.assetid: 6ae74a8b-0025-450d-94a5-4e601831d420
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 437cbd485f07a5d6ee8b367e209b18b09507a88b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 51d3206e4df57c42c0245e13757cdcac1686a313
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178469"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148404"
 ---
 # <a name="tabular-model-data-access"></a>Accès aux données de modèle tabulaire
   Les bases de données model tabulaires dans Analysis Services sont accessibles par la plupart des mêmes clients, interfaces et langues que vous utilisez pour récupérer les données ou les métadonnées d'un modèle multidimensionnel. Pour plus d’informations, consultez [Accès aux données de modèles multidimensionnels &#40;Analysis Services - Données multidimensionnelles &#41;](../multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md).  
@@ -24,7 +24,7 @@ ms.locfileid: "48178469"
  Cette rubrique décrit les clients, les langages de requête et les interfaces de programmation qui fonctionnent avec des modèles tabulaires.  
   
 ## <a name="clients"></a>Clients  
- Les applications clientes Microsoft suivantes prennent en charge les connexions natives aux bases de données model tabulaires de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
+ Les applications clientes Microsoft suivantes prennent en charge les connexions natives aux bases de données model tabulaires de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
 ### <a name="excel"></a>Excel  
  Vous pouvez vous connecter aux bases de données model tabulaires Excel à l'aide des fonctionnalités de visualisation et d'analyse des données dans Excel pour travailler avec vos données. Pour accéder aux données, vous définissez une connexion de données Analysis Services, vous spécifiez un serveur qui s'exécute en mode serveur tabulaire, puis vous choisissez la base de données que vous souhaitez utiliser. Pour plus d'informations, consultez [Se connecter ou importer des données à partir de SQL Server Analysis Services](http://go.microsoft.com/fwlink/?linkID=215150).  
@@ -36,12 +36,12 @@ ms.locfileid: "48178469"
   
  Le client [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] détermine la structure du modèle spécifié en envoyant une requête à la source de données spécifiée, qui retourne un schéma pouvant être utilisé par le client pour créer des requêtes sur le modèle en tant que source de données et pour effectuer des opérations sur les données. Les opérations qui suivent dans l'interface utilisateur de [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] pour filtrer les données, effectuer des calculs ou des agrégations et afficher les données associées sont contrôlées par le client et ne peuvent pas être manipulées par programme.  
   
- Les requêtes qui sont envoyées par le client [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] au modèle sont émises en tant qu'instructions DAX, que vous pouvez surveiller en définissant une trace sur le modèle.  Le client envoie également une requête au serveur pour la définition de schéma initiale, qui est présentée en langage CSDL (Conceptual Schema Definition Language). Pour plus d’informations, consultez [CSDL Annotations for Business Intelligence &#40;CSDLBI&#41;](../tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md)  
+ Les requêtes qui sont envoyées par le client [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] au modèle sont émises en tant qu'instructions DAX, que vous pouvez surveiller en définissant une trace sur le modèle.  Le client envoie également une requête au serveur pour la définition de schéma initiale, qui est présentée en langage CSDL (Conceptual Schema Definition Language). Pour plus d’informations, consultez [CSDL Annotations for Business Intelligence &#40;CSDLBI&#41;](https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi)  
   
 ### <a name="sql-server-management-studio"></a>SQL Server Management Studio  
  Vous pouvez utiliser [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pour gérer les instances qui hébergent des modèles tabulaires et pour interroger les métadonnées et les données qu'elles contiennent. Vous pouvez traiter des modèles ou les objets d'un modèle, créer et gérer des partitions et définir la sécurité qui peut être utilisée pour gérer l'accès aux données. Pour plus d'informations, consultez les rubriques suivantes :  
   
--   [Déterminer le mode serveur d’une instance Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
+-   [Déterminer le mode serveur d'une instance Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
 -   [Se connecter à Analysis Services](../instances/connect-to-analysis-services.md)  
   
@@ -53,7 +53,7 @@ ms.locfileid: "48178469"
   
 -   Vous ne pouvez pas modifier le contexte de base de données de la fenêtre Requête XMLA après avoir ouvert la fenêtre **Requête** . Par conséquent, si vous devez envoyer une requête à une autre base de données ou à une autre instance, vous devez ouvrir cette base de données ou cette instance à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] et ouvrir une nouvelle fenêtre **Requête XMLA** dans ce contexte.  
   
- Vous pouvez créer des traces sur un modèle tabulaire [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] comme sur une solution multidimensionnelle. Dans cette version, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fournit de nombreux nouveaux événements qui peuvent être utilisés pour suivre l'utilisation de la mémoire, les opérations de requête et de traitement et l'utilisation de fichiers. Pour plus d’informations, consultez [Événements de trace Analysis Services](../trace-events/analysis-services-trace-events.md).  
+ Vous pouvez créer des traces sur un modèle tabulaire [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] comme sur une solution multidimensionnelle. Dans cette version, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fournit de nombreux nouveaux événements qui peuvent être utilisés pour suivre l'utilisation de la mémoire, les opérations de requête et de traitement et l'utilisation de fichiers. Pour plus d’informations, consultez [Événements de trace Analysis Services](https://docs.microsoft.com/bi-reference/trace-events/analysis-services-trace-events).  
   
 > [!WARNING]  
 >  Si vous faites le suivi d'une base de données de modèle tabulaire, vous pouvez voir certains événements catégorisés en tant que requêtes DMX. Toutefois, l'exploration de données n'est pas prise en charge sur les données de modèle tabulaire et les requêtes DMX effectuées sur la base de données sont limitées aux instructions SELECT sur les métadonnées du modèle. Les événements sont catégorisés en tant que DMX uniquement parce que la même infrastructure d'analyseur est utilisée pour MDX.  
@@ -74,7 +74,7 @@ ms.locfileid: "48178469"
 ### <a name="csdl"></a>CSDL  
  Le langage CSDL (Conceptual Schéma Definition Language) n'est pas un langage de requête en soi, mais il peut être utilisé pour récupérer des informations sur le modèle et les métadonnées du modèle, qui peuvent être utilisés plus tard pour créer des rapports ou pour créer des requêtes sur le modèle.  
   
- Pour plus d’informations sur la façon dont le langage CSDL est utilisé dans les modèles tabulaires, consultez [CSDL Annotations for Business Intelligence &#40;CSDLBI&#41;](../tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md).  
+ Pour plus d’informations sur la façon dont le langage CSDL est utilisé dans les modèles tabulaires, consultez [CSDL Annotations for Business Intelligence &#40;CSDLBI&#41;](https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi).  
   
 ## <a name="programmatic-interfaces"></a>Interfaces de programmation  
  Les interfaces principales utilisées pour interagir avec des modèles tabulaires d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sont les ensembles de lignes de schéma, XMLA, ainsi que les clients de requête et les outils de requête fournis par [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] et [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
@@ -90,7 +90,7 @@ ms.locfileid: "48178469"
   
  Vous pouvez également récupérer les données directement à partir d'une instance d'Analysis Services en format XML. Vous pouvez récupérer le schéma du modèle tabulaire à l'aide de l'ensemble de lignes DISCOVER_CSDL_METADATA ou vous pouvez utiliser une commande EXECUTE ou DISCOVER avec des éléments ASSL, des objets ou des propriétés existants. Pour plus d'informations, consultez les ressources ci-dessous.  
   
--   [Annotations CSDL pour Business Intelligence &#40;CSDLBI&#41;](../tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md)  
+-   [Annotations CSDL pour Business Intelligence &#40;CSDLBI&#41;](https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi)  
   
 ### <a name="manipulate-analysis-services-objects"></a>Manipulation des objets Analysis Services  
  Vous pouvez créer, modifier, supprimer, et traiter des modèles tabulaires et les objets qu'ils contiennent, notamment des tables, des colonnes, des perspectives, des mesures et des partitions, à l'aide des commandes XMLA ou en utilisant AMO. AMO et XMLA ont été mis à jour pour prendre en charge les propriétés supplémentaires utilisées dans les modèles tabulaires pour une création de rapports et une modélisation améliorées.  
@@ -106,11 +106,11 @@ ms.locfileid: "48178469"
 ### <a name="schema-rowsets"></a>Ensembles de lignes de schéma  
  Les applications clientes peuvent utiliser les ensembles de lignes de schéma pour examiner les métadonnées des modèles tabulaires et récupérer les informations de prise en charge et de surveillance du serveur [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Dans cette version de SQL Server, de nouveaux ensembles de lignes de schéma ont été ajoutés et des ensembles de lignes de schéma existants ont été étendus pour prendre en charge des fonctionnalités relatives aux modèles tabulaires et pour améliorer la surveillance et l'analyse des performances sur [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
--   [DISCOVER_CALC_DEPENDENCY, ensemble de lignes](../schema-rowsets/xml/discover-calc-dependency-rowset.md)  
+-   [DISCOVER_CALC_DEPENDENCY, ensemble de lignes](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-calc-dependency-rowset)  
   
      Nouvel ensemble de lignes de schéma pour suivre les dépendances entre les colonnes et les références d'un modèle tabulaire  
   
--   [DISCOVER_CSDL_METADATA, ensemble de lignes](../schema-rowsets/xml/discover-csdl-metadata-rowset.md)  
+-   [Ensemble de lignes DISCOVER_CSDL_METADATA](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-csdl-metadata-rowset)  
   
      Nouvel ensemble de lignes de schéma pour obtenir la représentation CSDL d'un modèle tabulaire  
   
@@ -118,13 +118,13 @@ ms.locfileid: "48178469"
   
      Nouvel ensemble de lignes de schéma pour surveiller les événements étendus SQL Server. Pour plus d’informations, consultez [utilisez SQL Server Extended Events &#40;XEvents&#41; pour surveiller Analysis Services](../instances/monitor-analysis-services-with-sql-server-extended-events.md).  
   
--   [DISCOVER_TRACES, ensemble de lignes](../schema-rowsets/xml/discover-traces-rowset.md)  
+-   [DISCOVER_TRACES, ensemble de lignes](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-traces-rowset)  
   
      La nouvelle colonne `Type` vous permet de filtrer les traces par catégorie. Pour plus d’informations, consultez [Créer des traces de SQL Server Profiler pour la relecture &#40;Analysis Services&#41;](../instances/create-profiler-traces-for-replay-analysis-services.md).  
   
--   [MDSCHEMA_HIERARCHIES, ensemble de lignes](../schema-rowsets/ole-db-olap/mdschema-hierarchies-rowset.md)  
+-   [MDSCHEMA_HIERARCHIES, ensemble de lignes](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-hierarchies-rowset)  
   
-     Nouvelle `STRUCTURE_TYPE` énumération prend en charge l’identification des hiérarchies définies par l’utilisateur créées dans les modèles tabulaires. Pour plus d’informations, consultez [Hiérarchies &#40;SSAS Tabulaire&#41;](hierarchies-ssas-tabular.md).  
+     La nouvelle énumération `STRUCTURE_TYPE` prend en charge l'identification des hiérarchies définies par l'utilisateur créées dans les modèles tabulaires. Pour plus d’informations, consultez [Hiérarchies &#40;SSAS Tabulaire&#41;](hierarchies-ssas-tabular.md).  
   
  Il n'y a aucune mise à jour apportée à OLE DB pour les ensembles de lignes de schéma d'exploration de données dans cette version.  
   

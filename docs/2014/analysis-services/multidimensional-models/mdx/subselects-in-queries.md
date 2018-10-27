@@ -11,12 +11,12 @@ ms.assetid: 9e361798-688e-4b11-9eef-31fc793e8ba4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9e0c2204aeb8c428d558b8bfe31f29c19ba6d773
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c2ca1078bbc0d70ca36ad97e3b2f4aa69cd7d170
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48212089"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148454"
 ---
 # <a name="subselects-in-queries"></a>Instructions de sous-sélection dans les requêtes
   Les expressions d'instruction de sous-sélection sont des expressions SELECT imbriquées utilisées pour restreindre l'espace du cube à partir duquel SELECT externe est évalué. Les instructions de sous-sélection vous permettent de définir un nouvel espace sur lequel tous les calculs sont évalués.  
@@ -350,6 +350,6 @@ SELECT [Sales Territory].[Sales Territory Region].MEMBERS on 0
   
 -   La clause HAVING n’est pas autorisée dans une clause d’axe ; utilisez à la place une expression de fonction [Filter &#40;MDX&#41;](/sql/mdx/filter-mdx).  
   
--   Par défaut les membres calculés ne sont pas autorisés dans les instructions de sous-sélection ; Toutefois, cette restriction peut être modifiée, dans une base par session, en affectant une valeur pour le `SubQueries` propriété de chaîne de connexion dans <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> ou `DBPROP_MSMD_SUBQUERIES` propriété dans [propriétés XMLA prises en charge &#40;XMLA&#41; ](../../xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md). Consultez [des membres calculés dans les sous-sélections et les sous-cubes](calculated-members-in-subselects-and-subcubes.md) pour une explication détaillée du comportement des membres calculés en fonction des valeurs de `SubQueries` ou `DBPROP_MSMD_SUBQUERIES`.  
+-   Par défaut les membres calculés ne sont pas autorisés dans les instructions de sous-sélection ; Toutefois, cette restriction peut être modifiée, dans une base par session, en affectant une valeur pour le `SubQueries` propriété de chaîne de connexion dans <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> ou `DBPROP_MSMD_SUBQUERIES` propriété dans [propriétés XMLA prises en charge &#40;XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties). Consultez [des membres calculés dans les sous-sélections et les sous-cubes](calculated-members-in-subselects-and-subcubes.md) pour une explication détaillée du comportement des membres calculés en fonction des valeurs de `SubQueries` ou `DBPROP_MSMD_SUBQUERIES`.  
   
   

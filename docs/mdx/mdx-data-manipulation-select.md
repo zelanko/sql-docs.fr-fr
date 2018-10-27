@@ -1,5 +1,5 @@
 ---
-title: Instruction SELECT (MDX) | Documents Microsoft
+title: Instruction SELECT (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 55a4e841a181e788892c293ec9c39a1a53a0459e
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: f803ea892166819cee846a7dc97ef435802e9ae3
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741888"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148414"
 ---
 # <a name="mdx-data-manipulation---select"></a>Manipulation de données MDX - SELECT
 
@@ -89,7 +89,7 @@ FROM
  *Set_Expression*  
  Une expression MDX (Multidimensional Expressions) valide qui retourne un jeu.  
   
- *Entier*  
+ *Integer*  
  Entier entre 0 et 127.  
   
  *Cube_Name*  
@@ -117,7 +117,7 @@ FROM
   
  L'option NON VISUAL de l'instruction de sous-sélection vous permet de filtrer les membres tout en conservant les totaux réels au lieu des totaux filtrés. Cela vous permet de lancer une requête pour les dix meilleures ventes (personnes/produits/régions) et d'obtenir le total réel des ventes pour tous les membres faisant l'objet de la requête, au lieu de la valeur totale des ventes pour les dix meilleures ventes renvoyées. Pour plus d'informations, consultez les exemples ci-après.  
   
- Les membres calculés peuvent être inclus dans \<clause d’axe de requête SELECT > chaque fois que la connexion a été ouvert à l’aide du paramètre de chaîne de connexion *sous-requêtes = 1*; consultez [pris en charge les propriétés XMLA &#40; XMLA&#41; ](../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) et <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> pour l’utilisation des paramètres. Voici un exemple concernant les membres calculés dans les sous-sélections.  
+ Les membres calculés peuvent être inclus dans \<clause d’axe de requête SELECT > chaque fois que la connexion a été ouverte à l’aide du paramètre de chaîne de connexion *sous-requêtes = 1*; consultez [propriétés XMLA prises en charge &#40; XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) et <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> pour l’utilisation des paramètres. Voici un exemple concernant les membres calculés dans les sous-sélections.  
   
 ## <a name="autoexists"></a>Autoexists  
  Lorsque deux attributs, ou plus, de la dimension sont utilisés dans une instruction SELECT, Analysis Services évalue les expressions des attributs pour s'assurer que les membres de ces attributs sont correctement limités afin de répondre aux critères de tous les autres attributs. Supposons, par exemple, que vous utilisez des attributs de la dimension de Geography. Si vous avez une expression qui retourne tous les membres de l'attribut City et une autre expression qui limite les membres de l'attribut Country à tous les pays d'Europe, il en résultera une limitation des membres de City aux seules villes qui appartiennent à des pays d'Europe. Cette caractéristique d'Analysis Services, appelée Autoexists, s'applique uniquement à des attributs dans la même dimension. En effet, elle tente d'empêcher que des enregistrements de la dimension exclus d'une expression d'attribut soient exclus par les autres expressions d'attributs. La fonctionnalité Autoexists peut également être interprétée comme l'intersection obtenue entre les différentes expressions d'attributs sur les enregistrements de dimension. Observez les exemples ci-dessous :  
@@ -340,10 +340,10 @@ FROM
 |**Mountain-100**|**8 568 958,27 $**|**139 393,27 $**|**1.63**|  
 |**HL Mountain Frame**|**3 365 069,27 $**|**$174.11**|**0.01**|  
   
- Comportement d’Autoexists peut être modifié à l’aide de la fonctionnalité AUTOEXISTS = [1 | 2 | paramètre 3] dans la chaîne de connexion ; consultez [pris en charge les propriétés XMLA &#40;XMLA&#41; ](../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) et <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> pour l’utilisation des paramètres.  
+ Comportement d’Autoexists peut être modifié à l’aide de la fonctionnalité AUTOEXISTS = [1 | 2 | 3] le paramètre dans la chaîne de connexion ; consultez [propriétés XMLA prises en charge &#40;XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) et <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> pour l’utilisation des paramètres.  
   
 ## <a name="examples"></a>Exemples  
- L’exemple suivant retourne la somme de la `Measures.[Order Quantity]` membre, agrégé sur les huit premiers mois de l’année civile 2003 qui sont contenus dans le `Date` dimension, à partir de la **Adventure Works** cube.  
+ L’exemple suivant retourne la somme de la `Measures.[Order Quantity]` membre, agrégé sur les huit premiers mois de l’année civile 2003 qui figurent dans le `Date` dimension, à partir de la **Adventure Works** cube.  
   
 ```  
 WITH MEMBER [Date].[Calendar].[First8Months2003] AS  
@@ -362,7 +362,7 @@ WHERE
     [Measures].[Order Quantity]  
 ```  
   
- Pour comprendre **NON VISUAL** l’exemple suivant est une requête sur [Adventure Works] pour obtenir les chiffres [Reseller Sales Amount] dans une table où les catégories de produits sont les colonnes et les types d’entreprise reseller sont les lignes. Notez que les totaux sont fournis pour les produits et pour les revendeurs.  
+ Pour comprendre **NON VISUAL** l’exemple suivant est une requête sur [Adventure Works] pour obtenir les chiffres [Reseller Sales Amount] dans une table où les catégories de produits sont les colonnes et les types d’entreprise de revendeurs sont les lignes. Notez que les totaux sont fournis pour les produits et pour les revendeurs.  
   
  L'instruction SELECT suivante :  
   
@@ -464,8 +464,8 @@ WHERE
 |80 450 596,98 $|$79,980,114.38|$470,482.60|0.58%|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Concepts clés pour MDX &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
- [Les instructions de Manipulation de données MDX &#40;MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)   
+ [Concepts clés de MDX &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
+ [Instructions de Manipulation de données MDX &#40;MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)   
  [Restriction de la requête avec les Axes de requête et segment &#40;MDX&#41;](~/analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-restricting-the-query.md)  
   
   

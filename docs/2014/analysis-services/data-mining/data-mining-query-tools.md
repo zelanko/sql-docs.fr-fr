@@ -19,17 +19,17 @@ ms.assetid: a8952427-fd8c-4300-8f62-25f57ac1be0c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0baf445580017ba976d788c402e81aa06cbb2643
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8b5d5ab4c6b62dd9afd4ac922b0604c6ffdbd075
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48110529"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148234"
 ---
 # <a name="data-mining-query-interfaces"></a>Interface de requête d'exploration de données
   Les requêtes d'exploration de données sont basées sur le langage DMX (Data Mining Extensions). Vous utilisez DMX pour toutes les tâches de prédiction et de modélisation, notamment la classification, l'évaluation des risques, la génération de recommandations et la régression linéaire. Vous pouvez également récupérer les modèles et les statistiques générés lorsque vous avez traité le modèle.  
   
- La syntaxe d'une requête de prédiction utilisant DMX est semblable à la syntaxe d'une requête en langage [!INCLUDE[tsql](../../includes/tsql-md.md)]. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] et [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] fournissent des outils qui vous permettent de générer des requêtes de prédiction DMX.  
+ La syntaxe d'une requête de prédiction utilisant DMX est semblable à la syntaxe d'une requête en langage [!INCLUDE[tsql](../../includes/tsql-md.md)]. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] et [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] fournissent des outils qui vous permettent de générer des requêtes de prédiction DMX.  
   
  Cette rubrique décrit les interfaces que vous pouvez utiliser pour créer et exécuter des requêtes d'exploration de données à l'aide de DMX.  
   
@@ -87,16 +87,16 @@ ms.locfileid: "48110529"
   
  Toutefois, XMLA constitue le format de message sous-jacent pour toutes les interactions avec un serveur Analysis Service. Dans un message XMLA, les requêtes sont représentées différemment selon que vous envoyez une requête de prédiction basée sur DMX, une requête de contenu ou une requête qui récupère les métadonnées du modèle à l'aide des ensembles de lignes de schéma d'exploration de données.  
   
--   Le texte des **requêtes de prédiction** (et de toutes les autres instructions DMX) est envoyé au format XMLA à l’aide de la [méthode Execute &#40;XMLA&#41;](../xmla/xml-elements-methods-execute.md), avec la requête DMX placée en tant que texte dans [l’élément Statement &#40;XMLA&#41;](../xmla/xml-elements-commands/statement-element-xmla.md) de [l’élément Command &#40;XMLA&#41;](../xmla/xml-elements-properties/command-element-xmla.md).  
+-   Le texte des **requêtes de prédiction** (et de toutes les autres instructions DMX) est envoyé au format XMLA à l’aide de la [méthode Execute &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute), avec la requête DMX placée en tant que texte dans [l’élément Statement &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/statement-element-xmla) de [l’élément Command &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/command-element-xmla).  
   
--   Pour récupérer le **modèle de contenu** et les **métadonnées de modèle**, telles que le nombre de clusters, les attributs utilisés dans les arbres de décision, la date à laquelle le modèle a été traité pour la dernière fois et les paramètres d’algorithme utilisés pendant la création du modèle, vous pouvez utiliser la [méthode Discover &#40;XMLA&#41;](../xmla/xml-elements-methods-discover.md) et spécifier l’un des ensembles de lignes de schéma d’exploration de données dans l’en-tête de [l’élément RequestType &#40;XMLA&#41;](../xmla/xml-elements-properties/type-element-xmla.md). Pour limiter la portée de la requête, entrez les critères en tant que restrictions dans [l’élément RestrictionList &#40;XMLA&#41;](../xmla/xml-elements-properties/restrictionlist-element-xmla.md).  
+-   Pour récupérer le **modèle de contenu** et les **métadonnées de modèle**, telles que le nombre de clusters, les attributs utilisés dans les arbres de décision, la date à laquelle le modèle a été traité pour la dernière fois et les paramètres d’algorithme utilisés pendant la création du modèle, vous pouvez utiliser la [méthode Discover &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-discover) et spécifier l’un des ensembles de lignes de schéma d’exploration de données dans l’en-tête de [l’élément RequestType &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/type-element-xmla). Pour limiter la portée de la requête, entrez les critères en tant que restrictions dans [l’élément RestrictionList &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/restrictionlist-element-xmla).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Data Mining Extensions &#40;DMX&#41; référence](/sql/dmx/data-mining-extensions-dmx-reference)   
+ [Guide de référence du langage DMX &#40;Data Mining Extensions&#41;](/sql/dmx/data-mining-extensions-dmx-reference)   
  [Solutions d’exploration de données](data-mining-solutions.md)   
- [Présentation de l’instruction DMX Select](/sql/dmx/understanding-the-dmx-select-statement)   
+ [Présentation de l'instruction DMX Select](/sql/dmx/understanding-the-dmx-select-statement)   
  [Structure et utilisation des requêtes de prédiction DMX](/sql/dmx/structure-and-usage-of-dmx-prediction-queries)   
- [Créer une requête de prédiction à l’aide du Générateur de requêtes de prédiction](create-a-prediction-query-using-the-prediction-query-builder.md)   
+ [Créer une requête de prédiction à l'aide du Générateur de requêtes de prédiction](create-a-prediction-query-using-the-prediction-query-builder.md)   
  [Créer une requête DMX dans SQL Server Management Studio](create-a-dmx-query-in-sql-server-management-studio.md)  
   
   
