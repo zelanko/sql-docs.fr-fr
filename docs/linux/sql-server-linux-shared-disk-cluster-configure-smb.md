@@ -22,12 +22,12 @@ ms.locfileid: "47661937"
 
 Cet article explique comment configurer le stockage SMB pour une instance de cluster de basculement (FCI) sur Linux. 
  
-Dans le monde non Windows, SMB est souvent appelée afin de partager en tant qu’un fichier système CIFS (Common Internet) et implémenté par le biais de Samba. Dans le monde de Windows, l’accès à un partage SMB est effectuée de cette façon : \\nomserveur\nompartage. Pour les installations de SQL Server basée sur Linux, le partage SMB doit être monté en tant que dossier.
+Dans le monde non Windows, SMB est souvent référencé par le système CIFS (Common Internet File System) et implémenté par le biais de Samba. Dans le monde de Windows, l’accès à un partage SMB est effectuée de cette façon : \\\nomserveur\nompartage. Pour les installations de SQL Server basée sur Linux, le partage SMB doit être monté en tant que dossier.
 
 ## <a name="important-source-and-server-information"></a>Informations importantes sur la source et le serveur
 
 Voici quelques conseils et les notes relatives à l’aide de SMB :
-- Le partage SMB peut être sur Windows, Linux, ou même à partir d’une appliance en tant que long car il est à l’aide de SMB 3.0 ou version ultérieure. Pour plus d’informations sur Samba et SMB 3.0, consultez [SMB 3.0](https://wiki.samba.org/index.php/Samba3/SMB2#SMB_3.0) pour voir si votre implémentation Samba est compatible avec SMB 3.0.
+- Le partage SMB peut se trouver sur Windows, Linux, ou même sur une appliance s'il propose SMB 3.0 ou version ultérieure. Pour plus d’informations sur Samba et SMB 3.0, consultez [SMB 3.0](https://wiki.samba.org/index.php/Samba3/SMB2#SMB_3.0) pour voir si votre implémentation Samba est compatible avec SMB 3.0.
 - Le partage SMB doit être hautement disponible.
 - La sécurité doit être définie correctement sur le partage SMB. Voici un exemple de /etc/samba/smb.conf, où SQLData1 est le nom du partage.
 
@@ -43,7 +43,7 @@ Voici quelques conseils et les notes relatives à l’aide de SMB :
     sudo id mssql
     ```
     
-    Notez l’uid, gid et des groupes. 
+    Notez l’uid, le gid et les groupes. 
 
 3. Exécutez `sudo smbclient -L //NameOrIP/ShareName -U User`.
 
@@ -89,9 +89,9 @@ Voici quelques conseils et les notes relatives à l’aide de SMB :
     cp /var/opt/mssql/data/* <TempDir>
     ```
 
-    \<TempDir > est le nom du dossier à partir de l’étape précédente.
+    \<TempDir > est le nom du dossier défini à l’étape précédente.
     
-   *    Vérifiez que les fichiers se trouvent dans le répertoire.
+   *    Vérifiez que les fichiers se trouvent bien dans le répertoire.
 
     ```bash
     ls <TempDir>
@@ -111,7 +111,7 @@ Voici quelques conseils et les notes relatives à l’aide de SMB :
     ls /var/opt/mssql/data
     ```
  
-   *    Tapez exit pour revenir à l’utilisateur racine.
+   *    Tapez exit pour revenir à l’utilisateur "root".
 
    *    Montez le partage SMB dans le dossier de données SQL Server. Vous ne recevrez pas d’accusé de réception en cas de réussite. Cet exemple montre la syntaxe pour la connexion à un partage basée sur Windows Server SMB 3.0.
 
@@ -119,13 +119,13 @@ Voici quelques conseils et les notes relatives à l’aide de SMB :
     Mount -t cifs //<ServerName>/<ShareName> /var/opt/mssql/data -o vers=3.0,username=<UserName>,password=<Password>,domain=<domain>,uid=<mssqlUID>,gid=<mssqlGID>,file_mode=0777,dir_mode=0777
     ```
 
-    \<ServerName > est le nom du serveur avec le partage SMB
+    \<ServerName > est le nom du serveur contenant le partage SMB
     
     \<Nom de partage > est le nom du partage
 
     \<Nom d’utilisateur > est le nom de l’utilisateur pour accéder au partage
 
-    \<Mot de passe > est le mot de passe pour l’utilisateur
+    \<Mot de passe > est le mot de passe de l’utilisateur
 
     \<domaine > est le nom d’Active Directory
 
@@ -133,7 +133,7 @@ Voici quelques conseils et les notes relatives à l’aide de SMB :
  
     \<mssqlGID > est le GID de l’utilisateur mssql
  
-   *    Vérifiez que le montage a réussi en émettant une commande mount sans commutateurs.
+   *    Vérifiez que le montage a réussi en lançant la commande mount sans paramètres.
 
     ```bash
     mount
@@ -172,7 +172,7 @@ Voici quelques conseils et les notes relatives à l’aide de SMB :
 
     ![10_testcreatedb][2] 
   
-   *    Arrêtez SQL Server et vérifiez qu’il est arrêté. Si vous vous apprêtez à l’ajout ou de test d’autres disques, n’arrêtez pas SQL Server jusqu'à ce que ceux sont ajoutés et testés.
+   *    Arrêtez SQL Server et vérifiez qu’il soit bien arrêté. Si vous vous apprêtez à l’ajout ou le test d’autres disques, n’arrêtez pas SQL Server jusqu'à ce que ceux soient ajoutés et testés.
 
     ```bash
     sudo systemctl stop mssql-server
@@ -217,7 +217,7 @@ Voici quelques conseils et les notes relatives à l’aide de SMB :
     Mount -t cifs //<ServerName>/<ShareName> <FolderName> -o vers=3.0,username=<UserName>,password=<Password>,uid=<mssqlUID>,gid=<mssqlGID>,file_mode=0777,dir_mode=0777
     ```
 
-    \<ServerName > est le nom du serveur avec le partage SMB
+    \<ServerName > est le nom du serveur contenant le partage SMB
 
     \<Nom de partage > est le nom du partage
 
@@ -225,17 +225,17 @@ Voici quelques conseils et les notes relatives à l’aide de SMB :
 
     \<Nom d’utilisateur > est le nom de l’utilisateur pour accéder au partage
 
-    \<Mot de passe > est le mot de passe pour l’utilisateur
+    \<Mot de passe > est le mot de passe de l’utilisateur
 
     \<mssqlUID > est l’UID de l’utilisateur mssql
 
     \<mssqlGID > est le GID de l’utilisateur mssql.
  
-   * Vérifiez que le montage a réussi en émettant une commande mount sans commutateurs.
+   * Vérifiez que le montage a réussi en émettant une commande mount sans paramètres.
  
    * Tapez exit pour ne plus plus être super utilisateur.
 
-   * Pour tester, créez une base de données dans ce dossier. L’exemple suivant utilise sqlcmd pour créer une base de données, changer le contexte vers elle, vérifiez que l’option les fichiers existent au niveau du système d’exploitation, puis supprime l’emplacement temporaire. Vous pouvez utiliser SSMS.
+   * Pour tester, créez une base de données dans ce dossier. L’exemple suivant utilise sqlcmd pour créer une base de données, changer le contexte vers cette base, et vérifier que les fichiers existent bien au niveau du système d’exploitation, puis supprime l’emplacement temporaire. Vous pouvez aussi utiliser SSMS.
  
    * Démonter le partage 
 
