@@ -13,12 +13,12 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5a8f0b9a18627da1e7d407b396686cb756ca5a4b
-ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
+ms.openlocfilehash: 75263ad68af90f0dfd8035cc943a194c344f90fa
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48852107"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461030"
 ---
 # <a name="tutorial-getting-started-with-always-encrypted-with-secure-enclaves-using-ssms"></a>Tutoriel : Bien démarrer avec Always Encrypted avec enclaves sécurisées en utilisant SSMS
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -27,7 +27,7 @@ Ce tutoriel vous apprend à bien démarrer avec [Always Encrypted avec enclaves 
 - Créer un environnement simple pour tester et évaluer Always Encrypted avec enclaves sécurisées.
 - Chiffrer des données sur place et émettre des requêtes complexes sur des colonnes chiffrées en utilisant SQL Server Management Studio (SSMS).
 
-## <a name="prerequisites"></a>Prérequis
+## <a name="prerequisites"></a>Conditions préalables requises
 
 Pour bien démarrer avec Always Encrypted avec enclaves sécurisées, vous avez besoin d’au moins deux ordinateurs (qui peuvent être des machines virtuelles) :
 
@@ -156,7 +156,7 @@ Dans cette étape, vous allez activer la fonctionnalité Always Encrypted avec e
 
     La requête doit retourner une ligne qui se présente comme suit :  
 
-    | name                           | value | value_in_use |
+    | NAME                           | valeur | value_in_use |
     | ------------------------------ | ----- | -------------- |
     | column encryption enclave type | 1     | 1              |
 
@@ -308,9 +308,9 @@ Dans cette étape, vous allez chiffrer les données stockées dans les colonnes 
     WHERE SSN LIKE @SSNPattern AND [Salary] >= @MinSalary;
     ```
 
-## <a name="next-steps"></a>Étapes suivantes
+## <a name="next-steps"></a>Next Steps
 Consultez [Configurer Always Encrypted avec enclaves sécurisées](encryption/configure-always-encrypted-enclaves.md) pour voir d’autres cas d’utilisation. Vous pouvez aussi essayer ce qui suit :
 
-- [Configurer l’attestation TPM.](https://docs.microsoft.com/en-us/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-initialize-hgs-tpm-mode)
-- [Configurer HTTPS pour votre instance SGH.](https://docs.microsoft.com/en-us/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-configure-hgs-https)
+- [Configurer l’attestation TPM.](https://docs.microsoft.com/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-initialize-hgs-tpm-mode)
+- [Configurer HTTPS pour votre instance SGH.](https://docs.microsoft.com/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-configure-hgs-https)
 - Développer des applications qui émettent des requêtes complexes sur des colonnes chiffrées.

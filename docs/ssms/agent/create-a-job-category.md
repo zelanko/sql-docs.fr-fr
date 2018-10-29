@@ -16,12 +16,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: da4d9086c059baed29e44f5a6c541c997374d64b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7a487f7e081d9660f2034d8f6a2e62752bd7bd51
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47734058"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099591"
 ---
 # <a name="create-a-job-category"></a>Créer une catégorie de travaux
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -83,7 +83,7 @@ Pour plus d’informations sur ces boîtes de dialogue, consultez [Catégories d
   
 #### <a name="to-create-a-job-category"></a>Pour créer une catégorie de travail  
   
-1.  Dans l'**Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   
@@ -100,7 +100,7 @@ Pour plus d’informations sur ces boîtes de dialogue, consultez [Catégories d
     GO  
     ```  
   
-Pour plus d’informations, consultez [sp_add_category (Transact-SQL)](http://msdn.microsoft.com/en-us/6cca32cd-d941-4378-aed6-a7c90cb7520a).  
+Pour plus d’informations, consultez [sp_add_category (Transact-SQL)](http://msdn.microsoft.com/6cca32cd-d941-4378-aed6-a7c90cb7520a).  
   
 ## <a name="SMO"></a>Utilisation de SQL Server Management Objects  
 **Pour créer une catégorie de travail**  

@@ -12,17 +12,15 @@ ms.assetid: e8db82f0-50ed-4531-9209-940006ed34cb
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3a28a9a1670f4d6b8ca64d9ed2aaf683b1af0636
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a809a506fc7bb39b70f8baf983eed8f1a92cb094
+ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47850087"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49384144"
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>Leçon 1 : Connexion au moteur de base de données
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-
- > Pour accéder au contenu relatif aux versions précédentes de SQL Server, consultez [Leçon 1 : Connexion au moteur de base de données](lesson-1-connecting-to-the-database-engine.md).
 
 Les outils installés lors de l'installation du [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]dépendent de l'édition du produit et de la configuration choisies. Cette leçon passe en revue les outils principaux et décrit comment faire pour se connecter et exécuter une fonction de base (autorisation de plusieurs utilisateurs).  
 
