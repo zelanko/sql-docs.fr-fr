@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 05/22/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
-ms.suite: sql
+ms.reviewer: vanto
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - encryption [SQL Server], columns
@@ -15,24 +13,23 @@ helpviewer_keywords:
 - column level encryption
 - cell level encryption
 ms.assetid: 38e9bf58-10c6-46ed-83cb-e2d76cda0adc
-caps.latest.revision: 27
 author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 55f0b6d69e4f351c422a76cf5a578703ca172205
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: f104edbe976f516fac1d7439a454054d05ef7e30
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43098248"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47650367"
 ---
 # <a name="encrypt-a-column-of-data"></a>Chiffrer une colonne de données
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  Cette rubrique explique comment chiffrer une colonne de données à l'aide du chiffrement symétrique dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] avec [!INCLUDE[tsql](../../../includes/tsql-md.md)]. On parle parfois de chiffrement au niveau colonne ou au niveau cellule.  
+  Cet article explique comment chiffrer une colonne de données à l’aide du chiffrement symétrique dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] avec [!INCLUDE[tsql](../../../includes/tsql-md.md)]. On parle parfois de chiffrement au niveau colonne ou au niveau cellule.  
   
- **Dans cette rubrique**  
+ **Dans cet article**  
   
 -   **Avant de commencer :**  
   
@@ -57,7 +54,7 @@ ms.locfileid: "43098248"
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
 
-Pour pouvoir utiliser les exemples suivants, vous devez avoir une clé principale de base de données. Si votre base de données ne dispose pas déjà d’une clé principale de base de données, créez-en une en exécutant l’instruction suivante et en fournissant votre mot de passe :   
+Pour pouvoir utiliser les exemples suivants, vous devez disposer d’une clé principale de base de données. Si votre base de données ne dispose pas déjà d’une clé principale de base de données, créez-en une en exécutant l’instruction suivante et en fournissant votre mot de passe :   
 ```  
 CREATE MASTER KEY ENCRYPTION BY   
 PASSWORD = '<some strong password>';  

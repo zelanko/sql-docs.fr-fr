@@ -1,34 +1,33 @@
 ---
 title: Configurer un serveur de rapports sur un cluster avec équilibrage de la charge réseau | Microsoft Docs
-ms.date: 03/20/2017
-ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.technology: report-server
-ms.topic: conceptual
-helpviewer_keywords:
-- report servers [Reporting Services], network load balancing
-ms.assetid: 6bfa5698-de65-43c3-b940-044f41c162d3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 40564e92fa3eae3e7dcaf596a44792e8ee238a5f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: kfile
+ms.prod: reporting-services, reporting-services-sharepoint, reporting-services-native
+ms.technology: report-server
+ms.topic: conceptual
+ms.date: 10/3/2018
+ms.openlocfilehash: 68cc484911dd98e778d8b56977572f9a1db80132
+ms.sourcegitcommit: 2da0c34f981c83d7f1d37435c80aea9d489724d1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47657777"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48782338"
 ---
 # <a name="configure-a-report-server-on-a-network-load-balancing-cluster"></a>Configurer un serveur de rapports sur un cluster avec équilibrage de la charge réseau
+
   Si vous configurez la montée en puissance parallèle du serveur de rapports en vue de son exécution sur un cluster avec équilibrage de la charge réseau (NLB, Network Load Balancing), vous devez effectuer les opérations suivantes :  
   
--   S'assurer que le cluster avec équilibrage de la charge réseau est accessible via un nom de serveur virtuel mappé avec l'adresse IP du serveur virtuel. Un nom de serveur virtuel est nécessaire pour configurer un point d'entrée unique au cluster avec équilibrage de la charge réseau. Lorsque vous configurerez une URL pour chaque instance du serveur de rapports, vous spécifierez le nom du serveur virtuel en tant qu'hôte.  
+- S'assurer que le cluster avec équilibrage de la charge réseau est accessible via un nom de serveur virtuel mappé avec l'adresse IP du serveur virtuel. Un nom de serveur virtuel est nécessaire pour configurer un point d'entrée unique au cluster avec équilibrage de la charge réseau. Lorsque vous configurerez une URL pour chaque instance du serveur de rapports, vous spécifierez le nom du serveur virtuel en tant qu'hôte.  
   
--   Configurez la validation de l'état d'affichage pour prendre en charge la consultation des rapports interactifs. Les rapports interactifs sont en général restitués à plusieurs reprises au cours d'une session mono-utilisateur afin de permettre la visualisation de données nouvelles ou différentes en réponse aux actions de l'utilisateur. Configurer la validation de l'état d'affichage assure la continuité au cours de la session utilisateur quel que soit le serveur de rapports qui répond à la demande réelle.  
+- Configurez la validation de l'état d'affichage pour prendre en charge la consultation des rapports interactifs. Les rapports interactifs sont en général restitués à plusieurs reprises au cours d'une session mono-utilisateur afin de permettre la visualisation de données nouvelles ou différentes en réponse aux actions de l'utilisateur. Configurer la validation de l'état d'affichage assure la continuité au cours de la session utilisateur quel que soit le serveur de rapports qui répond à la demande réelle.  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ne fournit pas de fonctionnalités pour l’équilibrage de charge d’un déploiement avec montée en puissance parallèle ni pour la définition d’un point unique d’accès via une URL partagée. Vous devez implémenter une solution logicielle ou matérielle distincte de cluster avec équilibrage de la charge réseau afin de prendre en charge un déploiement avec montée en puissance parallèle de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
  Vous pouvez installer [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sur les nœuds qui font déjà partie d'un cluster avec équilibrage de la charge réseau ou configurer d'abord un déploiement avec montée en puissance parallèle, puis installer le logiciel de cluster.  
   
-## <a name="steps-for-report-server-deployment-on-an-nlb-cluster"></a>Étapes pour le déploiement du serveur de rapports sur un cluster avec équilibrage de la charge réseau  
+## <a name="steps-for-report-server-deployment-on-an-nlb-cluster"></a>Étapes pour le déploiement du serveur de rapports sur un cluster avec équilibrage de la charge réseau
+
  Appuyez-vous sur les indications suivantes pour installer et configurer votre déploiement :  
   
 |Étape|Description|Informations complémentaires|  
@@ -41,27 +40,60 @@ ms.locfileid: "47657777"
 |6|Configurer **Hostname** et **UrlRoot** pour utiliser l’adresse IP de serveur virtuel du cluster avec équilibrage de la charge réseau.|[Comment configurer Hostname et UrlRoot](#SpecifyingVirtualServerName) dans cette rubrique.|  
 |7|Vérifiez que les serveurs sont accessibles via le nom d'hôte que vous avez spécifié.|[Vérifier l’accès au serveur de rapports](#Verify) dans cette rubrique.|  
   
-##  <a name="ViewState"></a> Comment configurer la validation de l’état d’affichage  
- Pour exécuter un déploiement avec montée en puissance parallèle sur un cluster avec équilibrage de la charge réseau, vous devez configurer la validation de l'état d'affichage afin que les utilisateurs puissent consulter les rapports HTML interactifs.
+## <a name="ViewState"></a> Comment configurer la validation de l’état d’affichage
+
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+Pour exécuter un déploiement avec montée en puissance parallèle sur un cluster avec équilibrage de la charge réseau, vous devez configurer la validation de l'état d'affichage afin que les utilisateurs puissent consulter les rapports HTML interactifs.  Vous devez procéder ainsi pour le service Web Report Server.
+::: moniker-end
+
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+Pour exécuter un déploiement avec montée en puissance parallèle sur un cluster avec équilibrage de la charge réseau, vous devez configurer la validation de l'état d'affichage afin que les utilisateurs puissent consulter les rapports HTML interactifs.
+::: moniker-end
   
  La validation de l'état d'affichage est contrôlée par ASP.NET. Par défaut, la validation de l'état d'affichage est activée et utilise l'identité du service Web pour effectuer la validation. Toutefois, dans un scénario de cluster avec équilibrage de la charge réseau, il existe plusieurs instances de services et plusieurs identités de services Web qui s'exécutent sur différents ordinateurs. L'identité de service étant différente pour chaque nœud, vous ne pouvez pas vous appuyer sur une seule identité de processus pour effectuer la validation.  
   
  Pour contourner ce problème, vous pouvez générer une clé de validation arbitraire pour prendre en charge la validation de l'état d'affichage, puis configurer manuellement chaque nœud de serveur de rapports de manière à ce qu'il utilise la même clé. Vous pouvez utiliser n'importe quelle séquence hexadécimale générée de façon aléatoire. L'algorithme de validation (tel que SHA1) détermine la longueur que doit avoir la séquence hexadécimale.  
 
-1.  Générez une clé de validation et clé de déchiffrement en utilisant les fonctionnalités de création automatique fourni par le [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. À la fin, vous devez avoir une seule entrée \<**MachineKey**> que vous pouvez coller dans le fichier RSReportServer.config pour chaque instance du serveur de rapports dans le déploiement avec montée en puissance parallèle.
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+
+1. Générez une clé de validation et clé de déchiffrement en utilisant les fonctionnalités de création automatique fourni par le [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. À la fin, vous devez avoir une entrée <`MachineKey`> unique que vous pouvez coller dans le fichier Web.config pour chaque instance du serveur de rapports dans le déploiement scale-out.  
   
-     L'exemple suivant illustre la valeur que vous devez obtenir. Ne copiez pas cet exemple dans vos fichiers de configuration ; les valeurs de clé ne sont pas valides. La casse correcte doit être utilisée pour le serveur de rapports.
+    L'exemple suivant illustre la valeur que vous devez obtenir. Ne copiez pas cet exemple dans vos fichiers de configuration ; les valeurs de clé ne sont pas valides.  
   
+    ```xml
+    <machineKey validationKey="123455555" decryptionKey="678999999" validation="SHA1" decryption="AES"/>  
     ```  
-    <MachineKey ValidationKey="123455555" DecryptionKey="678999999" Validation="SHA1" Decryption="AES"/>  
-    ```   
-2.  Enregistrez le fichier.  
   
-3.  Répétez l'étape précédente pour chaque serveur de rapports impliqué dans le déploiement avec montée en puissance parallèle.  
+2. Ouvrez le fichier Web.config pour Reportserver, puis, dans la section <`system.web`>, collez l'élément <`machineKey`> que vous avez généré. Par défaut, le fichier Web.config du Gestionnaire de rapports se trouve dans \Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\Reportserver\Web.config.  
   
-4.  Vérifiez que tous les fichiers RSReportServer.config des dossiers\Reporting Services\Report Manager contiennent des éléments \<**MachineKey**> identiques.  
+3. Enregistrez le fichier.  
   
-##  <a name="SpecifyingVirtualServerName"></a> Comment configurer Hostname et UrlRoot  
+4. Répétez l'étape précédente pour chaque serveur de rapports impliqué dans le déploiement avec montée en puissance parallèle.  
+  
+5. Vérifiez que tous les fichiers Web.Config des dossiers \Reporting Services\Reportserver contiennent des éléments <`machineKey`> identiques dans la section <`system.web`>.  
+
+::: moniker-end
+
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+
+1. Générez une clé de validation et clé de déchiffrement en utilisant les fonctionnalités de création automatique fourni par le [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. À la fin, vous devez avoir une seule entrée \<**MachineKey**> que vous pouvez coller dans le fichier RSReportServer.config pour chaque instance du serveur de rapports dans le déploiement avec montée en puissance parallèle.
+
+    L'exemple suivant illustre la valeur que vous devez obtenir. Ne copiez pas cet exemple dans vos fichiers de configuration ; les valeurs de clé ne sont pas valides. La casse correcte doit être utilisée pour le serveur de rapports.
+
+    ```xml
+    <machineKey validationKey="123455555" decryptionKey="678999999" validation="SHA1" decryption="AES"/>
+    ```
+
+2. Enregistrez le fichier.
+
+3. Répétez l'étape précédente pour chaque serveur de rapports impliqué dans le déploiement avec montée en puissance parallèle.  
+
+4. Vérifiez que tous les fichiers RSReportServer.config des dossiers\Reporting Services\Report Manager contiennent des éléments \<**MachineKey**> identiques.
+
+::: moniker-end
+
+## <a name="SpecifyingVirtualServerName"></a> Comment configurer Hostname et UrlRoot
+
  Pour configurer un déploiement avec montée en puissance parallèle du serveur de rapports sur un cluster avec équilibrage de la charge réseau, vous devez définir un seul nom de serveur virtuel qui fournit un point d'accès unique au cluster de serveurs. Puis, inscrivez le nom du serveur virtuel auprès du serveur de noms de domaine de votre environnement.  
   
  Après avoir défini le nom du serveur virtuel, vous pouvez configurer les propriétés **Hostname** et **UrlRoot** du fichier RSReportServer.config de façon à inclure le nom du serveur virtuel dans l’URL du serveur de rapports.  
@@ -74,42 +106,43 @@ ms.locfileid: "47657777"
   
  Ne modifiez pas **ReportServerUrl**. Si vous modifiez cette URL, un aller-retour supplémentaire au serveur virtuel sera nécessaire pour chaque demande interne à gérer. Pour plus d’informations, consultez [URL des fichiers de configuration &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md). Pour plus d’informations sur la modification du fichier de configuration, consultez [Modifier un fichier de configuration Reporting Services &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md) dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-1.  Ouvrez RSReportServer.config dans un éditeur de texte.  
+1. Ouvrez RSReportServer.config dans un éditeur de texte.  
   
-2.  Recherchez la section **\<Service>** et ajoutez les informations suivantes au fichier de configuration, en remplaçant la valeur **Hostname** par le nom de serveur virtuel de votre serveur NLB :  
+2. Recherchez la section **\<Service>** et ajoutez les informations suivantes au fichier de configuration, en remplaçant la valeur **Hostname** par le nom de serveur virtuel de votre serveur NLB :  
   
-    ```  
+    ```xml
     <Hostname>virtual_server</Hostname>  
     ```  
   
-3.  Recherchez **UrlRoot**. L’élément n’est pas spécifié dans le fichier de configuration, mais la valeur par défaut utilisée est une URL au format http:// ou `https://<computername>/<reportserver>`, où \<*reportserver*> est le nom du répertoire virtuel du service Web Report Server.  
+3. Recherchez **UrlRoot**. L’élément n’est pas spécifié dans le fichier de configuration, mais la valeur par défaut utilisée est une URL au format http:// ou `https://<computername>/<reportserver>`, où \<*reportserver*> est le nom du répertoire virtuel du service Web Report Server.  
   
-4.  Tapez une valeur pour **UrlRoot** qui inclut le nom virtuel du cluster au format http:// ou `https://<virtual_server>/<reportserver>`.  
+4. Tapez une valeur pour **UrlRoot** qui inclut le nom virtuel du cluster au format http:// ou `https://<virtual_server>/<reportserver>`.  
   
-5.  Enregistrez le fichier.  
+5. Enregistrez le fichier.  
   
-6.  Répétez ces étapes dans chaque fichier RSReportServer.config de chaque serveur de rapports impliqué dans le déploiement par montée en puissance parallèle.  
+6. Répétez ces étapes dans chaque fichier RSReportServer.config de chaque serveur de rapports impliqué dans le déploiement par montée en puissance parallèle.  
   
-##  <a name="Verify"></a> Vérifier l’accès au serveur de rapports  
+## <a name="Verify"></a> Vérifier l’accès au serveur de rapports
+
  Vérifiez que vous avez accès au déploiement avec montée en puissance parallèle par le biais du nom du serveur virtuel (par exemple, `https://MyVirtualServerName/reportserver` et `https://MyVirtualServerName/reports`).  
   
  Vous pouvez vérifier quel nœud traite effectivement les rapports en examinant les fichiers journaux du serveur de rapports ou en vérifiant le journal d’exécution Reporting Services (la table du journal d’exécution contient une colonne **InstanceName** qui indique quelle instance a traité une demande particulière). Pour plus d’informations, consultez [Fichiers journaux et sources de Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md) dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Si vous ne pouvez pas vous connecter au serveur de rapports, vérifiez l'équilibrage de la charge réseau pour contrôler que les demandes sont envoyées au serveur de rapports et affichez le journal HTTP du serveur de rapports pour être certain que le serveur reçoit les demandes.  
   
-#### <a name="troubleshooting-failed-requests"></a>Dépannage des demandes ayant échoué  
+### <a name="troubleshooting-failed-requests"></a>Dépannage des demandes ayant échoué
+
  Si les demandes n'atteignent pas les instances du serveur de rapports, consultez le fichier RSReportServer.config pour vérifier que le nom du serveur virtuel est spécifié comme nom d'hôte pour les URL du serveur de rapports :  
   
-1.  Ouvrez le fichier RSReportServer.config dans un éditeur de texte.  
+1. Ouvrez le fichier RSReportServer.config dans un éditeur de texte.  
   
-2.  Recherchez \<**Hostname**>,\<**ReportServerUrl**> et \<**UrlRoot**>, et vérifiez le nom d’hôte pour chaque paramètre. Si la valeur n'est pas le nom d'hôte attendu, remplacez-le par le nom d'hôte approprié.  
+2. Recherchez \<**Hostname**>,\<**ReportServerUrl**> et \<**UrlRoot**>, et vérifiez le nom d’hôte pour chaque paramètre. Si la valeur n'est pas le nom d'hôte attendu, remplacez-le par le nom d'hôte approprié.  
   
  Si vous démarrez l’outil de configuration de Reporting Services après avoir effectué ces modifications, l’outil peut remplacer les paramètres \<**ReportServerUrl**> par la valeur par défaut. Conservez toujours une copie de sauvegarde des fichiers de configuration au cas où vous auriez besoin de les remplacer par la version qui contient les paramètres à utiliser.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a> Voir aussi
+
  [Gestionnaire de configuration de Reporting Services &#40;mode natif&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
  [Configurer une URL &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
  [Configurer un déploiement avec montée en puissance parallèle de serveurs de rapports en mode natif &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)   
- [Gérer un serveur de rapports Reporting Services en mode natif](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)  
-  
-  
+ [Gérer un serveur de rapports Reporting Services en mode natif](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)

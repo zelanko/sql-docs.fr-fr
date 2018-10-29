@@ -12,17 +12,17 @@ ms.assetid: de83cfa9-9ffe-4e24-9c74-96a3876cb4bd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e4b355fccd5366ec287e19ab0fb9c45d904494eb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 61018db803a8459f10fc6cb0bf49c89dd9c685ed
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113692"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50100320"
 ---
 # <a name="dax-formula-compatibility-in-directquery-mode-ssas-2014"></a>Compatibilité des formules DAX en mode DirectQuery (SSAS 2014)
 Le langage Data Analysis expressions (DAX) peut être utilisé pour créer des mesures et autres formules personnalisées pour une utilisation dans les modèles tabulaires Analysis Services, [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] les modèles de données dans des classeurs Excel et les modèles de données Power BI Desktop. Dans bien des égards, les modèles que vous créez dans ces environnements sont identiques, et vous pouvez utiliser les mesures de même, les relations et les indicateurs de performance clés, etc. Toutefois, si vous créez un modèle tabulaire Analysis Services et le déployez en mode DirectQuery, il existe certaines restrictions sur les formules que vous pouvez utiliser. Cette rubrique fournit une vue d’ensemble de ces différences, répertorie les fonctions qui ne sont pas pris en charge dans le modèle de tabulars SQL Server 2014 Analysis Services au niveau de compatibilité 1100 ou 1103 et en mode DirectQuery, et répertorie les fonctions qui sont prises en charge, mais peut retourner des résultats différents.  
   
-Dans cette rubrique, nous utilisons le terme *modèle en mémoire* pour faire référence aux modèles tabulaires, qui sont entièrement hébergés en mémoire des données mises en cache sur un serveur Analysis Services en cours d’exécution en mode tabulaire. Nous utilisons *les modèles DirectQuery* pour faire référence aux modèles tabulaires qui ont été créés ou déployés en mode DirectQuery. Pour plus d’informations sur le mode DirectQuery, consultez [DirectQuery Mode (SSAS tabulaire)](http://msdn.microsoft.com/en-us/45ad2965-05ec-4fb1-a164-d8060b562ea5).  
+Dans cette rubrique, nous utilisons le terme *modèle en mémoire* pour faire référence aux modèles tabulaires, qui sont entièrement hébergés en mémoire des données mises en cache sur un serveur Analysis Services en cours d’exécution en mode tabulaire. Nous utilisons *les modèles DirectQuery* pour faire référence aux modèles tabulaires qui ont été créés ou déployés en mode DirectQuery. Pour plus d’informations sur le mode DirectQuery, consultez [DirectQuery Mode (SSAS tabulaire)](http://msdn.microsoft.com/45ad2965-05ec-4fb1-a164-d8060b562ea5).  
   
   
 ## <a name="bkmk_SemanticDifferences"></a>Différences entre en mémoire et le mode DirectQuery  
@@ -92,7 +92,7 @@ Pour plus d’informations sur les règles régissant les conversions de chaîne
 Les modèles qui utilisent la banque de données en mémoire utilisent une plage plus limitée de formats de texte pour les dates que les formats de chaîne pour les dates prises en charge par SQL Server. Toutefois, DAX prend en charge les formats de date et d'heure personnalisés.  
   
 **Conversion d'une chaîne en d'autres valeurs non booléennes**  
-Lors de la conversion de chaînes en valeurs non booléennes, le mode DirectQuery se comporte de la même manière que SQL Server. Pour plus d’informations, consultez [CAST et CONVERT (Transact-SQL)](http://msdn.microsoft.com/en-us/a87d0850-c670-4720-9ad5-6f5a22343ea8).  
+Lors de la conversion de chaînes en valeurs non booléennes, le mode DirectQuery se comporte de la même manière que SQL Server. Pour plus d’informations, consultez [CAST et CONVERT (Transact-SQL)](http://msdn.microsoft.com/a87d0850-c670-4720-9ad5-6f5a22343ea8).  
   
 **Conversion de nombres en chaîne non autorisée**  
 EXEMPLE : `CONCATENATE(102,”,345”)`  
@@ -265,7 +265,7 @@ En mode DirectQuery, la casse du caractère qui est retourné est toujours exact
   
 Par défaut, le classement Latin1_General est utilisé, qui ne respecte pas la casse mais les accents. Par conséquent, s'il existe plusieurs instances d'une chaîne de texte en minuscules, majuscules, ou casse mixte, toutes les instances sont considérées comme la même chaîne, et seule la première instance de la chaîne est stockée dans l'index. Toutes les fonctions de texte exécutées sur les chaînes stockées récupèrent la partie spécifiée du formulaire indexé. Par conséquent, l'exemple de formule retourne la même valeur pour la colonne entière, à l'aide de la première instance comme entrée.  
   
-[Stockage et classement des chaînes dans les modèles tabulaires](http://msdn.microsoft.com/en-us/8516f0ad-32ee-4688-a304-e705143642ca)  
+[Stockage et classement des chaînes dans les modèles tabulaires](http://msdn.microsoft.com/8516f0ad-32ee-4688-a304-e705143642ca)  
   
 Ce comportement s'applique également aux autres fonctions de texte, notamment RIGHT, MID, etc.  
   
@@ -506,6 +506,6 @@ LASTDATE
 DATEADD  
   
 ## <a name="see-also"></a>Voir aussi  
-[Mode DirectQuery (SSAS Tabulaire)](http://msdn.microsoft.com/en-us/45ad2965-05ec-4fb1-a164-d8060b562ea5)  
+[Mode DirectQuery (SSAS Tabulaire)](http://msdn.microsoft.com/45ad2965-05ec-4fb1-a164-d8060b562ea5)  
   
 

@@ -5,9 +5,7 @@ ms.date: 07/14/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL13.SWB.DATABASEUSER.MEMBERSHIP.F1
@@ -15,17 +13,16 @@ helpviewer_keywords:
 - adding a member to a role
 - join a role
 ms.assetid: 05c8d10d-5823-46c6-8b1a-81722da6a42b
-caps.latest.revision: 13
 author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 84bfd4050ba971d74532f9a8b8adc6abbfae57c5
-ms.sourcegitcommit: e4e9f02b5c14f3bb66e19dec98f38c012275b92c
+ms.openlocfilehash: 2ed0fb7bcc834127254a6d3298d3baba7404386c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43118131"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47699357"
 ---
 # <a name="join-a-role"></a>joindre un rôle
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -82,9 +79,9 @@ ms.locfileid: "43118131"
   
 4.  Cliquez avec le bouton droit sur le rôle à modifier, puis sélectionnez **Propriétés**.  
   
-5.  Dans la boîte de dialogue **Propriétés du rôle de serveur ***nom_rôle_serveur*, dans la page **Membres**, cliquez sur **Ajouter**.  
+5.  Dans la boîte de dialogue **Propriétés du rôle de serveur –**_nom\_rôle\_serveur_, dans la page **Membres**, cliquez sur **Ajouter**.  
   
-6.  Dans la boîte de dialogue **Sélectionner la connexion au serveur ou le rôle de serveur** , sous **Entrez les noms des objets à sélectionner (exemples)**, entrez la connexion ou le rôle serveur à ajouter à ce rôle serveur. Ou bien, cliquez sur **Parcourir…** et sélectionnez tout ou partie des objets disponibles dans la boîte de dialogue **Rechercher des objets** . Cliquez sur **OK** pour revenir à la boîte de dialogue **Propriétés du rôle de serveur –***nom_rôle_serveur*.  
+6.  Dans la boîte de dialogue **Sélectionner la connexion au serveur ou le rôle de serveur** , sous **Entrez les noms des objets à sélectionner (exemples)**, entrez la connexion ou le rôle serveur à ajouter à ce rôle serveur. Ou bien, cliquez sur **Parcourir…** et sélectionnez tout ou partie des objets disponibles dans la boîte de dialogue **Rechercher des objets** . Cliquez sur **OK** pour revenir à la boîte de dialogue **Propriétés du rôle de serveur –**_nom\_rôle\_serveur_.  
   
 7.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -104,9 +101,9 @@ ms.locfileid: "43118131"
   
 7.  Cliquez avec le bouton droit sur le rôle à modifier, puis sélectionnez **Propriétés**.  
   
-8.  Dans la boîte de dialogue **Propriétés du rôle de base de données –***nom_rôle_base de données*, dans la page **Général**, cliquez sur **Ajouter**.  
+8.  Dans la boîte de dialogue **Propriétés du rôle de base de données –**_nom\_rôle\_base de données_, dans la page **Général**, cliquez sur **Ajouter**.  
   
-9. Dans la boîte de dialogue **Sélectionner l’utilisateur ou le rôle de la base de données** , sous **Entrez les noms des objets à sélectionner (exemples)**, entrez la connexion ou le rôle de base de données à ajouter à ce rôle de base de données. Ou bien, cliquez sur **Parcourir…** et sélectionnez tout ou partie des objets disponibles dans la boîte de dialogue **Rechercher des objets** . Cliquez sur **OK** pour revenir à la boîte de dialogue **Propriétés du rôle de base de données –***nom_rôle_base de données*.  
+9. Dans la boîte de dialogue **Sélectionner l’utilisateur ou le rôle de la base de données** , sous **Entrez les noms des objets à sélectionner (exemples)**, entrez la connexion ou le rôle de base de données à ajouter à ce rôle de base de données. Ou bien, cliquez sur **Parcourir…** et sélectionnez tout ou partie des objets disponibles dans la boîte de dialogue **Rechercher des objets** . Cliquez sur **OK** pour revenir à la boîte de dialogue **Propriétés du rôle de base de données –**_nom\_rôle\_base de données_.  
   
 10. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   

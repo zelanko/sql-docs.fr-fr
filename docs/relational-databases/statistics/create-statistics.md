@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: performance
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.stat.properties.f1
@@ -21,12 +19,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dcccb4f911bd3067694ff959bea49f1838924172
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 32c1cfde6f887074e3aa40486ea93f73f3865782
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43070842"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47672097"
 ---
 # <a name="create-statistics"></a>Créer des statistiques
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -73,7 +71,7 @@ ms.locfileid: "43070842"
   
 4.  Cliquez avec le bouton droit sur le dossier **Statistiques** et sélectionnez **Nouvelles statistiques**.  
   
-     Les propriétés suivantes s’affichent dans la page **Général** de la boîte de dialogue **Nouvelles statistiques sur la table***nom_table*.  
+     Les propriétés suivantes s’affichent dans la page **Général** dans la boîte de dialogue **Nouvelles statistiques sur la table**_nom\_table_.  
   
      **Nom de la table**  
      Affiche le nom de la table décrite par les statistiques.  
@@ -117,12 +115,12 @@ ms.locfileid: "43070842"
      **Mettre à jour les statistiques pour ces colonnes**  
      Activez cette option pour mettre à jour les statistiques lors de la fermeture de la boîte de dialogue.  
   
-     La propriété suivante s’affiche dans la page **Filtre** de la boîte de dialogue **Nouvelles statistiques sur la table***nom_table*.  
+     Les propriétés suivantes s’affichent dans la page **Filtre** dans la boîte de dialogue **Nouvelles statistiques sur la table**_nom\_table_.  
   
      **Expression de filtre**  
      Définit quelles lignes de données inclure dans les statistiques filtrées. Par exemple, `Production.ProductSubcategoryID IN ( 1,2,3 )`  
   
-5.  Dans la boîte de dialogue **Nouvelles statistiques sur la table***nom_table*, dans la page **Général**, cliquez sur **Ajouter**.  
+5.  Dans la boîte de dialogue **Nouvelles statistiques sur la table**_nom\_table_, dans la page **Général**, cliquez sur **Ajouter**.  
   
      Les propriétés suivantes s'affichent dans la boîte de dialogue **Sélectionner les colonnes** . Ces informations sont en lecture seule.  
   
@@ -143,7 +141,7 @@ ms.locfileid: "43070842"
   
 6.  Dans la boîte de dialogue **Sélectionner les colonnes** , activez la ou les cases à cocher de chaque colonne pour laquelle vous voulez créer une statistique, puis cliquez sur **OK**.  
   
-7.  Dans la boîte de dialogue **Nouvelles statistiques sur la table***nom_table*, cliquez sur **OK**.  
+7.  Dans la boîte de dialogue **Nouvelles statistiques sur la table**_nom\_table_, cliquez sur **OK**.  
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   

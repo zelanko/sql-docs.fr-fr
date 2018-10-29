@@ -1,31 +1,27 @@
 ---
 title: Guide d’architecture des pages et des étendues | Microsoft Docs
 ms.custom: ''
-ms.date: 10/21/2016
+ms.date: 09/23/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: relational-databases-misc
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - page and extent architecture guide
 - guide, page and extent architecture
 ms.assetid: 83a4aa90-1c10-4de6-956b-7c3cd464c2d2
-caps.latest.revision: 2
 author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9af33c1a357342a04d086ce0dee33856f9c7138e
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 9dc6bc734f81f9bba423f51591815f3eee676996
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43103819"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47857134"
 ---
 # <a name="pages-and-extents-architecture-guide"></a>Guide d’architecture des pages et des étendues
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,7 +38,7 @@ Les extensions sont une collection de huit pages physiques contiguës ; elles so
 
 Dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], la taille des pages est de 8 Ko. Autrement dit, les bases de données [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] disposent de 128 pages par mégaoctet. Chaque page commence par un en-tête de 96 octets qui sert à stocker les informations système relatives à la page. Ces informations sont notamment le numéro de page, le type de page, la quantité d'espace disponible sur la page et l'ID de l'unité d'allocation de l'objet auquel appartient la page.
 
-Le tableau suivant présente les types de page utilisés dans les fichiers de données d’une base de données SQL Server.
+Le tableau suivant présente les types de page utilisés dans les fichiers de données d'une base de données [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
 |Type de page | Sommaire |
 |-------|-------|
@@ -68,20 +64,25 @@ Les lignes ne peuvent pas couvrir plusieurs pages, mais des parties d'une ligne 
 
 Cette restriction est assouplie pour les tables qui contiennent des colonnes varchar, nvarchar, varbinary ou sql_variant. Lorsque la taille totale de ligne de toutes les colonnes de longueur fixe et variable d'une table dépasse la limite des 8 060 octets, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] déplace de manière dynamique une ou plusieurs colonnes de longueur variable dans les pages de l'unité d'allocation ROW_OVERFLOW_DATA, en commençant par la colonne dont la largeur est la plus grande. 
 
-Cette opération est réalisée chaque fois qu'une opération d'insertion ou de mise à jour augmente la taille totale de la ligne au-delà de la limite de 8 060 octets. Lorsqu'une colonne est déplacée dans une page de l'unité d'allocation ROW_OVERFLOW_DATA, un pointeur de 24 octets est conservé sur la page d'origine dans l'unité d'allocation IN_ROW_DATA. Si une opération ultérieure réduit la taille de la ligne, SQL Server redéplace de manière dynamique les colonnes dans la page de données d’origine. 
+Cette opération est réalisée chaque fois qu'une opération d'insertion ou de mise à jour augmente la taille totale de la ligne au-delà de la limite de 8 060 octets. Lorsqu'une colonne est déplacée dans une page de l'unité d'allocation ROW_OVERFLOW_DATA, un pointeur de 24 octets est conservé sur la page d'origine dans l'unité d'allocation IN_ROW_DATA. Si une opération ultérieure réduit la taille de la ligne, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] redéplace de manière dynamique les colonnes dans la page de données d'origine. 
 
 ### <a name="extents"></a>Étendues 
 
 Les extensions constituent l'unité de base dans laquelle l'espace est géré. Une extension est constituée de 8 pages contiguës, soit 64 Ko. Autrement dit, les bases de données SQL Server disposent de 16 étendues par mégaoctet.
 
-Afin d’optimiser la gestion de l’espace, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] n’affecte pas d’étendues complètes aux tables possédant de petites quantités de données. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] contient deux types d’étendues : 
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] contient deux types d’étendues : 
 
 * Les extensions **uniformes** appartiennent à un objet unique ; les huit pages de l’extension ne peuvent être utilisées que par l’objet propriétaire.
 * Les extensions **mixtes** sont partagées par huit objets au plus. Chacune des huit pages de l'extension peut être la propriété d'un objet différent.
 
-Une nouvelle table ou un nouvel index est en général affecté de pages issues d'extensions mixtes. Lorsque la table ou l'index atteint huit pages, il bascule à l'utilisation des extensions uniformes pour les allocations suivantes. Si vous créez un index sur une table existante qui possède un nombre de lignes suffisant pour générer huit pages dans l'index, toutes les allocations à l'index se trouvent dans des extensions uniformes.
+Jusqu’à [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] compris, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] n’affecte pas d’étendues complètes aux tables possédant de petites quantités de données. Une nouvelle table ou un nouvel index affecte en général des pages issues d'extensions mixtes. Lorsque la table ou l'index atteint huit pages, il bascule à l'utilisation des extensions uniformes pour les allocations suivantes. Si vous créez un index sur une table existante qui possède un nombre de lignes suffisant pour générer huit pages dans l'index, toutes les allocations à l'index se trouvent dans des extensions uniformes. Toutefois, à partir de [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], l’option par défaut pour toutes les allocations dans la base de données correspond aux extensions uniformes.
 
 ![Étendues](../relational-databases/media/extents.gif)
+
+> [!NOTE]
+> Jusqu'à [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] compris, l’indicateur de trace 1118 peut être utilisé pour modifier l’allocation par défaut afin de toujours utiliser des extensions uniformes. Pour plus d’informations sur cet indicateur de trace, consultez [DBCC TRACEON - Indicateurs de Trace](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).   
+>   
+> À partir de [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], la fonctionnalité fournie par l’indicateur de trace 1118 est automatiquement activée pour TempDB. Pour les bases de données utilisateur, ce comportement est contrôlé par l’option `SET MIXED_PAGE_ALLOCATION` de `ALTER DATABASE`, avec la valeur par défaut définie sur OFF, et l’indicateur de trace 1118 n’a aucun effet. Pour plus d’informations, consultez [Options SET d’ALTER DATABASE (Transact-SQL)](../t-sql/statements/alter-database-transact-sql-set-options.md).
 
 ## <a name="managing-extent-allocations-and-free-space"></a>Gestion des allocations des extensions et de l'espace libre 
 
@@ -98,10 +99,10 @@ Les structures de données [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilise deux types de tables d’allocation pour enregistrer l’allocation des extensions : 
 
 - **Pages GAM (Global Allocation Map)**   
-  Les pages GAM enregistrent les extensions qui ont été allouées. Chaque table GAM prend en charge 64 000 extensions, soit près de 4 Go de données. Elle est constituée d'un bit pour chaque extension dans l'intervalle couvert. Si la valeur du bit est 1, l'extension est libre. En revanche, si sa valeur est 0, l'extension est allouée. 
+  Les pages GAM enregistrent les extensions qui ont été allouées. Chaque page GAM couvre 64 000 extensions, soit près de 4 gigaoctets (Go) de données. La page GAM compte un bit pour chaque extension dans l'intervalle couvert. Si la valeur du bit est 1, l'extension est libre. En revanche, si sa valeur est 0, l'extension est allouée. 
 
 - **Pages SGAM (Shared Global Allocation Map)**   
-  Les pages SGAM enregistrent les extensions actuellement utilisées comme extensions mixtes et possédant au moins une page inutilisée. Chaque table SGAM prend en charge 64 000 étendues, soit près de 4 Go de données. Elle est constituée d'un bit pour chaque étendue dans l'intervalle couvert. Si la valeur du bit est 1, l'extension est utilisée comme extension mixte et possède une page libre. Si la valeur du bit est 0, l'extension n'est pas utilisée comme extension mixte ou correspond à une extension mixte dont toutes les pages sont utilisées. 
+  Les pages SGAM enregistrent les extensions actuellement utilisées comme extensions mixtes et possédant au moins une page inutilisée. Chaque page SGAM couvre 64 000 étendues, soit près de 4 Go de données. La page SGAM compte un bit pour chaque extension dans l'intervalle couvert. Si la valeur du bit est 1, l'extension est utilisée comme extension mixte et possède une page libre. Si la valeur du bit est 0, l'extension n'est pas utilisée comme extension mixte ou correspond à une extension mixte dont toutes les pages sont utilisées. 
 
 Chaque extension possède les schémas de bits suivants dans les tables GAM et SGAM, en fonction de son utilisation actuelle. 
 
@@ -115,21 +116,21 @@ Ceci se traduit par des algorithmes simples de gestion des extensions.
 -   Pour allouer une extension uniforme, le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] recherche un bit 1 dans la table GAM et lui affecte la valeur 0. 
 -   Pour trouver une extension mixte comportant des pages libres, le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] recherche un bit 1 dans la table SGAM. 
 -   Pour allouer une extension mixte, le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] recherche un bit 1 dans la table GAM, lui affecte la valeur 0, puis affecte la valeur 1 au bit correspondant dans la table SGAM. 
--   Pour désallouer une extension, le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] s’assure que le bit de la table GAM a la valeur 1 et que le bit de la table SGAM a la valeur 0. Les algorithmes qui sont effectivement utilisés en interne par le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] sont plus complexes que ceux dont il est fait mention ici, du fait que le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] répartit les données uniformément dans une base de données. Toutefois, même les algorithmes réels sont simplifiés afin de ne plus devoir gérer les chaînes d'informations d'allocation des extensions.
+-   Pour désallouer une extension, le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] s’assure que le bit de la table GAM a la valeur 1 et que le bit de la table SGAM a la valeur 0. Les algorithmes qui sont effectivement utilisés en interne par le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] sont plus complexes que ceux décrits dans cet article, du fait que le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] répartit les données uniformément dans une base de données. Toutefois, même les algorithmes réels sont simplifiés afin de ne plus devoir gérer les chaînes d'informations d'allocation des extensions.
 
 ### <a name="tracking-free-space"></a>Suivi de l’espace libre
 
 Les pages **PFS (Page Free Space)** enregistrent quand une page individuelle a été allouée, le statut d’allocation et la quantité d’espace libre de chaque page. Chaque page correspond à un octet qui enregistre si la page a été allouée et, le cas échéant, si elle est vide, pleine à 1-50 %, 51-80 %, 81-95 % ou 96-100 %.
 
-Une fois une étendue allouée à un objet, le moteur de base de données utilise les pages PFS pour enregistrer les pages de l’étendue qui sont allouées ou libres. Ces informations sont alors utilisées par le moteur de base de données pour l’allocation de toute nouvelle page. La quantité d'espace libre d'une page n'est conservée que pour les pages de segment, de texte et d'image. Ces informations sont exploitées par le moteur de base de données pour rechercher une page disposant de suffisamment d’espace libre pour accueillir une nouvelle ligne. Pour les index, le suivi de l'espace libre des pages n'est pas nécessaire étant donné que le point d'insertion d'une nouvelle ligne est défini par les valeurs de clés de l'index.
+Une fois une extension allouée à un objet, le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] utilise les pages PFS pour enregistrer les pages de l'extension qui sont allouées ou libres. Ces informations sont alors utilisées par le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] pour l'allocation de toute nouvelle page. La quantité d'espace libre d'une page n'est conservée que pour les pages de segment, de texte et d'image. Ces informations sont exploitées par le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] pour rechercher une page disposant de suffisamment d'espace libre pour accueillir une nouvelle ligne. Pour les index, le suivi de l'espace libre des pages n'est pas nécessaire étant donné que le point d'insertion d'une nouvelle ligne est défini par les valeurs de clés de l'index.
 
-Une page PFS vient juste après la page d’en-tête d’un fichier de données (ID de page 1). Elle est suivie d’une page GAM (ID de page 2), puis d’une page SGAM (ID de page 3). Il y a une page PFS approximativement 8 000 pages après la première page PFS. Il y a une autre page GAM 64 000 extensions après la première page GAM (page 2) et une autre page SGAM 64 000 extensions après la première page SGAM (page 3). L’illustration suivante indique l’ordre des pages utilisées par le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] pour l’allocation et la gestion des extensions.
+Une page PFS vient juste après la page d’en-tête d’un fichier de données (ID de page 1). Elle est suivie d’une page GAM (ID de page 2), puis d’une page SGAM (ID de page 3). Il y a une nouvelle page PFS approximativement 8 000 pages après la première page PFS, et des pages PFS supplémentaires toutes les 8 000 pages. Il y a une autre page GAM 64 000 extensions après la première page GAM (page 2), une autre page SGAM 64 000 extensions après la première page SGAM (page 3) et des pages GAM et SGAM supplémentaires toutes les 64 000 extensions. L’illustration suivante indique l’ordre des pages utilisées par le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] pour l’allocation et la gestion des extensions.
 
 ![manage_extents](../relational-databases/media/manage-extents.gif)
 
 ## <a name="managing-space-used-by-objects"></a>Gestion de l’espace utilisé par les objets 
 
-Une page **IAM (Index Allocation Map)** mappe les étendues d’une portion de 4 gigaoctets (Go) d’un fichier de base de données utilisées par une unité d’allocation. Une unité d'allocation peut être de trois types :
+Une page **IAM (Index Allocation Map)** mappe les étendues d’une portion de 4 Go d’un fichier de base de données utilisées par une unité d’allocation. Une unité d'allocation peut être de trois types :
 
 - IN_ROW_DATA   
     Contient une partition d'un segment ou d'un index.
@@ -140,7 +141,7 @@ Une page **IAM (Index Allocation Map)** mappe les étendues d’une portion de 4
 - ROW_OVERFLOW_DATA   
    Contient des données de longueur variable stockées dans des colonnes varchar, nvarchar, varbinary ou sql_variant qui dépassent le seuil de 8 060 octets par ligne. 
 
-Chaque partition d'un segment ou d'un index contient au moins une unité d'allocation IN_ROW_DATA. Elle peut aussi contenir une unité d'allocation LOB_DATA ou ROW_OVERFLOW_DATA, selon le schéma de segment ou d'index. Pour plus d’informations sur les unités d’allocation, consultez Organisation des tables et des index.
+Chaque partition d'un segment ou d'un index contient au moins une unité d'allocation IN_ROW_DATA. Elle peut aussi contenir une unité d'allocation LOB_DATA ou ROW_OVERFLOW_DATA, selon le schéma de segment ou d'index.
 
 Une page IAM couvre une plage de 4 Go dans un fichier, comme une page GAM ou SGAM. Si l'unité d'allocation contient des étendues provenant de plusieurs fichiers, ou plusieurs plages de 4 Go dans un fichier, il y aura plusieurs pages IAM liées entre elles dans une chaîne IAM. Ainsi, chaque unité d'allocation contient au moins une page IAM pour chaque fichier dans lequel elle possède des étendues. Un fichier peut aussi contenir plusieurs pages IAM si la plage d'étendues du fichier allouée à l'unité d'allocation dépasse la plage que peut enregistrer une page IAM unique. 
 
@@ -149,13 +150,13 @@ Une page IAM couvre une plage de 4 Go dans un fichier, comme une page GAM ou SGA
 Les pages IAM sont allouées au fur et à mesure des besoins pour chaque unité d'allocation et elles sont placées aléatoirement dans le fichier. La vue système, sys.system_internals_allocation_units, pointe sur la première page IAM d’une unité d’allocation. Toutes les pages IAM de cette unité d'allocation sont liées entre elles et forment une chaîne.
 
 > [!IMPORTANT]
-> La vue système sys.system_internals_allocation_units est destinée exclusivement à un usage interne et elle est susceptible de changer. La compatibilité n'est pas garantie.
+> La vue système `sys.system_internals_allocation_units` est destinée exclusivement à un usage interne et elle est susceptible de changer. La compatibilité n'est pas garantie.
 
 ![iam_chain](../relational-databases/media/iam-chain.gif)
  
 Pages IAM liées dans une chaîne par unité d’allocation. Une page IAM possède un en-tête indiquant l’étendue de départ de la plage d’étendues mappée par la page IAM. La page IAM contient aussi une grande image dans laquelle chaque bit représente une étendue. Le premier bit représente la première étendue de la plage, le second la deuxième étendue, et ainsi de suite. Si un bit est égal à 0, l'étendue qu'il représente n'est pas allouée à l'unité d'allocation possédant la page IAM. Si un bit est égal à 1, l'étendue qu'il représente est allouée à l'unité d'allocation possédant la page IAM.
 
-Quand le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] a besoin d’insérer une nouvelle ligne et qu’il n’y a pas de place sur la page active, il a recours aux pages IAM et PFS pour rechercher une page à allouer ou, pour un segment ou une page de texte/image, une page suffisamment grande pour accueillir la ligne. Le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] utilise les pages IAM pour rechercher les étendues allouées à l’unité d’allocation. Pour chaque étendue, le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] recherche les pages PFS afin de vérifier si l’une d’elles peut être utilisée. Chaque page IAM et PFS couvre de nombreuses pages de données de sorte qu'il y a peu de pages IAM et PFS dans une base de données. C’est pourquoi elles se trouvent en général dans la mémoire du pool de mémoires tampons de SQL Server, d’où il est possible de les rechercher plus rapidement. Pour les index, le point d'insertion d'une nouvelle ligne est défini par la clé d'index. Dans ce cas, la recherche précédemment décrite ne se produit pas.
+Quand le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] a besoin d’insérer une nouvelle ligne et qu’il n’y a pas de place sur la page active, il a recours aux pages IAM et PFS pour rechercher une page à allouer ou, pour un segment ou une page de texte/image, une page suffisamment grande pour accueillir la ligne. Le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] utilise les pages IAM pour rechercher les étendues allouées à l’unité d’allocation. Pour chaque étendue, le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] recherche les pages PFS afin de vérifier si l’une d’elles peut être utilisée. Chaque page IAM et PFS couvre de nombreuses pages de données de sorte qu'il y a peu de pages IAM et PFS dans une base de données. C'est pourquoi elles se trouvent en général dans la mémoire du pool de mémoires tampons de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], d'où il est possible de les rechercher plus rapidement. Pour les index, le point d'insertion d'une nouvelle ligne est défini par la clé d'index. Dans ce cas, la recherche précédemment décrite ne se produit pas.
 
 Le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] n’alloue une nouvelle étendue à une unité d’allocation que s’il ne trouve pas rapidement une page suffisamment grande dans une étendue existante pour accueillir la ligne à insérer. 
 
@@ -174,4 +175,7 @@ Le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] n’alloue une nou
 L'intervalle entre les pages DCM et les pages BCM est le même que l'intervalle entre les pages GAM et SGAM : 64 000 extensions. Les pages DCM et BCM sont situées juste derrière les pages GAM et SGAM dans un fichier physique :
 
 ![special_page_order](../relational-databases/media/special-page-order.gif)
- 
+
+## <a name="see-also"></a> Voir aussi
+[sys.allocation_units &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)     
+[Segments &#40;tables sans index cluster&#41;](../relational-databases/indexes/heaps-tables-without-clustered-indexes.md#heap-structures)    

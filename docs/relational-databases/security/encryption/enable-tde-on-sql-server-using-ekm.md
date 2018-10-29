@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 04/15/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
-ms.suite: sql
+ms.reviewer: vanto
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - encryption [SQL Server], TDE using an EKM
@@ -15,23 +13,22 @@ helpviewer_keywords:
 - EKM, TDE how to
 - Transparent Data Encryption, using EKM
 ms.assetid: b892e7a7-95bd-4903-bf54-55ce08e225af
-caps.latest.revision: 26
 author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b70e78455aca3f25ba880d3a4fb8ad5bd8ed32c8
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 62d910ed7b43d0334c8bf15c49c47d2214e81b85
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43084205"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47627457"
 ---
 # <a name="enable-tde-on-sql-server-using-ekm"></a>Activer le chiffrement transparent des données à l’aide de la gestion de clés extensible (EKM)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Cette rubrique explique comment activer le chiffrement transparent des données (TDE) dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] afin de protéger une clé de chiffrement de base de données à l'aide d'une clé asymétrique stockée dans un module de gestion de clés extensible (EKM) avec [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
+  Cette rubrique explique comment activer Transparent Data Encryption (TDE) dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] pour protéger une clé de chiffrement de base de données à l’aide d’une clé asymétrique stockée dans un module de gestion de clés extensible (EKM) avec [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
- L'ensemble de la base de données est chiffré à l'aide d'une clé symétrique, appelée clé de chiffrement de base de données. La clé de chiffrement de base de données peut également être protégée à l'aide d'un certificat qui est lui-même protégé par la clé principale de base de données de la base de données MASTER Pour plus d’informations sur la protection de la clé de chiffrement de base de données à l’aide de la clé principale de base de données, consultez [Transparent Data Encryption &#40;TDE&#41;](../../../relational-databases/security/encryption/transparent-data-encryption.md). Pour plus d’informations sur la configuration de TDE lorsque [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] est exécuté sur une machine virtuelle Azure, consultez [Gestion de clés extensible à l’aide d’Azure Key Vault &#40;SQL Server&#41;](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md). Pour plus d’informations sur la configuration de TDE à l’aide d’une clé dans Azure Key Vault, consultez [Utiliser le connecteur SQL Server avec les fonctionnalités de chiffrement SQL](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md). 
+ L'ensemble de la base de données est chiffré à l'aide d'une clé symétrique, appelée clé de chiffrement de base de données. La clé de chiffrement de base de données peut aussi être protégée à l’aide d’un certificat qui est lui-même protégé par la clé principale de base de données de la base de données MASTER. Pour plus d’informations sur la protection de la clé de chiffrement de base de données à l’aide de la clé principale de base de données, consultez [Transparent Data Encryption &#40;TDE&#41;](../../../relational-databases/security/encryption/transparent-data-encryption.md). Pour plus d’informations sur la configuration de TDE lorsque [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] est exécuté sur une machine virtuelle Azure, consultez [Gestion de clés extensible à l’aide d’Azure Key Vault &#40;SQL Server&#41;](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md). Pour plus d’informations sur la configuration de TDE à l’aide d’une clé dans Azure Key Vault, consultez [Utiliser le connecteur SQL Server avec les fonctionnalités de chiffrement SQL](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md). 
 
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
@@ -40,7 +37,7 @@ ms.locfileid: "43084205"
   
 -   Vous devez être un utilisateur doté de privilèges élevés (comme un administrateur système) pour créer une clé de chiffrement de base de données et chiffrer une base de données. Cet utilisateur doit pouvoir être authentifié par le module EKM.  
   
--   Au démarrage, le [!INCLUDE[ssDE](../../../includes/ssde-md.md)] doit ouvrir la base de données. Pour ce faire, vous devez créer des informations d'identification qui seront authentifiées par la gestion de clés extensible et les ajouter à un nom de connexion reposant sur une clé asymétrique. Les utilisateurs ne peuvent pas se connecter à l'aide de ce nom de connexion, mais le [!INCLUDE[ssDE](../../../includes/ssde-md.md)] sera en mesure de s'authentifier auprès du périphérique EKM.  
+-   Au démarrage, le [!INCLUDE[ssDE](../../../includes/ssde-md.md)] doit ouvrir la base de données. Pour ce faire, vous devez créer des informations d'identification qui seront authentifiées par la gestion de clés extensible et les ajouter à un nom de connexion reposant sur une clé asymétrique. Les utilisateurs ne peuvent pas se connecter à l’aide de ce nom de connexion, mais le [!INCLUDE[ssDE](../../../includes/ssde-md.md)] sera en mesure de s’authentifier auprès du périphérique EKM.  
   
 -   En cas de perte de la clé asymétrique stockée dans le module EKM, la base de données ne peut pas être ouverte par [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Si le fournisseur EKM vous permet de sauvegarder la clé asymétrique, vous devez créer une sauvegarde et la stocker dans un endroit sûr.  
   
@@ -49,7 +46,7 @@ ms.locfileid: "43084205"
 ###  <a name="Security"></a> Sécurité  
   
 ####  <a name="Permissions"></a> Permissions  
- Cette rubrique utilise les autorisations suivantes :  
+ Cet article utilise les autorisations suivantes :  
   
 -   Pour modifier une option de configuration et exécuter l'instruction RECONFIGURE, vous devez disposer de l'autorisation de niveau serveur ALTER SETTINGS. L'autorisation ALTER SETTINGS est implicitement détenue par les rôles serveur fixes **sysadmin** et **serveradmin** .  
   
@@ -70,7 +67,7 @@ ms.locfileid: "43084205"
 2.  Installez les certificats requis par votre fournisseur EKM sur votre ordinateur.  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ne propose pas de fournisseur EKM. Chaque fournisseur EKM peut utiliser des procédures différentes pour l'installation, la configuration et l'autorisation des utilisateurs.  Consultez la documentation de votre fournisseur EKM pour effectuer cette étape.  
+    >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ne propose pas de fournisseur EKM. Chaque fournisseur EKM peut utiliser des procédures différentes pour l’installation, la configuration et l’autorisation des utilisateurs.  Consultez la documentation de votre fournisseur EKM pour effectuer cette étape.  
   
 3.  Dans l'**Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   

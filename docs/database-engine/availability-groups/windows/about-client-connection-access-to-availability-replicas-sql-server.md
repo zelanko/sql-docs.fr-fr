@@ -56,7 +56,7 @@ ms.locfileid: "47642187"
  Connexions d'intention en lecture seule  
  La ou les bases de données secondaires sont disponibles uniquement pour une connexion pour laquelle la propriété de connexion **Intention de l’application** a la valeur **ReadOnly** (*connexions de tentative de lecture*).  
   
- Pour plus d'informations sur cette propriété de connexion, consultez [SQL Server Native Client Support for High Availability, Disaster Recovery](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).  
+ Pour plus d'informations sur cette propriété de connexion, consultez [Prise en charge des fonctionnalités de récupération d'urgence, haute disponibilité par SQL Server Native Client](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).  
   
  Autoriser toute connexion en lecture seule  
  La ou les bases de données secondaires sont toutes disponibles pour les connexions d'accès en lecture. Cette option permet aux clients disposant d'une version antérieure de se connecter.  
@@ -119,7 +119,7 @@ ms.locfileid: "47642187"
   
 ##  <a name="RelatedContent"></a> Contenu associé  
   
--   [Microsoft SQL Server Always On Solutions Guide for High Availability and Disaster Recovery (Guide de solutions Microsoft SQL Server Always On pour la haute disponibilité et la récupération d’urgence)](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Guide de solutions Microsoft SQL Server Always On pour la haute disponibilité et la récupération d’urgence](http://go.microsoft.com/fwlink/?LinkId=227600)  
   
 -   [Blog de l’équipe de SQL Server Always On : Blog officiel de l’équipe de SQL Server Always On](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   

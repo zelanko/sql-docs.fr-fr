@@ -4,28 +4,24 @@ ms.custom: ''
 ms.date: 06/08/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: relational-databases-misc
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - guide, memory management architecture
 - memory management architecture guide
 ms.assetid: 7b0d0988-a3d8-4c25-a276-c1bdba80d6d5
-caps.latest.revision: 6
 author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f056477d1de9ad2d73240f12e033e1022c44979e
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 7cd0d739f35f9f6cdcf03c525c41f0d2fb70d131
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43073058"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47623827"
 ---
 # <a name="memory-management-architecture-guide"></a>guide d’architecture de gestion de la mémoire
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -98,7 +94,7 @@ Le tableau suivant indique si un type spécifique d’allocation de mémoire est
 |Mémoire de piles de threads|non|non|
 |Allocations directes de Windows|non|non|
 
-À compter de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] peut allouer plus de mémoire que la valeur spécifiée dans le paramètre max server memory. Ce comportement peut se produire quand la valeur de ***Mémoire totale du serveur (Ko)*** a déjà atteint le paramètre ***Mémoire du serveur cible (Ko)*** (comme spécifié par max server memory). Si la mémoire libre contiguë est insuffisante pour répondre aux demandes de mémoire de plusieurs pages (plus de 8 Ko) en raison de la fragmentation de la mémoire, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] peut procéder à une surallocation au lieu de rejeter la demande de mémoire. 
+À compter de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] peut allouer plus de mémoire que la valeur spécifiée dans le paramètre max server memory. Ce comportement peut se produire quand la valeur de **_Mémoire totale du serveur (Ko)_** a déjà atteint le paramètre **_Mémoire du serveur cible (Ko)_** (comme spécifié par la mémoire maximum du serveur). Si la mémoire libre contiguë est insuffisante pour répondre aux demandes de mémoire de plusieurs pages (plus de 8 Ko) en raison de la fragmentation de la mémoire, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] peut procéder à une surallocation au lieu de rejeter la demande de mémoire. 
 
 Dès que cette allocation est effectuée, la tâche en arrière-plan du *moniteur de ressource* signale à tous les consommateurs de mémoire de libérer la mémoire allouée et tente de faire passer la valeur *Mémoire totale du serveur (Ko)* en dessous de la spécification *Mémoire du serveur cible (Ko)*. L’utilisation de la mémoire de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] peut donc dépasser brièvement le paramètre max server memory. Dans ce cas, la valeur du compteur de performances *Mémoire totale du serveur (Ko)* dépasse les paramètres max server memory et *Mémoire du serveur cible (Ko)*.
 
@@ -111,7 +107,7 @@ Ce comportement est généralement observé durant les opérations suivantes :
 ## <a name="changes-to-memorytoreserve-starting-with-includesssql11includessssql11-mdmd"></a>Changements apportés à « memory_to_reserve » à compter de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]
 Dans les versions antérieures de SQL Server ([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] et [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]), le Gestionnaire de mémoire de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] réservait une partie de l’espace d’adressage virtuel (VAS) des processus à **l’allocateur de plusieurs pages (MPA)**, à **l’allocateur du CLR**, aux allocations de mémoire pour les **piles de threads** dans le processus SQL Server et aux **allocations Windows directes (DWA)**. Cette partie de l’espace d’adressage virtuel est également appelée « Mem-To-Leave » ou « pool non-tampon ».
 
-L’espace d’adressage virtuel réservé pour ces allocations est déterminé par l’option de configuration ***memory_to_reserve***. La valeur par défaut utilisée par [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] est de 256 Mo. Pour remplacer la valeur par défaut, utilisez le paramètre de démarrage [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] *-g*. Pour plus d’informations sur le paramètre de démarrage *-g*, consultez la page [Options de démarrage du service moteur de base de données](../database-engine/configure-windows/database-engine-service-startup-options.md) dans la documentation.
+L’espace d’adressage virtuel réservé pour ces allocations est déterminé par l’option de configuration _**memory\_to\_reserve**_. La valeur par défaut utilisée par [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] est de 256 Mo. Pour remplacer la valeur par défaut, utilisez le paramètre de démarrage [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] *-g*. Pour plus d’informations sur le paramètre de démarrage *-g*, consultez la page [Options de démarrage du service moteur de base de données](../database-engine/configure-windows/database-engine-service-startup-options.md) dans la documentation.
 
 En effet, à compter de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], le nouvel allocateur de page de « toute taille » gère également les allocations supérieures à 8 Ko, et la valeur *memory_to_reserve* n’inclut pas les allocations de plusieurs pages. À l’exception de ce changement, cette option de configuration est la même.
 

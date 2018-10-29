@@ -1,45 +1,44 @@
 ---
 title: Bien démarrer avec le contrôle ReportViewer 2016 | Microsoft Docs
-ms.date: 06/12/2017
+ms.date: 09/18/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: application-integration
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: 01a821c4-2920-400c-be03-93d26c749bb1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 33225be23805250df8b59f6d71f0a98dfb917294
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 67955e82dc7e0a9fa85b064ed27781ee7b546090
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43268781"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47831127"
 ---
-# <a name="integrating-reporting-services-using-reportviewer-controls---get-started"></a>Intégration de Reporting Services à l’aide de contrôles ReportViewer - Bien démarrer
+# <a name="integrating-reporting-services-using-the-report-viewer-controls---get-started"></a>Intégration de Reporting Services à l’aide des contrôles Visionneuse de rapports - Bien démarrer
 
-Découvrez comment les développeurs peuvent incorporer des rapports paginés dans des sites web ASP.NET et des applications Windows Forms par le biais du contrôle ReportViewer Reporting Services 2016. Vous pouvez ajouter le contrôle à un nouveau projet, ou mettre à jour un projet existant.
+Les contrôles Visionneuse de rapports permettent d’intégrer des rapports Reporting Services RDL dans les applications WebForms et WinForms. Pour plus d’informations sur les mises à jour récentes, consultez le [journal des modifications](changelog.md).
 
-## <a name="adding-the-reportviewer-control-to-a-new-web-project"></a>Ajout du contrôle ReportViewer à un nouveau projet web
+## <a name="adding-the-report-viewer-control-to-a-new-web-project"></a>Ajout du contrôle Visionneuse de rapports à un nouveau projet web
 
 1. Créez un **site web ASP.NET vide** ou ouvrez un projet ASP.NET existant.
 
     ![ssRS-Create-New-ASPNET-Project](../../reporting-services/application-integration/media/ssrs-create-new-aspnet-project.png)
 
-2. Installez le package nuget du contrôle ReportViewer 2016 par le biais de la **console du gestionnaire de package Nuget**.
+2. Installez le package NuGet du contrôle Visionneuse de rapports via la **console du gestionnaire de package Nuget**.
 
     ```
     Install-Package Microsoft.ReportingServices.ReportViewerControl.WebForms
     ```
-3. Ajoutez une nouvelle page .aspx au projet et inscrivez l’assembly du contrôle ReportViewer en vue de l’utiliser dans la page.
+3. Ajoutez une nouvelle page .aspx au projet et inscrivez l’assembly du contrôle Visionneuse de rapports en vue de l’utiliser dans la page.
 
     ```
-    <%@ Register assembly="Microsoft.ReportViewer.WebForms, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" namespace="Microsoft.Reporting.WebForms" tagprefix="rsweb" %>
+    <%@ Register assembly="Microsoft.ReportViewer.WebForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" namespace="Microsoft.Reporting.WebForms" tagprefix="rsweb" %>
     ```
     
 4. Ajoutez un **ScriptManagerControl** à la page.
 
-5. Ajoutez le contrôle ReportViewer à la page. L’extrait de code ci-dessous peut être mis à jour pour référencer un rapport hébergé sur un serveur de rapports à distance.
+5. Ajoutez le contrôle Visionneuse de rapports à la page. L’extrait de code ci-dessous peut être mis à jour pour référencer un rapport hébergé sur un serveur de rapports à distance.
 
     ```
     <rsweb:ReportViewer ID="ReportViewer1" runat="server" ProcessingMode="Remote">
@@ -52,7 +51,7 @@ La page finale devrait ressembler à ce qui suit.
 ```
 <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="Sample" %>
 
-<%@ Register assembly="Microsoft.ReportViewer.WebForms, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" namespace="Microsoft.Reporting.WebForms" tagprefix="rsweb" %>
+<%@ Register assembly="Microsoft.ReportViewer.WebForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" namespace="Microsoft.Reporting.WebForms" tagprefix="rsweb" %>
 
 <!DOCTYPE html>
 
@@ -73,9 +72,9 @@ La page finale devrait ressembler à ce qui suit.
 
 ```
 
-## <a name="updating-an-existing-project-to-use-the-reportviewer-control"></a>Mise à jour d’un projet existant pour utiliser le contrôle ReportViewer
+## <a name="updating-an-existing-project-to-use-the-report-viewer-control"></a>Mise à jour d’un projet existant pour utiliser le contrôle Visionneuse de rapports
 
-Pour utiliser le contrôle ReportViewer 2016 dans un projet existant, ajoutez le contrôle par le biais de Nuget et mettez à jour les références d’assembly vers la version *14.0.0.0*. Cette opération entraîne la mise à jour du fichier web.config du projet et de toutes les pages .aspx qui référencent le contrôle ReportViewer.
+Veillez à mettre à jour les références d’assembly vers la version *15.0.0.0*, y compris le fichier web.config du projet et toutes les pages .aspx qui référencent le contrôle de visionneuse.
 
 ### <a name="sample-webconfig-changes"></a>Exemple de modifications apportées au fichier web.config
 
@@ -89,26 +88,26 @@ Pour utiliser le contrôle ReportViewer 2016 dans un projet existant, ajoutez le
   <system.web>
     <compilation debug="true" targetFramework="4.5.2">
       <assemblies>
-        <!-- All assemblies updated to version 14.0.0.0. -->
-        <add assembly="Microsoft.ReportViewer.Common, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845DCD8080CC91"/>
-        <add assembly="Microsoft.ReportViewer.DataVisualization, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845DCD8080CC91"/>
-        <add assembly="Microsoft.ReportViewer.Design, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845DCD8080CC91"/>
-        <add assembly="Microsoft.ReportViewer.ProcessingObjectModel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845DCD8080CC91"/>
-        <add assembly="Microsoft.ReportViewer.WebDesign, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845DCD8080CC91"/>
-        <add assembly="Microsoft.ReportViewer.WebForms, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845DCD8080CC91"/>
-        <add assembly="Microsoft.ReportViewer.WinForms, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845DCD8080CC91"/>
+        <!-- All assemblies updated to version 15.0.0.0. -->
+        <add assembly="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845DCD8080CC91"/>
+        <add assembly="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845DCD8080CC91"/>
+        <add assembly="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845DCD8080CC91"/>
+        <add assembly="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845DCD8080CC91"/>
+        <add assembly="Microsoft.ReportViewer.WebDesign, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845DCD8080CC91"/>
+        <add assembly="Microsoft.ReportViewer.WebForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845DCD8080CC91"/>
+        <add assembly="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845DCD8080CC91"/>
       </assemblies>
       <buildProviders>
-        <!-- Version updated to 14.0.0.0. -->
+        <!-- Version updated to 15.0.0.0. -->
         <add extension=".rdlc"
-          type="Microsoft.Reporting.RdlBuildProvider, Microsoft.ReportViewer.WebForms, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845DCD8080CC91"/>
+          type="Microsoft.Reporting.RdlBuildProvider, Microsoft.ReportViewer.WebForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845DCD8080CC91"/>
       </buildProviders>
     </compilation>
     <httpRuntime targetFramework="4.5.2"/>
     <httpHandlers>
-      <!-- Version updated to 14.0.0.0 -->
+      <!-- Version updated to 15.0.0.0 -->
       <add path="Reserved.ReportViewerWebControl.axd" verb="*"
-        type="Microsoft.Reporting.WebForms.HttpHandler, Microsoft.ReportViewer.WebForms, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845DCD8080CC91"
+        type="Microsoft.Reporting.WebForms.HttpHandler, Microsoft.ReportViewer.WebForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845DCD8080CC91"
         validate="false"/>
     </httpHandlers>
   </system.web>
@@ -116,9 +115,9 @@ Pour utiliser le contrôle ReportViewer 2016 dans un projet existant, ajoutez le
     <validation validateIntegratedModeConfiguration="false"/>
     <modules runAllManagedModulesForAllRequests="true"/>
     <handlers>
-      <!-- Version updated to 14.0.0.0 -->
+      <!-- Version updated to 15.0.0.0 -->
       <add name="ReportViewerWebControlHandler" verb="*" path="Reserved.ReportViewerWebControl.axd" preCondition="integratedMode"
-        type="Microsoft.Reporting.WebForms.HttpHandler, Microsoft.ReportViewer.WebForms, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845DCD8080CC91"/>
+        type="Microsoft.Reporting.WebForms.HttpHandler, Microsoft.ReportViewer.WebForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845DCD8080CC91"/>
     </handlers>
   </system.webServer>
 </configuration>
@@ -129,19 +128,19 @@ Pour utiliser le contrôle ReportViewer 2016 dans un projet existant, ajoutez le
 ```
 <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="SampleAspx" %>
 
-<!-- Update version to 14.0.0.0 -->
-<%@ Register assembly="Microsoft.ReportViewer.WebForms, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" namespace="Microsoft.Reporting.WebForms" tagprefix="rsweb" %>
+<!-- Update version to 15.0.0.0 -->
+<%@ Register assembly="Microsoft.ReportViewer.WebForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" namespace="Microsoft.Reporting.WebForms" tagprefix="rsweb" %>
 
 <!DOCTYPE html>
 ```
 
-## <a name="adding-the-reportviewer-control-to-a-new-windows-forms-project"></a>Ajout du contrôle ReportViewer à un nouveau projet Windows Forms
+## <a name="adding-the-report-viewer-control-to-a-new-windows-forms-project"></a>Ajout du contrôle Visionneuse de rapports à un nouveau projet Windows Forms
 
 1. Créez une **application Windows Forms** ou ouvrez un projet existant.
 
     ![ssRS-Create-New-winforms-Project](../../reporting-services/application-integration/media/ssrs-create-new-winforms-project.png)
 
-2. Installez le package nuget du contrôle ReportViewer 2016 par le biais de la **console du gestionnaire de package Nuget**.
+2. Installez le package NuGet du contrôle Visionneuse de rapports via la **console du gestionnaire de package Nuget**.
 
     ```
     Install-Package Microsoft.ReportingServices.ReportViewerControl.WinForms
@@ -170,13 +169,11 @@ Pour utiliser le contrôle ReportViewer 2016 dans un projet existant, ajoutez le
     }
     ```
 
-## <a name="how-to-set-100-height-on-the-report-viewer-2016-control"></a>Comment définir la propriété height sur 100% sur le contrôle ReportViewer 2016
+## <a name="how-to-set-100-height-on-the-report-viewer-control"></a>Comment définir une hauteur de 100 % sur le contrôle Visionneuse de rapports
 
-Le nouveau contrôle ReportViewer 2016 est optimisé pour les pages en mode HTML5 standard et fonctionne sur tous les navigateurs modernes. Avant, avec l’ancien contrôle RVC, la définition de la propriété height sur 100% était prise en compte même si cette propriété n’était spécifiée pour aucun des ancêtres. Ce comportement a changé dans HTML5. Quand vous définissez cette propriété sur le nouveau contrôle RVC, l’opération ne fonctionne correctement que si l’élément parent a une hauteur définie, c’est-à-dire une valeur différente d’auto, ou que tous les ancêtres de RVC ont une propriété height définie sur 100%.
+Si vous définissez la hauteur du contrôle de visionneuse à 100 %, l’élément parent doit avoir une hauteur définie ou tous les ancêtres sont obligés d’avoir des pourcentages de hauteur.
 
-Les deux exemples ci-après montrent comment opérer.
-
-### <a name="by-setting-the-height-of-all-the-parent-elements-to-100"></a>En définissant la propriété height de tous les éléments parents sur 100%
+### <a name="setting-the-height-of-all-the-ancestors-to-100"></a>Définition de la hauteur de tous les ancêtres à 100 %
 
 ```
 <!DOCTYPE html>
@@ -202,7 +199,7 @@ Les deux exemples ci-après montrent comment opérer.
 
 ```
 
-### <a name="by-setting-the-style-height-attribute-on-the-parent-of-the-reportviewer-control"></a>En définissant l’attribut de style height sur le parent du contrôle ReportViewer
+### <a name="setting-the-parents-height-attribute"></a>Définition de l’attribut de hauteur du parent
 
 Pour plus d’informations sur les longueurs en pourcentage de la fenêtre d’affichage, consultez [Viewport-percentage lengths](https://www.w3.org/TR/css3-values/#viewport-relative-lengths) (Longueurs en pourcentage de la fenêtre d’affichage).
 
@@ -227,15 +224,15 @@ Pour plus d’informations sur les longueurs en pourcentage de la fenêtre d’a
 
 ## <a name="adding-control-to-visual-studio-toolbar"></a>Ajout du contrôle à la barre d’outils de Visual Studio
 
-Le contrôle ReportViewer est désormais fourni sous la forme d’un package NuGet. Il n’apparaît donc pas par défaut dans la boîte à outils de Visual Studio. Vous pouvez l’ajouter à la boîte à outils en effectuant la procédure suivante.
+Le contrôle Visionneuse de rapports est désormais fourni sous forme de package NuGet et ne s’affiche plus dans la boîte à outils Visual Studio par défaut. Vous pouvez ajouter manuellement le contrôle à la boîte à outils.
 
 1. Installez le package NuGet pour WinForms ou WebForms comme indiqué ci-dessus.
 
-2. Supprimez le contrôle ReportViewer qui est répertorié dans la boîte à outils. Il s’agit du contrôle ayant la version 12.x.
+2. Supprimez le contrôle Visionneuse de rapports qui est répertorié dans la boîte à outils.
 
     ![ssRS-remove-old-rvcontrol-toolbox](../../reporting-services/application-integration/media/ssrs-remove-old-rvcontrol-toolbox.png)
 
-3. Cliquez avec le bouton droit n’importe où dans la boîte à outils, puis sélectionnez **Choisir les éléments...**.
+3. Cliquez avec le bouton droit n’importe où dans la boîte à outils, puis sélectionnez **Choisir les éléments...**
 
     ![ssRS-toolbox-choose-item](../../reporting-services/application-integration/media/ssrs-toolbox-choose-item.png)
     
@@ -252,27 +249,20 @@ Le contrôle ReportViewer est désormais fourni sous la forme d’un package NuG
 
     ![ssRS-toolbox-rvcontrol](../../reporting-services/application-integration/media/ssrs-toolbox-rvcontrol.png)
 
-### <a name="things-to-be-aware-of"></a>Éléments à prendre en considération
-
-- Cette opération ajoute une référence au package NuGet installé dans votre projet actuel. L’élément dans la boîte à outils est conservé pour les autres projets. Quand vous installez le package NuGet dans une nouvelle solution/projet, l’élément de la boîte à outils peut référencer une version antérieure. 
-
-- Le contrôle reste dans la boîte à outils même si l’assembly n’est plus disponible. Si ce projet a été supprimé et que vous essayez d’ajouter le contrôle à partir de la boîte à outils, Visual Studio génère une erreur. Pour corriger cette erreur, supprimez le contrôle de la boîte à outils et rajoutez-le en suivant la procédure ci-dessus.
-
-
 ## <a name="common-issues"></a>Problèmes courants
     
-- Le contrôle ReportViewer 2016 est conçu pour être utilisé avec les navigateurs modernes. Le contrôle peut ne pas fonctionner si les navigateurs restituent la page web dans un mode de compatibilité Internet Explorer. Les sites intranet peuvent nécessiter une balise meta pour remplacer le paramètre qui incite le rendu des pages intranet en mode de compatibilité.
+Le contrôle de visionneuse est conçu pour les navigateurs modernes. Il peut ne pas fonctionner comme prévu si le navigateur restitue la page en utilisant le mode de compatibilité Internet Explorer. Les sites intranet peuvent nécessiter une balise meta pour remplacer le comportement par défaut du navigateur.
 
     ```
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     ```
       
-## <a name="providing-feedback"></a>Envoi de commentaires
+## <a name="feedback"></a>Commentaires
 
-Informez l’équipe des problèmes que vous rencontrez avec le contrôle sur les [forums MSDN Reporting Services](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=sqlreportingservices) ou par e-mail à l’adresse [RVCFeedback@microsoft.com](mailto:RVCFeedback@microsoft.com).
+Informez l’équipe au sujet des problèmes sur les [forums Reporting Services](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=sqlreportingservices).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Collecte de données dans le contrôle ReportingViewer version 2016](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls-data-collection.md)  
+[Collecte de données dans le contrôle Visionneuse de rapports](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls-data-collection.md)  
 D’autres questions ? [Essayez le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
 

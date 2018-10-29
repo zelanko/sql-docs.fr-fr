@@ -1,36 +1,36 @@
 ---
 title: Collecte des données dans le contrôle ReportViewer version 2016 | Microsoft Docs
-ms.date: 09/06/2016
+ms.date: 09/18/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
-ms.suite: pro-bi
 ms.topic: reference
 ms.assetid: 112e0240-351d-46a9-98c7-2be09f26ac60
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 782888c9946fd09d9c711a6eda2a8f77fd18c3ba
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 68e5a4c9789a6c0485433a3199d8d6a03c2a90d5
+ms.sourcegitcommit: a251adad8474b477363df6a121431b837f22bf77
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43267404"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47864337"
 ---
 # <a name="integrating-reporting-services-using-reportviewer-controls---data-collection"></a>Intégration de Reporting Services à l’aide de contrôles ReportViewer - collecte des données
-Par défaut, le contrôle ReportViewer collecte des informations d’utilisation anonymes permettant à Microsoft de mieux comprendre la façon dont les clients utilisent le contrôle. Grâce à une meilleure compréhension de la façon dont les clients déploient et utilisent le contrôle de visionneuse, il est possible de concentrer le développement futur sur les améliorations les plus intéressantes pour la majorité des clients.
 
-Pour obtenir une explication des pratiques de collecte et d’utilisation des données utilisateur des versions de Microsoft SQL Server 2016 et de tout autre produit ou service, consultez cette [déclaration de confidentialité]((http://go.microsoft.com/fwlink/?LinkID=868444)).
+Des données d’utilisation anonymes sont collectées par le contrôle pour vous permettre de mieux comprendre comment les clients utilisent le produit. Les données d’utilisation permettent de concentrer le développement futur sur les améliorations les plus pertinentes pour les clients.
 
-## <a name="opting-out-of-telemetry"></a>Désactivation de la télémétrie
+Une explication des pratiques de collecte et d’utilisation des données de Microsoft SQL Server et de la visionneuse de rapports est disponible dans la [déclaration de confidentialité](http://go.microsoft.com/fwlink/?LinkID=868444).
 
-Vous pouvez désactiver la télémétrie par programmation par le biais du paramètre «EnableTelemetry ». Pour ce faire, modifiez la page .aspx qui héberge le contrôle.
+## <a name="opting-out-of-data-collection"></a>Désactivation de la collecte de données
+
+La collecte des données d’utilisation peut être désactivée via la propriété ```EnableTelemetry```.
 
 ```
-\<rsweb:ReportViewer ID="ReportViewer1" runat="server" EnableTelemetry="false">
-\</rsweb:ReportViewer>
+<rsweb:ReportViewer ID="ReportViewer1" runat="server" EnableTelemetry="false">
+</rsweb:ReportViewer>
 ```
 
-Vous pouvez également effectuer la désactivation avant que le contrôle ne soit restitué, comme dans les appels de Page_Load de la page d’hébergement.
+Ou, de façon pragmatique, avant que le contrôle soit restitué.
     
 ```
 protected void Page_Load(object sender, EventArgs e)
@@ -40,8 +40,8 @@ protected void Page_Load(object sender, EventArgs e)
 ```
 ## <a name="see-also"></a>Voir aussi
 
-[Utilisation du contrôle WebForms ReportViewer](../../reporting-services/application-integration/using-the-webforms-reportviewer-control.md)  
-[Intégration de Reporting Services à l’aide des contrôles ReportViewer](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls.md) 
+[Utilisation du contrôle WebForms Visionneuse de rapports](../../reporting-services/application-integration/using-the-webforms-reportviewer-control.md)  
+[Intégration de Reporting Services à l’aide des contrôles Visionneuse de rapports](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls.md) 
 
 
 

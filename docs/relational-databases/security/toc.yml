@@ -1,6 +1,7 @@
+items:
 - name: Vue d'ensemble
   href: security-center-for-sql-server-database-engine-and-azure-sql-database.md
-- name: "Sécurisation de SQL\_Server"
+- name: Sécurisation de SQL Server
   href: securing-sql-server.md
 - name: Audit
   href: ../../relational-databases/security/auditing/sql-server-audit-database-engine.md
@@ -26,7 +27,7 @@
   href: sql-vulnerability-assessment.md
 - name: Découverte et classification des données SQL
   href: sql-data-discovery-and-classification.md
-- name: 'TRUSTWORTHY, propriété de base de données'
+- name: TRUSTWORTHY, propriété de base de données
   href: trustworthy-database-property.md
 - name: Permissions
   href: permissions-database-engine.md
@@ -42,5 +43,17 @@
   href: row-level-security.md
 - name: Masquage dynamique des données
   href: dynamic-data-masking.md
-- name: "Certificats et clés asymétriques SQL\_Server"
+- name: Certificats et clés asymétriques SQL Server
   href: sql-server-certificates-and-asymmetric-keys.md
+- name: Didacticiels
+  items:
+  - name: Always Encrypted
+    items:
+    - name: Bien démarrer avec Always Encrypted avec enclaves sécurisées en utilisant SSMS
+      href: tutorial-getting-started-with-always-encrypted-enclaves.md
+ms.openlocfilehash: 0c4449b875e4b24bfeb8e03dc96b3e1a4b92a878
+ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48851854"

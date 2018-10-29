@@ -1,7 +1,7 @@
 ---
 title: Configurer la base de données de distribution SQL Server dans un groupe de disponibilité | Microsoft Docs
 ms.custom: ''
-ms.date: 05/23/2018
+ms.date: 10/04/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: replication
@@ -20,18 +20,18 @@ ms.assetid: 94d52169-384e-4885-84eb-2304e967d9f7
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1af1ffe2423fad7e8b9b2b07f2085bdf0efed1f2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b8d12a1626d6d2d76e24f5aeebfe6d3f50a66959
+ms.sourcegitcommit: 8aecafdaaee615b4cd0a9889f5721b1c7b13e160
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47615378"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48817997"
 ---
 # <a name="set-up-replication-distribution-database-in-always-on-availability-group"></a>Configurer la base de données de distribution de réplication dans un groupe de disponibilité AlwaysOn
 
 Cet article explique comment configurer une base de données distribution de réplication SQL Server dans un groupe de disponibilité AlwaysOn.
 
-SQL Server 2017 CU 6 prend désormais en charge l’utilisation de bases de données de distribution de réplication dans un groupe de disponibilité, grâce aux mécanismes suivants :
+SQL Server 2017 CU6 et SQL Server 2016 SP2-CU3 prennent désormais en charge l’utilisation de bases de données de distribution de réplication dans un groupe de disponibilité, grâce aux mécanismes suivants :
 
 - Le groupe de disponibilité de base de données de distribution doit avoir un écouteur. Lorsque le serveur de publication ajoute le serveur de distribution, il utilise le nom de l’écouteur pour nommer le serveur de distribution.
 - Les travaux de réplication sont créés avec le nom de l’écouteur comme nom du serveur de distribution.
@@ -190,13 +190,15 @@ Cet exemple ajoute un nouveau serveur de distribution à une configuration de r�
    sp_adddistributiondb 'distribution'
    ```
 
-1. Sur DIST3, exécutez ce qui suit : 
+4. Sur DIST3, exécutez ce qui suit : 
 
    ```sql
    sp_adddistpublisher @publisher= 'PUB', @distribution_db= 'distribution', @working_directory= '<network path>'
    ```
 
    La valeur de `@working_directory` doit être identique à celle spécifiée pour DIST1 et DIST2.
+
+4. Sur DIST3, vous devez recréer les serveurs liés pour les abonnés.
 
 ## <a name="remove-a-replica-from-distribution-database-ag"></a>Supprimer un réplica du groupe de disponibilité de base de données de distribution
 

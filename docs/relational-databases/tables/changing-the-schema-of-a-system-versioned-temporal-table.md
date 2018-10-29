@@ -5,22 +5,19 @@ ms.date: 03/28/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 9dbe5a21-9335-4f8b-85fd-9da83df79946
-caps.latest.revision: 13
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a4c8aa3a14937c0855b3cd91ba35dd4868af075f
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 765e480e8fa01daf99036c2526ee9b5dc0dccfe2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43075972"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47679477"
 ---
 # <a name="changing-the-schema-of-a-system-versioned-temporal-table"></a>Modification du schéma d’une table temporelle à version contrôlée par le système
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -63,7 +60,7 @@ ALTER TABLE dbo.Department
   
 -   Pendant une opération **ALTER TABLE** , le système verrouille le schéma des deux tables.  
   
--   La modification de schéma spécifiée est propagée à la table historique de manière appropriée (selon le type de modification).  
+-   La modification de schéma spécifiée est propagée à la table d’historique de manière appropriée (selon le type de modification).  
   
 -   Si vous ajoutez une colonne n’acceptant la valeur Null ou modifiez une colonne de sorte qu’elle n’accepte pas la valeur Null, vous devez spécifier la valeur par défaut des lignes existantes. Le système génère une valeur par défaut supplémentaire avec la même valeur et l’applique à la table historique. L’ajout de **DEFAULT** à une table non vide est une opération Taille des données dans toutes les éditions sauf dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition (pour laquelle c’est une opération de métadonnées).  
   

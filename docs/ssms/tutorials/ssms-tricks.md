@@ -6,7 +6,6 @@ author: MashaMSFT
 ms.author: mathoma
 ms.date: 03/13/2018
 ms.topic: Tutorial
-ms.suite: sql
 ms.prod: sql
 ms.technology: ssms
 ms.prod_service: sql-tools
@@ -21,12 +20,12 @@ helpviewer_keywords:
 - Find SQL Server Instance
 - find instance name
 - find sql server instance name
-ms.openlocfilehash: a2a57d1e870695bcd2a19b609f966ae9ccde697e
-ms.sourcegitcommit: c113001aff744ed17d215e391cae2005bb3d0f6e
+ms.openlocfilehash: df5ed680949f40e27d2df0184a2b4c387289129c
+ms.sourcegitcommit: a251adad8474b477363df6a121431b837f22bf77
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40020673"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47864387"
 ---
 # <a name="tutorial-additional-tips-and-tricks-for-using-ssms"></a>Tutoriel : Conseils et astuces supplémentaires pour utiliser SSMS
 Ce tutoriel vous propose des astuces supplémentaires pour utiliser SQL Server Management Studio (SSMS). Cet article vous montre comment : 
@@ -83,12 +82,19 @@ Vous pouvez ajouter et supprimer des marques de commentaire dans des parties de 
 7. Mettez en surbrillance tous les éléments à l’exception de la commande **ALTER DATABASE**, puis sélectionnez le bouton **Commenter** :
 
     ![Tout commenter](media/ssms-tricks/commenteverything.png)
+    
+    > [!NOTE]
+    > Le raccourci clavier permettant d’ajouter des marques commentaire au texte est **Ctrl+K, Ctrl+C**. 
 
 8. Mettez en surbrillance la partie **ALTER DATABASE** du texte et sélectionnez le bouton **Supprimer les marques de commentaire** pour supprimer les marques de commentaire :
 
     ![Supprimer les marques de commentaire dans le texte](media/ssms-tricks/uncomment.png)
     
+    > [!NOTE]
+    > Le raccourci clavier permettant de supprimer des marques de commentaire du texte est **Ctrl+K, Ctrl+U**. 
+    
 9. Sélectionnez **Exécuter** pour exécuter la partie de texte sans marque de commentaire. 
+
 
 ## <a name="indent-your-text"></a>Mettre en retrait du texte
 Vous pouvez utiliser les boutons de mise en retrait de la barre d’outils pour augmenter ou réduire le retrait du texte. 

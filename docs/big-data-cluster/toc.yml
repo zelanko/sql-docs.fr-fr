@@ -1,0 +1,83 @@
+items:
+- name: Vue d'ensemble
+  items:
+  - name: Qu’est-ce que le cluster Big Data de SQL Server ?
+    href: big-data-cluster-overview.md
+  - name: Notes de publication
+    href: big-data-cluster-release-notes.md
+- name: Guides de démarrage rapide
+  items:
+  - name: Déployer le cluster Big Data de SQL Server
+    href: quickstart-big-data-cluster-deploy.md
+- name: Concepts
+  items:
+  - name: Contrôleur
+    href: concept-controller.md
+  - name: Instance principale
+    href: concept-master-instance.md
+  - name: Pool de données
+    href: concept-data-pool.md
+  - name: Pool de stockage
+    href: concept-storage-pool.md
+  - name: Pool de calcul
+    href: concept-compute-pool.md
+  - name: Persistance des données
+    href: concept-data-persistence.md
+  - name: Sécurité
+    href: concept-security.md
+- name: Guides de procédures
+  items:
+  - name: Installer
+    items:
+    - name: Conseils pour le déploiement
+      href: deployment-guidance.md
+    - name: Déployer sur Minikube
+      href: deploy-on-minikube.md
+    - name: Déployer sur AKS
+      href: deploy-on-aks.md
+    - name: Se connecter avec Azure Data Studio
+      href: deploy-big-data-tools.md
+  - name: Virtualisation de données
+    items:
+    - name: Virtualiser des données externes
+      href: ../relational-databases/polybase/data-virtualization.md?toc=%2fsql%2fbig-data-cluster%2ftoc.json
+  - name: Ingestion de données
+    items:
+    - name: Charger des données avec curl
+      href: data-ingestion-curl.md
+    - name: Restaurer une base de données
+      href: data-ingestion-restore-databse.md
+  - name: Big Data/Machine Learning
+    items:
+    - name: Data wrangling avec l’accélérateur de code PROSE
+      href: use-prose-for-big-data-automation.md
+  - name: Gérer le cluster Big Data de SQL Server
+    items:
+    - name: Portail d’administration du cluster
+      href: cluster-admin-portal.md
+  - name: Notebooks
+    items:
+    - name: Vue d’ensemble des notebooks
+      href: notebooks-guidance.md
+    - name: Gérer les notebooks existants
+      href: notebooks-how-to-manage.md
+  - name: Travaux Spark
+    items:
+    - name: Soumettre des travaux Spark
+      href: spark-submit-job.md
+    - name: Utiliser le serveur d’historique Spark
+      href: spark-history-server.md
+- name: Ressources
+  items:
+  - name: SQL Server 2019 - Preview
+    href: ../sql-server/what-s-new-in-sql-server-ver15.md?toc=%2fsql%2fbig-data-cluster%2ftoc.json
+  - name: Documentation PolyBase
+    href: ../relational-databases/polybase/polybase-guide.md
+  - name: Demander l’accès à des clusters Big Data
+    href: https://aka.ms/eapsignup
+ms.openlocfilehash: c8a685c849acf82b9fdfa078093528e9c0972964
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085306"

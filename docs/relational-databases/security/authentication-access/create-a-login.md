@@ -5,9 +5,7 @@ ms.date: 08/01/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.login.status.f1
@@ -22,17 +20,16 @@ helpviewer_keywords:
 - Create login [SQL Server]
 - SQL Server logins
 ms.assetid: fb163e47-1546-4682-abaa-8c9494e9ddc7
-caps.latest.revision: 29
 author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6924a66746699e429ef2cd45d1692ced5c9bf44d
-ms.sourcegitcommit: e4e9f02b5c14f3bb66e19dec98f38c012275b92c
+ms.openlocfilehash: 28bda5c6e02b21343cef97ee04c36f80f124d9a9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43118536"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47630357"
 ---
 # <a name="create-a-login"></a>Créer un compte de connexion
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -168,9 +165,9 @@ ms.locfileid: "43118536"
   
 1.  Cliquez sur **Rechercher**.  
   
-2.  Dans la boîte de dialogue **Ajouter des objets**, sélectionnez l’une des options suivantes : **Objets spécifiques…**, **Tous les objets des types…** ou **Le serveur***nom_serveur*. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+2.  Dans la boîte de dialogue **Ajouter des objets**, sélectionnez une des options suivantes : **Objets spécifiques…**, **Tous les objets des types…** ou **Le serveur**_nom\_serveur_. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-    > **REMARQUE :** La sélection de l’option **Le serveur***nom_serveur* remplit automatiquement la grille supérieure avec tous les objets sécurisables de ce serveur.  
+    > **REMARQUE :** La sélection de l’option **Le serveur**_nom\_serveur_ remplit automatiquement la grille supérieure avec tous les objets sécurisables de ce serveur.  
   
 3.  Si vous sélectionnez **Objets spécifiques…**:  
   

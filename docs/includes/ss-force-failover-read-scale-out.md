@@ -7,12 +7,12 @@ ms.topic: include
 ms.date: 02/05/2018
 ms.author: mikeray
 ms.custom: include file
-ms.openlocfilehash: 19bf9ad54bee8b14796144d002e97c6eead541aa
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 189ffb02217d85d77cee524658cd35a2d2cff034
+ms.sourcegitcommit: 677a75e7d149ff257ed8376a392806d17dca0640
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38069970"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46488294"
 ---
 Chaque groupe de disponibilité contient un seul réplica principal. Le réplica principal autorise les opérations de lecture et d’écriture. Pour changer de réplica principal, vous pouvez effectuer un basculement. Dans un groupe de disponibilité pour la haute disponibilité, le gestionnaire de cluster automatise le processus de basculement. Dans un groupe de disponibilité avec le type de cluster AUCUN, le processus de basculement est manuel. 
 
@@ -29,6 +29,12 @@ Pour forcer le basculement avec perte de données, connectez-vous à l’instanc
 
 ```SQL
 ALTER AVAILABILITY GROUP [ag1] FORCE_FAILOVER_ALLOW_DATA_LOSS;
+```
+
+Quand le réplica principal précédent récupère, il assume également le rôle principal. Pour garantir que le réplica principal précédent passe à un rôle secondaire, exécutez la commande suivante sur le réplica principal précédent.
+
+```SQL
+ALTER AVAILABILITY GROUP [ag1]  SET (ROLE = SECONDARY);
 ```
 
 ### <a name="manual-failover-without-data-loss"></a>Basculement manuel sans perte de données

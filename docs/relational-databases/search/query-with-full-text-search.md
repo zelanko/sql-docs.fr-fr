@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: search, sql-database
-ms.component: search
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: search
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - queries [full-text search], about full-text queries
@@ -18,17 +15,16 @@ helpviewer_keywords:
 - full-text queries [SQL Server]
 - queries [full-text search], functions
 ms.assetid: 7624ba76-594b-4be5-ac10-c3ac4a3529bd
-caps.latest.revision: 80
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a4e62ce63f377d085d8726f7b1ad187351f164cf
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 92b2a975fbee89249850e4acfdf23f7f47e5bd23
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43078642"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47652627"
 ---
 # <a name="query-with-full-text-search"></a>Exécuter une requête avec une recherche en texte intégral
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -218,7 +214,7 @@ GO
   
  Tout texte correspondant au texte spécifié avant l'astérisque (*) est renvoyé. Si le texte et l'astérisque ne sont pas délimités par des guillemets doubles, comme dans `CONTAINS (DESCRIPTION, 'top*')`, la recherche en texte intégral ne considère pas l'astérisque comme un caractère générique.  
   
- Lorsque le préfixe est une expression, chaque jeton à l'intérieur de l'expression est considéré comme un préfixe distinct. Toutes les lignes qui possèdent des mots qui commencent par les préfixes seront renvoyés. Par exemple, le terme de préfixe « light bread* » trouve des lignes contenant le texte « light breaded », « lightly breaded » ou « light bread », mais il ne retourne pas « lightly toasted bread ».
+ Lorsque le préfixe est une expression, chaque jeton à l'intérieur de l'expression est considéré comme un préfixe distinct. Toutes les lignes qui possèdent des mots qui commencent par les préfixes seront renvoyés. Par exemple, le terme de préfixe « light bread\* » trouve des lignes contenant le texte « light breaded », « lightly breaded » ou « light bread », mais il ne retourne pas « lightly toasted bread ».
 
 #### <a name="more-info-about-prefix-searches"></a>Plus d’informations sur les recherches par préfixe
 

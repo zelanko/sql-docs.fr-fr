@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 05/01/2018
 ms.prod: sql
 ms.prod_service: sql-database
-ms.service: ''
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CLONEDATABASE
@@ -37,16 +34,15 @@ helpviewer_keywords:
 - database cloning [SQL Server]
 - DBCC CLONEDATABASE statement
 ms.assetid: ''
-caps.latest.revision: ''
 author: pamela
 ms.author: pamela
 manager: amitban
-ms.openlocfilehash: 00c1d492b8fd4b2315d825c2b74bac701781e9bd
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.openlocfilehash: 572470c85de7a8340a61e0a24b54c6632fe1b06f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36258411"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47666677"
 ---
 # <a name="dbcc-clonedatabase-transact-sql"></a>DBCC CLONEDATABASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -114,7 +110,7 @@ Cannot insert duplicate key row in object <system table> with unique index 'inde
 ```
 
 > [!IMPORTANT]
-> Si vous avez des index columnstore, consultez [Considerations when you tune the queries with Columnstore indexes on clone databases](https://blogs.msdn.microsoft.com/sql_server_team/considerations-when-tuning-your-queries-with-columnstore-indexes-on-clone-databases/) pour mettre à jour les statistiques d’index columnstore avant d’exécuter la commande **DBCC CLONEDATABASE**.
+> Si vous avez des index columnstore, consultez [Considerations when you tune the queries with Columnstore indexes on clone databases](https://blogs.msdn.microsoft.com/sql_server_team/considerations-when-tuning-your-queries-with-columnstore-indexes-on-clone-databases/) pour mettre à jour les statistiques d’index columnstore avant d’exécuter la commande **DBCC CLONEDATABASE**.  À compter de SQL Server 2019, les étapes manuelles listées dans l’article ci-dessus ne seront plus requises, car la commande **DBCC CLONEDATABASE** collecte automatiquement ces informations.
 
 Pour plus d’informations sur la sécurité des données dans les bases de données clonées, consultez [Understanding data security in cloned databases](https://blogs.msdn.microsoft.com/sql_server_team/understanding-data-security-in-cloned-databases-created-using-dbcc-clonedatabase/).
 
@@ -175,7 +171,7 @@ Seuls les objets suivants peuvent être clonés dans la base de données de dest
 - XML INDEX
 - XML SCHEMA COLLECTION  
 
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
 Nécessite l'appartenance au rôle serveur fixe **sysadmin** .
 
 ## <a name="error-log-messages"></a>Messages du journal des erreurs

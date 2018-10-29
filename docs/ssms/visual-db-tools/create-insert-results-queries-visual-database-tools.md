@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms-visual-db
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - queries [SQL Server], types
@@ -17,15 +14,15 @@ helpviewer_keywords:
 - Insert Results query
 - queries [SQL Server], results
 ms.assetid: 8770d630-09cc-47ec-a0e9-e9de2d7bbc89
-caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 91c84391103acc56a4602bb91d960557f190cb52
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6e02bff525732632dc97c3dc2fe6955053106e5d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47845007"
 ---
 # <a name="create-insert-results-queries-visual-database-tools"></a>Créer des requêtes Insert Results (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -81,11 +78,11 @@ Lorsque vous créez une requête Insert Results, le volet Critères change afin 
     > [!NOTE]  
     > Le Concepteur de requêtes et de vues ne peut pas déterminer à l'avance les tables et vues qu'il est possible de mettre à jour. Ainsi, la liste **Nom de la table** de la boîte de dialogue **Choisir la table cible pour la requête Insérer les résultats** affiche toutes les tables et vues disponibles dans la connexion de données sur laquelle porte la requête, même celles vers lesquelles il est impossible de copier des lignes.  
   
-4.  Dans le rectangle représentant la table ou l'objet table, choisissez les noms des colonnes dont vous souhaitez copier le contenu. Pour copier des lignes entières, choisissez **\&#42; (Toutes les colonnes)**.  
+4.  Dans le rectangle représentant la table ou l'objet table, choisissez les noms des colonnes dont vous souhaitez copier le contenu. Pour copier des lignes entières, choisissez **#42; (Toutes les colonnes)**.  
   
     Le Concepteur de requêtes et de vues ajoute les colonnes sélectionnées à la colonne **Colonne** du volet Critères.  
   
-5.  Dans la colonne **Ajouter** du volet Critères, sélectionnez une colonne cible dans la table de destination pour chaque colonne copiée. Choisissez *nom_table.\&#42;* si vous copiez des lignes entières. Les colonnes de la table de destination doivent avoir des types de données identiques (ou compatibles) à ceux des colonnes de la table source.  
+5.  Dans la colonne **Ajouter** du volet Critères, sélectionnez une colonne cible dans la table de destination pour chaque colonne copiée. Choisissez *nom_table.&#42;* si vous copiez des lignes entières. Les colonnes de la table de destination doivent avoir des types de données identiques (ou compatibles) à ceux des colonnes de la table source.  
   
 6.  Si vous souhaitez copier les lignes dans un ordre précis, spécifiez un ordre de tri. Pour plus d’informations, consultez [Trier et regrouper des résultats de requête &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md).  
   

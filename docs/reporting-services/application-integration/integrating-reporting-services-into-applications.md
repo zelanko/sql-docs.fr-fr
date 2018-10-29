@@ -1,22 +1,19 @@
 ---
 title: Intégration de Reporting Services à des applications | Microsoft Docs
-ms.date: 10/19/2017
+ms.date: 09/18/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
-ms.suite: pro-bi
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 author: markingmyname
 ms.author: maghan
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ac677d269f25b8cc6d9c4587e729fd3e57063259
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: f68945ab92db13f80236cfa900067a7d38533849
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43266546"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47614117"
 ---
 # <a name="integrating-reporting-services-into-applications"></a>Intégration de Reporting Services dans les applications
 
@@ -27,26 +24,26 @@ ms.locfileid: "43266546"
 > [!NOTE]
 > À partir de SQL Server 2017 Reporting Services, l’accès de l’API REST est disponible pour le développement de solutions. L’accès de l’API SOAP a été déprécié. Pour plus d’informations, consultez [Développer avec les API REST pour Reporting Services](../developer/rest-api.md).
   
- Il existe trois options d’intégration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] à des applications personnalisées : le service Web Report Server, également appelé API SOAP de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], les contrôles ReportViewer pour [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] et l’accès URL. Chaque option représente une approche différente de l'intégration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dans vos applications.
+ Il existe trois options d’intégration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] à des applications personnalisées : le service Web Report Server, également appelé API SOAP de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], les contrôles Visionneuse de rapports pour [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] et l’accès URL. Chaque option représente une approche différente de l'intégration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dans vos applications.
   
 ## <a name="report-server-web-service"></a>Service web Report Server
 
  Le service Web Report Server constitue la principale interface de développement avec [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Que vous développiez du code pour gérer votre catalogue de rapports ou pour effectuer le rendu de rapports dans un format pris en charge, le service Web propose toutes les méthodes nécessaires pour intégrer [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dans vos applications. Ainsi, par exemple, le Gestionnaire de rapports, qui est inclus dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], utilise le service web pour gérer la base de données du serveur de rapports.  
   
-## <a name="reportviewer-controls-for-visual-studio"></a>Contrôles ReportViewer pour Visual Studio
+## <a name="report-viewer-controls-for-visual-studio"></a>Contrôles Visionneuse de rapports pour Visual Studio
 
- Les contrôles ReportViewer disponibles pour [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] sont utilisés pour intégrer la consultation de rapports à vos applications. Il existe deux contrôles : un pour les applications Windows Forms et un autre pour les applications Web Forms. Chaque contrôle propose une fonctionnalité de consultation des rapports qui ont été déployés sur un serveur de rapports et permet d'effectuer le rendu de rapports dans un environnement où un aucun serveur de rapports n'est installé.  
+ Les contrôles Visionneuse de rapports disponibles pour [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] sont utilisés pour intégrer la consultation de rapports à vos applications. Il existe deux contrôles : un pour les applications Windows Forms et un autre pour les applications Web Forms. Chaque contrôle propose une fonctionnalité de consultation des rapports qui ont été déployés sur un serveur de rapports et permet d'effectuer le rendu de rapports dans un environnement où un aucun serveur de rapports n'est installé.  
   
 ## <a name="url-access"></a>accès URL  
- L'accès URL est une autre option d'intégration de la consultation de rapports dans vos applications si les contrôles ReportViewer ne sont pas proposés en option. Par ailleurs, l'accès URL est utile pour envoyer aux utilisateurs des liens vers des rapports par courrier électronique.  
+ L'accès URL est une autre option d'intégration de la consultation de rapports dans vos applications si les contrôles Visionneuse de rapports ne sont pas proposés en option. Par ailleurs, l'accès URL est utile pour envoyer aux utilisateurs des liens vers des rapports par courrier électronique.  
   
 ## <a name="in-this-section"></a>Contenu de cette section
 
  [Intégration de Reporting Services à l'aide de SOAP](../../reporting-services/application-integration/integrating-reporting-services-using-soap.md)  
  Décrit comment intégrer la navigation et la gestion des rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dans vos applications de gestion existantes à l'aide du service Web Report Server.  
   
- [Intégration de Reporting Services à l’aide des contrôles ReportViewer](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls.md)  
- Décrit comment intégrer la consultation de rapports dans vos applications existantes à l'aide de contrôles ReportViewer.  
+ [Intégration de Reporting Services à l’aide des contrôles Visionneuse de rapports](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls.md)  
+ Explique comment intégrer la consultation de rapports dans vos applications existantes à l'aide des contrôles Visionneuse de rapports.  
   
  [Intégration de Reporting Services à l'aide de l'accès URL](../../reporting-services/application-integration/integrating-reporting-services-using-url-access.md)  
  Décrit comment intégrer la navigation entre les rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dans vos applications de gestion existantes à l'aide de l'accès URL.  

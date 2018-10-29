@@ -1,14 +1,11 @@
 ---
 title: Télécharger SQL Server Management Studio (SSMS) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/04/2018
+ms.date: 09/24/2018
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 keywords:
 - installer ssms, télécharger ssms, dernière version de ssms
@@ -24,103 +21,95 @@ keywords:
 - sql server ssms
 - ssms express
 ms.assetid: adafeeef-4255-4924-8042-02f503d599ca
-caps.latest.revision: 145
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c226957b2bd8c0a66bda053795fa1bbe96ba042f
-ms.sourcegitcommit: 82bb56269faf3fb5dd1420418e32a0a6476780cc
+ms.openlocfilehash: 3d22c89d40c423449af8fe1803ceea3a586f5b45
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43694732"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906339"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>Télécharger SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
-SSMS est un environnement intégré pour la gestion des infrastructures SQL, de SQL Server à SQL Database. SSMS fournit des outils pour configurer, surveiller et administrer les instances de SQL. Utilisez SSMS pour déployer, surveiller et mettre à niveau les composants de la couche Données utilisés par vos applications, mais aussi pour créer des requêtes et des scripts.
+SSMS est un environnement intégré pour la gestion des infrastructures SQL, de SQL Server à Azure SQL Database. SSMS fournit des outils pour configurer, surveiller et administrer les instances de SQL. Utilisez SSMS pour déployer, surveiller et mettre à niveau les composants de la couche Données utilisés par vos applications, mais aussi pour créer des requêtes et des scripts.
 
 Utilisez SQL Server Management Studio (SSMS) pour interroger, concevoir et gérer vos bases de données et entrepôts de données, où qu’ils se trouvent (sur votre ordinateur local ou dans le cloud).
 
 **SSMS est gratuit !**
 
-SSMS 17.x est la dernière génération de *SQL Server Management Studio* et fournit la prise en charge de SQL Server 2017.
+## <a name="ssms-179-is-the-current-general-availability-ga-version-of-ssms"></a>SSMS 17.9 est la version en disponibilité générale actuelle de SSMS
 
-**[![télécharger](../ssdt/media/download.png) Télécharger SQL Server Management Studio 17.9](https://go.microsoft.com/fwlink/?linkid=2014306) (il n’est pas obligatoire d’avoir une version antérieure de SSMS 17.x sur l’ordinateur)**
+**[![télécharger](../ssdt/media/download.png) Télécharger SQL Server Management Studio 17.9](https://go.microsoft.com/fwlink/?linkid=2014306)**
+<br>**[![télécharger](../ssdt/media/download.png) Télécharger le package de mise à niveau SQL Server Management Studio 17.9 (met à niveau 17.x vers 17.9)](https://go.microsoft.com/fwlink/?linkid=2014215)**
 
-**[![télécharger](../ssdt/media/download.png) Télécharger le package de mise à niveau de SQL Server Management Studio 17.9](https://go.microsoft.com/fwlink/?linkid=2014215) (mises à niveau de 17.x vers 17.9 ; une version antérieure de SSMS 17.x est requise sur l’ordinateur)**
+Pour plus d’informations sur SSMS 17.9, consultez le [journal des modifications de SSMS 17.9](sql-server-management-studio-changelog-ssms.md#ssms-179-latest-ga-release).
 
+## <a name="ssms-180-preview"></a>SSMS 18.0 (préversion)
+
+**La préversion publique 4 de SSMS 18.0.x, maintenant disponible, est la dernière génération de *SQL Server Management Studio* et offre une prise en charge de [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)].**
+
+**[![télécharger](../ssdt/media/download.png) Télécharger SQL Server Management Studio 18.0 (préversion 4)](https://go.microsoft.com/fwlink/?linkid=2014662)**
+
+La préversion 4 est la première préversion publique de SSMS 18.0.
 
 **Informations sur la version**
 
-Numéro de version : 17.9<br>
-Numéro de build : 14.0.17285.0<br>
-Date de publication : 4 septembre 2018
+- Numéro de version : 18.0 (préversion 4)<br>
+- Numéro de build : 15.0.18040.0<br>
+- Date de publication : 24 septembre 2018
 
-L’installation de SSMS 17.x ne met pas à niveau ni ne remplace les versions 16.x ou antérieures de SSMS. SSMS 17.x s’installe côte à côte avec les versions précédentes pour que vous puissiez utiliser les deux versions.
-Si un ordinateur contient des installations côte à côte de SSMS, vérifiez que vous démarrez la version adaptée à vos besoins spécifiques. La version la plus récente est étiquetée *Microsoft SQL Server Management Studio 17* et a une nouvelle icône : 
+Si vous avez des commentaires ou des suggestions, ou si vous souhaitez signaler des problèmes, la meilleure façon de contacter l’équipe SSMS est de passer par [UserVoice](https://aka.ms/sqlfeedback).
+
+L’installation de SSMS 18.x ne met pas à niveau ni ne remplace les versions 17.x ou antérieures de SSMS. SSMS 18.x s’installe côte à côte avec les versions précédentes pour que vous puissiez utiliser les deux versions.
+
+Si un ordinateur contient des installations côte à côte de SSMS, vérifiez que vous démarrez la version adaptée à vos besoins spécifiques. La version la plus récente s’intitule *Microsoft SQL Server Management Studio 18* :
  
-   ![SSMS 17.x](media/download-sql-server-management-studio-ssms/version-icons.png)
 
-
-## <a name="available-languages"></a>Langues disponibles
-
-> [!NOTE]
-> Les versions localisées dans des langues autres que l’anglais nécessitent la [mise à jour de sécurité KB 2862966](https://support.microsoft.com/en-us/kb/2862966) si l’installation est effectuée sur : Windows 8, Windows 7, Windows Server 2012 et Windows Server 2008 R2.
-
+## <a name="available-languages-ssms-180-preview"></a>Langues disponibles (préversion de SSMS 18.0)
 
 Cette version de SSMS peut être installée dans les langues suivantes :
 
-SQL Server Management Studio 17.9 :<br>
-[Chinois (simplifié)](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x804) | [Chinois (traditionnel)](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x404) | [Anglais (États-Unis)](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x409) | [Français](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x40c) | [Allemand](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x407) | [Italien](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x410) | [Japonais](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x411) | [Coréen](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x412) | [Portugais (Brésil)](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x416) | [Russe](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x419) | [Espagnol](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x40a)
+SQL Server Management Studio 18.0 (préversion 4) :<br>
+[Chinois (simplifié)](https://go.microsoft.com/fwlink/?linkid=2014662&clcid=0x804) | [Chinois (traditionnel)](https://go.microsoft.com/fwlink/?linkid=2014662&clcid=0x404) | [Anglais (États-Unis)](https://go.microsoft.com/fwlink/?linkid=2014662&clcid=0x409) | [Français](https://go.microsoft.com/fwlink/?linkid=2014662&clcid=0x40c) | [Allemand](https://go.microsoft.com/fwlink/?linkid=2014662&clcid=0x407) | [Italien](https://go.microsoft.com/fwlink/?linkid=2014662&clcid=0x410) | [Japonais](https://go.microsoft.com/fwlink/?linkid=2014662&clcid=0x411) | [Coréen](https://go.microsoft.com/fwlink/?linkid=2014662&clcid=0x412) | [Portugais (Brésil)](https://go.microsoft.com/fwlink/?linkid=2014662&clcid=0x416) | [Russe](https://go.microsoft.com/fwlink/?linkid=2014662&clcid=0x419) | [Espagnol](https://go.microsoft.com/fwlink/?linkid=2014662&clcid=0x40a)
 
-Package de mise à niveau SQL Server Management Studio 17.9 (mise à niveau de 17.x vers 17.9) :<br>
-[Chinois (simplifié)](https://go.microsoft.com/fwlink/?linkid=2014215&clcid=0x804) | [Chinois (traditionnel)](https://go.microsoft.com/fwlink/?linkid=2014215&clcid=0x404) | [Anglais (États-Unis)](https://go.microsoft.com/fwlink/?linkid=2014215&clcid=0x409) | [Français](https://go.microsoft.com/fwlink/?linkid=2014215&clcid=0x40c) | [Allemand](https://go.microsoft.com/fwlink/?linkid=2014215&clcid=0x407) | [Italien](https://go.microsoft.com/fwlink/?linkid=2014215&clcid=0x410) | [Japonais](https://go.microsoft.com/fwlink/?linkid=2014215&clcid=0x411) | [Coréen](https://go.microsoft.com/fwlink/?linkid=2014215&clcid=0x412) | [Portugais (Brésil)](https://go.microsoft.com/fwlink/?linkid=2014215&clcid=0x416) | [Russe](https://go.microsoft.com/fwlink/?linkid=2014215&clcid=0x419) | [Espagnol](https://go.microsoft.com/fwlink/?linkid=2014215&clcid=0x40a)
+Package de mise à niveau de SQL Server Management Studio 18.0 (met à niveau vers 18.0) :<br>
+Aucune option de mise à niveau n’est disponible à l’heure actuelle.
 
 > [!NOTE]
-> Le module PowerShell de SQL Server est désormais une installation distincte que vous pouvez effectuer par l’intermédiaire de la galerie PowerShell. Pour plus d'informations, consultez la page [Télécharger le module SQL Server PowerShell](download-sql-server-ps-module.md).
-
-## <a name="sql-server-management-studio"></a>SQL Server Management Studio
+> Le module SQL Server PowerShell est une installation distincte que vous pouvez effectuer via PowerShell Gallery. Pour plus d'informations, consultez la page [Télécharger le module SQL Server PowerShell](download-sql-server-ps-module.md).
 
 
-## <a name="new-in-this-release"></a>Nouveautés de cette version
+## <a name="new-in-this-release-ssms-180-preview"></a>Nouveautés de cette version (préversion de SSMS 18.0)
 
-SSMS 17.9 est la dernière version de SQL Server Management Studio. La génération 17.x de SSMS prend en charge presque tous les composants de SQL Server 2008 à SQL Server 2017. La version 17.x prend également en charge la PaaS SQL Analysis Services.
+SSMS 18.0 (préversion) est la dernière version de SQL Server Management Studio. La génération 18.x de SSMS prend en charge presque tous les composants de SQL Server 2008 à la préversion de SQL Server 2019.
 
-Contenu de la version 17.9 :
-
-**SSMS général**
-
-Plan d’exécution de requêtes :
-
-- Le plan d’exécution de requêtes graphique affiche à présent les nouveaux attributs de rétroaction d’allocation de mémoire en mode ligne lorsque la fonctionnalité est activée pour un plan spécifique : IsMemoryGrantFeedbackAdjusted et LastRequestedMemory ajoutés à l’élément XML de plan de requête MemoryGrantInfo. Pour plus d’informations sur la rétroaction d’allocation de mémoire en mode ligne, voir [Traitement adaptatif des requêtes dans les bases de données SQL](https://docs.microsoft.com/sql/relational-databases/performance/adaptive-query-processing).
-
-Azure SQL : 
-
-- Ajout de la prise en charge des références SKU vCore dans la création de bases de données Azure. Pour plus d’informations, voir [Modèle d’achat par vCore](https://docs.microsoft.com/azure/sql-database/sql-database-service-tiers#vcore-based-purchasing-model).
+Pour plus d’informations sur les nouveautés de cette version, consultez [le journal des modifications SSMS](sql-server-management-studio-changelog-ssms.md).
 
 
-## <a name="supported-sql-offerings"></a>Produits SQL pris en charge
+## <a name="supported-sql-offerings-ssms-180-preview"></a>Produits SQL pris en charge (préversion de SSMS 18.0)
 
-* Cette version de SSMS fonctionne avec toutes les [versions prises en charge de SQL Server 2008 - SQL Server 2017](https://support.microsoft.com/lifecycle?C2=1044) et offre le meilleur niveau de prise en charge pour une utilisation des dernières fonctionnalités cloud dans Azure SQL Database et Azure SQL Data Warehouse.
-* Utilisez SSMS 17.x pour vous connecter à [SQL Server sur Linux](../linux/sql-server-linux-overview.md).
-* Par ailleurs, SSMS 17.x peut être installé côte à côte avec SSMS 16.x ou SQL Server 2014 SSMS et version antérieure.
-* SQL Server Integration Services (SSIS) : la version SSMS 17.x ne prend pas en charge la connexion au service SQL Server Integration Services hérité. Pour vous connecter à une version antérieure du service Integration Services hérité, utilisez la version de SSMS alignée sur la version de SQL Server. Par exemple, utilisez SSMS 16.x pour vous connecter au service SQL Server 2016 Integration Services hérité. SSMS 17.x et SSMS 16.x peuvent être installés côte à côte sur le même ordinateur. Depuis la version de SQL Server 2012, la base de données du catalogue SSIS, SSISDB, est la méthode recommandée pour stocker, gérer, exécuter et surveiller des packages Integration Services. Pour plus d’informations, consultez [Catalogue SSIS](../integration-services/catalog/ssis-catalog.md).
+* Cette version de SSMS fonctionne avec toutes les [versions prises en charge de SQL Server 2008 - [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)]](https://support.microsoft.com/lifecycle?C2=1044) et offre le meilleur niveau de prise en charge pour une utilisation des dernières fonctionnalités cloud d’Azure SQL Database et Azure SQL Data Warehouse.
+* Par ailleurs, SSMS 18.x peut être installé côte à côte avec SSMS 17.x, SSMS 16.x ou SSMS SQL Server 2014 et versions antérieures.
+* SQL Server Integration Services (SSIS) : SSMS version 17.x ou ultérieure ne prend pas en charge la connexion au service SQL Server Integration Services hérité. Pour vous connecter à une version antérieure du service Integration Services hérité, utilisez la version de SSMS alignée sur la version de SQL Server. Par exemple, utilisez SSMS 16.x pour vous connecter au service SQL Server 2016 Integration Services hérité. SSMS 17.x et SSMS 16.x peuvent être installés côte à côte sur le même ordinateur. Depuis la version de SQL Server 2012, la base de données du catalogue SSIS, SSISDB, est la méthode recommandée pour stocker, gérer, exécuter et surveiller des packages Integration Services. Pour plus d’informations, consultez [Catalogue SSIS](../integration-services/catalog/ssis-catalog.md).
 
-## <a name="supported-operating-systems"></a>Systèmes d’exploitation pris en charge
-  
+## <a name="supported-operating-systems-ssms-180-preview"></a>Systèmes d’exploitation pris en charge (préversion de SSMS 18.0)
+
 Cette version de SSMS prend en charge les plateformes 64 bits suivantes quand elle est utilisée avec le dernier Service Pack :
-- Windows 10 (64 bits)
-- Windows 8.1 (64 bits)
-- Windows 8 (64 bits)
-- Windows 7 (SP1) (64 bits)
+
+- Windows 10 (64 bits) *
 - Windows Server 2016 *
 - Windows Server 2012 R2 (64 bits)
 - Windows Server 2012 (64 bits)
 - Windows Server 2008 R2 (64 bits)
 
-\* SSMS 17.X est basé sur le shell isolé Visual Studio 2015, qui a été publié avant Windows Server 2016. Microsoft prend au sérieux la compatibilité des applications et vérifie que les applications déjà livrées continuent à s’exécuter sur les dernières versions de Windows. Pour réduire les problèmes liés à l’exécution de SSMS sur Windows Server 2016, vérifiez que vous avez appliqué toutes les mises à jour de SSMS. Si vous rencontrez des problèmes avec SSMS sur Windows Server 2016, contactez le support. L’équipe de support détermine si le problème est lié à SSMS, Visual Studio ou à la compatibilité de Windows. Puis, l’équipe de support achemine le problème vers l’équipe appropriée pour un examen approfondi.
+\* Nécessite la version 1607 (10.0.14939) ou ultérieure
 
-## <a name="ssms-installation-tips-and-issues"></a>Problèmes et conseils pour l’installation de SSMS
+> [!NOTE]
+> SSMS s’exécute sur Windows uniquement. Si vous avez besoin d’un outil qui s’exécute sur d’autres plateformes que Windows, envisagez Azure Data Studio. Azure Data Studio est un nouvel outil multiplateforme qui s’exécute sur macOS, Linux, ainsi que Windows. Pour plus d’informations, consultez [Azure Data Studio](../azure-data-studio/what-is.md).
+  
+## <a name="ssms-installation-tips-and-issues-ssms-180-preview"></a>Problèmes et conseils pour l’installation de SSMS (préversion de SSMS 18.0)
 
 ### <a name="minimize-installation-reboots"></a>Réduire les redémarrages de l’installation
 
@@ -132,37 +121,22 @@ Cette version de SSMS prend en charge les plateformes 64 bits suivantes quand 
   * Les actions indiquées sont généralement nécessaires une seule fois. Dans certains cas, un redémarrage est nécessaire pendant les mises à niveau supplémentaires appliquées à la même version principale de SSMS. Pour les mises à niveau mineures, tous les prérequis de SSMS sont déjà installés sur l’ordinateur.
 
 
-## <a name="release-notes"></a>Notes de publication
+## <a name="release-notes-ssms-180-preview"></a>Notes de publication (préversion de SSMS 18.0)
 
-Il n’existe actuellement aucun problème connu dans cette version.
+Les problèmes connus de la version actuelle sont les suivants :
 
+> [!IMPORTANT]
+> Quand les utilisateurs ont recours à l’authentification *universelle Active Directory avec prise en charge de MFA* avec l’Éditeur de requête SQL, leur connexion peut se fermer et se rouvrir à chaque appel de requête. Cette fermeture peut avoir pour effet de supprimer de façon inattendue les tables temporaires globales voire dans certains d’attribuer un nouveau SPID à la connexion. Cette fermeture ne se produit pas en présence d’une transaction ouverte sur la connexion. Pour contourner ce problème, les utilisateurs peuvent définir `persist security info=true` dans les paramètres de connexion.
 
+SSMS
 
-## <a name="uninstall-and-reinstall-ssms"></a>Désinstaller et réinstaller SSMS
+- Si vous double-cliquez sur un fichier .sql, SSMS se lance, mais le script réel ne s’ouvre pas.
+  - Solution de contournement : glissez-déplacez le fichier .sql vers l’éditeur SSMS.
 
-Si votre installation de SSMS rencontre des problèmes et qu’une désinstallation et réinstallation standard ne les résolvent pas, vous pouvez d’abord essayer de [réparer](https://support.microsoft.com/help/4028054/windows-10-repair-or-remove-programs) le shell isolé de Visual Studio 2015. Si la réparation du shell isolé de Visual Studio 2015 ne résout pas le problème, les étapes suivantes ont été trouvées pour résoudre de nombreux problèmes aléatoires :
+SSIS
 
-1.  Désinstallez SSMS comme vous désinstallez n’importe quelle application (avec *Applications et fonctionnalités*, *Programmes et fonctionnalités*, etc., selon votre version de Windows).
-
-2.  Désinstallez le shell isolé de Visual Studio 2015 **à partir d’une invite de commandes avec élévation de privilèges** :
-   
-    ```PUSHD "C:\ProgramData\Package Cache\FE948F0DAB52EB8CB5A740A77D8934B9E1A8E301\redist"```
-
-    ```vs_isoshell.exe /Uninstall /Force /PromptRestart```
-
-3.  Désinstallez Microsoft Visual C++ 2015 Redistributable comme vous désinstallez n’importe quelle application. Désinstallez x86 et x64 s’ils sont sur votre ordinateur.
-
-4.  Réinstallez le shell isolé de Visual Studio 2015 **à partir d’une invite de commandes avec élévation de privilèges** :  
-
-    ```PUSHD "C:\ProgramData\Package Cache\FE948F0DAB52EB8CB5A740A77D8934B9E1A8E301\redist"```  
- 
-    ```vs_isoshell.exe /PromptRestart```
-
-5.  Réinstallez SSMS.
-
-6.  Effectuez une mise à niveau avec la [version la plus récente de Visual C++ 2015 Redistributable](https://support.microsoft.com/help/2977003/the-latest-supported-visual-c-downloads) si vous n’êtes plus à jour.
-
-
+- Il est impossible de déployer ou d’exécuter un package qui cible une ancienne version de SQL Server et qui contient en même temps le composant Tâche de script/Script.
+- SSMS ne peut pas se connecter à Integration Services à distance.
 
 
 ## <a name="previous-releases"></a>Versions antérieures
@@ -183,3 +157,6 @@ Si votre installation de SSMS rencontre des problèmes et qu’une désinstallat
 - [Télécharger SSDT (SQL Server Data Tools)](../ssdt/download-sql-server-data-tools-ssdt.md)
 
 [!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]
+
+
+Si vous avez des commentaires ou des suggestions, ou si vous souhaitez signaler des problèmes, la meilleure façon de contacter l’équipe SSMS est de passer par [UserVoice](https://aka.ms/sqlfeedback).
