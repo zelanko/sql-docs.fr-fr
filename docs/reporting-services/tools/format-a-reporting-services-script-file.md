@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 85a207dd-4e0f-4d40-a41e-0c75f65d719c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 980a456f652958492a14eb688ae68b697898d874
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9b3606fe93d988d878f98d21124fbb5820cd0ee2
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47680797"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031488"
 ---
 # <a name="format-a-reporting-services-script-file"></a>Formater un fichier de script Reporting Services
   Un script [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] est un fichier de code [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET, écrit par rapport au proxy développé sur le service WSDL (Web Service Description Langage), qui définit l'API SOAP Reporting Services. Un fichier de script est stocké comme fichier texte Unicode ou UTF-8 avec l'extension .rss.  
@@ -48,7 +48,7 @@ End Sub
   
  Vous ne déclarez pas d'espaces de noms dans le fichier de script. Grâce à l’environnement de script, plusieurs espaces de noms [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] sont disponibles : **System.Web.Services**, **System.Web.Services.Protocols**, **System.Xml**et **System.IO**.  
   
- Pour des exemples de scripts, consultez [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889)(Exemples SQL Server Reporting Services).  
+ Pour des exemples de scripts, consultez [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889)(Exemples SQL Server Reporting Services).  
   
 ## <a name="see-also"></a> Voir aussi  
  [service Web Report Server](../../reporting-services/report-server-web-service/report-server-web-service.md)   

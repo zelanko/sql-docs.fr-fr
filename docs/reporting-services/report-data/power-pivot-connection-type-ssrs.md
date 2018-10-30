@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: a104c3c7-f118-4d02-9a0f-6859f1469d11
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 46a91e610fd49f19a4f755b039ce7b111840d5ca
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d86acb0dae3d8f9059229dda764403aa999fd817
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611567"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030848"
 ---
 # <a name="power-pivot-connection-type-ssrs"></a>Type de connexion PowerPivot (SSRS)
   Vous pouvez utiliser l’extension de traitement des données SQL Server Analysis Services pour récupérer des données d’un classeur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] publié dans une Galerie SharePoint [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
@@ -23,7 +23,7 @@ ms.locfileid: "47611567"
 ## <a name="prerequisites"></a>Conditions préalables requises  
  La source de données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] doit être publiée dans une Galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] sur un site SharePoint.  
   
- Pour prendre en charge les connexions du Générateur de rapports à un classeur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , vous devez disposer de SQL Server 2008 R2 ADOMD.NET sur votre station de travail. Cette bibliothèque cliente est installée avec [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour Excel, mais si vous utilisez un ordinateur qui n’a pas cette application, vous devez télécharger et installer ADOMD.NET à partir de la page [SQL Server 2008 R2 Feature Pack](http://go.microsoft.com/fwlink/?LinkId=192565).  
+ Pour prendre en charge les connexions du Générateur de rapports à un classeur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , vous devez disposer de SQL Server 2008 R2 ADOMD.NET sur votre station de travail. Cette bibliothèque cliente est installée avec [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour Excel, mais si vous utilisez un ordinateur qui n’a pas cette application, vous devez télécharger et installer ADOMD.NET à partir de la page [SQL Server 2008 R2 Feature Pack](https://go.microsoft.com/fwlink/?LinkId=192565).  
   
 ## <a name="data-source-type"></a>Type de source de données  
  Utilisez le type de source de données de rapport **Microsoft SQL Server Analysis Services**.  
@@ -32,7 +32,7 @@ ms.locfileid: "47611567"
  La chaîne de connexion est l’URL du classeur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] publié sur SharePoint dans la Galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ou une autre bibliothèque, par exemple `http://contoso-srv/subsite/PowerPivotLibrary/ContosoSales.xlsx`.  
   
 ## <a name="credentials"></a>Informations d'identification  
- Spécifiez les informations d’identification dont vous avez besoin pour accéder au classeur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] et au site SharePoint, par exemple l’authentification Windows (sécurité intégrée). Pour plus d’informations, consultez [Connexions de données, sources de données et chaînes de connexion &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) ou [Spécifier des informations d’identification dans le Générateur de rapports](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53).  
+ Spécifiez les informations d’identification dont vous avez besoin pour accéder au classeur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] et au site SharePoint, par exemple l’authentification Windows (sécurité intégrée). Pour plus d’informations, consultez [Connexions de données, sources de données et chaînes de connexion &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) ou [Spécifier des informations d’identification dans le Générateur de rapports](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53).  
   
 ## <a name="queries"></a>Requêtes  
  Lorsque vous êtes connecté à la source de données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , utilisez la requête graphique MDX pour créer une requête en explorant et en sélectionnant des données dans les structures de données sous-jacentes. Après avoir créé une requête, exécutez-la pour visualiser des exemples de données dans le volet Résultats.  
@@ -61,7 +61,7 @@ ms.locfileid: "47611567"
 -   Le rapport ne contient que les données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] d’une source de données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
 ## <a name="see-also"></a> Voir aussi  
- [Interface utilisateur du Concepteur de requêtes MDX Analysis Services &#40;Générateur de rapports&#41;](http://msdn.microsoft.com/library/7e288eee-2d37-485e-a6a0-dbba5e041e26)   
+ [Interface utilisateur du Concepteur de requêtes MDX Analysis Services &#40;Générateur de rapports&#41;](https://msdn.microsoft.com/library/7e288eee-2d37-485e-a6a0-dbba5e041e26)   
  [Expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
   
   

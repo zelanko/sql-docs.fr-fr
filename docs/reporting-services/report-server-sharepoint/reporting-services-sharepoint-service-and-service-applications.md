@@ -8,16 +8,16 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 3cafcc36570f06bfd85b8b9579a9b7c9ec94f7c9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1b22342b9f73ad87a2b6474772cd542b6a96ba55
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752527"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030628"
 ---
 # <a name="reporting-services-sharepoint-service-and-service-applications"></a>Service et applications de service Reporting Services SharePoint
 
-[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)])
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
@@ -28,7 +28,7 @@ ms.locfileid: "47752527"
   
 ## <a name="creating-a-reporting-services-service-application"></a>Création d’une application de service Reporting Services
 
- Vous pouvez utiliser l’Administration centrale de SharePoint ou les scripts PowerShell pour créer les applications de service Reporting Services. Pour plus d’informations sur l’utilisation de l’Administration centrale de SharePoint, consultez la section « Créez une nouvelle application de service Reporting Services » dans [Installer le mode SharePoint de Reporting Services pour SharePoint 2010](http://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c). Consultez la section PowerShell plus loin dans cette rubrique pour obtenir un exemple de script PowerShell permettant de créer des applications de service.  
+ Vous pouvez utiliser l’Administration centrale de SharePoint ou les scripts PowerShell pour créer les applications de service Reporting Services. Pour plus d’informations sur l’utilisation de l’Administration centrale de SharePoint, consultez la section « Créez une nouvelle application de service Reporting Services » dans [Installer le mode SharePoint de Reporting Services pour SharePoint 2010](https://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c). Consultez la section PowerShell plus loin dans cette rubrique pour obtenir un exemple de script PowerShell permettant de créer des applications de service.  
   
 ## <a name="modify-the-associations-of-the-service-application-with-a-proxy-group"></a>Modifier les associations de l’application de service avec un groupe de proxy
 
@@ -83,4 +83,4 @@ ms.locfileid: "47752527"
 |Gérez les paramètres de votre application de service.|[Gérer une application de service SharePoint Reporting Services](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)|  
 |Sauvegardez et restaurez l'application de service et ses composants connexes tels que les clés de chiffrement et le proxy.|[Applications de service SharePoint de sauvegarde et de restauration Reporting Services](../../reporting-services/report-server-sharepoint/backup-and-restore-reporting-services-sharepoint-service-applications.md)|  
 
-D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

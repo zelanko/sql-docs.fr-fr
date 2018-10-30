@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2fde08b2-137d-4f4b-88e5-216030216e0d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 79d3ad6cf88bc4581ddea74e145d21c88c57114b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4367c20c7f673f1075182385de092231ca289c72
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833267"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031068"
 ---
 # <a name="report-server-service-trace-log"></a>Report Server Service Trace Log
   Les journaux des traces du serveur de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sont des fichiers texte ASCII qui contiennent des informations détaillées sur les opérations du service Report Server.  Ce fichier contient des informations telles que les opérations effectuées par le service web Report Server, le portail web et le traitement en arrière-plan. Le fichier journal des traces comprend des informations redondantes qui sont consignées dans d'autres fichiers journaux, ainsi que des informations qui ne se trouvent nulle part ailleurs. Les informations du journal des traces sont utiles si vous déboguez une application qui comprend un serveur de rapports, ou si vous essayez de déterminer l’origine d’un problème consigné dans le journal des événements ou le journal des exécutions. Par exemple, lors de la résolution des problèmes liés aux abonnements.  
@@ -110,5 +110,5 @@ Dans les versions antérieures de [!INCLUDE[ssRSnoversion_md](../../includes/ssr
 ## <a name="see-also"></a> Voir aussi  
  [Fichiers journaux et sources de Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   
  [Guide de référence des erreurs et des événements &#40;Reporting Services&#41;](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
- D’autres questions ? [Essayez le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+ D’autres questions ? [Essayez le forum Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)
   

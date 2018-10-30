@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 18a98f2f-6b40-454e-9b37-568ed1a96458
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 05484d30e5a383f1efe3b7bed3403cb0546808fd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 86e0331f1d7a9c8485376fed057158f07637f158
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747307"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031038"
 ---
 # <a name="verifying-a-report-run"></a>Vérification de l'exécution d'un rapport
   Pour afficher des informations sur l'état du traitement d'un rapport, vous pouvez utiliser les fichiers journaux ou vous référer aux informations d'état qui s'affichent avec le rapport dans le Gestionnaire de rapports.  
@@ -38,13 +38,13 @@ ms.locfileid: "47747307"
   
 |Pour ce type de rapport|Les informations de date et d'heure se situent ici|Pour afficher ces informations, procédez comme suit|  
 |-----------------------------|-----------------------------------------------|-----------------------------------------------|  
-|Rapport s'exécutant en tant qu'instantané de rapport.|Dans la page Contenu. Pour plus d’informations, consultez [Page Contenu &#40;Gestionnaire de rapports&#41;](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378).|1) Localisez le dossier contenant le rapport.<br /><br /> 2) Choisissez d’afficher le contenu du dossier en mode Détails.<br /><br /> 3) Notez la date et l’heure figurant dans la colonne **Lors de l’exécution** .|  
-|Instantané dans l'historique de rapport.|Dans la page des propriétés de l'historique. Pour plus d’informations, consultez [Page de propriétés Options d’instantanés &#40;Gestionnaire de rapports&#41;](http://msdn.microsoft.com/library/f6641f59-5267-4f57-8957-63b93d1a9679).|1) Ouvrez le rapport.<br /><br /> 2) Cliquez sur la page **Propriétés** .<br /><br /> 3) Cliquez sur l’onglet **Historique** .<br /><br /> 4) Notez la date et l’heure figurant dans la colonne **Lors de l’exécution** .|  
+|Rapport s'exécutant en tant qu'instantané de rapport.|Dans la page Contenu. Pour plus d’informations, consultez [Page Contenu &#40;Gestionnaire de rapports&#41;](https://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378).|1) Localisez le dossier contenant le rapport.<br /><br /> 2) Choisissez d’afficher le contenu du dossier en mode Détails.<br /><br /> 3) Notez la date et l’heure figurant dans la colonne **Lors de l’exécution** .|  
+|Instantané dans l'historique de rapport.|Dans la page des propriétés de l'historique. Pour plus d’informations, consultez [Page de propriétés Options d’instantanés &#40;Gestionnaire de rapports&#41;](https://msdn.microsoft.com/library/f6641f59-5267-4f57-8957-63b93d1a9679).|1) Ouvrez le rapport.<br /><br /> 2) Cliquez sur la page **Propriétés** .<br /><br /> 3) Cliquez sur l’onglet **Historique** .<br /><br /> 4) Notez la date et l’heure figurant dans la colonne **Lors de l’exécution** .|  
 |Rapport mis en cache.|Dans la planification utilisée pour créer et actualiser le rapport mis en cache.|1) Ouvrez le rapport.<br /><br /> 2) Cliquez sur la page **Propriétés** .<br /><br /> 3) Cliquez sur l’onglet **Exécution** .<br /><br /> 4) Ouvrez la planification.|  
   
 ## <a name="see-also"></a> Voir aussi  
  [Fichiers journaux et sources de Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   
- [Définir les propriétés de traitement d'un rapport](../../reporting-services/report-server/set-report-processing-properties.md)   
- [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)  
+ [Définir les propriétés de traitement d’un rapport](../../reporting-services/report-server/set-report-processing-properties.md)   
+ [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)  
   
   

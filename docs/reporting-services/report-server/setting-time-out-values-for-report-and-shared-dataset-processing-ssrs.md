@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0f9dc61d-d03c-4bbf-8090-7a53844350f8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 206c242dc250eb99b5cc00228928238fd4bc779c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b2b9c0607b2e7fbcc43ba45190c7acb6e0d92cd3
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47847808"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030698"
 ---
 # <a name="setting-time-out-values-for-report-and-shared-dataset-processing-ssrs"></a>Définition des valeurs de délai d'attente pour le traitement d'un rapport et d'un dataset partagé (SSRS)
   Vous pouvez spécifier, à l’aide de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] des valeurs de délai d’attente pour fixer des limites à l’utilisation des ressources système. Le serveur de rapports accepte deux valeurs de délai d'attente :  
@@ -56,6 +56,6 @@ ms.locfileid: "47847808"
  [Définir les options de traitement &#40;Reporting Services en mode intégré SharePoint&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
  [Serveur de rapports Reporting Services &#40;mode natif&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
  [Gérer un processus en cours d'exécution](../../reporting-services/subscriptions/manage-a-running-process.md)   
- [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)  
+ [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)  
   
   

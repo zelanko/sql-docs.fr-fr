@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 473e574e-f1ff-4ef9-bda6-7028b357ac42
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 74a041097f0bd4d8ac824fcb24a21f2ff19339ff
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c029b1d3964b508655091e87c8774e76e4cc2639
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47699857"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021953"
 ---
 # <a name="manage-a-running-process"></a>Gérer un processus en cours d'exécution
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] analyse l'état des travaux qui s'exécutent sur le serveur de rapports. À intervalles réguliers, le serveur de rapports procède à une analyse des travaux en cours et transmet des informations d'état à la base de données du serveur de rapports ou aux bases de données d'application de service pour le mode SharePoint. Un travail est en cours si l'un des processus suivants est en cours : exécution de la requête sur un serveur de base de données distant ou local, traitement des rapports et rendu de rapport.  
@@ -121,7 +121,7 @@ ms.locfileid: "47699857"
  [Propriétés du travail &#40;Management Studio&#41;](../../reporting-services/tools/job-properties-management-studio.md)   
  [Modifier un fichier de configuration Reporting Services &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
  [RsReportServer.config Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
- [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
- [Contrôle des performances d'un serveur de rapports](../../reporting-services/report-server/monitoring-report-server-performance.md)  
+ [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [Analyse des performances d'un serveur de rapports](../../reporting-services/report-server/monitoring-report-server-performance.md)  
   
   

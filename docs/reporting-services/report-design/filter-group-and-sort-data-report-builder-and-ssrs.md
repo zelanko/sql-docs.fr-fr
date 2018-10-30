@@ -17,12 +17,12 @@ f1_keywords:
 ms.assetid: 4dda2a7f-3f31-47e9-a88b-28d770ebd65e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fe646114217d00fbdf18b6eb304c8826b8b949d5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 74f047ddc136ae1b117f533d45391ef8b2048441
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47725967"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031128"
 ---
 # <a name="filter-group-and-sort-data-report-builder-and-ssrs"></a>Filtrer, regrouper et trier des données (Générateur de rapports et SSRS)
   Dans un rapport, les expressions sont utilisées pour aider à contrôler, organiser et trier les données de rapport. Par défaut, lorsque vous créez des datasets et concevez la mise en page de rapport, les propriétés des éléments de rapport prennent automatiquement la valeur d'expressions en fonction des champs, paramètres et autres éléments de dataset qui s'affichent dans le volet des données de rapport. Vous pouvez également ajouter un bouton de tri interactif à une cellule de tableau ou de matrice afin de permettre à un utilisateur de modifier interactivement l'ordre de tri des lignes pour des groupes ou pour des lignes situées dans des groupes.  
@@ -47,7 +47,7 @@ ms.locfileid: "47725967"
   
 -   [Didacticiels sur Reporting Services &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)  
   
--   [Exemples de rapports (Générateur de rapports et SSRS)](http://go.microsoft.com/fwlink/?LinkId=198283)  
+-   [Exemples de rapports (Générateur de rapports et SSRS)](https://go.microsoft.com/fwlink/?LinkId=198283)  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

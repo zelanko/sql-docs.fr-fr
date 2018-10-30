@@ -8,20 +8,20 @@ ms.topic: conceptual
 ms.assetid: 628c8775-c62d-45ac-b349-23db86fa4e6c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b49ec38fd8cedb7d55608d455d2b009ca62f978c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 68ea91137c584959c53ee8de010dbff92106c119
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47598397"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028058"
 ---
 # <a name="create-drillthrough-rdlc-report-with-parameters---reportviewer"></a>Créer un rapport d’extraction (RDLC) avec des paramètres - ReportViewer
-Un rapport [d’extraction](http://technet.microsoft.com/library/ff519554.aspx) est un rapport que l’utilisateur ouvre en cliquant sur un lien situé dans un autre rapport. Il contient en général des détails sur un élément figurant dans le rapport de synthèse d'origine. Ce tutoriel vous guide tout au long des leçons suivantes pour créer un rapport d’extraction avec des paramètres et une requête, en [mode local](report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md).  
+Un rapport [d’extraction](https://technet.microsoft.com/library/ff519554.aspx) est un rapport que l’utilisateur ouvre en cliquant sur un lien situé dans un autre rapport. Il contient en général des détails sur un élément figurant dans le rapport de synthèse d'origine. Ce didacticiel vous guide tout au long des leçons suivantes pour créer un rapport d’extraction avec des paramètres et une requête, en [mode local](report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md).  
   
 ## <a name="requirements"></a>Spécifications  
 Pour suivre cette procédure pas à pas, vous devez avoir accès à l’exemple de base de données **AdventureWorks2014** . Pour plus d’informations sur la façon d’obtenir l’exemple de base de données **AdventureWorks2014**, consultez [Exemples de bases de données AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases).  
   
-Cette procédure pas à pas part du principe que vous connaissez les requêtes Transaction-SQL et les objets ADO.NET [DataSet](https://msdn.microsoft.com/library/system.data.dataset.aspx) et [DataTable](http://msdn.microsoft.com/library/system.data.datatable.aspx) .  
+Cette procédure pas à pas part du principe que vous connaissez les requêtes Transaction-SQL et les objets ADO.NET [DataSet](https://msdn.microsoft.com/library/system.data.dataset.aspx) et [DataTable](https://msdn.microsoft.com/library/system.data.datatable.aspx) .  
   
 Utilisez Visual Studio 2015 et l’application web ASP.NET pour créer une page web ASP.NET avec un contrôle ReportViewer. Le contrôle est configuré en vue d'afficher un rapport que vous créez. Pour cette procédure pas à pas, vous créez l'application dans Microsoft Visual C#.  
   

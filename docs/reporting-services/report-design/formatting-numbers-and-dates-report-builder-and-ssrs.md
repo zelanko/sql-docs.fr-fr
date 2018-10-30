@@ -17,19 +17,19 @@ f1_keywords:
 ms.assetid: 6de1a725-9f06-4708-be26-2d55e442e344
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a590a8f0738a5717f7982cdd095d73bfcc18dc55
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 379f8a3cc95df4bfb2ed55ac639516d025abc32f
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47803757"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029208"
 ---
 # <a name="formatting-numbers-and-dates-report-builder-and-ssrs"></a>Mise en forme des nombres et des dates (Générateur de rapports et SSRS)
   Vous pouvez mettre en forme les nombres et les dates dans les régions de données en sélectionnant un format dans la page **Nombre** de la boîte de dialogue **Propriétés** de la région de données correspondante.  
   
  Pour spécifier des chaînes de format dans un élément de rapport de zone de texte, sélectionnez l’élément que vous souhaitez mettre en forme, cliquez dessus avec le bouton droit, sélectionnez **Propriétés de la zone de texte**, puis cliquez sur **Nombre**. En procédant de la même manière, vous pouvez mettre en forme des cellules individuelles d'une région de données de table ou de matrice, car ces cellules sont des zones de texte individuelles.  
   
- Une région de données de graphique affiche généralement des dates le long de l'axe des abscisses (x) et des valeurs le long de l'axe des ordonnées (y). Pour spécifier la mise en forme d’un graphique, cliquez avec le bouton droit sur un axe et sélectionnez **Propriétés de l’axe**. Sur l'axe des ordonnées, vous ne pouvez spécifier que des formats pour les nombres. Pour plus d’informations, consultez [Mise en forme des points de données sur un graphique &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md).  
+ Une région de données de graphique affiche généralement des dates le long de l'axe des abscisses (x) et des valeurs le long de l'axe des ordonnées (y). Pour spécifier la mise en forme d’un graphique, cliquez avec le bouton droit sur un axe et sélectionnez **Propriétés de l’axe**. Sur l'axe des ordonnées, vous ne pouvez spécifier que des formats pour les nombres. Pour plus d’informations, consultez [Formatting Axis Labels on a Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md).  
   
  Pour spécifier la mise en forme d’une région de données de jauge, cliquez avec le bouton droit sur l’échelle de la jauge et sélectionnez **Propriétés de l’échelle radiale** ou **Propriétés de l’échelle linéaire**.  
   
@@ -44,13 +44,13 @@ ms.locfileid: "47803757"
   
 -   Par défaut, les nombres sont mis en forme de manière à refléter les paramètres culturels de l'ordinateur client. Utilisez des chaînes de mise en forme pour spécifier l'affichage des nombres, de sorte que la mise en forme soit cohérente quel que soit l'endroit où se trouve la personne qui consulte le rapport.  
   
--   Les formats fournis dans la page **Nombre** constituent un sous-ensemble des chaînes de format numérique standard [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . Pour mettre en forme un nombre ou une date à l'aide d'un format personnalisé qui ne figure pas dans la boîte de dialogue, vous pouvez utiliser les chaînes de format [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] pour les nombres ou les dates. Pour plus d'informations sur les chaînes de format personnalisées, consultez la rubrique [Mise en forme des types](http://go.microsoft.com/fwlink/?LinkId=112024) sur MSDN.  
+-   Les formats fournis dans la page **Nombre** constituent un sous-ensemble des chaînes de format numérique standard [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . Pour mettre en forme un nombre ou une date à l'aide d'un format personnalisé qui ne figure pas dans la boîte de dialogue, vous pouvez utiliser les chaînes de format [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] pour les nombres ou les dates. Pour plus d'informations sur les chaînes de format personnalisées, consultez la rubrique [Mise en forme des types](https://go.microsoft.com/fwlink/?LinkId=112024) sur MSDN.  
   
 -   Si une chaîne de format personnalisée a été spécifiée, sa priorité est plus élevée que les paramètres par défaut qui sont spécifiques à une culture. Par exemple, supposez que vous définissez une chaîne de format personnalisée de "#,###" pour afficher le nombre 1234 sous la forme 1,234. Cela peut avoir une signification différente selon que l'utilisateur se trouve aux États-Unis ou en Europe. Avant de spécifier un format personnalisé, tenez compte de l'effet du format que vous choisissez sur des utilisateurs de cultures différentes qui peuvent être amenés à consulter le rapport.  
   
 -   Si vous spécifiez une chaîne de format non valide, le texte mis en forme est interprété en tant que chaîne littérale qui remplace la mise en forme.  
   
--   Si vous mettez en forme une combinaison de nombres et de caractères dans une même zone de texte, envisagez d'utiliser un espace réservé pour mettre en forme les nombres en les séparant du reste du texte. Pour plus d’informations, consultez [Mise en forme du texte et des espaces réservés &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md). Si une chaîne de format non valide est spécifiée pour la propriété Format de la zone de texte, la chaîne de format est ignorée. Si une chaîne de format non valide est spécifiée pour la propriété Format du graphique ou de la jauge, la chaîne de format que vous avez spécifiée est interprétée en tant que chaîne et la mise en forme n’est pas appliquée.  
+-   Si vous mettez en forme une combinaison de nombres et de caractères dans une même zone de texte, envisagez d'utiliser un espace réservé pour mettre en forme les nombres en les séparant du reste du texte. Pour plus d’informations, consultez [Formatting Text and Placeholders &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md). Si une chaîne de format non valide est spécifiée pour la propriété Format de la zone de texte, la chaîne de format est ignorée. Si une chaîne de format non valide est spécifiée pour la propriété Format du graphique ou de la jauge, la chaîne de format que vous avez spécifiée est interprétée en tant que chaîne et la mise en forme n’est pas appliquée.  
   
 -   Si vous sélectionnez **Devise** sous **Catégorie** et si vous activez **Afficher les valeurs en**, vous pouvez sélectionner **Milliers**, **Millions**ou **Milliards** pour afficher les nombres au format financier. Par exemple, si la valeur du champ est 1 789 905 394, que vous sélectionnez **Milliards** et spécifiez 2 comme nombre de décimales, la valeur affichée dans le rapport est 1,78.  
   

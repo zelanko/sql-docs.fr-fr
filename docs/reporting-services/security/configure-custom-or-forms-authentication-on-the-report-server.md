@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: e8601a8f-e66d-4649-8e4d-a46ca20ec7d0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2cb60efd33fdcf0ad6a7ea67b5c6011b016fd682
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4ef775e1474c38e95491388465d1010c23d64526
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47617247"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50027478"
 ---
 # <a name="configure-custom-or-forms-authentication-on-the-report-server"></a>Configurer l'authentification personnalisée ou par formulaire sur le serveur de rapports
 
@@ -27,7 +27,7 @@ En pratique, le déploiement d'une extension d'authentification personnalisée r
 > [!NOTE]
 >  La création d’une extension d’authentification personnalisée nécessite du code personnalisé et des compétences en matière de sécurité [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] . Si vous ne souhaitez pas créer de code pour une extension d'authentification personnalisée, vous pouvez utiliser des comptes et des groupes [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory, mais vous devez réduire grandement l'étendue d'un déploiement de serveur de rapports. Pour plus d’informations sur l’authentification personnalisée, consultez [Implémentation d’une extension de sécurité](../../reporting-services/extensions/security-extension/implementing-a-security-extension.md).
 
-En outre, si vous souhaitez utiliser une authentification par formulaire ou une extension d’authentification personnalisée dans un environnement SQL Server Reporting Services intégré à un produit SharePoint, vous devez configurer le site SharePoint pour qu’il utilise la méthode d’authentification que vous choisissez. Pour plus d’informations sur la configuration de l’authentification dans SharePoint, consultez [Exemples d’authentification](http://go.microsoft.com/fwlink/?LinkId=115575) sur [!INCLUDE[msCoName](../../includes/msconame-md.md)] Developer Network (MSDN).
+En outre, si vous souhaitez utiliser une authentification par formulaire ou une extension d’authentification personnalisée dans un environnement SQL Server Reporting Services intégré à un produit SharePoint, vous devez configurer le site SharePoint pour qu’il utilise la méthode d’authentification que vous choisissez. Pour plus d’informations sur la configuration de l’authentification dans SharePoint, consultez [Exemples d’authentification](https://go.microsoft.com/fwlink/?LinkId=115575) sur [!INCLUDE[msCoName](../../includes/msconame-md.md)] Developer Network (MSDN).
 
 
 
@@ -83,4 +83,4 @@ En outre, si vous souhaitez utiliser une authentification par formulaire ou une 
 [RsReportServer.config Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
 [Configurer une authentification de base sur le serveur de rapports](../../reporting-services/security/configure-basic-authentication-on-the-report-server.md)   
 [Configurer une authentification Windows sur le serveur de rapports](../../reporting-services/security/configure-windows-authentication-on-the-report-server.md)  
-D’autres questions ? [Essayez le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+D’autres questions ? [Essayez le forum Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

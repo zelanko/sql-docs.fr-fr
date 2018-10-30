@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 146542c3-8efd-4b89-a8d8-77d22896630e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c4814359213649eb4bb7ed5a8d3b36c5b1dd8cc6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 18b41757ada0d21136e5768eade88ecf8b2a7d40
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645117"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029758"
 ---
 # <a name="caching-reports-ssrs"></a>Mise en cache de rapports (SSRS)
   Un serveur de rapports peut mettre en mémoire cache la copie d'un rapport traité et retourner cette copie lorsqu'un utilisateur ouvre le rapport. Pour cet utilisateur, la date et l'heure de l'exécution du rapport sont les seules informations qui lui permettent de savoir que ce rapport est une copie en cache. Si la date ou l'heure n'est pas celle en cours et que le rapport n'est pas un instantané, ceci signifie que le rapport a été extrait du cache.  
@@ -69,11 +69,11 @@ ms.locfileid: "47645117"
   
 ## <a name="see-also"></a> Voir aussi  
  [Définir les options de traitement &#40;Reporting Services en mode intégré SharePoint&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
- [Définir les propriétés de traitement d'un rapport](../../reporting-services/report-server/set-report-processing-properties.md)   
+ [Définir les propriétés de traitement d’un rapport](../../reporting-services/report-server/set-report-processing-properties.md)   
  [Concepts de Reporting Services &#40;SSRS&#41;](../../reporting-services/reporting-services-concepts-ssrs.md)   
  [Précharger le cache &#40;Gestionnaire de rapports&#41;](../../reporting-services/report-server/preload-the-cache-report-manager.md)   
  [Planifications](../../reporting-services/subscriptions/schedules.md)   
  [Mettre en cache les datasets partagés &#40;SSRS&#41;](../../reporting-services/report-server/cache-shared-datasets-ssrs.md)   
- [Options d’actualisation du cache &#40;Gestionnaire de rapports&#41;](http://msdn.microsoft.com/library/227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6)  
+ [Options d’actualisation du cache &#40;Gestionnaire de rapports&#41;](https://msdn.microsoft.com/library/227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6)  
   
   

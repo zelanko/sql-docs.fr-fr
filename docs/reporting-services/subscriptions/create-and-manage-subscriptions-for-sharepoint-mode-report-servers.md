@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 44be7ee2-33ce-46e4-9d1a-a20aaf43a227
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d16794c7903ac106f0ca62953498fe7df70d7303
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 44f4ba6f43d0c1d83aee358e018bc6aa51a12abe
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761817"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50100090"
 ---
 # <a name="create-and-manage-subscriptions-for-sharepoint-mode-report-servers"></a>Créer et gérer des abonnements pour des serveurs de rapports en mode SharePoint
   Vous pouvez créer des abonnements [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour remettre les rapports à partir d’une application web SharePoint qui est intégrée à un serveur de rapports en mode SharePoint. Les abonnements peuvent remettre des rapports dans une bibliothèque de documents, un dossier de fichiers ou sous forme de courrier électronique. Cette rubrique résume les conditions requises et les étapes de création d’un abonnement [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
@@ -159,6 +159,6 @@ ms.locfileid: "47761817"
  [Remise par e-mail dans Reporting Services](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md)   
  [Remise par partage de fichiers dans Reporting Services](../../reporting-services/subscriptions/file-share-delivery-in-reporting-services.md)   
  [Remise à une bibliothèque SharePoint dans Reporting Services](../../reporting-services/subscriptions/sharepoint-library-delivery-in-reporting-services.md)   
- [Configurer un serveur de rapports pour la remise par messagerie (Gestionnaire de configuration de SSRS)](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83)  
+ [Configurer un serveur de rapports pour la remise par messagerie (Gestionnaire de configuration de SSRS)](https://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83)  
   
   

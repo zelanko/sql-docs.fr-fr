@@ -7,12 +7,12 @@ ms.topic: conceptual
 ms.assetid: f880c623-67c8-4167-b98b-ace17e800faa
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 797b174427fa5a23542c26131dc3a74cd81fbba2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d343831a702a3301cdff7b6c18bcd39318cd6241
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603007"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021333"
 ---
 # <a name="configure-the-report-server-service-account-ssrs-configuration-manager"></a>Configurer le compte de service Report Server (Gestionnaire de configuration de SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] est implémenté en tant que service unique qui contient un service Web Report Server, le [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]et une application de traitement en arrière-plan utilisée pour le traitement des rapports planifié et la remise d’abonnement. Cette rubrique explique comment le compte de service est configuré initialement et comment modifier le compte ou le mot de passe à l'aide de l'outil de configuration de Reporting Services.  
@@ -33,7 +33,7 @@ ms.locfileid: "47603007"
   
 -   Il met à jour automatiquement les autorisations de connexion sur l’instance du [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] utilisée pour héberger la base de données du serveur de rapports. Le nouveau compte est ajouté au rôle **RSExecRole**.  
   
-     La connexion de base de données pour l'ancien compte n'est pas supprimée automatiquement. Assurez-vous de supprimer les comptes qui ne sont plus utilisés. Pour plus d’informations, consultez [Administrer une base de données du serveur de rapports &#40;SSRS en mode natif&#41;](../../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md) dans la documentation en ligne de SQL Server.  
+     La connexion de base de données pour l'ancien compte n'est pas supprimée automatiquement. Assurez-vous de supprimer les comptes qui ne sont plus utilisés. Pour plus d’informations, consultez [Administrer une base de données du serveur de rapports &#40;SSRS en mode natif&#41;](../../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md) dans la documentation en ligne de SQL Server.  
   
      L’accord des autorisations de base de données à un nouveau compte de service a lieu uniquement si vous avez configuré en premier lieu la connexion de base de données du serveur de rapports de façon à utiliser le compte de service. Si vous avez configuré la connexion de base de données du serveur de rapports de façon à utiliser un compte d'utilisateur de domaine ou une connexion de base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , les informations de connexion ne sont pas affectées par la mise à jour du compte de service.  
   
@@ -88,7 +88,7 @@ Les instructions et les liens suivants de cette section peuvent vous aider à ch
   
 -   [Configurer les comptes de service Windows et les autorisations](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) dans la documentation en ligne de SQL Server.  
   
--   [Guide de planification de la sécurité des services et comptes de service](http://go.microsoft.com/fwlink/?LinkId=69155) sur MSDN.  
+-   [Guide de planification de la sécurité des services et comptes de service](https://go.microsoft.com/fwlink/?LinkId=69155) sur MSDN.  
   
 ## <a name="updating-an-expired-password"></a>Mise à jour d'un mot de passe  expiré  
  Si le service Report Server s’exécute sous un compte de domaine et que le mot de passe expire avant que vous puissiez le mettre à jour dans le Gestionnaire de configuration de Reporting Services, le service ne démarrera pas tant que vous n’aurez pas spécifié un nouveau mot de passe.  

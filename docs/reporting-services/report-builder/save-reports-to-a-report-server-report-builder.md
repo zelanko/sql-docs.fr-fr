@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 48dfef01-ed8c-4f23-90c3-de67c90a97dd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8978a5ad1429890861c96238317b38189c144409
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 13b71430d1d07eb8c33492bfe18c7c2b2395b951
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826717"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50027814"
 ---
 # <a name="save-reports-to-a-report-server-report-builder"></a>Enregistrer des rapports sur un serveur de rapports (Générateur de rapports)
   Dans le Générateur de rapports, vous pouvez enregistrer une définition de rapport sur un serveur de rapports (on parle également de publier un rapport). Le fait d'enregistrer un rapport sur un serveur de rapports permet aux autres utilisateurs de le consulter. Chaque fois que vous exécutez le rapport publié, vous récupérez les données les plus récentes. Pour enregistrer une copie statique d'un rapport rendu, exportez le rapport sous un format de fichier différent et enregistrez-le ou utilisez la fonctionnalité d'historique de rapport pour enregistrer des versions de rapports rendus.  
@@ -50,6 +50,6 @@ ms.locfileid: "47826717"
  [Recherche, affichage et gestion des rapports &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Exporter des rapports &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)   
  [Enregistrement des rapports &#40;Générateur de rapports&#41;](../../reporting-services/report-builder/saving-reports-report-builder.md)   
- [Exporter un rapport dans un autre type de fichier &#40;Générateur de rapports et SSRS&#41;](http://msdn.microsoft.com/library/b577568b-ecbd-44c3-be88-31dab6fc38a2)  
+ [Exporter un rapport dans un autre type de fichier &#40;Générateur de rapports et SSRS&#41;](https://msdn.microsoft.com/library/b577568b-ecbd-44c3-be88-31dab6fc38a2)  
   
   

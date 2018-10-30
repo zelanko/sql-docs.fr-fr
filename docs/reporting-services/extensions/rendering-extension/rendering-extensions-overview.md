@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 909356a0-4709-43e5-b597-33bd9bb22882
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bf01ea0fda03d38291c8a41a044fc409406fa89b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b727b8ff0bdfcca2af46cf1df56b5080c0a56215
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47679337"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50027948"
 ---
 # <a name="rendering-extensions-overview"></a>Vue d'ensemble des extensions de rendu
   Une extension de rendu est un composant ou un module d'un serveur de rapports qui transforme les données de rapport et les informations de disposition dans un format spécifique au périphérique. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] comprend sept extensions de rendu : HTML, Excel, Word, CSV ou texte, XML, image et PDF. Vous pouvez créer des extensions de rendu supplémentaires pour créer des rapports dans d'autres formats.  
@@ -54,7 +54,7 @@ ms.locfileid: "47679337"
   
  L'écriture d'une extension de rendu personnalisée est difficile. Une extension de rendu doit généralement prendre en charge toutes les combinaisons possibles d'éléments de rapport et nécessite d'implémenter des centaines de classes, interfaces, méthodes et propriétés. Si vous devez effectuer le rendu d’un rapport dans un format qui n’est pas inclus avec [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] et que vous décidez d’écrire votre propre implémentation de code managé d’une extension de rendu, le code de l’extension de rendu doit implémenter l’interface **Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension** que nécessite le serveur de rapports.  
   
- Pour une documentation supplémentaire et des livres blancs sur [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], consultez les ressources techniques les plus récentes sur le [site web Reporting Services](http://go.microsoft.com/fwlink/?LinkId=19951).  
+ Pour une documentation supplémentaire et des livres blancs sur [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], consultez les ressources techniques les plus récentes sur le [site web Reporting Services](https://go.microsoft.com/fwlink/?LinkId=19951).  
   
 ## <a name="see-also"></a> Voir aussi  
  [Implémentation d’une extension de rendu](../../../reporting-services/extensions/rendering-extension/implementing-a-rendering-extension.md)   

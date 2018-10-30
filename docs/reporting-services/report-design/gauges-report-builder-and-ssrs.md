@@ -156,12 +156,12 @@ f1_keywords:
 ms.assetid: 1f086882-4834-48e9-ab30-c214beee2040
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fb366c4d9b2b199382df85a884e1806dbd974c67
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 083d03837cee77d02719d8053517f2f4541df1bd
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47805827"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031278"
 ---
 # <a name="gauges-report-builder-and-ssrs"></a>Jauges (Générateur de rapports et SSRS)
   Dans les rapports paginés [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , une région de données de jauge affiche une valeur unique tirée de votre dataset. Chaque jauge est toujours positionnée à l'intérieur d'un panneau de jauge, où vous pouvez ajouter des jauges enfants ou adjacentes. Dans un panneau de jauge, vous pouvez créer plusieurs jauges qui partagent des fonctions communes telles que le filtrage, le regroupement ou le tri.  
@@ -282,9 +282,9 @@ ms.locfileid: "47805827"
   
 -   [Définir un minimum ou un maximum sur une jauge &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md)  
   
--   [Définir un intervalle d'alignement sur une jauge (Générateur de rapports et SSRS)](http://msdn.microsoft.com/0ece7297-6e2f-47fb-835d-b9e9cce53fe2)  
+-   [Définir un intervalle d'alignement sur une jauge (Générateur de rapports et SSRS)](https://msdn.microsoft.com/0ece7297-6e2f-47fb-835d-b9e9cce53fe2)  
   
--   [Spécifier une image en tant que pointeur dans une jauge (Générateur de rapports et SSRS)](http://msdn.microsoft.com/9d73b3c3-a068-4868-a2be-0cd261b6e92b)  
+-   [Spécifier une image en tant que pointeur dans une jauge (Générateur de rapports et SSRS)](https://msdn.microsoft.com/9d73b3c3-a068-4868-a2be-0cd261b6e92b)  
   
 ##  <a name="InThisSection"></a> Dans cette section  
  Les rubriques suivantes fournissent des informations supplémentaires sur l'utilisation des jauges.  

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: b30d0308-4d9b-4f85-9f83-dece4dcb2775
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ecb1ff697f90149b102592306a8756bd7a84f776
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1b026e4e361ff6664dfdc78d0215ec3ed723fe93
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47777497"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021643"
 ---
 # <a name="configure-a-native-mode-report-server-scale-out-deployment"></a>Configurer un déploiement par montée en puissance parallèle de serveurs de rapports en mode natif.
 
@@ -26,7 +26,7 @@ Le mode natif de Reporting Services prend en charge un modèle de déploiement p
 
 Pour Power BI Report Server, vous devez configurer l’affinité du client (parfois appelée « sessions persistantes ») sur l’équilibreur de charge de n’importe quel environnement de montée en puissance parallèle, afin d’assurer des performances adéquates.  
   
-Pour SQL Server 2016 Reporting Services, les serveurs de rapports en mode SharePoint utilisent l’infrastructure de produits SharePoint pour la montée en puissance parallèle. La montée en puissance parallèle en mode SharePoint est effectuée en ajoutant des serveurs de rapports en mode SharePoint à la batterie de serveurs SharePoint. Pour plus d’informations sur la montée en puissance parallèle en mode SharePoint, consultez [Ajouter un serveur de rapports supplémentaires à une batterie de serveurs &#40;SSRS Scale-out&#41;](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md).  
+Pour SQL Server 2016 Reporting Services, les serveurs de rapports en mode SharePoint utilisent l’infrastructure de produits SharePoint pour la montée en puissance parallèle. La montée en puissance parallèle en mode SharePoint est effectuée en ajoutant des serveurs de rapports en mode SharePoint à la batterie de serveurs SharePoint. Pour plus d’informations sur la montée en puissance parallèle en mode SharePoint, consultez [Ajouter un serveur de rapports supplémentaires à une batterie de serveurs &#40;montée en puissance SSRS&#41;](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md).  
  
   Un *déploiement avec montée en puissance parallèle* est utilisé dans les scénarios suivants :  
   
@@ -143,7 +143,7 @@ Ce problème est intermittent dans le sens où seul le serveur qui a créé la t
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-[Configurer un compte de service](http://msdn.microsoft.com/library/25000ad5-3f80-4210-8331-d4754dc217e0)   
+[Configurer un compte de service](https://msdn.microsoft.com/library/25000ad5-3f80-4210-8331-d4754dc217e0)   
 [Configurer une URL](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
 [Créer une base de données du serveur de rapports en mode natif](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
 [Configurer des URL de serveurs de rapports](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
@@ -151,4 +151,4 @@ Ce problème est intermittent dans le sens où seul le serveur qui a créé la t
 [Ajouter et supprimer des clés de chiffrement pour un déploiement avevc montée en puissance prallèle](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)   
 [Gérer un serveur de rapports Reporting Services en mode natif](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)  
 
-D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

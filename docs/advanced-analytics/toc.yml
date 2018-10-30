@@ -9,7 +9,7 @@ items:
     href: r/sql-server-r-services.md
   - name: Serveur autonome
     href: r/r-server-standalone.md
-  - name: Nouveautés
+  - name: What's New
     href: what-s-new-in-sql-server-machine-learning-services.md
 - name: Extension Java
   items:
@@ -21,7 +21,7 @@ items:
     href: java/java-first-sample.md
   - name: Java et les types de données SQL
     href: java/java-sql-datatypes.md
-- name: Installer
+- name: Install
   items:
   - name: Différences dans SQL Server 2019
     href: install/sql-machine-learning-services-ver15.md
@@ -48,7 +48,7 @@ items:
     href: python/setup-python-client-tools-sql.md
   - name: Configurer un serveur virtuel
     href: r/installing-sql-server-r-services-on-an-azure-virtual-machine.md
-- name: Guides de démarrage rapide
+- name: Démarrages rapides
   items:
   - name: R
     items:
@@ -66,11 +66,37 @@ items:
       href: tutorials/rtsql-predict-and-plot-from-model.md
   - name: Python
     items:
-    - name: Wrapper Python dans une procédure stockée
-      href: tutorials/wrap-python-in-tsql-stored-procedure.md
-- name: Didacticiels
+    - name: Exécuter Python avec T-SQL
+      href: tutorials/run-python-using-t-sql.md
+- name: Tutoriels
   href: tutorials/machine-learning-services-tutorials.md
   items:
+  - name: Données
+    items:
+    - name: Jeu de données Airline
+      href: tutorials/demo-data-airlinedemo-in-sql.md
+    - name: Jeu de données Iris
+      href: tutorials/demo-data-iris-in-sql.md
+    - name: Jeu de données NYC Taxi
+      href: tutorials/demo-data-nyctaxi-in-sql.md
+  - name: Python
+    href: tutorials/sql-server-python-tutorials.md
+    items:
+    - name: Entraîner et utiliser votre premier modèle
+      href: tutorials/train-score-using-python-in-tsql.md
+    - name: Découvrir l’analytique dans la base de données
+      href: tutorials/sqldev-in-database-python-for-sql-developers.md
+      items:
+      - name: Explorer et visualiser des données
+        href: tutorials/sqldev-py3-explore-and-visualize-the-data.md
+      - name: Créer des caractéristiques de données
+        href: tutorials/sqldev-py4-create-data-features-using-t-sql.md
+      - name: Entraîner et enregistrer le modèle
+        href: tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md
+      - name: Rendre le modèle opérationnel
+        href: tutorials/sqldev-py6-operationalize-the-model.md
+    - name: Créer un modèle à l’aide de revoscalepy
+      href: tutorials/use-python-revoscalepy-to-create-model.md
   - name: R
     href: tutorials/sql-server-r-tutorials.md
     items:
@@ -79,15 +105,13 @@ items:
     - name: Découvrir l’analytique dans la base de données
       href: tutorials/sqldev-in-database-r-for-sql-developers.md
       items:
-      - name: 1 - Configurer les données de démonstration
-        href: tutorials/sqldev-download-the-sample-data.md
-      - name: 2 - Visualiser les données
+      - name: 1 - Visualiser les données
         href: tutorials/sqldev-explore-and-visualize-the-data.md
-      - name: 3 - Créer des caractéristiques de données
+      - name: 2 - Créer des caractéristiques de données
         href: tutorials/sqldev-create-data-features-using-t-sql.md
-      - name: 4 - Entraîner et enregistrer dans SQL
-        href: r/sqldev-train-and-save-a-model-using-t-sql.md
-      - name: 5 - Prédire les résultats
+      - name: 3 - Entraîner et enregistrer dans SQL
+        href: tutorials/sqldev-train-and-save-a-model-using-t-sql.md
+      - name: 4 - Prédire les résultats
         href: tutorials/sqldev-operationalize-the-model.md
     - name: Procédure pas à pas pour une solution complète de science des données
       href: tutorials/walkthrough-data-science-end-to-end-walkthrough.md
@@ -139,31 +163,6 @@ items:
         href: tutorials/deepdive-move-data-between-sql-server-and-xdf-file.md
       - name: Créer une simulation simple
         href: tutorials/deepdive-create-a-simple-simulation.md
-  - name: Python
-    href: tutorials/sql-server-python-tutorials.md
-    items:
-    - name: Exécuter Python avec T-SQL
-      href: tutorials/run-python-using-t-sql.md
-      items:
-      - name: Entraîner et scorer à partir d’un modèle Python dans SQL Server
-        href: tutorials/train-score-using-python-in-tsql.md
-      - name: Créer un modèle à l’aide de revoscalepy dans un contexte de calcul SQL Server
-        href: tutorials/use-python-revoscalepy-to-create-model.md
-    - name: Découvrir l’analytique dans la base de données
-      href: tutorials/sqldev-in-database-python-for-sql-developers.md
-      items:
-      - name: Obtenir les données et les scripts
-        href: tutorials/sqldev-py1-download-the-sample-data.md
-      - name: Importer des données
-        href: tutorials/sqldev-py2-import-data-to-sql-server-using-powershell.md
-      - name: Explorer et visualiser des données
-        href: tutorials/sqldev-py3-explore-and-visualize-the-data.md
-      - name: Créer des caractéristiques de données
-        href: tutorials/sqldev-py4-create-data-features-using-t-sql.md
-      - name: Entraîner et enregistrer le modèle
-        href: tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md
-      - name: Rendre le modèle opérationnel
-        href: tutorials/sqldev-py6-operationalize-the-model.md
 - name: Exemples
   href: https://github.com/Microsoft/sql-server-samples
 - name: Solutions
@@ -326,9 +325,9 @@ items:
       href: https://social.msdn.microsoft.com/Forums/sqlserver/home?category=sqlserver
     - name: Machine Learning Server
       href: https://social.msdn.microsoft.com/Forums/home?forum=MicrosoftR
-ms.openlocfilehash: 263f18263288b78c183f4fc7e0dd129b192105dd
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 44eec73a9bf8e7dd931833ac9fbb54a34deaa770
+ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169230"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49806779"

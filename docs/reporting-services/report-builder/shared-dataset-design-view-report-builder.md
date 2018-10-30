@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 47c502da-d163-45d9-bf04-0849e5ba7929
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 47da73089d622ca0dffc6f9cb9d92a1a1c8244dc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1be128dd301e5f545d1e008c8710c6e738063595
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800147"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50020464"
 ---
 # <a name="shared-dataset-design-view-report-builder"></a>Mode création de dataset partagé (Générateur de rapports)
   Dans un rapport, un dataset représente des données de rapport retournées comme résultat de l'exécution d'une requête sur une source de données externe. Les datasets partagés sont publiés sur un serveur de rapports et peuvent être utilisés par plusieurs rapports. Vous pouvez créer des datasets à partager avec d’autres utilisateurs. Dans la fenêtre Dataset partagé, vous pouvez sélectionner une source de données partagée, spécifier des propriétés pour le dataset partagé et créer une requête dans le concepteur de requêtes.  
@@ -31,7 +31,7 @@ ms.locfileid: "47800147"
 > [!NOTE]  
 >  Un dataset partagé doit être basé sur une source de données partagée. Si la source de données dont vous avez besoin n’est pas disponible, vous devez en créer une sur le serveur de rapports. Pour plus d’informations, consultez [Créer, modifier et supprimer des sources de données partagées &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md).  
   
- Pour plus d'informations, consultez [Connexions de données, sources de données et chaînes de connexion](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34).  
+ Pour plus d'informations, consultez [Connexions de données, sources de données et chaînes de connexion](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34).  
   
 ### <a name="dataset"></a>Dataset  
  Utilisez le bouton **Définir les options** pour définir les propriétés de dataset partagé. Ces options en question sont les suivantes :  

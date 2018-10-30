@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: d9cd3624-1594-4707-8887-55437dd7e07c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 26c2a900a8e8e39ed6f7d89555dd040945bc57b0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a2754521a136369995bc0ba6ab93c2fe958dc9e5
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629497"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031428"
 ---
 # <a name="retrieve-data-from-a-data-mining-model-dmx-ssrs"></a>Récupérer des données d'un modèle d'exploration de données (DMX) (SSRS)
   Pour utiliser les données d’un modèle d’exploration de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dans votre rapport, vous devez définir une source de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ainsi qu’un ou plusieurs datasets de rapport. Lorsque vous créez la définition de la source de données, vous devez spécifier une chaîne de connexion et des informations d'identification pour pouvoir accéder à la source de données à partir de l'ordinateur client.  
   
- Vous pouvez créer une définition de source de données incorporée à utiliser par un seul rapport ou une définition de source de données partagée utilisable par plusieurs rapports. Les procédures de cette rubrique décrivent la création d'une source de données incorporée. Pour plus d’informations sur les sources de données partagées, consultez [Connexions de données ou sources de données incorporées et partagées &#40;Générateur de rapports et SSRS&#41;](http://msdn.microsoft.com/library/f417782c-b85a-4c4d-8a40-839176daba56) et [Créer, modifier, puis supprimer des sources de données partagées &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md).  
+ Vous pouvez créer une définition de source de données incorporée à utiliser par un seul rapport ou une définition de source de données partagée utilisable par plusieurs rapports. Les procédures de cette rubrique décrivent la création d'une source de données incorporée. Pour plus d’informations sur les sources de données partagées, consultez [Connexions de données ou sources de données incorporées et partagées &#40;Générateur de rapports et SSRS&#41;](https://msdn.microsoft.com/library/f417782c-b85a-4c4d-8a40-839176daba56) et [Créer, modifier, puis supprimer des sources de données partagées &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md).  
   
  Après avoir créé une source de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , vous pouvez créer un ou plusieurs datasets. Pour chaque dataset, vous utilisez un concepteur de requêtes de prédiction de l'exploration de données (DMX) pour créer une requête DMX qui spécifie la collection de champs. Pour plus d’informations, consultez [Interface utilisateur du Concepteur de requêtes DMX Analysis Services](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md).  
   

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: cd5fa70c-5218-40d5-9ae6-02d798b5c485
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d0d5b2101e4fb6ce80e2eb53f7d1f43137273cd2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6b0f49608e5245121377ff53a7f2194d3ba09da3
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612027"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031288"
 ---
 # <a name="relational-query-designer-user-interface-report-builder"></a>Interface utilisateur du Concepteur de requêtes relationnelles (Générateur de rapports)
   Le Générateur de rapports et le Concepteur de rapports de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]fournissent un concepteur de requêtes graphique et un concepteur de requêtes textuel qui permettent de créer une requête spécifiant les données à récupérer auprès de bases de données relationnelles [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDS](../../includes/sssds-md.md)] relational databases et [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] pour un dataset de rapport. Utilisez le Concepteur de requêtes graphique pour explorer les métadonnées, créer une requête de manière interactive et afficher les résultats de votre requête. Utilisez le Concepteur de requêtes textuel pour afficher la requête créée par le Concepteur de requêtes graphique ou pour modifier une requête. Vous pouvez également importer une requête existante à partir d'un fichier ou d'un rapport.  
@@ -89,7 +89,7 @@ ms.locfileid: "47612027"
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise [!INCLUDE[tsql](../../includes/tsql-md.md)] et [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] utilise [!INCLUDE[DWsql](../../includes/dwsql-md.md)]. Les deux dialectes du langage SQL prennent en charge la clause, le mot clé et les agrégats fournis par le Concepteur de requêtes.  
   
- Pour plus d’informations sur [!INCLUDE[tsql](../../includes/tsql-md.md)], consultez [Informations de référence sur Transact-SQL &#40;moteur de base de données&#41;](../../t-sql/transact-sql-reference-database-engine.md) dans la [documentation en ligne](http://go.microsoft.com/fwlink/?LinkId=141687) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur msdn.microsoft.com.  
+ Pour plus d’informations sur [!INCLUDE[tsql](../../includes/tsql-md.md)], consultez [Informations de référence sur Transact-SQL &#40;moteur de base de données&#41;](../../t-sql/transact-sql-reference-database-engine.md) dans la [documentation en ligne](https://go.microsoft.com/fwlink/?LinkId=141687) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur msdn.microsoft.com.  
   
  Le tableau suivant répertorie les agrégats et fournit de brèves descriptions de ces derniers.  
   
@@ -153,7 +153,7 @@ ms.locfileid: "47612027"
   
 -   **Table de gauche** Affiche le nom de la première table qui fait partie d'une relation de jointure.  
   
--   **Type de jointure** Affiche le type d'instruction SQL JOIN utilisée dans la requête générée automatiquement. Par défaut, si une contrainte de clé étrangère est détectée, une jointure interne (INNER JOIN) est utilisée. D'autres types de jointures peuvent être des jointures gauches (LEFT JOIN) ou droites (RIGHT JOIN). Si aucun de ces types de jointures ne s'applique, la colonne **Type de jointure** affiche **Non lié**. Aucune jointure CROSS JOIN n'est créée pour les tables non associées ; à la place, vous devez créer manuellement les relations en joignant les colonnes des tables de gauche et de droite. Pour plus d'informations sur les types de jointures, consultez « Principes de base des jointures » dans la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [de](http://go.microsoft.com/fwlink/?LinkId=141687) sur msdn.microsoft.com.  
+-   **Type de jointure** Affiche le type d'instruction SQL JOIN utilisée dans la requête générée automatiquement. Par défaut, si une contrainte de clé étrangère est détectée, une jointure interne (INNER JOIN) est utilisée. D'autres types de jointures peuvent être des jointures gauches (LEFT JOIN) ou droites (RIGHT JOIN). Si aucun de ces types de jointures ne s'applique, la colonne **Type de jointure** affiche **Non lié**. Aucune jointure CROSS JOIN n'est créée pour les tables non associées ; à la place, vous devez créer manuellement les relations en joignant les colonnes des tables de gauche et de droite. Pour plus d'informations sur les types de jointures, consultez « Principes de base des jointures » dans la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [de](https://go.microsoft.com/fwlink/?LinkId=141687) sur msdn.microsoft.com.  
   
 -   **Table de droite** Affiche le nom de la deuxième table dans la relation de jointure.  
   
@@ -195,6 +195,6 @@ ms.locfileid: "47612027"
  Pour bénéficier d'un contrôle optimal sur votre requête, utilisez le Concepteur de requêtes textuel. Pour basculer vers le Concepteur de requêtes textuel, cliquez sur **Modifier en tant que texte**dans la barre d’outils. Une fois que vous avez modifié une requête dans le Concepteur de requêtes textuel, vous ne pouvez plus utiliser le Concepteur de requêtes relationnelles. La requête sera ensuite toujours ouverte dans le Concepteur de requêtes textuel. Pour plus d’informations, consultez [Interface utilisateur du Concepteur de requêtes textuel &#40;Générateur de rapports&#41;](../../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md).  
   
 ## <a name="see-also"></a> Voir aussi  
- [Concepteurs de requêtes &#40;Générateur de rapports&#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  
+ [Concepteurs de requêtes &#40;Générateur de rapports&#41;](https://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  
   
   

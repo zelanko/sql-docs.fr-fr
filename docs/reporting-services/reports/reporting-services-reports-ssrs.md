@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 52ed9e74-f2c8-488b-a2c2-6dfbc2a2c8cc
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: db0e7b193a21824f9eeb8e0745c60708cd660f57
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 14540871ad8be2c59bc8eb899ccb30b06f0278f5
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47657167"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030328"
 ---
 # <a name="reporting-services-reports-ssrs"></a>Rapports Reporting Services (SSRS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Les rapports paginés sont des définitions de rapport XML qui incluent des données de rapport et des éléments de disposition du rapport. Sur un système de fichiers client, les définitions de rapport portent l'extension de fichier .rdl. Une fois publié, un rapport paginé correspond à un élément de rapport stocké sur le serveur de rapports ou le site SharePoint. Les rapports paginés constituent une partie de la plateforme de création de rapports sur le serveur fourni par [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Vous pouvez également [Créer des rapports mobiles avec l’Éditeur de rapports mobiles SQL Server](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md).  
@@ -122,7 +122,7 @@ ms.locfileid: "47657167"
 ## <a name="view-reports"></a>Afficher les rapports  
  En plus de l'aperçu d'un rapport enregistré localement ou publié sur un serveur de rapports, vous pouvez fournir un large éventail d'affichages pour les lecteurs de votre rapport. Pour afficher un rapport :  
   
--   **Navigateur.**  Utilisez le service Web Report Server ou le site SharePoint pour afficher les rapports publiés. Sur un site SharePoint, vous pouvez également configurer un composant WebPart pour afficher les rapports publiés. Pour plus d’informations, consultez [Planification de la prise en charge des navigateurs pour Reporting Services et Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md), [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896) et [Accès URL &#40;SSRS&#41;](../../reporting-services/url-access-ssrs.md).  
+-   **Navigateur.**  Utilisez le service Web Report Server ou le site SharePoint pour afficher les rapports publiés. Sur un site SharePoint, vous pouvez également configurer un composant WebPart pour afficher les rapports publiés. Pour plus d’informations, consultez [Planification de la prise en charge des navigateurs pour Reporting Services et Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md), [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896) et [Accès URL &#40;SSRS&#41;](../../reporting-services/url-access-ssrs.md).  
   
 -   **Remise.**  Configurez un abonnement pour remettre les rapports aux personnes souhaitant les lire dans un dossier de messagerie ou dans un dossier partagé.  Pour plus d’informations, consultez [Abonnements et remise &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md).  
   
@@ -130,7 +130,7 @@ ms.locfileid: "47657167"
   
 -   **Impression.**  Un lecteur de rapport peut imprimer un rapport ou des pages d'un rapport selon la façon dont il est affiché. Pour plus d’informations, consultez [Imprimer des rapports &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md).  
   
--   **Application Web ou Windows Form.**  Utilisez Visual Studio pour développer une application AJAX ASP.NET ou Windows Form qui héberge le contrôle Visionneuse de rapports. Le contrôle peut indiquer les rapports publiés sur un serveur de rapports. Pour plus d'informations, consultez [Rapports Microsoft](http://go.microsoft.com/fwlink/?LinkID=205399).  
+-   **Application Web ou Windows Form.**  Utilisez Visual Studio pour développer une application AJAX ASP.NET ou Windows Form qui héberge le contrôle Visionneuse de rapports. Le contrôle peut indiquer les rapports publiés sur un serveur de rapports. Pour plus d'informations, consultez [Rapports Microsoft](https://go.microsoft.com/fwlink/?LinkID=205399).  
   
 ## <a name="manage-reports"></a>Gérer les rapports  
  Pour gérer un rapport publié :  

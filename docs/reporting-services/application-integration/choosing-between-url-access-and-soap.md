@@ -8,16 +8,16 @@ ms.topic: reference
 author: markingmyname
 ms.author: maghan
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: db4bea93fb172bc47665e993e3185d29841be758
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cada882236484e5c7c7325f44b5633479a81f6e1
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47783458"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028666"
 ---
 # <a name="choosing-between-url-access-and-soap-in-reporting-services"></a>Choix entre l’accès URL et SOAP dans Reporting Services
 
-[!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-not-2017](../../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../../includes/ssrs-appliesto-not-pbirs.md)])
+[!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-not-2017](../../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../../includes/ssrs-appliesto-not-pbirs.md)]
 
 L'intégration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dans des applications personnalisées peut s'avérer difficile. Toutefois, la difficulté ne se trouve pas dans la complexité du modèle de programmation ou les API, mais dans les nombreuses méthodes possibles pour l'intégrer. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] a été conçu dès le départ comme une plate-forme de développeur, et en tant que tel, a été créé avec une flexibilité de la programmation à l'esprit. Avec la flexibilité apparaît le besoin de prendre des décisions importantes concernant l'intégration de la navigation entre les rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] et les fonctionnalités de gestion dans vos applications de gestion existantes.
 
@@ -45,6 +45,6 @@ L'intégration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 
   
  Dans la majorité des cas, l'accès URL et les appels SOAP sont requis pour satisfaire vos besoins de création de rapports. SOAP est utilisé lors de la connexion initiale à la base de données du serveur de rapports et lors de la présentation de la liste de rapports disponible dans une interface utilisateur tandis que l'accès URL est utilisé pour accéder réellement aux rapports individuels et les parcourir.  
   
- Pour obtenir un exemple de combinaison de l’accès URL et du service web à des fins de création de rapports intégrée, consultez [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889) (Exemples Reporting Services pour le produit SQL Server).
+ Pour obtenir un exemple de combinaison de l’accès URL et du service web à des fins de création de rapports intégrée, consultez [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889) (Exemples Reporting Services pour le produit SQL Server).
 
-D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

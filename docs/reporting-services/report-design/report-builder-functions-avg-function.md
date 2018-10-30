@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: f1276c4c-bb44-44c0-a1bf-386a0c340003
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b02b21a0011fb838a697792955c56ac04d52ce32
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5c03f0d04b8fe643480817d25cef402b304ef862
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47602737"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021743"
 ---
 # <a name="report-builder-functions---avg-function"></a>Fonctions du Générateur de rapports - Avg
 Dans les rapports paginés [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , retourne la moyenne de toutes les valeurs numériques non Null spécifiées par l’expression, évaluée dans l’étendue donnée.  
@@ -42,7 +42,7 @@ Avg(expression, scope, recursive)
  Retourne une valeur **Decimal** pour les expressions décimales et une valeur **Double** pour toutes les autres expressions.  
   
 ## <a name="remarks"></a>Notes   
- Le jeu de données spécifié dans l'expression doit avoir le même type de données. Pour convertir des données qui ont plusieurs types de données numériques en un même type de données, utilisez des fonctions de conversion telles que **CInt**, **CDbl** ou **CDec**. Pour plus d'informations, consultez [Fonctions de conversion de types de données](http://go.microsoft.com/fwlink/?LinkId=96142).  
+ Le jeu de données spécifié dans l'expression doit avoir le même type de données. Pour convertir des données qui ont plusieurs types de données numériques en un même type de données, utilisez des fonctions de conversion telles que **CInt**, **CDbl** ou **CDec**. Pour plus d'informations, consultez [Fonctions de conversion de types de données](https://go.microsoft.com/fwlink/?LinkId=96142).  
   
  La valeur du paramètre *scope* doit être une constante de chaîne et ne peut pas être une expression. Pour les agrégats externes ou les agrégats qui ne spécifient pas d'autres agrégats, le paramètre *scope* doit faire référence à l'étendue actuelle ou à une étendue contenante. Pour les agrégats d'agrégats, les agrégats imbriqués peuvent spécifier une étendue enfant.  
   

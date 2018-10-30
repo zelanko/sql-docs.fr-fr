@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7047d29e-a2c9-4e6f-ad02-635851a38ed7
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e0a9e5a7385239a68e23426e026ae477b7dccb0a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1fa0709d4bfde776221c5c5f234c1a3acb502406
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700703"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031808"
 ---
 # <a name="implementing-a-connection-class-for-a-data-processing-extension"></a>Implémentation d'une classe Connection pour une extension pour le traitement des données
   L’objet **Connection** représente une connexion de base de données ou une ressource similaire et représente le point de départ pour les utilisateurs d’une extension pour le traitement des données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Il représente des connexions aux serveurs de base de données, bien que toute entité ayant un comportement similaire puisse être exposée comme un objet **Connection**.  
@@ -44,7 +44,7 @@ ms.locfileid: "47700703"
 > [!NOTE]  
 >  L'implémentation implicite de <xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension> nécessite d'implémenter les membres des interfaces <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection> et <xref:Microsoft.ReportingServices.Interfaces.IExtension>.  
 >   
->  Pour un exemple d’implémentation de la classe **Connection**, consultez [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889) (Exemples Reporting Services pour le produit SQL Server).  
+>  Pour un exemple d’implémentation de la classe **Connection**, consultez [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889) (Exemples Reporting Services pour le produit SQL Server).  
   
 ## <a name="see-also"></a> Voir aussi  
  [Extensions Reporting Services](../../../reporting-services/extensions/reporting-services-extensions.md)   

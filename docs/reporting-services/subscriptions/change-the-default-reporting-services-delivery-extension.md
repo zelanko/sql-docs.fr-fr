@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 5f6fee72-01bf-4f6c-85d2-7863c46c136b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ee889c409d7e520822cc7d2449369dc20f5ef044
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 66e98f21d426bc2b9d570990d72703b6cb059391
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669708"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50100040"
 ---
 # <a name="change-the-default-reporting-services-delivery-extension"></a>Modification de l’extension de remise par défaut de Reporting Services
   Vous pouvez modifier les paramètres de configuration [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour modifier l’extension de remise par défaut qui s’affiche dans la liste **Remis par** d’une page de définition d’abonnement. Par exemple, vous pouvez modifier la configuration afin que, lorsque les utilisateurs créent un nouvel abonnement, la remise par partage de fichiers soit activée par défaut, plutôt que la remise par messagerie électronique. Vous pouvez également modifier l'ordre selon lequel les extensions de remise sont répertoriées dans l'interface utilisateur.  
@@ -113,7 +113,19 @@ ms.locfileid: "47669708"
  [RsReportServer.config Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [RsReportServer.config Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [Remise par partage de fichiers dans Reporting Services](../../reporting-services/subscriptions/file-share-delivery-in-reporting-services.md)   
- [Remise par e-mail dans Reporting Services](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md)   
- [Configurer un serveur de rapports pour la remise par messagerie (Gestionnaire de configuration de SSRS)](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83)  
+ [Remise par courrier électronique dans Reporting Services](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md)   
+ [Configurer un serveur de rapports pour la remise par messagerie (Gestionnaire de configuration de SSRS)](https://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83)  
   
-  
+<!-- TODO:
+The above See Also link to the old MSDN at...
+https://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83
+
+...is redirected to the following Docs link, for SQL Server 2014...
+
+https://docs.microsoft.com/en-us/sql/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager?view=sql-server-2014
+
+...So if I was not presently resolving conflicts with public repo PR, related to private repo PR 7827,
+the better fix would be to replace the whole MSDN link with the newer Docs link (to which the older MSDN link is redirected).
+Maybe later someone can perform this replacement, and under docs/reporting-services/ there are multiple similar replacement opportunities.
+GeneMi , 2018/10/25
+-->

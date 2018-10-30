@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8dc2b44e-5ad9-411d-a29f-7213e29321a9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9c7e880bee978cbd89a09dc375e7d11d108aab19
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c13c3fb54554387bdb74a478b5f1703645adb462
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742727"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029850"
 ---
 # <a name="implementing-a-data-processing-extension"></a>Implémentation d'une extension pour le traitement des données
   Les extensions pour le traitement des données dans [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] vous permettent de vous connecter à une source de données et de récupérer des données. Elles servent également de pont entre une source de données et un dataset Les extensions pour le traitement des données [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] sont basées sur un sous-ensemble des interfaces de fournisseur de données [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  
@@ -51,7 +51,7 @@ ms.locfileid: "47742727"
  [Débogage du code des extensions pour le traitement des données](../../../reporting-services/extensions/data-processing/debugging-data-processing-extension-code.md)  
  Décrit comment déboguer le code dans vos extensions pour le traitement des données.  
   
- Pour un exemple d’extension pour le traitement des données totalement implémentée, consultez [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889) (Exemples Reporting Services pour le produit SQL Server).  
+ Pour un exemple d’extension pour le traitement des données totalement implémentée, consultez [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889) (Exemples Reporting Services pour le produit SQL Server).  
   
 ## <a name="see-also"></a> Voir aussi  
  [Extensions Reporting Services](../../../reporting-services/extensions/reporting-services-extensions.md)   

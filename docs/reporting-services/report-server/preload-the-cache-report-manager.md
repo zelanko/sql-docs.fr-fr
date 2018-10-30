@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 152a1051-8aa5-4c01-bc85-f8be8971b0cd
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d5f848443fbfcbbb1c45aadf910f6493f408bf59
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0ebb6fe63178870a5b76383523fc04c9472a4659
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849317"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021873"
 ---
 # <a name="preload-the-cache-report-manager"></a>préchargement du cache (Gestionnaire de rapports)
   Vous pouvez précharger le cache pour un dataset partagé en créant un plan d'actualisation du cache pour le dataset partagé.  
@@ -37,7 +37,7 @@ ms.locfileid: "47849317"
   
 ### <a name="to-preload-the-cache-by-creating-a-cache-refresh-plan"></a>Pour précharger le cache en créant un plan d'actualisation du cache  
   
-1.  Démarrez le [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
+1.  Démarrez le [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
 2.  Dans le Gestionnaire de rapports, accédez à la page **Contenu** , puis à l’élément que vous voulez mettre en cache.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "47849317"
   
 ### <a name="to-preload-the-cache-with-a-user-specific-report-by-using-a-data-driven-subscription"></a>Pour précharger le cache avec un rapport spécifique à l'utilisateur en utilisant un abonnement piloté par les données  
   
-1.  Démarrez le [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
+1.  Démarrez le [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
 2.  Dans le Gestionnaire de rapports, accédez à la page **Contenu** , puis au rapport pour lequel vous voulez créer un abonnement.  
   
@@ -101,7 +101,7 @@ ms.locfileid: "47849317"
      Ou, pour créer une planification personnalisée, cliquez sur **Suivant une planification créée pour cet abonnement** , puis sur **Suivant**. Configurez la planification, puis cliquez sur **Terminer**.  
   
     > [!NOTE]  
-    >  Pour que les abonnés reçoivent la version du rapport la plus récente, la planification que vous configurez doit être chronologiquement cohérente par rapport à la planification de la remise du rapport que vous avez définie pour les abonnés. Pour plus d’informations, consultez [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
+    >  Pour que les abonnés reçoivent la version du rapport la plus récente, la planification que vous configurez doit être chronologiquement cohérente par rapport à la planification de la remise du rapport que vous avez définie pour les abonnés. Pour plus d’informations, consultez [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
 14. Configurez les options d'exécution du rapport comme suit. Dans la page du rapport, cliquez sur l’onglet **Propriétés** .  
   
@@ -118,10 +118,10 @@ ms.locfileid: "47849317"
 18. Cliquez sur **Appliquer**.  
   
 ## <a name="see-also"></a> Voir aussi  
- [Abonnements pilotés par les données](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
+ [Data-Driven Subscriptions](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
  [Créer un abonnement piloté par les données &#40;didacticiel SSRS&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)   
  [Performances, instantanés, mise en cache &#40;Reporting Services&#41;](../../reporting-services/report-server/performance-snapshots-caching-reporting-services.md)   
- [Définir les propriétés de traitement d'un rapport](../../reporting-services/report-server/set-report-processing-properties.md)   
+ [Définir les propriétés de traitement d’un rapport](../../reporting-services/report-server/set-report-processing-properties.md)   
  [Mise en cache de rapports &#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md)  
   
   

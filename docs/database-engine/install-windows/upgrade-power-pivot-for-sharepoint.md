@@ -11,12 +11,12 @@ author: Minewiskan
 ms.author: owend
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: erikre
-ms.openlocfilehash: 03320b4e1b416517d368965f6aea5abf34a350c6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4283b58d3bdf3b74f663a2a6632d5aa00fba2381
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47672287"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50100200"
 ---
 # <a name="upgrade-power-pivot-for-sharepoint"></a>Mettre à niveau Power Pivot pour SharePoint
 
@@ -351,15 +351,15 @@ Get-PowerPivotSystemService
 |Vérifiez que le service fonctionne sur tous les ordinateurs qui exécutent [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint.|[Démarrer ou arrêter un serveur PowerPivot pour SharePoint](../../analysis-services/power-pivot-sharepoint/start-or-stop-a-power-pivot-for-sharepoint-server.md)|  
 |Vérifiez l'activation des fonctionnalités au niveau de la collection de sites.|[Activer l’intégration des fonctionnalités Power Pivot pour des collections de sites dans l’Administration centrale](../../analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca.md)|  
 |Vérifiez que les classeurs [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] se chargent correctement en ouvrant un classeur et en cliquant sur les filtres et les segments pour initialiser une requête.|Recherchez la présence de fichiers mis en cache sur le disque dur. La présence de fichiers mis en cache confirme que les fichiers de données ont été chargés sur ce serveur physique. Recherchez les fichiers mis en cache dans le dossier c:\Program Files\Microsoft SQL Server\MSAS13.POWERPIVOT\OLAP\Backup.|  
-|Testez l'actualisation des données sur les classeurs sélectionnés configurés pour l'actualisation des données.|La méthode la plus simple pour tester l'actualisation des données consiste à modifier une planification d'actualisation des données, en activant la case à cocher **Aussi actualiser dès que possible** afin que l'actualisation des données s'exécute immédiatement. Cette étape détermine si l'actualisation des données aboutit pour le classeur actuel. Répétez ces étapes pour les autres classeurs fréquemment utilisés pour vous assurer que l'actualisation des données est fonctionnelle. Pour plus d’informations sur la planification de l’actualisation des données, consultez [Planifier une actualisation des données (PowerPivot pour SharePoint)](http://msdn.microsoft.com/en-us/8571208f-6aae-4058-83c6-9f916f5e2f9b).|  
+|Testez l'actualisation des données sur les classeurs sélectionnés configurés pour l'actualisation des données.|La méthode la plus simple pour tester l'actualisation des données consiste à modifier une planification d'actualisation des données, en activant la case à cocher **Aussi actualiser dès que possible** afin que l'actualisation des données s'exécute immédiatement. Cette étape détermine si l'actualisation des données aboutit pour le classeur actuel. Répétez ces étapes pour les autres classeurs fréquemment utilisés pour vous assurer que l'actualisation des données est fonctionnelle. Pour plus d’informations sur la planification de l’actualisation des données, consultez [Planifier une actualisation des données (PowerPivot pour SharePoint)](http://msdn.microsoft.com/8571208f-6aae-4058-83c6-9f916f5e2f9b).|  
 |Au fil du temps, vérifiez les rapports d’actualisation des données dans le tableau de bord de gestion [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour vous assurer qu’il n’y a pas d’erreurs d’actualisation des données.|[Tableau de bord de gestion Power Pivot et données d’utilisation](../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)|  
   
  Pour plus d’informations sur la configuration des paramètres et des fonctionnalités [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , consultez [Administration et configuration d’un serveur PowerPivot dans l’Administration centrale](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md).  
   
- Pour des instructions pas à pas qui vous guident dans toutes les tâches de configuration consécutives à l’installation, consultez [Configuration initiale (PowerPivot pour SharePoint)](http://msdn.microsoft.com/en-us/3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146).  
+ Pour des instructions pas à pas qui vous guident dans toutes les tâches de configuration consécutives à l’installation, consultez [Configuration initiale (PowerPivot pour SharePoint)](http://msdn.microsoft.com/3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146).  
   
 ## <a name="see-also"></a> Voir aussi  
  [Fonctionnalités prises en charge par les éditions de SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)   
- [Installation de PowerPivot pour SharePoint 2010](http://msdn.microsoft.com/en-us/8d47dde7-c941-4280-a934-e2fe3f9a938f)  
+ [Installation de PowerPivot pour SharePoint 2010](http://msdn.microsoft.com/8d47dde7-c941-4280-a934-e2fe3f9a938f)  
   
   

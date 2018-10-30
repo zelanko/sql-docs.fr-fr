@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f8f075036f83ae12f3bede71c838e0a408836d4f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c9a345a40713bdba845e2e2cdd825326c1799c1e
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826128"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021093"
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>Exportation vers Microsoft Word (Générateur de rapports et SSRS)
 
@@ -149,7 +149,7 @@ ms.locfileid: "47826128"
 > [!IMPORTANT]  
 >  L’extension de rendu [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 (.doc) est déconseillée. Pour plus d’informations, consultez [Fonctions déconseillées de SQL Server Reporting Services dans SQL Server 2016](~/reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md).  
   
- Le convertisseur Word est compatible avec [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 moyennant l’installation préalable du Module de compatibilité [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office pour les formats de fichiers Word, Excel et PowerPoint. Pour plus d'informations, consultez [Module de compatibilité pour formats de fichiers Microsoft Office Word, Excel et PowerPoint](http://go.microsoft.com/fwlink/?LinkID=205622).  
+ Le convertisseur Word est compatible avec [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 moyennant l’installation préalable du Module de compatibilité [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office pour les formats de fichiers Word, Excel et PowerPoint. Pour plus d'informations, consultez [Module de compatibilité pour formats de fichiers Microsoft Office Word, Excel et PowerPoint](https://go.microsoft.com/fwlink/?LinkID=205622).  
   
  La version précédente de l'extension de rendu Word, compatible avec [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003, est renommée Word 2003. Seule l'extension de rendu Word est disponible par défaut. Vous devez mettre à jour les fichiers de configuration Reporting Services pour rendre l'extension de rendu Word 2003 disponible. Le type de contenu des fichiers générés par le convertisseur Word 2003 est **application/vnd.ms-word** et l’extension des noms de fichiers est .doc.  
   
@@ -195,4 +195,4 @@ ms.locfileid: "47826128"
 [Rendu des éléments de rapport](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
 [Tables, matrices et listes](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
 
-D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 01daf21c-19c6-448d-ac30-accb54ad83da
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8eaada7d40896156dee1ba51b9a02b90b1ff9e70
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5835d17dcb628eebe99bff4c6e3182a10e41dbe7
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47741387"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021043"
 ---
 # <a name="feature-reference-reporting-services"></a>Références relatives aux fonctionnalités (Reporting Services)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] contient plusieurs outils et applications qui permettent de créer, gérer et afficher des rapports. Cette section répertorie les rubriques spécifiques qui décrivent les boîtes de dialogue, les pages Web et les Assistants de ces outils et applications.  
@@ -29,7 +29,7 @@ ms.locfileid: "47741387"
  [Aide sur le Concepteur de rapports via la touche F1](../reporting-services/tools/report-designer-f1-help.md)  
  Aide sur le Concepteur de rapports et ses boîtes de dialogue, sur l'Assistant Rapport et sur l'Assistant Image.  
   
- [Rubriques d’aide sur le Gestionnaire de configuration de Reporting Services](http://msdn.microsoft.com/library/7b6fb18e-ec39-4661-88e3-977ed64e2c82)  
+ [Rubriques d’aide sur le Gestionnaire de configuration de Reporting Services](https://msdn.microsoft.com/library/7b6fb18e-ec39-4661-88e3-977ed64e2c82)  
  Aide sur l’outil de configuration de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] utilisé pour déployer et gérer les instances du serveur de rapports.  
   
  [Aide du serveur de rapports dans Management Studio accessible par la touche F1](../reporting-services/tools/report-server-in-management-studio-f1-help.md)  
@@ -41,8 +41,8 @@ ms.locfileid: "47741387"
 ## <a name="see-also"></a> Voir aussi  
  [Concepts de Reporting Services &#40;SSRS&#41;](../reporting-services/reporting-services-concepts-ssrs.md)   
  [Rapports Reporting Services &#40;SSRS&#41;](../reporting-services/reports/reporting-services-reports-ssrs.md)   
- [Jeux de données du rapport &#40;SSRS&#41;](../reporting-services/report-data/report-datasets-ssrs.md)   
- [Bien démarrer avec le Générateur de rapports](http://www.microsoft.com/download/en/details.aspx?id=29072)   
- [Conception et implémentation de rapports à l’aide du Générateur de rapports version 1.0](http://go.microsoft.com/fwlink/?LinkId=142601)  
+ [Datasets de rapport &#40;SSRS&#41;](../reporting-services/report-data/report-datasets-ssrs.md)   
+ [Mise en route avec le Générateur de rapports](http://www.microsoft.com/download/en/details.aspx?id=29072)   
+ [Conception et implémentation de rapports à l’aide du Générateur de rapports version 1.0](https://go.microsoft.com/fwlink/?LinkId=142601)  
   
   

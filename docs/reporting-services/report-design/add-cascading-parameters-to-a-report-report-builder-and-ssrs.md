@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 3a22eec3-57a7-478e-b6fc-102a9dbe0591
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3696e2e1a299a79ad0eea95db4783297474ea3b6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 209e4ad60eb364a0cbc1ac873dd04af62fa986e3
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47744017"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030838"
 ---
 # <a name="add-cascading-parameters-to-a-report-report-builder-and-ssrs"></a>Ajouter des paramètres en cascade à un rapport (Générateur de rapports et SSRS)
   Les paramètres en cascade permettent de gérer d'importantes quantités de données de rapport. Vous pouvez définir un ensemble de paramètres associés, de telle sorte que la liste des valeurs d'un paramètre dépende de la valeur choisie dans un autre paramètre. Par exemple, le premier paramètre est indépendant et peut présenter une liste de catégories de produits. Lorsque l'utilisateur sélectionne une catégorie, le deuxième paramètre dépend de la valeur du premier paramètre. Ses valeurs sont mises à jour avec une liste de sous-catégories au sein de la catégorie choisie. Lorsque l'utilisateur affiche le rapport, les valeurs des paramètres de catégorie et de sous-catégorie permettent de filtrer les données du rapport.  
@@ -25,7 +25,7 @@ ms.locfileid: "47744017"
   
  L'ordre des paramètres en cascade est important, car la requête de dataset d'un paramètre situé plus bas dans la liste comporte une référence à chaque paramètre situé plus haut dans la liste. Au moment de l'exécution, l'ordre des paramètres dans le volet des données de rapport détermine l'ordre d'apparition des requêtes de paramètre dans le rapport et, par conséquent, l'ordre dans lequel un utilisateur choisit chaque valeur de paramètre consécutive.  
   
- Pour plus d'informations sur la création de paramètres en cascade avec plusieurs valeurs et notamment la fonctionnalité Sélectionner tout, consultez [Comment avoir un paramètre Tout sélectionner en cascade à valeurs multiples](http://go.microsoft.com/fwlink/?LinkId=184757)(en anglais).  
+ Pour plus d'informations sur la création de paramètres en cascade avec plusieurs valeurs et notamment la fonctionnalité Sélectionner tout, consultez [Comment avoir un paramètre Tout sélectionner en cascade à valeurs multiples](https://go.microsoft.com/fwlink/?LinkId=184757)(en anglais).  
   
 ## <a name="to-create-the-main-dataset-with-a-query-that-includes-multiple-related-parameters"></a>Pour créer le dataset principal avec une requête incluant plusieurs paramètres associés  
   
@@ -154,7 +154,7 @@ ms.locfileid: "47744017"
 ## <a name="see-also"></a> Voir aussi  
  [Ajouter, modifier ou supprimer un paramètre de rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)   
  [Paramètres de rapport &#40;Générateur de rapports et Concepteur de rapports&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
- [Didacticiel : ajouter un paramètre à un rapport &#40;Générateur de rapports&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)   
+ [Didacticiel : ajouter un paramètre à un rapport &#40;Générateur de rapports&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)   
  [Didacticiels du Générateur de rapports](../../reporting-services/report-builder-tutorials.md)   
  [Ajouter des filtres de datasets, des filtres de régions de données et des filtres de groupes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
  [Datasets incorporés dans le rapport et datasets partagés &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  

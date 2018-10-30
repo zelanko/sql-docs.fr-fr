@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: cf2c396e-b0c6-41f9-8c45-ddc8406f7e85
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d22f07d4375d92dd49f18f5fe80653f1e401b744
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4d129704681c308c093033ff69e1f1e3ec2bc5fb
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855009"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021833"
 ---
 # <a name="clickthrough-reports-ssrs"></a>Rapports générés interactifs (SSRS)
   Dans le Générateur de rapports, un rapport généré interactif est un rapport qui fournit des informations détaillées sur les données contenues dans le rapport principal. Un rapport consultable à l'aide de clics est affiché lorsque l'utilisateur clique sur des données interactives apparaissant dans le rapport principal. Ces rapports sont automatiquement générés par le serveur de rapports. En tant que concepteur de modèle, vous déterminez ce qui est affiché dans les rapports générés interactifs en définissant les propriétés **DefaultDetailAttribute** et **DefaultAggregateAttribute** que vous affectez à une entité dans le modèle de rapport.  
@@ -47,6 +47,6 @@ ms.locfileid: "47855009"
 >  L'entité principale ou de base employée dans le rapport doit être celle à laquelle vous liez le rapport.  
   
 ## <a name="see-also"></a> Voir aussi  
- [Lier un rapport à un modèle en tant que rapport généré interactif](http://msdn.microsoft.com/library/3af42de3-67ef-41c2-bc8a-7045baec6f63)  
+ [Lier un rapport à un modèle en tant que rapport généré interactif](https://msdn.microsoft.com/library/3af42de3-67ef-41c2-bc8a-7045baec6f63)  
   
   

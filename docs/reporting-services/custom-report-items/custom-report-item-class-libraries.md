@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: f18c5d8f-1d6b-4f0b-8657-c14896c2ce0d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 901171d5e3517fcf89142dcfe44d7074ef83e520
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3a52dbdd40605d9a1634495066b4249bd0567075
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832897"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028103"
 ---
 # <a name="custom-report-item-class-libraries"></a>Bibliothèques de classes d'éléments de rapport personnalisés
-  Les éléments de rapport personnalisés utilisent des classes de l’espace de noms **Microsoft.ReportDesigner**. Les classes utilisées pour implémenter un élément de rapport personnalisé peuvent être divisées en deux catégories principales : les classes uniques conçues pour prendre en charge l'infrastructure d'éléments de rapport personnalisés et les classes wrapper managées qui encapsulent les fonctionnalités d'éléments RDL (Report Definition Language) pertinents. Pour un exemple de code montrant comment utiliser ces classes, consultez [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889) (Exemples Reporting Services pour le produit SQL Server).  
+  Les éléments de rapport personnalisés utilisent des classes de l’espace de noms **Microsoft.ReportDesigner**. Les classes utilisées pour implémenter un élément de rapport personnalisé peuvent être divisées en deux catégories principales : les classes uniques conçues pour prendre en charge l'infrastructure d'éléments de rapport personnalisés et les classes wrapper managées qui encapsulent les fonctionnalités d'éléments RDL (Report Definition Language) pertinents. Pour un exemple de code montrant comment utiliser ces classes, consultez [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889) (Exemples Reporting Services pour le produit SQL Server).  
   
 ## <a name="custom-report-item-infrastructure-classes"></a>Classes d'infrastructure d'éléments de rapport personnalisés  
  Les classes suivantes sont utilisées pour implémenter un élément de rapport personnalisé.  

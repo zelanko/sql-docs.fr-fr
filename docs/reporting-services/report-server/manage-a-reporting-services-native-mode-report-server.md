@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6ca03a09-d6a8-4c93-ba12-1c99dcbfb618
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8c945a601238c6ba110986c236d1079ec9ba99bd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b3b8b5baec563f2c5c99a08a730204581b6abdc7
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47677857"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021593"
 ---
 # <a name="manage-a-reporting-services-native-mode-report-server"></a>Gérer un serveur de rapports Reporting Services (SSRS) en mode natif
   Cette section contient des procédures qui indiquent comment configurer une instance de serveur de rapports en mode natif à l'aide du Gestionnaire de configuration de Reporting Services.  
@@ -29,7 +29,7 @@ ms.locfileid: "47677857"
  [Gestionnaire de configuration de Reporting Services &#40;mode natif&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
  Indique la procédure à suivre pour démarrer l'outil de configuration de Reporting Services.  
   
- [Configurer un compte de service &#40;Gestionnaire de configuration de SSR&#41;](http://msdn.microsoft.com/library/25000ad5-3f80-4210-8331-d4754dc217e0)  
+ [Configurer un compte de service &#40;Gestionnaire de configuration de SSR&#41;](https://msdn.microsoft.com/library/25000ad5-3f80-4210-8331-d4754dc217e0)  
  Explique comment spécifier des informations de compte et de mot de passe pour le service Web Report Server.  
   
  [Inscrire un nom de principal du service &#40;SPN&#41; pour un serveur de rapports](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md)  
@@ -45,7 +45,7 @@ ms.locfileid: "47677857"
  [Configurer un déploiement par montée en puissance parallèle de serveurs de rapports en mode natif &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)  
  Indique la procédure à suivre pour configurer plusieurs serveurs de rapports afin qu'ils partagent une base de données du serveur de rapports.  
   
- [Configurer un serveur de rapports pour la remise par messagerie (Gestionnaire de configuration de SSRS)](http://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83)  
+ [Configurer un serveur de rapports pour la remise par messagerie (Gestionnaire de configuration de SSRS)](https://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83)  
  Fournit des instructions de configuration d'un serveur de rapports pour la distribution par messagerie.  
   
  [Configurer un pare-feu pour accéder au serveur de rapports](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)  

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 1c38c2e8-7a29-4f79-a4a3-85ed2b13723b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 668818a529a721a500f03b5d388f6e56648f4d38
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 45db20b8f7f6fb4feca35b806f5fb694982cc8a1
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742867"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021343"
 ---
 # <a name="create-and-modify-embedded-data-sources"></a>Créer et modifier des sources de données incorporées
   Une source de données incorporée est définie dans une définition de rapport et utilisée uniquement par ce rapport.  
@@ -33,7 +33,7 @@ ms.locfileid: "47742867"
   
     2.  Spécifiez une chaîne de connexion à l'aide de l'une des méthodes suivantes :  
   
-        -   Tapez directement la chaîne de connexion dans la zone de texte **Chaîne de connexion** . Pour obtenir une liste d’exemples de chaînes de connexion, consultez [Connexions de données, sources de données et chaînes de connexion dans le Générateur de rapports](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34) ou [Connexions de données, sources de données et chaînes de connexion &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
+        -   Tapez directement la chaîne de connexion dans la zone de texte **Chaîne de connexion** . Pour obtenir une liste d’exemples de chaînes de connexion, consultez [Connexions de données, sources de données et chaînes de connexion dans le Générateur de rapports](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34) ou [Connexions de données, sources de données et chaînes de connexion &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
         -   Cliquez sur le bouton d’expression (**fx)** pour créer une expression qui prend la valeur d’une chaîne de connexion. Dans la boîte de dialogue **Expression** , tapez l'expression dans le volet Expression. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -59,7 +59,7 @@ ms.locfileid: "47742867"
   
     2.  Spécifiez une chaîne de connexion en utilisant l'une des méthodes suivantes :  
   
-        -   Tapez directement la chaîne de connexion dans la zone de texte **Chaîne de connexion** . Pour obtenir une liste d’exemples de chaînes de connexion, consultez [Connexions de données, sources de données et chaînes de connexion dans le Générateur de rapports](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34).  
+        -   Tapez directement la chaîne de connexion dans la zone de texte **Chaîne de connexion** . Pour obtenir une liste d’exemples de chaînes de connexion, consultez [Connexions de données, sources de données et chaînes de connexion dans le Générateur de rapports](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34).  
   
         -   Cliquez sur le bouton d’expression (**fx)** pour créer une expression qui prend la valeur d’une chaîne de connexion. Dans la boîte de dialogue **Expression** , tapez l'expression dans le volet Expression. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -69,7 +69,7 @@ ms.locfileid: "47742867"
   
 4.  Cliquez sur **Informations d'identification**.  
   
-     Spécifiez les informations d'identification à utiliser pour cette source de données. Le propriétaire de la source de données choisit le type d'informations d'identification pris en charge. Pour plus d’informations, consultez [Spécifier des informations d’identification dans le Générateur de rapports](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53).  
+     Spécifiez les informations d'identification à utiliser pour cette source de données. Le propriétaire de la source de données choisit le type d'informations d'identification pris en charge. Pour plus d’informations, consultez [Spécifier des informations d’identification dans le Générateur de rapports](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53).  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -77,6 +77,6 @@ ms.locfileid: "47742867"
   
 ## <a name="see-also"></a> Voir aussi  
  [Datasets incorporés dans le rapport et datasets partagés &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
- [Spécifier des informations d’identification dans le Générateur de rapports](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)  
+ [Spécifier des informations d’identification dans le Générateur de rapports](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)  
   
   

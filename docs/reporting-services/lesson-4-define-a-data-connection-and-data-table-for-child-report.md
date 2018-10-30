@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: a6aa2c56-227c-43c5-a28e-c7104131ac5e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b160390718e62854fa1fbfb5aae1d12310420477
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 95816785bf328d4f1e7e50d5ce34f854b6c7da15
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695760"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031458"
 ---
 # <a name="lesson-4-define-a-data-connection-and-data-table-for-child-report"></a>Leçon 4 : définir une connexion de données et une table de données pour le rapport enfant
 Après avoir créé le rapport parent, l'étape suivante consiste à créer une connexion de données et une table de données pour le rapport enfant. Dans ce didacticiel, la connexion de données s’établit avec la base de données AdventureWorks2014.  
@@ -61,7 +61,7 @@ Après avoir créé le rapport parent, l'étape suivante consiste à créer une 
     > [!WARNING]  
     > Veillez à décocher **Créer des méthodes pour envoyer directement des mises à jour à la base de données (GenerateDBDirectMethods)**  
   
-    Vous avez maintenant terminé la configuration de l’objet ADO.NET [DataTable](http://msdn.microsoft.com/library/system.data.datatable.aspx) comme source de données de votre rapport. Dans la page du Concepteur de DataSet dans Visual Studio, vous devez voir l’objet **DataTable** que vous avez ajouté, qui répertorie les colonnes spécifiées dans la requête. DataSet2 contient les données de la table PurchaseOrderDetail, en fonction de la requête.  
+    Vous avez maintenant terminé la configuration de l’objet ADO.NET [DataTable](https://msdn.microsoft.com/library/system.data.datatable.aspx) comme source de données de votre rapport. Dans la page du Concepteur de DataSet dans Visual Studio, vous devez voir l’objet **DataTable** que vous avez ajouté, qui répertorie les colonnes spécifiées dans la requête. DataSet2 contient les données de la table PurchaseOrderDetail, en fonction de la requête.  
   
 11. Enregistrez le fichier.  
   

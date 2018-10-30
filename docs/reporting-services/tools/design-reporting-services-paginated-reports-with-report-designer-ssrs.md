@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: 3a26dccc-6ad6-48f5-a882-f96c6c0dd405
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 906ff754691e70bbaf9d3ccc641906411de4a76c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3777d43e44819b8c9882a381b5814a69ac116fbb
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739227"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031908"
 ---
 # <a name="design-reporting-services-paginated-reports-with-report-designer-ssrs"></a>Concevoir des rapports paginés Reporting Services à l’aide du Concepteur de rapports (SSRS)
 
 Utilisez le Concepteur de rapports pour créer des rapports et des solutions de création de rapports complets et paginés de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Le Concepteur de rapports fournit une interface graphique dans laquelle vous pouvez définir les sources de données, les datasets et les requêtes, les positions de mise en page des rapports pour les régions de données et les champs, ainsi que des fonctionnalités interactives telles que les paramètres et les jeux de rapports qui fonctionnent ensemble.  
 
-Le Concepteur de rapports est une fonctionnalité de  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], un environnement Microsoft Visual Studio pour la création de solutions décisionnelles. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] n’est pas fourni avec SQL Server. Téléchargez [SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714). 
+Le Concepteur de rapports est une fonctionnalité de  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], un environnement Microsoft Visual Studio pour la création de solutions décisionnelles. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] n’est pas fourni avec SQL Server. Téléchargez [SQL Server Data Tools](https://go.microsoft.com/fwlink/?LinkID=616714). 
   
 ## <a name="benefits-of-report-projects"></a>Avantages des projets de rapports  
 Les projets de rapports fonctionnent comme des conteneurs de définitions de rapports et de ressources. Utilisez les projets pour :  
@@ -69,7 +69,7 @@ Les rapports paginés sont des fichiers qui sont stockés dans un projet de rapp
   
 -   **Ajoutez un élément existant.** Une définition de rapport existante (.rdl) s'ouvre dans le Concepteur de rapports. Ouvrir un rapport ou un projet d'une version antérieure de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] peut automatiquement mettre à niveau le projet vers la version actuelle et le rapport vers le schéma actuel. Pour plus d'informations, consultez [Mettre à niveau des rapports](../../reporting-services/install-windows/upgrade-reports.md).  
   
--   **Importez un rapport [!INCLUDE[msCoName](../../includes/msconame-md.md)] Access.** Importez tous les rapports à partir d’une base de données Access (.mdb, .accdb) ou du fichier de projet (.adp). Le Concepteur de rapports convertit chaque rapport dans un fichier de base de données ou de projet au format RDL, puis l'enregistre dans le projet de rapport. Les fonctionnalités d'un rapport Access ne sont pas toutes transférables dans un fichier de définition de rapport (.rdl). Pour plus d’informations, consultez [Importer des rapports à partir de Microsoft Access &#40;Reporting Services&#41;](http://msdn.microsoft.com/library/4f29d5b8-b77d-4714-a84a-05523df55646) et [Fonctionnalités des états Access prises en charge &#40;SSRS&#41;](http://msdn.microsoft.com/library/7ffec331-6365-4c13-8e58-b77a48cffb44).  
+-   **Importez un rapport [!INCLUDE[msCoName](../../includes/msconame-md.md)] Access.** Importez tous les rapports à partir d’une base de données Access (.mdb, .accdb) ou du fichier de projet (.adp). Le Concepteur de rapports convertit chaque rapport dans un fichier de base de données ou de projet au format RDL, puis l'enregistre dans le projet de rapport. Les fonctionnalités d'un rapport Access ne sont pas toutes transférables dans un fichier de définition de rapport (.rdl). Pour plus d’informations, consultez [Importer des rapports à partir de Microsoft Access &#40;Reporting Services&#41;](https://msdn.microsoft.com/library/4f29d5b8-b77d-4714-a84a-05523df55646) et [Fonctionnalités des états Access prises en charge &#40;SSRS&#41;](https://msdn.microsoft.com/library/7ffec331-6365-4c13-8e58-b77a48cffb44).  
   
     > [!NOTE]  
     >  Microsoft Access 2002 (ou version ultérieure) doit être installé sur le même ordinateur que le Concepteur de rapports pour pouvoir utiliser la fonctionnalité d'importation. La source de données des états Access doit être disponible lorsque les états sont importés.  
@@ -180,9 +180,9 @@ Les rapports paginés sont des fichiers qui sont stockés dans un projet de rapp
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-[Télécharger SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714)  
+[Télécharger SQL Server Data Tools](https://go.microsoft.com/fwlink/?LinkID=616714)  
 [Reporting Services dans les outils de données SQL Server](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md)   
 [Outils de création de requêtes](../../reporting-services/report-data/query-design-tools-ssrs.md)   
 [Prise en charge du déploiement et de la version dans les outils de données de serveur SQL](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  
 
-D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

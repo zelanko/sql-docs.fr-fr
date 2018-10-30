@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: e0894b0d-dc5b-4a75-8142-75092972a034
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3e2733359b71be77bf725eda5c304313e830f043
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 34a916a39a152b1f62315df9db4028652fce3f97
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800937"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50020495"
 ---
 # <a name="pagination-in-reporting-services-report-builder--and-ssrs"></a>Pagination dans Reporting Services (Générateur de rapports et SSRS)
   La pagination fait référence au nombre de pages au sein d'un rapport et à la façon dont les éléments d'un rapport sont réorganisés sur ces pages. La pagination dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dépend de l'extension de rendu que vous utilisez pour afficher et remettre le rapport. Lorsque vous exécutez un rapport sur le serveur de rapports, le rapport utilise le convertisseur HTML. HTML suit un ensemble spécifique de règles de pagination. Par exemple, si vous exportez le même rapport en PDF, le convertisseur PDF est utilisé et un ensemble différent de règles est appliqué ; par conséquent, le rapport est paginé différemment. Pour concevoir avec succès un rapport facile à lire par vos utilisateurs et qui est optimisé pour le convertisseur que vous prévoyez d’utiliser pour remettre votre rapport, vous devez comprendre les règles utilisées pour contrôler la pagination dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
@@ -36,7 +36,7 @@ ms.locfileid: "47800937"
   
  Par défaut, la taille de la page est de 8,5 x 11 pouces, mais vous pouvez modifier cette taille en utilisant le volet **Propriétés de rapport** , la boîte de dialogue **Mise en page** ou en modifiant les propriétés PageHeight et PageWidth dans le volet **Propriétés** . La taille de la page ne varie pas pour s'ajuster au contenu du corps de rapport. Si vous souhaitez que le rapport s'affiche sur une seule page, tout le contenu dans le corps du rapport doit s'ajuster à la page physique. Si le contenu ne s'ajuste pas à la page et que vous utilisez le format de saut de page manuel, le rapport nécessitera des pages supplémentaires. Si le corps du rapport dépasse le bord droit de la page physique, un saut de page est inséré horizontalement. Si le corps du rapport dépasse le bord inférieur de la page physique, un saut de page est inséré verticalement.  
   
- Si vous souhaitez remplacer la taille physique de la page définie dans le rapport, vous pouvez spécifier cette taille à l'aide des paramètres d'informations de périphérique pour le convertisseur spécifique que vous utilisez pour exporter le rapport. Pour plus d'informations, consultez [Paramètres d'informations de périphérique Reporting Services](http://go.microsoft.com/fwlink/?LinkId=102515)(en anglais).  
+ Si vous souhaitez remplacer la taille physique de la page définie dans le rapport, vous pouvez spécifier cette taille à l'aide des paramètres d'informations de périphérique pour le convertisseur spécifique que vous utilisez pour exporter le rapport. Pour plus d'informations, consultez [Paramètres d'informations de périphérique Reporting Services](https://go.microsoft.com/fwlink/?LinkId=102515)(en anglais).  
   
 ### <a name="margins"></a>Marges  
  Les marges sont dessinées à partir bord des dimensions de la page physique vers le paramètre de marge spécifié. Si un élément du rapport dépasse dans la zone de marge, il est détouré afin que la zone superposée ne soit pas rendue. Si vous spécifiez des tailles de marge qui équivalent à une largeur horizontale ou verticale de la page égale à zéro, les paramètres de marge prennent la valeur par défaut zéro. Les marges sont spécifiées à l’aide du volet **Propriétés de rapport** , de la boîte de dialogue **Mise en page** ou en modifiant les propriétés TopMargin, BottomMargin, LeftMargin et RightMargin dans le volet **Propriétés** . Si vous souhaitez remplacer la taille de la marge définie dans le rapport, vous pouvez spécifier cette taille à l'aide des paramètres d'informations de périphérique pour le convertisseur spécifique que vous utilisez pour exporter le rapport.  

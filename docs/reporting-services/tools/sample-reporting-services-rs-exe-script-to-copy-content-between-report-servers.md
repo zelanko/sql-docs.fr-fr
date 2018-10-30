@@ -8,16 +8,16 @@ ms.topic: conceptual
 ms.assetid: d81bb03a-a89e-4fc1-a62b-886fb5338150
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ec2227925dcc8023a04c3993b2cecd32e89a4db4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b279c177a7e5b627c8ead3103cb2bd8ad6a58d78
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742947"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031438"
 ---
 # <a name="sample-reporting-services-rsexe-script-to-copy-content-between-report-servers"></a>Exemple de script Reporting Services rs.exe pour copier du contenu entre des serveurs de rapports
 
-[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2008r2-and-later](../../includes/ssrs-appliesto-2008r2-and-later.md)] [!INCLUDE [ssrs-appliesto-sharepoint-2013-2016](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE [ssrs-appliesto-pbirs](../../includes/ssrs-appliesto-pbirs.md)])
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2008r2-and-later](../../includes/ssrs-appliesto-2008r2-and-later.md)] [!INCLUDE [ssrs-appliesto-sharepoint-2013-2016](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE [ssrs-appliesto-pbirs](../../includes/ssrs-appliesto-pbirs.md)]
 
 Cet article inclut et décrit un exemple de script RSS [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] qui copie les éléments de contenu et les paramètres d’un serveur de rapports [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] vers un autre serveur de rapports au moyen de l’utilitaire **RS.exe**. RS.exe est installé avec [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], en mode natif et SharePoint. Le script copie les éléments de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , par exemple les rapports et les abonnements, de serveur à serveur. Il prend en charge le mode SharePoint et les serveurs de rapports en mode natif.  
 
@@ -265,7 +265,7 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://SourceServer/ReportServer -u 
 ```  
   
 > [!TIP]  
->  Pour plus d’informations sur l’utilisation de Windows PowerShell pour créer des serveurs de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sur des machines virtuelles Microsoft Azure, consultez [Utiliser PowerShell pour créer une machine virtuelle Microsoft Azure avec un serveur de rapports en mode natif](http://msdn.microsoft.com/library/dn449661.aspx).  
+>  Pour plus d’informations sur l’utilisation de Windows PowerShell pour créer des serveurs de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sur des machines virtuelles Microsoft Azure, consultez [Utiliser PowerShell pour créer une machine virtuelle Microsoft Azure avec un serveur de rapports en mode natif](https://msdn.microsoft.com/library/dn449661.aspx).  
   
 ##  <a name="bkmk_sharepoint_site_to_native_Azure_vm"></a> Mode SharePoint – Collection de sites « bi » vers un serveur en mode natif sur une machine virtuelle Windows Azure  
  L'exemple suivant migre le contenu :  
@@ -318,6 +318,6 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://uetesta02/_vti_bin/reportserv
   
 ## <a name="see-also"></a> Voir aussi  
  [Utilitaire RS.exe &#40;SSRS&#41;](../../reporting-services/tools/rs-exe-utility-ssrs.md)   
- [Comparer des rôles et des tâches dans Reporting Services pour des autorisations et des groupes SharePoint](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)  
+ [Comparer des rôles et des tâches dans Reporting Services avec les autorisations et les groupes SharePoint](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)  
   
   

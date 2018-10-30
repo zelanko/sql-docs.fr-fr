@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 4dde9d4d-e4fa-4bbe-91b0-0bcb0dc7dde7
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: adfa89703f24d9ce93653dc897d494ccef769a0f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 50282a856d6d6448923c05b7e81394b6f9e6c541
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746317"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031718"
 ---
 # <a name="planning-for-reporting-services"></a>Planification pour Reporting Services
   Utilisez ces rubriques pour mieux comprendre [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Apprenez comment installer et configurer l’environnement [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] pour mieux répondre à vos besoins.  
@@ -21,15 +21,15 @@ ms.locfileid: "47746317"
  ![Petite icône de dossier de fichiers](../analysis-services/media/filefolder-small.png "Petite icône de dossier de fichiers") **Planification et architecture des fonctionnalités générales de Reporting Services**  
  [Prise en charge des navigateurs pour Reporting Services et Power View](../reporting-services/browser-support-for-reporting-services-and-power-view.md)  
   
- [Planifier la conception de rapports et le déploiement de rapports | Reporting Services](http://msdn.microsoft.com/1c1e265e-52a2-4de3-96fd-ca4abae01c02)  
+ [Planifier la conception de rapports et le déploiement de rapports | Reporting Services](https://msdn.microsoft.com/1c1e265e-52a2-4de3-96fd-ca4abae01c02)  
   
- [Afficher des rapports Reporting Services sur des appareils Microsoft Surface et Apple iOS](http://msdn.microsoft.com/library/2124bcf5-d60a-475f-a4ae-de6df44d2860)  
+ [Afficher des rapports Reporting Services sur des appareils Microsoft Surface et Apple iOS](https://msdn.microsoft.com/library/2124bcf5-d60a-475f-a4ae-de6df44d2860)  
   
  ![Petite icône de dossier de fichiers](../analysis-services/media/filefolder-small.png "Petite icône de dossier de fichiers") **Programme d’installation de Reporting Services**  
  [Serveur de rapports Reporting Services](../reporting-services/report-server-sharepoint/reporting-services-report-server.md)  
   
- [Liste de vérification du déploiement : Installer Reporting Services dans une batterie de serveurs SharePoint existante](http://msdn.microsoft.com/library/436b4c3d-3f2f-464a-be7e-5c051d9ffb8f)  
+ [Liste de vérification du déploiement : Installer Reporting Services dans une batterie de serveurs SharePoint existante](https://msdn.microsoft.com/library/436b4c3d-3f2f-464a-be7e-5c051d9ffb8f)  
   
- [Topologies de déploiement pour les fonctionnalités SQL Server BI dans SharePoint](http://msdn.microsoft.com/library/39f76bc7-94e6-4dbc-bfa5-d56f4430bb26)  
+ [Topologies de déploiement pour les fonctionnalités SQL Server BI dans SharePoint](https://msdn.microsoft.com/library/39f76bc7-94e6-4dbc-bfa5-d56f4430bb26)  
   
   

@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 75432318-0b00-4797-917c-0a2e74f9d951
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 88d02eafa98beeca7dfe789e7697afe5acd31116
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d6e0d987c9976759a870bb58578c9f39593bfb87
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608707"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021763"
 ---
 # <a name="dataset-properties-dialog-box-query-report-builder"></a>Boîte de dialogue Propriétés du dataset, Requête (Générateur de rapports)
  
@@ -66,6 +66,6 @@ Cette option apparaît lorsque vous choisissez l'option de type de commande Proc
 ## <a name="see-also"></a> Voir aussi  
 [Datasets incorporés dans les rapports et datasets partagés &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
 [Datasets de rapport &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
-[Concepteurs de requêtes &#40;Générateur de rapports&#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  
+[Concepteurs de requêtes &#40;Générateur de rapports&#41;](https://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  
   
   

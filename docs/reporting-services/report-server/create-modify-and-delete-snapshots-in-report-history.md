@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5aebbbfa-a8db-462d-8ab9-746fad9525f0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0dfa183f3df88bb53074407c62ea57aa2a3a3cc6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 31c1b8e60f6baeea276a38669a42e07ecbf18479
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710597"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029618"
 ---
 # <a name="create-modify-and-delete-snapshots-in-report-history"></a>Créer, modifier et supprimer des instantanés dans l'historique de rapport
   L'historique de rapport est un ensemble d'instantanés de rapport. Vous pouvez gérer l'historique de rapport en ajoutant et en supprimant des instantanés, ou en modifiant les propriétés qui affectent le stockage de l'historique de rapport. Vous pouvez créer un historique de rapport manuellement ou de manière planifiée.  
@@ -26,7 +26,7 @@ ms.locfileid: "47710597"
  Les instantanés dans l'historique de rapport sont identifiés par la date et l'heure de leur création. La date et l'heure dépendent du moment d'exécution de la requête.  
   
 ## <a name="creating-snapshots-in-report-history"></a>Création d'instantanés l'historique de rapport  
- Les instantanés peuvent être créés manuellement ou à intervalles planifiés pour un rapport pouvant s'exécuter de manière automatisée. Pour pouvoir s'exécuter de manière automatisée, le rapport doit utiliser des informations d'identification stockées ou ne pas en utiliser du tout. Par ailleurs, si le rapport utilise des paramètres, vous devez spécifier les valeurs par défaut à utiliser lors de l'exécution du rapport. Vous pouvez spécifier les informations d'identification stockées et les valeurs des paramètres dans les pages des propriétés du rapport. Pour plus d’informations, consultez [Page de propriétés des paramètres &#40;Gestionnaire de rapports&#41;](http://msdn.microsoft.com/library/ebb53598-2378-46ae-8935-d5192f8ea49a).  
+ Les instantanés peuvent être créés manuellement ou à intervalles planifiés pour un rapport pouvant s'exécuter de manière automatisée. Pour pouvoir s'exécuter de manière automatisée, le rapport doit utiliser des informations d'identification stockées ou ne pas en utiliser du tout. Par ailleurs, si le rapport utilise des paramètres, vous devez spécifier les valeurs par défaut à utiliser lors de l'exécution du rapport. Vous pouvez spécifier les informations d'identification stockées et les valeurs des paramètres dans les pages des propriétés du rapport. Pour plus d’informations, consultez [Page de propriétés des paramètres &#40;Gestionnaire de rapports&#41;](https://msdn.microsoft.com/library/ebb53598-2378-46ae-8935-d5192f8ea49a).  
   
  Lorsque vous créez un instantané de rapport, les éléments suivants sont stockés avec l'instantané de rapport dans la base de données du serveur de rapports :  
   
@@ -59,7 +59,7 @@ ms.locfileid: "47710597"
   
 ## <a name="see-also"></a> Voir aussi  
  [Créer un historique de rapport &#40;Reporting Services en mode intégré SharePoint&#41;](../../reporting-services/report-server/create-report-history-reporting-services-in-sharepoint-integrated-mode.md)   
- [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
  [Gestion du contenu du serveur de rapports &#40;SSRS en mode natif&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
  [Ajout d’un instantané à un historique de rapport &#40;Gestionnaire de rapports&#41;](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)   
  [Limiter l’historique de rapport &#40;Gestionnaire de rapports&#41;](../../reporting-services/reports/limit-report-history-report-manager.md)  

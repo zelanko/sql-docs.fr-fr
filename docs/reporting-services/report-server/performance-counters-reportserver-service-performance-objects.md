@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 2bcacab2-3a4f-4aae-b123-19d756b9b9ed
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4d17a873d3d2e6df6f5c69d6eab0e9b602c70304
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 32e240e82c48777c19b2c1d731753ab450437f0f
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47816251"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028768"
 ---
 # <a name="performance-counters---reportserver-service--performance-objects"></a>Compteurs de performances - Service ReportServer, objets de performance
   Cette rubrique décrit les compteurs de performance pour les objets de performance **ReportServer:Service** et **ReportServerSharePoint:Service** qui font partie d’un déploiement de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] .  
@@ -23,7 +23,7 @@ ms.locfileid: "47816251"
 > [!NOTE]  
 >  Les objets de performance sont utilisés pour contrôler des événements sur le serveur de rapports local. Si vous exécutez un serveur de rapports dans un déploiement avec montée en puissance parallèle, les chiffres s'appliquent au serveur actuel et non au déploiement avec montée en puissance parallèle dans son ensemble.  
   
- Les objets de performance sont disponibles dans l’Analyseur de performances Windows (**Perfmon.exe**). Pour plus d'informations, consultez la documentation Windows. [Profilage de runtime](http://msdn.microsoft.com/library/w4bz2147.aspx) (http://msdn.microsoft.com/library/w4bz2147.aspx).  
+ Les objets de performance sont disponibles dans l’Analyseur de performances Windows (**Perfmon.exe**). Pour plus d'informations, consultez la documentation Windows. [Profilage de runtime](https://msdn.microsoft.com/library/w4bz2147.aspx) (https://msdn.microsoft.com/library/w4bz2147.aspx).  
   
  Dans cette rubrique :  
   
@@ -96,7 +96,7 @@ ms.locfileid: "47816251"
   
 ## <a name="see-also"></a> Voir aussi  
  [Analyse des performances d'un serveur de rapports](../../reporting-services/report-server/monitoring-report-server-performance.md)   
- [Compteurs de performances du service web MSRS 2011 et des objets de performance du service Windows MSRS 2011 &#40;mode natif&#41;](../../reporting-services/report-server/performance-counters-msrs-2011-web-service-performance-objects.md)   
+ [Compteurs de performances du service Web MSRS 2011 et des objets de performance du service Windows MSRS 2011 &#40;mode natif&#41;](../../reporting-services/report-server/performance-counters-msrs-2011-web-service-performance-objects.md)   
  [Compteurs de performances du service Web MSRS 2011 en mode SharePoint et des objets de performance du service Windows MSRS 2011 en mode SharePoint &#40;mode SharePoint&#41;](../../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)  
   
   

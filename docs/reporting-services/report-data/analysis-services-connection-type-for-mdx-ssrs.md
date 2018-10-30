@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: bd2e7148-3124-4e07-9734-22333127c3be
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a291a86fca484d986cac0b9f7b66315fd8f90fd3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 111e97f9dd5c398053ee7b3c9b0f8c2db7f9176e
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800277"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031538"
 ---
 # <a name="analysis-services-connection-type-for-mdx-ssrs"></a>Type de connexion Analysis Services pour MDX (SSRS)
   Pour inclure des données d’un cube [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dans votre rapport, vous devez avoir un dataset basé sur une source de données de rapport de type [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Ce type de source de données intégré est basé sur l'extension de données [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Vous pouvez récupérer les métadonnées relatives aux dimensions, hiérarchies, niveaux, indicateurs de performance clés (KPI), mesures et attributs d'un cube [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] afin de les utiliser comme données de rapport.  
@@ -29,7 +29,7 @@ ms.locfileid: "47800277"
 data source=<server name>;initial catalog=<database name>  
 ```  
   
- Pour obtenir d’autres exemples sur les chaînes de connexion, consultez [Connexions de données, sources de données et chaînes de connexion dans le Générateur de rapports](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34).  
+ Pour obtenir d’autres exemples sur les chaînes de connexion, consultez [Connexions de données, sources de données et chaînes de connexion dans le Générateur de rapports](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34).  
   
   
 ##  <a name="Credentials"></a> Informations d'identification  
@@ -45,9 +45,9 @@ data source=<server name>;initial catalog=<database name>
   
 -   demander à l'utilisateur des informations d'identification ; Cette option prend uniquement en charge la sécurité intégrée de Windows.  
   
--   Aucune information d'identification n'est requise. Pour utiliser cette option, vous devez avoir configuré le compte d'exécution sans assistance sur le serveur de rapports. Pour plus d’informations, consultez [Configurer le compte d’exécution sans assistance &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) dans la [documentation Reporting Services](http://go.microsoft.com/fwlink/?linkid=121312) sur msdn.microsoft.com.  
+-   Aucune information d'identification n'est requise. Pour utiliser cette option, vous devez avoir configuré le compte d'exécution sans assistance sur le serveur de rapports. Pour plus d’informations, consultez [Configurer le compte d’exécution sans assistance &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) dans la [documentation Reporting Services](https://go.microsoft.com/fwlink/?linkid=121312) sur msdn.microsoft.com.  
   
- Pour plus d’informations, consultez [Connexions de données, sources de données et chaînes de connexion &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) ou [Spécifier des informations d’identification dans le Générateur de rapports](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53).  
+ Pour plus d’informations, consultez [Connexions de données, sources de données et chaînes de connexion &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) ou [Spécifier des informations d’identification dans le Générateur de rapports](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53).  
   
   
 ##  <a name="Query"></a> Requêtes  
@@ -61,7 +61,7 @@ data source=<server name>;initial catalog=<database name>
   
     -   **Affichage des requêtes** Faites glisser des dimensions, des membres, des propriétés de membre, des mesures et des indicateurs de performance clés du navigateur de métadonnées vers le volet Requête dans le but de générer une requête MDX. Il est possible de modifier le texte MDX directement dans le volet Requête. Faites glisser les membres calculés du volet CalculatedMembers vers le volet Requête pour définir d’autres champs de dataset.  
   
-     Pour plus d’informations, consultez [Interface utilisateur du Concepteur de requêtes MDX Analysis Services &#40;Générateur de rapports&#41;](http://msdn.microsoft.com/library/7e288eee-2d37-485e-a6a0-dbba5e041e26).  
+     Pour plus d’informations, consultez [Interface utilisateur du Concepteur de requêtes MDX Analysis Services &#40;Générateur de rapports&#41;](https://msdn.microsoft.com/library/7e288eee-2d37-485e-a6a0-dbba5e041e26).  
   
 -   Importer une requête MDX existante à partir d'un rapport. Utilisez le bouton **Importer une requête** pour rechercher un fichier .rdl et importer une requête. Vous pouvez importer une requête à partir d'un rapport qui contient un dataset incorporé basé sur une source de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . L'importation d'une requête MDX directement à partir d'un fichier .mdx n'est pas prise en charge.  
   
@@ -81,7 +81,7 @@ data source=<server name>;initial catalog=<database name>
   
  Vous pouvez également récupérer les données d’un cube [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] à partir du type de source de données OLE DB. Pour plus d’informations, consultez [Type de connexion OLE DB &#40;SSRS&#41;](../../reporting-services/report-data/ole-db-connection-type-ssrs.md).  
   
- Pour plus d’informations sur la prise en charge des versions, consultez [Sources de données prises en charge par Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) dans la section [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de la [documentation en ligne](http://go.microsoft.com/fwlink/?linkid=121312) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Pour plus d’informations sur la prise en charge des versions, consultez [Sources de données prises en charge par Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) dans la section [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de la [documentation en ligne](https://go.microsoft.com/fwlink/?linkid=121312) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
   
 ##  <a name="Related"></a> Sections connexes  
@@ -90,7 +90,7 @@ data source=<server name>;initial catalog=<database name>
  [Datasets de rapport &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
  Fournit une vue d'ensemble de l'accès aux données pour votre rapport.  
   
- [Connexions de données, sources de données et chaînes de connexion dans le Générateur de rapports](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
+ [Connexions de données, sources de données et chaînes de connexion dans le Générateur de rapports](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
  Fournit des informations sur les connexions de données et les sources de données.  
   
  [Datasets incorporés dans le rapport et datasets partagés &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
@@ -102,7 +102,7 @@ data source=<server name>;initial catalog=<database name>
  [Propriétés de champ étendues pour une base de données Analysis Services &#40;SSRS&#41;](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md)  
  Fournit des informations sur les champs supplémentaires disponibles via le fournisseur de données XMLA.  
   
- [Sources de données prises en charge par Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) dans la section [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de la [documentation en ligne](http://go.microsoft.com/fwlink/?linkid=121312) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ [Sources de données prises en charge par Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) dans la section [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de la [documentation en ligne](https://go.microsoft.com/fwlink/?linkid=121312) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
  Fournit des informations détaillées sur la prise en charge des plateformes et des versions pour chaque extension de données.  
   
   

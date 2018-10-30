@@ -9,12 +9,12 @@ ms.assetid: 8464ab9d-afe1-4490-955f-9f3319bcbf8d
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 845a120f1fe8b4bc56b8cac835251b062cade112
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: c96de7a5f5141e97a9e3670711e09eb3c20cd324
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072193"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021613"
 ---
 # <a name="create-a-data-alert-in-data-alert-designer"></a>Créer une alerte de données dans le Concepteur d’alertes
 
@@ -126,4 +126,4 @@ Vous pouvez créer les définitions d'alerte de données dans le Concepteur d'al
 [Gestionnaire des alertes de données pour les administrateurs d'alertes](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
 [Alertes de données Reporting Services](../reporting-services/reporting-services-data-alerts.md)  
 
-D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -15,19 +15,19 @@ f1_keywords:
 ms.assetid: 58b96555-d876-4f61-bff8-db5764b9f5f9
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 52e879b6b5cbfcd38b2532391f1640f2b8f85681
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fa92c44ff8410049e32ba7ddba2c90fcd07c2821
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681487"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50032078"
 ---
 # <a name="report-parameters-report-builder-and-report-designer"></a>Paramètres de rapport (Générateur de rapports et Concepteur de rapports)
-  Cette rubrique décrit les utilisations courantes des paramètres de rapport [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , les propriétés que vous pouvez définir, et bien d’autres aspects. Les paramètres de rapport vous permettent de contrôler les données du rapport, d'interconnecter les rapports associés et de varier la présentation des rapports. Vous pouvez utiliser les paramètres de rapport dans les rapports paginés que vous créez dans le [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] et dans le Concepteur de rapports, ainsi que dans les rapports mobiles que vous créez dans [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]. En savoir plus sur les [Concepts de paramètres de rapport](../../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md).  
+  Cette rubrique décrit les utilisations courantes des paramètres de rapport [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , les propriétés que vous pouvez définir, et bien d’autres aspects. Les paramètres de rapport vous permettent de contrôler les données du rapport, d'interconnecter les rapports associés et de varier la présentation des rapports. Vous pouvez utiliser les paramètres de rapport dans les rapports paginés que vous créez dans [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] et dans le Concepteur de rapports, ainsi que dans les rapports mobiles que vous créez dans [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]. En savoir plus sur les [Concepts de paramètres de rapport](../../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md).  
   
 ||  
 |-|  
-|[!INCLUDE[applies](../../includes/applies-md.md)], [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode SharePoint et en mode natif|  
+|[!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)], mode SharePoint et mode natif de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|  
   
  Pour essayer d’ajouter vous-même un paramètre à un rapport, consultez [Didacticiel : Ajouter un paramètre à un rapport &#40;Générateur de rapports&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md).  
     
@@ -159,7 +159,7 @@ ms.locfileid: "47681487"
   
 -   Pour les requêtes [!INCLUDE[tsql](../../includes/tsql-md.md)] , différentes sources de données prennent en charge différentes syntaxes pour les paramètres. La prise en charge comprend les paramètres identifiés dans la requête par position ou par nom. Pour plus d’informations, consultez les rubriques relatives aux types de sources de données externes spécifiques dans [Datasets de rapport &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md). Dans le concepteur de requêtes relationnelles, vous devez sélectionner l'option de paramètre pour un filtre afin de créer une requête paramétrable. Pour plus d’informations, consultez [Interface utilisateur du Concepteur de requêtes relationnelles &#40;Générateur de rapports&#41;](../../reporting-services/report-data/relational-query-designer-user-interface-report-builder.md).  
   
--   Pour les requêtes basées sur une source de données multidimensionnelle telle que Microsoft SQL Server Analysis Services, SAP NetWeaver BI ou Hyperion Essbase, vous pouvez définir s'il faut créer un paramètre en fonction d'un filtre que vous spécifiez dans le concepteur de requêtes. Pour plus d’informations, consultez la rubrique relative au concepteur de requêtes dans [Concepteurs de requêtes &#40;Générateur de rapports&#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9) qui correspond à l’extension de données.  
+-   Pour les requêtes basées sur une source de données multidimensionnelle telle que Microsoft SQL Server Analysis Services, SAP NetWeaver BI ou Hyperion Essbase, vous pouvez définir s'il faut créer un paramètre en fonction d'un filtre que vous spécifiez dans le concepteur de requêtes. Pour plus d’informations, consultez la rubrique relative au concepteur de requêtes dans [Concepteurs de requêtes &#40;Générateur de rapports&#41;](https://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9) qui correspond à l’extension de données.  
   
 ##  <a name="bkmk_Manage_Parameters"></a> Gestion des paramètres pour un rapport publié  
  Lorsque vous concevez un rapport, les paramètres de rapport sont enregistrés dans la définition de rapport. Lorsque vous publiez un rapport, les paramètres de rapport sont enregistrés et gérés indépendamment de la définition de rapport.  
@@ -233,13 +233,13 @@ ms.locfileid: "47681487"
   
 
 ##  <a name="bkmk_Related_Topics"></a> Sections connexes  
- [Configuration de paramètres de rapport SSRS (quiz)](http://go.microsoft.com/fwlink/p/?LinkID=306443)  
+ [Configuration de paramètres de rapport SSRS (quiz)](https://go.microsoft.com/fwlink/p/?LinkID=306443)  
   
  [Didacticiel : Ajouter un paramètre à un rapport &#40;Générateur de rapports&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)  
   
 [Concepts de paramètres de rapport](../../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md)  
   
- [Exemples de rapports (Générateur de rapports et SSRS)](http://go.microsoft.com/fwlink/?LinkId=198283)  
+ [Exemples de rapports (Générateur de rapports et SSRS)](https://go.microsoft.com/fwlink/?LinkId=198283)  
   
  [Utilisation d’expressions dans les rapports &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)  
   

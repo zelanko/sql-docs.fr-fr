@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: f985856b-31d5-4e56-844b-8a8ee38da67e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c7899c50bfcc5fe21b7482d5b3ddce35770d5c94
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 518133fc1023683f5f15af50db6133c28db2cc17
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47775307"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031565"
 ---
 # <a name="sap-netweaver-bi-connection-type-ssrs"></a>Type de connexion SAP NetWeaver BI (SSRS)
   Pour inclure les données d'une source de données externe SAP NetWeaver® Business Intelligence dans votre rapport, vous devez avoir un dataset basé sur une source de données de rapport de type [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)]. Ce type de source de données intégré est basé sur l'extension de données du fournisseur de données [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 1.0 pour [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)].  
@@ -29,7 +29,7 @@ ms.locfileid: "47775307"
 DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla  
 ```  
   
- Pour obtenir d’autres exemples sur les chaînes de connexion, consultez [Connexions de données, sources de données et chaînes de connexion dans le Générateur de rapports](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34).  
+ Pour obtenir d’autres exemples sur les chaînes de connexion, consultez [Connexions de données, sources de données et chaînes de connexion dans le Générateur de rapports](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34).  
   
   
 ##  <a name="Credentials"></a> Informations d'identification  
@@ -37,7 +37,7 @@ DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
   
  Après avoir publié votre rapport, vous pouvez devoir modifier les informations d'identification pour la source de données afin que les autorisations soient valides pour récupérer les données lorsque le rapport s'exécute sur le serveur de rapports.  
   
- Pour plus d’informations, consultez [Connexions de données, sources de données et chaînes de connexion &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) ou [Spécifier des informations d’identification dans le Générateur de rapports](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53).  
+ Pour plus d’informations, consultez [Connexions de données, sources de données et chaînes de connexion &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) ou [Spécifier des informations d’identification dans le Générateur de rapports](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53).  
   
   
 ##  <a name="Query"></a> Requêtes  
@@ -49,7 +49,7 @@ DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
   
  Pendant que vous générez des requêtes, le concepteur de requêtes ajoute automatiquement des propriétés par défaut à la requête MDX. Pour inclure des propriétés autres que les propriétés par défaut, vous devez modifier manuellement la requête MDX.  
   
- Pour plus d’informations sur l’utilisation de ce Concepteur de requêtes, consultez [Interface utilisateur du Concepteur de requêtes SAP NetWeaver BI &#40;Générateur de rapports&#41;](http://msdn.microsoft.com/library/8edda06d-1608-498b-bd50-10905e54f6ce).  
+ Pour plus d’informations sur l’utilisation de ce Concepteur de requêtes, consultez [Interface utilisateur du Concepteur de requêtes SAP NetWeaver BI &#40;Générateur de rapports&#41;](https://msdn.microsoft.com/library/8edda06d-1608-498b-bd50-10905e54f6ce).  
   
   
 ##  <a name="Extended"></a> Propriétés de champ étendues  
@@ -97,7 +97,7 @@ DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
 ##  <a name="Remarks"></a> Notes  
  Certains modes de remise de rapport ne sont pas pris en charge par ce fournisseur de données. La remise des rapports par le biais d'abonnements pilotés par les données n'est pas prise en charge pour cette extension pour le traitement des données. Pour plus d’informations, consultez [Utiliser une source de données externe pour les données des abonnés &#40;abonnements pilotés par les données&#41;](../../reporting-services/subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md).  
   
- Pour plus d'informations, consultez [Utilisation de SQL Server 2008 Reporting Services avec SAP NetWeaver Business Intelligence](http://go.microsoft.com/fwlink/?LinkId=167352).  
+ Pour plus d'informations, consultez [Utilisation de SQL Server 2008 Reporting Services avec SAP NetWeaver Business Intelligence](https://go.microsoft.com/fwlink/?LinkId=167352).  
   
   
 ##  <a name="HowTo"></a> Rubriques de procédures  
@@ -116,7 +116,7 @@ DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
  [Datasets de rapport &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
  Fournit une vue d'ensemble de l'accès aux données pour votre rapport.  
   
- [Connexions de données, sources de données et chaînes de connexion dans le Générateur de rapports](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
+ [Connexions de données, sources de données et chaînes de connexion dans le Générateur de rapports](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
  Fournit des informations sur les connexions de données et les sources de données.  
   
  [Datasets incorporés dans le rapport et datasets partagés &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  

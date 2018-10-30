@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0ba2093e-9393-4eb6-af06-9da10988cfaf
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3a7759473698ebdae0a9e97e7487f8812983d5b8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 533391424ab1eeacb52d59e56070f0b874320942
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849147"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030388"
 ---
 # <a name="create-modify-and-delete-data-driven-subscriptions"></a>Créer, modifier ou supprimer des abonnements pilotés par les données
   Un abonnement piloté par les données est un abonnement qui a recours à une requête pour obtenir les valeurs de données qui seront utilisées dans le traitement de l'abonnement au moment de l'exécution. Lorsque l'abonnement est déclenché, une requête est traitée pour récupérer des informations récentes sur les destinataires, les options de remise de rapport, les formats de rendu et les valeurs de paramètre. Les résultats de la requête sont combinées à la définition de l'abonnement pour créer un abonnement dynamique utilisant les données que vous avez conservées dans une base de données employés, une base de données clients ou dans toute autre base de données contenant des informations utilisables comme données d'abonnés.  
@@ -36,7 +36,7 @@ ms.locfileid: "47849147"
 -   [Exécution de l'abonnement](#bkmk_run_subscription)  
   
 ##  <a name="bkmk_manage_and_delete"></a> Gestion et suppression d'un abonnement piloté par les données  
- Un abonnement piloté par les données en cours d'exécution ne peut pas être arrêté ou supprimé via la page Gérer les travaux du Gestionnaire de rapports. Par conséquent, il est préférable d'utiliser une planification partagée pour déclencher l'abonnement piloté par les données. Si vous voulez empêcher temporairement l'exécution d'un abonnement, vous pouvez suspendre la planification qui le déclenche. Pour plus d’informations, consultez [old_Créer et gérer des abonnements pour les serveurs de rapports en mode natif](http://msdn.microsoft.com/7f46cbdb-5102-4941-bca2-5e0ff9012c6b).  
+ Un abonnement piloté par les données en cours d'exécution ne peut pas être arrêté ou supprimé via la page Gérer les travaux du Gestionnaire de rapports. Par conséquent, il est préférable d'utiliser une planification partagée pour déclencher l'abonnement piloté par les données. Si vous voulez empêcher temporairement l'exécution d'un abonnement, vous pouvez suspendre la planification qui le déclenche. Pour plus d’informations, consultez [old_Créer et gérer des abonnements pour les serveurs de rapports en mode natif](https://msdn.microsoft.com/7f46cbdb-5102-4941-bca2-5e0ff9012c6b).  
   
  Pour supprimer un abonnement piloté par les données, sélectionnez-le dans la page Mes abonnements ou dans la page Abonnements d’un rapport, puis cliquez sur **Supprimer**.  
   
@@ -101,9 +101,9 @@ ms.locfileid: "47849147"
 ## <a name="see-also"></a> Voir aussi  
  [Créer et gérer des abonnements pour les serveurs de rapports en mode natif](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)   
  [Abonnements et remise &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
- [old_Créer et gérer des abonnements pour les serveurs de rapports en mode natif](http://msdn.microsoft.com/7f46cbdb-5102-4941-bca2-5e0ff9012c6b)   
- [Page Abonnements &#40;Gestionnaire de rapports&#41;](http://msdn.microsoft.com/library/cf3a6bd0-e0b2-4875-a532-63ef34cfa860)   
- [Page Mes abonnements &#40;Gestionnaire de rapports&#41;](http://msdn.microsoft.com/library/491a85a3-f323-4155-a0a8-de2779899995)  
+ [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [old_Créer et gérer des abonnements pour les serveurs de rapports en mode natif](https://msdn.microsoft.com/7f46cbdb-5102-4941-bca2-5e0ff9012c6b)   
+ [Page Abonnements &#40;Gestionnaire de rapports&#41;](https://msdn.microsoft.com/library/cf3a6bd0-e0b2-4875-a532-63ef34cfa860)   
+ [Page Mes abonnements &#40;Gestionnaire de rapports&#41;](https://msdn.microsoft.com/library/491a85a3-f323-4155-a0a8-de2779899995)  
   
   

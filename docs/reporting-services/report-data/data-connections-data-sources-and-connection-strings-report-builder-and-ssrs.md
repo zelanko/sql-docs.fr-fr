@@ -7,16 +7,16 @@ ms.technology: report-data
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6b6b443d1cdba9a72d6117465fd5c350d79abd63
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 809d427a6644a95a9f86ec3fbc9bf0d19023cc32
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611877"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030011"
 ---
 # <a name="data-connections-data-sources-and-connection-strings-report-builder-and-ssrs"></a>Connexions de données, sources de données et chaînes de connexion (Générateur de rapports et SSRS)
 
-[!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)])
+[!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
@@ -89,7 +89,7 @@ ms.locfileid: "47611877"
   
 -   ODBC  
   
--   Modèle sémantique Microsoft BI pour Power View : sur un site SharePoint configuré pour une galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] et [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], ce type de source de données est disponible. Ce type de source de données est utilisé uniquement pour les présentations [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] . Pour plus d'informations, consultez [Création de modèles tabulaires sémantiques BI pour Power View parfaits](http://technet.microsoft.com/video/building-the-perfect-bi-semantic-tabular-models-for-power-view.aspx).  
+-   Modèle sémantique Microsoft BI pour Power View : sur un site SharePoint configuré pour une galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] et [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], ce type de source de données est disponible. Ce type de source de données est utilisé uniquement pour les présentations [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] . Pour plus d'informations, consultez [Création de modèles tabulaires sémantiques BI pour Power View parfaits](https://technet.microsoft.com/video/building-the-perfect-bi-semantic-tabular-models-for-power-view.aspx).  
   
  Pour obtenir la liste complète des sources de données et des versions prises en charge par [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], consultez [Sources de données prises en charge par Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
@@ -158,4 +158,4 @@ ms.locfileid: "47611877"
 [Définir des propriétés de déploiement](../../reporting-services/tools/set-deployment-properties-reporting-services.md)   
 [Spécifier des informations d'identification et de connexion pour les sources de données de rapports](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
 
-D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

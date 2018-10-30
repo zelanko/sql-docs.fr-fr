@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: c84def6c-e8cf-43d9-9912-098171a7ce79
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7737d99d37959e9670fb2c7473b20b715d576da9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2a18c690cc9d62310f25eafa1b323abae80c7bf9
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47790037"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021713"
 ---
 # <a name="sql-azure-connection-type-ssrs"></a>Type de connexion SQL Azure (SSRS)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] est une base de données relationnelle hébergée basée sur le cloud qui repose sur les technologies [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour inclure des données de [!INCLUDE[ssSDS](../../includes/sssds-md.md)] dans votre rapport, vous devez avoir un dataset basé sur une source de données de rapport de type [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Ce type de source de données intégré est basé sur l’extension de données [!INCLUDE[ssSDS](../../includes/sssds-md.md)] . Utilisez ce type de source de données pour vous connecter à et récupérer des données de [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
@@ -40,7 +40,7 @@ Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True;
   
  De plus, vous utilisez la boîte de dialogue **Propriétés de la source de données** pour fournir des informations d'identification telles que le nom d'utilisateur et le mot de passe. Les options `User Id` et `Password` sont ajoutées automatiquement à la chaîne de connexion ; vous n'avez pas besoin de les taper dans la chaîne de connexion.  
   
- Pour obtenir plus d’informations et des exemples de chaînes de connexion, consultez [Connexions de données, sources de données et chaînes de connexion dans le Générateur de rapports](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34).  
+ Pour obtenir plus d’informations et des exemples de chaînes de connexion, consultez [Connexions de données, sources de données et chaînes de connexion dans le Générateur de rapports](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34).  
   
 ##  <a name="Credentials"></a> Informations d'identification  
  L'authentification Windows (sécurité intégrée) n'est pas prise en charge. Si vous essayez de vous connecter à [!INCLUDE[ssSDS](../../includes/sssds-md.md)] à l'aide de l'authentification Windows, une erreur se produit. [!INCLUDE[ssSDS](../../includes/sssds-md.md)] prend en charge uniquement l’authentification SQL Server (nom d’utilisateur et mot de passe) ; en outre, les utilisateurs doivent fournir des informations d’identification (nom de connexion et mot de passe) chaque fois qu’ils se connectent à [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
@@ -51,9 +51,9 @@ Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True;
   
 -   Utiliser un nom d'utilisateur et un mot de passe enregistrés. Pour négocier le double tronçon qui se produit lorsque la base de données qui contient les données de rapport est différente du serveur de rapports, sélectionnez les options permettant d'utiliser les informations d'identification en tant qu'informations d'identification Windows. Vous pouvez également choisir d'emprunter l'identité de l'utilisateur authentifié après la connexion à la source de données.  
   
--   Aucune information d'identification n'est requise. Pour utiliser cette option, vous devez avoir configuré le compte d'exécution sans assistance sur le serveur de rapports. Pour plus d’informations, consultez [Configurer le compte d’exécution sans assistance &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) dans la [documentation Reporting Services](http://go.microsoft.com/fwlink/?linkid=121312) sur msdn.microsoft.com.  
+-   Aucune information d'identification n'est requise. Pour utiliser cette option, vous devez avoir configuré le compte d'exécution sans assistance sur le serveur de rapports. Pour plus d’informations, consultez [Configurer le compte d’exécution sans assistance &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) dans la [documentation Reporting Services](https://go.microsoft.com/fwlink/?linkid=121312) sur msdn.microsoft.com.  
   
- Pour plus d’informations, consultez [Connexions de données, sources de données et chaînes de connexion &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) ou [Spécifier des informations d’identification dans le Générateur de rapports](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53).  
+ Pour plus d’informations, consultez [Connexions de données, sources de données et chaînes de connexion &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) ou [Spécifier des informations d’identification dans le Générateur de rapports](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53).  
   
   
 ##  <a name="Query"></a> Requêtes  
@@ -75,7 +75,7 @@ Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True;
   
  Pour plus d’informations, consultez [Interface utilisateur du Concepteur de requêtes relationnelles &#40;Générateur de rapports&#41;](../../reporting-services/report-data/relational-query-designer-user-interface-report-builder.md) et [Interface utilisateur du Concepteur de requêtes textuel &#40;Générateur de rapports&#41;](../../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md).  
   
- Le concepteur de requêtes graphique utilisé par [!INCLUDE[ssSDS](../../includes/sssds-md.md)] fournit une prise en charge intégrée du regroupement et des agrégats pour vous aider à écrire des requêtes qui récupèrent uniquement les données de synthèse. Les fonctionnalités du langage [!INCLUDE[tsql](../../includes/tsql-md.md)] sont les suivantes : clause GROUP BY, mot clé DISTINCT et agrégats tels que SUM et COUNT. Le concepteur de requêtes textuel fournit une prise en charge complète du langage [!INCLUDE[tsql](../../includes/tsql-md.md)] , notamment en matière de regroupement et d’agrégats. Pour plus d’informations sur [!INCLUDE[tsql](../../includes/tsql-md.md)], consultez [Informations de référence sur Transact-SQL &#40;moteur de base de données&#41;](../../t-sql/transact-sql-reference-database-engine.md) dans la [documentation en ligne](http://go.microsoft.com/fwlink/?LinkId=141687) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur msdn.microsoft.com.  
+ Le concepteur de requêtes graphique utilisé par [!INCLUDE[ssSDS](../../includes/sssds-md.md)] fournit une prise en charge intégrée du regroupement et des agrégats pour vous aider à écrire des requêtes qui récupèrent uniquement les données de synthèse. Les fonctionnalités du langage [!INCLUDE[tsql](../../includes/tsql-md.md)] sont les suivantes : clause GROUP BY, mot clé DISTINCT et agrégats tels que SUM et COUNT. Le concepteur de requêtes textuel fournit une prise en charge complète du langage [!INCLUDE[tsql](../../includes/tsql-md.md)] , notamment en matière de regroupement et d’agrégats. Pour plus d’informations sur [!INCLUDE[tsql](../../includes/tsql-md.md)], consultez [Informations de référence sur Transact-SQL &#40;moteur de base de données&#41;](../../t-sql/transact-sql-reference-database-engine.md) dans la [documentation en ligne](https://go.microsoft.com/fwlink/?LinkId=141687) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur msdn.microsoft.com.  
   
 ###  <a name="QueryText"></a> Utilisation du type de requête Texte  
  Dans le concepteur de requêtes textuel, vous tapez des commandes [!INCLUDE[tsql](../../includes/tsql-md.md)] pour définir les données d’un dataset. Par exemple, la requête [!INCLUDE[tsql](../../includes/tsql-md.md)] suivante sélectionne les noms de tous les employés qui occupent la fonction d'assistants marketing :  
@@ -144,7 +144,7 @@ WHERE EmployeeID = (@EmpID)
  Pour plus d’informations, consultez [Type de connexion ODBC &#40;SSRS&#41;](../../reporting-services/report-data/odbc-connection-type-ssrs.md).  
   
 ###### <a name="platform-and-version-information"></a>Informations sur les plateformes et les versions  
- Pour plus d’informations sur la prise en charge des plateformes et des versions, consultez [Sources de données prises en charge par Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) dans la section [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de la [documentation en ligne](http://go.microsoft.com/fwlink/?linkid=121312) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Pour plus d’informations sur la prise en charge des plateformes et des versions, consultez [Sources de données prises en charge par Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) dans la section [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de la [documentation en ligne](https://go.microsoft.com/fwlink/?linkid=121312) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
   
 ##  <a name="HowTo"></a> Rubriques de procédures  
@@ -163,7 +163,7 @@ WHERE EmployeeID = (@EmpID)
  [Datasets de rapport &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
  Fournit une vue d'ensemble de l'accès aux données pour votre rapport.  
   
- [Connexions de données, sources de données et chaînes de connexion dans le Générateur de rapports](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
+ [Connexions de données, sources de données et chaînes de connexion dans le Générateur de rapports](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
  Fournit des informations sur les connexions de données et les sources de données.  
   
  [Datasets incorporés dans le rapport et datasets partagés &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
@@ -172,7 +172,7 @@ WHERE EmployeeID = (@EmpID)
  [Collection de champs de dataset &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
  Fournit des informations sur la collection de champs de dataset générée par la requête.  
   
- [Sources de données prises en charge par Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) dans la section [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de la [documentation en ligne](http://go.microsoft.com/fwlink/?linkid=121312) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ [Sources de données prises en charge par Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) dans la section [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de la [documentation en ligne](https://go.microsoft.com/fwlink/?linkid=121312) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
  Fournit des informations détaillées sur la prise en charge des plateformes et des versions pour chaque extension de données.  
   
   
@@ -181,6 +181,6 @@ WHERE EmployeeID = (@EmpID)
  [Paramètres de rapport &#40;Générateur de rapports et Concepteur de rapports&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
  [Filtrer, regrouper et trier des données &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [Expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
- D’autres questions ? [Essayez le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+ D’autres questions ? [Essayez le forum Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)
   
   

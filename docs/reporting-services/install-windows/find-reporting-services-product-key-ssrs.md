@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 63fda18a7dce1b6cf27cc21f6decab18948e1209
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7c7a9e61ff2cda1d0760a1ae28ab7e79fbddf09e
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47709117"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028088"
 ---
 # <a name="how-to-find-the-product-key-for-sql-server-2017-reporting-services"></a>Guide pratique pour rechercher la clé de produit de SQL Server 2017 Reporting Services
 
@@ -46,4 +46,4 @@ Effectuez cette étape uniquement à la première installation de SSRS 2017. Vou
 ## <a name="next-steps"></a>Étapes suivantes
 
 - [Installer SQL Server 2017 Reporting Services](install-reporting-services.md)
-- D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+- D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 85117f6c-828e-45c9-810f-e700d9bfba67
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ec8ba62b63324bb8aceeef976a482325af9248d0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1385736df737044304649ddf5b17797d052f5a8e
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785437"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029238"
 ---
 # <a name="previewing-reports"></a>Aperçu des rapports
   Quand vous concevez un rapport     [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , vous pouvez le visualiser avant de le publier sur l’environnement de production. Pour ce faire, vous disposez de plusieurs méthodes : en passant en mode aperçu dans le Concepteur de rapports, en utilisant la fenêtre d'aperçu du Concepteur de rapports et en publiant le rapport sur un serveur de rapports dans un environnement de test.  
@@ -51,7 +51,7 @@ ms.locfileid: "47785437"
 ## <a name="see-also"></a> Voir aussi  
  [Imprimer des rapports &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)   
  [Imprimer un rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/print-a-report-report-builder-and-ssrs.md)   
- [Publier des rapports](http://msdn.microsoft.com/library/ef5a514e-e818-4041-a8b0-15835f9a046b)   
- [Utilisation d'assemblages personnalisés avec des rapports](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)  
+ [Publier des rapports](https://msdn.microsoft.com/library/ef5a514e-e818-4041-a8b0-15835f9a046b)   
+ [Utilisation d'assemblys personnalisés avec des rapports](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)  
   
   

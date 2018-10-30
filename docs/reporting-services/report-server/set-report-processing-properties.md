@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: b5cbc453-5986-423e-af44-1f243ef3edb1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4d4391fb3957c9b0d3529ebb51d038398786c15d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3b0f9d441db188551b1b2073e968c8f000b21107
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838577"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031768"
 ---
 # <a name="set-report-processing-properties"></a>Définir les propriétés de traitement d'un rapport
   Les propriétés d'exécution d'un rapport déterminent la façon dont le traitement du rapport s'effectue. Elles doivent être définies individuellement pour chaque rapport.  
   
- Pour définir les propriétés d'exécution d'un rapport, ouvrez le rapport dans le Gestionnaire de rapports, puis accédez à la page des propriétés d'exécution. Pour plus d’informations, consultez [Page de propriétés Options de traitement &#40;Gestionnaire de rapports&#41;](http://msdn.microsoft.com/library/28f07c70-7132-4d15-9505-4fdf31dc9cc0). Vous pouvez également définir des propriétés via [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Consultez [Page de propriétés Options de traitement &#40;Gestionnaire de rapports&#41;](http://msdn.microsoft.com/library/28f07c70-7132-4d15-9505-4fdf31dc9cc0).  
+ Pour définir les propriétés d'exécution d'un rapport, ouvrez le rapport dans le Gestionnaire de rapports, puis accédez à la page des propriétés d'exécution. Pour plus d’informations, consultez [Page de propriétés Options de traitement &#40;Gestionnaire de rapports&#41;](https://msdn.microsoft.com/library/28f07c70-7132-4d15-9505-4fdf31dc9cc0). Vous pouvez également définir des propriétés via [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Consultez [Page de propriétés Options de traitement &#40;Gestionnaire de rapports&#41;](https://msdn.microsoft.com/library/28f07c70-7132-4d15-9505-4fdf31dc9cc0).  
   
 ## <a name="report-execution-modes"></a>Modes d'exécution d'un rapport  
  Vous pouvez exécuter un rapport à la demande ou en tant qu'instantané. La section suivante décrit chaque méthode.  
@@ -57,7 +57,7 @@ ms.locfileid: "47838577"
  [Définir les options de traitement &#40;Reporting Services en mode intégré SharePoint&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
  [Configurer les propriétés d’exécution d’un rapport &#40;Gestionnaire de rapports&#41;](../../reporting-services/reports/configure-execution-properties-for-a-report-report-manager.md)   
  [Concepts de Reporting Services &#40;SSRS&#41;](../../reporting-services/reporting-services-concepts-ssrs.md)   
- [Guide pratique pour ajouter un instantané à un historique de rapport](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)   
+ [Procédure : ajouter un instantané à un historique de rapport](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)   
  [Spécifier des informations d'identification et de connexion pour les sources de données de rapports](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
   
   

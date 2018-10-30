@@ -7,12 +7,12 @@ ms.topic: conceptual
 ms.assetid: e2536f7f-d90c-4571-9ffd-6bbfe69018d6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cdf5f72629469de95ee5d6ce171fe26fbb5b747b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0a448e9096fce3b799a601cb0218ad6767090bc1
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608348"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50020323"
 ---
 # <a name="troubleshoot-a-reporting-services-installation"></a>Dépanner une installation de Reporting Services
 
@@ -20,7 +20,7 @@ ms.locfileid: "47608348"
   
  Pour plus d’informations sur d’autres erreurs et problèmes liés à [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], consultez [Résoudre les problèmes et erreurs de SSRS.](http://social.technet.microsoft.com/wiki/contents/articles/ssrs-troubleshooting-issues-and-errors.aspx)  
   
- Examinez les [notes de publication en ligne](http://go.microsoft.com/fwlink/?linkid=236893) si le problème que vous rencontrez est décrit dans les notes de mise à jour.  
+ Examinez les [notes de publication en ligne](https://go.microsoft.com/fwlink/?linkid=236893) si le problème que vous rencontrez est décrit dans les notes de mise à jour.  
   
 ##  <a name="bkmk_setuplogs"></a> Vérifier les journaux d’installation  
  Les erreurs d’installation sont enregistrées dans des fichiers journaux dans le dossier **[!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]Setup Bootstrap\Log** . Un sous-dossier est créé chaque fois que vous exécutez le programme d'installation. Le nom du sous-dossier est l'heure et la date d'exécution du programme d'installation. Pour obtenir des instructions sur la manière d’afficher les fichiers journaux d’installation, consultez [Afficher et lire les fichiers journaux d’installation de SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  

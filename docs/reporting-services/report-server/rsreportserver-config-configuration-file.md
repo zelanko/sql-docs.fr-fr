@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 60e0a0b2-8a47-4eda-a5df-3e5e403dbdbc
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 300e3c89da8fb37120baa211d2701b60f59b7716
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4edaecf62a1f78c90954b60ff0c08ce462993dd3
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47776077"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50020343"
 ---
 # <a name="rsreportserverconfig-configuration-file"></a>Fichier de configuration RSReportServer.config
 Le fichier [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**RsReportServer.config** stocke les paramètres utilisés par le service Web Report Server et le traitement en arrière-plan. Toutes les applications [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] s'exécutent au sein d'un processus unique qui lit les paramètres de configuration stockés dans le fichier RSReportServer.config. Les serveurs de rapports en mode natif et en mode SharePoint utilisent le fichier RSReportServer.config. Toutefois, les deux modes n'utilisent pas les mêmes paramètres dans le fichier de configuration. La version en mode SharePoint du fichier est moins volumineuse car de nombreux paramètres du mode SharePoint sont stockés dans des bases de données de configuration SharePoint plutôt que dans le fichier. Cette rubrique décrit le fichier de configuration par défaut installé en mode natif ou en mode SharePoint, et certains paramètres et comportements importants qui sont contrôlés par le fichier de configuration.  
@@ -57,7 +57,7 @@ Pour plus d’informations sur la modification du fichier, consultez [Modifier u
  Le tableau suivant fournit des informations sur les paramètres de configuration généraux qui apparaissent dans la première partie du fichier. Les paramètres sont présentés dans l'ordre dans lequel ils apparaissent dans le fichier de configuration. La dernière colonne du tableau indique si le paramètre s’applique à un serveur de rapports en mode natif **(N)** , à un serveur de rapports en mode SharePoint **(S)** ou aux deux.  
   
 > [!NOTE]  
->  Dans cette rubrique, « entier maximal » désigne la valeur INT_MAX de 2147483647.  Pour plus d'informations, consultez [Limites des ressources](http://msdn.microsoft.com/library/296az74e\(v=vs.110\).aspx) (http://msdn.microsoft.com/library/296az74e(v=vs.110).aspx).  
+>  Dans cette rubrique, « entier maximal » désigne la valeur INT_MAX de 2147483647.  Pour plus d'informations, consultez [Limites des ressources](https://msdn.microsoft.com/library/296az74e\(v=vs.110\).aspx) (https://msdn.microsoft.com/library/296az74e(v=vs.110).aspx).  
   
 |Paramètre|Description|Mode|  
 |-------------|-----------------|----------|  
@@ -90,7 +90,7 @@ Pour plus d’informations sur la modification du fichier, consultez [Modifier u
  **URLReservations** définit l’accès HTTP au service Web Report Server et au portail web pour l’instance actuelle. Les URL sont réservées et stockées dans HTTP.SYS lorsque vous configurez le serveur de rapports.  
   
 > [!WARNING]  
->  Pour le mode SharePoint, les réservations d'URL sont configurées dans l'Administration centrale de SharePoint. Pour plus d’informations, consultez [Configurer le mappage des accès de substitution (http://technet.microsoft.com/library/cc263208(office.12).aspx)](http://technet.microsoft.com/library/cc263208\(office.12\).aspx).  
+>  Pour le mode SharePoint, les réservations d'URL sont configurées dans l'Administration centrale de SharePoint. Pour plus d’informations, consultez [Configurer le mappage des accès de substitution (https://technet.microsoft.com/library/cc263208(office.12).aspx)](https://technet.microsoft.com/library/cc263208\(office.12\).aspx).  
   
  Ne modifiez pas directement les réservations d'URL dans le fichier de configuration. Utilisez toujours le Gestionnaire de configuration [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ou le fournisseur WMI de Report Server pour créer ou modifier des réservations d'URL dans le cadre d'un serveur de rapports en mode natif. Si vous modifiez les valeurs du fichier de configuration, vous risquez d'endommager la réservation, ce qui provoquera des erreurs sur le serveur au moment de l'exécution ou laissera des réservations orphelines dans HTTP.SYS, car ces dernières ne seront pas supprimées si vous désinstallez le logiciel. Pour plus d’informations, consultez [Configurer des URL de serveurs de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md) et [URL des fichiers de configuration &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md).  
   
@@ -236,7 +236,7 @@ Pour plus d’informations sur la modification du fichier, consultez [Modifier u
 |**ExcludedRenderFormats**, **RenderingExtension**|Ces paramètres sont utilisés pour exclure volontairement les formats d'exportation qui ne fonctionnent pas correctement avec la remise par partage de fichiers. Ces formats sont utilisés en général pour la création de rapports interactifs, l'aperçu ou le préchargement du cache de rapports. Ils ne produisent pas de fichiers d'application qui peuvent être affichés facilement à partir d'une application bureautique.<br /><br /> HTMLOWC<br /><br /> RGDI<br /><br /> Null|  
   
 ####  <a name="bkmk_email_extension"></a> Paramètres de configuration de l'extension de messagerie électronique du serveur de rapports  
- La messagerie électronique Report Server utilise un périphérique réseau SMTP pour envoyer des rapports à des adresses de messagerie. Cette extension de remise doit être configurée avant de pouvoir être utilisée. Pour plus d’informations, consultez [Configurer un serveur de rapports pour la remise par messagerie (Gestionnaire de configuration de SSRS)](http://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83) et [Remise par courrier électronique dans Reporting Services](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md).  
+ La messagerie électronique Report Server utilise un périphérique réseau SMTP pour envoyer des rapports à des adresses de messagerie. Cette extension de remise doit être configurée avant de pouvoir être utilisée. Pour plus d’informations, consultez [Configurer un serveur de rapports pour la remise par messagerie (Gestionnaire de configuration de SSRS)](https://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83) et [Remise par courrier électronique dans Reporting Services](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md).  
   
 |Paramètre|Description|  
 |-------------|-----------------|  
@@ -381,8 +381,8 @@ Pour plus d’informations sur la modification du fichier, consultez [Modifier u
 |-------------|-----------------|  
 |**MaxConnections**|Spécifie le nombre maximal de connexions aux services Web Bing Maps.|  
 |**Délai d'expiration**|Spécifie le délai d'attente, en secondes, d'une réponse des services Web Bing Maps.|  
-|**AppID**|Spécifie l'identificateur d'application (AppID) à utiliser pour les services Web Bing Maps. **(Default)** spécifie l’AppID par défaut de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .<br /><br /> Pour plus d'informations sur l'utilisation de mosaïques Bing dans votre rapport, consultez [Conditions supplémentaires d'utilisation](http://go.microsoft.com/fwlink/?LinkId=151371).<br /><br /> Ne modifiez pas cette valeur sauf si vous devez spécifier un AppID personnalisé pour votre propre contrat de licence Bing Maps. Lorsque vous modifiez l'AppID, vous n'avez pas à redémarrer [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour que la modification prenne effet.|  
-|**CacheLevel**|Spécifie une valeur de l'énumération HttpRequestCacheLevel de System.Net.Cache. La valeur par défaut est **Default**. Pour plus d'informations, consultez [HttpRequestCacheLevel, énumération](http://go.microsoft.com/fwlink/?LinkId=153353).|  
+|**AppID**|Spécifie l'identificateur d'application (AppID) à utiliser pour les services Web Bing Maps. **(Default)** spécifie l’AppID par défaut de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .<br /><br /> Pour plus d'informations sur l'utilisation de mosaïques Bing dans votre rapport, consultez [Conditions supplémentaires d'utilisation](https://go.microsoft.com/fwlink/?LinkId=151371).<br /><br /> Ne modifiez pas cette valeur sauf si vous devez spécifier un AppID personnalisé pour votre propre contrat de licence Bing Maps. Lorsque vous modifiez l'AppID, vous n'avez pas à redémarrer [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour que la modification prenne effet.|  
+|**CacheLevel**|Spécifie une valeur de l'énumération HttpRequestCacheLevel de System.Net.Cache. La valeur par défaut est **Default**. Pour plus d'informations, consultez [HttpRequestCacheLevel, énumération](https://go.microsoft.com/fwlink/?LinkId=153353).|  
   
 ##  <a name="bkmk_nativedefaultfile"></a> Fichier de configuration par défaut d'un serveur de rapports en mode natif  
  Le fichier rsreportserver.config est installé à l'emplacement par défaut suivant :  
@@ -840,6 +840,6 @@ x6K1NTC/u8hl9v0MgK+xMQKaiV7BuNYbgGgkaViABcNH0xVzcc5rMTHUkrABbGDFGKyAFniGQ1qu
  [Initialiser un serveur de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
  [Stocker des données chiffrées du serveur de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
  [Gestionnaire de configuration de Reporting Services &#40;mode natif&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
- D’autres questions ? [Essayez le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+ D’autres questions ? [Essayez le forum Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)
   
   

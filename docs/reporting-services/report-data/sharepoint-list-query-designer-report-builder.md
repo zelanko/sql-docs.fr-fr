@@ -10,12 +10,12 @@ f1_keywords:
 ms.assetid: b8a3122c-8008-4950-b515-937636d7967f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6bb3d9506c5a75f757682dafa2897714fdc3ab65
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 701cccc9acc67c21133d97b592f7aa6211adb8d4
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47679077"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031618"
 ---
 # <a name="sharepoint-list-query-designer-report-builder"></a>Concepteur de requêtes de liste SharePoint (Générateur de rapports)
   Le Générateur de rapports et le Concepteur de rapports fournissent un concepteur de requêtes graphique et un concepteur de requêtes textuel, qui vous aident à créer une requête spécifiant les données à récupérer à partir d’un site SharePoint pour un jeu de données de rapport. Utilisez le Concepteur de requêtes graphique pour explorer les métadonnées de liste SharePoint, créer une requête de manière interactive et afficher les résultats de votre requête. Utilisez le Concepteur de requêtes textuel pour afficher la requête créée par le Concepteur de requêtes graphique, modifier une requête ou taper les commandes d'une requête. Vous pouvez également importer une requête existante à partir d'un fichier ou d'un rapport.  
@@ -93,6 +93,6 @@ ms.locfileid: "47679077"
 |**Afficher les champs masqués**|Bascule pour afficher ou masquer les champs générés automatiquement par SharePoint, tels que les éléments de lien ProgId et Level SharePoint, mais qui ne sont généralement pas utilisés dans les rapports. Le masquage de ces champs rend la liste de champs plus courte et plus facile à utiliser.|  
   
 ## <a name="see-also"></a> Voir aussi  
- [Concepteurs de requêtes &#40;Générateur de rapports&#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  
+ [Concepteurs de requêtes &#40;Générateur de rapports&#41;](https://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  
   
   

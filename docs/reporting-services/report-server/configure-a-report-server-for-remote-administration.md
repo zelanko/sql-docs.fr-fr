@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8c7f145f-3ac2-4203-8cd6-2a4694395d09
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b6a8c6213a215c1ea88ca84d4156e74b36ae81e6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 25ac3270e936f80bce62bdeeb67965c4688dfbcf
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47805077"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50020333"
 ---
 # <a name="configure-a-report-server-for-remote-administration"></a>Configurer un serveur de rapports pour l'administration à distance
   Dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vous pouvez configurer des instances de serveur de rapports localement ou à distance. Pour configurer une instance de serveur de rapports à distance, vous pouvez faire appel à l’outil de configuration de Reporting Services ou bien écrire un code personnalisé qui utilise le fournisseur WMI (Windows Management Instrumentation) de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . L'outil de configuration de Reporting Services offre une interface graphique avec le fournisseur WMI pour vous permettre de configurer un serveur de rapports sans avoir à écrire du code. Lorsque vous démarrez l'outil, vous pouvez spécifier un serveur distant auquel vous connecter.  
@@ -39,7 +39,7 @@ ms.locfileid: "47805077"
   
  Certaines organisations disposent de stratégies de groupe qui empêchent l'administration serveur à distance pour certains systèmes d'exploitation ou certains utilisateurs. Avant de commencer à modifier les paramètres du pare-feu, vérifiez auprès de votre administrateur réseau si des restrictions s'appliquent dans le cadre de l'administration à distance.  
   
- Pour plus d'informations, consultez [Connecting Through Windows Firewall](http://go.microsoft.com/fwlink/?LinkId=63615) dans la documentation du kit de développement Platform SDK sur MSDN.  
+ Pour plus d'informations, consultez [Connecting Through Windows Firewall](https://go.microsoft.com/fwlink/?LinkId=63615) dans la documentation du kit de développement Platform SDK sur MSDN.  
   
 ## <a name="tasks"></a>Tâches  
  Les tâches qui activent la configuration de serveur de rapports à distance incluent les éléments suivants :  

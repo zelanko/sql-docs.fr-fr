@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: a28cf500-6d47-4268-a248-04837e7a09eb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: adebe82c29aff88167bd5c8e3cfa02f3f35785c0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0cd0827109cff1cda866ed8a0d85f9cb37ab54f6
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47784867"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021583"
 ---
 # <a name="working-with-kpis-in-reporting-services"></a>Utilisation des indicateurs de performance clés dans Reporting Services
 
@@ -107,4 +107,4 @@ Pour actualiser l’indicateur de performance clé, vous devez configurer une mi
 [Portail Web](../reporting-services/web-portal-ssrs-native-mode.md)  
 [Utiliser des datasets partagés](../reporting-services/work-with-shared-datasets-web-portal.md)
 
-D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

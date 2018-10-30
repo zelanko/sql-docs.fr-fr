@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: e198575e-b154-4342-b944-2bf19ec49bfd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8aba9144a16da8494d4f303053b164462e0cae8c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a5e0f3461cee55781379fc598bbc6c61e51f5704
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717217"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021173"
 ---
 # <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>Rapports mobiles SQL Server : procédure pas à pas de bout en bout
 Étapes permettant de créer des rapports mobiles pour n’importe quelle taille d’écran avec [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] sur le portail web [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] et de les afficher dans les applications mobiles Power BI.
@@ -32,11 +32,11 @@ Pour suivre la procédure, vous avez besoin de ces produits :
   
 * Pour créer des sources de données et des indicateurs de performance clés, et publier des jeux de données et des rapports mobiles, vous devez accéder à un [!INCLUDE[ssRSCurrent_md](../install-windows/install-reporting-services-native-mode-report-server.md).  
 * Pour [créer des jeux de données partagés](../install-windows/install-report-builder.md).  
-* Pour créer des rapports mobiles, [installez l’Éditeur de rapports mobiles SQL Server](http://go.microsoft.com/fwlink/?LinkId=717766).  
+* Pour créer des rapports mobiles, [installez l’Éditeur de rapports mobiles SQL Server](https://go.microsoft.com/fwlink/?LinkId=717766).  
 * [Exemples de bases de données AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases).  
 *  OU : exemple de base de données World Wide Importers, disponible à partir de la page [Exemples Microsoft SQL Server](../../sample/microsoft-sql-server-samples.md).
 * Pour afficher le résultat 
-  *   [Inscrivez-vous au service Power BI](http://go.microsoft.com/fwlink/?LinkID=513879) et
+  *   [Inscrivez-vous au service Power BI](https://go.microsoft.com/fwlink/?LinkID=513879) et
   *  [Téléchargez l’application mobile Power BI](https://powerbi.microsoft.com/en-us/documentation/powerbi-power-bi-apps-for-mobile-devices/) sur votre appareil mobile : iOS, téléphone Android ou appareil Windows 10.  
 
   
@@ -133,7 +133,7 @@ Vous créez les indicateurs de performance clés directement sur le portail web 
     
 ## <a name="create-mobile-report">Créer un rapport mobile Reporting Services</a>  
    
-Pour créer un rapport mobile Reporting Services, [installez l’Éditeur de rapports mobiles SQL Server](http://go.microsoft.com/fwlink/?LinkId=717766)ou lancez-le à partir du portail web [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] . 
+Pour créer un rapport mobile Reporting Services, [installez l’Éditeur de rapports mobiles SQL Server](https://go.microsoft.com/fwlink/?LinkId=717766)ou lancez-le à partir du portail web [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] . 
 
 Quand vous ouvrez [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]pour la première fois, une zone vide s’affiche. Vous pouvez y créer votre rapport mobile. Vous pouvez commencer par créer les visuels ou commencer par vos données. Si vous créez d’abord les visuels, [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] génère automatiquement des données simulées liées au rapport, qui changent de manière dynamique à mesure que vous modifiez vos sélections de visuels. Essayez vous-même.   
   
@@ -259,7 +259,7 @@ Vous pouvez enregistrer votre rapport localement ou sur un portail web [!INCLUDE
   
 Pour afficher votre rapport [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , vous devez d’abord :
 
-*  [Vous inscrire au service Power BI](http://go.microsoft.com/fwlink/?LinkID=513879), si vous n’avez pas encore de compte.
+*  [Vous inscrire au service Power BI](https://go.microsoft.com/fwlink/?LinkID=513879), si vous n’avez pas encore de compte.
 *  [Télécharger l’application mobile Power BI](https://powerbi.microsoft.com/en-us/documentation/powerbi-power-bi-apps-for-mobile-devices/) sur votre appareil mobile.  
 
 ### <a name="view-your-mobile-report"></a>Afficher votre rapport mobile

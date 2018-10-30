@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: a6fc56c1-c504-438d-a2b0-5ed29c24e7d6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5fc7a284a00a60e637cddf04e6c02389de5dfa9c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 298864ba273d4558f411ce41595928a1d786506a
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47720297"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030898"
 ---
 # <a name="migrate-a-reporting-services-installation-native-mode"></a>Migrer une installation Reporting Services (mode natif)
 
-[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-not-2017](../../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)])
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-not-2017](../../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
 
 Cette rubrique fournit des instructions détaillées de migration de l’une des versions prises en charge suivantes d’un déploiement en mode natif de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] vers une nouvelle instance de SQL Server Reporting Services :  
   
@@ -282,4 +282,4 @@ Une fois que vous avez effectué avec succès une migration de votre serveur de 
 [Compatibilité descendante de Reporting Services](../../reporting-services/reporting-services-backward-compatibility.md)   
 [Gestionnaire de configuration de Reporting Services](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
 
-D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

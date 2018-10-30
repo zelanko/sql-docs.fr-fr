@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 4091cf87-9d97-4048-a393-67f1f9207401
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 06a345284c235ffc1bf65400238ef01107df9f2a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 03b999b35cf9b308d683c8888980d7e60a24fb36
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47628947"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50027528"
 ---
 # <a name="upgrade-a-report-server-database"></a>Mettre à niveau une base de données du serveur de rapports
 
@@ -70,4 +70,4 @@ La base de données du serveur de rapports offre un espace de stockage pour une 
 [Mettre à niveau et migrer Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
 [Migrer une installation Reporting Services](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md)  
 
-D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

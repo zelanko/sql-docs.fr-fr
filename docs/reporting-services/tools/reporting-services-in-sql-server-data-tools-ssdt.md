@@ -10,16 +10,16 @@ helpviewer_keywords:
 ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7d0aca5eaf6f0e56eab3b991611199334d003c4a
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 7309f4669a0672ca65b0c74961c14e83d073a4c6
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48905999"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030378"
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>Reporting Services dans les outils de données SQL Server (SSDT)
 
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] est un environnement [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] pour créer des solutions d’aide à la décision. SSDT comprend l’environnement de création Concepteur de rapports, où vous pouvez ouvrir, modifier, afficher un aperçu, enregistrer et déployer des définitions de rapport paginés [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , des sources de données partagées, des datasets partagés et des parties de rapports. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] n’est pas fourni avec SQL Server. Téléchargez [SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714). 
+  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] est un environnement [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] pour créer des solutions d’aide à la décision. SSDT comprend l’environnement de création Concepteur de rapports, où vous pouvez ouvrir, modifier, afficher un aperçu, enregistrer et déployer des définitions de rapport paginés [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , des sources de données partagées, des datasets partagés et des parties de rapports. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] n’est pas fourni avec SQL Server. Téléchargez [SQL Server Data Tools](https://go.microsoft.com/fwlink/?LinkID=616714). 
   
  Cette rubrique décrit les solutions, les projets, les modèles de projet, et les configurations de [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] utilisés pour [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], ainsi que les vues, les menus, les barres d'outils et les raccourcis que vous pouvez utiliser dans le Concepteur de rapports.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "48905999"
   
  Utilisez le volet Propriétés pour :  
   
--   définir les propriétés pour l'élément actuellement sélectionné dans l'aire de conception. Certaines propriétés affichent une liste déroulante de valeurs. Vous pouvez aussi taper la valeur directement dans la cellule. Certaines propriétés contiennent une collection de valeurs désignée par la valeur **(Collection)**. La plupart des propriétés peuvent accepter une expression ; les expressions complexes sont signalées par la valeur **\<Expression>**. Cliquez sur **\<Expression>** pour ouvrir la boîte de dialogue **Expression**. Pour plus d'informations, consultez [Expression Dialog Box](http://msdn.microsoft.com/library/e6c74ccb-4594-4d4f-b958-618d710e34eb).  
+-   définir les propriétés pour l'élément actuellement sélectionné dans l'aire de conception. Certaines propriétés affichent une liste déroulante de valeurs. Vous pouvez aussi taper la valeur directement dans la cellule. Certaines propriétés contiennent une collection de valeurs désignée par la valeur **(Collection)**. La plupart des propriétés peuvent accepter une expression ; les expressions complexes sont signalées par la valeur **\<Expression>**. Cliquez sur **\<Expression>** pour ouvrir la boîte de dialogue **Expression**. Pour plus d'informations, consultez [Expression Dialog Box](https://msdn.microsoft.com/library/e6c74ccb-4594-4d4f-b958-618d710e34eb).  
   
 -   Utilisez les boutons de la barre d'outils du volet Propriétés pour modifier la grille et la faire basculer de l'affichage des catégories vers un affichage alphabétique. En affichage des catégories, vous devrez peut-être développer une catégorie pour afficher toutes ses propriétés en dessous. Pour ouvrir la boîte de dialogue Propriétés d’un élément, cliquez sur le bouton **Pages de propriétés** de la barre d’outils, ou cliquez avec le bouton droit sur l’élément, puis cliquez sur **Propriétés**.  
   
@@ -237,7 +237,7 @@ ms.locfileid: "48905999"
   
 
 ##  <a name="bkmk_SourceControl"></a> contrôle de code source ;  
- [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] peut intégrer des plug-ins de source. Utilisez les pages Projets et Solutions de la boîte de dialogue **Options** pour spécifier le plug-in et configurer les paramètres.  
+ [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] peut intégrer des plug-ins de source. Utilisez les pages Projets et Solutions de la boîte de dialogue Options** pour spécifier le plug-in et configurer les paramètres.  
   
 ##  <a name="bkmk_CustomReportTemplates"></a> Modèles de rapports personnalisés  
  Pour utiliser des rapports personnalisés comme modèles pour de nouveaux rapports, il suffit de les copier dans le dossier ReportProject sur l'ordinateur sur lequel [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] est installé. Par défaut, ce dossier se trouve dans l’emplacement suivant : `<drive>:\Program Files\Microsoft Visual Studio 14.0\Common7\IDE\Private Assemblies\ProjectItems\ReportProject`. Lorsque vous ajoutez un nouvel élément au projet de rapport, votre rapport personnalisé s'affiche dans le volet Modèles.  
@@ -305,10 +305,10 @@ ms.locfileid: "48905999"
   
 ## <a name="next-steps"></a>Étapes suivantes
 
-[Télécharger SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714)
+[Télécharger SQL Server Data Tools](https://go.microsoft.com/fwlink/?LinkID=616714)
 [Explorateur de solutions](../../ssms/solution/solution-explorer.md)   
 [Rapports Reporting Services](../../reporting-services/reports/reporting-services-reports-ssrs.md)   
 [Langage de définition des rapports](../../reporting-services/reports/report-definition-language-ssrs.md)   
 [Prise en charge du déploiement et de la version dans les outils de données de serveur SQL](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  
 
-D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

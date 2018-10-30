@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 094f39bf-3634-4852-9fc3-3adec4b266e5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 60550310a391dfc1ed6dc03042b0d0b86b5152f0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dfd9b806aefc53c644a5ee50799ba9bb60a194ff
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47801257"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021193"
 ---
 # <a name="plot-data-on-a-secondary-axis-report-builder-and-ssrs"></a>Tracer des données sur un axe secondaire (Générateur de rapports et SSRS)
 
@@ -23,7 +23,7 @@ Le graphique a deux types d'axes : principal et secondaire. L'axe secondaire est
   
  Dans les cas où plus de deux séries doivent être comparées, envisagez une approche différente pour comparer et afficher plusieurs séries dans un graphique. Pour plus d’informations, consultez [Plusieurs séries sur un graphique &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/multiple-series-on-a-chart-report-builder-and-ssrs.md).  
   
- Un exemple de ce graphique est disponible sous forme d'exemple de rapport. Pour plus d'informations sur le téléchargement de cet exemple de rapport et d'autres rapports, consultez [Exemples de rapports du Générateur de rapports et du Concepteur de rapports](http://go.microsoft.com/fwlink/?LinkId=198283).  
+ Un exemple de ce graphique est disponible sous forme d'exemple de rapport. Pour plus d'informations sur le téléchargement de cet exemple de rapport et d'autres rapports, consultez [Exemples de rapports du Générateur de rapports et du Concepteur de rapports](https://go.microsoft.com/fwlink/?LinkId=198283).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -39,4 +39,4 @@ Le graphique a deux types d'axes : principal et secondaire. L'axe secondaire est
 [Mise en forme des étiquettes des axes sur un graphique](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
 [Spécifier un intervalle d’axe](../../reporting-services/report-design/specify-an-axis-interval-report-builder-and-ssrs.md)  
 
-D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

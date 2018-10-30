@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: db0cf6a0-2114-41d0-ab27-0319e52dee76
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: add231df29906b945d1637c09969b670f4419909
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d08af2a5d42742dcb165aa2038b858ae1ae2b491
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703777"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028628"
 ---
 # <a name="bar-charts-report-builder-and-ssrs"></a>Graphiques à barres (Générateur de rapports et SSRS)
   Un graphique à barres affiche les séries sous la forme d'ensembles de barres horizontales. Le graphique à barres ordinaire est étroitement lié à l'histogramme, qui affiche les séries sous la forme d'ensembles de barres verticales, ainsi qu'au graphique d'étendue à barres, qui affiche les séries sous la forme d'ensembles de barres horizontales avec des points de départ et de fin variables.  
@@ -65,7 +65,7 @@ ms.locfileid: "47703777"
  [Mise en forme des étiquettes des axes sur un graphique &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [Mise en forme de la légende sur un graphique &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/chart-legend-formatting-report-builder.md)   
  [Ajouter des styles de biseau, de relief et de texture à un graphique &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/chart-effects-add-bevel-emboss-or-texture-report-builder.md)   
- [Didacticiel : ajout d’un graphique à barres à un rapport (Générateur de rapports)](http://go.microsoft.com/fwlink/?LinkId=198052)   
- [Didacticiel : ajout d’un graphique à barres dans un rapport](http://go.microsoft.com/fwlink/?LinkId=198042)  
+ [Didacticiel : ajout d’un graphique à barres à un rapport (Générateur de rapports)](https://go.microsoft.com/fwlink/?LinkId=198052)   
+ [Didacticiel : ajout d’un graphique à barres dans un rapport](https://go.microsoft.com/fwlink/?LinkId=198042)  
   
   

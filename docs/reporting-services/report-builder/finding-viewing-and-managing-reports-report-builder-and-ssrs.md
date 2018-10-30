@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 5599300d-6bcd-4704-aba5-fa98e01c78a9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 59d4ffbb3c2088ae4b517ab99e0b2705ffccd047
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.openlocfilehash: 2d28ffb546476d2e18fd1dc57d04c837f7176142
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49085445"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029691"
 ---
 # <a name="finding-viewing-and-managing-reports-report-builder-and-ssrs-"></a>Recherche, affichage et gestion des rapports (Générateur de rapports et SSRS)
   Le Générateur de rapports vous permet de parcourir les dossiers d'un serveur de rapports ou site SharePoint pour y rechercher des rapports, des sources de données partagées, des modèles et d'autres éléments de rapport connexes, ainsi que de parcourir votre ordinateur pour trouver des rapports en local. Pour faciliter la recherche de rapports, le Générateur de rapports gère une liste de serveurs et sites récemment utilisés, et fournit l'accès direct aux dossiers Bureau, Mes documents et Poste de travail dans le système de fichiers de votre ordinateur.  
@@ -77,7 +77,7 @@ Fenêtre Gestionnaire de rapports
  ![Barre d’outils Rapport](../../reporting-services/media/ssrs-htmlviewer-toolbar.png "Barre d’outils Rapport")  
 Barre d'outils Rapports  
   
- Après avoir exécuté un rapport, vous pouvez l'exporter sous un autre format, tel que [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel ou PDF. Vous pouvez également exporter le rapport à l'aide d'une extension de rendu de données, telle que l'extension CSV (Comma-Separated Value), puis utiliser le fichier de données CSV comme entrée pour une autre application. Pour plus d’informations sur l’exportation de rapports, consultez [Exporter des rapports &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md) et [Exporter un rapport dans un autre type de fichier &#40;Générateur de rapports et SSRS&#41;](http://msdn.microsoft.com/library/b577568b-ecbd-44c3-be88-31dab6fc38a2).  
+ Après avoir exécuté un rapport, vous pouvez l'exporter sous un autre format, tel que [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel ou PDF. Vous pouvez également exporter le rapport à l'aide d'une extension de rendu de données, telle que l'extension CSV (Comma-Separated Value), puis utiliser le fichier de données CSV comme entrée pour une autre application. Pour plus d’informations sur l’exportation de rapports, consultez [Exporter des rapports &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md) et [Exporter un rapport dans un autre type de fichier &#40;Générateur de rapports et SSRS&#41;](https://msdn.microsoft.com/library/b577568b-ecbd-44c3-be88-31dab6fc38a2).  
   
  La méthode la plus simple pour sélectionner et exécuter un rapport consiste à ouvrir le Gestionnaire de rapports, puis à rechercher le rapport à afficher. Pour obtenir des instructions détaillées sur l’ouverture des rapports, consultez [Ouvrir et fermer un rapport &#40;Gestionnaire de rapports&#41;](../../reporting-services/reports/open-and-close-a-report-report-manager.md).  
   
@@ -100,7 +100,7 @@ Barre d'outils Rapports
   
  Pour accéder aux pages d'application, sélectionnez des actions spécifiques à l'élément dans un menu déroulant sur un rapport ou autre élément de serveur de rapports que vous avez ajouté précédemment à une bibliothèque SharePoint. Selon l'élément et vos autorisations, vous pouvez être également en mesure de créer des rapports dans le Générateur de rapports, de générer des modèles et de définir la sécurité des éléments de modèle.  
   
- Pour plus d’informations sur la technologie Reporting Services et SharePoint, consultez [Configuration et administration d’un serveur de rapports &#40;mode SharePoint de Reporting Services&#41;](../../reporting-services/report-server-sharepoint/configuration-and-administration-of-a-report-server.md) dans la documentation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [en ligne](http://go.microsoft.com/fwlink/?LinkId=154888) sur msdn.microsoft.com.  
+ Pour plus d’informations sur la technologie Reporting Services et SharePoint, consultez [Configuration et administration d’un serveur de rapports &#40;mode SharePoint de Reporting Services&#41;](../../reporting-services/report-server-sharepoint/configuration-and-administration-of-a-report-server.md) dans la documentation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [en ligne](https://go.microsoft.com/fwlink/?LinkId=154888) sur msdn.microsoft.com.  
   
 ### <a name="finding-report-server-items-on-a-sharepoint-site"></a>Recherche d'éléments de serveur de rapports sur un site SharePoint  
  Avant de pouvoir définir des propriétés, vous devez être en mesure de localiser l'élément. Les éléments de serveur de rapports sont toujours stockés dans des bibliothèques ou dans un dossier d'une bibliothèque.  
@@ -148,6 +148,6 @@ Barre d'outils Rapports
 ## <a name="see-also"></a> Voir aussi  
  [Enregistrement des rapports &#40;Générateur de rapports&#41;](../../reporting-services/report-builder/saving-reports-report-builder.md)   
  [Générateur de rapports dans SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
- [Installer et désinstaller le Générateur de rapports](http://msdn.microsoft.com/library/2c9a5814-17bf-4947-8fb3-6269e7caa416)  
+ [Installer et désinstaller le Générateur de rapports](https://msdn.microsoft.com/library/2c9a5814-17bf-4947-8fb3-6269e7caa416)  
   
   

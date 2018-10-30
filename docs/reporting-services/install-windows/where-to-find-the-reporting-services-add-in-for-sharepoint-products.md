@@ -9,12 +9,13 @@ helpviewer_keywords:
 ms.assetid: 069ac476-6336-44a9-a0e7-db1c4888948f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 07cd33238f3c5250319e099d2efddc4ca7f2045e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
+ms.openlocfilehash: be6ca2af39fecd2ad56f894b18f820137b2e6769
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47624497"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50051081"
 ---
 # <a name="where-to-find-the-reporting-services-add-in-for-sharepoint-products"></a>Où trouver le complément Reporting Services pour les produits SharePoint
 
@@ -37,7 +38,7 @@ Le complément [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssN
 ##  <a name="bkmk_sql14"></a> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Complément Reporting Services pour les produits SharePoint  
  Pour télécharger et installer le complément, consultez le centre de téléchargement de [!INCLUDE[msCoName](../../includes/msconame-md.md)] :  
   
--   [Complément Microsoft® SQL Server 2014 Reporting Services pour Microsoft SharePoint](http://go.microsoft.com/fwlink/?LinkID=324852)  
+-   [Complément Microsoft® SQL Server 2014 Reporting Services pour Microsoft SharePoint](https://go.microsoft.com/fwlink/?LinkID=324852)  
   
  La version [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] du complément est également disponible dans l'Assistant Installation de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] .  
   
@@ -52,15 +53,15 @@ Le complément [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssN
   
 -   **Complément SP1 :**  [Complément Microsoft® SQL Server® 2012 SP1 Reporting Services pour Microsoft® SharePoint®](http://www.microsoft.com/download/details.aspx?id=35583)(http://www.microsoft.com/download/details.aspx?id=35583).  
   
--   **SP1 :**  [Microsoft® SQL Server® 2012 Service Pack 1 (SP1)](http://go.microsoft.com/fwlink/p/?LinkID=255906) (http://go.microsoft.com/fwlink/p/?LinkID=255906).  
+-   **SP1 :**  [Microsoft® SQL Server® 2012 Service Pack 1 (SP1)](https://go.microsoft.com/fwlink/p/?LinkID=255906) (https://go.microsoft.com/fwlink/p/?LinkID=255906).  
 
 ##  <a name="bkmk_sql11"></a> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Complément Reporting Services pour les produits SharePoint 2010
 
-Dans SQL Server 2016, le complément peut être installé avec l’Assistant Installation de SQL Server, dans la page Sélection de composant. Si vous souhaitez télécharger et installer le complément séparément, la version la plus à jour de ce fichier est disponible en ligne dans le Centre de téléchargement [!INCLUDE[msCoName](../../includes/msconame-md.md)] , page [Complément Reporting Services Microsoft® SQL Server 2012 pour les technologies Microsoft® SharePoint® 2010](http://go.microsoft.com/fwlink/?LinkID=207242) .
+Dans SQL Server 2016, le complément peut être installé avec l’Assistant Installation de SQL Server, dans la page Sélection de composant. Si vous souhaitez télécharger et installer le complément séparément, la version la plus à jour de ce fichier est disponible en ligne dans le Centre de téléchargement [!INCLUDE[msCoName](../../includes/msconame-md.md)] , page [Complément Reporting Services Microsoft® SQL Server 2012 pour les technologies Microsoft® SharePoint® 2010](https://go.microsoft.com/fwlink/?LinkID=207242) .
 
 ## <a name="next-steps"></a>Étapes suivantes
 
 [Installer ou désinstaller le complément Reporting Services pour SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)   
 [Vous ne pouvez pas parcourir les pages SharePoint dans une zone non définie par défaut après avoir désinstallé le complément Reporting Services](http://support.microsoft.com/kb/2009212)  
 
-D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

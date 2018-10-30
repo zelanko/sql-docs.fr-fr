@@ -25,12 +25,12 @@ f1_keywords:
 ms.assetid: b035b2e0-ab1e-4a37-bff7-a42d1e914bac
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2cd1a8450f9ffa847f5feab752c957d20f5fd6e1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e3b748da4e74ce9ade370df965bd8df1c388a3b7
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654162"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028970"
 ---
 # <a name="chart-legend---formatting-report-builder"></a>Légende de graphique - Mise en forme (Générateur de rapports)
   La légende du graphique contient des descriptions pour chaque catégorie d'un graphique. Une légende contient toujours un ou plusieurs éléments de légende. Chaque élément de légende consiste en une zone colorée qui représente les séries et une chaîne de texte qui décrit ces dernières, comme indiqué dans l'illustration ci-dessous.  
@@ -77,12 +77,12 @@ ms.locfileid: "47654162"
  Par défaut, le texte de légende n'est pas optimisé pour s'ajuster à la zone de légende. Pour que le texte de légende s’adapte automatiquement à l’espace alloué, affectez la valeur **False** à la propriété AutoFitTextDisabled et définissez la propriété MinFontSize à la plus petite taille de police que vous pensez être présentable tout en permettant l’optimisation de la légende.  
   
 ## <a name="see-also"></a> Voir aussi  
- [Boîte de dialogue Propriétés de la légende, Général &#40;Générateur de rapports et SSRS&#41;](http://msdn.microsoft.com/library/db718f8f-f185-422f-871c-96f0749e5893)   
+ [Boîte de dialogue Propriétés de la légende, Général &#40;Générateur de rapports et SSRS&#41;](https://msdn.microsoft.com/library/db718f8f-f185-422f-871c-96f0749e5893)   
  [Modifier le texte d’un élément de légende &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/chart-legend-change-item-text-report-builder.md)   
  [Mise en forme d’un graphique &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
- [Mise en forme des couleurs des séries sur un graphique &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
+ [Mise en forme des couleurs des séries d’un graphique &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
  [Graphiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [Masquer des éléments de légende sur le graphique &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/chart-legend-hide-items-report-builder.md)   
+ [Masquer des éléments de légende dans le graphique &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/chart-legend-hide-items-report-builder.md)   
  [Définir les couleurs d’un graphique à l’aide d’une palette &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)  
   
   

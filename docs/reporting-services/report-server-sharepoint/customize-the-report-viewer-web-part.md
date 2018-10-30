@@ -7,16 +7,16 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cbbc8331699121acaf526e257fd926542c894824
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bd5749c287f76dd018066ba6e63b3006e6f7d118
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770787"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021523"
 ---
 # <a name="customize-the-report-viewer-web-part"></a>Personnaliser le composant WebPart Visionneuse de rapports
 
-[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)])
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
@@ -84,7 +84,7 @@ Vous pouvez utiliser le composant WebPart Visionneuse de rapports pour afficher 
 |Largeur de la zone des paramètres|Vous pouvez choisir l'unité de mesure et la valeur. La valeur par défaut est 200 pixels. Cette propriété doit respecter une seule exigence, elle doit être supérieure à zéro.|  
 |Explorateur de documents|Contrôle de navigation entre les rapports qui est défini dans le rapport et qui permet d'accéder en un seul clic à des sections spécifiques d'un rapport. Il est disponible dans les rapports HTML. L'Explorateur de documents s'affiche dans une zone réductible en regard de la zone d'affichage du rapport. Les valeurs valides sont **Affiché**, **Réduit**et **Caché**. Si un Explorateur de documents est défini pour un rapport, la zone est développée par défaut, à moins qu’elle ne soit cachée ou réduite via les propriétés du composant WebPart. Si l'Explorateur de documents est réduit, vous pouvez cliquer sur la flèche pour le développer.|  
 |Largeur de la zone de l'explorateur de documents|Vous pouvez choisir l'unité de mesure et la valeur. La valeur par défaut est 200 pixels. Cette propriété doit respecter une seule exigence, elle doit être supérieure à zéro.|  
-|Charger les paramètres|Récupérez les propriétés de paramètre pour le rapport. Tous les rapports n'ont pas des paramètres. Si le rapport n'a pas de paramètres, aucune valeur n'est retournée. Si vous définissez les propriétés d'un rapport que vous venez de télécharger, vous risquez de recevoir une erreur indiquant que la connexion à la source de données a été supprimée. Si cela se produit, réinitialisez la connexion, puis terminez la définition des propriétés des paramètres une fois la connexion spécifiée. Pour plus d’informations sur la définition de la connexion, consultez [Créer et gérer des sources de données partagées &#40;Reporting Services en mode intégré SharePoint&#41;](http://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76).<br /><br /> Pour obtenir des résultats optimaux, cliquez sur **Appliquer** avant de cliquer sur Charger les paramètres.<br /><br /> Une fois que vous avez chargé les propriétés des paramètres, vous pouvez les définir de la même façon que dans les pages de propriétés des paramètres du rapport. Pour plus d’informations sur la définition des paramètres, consultez [Définir les paramètres sur un rapport publié &#40;Reporting Services en mode intégré SharePoint&#41;](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md).|  
+|Charger les paramètres|Récupérez les propriétés de paramètre pour le rapport. Tous les rapports n'ont pas des paramètres. Si le rapport n'a pas de paramètres, aucune valeur n'est retournée. Si vous définissez les propriétés d'un rapport que vous venez de télécharger, vous risquez de recevoir une erreur indiquant que la connexion à la source de données a été supprimée. Si cela se produit, réinitialisez la connexion, puis terminez la définition des propriétés des paramètres une fois la connexion spécifiée. Pour plus d’informations sur la définition de la connexion, consultez [Créer et gérer des sources de données partagées &#40;Reporting Services en mode intégré SharePoint&#41;](https://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76).<br /><br /> Pour obtenir des résultats optimaux, cliquez sur **Appliquer** avant de cliquer sur Charger les paramètres.<br /><br /> Une fois que vous avez chargé les propriétés des paramètres, vous pouvez les définir de la même façon que dans les pages de propriétés des paramètres du rapport. Pour plus d’informations sur la définition des paramètres, consultez [Définir les paramètres sur un rapport publié &#40;Reporting Services en mode intégré SharePoint&#41;](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md).|  
 
 ## <a name="customizing-the-toolbar"></a>Personnalisation de la barre d’outils
 
@@ -94,7 +94,7 @@ Vous pouvez utiliser le composant WebPart Visionneuse de rapports pour afficher 
 
 ## <a name="customizing-the-viewing-area"></a>Personnalisation de la zone d’affichage
 
- Une zone d'affichage sert à afficher les rapports. La zone d'affichage du rapport est partagée avec les zones Paramètres et Informations d'identification, si celles-ci sont utilisées. Si des informations d'identification sont requises, la zone Informations d'identification s'affiche en regard d'une zone d'affichage du rapport vide. La zone Informations d'identification disparaît une fois que l'utilisateur fournit les informations d'identification et qu'il exécute le rapport. Pour personnaliser le texte invitant les utilisateurs à fournir des informations d’identification, modifiez les propriétés de connexion de la source de données. Pour plus d’informations, consultez [Créer et gérer des sources de données partagées &#40;Reporting Services en mode intégré SharePoint&#41;](http://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76).  
+ Une zone d'affichage sert à afficher les rapports. La zone d'affichage du rapport est partagée avec les zones Paramètres et Informations d'identification, si celles-ci sont utilisées. Si des informations d'identification sont requises, la zone Informations d'identification s'affiche en regard d'une zone d'affichage du rapport vide. La zone Informations d'identification disparaît une fois que l'utilisateur fournit les informations d'identification et qu'il exécute le rapport. Pour personnaliser le texte invitant les utilisateurs à fournir des informations d’identification, modifiez les propriétés de connexion de la source de données. Pour plus d’informations, consultez [Créer et gérer des sources de données partagées &#40;Reporting Services en mode intégré SharePoint&#41;](https://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76).  
   
  La zone Paramètres fournit des champs permettant d'entrer des valeurs avant l'exécution du rapport. Elle n'est utilisée que lorsqu'une définition de rapport comprend des paramètres. Lorsque la zone Paramètres ou Informations d’identification est visible, l’affichage du rapport est ajusté en fonction de la largeur restante du composant WebPart. Vous pouvez définir les propriétés du composant WebPart afin de personnaliser la largeur de la zone Paramètres. Vous pouvez également définir les étiquettes qui s'affichent en regard des paramètres individuels sur la page. Pour plus d’informations sur la modification des étiquettes de paramètres, consultez [Définir les paramètres sur un rapport publié &#40;Reporting Services en mode intégré SharePoint&#41;](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md).  
   
@@ -103,4 +103,4 @@ Vous pouvez utiliser le composant WebPart Visionneuse de rapports pour afficher 
  [Composant WebPart Visionneuse de rapports sur un site SharePoint](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md)   
  [Ajouter le composant Web Visionneuse de rapports à une page web](../../reporting-services/report-server-sharepoint/add-the-report-viewer-web-part-to-a-web-page.md)  
 
-D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

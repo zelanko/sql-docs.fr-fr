@@ -7,12 +7,12 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.date: 09/17/2017
-ms.openlocfilehash: 6561f4a6378a31485722a9e87d59d293ced0dad9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 19543e33782d2d175f5ddfbc065f6016cbed3fcc
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759427"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029578"
 ---
 # <a name="power-bi-report-server-integration-configuration-manager"></a>Intégration du serveur de rapports Power BI (Gestionnaire de configuration)
 
@@ -24,7 +24,7 @@ La page  **Intégration de Power BI** du Gestionnaire de configuration [!INCLUDE
 
 Outre une connexion Internet active pour pouvoir accéder au service [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] , voici la configuration requise pour effectuer l’intégration [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)].
 
-- **Azure Active Directory :** votre organisation doit utiliser Azure Active Directory, qui fournit la gestion des annuaires et des identités pour les services et applications web Azure. Pour plus d’informations, consultez [Qu’est-ce qu’Azure Active Directory ?](https://azure.microsoft.com/documentation/articles/active-directory-whatis/)
+- **Azure Active Directory :** votre organisation doit utiliser Azure Active Directory, qui fournit la gestion des annuaires et des identités pour les services et applications web Azure. Pour plus d’informations, consultez [Qu’est-ce qu’Azure Active Directory ?](https://azure.microsoft.com/documentation/articles/active-directory-whatis/)
 
 - **Client géré :** le tableau de bord [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] auquel vous voulez épingler des éléments de rapport doit faire partie d’un client géré Azure AD.  Un client géré est créé automatiquement la première fois que votre organisation souscrit à des services Azure tels qu’Office 365 et Microsoft Intune.   Les clients viraux ne sont pas pris en charge pour le moment.  Pour plus d’informations, consultez les sections « Qu’est-ce qu’un client Azure AD ?» et « Obtention d’un annuaire Azure AD » de la rubrique [Qu’est-ce qu’un annuaire Azure AD ?](https://msdn.microsoft.com/library/azure/jj573650.aspx#BKMK_WhatIsAnAzureADTenant)
 
@@ -113,7 +113,7 @@ Cette section présente les étapes de base et les technologies impliquées dans
 
 1. Les utilisateurs prévisualisent les rapports dans le [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] la première fois qu’ils cliquent pour épingler un élément de rapport dans le [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]
 
-2. Ils sont redirigés vers la page de connexion Azure AD. Ils peuvent également se connecter à partir de la page [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] **My Settings** page. Lorsque des utilisateurs se connectent au client géré Azure, une relation est établie entre leur compte Azure et les autorisations [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  Pour plus d’informations, consultez [Mes paramètres pour l’intégration de Power BI &#40;portail web&#41;](http://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5).
+2. Ils sont redirigés vers la page de connexion Azure AD. Ils peuvent également se connecter à partir de la page [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] **My Settings** page. Lorsque des utilisateurs se connectent au client géré Azure, une relation est établie entre leur compte Azure et les autorisations [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  Pour plus d’informations, consultez [Mes paramètres pour l’intégration de Power BI &#40;portail web&#41;](https://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5).
 
 3. Un jeton de sécurité utilisateur est renvoyé au serveur de rapports.
 
@@ -125,7 +125,7 @@ Cette section présente les étapes de base et les technologies impliquées dans
 
 7. Un abonnement [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] est créé pour gérer l’actualisation planifiée de l’élément de rapport sur la vignette de tableau de bord. L’abonnement utilise le jeton de sécurité créé lors de la connexion de l’utilisateur.
 
-     Le jeton est valable **90 jours**, après quoi les utilisateurs doivent se reconnecter pour en créer un. Une fois le jeton expiré, les vignettes épinglées restent affichées sur le tableau de bord, mais les données ne sont plus actualisées.  Les abonnements [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] utilisés pour les éléments épinglés génèrent une erreur tant qu’un nouveau jeton n’est pas créé. Consultez [Mes paramètres pour l’intégration de Power BI &#40;portail web&#41;](http://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5). pour plus d'informations.
+     Le jeton est valable **90 jours**, après quoi les utilisateurs doivent se reconnecter pour en créer un. Une fois le jeton expiré, les vignettes épinglées restent affichées sur le tableau de bord, mais les données ne sont plus actualisées.  Les abonnements [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] utilisés pour les éléments épinglés génèrent une erreur tant qu’un nouveau jeton n’est pas créé. Consultez [Mes paramètres pour l’intégration de Power BI &#40;portail web&#41;](https://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5). pour plus d'informations.
 
 Lorsqu’un utilisateur épingle un élément pour la deuxième fois, les étapes 1 à 4 sont ignorées. L’ID d’application et les URL sont récupérés auprès de la base de données ReportServer et la procédure reprend à l’étape 5.
 
@@ -149,8 +149,8 @@ Lorsqu’un utilisateur épingle un élément pour la deuxième fois, les étape
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-[Mes paramètres pour l’intégration de Power BI](http://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5)  
+[Mes paramètres pour l’intégration de Power BI](https://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5)  
 [Épingler des éléments Reporting Services aux tableaux de bord Power BI](../../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md)   
 [Tableaux de bord dans Power BI](https://powerbi.microsoft.com/documentation/powerbi-service-dashboards/)  
 
-D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 2641ea84-9343-4e6f-aec1-25339031b163
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 76448fc4a919b9931ea97712038be9ba0f2c2da2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5f8e1ebaaeaf6ea6ee413bf20f83beaddcbdd465
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747537"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50020353"
 ---
 # <a name="work-with-shared-datasets---web-portal"></a>Utilisation de datasets partagés (portail web)
 
@@ -104,4 +104,4 @@ Une fois que vous avez terminé, vous pouvez sélectionner **Créer un plan d’
   
 Vous pouvez ensuite **Modifier** ou **Supprimer** des plans répertoriés. L’option **Créer à partir d'un élément existant** est activée lorsqu'un seul et unique plan d'actualisation du cache est sélectionné. Cette option crée un nouveau plan d'actualisation copié à partir du plan d'origine. La page du plan d'actualisation du cache qui s'ouvre contient les détails du plan sélectionné. Vous pouvez alors modifier les options du plan d'actualisation et enregistrer ce dernier en utilisant une nouvelle description.  
 
-D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

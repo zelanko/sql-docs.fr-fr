@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 51ad69d8-fe92-4662-a7cd-d235692f0c03
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 76bd175c9461e1781502471d0ed17037c168c041
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 60db1fe9f00084ce95d94af131e72a14f1e3988e
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856799"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021163"
 ---
 # <a name="tutorial-how-to-locate-and-start-reporting-services-tools-ssrs"></a>Didacticiel : comment localiser et démarrer les outils Reporting Services (SSRS)
 
@@ -86,7 +86,7 @@ ms.locfileid: "47856799"
 4.  Si vous exécutez le portail web sur le serveur de rapports local, consultez [Configurer un serveur de rapports en mode natif pour l’administration locale &#40;SSRS&#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
    
 ##  <a name="bkmk_managements_studio"></a> Management Studio  
- Les administrateurs du serveur de rapports peuvent utiliser [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] pour gérer le serveur de rapports en même temps que d'autres composants serveur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour plus d’informations, consultez [Use SQL Server Management Studio](http://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be).  
+ Les administrateurs du serveur de rapports peuvent utiliser [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] pour gérer le serveur de rapports en même temps que d'autres composants serveur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour plus d’informations, consultez [Use SQL Server Management Studio](https://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be).  
   
 ### <a name="to-start-sql-server-management-studio"></a>Pour démarrer SQL Server Management Studio  
   
@@ -111,7 +111,7 @@ ms.locfileid: "47856799"
   
  Le Concepteur de rapports est disponible dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] -Visual Studio. L’aire de conception du Concepteur de rapports inclut des fenêtres avec onglets, des Assistants et des menus permettant d’accéder aux fonctionnalités de création de rapports. L’outil Concepteur de rapports devient disponible lorsque vous choisissez un projet Report Server ou un modèle de l’Assistant Report Server dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Pour en savoir plus, consultez [Reporting Services dans les outils de données SQL Server &#40;SSDT&#41;](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md). 
  
-Téléchargez [SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714).  
+Téléchargez [SQL Server Data Tools](https://go.microsoft.com/fwlink/?LinkID=616714).  
   
 ### <a name="to-start-report-designer"></a>Pour démarrer le Concepteur de rapports  
   
@@ -134,7 +134,7 @@ Téléchargez [SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616
 ##  <a name="bkmk_report_builder"></a> [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]  
  Le[Générateur de rapports dans SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md) est une application autonome que vous pouvez utiliser pour créer des rapports paginés en dehors de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Vous pouvez personnaliser et mettre à jour tous les rapports existants, qu’ils aient été créés dans le Concepteur de rapports ou dans des versions précédentes du [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]. Vous pouvez l’installer depuis le portail web de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou le Centre de téléchargement Microsoft.  
   
- [Téléchargez le Générateur de rapports](http://go.microsoft.com/fwlink/?LinkID=219138) depuis le Centre de téléchargement Microsoft.  
+ [Téléchargez le Générateur de rapports](https://go.microsoft.com/fwlink/?LinkID=219138) depuis le Centre de téléchargement Microsoft.  
   
 ### <a name="to-start-includessrbnoversionincludesssrbnoversionmd"></a>Pour démarrer le [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]  
   
@@ -146,14 +146,14 @@ Téléchargez [SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616
   
      ou  
   
-     [Téléchargez le Générateur de rapports](http://go.microsoft.com/fwlink/?LinkID=219138) depuis le Centre de téléchargement Microsoft.  
+     [Téléchargez le Générateur de rapports](https://go.microsoft.com/fwlink/?LinkID=219138) depuis le Centre de téléchargement Microsoft.  
   
 3.  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] s’ouvre et vous pouvez créer ou ouvrir un rapport paginé.  
   
 ##  <a name="bkmk_mobile_report_pub"></a> [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]  
- Utilisez [l’Éditeur de rapports mobiles SQL Server](http://msdn.microsoft.com/library/e23cf095-cb9a-4631-ab46-10413d8e3a7c) pour créer des rapports mobiles consultables dans le portail web de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et sur des appareils mobiles tels que des iPad et des iPhone.   Vous pouvez l’installer depuis le portail web de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou le Centre de téléchargement Microsoft.  
+ Utilisez [l’Éditeur de rapports mobiles SQL Server](https://msdn.microsoft.com/library/e23cf095-cb9a-4631-ab46-10413d8e3a7c) pour créer des rapports mobiles consultables dans le portail web de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et sur des appareils mobiles tels que des iPad et des iPhone.   Vous pouvez l’installer depuis le portail web de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou le Centre de téléchargement Microsoft.  
   
- [Téléchargez l’Éditeur de rapports mobiles SQL Server](http://go.microsoft.com/fwlink/?LinkID=733527) depuis le Centre de téléchargement Microsoft.  
+ [Téléchargez l’Éditeur de rapports mobiles SQL Server](https://go.microsoft.com/fwlink/?LinkID=733527) depuis le Centre de téléchargement Microsoft.  
   
 ### <a name="to-start-includessmobilereptpubshortincludesss-mobilereptpub-shortmd"></a>Pour démarrer le [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)]  
   
@@ -165,18 +165,18 @@ Téléchargez [SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616
   
      ou  
   
-     [Téléchargez l’Éditeur de rapports mobiles SQL Server](http://go.microsoft.com/fwlink/?LinkID=733527) depuis le Centre de téléchargement Microsoft.  
+     [Téléchargez l’Éditeur de rapports mobiles SQL Server](https://go.microsoft.com/fwlink/?LinkID=733527) depuis le Centre de téléchargement Microsoft.  
   
 3.  [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)] s’ouvre et vous pouvez créer ou ouvrir un rapport mobile.  
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-[Téléchargez l’Éditeur de rapports mobiles SQL Server](http://go.microsoft.com/fwlink/?LinkID=733527)   
-[Téléchargez le Générateur de rapports](http://go.microsoft.com/fwlink/?LinkID=219138)  
-[Télécharger SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714) 
+[Téléchargez l’Éditeur de rapports mobiles SQL Server](https://go.microsoft.com/fwlink/?LinkID=733527)   
+[Téléchargez le Générateur de rapports](https://go.microsoft.com/fwlink/?LinkID=219138)  
+[Télécharger SQL Server Data Tools](https://go.microsoft.com/fwlink/?LinkID=616714) 
 [Installer le mode SharePoint de Reporting Services](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)   
 [Serveur de rapports Reporting Services](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)   
 [Outils de création de requêtes](../../reporting-services/report-data/query-design-tools-ssrs.md)   
 [Didacticiels sur Reporting Services](../../reporting-services/reporting-services-tutorials-ssrs.md)  
 
-D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

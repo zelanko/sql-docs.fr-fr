@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1ac2646d-ed5a-4436-b18f-2150c33f3d87
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b013748942c239c16a5265a2daa77a00936ff48a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: da1568dfbdee3c772c583569d04d31cba65f6458
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47632537"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028661"
 ---
 # <a name="scripting-and-powershell-with-reporting-services"></a>Scripts et PowerShell avec Reporting Services
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] prend en charge un large éventail de scénarios de développement et de gestion via script, notamment l'utilitaire de ligne de commande rs.exe, les applets de commande PowerShell pour les serveurs de rapports en mode SharePoint et l'exploitation du modèle d'objet [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de PowerShell pour le mode natif et le mode SharePoint.  
@@ -50,7 +50,7 @@ ms.locfileid: "47632537"
   
 -   [Utiliser PowerShell pour modifier et répertorier les propriétaires d’abonnements Reporting Services, et exécuter un abonnement](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md).  
   
--   [Utilisation de PowerShell pour créer une machine virtuelle Azure avec un serveur de rapports en mode natif](http://msdn.microsoft.com/library/azure/dn449661.aspx).  
+-   [Utilisation de PowerShell pour créer une machine virtuelle Azure avec un serveur de rapports en mode natif](https://msdn.microsoft.com/library/azure/dn449661.aspx).  
   
 -   Consultez la section « Accéder aux classes WMI à l'aide de PowerShell » dans [Accéder au fournisseur WMI de Reporting Services](../../reporting-services/tools/access-the-reporting-services-wmi-provider.md).  
   
@@ -59,7 +59,7 @@ ms.locfileid: "47632537"
   
 -   [Exemple de script Reporting Services rs.exe pour copier du contenu entre des serveurs de rapports](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
   
--   Pour obtenir des exemples supplémentaires de script, d'application et d'extension, consultez les [exemples de produit SQL Server Reporting Services](http://go.microsoft.com/fwlink/?LinkId=177889).  
+-   Pour obtenir des exemples supplémentaires de script, d'application et d'extension, consultez les [exemples de produit SQL Server Reporting Services](https://go.microsoft.com/fwlink/?LinkId=177889).  
   
 ## <a name="see-also"></a> Voir aussi  
  [Utilitaire RS.exe &#40;SSRS&#41;](../../reporting-services/tools/rs-exe-utility-ssrs.md)   

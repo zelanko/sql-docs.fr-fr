@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 76b9ed31-5aec-40fc-bb88-a1c1b0ab3fc3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e1a3611e0575014ba2abba89d61d0512b484f720
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fc8b13d548aab60dd22cfc3adf6b1730445113cd
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733167"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50100310"
 ---
 # <a name="expression-uses-in-reports-report-builder-and-ssrs"></a>Utilisation d'expressions dans les rapports (Générateur de rapport et SSRS)
 Dans les rapports paginés [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , les expressions sont utilisées dans la définition des rapports pour spécifier ou calculer les valeurs des paramètres, requêtes, filtres, propriétés d’éléments de rapport, définitions de groupe et de tri, propriétés de zone de texte, signets, explorateurs de documents, contenu d’en-tête et de pied de page dynamique, images et définitions de source de données dynamiques. Cette rubrique fournit des exemples des nombreux emplacements où vous pouvez utiliser des expressions pour varier le contenu ou l'apparence d'un rapport. Cette liste n'est pas exhaustive. Vous pouvez définir une expression pour toute propriété dans une boîte de dialogue qui affiche le bouton d’expression (**fx**) ou dans une liste déroulante qui affiche **\<Expression...>**.  
@@ -53,7 +53,7 @@ Dans les rapports paginés [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnovers
 |-------------------|---------------------------------------|--------------------|  
 |Calculer les valeurs d'agrégat pour un dataset.|Propriété Value d’un espace réservé à l’intérieur d’une zone de texte. Utilisez la **boîte de dialogue Propriétés de l'espace réservé, Général**.|`=First(Fields!Sales.Value,"DataSet1")`|  
 |Concaténer du texte et des expressions dans la même zone de texte.|Propriété Value d’un espace réservé à l’intérieur d’une zone de texte placée dans un en-tête ou un pied de page. Utilisez la **boîte de dialogue Propriétés de l'espace réservé, Général**.|`="This report began processing at " & Globals!ExecutionTime`|  
-|Calculer une valeur d'agrégat pour un dataset dans une étendue différente.|Propriété Value d’un espace réservé à l’intérieur d’une zone de texte placée dans un groupe de tableaux matriciels. Utilisez la **boîte de dialogue Propriétés de l'espace réservé, Général**.|`=Max(Fields!Total.Value,"DataSet2)`|  
+|Calculer une valeur d'agrégat pour un dataset dans une étendue différente.|Propriété Value d’un espace réservé à l’intérieur d’une zone de texte placée dans un groupe de tableaux matriciels. Utilisez la **boîte de dialogue Propriétés de l'espace réservé, Général**.|`=Max(Fields!Total.Value,"DataSet2")`|  
 |Mettre en forme des données dans une zone de texte selon la valeur.|Propriété Color d’un espace réservé à l’intérieur d’une zone de texte sur la ligne Détails d’un tableau matriciel. Utilisez la **boîte de dialogue Propriétés de la zone de texte, Police**.|`=IIF(Fields!TotalDue.Value < 10000,"Red","Black")`|  
 |Calculer une valeur une fois pour s'y reporter dans tout le rapport.|Propriété Value d’une variable de rapport. Utilisez la **boîte de dialogue Propriétés du rapport, Variables**.|`=Variables!MyCalculation.Value`|  
 |Inclure des valeurs spécifiques pour plusieurs champs d'un dataset.|Équation de filtre pour un groupe dans un tableau matriciel. Utilisez la **boîte de dialogue Propriétés du tableau matriciel, Filtres**.|Pour le type de données, sélectionnez **Booléen**.<br /><br /> `=IIF(InStr(Fields!Subcat.Value,"Shorts")=0 AND (Fields!Size.Value="M" OR Fields!Size.Value="S"),TRUE, FALSE)`<br /><br /> `=`<br /><br /> `TRUE`|  

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0ec5ac6e-b3cf-49cd-96f6-6b4b7dc29982
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4bc9f71e2cec93ef3077f5cbd32ca1f4000ab275
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: be7d36aca5b1876fee4e9ea0f80d3064e77daf7e
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47816907"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028698"
 ---
 # <a name="script-with-the-rsexe-utility-and-the-web-service"></a>Écrire des scripts avec l'utilitaire rs.exe et le service Web
   Les développeurs et les administrateurs du serveur de rapports peuvent effectuer des opérations sur un serveur de rapports grâce à l’utilitaire **rs** (RS.exe). Ils peuvent ainsi administrer par programmation un serveur de rapports à l’aide de scripts écrits avec [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].  
@@ -30,7 +30,7 @@ ms.locfileid: "47816907"
   
  [Exemple de script Reporting Services rs.exe pour copier du contenu entre des serveurs de rapports](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
   
- [Exemples de produit SQL Server Reporting Services](http://go.microsoft.com/fwlink/?LinkId=177889).  
+ [Exemples de produit SQL Server Reporting Services](https://go.microsoft.com/fwlink/?LinkId=177889).  
   
 ## <a name="see-also"></a> Voir aussi  
  [Écrire des scripts pour les tâches d'administration et de déploiement](../../reporting-services/tools/script-deployment-and-administrative-tasks.md)   

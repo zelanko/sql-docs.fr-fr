@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4876bee2-071f-4a8d-ab8a-b03337625b74
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 378c5baad5b1527c76cfb26496dca71a98a4ce03
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d8ed5f298da17422e90cb6ab29fba596a0422079
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721797"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021033"
 ---
 # <a name="technical-reference-ssrs"></a>Références techniques (SSRS)
 
@@ -31,11 +31,11 @@ ms.locfileid: "47721797"
  ![Petite icône de dossier de fichiers](../analysis-services/media/filefolder-small.png "Petite icône de dossier de fichiers") **Références relatives aux fonctionnalités**  
  [Aide sur le concepteur de rapports via la touche F1](../reporting-services/tools/report-designer-f1-help.md)  
   
- [Aide F1 du Gestionnaire de rapports](http://msdn.microsoft.com/library/e0137273-85b8-45f0-83e5-38a50481768f)  
+ [Aide F1 du Gestionnaire de rapports](https://msdn.microsoft.com/library/e0137273-85b8-45f0-83e5-38a50481768f)  
   
  [Gestionnaire de configuration de Reporting Services &#40;mode natif&#41;](../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
   
- [Aide de l'Assistant Rapport](http://msdn.microsoft.com/library/68287bcf-f91a-429f-bb7c-48c029b041fa)  
+ [Aide de l'Assistant Rapport](https://msdn.microsoft.com/library/68287bcf-f91a-429f-bb7c-48c029b041fa)  
   
  [Visionneuse HTML et barre d’outils des rapports](../reporting-services/html-viewer-and-the-report-toolbar.md)  
   
@@ -51,4 +51,4 @@ ms.locfileid: "47721797"
  ![Petite icône de dossier de fichiers](../analysis-services/media/filefolder-small.png "Petite icône de dossier de fichiers") **Bibliothèque de classes Fournisseur WMI de Reporting Services**  
  [Référence de bibliothèque du fournisseur WMI de Reporting Services &#40;SSRS&#41;](../reporting-services/wmi-provider-library-reference/reporting-services-wmi-provider-library-reference-ssrs.md)  
 
-D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

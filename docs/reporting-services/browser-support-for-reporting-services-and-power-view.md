@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 48a75bbb-0029-4c43-891d-dc8f4fc0ebe1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 96c7e313bea6d36d62267413618b4a90bfdd2d74
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7282fd5627bc46d9f392a449c4707c75c867dd92
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695907"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021214"
 ---
 # <a name="browser-support-for-reporting-services-and-power-view"></a>Prise en charge des navigateurs pour Reporting Services et Power View
 
@@ -82,7 +82,7 @@ Voici la liste actuelle des navigateurs pris en charge pour le portail web.
 
  **(+)** Dernière version commercialisée
 
- Si vous utilisez un produit SharePoint intégré à [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], consultez  [Planifier la prise en charge du navigateur dans SharePoint 2016](http://technet.microsoft.com//library/cc263526\(v=office.16\).aspx).
+ Si vous utilisez un produit SharePoint intégré à [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], consultez  [Planifier la prise en charge du navigateur dans SharePoint 2016](https://technet.microsoft.com//library/cc263526\(v=office.16\).aspx).
 
 ### <a name="authentication-requirements"></a>Exigences relatives à l’authentification
 
@@ -142,15 +142,15 @@ Voici la liste actuelle des navigateurs pris en charge pour le portail web.
 
  **(+)** Dernière version commercialisée
 
- Pour en savoir plus sur la prise en charge des navigateurs SharePoint 2016, consultez [Planifier la prise en charge du navigateur dans SharePoint 2013](http://technet.microsoft.com//library/cc263526\(v=office.16\).aspx).
+ Pour en savoir plus sur la prise en charge des navigateurs SharePoint 2016, consultez [Planifier la prise en charge du navigateur dans SharePoint 2013](https://technet.microsoft.com//library/cc263526\(v=office.16\).aspx).
 
 ## <a name="next-steps"></a>Étapes suivantes
 
 [Recherche et affichage de rapports dans le portail Web](report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
 [Outils de Reporting Services](../reporting-services/tools/reporting-services-tools.md)  
-[Portail web (SSRS en mode natif)](http://msdn.microsoft.com/7349e626-6ed5-4d21-b05f-cf042ad9ad70)  
+[Portail web (SSRS en mode natif)](https://msdn.microsoft.com/7349e626-6ed5-4d21-b05f-cf042ad9ad70)  
 [HTML Viewer and the Report Toolbar](../reporting-services/html-viewer-and-the-report-toolbar.md)  
 [Référence de paramètres d'accès URL](../reporting-services/url-access-parameter-reference.md)  
 
-D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)
 

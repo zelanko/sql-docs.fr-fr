@@ -11,19 +11,19 @@ helpviewer_keywords:
 ms.assetid: d21f7493-bcf7-4e9e-9886-55ebdc1f1037
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2dfa6b9d901b836133af5d0fe851d06c0e7d03cc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d82159a1d93e51715888fc405a94d91a4ffbb925
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596858"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031559"
 ---
 # <a name="update-a-resource-report-manager"></a>mise à jour d'une ressource (Gestionnaire de rapports)
   Vous pouvez mettre à jour une ressource en la remplaçant par une nouvelle version. Les ressources sont des éléments stockés sur un serveur de rapports qui tirent leur contenu des fichiers que vous téléchargez. Vous pouvez remplacer une ressource existante en important du contenu de fichier inédit ou différent dans la ressource existante. La mise à jour d'une ressource permet d'actualiser du contenu tout en préservant les propriétés existantes et les paramètres de sécurité définis sur la ressource.  
   
 ### <a name="to-update-a-resource"></a>Pour mettre à jour une ressource  
   
-1.  Démarrez le [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
+1.  Démarrez le [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
 2.  Dans le Gestionnaire de rapports, parcourez l'arborescence jusqu'à la ressource à mettre à jour ou effectuez une recherche pour la localiser.  
   
@@ -42,9 +42,9 @@ ms.locfileid: "47596858"
  Si la ressource en cours de mise à jour contient une image utilisée dans un rapport, vous devez actualiser le rapport pour afficher l'image mise à jour.  
   
 ## <a name="see-also"></a> Voir aussi  
- [Page Contenu &#40;Gestionnaire de rapports&#41;](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
- [Page Charger un fichier &#40;Gestionnaire de rapports&#41;](http://msdn.microsoft.com/library/7bb3166f-9374-4449-b66a-ffb77298507d)   
+ [Page Contenu &#40;Gestionnaire de rapports&#41;](https://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
+ [Page Charger un fichier &#40;Gestionnaire de rapports&#41;](https://msdn.microsoft.com/library/7bb3166f-9374-4449-b66a-ffb77298507d)   
  [Télécharger des fichiers dans un dossier](../../reporting-services/report-server/upload-files-to-a-folder.md)   
- [Aide (F1) du Gestionnaire de rapports](http://msdn.microsoft.com/library/e0137273-85b8-45f0-83e5-38a50481768f)  
+ [Aide F1 du Gestionnaire de rapports](https://msdn.microsoft.com/library/e0137273-85b8-45f0-83e5-38a50481768f)  
   
   

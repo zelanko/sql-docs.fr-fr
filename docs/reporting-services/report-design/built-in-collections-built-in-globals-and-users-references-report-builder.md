@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 5f5e1149-c967-454d-9a63-18ec4a33d985
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bd89bede228d7a54e0bbfe7cab967facdcbec563
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a6ae1e843a2f4c829f5dd21f7795681bb962e025
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719897"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031578"
 ---
 # <a name="built-in-collections---built-in-globals-and-users-references-report-builder"></a>Collections intégrées - Références à des champs Globals et Users prédéfinis (Générateur de rapports)
   La collection de champs prédéfinis, qui inclut à la fois les collections **Globals** et **User** , représente les valeurs globales fournies par Reporting Services pendant le traitement d’un rapport. La collection **Globals** fournit des valeurs, telles que le nom du rapport, l'heure de début du traitement du rapport et les numéros des pages actuelles pour l'en-tête ou le pied de page du rapport. La collection **User** fournit les paramètres d'identificateur d'utilisateur et de langue. Ces valeurs peuvent être utilisées dans les expressions pour filtrer les résultats dans un rapport.  
@@ -86,7 +86,7 @@ ms.locfileid: "47719897"
   
 ## <a name="see-also"></a> Voir aussi  
  [Expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [Boîte de dialogue Expression &#40;Générateur de rapports&#41;](http://msdn.microsoft.com/library/e89c4d97-5d41-4b55-8695-79329edac15d)   
+ [Boîte de dialogue Expression &#40;Générateur de rapports&#41;](https://msdn.microsoft.com/library/e89c4d97-5d41-4b55-8695-79329edac15d)   
  [Types de données dans les expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
  [Mise en forme des nombres et des dates &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
  [Exemples d’expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6ec69ac3-27b0-472d-91e1-733af9078ed2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1ddbd23aa9a37033c65115c02e49fde8bcedd5dc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b8329ef7eadc543a6672b88887a356da4e3c6daa
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47738697"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021485"
 ---
 # <a name="start-and-stop-the-report-server-service"></a>Démarrer et arrêter le service Report Server
   Un serveur de rapports est implémenté comme un service Windows unique qui contient le service Web Report Server, le Gestionnaire de rapports et une application de traitement en arrière-plan. Le service doit s'exécuter afin que vous puissiez utiliser les fonctionnalités du serveur de rapports. L'arrêt du service interrompt toutes les opérations du serveur de rapports.  
@@ -51,6 +51,6 @@ ms.locfileid: "47738697"
   
 ## <a name="see-also"></a> Voir aussi  
  [Gestionnaire de configuration de Reporting Services &#40;mode natif&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
- [Démarrer, arrêter ou suspendre le service SQL Server Agent](http://msdn.microsoft.com/library/c95a9759-dd30-4ab6-9ab0-087bb3bfb97c)  
+ [Démarrer, arrêter ou suspendre le service SQL Server Agent](https://msdn.microsoft.com/library/c95a9759-dd30-4ab6-9ab0-087bb3bfb97c)  
   
   

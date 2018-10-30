@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: f2e42303-e355-4c1f-bb3b-3338fbdd230d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6c3f7551c731dd8be32918f8c4fab2628f0204e7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b0c8ec6556a1883e9c677c3db96cb4431227544c
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843919"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029148"
 ---
 # <a name="report-datasets-ssrs"></a>Jeux de données du rapport (SSRS)
   Pour ajouter des données à un rapport, vous devez créer des datasets. Chaque dataset représente le jeu de résultats émanant de l'exécution d'une commande de requête sur une source de données. Les colonnes du jeu de résultats représentent la collection de champs. Les lignes du jeu de résultats constituent les données. Un dataset ne contient pas les données proprement dites. Il contient les informations nécessaires à la récupération d'un jeu de données spécifique à partir d'une source de données.  
@@ -32,7 +32,7 @@ ms.locfileid: "47843919"
   
      ![rs_SharedDatasetDesignMode](../../reporting-services/report-builder/media/rs-shareddatasetdesignmode.gif "rs_SharedDatasetDesignMode")  
   
- Pour plus d’informations, consultez [Datasets incorporés et partagés &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md) et [Connexions de données ou sources de données incorporées et partagées &#40;Générateur de rapports et SSRS&#41;](http://msdn.microsoft.com/library/f417782c-b85a-4c4d-8a40-839176daba56).  
+ Pour plus d’informations, consultez [Datasets incorporés et partagés &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md) et [Connexions de données ou sources de données incorporées et partagées &#40;Générateur de rapports et SSRS&#41;](https://msdn.microsoft.com/library/f417782c-b85a-4c4d-8a40-839176daba56).  
   
  Vous pouvez également ajouter des datasets à un rapport en ajoutant des parties de rapports qui contiennent les datasets dont elles dépendent. [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
   
@@ -92,9 +92,9 @@ ms.locfileid: "47843919"
   
  Dans le concepteur de requêtes, vous pouvez exécuter la requête pour afficher des exemples de données et valider la syntaxe de commande de requête. Les noms des colonnes dans le jeu de résultats deviennent les noms des champs affichés dans le volet Données du rapport. Le jeu de résultats doit être un jeu de lignes et de colonnes unique où le même nombre de valeurs existe pour chaque ligne de données. Plusieurs jeux de résultats d'une même requête ne sont pas pris en charge. Les hiérarchies déséquilibrées, qui n'ont pas un nombre constant de colonnes et peuvent produire un nombre différent de valeurs de données pour chaque ligne, ne sont pas prises en charge.  
   
- Pour exécuter une requête, vous devez disposer d'informations d'identification au moment de la conception. Pour plus d’informations, consultez [Spécifier des informations d’identification dans le Générateur de rapports](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53) et [Connexions de données, sources de données et chaînes de connexion &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
+ Pour exécuter une requête, vous devez disposer d'informations d'identification au moment de la conception. Pour plus d’informations, consultez [Spécifier des informations d’identification dans le Générateur de rapports](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53) et [Connexions de données, sources de données et chaînes de connexion &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
- La communication entre une extension de données et la source de données externe est gérée par les fournisseurs de données. La prise en charge de la syntaxe de commande de requête, des paramètres de requête et des types de données pour les valeurs dans le jeu de résultats est déterminée par chaque fournisseur de données. Pour plus d’informations, consultez la rubrique correspondant au type spécifique d’extension de données et [Concepteurs de requêtes&#40;Générateur de rapports&#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9).  
+ La communication entre une extension de données et la source de données externe est gérée par les fournisseurs de données. La prise en charge de la syntaxe de commande de requête, des paramètres de requête et des types de données pour les valeurs dans le jeu de résultats est déterminée par chaque fournisseur de données. Pour plus d’informations, consultez la rubrique correspondant au type spécifique d’extension de données et [Concepteurs de requêtes&#40;Générateur de rapports&#41;](https://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9).  
   
   
 ##  <a name="HowTo"></a> Rubriques de procédures  
@@ -120,9 +120,9 @@ ms.locfileid: "47843919"
 ##  <a name="Section"></a> Dans cette section  
  [Parties de rapports et datasets dans le Générateur de rapports](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)  
   
- [Connexions de données, sources de données et chaînes de connexion dans le Générateur de rapports](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
+ [Connexions de données, sources de données et chaînes de connexion dans le Générateur de rapports](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
   
- [Spécifier des informations d’identification dans le Générateur de rapports](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)  
+ [Spécifier des informations d’identification dans le Générateur de rapports](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)  
   
  [Datasets incorporés dans les rapports et datasets partagés &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   

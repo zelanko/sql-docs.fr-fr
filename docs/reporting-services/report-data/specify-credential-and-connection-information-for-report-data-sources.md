@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: fee1a663-a313-424a-aed2-5082bfd114b3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ec6c893548c8353be0ae79f98f47880fe9e3a85b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fa8731c0f7438c1272e7a0cee3119d81b5c57c0e
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47756407"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031598"
 ---
 # <a name="specify-credential-and-connection-information-for-report-data-sources"></a>Spécifier des informations d'identification et de connexion pour les sources de données de rapport
   Un serveur de rapports utilise des informations d'identification pour se connecter à des sources de données externes qui fournissent du contenu aux rapports ou des informations de destinataire aux abonnements pilotés par les données. Vous pouvez spécifier des informations d'identification qui utilisent l'authentification Windows, l'authentification de base de données, aucune authentification ou une authentification personnalisée. Lors de l'envoi d'une demande de connexion sur le réseau, le serveur de rapports emprunte l'identité d'un compte d'utilisateur ou du compte d'exécution sans assistance. Pour plus d’informations sur le contexte de sécurité sous lequel une demande de connexion est émise, consultez [Configuration d’une source de données et connexions réseau](#DataSourceConfigurationConnections) plus loin dans cette rubrique.  
@@ -48,7 +48,7 @@ ms.locfileid: "47756407"
   
      Lorsque vous enregistrez, publiez ou naviguez vers un serveur de rapports ou un site SharePoint pour la première fois, vous devez éventuellement entrer vos informations d'identification. Les informations d'identification que vous entrez sont utilisées jusqu'à la fin de la session du Générateur de rapports. Si vous choisissez d'enregistrer les informations d'identification, elles sont stockées de manière sécurisée avec vos paramètres utilisateur sur votre ordinateur. Dans les sessions ultérieures du Générateur de rapports, les informations d'identification enregistrées sont utilisées pour la connexion au même serveur de rapports ou site SharePoint. L'administrateur du serveur de rapports ou l'administrateur SharePoint spécifie le type des informations d'identification à utiliser.  
   
--   Informations d’identification de la source de données que vous entrez dans la [boîte de dialogue Propriétés de la source de données, Informations d’identification &#40;Générateur de rapports&#41;](http://msdn.microsoft.com/library/4531f09f-d653-4c05-a120-d7788838bc99) pour une source de données incorporée.  
+-   Informations d’identification de la source de données que vous entrez dans la [boîte de dialogue Propriétés de la source de données, Informations d’identification &#40;Générateur de rapports&#41;](https://msdn.microsoft.com/library/4531f09f-d653-4c05-a120-d7788838bc99) pour une source de données incorporée.  
   
      Ces informations d'identification sont utilisées par le serveur de rapports pour établir une connexion de données à la source de données externe. Pour certains types de sources de données, les informations d'identification peuvent être stockées de manière sécurisée sur le serveur de rapports. Ces informations d'identification permettent à d'autres utilisateurs d'exécuter le rapport sans fournir d'informations d'identification pour la connexion de données sous-jacente.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "47756407"
   
      Pour les sources de données partagées, utilisez l'option **Enregistrer mon mot de passe** afin d'enregistrer les informations d'identification localement avec vos paramètres utilisateur sur votre ordinateur. Le Générateur de rapports utilise les informations d'identification enregistrées chaque fois qu'une connexion est établie vers la source de données externe correspondante.  
   
- Pour plus d’informations, consultez [Boîte de dialogue Propriétés de la source de données, Général &#40;Générateur de rapports&#41;](http://msdn.microsoft.com/library/b956f43a-8426-4679-acc1-00f405d5ff5b) et [Aperçu des rapports dans le Générateur de rapports](../../reporting-services/report-builder/previewing-reports-in-report-builder.md).  
+ Pour plus d’informations, consultez [Boîte de dialogue Propriétés de la source de données, Général &#40;Générateur de rapports&#41;](https://msdn.microsoft.com/library/b956f43a-8426-4679-acc1-00f405d5ff5b) et [Aperçu des rapports dans le Générateur de rapports](../../reporting-services/report-builder/previewing-reports-in-report-builder.md).  
   
 ## <a name="using-remote-data-sources"></a>Utilisation de sources de données distantes  
  Si le rapport récupère des données à partir d'un serveur de base de données distant, vérifiez les éléments suivants :  
@@ -154,7 +154,7 @@ ms.locfileid: "47756407"
 |Sécurité intégrée|Emprunter l'identité de l'utilisateur actuel.|Pour tous les types de sources de données, se connecter en utilisant le compte d'utilisateur actuel.|  
 |Informations d'identification Windows|Emprunter l'identité de l'utilisateur spécifié.|Pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, ODBC et OLE DB : connectez-vous à l'aide du compte d'utilisateur avec emprunt d'identité.|  
 |Informations d'identification de la base de données|Emprunter l'identité du compte d'exécution sans assistance ou du compte de service.<br /><br /> (Reporting Services supprime les autorisations d'administrateur lors de l'envoi d'une demande de connexion utilisant l'identité du service).|Pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, ODBC et OLE DB :<br /><br /> Ajouter le nom d'utilisateur et le mot de passe à la chaîne de connexion.<br /><br /> Pour [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]:<br /><br /> La connexion aboutit si vous utilisez le protocole TCP/IP, sinon elle échoue.<br /><br /> Pour XML :<br /><br /> La connexion échoue sur le serveur de rapports si des informations d'identification de base de données sont utilisées.|  
-|None|Emprunter l'identité du compte d'exécution sans assistance.|Pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, ODBC et OLE DB :<br /><br /> Utiliser les informations d'identification définies dans la chaîne de connexion. La connexion échoue sur le serveur de rapports si le compte d'exécution sans assistance n'est pas défini.<br /><br /> Pour [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]:<br /><br /> La connexion échoue toujours si aucune information d'identification n'est spécifiée, même si le compte d'exécution sans assistance est défini.<br /><br /> Pour XML :<br /><br /> Se connecter comme utilisateur anonyme si le compte d'exécution sans assistance est défini ; sinon, la connexion échoue.|  
+|Aucun|Emprunter l'identité du compte d'exécution sans assistance.|Pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, ODBC et OLE DB :<br /><br /> Utiliser les informations d'identification définies dans la chaîne de connexion. La connexion échoue sur le serveur de rapports si le compte d'exécution sans assistance n'est pas défini.<br /><br /> Pour [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]:<br /><br /> La connexion échoue toujours si aucune information d'identification n'est spécifiée, même si le compte d'exécution sans assistance est défini.<br /><br /> Pour XML :<br /><br /> Se connecter comme utilisateur anonyme si le compte d'exécution sans assistance est défini ; sinon, la connexion échoue.|  
   
 ## <a name="setting-credentials-programmatically"></a>Définition des informations d'identification par programme  
  Vous pouvez définir des informations d'identification dans votre code pour contrôler l'accès aux rapports et au serveur de rapports. Pour plus d’informations, consultez [Sources de données et méthodes de connexion](../../reporting-services/report-server-web-service/methods/data-sources-and-connection-methods.md).  

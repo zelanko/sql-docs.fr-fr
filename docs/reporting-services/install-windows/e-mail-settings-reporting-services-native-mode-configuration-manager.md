@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: cdad1529-bfa6-41fb-9863-d9ff1b802577
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ccbf7b6e51cd3d58c309dd98ba0041049b76e760
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ab2d4208d26ca6da5188e635dda8183c545d6f3e
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47725077"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50020393"
 ---
 # <a name="e-mail-settings---reporting-services-native-mode-configuration-manager"></a>Paramètres de messagerie : mode natif de Reporting Services (Gestionnaire de configuration)
 Reporting Services comprend une extension de la remise des e-mails que vous pouvez utiliser pour distribuer les rapports par courrier électronique. Selon la façon dont vous définissez l'abonnement de messagerie électronique, une remise peut consister en une notification, un lien, une pièce jointe ou un rapport incorporé. L'extension de remise de courrier électronique fonctionne avec votre technologie de serveur de messagerie existante. Le serveur de messagerie doit être un serveur SMTP ou redirecteur. Le serveur de rapports se connecte à un serveur SMTP par le biais de bibliothèques CDO (Collaboration Data Objects) (cdosys.dll) fournies par le système d'exploitation.
@@ -25,7 +25,7 @@ L'extension de remise du courrier électronique par le serveur de rapports n'est
 
 ## <a name="configuration-requirements"></a>Configuration requise
 
-- La remise du courrier électronique par le serveur de rapports est implémentée sur des objets de données de collaboration (CDO) et nécessite un serveur SMTP (Simple Mail Transfer Protocol) local ou distant, ou encore un redirecteur SMTP. Le protocole SMTP n'est pas pris en charge sur tous les systèmes d'exploitation Windows. Si vous utilisez l'édition Itanium de Windows Server 2008, le protocole SMTP n'est pas pris en charge. Pour plus d'informations sur les options de configuration fournies par le biais des objets CDO, consultez [Configuration CoClass](http://go.microsoft.com/fwlink/?LinkId=98237) sur MSDN.
+- La remise du courrier électronique par le serveur de rapports est implémentée sur des objets de données de collaboration (CDO) et nécessite un serveur SMTP (Simple Mail Transfer Protocol) local ou distant, ou encore un redirecteur SMTP. Le protocole SMTP n'est pas pris en charge sur tous les systèmes d'exploitation Windows. Si vous utilisez l'édition Itanium de Windows Server 2008, le protocole SMTP n'est pas pris en charge. Pour plus d'informations sur les options de configuration fournies par le biais des objets CDO, consultez [Configuration CoClass](https://go.microsoft.com/fwlink/?LinkId=98237) sur MSDN.
 
 Le compte d’authentification configuré doit être autorisé à envoyer des e-mails sur le serveur SMTP.
 

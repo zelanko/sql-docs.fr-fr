@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3b539b4b-26f2-4c0b-b506-80f175679a46
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9dbd62baf7b4c9951357a5a206b42ebf87ee6661
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 426648f277ad5134a38dfa9cc7fb6948db6f918a
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824227"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031638"
 ---
 # <a name="create-a-basic-table-report-ssrs-tutorial"></a>Créer un rapport de tableau de base (didacticiel SSRS)
 
@@ -32,7 +32,7 @@ Les éléments suivants doivent cependant être installés sur votre système :
   
 -   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] en mode natif.  
   
--   La base de données [!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] .  Pour plus d’informations, consultez [Exemples de bases de données Adventure Works 2014](https://github.com/Microsoft/sql-server-samples/releases).  
+-   La base de données [!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] .  Pour plus d’informations, consultez [Adventure Works 2014 Sample Databases](https://github.com/Microsoft/sql-server-samples/releases)(Exemples de bases de données Adventure Works 2014).  
   
  -   [SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md) doté des composants SQL Server Reporting Services, afin que vous disposiez du Concepteur de rapports.    
   
@@ -57,4 +57,4 @@ Vous devez également disposer d’autorisations en lecture seule pour pouvoir r
 
 [Didacticiels sur Reporting Services](../reporting-services/reporting-services-tutorials-ssrs.md)  
 
-D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

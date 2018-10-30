@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: b3884576-1f7e-4d40-bb7d-168312333bb3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1acafd612881dfc107d72239c1e521a4edead043
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 56ab751d420fe323b641d3fea0e7454d20447e15
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47853381"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031858"
 ---
 # <a name="dataset-fields-collection-report-builder-and-ssrs"></a>Collection de champs de dataset (Générateur de rapports et SSRS)
   Les champs de dataset représentent les données d'une connexion de données. Un champ peut représenter des données numériques ou non numériques. À titre d'exemples, citons des chiffres d'affaires, des totaux de ventes, des noms de client, des identificateurs de base de données, des URL, des images, des données spatiales et des adresses de messagerie. Sur l'aire de conception, les champs s'affichent sous la forme d'expressions dans les éléments de rapport tels que les zones de texte, les tables et les graphiques.  
@@ -76,9 +76,9 @@ ms.locfileid: "47853381"
   
 -   **Source de données** Il s'agit des types de données pris en charge par la version du type de source de données à laquelle vous vous connectez.  
   
-     Par exemple, les types de données classiques pour une source de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] incluent **int**, **datetime**et **varchar**. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a introduit la prise en charge des types de données **date**, **time**, **datetimetz**et **datetime2**. Pour plus d’informations, consultez [Types de données (Transact-SQL)](http://go.microsoft.com/fwlink/?linkid=98362).  
+     Par exemple, les types de données classiques pour une source de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] incluent **int**, **datetime**et **varchar**. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a introduit la prise en charge des types de données **date**, **time**, **datetimetz**et **datetime2**. Pour plus d’informations, consultez [Types de données (Transact-SQL)](https://go.microsoft.com/fwlink/?linkid=98362).  
   
--   **Fournisseur de données ou extension pour le traitement des données** Il s'agit des types de données pris en charge par la version du fournisseur de données ou de l'extension pour le traitement des données que vous sélectionnez lorsque vous vous connectez à la source de données. Les fournisseurs de données se basant sur le [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] utilisent des types de données pris en charge par le CLR. Pour plus d’informations sur les types de données des fournisseurs de données [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] , consultez [Mappages de types de données (ADO.NET)](http://go.microsoft.com/fwlink/?LinkId=112178) et [Utilisation des types de base](http://go.microsoft.com/fwlink/?LinkId=112177) sur MSDN.  
+-   **Fournisseur de données ou extension pour le traitement des données** Il s'agit des types de données pris en charge par la version du fournisseur de données ou de l'extension pour le traitement des données que vous sélectionnez lorsque vous vous connectez à la source de données. Les fournisseurs de données se basant sur le [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] utilisent des types de données pris en charge par le CLR. Pour plus d’informations sur les types de données des fournisseurs de données [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] , consultez [Mappages de types de données (ADO.NET)](https://go.microsoft.com/fwlink/?LinkId=112178) et [Utilisation des types de base](https://go.microsoft.com/fwlink/?LinkId=112177) sur MSDN.  
   
      Les types de données classiques pris en charge par le [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] sont **Int32** et **String**, par exemple. Les dates et heures de calendrier sont prises en charge par la structure **DateTime** . [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2.0 Service Pack 1 a introduit la prise en charge de la structure **DateTimeOffset** pour les dates avec un décalage de fuseau horaire.  
   
@@ -96,7 +96,7 @@ ms.locfileid: "47853381"
     |**DateTimeTZ**|**DateTimeOffset**|Date et heure avec décalage de fuseau horaire|  
     |**DateTime2**|**DateTime**|Date et heure avec fractions de milliseconde|  
   
- Pour plus d’informations sur les types de bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consultez [Types de données (moteur de base de données)](http://go.microsoft.com/fwlink/?linkid=98362) et [Types de données et fonctions de date et d’heure (Transact-SQL)](http://go.microsoft.com/fwlink/?linkid=98360).  
+ Pour plus d’informations sur les types de bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consultez [Types de données (moteur de base de données)](https://go.microsoft.com/fwlink/?linkid=98362) et [Types de données et fonctions de date et d’heure (Transact-SQL)](https://go.microsoft.com/fwlink/?linkid=98360).  
   
  Pour plus d’informations sur l’ajout de références dans un champ de dataset à partir d’une expression, consultez [Types de données dans les expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md).  
   
@@ -106,7 +106,7 @@ ms.locfileid: "47853381"
   
   
 ## <a name="see-also"></a> Voir aussi  
- [Boîte de dialogue Propriétés du dataset, Champs &#40;Générateur de rapports&#41;](http://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42)   
+ [Boîte de dialogue Propriétés du dataset, Champs &#40;Générateur de rapports&#41;](https://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42)   
  [Parties de rapports et datasets dans le Générateur de rapports](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
  [Datasets incorporés dans le rapport et datasets partagés &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   

@@ -7,12 +7,12 @@ ms.technology: reporting-services
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 59b0d8acbf6f0b99b3437dc866435595af00ab55
-ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
+ms.openlocfilehash: 1e3d1af1202c172eda900d5fe9e2830ff201de72
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "47639777"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029498"
 ---
 # <a name="whats-new-in-sql-server-reporting-services-ssrs"></a>Nouveautés de SQL Server Reporting Services (SSRS)
 
@@ -79,7 +79,7 @@ Des informations supplémentaires sont disponibles dans le [blog de Reporting Se
  #### <a name="custom-branding-for-the-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd"></a>Personnaliser le [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 
   Vous pouvez personnaliser le [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] avec les couleurs et le logo de votre organisation au moyen d’un pack de personnalisation.  
   
-  Pour plus d’informations sur la personnalisation, consultez [Personnalisation du portail web](http://msdn.microsoft.com/6dac97f7-02a6-4711-81a3-e850a6b40bf1).
+  Pour plus d’informations sur la personnalisation, consultez [Personnalisation du portail web](https://msdn.microsoft.com/6dac97f7-02a6-4711-81a3-e850a6b40bf1).
  
  #### <a name="key-performance-indicators-kpi-in-the-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd"></a>Indicateurs de performance clé (KPI) dans le [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 
 
@@ -87,7 +87,7 @@ Vous pouvez créer directement dans le [!INCLUDE[ssRSWebPortal-Non-Markdown](../
   
  ![ssrs-webportal-kpi](../reporting-services/media/ssrs-webportal-kpi.png)
  
- Pour plus d’informations, consultez [Utilisation des indicateurs de performance clés dans le portail web](http://msdn.microsoft.com/a28cf500-6d47-4268-a248-04837e7a09eb)
+ Pour plus d’informations, consultez [Utilisation des indicateurs de performance clés dans le portail web](https://msdn.microsoft.com/a28cf500-6d47-4268-a248-04837e7a09eb)
   
  
  ### <a name="mobile-reports"></a>Rapports mobiles
@@ -166,7 +166,7 @@ http://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportf
 |**Partage des informations d’identification pour les abonnements aux partages de fichiers**. Les abonnements aux partages de fichiers [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] incluent désormais deux flux de travail :<br /><br /> (Nouveauté de cette version) Votre administrateur [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] peut configurer un compte de partage de fichiers unique, utilisé pour un ou plusieurs abonnements. Le compte de partage de fichiers est configuré dans le gestionnaire de configuration en mode natif [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] **Spécifier un compte de partage de fichiers**, puis dans la page de configuration de l’abonnement, les utilisateurs sélectionnent **Utiliser le compte de partage de fichiers**.<br /><br /> Configurez les abonnements individuels avec des informations d’identification spécifiques pour le partage de fichiers de destination.<br /><br /> Vous pouvez également combiner les deux approches de sorte que certains abonnements de partage de fichiers utilisent le compte de partage de fichiers central tandis que d’autres abonnements utilisent des informations d’identification spécifiques.|en mode natif|  
 
 ### <a name="sql-server-data-tools-ssdt"></a>Outils de données SQL Server (SSDT)  
- La nouvelle version de SSDT inclut les modèles de projet pour [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]: Assistant Projet Report Server et Projet Report Server. Pour plus d’informations sur le téléchargement de SSDT, consultez [SQL Server Data Tools for Visual Studio 2015](http://go.microsoft.com/fwlink/?LinkId=827542).  
+ La nouvelle version de SSDT inclut les modèles de projet pour [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]: Assistant Projet Report Server et Projet Report Server. Pour plus d’informations sur le téléchargement de SSDT, consultez [SQL Server Data Tools for Visual Studio 2015](https://go.microsoft.com/fwlink/?LinkId=827542).  
 
 ### <a name="report-builder-improvements"></a>Améliorations du Générateur de rapports
 
@@ -186,14 +186,14 @@ http://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportf
   
 -   [Windows 8.1 DPI Scaling Enhancements (Améliorations apportées à la mise à l’échelle PPP dans Windows 8.1)](https://blogs.windows.com/windowsexperience/2013/07/15/windows-8-1-dpi-scaling-enhancements/)  
   
--   [High DPI and Windows 8.1 (Windows 8.1 et la haute résolution)](http://technet.microsoft.com/library/dn528848.aspx)  
+-   [High DPI and Windows 8.1 (Windows 8.1 et la haute résolution)](https://technet.microsoft.com/library/dn528848.aspx)  
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-[Nouveautés d’Analysis Services](http://msdn.microsoft.com/aa69c299-b8f4-4969-86d8-b3292fe13f08)  
+[Nouveautés d’Analysis Services](https://msdn.microsoft.com/aa69c299-b8f4-4969-86d8-b3292fe13f08)  
 [Compatibilité descendante](reporting-services-backward-compatibility.md)   
-[Fonctionnalités Reporting Services prises en charge par les éditions de SQL Server 2016](http://msdn.microsoft.com/39f03d2d-6e48-4b34-a9d3-07f86313b937)   
+[Fonctionnalités Reporting Services prises en charge par les éditions de SQL Server 2016](https://msdn.microsoft.com/39f03d2d-6e48-4b34-a9d3-07f86313b937)   
 [Mettre à niveau et migrer Reporting Services](../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
 [Reporting Services](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)  
 
-D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

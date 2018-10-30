@@ -7,12 +7,13 @@ ms.topic: conceptual
 ms.assetid: d7a11bda-ae26-49ac-b071-37d83cae5afe
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 09d930c7241a2fb0beb7c5455c5e2db7b6caeb61
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
+ms.openlocfilehash: 603407cd0642a8fb3bb66826d89300ea0d8c7e0d
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47815607"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50050931"
 ---
 # <a name="add-an-additional-reporting-services-web-front-end-to-a-farm"></a>Ajouter un serveur Web frontal Reporting Services supplémentaire à une batterie
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Le mode SharePoint inclut les composants nécessaires pour les serveurs d’applications et les serveurs web frontaux. Cette rubrique traite de l'installation des composants [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] requis pour un serveur Web frontal, y compris les pages d'application utilisées par les fonctionnalités [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] telles que les abonnements, les alertes de données et [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]. L’installation [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] principale nécessaire pour un serveur web frontal consiste à installer le complément [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour les produits SharePoint 2016.  
@@ -56,4 +57,4 @@ ms.locfileid: "47815607"
 [Ajouter un serveur SharePoint à une batterie de serveurs dans SharePoint Server 2016](https://technet.microsoft.com/library/cc261752(v=office.16).aspx)  
 [Ajouter un serveur SharePoint à une batterie de serveurs dans SharePoint Server 2013](https://technet.microsoft.com/library/cc261752(v=office.15).aspx)
 
-D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

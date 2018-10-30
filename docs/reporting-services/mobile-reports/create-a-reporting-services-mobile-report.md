@@ -8,17 +8,17 @@ ms.topic: conceptual
 ms.assetid: e84dc855-aede-4fb4-b721-e6d8787961f4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 128614f4276c3853bc2b5d5f69306ac89db6c370
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5f074f3bbdb3b3a7920f1e3ad86270a6bf51059b
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47744567"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030198"
 ---
 # <a name="create-a-reporting-services-mobile-report"></a>Créer un rapport mobile Reporting Services
 L’Éditeur de rapports mobiles SQL Server vous permet de créer rapidement des rapports mobiles SQL Server 2016 Reporting Services bien adaptés à la taille de votre écran, sur une aire de conception dotée de lignes et de colonnes de grille réglables, ainsi que d’éléments de rapport mobile flexibles.  
   
-Quand vous créez un rapport mobile pour la première fois, vous pouvez installer Éditeur de rapports mobiles SQL Server sur votre machine locale à partir du portail web de Reporting Services. Vous pouvez aussi l’installer à partir du [Centre de téléchargement Microsoft](http://go.microsoft.com/fwlink/?LinkID=733527). Après cela, vous pouvez le démarrer à partir du portail web ou localement.   
+Quand vous créez un rapport mobile pour la première fois, vous pouvez installer Éditeur de rapports mobiles SQL Server sur votre machine locale à partir du portail web de Reporting Services. Vous pouvez aussi l’installer à partir du [Centre de téléchargement Microsoft](https://go.microsoft.com/fwlink/?LinkID=733527). Après cela, vous pouvez le démarrer à partir du portail web ou localement.   
     
 1. Dans la barre située en haut du portail web Reporting Services, sélectionnez **Nouveau** > **Rapport mobile**.  
   

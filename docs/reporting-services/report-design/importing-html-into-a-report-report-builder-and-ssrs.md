@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: dd0410ea-8839-4e8c-9944-8cdfe5465591
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6df6dc9d5d22ae158830aee5418a28d92a8b758e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8ee3c9ffa00fcb76f4b167b5f535099b9f8c57ae
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686187"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029728"
 ---
 # <a name="importing-html-into-a-report-report-builder-and-ssrs"></a>Importation de données HTML dans un rapport (Générateur de rapports et SSRS)
   Vous pouvez utiliser une zone de texte pour insérer dans un rapport du texte au format HTML récupéré à partir de l'un des champs de votre dataset. Ce texte au format HTML peut être issu de toute expression simple ou complexe capable de transformer correctement des données au format HTML. Le texte ainsi mis en forme peut être converti dans tous les formats de sortie pris en charge, y compris au format PDF.  
@@ -64,7 +64,7 @@ ms.locfileid: "47686187"
   
     -   Les unités de longueur CSS relatives sont ignorées et ne sont pas prises en charge. Les unités non prises en charge sont em, ex, px, %, rem.  
   
-     Pour plus d’informations sur les unités CSS, consultez : [Référence des valeurs et unités CSS](http://msdn.microsoft.com/library/ms531211\(VS.85\).aspx) (http://msdn.microsoft.com/library/ms531211(VS.85).aspx).  
+     Pour plus d’informations sur les unités CSS, consultez : [Référence des valeurs et unités CSS](https://msdn.microsoft.com/library/ms531211\(VS.85\).aspx) (https://msdn.microsoft.com/library/ms531211(VS.85).aspx).  
   
 -   color  
   

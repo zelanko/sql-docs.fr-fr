@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 48cbe18b-1290-4107-8a1c-ec6acd71f73b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3489f33890438577f20a6e7a5341fe9766f42c1c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a8b90d0eddd10825abc2e05fd97da236a5049293
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645167"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021053"
 ---
 # <a name="map-wizard-and-map-layer-wizard-report-builder-and-ssrs"></a>Assistant Carte et Assistant Couche (Générateur de rapports et SSRS)
  Dans les rapports paginés [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , l’Assistant Carte et l’Assistant Couche automatisent la tâche de création d’une carte, d’ajout d’une couche ou de modification des options de couche sur une couche existante.  
@@ -128,13 +128,13 @@ ms.locfileid: "47645167"
  Dans le Concepteur de rapports dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], ajoutez le fichier .shp et le fichier .dbf au projet de rapport, puis spécifiez le nom du fichier .shp comme source de données spatiales.  
   
 ###  <a name="GetShapefiles"></a> Où puis-je obtenir des fichiers de forme ESRI ?  
- Les fichiers de forme ESRI sont disponibles sur le Web. Pour plus d’informations, consultez [Rechercher des fichiers de forme ESRI pour une carte](http://go.microsoft.com/fwlink/?linkid=178814).  
+ Les fichiers de forme ESRI sont disponibles sur le Web. Pour plus d’informations, consultez [Rechercher des fichiers de forme ESRI pour une carte](https://go.microsoft.com/fwlink/?linkid=178814).  
   
 ###  <a name="SqlServerSpatial"></a> Qu'est-ce qu'une requête spatiale SQL Server ?  
  Une requête spatiale [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est une requête de dataset qui spécifie des données de type SQLGeometry ou SQLGeography d'une base de données relationnelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!NOTE]  
->  Lorsque vous définissez une source de données dans l'Assistant, vous remarquerez que la page Créer une requête contient différents concepteurs de requêtes, selon le type de la source de données à laquelle vous vous connectez. Pour plus d’informations, consultez [Concepteurs de requêtes &#40;Générateur de rapports&#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9).  
+>  Lorsque vous définissez une source de données dans l'Assistant, vous remarquerez que la page Créer une requête contient différents concepteurs de requêtes, selon le type de la source de données à laquelle vous vous connectez. Pour plus d’informations, consultez [Concepteurs de requêtes &#40;Générateur de rapports&#41;](https://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9).  
   
  Lorsque vous exécutez la requête dans le concepteur de requêtes, le jeu de résultats affiche une colonne avec des données spatiales affichées sous forme de texte. Par exemple, une ligne peut contenir des données spatiales qui sont un point unique et la ligne suivante peut contenir des données spatiales qui définissent un jeu de points. Chaque ligne devient un élément cartographique. Vous pouvez varier l'affichage de chaque élément cartographique en tant qu'unité indivisible.  
   
@@ -183,7 +183,7 @@ ms.locfileid: "47645167"
   
 -   **Hybride.** Affichez la combinaison des vues **Route** et **Aérien** .  
   
- Pour plus d'informations sur les mosaïques, consultez le [système de mosaïques Bing](http://go.microsoft.com/fwlink/?LinkId=147315). Pour plus d'informations sur l'utilisation de mosaïques Bing dans votre rapport, consultez [Conditions supplémentaires d'utilisation](http://go.microsoft.com/fwlink/?LinkId=151371).  
+ Pour plus d'informations sur les mosaïques, consultez le [système de mosaïques Bing](https://go.microsoft.com/fwlink/?LinkId=147315). Pour plus d'informations sur l'utilisation de mosaïques Bing dans votre rapport, consultez [Conditions supplémentaires d'utilisation](https://go.microsoft.com/fwlink/?LinkId=151371).  
   
  Pour afficher un arrière-plan de mosaïques en mode Création, vous devez disposer d'un accès Internet. Pour afficher l'arrière-plan de mosaïques dans l'aperçu d'un rapport sur un serveur de rapports, le serveur de rapports doit être configuré pour prendre en charge les mosaïques Bing. Pour plus d’informations, consultez [Résoudre les problèmes liés aux rapports : rapports cartographiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md) et [Planifier un rapport cartographique](../../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md).  
   

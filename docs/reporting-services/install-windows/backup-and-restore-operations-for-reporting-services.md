@@ -8,12 +8,12 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.topic: conceptual
 ms.assetid: 157bc376-ab72-4c99-8bde-7b12db70843a
 ms.date: 05/24/2018
-ms.openlocfilehash: bc5ee18e2ddcde4038541f374bae68aeaa3fd3bc
-ms.sourcegitcommit: 2da0c34f981c83d7f1d37435c80aea9d489724d1
+ms.openlocfilehash: 42ca036f069d5c7014e14a4c3ccb0d1e9d298a2b
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48782308"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030121"
 ---
 # <a name="backup-and-restore-operations-for-reporting-services"></a>Opérations de sauvegarde et de restauration pour Reporting Services
 
@@ -23,7 +23,7 @@ ms.locfileid: "48782308"
   
  Les opérations de sauvegarde et de restauration sont souvent utilisées pour déplacer partiellement ou intégralement une installation [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] :  
   
--   Si vous ne déplacez que les bases de données du serveur de rapports, vous pouvez utiliser la sauvegarde et la restauration ou l'attachement et le détachement pour déplacer les bases de données sur une autre instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour plus d’informations, consultez [Déplacement des bases de données du serveur de rapports vers un autre ordinateur &#40;en mode natif SSRS&#41;](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md).  
+-   Si vous ne déplacez que les bases de données du serveur de rapports, vous pouvez utiliser la sauvegarde et la restauration ou l'attachement et le détachement pour déplacer les bases de données sur une autre instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [Déplacement des bases de données du serveur de rapports vers un autre ordinateur &#40;en mode natif SSRS&#41;](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md).  
   
 -   Le déplacement d'une installation [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sur un nouvel ordinateur s'appelle une migration. Lorsque vous faites migrer une installation, vous exécutez le programme d'installation pour installer une nouvelle instance de serveur de rapports, puis vous copiez les données de l'ancienne instance sur le nouvel ordinateur. Pour plus d’informations sur la migration d’une installation [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], consultez les articles suivants :  
   
@@ -81,4 +81,4 @@ ms.locfileid: "48782308"
 [Administrer une base de données du serveur de rapports](../../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md)   
 [Configurer et gérer des clés de chiffrement](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
 
-D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

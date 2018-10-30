@@ -15,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: d62159a8-ec67-4e28-a9f1-05a9250065bb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 437116ae427f9d5ed6492962ad290b496f7b1090
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 548c66c7e62f5197e27a633ea4f8325c1466cdd8
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666837"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021204"
 ---
 # <a name="create-delete-or-modify-a-folder-report-manager"></a>création, suppression ou modification d'un dossier (Gestionnaire de rapports)
   Vous pouvez créer des dossiers pour organiser et gérer les éléments à publier sur un serveur de rapports. La création de dossiers peut permettre aux utilisateurs de rechercher les rapports qui les intéressent. Pour les gestionnaires de contenu, les dossiers fournissent l'infrastructure nécessaire à l'application d'autorisations. Vous pouvez créer des attributions de rôles pour des dossiers spécifiques afin de restreindre l'accès aux rapports en cours de développement ou dont la diffusion doit être restreinte.  
   
 ### <a name="to-create-a-folder"></a>Pour créer un dossier  
   
-1.  Démarrez le [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
+1.  Démarrez le [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
 2.  Dans le Gestionnaire de rapports, sélectionnez le dossier de base et cliquez sur **Nouveau dossier**. Vous pouvez également, pour créer un sous-dossier dans un dossier existant, naviguer jusqu’au dossier de votre choix dans la page **Contenu** , cliquer dessus pour l’ouvrir, puis cliquer sur **Nouveau dossier**.  
   
@@ -72,8 +72,8 @@ ms.locfileid: "47666837"
 7.  Cliquez sur **Appliquer** pour enregistrer vos modifications.  
   
 ## <a name="see-also"></a> Voir aussi  
- [Page Nouveau dossier &#40;Gestionnaire de rapports&#41;](http://msdn.microsoft.com/library/9212fc68-f0a6-4f79-83c1-84baf4d1957e)   
- [Page Contenu &#40;Gestionnaire de rapports&#41;](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
+ [Page Nouveau dossier &#40;Gestionnaire de rapports&#41;](https://msdn.microsoft.com/library/9212fc68-f0a6-4f79-83c1-84baf4d1957e)   
+ [Page Contenu &#40;Gestionnaire de rapports&#41;](https://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
  [Recherche, affichage et gestion de rapports &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   

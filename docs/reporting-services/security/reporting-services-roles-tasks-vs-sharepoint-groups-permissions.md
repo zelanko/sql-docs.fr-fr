@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 429f1dbb-183a-4097-bd1b-693da9fe7a36
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 75a595c5286de0dd050887ae28b95db5b724accc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ee3a8e9576b38ee49dc5b562384d51c45f58c3fd
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47778347"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50020253"
 ---
 # <a name="reporting-services-roles-tasks-vs-sharepoint-groups-permissions"></a>Rôles-tâches Reporting Services et groupes-autorisations SharePoint
   Cette rubrique compare les fonctionnalités d'autorisation basées sur les rôles et les tâches en mode natif [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] aux fonctionnalités de sécurité dans les produits SharePoint. Cette rubrique compare la terminologie et les caractéristiques des rôles, des tâches, des groupes SharePoint, des niveaux d'autorisation et des autorisations.  
@@ -51,7 +51,7 @@ ms.locfileid: "47778347"
 |---|**Groupe de niveau d'autorisation :** « Afficher uniquement » pour le groupe « Visionneuses », par exemple.|  
 |**Tâches :** « Gérer les rapports », par exemple.|**Autorisations :** par exemple, au sein du groupe « Afficher uniquement », il existe des autorisations de liste des éléments de vue, des versions de vue et des pages d'application de vue.|  
   
- Pour plus d'informations sur les autorisations SharePoint, consultez [Autorisations et niveaux d'autorisation](http://office.microsoft.com/windows-sharepoint-services-help/permission-levels-and-permissions-HA010100149.aspx) et [Déterminer les niveaux d'autorisation et les groupes dans SharePoint 2013](http://technet.microsoft.com/library/cc262690.aspx).  
+ Pour plus d'informations sur les autorisations SharePoint, consultez [Autorisations et niveaux d'autorisation](http://office.microsoft.com/windows-sharepoint-services-help/permission-levels-and-permissions-HA010100149.aspx) et [Déterminer les niveaux d'autorisation et les groupes dans SharePoint 2013](https://technet.microsoft.com/library/cc262690.aspx).  
   
 ##  <a name="bkmk_compare_roles_groups"></a> Comparer les rôles en mode natif et les groupes SharePoint  
  Le tableau suivant compare les définitions de rôles prédéfinies dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode natif aux groupes SharePoint standard. Si les groupes SharePoint ne correspondent pas au rôle spécifique que vous recherchez, vous pouvez créer un groupe personnalisé et attribuer des niveaux d'autorisation dans SharePoint.  
@@ -102,8 +102,8 @@ ms.locfileid: "47778347"
   
 ## <a name="see-also"></a> Voir aussi  
  [Définir les autorisations sur les éléments du serveur de rapports sur un site SharePoint &#40;Reporting Services en mode intégré SharePoint&#41;](../../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
- [Définir des autorisations pour des opérations de serveurs de rapports dans une application web SharePoint](../../reporting-services/security/set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)   
- [Accord d'autorisations sur des éléments de serveur de rapports sur un site SharePoint](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
+ [Définir des autorisations pour les opérations de serveur de rapports dans une application Web SharePoint](../../reporting-services/security/set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)   
+ [Accord d’autorisations sur des éléments de serveur de rapports sur un site SharePoint](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [Définitions de rôles](../../reporting-services/security/role-definitions.md)   
  [Rôles prédéfinis](../../reporting-services/security/role-definitions-predefined-roles.md)  
   

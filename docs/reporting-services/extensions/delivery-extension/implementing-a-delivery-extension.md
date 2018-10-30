@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: 600cd229-efcd-480e-8c95-3c3c39ff4e7a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a2604f20a68ce2c76f7e541c007103afcd7757e2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 62dca2e3df21e95b8f51d4a9261272a7555e3dda
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670397"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021803"
 ---
 # <a name="implementing-a-delivery-extension"></a>Implémentation d'une extension de remise
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] permet aux utilisateurs de créer et de publier des rapports qui, une fois créés et publiés, peuvent être remis à différents emplacements. De plus, [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] inclut plusieurs extensions de remise et une API de remise qui permettent aux développeurs de créer des extensions de remise supplémentaires pour étendre les fonctionnalités de remise proposées dans [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
- Pour un exemple d’implémentation d’extension de remise, consultez [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889) (Exemples Reporting Services pour le produit SQL Server).  
+ Pour un exemple d’implémentation d’extension de remise, consultez [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889) (Exemples Reporting Services pour le produit SQL Server).  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Vue d'ensemble des extensions de remise](../../../reporting-services/extensions/delivery-extension/delivery-extensions-overview.md)  

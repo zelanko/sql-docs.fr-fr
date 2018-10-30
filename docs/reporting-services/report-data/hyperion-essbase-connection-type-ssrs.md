@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 108a00b6-799f-4066-b796-da59e95c09fd
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2c0d45b2b8931591688ece17e61427966c2cd795
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6adbbc3107b21c6bb86d12d249c5fa1f5b01272f
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681957"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028488"
 ---
 # <a name="hyperion-essbase-connection-type-ssrs"></a>Type de connexion Hyperion Essbase (SSRS)
   Pour inclure les données d’une source de données externe [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] dans votre rapport, vous devez avoir un dataset basé sur une source de données de rapport de type [!INCLUDE[extEssbase](../../includes/extessbase-md.md)]. Ce type de source de données intégré est basé sur l’extension de données pour [!INCLUDE[extEssbase](../../includes/extessbase-md.md)], ce qui vous permet de récupérer les données multidimensionnelles d’une source de données externe [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] .  
@@ -27,7 +27,7 @@ ms.locfileid: "47681957"
 Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample  
 ```  
   
- Pour plus d’informations sur les exemples de chaînes de connexion, consultez [Connexions de données, sources de données et chaînes de connexion dans le Générateur de rapports](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34).  
+ Pour plus d’informations sur les exemples de chaînes de connexion, consultez [Connexions de données, sources de données et chaînes de connexion dans le Générateur de rapports](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34).  
   
   
 ##  <a name="Credentials"></a> Informations d'identification  
@@ -35,7 +35,7 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
  Après avoir publié votre rapport, vous pouvez devoir modifier les informations d'identification pour la source de données afin que les autorisations soient valides pour récupérer les données lorsque le rapport s'exécute sur le serveur de rapports.  
   
- Pour plus d’informations, consultez [Connexions de données, sources de données et chaînes de connexion &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) ou [Spécifier des informations d’identification dans le Générateur de rapports](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53).  
+ Pour plus d’informations, consultez [Connexions de données, sources de données et chaînes de connexion &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) ou [Spécifier des informations d’identification dans le Générateur de rapports](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53).  
   
   
 ##  <a name="Query"></a> Requêtes  
@@ -47,7 +47,7 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
     -   **Affichage des requêtes** Faites glisser des dimensions, des membres, des propriétés de membre, des mesures et des indicateurs de performance clés du navigateur de métadonnées vers le volet Requête dans le but de générer une requête MDX. Il est possible de modifier le texte MDX directement dans le volet Requête. Faites glisser les membres calculés du volet CalculatedMembers vers le volet Requête pour définir d’autres champs de dataset.  
   
-     Pour plus d’informations, consultez [Interface utilisateur du Concepteur de requêtes Hyperion Essbase &#40;Générateur de rapports&#41;](http://msdn.microsoft.com/library/d89a6773-dbe5-48e5-bda9-db0e67100696).  
+     Pour plus d’informations, consultez [Interface utilisateur du Concepteur de requêtes Hyperion Essbase &#40;Générateur de rapports&#41;](https://msdn.microsoft.com/library/d89a6773-dbe5-48e5-bda9-db0e67100696).  
   
 -   Importer une requête MDX existante à partir d'un rapport. Utilisez le bouton **Importer une requête** pour rechercher un fichier .rdl et importer une requête. Vous pouvez importer une requête à partir d'un rapport qui contient un dataset incorporé basé sur une source de données [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] . L'importation d'une requête MDX directement à partir d'un fichier .mdx n'est pas prise en charge.  
   
@@ -104,9 +104,9 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
   
 ##  <a name="Remarks"></a> Notes  
- Certains modes de remise de rapport ne sont pas pris en charge par ce fournisseur de données. La remise des rapports par le biais d'abonnements pilotés par les données n'est pas prise en charge pour cette extension pour le traitement des données. Pour plus d’informations, consultez [Utiliser une source de données externe pour les données des abonnés &#40;abonnement piloté par les données&#41;](../../reporting-services/subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md) dans la documentation de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dans la documentation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][en ligne](http://go.microsoft.com/fwlink/?linkid=121312)de.  
+ Certains modes de remise de rapport ne sont pas pris en charge par ce fournisseur de données. La remise des rapports par le biais d'abonnements pilotés par les données n'est pas prise en charge pour cette extension pour le traitement des données. Pour plus d’informations, consultez [Utiliser une source de données externe pour les données des abonnés &#40;abonnement piloté par les données&#41;](../../reporting-services/subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md) dans la documentation de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dans la documentation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][en ligne](https://go.microsoft.com/fwlink/?linkid=121312)de.  
   
- Pour plus d’informations, consultez [Using SQL Server 2005 Reporting Services with Hyperion Essbase](http://go.microsoft.com/fwlink/?LinkId=81970).  
+ Pour plus d’informations, consultez [Using SQL Server 2005 Reporting Services with Hyperion Essbase](https://go.microsoft.com/fwlink/?LinkId=81970).  
   
   
 ##  <a name="HowTo"></a> Rubriques de procédures  
@@ -125,7 +125,7 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
  [Datasets de rapport &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
  Fournit une vue d'ensemble de l'accès aux données pour votre rapport.  
   
- [Connexions de données, sources de données et chaînes de connexion dans le Générateur de rapports](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
+ [Connexions de données, sources de données et chaînes de connexion dans le Générateur de rapports](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
  Fournit des informations sur les connexions de données et les sources de données.  
   
  [Datasets incorporés dans le rapport et datasets partagés &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
@@ -134,10 +134,10 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
  [Collection de champs de dataset &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
  Fournit des informations sur la collection de champs générée par la requête de dataset.  
   
- [Sources de données prises en charge par Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) dans la section [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de la [documentation en ligne](http://go.microsoft.com/fwlink/?linkid=121312) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ [Sources de données prises en charge par Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) dans la section [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de la [documentation en ligne](https://go.microsoft.com/fwlink/?linkid=121312) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
  Fournit des informations détaillées sur la prise en charge des plateformes et des versions pour chaque extension de données.  
   
- [Using SQL Server 2005 Reporting Services with Hyperion Essbase](http://go.microsoft.com/fwlink/?LinkId=81970)  
+ [Using SQL Server 2005 Reporting Services with Hyperion Essbase](https://go.microsoft.com/fwlink/?LinkId=81970)  
  Fournit des informations détaillées sur l'utilisation de cette extension de données.  
   
   

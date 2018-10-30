@@ -19,12 +19,12 @@ ms.assetid: 6732a431-cdef-4f1e-9262-4ac3b77c275e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a3e415e506e50ca5cbd9642e790697a4b4644565
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 777647d3e558327eb635a0ae8d2794d82d453c25
+ms.sourcegitcommit: 54e480afa91e041124c73b7206df73958f4dfa9e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47776557"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50150170"
 ---
 # <a name="move-a-database-using-detach-and-attach-transact-sql"></a>Déplacer une base de données à l'aide de la méthode de détachement et d'attachement (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,9 +40,6 @@ ms.locfileid: "47776557"
 1.  Détachez la base de données. Pour plus d’informations, consultez [Détacher une base de données](../../relational-databases/databases/detach-a-database.md).  
   
 2.  Dans une fenêtre de l'Explorateur Windows ou de l'invite de commandes Windows, déplacez les fichiers journaux et les fichiers de base de données détachés à l'emplacement de votre choix.  
-  
-    > [!NOTE]  
-    >  Pour déplacer une base de données composée d'un seul fichier, vous pouvez utiliser la messagerie électronique si la taille du fichier le permet.  
   
      Vous devez déplacer les fichiers journaux, même si vous envisagez d'en créer de nouveaux. Dans certains cas, le rattachement d'une base de données nécessite ses fichiers journaux existants. Par conséquent, conservez toujours tous les fichiers journaux détachés jusqu'à ce que la base de données ait été attachée avec succès sans eux.  
   

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 2e36f0fe-8100-4513-b169-14d611646f81
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2b6ff23adff22e57454246eb60529267c810fa5c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3e63393549db4601a8956e7a3c7b14248c069937
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47690937"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021913"
 ---
 # <a name="add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs"></a>ajouter, modifier ou actualiser des champs dans le volet des données de rapport (Générateur de rapports et SSRS)
   Les champs de dataset sont la collection intégrée de noms de champs qui représentent les données qui sont retournées lorsqu'une requête de dataset s'exécute sur une source de données externe.  
@@ -91,7 +91,7 @@ ms.locfileid: "47690937"
  [Collection de champs de dataset &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
  [Jeux de données du rapport &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
  [Datasets incorporés dans le rapport et datasets partagés &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
- [Concepteurs de requêtes Reporting Services](http://msdn.microsoft.com/library/07efd3f1-804f-45f7-b62a-3e727a3d9835)   
- [Concepteurs de requêtes &#40;Générateur de rapports&#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  
+ [Concepteurs de requêtes Reporting Services](https://msdn.microsoft.com/library/07efd3f1-804f-45f7-b62a-3e727a3d9835)   
+ [Concepteurs de requêtes &#40;Générateur de rapports&#41;](https://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  
   
   

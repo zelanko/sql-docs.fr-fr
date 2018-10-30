@@ -8,16 +8,16 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1255f614972ef03858d3528f395e95797c192465
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9662a3e69b7d870b7f376f7a0c699db75584ad62
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721500"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021083"
 ---
 # <a name="upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode"></a>Télécharger des documents vers une bibliothèque SharePoint (Reporting Services en mode SharePoint)
 
-[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)])
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
@@ -43,7 +43,7 @@ Vous pouvez télécharger des définitions de rapport et des modèles de rapport
   
      Si la définition de rapport utilise un fichier de source de données partagée (.rsds) pour stocker les informations de connexion à une source de données externe, vous pouvez télécharger les fichiers .rdl et .rsds au même moment. Pour cela, cliquez sur **Télécharger plusieurs fichiers**, spécifiez les deux fichiers, puis cliquez sur **OK**.  
   
- Si vous téléchargez un rapport qui contient des références à des sources de données partagées, à des modèles de rapport ou à des sous-rapports, les références seront rompues dans le rapport lors du téléchargement des fichiers. Pour plus d’informations sur la réinitialisation des références, consultez [Créer et gérer des sources de données partagées &#40;Reporting Services en mode intégré SharePoint&#41;](http://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76).  
+ Si vous téléchargez un rapport qui contient des références à des sources de données partagées, à des modèles de rapport ou à des sous-rapports, les références seront rompues dans le rapport lors du téléchargement des fichiers. Pour plus d’informations sur la réinitialisation des références, consultez [Créer et gérer des sources de données partagées &#40;Reporting Services en mode intégré SharePoint&#41;](https://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76).  
   
  Lorsque vous téléchargez un rapport, il s'exécute à la demande lorsque vous l'ouvrez, récupérant les données actives à partir de la source de données. Vous pouvez configurer le rapport pour récupérer des données suivant une planification ou utiliser les données mises en cache. Pour plus d’informations, consultez [Définir les options de traitement &#40;Reporting Services en mode intégré SharePoint&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md).  
   
@@ -52,7 +52,7 @@ Vous pouvez télécharger des définitions de rapport et des modèles de rapport
 ## <a name="see-also"></a>Voir aussi
 
  [publier un rapport dans une bibliothèque SharePoint](../../reporting-services/reports/publish-a-report-to-a-sharepoint-library.md)   
- [Publier une source de données partagée sur une bibliothèque SharePoint](../../reporting-services/reports/publish-a-shared-data-source-to-a-sharepoint-library.md)   
+ [publier une source de données partagée sur une bibliothèque SharePoint](../../reporting-services/reports/publish-a-shared-data-source-to-a-sharepoint-library.md)   
  [Accord d'autorisations sur des éléments de serveur de rapports sur un site SharePoint](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)  
 
-D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

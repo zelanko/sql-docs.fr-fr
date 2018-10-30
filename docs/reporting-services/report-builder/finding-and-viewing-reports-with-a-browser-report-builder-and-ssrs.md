@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: edf4843a-2a0a-486f-be25-14a3c1c6bc72
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2451c688361ab2c2dcf2ec0bdcd8745825c658ea
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: eb30ef71e0467d6f35fdd21cc8a1b1c42eed76fa
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767837"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031358"
 ---
 # <a name="finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs"></a>Recherche et affichage de rapports à l'aide d'un navigateur (Générateur de rapports et SSRS)
   Vous pouvez utiliser n'importe quel navigateur Web pris en charge pour afficher un rapport par le biais d'une connexion directe avec le serveur de rapports. Sur un serveur de rapports, tous les rapports ont une adresse URL. Vous pouvez entrer l'adresse Web d'un rapport pour l'ouvrir dans une fenêtre de navigateur indépendamment d'une application Web. Le rapport s'ouvre au format HTML et comprend la barre d'outils Rapport afin que vous puissiez naviguer entre les pages ou effectuer des recherches sur les valeurs de données dans le rapport. Dans l'URL, vous pouvez définir des paramètres pour masquer la barre d'outils ou sélectionner le format de sortie du rapport.  
@@ -28,7 +28,7 @@ Dossiers dans un navigateur
 > [!NOTE]  
 >  Si vous accédez à un rapport à partir d'un ordinateur de poche, vous devez utiliser un navigateur pour ouvrir le rapport en question. Le Gestionnaire de rapports n'est pas conçu pour l'affichage des rapports sur les ordinateurs de poche.  
   
- Pour plus d'informations sur les types de navigateurs que vous pouvez utiliser, consultez « Types de navigateurs pris en charge par Reporting Services » dans la [documentation de Reporting Services](http://go.microsoft.com/fwlink/?linkid=121312) dans la documentation en ligne de SQL Server.  
+ Pour plus d'informations sur les types de navigateurs que vous pouvez utiliser, consultez « Types de navigateurs pris en charge par Reporting Services » dans la [documentation de Reporting Services](https://go.microsoft.com/fwlink/?linkid=121312) dans la documentation en ligne de SQL Server.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -53,6 +53,6 @@ Dossiers dans un navigateur
   
  La limite maximale pour une URL dans Internet Explorer est 2 083 caractères. Pour plus d'informations, consultez [Longueur maximale d'une URL dans Internet Explorer](http://support.microsoft.com/kb/208427).  
   
- Pour plus d'informations sur l'accès à un rapport via une URL, notamment des informations sur la construction d'une URL, consultez « Accès URL » dans la [documentation de Reporting Services](http://go.microsoft.com/fwlink/?linkid=121312) dans la documentation en ligne de SQL Server.  
+ Pour plus d'informations sur l'accès à un rapport via une URL, notamment des informations sur la construction d'une URL, consultez « Accès URL » dans la [documentation de Reporting Services](https://go.microsoft.com/fwlink/?linkid=121312) dans la documentation en ligne de SQL Server.  
   
   

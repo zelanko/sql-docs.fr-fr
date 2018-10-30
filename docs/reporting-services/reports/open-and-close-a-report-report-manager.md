@@ -12,19 +12,19 @@ helpviewer_keywords:
 ms.assetid: a9db1caf-1e7d-41ee-9aed-e09fd0712f9b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 30c20b9232725ec41d8d6438c82ce18820181fee
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.openlocfilehash: f40b4f2e377881cd6788ca3fa8629b5f0f52333f
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49085045"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021843"
 ---
 # <a name="open-and-close-a-report-report-manager"></a>Ouvrir et fermer un rapport (Gestionnaire de rapports)
   Vous pouvez utiliser le Gestionnaire de rapports pour afficher les rapports publiés sur un serveur de rapports. Par défaut, tous les rapports s'ouvrent au format HTML. Une fois qu'un rapport est ouvert, vous pouvez l'exporter pour l'afficher dans d'autres formats d'application. Si le rapport contient des fonctionnalités interactives, ou s'il s'agit d'un rapport du Générateur de rapports qui contient des données interactives, vous pouvez cliquer sur les liens pour afficher des rapports ou des données supplémentaires.  
   
 ### <a name="to-view-a-report"></a>Pour afficher un rapport  
   
-1.  Démarrez le [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
+1.  Démarrez le [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
 2.  Pour rechercher un rapport, parcourez l'arborescence des dossiers ou lancez une recherche à partir de son nom. Dans la page **Contenu** , affichez le contenu d’un dossier en cliquant sur son nom ou sur son l’icône. Recherchez le rapport en tapant intégralement ou partiellement son nom dans la zone de texte **Rechercher** située en haut de la page.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "49085045"
      La fermeture d'un rapport n'entraîne pas sa suppression dans le cache du navigateur. Vous devez fermer le navigateur pour déconnecter le rapport.  
   
 ## <a name="see-also"></a> Voir aussi  
- [Page Contenu &#40;Gestionnaire de rapports&#41;](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
+ [Page Contenu &#40;Gestionnaire de rapports&#41;](https://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
  [Recherche, affichage et gestion des rapports &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Gestion du contenu du serveur de rapports &#40;SSRS en mode natif&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)  
   

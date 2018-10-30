@@ -17,12 +17,12 @@ ms.assetid: aa1bee1a-ab06-44d8-9944-4bff03d73016
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 36948de07892e24e0aabb1e4bb4ab948e58acfd2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 77b815ac5cf4a470570e458cd9702d64ebada5ce
+ms.sourcegitcommit: ef15fa253d98c62538bf9b6fe191af7f8ef8f6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612277"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49991272"
 ---
 # <a name="creating-a-synchronous-transformation-with-the-script-component"></a>Création d'une transformation synchrone à l'aide du composant Script
   Vous utilisez un composant de transformation dans le flux de données d'un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pour modifier et analyser les données acheminées de la source à la destination. Une transformation à sorties synchrones traite chacune des lignes d'entrée lorsqu'elles traversent le composant. Une transformation à sorties asynchrones patiente jusqu'à ce qu'elle ait reçu toutes les lignes d'entrée pour achever son traitement. Cette rubrique décrit une transformation synchrone. Pour plus d’informations sur les transformations asynchrones, consultez [Création d’une transformation asynchrone à l’aide du composant Script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md). Pour plus d’informations sur la différence entre les composants synchrones et asynchrones, consultez [Présentation des transformations synchrones et asynchrones](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md).  
@@ -260,10 +260,7 @@ public override void MyAddressInput_ProcessInputRow(MyAddressInputBuffer Row)
 ```  
   
 ## <a name="see-also"></a> Voir aussi  
- [Présentation des transformations synchrones et asynchrones] (~/integration-services/understanding-synchronous-and-asynchronous-transformations.md   
- [Création d’une transformation asynchrone à l’aide du composant Script] (~/integration-services/extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md   
- [Développement d’un composant de transformation personnalisé à sorties synchrones](~/integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-synchronous-outputs.md  
-  
-  
-
-
+ [Présentation des transformations synchrones et asynchrones](~/integration-services/understanding-synchronous-and-asynchronous-transformations.md)  
+ [Création d’une transformation asynchrone à l’aide du composant Script](~/integration-services/extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md)  
+ [Développement d’un composant de transformation personnalisé avec des sorties synchrones](~/integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-synchronous-outputs.md)
+ 

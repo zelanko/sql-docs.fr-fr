@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 39f03d2d-6e48-4b34-a9d3-07f86313b937
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 757e8652993e4bed8df1095eaec7252be9df13b7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3a57f466df8b404455234dde9635448b1a9ebb86
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47779647"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031894"
 ---
 # <a name="reporting-services-features-supported-by-the-editions-of-sql-server-2016"></a>Fonctionnalités Reporting Services prises en charge par les éditions de SQL Server 2016
 
@@ -101,7 +101,7 @@ Pour accéder au tableau d’une technologie SQL Server, cliquez sur son lien :
 ## <a name="next-steps"></a>Étapes suivantes
 
 [Fonctionnalités prises en charge par les éditions de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)  
-[Spécifications de produit pour SQL Server 2016](http://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)  
+[Spécifications de produit pour SQL Server 2016](https://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)  
 [Installation de SQL Server 2016](../database-engine/install-windows/installation-for-sql-server-2016.md) 
 
-D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

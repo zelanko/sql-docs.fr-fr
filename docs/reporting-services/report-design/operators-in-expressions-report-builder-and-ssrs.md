@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: d22dc8b6-4353-40e7-91a1-65e8dae6325d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4499e62cf8564705b96ec74d2598c311e0097709
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 870792045a0281461362262fe81a831644ac06dd
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47817097"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021133"
 ---
 # <a name="operators-in-expressions-report-builder-and-ssrs"></a>Opérateurs dans les expressions (Générateur de rapports et SSRS)
   Un opérateur est un symbole qui représente des actions exécutées sur un ou plusieurs termes d'une expression. Les catégories d'opérateurs suivantes sont prises en charge dans une expression : arithmétique, de comparaison, de concaténation, logique ou au niveau du bit, et de décalage de bits.  
@@ -77,10 +77,10 @@ ms.locfileid: "47817097"
 |>>|Effectue un décalage arithmétique vers la droite sur un modèle binaire.|  
   
 ## <a name="see-also"></a> Voir aussi  
- [Boîte de dialogue Expression](http://msdn.microsoft.com/library/e6c74ccb-4594-4d4f-b958-618d710e34eb)   
+ [Boîte de dialogue Expression](https://msdn.microsoft.com/library/e6c74ccb-4594-4d4f-b958-618d710e34eb)   
  [Expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
  [Exemples d’expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [Types de données dans les expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
- [Boîte de dialogue Expression &#40;Générateur de rapports&#41;](http://msdn.microsoft.com/library/e89c4d97-5d41-4b55-8695-79329edac15d)  
+ [Boîte de dialogue Expression &#40;Générateur de rapports&#41;](https://msdn.microsoft.com/library/e89c4d97-5d41-4b55-8695-79329edac15d)  
   
   

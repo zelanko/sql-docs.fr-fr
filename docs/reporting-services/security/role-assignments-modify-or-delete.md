@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 523bdd32-92cb-4b48-a3a9-d58b2385bde7
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d533acbbc99d02c644d910e1b2ee3555d58bece0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c2cc79176f0c52cd1fdceae0d04d46b4279e9d50
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47699497"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030748"
 ---
 # <a name="role-assignments---modify-or-delete"></a>Attributions de rôles - Modifier ou supprimer
   Une attribution de rôle mappe un compte d'utilisateur ou de groupe à une définition de rôle prédéfinie qui inclut les tâches pouvant être effectuées. Elle détermine les types d'opérations qu'un utilisateur peut effectuer sur un dossier, un rapport, un modèle ou tout autre type de contenu. Pour créer, modifier ou supprimer des attributions de rôles, vous devez utiliser le Gestionnaire de rapports. Après avoir créé une attribution de rôle pour un utilisateur ou un groupe particulier, vous pouvez la modifier ultérieurement en sélectionnant un autre rôle. Pour révoquer des autorisations d'accès à un serveur de rapports, vous pouvez supprimer une attribution de rôle du serveur de rapports.  
@@ -34,7 +34,7 @@ ms.locfileid: "47699497"
   
 ### <a name="to-modify-or-delete-a-system-role-assignment"></a>Pour modifier ou supprimer une attribution de rôle système  
   
-1.  Démarrez le [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
+1.  Démarrez le [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
 2.  Cliquez sur **Paramètres du site**.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "47699497"
 ## <a name="see-also"></a> Voir aussi  
  [Créer et gérer des attributions de rôles](../../reporting-services/security/create-and-manage-role-assignments.md)   
  [Attributions de rôles](../../reporting-services/security/role-assignments.md)   
- [Page Paramètres du site &#40;Gestionnaire de rapports&#41;](http://msdn.microsoft.com/library/4d67a01c-eae4-49ba-a6e8-8e983c0248f5)   
- [Page Nouvelle attribution de rôle système : Modifier les attributions de rôles système &#40;Gestionnaire de rapports&#41;](http://msdn.microsoft.com/library/62a22ab9-1eb4-4ce5-8dd7-06b5ed2d9a2a)  
+ [Page Paramètres du site &#40;Gestionnaire de rapports&#41;](https://msdn.microsoft.com/library/4d67a01c-eae4-49ba-a6e8-8e983c0248f5)   
+ [Page Nouvelle attribution de rôle système : Modifier les attributions de rôles système &#40;Gestionnaire de rapports&#41;](https://msdn.microsoft.com/library/62a22ab9-1eb4-4ce5-8dd7-06b5ed2d9a2a)  
   
   

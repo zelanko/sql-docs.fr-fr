@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 8a056adf-4473-473d-9b0c-314675af7bfd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 08391bc16552540005098e1a52cd96d1a30b021f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8459e46364c2c0e80940b59fa2a520f3e29c86f1
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47738657"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028858"
 ---
 # <a name="change-indicator-icons-and-indicator-sets-report-builder-and-ssrs"></a>Modifier les icônes d'indicateur et jeux d'indicateurs (Générateur de rapports et SSRS)
   Les jeux d’indicateurs préconfigurés que [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fournit pour les rapports paginés peuvent ne pas toujours représenter efficacement vos données ni fonctionner correctement dans le rapport remis. Cette rubrique fournit des procédures permettant de modifier l'apparence des icônes d'indicateur et les jeux d'indicateurs pour inclure plus ou moins d'icônes d'indicateur, ou d'autres icônes d'indicateur.  
@@ -30,7 +30,7 @@ ms.locfileid: "47738657"
   
      Cliquez éventuellement sur le bouton **Expression** (*fx*) pour modifier une expression qui définit la valeur de l’option **Couleur** .  
   
-     Si vous avez cliqué sur **Couleurs supplémentaires**, la boîte de dialogue **Sélectionner une couleur** s’ouvre, dans laquelle vous pouvez choisir parmi un grand nombre de couleurs. Pour plus d’informations sur ses options, consultez [Boîte de dialogue Sélectionner une couleur &#40;Générateur de rapports et SSRS&#41;](http://msdn.microsoft.com/library/ac7089a3-5c7b-4f53-8348-180610e86da2). Cliquez sur **OK** pour fermer la boîte de dialogue **Sélectionner une couleur** .  
+     Si vous avez cliqué sur **Couleurs supplémentaires**, la boîte de dialogue **Sélectionner une couleur** s’ouvre, dans laquelle vous pouvez choisir parmi un grand nombre de couleurs. Pour plus d’informations sur ses options, consultez [Boîte de dialogue Sélectionner une couleur &#40;Générateur de rapports et SSRS&#41;](https://msdn.microsoft.com/library/ac7089a3-5c7b-4f53-8348-180610e86da2). Cliquez sur **OK** pour fermer la boîte de dialogue **Sélectionner une couleur** .  
   
 4.  Cliquez sur **OK**.  
   

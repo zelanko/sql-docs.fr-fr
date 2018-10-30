@@ -11,16 +11,16 @@ helpviewer_keywords:
 ms.assetid: 8f25e6dc-b753-400e-9e9a-50f4f35bf6c4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b70746e6bf466c3f6d5e7e22a4a09fd25a4e9fa9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c625459ae357dd0c8db1ab7b2255e95e5787b1f0
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676177"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029338"
 ---
 # <a name="install-reporting-services-2016-native-mode-report-server"></a>Installer le serveur de rapports Reporting Services 2016 en mode natif
 
-[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-not-2017](../../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)])
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-not-2017](../../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
 
 Découvrez comment installer [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode natif. Vous bénéficierez d’un accès à un [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] permettant de gérer les rapports et d’autres éléments.
 
@@ -183,4 +183,4 @@ Un serveur de rapports en mode natif [!INCLUDE[ssRSnoversion](../../includes/ssr
 [Configurer des connexions SSL sur un serveur de rapports en mode natif](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)   
 [Configurer les comptes de service Windows et les autorisations](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
 
-D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: faddd29d-4cc1-4c2c-8e29-d3d9918fe22a
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1b869739cd944ac96104044efc2c79e91f8e8a7a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f411a80acc72a582071a2ee1297f704ab22d42c1
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47848049"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030798"
 ---
 # <a name="empty-and-null-data-points-in-charts-report-builder-and-ssrs"></a>Points de données vides et Null dans les graphiques (Générateur de rapports et SSRS)
 
@@ -27,7 +27,7 @@ ms.locfileid: "47848049"
   
 -   Dans les types de graphiques à base de formes, les valeurs Null sont omises.  
   
- Un exemple de graphique avec des points de données vides est disponible sous forme d'exemple de rapport. Pour plus d'informations sur le téléchargement de cet exemple de rapport et d'autres rapports, consultez [Exemples de rapports du Générateur de rapports et du Concepteur de rapports](http://go.microsoft.com/fwlink/?LinkId=198283).  
+ Un exemple de graphique avec des points de données vides est disponible sous forme d'exemple de rapport. Pour plus d'informations sur le téléchargement de cet exemple de rapport et d'autres rapports, consultez [Exemples de rapports du Générateur de rapports et du Concepteur de rapports](https://go.microsoft.com/fwlink/?LinkId=198283).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -47,4 +47,4 @@ ms.locfileid: "47848049"
 [Ajouter un graphique à un rapport](../../reporting-services/report-design/add-a-chart-to-a-report-report-builder-and-ssrs.md)   
 [Dépanner les graphiques](../../reporting-services/report-design/troubleshoot-charts-report-builder-and-ssrs.md)  
 
-D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

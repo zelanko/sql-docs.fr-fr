@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: a79003d0-c905-4d4c-9560-93a7cc1e1dd4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5acce2ed5c4720bc6a69eb0b0e83125b58b7db1e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f980f4bb625fb0686911c7aa1cad28ca574faaf6
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47675547"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030948"
 ---
 # <a name="configure-report-builder-access"></a>Configurer l'accès au Générateur de rapports
   Le Générateur de rapports est un outil de génération d’états ad hoc qui s’installe avec un serveur de rapports [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] configuré pour le mode natif ou pour le mode intégré SharePoint.  
@@ -164,8 +164,8 @@ ms.locfileid: "47675547"
  [Authentification avec le serveur de rapports](../../reporting-services/security/authentication-with-the-report-server.md)   
  [Planification de la prise en charge des navigateurs pour Reporting Services et Power View (Reporting Services 2014)](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)   
  [Démarrer le Générateur de rapports](../../reporting-services/report-builder/start-report-builder.md)   
- [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
  [Se connecter à un serveur de rapports dans Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
- [Propriétés système du serveur de rapports](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)  
+ [Propriétés système de Report Server](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)  
   
   

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 76d3ac86-650c-46fe-8086-8b3edcea3882
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e6ea519e4f22c3b08485f520537fe1f22c3b069d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5764d853f70213c0f92b68af28f0647ba6d1a1e5
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666700"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021143"
 ---
 # <a name="expressions-report-builder-and-ssrs"></a>Expressions (Générateur de rapports et SSRS)
   Les expressions sont couramment utilisées dans des rapports [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] pour récupérer, calculer, afficher, regrouper, trier, filtrer, paramétrer et mettre en forme les données d’un rapport. 
@@ -115,5 +115,5 @@ ms.locfileid: "47666700"
 -   [Exemples d’équations de filtre &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)  
 -   [Exemples d’expressions de groupe &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)  
 -   [Didacticiel : introduction aux expressions](Tutorial:%20Introducing%20Expressions.md)
--   [Exemples de rapports (Générateur de rapports et SSRS)](http://go.microsoft.com/fwlink/?LinkId=198283)  
+-   [Exemples de rapports (Générateur de rapports et SSRS)](https://go.microsoft.com/fwlink/?LinkId=198283)  
   

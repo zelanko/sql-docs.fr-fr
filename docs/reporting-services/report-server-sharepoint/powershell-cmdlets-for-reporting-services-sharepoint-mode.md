@@ -8,16 +8,16 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: c3936b2918f9bc5dae127d44fe9001944ac7e3eb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 84e7f739f0d7dfe8e47b8053a37db327ee6b49a4
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799457"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031648"
 ---
 # <a name="powershell-cmdlets-for-reporting-services-sharepoint-mode"></a>Applets de commande PowerShell pour le mode SharePoint de Reporting Services
 
-[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)])
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
@@ -34,7 +34,7 @@ Lorsque vous installez le mode SharePoint de SQL Server 2016 Reporting Services
 
 ## <a name="cmdlet-summary"></a>Résumé des applets de commande
 
- Pour exécuter les applets de commande, vous devez ouvrir SharePoint Management Shell. Vous pouvez aussi utiliser l’éditeur d’interface utilisateur graphique fourni avec Microsoft Windows : **l’Environnement d’écriture de scripts intégré de Windows PowerShell (ISE)**. Pour plus d’informations, consultez [Démarrage de Windows PowerShell sur Windows Server](http://technet.microsoft.com/library/hh847814.aspx). Dans les résumés suivants d’applets de commande, les références à l’application de service « bases de données » font référence à toutes les bases de données créées et utilisées par une application de service Reporting Services. Cela inclut la configuration, la définition d'alertes et les bases de données temp.  
+ Pour exécuter les applets de commande, vous devez ouvrir SharePoint Management Shell. Vous pouvez aussi utiliser l’éditeur d’interface utilisateur graphique fourni avec Microsoft Windows : **l’Environnement d’écriture de scripts intégré de Windows PowerShell (ISE)**. Pour plus d’informations, consultez [Démarrage de Windows PowerShell sur Windows Server](https://technet.microsoft.com/library/hh847814.aspx). Dans les résumés suivants d’applets de commande, les références à l’application de service « bases de données » font référence à toutes les bases de données créées et utilisées par une application de service Reporting Services. Cela inclut la configuration, la définition d'alertes et les bases de données temp.  
   
  Si vous voyez un message d'erreur semblable au suivant lorsque vous tapez les exemples PowerShell :  
   
@@ -51,7 +51,7 @@ Lorsque vous installez le mode SharePoint de SQL Server 2016 Reporting Services
     Add-PSSnapin Microsoft.SharePoint.PowerShell  
     ```  
   
- Pour plus d’informations, consultez [Utiliser Windows PowerShell pour administrer SharePoint 2013](http://technet.microsoft.com/library/ee806878.aspx).  
+ Pour plus d’informations, consultez [Utiliser Windows PowerShell pour administrer SharePoint 2013](https://technet.microsoft.com/library/ee806878.aspx).  
   
 ### <a name="open-the-sharepoint-management-shell-and-run-cmdlets"></a>Pour ouvrir SharePoint Management Shell et exécuter les applets de commande
   
@@ -293,4 +293,4 @@ Get-SPRSExtension -identity $app -ExtensionType “Data” | select name,extensi
 [Liste de vérification : utiliser PowerShell pour vérifier Power Pivot pour SharePoint](../../analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md)   
 [Obtenir de l’aide sur SQL Server PowerShell](../../relational-databases/scripting/get-help-sql-server-powershell.md)   
 
-D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

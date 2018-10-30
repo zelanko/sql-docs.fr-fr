@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: f9492a97-5609-4059-ae76-0fba111d4968
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a3892815dee3002e06abf6c76e4604225a29749a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ba16d32c5a44385329f789c2e0851609514be616
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47777347"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028568"
 ---
 # <a name="lesson-6-add-a-reportviewer-control-to-the-application"></a>Leçon 6 : Ajouter un contrôle ReportViewer à l'application
 Après avoir conçu le rapport enfant à l'aide de l'Assistant Rapport, l'étape suivante consiste à ajouter un contrôle ReportViewer à l'application de site Web. Si vous utilisez le site web des rapports ASP.NET, la page default.aspx contient le contrôle ReportViewer.   
@@ -30,7 +30,7 @@ Après avoir conçu le rapport enfant à l'aide de l'Assistant Rapport, l'étape
   
 5.  Dans la zone **Choisir un rapport** , sélectionnez le rapport parent que vous avez créé.  
   
-    Lorsque vous sélectionnez un rapport, les instances de sources de données utilisées dans le rapport sont créées automatiquement. Le code est généré pour instancier chaque objet DataTable (et son conteneur [DataSet](http://msdn.microsoft.com/library/system.data.dataset.aspx) ). Un contrôle [ObjectDataSource](http://msdn.microsoft.com/library/system.web.ui.webcontrols.objectdatasource.aspx) est ajouté à l’aire de conception, correspondant à chaque source de données utilisée dans le rapport. Ce contrôle de source de données est configuré automatiquement.  
+    Lorsque vous sélectionnez un rapport, les instances de sources de données utilisées dans le rapport sont créées automatiquement. Le code est généré pour instancier chaque objet DataTable (et son conteneur [DataSet](https://msdn.microsoft.com/library/system.data.dataset.aspx) ). Un contrôle [ObjectDataSource](https://msdn.microsoft.com/library/system.web.ui.webcontrols.objectdatasource.aspx) est ajouté à l’aire de conception, correspondant à chaque source de données utilisée dans le rapport. Ce contrôle de source de données est configuré automatiquement.  
   
 6.  Dans le menu Générer, cliquez sur Générer le site Web.  
   

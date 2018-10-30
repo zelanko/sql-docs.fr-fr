@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: c99495c3-899b-4c84-af87-76e96d4afa23
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9539992fdcabd16bdd3d6cd7601fea97c57a78d0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 238461d1d191c9e62fa713e46c7483c09df51f38
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731917"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031728"
 ---
 # <a name="report-builder-tutorials"></a>Didacticiels du Générateur de rapports
 
@@ -74,4 +74,4 @@ Suivez les étapes de ce didacticiel pour apprendre à utiliser des expressions 
 [Générateur de rapports dans SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
 [Didacticiel : créer un rapport de graphique rapide en mode hors connexion](../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
 
-D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

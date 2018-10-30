@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 45da3d39-278e-4760-a4b3-9932c9547cf2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 94cb190dd6933f7a226734b3110f9620c782d0d0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 567a22114f04644b2a20d8d2653f859c10ae5534
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613797"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029308"
 ---
 # <a name="displaying-a-series-with-multiple-data-ranges-on-a-chart"></a>Affichage d'une série avec plusieurs plages de données sur un graphique
 
@@ -44,7 +44,7 @@ ms.locfileid: "47613797"
   
  Si vous activez un séparateur d’échelle, mais qu’il n’apparaît pas, bien que la distance soit suffisante entre les plages de données, vous pouvez affecter à la propriété CollapsibleSpaceThreshold une valeur inférieure à 25. La propriété CollapsibleSpaceThreshold spécifie le pourcentage d’espace réductible nécessaire entre les plages de données. Pour plus d’informations, consultez [Ajouter des séparateurs d’échelle à un graphique &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/add-scale-breaks-to-a-chart-report-builder-and-ssrs.md).  
   
- Les graphiques prennent en charge jusqu'à cinq séparateurs d'échelle par graphique ; toutefois, en affichant plusieurs séparateurs, le graphique peut devenir illisible. Si vous disposez de plusieurs plages de données, envisagez d'utiliser une méthode différente pour afficher ces données. Pour plus d’informations, consultez [Plusieurs séries sur un graphique &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/multiple-series-on-a-chart-report-builder-and-ssrs.md).  
+ Les graphiques prennent en charge jusqu'à cinq séparateurs d'échelle par graphique ; toutefois, en affichant plusieurs séparateurs, le graphique peut devenir illisible. Si vous disposez de plusieurs plages de données, envisagez d'utiliser une méthode différente pour afficher ces données. Pour plus d’informations, consultez [Multiple Series on a Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/multiple-series-on-a-chart-report-builder-and-ssrs.md).  
   
 ## <a name="unsupported-scale-break-scenarios"></a>Scénarios de séparateurs d'échelle non pris en charge  
  Les séparateurs d'échelle ne sont pas pris en charge dans les scénarios de graphiques suivants :  
@@ -57,7 +57,7 @@ ms.locfileid: "47613797"
   
 -   Le type de graphique est polaire, en radar, à secteurs, en anneau, en entonnoir, en pyramide ou tout graphique empilé.  
   
- Un exemple de graphique avec séparations d'échelle est disponible sous forme d'exemple de rapport. Pour plus d'informations sur le téléchargement de cet exemple de rapport et d'autres rapports, consultez [Exemples de rapports du Générateur de rapports et du Concepteur de rapports](http://go.microsoft.com/fwlink/?LinkId=198283).  
+ Un exemple de graphique avec séparations d'échelle est disponible sous forme d'exemple de rapport. Pour plus d'informations sur le téléchargement de cet exemple de rapport et d'autres rapports, consultez [Exemples de rapports du Générateur de rapports et du Concepteur de rapports](https://go.microsoft.com/fwlink/?LinkId=198283).  
 
 ## <a name="next-steps"></a>Étapes suivantes
 
@@ -65,7 +65,7 @@ ms.locfileid: "47613797"
 [Mise en forme d’un graphique](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
 [Effets 3D, de biseau et autres dans un graphique](../../reporting-services/report-design/chart-effects-3d-bevel-and-other-report-builder.md)   
 [Graphiques](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
-[Boîte de dialogue Propriétés de l’axe, Options de l’axe](http://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11)   
+[Boîte de dialogue Propriétés de l’axe, Options de l’axe](https://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11)   
 [Regrouper des petits secteurs sur un graphique à secteurs](../../reporting-services/report-design/collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)  
 
-D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

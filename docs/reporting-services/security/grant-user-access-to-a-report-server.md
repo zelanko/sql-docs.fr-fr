@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2144c020-3253-4b47-8cda-e14c928bb471
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8994681f816de7d1f7b8d35eaee87d58b77c04ae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2baff221e28428daaf57deb8aaec7e8eb6d0d267
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711257"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021853"
 ---
 # <a name="grant-user-access-to-a-report-server"></a>Accorder à un utilisateur l'accès à un serveur de rapports
 
@@ -96,9 +96,9 @@ Examinez la liste suivante avant d'ajouter des utilisateurs à un serveur de rap
 ## <a name="next-steps"></a>Étapes suivantes
 
 [Créer et gérer des attributions de rôles](../../reporting-services/security/create-and-manage-role-assignments.md)   
-[Page Nouvelle attribution de rôle : Modifier l’attribution de rôle &#40;Gestionnaire de rapports&#41;](http://msdn.microsoft.com/library/3319ced0-4b86-42af-b18d-da41a625113c)   
-[Page Propriétés de sécurité, Éléments &#40;Gestionnaire de rapports&#41;](http://msdn.microsoft.com/library/351b8503-354f-4b1b-a7ac-f1245d978da0)   
+[Page Nouvelle attribution de rôle : Modifier l’attribution de rôle &#40;Gestionnaire de rapports&#41;](https://msdn.microsoft.com/library/3319ced0-4b86-42af-b18d-da41a625113c)   
+[Page Propriétés de sécurité, Éléments &#40;Gestionnaire de rapports&#41;](https://msdn.microsoft.com/library/351b8503-354f-4b1b-a7ac-f1245d978da0)   
 [Attributions de rôles](../../reporting-services/security/role-assignments.md)   
 [Définitions de rôles](../../reporting-services/security/role-definitions.md)  
 
-D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

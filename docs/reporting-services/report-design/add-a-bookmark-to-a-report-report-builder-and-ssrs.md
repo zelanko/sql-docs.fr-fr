@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: f130562e-5673-40e3-8e01-de7227a21d41
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e6e047ff8c5a6c898ed902fa4d52de6db797da3f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 73268c03ef80b13a28d8011f9b6860abcfac79e2
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676997"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030368"
 ---
 # <a name="add-a-bookmark-to-a-report-report-builder-and-ssrs"></a>Ajouter un signet à un rapport (Générateur de rapports et SSRS)
   Ajoutez des signets et des liens de signet à un rapport lorsque vous souhaitez fournir une table des matières personnalisée ou des liens de navigation interne personnalisés dans le rapport. En général, vous ajoutez des signets aux emplacements du rapport où vous souhaitez amener les utilisateurs, comme les tables ou graphiques, ou les valeurs de groupe uniques qui figurent dans une table ou une matrice. Vous pouvez créer vos propres chaînes à utiliser en tant que signets, ou, pour les groupes, vous pouvez définir le signet sur l'expression de groupe.  
@@ -22,7 +22,7 @@ ms.locfileid: "47676997"
   
  Par exemple, si votre rapport affiche une table dans laquelle un regroupement par couleur a été effectué, vous pouvez ajouter à l'en-tête de groupe un signet basé sur l'expression de groupe. Vous pouvez ensuite ajouter au début du rapport une table avec une seule zone de texte qui affiche les couleurs et définir le lien de signet vers cette zone de texte. Lorsque vous cliquez sur la couleur, le rapport accède à la page qui affiche la ligne d'en-tête de groupe correspondant à cette couleur.  
   
- Vous pouvez ajouter un signet à tout élément de rapport et ajouter un lien de signet à tout élément assorti d'une propriété **Action** , par exemple, une zone de texte, une image ou une série calculée dans un graphique. Pour plus d’informations, consultez [Boîte de dialogue Propriétés relatives aux actions &#40;Générateur de rapports et SSRS&#41;](http://msdn.microsoft.com/library/2c5d915b-4f97-42cf-b8f1-49ca3ff3d0f9).  
+ Vous pouvez ajouter un signet à tout élément de rapport et ajouter un lien de signet à tout élément assorti d'une propriété **Action** , par exemple, une zone de texte, une image ou une série calculée dans un graphique. Pour plus d’informations, consultez [Boîte de dialogue Propriétés relatives aux actions &#40;Générateur de rapports et SSRS&#41;](https://msdn.microsoft.com/library/2c5d915b-4f97-42cf-b8f1-49ca3ff3d0f9).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

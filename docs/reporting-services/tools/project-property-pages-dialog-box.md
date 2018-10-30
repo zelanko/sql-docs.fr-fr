@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 209d9e22-37fc-418f-8739-83adcf447d3f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1c8f13b792a09ea8b34eccaf2d41ea073f98f25c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: eb5c0c7e3e955bb4489e93943303cce4bd42c8d6
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710870"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021863"
 ---
 # <a name="project-property-pages-dialog-box"></a>Pages de propriétés du projet, boîte de dialogue
 
@@ -82,9 +82,9 @@ ms.locfileid: "47710870"
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-[Publier des rapports](http://msdn.microsoft.com/library/ef5a514e-e818-4041-a8b0-15835f9a046b)   
+[Publier des rapports](https://msdn.microsoft.com/library/ef5a514e-e818-4041-a8b0-15835f9a046b)   
 [publier un rapport dans une bibliothèque SharePoint](../../reporting-services/reports/publish-a-report-to-a-sharepoint-library.md)   
 [Définir des propriétés de déploiement &#40;Reporting Services&#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md)   
 [Aide sur le concepteur de rapports via la touche F1](../../reporting-services/tools/report-designer-f1-help.md)  
 
-D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

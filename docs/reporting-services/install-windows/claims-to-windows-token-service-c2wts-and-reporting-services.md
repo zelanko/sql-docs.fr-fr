@@ -7,12 +7,12 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint
 ms.topic: conceptual
 ms.date: 09/15/2017
-ms.openlocfilehash: f677d955541d32614dcfc60cebb0be1d1c438571
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: 7d45e74b7d4079094c37b449eece3b62406ae13f
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460984"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50020593"
 ---
 # <a name="claims-to-windows-token-service-c2wts-and-reporting-services"></a>Service d'émission de jetons Revendications vers Windows (C2WTS) et Reporting Services
 
@@ -44,7 +44,7 @@ Le service d’émission de jetons Revendications vers Windows (C2WTS) SharePoin
 
 Les jetons créés par C2WTS ne fonctionnent qu’avec la délégation contrainte (pour certains services uniquement) et l’option de configuration « avec n’importe quel protocole d’authentification » (transition de protocole).
 
-Si votre environnement utilise la délégation contrainte Kerberos, le service SharePoint server et les sources de données externes doivent résider dans le même domaine Windows. Tout service qui s’appuie sur le service d’émission de jetons Revendications vers Windows (C2WTS) doit utiliser la délégation **contrainte** Kerberos pour permettre à C2WTS d’utiliser une transition de protocole Kerberos dans la conversion de revendications en informations d’identification Windows. Ces exigences s'appliquent à tous les services partagés SharePoint. Pour plus d’informations, consultez [Planifier l’authentification Kerberos dans SharePoint 2013](http://technet.microsoft.com/library/ee806870.aspx).  
+Si votre environnement utilise la délégation contrainte Kerberos, le service SharePoint server et les sources de données externes doivent résider dans le même domaine Windows. Tout service qui s’appuie sur le service d’émission de jetons Revendications vers Windows (C2WTS) doit utiliser la délégation **contrainte** Kerberos pour permettre à C2WTS d’utiliser une transition de protocole Kerberos dans la conversion de revendications en informations d’identification Windows. Ces exigences s'appliquent à tous les services partagés SharePoint. Pour plus d’informations, consultez [Planifier l’authentification Kerberos dans SharePoint 2013](https://technet.microsoft.com/library/ee806870.aspx).  
 
 1. Configurez le compte de domaine de service C2WTS. 
 
@@ -115,4 +115,4 @@ Si votre environnement utilise la délégation contrainte Kerberos, le service S
 
 4. Démarrez (arrêtez et démarrez si déjà démarré) les revendications SharePoint vers Windows Token Service via l’Administration centrale de SharePoint dans la page **Gérer les services sur le serveur**. Le service doit être démarré sur le serveur qui effectuera l'action. Par exemple si vous avez un serveur web frontal et un serveur d’applications exécutant le service partagé SQL Server Reporting Services, il vous suffit de démarrer C2WTS sur le serveur d’applications. C2WTS est obligatoire sur un serveur web frontal uniquement si vous utilisez le composant WebPart Visionneuse de rapports.
 
-D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

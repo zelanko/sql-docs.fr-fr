@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 656cf55483947a17696fdaf4c09f7ebe08124d20
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a1f756c0f2e843f2a13e394bb739647530feda09
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654318"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029161"
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>Didacticiel : création d'un rapport principal et d'un rapport d'extraction (Générateur de rapports)
 Ce didacticiel vous apprend comment créer deux types de rapports paginés [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] : un rapport d’extraction et un rapport principal. Les exemples de données de ventes utilisés dans ces rapports sont récupérés d'un cube Analysis Services. 
@@ -25,7 +25,7 @@ L’illustration suivante montre les rapports que vous allez créer et comment l
 Durée estimée pour effectuer ce didacticiel : 30 minutes.  
   
 ## <a name="requirements"></a>Spécifications  
-Ce didacticiel nécessite l’accès au cube Contoso Sales pour le rapport d’extraction et le rapport principal. Ce dataset se compose de l’entrepôt de données ContosoDW et de la base de données de traitement analytique en ligne (OLAP) Contoso_Retail. Les rapports que vous allez créer dans ce didacticiel récupèrent des données du cube Contoso Sales. Vous pouvez télécharger la base de données OLAP Contoso_Retail à partir du [Centre de téléchargement Microsoft](http://go.microsoft.com/fwlink/?LinkID=191575). Il vous suffit de télécharger le fichier ContosoBIdemoABF.exe. Il contient la base de données OLAP.  
+Ce didacticiel nécessite l’accès au cube Contoso Sales pour le rapport d’extraction et le rapport principal. Ce dataset se compose de l’entrepôt de données ContosoDW et de la base de données de traitement analytique en ligne (OLAP) Contoso_Retail. Les rapports que vous allez créer dans ce didacticiel récupèrent des données du cube Contoso Sales. Vous pouvez télécharger la base de données OLAP Contoso_Retail à partir du [Centre de téléchargement Microsoft](https://go.microsoft.com/fwlink/?LinkID=191575). Il vous suffit de télécharger le fichier ContosoBIdemoABF.exe. Il contient la base de données OLAP.  
   
 L'autre fichier, ContosoBIdemoBAK.exe, concerne l'entrepôt de données ContosoDW, qui n'est pas utilisé dans ce didacticiel.  
   
@@ -82,7 +82,7 @@ Une connexion de données contient les informations nécessaires pour se connect
 10. Cliquez sur **Type d’informations d’identification**.  
   
     > [!NOTE]  
-    > Selon le mode de configuration des autorisations sur la source de données, vous devrez peut-être modifier les options d'authentification par défaut. Pour plus d’informations, consultez [Security &#40;Report Builder&#41;](../reporting-services/report-builder/security-report-builder.md).  
+    > Selon le mode de configuration des autorisations sur la source de données, vous devrez peut-être modifier les options d'authentification par défaut. Pour plus d’informations, consultez [Sécurité &#40;Générateur de rapports&#41;](../reporting-services/report-builder/security-report-builder.md).  
   
 11. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   

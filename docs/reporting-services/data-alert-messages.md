@@ -9,12 +9,12 @@ ms.assetid: 6819720c-d848-4b90-9b51-89501b4f4645
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 5b27eafb4908c74bffaeab7e3f5e8e2ae1bf8f7e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d7a3a2d1320e2f33a9246c538d30c63bd0cc890e
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47709177"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031968"
 ---
 # <a name="data-alert-messages"></a>Messages d'alerte de données
 
@@ -71,4 +71,4 @@ Le propriétaire de la définition d'alerte de données peut également afficher
 [Concepteur d'alertes de données](../reporting-services/data-alert-designer.md)   
 [Alertes de données Reporting Services](../reporting-services/reporting-services-data-alerts.md)  
 
-D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 465ef8d1-c503-407c-8afd-58d620e344ee
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6f3d9089ae5a15b8e63b236f0026a3085d744c43
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2093aad82661133944227dbd0458b66cfb19da94
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47720997"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028718"
 ---
 # <a name="implementing-a-command-class-for-a-data-processing-extension"></a>Implémentation d'une classe Command pour une extension pour le traitement des données
   L’objet **Command** formule une demande et la passe à la source de données. Le texte de la commande peut prendre de nombreuses formes syntaxiques, notamment texte et XML. Si des résultats sont retournés, l’objet **Command** les retourne sous la forme d’un objet **DataReader**.  
@@ -29,7 +29,7 @@ ms.locfileid: "47720997"
 > [!NOTE]  
 >  Vous ne devez pas implémenter <xref:Microsoft.ReportingServices.DataProcessing.IDbCommandAnalysis> si votre extension personnalisée pour le traitement des données ne prend en charge aucun paramètre.  
   
- Pour un exemple d’implémentation de la classe **Command**, consultez [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889) (Exemples Reporting Services pour le produit SQL Server).  
+ Pour un exemple d’implémentation de la classe **Command**, consultez [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889) (Exemples Reporting Services pour le produit SQL Server).  
   
 ## <a name="see-also"></a> Voir aussi  
  [Extensions Reporting Services](../../../reporting-services/extensions/reporting-services-extensions.md)   

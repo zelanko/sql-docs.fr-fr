@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 3cf9a240-24cc-46d4-bec6-976f82d8f830
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 419e1a3e6bf886625edd260f48afea9bcb4bc109
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d6a632c7d5bb1579f7fdee84d390b47bf0c863e6
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47614847"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030432"
 ---
 # <a name="disable-or-pause-report-and-subscription-processing"></a>Désactiver ou suspendre le traitement des rapports et des abonnements
   Il existe plusieurs approches pour désactiver ou suspendre le traitement des rapports et des abonnements [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Les approches présentées dans cette rubrique couvrent la désactivation d’un abonnement jusqu’à la suspension de la connexion à la source de données. Certaines approches ne sont pas possibles avec les deux modes serveur [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Les tableaux suivants récapitulent les méthodes et les modes serveur [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pris en charge :  
@@ -156,9 +156,9 @@ ForEach ($subscription in $subscriptions)
   
 -   Bibliothèque SharePoint (disponible uniquement à partir d'un site SharePoint intégré à un serveur de rapports en mode intégré SharePoint)  
   
- La remise par messagerie électronique doit être configurée avant de pouvoir être utilisée. Si vous ne la configurez pas, elle n'est pas disponible. Pour plus d’informations, consultez [Configurer un serveur de rapports pour la remise par messagerie (Gestionnaire de configuration de SSRS)](http://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83).  
+ La remise par messagerie électronique doit être configurée avant de pouvoir être utilisée. Si vous ne la configurez pas, elle n'est pas disponible. Pour en savoir plus, consultez [Configurer un serveur de rapports pour la remise par messagerie (Gestionnaire de configuration de SSRS)](https://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83).  
   
- Si vous souhaitez désactiver des extensions spécifiques, vous pouvez supprimer les entrées d'extension appropriées dans le fichier **RSReportServer.config** . Pour plus d’informations, consultez [Fichiers de configuration de Reporting Services](../../reporting-services/report-server/reporting-services-configuration-files.md) et [Configurer un serveur de rapports pour la remise par messagerie (Gestionnaire de configuration de SSRS)](http://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83).  
+ Si vous souhaitez désactiver des extensions spécifiques, vous pouvez supprimer les entrées d'extension appropriées dans le fichier **RSReportServer.config** . Pour plus d’informations, consultez [Fichiers de configuration de Reporting Services](../../reporting-services/report-server/reporting-services-configuration-files.md) et [Configurer un serveur de rapports pour la remise par messagerie (Gestionnaire de configuration de SSRS)](https://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83).  
   
  Lorsqu'une extension de remise est supprimée, elle n'est plus disponible dans le Gestionnaire de rapports, ni dans un site SharePoint. La suppression d'une extension de remise peut engendrer des abonnements inactifs. Avant de supprimer une extension, prenez soin de supprimer ces abonnements ou configurez-les pour qu'ils utilisent une autre extension de remise.  
   
@@ -167,7 +167,7 @@ ForEach ($subscription in $subscriptions)
  [Fichiers de configuration de Reporting Services](../../reporting-services/report-server/reporting-services-configuration-files.md)   
  [Configurer le Gestionnaire de rapports &#40;mode natif&#41;](../../reporting-services/report-server/configure-report-manager-native-mode.md)   
  [Serveur de rapports Reporting Services &#40;mode natif&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
- [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
- [Propriétés de sécurité, éléments de la page &#40;Gestionnaire de rapports&#41;](http://msdn.microsoft.com/library/351b8503-354f-4b1b-a7ac-f1245d978da0)  
+ [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [Page Propriétés de sécurité, Éléments &#40;Gestionnaire de rapports&#41;](https://msdn.microsoft.com/library/351b8503-354f-4b1b-a7ac-f1245d978da0)  
   
   

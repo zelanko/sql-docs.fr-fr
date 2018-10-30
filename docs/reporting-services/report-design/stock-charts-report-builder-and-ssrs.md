@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: f75ca11e-b7f5-4ac0-ba17-fe6f82742dad
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b8fd78d37c9ae890fc2a5412916acc55b30487f6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 38412eabee8a497532e12e139294ee47a1c57165
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47725477"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50020703"
 ---
 # <a name="stock-charts-report-builder-and-ssrs"></a>Graphiques boursiers (Générateur de rapports et SSRS)
 
@@ -21,7 +21,7 @@ ms.locfileid: "47725477"
   
  ![Graphique boursier](../../reporting-services/report-design/media/rs-stockchart.gif "Graphique boursier")  
   
- Un exemple de graphique boursier est disponible dans les exemples de rapports du Générateur de rapports. Pour plus d'informations sur le téléchargement de cet exemple de rapport et d'autres rapports, consultez [Exemples de rapports du Générateur de rapports et du Concepteur de rapports](http://go.microsoft.com/fwlink/?LinkId=198283).  
+ Un exemple de graphique boursier est disponible dans les exemples de rapports du Générateur de rapports. Pour plus d'informations sur le téléchargement de cet exemple de rapport et d'autres rapports, consultez [Exemples de rapports du Générateur de rapports et du Concepteur de rapports](https://go.microsoft.com/fwlink/?LinkId=198283).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -43,6 +43,6 @@ ms.locfileid: "47725477"
 [Graphiques d’étendue](../../reporting-services/report-design/range-charts-report-builder-and-ssrs.md)   
 [Graphiques](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
 [Mise en forme d’un graphique](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
-[Boîte de dialogue Propriétés de l’axe, Options de l’axe](http://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11)  
+[Boîte de dialogue Propriétés de l’axe, Options de l’axe](https://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11)  
 
-D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

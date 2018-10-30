@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 4acb1bbe-1c04-4979-b893-dc1b1c5039b6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5585266d4c326c00a1211c1148f80d2a875a00ba
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: fd9d5095b2d0361ec1da121b987d2a7d84944ad0
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48905653"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021489"
 ---
 # <a name="cache-shared-datasets-ssrs"></a>Mettre en cache les datasets partagés (SSRS)
   Les résultats de la requête pour un dataset partagé peuvent être copiés vers un cache afin de fournir des données cohérentes pour plusieurs rapports et améliorer le temps de réponse pour la requête de dataset. Comme pour les rapports, vous pouvez configurer un dataset partagé à mettre en cache lors de la première utilisation ou en spécifiant une planification.  
@@ -51,7 +51,7 @@ ms.locfileid: "48905653"
   
  Pendant que les résultats de la requête pour une combinaison de paramètres spécifique sont dans le cache, chaque rapport lancé pour le traitement et qui inclut une référence au dataset partagé avec ces valeurs de paramètre utilisera les données en mémoire cache.  
   
- Vous pouvez spécifier la durée pendant laquelle conserver les données dans le cache avant leur expiration. Pour plus d’informations, consultez [Page Mise en cache, datasets partagés &#40;Gestionnaire de rapports&#41;](http://msdn.microsoft.com/library/eac372e9-d2a1-48a8-bbe5-09d101df16ea).  
+ Vous pouvez spécifier la durée pendant laquelle conserver les données dans le cache avant leur expiration. Pour plus d’informations, consultez [Page Mise en cache, datasets partagés &#40;Gestionnaire de rapports&#41;](https://msdn.microsoft.com/library/eac372e9-d2a1-48a8-bbe5-09d101df16ea).  
   
 ## <a name="preloading-the-cache"></a>Préchargement du cache  
  Vous pouvez précharger le cache en créant un plan d'actualisation du cache. Avec un plan d'actualisation, vous pouvez spécifier la fréquence d'actualisation du cache à l'aide d'une planification spécifique par élément ou d'une planification partagée. Pour éviter qu'il y ait plusieurs entrées du cache pour le même élément, la planification que vous spécifiez doit permettre suffisamment de temps pour le traitement des requêtes sur la source de données externe. Par exemple, si la requête prend 20 minutes pour s'exécuter, la planification d'actualisation doit être supérieure à 20 minutes. Pour plus d'informations, consultez [Schedules](../../reporting-services/subscriptions/schedules.md).  
@@ -68,7 +68,7 @@ ms.locfileid: "48905653"
   
 -   Vous devez avoir des autorisations ReadPolicy et UpdatePolicy sur le dataset partagé.  
   
- Les plans d'actualisation du cache s'appliquent aux datasets partagés et aux rapports. Pour plus d’informations, consultez [Options d’actualisation du cache &#40;Gestionnaire de rapports&#41;](http://msdn.microsoft.com/library/227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6).  
+ Les plans d'actualisation du cache s'appliquent aux datasets partagés et aux rapports. Pour plus d’informations, consultez [Options d’actualisation du cache &#40;Gestionnaire de rapports&#41;](https://msdn.microsoft.com/library/227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6).  
   
 ## <a name="conditions-that-cause-cache-expiration"></a>Conditions entraînant l'expiration du cache  
  Les conditions suivantes peuvent provoquer le fait qu'un cache de dataset partagé devienne non valide.  

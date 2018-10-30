@@ -21,12 +21,12 @@ f1_keywords:
 ms.assetid: fdd9b994-d138-4990-a291-279b0249eb72
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 867e0fff62bf38f5f2d4d42a24e6c3bf49a9ee34
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a17aac87516dcc3903c6802435762f962258efe9
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633707"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028788"
 ---
 # <a name="customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs"></a>Personnaliser des données et l'affichage d'une carte ou d'une couche (Générateur de rapports et SSRS)
   Après avoir ajouté une carte ou une couche à un rapport paginé [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] en utilisant un Assistant, vous pouvez modifier l’apparence de la carte dans le rapport. Vous pouvez apporter des améliorations en considérant les points suivants :  
@@ -86,7 +86,7 @@ ms.locfileid: "47633707"
   
 -   Résolution et simplification. Choisissez un compromis entre le temps de dessin et des plans détaillés pour les lignes et les polygones.  
   
- Pour modifier ces options, cliquez avec le bouton droit sur le point de vue de la carte, utilisez la page [Boîte de dialogue Propriétés du point de vue de la carte, Général](http://msdn.microsoft.com/library/6c9c773e-5c56-4571-95ed-8a157cfdfe52) et les pages connexes.  
+ Pour modifier ces options, cliquez avec le bouton droit sur le point de vue de la carte, utilisez la page [Boîte de dialogue Propriétés du point de vue de la carte, Général](https://msdn.microsoft.com/library/6c9c773e-5c56-4571-95ed-8a157cfdfe52) et les pages connexes.  
   
 ##  <a name="Legends"></a> Modifier les options des légendes  
  Les légendes aident les utilisateurs à interpréter les données sur une carte.  
@@ -121,7 +121,7 @@ ms.locfileid: "47633707"
   
  L'expression de groupe spécifie comment les données analytiques en relation avec les données spatiales sont regroupées pour chaque élément cartographique de la couche. Par défaut, l'expression de groupe est le jeu de champs de correspondance spécifié pour la relation entre les données spatiales et les données analytiques. Par exemple, pour une carte à bulles affichant les villes et la taille de la population d'un pays ou d'une région, les champs de correspondance incluent le nom de ville [Ville] et le nom de région [Région] parce que plusieurs villes peuvent avoir le même nom. L'expression de groupe correspondante inclut deux champs : [Ville] et [Région].  
   
- Pour plus d’informations, consultez [Map Tips: How To Import Shapefiles Into SQL Server and Aggregate Spatial Data](http://go.microsoft.com/fwlink/?LinkID=214991).  
+ Pour plus d’informations, consultez [Map Tips: How To Import Shapefiles Into SQL Server and Aggregate Spatial Data](https://go.microsoft.com/fwlink/?LinkID=214991).  
   
 ##  <a name="MapElements"></a> Modifier les options des éléments cartographiques sur la couche  
  Les éléments cartographiques sont les points, lignes ou polygones d'une couche basés sur les données spatiales. Pour les éléments cartographiques, les options suivantes peuvent être définies. Ces options s'appliquent à tous les éléments cartographiques de la couche, qu'ils soient incorporés ou non :  

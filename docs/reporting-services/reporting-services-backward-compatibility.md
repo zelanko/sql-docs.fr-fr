@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 675b0e0e-cfee-4790-9675-80fc3ea6d30f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3d5e213506cfbf94191a5f055b9cd21cc851c0b2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 54fe4e8786bac599ab5e71b5109d5838f4ae13cf
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47707797"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029028"
 ---
 #  <a name="reporting-services-backward-compatibility"></a>Compatibilité descendante de Reporting Services
 En savoir plus sur les changements de comportement de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Cette rubrique traite des fonctionnalités qui ne sont plus disponibles ou destinées à être supprimées dans les versions futures.
@@ -35,6 +35,6 @@ Elle décrit également les changements importants apportés au produit, connus 
 |[Changements de comportement apportés à SQL Server Reporting Services dans SQL Server 2016](behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)|Décrit les fonctionnalités qui ont changé dans [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].|  
   
 ## <a name="see-also"></a> Voir aussi  
- [Compatibilité descendante | Analysis Services](http://msdn.microsoft.com/618b6c3a-e20d-47a9-b2c6-6d848dfba05a)  
+ [Compatibilité descendante | Analysis Services](https://msdn.microsoft.com/618b6c3a-e20d-47a9-b2c6-6d848dfba05a)  
   
   

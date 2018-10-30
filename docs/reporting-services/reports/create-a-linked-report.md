@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 12be8341-cb57-45e8-a421-2bf66b50234d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a757dd4dac0e788c33e1189171c58987a7bc4fa2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: df16c043688de82a549ec506ece457730626dda1
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47663617"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029058"
 ---
 # <a name="create-a-linked-report"></a>Créer un rapport lié
   Un rapport lié est un élément de serveur de rapports qui fournit un point d'accès à un rapport existant. Au niveau conceptuel, il est assimilable au raccourci d'un programme que vous utilisez pour exécuter une application ou ouvrir un fichier.  
@@ -42,10 +42,10 @@ ms.locfileid: "47663617"
   
 ## <a name="see-also"></a> Voir aussi  
  [Ouvrir et fermer un rapport &#40;Gestionnaire de rapports&#41;](../../reporting-services/reports/open-and-close-a-report-report-manager.md)   
- [Page Nouveau rapport lié &#40;Gestionnaire de rapports&#41;](http://msdn.microsoft.com/library/fefb46e8-6901-4d50-a3f8-7c49ad72e7b1)   
- [Page Choisir l’emplacement de l’élément &#40;Gestionnaire de rapports&#41;](http://msdn.microsoft.com/library/4a53a1a8-d1e1-47ef-b1fc-63352ece7d3c)   
- [Page Propriétés générales, Rapports &#40;Gestionnaire de rapports&#41;](http://msdn.microsoft.com/library/66c99d28-ab41-45f0-bf02-ed560293595d)   
+ [Page Nouveau rapport lié &#40;Gestionnaire de rapports&#41;](https://msdn.microsoft.com/library/fefb46e8-6901-4d50-a3f8-7c49ad72e7b1)   
+ [Page Choisir l’emplacement de l’élément &#40;Gestionnaire de rapports&#41;](https://msdn.microsoft.com/library/4a53a1a8-d1e1-47ef-b1fc-63352ece7d3c)   
+ [Page Propriétés générales, Rapports &#40;Gestionnaire de rapports&#41;](https://msdn.microsoft.com/library/66c99d28-ab41-45f0-bf02-ed560293595d)   
  [Concepts de Reporting Services &#40;SSRS&#41;](../../reporting-services/reporting-services-concepts-ssrs.md)   
- [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)  
+ [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)  
   
   

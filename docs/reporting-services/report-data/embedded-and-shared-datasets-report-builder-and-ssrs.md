@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: adc95cc0-d15a-413d-bc5a-302eab37a069
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5ed402cb5d781961eab44088a6ea43ffff9a6d55
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e019ee45eaffdd3a95bde64d284caa61e24788f3
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713909"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028798"
 ---
 # <a name="embedded-and-shared-datasets-report-builder-and-ssrs"></a>Datasets incorporés et partagés (Générateur de rapports et SSRS)
   Dans un rapport, un dataset représente des données de rapport retournées comme résultat de l'exécution d'une requête sur une source de données externe. Le dataset dépend de la connexion de données qui contient des informations sur la source de données externe. Les données elles-mêmes ne sont pas intégrées dans la définition de rapport. Un dataset contient une commande de requête, une collection de champs, des paramètres, des filtres et des options de données incluant notamment le respect de la casse et le classement. Il existe deux types de datasets :  
@@ -57,11 +57,11 @@ ms.locfileid: "47713909"
  Pour créer ou modifier un dataset incorporé, utilisez le volet des données de rapport. Après avoir créé un dataset, vous pouvez configurer les propriétés dans la boîte de dialogue **Propriétés du dataset** .  
   
 ## <a name="see-also"></a> Voir aussi  
- [Connexions de données ou sources de données incorporées et partagées &#40;Générateur de rapports et SSRS&#41;](http://msdn.microsoft.com/library/f417782c-b85a-4c4d-8a40-839176daba56)   
+ [Connexions de données ou sources de données incorporées et partagées &#40;Générateur de rapports et SSRS&#41;](https://msdn.microsoft.com/library/f417782c-b85a-4c4d-8a40-839176daba56)   
  [Créer un dataset partagé ou incorporé &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
  [Jeux de données du rapport &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
  [Collection de champs de dataset &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
- [Connexions de données, sources de données et chaînes de connexion dans le Générateur de rapports](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)   
+ [Connexions de données, sources de données et chaînes de connexion dans le Générateur de rapports](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)   
  [Connexions de données, sources de données et chaînes de connexion &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
   
   

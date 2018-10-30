@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 5b55fff2-1b15-4156-83ef-15ad9cf9f509
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 86ddecfcc93f4efa6de2b329298d31a244b65e34
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: af97fe48532d87f252cb9d86934d536611a33198
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47801787"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021794"
 ---
 # <a name="xml-connection-type-ssrs"></a>Type de connexion XML (SSRS)
   Pour inclure les données d'une source de données XML dans votre rapport, vous devez avoir un dataset basé sur une source de données de rapport de type XML. Ce type de source de données intégré est basé sur l'extension de données XML. Ce type de source de données vous permet de vous connecter et de récupérer des données à partir de documents XML, de services Web ou de données XML incorporées dans la requête.  
@@ -33,7 +33,7 @@ ms.locfileid: "47801787"
 |Document XML|`http://localhost/XML/Customers.xml`|  
 |Document XML incorporé|*Vide*|  
   
- Pour obtenir d’autres exemples de chaînes de connexion, consultez [Connexions de données, sources de données et chaînes de connexion dans le Générateur de rapports](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
+ Pour obtenir d’autres exemples sur les chaînes de connexion, consultez [Connexions de données, sources de données et chaînes de connexion dans le Générateur de rapports](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
 ##  <a name="Credentials"></a> Informations d'identification  
  Les informations d'identification sont obligatoires pour exécuter des requêtes, afficher l'aperçu du rapport localement et afficher l'aperçu du rapport à partir du serveur de rapports.  
@@ -44,11 +44,11 @@ ms.locfileid: "47801787"
   
 -   Utilisateur Windows actuel (également appelé sécurité intégrée).  
   
--   Aucune information d'identification n'est requise. Si vous choisissez de ne pas demander d'informations d'identification, l'accès anonyme est utilisé. Vérifiez que vous avez défini le compte d'exécution sans assistance pour le serveur de rapports afin d'établir une connexion à une source de données externe. L'extension pour le traitement des données XML ne transmet pas d'informations d'identification à l'URL cible ou au service Web ; la connexion ne peut aboutir que si vous avez défini le compte d'exécution sans assistance. Pour plus d’informations, consultez [Configurer le compte d’exécution sans assistance &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) dans la section [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de la [documentation en ligne](http://go.microsoft.com/fwlink/?linkid=121312) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur msdn.microsoft.com.  
+-   Aucune information d'identification n'est requise. Si vous choisissez de ne pas demander d'informations d'identification, l'accès anonyme est utilisé. Vérifiez que vous avez défini le compte d'exécution sans assistance pour le serveur de rapports afin d'établir une connexion à une source de données externe. L'extension pour le traitement des données XML ne transmet pas d'informations d'identification à l'URL cible ou au service Web ; la connexion ne peut aboutir que si vous avez défini le compte d'exécution sans assistance. Pour plus d’informations, consultez [Configurer le compte d’exécution sans assistance &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) dans la section [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de la [documentation en ligne](https://go.microsoft.com/fwlink/?linkid=121312) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur msdn.microsoft.com.  
   
  Les informations d'identification stockées ou demandées ne sont pas prises en charge. Notez bien que si vous désactivez la sécurité intégrée de Windows, vous ne pouvez pas l'utiliser pour récupérer des données. Si vous spécifiez des informations d'identification stockées ou demandées par invite, une erreur se produit au moment de l'exécution.  
   
- Pour plus d’informations, consultez [Connexions de données, sources de données et chaînes de connexion &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) ou [Spécifier des informations d’identification dans le Générateur de rapports](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53).  
+ Pour plus d’informations, consultez [Connexions de données, sources de données et chaînes de connexion &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) ou [Spécifier des informations d’identification dans le Générateur de rapports](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53).  
   
 ##  <a name="Query"></a> Requêtes  
  Une requête spécifie les données à récupérer pour un dataset de rapport. Les colonnes dans le jeu de résultats d'une requête remplissent la collection de champs pour un dataset. Un rapport traite uniquement le premier jeu de résultats récupéré par une requête.  
@@ -113,9 +113,9 @@ ms.locfileid: "47801787"
   
          `<ElementPath IgnoreNamespaces="true">`  *chemin d'accès à l'élément*  `</ElementPath>`  
   
- Pour plus d'informations sur la syntaxe des requêtes, consultez [Syntaxe de requête XML pour les données de rapport XML &#40;SSRS&#41;](../../reporting-services/report-data/xml-query-syntax-for-xml-report-data-ssrs.md) dans la section [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de la [documentation en ligne](http://go.microsoft.com/fwlink/?linkid=121312) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur msdn.microsoft.com.  
+ Pour plus d'informations sur la syntaxe des requêtes, consultez [Syntaxe de requête XML pour les données de rapport XML &#40;SSRS&#41;](../../reporting-services/report-data/xml-query-syntax-for-xml-report-data-ssrs.md) dans la section [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de la [documentation en ligne](https://go.microsoft.com/fwlink/?linkid=121312) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur msdn.microsoft.com.  
   
- Pour obtenir des exemples, consultez [Reporting Services : utilisation de sources de données XML et de service web](http://go.microsoft.com/fwlink/?LinkId=81654).  
+ Pour obtenir des exemples, consultez [Reporting Services : utilisation de sources de données XML et de service web](https://go.microsoft.com/fwlink/?LinkId=81654).  
   
 ### <a name="requirements-for-retrieving-xml-web-service-data"></a>Configuration requise pour la récupération de données d'un service Web XML  
  L'extension pour le traitement des données XML ne détecte pas le schéma automatiquement. Vous devez donc disposer d'un moyen d'identifier quelles méthodes SOAP permettent d'extraire les données de votre choix. Vous devez également comprendre le schéma d'adressage ou l'espace de noms que le service Web utilise pour ses données.  
@@ -129,12 +129,12 @@ ms.locfileid: "47801787"
   
  Vous pouvez préciser un chemin d'accès de l'élément à l'aide d'une syntaxe XML semblable à la syntaxe XQuery.  
   
- Pour plus d’informations, consultez [Syntaxe du chemin d’accès à l’élément pour des données de rapport XML &#40;SSRS&#41;](../../reporting-services/report-data/element-path-syntax-for-xml-report-data-ssrs.md) dans la documentation relative à [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] au sein de la [documentation en ligne](http://go.microsoft.com/fwlink/?linkid=121312) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]msdn.microsoft.com.  
+ Pour plus d’informations, consultez [Syntaxe du chemin d’accès à l’élément pour des données de rapport XML &#40;SSRS&#41;](../../reporting-services/report-data/element-path-syntax-for-xml-report-data-ssrs.md) dans la documentation relative à [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] au sein de la [documentation en ligne](https://go.microsoft.com/fwlink/?linkid=121312) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]msdn.microsoft.com.  
   
 ##  <a name="Parameters"></a> Paramètres  
  La requête n'est pas analysée pour l'identification des paramètres.  
   
- Pour ajouter des paramètres, vous devez les créer manuellement via la page **Paramètre** dans la boîte de dialogue [Propriétés du dataset](http://msdn.microsoft.com/library/3a0672ad-c969-455b-b952-585164ce1dda) .  
+ Pour ajouter des paramètres, vous devez les créer manuellement via la page **Paramètre** dans la boîte de dialogue [Propriétés du dataset](https://msdn.microsoft.com/library/3a0672ad-c969-455b-b952-585164ce1dda) .  
   
 ##  <a name="Remarks"></a> Notes  
  L'extension de données XML prend en charge la création de rapports à partir de données XML tabulaires et non hiérarchiques. Pour plus d’informations, consultez [Ajouter des données à partir de sources de données externes &#40;SSRS&#41;](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md).  
@@ -156,7 +156,7 @@ ms.locfileid: "47801787"
  [Datasets de rapport &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
  Fournit une vue d'ensemble de l'accès aux données pour votre rapport.  
   
- [Connexions de données, sources de données et chaînes de connexion dans le Générateur de rapports](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
+ [Connexions de données, sources de données et chaînes de connexion dans le Générateur de rapports](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
  Fournit des informations sur les connexions de données et les sources de données.  
   
  [Datasets incorporés dans le rapport et datasets partagés &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
@@ -165,7 +165,7 @@ ms.locfileid: "47801787"
  [Collection de champs de dataset &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
  Fournit des informations sur la collection de champs de dataset générée par la requête.  
   
- [Sources de données prises en charge par Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) dans la section [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de la [documentation en ligne](http://go.microsoft.com/fwlink/?linkid=121312) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ [Sources de données prises en charge par Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) dans la section [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de la [documentation en ligne](https://go.microsoft.com/fwlink/?linkid=121312) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
  Fournit des informations détaillées sur la prise en charge des plateformes et des versions pour chaque extension de données.  
   
 ## <a name="see-also"></a> Voir aussi  

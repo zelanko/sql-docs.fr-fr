@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 8bc0bb53-ad8a-464d-bb6a-7fea5fa62c5c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: dd18d9586dd7777b306b7c25cf67124026ce8255
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9dba27d665c40e84cd8240f996d3f6b8f5e782e7
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727047"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031138"
 ---
 # <a name="add-a-new-or-existing-report-to-a-report-project-ssrs"></a>Ajouter un nouveau rapport ou un rapport existant à un projet de rapport (SSRS)
   Dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], vous pouvez ajouter un nouveau rapport paginé [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] en utilisant l’Assistant Rapport ou en ajoutant un nouveau rapport vide à votre projet. Vous pouvez aussi ajouter un rapport existant. Après avoir ajouté un rapport, vous pouvez voir son nom sous le dossier **Rapports** de votre projet.  
@@ -33,7 +33,7 @@ ms.locfileid: "47727047"
   
     -   **Sélectionnez une source de données.** La première étape de création d'un rapport consiste à définir une source de données. L'Assistant Rapport fournit la liste de toutes les sources de données partagées du projet de rapport et offre la possibilité de créer une nouvelle source de données.  
   
-    -   **Créez une requête.** L'étape suivante consiste à créer une requête. Vous pouvez taper la chaîne de requête, la générer à l'aide du concepteur de requêtes ou importer une requête à partir d'un autre rapport. Pour plus d’informations sur les concepteurs de requêtes, consultez [Concepteurs de requêtes Reporting Services](http://msdn.microsoft.com/library/07efd3f1-804f-45f7-b62a-3e727a3d9835).  
+    -   **Créez une requête.** L'étape suivante consiste à créer une requête. Vous pouvez taper la chaîne de requête, la générer à l'aide du concepteur de requêtes ou importer une requête à partir d'un autre rapport. Pour plus d’informations sur les concepteurs de requêtes, consultez [Concepteurs de requêtes Reporting Services](https://msdn.microsoft.com/library/07efd3f1-804f-45f7-b62a-3e727a3d9835).  
   
     -   **Choisissez un type de rapport.** L'étape suivante consiste à sélectionner le type de rapport souhaité. Vous pouvez choisir un rapport tabulaire ou de matrice. Un rapport tabulaire comporte un nombre fixe de colonnes. Un rapport de matrice (ou tableau croisé dynamique) comporte un nombre variable de colonnes qui dépend des résultats de la requête. Un rapport cartographique affiche des informations analytiques sur un arrière-plan géographique.  
   
@@ -59,6 +59,6 @@ ms.locfileid: "47727047"
   
 ## <a name="see-also"></a> Voir aussi  
  [Didacticiels sur Reporting Services &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)  
- D’autres questions ? [Essayez le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+ D’autres questions ? [Essayez le forum Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)
   
   

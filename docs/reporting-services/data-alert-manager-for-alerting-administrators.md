@@ -12,12 +12,12 @@ ms.assetid: 32fd968f-1c0c-4ba8-851c-8a3b5e1fbbf2
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 73ff7713605df82a8a9e2989c94e06febd70fd32
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 84d99c48cea1da044e5372713a487f250bb1f40d
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47594952"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021123"
 ---
 # <a name="data-alert-manager-for-alerting-administrators"></a>Gestionnaire des alertes de données pour les administrateurs d'alertes
 
@@ -79,4 +79,4 @@ SQL Server Reporting Services fournit le Gestionnaire des alertes de données po
 
 [Alertes de données Reporting Services](../reporting-services/reporting-services-data-alerts.md)  
 
-D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

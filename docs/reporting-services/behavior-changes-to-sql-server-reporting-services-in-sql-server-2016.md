@@ -21,16 +21,16 @@ helpviewer_keywords:
 ms.assetid: 2a767f0f-84f2-4099-8784-1e37790f858e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f2959b333de3c183394a46e580101489f6eed87f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0524ee3eab63c2be21ff4196a2c68a3c30bd13ba
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845667"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028468"
 ---
 # <a name="behavior-changes-to-sql-server-reporting-services-in-sql-server-2016"></a>Changements de comportement apportés à SQL Server Reporting Services dans SQL Server 2016
 
-[!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016](../includes/ssrs-appliesto-2016.md)] [!INCLUDE [ssrs-appliesto-not-2017](../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../includes/ssrs-appliesto-not-pbirs.md)])
+[!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016](../includes/ssrs-appliesto-2016.md)] [!INCLUDE [ssrs-appliesto-not-2017](../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../includes/ssrs-appliesto-not-pbirs.md)]
 
 [!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)]
 
@@ -45,4 +45,4 @@ Il n’existe aucun changement de comportement.
 [Fonctionnalités supprimées de SQL Server Reporting Services dans SQL Server 2016](../reporting-services/discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md)   
 [Modifications importantes de SQL Server Reporting Services dans SQL Server 2016](../reporting-services/breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md)
 
-D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: e22b7c24-edab-42d6-82f6-95068e1c6043
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3df6da1da2786ede9dbde2ec417c5800046577fd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e2f6ff834463d0379d9e93058344dde5a391362d
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611553"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031388"
 ---
 # <a name="report-data-ssrs"></a>Données des rapports (SSRS)
   Les données de rapport peuvent provenir de plusieurs sources de données de votre organisation. Votre première étape lors de la conception d'un rapport consiste à créer des sources de données et des datasets qui représentent les données de rapport sous-jacentes. Chaque source de données inclut des informations de connexion de données. Chaque dataset inclut une commande de requête qui définit le jeu de champs à utiliser comme données d'une source de données. Pour visualiser des données de chaque dataset, ajoutez une région de données, telle qu'une table, une matrice, un graphique ou une carte. Lorsque le rapport est traité, les requêtes s'exécutent sur la source de données, et chaque région de données s'étend autant que nécessaire pour afficher les résultats de la requête pour le dataset.  
@@ -24,7 +24,7 @@ ms.locfileid: "47611553"
   
 -   **Définition de source de données.** Un fichier qui contient la représentation XML d'une source de données de rapport. Lorsqu'un rapport est publié, ses sources de données sont enregistrées sur le serveur de rapports ou le site SharePoint en tant que définitions de source de données, indépendamment de la définition de rapport. Par exemple, un administrateur de serveur de rapports peut mettre à jour la chaîne de connexion ou les informations d'identification. Sur un serveur de rapports natif, le type de fichier est .rds. Sur un site SharePoint, le type de fichier est .rsds.  
   
--   **Chaîne de connexion.** Une chaîne de connexion est une version de chaîne des propriétés de connexion nécessaires à la connexion à une source de données. Les propriétés de connexion diffèrent selon le type de connexion de données. Pour obtenir des exemples, consultez [Connexions de données, sources de données et chaînes de connexion](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34).  
+-   **Chaîne de connexion.** Une chaîne de connexion est une version de chaîne des propriétés de connexion nécessaires à la connexion à une source de données. Les propriétés de connexion diffèrent selon le type de connexion de données. Pour obtenir des exemples, consultez [Connexions de données, sources de données et chaînes de connexion](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34).  
   
 -   **Source de données partagée.** Source de données disponible sur un serveur de rapports ou un site SharePoint, et qui est utilisable par plusieurs rapports.  
   

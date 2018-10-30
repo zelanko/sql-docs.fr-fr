@@ -10,17 +10,17 @@ helpviewer_keywords:
 ms.assetid: b3e15a4a-98f8-4dbb-b847-bbcb20327051
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ceb6e3636665cf8084cc6473432014943812d5f8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0e26a45b7458e548535611af0ba19357f59eef54
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662867"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031978"
 ---
 # <a name="creating-a-custom-report-item-run-time-component"></a>Création d'un composant d'exécution d'élément de rapport personnalisé
   Le composant d’exécution d’élément de rapport personnalisé est implémenté en tant que composant [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] à l’aide de tout langage Conforme CLS et est appelé par le processeur de rapports au moment de l’exécution. Les propriétés du composant d'exécution sont définies dans l'environnement de conception en modifiant le composant de conception d'élément de rapport personnalisé y correspondant.  
   
- Pour un exemple d’élément de rapport personnalisé totalement implémenté, consultez [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889) (Exemples Reporting Services pour le produit SQL Server).  
+ Pour un exemple d’élément de rapport personnalisé totalement implémenté, consultez [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889) (Exemples Reporting Services pour le produit SQL Server).  
   
 ## <a name="definition-and-instance-objects"></a>Objets d'instance et de définition  
  Avant d’implémenter un élément de rapport personnalisé, il est important de comprendre la différence entre *objets de définition* et *objets d’instance*. Les objets de définition fournissent la représentation RDL de l'élément de rapport personnalisé alors que les objets d'instance sont les versions évaluées des objets de définition. Il n'existe qu'un seul objet de définition pour chaque élément du rapport. Lorsque vous accédez aux propriétés d'un objet de définition qui contient des expressions, vous obtenez une chaîne d'expression non-évaluée. Les objets d'instance contiennent les versions évaluées des objets de définition et peuvent avoir une relation un-à-plusieurs avec l'objet de définition d'un élément. Par exemple, lorsque la région de données <xref:Microsoft.ReportingServices.OnDemandReportRendering.Tablix> d'un rapport contient un composant <xref:Microsoft.ReportingServices.OnDemandReportRendering.CustomReportItem> dans l'une de ses lignes de détails, un seul objet de définition y correspond. En revanche, plusieurs objets d'instance sont spécifiés, un pour chaque ligne que comporte la région de données.  

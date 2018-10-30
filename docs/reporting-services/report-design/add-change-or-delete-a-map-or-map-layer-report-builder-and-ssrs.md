@@ -25,12 +25,12 @@ f1_keywords:
 ms.assetid: 6e89815e-187e-45bf-bf63-3d5c4a246360
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e34042bcaf265651f84a805ff383da3f1caed734
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b84b6a3d89e1112bd7026909b7ff9bb6bae14902
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719527"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029828"
 ---
 # <a name="add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs"></a>Ajouter, modifier ou supprimer une carte ou une couche (Générateur de rapports et SSRS)
   Une carte est un ensemble de couches. Quand vous ajoutez une carte à un rapport paginé [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , vous définissez la première couche. Vous pouvez créer des couches supplémentaires à l'aide de l'Assistant Couche.  
@@ -114,9 +114,9 @@ ms.locfileid: "47719527"
   
 1.  Sélectionnez **Général** dans la boîte de dialogue **Propriétés des points de la carte** pour modifier les options d’étiquette, d’info-bulle et de type de marqueur pour les éléments cartographiques suivants :  
   
-    -   Tous les points dynamiques ou incorporés sur une couche de points. Les règles de couleur, de taille et de type de marqueur relatives aux points remplacent ces options. Pour remplacer les options d’un point incorporé spécifique, utilisez la page [Boîte de dialogue Propriétés des points incorporés de la carte, Marqueur](http://msdn.microsoft.com/library/3c5eb1c5-d40a-424f-aa7c-43b112f42dec) .  
+    -   Tous les points dynamiques ou incorporés sur une couche de points. Les règles de couleur, de taille et de type de marqueur relatives aux points remplacent ces options. Pour remplacer les options d’un point incorporé spécifique, utilisez la page [Boîte de dialogue Propriétés des points incorporés de la carte, Marqueur](https://msdn.microsoft.com/library/3c5eb1c5-d40a-424f-aa7c-43b112f42dec) .  
   
-    -   Le point central de tous les polygones dynamiques ou incorporés sur une couche de polygones. Les règles de couleur, de taille et de type de marqueur relatives aux points centraux remplacent ces options. Pour remplacer les options d’un point central spécifique, utilisez la page [Boîte de dialogue Propriétés des points incorporés de la carte, Marqueur](http://msdn.microsoft.com/library/3c5eb1c5-d40a-424f-aa7c-43b112f42dec) .  
+    -   Le point central de tous les polygones dynamiques ou incorporés sur une couche de polygones. Les règles de couleur, de taille et de type de marqueur relatives aux points centraux remplacent ces options. Pour remplacer les options d’un point central spécifique, utilisez la page [Boîte de dialogue Propriétés des points incorporés de la carte, Marqueur](https://msdn.microsoft.com/library/3c5eb1c5-d40a-424f-aa7c-43b112f42dec) .  
   
 ##  <a name="Embedded"></a> Pour spécifier des données incorporées comme source de données spatiales  
   
@@ -171,7 +171,7 @@ ms.locfileid: "47719527"
 2.  Dans la barre d’outils, cliquez sur le bouton **Ajouter une couche** puis, dans la liste déroulante, cliquez sur **Couche de mosaïques**.  
   
     > [!NOTE]  
-    >  Pour plus d'informations sur l'utilisation de mosaïques Bing dans votre rapport, consultez [Conditions supplémentaires d'utilisation](http://go.microsoft.com/fwlink/?LinkId=151371).  
+    >  Pour plus d'informations sur l'utilisation de mosaïques Bing dans votre rapport, consultez [Conditions supplémentaires d'utilisation](https://go.microsoft.com/fwlink/?LinkId=151371).  
   
 3.  Cliquez avec le bouton droit sur la couche de mosaïques dans le volet Carte, puis sélectionnez **Propriétés des mosaïques**.  
   

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 2c4adf2f-e9c4-4fae-bd3c-97fe64436caf
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6963674fe21754b9194cf8b3024e85db7291e370
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 935749fe3bd88171892874b2643c6803a59fde92
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780867"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029818"
 ---
 # <a name="sharepoint-list-connection-type-ssrs"></a>Type de connexion de liste SharePoint (SSRS)
 
@@ -28,7 +28,7 @@ Utilisez les informations de cette rubrique pour générer une source de donnée
   
  Le concepteur de requêtes affiche automatiquement les listes SharePoint pour lesquelles vous disposez d'autorisations d'accès suffisantes.  
   
- Pour obtenir d’autres exemples de chaînes de connexion, consultez [Connexions de données, sources de données et chaînes de connexion dans le Générateur de rapports](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34).  
+ Pour obtenir d’autres exemples de chaînes de connexion, consultez [Connexions de données, sources de données et chaînes de connexion dans le Générateur de rapports](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34).  
   
 ##  <a name="Credentials"></a> Informations d'identification  
  Les informations d'identification sont obligatoires pour exécuter des requêtes, afficher l'aperçu du rapport localement et afficher l'aperçu du rapport à partir du serveur de rapports. Après avoir publié votre rapport, vous pouvez devoir modifier les informations d'identification pour la source de données afin que les autorisations soient valides pour récupérer les données lorsque le rapport s'exécute sur le serveur de rapports. Les types d'informations d'identification qui peuvent être utilisés avec cette extension de données dépendent de la configuration de la technologie SharePoint pour la liste SharePoint que vous utilisez comme source de données.  
@@ -71,7 +71,7 @@ Utilisez les informations de cette rubrique pour générer une source de donnée
   
  Pour plus d'informations sur la prise en charge de l'authentification par revendications dans la pile Microsoft BI, consultez [Utilisation de l'authentification par revendications dans la pile Microsoft BI](http://social.technet.microsoft.com/wiki/contents/articles/15274.using-claims-authentication-across-the-microsoft-bi-stack.aspx).  
   
- Pour plus d’informations, consultez [Connexions de données, sources de données et chaînes de connexion &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md), [Spécifier des informations d’identification dans le Générateur de rapports](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53) et [Sources de données prises en charge par Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
+ Pour plus d’informations, consultez [Connexions de données, sources de données et chaînes de connexion &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md), [Spécifier des informations d’identification dans le Générateur de rapports](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53) et [Sources de données prises en charge par Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
 ##  <a name="Query"></a> Requêtes  
  Pour concevoir une requête, créez un dataset selon la source de données, puis ouvrez le concepteur de requêtes associé. Pour plus d’informations, consultez [Créer un dataset partagé ou incorporé &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md).  
@@ -90,7 +90,7 @@ Utilisez les informations de cette rubrique pour générer une source de donnée
   
  La sélection de champs dans plusieurs listes n'est pas prise en charge. Vous pouvez créer un dataset pour chaque liste et sélectionner des champs dans chaque dataset. Si les listes ont un champ en commun, vous pouvez utiliser la fonction de recherche dans une région de données de tableau matriciel liée à l'un des deux dataset pour extraire une valeur de l'autre dataset qui n'est pas lié à la région de données. Pour plus d’informations, consultez [Fonction de recherche &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/report-builder-functions-lookup-function.md).  
   
--   **Champs sélectionnés**  Affiche les champs que vous avez sélectionnés. Les noms des champs dans ce volet sont des noms conviviaux qu'un utilisateur SharePoint a spécifiés. Lorsque vous fermez le concepteur de requêtes, vous voyez ces noms dans la collection de champs de dataset dans le volet des données de rapport. La relation entre les noms uniques et les noms conviviaux est disponible dans la page [Boîte de dialogue Propriétés du dataset, Champs &#40;Générateur de rapports&#41;](http://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42).  
+-   **Champs sélectionnés**  Affiche les champs que vous avez sélectionnés. Les noms des champs dans ce volet sont des noms conviviaux qu'un utilisateur SharePoint a spécifiés. Lorsque vous fermez le concepteur de requêtes, vous voyez ces noms dans la collection de champs de dataset dans le volet des données de rapport. La relation entre les noms uniques et les noms conviviaux est disponible dans la page [Boîte de dialogue Propriétés du dataset, Champs &#40;Générateur de rapports&#41;](https://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42).  
   
 -   **Filtres appliqués**  Limite les données retournées à partir de la liste SharePoint, avant que les données ne soient retournées vers le rapport. Sélectionnez le nom de champ, l'opérateur et la valeur à utiliser pour limiter les données récupérées dans la liste. Les opérateurs varient selon le type de données de la valeur que vous sélectionnez.  
   
@@ -98,7 +98,7 @@ Utilisez les informations de cette rubrique pour générer une source de donnée
   
 -   **Résultats de la requête**  Affiche des lignes exemples qui sont retournées lors de l'exécution de la requête. Si les valeurs de liste SharePoint changent fréquemment sur le site SharePoint, les valeurs que vous voyez dans le volet des résultats de la requête peuvent différer de celles que vous voyez dans le rapport.  
   
--   **Champs sélectionnés**  Affiche les champs que vous avez sélectionnés. Les noms des champs dans ce volet sont des noms conviviaux qu'un utilisateur SharePoint a spécifiés. Lorsque vous fermez le concepteur de requêtes, vous voyez ces noms dans la collection de champs de dataset dans le volet des données de rapport. La relation entre les noms uniques et les noms conviviaux est disponible dans la page [Boîte de dialogue Propriétés du dataset, Champs &#40;Générateur de rapports&#41;](http://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42).  
+-   **Champs sélectionnés**  Affiche les champs que vous avez sélectionnés. Les noms des champs dans ce volet sont des noms conviviaux qu'un utilisateur SharePoint a spécifiés. Lorsque vous fermez le concepteur de requêtes, vous voyez ces noms dans la collection de champs de dataset dans le volet des données de rapport. La relation entre les noms uniques et les noms conviviaux est disponible dans la page [Boîte de dialogue Propriétés du dataset, Champs &#40;Générateur de rapports&#41;](https://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42).  
   
 -   **Filtres appliqués**  Limite les données retournées à partir de la liste SharePoint, avant que les données ne soient retournées vers le rapport. Sélectionnez le nom de champ, l'opérateur et la valeur à utiliser pour limiter les données récupérées dans la liste. Les opérateurs varient selon le type de données de la valeur que vous sélectionnez.  
   
@@ -169,7 +169,7 @@ Utilisez les informations de cette rubrique pour générer une source de donnée
  [Datasets de rapport &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
  Fournit une vue d'ensemble de l'accès aux données pour votre rapport.  
   
- [Connexions de données, sources de données et chaînes de connexion dans le Générateur de rapports](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
+ [Connexions de données, sources de données et chaînes de connexion dans le Générateur de rapports](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
  Fournit des informations sur les connexions de données et les sources de données.  
   
  [Datasets incorporés dans le rapport et datasets partagés &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
@@ -178,7 +178,7 @@ Utilisez les informations de cette rubrique pour générer une source de donnée
  [Collection de champs de dataset &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
  Fournit des informations sur la collection de champs de dataset générée par la requête.  
   
- [Sources de données prises en charge par Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) dans la section [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de la [documentation en ligne](http://go.microsoft.com/fwlink/?linkid=121312) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ [Sources de données prises en charge par Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) dans la section [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de la [documentation en ligne](https://go.microsoft.com/fwlink/?linkid=121312) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
  Fournit des informations détaillées sur la prise en charge des plateformes et des versions pour chaque extension de données.  
 
 ## <a name="see-also"></a> Voir aussi
@@ -187,4 +187,4 @@ Utilisez les informations de cette rubrique pour générer une source de donnée
 [Filtrer, regrouper et trier des données](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
 [Expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
 
-D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

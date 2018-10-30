@@ -10,16 +10,16 @@ ms.assetid: 048169b3-512c-41e4-895a-0416eff41268
 author: markingmyname
 ms.author: maghan
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: b098ffb4559393d3ca1b309b8310e4c3df65f475
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 18d5e095789c1f7a240925130821c8adb639fe7b
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772867"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028368"
 ---
 # <a name="install-reporting-services-2016-at-the-command-prompt"></a>Installer Reporting Services 2016 à partir de l’invite de commandes
 
-[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-not-2017](../../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)])
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-not-2017](../../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
 
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] prend en charge l’installation à partir de la ligne de commande du programme d’installation de SQL Server. Cette rubrique contient plusieurs exemples d'installations à partir de la ligne de commande spécifiques à [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Pour obtenir une description complète des options de ligne de commande disponibles pour tous les composants SQL Server, consultez [Installer SQ  Server à partir de l’invite de commandes](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md). Cette rubrique ne décrit pas les options de ligne de commande du complément [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour les produits SharePoint. Pour plus d’informations sur l’installation du complément à partir de la ligne de commande, consultez [Installer le complément à l’aide du fichier d’installation rsSharePoint.msi](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md#bkmk_install_rssharepoint).
 
@@ -86,6 +86,6 @@ Setup.exe /q /ACTION="Upgrade" /INSTANCENAME="MSSQLSERVER" /PID="[Your PID Value
 
 [Installer SQL Server à partir de l’invite de commandes](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)   
 [Paramètres SysPrep](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#SysPrep)   
-[Installer Power Pivot à partir de l’invite de commandes](http://msdn.microsoft.com/7f1f2b28-c9f5-49ad-934b-02f2fa6b9328)  
+[Installer Power Pivot à partir de l’invite de commandes](https://msdn.microsoft.com/7f1f2b28-c9f5-49ad-934b-02f2fa6b9328)  
 
-D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

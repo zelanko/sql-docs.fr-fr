@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4e50733e-bd8c-4bf6-8379-98b1531bb9ca
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7fa941d5c7229eeba45e52bddb2b434d3cae44da
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ade8f4233e2cf830ecd17fe1626098f786312f01
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47643307"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099910"
 ---
 # <a name="configure-the-unattended-execution-account-ssrs-configuration-manager"></a>Configurer le compte d'exécution sans assistance (Gestionnaire de configuration de SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fournit un compte spécial utilisé pour le traitement de rapport sans assistance et pour l'envoi de demandes de connexion par le biais du réseau. Le compte est utilisé des façons suivantes :  
@@ -56,7 +56,7 @@ ms.locfileid: "47643307"
   
      **rsconfig -e -u\<domaine/nom utilisateur> -p\<mot de passe>**  
   
- **rsconfig -e** prend en charge d’autres arguments. Pour plus d’informations sur la syntaxe et pour obtenir des exemples de commande, consultez [Utilitaire rsconfig&#40;SSRS&#41;](../../reporting-services/tools/rsconfig-utility-ssrs.md) dans la documentation en ligne de SQL Server.  
+ **rsconfig -e** prend en charge d’autres arguments. Pour plus d’informations sur la syntaxe et pour obtenir des exemples de commande, consultez [Utilitaire rsconfig&#40;SSRS&#41;](../../reporting-services/tools/rsconfig-utility-ssrs.md) dans la documentation en ligne de SQL Server.  
   
 ### <a name="how-account-information-is-stored"></a>Comment les informations sur le compte sont stockées  
  Lorsque vous définissez le compte, les paramètres suivants sont spécifiés comme valeurs chiffrées dans le fichier RSreportserver.config sur une instance de serveur de rapports locale ou distante :  
@@ -101,6 +101,6 @@ ms.locfileid: "47643307"
  Les informations de compte sont supprimées du fichier RSReportServer.config.  
   
 ## <a name="see-also"></a> Voir aussi  
- [Gestionnaire de configurations de Reporting Services (SSRS en mode natif)](http://msdn.microsoft.com/en-us/379eab68-7f13-4997-8d64-38810240756e)  
+ [Gestionnaire de configurations de Reporting Services (SSRS en mode natif)](https://msdn.microsoft.com/379eab68-7f13-4997-8d64-38810240756e)  
   
   

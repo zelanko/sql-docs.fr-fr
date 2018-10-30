@@ -8,16 +8,16 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d0223f4df57498da9c018c65c0cf690225d4178c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e20440d6b70a4e70bf92d1789ef944f332d3dafc
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47817497"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021243"
 ---
 # <a name="back-up-and-restore-reporting-services-sharepoint-service-applications"></a>Sauvegarder et restaurer des applications de service Reporting Services SharePoint
 
-[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)])
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
@@ -71,9 +71,9 @@ Pour sauvegarder l'application de service, procédez comme suit :
   
  Pour plus d'informations, consultez les rubriques suivantes dans la documentation de SharePoint :  
   
- [Enregistrer une application de service (SharePoint Foundation 2010) dans la documentation SharePoint](http://msdn.microsoft.com/library/ee748601.aspx).  
+ [Enregistrer une application de service (SharePoint Foundation 2010) dans la documentation SharePoint](https://msdn.microsoft.com/library/ee748601.aspx).  
   
- [Enregistrer une application de service (SharePoint Server 2010)](http://technet.microsoft.com/library/ee428318.aspx)  
+ [Enregistrer une application de service (SharePoint Server 2010)](https://technet.microsoft.com/library/ee428318.aspx)  
   
 ### <a name="verify-execution-account-and-database-authentication"></a>Vérifier le compte d’exécution et l’authentification de la base de données
 
@@ -125,7 +125,7 @@ Pour sauvegarder l'application de service, procédez comme suit :
   
  Pour plus d'informations, consultez les rubriques suivantes dans la documentation de SharePoint :  
   
- [Restaurer une application de service (SharePoint Foundation 2010)](http://msdn.microsoft.com/library/ee748615.aspx).  
+ [Restaurer une application de service (SharePoint Foundation 2010)](https://msdn.microsoft.com/library/ee748615.aspx).  
   
  [Restaurer une application de service (SharePoint Server 2010)](https://technet.microsoft.com/library/ee428305.aspx).  
 
@@ -161,4 +161,4 @@ Pour sauvegarder l'application de service, procédez comme suit :
   
 6.  Sélectionnez **OK**.
 
-D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

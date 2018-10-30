@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8c8c7d2e-b315-418d-bf65-90e7685e4259
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1d570d67c1ecc43d04ffbfc748951b8cde2b3619
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e42aec0a8630d26b7831217418f35197bc338567
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644417"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030608"
 ---
 # <a name="start-report-builder"></a>Démarrer le Générateur de rapports
 
@@ -28,7 +28,7 @@ ms.locfileid: "47644417"
  
 ![report-builder-get-report-builder](../../reporting-services/report-builder/media/report-builder-get-report-builder.png) 
  
- Le Générateur de rapports peut également être [installé sur votre ordinateur par un administrateur ou par vous-même à partir du Centre de téléchargement Microsoft](http://go.microsoft.com/fwlink/?LinkID=219138). Pour plus d’informations, consultez « Installer le Générateur de rapports avec Systems Manager Server » dans [Installer le Générateur de rapports](../../reporting-services/install-windows/install-report-builder.md) .
+ Le Générateur de rapports peut également être [installé sur votre ordinateur par un administrateur ou par vous-même à partir du Centre de téléchargement Microsoft](https://go.microsoft.com/fwlink/?LinkID=219138). Pour plus d’informations, consultez « Installer le Générateur de rapports avec Systems Manager Server » dans [Installer le Générateur de rapports](../../reporting-services/install-windows/install-report-builder.md) .
  
  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] n’est pas installé lorsque vous installez SQL Server Reporting Services ; vous devez le télécharger et l’installer séparément.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "47644417"
   
      Lorsque vous l’effectuez pour la première fois, cette opération lance l’Assistant [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] SQL Server. Pour plus d'informations, consultez [Install Report Builder](../../reporting-services/install-windows/install-report-builder.md) .  
   
-     Le [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] s’ouvre, et vous permet de créer un rapport paginé ou d’ouvrir un rapport sur le serveur de rapports.  
+     [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] s’ouvre, et vous pouvez alors créer un rapport paginé ou ouvrir un rapport sur le serveur de rapports.  
   
      **Remarque** Si le menu **Nouveau document** n’inclut pas **Rapport du Générateur de rapports**, **Modèle du générateur de rapports**ni **Source de données du rapport**, il convient d’ajouter les types de contenus correspondants à la bibliothèque SharePoint. Pour plus d’informations, consultez [Ajouter des types de contenus Reporting Services à une bibliothèque SharePoint](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md).  
 
@@ -67,4 +67,4 @@ ms.locfileid: "47644417"
 [Générateur de rapports dans SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
 [Définir les options par défaut du Générateur de rapports](../../reporting-services/report-builder/set-default-options-for-report-builder.md)  
 
-D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -12,22 +12,22 @@ helpviewer_keywords:
 ms.assetid: 851a19a8-07ab-4d42-992f-1986c4c8df55
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 12c0dda2fb1a9a01cdaf0d3a1077aef54e388ebe
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9e7dfa2d347f020fc0514536680dce4343ee625c
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840277"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021453"
 ---
 # <a name="upgrade-and-migrate-reporting-services"></a>Upgrade and Migrate Reporting Services
 
-[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)])
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
 
   Cette rubrique propose une vue d’ensemble des options de mise à niveau et de migration pour SQL Server Reporting Services. La mise à niveau d’un déploiement de SQL Server Reporting Services peut se faire selon deux approches générales :  
   
 -   **Mise à niveau :** vous mettez à niveau les composants [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sur les serveurs et instances où ils sont installés. Cela s'appelle communément une mise à niveau « sur place ». La mise à niveau sur place n'est pas prise en charge d'un mode de serveur [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] à un autre. Par exemple, vous ne pouvez pas mettre à niveau un serveur de rapports en mode natif vers un serveur de rapports en mode SharePoint. vous pouvez migrer vos éléments de rapport d'un mode à l'autre. Pour plus d'informations, consultez la section « Migration du mode natif au mode SharePoint » plus loin dans ce document.  
   
--   **Migration**: vous installez et configurez un nouvel environnement SharePoint, copiez vos éléments de rapport et ressources dans le nouvel environnement et configurez le nouvel environnement de façon à utiliser le contenu existant. une forme de migration de niveau inférieur consiste à copier les bases de données [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , les fichiers de configuration, et si vous utilisez le mode SharePoint, les bases de données de contenu SharePoint.  
+-   **Migration**: vous installez et configurez un nouvel environnement SharePoint, copiez vos éléments de rapport et ressources dans le nouvel environnement et configurez le nouvel environnement de façon à utiliser le contenu existant. une forme de migration de niveau inférieur consiste à copier les bases de données [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], les fichiers de configuration, et si vous utilisez le mode SharePoint, les bases de données de contenu SharePoint.  
     
 > **[!INCLUDE[applies](../../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode natif &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode SharePoint
   
@@ -37,7 +37,7 @@ ms.locfileid: "47840277"
 > [!TIP]  
 >  Pour obtenir les dernières informations concernant les problèmes relatifs à SQL Server, consultez les ressources suivantes :  
 >   
->  -   [Notes de publication de SQL Server 2016](http://go.microsoft.com/fwlink/?LinkID=398124).  
+>  -   [Notes de publication de SQL Server 2016](https://go.microsoft.com/fwlink/?LinkID=398124).  
   
   
 ##  <a name="bkmk_side_by_side"></a> Installations côte à côte  
@@ -230,17 +230,17 @@ ms.locfileid: "47840277"
   
 -   [Présentation de la procédure de mise à niveau vers SharePoint 2016](https://technet.microsoft.com/library/cc262483\(v=office.16\)).
 
--   [Présentation de la procédure de mise à niveau vers SharePoint 2013](http://go.microsoft.com/fwlink/p/?LinkId=256688).
+-   [Présentation de la procédure de mise à niveau vers SharePoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256688).
   
--   [Nettoyer les préparations avant la mise à niveau vers SharePoint 2013](http://go.microsoft.com/fwlink/p/?LinkId=256689).  
+-   [Nettoyer les préparations avant la mise à niveau vers SharePoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256689).  
   
 -   [Mettre à niveau les bases de données de SharePoint 2013 vers SharePoint 2016](https://technet.microsoft.com/library/cc303436\(v=office.16\)).
 
--   [Mettre à niveau les bases de données de SharePoint 2010 vers SharePoint 2013](http://go.microsoft.com/fwlink/p/?LinkId=256690).  
+-   [Mettre à niveau les bases de données de SharePoint 2010 vers SharePoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256690).  
 
 ## <a name="next-steps"></a>Étapes suivantes
 
 [Rapports de mise à niveau](../../reporting-services/install-windows/upgrade-reports.md)   
 [Effectuer une mise à niveau vers SQL Server 2016 à l’aide de l’Assistant Installation &#40;programme d’installation&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)  
 
-D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

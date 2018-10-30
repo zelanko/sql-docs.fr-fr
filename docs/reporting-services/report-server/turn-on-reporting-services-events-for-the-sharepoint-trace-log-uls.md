@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 81110ef6-4289-405c-a931-e7e9f49e69ba
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 440d78222dff3bdbbc1918e563671f5735a76df6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ee9c57eff9572632d40147007b9be8e669702a3a
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47651622"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50020373"
 ---
 # <a name="turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls"></a>Activer des événements Reporting Services pour le journal des traces SharePoint (ULS)
 
@@ -146,11 +146,11 @@ Get-content -path "C:\Program Files\Common Files\Microsoft Shared\Web Server Ext
   
  Il existe également des outils que vous pouvez télécharger pour lire des journaux ULS. Par exemple, [SharePoint LogViewer](https://github.com/hasankhan/SharePointLogViewer), disponible sur GitHub. 
   
- Pour plus d’informations sur l’utilisation de PowerShell pour afficher les données du journal, consultez [Afficher les journaux de diagnostic (SharePoint Server 2010)](http://technet.microsoft.com/library/ff463595.aspx).  
+ Pour plus d’informations sur l’utilisation de PowerShell pour afficher les données du journal, consultez [Afficher les journaux de diagnostic (SharePoint Server 2010)](https://technet.microsoft.com/library/ff463595.aspx).  
   
 ##  <a name="bkmk_trace"></a> Emplacement du journal des traces  
  Les fichiers journaux des traces se trouvent généralement dans le dossier **c:\Program Files\Common files\Microsoft Shared\Web Server Extensions\14\logs** , mais vous pouvez vérifier ou modifier le chemin d’accès à partir de la page **Journalisation des diagnostics** dans l’Administration centrale de SharePoint.  
   
- Pour plus d’informations et pour connaître les étapes permettant de configurer la journalisation des diagnostics sur un serveur SharePoint dans l’Administration centrale de SharePoint 2010, consultez [Configurer les paramètres de journalisation des diagnostics (Windows SharePoint Services)](http://go.microsoft.com/fwlink/?LinkID=114423).  
+ Pour plus d’informations et pour connaître les étapes permettant de configurer la journalisation des diagnostics sur un serveur SharePoint dans l’Administration centrale de SharePoint 2010, consultez [Configurer les paramètres de journalisation des diagnostics (Windows SharePoint Services)](https://go.microsoft.com/fwlink/?LinkID=114423).  
 
-D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

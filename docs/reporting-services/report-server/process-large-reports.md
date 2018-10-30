@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c5275a9f-c95b-46d7-bc62-633879a8a291
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0aada8f512db681b4522dcaa24d71c1903901947
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 89293d1ed4f4c70306f5f6d0a31238830e2313e6
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47651877"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50020183"
 ---
 # <a name="process-large-reports"></a>Traiter les rapports volumineux
   Les rapports volumineux présentent certains problèmes de traitement. Ils nécessitent un certain nombre de configurations pour garantir leur fonctionnement correct. Ils ne doivent pas être exécutés à la demande, à moins d'être configurés pour prendre en charge la pagination.  
@@ -31,7 +31,7 @@ ms.locfileid: "47651877"
   
  La taille des rapports contenant des données volatiles peut changer considérablement d'une exécution à l'autre. Dans ce cas, vous devez analyser la source des données pour déterminer de quelle façon la volatilité des données agit sur ces rapports, afin de savoir si vous devez suivre les recommandations prodiguées dans la présente rubrique.  
   
- Pour plus d’informations et de conseils sur le diagnostic des erreurs de délai d’attente et des erreurs d’insuffisance de mémoire, consultez l’article [Comment diagnostiquer des problèmes lors de l'exécution de rapports sur le serveur de rapports](http://go.microsoft.com/fwlink/?LinkId=85634) sur blogs.msdn.com.  
+ Pour plus d’informations et de conseils sur le diagnostic des erreurs de délai d’attente et des erreurs d’insuffisance de mémoire, consultez l’article [Comment diagnostiquer des problèmes lors de l'exécution de rapports sur le serveur de rapports](https://go.microsoft.com/fwlink/?LinkId=85634) sur blogs.msdn.com.  
   
 ## <a name="configuration-recommendations"></a>Recommandations relatives à la configuration  
  Les recommandations concernant l'accès, l'exécution et le rendu des rapports sont les suivantes :  

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0a03939e-48ce-4c30-b227-98533f2e0ccb
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 91e4536925b37277f81ccafe41b6a30c6dc52504
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c926fc1c7c7e2b01efade00997b955a6de6328b1
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47657449"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031478"
 ---
 # <a name="add-an-assembly-reference-to-a-report-ssrs"></a>Ajouter une référence d'assembly à un rapport (SSRS)
   Lorsque vous incorporez du code personnalisé qui contient des références aux classes [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] qui ne sont pas dans <xref:System.Math> ou <xref:System.Convert>, vous devez fournir une référence d’assembly au rapport afin que le processeur de rapports puisse résoudre les noms. Pour plus d’informations, consultez [Ajouter du code à un rapport &#40;SSRS&#41;](../../reporting-services/report-design/add-code-to-a-report-ssrs.md).  
@@ -41,6 +41,6 @@ ms.locfileid: "47657449"
   
 ## <a name="see-also"></a> Voir aussi  
  [Utilisation d'assemblys personnalisés avec des rapports](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)   
- [Boîte de dialogue Propriétés du rapport, Références](http://msdn.microsoft.com/library/4639d368-9918-4bb1-9953-7a724ca78dea)  
+ [Boîte de dialogue Propriétés du rapport, Références](https://msdn.microsoft.com/library/4639d368-9918-4bb1-9953-7a724ca78dea)  
   
   

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 8d831356-7efa-40cc-ae95-383b3eecf833
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 74d29eb991036979b37d3a527f7b323fb5ee1021
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 36fc882093d13b366419015f058d6e889dfe4f05
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596383"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029388"
 ---
 # <a name="tutorial-map-report-report-builder"></a>Didacticiel : Rapport cartographique (Générateur de rapports)
 Dans ce didacticiel [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] , vous allez découvrir les fonctionnalités cartographiques que vous pouvez utiliser pour afficher des données sur un arrière-plan géographique d’un rapport paginé [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] . 
@@ -32,7 +32,7 @@ Dans ce didacticiel, vous créez un rapport cartographique qui affiche les empla
 Durée estimée pour effectuer ce didacticiel : 30 minutes.  
   
 ## <a name="requirements"></a>Spécifications  
-Pour ce didacticiel, le serveur de rapports doit être configuré pour prendre en charge les cartes Bing comme arrière-plan. Pour plus d’informations, consultez [Planifier la prise en charge de rapport cartographique](http://msdn.microsoft.com/5ddc97a7-7ee5-475d-bc49-3b814dce7e19). 
+Pour ce didacticiel, le serveur de rapports doit être configuré pour prendre en charge les cartes Bing comme arrière-plan. Pour plus d’informations, consultez [Planifier la prise en charge de rapport cartographique](https://msdn.microsoft.com/5ddc97a7-7ee5-475d-bc49-3b814dce7e19). 
 
 Pour plus d’informations sur les autres spécifications, consultez [Éléments requis pour les didacticiels &#40;Générateur de rapports&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   

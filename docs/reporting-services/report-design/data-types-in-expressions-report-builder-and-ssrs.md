@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 94fdf921-270c-4c12-87b3-46b1cc98fae5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 168bd862f78b10726b3d62146fa41a6a3620d16d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b7f3fa31092f6406ffd3d49b227a2fa3deba8e82
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47619978"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030668"
 ---
 # <a name="data-types-in-expressions-report-builder-and-ssrs"></a>Types de données dans les expressions (Générateur de rapports et SSRS)
   Les données sont représentées par différents types de données permettant de les stocker et de les traiter de manière efficace. Les types de données typiques incluent du texte (également appelé chaînes), des numéros avec et sans décimales, des dates, des heures et des images. Les valeurs dans un rapport doivent être un type de données RDL (Report Definition Language). Vous pouvez mettre en forme une valeur selon votre préférence lorsque vous l'affichez dans un rapport. Par exemple, un champ qui représente une devise est stocké dans la définition de rapport sous la forme d'un nombre à virgule flottante, mais peut être affiché sous divers formats en fonction de la propriété de format choisie.  
@@ -87,7 +87,7 @@ ms.locfileid: "47619978"
 |Uniquement la partie DateTime d'une valeur DateTimeOffset|`=Fields!MyDatetimeOffset.Value.DateTime`|  
 |Uniquement la partie Offset d'une valeur DateTimeOffset|`=Fields!MyDatetimeOffset.Value.Offset`|  
   
- Vous pouvez également utiliser la fonction Format pour contrôler le format d'affichage de la valeur. Pour plus d’informations, consultez [Fonctions (Visual Basic)](http://go.microsoft.com/fwlink/?linkid=111483).  
+ Vous pouvez également utiliser la fonction Format pour contrôler le format d'affichage de la valeur. Pour plus d’informations, consultez [Fonctions (Visual Basic)](https://go.microsoft.com/fwlink/?linkid=111483).  
   
 ## <a name="advanced-examples"></a>Exemples avancés  
  Lorsque vous vous connectez à une source de données par le biais d'un fournisseur de données qui ne prend pas en charge la conversion de tous les types de données de la source, le type de données par défaut utilisé pour les types de source de données non pris en charge est Chaîne. Les exemples suivants proposent des solutions pour les types de données spécifiques retournés en tant que chaîne.  
@@ -116,7 +116,7 @@ ms.locfileid: "47619978"
   
          Si la chaîne `MyDateTime.Value` utilise un décalage UTC, la fonction `DateTime.Parse` ajuste tout d'abord le décalage UTC (7 A.M. - [`+08:00`] de manière à afficher l'heure UTC 11 P.M. la nuit précédente). La fonction `DateTime.Parse` applique ensuite le décalage UTC du serveur de rapports local et, si nécessaire, ajuste à nouveau l'heure pour tenir compte de l'heure d'été. Par exemple, à Redmond, dans l'état de Washington, le décalage horaire local ajusté pour tenir compte de l'heure d'été est `[-07:00]`, ou 7 heures avant 11 PM. Le résultat correspond à la valeur **DateTime** suivante : `2007-07-06 04:07:07 PM` (6 juillet 2007 à 4:07 P.M).  
   
- Pour plus d’informations sur la conversion de chaînes en types de données **DateTime** , consultez les rubriques [Analyse des chaînes de date/heure](http://go.microsoft.com/fwlink/?LinkId=89703), [Mise en forme de la date et de l’heure pour une culture spécifique](http://go.microsoft.com/fwlink/?LinkId=89704)et [Choosing Between DateTime, DateTimeOffsetet TimeZoneInfo](http://go.microsoft.com/fwlink/?linkid=110652) dans la bibliothèque MSDN.  
+ Pour plus d’informations sur la conversion de chaînes en types de données **DateTime** , consultez les rubriques [Analyse des chaînes de date/heure](https://go.microsoft.com/fwlink/?LinkId=89703), [Mise en forme de la date et de l’heure pour une culture spécifique](https://go.microsoft.com/fwlink/?LinkId=89704)et [Choosing Between DateTime, DateTimeOffsetet TimeZoneInfo](https://go.microsoft.com/fwlink/?linkid=110652) dans la bibliothèque MSDN.  
   
 -   Ajoutez un nouveau champ calculé au dataset du rapport qui utilise une expression pour extraire certaines parties de la chaîne. Pour plus d’informations, consultez [Ajouter, modifier ou actualiser des champs dans le volet des données de rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md).  
   

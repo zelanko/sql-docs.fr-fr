@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 6bee2f15-0e69-49c8-9689-b04544063b1d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e779abdd10eb5b71fa7d7bbf7a6d6938bf469c51
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 221fde16d239fa304c6f8dccbd90720d24b4b36d
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742567"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021513"
 ---
 # <a name="report-builder-functions---runningvalue-function"></a>Fonctions du Générateur de rapports - RunningValue
   Retourne un agrégat cumulé de toutes les valeurs numériques non Null spécifiées par l'expression, évaluée pour l'étendue donnée.  
@@ -46,7 +46,7 @@ RunningValue(expression, function, scope)
   
  **RunningValue** ne peut pas être utilisé dans une expression de filtre ou de tri.  
   
- Le jeu des données pour lequel la valeur d'exécution est calculée doit avoir le même type de données. Pour convertir des données qui ont plusieurs types de données numériques en un même type de données, utilisez des fonctions de conversion telles que **CInt**, **CDbl** ou **CDec**. Pour plus d'informations, consultez [Fonctions de conversion de types de données](http://go.microsoft.com/fwlink/?LinkId=96142).  
+ Le jeu des données pour lequel la valeur d'exécution est calculée doit avoir le même type de données. Pour convertir des données qui ont plusieurs types de données numériques en un même type de données, utilisez des fonctions de conversion telles que **CInt**, **CDbl** ou **CDec**. Pour plus d'informations, consultez [Fonctions de conversion de types de données](https://go.microsoft.com/fwlink/?LinkId=96142).  
   
  *Scope* ne peut pas être une expression.  
   

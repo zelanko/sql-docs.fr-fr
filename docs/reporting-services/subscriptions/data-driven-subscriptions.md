@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: ba009f62-0d4f-45e7-a27c-36fd5f0cd3a8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4d7c41d826b1dec0aca01080fb3482c03e5fa594
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d5bf68f2655a7ffb024d7458595fc0439a51817c
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608328"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50020643"
 ---
 # <a name="data-driven-subscriptions"></a>abonnements pilotés par les données
   Un abonnement piloté par les données constitue un moyen d'utiliser des données d'abonnement dynamiques extraites à partir d'une source de données externe au moment de l'exécution. Un abonnement piloté par les données peut également utiliser du texte statique et des valeurs par défaut que vous spécifiez au moment de définir l'abonnement. Vous pouvez vous servir d'abonnements pilotés par les données pour effectuer les opérations suivantes :  
@@ -42,7 +42,7 @@ ms.locfileid: "47608328"
 ## <a name="requirements-for-using-data-driven-subscriptions"></a>Configuration requise pour utiliser les abonnements pilotés par les données  
  La fonctionnalité d'abonnement piloté par les données n'est pas disponible dans toutes les éditions. Des restrictions s'appliquent également dans le cadre des types de sources de données que vous pouvez utiliser pour extraire des données d'abonnement au moment de l'exécution. La liste ci-dessous fournit de plus amples informations sur les exigences requises :  
   
--   Pour plus d’informations sur les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui prennent en charge la fonctionnalité d’abonnement piloté par les données, consultez [Fonctionnalités prises en charge par les éditions de SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
+-   Pour plus d’informations sur les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui prennent en charge la fonctionnalité d’abonnement piloté par les données, consultez [Fonctionnalités prises en charge par les éditions de SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473).  
   
 -   Pour les données d'abonnement, choisissez une source de données capable de fournir des informations sur les schémas au serveur de rapports. Les données relationnelles [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , les bases de données Oracle et [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , les données de package [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , les sources de données ODBC et les sources de données OLE DB sont des exemples de types de sources de données pris en charge. Pour plus d’informations sur les exigences relatives à la source de données des abonnés, consultez [Utiliser une source de données externe pour les données des abonnés &#40;abonnements pilotés par les données&#41;](../../reporting-services/subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md).  
   
@@ -58,7 +58,7 @@ ms.locfileid: "47608328"
   
 ## <a name="see-also"></a> Voir aussi  
  [Abonnements et remise &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [Page Créer un abonnement piloté par les données &#40;Gestionnaire de rapports&#41;](http://msdn.microsoft.com/library/814b4653-572a-48c7-847f-b310ba0f3046)   
+ [Page Créer un abonnement piloté par les données &#40;Gestionnaire de rapports&#41;](https://msdn.microsoft.com/library/814b4653-572a-48c7-847f-b310ba0f3046)   
  [Précharger le cache &#40;Gestionnaire de rapports&#41;](../../reporting-services/report-server/preload-the-cache-report-manager.md)  
   
   

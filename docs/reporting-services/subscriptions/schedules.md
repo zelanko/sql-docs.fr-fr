@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ecccd16b-eba9-4e95-b55d-f15c621e003f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b36a4528ac1a12ec1a59528e515530b1e009ba2a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0e91e3572d962ec9c819aae7f501b7b274f5c452
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47779663"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029568"
 ---
 # <a name="schedules"></a>Planifications
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fournit des **planifications partagées** et des **planifications spécifiques aux rapports** pour vous aider à contrôler le traitement et la distribution des rapports. La différence entre ces deux types de planifications réside dans la façon dont elles sont définies, stockées et gérées. La construction interne des deux types de planifications est la même. Toutes les planifications spécifient un type de périodicité : mensuelle, hebdomadaire ou quotidienne. Dans le type de périodicité, vous définissez les intervalles et la plage pour configurer la fréquence à laquelle un événement se produit. Qu'il s'agisse de créer une planification partagée ou une planification spécifique aux rapports, le type de périodicité et la façon dont elle est spécifiée restent inchangés.
@@ -29,7 +29,7 @@ ms.locfileid: "47779663"
   
 -   Les planifications spécifiques aux rapports sont créées lorsque vous définissez un abonnement ou configurez des propriétés d'exécution de rapport. L'entrée des informations de planification fait partie de la définition d'un abonnement ou du paramétrage des propriétés. Pour définir une planification spécifique aux rapports, ouvrez le rapport ou l'abonnement qui l'utilise.  
   
- Une planification partagée contient les informations de planification et de périodicité qui peuvent être utilisées par tous les rapports publiés et abonnements qui s'exécutent sur un serveur de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Si de nombreux rapports et abonnements s'exécutent en même temps, vous pouvez créer une planification partagée pour ces travaux. Si vous souhaitez modifier ultérieurement la périodicité ou la date de fin, vous pouvez effectuer cette modification à un seul emplacement.  
+ Une planification partagée contient les informations de planification et de périodicité qui peuvent être utilisées par tous les rapports publiés et abonnements qui s'exécutent sur un serveur de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Si de nombreux rapports et abonnements s'exécutent en même temps, vous pouvez créer une planification partagée pour ces travaux. Si vous souhaitez modifier ultérieurement la périodicité ou la date de fin, vous pouvez effectuer cette modification à un seul emplacement.  
   
  La maintenance des planifications partagées est plus facile à assurer ; par ailleurs, ces dernières vous apportent une plus grande souplesse de gestion des opérations planifiées. Par exemple, vous pouvez suspendre et reprendre des planifications partagées. En outre, si vous trouvez que trop d'opérations planifiées s'exécutent en même temps, vous pouvez créer plusieurs planifications partagées qui s'exécutent à des heures différentes, puis vous pouvez ajuster les informations de planification de sorte que la charge de traitement soit répartie de manière égale sur le serveur de rapports.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "47779663"
  Pour plus d'informations sur la création et la gestion des planifications, consultez [Create, Modify, and Delete Schedules](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md).  
   
 > [!NOTE]  
->  Les opérations de planification ne sont pas disponibles dans toutes les édition de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prises en charge par les éditions de SQL Server 2016](http://msdn.microsoft.com/library/22ad82d7-860c-43d3-b77a-77fb9eec5454).  
+>  Les opérations de planification ne sont pas disponibles dans toutes les édition de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prises en charge par les éditions de SQL Server 2016](https://msdn.microsoft.com/library/22ad82d7-860c-43d3-b77a-77fb9eec5454).  
   
 ##  <a name="bkmk_compare"></a> Comparaison entre les planifications partagées et les planifications spécifiques aux rapports  
  Les deux types de planification produisent le même résultat.  
@@ -133,7 +133,7 @@ ms.locfileid: "47779663"
 ## <a name="see-also"></a> Voir aussi  
  [Créer, modifier et supprimer des instantanés dans l'historique de rapport](../../reporting-services/report-server/create-modify-and-delete-snapshots-in-report-history.md)   
  [Abonnements et remise &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [Abonnements pilotés par les données](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
+ [Data-Driven Subscriptions](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
  [Mise en cache de rapports &#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md)   
  [Gestion du contenu du serveur de rapports &#40;SSRS en mode natif&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
  [Mettre en cache les datasets partagés &#40;SSRS&#41;](../../reporting-services/report-server/cache-shared-datasets-ssrs.md)  

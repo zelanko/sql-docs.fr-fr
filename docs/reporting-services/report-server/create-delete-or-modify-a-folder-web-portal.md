@@ -8,19 +8,19 @@ ms.topic: conceptual
 ms.assetid: 70a38879-856c-414b-8479-5f9dead38f15
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9f7e2565f5c2eaa493fe371b0f0a590618e06f76
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 73bc8332e4a0c6d86e9ef57b5fc6c94d39cbafae
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686027"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021654"
 ---
 # <a name="create-delete-or-modify-a-folder-web-portal"></a>Créer, supprimer ou modifier un dossier (portail web)
   Vous pouvez créer des dossiers pour organiser et gérer les éléments à publier sur un serveur de rapports. La création de dossiers peut permettre aux utilisateurs de rechercher les rapports qui les intéressent. Pour les gestionnaires de contenu, les dossiers fournissent l'infrastructure nécessaire à l'application d'autorisations. Vous pouvez créer des attributions de rôles pour des dossiers spécifiques afin de restreindre l'accès aux rapports en cours de développement ou dont la diffusion doit être restreinte.  
   
 #### <a name="to-create-a-folder"></a>Pour créer un dossier  
   
-1.  Démarrez le [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
+1.  Démarrez le [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
 2.  Dans le portail web, sélectionnez **Dossier** sous le menu déroulant **Nouveau** . Une autre solution consiste à créer un dossier sous un dossier existant, à accéder à ce dossier, puis à sélectionner **Dossier** sous le menu déroulant **Nouveau** .  
   

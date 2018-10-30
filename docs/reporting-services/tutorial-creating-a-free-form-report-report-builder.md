@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 87288b59-faf2-4b1d-a8e4-a7582baedf2f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 17a6be9dcb025b1a7d654a954f8b42b817702223
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: d89562ce168d8cf5662fc7af96da3d89cdafe509
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906279"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021923"
 ---
 # <a name="tutorial-creating-a-free-form-report-report-builder"></a>Didacticiel : création d'un rapport au format libre (Générateur de rapports)
 Dans ce didacticiel, vous créez un rapport paginé qui fait office de newsletter. Chaque page affiche du texte statique, des éléments visuels de synthèse et des exemples de données de ventes détaillées.
@@ -505,7 +505,7 @@ Pour plus d’informations sur les listes, consultez :
 * [Créer des factures et des formulaires avec des listes](../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)
 * [Cellules, lignes et colonnes de région de données de tableau matriciel &#40;Générateur de rapports et SSRS&#41;](../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md).  
   
-Pour plus d’informations sur les concepteurs de requêtes, consultez [Concepteurs de requêtes &#40;Générateur de rapports&#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9) et [Interface utilisateur du concepteur de requêtes textuel &#40;Générateur de rapports&#41;](../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md).  
+Pour plus d’informations sur les concepteurs de requêtes, consultez [Concepteurs de requêtes &#40;Générateur de rapports&#41;](https://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9) et [Interface utilisateur du concepteur de requêtes textuel &#40;Générateur de rapports&#41;](../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md).  
   
 ## <a name="see-also"></a> Voir aussi  
 [Didacticiels du Générateur de rapports](../reporting-services/report-builder-tutorials.md) 

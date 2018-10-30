@@ -8,23 +8,23 @@ ms.topic: conceptual
 ms.assetid: eb5c6f4a-3ed5-430b-a712-d5ed4b6b9b2b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e6397e574376e652217ec909a02a47e0c9c26eae
-ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
+ms.openlocfilehash: d86215287683e9ff8ab3c7c01f410ff8b2fd0896
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48851905"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031958"
 ---
 # <a name="extended-protection-for-authentication-with-reporting-services"></a>Protection étendue de l'authentification avec Reporting Services
 
   La protection étendue est un ensemble d'améliorations apportées aux dernières versions du système d'exploitation [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. La protection étendue améliore la manière dont les applications protègent les informations d'identification et l'authentification. La fonctionnalité ne fournit pas directement de protection contre des attaques spécifiques telles que le transfert d'informations d'identification, mais offre une infrastructure aux applications telles que [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] afin d'appliquer la protection étendue de l'authentification.  
   
- La liaison de service et la liaison de canal figurent parmi les améliorations d'authentification les plus importantes de la protection étendue. La liaison de canal utilise un jeton de liaison de canal (FAO) afin de vérifier que le canal établi entre deux points d'arrêt n'a pas été compromis. La liaison de service utilise les noms de principaux du service (SPN) pour valider la destination prévue de jetons d'authentification. Pour plus d’informations générales sur la protection étendue, consultez [Integrated Windows Authentication with Extended Protection](http://go.microsoft.com/fwlink/?LinkId=179922)(Authentification Windows intégrée avec protection étendue).  
+ La liaison de service et la liaison de canal figurent parmi les améliorations d'authentification les plus importantes de la protection étendue. La liaison de canal utilise un jeton de liaison de canal (FAO) afin de vérifier que le canal établi entre deux points d'arrêt n'a pas été compromis. La liaison de service utilise les noms de principaux du service (SPN) pour valider la destination prévue de jetons d'authentification. Pour plus d’informations générales sur la protection étendue, consultez [Integrated Windows Authentication with Extended Protection](https://go.microsoft.com/fwlink/?LinkId=179922)(Authentification Windows intégrée avec protection étendue).  
   
 SQL Server Reporting Services (SSRS) prend en charge et applique la protection étendue qui a été activée dans le système d’exploitation et configurée dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Par défaut, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] accepte les demandes qui spécifient l'authentification Negotiate ou NTLM et peut donc tirer parti de la prise en charge de la protection étendue dans le système d'exploitation et des fonctionnalités de la protection étendue de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
 > [!IMPORTANT]  
->  Par défaut, Windows n'active pas la protection étendue. Pour plus d'informations sur l'activation de la protection étendue dans Windows, consultez [Protection étendue de l'authentification](http://go.microsoft.com/fwlink/?LinkID=178431). Le système d'exploitation et la pile d'authentification du client doivent tous les deux prendre en charge la protection étendue pour que l'authentification aboutisse. Vous devrez peut-être installer plusieurs mises à jour sur les systèmes d'exploitation plus anciens pour bénéficier d'une protection étendue à jour et prête à l'emploi sur l'ordinateur. Pour plus d’informations sur les développements les plus récents de la protection étendue, consultez les [informations mises à jour relatives à la protection étendue](http://go.microsoft.com/fwlink/?LinkId=183362).  
+>  Par défaut, Windows n'active pas la protection étendue. Pour plus d'informations sur l'activation de la protection étendue dans Windows, consultez [Protection étendue de l'authentification](https://go.microsoft.com/fwlink/?LinkID=178431). Le système d'exploitation et la pile d'authentification du client doivent tous les deux prendre en charge la protection étendue pour que l'authentification aboutisse. Vous devrez peut-être installer plusieurs mises à jour sur les systèmes d'exploitation plus anciens pour bénéficier d'une protection étendue à jour et prête à l'emploi sur l'ordinateur. Pour plus d’informations sur les développements les plus récents de la protection étendue, consultez les [informations mises à jour relatives à la protection étendue](https://go.microsoft.com/fwlink/?LinkId=183362).  
 
 ## <a name="reporting-services-extended-protection-overview"></a>Vue d'ensemble de la protection étendue Reporting Services
 
@@ -164,11 +164,11 @@ SSRS prend en charge et applique la protection étendue qui a été activée dan
 ## <a name="next-steps"></a>Étapes suivantes
 
 [Se connecter au moteur de base de données à l'aide de la protection étendue](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md)   
-[Extended Protection for Authentication Overview (en anglais)](http://go.microsoft.com/fwlink/?LinkID=177943)   
-[Integrated Windows Authentication with Extended Protection](http://go.microsoft.com/fwlink/?LinkId=179922)   
-[Microsoft Security Advisory: Extended protection for authentication (en anglais)](http://go.microsoft.com/fwlink/?LinkId=179923)   
+[Extended Protection for Authentication Overview (en anglais)](https://go.microsoft.com/fwlink/?LinkID=177943)   
+[Integrated Windows Authentication with Extended Protection](https://go.microsoft.com/fwlink/?LinkId=179922)   
+[Microsoft Security Advisory: Extended protection for authentication (en anglais)](https://go.microsoft.com/fwlink/?LinkId=179923)   
 [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md)   
 [RsReportServer.config Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
 [Méthode SetExtendedProtectionSettings &#40;WMI MSReportServer_ConfigurationSetting&#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-setextendedprotectionsettings.md)  
 
-D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

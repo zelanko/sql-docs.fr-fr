@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 59ddc4b8-9517-4d3f-9c88-a07e9907cecb
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8a57d7330dba6703b8cdcae264dc835113e4a0e4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ea2e2b6ef177f4c11d7655f4a4a66c159d40961a
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47594758"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029048"
 ---
 # <a name="saving-reports-report-builder"></a>Enregistrement des rapports (Générateur de rapports)
   Dans le Générateur de rapports, vous avez la possibilité d’enregistrer un rapport paginé sur un serveur de rapports [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , une bibliothèque SharePoint, un partage de fichiers sur lequel vous disposez d’une autorisation d’accès en écriture, ou sur votre ordinateur. 
@@ -62,7 +62,7 @@ Lorsque vous enregistrez un rapport, vous enregistrez en fait la définition de 
    
 ## <a name="see-also"></a> Voir aussi  
  [Rapports, parties de rapports et définitions de rapports &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
- [Installer et désinstaller le Générateur de rapports](http://msdn.microsoft.com/library/2c9a5814-17bf-4947-8fb3-6269e7caa416)   
+ [Installer et désinstaller le Générateur de rapports](https://msdn.microsoft.com/library/2c9a5814-17bf-4947-8fb3-6269e7caa416)   
  [Recherche, affichage et gestion des rapports &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Exporter des rapports &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)   
  [Imprimer des rapports &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)  

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 41947b4c-8ecf-4e4f-b30e-66e1d6692b74
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: dce1ca8367db90177d9a9093da2f7300d7409e45
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1db5322685b4bddb0ec6b468365b5a4206e6e96a
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47614487"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50100350"
 ---
 # <a name="managing-report-parts"></a>Gestion de parties de rapport
   Les parties de rapports peuvent être réutilisées dans les rapports paginés par plusieurs utilisateurs et dans plusieurs rapports. Les utilisateurs peuvent rechercher des parties de rapports sur le serveur et les ajouter à un rapport.  Les utilisateurs peuvent également être informés des mises à jour apportées à la partie de rapport sur le serveur et republier de nouvelles versions d'une partie de rapport. Ces actions de création du rapport peuvent être affectées et contrôlées par les autorisations de sécurité de Reporting Services.  Cette rubrique passe en revue les propriétés et le comportement des parties de rapports une fois que celles-ci sont sur le serveur.  
@@ -89,7 +89,7 @@ ms.locfileid: "47614487"
 ## <a name="see-also"></a> Voir aussi  
  [Parties de rapports et datasets dans le Générateur de rapports](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
  [Gestion du contenu du serveur de rapports &#40;SSRS en mode natif&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
- [Résoudre les problèmes liés aux parties de rapports (Générateur de rapports et SSRS)](http://msdn.microsoft.com/en-us/d9fe1932-46e7-421b-a8a9-4c54d9576e94)   
- [Parties de rapports dans le Concepteur de rapports &#40;SSRS&#41;](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md)  
+ [Résoudre les problèmes liés aux parties de rapports (Générateur de rapports et SSRS)](https://msdn.microsoft.com/d9fe1932-46e7-421b-a8a9-4c54d9576e94)   
+ [Parties de rapport dans le Concepteur de rapports &#40;SSRS&#41;](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md)  
   
   

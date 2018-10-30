@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0e709c96-7517-4547-8ef6-5632f8118524
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3e12399672c875368276e0322b2c16c860f64891
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: eba94f256e5b8a9f8d335076e65765d507622cea
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47728847"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030168"
 ---
 # <a name="enable-and-disable-client-side-printing-for-reporting-services"></a>Activer et désactiver l'impression côté client pour Reporting Services
 
@@ -111,4 +111,4 @@ Dim rs As New ReportingService()
 End Class 'Sample  
 ```
 
-D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: ddf50dd5-5314-42ff-97f4-c3a4a17cfcdd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c66eb9c4f9636cd77d78fd8e77ddc8f6f0b5c3d5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 263cd5cc24a293192c434c644c387f5678e120fe
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47795427"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031418"
 ---
 # <a name="formatting-axis-labels-on-a-chart-report-builder-and-ssrs"></a>Mise en forme des étiquettes des axes sur un graphique (Générateur de rapports et SSRS)
   Les types de graphiques basés sur les coordonnées (histogramme, graphique à barres, graphique en aires, graphique à points, graphique en courbes et graphique d'étendue) comportent deux axes qui sont utilisés pour classer des données en catégories et afficher les relations de données. Des types de mises en forme différents seront appliqués à chaque axe.  
@@ -105,7 +105,7 @@ ms.locfileid: "47795427"
   
  Vous pouvez définir un axe scalaire de deux façons :  
   
--   Sélectionnez l’option **Axe scalaire** de la boîte de dialogue **Propriétés de l’axe** . Cela ajoutera des valeurs numérique ou de date/d'heure à l'axe où il n'existe aucune valeur de regroupement de données. Pour plus d’informations, consultez [Boîte de dialogue Propriétés de l’axe, Options de l’axe &#40;Générateur de rapports et SSRS&#41;](http://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11).  
+-   Sélectionnez l’option **Axe scalaire** de la boîte de dialogue **Propriétés de l’axe** . Cela ajoutera des valeurs numérique ou de date/d'heure à l'axe où il n'existe aucune valeur de regroupement de données. Pour plus d’informations, consultez [Boîte de dialogue Propriétés de l’axe, Options de l’axe &#40;Générateur de rapports et SSRS&#41;](https://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11).  
   
 -   Sélectionnez un champ ou tapez une expression pour l’option **Champ de catégorie** de la boîte de dialogue **Propriétés de la série** . Le graphique ajoutera des intervalles d'axe pour toutes les valeurs du champ de catégorie que vous avez spécifié.  
   
