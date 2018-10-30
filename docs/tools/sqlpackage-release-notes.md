@@ -10,16 +10,34 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: kenvh
-ms.openlocfilehash: 55df71c62fddfe6d21abb27235b287963b946709
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c146426a9c325eec721e3289d711d0a00a632e2c
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47754330"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50050851"
 ---
 # <a name="sqlpackage-release-notes"></a>notes de publication de Sqlpackage
 
 **[Télécharger la version la plus récente](sqlpackage-download.md)**
+
+## <a name="sqlpackage-180"></a>sqlpackage 18.0
+
+Date de publication : 24 octobre 2018  
+Build : 15.0.4200.1 
+
+La version inclut les correctifs et les fonctionnalités suivantes :
+
+- Prise en charge ajoutée pour le niveau de compatibilité de base de données 150.
+- Prise en charge pour les Instances gérées.
+- Ajout MaxParallelism du paramètre de ligne de commande pour spécifier le degré de parallélisme pour les opérations de base de données.
+- Ajouter un paramètre de ligne de commande de AccessToken pour spécifier un jeton d’authentification lors de la connexion à SQL Server.
+- Prise en charge de types de données d’objet BLOB/CLOB flux pour les importations.
+- Prise en charge pour la fonction UDF scalaire option « INLINE ».
+- Prise en charge ajoutée pour la syntaxe de 'MERGE' table graphique.
+- Fixe non résolue pseudo-colonne pour les tables de graphique.
+- Correction de la création d’une base de données avec un fichier optimisé en mémoire groupes de tables optimisées en mémoire sont utilisés.
+- Fixe, y compris les propriétés étendues sur les tables externes.
 
 ## <a name="sqlpackage-178"></a>sqlpackage 17.8
 
@@ -29,7 +47,6 @@ Build : 14.0.4079.2
 La version inclut les correctifs suivants :
 
 - Amélioration des messages d’erreur pour les échecs de connexion, y compris le message d’exception SqlClient.
-- Ajout MaxParallelism du paramètre de ligne de commande pour spécifier le degré de parallélisme pour les opérations de base de données.
 - Prend en charge la compression des index sur les index de partition unique pour l’importation/exportation.
 - Correction d’un problème d’ingénierie inverse pour les jeux de colonnes XML avec SQL 2017 et versions ultérieures.
 - Correction du problème selon lequel les scripts du niveau de compatibilité de la base de données 140 étaient ignorés pour Azure SQL Database.
