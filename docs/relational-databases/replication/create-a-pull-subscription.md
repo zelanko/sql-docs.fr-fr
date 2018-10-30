@@ -45,7 +45,7 @@ ms.locfileid: "47781177"
   
     -   Pour les abonnements aux publications de fusion, spécifiez les informations d'identification dans la page **Sécurité de l'Agent de fusion** .  
   
-     Pour plus d'informations sur les autorisations requises par chaque agent, consultez [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
+     Pour plus d’informations sur les autorisations requises par chaque agent, consultez [Modèle de sécurité de l’Agent de réplication](../../relational-databases/replication/security/replication-agent-security-model.md).  
   
 -   Spécifiez une planification de la synchronisation et le moment choisi pour initialiser l'Abonné.  
   
@@ -92,7 +92,7 @@ ms.locfileid: "47781177"
   
     -   Si la valeur de **allow_pull** est **0**, exécutez [sp_changepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md), en spécifiant **allow_pull** pour **@property** et **true** pour **@value**.  
   
-2.  Sur l’Abonné, exécutez [sp_addpullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md). Spécifiez **@publisher** et **@publication**. Pour plus d'informations sur la mise à jour des abonnements, consultez [Create an Updatable Subscription to a Transactional Publication](publish/create-an-updatable-subscription-to-a-transactional-publication.md).   
+2.  Sur l’Abonné, exécutez [sp_addpullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md). Spécifiez **@publisher** et **@publication**. Pour plus d'informations sur la mise à jour des abonnements, consultez [Créer un abonnement pouvant être mis à jour pour une publication transactionnelle](publish/create-an-updatable-subscription-to-a-transactional-publication.md).   
   
 3.  Sur l’Abonné, exécutez [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md). Spécifiez les éléments suivants :  
   
@@ -105,7 +105,7 @@ ms.locfileid: "47781177"
   
     -   (Facultatif) Une valeur de **0** pour **@distributor_security_mode** et les informations de connexion SQL Server pour **@distributor_login** et **@distributor_password**, si vous devez utiliser l’authentification SQL Server lors de la connexion au serveur de distribution.  
   
-    -   Planification du travail de l'Agent de distribution pour cet abonnement. Pour plus d’informations, consultez [Specify Synchronization Schedules](../../relational-databases/replication/specify-synchronization-schedules.md).  
+    -   Planification du travail de l'Agent de distribution pour cet abonnement. Pour plus d’informations, consultez [Spécifier des planifications de synchronisation](../../relational-databases/replication/specify-synchronization-schedules.md).  
   
 4.  Sur le serveur de publication, exécutez [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) pour inscrire l’abonnement par extraction. Specify **@publication**, de **@subscriber**et **@destination_db**. Affectez la valeur **pull** pour **@subscription_type**.  
   
@@ -123,7 +123,7 @@ ms.locfileid: "47781177"
   
     -   **@subscription_priority** – Spécifiez la priorité de l'abonnement (de**0,00** à **99,99**). Ceci est requis uniquement pour un abonnement serveur.  
   
-         Pour plus d’informations, consultez [Advanced Merge Replication Conflict Detection and Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
+         Pour plus d’informations, consultez [Détection et résolution avancées des conflits de réplication de fusion](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   
 3.  Sur l’Abonné, exécutez [sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md). Spécifiez les paramètres suivants :  
   
@@ -138,7 +138,7 @@ ms.locfileid: "47781177"
   
     -   (Facultatif) La valeur **0** pour **@publisher_security_mode** et les informations de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour **@publisher_login** et **@publisher_password**, si vous devez utiliser l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lors de la connexion au serveur de publication.  
   
-    -   Une planification du travail de l'Agent de fusion pour cet abonnement. Pour plus d'informations, voir [Create an Updatable Subscription to a Transactional Publication](publish/create-an-updatable-subscription-to-a-transactional-publication.md).  
+    -   Une planification du travail de l'Agent de fusion pour cet abonnement. Pour plus d'informations, voir [Créer un abonnement pouvant être mis à jour pour une publication transactionnelle](publish/create-an-updatable-subscription-to-a-transactional-publication.md).  
   
 4.  Sur le serveur de publication, exécutez [sp_addmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md). Spécifiez **@publication**, de **@subscriber**, de **@subscriber_db**et la valeur **pull** pour **@subscription_type**. L'abonnement par extraction est inscrit.  
   
@@ -1125,7 +1125,7 @@ End Try
  [Concepts liés à RMO (Replication Management Objects)](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
  [Afficher et modifier les propriétés d’un abonnement par extraction](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)   
  [Configurer la synchronisation web](../../relational-databases/replication/configure-web-synchronization.md)   
- [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
- [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)  
+ [S’abonner aux Publications](../../relational-databases/replication/subscribe-to-publications.md)   
+ [Bonnes pratiques en matière de sécurité de la réplication](../../relational-databases/replication/security/replication-security-best-practices.md)  
   
   
