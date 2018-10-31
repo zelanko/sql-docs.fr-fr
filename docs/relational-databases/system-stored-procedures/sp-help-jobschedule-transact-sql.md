@@ -88,7 +88,7 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**schedule_uid**|**uniqueidentifier**|Identificateur de la planification.|  
 |**job_count**|**Int**|Nombre de travaux retournés.|  
   
-> **Remarque :****sp_help_jobschedule** retourne des valeurs à partir de la **dbo.sysjobschedules** et **dbo.sysschedules** tables système dans **msdb** .   **sysjobschedules** met à jour toutes les 20 minutes. Cela peut affecter les valeurs retournées par cette procédure stockée.  
+> **Remarque :** **sp_help_jobschedule** retourne des valeurs à partir de la **dbo.sysjobschedules** et **dbo.sysschedules** tables système dans **msdb** .   **sysjobschedules** met à jour toutes les 20 minutes. Cela peut affecter les valeurs retournées par cette procédure stockée.  
   
 ## <a name="remarks"></a>Notes  
  Les paramètres de **sp_help_jobschedule** peut être utilisé uniquement dans certaines combinaisons. Si *id_de_la_planification* est spécifié, ni *job_id* ni *nom_travail* peut être spécifié. Sinon, le *job_id* ou *nom_travail* paramètres peuvent être utilisés avec *nom_de_la_planification*.  
