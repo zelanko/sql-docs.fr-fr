@@ -79,7 +79,7 @@ Création de points de terminaison et la restauration des certificats n’est po
 Pour la syntaxe complète sur les options disponibles pour les différentes commandes (par exemple, de renforcer la sécurité), consultez :
 
 -   [BACKUP CERTIFICATE](../t-sql/statements/backup-certificate-transact-sql.md)
--   [CRÉER LE CERTIFICAT](../t-sql/statements/create-certificate-transact-sql.md)
+-   [CREATE CERTIFICATE](../t-sql/statements/create-certificate-transact-sql.md)
 -   [CREATE ENDPOINT](../t-sql/statements/create-endpoint-transact-sql.md)
 
 > [!NOTE]
