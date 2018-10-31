@@ -44,7 +44,7 @@ ms.locfileid: "49383564"
   
 -   [Procédure : consulter les tentatives de réparation de page automatique](#ViewAPRattempts)  
   
-##  <a name="ErrorTypes"></a> Error Types That Cause an Automatic Page-Repair Attempt  
+##  <a name="ErrorTypes"></a> Types d’erreurs qui provoquent une tentative de réparation de Page automatique  
  La réparation de page automatique de la mise en miroir de bases de données tente de réparer uniquement les pages situées dans un fichier de données sur lequel une opération a échoué en raison de l'une des erreurs répertoriées dans le tableau suivant.  
   
 |Numéro d'erreur|Description|Instances qui provoquent une tentative de réparation de page automatique|  
@@ -66,7 +66,7 @@ ms.locfileid: "49383564"
 -   Pages d'allocation : pages GAM (Global Allocation Map), pages SGAM(Shared Global Allocation Map) et pages PFS (Page Free Space).  
   
  
-##  <a name="PrimaryIOErrors"></a> Handling I/O Errors on the Principal/Primary Database  
+##  <a name="PrimaryIOErrors"></a> Gestion des erreurs d’e/s sur la base de données principale/primaire  
  Sur le principal/la base de données primaire, la réparation de page automatique est lancée uniquement lorsque la base de données est dans l'état SYNCHRONIZED et que le principal/la base de données primaire envoie encore des enregistrements de journal au serveur miroir/secondaire pour la base de données. La séquence de base pour les actions relatives à une tentative de réparation de page automatique est la suivante :  
   
 1.  Quand une erreur de lecture se produit sur une page de données sur le principal/la base de données primaire, ce dernier ou cette dernière insère une ligne dans la table [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) avec l’état d’erreur approprié. Pour la mise en miroir de bases de données, le principal demande ensuite une copie de la page au serveur miroir. Pour [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], le principal diffuse la demande à tous les serveurs secondaires et obtient la page du premier serveur qui répond. La demande spécifie l'ID de page et le numéro séquentiel dans le journal (Log Sequence Number ou LSN) se trouvant actuellement à la fin du journal vidé. La page est marquée comme *restauration en attente*, elle est par conséquent inaccessible pendant la tentative de réparation de page automatique. Les tentatives d'accès à cette page lors de la tentative de réparation échouent avec une erreur 829 (restauration en attente).  
@@ -80,7 +80,7 @@ ms.locfileid: "49383564"
 5.  Si l’erreur d’E/S de la page a provoqué des [transactions différées](../../relational-databases/backup-restore/deferred-transactions-sql-server.md), après la réparation de la page, le principal/la base de données primaire tente de résoudre ces transactions.  
   
  
-##  <a name="SecondaryIOErrors"></a> Handling I/O Errors on the Mirror/Secondary Database  
+##  <a name="SecondaryIOErrors"></a> Gestion des erreurs d’e/s sur la base de données miroir/secondaire  
  Les erreurs d'E/S sur les pages de données qui se produisent sur la base de données miroir/secondaire sont généralement gérées de la même manière par la mise en miroir de bases de données et par [!INCLUDE[ssHADR](../../includes/sshadr-md.md)].  
   
 1.  Avec la mise en miroir de bases de données, si le serveur miroir rencontre une ou plusieurs erreurs d'E/S de page lorsqu'il reconstruit un enregistrement de journal, la session de mise en miroir passe à l'état SUSPENDED. Avec [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], si un réplica secondaire rencontre une ou plusieurs erreurs d'E/S de page lorsqu'il reconstruit un enregistrement de journal, la base de données secondaire passe à l'état SUSPENDED. Le serveur miroir/secondaire insère alors une ligne dans la table **suspect_pages** avec l’état d’erreur approprié. Le serveur miroir/secondaire demande ensuite une copie de la page au principal/à la base de données primaire.  
