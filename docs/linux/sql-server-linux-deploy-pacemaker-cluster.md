@@ -20,9 +20,9 @@ ms.locfileid: "47750587"
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Ce didacticiel décrit les tâches requises pour déployer un cluster Linux Pacemaker pour un [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] toujours sur le groupe de disponibilité (AG) ou de l’instance de cluster de basculement (FCI). Contrairement à Windows Server étroitement couplé /[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] pile, la création du cluster Pacemaker comme configuration de groupe (AG) de disponibilité sur Linux peut être effectuée avant ou après l’installation de [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. L’intégration et la configuration des ressources pour la partie Pacemaker du déploiement d’un groupe de disponibilité ou une instance FCI est effectuée une fois que le cluster est configuré.
+Ce didacticiel décrit les tâches nécessaires pour déployer un cluster Linux Pacemaker pour un groupe de disponibilité [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] AlwaysOn ou une instance de cluster de basculement. Contrairement à la pile étroitement couplée Windows Server /[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)], la création du cluster Pacemaker et la configuration d'un groupe de disponibilité sur Linux peuvent être effectuées avant ou après l’installation de [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. L’intégration et la configuration des ressources pour la partie Pacemaker du déploiement d’un groupe de disponibilité ou d’une instance de cluster de basculement sont effectuées une fois que le cluster est configuré.
 > [!IMPORTANT]
-> Un groupe de disponibilité avec un type de cluster aucun est *pas* nécessitent un cluster Pacemaker, ni être géré par Pacemaker. 
+> Un groupe de disponibilité avec un cluster de type "Aucun" ne nécessite *pas* de cluster Pacemaker, et il ne peut pas être géré par Pacemaker. 
 
 > [!div class="checklist"]
 > * Installer le module complémentaire de haute disponibilité et Pacemaker.
