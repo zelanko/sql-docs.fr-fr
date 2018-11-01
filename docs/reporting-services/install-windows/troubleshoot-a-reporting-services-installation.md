@@ -165,7 +165,7 @@ ms.locfileid: "50020323"
   
 -   Consultez l’article SharePoint sur les environnements de développement. [Configuration d’un environnement de développement général pour SharePoint](https://msdn.microsoft.com/library/ee554869)  
   
--   Consultez la question du forum : [Central Administration returns blank page after installation on Windows 7](http://social.technet.microsoft.com/Forums/en/sharepoint2010setup/thread/a422a3c8-39f6-4b9e-988a-4c4d1e745694)  
+-   Consultez la question du forum : [Central Administration returns page vierge après l’installation sur Windows 7](http://social.technet.microsoft.com/Forums/en/sharepoint2010setup/thread/a422a3c8-39f6-4b9e-988a-4c4d1e745694)  
   
 -   Le compte de service que vous utilisez pour les services SharePoint tels que le service Administration centrale de SharePoint 2013/2016 doit être doté des privilèges d’administrateur du système d’exploitation local.  
   

@@ -42,7 +42,7 @@ Les extensions COM ne prennent pas en charge le multiciblage. Le concepteur SSIS
 
 ## <a name="add-basic-support-for-multiple-versions-and-multi-targeting"></a>Ajouter la prise en charge de base des versions multiples et du multiciblage
 
-Pour plus d’informations et des conseils, consultez [Getting your SSIS custom extensions to be supported by the multi-version support of SSDT 2015 for SQL Server 2016](https://blogs.msdn.microsoft.com/ssis/2016/04/19/getting-your-ssis-custom-extensions-to-be-supported-by-the-multi-version-support-of-ssdt-2015-for-sql-server-2016/). Ce billet de blog décrit les étapes et exigences suivantes :
+Pour plus d’informations et des conseils, consultez [bien vos extensions personnalisées SSIS pour être pris en charge par la prise en charge de plusieurs version de SSDT 2015 for SQL Server 2016](https://blogs.msdn.microsoft.com/ssis/2016/04/19/getting-your-ssis-custom-extensions-to-be-supported-by-the-multi-version-support-of-ssdt-2015-for-sql-server-2016/). Ce billet de blog décrit les étapes et exigences suivantes :
 
 -   Déployer vos assemblys dans les dossiers appropriés.
 
