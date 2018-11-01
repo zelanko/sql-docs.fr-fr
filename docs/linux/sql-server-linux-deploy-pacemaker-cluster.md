@@ -20,21 +20,21 @@ ms.locfileid: "47750587"
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Ce didacticiel décrit les tâches requises pour déployer un cluster Linux Pacemaker pour un [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] AlwaysOn dans un groupe de disponibilité (AG) ou une instance de cluster de basculement (FCI). Contrairement à Windows Server étroitement couplé à /[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)], la création du cluster Pacemaker comme la configuration d'un groupe (AG) de disponibilité sur Linux peuvent être effectuées avant ou après l’installation de [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. L’intégration et la configuration des ressources pour la partie Pacemaker du déploiement d’un groupe de disponibilité ou une instance FCI sont effectuées une fois que le cluster est configuré.
+Ce didacticiel décrit les tâches nécessaires pour déployer un cluster Linux Pacemaker pour un groupe de disponibilité [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] AlwaysOn ou une instance de cluster de basculement. Contrairement à la pile étroitement couplée Windows Server /[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)], la création du cluster Pacemaker et la configuration d'un groupe de disponibilité sur Linux peuvent être effectuées avant ou après l’installation de [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. L’intégration et la configuration des ressources pour la partie Pacemaker du déploiement d’un groupe de disponibilité ou d’une instance de cluster de basculement sont effectuées une fois que le cluster est configuré.
 > [!IMPORTANT]
-> Un groupe de disponibilité avec un cluster de type "aucun" ne nécessite  *pas*  un cluster Pacemaker, ni être géré par Pacemaker. 
+> Un groupe de disponibilité avec un cluster de type "Aucun" ne nécessite *pas* de cluster Pacemaker, et il ne peut pas être géré par Pacemaker. 
 
 > [!div class="checklist"]
 > * Installer le module complémentaire de haute disponibilité et Pacemaker.
 > * Préparer les nœuds pour Pacemaker (RHEL et Ubuntu uniquement).
-> * Créer le cluster Pacemaker.
+> * Créez le cluster Pacemaker.
 > * Installer les packages SQL Server à haute disponibilité et l’Agent SQL Server.
  
 ## <a name="prerequisite"></a>Condition préalable
 [Installer SQL Server 2017](sql-server-linux-setup.md).
 
 ## <a name="install-the-high-availability-add-on"></a>Installer le module complémentaire de haute disponibilité
-Utiliser la syntaxe suivante pour installer les packages qui composent le module complémentaire de haute disponibilité (HA) pour chaque distribution de Linux. 
+Utilisez la syntaxe suivante pour installer les packages qui composent le module complémentaire de haute disponibilité (HA) pour chaque distribution de Linux. 
 
 **Red Hat Enterprise Linux (RHEL)**
 1.  Inscrivez le serveur à l’aide de la syntaxe suivante. Vous êtes invité à un nom d’utilisateur valide et un mot de passe.
