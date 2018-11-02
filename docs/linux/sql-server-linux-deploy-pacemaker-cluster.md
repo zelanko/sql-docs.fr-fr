@@ -22,7 +22,7 @@ ms.locfileid: "47750587"
 
 Ce didacticiel décrit les tâches nécessaires pour déployer un cluster Linux Pacemaker pour un groupe de disponibilité [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] AlwaysOn ou une instance de cluster de basculement. Contrairement à la pile étroitement couplée Windows Server /[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)], la création du cluster Pacemaker et la configuration d'un groupe de disponibilité sur Linux peuvent être effectuées avant ou après l’installation de [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. L’intégration et la configuration des ressources pour la partie Pacemaker du déploiement d’un groupe de disponibilité ou d’une instance de cluster de basculement sont effectuées une fois que le cluster est configuré.
 > [!IMPORTANT]
-> Un groupe de disponibilité avec un cluster de type "Aucun" ne nécessite *pas* de cluster Pacemaker, et il ne peut pas être géré par Pacemaker. 
+> Un groupe de disponibilité avec un cluster de type "Aucun" ne nécessite  *pas*  de cluster Pacemaker, et il ne peut pas être géré par Pacemaker. 
 
 > [!div class="checklist"]
 > * Installer le module complémentaire de haute disponibilité et Pacemaker.
