@@ -12,12 +12,12 @@ ms.assetid: e03c2b6f-8f39-4382-9cf3-7f766a1bd929
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ad8d959ae622d743de02d996c280af37eddc9bf2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e0ad2e58c7c261d191adf7d48b157e42f13d8d37
+ms.sourcegitcommit: c2322c1a1dca33b47601eb06c4b2331b603829f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184079"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50743164"
 ---
 # <a name="unused-assembly-cleanup"></a>Nettoyage d'assembly inutilisé
   L'exemple `AssemblyCleanup` contient une procédure stockée .NET qui nettoie les assemblys inutilisés de la base de données actuelle en interrogeant les catalogues de métadonnées. Son seul paramètre, `visible_assemblies`, est utilisé pour spécifier si les assemblys visibles inutilisés doivent être supprimés ou pas. La valeur « false » signifie par défaut que seuls les assemblys invisibles inutilisés seront supprimés ; sinon, tous les assemblys inutilisés le seront. L'ensemble des assemblys inutilisés sont les assemblys qui n'ont pas de points d'entrée définis (routines / types et agrégats) et qui ne sont référencés directement ou indirectement par aucun assembly utilisé.  
@@ -39,7 +39,7 @@ ms.locfileid: "48184079"
   
     #### <a name="enabling-clr-integration"></a>Activation de l'intégration du CLR  
   
-    -   Exécutez les commandes [!INCLUDE[tsql](../../includes/tsql-md.md)] suivantes :  
+    -   Exécutez les commandes [!INCLUDE[tsql](../../includes/tsql-md.md)] suivantes :  
   
      `sp_configure 'clr enabled', 1`  
   
@@ -50,7 +50,7 @@ ms.locfileid: "48184079"
      `GO`  
   
     > [!NOTE]  
-    >  Pour activer le CLR, vous devez avoir `ALTER SETTINGS` autorisation de niveau serveur, qui est implicitement détenue par les membres de la `sysadmin` et `serveradmin` rôles serveur fixes.  
+    >  Pour activer l'intégration du CLR, vous devez disposer de l'autorisation de niveau serveur `ALTER SETTINGS` qui est attribuée implicitement aux membres des rôles serveur fixes `sysadmin` et `serveradmin`.  
   
 -   La base de données AdventureWorks doit être installée sur l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que vous utilisez.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "48184079"
   
 2.  Si nécessaire, créez un répertoire pour votre exemple. Pour cet exemple, nous utiliserons C:\MySample.  
   
-3.  Dans c:\MySample, créez `AssemblyCleanup.vb` (pour l'exemple Visual Basic) ou `AssemblyCleanup.cs` (pour l'exemple C#) et copiez l'exemple de code Visual Basic ou  C# approprié (ci-dessous) dans le fichier.  
+3.  Dans c:\MySample, créez `AssemblyCleanup.vb` (pour l'exemple Visual Basic) ou `AssemblyCleanup.cs` (pour l'exemple C#) et copiez l'exemple de code Visual Basic ou  C# approprié (ci-dessous) dans le fichier.  
   
 4.  Compilez l'exemple de code à partir de l'invite de ligne de commande en exécutant l'un des éléments suivants, selon le langage choisi.  
   
@@ -155,9 +155,9 @@ using Microsoft.SqlServer.Server;
             /// <summary>  
             /// Returns the comma-separated list of assembly ids contained in this instance  
             /// </summary>  
-            /// <returns>string value that represents a comma-seperated list   
+            /// <returns>string value that represents a comma-separated list   
             /// of assembly ids</returns>  
-            public string ToCommaSeperatedList()  
+            public string ToCommaSeparatedList()  
             {  
                 StringBuilder sb = new StringBuilder();  
   
@@ -240,7 +240,7 @@ using Microsoft.SqlServer.Server;
   
                 cmd.CommandText = String.Format(CultureInfo.InvariantCulture,  
                     "SELECT name FROM sys.assemblies WHERE assembly_id IN ({0});",  
-                    unusedAssemblySet.ToCommaSeperatedList());  
+                    unusedAssemblySet.ToCommaSeparatedList());  
                 using (SqlDataReader rd = cmd.ExecuteReader())  
                 {  
                     while (rd.Read())  
@@ -407,8 +407,8 @@ Public NotInheritable Class AssemblyCleanup
         ''' <summary>  
         ''' Returns the comma-separated list of assembly ids contained in this instance  
         ''' </summary>  
-        ''' <returns>string value that represents a comma-seperated list of assembly ids</returns>  
-        Public Function ToCommaSeperatedList() As String  
+        ''' <returns>string value that represents a comma-separated list of assembly ids</returns>  
+        Public Function ToCommaSeparatedList() As String  
             Dim sb As New StringBuilder()  
   
             If m_dictionary.Count > 0 Then  
@@ -486,7 +486,7 @@ Public NotInheritable Class AssemblyCleanup
   
             cmd.CommandText = String.Format(CultureInfo.InvariantCulture, _  
                 "SELECT name FROM sys.assemblies WHERE assembly_id IN ({0});", _  
-                unusedAssemblySet.ToCommaSeperatedList())  
+                unusedAssemblySet.ToCommaSeparatedList())  
             Dim rd As SqlDataReader = cmd.ExecuteReader()  
             Try  
                 While rd.Read()  

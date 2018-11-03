@@ -15,12 +15,12 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: d844f06ec7b043f2f43e7fe19e29121ad9efaae3
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.openlocfilehash: 12c91f52694c9c7b4cc9abc9e7b96df0ddffb51c
+ms.sourcegitcommit: f9b4078dfa3704fc672e631d4830abbb18b26c85
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49643977"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50965951"
 ---
 # <a name="perform-a-sql-server-migration-assessment-with-data-migration-assistant"></a>Effectuer une évaluation de migration de SQL Server avec Data Migration Assistant
 
@@ -47,15 +47,13 @@ La procédure détaillée ci-dessous vous aider à effectuer votre évaluation p
    Lorsque que vous évaluez votre instance de SQL Server source pour la migration vers local SQL Server ou SQL Server hébergées sur les cibles de la machine virtuelle Azure, vous pouvez choisir une ou les deux types de rapport d’évaluation suivants :
 
     -   **Problèmes de compatibilité**
-
     -   **Recommandation de nouvelles fonctionnalités**
 
     ![Sélectionnez un type de rapport d’évaluation pour SQL Server cible](../dma/media/AssessmentTypes.png)
 
-   Lorsque que vous évaluez votre instance de SQL Server source pour la migration vers Azure SQL Database, vous pouvez choisir une ou les deux types de rapport d’évaluation suivants :
+   Lors de l’évaluation de votre instance de SQL Server source pour la migration vers Azure SQL Database, vous pouvez choisir une ou les deux types de rapport d’évaluation suivants :
 
     -   **Vérifier la compatibilité de base de données**
-
     -   **Vérifier la parité de fonctionnalité**
 
     ![Sélectionnez le type de rapport d’évaluation pour la cible de la base de données SQL](../dma/media/AssessmentTypes_Azure.png)
@@ -89,17 +87,17 @@ Vous pouvez examiner les problèmes de compatibilité en analysant l’objet aff
 
 De même, vous pouvez examiner la recommandation de fonctionnalité entre **performances**, **stockage**, et **sécurité** zones.
 
-Recommandations de fonctionnalités couvrent une variété de fonctionnalités telles que l’OLTP en mémoire et Columnstore, Stretch Database, Always Encrypted, Dynamic Data Masking et Transparent Data Encryption.
+Recommandations de fonctionnalités couvrent une variété de fonctionnalités comme OLTP en mémoire, Columnstore, Stretch Database, Always Encrypted, Dynamic Data Masking et Transparent Data Encryption.
 
 ![Afficher les recommandations de fonctionnalité](../dma/media/FeatureRecommendations.png)
 
-Pour la base de données SQL Azure, l’évaluation des problèmes bloquants de migration et les problèmes de parité de fonctionnalité. Passez en revue les résultats pour ces deux catégories en sélectionnant les options spécifiques.
+Pour la base de données SQL Azure, l’évaluation des problèmes bloquants de migration et les problèmes de parité de fonctionnalité. Passez en revue les résultats pour ces deux catégories en sélectionnant les options spécifiques.
 
 - Le **parité des fonctionnalités de SQL Server** catégorie fournit un ensemble complet de recommandations, d’approches alternatives disponibles dans Azure et les procédures d’atténuation. Il vous permet de planifier cet effort dans vos projets de migration.
 
   ![Afficher les informations de parité des fonctionnalités de SQL Server](../dma/media/SQLFeatureParity.png)
 
-- Le **les problèmes de compatibilité** catégorie fournit les fonctionnalités partiellement prises en charge ou non pris en charge qui bloquent la migration bases de données de SQL Server sur site aux bases de données SQL Azure. Il fournit ensuite des recommandations pour vous aider à résoudre ces problèmes.
+- Le **les problèmes de compatibilité** catégorie fournit les fonctionnalités partiellement prises en charge ou non pris en charge qui bloquent la migration bases de données de SQL Server sur site aux bases de données SQL Azure. Il fournit ensuite des recommandations pour vous aider à résoudre ces problèmes.
 
   ![Afficher les problèmes de compatibilité](../dma/media/CompatibilityIssues.png)
 

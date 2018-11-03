@@ -10,12 +10,12 @@ ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
 monikerRange: '>= aps-pdw-2016-au7 || = sqlallproducts-allversions'
-ms.openlocfilehash: 70eed88b1224a712dcb8d1c76085fffc839155a5
-ms.sourcegitcommit: 8008ea52e25e65baae236631b48ddfc33014a5e0
+ms.openlocfilehash: 0d2aadb0e7c0c56c69d89bc94e0ddaacef54e837
+ms.sourcegitcommit: 3e1efbe460723f9ca0a8f1d5a0e4a66f031875aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44311639"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50236905"
 ---
 #<a name="appliance-feature-switches"></a>Commutateurs de fonctionnalité d’appliance
 Le **commutateur de fonctionnalité** page affiche des informations sur les commutateurs de fonctionnalité ont été introduits dans Analytique Platform System AU7 et versions ultérieures. Utilisez cette page de configuration pour mettre à jour ou activer/désactiver les fonctionnalités et les paramètres d’Analytique Platform System. Modifications apportées aux valeurs de commutateur de fonctionnalité requièrent un redémarrage du service.
@@ -24,6 +24,9 @@ Le **commutateur de fonctionnalité** page affiche des informations sur les comm
 
 ##<a name="autostatsenabled"></a>AutoStatsEnabled
 Contrôle la fonctionnalité de statistiques automatique. Cette fonctionnalité de commutateur est définie sur true par défaut après la mise à niveau vers AU7. Toute base de données créée après que la mise à niveau hérite de la création automatique et mise à jour asynchrone des statistiques. Pour les bases de données existantes, les administrateurs de base de données peuvent activer des automatique des statistiques avec [ALTER DATABASE (Parallel Data Warehouse)](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw). Pour plus d’informations sur les statistiques, consultez [statistiques](../relational-databases/statistics/statistics.md).
+
+##<a name="maxdopforinsertqueries"></a>MaxDOPForInsertQueries
+Vous permet de choisir les paramètres maxdop supérieures à 1 pour les opérations insert/select. Options pour ce paramètre sont 0, 1, 2 et 4, valeur par défaut est 1.
 
 ##<a name="usecatalogqueries"></a>UseCatalogQueries
 À l’aide des objets de catalogue pour certains appels de métadonnées au lieu d’utiliser SMO a montré l’amélioration des performances. La valeur true par défaut dans CU7.1, ce commutateur contrôle ce comportement. 

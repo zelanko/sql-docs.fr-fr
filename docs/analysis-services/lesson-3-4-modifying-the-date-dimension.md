@@ -1,5 +1,5 @@
 ---
-title: Modification de la Dimension Date | Documents Microsoft
+title: Modification de la Dimension Date | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6e45dbb5f33ba17211fcb60bc6d8cca9e47aa1ee
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 2e060b546287b1a56a103086b8a4d6fc7e120be9
+ms.sourcegitcommit: fafb9b5512695b8e3fc2891f9c5e3abd7571d550
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019666"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50753566"
 ---
-# <a name="lesson-3-4---modifying-the-date-dimension"></a>Leçon 3-4-modification de la Dimension Date
+# <a name="lesson-3-4---modifying-the-date-dimension"></a>Leçon 3-4 : modification de la Dimension Date
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 Dans les tâches de cette rubrique, vous allez créer une hiérarchie définie par l'utilisateur et vous allez modifier les noms de membre affichés pour les attributs Date, Month, Calendar Quarter et Calendar Semester. Vous allez également définir des clés composites pour les attributs, contrôler l'ordre de tri des membres de dimension et définir les relations d'attributs.  
@@ -86,7 +86,7 @@ Vous pouvez créer une hiérarchie en faisant glisser un attribut du volet **Att
   
 5.  Faites glisser l’attribut **Date Key** du volet **Attributs** vers la cellule **<new level>** dans le volet **Hiérarchies** , sous le niveau **English Month Name** .  
   
-6.  Dans le volet **Hiérarchies** , cliquez avec le bouton droit sur la barre de titre de la hiérarchie **Hiérarchie** , cliquez sur **Renommer**et tapez **Calendar Date**.  
+6.  Dans le **hiérarchies** volet, avec le bouton droit de la barre de titre de la **hiérarchie** hiérarchie, cliquez sur **renommer**, puis tapez **Calendar Date**.  
   
 7.  À l’aide du menu contextuel accessible par un clic droit, dans la hiérarchie **Calendar Date** , renommez le niveau **English Month Name** en **Calendar Month**, puis renommez le niveau **Date Key** en **Date**.  
   

@@ -1,7 +1,7 @@
 ---
 title: Agent de lecture de la file d’attente de réplication | Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
+ms.date: 10/29/2018
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology:
@@ -16,12 +16,12 @@ ms.assetid: 8e227793-11f6-47c6-99dc-ffc282f5d4bf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c8ba3f9ef9c76957872114fd05cf98520ce44bb4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f63676830d79bc8ec9c3ffd462e9d836364df159
+ms.sourcegitcommit: 3e1efbe460723f9ca0a8f1d5a0e4a66f031875aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078239"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50236966"
 ---
 # <a name="replication-queue-reader-agent"></a>Agent de lecture de la file d'attente de réplication
   L'Agent de lecture de la file d'attente de réplication est un fichier exécutable qui lit les messages stockés dans une file d'attente [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou une file d'attente de messages [!INCLUDE[msCoName](../../../includes/msconame-md.md)] , puis qui applique ces messages au serveur de publication. L'Agent de lecture de la file d'attente est utilisé avec les publications transactionnelles et les publications d'instantané qui autorisent la mise à jour en attente.  
@@ -86,6 +86,9 @@ ms.locfileid: "48078239"
 |**0**|Spécifie que le chiffrement SSL n'est pas utilisé.|  
 |**1**|Spécifie que le chiffrement SSL est utilisé, mais que l'agent ne vérifie pas si le certificat de serveur SSL est signé par un émetteur de confiance.|  
 |**2**|Spécifie que le chiffrement SSL est utilisé et que le certificat est vérifié.|  
+
+ > [!NOTE]  
+ >  Un certificat SSL valide est défini avec un nom de domaine complet du serveur SQL. Pour l’agent pour se connecter avec succès lors de la définition - EncryptionLevel à 2, créer un alias sur le serveur SQL local. Le paramètre de nom de l’Alias doit être le nom du serveur et le paramètre « Serveur » doit être défini pour le nom qualifié complet de SQL Server.
   
  Pour plus d’informations, consultez [Vue d’ensemble de la sécurité &#40;réplication&#41;](../security/security-overview-replication.md).  
   

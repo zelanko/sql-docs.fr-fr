@@ -1,7 +1,7 @@
 ---
 title: Agent de lecture du journal des réplications | Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
+ms.date: 10/29/2018
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology:
@@ -16,12 +16,12 @@ ms.assetid: 5487b645-d99b-454c-8bd2-aff470709a0e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f7704a37bf8d3972944a17cc5ca1d3a6b209faf3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 892f89c0c2d3161b0df16ad9337237ce14bef159
+ms.sourcegitcommit: 3a8293b769b76c5e46efcb1b688bffe126d591b3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202429"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50226341"
 ---
 # <a name="replication-log-reader-agent"></a>Agent de lecture du journal des réplications
   L'Agent de lecture du journal des réplications est un fichier exécutable qui analyse le journal des transactions de chaque base de données configurée pour la réplication transactionnelle et qui copie les transactions devant être répliquées à partir du journal des transactions dans la base de données de distribution.  
@@ -101,7 +101,10 @@ ms.locfileid: "48202429"
 |**0**|Spécifie que le chiffrement SSL n'est pas utilisé.|  
 |**1**|Spécifie que le chiffrement SSL est utilisé, mais que l'agent ne vérifie pas si le certificat de serveur SSL est signé par un émetteur de confiance.|  
 |**2**|Spécifie que le chiffrement SSL est utilisé et que le certificat est vérifié.|  
-  
+
+ > [!NOTE]  
+ >  Un certificat SSL valide est défini avec un nom de domaine complet du serveur SQL. Pour l’agent pour se connecter avec succès lors de la définition - EncryptionLevel à 2, créer un alias sur le serveur SQL local. Le paramètre de nom de l’Alias doit être le nom du serveur et le paramètre « Serveur » doit être défini pour le nom qualifié complet de SQL Server.
+ 
  Pour plus d’informations, consultez [Vue d’ensemble de la sécurité &#40;réplication&#41;](../security/security-overview-replication.md).  
   
  **-ExtendedEventConfigFile** *configuration_path_and_file_name*  

@@ -1,5 +1,5 @@
 ---
-title: Configurer PolyBase pour accéder aux données externes dans Hadoop | Microsoft Docs
+title: Configurer PolyBase pour accéder à des données externes dans Hadoop | Microsoft Docs
 description: Explique comment configurer PolyBase dans Parallel Data Warehouse pour se connecter à Hadoop externe.
 author: mzaman1
 manager: craigg
@@ -9,20 +9,20 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 89ce9402540c21a9f9eedbba4f488ea1c3350956
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: b0a49925ec0d0592adfd131e0ab994e5e8356f95
+ms.sourcegitcommit: 3e1efbe460723f9ca0a8f1d5a0e4a66f031875aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460875"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50236935"
 ---
-# <a name="configure-polybase-to-access-external-data-in-hadoop"></a>Configurer PolyBase pour accéder aux données externes dans Hadoop
+# <a name="configure-polybase-to-access-external-data-in-hadoop"></a>Configurer PolyBase pour accéder à des données externes dans Hadoop
 
 L’article explique comment utiliser PolyBase sur une appliance APS pour interroger des données externes dans Hadoop.
 
 ## <a name="prerequisites"></a>Prérequis
 
-PolyBase prend en charge deux fournisseurs Hadoop, HDP (Hortonworks Data Platform) et CDH (Cloudera Distributed Hadoop). Hadoop suit l’élément « major.minor.version » pour les nouvelles versions, et toutes les versions d’une version majeure ou mineure prise en charge sont pris en charge. Les fournisseurs de Hadoop suivants sont pris en charge :
+PolyBase prend en charge deux fournisseurs Hadoop, HDP (Hortonworks Data Platform) et CDH (Cloudera Distributed Hadoop). Hadoop suit le modèle « majeure.mineure.version » pour ses nouvelles versions, et toutes les versions d’une version majeure ou mineure prise en charge sont prises en charge. Les fournisseurs Hadoop suivants sont pris en charge :
  - Hortonworks HDP 1.3 sur Linux/Windows Server  
  - Hortonworks HDP 2.1 - 2.6 sur Linux
  - Hortonworks HDP 2.1 - 2.3 sur Windows Server  
@@ -33,7 +33,7 @@ PolyBase prend en charge deux fournisseurs Hadoop, HDP (Hortonworks Data Platfor
 
 Tout d’abord, configurer des points d’accès pour utiliser votre fournisseur Hadoop spécifique.
 
-1. Exécutez [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) avec 'connectivité hadoop' et définissez une valeur appropriée pour votre fournisseur. Pour rechercher la valeur de votre fournisseur, consultez [Configuration de la connectivité PolyBase](../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md). 
+1. Exécutez [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) avec 'hadoop connectivity' et définissez une valeur appropriée pour votre fournisseur. Pour trouver la valeur pour votre fournisseur, consultez [Configuration de la connectivité PolyBase](../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md). 
 
    ```sql  
    -- Values map to various external data sources.  
@@ -48,9 +48,9 @@ Tout d’abord, configurer des points d’accès pour utiliser votre fournisseur
 
 2. Redémarrer la région de points d’accès à l’aide de la page État du Service sur [Appliance Configuration Manager](launch-the-configuration-manager.md).
   
-## <a id="pushdown"></a> Activez le calcul de poussée vers le bas  
+## <a id="pushdown"></a>Activer le calcul pushdown  
 
-Pour améliorer les performances des requêtes, activez le calcul de poussée vers le bas à votre cluster Hadoop :  
+Pour améliorer les performances des requêtes, activez le calcul pushdown sur votre cluster Hadoop :  
   
 1. Ouvrez une connexion Bureau à distance au nœud de contrôle de PDW.
 
@@ -70,13 +70,13 @@ Pour améliorer les performances des requêtes, activez le calcul de poussée ve
 
 Pour interroger les données dans votre source de données Hadoop, vous devez définir une table externe à utiliser dans les requêtes Transact-SQL. Les étapes suivantes décrivent comment configurer la table externe.
 
-1. Créer une clé principale de la base de données. Il est nécessaire pour chiffrer le secret des informations d’identification.
+1. Créez une clé principale sur la base de données. Il est nécessaire pour chiffrer le secret des informations d’identification.
 
    ```sql
    CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo';  
    ```
 
-2. Créer une information d’identification de niveau base de données pour les clusters Hadoop sécurisé par Kerberos.
+2. Créez des informations d’identification limitées à la base de données pour les clusters Hadoop sécurisés par Kerberos.
 
    ```sql
    -- IDENTITY: the Kerberos user name.  
@@ -85,7 +85,7 @@ Pour interroger les données dans votre source de données Hadoop, vous devez d�
    WITH IDENTITY = '<hadoop_user_name>', Secret = '<hadoop_password>';  
    ```
 
-3. Créer une source de données externe avec [CREATE EXTERNAL DATA SOURCE](../t-sql/statements/create-external-data-source-transact-sql.md).
+3. Créez une source de données externe avec [CREATE EXTERNAL DATA SOURCE](../t-sql/statements/create-external-data-source-transact-sql.md).
 
    ```sql
    -- LOCATION (Required) : Hadoop Name Node IP address and port.  
@@ -99,7 +99,7 @@ Pour interroger les données dans votre source de données Hadoop, vous devez d�
    );  
    ```
 
-4. Créer un format de fichier externe avec [CREATE EXTERNAL FILE FORMAT](../t-sql/statements/create-external-file-format-transact-sql.md).
+4. Créez un format de fichier externe avec [CREATE EXTERNAL FILE FORMAT](../t-sql/statements/create-external-file-format-transact-sql.md).
 
    ```sql
    -- FORMAT TYPE: Type of format in Hadoop (DELIMITEDTEXT,  RCFILE, ORC, PARQUET).
@@ -109,7 +109,7 @@ Pour interroger les données dans votre source de données Hadoop, vous devez d�
                USE_TYPE_DEFAULT = TRUE)  
    ```
 
-5. Créer une table externe pointant vers les données stockées dans Hadoop avec [CREATE EXTERNAL TABLE](../t-sql/statements/create-external-table-transact-sql.md). Dans cet exemple, les données externes contiennent des données de capteur de véhicules.
+5. Créez une table externe pointant vers les données stockées dans Hadoop avec [CREATE EXTERNAL TABLE](../t-sql/statements/create-external-table-transact-sql.md). Dans cet exemple, les données externes contiennent des données de capteur de véhicules.
 
    ```sql
    -- LOCATION: path to file or directory that contains the data (relative to HDFS root).  
@@ -126,7 +126,7 @@ Pour interroger les données dans votre source de données Hadoop, vous devez d�
    );  
    ```
 
-6. Créer des statistiques sur une table externe.
+6. Créez des statistiques sur une table externe.
 
    ```sql
    CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)  
@@ -137,10 +137,10 @@ Pour interroger les données dans votre source de données Hadoop, vous devez d�
 PolyBase est approprié pour trois fonctions :  
   
 - Requêtes ad hoc sur les tables externes.  
-- L’importation de données.  
+- Importation de données.  
 - Exportation de données.  
 
-Les requêtes suivantes fournissent un exemple avec des données de capteur de voiture fictif.
+Les requêtes suivantes fournissent un exemple avec des données fictives provenant de capteurs sur des voitures.
 
 ### <a name="ad-hoc-queries"></a>Requêtes ad hoc  
 
@@ -200,5 +200,6 @@ Dans SQL Server Data Tools, les tables externes sont affichées dans un dossier 
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Pour plus d’informations sur PoliyBase, consultez le [What ' s PolyBase ?](../relational-databases/polybase/polybase-guide.md). 
+Pour les paramètres de sécurité Hadoop, consultez [configurer la sécurité de Hadoop](polybase-configure-hadoop-security.md).<br>
+Pour plus d’informations sur PolyBase, consultez [Qu’est-ce que PolyBase ?](../relational-databases/polybase/polybase-guide.md). 
  

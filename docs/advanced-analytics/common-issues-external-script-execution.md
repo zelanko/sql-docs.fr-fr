@@ -1,18 +1,18 @@
 ---
 title: Problèmes courants avec le service Launchpad et l’exécution du script externe dans SQL Server | Microsoft Docs
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: mlserver
 ms.date: 05/31/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 9a556a83e57dc41109914ff9da82405abd8b24e1
-ms.sourcegitcommit: e4e9f02b5c14f3bb66e19dec98f38c012275b92c
+ms.openlocfilehash: b480c400ae2068bb6701192e77d97672ddeb024e
+ms.sourcegitcommit: b29745051be2326268f165cf72f5eb95dc893564
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43118407"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50254445"
 ---
 # <a name="common-issues-with-launchpad-service-and-external-script-execution-in-sql-server"></a>Problèmes courants avec le service Launchpad et l’exécution du script externe dans SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -121,7 +121,7 @@ Pour accorder des autorisations nécessaires pour le nouveau compte de service, 
 
 Si vous avez installé et activé apprentissage, mais vous obtenez cette erreur lorsque vous essayez d’exécuter un script R ou Python, le service Launchpad de l’instance peut avoir cessé de fonctionner.
 
-1. À partir d’une invite de commandes Windows, ouvrez le Gestionnaire de configuration SQL Server. Pour plus d’informations, consultez [SQL Server Configuration Manager](https://docs.microsoft.com/sql/relational-databases/sql-server-configuration-manager).
+1. À partir d’une invite de commandes Windows, ouvrez le Gestionnaire de configuration SQL Server. Pour plus d'informations, consultez [SQL Server Configuration Manager](https://docs.microsoft.com/sql/relational-databases/sql-server-configuration-manager).
 
 2. Avec le bouton droit de Launchpad de SQL Server pour l’instance, puis sélectionnez **propriétés**.
 

@@ -1,5 +1,5 @@
 ---
-title: Jeu de données IRIS démonstration de didacticiels SQL Server Python et R | Microsoft Docs
+title: Jeu de données IRIS démonstration de didacticiels Python et R dans SQL Server | Microsoft Docs
 Description: Create a database containing the Iris dataset and a table for storing models. This dataset is used in exercises showing how to wrap R language or Python code in a SQL Server stored procedure.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,14 +8,14 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 74e4cbe97d64f922de2cdfe1f67eae5d3a3e24bd
-ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
+ms.openlocfilehash: 2fbe5915f7b135882bbbefbb83b572d2cd640837
+ms.sourcegitcommit: 12779bddd056a203d466d83c4a510a97348fe9d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49806669"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50216679"
 ---
-#  <a name="iris-demo-data-for-sql-server-python-and-r-tutorials"></a>Données de démonstration IRIS pour les didacticiels de SQL Server Python et R
+#  <a name="iris-demo-data-for-python-and-r-tutorials-in-sql-server"></a>Données de démonstration d’iris de didacticiels Python et R dans SQL Server 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Dans cet exercice, créez une base de données SQL Server pour stocker des données à partir de la [jeu de données Iris fleur](https://en.wikipedia.org/wiki/Iris_flower_data_set) et modèles basés sur les mêmes données. Données IRIS sont incluses dans les distributions de R et Python installées par SQL Server et sont utilisées dans les didacticiels de machine learning pour SQL Server. 

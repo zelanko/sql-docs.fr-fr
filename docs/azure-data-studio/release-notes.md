@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dfa3636ddba734d9c6ee6c9d9da4560a3cd61304
-ms.sourcegitcommit: ef115025e57ec342c14ed3151ce006f484d1fadc
+ms.openlocfilehash: 34b8f3f1e3f7ca3396b32c6dad99ef721542fd48
+ms.sourcegitcommit: 3e1efbe460723f9ca0a8f1d5a0e4a66f031875aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49411196"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50237065"
 ---
 # <a name="azure-data-studio-release-notes"></a>Notes de publication Azure Data Studio
 
@@ -23,8 +23,8 @@ ms.locfileid: "49411196"
 
 ## <a name="october-2018-october-release"></a>Octobre 2018 (version d’octobre)
 
-date de publication : 18 octobre 2018  
-version : 1.1.3
+date de publication : 29 octobre 2018  
+version : 1.1.4
 
 - Présentation de l’Explorateur de ressources Azure pour parcourir les bases de données SQL Azure
 - Améliorer la robustesse de connectivité de l’Explorateur d’objets et de l’éditeur de requête
@@ -32,6 +32,12 @@ version : 1.1.3
 - Mettre à jour vers la [extension de la version préliminaire de SQL Server 2019](https://docs.microsoft.com/sql/azure-data-studio/sql-server-2019-extension?view=sql-server-ver15)
 
 ### <a name="bug-fixes"></a>Correctifs de bogues
+- Corriger [émettre #2717](https://github.com/Microsoft/azuredatastudio/issues/2717): résultat de la colonne XML sur la mise en forme
+- Corriger [émettre #2993](https://github.com/Microsoft/azuredatastudio/issues/2993): les fenêtres de résultats de la largeur est incomplète
+- Corriger [émettre #2999](https://github.com/Microsoft/azuredatastudio/issues/2999): pas de charger le fichier System.Diagnostics.Tracing sur Mac lors de la connexion à la base de données
+- Corriger [émettre #2851](https://github.com/Microsoft/azuredatastudio/issues/2851): TimeSeries graphique n’affiche pas correctement
+- Corriger [émettre #2996](https://github.com/Microsoft/azuredatastudio/issues/2996): Temp de perte de la table en raison du changement de session soudaine
+- ...
 
 Pour plus d’informations, consultez le [journal des modifications](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md), et [versions](https://github.com/Microsoft/azuredatastudio/releases).
 

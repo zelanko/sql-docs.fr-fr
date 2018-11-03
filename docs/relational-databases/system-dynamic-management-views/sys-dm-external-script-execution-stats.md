@@ -1,7 +1,7 @@
 ---
 title: Sys.dm_external_script_execution_stats | Microsoft Docs
 ms.custom: ''
-ms.date: 09/16/2016
+ms.date: 10/28/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: ''
@@ -16,26 +16,23 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_external_script_execution_stats dynamic management view
 ms.assetid: 2e99f026-ceb2-42a2-a549-c71d31ed0cf4
-author: jeannt
-ms.author: jeannt
-manager: craigg
-ms.openlocfilehash: 344de7e44b6d96a7813487631051fb25600f164b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlund
+ms.openlocfilehash: 8bdbaf1fdb0fb0c27127611ace0fac00d861838f
+ms.sourcegitcommit: c2322c1a1dca33b47601eb06c4b2331b603829f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47813237"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50743134"
 ---
 # <a name="sysdmexternalscriptexecutionstats"></a>sys.dm_external_script_execution_stats
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-
-  Renvoie une ligne pour chaque type de demande de script externe. Les demandes de script externe sont regroupées par le langage de script externe pris en charge. Une ligne est générée pour chaque fonction enregistrée de script externe. Les fonctions de script externe ne sont pas enregistrées, sauf si elle sont envoyées par un processus parent, comme `rxExec`.
-
- 
+Renvoie une ligne pour chaque type de demande de script externe. Les demandes de script externe sont regroupées par le langage de script externe pris en charge. Une ligne est générée pour chaque fonction enregistrée de script externe. Les fonctions de script externe ne sont pas enregistrées, sauf si elle sont envoyées par un processus parent, comme `rxExec`.
   
 > [!NOTE]  
->  Cette vue de gestion dynamique est disponible uniquement si vous avez installé et activé la fonctionnalité qui prend en charge l’exécution du script externe. Pour plus d’informations sur la manière de procéder pour les scripts R, consultez [Configurer SQL Server R Services](../../advanced-analytics/r-services/set-up-sql-server-r-services-in-database.md).  
+> Cette vue de gestion dynamique (DMV) est disponible uniquement si vous avez installé et activé la fonctionnalité qui prend en charge l’exécution du script externe. Pour plus d’informations, consultez [R Services dans SQL Server 2016](../../advanced-analytics/r/sql-server-r-services.md) et [Machine Learning Services (R, Python) dans SQL Server 2017](../../advanced-analytics/what-is-sql-server-machine-learning.md).  
   
 |Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
@@ -53,24 +50,26 @@ ms.locfileid: "47813237"
 ## <a name="remarks"></a>Notes  
   Cette vue de gestion dynamique est fournie pour la télémétrie interne, afin de contrôler l’utilisation générale de la nouvelle fonction d’exécution de script externe fournie dans [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]. La télémétrie démarre au lancement de LaunchPad et incrémente un compteur sur disque à chaque fois qu’une fonction enregistrée de script externe est appelée.
 
-En règle générale, les compteurs de performance demeurent valides tant que le processus qui les a générés reste actif. Par conséquent, une demande sur une vue de gestion dynamique ne peut pas faire état des données des services qui ne sont plus en cours d’exécution. Par exemple, si le lanceur exécute le script externe tout en les terminant très rapidement, une vue de gestion dynamique conventionnelle n’indiquera pas forcément les données.
+En règle générale, les compteurs de performance demeurent valides tant que le processus qui les a générés reste actif. Par conséquent, une demande sur une vue de gestion dynamique ne peut pas faire état des données des services qui ne sont plus en cours d’exécution. Par exemple, si un lanceur exécute le script externe et encore terminant très rapidement, une vue de gestion dynamique conventionnelle ne peut pas afficher toutes les données.
 
 Par conséquent, les compteurs suivis par cette vue de gestion dynamique sont conservés en cours d’exécution, tandis que l’état pour sys.dm_external_script_requests est préservé par l’utilisation d’écritures sur le disque, même si l’instance est arrêtée.
 
    
   
-### <a name="r-counter-values"></a>Valeurs de compteur R
- Actuellement, le seul langage de script externe pris en charge dans [!INCLUDE[ssCurrent_md](../../includes/sscurrent-md.md)] est R. Les demandes de script externes pour le langage R sont traitées par [!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)]. 
+### <a name="counter-values"></a>Valeurs de compteur
+Dans SQL Server 2016, le seul langage externe pris en charge est R et les demandes de script externe sont gérés par [!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)]. Dans SQL Server 2017, R et Python est pris en charge des langages externes et les demandes de script externe sont gérés par [!INCLUDE[rsql_productname_md](../../includes/rsql-productnamenew-md.md)].
 
 Pour R, cette DMV suit le nombre d’appels R effectués sur une instance. Par exemple, si `rxLinMod` est appelé et s’exécute en parallèle, le compteur est incrémenté d’une unité.
  
 Pour le langage R, les valeurs de compteur affichées dans le champ *counter_name* représentent le nom des fonctions ScaleR enregistrées. Les valeurs du champ *counter_value* représentent le nombre cumulé des instances de fonctions spécifiques ScaleR. 
 
+Pour Python, cette DMV effectue le suivi du nombre d’appels de Python qui sont effectuées sur une instance.
+
 Le comptage commence quand la fonction est installée et activée sur l’instance. Il est cumulé jusqu’à ce que le fichier qui gère l’état soit supprimé ou remplacé par un administrateur. Par conséquent, il n’est généralement pas possible de réinitialiser les valeurs de *counter_value*. Si vous souhaitez contrôler l’utilisation par session, période calendaire ou tout autre intervalle, nous vous recommandons de capturer les nombres dans un tableau.
 
-### <a name="registration-of-external-script-functions"></a>Inscription des fonctions de script externe
+### <a name="registration-of-external-script-functions-in-r"></a>Inscription des fonctions de script externe dans R
 
-Le langage R prend en charge les scripts arbitraires, tandis que la communauté R fournit plusieurs milliers de packages, qui présentent tous leurs propres fonctions et méthodes. Toutefois, cette vue de gestion dynamique contrôle uniquement les fonctions ScaleR installées avec SQL Server R Services.
+R prend en charge les scripts arbitraires, et la Communauté R fournit plusieurs milliers de packages, chacun avec ses propres fonctions et les méthodes. Toutefois, cette vue de gestion dynamique contrôle uniquement les fonctions ScaleR installées avec SQL Server R Services.
 
 L’inscription de ces fonctions est effectuée lors de leur installation ; les fonctions inscrites ne peuvent pas être ajoutées ou supprimées.
 
@@ -83,6 +82,15 @@ L’inscription de ces fonctions est effectuée lors de leur installation ; les 
 SELECT counter_name, counter_value   
 FROM sys.dm_external_script_execution_stats   
 WHERE language = 'R';
+```  
+
+### <a name="viewing-the-number-of-python-scripts-run-on-the-server"></a>Affichage du nombre de Python scripts s’exécutent sur le serveur  
+ L’exemple suivant affiche le nombre cumulé d’exécutions de script externe pour le langage Python.  
+  
+```  
+SELECT counter_name, counter_value   
+FROM sys.dm_external_script_execution_stats   
+WHERE language = 'Python';
 ```  
 
   

@@ -11,18 +11,18 @@ ms.assetid: 4689d780-4bf6-4cf8-8fde-eb3f15dd668a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 05314c09c64232c469b88e4522934d2a4d713dff
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6450b85b00906facfb291d8085d729474577bd32
+ms.sourcegitcommit: fafb9b5512695b8e3fc2891f9c5e3abd7571d550
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168159"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50753576"
 ---
 # <a name="modifying-the-date-dimension"></a>Modification de la dimension Date
   Dans les tâches de cette rubrique, vous allez créer une hiérarchie définie par l'utilisateur et vous allez modifier les noms de membre affichés pour les attributs Date, Month, Calendar Quarter et Calendar Semester. Vous allez également définir des clés composites pour les attributs, contrôler l'ordre de tri des membres de dimension et définir les relations d'attributs.  
   
 ## <a name="adding-a-named-calculation"></a>Ajout d'un calcul nommé  
- Vous pouvez ajouter un calcul nommé, c'est-à-dire une expression SQL qui est représentée sous la forme d'une colonne calculée, dans la table d'une vue de source de données. L'expression apparaît et se comporte comme une colonne dans une table. Les calculs nommés permettent d'étendre le schéma relationnel des tables existantes dans une vue de source des données, sans avoir à modifier la table dans la source de données sous-jacente. Pour plus d’informations, consultez [Définir des calculs nommés dans une vue de source de données &#40;Analysis Services&#41;](multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md).  
+ Vous pouvez ajouter un calcul nommé, c'est-à-dire une expression SQL qui est représentée sous la forme d'une colonne calculée, dans la table d'une vue de source de données. L'expression apparaît et se comporte comme une colonne dans une table. Les calculs nommés permettent d'étendre le schéma relationnel des tables existantes dans une vue de source des données, sans avoir à modifier la table dans la source de données sous-jacente. Pour plus d’informations, consultez [Définir des calculs nommés dans une vue de source de données &#40;Analysis Services&#41;](multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
   
 #### <a name="to-add-a-named-calculation"></a>Pour ajouter un calcul nommé  
   
@@ -86,7 +86,7 @@ ms.locfileid: "48168159"
   
 5.  Faites glisser le **Date Key** de l’attribut le **attributs** volet dans le  **\<nouveau niveau >** de cellule dans le **hiérarchies** volet , en dessous de la **English Month Name** niveau.  
   
-6.  Dans le **hiérarchies** volet, avec le bouton droit de la barre de titre de la **hiérarchie** , cliquez sur **renommer**, puis tapez `Calendar Date`.  
+6.  Dans le **hiérarchies** volet, avec le bouton droit de la barre de titre de la **hiérarchie** hiérarchie, cliquez sur **renommer**, puis tapez `Calendar Date`.  
   
 7.  À l’aide du menu contextuel, dans le `Calendar Date` hiérarchie, renommer le **English Month Name** niveau `Calendar Month`, puis renommez le **Date Key** au niveau `Date`.  
   

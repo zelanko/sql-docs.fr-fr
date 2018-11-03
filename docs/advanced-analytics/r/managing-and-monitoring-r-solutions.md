@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: c921b89dc3f6928ccbfc3f9fc727015dadc05b7b
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: e24f9974c55d6d189f7d650902352393e3e62627
+ms.sourcegitcommit: c2322c1a1dca33b47601eb06c4b2331b603829f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169079"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50743204"
 ---
 # <a name="manage-and-integrate-machine-learning-workloads-on-sql-server"></a>Gérer et intégrer des charges de travail machine learning sur SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -87,6 +87,18 @@ Si vous déterminez par la suite que les fonctions de bibliothèque externe sont
 
 > [!NOTE]
 > Pour les packages R, les droits d’administrateur de serveur ne sont pas spécialement requis pour l’installation du package si vous utilisez d’autres méthodes. Consultez [installer des packages R dans SQL Server](install-additional-r-packages-on-sql-server.md) pour plus d’informations.
+
+## <a name="monitoring-script-execution"></a>Surveillance de l’exécution du script
+
+Les scripts R et Python qui s’exécutent dans [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] sont démarrés par le [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] interface. Toutefois, le Launchpad n’est pas ressources régies ou analysées séparément, car il s’agit d’un service sécurisé fourni par Microsoft qui gère les ressources de manière appropriée.
+
+Les scripts externes qui s’exécutent sous le service Launchpad sont gérés à l’aide de la [objet de traitement Windows](/windows/desktop/ProcThread/job-objects). Avec un objet de traitement, des groupes de processus peuvent être gérés en tant qu’unité. Chaque objet de traitement est hiérarchique et contrôle les attributs de tous les processus qui lui sont associés. Les opérations effectuées sur un objet de traitement affectent tous les processus associés à cet objet.
+
+Par conséquent, si vous avez besoin de mettre fin à une tâche associée à un objet, sachez que tous les processus connexes seront également arrêtés. Si vous exécutez un script R qui est affecté à un objet de traitement Windows et que ce script exécute un travail ODBC qui doit être arrêté, le processus de script R parent est également arrêté.
+
+Si vous démarrez un script externe qui utilise le traitement parallèle, un seul objet de traitement Windows gère tous les processus enfants parallèles.
+
+Pour déterminer si un processus s’exécute dans un travail, utilisez la fonction `IsProcessInJob`.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

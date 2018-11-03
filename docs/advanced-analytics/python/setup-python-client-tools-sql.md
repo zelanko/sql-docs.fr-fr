@@ -8,22 +8,22 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 326676d1be684b90784351de316590ebdb1ff29f
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: b328d6c44dd8f75e3d74a3abe74f3324f31e1409
+ms.sourcegitcommit: 12779bddd056a203d466d83c4a510a97348fe9d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50051151"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50216623"
 ---
 # <a name="set-up-a-python-client-for-use-with-sql-server-machine-learning"></a>Configurer un client Python pour une utilisation avec SQL Server Machine Learning
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Intégration de Python est disponible à partir de SQL Server 2017 ou version ultérieure, lorsque vous incluez l’option de Python dans une installation de Services Machine Learning (en base de données). Pour plus d’informations, consultez [installer SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md).
+Intégration de Python est disponible à partir de SQL Server 2017 ou version ultérieure, lorsque vous incluez l’option de Python dans un [installation Machine Learning Services (en base de données)](../install/sql-machine-learning-services-windows-install.md). 
 
-Dans cet article, découvrez comment configurer une station de travail de développement client afin que vous pouvez vous connecter à un serveur SQL distant activé pour l’apprentissage automatique et intégration de Python. À la fin, vous devrez les mêmes bibliothèques Python que celles de SQL Server ainsi que la possibilité d’envoyer des calculs à partir d’une session locale à une session distante sur SQL Server.
+Dans cet article, découvrez comment configurer une station de travail du développement de client Python afin que vous pouvez vous connecter à un serveur SQL distant activé pour l’apprentissage automatique et intégration de Python. Cet exercice utilise les blocs-notes Jupyter pour exécuter le code Python. Après avoir effectué les étapes décrites dans cet article, vous devez les mêmes bibliothèques Python que celles sur SQL Server. Vous saurez également comment envoyer des calculs à partir d’une session de Python locale une session à distance Python sur SQL Server.
 
 > [!Tip]
-> Pour une démonstration vidéo, consultez [exécuter de R et Python à distance dans SQL Server à partir des blocs-notes Jupyter](https://blogs.msdn.microsoft.com/mlserver/2018/07/10/run-r-and-python-remotely-in-sql-server-from-jupyter-notebooks-or-any-ide/).
+> Pour une démonstration vidéo, des exercices de cet article, consultez [exécuter de R et Python à distance dans SQL Server à partir des blocs-notes Jupyter](https://blogs.msdn.microsoft.com/mlserver/2018/07/10/run-r-and-python-remotely-in-sql-server-from-jupyter-notebooks-or-any-ide/).
 
 > [!Note]
 > Une alternative à installer les bibliothèques clientes est à l’aide d’un serveur autonome. À l’aide d’un autonome server comme client riche est une option que certains clients préfèrent pour plus de travail de scénario de bout en bout. Si vous avez un [serveur autonome](../install/sql-machine-learning-standalone-windows-install.md) que celui fourni dans le programme d’installation de SQL Server, vous disposez d’un serveur de Python est entièrement découplé à partir d’une instance du moteur de base de données SQL Server. Un serveur standalon inclut la distribution de base open source de Anaconda ainsi que les bibliothèques spécifiques à Microsoft. Vous pouvez trouver l’exécutable de Python à cet emplacement : `C:\Program Files\Microsoft SQL Server\140\PYTHON_SERVER`. En tant que la validation de l’installation de client riche, ouvrez un [bloc-notes Jupyter](#python-tools) pour exécuter des commandes à l’aide de la Python.exe sur le serveur.
@@ -127,7 +127,7 @@ Si votre code requiert les packages qui ne sont pas installés par défaut avec 
 
 Avant de réessayer cette étape, vérifiez que vous disposez des autorisations sur l’instance de SQL Server et une chaîne de connexion à la [base de données exemple Iris](../tutorials/demo-data-iris-in-sql.md). Si la base de données n’existe pas et que vous disposez des autorisations suffisantes, vous pouvez [créer une base de données à l’aide de ces instructions inline](#create-iris-remotely).
 
-Remplacez la chaîne de connexion avec les valeurs valides. L’exemple de code utilise `"Driver=SQL Server;Server=localhost;Database=irissql;Trusted_Connection=Yes;"` mais votre code doit spécifier un serveur distant, éventuellement avec un nom d’instance.
+Remplacez la chaîne de connexion avec les valeurs valides. L’exemple de code utilise `"Driver=SQL Server;Server=localhost;Database=irissql;Trusted_Connection=Yes;"` mais votre code doit spécifier un serveur distant, éventuellement avec un nom d’instance et une option d’informations d’identification qui est mappé à la connexion d’utilisateur de base de données.
 
 ### <a name="define-a-function"></a>Définir une fonction
 
@@ -237,7 +237,7 @@ iris = datasets.load_iris()
 df = pd.DataFrame(iris.data, columns=iris.feature_names)
 ```
 
-### <a name="3---use-recoscalepy-apis-to-create-a-table-and-load-the-iris-data"></a>3 - Utilisez RecoscalePy APIs pour créer une table et charger les données Iris
+### <a name="3---use-revoscalepy-apis-to-create-a-table-and-load-the-iris-data"></a>3 - Utilisez Revoscalepy APIs pour créer une table et charger les données Iris
 
 ```Python
 from revoscalepy import RxSqlServerData, rx_data_step

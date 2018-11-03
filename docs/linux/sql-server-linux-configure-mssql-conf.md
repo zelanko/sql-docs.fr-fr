@@ -4,18 +4,18 @@ description: Cet article décrit comment utiliser l’outil mssql-conf pour conf
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 06/22/2018
+ms.date: 10/31/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
-ms.openlocfilehash: e03738f2252a4bfef9a5e14cc22ed9342b404f6e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a8a4cd22d4637c2d6fd86bf61d25c16dda728394
+ms.sourcegitcommit: fafb9b5512695b8e3fc2891f9c5e3abd7571d550
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694667"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50753586"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Configurer SQL Server sur Linux avec l’outil mssql-conf
 
@@ -34,7 +34,7 @@ ms.locfileid: "47694667"
 | [Profil de messagerie de base de données](#dbmail) | Définir le profil de messagerie de base de données par défaut pour SQL Server sur Linux. |
 | [Répertoire de données par défaut](#datadir) | Remplacez le répertoire par défaut pour les nouveaux fichiers de données de base de données SQL Server (.mdf). |
 | [Répertoire de journal par défaut](#datadir) | Change le répertoire par défaut pour les nouveaux fichiers de journal (.ldf) de base de données SQL Server. |
-| [Répertoire de fichier de base de données master par défaut](#masterdatabasedir) | Change le répertoire par défaut pour les fichiers de base de données master sur l’installation existante de SQL.|
+| [Répertoire de base de données master par défaut](#masterdatabasedir) | Change le répertoire par défaut pour les fichiers journaux et de base de données master.|
 | [Nom de fichier de base de données master par défaut](#masterdatabasename) | Modifie le nom des fichiers de base de données master. |
 | [Répertoire de vidage par défaut](#dumpdir) | Remplacez le répertoire par défaut pour les nouvelles images mémoire et d’autres fichiers de résolution des problèmes. |
 | [Répertoire de journal d’erreur par défaut](#errorlogdir) | Change le répertoire par défaut pour les nouveaux fichiers de journal des erreurs de SQL Server, la Trace de Profiler par défaut, XE de Session de contrôle d’intégrité système et Hekaton Session XE. |
@@ -190,7 +190,7 @@ Le **filelocation.defaultdatadir** et **filelocation.defaultlogdir** paramètres
 
 ## <a id="masterdatabasedir"></a> Modifier l’emplacement de répertoire de fichiers de base de données master par défaut
 
-Le **filelocation.masterdatafile** et **filelocation.masterlogfile** définition modifie l’emplacement où le moteur SQL Server recherche les fichiers de base de données master. Par défaut, cet emplacement est /var/opt/mssql/data. 
+Le **filelocation.masterdatafile** et **filelocation.masterlogfile** définition modifie l’emplacement où le moteur SQL Server recherche les fichiers de base de données master. Par défaut, cet emplacement est /var/opt/mssql/data.
 
 Pour modifier ces paramètres, utilisez les étapes suivantes :
 
@@ -214,13 +214,16 @@ Pour modifier ces paramètres, utilisez les étapes suivantes :
    sudo /opt/mssql/bin/mssql-conf set filelocation.masterlogfile /tmp/masterdatabasedir/mastlog.ldf
    ```
 
+   > [!NOTE]
+   > En plus de déplacer les données de référence et les fichiers journaux, il déplace également l’emplacement par défaut pour toutes les autres bases de données système.
+
 1. Arrêtez le service SQL Server :
 
    ```bash
    sudo systemctl stop mssql-server
    ```
 
-1. Déplacer le master.mdf et masterlog.ldf : 
+1. Déplacer le master.mdf et masterlog.ldf :
 
    ```bash
    sudo mv /var/opt/mssql/data/master.mdf /tmp/masterdatabasedir/master.mdf 
@@ -232,14 +235,15 @@ Pour modifier ces paramètres, utilisez les étapes suivantes :
    ```bash
    sudo systemctl start mssql-server
    ```
-   
-> [!NOTE]
-> Si SQL Server ne peut pas trouver les fichiers master.mdf et mastlog.ldf dans le répertoire spécifié, une copie basés sur des modèles de bases de données système sera automatiquement créée dans le répertoire spécifié, et SQL Server démarrera avec succès. Toutefois, métadonnées, telles que les bases de données utilisateur, les connexions serveur, des certificats de serveur, clés de chiffrement, les travaux de l’agent SQL ou ancien mot de passe de connexion SA ne seront pas mis à jour dans la base de données master. Vous devrez arrêter SQL Server et de déplacer votre ancien master.mdf mastlog.ldf vers le nouvel emplacement spécifié et de démarrage de SQL Server pour continuer à utiliser les métadonnées existantes. 
 
+   > [!NOTE]
+   > Si SQL Server ne peut pas trouver les fichiers master.mdf et mastlog.ldf dans le répertoire spécifié, une copie basés sur des modèles de bases de données système sera automatiquement créée dans le répertoire spécifié, et SQL Server démarrera avec succès. Toutefois, métadonnées, telles que les bases de données utilisateur, les connexions serveur, des certificats de serveur, clés de chiffrement, les travaux de l’agent SQL ou ancien mot de passe de connexion SA ne seront pas mis à jour dans la base de données master. Vous devrez arrêter SQL Server et de déplacer votre ancien master.mdf mastlog.ldf vers le nouvel emplacement spécifié et de démarrage de SQL Server pour continuer à utiliser les métadonnées existantes.
+ 
+## <a id="masterdatabasename"></a> Modifier le nom des fichiers de base de données master
 
-## <a id="masterdatabasename"></a> Modifier le nom des fichiers de base de données master.
+Le **filelocation.masterdatafile** et **filelocation.masterlogfile** définition modifie l’emplacement où le moteur SQL Server recherche les fichiers de base de données master. Cela permet également de modifier le nom des fichiers journaux et de base de données master. 
 
-Le **filelocation.masterdatafile** et **filelocation.masterlogfile** définition modifie l’emplacement où le moteur SQL Server recherche les fichiers de base de données master. Par défaut, cet emplacement est /var/opt/mssql/data. Pour modifier ces paramètres, utilisez les étapes suivantes :
+Pour modifier ces paramètres, utilisez les étapes suivantes :
 
 1. Arrêtez le service SQL Server :
 
@@ -251,8 +255,11 @@ Le **filelocation.masterdatafile** et **filelocation.masterlogfile** définition
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf set filelocation.masterdatafile /var/opt/mssql/data/masternew.mdf
-   sudo /opt/mssql/bin/mssql-conf set filelocation.mastlogfile /var/opt/mssql/data /mastlognew.ldf
+   sudo /opt/mssql/bin/mssql-conf set filelocation.mastlogfile /var/opt/mssql/data/mastlognew.ldf
    ```
+
+   > [!IMPORTANT]
+   > Vous pouvez uniquement modifier le nom de la base de données master et les fichiers journaux une fois que SQL Server a démarré avec succès. Avant l’exécution initiale, SQL Server attend les les fichiers master.mdf et mastlog.ldf.
 
 1. Modifier le nom des base de données master données et fichiers journaux 
 
@@ -266,8 +273,6 @@ Le **filelocation.masterdatafile** et **filelocation.masterlogfile** définition
    ```bash
    sudo systemctl start mssql-server
    ```
-
-
 
 ## <a id="dumpdir"></a> Modifier l’emplacement par défaut du répertoire de vidage
 

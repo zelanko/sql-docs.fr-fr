@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 343e40cc0872c07d21d319717d33811a366a88b2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 66622346bdc180dbbe4de9e734699dd1e522e95c
+ms.sourcegitcommit: fafb9b5512695b8e3fc2891f9c5e3abd7571d550
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47750508"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50753536"
 ---
 # <a name="configure-sql-server-settings-with-environment-variables-on-linux"></a>Configurer les paramètres de SQL Server avec les variables d’environnement sur Linux
 
@@ -61,8 +61,8 @@ Vous pouvez utiliser plusieurs variables d’environnement différent pour confi
 | **MSSQL_DUMP_DIR** | Accédez au répertoire où SQL Server déposera les vidages de mémoire et d’autres fichiers de résolution des problèmes par défaut. |
 | **MSSQL_ENABLE_HADR** | Activer le groupe de disponibilité. Par exemple, '1' est activé, et « 0 » est désactivé |
 | **MSSQL_AGENT_ENABLED** | Activer l’Agent SQL Server. Par exemple, 'true' est activée et 'false' est désactivé. Par défaut, l’agent est désactivé.  |
-| **MSSQL_MASTER_DATA_FILE** | Définit l’emplacement du fichier de données de base de données master. |
-| **MSSQL_MASTER_LOG_FILE** | Définit l’emplacement du fichier de journal de base de données master. |
+| **MSSQL_MASTER_DATA_FILE** | Définit l’emplacement du fichier de données de base de données master. Doit être nommé **master.mdf** jusqu'à ce que la première exécution de SQL Server. |
+| **MSSQL_MASTER_LOG_FILE** | Définit l’emplacement du fichier de journal de base de données master. Doit être nommé **mastlog.ldf** jusqu'à ce que la première exécution de SQL Server. |
 | **MSSQL_ERROR_LOG_FILE** | Définit l’emplacement des fichiers du journal des erreurs. |
 
 ::: moniker-end
@@ -85,13 +85,13 @@ Vous pouvez utiliser plusieurs variables d’environnement différent pour confi
 | **MSSQL_DUMP_DIR** | Accédez au répertoire où SQL Server déposera les vidages de mémoire et d’autres fichiers de résolution des problèmes par défaut. |
 | **MSSQL_ENABLE_HADR** | Activer le groupe de disponibilité. Par exemple, '1' est activé, et « 0 » est désactivé |
 | **MSSQL_AGENT_ENABLED** | Activer l’Agent SQL Server. Par exemple, 'true' est activée et 'false' est désactivé. Par défaut, l’agent est désactivé.  |
-| **MSSQL_MASTER_DATA_FILE** | Définit l’emplacement du fichier de données de base de données master. |
-| **MSSQL_MASTER_LOG_FILE** | Définit l’emplacement du fichier de journal de base de données master. |
+| **MSSQL_MASTER_DATA_FILE** | Définit l’emplacement du fichier de données de base de données master. Doit être nommé **master.mdf** jusqu'à ce que la première exécution de SQL Server. |
+| **MSSQL_MASTER_LOG_FILE** | Définit l’emplacement du fichier de journal de base de données master. Doit être nommé **mastlog.ldf** jusqu'à ce que la première exécution de SQL Server. |
 | **MSSQL_ERROR_LOG_FILE** | Définit l’emplacement des fichiers du journal des erreurs. |
 
 ::: moniker-end
 
-## <a name="example-initial-setup"></a>Exemple : le programme d’installation initiale de
+## <a name="use-with-initial-setup"></a>Utiliser avec le programme d’installation initiale
 
 Cet exemple exécute `mssql-conf setup` avec configuré des variables d’environnement. Les variables d’environnement suivantes sont spécifiées :
 
@@ -104,7 +104,7 @@ Cet exemple exécute `mssql-conf setup` avec configuré des variables d’enviro
 sudo ACCEPT_EULA='Y' MSSQL_PID='Developer' MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>' MSSQL_TCP_PORT=1234 /opt/mssql/bin/mssql-conf setup
 ```
 
-## <a name="example-docker"></a>Exemple : Docker
+## <a name="use-with-docker"></a>Utilisation avec Docker
 
 Cet exemple de commande docker utilise les variables d’environnement suivantes pour créer un nouveau conteneur de SQL Server :
 
