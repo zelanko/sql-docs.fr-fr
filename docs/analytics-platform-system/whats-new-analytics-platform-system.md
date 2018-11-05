@@ -9,17 +9,69 @@ ms.topic: conceptual
 ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: bc9b0e8b89fb7fd6e507e9e615190fef21a94466
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: 4dde052645662689b4f783777b4aec847c613e6d
+ms.sourcegitcommit: 3e1efbe460723f9ca0a8f1d5a0e4a66f031875aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49461104"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50237075"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>Quelles sont les nouveautés d’Analytique Platform System, un entrepôt de données MPP montée en puissance
 Consultez les nouveautés introduite dans les dernières mises à jour de matériel pour Microsoft® Analytique Platform System (APS). APS est une appliance de montée en puissance en local qui héberge MPP SQL Server Parallel Data Warehouse. 
 
 ::: moniker range=">= aps-pdw-2016-au7 || = sqlallproducts-allversions"
+<a name="h2-aps-cu7.2"></a>
+## <a name="aps-cu72"></a>APS CU7.2
+Date de publication : octobre 2018
+
+### <a name="support-for-tls-12"></a>Prise en charge de TLS 1.2
+APS CU7.2 prend en charge TLS 1.2. Ordinateur client pour les points d’accès et des points d’accès des communications intra-nœud peuvent désormais être définie pour communiquer uniquement via TLS 1.2. Outils tels que SSDT, SSIS et Dwloader installé sur les ordinateurs clients qui sont configurés pour communiquer uniquement via TLS 1.2 peuvent maintenant vous connecter aux points d’accès à l’aide de TLS 1.2. Par défaut, les points d’accès prendra en charge toutes les versions TLS (1.0, 1.1 et 1.2) pour la compatibilité descendante. Si vous souhaitez définir votre appliance APS pour stictly utiliser TLS 1.2, vous pouvez le faire en modifiant les paramètres du Registre. 
+
+Consultez [configuration TLS 1.2 sur APS](configure-tls12-aps.md) pour plus d’informations.
+
+### <a name="hadoop-encryption-zone-support-for-polybase"></a>Zone de chiffrement Hadoop prise en charge de PolyBase
+PolyBase peut désormais communiquer aux zones de chiffrement Hadoop. Consultez les modifications de configuration de points d’accès qui sont nécessaires dans [configurer la sécurité de Hadoop](polybase-configure-hadoop-security.md#encryptionzone).
+
+### <a name="insert-select-maxdop-options"></a>Options de maxdop de Insert-Select
+Nous avons ajouté un [commutateur de fonctionnalité](appliance-feature-switch.md) qui vous permet de choisir les paramètres maxdop supérieures à 1 pour les opérations insert-select. Vous pouvez maintenant définir le paramètre maxdop à 0, 1, 2 ou 4. La valeur par défaut est 1.
+
+> [!IMPORTANT]  
+> Augmenter maxdop peut parfois entraîner des opérations plus lentes ou des erreurs de blocage. Si cela se produit, redéfinissez le paramètres maxdop 1 et recommencez l’opération.
+
+### <a name="columnstore-index-health-dmv"></a>Intégrité de l’index ColumnStore DMV
+Vous pouvez afficher des informations d’à l’aide d’intégrité columnstore index **dm_pdw_nodes_db_column_store_row_group_physical_stats** dmv. Utiliser l’affichage suivant pour déterminer la fragmentation et de décider du moment reconstruire ou réorganiser un index columnstore.
+
+```sql
+create view dbo.vCS_rg_physical_stats
+as 
+with cte
+as
+(
+select   tb.[name]                    AS [logical_table_name]
+,        rg.[row_group_id]            AS [row_group_id]
+,        rg.[state]                   AS [state]
+,        rg.[state_desc]              AS [state_desc]
+,        rg.[total_rows]              AS [total_rows]
+,        rg.[trim_reason_desc]        AS trim_reason_desc
+,        mp.[physical_name]           AS physical_name
+FROM    sys.[schemas] sm
+JOIN    sys.[tables] tb               ON  sm.[schema_id]          = tb.[schema_id]                             
+JOIN    sys.[pdw_table_mappings] mp   ON  tb.[object_id]          = mp.[object_id]
+JOIN    sys.[pdw_nodes_tables] nt     ON  nt.[name]               = mp.[physical_name]
+JOIN    sys.[dm_pdw_nodes_db_column_store_row_group_physical_stats] rg      ON  rg.[object_id]     = nt.[object_id]
+                                                                            AND rg.[pdw_node_id]   = nt.[pdw_node_id]
+                                        AND rg.[pdw_node_id]    = nt.[pdw_node_id]                                          
+)
+select *
+from cte;
+```
+
+### <a name="polybase-date-range-increase-for-orc-and-parquet-files"></a>Augmentation de la plage date PolyBase pour les fichiers ORC et Parquet
+Lecture, l’importation et exportation des types de données de date à l’aide de PolyBase maintenant prend en charge les dates avant 1970-01-01 et après 2038-01-20 pour les types de fichier ORC et Parquet.
+
+### <a name="ssis-destination-adapter-for-sql-server-2017-as-target"></a>Adaptateur de destination SSIS pour SQL Server 2017 en tant que cible
+Nouvel adaptateur de destination APS SSIS qui prend en charge de SQL Server 2017 comme cible de déploiement peut être téléchargé à partir de [site de téléchargement](https://www.microsoft.com/en-us/download/details.aspx?id=57472).
+
 <a name="h2-aps-cu7.1"></a>
 ## <a name="aps-cu71"></a>APS CU7.1
 Date de publication - juillet 2018
@@ -77,11 +129,11 @@ APS AU6 s’exécute sur la dernière version de SQL Server 2016 et utilise le n
 ### <a name="t-sql"></a>T-SQL
 APS AU6 prend en charge ces améliorations de compatibilité de T-SQL.  Ces éléments de langage supplémentaires facilitent la migration à partir de SQL Server et d’autres sources de données. 
 
-- [Classements SQL au niveau des colonnes][] sont désormais pris en charge, en plus des classements de Windows.
-- [Index non cluster sur les index columnstore en cluster][] améliorer les performances des requêtes qui recherchent des valeurs spécifiques dans l’index cluster columnstore. 
+- [Les classements au niveau des colonnes SQL][] sont désormais pris en charge, en plus des classements de Windows.
+- [Les index non cluster sur les index columnstore en cluster][] améliorer les performances des requêtes qui recherchent des valeurs spécifiques dans l’index cluster columnstore. 
 - [SÉLECTIONNEZ... DANS][] 
 - [sp_spaceused()][] affiche l’espace disque utilisé ou réservé dans une table ou une base de données.
-- [Tableaux larges][] prise en charge est identique à SQL Server 2016. La limite de 32 Ko pour la taille de ligne n’existe plus. 
+- [Les tableaux larges][] prise en charge est identique à SQL Server 2016. La limite de 32 Ko pour la taille de ligne n’existe plus. 
 
 **Types de données**
 
@@ -144,16 +196,16 @@ The link format that starts with '/sql/what-ever/my-artlcle' is not appropriate 
 The proper formats have at least two big advantages.  One big advantage is that the proper formats enable the OPS Build system to detect broken links at Pull Request build time, instead of only later during run time.
 -->
 [database compatibility level 130]: ../t-sql/statements/alter-database-transact-sql-compatibility-level.md
-[Classements SQL au niveau des colonnes]: ~/relational-databases/collations/collation-and-unicode-support.md
+[Les classements au niveau des colonnes SQL]: ~/relational-databases/collations/collation-and-unicode-support.md
 
-[Index non cluster sur les index columnstore en cluster]:/sql/t-sql/statements/create-index-transact-sql
+[Les index non cluster sur les index columnstore en cluster]:/sql/t-sql/statements/create-index-transact-sql
 [VARCHAR (MAX)]:/sql/t-sql/data-types/char-and-varchar-transact-sql
 [NVARCHAR (MAX)]:/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql
 [VARBINARY (MAX)]:/sql/t-sql/data-types/binary-and-varbinary-transact-sql
 [SYSNAME]:/sql/relational-databases/system-catalog-views/sys-types-transact-sql
 [SÉLECTIONNEZ... DANS]:/sql/t-sql/queries/select-into-clause-transact-sql
 [sp_spaceused()]:/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql
-[Tableaux larges]:/sql/sql-server/maximum-capacity-specifications-for-sql-server
+[Les tableaux larges]:/sql/sql-server/maximum-capacity-specifications-for-sql-server
 [BULK INSERT]:/sql/t-sql/statements/bulk-insert-transact-sql
 [Utilitaire bcp]:/sql/tools/bcp-utility
 [UNIQUEIDENTIFIER]:/sql/t-sql/data-types/uniqueidentifier-transact-sql

@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 07c5e65558bf4544da08f631a1d57290352bb451
-ms.sourcegitcommit: ef115025e57ec342c14ed3151ce006f484d1fadc
+ms.openlocfilehash: dc8632769f54a9b6eba25a1a1b5ad55b70bc1c59
+ms.sourcegitcommit: f9b4078dfa3704fc672e631d4830abbb18b26c85
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49411136"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50965950"
 ---
 # <a name="download-and-install-azure-data-studio"></a>Téléchargez et installez Azure Data Studio
 
@@ -28,9 +28,9 @@ Téléchargez et installez la dernière version, le *Release d’octobre*:
 
 |Plateforme|Télécharger|Date de publication| Version |
 |:---|:---|:---|:---|
-|Windows|[Programme d’installation](https://go.microsoft.com/fwlink/?linkid=2030731)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2030736)|18 octobre 2018 |1.1.3|
-|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=2030738)|18 octobre 2018 |1.1.3|
-|Linux|[.DEB](https://go.microsoft.com/fwlink/?linkid=2030750)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2030746)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2030741)|18 octobre 2018 |1.1.3|
+|Windows|[Programme d’installation](https://go.microsoft.com/fwlink/?linkid=2030731)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2030736)|30 octobre 2018 |1.1.4|
+|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=2030738)|30 octobre 2018 |1.1.4|
+|Linux|[.DEB](https://go.microsoft.com/fwlink/?linkid=2030750)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2030746)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2030741)|30 octobre 2018 |1.1.4|
 
 Pour plus d’informations sur la dernière version, consultez le [notes de version](release-notes.md).
 
@@ -44,7 +44,7 @@ Cette version de [!INCLUDE[name-sos](../includes/name-sos-short.md)] inclut une 
 1. Démarrer le [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] application.
 
 
-**fichier .zip**
+**Fichier zip**
 
 1. Télécharger [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] .zip pour Windows](https://go.microsoft.com/fwlink/?linkid=2030736).
 2. Recherchez le fichier téléchargé et extrayez-le.
@@ -146,12 +146,21 @@ Si vous avez installé [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]
 - SUSE Linux Enterprise Server v12 SP2
 - Ubuntu 16.04
 
+## <a name="recommended-system-requirements"></a>Configuration système recommandée
+Pour une expérience optimale, utilisez la configuration système recommandée.
+
+|             | Cœurs de processeur | Mémoire/RAM |
+|:-----------:|:---------:|:----------:|
+| Recommandation |     4     |      8     |
+|   Minimum   |     2     |      4     |
+|             |           |            |
+
 ## <a name="check-for-updates"></a>Rechercher des mises à jour
 Pour vérifier les dernières mises à jour, cliquez sur l’icône d’engrenage dans la coin inférieur gauche de la fenêtre et cliquez sur **vérifier les mises à jour**
 
-## <a name="supported-sql-offerings-ssms-180-preview"></a>Produits SQL pris en charge (version préliminaire de SSMS 18.0)
+## <a name="supported-sql-offerings"></a>Produits SQL pris en charge
 
-* Cette version de Azure Data Studio fonctionne avec toutes les [prise en charge des versions de SQL Server 2014 - [!INCLUDE [sql-server-2019](..\includes\sssqlv15-md.md)]](https://support.microsoft.com/lifecycle?C2=1044) et prend en charge pour l’utilisation avec les dernières fonctionnalités de cloud dans Azure SQL Database et Azure SQL Data Warehouse. Azure Data Studio offre également la prise en charge de la version préliminaire de Azure SQL Managed Instance.
+* Cette version de Azure Data Studio fonctionne avec toutes les [prise en charge des versions de SQL Server 2014 - [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)]](https://support.microsoft.com/lifecycle?C2=1044) et prend en charge pour l’utilisation avec les dernières fonctionnalités de cloud dans Azure SQL Database et Azure SQL Data Warehouse. Azure Data Studio offre également la prise en charge de la version préliminaire de Azure SQL Managed Instance.
 
 ## <a name="move-user-settings"></a>Déplacer les paramètres de l’utilisateur
 
