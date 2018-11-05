@@ -7,12 +7,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0cd9678c06e69b185c75b95d6095e238df8d0937
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.openlocfilehash: 5f6f3e3d23c2d2777a3a17db16d047222991d48a
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49085175"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030618"
 ---
 # <a name="deploy-the-sql-server-reporting-services-report-viewer-web-part-on-a-sharepoint-site"></a>Déployer le composant WebPart Visionneuse de rapports de SQL Server Reporting Services sur un site SharePoint
 
@@ -28,7 +28,7 @@ Utilisez les instructions suivantes pour déployer manuellement le package de so
 
 > [!IMPORTANT]
 > Depuis la version « 15.X.X.X », vous pouvez installer ReportViewerWebPart côte à côte avec vos applications de services partagés en mode intégré Reporting Services SharePoint.
-> Avec cette mise à jour de la solution .wsp nous avons introduit de nouveaux fichiers et la solution précédente doit être retirée et la nouvelle solution .wsp doit être redéployée à l’aide des cmdlets Uninstall-SPSolution et Install-SPSolution, respectivement.
+> De nouveaux fichiers ont été ajoutés dans le cadre de la mise à jour de la solution .wsp. Vous devez supprimer la solution précédente et redéployer la nouvelle à l’aide des applets de commande Uninstall-SPSolution et Install-SPSolution, respectivement.
 >
 
 **Versions SharePoint Server prises en charge :**
@@ -171,4 +171,4 @@ Les langues suivantes sont prises en charge dans le composant WebPart :
 
 Une fois le composant WebPart Visionneuse de rapports déployé et activé, vous pouvez l’ajouter à une page SharePoint. Pour plus d’informations, consultez [Ajouter le composant WebPart Visionneuse de rapports de SQL Server Reporting Services à une page SharePoint](add-report-viewer-web-part-to-page.md).
 
-D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -9,18 +9,18 @@ ms.topic: conceptual
 ms.assetid: a5a8dbf6-4c3a-435d-8188-d6656c32f229
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 412669834546ddd7583b8f7bd3f7eeaef3cb0348
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4572d5c325dbfb36a17ce2c987140ab56b6626e6
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739337"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031628"
 ---
 # <a name="create-mobile-reports-with-sql-server-mobile-report-publisher"></a>Créer des rapports mobiles avec l’Éditeur de rapports mobiles SQL Server
 Découvrez les rapports mobiles [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , optimisés pour les appareils mobiles et connectés à des données locales, avec un large éventail de visualisations de données. 
 
 >[!NOTE]
->  Pour migrer un contenu Datazen Server tel que des tableaux de bord et des indicateurs de performance clés vers un serveur SQL Server 2016 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , n’hésitez pas utiliser [l’Assistant de migration SQL Server pour Datazen](https://www.microsoft.com/en-us/download/details.aspx?id=53128). 
+>  Vous avez besoin de migrer du contenu Datazen Server, tel que des tableaux de bord et des indicateurs de performance clés, vers un serveur SQL Server 2016 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] ? n’hésitez pas utiliser [l’Assistant de migration SQL Server pour Datazen](https://www.microsoft.com/en-us/download/details.aspx?id=53128). 
  
 ![SS_MRP_LayoutTabSm](../../reporting-services/media/ss-mrp-layouttabsm.png)  
 
@@ -33,7 +33,7 @@ Avec [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)], vous pou
 ## <a name="create-includessrsnoversionmdincludesssrsnoversion-mdmd--mobile-reports"></a>Créer des rapports mobiles [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]  
   
 Ces articles vous aideront à démarrer.
--  Téléchargez [l’Éditeur de rapports mobiles SQL Server](http://go.microsoft.com/fwlink/?LinkID=733527).  
+-  Téléchargez [l’Éditeur de rapports mobiles SQL Server](https://go.microsoft.com/fwlink/?LinkID=733527).  
 -  [Créer un rapport mobile Reporting Services](../../reporting-services/mobile-reports/create-a-reporting-services-mobile-report.md)  
 -  [Procédure détaillée : créer des rapports mobiles et des indicateurs de performance clés dans SQL Server 2016 Reporting Services](http://christopherfinlan.com/2015/12/21/how-to-create-mobile-reports-and-kpis-in-sql-server-reporting-services-2016-an-end-to-end-walkthrough/) (blog de Christopher Finlan, en anglais)  
 - [Commencer par la conception ou Commencer par les données](../../reporting-services/mobile-reports/design-first-or-data-first-when-creating-in-reporting-services-mobile-reports.md): indiquez si vous souhaitez d’abord concevoir votre rapport avec des données simulées, ou commencer par vos propres données.  

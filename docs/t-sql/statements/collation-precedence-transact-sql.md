@@ -1,5 +1,5 @@
 ---
-title: Priorité de classement (Transact-SQL) | Microsoft Docs
+title: Priorité de classement | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -27,14 +27,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1271e6d108009ffd30084a6402c790070c0e3d8f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0fd55a9b0b6dd98a00ce7d826611845e8597170c
+ms.sourcegitcommit: eddf8cede905d2adb3468d00220a347acd31ae8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47621317"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49960773"
 ---
-# <a name="collation-precedence-transact-sql"></a>Priorité de classement (Transact-SQL)
+# <a name="collation-precedence"></a>Priorité de classement
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   La priorité de classement, également appelée règles de contraintes de classements, détermine :  
@@ -43,10 +43,10 @@ ms.locfileid: "47621317"
   
 -   le classement utilisé par certains opérateurs, tels que LIKE et IN, qui utilisent des entrées de chaînes de caractères, mais ne renvoient pas une chaîne de caractères.  
   
- Les règles de priorité de classement s’appliquent uniquement aux types de données de chaînes de caractères : **char**, **varchar**, **text**, **nchar**, **nvarchar** et **ntext**. Les objets comportant d'autres types de données n'interviennent pas dans les évaluations de classement.  
+Les règles de priorité de classement s’appliquent uniquement aux types de données de chaînes de caractères : **char**, **varchar**, **text**, **nchar**, **nvarchar** et **ntext**. Les objets comportant d'autres types de données n'interviennent pas dans les évaluations de classement.  
   
 ## <a name="collation-labels"></a>Étiquettes de classement  
- Le tableau suivant répertorie et décrit les quatre catégories de classement des objets. Le nom de chaque catégorie est identifié par une étiquette de classement.  
+Le tableau suivant répertorie et décrit les quatre catégories de classement des objets. Le nom de chaque catégorie est identifié par une étiquette de classement.  
   
 |Étiquette de classement|Types d’objets|  
 |---------------------|----------------------|  
@@ -56,11 +56,11 @@ ms.locfileid: "47621317"
 |Sans classement|Indique que la valeur d'une expression est le résultat d'une opération entre deux chaînes dont l'étiquette de classement implicite génère des classements conflictuels. Le résultat de l'expression est défini comme étant dépourvu d'un classement.|  
   
 ## <a name="collation-rules"></a>Règles de classement  
- L'étiquette de classement d'une expression simple qui fait référence à un seul objet de chaîne de caractère représente l'étiquette de classement de l'objet en référence.  
+L'étiquette de classement d'une expression simple qui fait référence à un seul objet de chaîne de caractère représente l'étiquette de classement de l'objet en référence.  
   
- L'étiquette de classement d'une expression complexe qui fait référence à deux expressions d'opérandes dotées de la même étiquette de classement constitue l'étiquette de classement des expressions d'opérandes.  
+L'étiquette de classement d'une expression complexe qui fait référence à deux expressions d'opérandes dotées de la même étiquette de classement constitue l'étiquette de classement des expressions d'opérandes.  
   
- L'étiquette de classement du résultat final d'une expression complexe qui fait référence à deux expressions d'opérandes comportant des classements différents obéit aux règles suivantes :  
+L'étiquette de classement du résultat final d'une expression complexe qui fait référence à deux expressions d'opérandes comportant des classements différents obéit aux règles suivantes :  
   
 -   L'étiquette Explicite est prioritaire par rapport à l'étiquette Implicite. L'étiquette Implicite est prioritaire par rapport à l'étiquette Contrainte par défaut.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "47621317"
   
      Sans classement + X explicite = Explicite  
   
- Le tableau suivant récapitule les différentes règles.  
+Le tableau suivant récapitule les différentes règles.  
   
 |Étiquette de contrainte d'opérande|X explicite|X implicite|Contrainte par défaut|Sans classement|  
 |----------------------------|----------------|----------------|------------------------|-------------------|  
@@ -91,7 +91,7 @@ ms.locfileid: "47621317"
 |**Contrainte par défaut**|Le résultat est X explicite|Le résultat est X implicite|Le résultat est Contrainte par défaut|Le résultat est Sans classement|  
 |**Sans classement**|Le résultat est X explicite|Le résultat est Sans classement|Le résultat est Sans classement|Le résultat est Sans classement|  
   
- Les règles supplémentaires suivantes s'appliquent également à la priorité de classement :  
+Les règles supplémentaires suivantes s'appliquent également à la priorité de classement :  
   
 -   Une expression explicite ne peut pas avoir plusieurs clauses COLLATE. Par exemple, la clause `WHERE` suivante n'est pas valide car une clause `COLLATE` est spécifiée pour une expression qui est déjà explicite :  
   
@@ -99,9 +99,9 @@ ms.locfileid: "47621317"
   
 -   Les conversions de pages de codes pour les types de données **text** ne sont pas autorisées. Vous ne pouvez pas effectuer un cast d’une expression de type **texte** d’un classement à l’autre si les pages de codes de ces derniers sont différentes. L'opérateur d'affectation ne peut pas attribuer de valeurs si le classement de l'opérande texte de droite utilise une page de codes différente de l'opérande texte de gauche.  
   
- La priorité de classement est déterminée après la conversion du type de données. L'opérande qui détermine le classement résultant peut être différent de l'opérande qui fournit le type de données du résultat final. Par exemple, étudiez le traitement ci-dessous :  
+La priorité de classement est déterminée après la conversion du type de données. L'opérande qui détermine le classement résultant peut être différent de l'opérande qui fournit le type de données du résultat final. Par exemple, étudiez le traitement ci-dessous :  
   
-```  
+```sql  
 CREATE TABLE TestTab  
    (PrimaryKey int PRIMARY KEY,  
     CharCol char(10) COLLATE French_CI_AS  
@@ -112,12 +112,12 @@ FROM TestTab
 WHERE CharCol LIKE N'abc'  
 ```  
   
- Le type de données Unicode de l'expression simple `N'abc'` est prioritaire. Par conséquent, l'expression résultante a le type de données Unicode affecté à `N'abc'`. Cependant, l'expression `CharCol` a l'étiquette de classement Implicite, alors que `N'abc'` est associé à une étiquette de contrainte inférieure de Contrainte par défaut. Le classement `French_CI_AS` de `CharCol` sera dès lors utilisé.  
+Le type de données Unicode de l'expression simple `N'abc'` est prioritaire. Par conséquent, l'expression résultante a le type de données Unicode affecté à `N'abc'`. Cependant, l'expression `CharCol` a l'étiquette de classement Implicite, alors que `N'abc'` est associé à une étiquette de contrainte inférieure de Contrainte par défaut. Le classement `French_CI_AS` de `CharCol` sera dès lors utilisé.  
   
 ### <a name="examples-of-collation-rules"></a>Exemples de règles de classement  
  Les exemples suivants illustrent le fonctionnement des règles de classement. Pour exécuter les exemples, créez la table test suivante.  
   
-```  
+```sql  
 USE tempdb;  
 GO  
   
@@ -133,7 +133,7 @@ GO
 #### <a name="collation-conflict-and-error"></a>Conflit et erreur de classement  
  Dans la requête suivante, le prédicat présente un conflit de classement et génère une erreur.  
   
-```  
+```sql  
 SELECT *   
 FROM TestTab   
 WHERE GreekCol = LatinCol;  
@@ -149,7 +149,7 @@ Cannot resolve collation conflict between 'Latin1_General_CS_AS' and 'Greek_CI_A
 #### <a name="explicit-label-vs-implicit-label"></a>Étiquettes Explicite et étiquette Implicite  
  Dans la requête suivante, le prédicat est analysé dans le classement `greek_ci_as`, car l'expression de droite comporte l'étiquette Explicite. Celle-ci est prioritaire par rapport à l'étiquette Implicite de l'expression de gauche.  
   
-```  
+```sql  
 SELECT *   
 FROM TestTab   
 WHERE GreekCol = LatinCol COLLATE greek_ci_as;  
@@ -166,9 +166,9 @@ id          GreekCol             LatinCol
 ```  
   
 #### <a name="no-collation-labels"></a>Étiquette sans classement  
- Dans les requêtes suivantes, les expressions `CASE` ont l'étiquette Sans classement. Elles ne peuvent donc pas apparaître dans la liste de sélection, ni être traitées par les opérateurs qui respectent le classement. Toutefois, les expressions peuvent être traitées par les opérateurs qui ne respectent pas le classement.  
+Dans les requêtes suivantes, les expressions `CASE` ont l'étiquette Sans classement. Elles ne peuvent donc pas apparaître dans la liste de sélection, ni être traitées par les opérateurs qui respectent le classement. Toutefois, les expressions peuvent être traitées par les opérateurs qui ne respectent pas le classement.  
   
-```  
+```sql  
 SELECT (CASE WHEN id > 10 THEN GreekCol ELSE LatinCol END)   
 FROM TestTab;  
 ```  
@@ -180,7 +180,7 @@ Msg 451, Level 16, State 1, Line 1
 Cannot resolve collation conflict for column 1 in SELECT statement.  
 ```  
   
-```  
+```sql  
 SELECT PATINDEX((CASE WHEN id > 10 THEN GreekCol ELSE LatinCol END), 'a')  
 FROM TestTab;  
 ```  
@@ -192,7 +192,7 @@ Msg 446, Level 16, State 9, Server LEIH2, Line 1
 Cannot resolve collation conflict for patindex operation.  
 ```  
   
-```  
+```sql  
 SELECT (CASE WHEN id > 10 THEN GreekCol ELSE LatinCol END) COLLATE Latin1_General_CI_AS   
 FROM TestTab;  
 ```  
@@ -207,23 +207,23 @@ a
 ```  
   
 ## <a name="collation-sensitive-and-collation-insensitive"></a>Sensibilité au classement  
- Les opérateurs et les fonctions respectent ou non le classement.  
+Les opérateurs et les fonctions respectent ou non le classement.  
   
- Respect du classement  
- Le respect du classement signifie que la spécification d'un opérande sans classement génère une erreur de compilation. Le résultat de l'expression ne peut être de type sans classement.  
+Respect du classement  
+Le respect du classement signifie que la spécification d'un opérande sans classement génère une erreur de compilation. Le résultat de l'expression ne peut être de type sans classement.  
   
- Non-respect du classement  
- Le non-respect du classement signifie que les opérandes et le résultat peuvent être sans classement.  
+Non-respect du classement  
+Le non-respect du classement signifie que les opérandes et le résultat peuvent être sans classement.  
   
 ### <a name="operators-and-collation"></a>Opérateurs et classement  
- Les opérateurs de comparaison et les opérateurs MAX, MIN, BETWEEN, LIKE et IN respectent le classement. La chaîne utilisée par les opérateurs se voit attribuer l'étiquette de classement de l'opérande comportant le degré de priorité le plus élevé. L'opérateur UNION respecte également le classement, et tous les opérandes de chaînes et le résultat final se voient attribuer le classement de l'opérande doté du degré de priorité le plus élevé. La priorité de classement des opérandes UNION et du résultat est évaluée par colonne.  
+Les opérateurs de comparaison et les opérateurs MAX, MIN, BETWEEN, LIKE et IN respectent le classement. La chaîne utilisée par les opérateurs se voit attribuer l'étiquette de classement de l'opérande comportant le degré de priorité le plus élevé. L’instruction UNION respecte également le classement. Tous les opérandes de chaînes et le résultat final se voient attribuer le classement de l’opérande doté du degré de priorité le plus élevé. La priorité de classement de l’opérande UNION et du résultat est évaluée par colonne.  
   
- L'opérateur d'affectation ne respecte pas le classement et l'expression de droite est affectée au classement de gauche.  
+L'opérateur d'affectation ne respecte pas le classement et l'expression de droite est affectée au classement de gauche.  
   
- L'opérateur de concaténation de chaînes respecte le classement, les deux opérandes de chaînes et le résultat se voient attribuer l'étiquette de classement de l'opérande comportant la priorité de classement la plus élevée. Les opérateurs UNION ALL et CASE respectent également le classement, et tous les opérandes de chaînes et résultats finaux se voient attribuer l'étiquette de classement de l'opérande doté du degré de priorité le plus élevé. La priorité de classement des opérandes UNION ALL et du résultat est évaluée par colonne.  
+L'opérateur de concaténation de chaînes respecte le classement, les deux opérandes de chaînes et le résultat se voient attribuer l'étiquette de classement de l'opérande comportant la priorité de classement la plus élevée. Les instructions UNION ALL et CASE ne respectent pas le classement. Tous les opérandes de chaînes et résultats finaux se voient attribuer l’étiquette de classement de l’opérande doté du degré de priorité le plus élevé. La priorité de classement des opérandes UNION ALL et du résultat est évaluée par colonne.  
   
 ### <a name="functions-and-collation"></a>Fonctions et classement  
- Les fonctions CAST, CONVERT et COLLATE respectent le classement pour les types de données **char**, **varchar** et **text**. Si l'entrée et la sortie des fonctions CAST et CONVERT sont des chaînes de caractères, la chaîne résultante a l'étiquette de classement de la chaîne d'entrée. Si l'entrée n'est pas une chaîne de caractères, la chaîne résultante est une contrainte par défaut et se voit attribuer le classement de la base de données actuelle pour la connexion, ou de celle contenant la fonction définie par l'utilisateur, la procédure stockée ou le déclencheur dans lequel la fonction CAST ou CONVERT est référencée.  
+Les fonctions CAST, CONVERT et COLLATE respectent le classement pour les types de données **char**, **varchar** et **text**. Si l'entrée et la sortie des fonctions CAST et CONVERT sont des chaînes de caractères, la chaîne résultante a l'étiquette de classement de la chaîne d'entrée. Si l'entrée n'est pas une chaîne de caractères, la chaîne résultante est une contrainte par défaut et se voit attribuer le classement de la base de données actuelle pour la connexion, ou de celle contenant la fonction définie par l'utilisateur, la procédure stockée ou le déclencheur dans lequel la fonction CAST ou CONVERT est référencée.  
   
  Pour les fonctions intégrées qui renvoient une chaîne, mais qui n'acceptent pas une chaîne en entrée, la chaîne résultante est une contrainte par défaut et se voit attribuer le classement de la base de données actuelle ou celui de la base de données contenant la fonction définie par l'utilisateur, la procédure stockée ou le déclencheur dans lequel la fonction est référencée.  
   

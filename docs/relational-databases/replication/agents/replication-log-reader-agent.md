@@ -1,7 +1,7 @@
 ---
 title: Agent de lecture du journal des réplications | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 10/29/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -16,12 +16,12 @@ ms.assetid: 5487b645-d99b-454c-8bd2-aff470709a0e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1f269ce06c4ebc8f3433f21b57f1bac1b2d237cf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 80f099af2fc47fdcf8dd33d8dea8b970c62f5ab9
+ms.sourcegitcommit: 3a8293b769b76c5e46efcb1b688bffe126d591b3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854747"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50226311"
 ---
 # <a name="replication-log-reader-agent"></a>Agent de lecture du journal des réplications
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -102,7 +102,10 @@ logread [-?]
 |**0**|Spécifie que le chiffrement SSL n'est pas utilisé.|  
 |**1**|Spécifie que le chiffrement SSL est utilisé, mais que l'agent ne vérifie pas si le certificat de serveur SSL est signé par un émetteur de confiance.|  
 |**2**|Spécifie que le chiffrement SSL est utilisé et que le certificat est vérifié.|  
-  
+
+ > [!NOTE]  
+ >  Un certificat SSL valide est défini avec le nom de domaine complet de l’instance SQL Server. Pour que l’agent puisse se connecter lorsque vous définissez EncryptionLevel sur 2, créez un alias sur l’instance locale de SQL Server. Le paramètre « Nom de l’alias » doit correspondre au nom du serveur, et le paramètre « Serveur » doit être défini sur le nom complet de l’instance SQL Server.
+ 
  Pour plus d’informations, consultez [Vue d’ensemble de la sécurité &#40;réplication&#41;](../../../relational-databases/replication/security/security-overview-replication.md).  
   
  **-ExtendedEventConfigFile** *configuration_path_and_file_name*  

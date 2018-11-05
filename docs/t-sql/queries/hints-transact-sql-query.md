@@ -1,7 +1,7 @@
 ---
 title: Indicateurs de requête (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/24/2018
+ms.date: 10/22/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -56,12 +56,12 @@ ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 521a3a19ce2e1278d856cc3ade5feed67b4182c5
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: ecdfe3131c797dc10c1bfe87fcfd6c7e7a3eb1c9
+ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906309"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49806829"
 ---
 # <a name="hints-transact-sql---query"></a>Indicateurs (Transact-SQL) - Requête
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -257,29 +257,33 @@ ms.locfileid: "48906309"
 
  Les noms d’indicateur suivants sont pris en charge :    
  
-*  'DISABLE_OPTIMIZED_NESTED_LOOP'  
- Indique au processeur de requêtes de ne pas appliquer d’opération de tri (tri par lots) sur les jointures de boucles imbriquées optimisées au moment de la génération d’un plan de requête. Cela équivaut à utiliser [l’indicateur de trace](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2340.
-*  'FORCE_LEGACY_CARDINALITY_ESTIMATION'  <a name="use_hint_ce70"></a> Force l’optimiseur de requête à utiliser le modèle [Estimation de cardinalité](../../relational-databases/performance/cardinality-estimation-sql-server.md) de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et des versions antérieures. Cela équivaut à utiliser [l’indicateur de trace](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481 ou le paramètre de [configuration au niveau base de données](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) LEGACY_CARDINALITY_ESTIMATION=ON.
-*  'ENABLE_QUERY_OPTIMIZER_HOTFIXES'  
- Active les correctifs de l’optimiseur de requête (modifications publiées dans les Service Packs et mises à jour cumulatives SQL Server). Cela équivaut à utiliser [l’indicateur de trace](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4199 ou le paramètre de [configuration au niveau base de données](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) QUERY_OPTIMIZER_HOTFIXES=ON.
-*  'DISABLE_PARAMETER_SNIFFING'  
- Indique à l’optimiseur de requête d’utiliser la distribution moyenne des données quand il compile une requête avec un ou plusieurs paramètres. De cette manière, le plan de requête ne dépend pas de la valeur du paramètre initialement détectée lors de la compilation de la requête. Cela équivaut à utiliser [l’indicateur de trace](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4136 ou le paramètre de [configuration au niveau base de données](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) PARAMETER_SNIFFING=OFF.
-*  'ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES'    <a name="use_hint_correlation"></a>Indique à SQL Server de générer un plan qui utilise la sélectivité minimale lors de l’évaluation des prédicats AND des filtres à prendre en compte pour la corrélation. Cela équivaut à utiliser [l’indicateur de trace](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4137 avec le modèle d’estimation de la cardinalité fourni dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et les versions antérieures, ou [l’indicateur de trace](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9471 avec le modèle d’estimation de la cardinalité disponible dans [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ou les versions ultérieures.
-*  'DISABLE_OPTIMIZER_ROWGOAL'  <a name="use_hint_rowgoal"></a> Indique à SQL Server de générer un plan qui n’utilise pas les ajustements d’objectif de lignes avec les requêtes contenant les mots clés TOP, OPTION (FAST N), IN ou EXISTS. Cela équivaut à utiliser [l’indicateur de trace](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4138.
-*  'ENABLE_HIST_AMENDMENT_FOR_ASC_KEYS'  
- Active automatiquement la génération de statistiques rapides (modification de l’histogramme) pour les colonnes d’index de début où l’estimation de la cardinalité est nécessaire. L’histogramme utilisé pour estimer la cardinalité est ajusté au moment de la compilation des requêtes pour prendre en compte la valeur minimale ou maximale réelle de chaque colonne. Cela équivaut à utiliser [l’indicateur de trace](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4139. 
-*  'ASSUME_JOIN_PREDICATE_DEPENDS_ON_FILTERS'    <a name="use_hint_join_containment"></a> amène [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à générer un plan de requête qui utilise l’hypothèse de relation contenant-contenu simple au lieu de l’hypothèse par défaut de relation contenant-contenu de base pour les jointures, avec le modèle [d’estimation de la cardinalité](../../relational-databases/performance/cardinality-estimation-sql-server.md) de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ou d’une version ultérieure. Cela équivaut à utiliser [l’indicateur de trace](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9476. 
-*  'FORCE_DEFAULT_CARDINALITY_ESTIMATION'    
- Force l’optimiseur de requête à utiliser le modèle [d’estimation de la cardinalité](../../relational-databases/performance/cardinality-estimation-sql-server.md) qui correspond au niveau de compatibilité de la base de données. Cet indicateur substitue [l’indicateur de trace](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 9481 ou le paramètre de [configuration au niveau base de données](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) LEGACY_CARDINALITY_ESTIMATION=ON.
-*  'DISABLE_INTERLEAVED_EXECUTION_TVF'   
- Désactive l’exécution entrelacée pour les fonctions table à instructions multiples. Pour plus d’informations, voir [Exécution entrelacée pour les fonctions table à instructions multiples](../../relational-databases/performance/adaptive-query-processing.md#interleaved-execution-for-multi-statement-table-valued-functions).
-*  'DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK'     
- Désactive les retours d’allocation de mémoire en mode batch. Pour plus d’informations, consultez [Retour d’allocation de mémoire en mode batch](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-memory-grant-feedback).
-*  'DISABLE_BATCH_MODE_ADAPTIVE_JOINS'     
- Désactive les jointures adaptatives en mode batch. Pour plus d’informations, consultez [Jointures adaptatives en mode batch](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-adaptive-joins).
-*  'QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n'       
+*  'ASSUME_JOIN_PREDICATE_DEPENDS_ON_FILTERS' <a name="use_hint_join_containment"></a>       
+   Indique à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de générer un plan de requête qui utilise l’hypothèse de relation contenant-contenu simple, au lieu de l’hypothèse par défaut de relation contenant-contenu de base pour les jointures, avec le modèle [d’estimation de la cardinalité](../../relational-databases/performance/cardinality-estimation-sql-server.md) de l’optimiseur de requête fourni dans [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ou ultérieur. Cela équivaut à utiliser [l’indicateur de trace](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9476. 
+*  'ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES' <a name="use_hint_correlation"></a>      
+   Indique à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de générer un plan qui utilise la sélectivité minimale lors de l’évaluation des prédicats AND des filtres pour la prise en compte de la corrélation. Cela équivaut à utiliser [l’indicateur de trace](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4137 avec le modèle d’estimation de la cardinalité fourni dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et les versions antérieures, ou [l’indicateur de trace](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9471 avec le modèle d’estimation de la cardinalité disponible dans [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ou les versions ultérieures.
+*  'DISABLE_BATCH_MODE_ADAPTIVE_JOINS'       
+   Désactive les jointures adaptatives en mode batch. Pour plus d’informations, consultez [Jointures adaptatives en mode batch](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-adaptive-joins).
+*  'DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK'       
+   Désactive les retours d’allocation de mémoire en mode batch. Pour plus d’informations, consultez [Retour d’allocation de mémoire en mode batch](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-memory-grant-feedback).
+*  'DISABLE_INTERLEAVED_EXECUTION_TVF'      
+   Désactive l’exécution entrelacée pour les fonctions table à instructions multiples. Pour plus d’informations, voir [Exécution entrelacée pour les fonctions table à instructions multiples](../../relational-databases/performance/adaptive-query-processing.md#interleaved-execution-for-multi-statement-table-valued-functions).
+*  'DISABLE_OPTIMIZED_NESTED_LOOP'      
+   Indique au processeur de requêtes de ne pas appliquer d’opération de tri (tri par lots) sur les jointures de boucles imbriquées optimisées au moment de la génération d’un plan de requête. Cela équivaut à utiliser [l’indicateur de trace](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2340.
+*  'DISABLE_OPTIMIZER_ROWGOAL' <a name="use_hint_rowgoal"></a>      
+   Indique à SQL Server de générer un plan qui n’utilise pas les ajustements d’objectif de lignes avec les requêtes contenant les mots clés TOP, OPTION (FAST N), IN ou EXISTS. Cela équivaut à utiliser [l’indicateur de trace](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4138.
+*  'DISABLE_PARAMETER_SNIFFING'      
+   Indique à l’optimiseur de requête d’utiliser la distribution moyenne des données quand il compile une requête avec un ou plusieurs paramètres. De cette manière, le plan de requête ne dépend pas de la valeur du paramètre initialement détectée lors de la compilation de la requête. Cela équivaut à utiliser [l’indicateur de trace](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4136 ou le paramètre de [configuration au niveau base de données](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) PARAMETER_SNIFFING=OFF.
+*  'ENABLE_HIST_AMENDMENT_FOR_ASC_KEYS'      
+   Active automatiquement la génération de statistiques rapides (modification de l’histogramme) pour les colonnes d’index de début où l’estimation de la cardinalité est nécessaire. L’histogramme utilisé pour estimer la cardinalité est ajusté au moment de la compilation des requêtes pour prendre en compte la valeur minimale ou maximale réelle de chaque colonne. Cela équivaut à utiliser [l’indicateur de trace](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4139. 
+*  'ENABLE_QUERY_OPTIMIZER_HOTFIXES'     
+   Active les correctifs de l’optimiseur de requête (modifications publiées dans les Service Packs et mises à jour cumulatives SQL Server). Cela équivaut à utiliser [l’indicateur de trace](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4199 ou le paramètre de [configuration au niveau base de données](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) QUERY_OPTIMIZER_HOTFIXES=ON.
+*  'FORCE_DEFAULT_CARDINALITY_ESTIMATION'      
+   Force l’optimiseur de requête à utiliser le modèle [d’estimation de la cardinalité](../../relational-databases/performance/cardinality-estimation-sql-server.md) qui correspond au niveau de compatibilité de la base de données. Cet indicateur substitue [l’indicateur de trace](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 9481 ou le paramètre de [configuration au niveau base de données](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) LEGACY_CARDINALITY_ESTIMATION=ON.
+*  'FORCE_LEGACY_CARDINALITY_ESTIMATION' <a name="use_hint_ce70"></a>      
+   Force l’optimiseur de requête à utiliser le modèle [Estimation de cardinalité](../../relational-databases/performance/cardinality-estimation-sql-server.md) fourni dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et les versions antérieures. Cela équivaut à utiliser [l’indicateur de trace](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481 ou le paramètre de [configuration au niveau base de données](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) LEGACY_CARDINALITY_ESTIMATION=ON.
+*  'QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n'          
  Force le comportement de l’optimiseur de requête au niveau d’une requête, comme si la requête était compilée avec le niveau de compatibilité de base de données *n*, où *n* est un niveau de compatibilité de base de données pris en charge. Consultez [sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md) pour obtenir la liste des valeurs actuellement prises en charge pour *n*. **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU10).    
- 
+
    > [!NOTE]
    > L’indicateur QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n ne remplace pas le paramètre d’estimation de cardinalité héritée ou par défaut, s’il est forcé via la configuration délimitée à la base de données, l’indicateur de suivi ou un autre indicateur de requête comme QUERYTRACEON.   
    > Cet indicateur affecte uniquement le comportement de l’optimiseur de requête. Il n’affecte pas les autres fonctionnalités de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui peuvent dépendre du [niveau de compatibilité de base de données](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md), comme la disponibilité de certaines fonctionnalités de la base de données.  
@@ -287,7 +291,7 @@ ms.locfileid: "48906309"
     
 *  'QUERY_PLAN_PROFILE'      
  Permet un profilage léger pour la requête. À la fin d’une requête contenant ce nouvel indicateur, un nouvel événement étendu, query_plan_profile, est déclenché. Cet événement étendu expose les statistiques d’exécution et le plan d’exécution réel XML semblable à l’événement étendu query_post_execution_showplan, mais uniquement pour les requêtes qui contiennent le nouvel indicateur. **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2CU3 et [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU11). 
- 
+
   > [!NOTE]
   > Si vous activez la collecte de l’événement étendu query_post_execution_showplan, cette opération ajoutera l’infrastructure de profilage standard à chaque requête qui est en cours d’exécution sur le serveur et pourra, par conséquent, affecter les performances globales du serveur.      
   > Si vous activez la collection de l’événement étendu *query_thread_profile* pour utiliser l’infrastructure à profilage léger à la place, la performance sera beaucoup plus faible, mais les performances globales du serveur seront quand même affectées.       

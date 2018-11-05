@@ -33,18 +33,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f289beef87a16f518e993b80045cd98c5828b5d9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1427cea1e6a920b0c3705a5a305e165b4ccb99be
+ms.sourcegitcommit: ef15fa253d98c62538bf9b6fe191af7f8ef8f6c8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730307"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49991093"
 ---
 # <a name="database-lifecycle-management"></a>Gestion du cycle de vie de base de données
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   La gestion du cycle de vie des bases de données (Database lifecycle management ou DLM) est une approche stratégique de la gestion des bases de données et ressources de données. DLM n'est pas un produit, mais une approche complète de la gestion du schéma, des données et des métadonnées d'une application de base de données. Grâce à l'approche réfléchie et proactive de DLM, une entreprise peut gérer ses ressources de données en fonction des niveaux de performance, de protection, de disponibilité et de coût requis.  
   
- L'approche DLM commence par une discussion sur la conception et l'objectif du projet, se poursuit par les activités de développement, de test, de génération, de déploiement, de maintenance et de sauvegarde de la base de données, puis se termine par l'archivage des données. Cette rubrique présente une vue d'ensemble des étapes de l'approche DLM, en commençant par le développement d'une base de données, suivi des activités de génération, de déploiement et de surveillance (Illustration 1). Les activités de gestion des données, ainsi que les opérations de portabilité des données de type importation/exportation, sauvegarde, migration et synchronisation, sont également abordées.  
+ L'approche DLM commence par une discussion sur la conception et l'objectif du projet, se poursuit par les activités de développement, de test, de génération, de déploiement, de maintenance et de sauvegarde de la base de données, puis se termine par l'archivage des données. Cette rubrique présente une vue d’ensemble des étapes de l’approche DLM, en commençant par le développement d’une base de données, suivi des activités de génération, de déploiement et de supervision. Les activités de gestion des données, ainsi que les opérations de portabilité des données de type importation/exportation, sauvegarde, migration et synchronisation, sont également abordées.  
   
  Pour lire l’intégralité de la rubrique, consultez [Gestion du cycle de vie de la base de données (DLM)](http://go.microsoft.com/fwlink/?LinkId=276949).  
   

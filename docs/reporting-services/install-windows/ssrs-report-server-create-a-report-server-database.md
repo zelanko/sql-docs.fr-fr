@@ -1,21 +1,21 @@
 ---
 title: Créer une base de données du serveur de rapports (Gestionnaire de configuration de SSRS) | Microsoft Docs
-ms.date: 09/20/2017
+ms.date: 10/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4c2a0a6391e1eeecf6f5831072528840c3257d1c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dced97164a9ba37fe6a2f5102f109c4c3c4ac90f
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47768237"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50050898"
 ---
 # <a name="create-a-report-server-database"></a>Créer une base de données du serveur de rapports
 
-[!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)])
+[!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
@@ -60,16 +60,16 @@ ms.locfileid: "47768237"
   
 -   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]  
   
- Pour créer la base de données du serveur de rapports sur un ordinateur distant, vous devez configurer la connexion de manière à employer un compte d'utilisateur de domaine ou un compte de service pouvant accéder au réseau. Si vous décidez d'utiliser une instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] distante, réfléchissez avec soin aux informations d'identification que le serveur de rapports devra utiliser pour se connecter à l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour plus d’informations, consultez [Configurer une connexion à la base de données du serveur de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
+ Pour créer la base de données du serveur de rapports sur un ordinateur distant, vous devez configurer la connexion de manière à employer un compte d'utilisateur de domaine ou un compte de service pouvant accéder au réseau. Si vous décidez d'utiliser une instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] distante, réfléchissez avec soin aux informations d'identification que le serveur de rapports devra utiliser pour se connecter à l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [Configurer une connexion à la base de données du serveur de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
 > [!IMPORTANT]  
 >  Le serveur de rapports et l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hébergeant la base de données du serveur de rapports peuvent appartenir à des domaines différents. Dans le cadre d'un déploiement Internet, il est courant d'utiliser un serveur situé derrière un pare-feu. Si vous configurez un serveur de rapports de manière à accéder à Internet, utilisez les informations d'identification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour vous connecter à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] située derrière le pare-feu et recourez à IPSEC pour sécuriser la connexion.  
   
 ## <a name="database-server-edition-requirements"></a>Conditions requises pour une édition du serveur de bases de données  
- Lors de la création d’une base de données de serveur de rapports, soyez conscient que certaines éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne peuvent pas être utilisées pour héberger la base de données. Pour plus d’informations, consultez la section « Conditions requises pour l’édition SQL Server de la base de données du serveur de rapports » dans [Fonctionnalités prises en charge par les éditions de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+ Lors de la création d’une base de données de serveur de rapports, soyez conscient que certaines éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne peuvent pas être utilisées pour héberger la base de données. Pour plus d’informations, consultez [Conditions requises pour l’édition SQL Server de la base de données du serveur de rapports](../reporting-services-features-supported-by-the-editions-of-sql-server-2016.md#report-server-database-server-edition-requirements) dans [Fonctionnalités Reporting Services prises en charge par les éditions de SQL Server 2016](../reporting-services-features-supported-by-the-editions-of-sql-server-2016.md).  
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-[Gestionnaire de configuration de Reporting Services](http://msdn.microsoft.com/63519ef4-e68a-42fb-9cf7-31228ea4e434)  
+[Gestionnaire de configuration de Reporting Services](https://msdn.microsoft.com/63519ef4-e68a-42fb-9cf7-31228ea4e434)  
 
-D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

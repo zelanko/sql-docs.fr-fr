@@ -8,16 +8,16 @@ ms.topic: conceptual
 ms.assetid: 44a9854d-e333-44f6-bdc7-8837b9f34416
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d1e144c70a1ceca4097597a8a87d639865f96b68
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 94cdbe6358bd0361addd70d682a3d0d41e70bbba
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742937"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50100220"
 ---
 # <a name="moving-the-report-server-databases-to-another-computer-ssrs-native-mode"></a>Déplacement des bases de données du serveur de rapports vers un autre ordinateur (en mode natif SSRS)
 
-  Vous pouvez déplacer les bases de données du serveur de rapports qui sont utilisées dans une installation du [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] vers une instance située sur un autre ordinateur. Les bases de données reportserver et reportservertempdb doivent être déplacées ou copiées ensemble. Ces deux bases de données sont requises dans une installation [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ; la base de données reportservertempdb doit être liée par nom à la base de données reportserver primaire que vous déplacez.  
+  Vous pouvez déplacer les bases de données du serveur de rapports qui sont utilisées dans une installation du [!INCLUDE[ssDE](../../includes/ssde-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vers une instance située sur un autre ordinateur. Les bases de données reportserver et reportservertempdb doivent être déplacées ou copiées ensemble. Ces deux bases de données sont requises dans une installation [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ; la base de données reportservertempdb doit être liée par nom à la base de données reportserver primaire que vous déplacez.  
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
@@ -226,4 +226,4 @@ GO
 [Configurer et gérer des clés de chiffrement](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
 [Base de données du serveur de rapports](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)  
 
-D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

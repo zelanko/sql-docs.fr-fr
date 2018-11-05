@@ -11,12 +11,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8f7520a4e9bdc346113e4777bd6899f5ccc0e01c
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: 957d8c397843f30e831dcc0a5f33943b959bac90
+ms.sourcegitcommit: 3a8293b769b76c5e46efcb1b688bffe126d591b3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460314"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50226261"
 ---
 # <a name="polybase-features-and-limitations"></a>Fonctionnalités et limitations de PolyBase
 
@@ -64,11 +64,7 @@ PolyBase présente les limitations suivantes :
 
 - La taille de ligne maximale, incluant la longueur totale des colonnes à longueur variable, ne peut pas dépasser 32 Ko dans SQL Server ou 1 Mo dans Azure SQL Data Warehouse.
 
-- PolyBase ne prend pas en charge les types de données Hive 0.12+ (c’est-à-dire Char(), VarChar()).
-
 - Durant l’exportation de données dans un format de fichier ORC à partir de SQL Server ou Azure SQL Data Warehouse, le nombre de colonnes de texte lourdes peut être limité à seulement 50, en raison d’erreurs de mémoire insuffisante Java. Pour contourner ce problème, exportez uniquement une partie des colonnes.
-
-- Impossible de lire ou d’écrire des données chiffrées au repos dans Hadoop. Cela inclut le chiffrement transparent ou les zones chiffrées HDFS.
 
 - PolyBase ne peut pas se connecter à une instance de Hortonworks si Knox est activé.
 
@@ -80,10 +76,6 @@ PolyBase présente les limitations suivantes :
 - [PolyBase ne s’installe pas quand vous ajoutez un nœud à un cluster de basculement SQL Server 2016](https://support.microsoft.com/en-us/help/3173087/fix-polybase-feature-doesn-t-install-when-you-add-a-node-to-a-sql-server-2016-failover-cluster)
 
 ::: moniker-end
-
-- L’authentification intégrée n’est pas prise en charge. Seule l’authentification par nom d’utilisateur et mot de passe est prise en charge actuellement.  
-
-- Le chiffrement est activé par défaut.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

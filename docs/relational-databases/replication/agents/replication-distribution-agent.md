@@ -1,7 +1,7 @@
 ---
 title: Agent de distribution de réplication | Microsoft Docs
 ms.custom: ''
-ms.date: 02/23/2016
+ms.date: 10/29/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -16,12 +16,12 @@ ms.assetid: 7b4fd480-9eaf-40dd-9a07-77301e44e2ac
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1864abc0cfa12e0b7ea60f5e080d372b9b50d989
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5cf1431ab35afc336fb18ac5546d00336f97c1bc
+ms.sourcegitcommit: 3a8293b769b76c5e46efcb1b688bffe126d591b3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47790287"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50226351"
 ---
 # <a name="replication-distribution-agent"></a>Agent de distribution de réplication
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -142,7 +142,10 @@ distrib [-?]
 |**0**|Spécifie que le chiffrement SSL n'est pas utilisé.|  
 |**1**|Spécifie que le chiffrement SSL est utilisé, mais que l'agent ne vérifie pas si le certificat de serveur SSL est signé par un émetteur de confiance.|  
 |**2**|Spécifie que le chiffrement SSL est utilisé et que le certificat est vérifié.|  
-  
+ 
+ > [!NOTE]  
+ >  Un certificat SSL valide est défini avec le nom de domaine complet de l’instance SQL Server. Pour que l’agent puisse se connecter lorsque vous définissez EncryptionLevel sur 2, créez un alias sur l’instance locale de SQL Server. Le paramètre « Nom de l’alias » doit correspondre au nom du serveur, et le paramètre « Serveur » doit être défini sur le nom complet de l’instance SQL Server.
+
  Pour plus d’informations, consultez [Vue d’ensemble de la sécurité &#40;réplication&#41;](../../../relational-databases/replication/security/security-overview-replication.md).  
   
  **-ErrorFile** *error_path_and_file_name*  

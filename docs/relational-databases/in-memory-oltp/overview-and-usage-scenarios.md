@@ -13,12 +13,12 @@ author: jodebrui
 ms.author: jodebrui
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3bbb4cce22423cbc5ac2f6e4941ffa1c624f18d1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 69b27bc4eba03a7f9c9bf83880f680720402ad3c
+ms.sourcegitcommit: 54e480afa91e041124c73b7206df73958f4dfa9e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830737"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50150190"
 ---
 # <a name="overview-and-usage-scenarios"></a>Vue d’ensemble et scénarios d’utilisation
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -129,6 +129,7 @@ Pour bien démarrer, consultez : [Improving temp table and table variable perfor
 #### <a name="customer-case-studies"></a>Études de cas clients
 
 - Un client est parvenu à améliorer les performances de 40 % simplement en remplaçant les paramètres table traditionnels par des paramètres table optimisés en mémoire : [High Speed IoT Data Ingestion Using In-Memory OLTP in Azure](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/04/07/a-technical-case-study-high-speed-iot-data-ingestion-using-in-memory-oltp-in-azure/)(Intégration de données IoT haute vitesse à l’aide de l’OLTP en mémoire dans Azure)
+- SentryOne a considérablement amélioré son ingestion des données grâce à une latence quasi nulle dans sa solution de supervision. Pour cela, l’entreprise a remplacé les tables tempdb par les tables OLTP en mémoire, dans le cadre de ses améliorations de scalabilité d’entreprise : [Un fournisseur de solution atteint des performances inédites en innovant dans le domaine de la supervision des données](https://customers.microsoft.com/story/sentryone-partner-professional-services-sql-server-azure)
 
 ### <a name="etl-extract-transform-load"></a>ETL (extraction, transformation, chargement)
 

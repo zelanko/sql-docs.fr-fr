@@ -14,12 +14,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 07fe3c1266cbdbabd13afc86aad9db04ea004932
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: f63416c3400f328f0602aa804dc66716067eeb7e
+ms.sourcegitcommit: 3a8293b769b76c5e46efcb1b688bffe126d591b3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419196"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50226301"
 ---
 # <a name="download-and-install-sql-server-data-tools-ssdt-for-visual-studio"></a>Télécharger et installer SQL Server Data Tools (SSDT) pour Visual Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -87,16 +87,18 @@ Commencez par effectuer les étapes suivantes tant que vous êtes en ligne :
 
 1. [Télécharger le programme d’installation autonome SSDT](#ssdt-for-vs-2017-standalone-installer).
 2. [Télécharger vs_sql.exe](https://aka.ms/vs/15/release/vs_sql.exe).
-3. Pendant que vous êtes toujours en ligne, exécutez l’une des commandes suivantes pour télécharger tous les fichiers nécessaires à l’installation hors connexion. L’utilisation de l’option `--layout` est la clé. Remplacez <filepath> par le vrai chemin pour y enregistrer les fichiers.
+3. Pendant que vous êtes toujours en ligne, exécutez l’une des commandes suivantes pour télécharger tous les fichiers nécessaires à l’installation hors connexion. L’utilisation de l’option `--layout` est primordiale. Elle permet de télécharger les fichiers en vue d’une installation hors connexion. Remplacez <filepath> par le vrai chemin des dispositions pour y enregistrer les fichiers.
 
+   
    A.   Pour une langue spécifique, passez les paramètres régionaux : `vs_sql.exe --layout c:\<filepath> --lang en-us` (une seule langue correspond environ à 1 Go)  
    B. Pour toutes les langues, omettez l’argument `--lang` : `vs_sql.exe --layout c:\<filepath>` (toutes les langues correspondent environ à 3,9 Go).
 
+4. Exécutez `SSDT-Setup-ENU.exe /layout c:\<filepath>` pour extraire la charge utile SSDT dans l’emplacement `<filepath>` où les fichiers Visual Studio 2017 ont été téléchargés. De cette façon, tous les fichiers sont réunis dans un seul dossier de dispositions.
+
 Après avoir effectué les étapes précédentes, vous pouvez effectuer ce qui suit hors connexion :
 
-1. Copiez le contenu de VS 2017 dans le dossier du contenu de SSDT. Vérifiez que tous les fichiers des deux sont réunis dans un seul dossier.
-2. Exécutez `vs_setup.exe --NoWeb` pour installer l’interpréteur de commandes de VS 2017 et le projet de données SQL Server.
-3. Exécutez `SSDT-Setup-ENU.exe /install` et sélectionnez SSIS/SSRS/SSAS.
+1. Exécutez `vs_setup.exe --NoWeb` pour installer l’interpréteur de commandes de VS 2017 et le projet de données SQL Server.
+2. À partir du dossier de dispositions, exécutez `SSDT-Setup-ENU.exe /install`, puis sélectionnez SSRS/SSIS/SSAS.
 
    - Ou pour une installation sans assistance, exécutez `SSDT-Setup-ENU.exe /INSTALLALL[:vsinstances] /passive`  
 

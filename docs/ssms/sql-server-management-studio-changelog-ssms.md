@@ -11,12 +11,12 @@ ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8e19cfe7a0ad2292491dfc6b392f47e5a452774a
-ms.sourcegitcommit: 0acd84d0b22a264b3901fa968726f53ad7be815c
+ms.openlocfilehash: 49c01e3daf0561e5082bcba28373c574a65a4c7f
+ms.sourcegitcommit: 3a8293b769b76c5e46efcb1b688bffe126d591b3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49307143"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50226391"
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Journal des modifications (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +40,7 @@ Taille de téléchargement inférieure :
 
 SSMS 18.x est basé sur le nouveau shell isolé Visual Studio 2017 :
 
-- Il s’agit d’un interpréteur de commandes moderne (nous avons choisi Visual Studio 2107 15.6.4) qui permet d’exploiter tous les correctifs d’accessibilité qui ont été intégrés à SSMS et Visual Studio.
+- Il s’agit d’un interpréteur de commandes moderne (nous avons choisi Visual Studio 2017 15.6.4) qui permet d’exploiter tous les correctifs d’accessibilité qui ont été intégrés à SSMS et Visual Studio.
 
 Améliorations sur le plan de l’accessibilité :
 
@@ -120,14 +120,15 @@ SSMS / Plan d’exécution de requêtes :
 - Ajout de la logique pour l’affichage de « Materializer Operator (External Select) ».
 - Ajout d’un nouvel attribut de plan d’exécution de requêtes « BatchModeOnRowStoreUSed » pour identifier facilement les requêtes qui utilisent la fonctionnalité « analyse en mode batch sur les rowstores ». Chaque fois qu’une requête effectue une analyse en mode batch sur des rowstores, un nouvel attribut (BatchModeOnRowStoreUsed="true") est ajouté à l’élément StmtSimple.
 
-Always On :
+AlwaysOn :
 
 - Rehachage du temps de récupération estimé (RTO) et de la perte de données estimée (RPO) dans le tableau de bord Always On de SSMS. Pour plus d’informations, consultez [Monitorer les performances des groupes de disponibilité Always On](../database-engine/availability-groups/windows/monitor-performance-for-always-on-availability-groups.md).
 
 Fichiers d’audit :
 
 - Abandon de la méthode d’authentification basée sur la clé du compte de stockage au profit de l’authentification basée sur Azure AD.
-Always Encrypted (AD) :
+
+Always Encrypted :
 
 - Ajout d’un onglet Always Encrypted avec une case à cocher *Activer Always Encrypted* (dans la boîte de dialogue *Se connecter au serveur*) qui offre désormais un moyen simple d’activer/désactiver Always Encrypted pour une connexion de base de données.
 - Plusieurs améliorations ont été apportées pour prendre en charge Always Encrypted avec enclaves sécurisées :
@@ -746,7 +747,7 @@ Correction du problème à cause duquel la fermeture de la fenêtre Données act
 Correction du problème à cause duquel les bases de données de serveur levaient une exception pour les bases de données SQL Data Warehouse en pause.
 Correction du problème à cause duquel le lancement de scripts de la base de données SQL sur SQL Data Warehouse générait des valeurs de paramètres T-SQL incorrectes.
 Correction du problème à cause duquel les scripts d’une extension de base de données émettaient à tort l’option *DATA\_COMPRESSION*.
-- Moniteur d’activité des travaux : Correction d’un problème à cause duquel l’utilisateur obtenait une erreur « Index hors limites. Il ne doit pas être négatif et sa taille doit être inférieure à celle de la collection. 
+- Moniteur d’activité des travaux : Correction d’un problème à cause duquel l’utilisateur obtenait une erreur « Index hors limites. Il doit être non négatif et inférieur à la taille de la collection. 
       Nom du paramètre : index (System.Windows.Forms) » lorsqu’il tentait de filtrer par catégorie - [Connect 3138691](https://connect.microsoft.com/SQLServer/feedback/details/3138691).
 - Boîte de dialogue Connexion : Correction d’un problème qui empêchait les utilisateurs de domaine ne disposant pas d’un accès en lecture/écriture à un contrôleur de domaine de se connecter à un serveur SQL Server avec l’authentification SQL - [Connect 2373381](https://connect.microsoft.com/SQLServer/feedback/details/2373381).
 - Réplication : Correction d’un problème à cause duquel une erreur du type « Impossible d’appliquer la valeur "Null" à la propriété ServerInstance » s’affichait au moment de consulter les propriétés d’un abonnement par extraction dans SQL Server.
@@ -1128,9 +1129,9 @@ http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manag
 - Correction du problème qui provoquait l’échec de « Générer le script… » pour les bases de données SQL Azure.
 - Correction de « Générer un script en tant que » et « Assistant Génération de scripts », qui n’ajoutaient pas de sauts de ligne supplémentaires lors de la génération de scripts pour des objets comme les procédures stockées. [Article de Microsoft Connect](http://connect.microsoft.com/SQLServer/feedback/details/3115850)
 - Le fournisseur SQLAS PowerShell : Ajout de la propriété LastProcessed aux dossiers Dimension et MeasureGroup. [Article de Microsoft Connect](http://connect.microsoft.com/SQLServer/feedback/details/3111879)
-- Statistiques sur les requêtes en direct : Résolution d’un problème où elles montraient seulement la première requête dans un lot. [Article de Microsoft Connect] (http://connect.microsoft.com/SQLServer/feedback/details/3114221)  
+- Statistiques sur les requêtes en direct : Résolution d’un problème où elles montraient seulement la première requête dans un lot. [Article de Microsoft Connect](http://connect.microsoft.com/SQLServer/feedback/details/3114221)  
 - Plan d’exécution de requêtes : Affichage du maximum au lieu de la somme pour les threads dans la fenêtre Propriétés.
-- Magasin de requêtes : Ajout d’un nouveau rapport sur les requêtes avec les variations fortes des exécutions.
+- Magasin de requêtes : Ajout d’un nouveau rapport sur les requêtes avec les variation fortes des exécutions.
 - Problèmes de performances de l’Explorateur d’objets : [Article Microsoft Connect](http://connect.microsoft.com/SQLServer/feedback/details/3114074) Le menu contextuel pour les tables se bloque momentanément SSMS est lent quand l’utilisateur clique avec le bouton droit sur un index pour une table (via une connexion (Internet) à distance). Éviter d’émettre des requêtes sur des tables qui sont triées sur le serveur
 - Suppression dans SSMS de l’Assistant Déploiement Azure (pour déployer une base de données sur une machine virtuelle Azure)
 - Résolution d’un problème où les index manquants n’étaient pas affichés dans les plans d’exécution dans SSMS [Article de Microsoft Connect](http://connect.microsoft.com/SQLServer/feedback/details/3114194)
@@ -1139,8 +1140,8 @@ http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manag
 - Résolution d’un problème où SSMS pouvait se bloquer lors d’une tentative d’affichage des autorisations sur une base de données
 - Magasin de requêtes : améliorations générales apportées aux éléments du menu contextuel pour les grilles de résultats des rapports du magasin de requêtes
 - La configuration d’Always Encrypted pour une table existante échoue avec des erreurs sur des objets non associés. [Article de Microsoft Connect](http://connect.microsoft.com/SQLServer/feedback/details/3103181)
-- La configuration d’Always Encrypted pour une base de données existante avec plusieurs schémas ne fonctionne pas. [Article de Microsoft Connect] (http://connect.microsoft.com/SQLServer/feedback/details/3109591)
-- L’Assistant Colonne chiffrée d’Always Encrypted échoue parce que la base de données contient des vues qui référencent des vues système. [Article de Microsoft Connect] (http://connect.microsoft.com/SQLServer/feedback/details/3111925)
+- La configuration d’Always Encrypted pour une base de données existante avec plusieurs schémas ne fonctionne pas. [Article de Microsoft Connect](http://connect.microsoft.com/SQLServer/feedback/details/3109591)
+- L’Assistant Colonne chiffrée d’Always Encrypted échoue parce que la base de données contient des vues qui référencent des vues système. [Article de Microsoft Connect](http://connect.microsoft.com/SQLServer/feedback/details/3111925)
 - Lors du chiffrement à l’aide d’Always Encrypted, les erreurs provenant de l’actualisation des modules après le chiffrement ne sont pas gérées correctement.
 - Résolution du problème de troncation de l’interface utilisateur dans la boîte de dialogue « Nouvelle inscription de serveur »
 - Correction de la mise à jour incorrecte par l’interface utilisateur des conditions DMF pour les expressions contenant des valeurs de constante de chaîne incluant des guillemets

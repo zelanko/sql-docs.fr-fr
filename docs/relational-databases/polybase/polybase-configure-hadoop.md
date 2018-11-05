@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 677d076d912cc7b3926fdd8ae2ef9dcc79c7b350
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2dd074f4cd7d3d9042e5f0deb3de6ee0731c4af9
+ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47762367"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49806719"
 ---
 # <a name="configure-polybase-to-access-external-data-in-hadoop"></a>Configurer PolyBase pour accéder à des données externes dans Hadoop
 
@@ -88,12 +88,15 @@ Pour améliorer les performances des requêtes, activez le calcul pushdown sur v
 
 Pour interroger les données dans votre source de données Hadoop, vous devez définir une table externe à utiliser dans les requêtes Transact-SQL. Les étapes suivantes décrivent comment configurer la table externe.
 
-1. Créez une clé principale sur la base de données. Ceci est nécessaire pour chiffrer le secret des informations d’identification.
+1. Créez une clé principale pour la base de données, si celle-ci n’en a pas. C’est nécessaire pour chiffrer le secret des informations d’identification.
 
-   ```sql
-   CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo';  
-   ```
+     ```sql
+      CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'password';  
+     ```
+    ## <a name="arguments"></a>Arguments
+    PASSWORD ='password'
 
+    Mot de passe utilisé pour chiffrer la clé principale dans la base de données. Le mot de passe doit satisfaire aux critères de la stratégie de mot de passe Windows de l’ordinateur qui héberge l’instance SQL Server.
 1. Créez des informations d’identification limitées à la base de données pour les clusters Hadoop sécurisés par Kerberos.
 
    ```sql

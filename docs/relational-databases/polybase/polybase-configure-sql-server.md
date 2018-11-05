@@ -10,12 +10,12 @@ author: Abiola
 ms.author: aboke
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4729d78f0cfecf80f65dbff0f7bc2d6abe2ebbfa
-ms.sourcegitcommit: 8dccf20d48e8db8fe136c4de6b0a0b408191586b
+ms.openlocfilehash: 90b535714eea3a00ecffd2cf010187fbcd676a82
+ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48874257"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49806639"
 ---
 # <a name="configure-polybase-to-access-external-data-in-sql-server"></a>Configurer PolyBase pour accéder à des données externes dans SQL Server
 
@@ -23,7 +23,7 @@ ms.locfileid: "48874257"
 
 L’article explique comment utiliser PolyBase sur une instance SQL Server pour interroger des données externes dans une autre instance SQL Server.
 
-## <a name="prerequisites"></a>Prérequis
+## <a name="prerequisites"></a>Conditions préalables requises
 
 Si vous n’avez pas installé PolyBase, consultez [Installation de PolyBase](polybase-installation.md). Cet article décrit les prérequis pour l’installation.
 
@@ -68,7 +68,7 @@ Voici les objets de création qui vont être utilisés dans cette section :
     WITH ( 
     LOCATION = sqlserver://SqlServer,
     -- PUSHDOWN = ON | OFF,
-      CREDENTIAL = TeradataCredentials
+      CREDENTIAL = SQLServerCredentials
     );
 
      ```
@@ -107,6 +107,10 @@ Voici les objets de création qui vont être utilisés dans cette section :
      ```sql
       CREATE STATISTICS CustomerCustKeyStatistics ON sqlserver.customer (C_CUSTKEY) WITH FULLSCAN; 
      ```
+
+## <a name="sql-server-connector-compatible-types"></a>Types compatibles avec le connecteur SQL Server
+
+Une connexion peut être établie avec d’autres sources de données qui reconnaissent les connexions SQL Server. Avec le connecteur SQL Server PolyBase, vous pouvez créer une table externe pour **Azure SQL Data Warehouse et Azure SQL Database**. Pour cela, vous devez suivre les étapes listées ci-dessus. Vérifiez que les informations d’identification incluses dans l’étendue de la base de données, l’adresse du serveur, le port et la chaîne d’emplacement sont bien ceux de la source de données compatible à laquelle vous souhaitez vous connecter.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

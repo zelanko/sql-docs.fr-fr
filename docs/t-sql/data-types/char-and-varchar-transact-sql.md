@@ -25,12 +25,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e1aa8e57c93a96c2d8f48d8b675c97ef51f7396f
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.openlocfilehash: e8b54eff8007a5edd33ed36f40514a2e53b579f5
+ms.sourcegitcommit: eddf8cede905d2adb3468d00220a347acd31ae8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49644007"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49960793"
 ---
 # <a name="char-and-varchar-transact-sql"></a>char et varchar (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -64,12 +64,12 @@ Si SET ANSI_PADDING a la valeur OFF lors de l’exécution de CREATE TABLE ou d�
   
 > [!WARNING]
 > Chaque colonne varchar(max) ou nvarchar(max) non Null demande 24 octets d’allocation fixe supplémentaire calculée par rapport à la limite de 8 060 octets par ligne pendant une opération de tri. Cela peut produire une limite implicite du nombre de colonnes varchar(max) ou nvarchar(max) non Null pouvant être créées dans une table.  
-Aucune erreur spéciale n'est fournie quand la table est créée (mis à part l’avertissement habituel indiquant que la taille maximale de ligne dépasse la taille maximale autorisée de 8 060 octets) ou quand les données sont insérées. Cette grande taille de ligne peut provoquer des erreurs (comme l’erreur 512) au cours des opérations normales, telles que la mise à jour de la clé d’index cluster ou le tri de l’intégralité des colonnes, que les utilisateurs ne peuvent pas anticiper tant qu’elles n’ont pas été effectuées.
+Aucune erreur spéciale n'est fournie quand la table est créée (mis à part l’avertissement habituel indiquant que la taille maximale de ligne dépasse la taille maximale autorisée de 8 060 octets) ou quand les données sont insérées. Cette grande taille de ligne peut provoquer des erreurs (comme l’erreur 512) au cours des opérations normales, telles que la mise à jour de la clé d’index cluster ou le tri de l’intégralité des colonnes, que les utilisateurs ne peuvent pas anticiper tant qu’elles n’ont pas été effectuées.
   
 ##  <a name="_character"></a> Conversion de données caractères  
 Lorsque des expressions de caractères sont converties en type caractère de taille différente, les valeurs trop longues pour le nouveau type de données sont tronquées. Le type **uniqueidentifier** est considéré comme un type caractère pour les besoins de la conversion à partir d’une expression de caractères ; il est par conséquent soumis aux règles de troncation pour la conversion en un type caractère. Consultez la section Exemples qui suit.
   
-Quand une expression de caractères est convertie en une expression de caractères de taille ou de type de données différent (par exemple, de **char(5)** en **varchar(5)**, ou **char(20)** en **char(15)**), le classement de la valeur d’entrée est affecté à la valeur convertie. Si une expression de type non caractère est convertie en un type de données caractère, le classement par défaut de la base de données active est affecté à la valeur convertie. Dans les deux cas, vous pouvez affecter un classement spécifique à l’aide de la clause [COLLATE](http://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9).
+Quand une expression de caractères est convertie en une expression de caractères de taille ou de type de données différent (par exemple, de **char(5)** en **varchar(5)**, ou **char(20)** en **char(15)**), le classement de la valeur d’entrée est affecté à la valeur convertie. Si une expression de type non caractère est convertie en un type de données caractère, le classement par défaut de la base de données active est affecté à la valeur convertie. Dans les deux cas, vous pouvez affecter un classement spécifique à l’aide de la clause [COLLATE](../../t-sql/statements/collations.md).
   
 > [!NOTE]  
 > Les traductions de pages de codes sont prises en charge pour les types de données **char** et **varchar**, mais pas pour **text**. De manière identique aux versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la perte de données lors de l'interprétation d'une page de codes n'est pas mentionnée.  
@@ -162,7 +162,7 @@ String                                       TruncatedValue
 ## <a name="see-also"></a>Voir aussi
 [nchar et nvarchar &#40;Transact-SQL&#41;](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)  
 [CAST et CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
-[COLLATE &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9)  
+[COLLATE &#40;Transact-SQL&#41;](../../t-sql/statements/collations.md)  
 [Conversion de type de données &#40;moteur de base de données&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)  
 [Types de données &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
 [Estimer la taille d'une base de données](../../relational-databases/databases/estimate-the-size-of-a-database.md)     

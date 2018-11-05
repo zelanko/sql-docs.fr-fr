@@ -11,12 +11,12 @@ helpviewer_keywords:
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 94334d025645ec13e6f046800de49eeb902401f4
-ms.sourcegitcommit: 8dccf20d48e8db8fe136c4de6b0a0b408191586b
+ms.openlocfilehash: e30cded830401c589c62d1e6301d5be78720c07f
+ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48874357"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49806749"
 ---
 # <a name="install-polybase-on-windows"></a>Installer PolyBase sur Windows
 
@@ -35,27 +35,28 @@ Pour installer une version d'évaluation de SQL Server, accédez à [Versions d�
 - Mémoire minimale : 4 Go  
    
 - Espace libre minimal sur le disque dur : 2 Go  
+- **Recommandé :** 16 Go de RAM au minimum
    
 - TCP/IP doit être activé pour que PolyBase fonctionne correctement. TCP/IP est activé par défaut sur toutes les éditions de SQL Server, sauf sur les éditions SQL Server Express et Developer. Pour que PolyBase fonctionne correctement sur les éditions Express et Developer, vous devez activer la connectivité TCP/IP (consultez [Activer ou désactiver un protocole réseau de serveur](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md).)
 
-- Une source de données externe (objet blob Azure ou cluster Hadoop). Pour connaître les versions d’Hadoop prises en charge, consultez [Configurer PolyBase](#supported). 
-- Installation de MSVC++ 2012  
+- MSVC++ 2012 
 
-> [!NOTE]
-> Si vous envisagez d’utiliser la fonction de délégation des calculs sur Hadoop, vous devez vous assurer que le cluster Hadoop cible est doté des principaux composants de hdfs, Yarn/MapReduce avec le serveur Jobhistory activé. PolyBase envoie la requête émise via MapReduce et extrait l’état à partir du serveur JobHistory. L’absence de l’un ou l’autre des composants entraîne l’échec de la requête.
+**Remarque**  
 
-**Remarques**  
+Il n'est possible d'installer PolyBase que sur une instance SQL Server par ordinateur.
 
-Il n'est possible d'installer PolyBase que sur une instance SQL Server par ordinateur.  
-   
+> **Important**
+>
+> Si vous envisagez d’utiliser la fonctionnalité de calcul pushdown sur Hadoop, vérifiez que le cluster Hadoop cible est bien doté des principaux composants HDFS et Yarn/MapReduce, avec le serveur Jobhistory activé. PolyBase envoie la requête émise via MapReduce et extrait l’état à partir du serveur JobHistory. L’absence de l’un ou l’autre des composants entraîne l’échec de la requête.
+  
 ## <a name="single-node-or-polybase-scaleout-group"></a>Nœud unique ou groupe PolyBase avec montée en puissance parallèle
 
-Avant de commencer l’installation de PolyBase sur vos instances SQL Server, il est judicieux de planifier si vous souhaitez une installation sur un nœud unique ou dans un groupe de scale-out PolyBase. 
+Avant de commencer l’installation de PolyBase sur vos instances SQL Server, décidez si l’installation doit être faite sur un nœud unique ou dans un [groupe de scale-out PolyBase](../../relational-databases/polybase/polybase-scale-out-groups.md).
 
-Pour un groupe de scale-out PolyBase, vous devez veiller à ce que : 
+Pour un groupe de scale-out PolyBase, vous devez veiller à ce que :
 
 - Toutes les machines figurent dans le même domaine.
-- Vous utilisez les mêmes compte de service et mot de passe pendant l’installation.
+- Vous utilisez les mêmes compte de service et mot de passe pendant l’installation de PolyBase.
 - Vos instances de SQL Server peuvent communiquer entre elles sur le réseau.
 - Les instances de SQL Server sont toutes la même version de SQL Server.
 
@@ -63,7 +64,7 @@ Une fois que vous avez installé PolyBase de façon autonome ou dans un groupe d
 
 ## <a name="install-using-the-installation-wizard"></a>Installation avec l’assistant Installation  
    
-1. Lancez le **Centre d’installation SQL Server**. Insérez le support d’installation de SQL Server, puis double-cliquez sur **Setup.exe**.  
+1. Exécutez le fichier setup.exe de SQL Server.   
    
 2. Cliquez sur **Installation**, puis sur **Nouvelle installation autonome de SQL Server, ou ajouter des fonctionnalités**.  
    
@@ -71,10 +72,11 @@ Une fois que vous avez installé PolyBase de façon autonome ou dans un groupe d
 
  ![Services PolyBase](../../relational-databases/polybase/media/install-wizard.png "Services PolyBase")  
    
-4. Dans la page de configuration du serveur, configurez le **Service de moteur SQL Server PolyBase** et le service de déplacement de données SQL Server PolyBase à exécuter sous le même compte.  
+4. Dans la page de configuration du serveur, configurez le **Service de moteur SQL Server PolyBase** et le service Mouvement de données PolyBase SQL Server à exécuter sous le même compte de domaine.  
    
-   > **IMPORTANT !** Dans un groupe de scale-out PolyBase, le moteur PolyBase et le service de déplacement PolyBase doivent être exécutés sous le même compte de domaine, et ce sur tous les nœuds.  
-   > Voir l’évolution horizontale PolyBase.  
+ > **IMPORTANT !** 
+>
+>Dans un groupe de scale-out PolyBase, le moteur PolyBase et le service de déplacement PolyBase doivent être exécutés sous le même compte de domaine, et ce sur tous les nœuds. Voir [Groupes de scale-out PolyBase](#Enable)
    
 5. Sur la **Page de configuration de PolyBase**, sélectionnez une des deux options. Pour plus d’informations, consultez [Groupes de scale-out PolyBase](../../relational-databases/polybase/polybase-scale-out-groups.md) .  
    
@@ -82,20 +84,16 @@ Une fois que vous avez installé PolyBase de façon autonome ou dans un groupe d
    
      Choisissez cette option pour utiliser cette instance SQL Server comme nœud principal autonome.  
    
-   - Utilisez l’instance de SQL Server dans le cadre du groupe de scale-out PolyBase.  Le choix de cette option ouvre le pare-feu pour autoriser les connexions entrantes sur le moteur de base de données SQL Server, le moteur PolyBase SQL Server, le service de déplacement de données PolyBase SQL Server et SQL Browser. Le pare-feu est ouvert pour autoriser les connexions entrantes à partir d'autres nœuds dans un groupe de scale-out PolyBase.  
+   - Utilisez l’instance de SQL Server dans le cadre du groupe de scale-out PolyBase.  Le choix de cette option ouvre le pare-feu pour autoriser les connexions entrantes au moteur de base de données SQL Server, au moteur PolyBase SQL Server, au service Mouvement de données PolyBase SQL Server et à SQL Browser. Le pare-feu est ouvert pour autoriser les connexions entrantes à partir d'autres nœuds dans un groupe de scale-out PolyBase.  
    
      Le choix de cette option activera également les connexions du pare-feu Microsoft Distributed Transaction Coordinator (MSDTC) et modifiera les paramètres du registre MSDTC.  
    
 6. Sur la **Page de configuration de PolyBase**, spécifiez une plage de ports avec au moins six ports. Le programme d'installation de SQL Server affectera les six premiers ports disponibles sur la plage.  
 
-<!--SQL Server 2019-->
-::: moniker range=">= sql-server-ver15 || =sqlallproducts-allversions"
-
   > **IMPORTANT !**
   >
   > Après l’installation, vous devez [activer la fonctionnalité PolyBase](#enable).
 
-::: moniker-end
 
 ##  <a name="installing"></a> Installation avec une invite de commandes  
 
@@ -134,12 +132,9 @@ Utilisez les valeurs de cette table pour créer des scripts d'installation. Les 
 
 ::: moniker-end
 
-<!--SQL Server 2019-->
-::: moniker range=">= sql-server-ver15 || =sqlallproducts-allversions"
-
 Après l’installation, vous devez [activer la fonctionnalité PolyBase](#enable).
 
-::: moniker-end
+
 
 **Exemple**
 
@@ -156,10 +151,7 @@ Setup.exe /Q /ACTION=INSTALL /IACCEPTSQLSERVERLICENSETERMS /FEATURES=SQLEngine,P
    
 ```  
 
-<!--SQL Server 2019-->
-::: moniker range=">= sql-server-ver15 || =sqlallproducts-allversions"
 ## <a id="enable"></a> Activer PolyBase
-
 
 Une fois que vous avez terminé l’installation, PolyBase doit être activé pour accéder à ses fonctionnalités. Pour vous connecter à SQL Server 2019 CTP 2.0, vous devez activer PolyBase après l’installation à l’aide de la commande Transact-SQL suivante :
 
@@ -170,8 +162,6 @@ RECONFIGURE [ WITH OVERRIDE ]  ;
 ```
 L’instance doit ensuite être **redémarrée**. 
 
-
-::: moniker-end
 
 ## <a name="post-installation-notes"></a>Notes post-installation  
 
@@ -195,7 +185,7 @@ Le programme d'installation de SQL Server PolyBase crée les règles de pare-feu
 
 - SQL Server PolyBase - SQL Browser - (UDP-entrant)  
    
-Lors de l’installation, si vous choisissez d’utiliser l’instance SQL Server dans le cadre d’un groupe de scale-out PolyBase, ces règles sont activées et le pare-feu est ouvert pour autoriser les connexions entrantes au moteur de base de données de SQL Server, au moteur SQL Server PolyBase, au service de déplacement des données de SQL Server PolyBase et SQL Browser. Cependant, si le service de pare-feu sur l’ordinateur n’est pas en cours d’exécution lors de l’installation, la configuration de SQL Server ne pourra pas activer ces règles. Dans ce cas, vous devez démarrer le service de pare-feu sur l'ordinateur et activer ces règles après l'installation.  
+Lors de l’installation, si vous choisissez d’utiliser l’instance SQL Server dans le cadre d’un groupe de scale-out PolyBase, ces règles sont activées et le pare-feu est ouvert pour autoriser les connexions entrantes au moteur de base de données de SQL Server, au moteur SQL Server PolyBase, au service Mouvement de données PolyBase SQL Server et à SQL Browser. Cependant, si le service de pare-feu de l’ordinateur n’est pas exécuté au moment de l’installation, la configuration de SQL Server ne pourra pas activer ces règles. Dans ce cas, vous devez démarrer le service de pare-feu sur l'ordinateur et activer ces règles après l'installation.  
    
 #### <a name="to-enable-the-firewall-rules"></a>Pour activer les règles de pare-feu  
 

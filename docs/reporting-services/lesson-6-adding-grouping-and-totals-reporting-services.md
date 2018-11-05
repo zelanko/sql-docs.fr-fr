@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: e3d61228-2aa4-42cc-955e-602dbf3406a7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e1efff69fb2311d1c81ac4f25a1a51fe456b77b8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fc8a5e6bc796cf5e7c014c51ec93074eae863bb7
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47720507"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50051012"
 ---
 # <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lesson 6: Adding Grouping and Totals (Reporting Services)
 Dans cette leçon du didacticiel, vous allez ajouter un regroupement et des totaux à votre rapport [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] pour organiser et synthétiser vos données.  
@@ -33,9 +33,9 @@ Dans cette leçon du didacticiel, vous allez ajouter un regroupement et des tota
   
 4.  Faites glisser le champ **Order** du volet des **données de rapport** vers le volet **Groupes de lignes** . Placez-le au-dessous du champ Date et au-dessus de la ligne **(Details)**.
 
-![ssrs_ssdt_addorderfield](../reporting-services/media/ssrs-ssdt-addorderfield.png)   
+    ![ssrs_ssdt_addorderfield](../reporting-services/media/ssrs-ssdt-addorderfield.png)   
   
-    Note that the row handle now has two brackets in it ![ssrs_ssdt_rowgroupdoublehandles](../reporting-services/media/ssrs-ssdt-rowgroupdoublehandles.png), to show two groups. The table now has two **Order** columns, too.  
+    Notez que le descripteur de ligne comporte maintenant deux crochets pour montrer deux groupes ![ssrs_ssdt_rowgroupdoublehandles](../reporting-services/media/ssrs-ssdt-rowgroupdoublehandles.png). En outre, le tableau présente désormais deux colonnes **Order** .  
   
 5.  Supprimez les colonnes **Date** et **Order** d’origine, à **droite** du double trait. Cette opération supprime les différentes valeurs d'enregistrement afin que seule la valeur de groupe soit affichée. Sélectionnez les descripteurs des deux colonnes, cliquez avec le bouton droit, puis cliquez sur **Supprimer les colonnes**.  
   
@@ -84,7 +84,7 @@ Dans cette leçon du didacticiel, vous allez ajouter un regroupement et des tota
   
 4.  Dans le menu **Format** , cliquez sur **Couleur d'arrière-plan**, sur **Orange**, puis sur **OK**.  
   
-    ![](../reporting-services/media/rs-basictablesumdaytotaldesign.gif "rs_BasicTableSumDayTotalDesign")  
+    ![Définir la couleur Orange pour l’arrière-plan](../reporting-services/media/rs-basictablesumdaytotaldesign.gif "rs_BasicTableSumDayTotalDesign")  
   
 ## <a name="bkmk_addgrandtotal"></a>Pour ajouter un total général à un rapport  
   
@@ -113,9 +113,9 @@ Dans cette leçon du didacticiel, vous allez ajouter un regroupement et des tota
 2.  Cliquez sur le menu **Projet** , puis sur **Propriétés du didacticiel...**  
   
 3.  Dans **TargetServerURL** , tapez le nom de votre serveur de rapports ; par exemple,   
-- `http:/<servername>/reportserver`  
+    - `http:/<servername>/reportserver`  
    
-- `http://localhost/reportserver` fonctionne si vous concevez le rapport sur le serveur de rapports.  
+    - `http://localhost/reportserver` fonctionne si vous concevez le rapport sur le serveur de rapports.  
   
   
 4. Notez que TargetReportFolder a pour valeur tutorial, le nom du projet.  Il s’agit du nom du dossier sur lequel le rapport se déploiera au cours des prochaines étapes.  
@@ -143,15 +143,15 @@ Dans cette leçon du didacticiel, vous allez ajouter un regroupement et des tota
   
     Accédez à l’URL du portail web [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] .   
     **Remarque :** L’URL du *portail* est « Reports », pas l’URL du *serveur* de rapports « Reportserver ».  Exemple :   
-    - `http://<server name>/reports`.  
-     - `http://localhost/reports` fonctionne si vous concevez le rapport sur le serveur de rapports.  
+    `http://<server name>/reports`.  
+    `http://localhost/reports` fonctionne si vous concevez le rapport sur le serveur de rapports.  
   
 8.  Accédez au dossier contenant le rapport. Le nom par défaut est *tutorial*, le nom du projet ou le nom que vous avez tapé dans le champ TargetReportFolder dans les propriétés du projet.   
 Cliquez sur le nom du rapport **Sales Orders** afin de consulter le rapport rendu dans le navigateur.  
   
     ![ssrs_tutorial_tutorialfolder](../reporting-services/media/ssrs-tutorial-tutorialfolder.png)  
  
-** Vous avez correctement mené à terme le didacticiel de création d’un rapport de tableau de base.**  
+Vous avez réalisé le didacticiel de création d'un rapport de tableau de base.  
   
 ## <a name="see-also"></a> Voir aussi  
 [Filtrer, regrouper et trier des données &#40;Générateur de rapports et SSRS&#41;](../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  

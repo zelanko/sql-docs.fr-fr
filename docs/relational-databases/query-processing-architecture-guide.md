@@ -17,12 +17,12 @@ ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e41301df0559ac7cbcfc75c9fb90967e7ddfc4fc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2b6be4caf0746d7ebbcd25c1a3a27221d48db582
+ms.sourcegitcommit: 3a8293b769b76c5e46efcb1b688bffe126d591b3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47665607"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50226381"
 ---
 # <a name="query-processing-architecture-guide"></a>Guide d’architecture de traitement des requêtes
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ Le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] peut traiter les i
 - Exécution en mode batch
 
 ### <a name="row-mode-execution"></a>Exécution en mode ligne
-*L’exécution en mode ligne* est une méthode de traitement des requêtes utilisée avec les tables traditionnelles des SGBDR, où les données sont stockées à un format ligne. Quand une requête est exécutée et accède aux données dans des tables contenant des lignes, les opérateurs de l’arborescence d’exécution et les opérateurs enfants lisent chaque ligne nécessaire, dans toutes les colonnes spécifiées dans le schéma de table. Pour chaque ligne lue, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] récupère ensuite les colonnes qui sont nécessaires pour le jeu de résultats, telles qu’elles sont référencées par une instruction SELECT, un prédicat JOIN ou un prédicat de filtre.
+*L’exécution en mode ligne* est une méthode de traitement des requêtes utilisée avec les tables traditionnelles des SGBDR, où les données sont stockées à un format ligne. Quand une requête est exécutée et accède aux données de tables contenant des lignes, les opérateurs de l’arborescence d’exécution et les opérateurs enfants lisent chaque ligne nécessaire, dans toutes les colonnes qui sont spécifiées dans le schéma de table. Pour chaque ligne lue, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] récupère ensuite les colonnes qui sont nécessaires pour le jeu de résultats, telles qu’elles sont référencées par une instruction SELECT, un prédicat JOIN ou un prédicat de filtre.
 
 > [!NOTE]
 > L’exécution en mode ligne est très efficace pour les scénarios OLTP, mais elle peut s’avérer moins efficace lors de l’analyse de grandes quantités de données, par exemple dans les scénarios d’entreposage de données.
