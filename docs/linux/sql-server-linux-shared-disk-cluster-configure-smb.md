@@ -22,7 +22,7 @@ ms.locfileid: "47661937"
 
 Cet article explique comment configurer le stockage SMB pour une instance de cluster de basculement (FCI) sur Linux. 
  
-Dans le monde non Windows, SMB est souvent référencé par le système CIFS (Common Internet File System) et implémenté par le biais de Samba. Dans le monde de Windows, l’accès à un partage SMB est effectuée de cette façon : \\\nomserveur\nompartage. Pour les installations de SQL Server basée sur Linux, le partage SMB doit être monté en tant que dossier.
+Dans le monde non Windows, SMB est souvent référencé par le système CIFS (Common Internet File System) et implémenté par le biais de Samba. Dans le monde de Windows, l’accès à un partage SMB est effectuée de cette façon : \\\nomserveur\nompartage. Pour les installations de SQL Server basées sur Linux, le partage SMB doit être monté en tant que dossier.
 
 ## <a name="important-source-and-server-information"></a>Informations importantes sur la source et le serveur
 
@@ -91,7 +91,7 @@ Voici quelques conseils et les notes relatives à l’aide de SMB :
 
     \<TempDir > est le nom du dossier défini à l’étape précédente.
     
-   *    Vérifiez que les fichiers se trouvent bien dans le répertoire.
+   *    Vérifiez que les fichiers se trouvent dans le répertoire.
 
     ```bash
     ls <TempDir>
@@ -133,7 +133,7 @@ Voici quelques conseils et les notes relatives à l’aide de SMB :
  
     \<mssqlGID > est le GID de l’utilisateur mssql
  
-   *    Vérifiez que le montage a réussi en lançant la commande mount sans paramètres.
+   *    Vérifiez que le montage a réussi en émettant une commande mount sans commutateurs.
 
     ```bash
     mount
@@ -172,7 +172,7 @@ Voici quelques conseils et les notes relatives à l’aide de SMB :
 
     ![10_testcreatedb][2] 
   
-   *    Arrêtez SQL Server et vérifiez qu’il soit bien arrêté. Si vous vous apprêtez à l’ajout ou le test d’autres disques, n’arrêtez pas SQL Server jusqu'à ce que ceux soient ajoutés et testés.
+   *    Arrêtez SQL Server et vérifiez qu’il est bien arrêté. Si vous vous apprêtez à ajouter ou à tester d’autres disques, n’arrêtez pas SQL Server tant que ceux-ci n'ont pas été ajoutés et testés.
 
     ```bash
     sudo systemctl stop mssql-server
@@ -231,7 +231,7 @@ Voici quelques conseils et les notes relatives à l’aide de SMB :
 
     \<mssqlGID > est le GID de l’utilisateur mssql.
  
-   * Vérifiez que le montage a réussi en émettant une commande mount sans paramètres.
+   * Vérifiez que le montage a réussi en émettant une commande mount sans commutateurs.
  
    * Tapez exit pour ne plus plus être super utilisateur.
 
