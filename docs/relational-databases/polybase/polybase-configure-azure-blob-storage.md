@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6b1bd34a017cc067a93e8b307adc5c8069ac8e0d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8df74aceaf08bd030fe092d4c18cd38fc0559cb7
+ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47831337"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50970828"
 ---
 # <a name="configure-polybase-to-access-external-data-in-azure-blob-storage"></a>Configurer PolyBase pour accéder à des données externes dans Stockage Blob Azure
 
@@ -88,7 +88,7 @@ Pour interroger les données dans votre source de données Hadoop, vous devez d�
    CREATE EXTERNAL FILE FORMAT TextFileFormat WITH (  
          FORMAT_TYPE = DELIMITEDTEXT,
          FORMAT_OPTIONS (FIELD_TERMINATOR ='|',
-               USE_TYPE_DEFAULT = TRUE)  
+               USE_TYPE_DEFAULT = TRUE))  
    ```
 
 1. Créez une table externe pointant vers les données stockées dans Stockage Azure avec [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md). Dans cet exemple, les données externes contiennent des données provenant de capteurs sur des voitures.
@@ -194,7 +194,7 @@ Dans SSMS, les tables externes sont affichées dans un dossier distinct, **Table
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Explorez d’autres façons d’utiliser et de surveiller PolyBase dans les articles suivants :
+Explorez d’autres façons d’utiliser et de superviser PolyBase dans les articles suivants :
 
 [Groupes de scale-out PolyBase](../../relational-databases/polybase/polybase-scale-out-groups.md).  
 [Résolution des problèmes de PolyBase](polybase-troubleshooting.md).  
