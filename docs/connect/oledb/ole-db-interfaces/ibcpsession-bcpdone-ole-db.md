@@ -6,8 +6,7 @@ ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: connectivity
 ms.topic: reference
 apiname:
 - IBCPSession::BCPDone (OLE DB)
@@ -17,12 +16,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 2989f2dc79574b7a0959ffea5a3ff5988bead882
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d0338fc05683c22df4a900f709770ac35e8b2bad
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47728117"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51031526"
 ---
 # <a name="ibcpsessionbcpdone-ole-db"></a>IBCPSession::BCPDone (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +38,7 @@ HRESULT BCPDone(void);
 ```  
   
 ## <a name="remarks"></a>Notes   
- Aucune autre opération ne peut être appelée dans l’interface [IBCPSession](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md) après avoir appelé la méthode **BCPDone**. La seule possibilité consiste à appeler la méthode [IBCPSession::BCPInit](../../oledb/ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) pour démarrer une nouvelle opération de copie en bloc. Cela s’apparente à l’appel de la méthode [IRowsetFastLoad::Commit](../../oledb/ole-db-interfaces/irowsetfastload-commit-ole-db.md).  
+ Aucune autre opération ne peut être appelée dans l’interface [IBCPSession](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md) après avoir appelé la méthode **BCPDone**. La seule possibilité consiste à appeler la méthode [IBCPSession::BCPInit](../../oledb/ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) pour démarrer une nouvelle opération de copie en bloc. Cela s'apparente à l'appel de la méthode [IRowsetFastLoad::Commit](../../oledb/ole-db-interfaces/irowsetfastload-commit-ole-db.md) .  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  Cette méthode signale les erreurs en attribuant à la propriété Nombre de l'objet Err global l'une des valeurs du tableau suivant.  
@@ -51,7 +50,7 @@ HRESULT BCPDone(void);
 ## <a name="example"></a> Exemple  
  Cet exemple montre comment utiliser l'interface **IBCPSession** .  
   
- L'instruction [!INCLUDE[tsql](../../../includes/tsql-md.md)] suivante doit être exécutée avant d'exécuter cet exemple :  
+ L'instruction [!INCLUDE[tsql](../../../includes/tsql-md.md)] suivante doit être exécutée avant d'exécuter cet exemple :  
   
 ```sql  
 create table fltest(col1 int, col2 int, col3 image)  

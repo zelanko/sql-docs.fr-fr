@@ -22,7 +22,7 @@ ms.locfileid: "47661937"
 
 Cet article explique comment configurer le stockage SMB pour une instance de cluster de basculement (FCI) sur Linux. 
  
-Dans le monde non Windows, SMB est souvent référencé par le système CIFS (Common Internet File System) et implémenté par le biais de Samba. Dans le monde de Windows, l’accès à un partage SMB est effectuée de cette façon : \\\nomserveur\nompartage. Pour les installations de SQL Server basées sur Linux, le partage SMB doit être monté en tant que dossier.
+Dans le monde non Windows, SMB est souvent référencé par le système CIFS (Common Internet File System) et implémenté par le biais de Samba. Dans le monde de Windows, l’accès à un partage SMB est effectuée de cette façon : \\nomserveur\nompartage. Pour les installations de SQL Server basées sur Linux, le partage SMB doit être monté en tant que dossier.
 
 ## <a name="important-source-and-server-information"></a>Informations importantes sur la source et le serveur
 
@@ -89,7 +89,7 @@ Voici quelques conseils et les notes relatives à l’aide de SMB :
     cp /var/opt/mssql/data/* <TempDir>
     ```
 
-    \<TempDir > est le nom du dossier défini à l’étape précédente.
+    \<TempDir > est le nom du dossier à partir de l’étape précédente.
     
    *    Vérifiez que les fichiers se trouvent dans le répertoire.
 
@@ -119,13 +119,13 @@ Voici quelques conseils et les notes relatives à l’aide de SMB :
     Mount -t cifs //<ServerName>/<ShareName> /var/opt/mssql/data -o vers=3.0,username=<UserName>,password=<Password>,domain=<domain>,uid=<mssqlUID>,gid=<mssqlGID>,file_mode=0777,dir_mode=0777
     ```
 
-    \<ServerName > est le nom du serveur contenant le partage SMB
+    \<ServerName > est le nom du serveur avec le partage SMB
     
     \<Nom de partage > est le nom du partage
 
     \<Nom d’utilisateur > est le nom de l’utilisateur pour accéder au partage
 
-    \<Mot de passe > est le mot de passe de l’utilisateur
+    \<Mot de passe > est le mot de passe pour l’utilisateur
 
     \<domaine > est le nom d’Active Directory
 
@@ -217,7 +217,7 @@ Voici quelques conseils et les notes relatives à l’aide de SMB :
     Mount -t cifs //<ServerName>/<ShareName> <FolderName> -o vers=3.0,username=<UserName>,password=<Password>,uid=<mssqlUID>,gid=<mssqlGID>,file_mode=0777,dir_mode=0777
     ```
 
-    \<ServerName > est le nom du serveur contenant le partage SMB
+    \<ServerName > est le nom du serveur avec le partage SMB
 
     \<Nom de partage > est le nom du partage
 
@@ -225,7 +225,7 @@ Voici quelques conseils et les notes relatives à l’aide de SMB :
 
     \<Nom d’utilisateur > est le nom de l’utilisateur pour accéder au partage
 
-    \<Mot de passe > est le mot de passe de l’utilisateur
+    \<Mot de passe > est le mot de passe pour l’utilisateur
 
     \<mssqlUID > est l’UID de l’utilisateur mssql
 
