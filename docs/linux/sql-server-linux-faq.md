@@ -30,7 +30,7 @@ Les sections suivantes fournissent des questions et réponses pour SQL Server s�
 
 1. **SQL Server sur Linux ne fonctionnera sur d’autres plateformes**?
 
-   SQL Server est testé et pris en charge sur Linux pour les distributions répertoriées précédemment. D'autres distributions de Linux sont étroitement liées et peuvent être en mesure d’exécuter SQL Server (par exemple, CentOS est étroitement liée à Red Hat Enterprise Server). Mais si vous choisissez d’installer SQL Server sur un système d’exploitation non pris en charge, passez en revue la **politique de Support** section de la [politique de support technique pour Microsoft SQL Server](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server) pour comprendre les implications de cette prise en charge. Notez également que certaines-distributions Linux gérées par la communauté, n’ont pas de moyen formel pour recevoir un support si le système d’exploitation sous-jacent est l'origine du problème.
+   SQL Server est testé et pris en charge sur Linux pour les distributions répertoriées précédemment. D'autres distributions de Linux sont étroitement liées et peuvent être en mesure d’exécuter SQL Server (par exemple, CentOS est étroitement liée à Red Hat Enterprise Server). Mais si vous choisissez d’installer SQL Server sur un système d’exploitation non pris en charge, passez en revue la section **Politique de prise en charge** de la [politique de support technique pour Microsoft SQL Server](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server) pour comprendre les implications de cette prise en charge. Notez également que certaines distributions Linux gérées par la communauté n’ont pas de moyen formel pour recevoir un support si le système d’exploitation sous-jacent est l'origine du problème.
 
 1. **Comment fonctionnent les licences sur Linux ?**
 
@@ -38,27 +38,27 @@ Les sections suivantes fournissent des questions et réponses pour SQL Server s�
 
 1. **SQL Server sur Linux est-il le même que sur Windows ?**
 
-   Le coeur du moteur de base de données pour SQL Server est le même sur Linux que sur Windows. Toutefois, certaines fonctionnalités ne sont actuellement pas pris en charge sur Linux. Pour obtenir la liste des fonctionnalités qui ne sont pas pris en charge sur Linux, consultez le [fonctionnalités et services non pris en charge](sql-server-linux-release-notes.md#Unsupported). Examinez également les [problèmes connus](sql-server-linux-release-notes.md#known-issues). Sauf indication contraire dans ces listes, les autres fonctionnalités et services de SQL Server sont pris en charge sur Linux.
+   Le coeur du moteur de base de données pour SQL Server est le même sur Linux que sur Windows. Toutefois, certaines fonctionnalités ne sont actuellement pas pris en charge sur Linux. Pour obtenir la liste des fonctionnalités qui ne sont pas pris en charge sur Linux, consultez [Fonctionnalités et services non pris en charge](sql-server-linux-release-notes.md#Unsupported). Examinez également les [problèmes connus](sql-server-linux-release-notes.md#known-issues). Sauf indication contraire dans ces listes, les autres fonctionnalités et services de SQL Server sont pris en charge sur Linux.
 
 1. **Quelle est la stratégie de support pour SQL Server ?**
 
    Pour comprendre la politique de support, consultez la [politique d’assistance pour SQL Server](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server).
 
-1. **Je viens du monde SQL Server sous Windows. Existe-t-il des ressources pour aider à apprendre à utiliser SQL Server sur Linux ?**
+1. **J'ai l'habitude d'utiliser SQL Server sur Windows. Existe-t-il des ressources pour apprendre à utiliser SQL Server sur Linux ?**
 
-   Les [Démarrages rapides](sql-server-linux-setup.md#platforms) fournissent des instructions détaillées sur la façon d’installer SQL Server sur Linux et d'exécuter des requêtes Transact-SQL. D'autres didacticiels fournissent des instructions supplémentaires sur l’utilisation de SQL Server sur Linux. Pour une liste de fournisseurs externes de conseils, consultez la [liste MSSQLTIPS de SQL Server sur Linux conseils](https://www.mssqltips.com/sql-server-tip-category/226/sql-server-on-linux/).
+   Les [Démarrages rapides](sql-server-linux-setup.md#platforms) fournissent des instructions détaillées sur la façon d’installer SQL Server sur Linux et d'exécuter des requêtes Transact-SQL. D'autres didacticiels fournissent des instructions supplémentaires sur l’utilisation de SQL Server sur Linux. Pour une liste de fournisseurs externes de conseils, consultez la [liste des conseils MSSQLTIPS de SQL Server sur Linux](https://www.mssqltips.com/sql-server-tip-category/226/sql-server-on-linux/).
 
 ## <a name="installation"></a>Installation
 
-1. **Comment obtenir SQL Server installé sur mes serveurs Linux ?**
+1. **Comment installer SQL Server sur mes serveurs Linux ?**
 
-   Microsoft tient à jour des référentiels de packages pour l’installation de SQL Server et prend en charge l’installation par le biais de gestionnaires de packages natifs tels qu’yum, zypper et apt. Pour installer rapidement, consultez une procédure de [Démarrages rapides](sql-server-linux-setup.md#platforms).
+   Microsoft tient à jour des référentiels de packages pour l’installation de SQL Server et prend en charge l’installation par le biais de gestionnaires de packages natifs tels qu’yum, zypper et apt. Pour installer rapidement, consultez un des [guides de démarrage rapide](sql-server-linux-setup.md#platforms).
 
 1. **Puis-je installer SQL Server sur le sous-système Linux pour Windows 10 ?**
 
    Non. Linux s’exécutant sur Windows 10 n’est actuellement pas une plateforme prise en charge pour SQL Server et les outils associés.
 
-1. **Les systèmes de fichiers Linux SQL Server peut utiliser pour les fichiers de données ?**
+1. **Quels systèmes de fichiers Linux SQL Server peut-il utiliser comme fichiers de données ?**
 
    SQL Server sur Linux prend en charge ext4 et XFS. Prise en charge d’autres systèmes de fichiers est ajouté en fonction des besoins à l’avenir.
 
@@ -72,7 +72,7 @@ Les sections suivantes fournissent des questions et réponses pour SQL Server s�
 
 1. **Quelle édition de SQL Server dois-je utiliser selon ce que j'ai déjà acheté ?**
 
-   Lorsque vous exécutez le programme d’installation de mssql-conf vous les possibilités suivantes :  
+   Lorsque vous exécutez le programme d’installation mssql-conf, vous pouvez : 
    `Choose an edition of SQL Server:` <br>
 `     1. Evaluation (free, no production use rights, 180-day limit)` <br>
 `     2. Developer (free, no production use rights)` <br>
@@ -98,18 +98,18 @@ Les sections suivantes fournissent des questions et réponses pour SQL Server s�
 
 1. **Les commandes telles que sqlcmd et bcp sont-elles disponibles sur Linux ?**
 
-   Oui, [sqlcmd et bcp](sql-server-linux-setup-tools.md) sont disponibles en mode natif sur Linux, macOS et Windows. En outre, vous pouvez utiliser le nouvel [mssql-scripter](https://github.com/Microsoft/mssql-scripter) outil de ligne de commande sur Linux, macOS ou Windows pour générer des scripts T-SQL pour votre base de données SQL en cours d’exécution en tout lieu. En outre, consultez la version d’évaluation de mise à jour pour [mssql-cli](https://blogs.technet.microsoft.com/dataplatforminsider/2017/12/12/try-mssql-cli-a-new-interactive-command-line-tool-for-sql-server/).
+   Oui, [sqlcmd et bcp](sql-server-linux-setup-tools.md) sont disponibles en mode natif sur Linux, macOS et Windows. En outre, vous pouvez utiliser le nouvel outil en ligne de commande [mssql-scripter](https://github.com/Microsoft/mssql-scripter) sur Linux, macOS ou Windows pour générer des scripts T-SQL pour votre base de données SQL en cours d’exécution en tout lieu. En outre, consultez la version d’évaluation de mise à jour pour [mssql-cli](https://blogs.technet.microsoft.com/dataplatforminsider/2017/12/12/try-mssql-cli-a-new-interactive-command-line-tool-for-sql-server/).
 
-1. **Il est possible d’afficher le moniteur d’activité lorsque l'on est connecté via SSMS sur Windows pour une instance s’exécute sur Linux ?**
+1. **Est-il possible d’afficher le moniteur d’activité lorsque l'on est connecté via SSMS sur Windows pour une instance qui s’exécute sur Linux ?**
 
-   Oui, vous pouvez utiliser SSMS sur Windows pour se connecter à distance et utiliser les outils / fonctionnalités tels que les commandes de moniteur d’activité sur une instance de Linux.
+   Oui, vous pouvez utiliser SSMS sur Windows pour vous connecter à distance et utiliser les outils / fonctionnalités tels que les commandes de moniteur d’activité sur une instance Linux.
 
 1. **Quels outils sont disponibles pour surveiller les performances de SQL Server sur Linux ?**
 
    Vous pouvez utiliser les [vues de gestion dynamique (DMV) systèmes](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) pour collecter les différents types d’informations sur SQL Server, y compris les informations de processus Linux. Vous pouvez utiliser une[requête Store](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md) pour améliorer les performances de requête. D'autres outils, tels que le compte [tableau de bord performances](https://blogs.msdn.microsoft.com/sql_server_team/new-in-ssms-performance-dashboard-built-in/), fonctionne à distance dans SQL Server Management Studio (SSMS) à partir de Windows.
 
    > [!TIP]
-   > Un moyen d'améliorer les performances consiste à configurer correctement votre système d’exploitation Linux et l’instance SQL Server. Pour plus d’informations, consultez les [performances, meilleures pratiques et des instructions de configuration de SQL Server sur Linux](sql-server-linux-performance-best-practices.md).
+   > Un moyen d'améliorer les performances consiste à configurer correctement votre système d’exploitation Linux et l’instance SQL Server. Pour plus d’informations, consultez les [Bonnes pratiques en matière de performances et instructions de configuration de SQL Server sur Linux](sql-server-linux-performance-best-practices.md).
 
 ## <a name="administration"></a>Administration
 
@@ -127,7 +127,7 @@ Les sections suivantes fournissent des questions et réponses pour SQL Server s�
 
 1. **Always On et gestion de clusters sont-ils pris en charge dans Linux ?**
 
-   Le clustering de basculement et la haute disponibilité sur Linux sont réalisés avec Pacemaker sur Linux. Pour plus d’informations, consultez [Business continuité des activités et la base de données de récupération - SQL Server sur Linux](sql-server-linux-business-continuity-dr.md).
+   Le clustering de basculement et la haute disponibilité sur Linux sont réalisés avec Pacemaker sur Linux. Pour plus d’informations, consultez [Continuité des activités et récupération de base de données - SQL Server sur Linux](sql-server-linux-business-continuity-dr.md).
 
 1. **Est-il possible de configurer la réplication à partir de Linux vers Windows et vice versa ?**
 
@@ -143,9 +143,9 @@ Les sections suivantes fournissent des questions et réponses pour SQL Server s�
 
 1. **Quelles sont les autorisations requises pour les fichiers SQL Server ?**
 
-   Tous les fichiers dans le dossier `/var/opt/mssql` doivent être possédés par l'utilisateur **mssql** et appartenir au groupe **mssql**. Les deux, **mssql** utilisateur et groupe, doivent disposer des autorisations en lecture-écriture sur tous les fichiers et répertoires. Notez les scénarios spéciaux suivants, impliquant des autorisations de fichier et répertoire :
+   Tous les fichiers dans le dossier `/var/opt/mssql` doivent être possédés par l'utilisateur **mssql** et appartenir au groupe **mssql**. L'utilisateur et le groupe **mssql** doivent disposer des autorisations en lecture-écriture sur tous les fichiers et répertoires. Notez les scénarios spéciaux suivants, impliquant des autorisations de fichier et répertoire :
 
-   * Les autorisations de propriétaire de mssql et de groupe sont requises pour les partages réseau montés qui sont utilisés pour stocker les fichiers de SQL Server.
+   * Les autorisations du propriétaire et du groupe mssql sont requises pour les partages réseau montés utilisés pour stocker les fichiers de SQL Server.
    * Si vous trouvez des sauvegardes ou des fichiers de base de données dans un répertoire non définis par défaut, vous devez également définir des autorisations pour ce répertoire.
    * Si vous modifiez l’umask de la racine par défaut qui a la valeur 0022, la configuration de SQL Server échoue après l’installation. Vous devez ensuite appliquer manuellement les autorisations requises au compte de démarrage de SQL Server.
 
