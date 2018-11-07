@@ -29,13 +29,13 @@ Le didacticiel comprend les tâches suivantes :
 > * Créer des certificats et des points de terminaison du groupe de disponibilité.
 > * Utiliser [!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)] (SSMS) ou Transact-SQL pour créer un groupe de disponibilité.
 > * Créer la connexion [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] et les autorisations pour Pacemaker.
-> * Créer les ressources du groupe de disponibilité dans un cluster Pacemaker (type externe uniquement).
+> * Créer les ressources du groupe de disponibilité dans un cluster Pacemaker (type External uniquement).
 
 ## <a name="prerequisite"></a>Condition préalable
 - Déployer le cluster à haute disponibilité Pacemaker, comme décrit dans [déployer un cluster Pacemaker pour SQL Server sur Linux](sql-server-linux-deploy-pacemaker-cluster.md).
 
 
-## <a name="enable-the-availability-groups-feature"></a>Activer la fonctionnalité de groupes de disponibilité
+## <a name="enable-the-availability-groups-feature"></a>Activez la fonctionnalité de groupes de disponibilité
 
 Contrairement à l'environnement Windows, vous ne pouvez pas utiliser PowerShell ou [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Configuration Manager pour activer la fonctionnalité "Groupes de disponibilité (AG). Sous Linux, vous devez utiliser `mssql-conf` pour activer la fonctionnalité. Il existe deux façons d’activer la fonctionnalité de groupes de disponibilité : utiliser l'utilitaire `mssql-conf`, ou modifier le fichier `mssql.conf` manuellement.
 
@@ -52,7 +52,7 @@ sudo /opt/mssql/bin/mssql-conf set hadr.hadrenabled 1
 
 ### <a name="edit-the-mssqlconf-file"></a>Modifier le fichier mssql.conf
 
-Vous pouvez également modifier le fichier `mssql.conf`, situé sous le dossier `/var/opt/mssql`, ajouter les lignes suivantes :
+Vous pouvez également modifier le fichier `mssql.conf`, situé sous le dossier `/var/opt/mssql`, pour ajouter les lignes suivantes :
 
 ```
 [hadr]
@@ -61,7 +61,7 @@ hadr.hadrenabled = 1
 ```
 
 ### <a name="restart-includessnoversion-mdincludesssnoversion-mdmd"></a>Redémarrage [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
-Après avoir activé les groupes de disponibilité, comme sur Windows, vous devez redémarrer [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. Ceci peut être effectuée par la commande suivante :
+Après avoir activé les groupes de disponibilité, comme sur Windows, vous devez redémarrer [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. Ceci peut être effectué avec la commande suivante :
 
 ```bash
 sudo systemctl restart mssql-server
@@ -87,7 +87,7 @@ Pour la syntaxe complète sur les options disponibles pour les différentes comm
 
 Cet exemple va créer des certificats pour une configuration à trois nœuds. Les noms d’instance sont LinAGN1, LinAGN2 et LinAGN3.
 
-1.  Exécuter la commande suivante sur LinAGN1 pour créer la clé principale, le certificat et le point de terminaison, ainsi que sauvegarder le certificat. Pour cet exemple, le port TCP 5022 classique est utilisé pour le point de terminaison.
+1.  Exécuter la commande suivante sur LinAGN1 pour créer la clé principale, le certificat et le point de terminaison, ainsi que pour sauvegarder le certificat. Pour cet exemple, le port TCP 5022 classique est utilisé pour le point de terminaison.
     
     ```SQL
     CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<StrongPassword>';
@@ -182,7 +182,7 @@ Cet exemple va créer des certificats pour une configuration à trois nœuds. Le
     - Copier LinAGN2_Cert.cer sur LinAGN1 et LinAGN3.
     - Copier LinAGN3_Cert.cer sur LinAGN1 et LinAGN2.
     
-5.  Modifier la propriété et le groupe associé avec les fichiers de certificat copiés par `mssql`.
+5.  Modifier la propriété et le groupe associé avec les fichiers de certificat copiés dans `mssql`.
     
     ```bash
     sudo chown mssql:mssql <CertFileName>
@@ -217,7 +217,7 @@ Cet exemple va créer des certificats pour une configuration à trois nœuds. Le
     
     GO
     
-8.  Accepter la connexion des comptes(login) associés à LinAG2 et LinAGN3 sur le point de terminaison de LinAGN1.
+8.  Grant the logins associated with LinAG2 and LinAGN3 permission to connect to the endpoint on LinAGN1.
     
     ```SQL
     GRANT CONNECT ON ENDPOINT::AGEP TO LinAGN2_Login;
@@ -258,7 +258,7 @@ Cet exemple va créer des certificats pour une configuration à trois nœuds. Le
     
     GO
     
-11.  Accepter la connexion des comptes(login) associés à LinAG1 and LinAGN3 sur le point de terminaison LinAGN2.
+11.  Grant the logins associated with LinAG1 and LinAGN3 permission to connect to the endpoint on LinAGN2.
     
     ```SQL
     GRANT CONNECT ON ENDPOINT::AGEP TO LinAGN1_Login;
@@ -299,7 +299,7 @@ Cet exemple va créer des certificats pour une configuration à trois nœuds. Le
     
     GO
     
-14.  Accepter la connexion des comptes(login) associés à LinAG1 and LinAGN2 sur le point de terminaison LinAGN3.
+14.  Grant the logins associated with LinAG1 and LinAGN2 permission to connect to the endpoint on LinAGN3.
     
     ```SQL
     GRANT CONNECT ON ENDPOINT::AGEP TO LinAGN1_Login;
@@ -317,7 +317,7 @@ Cette section explique comment utiliser [!INCLUDE[ssmanstudiofull-md](../include
 
 ### <a name="use-includessmanstudiofull-mdincludesssmanstudiofull-mdmd"></a>Utiliser [!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)].
 
-Cette section montre comment créer un groupe de disponibilité avec un type de cluster externe à l’aide de SSMS et l'assistant "nouveau groupe de disponibilité".
+Cette section montre comment créer un groupe de disponibilité avec un cluster de type External à l’aide de SSMS et l'assistant "nouveau groupe de disponibilité".
 
 1.  Dans SSMS, développer **haute disponibilité Always On**, avec le bouton droit, cliquer sur **groupes de disponibilité**, puis sélectionner **Assistant Nouveau groupe de disponibilité**.
 
@@ -335,27 +335,27 @@ Cette section montre comment créer un groupe de disponibilité avec un type de 
 
 7.  Répéter les deux étapes précédentes pour l’instance qui contient un réplica en configuration uniquement ou un autre réplica secondaire.
 
-8.  Les trois instances doivent maintenant être répertoriées dans la boîte de dialogue "spécifier les réplicas". Si vous utilisez un type de cluster EXTERNAL, pour le réplica secondaire qui sera un vrai réplica secondaire, assurez-vous que le Mode de disponibilité correspond à celle du réplica principal et que le mode de basculement est défini sur EXTERNAL. Pour le réplica en configuration uniquement, sélectionner un mode de disponibilité de Configuration uniquement.
+8.  Les trois instances doivent maintenant être répertoriées dans la boîte de dialogue "spécifier les réplicas". Si vous utilisez un type de cluster EXTERNAL, pour le réplica secondaire qui sera un vrai réplica secondaire, assurez-vous que le Mode de disponibilité correspond à celle du réplica principal et que le mode de basculement est défini sur EXTERNAL. Pour le réplica en configuration uniquement, sélectionnez un mode de disponibilité de Configuration uniquement.
 
-    L’exemple suivant montre un groupe de disponibilité avec deux réplicas, un type de cluster externe et un réplica en configuration uniquement.
+    L’exemple suivant montre un groupe de disponibilité avec deux réplicas, un cluster de type EXTERNAL et un réplica en configuration uniquement.
 
     ![](./media/sql-server-linux-create-availability-group/image4.png)
 
-    L’exemple suivant montre un groupe de disponibilité avec deux réplicas, un type de cluster de None et un réplica en configuration uniquement.
+    L’exemple suivant montre un groupe de disponibilité avec deux réplicas, un cluster de type None et un réplica en configuration uniquement.
 
     ![](./media/sql-server-linux-create-availability-group/image5.png)
 
-9.  Si vous souhaitez modifier les préférences de sauvegarde, cliquer sur l’onglet "Préférences de sauvegarde". Pour plus d’informations sur les préférences de sauvegarde avec les groupes de disponibilité, consulter [configurer la sauvegarde sur les réplicas de disponibilité](../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md).
+9.  Si vous souhaitez modifier les préférences de sauvegarde, cliquez sur l’onglet Préférences de sauvegarde. Pour plus d’informations sur les préférences de sauvegarde avec les groupes de disponibilité, consultez [configurer la sauvegarde sur les réplicas de disponibilité](../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md).
 
-10. Si à l’aide de bases de données secondaires ou la création d’un groupe de disponibilité avec un cluster de type None pour une lecture répartie, vous pouvez créer un écouteur en sélectionnant l’onglet de l’écouteur. Un écouteur peut également être ajouté plus tard. Pour créer un écouteur, choisissez l’option **créer un écouteur de groupe de disponibilité** et entrez un nom, un port TCP/IP et s’il faut utiliser une adresse IP DHCP statique ou attribuée automatiquement. N’oubliez pas que pour un groupe de disponibilité avec un type de cluster aucun, l’adresse IP doit être statique et affectée à l’adresse principale.
+10. Si vous utilisez des bases de données secondaires ou si vous créez un groupe de disponibilité avec un cluster de type None pour une lecture répartie, vous pouvez créer un écouteur en sélectionnant l’onglet de l’écouteur. Un écouteur peut également être ajouté plus tard. Pour créer un écouteur, choisissez l’option **créer un écouteur de groupe de disponibilité** et entrez un nom, un port TCP/IP et déterminez s’il faut utiliser une adresse IP DHCP statique ou attribuée automatiquement. N’oubliez pas que pour un groupe de disponibilité avec un cluster de type None, l’adresse IP doit être statique et affectée à l’adresse principale.
 
     ![](./media/sql-server-linux-create-availability-group/image6.png)
 
-11. Si un écouteur est créé pour les scénarios de lecture, SSMS 17.3 ou ultérieur permet la création du routage en lecture seule dans l’Assistant. Il peut également être ajouté ultérieurement par le biais de SSMS ou Transact-SQL. Pour ajouter le routage en lecture seule maintenant :
+11. Si un écouteur est créé pour les scénarios lisibles, SSMS 17.3 ou ultérieure permet la création du routage en lecture seule dans l’Assistant. Il peut également être ajouté ultérieurement par le biais de SSMS ou Transact-SQL. Pour ajouter le routage en lecture seule maintenant :
 
-    A.  Sélectionner l’onglet routage en lecture seule.
+    A.  Sélectionnez l’onglet routage en lecture seule.
 
-    B.  Entrer les URL pour les réplicas en lecture seule. Ces URL est similaires aux points de terminaison, à ceci près qu’ils utilisent le port de l’instance, pas le point de terminaison.
+    B.  Entrez les URL pour les réplicas en lecture seule. Ces URL sont similaires aux points de terminaison, à ceci près qu’elles utilisent le port de l’instance, pas le point de terminaison.
 
     c.  Sélectionnez chaque URL et en bas, sélectionnez les réplicas lisibles. Pour une sélection multiple, maintenez la touche MAJ ou cliquez et faites glisser.
 
