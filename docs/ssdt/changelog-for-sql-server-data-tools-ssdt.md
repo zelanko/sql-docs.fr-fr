@@ -12,18 +12,33 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 93621800d61f84b6e27b3e2b79cc0fded7019091
-ms.sourcegitcommit: ef15fa253d98c62538bf9b6fe191af7f8ef8f6c8
+ms.openlocfilehash: f45da55ab27ba8043409b78663be008d7be9720f
+ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49991302"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51216807"
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>Journal des modifications de SQL Server Data Tools (SSDT)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Ce journal des modification est pour [SQL Server Data Tools (SSDT)](download-sql-server-data-tools-ssdt.md).  
   
 Pour des publications détaillées sur les nouveautés et les modifications, consultez [le blog de l’équipe SSDT](https://blogs.msdn.microsoft.com/ssdt/)
+
+
+## <a name="ssdt-for-visual-studio-2017-1582"></a>SSDT pour Visual Studio 2017 (15.8.2)
+Numéro de build : 14.0.16182.0  
+Date de publication : 5 novembre 2018  
+
+### <a name="whats-new"></a>Nouveautés
+**SSIS :**
+
+Correction d’un problème faisant en sorte que le déploiement d’un projet SSIS qui contient des packages contenant la destination Fichier plat/Tâche de script vers Azure-SSIS entraîne l’échec de l’exécution des packages dans Azure-SSIS. 
+
+### <a name="known-issues"></a>Problèmes connus :
+
+- La tâche d’exécution de package SSIS ne prend pas en charge le débogage quand ExecuteOutOfProcess a la valeur True. Ce problème s’applique uniquement au débogage. L’enregistrement, le déploiement et l’exécution via DTExec.exe ou le catalogue SSIS ne sont pas impactés.
+- SSDT pour Visual Studio 2017 (15.8.2) ne prend pas en charge les packages de conception qui contiennent une source/destination Oracle/Teradata. Utilisez SSDT pour Visual Studio 2017 (15.8).
 
 
 ## <a name="ssdt-for-visual-studio-2017-1581"></a>SSDT pour Visual Studio 2017 (15.8.1)
@@ -40,6 +55,8 @@ Date de publication : 27 septembre 2018
 ### <a name="known-issues"></a>Problèmes connus :
 
 - La tâche d’exécution de package SSIS ne prend pas en charge le débogage quand ExecuteOutOfProcess a la valeur True. Ce problème s’applique uniquement au débogage. L’enregistrement, le déploiement et l’exécution via DTExec.exe ou le catalogue SSIS ne sont pas impactés.
+- Le déploiement de projets SSIS qui ont des packages contenant la destination Fichier plat/Tâche de script vers Azure-SSIS entraîne l’échec de l’exécution des packages dans Azure-SSIS.
+- SSDT pour Visual Studio 2017 (15.8.1) ne prend pas en charge les packages de conception qui contiennent une source/destination Oracle/Teradata. Utilisez SSDT pour Visual Studio 2017 (15.8).
 
 
 ## <a name="ssdt-for-visual-studio-2017-158"></a>SSDT pour Visual Studio 2017 (15.8)

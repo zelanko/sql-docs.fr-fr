@@ -1,7 +1,7 @@
 ---
 title: Configurations matérielle et logicielle requises pour l’installation de SQL Server 2016 | Microsoft Docs
 ms.custom: ''
-ms.date: 07/06/2018
+ms.date: 11/06/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -45,15 +45,18 @@ ms.assetid: 09bcf20b-0a40-4131-907f-b61479d5e4d8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fd5f30d426b4d807d91bc500f1c475b71c3289ae
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: 00f555c060c348573eb6af8b98e90d506b8179ea
+ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49383635"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51221735"
 ---
 # <a name="hardware-and-software-requirements-for-installing-sql-server"></a>Configurations matérielle et logicielle requises pour l'installation de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+> [!div class="nextstepaction"]
+> [Participez à l’amélioration de la documentation SQL Server](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
 
 Cet article liste les configurations matérielle et logicielle minimales pour installer et exécuter [!INCLUDE[ssNoVer](../../includes/ssnoversion-md.md)] sur le système d’exploitation Windows. 
 
@@ -90,7 +93,7 @@ La configuration requise suivante s’applique à toutes les installations :
   
 |Composant|Condition requise|  
 |---------------|-----------------|  
-|.NET Framework|[!INCLUDE[sql2016](../../includes/sssql15-md.md)] RC1 et versions ultérieures nécessitent le [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 pour la prise en charge du moteur de base de données, de Master Data Services ou de la réplication. Le programme d’installation de[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] installe automatiquement [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Vous pouvez également installer manuellement [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] à partir de [Microsoft .NET Framework 4.6 (programme d’installation Web) pour Windows](http://support.microsoft.com/kb/3045560).<br/><br/> Pour obtenir davantage d’informations ainsi que des recommandations et des conseils sur [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6, consultez le [Guide de déploiement du .NET Framework pour les développeurs](http://msdn.microsoft.com/library/ee942965\(v=vs.110\).aspx).<br/><br/>[!INCLUDE[winblue_client_2](../../includes/winblue-client-2-md.md)]et [!INCLUDE[winblue_server_2](../../includes/winblue-server-2-md.md)] nécessitent une mise à niveau ( [KB2919355](http://support.microsoft.com/kb/2919355) ) avant l’installation du [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6.|  
+|.NET Framework|[!INCLUDE[sql2016](../../includes/sssql15-md.md)] RC1 et versions ultérieures nécessitent le [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 pour la prise en charge du moteur de base de données, de Master Data Services ou de la réplication. Le programme d’installation de[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] installe automatiquement [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Vous pouvez également installer manuellement [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] à partir de [Microsoft .NET Framework 4.6 (programme d’installation Web) pour Windows](http://support.microsoft.com/kb/3045560).<br/><br/>[!INCLUDE[sql2019](../../includes/sssqlv15-md.md)] nécessite .NET Framework 4.6.2. Disponible à partir du [Centre de téléchargement](http://www.microsoft.com/download/details.aspx?id=53344)<br/><br/> Pour obtenir davantage d’informations ainsi que des recommandations et des conseils sur [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6, consultez le [Guide de déploiement du .NET Framework pour les développeurs](http://msdn.microsoft.com/library/ee942965\(v=vs.110\).aspx).<br/><br/>[!INCLUDE[winblue_client_2](../../includes/winblue-client-2-md.md)]et [!INCLUDE[winblue_server_2](../../includes/winblue-server-2-md.md)] nécessitent une mise à niveau ( [KB2919355](http://support.microsoft.com/kb/2919355) ) avant l’installation du [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6.|  
 |Logiciel réseau|Les systèmes d'exploitation pris en charge pour [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] possèdent un logiciel réseau intégré. Les instances par défaut et les instances nommées d'une installation autonome prennent en charge les protocoles réseau suivants : protocoles de mémoire partagée, TCP/IP, Canaux nommés et VIA.<br/><br/> **Remarque** : le protocole VIA n’est pas pris en charge sur les clusters de basculement. Les clients ou les applications exécutés sur le même nœud du cluster de basculement en tant que l’instance SQL Server peuvent utiliser le protocole de mémoire partagée pour se connecter à SQL Server à l’aide de leur adresse de canal local. Toutefois, ce type de connexion n’est pas adaptée aux clusters et échoue après un basculement de l’instance. Il n’est donc pas recommandé et ne doit être utilisé que dans des scénarios très spécifiques.<br/><br/> **Important :** le protocole VIA est déconseillé. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]<br/><br/> Pour plus d'informations sur les protocoles et les bibliothèques réseau, consultez [Network Protocols and Network Libraries](../../sql-server/install/network-protocols-and-network-libraries.md).|  
 |Disque dur|[!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] requiert un minimum de 6 GO d'espace disque disponible.<br/><br/> L'espace disque nécessaire varie selon les composants [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] que vous installez. Pour plus d’informations, consultez [Espace disque nécessaire](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#HardDiskSpace) plus loin dans cet article. Pour plus d'informations sur les types de stockage pris en charge pour les fichiers de données, consultez [Storage Types for Data Files](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#StorageTypes).|  
 |Lecteur|Un lecteur de DVD, selon le cas, est requis pour l'installation à partir d'un disque.|  
