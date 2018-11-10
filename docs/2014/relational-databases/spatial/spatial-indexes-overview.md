@@ -1,11 +1,9 @@
 ---
 title: Vue d’ensemble des index spatiaux | Microsoft Docs
-ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- dbe-spatial
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - spatial indexes [SQL Server]
@@ -13,12 +11,12 @@ ms.assetid: b1ae7b78-182a-459e-ab28-f743e43f8293
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6a775ffdbe70eb47214ecb100ad395d37ca79a38
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3be9c588865596315839226492cce06c769aa4d1
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113629"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018674"
 ---
 # <a name="spatial-indexes-overview"></a>Vue d'ensemble des index spatiaux
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prend en charge les données spatiales et les index spatiaux. Un *index spatial* est un type d'index étendu qui vous permet d'indexer une colonne spatiale. Une colonne spatiale est une colonne de table qui contient des données d'un type de données spatiales, tel que `geometry` ou `geography`.  
@@ -156,7 +154,7 @@ ms.locfileid: "48113629"
 >  Les densités de grille d’un index spatial sont visibles dans les colonnes bounding_box_xmin, bounding_box_ymin, bounding_box_xmax et bounding_box_ymax de l’affichage catalogue [sys.spatial_index_tessellations](/sql/relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql) .  
   
 #### <a name="the-geography-grid-tessellation-scheme"></a>Le schéma de pavage de grille géographique  
- Ce schéma de pavage s’applique uniquement à un `geography` colonne. Cette section résume les méthodes qui sont prises en charge par le pavage de grille géographique et discute de la manière dont l'espace géodésique est projeté sur un plan, qui est ensuite décomposé en une hiérarchie de grille.  
+ Ce schéma de pavage s'applique uniquement à une colonne `geography`. Cette section résume les méthodes qui sont prises en charge par le pavage de grille géographique et discute de la manière dont l'espace géodésique est projeté sur un plan, qui est ensuite décomposé en une hiérarchie de grille.  
   
 > [!NOTE]  
 >  Vous pouvez spécifier explicitement ce schéma de pavage à l’aide de la clause USING (GEOGRAPHY_AUTO_GRID/GEOGRAPHY_GRID de l’instruction [CREATE SPATIAL INDEX](/sql/t-sql/statements/create-spatial-index-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)] .  
@@ -223,7 +221,7 @@ ms.locfileid: "48113629"
 -   *geography1*.[STDistance](/sql/t-sql/spatial-geography/stdistance-geography-data-type)(*geography2*) <= *nombre*  
   
 ### <a name="queries-that-use-spatial-indexes"></a>Requêtes qui utilisent des index spatiaux  
- Les index spatiaux sont pris en charge uniquement dans les requêtes qui comprennent un opérateur spatial indexé dans la clause `WHERE`. Par exemple, la syntaxe :  
+ Les index spatiaux sont pris en charge uniquement dans les requêtes qui incluent un opérateur spatial indexé dans la clause `WHERE`. Par exemple, la syntaxe :  
   
 ```  
 [spatial object].SpatialMethod([reference spatial object]) [ = | < ] [const literal or variable]  

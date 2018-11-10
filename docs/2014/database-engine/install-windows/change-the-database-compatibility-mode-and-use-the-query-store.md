@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords:
 - query plans [SQL Server], migrating
@@ -15,12 +14,12 @@ ms.assetid: 7e02a137-6867-4f6a-a45a-2b02674f7e65
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 82530d7707b6b93c2b4360ea4dd1fae27a868246
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9422afe49ecd31512b22995767ead61b7e9f4cce
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143419"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018464"
 ---
 # <a name="migrate-query-plans"></a>Migrer des plans de requête
   Dans la plupart des cas, la mise à niveau d'une base de données vers la dernière version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] améliore les performances des requêtes. Toutefois, si vous avez des requêtes critiques réglées avec soin pour la performance, vous pouvez conserver les plans de requête pour ces requêtes avant d'effectuer la mise à niveau en créant un repère de plan pour chaque requête. Si, après avoir effectué la mise à niveau, l'optimiseur de requête choisit un plan moins efficace pour l'une ou plusieurs des requêtes, vous pouvez activer les repères de plan et forcer l'optimiseur de requête à utiliser les plans de pré-mise à niveau.  

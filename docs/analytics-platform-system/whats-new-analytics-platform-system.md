@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 4dde052645662689b4f783777b4aec847c613e6d
-ms.sourcegitcommit: 3e1efbe460723f9ca0a8f1d5a0e4a66f031875aa
+ms.openlocfilehash: f5c991130c59d1999cc68d27ffccc15138ffc34d
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50237075"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269752"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>Quelles sont les nouveautés d’Analytique Platform System, un entrepôt de données MPP montée en puissance
 Consultez les nouveautés introduite dans les dernières mises à jour de matériel pour Microsoft® Analytique Platform System (APS). APS est une appliance de montée en puissance en local qui héberge MPP SQL Server Parallel Data Warehouse. 
@@ -129,15 +129,15 @@ APS AU6 s’exécute sur la dernière version de SQL Server 2016 et utilise le n
 ### <a name="t-sql"></a>T-SQL
 APS AU6 prend en charge ces améliorations de compatibilité de T-SQL.  Ces éléments de langage supplémentaires facilitent la migration à partir de SQL Server et d’autres sources de données. 
 
-- [Les classements au niveau des colonnes SQL][] sont désormais pris en charge, en plus des classements de Windows.
-- [Les index non cluster sur les index columnstore en cluster][] améliorer les performances des requêtes qui recherchent des valeurs spécifiques dans l’index cluster columnstore. 
+- [Classements SQL au niveau des colonnes][] sont désormais pris en charge, en plus des classements de Windows.
+- [Index non cluster sur les index columnstore en cluster][] améliorer les performances des requêtes qui recherchent des valeurs spécifiques dans l’index cluster columnstore. 
 - [SÉLECTIONNEZ... DANS][] 
 - [sp_spaceused()][] affiche l’espace disque utilisé ou réservé dans une table ou une base de données.
-- [Les tableaux larges][] prise en charge est identique à SQL Server 2016. La limite de 32 Ko pour la taille de ligne n’existe plus. 
+- [Tableaux larges][] prise en charge est identique à SQL Server 2016. La limite de 32 Ko pour la taille de ligne n’existe plus. 
 
 **Types de données**
 
-- [Varchar (max)][], [nvarchar (max)][] et [varbinary (max)][]. Ces types de données LOB ont une taille maximale de 2 Go. Pour charger ces objets utilisent [utilitaire bcp][]. Actuellement, Polybase et dwloader ne prennent en charge ces types de données. 
+- [Varchar (max)][], [nvarchar (max)][] et [varbinary (max)][]. Ces types de données LOB ont une taille maximale de 2 Go. Pour charger ces objets utilisent [utilitaire bcp][]. Actuellement, PolyBase et dwloader ne prennent en charge ces types de données. 
 - [SYSNAME][]
 - [UNIQUEIDENTIFIER][]
 - [NUMERIC][] et types de données décimal.
@@ -196,16 +196,16 @@ The link format that starts with '/sql/what-ever/my-artlcle' is not appropriate 
 The proper formats have at least two big advantages.  One big advantage is that the proper formats enable the OPS Build system to detect broken links at Pull Request build time, instead of only later during run time.
 -->
 [database compatibility level 130]: ../t-sql/statements/alter-database-transact-sql-compatibility-level.md
-[Les classements au niveau des colonnes SQL]: ~/relational-databases/collations/collation-and-unicode-support.md
+[Classements SQL au niveau des colonnes]: ~/relational-databases/collations/collation-and-unicode-support.md
 
-[Les index non cluster sur les index columnstore en cluster]:/sql/t-sql/statements/create-index-transact-sql
+[Index non cluster sur les index columnstore en cluster]:/sql/t-sql/statements/create-index-transact-sql
 [VARCHAR (MAX)]:/sql/t-sql/data-types/char-and-varchar-transact-sql
 [NVARCHAR (MAX)]:/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql
 [VARBINARY (MAX)]:/sql/t-sql/data-types/binary-and-varbinary-transact-sql
 [SYSNAME]:/sql/relational-databases/system-catalog-views/sys-types-transact-sql
 [SÉLECTIONNEZ... DANS]:/sql/t-sql/queries/select-into-clause-transact-sql
 [sp_spaceused()]:/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql
-[Les tableaux larges]:/sql/sql-server/maximum-capacity-specifications-for-sql-server
+[Tableaux larges]:/sql/sql-server/maximum-capacity-specifications-for-sql-server
 [BULK INSERT]:/sql/t-sql/statements/bulk-insert-transact-sql
 [Utilitaire bcp]:/sql/tools/bcp-utility
 [UNIQUEIDENTIFIER]:/sql/t-sql/data-types/uniqueidentifier-transact-sql

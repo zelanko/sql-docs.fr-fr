@@ -23,7 +23,7 @@ ms.locfileid: "47704297"
 # <a name="scalar-function-calls"></a>Appels de fonctions scalaires
 Fonctions scalaires retournent une valeur pour chaque ligne. Par exemple, la fonction scalaire de valeur absolue prend une colonne numérique en tant qu’argument et retourne la valeur absolue de chaque valeur dans la colonne. Est la séquence d’échappement pour appeler une fonction scalaire  
   
- **{fn***fonction scalaire* **}**   
+ **{fn** *fonction scalaire* **}**   
   
  où *fonction scalaire* est une des fonctions répertoriées dans [annexe e : les fonctions scalaires](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md). Pour plus d’informations sur la séquence d’échappement de fonction scalaire, consultez [scalaire séquence d’échappement de fonction](../../../odbc/reference/appendixes/scalar-function-escape-sequence.md) dans l’annexe c : SQL grammaire.  
   

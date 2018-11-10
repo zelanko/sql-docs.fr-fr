@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- dbe-spatial
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - planar spatial data [SQL Server], getting started
@@ -14,17 +13,17 @@ ms.assetid: c6b5c852-37d2-48d0-a8ad-e43bb80d6514
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 259a55908c97286805566ad0642391487aab77cd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 036ce2fe942866092ba774f98d6b306c8f0ea254
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48158969"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018187"
 ---
 # <a name="create-construct-and-query-geometry-instances"></a>Créer, construire et interroger des instances geometry
-  Le type de données spatiales PLANAIRE, `geometry`, représente des données dans un système de coordonnées euclidien (plat). Ce type est implémenté en tant que type de données CLR (Common Language Runtime) dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Le type de données spatiales planaire, `geometry`, représente les données dans un système de coordonnées euclidien (plat). Ce type est implémenté en tant que type de données CLR (Common Language Runtime) dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Le `geometry` type est prédéfini et disponible dans chaque base de données. Vous pouvez créer des colonnes de table de type `geometry` et opérer sur `geometry` les données de la même manière que vous utiliseriez des autres types CLR.  
+ Le type `geometry` est prédéfini et disponible dans chaque base de données. Vous pouvez créer des colonnes de table de type `geometry` et opérer sur les données `geometry` comme vous le feriez avec d'autres types CLR.  
   
  Le type de données `geometry` (planaire) pris en charge par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est conforme à la spécification Open Geospatial Consortium (OGC) Simple Features for SQL version 1.1.0.  
   
@@ -39,7 +38,7 @@ ms.locfileid: "48158969"
 ##  <a name="creating"></a> Création ou construction d'une nouvelle instance geometry  
   
 ###  <a name="existing"></a> Création d'une instance geometry à partir d'une instance existante  
- Le `geometry` type de données fournit de nombreuses méthodes intégrées que vous pouvez utiliser pour créer de nouveaux `geometry` instances basées sur des instances existantes.  
+ Le type de données `geometry` fournit de nombreuses méthodes intégrées que vous pouvez utiliser pour créer des instances `geometry` basées sur des instances existantes.  
   
  **Pour créer une mémoire tampon autour d'une géométrie**  
  [STBuffer &#40;type de données geometry&#41;](/sql/t-sql/spatial-geometry/stbuffer-geometry-data-type)  
@@ -101,7 +100,7 @@ ms.locfileid: "48158969"
   
   
 ###  <a name="wkb"></a> Construction d'une instance geometry à partir d'une entrée WKB (Well-Known Binary)  
- WKB est un format binaire spécifié par le Consortium OGC (Open Geospatial) qui autorise le `geometry` données à échanger entre une application cliente et une base de données SQL. Les fonctions suivantes acceptent l'entrée WKB pour construire des géométries :  
+ WKB est un format binaire spécifié par l'OGC (Open Geospatial Consortium) qui autorise l'échange de données de `geometry` entre une application cliente et une base de données SQL. Les fonctions suivantes acceptent l'entrée WKB pour construire des géométries :  
   
  **Pour construire tout type d'instance geometry à partir d'une entrée WKB**  
  [STGeomFromWKB &#40;type de données geometry&#41;](/sql/t-sql/spatial-geometry/stgeomfromwkb-geometry-data-type)  
@@ -138,7 +137,7 @@ ms.locfileid: "48158969"
   
   
 ##  <a name="returning"></a> Renvoi de données WKT et WKB à partir d'une instance geometry  
- Vous pouvez utiliser les méthodes suivantes pour retourner soit le format WKT ou WKB d’une `geometry` instance :  
+ Vous pouvez utiliser les méthodes suivantes pour retourner le format WKT ou WKB d'une instance `geometry` :  
   
  **Pour retourner la représentation WKT d'une instance geometry**  
  [STAsText &#40;type de données geometry&#41;](/sql/t-sql/spatial-geometry/stastext-geometry-data-type)  
@@ -160,7 +159,7 @@ ms.locfileid: "48158969"
  Tous les `geometry` instances ont un nombre de propriétés qui peuvent être récupérées via des méthodes qui [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit. Les rubriques suivantes définissent les propriétés et comportements de types geometry et les méthodes permettant de les interroger.  
   
 ###  <a name="valid"></a> Informations sur la validité, le type d'instance et GeometryCollection  
- Une fois un `geometry` instance est construite, vous pouvez utiliser les méthodes suivantes pour déterminer si elle est bien formée, retourner le type d’instance ou, si c’est une instance de la collection, retourner un spécifique `geometry` instance.  
+ Une fois qu'une instance `geometry` est construite, vous pouvez utiliser les méthodes suivantes pour déterminer si elle est formée correctement, retourner le type d'instance ou, s'il s'agit d'une instance de collection, retourner une instance `geometry` spécifique.  
   
  **Pour retourner le type d'instance d'une géométrie**  
  [STGeometryType &#40;type de données geometry&#41;](/sql/t-sql/spatial-geometry/stgeometrytype-geometry-data-type)  
@@ -212,7 +211,7 @@ ms.locfileid: "48158969"
   
   
 ###  <a name="dimension"></a> Dimension  
- Un nonempty `geometry` instance peut avoir 0, 1 ou 2 dimensions. À zéro dimension `geometries`, tel que `Point` et `MultiPoint`, n’ont aucune longueur ou la zone. Les objets unidimensionnels, tels que `LineString, CircularString, CompoundCurve`, et `MultiLineString`, ont une longueur. Les instances à deux dimensions, telles que `Polygon`, `CurvePolygon` et `MultiPolygon`, ont une surface et une longueur. Les instances vides indiquent une dimension de -1 et une `GeometryCollection` indique une surface dépendant des types de son contenu.  
+ Une instance `geometry` non vide peut avoir 0, 1 ou 2 dimensions. Les `geometries` à zéro dimension, telles que `Point` et `MultiPoint`, n'ont aucune longueur ou surface. Les objets unidimensionnels, tels que `LineString, CircularString, CompoundCurve` et `MultiLineString`, ont une longueur. Les instances à deux dimensions, telles que `Polygon`, `CurvePolygon` et `MultiPolygon`, ont une surface et une longueur. Les instances vides indiquent une dimension de -1 et une `GeometryCollection` indique une surface dépendant des types de son contenu.  
   
  **Pour retourner la dimension d'une instance**  
  [STDimension](/sql/t-sql/spatial-geometry/stdimension-geometry-data-type)  
@@ -226,7 +225,7 @@ ms.locfileid: "48158969"
   
   
 ###  <a name="empty"></a> Vide  
- Un *vide* `geometry` instance n’a pas de tous les points. La longueur de vide `LineString, CircularString`, `CompoundCurve`, et `MultiLineString` instances est égal à zéro. La zone de vide `Polygon`, `CurvePolygon`, et `MultiPolygon` instances est égal à 0.  
+ Un *vide* `geometry` instance n’a pas de tous les points. La longueur des instances `LineString, CircularString`, `CompoundCurve` et `MultiLineString` vides est nulle. La surface des instances `Polygon`, `CurvePolygon` et `MultiPolygon` vides est 0.  
   
  **Pour déterminer si une instance est vide**  
  [STIsEmpty](/sql/t-sql/spatial-geometry/stisempty-geometry-data-type).  
@@ -263,7 +262,7 @@ SET @g = geometry::Parse('MULTILINESTRING((0 1, 0 0, 1 0, 0 1), (1 1, 1 0))');
 SELECT @g.STBoundary().ToString();  
 ```  
   
- La limite d’un `Polygon` ou `MultiPolygon` instance est l’ensemble de ses anneaux.  
+ La limite d'une instance `Polygon` ou `MultiPolygon` est l'ensemble de ses anneaux.  
   
 ```  
 DECLARE @g geometry;  
@@ -285,9 +284,9 @@ SELECT @g.STBoundary().ToString();
   
   
 ###  <a name="closure"></a> Fermeture  
- Un *fermé* `geometry` instance est un graphique les points dont le démarrage et de points de terminaison sont les mêmes. `Polygon` instances sont considérées comme fermées. Les instances `Point` ne sont pas fermées.  
+ Un *fermé* `geometry` instance est un graphique les points dont le démarrage et de points de terminaison sont les mêmes. Les instances `Polygon` sont considérées comme fermées. Les instances `Point` ne sont pas fermées.  
   
- Un anneau est une simple et fermée `LineString` instance.  
+ Un anneau est une instance `LineString` simple et fermée.  
   
  **Pour déterminer si une instance est fermée**  
  [STIsClosed](/sql/t-sql/spatial-geometry/stisclosed-geometry-data-type)  
@@ -317,7 +316,7 @@ SELECT @g.STBoundary().ToString();
   
   
 ##  <a name="rel"></a> Détermination de relations entre des instances geometry  
- Le `geometry` type de données fournit de nombreuses méthodes intégrées que vous pouvez utiliser pour déterminer les relations entre deux `geometry` instances.  
+ Le type de données `geometry` fournit de nombreuses méthodes intégrées que vous pouvez utiliser pour déterminer les relations entre deux instances `geometry`.  
   
  **Pour déterminer si deux instances comprennent le même ensemble de points**  
  [STEquals](/sql/t-sql/spatial-geometry/stequals-geometry-data-type)  

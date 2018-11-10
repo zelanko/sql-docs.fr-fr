@@ -4,24 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 ms.assetid: 80ba9e43-f3f0-4730-9fb1-2afd2dd3e6fc
 author: Minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 84a76e85aeb73138f2c633bfa361325c0423ca96
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 956503602a4a9266427f7242097755f3ff6a7294
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197249"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51019024"
 ---
 # <a name="upgrade-powerpivot-for-sharepoint"></a>Mettre à niveau PowerPivot pour SharePoint
   Cette rubrique résume les étapes nécessaires pour mettre à niveau un déploiement de [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] vers [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)]. Les étapes spécifiques dépendent de la version de SharePoint exécutée par votre environnement et incluent le complément PowerPivot pour SharePoint (**spPowerPivot.msi**).  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2010 | SharePoint 2013  
+ **[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2010 | SharePoint 2013.  
   
  Pour obtenir les notes de mise à jour, consultez [Notes de mise à jour pour SQL Server 2014](http://go.microsoft.com/fwlink/?LinkID=296445).  
   
@@ -48,9 +47,9 @@ ms.locfileid: "48197249"
   
  **SQL Server :**  
   
--   Si l’installation existante PowerPivot est [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], le [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Service Pack 2 (SP2) est requis pour une mise à niveau vers [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)].  
+-   Si l'installation existante PowerPivot est [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Service Pack 2 (SP2) est nécessaire pour une mise à niveau vers [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)].  
   
--   Si l’installation existante PowerPivot est [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], le [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Service Pack 1 (SP1) est requis pour une mise à niveau vers [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)].  
+-   Si l'installation existante PowerPivot est [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Service Pack 1 (SP1) est nécessaire pour une mise à niveau vers [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)].  
   
  **SharePoint 2010 :**  
   
@@ -85,7 +84,7 @@ ms.locfileid: "48197249"
   
          ou  
   
-         Sur le **Démarrer** menu, pointez sur **tous les programmes**, cliquez sur [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], cliquez sur **outils de Configuration**, puis cliquez sur **PowerPivot pour SharePoint 2013 Configuration trop**. Notez que cet outil est répertorié uniquement lorsque [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] est installé sur le serveur local.  
+         Dans le menu **Démarrer** , pointez sur **Tous les programmes**, puis sur [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], sur **Outils de configuration**, puis cliquez sur **Outil de configuration de PowerPivot pour SharePoint 2013**. Notez que cet outil est répertorié uniquement lorsque [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] est installé sur le serveur local.  
   
     2.  Au démarrage, l'outil de configuration vérifie l'état de mise à niveau des solutions de solution de la batterie de serveurs PowerPivot et de l'application Web PowerPivot. Si des versions antérieures de ces solutions sont détectées, vous verrez le message « **De nouvelles versions des fichiers de solution PowerPivot ont été détectées. Sélectionnez l’option de mise à niveau appropriée pour mettre à niveau votre batterie de serveurs** ». Cliquez sur **OK** pour fermer le message de validation système.  
   
@@ -155,7 +154,7 @@ ms.locfileid: "48197249"
   
 7.  **Exécutez l’outil de Configuration PowerPivot** sur le premier serveur d’applications SharePoint qui exécute le service SQL Server Analysis Services (PowerPivot) pour mettre à niveau les solutions et les services Web dans SharePoint. Vous ne pouvez pas utiliser l'Administration centrale pour cette étape.  
   
-    1.  Sur le **Démarrer** menu, pointez sur **tous les programmes**, cliquez sur [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], cliquez sur **outils de Configuration**, puis cliquez sur **outil de Configuration PowerPivot** . Notez que cet outil est répertorié uniquement lorsque [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] est installé sur le serveur local.  
+    1.  Dans le menu **Démarrer** , pointez sur **Tous les programmes**, cliquez sur [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]et sur **Outils de configuration**, puis cliquez sur **Outil de configuration PowerPivot**. Notez que cet outil est répertorié uniquement lorsque [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] est installé sur le serveur local.  
   
     2.  Au démarrage, l'outil de configuration vérifie l'état de mise à niveau des solutions de solution de la batterie de serveurs PowerPivot et de l'application Web PowerPivot. Si des versions antérieures de ces solutions sont détectées, vous verrez le message « De nouvelles versions des fichiers de solution PowerPivot ont été détectées. Sélectionnez l'option de mise à niveau appropriée pour mettre à niveau votre batterie de serveurs. » Cliquez sur **OK** pour fermer le message.  
   

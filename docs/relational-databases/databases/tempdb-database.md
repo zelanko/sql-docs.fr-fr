@@ -19,12 +19,12 @@ ms.author: sstein
 manager: craigg
 ms.reviewer: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 93ccc48a8dc85bc788bb8ea35de6e6c57e031fa6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a7553be68390c90b2cab8ac55c66bb9ffa47ad88
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676377"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51031266"
 ---
 # <a name="tempdb-database"></a>Base de données tempdb
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -203,6 +203,10 @@ GO
 - Toutes les allocations dans **tempdb** utilisent des extensions uniformes. [L’indicateur de trace 1118](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) n’est plus nécessaire.  
 - Pour le groupe de fichiers primaire, la propriété AUTOGROW_ALL_FILES est activée et la propriété ne peut pas être modifiée. 
 
+Pour plus d’informations sur les améliorations des performances dans tempdb, consultez l’article de blog suivant :
+
+[TEMPDB – Files and Trace Flags and Updates, Oh My!](https://blogs.msdn.microsoft.com/sql_server_team/tempdb-files-and-trace-flags-and-updates-oh-my/)
+
 ## <a name="capacity-planning-for-tempdb-in-sql-server"></a>Planification de la capacité de tempdb dans SQL Server
  La détermination de la taille appropriée pour tempdb dans un environnement de production SQL Server dépend de nombreux facteurs. Comme décrit plus haut dans cet article, ces facteurs incluent la charge de travail existante et les fonctionnalités [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisées. Nous vous recommandons d’analyser la charge de travail existante en effectuant les tâches suivantes dans un environnement de test SQL Server :
 - Activez la croissance automatique de tempdb.
@@ -273,5 +277,5 @@ GO
  [Déplacer des fichiers de bases de données](../../relational-databases/databases/move-database-files.md)  
   
 ## <a name="see-also"></a> Voir aussi  
- [Utilisation de tempdb dans SQL Server 2005](http://go.microsoft.com/fwlink/?LinkId=81216)  
+ [Utilisation de tempdb dans SQL Server 2005](https://technet.microsoft.com/library/cc966545.aspx)  
  [Résolution des problèmes d’espace disque insuffisant dans tempdb](http://msdn.microsoft.com/library/ms176029.aspx) 

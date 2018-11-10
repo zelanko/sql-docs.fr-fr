@@ -1,11 +1,9 @@
 ---
 title: Créer, modifier et supprimer les index spatiaux | Microsoft Docs
-ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- dbe-spatial
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - indexes [SQL Server], creating
@@ -18,12 +16,12 @@ ms.assetid: 00c1b927-8ec5-44cf-87c2-c8de59745735
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f935fa237c13f71c6ad7cc0ee97a4d7577a516ab
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 485b9bd38754309602df8002bf651188d322d6d8
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122349"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018654"
 ---
 # <a name="create-modify-and-drop-spatial-indexes"></a>Créer, modifier et supprimer les index spatiaux
   Un index spatial peut effectuer plus efficacement certaines opérations sur une colonne de la `geometry` ou `geography` type de données (un *colonne spatiale*). Plusieurs index spatiaux peuvent être spécifiés sur une colonne spatiale. Cela peut s'avérer utile par exemple pour indexer différents paramètres de pavage dans une même colonne.  
@@ -85,7 +83,7 @@ ms.locfileid: "48122349"
   
      La table s'ouvre dans le Concepteur de tables.  
   
-2.  Sélectionnez un `geometry` ou `geography` colonne pour l’index.  
+2.  Sélectionnez une colonne `geometry` ou `geography` pour l'index.  
   
 3.  Dans le menu **Concepteur de tables** , cliquez sur **Index spatial**.  
   
@@ -155,6 +153,6 @@ ms.locfileid: "48122349"
   
   
 ## <a name="see-also"></a>Voir aussi  
- [Vue d’ensemble des index spatiaux](spatial-indexes-overview.md)  
+ [Vue d'ensemble des index spatiaux](spatial-indexes-overview.md)  
   
   

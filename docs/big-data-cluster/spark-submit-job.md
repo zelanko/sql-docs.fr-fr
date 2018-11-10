@@ -8,17 +8,17 @@ ms.author: jejiang
 ms.reviewer: jroth
 ms.custom: ''
 ms.topic: conceptual
-ms.date: 10/01/2018
-ms.openlocfilehash: 0787663b0c2eccfed33bf5c2cc681be4f2ef5edc
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.date: 11/06/2018
+ms.openlocfilehash: 4ff29460ade2a3e32f3650d2c2701f22548bdb60
+ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50050833"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51221605"
 ---
 # <a name="submit-spark-job-on-sql-server-big-data-clusters-in-azure-data-studio"></a>Soumettre un travail Spark sur des clusters de données volumineuses de SQL Server dans Azure Data Studio
 
-Un des principaux scénarios consiste à soumettre un travail Spark pour SQL Server 2019 CTP 2.0. La fonctionnalité de soumission de travaux Spark vous permet de soumettre des fichiers Jar ou Py locaux avec des références à un cluster de données volumineux de SQL Server 2019. Il vous permet également d’exécuter des fichiers Jar ou Py, ce qui sont trouvent déjà dans le système de fichiers HDFS. 
+Un des principaux scénarios consiste à soumettre un travail Spark dans SQL Server 2019 CTP 2.1. La fonctionnalité de soumission de travaux Spark vous permet de soumettre des fichiers Jar ou Py locaux avec des références à un cluster de données volumineux de SQL Server 2019. Il vous permet également d’exécuter des fichiers Jar ou Py, ce qui sont trouvent déjà dans le système de fichiers HDFS. 
 
 ## <a name="prerequisite"></a>Condition préalable 
 Installez les outils de big data pour SQL Server et vous connecter à un cluster de données volumineux avant d’envoyer le travail Spark. Pour les détails de l’installation, consultez pour créer un lien [déployer big data Tools](deploy-big-data-tools.md).

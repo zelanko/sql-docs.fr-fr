@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 7d1076e0-7710-469a-9107-e293e4bd80ac
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1ebef54890df839f0608865ba7951221d17485e9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1302a354255c6b98a46cd2c1aef234fe3f1c5f67
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194669"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51029257"
 ---
 # <a name="cleanse-data-in-a-composite-domain"></a>Nettoyer les données dans un domaine composite
-  Cette rubrique fournit des informations sur le nettoyage des domaines composites dans [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Un domaine composite comprend plusieurs domaines uniques et est mappé à un champ de données qui comprend plusieurs termes connexes. Les différents domaines dans un domaine composite doivent avoir un espace commun de connaissance. Pour plus d’informations sur les domaines composites, consultez [gestion d’un domaine Composite](../../2014/data-quality-services/managing-a-composite-domain.md).  
+  Cette rubrique fournit des informations sur le nettoyage des domaines composites dans [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Un domaine composite comprend plusieurs domaines uniques et est mappé à un champ de données qui comprend plusieurs termes connexes. Les différents domaines dans un domaine composite doivent avoir un espace commun de connaissance. Pour plus d'informations sur les domaines composites, consultez [Managing a Composite Domain](../../2014/data-quality-services/managing-a-composite-domain.md).  
   
 ##  <a name="Mapping"></a> Mappage d'un domaine composite aux données sources  
  Il existe deux façons de mapper vos données sources à un domaine composite :  
@@ -28,7 +27,7 @@ ms.locfileid: "48194669"
   
     -   Si le domaine composite est mappé à un service de données de référence, les données sources sont envoyées telles quelles au service de données de référence pour correction et analyse.  
   
-    -   Si le domaine composite n'est pas mappé à un service de données de référence, l'analyse est effectuée selon la méthode définie pour le domaine composite. Pour plus d’informations sur la spécification d’une méthode d’analyse pour les domaines composites, consultez [créer un domaine Composite](../../2014/data-quality-services/create-a-composite-domain.md)  
+    -   Si le domaine composite n'est pas mappé à un service de données de référence, l'analyse est effectuée selon la méthode définie pour le domaine composite. Pour plus d'informations sur la spécification d'une méthode d'analyse pour les domaines composites, consultez [Create a Composite Domain](../../2014/data-quality-services/create-a-composite-domain.md)  
   
 -   Les données sources sont constituées de plusieurs champs (par exemple, Prénom, Deuxième prénom et Nom) qui sont mappés à des domaines différents dans un domaine composite.  
   
@@ -55,7 +54,7 @@ ms.locfileid: "48194669"
 |-----------------|-----------------|--------------------|  
 |Microsoft Office 2010|Microsoft Inc.|2010|  
   
- Lorsque vous testez la règle entre domaines *Then* définitive, **La valeur est égale à**, la boîte de dialogue **Tester la règle de domaine composite** contient une nouvelle colonne, **Corriger vers**, qui affiche les données correctes. Dans un projet de qualité des données de nettoyage, cette règle entre domaines définitive modifie les données avec un niveau de confiance de 100 % et la colonne **Raison** affiche le message suivant : Corrigé par la règle «*\<Nom de la règle entre domaines>*. Pour plus d’informations sur les règles entre domaines, consultez [créer une règle inter-domaines](../../2014/data-quality-services/create-a-cross-domain-rule.md).  
+ Lorsque vous testez la règle entre domaines *Then* définitive, **La valeur est égale à**, la boîte de dialogue **Tester la règle de domaine composite** contient une nouvelle colonne, **Corriger vers**, qui affiche les données correctes. Dans un projet de qualité des données de nettoyage, cette règle entre domaines définitive modifie les données avec un niveau de confiance de 100 % et la colonne **Raison** affiche le message suivant : Corrigé par la règle «*\<Nom de la règle entre domaines>*. Pour plus d'informations sur les règles entre domaines, consultez [Create a Cross-Domain Rule](../../2014/data-quality-services/create-a-cross-domain-rule.md).  
   
 > [!NOTE]  
 >  La règle entre domaines définitive ne fonctionne pas pour les domaines composites joints au service de données de référence.  

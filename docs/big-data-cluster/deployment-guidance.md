@@ -4,15 +4,15 @@ description: Découvrez comment déployer des clusters de données volumineuses 
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/08/2018
+ms.date: 11/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: de19577b4a83bc10875bf56f4c0f2924828a00ea
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: 70d8b07caf618cb5f1629fc80f0ca1db8b73ad3c
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50051181"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269862"
 ---
 # <a name="how-to-deploy-sql-server-big-data-cluster-on-kubernetes"></a>Comment déployer SQL Server du cluster big data sur Kubernetes
 
@@ -26,7 +26,7 @@ Cluster de données volumineux de SQL Server peut être déployé en tant que co
 
 ## <a id="prereqs"></a> Prérequis du cluster Kubernetes
 
-Cluster de données volumineux de SQL Server requiert une version 1.10 d’edgeos minimale pour Kubernetes, pour le serveur et client. Pour installer une version spécifique sur le client kubectl, consultez [installer kubectl binaire via curl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl).  Dernières versions de minikube et AKS sont au moins 1.10. Pour AKS, vous devez utiliser `--kubernetes-version` paramètre pour spécifier une version différente de celle par défaut.
+Cluster de données volumineux de SQL Server requiert une version 1.10 d’edgeos minimale pour Kubernetes, pour le serveur et client. Pour installer une version spécifique sur le client kubectl, consultez [installer kubectl binaire via curl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl). Dernières versions de minikube et AKS sont au moins 1.10. Pour AKS, vous devez utiliser `--kubernetes-version` paramètre pour spécifier une version différente de celle par défaut.
 
 > [!NOTE]
 > Notez que les versions Kubernetes client et le serveur doivent être de version mineure + 1 ou -1. Pour plus d’informations, consultez [Kubernetes pris en charge les versions et composant de décalage](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/release/versioning.md#supported-releases-and-component-skew).
@@ -54,7 +54,12 @@ Pour obtenir des conseils sur la configuration d’une de ces options de cluster
 
 ## <a id="deploy"></a> Déployer le cluster de données volumineux de SQL Server
 
-Une fois que vous avez configuré votre cluster Kubernetes, vous pouvez poursuivre le déploiement de cluster de données volumineux de SQL Server. Pour déployer un cluster de données volumineuses dans Azure avec toutes les configurations par défaut pour un environnement de développement/test, suivez les instructions de cet article :
+Une fois que vous avez configuré votre cluster Kubernetes, vous pouvez poursuivre le déploiement de cluster de données volumineux de SQL Server. 
+
+> [!NOTE]
+> Si vous mettez à niveau à partir d’une version antérieure, veuillez consulter la [mise à niveau de la section de cet article](#upgrade).
+
+Pour déployer un cluster de données volumineuses dans Azure avec toutes les configurations par défaut pour un environnement de développement/test, suivez les instructions de cet article :
 
 [Démarrage rapide : Déployer le cluster de données volumineux de SQL Server sur Kubernetes](quickstart-big-data-cluster-deploy.md)
 
@@ -71,6 +76,9 @@ kubectl config view
 ## <a id="mssqlctl"></a> Installer mssqlctl
 
 **mssqlctl** est un utilitaire de ligne de commande écrit dans Python que permet aux administrateurs de démarrer et de gérer le cluster de données volumineuses via les API REST de cluster. La version de Python minimale requise est v3.5. Vous devez également avoir `pip` qui est utilisé pour télécharger et installer **mssqlctl** outil. 
+
+> [!IMPORTANT]
+> Si vous avez installé une version antérieure, vous devez supprimer le cluster *avant* la mise à niveau **mssqlctl** et l’installation de la nouvelle version. Pour plus d’informations, consultez [mise à niveau vers une nouvelle version](deployment-guidance.md#upgrade).
 
 ### <a name="windows-mssqlctl-installation"></a>Installation de mssqlctl Windows
 
@@ -89,7 +97,7 @@ kubectl config view
 1. Installer **mssqlctl** avec la commande suivante :
 
    ```bash
-   pip3 install --index-url https://private-repo.microsoft.com/python/ctp-2.0 mssqlctl
+   pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.1 mssqlctl
    ```
 
 ### <a name="linux-mssqlctl-installation"></a>Installation de mssqlctl Linux
@@ -105,17 +113,10 @@ Sur Linux, vous devez installer le **python3** et **python3-pip** packages, puis
    sudo -H pip3 install --upgrade pip
    ```
 
-1. Assurez-vous que vous disposez de la dernière version **demandes** package.
-
-   ```bash
-   sudo -H python3 -m pip install requests
-   sudo -H python3 -m pip install requests --upgrade
-   ```
-
 1. Installer **mssqlctl** avec la commande suivante :
 
    ```bash
-   pip3 install --index-url https://private-repo.microsoft.com/python/ctp-2.0 mssqlctl
+   pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.1 mssqlctl
    ```
 
 ## <a name="define-environment-variables"></a>Définir des variables d’environnement
@@ -224,7 +225,7 @@ Ou bien, vous pouvez supprimer à l’aide de volumes persistants sur minikube e
 
 Si vous déployez avec kubeadm sur vos propres ordinateurs physiques ou virtuels, vous devez préconfigurer une classe de stockage Kubernetes et passer d’à l’aide de la `STORAGE_CLASS_NAME`. Ou bien, vous pouvez supprimer à l’aide de volumes persistants en définissant `USE_PERSISTENT_VOLUME=false`. Pour plus d’informations sur le stockage persistant, consultez [persistance des données avec SQL Server du cluster big data sur Kubernetes](concept-data-persistence.md).
 
-## <a name="deploy-sql-server-big-data-cluster"></a>Déployer le cluster de données volumineux de SQL Server
+## <a name="deploy-sql-server-big-data-cluster"></a>Déployer le cluster Big Data de SQL Server
 
 L’API de création de cluster est utilisé pour initialiser l’espace de noms Kubernetes et de déployer tous les pods d’application dans l’espace de noms. Pour déployer un cluster de données volumineux de SQL Server sur votre cluster Kubernetes, exécutez la commande suivante :
 
@@ -275,6 +276,29 @@ Quelle que soit la plateforme vous s’exécutent votre cluster Kubernetes, pour
 ```bash
 kubectl get svc -n <name of your cluster>
 ```
+
+## <a id="upgrade"></a> Mise à niveau vers une nouvelle version
+
+Actuellement, la seule façon de mettre à niveau un cluster de données volumineux vers une nouvelle version consiste à supprimer et recréer le cluster manuellement. Chaque version comporte une version unique de **mssqlctl** qui n’est pas compatible avec la version précédente. En outre, si un cluster plus anciens avait télécharger une image sur un nouveau nœud, la dernière image peut-être pas compatible avec les anciennes images sur le cluster. Pour mettre à niveau vers la dernière version, procédez comme suit :
+
+1. Avant de supprimer l’ancien cluster, sauvegardez les données sur l’instance principale de SQL Server et sur HDFS. Pour l’instance principale de SQL Server, vous pouvez utiliser [sauvegarde et restauration SQL Server](data-ingestion-restore-databse.md). Système de fichiers HDFS, vous [peut copier les données avec **curl**](data-ingestion-curl.md).
+
+1. Supprimer l’ancien cluster avec le `mssqlctl delete cluster` commande.
+
+   ```bash
+    mssqlctl delete cluster <old-cluster-name>
+   ```
+
+1. Installez la dernière version de **mssqlctl**.
+   
+   ```bash
+   pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.1 mssqlctl
+   ```
+
+   > [!IMPORTANT]
+   > Pour chaque version, le chemin d’accès à **mssqlctl** modifications. Même si vous avez installé précédemment **mssqlctl**, vous devez réinstaller à partir du chemin plus récent avant de créer le nouveau cluster.
+
+1. Installer la dernière version en suivant les instructions dans le [déployer section](#deploy) de cet article. 
 
 ## <a name="next-steps"></a>Étapes suivantes
 

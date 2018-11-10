@@ -22,12 +22,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4f60de14fe4414bcb7cc9a09656f7d472785bda1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b80ec93ef671f2f9a564c81ae2ebb10c19c43dfd
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47679373"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018334"
 ---
 # <a name="sysfngetauditfile-transact-sql"></a>sys.fn_get_audit_file (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ fn_get_audit_file ( file_pattern,
  *file_pattern*  
  Spécifie le répertoire ou chemin d'accès et nom de fichier du jeu de fichiers d'audit à lire. Est de type **nvarchar (260)**. 
  
- - **SQL Server**:
+ - **SQL Server** :
     
     Cet argument doit inclure à la fois un chemin d'accès (lettre de lecteur ou partage réseau) et un nom de fichier qui peut inclure un caractère générique. Un seul astérisque (*) peut être utilisé pour recueillir plusieurs fichiers à partir d’un jeu de fichiers d’audit. Exemple :  
   
@@ -107,8 +107,8 @@ fn_get_audit_file ( file_pattern,
 |target_server_principal_sid|**varbinary**|SID de connexion cible. Autorise la valeur NULL. Retourne NULL si non applicable.|  
 |target_database_principal_name|**sysname**|Utilisateur cible de l’action. Autorise la valeur NULL. Retourne NULL si non applicable.|  
 |server_instance_name|**sysname**|Nom de l'instance de serveur où l'audit s'est produit. Le format de server\instance standard est utilisé.|  
-|database_name|**sysname**|Contexte de base de données dans lequel l'action s'est produite. Autorise la valeur NULL. Retourne NULL pour les audits qui ont lieu au niveau serveur.|  
-|schema_name|**sysname**|Contexte de schéma dans lequel l'action s'est produite. Autorise la valeur NULL. Retourne NULL pour les audits qui ont lieu à l'extérieur d'un schéma.|  
+|database_name|**sysname**|Contexte de base de données dans lequel l'action s'est produite. Autorise la valeur NULL. Retourne la valeur NULL pour les audits qui se produisent au niveau du serveur.|  
+|schema_name|**sysname**|Contexte de schéma dans lequel l'action s'est produite. Autorise la valeur NULL. Retourne la valeur NULL pour les audits qui se produisent en dehors d’un schéma.|  
 |object_name|**sysname**|Nom de l'entité sur laquelle l'audit s'est produit. Notamment :<br /> Objets de serveur<br /> Bases de données<br /> Objets de base de données<br /> Objets de schéma<br /> Autorise la valeur NULL. Retourne NULL si l'entité est le serveur lui-même ou si l'audit n'est pas effectué à un niveau objet. Par exemple, Authentification.|  
 |instruction|**nvarchar(4000)**|Instruction TSQL si elle existe. Autorise la valeur NULL. Retourne NULL si non applicable.|  
 |additional_information|**nvarchar(4000)**|Les informations uniques qui s'appliquent seulement à un événement unique sont retournées au format XML. Un petit nombre d'actions pouvant être auditées contient ce type d'informations.<br /><br /> Un niveau de pile TSQL est affiché au format XML pour les actions auxquelles la pile TSQL est associée. Le format XML est le suivant :<br /><br /> `<tsql_stack><frame nest_level = '%u' database_name = '%.*s' schema_name = '%.*s' object_name = '%.*s' /></tsql_stack>`<br /><br /> Niveau_imbrication_cadre indique le niveau d'imbrication actuel du cadre. Le nom du module est représenté dans un format en trois parties (nom_base_de_données, nom_schéma et nom_objet).  Le nom du module sera analysé pour échapper les caractères xml non valide comme `'\<'`, `'>'`, `'/'`, `'_x'`. Ils sont placés sous `_xHHHH\_`. HHHH représente le code UCS-2 hexadécimal à quatre chiffres du caractère.<br /><br /> Autorise la valeur NULL. Retourne NULL lorsqu'il n'y a pas d'informations supplémentaires signalées par l'événement.|  

@@ -1,6 +1,6 @@
 ---
 title: Sources de données prises en charge dans les modèles 1200 tabulaires SQL Server Analysis Services | Microsoft Docs
-ms.date: 05/07/2018
+ms.date: 11/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 31ef1eb37f85e3e9ec7a7ea7d7eadee03b6c9c20
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 49c63d205d2ce1b900f3b8d4ad9a08e3bf83e2f6
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38017527"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269682"
 ---
 # <a name="data-sources-supported-in-sql-server-analysis-services-tabular-1200-models"></a>Sources de données pris en charge dans SQL Server Analysis Services les modèles 1200 tabulaires
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -31,7 +31,7 @@ Lorsque vous installez [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudio
 |||||  
 |-|-|-|-|  
 |Source|Versions|Type de fichier|Fournisseurs|  
-|Bases de données Access|Microsoft Access 2010 et versions ultérieures.|.accdb ou .mdb|Fournisseur OLE DB ACE 14|  
+|Bases de données Access|Microsoft Access 2010 et versions ultérieures.|.accdb ou .mdb|Fournisseur OLE DB ACE 14 <sup> [1](#dnu)</sup>|  
 |Bases de données relationnelles SQL Server|SQL Server 2008 et versions ultérieur, SQL Server 2008 de l’entrepôt de données et version ultérieure, Azure SQL Database, Azure SQL Data Warehouse, Analytique Platform System (APS)<br /><br /> <br /><br /> Analytique Platform System (APS) s’appelait auparavant en tant que SQL Server Parallel Data Warehouse (PDW). À l’origine, la connexion à PDW à partir d’Analysis Services nécessitait un fournisseur de données spécial. Ce fournisseur a été remplacé dans SQL Server 2012. À partir de SQL Server 2012, le client natif SQL Server est utilisé pour les connexions à PDW/APS. |(non applicable)|Fournisseur OLE DB pour SQL Server<br /><br /> Fournisseur OLE DB SQL Server Native Client<br /><br /> Fournisseur OLE DB SQL Server Native Client 10.0<br /><br /> Fournisseur de données .NET Framework pour SQL Client|  
 |Bases de données relationnelles Oracle|Oracle 9i et versions ultérieures.|(non applicable)|Fournisseur OLE DB Oracle<br /><br /> Fournisseur de données .NET Framework pour client Oracle<br /><br /> Fournisseur de données .NET Framework pour SQL Server<br /><br /> OraOLEDB<br /><br /> MSDASQL|  
 |Bases de données relationnelles Teradata|Teradata V2R6 et versions ultérieures|(non applicable)|Fournisseur OLE DB TDOLEDB<br /><br /> Fournisseur de données .Net pour Teradata|  
@@ -39,14 +39,16 @@ Lorsque vous installez [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudio
 |Bases de données relationnelles IBM DB2|8.1|(non applicable)|DB2OLEDB|  
 |Bases de données relationnelles Sybase Adaptive Server Enterprise (ASE)|15.0.2|(non applicable)|Fournisseur OLE DB Sybase|  
 |Autres bases de données relationnelles|(non applicable)|(non applicable)|Fournisseur OLE DB pour pilote ODBC|  
-|Fichiers texte|(non applicable)|.txt, .tab, .csv|Fournisseur OLE DB ACE 14 pour Microsoft Access|  
-|Fichiers Microsoft Excel|Excel 2010 et versions ultérieures|.xlsx, xlsm, .xlsb, .xltx, .xltm|Fournisseur OLE DB ACE 14|  
+|Fichiers texte|(non applicable)|.txt, .tab, .csv|Fournisseur OLE DB ACE 14 <sup> [1](#dnu)</sup> |  
+|Fichiers Microsoft Excel|Excel 2010 et versions ultérieures|.xlsx, xlsm, .xlsb, .xltx, .xltm|Fournisseur OLE DB ACE 14 <sup> [1](#dnu)</sup>|  
 |[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] classeur|Microsoft SQL Server 2008 Analysis Services et versions ultérieures|xlsx, xlsm, .xlsb, .xltx, .xltm|ASOLEDB 10.5<br /><br /> (utilisé uniquement avec les classeurs [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] publiés dans des batteries de serveurs SharePoint où [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] est installé)|  
 |Cube Analysis Services|Microsoft SQL Server 2008 Analysis Services et versions ultérieures|(non applicable)|ASOLEDB 10|  
 |Flux de données<br /><br /> (utilisé pour importer des données à partir de rapports Reporting Services, de documents de service Atom, de Microsoft Azure Marketplace DataMarket et d'un flux de données unique)|Format Atom 1.0<br /><br /> Base de données ou document qui est exposé en tant que Windows Communication Foundation (WCF) Data Services (anciennement ADO.NET Data Services).|`.atomsvc` pour un document de service qui définit un ou plusieurs flux<br /><br /> .atom pour un document de flux Web Atom|Fournisseur de flux de données Microsoft pour [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]<br /><br /> Fournisseur de données de flux de données .NET Framework pour [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]|  
 |Fichiers de connexion de base de données Office||.odc||  
-  
-  
+ 
+<a name="dnu">[1] </a> Using **fournisseur OLE DB ACE 14** pour se connecter à des types de données de fichier **n’est pas recommandé**. Si vous devez conserver vos modèles de niveau de compatibilité tabulaire de 1200 et versions antérieures, exportez vos données vers un type de fichier csv, Importer base de données SQL, ensuite vous connecter à et importer à partir de la base de données. Toutefois, il est recommandé de vous mettre à niveau vers le niveau de compatibilité 1400 tabulaire (SQL Server 2017 et versions ultérieur) et utiliser **obtenir des données** dans SSDT pour sélectionner et importer votre source de données de fichier. Obtenir des données utilise des données structurées connexions à la source fournies par le moteur de données Power Query, qui sont plus stables que les connexions du fournisseur OLE DB ACE 14.  
+
+
 ##  <a name="bkmk_supported_ds_dq"></a> Sources de données prises en charge pour les modèles DirectQuery  
  DirectQuery est une alternative au mode de stockage en mémoire : cette approche consiste à router les requêtes vers des systèmes de données back-end d’où sont retournés directement les résultats, plutôt qu’à stocker toutes les données à l’intérieur du modèle (et dans la mémoire RAM, une fois le modèle est chargé). Étant donné que Analysis Services doit formuler des requêtes dans la syntaxe de requête de base de données native, un sous-ensemble réduit de sources de données est prise en charge pour ce mode.  
   

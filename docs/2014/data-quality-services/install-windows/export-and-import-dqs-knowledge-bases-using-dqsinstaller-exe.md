@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 8234c63b-a018-4e55-8184-9a6bdf03274d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 58dedf029123f47fb7268067b8697ec0f859888a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2e324435b6b67574a111f9cd95671f5b2aa6824d
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48088159"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51032426"
 ---
 # <a name="export-and-import-dqs-knowledge-bases-using-dqsinstallerexe"></a>Exporter et importer des bases de connaissances DQS à l'aide de DQSInstaller.exe
-  Pour une installation existante de DQS, vous pouvez exporter toutes les bases de connaissances de votre [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] en même temps dans un fichier de sauvegarde DQS (.dqsb), puis utiliser ultérieurement ce fichier .dqsb pour importer toutes les bases de connaissances à la fois vers un autre [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] en exécutant le fichier DQSInstaller.exe à partir de l'invite de commandes. Pour plus d'informations sur l'exécution du fichier DQSInstaller.exe à partir de l'invite de commandes, consultez [Run DQSInstaller.exe from Command Prompt](run-dqsinstaller-exe-to-complete-data-quality-server-installation.md#CommandPrompt) dans [Run DQSInstaller.exe to Complete Data Quality Server Installation](run-dqsinstaller-exe-to-complete-data-quality-server-installation.md).  
+  Pour une installation existante de DQS, vous pouvez exporter toutes les bases de connaissances de votre [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] en même temps dans un fichier de sauvegarde DQS (.dqsb), puis utiliser ultérieurement ce fichier .dqsb pour importer toutes les bases de connaissances à la fois vers un autre [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] en exécutant le fichier DQSInstaller.exe à partir de l'invite de commandes. Pour plus d'informations sur l'exécution du fichier DQSInstaller.exe à partir de l'invite de commandes, consultez [Exécuter DQSInstaller.exe à partir d'une invite de commandes](run-dqsinstaller-exe-to-complete-data-quality-server-installation.md#CommandPrompt) dans [Exécuter DQSInstaller.exe pour terminer l'installation du serveur DQS](run-dqsinstaller-exe-to-complete-data-quality-server-installation.md).  
   
  Cette fonctionnalité vous permet d'effectuer une sauvegarde de *toutes* vos bases de connaissances de [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] en même temps sans avoir à exporter chaque base de connaissances individuellement dans un fichier .dqs à l'aide de [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]. De la même façon, vous pouvez importer *toutes* les bases de connaissances du fichier de sauvegarde dans un autre [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] en même temps sans avoir à importer individuellement chaque base de connaissances à partir d'un fichier .dqs à l'aide de [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]. Cela est particulièrement utile pour sauvegarder et restaurer vos bases de connaissances lorsque vous désinstallez [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] sur un ordinateur, puis le réinstallez sur un autre ordinateur. Vous pouvez facilement exporter toutes les bases de connaissances d'une installation existante de [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] dans un fichier de sauvegarde DQS (.dqsb), puis importer toutes les bases de connaissances du fichier de sauvegarde après l'installation de [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] sur un autre ordinateur.  
   
@@ -58,7 +57,7 @@ dqsinstaller.exe –importkbs c:\DQSBackup.dqsb
 ## <a name="see-also"></a>Voir aussi  
  [Exécuter DQSInstaller.exe pour terminer l'installation du serveur DQS](run-dqsinstaller-exe-to-complete-data-quality-server-installation.md)   
  [Installer Data Quality Services](install-data-quality-services.md)   
- [Exporter une base de connaissances vers un fichier .dqs](../export-a-knowledge-base-to-a-dqs-file.md)   
- [Importer une base de connaissances à partir d’un fichier .dqs](../import-a-knowledge-base-from-a-dqs-file.md)  
+ [Exporter une base de connaissances dans un fichier .dqs](../export-a-knowledge-base-to-a-dqs-file.md)   
+ [Importer une base de connaissances à partir d'un fichier .dqs](../import-a-knowledge-base-from-a-dqs-file.md)  
   
   

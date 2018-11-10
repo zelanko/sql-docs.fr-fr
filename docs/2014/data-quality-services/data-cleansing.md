@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: e67136cc-f8c6-4cb3-ba0b-c966c636256c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5e04e10b21e0210329a3ce6c09bc10bad53245f9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 45909dae2443b594b12de98a2403178bdd7ce1ca
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068809"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51032706"
 ---
 # <a name="data-cleansing"></a>Data Cleansing
   Le nettoyage de données est le processus qui consiste à analyser la qualité des données contenues dans une source de données, à approuver/refuser manuellement les suggestions formulées par le système et à apporter les modifications correspondantes aux données. Le nettoyage de données dans [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) inclut un processus assisté par ordinateur qui analyse la conformité des données par rapport aux connaissances contenues dans une base de connaissances et un processus interactif qui permet au gestionnaire de données d'examiner et de modifier les résultats du processus assisté par ordinateur afin de s'assurer que le nettoyage de données correspond exactement à ce qu'il souhaite faire.  
@@ -99,7 +98,7 @@ ms.locfileid: "48068809"
   
 |Description de la tâche|Rubrique|  
 |----------------------|-----------|  
-|Explique comment configurer les valeurs de seuil pour l'activité de nettoyage.|[Configurer les valeurs de seuil pour le nettoyage et la correspondance](../../2014/data-quality-services/configure-threshold-values-for-cleansing-and-matching.md)|  
+|Explique comment configurer les valeurs de seuil pour l'activité de nettoyage.|[Configure Threshold Values for Cleansing and Matching](../../2014/data-quality-services/configure-threshold-values-for-cleansing-and-matching.md)|  
 |Explique comment nettoyer les données à l'aide des connaissances intégrées à DQS.|[Nettoyer des données à l’aide de la base de connaissances DQS &#40;interne&#41;](../../2014/data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)|  
 |Explique comment nettoyer les données à l'aide des connaissances du service de données de référence.|[Nettoyer des données à l’aide de la connaissance des données de référence &#40;externes&#41;](../../2014/data-quality-services/cleanse-data-using-reference-data-external-knowledge.md)|  
 |Explique comment nettoyer un domaine composite.|[Nettoyer les données dans un domaine composite](../../2014/data-quality-services/cleanse-data-in-a-composite-domain.md)|  

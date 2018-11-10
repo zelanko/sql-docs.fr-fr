@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 9c434df0576275af84fd9f4b0e5f57e584323ab6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9b5d9e27db92ba048f0b6400c00313e81a1899f7
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47693547"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269444"
 ---
 # <a name="configure-repositories-for-installing-and-upgrading-sql-server-on-linux"></a>Configurer des référentiels pour l’installation et la mise à niveau de SQL Server sur Linux
 
@@ -23,7 +23,7 @@ ms.locfileid: "47693547"
 Cet article décrit comment configurer le référentiel approprié pour les mises à niveau et les installations de SQL Server 2017 et SQL Server 2019 sur Linux.
 
 > [!TIP]
-> SQL Server 2019 CTP 2.0 est désormais disponible ! Pour l’essayer, utilisez cet article pour configurer le nouveau **mssql-server-preview** référentiel. Puis installer en suivant les instructions dans le [guide d’installation](sql-server-linux-setup.md).
+> SQL Server 2019 preview est désormais disponible ! Pour l’essayer, utilisez cet article pour configurer le nouveau **mssql-server-preview** référentiel. Puis installer en suivant les instructions dans le [guide d’installation](sql-server-linux-setup.md).
 
 ## <a id="repositories"></a>Référentiels
 
@@ -32,7 +32,7 @@ Lorsque vous installez SQL Server sur Linux, vous devez configurer un référent
 | Référentiel | Nom    | Description |
 |---|---|---|
 | **Version préliminaire (2017)** | **mssql-server** | Référentiel SQL Server 2017 CTP et RC (supprimée). |
-| **Version préliminaire (2019)** | **MSSQL-server-preview** | Référentiel SQL Server 2019 CTP et RC. |
+| **Version préliminaire (2019)** | **MSSQL-server-preview** | Version préliminaire de SQL Server 2019 et référentiel RC. |
 | **CU** | **mssql-server-2017** | Référentiel de SQL Server 2017 Cumulative Update (CU). |
 | **GDR** | **mssql-server-2017-gdr** | Référentiel de SQL Server 2017 GDR pour les mises à jour critiques uniquement. |
 

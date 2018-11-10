@@ -14,12 +14,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 170f68a33a1c46a2a58f2bfb8814c872bb7405a0
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: 0fba28ddaa76fc441bff847f19633ccbfbfef91e
+ms.sourcegitcommit: 29760037d0a3cec8b9e342727334cc3d01db82a6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49383764"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50411789"
 ---
 # <a name="return-data-from-a-stored-procedure"></a>Retour de données à partir d'une procédure stockée
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "49383764"
  ### <a name="examples-of-returning-data-using-a-result-set"></a>Exemples de retour de données avec un jeu de résultats 
   L’exemple suivant montre une procédure stockée qui retourne les valeurs LastName et SalesYTD pour toutes les lignes de SalesPerson qui apparaissent aussi dans la vue vEmployee.
   
- ```  
+ ```sql
 USE AdventureWorks2012;  
 GO  
 IF OBJECT_ID('Sales.uspGetEmployeeSalesYTD', 'P') IS NOT NULL  
@@ -59,7 +59,7 @@ GO
 ### <a name="examples-of-output-parameter"></a>Exemples de paramètre de sortie  
  L'exemple ci-dessous illustre une procédure avec un paramètre d'entrée et un paramètre de sortie. Le paramètre `@SalesPerson` doit recevoir une valeur d'entrée spécifiée par le programme appelant. L’instruction SELECT utilise la valeur passée dans le paramètre d’entrée pour obtenir la valeur `SalesYTD` correcte. L’instruction SELECT affecte également la valeur au paramètre de sortie `@SalesYTD` , qui retourne la valeur au programme appelant quand la procédure se termine.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 IF OBJECT_ID('Sales.uspGetEmployeeSalesYTD', 'P') IS NOT NULL  
@@ -82,7 +82,7 @@ GO
   
  L’exemple suivant appelle la procédure créée dans le premier exemple et enregistre la valeur de sortie retournée par la procédure appelée dans la variable `@SalesYTD` , qui est locale pour le programme appelant.  
   
-```  
+```sql
 -- Declare the variable to receive the output value of the procedure.  
 DECLARE @SalesYTDBySalesPerson money;  
 -- Execute the procedure specifying a last name for the input parameter  
@@ -138,7 +138,7 @@ GO
  
  Commencez par créer la procédure qui déclare puis ouvre un curseur dans la table Currency.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 IF OBJECT_ID ( 'dbo.uspCurrencyCursor', 'P' ) IS NOT NULL  
@@ -159,7 +159,7 @@ GO
   
  Ensuite, exécutez un traitement d'instructions qui déclare une variable curseur locale, exécute la procédure pour affecter le curseur à la variable locale et extrait les lignes du curseur.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 DECLARE @MyCursor CURSOR;  
@@ -177,7 +177,7 @@ GO
 ## <a name="returning-data-using-a-return-code"></a>Renvoi de données au moyen d'un code de retour  
  Une procédure peut retourner une valeur entière appelée « code de retour » pour indiquer l'état d'exécution d'une procédure. Le code de retour d'une procédure se définit au moyen de l'instruction RETURN. Comme dans le cas des paramètres OUTPUT, vous devez enregistrer le code de retour dans une variable lors de l'exécution de la procédure afin de pouvoir utiliser sa valeur dans le programme appelant. Par exemple, la variable d’attribution `@result` , de type de données **int** , sert à stocker le code de retour de la procédure `my_proc`, de sorte que :  
   
-```  
+```sql
 DECLARE @result int;  
 EXECUTE @result = my_proc;  
 ```  
@@ -195,7 +195,7 @@ EXECUTE @result = my_proc;
 |3|Erreur lors de l'obtention de la valeur des ventes.|  
 |4|Valeur des ventes NULL trouvée pour le vendeur.|  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 IF OBJECT_ID('Sales.usp_GetSalesYTD', 'P') IS NOT NULL  
@@ -255,7 +255,7 @@ PRINT N'Year-to-date sales for this employee is ' +
   
  L'exemple suivant crée un programme chargé de gérer les codes de retour retournés par la procédure `usp_GetSalesYTD` .  
   
-```  
+```sql
 -- Declare the variables to receive the output value and return code   
 -- of the procedure.  
 DECLARE @SalesYTDForSalesPerson money, @ret_code int;  

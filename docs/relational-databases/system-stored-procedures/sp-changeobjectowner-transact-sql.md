@@ -46,7 +46,7 @@ sp_changeobjectowner [ @objname = ] 'object' , [ @newowner = ] 'owner'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@objname =** ] **'***objet***'**  
+ [ **@objname =** ] **'***objet***'**  
  Nom d'une table, d'une vue, d'une fonction définie par l'utilisateur ou d'une procédure stockée dans la base de données actuelle. *objet* est un **nvarchar(776)**, sans valeur par défaut. *objet* peut être qualifié avec le propriétaire de l’objet existant, sous la forme *propriétaire_existant.objet ***.*** objet* si le schéma et son propriétaire ont le même nom.  
   
  [  **@newowner=**] **' *** propriétaire* **'**  

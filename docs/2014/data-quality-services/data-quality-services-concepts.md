@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 837c71ee-48fa-4044-8744-2be9119aaa04
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 623db4fff3bbafeb0da09899527406b0d4686181
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e3ddffe0e468adcc004a8cb78a5f083a58dcf0c8
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170979"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51032118"
 ---
 # <a name="data-quality-services-concepts"></a>Concepts Data Quality Services
   Cette rubrique fournit un bref résumé des concepts [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) relatifs à la gestion des connaissances, aux projets de qualité des données et à l'administration de la qualité des données.  
@@ -34,13 +33,13 @@ ms.locfileid: "48170979"
   
  **Stratégie de correspondance**  
   
- Une stratégie de correspondance contient les règles de correspondance utilisées pour effectuer une déduplication de données. Le processus de stratégie de correspondance vous permet de créer des règles de correspondance, de les adapter précisément en fonction des résultats de la correspondance et du profilage des données, et d'ajouter la stratégie à la base de connaissances. Pour plus d'informations, voir [Data Matching](../../2014/data-quality-services/data-matching.md).  
+ Une stratégie de correspondance contient les règles de correspondance utilisées pour effectuer une déduplication de données. Le processus de stratégie de correspondance vous permet de créer des règles de correspondance, de les adapter précisément en fonction des résultats de la correspondance et du profilage des données, et d'ajouter la stratégie à la base de connaissances. Pour plus d’informations, consultez [Correspondance de données](../../2014/data-quality-services/data-matching.md).  
   
  **Reference Data Services**  
   
  Vous pouvez utiliser des données de référence pour valider, corriger et enrichir vos données, en exploitant les services de sociétés qui garantissent la qualité de leurs données de référence. Vous pouvez utiliser les services de la Place de marché Microsoft Azure pour vous connecter à des fournisseurs de données de référence, ou vous pouvez prendre directement contact avec un fournisseur. Pour plus d’informations, consultez [Reference Data Services in DQS](../../2014/data-quality-services/reference-data-services-in-dqs.md).  
   
- Pour plus d’informations sur la gestion des connaissances dans DQS, consultez [Bases de connaissances DQS et les domaines](../../2014/data-quality-services/dqs-knowledge-bases-and-domains.md).  
+ Pour plus d'informations sur la gestion des connaissances dans DQS, consultez [DQS Knowledge Bases and Domains](../../2014/data-quality-services/dqs-knowledge-bases-and-domains.md).  
   
 ##  <a name="Projects"></a> Concepts relatifs au projets de qualité des données  
  Le gestionnaire de données effectue des opérations de qualité des données (nettoyage et correspondance) à l'aide d'un projet de qualité des données dans l'application [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] .  
@@ -53,7 +52,7 @@ ms.locfileid: "48170979"
   
 -   **Nettoyage interactif**: le gestionnaire de données ou un professionnel de l'informatique peut exécuter le processus de nettoyage interactif pour modifier ou augmenter les corrections aux données proposées par le processus de nettoyage de données assisté par ordinateur. Il utilise pour cela les niveaux de confiance et les statistiques identifiés par le processus de nettoyage de données, ou écrit manuellement ses propres modifications dans le projet.  
   
- Après le nettoyage de données, le gestionnaire peut exporter les données traitées vers une base de données SQL Server, un fichier .csv ou un fichier Excel. Pour plus d'informations, voir [Data Cleansing](../../2014/data-quality-services/data-cleansing.md).  
+ Après le nettoyage de données, le gestionnaire peut exporter les données traitées vers une base de données SQL Server, un fichier .csv ou un fichier Excel. Pour plus d’informations, consultez [Data Cleansing](../../2014/data-quality-services/data-cleansing.md).  
   
  **Correspondance de données**  
   
@@ -61,7 +60,7 @@ ms.locfileid: "48170979"
   
  **Profilage et notifications**  
   
- Le profilage des données fournit aux gestionnaires de données des statistiques et des informations en temps réel sur les données traitées par DQS dans le cadre des activité de nettoyage ou de correspondance pendant l'exécution d'un projet de qualité de données. Le profilage des données vous aide à évaluer l'efficacité des activités de nettoyage et de correspondance dans un projet de qualité des données, et les notifications suggèrent des mesures pouvant être prises pour améliorer ces activités. Pour plus d’informations, consultez [Data Profiling and Notifications dans DQS](../../2014/data-quality-services/data-profiling-and-notifications-in-dqs.md).  
+ Le profilage des données fournit aux gestionnaires de données des statistiques et des informations en temps réel sur les données traitées par DQS dans le cadre des activité de nettoyage ou de correspondance pendant l'exécution d'un projet de qualité de données. Le profilage des données vous aide à évaluer l'efficacité des activités de nettoyage et de correspondance dans un projet de qualité des données, et les notifications suggèrent des mesures pouvant être prises pour améliorer ces activités. Pour plus d’informations, consultez [Data Profiling and Notifications in DQS](../../2014/data-quality-services/data-profiling-and-notifications-in-dqs.md).  
   
  Pour plus d’informations sur les projets de qualité des données dans DQS, consultez [Projets de qualité des données &#40;DQS&#41;](../../2014/data-quality-services/data-quality-projects-dqs.md).  
   
@@ -76,7 +75,7 @@ ms.locfileid: "48170979"
   
  L'option de configuration vous permet de :  
   
--   Configurer les paramètres de service des données de référence. Pour plus d’informations, consultez [configurer DQS pour utiliser les données de référence](../../2014/data-quality-services/configure-dqs-to-use-reference-data.md).  
+-   Configurer les paramètres de service des données de référence. Pour plus d’informations, consultez [Configure DQS to Use Reference Data](../../2014/data-quality-services/configure-dqs-to-use-reference-data.md).  
   
 -   Définir les valeurs de seuil pour les activités de nettoyage et de correspondance. Pour plus d’informations, consultez [Configurer les valeurs de seuil pour le nettoyage et la correspondance](../../2014/data-quality-services/configure-threshold-values-for-cleansing-and-matching.md).  
   
@@ -86,9 +85,9 @@ ms.locfileid: "48170979"
   
  **Sécurité relative au magasin d'objets blob distants (DQS)**  
   
- Vous pouvez utiliser des rôles dans le mécanisme de sécurité SQL Server pour sécuriser DQS. Il existe trois rôles DQS qui déterminent le niveau d'accès d'un utilisateur à l'application [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] : dqs_administrator, dqs_kb_editor, et dqs_kb_operator. Vous ne pouvez pas accorder les rôles aux utilisateurs à l'aide de l'application [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] ; cela s'effectue à l'aide de SQL Server Management Studio. Pour plus d’informations, consultez [sécurité DQS](../../2014/data-quality-services/dqs-security.md).  
+ Vous pouvez utiliser des rôles dans le mécanisme de sécurité SQL Server pour sécuriser DQS. Il existe trois rôles DQS qui déterminent le niveau d'accès d'un utilisateur à l'application [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] : dqs_administrator, dqs_kb_editor, et dqs_kb_operator. Vous ne pouvez pas accorder les rôles aux utilisateurs à l'aide de l'application [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] ; cela s'effectue à l'aide de SQL Server Management Studio. Pour plus d’informations, consultez [DQS Security](../../2014/data-quality-services/dqs-security.md).  
   
- Pour plus d’informations sur l’administration DQS, consultez [Administration de DQS](../../2014/data-quality-services/dqs-administration.md).  
+ Pour plus d'informations sur l'administration DQS, consultez [DQS Administration](../../2014/data-quality-services/dqs-administration.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Data Quality Services](../../2014/data-quality-services/data-quality-services.md)  

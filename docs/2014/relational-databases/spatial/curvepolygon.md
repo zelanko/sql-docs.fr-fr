@@ -1,22 +1,20 @@
 ---
 title: CurvePolygon | Microsoft Docs
-ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- dbe-spatial
+ms.technology: ''
 ms.topic: conceptual
 ms.assetid: e000a1d8-a049-4542-bfeb-943fd6ab3969
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1555c2375ae3b1e8145618516b1033fd42722000
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7783517c21317c8d0a162b869f7d57329d89b15c
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48214912"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018924"
 ---
 # <a name="curvepolygon"></a>CurvePolygon
   Un `CurvePolygon` est une surface topologiquement fermée définie par un anneau englobant extérieur et zéro ou plusieurs anneaux intérieurs.  
@@ -30,13 +28,13 @@ ms.locfileid: "48214912"
   
 -   L'intérieur de l'instance `CurvePolygon` désigne l'espace situé entre l'anneau extérieur et tous les anneaux intérieurs.  
   
- Un `CurvePolygon` diffère de l’instance un `Polygon` instance dans qui un `CurvePolygon` instance peut contenir les segments d’arc de cercle suivants : `CircularString` et `CompoundCurve`.  
+ Une instance `CurvePolygon` diffère d'une instance `Polygon` en cela qu'une instance `CurvePolygon` peut contenir les segments d'arc de cercle suivants : `CircularString` et `CompoundCurve`.  
   
 ## <a name="compoundcurve-instances"></a>Instances CompoundCurve  
- Ci-dessous montre l’illustration valide `CurvePolygon` chiffres :  
+ L'illustration ci-dessous montre des figures de `CurvePolygon` valides :  
   
 ### <a name="accepted-instances"></a>Instances acceptées  
- Pour un `CurvePolygon` soit acceptée, elle doit être soit vide ou contenir uniquement des anneaux d’arc de cercle acceptées. Un anneau d'arc circulaire accepté satisfait les exigences suivantes.  
+ Pour qu'une instance `CurvePolygon` soit acceptée, elle doit être soit vide, soit contenir uniquement des anneaux d'arc circulaires acceptés. Un anneau d'arc circulaire accepté satisfait les exigences suivantes.  
   
 1.  Être une instance acceptée `LineString`, `CircularString` ou `CompoundCurve`. Pour plus d'informations sur les instances acceptées, consultez [LineString](linestring.md), [CircularString](circularstring.md)et [CompoundCurve](compoundcurve.md).  
   
@@ -47,7 +45,7 @@ ms.locfileid: "48214912"
     > [!NOTE]  
     >  Les valeurs Z et M sont ignorées.  
   
- L’exemple suivant montre accepté `CurvePolygon` instances.  
+ L'exemple suivant illustre des instances `CurvePolygon` acceptées.  
   
 ```  
 DECLARE @g1 geometry = 'CURVEPOLYGON EMPTY';  
@@ -69,7 +67,7 @@ DECLARE @g2 geometry = 'CURVEPOLYGON((0 0, 0 0, 0 0))';
  `@g1` n'est pas accepté parce que les points de début et de fin n'ont pas la même valeur Y. `@g2` n'est pas accepté car la boucle n'a pas assez de points.  
   
 ### <a name="valid-instances"></a>Instances valides  
- Pour un `CurvePolygon` instance soit valide les anneaux extérieur et intérieurs doivent respecter les critères suivants :  
+ Pour qu'une instance `CurvePolygon` soit valide, les anneaux extérieur et intérieur doivent répondre aux critères suivants :  
   
 1.  Ils peuvent se toucher uniquement à des points de tangentes uniques.  
   
@@ -79,7 +77,7 @@ DECLARE @g2 geometry = 'CURVEPOLYGON((0 0, 0 0, 0 0))';
   
 4.  Chaque anneau doit être un type de courbe acceptable.  
   
- `CurvePolygon` instances doivent également répondre à des critères spécifiques, selon qu’il s’agisse `geometry` ou `geography` des types de données.  
+ Les instances `CurvePolygon` doivent également répondre à des critères spécifiques, selon qu'il s'agisse de types de données `geometry` ou `geography`.  
   
 #### <a name="geometry-data-type"></a>Type de données geometry  
  Une instance **geometryCurvePolygon** valide doit avoir les attributs suivants :  
@@ -133,14 +131,14 @@ SET @g = geometry::Parse('CURVEPOLYGON EMPTY');
 ```  
   
 ### <a name="b-declaring-and-instantiating-a-geometry-instance-with-a-curvepolygon-in-the-same-statement"></a>B. Déclaration et instanciation d'une instance geometry avec un CurvePolygon dans la même instruction  
- Cet extrait de code montre comment déclarer et initialiser une instance geometry avec un `CurvePolygon` dans la même instruction :  
+ Cet extrait de code indique comment déclarer et initialiser une instance geometry avec un `CurvePolygon` dans la même instruction :  
   
 ```tsql  
 DECLARE @g geometry = 'CURVEPOLYGON(CIRCULARSTRING(2 4, 4 2, 6 4, 4 6, 2 4))'  
 ```  
   
 ### <a name="c-instantiating-a-geography-instance-with-a-curvepolygon"></a>C. Instanciation d'une instance geography avec un CurvePolygon  
- Cet extrait de code montre comment déclarer et initialiser un `geography` instance avec un `CurvePolygon`:  
+ Cet extrait de code indique comment déclarer et initialiser une instance `geography` avec un `CurvePolygon` :  
   
 ```tsql  
 DECLARE @g geography = 'CURVEPOLYGON(CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))';  
@@ -156,7 +154,7 @@ SELECT @g.STArea() AS Area;
 ```  
   
 ### <a name="e-storing-a-curvepolygon-containing-interior-rings"></a>E. Stockage d'un CurvePolygon contenant des anneaux intérieurs  
- Cet exemple crée une bouée dans une `CurvePolygon` instance (à la fois un anneau englobant extérieur et un anneau intérieur est utilisé pour définir la bouée) :  
+ Cet exemple crée une bouée dans une instance `CurvePolygon` (à la fois un anneau englobant extérieur et un anneau intérieur sont utilisés pour définir la bouée) :  
   
 ```tsql  
 DECLARE @g geometry;  
@@ -164,7 +162,7 @@ SET @g = geometry::Parse('CURVEPOLYGON(CIRCULARSTRING(0 4, 4 0, 8 4, 4 8, 0 4), 
 SELECT @g.STArea() AS Area;  
 ```  
   
- Cet exemple montre à la fois valide `CurvePolygon` instance et une instance non valide lors de l’utilisation d’anneaux intérieurs :  
+ Cet exemple montre à la fois une instance `CurvePolygon` valide et une instance non valide lors de l'utilisation d'anneaux intérieurs :  
   
 ```tsql  
 DECLARE @g1 geometry, @g2 geometry;  

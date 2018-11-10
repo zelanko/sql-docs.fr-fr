@@ -1,11 +1,9 @@
 ---
 title: Données spatiales (SQL Server) | Microsoft Docs
-ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- dbe-spatial
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - geography data type [SQL Server], spatial storage design
@@ -19,12 +17,12 @@ ms.assetid: 41a132a1-09e2-4426-b9df-225270cb8e15
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f25de7e1aa60d482d5256470d3fb2e1ada08f356
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f18e84ac46d4647c3bcd884b98196faf58bef636
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222169"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018094"
 ---
 # <a name="spatial-data-sql-server"></a>Données spatiales (SQL Server)
   Les données spatiales représentent des informations relatives à l'emplacement physique et à la forme d'objets géométriques. Ces objets peuvent être des emplacements de points ou des objets plus complexes tels que des pays, des routes ou des lacs.  
@@ -33,7 +31,7 @@ ms.locfileid: "48222169"
   
 -   Le type `geometry` représente des données dans un système de coordonnées euclidien (plat).  
   
--   Le `geography` type représente des données dans un système de coordonnées de monde sphérique.  
+-   Le type `geography` représente des données dans un système de coordonnées de monde sphérique.  
   
  Ces deux types de données sont implémentés comme types de données CLR .NET dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -77,7 +75,7 @@ ms.locfileid: "48222169"
   
 -   [GeometryCollection](geometrycollection.md)  
   
- [Vue d’ensemble des index spatiaux](spatial-indexes-overview.md)  
+ [Vue d'ensemble des index spatiaux](spatial-indexes-overview.md)  
  Présente les index spatiaux et décrit le pavage et les schémas de pavage.  
   
   

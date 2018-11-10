@@ -5,8 +5,7 @@ ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: wmi
 ms.topic: reference
 apiname:
 - SetValue Method (ClientSettingsGeneralFlag Class)
@@ -19,12 +18,12 @@ ms.assetid: 34443689-a0e0-4668-a811-17532c6fd271
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: dc27dc06880971ec3b857fba2f79ddc947c51b4e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 236ffc5178dad75f70cdb0891d17341c2a0c5c86
+ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47751167"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51215269"
 ---
 # <a name="setvalue-method-clientsettingsgeneralflag-class"></a>Méthode SetValue (classe ClientSettingsGeneralFlag)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ object.SetValue(Value)
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|*Value*|Valeur booléenne qui spécifie la valeur de l'indicateur.|  
+|*Valeur*|Valeur booléenne qui spécifie la valeur de l'indicateur.|  
   
 ## <a name="property-valuereturn-value"></a>Valeur de propriété/valeur de retour  
  Valeur **uint32** , égale à 0 si le service a été correctement modifié, égale à 1 si la demande n'est pas prise en charge ou égale à tout autre nombre pour indiquer une erreur.  

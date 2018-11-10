@@ -7,18 +7,16 @@ ms.reviewer: ''
 ms.technology:
 - database-engine
 ms.topic: conceptual
-f1_keywords:
-- VS.ToolsOptionsPages.Text_Editor.File_Extension
 ms.assetid: 6637bf3f-03c8-4552-ae63-d4896307cf4c
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 440576ae4c4d89639ec2ca44c9bfec7142a4326d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dd5309a335f637ae205993d930fde7ad25fdf21f
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076855"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51031786"
 ---
 # <a name="options-text-editor---file-extension-page"></a>Options (Éditeur de texte - Page Extension de fichier)
   La boîte de dialogue **Options** vous permet de spécifier la manière dont tous les fichiers présentant certaines extensions de fichier sont traités par [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Pour chaque extension que vous entrez, vous pouvez sélectionner un éditeur. Ainsi, vous pouvez choisir l'éditeur [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] dans lequel doivent s'ouvrir les documents d'un certain type. Pour afficher les options d’extension de fichier, cliquez sur **Options** dans le menu **Outils**, développez **Éditeur de texte**, puis cliquez sur **Extension de fichier**.  

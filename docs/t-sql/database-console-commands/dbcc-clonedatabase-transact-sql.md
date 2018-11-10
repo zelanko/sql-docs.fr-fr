@@ -37,12 +37,12 @@ ms.assetid: ''
 author: pamela
 ms.author: pamela
 manager: amitban
-ms.openlocfilehash: 572470c85de7a8340a61e0a24b54c6632fe1b06f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 84ac455efb9a5babe801d11218659730382dab8d
+ms.sourcegitcommit: f9b4078dfa3704fc672e631d4830abbb18b26c85
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666677"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50965977"
 ---
 # <a name="dbcc-clonedatabase-transact-sql"></a>DBCC CLONEDATABASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ DBCC CLONEDATABASE
 (  
     source_database_name
     ,  target_database_name
-    [ WITH { [ NO_STATISTICS ] [ , NO_QUERYSTORE ] [ , VERIFY_CLONEDB ] [ , BACKUP_CLONEDB ] } ]   
+    [ WITH { [ NO_STATISTICS ] [ , NO_QUERYSTORE ] [ , VERIFY_CLONEDB | SERVICEBROKER ] [ , BACKUP_CLONEDB ] } ]   
 )  
 ```  
   
@@ -72,16 +72,21 @@ Nom de la base de données dans laquelle la base de données est copiée. Cette 
 NO_STATISTICS  
 Indique si les statistiques de table/index doivent être exclues du clone. Si cette option n’est pas spécifiée, les statistiques de table/index sont automatiquement incluses. Cette option est disponible à partir de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 CU3 et de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1.
 
-NO_QUERYSTORE Précise si les données du magasin des requêtes doivent être exclues du clone. Si cette option n’est pas spécifiée, les données du magasin des requêtes sont copiées dans le clone si le magasin des requêtes est activé dans la base de données source. Cette option est disponible à partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1.
+NO_QUERYSTORE<br>
+Précise si les données du magasin des requêtes doivent être exclues du clone. Si cette option n’est pas spécifiée, les données du magasin des requêtes sont copiées dans le clone si le magasin des requêtes est activé dans la base de données source. Cette option est disponible à partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1.
 
 VERIFY_CLONEDB  
-Vérifie la cohérence de la nouvelle base de données.  Cette option est obligatoire si la base de données clonée est censée être utilisée en production.  L’activation de VERIFY_CLONEDB a aussi pour effet de désactiver la collecte de statistiques et du magasin des requêtes. Cela revient donc à exécuter WITH VERIFY_CLONEDB, NO_STATISTICS, NO_QUERYSTORE.  Cette option est disponible à partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2.
+Vérifie la cohérence de la nouvelle base de données.  Cette option est obligatoire si la base de données clonée est censée être utilisée en production.  L’activation de VERIFY_CLONEDB a aussi pour effet de désactiver la collecte de statistiques et du magasin des requêtes. Cela revient donc à exécuter WITH VERIFY_CLONEDB, NO_STATISTICS, NO_QUERYSTORE.  Cette option est disponible à partir de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP3, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 et [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU8.
 
 > [!NOTE]  
 > La commande suivante peut être utilisée pour vérifier que la base de données clonée est prête pour la production : <br/>`SELECT DATABASEPROPERTYEX('clone_database_name', 'IsVerifiedClone')`
 
+
+SERVICEBROKER<br>
+Spécifie si les catalogues système liés à Service Broker doivent être inclus dans le clone.  L’option SERVICEBROKER ne peut pas être utilisée en association avec VERIFY_CLONEDB.  Cette option est disponible à partir de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP3, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 et [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU8.
+
 BACKUP_CLONEDB  
-Crée et vérifie une sauvegarde de la base de données de clonage.  Dans le cas d’une utilisation avec VERIFY_CLONEDB, la base de données de clonage est vérifiée avant que la sauvegarde soit effectuée.  Cette option est disponible à partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2.
+Crée et vérifie une sauvegarde de la base de données de clonage.  Dans le cas d’une utilisation avec VERIFY_CLONEDB, la base de données de clonage est vérifiée avant que la sauvegarde soit effectuée.  Cette option est disponible à partir de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP3, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 et [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU8.
   
 ## <a name="remarks"></a>Notes 
 Les validations suivantes sont effectuées par DBCC CLONEDATABASE. La commande échoue si l’une des validations échoue.

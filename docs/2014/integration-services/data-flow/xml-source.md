@@ -96,6 +96,6 @@ ms.locfileid: "48155369"
  [Extraire des données à l’aide de la source XML](xml-source.md)  
   
 ## <a name="related-content"></a>Contenu associé  
- Réponse traitée, [Create an XML Destination for an SSIS Package](http://go.microsoft.com/fwlink/?LinkId=321993), sur curatedviews.cloudapp.net.  
+ Réponse traitée, [Créer une destination XML pour un package SSIS](http://go.microsoft.com/fwlink/?LinkId=321993), sur curatedviews.cloudapp.net.  
   
   

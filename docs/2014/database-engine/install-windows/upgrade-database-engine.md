@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 10/26/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords:
 - compatibility [SQL Server], databases
@@ -15,12 +14,12 @@ ms.assetid: 3c036813-36cf-4415-a0c9-248d0a433859
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4767b695f0c2c3668278e30f47f389664b4a4ef0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 84f032e89730aa9828dada1208c6d794db97260b
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189549"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018564"
 ---
 # <a name="upgrade-database-engine"></a>Mettre à niveau le moteur de base de données
   Cette rubrique fournit les informations qui vous aideront à préparer et à comprendre le processus de mise à niveau :  
@@ -108,7 +107,7 @@ ms.locfileid: "48189549"
  Si le niveau de compatibilité d'une base de données utilisateur est à 100 ou supérieur avant la mise à niveau, il reste le même après la mise à niveau. Si le niveau de compatibilité était à 90 avant la mise à niveau, dans la base de données mise à niveau, le niveau de compatibilité est défini à 100, ce qui correspond au niveau de compatibilité le plus bas pris en charge dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 > [!NOTE]  
->  Nouvelles bases de données utilisateur héritent du niveau de compatibilité de la `model` base de données.  
+>  Les nouvelles bases de données utilisateur héritent du niveau de compatibilité de la base de données `model`.  
   
 ## <a name="migrating-databases"></a>Migration des bases de données  
  Vous pouvez déplacer les bases de données utilisateur vers une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l'aide des fonctionnalités de sauvegarde et de restauration ou de détachement et d'attachement de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [Copier des bases de données avec la sauvegarde et la restauration](../../relational-databases/databases/copy-databases-with-backup-and-restore.md) ou [Attacher et détacher une base de données &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md).  
@@ -133,7 +132,7 @@ ms.locfileid: "48189549"
   
 -   Validez ou supprimez les indicateurs USE PLAN générés par [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et appliqués aux requêtes sur les tables partitionnées et les index.  
   
-     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] modifie le mode de traitement des requêtes sur les tables et index partitionnés. Les requêtes sur les objets partitionnés qui utilisent l'indicateur USE PLAN pour un plan généré par [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] peuvent contenir un plan non utilisable dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Nous recommandons les procédures suivantes après la mise à niveau vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] modifie la manière dont sont traitées les requêtes sur les tables partitionnées et les index. Les requêtes sur les objets partitionnés qui utilisent l'indicateur USE PLAN pour un plan généré par [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] peuvent contenir un plan non utilisable dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Nous recommandons les procédures suivantes après la mise à niveau vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
      **Lorsque l’indicateur USE PLAN est spécifié directement dans une requête :**  
   

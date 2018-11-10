@@ -362,7 +362,7 @@ ms.locfileid: "47615517"
 |Action|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
 |Afficher la boîte de dialogue **Rechercher**|Ctrl+F|Ctrl+F|  
-|Affiche l'onglet ***** In Files ***** de la boîte de dialogue **Rechercher** .|||  
+|Affiche l'onglet **In Files** de la boîte de dialogue **Rechercher** .|||  
 |Affiche la définition du symbole sélectionné.|F12|Pas d'équivalent|  
 |Affiche la liste des références pour le symbole sélectionné.|Maj+F12|Pas d'équivalent|  
 |Afficher la boîte de dialogue **Remplacer**|Ctrl+H|Ctrl+H|  

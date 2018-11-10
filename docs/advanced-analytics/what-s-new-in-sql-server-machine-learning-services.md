@@ -3,18 +3,18 @@ title: Ce que&#39;s Nouveautés de SQL Server Machine Learning Services | Micros
 description: Nouvelles annonces de fonctionnalité pour chaque version de SQL Server 2016 R Services, R Server, SQL Server 2017 Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/24/2018
+ms.date: 11/06/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: c6df8f09d46b2f90c1cd464b6e80cda20e83c97f
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: d00757a8676540be420edd972857ce6cf6ced6d1
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46712572"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269653"
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>Quelles sont les nouveautés dans SQL Server Machine Learning Services 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -28,9 +28,9 @@ Cette version ajoute les fonctionnalités les plus demandées pour les opératio
 
 | Version | Mise à jour de fonctionnalité |
 |---------|----------------|
-| CTP 2.0 | Prise en charge des plates-formes de Linux pour l’apprentissage de R et Python, ainsi que la nouvelle extension de Java. Pour commencer, consultez [installer SQL Server Machine Learning Services sur Linux](../linux/sql-server-linux-setup-machine-learning.md). |
-| CTP 2.0 | Le [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) inclut deux nouveaux paramètres qui vous permettent de facilement générer plusieurs modèles à partir de données partitionnées. En savoir plus dans ce didacticiel, [créer des modèles basés sur une partition dans R](tutorials/r-tutorial-create-models-per-partition.md). |
-| CTP 2.0 | Prise en charge du cluster de basculement est maintenant pris en charge sur Windows et Linux, en supposant que le service Launchpad SQL Server est démarré sur tous les nœuds. Pour plus d’informations, consultez [installation de cluster de basculement SQL Server](../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md). |
+| CTP 2.0 | Prise en charge des plates-formes de Linux pour l’apprentissage de R et Python, ainsi que la nouvelle extension de Java. Pour commencer, consultez [installer SQL Server Machine Learning Services sur Linux](../linux/sql-server-linux-setup-machine-learning.md). |
+| CTP 2.0 | Le [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) inclut deux nouveaux paramètres qui vous permettent de facilement générer plusieurs modèles à partir de données partitionnées. En savoir plus dans ce didacticiel, [créer des modèles basés sur une partition dans R](tutorials/r-tutorial-create-models-per-partition.md). |
+| CTP 2.0 | Prise en charge du cluster de basculement est maintenant pris en charge sur Windows et Linux, en supposant que le service Launchpad SQL Server est démarré sur tous les nœuds. Pour plus d’informations, consultez [installation de cluster de basculement SQL Server](../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md). |
 ::: moniker-end
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
@@ -103,9 +103,9 @@ Sur Linux, SQL Server 2017 n’a pas d’intégration de R ou Python, mais vous 
 
 <a name="azure-sql-database-roadmap"></a>
 
-## <a name="azure-sql-database-roadmap"></a>Feuille de route de base de données SQL Azure
+## <a name="machine-learning-services-in-azure-sql-database"></a>Machine Learning Services dans la base de données SQL Azure
 
-Il n’existe actuellement aucune prise en charge pour Machine Learning Services (R et Python) dans la base de données SQL Azure. Prise en charge est la feuille de route, mais il n’existe aucune date de mise en production prévue pour l’instant.  
+Machine Learning Services (avec R) dans la base de données SQL Azure est en version préliminaire publique. Pour plus d’informations, consultez [Guide de démarrage rapide : utilisez Machine Learning Services (avec R) dans la base de données SQL Azure (aperçu)](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-r).
 
 ## <a name="next-steps"></a>Étapes suivantes
 

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.kb.kbanalyze.f1
@@ -16,12 +15,12 @@ ms.assetid: 34a0ea16-02e6-46ed-90bc-dede68687f63
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a0c7809182a67707055cb595ed2dc9a51a0067b2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 491d87d9c37026fbdac57dde8144a2226f93bbb2
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076049"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51032466"
 ---
 # <a name="perform-knowledge-discovery"></a>Effectuer une découverte des connaissances
   Cette rubrique décrit comment créer une base de connaissances via la découverte des connaissances. Dans le processus de découverte, [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) analyse les données dans un exemple de source de données via un processus assisté par ordinateur, et ajoute les connaissances qu'il acquiert à la base de connaissances. Ces connaissances peuvent être modifiées et améliorées dans l'étape **Gestion des valeurs de domaine** de l'activité de découverte des connaissances ou de celle de gestion des domaines.  
@@ -67,12 +66,12 @@ ms.locfileid: "48076049"
   
 4.  Dans la table **Mappages** , mappez chaque colonne source sur laquelle vous voulez procéder à la découverte des connaissances avec un domaine de la base de connaissances, comme suit :  
   
-    1.  Créez un mappage en sélectionnant une colonne source dans la liste déroulante de la colonne **Colonne source** d'une ligne vide, puis sélectionnez un domaine dans la liste déroulante de la colonne **Domaine** de la même ligne, s'il existe un domaine. Si aucun domaine n'existe, cliquez sur **Créer un domaine** ou sur **Créer un domaine composite** pour créer un domaine. Pour plus d'informations, consultez [Créer une règle de domaine](../../2014/data-quality-services/create-a-domain-rule.md) ou [Créer un domaine composite](../../2014/data-quality-services/create-a-composite-domain.md).  
+    1.  Créez un mappage en sélectionnant une colonne source dans la liste déroulante de la colonne **Colonne source** d'une ligne vide, puis sélectionnez un domaine dans la liste déroulante de la colonne **Domaine** de la même ligne, s'il existe un domaine. Si aucun domaine n'existe, cliquez sur **Créer un domaine** ou sur **Créer un domaine composite** pour créer un domaine. Pour plus d'informations, consultez [Create a Domain Rule](../../2014/data-quality-services/create-a-domain-rule.md) ou [Create a Composite Domain](../../2014/data-quality-services/create-a-composite-domain.md).  
   
     2.  Répétez l'étape précédente pour chaque mappage. Pour modifier le nombre de lignes de la table, cliquez sur **Ajouter un mappage de colonnes**, ou sélectionnez une ligne et cliquez sur **Supprimer le mappage des colonnes sélectionné**. Si vous cliquez sur **Supprimer le mappage des colonnes sélectionné** alors qu'une ligne remplie est sélectionnée, la ligne sélectionnée est supprimée même s'il existe une ligne non remplie.  
   
         > [!NOTE]  
-        >  Vous pouvez mapper vos données source à un domaine DQS lors d'une activité de découverte des connaissances uniquement si le type de données source est pris en charge dans DQS et correspond au type de données du domaine DQS Pour plus d'informations sur les types de données pris en charge, consultez [Types de données SQL Server et SSIS pris en charge pour les domaines DQS](../../2014/data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md).  
+        >  Vous pouvez mapper vos données source à un domaine DQS lors d'une activité de découverte des connaissances uniquement si le type de données source est pris en charge dans DQS et correspond au type de données du domaine DQS Pour plus d'informations sur les types de données pris en charge, consultez [Supported SQL Server and SSIS Data Types for DQS Domains](../../2014/data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md).  
   
     3.  Cliquez sur **Afficher/Sélectionner des domaines composites** pour afficher les domaines composites qui ont été définis. Si aucun domaine composite n'a été défini, le contrôle ne sera pas disponible.  
   
@@ -172,7 +171,7 @@ ms.locfileid: "48076049"
   
     -   **Définir une valeur du domaine sélectionné en tant que valeur de départ de son groupe**: modifiez la valeur de départ du groupe en sélectionnant une valeur dans le groupe qui n'est pas défini comme valeur de début, puis en cliquant sur le bouton **Définir une valeur du domaine sélectionné en tant que valeur de départ de son groupe** .  
   
-6.  **Vérificateur d'orthographe**: si vous avez activé le correcteur orthographique dans la page des propriétés du domaine, recherchez toutes les valeurs qui ont un trait de soulignement ondulé rouge, indication que le vérificateur d'orthographe suggère une correction. Cliquez avec le bouton droit sur la valeur avec un trait de soulignement, puis sélectionnez une correction, le cas échéant. Le type de valeur devient (ou demeure) erroné et la correction est ajoutée à la colonne **Corriger vers** . Cliquez sur la flèche bas pour afficher les corrections proposées supplémentaires. Entrez une correction manuellement pour l'ajouter au dictionnaire du vérificateur d'orthographe et pouvoir la sélectionner comme correction. Pour plus d'informations, consultez [Utiliser le vérificateur d'orthographe DQS](../../2014/data-quality-services/use-the-dqs-speller.md) et [Définir les propriétés du domaine](../../2014/data-quality-services/set-domain-properties.md).  
+6.  **Vérificateur d'orthographe**: si vous avez activé le correcteur orthographique dans la page des propriétés du domaine, recherchez toutes les valeurs qui ont un trait de soulignement ondulé rouge, indication que le vérificateur d'orthographe suggère une correction. Cliquez avec le bouton droit sur la valeur avec un trait de soulignement, puis sélectionnez une correction, le cas échéant. Le type de valeur devient (ou demeure) erroné et la correction est ajoutée à la colonne **Corriger vers** . Cliquez sur la flèche bas pour afficher les corrections proposées supplémentaires. Entrez une correction manuellement pour l'ajouter au dictionnaire du vérificateur d'orthographe et pouvoir la sélectionner comme correction. Pour plus d'informations, consultez [Use the DQS Speller](../../2014/data-quality-services/use-the-dqs-speller.md) et [Set Domain Properties](../../2014/data-quality-services/set-domain-properties.md).  
   
     > [!NOTE]  
     >  Pour utiliser le vérificateur orthographique, vous pouvez l'activer dans la page **Propriétés du domaine** ou s'il est désactivé dans la page **Propriétés du domaine** , vous pouvez cliquer sur l'icône **Activer/désactiver le vérificateur d'orthographe** dans la page **Gérer les résultats de la découverte de données** pour l'activer sur cette page.  

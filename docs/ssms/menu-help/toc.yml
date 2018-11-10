@@ -1,3 +1,4 @@
+items:
 - name: Aide de SQL Server Management Studio
   href: sql-server-management-studio-menu-help.md
 - name: Fenêtre Propriétés - Aide (F1) (Management Studio)
@@ -12,6 +13,8 @@
   href: customize-commands-page.md
 - name: Options (Environnement - Page Général)
   href: options-environment-general-page.md
+- name: Options (Environnement – Page Démarrage)
+  href: options-environment-startup-page.md
 - name: Aide (F1) des boîtes de dialogue Options
   href: options-dialog-boxes-f1-help.md
 - name: Choisir des éléments de boîte à outils (page Tâches de maintenance)
@@ -42,3 +45,9 @@
   href: options-environment-help-online-page.md
 - name: Options (Environnement - Page Clavier)
   href: options-environment-keyboard-page.md
+ms.openlocfilehash: 2ec740b3ee5d782da7e14c34adc13605dd8ba46d
+ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51221805"

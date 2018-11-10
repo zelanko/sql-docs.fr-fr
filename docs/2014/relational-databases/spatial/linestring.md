@@ -1,11 +1,9 @@
 ---
 title: LineString | Microsoft Docs
-ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- dbe-spatial
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - LineString geometry subtype [SQL Server]
@@ -14,18 +12,18 @@ ms.assetid: e50d0b86-8b31-4285-be71-ad05c7712cbd
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b03537992a8f6c63c36ffb079f661aee171439be
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2efe03bcff016070c9017068c62e823dd36d497a
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48059749"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018474"
 ---
 # <a name="linestring"></a>LineString
   Un `LineString` est un objet unidimensionnel qui représente une séquence de points et les segments de ligne qui les connectent.  
   
 ## <a name="linestring-instances"></a>Instances LINESTRING  
- L’illustration ci-dessous montre des exemples de `LineString` instances.  
+ L'illustration suivante montre des exemples d'instances `LineString`.  
   
  ![Exemples d’instances LineString géométriques](../../database-engine/media/linestring.gif "Exemples d’instances LineString géométriques")  
   
@@ -33,7 +31,7 @@ ms.locfileid: "48059749"
   
 -   La Figure 1 est une instance `LineString` simple et non fermée.  
   
--   Figure 2 est un non simple, et non fermée `LineString` instance.  
+-   La Figure 2 est une instance `LineString` non simple et non fermée.  
   
 -   La Figure 3 est une instance `LineString` fermée et simple ; il s'agit par conséquent d'un anneau.  
   
@@ -50,20 +48,20 @@ DECLARE @g3 geometry = 'LINESTRING(1 1, 1 1)';
   
  `@g3` montre qu'une instance `LineString` peut être acceptée, mais non valide.  
   
- Ce qui suit `LineString` instance n’est pas acceptée. Elle lèvera une `System.FormatException`.  
+ L'instance `LineString` suivante n'est pas acceptée. Elle lèvera une `System.FormatException`.  
   
 ```  
 DECLARE @g geometry = 'LINESTRING(1 1)';  
 ```  
   
 ### <a name="valid-instances"></a>Instances valides  
- Pour un `LineString` instance soit valide, il doit respecter les critères suivants.  
+ Pour qu'une instance `LineString` soit valide, elle doit répondre aux critères suivants :  
   
-1.  Le `LineString` instance doit être acceptée.  
+1.  L'instance `LineString` doit être acceptée.  
   
 2.  Si une instance `LineString` n'est pas vide, elle doit contenir au moins deux points distincts.  
   
-3.  Le `LineString` instance ne peut pas se chevaucher elle-même sur un intervalle de deux ou plusieurs points consécutifs.  
+3.  L'instance `LineString` ne peut pas se chevaucher sur un intervalle de plusieurs points consécutifs.  
   
  Les instances `LineString` suivantes sont valides.  
   
@@ -76,7 +74,7 @@ SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(), @g4.STIsValid();
   
 ```  
   
- Ce qui suit `LineString` instances ne sont pas valides.  
+ Les instances `LineString` suivantes ne sont pas valides.  
   
 ```  
 DECLARE @g1 geometry = 'LINESTRING(1 4, 3 4, 2 4, 2 0)';  
@@ -128,7 +126,7 @@ POINT(1 3) is a valid Point.
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [STLength &#40;Type de données geometry&#41;](/sql/t-sql/spatial-geometry/stlength-geometry-data-type)   
+ [STLength &#40;type de données geometry&#41;](/sql/t-sql/spatial-geometry/stlength-geometry-data-type)   
  [STStartPoint &#40;type de données geometry&#41;](/sql/t-sql/spatial-geometry/ststartpoint-geometry-data-type)   
  [STEndPoint &#40;type de données geometry&#41;](/sql/t-sql/spatial-geometry/stendpoint-geometry-data-type)   
  [STPointN &#40;type de données geometry&#41;](/sql/t-sql/spatial-geometry/stpointn-geometry-data-type)   

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 27f306f4-d67c-47f5-b35c-4260cc5d36e3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8a7140e26bfb228234e692c3f1665aba070a32e2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 93f502259f3de895a674a1fd26d94436277cbaed
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107879"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51031836"
 ---
 # <a name="manage-a-knowledge-base"></a>Gérer une base de connaissances
   Cette rubrique décrit comment remplir les fonctions de gestion sur une base de connaissances dans [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Vous pouvez supprimer une base de connaissances, la déverrouiller, ignorer vos modifications, la renommer et afficher ses propriétés.  
@@ -43,9 +42,9 @@ ms.locfileid: "48107879"
   
     1.  **Ouvrir**: cliquez pour ouvrir la base de connaissances dans l'activité sélectionnée dans le volet **Sélectionner une activité** .  
   
-    2.  **Déverrouiller**: vous pouvez déverrouiller la base de connaissances si vous êtes l'utilisateur qui travaillait sur la base de connaissances lors de l'une des étapes de la gestion des domaines, de la découverte des connaissances et de l'activité de la stratégie de correspondance, et l'avait fermée. Si vous déchargez la base de connaissances, une autre personne peut l'ouvrir et travailler dessus. Cette commande n'est pas disponible si la base de connaissances n'est pas dans un état d'une activité. Pour plus d’informations, consultez [ouvrir une Base de connaissances](../../2014/data-quality-services/open-a-knowledge-base.md).  
+    2.  **Déverrouiller**: vous pouvez déverrouiller la base de connaissances si vous êtes l'utilisateur qui travaillait sur la base de connaissances lors de l'une des étapes de la gestion des domaines, de la découverte des connaissances et de l'activité de la stratégie de correspondance, et l'avait fermée. Si vous déchargez la base de connaissances, une autre personne peut l'ouvrir et travailler dessus. Cette commande n'est pas disponible si la base de connaissances n'est pas dans un état d'une activité. Pour plus d'informations, consultez [Open a Knowledge Base](../../2014/data-quality-services/open-a-knowledge-base.md).  
   
-    3.  **Ignorer le travail**: cliquez sur cette option lorsque la base de connaissances est dans un état de travail, comme illustré avec une entrée dans le champ État de la table. Cette commande n'est pas disponible si la base de connaissances n'est pas dans un état d'une activité ou si la base de connaissances est verrouillée. Pour plus d’informations, consultez [ouvrir une Base de connaissances](../../2014/data-quality-services/open-a-knowledge-base.md).  
+    3.  **Ignorer le travail**: cliquez sur cette option lorsque la base de connaissances est dans un état de travail, comme illustré avec une entrée dans le champ État de la table. Cette commande n'est pas disponible si la base de connaissances n'est pas dans un état d'une activité ou si la base de connaissances est verrouillée. Pour plus d'informations, consultez [Open a Knowledge Base](../../2014/data-quality-services/open-a-knowledge-base.md).  
   
     4.  **Renommer**: cliquez sur cette option pour que le champ Base de connaissances de la table puisse être modifié pour la base de connaissances sur laquelle vous avez cliqué avec le bouton droit. Modifiez le nom, puis cliquez sur cette base de connaissances et sur une autre dans le champ pour accepter le changement de nom.  
   

@@ -4,41 +4,43 @@ description: Cet article fournit une procédure pas à pas pour la configuration
 author: DBArgenis
 ms.author: argenisf
 manager: craigg
-ms.date: 09/24/2018
+ms.date: 11/06/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 71c4af08573f54b5a33a95f0c821dfdb81b4f0a0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 07f068a24c60fe82c299387fe859f07296f21df8
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47765589"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269433"
 ---
 # <a name="how-to-configure-persistent-memory-pmem-for-sql-server-on-linux"></a>Comment configurer la mémoire persistante (PMEM) pour SQL Server sur Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Cet article décrit comment configurer la mémoire persistante (PMEM) pour SQL Server sur Linux. Prise en charge PMEM sur Linux a été introduite dans SQL Server 2019 CTP 2.0.
+Cet article décrit comment configurer la mémoire persistante (PMEM) pour SQL Server sur Linux. Prise en charge PMEM sur Linux a été introduite dans la version préliminaire de SQL Server 2019.
 
 ## <a name="overview"></a>Vue d'ensemble
 
-SQL Server 2016 introduit la prise en charge de barrettes DIMM Non Volatile, et une optimisation appelé [fin de la mise en cache du journal sur le dispositif NVDIMM]( https://blogs.msdn.microsoft.com/bobsql/2016/11/08/how-it-works-it-just-runs-faster-non-volatile-memory-sql-server-tail-of-log-caching-on-nvdimm/) qui réduit la quantité d’opérations nécessaires pour renforcer un tampon de journal vers le stockage persistant. Cela s’appuie sur les capacités de Windows Server pour accéder directement à un périphérique de mémoire persistante en mode DAX.
+SQL Server 2016 introduit la prise en charge de barrettes DIMM Non Volatile, et une optimisation appelé [fin de la mise en cache du journal sur le dispositif NVDIMM]( https://blogs.msdn.microsoft.com/bobsql/2016/11/08/how-it-works-it-just-runs-faster-non-volatile-memory-sql-server-tail-of-log-caching-on-nvdimm/). Ces optimisations réduit le nombre d’opérations nécessaires pour renforcer un tampon de journal vers le stockage persistant. Cela s’appuie sur Windows Server un accès direct à un périphérique de mémoire persistante en mode DAX.
 
-Version préliminaire de SQL Server 2019 s’étend la prise en charge de mémoire persistante appareils (PMEM) pour Linux, offrant révération complète des données et les fichiers journaux placés sur PMEM. Révération fait référence à la méthode d’accès au périphérique de stockage à l’aide d’opérations de memcpy espace utilisateur efficace. Au lieu de passer en revue la pile de stockage et de système de fichier, SQL Server s’appuie sur la prise en charge DAX sur Linux pour placer directement les données sur les appareils, encourir dans une latence minimale.
+Version préliminaire de SQL Server 2019 s’étend la prise en charge de mémoire persistante appareils (PMEM) pour Linux, offrant révération complète des données et les fichiers journaux placés sur PMEM. Révération fait référence à la méthode d’accès au périphérique de stockage à l’aide d’espace utilisateur efficace `memcpy()` operations. Au lieu de passer en revue la pile de stockage et de système de fichier, SQL Server s’appuie sur la prise en charge DAX sur Linux à placer directement les données dans les appareils, ce qui réduit la latence.
 
 ## <a name="enable-enlightenment-of-database-files"></a>Activer les connaissances des fichiers de base de données
 Pour activer les connaissances de fichiers de base de données dans SQL Server sur Linux, suivez les étapes suivantes :
 
-1. Configurer les appareils dans Linux, cette opération est effectuée à l’aide de la `ndctl` utilitaire.
+1. Configurer les appareils.
 
-  - Installer installation `ndctl` configurer pmem périphérique. Vous pouvez le trouver [ici](https://docs.pmem.io/getting-started-guide/installing-ndctl).
+  Sous Linux, utilisez la `ndctl` utilitaire.
+
+  - Installer `ndctl` configurer PMEM périphérique. Vous pouvez le trouver [ici](https://docs.pmem.io/getting-started-guide/installing-ndctl).
   - Utilisez [ndctl] pour créer un espace de noms.
 
   ```bash 
-  ndctl create-namespace -f -e namespace0.0 --mode=fsdax* –map=mem
+  ndctl create-namespace -f -e namespace0.0 --mode=fsdax* -–map=mem
   ```
 
   >[!NOTE]
@@ -59,7 +61,7 @@ ndctl list
 ]
 ```
 
-  - Créer et monter pmem appareil
+  - Créer et monter PMEM appareil
 
     Par exemple, avec XFS
 

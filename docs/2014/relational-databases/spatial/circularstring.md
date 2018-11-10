@@ -4,33 +4,32 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- dbe-spatial
+ms.technology: ''
 ms.topic: conceptual
 ms.assetid: 9fe06b03-d98c-4337-9f89-54da98f49f9f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4602b251d7e0674c206fe85830b0abc35d92684b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 75845ceafbf776eb15a30b3289de97573109c4d8
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128889"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018188"
 ---
 # <a name="circularstring"></a>CircularString
-  Un `CircularString` est une collection de zéro ou plusieurs segments d’arc de cercle continus. Un segment d'arc de cercle est un segment courbé défini par trois points dans un plan à deux dimensions ; le premier point doit être différent du troisième point. Si les trois points d'un segment d'arc de cercle sont colinéaires, le segment d'arc est traité comme un segment de ligne.  
+  Un `CircularString` est une collection de zéro ou plusieurs segments d'arc de cercle continus. Un segment d'arc de cercle est un segment courbé défini par trois points dans un plan à deux dimensions ; le premier point doit être différent du troisième point. Si les trois points d'un segment d'arc de cercle sont colinéaires, le segment d'arc est traité comme un segment de ligne.  
   
 > [!IMPORTANT]  
 >  Pour obtenir une description détaillée et des exemples de nouvelles fonctionnalités spatiales introduites dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], y compris le `CircularString` sous-type, téléchargez le livre blanc, [nouvelles fonctionnalités spatiales dans SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=226407).  
   
 ## <a name="circularstring-instances"></a>Instances CircularString  
- Le dessin suivant montre valid `CircularString` instances :  
+ Le dessin suivant montre des instances `CircularString` valides :  
   
  ![](../../database-engine/media/5ff17e34-b578-4873-9d33-79500940d0bc.png "5ff17e34-b578-4873-9d33-79500940d0bc")  
   
 ### <a name="accepted-instances"></a>Instances acceptées  
- Un `CircularString` instance est acceptée si elle est vide ou contient un nombre impair de points, n, où n > 1. Ce qui suit `CircularString` instances sont acceptées.  
+ Un `CircularString` instance est acceptée si elle est vide ou contient un nombre impair de points, n, où n > 1. Les instances `CircularString` suivantes sont acceptées.  
   
 ```  
 DECLARE @g1 geometry = 'CIRCULARSTRING EMPTY';  
@@ -38,14 +37,14 @@ DECLARE @g2 geometry = 'CIRCULARSTRING(1 1, 2 0, -1 1)';
 DECLARE @g3 geometry = 'CIRCULARSTRING(1 1, 2 0, 2 0, 2 0, 1 1)';  
 ```  
   
- `@g3` Indique que `CircularString` instance peut être acceptée, mais non valide. La déclaration suivante d'instance de CircularString n'est pas acceptée. Cette déclaration lève une `System.FormatException`.  
+ `@g3` montre que l'instance `CircularString` peut être acceptée, mais pas valide. La déclaration suivante d'instance de CircularString n'est pas acceptée. Cette déclaration lève une `System.FormatException`.  
   
 ```  
 DECLARE @g geometry = 'CIRCULARSTRING(1 1, 2 0, 2 0, 1 1)';  
 ```  
   
 ### <a name="valid-instances"></a>Instances valides  
- Valide `CircularString` instance doit être vide ou avoir les attributs suivants :  
+ Une instance `CircularString` valide doit être vide ou avoir les attributs suivants :  
   
 -   Elle doit contenir au moins un segment d'arc de cercle (autrement dit, voir un minimum de trois points).  
   
@@ -55,9 +54,9 @@ DECLARE @g geometry = 'CIRCULARSTRING(1 1, 2 0, 2 0, 1 1)';
   
 -   Elle ne peut pas se chevaucher sur un intervalle.  
   
--   Bien que `CircularString` instances peuvent contenir des segments de ligne, ces segments de ligne doivent être définis par trois points colinéaires.  
+-   Bien que les instances `CircularString` puissent contenir des segments de ligne, ces segments de ligne doivent être définis par trois points colinéaires.  
   
- L’exemple suivant montre valide `CircularString` instances.  
+ L'exemple suivant montre des instances `CircularString` valides.  
   
 ```  
 DECLARE @g1 geometry = 'CIRCULARSTRING EMPTY';  
@@ -67,7 +66,7 @@ DECLARE @g4 geometry = 'CIRCULARSTRING(1 1, 2 2, 2 2)';
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(),@g4.STIsValid();  
 ```  
   
- Une instance `CircularString` doit contenir au moins deux segments d'arc de cercle pour définir un cercle complet. Un `CircularString` instance ne peut pas utiliser un segment d’arc de cercle unique (tel que (1 1, 3 1, 1 1)) pour définir un cercle complet. Utilisez (1 1, 2 2, 3 1, 2 0, 1 1) pour définir le cercle.  
+ Une instance `CircularString` doit contenir au moins deux segments d'arc de cercle pour définir un cercle complet. Une instance `CircularString` ne peut pas utiliser un seul segment d'arc de cercle (tel que (1 1, 3 1, 1 1)) pour définir un cercle complet. Utilisez (1 1, 2 2, 3 1, 2 0, 1 1) pour définir le cercle.  
   
  L'exemple suivant montre des instances CircularString qui ne sont pas valides.  
   
@@ -106,7 +105,7 @@ SELECT @g.ToString();
 ```  
   
 ### <a name="c-instantiating-a-geometry-instance-using-a-circularstring-with-multiple-circular-arc-segments"></a>C. Instanciation d'une instance géométrique à l'aide d'un CircularString avec plusieurs segments d'arc de cercle  
- L’exemple suivant montre comment créer un `CircularString` avec plusieurs segments d’arc de cercle (cercle complet) de l’instance :  
+ L'exemple suivant indique comment créer une instance `CircularString` avec plusieurs segments d'arc de cercle (cercle complet) :  
   
 ```tsql  
 DECLARE @g geometry;  

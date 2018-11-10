@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords:
 - IsHadrEnabled server property
@@ -14,29 +13,29 @@ ms.assetid: ed6e5e94-4b8d-422a-a17e-61b05a4df903
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3e2d660f095c2f6e4d098fe2f0d60ef547a02ad7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7954c3050f07fd8c727a7f91c18bf343c9b69f2d
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101729"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018434"
 ---
 # <a name="configure-sql-server-on-a-server-core-installation"></a>Configurer SQL Server sur une installation Server Core
   Cette rubrique fournit des détails sur la configuration de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur une installation Server Core de [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1. Reportez-vous aux sections suivantes :  
   
 -   [Configurer et gérer Server Core sur Windows Server](configure-sql-server-on-a-server-core-installation.md#bkmk_configurewindows)  
   
--   [Installer les mises à jour SQL Server](configure-sql-server-on-a-server-core-installation.md#bkmk_installsqlupdates)  
+-   [Installer des mises à jour de SQL Server](configure-sql-server-on-a-server-core-installation.md#bkmk_installsqlupdates)  
   
--   [Démarrer/arrêter le Service SQL Server](configure-sql-server-on-a-server-core-installation.md#bkmk_startstopservices)  
+-   [Démarrer/arrêter un service SQL Server](configure-sql-server-on-a-server-core-installation.md#bkmk_startstopservices)  
   
 -   [Activer les groupes de disponibilité AlwaysOn](configure-sql-server-on-a-server-core-installation.md#bkmk_enablealwayson)  
   
--   [Configuration de l’accès à distance de SQL Server s’exécutant sur Server Core](configure-sql-server-on-a-server-core-installation.md#bkmk_configureremoteaccess)  
+-   [Configuration de l'accès à distance de SQL Server s'exécutant sur Server Core](configure-sql-server-on-a-server-core-installation.md#bkmk_configureremoteaccess)  
   
 -   [SQL Server Profiler](configure-sql-server-on-a-server-core-installation.md#bkmk_profiler)  
   
--   [Audit de SQL Server](configure-sql-server-on-a-server-core-installation.md#bkmk_auditing)  
+-   [Audit SQL Server](configure-sql-server-on-a-server-core-installation.md#bkmk_auditing)  
   
 -   [Utilitaires de ligne de commande](configure-sql-server-on-a-server-core-installation.md#bkmk_cmd)  
   
@@ -114,10 +113,10 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,Replication /INSTANCENAME=MSSQ
  Vous pouvez également utiliser les services .Net pour démarrer et arrêter les services [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ##  <a name="BKMK_EnableAlwaysON"></a> Activer les groupes de disponibilité AlwaysOn  
- Les groupes de disponibilité AlwaysOn doivent être activés pour qu'une instance de serveur utilise les groupes de disponibilité comme solution de haute disponibilité et de récupération d'urgence. Pour plus d’informations sur la gestion des groupes de disponibilité AlwaysOn, consultez [activer et désactiver les groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](../availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md).  
+ Les groupes de disponibilité AlwaysOn doivent être activés pour qu'une instance de serveur utilise les groupes de disponibilité comme solution de haute disponibilité et de récupération d'urgence. Pour plus d’informations sur la gestion des groupes de disponibilité AlwaysOn, consultez [Activer et désactiver les groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](../availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md).  
   
 ### <a name="using-includessnoversionincludesssnoversion-mdmd-configuration-manager-remotely"></a>Utilisation du Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à distance  
- Les étapes qui suivent doivent être effectuées sur un PC exécutant l’édition cliente de [!INCLUDE[win7](../../includes/win7-md.md)] ou version ultérieure, ou un autre serveur qui a l’interpréteur de commandes graphique installé (c'est-à-dire une installation complète de [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] ou une installation de Windows Server 8 avec le serveur Interpréteur de commandes graphique fonctionnalité activée).  
+ Les étapes qui suivent doivent être effectuées sur un ordinateur exécutant l'édition cliente de [!INCLUDE[win7](../../includes/win7-md.md)] ou version ultérieure, ou un autre serveur qui a l'interpréteur de commandes graphiques de serveur installé (c'est-à-dire une installation complète de [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] ou une installation de Windows Server 8 avec la fonctionnalité d'interpréteur de commandes graphiques de serveur activée).  
   
 1.  Ouvrez la Gestion de l'ordinateur. Pour ouvrir la Gestion de l'ordinateur, effectuez l'une des actions suivantes :  
   

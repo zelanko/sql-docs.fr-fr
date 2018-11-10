@@ -4,25 +4,24 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 12537c9d-31e4-40b0-a411-cb343abbe96a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 66f6929a7563a774417f93ddcfe25b166c5e64b6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9045ee53e6e3e08222c99ddffa2935040a314b16
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079819"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51031936"
 ---
 # <a name="importing-and-exporting-knowledge"></a>Importation et exportation de connaissances
   Vous pouvez créer des bases de connaissances et les domaines directement dans l'application [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] ou vous pouvez importer ou exporter les connaissances vers ou depuis une base de connaissances. Dans l'application [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , vous pouvez utiliser un fichier de données pour les opérations d'importation et d'exportation, ou un fichier Excel pour les opérations d'importation. Le fichier de données utilisé est un fichier chiffré qui est créé par [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) avec l'extension .dqs. Les fichiers créés par Microsoft Excel peuvent avoir une extension .xlsx, .xls ou .csv. Ces opérations offrent plus de souplesse dans la génération et le partage des connaissances que vous utilisez pour effectuer le nettoyage et la correspondance des données.  
   
 > [!IMPORTANT]  
->  Vous pouvez exporter *toutes* les bases de connaissances de votre [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] vers un fichier de sauvegarde DQS (.dqsb) en exécutant le fichier DQSInstaller.exe à partir de l'invite de commandes. De même, vous pouvez importer *toutes* les bases de connaissances à partir d'un fichier de sauvegarde DQS (.dqsb) vers votre [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] en exécutant le fichier DQSInstaller.exe à partir de l'invite de commandes. Pour plus d'informations, consultez [Export and Import DQS Knowledge Bases Using DQSInstaller.exe](install-windows/export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md) dans le guide d'installation de DQS.  
+>  Vous pouvez exporter *toutes* les bases de connaissances de votre [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] vers un fichier de sauvegarde DQS (.dqsb) en exécutant le fichier DQSInstaller.exe à partir de l'invite de commandes. De même, vous pouvez importer *toutes* les bases de connaissances à partir d'un fichier de sauvegarde DQS (.dqsb) vers votre [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] en exécutant le fichier DQSInstaller.exe à partir de l'invite de commandes. Pour plus d’informations, consultez [Export et Import DQS Knowledge Bases Using DQSInstaller.exe](install-windows/export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md) dans le guide d’installation DQS.  
   
 ## <a name="in-this-section"></a>Dans cette section  
  Vous pouvez exécuter les opérations d'importation et d'exportation suivantes :  

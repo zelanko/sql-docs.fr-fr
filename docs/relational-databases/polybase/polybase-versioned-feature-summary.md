@@ -11,60 +11,60 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 957d8c397843f30e831dcc0a5f33943b959bac90
-ms.sourcegitcommit: 3a8293b769b76c5e46efcb1b688bffe126d591b3
+ms.openlocfilehash: 08d0b31d5ed0be4b3d9a5e766483f14e0653343e
+ms.sourcegitcommit: 41979c9d511b3eeb45134d30ccb0dbc6bba70f1a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50226261"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50757964"
 ---
 # <a name="polybase-features-and-limitations"></a>Fonctionnalités et limitations de PolyBase
 
 [!INCLUDE[appliesto-ss2016-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
-Récapitulatif des fonctionnalités PolyBase disponibles pour les services et produits SQL Server.  
+Cet article fournit une synthèse des fonctionnalités PolyBase disponibles pour les services et produits SQL Server.  
   
 ## <a name="feature-summary-for-product-releases"></a>Synthèse des fonctionnalités pour les versions du produit
 
-Ce tableau récapitule les principales fonctionnalités de PolyBase et des produits dans lesquels elles sont disponibles.  
+Ce tableau contient les principales fonctionnalités de PolyBase et les produits dans lesquels elles sont disponibles.  
   
 ||||||
 |-|-|-|-|-|   
 |**Fonctionnalité**|**SQL Server 2016**|**Azure SQL Database**|**Azure SQL Data Warehouse**|**Parallel Data Warehouse**| 
-|Interroger des données Hadoop avec [!INCLUDE[tsql](../../includes/tsql-md.md)]|oui|non|non|oui|
-|Importer des données depuis Hadoop|oui|non|non|oui|
-|Exporter des données vers Hadoop  |oui|non|non| oui|
-|Interroger, importer, exporter vers HDInsights |non|non|non|non
-|Transmettre des calculs de requête à Hadoop|oui|non|non|oui|  
-|Importer des données depuis le stockage d’objets blob Azure|oui|non|oui|oui| 
-|Exporter des données vers le stockage d’objets blob Azure|oui|non|oui|oui|  
-|Importer des données depuis Azure Data Lake Store|non|non|oui|non|    
-|Exporter des données depuis Azure Data Lake Store|non|non|oui|non|
-|Exécuter des requêtes PolyBase à partir des outils décisionnels de Microsoft|oui|non|oui|oui|   
+|Interroger des données Hadoop avec [!INCLUDE[tsql](../../includes/tsql-md.md)]|Oui|non|non|Oui|
+|Importer des données depuis Hadoop|Oui|non|non|Oui|
+|Exporter des données vers Hadoop  |Oui|non|non| Oui|
+|Interroger, importer, exporter vers Azure HDInsights |non|non|non|non
+|Transmettre des calculs de requête à Hadoop|Oui|non|non|Oui|  
+|Importer des données à partir du stockage d’objets blob Azure|Oui|non|Oui|Oui| 
+|Exporter des données vers le stockage d’objets blob Azure|Oui|non|Oui|Oui|  
+|Importer des données depuis Azure Data Lake Store|non|non|Oui|non|    
+|Exporter des données depuis Azure Data Lake Store|non|non|Oui|non|
+|Exécuter des requêtes PolyBase à partir des outils décisionnels Microsoft|Oui|non|Oui|Oui|   
 
-## <a name="pushdown-computation-supported-t-sql-operators"></a>Opérateurs T-SQL pris en charge pour la transmission des calculs
+## <a name="pushdown-computation-supported-by-t-sql-operators"></a>Transmission des calculs prise en charge par les opérateurs T-SQL
 
-Dans SQL Server et APS, tous les opérateurs T-SQL ne peuvent pas être transmis au cluster hadoop. Le tableau ci-dessous répertorie tous les opérateurs pris en charge et une partie des opérateurs non pris en charge. 
+Dans SQL Server et APS, tous les opérateurs T-SQL ne peuvent pas être transmis au cluster Hadoop. Ce tableau contient tous les opérateurs pris en charge et un sous-ensemble des opérateurs non pris en charge. 
 
 ||||
 |-|-|-| 
-|**Type d’opérateur**|**Transmissible à Hadoop**|**Transmissible au Stockage Blob**|
-|Projections de colonne|oui|non|
-|Prédicats|oui|non|
-|Agrégats|partielles|non|
+|**Type d’opérateur**|**Transmissible à Hadoop**|**Transmissible au stockage d’objets blob**|
+|Projections de colonne|Oui|non|
+|Prédicats|Oui|non|
+|Agrégats|Partielle|non|
 |Jointures entre les tables externes|non|non|
 |Jointures entre les tables externes et les tables locales|non|non|
 |Tris|non|non|
 
-Une agrégation partielle signifie qu’une agrégation finale doit se produire une fois que les données atteignent SQL Server, mais qu’une partie de l’agrégation se produit dans Hadoop. Il s’agit d’une méthode courante de calcul des agrégations dans les systèmes à traitement parallèle massif.  
+L’agrégation partielle signifie qu’une agrégation finale doit se produire une fois que les données ont atteint SQL Server, mais qu’une partie de l’agrégation se produit dans Hadoop. Il s’agit d’une méthode courante de calcul des agrégations dans les systèmes à traitement parallèle massif.  
 
 ## <a name="known-limitations"></a>Limitations connues
 
 PolyBase présente les limitations suivantes :
 
-- La taille de ligne maximale, incluant la longueur totale des colonnes à longueur variable, ne peut pas dépasser 32 Ko dans SQL Server ou 1 Mo dans Azure SQL Data Warehouse.
+- La taille de ligne maximale, qui comprend la longueur totale des colonnes à longueur variable, ne peut pas dépasser 32 Ko dans SQL Server ou 1 Mo dans Azure SQL Data Warehouse.
 
-- Durant l’exportation de données dans un format de fichier ORC à partir de SQL Server ou Azure SQL Data Warehouse, le nombre de colonnes de texte lourdes peut être limité à seulement 50, en raison d’erreurs de mémoire insuffisante Java. Pour contourner ce problème, exportez uniquement une partie des colonnes.
+- Quand des données sont exportées dans un format de fichier ORC à partir de SQL Server ou SQL Data Warehouse, les colonnes comportant beaucoup de texte peuvent être limitées. Elles peuvent être limitées à 50 colonnes en raison des messages d’erreur de mémoire Java insuffisante. Pour contourner ce problème, exportez uniquement une partie des colonnes.
 
 - PolyBase ne peut pas se connecter à une instance de Hortonworks si Knox est activé.
 
@@ -73,7 +73,7 @@ PolyBase présente les limitations suivantes :
 <!--SQL Server 2016-->
 ::: moniker range="= sql-server-2016 || =sqlallproducts-allversions"
 
-- [PolyBase ne s’installe pas quand vous ajoutez un nœud à un cluster de basculement SQL Server 2016](https://support.microsoft.com/en-us/help/3173087/fix-polybase-feature-doesn-t-install-when-you-add-a-node-to-a-sql-server-2016-failover-cluster)
+- [PolyBase ne s’installe pas quand vous ajoutez un nœud à un cluster de basculement SQL Server 2016](https://support.microsoft.com/en-us/help/3173087/fix-polybase-feature-doesn-t-install-when-you-add-a-node-to-a-sql-server-2016-failover-cluster).
 
 ::: moniker-end
 

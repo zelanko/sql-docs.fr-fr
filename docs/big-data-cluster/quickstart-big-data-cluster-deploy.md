@@ -4,15 +4,15 @@ description: ''
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/01/2018
+ms.date: 11/06/2018
 ms.topic: quickstart
 ms.prod: sql
-ms.openlocfilehash: 899a02996e6415cbf35ed903c276ca23b78c6961
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: efa3d06feb138445c3e55e5d2ea3da7e60f3da20
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50050991"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269554"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Démarrage rapide : Déployer le cluster de données volumineux de SQL Server sur Azure Kubernetes Service (AKS)
 
@@ -28,8 +28,6 @@ Sur l’ordinateur que vous utilisez pour exécuter les commandes pour installer
 
 Pour installer le **mssqlctl** outil CLI pour gérer les données volumineuses de SQL Server du cluster sur votre ordinateur client, vous devez d’abord installer [Python](https://www.python.org/downloads/) v3.0 de version minimale et [pip3](https://pip.pypa.io/en/stable/installing/). `pip` est déjà installé si vous utilisez une version de Python au moins les 3.4 téléchargés à partir de [python.org](https://www.python.org/).
 
-Si votre installation de Python est manquante le `requests` package, vous devez installer `requests` à l’aide de `python -m pip install requests` (utilisez `python3` pour ces commandes sur Linux). Si vous avez déjà un `requests` du package, mettez-la à niveau vers la dernière version à l’aide `python -m pip install requests --upgrade`.
-
 ## <a name="verify-aks-configuration"></a>Vérifier la configuration d’ACS
 
 Une fois que vous avez le cluster AKS déployé, vous pouvez exécuter la commande kubectl pour afficher la configuration de cluster ci-dessous. Assurez-vous que kubectl pointe vers le contexte de cluster correct.
@@ -43,8 +41,11 @@ kubectl config view
 Exécutez la commande ci-dessous pour installer **mssqlctl** outil sur votre ordinateur client. La commande fonctionne à partir d’un Windows et un client Linux, mais que vous l’exécutez à partir d’une fenêtre cmd qui s’exécute avec des privilèges d’administrateur sur Windows ou faites-la précéder `sudo` sur Linux :
 
 ```
-pip3 install --index-url https://private-repo.microsoft.com/python/ctp-2.0 mssqlctl  
+pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.1 mssqlctl  
 ```
+
+> [!IMPORTANT]
+> Si vous avez installé une version antérieure, vous devez supprimer le cluster *avant* la mise à niveau **mssqlctl** et l’installation de la nouvelle version. Pour plus d’informations, consultez [mise à niveau vers une nouvelle version](deployment-guidance.md#upgrade).
 
 > [!TIP]
 > Si **mssqlctl** n’a pas été installé correctement, passez en revue les étapes requises dans l’article [installer mssqlctl](deployment-guidance.md#mssqlctl).
@@ -58,7 +59,7 @@ Avant de continuer, notez les instructions importantes suivantes :
 - Dans le [fenêtre de commande](http://docs.microsoft.com/visualstudio/ide/reference/command-window), guillemets doubles sont inclus dans les variables d’environnement. Si vous utilisez des guillemets pour encapsuler un mot de passe, les guillemets sont inclus dans le mot de passe.
 - Dans bash, les guillemets ne sont pas inclus dans la variable. Nos exemples utilisent des guillemets doubles `"`.
 - Vous pouvez définir les variables d’environnement le mot de passe à comme vous le souhaitez, mais assurez-vous qu’ils sont suffisamment complexes et n’utilisent pas le `!`, `&`, ou `'` caractères.
-- Pour la version CTP 2.0, ne modifiez pas les ports par défaut.
+- Pour la version CTP 2.1, ne modifiez pas les ports par défaut.
 - Le `sa` compte est un administrateur système sur l’instance principale de SQL Server qui est créé pendant l’installation. Une fois le conteneur SQL Server créé, la variable d’environnement `MSSQL_SA_PASSWORD` que vous avez spécifiée peut être découverte en exécutant `echo $MSSQL_SA_PASSWORD` dans le conteneur. Pour des raisons de sécurité, vous devez modifier votre `sa` mot de passe conformément aux bonnes pratiques documentées [ici](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker?view=sql-server-2017#change-the-sa-password).
 
 Initialiser les variables d’environnement suivantes.  Ils sont requis pour le déploiement d’un cluster de données volumineuses :
@@ -110,7 +111,7 @@ export DOCKER_PRIVATE_REGISTRY="1"
 
 ## <a name="deploy-a-big-data-cluster"></a>Déployer un cluster de données volumineuses
 
-Pour déployer un cluster SQL Server 2019 CTP 2.0 de données volumineux sur votre cluster Kubernetes, exécutez la commande suivante :
+Pour déployer un cluster SQL Server 2019 CTP 2.1 de données volumineux sur votre cluster Kubernetes, exécutez la commande suivante :
 
 ```bash
 mssqlctl create cluster <name of your cluster>

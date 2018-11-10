@@ -4,39 +4,39 @@ description: ''
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/05/2018
+ms.date: 11/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 137da00959f6f8d3498bb3d063ceb21337266aef
-ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
+ms.openlocfilehash: 9f9db16431cd6c3befbb32383725ec008f5a9081
+ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48878012"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51221635"
 ---
 # <a name="how-to-use-notebooks-in-sql-server-2019-preview"></a>Comment utiliser des blocs-notes en version préliminaire de SQL Server 2019
 
-Cet article explique comment lancer les blocs-notes sur un cluster de données volumineux de SQL Server 2019. Il montre également comment commencer à créer vos propres blocs-notes et comment envoyer des travaux sur le cluster.
+Cet article décrit comment lancer des blocs-notes Jupyter sur le cluster et commencer à créer vos propres blocs-notes. Il montre également comment envoyer des travaux sur le cluster.
 
 ## <a name="prerequisites"></a>Prérequis
 
 Pour utiliser des blocs-notes, vous devez installer les conditions préalables suivantes :
 
 - [Un cluster de données volumineux de SQL Server 2019](deployment-guidance.md)
-- [Studio de données Azure](../azure-data-studio/what-is.md)
+- [Azure Data Studio](../azure-data-studio/what-is.md)
 - [L’extension de SQL Server 2019 (version préliminaire)](../azure-data-studio/sql-server-2019-extension.md).
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
-## <a name="connect-to-the-sql-server-big-data-cluster-end-point"></a>Se connecter pour le point de terminaison du cluster volumineuses de données SQL Server
+## <a name="connect-to-the-hadoop-gateway-knox-end-point"></a>Se connecter au point de terminaison Hadoop passerelle Knox
 
-Vous pouvez vous connecter à différents points de terminaison dans le cluster. Vous pouvez vous connecter pour le type de connexion de Microsoft SQL Server ou pour le point de terminaison du cluster volumineuses de données SQL Server.
-
-Dans Azure Data Studio (version préliminaire), tapez **F1** > **nouvelle connexion**et vous connecter à votre point de terminaison du cluster volumineuses de données SQL Server.
+Vous pouvez vous connecter à différents points de terminaison dans le cluster. Vous pouvez vous connecter au type de connexion Microsoft SQL Server ou au point de terminaison de passerelle HDFS/Spark.
+Dans Azure Data Studio (version préliminaire), appuyez sur F1, puis cliquez sur **nouvelle connexion** et vous pouvez vous connecter à votre point de terminaison de passerelle HDFS/Spark.
 
 ![Image1](media/notebooks-guidance/image1.png)
 
 ## <a name="browse-hdfs"></a>Parcourir le HDFS
+
 Une fois que vous vous connectez, vous serez en mesure de parcourir votre dossier HDFS. WebHDFS démarre lorsque le déploiement terminé, et vous pourrez **Actualiser**, ajouter **nouveau répertoire**, **télécharger** fichiers, et **supprimer**.
 
 ![Image2](media/notebooks-guidance/image2.png)
@@ -45,104 +45,116 @@ Ces opérations simples vous permettent d’importer vos propres données dans H
 
 ## <a name="launch-new-notebooks"></a>Lancer de nouveaux ordinateurs portables
 
+>[!NOTE]
+>Si vous avez plusieurs processus Python en cours d’exécution dans votre environnement, vous devez tout d’abord supprimer la `.scaleoutdata` dossier sous votre répertoire installé. Il doit déclencher le `Reinstall Notebook dependencies` tâche dans Azure Data Studio. Il prendra quelques minutes pour toutes les dépendances à installer.
+
+S’il existe des problèmes pour installer les dépendances du bloc-notes, cliquez sur Ctrl + Maj + P ou pour Macintosh Cmd + Maj + P, puis tapez `Reinstall Notebook dependencies` dans la palette de commandes.
+
+![Image3](media/notebooks-guidance/image3.png)
+
 Il existe plusieurs façons de lancer un nouveau bloc-notes.
 
-1. À partir du tableau de bord de gestion. Sur la création d’une nouvelle connexion, vous verrez un tableau de bord. Cliquez sur la tâche nouveau bloc-notes à partir du tableau de bord.
+1. À partir de la **gérer le tableau de bord**. Après avoir établi une connexion, vous verrez un tableau de bord. Cliquez sur **nouveau bloc-notes** tâche du tableau de bord.
 
-  ![Image3](media/notebooks-guidance/image3.png)
+  ![image4](media/notebooks-guidance/image4.png)
 
-1. Cliquez avec le bouton droit sur la connexion HDFS/Spark et que vous avez un nouveau bloc-notes dans le menu contextuel
+1. Avec le bouton droit de la connexion HDFS/Spark et cliquez sur **nouveau bloc-notes** dans le menu contextuel.
 
-![image4](media/notebooks-guidance/image4.png)
+  ![image5](media/notebooks-guidance/image5.png)
 
-Fournissez un nom de votre bloc-notes (exemple : *Test.ipynb*) et cliquez sur **enregistrer**.
-
-![image5](media/notebooks-guidance/image5.png)
-
-## <a name="supported-kernels-and-attach-to-context"></a>Prise en charge les noyaux et d’attachement au contexte
-
-Dans notre Installation Notebook, nous prenons en charge les noyaux PySpark et Spark, Spark Magic qui permettent aux utilisateurs d’écrire du code Python et Scala à l’aide de Spark. Nous permettent également aux utilisateurs de choisir les Python pour leurs à des fins de développement local.
+  Fournissez un nom de votre ordinateur portable, par exemple, `Test.ipynb`. Cliquez sur **Enregistrer**.
 
 ![image6](media/notebooks-guidance/image6.png)
 
-Lorsque vous sélectionnez une de ces noyaux, nous allons installer ce noyau dans l’environnement virtuel et vous pouvez commencer à écrire de code dans le langage pris en charge.
+## <a name="supported-kernels-and-attach-to-context"></a>Prise en charge les noyaux et d’attachement au contexte
 
-| Noyau | Description
-|---- |----
-|Noyau PySpark| Pour l’écriture de code Python à l’aide de Spark, de calcul à partir du cluster.
-|Noyau Spark|Pour l’écriture de code Scala à l’aide de Spark, de calcul à partir du cluster.
-|Noyau Python|Pour l’écriture de code Python pour un développement local.
-
-La sélection pour attacher fournit le contexte pour le noyau à attacher. Lorsque vous êtes connecté pour le point de terminaison du cluster volumineuses de données SQL Server, la sélection par défaut à attacher sera ce point de terminaison du cluster.
+L’Installation de l’ordinateur portable prend en charge les noyaux PySpark et Spark, Spark Magic, ce qui vous permet d’écrire du code Python et Scala à l’aide de Spark. Si vous le souhaitez, vous pouvez choisir de Python à des fins de développement local.
 
 ![image7](media/notebooks-guidance/image7.png)
 
-> [!NOTE]
-> Par défaut, l’application Spark est configurée avec le 1 pilote et 3 exécuteurs qui prendront environ 8,5 Go de mémoire. La configuration recommandée pour exécuter plusieurs sessions de spark est pour chaque serveur dans le cluster pour avoir au moins 32 Go de mémoire (par exemple, dans un environnement AKS utiliser **Standard_D8_v3** tailles de machines virtuelles, qui ont de 32 Go de mémoire).
+Lorsque vous sélectionnez une de ces noyaux, nous allons installer ce noyau dans l’environnement virtuel et vous pouvez commencer à écrire de code dans le langage pris en charge.
 
-## <a name="hello-world-in-the-different-contexts"></a>Hello world dans les différents contextes
+|Noyau|Description
+|:-----|:-----
+|Noyau PySpark|Pour l’écriture de code Python à l’aide de calcul Spark à partir du cluster.
+|Noyau Spark|Pour l’écriture de code Scala à l’aide de calcul Spark à partir du cluster.
+|Noyau Python|Pour l’écriture de code Python pour un développement local.
+
+Le `Attach to` fournit le contexte pour le noyau à attacher. Lorsque vous êtes connecté à la fin de la passerelle HDFS/Spark (Knox) point de la valeur par défaut `Attach to` est ce point de terminaison du cluster.
+
+![image8](media/notebooks-guidance/image8.png)
+
+## <a name="hello-world-in-different-contexts"></a>Hello world dans différents contextes
 
 ### <a name="pyspark-kernel"></a>Noyau Pyspark
 
 Choisissez le noyau PySpark et dans le type de cellule dans le code suivant :
 
-![image8](media/notebooks-guidance/image8.png)
+![image9](media/notebooks-guidance/image9.png)
 
 Cliquez sur l’exécution et que vous devez voir l’Application Spark en cours de démarrage et vous verrez la sortie suivante :
 
-![image9](media/notebooks-guidance/image9.png)
+![Image10](media/notebooks-guidance/image10.png)
 
 Le résultat doit ressembler à quelque chose de similaire à l’image suivante.
 
-![Image10](media/notebooks-guidance/image10.png)
-
-### <a name="spark-kernel"></a>Noyau Spark
-Ajoutez une nouvelle cellule de code en cliquant sur le + Code de commande dans la barre d’outils.
-
 ![Image11](media/notebooks-guidance/image11.png)
 
-Choisissez le noyau Spark dans la liste déroulante pour les noyaux et dans le type de cellule/coller dans 
+### <a name="spark-kernel"></a>Noyau Spark
+Ajoutez une nouvelle cellule de code en cliquant sur le **+ Code** commande dans la barre d’outils.
 
 ![Image12](media/notebooks-guidance/image12.png)
 
-Cliquez sur **exécuter** vous devez voir l’Application Spark en cours de démarrage et cela créera la session Spark **spark** et définira le **HelloWorld** objet.
-
-Le bloc-notes doit ressembler à l’image suivante.
+Vous pouvez également afficher les Options « cellule » lorsque vous cliquez sur l’icône des options ci-dessous :
 
 ![Image13](media/notebooks-guidance/image13.png)
 
-Une fois que vous définissez l’objet de puis dans le type de cellule bloc-notes suivant dans le code suivant :
+Voici les options pour chaque cellule :
 
-![Image14](media/notebooks-guidance/image14.png)
+![Image14](media/notebooks-guidance/image14.png)-
 
-Cliquez sur **exécuter** dans le bloc-notes menu doit s’afficher « Hello, world ! » dans la sortie.
+Maintenant, choisissez le noyau Spark dans la liste déroulante pour les noyaux et dans le type de cellule/coller dans :
 
 ![Image15](media/notebooks-guidance/image15.png)
 
-### <a name="local-python-kernel"></a>Noyau python local
-Choisissez le noyau Python local et dans le type de cellule dans **
+Cliquez sur **exécuter** et vous devez voir l’Application Spark en cours de démarrage et que cette opération crée la session Spark en tant que **spark** et définira le **HelloWorld** objet.
+
+Le bloc-notes doit ressembler à l’image suivante.
 
 ![Image16](media/notebooks-guidance/image16.png)
 
-Vous devez voir la sortie suivante :
+Une fois que vous définissez l’objet puis dans la prochaine cellule du bloc-notes, tapez le code suivant :
 
 ![Image17](media/notebooks-guidance/image17.png)
 
-### <a name="markdown-text"></a>Texte markdown
-Ajoutez une nouvelle cellule de texte en cliquant sur le + commande de texte dans la barre d’outils.
+Cliquez sur **exécuter** dans le bloc-notes menu doit s’afficher « Hello, world ! » dans la sortie.
 
 ![Image18](media/notebooks-guidance/image18.png)
 
-Cliquez sur l’icône d’aperçu pour ajouter votre markdown
+### <a name="local-python-kernel"></a>Noyau python local
+Choisissez le noyau Python local et dans le type de cellule :
 
 ![Image19](media/notebooks-guidance/image19.png)
 
-Cliquez sur l’icône d’aperçu pour activer/désactiver le consultez simplement la syntaxe markdown
+Vous devez voir la sortie suivante :
 
 ![Image20](media/notebooks-guidance/image20.png)
 
+### <a name="markdown-text"></a>Texte markdown
+Ajoutez une nouvelle cellule de texte en cliquant sur le **+ texte** commande dans la barre d’outils.
+
+![Image21](media/notebooks-guidance/image21.png)
+
+Cliquez sur l’icône d’aperçu pour ajouter votre markdown
+
+![Image22](media/notebooks-guidance/image22.png)
+
+Cliquez sur l’icône d’aperçu pour activer/désactiver le consultez simplement la syntaxe markdown
+
+![Image23](media/notebooks-guidance/image23.png)
+
 ## <a name="manage-packages"></a>Gérer les Packages
-Une des choses que nous avons optimisé pour le développement Python local était d’incluent la possibilité d’installer des packages qui les clients devraient pour leurs scénarios. Par défaut, nous incluons les packages courants tels que pandas, numpy, etc., mais si vous attendez un package qui n’est pas inclus puis écrire le code suivant dans la cellule du bloc-notes
+Une des choses que nous avons optimisé pour le développement Python local était d’incluent la possibilité d’installer des packages qui les clients devraient pour leurs scénarios. Par défaut, nous incluons les packages courants tels que pandas, numpy, etc., mais si vous attendez un package qui n’est pas inclus puis écrire le code suivant dans la cellule du bloc-notes : 
 
 ```python
 import <package-name>
@@ -150,9 +162,9 @@ import <package-name>
 
 Lorsque vous exécutez cette commande, vous obtiendrez un `Module not found` erreur. Si votre package existe, puis vous pas obtiendrez l’erreur.
 
-Si vous trouvez un `Module not Found` erreur, puis cliquez sur le **gérer les Packages** pour lancer le terminal avec le chemin d’accès pour votre Virtualenv identifié. Vous pouvez désormais installer les packages localement. Utilisez la commande suivante pour installer les packages :
+Si vous trouvez un `Module not Found` erreur, puis cliquez sur **gérer les Packages** pour lancer le terminal avec le chemin d’accès pour votre Virtualenv identifié. Vous pouvez désormais installer les packages localement. Utilisez les commandes suivantes pour installer les packages :
 
-```
+```bash
 ./pip install <package-name>
 ```
 
@@ -164,9 +176,9 @@ import <package-name>
 
 Maintenant lorsque vous exécutez la cellule, vous devez obtenir n’est plus le `Module not found` erreur.
 
-Si vous souhaitez désinstaller un package, utilisez la commande suivante à partir de votre terminal :
+Pour désinstaller un package, utilisez la commande suivante à partir de votre terminal :
 
-```
+```bash
 ./pip uninstall <package-name>
 ```
 

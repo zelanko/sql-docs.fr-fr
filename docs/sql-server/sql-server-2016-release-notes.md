@@ -14,12 +14,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: da1dd90bb9a6ed19ed7bcbffc7afdfd0298291e2
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: 4615707f7d3df5da90f8eea999ba290ae2ee0366
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419474"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269993"
 ---
 # <a name="sql-server-2016-release-notes"></a>Notes de publication de SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ Améliorations relatives à la prise en charge et aux diagnostics incluses dans 
 |   --- |   --- |   --- |
 |Prise en charge complète de DTC pour les bases de données dans un groupe de disponibilité    |   Les transactions entre bases de données faisant partie d’un groupe de disponibilité ne sont actuellement pas prises en charge pour SQL Server 2016. Avec SQL Server 2016 SP2, nous présentons la prise en charge complète des transactions distribuées avec des bases de données de groupes de disponibilité.   |       |
 |Mise à jour de la colonne is_encrypted de sys.databases pour refléter de manière correcte l’état du chiffrement pour TempDB |   La valeur de la colonne is_encryptedcolumn dans sys.databases est égale à 1 pour TempDB, même après la désactivation du chiffrement pour toutes les bases de données utilisateur et le redémarrage de SQL Server. Le comportement attendu est une valeur de 0, car TempDB n’est plus chiffré dans ce cas. À partir de SQL Server 2016 SP2, sys.databases.is_encrypted reflète maintenant de manière correcte l’état du chiffrement pour TempDB.  |       |
-|Nouvelles options DBCC CLONEDATABASE pour générer un clone et une sauvegarde vérifiés   |   Avec SQL Server 2016 SP2, DBCC CLONEDATABASE offre deux nouvelles options : créer un clone vérifié ou créer une sauvegarde vérifiée. Lorsqu’une base de données clone est créée avec l’option WITH VERIFY_CLONEDB, un clone de base de données cohérent est créé et vérifié. Celui-ci est pris en charge par Microsoft pour une utilisation en production. Une nouvelle propriété est présentée pour valider que le clone est vérifié SELECT DATABASEPROPERTYEX(‘clone_database_name’, ‘IsVerifiedClone’). Lorsqu’un clone est créé avec l’option BACKUP_CLONEDB, une sauvegarde est générée dans le même dossier que le fichier de données afin de faciliter, pour les utilisateurs, le déplacement du clone vers un autre serveur ou son envoi au Support technique Microsoft à des fins de résolution des problèmes.  |       |
+|Nouvelles options DBCC CLONEDATABASE pour générer un clone et une sauvegarde vérifiés   |   Avec SQL Server 2016 SP2, DBCC CLONEDATABASE offre deux nouvelles options : produire un clone vérifié ou un clone de sauvegarde. Lorsqu’une base de données clone est créée avec l’option WITH VERIFY_CLONEDB, un clone de base de données cohérent est créé et vérifié. Celui-ci est pris en charge par Microsoft pour une utilisation en production. Une nouvelle propriété est présentée pour valider que le clone est vérifié SELECT DATABASEPROPERTYEX(‘clone_database_name’, ‘IsVerifiedClone’). Lorsqu’un clone est créé avec l’option BACKUP_CLONEDB, une sauvegarde est générée dans le même dossier que le fichier de données afin de faciliter, pour les utilisateurs, le déplacement du clone vers un autre serveur ou son envoi au Support technique Microsoft à des fins de résolution des problèmes.  |       |
 |Prise en charge de Service Broker (SSB) pour DBCC CLONEDATABASE    |   Commande DBCC CLONEDATABASE améliorée pour autoriser le script d’objets SSB.  |   [KB4092075](https://support.microsoft.com/en-us/help/4092075)   |
 |Nouvelle vue de gestion dynamique (DMV) pour surveiller l’utilisation de l’espace du magasin de versions TempDB    |   Une nouvelle DMV sys.dm_tran_version_store_space_usage est présentée dans SQL Server 2016 SP2 pour permettre le monitoring de l’utilisation du magasin de versions par TempDB. Les Administrateurs de base de données peuvent désormais planifier de manière proactive le dimensionnement de TempDB en fonction des exigences d’utilisation du magasin de versions par base de données, sans surcharge des performances en cas d’exécution sur des serveurs de production. |       |
 |Prise en charge complète des vidages (dumps) pour les agents de réplication | Actuellement, si les agents de réplication rencontrent une exception non gérée, le comportement par défaut est de créer un vidage minimal des symptômes de l’exception. Cela rend la résolution des problèmes d’une exception non gérée très difficile. Via cette modification, nous introduisons une nouvelle clé de registre, qui permet de créer un vidage complet pour les Agents de réplication.  |       |

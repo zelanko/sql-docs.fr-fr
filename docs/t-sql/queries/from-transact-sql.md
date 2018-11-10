@@ -35,12 +35,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0955a3d8db2e9969996d0a9e37a3f20645f18f70
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e2f3642a8638fc39c538bb2609e061c2491a0136
+ms.sourcegitcommit: f9b4078dfa3704fc672e631d4830abbb18b26c85
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753427"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50966037"
 ---
 # <a name="from-transact-sql"></a>FROM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -409,15 +409,15 @@ ON (p.ProductID = v.ProductID);
 ## <a name="using-apply"></a>Utilisation de l'opérateur APPLY  
  Les opérandes de gauche et de droite de l'opérateur APPLY sont des expressions de table. Leur principale différence est que *right_table_source* peut utiliser une fonction table qui prend une colonne de *left_table_source* comme l’un des arguments de cette fonction. *left_table_source* peut inclure des fonctions table, mais ne peut pas contenir d’arguments qui représentent des colonnes de *right_table_source*.  
   
- L'opérateur APPLY fonctionne de la même façon pour produire la source de table pour la clause FROM :  
+L'opérateur APPLY fonctionne de la même façon pour produire la source de table pour la clause FROM :  
   
 1.  Évalue *right_table_source* par rapport à chaque ligne de *left_table_source* pour générer des ensembles de lignes.  
   
-     Les valeurs dans *right_table_source* dépendent de *left_table_source*. *right_table_source* peut être représenté approximativement de la façon suivante : `TVF(left_table_source.row)`, où `TVF` est une fonction table.  
+    Les valeurs dans *right_table_source* dépendent de *left_table_source*. *right_table_source* peut être représenté approximativement de la façon suivante : `TVF(left_table_source.row)`, où `TVF` est une fonction table.  
   
 2.  Combine les jeux de résultats générés pour chaque ligne lors de l’évaluation de *right_table_source* avec *left_table_source* en effectuant une opération UNION ALL.  
   
-     La liste de colonnes résultant de l’utilisation de l’opérateur APPLY correspond à l’ensemble des colonnes de *left_table_source*, combiné avec la liste des colonnes de *right_table_source*.  
+    La liste de colonnes résultant de l’utilisation de l’opérateur APPLY correspond à l’ensemble des colonnes de *left_table_source*, combiné avec la liste des colonnes de *right_table_source*.  
   
 ## <a name="using-pivot-and-unpivot"></a>Utilisation des opérateurs PIVOT et UNPIVOT  
  *pivot_column* et *value_column* sont des colonnes de regroupement utilisées par l’opérateur PIVOT. PIVOT suit le processus ci-après pour obtenir le jeu de résultats de sortie :  
@@ -579,32 +579,35 @@ FROM Sales.Customer TABLESAMPLE SYSTEM (10 PERCENT) ;
 ```  
   
 ### <a name="k-using-apply"></a>K. Utilisation de l'opérateur APPLY  
- L'exemple suivant suppose que les tables ci-après associées au schéma suivant existent dans la base de données :  
+L’exemple suivant part du principe que les tables et la fonction table ci-après existent dans la base de données :  
+
+|Nom de l’objet|Noms des colonnes|      
+|---|---|   
+|Departments|DeptID, DivisionID, DeptName, DeptMgrID|      
+|EmpMgr|MgrID, EmpID|     
+|Employees|EmpID, EmpLastName, EmpFirstName, EmpSalary|  
+|GetReports(MgrID)|EmpID, EmpLastName, EmpSalary|     
   
--   `Departments`: `DeptID`, `DivisionID`, `DeptName`, `DeptMgrID`  
+La fonction table `GetReports` retourne la liste de tous les employés qui rendent directement ou indirectement compte au `MgrID` spécifié.  
   
--   `EmpMgr`: `MgrID`, `EmpID`  
-  
--   `Employees`: `EmpID`, `EmpLastName`, `EmpFirstName`, `EmpSalary`  
-  
- Il existe également une fonction table, `GetReports(MgrID)`, qui retourne la liste de tous les employés (`EmpID`, `EmpLastName`, `EmpSalary`) qui rendent directement ou indirectement compte au `MgrID` spécifié.  
-  
- L'exemple utilise `APPLY` pour retourner tous les services et tous les employés qui en font partie. Si un service particulier est dépourvu d'employés, aucune ligne n'est retournée pour celui-ci.  
+L'exemple utilise `APPLY` pour retourner tous les services et tous les employés qui en font partie. Si un service particulier est dépourvu d'employés, aucune ligne n'est retournée pour celui-ci.  
   
 ```sql
 SELECT DeptID, DeptName, DeptMgrID, EmpID, EmpLastName, EmpSalary  
-FROM Departments d CROSS APPLY dbo.GetReports(d.DeptMgrID) ;  
+FROM Departments d    
+CROSS APPLY dbo.GetReports(d.DeptMgrID) ;  
 ```  
   
- Si vous souhaitez que la requête génère des lignes pour ces services sans employés, ce qui produira des valeurs NULL pour les colonnes `EmpID`, `EmpLastName` et `EmpSalary`, utilisez `OUTER APPLY` à la place.  
+Si vous souhaitez que la requête génère des lignes pour ces services sans employés, ce qui produira des valeurs NULL pour les colonnes `EmpID`, `EmpLastName` et `EmpSalary`, utilisez `OUTER APPLY` à la place.  
   
 ```sql
 SELECT DeptID, DeptName, DeptMgrID, EmpID, EmpLastName, EmpSalary  
-FROM Departments d OUTER APPLY dbo.GetReports(d.DeptMgrID) ;  
+FROM Departments d   
+OUTER APPLY dbo.GetReports(d.DeptMgrID) ;  
 ```  
   
 ### <a name="l-using-cross-apply"></a>L. Utilisation de l'opérateur CROSS APPLY  
- L'exemple suivant récupère un instantané de tous les plans de requête résidant dans la mémoire cache des plans, en interrogeant la vue de gestion dynamique `sys.dm_exec_cached_plans` pour récupérer les descripteurs de plan de tous les plans de requête dans le cache. L'opérateur `CROSS APPLY` est spécifié pour transmettre les descripteurs de plan à `sys.dm_exec_query_plan`. La sortie du plan d'exécution de requêtes XML pour chaque plan actuellement dans la mémoire cache des plans se trouve dans la colonne `query_plan` de la table retournée.  
+L'exemple suivant récupère un instantané de tous les plans de requête résidant dans la mémoire cache des plans, en interrogeant la vue de gestion dynamique `sys.dm_exec_cached_plans` pour récupérer les descripteurs de plan de tous les plans de requête dans le cache. L'opérateur `CROSS APPLY` est spécifié pour transmettre les descripteurs de plan à `sys.dm_exec_query_plan`. La sortie du plan d'exécution de requêtes XML pour chaque plan actuellement dans la mémoire cache des plans se trouve dans la colonne `query_plan` de la table retournée.  
   
 ```sql
 USE master;  

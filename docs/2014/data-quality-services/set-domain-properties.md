@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.dm.domainproperties.f1
@@ -13,12 +12,12 @@ ms.assetid: 8a3c88ca-31d6-4f75-9aca-cf027c6d9845
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6076ee4d222a405fb5243e07575b01c7da0a4dde
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a71a8084b2fb36135a87c24f902507a6ab790247
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190959"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51030872"
 ---
 # <a name="set-domain-properties"></a>Définir des propriétés de domaine
   Cette rubrique décrit comment définir des propriétés de domaine dans [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS).  
@@ -35,11 +34,11 @@ ms.locfileid: "48190959"
   
 ##  <a name="Set"></a> Définir des propriétés de domaine  
   
-1.  Définir des propriétés sur un domaine existant en ouvrant une base de connaissances dans l’activité de gestion de domaine (consultez [ouvrir une Base de connaissances](../../2014/data-quality-services/open-a-knowledge-base.md)), puis en sélectionnant le domaine approprié dans le **domaine** liste. La page Propriétés du domaine sera affichée par défaut.  
+1.  Définissez des propriétés sur un domaine existant en ouvrant une base de connaissances dans l'activité de gestion de l'arborescence du domaine (consultez [Open a Knowledge Base](../../2014/data-quality-services/open-a-knowledge-base.md)), puis en sélectionnant le domaine approprié dans la liste **Domaine** . La page Propriétés du domaine sera affichée par défaut.  
   
-2.  Définir des propriétés sur un nouveau domaine après sa création comme décrit dans [créer un domaine](../../2014/data-quality-services/create-a-domain.md).  
+2.  Définissez des propriétés sur un nouveau domaine après sa création comme décrit dans [Create a Domain](../../2014/data-quality-services/create-a-domain.md).  
   
-3.  Cliquez sur **Terminer** pour terminer l’activité de gestion de domaine, comme décrit dans [End the Domain Management Activity](../../2014/data-quality-services/end-the-domain-management-activity.md).  
+3.  Cliquez sur **Terminer** pour terminer l'activité de gestion de l'arborescence du domaine, comme décrit dans [End the Domain Management Activity](../../2014/data-quality-services/end-the-domain-management-activity.md).  
   
 ##  <a name="FollowUp"></a> Suivi : Après avoir défini les propriétés de domaine  
  Après avoir défini les propriétés de domaine, vous pouvez effectuer d'autres tâches de gestion des domaines sur le domaine, effectuer une découverte des connaissances pour ajouter des connaissances au domaine ou ajouter une stratégie de correspondance au domaine. Pour plus d’informations, consultez [Effectuer une découverte des connaissances](../../2014/data-quality-services/perform-knowledge-discovery.md), [Gestion d’un domaine](../../2014/data-quality-services/managing-a-domain.md) ou [Créer une stratégie de correspondance](../../2014/data-quality-services/create-a-matching-policy.md).  
@@ -84,7 +83,7 @@ ms.locfileid: "48190959"
 ###  <a name="Speller"></a> Activer le vérificateur d'orthographe  
  Si le type de données est **Chaîne**, cliquez pour activer le vérificateur d'orthographe DQS pour le domaine. Le vérificateur d'orthographe fonctionne uniquement sur les domaines dont le type de données est chaîne. La case à cocher **Activer le vérificateur d'orthographe** active le vérificateur d'orthographe uniquement pour le seul domaine associé à la case à cocher. La case à cocher ne s'applique pas à un domaine composite.  
   
- Le vérificateur d'orthographe propose des corrections de syntaxe et de validation pour les valeurs du domaine. Pour plus d’informations, consultez [utiliser le vérificateur d’orthographe DQS](../../2014/data-quality-services/use-the-dqs-speller.md).  
+ Le vérificateur d'orthographe propose des corrections de syntaxe et de validation pour les valeurs du domaine. Pour plus d'informations, consultez [Use the DQS Speller](../../2014/data-quality-services/use-the-dqs-speller.md).  
   
 ###  <a name="Syntax"></a> Désactiver les algorithmes d'erreur de syntaxe  
  Si le type de données est **Chaîne**, activez cette case à cocher pour spécifier que les erreurs de syntaxe ne sont pas identifiées par DQS dans le domaine lors du nettoyage. Activez cette case à cocher lorsque l'identification des erreurs de syntaxe pour ce domaine n'est pas nécessaire. Par exemple, l'identification des erreurs de syntaxe peut ne pas être importante pour un numéro de série. Ce contrôle est uniquement disponible pour le type de données chaîne. DQS ne recherche pas les erreurs de syntaxe dans les types de données autres que chaîne.  

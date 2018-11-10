@@ -1,17 +1,17 @@
 ---
 layout: HubPage
 hide_bc: true
-title: Centre de formation SQL Server
-description: Explorez une compilation de ressources de formation pour SQL Server.
+title: Documentation de Microsoft Azure
+description: Découvrez comment générer et gérer des applications puissantes à l’aide des services cloud Microsoft Azure. Obtenez de la documentation, des exemples de code, des tutoriels et bien plus encore.
 ms.topic: hub-page
 featureFlags:
 - clicktale
-ms.openlocfilehash: a50d7112ca9f3e8ff9fa5d2a37a037a3322e2cf3
-ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
+ms.openlocfilehash: c0e888c799ce57814cbe0a66e7242258f9fe5ed9
+ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49336178"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50970818"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -74,403 +74,595 @@ ms.locfileid: "49336178"
     </div>
     <div class="container">
         <h1>SQL Server : centre de formation</h1>
-        <ul class="pivots tabLess">
-            <li class="pivotItem" style="display: list-item;" data-id="#products">
-                <a href="#products" data-linktype="self-bookmark"></a>
-                <ul id="products">
-                    <li class="panelItem" data-index="0">
-                        <a class="singlePanelNavItem selected" href="#products1" data-linktype="self-bookmark"></a>
-                        <ul class="cardsD panelContent singlePanelContent" id="products1" style="margin-top: 0px; display: flex;">
-                           <li class="fullSpan">
-                                <div class="container intro">
-                                <h2>Didacticiels</h2>
-                            </li>
-                            <li>
-                                <a href="/sql/relational-databases/tutorial-getting-started-with-the-database-engine">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage">
-                                                        <img src="media/sql-education-center/getting-started-db-engine.svg" alt="" />
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Bien démarrer avec le moteur de base de données</h3>
-                                                    <p>Ce tutoriel vous apprend à vous connecter à une instance du moteur de base de données. </p>
-                                                </div>
+        <h2>Démarrages rapides</h2>
+         <ul class="cardsF panelContent singlePanelContent" style="display:flex!important;">
+                        <li>
+                            <a href="/azure/virtual-machines/windows/sql/quickstart-sql-vm-create-portal" data-linktype="external">
+                            <div class="cardSize">
+                                <div class="cardPadding">
+                                    <div class="card">
+                                        <div class="cardImageOuter">
+                                            <div class="cardImage">
+                                                <img src="media/sql-education-center/sql-iaas-quickstart.svg" alt="" data-linktype="external">
                                             </div>
                                         </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/sql/ssms/tutorials/tutorial-sql-server-management-studio">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage">
-                                                        <img src="media/sql-education-center/sql-mgmt-studio.svg" alt="" />
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>SQL Server Management Studio</h3>
-                                                    <p>Ce tutoriel vous présente l'environnement intégré pour la gestion de votre infrastructure SQL Server. SQL Server Management Studio présente une interface graphique pour configurer, surveiller et administrer les instances de SQL Server. </p>
-                                                </div>
-                                            </div>
+                                        <div class="cardText">
+                                            <p>SQL Server 2017 sur machine virtuelle Windows</p>
                                         </div>
                                     </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/sql/tools/dta/tutorial-database-engine-tuning-advisor/">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage">
-                                                        <img src="media/sql-education-center/db-tuning-advisor-tutorial.svg" alt="" />
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Database Engine Tuning Advisor</h3>
-                                                    <p>Ce didacticiel vous explique comment utiliser l'Assistant pour examiner la façon dont les requêtes sont traitées, puis pour passer en revue les recommandations visant à améliorer les performances des requêtes.</p>
-                                                </div>
+                                </div>
+                            </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/sql/azure-data-studio/quickstart-sql-server" data-linktype="external">
+                            <div class="cardSize">
+                                <div class="cardPadding">
+                                    <div class="card">
+                                        <div class="cardImageOuter">
+                                            <div class="cardImage">
+                                                <img src="media/sql-education-center/ads-quickstart.svg" alt="" data-linktype="external">
                                             </div>
                                         </div>
-                                    </div>
-                                </a>
-                            </li> 
-                            <li>
-                                <a href="/sql/relational-databases/tables/tutorial-using-the-hierarchyid-data-type/">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage">
-                                                        <img src="media/sql-education-center/use-heir-data.svg" alt="" />
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Utilisation du type de données hierarchyid</h3>
-                                                    <p>Ce didacticiel vous apprend à convertir une table en structure hiérarchique, puis à gérer les données dans la table.</p>
-                                                </div>
-                                            </div>
+                                        <div class="cardText">
+                                            <p>Utilisation d’Azure Data Studio </p> 
                                         </div>
                                     </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/sql/t-sql/tutorial-writing-transact-sql-statements/">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage">
-                                                        <img src="media/sql-education-center/writing-t-sql.svg" alt="" />
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Écriture d'instructions Transact-SQL</h3>
-                                                    <p> Ce tutoriel vous apprend les techniques fondamentales d'écriture d'instructions Transact-SQL pour créer et gérer des objets dans une base de données SQL Server.</p>
-                                                </div>
+                                </div>
+                            </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/sql/linux/quickstart-install-connect-red-hat" data-linktype="external">
+                            <div class="cardSize">
+                                <div class="cardPadding">
+                                    <div class="card">
+                                        <div class="cardImageOuter">
+                                            <div class="cardImage">
+                                                <img src="media/sql-education-center/linux-quickstart.svg" alt="" data-linktype="external">
                                             </div>
                                         </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/sql/relational-databases/tutorial-signing-stored-procedures-with-a-certificate/">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage">
-                                                        <img src="media/sql-education-center/sign-stored-procedures.svg" alt="" />
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Signature de procédures stockées à l’aide d’un certificat</h3>
-                                                    <p>Ce tutoriel explique comment signer des procédures stockées à l’aide d’un certificat généré par SQL Server.</p>
-                                                </div>
-                                            </div>
+                                        <div class="cardText">
+                                            <p>Exécution de SQL Server sur Linux</p> 
                                         </div>
                                     </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/sql/relational-databases/tutorial-ownership-chains-and-context-switching/">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage">
-                                                        <img src="media/sql-education-center/ownership-chains.svg" alt="" />
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Chaînes de propriétés et changement de contexte</h3>
-                                                    <p>Ce tutoriel explore en se fondant sur un scénario les concepts de sécurité de SQL Server impliquant les chaînes de propriétés et le changement de contexte utilisateur.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/sql/relational-databases/policy-based-management/tutorial-administering-servers-by-using-policy-based-management/">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage">
-                                                        <img src="media/sql-education-center/admin-policybasemgmt.svg" alt="" />
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Administration de serveurs à l'aide de la Gestion basée sur des stratégies</h3>
-                                                    <p>Il vous apprend comment créer des stratégies qui appliquent des normes d'administration de site.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/sql/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage">
-                                                        <img src="media/sql-education-center/back-up-restore-to-azure-blob.svg" alt="" />
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Sauvegarde et restauration SQL Server dans le service de Stockage Blob Windows Azure</h3>
-                                                    <p>Ce didacticiel explique comment effectuer une sauvegarde et une restauration SQL Server dans le service de Stockage Blob Windows Azure.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/sql/relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016/">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage">
-                                                        <img src="media/sql-education-center/use-azure-blob-storage-2016.svg" alt="" />
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Utilisation du service Stockage Blob Microsoft Azure avec des bases de données SQL Server 2016 </h3>
-                                                    <p>Ce didacticiel explique comment stocker directement des fichiers de données SQL Server dans le service de stockage d'objets blob Windows Azure.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>  
-                            <li class="fullSpan">
-                                <div class="container intro">
-                                <h2>Guides internes SQL</h2>
-                            </li>
-                            <li>
-                                <a href="/sql/relational-databases/ghost-record-cleanup-process-guide/">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage">
-                                                        <img src="media/sql-education-center/ghost-record.svg" alt="" />
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Processus de nettoyage des enregistrements fantômes</h3>
-                                                    <p> Ce guide fournit une vue d’ensemble du processus de nettoyage des enregistrements fantômes, un processus en arrière-plan qui supprime les enregistrements marqués pour suppression dans des pages. </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/sql/relational-databases/sql-server-index-design-guide/">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage">
-                                                        <img src="media/sql-education-center/index-arch-design.svg" alt="" />
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Architecture et conception des index</h3>
-                                                    <p>Ce guide contient des informations sur l’architecture des index, ainsi que des bonnes pratiques permettant de créer des index performants et adaptés aux besoins de votre application. </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/sql/relational-databases/memory-management-architecture-guide/">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage">
-                                                        <img src="media/sql-education-center/memory-mgmt-arch.svg" alt="" />
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Architecture de gestion de la mémoire</h3>
-                                                    <p> Ce guide explique comment SQL Server gère la mémoire, ainsi que l’utilisation de la mémoire pendant la lecture et l’écriture de pages. </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/sql/relational-databases/pages-and-extents-architecture-guide/">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage">
-                                                        <img src="media/sql-education-center/pages-extents-architecture.svg" alt="" />
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Architecture des pages et étendues</h3>
-                                                    <p>Ce guide décrit les structures de données utilisées pour gérer les pages et les étendues dans toutes les versions de SQL Server. Il est essentiel de comprendre l'architecture des pages et étendues pour concevoir et développer des bases de données performantes.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/sql/relational-databases/post-migration-validation-and-optimization-guide/">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage">
-                                                        <img src="media/sql-education-center/post-migration-validation.svg" alt="" />
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Optimisation et validation de la post-migration</h3>
-                                                    <p>Vue d’ensemble de quelques scénarios de performance courants rencontrés après la migration vers SQL Server et leur résolution. </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/sql/relational-databases/query-processing-architecture-guide/">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage">
-                                                        <img src="media/sql-education-center/query-process-arch.svg" alt="" />
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Architecture de traitement des requêtes</h3>
-                                                    <p>Le moteur de base de données SQL Server traite les requêtes sur diverses architectures de stockage des données, telles que des tables locales, des tables partitionnées et des tables distribuées sur plusieurs serveurs. Ce guide explique comment SQL Server traite les requêtes et optimise leur réutilisation grâce à la mise en cache du plan d’exécution. </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/sql/relational-databases/sql-server-transaction-log-architecture-and-management-guide/">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage">
-                                                        <img src="media/sql-education-center/trans-log-arch.svg" alt="" />
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Architecture et gestion du journal des transactions</h3>
-                                                    <p> Ce guide contient des informations sur l'architecture physique et logique du journal des transactions. Ces informations pourront vous aider à gérer plus efficacement les journaux des transactions. </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/sql/relational-databases/thread-and-task-architecture-guide/">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage">
-                                                        <img src="media/sql-education-center/thread-task-arch.svg" alt="" />
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Architecture de threads et de tâches</h3>
-                                                    <p>Les threads sont une caractéristique du système d'exploitation qui permettent à la logique de l'application d'être séparée en plusieurs chemins d'exécution simultanés. Ce guide explique comment SQL manipule des threads et des tâches. </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/sql/relational-databases/sql-server-transaction-log-architecture-and-management-guide/">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage">
-                                                        <img src="media/sql-education-center/trans-log-arch.svg" alt="" />
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Verrouillage des transactions et contrôle de version de ligne</h3>
-                                                    <p> Ce guide présente les mécanismes de verrouillage et de contrôle de version de ligne utilisés par le moteur de base de données SQL Server pour garantir l'intégrité physique de chaque transaction et contient des informations sur la façon dont les applications peuvent contrôler efficacement les transactions. </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>                            
-                        </ul>
-                    </li>
+                                </div>
+                            </div>
+                            </a>
+                        </li>
                 </ul>
-            </li>
-        </ul>
+           <h2>Didacticiels</h2>
+         <ul class="cardsF panelContent singlePanelContent" style="display:flex!important;">
+                           <li>
+                            <a href="/sql/relational-databases/tutorial-getting-started-with-the-database-engine" data-linktype="external">
+                            <div class="cardSize">
+                                <div class="cardPadding">
+                                    <div class="card">
+                                        <div class="cardImageOuter">
+                                            <div class="cardImage">
+                                                <img src="media/sql-education-center/sql_tutorials.svg" alt="" data-linktype="external">
+                                            </div>
+                                        </div>
+                                        <div class="cardText">
+                                            <p>Moteur de base de données SQL Server</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/sql/tools/dta/tutorial-database-engine-tuning-advisor/" data-linktype="external">
+                            <div class="cardSize">
+                                <div class="cardPadding">
+                                    <div class="card">
+                                        <div class="cardImageOuter">
+                                            <div class="cardImage">
+                                                <img src="media/sql-education-center/sql_tutorials.svg" alt="" data-linktype="external">
+                                            </div>
+                                        </div>
+                                        <div class="cardText">
+                                            <p>Database Engine Tuning Advisor</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/sql/relational-databases/tables/tutorial-using-the-hierarchyid-data-type/" data-linktype="external">
+                            <div class="cardSize">
+                                <div class="cardPadding">
+                                    <div class="card">
+                                        <div class="cardImageOuter">
+                                            <div class="cardImage">
+                                                <img src="media/sql-education-center/sql_tutorials.svg" alt="" data-linktype="external">
+                                            </div>
+                                        </div>
+                                        <div class="cardText">
+                                            <p>Utilisation du type de données hierarchyid</p> 
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/sql/relational-databases/tutorial-signing-stored-procedures-with-a-certificate/" data-linktype="absolute-path">
+                            <div class="cardSize">
+                                <div class="cardPadding">
+                                    <div class="card">
+                                        <div class="cardImageOuter">
+                                            <div class="cardImage">
+                                                <img src="media/sql-education-center/sql_tutorials.svg" alt="" data-linktype="external">
+                                            </div>
+                                        </div>
+                                        <div class="cardText">
+                                             <p>Signature de procédures stockées à l’aide d’un certificat</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/sql/relational-databases/tutorial-ownership-chains-and-context-switching/" data-linktype="external">
+                            <div class="cardSize">
+                                <div class="cardPadding">
+                                    <div class="card">
+                                        <div class="cardImageOuter">
+                                            <div class="cardImage">
+                                                <img src="media/sql-education-center/sql_tutorials.svg" alt="" data-linktype="external">
+                                            </div>
+                                        </div>
+                                        <div class="cardText">
+                                            <p>Chaînes de propriétés et changement de contexte</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/sql/relational-databases/policy-based-management/tutorial-administering-servers-by-using-policy-based-management/" data-linktype="external">
+                            <div class="cardSize">
+                                <div class="cardPadding">
+                                    <div class="card">
+                                        <div class="cardImageOuter">
+                                            <div class="cardImage">
+                                                <img src="media/sql-education-center/sql_tutorials.svg" alt="" data-linktype="external">
+                                            </div>
+                                        </div>
+                                        <div class="cardText">
+                                            <p>Administration de serveurs à l'aide de la Gestion basée sur des stratégies</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/sql/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/" data-linktype="external">
+                            <div class="cardSize">
+                                <div class="cardPadding">
+                                    <div class="card">
+                                        <div class="cardImageOuter">
+                                            <div class="cardImage">
+                                                <img src="media/sql-education-center/sql_tutorials.svg" alt="" data-linktype="external">
+                                            </div>
+                                        </div>
+                                        <div class="cardText">
+                                            <p>Sauvegarde et restauration SQL Server dans le service de Stockage Blob Windows Azure</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/sql/relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016/" data-linktype="external">
+                            <div class="cardSize">
+                                <div class="cardPadding">
+                                    <div class="card">
+                                        <div class="cardImageOuter">
+                                            <div class="cardImage">
+                                                <img src="media/sql-education-center/sql_tutorials.svg" alt="" data-linktype="external">
+                                            </div>
+                                        </div>
+                                        <div class="cardText">
+                                            <p>Utilisation du service Stockage Blob Microsoft Azure avec des bases de données SQL Server 2016</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </a>
+                          </li>
+                        <li>
+                            <a href="/sql/ssms/tutorials/tutorial-sql-server-management-studio" data-linktype="external">
+                            <div class="cardSize">
+                                <div class="cardPadding">
+                                    <div class="card">
+                                        <div class="cardImageOuter">
+                                            <div class="cardImage">
+                                                <img src="media/sql-education-center/ssms_tutorials.svg" alt="" data-linktype="external">
+                                            </div>
+                                        </div>
+                                        <div class="cardText">
+                                            <p>SQL Server Management Studio</p> 
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/sql/t-sql/tutorial-writing-transact-sql-statements/" data-linktype="external">
+                            <div class="cardSize">
+                                <div class="cardPadding">
+                                    <div class="card">
+                                        <div class="cardImageOuter">
+                                            <div class="cardImage">
+                                                <img src="media/sql-education-center/tsql_tutorials.svg" alt="" data-linktype="external">
+                                            </div>
+                                        </div>
+                                        <div class="cardText">
+                                            <p>Écriture d'instructions Transact-SQL</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </a>
+                        </li>
+                         <li>
+                            <a href="/sql/advanced-analytics/tutorials/machine-learning-services-tutorials/" data-linktype="external">
+                            <div class="cardSize">
+                                <div class="cardPadding">
+                                    <div class="card">
+                                        <div class="cardImageOuter">
+                                            <div class="cardImage">
+                                                <img src="media/sql-education-center/sqlml_tutorials.svg" alt="" data-linktype="external">
+                                            </div>
+                                        </div>
+                                        <div class="cardText">
+                                            <p>SQL Server Machine Learning Services</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </a>
+                          </li>
+                           <li>
+                            <a href="/sql/reporting-services/reporting-services-tutorials-ssrs/" data-linktype="external">
+                            <div class="cardSize">
+                                <div class="cardPadding">
+                                    <div class="card">
+                                        <div class="cardImageOuter">
+                                            <div class="cardImage">
+                                                <img src="media/sql-education-center/ssrs_tutorials.svg" alt="" data-linktype="external">
+                                            </div>
+                                        </div>
+                                        <div class="cardText">
+                                            <p>SQL Server Reporting Services</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </a>
+                          </li>
+                           <li>
+                            <a href="/sql/analysis-services/analysis-services-tutorials-ssas/" data-linktype="external">
+                            <div class="cardSize">
+                                <div class="cardPadding">
+                                    <div class="card">
+                                        <div class="cardImageOuter">
+                                            <div class="cardImage">
+                                                <img src="media/sql-education-center/ssas_tutorials.svg" alt="" data-linktype="external">
+                                            </div>
+                                        </div>
+                                        <div class="cardText">
+                                            <p>SQL Server Analysis Services</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </a>
+                          </li>
+                           <li>
+                            <a href="/sql/integration-services/integration-services-tutorials/" data-linktype="external">
+                            <div class="cardSize">
+                                <div class="cardPadding">
+                                    <div class="card">
+                                        <div class="cardImageOuter">
+                                            <div class="cardImage">
+                                                <img src="media/sql-education-center/ssis_tutorials.svg" alt="" data-linktype="external">
+                                            </div>
+                                        </div>
+                                        <div class="cardText">
+                                            <p>SQL Server Integration Services</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </a>
+                          </li>
+                    </ul>        
+                   <h2>Guides internes SQL</h2>
+                   <ul class="cardsF panelContent singlePanelContent" style="display:flex!important;">
+                        <li>
+                            <a href="/sql/relational-databases/ghost-record-cleanup-process-guide/" data-linktype="external">
+                            <div class="cardSize">
+                                <div class="cardPadding">
+                                    <div class="card">
+                                        <div class="cardImageOuter">
+                                            <div class="cardImage">
+                                                <img src="media/sql-education-center/guides.svg" alt="" data-linktype="external">
+                                            </div>
+                                        </div>
+                                        <div class="cardText">
+                                            <h3>Processus de nettoyage des enregistrements fantômes</h3>
+                                            <p>Fournit une vue d’ensemble du processus en arrière-plan qui supprime les enregistrements marqués pour suppression dans des pages.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/sql/relational-databases/sql-server-index-design-guide/" data-linktype="external">
+                            <div class="cardSize">
+                                <div class="cardPadding">
+                                    <div class="card">
+                                        <div class="cardImageOuter">
+                                            <div class="cardImage">
+                                                <img src="media/sql-education-center/guides.svg" alt="" data-linktype="external">
+                                            </div>
+                                        </div>
+                                        <div class="cardText">
+                                            <h3>Architecture et conception des index</h3>
+                                            <p>Contient des informations sur l’architecture des index, ainsi que des bonnes pratiques permettant de créer des index performants.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/sql/relational-databases/memory-management-architecture-guide/" data-linktype="external">
+                            <div class="cardSize">
+                                <div class="cardPadding">
+                                    <div class="card">
+                                        <div class="cardImageOuter">
+                                            <div class="cardImage">
+                                                <img src="media/sql-education-center/guides.svg" alt="" data-linktype="external">
+                                            </div>
+                                        </div>
+                                        <div class="cardText">
+                                            <h3>Architecture de gestion de la mémoire</h3>
+                                            <p>Explique comment SQL Server gère la mémoire, ainsi que l’utilisation de la mémoire pendant la lecture et l’écriture de pages.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/sql/relational-databases/pages-and-extents-architecture-guide/" data-linktype="external">
+                            <div class="cardSize">
+                                <div class="cardPadding">
+                                    <div class="card">
+                                        <div class="cardImageOuter">
+                                            <div class="cardImage">
+                                                <img src="media/sql-education-center/guides.svg" alt="" data-linktype="external">
+                                            </div>
+                                        </div>
+                                        <div class="cardText">
+                                            <h3>Architecture des pages et extensions</h3>
+                                            <p>Décrit les structures de données utilisées pour gérer les pages et les étendues dans toutes les versions de SQL Server.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/sql/relational-databases/post-migration-validation-and-optimization-guide/" data-linktype="external">
+                            <div class="cardSize">
+                                <div class="cardPadding">
+                                    <div class="card">
+                                        <div class="cardImageOuter">
+                                            <div class="cardImage">
+                                                <img src="media/sql-education-center/guides.svg" alt="" data-linktype="external">
+                                            </div>
+                                        </div>
+                                        <div class="cardText">
+                                            <h3>Optimisation et validation de la post-migration</h3>
+                                            <p>Vue d’ensemble de quelques scénarios de performance courants rencontrés après la migration vers SQL Server et leur résolution.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/sql/relational-databases/query-processing-architecture-guide/" data-linktype="absolute-path">
+                            <div class="cardSize">
+                                <div class="cardPadding">
+                                    <div class="card">
+                                        <div class="cardImageOuter">
+                                            <div class="cardImage">
+                                                <img src="media/sql-education-center/guides.svg" alt="" data-linktype="external">
+                                            </div>
+                                        </div>
+                                        <div class="cardText">
+                                            <h3>Architecture du traitement des requêtes</h3>
+                                            <p>Explique comment SQL Server traite les requêtes et optimise leur réutilisation grâce à la mise en cache du plan d’exécution.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/sql/relational-databases/sql-server-transaction-log-architecture-and-management-guide/" data-linktype="external">
+                            <div class="cardSize">
+                                <div class="cardPadding">
+                                    <div class="card">
+                                        <div class="cardImageOuter">
+                                            <div class="cardImage">
+                                                <img src="media/sql-education-center/guides.svg" alt="" data-linktype="external">
+                                            </div>
+                                        </div>
+                                        <div class="cardText">
+                                            <h3>Gestion et architecture du journal des transactions</h3>
+                                            <p>Contient des informations sur l'architecture physique et logique du journal des transactions.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/sql/relational-databases/thread-and-task-architecture-guide/" data-linktype="external">
+                            <div class="cardSize">
+                                <div class="cardPadding">
+                                    <div class="card">
+                                        <div class="cardImageOuter">
+                                            <div class="cardImage">
+                                                <img src="media/sql-education-center/guides.svg" alt="" data-linktype="external">
+                                            </div>
+                                        </div>
+                                        <div class="cardText">
+                                            <h3>Architecture des threads et des tâches</h3>
+                                            <p>Explique comment SQL gère des threads et des tâches, permettant de définir les chemins d’accès logique et l’exécution des applications. </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/sql/relational-databases/sql-server-transaction-log-architecture-and-management-guide/" data-linktype="external">
+                            <div class="cardSize">
+                                <div class="cardPadding">
+                                    <div class="card">
+                                        <div class="cardImageOuter">
+                                            <div class="cardImage">
+                                                <img src="media/sql-education-center/guides.svg" alt="" data-linktype="external">
+                                            </div>
+                                        </div>
+                                        <div class="cardText">
+                                            <h3>Verrouillage des transactions et contrôle de version de ligne</h3>
+                                            <p>Présente les mécanismes de verrouillage et de contrôle de version de ligne utilisés par le moteur de base de données SQL Server pour garantir l'intégrité physique de chaque transaction.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                 </li>
+         </ul>
+        <h2>Ressources supplémentaires</h2>
+         <ul class="cardsF panelContent singlePanelContent" style="display:flex!important;">
+                        <li>
+                            <a href="https://docs.microsoft.com/learn/" data-linktype="external">
+                            <div class="cardSize">
+                                <div class="cardPadding">
+                                    <div class="card">
+                                        <div class="cardImageOuter">
+                                            <div class="cardImage">
+                                                <img src="media/sql-education-center/msftlearn.svg" alt="" data-linktype="external">
+                                            </div>
+                                        </div>
+                                        <div class="cardText">
+                                            <p>Microsoft Learn</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://mva.microsoft.com/product-training/sql-server#!lang=1033" data-linktype="external">
+                            <div class="cardSize">
+                                <div class="cardPadding">
+                                    <div class="card">
+                                        <div class="cardImageOuter">
+                                            <div class="cardImage">
+                                                <img src="media/sql-education-center/mva.svg" alt="" data-linktype="external">
+                                            </div>
+                                        </div>
+                                        <div class="cardText">
+                                            <p>Microsoft Virtual Academy</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://channel9.msdn.com/Tags/sql+server" data-linktype="external">
+                            <div class="cardSize">
+                                <div class="cardPadding">
+                                    <div class="card">
+                                        <div class="cardImageOuter">
+                                            <div class="cardImage">
+                                                <img src="media/sql-education-center/channel9.svg" alt="" data-linktype="external">
+                                            </div>
+                                        </div>
+                                        <div class="cardText">
+                                            <p>Channel 9</p> 
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/learning/topics/sql-server" data-linktype="external">
+                            <div class="cardSize">
+                                <div class="cardPadding">
+                                    <div class="card">
+                                        <div class="cardImageOuter">
+                                            <div class="cardImage">
+                                                <img src="media/sql-education-center/linkedin.svg" alt="" data-linktype="external">
+                                            </div>
+                                        </div>
+                                        <div class="cardText">
+                                            <p>LinkedIn Learning</p> 
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.pluralsight.com/browse/data-professional/sql" data-linktype="external">
+                            <div class="cardSize">
+                                <div class="cardPadding">
+                                    <div class="card">
+                                        <div class="cardImageOuter">
+                                            <div class="cardImage">
+                                                <img src="media/sql-education-center/plural.svg" alt="" data-linktype="external">
+                                            </div>
+                                        </div>
+                                        <div class="cardText">
+                                            <p>Pluralsight</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </a>
+                        </li>
+                </ul>
     </div>
 </div>
 <div class="container centered pageFooter">
         <h2>Restez en contact avec nous</h2>
         <ul class="links">
            <li>
-                <a href="http://aka.ms/editsqldocs" data-linktype="external"> Collaborer </a>
+                <a href="http://aka.ms/editsqldocs" data-linktype="external"> Contribuer aux documents SQL </a>
             </li>
            <li>
-                <a href="https://docs.microsoft.com/sql/sql-server/sql-server-get-help" data-linktype="external"> Obtenir de l’aide </a>
-            </li>
-           <li>
-                <a href="http://aka.ms/sqldocsfeedback" data-linktype="external"> Commentaires </a>
-            </li>
-           <li>
-                <a href="http://aka.ms/sqldocsurvey" data-linktype="external"> Enquête </a>
+                <a href="http://aka.ms/sqldocsurvey" data-linktype="external"> Commentaires relatifs à SQL Docs </a>
             </li>
            <li>
                 <a href="https://cloudblogs.microsoft.com/sqlserver/" data-linktype="external"> Blog </a>
@@ -486,3 +678,4 @@ ms.locfileid: "49336178"
             </li>
         </ul>
     </div>
+

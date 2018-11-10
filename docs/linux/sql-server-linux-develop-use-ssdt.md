@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 1e924704-e07c-4a8b-b243-8c1dd8cff0d3
 ms.custom: sql-linux
-ms.openlocfilehash: 0de0286065166137ebe83ce2a46dfb41d1670fc0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2053e338bf14d11f25e6e12b3d6c5aee6b8e636e
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47816057"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51033576"
 ---
 # <a name="use-visual-studio-to-create-databases-for-sql-server-on-linux"></a>Utiliser Visual Studio pour créer des bases de données pour SQL Server sur Linux
 
@@ -107,7 +107,7 @@ Vous avez créé une base de données sur l'instance SQL Server sur Linux et vou
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Si vous débutez avec T-SQL, consultez [Didacticiel : écriture d'instructions Transact-SQL] et [référence Transact-SQL (moteur de base de données)].
+Si vous débutez avec T-SQL, consultez [Didacticiel : écriture d'instructions Transact-SQL] et [Référence Transact-SQL (moteur de base de données)].
 
 Pour plus d’informations sur le développement d’une base de données avec les outils de données SQL, consultez [Documents MSDN SSDT]
 

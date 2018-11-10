@@ -1,22 +1,20 @@
 ---
 title: Interroger des données spatiales au sujet du plus proche voisin | Microsoft Docs
-ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- dbe-spatial
+ms.technology: ''
 ms.topic: conceptual
 ms.assetid: 7af4ad5d-484e-45b4-aa16-83c33b358bb6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9c70c341317648f6d981f40b38d39d2f2ab4b533
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c7a32f277378f48ffd61cce141f8fe7074c8204e
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164719"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018694"
 ---
 # <a name="query-spatial-data-for-nearest-neighbor"></a>Interroger des données spatiales au sujet du plus proche voisin
   Une requête courante utilisée avec les données spatiales est la requête Plus proche voisin. Les requêtes Plus proche voisin sont utilisées pour trouver les objets spatiaux les plus proches d'un objet spatial spécifique. Par exemple, le localisateur de magasin d'un site Web doit souvent trouver les magasins les plus proches de l'emplacement d'un client.  
@@ -52,7 +50,7 @@ SELECT TOP ( number )
 ```  
   
 ## <a name="nearest-neighbor-query-and-spatial-indexes"></a>Requête Plus proche voisin et index spatiaux  
- Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les clauses `TOP` et `ORDER BY` sont utilisées pour effectuer une requête Plus proche voisin sur les colonnes de données spatiales. Le `ORDER BY` clause contient un appel à la `STDistance()` méthode pour le type de données de colonne spatiale. Le `TOP` clause indique le nombre d’objets à retourner pour la requête.  
+ Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les clauses `TOP` et `ORDER BY` sont utilisées pour effectuer une requête Plus proche voisin sur les colonnes de données spatiales. La clause `ORDER BY` contient un appel à la méthode `STDistance()` pour le type de données de colonne spatial. La clause `TOP` indique le nombre d'objets à retourner pour la requête.  
   
  Les conditions suivantes doivent être respectées pour qu'une requête Plus proche voisin utilise un index spatial :  
   
@@ -62,7 +60,7 @@ SELECT TOP ( number )
   
 3.  La clause `WHERE` doit contenir une méthode `STDistance()`.  
   
-4.  S'il existe plusieurs prédicats dans la clause `WHERE`, le prédicat qui contient la méthode `STDistance()` doit être connecté par une conjonction `AND` aux autres prédicats. Le `STDistance()` méthode ne peut pas être dans une partie facultative de la `WHERE` clause.  
+4.  S'il existe plusieurs prédicats dans la clause `WHERE`, le prédicat qui contient la méthode `STDistance()` doit être connecté par une conjonction `AND` aux autres prédicats. La méthode `STDistance()` ne doit pas se trouver dans une partie facultative de la clause `WHERE`.  
   
 5.  La première expression dans la clause `ORDER BY` doit utiliser la méthode `STDistance()`.  
   
@@ -102,7 +100,7 @@ ORDER BY SpatialLocation.STDistance(@g);
   
 ```  
   
- La requête n’a pas un `WHERE` clause utilise `STDistance()` au format spécifié dans la section syntaxe ; la requête ne peut pas utiliser un index spatial.  
+ La requête n'a pas de clause `WHERE` qui utilise `STDistance()` au format spécifié dans la section Syntaxe ; la requête ne peut donc pas utiliser d'index spatial.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Données spatiales &#40;SQL Server&#41;](spatial-data-sql-server.md)  

@@ -10,18 +10,18 @@ author: Abiola
 ms.author: aboke
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1140e537e4ea7614df90f964ae280b7d86741d31
-ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
+ms.openlocfilehash: 7abd9873b3aeefb5644ade0497fe89c47d7cd343
+ms.sourcegitcommit: 41979c9d511b3eeb45134d30ccb0dbc6bba70f1a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49806629"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50757954"
 ---
 # <a name="configure-polybase-to-access-external-data-in-teradata"></a>Configurer PolyBase pour accéder à des données externes dans Teradata
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-L’article explique comment utiliser PolyBase sur une instance SQL Server pour interroger des données externes dans Teradata.
+Cet article explique comment utiliser PolyBase sur une instance de SQL Server pour interroger des données externes dans Teradata.
 
 ## <a name="prerequisites"></a>Conditions préalables requises
 
@@ -33,22 +33,23 @@ Pour utiliser PolyBase sur Teradata, VC++ Redistributable est nécessaire.
 
 Pour interroger les données d’une source de données Teradata, vous devez créer des tables externes pour référencer les données externes. Cette section fournit un exemple de code pour créer ces tables externes. 
 
-Voici les objets de création qui vont être utilisés dans cette section :
+Ces objets sont créés dans cette section :
 
 - CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)
 - CREATE EXTERNAL DATA SOURCE (Transact-SQL) 
 - CREATE EXTERNAL TABLE (Transact-SQL) 
 - CREATE STATISTICS (Transact-SQL)
 
-1. Créez une clé principale pour la base de données, si celle-ci n’en a pas. C’est nécessaire pour chiffrer le secret des informations d’identification.
+1. Créez une clé principale pour la base de données, si celle-ci n’en a pas. Une clé principale est nécessaire pour chiffrer le secret des informations d’identification.
 
      ```sql
       CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'password';  
      ```
-    ## <a name="arguments"></a>Arguments
+    **Arguments**
+
     PASSWORD ='password'
 
-    Mot de passe utilisé pour chiffrer la clé principale dans la base de données. Le mot de passe doit satisfaire aux critères de la stratégie de mot de passe Windows de l’ordinateur qui héberge l’instance SQL Server.
+    Le mot de passe utilisé pour chiffrer la clé principale est-il dans la base de données ? Le mot de passe doit remplir les critères de la stratégie de mot de passe Windows de l’ordinateur qui héberge l’instance de SQL Server.
 
 1. Créez des informations d’identification incluses dans l’étendue de la base de données.
  
@@ -78,7 +79,7 @@ Voici les objets de création qui vont être utilisés dans cette section :
 
      ```
 
-1.  Créez des tables externes qui représentent les données stockées dans le système Teradata externe [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md).
+1.  Créez des tables externes qui représentent les données stockées dans un système Teradata externe avec [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md).
  
      ```sql
      /*  LOCATION: Teradata table/view in '<database_name>.<object_name>' format
@@ -108,9 +109,9 @@ Voici les objets de création qui vont être utilisés dans cette section :
      );
      ```
 
-1. **Facultatif :** Créez des statistiques sur une table externe.
+1. *Facultatif :* Créez des statistiques sur une table externe.
 
-    Pour des performances de requêtes optimales, nous vous recommandons de créer des statistiques sur les colonnes de table externe, en particulier celles utilisées pour les jointures, les filtres et les agrégats.
+    Pour des performances de requêtes optimales, créez des statistiques sur les colonnes de tables externes, en particulier celles utilisées pour les jointures, les filtres et les agrégats.
 
      ```sql
       CREATE STATISTICS statistics_name ON customer (C_CUSTKEY) WITH FULLSCAN; 

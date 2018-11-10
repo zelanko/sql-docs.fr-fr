@@ -10,18 +10,18 @@ author: Abiola
 ms.author: aboke
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 90b535714eea3a00ecffd2cf010187fbcd676a82
-ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
+ms.openlocfilehash: d2b4bb2249f0c4a6ec57c037db54c490f3066e2b
+ms.sourcegitcommit: 41979c9d511b3eeb45134d30ccb0dbc6bba70f1a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49806639"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50757944"
 ---
 # <a name="configure-polybase-to-access-external-data-in-sql-server"></a>Configurer PolyBase pour accéder à des données externes dans SQL Server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-L’article explique comment utiliser PolyBase sur une instance SQL Server pour interroger des données externes dans une autre instance SQL Server.
+Cet article explique comment utiliser PolyBase sur une instance de SQL Server pour interroger des données externes dans une autre instance SQL Server.
 
 ## <a name="prerequisites"></a>Conditions préalables requises
 
@@ -31,16 +31,16 @@ Si vous n’avez pas installé PolyBase, consultez [Installation de PolyBase](po
 
 Pour interroger les données d’une source de données SQL Server, vous devez créer des tables externes pour référencer les données externes. Cette section fournit un exemple de code pour créer ces tables externes. 
  
-Pour des performances de requêtes optimales, nous vous recommandons de créer des statistiques sur les colonnes de table externe, en particulier celles utilisées pour les jointures, les filtres et les agrégats.
+Pour des performances de requêtes optimales, créez des statistiques sur les colonnes de tables externes, en particulier celles utilisées pour les jointures, les filtres et les agrégats.
 
-Voici les objets de création qui vont être utilisés dans cette section :
+Ces objets sont créés dans cette section :
 
 - CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL) 
 - CREATE EXTERNAL DATA SOURCE (Transact-SQL) 
 - CREATE EXTERNAL TABLE (Transact-SQL) 
 - CREATE STATISTICS (Transact-SQL)
 
-1. Créez une clé principale sur la base de données. C’est nécessaire pour chiffrer le secret des informations d’identification.
+1. Créez une clé principale sur la base de données. Une clé principale est nécessaire pour chiffrer le secret des informations d’identification.
 
      ```sql
       CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo';  
@@ -80,7 +80,7 @@ Voici les objets de création qui vont être utilisés dans cette section :
      GO
      ```
 
-1.  Créez des tables externes qui représentent les données stockées dans le système SQL Server externe [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md).
+1.  Créez des tables externes qui représentent les données stockées dans une instance de SQL Server externe avec [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md).
  
      ```sql
      /*  LOCATION: sql server table/view in 'database_name.schema_name.object_name' format
@@ -110,7 +110,7 @@ Voici les objets de création qui vont être utilisés dans cette section :
 
 ## <a name="sql-server-connector-compatible-types"></a>Types compatibles avec le connecteur SQL Server
 
-Une connexion peut être établie avec d’autres sources de données qui reconnaissent les connexions SQL Server. Avec le connecteur SQL Server PolyBase, vous pouvez créer une table externe pour **Azure SQL Data Warehouse et Azure SQL Database**. Pour cela, vous devez suivre les étapes listées ci-dessus. Vérifiez que les informations d’identification incluses dans l’étendue de la base de données, l’adresse du serveur, le port et la chaîne d’emplacement sont bien ceux de la source de données compatible à laquelle vous souhaitez vous connecter.
+Vous pouvez établir une connexion avec d’autres sources de données qui reconnaissent les connexions SQL Server. Utilisez le connecteur SQL Server PolyBase pour créer une table externe pour Azure SQL Data Warehouse et Azure SQL Database. Pour accomplir cette tâche, suivez les étapes indiquées précédemment. Vérifiez que les informations d’identification incluses dans l’étendue de la base de données, l’adresse du serveur, le port et la chaîne d’emplacement sont bien ceux de la source de données compatible à laquelle vous souhaitez vous connecter.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

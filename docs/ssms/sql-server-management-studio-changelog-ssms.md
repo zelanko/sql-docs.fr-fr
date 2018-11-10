@@ -11,12 +11,12 @@ ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 49c01e3daf0561e5082bcba28373c574a65a4c7f
-ms.sourcegitcommit: 3a8293b769b76c5e46efcb1b688bffe126d591b3
+ms.openlocfilehash: fdea834df198dc8fbaf403816895a99d9140e4ec
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50226391"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51270272"
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Journal des modifications (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -1093,7 +1093,7 @@ Correction du problème lié à l’échec de l’Assistant AE si l’utilisateu
 Correction d’un problème dans l’Assistant AE dont la page de connexion Azure Key Vault n’affichait pas d’abonnements Azure en présence de plusieurs instances AAD Correction d’un problème dans l’Assistant AE dont la page de connexion Azure Key Vault n’affichait pas les abonnements Azure pour lesquels l’utilisateur disposait d’une autorisation d’accès en lecture
   - Correction d’un problème où les fichiers de ressources ne pouvaient pas être chargés correctement, ce qui provoquait des messages d’erreur imprécis
 - Amélioration du contraste des liens hypertexte sur la page Installation de SSMS
-- Correction d’un problème lié au non-affichage des nœuds Polybase lors de la connexion à SQL Server Express (2016 SP1)
+- Correction du problème selon lequel les nœuds PolyBase ne s’affichaient pas en cas de connexion à SQL Server Express (2016 SP1)
 - Correction d’un problème où SSMS ne pouvait pas changer le niveau de compatibilité d’une base de données Azure pour le faire passer à v140
 - Amélioration des performances de l’Explorateur d’objets lors du développement de la liste des bases de données Azure [Article de Microsoft Connect](https://connect.microsoft.com/SQLServer/feedback/details/3100675)
 - Correction d’un problème où l’élément de menu contextuel Afficher le journal SQL Server apparaît de manière incorrecte pour les types de serveurs non relationnels (AS\RS\IS) 
@@ -1136,7 +1136,7 @@ http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manag
 - Suppression dans SSMS de l’Assistant Déploiement Azure (pour déployer une base de données sur une machine virtuelle Azure)
 - Résolution d’un problème où les index manquants n’étaient pas affichés dans les plans d’exécution dans SSMS [Article de Microsoft Connect](http://connect.microsoft.com/SQLServer/feedback/details/3114194)
 - Résolution du problème courant de blocage lors de l’arrêt dans SSMS
-- Résolution du problème dans l’Explorateur d’objets, où une erreur se produisait lors de l’affichage du menu contextuel sur les nœuds Polybase | Groupe de scale-out[Article de Microsoft Connect](http://connect.microsoft.com/SQLServer/feedback/details/3115128)
+- Résolution du problème de l’Explorateur d’objets qui provoquait une erreur lors de l’affichage du menu contextuel sur les nœuds de groupe de scale out PolyBase [Article de Microsoft Connect](http://connect.microsoft.com/SQLServer/feedback/details/3115128)
 - Résolution d’un problème où SSMS pouvait se bloquer lors d’une tentative d’affichage des autorisations sur une base de données
 - Magasin de requêtes : améliorations générales apportées aux éléments du menu contextuel pour les grilles de résultats des rapports du magasin de requêtes
 - La configuration d’Always Encrypted pour une table existante échoue avec des erreurs sur des objets non associés. [Article de Microsoft Connect](http://connect.microsoft.com/SQLServer/feedback/details/3103181)

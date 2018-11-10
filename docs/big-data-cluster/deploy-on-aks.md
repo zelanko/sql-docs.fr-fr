@@ -4,15 +4,15 @@ description: Découvrez comment configurer Azure Kubernetes Service (AKS) pour l
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/23/2018
+ms.date: 11/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: e3a73eab49c947d950981a9bdb41098ee00a9b9f
-ms.sourcegitcommit: 12779bddd056a203d466d83c4a510a97348fe9d9
+ms.openlocfilehash: 07ee0ac0db742eca9a55decfcd78cb76b75e0160
+ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50216675"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51221655"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-2019-preview-deployments"></a>Configurer Azure Kubernetes Service pour les déploiements de SQL Server 2019 (version préliminaire)
 
@@ -27,12 +27,11 @@ Cet article décrit les étapes pour déployer Kubernetes sur AKS à l’aide d�
 
 ## <a name="prerequisites"></a>Prérequis
 
-- Pour un environnement AKS, la condition minimale de la machine virtuelle au moins deux agent les machines virtuelles est (en plus de serveur maître), avec au moins 4 processeurs et 32 Go de mémoire chacune. Infrastructure Azure offre plusieurs options de taille pour les machines virtuelles, consultez [ici](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sizes) pour les sélections dans la région que vous voulez déployer.
+- Pour un environnement AKS, pour une expérience optimale lors de la validation des scénarios de base, nous vous recommandons de machines virtuelles de l’agent au moins trois (outre maître), avec au moins 4 processeurs virtuels et 32 Go de mémoire chaque. Infrastructure Azure offre plusieurs options de taille pour les machines virtuelles, consultez [ici](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sizes) pour les sélections dans la région que vous voulez déployer.
   
 - Cette section, vous devez être en cours d’exécution Azure CLI version 2.0.4 ou version ultérieure. Si vous avez besoin installer ou mettre à niveau, consultez [installer Azure CLI 2.0](https://docs.microsoft.com/cli/azure/install-azure-cli). Exécutez `az --version` pour trouver la version, si nécessaire.
 
-- Installer [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/). Cluster de données volumineux de SQL Server requiert toute version mineure dans la plage de 1.10 version pour Kubernetes, pour le serveur et client. Pour installer une version spécifique sur le client kubectl, consultez [installer kubectl binaire via curl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl). Pour AKS, vous devez utiliser `--kubernetes-version` paramètre pour spécifier une version différente de celle par défaut. Notez qu’à la période de mise en production CTP2.0, AKS prend uniquement en charge les versions 1.10.7 et 1.10.8. 
-
+- Installer [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/) avec un minimum de version 1.10 pour le serveur et client. Si vous souhaitez installer une version spécifique sur le client kubectl, consultez [installer kubectl binaire via curl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl). Pour AKS, vous devez utiliser `--kubernetes-version` paramètre pour spécifier une version différente de la valeur par défaut.
 
 > [!NOTE]
 Notez que la version de client/serveur incliner qui est pris en charge est +/-1 version mineure. La documentation de Kubernetes indique que « un client doit être décalées ne plusieurs versions mineures du serveur maître, mais peut entraîner le maître par jusqu'à une version mineure. Par exemple, un serveur maître v1.3 doit fonctionner avec les nœuds v1.3 v1.1 et v1.2 et doit fonctionner avec v1.2 v1.3, clients et v1.4. » Pour plus d’informations, consultez [Kubernetes pris en charge les versions et composant de décalage](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/release/versioning.md#supported-releases-and-component-skew).
@@ -79,8 +78,8 @@ Un groupe de ressources Azure est un groupe logique dans Azure les ressources so
     --resource-group sqlbigdatagroup \
     --generate-ssh-keys \
     --node-vm-size Standard_E4s_v3 \
-    --node-count 2 \
-    --kubernetes-version 1.10.7
+    --node-count 3 \
+    --kubernetes-version 1.10.8
     ```
 
     Vous pouvez augmenter ou réduire le nombre d’agents par défaut en modifiant le `--node-count <n>` où `<n>` est le nombre de nœuds d’agent que vous souhaitez effectuer.

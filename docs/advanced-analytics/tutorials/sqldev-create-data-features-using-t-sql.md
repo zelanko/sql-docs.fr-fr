@@ -1,6 +1,6 @@
 ---
-title: Leçon 2 fonctionnalités de données créez à l’aide des fonctions T-SQL (SQL Server Machine Learning) | Microsoft Docs
-description: Didacticiel expliquant comment incorporer R dans SQL Server des procédures stockées et fonctions T-SQL
+title: Leçon 2 fonctionnalités de données de créer à l’aide des fonctions T-SQL (R dans SQL Server Machine Learning) | Microsoft Docs
+description: Didacticiel montrant comment ajouter des calculs à des procédures stockées pour une utilisation dans les modèles d’apprentissage de R.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/19/2018
@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: f5427772ea438a198b1236a865e8cdbdd0b09d70
-ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
+ms.openlocfilehash: 4986d7ae5e51eaf0e89b3ee986ac7597e4a5edb7
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49462095"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51031496"
 ---
 # <a name="lesson-2-create-data-features-using-r-and-t-sql"></a>Leçon 2 : Créer des fonctionnalités de données à l’aide de R et T-SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

@@ -10,12 +10,12 @@ ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 22178bb26309bba1529189e728bde3e5a26bab0e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a76cadf3fafc1980d6600d406b30492b6a6bc2fa
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798937"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51031022"
 ---
 # <a name="high-availability-and-data-protection-for-availability-group-configurations"></a>Haute disponibilité et protection des données pour les configurations de groupe de disponibilité
 
@@ -62,8 +62,8 @@ Un groupe de disponibilité avec trois réplicas synchrones peut fournir en lect
 | |échelle de lecture|Haute disponibilité & </br> protection de données | Protection des données
 |:---|---|---|---
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 |1<sup>*</sup>|2
-|Indisponibilité du réplica principal | Basculement manuel. Perte de données possible. Nouveau réplica principal est R / w. |Basculement automatique. Nouveau réplica principal est R / w. |Basculement automatique. Nouveau réplica principal n’est pas disponible pour les transactions utilisateur jusqu'à ce que le réplica principal précédent récupère et joint le groupe de disponibilité comme secondaire. 
-|Une indisponibilité du réplica secondaire  | Principal est R / w. Aucun basculement automatique si le serveur principal échoue. |Principal est R / w. Aucun basculement automatique si le serveur principal échoue également. | Principal n’est pas disponible pour les transactions utilisateur. 
+|Indisponibilité du réplica principal | Basculement manuel. Perte de données possible. Nouveau réplica principal est R / w. |Basculement automatique. Nouveau réplica principal est R / w. |Basculement automatique. Nouveau réplica principal n’est pas disponible pour les transactions utilisateur jusqu'à ce que le réplica principal précédent récupère et joint le groupe de disponibilité comme secondaire. 
+|Une indisponibilité du réplica secondaire  | Principal est R / w. Aucun basculement automatique si le serveur principal échoue. |Principal est R / w. Aucun basculement automatique si le serveur principal échoue également. | Principal n’est pas disponible pour les transactions utilisateur. 
 <sup>*</sup> Par défaut
 
 <a name="twoSynch"></a>
@@ -80,7 +80,7 @@ Un groupe de disponibilité avec deux réplicas synchrones fournit une protectio
 |:---|---|---
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>*</sup>|1
 |Indisponibilité du réplica principal | Basculement manuel. Perte de données possible. Nouveau réplica principal est R / w.| Basculement automatique. Nouveau réplica principal n’est pas disponible pour les transactions utilisateur jusqu'à ce que le réplica principal précédent récupère et joint le groupe de disponibilité comme secondaire.
-|Une indisponibilité du réplica secondaire  |Principal est en lecture/écriture, exécution exposée à une perte de données. |Principal n’est pas disponible pour les transactions utilisateur jusqu'à ce que la récupération du réplica secondaire.
+|Une indisponibilité du réplica secondaire  |Principal est en lecture/écriture, exécution exposée à une perte de données. |Principal n’est pas disponible pour les transactions utilisateur jusqu'à ce que la récupération du réplica secondaire.
 <sup>*</sup> Par défaut
 
 >[!NOTE]
@@ -108,9 +108,9 @@ La valeur par défaut `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` est 0. Le ta
 |:---|---|---
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>*</sup>|1
 |Indisponibilité du réplica principal | Basculement automatique. Nouveau réplica principal est R / w. | Basculement automatique. Nouveau réplica principal n’est pas disponible pour les transactions utilisateur. 
-|Indisponibilité du réplica secondaire | Réplica principal est lecture/écriture, exécution exposée à une perte de données (si principal échoue et ne peuvent pas être récupérée). Aucun basculement automatique si le serveur principal échoue également. | Principal n’est pas disponible pour les transactions utilisateur. Aucun réplica vers lequel basculer principale n’échoue également. 
-|Panne de réplica configuration uniquement | Principal est R / w. Aucun basculement automatique si le serveur principal échoue également. | Principal est R / w. Aucun basculement automatique si le serveur principal échoue également. 
-|Base de données secondaire synchrone + configuration uniquement indisponibilité du réplica| Principal n’est pas disponible pour les transactions utilisateur. Aucun basculement automatique. | Principal n’est pas disponible pour les transactions utilisateur. Aucun réplica vers lequel basculer if principal échoue également. 
+|Indisponibilité du réplica secondaire | Réplica principal est lecture/écriture, exécution exposée à une perte de données (si principal échoue et ne peuvent pas être récupérée). Aucun basculement automatique si le serveur principal échoue également. | Principal n’est pas disponible pour les transactions utilisateur. Aucun réplica vers lequel basculer principale n’échoue également. 
+|Panne de réplica configuration uniquement | Principal est R / w. Aucun basculement automatique si le serveur principal échoue également. | Principal est R / w. Aucun basculement automatique si le serveur principal échoue également. 
+|Base de données secondaire synchrone + configuration uniquement indisponibilité du réplica| Principal n’est pas disponible pour les transactions utilisateur. Aucun basculement automatique. | Principal n’est pas disponible pour les transactions utilisateur. Aucun réplica vers lequel basculer if principal échoue également. 
 <sup>*</sup> Par défaut
 
 >[!NOTE]

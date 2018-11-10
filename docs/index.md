@@ -8,12 +8,12 @@ ms.author: barbkess
 ms.topic: hub-page
 ms.technology:
 - database-engine
-ms.openlocfilehash: d809326a23487f23d1c5efeb6b771472c4ebcd67
-ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
+ms.openlocfilehash: 5ed3d7edbe277d8a39bbf9003810632a2c34a2c7
+ms.sourcegitcommit: 87fec38a515a7c524b7c99f99bc6f4d338e09846
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49336268"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "51272577"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -255,7 +255,7 @@ ms.locfileid: "49336268"
                                                       </div>
                                                       <div class="cardText">
                                                           <h3>Conception de la base de données</h3>
-                                                          <p><b>Flux de fichier, FileTable, Données spatiales, Vues, Déclencheurs, Graphes, Numéros séquentiels, Procédures stockées, Suivi des modifications </b> </p>
+                                                          <p><b>Flux de fichier, FileTable, graphes, numéros séquentiels, données spatiales, procédures stockées, déclencheurs, suivi des modifications, vues </b> </p>
                                                       </div>
                                                   </div>
                                               </div>
@@ -274,7 +274,7 @@ ms.locfileid: "49336268"
                                                       </div>
                                                       <div class="cardText">
                                                           <h3>Interroger des données</h3>
-                                                          <p><b>Curseurs, synonymes, opérations de script, jointures, fonctions définies par l’utilisateur, recherche en texte intégral </b></p>
+                                                          <p><b>Recherche en texte intégral, jointures, scripts, synonymes, fonctions définies par l’utilisateur</b></p>
                                                       </div>
                                                   </div>
                                               </div>
@@ -391,7 +391,7 @@ ms.locfileid: "49336268"
                                                         <h3>Analytique des données</h3>
                                                         <ul class="noBullet">
                                                         <li><a class="barLink" href="/sql/analytics-platform-system/">Microsoft Analytics Platform System</a></li>
-                                                            <li><a class="barLink" href="/sql/relational-databases/polybase/polybase-guide/">Polybase</a></li>
+                                                            <li><a class="barLink" href="/sql/relational-databases/polybase/polybase-guide/">PolyBase</a></li>
                                                             <li><a class="barLink" href="/sql/analysis-services/analysis-services">SQL Server Analysis Services</a></li>
                                                             <li><a class="barLink" href="/azure/analysis-services/">Azure Analysis Services</a></li>
                                                        </ul>
@@ -407,8 +407,8 @@ ms.locfileid: "49336268"
                                                   <div class="cardText">
                                                         <h3>IA et Machine Learning</h3>
                                                         <ul class="noBullet">
-                                                            <li><a class="barLink" href="/sql/advanced-analytics/what-is-sql-server-machine-learning">SQL Machine Learning Services</a></li>
-                                                            <li><a class="barLink" href="/sql/sql/advanced-analytics/r/sql-server-r-services">R Services</a></li>
+                                                            <li><a class="barLink" href="/sql/advanced-analytics/what-is-sql-server-machine-learning">SQL Server Machine Learning Services (R et Python)</a></li>
+                                                            <li><a class="barLink" href="/sql/advanced-analytics/r/sql-server-r-services">SQL Server R Services</a></li>
                                                             <li><a class="barLink" href="/azure/machine-learning/">Azure Machine Learning</a></li>
                                                        </ul>
                                                     </div>

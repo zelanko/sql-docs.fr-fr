@@ -1,7 +1,7 @@
 ---
 title: Sys.sql_modules (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/09/2018
+ms.date: 11/06/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b6e5929ac379b4e20ee4f25bf7e3ede42e980082
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 59f65e8743dab760b54cec9b088f5feca8d49e0b
+ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705597"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51221535"
 ---
 # <a name="syssqlmodules-transact-sql"></a>sys.sql_modules (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -47,6 +47,9 @@ ms.locfileid: "47705597"
 |**null_on_null_input**|**bit**|Le module a été déclaré pour produire une sortie NULL sur n'importe quelle entrée NULL.|  
 |**execute_as_principal_id**|**Int**|ID du principal de base de données EXECUTE AS.<br /><br /> Valeur NULL par défaut ou dans le cas de l'instruction EXECUTE AS CALLER.<br /><br /> ID du principal spécifié si EXECUTE AS SELF ou EXECUTE AS \<principal >.<br /><br /> -2 = EXECUTE AS OWNER.|  
 |**uses_native_compilation**|**bit**|**S'applique à**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] jusqu'à [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].<br /><br /> 0 = Non compilé en mode natif<br /><br /> 1 = Compilé en mode natif<br /><br /> La valeur par défaut est 0 :|  
+|**is_inlineable**|**bit**|**S’applique aux**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] et versions ultérieures.<br/><br />Indique si le module est inlineable ou non. Inlineability est basée sur les conditions spécifiées [ici](../user-defined-functions/scalar-udf-inlining.md#inlineable-scalar-udfs-requirements).<br /><br /> 0 = non inlineable<br /><br /> 1 = est inlineable. <br /><br /> Pour des UDF scalaires, la valeur sera 1 si l’UDF est inlineable et 0 dans le cas contraire. Il contient toujours la valeur 1 pour les fonctions table inline et 0 pour tous les autres types de module.<br />|  
+|**inline_type**|**bit**|**S’applique aux**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] et versions ultérieures.<br /><br />Indique si l’incorporation (inlining) est activé pour le module actuellement. <br /><br />0 = fonction inline est mis hors tension<br /><br /> 1 = fonction inline est activé.<br /><br /> Pour des UDF scalaires, la valeur est égal à 1 si l’incorporation (inlining) est activé (explicitement ou implicitement). La valeur sera toujours 1 des fonctions table en ligne et la valeur 0 pour les autres types de module.<br />|  
+
   
 ## <a name="remarks"></a>Notes  
  L’expression SQL pour une contrainte par défaut, l’objet de type D, se trouve dans le [sys.default_constraints](../../relational-databases/system-catalog-views/sys-default-constraints-transact-sql.md) vue de catalogue. L’expression SQL pour une contrainte CHECK, objet de type C, se trouve dans le [sys.check_constraints](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md) vue de catalogue.  

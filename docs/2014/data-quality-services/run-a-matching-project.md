@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.matchingproject.matching.f1
@@ -15,19 +14,19 @@ ms.assetid: 6aa9d199-83ce-4b5d-8497-71eef9258745
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 27a77ac21cf9ffacf2c4d5dd52759479668152f3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: eb23627ef869fdc4117297f43efd8ed8898820f9
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091749"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51031506"
 ---
 # <a name="run-a-matching-project"></a>Exécuter un projet de correspondance
   Cette rubrique décrit comment réaliser la correspondance de données dans [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Le processus de correspondance identifie les clusters des enregistrements correspondants selon les règles de correspondance de la stratégie de correspondance, indique un enregistrement de chaque cluster en tant que survivant basé sur une règle de survivance, et exporte les résultats. DQS exécute le processus de correspondance, également appelé déduplication, dans un processus assisté par ordinateur, mais vous créez des règles de correspondance de manière interactive et sélectionnez la règle de survivance parmi plusieurs choix, afin de contrôler le processus de correspondance.  
   
  La correspondance est effectuée en trois étapes : un processus de mappage dans lequel vous identifiez la source de données et mappez les domaines à la source de données, un processus de correspondance dans lequel vous exécutez l'analyse de correspondance, et un processus de survivance et d'exportation dans lequel vous indiquez la règle de survivance et exportez les résultats de correspondance. Chacun de ces processus est exécuté sur une page distincte de l'Assistant de l'activité de correspondance, ce qui vous permet de vous déplacer dans les deux sens vers différentes pages, de réexécuter le processus et de fermer un processus de concordance spécifique, puis de retourner à la même étape du processus. DQS vous fournit des statistiques sur les données sources, les règles de correspondance et les résultats de correspondance qui vous permettent de prendre des décisions avisées sur la correspondance et d'affiner le processus de concordance.  
   
- Vous devez vous préparer à la correspondance en créant une stratégie de correspondance avec une ou plusieurs règles de correspondance, et en exécutant la stratégie sur des exemples de données. Le processus de projet de correspondance est distinct du processus de stratégie de correspondance, et une base de connaissances n'est pas remplie avec les connaissances de correspondance acquises à partir du projet de correspondance. Pour plus d’informations sur la création d’une stratégie de correspondance, consultez [créer une stratégie de correspondance](../../2014/data-quality-services/create-a-matching-policy.md).  
+ Vous devez vous préparer à la correspondance en créant une stratégie de correspondance avec une ou plusieurs règles de correspondance, et en exécutant la stratégie sur des exemples de données. Le processus de projet de correspondance est distinct du processus de stratégie de correspondance, et une base de connaissances n'est pas remplie avec les connaissances de correspondance acquises à partir du projet de correspondance. Pour plus d'informations sur la création d'une stratégie de correspondance, consultez [Create a Matching Policy](../../2014/data-quality-services/create-a-matching-policy.md).  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
@@ -166,7 +165,7 @@ ms.locfileid: "48091749"
     >  Si vous avez terminé un projet de correspondance et l'utilisez de nouveau, il utilise la base de connaissances en place lorsqu'il a été publié. Il n'utilise aucune modification que vous avez apportée à la base de connaissances depuis que vous avez terminé le projet. Pour utiliser ces modifications, ou une nouvelle base de connaissances, vous devez créer un projet de correspondance. En revanche, si vous avez créé, mais pas fini, un projet de correspondance, toutes les modifications que vous avez publiées dans la stratégie de correspondance sont utilisées si vous exécutez une correspondance dans le projet.  
   
 ##  <a name="FollowUp"></a> Suivi : Après l'exécution d'un projet de correspondance  
- Après avoir exécuté un projet de correspondance, vous pouvez modifier la stratégie de correspondance dans la base de connaissances, puis créer et exécuter un autre projet de correspondance basé sur la stratégie de correspondance mise à jour. Pour plus d’informations, consultez [Créer une stratégie de correspondance](../../2014/data-quality-services/create-a-matching-policy.md).  
+ Après avoir exécuté un projet de correspondance, vous pouvez modifier la stratégie de correspondance dans la base de connaissances, puis créer et exécuter un autre projet de correspondance basé sur la stratégie de correspondance mise à jour. Pour plus d’informations, consultez [Create a Matching Policy](../../2014/data-quality-services/create-a-matching-policy.md).  
   
 ##  <a name="Profiler"></a> Onglets Générateur de profils et Résultats  
  Les onglets Générateur de profils et Résultats contiennent des statistiques pour le processus de correspondance.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- dbe-spatial
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - geography data type [SQL Server]
@@ -15,22 +14,22 @@ ms.assetid: b585851e-d15b-411f-adeb-aeabeb777c0b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9fdb6d7b2c5649908b31a958238572aa6b8b0285
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a576a6d047148675fd50730bcb4a5e76a5684b14
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218307"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018744"
 ---
 # <a name="create-construct-and-query-geography-instances"></a>Créer, construire et interroger des instances geography
   Le type de données spatiales géographiques, `geography`, représente des données dans un système de coordonnées de monde sphérique. Ce type est implémenté en tant que type de données CLR (Common Language Runtime) .NET dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `geography` type de données stocke des données ellipsoïdes (monde sphérique), telles que des coordonnées de latitude et de longitude GPS.  
   
- Le `geography` type est prédéfini et disponible dans chaque base de données. Vous pouvez créer des colonnes de table de type `geography` et opérer sur les données `geography` comme vous le feriez avec d'autres types fournis par le système.  
+ Le type `geography` est prédéfini et disponible dans chaque base de données. Vous pouvez créer des colonnes de table de type `geography` et opérer sur les données `geography` comme vous le feriez avec d'autres types fournis par le système.  
   
 ##  <a name="creating"></a> Création ou construction d'une nouvelle instance geography  
   
 ###  <a name="existing"></a> Création d'une nouvelle instance geography à partir d'une instance existante  
- Le `geography` type de données fournit de nombreuses méthodes intégrées que vous pouvez utiliser pour créer de nouveaux `geography` instances basées sur des instances existantes.  
+ Le type de données `geography` fournit de nombreuses méthodes intégrées que vous pouvez utiliser pour créer des instances `geography` basées sur des instances existantes.  
   
  **Pour créer une mémoire tampon autour d'une géographie**  
  [STBuffer &#40;type de données geography&#41;](/sql/t-sql/spatial-geography/stbuffer-geography-data-type)  
@@ -48,7 +47,7 @@ ms.locfileid: "48218307"
  [STDifference &#40;type de données geography&#41;](/sql/t-sql/spatial-geography/stdifference-geography-data-type)  
   
 ###  <a name="wkt"></a> Construction d'une instance geography à partir d'une entrée WKT (Well-Known Text)  
- Le `geography` type de données fournit plusieurs méthodes intégrées qui génèrent une géographie à partir de la représentation WKT de l’Open Geospatial Consortium (OGC). La norme WKT est une chaîne de texte qui autorise l'échange de données geography sous forme textuelle.  
+ Le type de données `geography` fournit plusieurs méthodes intégrées qui génèrent une géographie à partir de la représentation WKT OGC (Open Geospatial Consortium). La norme WKT est une chaîne de texte qui autorise l'échange de données geography sous forme textuelle.  
   
  **Pour construire tout type d'instance geography à partir d'une entrée WKT**  
  [STGeomFromText &#40;type de données geography&#41;](/sql/t-sql/spatial-geography/stgeomfromtext-geography-data-type)  
@@ -77,7 +76,7 @@ ms.locfileid: "48218307"
  [STGeomCollFromText &#40;type de données geography&#41;](/sql/t-sql/spatial-geography/stgeomcollfromtext-geography-data-type)  
   
 ###  <a name="wkb"></a> Construction d'une instance geography à partir d'une entrée WKB (Well-Known Binary)  
- WKB est un format binaire spécifié par l’OGC qui autorise `Geography` données à échanger entre une application cliente et une base de données SQL. Les fonctions suivantes acceptent l'entrée WKB pour construire des instances geography :  
+ WKB est un format binaire spécifié par l'OGC qui autorise l'échange de données de `Geography` entre une application cliente et une base de données SQL. Les fonctions suivantes acceptent l'entrée WKB pour construire des instances geography :  
   
  **Pour construire tout type d'instance geography à partir d'une entrée WKB**  
  [STGeomFromWKB &#40;type de données geography&#41;](/sql/t-sql/spatial-geography/stgeomfromwkb-geography-data-type)  
@@ -112,7 +111,7 @@ ms.locfileid: "48218307"
  [GeomFromGML &#40;type de données geography&#41;](/sql/t-sql/spatial-geography/geomfromgml-geography-data-type)  
   
 ##  <a name="returning"></a> Renvoi de données WKT et WKB à partir d'une instance geography  
- Vous pouvez utiliser les méthodes suivantes pour retourner soit le format WKT ou WKB d’une `geography` instance :  
+ Vous pouvez utiliser les méthodes suivantes pour retourner le format WKT ou WKB d'une instance `geography` :  
   
  **Pour retourner la représentation WKT d'une instance geography**  
  [STAsText &#40;type de données geography&#41;](/sql/t-sql/spatial-geography/stastext-geography-data-type)  
@@ -162,7 +161,7 @@ ms.locfileid: "48218307"
  [STEndpoint &#40;type de données geography&#41;](/sql/t-sql/spatial-geography/stendpoint-geography-data-type)  
   
 ###  <a name="dimension"></a> Dimension  
- Un nonempty `geography` instance peut avoir 0, 1 ou 2 dimensions. À zéro dimension `geography` les instances, tel que `Point` et `MultiPoint`, n’ont aucune longueur ou la zone. Les objets unidimensionnels, tels que `LineString, CircularString`, `CompoundCurve` et `MultiLineString`, ont une longueur. Instances à deux dimensions, telles que `Polygon, CurvePolygon`, et `MultiPolygon`, ont une surface et la longueur. Les instances vides indiquent une dimension de -1 et une `GeometryCollection` indique la dimension maximale de son contenu.  
+ Une instance `geography` non vide peut avoir 0, 1 ou 2 dimensions. À zéro dimension `geography` les instances, tel que `Point` et `MultiPoint`, n’ont aucune longueur ou la zone. Les objets unidimensionnels, tels que `LineString, CircularString`, `CompoundCurve` et `MultiLineString`, ont une longueur. Instances à deux dimensions, telles que `Polygon, CurvePolygon`, et `MultiPolygon`, ont une surface et la longueur. Les instances vides indiquent une dimension de -1 et une `GeometryCollection` indique la dimension maximale de son contenu.  
   
  **Pour retourner la dimension d'une instance**  
  [STDimension &#40;type de données geography&#41;](/sql/t-sql/spatial-geography/stdimension-geography-data-type)  
@@ -174,15 +173,15 @@ ms.locfileid: "48218307"
  [STArea &#40;type de données geography&#41;](/sql/t-sql/spatial-geography/starea-geography-data-type)  
   
 ###  <a name="empty"></a> Vide  
- Un *vide* `geography` instance n’a pas de tous les points. La longueur des instances `LineString, CircularString`, `CompoundCurve` et `MultiLineString` vides est 0. La zone de vide `Polygon, CurvePolygon` et `MultiPolygon` instances est égal à 0.  
+ Un *vide* `geography` instance n’a pas de tous les points. La longueur des instances `LineString, CircularString`, `CompoundCurve` et `MultiLineString` vides est 0. La surface des instances `Polygon, CurvePolygon` et `MultiPolygon` vides est 0.  
   
  **Pour déterminer si une instance est vide**  
  [STIsEmpty &#40;type de données geography&#41;](/sql/t-sql/spatial-geography/stisempty-geography-data-type)  
   
 ###  <a name="closure"></a> Fermeture  
- Un *fermé* `geography` instance est un graphique les points dont le démarrage et de points de terminaison sont les mêmes. `Polygon` instances sont considérées comme fermées. Les instances `Point` ne sont pas fermées.  
+ Un *fermé* `geography` instance est un graphique les points dont le démarrage et de points de terminaison sont les mêmes. Les instances `Polygon` sont considérées comme fermées. Les instances `Point` ne sont pas fermées.  
   
- Un anneau est une simple et fermée `LineString` instance.  
+ Un anneau est une instance `LineString` simple et fermée.  
   
  **Pour déterminer si une instance est fermée**  
  [STIsClosed &#40;type de données geography&#41;](/sql/t-sql/spatial-geography/stisclosed-geography-data-type)  
@@ -194,7 +193,7 @@ ms.locfileid: "48218307"
  [RingN &#40;type de données geography&#41;](/sql/t-sql/spatial-geography/ringn-geography-data-type)  
   
 ###  <a name="srid"></a> ID de référence spatial (SRID)  
- Le SRID (ID) de référence spatiale est un identificateur spécifiant dans quel système de coordonnées ellipsoïde le `geography` instance est représentée dans. Deux instances `geography` avec différents SRID ne peuvent pas être comparées.  
+ L'ID de référence spatial (SRID) est un identificateur spécifiant dans quel système de coordonnées ellipsoïde l'instance `geography` est représentée. Deux instances `geography` avec différents SRID ne peuvent pas être comparées.  
   
  **Pour définir ou retourner le SRID d'une instance**  
  [STSrid &#40;type de données geography&#41;](/sql/t-sql/spatial-geography/stsrid-geography-data-type)  
@@ -202,7 +201,7 @@ ms.locfileid: "48218307"
  Cette propriété peut être modifiée.  
   
 ##  <a name="rel"></a> Détermination de relations entre des instances geography  
- Le `geography` type de données fournit de nombreuses méthodes intégrées que vous pouvez utiliser pour déterminer les relations entre deux `geography` instances.  
+ Le type de données `geography` fournit de nombreuses méthodes intégrées que vous pouvez utiliser pour déterminer les relations entre deux instances `geography`.  
   
  **Pour déterminer si deux instances comprennent le même ensemble de points**  
  [STEquals &#40;type de données geometry&#41;](/sql/t-sql/spatial-geometry/stequals-geometry-data-type)  
@@ -226,7 +225,7 @@ ms.locfileid: "48218307"
  [STSymDifference &#40;type de données geography&#41;](/sql/t-sql/spatial-geography/stsymdifference-geography-data-type)  
   
 ##  <a name="supportedsrid"></a> Les instances geography doivent utiliser un SRID pris en charge  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge les SRID basés sur les normes EPSG. Un SRID [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pris en charge pour les instances `geography` doit être utilisé lors de l'exécution de calculs ou de l'utilisation de méthodes avec des données spatiales géographiques. Le SRID doit correspondre à l’un des SRID présents dans l’affichage catalogue **sys.spatial_reference_systems** . Comme mentionné précédemment, lorsque vous effectuez des calculs sur vos données spatiales à l’aide de la `geography` type de données, vos résultats dépendront ellipsoïde utilisée dans la création de vos données, car un (identificateur de référence spatiale spécifique est assigné à chaque ellipsoïde SRID).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge les SRID basés sur les normes EPSG. Un SRID [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pris en charge pour les instances `geography` doit être utilisé lors de l'exécution de calculs ou de l'utilisation de méthodes avec des données spatiales géographiques. Le SRID doit correspondre à l’un des SRID présents dans l’affichage catalogue **sys.spatial_reference_systems** . Comme mentionné précédemment, lorsque vous effectuez des calculs sur vos données spatiales à l'aide du type de données `geography`, vos résultats dépendront de l'ellipsoïde utilisée dans la création de vos données, car un identificateur de référence spatiale (SRID) spécifique est assigné à chaque ellipsoïde.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise le SRID par défaut de 4326, qui mappe au système de référence spatiale WGS 84, lors de l'utilisation de méthodes sur des instances `geography`. Si vous utilisez des données d'un système de référence spatiale autre que WGS 84 (ou SRID 4326), vous devrez déterminer le SRID spécifique pour vos données spatiales geography.  
   

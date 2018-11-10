@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 1e6155be9338f7d7c04c7ecfd5312d38d909065e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 57936009880849b3ca1e566110e688b699f6835b
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47628143"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269732"
 ---
 # <a name="wideworldimportersdw-use-of-sql-server-features-and-capabilities"></a>Utilisation de WideWorldImportersDW de fonctionnalités de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ PolyBase est utilisé pour combiner les informations de vente à partir de WideW
 
 Pour activer l’utilisation de PolyBase dans la base de données, vérifiez qu’il est installé et exécutez la procédure stockée suivante dans la base de données :
 
-    EXEC [Application].[Configuration_ApplyPolybase]
+    EXEC [Application].[Configuration_ApplyPolyBase]
 
 Cela créera une table externe `dbo.CityPopulationStatistics` qui fait référence à un jeu de données publiques qui contient les données de la population des villes aux États-Unis, hébergé dans le stockage blob Azure. Il est conseillé d’examiner le code dans la procédure stockée pour comprendre le processus de configuration. Si vous souhaitez héberger vos propres données dans stockage blob Azure et conservez-la en lieu sûr à partir de l’accès public général, vous devez effectuer les étapes de configuration supplémentaires. La requête suivante retourne les données à partir de ce jeu de données externe :
 

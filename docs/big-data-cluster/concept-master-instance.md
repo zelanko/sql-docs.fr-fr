@@ -4,15 +4,15 @@ description: Cet article décrit l’instance principale dans un cluster de donn
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/01/2018
+ms.date: 11/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 7c58d925e9d52ee4496f8a324eab91bbfa7ccaad
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: 50955f8c781dcf370aa3f48ed72a0ed993854655
+ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50051061"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51221595"
 ---
 # <a name="what-is-the-sql-server-big-data-cluster-master-instance"></a>Quelles sont les données volumineuses de SQL Server cluster instance principale ?
 
@@ -26,7 +26,7 @@ L’instance principale de SQL Server fournit un point de terminaison TDS access
 
 ## <a name="scale-out-query-management"></a>Gestion des requêtes de montée en puissance
 
-L’instance principale de SQL Server contient le moteur de requête de montée en puissance est utilisé pour distribuer les requêtes sur des instances de SQL Server sur les nœuds dans le [pool de calcul](concept-compute-pool.md). Le moteur de requête de montée en puissance permet également d’accéder via Transact-SQL pour toutes les tables Hive dans le cluster sans aucune configuration supplémentaire. (Prise en charge des tables hive n’est pas dans CTP 2.0)
+L’instance principale de SQL Server contient le moteur de requête de montée en puissance est utilisé pour distribuer les requêtes sur des instances de SQL Server sur les nœuds dans le [pool de calcul](concept-compute-pool.md). Le moteur de requête de montée en puissance permet également d’accéder via Transact-SQL pour toutes les tables Hive dans le cluster sans aucune configuration supplémentaire. (Prise en charge des tables hive n’est pas dans les CTP 2.1)
 
 ## <a name="metadata-and-user-databases"></a>Les bases de données utilisateur et de métadonnées
 

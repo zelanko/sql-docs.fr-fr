@@ -1,11 +1,9 @@
 ---
 title: MultiPolygon | Microsoft Docs
-ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- dbe-spatial
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - MultiPolygon geometry subtype [SQL Server]
@@ -14,33 +12,33 @@ ms.assetid: 2c5db358-2a16-49d9-aac5-a74e86813932
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 35618fe95194a2c8fe256720bbfb3bb223390e57
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d941425b1faa2fcbc23b48555dce12846a7fd52e
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076856"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018984"
 ---
 # <a name="multipolygon"></a>MultiPolygon
-  Un `MultiPolygon` instance est une collection de zéro ou plusieurs `Polygon` instances.  
+  Une instance `MultiPolygon` est une collection de zéro ou plusieurs instances `Polygon`.  
   
 ## <a name="polygon-instances"></a>Instances Polygon  
- L’illustration ci-dessous montre des exemples de `MultiPolygon` instances.  
+ L'illustration suivante montre des exemples d'instances `MultiPolygon`.  
   
  ![Exemples d’instances MultiPolygon géométriques](../../database-engine/media/multipolygon.gif "Exemples d’instances MultiPolygon géométriques")  
   
  Comme indiqué par l'illustration :  
   
--   Figure 1 est un `MultiPolygon` instance avec deux `Polygon` éléments. La limite est définie par les deux anneaux extérieurs et les trois anneaux intérieurs.  
+-   La Figure 1 est une instance `MultiPolygon` avec deux éléments `Polygon`. La limite est définie par les deux anneaux extérieurs et les trois anneaux intérieurs.  
   
 -   La Figure 2 est une instance `MultiPolygon` avec deux éléments `Polygon`. La limite est définie par les deux anneaux extérieurs et les trois anneaux intérieurs. Les deux éléments `Polygon` se croisent à un point tangent.  
   
 ### <a name="accepted-instances"></a>Instances acceptées  
- Un `MultiPolygon` instance est acceptée, une des conditions suivantes est remplie.  
+ Les instances `MultiPolygon` sont acceptées si l'une des conditions suivantes est remplie.  
   
--   Il est vide `MultiPolygon` instance.  
+-   Il s'agit d'une instance `MultiPolygon` vide.  
   
--   Toutes les instances comprenant le `MultiPolygon` instance sont acceptées `Polygon` instances. Pour plus d’informations sur accepté `Polygon` instances, consultez [polygone](../spatial/polygon.md).  
+-   Toutes les instances comprenant l'instance `MultiPolygon` sont des instances `Polygon` acceptées. Pour plus d’informations sur accepté `Polygon` instances, consultez [polygone](../spatial/polygon.md).  
   
  Les exemples suivants montrent acceptés `MultiPolygon` instances.  
   
@@ -74,7 +72,7 @@ DECLARE @g3 geometry = 'MULTIPOLYGON(((2 2, 2 -2, -2 -2, -2 2, 2 2)),((1 1, 3 1,
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid();  
 ```  
   
- `@g2` est valide, car les deux `Polygon` instances se touchent uniquement à un point tangent. `@g3` n’est pas valide, car les intérieurs des deux `Polygon` instances chevauchent.  
+ `@g2` n'est pas valide car les deux instances de `Polygon` se touchent uniquement sur un point tangent. `@g3` n'est pas valide car les intérieurs des deux instances de `Polygon` se chevauchent.  
   
 ## <a name="examples"></a>Exemples  
  L’exemple suivant illustre la création d’une instance `geometry``MultiPolygon` et retourne l’entrée WKT (well-known text) du deuxième composant.  

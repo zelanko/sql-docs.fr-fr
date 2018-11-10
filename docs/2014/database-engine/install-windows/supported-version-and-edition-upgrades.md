@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 10/26/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords:
 - components [SQL Server], adding to existing installations
@@ -16,15 +15,15 @@ ms.assetid: 702359c4-6ca9-42a8-860c-a95a802898a1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6045b6e54758a210014c302d1d1301d29aae073d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4a245aab71292e1482bd5a17bd32a27bded640ab
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48199583"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018584"
 ---
 # <a name="supported-version-and-edition-upgrades"></a>Mises à niveau de version et d’édition prises en charge
-  Vous pouvez mettre à niveau à partir de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], et [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], et [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. Cette rubrique répertorie les chemins de mise à niveau pris en charge à partir de ces versions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , et les mises à niveau d'édition prises en charge pour [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
+  Vous pouvez effectuer une mise à niveau depuis [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] et [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. Cette rubrique répertorie les chemins de mise à niveau pris en charge à partir de ces versions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , et les mises à niveau d'édition prises en charge pour [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
   
 ## <a name="pre-upgrade-checklist"></a>Liste de contrôle préalable à la mise à niveau  
   
@@ -53,22 +52,22 @@ ms.locfileid: "48199583"
 ## <a name="upgrades-from-earlier-versions-to-includesssql14includessssql14-mdmd"></a>Mises à niveau des versions antérieures vers [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
   
 > [!NOTE]  
->  La prise en charge de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] est décrite plus en détail dans la section suivante, « Prise en charge[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] pour [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ».  
+>  La prise en charge de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] est décrite plus en détail dans la section suivante, « Prise en charge[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] pour [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]».  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] éditions 32 bits peuvent être mis à niveau vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] sur le sous-système 32 bits (WOW64) d’un serveur 64 bits.  
+-   Les éditions 32 bits de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peuvent être mise à niveau vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] dans le sous-système 32 bits (WOW64) d'un serveur 64 bits.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versions 64 bits peuvent être mis à niveau vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] serveur 64 bits uniquement.  
+-   Les versions 64 bits de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peuvent être mises à niveau uniquement vers un serveur 64 bits [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 > [!NOTE]  
 >  Lorsque vous effectuez la mise à niveau vers [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] d'une version antérieure de l'édition Enterprise de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , choisissez entre Enterprise Edition : contrat de licence selon le nombre de cœurs et Enterprise Edition. Ces éditions Enterprise se différencient uniquement par leur mode de licences et le nombre maximal de noyaux pris en charge. Pour plus d’informations, voir [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
   
- [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] prend en charge la mise à niveau à partir des versions suivantes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
+ [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] prend en charge la mise à niveau à partir des versions suivantes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
--   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP4 ou ultérieur  
+-   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP4 ou version ultérieure  
   
 -   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP3 ou ultérieur  
   
--   [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] SP2 ou ultérieur  
+-   [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] SP2 ou version ultérieure  
   
 -   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 ou version ultérieure  
   
@@ -103,10 +102,10 @@ ms.locfileid: "48199583"
 |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 Express,<br /><br /> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 Express with Tools, et<br /><br /> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 Express Management Studio, et<br /><br /> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 Express with Advanced Services|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Web<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Express|  
 |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 Business Intelligence|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence|  
   
-### <a name="includesssql14includessssql14-mdmd-support-for-includessversion2005includesssversion2005-mdmd"></a>[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Prise en charge de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]  
- Cette section aborde la prise en charge de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] pour [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Dans [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], vous pouvez effectuer les opérations suivantes :  
+### <a name="includesssql14includessssql14-mdmd-support-for-includessversion2005includesssversion2005-mdmd"></a>[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Prise en charge pour [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]  
+ Cette section aborde la prise en charge de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] pour [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Dans [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], vous pouvez effectuer les opérations suivantes :  
   
--   Mettre à niveau un [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] instance du moteur de base de données à [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] en exécutant [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] le programme d’installation à l’aide de l’Assistant d’installation ou à partir de l’invite de commandes.  
+-   Mettre à niveau une instance [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] du moteur de base de données [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] en exécutant le programme d'installation de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] avec l'assistant d'installation ou à partir de l'invite de commandes.  
   
 -   Attacher une base de données [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] (fichiers mdf/ldf) à l'instance [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] du moteur de base de données.  
   
@@ -114,15 +113,15 @@ ms.locfileid: "48199583"
   
 -   Mettre à niveau un package [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] vers [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. Exécuter des packages avec mise à niveau automatique sur place.  
   
--   Mettre à niveau un [!INCLUDE[ssASversion2005](../../includes/ssasversion2005-md.md)] à [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] en exécutant [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] le programme d’installation.  
+-   Mettre à niveau un [!INCLUDE[ssASversion2005](../../includes/ssasversion2005-md.md)] vers [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] en exécutant le programme d'installation de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
   
 -   Sauvegarder un cube [!INCLUDE[ssASversion2005](../../includes/ssasversion2005-md.md)] et le restaurer sur [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
   
--   Mettre à niveau [!INCLUDE[ssRSversion2005](../../includes/ssrsversion2005-md.md)] vers [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] en exécutant le programme d'installation de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
+-   Mettre à niveau [!INCLUDE[ssRSversion2005](../../includes/ssrsversion2005-md.md)] vers [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] en exécutant le programme d'installation de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] .  
   
--   Se connecter à [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]à l’aide de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 2014.  
+-   Se connecter à [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]à l'aide de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 2014.  
   
- Lorsqu'une base de données [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] est mise à niveau vers [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], le niveau de compatibilité de cette base de données passe de 90 à 100. (Dans [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], les valeurs valides pour le niveau de compatibilité de base de données sont 100, 110 et 120.) [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level) explique comment la modification du niveau de compatibilité peut affecter les applications [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Lorsqu'une base de données [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] est mise à niveau vers [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], le niveau de compatibilité de cette base de données passe de 90 à 100. (Dans [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], les valeurs valides du niveau de compatibilité de la base de données sont 100, 110 et 120.) [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level) explique comment la modification du niveau de compatibilité peut affecter les applications [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Les scénarios non spécifiés dans la liste ci-dessus ne sont pas pris en charge, notamment :  
   
@@ -161,7 +160,7 @@ ms.locfileid: "48199583"
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Web|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise (licence serveur+CAL ou licence principale)<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard|  
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Express <sup>1</sup>|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise (licence serveur+CAL ou licence principale)<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Developer<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Web|  
   
- En outre vous pouvez également effectuer une mise à niveau d'édition entre [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise (licence serveur+CAL) et [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise (licence principale) :  
+ En outre vous pouvez également effectuer une mise à niveau d'édition entre [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise (licence serveur+CAL) et [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise (licence principale) :  
   
 |Mise à niveau d'édition depuis|Mise à niveau d'édition vers|  
 |--------------------------|------------------------|  
@@ -170,7 +169,7 @@ ms.locfileid: "48199583"
   
  <sup>1</sup> s’applique également aux [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Express with Tools et [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Express with Advanced Services.  
   
- <sup>2</sup> modification de l’édition d’un [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] cluster de basculement est limité. Les scénarios suivants ne sont pas pris en charge pour les clusters de basculement [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] :  
+ <sup>2</sup> modification de l’édition d’un [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] cluster de basculement est limité. Les scénarios suivants ne sont pas pris en charge pour les clusters de basculement [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] :  
   
 -   SQL Server 2014 Enterprise vers SQL Server 2014 Developer, Standard ou Enterprise Evaluation.  
   

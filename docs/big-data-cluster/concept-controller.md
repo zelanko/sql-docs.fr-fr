@@ -4,15 +4,15 @@ description: Cet article décrit le contrôleur d’un cluster de données volum
 author: mihaelablendea
 ms.author: mihaelab
 manager: craigg
-ms.date: 10/01/2018
+ms.date: 11/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: cfc26567d13787671319cbbbee09bae39be126bf
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: abf8c174379ad444cd29b5115240ad7c404b2c4b
+ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50050871"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51221515"
 ---
 # <a name="what-is-the-sql-server-big-data-clusters-controller"></a>Qu’est le contrôleur de clusters de données volumineuses de SQL Server ?
 
@@ -26,8 +26,8 @@ Le service de contrôleur fournit les fonctionnalités principales suivantes :
 - Exposer des outils de surveillance pour observer l’état du cluster
 - Exposer des outils de dépannage pour détecter et corriger les problèmes inattendus
 - Gérer la sécurité du cluster : Vérifiez les points de terminaison de cluster sécurisé, gérer les utilisateurs et les rôles, configurez les informations d’identification pour la communication intra-cluster
-- Gérer le flux de travail des mises à niveau afin qu’ils sont implémentés en toute sécurité (non disponible dans CTP 2.0)
-- Gérer une haute disponibilité et récupération d’urgence pour les services avec état dans le cluster (non disponible dans CTP 2.0)
+- Gérer le flux de travail des mises à niveau afin qu’ils sont implémentés en toute sécurité (non disponible dans les CTP 2.1)
+- Gérer une haute disponibilité et récupération d’urgence pour les services avec état dans le cluster (non disponible dans les CTP 2.1)
 
 ## <a name="deploying-the-controller-service"></a>Déploiement du service de contrôleur
 
@@ -48,7 +48,7 @@ Le contrôleur et les objets Kubernetes (jeux avec état, pods, secrets, etc.) c
 
 `mssqlctl` est un utilitaire de ligne de commande écrit dans Python qui permet aux administrateurs de cluster à démarrer et gérer des clusters de données volumineuses via les API REST exposées par le service de contrôleur.
 
-### <a name="cluster-administration-portal"></a>Portail d’administration de cluster
+### <a name="cluster-administration-portal"></a>Portail d’administration du cluster
 
 Une fois que le service de contrôleur est en cours d’exécution, l’administrateur de cluster permettre utiliser le portail d’administration de Cluster pour surveiller la progression du déploiement, de détecter et de résoudre les problèmes avec les services au sein du cluster. 
 
