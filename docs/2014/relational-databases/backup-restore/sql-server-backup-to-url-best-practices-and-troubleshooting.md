@@ -48,7 +48,7 @@ ms.locfileid: "48049019"
 ## <a name="troubleshooting-backup-to-or-restore-from-url"></a>Dépannage des problèmes de sauvegarde vers une URL ou de restauration depuis une URL  
  Voici quelques méthodes rapides qui vous aideront à résoudre les erreurs survenant lors de la sauvegarde ou de la restauration vers/depuis le service de stockage d'objets blob Windows Azure.  
   
- Pour éviter les erreurs en raison des limitations ou des options non prises en charge, passez en revue la liste des limitations et prise en charge pour la sauvegarde et restauration sur les commandes dans le [SQL Server Backup and Restore with Windows Azure Blob Storage Service](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) article.  
+ Pour éviter les erreurs en raison des limitations ou des options non prises en charge, passez en revue la liste des limitations et prise en charge pour la sauvegarde et restauration sur les commandes dans le [Sauvegarde et restauration SQL Server avec le service de Stockage Blob Windows Azure](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) article.  
   
  **Erreurs d'authentification :**  
   
