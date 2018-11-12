@@ -30,7 +30,7 @@ ms.locfileid: "48064289"
  Utilisée pour restaurer une base de données.  
   
  New-SqlCredential  
- Cette applet de commande permet de créer des informations d'identification SQL à utiliser pour la sauvegarde SQL Server dans le stockage Windows Azure. Pour plus d'informations sur les informations d'identification et leur utilisation dans Sauvegarde et restauration SQL Server, consultez [SQL Server Backup and Restore with Windows Azure Blob Storage Service](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+ Cette applet de commande permet de créer des informations d'identification SQL à utiliser pour la sauvegarde SQL Server dans le stockage Windows Azure. Pour plus d'informations sur les informations d'identification et leur utilisation dans Sauvegarde et restauration SQL Server, consultez [Sauvegarde et restauration SQL Server avec le service de stockage d'objets blob Windows Azure](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
  Get-SqlCredential  
  Cette applet de commande est utilisée pour récupérer l'objet contenant les informations d'identification et ses propriétés.  
@@ -265,7 +265,7 @@ Backup-SqlDatabase -Database $s -BackupContainer $backupUrlContainer -SqlCredent
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [SQL Server Backup and Restore with Windows Azure Blob Storage Service](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)   
+ [Service de stockage d'objets blob Windows Azure](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)   
  [Bonnes pratiques en matière de sauvegarde SQL Server vers une URL et résolution des problèmes associés](sql-server-backup-to-url-best-practices-and-troubleshooting.md)  
   
   
