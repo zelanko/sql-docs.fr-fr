@@ -123,7 +123,7 @@ ms.locfileid: "48095709"
   
  Après avoir ajouté une carte à l'aide de l'Assistant Carte, vous pouvez créer des couches supplémentaires ou modifier des options pour une couche à l'aide de l'Assistant Couche. Pour plus d’informations sur les Assistants, consultez [Assistant Carte et Assistant Couche &#40;Générateur de rapports et SSRS&#41;](map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md).  
   
- Vous pouvez personnaliser les options d'affichage ou de données individuellement pour chaque couche. Pour plus d’informations sur la personnalisation d’une carte après avoir exécuté un Assistant, consultez [Customize the Data and Display of a Map or Map Layer &#40;Report Builder and SSRS&#41;](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md).  
+ Vous pouvez personnaliser les options d'affichage ou de données individuellement pour chaque couche. Pour plus d’informations sur la personnalisation d’une carte après avoir exécuté un Assistant, consultez [Personnaliser des données et l’affichage d’une carte ou d’une couche &#40;Générateur de rapports et SSRS&#41;](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md).  
   
  
   
