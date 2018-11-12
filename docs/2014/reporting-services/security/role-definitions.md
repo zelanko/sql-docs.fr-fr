@@ -48,7 +48,7 @@ ms.locfileid: "48107099"
   
  Pour créer une définition de rôle, utilisez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Pour plus d’informations, consultez [créer, supprimer ou modifier un rôle &#40;Management Studio&#41;](role-definitions-create-delete-or-modify.md).  
   
- Après avoir créé une définition de rôle, vous pouvez l'utiliser en la sélectionnant dans une attribution de rôle. Pour plus d’informations, consultez [Grant User Access to a Report Server &#40;Report Manager&#41;](grant-user-access-to-a-report-server.md).  
+ Après avoir créé une définition de rôle, vous pouvez l'utiliser en la sélectionnant dans une attribution de rôle. Pour plus d’informations, consultez [Accorder à un utilisateur l’accès à un serveur de rapports &#40;Gestionnaire de rapports&#41;](grant-user-access-to-a-report-server.md).  
   
 ## <a name="customize-or-delete-a-role-definition"></a>Personnaliser ou supprimer une définition de rôle  
  Les rôles prédéfinis peuvent être modifiés ou remplacés par des rôles personnalisés. Pour modifier un rôle, vous ajoutez ou supprimez des tâches de la définition de rôle. Vous ne pouvez pas renommer un rôle. Toute modification d'une définition de rôle est immédiatement appliquée à toutes les attributions de rôles qui incluent cette définition de rôle.  

@@ -27,7 +27,7 @@ ms.locfileid: "48154809"
   
 ### <a name="using-transact-sql"></a>Utilisation de Transact-SQL  
   
--   Étant donné que SQL Server doit se connecter à une source externe pour récupérer les fichiers de sauvegarde, les informations d'identification SQL sont utilisées pour authentifier le compte de stockage. Par conséquent, l'instruction RESTORE nécessite l'option WITH CREDENTIAL. Pour plus d'informations, voir [SQL Server Backup and Restore with Windows Azure Blob Storage Service](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+-   Étant donné que SQL Server doit se connecter à une source externe pour récupérer les fichiers de sauvegarde, les informations d'identification SQL sont utilisées pour authentifier le compte de stockage. Par conséquent, l'instruction RESTORE nécessite l'option WITH CREDENTIAL. Pour plus d'informations, voir [Sauvegarde et restauration SQL Server avec le service de stockage d'objets blob Windows Azure](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
 -   Si vous utilisez une [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] pour gérer vos sauvegardes dans le cloud, vous pouvez passer en revue toutes les sauvegardes disponibles dans le stockage, en utilisant la fonction système **smart_admin.fn_available_backups** . Cette fonction système retourne toutes les sauvegardes disponibles pour une base de données dans une table. Comme les résultats sont retournés dans une table, vous pouvez les filtres ou les trier. Pour plus d’informations, consultez [smart_admin.fn_available_backups &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/managed-backup-fn-available-backups-transact-sql).  
   
