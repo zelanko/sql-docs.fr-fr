@@ -83,7 +83,7 @@ ms.locfileid: "47603647"
  [Compteurs de performances du service Web MSRS 2011 en mode SharePoint et des objets de performance du service Windows MSRS 2011 en mode SharePoint &#40;mode SharePoint&#41;](../../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)  
  Décrit les compteurs de performances utilisés par le service Windows Report Server.  
   
- [Performance Counters for the ReportServer:Service  and ReportServerSharePoint:Service Performance Objects](../../reporting-services/report-server/performance-counters-reportserver-service-performance-objects.md)  
+ [Compteurs de performances pour des objets de performances ReportServer:Service  et ReportServerSharePoint:Service](../../reporting-services/report-server/performance-counters-reportserver-service-performance-objects.md)  
  Décrit les compteurs de performance liés à HTTP et relatifs à la mémoire dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
  Événements pour un serveur de rapports en mode intégré SharePoint  
