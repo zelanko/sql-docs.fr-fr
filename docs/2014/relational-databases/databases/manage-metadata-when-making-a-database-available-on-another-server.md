@@ -154,7 +154,7 @@ ms.locfileid: "48198499"
   
  [&#91;Haut&#93;](#information_entities_and_objects)  
   
-##  <a name="event_notif_and_wmi_events"></a> Event Notifications and Windows Management Instrumentation (WMI) Events (at Server Level)  
+##  <a name="event_notif_and_wmi_events"></a> Notifications d’événements et des événements Windows Management Instrumentation (WMI) (au niveau du serveur)  
   
 ### <a name="server-level-event-notifications"></a>Notifications d'événements au niveau du serveur  
  Les notifications d’événements au niveau du serveur sont stockées dans la base de données **msdb**. Par conséquent, si une application de base de données repose sur une notification d'événements au niveau du serveur, cette notification doit être recréée sur l'instance du serveur de destination. Pour afficher les notifications d’événements sur une instance de serveur, utilisez l’affichage catalogue [sys.server_event_notifications](/sql/relational-databases/system-catalog-views/sys-server-event-notifications-transact-sql) . Pour plus d'informations, voir [Event Notifications](../service-broker/event-notifications.md).  

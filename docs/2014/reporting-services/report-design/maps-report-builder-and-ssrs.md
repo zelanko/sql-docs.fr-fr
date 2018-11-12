@@ -197,7 +197,7 @@ ms.locfileid: "48187959"
   
  ![rsMapLayerZone](../media/rsmaplayerzone.gif "rsMapLayerZone")  
   
- Pour plus d’informations sur les couches, consultez [Add, Change, or Delete a Map or Map Layer &#40;Report Builder and SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md).  
+ Pour plus d’informations sur les couches, consultez [Ajouter, modifier ou supprimer une carte ou une couche &#40;Générateur de rapports et SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md).  
   
 ### <a name="varying-display-properties-for-points-lines-and-polygons"></a>Modification des propriétés d'affichage des points, des lignes et des polygones  
  Les options d'affichage d'un élément cartographique peuvent être définies au niveau de la couche, à l'aide de règles pour la couche ou pour des éléments individuels. Par exemple, vous pouvez définir des propriétés d'affichage pour tous les points d'une couche, ou définir des règles qui contrôlent les propriétés d'affichage pour tous les points d'une couche, qu'ils soient incorporés ou non, ou remplacer des paramètres des propriétés d'affichage pour des points incorporés spécifiques.  

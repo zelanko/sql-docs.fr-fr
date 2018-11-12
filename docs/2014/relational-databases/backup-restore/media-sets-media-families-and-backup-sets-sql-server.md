@@ -34,7 +34,7 @@ ms.locfileid: "48197309"
   Cette rubrique présente la terminologie de base des supports de sauvegarde propre aux sauvegardes et restaurations dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cette rubrique s'adresse aux lecteurs qui font leurs premiers pas dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cette rubrique décrit le format utilisé par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour les supports de sauvegarde, la correspondance entre le support de sauvegarde et les unités de sauvegarde, l'organisation des sauvegardes sur le support de sauvegarde, et plusieurs considérations relatives aux jeux de supports et aux familles de supports. La rubrique décrit également les étapes de l'initialisation ou la mise en forme du support de sauvegarde avant de l'utiliser pour la première fois ou de remplacer un jeu de supports ancien par un nouveau, comment remplacer d'anciens jeux de sauvegarde dans un jeu de supports, et comment ajouter de nouveaux jeux de sauvegarde à un jeu de supports.  
   
 > [!NOTE]  
->  Pour plus d’informations sur la sauvegarde de SQL Server pour le service de stockage d’objets Blob Windows Azure, consultez, [SQL Server Backup and Restore with Windows Azure Blob Storage Service](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+>  Pour plus d’informations sur la sauvegarde de SQL Server pour le service de stockage d’objets Blob Windows Azure, consultez, [Sauvegarde et restauration SQL Server avec le service de stockage d'objets blob Windows Azure](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
   
 ##  <a name="TermsAndDefinitions"></a> Termes et définitions  
