@@ -51,7 +51,7 @@ ms.locfileid: "48164789"
 -   Les deux serveurs partenaires, c'est-à-dire le principal et le serveur miroir doivent exécuter la même version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le serveur témoin, le cas échéant, peut s'exécuter sur n'importe quelle édition de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui prend en charge la mise en miroir de bases de données.  
   
     > [!NOTE]  
-    >  Vous pouvez mettre à niveau des instances de serveur qui participent à une session de mise en miroir vers une version plus récente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d'informations, voir [Minimize Downtime for Mirrored Databases When Upgrading Server Instances](upgrading-mirrored-instances.md).  
+    >  Vous pouvez mettre à niveau des instances de serveur qui participent à une session de mise en miroir vers une version plus récente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations, voir [réduire les temps d’arrêt pour la mise en miroir de bases de données lors de la mise à niveau d’Instances de serveur](upgrading-mirrored-instances.md).  
   
 -   La base de données doit utiliser le mode de récupération complète. Les modes de récupération simples et utilisant les journaux de transactions ne prennent pas en charge la mise en miroir de bases de données. Par conséquent, toutes les opérations en bloc sont entièrement journalisées pour une base de données mise en miroir. Pour plus d’informations sur les modes de récupération, consultez [Modes de récupération &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md).  
   
