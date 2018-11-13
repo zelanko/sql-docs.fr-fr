@@ -52,7 +52,7 @@ sudo /opt/mssql/bin/mssql-conf set hadr.hadrenabled 1
 
 ### <a name="edit-the-mssqlconf-file"></a>Modifier le fichier mssql.conf
 
-Vous pouvez également modifier le fichier `mssql.conf`, situé sous le dossier `/var/opt/mssql`, pour ajouter les lignes suivantes :
+Vous pouvez également modifier le fichier `mssql.conf`, situé sous le dossier `/var/opt/mssql`, pour ajouter les lignes suivantes :
 
 ```
 [hadr]
@@ -61,7 +61,7 @@ hadr.hadrenabled = 1
 ```
 
 ### <a name="restart-includessnoversion-mdincludesssnoversion-mdmd"></a>Redémarrage [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
-Après avoir activé les groupes de disponibilité, comme sur Windows, vous devez redémarrer [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. Ceci peut être effectué avec la commande suivante :
+Après avoir activé les groupes de disponibilité, comme sur Windows, vous devez redémarrer [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. Ceci peut être effectué avec la commande suivante :
 
 ```bash
 sudo systemctl restart mssql-server
@@ -351,7 +351,7 @@ Cette section montre comment créer un groupe de disponibilité avec un cluster 
 
     ![](./media/sql-server-linux-create-availability-group/image6.png)
 
-11. Si un écouteur est créé pour les scénarios lisibles, SSMS 17.3 ou ultérieure permet la création du routage en lecture seule dans l’Assistant. Il peut également être ajouté ultérieurement par le biais de SSMS ou Transact-SQL. Pour ajouter le routage en lecture seule maintenant :
+11. Si un écouteur est créé pour les scénarios lisibles, SSMS 17.3 ou ultérieure permet la création du routage en lecture seule dans l’Assistant. Il peut également être ajouté ultérieurement par le biais de SSMS ou Transact-SQL. Pour ajouter le routage en lecture seule maintenant :
 
     A.  Sélectionnez l’onglet routage en lecture seule.
 
@@ -359,11 +359,11 @@ Cette section montre comment créer un groupe de disponibilité avec un cluster 
 
     c.  Sélectionnez chaque URL et en bas, sélectionnez les réplicas lisibles. Pour une sélection multiple, maintenez la touche MAJ ou cliquez et faites glisser.
 
-12. Cliquez sur **Suivant**.
+12. Cliquer sur **Suivant**.
 
-13. Choisissez comment l’ou les réplicas secondaire sera initialisé. La valeur par défaut consiste à utiliser [l’amorçage automatique](../database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group.md), ce qui nécessite le même chemin d’accès sur tous les serveurs participant dans le groupe de disponibilité. Vous pouvez également laisser l’Assistant effectuer une copie de sauvegarde et de restauration (la deuxième option) ; il avoir une jointure si vous avez manuellement sauvegardé, copié et restauré la base de données sur l’ou les réplicas (troisième option) ; ou ajoutés ultérieurement de la base de données (la dernière option). Comme avec les certificats, si vous êtes manuellement les sauvegardes et les copier, les autorisations sur les fichiers de sauvegarde doit être définie sur l’ou les autres réplicas. Cliquez sur **Suivant**.
+13. Choisissez comment l’ou les réplicas secondaire sera initialisé. La valeur par défaut consiste à utiliser [l’amorçage automatique](../database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group.md), ce qui nécessite le même chemin d’accès sur tous les serveurs participant dans le groupe de disponibilité. Vous pouvez également laisser l’Assistant effectuer une copie de sauvegarde et de restauration (la deuxième option) ; il avoir une jointure si vous avez manuellement sauvegardé, copié et restauré la base de données sur l’ou les réplicas (troisième option) ; ou ajoutés ultérieurement de la base de données (la dernière option). Comme avec les certificats, si vous êtes manuellement les sauvegardes et les copier, les autorisations sur les fichiers de sauvegarde doit être définie sur l’ou les autres réplicas. Cliquer sur **Suivant**.
 
-14. Dans la boîte de dialogue de Validation, si tous les éléments ne sont reçue en tant que réussite, examiner. Des avertissements sont acceptables et pas irrécupérable, comme si vous ne créez pas un écouteur. Cliquez sur **Suivant**.
+14. Dans la boîte de dialogue de Validation, si tous les éléments ne sont reçue en tant que réussite, examiner. Des avertissements sont acceptables et pas irrécupérable, comme si vous ne créez pas un écouteur. Cliquer sur **Suivant**.
 
 15. Dans la boîte de dialogue Résumé, cliquez sur **Terminer**. Le processus pour créer le groupe de disponibilité commence.
 
@@ -679,8 +679,8 @@ Dans ce didacticiel, vous avez appris à créer et configurer un groupe de dispo
 > [!div class="checklist"]
 > * Activer les groupes de disponibilité.
 > * Points de terminaison de créer le groupe de disponibilité et certificats.
-> * Utilisez [!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)] (SSMS) ou de Transact-SQL pour créer un groupe de disponibilité.
-> * Créer le [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] connexion et des autorisations pour Pacemaker.
+> * Utiliser [!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)] (SSMS) ou Transact-SQL pour créer un groupe de disponibilité.
+> * Créer la connexion [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] et les autorisations pour Pacemaker.
 > * Créez des ressources de groupe de disponibilité dans un cluster Pacemaker.
 
 Pour la plupart des tâches d’administration de groupe de disponibilité, y compris les mises à niveau et le basculement, consultez :
