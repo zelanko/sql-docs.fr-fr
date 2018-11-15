@@ -33,7 +33,7 @@ ms.locfileid: "48140639"
 >  Vous pouvez également accéder à la **Bibliothèque des configurations du package**, en cliquant sur le bouton de sélection (points de suspension) en regard de la propriété **Configuration** . La propriété Configuration apparaît dans la fenêtre des propriétés du package.  
   
 > [!NOTE]  
->  Des configurations sont disponibles pour le modèle de déploiement de package. Les paramètres sont utilisés à la place des configurations pour le modèle de déploiement de projet. Le modèle de déploiement de projet vous permet de déployer des projets [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sur le serveur [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Pour plus d'informations sur les modèles de déploiement, consultez [Deployment of Projects and Packages](packages/deploy-integration-services-ssis-projects-and-packages.md).  
+>  Des configurations sont disponibles pour le modèle de déploiement de package. Les paramètres sont utilisés à la place des configurations pour le modèle de déploiement de projet. Le modèle de déploiement de projet vous permet de déployer des projets [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sur le serveur [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Pour plus d'informations sur les modèles de déploiement, consultez [Déploiement de projets et de packages](packages/deploy-integration-services-ssis-projects-and-packages.md).  
   
  Dans la boîte de dialogue **Bibliothèque des configurations du package** , vous pouvez permettre aux packages d'utiliser des configurations, ajouter et supprimer des configurations et définir l'ordre souhaité dans lequel sont chargées les configurations.  
   
@@ -96,9 +96,9 @@ ms.locfileid: "48140639"
   
 6.  Sur la page d'accueil de l'Assistant Configuration de package, cliquez sur **Suivant**.  
   
-7.  Sur la page Sélectionner le type de configuration, spécifiez le type de configuration, puis définissez les propriétés se rapportant au type de configuration. Pour plus d’informations, voir [Package Configuration Wizard UI Reference](../../2014/integration-services/package-configuration-wizard-ui-reference.md).  
+7.  Sur la page Sélectionner le type de configuration, spécifiez le type de configuration, puis définissez les propriétés se rapportant au type de configuration. Pour plus d’informations, voir [Référence de l'interface utilisateur de l'Assistant Configuration de package](../../2014/integration-services/package-configuration-wizard-ui-reference.md).  
   
-8.  Dans la page Sélectionner les propriétés à exporter, sélectionnez les propriétés des objets de package à inclure dans la configuration. Si le type de configuration ne prend en charge qu'une seule propriété, le titre de cette page de l'Assistant est Sélectionner la propriété cible. Pour plus d’informations, voir [Package Configuration Wizard UI Reference](../../2014/integration-services/package-configuration-wizard-ui-reference.md).  
+8.  Dans la page Sélectionner les propriétés à exporter, sélectionnez les propriétés des objets de package à inclure dans la configuration. Si le type de configuration ne prend en charge qu'une seule propriété, le titre de cette page de l'Assistant est Sélectionner la propriété cible. Pour plus d’informations, voir [Référence de l'interface utilisateur de l'Assistant Configuration de package](../../2014/integration-services/package-configuration-wizard-ui-reference.md).  
   
     > [!NOTE]  
     >  Seuls les types de configuration **Fichier de configuration XML** et **SQL Server** prennent en charge l’inclusion de plusieurs propriétés dans une configuration.  
@@ -111,9 +111,9 @@ ms.locfileid: "48140639"
   
 ## <a name="external-resources"></a>Ressources externes  
   
--   Article technique, [Understanding Integration Services Package Configurations](http://go.microsoft.com/fwlink/?LinkId=165643), sur msdn.microsoft.com  
+-   Article technique, [Présentation des configurations de packages Integration Services.](http://go.microsoft.com/fwlink/?LinkId=165643), sur msdn.microsoft.com  
   
--   Entrée de blog, [Creating packages in code – Package Configurations](http://go.microsoft.com/fwlink/?LinkId=217663), sur www.sqlis.com.  
+-   Entrée de blog, [création de packages dans le code – Package Configurations](http://go.microsoft.com/fwlink/?LinkId=217663), sur www.sqlis.com.  
   
 -   Entrée de blog, [API Sample – Programmatically add a configuration file to a package](http://go.microsoft.com/fwlink/?LinkId=217664), sur blogs.msdn.com.  
   

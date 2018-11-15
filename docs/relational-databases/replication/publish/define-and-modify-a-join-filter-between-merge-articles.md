@@ -110,9 +110,9 @@ ms.locfileid: "47728897"
   
 1.  Définissez le filtrage pour l'article auquel s'effectue la jointure, qui est également connu comme l'article parent.  
   
-    -   Pour un article filtré à l'aide d'un filtre de lignes paramétrable, consultez [Define and Modify a Parameterized Row Filter for a Merge Article](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md).  
+    -   Pour un article filtré à l'aide d'un filtre de lignes paramétrable, consultez [Définir et modifier un filtre de lignes paramétrable pour un article de fusion](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md).  
   
-    -   Pour un article filtré à l'aide d'un filtre de lignes statique, consultez [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md).  
+    -   Pour un article filtré à l'aide d'un filtre de lignes statique, consultez [Définir et modifier un filtre de lignes statiques](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md)  
   
 2.  Exécutez [sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) sur la base de données de publication du serveur de publication pour définir un ou plusieurs articles connexes, également appelés « articles enfants », pour la publication. Pour plus d'informations, voir [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
   
@@ -128,7 +128,7 @@ ms.locfileid: "47728897"
     >  Affectez uniquement à **@join_unique_key** la valeur **1** s'il existe une contrainte sur la colonne de jointure dans la table sous-jacente pour l'article parent qui garantit l'unicité. Si **@join_unique_key** se voit affecter la valeur **1** de manière inappropriée, une non-convergence des données peut se produire.  
   
 ###  <a name="TsqlExample"></a> Exemples (Transact-SQL)  
- Cet exemple définit un article pour une publication de fusion, où l'article de la table `SalesOrderDetail` est filtré par rapport à la table `SalesOrderHeader` qui est elle-même filtrée à l'aide d'un filtre de ligne statique. Pour plus d'informations, voir [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md).  
+ Cet exemple définit un article pour une publication de fusion, où l'article de la table `SalesOrderDetail` est filtré par rapport à la table `SalesOrderHeader` qui est elle-même filtrée à l'aide d'un filtre de ligne statique. Pour plus d'informations, voir [Définir et modifier un filtre de lignes statiques](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md).  
   
  [!code-sql[HowTo#sp_AddMergeArticle](../../../relational-databases/replication/codesnippet/tsql/define-and-modify-a-join_1.sql)]  
   
