@@ -37,7 +37,7 @@ ms.locfileid: "34019496"
 ##  <a name="bkmk_top"></a> Obtention d'informations sur le modèle de régression logistique  
  Les modèles de régression logistique sont créés en utilisant l'algorithme MNR (Microsoft Neural Network) avec un ensemble spécial de paramètres ; par conséquent, un modèle de régression logistique possède certaines informations identiques à un modèle de réseau neuronal, mais est moins complexe. Pour comprendre la structure du contenu du modèle et les types d’informations stockés dans les différents types de nœuds, consultez [Mining Model Content for Logistic Regression Models &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md).  
   
- Pour suivre les scénarios de requête, vous pouvez créer un modèle de régression logistique comme décrit dans la section suivante du Didacticiel intermédiaire sur l’exploration de données : [Lesson 5: Building Neural Network and Logistic Regression Models &#40;Intermediate Data Mining Tutorial&#41;](http://msdn.microsoft.com/library/42c3701a-1fd2-44ff-b7de-377345bbbd6b).  
+ Pour suivre les scénarios de requête, vous pouvez créer un modèle de régression logistique comme décrit dans la section suivante du Didacticiel intermédiaire sur l’exploration de données : [Leçon 5 : Génération de modèles de réseau neuronal et de régression logistique &#40;Didacticiel sur l’exploration de données intermédiaire&#41;](http://msdn.microsoft.com/library/42c3701a-1fd2-44ff-b7de-377345bbbd6b).  
   
  Vous pouvez aussi utiliser la structure d’exploration de données (publipostage ciblé) du [Didacticiel sur l’exploration de données de base](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
   

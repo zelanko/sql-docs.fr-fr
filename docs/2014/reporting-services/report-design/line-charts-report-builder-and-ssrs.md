@@ -34,7 +34,7 @@ ms.locfileid: "48199949"
   
 -   **Courbes en escalier**. Graphique en courbes qui utilise une ligne en escalier au lieu d'une ligne normale. La ligne en escalier connecte les points à l'aide d'une ligne qui ressemble aux barreaux d'une échelle ou aux marches d'un escalier.  
   
--   **Graphiques sparkline**. Variations du graphique en courbes qui affichent uniquement la série dans la cellule d'une table ou matrice. Pour plus d’informations, consultez [Sparklines and Data Bars &#40;Report Builder and SSRS&#41;](sparklines-and-data-bars-report-builder-and-ssrs.md).  
+-   **Graphiques sparkline**. Variations du graphique en courbes qui affichent uniquement la série dans la cellule d'une table ou matrice. Pour plus d’informations, consultez [Graphiques sparkline et barres de données &#40;Générateur de rapports et SSRS&#41;](sparklines-and-data-bars-report-builder-and-ssrs.md).  
   
 ## <a name="data-considerations-for-line-charts"></a>Considérations relatives aux données pour les graphiques en courbes  
   

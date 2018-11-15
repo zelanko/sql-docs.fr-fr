@@ -25,7 +25,7 @@ ms.locfileid: "48207919"
   
 -   Vous avez créé une base de données sur l'ordinateur source.  
   
--   Vous avez créé une sauvegarde de votre base de données (.bak) dans le stockage Windows Azure à l’aide de la [SQL Server Backup and Restore with Windows Azure Blob Storage Service](backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) fonctionnalité. Notez que vous devez créer d'autres informations d'identification SQL Server au cours de cette étape. Ces informations d'identification utilisent des clés de compte de stockage.  
+-   Vous avez créé une sauvegarde de votre base de données (.bak) dans le stockage Windows Azure à l’aide de la [Sauvegarde et restauration SQL Server avec le service de stockage d'objets blob Windows Azure](backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) fonctionnalité. Notez que vous devez créer d'autres informations d'identification SQL Server au cours de cette étape. Ces informations d'identification utilisent des clés de compte de stockage.  
   
 -   Vous disposez d'un compte Microsoft Azure Storage.  
   
