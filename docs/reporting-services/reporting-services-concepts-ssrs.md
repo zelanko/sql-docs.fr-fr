@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 934b199c-9918-4e6b-83f4-5862b94fc904
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4976298eee9ed0e8b3cef41fa2f201a5590799bc
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 7bad528f4c644ee4de7339eacdd1e0a0e74c9abc
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031890"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814302"
 ---
 # <a name="reporting-services-concepts-ssrs"></a>Concepts de Reporting Services (SSRS)
   Cette rubrique fournit un bref résumé des concepts de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
@@ -33,7 +33,7 @@ ms.locfileid: "50031890"
  Les éléments du serveur de rapports incluent des rapports paginés et mobiles, des indicateurs de performance clé, des sources de données partagées, des datasets partagés et d'autres éléments que vous pouvez publier, télécharger ou enregistrer sur un serveur de rapports. Organisez les éléments dans la structure hiérarchique des dossiers du serveur de rapports sur un serveur de rapports natif ou dans les bibliothèques de contenu SharePoint sur un site SharePoint. Pour plus d’informations, consultez [Gestion du contenu du serveur de rapports &#40;SSRS en mode natif&#41;](../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md).  
   
 ### <a name="folders"></a>Dossiers
- Sur un serveur de rapports natif, les dossiers fournissent la structure hiérarchique de navigation et le chemin d'accès de tous les éléments adressables qui sont stockés dans un serveur de rapports. Pour contrôler l’accès aux éléments du serveur de rapports, appelé *sécurité au niveau élément*, utilisez l’arborescence des dossiers et les autorisations d’accès au dossier et au site. Par défaut, les attributions de rôles que vous définissez pour des dossiers spécifiques sont héritées par des dossiers enfants dans l'arborescence des dossiers. Si vous attribuez des rôles spécifiques à un dossier, les règles d'héritage ne sont plus applicables. La structure des dossiers comporte un nœud racine nommé **Accueil**et des dossiers réservés qui prennent en charge la fonctionnalité optionnelle **Mes rapports** . Dans un navigateur, le nœud racine est le nom du répertoire virtuel du serveur de rapports, par exemple, `http://myreportserver/reports`. Pour plus d'informations, consultez [Folders](../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md#bkmk_Folders).  
+ Sur un serveur de rapports natif, les dossiers fournissent la structure hiérarchique de navigation et le chemin d'accès de tous les éléments adressables qui sont stockés dans un serveur de rapports. Pour contrôler l’accès aux éléments du serveur de rapports, appelé *sécurité au niveau élément*, utilisez l’arborescence des dossiers et les autorisations d’accès au dossier et au site. Par défaut, les attributions de rôles que vous définissez pour des dossiers spécifiques sont héritées par des dossiers enfants dans l'arborescence des dossiers. Si vous attribuez des rôles spécifiques à un dossier, les règles d'héritage ne sont plus applicables. La structure des dossiers comporte un nœud racine nommé **Accueil**et des dossiers réservés qui prennent en charge la fonctionnalité optionnelle **Mes rapports** . Dans un navigateur, le nœud racine est le nom du répertoire virtuel du serveur de rapports, par exemple, `https://myreportserver/reports`. Pour plus d'informations, consultez [Folders](../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md#bkmk_Folders).  
   
  Pour organiser les éléments sur un site SharePoint, utilisez les dossiers SharePoint des bibliothèques de documents et des bibliothèques de contenu.  
   

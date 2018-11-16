@@ -21,12 +21,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 307db631ea3d4b803402f11070c5770afe452b0c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d764bcfec14d14b1c1a3e6bf5a6f0af9b18687ce
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772559"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701317"
 ---
 # <a name="what-are-the-sql-database-functions"></a>Quelles sont les fonctions de base de données SQL ?
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -60,14 +60,14 @@ Effectuent des opérations sur une valeur unique et retournent ensuite une valeu
 |[Fonctions de curseur](cursor-functions-transact-sql.md)|Retournent des informations sur les curseurs.|  
 |[Types de données et fonctions de date et d’heure](date-and-time-data-types-and-functions-transact-sql.md)|Effectuent des opérations sur des valeurs d'entrée de type date et heure et retournent des valeurs de type date et heure, numérique ou chaîne.|  
 |[Fonctions JSON](json-functions-transact-sql.md)|Validez, interrogez et modifiez les données JSON.|  
-|[Fonctions logiques](http://msdn.microsoft.com/library/5b2b4546-951b-462d-91d5-e41fc5acd6f9)|Effectuent des opérations logiques.|  
+|[Fonctions logiques](https://msdn.microsoft.com/library/5b2b4546-951b-462d-91d5-e41fc5acd6f9)|Effectuent des opérations logiques.|  
 |[Fonctions mathématiques](mathematical-functions-transact-sql.md)|Effectuent des calculs sur la base des valeurs d'entrée fournies comme paramètres aux fonctions et retournent des valeurs numériques.|  
 |[Fonctions de métadonnées](metadata-functions-transact-sql.md)|Retournent des informations concernant la base de données et les objets de base de données.|  
 |[Fonctions de sécurité](security-functions-transact-sql.md)|Retournent des informations concernant les utilisateurs et les rôles.|  
 |[Fonctions de chaîne](string-functions-transact-sql.md)|Effectuent des opérations sur une valeur d’entrée de type chaîne (**char** ou **varchar**) et renvoient une valeur numérique ou de type chaîne.|  
 |[Fonctions système](../../relational-databases/system-functions/system-functions-for-transact-sql.md)|Effectuent des opérations et retournent des informations concernant les valeurs, objets et paramètres de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[Fonctions statistiques système](system-statistical-functions-transact-sql.md)|Retournent des informations statistiques concernant le système.|  
-|[Fonctions texte et image](http://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)|Effectuent des opérations sur des colonnes ou des valeurs d'entrée de type texte ou image et retournent des informations concernant la valeur.|  
+|[Fonctions texte et image](https://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)|Effectuent des opérations sur des colonnes ou des valeurs d'entrée de type texte ou image et retournent des informations concernant la valeur.|  
   
 ## <a name="function-determinism"></a>Déterminisme des fonctions  
  Les fonctions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intégrées sont déterministes ou non déterministes. Une fonction déterministe retourne toujours le même résultat chaque fois qu'elle est appelée avec un ensemble de valeurs d'entrée spécifique. Une fonction non déterministe peut retourner des résultats différents chaque fois qu'elle est appelée, même si le même ensemble de valeurs d'entrée spécifique est utilisé. Pour plus d’informations, consultez [Fonctions déterministes et non déterministes](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)  

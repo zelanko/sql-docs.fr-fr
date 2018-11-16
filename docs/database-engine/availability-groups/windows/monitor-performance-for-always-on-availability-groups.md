@@ -10,12 +10,12 @@ ms.assetid: dfd2b639-8fd4-4cb9-b134-768a3898f9e6
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f9da27595423d85ddb2769ea66b6ac4b4e26cb05
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2f9b3fb8ce55a57a7609aacd685ef56952b6811e
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47802287"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601149"
 ---
 # <a name="monitor-performance-for-always-on-availability-groups"></a>Monitorer les performances des groupes de disponibilité Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -328,7 +328,7 @@ Il est possible d’interroger les vues DMV [sys.dm_hadr_database_replica_states
 
   
 ##  <a name="monitoring-for-rto-and-rpo"></a>Supervision du RTO et du RPO  
- Cette section montre comment monitorer les métriques RTO et RPO des groupes de disponibilité. Cette démonstration est similaire au didacticiel relatif à l’interface graphique utilisateur présenté dans [The Always On health model, part 2: Extending the health model](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx).  
+ Cette section montre comment monitorer les métriques RTO et RPO des groupes de disponibilité. Cette démonstration est similaire au didacticiel relatif à l’interface graphique utilisateur présenté dans [The Always On health model, part 2: Extending the health model](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx).  
   
  Les éléments de calcul du temps de basculement et du risque de perte de données dans [Estimation du temps de basculement (RTO)](#BKMK_RTO) et [Estimation du risque de perte de données (RPO)](#BKMK_RPO) sont proposés sous forme de métriques dans la facette de gestion de stratégie **État du réplica de base de données** (consultez [Afficher les facettes de gestion basée sur des stratégies sur un objet SQL Server](~/relational-databases/policy-based-management/view-the-policy-based-management-facets-on-a-sql-server-object.md)). Vous pouvez monitorer ces deux métriques selon une planification et recevoir une alerte quand elles dépassent le RTO et le RPO, respectivement.  
   

@@ -5,19 +5,18 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: aee11dde-daad-439b-b594-9f4aeac94335
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d1b4ddf913d0de1f93d6b440c0fe861bdeaf1ecf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c4c520639c0be9ad22a4ba768bf09a704292d511
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745317"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677608"
 ---
 # <a name="configure-distributed-replay"></a>Configure Distributed Replay
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -168,8 +167,8 @@ ms.locfileid: "47745317"
 
 ### <a name="possible-issue-when-running-with-synchronization-sequencing-mode"></a>Problème possible lors de l’exécution avec la synchronisation en Mode de séquencement
  Vous pouvez rencontrer un problème dans lequel la fonctionnalité de relecture semble se « blocage », ou les événements de relectures très lentement. Ce phénomène peut se produire si la cours de relecture de trace s’appuie sur les données et/ou les événements qui n’existent pas dans la base de données restaurée. 
- 
- Par exemple, une charge de travail capturée utilise WAITFOR, comme dans l’instruction WAITFOR de réception de Service service Broker. Lorsque vous utilisez le mode de séquencement de synchronisation, les lots sont relus en série. Si une instruction INSERT portant sur la base de données source après la sauvegarde de base de données, mais avant la capture de la relecture de trace est démarrée, la réception WAITFOR émis lors de la relecture peut devoir attendre la durée totale de WAITFOR. Événements configurés pour être relus après que la réception de WAITFOR sera bloquée. Cela peut entraîner le compteur de moniteur de performances de requêtes Batch/s pour la relecture de base de données cible quand vous avez déposé à zéro jusqu'à ce que WAITFOR soit terminée. 
+ 
+Par exemple, une charge de travail capturée utilise WAITFOR, comme dans l’instruction WAITFOR de réception de Service service Broker. Lorsque vous utilisez le mode de séquencement de synchronisation, les lots sont relus en série. Si une instruction INSERT portant sur la base de données source après la sauvegarde de base de données, mais avant la capture de la relecture de trace est démarrée, la réception WAITFOR émis lors de la relecture peut devoir attendre la durée totale de WAITFOR. Événements configurés pour être relus après que la réception de WAITFOR sera bloquée. Cela peut entraîner le compteur de moniteur de performances de requêtes Batch/s pour la relecture de base de données cible quand vous avez déposé à zéro jusqu'à ce que WAITFOR soit terminée. 
  
  Si vous avez besoin d’utiliser le mode de synchronisation et souhaits afin d’éviter ce comportement, vous devez procédez comme suit :
  
@@ -185,8 +184,8 @@ ms.locfileid: "47745317"
 ## <a name="see-also"></a> Voir aussi  
  [Options de ligne de commande de l’outil d’administration &#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
- [Forum de SQL Server Distributed Replay](http://social.technet.microsoft.com/Forums/sl/sqldru/)   
- [Utilisation de Distributed Replay pour le test de charge de SQL Server – Partie 2](http://blogs.msdn.com/b/mspfe/archive/2012/11/14/using-distributed-replay-to-load-test-your-sql-server-part-2.aspx)   
- [Utilisation de Distributed Replay pour le test de charge de SQL Server – Partie 1](http://blogs.msdn.com/b/mspfe/archive/2012/11/08/using-distributed-replay-to-load-test-your-sql-server-part-1.aspx)  
+ [Forum de SQL Server Distributed Replay](https://social.technet.microsoft.com/Forums/sl/sqldru/)   
+ [Utilisation de Distributed Replay pour le test de charge de SQL Server – Deuxième partie](https://blogs.msdn.com/b/mspfe/archive/2012/11/14/using-distributed-replay-to-load-test-your-sql-server-part-2.aspx)   
+ [Utilisation de Distributed Replay pour le test de charge de SQL Server – Partie 1](https://blogs.msdn.com/b/mspfe/archive/2012/11/08/using-distributed-replay-to-load-test-your-sql-server-part-1.aspx)  
   
   

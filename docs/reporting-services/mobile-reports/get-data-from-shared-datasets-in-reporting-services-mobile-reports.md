@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 0b846451-c8d0-412c-802d-a42bb1ff8c63
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ec30904cc7c434d5450de025feb0cb7698a2e128
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cac1a32b49fde5b41c0a8ef21706d873ce037cd3
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836953"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813932"
 ---
 # <a name="get-data-from-shared-datasets-in-reporting-services-mobile-reports"></a>Obtenir des données à partir de datasets partagés dans l’Éditeur de rapports mobiles
 Outre le [chargement de données à partir de fichiers Excel](../../reporting-services/mobile-reports/prepare-excel-data-for-reporting-services-mobile-reports.md), l’Éditeur de rapports mobiles SQL Server peut également accéder à des données depuis pratiquement n’importe quelle source. L’accès aux données requiert une source de données partagée, configurée sur un portail web Reporting Services. En savoir plus sur la [création de sources de données partagées](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md) et sur la [création de jeux de données partagés](../../reporting-services/report-data/manage-shared-datasets.md).  
@@ -41,7 +41,7 @@ Une fois connecté à un serveur [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnove
   
 Une fois le jeu de données importé, vous pouvez concevoir votre rapport mobile de la même manière qu’avec des données simulées ou qu’avec des données locales provenant d’un fichier Excel.  
   
-Par défaut, le jeu de données partagé reflète toujours les données les plus récentes, car chaque fois qu’un utilisateur consulte un rapport mobile dérivé de ce jeu de données, SQL Server exécute la requête sous-jacente et retourne les données les plus récentes. Cette approche n’est certainement pas idéale si un grand nombre d’utilisateurs consultent votre rapport mobile ; vous pouvez donc configurer la mise en cache pour exécuter régulièrement la requête et mettre en cache le jeu de données obtenu. Ce billet de blog explique [le principe de fonctionnement de la mise en cache et de l’actualisation des données dans le portail web](http://christopherfinlan.com/2016/02/10/so-refreshinghow-data-refresh-works-with-mobile-reports-and-kpis-in-reporting-services/).  
+Par défaut, le jeu de données partagé reflète toujours les données les plus récentes, car chaque fois qu’un utilisateur consulte un rapport mobile dérivé de ce jeu de données, SQL Server exécute la requête sous-jacente et retourne les données les plus récentes. Cette approche n’est certainement pas idéale si un grand nombre d’utilisateurs consultent votre rapport mobile ; vous pouvez donc configurer la mise en cache pour exécuter régulièrement la requête et mettre en cache le jeu de données obtenu. Ce billet de blog explique [le principe de fonctionnement de la mise en cache et de l’actualisation des données dans le portail web](https://christopherfinlan.com/2016/02/10/so-refreshinghow-data-refresh-works-with-mobile-reports-and-kpis-in-reporting-services/).  
   
 ## <a name="add-edit-or-remove-a-report-server"></a>Ajouter, modifier ou supprimer un serveur de rapports  
   
@@ -60,8 +60,8 @@ Si vous êtes déjà connecté à un serveur de rapports, lorsque vous sélectio
 ### <a name="see-also"></a>Voir aussi  
 - [Créer et publier des rapports mobiles avec l’Éditeur de rapports mobiles SQL Server](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
 -  [Portail web (SSRS en mode natif)](../../reporting-services/web-portal-ssrs-native-mode.md)  
--  Affichez les [rapports mobiles SQL Server et les indicateurs de performance clés dans l’application iPad](https://pbiwebprod-docs.azurewebsites.net/en-us/documentation/powerbi-mobile-ipad-kpis-mobile-reports)  (Power BI pour iOS)  
--  Affichez les [rapports mobiles SQL Server et les indicateurs de performance clés dans l’application iPhone](https://pbiwebprod-docs.azurewebsites.net/en-us/documentation/powerbi-mobile-iphone-kpis-mobile-reports) (Power BI pour iOS)  
+-  Affichez les [rapports mobiles SQL Server et les indicateurs de performance clés dans l’application iPad](https://pbiwebprod-docs.azurewebsites.net/documentation/powerbi-mobile-ipad-kpis-mobile-reports)  (Power BI pour iOS)  
+-  Affichez les [rapports mobiles SQL Server et les indicateurs de performance clés dans l’application iPhone](https://pbiwebprod-docs.azurewebsites.net/documentation/powerbi-mobile-iphone-kpis-mobile-reports) (Power BI pour iOS)  
   
   
   

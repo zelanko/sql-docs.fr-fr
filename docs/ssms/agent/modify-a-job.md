@@ -16,12 +16,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 0460b819b4104731421a0ad34e63f28d7a0699e7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 231a823dec8d3ad06d7cf858c926cef227d860bd
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649927"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703107"
 ---
 # <a name="modify-a-job"></a>Modifier un travail
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -75,24 +75,24 @@ Vous pouvez modifier uniquement les travaux dont vous êtes propriétaire, à mo
   
 3.  Dans la fenêtre de requête, utilisez les procédures stockées système suivantes pour modifier un travail.  
   
-    -   Exécutez [sp_update_job (Transact-SQL)](http://msdn.microsoft.com/cbdfea38-9e42-47f3-8fc8-5978b82e2623) pour modifier les attributs d’un travail.  
+    -   Exécutez [sp_update_job (Transact-SQL)](https://msdn.microsoft.com/cbdfea38-9e42-47f3-8fc8-5978b82e2623) pour modifier les attributs d’un travail.  
   
-    -   Exécutez [sp_update_schedule (Transact-SQL)](http://msdn.microsoft.com/97b3119b-e43e-447a-bbfb-0b5499e2fefe) pour modifier les détails de planification d’une définition de travail.  
+    -   Exécutez [sp_update_schedule (Transact-SQL)](https://msdn.microsoft.com/97b3119b-e43e-447a-bbfb-0b5499e2fefe) pour modifier les détails de planification d’une définition de travail.  
   
-    -   Exécutez [sp_add_jobstep (Transact-SQL)](http://msdn.microsoft.com/97900032-523d-49d6-9865-2734fba1c755) pour ajouter de nouvelles étapes de travail.  
+    -   Exécutez [sp_add_jobstep (Transact-SQL)](https://msdn.microsoft.com/97900032-523d-49d6-9865-2734fba1c755) pour ajouter de nouvelles étapes de travail.  
   
-    -   Exécutez [sp_update_jobstep (Transact-SQL)](http://msdn.microsoft.com/e158802c-c347-4a5d-bf75-c03e5ae56e6b) pour modifier des étapes de travail existantes.  
+    -   Exécutez [sp_update_jobstep (Transact-SQL)](https://msdn.microsoft.com/e158802c-c347-4a5d-bf75-c03e5ae56e6b) pour modifier des étapes de travail existantes.  
   
-    -   Exécutez [sp_delete_jobstep (Transact-SQL)](http://msdn.microsoft.com/421ede8e-ad57-474a-9fb9-92f70a3e77e3) pour supprimer une étape d’un travail.  
+    -   Exécutez [sp_delete_jobstep (Transact-SQL)](https://msdn.microsoft.com/421ede8e-ad57-474a-9fb9-92f70a3e77e3) pour supprimer une étape d’un travail.  
   
     -   Procédures stockées supplémentaires pour modifier un travail maître de l'Agent SQL Server :  
   
-        -   Exécutez [sp_delete_jobserver (Transact-SQL)](http://msdn.microsoft.com/6d63ed32-68cf-4d8f-aa40-05a3826e05b8) pour supprimer un serveur actuellement associé à un travail.  
+        -   Exécutez [sp_delete_jobserver (Transact-SQL)](https://msdn.microsoft.com/6d63ed32-68cf-4d8f-aa40-05a3826e05b8) pour supprimer un serveur actuellement associé à un travail.  
   
-        -   Exécutez [sp_add_jobserver (Transact-SQL)](http://msdn.microsoft.com/485252cc-0081-490a-9bd1-cbbd68eea286) pour associer un serveur au travail actif.  
+        -   Exécutez [sp_add_jobserver (Transact-SQL)](https://msdn.microsoft.com/485252cc-0081-490a-9bd1-cbbd68eea286) pour associer un serveur au travail actif.  
   
 ## <a name="SMO"></a>Utilisation de SQL Server Management Objects  
 **Pour modifier un travail**  
   
-Utilisez la classe **Job** à l’aide du langage de programmation de votre choix, tel que Visual Basic, Visual C# ou PowerShell. Pour plus d’informations, consultez [SQL Server Management Objects (SMO)](http://msdn.microsoft.com/library/ms162169.aspx).  
+Utilisez la classe **Job** à l’aide du langage de programmation de votre choix, tel que Visual Basic, Visual C# ou PowerShell. Pour plus d’informations, consultez [SQL Server Management Objects (SMO)](https://msdn.microsoft.com/library/ms162169.aspx).  
   

@@ -42,12 +42,12 @@ ms.assetid: e57b9160-4b78-4353-abb2-bfdbdf523d7a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5d396cb99ccda05efc3f4b1370eabc6bd5cc6bb3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a598cb35b1b54151abb1393d231c23fb9a7ef0aa
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767157"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51667438"
 ---
 # <a name="sql-server-profiler-dialog-boxes"></a>Boîtes de dialogue SQL Server Profiler
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +78,7 @@ Utilisez l'onglet **Sélection des événements** de la boîte de dialogue **Pro
 |---|---
 |Colonne**Events** |Spécifiez les événements à tracer en activant ou en désactivant les cases à cocher dans la colonne des événements. Les**événements** sont organisés par catégorie. Les classes d'événements spécifiées dans le modèle sont automatiquement sélectionnées. Pour plus d'informations, consultez [SQL Server Event Class Reference](../../relational-databases/event-classes/sql-server-event-class-reference.md).  
 |Colonnes de données|Précisez les colonnes de données à tracer en activant la case à cocher correspondant à l'événement et à la colonne de données requis. Toutes les colonnes d'événements pertinentes sont cochées par défaut pour chaque événement inclus dans la trace.  
-|Filtres|Spécifiez les filtres en cliquant sur les en-têtes de colonne de données et entrant les critères du filtre. Les colonnes de données filtrées sont indiquées par une icône de filtre à gauche de l'étiquette de colonne dans la boîte de dialogue **Modifier le filtre** . Pour plus d’informations, consultez [SQL Server Profiler - Modifier le filtre](http://msdn.microsoft.com/library/a589eff5-6ec6-4f6e-94b8-831658257f14).  
+|Filtres|Spécifiez les filtres en cliquant sur les en-têtes de colonne de données et entrant les critères du filtre. Les colonnes de données filtrées sont indiquées par une icône de filtre à gauche de l'étiquette de colonne dans la boîte de dialogue **Modifier le filtre** . Pour plus d’informations, consultez [SQL Server Profiler - Modifier le filtre](https://msdn.microsoft.com/library/a589eff5-6ec6-4f6e-94b8-831658257f14).  
 |**Afficher tous les événements**|Affiche tous les événements disponibles. Par défaut, seules les lignes sélectionnées dans la grille **Sélection des événements** sont affichées. Désactivez cette case à cocher pour masquer tous les événements non sélectionnés dans la grille **Sélection des événements** .  
 |**Afficher toutes les colonnes**|Affiche toutes les colonnes de données disponibles. Par défaut, seules les colonnes de données sélectionnées sont affichées. Désactivez cette case à cocher pour masquer toutes les colonnes de données non sélectionnées dans la grille **Sélection des événements** .  
 |**Filtres de colonnes**|Affiche la boîte de dialogue **Modifier le filtre** . Vous pouvez utiliser celle-ci pour modifier les filtres de colonnes de données.  
@@ -179,7 +179,7 @@ Utilisez la boîte de dialogue **Options générales** pour afficher ou spécifi
 |---|---
 |**Charger tous les fichiers de substitution en séquence sans invite**|Charge automatiquement les fichiers de substitution lorsqu'un fichier de trace est ouvert. Si plusieurs fichiers ont été créés pendant le suivi, la sélection de cette option charge automatiquement tous les fichiers de substitution.  
 |**Demander confirmation avant le chargement des fichiers de substitution**|Le [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] vous demande confirmation avant l'ajout d'un fichier de substitution lorsqu'un fichier de trace est ouvert.  
-|**Ne jamais charger les fichiers de substitution suivants**|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ne charge jamais de fichiers de substitution suivants lorsqu'un fichier de trace est ouvert.  
+|**Ne jamais charger les fichiers de substitution suivants**|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ne charge jamais les fichiers de substitution suivants quand un fichier de trace est ouvert.  
 ### <a name="replay-options"></a>Options de relecture  
 |Élément|Description
 |---|---
@@ -275,6 +275,6 @@ Utilisez la boîte de dialogue **Sélectionner le nom du modèle** pour sélecti
 
 ## <a name="see-also"></a>Voir aussi 
 [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)   
-[Analyse des performances et surveillance de l’activité du serveur](../../relational-databases/performance/server-performance-and-activity-monitoring.md)  
+[Analyse des performances et surveillance de l'activité du serveur](../../relational-databases/performance/server-performance-and-activity-monitoring.md)  
   
   

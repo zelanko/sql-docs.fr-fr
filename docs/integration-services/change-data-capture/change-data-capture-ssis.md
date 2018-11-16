@@ -14,12 +14,12 @@ ms.assetid: c4aaba1b-73e5-4187-a97b-61c10069cc5a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 57ceb8a68ec89d1bb0f5e78109445719d84d731a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ff152320679a4a315da2630ecb426ce9ba2cc7b3
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804657"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641146"
 ---
 # <a name="change-data-capture-ssis"></a>Capture de données modifiées (SSIS)
   Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la capture de données modifiées constitue une solution efficace au défi de l'optimisation des chargements incrémentiels de tables sources vers des mini-Data Warehouses et des entrepôts de données.  
@@ -96,9 +96,9 @@ ms.locfileid: "47804657"
 ## <a name="samples-of-change-data-capture-packages"></a>Exemples de packages de capture de données modifiées  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fournit deux exemples qui montrent comment utiliser la capture de données modifiées dans des packages. Pour plus d'informations, consultez les rubriques suivantes :  
   
--   [Fichier Lisezmoi de l'exemple de package de capture de données modifiées pour l'intervalle spécifié](http://go.microsoft.com/fwlink/?LinkId=133507)  
+-   [Fichier Lisezmoi de l'exemple de package de capture de données modifiées pour l'intervalle spécifié](https://go.microsoft.com/fwlink/?LinkId=133507)  
   
--   [Fichier Lisez-moi de l'exemple de package Change Data Capture since Last Request](http://go.microsoft.com/fwlink/?LinkId=133508)  
+-   [Fichier Lisez-moi de l'exemple de package Change Data Capture since Last Request](https://go.microsoft.com/fwlink/?LinkId=133508)  
   
 ## <a name="related-tasks"></a>Tâches associées  
   
@@ -119,6 +119,6 @@ ms.locfileid: "47804657"
 -   [Exécuter un chargement incrémentiel de plusieurs table](../../integration-services/change-data-capture/perform-an-incremental-load-of-multiple-tables.md)  
   
 ## <a name="related-content"></a>Contenu associé  
- Entrée de blog, [SSIS Design Pattern – Incremental Load](http://go.microsoft.com/fwlink/?LinkId=217679), sur sqlblog.com  
+ Entrée de blog, [SSIS Design Pattern – Incremental Load](https://go.microsoft.com/fwlink/?LinkId=217679), sur sqlblog.com  
   
   

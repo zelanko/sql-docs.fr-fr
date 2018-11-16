@@ -14,12 +14,12 @@ ms.assetid: ea928535-6fd1-4738-a8ed-ffb602f3825e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1648487c3ed1354b2b50d59b123fd57b236172f6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 48483caed9b6056fb87183210af0c2ba3014067f
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47797278"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51667468"
 ---
 # <a name="errors-and-events-reference-database-engine"></a>Références relatives aux erreurs et aux événements (moteur de base de données)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,8 +38,8 @@ ms.locfileid: "47797278"
   
 |Ressource|Description|  
 |--------------|-----------------|  
-|[Communauté SQL Server](http://go.microsoft.com/fwlink/?LinkId=42455)|Ce site contient des liens vers des groupes de discussion et des forums contrôlés par la communauté [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . S'y trouvent également des sources d'information de la communauté, telles que les blogs et les sites Web. La communauté [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] représente une aide précieuse grâce aux réponses qu'elle fournit aux questions posées, mais l'obtention d'une réponse ne peut pas être garantie.|  
-|[SQL Server Developer Center Community](http://go.microsoft.com/fwlink/?LinkId=42456)|Ce site est centré sur les groupes de discussion, les forums et d'autres ressources de communautés qui sont utiles aux développeurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
-|[Aide et support Microsoft](http://go.microsoft.com/fwlink/?linkid=16419)|Vous pouvez utiliser ce site Web pour présenter un cas à un professionnel du support [!INCLUDE[msCoName](../../includes/msconame-md.md)] .|  
+|[Communauté SQL Server](https://go.microsoft.com/fwlink/?LinkId=42455)|Ce site contient des liens vers des groupes de discussion et des forums contrôlés par la communauté [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . S'y trouvent également des sources d'information de la communauté, telles que les blogs et les sites Web. La communauté [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] représente une aide précieuse grâce aux réponses qu'elle fournit aux questions posées, mais l'obtention d'une réponse ne peut pas être garantie.|  
+|[SQL Server Developer Center Community](https://go.microsoft.com/fwlink/?LinkId=42456)|Ce site est centré sur les groupes de discussion, les forums et d'autres ressources de communautés qui sont utiles aux développeurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
+|[Aide et support Microsoft](https://go.microsoft.com/fwlink/?linkid=16419)|Vous pouvez utiliser ce site Web pour présenter un cas à un professionnel du support [!INCLUDE[msCoName](../../includes/msconame-md.md)] .|  
   
   

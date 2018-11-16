@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 81110ef6-4289-405c-a931-e7e9f49e69ba
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ee9c57eff9572632d40147007b9be8e669702a3a
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 0f4d8f59821a649214ddc2deda128d801e6ddb7a
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50020373"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814172"
 ---
 # <a name="turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls"></a>Activer des événements Reporting Services pour le journal des traces SharePoint (ULS)
 
@@ -108,7 +108,7 @@ Get-SPDiagnosticConfig
 |Catalogue service Web Report Server||  
 |Segment service Web Report Server||  
 |Nettoyage service Web Report Server||  
-|Gestionnaire de configuration service Web Report Server|Entrées témoin :<br /><br /> URL interne du serveur de rapports MediumUsing `http://localhost:80/ReportServer`.<br /><br /> Paramètre UnexpectedMissing ou Invalid ExtendedProtectionLevel|  
+|Gestionnaire de configuration service Web Report Server|Entrées témoin :<br /><br /> URL interne du serveur de rapports MediumUsing `https://localhost:80/ReportServer`.<br /><br /> Paramètre UnexpectedMissing ou Invalid ExtendedProtectionLevel|  
 |Chiffrement service Web Report Server||  
 |Extension de données service Web Report Server||  
 |Interrogation de la base de données service Web Report Server||  

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2fde08b2-137d-4f4b-88e5-216030216e0d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4367c20c7f673f1075182385de092231ca289c72
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: ad166eb92770d133137296d31262d202a540d94f
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031068"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813792"
 ---
 # <a name="report-server-service-trace-log"></a>Report Server Service Trace Log
   Les journaux des traces du serveur de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sont des fichiers texte ASCII qui contiennent des informations détaillées sur les opérations du service Report Server.  Ce fichier contient des informations telles que les opérations effectuées par le service web Report Server, le portail web et le traitement en arrière-plan. Le fichier journal des traces comprend des informations redondantes qui sont consignées dans d'autres fichiers journaux, ainsi que des informations qui ne se trouvent nulle part ailleurs. Les informations du journal des traces sont utiles si vous déboguez une application qui comprend un serveur de rapports, ou si vous essayez de déterminer l’origine d’un problème consigné dans le journal des événements ou le journal des exécutions. Par exemple, lors de la résolution des problèmes liés aux abonnements.  
@@ -80,7 +80,7 @@ ms.locfileid: "50031068"
 <add name="Directory" value="U:\logs\" />  
 ```  
   
- Pour plus d'informations, consultez l' [article 913046 de la Base de connaissances](http://support.microsoft.com/?kbid=913046) sur le site Web de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
+ Pour plus d'informations, consultez l' [article 913046 de la Base de connaissances](https://support.microsoft.com/?kbid=913046) sur le site Web de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
 ##  <a name="bkmk_log_file_fields"></a> Champs du fichier journal  
  Un journal des traces contient les champs suivants :  

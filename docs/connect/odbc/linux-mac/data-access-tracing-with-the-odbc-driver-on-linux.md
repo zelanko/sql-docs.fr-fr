@@ -14,12 +14,12 @@ ms.assetid: 3149173a-588e-47a0-9f50-edb8e9adf5e8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0ad5d49841db9abdd0b512c1d36454eccc5ff73a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5cd3795f57f544d5f7003f7aab60be2a08a64229
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782877"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51607189"
 ---
 # <a name="data-access-tracing-with-the-odbc-driver-on-linux-and-macos"></a>Traçage de l’accès aux données avec le pilote ODBC sur Linux et macOS
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -63,7 +63,7 @@ SQLLEN Size........: 8
 SQLSETPOSIROW Size.: 8
 ```
 
-Le [documentation unixODBC](http://www.unixodbc.org/doc/UserManual/) explique les différences entre l’utilisateur et les sources de données système. En résumé :  
+Le [documentation unixODBC](https://www.unixodbc.org/doc/UserManual/) explique les différences entre l’utilisateur et les sources de données système. En résumé :  
 
 - Sources de données utilisateur---il s’agit des sources de données qui sont disponibles uniquement pour un utilisateur spécifique. Les utilisateurs peuvent se connecter à l’aide, ajouter, modifier et supprimer leur propres sources de données utilisateur. Sources de données utilisateur sont stockés dans un fichier dans le répertoire de base utilisateur ou un sous-répertoire.
   

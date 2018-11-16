@@ -53,17 +53,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 18e99c028fb00bc7c0365885c9a42af1668ed3ff
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7e0989f8f24e3764c63ca30b7ed980c9a4852165
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47643297"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51702677"
 ---
 # <a name="odbc-scalar-functions-transact-sql"></a>Fonctions scalaires ODBC (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Vous pouvez utiliser les [fonctions scalaires ODBC](http://go.microsoft.com/fwlink/?LinkID=88579) dans les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)]. Ces instructions sont interprétées par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Elles peuvent être utilisées dans les procédures stockées et les fonctions définies par l'utilisateur. Celles-ci incluent les fonctions de chaîne, numériques, d'heure, de date, d'intervalle et système.  
+  Vous pouvez utiliser les [fonctions scalaires ODBC](https://go.microsoft.com/fwlink/?LinkID=88579) dans les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)]. Ces instructions sont interprétées par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Elles peuvent être utilisées dans les procédures stockées et les fonctions définies par l'utilisateur. Celles-ci incluent les fonctions de chaîne, numériques, d'heure, de date, d'intervalle et système.  
   
 ## <a name="usage"></a>Utilisation  
  `SELECT {fn <function_name> [ (<argument>,....n) ] }`  

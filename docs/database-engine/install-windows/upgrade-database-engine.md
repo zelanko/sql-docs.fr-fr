@@ -15,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 02f454ba26701263b98ba86d22bb98943ed2a498
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 99d1b87ac5584f05911ebfb16387babc408e26f5
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613428"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600929"
 ---
 # <a name="upgrade-database-engine"></a>Mettre à niveau le moteur de base de données
 
@@ -36,6 +36,6 @@ ms.locfileid: "47613428"
   
 4.  [Modifier le mode de compatibilité de base de données et utiliser le magasin des requêtes](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md) Une des étapes à effectuer après la mise à niveau de vos bases de données vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] consiste à activer les nouvelles fonctionnalités en modifiant le mode de compatibilité de base de données, puis en utilisant le magasin des requêtes pour surveiller les performances. Cet article traite de ce processus et fournit un flux de travail recommandé.  
   
-5.  [Tirer parti des nouvelles fonctionnalités SQL Server](http://www.microsoft.com/sql-server/sql-server-2017) Enfin, une fois que vous avez exécuté les étapes précédentes, vous pouvez découvrir comment bénéficier des nouvelles améliorations spécifiques du moteur de base de données. Cet article suggère quelques exemples d’améliorations et fournit des liens contenant davantage d’informations.  
+5.  [Tirer parti des nouvelles fonctionnalités SQL Server](https://www.microsoft.com/sql-server/sql-server-2017) Enfin, une fois que vous avez exécuté les étapes précédentes, vous pouvez découvrir comment bénéficier des nouvelles améliorations spécifiques du moteur de base de données. Cet article suggère quelques exemples d’améliorations et fournit des liens contenant davantage d’informations.  
   
   

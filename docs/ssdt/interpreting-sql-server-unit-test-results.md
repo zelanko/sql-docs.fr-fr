@@ -11,29 +11,29 @@ ms.assetid: fde3c95b-2f68-483d-a197-0f7161b72fa3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 50f98e5ba8905a3e97ca401b5ff49a87e9a2ecfc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f0576454d646f5e738e153f7937cb717f8b26fc3
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47736507"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51658938"
 ---
 # <a name="interpreting-sql-server-unit-test-results"></a>Interprétation des résultats des tests unitaires SQL Server
 Lorsque vous exécutez un test unitaire SQL Server, le résultat du test est généré automatiquement, enregistré sur le disque et résumé dans la fenêtre **Résultats des tests**. Dès que vous démarrez une série de tests, la fenêtre **Résultats des tests** apparaît et affiche la progression de la série de tests. Cet affichage comprend les tests en cours d'exécution et les tests qui ont été finalisés.  
   
 Pour afficher des informations détaillées sur un résultat de test, double-cliquez dessus dans la fenêtre **Résultats des tests** pour afficher la page **Détails des résultats des tests**. Pour plus d'informations sur un résultat de test, double-cliquez dessus.  
   
-Pour plus d'informations sur la modification de l'affichage de la fenêtre **Résultats des tests**, consultez [Procédure : ajouter ou supprimer des colonnes dans les fenêtres de test (Visual Studio 2010)](http://msdn.microsoft.com/library/ms182508(VS.100).aspx)ou [Procédure : ajouter ou supprimer des colonnes dans les fenêtres de test (Visual Studio 2012)](http://msdn.microsoft.com/library/ms182508.aspx).  
+Pour plus d'informations sur la modification de l'affichage de la fenêtre **Résultats des tests**, consultez [Procédure : ajouter ou supprimer des colonnes dans les fenêtres de test (Visual Studio 2010)](https://msdn.microsoft.com/library/ms182508(VS.100).aspx)ou [Procédure : ajouter ou supprimer des colonnes dans les fenêtres de test (Visual Studio 2012)](https://msdn.microsoft.com/library/ms182508.aspx).  
   
 ## <a name="storing-test-results"></a>Stockage des résultats des tests  
-Les résultats des tests unitaires sont automatiquement stockés sur votre disque dur dans des fichiers portant l'extension .trx. Un fichier .trx est un fichier XML qui contient les détails d'une série de tests. Chargez les fichiers .trx de séries de tests précédentes pour examiner les résultats de ces séries de tests ou réexécuter des tests antérieurs. Pour plus d'informations, consultez [Procédure : réexécuter un test (Visual Studio 2010)](http://msdn.microsoft.com/library/ms182472(VS.100).aspx).  
+Les résultats des tests unitaires sont automatiquement stockés sur votre disque dur dans des fichiers portant l'extension .trx. Un fichier .trx est un fichier XML qui contient les détails d'une série de tests. Chargez les fichiers .trx de séries de tests précédentes pour examiner les résultats de ces séries de tests ou réexécuter des tests antérieurs. Pour plus d'informations, consultez [Procédure : réexécuter un test (Visual Studio 2010)](https://msdn.microsoft.com/library/ms182472(VS.100).aspx).  
   
 > [!NOTE]  
 > Vous ne pouvez pas exécuter des tests unitaires à distance.  
   
 Si votre équipe utilise un projet d'équipe Visual Studio Team Foundation Server pour l'aider à gérer son travail, vous pouvez également publier vos données de test dans une base de données SQL Server appelée magasin opérationnel.  
   
-Pour plus d'informations sur l'enregistrement des résultats des tests, leur réutilisation et leur partage avec votre équipe, consultez [Procédure : enregistrer et ouvrir les résultats des tests dans Visual Studio 2010](http://msdn.microsoft.com/library/ms404662(VS.100).aspx) ou [Procédure : enregistrer et ouvrir les résultats des tests dans Visual Studio 2012](http://msdn.microsoft.com/library/ms404662.aspx).  
+Pour plus d'informations sur l'enregistrement des résultats des tests, leur réutilisation et leur partage avec votre équipe, consultez [Procédure : enregistrer et ouvrir les résultats des tests dans Visual Studio 2010](https://msdn.microsoft.com/library/ms404662(VS.100).aspx) ou [Procédure : enregistrer et ouvrir les résultats des tests dans Visual Studio 2012](https://msdn.microsoft.com/library/ms404662.aspx).  
   
 ## <a name="see-also"></a> Voir aussi  
 [Exécuter des tests unitaires SQL Server](../ssdt/running-sql-server-unit-tests.md)  

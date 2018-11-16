@@ -13,12 +13,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 770929b0838fabaf6a4584c80482a5169befe823
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ff6eacea7b67d923100a328f7ee9d4cb0d370a8c
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47712519"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51667121"
 ---
 # <a name="showplan-xml-for-query-compile-event-class"></a>Showplan XML for Query Compile, classe d’événements
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "47712519"
   
  La classe d'événements Showplan XML For Query Compile affiche des données de compilation complètes, de sorte que les traces qui contiennent cette classe d'événements peuvent entraîner une baisse significative des performances. Pour limiter ce problème, n'utilisez cette classe d'événements qu'avec les traces surveillant des problèmes spécifiques pendant de brèves périodes.  
   
- Les documents Showplan XML ont un schéma qui leur est associé. Ce schéma est disponible sur le [site web de Microsoft](http://go.microsoft.com/fwlink/?LinkId=41740)ou dans le cadre de votre installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ Les documents Showplan XML ont un schéma qui leur est associé. Ce schéma est disponible sur le [site web de Microsoft](https://go.microsoft.com/fwlink/?LinkId=41740)ou dans le cadre de votre installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="showplan-xml-for-query-compile-event-class-data-columns"></a>Colonnes de données de classe d'événements Showplan XML For Query Compile  
   

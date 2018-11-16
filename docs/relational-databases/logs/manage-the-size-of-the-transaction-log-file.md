@@ -15,12 +15,12 @@ ms.assetid: 3a70e606-303f-47a8-96d4-2456a18d4297
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5e2eb2f1b799773eb0a6a334828573a89b25a08c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3322acb510ffa57582b27a8a0b2efc728459bf53
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664747"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51674848"
 ---
 # <a name="manage-the-size-of-the-transaction-log-file"></a>Gérer la taille du fichier journal des transactions
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ Surveillez l’utilisation de l’espace pour le journal à l’aide de [sys.dm_
 Pour plus d’informations sur la taille actuelle d’un fichier journal, sa taille maximale et l’option de croissance automatique du fichier, vous pouvez également utiliser les colonnes **size**, **max_size** et **growth** de ce fichier journal dans [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md).  
   
 > [!IMPORTANT]
-> Évitez de surcharger le disque du journal. Assurez-vous que le stockage des journaux peut supporter les exigences [d’IOPS](http://wikipedia.org/wiki/IOPS) et de faible latence inhérentes à votre charge transactionnelle. 
+> Évitez de surcharger le disque du journal. Assurez-vous que le stockage des journaux peut supporter les exigences [d’IOPS](https://wikipedia.org/wiki/IOPS) et de faible latence inhérentes à votre charge transactionnelle. 
   
 ##  <a name="ShrinkSize"></a> Réduire la taille du fichier journal  
  Pour réduire la taille physique d'un fichier journal physique, vous devez réduire le fichier journal. Cela est utile quand vous savez qu’un fichier journal de transactions contient de l’espace inutilisé. Vous pouvez réduire un fichier journal uniquement quand la base de données est en ligne, et qu’au moins un [fichier journal virtuel](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) est libre. Dans certains cas, la réduction du journal peut n'être possible qu'après la troncation de journal suivante.  
@@ -101,9 +101,9 @@ Voici une série de recommandations générales à suivre pendant l’utilisatio
       |À compter de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|1 Mo de données. 10 % de fichiers journaux.|  
       |Avant [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|10 % de données. 10 % de fichiers journaux.|  
 
--   Un incrément de croissance réduit peut générer un nombre excessif de petits [fichiers journaux virtuels](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) et réduire le niveau de performance. Pour déterminer la distribution optimale des fichiers journaux virtuels pour la taille actuelle du journal des transactions de toutes les bases de données dans une instance donnée, ainsi que les incréments de croissance pour atteindre la taille nécessaire, consultez ce [script](http://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs).
+-   Un incrément de croissance réduit peut générer un nombre excessif de petits [fichiers journaux virtuels](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) et réduire le niveau de performance. Pour déterminer la distribution optimale des fichiers journaux virtuels pour la taille actuelle du journal des transactions de toutes les bases de données dans une instance donnée, ainsi que les incréments de croissance pour atteindre la taille nécessaire, consultez ce [script](https://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs).
 
--   Un incrément de croissance élevé peut générer un nombre insuffisants de [fichiers journaux virtuels](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) volumineux et affecter également le niveau de performance. Pour déterminer la distribution optimale des fichiers journaux virtuels pour la taille actuelle du journal des transactions de toutes les bases de données dans une instance donnée, ainsi que les incréments de croissance pour atteindre la taille nécessaire, consultez ce [script](http://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs). 
+-   Un incrément de croissance élevé peut générer un nombre insuffisants de [fichiers journaux virtuels](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) volumineux et affecter également le niveau de performance. Pour déterminer la distribution optimale des fichiers journaux virtuels pour la taille actuelle du journal des transactions de toutes les bases de données dans une instance donnée, ainsi que les incréments de croissance pour atteindre la taille nécessaire, consultez ce [script](https://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs). 
 
 -   Même si la croissance automatique est activée, vous pouvez recevoir un message indiquant que le journal des transactions est complet, s’il ne peut pas croître suffisamment rapidement pour répondre aux besoins de votre requête. Pour plus d’informations sur le changement de l’incrément de croissance, consultez [Options de fichiers et de groupes de fichiers &#40;Transact-SQL&#41; ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).
 

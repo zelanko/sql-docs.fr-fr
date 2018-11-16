@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: b0a08639-3101-40a2-abe2-3a41753826d1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 661930ac70d1fdf657547f816f64fca1ed888213
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 86d01110e1d1e0146e34a3d2f5c3afe2434f48bd
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47779867"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812842"
 ---
 # <a name="setting-the-item-namespace-for-the-getproperties-method"></a>Définition de l'espace de noms d'élément pour la méthode GetProperties
   Vous pouvez utiliser l'en-tête SOAP <xref:ReportService2010.ItemNamespaceHeader> dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour récupérer des propriétés d'élément selon deux identificateurs d'élément différents : le chemin d'accès complet de l'élément ou l'ID de l'élément.  
@@ -37,7 +37,7 @@ Class Sample
    Sub Main()  
       Dim rs As New ReportingService2010()  
       rs.Credentials = System.Net.CredentialCache.DefaultCredentials  
-      rs.Url = "http://<Server Name>/reportserver/ReportService2010.asmx"  
+      rs.Url = "https://<Server Name>/reportserver/ReportService2010.asmx"  
   
       Dim items() As CatalogItem  
   
@@ -80,7 +80,7 @@ class Sample
    {  
    ReportingService2010 rs = new ReportingService2010();  
       rs.Credentials = System.Net.CredentialCache.DefaultCredentials;  
-      rs.Url = "http://<Server Name>/reportserver/ReportService2010.asmx";  
+      rs.Url = "https://<Server Name>/reportserver/ReportService2010.asmx";  
   
       CatalogItem[] items;  
   

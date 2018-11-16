@@ -12,12 +12,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 307471c65910c702a7777796e153a599a6a4e59f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 13c4320a3e571c6680800fac18f9be75674f61ce
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825917"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51664988"
 ---
 # <a name="data-tier-application-framework---license-terms"></a>Data-Tier Application Framework - Termes du contrat de licence
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -79,7 +79,7 @@ de ce logiciel à moins que d’autres termes n’accompagnent ces produits, auq
     -   transférer le logiciel ou ce contrat à un tiers ; ou  
     -   utiliser le logiciel en association avec des services d’hébergement commercial.  
       
-4.  **MENTIONS DE TIERS.** Le logiciel peut inclure du code de tiers que Microsoft, et non le tiers, vous concède sous licence aux termes stipulés dans le présent contrat. Les mentions éventuelles relatives à du code de tiers sont incluses pour votre information uniquement. De plus, tout script tiers lié à, appelé ou référencé par ce logiciel, vous est concédé sous licence par le tiers propriétaire de ce code, et non par Microsoft. Consultez les conditions d’utilisation du CDN Ajax ASP.NET : http://www.asp.net/ajaxlibrary/CDN.ashx.  
+4.  **MENTIONS DE TIERS.** Le logiciel peut inclure du code de tiers que Microsoft, et non le tiers, vous concède sous licence aux termes stipulés dans le présent contrat. Les mentions éventuelles relatives à du code de tiers sont incluses pour votre information uniquement. De plus, tout script tiers lié à, appelé ou référencé par ce logiciel, vous est concédé sous licence par le tiers propriétaire de ce code, et non par Microsoft. Consultez les conditions d’utilisation du CDN Ajax ASP.NET : https://www.asp.net/ajaxlibrary/CDN.ashx.  
   
 5.  **COPIE DE SAUVEGARDE.** Vous êtes autorisé à effectuer une copie de sauvegarde du logiciel. Vous ne pouvez l’utiliser que dans le but de réinstaller le logiciel.  
   

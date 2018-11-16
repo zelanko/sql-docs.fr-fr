@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: f67c83c0-1f74-42bb-bfc1-e50c38152d3d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 26de643bf01e9ebffca01ff5b1f8aeecc38b7c5c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c7d96d825c9a1b9a6bc4ea069a9c7b04d79b5412
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47741257"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814062"
 ---
 # <a name="url-reservations-for-multi-instance-report-server-deployments"></a>Réservations d'URL pour les déploiements de serveur de rapports multi-instance
   Si vous installez plusieurs instances de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sur le même ordinateur, vous devez considérer comment vous définirez les réservations d'URL pour chaque instance. Dans chaque instance, le service Web Report Server et le [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] doivent avoir au moins une réservation d’URL chacun. L'ensemble entier de réservations doit être unique dans HTTP.SYS.  
@@ -26,8 +26,8 @@ ms.locfileid: "47741257"
   
 |Instance SQL Server|Réservation d'URL par défaut|  
 |-------------------------|-----------------------------|  
-|Par défaut (MSSQLSERVER)|`http://+:80/reportserver`|  
-|Nommée (MynamedInstance)|`http://+:80/reportserver_MyNamedInstance`|  
+|Par défaut (MSSQLSERVER)|`https://+:80/reportserver`|  
+|Nommée (MynamedInstance)|`https://+:80/reportserver_MyNamedInstance`|  
   
  Pour l'instance nommée, le répertoire virtuel inclut le nom de l'instance. L'instance par défaut et l'instance nommée écoutent sur le même port, mais les noms de répertoires virtuels uniques déterminent quel serveur de rapports obtient la demande.  
   
@@ -38,8 +38,8 @@ ms.locfileid: "47741257"
   
 |Instance par défaut du serveur de rapports (MSSQLSERVER)|ReportServer_MyNamedInstance|Unicité|  
 |----------------------------------------------------|-----------------------------------|----------------|  
-|`http://+:80/reportserver`|`http://+:8888/reportserver`|Chaque instance écoute sur un port différent.|  
-|`http://www.contoso.com/reportserver`|`http://SRVR-46/reportserver`|Chaque instance répond à différents noms de serveurs (nom de domaine complet et nom d'ordinateur).|  
+|`https://+:80/reportserver`|`https://+:8888/reportserver`|Chaque instance écoute sur un port différent.|  
+|`https://www.contoso.com/reportserver`|`https://SRVR-46/reportserver`|Chaque instance répond à différents noms de serveurs (nom de domaine complet et nom d'ordinateur).|  
   
 ## <a name="uniqueness-requirements"></a>Spécifications relatives à l'unicité  
  Les technologies sous-jacentes utilisées par [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] imposent des spécifications relatives aux noms uniques. HTTP.SYS requiert que toutes les URL dans sa base de données de référentiel soient uniques. Vous pouvez varier le port, le nom d'hôte ou le nom de répertoire virtuel pour créer une URL unique. [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] requiert que les identités d’application soient uniques dans le même processus. Cette spécification affecte les noms de répertoires virtuels. Elle spécifie que vous ne pouvez pas dupliquer de nom de répertoire virtuel dans la même instance de serveur de rapports.  

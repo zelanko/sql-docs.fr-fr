@@ -5,19 +5,18 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: 7e2e586d-947d-4fe2-86c5-f06200ebf139
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d1e85883fa9b772d132cc5f6aaa75f7d46539244
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7aef54c119c9941b245068186cc93f66f4e5f135
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717027"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677748"
 ---
 # <a name="distributed-replay-security"></a>Sécurité Distributed Replay
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +65,7 @@ ms.locfileid: "47717027"
 |Compte|Autorisations d'accès au dossier|  
 |-------------|------------------------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay|`<Controller_Installation_Path>\DReplayController` (lecture, écriture, suppression)<br /><br /> `DReplayServer.xml` fichier (lecture, écriture)|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay|`<Client_Installation_Path>\DReplayClient` (lecture, écriture, suppression)<br /><br /> `DReplayClient.xml` fichier (lecture, écriture)<br /><br /> Répertoires d'exécution et de résultat, comme spécifié dans le fichier de configuration du client par les éléments `WorkingDirectory` et `ResultDirectory` , respectivement. (Lecture, écriture)|  
+|Compte de service du client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay|`<Client_Installation_Path>\DReplayClient` (lecture, écriture, suppression)<br /><br /> `DReplayClient.xml` fichier (lecture, écriture)<br /><br /> Répertoires d'exécution et de résultat, comme spécifié dans le fichier de configuration du client par les éléments `WorkingDirectory` et `ResultDirectory` , respectivement. (Lecture, écriture)|  
   
 ## <a name="dcom-permissions"></a>Autorisations DCOM  
  DCOM est utilisé pour la communication d'appel de procédure distante (RPC) entre le contrôleur et l'outil d'administration, et entre le contrôleur et tous les clients. Vous devez configurer les autorisations DCOM au niveau de l'ordinateur et spécifiques à l'application sur le contrôleur une fois que les fonctionnalités Distributed Replay ont été installées.  
@@ -81,9 +80,9 @@ ms.locfileid: "47717027"
   
     3.  Appuyez sur Entrée.  
   
-2.  **Configurez les autorisations DCOM au niveau de l’ordinateur**: Accordez les autorisations DCOM au niveau de l’ordinateur pour chaque compte répertorié dans le tableau suivant. Pour plus d’informations sur la définition des autorisations au niveau de l’ordinateur, consultez [Liste de vérification : gérer les applications DCOM](http://go.microsoft.com/fwlink/?LinkId=185842).  
+2.  **Configurez les autorisations DCOM au niveau de l’ordinateur**: Accordez les autorisations DCOM au niveau de l’ordinateur pour chaque compte répertorié dans le tableau suivant. Pour plus d’informations sur la définition des autorisations au niveau de l’ordinateur, consultez [Liste de vérification : gérer les applications DCOM](https://go.microsoft.com/fwlink/?LinkId=185842).  
   
-3.  **Configurez les autorisations DCOM spécifiques à l’application**: Accordez les autorisations DCOM spécifiques à l’application correspondantes pour chaque compte répertorié dans le tableau suivant. Le nom d'application DCOM pour le service du contrôleur est **DReplayController**. Pour plus d’informations sur la définition des autorisations spécifiques à l’application, consultez [Liste de vérification : gérer les applications DCOM](http://go.microsoft.com/fwlink/?LinkId=185842).  
+3.  **Configurez les autorisations DCOM spécifiques à l’application**: Accordez les autorisations DCOM spécifiques à l’application correspondantes pour chaque compte répertorié dans le tableau suivant. Le nom d'application DCOM pour le service du contrôleur est **DReplayController**. Pour plus d’informations sur la définition des autorisations spécifiques à l’application, consultez [Liste de vérification : gérer les applications DCOM](https://go.microsoft.com/fwlink/?LinkId=185842).  
   
  Le tableau suivant décrit les autorisations DCOM requises pour le compte d'utilisateur interactif de l'outil d'administration et les comptes de service du client :  
   

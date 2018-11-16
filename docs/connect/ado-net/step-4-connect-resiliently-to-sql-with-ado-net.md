@@ -13,12 +13,12 @@ ms.assetid: 9b608b0b-6b38-42da-bb83-79df8c170cd7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 75c6f352a962232b2109861b2a264d458af05e70
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 483c7f84d171b34135d16fd6f392b6f5f180d217
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49119802"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51607099"
 ---
 # <a name="step-4-connect-resiliently-to-sql-with-adonet"></a>Étape 4 : Connexion résiliente à SQL avec ADO.NET
 
@@ -39,7 +39,7 @@ Les classes ADO.NET pour se connecter à votre serveur Microsoft SQL Server loca
   
 Votre programme doit faire la distinction entre les erreurs temporaires et les erreurs persistantes. Erreurs temporaires sont des conditions d’erreur qui peuvent résoudre sur une courte période de temps, telles que des problèmes réseau temporaires.  Un exemple d’une erreur permanente lors serait, si votre programme a mal orthographié le nom de la base de données cible, dans ce cas, l’erreur « Aucune base de données trouvée » soit persistant et ne risque pas d’effacer les sur une courte période de temps.  
   
-La liste des numéros d’erreur qui sont classés comme des erreurs temporaires est disponible à l’adresse [messages d’erreur pour les applications clientes SQL Database](http://docs.microsoft.com/azure/sql-database/sql-database-develop-error-messages/)  
+La liste des numéros d’erreur qui sont classés comme des erreurs temporaires est disponible à l’adresse [messages d’erreur pour les applications clientes SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-develop-error-messages/)  
   
 ## <a name="step-2-create-and-run-sample-application"></a>Étape 2 : Créer et exécuter l’exemple d’application  
   
@@ -317,4 +317,4 @@ Pour prouver que le code gère des erreurs persistantes correctement, exécutez 
   
 ## <a name="next-steps"></a>Next Steps  
   
-Pour découvrir d’autres meilleures practicies et les règles de conception, visitez [connexion à SQL Database : liens, les meilleures pratiques et les règles de conception](http://azure.microsoft.com/documentation/articles/sql-database-connect-central-recommendations/)  
+Pour découvrir d’autres meilleures practicies et les règles de conception, visitez [connexion à SQL Database : liens, les meilleures pratiques et les règles de conception](https://azure.microsoft.com/documentation/articles/sql-database-connect-central-recommendations/)  

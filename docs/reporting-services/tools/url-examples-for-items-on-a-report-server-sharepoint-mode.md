@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 54cb861a-8cec-445c-875d-599fb9bd1973
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a21d053818991c19e8b57ce60c11f4766973b6ec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7b787bdccdb913bd95051c8e3a4a3dd37fed5c01
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47839557"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812952"
 ---
 # <a name="url-examples-for-items-on-a-report-server---sharepoint-mode"></a>Exemples d’URL pour les éléments sur un serveur de rapports (mode SharePoint)
   Pour publier des rapports et des éléments associés dans une bibliothèque SharePoint, vous pouvez soit publier le contenu à l’aide des outils de création de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] tels que le Concepteur de rapports, soit télécharger le contenu à l’aide des actions de site SharePoint.  
@@ -47,21 +47,21 @@ ms.locfileid: "47839557"
  L'utilisation du point de terminaison du proxy URL [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] n'est pas prise en charge. Un point de terminaison de proxy inclut un numéro de port ; par exemple, `http:*//servername:8080/reportserver*`.  
   
 ### <a name="url-for-a-sharepoint-server-site-or-subsite"></a>URL d'un site ou sous-site de serveur SharePoint  
- Lorsque vous déployez un rapport ou une source de données de rapport, vous devez utiliser une URL vers un site et un sous-site SharePoint, le cas échéant. Dans l’URL, le nom du site apparaît juste après le nom du serveur ; par exemple, `http://*servername/site*` ou `http://*servername/site/subsite*`.  
+ Lorsque vous déployez un rapport ou une source de données de rapport, vous devez utiliser une URL vers un site et un sous-site SharePoint, le cas échéant. Dans l’URL, le nom du site apparaît juste après le nom du serveur ; par exemple, `https://*servername/site*` ou `https://*servername/site/subsite*`.  
   
  Dans une application web [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 ou [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] , le site et le sous-site correspondent le plus souvent aux onglets du site principal. Pour trouver le nom du site ou du sous-site, cliquez sur **Accueil**, puis sur **Tout le contenu du site**. Faites défiler vers le bas et recherchez **Sites et espaces de travail**. La liste des sites s'affiche dans cette section.  
   
 ### <a name="url-for-a-sharepoint-library"></a>URL d'une bibliothèque SharePoint  
  Si vous déployez un rapport ou un élément connexe vers une bibliothèque SharePoint, vous devez utiliser une URL vers la bibliothèque SharePoint. L'URL à utiliser pour une bibliothèque varie selon votre version de SharePoint.  
   
- Dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 ou [!INCLUDE[SPF2010](../../includes/spf2010-md.md)], la bibliothèque apparaît après le nom du serveur ; par exemple, `http://*servername/*Shared Documents`.  
+ Dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 ou [!INCLUDE[SPF2010](../../includes/spf2010-md.md)], la bibliothèque apparaît après le nom du serveur ; par exemple, `https://*servername/*Shared Documents`.  
   
- Dans [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 ou [!INCLUDE[SPS2010](../../includes/sps2010-md.md)], la bibliothèque apparaît après le site et le sous-site. Par exemple, `http://*servername/site/*Documents`.  
+ Dans [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 ou [!INCLUDE[SPS2010](../../includes/sps2010-md.md)], la bibliothèque apparaît après le site et le sous-site. Par exemple, `https://*servername/site/*Documents`.  
   
  Pour rechercher les informations de chemin d'accès pour une nouvelle bibliothèque SharePoint ou pour un site inconnu, ouvrez un navigateur et localisez la bibliothèque SharePoint où vous souhaitez publier vos rapports. Si la bibliothèque est vide, téléchargez un fichier. Cliquez avec le bouton droit sur le fichier et sélectionnez **Propriétés** pour ouvrir la fenêtre **Propriétés** . L'adresse du fichier contient les valeurs URL nécessaires à une opération de publication.  
   
 ### <a name="fully-qualified-urls-for-items-on-a-sharepoint-site"></a>URL complètes des éléments sur un site SharePoint  
- Les éléments stockés dans une bibliothèque SharePoint sont toujours traités par le biais d’une URL complète qui commence par l’application web (`http://*server*`) comme nœud racine, et se termine par le nom du fichier auquel vous faites référence.  
+ Les éléments stockés dans une bibliothèque SharePoint sont toujours traités par le biais d’une URL complète qui commence par l’application web (`https://*server*`) comme nœud racine, et se termine par le nom du fichier auquel vous faites référence.  
   
  Les noms de fichiers dans l'URL doivent inclure une extension de nom de fichier.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "47839557"
  Pour spécifier des rapports d'extraction, incluez l'URL dans une expression. Par exemple, pour spécifier le rapport nommé SalesDetails comme un rapport d'extraction, dans la zone Action de la zone de texte ou du texte d'espace réservé, définissez ReportName sur l'expression suivante :  
   
 ```  
-="http://site/subsite/documentlibrary/SalesDetails.rdl"  
+="https://site/subsite/documentlibrary/SalesDetails.rdl"  
 ```  
   
 ### <a name="reserved-names-on-sharepoint-sites"></a>Noms réservés sur des sites SharePoint  
@@ -94,11 +94,11 @@ ms.locfileid: "47839557"
   
 |Cible|Exemple d'URL|  
 |------------|-----------------|  
-|Serveur SharePoint.|`http://TestServer`|  
-|Site ou sous-site de serveur SharePoint.|`http://TestServer/toplevelsite/subsite`|  
-|Exemple de rapport Company Sales dans le dossier **Documents partagés** d’un déploiement [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] ou [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] .|`http://TestServer/TestSite/Shared%20Documents/Company%20Sales.rdl`|  
-|Exemple de rapport Company Sales dans le dossier **Documents/Doc** d’une instance [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] ou [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] .|`http://TestServer/TestSite/Documents/Doc/Company%20Sales.rdl`|  
-|Exemple de rapport Company Sales dans le dossier **Report Center** d’une instance [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] ou [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] .|`http://TestServer/TestSite/Reports/Doc/Company%20Sales.rdl`|  
+|Serveur SharePoint.|`https://TestServer`|  
+|Site ou sous-site de serveur SharePoint.|`https://TestServer/toplevelsite/subsite`|  
+|Exemple de rapport Company Sales dans le dossier **Documents partagés** d’un déploiement [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] ou [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] .|`https://TestServer/TestSite/Shared%20Documents/Company%20Sales.rdl`|  
+|Exemple de rapport Company Sales dans le dossier **Documents/Doc** d’une instance [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] ou [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] .|`https://TestServer/TestSite/Documents/Doc/Company%20Sales.rdl`|  
+|Exemple de rapport Company Sales dans le dossier **Report Center** d’une instance [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] ou [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] .|`https://TestServer/TestSite/Reports/Doc/Company%20Sales.rdl`|  
   
 ##  <a name="publishingToDocLib"></a> Publication dans une bibliothèque SharePoint à partir d’un outil de création  
  Lorsque vous utilisez un outil de création de rapports pour publier des rapports et des fichiers associés dans une bibliothèque, les fichiers sont validés avant d'être ajoutés. Si vous téléchargez les rapports et les fichiers associés via l’action **Télécharger** dans une bibliothèque SharePoint, aucune vérification de validation n’a lieu. Vous ne saurez pas si le fichier est valide tant que vous n'accéderez pas au rapport en le gérant, le modifiant ou l'exécutant.  

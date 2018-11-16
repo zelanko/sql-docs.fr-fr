@@ -14,12 +14,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: d47a73c378ee8bbdae38631031714c98d2bdc730
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: ee7b41d2c6e4584bd2dd48dec09fbe71b5150d13
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50100190"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696777"
 ---
 # <a name="permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse"></a>Autorisations : GRANT, DENY, REVOKE (Azure SQL Data Warehouse, Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -127,7 +127,7 @@ REVOKE
  Une autorisation implicite peut également être héritée d’une autorisation parente ou de couverture. Par exemple, l’autorisation **UPDATE** sur une table peut être héritée si vous avez l’autorisation **UPDATE** sur le schéma qui contient la table ou l’autorisation **CONTROL** sur la table.  
   
 ### <a name="ownership-chaining"></a>Chaînage des propriétés  
- Quand plusieurs objets de base de données accèdent les uns aux autres de façon séquentielle, la séquence est appelée *chaîne*. Bien que de telles chaînes n'existent pas indépendamment les unes des autres, lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] parcourt les liens d'une chaîne, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] évalue les autorisations sur les objets constitutifs différemment de ce qu'il ferait s'il accédait aux objets séparément. Le chaînage des propriétés a des implication importantes sur la gestion de la sécurité. Pour plus d’informations sur les chaînes de propriétés, consultez [Chaînes de propriétés](http://msdn.microsoft.com/library/ms188676\(v=sql11\).aspx) et [Tutoriel : Chaînes de propriétés et changement de contexte](../../relational-databases/tutorial-ownership-chains-and-context-switching.md).  
+ Quand plusieurs objets de base de données accèdent les uns aux autres de façon séquentielle, la séquence est appelée *chaîne*. Bien que de telles chaînes n'existent pas indépendamment les unes des autres, lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] parcourt les liens d'une chaîne, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] évalue les autorisations sur les objets constitutifs différemment de ce qu'il ferait s'il accédait aux objets séparément. Le chaînage des propriétés a des implication importantes sur la gestion de la sécurité. Pour plus d’informations sur les chaînes de propriétés, consultez [Chaînes de propriétés](https://msdn.microsoft.com/library/ms188676\(v=sql11\).aspx) et [Tutoriel : Chaînes de propriétés et changement de contexte](../../relational-databases/tutorial-ownership-chains-and-context-switching.md).  
   
 ## <a name="permission-list"></a>Liste d’autorisations  
   
@@ -237,14 +237,14 @@ REVOKE
   
 -   REFERENCES  
   
- Pour voir la définition de chaque type d’autorisation, consultez [Autorisations (moteur de base de données)](http://msdn.microsoft.com/library/ms191291.aspx).  
+ Pour voir la définition de chaque type d’autorisation, consultez [Autorisations (moteur de base de données)](https://msdn.microsoft.com/library/ms191291.aspx).  
   
 ### <a name="chart-of-permissions"></a>Graphique des autorisations  
  Toutes les autorisations sont représentées graphiquement dans ce schéma. C’est le moyen le plus simple de représenter la hiérarchie imbriquée des autorisations. Par exemple, l’autorisation **ALTER ON LOGIN** peut être accordée par elle-même, mais elle est également incluse si une connexion reçoit l’autorisation **CONTROL** sur cette connexion ou l’autorisation **ALTER ANY LOGIN**.  
   
  ![Schéma des autorisations de sécurité APS](../../t-sql/statements/media/aps-security-perms-poster.png "Schéma des autorisations de sécurité APS")  
   
- Pour télécharger une version en taille réelle de ce schéma, consultez [Autorisations de SQL Server PDW](http://go.microsoft.com/fwlink/?LinkId=244249) dans la section de fichiers du site APS Yammer (ou envoyez une demande par e-mail à **apsdoc@microsoft.com**.  
+ Pour télécharger une version en taille réelle de ce schéma, consultez [Autorisations de SQL Server PDW](https://go.microsoft.com/fwlink/?LinkId=244249) dans la section de fichiers du site APS Yammer (ou envoyez une demande par e-mail à **apsdoc@microsoft.com**.  
   
 ## <a name="default-permissions"></a>Autorisations par défaut  
  La liste suivante décrit les autorisations par défaut :  

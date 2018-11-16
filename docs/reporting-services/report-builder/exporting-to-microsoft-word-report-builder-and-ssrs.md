@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c9a345a40713bdba845e2e2cdd825326c1799c1e
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 1dd2e24be0ca0746ad456a43c9005f3e0dd8a30c
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021093"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814092"
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>Exportation vers Microsoft Word (Générateur de rapports et SSRS)
 
@@ -112,9 +112,9 @@ ms.locfileid: "50021093"
   
  Les rubriques suivantes fournissent des informations supplémentaires sur le paramétrage des options d'Office et de Word.  
   
--   Modifier la langue d’édition dans les **Préférences linguistiques de Microsoft Office** ou dans la boîte de dialogue **Options de Word** dans Word. Pour plus d'informations, consultez [Définir les préférences de langue pour l’édition, l’affichage ou l’aide](http://office.microsoft.com/word-help/enable-the-use-of-other-languages-in-your-office-programs-HA010354783.aspx?CTT=1).  
+-   Modifier la langue d’édition dans les **Préférences linguistiques de Microsoft Office** ou dans la boîte de dialogue **Options de Word** dans Word. Pour plus d'informations, consultez [Définir les préférences de langue pour l’édition, l’affichage ou l’aide](https://office.microsoft.com/word-help/enable-the-use-of-other-languages-in-your-office-programs-HA010354783.aspx?CTT=1).  
   
--   Ajouter des packs linguistiques Office et modifier la langue d'édition. Pour plus d’informations, consultez [Ajouter une langue ou définir les préférences de langue dans Office 2010 et les versions ultérieures](http://office.microsoft.com/word-help/enable-the-use-of-other-languages-in-your-office-programs-HA010354783.aspx?CTT=1) et [Options linguistiques d’Office](http://office.microsoft.com/language/).  
+-   Ajouter des packs linguistiques Office et modifier la langue d'édition. Pour plus d’informations, consultez [Ajouter une langue ou définir les préférences de langue dans Office 2010 et les versions ultérieures](https://office.microsoft.com/word-help/enable-the-use-of-other-languages-in-your-office-programs-HA010354783.aspx?CTT=1) et [Options linguistiques d’Office](https://office.microsoft.com/language/).  
   
 > [!NOTE]  
 >  Lorsque vous modifiez la langue d’édition dans les **Préférences linguistiques de Microsoft Office** ou dans la boîte de dialogue **Options de Word** dans Word, la modification s’applique à tous les programmes Office.  

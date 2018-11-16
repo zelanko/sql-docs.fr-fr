@@ -11,12 +11,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ccc38600559c931e1ce3cd59708b47e581de2557
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a28d59165f7c1a7e733807cb4b86d334604da289
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706567"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51672768"
 ---
 # <a name="accessing-memory-optimized-tables-using-interpreted-transact-sql"></a>Accès aux tables optimisées en mémoire à l’aide du Transact-SQL interprété
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ Lorsque vous accédez à une table optimisée en mémoire à partir d’une tran
   
 - Définissez l’option de base de données [MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT](../../t-sql/statements/alter-database-transact-sql-set-options.md) sur ON.  
   
-Un indicateur de table de niveau d’isolation n’est pas obligatoire pour les tables optimisées en mémoire accessibles par des requêtes qui s’exécutent en [mode de validation automatique](http://msdn.microsoft.com/c8de5b60-d147-492d-b601-2eeae8511d00).  
+Un indicateur de table de niveau d’isolation n’est pas obligatoire pour les tables optimisées en mémoire accessibles par des requêtes qui s’exécutent en [mode de validation automatique](https://msdn.microsoft.com/c8de5b60-d147-492d-b601-2eeae8511d00).  
   
 ## <a name="see-also"></a> Voir aussi
 

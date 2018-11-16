@@ -11,12 +11,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 030fc4262f41112eeca34c590eac00701e8ee876
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 325a2bad11c168e1b14031b8f16ac71e9dbb7eb3
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47781227"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661868"
 ---
 # <a name="dynamic-data-masking"></a>Masquage dynamique des données
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ Par exemple, si une personne assurant le support technique au sein d’un centre
 
 Le masquage dynamique des données vise à limiter l’exposition de données sensibles, en empêchant des utilisateurs ne devant pas avoir accès à celles-ci de les consulter. En revanche, le masquage dynamique des données n’a pas pour but d’empêcher des utilisateurs d’une base de données de se connecter directement à celle-ci ou d’exécuter des requêtes exhaustives ayant pour effet d’exposer des éléments de données sensibles. Le masquage dynamique des données est complémentaire à d’autres fonctionnalités de sécurité de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (audit, chiffrement, sécurité au niveau des lignes...). Il est vivement recommandé de l’utiliser conjointement avec celles-ci pour mieux protéger les données sensibles contenues dans la base de données.  
   
-Le masquage des données dynamiques est disponible dans [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)], et est configuré à l’aide de commandes [!INCLUDE[tsql](../../includes/tsql-md.md)] . Pour plus d’informations sur la configuration du masquage dynamique des données via le portail Azure, consultez [Prise en main du masquage dynamique des données de base de données SQL (portail Azure)](http://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/).  
+Le masquage des données dynamiques est disponible dans [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)], et est configuré à l’aide de commandes [!INCLUDE[tsql](../../includes/tsql-md.md)] . Pour plus d’informations sur la configuration du masquage dynamique des données via le portail Azure, consultez [Prise en main du masquage dynamique des données de base de données SQL (portail Azure)](https://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/).  
   
 ## <a name="defining-a-dynamic-data-mask"></a>Définition d’un masque dynamique des données  
  Il est possible de définir une règle de masquage sur une colonne d’une table, afin d’obfusquer les données qui y figurent. Quatre types de masques sont disponibles.  
@@ -197,4 +197,4 @@ ALTER COLUMN LastName DROP MASKED;
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [column_definition &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-column-definition-transact-sql.md)   
  [sys.masked_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-masked-columns-transact-sql.md)   
- [Prise en main du masquage dynamique des données de Base de données SQL (portail Azure en version préliminaire)](http://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/)  
+ [Prise en main du masquage dynamique des données de Base de données SQL (portail Azure en version préliminaire)](https://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/)  

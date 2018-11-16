@@ -13,12 +13,12 @@ ms.assetid: c0225395-3a2e-4561-a2f2-8050ad11c8e2
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d3e97f0fa4e8abfb8eddb27095fefcacd565d1d7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2c47ecfcb9f7c3c321ad91e45fd3db1e4033e680
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47671637"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677368"
 ---
 # <a name="example-application-sqlsrv-driver"></a>Exemple d’application (pilote SQLSRV)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -30,7 +30,7 @@ L’exemple d’application Évaluations de produits AdventureWorks est une appl
 1.  Installez [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. Pour plus d’informations, consultez [mise en route avec le Microsoft Drivers for PHP for SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md).
 2.  Copiez le code répertorié plus loin dans ce document dans deux fichiers : adventureworks_demo.php et photo.php.  
 3.  Placez les fichiers adventureworks_demo.php et photo.php dans le répertoire racine de votre serveur web.  
-4.  Exécutez l’application en démarrant http://localhost/adventureworks_demo.php depuis votre navigateur.  
+4.  Exécutez l’application en démarrant https://localhost/adventureworks_demo.php depuis votre navigateur.  
   
 ## <a name="requirements"></a>Spécifications  
 Pour exécuter l’exemple d’application Évaluations de produits AdventureWorks, les conditions suivantes doivent être remplies sur votre ordinateur :  
@@ -57,7 +57,7 @@ L’exemple d’application Évaluations de produits AdventureWorks retourne les
   
 Placez le code suivant dans un fichier nommé adventureworks_demo.php :  
   
-```  
+```php
 <!--=============  
 This file is part of a Microsoft SQL Server Shared Source Application.  
 Copyright (C) Microsoft Corporation.  All rights reserved.  
@@ -497,7 +497,7 @@ Le script photo.php retourne la photo du produit correspondant au **ProductID**s
   
 Placez le code suivant dans un fichier nommé photo.php :  
   
-```  
+```php
 <?php  
 /*=============  
 This file is part of a Microsoft SQL Server Shared Source Application.  
@@ -550,7 +550,7 @@ else
      die(print_r( sqlsrv_errors(), true));  
 }  
   
-/* Free the statement and connectin resources. */  
+/* Free the statement and connection resources. */  
 sqlsrv_free_stmt( $stmt );  
 sqlsrv_close( $conn );  
 ?>  

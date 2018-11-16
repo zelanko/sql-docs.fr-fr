@@ -13,12 +13,12 @@ ms.assetid: b6f3cd5a-3389-42d6-a93f-97b3ddf31b95
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cfb567a0e970cdc6f2a1e4b56fd39d39405a84c4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a832c9001f60433764a17fbedba0ebb93eb15588
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47627588"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51681237"
 ---
 # <a name="how-to-create-an-empty-sql-server-unit-test"></a>Procédure : créer un test unitaire SQL Server vide
 Incluez des tests unitaires dans votre projet de base de données pour vérifier que les modifications que vous apportez aux objets de base de données n'empêchent pas les fonctionnalités existantes. Les procédures suivantes expliquent comment créer des tests unitaires SQL Server pour n'importe quel objet de base de données. SQL Server Data Tools offre une prise en charge supplémentaire pour des fonctions de base de données, des déclencheurs et des procédures stockées. Pour plus d’informations, consultez [Procédure : créer des tests unitaires SQL Server pour des fonctions, des déclencheurs ou des procédures stockées](../ssdt/how-to-create-unit-tests-for-functions-triggers-stored-procedures.md).  
@@ -96,10 +96,10 @@ Après avoir configuré le projet de test et créé le test unitaire, voici les 
 -   Ajoutez des conditions de test ou une autre instruction d'assertion pour vérifier les résultats du script.  
   
 > [!NOTE]  
-> La condition de test Non concluant est la condition par défaut ajoutée à chaque test. Cette condition de test est incluse pour indiquer que la vérification du test n'a pas été implémentée. Supprimez cette condition de test de votre test après avoir ajouté d'autres conditions de test. Pour plus d'informations, consultez [Procédure : ajouter des conditions de test à des tests unitaires de base de données](http://msdn.microsoft.com/library/aa833242(VS.100).aspx).  
+> La condition de test Non concluant est la condition par défaut ajoutée à chaque test. Cette condition de test est incluse pour indiquer que la vérification du test n'a pas été implémentée. Supprimez cette condition de test de votre test après avoir ajouté d'autres conditions de test. Pour plus d'informations, consultez [Procédure : ajouter des conditions de test à des tests unitaires de base de données](https://msdn.microsoft.com/library/aa833242(VS.100).aspx).  
   
 ## <a name="see-also"></a> Voir aussi  
 [Procédure : exécuter des tests unitaires SQL Server](../ssdt/how-to-run-sql-server-unit-tests.md)  
 [Création et définition de tests unitaires SQL Server](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
-[Création de tests unitaires](http://msdn.microsoft.com/library/ms182523(VS.90).aspx)  
+[Création de tests unitaires](https://msdn.microsoft.com/library/ms182523(VS.90).aspx)  
   

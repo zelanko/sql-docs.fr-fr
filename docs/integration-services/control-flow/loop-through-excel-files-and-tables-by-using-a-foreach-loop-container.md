@@ -15,12 +15,12 @@ ms.assetid: a5393c1a-cc37-491a-a260-7aad84dbff68
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 03f8fe59c2c78c1687d36ab31df6321bda9a6ba9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b79ca6af9b0ccea0dfb1fe66b73f33cc8b9cd062
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47728677"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639246"
 ---
 # <a name="loop-through-excel-files-and-tables-by-using-a-foreach-loop-container"></a>Effectuer une boucle dans des fichiers et des tables Excel en utilisant un conteneur de boucles Foreach
   Les procédures de cette rubrique expliquent comment effectuer une boucle dans les classeurs Excel d'un dossier, ou dans les tableaux d'un classeur Excel, à l'aide du conteneur de boucles Foreach et de l'énumérateur approprié.  
@@ -36,7 +36,7 @@ ms.locfileid: "47728677"
   
      Si vous n'utilisez pas une variable pour l'argument de propriétés étendues, vous devez l'ajouter manuellement à l'expression qui contient la chaîne de connexion.  
   
-3.  Ajoutez un conteneur de boucles Foreach à l’onglet **Flux de contrôle** . Pour plus d’informations sur la configuration du conteneur de boucles Foreach, consultez [Configurer un conteneur de boucles Foreach](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25).  
+3.  Ajoutez un conteneur de boucles Foreach à l’onglet **Flux de contrôle** . Pour plus d’informations sur la configuration du conteneur de boucles Foreach, consultez [Configurer un conteneur de boucles Foreach](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25).  
   
 4.  Dans la page **Collection** de **l’Éditeur de boucle Foreach**, sélectionnez l’énumérateur de fichiers Foreach, spécifiez le dossier contenant les classeurs Excel, puis le filtre de fichiers (généralement *.xlsx).  
   
@@ -44,7 +44,7 @@ ms.locfileid: "47728677"
   
 6.  Fermez **l’Éditeur de boucle Foreach**.  
   
-7.  Ajoutez un gestionnaire de connexions Excel au package, comme décrit dans la rubrique [Ajouter, supprimer ou partager un gestionnaire de connexions dans un package](http://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655). Pour éviter toute erreur de validation, sélectionnez un fichier de classeur Excel pour la connexion.  
+7.  Ajoutez un gestionnaire de connexions Excel au package, comme décrit dans la rubrique [Ajouter, supprimer ou partager un gestionnaire de connexions dans un package](https://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655). Pour éviter toute erreur de validation, sélectionnez un fichier de classeur Excel pour la connexion.  
   
     > [!IMPORTANT]  
     >  Pour éviter des erreurs de validation à mesure que vous configurez des tâches et des composants de flux de données qui utilisent ce gestionnaire de connexions Excel, sélectionnez un classeur Excel existant dans **l’Éditeur du gestionnaire de connexions Excel**. Le gestionnaire de connexions n’utilise pas ce classeur au moment de l’exécution une fois que vous ayez configuré une expression pour la propriété **ConnectionString** comme décrit dans la procédure suivante. Après avoir créé et configuré le package, vous pouvez supprimer la valeur de la propriété **ConnectionString** dans la fenêtre Propriétés. Néanmoins, si vous supprimez cette valeur, la propriété de chaîne de connexion du gestionnaire de connexions Excel n'est plus valide tant que la boucle Foreach n'est pas exécutée. Vous devez donc définir la propriété **DelayValidation** à **True** dans les tâches où le gestionnaire de connexions est utilisé, ou bien dans le package, pour éviter des erreurs de validation.  
@@ -73,11 +73,11 @@ ms.locfileid: "47728677"
   
 ## <a name="to-loop-through-excel-tables-by-using-the-foreach-adonet-schema-rowset-enumerator"></a>Pour effectuer une boucle dans des tableaux Excel à l'aide de l'énumérateur d'ensemble de lignes du schéma ADO.NET Foreach  
   
-1.  Créez un gestionnaire de connexions ADO.NET qui utilise le fournisseur OLE DB pour Microsoft ACE afin d’établir une connexion à un classeur Excel. Dans la page Tout de la boîte de dialogue **Gestionnaire de connexions**, entrez la version Excel (dans cet exemple, Excel 12.0) comme valeur de la propriété Propriétés étendues. Pour plus d’informations, consultez [Ajouter, supprimer ou partager un gestionnaire de connexions dans un package](http://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655).  
+1.  Créez un gestionnaire de connexions ADO.NET qui utilise le fournisseur OLE DB pour Microsoft ACE afin d’établir une connexion à un classeur Excel. Dans la page Tout de la boîte de dialogue **Gestionnaire de connexions**, entrez la version Excel (dans cet exemple, Excel 12.0) comme valeur de la propriété Propriétés étendues. Pour plus d’informations, consultez [Ajouter, supprimer ou partager un gestionnaire de connexions dans un package](https://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655).  
   
 2.  Créez une variable de chaîne qui recevra le nom du tableau actuel à chaque itération de la boucle.  
   
-3.  Ajoutez un conteneur de boucles Foreach à l’onglet **Flux de contrôle** . Pour plus d’informations sur la configuration du conteneur de boucles Foreach, consultez [Configurer un conteneur de boucles Foreach](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25).  
+3.  Ajoutez un conteneur de boucles Foreach à l’onglet **Flux de contrôle** . Pour plus d’informations sur la configuration du conteneur de boucles Foreach, consultez [Configurer un conteneur de boucles Foreach](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25).  
   
 4.  Dans la page **Collection** de **l’Éditeur de boucle Foreach**, sélectionnez l’énumérateur d’ensemble de lignes du schéma ADO.NET Foreach.  
   
@@ -96,7 +96,7 @@ ms.locfileid: "47728677"
   
 ## <a name="see-also"></a> Voir aussi  
  [Charger des données depuis ou vers Excel avec SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md)  
- [Configurer un conteneur de boucles Foreach](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)   
+ [Configurer un conteneur de boucles Foreach](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)   
  [Ajouter ou modifier une expression de propriété](../../integration-services/expressions/add-or-change-a-property-expression.md)   
  [Gestionnaire de connexions Excel](../../integration-services/connection-manager/excel-connection-manager.md)   
  [Source Excel](../../integration-services/data-flow/excel-source.md)   

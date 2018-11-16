@@ -18,12 +18,12 @@ ms.assetid: a4418315-38e2-4ad3-8784-576163b25d6f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b5cb3e406f070d9bf527b4f6c8a65fb0dd6e2dda
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b035d9f36acfa1f01e7eafdb81d68f647d874db5
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47736887"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638966"
 ---
 # <a name="enumerated-constants-in-property-expressions"></a>Constantes énumérées dans des expressions de propriété
   Si des expressions de propriété incluent des valeurs d'une liste de membres d'énumérateur, l'expression doit utiliser la valeur numérique du membre énumérateur et non le nom convivial du membre. Par exemple, si une expression définit la propriété **LoggingMode** , vous devez utiliser la valeur numérique 2 à la place du nom convivial Disabled.  
@@ -458,7 +458,7 @@ ms.locfileid: "47736887"
   
 |Nom convivial dans DTSXMLDiffOptions|Valeur numérique|  
 |----------------------------------------|-------------------|  
-|None|0|  
+|Aucun|0|  
 |IgnoreChildOrder|1|  
 |IgnoreComments|2|  
 |IgnorePI|4|  
@@ -488,7 +488,7 @@ ms.locfileid: "47736887"
   
 |Nom convivial dans DatabaseSelection|Valeur numérique|  
 |----------------------------------------|-------------------|  
-|None|0|  
+|Aucun|0|  
 |All|1|  
 |Système|2|  
 |Utilisateur|3|  
@@ -498,7 +498,7 @@ ms.locfileid: "47736887"
   
 |Nom convivial dans TableSelection|Valeur numérique|  
 |-------------------------------------|-------------------|  
-|None|0|  
+|Aucun|0|  
 |All|1|  
 |Specific|2|  
   
@@ -576,12 +576,12 @@ ms.locfileid: "47736887"
   
 |Nom convivial dans DTSForcedExecResult|Valeur numérique|  
 |------------------------------------------|-------------------|  
-|None|-1|  
+|Aucun|-1|  
 |Réussi|0|  
 |Failure|1|  
 |Completion|2|  
   
- Propriété**IsolationLevel** : définie à l’aide de valeurs provenant de l’énumération **IsolationLevel** . Pour plus d’informations, consultez la bibliothèque de classes .NET Framework dans [MSDN Library](http://go.microsoft.com/fwlink?LinkId=17313).  
+ Propriété**IsolationLevel** : définie à l’aide de valeurs provenant de l’énumération **IsolationLevel** . Pour plus d’informations, consultez la bibliothèque de classes .NET Framework dans [MSDN Library](https://go.microsoft.com/fwlink?LinkId=17313).  
   
  Propriété**LoggingMode** : définie à l’aide de valeurs provenant de l’énumération **DTSLoggingMode** .  
   

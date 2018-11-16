@@ -11,19 +11,19 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 1e3aa4a72623e986a4e5a6494829f7e7a53d9cb3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 312fff4f7221c7ff7f644933494c71afd76b1136
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668635"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640446"
 ---
 # <a name="scale-out-support-for-high-availability-via-sql-server-failover-cluster-instance"></a>Prise en charge de Scale Out pour la haute disponibilité au moyen d’une instance de cluster de basculement SQL Server
 
 Pour configurer la haute disponibilité côté Scale Out Master au moyen d’une instance de cluster de basculement SQL Server, suivez les étapes ci-dessous :
 
 ## <a name="1-prerequisites"></a>1. Conditions préalables requises
-Configurez un cluster de basculement Windows. Pour obtenir des instructions, consultez le billet de blog [Installing the Failover Cluster Feature and Tools for Windows Server 2012](http://blogs.msdn.com/b/clustering/archive/2012/04/06/10291601.aspx). Installez la fonctionnalité et les outils sur tous les nœuds de cluster.
+Configurez un cluster de basculement Windows. Pour obtenir des instructions, consultez le billet de blog [Installation de la fonctionnalité de cluster de basculement et des outils pour Windows Server 2012](https://blogs.msdn.com/b/clustering/archive/2012/04/06/10291601.aspx). Installez la fonctionnalité et les outils sur tous les nœuds de cluster.
 
 ## <a name="2-install-sql-server-failover-cluster"></a>2. Installer un cluster de basculement SQL Server
 Installez un cluster de basculement SQL Server. Pour obtenir des instructions, consultez [Installation d’un cluster de basculement SQL Server](../../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md). Durant l’installation, dans la page Sélection de fonctionnalités, sélectionnez Services Moteur de base de données. Notez le nom réseau SQL Server, car vous en aurez besoin ultérieurement pour la configuration.

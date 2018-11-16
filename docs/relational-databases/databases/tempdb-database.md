@@ -5,8 +5,7 @@ ms.custom: P360
 ms.date: 07/17/2018
 ms.prod: sql
 ms.prod_service: database-engine
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - temporary tables [SQL Server], tempdb database
@@ -19,12 +18,12 @@ ms.author: sstein
 manager: craigg
 ms.reviewer: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a7553be68390c90b2cab8ac55c66bb9ffa47ad88
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 3041f983b1d5aec55ac3727c322558ed22e69315
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51031266"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51658628"
 ---
 # <a name="tempdb-database"></a>Base de données tempdb
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -60,7 +59,7 @@ Les opérations effectuées dans **tempdb** font l’objet d’un enregistrement
  \* Le nombre de fichiers dépend du nombre de processeurs (logiques) sur l’ordinateur. En règle générale, si le nombre de processeurs logiques est inférieur ou égal à huit, utilisez le même nombre de fichiers de données que de processeurs logiques. Si le nombre de processeurs logiques est supérieur à huit, utilisez huit fichiers de données et, si le conflit persiste, augmentez le nombre de fichiers de données par multiples de quatre pour réduire le conflit à un niveau acceptable ou bien modifiez la charge de travail/le code.
 
 > [!NOTE]
-> La valeur par défaut du nombre de fichiers de données est basée sur les directives générales de l’article [KB 2154845](http://support.microsoft.com/kb/2154845/).  
+> La valeur par défaut du nombre de fichiers de données est basée sur les directives générales de l’article [KB 2154845](https://support.microsoft.com/kb/2154845/).  
   
 ### <a name="moving-the-tempdb-data-and-log-files-in-sql-server"></a>Déplacement des fichiers de données et journaux de tempdb dans SQL Server  
  Pour déplacer les données **tempdb** et les fichiers journaux, consultez [Déplacer des bases de données système](../../relational-databases/databases/move-system-databases.md).  
@@ -278,4 +277,4 @@ Pour plus d’informations sur les améliorations des performances dans tempdb, 
   
 ## <a name="see-also"></a> Voir aussi  
  [Utilisation de tempdb dans SQL Server 2005](https://technet.microsoft.com/library/cc966545.aspx)  
- [Résolution des problèmes d’espace disque insuffisant dans tempdb](http://msdn.microsoft.com/library/ms176029.aspx) 
+ [Résolution des problèmes d’espace disque insuffisant dans tempdb](https://msdn.microsoft.com/library/ms176029.aspx) 

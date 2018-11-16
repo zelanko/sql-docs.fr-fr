@@ -19,12 +19,12 @@ ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6cc9fbc190645b2f517758b129e92f458dcef316
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8cbdfeec8b603c4ca474088e0134f9fb2c319c08
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846597"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661125"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>Démarrer et utiliser l'Assistant Paramétrage du moteur de base de données
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -223,7 +223,7 @@ Pour plus d’informations, consultez [Paramétrage de base de données à l’a
 >  La suspension de l'Assistant Paramétrage du moteur de base de données n'est pas acceptée. Si vous cliquez sur le bouton de barre d’outils **Démarrer l’analyse** après avoir cliqué soit sur **Arrêter l’analyse** soit sur **Arrêter l’analyse (avec recommandations)** , l’Assistant Paramétrage du moteur de base de données démarre une nouvelle session de paramétrage.  
   
 ###  <a name="dta"></a> Utilisation de l'utilitaire dta  
- L' [utilitaire dta](../../tools/dta/dta-utility.md) fournit un fichier exécutable d'invite de commandes qui vous permet de paramétrer des bases de données. Il vous permet d'utiliser l'Assistant Paramétrage du moteur de base de données dans les scripts et les fichiers de commandes. L’utilitaire **dta** accepte les entrées de cache du plan, les fichiers de trace, les tables de trace et les scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] en tant que charges de travail. Il accepte également les entrées XML qui sont conformes aux schéma XML de l'Assistant Paramétrage du moteur de base de données, qui est disponible sur ce [site Web de Microsoft](http://go.microsoft.com/fwlink/?linkid=43100).  
+ L' [utilitaire dta](../../tools/dta/dta-utility.md) fournit un fichier exécutable d'invite de commandes qui vous permet de paramétrer des bases de données. Il vous permet d'utiliser l'Assistant Paramétrage du moteur de base de données dans les scripts et les fichiers de commandes. L’utilitaire **dta** accepte les entrées de cache du plan, les fichiers de trace, les tables de trace et les scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] en tant que charges de travail. Il accepte également les entrées XML qui sont conformes aux schéma XML de l'Assistant Paramétrage du moteur de base de données, qui est disponible sur ce [site Web de Microsoft](https://go.microsoft.com/fwlink/?linkid=43100).  
   
  Prenez en considération les points suivants avant de paramétrer une charge de travail à l’aide de l’utilitaire **dta** :  
   
@@ -313,7 +313,7 @@ Pour plus d’informations, consultez [Paramétrage de base de données à l’a
   
  C:\Program Files\Microsoft SQL Server\100\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd  
   
- Le schéma XML de l'Assistant Paramétrage du [!INCLUDE[ssDE](../../includes/ssde-md.md)] est également disponible en ligne sur ce [site Web de Microsoft](http://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409).  
+ Le schéma XML de l'Assistant Paramétrage du [!INCLUDE[ssDE](../../includes/ssde-md.md)] est également disponible en ligne sur ce [site Web de Microsoft](https://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409).  
   
  Cette adresse URL pointe vers une page contenant de nombreux schémas XML [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Parcourez la page pour atteindre la ligne correspondant à l'Assistant Paramétrage du [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
   

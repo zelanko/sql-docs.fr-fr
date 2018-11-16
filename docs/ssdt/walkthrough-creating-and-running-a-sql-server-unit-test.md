@@ -11,12 +11,12 @@ ms.assetid: 992c1d8e-3729-438b-9ef4-cd103e28f145
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 77ef8c2340724558b137bb1da1bb3448db677795
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 86f54b31eb9bab93b6a4a3be918e1011f023ab5b
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855283"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51666518"
 ---
 # <a name="walkthrough-creating-and-running-a-sql-server-unit-test"></a>Procédure pas à pas : création et exécution d'un test unitaire SQL Server
 Dans cette procédure pas à pas, vous créez un test unitaire SQL Server qui vérifie le comportement de plusieurs procédures stockées. Vous créez des tests unitaires SQL Server pour identifier les erreurs de code qui peuvent provoquer un comportement d'application incorrect. Vous pouvez exécuter des tests unitaires SQL Server et des tests d'application dans le cadre d'une suite automatisée de tests.  
@@ -40,7 +40,7 @@ Au cours de cette procédure pas à pas, vous effectuez les tâches suivantes :
 Lorsqu'un des tests unitaires détecte une erreur dans une procédure stockée, vous corrigez cette erreur et réexécutez le test.  
   
 ## <a name="prerequisites"></a>Conditions préalables requises  
-Pour effectuer cette procédure pas à pas, vous devez être en mesure de vous connecter à un serveur de base de données (ou à une base de données LocalDB) sur lequel vous êtes autorisé à créer et déployer une base de données. Pour plus d'informations, consultez [Autorisations requises pour les fonctionnalités de base de données de Visual Studio](http://msdn.microsoft.com/library/aa833413(VS.100).aspx).  
+Pour effectuer cette procédure pas à pas, vous devez être en mesure de vous connecter à un serveur de base de données (ou à une base de données LocalDB) sur lequel vous êtes autorisé à créer et déployer une base de données. Pour plus d'informations, consultez [Autorisations requises pour les fonctionnalités de base de données de Visual Studio](https://msdn.microsoft.com/library/aa833413(VS.100).aspx).  
   
 ## <a name="CreateScript"></a>Créer un script qui contient un schéma de base de données  
   
@@ -968,7 +968,7 @@ Pour créer et vérifier un test négatif, vous devez effectuer les tâches suiv
     Spécifiez que vous attendez une exception spécifique. Vous pouvez éventuellement spécifier un numéro d'erreur spécifique. Si vous n'ajoutez pas cet attribut, le test unitaire échoue et un message s'affiche dans la fenêtre Résultats de tests  
   
     > [!IMPORTANT]  
-    > Actuellement, Visual Studio 2012 ne prend pas en charge l'attribut ExpectedSqlException. Pour plus d'informations sur la façon de contourner cela, consultez [Impossible d'exécuter le test unitaire de base de données « Échec attendu »](http://social.msdn.microsoft.com/Forums/en-US/ssdt/thread/e74e06ad-e3c9-4cb0-97ad-a6f235a52345).  
+    > Actuellement, Visual Studio 2012 ne prend pas en charge l'attribut ExpectedSqlException. Pour plus d'informations sur la façon de contourner cela, consultez [Impossible d'exécuter le test unitaire de base de données « Échec attendu »](https://social.msdn.microsoft.com/Forums/en-US/ssdt/thread/e74e06ad-e3c9-4cb0-97ad-a6f235a52345).  
   
 3.  Dans le menu Fichier, cliquez sur Enregistrer SqlServerUnitTests1.cs.  
   

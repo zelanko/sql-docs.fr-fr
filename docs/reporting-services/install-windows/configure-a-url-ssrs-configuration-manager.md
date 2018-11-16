@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 851e163a-ad2a-491e-bc1e-4df92327092f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bc385863afdd0ec6c9c5fb06799f8109f0c9cea7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 403946b29ebda9e8023b8f156daac9fbb9202df4
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645147"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813352"
 ---
 # <a name="configure-a-url--ssrs-configuration-manager"></a>Configurer une URL (Gestionnaire de configuration de SSRS)
   Avant de pouvoir utiliser le [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] ou le service web Report Server, vous devez configurer au moins une URL pour chaque application. La configuration des URL est obligatoire si vous avez installé [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode « fichiers uniquement » (autrement dit, en sélectionnant l’option **Installer mais ne pas configurer le serveur** dans la page Options d’installation du serveur de rapports dans l’Assistant Installation). Si vous avez installé [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dans la configuration par défaut, les URL sont déjà configurées pour chaque application.  
@@ -78,7 +78,7 @@ ms.locfileid: "47645147"
   
          `netstat –anp tcp`  
   
-    -   Lisez l’article du support Microsoft [Informations relatives aux affectations de ports TCP/IP](http://support.microsoft.com/kb/174904)pour comprendre les attributions de port TCP et les différences entre les ports bien identifiés (0 à 1023), les ports inscrits (1024 à 49151) et les ports dynamiques ou privés (49152 à 65535).  
+    -   Lisez l’article du support Microsoft [Informations relatives aux affectations de ports TCP/IP](https://support.microsoft.com/kb/174904)pour comprendre les attributions de port TCP et les différences entre les ports bien identifiés (0 à 1023), les ports inscrits (1024 à 49151) et les ports dynamiques ou privés (49152 à 65535).  
   
     -   Si vous utilisez le Pare-feu Windows, vous devez ouvrir le port. Pour obtenir des instructions, consultez [Configure a Firewall for Report Server Access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md).  
   
@@ -124,9 +124,9 @@ ms.locfileid: "47645147"
 ## <a name="setting-advanced-properties-to-specify-additional-urls"></a>Définition de propriétés avancées pour spécifier les URL supplémentaires  
  Vous pouvez réserver plusieurs URL pour le service web Report Server ou le [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] en spécifiant des ports ou des noms d’hôte différents (une adresse IP ou un nom d’en-tête de l’hôte qu’un serveur de noms de domaine peut résoudre en une adresse IP affectée à l’ordinateur). En créant plusieurs URL, vous pouvez définir différents chemins d'accès à la même instance de serveur de rapports. Par exemple, pour activer l'accès intranet et extranet à un serveur de rapports, vous pouvez utiliser l'URL par défaut pour l'accès intranet et un nom d'hôte complet supplémentaire pour l'accès extranet :  
   
--   `http://myserver01/reportserver`  
+-   `https://myserver01/reportserver`  
   
--   `http://www.adventure-works.com/reportserver`  
+-   `https://www.adventure-works.com/reportserver`  
   
  Vous ne pouvez pas définir plusieurs noms de répertoire virtuel pour la même instance d'application. Chaque instance d'application de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] est mappée sur un nom de répertoire virtuel unique. Si vous avez plusieurs instances de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sur le même ordinateur, le nom de répertoire virtuel d'une application doit inclure le nom de l'instance pour garantir que chaque demande atteint sa cible prévue.  
  
@@ -151,7 +151,7 @@ ms.locfileid: "47645147"
   
 2.  Cliquez sur **Ajouter**.  
   
-3.  Cliquez sur l'adresse IP ou le nom d'en-tête de l'hôte. Si vous spécifiez un en-tête de l'hôte, veillez bien à spécifier un nom que le service DNS peut résoudre. Si vous spécifiez un nom de domaine disponible publiquement, indiquez la totalité de l’URL, y compris `http://www`.  
+3.  Cliquez sur l'adresse IP ou le nom d'en-tête de l'hôte. Si vous spécifiez un en-tête de l'hôte, veillez bien à spécifier un nom que le service DNS peut résoudre. Si vous spécifiez un nom de domaine disponible publiquement, indiquez la totalité de l’URL, y compris `https://www`.  
   
 4.  Spécifiez le port. Si vous spécifiez un port personnalisé, l'URL de l'application doit toujours inclure le numéro de port.  
   
@@ -165,13 +165,13 @@ ms.locfileid: "47645147"
 ##  <a name="URLExamples"></a> Exemples de configurations d'URL  
  La liste suivante présente quelques exemples d'URL de serveur de rapports :  
   
--   `http://localhost/reportserver`  
+-   `https://localhost/reportserver`  
   
--   `http://localhost/reportserver_SQLEXPRESS`  
+-   `https://localhost/reportserver_SQLEXPRESS`  
   
--   `http://sales01/reportserver`  
+-   `https://sales01/reportserver`  
   
--   `http://sales01:8080/reportserver`  
+-   `https://sales01:8080/reportserver`  
   
 -   `https://sales.adventure-works.com/reportserver`  
   
@@ -179,13 +179,13 @@ ms.locfileid: "47645147"
   
  Les URL que vous utilisez pour accéder au [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] partagent le même format et sont généralement créées sous le site web qui héberge le serveur de rapports. La seule différence est le nom du répertoire virtuel (dans ce cas, le nom est **rapports** , mais vous pouvez configurer le répertoire virtuel pour qu’il utilise le nom de votre choix) :  
   
--   `http://localhost/reports`  
+-   `https://localhost/reports`  
   
--   `http://localhost/reports_SQLEXPRESS`  
+-   `https://localhost/reports_SQLEXPRESS`  
   
--   `http://sales01/reports`  
+-   `https://sales01/reports`  
   
--   `http://sales01:8080/reports`  
+-   `https://sales01:8080/reports`  
   
 -   `https://sales.adventure-works.com/reports`  
   

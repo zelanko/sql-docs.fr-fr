@@ -11,12 +11,12 @@ ms.assetid: 7b6867fa-1039-49b3-90fb-85b84678a612
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 02cd5a093d0af3d325437c77dc07846ee8f6db23
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 83346a846e180cd2e77c6ba895bac7a899b1143a
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601267"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639177"
 ---
 # <a name="dtexec-utility"></a>Utilitaire dtexec
   L’utilitaire d’invite de commandes **dtexec** permet de configurer et d’exécuter des packages [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . L’utilitaire **dtexec** donne accès à toutes les fonctions de configuration et d’exécution de packages, telles que les paramètres, les connexions, les propriétés, les variables, la journalisation et les indicateurs de progression. L’utilitaire **dtexec** vous permet de charger des packages à partir des sources suivantes : le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , un fichier projet .ispac, une base de données [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , le Magasin de packages [!INCLUDE[ssIS](../../includes/ssis-md.md)] et le système de fichiers.  
@@ -172,7 +172,7 @@ dtexec /option [value] [/option [value]]...
   
      Cette option exige la spécification des deux paramètres : le nom ou le GUID du gestionnaire de connexions doit être fourni dans l’argument *id_or_name*, et une chaîne de connexion valide doit être spécifiée dans l’argument *connection_string*. Pour plus d’informations, consultez [Connexions Integration Services &#40;SSIS&#41;](../../integration-services/connection-manager/integration-services-ssis-connections.md).  
   
-     Au moment de l’exécution, vous pouvez utiliser l’option **/Connection** pour charger des configurations de package à partir d’un emplacement autre que celui que vous avez spécifié au moment de la conception. Les valeurs de ces configurations remplacent alors les valeurs spécifiées à l'origine. Cependant, vous ne pouvez utiliser l’option **/Connection** que pour des configurations qui utilisent un gestionnaire de connexions (par exemple les configurations [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ). Pour comprendre comment les configurations de package sont appliquées, consultez [Configurations de package](../../integration-services/packages/package-configurations.md) et [Changements de comportement des fonctionnalités Integration Services dans SQL Server 2016](http://msdn.microsoft.com/library/611d22fa-5ac7-485e-9a40-7131e852f794).  
+     Au moment de l’exécution, vous pouvez utiliser l’option **/Connection** pour charger des configurations de package à partir d’un emplacement autre que celui que vous avez spécifié au moment de la conception. Les valeurs de ces configurations remplacent alors les valeurs spécifiées à l'origine. Cependant, vous ne pouvez utiliser l’option **/Connection** que pour des configurations qui utilisent un gestionnaire de connexions (par exemple les configurations [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ). Pour comprendre comment les configurations de package sont appliquées, consultez [Configurations de package](../../integration-services/packages/package-configurations.md) et [Changements de comportement des fonctionnalités Integration Services dans SQL Server 2016](https://msdn.microsoft.com/library/611d22fa-5ac7-485e-9a40-7131e852f794).  
   
 -   **/Cons[oleLog]** [[*displayoptions*];[*list_options*;*src_name_or_guid*]...] : (Facultatif). Affiche les entrées de journal spécifiées sur la console pendant l'exécution du package. Si cette option est omise, aucune entrée de journal ne s'affiche sur la console. Si l'option est spécifiée sans paramètre de restriction d'affichage, toutes les entrées du journal s'affichent. Pour limiter les entrées qui s’affichent dans la console, vous pouvez spécifier les colonnes à inclure à l’aide du paramètre *displayoptions* , puis limiter les types d’entrée de journal à l’aide du paramètre *list_options* .  
   
@@ -403,7 +403,7 @@ dtexec /option [value] [/option [value]]...
   
      `/Project c:\project.ispac /Package Package1.dtsx /SET \Package.Variables[$Package::Parameter];1 /SET \Package.Variables[$Project::Parameter];1`  
   
-     Vous pouvez utiliser l’option **/Set** pour modifier l’emplacement de chargement des configurations de package. Cependant, vous ne pouvez pas utiliser l’option **/Set** pour remplacer une valeur spécifiée par une configuration au moment de la conception. Pour comprendre comment les configurations de package sont appliquées, consultez [Configurations de package](../../integration-services/packages/package-configurations.md) et [Changements de comportement des fonctionnalités Integration Services dans SQL Server 2016](http://msdn.microsoft.com/library/611d22fa-5ac7-485e-9a40-7131e852f794).  
+     Vous pouvez utiliser l’option **/Set** pour modifier l’emplacement de chargement des configurations de package. Cependant, vous ne pouvez pas utiliser l’option **/Set** pour remplacer une valeur spécifiée par une configuration au moment de la conception. Pour comprendre comment les configurations de package sont appliquées, consultez [Configurations de package](../../integration-services/packages/package-configurations.md) et [Changements de comportement des fonctionnalités Integration Services dans SQL Server 2016](https://msdn.microsoft.com/library/611d22fa-5ac7-485e-9a40-7131e852f794).  
   
 -   **/Ser[ver]** *server*: (Facultatif). Quand l’option **/SQL** ou **/DTS** est spécifiée, cette option spécifie le nom du serveur à partir duquel le package est récupéré. Si vous omettez l’option **/Server** et que l’option **/SQL** ou **/DTS** est spécifiée, l’exécution du package est tentée sur le serveur local. La valeur de *server_instance* peut être mise entre guillemets.  
   
@@ -630,6 +630,6 @@ dtexec /isserver "\SSISDB\MyFolder\MyProject\MyPackage.dtsx" /server "."
 ```  
   
 ## <a name="related-content"></a>Contenu associé  
- Entrée de blog, [Exit Codes, DTEXEC, and SSIS Catalog](http://www.mattmasson.com/2012/02/exit-codes-dtexec-and-ssis-catalog/), sur www.mattmasson.com.  
+ Entrée de blog, [Exit Codes, DTEXEC, and SSIS Catalog](https://www.mattmasson.com/2012/02/exit-codes-dtexec-and-ssis-catalog/), sur www.mattmasson.com.  
   
   

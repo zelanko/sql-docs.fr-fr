@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 1c1e265e-52a2-4de3-96fd-ca4abae01c02
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 55eff13b6c766d5c10270e79b8b8d986d1a08f5e
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 0910de2e41c28ea5faf61106e2fabb7d507d60e2
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029138"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814232"
 ---
 # <a name="plan-for-report-design-and-report-deployment--reporting-services"></a>Planifier la conception de rapports et le déploiement de rapports | Reporting Services
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] offre plusieurs approches pour créer et déployer des rapports paginés. Découvrez comment planifier un outil de création de rapports et un environnement de serveur de rapports qui fonctionnent ensemble.
@@ -27,11 +27,11 @@ Cette rubrique offre une vue d'ensemble de la prise en charge de la définition 
   
 |Abréviation|Version de schéma|  
 |------------------|--------------------|  
-|2016 RDL|`http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition`|
-|RDL 2010|`http://schemas.microsoft.com/sqlserver/reporting/2010/01/reportdefinition`|  
-|RDL 2008|`http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition`|  
-|RDL 2005<br /><br /> RDLC 2005|`http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition`|  
-|RDL 2000|`http://schemas.microsoft.com/sqlserver/reporting/2003/10/reportdefinition`|  
+|2016 RDL|`https://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition`|
+|RDL 2010|`https://schemas.microsoft.com/sqlserver/reporting/2010/01/reportdefinition`|  
+|RDL 2008|`https://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition`|  
+|RDL 2005<br /><br /> RDLC 2005|`https://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition`|  
+|RDL 2000|`https://schemas.microsoft.com/sqlserver/reporting/2003/10/reportdefinition`|  
   
  Pour plus d'informations sur RDL et les schémas RDL, reportez-vous aux rubriques suivantes :  
   

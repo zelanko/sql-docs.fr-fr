@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: e566f09ae6c3357ecdbc2083f1f32fffadcf94d0
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 41a03695526a669f33b74833137415a35db02929
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50028235"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812743"
 ---
 # <a name="develop-with-the-rest-apis-for-reporting-services"></a>Développer avec les API REST pour Reporting Services
 
@@ -46,7 +46,7 @@ Une paire demande/réponse d’API REST peut être divisée en cinq composants :
 
 * Champs **d’en-tête du message de réponse** HTTP :
 
-    * Un [code d’état HTTP](http://www.w3.org/Protocols/HTTP/HTRESP.html), compris entre 2xx (opérations réussies) et 4xx ou 5xx (erreur). Ou bien un code d’état défini par le service peut être retourné, comme indiqué dans la documentation de l’API.
+    * Un [code d’état HTTP](https://www.w3.org/Protocols/HTTP/HTRESP.html), compris entre 2xx (opérations réussies) et 4xx ou 5xx (erreur). Ou bien un code d’état défini par le service peut être retourné, comme indiqué dans la documentation de l’API.
     * Des champs d’en-tête supplémentaires facultatifs, nécessaires à la prise en charge de la réponse de la demande, tels qu’un en-tête de réponse `Content-type`.
 
 * Champs du **corps du message de réponse** HTTP facultatifs :
@@ -59,7 +59,7 @@ Une API REST moderne exige une documentation d’API moderne. L’API REST repos
 
 ## <a name="testing-api-calls"></a>Test des appels d’API
 
-Pour tester les messages de demande/réponse HTTP, vous pouvez recourir à l’outil [Fiddler](http://www.telerik.com/fiddler). Ce dernier est un proxy de débogage web gratuit capable d’intercepter vos demandes REST, facilitant ainsi le diagnostic des messages de demande/réponse HTTP.
+Pour tester les messages de demande/réponse HTTP, vous pouvez recourir à l’outil [Fiddler](https://www.telerik.com/fiddler). Ce dernier est un proxy de débogage web gratuit capable d’intercepter vos demandes REST, facilitant ainsi le diagnostic des messages de demande/réponse HTTP.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

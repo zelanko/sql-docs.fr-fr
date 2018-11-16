@@ -41,12 +41,12 @@ ms.assetid: 34418730-1aaa-4948-aee2-8f1e62cda85c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 642427e5291fecdcbe64bca3c66d0606ac8b2523
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 8eb14ed03dc43a1a27254a1998f84b786e39694d
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50100143"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51671401"
 ---
 # <a name="database-project-settings"></a>Paramètres du projet de base de données
 Vous utilisez des paramètres de projet de base de données pour contrôler des aspects de vos configurations de build, de débogage et de bases de données. Ces paramètres peuvent être répartis dans les catégories suivantes :  
@@ -107,7 +107,7 @@ La vérification Transact-SQL étendue est une fonctionnalité du système de pr
 ### <a name="transact-sql-compiler-service"></a>Transact-SQL Compiler Service  
 Transact-SQL Compiler Service est un composant basé sur le moteur de base de données Microsoft SQL Server 2012. Ce service permet de valider la syntaxe et la sémantique des instructions DDL avec la même fidélité qu'un moteur de base de données Microsoft SQL Server 2012. Cela signifie, de manière intrinsèque, que le Compiler Service ne prend pas en charge la syntaxe ou les fonctionnalités qui ont été déconseillées dans Microsoft SQL Server 2012. Pour plus d’informations sur les fonctionnalités dépréciées, consultez [Fonctionnalités du moteur de base de données supprimées dans SQL Server 2012](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md).  
   
-Pour les besoins de la validation du projet de base de données, le Compiler Service crée une base de données partiellement autonome et simule l'exécution des instructions DDL sur cette base de données. Pour plus d'informations, consultez [Bases de données partiellement autonomes](http://msdn.microsoft.com/library/ff929071%28v=SQL.110%29.aspx).  
+Pour les besoins de la validation du projet de base de données, le Compiler Service crée une base de données partiellement autonome et simule l'exécution des instructions DDL sur cette base de données. Pour plus d'informations, consultez [Bases de données partiellement autonomes](https://msdn.microsoft.com/library/ff929071%28v=SQL.110%29.aspx).  
   
 Le Compiler Service distingue deux catégories de limitations.  
   
@@ -132,7 +132,7 @@ Fonctionnalités qui ne sont pas prises en charge actuellement pour la validatio
 -   Classement de métadonnées SQL Azure (Compiler Service utilise le classement de métadonnées de base de données partiellement autonome SQL Server 2012 - Latin1_General_100_CI_AS_KS_WS_SC)  
   
 ### <a name="enablingdisabling-extended-verification"></a>Activation/Désactivation de la vérification étendue  
-La vérification Transact-SQL étendue est activée par défaut dans un projet de base de données créé directement à partir d'une base de données SQL Azure ou d'un projet dont la plateforme cible est définie sur SQL Azure. Il est recommandé d'utiliser la vérification étendue lors du développement pour une base de données SQL Azure ou à portée d'application ciblant SQL Server 2012. Pour plus d'informations sur les bases de données à portée d'application, consultez [Bases de données partiellement autonomes](http://msdn.microsoft.com/library/ff929071%28v=SQL.110%29.aspx).  
+La vérification Transact-SQL étendue est activée par défaut dans un projet de base de données créé directement à partir d'une base de données SQL Azure ou d'un projet dont la plateforme cible est définie sur SQL Azure. Il est recommandé d'utiliser la vérification étendue lors du développement pour une base de données SQL Azure ou à portée d'application ciblant SQL Server 2012. Pour plus d'informations sur les bases de données à portée d'application, consultez [Bases de données partiellement autonomes](https://msdn.microsoft.com/library/ff929071%28v=SQL.110%29.aspx).  
   
 La fonctionnalité de vérification étendue peut également être utilisée lors du développement d'une base de données à portée d'application pour SQL Server 2008/R2 afin de parvenir à la compatibilité avec Microsoft SQL Server 2012 et SQL Azure.  
   
@@ -154,23 +154,23 @@ La fonctionnalité de vérification étendue peut également être utilisée lor
 ![Propriétés du fichier](../ssdt/media/ssdt-evf.gif "Propriétés du fichier")  
   
 ### <a name="special-considerations-for-collations"></a>Considérations spéciales relatives aux classements  
-Pour plus d'informations concernant les classements dans les bases de données partiellement autonomes, consultez [Classements de base de données autonome](http://msdn.microsoft.com/library/ff929080%28v=sql.110%29.aspx).  
+Pour plus d'informations concernant les classements dans les bases de données partiellement autonomes, consultez [Classements de base de données autonome](https://msdn.microsoft.com/library/ff929080%28v=sql.110%29.aspx).  
   
 ## <a name="bkmk_sqlclr"></a>SQLCLR  
-Pour plus d'informations sur les options d'assembly, consultez [Boîte de dialogue Informations de l'assembly](http://msdn.microsoft.com/library/1h52t681.aspx?queryresult=true).  
+Pour plus d'informations sur les options d'assembly, consultez [Boîte de dialogue Informations de l'assembly](https://msdn.microsoft.com/library/1h52t681.aspx?queryresult=true).  
   
-Pour plus d'informations sur la signature, consultez la section **Signature de l'assembly** de la rubrique [Page Signature, Concepteur de projets](http://msdn.microsoft.com/library/0k50fs3b.aspx?queryresult=true) .  
+Pour plus d'informations sur la signature, consultez la section **Signature de l'assembly** de la rubrique [Page Signature, Concepteur de projets](https://msdn.microsoft.com/library/0k50fs3b.aspx?queryresult=true) .  
   
 ## <a name="bkmk_sqlclr_sqlclrbuild"></a>SQLCLR et Build SQLCLR  
 Les pages de propriétés **SQLCLR** et **Build SQLCLR** contiennent de nombreux paramètres d'utilisation des objets CLR SQL dans votre projet. Plus particulièrement, la page de propriétés **SQLCLR** dispose d'un paramètre de niveau d'autorisation pour définir les autorisations sur l'assembly SQLCLR. Elle possède aussi le paramètre Générer le DDL pour contrôler si le DDL des objets SQLCLR ajoutés au projet doit être généré. La page de propriétés **Build** SQLCLR contient toutes les options du compilateur que vous pouvez définir pour configurer la compilation du code SQLCLR dans le projet.  
   
 La page de propriétés **Build SQLCLR** contient des paramètres de build avancés pour la génération de vos objets CLR SQL. Différentes options sont fournies en fonction du langage (VB ou C#)) utilisé pour coder les objets SQL CLR.  
   
-1.  Si l'objet est écrit en C#, accédez aux options en cliquant sur le bouton **Avancé** dans la page de propriétés **Build SQLCLR**. La description des options C# est disponible dans l'article [Boîte de dialogue Paramètres de build avancés (C#)](http://msdn.microsoft.com/library/s4wcexbc.aspx).  
+1.  Si l'objet est écrit en C#, accédez aux options en cliquant sur le bouton **Avancé** dans la page de propriétés **Build SQLCLR**. La description des options C# est disponible dans l'article [Boîte de dialogue Paramètres de build avancés (C#)](https://msdn.microsoft.com/library/s4wcexbc.aspx).  
   
-2.  Si l'objet est écrit en VB, sélectionnez d'abord VB dans la liste déroulante **Langage** , puis cliquez sur le bouton **Avancé** . La description des options VB est disponible dans l'article [Boîte de dialogue Paramètres avancés du compilateur (Visual Basic)](http://msdn.microsoft.com/library/07bysfz2.aspx)  
+2.  Si l'objet est écrit en VB, sélectionnez d'abord VB dans la liste déroulante **Langage** , puis cliquez sur le bouton **Avancé** . La description des options VB est disponible dans l'article [Boîte de dialogue Paramètres avancés du compilateur (Visual Basic)](https://msdn.microsoft.com/library/07bysfz2.aspx)  
   
-Pour plus d'informations, consultez [Propriétés de la configuration de build](http://msdn.microsoft.com/query/dev10.query?appId=Dev10IDEF1&l=EN-US&k=k(CS.PROJECTPROPERTIESBUILD))  
+Pour plus d'informations, consultez [Propriétés de la configuration de build](https://msdn.microsoft.com/query/dev10.query?appId=Dev10IDEF1&l=EN-US&k=k(CS.PROJECTPROPERTIESBUILD))  
   
 ## <a name="bkmk_build"></a>Build  
 Vous pouvez choisir une configuration de build pour chaque projet de base de données dans votre solution. Par défaut il n'existe qu'une seule configuration, mais vous pouvez ajouter des configurations personnalisées. Vous pouvez décider de procéder ainsi, par exemple, si vous voulez une configuration personnalisée dans laquelle vous supprimez toujours la base de données, puis la recréez. Dans les solutions qui contiennent différents types de projets, vous pouvez créer une configuration de solution personnalisée contenant une configuration de build spécifique pour chaque projet.  
@@ -210,8 +210,8 @@ Vous pouvez utiliser ces paramètres pour spécifier une ligne de commande à ex
   
 |Champ|Valeur par défaut|Description|  
 |---------|-----------------|---------------|  
-|Ligne de commande de l'événement avant génération|None|Spécifie la ligne de commande à exécuter avant la génération du projet. Cliquez sur **Modifier pré-build** pour modifier la ligne de commande.|  
-|Ligne de commande d'événement après génération|None|Spécifie la ligne de commande à exécuter après la génération du projet. Cliquez sur **Modifier post-build** pour modifier la ligne de commande.|  
+|Ligne de commande de l'événement avant génération|Aucun|Spécifie la ligne de commande à exécuter avant la génération du projet. Cliquez sur **Modifier pré-build** pour modifier la ligne de commande.|  
+|Ligne de commande d'événement après génération|Aucun|Spécifie la ligne de commande à exécuter après la génération du projet. Cliquez sur **Modifier post-build** pour modifier la ligne de commande.|  
 |Exécuter l'événement post-build|En cas de build réussie|Spécifie si la ligne de commande post-build doit être exécutée toujours, uniquement en cas de génération réussie ou uniquement lorsque la génération a mis à jour la sortie de projet (le script de compilation).|  
   
 ## <a name="bkmk_debug"></a>Déboguer  
@@ -219,7 +219,7 @@ Vous pouvez utiliser ces paramètres pour contrôler le débogage de votre proje
   
 |Champ|Valeur par défaut|Description|  
 |---------|-----------------|---------------|  
-|Action de démarrage|None|Spécifie un script ou un programme externe à exécuter lorsque vous déboguez votre projet.|  
+|Action de démarrage|Aucun|Spécifie un script ou un programme externe à exécuter lorsque vous déboguez votre projet.|  
 |Chaîne de connexion cible|Data Source=(localdb)\\*SolutionName*;Initial Catalog=*DatabaseProjectName*;Integrated Security=True;Pooling=False;Connect Timeout=30|Spécifie les informations de connexion du serveur de base de données que vous souhaitez cibler pour la configuration de build spécifiée. La chaîne de connexion par défaut est spécifiée par rapport à une instance LocalDB SQL Server et une base de données.|  
 |Déployer les propriétés de la base de données|Oui|Spécifie si les paramètres DatabaseProerties.DatabaseProperties sont déployés ou mis à jour lorsque vous déployez le projet de base de données.|  
 |Toujours recréer la base de données|non|Spécifie si la base de données doit être supprimée et recréée au lieu d'effectuer une mise à niveau incrémentielle. Vous pouvez cocher cette case par exemple si vous souhaitez exécuter des tests unitaires de bases de données par rapport à un déploiement propre de la base de données. Si cette case à cocher est désactivée, la base de données existante sera mise à jour au lieu d'être supprimée et recréée.|  
@@ -229,10 +229,10 @@ Vous pouvez utiliser ces paramètres pour contrôler le débogage de votre proje
 |Avancé...|non|Bouton de commande qui vous permet de spécifier les options qui contrôlent les événements et le comportement du déploiement.|  
   
 ## <a name="bkmk_ref_paths"></a>Chemins d'accès des références  
-Vous pouvez utiliser cette page pour définir les variables de serveur et de base de données associées à une référence entre bases de données. En outre, vous pouvez spécifier les valeurs de ces variables. Pour plus d'informations, consultez [Utilisation de références dans les projets de base de données](http://msdn.microsoft.com/library/bb386242.aspx).  
+Vous pouvez utiliser cette page pour définir les variables de serveur et de base de données associées à une référence entre bases de données. En outre, vous pouvez spécifier les valeurs de ces variables. Pour plus d'informations, consultez [Utilisation de références dans les projets de base de données](https://msdn.microsoft.com/library/bb386242.aspx).  
   
 ## <a name="bkmk_code_analysis"></a>Analyse du code  
 Vous pouvez utiliser l'analyse du code pour découvrir d'éventuels problèmes dans vos scripts, tels que les problèmes de conception, d'attribution de nom et de performances. Les règles pour les projets de base de données sont organisées en ensembles de règles prédéfinis qui ciblent des zones spécifiques, et vous pouvez activer ou désactiver une règle dans l'onglet **Analyse du code** de la page de propriétés **Propriétés du projet** . Dans le même onglet, vous pouvez spécifier que l'analyse du code soit exécutée automatiquement chaque fois qu'un projet est généré, ou si les avertissements doivent être traités comme des erreurs.  
   
-Pour utiliser l’analyse du code manuellement, cliquez avec le bouton droit sur votre projet dans **l’Explorateur de solutions** et sélectionnez **Exécuter l’analyse du code**. Les avertissements d'analyse du code s'affichent dans la fenêtre **Liste d'erreurs** . Vous pouvez double-cliquer sur un avertissement pour accéder au code source comportant le problème. Pour afficher des informations supplémentaires et les corrections possibles d’un avertissement, utilisez le menu contextuel **Afficher de l’aide sur l’erreur**. Pour plus d’informations sur l’analyse du code, consultez [Analyse du code de la base de données pour améliorer la qualité du code](http://msdn.microsoft.com/library/dd172133.aspx).  
+Pour utiliser l’analyse du code manuellement, cliquez avec le bouton droit sur votre projet dans **l’Explorateur de solutions** et sélectionnez **Exécuter l’analyse du code**. Les avertissements d'analyse du code s'affichent dans la fenêtre **Liste d'erreurs** . Vous pouvez double-cliquer sur un avertissement pour accéder au code source comportant le problème. Pour afficher des informations supplémentaires et les corrections possibles d’un avertissement, utilisez le menu contextuel **Afficher de l’aide sur l’erreur**. Pour plus d’informations sur l’analyse du code, consultez [Analyse du code de la base de données pour améliorer la qualité du code](https://msdn.microsoft.com/library/dd172133.aspx).  
   

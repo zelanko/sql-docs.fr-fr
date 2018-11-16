@@ -28,12 +28,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6a548ec574f6ae81b6e365f8f0e9f68db6357102
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.openlocfilehash: 4603333bce62f363a70c82936dfdbb28478f6a0d
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49643777"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701937"
 ---
 # <a name="char-transact-sql"></a>CHAR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -53,7 +53,7 @@ CHAR ( integer_expression )
 Entier compris entre 0 et 255. `CHAR` renvoie une valeur `NULL` pour les expressions d’entier en dehors de cette plage, ou lorsque l'entier exprime seulement le premier octet d'un caractère à deux octets.
 
 > [!NOTE]
-> Certains jeux de caractères non européens, tels que [Shift Japanese Industrial Standards](http://www.wikipedia.org/wiki/Shift_JIS), incluent des caractères qui peuvent être représentés dans un système de codage à un octet, mais nécessitent un codage multioctets. Pour plus d’informations sur les jeux de caractères, reportez-vous à [Jeux de caractères codés sur un octet et multioctets](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets). 
+> Certains jeux de caractères non européens, tels que [Shift Japanese Industrial Standards](https://www.wikipedia.org/wiki/Shift_JIS), incluent des caractères qui peuvent être représentés dans un système de codage à un octet, mais nécessitent un codage multioctets. Pour plus d’informations sur les jeux de caractères, reportez-vous à [Jeux de caractères codés sur un octet et multioctets](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets). 
   
 ## <a name="return-types"></a>Types de retour
 **char(1)**

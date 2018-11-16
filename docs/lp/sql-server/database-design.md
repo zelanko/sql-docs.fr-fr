@@ -6,12 +6,12 @@ description: Découvrez les fonctionnalités de SQL Server qui vous aident à co
 ms.topic: hub-page
 featureFlags:
 - clicktale
-ms.openlocfilehash: 3cae88b1597cc02fc87eeccc2300b7a1451d84bc
-ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
+ms.openlocfilehash: e72ef40dcce199c962c67e2c8c517681664e5b11
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49336278"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51702177"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -395,16 +395,16 @@ ms.locfileid: "49336278"
         <h2>Restez en contact avec nous</h2>
         <ul class="links">
            <li>
-                <a href="http://aka.ms/editsqldocs" data-linktype="external"> Collaborer </a>
+                <a href="https://aka.ms/editsqldocs" data-linktype="external"> Collaborer </a>
             </li>
            <li>
                 <a href="https://docs.microsoft.com/sql/sql-server/sql-server-get-help" data-linktype="external"> Obtenir de l’aide </a>
             </li>
            <li>
-                <a href="http://aka.ms/sqldocsfeedback" data-linktype="external"> Commentaires </a>
+                <a href="https://aka.ms/sqldocsfeedback" data-linktype="external"> Commentaires </a>
             </li>
            <li>
-                <a href="http://aka.ms/sqldocsurvey" data-linktype="external"> Enquête </a>
+                <a href="https://aka.ms/sqldocsurvey" data-linktype="external"> Enquête </a>
             </li>
            <li>
                 <a href="https://cloudblogs.microsoft.com/sqlserver/" data-linktype="external"> Blog </a>

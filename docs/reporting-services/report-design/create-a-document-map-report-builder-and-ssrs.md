@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: c200a97b-67f2-499f-8374-3ed1ebe3f33c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6532a160072e5a285cb5b8687397fd75b4026907
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 1c44173f34c1560da036ca1914649774365fdf42
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50020233"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812802"
 ---
 # <a name="create-a-document-map-report-builder-and-ssrs"></a>Créer un explorateur de documents (Générateur de rapports et SSRS)
 
@@ -82,14 +82,14 @@ Un explorateur de documents fournit un ensemble de liens de navigation permettan
      Par exemple, pour les exemples de rapport [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] , l'URL suivante spécifie le rapport nommé Product Catalog.  
   
     ```  
-    http://localhost/Reports/Pages/Report.aspx?ItemPath=%2fAdventureWorks2012+Sample+Reports%2fProduct+Catalog  
+    https://localhost/Reports/Pages/Report.aspx?ItemPath=%2fAdventureWorks2012+Sample+Reports%2fProduct+Catalog  
     ```  
   
 2.  Copiez le chemin d'accès du rapport sur le serveur. Dans l'exemple, le chemin d'accès du rapport est `%2fAdventureWorks2012+Sample+Reports%2fProduct+Catalog`.  
   
 3.  Créez une nouvelle URL composée des trois éléments suivants :  
   
-    -   Visionneuse de rapports sur le serveur de rapports : `http://localhost/ReportServer/Pages/ReportViewer.aspx?`  
+    -   Visionneuse de rapports sur le serveur de rapports : `https://localhost/ReportServer/Pages/ReportViewer.aspx?`  
   
     -   Nom du rapport copié à l'étape 1, par exemple : `%2fAdventureWorks2012+Sample+Reports%2fProduct+Catalog`  
   
@@ -98,7 +98,7 @@ Un explorateur de documents fournit un ensemble de liens de navigation permettan
      L'URL ci-dessous est composée de ces trois éléments, ajoutés dans l'ordre dans lequel ils sont mentionnés.  
   
     ```  
-    http://localhost/ReportServer/Pages/ReportViewer.aspx?  
+    https://localhost/ReportServer/Pages/ReportViewer.aspx?  
     %2fAdventureWorks2012+Sample+Reports%2fProduct+Catalog  
     &rs%3aCommand=Render&rc%3aFormat=HTML4.0&rc%3aDocMap=False  
     ```  

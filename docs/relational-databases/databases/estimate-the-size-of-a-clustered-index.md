@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.prod_service: database-engine, sql-database
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
 - space allocation [SQL Server], index size
@@ -25,12 +24,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e03241e66501b68f8f36986993d62a46a1bc5bc2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b94f389814ff0d0fc9a4adcb26b33431286d1119
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47638067"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51559356"
 ---
 # <a name="estimate-the-size-of-a-clustered-index"></a>Estimer la taille d’un index cluster
 
@@ -233,7 +232,7 @@ ms.locfileid: "47638067"
  [Créer des index cluster](../../relational-databases/indexes/create-clustered-indexes.md)   
  [Créez des index non-cluster](../../relational-databases/indexes/create-nonclustered-indexes.md)   
  [Estimer la taille d'un index non-cluster](../../relational-databases/databases/estimate-the-size-of-a-nonclustered-index.md)   
- [Estimer la taille d'un segment de mémoire](../../relational-databases/databases/estimate-the-size-of-a-heap.md)   
+ [Estimer la taille d’un segment de mémoire](../../relational-databases/databases/estimate-the-size-of-a-heap.md)   
  [Estimer la taille d'une base de données](../../relational-databases/databases/estimate-the-size-of-a-database.md)  
   
   

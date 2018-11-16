@@ -9,18 +9,18 @@ ms.topic: conceptual
 ms.assetid: a5a8dbf6-4c3a-435d-8188-d6656c32f229
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4572d5c325dbfb36a17ce2c987140ab56b6626e6
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: a9aaa281d1d91c8031182133976f1395417c4502
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031628"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812592"
 ---
 # <a name="create-mobile-reports-with-sql-server-mobile-report-publisher"></a>Créer des rapports mobiles avec l’Éditeur de rapports mobiles SQL Server
 Découvrez les rapports mobiles [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , optimisés pour les appareils mobiles et connectés à des données locales, avec un large éventail de visualisations de données. 
 
 >[!NOTE]
->  Vous avez besoin de migrer du contenu Datazen Server, tel que des tableaux de bord et des indicateurs de performance clés, vers un serveur SQL Server 2016 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] ? n’hésitez pas utiliser [l’Assistant de migration SQL Server pour Datazen](https://www.microsoft.com/en-us/download/details.aspx?id=53128). 
+>  Vous avez besoin de migrer du contenu Datazen Server, tel que des tableaux de bord et des indicateurs de performance clés, vers un serveur SQL Server 2016 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] ? n’hésitez pas utiliser [l’Assistant de migration SQL Server pour Datazen](https://www.microsoft.com/download/details.aspx?id=53128). 
  
 ![SS_MRP_LayoutTabSm](../../reporting-services/media/ss-mrp-layouttabsm.png)  
 
@@ -35,10 +35,10 @@ Avec [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)], vous pou
 Ces articles vous aideront à démarrer.
 -  Téléchargez [l’Éditeur de rapports mobiles SQL Server](https://go.microsoft.com/fwlink/?LinkID=733527).  
 -  [Créer un rapport mobile Reporting Services](../../reporting-services/mobile-reports/create-a-reporting-services-mobile-report.md)  
--  [Procédure détaillée : créer des rapports mobiles et des indicateurs de performance clés dans SQL Server 2016 Reporting Services](http://christopherfinlan.com/2015/12/21/how-to-create-mobile-reports-and-kpis-in-sql-server-reporting-services-2016-an-end-to-end-walkthrough/) (blog de Christopher Finlan, en anglais)  
+-  [Procédure détaillée : créer des rapports mobiles et des indicateurs de performance clés dans SQL Server 2016 Reporting Services](https://christopherfinlan.com/2015/12/21/how-to-create-mobile-reports-and-kpis-in-sql-server-reporting-services-2016-an-end-to-end-walkthrough/) (blog de Christopher Finlan, en anglais)  
 - [Commencer par la conception ou Commencer par les données](../../reporting-services/mobile-reports/design-first-or-data-first-when-creating-in-reporting-services-mobile-reports.md): indiquez si vous souhaitez d’abord concevoir votre rapport avec des données simulées, ou commencer par vos propres données.  
 - [Données de rapports mobiles Reporting Services](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md): utilisez des données de jeux de données partagés ou préparez des données à partir de classeurs Excel pour les utiliser dans vos rapports mobiles.
-- [Procédure d’actualisation des données des rapports mobiles et des indicateurs de performance clés dans Reporting Services](http://christopherfinlan.com/2016/02/10/so-refreshinghow-data-refresh-works-with-mobile-reports-and-kpis-in-reporting-services/) (blog de Christopher Finlan, en anglais) : découvrez comment configurer la mise en cache pour les jeux de données partagés afin de contrôler la fréquence d’actualisation des données et d’accélérer les performances des rapports.
+- [Procédure d’actualisation des données des rapports mobiles et des indicateurs de performance clés dans Reporting Services](https://christopherfinlan.com/2016/02/10/so-refreshinghow-data-refresh-works-with-mobile-reports-and-kpis-in-reporting-services/) (blog de Christopher Finlan, en anglais) : découvrez comment configurer la mise en cache pour les jeux de données partagés afin de contrôler la fréquence d’actualisation des données et d’accélérer les performances des rapports.
 - [Visualisations dans les rapports mobiles](../../reporting-services/mobile-reports/add-visualizations-to-reporting-services-mobile-reports.md)
 - [Jauges dans les rapports mobiles](../../reporting-services/mobile-reports/add-gauges-to-mobile-reports-reporting-services.md)
 - [Cartes dans les rapports mobiles](../../reporting-services/mobile-reports/maps-in-reporting-services-mobile-reports.md)

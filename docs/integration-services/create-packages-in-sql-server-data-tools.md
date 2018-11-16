@@ -16,12 +16,12 @@ ms.assetid: bb3c085b-1458-49fa-8348-6a76b6e97ea6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d7b7e61e278efe9040ad070452ce57535f33b26d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 199029eee15d44e3aba5b65c894de58b1ca2129c
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47847057"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639706"
 ---
 # <a name="create-packages-in-sql-server-data-tools"></a>Créer des packages dans les outils de données SQL Server
   Dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], vous pouvez créer un nouveau package à l'aide de l'une des méthodes suivantes :  
@@ -44,9 +44,9 @@ ms.locfileid: "47847057"
   
      L'Assistant Importation et Exportation [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] crée un package complet pour une opération simple d'importation ou d'exportation. Cet Assistant configure les connexions, la source et la destination, et ajoute toutes les transformations de données requises pour vous permettre d'exécuter l'opération d'importation ou d'exportation immédiatement. Vous pouvez enregistrer, le cas échéant, le package pour l'exécuter de nouveau ultérieurement ou pour l'affiner et l'améliorer dans [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]. Toutefois, si vous enregistrez le package, vous devez l'ajouter à un projet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] existant avant de pouvoir le modifier ou l'exécuter dans [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)].  
   
- Les packages que vous créez dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] à l'aide du concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)] sont enregistrés dans le système de fichiers. Pour enregistrer un package dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ou dans le magasin de packages, vous devez enregistrer une copie du package. Pour plus d’informations, consultez [Enregistrer une copie d’un package](http://msdn.microsoft.com/library/21482a20-e420-4452-b7eb-8f9fa1929f31).  
+ Les packages que vous créez dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] à l'aide du concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)] sont enregistrés dans le système de fichiers. Pour enregistrer un package dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ou dans le magasin de packages, vous devez enregistrer une copie du package. Pour plus d’informations, consultez [Enregistrer une copie d’un package](https://msdn.microsoft.com/library/21482a20-e420-4452-b7eb-8f9fa1929f31).  
 
- Pour obtenir une vidéo qui montre comment créer un package de base à l’aide du modèle de package par défaut, consultez [Création d’un package de base (Vidéo liée à SQL Server)](http://go.microsoft.com/fwlink/?LinkId=131023).  
+ Pour obtenir une vidéo qui montre comment créer un package de base à l’aide du modèle de package par défaut, consultez [Création d’un package de base (Vidéo liée à SQL Server)](https://go.microsoft.com/fwlink/?LinkId=131023).  
 
 ## <a name="get-sql-server-data-tools"></a>Obtenir SQL Server Data Tools
 Pour installer SQL Server Data Tools (SSDT), consultez [Télécharger SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md).

@@ -12,12 +12,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d9f84a4c1d64ad646d5da8c3cb4d54eaf735d6cd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b5251c082e2a31493110fe63f2bfb044c6a3a2f2
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47851537"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51674999"
 ---
 # <a name="revert-the-word-breakers-used-by-search-to-the-previous-version"></a>Rétablir la version précédente des analyseurs lexicaux utilisés par la recherche
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -215,8 +215,8 @@ ms.locfileid: "47851537"
 |---------------|------------------|-------------|  
 |CLSID précédent|7EFD3C7E-9E4B-4a93-9503-DECD74C0AC6D|483B0283-25DB-4c92-9C15-A65925CB95CE|  
 |Nom de fichier précédent|NaturalLanguage6.dll|NaturalLanguage6.dll|  
-|CLSID actuel|04b37e30-c9a9-4a7d-8f20-792fc87ddf71|None|  
-|Nom de fichier actuel|MSWB7.dll|None|  
+|CLSID actuel|04b37e30-c9a9-4a7d-8f20-792fc87ddf71|Aucun|  
+|Nom de fichier actuel|MSWB7.dll|Aucun|  
   
  **Allemand (deu), LCID 1031**  
   
@@ -233,8 +233,8 @@ ms.locfileid: "47851537"
 |---------------|------------------|-------------|  
 |CLSID précédent|E1E8F15E-8BEC-45df-83BF-50FF84D0CAB5|3D5DF14F-649F-4cbc-853D-F18FEDE9CF5D|  
 |Nom de fichier précédent|NaturalLanguage6.dll|NaturalLanguage6.dll|  
-|CLSID actuel|04096682-6ece-4e9e-90c1-52d81f0422ed|None|  
-|Nom de fichier actuel|MsWb70011.dll|None|  
+|CLSID actuel|04096682-6ece-4e9e-90c1-52d81f0422ed|Aucun|  
+|Nom de fichier actuel|MsWb70011.dll|Aucun|  
   
  **Néerlandais (nld), LCID 1043**  
   
@@ -349,8 +349,8 @@ ms.locfileid: "47851537"
 |---------------|------------------|-------------|  
 |CLSID précédent|CCA22CF4-59FE-11D1-BBFF-00C04FB97FDA|CEDC01C7-59FE-11D1-BBFF-00C04FB97FDA|  
 |Nom de fichier précédent|Thawbrkr.dll|Thawbrkr.dll|  
-|CLSID actuel|F70C0935-6E9F-4ef1-9F06-7876536DB900|None|  
-|Nom de fichier actuel|MsWb7001e.dll|None|  
+|CLSID actuel|F70C0935-6E9F-4ef1-9F06-7876536DB900|Aucun|  
+|Nom de fichier actuel|MsWb7001e.dll|Aucun|  
   
  **Chinois traditionnel (zh-hk), LCID 3076**  
   
@@ -381,6 +381,6 @@ ms.locfileid: "47851537"
   
 ## <a name="see-also"></a> Voir aussi  
  [Modifier l’analyseur lexical utilisé pour l’anglais des États-Unis et l’anglais du Royaume-Uni](../../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md)   
- [Changements de comportement de la recherche en texte intégral](http://msdn.microsoft.com/library/573444e8-51bc-4f3d-9813-0037d2e13b8f)  
+ [Changements de comportement de la recherche en texte intégral](https://msdn.microsoft.com/library/573444e8-51bc-4f3d-9813-0037d2e13b8f)  
   
   
