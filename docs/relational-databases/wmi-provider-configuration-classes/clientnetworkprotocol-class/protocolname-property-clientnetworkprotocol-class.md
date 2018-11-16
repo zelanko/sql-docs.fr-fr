@@ -18,16 +18,16 @@ ms.assetid: f8527121-fbcd-4d30-9b4a-1461149cb5a8
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 8099dcd674e888feddcbe14b81b7b4fcebdd03e4
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: 6cf64c8300e1bf60c0384bfc8283008d38c666ed
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51215883"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51660078"
 ---
 # <a name="protocolname-property-clientnetworkprotocol-class"></a>Propriété ProtocolName (classe ClientNetworkProtocol)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  Obtient le nom complet du protocole réseau actuel spécifié par le [configurer des protocoles clients](http://technet.microsoft.com/library/ms181035.aspx).  
+  Obtient le nom complet du protocole réseau actuel spécifié par le [configurer des protocoles clients](https://technet.microsoft.com/library/ms181035.aspx).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -41,11 +41,11 @@ object.ProtocolName [= value]
  A [classe ClientNetworkProtocol](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/clientnetworkprotocol-class.md) qui représente le protocole réseau utilisé par le client [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ## <a name="property-valuereturn-value"></a>Valeur de propriété/valeur de retour  
- Valeur de chaîne qui spécifie le nom du client actuel protocole réseau référencé par le [setordervalue, méthode (classe ClientNetworkProtocol)](http://technet.microsoft.com/library/ms179295.aspx).  
+ Valeur de chaîne qui spécifie le nom du client actuel protocole réseau référencé par le [setordervalue, méthode (classe ClientNetworkProtocol)](https://technet.microsoft.com/library/ms179295.aspx).  
   
 ## <a name="remarks"></a>Notes  
   
 ## <a name="see-also"></a>Voir aussi  
- [Configuration des bibliothèques réseau et des protocoles réseau clients](http://technet.microsoft.com/library/ms181035.aspx)  
+ [Configuration des bibliothèques réseau et des protocoles réseau clients](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

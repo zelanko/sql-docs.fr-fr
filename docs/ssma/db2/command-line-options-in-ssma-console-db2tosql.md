@@ -10,12 +10,12 @@ ms.assetid: 237354e9-25c4-4386-9d1f-ca0618d4a9a0
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 8419990abe0870d248ad403fc4d802b1775fe3f1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a53992485c98e5f4978ca0d6bcdba2747301702f
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678957"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51659148"
 ---
 # <a name="command-line-options-in-ssma-console-db2tosql"></a>Options de ligne de commande dans la Console SSMA (DB2ToSQL)
 Microsoft vous fournit avec des options de ligne de commande ensemble robuste pour exécuter et contrôler les activités SSMA. Les sections suivantes détaillent les mêmes.  
@@ -120,7 +120,7 @@ Cela indique le dossier de paramètres d’environnement projet pour le projet S
 ### <a name="secure-password-option-psecurepassword"></a>Option de mot de passe sécurisée : – p/securepassword  
 Cette option indique le mot de passe chiffré pour les connexions au serveur. Il diffère de toutes les autres options : l’option exécute n’importe quel script ni permet dans toutes les activités liées à la migration, mais vous aide à gérer le chiffrement de mot de passe pour les connexions du serveur utilisé dans le projet de migration.  
   
-Vous ne pouvez pas entrer de toute autre option ou mot de passe en tant que le paramètre de ligne de commande. Sinon, il en résulte une erreur. Pour plus d’informations, reportez-vous à la [la gestion des mots de passe](http://msdn.microsoft.com/56d546e3-8747-4169-aace-693302667e94) section.  
+Vous ne pouvez pas entrer de toute autre option ou mot de passe en tant que le paramètre de ligne de commande. Sinon, il en résulte une erreur. Pour plus d’informations, reportez-vous à la [la gestion des mots de passe](https://msdn.microsoft.com/56d546e3-8747-4169-aace-693302667e94) section.  
   
 Les options de sous-section suivantes sont prises en charge pour `–p/securepassword`:  
   

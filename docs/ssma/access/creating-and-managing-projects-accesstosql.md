@@ -18,12 +18,12 @@ ms.assetid: f2d1f0b0-5394-4adb-b3f3-abd71eb68ca7
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: d016498e0b46ce17cfd705264c6996c56302be32
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1cf23a076f7e4d7e873f48988364c51b1daa03b0
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47641567"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51663378"
 ---
 # <a name="creating-and-managing-projects-accesstosql"></a>Création et gestion de projets (AccessToSQL)
 Pour migrer des bases de données Access [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure, vous devez d’abord créer un projet SSMA. Le projet est un fichier qui contient des métadonnées sur les bases de données Access que vous souhaitez migrer vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure, les métadonnées sur l’instance cible de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure qui reçoit les objets migrés et les données, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] informations de connexion et les paramètres du projet.  
@@ -39,19 +39,19 @@ SSMA contient plusieurs options pour la conversion et la synchronisation des obj
   
 3.  Dans le volet gauche, cliquez sur **Conversion**.  
   
-4.  Dans le volet droit, passez en revue les options. Pour plus d’informations sur ces options, consultez [paramètres du projet (Conversion)](http://msdn.microsoft.com/bcebc635-c638-4ddb-924c-b9ccfef86388).  
+4.  Dans le volet droit, passez en revue les options. Pour plus d’informations sur ces options, consultez [paramètres du projet (Conversion)](https://msdn.microsoft.com/bcebc635-c638-4ddb-924c-b9ccfef86388).  
   
 5.  Modifiez les options en fonction des besoins.  
   
 6.  Répétez les étapes précédentes pour le **Migration**, **GUI**, et **le mappage de Type** pages.  
   
-    -   Pour plus d’informations sur les options de migration, consultez [paramètres du projet (Migration)](http://msdn.microsoft.com/4caebc9c-8680-4b99-a8fa-89c43161c95d).  
+    -   Pour plus d’informations sur les options de migration, consultez [paramètres du projet (Migration)](https://msdn.microsoft.com/4caebc9c-8680-4b99-a8fa-89c43161c95d).  
   
-    -   Pour plus d’informations sur les options d’interface utilisateur, consultez [paramètres de projet (GUI)](http://msdn.microsoft.com/cf06baf1-8714-48a3-95dc-781f6ca53693).  
+    -   Pour plus d’informations sur les options d’interface utilisateur, consultez [paramètres de projet (GUI)](https://msdn.microsoft.com/cf06baf1-8714-48a3-95dc-781f6ca53693).  
   
-    -   Pour plus d’informations sur les paramètres de mappage de type de données, consultez [paramètres du projet (mappage de Type)](http://msdn.microsoft.com/b87b9683-abed-4677-8c50-18bdba704655).  
+    -   Pour plus d’informations sur les paramètres de mappage de type de données, consultez [paramètres du projet (mappage de Type)](https://msdn.microsoft.com/b87b9683-abed-4677-8c50-18bdba704655).  
   
-    -   Pour plus d’informations sur les paramètres de SQL Azure, consultez [paramètres du projet (SQL Azure)](http://msdn.microsoft.com/bbb8a204-d0e4-4f0b-9709-271feb1f136e).  
+    -   Pour plus d’informations sur les paramètres de SQL Azure, consultez [paramètres du projet (SQL Azure)](https://msdn.microsoft.com/bbb8a204-d0e4-4f0b-9709-271feb1f136e).  
   
 **Remarque** paramètres de SQL Azure seront disponibles uniquement lorsque vous sélectionnez la Migration vers SQL Azure lors de la création d’un projet.  
   

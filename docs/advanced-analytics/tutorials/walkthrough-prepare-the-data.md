@@ -7,12 +7,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: cc47b7a8ba7090064983063ab579bd8ac8a1ccbb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5206213c06b283e8736dea8079f6909149e670e9
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142089"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703677"
 ---
 # <a name="prepare-the-data-using-powershell-walkthrough"></a>Préparer les données à l’aide de PowerShell (procédure pas à pas)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -100,7 +100,7 @@ Il existe différentes manières que vous pouvez installer des packages sur SQL 
     install.packages("RODBC", lib=grep("Program Files", .libPaths(), value=TRUE)[1])
     ```
 
-    - Cet exemple utilise la fonction grep R pour rechercher le vecteur de chemins d’accès disponibles et trouver le chemin d’accès qui inclut « Program Files ». Pour plus d’informations, consultez [ http://www.rdocumentation.org/packages/base/functions/grep ](http://www.rdocumentation.org/packages/base/functions/grep).
+    - Cet exemple utilise la fonction grep R pour rechercher le vecteur de chemins d’accès disponibles et trouver le chemin d’accès qui inclut « Program Files ». Pour plus d’informations, consultez [ https://www.rdocumentation.org/packages/base/functions/grep ](https://www.rdocumentation.org/packages/base/functions/grep).
 
     - Si vous pensez que les packages sont déjà installés, vérifiez la liste des packages installés en exécutant `installed.packages()`.
 
@@ -173,7 +173,7 @@ Si vous rencontrez des problèmes avec le script PowerShell, vous pouvez exécut
 
 Pour télécharger les données manuellement, cliquez avec le bouton droit sur le lien suivant et sélectionnez **Enregistrer la cible sous**.
 
-[http://getgoing.blob.core.windows.net/public/nyctaxi1pct.csv](http://getgoing.blob.core.windows.net/public/nyctaxi1pct.csv)
+[https://getgoing.blob.core.windows.net/public/nyctaxi1pct.csv](https://getgoing.blob.core.windows.net/public/nyctaxi1pct.csv)
 
 Prenez note du chemin du fichier de données téléchargé et du nom du fichier où les données ont été enregistrées. Vous devez le chemin d’accès complet pour charger les données de la table à l’aide **bcp**.
 
@@ -265,7 +265,7 @@ Lorsque vous téléchargez les fichiers à partir du référentiel GitHub, vous 
 
 Les données sont un échantillon représentatif du jeu de données sur les taxis de la ville de New York, qui contient les enregistrements de plus de 173 millions de trajets en 2013, y compris les tarifs et le montant des pourboires versés pour chaque trajet. Pour rendre les données plus faciles à manipuler, l’équipe de science des données Microsoft a effectué un sous-échantillonnage pour obtenir seulement 1 % des données.  Ces données a été partagées dans un conteneur de stockage d’objets blob public dans Azure, au format .CSV. La source de données est un fichier non compressé, juste en dessous de 350 Mo.
 
-+ Jeu de données public : [NYC Taxi et Limousines Commission](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)
++ Jeu de données public : [NYC Taxi et Limousines Commission](https://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)
 
 + [Création de modèles Azure ML sur le jeu de données NYC Taxi](https://blogs.technet.microsoft.com/machinelearning/2015/04/02/building-azure-ml-models-on-the-nyc-taxi-dataset/).
 

@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 75e79708ffe1ca40a38d93378b93481d6fdd91ae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 25c8da6552446f7c34cd6deb050b2074da67443c
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47766567"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673108"
 ---
 # <a name="uses-of-odbc-table-valued-parameters"></a>Scénarios d'utilisation des paramètres table ODBC
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47766567"
 ## <a name="table-valued-parameter-with-fully-bound-multirow-buffers-send-data-as-a-tvp-with-all-values-in-memory"></a>Paramètre table avec mémoires tampons multilignes entièrement liées (envoyer des données en tant que paramètre table avec toutes les valeurs en mémoire)  
  Lorsqu'elles sont utilisées avec des mémoires tampons multilignes entièrement liées, toutes les valeurs de paramètres sont disponibles en mémoire. Ce comportement est classique d'une transaction OLTP par exemple, dans laquelle les paramètres table peuvent être insérés dans une procédure stockée unique. Sans paramètres table, il serait nécessaire de générer dynamiquement un lot à instructions multiples complexe ou d'effectuer plusieurs appels au serveur.  
   
- Le paramètre table lui-même est lié à l’aide de [SQLBindParameter](http://go.microsoft.com/fwlink/?LinkId=59328) avec les autres paramètres. Une fois que tous les paramètres ont été liés, l’application définit l’attribut de focus de paramètre, SQL_SOPT_SS_PARAM_FOCUS, sur chaque paramètre table et appelle SQLBindParameter pour les colonnes du paramètre table incluse.  
+ Le paramètre table lui-même est lié à l’aide de [SQLBindParameter](https://go.microsoft.com/fwlink/?LinkId=59328) avec les autres paramètres. Une fois que tous les paramètres ont été liés, l’application définit l’attribut de focus de paramètre, SQL_SOPT_SS_PARAM_FOCUS, sur chaque paramètre table et appelle SQLBindParameter pour les colonnes du paramètre table incluse.  
   
  Le type de serveur d'un paramètre table est un nouveau type spécifique à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], SQL_SS_TABLE. Le type C de liaison pour SQL_SS_TABLE doit toujours être SQL_C_DEFAULT. Aucune donnée n'est transférée pour le paramètre lié au paramètre table ; il est utilisé pour passer les métadonnées de table et contrôler comment passer des données dans les colonnes qui constituent le paramètre table.  
   

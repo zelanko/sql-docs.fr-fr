@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bb00dc8525e4543df862bbe2bcd3eddfc1a04087
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 35b2c1eb2b3e714d8b70b8d65a5f96a7dcee379e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733717"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673728"
 ---
 # <a name="sysdatabases-transact-sql"></a>sys.databases (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -83,7 +83,7 @@ ms.locfileid: "47733717"
 |**is_db_chaining_on**|**bit**|1 = Le chaînage des propriétés des bases de données croisées est activé<br /> 0 = Le chaînage des propriétés des bases de données croisées est désactivé|  
 |**is_parameterization_forced**|**bit**|1 = Le paramétrage est forcé<br /> 0 = Le paramétrage est simple|  
 |**is_master_key_encrypted_by_server**|**bit**|1 = La base de données a une clé principale chiffrée<br /> 0 = La base de données n'a aucune clé principale chiffrée|  
-|**is_query_store_on**|**bit**|1 = la requête magasin est activée pour cette base de données. Vérifiez [sys.database_query_store_options](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md) pour afficher l’état du magasin de requête.<br /> 0 = la requête magasin n’est pas activé.<br /> **S’applique à**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu’à [version actuelle](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
+|**is_query_store_on**|**bit**|1 = la requête magasin est activée pour cette base de données. Vérifiez [sys.database_query_store_options](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md) pour afficher l’état du magasin de requête.<br /> 0 = la requête magasin n’est pas activé.<br /> **S'applique à**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] via la [version actuelle](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
 |**is_published**|**bit**|1 = La base de données est de type publication dans une topologie de réplication transactionnelle ou d'instantané<br /> 0 = N'est pas une base de données de publication|  
 |**is_subscribed**|**bit**|Cette colonne n'est pas utilisée. Elle retourne toujours 0, indépendamment de l'état d'abonné de la base de données.|  
 |**is_merge_published**|**bit**|1 = La base de données est de type publication dans une topologie de réplication de fusion<br /> 0 = N'est pas une base de données de publication dans une topologie de réplication de fusion|  

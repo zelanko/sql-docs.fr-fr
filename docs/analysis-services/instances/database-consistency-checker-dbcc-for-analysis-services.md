@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 5314c18f7626ee631d7d0b59ad8d9c004a33148b
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 3134ff97059efa61ab2df82a9b7d3c7aa4ee769e
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147864"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697009"
 ---
 # <a name="database-consistency-checker-dbcc-for-analysis-services"></a>Vérificateur de cohérence de base de données (DBCC) pour Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -35,7 +35,7 @@ La commande prend une définition d’objet et retourne un jeu de résultats vid
  DBCC pour Analysis Services s’exécute sur toute base de données Analysis Services à n’importe quel niveau de compatibilité, tant que la base de données s’exécute sur une instance de SQL Server 2016. Vérifiez simplement que vous utilisez la syntaxe de commande appropriée pour chaque type de base de données.  
   
 > [!NOTE]  
->  Si vous connaissez [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md), vous remarquerez rapidement que la portée de DBCC dans Analysis Services est beaucoup plus restreinte. DBCC dans Analysis Services est une commande unique dont les rapports portent exclusivement sur l’altération des données affectant la base de données ou des objets spécifiques. Si vous avez d’autres tâches à l’esprit, telles que la collecte d’informations, essayez d’utiliser des scripts PowerShell AMO ou XMLA à la place. Pour obtenir des liens vers d’autres informations, consultez [Monitor an Analysis Services Instance](../../analysis-services/instances/monitor-an-analysis-services-instance.md) .  
+>  Si vous connaissez [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md), vous remarquerez rapidement que la portée de DBCC dans Analysis Services est beaucoup plus restreinte. DBCC dans Analysis Services est une commande unique dont les rapports portent exclusivement sur l’altération des données affectant la base de données ou des objets spécifiques. Si vous avez d’autres tâches à l’esprit, telles que la collecte d’informations, essayez d’utiliser des scripts PowerShell AMO ou XMLA à la place.
   
 ## <a name="permission-requirements"></a>Spécifications relatives aux autorisations  
  Vous devez être administrateur de serveur ou de base de données Analysis Services (membre du rôle serveur) pour exécuter la commande. Pour obtenir des instructions, consultez [Octroyer des autorisations de base de données &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-database-permissions-analysis-services.md) ou [Accorder des droits d’administrateur de serveur à une instance Analysis Services](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md).  
@@ -299,7 +299,6 @@ Execution complete
 ## <a name="see-also"></a>Voir aussi  
  [Traiter une base de données, une table ou une partition &#40;Analysis Services&#41;](../../analysis-services/tabular-models/process-database-table-or-partition-analysis-services.md)   
  [Traitement d’un modèle multidimensionnel &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
- [Monitor an Analysis Services Instance](../../analysis-services/instances/monitor-an-analysis-services-instance.md)   
  [Niveau de compatibilité pour les modèles tabulaires dans Analysis Services](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)   
  [propriétés du serveur dans Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md)  
   

@@ -5,8 +5,7 @@ ms.date: 09/24/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: language-reference
 helpviewer_keywords:
 - SQL graph
@@ -16,12 +15,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dcff6266a24602b0ce1f17818d1c4b0451b1adaf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bf061fc552a29730fb25a1fd36fb868efb031953
+ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830647"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51512804"
 ---
 # <a name="sql-graph-architecture"></a>Graphique de l’Architecture SQL  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -32,7 +31,7 @@ Découvrez l’architecture de graphe SQL. Le fait de connaître les principes d
 Les utilisateurs peuvent créer un graphique par base de données. Un graphique est une collection de tables de nœuds et d’arêtes. Les tables de nœuds ou d’arêtes peuvent être créés sous n’importe quel schéma dans la base de données, mais elles appartiennent à un graphique de logique. Une table de nœuds est la collection de type similaire de nœuds. Par exemple, une table de nœuds Person conserve tous les nœuds de personne appartenant à un graphique. De même, un tableau de bord est une collection d’un type similaire de bords. Par exemple, une table d’arêtes Friends conserve tous les bords qui se connectent une personne à une autre personne. Dans la mesure où les nœuds et les bords sont stockés dans les tables, la plupart des opérations prises en charge sur les tables normales est pris en charge sur les tables de nœuds ou d’arêtes. 
  
  
-![SQL-graph-architecture](../../relational-databases/graphs/media/sql-graph-architecture.png "architecture de base de données de graphique Sql")   
+![SQL-graph-architecture](../../relational-databases/graphs/media/sql-graph-architecture.png "architecture de base de données de graphique Sql")   
 
 Figure 1 : Architecture de base de données de graphe SQL
  
@@ -57,7 +56,7 @@ Similaire à la `$node_id` colonne, il est recommandé que les utilisateurs cré
 
 Figure 2 montre comment les tables de nœuds et d’arêtes sont stockées dans la base de données. 
 
-![tables de personne amis](../../relational-databases/graphs/media/person-friends-tables.png "nœud Person et amis des tables de périphérie")   
+![tables de personne amis](../../relational-databases/graphs/media/person-friends-tables.png "nœud Person et amis des tables de périphérie")   
 
 Figure 2 : Nœuds et arêtes de représentation sous forme de table
 
@@ -110,10 +109,10 @@ Colonnes implicites dans un tableau de bord
 |graph_id_\<hex_string> |bigint |1  |interne `graph_id` colonne  |
 |$edge_id_\<hex_string > |NVARCHAR   |0  |externe `edge_id` colonne  |
 |from_obj_id_\<hex_string>  |INT    |1  |interne à partir du nœud `object_id`  |
-|from_id_\<hex_string>  |bigint |1  |Interne à partir du nœud `graph_id`  |
+|from_id_\<hex_string>  |bigint |1  |interne à partir du nœud `graph_id`  |
 |$from_id_\<hex_string > |NVARCHAR   |0  |externe à partir du nœud `node_id`  |
 |to_obj_id_\<hex_string>    |INT    |1  |interne au nœud `object_id`  |
-|to_id_\<hex_string>    |bigint |1  |Interne au nœud `graph_id`  |
+|to_id_\<hex_string>    |bigint |1  |interne au nœud `graph_id`  |
 |$to_id_\<hex_string >   |NVARCHAR   |0  |externe au nœud `node_id`  |
  
 ### <a name="system-functions"></a>Fonctions système
@@ -130,7 +129,7 @@ Les fonctions intégrées suivantes sont ajoutées. Ces fonctionnalités aideron
 
 
 
-## <a name="transact-sql-reference"></a>Référence Transact-SQL 
+## <a name="transact-sql-reference"></a>Informations de référence sur Transact-SQL 
 Découvrez le [!INCLUDE[tsql-md](../../includes/tsql-md.md)] extensions introduites dans SQL Server et de la base de données SQL Azure, qui activer la création et l’interrogation des objets graphiques. Les extensions de langage de requête vous aider à la requête et parcourent le graphique à l’aide de la syntaxe d’art ASCII.
  
 ### <a name="data-definition-language-ddl-statements"></a>Instructions de langage de définition (DDL) de données

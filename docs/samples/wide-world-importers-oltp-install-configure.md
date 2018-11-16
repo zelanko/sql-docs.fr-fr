@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3860eae1663b512af1835a0e1268145a742d161a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c31c6c2071d276da9b3ab0e498a090659ba589a7
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701457"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673478"
 ---
 # <a name="installation-and-configuration"></a>Installation et configuration
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -23,14 +23,14 @@ Wide World Importers OLTP instructions d’installation et configuration de base
 
 ## <a name="prerequisites"></a>Prérequis
 
-- [SQL Server 2016](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) (ou version ultérieure) ou [Azure SQL Database](https://azure.microsoft.com/services/sql-database/). Pour obtenir la version complète de l’exemple, utilisez SQL Server Evaluation/développeur/Enterprise Edition.
+- [SQL Server 2016](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) (ou version ultérieure) ou [Azure SQL Database](https://azure.microsoft.com/services/sql-database/). Pour obtenir la version complète de l’exemple, utilisez SQL Server Evaluation/développeur/Enterprise Edition.
 - [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md). Pour de meilleurs résultats, utilisez la version de juin 2016 ou version ultérieure.
 
 ## <a name="download"></a>Télécharger
 
 La dernière version de l’exemple :
 
-[wide-world-importers-release](http://go.microsoft.com/fwlink/?LinkID=800630)
+[wide-world-importers-release](https://go.microsoft.com/fwlink/?LinkID=800630)
 
 Télécharger l’exemple WideWorldImporters base de données sauvegarde/bacpac qui correspond à votre édition de SQL Server ou de la base de données SQL Azure.
 
@@ -90,5 +90,5 @@ S’applique à : Azure SQL Database
 
 La sécurité au niveau des lignes n’est pas activée par défaut dans le téléchargement de fichier bacpac de WideWorldImporters. Pour activer la sécurité de niveau ligne dans la base de données, exécutez la procédure stockée suivante :
 
-    EXECUTE [Application].[Configuration_ApplyAuditing]
+    EXECUTE [Application].[Configuration_ApplyRowLevelSecurity]
 

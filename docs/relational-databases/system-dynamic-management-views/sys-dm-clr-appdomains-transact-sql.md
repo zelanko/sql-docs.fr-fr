@@ -19,12 +19,12 @@ ms.assetid: 9fe0d4fd-950a-4274-a493-85e776278045
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b164c253f9e1bc90f65e143ef3490a4cca9542ec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d7e1c3534e510e2a18929331918db7b6cf3efa60
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681707"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657458"
 ---
 # <a name="sysdmclrappdomains-transact-sql"></a>sys.dm_clr_appdomains (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "47681707"
   
  Il existe plusieurs types d'objets de base de données managés d'intégration CLR. Pour obtenir des informations générales sur ces objets, consultez [création d’objets de base de données avec l’intégration du Common Language Runtime (CLR)](../../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md). Chaque fois que ces objets sont exécutés, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crée un **AppDomain** dans lequel il peut charger et exécuter le code requis. Le niveau d’isolement pour un **AppDomain** est un **AppDomain** par base de données par le propriétaire. Autrement dit, tous les objets CLR détenus par un utilisateur sont toujours exécutés dans le même **AppDomain** par base de données (si un utilisateur a inscrit des objets de base de données CLR dans différentes bases de données, la base de données CLR objets s’exécuteront dans différents domaines d’application). Un **AppDomain** n’est pas détruit une fois que le code termine son exécution. Il est mis en cache dans la mémoire pour les prochaines exécutions. Cela améliore les performances.  
   
- Pour plus d’informations, consultez [domaines d’Application](http://go.microsoft.com/fwlink/p/?LinkId=299658).  
+ Pour plus d’informations, consultez [domaines d’Application](https://go.microsoft.com/fwlink/p/?LinkId=299658).  
   
 |Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  

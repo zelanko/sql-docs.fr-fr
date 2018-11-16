@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: b30d0308-4d9b-4f85-9f83-dece4dcb2775
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: b0f084ebb6298ce141d39db444d24a241f878210
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: cbd26f431b71013400593858e6038fc4326f4d14
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095549"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606849"
 ---
 # <a name="configure-a-native-mode-report-server-scale-out-deployment-ssrs-configuration-manager"></a>Configurer un déploiement par montée en puissance parallèle de serveurs de rapports en mode natif (Gestionnaire de configuration de SSRS)
+
   Le mode natif de Reporting Services prend en charge un modèle de déploiement par montée en puissance parallèle qui vous permet d'exécuter plusieurs instances de serveur de rapports partageant une base de données du serveur de rapports unique. Les déploiements avec montée en puissance parallèle sont utilisés pour augmenter l'évolutivité des serveurs de rapports afin de gérer davantage d'utilisateurs simultanés et de plus grandes charges d'exécution de rapport. Ils peuvent également être utilisés pour dédier des serveurs spécifiques au traitement des rapports interactifs ou planifiés.  
   
  Les serveurs de rapports en mode SharePoint utilisent l'infrastructure de produits SharePoint pour la montée en puissance parallèle. La montée en puissance parallèle en mode SharePoint est effectuée en ajoutant des serveurs de rapports en mode SharePoint à la batterie de serveurs SharePoint. Pour plus d’informations sur la montée en puissance parallèle en mode SharePoint, consultez [Ajouter un serveur de rapports supplémentaires à une batterie de serveurs &#40;SSRS Scale-out&#41;](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md).  
@@ -41,7 +42,7 @@ ms.locfileid: "48095549"
   
 -   Révision [installer SQL Server 2014 à partir de l’Assistant Installation &#40;le programme d’installation&#41; ](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la documentation en ligne pour obtenir des instructions sur l’installation des instances de serveur de rapports.  
   
--   Si vous prévoyez d'héberger le déploiement avec montée en puissance parallèle sur un cluster à charge réseau équilibrée, vous devez configurer le cluster avant de configurer le déploiement avec montée en puissance parallèle. Pour plus d’informations, consultez [configurer un serveur de rapports sur un Cluster d’équilibrage de charge réseau](../report-server/configure-a-report-server-on-a-network-load-balancing-cluster.md).  
+-   Si vous prévoyez d'héberger le déploiement avec montée en puissance parallèle sur un cluster à charge réseau équilibrée, vous devez configurer le cluster avant de configurer le déploiement avec montée en puissance parallèle. Pour plus d’informations, consultez [Configurer un serveur de rapports sur un cluster avec équilibrage de la charge réseau](../report-server/configure-a-report-server-on-a-network-load-balancing-cluster.md).  
   
 -   Consultez les procédures dans cette rubrique pour obtenir des instructions sur le partage d'une base de données du serveur de rapports et la jointure des serveurs de rapports avec montée en puissance parallèle.  
   
@@ -91,7 +92,7 @@ ms.locfileid: "48095549"
   
     6.  Dans **base de données du serveur de rapports**, sélectionnez la base de données que vous avez créé pour le premier serveur de rapports, puis cliquez sur **suivant**. Le nom par défaut est ReportServer. Ne sélectionnez pas ReportServerTempDB ; il est utilisé uniquement pour stocker les données temporaires lors du traitement des rapports. Si la liste de bases de données est vide, répétez les quatre étapes précédentes pour établir une connexion au serveur.  
   
-    7.  Dans la page Informations d'identification, sélectionnez le type de compte et les informations d'identification que le serveur de rapports utilisera pour se connecter à la base de données du serveur de rapports. Vous pouvez utiliser les mêmes informations d'identification que la première instance du serveur de rapports, ou des informations d'identification différentes. Cliquez sur **Suivant**.  
+    7.  Dans la page Informations d'identification, sélectionnez le type de compte et les informations d'identification que le serveur de rapports utilisera pour se connecter à la base de données du serveur de rapports. Vous pouvez utiliser les mêmes informations d'identification que la première instance du serveur de rapports, ou des informations d'identification différentes. Cliquer sur **Suivant**.  
   
     8.  Cliquez sur **Résumé** puis cliquez sur **Terminer**.  
   
@@ -116,14 +117,14 @@ ms.locfileid: "48095549"
   
 4.  Vous devez maintenant être en mesure de vérifier que les deux instances de serveur de rapports sont opérationnelles. Pour vérifier la deuxième instance, vous pouvez utiliser l'outil de configuration de Reporting Services pour vous connecter au serveur de rapports et cliquer sur l'URL du service Web ou l'URL du Gestionnaire de rapports.  
   
- Si vous envisagez d'exécuter les serveurs de rapports dans un cluster de serveurs avec équilibrage de charge, une configuration supplémentaire est requise. Pour plus d’informations, consultez [configurer un serveur de rapports sur un Cluster d’équilibrage de charge réseau](../report-server/configure-a-report-server-on-a-network-load-balancing-cluster.md).  
+ Si vous envisagez d'exécuter les serveurs de rapports dans un cluster de serveurs avec équilibrage de charge, une configuration supplémentaire est requise. Pour plus d’informations, consultez [Configurer un serveur de rapports sur un cluster avec équilibrage de la charge réseau](../report-server/configure-a-report-server-on-a-network-load-balancing-cluster.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Configurer un compte de Service &#40;Gestionnaire de Configuration de SSRS&#41;](../../../2014/sql-server/install/configure-a-service-account-ssrs-configuration-manager.md)   
+ [Configurer un compte de service &#40;Gestionnaire de configuration de SSR&#41;](../../../2014/sql-server/install/configure-a-service-account-ssrs-configuration-manager.md)   
  [Configurer une URL &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
  [Créer une base de données du serveur de rapports en mode natif &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
  [Configurer des URL de serveurs de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
- [Configurer une connexion de base de données de serveur de rapports &#40;Gestionnaire de Configuration de SSRS&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [Configurer une connexion à la base de données du serveur de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
  [Ajouter et supprimer des clés de chiffrement pour un déploiement évolutif &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)   
  [Gérer un serveur de rapports Reporting Services en mode natif](../report-server/manage-a-reporting-services-native-mode-report-server.md)  
   

@@ -21,12 +21,12 @@ ms.assetid: 3ad73051-ae9a-4e41-a889-166146e5508f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 93e6bcfc4ec686f61672fa382d545db5a7000f96
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7722193dc643b4fd5afaa9a21559febe137cba6b
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838797"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51662848"
 ---
 # <a name="managedbackupspbackupconfigbasic-transact-sql"></a>managed_backup.sp_backup_config_basic (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ EXEC managed_backup.sp_backup_config_basic
  Le nom de la base de données, permettant la gestion de sauvegarde sur une base de données spécifique.  
   
  @container_url  
- Une URL qui indique l’emplacement de la sauvegarde. Lorsque @credential_name est NULL, cette URL est une URL de signature (SAP) d’accès partagé à un conteneur d’objets blob dans le stockage Azure et les sauvegardes utilisent la nouvelle sauvegarde à la fonctionnalité d’objet blob de bloc. Pour plus d’informations, consultez [compréhension SAS](http://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/). Lorsque @credential_name est spécifié, il s’agit d’une URL de compte de stockage et les sauvegardes utilisent la sauvegarde obsolète à la fonctionnalité d’objet blob de page.  
+ Une URL qui indique l’emplacement de la sauvegarde. Lorsque @credential_name est NULL, cette URL est une URL de signature (SAP) d’accès partagé à un conteneur d’objets blob dans le stockage Azure et les sauvegardes utilisent la nouvelle sauvegarde à la fonctionnalité d’objet blob de bloc. Pour plus d’informations, consultez [compréhension SAS](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/). Lorsque @credential_name est spécifié, il s’agit d’une URL de compte de stockage et les sauvegardes utilisent la sauvegarde obsolète à la fonctionnalité d’objet blob de page.  
   
 > [!NOTE]  
 >  Uniquement une URL SAS est pris en charge pour ce paramètre pour l’instant.  

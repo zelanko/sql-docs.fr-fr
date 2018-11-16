@@ -1,5 +1,5 @@
 ---
-title: Créez une simulation simple (SQL et R approfondie) | Documents Microsoft
+title: Créer une simulation simple (SQL et R immersion) | Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,27 +7,27 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 7c93d91324233b05541c09e037f5043f2d9e376f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: b0db5fdfd177f1303432659f7a96b0fbf111c000
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31202881"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51698237"
 ---
-# <a name="create-a-simple-simulation-sql-and-r-deep-dive"></a>Créez une simulation simple (SQL et R approfondie)
+# <a name="create-a-simple-simulation-sql-and-r-deep-dive"></a>Créer une simulation simple (SQL et R immersion)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Cet article est la dernière étape du didacticiel de présentation approfondie de science des données, sur l’utilisation de [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) avec SQL Server.
+Cet article est la dernière étape du didacticiel de présentation approfondie de science des données, sur l’utilisation [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) avec SQL Server.
 
-Jusqu'à présent vous utilisez les fonctions R qui sont conçues spécifiquement pour le déplacement des données entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et contexte de calcul local. Toutefois, supposons que vous écrivez une fonction R totalement personnalisée et que souhaitez l’exécuter dans le contexte du serveur.
+Jusqu'à présent que vous utilisiez des fonctions R qui sont conçues spécifiquement pour le déplacement des données entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et contexte de calcul local. Toutefois, supposons que vous écrivez une fonction R totalement personnalisée et que souhaitez l’exécuter dans le contexte du serveur.
 
-Vous pouvez appeler une fonction arbitraire dans le contexte de l’ordinateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , à l’aide de la fonction [rxExec](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxexec) . Vous pouvez également utiliser **rxExec** pour répartir le travail entre les cœurs dans un seul serveur explicitement.
+Vous pouvez appeler une fonction arbitraire dans le contexte de l’ordinateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , à l’aide de la fonction [rxExec](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxexec) . Vous pouvez également utiliser **rxExec** pour répartir explicitement le travail entre les cœurs dans un seul serveur.
 
 Dans cette leçon, vous utilisez le serveur distant pour créer une simulation simple. La simulation ne nécessite aucune donnée [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . L’exemple montre uniquement comment concevoir une fonction personnalisée, puis comment l’appeler à l’aide de la fonction **rxExec** .
 
-Pour obtenir un exemple plus complexe de l’utilisation de **rxExec**, consultez l’article : [parallélisme de granularité grossière avec foreach et rxExec](http://blog.revolutionanalytics.com/2015/04/coarse-grain-parallelism-with-foreach-and-rxexec.html)
+Pour obtenir un exemple plus complexe de l’utilisation de **rxExec**, consultez cet article : [parallélisme de granularité grossière avec foreach et rxExec](https://blog.revolutionanalytics.com/2015/04/coarse-grain-parallelism-with-foreach-and-rxexec.html)
 
-## <a name="create-the-custom-function"></a>Créer la fonction personnalisée
+## <a name="create-the-custom-function"></a>Créez la fonction personnalisée
 
 Un jeu de casino classique consiste à lancer une paire de dés, avec les règles suivantes :
 
@@ -65,7 +65,7 @@ Vous pouvez facilement simuler le jeu en R, en créant une fonction personnalis�
     }
     ```
   
-2.  Pour simuler un jeu unique de découper, exécutez la fonction.
+2.  Pour simuler un jeu de dés unique, exécutez la fonction.
   
     ```R
     rollDice()
@@ -73,13 +73,13 @@ Vous pouvez facilement simuler le jeu en R, en créant une fonction personnalis�
   
     Avez-vous gagné ou perdu ?
   
-Maintenant nous allons voir comment vous pouvez utiliser **rxExec** plusieurs exécutions de la fonction, pour créer une simulation permettant de déterminer la probabilité d’un avantage.
+Maintenant nous allons voir comment vous pouvez utiliser **rxExec** pour exécuter la fonction plusieurs fois, pour créer une simulation qui permet de déterminer la probabilité d’une victoire.
 
 ## <a name="create-the-simulation"></a>Créer la simulation
 
-Pour exécuter une fonction arbitraire dans le contexte de l’ordinateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vous pouvez appeler la fonction **rxExec** . Bien que **rxExec** également prend en charge distribués de l’exécution d’une fonction en parallèle sur les nœuds ou cœurs dans un contexte de serveur, ici s’exécute votre personnalisé fonctionne sur l’ordinateur SQL Server.
+Pour exécuter une fonction arbitraire dans le contexte de l’ordinateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vous pouvez appeler la fonction **rxExec** . Bien que **rxExec** également prend en charge l’exécution distribuée d’une fonction en parallèle sur les nœuds ou cœurs dans un contexte de serveur, ici s’exécute votre fonction sur l’ordinateur SQL Server.
 
-1. Appeler la fonction personnalisée en tant qu’argument à **rxExec**, avec les autres paramètres qui modifient la simulation.
+1. Appelez la fonction personnalisée en tant qu’argument à **rxExec**, avec les autres paramètres qui modifient la simulation.
   
     ```R
     sqlServerExec <- rxExec(rollDice, timesToRun=20, RNGseed="auto")
@@ -115,19 +115,19 @@ Dans ce didacticiel, vous vous être familiarisé avec les tâches suivantes :
 -   Transmission de modèles, de données et de traçages entre votre station de travail et le serveur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
   
 
-Si vous souhaitez faire des essais avec ces techniques à l’aide d’un jeu de données plu de 10 millions d’observations, les fichiers de données sont disponibles à partir du site web d’analytique Revolution : [Index des jeux de données](http://packages.revolutionanalytics.com/datasets)
+Si vous souhaitez expérimenter ces techniques à l’aide d’un dataset plus volumineux de 10 millions d’observations, les fichiers de données sont disponibles à partir du site web d’analytique Revolution : [Index des jeux de données](https://packages.revolutionanalytics.com/datasets)
 
 Pour réutiliser cette procédure pas à pas avec les fichiers de données plus volumineux, télécharger les données et modifier chacune des sources de données comme suit :
 
-1. Modifier les variables `ccFraudCsv` et `ccScoreCsv` pour pointer vers les nouveaux fichiers de données
+1. Modifiez les variables `ccFraudCsv` et `ccScoreCsv` pour pointer vers les nouveaux fichiers de données
 2. Modifier le nom de la table référencée dans *sqlFraudTable* à `ccFraud10`
 3. Modifier le nom de la table référencée dans *sqlScoreTable* à `ccFraudScore10`
 
 ## <a name="additional-samples"></a>Exemples supplémentaires
 
-Maintenant que vous maîtrisez l’utilisation de contextes de calcul et les fonctions RevoScaler pour transmettre et transformer des données, consultez ces didacticiels :
+Maintenant que vous maîtrisez l’utilisation de contextes de calcul et de passer et de transformer des données, les fonctions RevoScaler, consultez ces didacticiels :
 
-[Didacticiels de R pour les Services de Machine Learning](machine-learning-services-tutorials.md)
+[Didacticiels R pour Machine Learning Services](machine-learning-services-tutorials.md)
 ## <a name="previous-step"></a>Étape précédente
 
 [Déplacer des données entre SQL Server et un fichier XDF](../../advanced-analytics/tutorials/deepdive-move-data-between-sql-server-and-xdf-file.md)

@@ -1,5 +1,5 @@
 ---
-title: ALTER CUBE Statement (MDX) | Documents Microsoft
+title: ALTER CUBE Statement (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,17 +9,17 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3b21466e1f8af33faa49a217038fee78ddf9fcc6
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: f9a15108875c7e519948f0e73e0a87d08b70c975
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741568"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51698297"
 ---
 # <a name="mdx-data-definition---alter-cube"></a>Définition de données MDX - ALTER CUBE
 
 
-  Modifie la structure d'un cube spécifié, en général pour prendre en charge l'écriture différée. Pour plus d’informations sur l’utilisation de l’écriture différée dans une application, consultez ce billet de blog : [création d’une Application de l’écriture différée avec Analysis Services (blog)](http://go.microsoft.com/fwlink/?LinkId=394977)  
+  Modifie la structure d'un cube spécifié, en général pour prendre en charge l'écriture différée. Pour plus d’informations sur l’utilisation de l’écriture différée dans une application, consultez ce blog : [création d’une Application de l’écriture différée avec Analysis Services (blog)](https://go.microsoft.com/fwlink/?LinkId=394977)  
   
  Notez que les écritures différées de dimensions simultanées peuvent provoquer un blocage : la première écriture différée est bloquée par une validation en raison du verrou partagé conservé par la deuxième écriture différée. Aucune erreur n'est générée dans ce cas, mais aucune des deux d'opération ne peut progresser. Les deux opérations expirent et les modifications sont supprimées.  
   
@@ -101,7 +101,7 @@ CELL CALCULATION Calculation_Name
  *Property_name*  
  Identificateur MDX (Multidimensional Expressions) valide représentant une propriété de membre.  
   
- *Nom*  
+ *Property_Value*  
  Expression scalaire MDX (Multidimensional Expressions) valide qui définit la valeur de la propriété de membre calculé.  
   
 ## <a name="dropping-a-dimension-member"></a>Suppression d'un membre de dimension  
@@ -118,7 +118,7 @@ CELL CALCULATION Calculation_Name
  Si la clause WITH DESCENDANTS n'est pas utilisée, les enfants d'un membre supprimé deviennent les enfants du parent de ce dernier. Si la clause WITH DESCENDANTS n'est pas employée, tous les descendants et leurs lignes dans la table de dimension sont également supprimés.  
   
 > [!NOTE]  
->  Pour plus d’informations sur la suppression de membres calculés, jeux nommés, actions et les calculs de cellules, consultez [supprimer la déclaration de membre &#40;MDX&#41;](../mdx/mdx-data-definition-drop-member.md), [DROP définir l’instruction &#40;MDX&#41;](../mdx/mdx-data-definition-drop-set.md), [Instruction d’ACTION DROP &#40;MDX&#41;](../mdx/mdx-data-definition-drop-action.md), et [instruction de calcul de cellule DROP &#40;MDX&#41;](../mdx/mdx-data-definition-drop-cell-calculation.md).  
+>  Pour plus d’informations sur la suppression de membres calculés, jeux nommés, actions et les calculs de cellules, consultez [instruction membre DROP &#40;MDX&#41;](../mdx/mdx-data-definition-drop-member.md), [DROP définir l’instruction &#40;MDX&#41;](../mdx/mdx-data-definition-drop-set.md), [Instruction d’ACTION DROP &#40;MDX&#41;](../mdx/mdx-data-definition-drop-action.md), et [instruction de calcul de cellule DROP &#40;MDX&#41;](../mdx/mdx-data-definition-drop-cell-calculation.md).  
   
 ## <a name="updating-the-default-dimension-member"></a>Mise à jour du membre de dimension par défaut  
  Cette clause met à jour le membre par défaut d'un cube et est utilisée dans le script de calcul MDX en vue d'y définir un membre par défaut. Vous pouvez définir un membre par défaut pour la dimension de base de données, une dimension de cube ou pour la connexion d'un utilisateur. Vous pouvez également le modifier au cours d'une session.  
@@ -158,13 +158,13 @@ CELL CALCULATION Calculation_Name
  *MDX_Expression*  
  Expression MDX valide qui retourne un membre unique.  
   
- *Nom*  
+ *Property_Value*  
  Expression scalaire MDX valide qui définit la valeur de la propriété de membre calculé.  
   
 ## <a name="creating-a-cell-calculation"></a>Création d'un calcul de cellule  
  Pour plus d’informations sur la création d’un calcul de cellule à l’aide de l’instruction ALTER CUBE, consultez [instruction du calcul de cellule DROP &#40;MDX&#41;](../mdx/mdx-data-definition-drop-cell-calculation.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Instructions MDX de définition de données &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
+ [Instructions de définition de données MDX &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

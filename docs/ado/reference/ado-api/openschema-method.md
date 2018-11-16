@@ -17,12 +17,12 @@ ms.assetid: 850cf3ce-f18f-4e7c-8597-96c1dc504866
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3481d9b7c186f3492e403b6881f4ffafbe90912b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f2b4df18cf783e23792b51fb2c437b82c6a8ec52
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47787280"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606209"
 ---
 # <a name="openschema-method"></a>OpenSchema, méthode
 Obtient les informations de schéma de base de données du fournisseur.  
@@ -62,7 +62,7 @@ Set recordset = connection.OpenSchema(QueryType, Criteria, SchemaID)
 >  **Utilisation de Service de données à distance** le **OpenSchema** méthode n’est pas disponible sur une côté client [connexion](../../../ado/reference/ado-api/connection-object-ado.md) objet.  
   
 > [!NOTE]
->  En Visual Basic, les colonnes qui ont un entier non signé de 4 octets (DBTYPE UI4) dans le **Recordset** retourné à partir de la **OpenSchema** méthode sur le **connexion** objet ne peut pas comparé à d’autres variables. Pour plus d’informations sur les types de données OLE DB, consultez [dans OLE DB (OLE DB), les Types de données](http://msdn.microsoft.com/6039292f-74e0-49b2-b133-17bc117ebf6a) et [annexe a : Types de données](http://msdn.microsoft.com/e3a0533a-2196-4eb0-a31e-92fe9556ada6) dans référence du programmeur DB OLE Microsoft.  
+>  En Visual Basic, les colonnes qui ont un entier non signé de 4 octets (DBTYPE UI4) dans le **Recordset** retourné à partir de la **OpenSchema** méthode sur le **connexion** objet ne peut pas comparé à d’autres variables. Pour plus d’informations sur les types de données OLE DB, consultez [dans OLE DB (OLE DB), les Types de données](https://msdn.microsoft.com/6039292f-74e0-49b2-b133-17bc117ebf6a) et [annexe a : Types de données](https://msdn.microsoft.com/e3a0533a-2196-4eb0-a31e-92fe9556ada6) dans référence du programmeur DB OLE Microsoft.  
   
 > [!NOTE]
 >  **Les utilisateurs de Visual C/C++** lorsque vous N'utilisez pas les curseurs côté client, récupération de la « ORDINAL_POSITION » d’un schéma de colonne dans ADO renvoie un variant de type VT_R8 dans MDAC 2.7, MDAC 2.8 et Windows Data Access Components (Windows DAC) 6.0, tandis que le type utilisé dans MDAC 2.6 a été VT_I4. Les programmes écrits pour MDAC 2.6 qui recherchent uniquement pour une variante retourné de type que VT_I4 obtiendriez un zéro pour chaque ordinal si s’exécuter sous Windows DAC 6.0 MDAC 2.7 et MDAC 2.8 sans modification. Cette modification a été effectuée, car le type de données OLE DB retourne est DBTYPE_UI4, et dans le type VT_I4 signé ne comporte pas assez d’espace pour contenir toutes les valeurs possibles sans troncation éventuellement qui se produisent, causant ainsi une perte de données.  

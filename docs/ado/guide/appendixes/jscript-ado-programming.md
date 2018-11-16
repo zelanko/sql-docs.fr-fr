@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/08/2018
 ms.reviewer: ''
 ms.topic: conceptual
 dev_langs:
@@ -16,12 +16,12 @@ ms.assetid: 62273658-0fe7-4aac-b4d8-f725e6baf043
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 63559af64241be111ed99c9996b63c1978b3d649
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 64655ad666954b2fb63448cb1e55430dd6191491
+ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655627"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51350463"
 ---
 # <a name="jscript-ado-programming"></a>Programmation ADO JScript
 ## <a name="creating-an-ado-project"></a>Création d’un projet ADO  
@@ -35,14 +35,14 @@ ms.locfileid: "47655627"
   
  Vous pouvez copier et coller des définitions de constantes à partir de ces fichiers dans vos pages ASP ou, si vous effectuez un script côté serveur, copiez le fichier Adojavas.inc dans un dossier sur votre site Web et y fait référence à partir de votre page ASP comme suit :  
   
-```  
+```javascript
 <!--#include File="adojavas.inc"-->  
 ```  
   
 ## <a name="creating-ado-objects-in-jscript"></a>Création d’objets ADO dans JScript  
  Vous devez plutôt utiliser la **CreateObject** appel de fonction :  
   
-```  
+```javascript
 var Rs1;  
 Rs1 = Server.CreateObject("ADODB.Recordset");  
 ```  
@@ -50,15 +50,15 @@ Rs1 = Server.CreateObject("ADODB.Recordset");
 ## <a name="jscript-example"></a>Exemple JScript  
  Le code suivant est un exemple générique de programmation côté serveur en JScript dans un fichier de Active Server Page (ASP) qui ouvre un **Recordset** objet :  
   
-```  
-<%  @LANGUAGE="JScript" %>  
+```javascript
+<%  @LANGUAGE="JScript" %>  
 <!--#include File="adojavas.inc"-->  
 <HTML>  
 <BODY BGCOLOR="White" topmargin="10" leftmargin="10">  
 <%  
 var Source = "SELECT * FROM Authors";  
 var Connect =  "Provider=sqloledb;Data Source=srv;" +  
-    "Initial Catalog=Pubs;Integrated Security=SSPI;"  
+    "Initial Catalog=Pubs;Integrated Security=SSPI;"  
 var Rs1 = Server.CreateObject( "ADODB.Recordset.2.5" );  
 Rs1.Open(Source,Connect,adOpenForwardOnly);  
 Response.Write("Success!");  

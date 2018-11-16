@@ -16,24 +16,24 @@ ms.assetid: 21c97651-297f-469f-b5b5-c48af72b62a8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4dd7edb2f5969f7ec8ded931c5e562c0c1992768
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c95ec9525fe0890d241fd6a99a6c298f6ef7568e
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749227"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51603660"
 ---
 # <a name="schemaenum"></a>SchemaEnum
 Spécifie le type de schéma **Recordset** qui le [OpenSchema](../../../ado/reference/ado-api/openschema-method.md) récupère de la méthode.  
   
 ## <a name="remarks"></a>Notes  
- Des informations supplémentaires sur la fonction et les colonnes renvoyées pour chaque constante ADO sont disponibles dans les rubriques de [annexe b : Schema Rowsets](http://msdn.microsoft.com/2b5fbf03-e50d-44ee-bc57-5a57666c55f1) de référence du programmeur OLE DB. Le nom de chaque rubrique est répertorié dans les parenthèses dans la section de Description du tableau suivant.  
+ Des informations supplémentaires sur la fonction et les colonnes renvoyées pour chaque constante ADO sont disponibles dans les rubriques de [annexe b : Schema Rowsets](https://msdn.microsoft.com/2b5fbf03-e50d-44ee-bc57-5a57666c55f1) de référence du programmeur OLE DB. Le nom de chaque rubrique est répertorié dans les parenthèses dans la section de Description du tableau suivant.  
   
- Des informations supplémentaires sur la fonction et les colonnes renvoyées pour chaque constante ADO MD sont disponibles dans les rubriques de [OLE DB pour les objets OLAP et d’ensembles de lignes de schéma](http://msdn.microsoft.com/d20bb2a6-68bd-423f-9ec8-eb930cd0c144) dans OLE DB pour la documentation de traitement analytique en ligne (OLAP). Le nom de chaque rubrique est répertorié dans les parenthèses dans la colonne Description du tableau suivant.  
+ Des informations supplémentaires sur la fonction et les colonnes renvoyées pour chaque constante ADO MD sont disponibles dans les rubriques de [OLE DB pour les objets OLAP et d’ensembles de lignes de schéma](https://msdn.microsoft.com/d20bb2a6-68bd-423f-9ec8-eb930cd0c144) dans OLE DB pour la documentation de traitement analytique en ligne (OLAP). Le nom de chaque rubrique est répertorié dans les parenthèses dans la colonne Description du tableau suivant.  
   
  Vous pouvez traduire les types de données des colonnes dans la documentation OLE DB aux types de données ADO en vous reportant à la colonne de Description de l’ADO.NET [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) rubrique. Par exemple, un type de données OLE DB de **DBTYPE_WSTR** équivaut à un type de données ADO **adWChar**.  
   
- ADO génère des résultats de type schéma pour les constantes, **adSchemaDBInfoKeywords** et **adSchemaDBInfoLiterals**. ADO crée un **Recordset**, puis remplit chaque ligne avec les valeurs retournées respectivement par le **IDBInfo::GetKeywords** et **IDBInfo::GetLiteralInfo** méthodes. Vous trouverez plus d’informations sur ces méthodes dans le [IDBInfo](http://msdn.microsoft.com/3f5ad97f-3fc6-4f21-b691-f6911e4007f3) section de référence du programmeur OLE DB.  
+ ADO génère des résultats de type schéma pour les constantes, **adSchemaDBInfoKeywords** et **adSchemaDBInfoLiterals**. ADO crée un **Recordset**, puis remplit chaque ligne avec les valeurs retournées respectivement par le **IDBInfo::GetKeywords** et **IDBInfo::GetLiteralInfo** méthodes. Vous trouverez plus d’informations sur ces méthodes dans le [IDBInfo](https://msdn.microsoft.com/3f5ad97f-3fc6-4f21-b691-f6911e4007f3) section de référence du programmeur OLE DB.  
   
 |Constante|Valeur|Description|Colonnes de contrainte|  
 |--------------|-----------|-----------------|------------------------|  

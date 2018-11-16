@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: eefb9269a3eb0dc7a6b95e84accb4c68c6737a13
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: b7e80f8a9dfb82f13350b94b310690a081fae1de
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38063949"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606639"
 ---
 # <a name="istestcase-dmx"></a>IsTestCase (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -42,7 +42,7 @@ IsTestCase()
  Pour retourner les cas qui font partie du jeu de données d’apprentissage, utilisez la fonction [IsTrainingCase &#40;DMX&#41;](../dmx/istrainingcase-dmx.md).  
   
 ## <a name="examples"></a>Exemples  
- L’exemple suivant utilise le `Targeted Mailing` structure d’exploration de données qui est créé dans le [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). La requête retourne tous les cas de la structure qui sont utilisés pour le test.  
+ L’exemple suivant utilise le `Targeted Mailing` structure d’exploration de données qui est créé dans le [Basic Data Mining Tutorial](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). La requête retourne tous les cas de la structure qui sont utilisés pour le test.  
   
 ```  
 SELECT *  
@@ -54,7 +54,7 @@ WHERE IsTestCase()
   
 ## <a name="see-also"></a>Voir aussi  
  [Fonctions &#40;DMX&#41;](../dmx/functions-dmx.md)   
- [Requêtes d’exploration de données](../analysis-services/data-mining/data-mining-queries.md)   
+ [Requêtes d'exploration de données](../analysis-services/data-mining/data-mining-queries.md)   
  [Jeux de données d’apprentissage et de test](../analysis-services/data-mining/training-and-testing-data-sets.md)  
   
   

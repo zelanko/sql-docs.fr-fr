@@ -20,12 +20,12 @@ ms.assetid: 08e52aa6-12f3-41dd-a793-14b99a083fd5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d71b277f3717a0406f2f91fbce596ea90389b8da
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c5bf53045abe0f93e2ff1e07ec17d31f7d58248b
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067059"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814072"
 ---
 # <a name="register-a-database-as-a-dac"></a>Inscrire une base de données en tant que DAC
   Utilisez le **Assistant d’Application de couche données inscrire** ou un Windows script PowerShell pour générer une définition d’application (DAC) de couche données qui décrit les objets d’une base de données existante et inscrivez la définition de DAC dans le `msdb` base de données système (**master** dans [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]).  
@@ -76,7 +76,7 @@ ms.locfileid: "48067059"
 ##  <a name="Set_properties"></a> Page Définir les propriétés  
  Utilisez cette page pour spécifier des propriétés au niveau de la DAC telles que le nom de l'application et sa version.  
   
- **Nom de l'application.** - Chaîne qui spécifie le nom utilisé pour identifier la définition de la DAC ; le champ est rempli par le nom de la base de données.  
+ **Nom de l'application.** -Une chaîne qui spécifie le nom utilisé pour identifier la définition de la DAC, le champ est rempli avec le nom de la base de données.  
   
  **Version.** - Valeur numérique qui identifie la version de la DAC. La version de la DAC est utilisée dans Visual Studio pour identifier la version de la DAC sur laquelle les développeurs travaillent. Lorsque vous déployez une DAC, la version est stockée dans le `msdb` de base de données et peut être affichée ultérieurement sous le **Applications de couche données** nœud [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
