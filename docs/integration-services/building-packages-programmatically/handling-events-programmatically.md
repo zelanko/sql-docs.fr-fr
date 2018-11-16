@@ -25,12 +25,12 @@ ms.assetid: 0f00bd66-efd5-4f12-9e1c-36195f739332
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1f762d617dd2ae93a786f0c52b1200fee4bd36d4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 535dd25aa1d5f282261510100a0abb35518db8b4
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47663859"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641606"
 ---
 # <a name="handling-events-programmatically"></a>Gestion d'événements par programme
   Le Runtime [!INCLUDE[ssIS](../../includes/ssis-md.md)] fournit une collection d'événements qui se produisent avant, pendant et après la validation et l'exécution d'un package. Ces événements peuvent être capturés de deux manières. La première méthode consiste à implémenter l’interface <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> dans une classe et à fournir la classe en tant que paramètre aux méthodes **Execute** et **Validate** du package. La deuxième méthode consiste à créer des objets <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>, qui peuvent contenir d'autres objets [!INCLUDE[ssIS](../../includes/ssis-md.md)], tels que des tâches et des boucles, exécutés lorsqu'un événement se produit dans <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents>. Cette section décrit ces deux méthodes et fournit des exemples de code pour illustrer leur utilisation.  
@@ -250,6 +250,6 @@ End Module
   
 ## <a name="see-also"></a> Voir aussi  
  [Gestionnaires d’événements Integration Services &#40;SSIS&#41](../../integration-services/integration-services-ssis-event-handlers.md)   
- [Ajouter un gestionnaire d’événements à un package](http://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78)  
+ [Ajouter un gestionnaire d’événements à un package](https://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78)  
   
   

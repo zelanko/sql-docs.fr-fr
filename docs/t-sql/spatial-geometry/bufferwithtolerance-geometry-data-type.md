@@ -18,12 +18,12 @@ ms.assetid: 7049d37a-3e72-4e93-87a1-c96a6f0e2b99
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 409fdd3fe05b4dc5b0baabe0d60e871efd028c29
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dc1dd1617ff0bcdd30782b5c7890f60aa30258f1
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47729997"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700947"
 ---
 # <a name="bufferwithtolerance-geometry-data-type"></a>BufferWithTolerance (type de données geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -81,7 +81,7 @@ Retourne un objet géométrique qui représente l’union de toutes les valeurs 
   
  Une mémoire tampon négative supprime tous les points dans la distance donnée de la limite de l’instance **geometry**.  
   
- L’erreur entre la mémoire tampon théorique et la mémoire tampon calculée correspond à max(tolerance, étendues \* 1E-7), où tolerance représente la valeur du paramètre *tolerance*. Pour plus d’informations sur les étendues, consultez [Référence de méthodes de type de données geometry](http://msdn.microsoft.com/library/d88e632b-6b2f-4466-a15f-9fbef1a347a7).  
+ L’erreur entre la mémoire tampon théorique et la mémoire tampon calculée correspond à max(tolerance, étendues \* 1E-7), où tolerance représente la valeur du paramètre *tolerance*. Pour plus d’informations sur les étendues, consultez [Référence de méthodes de type de données geometry](https://msdn.microsoft.com/library/d88e632b-6b2f-4466-a15f-9fbef1a347a7).  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant crée une instance `Point` et utilise `BufferWithTolerance()` pour obtenir une estimation grossière de la mémoire tampon autour d'elle.  

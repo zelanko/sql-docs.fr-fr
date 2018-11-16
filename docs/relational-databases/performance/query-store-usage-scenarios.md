@@ -14,12 +14,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dcea20d707eb04922efc9a12fb81335ef48f9378
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d556922a6bdb0e6edd538630e34dd21d428f2953
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654247"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673828"
 ---
 # <a name="query-store-usage-scenarios"></a>Scénarios d’utilisation du Magasin des requêtes
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -81,7 +81,7 @@ Quand vous identifiez une requête dont les performances ne sont pas optimales, 
   
 -   Création d’index absents sur des tables référencées par des requêtes coûteuses.  
   
--   Application d’une stratégie de filtrage pour la sécurité au niveau des lignes. Pour plus d’informations, consultez [Optimizing Row Level Security with Query Store](http://blogs.msdn.com/b/sqlsecurity/archive/2015/07/21/optimizing-rls-performance-with-the-query-store.aspx) (Optimisation de la sécurité au niveau des lignes avec le Magasin des requêtes).  
+-   Application d’une stratégie de filtrage pour la sécurité au niveau des lignes. Pour plus d’informations, consultez [Optimizing Row Level Security with Query Store](https://blogs.msdn.com/b/sqlsecurity/archive/2015/07/21/optimizing-rls-performance-with-the-query-store.aspx) (Optimisation de la sécurité au niveau des lignes avec le Magasin des requêtes).  
   
 -   L’ajout d’un contrôle de version du système temporel aux tables qui sont fréquemment modifiées par vos applications OLTP.  
   
@@ -221,6 +221,6 @@ ALTER DATABASE [QueryStoreTest] SET QUERY_STORE = ON
   
 ## <a name="see-also"></a> Voir aussi  
  [Analyse des performances à l'aide du magasin de requêtes](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
- [Bonnes pratiques relatives au Magasin des requêtes](../../relational-databases/performance/best-practice-with-the-query-store.md)  
+ [Bonnes pratiques relatives au magasin de requêtes](../../relational-databases/performance/best-practice-with-the-query-store.md)  
   
   

@@ -15,12 +15,12 @@ ms.assetid: 83075cdf-f059-4646-8ba2-19be8202f130
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 387aaeb28e0dfc976bce72c33dd50d8b865bb432
-ms.sourcegitcommit: 8dccf20d48e8db8fe136c4de6b0a0b408191586b
+ms.openlocfilehash: b67636c618343b4f5beb5ec000f8d94236fb64a6
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48874367"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696977"
 ---
 # <a name="system-settings-master-data-services"></a>Paramètres système (Master Data Services)
 
@@ -110,11 +110,11 @@ ms.locfileid: "48874367"
   
 |Paramètre du Gestionnaire de configuration|Paramètre système|Description|  
 |-----------------------------------|--------------------|-----------------|  
-|**URL Master Data Manager pour les notifications**|**MDMRootURL**|URL de l’application web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], utilisée dans le lien des notifications par e-mail, par exemple `http://constoso/mds`.|  
+|**URL Master Data Manager pour les notifications**|**MDMRootURL**|URL de l’application web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], utilisée dans le lien des notifications par e-mail, par exemple `https://constoso/mds`.|  
 |**Intervalle de notification par courrier électronique**|**NotificationInterval**|Fréquence à laquelle les notifications par courrier électronique sont envoyées (en secondes). La valeur par défaut est **120** secondes (2 minutes).|  
 |**Nombre de notifications dans un même message électronique**|**NotificationsPerEmail**|Nombre maximal de problèmes de validation qui sont répertoriés dans un seul message électronique de notification. Les problèmes supplémentaires, le cas échéant, ne sont pas inclus dans le message électronique, mais sont disponibles dans [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].|  
 |**Format de courrier électronique par défaut**|**EmailFormat**|Format de toutes les notifications par courrier électronique. La valeur par défaut est **HTML** ou **1**. Le paramètre de base de données **2** indique **Texte**.<br /><br /> Remarque : vous pouvez remplacer cette valeur pour un utilisateur spécifique dans [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]en changeant et en enregistrant le **Format de courrier électronique** dans l’onglet **Général** de l’utilisateur.|  
-|**Expression régulière pour l'adresse de messagerie**|**EmailRegExPattern**|Dans la zone fonctionnelle [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **de** , expression régulière qui permet de valider l'adresse de messagerie entrée sous l'onglet **Général** de l’utilisateur. Pour plus d'informations sur les expressions régulières, consultez [Éléments du langage des expressions régulières](http://go.microsoft.com/fwlink/?LinkId=164401) dans MSDN Library.|  
+|**Expression régulière pour l'adresse de messagerie**|**EmailRegExPattern**|Dans la zone fonctionnelle [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **de** , expression régulière qui permet de valider l'adresse de messagerie entrée sous l'onglet **Général** de l’utilisateur. Pour plus d'informations sur les expressions régulières, consultez [Éléments du langage des expressions régulières](https://go.microsoft.com/fwlink/?LinkId=164401) dans MSDN Library.|  
 |**Compte de messagerie de base de données**|**EmailProfilePrincipalAccount**|Affiche le compte de messagerie de base de données à utiliser lors de l'envoi de notifications par courrier électronique. Le profil par défaut est **mds_email_user**.|  
 |**Profil de messagerie de base de données**|**DatabaseMailProfile**|Profil de messagerie de base de données à utiliser lors de l'envoi de notifications par courrier électronique. La valeur par défaut est vide.|  
 ||**ValidationIssueHTML**|Au format HTML, texte du courrier électronique que les utilisateurs reçoivent lors de l'échec de la validation d'une règle d'entreprise.|  

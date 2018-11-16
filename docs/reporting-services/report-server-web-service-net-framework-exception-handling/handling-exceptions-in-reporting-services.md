@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 1a443432-2db5-48c5-bc29-433b4688082f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b743287ad9056d32c55a7d83189cd7c98fcf9920
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 217ba85056b52fbe55c7cb4441b5a58c50a3a418
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723857"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812622"
 ---
 # <a name="handling-exceptions-in-reporting-services"></a>Gestion des exceptions dans Reporting Services
-  Lorsqu'une demande de client de l'API SOAP Reporting Services ne peut pas être exécutée, le serveur de rapports retourne une erreur au lieu des résultats attendus de l'appel. Quand un appel ne peut pas être passé, une erreur pour le service web Report Server est retournée sous la forme d’élément XML **Fault** SOAP. L’élément descriptif principal de l’erreur est l’élément **detail**, qui inclut toutes les informations sur l’erreur fournies par le serveur de rapports, ainsi que d’éventuelles informations supplémentaires sur l’erreur du service web. L’information essentielle de l’élément **detail** est le code d’erreur du serveur de rapports. En fonction du message et du code d'erreur, vous pouvez déterminer l'action appropriée suivante à prendre dans vos applications. Pour plus d'informations sur les erreurs SOAP, consultez le site Web du W3C (World Wide Consortium) à l'adresse http://www.w3.org/TR/SOAP.  
+  Lorsqu'une demande de client de l'API SOAP Reporting Services ne peut pas être exécutée, le serveur de rapports retourne une erreur au lieu des résultats attendus de l'appel. Quand un appel ne peut pas être passé, une erreur pour le service web Report Server est retournée sous la forme d’élément XML **Fault** SOAP. L’élément descriptif principal de l’erreur est l’élément **detail**, qui inclut toutes les informations sur l’erreur fournies par le serveur de rapports, ainsi que d’éventuelles informations supplémentaires sur l’erreur du service web. L’information essentielle de l’élément **detail** est le code d’erreur du serveur de rapports. En fonction du message et du code d'erreur, vous pouvez déterminer l'action appropriée suivante à prendre dans vos applications. Pour plus d'informations sur les erreurs SOAP, consultez le site Web du W3C (World Wide Consortium) à l'adresse https://www.w3.org/TR/SOAP.  
   
 ## <a name="soap-faults-and-the-net-framework"></a>Erreurs SOAP et le .NET Framework  
  Dans le [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], si une erreur se produit dans une requête de client au service web, le serveur de rapports communique l’erreur au code client qui appelle le service web en levant un objet **SoapException**. L’objet **SoapException** inclut dans un wrapper les informations contenues dans une erreur SOAP. La propriété **Detail** de **SoapException** est mappée à l’élément **detail** dans l’erreur SOAP. Les applications doivent intercepter l’objet **SoapException** avec un bloc try/catch et utiliser la propriété **Detail** de **SoapException** pour prendre la mesure appropriée. Pour plus d’informations sur la classe **SoapException** et la propriété **Detail** dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], consultez [SoapException, classe Reporting Services](../../reporting-services/report-server-web-service-net-framework-exception-handling/soapexception-class/reporting-services-soapexception-class.md). Pour plus d’informations sur la classe **SoapException**, consultez la documentation du SDK [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].  

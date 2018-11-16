@@ -1,5 +1,5 @@
 ---
-title: BottomSum (DMX) | Documents Microsoft
+title: BottomSum (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6a6356e70aa6694e04a9112e44a22825f0dc7a52
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.openlocfilehash: 5c4a4cfd4919218233d1c8ce2f41f4569c7f7302
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842782"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602789"
 ---
 # <a name="bottomsum-dmx"></a>BottomSum (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -32,15 +32,15 @@ BottomSum(<table expression>, <rank expression>, <sum>)
  Une expression qui retourne une table, comme un \<référence de colonne de table >, ou une fonction qui retourne une table.  
   
 ## <a name="return-type"></a>Type de retour  
- \<Expression de table >  
+ \<expression de table >  
   
 ## <a name="remarks"></a>Notes  
- Le **BottomSum** fonction retourne les lignes les plus bas dans l’ordre croissant. Le rang est basé sur la valeur évaluée de la \<rank expression > argument pour chaque ligne, telles que la somme de la \<rank expression > valeurs soit au moins égale au total spécifié par le \<somme > argument. **BottomSum** retourne le plus petit nombre d’éléments possible tout en correspondant à la valeur de la somme spécifiée.  
+ Le **BottomSum** fonction retourne les lignes les plus basses dans l’ordre croissant. Le rang est basé sur la valeur évaluée de la \<rank expression > argument pour chaque ligne, telles que la somme de la \<rank expression > valeurs soit au moins au total spécifié par le \<somme > argument. **BottomSum** retourne le plus petit nombre d’éléments possible tout en correspondant à la valeur de la somme spécifiée.  
   
 ## <a name="examples"></a>Exemples  
- L’exemple suivant crée une requête de prédiction sur le modèle d’Association que vous créez à l’aide de la [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
+ L’exemple suivant crée une requête de prédiction sur le modèle d’Association que vous générez à l’aide de la [Basic Data Mining Tutorial](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
   
- Pour comprendre le fonctionnement de BottomSum, il peut être utile d’abord exécuter une requête de prédiction qui retourne uniquement la table imbriquée.  
+ Pour comprendre le fonctionne de BottomSum, il peut être utile pour tout d’abord exécuter une requête de prédiction qui retourne uniquement la table imbriquée.  
   
 ```  
 SELECT Predict ([Association].[v Assoc Seq Line Items], INCLUDE_STATISTICS, 10)  
@@ -83,9 +83,9 @@ NATURAL PREDICTION JOIN
 (SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items]) AS t  
 ```  
   
- Le premier argument à la fonction BottomSum est le nom d’une colonne de table. Dans cet exemple, la table imbriquée est retournée en appelant la fonction de prédiction et à l’aide de l’argument INCLUDE_STATISTICS.  
+ Le premier argument à la fonction BottomSum est le nom d’une colonne de table. Dans cet exemple, la table imbriquée est retournée en appelant la fonction Predict et à l’aide de l’argument INCLUDE_STATISTICS.  
   
- Le deuxième argument de la fonction BottomSum est la colonne dans la table imbriquée qui vous permettent de classer les résultats. Dans cet exemple, l'option INCLUDE_STATISTICS retourne les colonnes $SUPPORT, $PROBABILTY et $ADJUSTED PROBABILITY. Cet exemple utilise $PROBABILITY pour retourner les lignes dont la somme est au moins égale à une probabilité de 50 %.  
+ Le deuxième argument à la fonction BottomSum est la colonne dans la table imbriquée qui vous permet de classer les résultats. Dans cet exemple, l'option INCLUDE_STATISTICS retourne les colonnes $SUPPORT, $PROBABILTY et $ADJUSTED PROBABILITY. Cet exemple utilise $PROBABILITY pour retourner les lignes dont la somme est au moins égale à une probabilité de 50 %.  
   
  Le troisième argument de la fonction BottomSum spécifie la somme de la cible, en tant que double. Pour obtenir les lignes pour les produits à nombre le plus bas dont la somme est égale à une probabilité de 10 pour cent, tapez .1.  
   

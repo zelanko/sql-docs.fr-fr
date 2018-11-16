@@ -15,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 1a982b90e9bbbb919e78d77e071ea13a6cff1bd3
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: d706feed2f2826afa6bb975d4ce47170b71126c4
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460684"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51605329"
 ---
 # <a name="install-sql-server-from-the-installation-wizard-setup"></a>Installer SQL Server à partir de l’Assistant Installation (programme d’installation)
 
@@ -69,7 +69,7 @@ Microsoft a identifié un problème avec la version spécifique des fichiers bin
 4.  Dans la page Termes du contrat de licence, prenez connaissance du contrat de licence et, si vous en acceptez les termes, activez la case à cocher **J'accepte les termes du contrat de licence.** , puis cliquez sur **Suivant**.  
 
   >[!NOTE]
-  > SQL Server transmet des informations sur votre expérience d’installation, ainsi que d’autres données de performances et d’utilisation pour aider Microsoft à améliorer le produit. Pour plus d’informations sur le traitement de données SQL Server et les contrôles de confidentialité, consultez la [déclaration de confidentialité](https://privacy.microsoft.com/en-us/privacystatement) et [Configurer SQL Server pour envoyer des commentaires à Microsoft](https://docs.microsoft.com/sql/sql-server/sql-server-customer-feedback?view=sql-server-2016). 
+  > SQL Server transmet des informations sur votre expérience d’installation, ainsi que d’autres données de performances et d’utilisation pour aider Microsoft à améliorer le produit. Pour plus d’informations sur le traitement de données SQL Server et les contrôles de confidentialité, consultez la [déclaration de confidentialité](https://privacy.microsoft.com/privacystatement) et [Configurer SQL Server pour envoyer des commentaires à Microsoft](https://docs.microsoft.com/sql/sql-server/sql-server-customer-feedback?view=sql-server-2016). 
   
 5.  Dans la fenêtre Règles globales, la procédure d'installation passera automatiquement à la fenêtre Mises à jour du produit s'il n'existe aucune erreur de règle.  
   

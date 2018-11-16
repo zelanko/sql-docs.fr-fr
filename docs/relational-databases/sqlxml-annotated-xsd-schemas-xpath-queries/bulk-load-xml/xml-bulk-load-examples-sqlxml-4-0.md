@@ -33,12 +33,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e83b9cb7c59a3f08e0c630d736ec6dcf4b46507d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cefdb89d4b8c36747f8fce6824f51b8dbb11e095
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836487"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673978"
 ---
 # <a name="xml-bulk-load-examples-sqlxml-40"></a>Exemples de chargement en masse XML (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -130,7 +130,7 @@ End Function
 2.  Créez un fichier dans votre éditeur de texte ou éditeur XML par défaut, puis enregistrez-le sous le nom SampleSchema.xml. Ajoutez à ce fichier le schéma XSD suivant :  
   
     ```xml  
-    <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
+    <xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
                 xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
        <xsd:element name="ROOT" sql:is-constant="1" >  
          <xsd:complexType>  
@@ -236,7 +236,7 @@ End Function
  Le schéma XSD suivant définit la vue XML de ces tables. Le schéma spécifie la relation parent-enfant entre les  **\<client >** et  **\<ordre >** éléments.  
   
 ```xml  
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   <xsd:annotation>  
     <xsd:appinfo>  
@@ -338,7 +338,7 @@ End Function
  Considérons par exemple ce schéma XSD :  
   
 ```xml  
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
 <xsd:annotation>  
   <xsd:appinfo>  
@@ -490,7 +490,7 @@ OrderDetail (OrderID, ProductID)
 2.  Créez un fichier dans votre éditeur de texte ou éditeur XML par défaut, puis enregistrez-le sous le nom SampleSchema.xml. Ajoutez ce schéma XSD à ce fichier.  
   
     ```  
-    <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
+    <xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
                 xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
      <xsd:annotation>  
        <xsd:appinfo>  
@@ -657,7 +657,7 @@ Set objBL = Nothing
  Le schéma de mappage XSD suivant fournit les informations nécessaires pour créer la table :  
   
 ```  
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
 <xsd:element name="ROOT" sql:is-constant="true" >  
   <xsd:complexType>  
@@ -815,7 +815,7 @@ End Sub
  Examinez ce schéma XSD :  
   
 ```  
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
 <xsd:annotation>  
   <xsd:appinfo>  
@@ -990,7 +990,7 @@ set objBL=Nothing
 2.  Créez un fichier dans votre éditeur de texte ou éditeur XML par défaut, puis enregistrez-le sous le nom SampleSchema.xml. Ajoutez au fichier le schéma XSD suivant :  
   
     ```  
-    <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
+    <xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
                 xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
       <xsd:element name="ROOT" sql:is-constant="true" >  
         <xsd:complexType>  
@@ -1045,7 +1045,7 @@ set objBL=Nothing
      Voici le schéma mis à jour :  
   
     ```  
-    <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
+    <xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
                 xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
       <xsd:element name="ROOT" sql:is-constant="true" >  
         <xsd:complexType>  
@@ -1134,7 +1134,7 @@ End Sub
 2.  Créez un fichier dans votre éditeur de texte ou éditeur XML par défaut, puis enregistrez-le sous le nom SampleSchema.xml. Ajoutez au fichier le schéma XSD suivant :  
   
     ```  
-    <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
+    <xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
                 xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
     <xsd:annotation>  
       <xsd:appinfo>  
@@ -1251,9 +1251,9 @@ End Sub
   
 ```  
 <?xml version="1.0" encoding="utf-8" ?>  
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
+<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
            xmlns:sql="urn:schemas-microsoft-com:mapping-schema"  
-           xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">   
+           xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">   
   <xsd:element name="ProductModel"  sql:relation="Production.ProductModel" >  
     <xsd:complexType>  
       <xsd:sequence>  
@@ -1290,10 +1290,10 @@ End Sub
     <ProductModel ProductModelID="2005">  
         <Name>Mountain-100 (2005 model)</Name>  
         <Desc><?xml-stylesheet href="ProductDescription.xsl" type="text/xsl"?>  
-            <p1:ProductDescription xmlns:p1="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription"   
-                  xmlns:wm="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain"   
-                  xmlns:wf="http://www.adventure-works.com/schemas/OtherFeatures"   
-                  xmlns:html="http://www.w3.org/1999/xhtml"   
+            <p1:ProductDescription xmlns:p1="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription"   
+                  xmlns:wm="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain"   
+                  xmlns:wf="https://www.adventure-works.com/schemas/OtherFeatures"   
+                  xmlns:html="https://www.w3.org/1999/xhtml"   
                   xmlns="">  
                 <p1:Summary>  
                     <html:p>Our top-of-the-line competition mountain bike.   

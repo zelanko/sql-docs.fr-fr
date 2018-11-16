@@ -14,12 +14,12 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0f84f3171f1266bb79763d360818faf75519e6a0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b519e70c46f697c4ef819f59c122fba6c4e40ea2
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669407"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51603619"
 ---
 # <a name="automatic-seeding-for-secondary-replicas"></a>Amorçage automatique pour les réplicas secondaires
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -265,7 +265,7 @@ Le tableau suivant répertorie les événements étendus relatifs à l’amorça
 
 [CREATE AVAILABILITY GROUP (Transact-SQL)](../../../t-sql/statements/create-availability-group-transact-sql.md)
 
-[Guide de surveillance et de résolution des problèmes des groupes de disponibilité Always On](http://technet.microsoft.com/library/dn135328.aspx)
+[Guide de surveillance et de résolution des problèmes des groupes de disponibilité Always On](https://technet.microsoft.com/library/dn135328.aspx)
 
 <!--Image references-->
 [1]: ./media/auto-seed-new-availability-group.png

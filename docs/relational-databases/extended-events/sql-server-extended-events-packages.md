@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1c8ff63651f0c23418c5ff5a6a386af4e2674a1b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 19d870d64816dfea011bc0a5c245b5a18a8f5aa3
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684967"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51675818"
 ---
 # <a name="sql-server-extended-events-packages"></a>Packages d’événements étendus SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -98,7 +98,7 @@ where name = 'keyword_map'
 >  Les mots clés correspondent étroitement au regroupement actuel des événements SQL Trace.  
   
 ### <a name="targets"></a>Cibles  
- Les cibles sont des consommateurs d'événements. Les cibles traitent des événements, de façon synchrone sur le thread qui déclenche l'événement ou de façon asynchrone sur un thread fourni par le système. Les événements étendus fournissent plusieurs cibles que vous pouvez utiliser d'une manière appropriée pour diriger les données de sortie des événements. Pour plus d'informations, consultez [SQL Server Extended Events Targets](http://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384).  
+ Les cibles sont des consommateurs d'événements. Les cibles traitent des événements, de façon synchrone sur le thread qui déclenche l'événement ou de façon asynchrone sur un thread fourni par le système. Les événements étendus fournissent plusieurs cibles que vous pouvez utiliser d'une manière appropriée pour diriger les données de sortie des événements. Pour plus d'informations, consultez [SQL Server Extended Events Targets](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384).  
   
 ### <a name="actions"></a>Actions  
  Une action est une réponse de programmation ou une série de réponses à un événement. Les actions sont liées à un événement et chaque événement peut posséder un ensemble unique d'actions.  
@@ -220,6 +220,6 @@ where name = 'lock_mode'
 ## <a name="see-also"></a> Voir aussi  
  [Sessions Événements étendus SQL Server](../../relational-databases/extended-events/sql-server-extended-events-sessions.md)   
  [Moteur des Événements étendus SQL Server](../../relational-databases/extended-events/sql-server-extended-events-engine.md)   
- [SQL Server Extended Events Targets](http://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)  
+ [SQL Server Extended Events Targets](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)  
   
   

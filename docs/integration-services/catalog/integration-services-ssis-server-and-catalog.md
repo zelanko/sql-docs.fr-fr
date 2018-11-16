@@ -14,12 +14,12 @@ ms.assetid: 6d667bba-7c25-492a-8f4d-70ebaca28f40
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0433940c558dc6cac8aeb7310bb6b038e911b971
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b1dab0e7496a41d897b927c4a53d6cc75ca8bdc4
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827187"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640767"
 ---
 # <a name="integration-services-ssis-server-and-catalog"></a>Serveur et catalogue Integration Services (SSIS)
   Après avoir conçu et testé des packages dans [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], vous pouvez déployer les projets qui contiennent les packages sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -35,7 +35,7 @@ ms.locfileid: "47827187"
 ## <a name="high-availability"></a>Haute disponibilité  
  Tout comme les autres bases de données utilisateur, la base de données **SSISDB** prend en charge la mise en miroir et la réplication de bases de données. Pour plus d’informations sur la mise en miroir et la réplication, consultez la page [Mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
   
- Vous pouvez également assurer la haute disponibilité de la base de données SSISDB et de son contenu en utilisant SSIS et les groupes de disponibilité Always On. Pour plus d’informations, consultez [Always On pour le catalogue SSIS (SSISDB](ssis-catalog.md#always-on-for-ssis-catalog-ssisdb). Consultez également ce billet de blog de Matt Masson, [SSIS with Always On](http://go.microsoft.com/fwlink/?LinkId=255873), sur blogs.msdn.com.  
+ Vous pouvez également assurer la haute disponibilité de la base de données SSISDB et de son contenu en utilisant SSIS et les groupes de disponibilité Always On. Pour plus d’informations, consultez [Always On pour le catalogue SSIS (SSISDB](ssis-catalog.md#always-on-for-ssis-catalog-ssisdb). Consultez également ce billet de blog de Matt Masson, [SSIS with Always On](https://go.microsoft.com/fwlink/?LinkId=255873), sur blogs.msdn.com.  
   
 ##  <a name="ssms"></a> Serveur Integration Services dans SQL Server Management Studio  
  Lorsque vous vous connectez à une instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] qui héberge la base de données **SSISDB** , vous affichez les objets suivants dans l'Explorateur d'objets :  
@@ -57,6 +57,6 @@ ms.locfileid: "47827187"
 -   [Exécuter des packages Integration Services (SSIS)](../../integration-services/packages/run-integration-services-ssis-packages.md)  
   
 ## <a name="related-content"></a>Contenu associé  
- Entrée de blog, [SSIS et Always On](http://go.microsoft.com/fwlink/?LinkId=255873), sur blogs.msdn.com.  
+ Entrée de blog, [SSIS et Always On](https://go.microsoft.com/fwlink/?LinkId=255873), sur blogs.msdn.com.  
   
   

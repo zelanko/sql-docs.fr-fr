@@ -19,12 +19,12 @@ ms.assetid: 32194784-1684-40cd-9f91-1aba4d8360d3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 795eacbaacc5fca1cc3d51908a365986019543c2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ab41c2219ecc43988af30ad071dbea17a5c4f63e
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664967"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638136"
 ---
 # <a name="multicast-transformation"></a>transformation de multidiffusion
   La transformation de multidiffusion distribue son entrée vers une ou plusieurs sorties. Cette transformation est similaire à la transformation de fractionnement conditionnel. Les deux transformations dirigent une entrée vers plusieurs sorties. Leur différence réside dans le fait que la transformation de multidiffusion dirige chaque ligne vers chaque sortie, tandis que la transformation de fractionnement conditionnel dirige une ligne vers une seule sortie. Pour plus d’informations, voir [Conditional Split Transformation](../../../integration-services/data-flow/transformations/conditional-split-transformation.md).  
@@ -38,7 +38,7 @@ ms.locfileid: "47664967"
 ## <a name="configuration-of-the-multicast-transformation"></a>Configuration de la transformation de multidiffusion  
  Vous pouvez définir les propriétés par le biais du concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)] ou par programmation.  
   
- Pour plus d’informations sur les propriétés que vous pouvez définir par programmation, consultez [Propriétés communes](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796).  
+ Pour plus d’informations sur les propriétés que vous pouvez définir par programmation, consultez [Propriétés communes](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796).  
   
 ## <a name="related-tasks"></a>Tâches associées  
  Pour plus d’informations sur la définition des propriétés de ce composant, consultez [Définir les propriétés d’un composant de flux de données](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  

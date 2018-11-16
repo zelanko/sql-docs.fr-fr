@@ -28,12 +28,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c0a6c44ddcf6a222db8db865896921ad29ea2f56
-ms.sourcegitcommit: 3fb1a740c0838d5f225788becd4e4790555707f2
+ms.openlocfilehash: 9b154ba3569c46d96c2e89b8fd209f51159e603a
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "49636478"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661718"
 ---
 # <a name="collation-and-unicode-support"></a>Prise en charge d’Unicode et du classement
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -58,7 +58,7 @@ Un classement désigne les modèles binaires qui représentent chaque caractère
     
 Le résultat d'une instruction[!INCLUDE[tsql](../../includes/tsql-md.md)] peut varier lorsque cette dernière est exécutée dans un contexte réunissant plusieurs bases de données dont chacune a un paramètre de classement différent. Dans la mesure du possible, choisissez un classement normalisé pour votre organisation. De cette manière, vous n'avez pas à spécifier explicitement le classement dans chaque caractère ou expression Unicode. Si vous devez utiliser des objets qui ont des paramètres de classement et de page de codes différents, codez vos requêtes conformément aux règles de priorité des classements. Pour plus d’informations, consultez [Priorité de classement (Transact-SQL)](../../t-sql/statements/collation-precedence-transact-sql.md).    
     
-Les options associées à un classement sont le respect de la casse, le respect des accents, le respect du jeu de caractères Kana, le respect de la largeur et le respect du sélecteur de variante. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] introduit une option supplémentaire pour l’encodage [UTF-8](http://www.wikipedia.org/wiki/UTF-8). Pour spécifier ces options, vous devez les ajouter au nom du classement. Par exemple, le classement `Japanese_Bushu_Kakusu_100_CS_AS_KS_WS_UTF8` respecte la casse, les accents, le jeu de caractères Kana et la largeur, et il est encodé en UTF-8. Autre exemple : le classement `Japanese_Bushu_Kakusu_140_CI_AI_KS_WS_VSS` ne respecte pas la casse, ne respecte pas les accents, respecte le jeu de caractères Kana, respecte la largeur, respecte le sélecteur de variante et utilise un encodage non-Unicode. Le tableau suivant décrit le comportement associé à ces différentes options.    
+Les options associées à un classement sont le respect de la casse, le respect des accents, le respect du jeu de caractères Kana, le respect de la largeur et le respect du sélecteur de variante. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] introduit une option supplémentaire pour l’encodage [UTF-8](https://www.wikipedia.org/wiki/UTF-8). Pour spécifier ces options, vous devez les ajouter au nom du classement. Par exemple, le classement `Japanese_Bushu_Kakusu_100_CS_AS_KS_WS_UTF8` respecte la casse, les accents, le jeu de caractères Kana et la largeur, et il est encodé en UTF-8. Autre exemple : le classement `Japanese_Bushu_Kakusu_140_CI_AI_KS_WS_VSS` ne respecte pas la casse, ne respecte pas les accents, respecte le jeu de caractères Kana, respecte la largeur, respecte le sélecteur de variante et utilise un encodage non-Unicode. Le tableau suivant décrit le comportement associé à ces différentes options.    
     
 |Option|Description|    
 |------------|-----------------|    
@@ -66,7 +66,7 @@ Les options associées à un classement sont le respect de la casse, le respect 
 |Respecter les accents (_AS)|Fait la distinction entre les caractères accentués et non accentués. Par exemple, « a » n'est pas équivalent à « ấ ». Si cette option n’est pas sélectionnée, le classement ne respecte pas les accents. Dans ce cas, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] considère que la version accentuée et la version non accentuée d’une même lettre sont identiques dans les opérations de tri. Vous pouvez explicitement sélectionner le non-respect des accents en spécifiant _AI.|    
 |Respecter le jeu de caractères Kana (_KS)|Fait la distinction entre les deux types de caractères japonais Kana : Hiragana et Katakana. Si cette option n'est pas sélectionnée, le classement ne respecte pas les caractères Kana. Dans ce cas, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] considère que les caractères Hiragana et Katakana sont identiques dans les opérations de tri. L'omission de cette option est le seul moyen de spécifier le non-respect du jeu de caractères Kana.|    
 |Respecter la largeur (_WS)|Fait la différence entre les caractères pleine largeur et demi-largeur. Si cette option n’est pas sélectionnée, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] considère que la représentation pleine largeur et demi-largeur d’un même caractère sont identiques dans les opérations de tri. L'omission de cette option est le seul moyen de spécifier le non-respect de la largeur.|    
-|Respecter le sélecteur de variante (_VSS) | Fait la distinction entre différents sélecteurs de variante idéographiques dans les classements japonais Japanese_Bushu_Kakusu_140 et Japanese_XJIS_140 introduits dans [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]. Une séquence de variantes se compose d’un caractère de base et d’un sélecteur de variante supplémentaire. Si cette option _VSS n’est pas sélectionnée, le classement ne respecte pas le sélecteur de variante, et celui-ci n’est pas pris en compte dans la comparaison. Autrement dit, SQL Server considère comme identiques (à des fins de tri) les caractères basés sur le même caractère de base avec différents sélecteurs de variante. Voir aussi  [Unicode Ideographic Variation Database (Base de données de variantes idéographiques Unicode)](http://www.unicode.org/reports/tr37/). <br/><br/> Les classements qui respectent le sélecteur de variante (_VSS) ne sont pas pris en charge dans les index de recherche en texte intégral. Les index de recherche en texte intégral prennent uniquement en charge les options Respecter les accents (_AS), Respecter le jeu de caractères Kana (_KS) et Respecter la largeur (_WS). Les moteurs XML et CLR de SQL Server ne prennent pas en charge les sélecteurs de variante (_VSS).
+|Respecter le sélecteur de variante (_VSS) | Fait la distinction entre différents sélecteurs de variante idéographiques dans les classements japonais Japanese_Bushu_Kakusu_140 et Japanese_XJIS_140 introduits dans [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]. Une séquence de variantes se compose d’un caractère de base et d’un sélecteur de variante supplémentaire. Si cette option _VSS n’est pas sélectionnée, le classement ne respecte pas le sélecteur de variante, et celui-ci n’est pas pris en compte dans la comparaison. Autrement dit, SQL Server considère comme identiques (à des fins de tri) les caractères basés sur le même caractère de base avec différents sélecteurs de variante. Voir aussi  [Unicode Ideographic Variation Database (Base de données de variantes idéographiques Unicode)](https://www.unicode.org/reports/tr37/). <br/><br/> Les classements qui respectent le sélecteur de variante (_VSS) ne sont pas pris en charge dans les index de recherche en texte intégral. Les index de recherche en texte intégral prennent uniquement en charge les options Respecter les accents (_AS), Respecter le jeu de caractères Kana (_KS) et Respecter la largeur (_WS). Les moteurs XML et CLR de SQL Server ne prennent pas en charge les sélecteurs de variante (_VSS).
 |UTF-8 (_UTF8)|Permet le stockage des données encodées en UTF-8 dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si cette option n’est pas sélectionnée, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise le format d’encodage non-Unicode par défaut pour les types de données applicables.| 
     
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge les ensembles de classement suivants :    
@@ -113,7 +113,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
 ```    
     
 ###  <a name="Locale_Defn"></a> Paramètres régionaux    
-Les paramètres régionaux sont un ensemble d'informations associées à un emplacement ou à une culture. Il peut s'agir du nom et de l'identificateur de la langue parlée, du script utilisé pour écrire la langue et des conventions culturelles. Les classements peuvent être associés à un ou plusieurs ensembles de paramètres régionaux. Pour plus d'informations, consultez [Locale IDs Assigned by Microsoft (en anglais)](http://msdn.microsoft.com/goglobal/bb964664.aspx).    
+Les paramètres régionaux sont un ensemble d'informations associées à un emplacement ou à une culture. Il peut s'agir du nom et de l'identificateur de la langue parlée, du script utilisé pour écrire la langue et des conventions culturelles. Les classements peuvent être associés à un ou plusieurs ensembles de paramètres régionaux. Pour plus d'informations, consultez [Locale IDs Assigned by Microsoft (en anglais)](https://msdn.microsoft.com/goglobal/bb964664.aspx).    
     
 ###  <a name="Code_Page_Defn"></a> Code Page    
  Une page de codes est le jeu ordonné de caractères d'un script donné dans lequel un index numérique (ou une valeur de point de code) est associé à chaque caractère. Une page de codes Windows est généralement appelée *jeu de caractères* ou *charset*. Les pages de codes permettent d'assurer la prise en charge des jeux de caractères et des dispositions du clavier utilisés par différents paramètres régionaux système Windows.     
@@ -258,10 +258,10 @@ Ces classements sont pris en charge dans les index de moteur de base de données
 |Explique comment modifier la langue des messages d'erreur et des paramètres relatifs à l'utilisation et l'affichage de la date, de l'heure et des devises.|[Définir une langue de session](../../relational-databases/collations/set-a-session-language.md)|    
     
 ##  <a name="Related_Content"></a> Contenu associé    
-[SQL Server Best Practices Collation Change](http://go.microsoft.com/fwlink/?LinkId=113891)    
+[SQL Server Best Practices Collation Change](https://go.microsoft.com/fwlink/?LinkId=113891)    
 [Utiliser le format de caractère Unicode pour importer ou exporter des données &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)        
-["SQL Server Best Practices Migration to Unicode"](http://go.microsoft.com/fwlink/?LinkId=113890) - (Plus de support)   
-[Site web du consortium Unicode](http://go.microsoft.com/fwlink/?LinkId=48619)    
+["SQL Server Best Practices Migration to Unicode"](https://go.microsoft.com/fwlink/?LinkId=113890) - (Plus de support)   
+[Site web du consortium Unicode](https://go.microsoft.com/fwlink/?LinkId=48619)    
     
 ## <a name="see-also"></a> Voir aussi    
 [Classements de base de données autonome](../../relational-databases/databases/contained-database-collations.md)     

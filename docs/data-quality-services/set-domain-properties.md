@@ -14,12 +14,12 @@ ms.assetid: 8a3c88ca-31d6-4f75-9aca-cf027c6d9845
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 910b511796411207151b40933cf82c8ea06b9dab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0c7c01d2ac09ebb1e521dfbf7c762077a3f68379
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821347"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696707"
 ---
 # <a name="set-domain-properties"></a>Définir des propriétés de domaine
 
@@ -43,7 +43,7 @@ ms.locfileid: "47821347"
   
 2.  Définissez des propriétés sur un nouveau domaine après sa création comme décrit dans [Create a Domain](../data-quality-services/create-a-domain.md).  
   
-3.  Cliquez sur **Terminer** pour terminer l'activité de gestion de l'arborescence du domaine, comme décrit dans [End the Domain Management Activity](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
+3.  Cliquez sur **Terminer** pour terminer l'activité de gestion de l'arborescence du domaine, comme décrit dans [End the Domain Management Activity](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
   
 ##  <a name="FollowUp"></a> Suivi : Après avoir défini les propriétés de domaine  
  Après avoir défini les propriétés de domaine, vous pouvez effectuer d'autres tâches de gestion des domaines sur le domaine, effectuer une découverte des connaissances pour ajouter des connaissances au domaine ou ajouter une stratégie de correspondance au domaine. Pour plus d’informations, consultez [Effectuer une découverte des connaissances](../data-quality-services/perform-knowledge-discovery.md), [Gestion d’un domaine](../data-quality-services/managing-a-domain.md) ou [Créer une stratégie de correspondance](../data-quality-services/create-a-matching-policy.md).  

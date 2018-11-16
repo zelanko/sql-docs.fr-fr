@@ -16,12 +16,12 @@ ms.assetid: d330aa4e-6ade-4b09-b376-1b15d6c78f7d
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 6d8de770ff7ef5187db60c359ed0ccea1ab25cc6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 69a2c06ca2a365814dd87b72d0641d91516def95
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47791457"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703597"
 ---
 # <a name="administrators-master-data-services"></a>Administrateurs (Master Data Services)
 
@@ -73,7 +73,7 @@ ms.locfileid: "47791457"
 |Administrateur d’entité|Peut être administrateur d’entité en fonction des autorisations d’administrateur qui lui sont affectées explicitement ou de celles héritées d’un groupe.<br /><br /> Accès uniquement aux zones fonctionnelles auxquelles l'accès est accordé.<br /><br /> Dispose automatiquement de toutes les autorisations sur tous les objets et membres dans l’entité spécifique.<br /><br /> Peut approuver les ensembles de modifications en attente si les modifications de l’entité doivent être approuvées.|  
   
 ## <a name="external-resources"></a>Ressources externes  
- Billet de blog, [Améliorations de sécurité](http://go.microsoft.com/fwlink/p/?LinkId=615376), sur msdn.com.  
+ Billet de blog, [Améliorations de sécurité](https://go.microsoft.com/fwlink/p/?LinkId=615376), sur msdn.com.  
   
 ## <a name="see-also"></a> Voir aussi  
  [Créer un administrateur de modèle &#40;Master Data Services&#41;](../master-data-services/create-a-model-administrator-master-data-services.md)   

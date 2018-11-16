@@ -17,12 +17,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2d514532bc7c3c08a1c31a934c41761ee524c9d7
-ms.sourcegitcommit: c7d3a903eb7f410db3a0230101d24de0af17621a
+ms.openlocfilehash: 748c341960d8bb50a70f06e6473c2eb613b071aa
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48827350"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51675128"
 ---
 # <a name="always-encrypted-database-engine"></a>Always Encrypted (moteur de base de données)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -187,7 +187,7 @@ Spécifications des outils
 
 - SQL Server Management Studio peut déchiffrer les résultats récupérés à partir de colonnes chiffrées si vous vous connectez avec *column encryption setting=enabled* sous l’onglet **Propriétés supplémentaires** de la boîte de dialogue **Se connecter au serveur** . Nécessite au moins SQL Server Management Studio version 17 pour insérer, mettre à jour ou filtrer les colonnes chiffrées.
 
-- Les connexions chiffrées depuis `sqlcmd` requièrent au moins la version 13.1, disponible dans le [Centre de téléchargement](http://go.microsoft.com/fwlink/?LinkID=825643).
+- Les connexions chiffrées depuis `sqlcmd` requièrent au moins la version 13.1, disponible dans le [Centre de téléchargement](https://go.microsoft.com/fwlink/?LinkID=825643).
 
   
 ## <a name="database-permissions"></a>Autorisations de base de données  

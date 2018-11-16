@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e7811bc4c7a58f25379e0565090004e92049ce23
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1bb3879e8f411dc8fa82fe8344df693e8cdaef2a
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47802397"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51672898"
 ---
 # <a name="creating-natively-compiled-stored-procedures"></a>Création de procédures stockées compilées en mode natif
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ Dans l’exemple de code, **NATIVE_COMPILATION** indique que cette procédure st
 |Option|Description|  
 |------------|-----------------|  
 |**SCHEMABINDING**|Les procédures stockées compilées en mode natif doivent être liées au schéma des objets référencés. Autrement dit, les tables référencées par la procédure ne peuvent pas être supprimées. Les tables référencées dans la procédure doivent inclure le nom du schéma, et les caractères génériques (\*) ne sont pas autorisés dans les requêtes (pas de `SELECT * from...`). **SCHEMABINDING** est uniquement prise en charge pour les procédures stockées compilées en mode natif dans cette version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**BEGIN ATOMIC**|Le corps d'une procédure stockée compilée en mode natif doit être un bloc Atomic. Les blocs Atomic garantissent l'exécution atomique de la procédure stockée. Si la procédure est appelée en dehors du contexte d'une transaction active, elle démarre une nouvelle transaction, qui valide la transaction à la fin du bloc Atomic. Deux options sont obligatoires pour les blocs Atomic dans les procédures stockées compilées en mode natif :<br /><br /> **TRANSACTION ISOLATION LEVEL**. Consultez [Niveaux d’isolement des transactions pour les tables mémoire optimisées](http://msdn.microsoft.com/library/8a6a82bf-273c-40ab-a101-46bd3615db8a) pour connaître les niveaux d’isolement pris en charge.<br /><br /> **LANGUAGE**. Le langage de la procédure stockée doit être défini sur l'un des langages ou des alias de langage disponibles.|  
+|**BEGIN ATOMIC**|Le corps d'une procédure stockée compilée en mode natif doit être un bloc Atomic. Les blocs Atomic garantissent l'exécution atomique de la procédure stockée. Si la procédure est appelée en dehors du contexte d'une transaction active, elle démarre une nouvelle transaction, qui valide la transaction à la fin du bloc Atomic. Deux options sont obligatoires pour les blocs Atomic dans les procédures stockées compilées en mode natif :<br /><br /> **TRANSACTION ISOLATION LEVEL**. Consultez [Niveaux d’isolement des transactions pour les tables mémoire optimisées](https://msdn.microsoft.com/library/8a6a82bf-273c-40ab-a101-46bd3615db8a) pour connaître les niveaux d’isolement pris en charge.<br /><br /> **LANGUAGE**. Le langage de la procédure stockée doit être défini sur l'un des langages ou des alias de langage disponibles.|  
   
 ## <a name="see-also"></a> Voir aussi  
  [Procédures stockées compilées en mode natif](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)  

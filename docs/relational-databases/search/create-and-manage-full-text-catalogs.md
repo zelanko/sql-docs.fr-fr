@@ -15,12 +15,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1367695210017990a780835c92cdae68500f9b47
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 727ad77d1e757014f723d1ca1a10b9c5502cad50
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770057"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51681257"
 ---
 # <a name="create-and-manage-full-text-catalogs"></a>Créer et gérer des catalogues de texte intégral
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ GO
   
 3.  Sélectionnez **Nouveau catalogue de recherche en texte intégral**.  
   
-4.  Dans la boîte de dialogue **Nouveau catalogue de recherche en texte intégral**, précisez les informations relatives au catalogue que vous recréez. Pour plus d’informations, consultez [Recherche en texte intégral &#40;page Général&#41;](http://msdn.microsoft.com/library/5ed6f7cd-d9af-4439-9f33-fc935b883d91).  
+4.  Dans la boîte de dialogue **Nouveau catalogue de recherche en texte intégral**, précisez les informations relatives au catalogue que vous recréez. Pour plus d’informations, consultez [Recherche en texte intégral &#40;page Général&#41;](https://msdn.microsoft.com/library/5ed6f7cd-d9af-4439-9f33-fc935b883d91).  
   
     > [!NOTE]  
     >  Les ID de catalogues de texte intégral commencent à 00005 et sont incrémentés d'une unité à chaque fois qu'un catalogue est créé.  

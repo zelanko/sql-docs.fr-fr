@@ -1,5 +1,5 @@
 ---
-title: Groupe de membres d’attribut (discrétisation) | Documents Microsoft
+title: Regrouper des membres d’attribut (discrétisation) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,20 +9,20 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: edf1f554a4e7829883263198b132f479b0001d5d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 622258222ef4f9dc8e4e4944daf584bc5780ea6e
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021756"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813712"
 ---
-# <a name="attribute-properties---group-attribute-members"></a>Propriétés - groupe attribut des membres d’attribut
+# <a name="attribute-properties---group-attribute-members"></a>Propriétés d’attribut - Grouper des membres d’attributs
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Un groupe de membres est une collection de membres de dimension contigus générée par le système. Dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], les membres d’un attribut peuvent être regroupés en plusieurs groupes de membres via un processus nommé discrétisation. Un niveau dans une hiérarchie contient soit des groupes de membres, soit des membres, mais pas les deux. Lorsque les utilisateurs professionnels parcourent un niveau qui contient des groupes de membres, ils voient les noms et les valeurs de cellule de ces groupes. Les membres générés par [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pour prendre en charge les groupes de membres s'appellent membres de regroupement et se présentent comme des membres ordinaires.  
   
  La propriété **DiscretizationMethod** au niveau d’un attribut détermine la façon dont les membres sont regroupés.  
   
-|Définition de**DiscretizationMethod** | Description|  
+|Définition de**DiscretizationMethod** |Description|  
 |--------------------------------------|-----------------|  
 |**None**|Affiche les membres.|  
 |**Automatic**|Sélectionne la méthode qui représente le mieux les données : soit la méthode **EqualAreas** , soit la méthode **Clusters** .|  
@@ -46,7 +46,7 @@ ms.locfileid: "34021756"
   
  `<First definition> ::= <Name expression>`  
   
- `<Intermediate defintion> ::= <Name expression>`  
+ `<Intermediate definition> ::= <Name expression>`  
   
  `<Last definition> ::= <Name expression>`  
   
@@ -98,6 +98,6 @@ ms.locfileid: "34021756"
 -   Si la table de dimension d'une dimension qui contient des groupes de membres est mise à jour et que la dimension fait ensuite l'objet d'un traitement complet, un nouveau jeu de groupes de membres est généré. Les noms et les enfants des nouveaux groupes de membres peuvent être différents de ceux des anciens groupes de membres.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Attributs et hiérarchies d’attributs](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)  
+ [Attributs et hiérarchies d'attributs](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)  
   
   

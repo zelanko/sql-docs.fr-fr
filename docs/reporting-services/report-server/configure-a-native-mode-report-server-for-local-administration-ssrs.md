@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 312c6bb8-b3f7-4142-a55f-c69ee15bbf52
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7aee55b262ab1a06f99325f977fe5e5be014f5eb
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: b3cb1aef270d2fb512d6234227b5ed6ab8b09a51
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021903"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812862"
 ---
 # <a name="configure-a-native-mode-report-server-for-local-administration-ssrs"></a>Configurer un serveur de rapports en mode natif pour l'administration locale (SSRS)
   Le déploiement d'un serveur de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sur l'un des systèmes d'exploitation suivants requiert davantage d'étapes de configuration si vous souhaitez administrer l'instance du serveur de rapports localement. Cette rubrique explique comment configurer le serveur de rapports pour l'administration locale. Si vous n’avez pas encore installé ou configuré le serveur de rapports, consultez [Installer SQL Server 2016 avec l’Assistant Installation &#40;programme d’installation&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) et [Gérer un serveur de rapports Reporting Services (SSRS) en mode natif](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md).  
@@ -87,7 +87,7 @@ ms.locfileid: "50021903"
   
 8.  Cliquez sur **Sites**.  
   
-9. Ajoutez `http://<your-server-name>`.  
+9. Ajoutez `https://<your-server-name>`.  
   
 10. Décochez la case **Nécessite la certification du serveur (https:) pour tous les sites dans cette zone** si vous n’utilisez pas HTTPS pour le site par défaut.  
   
@@ -111,7 +111,7 @@ ms.locfileid: "50021903"
   
 ###  <a name="bkmk_configure_site_settings"></a> Paramètres du site du gestionnaire de rapports  
   
-1.  Ouvrez votre navigateur avec des privilèges d'administrateur et accédez au gestionnaire de rapports, `http://<server name>/reports`.  
+1.  Ouvrez votre navigateur avec des privilèges d'administrateur et accédez au gestionnaire de rapports, `https://<server name>/reports`.  
   
 2.  Cliquez sur **Paramètres du site** dans l'angle supérieur de la page d'accueil.  
   

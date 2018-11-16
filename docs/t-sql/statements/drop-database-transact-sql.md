@@ -26,12 +26,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0b46658c52cbd40b1775103e07e7dbe7ca2e3f90
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 884474e5fd76700805125bbf0cf2f8c8238c0878
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47636117"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703217"
 ---
 # <a name="drop-database-transact-sql"></a>DROP DATABASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -54,7 +54,7 @@ DROP DATABASE database_name [;]
   
 ## <a name="arguments"></a>Arguments  
  *IF EXISTS*  
- **S’applique à**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu’à [version actuelle](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+ **S'applique à**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] via la [version actuelle](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
  Supprime, de manière conditionnelle, la base de données uniquement si elle existe déjà.  
   
@@ -76,7 +76,7 @@ DROP DATABASE database_name [;]
  Si vous supprimez une base de données, celle-ci l'est également d'une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il en est de même pour les fichiers disque physiques utilisés par la base de données. Si la base de données ou l'un de ses fichiers est hors connexion lors de la suppression, les fichiers disque ne sont pas supprimés. Ces fichiers peuvent être supprimés manuellement à l'aide de l'Explorateur Windows. Pour supprimer une base de données du serveur actif sans supprimer les fichiers du système de fichiers, utilisez [sp_detach_db](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md).  
   
 > [!WARNING]  
->  Vous pouvez supprimer une base de données qui est associée à des sauvegardes FILE_SNAPSHOT, mais les fichiers de base de données qui sont associés à des instantanés ne sont pas supprimés pour éviter l’invalidation des sauvegardes qui font référence à ces fichiers. Le fichier est tronqué, mais il n’est pas supprimé physiquement afin de conserver les sauvegardes FILE_SNAPSHOT. Pour plus d’informations, consultez [Sauvegarde et restauration SQL Server avec le service de stockage d’objets blob Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). **S’applique à** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu’à la [version actuelle](http://go.microsoft.com/fwlink/p/?LinkId=299658).  
+>  Vous pouvez supprimer une base de données qui est associée à des sauvegardes FILE_SNAPSHOT, mais les fichiers de base de données qui sont associés à des instantanés ne sont pas supprimés pour éviter l’invalidation des sauvegardes qui font référence à ces fichiers. Le fichier est tronqué, mais il n’est pas supprimé physiquement afin de conserver les sauvegardes FILE_SNAPSHOT. Pour plus d’informations, consultez [Sauvegarde et restauration SQL Server avec le service de stockage d’objets blob Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). **S’applique à** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu’à la [version actuelle](https://go.microsoft.com/fwlink/p/?LinkId=299658).  
   
 ### [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  Si vous supprimez un instantané de base de données, celui-ci l'est également d'une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il en est de même pour les fichiers partiellement alloués du système de fichiers physiques NTFS utilisés par l'instantané. Pour plus d’informations sur l’utilisation des fichiers partiellement alloués par les instantanés de base de données, consultez [Instantanés de base de données &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md). La suppression d'un instantané de base de données efface le cache de plan pour l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cette opération entraîne la recompilation de tous les plans d'exécution ultérieurs et peut entraîner une baisse temporaire et brutale des performances des requêtes. Pour chaque mémoire cache effacée dans le cache de plan, le journal des erreurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contient le message d'information suivant : « [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a rencontré %d occurrence(s) de vidages de mémoire cache pour la mémoire cache '%s' (partie du cache du plan) en raison d'opérations de maintenance ou de reconfiguration de base de données ». Ce message est enregistré toutes les cinq minutes si le cache est vidé au cours de cet intervalle de temps.  

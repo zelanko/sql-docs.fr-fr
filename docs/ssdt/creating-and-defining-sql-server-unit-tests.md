@@ -14,12 +14,12 @@ ms.assetid: 3c082177-a2b1-4fde-8833-b49b2a351815
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1ed68e2510169ee0c56a3dfbf2e95c2cb164412b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 14d242dbf69e223b5e56b575f09e55e1f3ba6964
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688587"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51681277"
 ---
 # <a name="creating-and-defining-sql-server-unit-tests"></a>Création et définition de tests unitaires SQL Server
 Exécutez des tests unitaires SQL Server pour vérifier si les modifications apportées à un ou plusieurs objets de base de données d'un schéma empêchent le fonctionnement de certaines fonctionnalités existantes dans une application de base de données. Ces tests complètent les tests unitaires créés par les développeurs de logiciels. Vous devez exécuter les deux types de tests pour vérifier le comportement de votre application.  
@@ -46,7 +46,7 @@ Dans le tableau suivant, vous pouvez trouver des descriptions de tâches courant
 [Exécuter des tests unitaires SQL Server](../ssdt/running-sql-server-unit-tests.md)  
 Après avoir créé les tests unitaires SQL Server, exécutez-les dans la fenêtre Affichage des tests, le Concepteur de test unitaire SQL Server ou à l'aide de Team Foundation Build.  
   
-[Scénario : définir des conditions de test personnalisées pour les tests unitaires de base de données](http://msdn.microsoft.com/library/dd193282(VS.100).aspx)  
+[Scénario : définir des conditions de test personnalisées pour les tests unitaires de base de données](https://msdn.microsoft.com/library/dd193282(VS.100).aspx)  
 Créez une condition de test personnalisée afin de tester un comportement que les conditions de test par défaut ne peuvent pas vérifier.  
   
 ## <a name="see-also"></a> Voir aussi  

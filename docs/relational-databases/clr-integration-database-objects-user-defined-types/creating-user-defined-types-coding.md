@@ -31,12 +31,12 @@ ms.assetid: 1e5b43b3-4971-45ee-a591-3f535e2ac722
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a0647d1e0f7dd082b3ce3aab668d8af8d5673efb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b3e8921e230f581f60c96e6443d4fa5b71a417b3
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47795767"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661559"
 ---
 # <a name="creating-user-defined-types---coding"></a>Création de types définis par l’utilisateur - Codage
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -621,7 +621,7 @@ public void Rotate(double anglex, double angley, double anglez)
   
  L'objectif du remplissage est de s'assurer que la culture est complètement séparée de la valeur monétaire, de sorte que lorsque deux types définis par l'utilisateur sont comparés dans le code [!INCLUDE[tsql](../../includes/tsql-md.md)], les octets de culture soient comparés à des octets de culture et les valeurs d'octets de monnaie soient comparées à des valeurs d'octets de monnaie.  
   
- Pour le code complet pour le **devise** UDT, suivez les instructions d’installation du CLR des exemples dans [exemples pour le moteur de base de données SQL Server](http://msftengprodsamples.codeplex.com/).  
+ Pour le code complet pour le **devise** UDT, suivez les instructions d’installation du CLR des exemples dans [exemples pour le moteur de base de données SQL Server](https://msftengprodsamples.codeplex.com/).  
   
 ### <a name="currency-attributes"></a>Attributs Currency  
  Le **devise** UDT est défini avec les attributs suivants.  
@@ -745,7 +745,7 @@ public void Read(System.IO.BinaryReader r)
 }  
 ```  
   
- Pour le code complet pour le **devise** UDT, consultez [exemples pour le moteur de base de données SQL Server](http://msftengprodsamples.codeplex.com/).  
+ Pour le code complet pour le **devise** UDT, consultez [exemples pour le moteur de base de données SQL Server](https://msftengprodsamples.codeplex.com/).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Création d’un type défini par l’utilisateur](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types.md)  

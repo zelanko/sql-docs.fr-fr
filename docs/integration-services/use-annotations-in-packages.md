@@ -15,19 +15,19 @@ ms.assetid: 48c8ed9a-b10d-490c-9ba7-4b77aa44e3dd
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8222a9d4ccf71b012c41a7a5059a46ea3b42e060
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 90788ae0c29e293db84f3b6f60fd93af41b99d8b
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645837"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51637701"
 ---
 # <a name="use-annotations-in-packages"></a>Utiliser des annotations dans les packages
   Le concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)] propose des annotations que vous pouvez utiliser afin de faire en sorte que les packages s'auto-documentent et soient ainsi plus faciles à comprendre et à gérer. Vous pouvez ajouter des annotations au flux de contrôle, au flux de données et aux surfaces de dessin du gestionnaire d'événements du concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)] . Les annotations peuvent contenir n'importe quel type de texte et sont utiles pour ajouter des étiquettes, des commentaires et autres informations descriptives à un package. Les annotations sont disponibles uniquement au moment de la conception. Par exemple, elles ne sont pas écrites dans les fichiers journaux.  
   
  Lorsque vous appuyez sur Entrée, le texte est renvoyé à la ligne suivante. La taille de la zone d'annotation augmente automatiquement lorsque vous ajoutez des lignes de texte supplémentaires. Les annotations de package sont conservées en texte clair dans la section CDATA du fichier de package.  
   
- Pour plus d’informations sur les modifications du format du fichier de package, consultez [Format de package SSIS](http://msdn.microsoft.com/library/cfe0e5dc-5be3-4222-b721-fe83665edd94).  
+ Pour plus d’informations sur les modifications du format du fichier de package, consultez [Format de package SSIS](https://msdn.microsoft.com/library/cfe0e5dc-5be3-4222-b721-fe83665edd94).  
   
  Lorsque vous enregistrez le package, le concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)] enregistre les annotations dans le package.  
   

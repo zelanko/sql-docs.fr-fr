@@ -10,19 +10,19 @@ ms.assetid: a93667ad-e856-405a-9328-065331b7ab7b
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 5ad1d1c83e2b736be9ea0dde4067316f08dd0646
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: f1b3d7cf26ad49a690d3c93dcf8b742c28caa303
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419144"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701218"
 ---
 # <a name="tutorials-for-sql-server"></a>Didacticiels pour SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] fournit des didacticiels pour vous aider à apprendre les nouvelles technologies et fonctionnalités. Les didacticiels pour les versions antérieures peuvent généralement être utilisés avec les versions plus récentes. Quand des didacticiels traitent d’une fonctionnalité plus récente, ils indiquent la version minimale nécessaire pour suivre le didacticiel.  
      
 -   Si un didacticiel utilise une des bases de données [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)], vous devez télécharger et utiliser la version la plus récente disponible auprès de CodePlex. Pour plus d’informations, consultez [Bases de données AdventureWorks et scripts pour SQL Server 2016 CTP3](https://www.microsoft.com/download/details.aspx?id=49502).    
--   Téléchargez un classeur [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] et des rapports [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] à utiliser avec des didacticiels sur [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] , accédez à [Exemples Power View pour SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=220734).  
+-   Téléchargez un classeur [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] et des rapports [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] à utiliser avec des didacticiels sur [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] , accédez à [Exemples Power View pour SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=220734).  
 - Découvrez le nouvel exemple [Wide World Importers](../sample/world-wide-importers/wide-world-importers-documentation.md) disponible dans le dépôt GitHub [sql-server-samples](https://github.com/Microsoft/sql-server-samples) . 
 
  
@@ -32,7 +32,7 @@ ms.locfileid: "49419144"
 |--------------|---------------|  
 |[Didacticiels pour Analysis Services &#40;SSAS&#41;](../analysis-services/analysis-services-tutorials-ssas.md)|Apprenez à développer et à déployer des modèles tabulaires ou multidimensionnels [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Apprenez également à utiliser des outils tels que PowerPivot pour analyser les données dans les modèles.|  
 |[Didacticiels sur le moteur de base de données](../relational-databases/database-engine-tutorials.md)|Apprenez à vous connecter à une instance du moteur de base de données, puis à créer et à exécuter des instructions Transact-SQL.|  
-|[Didacticiels sur la Gestion des informations d'entreprise](http://msdn.microsoft.com/library/8745dc80-193d-4de0-9f17-ba648ab1e81c)|Apprenez comment gérer les informations dans une entreprise à l'aide des technologies Microsoft EIM.|  
+|[Didacticiels sur la Gestion des informations d'entreprise](https://msdn.microsoft.com/library/8745dc80-193d-4de0-9f17-ba648ab1e81c)|Apprenez comment gérer les informations dans une entreprise à l'aide des technologies Microsoft EIM.|  
 |[Didacticiels sur Integration Services](../integration-services/integration-services-tutorials.md)|Découvrez comment créer et déployer des packages [!INCLUDE[ssIS](../includes/ssis-md.md)] .|  
 |[Didacticiels sur la réplication](../relational-databases/replication/replication-tutorials.md)|Apprenez comment installer et exécuter les topologies de réplication à l'aide de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].|  
 |[Didacticiels sur Reporting Services &#40;SSRS&#41;](../reporting-services/reporting-services-tutorials-ssrs.md)|Découvrez comment créer des rapports de base et des abonnements.|  
@@ -44,7 +44,7 @@ ms.locfileid: "49419144"
   
  - [Didacticiels pour SQL Server 2012](https://msdn.microsoft.com/library/hh231699(v=sql.110).aspx)  
   
- - [Didacticiels pour SQL Server 2008 R2](http://msdn.microsoft.com/library/ms167593.aspx)   
+ - [Didacticiels pour SQL Server 2008 R2](https://msdn.microsoft.com/library/ms167593.aspx)   
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 

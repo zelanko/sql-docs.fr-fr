@@ -11,26 +11,26 @@ ms.assetid: 6a0c9b6a-cf71-4311-82f2-12c445f63935
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d5233b6dc234f09bca8632e10642deafd5939010
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fcaee46bd8a7b84d72fda23d3bf7e5ffcb99050d
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47805457"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51660120"
 ---
 # <a name="sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service"></a>Sauvegarde et restauration SQL Server avec le service de stockage d’objets blob Microsoft Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   ![Graphique de sauvegarde vers le service de stockage d’objets blob Azure](../../relational-databases/backup-restore/media/backup-to-azure-blob-graphic.png "Graphique de sauvegarde vers le service de stockage d’objets blob Azure")  
   
- Cette rubrique présente les sauvegardes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vers le [service de stockage d’objets blob Microsoft Azure](http://www.windowsazure.com/develop/net/how-to-guides/blob-storage/)ainsi que la restauration à partir de ce service. Elle résume également les avantages liés à l’utilisation du service d’objets blob Microsoft Azure pour stocker des sauvegardes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ Cette rubrique présente les sauvegardes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vers le [service de stockage d’objets blob Microsoft Azure](https://www.windowsazure.com/develop/net/how-to-guides/blob-storage/)ainsi que la restauration à partir de ce service. Elle résume également les avantages liés à l’utilisation du service d’objets blob Microsoft Azure pour stocker des sauvegardes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  SQL Server prend en charge le stockage des sauvegardes dans le service de stockage d’objets blob Microsoft Azure comme suit :  
   
 -   **Gérer vos sauvegardes dans Microsoft Azure :** à l’aide des mêmes méthodes que celles utilisées pour sauvegarder sur disque (DISK) et sur bande (TAPE), réalisez maintenant vos sauvegardes dans le stockage Microsoft Azure en spécifiant une URL comme destination de sauvegarde. Utilisez cette fonctionnalité pour sauvegarder ou configurer manuellement votre propre stratégie de sauvegarde comme vous le feriez pour un stockage local ou d'autres options hors site. Cette fonctionnalité est également connue sous le nom **Sauvegarde SQL Server vers une URL**. Pour plus d'informations, consultez [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md). Cette fonctionnalité est disponible dans SQL Server 2012 SP1 CU2 ou version ultérieure. Cette fonctionnalité a été améliorée dans [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] pour fournir des performances et des fonctionnalités supplémentaires via l’utilisation d’objets blob de blocs, de signatures d’accès partagé et d’entrelacements.  
   
     > [!NOTE]  
-    >  Pour les versions SQL Server antérieures à SQL Server 2012 SP1 CU2, utilisez le complément SQL Server Backup to Microsoft Azure Tool afin de créer rapidement et facilement des sauvegardes dans le stockage Microsoft Azure. Pour plus d'informations, consultez le [centre de téléchargement](http://go.microsoft.com/fwlink/?LinkID=324399).  
+    >  Pour les versions SQL Server antérieures à SQL Server 2012 SP1 CU2, utilisez le complément SQL Server Backup to Microsoft Azure Tool afin de créer rapidement et facilement des sauvegardes dans le stockage Microsoft Azure. Pour plus d'informations, consultez le [centre de téléchargement](https://go.microsoft.com/fwlink/?LinkID=324399).  
   
 -   **Sauvegardes d’instantanés de fichiers pour les fichiers de base de données dans le stockage d’objets blob Azure** Les sauvegardes d’instantanés de fichiers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournissent, via l’utilisation d’instantanés Azure, des sauvegardes et des restaurations quasi instantanées des fichiers de base de données stockés à l’aide du service de stockage d’objets blob Azure. Cette fonctionnalité vous permet de simplifier vos stratégies de sauvegarde et de restauration et prend en charge la limite de restauration dans le temps. Pour plus d’informations, consultez [Sauvegarde d’instantanés de fichiers pour les fichiers de base de données dans Azure](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md). Cette fonctionnalité est disponible dans SQL Server 2016 ou version ultérieure.  
   
@@ -56,11 +56,11 @@ ms.locfileid: "47805457"
 ##  <a name="Billing"></a> Considérations sur la facturation Microsoft Azure :  
  En comprenant les coûts de stockage Microsoft Azure, vous pouvez prévoir le coût de création et de stockage des sauvegardes dans Microsoft Azure.  
   
- La [Calculatrice Microsoft Azure](http://go.microsoft.com/fwlink/?LinkId=277060) peut vous aider à évaluer les coûts.  
+ La [Calculatrice Microsoft Azure](https://go.microsoft.com/fwlink/?LinkId=277060) peut vous aider à évaluer les coûts.  
   
- **Stockage :** les tarifs sont basés sur l'espace utilisé et sont calculés sur une échelle graduée en fonction du niveau de redondance. Pour plus d’informations, consultez la section **Gestion des données** de l’article [Détails de la tarification](http://go.microsoft.com/fwlink/?LinkId=277059) .  
+ **Stockage :** les tarifs sont basés sur l'espace utilisé et sont calculés sur une échelle graduée en fonction du niveau de redondance. Pour plus d’informations, consultez la section **Gestion des données** de l’article [Détails de la tarification](https://go.microsoft.com/fwlink/?LinkId=277059) .  
   
- **Transferts de données :** les transferts de données entrants vers Microsoft Azure sont gratuits. Les transferts sortants sont facturés en fonction de l'utilisation de la bande passante et calculés selon une échelle graduée spécifique à la région. Pour plus d'informations, consultez la section [Transferts de données](http://go.microsoft.com/fwlink/?LinkId=277061) de l'article Détails de la tarification.  
+ **Transferts de données :** les transferts de données entrants vers Microsoft Azure sont gratuits. Les transferts sortants sont facturés en fonction de l'utilisation de la bande passante et calculés selon une échelle graduée spécifique à la région. Pour plus d'informations, consultez la section [Transferts de données](https://go.microsoft.com/fwlink/?LinkId=277061) de l'article Détails de la tarification.  
   
 ## <a name="see-also"></a> Voir aussi  
 

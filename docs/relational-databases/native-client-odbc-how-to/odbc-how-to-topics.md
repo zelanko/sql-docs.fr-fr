@@ -12,36 +12,36 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7a9cf9cdb65ba9fb405b17ffec01378dc4184a5c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 04f701dacfd5a61dcec8f1d2ca12dad80258bcd8
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688767"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661228"
 ---
 # <a name="odbc-how-to-topics"></a>Rubriques de procédures ODBC
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  Pour utiliser le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC, vous devez être en mesure de créer des sources de données ODBC et vérifier que le serveur dispose de la version correcte des procédures stockées du catalogue. Pour coder une application ODBC qui utilise SQL Server, vous devez savoir comment allouer des handles ODBC, définir des attributs, vous connecter à une instance de SQL Server, exécuter des requêtes et traiter les résultats.  
+  Pour utiliser le pilote ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vous devez être en mesure de créer des sources de données ODBC et de vous assurer que le serveur a la version correcte des procédures stockées de catalogue. Pour coder une application ODBC qui utilise SQL Server, vous devez savoir comment allouer des handles ODBC, définir des attributs, vous connecter à une instance de SQL Server, exécuter des requêtes et traiter les résultats.  
   
 ## <a name="in-this-section"></a>Dans cette section  
   
--   [Rubriques des procédures relatives à la configuration du pilote ODBC SQL Server](http://msdn.microsoft.com/library/e26fbc87-9483-4a2e-99f1-bf52a58360db)  
+-   [Rubriques des procédures relatives à la configuration du pilote ODBC SQL Server](https://msdn.microsoft.com/library/e26fbc87-9483-4a2e-99f1-bf52a58360db)  
   
 -   [Allouer des Handles et se connecter à SQL Server &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/allocate-handles-and-connect-to-sql-server-odbc.md)  
   
 -   [Rubriques de procédures relatives à l’exécution de requêtes &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
   
--   [Traitement des rubriques de procédures de résultats &#40;ODBC&#41;](http://msdn.microsoft.com/library/772d9064-c91d-4cac-8b60-fcc16bf76e10)  
+-   [Traitement des rubriques de procédures de résultats &#40;ODBC&#41;](https://msdn.microsoft.com/library/772d9064-c91d-4cac-8b60-fcc16bf76e10)  
   
 -   [À l’aide des rubriques de procédures de curseurs &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/cursors/using-cursors-how-to-topics-odbc.md)  
   
 -   [Utiliser Microsoft Distributed Transaction Coordinator &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-microsoft-distributed-transaction-coordinator-odbc.md)  
   
--   [Les rubriques de procédures de procédures stockées en cours d’exécution &#40;ODBC&#41;](http://msdn.microsoft.com/library/c2220182-a23d-4475-b353-77a77ab613d6)  
+-   [Les rubriques de procédures de procédures stockées en cours d’exécution &#40;ODBC&#41;](https://msdn.microsoft.com/library/c2220182-a23d-4475-b353-77a77ab613d6)  
   
--   [Gestion des rubriques de procédures des colonnes text et image &#40;ODBC&#41;](http://msdn.microsoft.com/library/f97333ad-e2ab-4d26-9395-741ba25f2c28)  
+-   [Gestion des rubriques de procédures des colonnes text et image &#40;ODBC&#41;](https://msdn.microsoft.com/library/f97333ad-e2ab-4d26-9395-741ba25f2c28)  
   
 -   [Rubriques Comment de performances de pilote ODBC de profilage &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
   

@@ -11,12 +11,12 @@ ms.assetid: 9216f18c-1762-4f2d-8c22-bd0ab7107555
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a6c5d95e970587625eb9a62f5cc86519466af049
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 51e6bc7f3bb1a1326245a4e7cfee67402d816a8e
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47795747"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638107"
 ---
 # <a name="lesson-6-using-parameters-with-the-project-deployment-model-in-ssis"></a>Leçon 6 : Utilisation des paramètres avec le modèle de déploiement de projet dans SSIS
 SQL Server 2012 introduit un nouveau modèle de déploiement qui permet de déployer vos projets sur le serveur Integration Services. Le serveur Integration Services vous permet de gérer et d'exécuter les packages, et de configurer leurs valeurs d'exécution.  
@@ -28,7 +28,7 @@ Dans cette leçon, vous allez modifier le package que vous avez créé dans [Le�
 Quand vous réexécutez le package, le service Integration Services utilise le paramètre pour donner sa valeur à la variable, qui à son tour met à jour la propriété Répertoire. Ainsi, le package itère dans les fichiers du nouveau dossier de données spécifié par la valeur du paramètre, et non du dossier défini dans le fichier de configuration du package.  
   
 > [!IMPORTANT]  
-> Pour suivre ce didacticiel, vous devez disposer de l'exemple de base de données **AdventureWorksDW2012** . Pour plus d’informations sur l’installation et le déploiement de **AdventureWorksDW2012**, consultez [Considérations relatives à l’installation d’exemples de bases de données et d’exemples de code SQL Server](http://technet.microsoft.com/library/ms161556%28v=sql.105%29).  
+> Pour suivre ce didacticiel, vous devez disposer de l'exemple de base de données **AdventureWorksDW2012** . Pour plus d’informations sur l’installation et le déploiement de **AdventureWorksDW2012**, consultez [Considérations relatives à l’installation d’exemples de bases de données et d’exemples de code SQL Server](https://technet.microsoft.com/library/ms161556%28v=sql.105%29).  
   
 ## <a name="lesson-tasks"></a>Tâches de la leçon  
 Cette leçon contient les tâches suivantes :  

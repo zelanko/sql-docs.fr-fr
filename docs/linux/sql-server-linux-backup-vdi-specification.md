@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 0250ba2b-8cdd-450e-9109-bf74f70e1247
-ms.openlocfilehash: f29a133ce422b5e6fd04bcd6a78bd036e1f447ee
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f417002cc3a778b0406cc56e763b8d7b4931b0c6
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806177"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51660139"
 ---
 # <a name="sql-server-on-linux-vdi-client-sdk-specification"></a>SQL Server sur le client Linux VDI spécification du Kit de développement logiciel
 
@@ -30,9 +30,9 @@ Ce document décrit les interfaces fournies par le serveur SQL Server sur le SDK
 - SQL Server sur Linux ne prend pas en charge les instances nommées pour les références au nom d’instance ont été supprimées. 
 - La bibliothèque partagée est implémentée dans libsqlvdi.so installés en /opt/mssql/lib/libsqlvdi.so
 
-Ce document est un complément à **vbackup.chm** qui détaille la spécification d’infrastructure VDI de Windows. Téléchargez le [spécification d’infrastructure VDI de Windows](http://www.microsoft.com/download/details.aspx?id=17282).
+Ce document est un complément à **vbackup.chm** qui détaille la spécification d’infrastructure VDI de Windows. Téléchargez le [spécification d’infrastructure VDI de Windows](https://www.microsoft.com/download/details.aspx?id=17282).
 
-Examinez également l’exemple de solution sauvegarde VDI sur le [référentiel GitHub d’exemples SQL Server](http://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sqlvdi-linux).
+Examinez également l’exemple de solution sauvegarde VDI sur le [référentiel GitHub d’exemples SQL Server](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sqlvdi-linux).
 
 ## <a name="user-permissions-setup"></a>Configuration des autorisations utilisateur
 
@@ -106,7 +106,7 @@ Ce chapitre contient des descriptions de chacune de ces fonctions du client. Les
 
 | Paramètres | Argument | Explication
 | ----- | ----- | ------ |
-| | **Délai d’attente** | Il s’agit du délai d’attente en millisecondes. Utiliser l’infini ou n’importe quel entier négatif pour empêcher le délai d’attente.
+| | **timeout** | Il s’agit du délai d’attente en millisecondes. Utiliser l’infini ou n’importe quel entier négatif pour empêcher le délai d’attente.
 | | **cfg** | L’exécution aboutit, il contient la configuration sélectionnée par le serveur. Pour plus d’informations, consultez « Configuration » plus loin dans ce document.
 
 | Valeurs de retour | Argument | Explication
@@ -161,7 +161,7 @@ Si cette fonction n’aboutit pas, une valeur null est retournée via le ppVirtu
 
 | Paramètres | Argument | Explication
 | ----- | ----- | ------ |
-| |**Délai d’attente** |Il s’agit de la durée d’attente, en millisecondes. Utilisez finie pour attendre indéfiniment. Utilisez 0 pour l’interrogation d’une commande. VD_E_TIMEOUT est retournée si aucune commande n’est actuellement disponible. Si le délai d’attente se produit, le client décide de l’action suivante.
+| |**timeout** |Il s’agit de la durée d’attente, en millisecondes. Utilisez finie pour attendre indéfiniment. Utilisez 0 pour l’interrogation d’une commande. VD_E_TIMEOUT est retournée si aucune commande n’est actuellement disponible. Si le délai d’attente se produit, le client décide de l’action suivante.
 | |**Délai d'expiration** |Il s’agit de la durée d’attente, en millisecondes. Utilisez finie ou une valeur négative pour attendre indéfiniment. Utilisez 0 pour l’interrogation d’une commande. VD_E_TIMEOUT est retournée si aucune commande n’est disponible avant l’expiration du délai. Si le délai d’expiration se produit, le client décide de l’action suivante.
 | |**ppCmd** |Lorsqu’une commande est retournée avec succès, le paramètre retourne l’adresse d’une commande à exécuter. La mémoire retournée est en lecture seule. Lorsque la commande est terminée, ce pointeur est passé à la routine CompleteCommand. Pour plus d’informations sur chaque commande, consultez « Commandes » plus loin dans ce document.
         
@@ -195,7 +195,7 @@ Lorsque cette routine doit bloquer à attendre une commande, le thread reste dan
 | |**pCmd** |Il s’agit de l’adresse d’une commande précédemment retournée à partir de ClientVirtualDevice::GetCommand.
 | |**completionCode** |Il s’agit d’un code d’état qui indique l’état d’achèvement. Ce paramètre doit être retourné pour toutes les commandes. Le code retourné doit convenir à la commande en cours d’exécution. ERROR_SUCCESS est utilisé dans tous les cas pour désigner une commande exécutée avec succès. Pour obtenir la liste complète des codes possibles, consultez le fichier, vdierror.h. Une liste standard des codes d’état pour chaque commande apparaît dans les « Commandes » plus loin dans ce document.
 | |**bytesTransferred** |Il s’agit du nombre d’octets transférés avec succès. Celui-ci est renvoyé uniquement pour le transfert de données commandes de lecture et d’écriture.
-| |**Position** |Il s’agit d’une réponse à la commande GetPosition uniquement.
+| |**position** |Il s’agit d’une réponse à la commande GetPosition uniquement.
         
 | Valeurs de retour | Argument | Explication
 | ----- | ----- | ------ |
@@ -218,7 +218,7 @@ Lorsque cette routine doit bloquer à attendre une commande, le thread reste dan
 
 | Paramètres | Argument | Explication
 | ----- | ----- | ------ |
-| |None | Non applicable
+| |Aucun | Non applicable
         
 | Valeurs de retour | Argument | Explication
 | ----- | ----- | ------ |
@@ -238,7 +238,7 @@ Lorsque cette routine doit bloquer à attendre une commande, le thread reste dan
 
 | Paramètres | Argument | Explication
 | ----- | ----- | ------ |
-| |None |Non applicable
+| |Aucun |Non applicable
         
 | Valeurs de retour | Argument | Explication
 | ----- | ----- | ------ |

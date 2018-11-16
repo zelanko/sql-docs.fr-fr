@@ -17,12 +17,12 @@ ms.assetid: 30e06a7d-75e9-44e2-bca3-b3b0c4a33f61
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e2ec8e76d8973216b58dc1472077554e51867e86
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 93abc35fca7d04d1a8fffb84de93b8739685818f
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47738007"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697887"
 ---
 # <a name="create-a-new-sql-server-failover-cluster-setup"></a>Créer un cluster de basculement SQL Server (programme d'installation)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "47738007"
   
  Pour plus d’informations sur une installation distante, consultez [Mises à niveau de la version et de l’édition prises en charge](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md).  
   
- Pour plus d’informations sur l’installation d’ [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] dans un cluster de basculement Windows, consultez [Procédure : mettre en cluster SQL Server Analysis Services](http://go.microsoft.com/fwlink/p/?LinkId=396548).  
+ Pour plus d’informations sur l’installation d’ [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] dans un cluster de basculement Windows, consultez [Procédure : mettre en cluster SQL Server Analysis Services](https://go.microsoft.com/fwlink/p/?LinkId=396548).  
   
 ## <a name="prerequisites"></a>Conditions préalables requises  
  Avant de commencer, consultez les rubriques suivantes dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  
@@ -169,7 +169,7 @@ ms.locfileid: "47738007"
   
 17. Dans la page Configuration du serveur — Comptes de service, spécifiez les comptes de connexion des services [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Les services réels configurés dans cette page dépendent des fonctionnalités que vous avez choisi d'installer.  
   
-     Vous pouvez attribuer le même compte de connexion à tous les services [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou configurer chaque compte de service individuellement. Le type de démarrage est défini sur manuel pour tous les services prenant en charge les clusters, notamment la recherche en texte intégral et l'Agent [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , et ne peut pas être modifié pendant l'installation. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] vous recommande de configurer les comptes de service individuellement afin de fournir des privilèges moindres pour chaque service, sachant que les services [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] disposent des autorisations minimales requises pour effectuer leurs tâches. Pour plus d’informations, consultez [Configuration du serveur - Comptes de service](http://msdn.microsoft.com/library/c283702d-ab20-4bfa-9272-f0c53c31cb9f) et [Configurer les comptes de service Windows et les autorisations](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
+     Vous pouvez attribuer le même compte de connexion à tous les services [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou configurer chaque compte de service individuellement. Le type de démarrage est défini sur manuel pour tous les services prenant en charge les clusters, notamment la recherche en texte intégral et l'Agent [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , et ne peut pas être modifié pendant l'installation. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] vous recommande de configurer les comptes de service individuellement afin de fournir des privilèges moindres pour chaque service, sachant que les services [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] disposent des autorisations minimales requises pour effectuer leurs tâches. Pour plus d’informations, consultez [Configuration du serveur - Comptes de service](https://msdn.microsoft.com/library/c283702d-ab20-4bfa-9272-f0c53c31cb9f) et [Configurer les comptes de service Windows et les autorisations](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
      Pour spécifier le même compte d'ouverture de session pour tous les comptes de service dans cette instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], fournissez les informations d'identification dans les champs en bas de page.  
   
@@ -290,7 +290,7 @@ ms.locfileid: "47738007"
   
 14. Le flux de travail du reste de cette rubrique dépend des fonctionnalités que vous avez spécifiées pour votre installation. Il est possible que les pages ne soient pas toutes visibles, en fonction de vos sélections.  
   
-15. Dans la page Configuration du serveur — Comptes de service, spécifiez les comptes de connexion des services [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Les services réels configurés dans cette page dépendent des fonctionnalités que vous avez choisi d'installer.  
+15. Dans la page Configuration du serveur — Comptes de service, spécifiez les comptes de connexion des services [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Les services réels configurés dans cette page dépendent des fonctionnalités que vous avez choisi d'installer.  
   
      Vous pouvez attribuer le même compte de connexion à tous les services [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou configurer chaque compte de service individuellement. Le type de démarrage est défini sur manuel pour tous les services prenant en charge les clusters, notamment la recherche en texte intégral et l'Agent [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , et ne peut pas être modifié pendant l'installation. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] vous recommande de configurer les comptes de service individuellement afin de fournir des privilèges moindres pour chaque service, sachant que les services [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] disposent des autorisations minimales requises pour effectuer leurs tâches. Pour plus d’informations, consultez [Configurer les comptes de service Windows et les autorisations](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   

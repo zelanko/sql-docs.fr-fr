@@ -14,12 +14,12 @@ ms.assetid: 9455d3cf-c1b7-4d48-8aff-7dc636ed5dc3
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: c9d5a6651613fe99707e26cdae5fc3410359911d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 51cd8e352d5400c012fe8dcfe7e6c4c7f6e4ef9b
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47851069"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696110"
 ---
 # <a name="web-application-requirements-master-data-services"></a>Configuration requise pour l'application Web (Master Data Services)
 
@@ -42,14 +42,14 @@ ms.locfileid: "47851069"
 -   [Configurations matérielle et logicielle requises pour l’installation de SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)    
   
 ### <a name="microsoft-silverlight"></a>Microsoft Silverlight  
- Pour travailler dans l'application Web de [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] , Silverlight 5 doit être installé sur l'ordinateur client. Si vous n'avez pas la version requise de Silverlight, vous êtes invité à l'installer lorsque vous accédez à une partie de l'application Web qui l'utilise. Vous pouvez installer Silverlight 5 à partir de [cet emplacement](http://go.microsoft.com/fwlink/?LinkId=243096).  
+ Pour travailler dans l'application Web de [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] , Silverlight 5 doit être installé sur l'ordinateur client. Si vous n'avez pas la version requise de Silverlight, vous êtes invité à l'installer lorsque vous accédez à une partie de l'application Web qui l'utilise. Vous pouvez installer Silverlight 5 à partir de [cet emplacement](https://go.microsoft.com/fwlink/?LinkId=243096).  
   
 ### <a name="role-and-role-services"></a>Rôle et services de rôle  
  Dans Windows Server 2012 ou Windows Server 2012 R2, vous pouvez utiliser le **Gestionnaire de serveur**, disponible dans Microsoft Management Console (MMC), pour installer le rôle **Serveur web (IIS)** et les services de rôle nécessaires.  
  
  
 > [!IMPORTANT]  
->La**compression du contenu dynamique** est activée par défaut. Cela réduit considérablement la taille de la réponse xml et économise des E/S réseau, mais le processeur est davantage sollicité.  Pour plus d’informations, consultez **[CTP 2.0] Performances améliorées** in [Nouveautés de Master Data Services &#40;MDS&#41;](../../master-data-services/what-s-new-in-master-data-services-mds.md).  
+>La**compression du contenu dynamique** est activée par défaut. Cela réduit considérablement la taille de la réponse xml et économise des E/S réseau, mais le processeur est davantage sollicité.  Pour plus d’informations, consultez **[CTP 2.0] Performances améliorées** dans [Nouveautés de Master Data Services &#40;MDS&#41;](../../master-data-services/what-s-new-in-master-data-services-mds.md).  
   
 ||  
 |-|  
@@ -83,6 +83,6 @@ Install-WindowsFeature Web-App-Dev, NET-Framework-45-Features -IncludeAllSubFeat
  [Installer Master Data Services](../../master-data-services/install-windows/install-master-data-services.md)   
       
  [Créer une application web Master Data Manager &#40;Master Data Services&#41;](../../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md)   
- [Page Configuration web &#40;Gestionnaire de configuration Master Data Services&#41;](../../master-data-services/web-configuration-page-master-data-services-configuration-manager.md)  
+ [Page Configuration web &#40;Gestionnaire de configuration de Master Data Services&#41;](../../master-data-services/web-configuration-page-master-data-services-configuration-manager.md)  
   
   

@@ -15,12 +15,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3ae4b7f0804b9cab8ac9c364be2337f6b7438025
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c3498d05f32abac1a8ffccf408c4b4af30023ed8
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47647507"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51664918"
 ---
 # <a name="tables"></a>Tables
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "47647507"
  Les tables temporaires sont stockées dans **tempdb**. Il en existe deux types : locale et globale. Elles se différencient par leur nom, leur visibilité et leur disponibilité. Le premier caractère du nom des tables temporaires locales est un signe dièse (#) unique. Ces tables sont visibles uniquement à la connexion courante de l'utilisateur et sont supprimées dès que l'utilisateur se déconnecte de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. En revanche, le nom des tables temporaires globales commence par deux signes dièse (##) ; ces tables sont visibles à tout utilisateur après avoir été créées et ne sont supprimées qu'une fois que l'ensemble des utilisateurs ayant fait référence à la table se sont déconnectés de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Tables système  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stocke les données qui définissent la configuration du serveur et de toutes ses tables dans un ensemble spécial de tables appelées « tables système ». Les utilisateurs ne peuvent pas directement interroger ou mettre à jour les tables système. Les informations contenues dans les tables système sont disponibles via les affichages système. Pour plus d’informations, consultez [Vues système &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stocke les données qui définissent la configuration du serveur et de toutes ses tables dans un ensemble spécial de tables appelées « tables système ». Les utilisateurs ne peuvent pas directement interroger ou mettre à jour les tables système. Les informations contenues dans les tables système sont disponibles via les affichages système. Pour plus d’informations, consultez [Vues système &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90).  
   
  Tableaux larges  
  Les tableaux larges utilisent des [colonnes éparses](../../relational-databases/tables/use-sparse-columns.md) pour porter à 30 000 le total de colonnes qu’un tableau peut contenir. Les colonnes éparses sont des colonnes ordinaires qui ont un stockage optimisé pour les valeurs NULL. Les colonnes éparses réduisent l'espace nécessaire pour les valeurs NULL, en échange d'une augmentation du coût d'extraction des valeurs autres que NULL. Un tableau large a défini un [jeu de colonnes](../../relational-databases/tables/use-column-sets.md), qui est une représentation XML non typée qui combine toutes les colonnes éparses d’une table dans une sortie structurée. Le nombre d'index et de statistiques est également porté à 1 000 et à 30 000, respectivement. La taille maximale d'une ligne de tableau large est de 8 019 octets. Par conséquent, la plupart des données dans une ligne particulière doivent avoir la valeur NULL. Le nombre maximal de colonnes non éparses plus les colonnes calculées dans un tableau large reste 1 024.  

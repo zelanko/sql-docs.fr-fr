@@ -5,8 +5,7 @@ ms.date: 07/26/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: release-landing
 ms.topic: conceptual
 helpviewer_keywords:
 - what's new [SQL Server Database Engine]
@@ -15,12 +14,12 @@ ms.assetid: 8f625d5a-763c-4440-97b8-4b823a6e2439
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 21e42bda8955a2235f70790aa14b915b404ac514
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7b69a59b2b4741894a6242998b67a9b7f9f3d5fe
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703657"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51604339"
 ---
 # <a name="whats-new-in-database-engine---sql-server-2016"></a>Nouveautés du moteur de base de données - SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -34,12 +33,12 @@ Pour découvrir les nouveautés des autres composants SQL Server, consultez [Nou
 
 #### <a name="try-it-out"></a>À votre tour d’essayer
 
-- Pour télécharger [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], accédez au **[Centre d’évaluation](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**![télécharger](../analysis-services/media/download.png "télécharger").
+- Pour télécharger [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], accédez au **[Centre d’évaluation](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**![télécharger](../analysis-services/media/download.png "télécharger").
 
 - Vous avez un compte Azure ?  Cliquez **[ici](https://azure.microsoft.com/services/virtual-machines/sql-server/)** pour lancer une machine virtuelle déjà équipée de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].
 
 > [!NOTE]
-> Pour obtenir les notes de publication actuelles, consultez [Notes de publication de SQL Server 2016](../sql-server/sql-server-2016-release-notes.md).
+> Pour obtenir les notes de publication actuelles, voir [SQL Server 2016 Release Notes](../sql-server/sql-server-2016-release-notes.md).
   
 ## <a name="sql-server-2016-service-pack-1-sp1"></a>SQL Server 2016 Service Pack 1 (SP1)  
 -  La syntaxe de `CREATE OR ALTER <object>` est désormais disponible pour les [procédures](../t-sql/statements/create-procedure-transact-sql.md), les [vues](../t-sql/statements/create-view-transact-sql.md), les [fonctions](../t-sql/statements/create-function-transact-sql.md) et les [déclencheurs](../t-sql/statements/create-trigger-transact-sql.md).
@@ -373,7 +372,7 @@ Pour obtenir des informations générales, consultez :
 - [sys.dm_exec_function_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-exec-function-stats-transact-sql.md) fournit des statistiques d’exécution concernant les fonctions à valeurs scalaires.
 - À partir de [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], les entrées incluses dans [sys.dm_db_index_usage_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md) sont conservées comme elles l’étaient avant [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)].
 - Les informations sur les instructions envoyées à une instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] peuvent être retournées par la nouvelle fonction de gestion dynamique [sys.dm_exec_input_buffer &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-exec-input-buffer-transact-sql.md).
-- Deux nouvelles vues prennent en charge [SQL Server R Services ](../advanced-analytics/r-services/sql-server-r-services.md): [sys.dm_external_script_requests](../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md) et [sys.dm_external_script_execution_stats](../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md). 
+- Deux nouvelles vues prennent en charge [SQL Server R Services](../advanced-analytics/r-services/sql-server-r-services.md): [sys.dm_external_script_requests](../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md) et [sys.dm_external_script_execution_stats](../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md). 
 
 
 ## <a name="security-enhancements"></a>Améliorations de la sécurité
@@ -441,17 +440,17 @@ Télécharger la dernière version de [SQL Server Management Studio (SSMS)](../s
 - [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] prend en charge ADAL (Active Directory Authentication Library), actuellement en développement, pour établir une connexion à Microsoft Azure. Cette technologie remplace l’authentification basée sur les certificats utilisée dans [!INCLUDE[ssSQL14](../includes/sssql14-md.md)][!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].
 - L’installation de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] exige l’installation préalable de .NET 4.6. Quand [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] est installé, le programme d’installation installe automatiquement le .NET 4.6.
 - Une nouvelle option de grille de résultats de requête conserve les caractères de retour chariot/saut de ligne lors de la copie ou de l’enregistrement de texte à partir de la grille de résultats. Vous pouvez définir cette option dans le menu Outils/Options.
-- Les outils d’administration SQL Server ne sont plus installés à partir de l’arborescence de fonctionnalités principales ; pour plus d’informations, consultez [Installer les outils d’administration SQL Server avec SSMS](http://msdn.microsoft.com/library/af68d59a-a04d-4f23-9967-ad4ee2e63381).
-- L’installation de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] exige l’installation préalable du .NET 4.6.1. Quand [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] est installé, le programme d’installation installe automatiquement le .NET 4.6.1.
+- Les outils d’administration SQL Server ne sont plus installés à partir de l’arborescence de fonctionnalités principales ; pour plus d’informations, consultez [Installer les outils d’administration SQL Server avec SSMS](https://msdn.microsoft.com/library/af68d59a-a04d-4f23-9967-ad4ee2e63381).
+- L’installation de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] exige l’installation préalable du .NET 4.6.1. Quand [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] est installé, le programme d’installation installe automatiquement le .NET 4.6.1.
 
 ### <a name="upgrade-advisor"></a>Conseiller de mise à niveau
 SQL Server 2016 Upgrade Advisor Preview est un outil autonome qui permet aux utilisateurs de versions antérieures d’exécuter un ensemble de règles de mise à niveau sur leur base de données SQL Server. Les utilisateurs peuvent ainsi identifier les modifications avec rupture, les changements de comportement et les fonctionnalités déconseillées, mais aussi recevoir de l’aide sur l’adoption des nouvelles fonctionnalités telles que Stretch Database.
 
- Vous pouvez télécharger Upgrade Advisor Preview [ici](https://www.microsoft.com/en-us/download/details.aspx?id=48119) ou l’installer à l’aide de Web Platform Installer.
+ Vous pouvez télécharger Upgrade Advisor Preview [ici](https://www.microsoft.com/download/details.aspx?id=48119) ou l’installer à l’aide de Web Platform Installer.
 
 ## <a name="see-also"></a> Voir aussi
 [Nouveautés de SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)
  
 [Notes de publication de SQL Server 2016](../sql-server/sql-server-2016-release-notes.md) 
  
-[Installer les Outils d’administration SQL Server avec SSMS](http://msdn.microsoft.com/library/af68d59a-a04d-4f23-9967-ad4ee2e63381)
+[Installer les Outils d’administration SQL Server avec SSMS](https://msdn.microsoft.com/library/af68d59a-a04d-4f23-9967-ad4ee2e63381)

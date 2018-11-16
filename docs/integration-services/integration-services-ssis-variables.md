@@ -19,12 +19,12 @@ ms.assetid: c1e81ad6-628b-46d4-9b09-d2866517b6ca
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d87ea7d4e61f2da561728ce66e797b32f2fd17b3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ddb4cc58fed64ddb755e797095d72a31b85885a0
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785017"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51642006"
 ---
 # <a name="integration-services-ssis-variables"></a>Variables Integration Services (SSIS)
   Les variables stockent des valeurs qu'un package [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] et ses conteneurs, tâches et gestionnaires d'événements peuvent utiliser au moment de l'exécution. Les scripts de la tâche de script et du composant Script peuvent également utiliser des variables. Les contraintes de précédence qui séquencent les tâches et les conteneurs dans un flux de travail peuvent utiliser des variables lorsque leurs définitions de contraintes incluent des expressions.  
@@ -46,7 +46,7 @@ ms.locfileid: "47785017"
 ## <a name="system-and-user-defined-variables"></a>Variables système et variables définies par l'utilisateur  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] prend en charge deux types de variables : les variables définies par l’utilisateur et les variables système. Les variables définies par l'utilisateur sont définies par les développeurs de packages, tandis que les variables système sont définies par [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Vous pouvez créer autant de variables définies par l'utilisateur qu'un package l'exige, mais vous ne pouvez pas créer de variables système supplémentaires.  
   
- Toutes les variables (système et définies par l'utilisateur) peuvent être utilisées dans les liaisons de paramètres que la tâche d'exécution SQL utilise pour mapper des variables à des paramètres dans des instructions SQL. Pour plus d’informations, consultez [Tache d’exécution de requêtes SQL](../integration-services/control-flow/execute-sql-task.md) et [Paramètres et codes de retour dans la tâche d’exécution SQL](http://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663).  
+ Toutes les variables (système et définies par l'utilisateur) peuvent être utilisées dans les liaisons de paramètres que la tâche d'exécution SQL utilise pour mapper des variables à des paramètres dans des instructions SQL. Pour plus d’informations, consultez [Tache d’exécution de requêtes SQL](../integration-services/control-flow/execute-sql-task.md) et [Paramètres et codes de retour dans la tâche d’exécution SQL](https://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663).  
   
 > [!NOTE]  
 >  Les noms des variables définies par l’utilisateur et des variables système respectent la casse.  
@@ -75,7 +75,7 @@ ms.locfileid: "47785017"
   
  Un ensemble de variables système différent est disponible pour différents types de conteneurs. Pour plus d'informations sur les variables système utilisées par les packages et leurs éléments, consultez [System Variables](../integration-services/system-variables.md).  
   
- Pour plus d’informations sur les scénarios d’utilisation concrète des variables, consultez [Utiliser des variables dans des packages](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
+ Pour plus d’informations sur les scénarios d’utilisation concrète des variables, consultez [Utiliser des variables dans des packages](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
   
 ## <a name="properties-of-variables"></a>Propriétés des variables  
  Vous pouvez configurer les variables définies par l’utilisateur en définissant les propriétés suivantes dans la fenêtre **Variables** ou la fenêtre **Propriétés** . Certaines propriétés sont disponibles uniquement dans la fenêtre Propriétés.  
@@ -155,9 +155,9 @@ Une variable a des options permettant de définir la valeur de la variable et le
   
  **Expressions de flux de données** : les variables permettent de fournir des valeurs dans les expressions dont se servent les transformations de fractionnement conditionnel et de colonne dérivée pour remplir les colonnes ou diriger les lignes de données vers différentes sorties de transformation. Par exemple, l'expression `@varSalutation + LastName`concatène la valeur dans la variable `VarSalutation` et la colonne `LastName` . L’expression `Income < @HighIncome` dirige vers une sortie les lignes de données dans lesquelles la valeur de la colonne `Income` est inférieure à la valeur de la variable `HighIncome`. Pour plus d’informations, consultez [Transformation de colonne dérivée](../integration-services/data-flow/transformations/derived-column-transformation.md), [Transformation de fractionnement conditionnel](../integration-services/data-flow/transformations/conditional-split-transformation.md) et [Expressions Integration Services &#40;SSIS&#41;](../integration-services/expressions/integration-services-ssis-expressions.md).  
   
- **Expressions de contrainte de précédence** : elles fournissent les valeurs à utiliser dans des contraintes de précédence pour déterminer si un exécutable contraint s’exécute. Les expressions peuvent être utilisées avec un résultat d'exécution (succès, échec, achèvement de l'opération) ou à la place d'un résultat d'exécution. Par exemple, si l’expression `@varMax > @varMin`est évalué à **true**, l’exécutable s’exécute. Pour plus d’informations, consultez [Ajouter des expressions aux contraintes de précédence](http://msdn.microsoft.com/library/5574d89a-a68e-4b84-80ea-da93305e5ca1).  
+ **Expressions de contrainte de précédence** : elles fournissent les valeurs à utiliser dans des contraintes de précédence pour déterminer si un exécutable contraint s’exécute. Les expressions peuvent être utilisées avec un résultat d'exécution (succès, échec, achèvement de l'opération) ou à la place d'un résultat d'exécution. Par exemple, si l’expression `@varMax > @varMin`est évalué à **true**, l’exécutable s’exécute. Pour plus d’informations, consultez [Ajouter des expressions aux contraintes de précédence](https://msdn.microsoft.com/library/5574d89a-a68e-4b84-80ea-da93305e5ca1).  
   
- **Paramètres et codes de retour** : ils fournissent des valeurs aux paramètres d’entrée ou stockent les valeurs des paramètres de sortie et des codes de retour. Cette opération s'effectue en mappant les variables aux paramètres et aux valeurs de retour. Par exemple, si vous affectez à la variable `varProductId` la valeur 23 et que vous exécutez l’instruction SQL `SELECT * from Production.Product WHERE ProductID = ?`, la requête récupère le produit associé à la valeur `ProductID` 23. Pour plus d’informations, consultez [Tache d’exécution de requêtes SQL](../integration-services/control-flow/execute-sql-task.md) et [Paramètres et codes de retour dans la tâche d’exécution SQL](http://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663).  
+ **Paramètres et codes de retour** : ils fournissent des valeurs aux paramètres d’entrée ou stockent les valeurs des paramètres de sortie et des codes de retour. Cette opération s'effectue en mappant les variables aux paramètres et aux valeurs de retour. Par exemple, si vous affectez à la variable `varProductId` la valeur 23 et que vous exécutez l’instruction SQL `SELECT * from Production.Product WHERE ProductID = ?`, la requête récupère le produit associé à la valeur `ProductID` 23. Pour plus d’informations, consultez [Tâche d’exécution de requêtes SQL](../integration-services/control-flow/execute-sql-task.md) et [Paramètres et codes de retour dans la tâche d’exécution SQL](https://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663).  
   
  **Expressions de boucle For** : elles fournissent les valeurs à utiliser dans les expressions d’initialisation, d’évaluation et d’assignation de la boucle For. Par exemple, si la variable `varCount` a la valeur 2 et la variable `varMaxCount` la valeur 10 et que l’expression d’initialisation est `@varCount`, l’expression d’évaluation  `@varCount < @varMaxCount`et l’expression d’assignation `@varCount =@varCount +1`, la boucle se répète 8 fois. Pour plus d’informations, consultez [Conteneur de boucles For](../integration-services/control-flow/for-loop-container.md).  
   
@@ -185,7 +185,7 @@ Une variable a des options permettant de définir la valeur de la variable et le
   
 6.  Dans la boîte de dialogue **Options de la grille** , sélectionnez des colonnes supplémentaires à afficher dans la boîte de dialogue **Options de la grille de variables** , puis cliquez sur **OK**.  
   
-7.  Éventuellement, définissez les propriétés d'une variable. Pour plus d’informations, consultez [Définir les propriétés d’une variable définie par l’utilisateur](http://msdn.microsoft.com/library/f98ddbec-f668-4dba-a768-44ac3ae0536f).  
+7.  Éventuellement, définissez les propriétés d'une variable. Pour plus d’informations, consultez [Définir les propriétés d’une variable définie par l’utilisateur](https://msdn.microsoft.com/library/f98ddbec-f668-4dba-a768-44ac3ae0536f).  
   
 8.  Pour enregistrer le package mis à jour, cliquez sur **Enregistrer les éléments sélectionnés** dans le menu **Fichier** .  
 
@@ -311,7 +311,7 @@ Utilisez la boîte de dialogue **Ajouter une variable** pour spécifier les prop
   
 7.  Dans la fenêtre **Propriétés** , mettez à jour les propriétés en lecture/écriture de la variable. Certaines propriétés sont en lecture/lecture uniquement pour les variables définies par l'utilisateur.  
   
-     Pour plus d’informations sur les propriétés, consultez [Variables Integration Services &#40;SSIS&#41;](../integration-services/integration-services-ssis-variables.md).  
+     Pour plus d’informations sur les propriétés, consultez [Integration Services &#40;SSIS&#41; Variables](../integration-services/integration-services-ssis-variables.md).  
   
 8.  Pour enregistrer le package mis à jour, dans le menu **Fichier** , cliquez sur **Enregistrer les éléments sélectionnés**.  
 

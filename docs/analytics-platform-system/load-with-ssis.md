@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: f20220208aed16d745dbab5aecce64e6653ef350
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: b8a1ca0ec3662dddb2baa5fbac5fe01ed4d4f2e5
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40394502"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700911"
 ---
 # <a name="load-data-with-integration-services-to-parallel-data-warehouse"></a>Charger des données avec Integration Services à Parallel Data Warehouse
 Fournit des informations de référence et de déploiement pour le chargement de données dans SQL Server Parallel Data Warehouse à l’aide des packages SQL Server Integration Services (SSIS).  
@@ -29,7 +29,7 @@ Before you can start loading data, use the following topics to install the Integ
   
 -   [Connect With Integration Services for loading](connect-with-ssis-for-loading.md)  
   
-For general information about developing Integration Services packages, see [Designing and Implementing Packages (Integration Services)](http://msdn.microsoft.com/library/ms141091\(v=sql11\).aspx) on MSDN.  
+For general information about developing Integration Services packages, see [Designing and Implementing Packages (Integration Services)](https://msdn.microsoft.com/library/ms141091\(v=sql11\).aspx) on MSDN.  
 
 -->
   
@@ -56,7 +56,7 @@ Pour exécuter le package à partir de SQL Server Data Tools, avec le bouton dro
 ### <a name="run-from-powershell"></a>Exécuter à partir de PowerShell  
 Pour exécuter le package à partir de Windows PowerShell, à l’aide de la **dtexec** utilitaire : `dtexec /FILE <packagePath>`  
   
-Par exemple, `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`  
+Par exemple : `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`  
   
 ### <a name="run-from-a-windows-command-prompt"></a>Invite de commandes de s’exécuter à partir de Windows 
 Pour exécuter le package à partir d’une invite de commandes Windows, à l’aide de la **dtexec** utilitaire : `dtexec /FILE <packagePath>`  
@@ -249,12 +249,12 @@ Exécuter le package sur votre ordinateur Integration Services.
 ## <a name="see-also"></a>Voir aussi  
 [Créer une tâche de script qui utilise l’adaptateur de destination SSIS PDW](create-ssis-script-task-using-pdw-destination-adapter.md)  
 [SQL Server Integration Services](../integration-services/sql-server-integration-services.md)  
-[Conception et implémentation de Packages (Integration Services)](http://msdn.microsoft.com/library/ms141091\(v=sql11\).aspx)  
-[Didacticiel : Création d’un Package de base à l’aide d’un Assistant](http://technet.microsoft.com/library/ms365330\(v=sql11\).aspx)  
-[Mise en route (Integration Services)](http://go.microsoft.com/fwlink/?LinkId=202412)  
-[Exemple de génération dynamique de Package](http://go.microsoft.com/fwlink/?LinkId=202413)  
-[Conception de vos Packages SSIS pour le parallélisme (vidéo liée à SQL Server)](http://msdn.microsoft.com/library/dd795221.aspx)  
-[Exemples de communauté Microsoft SQL Server : Integration Services](http://go.microsoft.com/fwlink/?LinkId=202415)  
+[Conception et implémentation de Packages (Integration Services)](https://msdn.microsoft.com/library/ms141091\(v=sql11\).aspx)  
+[Didacticiel : Création d’un Package de base à l’aide d’un Assistant](https://technet.microsoft.com/library/ms365330\(v=sql11\).aspx)  
+[Mise en route (Integration Services)](https://go.microsoft.com/fwlink/?LinkId=202412)  
+[Exemple de génération dynamique de Package](https://go.microsoft.com/fwlink/?LinkId=202413)  
+[Conception de vos Packages SSIS pour le parallélisme (vidéo liée à SQL Server)](https://msdn.microsoft.com/library/dd795221.aspx)  
+[Exemples de communauté Microsoft SQL Server : Integration Services](https://go.microsoft.com/fwlink/?LinkId=202415)  
 [Amélioration des chargements incrémentiels avec la Capture de données modifiées](../integration-services/change-data-capture/change-data-capture-ssis.md)  
 [Transformation de dimension à variation lente](../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)  
 [Tâche d’insertion en bloc](../integration-services/control-flow/bulk-insert-task.md)  

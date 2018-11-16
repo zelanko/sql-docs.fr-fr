@@ -14,12 +14,12 @@ ms.assetid: 31c947cf-53e9-4ff4-939b-4c1d034ea5b1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8c0d656ffdc18168e12092abfb66b0027fd68632
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 66422144cac35578bd9d6e77c887ad7e12ed21f9
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633137"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673598"
 ---
 # <a name="remote-blob-store-rbs-sql-server"></a>Magasin d'objets blob distants (RBS) (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,10 +52,10 @@ ms.locfileid: "47633137"
 ## <a name="rbs-requirements"></a>Conditions requises du magasin d'objets blob distants (RBS)  
  - Le magasin d'objets blob distants nécessite [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise pour le serveur de base de données principal sur lequel les métadonnées d'objets blob sont stockées.  Cependant, si vous utilisez le fournisseur FILESTREAM fourni, vous pouvez stocker les objets blob sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard. Pour vous connecter à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], RBS nécessite au moins la version 11 du pilote ODBC pour [!INCLUDE[ssSQL14_md](../../includes/sssql14-md.md)] et la version 13 du pilote ODBC pour [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]. Les pilotes sont disponibles à la page [Download ODBC Driver for SQL Server (Télécharger le pilote ODBC pour SQL Server)](https://msdn.microsoft.com/library/mt703139.aspx).    
   
- Le magasin d'objets blob distants comprend un fournisseur FILESTREAM qui vous permet de stocker les objets blob sur une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si vous souhaitez utiliser le magasin d'objets blob distants pour stocker des objets blob dans une solution de stockage différente, vous devez utiliser un fournisseur RBS tiers, qui aura été développé pour cette solution de stockage particulière, ou bien développer un fournisseur RBS personnalisé à l'aide de l'API RBS. Un exemple de fournisseur stockant des objets blob sur un système de fichiers NTFS est disponible parmi les ressources pédagogiques du site [CodePlex](http://go.microsoft.com/fwlink/?LinkId=210190).  
+ Le magasin d'objets blob distants comprend un fournisseur FILESTREAM qui vous permet de stocker les objets blob sur une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si vous souhaitez utiliser le magasin d'objets blob distants pour stocker des objets blob dans une solution de stockage différente, vous devez utiliser un fournisseur RBS tiers, qui aura été développé pour cette solution de stockage particulière, ou bien développer un fournisseur RBS personnalisé à l'aide de l'API RBS. Un exemple de fournisseur stockant des objets blob sur un système de fichiers NTFS est disponible parmi les ressources pédagogiques du site [CodePlex](https://go.microsoft.com/fwlink/?LinkId=210190).  
   
 ## <a name="rbs-security"></a>Sécurité relative au magasin d'objets blob distants (RBS)  
- Le blog de l'équipe de stockage d’objets blob distants SQL est une bonne source d'informations sur cette fonctionnalité. Le modèle de sécurité RBS est décrit dans la partie [Modèle de sécurité RBS](http://blogs.msdn.com/b/sqlrbs/archive/2010/08/05/rbs-security-model.aspx)de la publication.  
+ Le blog de l'équipe de stockage d’objets blob distants SQL est une bonne source d'informations sur cette fonctionnalité. Le modèle de sécurité RBS est décrit dans la partie [Modèle de sécurité RBS](https://blogs.msdn.com/b/sqlrbs/archive/2010/08/05/rbs-security-model.aspx)de la publication.  
   
 ### <a name="custom-providers"></a>Fournisseurs personnalisés  
  Lorsque vous utilisez un fournisseur personnalisé pour stocker des objets blob en dehors de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], assurez-vous de protéger les objets blob stockés à l'aide d'autorisations et d'options de chiffrement convenant au support de stockage utilisé par le fournisseur personnalisé.  
@@ -77,10 +77,10 @@ Si vos stratégies de sécurité nécessitent d’autres propriétés de clé (p
 ##  <a name="rbsresources"></a> Ressources RBS  
   
  **Exemples RBS**  
- Les exemples de magasins d'objets blob distants (RBS) disponibles sur le site [CodePlex](http://go.microsoft.com/fwlink/?LinkId=210190) montrent comment développer une application RBS et comment développer et installer un fournisseur RBS personnalisé.  
+ Les exemples de magasins d'objets blob distants (RBS) disponibles sur le site [CodePlex](https://go.microsoft.com/fwlink/?LinkId=210190) montrent comment développer une application RBS et comment développer et installer un fournisseur RBS personnalisé.  
   
  **Blog RBS**  
- Le [blog du magasin d'objets blob distants (RBS)](http://go.microsoft.com/fwlink/?LinkId=210315) fournit des informations supplémentaires qui vous aideront à mieux comprendre, déployer et gérer les magasins d'objets blob distants.  
+ Le [blog du magasin d'objets blob distants (RBS)](https://go.microsoft.com/fwlink/?LinkId=210315) fournit des informations supplémentaires qui vous aideront à mieux comprendre, déployer et gérer les magasins d'objets blob distants.  
   
 ##  <a name="Key_rotation"></a> Script de permutation des clés  
  Cet exemple crée une procédure stockée nommée `sp_rotate_rbs_symmetric_credential_key` pour remplacer la clé symétrique du magasin d’informations d’identification RBS actuellement utilisée  

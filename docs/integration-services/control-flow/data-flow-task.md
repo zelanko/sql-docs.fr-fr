@@ -19,12 +19,12 @@ ms.assetid: c27555c4-208c-43c8-b511-a4de2a8a3344
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 073b16502e725c36b64427514be04074439070bd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 77947ba03e3f094077c950981a394a3566e24f0e
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633627"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639089"
 ---
 # <a name="data-flow-task"></a>tâche de flux de données
   La tâche de flux de données encapsule le moteur de flux de données chargé de déplacer des données entre les sources et les destinations et permet à l'utilisateur de transformer, nettoyer et modifier les données au cours de leur déplacement. L'ajout d'une tâche de flux de données à un flux de contrôle de package permet au package d'extraire, de transformer et de charger des données.  
@@ -104,7 +104,7 @@ ms.locfileid: "47633627"
   
  Pour plus d’informations sur la façon de définir ces propriétés dans la fenêtre **Propriétés** , cliquez sur la rubrique suivante :  
   
--   [Définir les propriétés d'une tâche ou d'un conteneur](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Définir les propriétés d'une tâche ou d'un conteneur](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ## <a name="programmatic-configuration-of-the-data-flow-task"></a>Configuration par programmation de la tâche de flux de données  
  Pour plus d'informations sur l'ajout par programmation d'une tâche de flux de données à un package et sur la définition des propriétés de flux de données, cliquez sur la rubrique suivante :  
@@ -112,9 +112,9 @@ ms.locfileid: "47633627"
 -   [Ajout de la tâche de flux de données par programmation](../../integration-services/building-packages-programmatically/adding-the-data-flow-task-programmatically.md)  
   
 ## <a name="related-tasks"></a>Tâches associées  
- [Définir les propriétés d'une tâche ou d'un conteneur](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+ [Définir les propriétés d'une tâche ou d'un conteneur](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ## <a name="related-content"></a>Contenu associé  
- Vidéo, [Distributeur de données équilibrées](http://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409), sur technet.microsoft.com.  
+ Vidéo, [Distributeur de données équilibrées](https://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409), sur technet.microsoft.com.  
   
   

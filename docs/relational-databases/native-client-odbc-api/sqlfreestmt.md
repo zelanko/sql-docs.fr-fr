@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b9555c5fd335abcf4069c4ca9241bbade8f71771
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 32b1f1185dad9b173c12f3acb232c2426d5db411
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47844204"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51664898"
 ---
 # <a name="sqlfreestmt"></a>SQLFreeStmt
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "47844204"
  En règle générale, il est plus efficace de réutiliser des instructions que to déposez-les et allouer de nouveaux. Toutefois dans certaines situations, telles que la réutilisation des instructions, SQLFreeStmt toujours doit être utilisé.  
   
 ## <a name="see-also"></a>Voir aussi  
- [SQLFreeStmt, fonction](http://go.microsoft.com/fwlink/?LinkId=59346)   
+ [SQLFreeStmt, fonction](https://go.microsoft.com/fwlink/?LinkId=59346)   
  [Détails de l’implémentation d’API ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

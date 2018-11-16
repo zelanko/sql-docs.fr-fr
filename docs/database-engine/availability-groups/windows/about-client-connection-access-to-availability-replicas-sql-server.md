@@ -17,12 +17,12 @@ ms.assetid: 29027e46-43e4-4b45-b650-c4cdeacdf552
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 422ece01b8c0003fe51f685463956e143668c028
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 32bde72d793ac8c703c6a57fc4fe36ff5fd30d67
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47642187"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602669"
 ---
 # <a name="about-client-connection-access-to-availability-replicas-sql-server"></a>À propos de l'accès de la connexion client aux réplicas de disponibilité (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -98,8 +98,8 @@ ms.locfileid: "47642187"
   
 |Réplica|Mode de validation|Rôle initial|Accès à la connexion pour le rôle secondaire|Accès à la connexion pour le rôle principal|  
 |-------------|-----------------|------------------|------------------------------------------|----------------------------------------|  
-|Replica1|Synchrone|Principal|None|Lecture-écriture|  
-|Replica2|Synchrone|Secondary|None|Lecture-écriture|  
+|Replica1|Synchrone|Principal|Aucun|Lecture-écriture|  
+|Replica2|Synchrone|Secondary|Aucun|Lecture-écriture|  
 |Replica3|Asynchrone|Secondary|Intention de lecture uniquement|Lecture-écriture|  
 |Replica4|Asynchrone|Secondary|Intention de lecture uniquement|Lecture-écriture|  
   
@@ -119,7 +119,7 @@ ms.locfileid: "47642187"
   
 ##  <a name="RelatedContent"></a> Contenu associé  
   
--   [Guide de solutions Microsoft SQL Server Always On pour la haute disponibilité et la récupération d’urgence](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Guide de solutions Microsoft SQL Server Always On pour la haute disponibilité et la récupération d’urgence](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
 -   [Blog de l’équipe de SQL Server Always On : Blog officiel de l’équipe de SQL Server Always On](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   

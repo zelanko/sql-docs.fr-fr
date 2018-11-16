@@ -13,12 +13,12 @@ ms.assetid: 640e6a19-49ae-4ee8-ac07-008370158f0e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 958446082e1576e14f50d09a9b8b7181bf2f18af
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 10ad201fd848ba195c5c448dfc1f27c2b6ff058d
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47771577"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638606"
 ---
 # <a name="data-streaming-destination"></a>Data Streaming Destination
   **Data Streaming Destination** est un composant de destination [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS) qui permet au **fournisseur OLE DB pour SSIS** de consommer la sortie d’un package SSIS sous la forme d’un jeu de résultats tabulaire. Vous pouvez créer un serveur lié qui utilise le fournisseur OLE DB pour SSIS, puis exécuter une requête SQL sur le serveur lié pour afficher les données retournées par le package SSIS.  
@@ -54,7 +54,7 @@ SELECT * FROM OPENQUERY([Default Linked Server for Integration Services], N'Fold
   
  Le centre d’administration vous permet de publier des vues dans une base de données SQL Server. Par conséquent, vous pouvez utiliser l’Assistant Publication du package SSIS pour publier un package SSIS sous la forme d’une vue SQL. Ensuite, vous pouvez sélectionner la vue à inclure dans le flux OData dans le centre d’administration Power BI. Un gestionnaire de données peut consommer le flux à partir du package SSIS à l’aide du complément Power Query pour Excel.  
   
- Pour une description détaillée, consultez [Publication de packages SSIS sous forme de sources de flux OData](http://go.microsoft.com/fwlink/?LinkID=317367).  
+ Pour une description détaillée, consultez [Publication de packages SSIS sous forme de sources de flux OData](https://go.microsoft.com/fwlink/?LinkID=317367).  
   
 ## <a name="in-this-section"></a>Dans cette section  
   
@@ -81,6 +81,6 @@ SELECT * FROM OPENQUERY([Default Linked Server for Integration Services], N'Fold
  Cet onglet est similaire à l’onglet Colonnes d’entrée. Vous pouvez modifier les noms des colonnes de sortie dans cet onglet. Dans l’arborescence à gauche, développez **Entrée de Data Streaming Destination** , puis **Colonnes d’entrée**. Cliquez sur le nom de la colonne d’entrée et modifiez le nom de la colonne de sortie dans le volet droit.  
   
 ## <a name="see-also"></a> Voir aussi  
- [Publication de packages SSIS sous forme de sources de flux OData](http://go.microsoft.com/fwlink/?LinkID=317367)  
+ [Publication de packages SSIS sous forme de sources de flux OData](https://go.microsoft.com/fwlink/?LinkID=317367)  
   
   

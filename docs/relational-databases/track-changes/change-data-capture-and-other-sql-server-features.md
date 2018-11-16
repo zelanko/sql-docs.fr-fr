@@ -1,12 +1,10 @@
 ---
 title: Capture de données modifiées et autres fonctionnalités de SQL Server | Microsoft Docs
-ms.custom: ''
 ms.date: 05/03/2016
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - change data capture [SQL Server], other SQL Server features and
@@ -14,12 +12,12 @@ ms.assetid: 7dfcb362-1904-4578-8274-da16681a960e
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 9017c99b8629e63c54fc74eb3507bb0092e14c30
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 809c196ffdad3715b0d1c4f8c857c36fd246d02d
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758287"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51560476"
 ---
 # <a name="change-data-capture-and-other-sql-server-features"></a>Capture de données modifiées et autres fonctionnalités de SQL Server
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +33,7 @@ ms.locfileid: "47758287"
 
 -   [Bases de données autonomes](#Contained)
   
-##  <a name="ChangeTracking"></a> Change Tracking  
+##  <a name="ChangeTracking"></a> Suivi des modifications  
  La capture de données modifiées et le [suivi des modifications](../../relational-databases/track-changes/about-change-tracking-sql-server.md) peuvent être activés sur la même base de données. Aucune considération particulière ne s'applique. Pour plus d’informations, consultez [Utiliser le suivi des modifications &#40;SQL Server&#41;](../../relational-databases/track-changes/work-with-change-tracking-sql-server.md).  
   
 ##  <a name="DatabaseMirroring"></a> Mise en miroir de bases de données  

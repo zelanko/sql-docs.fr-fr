@@ -22,12 +22,12 @@ ms.assetid: 687c262f-fcab-42e8-92ae-e956f3d92d69
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 899d12bc7545f90717fda4fabb1ddbfb0c69c316
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 54c01591842965bcd45cff732295d2769fd6c661
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726677"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639586"
 ---
 # <a name="coding-and-debugging-the-script-task"></a>Codage et débogage de la tâche de script
   Après avoir configuré la tâche de script dans l’**éditeur de tâche de script**, vous pouvez écrire votre code personnalisé dans l’environnement de développement de tâche de script.  
@@ -244,7 +244,7 @@ To open Help, press F1.
   
 ## <a name="external-resources"></a>Ressources externes  
   
--   Entrée de blog, [VSTA setup and configuration troubles for SSIS 2008 and R2 installations](http://go.microsoft.com/fwlink/?LinkId=215661), sur blogs.msdn.com.  
+-   Entrée de blog, [VSTA setup and configuration troubles for SSIS 2008 and R2 installations](https://go.microsoft.com/fwlink/?LinkId=215661), sur blogs.msdn.com.  
   
 ## <a name="see-also"></a> Voir aussi  
  [Référencement d’autres assemblys dans les solutions de script](../../../integration-services/extending-packages-scripting/referencing-other-assemblies-in-scripting-solutions.md)   

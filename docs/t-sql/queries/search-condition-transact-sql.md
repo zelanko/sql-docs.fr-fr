@@ -38,12 +38,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4d57063ee518574adbb5faf2070ef2cfd203885b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f8e4fb4a2e8da7ecf32e4bec80f3d18a53a022ac
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745327"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699797"
 ---
 # <a name="search-condition-transact-sql"></a>Condition de recherche (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -134,7 +134,7 @@ ms.locfileid: "47745327"
  Nom de colonne, constante, fonction, variable, sous-requête scalaire ou toute combinaison de noms de colonnes, de constantes et de fonctions reliées par un ou plusieurs opérateurs ou par une sous-requête. L'expression peut également contenir l'expression CASE.  
   
 > [!NOTE]  
->  Les variables et constantes chaîne non Unicode utilisent la page de codes qui correspond au classement par défaut de la base de données. L’utilisation exclusive de données caractères non Unicode et la référence aux types de données caractères non Unicode **char**, **varchar** et **text** peuvent entraîner des conversions de page de codes. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] convertit les variables et constantes chaîne non Unicode dans la page de codes qui correspond au classement de la colonne référencée ou au classement spécifié avec COLLATE, si cette page de codes est différente de celle du classement par défaut de la base de données. Quand un caractère est introuvable dans la nouvelle page de codes, il est converti en un caractère similaire, si un [mappage ajusté](http://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/WindowsBestFit/) est trouvé. Sinon, il est converti en caractère de remplacement par défaut de « ? ».  
+>  Les variables et constantes chaîne non Unicode utilisent la page de codes qui correspond au classement par défaut de la base de données. L’utilisation exclusive de données caractères non Unicode et la référence aux types de données caractères non Unicode **char**, **varchar** et **text** peuvent entraîner des conversions de page de codes. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] convertit les variables et constantes chaîne non Unicode dans la page de codes qui correspond au classement de la colonne référencée ou au classement spécifié avec COLLATE, si cette page de codes est différente de celle du classement par défaut de la base de données. Quand un caractère est introuvable dans la nouvelle page de codes, il est converti en un caractère similaire, si un [mappage ajusté](https://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/WindowsBestFit/) est trouvé. Sinon, il est converti en caractère de remplacement par défaut de « ? ».  
 >  
 > Si vous avez plusieurs pages de codes, faites précéder les constantes caractères de la lettre majuscule 'N' et utilisez des variables Unicode pour éviter les conversions de page de codes.  
   

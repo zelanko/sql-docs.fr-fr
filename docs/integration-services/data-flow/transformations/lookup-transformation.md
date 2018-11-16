@@ -24,12 +24,12 @@ ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4621685d69a2bedffd35e1de896712efa40a0335
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b7f269e0cbbc3e5f98667e49b7db6987c692c881
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730927"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639656"
 ---
 # <a name="lookup-transformation"></a>Transformation de recherche
   La transformation de recherche effectue des recherches en joignant des données de colonnes d'entrée à des colonnes d'un dataset de référence. Vous utilisez la recherche pour accéder à des informations supplémentaires dans une table associée se basant sur des valeurs dans des colonnes communes.  
@@ -131,15 +131,15 @@ ms.locfileid: "47730927"
   
 ## <a name="related-content"></a>Contenu associé  
   
--   Vidéo, [Procédure : implémenter une transformation de recherche en mode Cache complet](http://go.microsoft.com/fwlink/?LinkId=131031), sur msdn.microsoft.com  
+-   Vidéo, [Procédure : implémenter une transformation de recherche en mode Cache complet](https://go.microsoft.com/fwlink/?LinkId=131031), sur msdn.microsoft.com  
   
--   Billet de blog, [Best Practices for Using the Lookup Transformation Cache Modes](http://go.microsoft.com/fwlink/?LinkId=146623)(Bonnes pratiques pour l’utilisation des modes de cache de transformation de recherche), sur blogs.msdn.com  
+-   Billet de blog, [Best Practices for Using the Lookup Transformation Cache Modes](https://go.microsoft.com/fwlink/?LinkId=146623)(Bonnes pratiques pour l’utilisation des modes de cache de transformation de recherche), sur blogs.msdn.com  
   
--   Billet de blog, [Lookup Pattern: Case Insensitive](http://go.microsoft.com/fwlink/?LinkId=157782)(Modèle de recherche : non-respect de la casse), sur blogs.msdn.com  
+-   Billet de blog, [Lookup Pattern: Case Insensitive](https://go.microsoft.com/fwlink/?LinkId=157782)(Modèle de recherche : non-respect de la casse), sur blogs.msdn.com  
   
--   Exemple, [Lookup Transformation](http://go.microsoft.com/fwlink/?LinkId=267528)(Transformation de recherche), sur msftisprodsamples.codeplex.com.  
+-   Exemple, [Lookup Transformation](https://go.microsoft.com/fwlink/?LinkId=267528)(Transformation de recherche), sur msftisprodsamples.codeplex.com.  
   
-     Pour plus d’informations sur l’installation d’exemples de produits et de bases de données [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , consultez [SQL Server Integration Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=267527)(Exemples de produits SQL Server Integration Services).  
+     Pour plus d’informations sur l’installation d’exemples de produits et de bases de données [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , consultez [SQL Server Integration Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=267527)(Exemples de produits SQL Server Integration Services).  
   
 ## <a name="lookup-transformation-editor-general-page"></a>Éditeur de transformation de recherche (page Général)
   Utilisez la page **Général** de la boîte de dialogue Éditeur de transformation de recherche pour sélectionner le mode de cache ainsi que le type de connexion et pour spécifier comment gérer les lignes sans entrées correspondantes.  
@@ -168,7 +168,7 @@ ms.locfileid: "47730927"
  Lorsque vous sélectionnez une autre option dans la zone de liste **Spécifier comment gérer les lignes sans entrées correspondantes** , les lignes sont gérées comme des erreurs. L'option **Erreur** de la page **Sortie d'erreur** est disponible.  
   
 ### <a name="external-resources"></a>Ressources externes  
- Entrée de blog, [Lookup cache modes](http://go.microsoft.com/fwlink/?LinkId=219518) sur blogs.msdn.com  
+ Entrée de blog, [Lookup cache modes](https://go.microsoft.com/fwlink/?LinkId=219518) sur blogs.msdn.com  
   
 ## <a name="lookup-transformation-editor-connection-page"></a>Éditeur de transformation de recherche (page Connexion)
   Utilisez la page **Connexion** de la boîte de dialogue **Éditeur de transformation de recherche** pour sélectionner un gestionnaire de connexions. Si vous sélectionnez un gestionnaire de connexions OLE DB, vous sélectionnez également une requête, une table ou une vue pour générer le dataset de référence.  
@@ -215,7 +215,7 @@ ms.locfileid: "47730927"
  Affichez un aperçu des résultats à l’aide de la boîte de dialogue **Visualiser les résultats de la requête** . Cette option affiche jusqu'à 200 lignes.  
   
 ### <a name="external-resources"></a>Ressources externes  
- Entrée de blog, [Lookup cache modes](http://go.microsoft.com/fwlink/?LinkId=219518) sur blogs.msdn.com  
+ Entrée de blog, [Lookup cache modes](https://go.microsoft.com/fwlink/?LinkId=219518) sur blogs.msdn.com  
   
 ## <a name="lookup-transformation-editor-columns-page"></a>Éditeur de transformation de recherche (page Colonnes)
   Utilisez la page **Colonnes** de la boîte de dialogue **Éditeur de transformation de recherche** pour définir la jointure entre la table source et la table de référence, ainsi que pour sélectionner les colonnes de recherche dans la table de référence.  
@@ -272,7 +272,7 @@ ms.locfileid: "47730927"
  Mappez les colonnes d’entrée aux paramètres en utilisant la boîte de dialogue **Définition des paramètres de la requête** .  
   
 ### <a name="external-resources"></a>Ressources externes  
- Entrée de blog, [Lookup cache modes](http://go.microsoft.com/fwlink/?LinkId=219518) sur blogs.msdn.com  
+ Entrée de blog, [Lookup cache modes](https://go.microsoft.com/fwlink/?LinkId=219518) sur blogs.msdn.com  
   
 ## <a name="see-also"></a> Voir aussi  
  [Transformation de recherche floue](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation.md)   

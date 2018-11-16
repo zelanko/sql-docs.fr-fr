@@ -15,12 +15,12 @@ ms.assetid: 552ff592-eeef-46e8-b4a2-9b2384c869aa
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3b12fe4feb21201cc22dc7cb2b1033e4743ea1c0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 96ad709b12fc8bcbdb588fc1abb511b4b4ee081e
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856861"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640826"
 ---
 # <a name="ssis-toolbox"></a>Boîte à outils SSIS
   Tous les composants installés sur l’ordinateur local apparaissent automatiquement dans la **Boîte à outils SSIS**. Lorsque vous installez des composants additionnels, cliquez avec le bouton droit dans la boîte à outils, puis cliquez sur **Boîte à outils Actualiser** pour ajouter les composants.  
@@ -30,7 +30,7 @@ ms.locfileid: "47856861"
  > [!NOTE]
 > Si vous ne voyez pas la boîte à outils, cliquez sur Affichage -> Autres fenêtres -> Boîte à outils SSIS.
  
-Vous pouvez obtenir des informations supplémentaires sur un composant de la boîte à outils en cliquant sur le composant pour afficher sa description en bas de la boîte à outils. Pour certains composants, vous pouvez également accéder à des exemples qui montrent comment configurer et utiliser les composants. Ces exemples sont disponibles sur [MSDN](http://go.microsoft.com/fwlink/?LinkId=259189). Pour accéder aux exemples depuis la **Boîte à outils SSIS**, cliquez sur le lien **Rechercher des exemples** qui apparaît sous la description.  
+Vous pouvez obtenir des informations supplémentaires sur un composant de la boîte à outils en cliquant sur le composant pour afficher sa description en bas de la boîte à outils. Pour certains composants, vous pouvez également accéder à des exemples qui montrent comment configurer et utiliser les composants. Ces exemples sont disponibles sur [MSDN](https://go.microsoft.com/fwlink/?LinkId=259189). Pour accéder aux exemples depuis la **Boîte à outils SSIS**, cliquez sur le lien **Rechercher des exemples** qui apparaît sous la description.  
   
 > [!NOTE]
 > Vous ne pouvez pas *supprimer* les composants installés à partir de la boîte à outils.  
@@ -38,7 +38,7 @@ Vous pouvez obtenir des informations supplémentaires sur un composant de la bo�
 ## <a name="toolbox-categories"></a>Catégories de la boîte à outils
  Dans la **boîte à outils SSIS**, le flux de contrôle et les composants de flux de données sont organisés en catégories.  Vous pouvez développer et réduire des catégories, et réorganiser des composants.  Restaurez l’organisation par défaut en cliquant avec le bouton droit dans la boîte à outils, puis en cliquant sur **Restaurer les valeurs par défaut de la boîte à outils**.  
   
- Les catégories **Favoris** et **Commun** apparaissent dans la boîte à outils lorsque vous sélectionnez les onglets **Flux de contrôle**, **Flux de données**et **Gestionnaires d'événements** . La catégorie **Autres tâches** apparaît dans la boîte à outils lorsque vous sélectionnez l'onglet **Flux de contrôle** ou l'onglet **Gestionnaires d'événements** . Les catégories **Autres transformations**, **Autres sources**et **Autres destinations** apparaissent dans la boîte à outils lorsque vous sélectionnez l'onglet **Flux de données** .  
+ Les catégories **Favoris** et **Commun** apparaissent dans la boîte à outils lorsque vous sélectionnez les onglets **Flux de contrôle**, **Flux de données**et **Gestionnaires d'événements** . La catégorie **Autres tâches** apparaît dans la boîte à outils lorsque vous sélectionnez l'onglet **Flux de contrôle** ou l'onglet **Gestionnaires d'événements** . Les catégories Autres transformations, **Autres sources**et **Autres destinations** apparaissent dans la boîte à outils lorsque vous sélectionnez l'onglet **Flux de données** .  
 
  ## <a name="add-azure-components-to-the-toolbox"></a>Ajouter des composants Azure à la boîte à outils  
  Le Feature Pack Azure pour Integration Services contient les gestionnaires de connexions permettant de se connecter aux sources de données Azure, ainsi que les tâches permettant d’effectuer les opérations Azure courantes. Installez le Feature Pack pour ajouter ces éléments à la boîte à outils. Pour plus d’informations, consultez [Feature Pack Azure pour Integration Services &#40;SSIS&#41;](../integration-services/azure-feature-pack-for-integration-services-ssis.md).  

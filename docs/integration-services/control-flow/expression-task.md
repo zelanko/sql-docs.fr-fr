@@ -13,12 +13,12 @@ ms.assetid: 1d7f042d-508d-4e1a-b83a-86a18e23b85f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5f2bfc7d8e3f5782851178667305966cc243d8c6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f026b827c510713ac45d11fbfad552b39171163d
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47602642"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640276"
 ---
 # <a name="expression-task"></a>Tâche d'expression
   La tâche d'expression crée et évalue les expressions qui définissent les valeurs des variables au moment de l'exécution, à l'aide du Générateur d'expressions. Lorsque vous modifiez la tâche, le [Expression Builder](../../integration-services/expressions/expression-builder.md) est lancé.  
@@ -31,9 +31,9 @@ ms.locfileid: "47602642"
  Pour obtenir des exemples d'utilisation des expressions pour définir des propriétés, consultez la section **Exemples d'expressions de propriété** dans [Use Property Expressions in Packages](../../integration-services/expressions/use-property-expressions-in-packages.md).  
   
 ## <a name="related-tasks"></a>Tâches associées  
- [Utiliser une expression dans un composant de flux de données](http://msdn.microsoft.com/library/9181b998-d24a-41fb-bb3c-14eee34f910d)  
+ [Utiliser une expression dans un composant de flux de données](https://msdn.microsoft.com/library/9181b998-d24a-41fb-bb3c-14eee34f910d)  
   
 ## <a name="related-content"></a>Contenu associé  
- Article technique, [SSIS Expression Cheat Sheet](http://go.microsoft.com/fwlink/?LinkId=746575), sur pragmaticworks.com  
+ Article technique, [SSIS Expression Cheat Sheet](https://go.microsoft.com/fwlink/?LinkId=746575), sur pragmaticworks.com  
   
   

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: f5c991130c59d1999cc68d27ffccc15138ffc34d
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.openlocfilehash: 5ffad259ca0de75ad2eb4b7fc6f51614f1c4dea9
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51269752"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700357"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>Quelles sont les nouveautés d’Analytique Platform System, un entrepôt de données MPP montée en puissance
 Consultez les nouveautés introduite dans les dernières mises à jour de matériel pour Microsoft® Analytique Platform System (APS). APS est une appliance de montée en puissance en local qui héberge MPP SQL Server Parallel Data Warehouse. 
@@ -70,7 +70,7 @@ from cte;
 Lecture, l’importation et exportation des types de données de date à l’aide de PolyBase maintenant prend en charge les dates avant 1970-01-01 et après 2038-01-20 pour les types de fichier ORC et Parquet.
 
 ### <a name="ssis-destination-adapter-for-sql-server-2017-as-target"></a>Adaptateur de destination SSIS pour SQL Server 2017 en tant que cible
-Nouvel adaptateur de destination APS SSIS qui prend en charge de SQL Server 2017 comme cible de déploiement peut être téléchargé à partir de [site de téléchargement](https://www.microsoft.com/en-us/download/details.aspx?id=57472).
+Nouvel adaptateur de destination APS SSIS qui prend en charge de SQL Server 2017 comme cible de déploiement peut être téléchargé à partir de [site de téléchargement](https://www.microsoft.com/download/details.aspx?id=57472).
 
 <a name="h2-aps-cu7.1"></a>
 ## <a name="aps-cu71"></a>APS CU7.1
@@ -111,7 +111,7 @@ APS AU7 introduit le commutateur de fonctionnalité dans [Configuration Manager]
 ### <a name="known-issues"></a>Problèmes connus
 Avec le logiciel de APS AU7, une mise à jour du BIOS Intel est fourni qui résout un problème appelé *attaques par canal latéral de l’exécution spéculative*. Les attaques visent à exploiter sont appelées *vulnérabilités Spectre et Meltdown*. Bien qu’il est empaqueté avec les points d’accès, la mise à jour du BIOS est installé manuellement et non comme faisant partie de l’installation du logiciel AU7 de points d’accès.
 
-Microsoft conseille à tous les clients pour installer le BIOS mis à jour. Microsoft a mesuré l’effet de noyau virtuels adresse occultation (KVAS), Kernel Page Table Indirection (KPTI) et l’atténuation de prédiction de branchement Indirect (IBP) sur les différentes charges de travail SQL dans différents environnements. Les mesures de trouver une dégradation importante sur certaines charges de travail. En fonction des résultats, il est recommandé que vous tester l’effet de performances de l’activation de la mise à jour avant de les déployer dans un environnement de production. Consultez l’aide de SQL Server [ici](https://support.microsoft.com/en-us/help/4073225/guidance-protect-sql-server-against-spectre-meltdown).
+Microsoft conseille à tous les clients pour installer le BIOS mis à jour. Microsoft a mesuré l’effet de noyau virtuels adresse occultation (KVAS), Kernel Page Table Indirection (KPTI) et l’atténuation de prédiction de branchement Indirect (IBP) sur les différentes charges de travail SQL dans différents environnements. Les mesures de trouver une dégradation importante sur certaines charges de travail. En fonction des résultats, il est recommandé que vous tester l’effet de performances de l’activation de la mise à jour avant de les déployer dans un environnement de production. Consultez l’aide de SQL Server [ici](https://support.microsoft.com/help/4073225/guidance-protect-sql-server-against-spectre-meltdown).
 
 ::: moniker-end
 ::: moniker range=">= aps-pdw-2016 || = sqlallproducts-allversions"

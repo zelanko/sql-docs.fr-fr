@@ -19,12 +19,12 @@ ms.assetid: 5abe2605-0506-46ec-82b5-6ec08428ba13
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c67f85b2a98b950b9614bfeb712c4d47d03d943b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9aa68c8c0dbc702b7f0db3e3186c7ddb56266dbc
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47795027"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51664962"
 ---
 # <a name="sysdmrepltraninfo-transact-sql"></a>sys.dm_repl_traninfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "47795027"
 |**begin_lsn**|**nvarchar(64)**|Numéro séquentiel dans le journal (NSE) de l'enregistrement du début pour la transaction.|  
 |**commit_lsn**|**nvarchar(64)**|Numéro de séquence de l'enregistrement du journal de validation pour la transaction.|  
 |**dbid**|**smallint**|ID de la base de données.|  
-|**lignes**|**Int**|ID de la commande répliquée à l'intérieur de la transaction.|  
+|**rows**|**Int**|ID de la commande répliquée à l'intérieur de la transaction.|  
 |**xdesid auquel**|**nvarchar(64)**|ID de transaction.|  
 |**artcache_table_address**|**varbinary(8)**|Adresse en mémoire de la dernière structure de table d'article mis en cache utilisée pour cette transaction.|  
 |**server**|**nvarchar(514)**|Nom du serveur.|  
@@ -77,7 +77,7 @@ ms.locfileid: "47795027"
 ## <a name="see-also"></a>Voir aussi  
  [Fonctions et vues de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Vues de gestion dynamique liées à la réplication &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/replication-related-dynamic-management-views-transact-sql.md)   
- [Vues de gestion dynamique liées à la capture des données modifiées &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/2a771d7d-693a-4f56-9227-02cd00e0e200)  
+ [Vues de gestion dynamique liées à la capture des données modifiées &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/2a771d7d-693a-4f56-9227-02cd00e0e200)  
   
   
 

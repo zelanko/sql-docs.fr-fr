@@ -15,12 +15,12 @@ ms.assetid: d0a0a394-6cb6-416a-a25f-9babf8ba294a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 414b8b130ff3e16bf3be092569ce05730d5ea204
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c7a570dda05c5fe83227b7f88209eecdc25529e0
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716047"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51667098"
 ---
 # <a name="import-into-a-database-project"></a>Importer dans un projet de base de données
 Vous pouvez utiliser la fonction Importer pour remplir un projet avec de nouveaux objets provenant d'une base de données active ou d'un fichier .dacpac, ou pour mettre à jour des objets existants dans votre projet avec une nouvelle définition d'un script. Il convient de noter plusieurs différences de comportement entre ces trois choix, comme décrit ci-dessous.  
@@ -59,7 +59,7 @@ Tous les objets de la source d’importation qui n’existent *pas* encore dans 
   
 Le processus d'importation à partir d'un script ne comprend pas les scripts de prédéploiement et de post-déploiement, les variables SQLCMD ni les fichiers RefactorLog. Ces éléments, ainsi que toutes les autres constructions non prises en charge qui sont détectées lors de l’importation, seront placés dans un fichier **ScriptsIgnoredOnImport.sql** au sein d’un dossier **Scripts** dans votre projet.  
   
-Pour plus d’informations, consultez le forum de l’équipe SSDT à l’adresse [http://social.msdn.microsoft.com/Forums/en-US/ssdt/threads](http://social.msdn.microsoft.com/Forums/en-US/ssdt/threads).  
+Pour plus d’informations, consultez le forum de l’équipe SSDT à l’adresse [https://social.msdn.microsoft.com/Forums/en-US/ssdt/threads](https://social.msdn.microsoft.com/Forums/en-US/ssdt/threads).  
   
 ## <a name="bkmk_import_encrypted"></a>Importer des objets chiffrés  
 Lors de l'importation d'objets chiffrés dans un projet de base de données, le corps entier de la définition d'objet ne peut pas toujours être récupéré depuis le serveur. De ce fait, le comportement d'importation peut varier lorsque cette classe d'objets doit être gérée.  

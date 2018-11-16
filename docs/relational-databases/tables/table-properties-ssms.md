@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: efcfa1d417a68428beb724c21f918f8af07dfffe
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5f4b3c22e81f28116fcdaaa83076ff4212b24bf5
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47708527"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51676068"
 ---
 # <a name="table-properties---ssms"></a>Propriétés de la table - SSMS
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -69,7 +69,7 @@ ms.locfileid: "47708527"
  Indique si l'objet a été créé avec l'option d'identificateur entre guillemets activée (ON). Pour plus d’informations, consultez [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
  **Escalade de verrous**  
- Indique la granularité de l'escalade de verrous de la table. Pour plus d'informations sur le verrouillage dans le moteur de base de données, consultez [Guide du verrouillage des transactions et du contrôle de version de ligne SQL Server](http://msdn.microsoft.com/library/jj856598.aspx). Les valeurs possibles sont :  
+ Indique la granularité de l'escalade de verrous de la table. Pour plus d'informations sur le verrouillage dans le moteur de base de données, consultez [Guide du verrouillage des transactions et du contrôle de version de ligne SQL Server](https://msdn.microsoft.com/library/jj856598.aspx). Les valeurs possibles sont :  
   
  AUTO  
  Cette option permet au [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] de sélectionner la granularité de l'escalade de verrous appropriée pour le schéma de la table.  

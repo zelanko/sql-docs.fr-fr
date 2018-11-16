@@ -15,12 +15,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 91d662dde7fe35ff74802ac9d899e03baaf8feb2
-ms.sourcegitcommit: 93e3bb8941411b808e00daa31121367e96fdfda1
+ms.openlocfilehash: 1c8daab3f7a68ee846d8f02012d572a1687058cc
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49359346"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673328"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Surveillance des performances à l’aide du magasin de requêtes
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "49359346"
  Pour plus d’informations sur l’utilisation du Magasin des requêtes dans Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)], consultez [Utilisation du Magasin des requêtes dans Azure SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-operate-query-store/).  
  
 > [!IMPORTANT]
-> Si vous utilisez le Magasin des requêtes pour avoir un aperçu juste-à-temps de la charge de travail dans [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], prévoyez d’installer les correctifs d’évolutivité des performances dans [KB 4340759](http://support.microsoft.com/help/4340759) dès que possible. 
+> Si vous utilisez le Magasin des requêtes pour avoir un aperçu juste-à-temps de la charge de travail dans [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], prévoyez d’installer les correctifs d’évolutivité des performances dans [KB 4340759](https://support.microsoft.com/help/4340759) dès que possible. 
   
 ##  <a name="Enabling"></a> Activation du magasin de requêtes  
  Le magasin de requêtes n'est pas actif par défaut pour les nouvelles bases de données.  

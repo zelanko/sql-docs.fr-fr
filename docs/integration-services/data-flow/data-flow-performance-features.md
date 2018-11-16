@@ -24,12 +24,12 @@ ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bb243fa126fc53282bd310d3bd5d47029e2f4aba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 694f1c2d29ced11a4f66a05bd983fe704e1be241
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605830"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51642376"
 ---
 # <a name="data-flow-performance-features"></a>Fonctionnalités de performances de flux de données
   Cette rubrique offre des suggestions pour éviter les problèmes de performances les plus fréquents lors de la conception de packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Cette rubrique fournit également des informations sur les fonctionnalités et les outils que vous pouvez utiliser pour résoudre des problèmes liés aux performances des packages.  
@@ -135,7 +135,7 @@ ms.locfileid: "47605830"
  Si vous devez créer plusieurs agrégations dans un flux de données, songez à créer plusieurs agrégations qui utilisent une transformation d'agrégation au lieu de créer plusieurs transformations. Cette approche améliore les performances lorsqu'une agrégation est un sous-ensemble d'une autre agrégation, car la transformation peut optimiser le stockage interne et analyser une seule fois les données entrantes. Par exemple, si une agrégation utilise une clause GROUP BY et une agrégation AVG, le fait de les combiner en une seule transformation peut améliorer les performances. Toutefois, du fait que la réalisation de plusieurs agrégations au sein d'une transformation d'agrégation sérialise les opérations d'agrégation, il est possible que les performances ne s'améliorent pas lorsque plusieurs agrégations doivent être calculées indépendamment.  
   
 #### <a name="fuzzy-lookup-and-fuzzy-grouping-transformations"></a>Transformations de recherche floue et de regroupement probable  
- Pour plus d'informations sur l'optimisation des performances des transformations de recherche floue et de regroupement probable, consultez le livre blanc [Présentation des transformations Fuzzy Lookup (recherche approximative) et Fuzzy Grouping (regroupement approximatif) dans les services DTS (Data Transformation Services) de SQL Server 2005](http://go.microsoft.com/fwlink/?LinkId=96604).  
+ Pour plus d'informations sur l'optimisation des performances des transformations de recherche floue et de regroupement probable, consultez le livre blanc [Présentation des transformations Fuzzy Lookup (recherche approximative) et Fuzzy Grouping (regroupement approximatif) dans les services DTS (Data Transformation Services) de SQL Server 2005](https://go.microsoft.com/fwlink/?LinkId=96604).  
   
 #### <a name="lookup-transformation"></a>Transformation de recherche  
  Réduisez la taille des données de référence en mémoire en entrant une instruction SELECT qui recherche uniquement les colonnes dont vous avez besoin. Cette approche est plus performante que la sélection d'une table ou d'une vue entière qui retourne une quantité importante de données inutiles.  
@@ -148,7 +148,7 @@ ms.locfileid: "47605830"
   
  En général, les composants les plus lents de la transformation de dimension à variation lente sont les transformations de commande OLE DB qui effectuent des mises à jour sur une ligne à la fois. Par conséquent, le moyen le plus efficace pour améliorer les performances de la transformation de dimension à variation lente consiste à remplacer les transformations de commande OLE DB. Vous pouvez remplacer ces transformations par des composants de destination qui enregistrent toutes les lignes à mettre à jour dans une table de transit. Ensuite, vous pouvez ajouter une tâche d'exécution SQL qui effectue une opération UPDATE Transact-SQL basée sur un jeu unique sur toutes les lignes en même temps.  
   
- Les utilisateurs expérimentés peuvent concevoir un flux de données personnalisé pour le traitement des dimensions à variation lente qui est optimisé pour les grandes dimensions. Pour en savoir plus et obtenir un exemple de cette approche, consultez la section « Scénario de dimension Unique » dans le livre blanc [Projet REAL: Pratiques de conception ETL Business Intelligence](http://go.microsoft.com/fwlink/?LinkId=96602).  
+ Les utilisateurs expérimentés peuvent concevoir un flux de données personnalisé pour le traitement des dimensions à variation lente qui est optimisé pour les grandes dimensions. Pour en savoir plus et obtenir un exemple de cette approche, consultez la section « Scénario de dimension Unique » dans le livre blanc [Projet REAL: Pratiques de conception ETL Business Intelligence](https://go.microsoft.com/fwlink/?LinkId=96602).  
   
 ### <a name="destinations"></a>Destinations  
  Pour obtenir de meilleures performances avec les destinations, songez à utiliser une destination [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et à tester les performances de la destination.  
@@ -171,38 +171,38 @@ ms.locfileid: "47605830"
 ## <a name="related-content"></a>Contenu associé  
  **Articles et publications de blog**  
   
--   Article technique, [SQL Server 2005 Integration Services : une stratégie pour de meilleures performances](http://go.microsoft.com/fwlink/?LinkId=98899), sur le site technet.microsoft.com  
+-   Article technique, [SQL Server 2005 Integration Services : une stratégie pour de meilleures performances](https://go.microsoft.com/fwlink/?LinkId=98899), sur le site technet.microsoft.com  
   
--   Article technique, [Integration Services : techniques de réglage des performances](http://go.microsoft.com/fwlink/?LinkId=98900), sur le site technet.microsoft.com  
+-   Article technique, [Integration Services : techniques de réglage des performances](https://go.microsoft.com/fwlink/?LinkId=98900), sur le site technet.microsoft.com  
   
--   Article technique, [Augmentation du débit de pipelines en fractionnant les transformations synchrones en plusieurs tâches](http://sqlcat.com/technicalnotes/archive/2010/08/18/increasing-throughput-of-pipelines-by-splitting-synchronous-transformations-into-multiple-tasks.aspx), sur le site sqlcat.com  
+-   Article technique, [Augmentation du débit de pipelines en fractionnant les transformations synchrones en plusieurs tâches](https://sqlcat.com/technicalnotes/archive/2010/08/18/increasing-throughput-of-pipelines-by-splitting-synchronous-transformations-into-multiple-tasks.aspx), sur le site sqlcat.com  
   
--   Article technique, [Guide des performances de chargement des données](http://go.microsoft.com/fwlink/?LinkId=220816), sur le site msdn.microsoft.com.  
+-   Article technique, [Guide des performances de chargement des données](https://go.microsoft.com/fwlink/?LinkId=220816), sur le site msdn.microsoft.com.  
   
--   Article technique, [Nous avons chargé 1 To en 30 minutes avec SSIS, vous le pouvez aussi](http://go.microsoft.com/fwlink/?LinkId=220817), sur le site msdn.microsoft.com.  
+-   Article technique, [Nous avons chargé 1 To en 30 minutes avec SSIS, vous le pouvez aussi](https://go.microsoft.com/fwlink/?LinkId=220817), sur le site msdn.microsoft.com.  
   
--   Article technique, [Les 10 meilleures pratiques pour SQL Server Integration Services](http://go.microsoft.com/fwlink/?LinkId=220818), sur le site sqlcat.com.  
+-   Article technique, [Les 10 meilleures pratiques pour SQL Server Integration Services](https://go.microsoft.com/fwlink/?LinkId=220818), sur le site sqlcat.com.  
   
--   Article technique et exemple, [« Distributeur de données équilibrées » pour SSIS](http://go.microsoft.com/fwlink/?LinkId=220822), sur le site sqlcat.com.  
+-   Article technique et exemple, [« Distributeur de données équilibrées » pour SSIS](https://go.microsoft.com/fwlink/?LinkId=220822), sur le site sqlcat.com.  
   
--   Publication de blog [Résolution des problèmes de performances des packages SSIS](http://go.microsoft.com/fwlink/?LinkId=238156)sur blogs.msdn.com.  
+-   Publication de blog [Résolution des problèmes de performances des packages SSIS](https://go.microsoft.com/fwlink/?LinkId=238156)sur blogs.msdn.com.  
   
  **Vidéos**  
   
--   Série de vidéos, [Conception et optimisation des performances de vos packages SSIS en entreprise (Série de vidéos SQL)](http://go.microsoft.com/fwlink/?LinkId=400878)  
+-   Série de vidéos, [Conception et optimisation des performances de vos packages SSIS en entreprise (Série de vidéos SQL)](https://go.microsoft.com/fwlink/?LinkId=400878)  
   
--   Vidéo, [Optimisation du flux de données de votre package SSIS en entreprise (Vidéo SQL Server)](http://technet.microsoft.com/sqlserver/ff686901.aspx), sur technet.microsoft.com  
+-   Vidéo, [Optimisation du flux de données de votre package SSIS en entreprise (Vidéo SQL Server)](https://technet.microsoft.com/sqlserver/ff686901.aspx), sur technet.microsoft.com  
   
--   Vidéo, [Présentation des mémoires tampon de flux de données SSIS (Vidéo SQL Server)](http://technet.microsoft.com/sqlserver/ff686905.aspx), sur technet.microsoft.com  
+-   Vidéo, [Présentation des mémoires tampon de flux de données SSIS (Vidéo SQL Server)](https://technet.microsoft.com/sqlserver/ff686905.aspx), sur technet.microsoft.com  
   
--   Vidéo [Modèles de conception des performances de Microsoft SQL Server Integration Services](http://go.microsoft.com/fwlink/?LinkID=233698&clcid=0x409), sur channel9.msdn.com.  
+-   Vidéo [Modèles de conception des performances de Microsoft SQL Server Integration Services](https://go.microsoft.com/fwlink/?LinkID=233698&clcid=0x409), sur channel9.msdn.com.  
   
--   Présentation, [Exploitation par Microsoft IT des améliorations apportées au moteur de flux de données SQL Server 2008 SSIS](http://go.microsoft.com/fwlink/?LinkId=217660), sur le site sqlcat.com.  
+-   Présentation, [Exploitation par Microsoft IT des améliorations apportées au moteur de flux de données SQL Server 2008 SSIS](https://go.microsoft.com/fwlink/?LinkId=217660), sur le site sqlcat.com.  
   
--   Vidéo, [Distributeur de données équilibrées](http://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409), sur technet.microsoft.com.  
+-   Vidéo, [Distributeur de données équilibrées](https://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409), sur technet.microsoft.com.  
   
 ## <a name="see-also"></a> Voir aussi  
  [Outils de dépannage pour le développement des packages](../../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)   
- [Outils de dépannage pour l’exécution des packages](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)  
+ [Outils de dépannage pour l'exécution des packages](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)  
   
   

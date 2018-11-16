@@ -16,12 +16,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7c5096ef0690e915b1063c684ed60e00bcba8f33
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 27ef6862a5fcfb6e63ffcbdd89fb1e000c2065f2
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854537"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51667028"
 ---
 # <a name="cardinality-estimation-sql-server"></a>Évaluation de la cardinalité (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -83,11 +83,11 @@ GO
  
 Ou, à partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, à l’aide de l’[indicateur de requête](../../t-sql/queries/hints-transact-sql-query.md#use_hint) `USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION')`.
  
- ```sql  
+ ```sql  
 SELECT CustomerId, OrderAddedDate  
 FROM OrderTable  
-WHERE OrderAddedDate >= '2016-05-01'; 
-OPTION (USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION'));  
+WHERE OrderAddedDate >= '2016-05-01'; 
+OPTION (USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION'));  
 ```
  
 **Magasin des requêtes** : Si vous utilisez [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], le Magasin des requêtes est un outil pratique pour examiner les performances de vos requêtes. Dans [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)], dans l’**Explorateur d’objets** situé sous le nœud de votre base de données, le nœud **Magasin des requêtes** s’affiche quand le Magasin des requêtes est activé.  
@@ -108,7 +108,7 @@ SET QUERY_STORE CLEAR;
 ```  
   
 > [!TIP] 
-> Nous vous recommandons d’installer la dernière version de [Management Studio](http://msdn.microsoft.com/library/mt238290.aspx) et de la mettre souvent à jour.  
+> Nous vous recommandons d’installer la dernière version de [Management Studio](https://msdn.microsoft.com/library/mt238290.aspx) et de la mettre souvent à jour.  
   
 Pour effectuer le suivi du processus de l’estimation de la cardinalité, vous pouvez utiliser l’événement étendu nommé **query_optimizer_estimate_cardinality**. L’exemple de code [!INCLUDE[tsql](../../includes/tsql-md.md)] suivant s’exécute sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il écrit un fichier .xel dans `C:\Temp\` (vous pouvez changer ce chemin). Lorsque vous ouvrez le fichier .xel dans [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)], vous voyez ses informations détaillées dans un affichage convivial.  
   
@@ -139,17 +139,17 @@ STATE = START;  --STOP;
 GO  
 ```  
   
-Pour plus d’informations sur les événements étendus adaptés à [!INCLUDE[ssSDS](../../includes/sssds-md.md)], consultez [Événements étendus dans la base de données SQL](http://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/).  
+Pour plus d’informations sur les événements étendus adaptés à [!INCLUDE[ssSDS](../../includes/sssds-md.md)], consultez [Événements étendus dans la base de données SQL](https://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/).  
   
 ## <a name="steps-to-assess-the-ce-version"></a>Étapes d’évaluation de la version d’estimation de la cardinalité  
   
 Les étapes suivantes permettent d’évaluer si l’une de vos requêtes importantes est moins performante avec la dernière version de l’estimation de cardinalité. Certaines étapes sont effectuées en exécutant l’exemple de code présenté dans la section précédente.  
   
-1.  Ouvrir [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)]. Vérifiez que le niveau de compatibilité de votre base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est configuré sur la valeur maximale.  
+1.  Ouvrez [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)]. Vérifiez que le niveau de compatibilité de votre base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est configuré sur la valeur maximale.  
   
 2.  Effectuez les étapes préliminaires suivantes :  
   
-    1.  Ouvrir [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)].  
+    1.  Ouvrez [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)].  
   
     2.  Exécutez le code T-SQL pour vérifier que le niveau de compatibilité de votre base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est configuré sur la valeur maximale.  
   
@@ -270,7 +270,7 @@ WHERE s.ticket = r.ticket AND
   
 ## <a name="see-also"></a> Voir aussi  
  [Surveiller et régler les performances](../../relational-databases/performance/monitor-and-tune-for-performance.md)   
- [Optimizing Your Query Plans with the SQL Server 2014 Cardinality Estimator](http://msdn.microsoft.com/library/dn673537.aspx) (Optimisation de vos plans de requête avec l’estimateur de cardinalité SQL Server 2014)  
+ [Optimizing Your Query Plans with the SQL Server 2014 Cardinality Estimator](https://msdn.microsoft.com/library/dn673537.aspx) (Optimisation de vos plans de requête avec l’estimateur de cardinalité SQL Server 2014)  
  [Indicateurs de requête](../../t-sql/queries/hints-transact-sql-query.md)     
  [Indicateurs de requête USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint)       
  [Analyse des performances à l'aide du magasin de requêtes](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)    

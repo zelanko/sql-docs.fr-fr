@@ -27,12 +27,12 @@ ms.assetid: e1728707-5215-4c04-8320-e36f161b834a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 38b30537da238905fdc4ae1394dfceb6d9606f89
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7fe44b790fbf99811761041f4b81eeb3b48e96da
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229969"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641536"
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd Utility
   Le `sqlcmd` utilitaire vous permet d’entrer [!INCLUDE[tsql](../includes/tsql-md.md)] script, instructions et procédures système de fichiers à l’invite de commandes, dans **éditeur de requête** en mode SQLCMD, dans un fichier de script Windows ou dans une étape de travail de système d’exploitation (Cmd.exe) d’un [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Travail de l’agent. Cet utilitaire utilise ODBC pour exécuter des traitements [!INCLUDE[tsql](../includes/tsql-md.md)].  
@@ -99,7 +99,7 @@ ms.locfileid: "48229969"
  Déclare le type de la charge de travail de l'application lors de la connexion à un serveur. La seule valeur actuellement prise en charge est **ReadOnly**. Si **-K** n’est pas spécifié, l’utilitaire sqlcmd ne prend pas en charge la connectivité à un réplica secondaire dans un groupe de disponibilité AlwaysOn. Pour plus d’informations, consultez [secondaires actifs : réplicas secondaires lisibles](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
  `-M` *multisubnet_failover*  
- Spécifiez toujours `-M` lors de la connexion à l’écouteur de groupe de disponibilité d’un [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] groupe de disponibilité ou un [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Instance de Cluster de basculement. `-M` fournit une détection plus rapide du serveur actif et une connexion à celui-ci. Si `–M` n'est pas spécifié, `-M` est désactivé. Pour plus d’informations sur [!INCLUDE[ssHADR](../includes/sshadr-md.md)], consultez [écouteurs de groupe de disponibilité, connectivité Client et basculement d’Application &#40;SQL Server&#41;](../database-engine/listeners-client-connectivity-application-failover.md), [la création et Configuration des groupes de disponibilité &#40;SQL Server&#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [Clustering de basculement et groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md), et [secondaires actifs : réplicas secondaires lisibles ](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md) .  
+ Spécifiez toujours `-M` lors de la connexion à l'écouteur de groupe de disponibilité d'un groupe de disponibilité [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ou d'une instance de cluster de basculement [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. `-M` fournit une détection plus rapide du serveur actif et une connexion à celui-ci. Si `–M` n'est pas spécifié, `-M` est désactivé. Pour plus d’informations sur [!INCLUDE[ssHADR](../includes/sshadr-md.md)], consultez [écouteurs de groupe de disponibilité, connectivité Client et basculement d’Application &#40;SQL Server&#41;](../database-engine/listeners-client-connectivity-application-failover.md), [la création et Configuration des groupes de disponibilité &#40;SQL Server&#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [Clustering de basculement et groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md), et [secondaires actifs : réplicas secondaires lisibles ](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md) .  
   
  **-N**  
  Ce commutateur est utilisé par le client pour demander une connexion chiffrée.  
@@ -707,7 +707,7 @@ ms.locfileid: "48229969"
   
  `GO`  
   
- Lorsque vous appuyez sur Entrée, le jeu de résultats suivant est retourné.  
+ Lorsque vous appuyez sur entrée, le jeu de résultats suivant est retourné.  
   
  `BusinessEntityID FirstName    LastName`  
   

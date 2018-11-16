@@ -11,12 +11,12 @@ ms.assetid: a612ed91-b89b-4173-a0b1-0bce381e1e28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 12229b018a6b7b2e7908d7d77091ce5caef5fb5a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6abb029f20becaac0e3c874202e1788e7bfb3722
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800807"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51642086"
 ---
 # <a name="sap-bw-destination"></a>Destination SAP BW
   La destination SAP BW est le composant de destination de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 pour SAP BW. Ainsi, la destination SAP BW charge les données du flux de données d'un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] dans un système SAP Netweaver BW version 7.  
@@ -84,7 +84,7 @@ ms.locfileid: "47800807"
   
  Si vous ne connaissez pas toutes les valeurs requises pour configurer la destination, adressez-vous à votre administrateur SAP.  
   
- Pour obtenir la procédure pas à pas qui montre comment configurer et utiliser le gestionnaire de connexions, la source et la destination SAP BW, consultez le livre blanc [Utilisation de SQL Server 2008 Integration Services avec SAP BI 7.0](http://go.microsoft.com/fwlink/?LinkID=137090). Ce livre blanc explique également comment configurer les objets nécessaires dans SAP BW.  
+ Pour obtenir la procédure pas à pas qui montre comment configurer et utiliser le gestionnaire de connexions, la source et la destination SAP BW, consultez le livre blanc [Utilisation de SQL Server 2008 Integration Services avec SAP BI 7.0](https://go.microsoft.com/fwlink/?LinkID=137090). Ce livre blanc explique également comment configurer les objets nécessaires dans SAP BW.  
   
 ### <a name="using-the-ssis-designer-to-configure-the-destination"></a>Utilisation du concepteur SSIS pour configurer la destination  
  Pour plus d'informations sur les propriétés de la destination SAP BW que vous pouvez définir dans le Concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , cliquez sur l'une des rubriques suivantes :  

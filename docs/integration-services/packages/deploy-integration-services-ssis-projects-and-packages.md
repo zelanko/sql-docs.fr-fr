@@ -19,12 +19,12 @@ ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a0912f9404f59f57e4a0a09ae2346049bbb01c97
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9c6e008139eb9e52583045690cdc51b812ef8e73
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47638505"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51642266"
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>Déployer des projets et des packages Integration Services (SSIS)
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] prend en charge deux modèles de déploiement : le modèle de déploiement de projet et le modèle de déploiement de package hérité. Le modèle de déploiement de projet vous permet de déployer vos projets sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -109,7 +109,7 @@ Pour plus d’informations sur l’erreur décrite dans cette section et sur les
     -   Si vous avez créé le projet dans une version précédente de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], après avoir ouvert le fichier projet dans [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], convertissez le projet en modèle de déploiement de projet.  
   
         > [!NOTE]  
-        >  Si le projet contient une ou plusieurs sources de données, les sources de données sont supprimées à l’issue de la conversion du projet. Pour créer une connexion à une source de données que les packages du projet peuvent partager, ajoutez un gestionnaire de connexions au niveau du projet. Pour plus d’informations, consultez [Ajouter, supprimer ou partager un gestionnaire de connexions dans un package](http://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655).  
+        >  Si le projet contient une ou plusieurs sources de données, les sources de données sont supprimées à l’issue de la conversion du projet. Pour créer une connexion à une source de données que les packages du projet peuvent partager, ajoutez un gestionnaire de connexions au niveau du projet. Pour plus d’informations, consultez [Ajouter, supprimer ou partager un gestionnaire de connexions dans un package](https://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655).  
   
          Selon que vous exécutez **l’Assistant Conversion de projet Integration Services** à partir de [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] ou de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], l’Assistant effectue différentes tâches de conversion.  
   
@@ -513,7 +513,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
   **L’Assistant Conversion de projet Integration Services** convertit un projet en modèle de déploiement de projet.  
   
 > [!NOTE]  
->  Si le projet contient une ou plusieurs sources de données, les sources de données sont supprimées quand la conversion du projet est terminée. Pour créer une connexion à une source de données pouvant être partagée par les packages du projet, ajoutez un gestionnaire de connexions au niveau du projet. Pour plus d’informations, consultez [Ajouter, supprimer ou partager un gestionnaire de connexions dans un package](http://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655).  
+>  Si le projet contient une ou plusieurs sources de données, les sources de données sont supprimées quand la conversion du projet est terminée. Pour créer une connexion à une source de données pouvant être partagée par les packages du projet, ajoutez un gestionnaire de connexions au niveau du projet. Pour plus d’informations, consultez [Ajouter, supprimer ou partager un gestionnaire de connexions dans un package](https://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655).  
   
  **Que voulez-vous faire ?**  
   

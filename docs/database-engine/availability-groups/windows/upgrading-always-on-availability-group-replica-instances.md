@@ -10,12 +10,12 @@ ms.assetid: f670af56-dbcc-4309-9119-f919dcad8a65
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cff08e85cb8235567dd2ce7e8f8294f465892b47
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9c3faf4bb4b9f2a180bc09c91591ce6f6a9c3f15
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838867"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51605469"
 ---
 # <a name="upgrading-always-on-availability-group-replica-instances"></a>Mise à niveau d’instances de réplica d’un groupe de disponibilité Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -23,7 +23,7 @@ ms.locfileid: "47838867"
 Pendant la mise à niveau d’une instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] hébergeant un groupe de disponibilité Always On vers une nouvelle version [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], un nouveau Service Pack [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou une mise à jour cumulative, ou pendant l’installation d’un nouveau Service Pack ou d’une nouvelle mise à jour cumulative Windows, vous pouvez réduire le temps d’arrêt du réplica principal à un seul basculement manuel en effectuant une mise à niveau propagée (ou deux basculements manuels en cas de restauration automatique vers l’instance principale d’origine). Pendant le processus de mise à niveau, un réplica secondaire n’est pas disponible pour le basculement ou pour des opérations en lecture seule et, après la mise à niveau, le réplica secondaire peut prendre un certain temps pour rattraper son retard par rapport au nœud de réplica principal en fonction du volume d’activité sur ce dernier (attendez-vous à un trafic réseau important). Sachez également qu’après le basculement initial vers un réplica secondaire exécutant une version plus récente de SQL Server, les bases de données de ce groupe de disponibilité s’exécuteront via un processus de mise à niveau vers la version la plus récente. Pendant ce temps, aucun réplica lisible ne sera présent pour aucune de ces bases de données. Le temps d’arrêt après le basculement initial dépend du nombre de bases de données dans le groupe de disponibilité. Si vous prévoyez une restauration automatique sur le réplica principal d’origine, cette étape ne sera pas répétée.
   
 >[!NOTE]  
->Cet article ne concerne que la mise à niveau de SQL Server lui-même. Il ne couvre pas la mise à niveau du système d’exploitation contenant le cluster de basculement Windows Server (WSFC). La mise à niveau du système d’exploitation Windows qui héberge le cluster de basculement n’est pas prise en charge psr les systèmes d’exploitation antérieurs à Windows Server 2012 R2. Pour mettre à niveau un nœud de cluster s’exécutant sur Windows Server 2012 R2, consultez la rubrique [Cluster Operating System Rolling Upgrade](http://docs.microsoft.com/windows-server/failover-clustering/cluster-operating-system-rolling-upgrade) (Mise à niveau propagée du système d’exploitation de cluster).  
+>Cet article ne concerne que la mise à niveau de SQL Server lui-même. Il ne couvre pas la mise à niveau du système d’exploitation contenant le cluster de basculement Windows Server (WSFC). La mise à niveau du système d’exploitation Windows qui héberge le cluster de basculement n’est pas prise en charge psr les systèmes d’exploitation antérieurs à Windows Server 2012 R2. Pour mettre à niveau un nœud de cluster s’exécutant sur Windows Server 2012 R2, consultez la rubrique [Cluster Operating System Rolling Upgrade](https://docs.microsoft.com/windows-server/failover-clustering/cluster-operating-system-rolling-upgrade) (Mise à niveau propagée du système d’exploitation de cluster).  
   
 ## <a name="prerequisites"></a>Conditions préalables requises  
 Avant de commencer, passez en revue les informations importantes suivantes :  
@@ -245,7 +245,7 @@ En fonction de la mise à jour appliquée, des étapes supplémentaires peuvent 
 
 1. Mettez à niveau l’instance qui était le réplica principal à l’origine.
 
-Pour plus d’informations, consultez [Les fonctionnalités de capture de données modifiées peuvent s’interrompre après la mise à niveau vers la dernière version CU](http://blogs.msdn.microsoft.com/sql_server_team/cdc-functionality-may-break-after-upgrading-to-the-latest-cu-for-sql-server-2012-2014-and-2016/).
+Pour plus d’informations, consultez [Les fonctionnalités de capture de données modifiées peuvent s’interrompre après la mise à niveau vers la dernière version CU](https://blogs.msdn.microsoft.com/sql_server_team/cdc-functionality-may-break-after-upgrading-to-the-latest-cu-for-sql-server-2012-2014-and-2016/).
 
   
 ## <a name="see-also"></a> Voir aussi  

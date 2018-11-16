@@ -14,12 +14,12 @@ ms.assetid: 6404dc7f-550c-47cc-b901-c072742f430a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 74609a50ad4d2f29bbbd7d25cc4cd1a242e64ff4
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: b187fb1d2e5595ef1ec75ed99c9a6e3f85029f3e
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49071753"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640696"
 ---
 # <a name="cdc-control-task"></a>Tâche de contrôle de capture de données modifiées
   La tâche de contrôle de capture de données modifiées permet de contrôler le cycle de vie des packages de capture de données modifiées. Elle gère la synchronisation des package de capture de données modifiées avec le package de charge initiale et la gestion des plages de numéros séquentiels dans le journal (NSE) qui sont traités lors de l'exécution d'un package de capture de données modifiées. En outre, la tâche de contrôle de capture de données modifiées traite les scénarios d'erreur et la récupération.  
@@ -78,11 +78,11 @@ ms.locfileid: "49071753"
   
 ## <a name="related-content"></a>Contenu associé  
   
--   Article technique, [Installation du service de capture de données modifiées Microsoft SQL Server 2012 pour Oracle par Attunity](http://go.microsoft.com/fwlink/?LinkId=252958), sur social.technet.microsoft.com.  
+-   Article technique, [Installation du service de capture de données modifiées Microsoft SQL Server 2012 pour Oracle par Attunity](https://go.microsoft.com/fwlink/?LinkId=252958), sur social.technet.microsoft.com.  
   
--   Article technique, [Résolution des problèmes de configuration dans le service de capture de données modifiées Microsoft SQL Server pour Oracle par Attunity](http://go.microsoft.com/fwlink/?LinkId=252960), sur social.technet.microsoft.com.  
+-   Article technique, [Résolution des problèmes de configuration dans le service de capture de données modifiées Microsoft SQL Server pour Oracle par Attunity](https://go.microsoft.com/fwlink/?LinkId=252960), sur social.technet.microsoft.com.  
   
--   Article technique, [Dépannage des erreurs d'instance du service de capture de données modifiées Microsoft SQL Server pour Oracle par Attunity](http://go.microsoft.com/fwlink/?LinkId=252961), sur social.technet.microsoft.com.  
+-   Article technique, [Dépannage des erreurs d'instance du service de capture de données modifiées Microsoft SQL Server pour Oracle par Attunity](https://go.microsoft.com/fwlink/?LinkId=252961), sur social.technet.microsoft.com.  
   
 ## <a name="cdc-control-task-editor"></a>Éditeur de tâche de contrôle CDC
   Utilisez la boîte de dialogue **Éditeur de tâche de contrôle CDC** pour configurer la tâche de contrôle CDC. La configuration de la tâche de contrôle CDC inclut la définition d'une connexion à la base de données CDC, l'opération de la tâche CDC et des informations de gestion d'état.  

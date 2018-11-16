@@ -17,12 +17,12 @@ ms.assetid: e549a2a8-4154-4ec8-b146-614564169b39
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 438356f08fee5bc9ac20c4a5b2038e54e7a6ffa6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5ce67b078a4410f67a1c877951e83dece65af1b6
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47815967"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51698777"
 ---
 # <a name="column-properties-visual-database-tools"></a>Propriétés de la colonne (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,7 +53,7 @@ Affiche le nom de la source de données pour la colonne sélectionnée. (S'appli
 S'étend pour afficher les propriétés restantes.  
   
 **Type de données**  
-Affiche le type de données de la colonne sélectionnée. Pour plus d’informations, consultez [Types de données (Transact-SQL)](http://msdn.microsoft.com/a54f7373-b247-4d61-8fb8-7f2ec7a8d0a4).  
+Affiche le type de données de la colonne sélectionnée. Pour plus d’informations, consultez [Types de données (Transact-SQL)](https://msdn.microsoft.com/a54f7373-b247-4d61-8fb8-7f2ec7a8d0a4).  
   
 **Incrément d'identité**  
 Indique l’incrément qui sera ajouté à **Valeur initiale de la propriété Identity** pour chaque ligne ultérieure de la colonne d’identité. (S'applique uniquement à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].)  
@@ -95,7 +95,7 @@ Affiche le nom de la colonne. Pour modifier le nom, tapez-le dans la zone de tex
 Précise si le type de données de la colonne autorise les valeurs NULL.  
   
 **Type de données**  
-Affiche le type de données de la colonne sélectionnée. Pour modifier cette propriété, cliquez sur sa valeur, développez la liste déroulante et choisissez une autre valeur. Pour plus d’informations, consultez [Types de données (Transact-SQL)](http://msdn.microsoft.com/a54f7373-b247-4d61-8fb8-7f2ec7a8d0a4).  
+Affiche le type de données de la colonne sélectionnée. Pour modifier cette propriété, cliquez sur sa valeur, développez la liste déroulante et choisissez une autre valeur. Pour plus d’informations, consultez [Types de données (Transact-SQL)](https://msdn.microsoft.com/a54f7373-b247-4d61-8fb8-7f2ec7a8d0a4).  
   
 **Valeur ou liaison par défaut**  
 Affiche la valeur par défaut de cette colonne quand aucune valeur n'y est spécifiée. La liste déroulante contient toutes les valeurs par défaut globales définies dans la source de données. Pour lier la colonne à une valeur par défaut globale, sélectionnez-en une dans la liste déroulante. Ou bien, pour créer une contrainte par défaut pour la colonne, entrez la valeur par défaut directement comme un texte.  
@@ -143,7 +143,7 @@ Affiche la colonne utilisée pour définir le type de document d'une colonne de 
 Indique la langue utilisée pour indexer la colonne.  
   
 **Sémantique statistique**  
-Sélectionnez s'il faut activer l'indexation sémantique statistique pour la colonne sélectionnée. Pour plus d’informations, consultez [Recherche sémantique (SQL Server)](http://msdn.microsoft.com/cd8faa9d-07db-420d-93f4-a2ea7c974b97).  
+Sélectionnez s'il faut activer l'indexation sémantique statistique pour la colonne sélectionnée. Pour plus d’informations, consultez [Recherche sémantique (SQL Server)](https://msdn.microsoft.com/cd8faa9d-07db-420d-93f4-a2ea7c974b97).  
   
 Si vous sélectionnez une **langue** avant de sélectionner **Sémantique statistique**, et que la langue sélectionnée n'est pas associée à un modèle linguistique sémantique, l'option **Sémantique statistique** est définie avec la valeur **Non** et ne peut pas être modifiée. Si vous sélectionnez **Oui** pour l'option **Sémantique statistique** avant de sélectionner une **langue**, les langues disponibles dans la colonne **Langue** sont limitées à celles pour lesquelles il existe une prise en charge de modèle linguistique sémantique.  
   

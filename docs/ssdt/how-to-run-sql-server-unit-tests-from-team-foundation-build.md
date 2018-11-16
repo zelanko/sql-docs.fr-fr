@@ -11,21 +11,21 @@ ms.assetid: 24f5b85d-d6f9-415f-b09f-933b78dc0b67
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 12908c9a880e09f08cc4903032243128025dbb3e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fe4b6dd462a8f8fec6797c26f7ae0461c4b0a4ce
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47797353"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51669858"
 ---
 # <a name="how-to-run-sql-server-unit-tests-from-team-foundation-build"></a>Procédure : exécuter des tests unitaires SQL Server en utilisant Team Foundation Build
 Utilisez Team Foundation Build pour exécuter vos tests unitaires SQL Server dans un test de vérification de la génération. Configurez les tests unitaires pour déployer la base de données, générer des données de test, puis exécuter les tests sélectionnés. Si vous n'êtes pas familiarisé avec Team Foundation Build, vous devez vérifier les informations suivantes avant de suivre les procédures de cette rubrique :  
   
 -   [Création et définition de tests unitaires SQL Server](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
   
--   [Procédure : configurer et exécuter des tests planifiés après avoir généré votre application](http://msdn.microsoft.com/library/ms182465(VS.100).aspx)  
+-   [Procédure : configurer et exécuter des tests planifiés après avoir généré votre application](https://msdn.microsoft.com/library/ms182465(VS.100).aspx)  
   
--   [Créer une définition de build de base](http://msdn.microsoft.com/library/ms181716(VS.100).aspx)  
+-   [Créer une définition de build de base](https://msdn.microsoft.com/library/ms181716(VS.100).aspx)  
   
 Avant d'utiliser ces procédures, vous devez d'abord configurer l'environnement de travail en effectuant les tâches suivantes :  
   
@@ -215,22 +215,22 @@ Dans cette procédure, vous archivez tous les fichiers de la solution. Ces fichi
   
 1.  Connectez-vous à un ordinateur exécutant Team Foundation Server.  
   
-    Pour plus d'informations, consultez [Utilisation de l'Explorateur du contrôle de code source](http://msdn.microsoft.com/library/ms181370(VS.100).aspx).  
+    Pour plus d'informations, consultez [Utilisation de l'Explorateur du contrôle de code source](https://msdn.microsoft.com/library/ms181370(VS.100).aspx).  
   
 2.  Si votre solution ne figure pas encore dans le contrôle de code source, ajoutez-la au contrôle de code source.  
   
-    Pour plus d'informations, consultez [Ajouter un projet ou une solution au contrôle de version](http://msdn.microsoft.com/library/ms181374(VS.100).aspx).  
+    Pour plus d'informations, consultez [Ajouter un projet ou une solution au contrôle de version](https://msdn.microsoft.com/library/ms181374(VS.100).aspx).  
   
 3.  Cliquez sur **Affichage**, puis sur **Archivages en attente**.  
   
 4.  Archivez tous les fichiers de la solution.  
   
-    Pour plus d’informations, consultez [Archiver des modifications en attente](http://msdn.microsoft.com/library/ms181411(VS.100).aspx).  
+    Pour plus d’informations, consultez [Archiver des modifications en attente](https://msdn.microsoft.com/library/ms181411(VS.100).aspx).  
   
     > [!NOTE]  
     > Vous pouvez disposer d'un processus d'équipe spécifique qui détermine la manière dont les tests automatisés sont créés et gérés. Par exemple, le processus peut nécessiter de vérifier la génération localement avant d'avoir archivé ce code avec les tests qui seront exécutés sur celui-ci.  
   
-    Dans l'**Explorateur de solutions**, une icône de cadenas apparaît en regard de chaque fichier pour indiquer qu'il est archivé. Pour plus d'informations, consultez [Afficher les propriétés des fichiers et dossiers du contrôle de version](http://msdn.microsoft.com/library/ms245468(VS.100).aspx).  
+    Dans l'**Explorateur de solutions**, une icône de cadenas apparaît en regard de chaque fichier pour indiquer qu'il est archivé. Pour plus d'informations, consultez [Afficher les propriétés des fichiers et dossiers du contrôle de version](https://msdn.microsoft.com/library/ms245468(VS.100).aspx).  
   
     Les tests sont disponibles dans Team Foundation Build. Vous pouvez à présent créer une définition de build qui contient les tests à exécuter.  
   
@@ -280,11 +280,11 @@ Dans cette procédure, vous archivez tous les fichiers de la solution. Ces fichi
   
 3.  Vérifiez que les valeurs des champs **Définition de build**, **Agent de build** et **Dossier de dépôt de cette build** sont appropriées, puis cliquez sur **Mettre en file d'attente**.  
   
-    L'onglet **En attente** de l'**Explorateur de builds** s'affiche. Pour plus d'informations, consultez [Gérer et afficher des builds terminées (Visual Studio 2010)](http://msdn.microsoft.com/library/ms181730(VS.100).aspx) ou [Gérer vos builds dans l'Explorateur de builds (Visual Studio 2012)](http://msdn.microsoft.com/library/ms181732.aspx).  
+    L'onglet **En attente** de l'**Explorateur de builds** s'affiche. Pour plus d'informations, consultez [Gérer et afficher des builds terminées (Visual Studio 2010)](https://msdn.microsoft.com/library/ms181730(VS.100).aspx) ou [Gérer vos builds dans l'Explorateur de builds (Visual Studio 2012)](https://msdn.microsoft.com/library/ms181732.aspx).  
   
 ## <a name="see-also"></a> Voir aussi  
 [Exécuter des tests unitaires SQL Server](../ssdt/running-sql-server-unit-tests.md)  
-[Créer une définition de build de base](http://msdn.microsoft.com/library/ms181716(VS.100).aspx)  
-[Mettre une build en file d'attente](http://msdn.microsoft.com/library/ms181722(VS.100).aspx)  
-[Surveiller la progression d'une build en cours d'exécution](http://msdn.microsoft.com/library/ms181724(VS.100).aspx)  
+[Créer une définition de build de base](https://msdn.microsoft.com/library/ms181716(VS.100).aspx)  
+[Mettre une build en file d'attente](https://msdn.microsoft.com/library/ms181722(VS.100).aspx)  
+[Surveiller la progression d'une build en cours d'exécution](https://msdn.microsoft.com/library/ms181724(VS.100).aspx)  
   

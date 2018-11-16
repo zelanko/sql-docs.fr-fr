@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 581da1ec4f3b42a9b71f4f8fedc5a22100d6ff2f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f70aa8745576c2837d4b957fed9783baa0248f07
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596127"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657608"
 ---
 # <a name="survey-of-initial-areas-in-in-memory-oltp"></a>Inspection des zones initiales dans OLTP en mémoire
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -82,7 +82,7 @@ Cet article se concentre sur OLTP et non sur l’analyse. Pour plus d’informat
   
   
 > [!NOTE]
-> Une vidéo de deux minutes sur les fonctionnalités en mémoire est disponible à la page [Azure SQL Database - In-Memory Technologies](http://channel9.msdn.com/Blogs/Windows-Azure/Azure-SQL-Database-In-Memory-Technologies)(Azure SQL Database - Technologies en mémoire). La vidéo date de décembre 2015.  
+> Une vidéo de deux minutes sur les fonctionnalités en mémoire est disponible à la page [Azure SQL Database - In-Memory Technologies](https://channel9.msdn.com/Blogs/Windows-Azure/Azure-SQL-Database-In-Memory-Technologies)(Azure SQL Database - Technologies en mémoire). La vidéo date de décembre 2015.  
 
 
 ### <a name="columnstore"></a>columnstore
@@ -463,7 +463,7 @@ Une fonction définie par l’utilisateur compilée en mode natif s’exécute p
 Pour obtenir des données de test et des explications sur les performances des fonctions définies par l’utilisateur natives, consultez :  
   
   - [Soften the RBAR impact with Native Compiled UDFs in SQL Server 2016 (Atténuer l’impact du traitement RBAR avec les fonctions définies par l’utilisateur compilées en mode natif dans SQL Server 2016)](https://blogs.msdn.microsoft.com/sqlcat/2016/02/17/soften-the-rbar-impact-with-native-compiled-udfs-in-sql-server-2016/)  
-  - Billet de blog [Natively Compiled User Defined Functions](http://sqlinthewild.co.za/index.php/2016/01/12/natively-compiled-user-defined-functions/) de Gail Shaw (janvier 2016).  
+  - Billet de blog [Natively Compiled User Defined Functions](https://sqlinthewild.co.za/index.php/2016/01/12/natively-compiled-user-defined-functions/) de Gail Shaw (janvier 2016).  
   
 <a name="documentation-guide-for-memory-optimized-tables-41z"></a>  
   
@@ -475,7 +475,7 @@ Consultez les autres articles suivants qui traitent de considérations spéciale
   - [Déterminer si un tableau ou une procédure stockée doit être déplacée vers l’OLTP en mémoire](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)  
   - Le rapport d’analyse des performances de transaction dans SQL Server Management Studio vous aide à évaluer si l’OLTP en mémoire améliore les performances de votre application de base de données.  
   - Utilisez le [Conseiller d’optimisation de la mémoire](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md) pour vous aider à migrer la table de base de données sur disque vers l’OLTP en mémoire.   
-- [Sauvegarder, restaurer et récupérer des tables optimisées en mémoire](http://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)  
+- [Sauvegarder, restaurer et récupérer des tables optimisées en mémoire](https://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)  
   - Le stockage utilisé par les tables optimisées en mémoire peut être bien supérieur à sa taille en mémoire, et il affecte la taille de la sauvegarde de base de données.  
 - [Transactions avec tables optimisées en mémoire](../../relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md)  
   - Fournit des informations sur la logique de nouvelle tentative dans T-SQL, pour les transactions sur les tables optimisées en mémoire.  
@@ -499,5 +499,5 @@ L’article suivant, et ses articles enfants dans la table des matières, décri
     
 Voici des articles qui contiennent du code pour illustrer les gains de performance que vous pouvez obtenir à l’aide de l’OLTP en mémoire :  
   
-- La[Démonstration : optimisation des performances de l’OLTP en mémoire](../../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md) propose une démonstration à petite échelle des gains de performances potentiels.  
+- La [Démonstration : optimisation des performances de l’OLTP en mémoire](../../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md) propose une démonstration à petite échelle des gains de performances potentiels.  
 - La page [Sample Database for In-Memory OLTP](../../relational-databases/in-memory-oltp/sample-database-for-in-memory-oltp.md) (Exemple de base de données pour l’OLTP en mémoire) présente une démonstration à plus grande échelle.  

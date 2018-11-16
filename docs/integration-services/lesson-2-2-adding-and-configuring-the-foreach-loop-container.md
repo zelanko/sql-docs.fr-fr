@@ -11,12 +11,12 @@ ms.assetid: 88a973cc-0f23-4ecf-adb6-5b06279c2df6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f5de46e377b750c26b9a048d63ffec7ae83c6f11
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 193794ba5d5553036b6fc2018d3e8d8a5ce4401d
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47648787"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51642166"
 ---
 # <a name="lesson-2-2---adding-and-configuring-the-foreach-loop-container"></a>Leçon 2-2 : Ajout et configuration du conteneur de boucles Foreach
 Dans cette tâche, vous allez activer la fonction qui permet d'effectuer des boucles dans un dossier de fichiers plats et d'appliquer la transformation de flux de données utilisée dans la leçon 1 à chacun de ces fichiers plats. Pour activer cette fonction, vous allez ajouter et configurer un conteneur de boucles Foreach dans le flux de contrôle.  
@@ -62,11 +62,11 @@ Une fois ces modifications apportées au package et le package exécuté, le con
   
     Ces exemples de données sont inclus dans les packages de leçons [!INCLUDE[ssIS](../includes/ssis-md.md)] . Pour télécharger ces exemples de données et les packages de leçons, procédez comme suit.  
   
-    1.  Accédez à [Exemples de produits Integration Services](http://go.microsoft.com/fwlink/?LinkId=275027). 
+    1.  Accédez à [Exemples de produits Integration Services](https://go.microsoft.com/fwlink/?LinkId=275027). 
   
     2.  Cliquez sur l'onglet **DOWNLOADS** (Téléchargements).  
   
-    3.  Cliquez sur le lien vers le fichier [SQL2012.Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip](http://msftisprodsamples.codeplex.com/downloads/get/596031).  
+    3.  Cliquez sur le lien vers le fichier [SQL2012.Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip](https://msftisprodsamples.codeplex.com/downloads/get/596031).  
   
 6.  Dans la zone **Fichiers**, tapez **Currency_\*.txt**.  
   
@@ -93,8 +93,8 @@ Une fois ces modifications apportées au package et le package exécuté, le con
 [Étape 3 : Modification du gestionnaire de connexions de fichiers plats](../integration-services/lesson-2-3-modifying-the-flat-file-connection-manager.md)  
   
 ## <a name="see-also"></a> Voir aussi  
-[Configurer un conteneur de boucles Foreach](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)  
-[Utiliser des variables dans des packages](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)  
+[Configurer un conteneur de boucles Foreach](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)  
+[Utiliser des variables dans des packages](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)  
   
   
   

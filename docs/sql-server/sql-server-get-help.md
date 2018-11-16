@@ -9,12 +9,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 03294cce7e8c800d51b5a333e92d611cf8b694fe
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: e4e48ba424b9c9c8ef56d1280d774c7ee3120ffe
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49384094"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51698227"
 ---
 # <a name="sql-server-help-and-feedback"></a>Aide et commentaires pour SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ Si vous êtes un utilisateur professionnel, veuillez consulter les [options de s
 Si vous êtes un utilisateur commercial, passez en revue la page [Contact](https://support.microsoft.com/gp/contactus81?forceorigin=esmc&Audience=Commercial) de Microsoft.
 
 ## <a name="i-want-to-review-license-information-about-sql-server"></a>Je veux consulter les informations de licence sur SQL Server
-Si vous souhaitez télécharger et lire les informations de licence pour SQL Server, vous les trouverez dans les [Termes supplémentaires du contrat de licence logicielle Microsoft SQL Server](https://www.microsoft.com/en-us/download/details.aspx?id=39299). 
+Si vous souhaitez télécharger et lire les informations de licence pour SQL Server, vous les trouverez dans les [Termes supplémentaires du contrat de licence logicielle Microsoft SQL Server](https://www.microsoft.com/download/details.aspx?id=39299). 
 
 ## <a name="i-want-to-ask-the-community-for-help"></a>Je souhaite demander de l’aide à la communauté 
 Si vous voulez obtenir une assistance auprès de la communauté SQL Server, vous disposez de plusieurs options !
@@ -80,9 +80,9 @@ Il existe quelques médias sociaux qui peuvent vous permettre de contacter l’�
 ## <a name="i-want-to-provide-feedback-for-sql-docs-content"></a>Je souhaite fournir des commentaires sur le contenu des documents SQL
 
 ### <a name="edit-contentincludesmediaedit-topic-pencilpng-editing-content"></a>![modifier contenu](../includes/media/edit-topic-pencil.png) Modification du contenu
-Avez-vous trouvé du contenu erroné dans notre documentation ? Saviez-vous que vous pouvez modifier le contenu vous-même ? Dans ce cas, non seulement notre documentation sera améliorée, mais vous serez également cité en tant que contributeur à la page ! Pour plus d’informations, consultez [http://aka.ms/editsqldocs](http://aka.ms/editsqldocs). 
+Avez-vous trouvé du contenu erroné dans notre documentation ? Saviez-vous que vous pouvez modifier le contenu vous-même ? Dans ce cas, non seulement notre documentation sera améliorée, mais vous serez également cité en tant que contributeur à la page ! Pour plus d’informations, consultez [https://aka.ms/editsqldocs](https://aka.ms/editsqldocs). 
 
 ### <a name="surveys"></a>Enquêtes
-Si vous avez un peu de temps à perdre et si vous souhaitez partager vos réflexions sur votre expérience avec les documents SQL, veuillez répondre à notre enquête ! Vous la trouverez sur [http://aka.ms/SQLDocSurvey](http://aka.ms/SQLDocSurvey) et cela devrait vous prendre entre 10 et 15 minutes. 
+Si vous avez un peu de temps à perdre et si vous souhaitez partager vos réflexions sur votre expérience avec les documents SQL, veuillez répondre à notre enquête ! Vous la trouverez sur [https://aka.ms/SQLDocSurvey](https://aka.ms/SQLDocSurvey) et cela devrait vous prendre entre 10 et 15 minutes. 
 
-Si vous avez quelque chose à partager avec l’équipe en charge du contenu SQL, une idée, une suggestion, des commentaires, quoi que ce soit ! Vous pouvez le faire sur [http://aka.ms/SQLDocsFeedback](http://aka.ms/SQLDocsFeedback). 
+Si vous avez quelque chose à partager avec l’équipe en charge du contenu SQL, une idée, une suggestion, des commentaires, quoi que ce soit ! Vous pouvez le faire sur [https://aka.ms/SQLDocsFeedback](https://aka.ms/SQLDocsFeedback). 

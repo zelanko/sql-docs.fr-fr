@@ -11,12 +11,12 @@ ms.assetid: 8aa7d690-4649-4c0a-ac6f-9504637ee426
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 12c207058e2471c2d7599cd7e76c0d885c26b41a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ec1faa2c0fc16037f80857217f3f854503915dd1
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633377"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51642139"
 ---
 # <a name="lesson-5-1---copying-the-lesson-4-package"></a>Leçon 5-1 : Copie du package de la leçon 4
 Dans cette tâche, vous créez une copie du package Lesson 4.dtsx que vous avez créé à la leçon 4. Vous pouvez également ajouter au projet le package final de la leçon 4 inclus avec le didacticiel, puis le copier. Vous allez utiliser cette nouvelle copie tout au long de la leçon 5.  
@@ -53,7 +53,7 @@ Dans cette tâche, vous créez une copie du package Lesson 4.dtsx que vous avez 
   
     Pour télécharger tous les packages de leçons de ce didacticiel, procédez comme suit.  
   
-    1.  Accédez à [Exemples de produits Integration Services](http://go.microsoft.com/fwlink/?LinkId=275027)  
+    1.  Accédez à [Exemples de produits Integration Services](https://go.microsoft.com/fwlink/?LinkId=275027)  
   
     2.  Cliquez sur l'onglet **DOWNLOADS** (Téléchargements).  
   

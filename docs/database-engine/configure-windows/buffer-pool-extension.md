@@ -11,12 +11,12 @@ ms.assetid: 909ab7d2-2b29-46f5-aea1-280a5f8fedb4
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1d66f118490cf0a665b94f3b0ae64c43f6179243
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f732c4038940ef2ed5ee511e399f3bcf2efae54f
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658197"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606889"
 ---
 # <a name="buffer-pool-extension"></a>Buffer Pool Extension
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "47658197"
  Les termes suivants s'appliquent aux fonctionnalités de l'extension du pool de mémoires tampons.  
   
  Disques SSD  
- Les disques SSD stockent les données en mémoire vive (RAM) de manière persistante. Pour plus d'informations, consultez [cette définition](http://en.wikipedia.org/wiki/Solid-state_drive).  
+ Les disques SSD stockent les données en mémoire vive (RAM) de manière persistante. Pour plus d'informations, consultez [cette définition](https://en.wikipedia.org/wiki/Solid-state_drive).  
   
  Buffer  
  Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], un tampon est une page de 8 Ko en mémoire dont la taille est similaire à une page d'index ou de données. Ainsi, le cache des tampons est divisé en pages de 8 Ko. Une page reste dans le cache des tampons jusqu'à ce que le gestionnaire de tampons ait besoin de la zone de mémoire tampon pour lire davantage de données. Les données ne sont réécrites sur le disque que si elles sont modifiées. Ces pages modifiées en mémoire sont appelées « pages de modifications ». Une page est nettoyée lorsqu'elle est équivalente à son image de base de données sur le disque. Les données dans le cache de tampons peuvent être modifiées plusieurs fois avant leur réécriture sur le disque.  

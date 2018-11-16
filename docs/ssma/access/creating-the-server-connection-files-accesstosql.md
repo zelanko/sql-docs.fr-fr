@@ -10,12 +10,12 @@ ms.assetid: 829153be-aa8e-4162-87e8-69882feecf19
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: f083b38d64927ded898366434def4505cd3f67c7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c3c31e4c815ac3c52f029ec474e53488b8202c8e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47672657"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51664294"
 ---
 # <a name="creating-the-server-connection-files-accesstosql"></a>Création du serveur de fichiers de connexion (AccessToSQL)
 Informations sur le serveur peuvent être spécifiée dans la section serveurs du fichier de script. Informations sur le serveur peuvent également être spécifiées dans un fichier de connexion de serveur distinct. Le paramètre de ligne de commande pour le fichier de connexion de serveur est `-c <serverconnectionfile>`. Si le même id de serveur est présent dans le script et le serveur de fichiers de connexion, la définition du serveur dans le fichier de script est considéré comme.  
@@ -68,5 +68,5 @@ L’utilisateur peut valider facilement son fichier de connexion de serveur par 
 L’étape suivante de d’exploitation de la console est [l’exécution de la Console SSMA &#40;AccessToSQL&#41;](../../ssma/access/executing-the-ssma-console-accesstosql.md)  
   
 ## <a name="see-also"></a>Voir aussi  
-[Exécution de la Console SSMA (accès)](http://msdn.microsoft.com/aa1bf665-8dc0-4259-b36f-46ae67197a43)  
+[Exécution de la Console SSMA (accès)](https://msdn.microsoft.com/aa1bf665-8dc0-4259-b36f-46ae67197a43)  
   

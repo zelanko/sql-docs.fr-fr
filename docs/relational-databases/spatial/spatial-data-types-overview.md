@@ -16,12 +16,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: aae75f2f665536336fcf745a86675846249b4ab8
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 9a9e4f02d0662150c8f8458da7bde3b5a4838022
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018405"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51668028"
 ---
 # <a name="spatial-data-types-overview"></a>Présentation des types de données spatiales
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -84,8 +84,8 @@ Dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], **FullGlobe** est un
 La spécification OGC Simple Features for SQL traite des anneaux externes et internes, mais cette distinction n’a que peu de sens pour le type de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography** ; tout anneau d’un polygone peut être accepté comme étant l’anneau externe.  
 
 Pour plus d'informations sur les spécifications OGC, reportez-vous aux sites Web suivants :  
--   [OGC Specifications, Simple Feature Access Part 1 - Common Architecture](http://go.microsoft.com/fwlink/?LinkId=93627)  
--   [OGC Specifications, Simple Feature Access Part 2 – SQL Options (en anglais)](http://go.microsoft.com/fwlink/?LinkId=93628)  
+-   [OGC Specifications, Simple Feature Access Part 1 - Common Architecture](https://go.microsoft.com/fwlink/?LinkId=93627)  
+-   [OGC Specifications, Simple Feature Access Part 2 – SQL Options (en anglais)](https://go.microsoft.com/fwlink/?LinkId=93628)  
 
 ##  <a name="circular"></a> Segments d'arc de cercle  
 Trois types instanciables acceptent des segments d’arc de cercle : **CircularString**, **CompoundCurve**et **CurvePolygon**.  Un segment d'arc de cercle est défini par trois points dans un plan à deux dimensions ; le troisième point doit être différent du premier point.  
@@ -173,7 +173,7 @@ Les instances**CurvePolygon** peuvent utiliser des instances **CircularString** 
 ## <a name="see-also"></a> Voir aussi  
 - [Données spatiales (SQL Server)](https://msdn.microsoft.com/library/bb933790.aspx) 
 - [Référence de méthodes de type de données geometry](https://msdn.microsoft.com/library/bb933973.aspx) 
-- [Référence de méthodes de type de données geography](http://msdn.microsoft.com/library/028e6137-7128-4c74-90a7-f7bdd2d79f5e)   
+- [Référence de méthodes de type de données geography](https://msdn.microsoft.com/library/028e6137-7128-4c74-90a7-f7bdd2d79f5e)   
 - [STNumCurves &#40;type de données geometry&#41;](../../t-sql/spatial-geometry/stnumcurves-geometry-data-type.md)   
 - [STNumCurves &#40;type de données geography&#41;](../../t-sql/spatial-geography/stnumcurves-geography-data-type.md)   
 - [STGeomFromText &#40;type de données geometry&#41;](../../t-sql/spatial-geometry/stgeomfromtext-geometry-data-type.md)   

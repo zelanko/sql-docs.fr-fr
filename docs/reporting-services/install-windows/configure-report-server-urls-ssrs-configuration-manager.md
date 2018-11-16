@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: a0134ef0-086c-443e-93b9-7213a3d76393
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6167e81d5f6d9307101994e687b1ecd353793394
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0aa67d80d18b6f93393cfccac146765a8df536ed
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47609697"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813342"
 ---
 # <a name="configure-report-server-urls--ssrs-configuration-manager"></a>Configurer des URL de serveurs de rapports (Gestionnaire de configuration de SSRS)
   Dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], les URL permettent d’accéder au service Web Report Server et au [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]. Avant de pouvoir utiliser l’une ou l’autre de ces applications, vous devez configurer au moins une URL pour le service web et une pour le [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fournit des valeurs par défaut pour les URL des deux applications qui s’accommodent bien à la plupart des scénarios de déploiement, dont les déploiements côte à côte avec d’autres applications et services web.  
@@ -38,9 +38,9 @@ ms.locfileid: "47609697"
 ## <a name="default-urls"></a>URL par défaut  
  Quand vous accédez à un serveur de rapports ou au [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] avec son URL, celle-ci doit inclure le nom d’hôte et pas l’adresse IP. Sur un réseau TCP/IP, l'adresse IP se résout en un nom d'hôte (ou le nom de réseau de l'ordinateur). Si vous avez utilisé les valeurs par défaut pour configurer les URL, vous devez être en mesure d'accéder au service Web Report Server à l'aide d'URL qui spécifient le nom d'ordinateur ou localhost comme nom d'hôte :  
   
--   `http://<computername>/reportserver`  
+-   `https://<computername>/reportserver`  
   
--   `http://localhost/reportserver`  
+-   `https://localhost/reportserver`  
   
  Les paramètres qui rendent cet URL disponibles apparaissent dans le tableau suivant. Ce tableau montre les valeurs par défaut qui activent une connexion de serveur de rapports via les URL incluant un nom d'hôte :  
   

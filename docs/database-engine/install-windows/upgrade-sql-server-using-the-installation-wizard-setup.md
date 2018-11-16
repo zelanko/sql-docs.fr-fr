@@ -14,12 +14,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: e1ef574febdd3c4624138c70d5d5d8acb74c6a3b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 840849b3d08feac21dd5b96235405773fc06f64c
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47803710"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51607159"
 ---
 # <a name="upgrade-sql-server-using-the-installation-wizard-setup"></a>Effectuer une mise à niveau de SQL Server à l’aide de l’Assistant Installation (Installation)
 
@@ -120,7 +120,7 @@ Vous devez exécuter le programme d'installation en tant qu'administrateur. Si v
   
      Lorsque vous avez terminé de spécifier les informations de connexion pour les services [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , cliquez sur **Suivant**.  
   
-15. Dans la page des options de mise à niveau de recherche en texte intégral, spécifiez les options de mise à niveau pour les bases de données mises à niveau. Pour plus d’informations, consultez [Options de mise à niveau de recherche en texte intégral](http://msdn.microsoft.com/library/16c9376b-5fbb-4495-a429-06a2493849c9).  
+15. Dans la page des options de mise à niveau de recherche en texte intégral, spécifiez les options de mise à niveau pour les bases de données mises à niveau. Pour plus d’informations, consultez [Options de mise à niveau de recherche en texte intégral](https://msdn.microsoft.com/library/16c9376b-5fbb-4495-a429-06a2493849c9).  
   
 16. La fenêtre Règles de fonctionnalité avancera automatiquement si toutes les règles passent.  
   
@@ -143,6 +143,6 @@ Vous devez exécuter le programme d'installation en tant qu'administrateur. Si v
   
 ## <a name="see-also"></a> Voir aussi  
  [Mettre à niveau SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)   
- [Compatibilité descendante_supprimé](http://msdn.microsoft.com/library/15d9117e-e2fa-4985-99ea-66a117c1e9fd)  
+ [Compatibilité descendante_supprimé](https://msdn.microsoft.com/library/15d9117e-e2fa-4985-99ea-66a117c1e9fd)  
   
   

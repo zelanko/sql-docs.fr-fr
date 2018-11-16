@@ -6,8 +6,7 @@ ms.date: 08/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - performance tuning [SQL Server]
@@ -16,12 +15,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 639b2f5fd09ad017f94881358f8b2731cbd39c51
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: db7fc8514fadbcf9be5b98c85457b4cddeac82cb
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849327"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51559136"
 ---
 # <a name="automatic-tuning"></a>Paramétrage automatique
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -94,8 +93,8 @@ Dans [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], vous pouvez recherche
 
 | Type | description | DATETIME | score | détails | … |
 | --- | --- | --- | --- | --- | --- |
-| `FORCE_LAST_GOOD_PLAN` | Temps processeur a été remplacée par 4 ms à 14 ms | 3/17/2017 | 83 | `queryId` `recommendedPlanId` `regressedPlanId` `T-SQL`) |   |
-| `FORCE_LAST_GOOD_PLAN` | Temps processeur passé de 37 ms à 84 ms | 3/16/2017 | 26 | `queryId` `recommendedPlanId` `regressedPlanId` `T-SQL`) |   |
+| `FORCE_LAST_GOOD_PLAN` | Temps processeur a été remplacée par 4 ms à 14 ms | 3/17/2017 | 83 | `queryId` `recommendedPlanId` `regressedPlanId` `T-SQL` |   |
+| `FORCE_LAST_GOOD_PLAN` | Temps processeur passé de 37 ms à 84 ms | 3/16/2017 | 26 | `queryId` `recommendedPlanId` `regressedPlanId` `T-SQL` |   |
 
 Certaines colonnes de cette vue sont décrits dans la liste suivante :
  - Type de l’action recommandée - `FORCE_LAST_GOOD_PLAN`.

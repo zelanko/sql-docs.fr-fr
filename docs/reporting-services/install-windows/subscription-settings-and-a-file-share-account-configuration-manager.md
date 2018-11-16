@@ -9,12 +9,12 @@ f1_keywords:
 ms.assetid: fefa7bdb-b5f2-4db7-b91c-b58869279f3c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9550a136d1720c5f7ee6ef9d5bd8eb2e39b5a246
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 61f8db13b3984825d37924a248ffebb31e2a5613
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702617"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813112"
 ---
 # <a name="subscription-settings-and-a-file-share-account-configuration-manager"></a>Paramètres d'abonnement et compte de partage de fichiers (Gestionnaire de configuration)
   Utilisez la page **Paramètres d'abonnement** du Gestionnaire de configuration [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] afin de configurer un compte de partage de fichiers pour les serveurs de rapports en mode natif et les abonnements de partage de fichiers. Le compte de partage de fichiers vous permet d'utiliser un jeu unique d'informations d'identification dans plusieurs abonnements qui fournissent des rapports à un partage de fichiers. Au moment de modifier les informations d'identification, vous configurez la modification pour le compte de partage de fichiers et vous n'avez pas besoin de mettre à jour chaque abonnement individuel.  
@@ -73,7 +73,7 @@ filter script:extensionSettingFilter
     }  
 }  
   
-$rs2010 = New-WebServiceProxy -Uri "http:// SERVERNAME/ReportServer/ReportService2010.asmx" -Namespace SSRS.ReportingService2010 -UseDefaultCredential;  
+$rs2010 = New-WebServiceProxy -Uri "https:// SERVERNAME/ReportServer/ReportService2010.asmx" -Namespace SSRS.ReportingService2010 -UseDefaultCredential;  
 $subscriptions = $rs2010.ListSubscriptions("/");  
   
 Write-Host "----- File share subscriptions using the default file share account ----";  
@@ -96,6 +96,6 @@ $subscriptions | extensionSettingFilter | select report, owner, status, lastexec
   
 ## <a name="see-also"></a> Voir aussi  
  [Remise par partage de fichiers dans Reporting Services](../../reporting-services/subscriptions/file-share-delivery-in-reporting-services.md)   
- [Créer et gérer des abonnements pour les serveurs de rapports en mode Natif](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)
+ [Créer et gérer des abonnements pour les serveurs de rapports en mode natif](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)
   
   

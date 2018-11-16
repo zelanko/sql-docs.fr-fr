@@ -11,18 +11,18 @@ ms.assetid: 8f3d273c-c663-4341-aa2f-5ed8ebcba5b0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c312e9b4cf820e247555b668d82834fd804457a0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1cba1d5551205c1658975943b76612f4e50768c0
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47620337"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699047"
 ---
 # <a name="sql-server-management-studio---license-terms"></a>SQL Server Management Studio - Termes du contrat de licence
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 ### <a name="available-languages"></a>Langues disponibles :  
-[Chinois (simplifié)](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x804) | [Chinois (traditionnel)](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x404) | [Anglais (États-Unis)](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x409) | [Français](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x40c)  
-[allemand](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x407) | [italien](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x410) | [japonais](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x411) | [coréen](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x412) | [portugais (Brésil)](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x416) | [russe](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x419) | [espagnol](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x40a)  
+[Chinois (simplifié)](https://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x804) | [Chinois (traditionnel)](https://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x404) | [Anglais (États-Unis)](https://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x409) | [Français](https://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x40c)  
+[allemand](https://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x407) | [italien](https://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x410) | [japonais](https://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x411) | [coréen](https://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x412) | [portugais (Brésil)](https://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x416) | [russe](https://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x419) | [espagnol](https://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x40a)  
   
 ## <a name="microsoft-software-license-terms"></a>TERMES DU CONTRAT DE LICENCE LOGICIEL MICROSOFT  
 **MICROSOFT SQL SERVER MANAGEMENT STUDIO**  
@@ -73,7 +73,7 @@ de ce logiciel à moins que d’autres termes n’accompagnent ces produits, auq
   
 **3.    SERVICES INTERNET.** Microsoft fournit des services Internet avec le logiciel. Ces services peuvent être modifiés ou interrompus à tout moment par Microsoft.  
   
-&nbsp;&nbsp;**a.    Consentement pour les Services Internet.** La fonctionnalité du logiciel décrite ci-dessous et dans la Déclaration relative aux données personnelles de SQL Server se connecte aux systèmes informatiques de Microsoft ou de fournisseurs de services via Internet. Dans certains cas, vous ne recevrez pas de notification de connexion. Vous pouvez désactiver cette fonctionnalité ou ne pas l’utiliser. Pour plus d’informations sur cette fonctionnalité, consultez [http://go.microsoft.com/fwlink/?LinkID=398120](http://go.microsoft.com/fwlink/?LinkID=398120). **En utilisant cette fonctionnalité, vous consentez à la transmission de ces informations**. Microsoft n’utilise pas ces informations afin de vous identifier ou de vous contacter.  
+&nbsp;&nbsp;**a.    Consentement pour les Services Internet.** La fonctionnalité du logiciel décrite ci-dessous et dans la Déclaration relative aux données personnelles de SQL Server se connecte aux systèmes informatiques de Microsoft ou de fournisseurs de services via Internet. Dans certains cas, vous ne recevrez pas de notification de connexion. Vous pouvez désactiver cette fonctionnalité ou ne pas l’utiliser. Pour plus d’informations sur cette fonctionnalité, consultez [https://go.microsoft.com/fwlink/?LinkID=398120](https://go.microsoft.com/fwlink/?LinkID=398120). **En utilisant cette fonctionnalité, vous consentez à la transmission de ces informations**. Microsoft n’utilise pas ces informations afin de vous identifier ou de vous contacter.  
   
 &nbsp;&nbsp;**i.    Informations sur l’ordinateur.** La fonctionnalité suivante utilise des protocoles Internet, lesquels transmettent aux systèmes appropriés des informations relatives à votre ordinateur, telles que votre adresse IP, le type de système d’exploitation, le navigateur, le nom et la version du logiciel que vous utilisez, ainsi que le code de langue du dispositif sur lequel vous avez installé le logiciel. Microsoft utilise ces informations pour mettre à votre disposition le service Internet.  
   

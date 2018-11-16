@@ -16,12 +16,12 @@ ms.assetid: 04f9863c-ba0b-47c5-af91-f2d41b078a23
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
-ms.openlocfilehash: 7bd66f0839d520cf9708f001756de2d031d6df0d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e831a5adc9142a339ee633592ccb98c8ff9f1462
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753797"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51642356"
 ---
 # <a name="upgrade-integration-services"></a>Mettre à niveau Integration Services
   Si [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] (ou une version ultérieure) est installé sur votre ordinateur, vous pouvez effectuer une mise à niveau vers [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)].  
@@ -46,7 +46,7 @@ ms.locfileid: "47753797"
 > -   Tâche d'exécution de package DTS 2000 ;  
 > -   analyse du Conseiller de mise à niveau des packages DTS.  
 >   
->  Pour plus d’informations sur les autres fonctionnalités abandonnées, consultez [Fonctionnalités Integration Services abandonnées dans SQL Server 2016](http://msdn.microsoft.com/library/5ee40ceb-37b9-47a9-b90d-ce1de74b10f7).  
+>  Pour plus d’informations sur les autres fonctionnalités abandonnées, consultez [Fonctionnalités Integration Services abandonnées dans SQL Server 2016](https://msdn.microsoft.com/library/5ee40ceb-37b9-47a9-b90d-ce1de74b10f7).  
   
 ## <a name="upgrading-integration-services"></a>mise à niveau d'Integration Services  
  Vous pouvez effectuer la mise à niveau au moyen de l'une des méthodes suivantes :  
@@ -145,6 +145,6 @@ ms.locfileid: "47753797"
 -   Vous ne pouvez pas utiliser les travaux de l’Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur des ordinateurs [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] pour exécuter les packages [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] stockés dans l’instance mise à niveau de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 ## <a name="external-resources"></a>Ressources externes  
- Entrée de blog [Faire fonctionner vos extensions et applications SSIS personnalisées existantes à Denali](http://go.microsoft.com/fwlink/?LinkId=238157), sur blogs.msdn.com.  
+ Entrée de blog [Faire fonctionner vos extensions et applications SSIS personnalisées existantes à Denali](https://go.microsoft.com/fwlink/?LinkId=238157), sur blogs.msdn.com.  
   
   

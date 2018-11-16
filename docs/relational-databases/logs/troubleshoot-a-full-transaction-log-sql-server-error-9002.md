@@ -19,12 +19,12 @@ ms.assetid: 0f23aa84-475d-40df-bed3-c923f8c1b520
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9f809f65be52e77e84e1391df0151cc183013624
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 57d6fa7cf4e323004789dabb098df400f1ae6dce
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47656507"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51663799"
 ---
 # <a name="troubleshoot-a-full-transaction-log-sql-server-error-9002"></a>Résoudre les problèmes liés à un journal des transactions saturé (erreur SQL Server 9002)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -112,7 +112,7 @@ Cette instruction vous permet d'identifier l'ID du propriétaire de la transacti
 Parfois, il vous suffit de mettre un terme au processus ; vous pouvez avoir à utiliser l’instruction [KILL](../../t-sql/language-elements/kill-transact-sql.md) . Utilisez cette instruction avec précaution, particulièrement lorsque des processus critiques que vous ne voulez pas supprimer sont en cours d’exécution. Pour plus d’informations, voir [KILL (Transact-SQL)](../../t-sql/language-elements/kill-transact-sql.md).
 
 ## <a name="see-also"></a>Voir aussi  
-[Article de support de la base de connaissances - Le journal des transactions augmente de manière inattendue ou est saturé sur un ordinateur SQL Server](https://support.microsoft.com/en-us/kb/317375) [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
+[Article de support de la base de connaissances - Le journal des transactions augmente de manière inattendue ou est saturé sur un ordinateur SQL Server](https://support.microsoft.com/kb/317375) [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [Gérer la taille du fichier journal des transactions](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)   
  [Sauvegardes des journaux de transactions &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)   
  [sp_add_log_file_recover_suspect_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-log-file-recover-suspect-db-transact-sql.md)  

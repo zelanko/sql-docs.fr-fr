@@ -16,16 +16,16 @@ ms.assetid: 12b0e160-5e5c-441f-bed7-ac0bd061e003
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 196641267bfedaff0de657d842b75a38c7cac75a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d24d67f3c798c061fe10c932f36aa4e7f007f772
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753357"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602359"
 ---
 # <a name="dataspace-object-and-createobject-method-example-vbscript"></a>DataSpace (exemple d’objet) et CreateObject (exemple de méthode) (VBScript)
 > [!IMPORTANT]
->  Depuis Windows 8 et Windows Server 2012, composants de serveur Services Bureau à distance ne sont plus inclus dans le système d’exploitation Windows (voir Windows 8 et [Guide de compatibilité de Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) pour plus de détails). Composants du client RDS seront supprimées dans une future version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent des services Bureau à distance doivent migrer vers [Service de données WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Depuis Windows 8 et Windows Server 2012, composants de serveur Services Bureau à distance ne sont plus inclus dans le système d’exploitation Windows (voir Windows 8 et [Guide de compatibilité de Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) pour plus de détails). Composants du client RDS seront supprimées dans une future version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent des services Bureau à distance doivent migrer vers [Service de données WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
  L’exemple suivant montre comment utiliser le [CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md) méthode de la [RDS. DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) avec l’objet métier par défaut, [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md). Pour tester cet exemple, coupez et collez ce code entre les \<corps > et \</corps > balises dans un HTML normal de document et nommez-le **DataSpaceVBS.asp**. Le script ASP identifie votre serveur.  
   
@@ -107,7 +107,7 @@ The <i>Query</i> Method of the RDSServer.DataFactory is used to bring back a Rec
     Dim strCnxn  
     Dim strSQL  
   
-    strServer = "http://<%=Request.ServerVariables("SERVER_NAME")%>"  
+    strServer = "https://<%=Request.ServerVariables("SERVER_NAME")%>"  
     strCnxn = "Provider='sqloledb';Data Source=" & _  
             "<%=Request.ServerVariables("SERVER_NAME")%>" & ";" & _  
             "Integrated Security='SSPI';Initial Catalog='Northwind';"  
@@ -140,7 +140,7 @@ The <i>Query</i> Method of the RDSServer.DataFactory is used to bring back a Rec
   
 ```  
 Sub Window_OnLoad()  
-   strServer = "http://<%=Request.ServerVariables("SERVER_NAME")%>"  
+   strServer = "https://<%=Request.ServerVariables("SERVER_NAME")%>"  
    Set BO = ADS1.CreateObject("VbBusObj.VbBusObjCls", strServer)  
    txtConnect.Value = "dsn=Pubs;uid=MyUserID;pwd=MyPassword;"  
    txtGetRecordset.Value = "Select * From authors for Browse"  

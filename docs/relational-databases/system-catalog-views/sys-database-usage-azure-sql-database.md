@@ -22,12 +22,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: b5735a0829579a612999381e3108717ac1f7430c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f17e34de7c230b111652ea57a3baa072a442a6a5
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47822055"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51656738"
 ---
 # <a name="sysdatabaseusage-azure-sql-database"></a>sys.database_usage (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "47822055"
  Le **sys.database_usage** vue retourne une ligne pour chaque jour de votre abonnement.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Tarification – base de données SQL](http://go.microsoft.com/fwlink/?LinkID=394978)   
- [Comptes et facturation dans Microsoft Azure SQL Database](http://msdn.microsoft.com/library/windowsazure/ee621788.aspx)  
+ [Tarification – base de données SQL](https://go.microsoft.com/fwlink/?LinkID=394978)   
+ [Comptes et facturation dans Microsoft Azure SQL Database](https://msdn.microsoft.com/library/windowsazure/ee621788.aspx)  
   
   

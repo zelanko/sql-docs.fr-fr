@@ -11,12 +11,12 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0507fd785dfe6eb61993c30c90b116db423548aa
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: 022c63e58d212c5b45f18fcfc60b169dae9be81d
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419454"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51675898"
 ---
 # <a name="troubleshooter-find-errors-with-sql-server-transactional-replication"></a>Résolution des problèmes : Rechercher des erreurs dans la réplication transactionnelle SQL Server 
 Le dépannage des erreurs de réplication peuvent être frustrant si vous n’avez pas une connaissance de base du fonctionnement de la réplication transactionnelle. La première étape de création d’une publication consiste à faire en sorte que l’Agent d’instantané crée l’instantané et l’enregistre dans le dossier des instantanés. Ensuite, l’Agent de distribution applique l’instantané à l’abonné. 
@@ -252,7 +252,7 @@ Vous pouvez utiliser la journalisation détaillée pour voir des informations pl
     
 1. Pour désactiver la journalisation détaillée, suivez les mêmes étapes que précédemment pour supprimer l’ensemble de la ligne `-Output` que vous avez ajoutée auparavant. 
 
-Pour plus d’informations, consultez [Activation de la journalisation détaillée pour les agents de réplication](https://support.microsoft.com/en-us/help/312292/how-to-enable-replication-agents-for-logging-to-output-files-in-sql-se). 
+Pour plus d’informations, consultez [Activation de la journalisation détaillée pour les agents de réplication](https://support.microsoft.com/help/312292/how-to-enable-replication-agents-for-logging-to-output-files-in-sql-se). 
 
 
 ## <a name="see-also"></a>Voir aussi

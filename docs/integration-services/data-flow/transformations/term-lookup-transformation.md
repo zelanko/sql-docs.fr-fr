@@ -24,12 +24,12 @@ ms.assetid: 3c0fa2f8-cb6a-4371-b184-7447be001de1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d5221b1474d6880cd7fdac56f5ae13a5f50514c4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5b3f90acc0f7fefea0ffd142c4b0acd6a8e59549
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827167"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640156"
 ---
 # <a name="term-lookup-transformation"></a>transformation de recherche de terme
   La transformation de recherche de terme met en correspondance des termes extraits de texte d'une colonne d'entrée de transformation avec les termes d'une table de référence. Elle compte ensuite le nombre de fois où un terme de la table de recherche apparaît dans le dataset d'entrée, puis écrit ce nombre et le terme de la table de référence dans les colonnes de la sortie de la transformation. Cette transformation est utile pour créer une liste personnalisée de termes reposant sur le texte d'entrée et complétée de statistiques de fréquence.  
@@ -98,11 +98,11 @@ ms.locfileid: "47827167"
   
  Pour plus d'informations sur les propriétés définissables dans la boîte de dialogue **Éditeur avancé** ou par programmation, cliquez sur l'une des rubriques suivantes :  
   
--   [Propriétés communes](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Propriétés communes](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Propriétés personnalisées des transformations](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
- Pour plus d’informations sur la définition des propriétés, consultez [Définir les propriétés d’un composant de flux de données](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
+ Pour plus d’informations sur la façon de définir les propriétés, consultez [Définir les propriétés d’un composant de flux de données](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
   
 ## <a name="term-lookup-transformation-editor-term-lookup-tab"></a>Éditeur de transformation de recherche de terme (onglet Recherche de terme)
   L'onglet **Recherche de terme** de la boîte de dialogue **Éditeur de transformation de recherche de terme** permet de mapper une colonne d'entrée à une colonne de recherche dans une table de référence et de fournir un alias pour chaque colonne de sortie.  
@@ -121,7 +121,7 @@ ms.locfileid: "47827167"
  Permet de saisir un alias pour chaque colonne de sortie. La valeur par défaut correspond au nom de la colonne. Cependant, vous pouvez choisir un nom unique descriptif.  
   
  **Configurer la sortie d’erreur**  
- Utilisez la boîte de dialogue [Configurer l’affichage des erreurs](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) pour spécifier les options de gestion des erreurs dans les lignes qui provoquent des erreurs.  
+ Utilisez la boîte de dialogue [Configurer l’affichage des erreurs](https://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) pour spécifier les options de gestion des erreurs dans les lignes qui provoquent des erreurs.  
   
 ## <a name="term-lookup-transformation-editor-reference-table-tab"></a>Éditeur de transformation de recherche de terme (onglet Table de référence)
   Utilisez l’onglet **Table de référence** de la boîte de dialogue **Éditeur de transformation de recherche de terme** pour définir la connexion à la table de référence (recherche).  
@@ -137,7 +137,7 @@ ms.locfileid: "47827167"
  Sélectionnez une table ou une vue de recherche dans la base de données en sélectionnant un élément dans la liste. La table ou la vue doit contenir une colonne avec une liste de termes existante à laquelle le texte de la colonne source peut être comparé.  
   
  **Configurer la sortie d’erreur**  
- Utilisez la boîte de dialogue [Configurer l’affichage des erreurs](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) pour spécifier les options de gestion des erreurs dans les lignes qui provoquent des erreurs.  
+ Utilisez la boîte de dialogue [Configurer l’affichage des erreurs](https://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) pour spécifier les options de gestion des erreurs dans les lignes qui provoquent des erreurs.  
   
 ## <a name="term-lookup-transformation-editor-advanced-tab"></a>Éditeur de transformation de recherche de terme (onglet Avancé).
   Utilisez l’onglet **Avancé** de la boîte de dialogue **Éditeur de transformation de recherche de terme** pour spécifier si la recherche doit respecter la casse.  
@@ -147,7 +147,7 @@ ms.locfileid: "47827167"
  Indique si la recherche respecte la casse. La valeur par défaut est **False**.  
   
  **Configurer la sortie d’erreur**  
- Utilisez la boîte de dialogue [Configurer l’affichage des erreurs](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) pour spécifier les options de gestion des erreurs dans les lignes qui provoquent des erreurs.  
+ Utilisez la boîte de dialogue [Configurer l’affichage des erreurs](https://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) pour spécifier les options de gestion des erreurs dans les lignes qui provoquent des erreurs.  
   
 ## <a name="see-also"></a> Voir aussi  
  [Guide de référence des erreurs et des messages propres à Integration Services](../../../integration-services/integration-services-error-and-message-reference.md)   

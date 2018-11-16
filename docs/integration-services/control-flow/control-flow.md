@@ -15,12 +15,12 @@ ms.assetid: 0cc042a9-1a7f-49ed-9f47-091653d5ef6e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 032b2fc6eee634f1b651384a035d381820844200
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f8119069b08b2f84bcdf71fa50894eb2e743b88b
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47673457"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640666"
 ---
 # <a name="control-flow"></a>Flux de contrôle
   Un package est constitué d'un flux de contrôle et, éventuellement, d'un ou de plusieurs flux de données. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fournit trois types différents d’éléments de flux de contrôle : des conteneurs qui structurent les packages, des tâches qui fournissent des fonctionnalités et des contraintes de précédence qui connectent les exécutables, les conteneurs et les tâches pour former un flux de contrôle ordonné.  
@@ -58,7 +58,7 @@ ms.locfileid: "47673457"
   
 -   Ajout de gestionnaires de connexions.  
   
-     De nombreuses tâches ont besoin d'une connexion à une source de données. Vous devez ajouter au package les gestionnaires de connexions requis par la tâche. En fonction du type d'énumérateur qu'il utilise, le conteneur de boucles Foreach peut également exiger un gestionnaire de connexions. Vous pouvez ajouter les gestionnaires de connexions au moment de la création de l'élément de flux de contrôle ou avant de commencer à construire le flux de contrôle. Pour plus d’informations, consultez [Connexions Integration Services &#40;SSIS&#41;](../../integration-services/connection-manager/integration-services-ssis-connections.md) et [Créer des gestionnaires de connexions](http://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345).  
+     De nombreuses tâches ont besoin d'une connexion à une source de données. Vous devez ajouter au package les gestionnaires de connexions requis par la tâche. En fonction du type d'énumérateur qu'il utilise, le conteneur de boucles Foreach peut également exiger un gestionnaire de connexions. Vous pouvez ajouter les gestionnaires de connexions au moment de la création de l'élément de flux de contrôle ou avant de commencer à construire le flux de contrôle. Pour plus d’informations, consultez [Connexions Integration Services &#40;SSIS&#41;](../../integration-services/connection-manager/integration-services-ssis-connections.md) et [Créer des gestionnaires de connexions](https://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345).  
   
  Le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] propose également de nombreuses fonctionnalités disponibles au moment de la conception permettant de gérer l’aire de conception et de faire en sorte que le flux de contrôle s’auto-documente.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "47673457"
   
 -   [Ajouter ou supprimer une tâche ou un conteneur dans un flux de contrôle](../../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
--   [Définir les propriétés d'une tâche ou d'un conteneur](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Définir les propriétés d'une tâche ou d'un conteneur](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 -   [Grouper ou dissocier des composants](../../integration-services/group-or-ungroup-components.md)  
   

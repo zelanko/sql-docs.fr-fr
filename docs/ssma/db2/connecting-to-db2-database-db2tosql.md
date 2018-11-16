@@ -10,12 +10,12 @@ ms.assetid: 5eb5801d-f0c3-4127-97c0-0b1ef49f4844
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: c280b28082a1f85074b129d7a659333d7323d879
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ce6a13eec87b60480ed2e68aa3d21a4c4f90ba1b
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735547"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51668368"
 ---
 # <a name="connecting-to-db2-database-db2tosql"></a>Connexion à la base de données DB2 (DB2ToSQL)
 Pour migrer des bases de données DB2 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous devez vous connecter à la base de données DB2 que vous souhaitez migrer. Lorsque vous vous connectez, SSMA Obtient les métadonnées relatives à tous les schémas de DB2, puis l’affiche dans le volet Explorateur de métadonnées de DB2. SSMA stocke des informations sur le serveur de base de données, mais ne stocke pas les mots de passe.  
@@ -107,7 +107,7 @@ Métadonnées relatives à la base de données DB2 ne sont pas actualisée autom
   
 ## <a name="next-step"></a>Étape suivante  
   
--   L’étape suivante du processus de migration consiste à [connexion à SQL Server](http://msdn.microsoft.com/b59803cb-3cc6-41cc-8553-faf90851410e).  
+-   L’étape suivante du processus de migration consiste à [connexion à SQL Server](https://msdn.microsoft.com/b59803cb-3cc6-41cc-8553-faf90851410e).  
   
 ## <a name="see-also"></a>Voir aussi  
 [Bases de données de migration de DB2 vers SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  

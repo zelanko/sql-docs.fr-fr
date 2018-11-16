@@ -5,19 +5,18 @@ ms.date: 10/02/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 ms.assetid: 38ffd9c2-18a5-43d2-b674-e425addec4e4
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 03d9dd525c06574360782a288faf2dae917f49cd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 87bc14e323d14ddbf64daae6fb441e2977a3af14
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47822197"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51675698"
 ---
 # <a name="sql-server-data-files-in-microsoft-azure"></a>Fichiers de données SQL Server dans Microsoft Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,10 +49,10 @@ ms.locfileid: "47822197"
 ### <a name="azure-storage-concepts"></a>Concepts liés au stockage Azure  
  Lorsque vous utilisez la fonctionnalité Fichiers de données SQL Server dans Windows Azure, vous devez créer un compte de stockage et un conteneur dans Windows Azure. Ensuite, vous devez créer des informations d'identification SQL Server, qui comportent des informations sur la stratégie du conteneur ainsi qu'une signature d'accès partagé qui est nécessaire pour accéder au conteneur.  
   
- Dans [Microsoft Azure](https://azure.microsoft.com), un compte de [stockage Azure](https://azure.microsoft.com/services/storage/) représente le niveau le plus élevé de l’espace de noms pour accéder aux objets blob. Un compte de stockage peut contenir un nombre illimité de conteneurs, tant que leur taille totale ne dépasse pas la limite de stockage. Pour les informations les plus récentes sur les limites de stockage, consultez [Abonnement Azure et limites, quotas et contraintes du service](http://docs.microsoft.com/azure/azure-subscription-service-limits). Un conteneur regroupe un ensemble d’ [objets blob](http://docs.microsoft.com/azure/storage/common/storage-introduction#blob-storage). Tous les objets blob doivent figurer dans un conteneur. Un compte peut contenir un nombre illimité de conteneurs. De la même manière, un conteneur peut également stocker un nombre illimité d'objets blob. Il existe deux types d’objets blob qui peuvent être enregistrés dans un stockage Azure : les objets blob de blocs et les objets blob de pages. Cette nouvelle fonctionnalité utilise des objets blob de pages, qui sont plus efficaces quand les plages d’octets d’un fichier sont fréquemment modifiées. Vous pouvez accéder aux objets blob avec le format d'URL suivant : `http://storageaccount.blob.core.windows.net/<container>/<blob>`.  
+ Dans [Microsoft Azure](https://azure.microsoft.com), un compte de [stockage Azure](https://azure.microsoft.com/services/storage/) représente le niveau le plus élevé de l’espace de noms pour accéder aux objets blob. Un compte de stockage peut contenir un nombre illimité de conteneurs, tant que leur taille totale ne dépasse pas la limite de stockage. Pour les informations les plus récentes sur les limites de stockage, consultez [Abonnement Azure et limites, quotas et contraintes du service](https://docs.microsoft.com/azure/azure-subscription-service-limits). Un conteneur regroupe un ensemble d’ [objets blob](https://docs.microsoft.com/azure/storage/common/storage-introduction#blob-storage). Tous les objets blob doivent figurer dans un conteneur. Un compte peut contenir un nombre illimité de conteneurs. De la même manière, un conteneur peut également stocker un nombre illimité d'objets blob. Il existe deux types d’objets blob qui peuvent être enregistrés dans un stockage Azure : les objets blob de blocs et les objets blob de pages. Cette nouvelle fonctionnalité utilise des objets blob de pages, qui sont plus efficaces quand les plages d’octets d’un fichier sont fréquemment modifiées. Vous pouvez accéder aux objets blob avec le format d'URL suivant : `https://storageaccount.blob.core.windows.net/<container>/<blob>`.  
   
 ### <a name="azure-billing-considerations"></a>Considérations sur la facturation Azure  
- L’estimation du coût d’utilisation des services Azure est une question importante dans le processus de prise de décision et de planification. Lorsque vous stockez des fichiers de données SQL Server dans le stockage Azure, vous devez payer les coûts associés au stockage et aux transactions. En outre, l’implémentation de la fonctionnalité Fichiers de données SQL Server dans le stockage Azure nécessite un renouvellement implicite du bail d’objets blob toutes les 45 à 60 secondes. Cela entraîne également des coûts de transaction par fichier de base de données (.mdf ou .ldf, par exemple). Utilisez les informations de la page [Tarification Azure](http://azure.microsoft.com/pricing/) pour estimer les coûts mensuels associés à l’utilisation de Stockage Azure et de Machines virtuelles Azure.  
+ L’estimation du coût d’utilisation des services Azure est une question importante dans le processus de prise de décision et de planification. Lorsque vous stockez des fichiers de données SQL Server dans le stockage Azure, vous devez payer les coûts associés au stockage et aux transactions. En outre, l’implémentation de la fonctionnalité Fichiers de données SQL Server dans le stockage Azure nécessite un renouvellement implicite du bail d’objets blob toutes les 45 à 60 secondes. Cela entraîne également des coûts de transaction par fichier de base de données (.mdf ou .ldf, par exemple). Utilisez les informations de la page [Tarification Azure](https://azure.microsoft.com/pricing/) pour estimer les coûts mensuels associés à l’utilisation de Stockage Azure et de Machines virtuelles Azure.  
   
 ### <a name="sql-server-concepts"></a>Concepts de SQL Server  
  Si vous utilisez cette nouvelle amélioration, assurez-vous de procéder comme suit :  
@@ -64,7 +63,7 @@ ms.locfileid: "47822197"
   
 -   Stockez les informations relatives au conteneur de stockage Azure, le nom de stratégie associé et la clé SAS dans la banque d’informations d’identification de SQL Server.  
   
- Dans l'exemple suivant, on suppose qu'un conteneur Azure Storage a été créé et qu'une stratégie a été créée avec des droits de lecture, d'écriture et de création de liste. La création d'une stratégie sur un conteneur génère une clé SAS qui peut rester non chiffrée en mémoire et qui est requise par SQL Server pour accéder aux fichiers d'objet blob dans le conteneur. Dans l'extrait de code suivant, remplacez `'<your SAS key>'` par une entrée similaire à la suivante : `'sr=c&si=<MYPOLICYNAME>&sig=<THESHAREDACCESSSIGNATURE>'`. Pour plus d'informations, consultez [Gérer l'accès aux ressources Azure Storage](http://docs.microsoft.com/azure/storage/blobs/storage-manage-access-to-resources).  
+ Dans l'exemple suivant, on suppose qu'un conteneur Azure Storage a été créé et qu'une stratégie a été créée avec des droits de lecture, d'écriture et de création de liste. La création d'une stratégie sur un conteneur génère une clé SAS qui peut rester non chiffrée en mémoire et qui est requise par SQL Server pour accéder aux fichiers d'objet blob dans le conteneur. Dans l'extrait de code suivant, remplacez `'<your SAS key>'` par une entrée similaire à la suivante : `'sr=c&si=<MYPOLICYNAME>&sig=<THESHAREDACCESSSIGNATURE>'`. Pour plus d'informations, consultez [Gérer l'accès aux ressources Azure Storage](https://docs.microsoft.com/azure/storage/blobs/storage-manage-access-to-resources).  
   
 ```sql
 CREATE CREDENTIAL [https://testdb.blob.core.windows.net/data]  
@@ -94,9 +93,9 @@ ON
 ### <a name="installation-prerequisites"></a>Prérequis pour l’installation  
  Vous trouverez ci-dessous les conditions préalables à l’installation pour le stockage de fichiers de données SQL Server dans le stockage Azure.  
   
--   **SQL Server local :** SQL Server 2016 et ultérieur comprend cette fonctionnalité. Pour savoir comment télécharger la dernière version de SQL Server, consultez [SQL Server](http://www.microsoft.com/sql-server/sql-server-downloads).  
+-   **SQL Server local :** SQL Server 2016 et ultérieur comprend cette fonctionnalité. Pour savoir comment télécharger la dernière version de SQL Server, consultez [SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads).  
   
--   SQL Server s’exécutant sur une machine virtuelle Azure : si vous installez [SQL Server sur une machine virtuelle Azure](http://azuremarketplace.microsoft.com/marketplace/apps?search=sql%20server&page=1), installez SQL Server 2016 ou mettez à jour votre instance existante. De la même manière, vous pouvez aussi créer une nouvelle machine virtuelle dans Azure à l’aide de l’image de la plateforme SQL Server 2016.
+-   SQL Server s’exécutant sur une machine virtuelle Azure : si vous installez [SQL Server sur une machine virtuelle Azure](https://azuremarketplace.microsoft.com/marketplace/apps?search=sql%20server&page=1), installez SQL Server 2016 ou mettez à jour votre instance existante. De la même manière, vous pouvez aussi créer une nouvelle machine virtuelle dans Azure à l’aide de l’image de la plateforme SQL Server 2016.
 
   
 ###  <a name="bkmk_Limitations"></a> Limitations  
@@ -109,7 +108,7 @@ ON
   
 -   En cas d’utilisation de la fonctionnalité Fichiers de données SQL Server dans Azure, la géoréplication de votre compte de stockage n’est pas prise en charge. Si un compte de stockage est géorépliqué et qu'un géobasculement a lieu, la base de données risque d'être endommagée.  
   
--   Pour les limites de capacité, consultez [Présentation du Stockage Blob](http://docs.microsoft.com/azure/storage/blobs/storage-blobs-introduction).  
+-   Pour les limites de capacité, consultez [Présentation du Stockage Blob](https://docs.microsoft.com/azure/storage/blobs/storage-blobs-introduction).  
   
 -   Il est impossible d’enregistrer des données de l’OLTP en mémoire dans un objet blob Azure à l’aide de la fonctionnalité Fichiers de données SQL Server dans le stockage Azure. Cela s’explique par le fait que l’OLTP en mémoire compte une dépendance sur **FileStream** et que, dans la version actuelle de cette fonctionnalité, l’enregistrement de données **FileStream** dans Azure Storage n’est pas pris en charge.  
   
@@ -123,7 +122,7 @@ ON
  Cette section décrit les bibliothèques de référence de programmation et les outils qui peuvent être utilisés lors du stockage de fichiers de données SQL Server dans le stockage Azure.  
   
 ### <a name="powershell-support"></a>Prise en charge de PowerShell  
- Utilisez des applets de commande PowerShell pour stocker des fichiers de données SQL Server dans le service de stockage d’objets blob Azure en référençant un chemin d’accès d’URL de stockage d’objets blob à la place d’un chemin d’accès de fichier. Accédez aux objets blob à l’aide du format d’URL suivant :`http://storageaccount.blob.core.windows.net/<container>/<blob>`.  
+ Utilisez des applets de commande PowerShell pour stocker des fichiers de données SQL Server dans le service de stockage d’objets blob Azure en référençant un chemin d’accès d’URL de stockage d’objets blob à la place d’un chemin d’accès de fichier. Accédez aux objets blob à l’aide du format d’URL suivant :`https://storageaccount.blob.core.windows.net/<container>/<blob>`.  
   
 ### <a name="sql-server-object-and-performance-counters-support"></a>Prise en charge des compteurs de performances et des objets SQL Server  
  Depuis SQL Server 2014, un nouvel objet SQL Server a été ajouté pour être utilisé avec la fonctionnalité Fichiers de données SQL Server dans le stockage Azure. Le nouvel objet SQL Server est appelé [SQL Server, HTTP_STORAGE_OBJECT](../../relational-databases/performance-monitor/sql-server-http-storage-object.md) et il peut être utilisé par le Moniteur système pour surveiller l’activité lors de l’exécution de SQL Server avec Microsoft Azure Storage.  

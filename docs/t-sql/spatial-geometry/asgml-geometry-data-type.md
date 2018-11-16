@@ -20,19 +20,19 @@ ms.assetid: f6c2e130-05f3-4ef3-921b-d78b51437d48
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bd98df91229a94f1c4562ae4fcd44f5742d0e91e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8d3b518f9255f3a6ed08bc66fdbd43eba6ed1472
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716887"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699747"
 ---
 # <a name="asgml-geometry-data-type"></a>AsGml (type de données geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Retourne la représentation GML (Geography Markup Language) d’une instance **geometry**.
   
-Pour plus d’informations sur le langage GML, consultez la spécification OGC (Open Geospatial Consortium) suivante : [OGC Specifications, Geography Markup Language.](http://go.microsoft.com/fwlink/?LinkId=93629)
+Pour plus d’informations sur le langage GML, consultez la spécification OGC (Open Geospatial Consortium) suivante : [OGC Specifications, Geography Markup Language.](https://go.microsoft.com/fwlink/?LinkId=93629)
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -60,7 +60,7 @@ SELECT @g.AsGml();
  Cette méthode retourne la description en tant qu'instance `LineString`.  
   
 ```  
-<LineString xmlns="http://www.opengis.net/gml">  
+<LineString xmlns="https://www.opengis.net/gml">  
 <posList>0 0 0 1 1 0</posList></LineString>  
 ```  
   

@@ -20,12 +20,12 @@ ms.assetid: a4bfc925-3ef6-431e-b1dd-7e0023d3a92d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 97ab72d572ee533ed43dfde39b362c5bb16120a0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f04de3c323f5655e7503d6d375df536897654740
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726667"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641386"
 ---
 # <a name="use-property-expressions-in-packages"></a>Expressions de propriété dans des packages
   Une expression de propriété est une expression affectée à une propriété pour permettre la mise à jour dynamique de la propriété au moment de l'exécution. Par exemple, une expression de propriété peut mettre à jour la ligne À utilisée par une tâche Envoyer un message en insérant une adresse électronique qui est stockée dans une variable.  
@@ -168,11 +168,11 @@ ms.locfileid: "47726667"
   
 ## <a name="external-resources"></a>Ressources externes  
   
--   [Expression and Configuration Highlighter (projet CodePlex)](http://go.microsoft.com/fwlink/?LinkId=146625)  
+-   [Expression and Configuration Highlighter (projet CodePlex)](https://go.microsoft.com/fwlink/?LinkId=146625)  
   
--   Article technique, [SSIS Expression Examples](http://go.microsoft.com/fwlink/?LinkId=220761), sur social.technet.microsoft.com  
+-   Article technique, [SSIS Expression Examples](https://go.microsoft.com/fwlink/?LinkId=220761), sur social.technet.microsoft.com  
   
 ## <a name="see-also"></a> Voir aussi  
- [Utiliser des variables dans des packages](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)  
+ [Utiliser des variables dans des packages](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)  
   
   

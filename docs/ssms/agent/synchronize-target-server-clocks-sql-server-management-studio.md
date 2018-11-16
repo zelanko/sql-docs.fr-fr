@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 440e91810c96d788916482c7f99217559d825ac7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e034bc8cba4265f74f8dfdc9257846dee3a8412f
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700807"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51702643"
 ---
 # <a name="synchronize-target-server-clocks-sql-server-management-studio"></a>Synchroniser les horloges des serveurs cibles (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ Nécessite l'appartenance au rôle serveur fixe **sysadmin** .
   
 #### <a name="to-synchronize-target-server-clocks"></a>Pour synchroniser les horloges des serveurs cibles  
   
-1.  Dans l'**Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   
@@ -91,5 +91,5 @@ Nécessite l'appartenance au rôle serveur fixe **sysadmin** .
     GO  
     ```  
   
-Pour plus d’informations, consultez [sp_resync_targetserver (Transact-SQL)](http://msdn.microsoft.com/40e44df7-d3e3-44ee-b149-08aba629a21f).  
+Pour plus d’informations, consultez [sp_resync_targetserver (Transact-SQL)](https://msdn.microsoft.com/40e44df7-d3e3-44ee-b149-08aba629a21f).  
   

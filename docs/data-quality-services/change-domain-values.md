@@ -14,12 +14,12 @@ ms.assetid: 8c90ab70-3aea-4eaf-a174-4159485c87d3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9ce3745881465c7f71eed0986e3de669b7488a8d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 21e2f8c20e4a1fcaadeb8747ed2f9fde29d9c10b
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830847"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699919"
 ---
 # <a name="change-domain-values"></a>Modifier les valeurs de domaine
 
@@ -90,7 +90,7 @@ ms.locfileid: "47830847"
   
     -   **Définir une valeur du domaine sélectionné en tant que valeur de début de son groupe**: pour modifier la valeur de début du groupe, sélectionnez une valeur dans le groupe qui n'est pas définie comme valeur de début, puis cliquez sur le bouton **Définir une valeur du domaine sélectionné en tant que valeur de début de son groupe** . La valeur de début est ainsi définie comme remplacement de l'autre valeur. Cette opération fonctionne uniquement si vous avez défini deux ou plusieurs valeurs qui sont un groupe et que vous souhaitez modifier la valeur désignée par DQS par la valeur de début. Notez que la valeur de début est indiquée par une ligne bleue avec la valeur en gras.  
   
-7.  **Vérificateur d'orthographe**: si une valeur a un trait de soulignement ondulé rouge, le vérificateur d'orthographe suggère une correction de la valeur. Cliquez avec le bouton droit sur la valeur avec un trait de soulignement, puis sélectionnez une correction, le cas échéant. Le type de valeur devient (ou demeure) erroné et la correction est ajoutée à la colonne **Corriger vers** . Cliquez sur la flèche bas pour afficher les corrections proposées supplémentaires. Entrez une correction manuellement pour l'ajouter au dictionnaire du vérificateur d'orthographe et pouvoir la sélectionner comme correction. Pour plus d'informations, consultez [Utiliser le vérificateur d'orthographe DQS](../data-quality-services/use-the-dqs-speller.md) et [Définir les propriétés du domaine](../data-quality-services/set-domain-properties.md).  
+7.  **Vérificateur d'orthographe**: si une valeur a un trait de soulignement ondulé rouge, le vérificateur d'orthographe suggère une correction de la valeur. Cliquez avec le bouton droit sur la valeur avec un trait de soulignement, puis sélectionnez une correction, le cas échéant. Le type de valeur devient (ou demeure) erroné et la correction est ajoutée à la colonne **Corriger vers** . Cliquez sur la flèche bas pour afficher les corrections proposées supplémentaires. Entrez une correction manuellement pour l'ajouter au dictionnaire du vérificateur d'orthographe et pouvoir la sélectionner comme correction. Pour plus d'informations, consultez [Use the DQS Speller](../data-quality-services/use-the-dqs-speller.md) et [Set Domain Properties](../data-quality-services/set-domain-properties.md).  
   
     > [!NOTE]  
     >  Pour utiliser le vérificateur d'orthographe, vous pouvez l'activer dans la page **Propriétés du domaine** ou, s'il est désactivé, dans la page **Propriétés du domaine** , vous pouvez cliquer sur l'icône **Activer/désactiver le vérificateur d'orthographe** dans la page **Valeurs du domaine** pour l'activer sur cette page.  
@@ -103,7 +103,7 @@ ms.locfileid: "47830847"
   
 11. **Supprimer les valeurs du domaine sélectionné**: pour supprimer une ou plusieurs valeurs existantes du domaine, sélectionnez les valeurs dans la table de valeurs, puis cliquez sur l'icône **Supprimer les valeurs du domaine sélectionné** . Comme une entrée DQS_NULL ne peut pas être supprimée, si vous choisissez plusieurs valeurs à supprimer et qu'une entrée DQS_NULL est l'une d'entre elles, l'opération échoue.  
   
-12. Cliquez sur **Terminer** pour terminer l'activité de gestion de l'arborescence du domaine, comme décrit dans [End the Domain Management Activity](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
+12. Cliquez sur **Terminer** pour terminer l'activité de gestion de l'arborescence du domaine, comme décrit dans [End the Domain Management Activity](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
   
 ##  <a name="FollowUp"></a> Suivi : Après avoir modifié les valeurs de domaine  
  Après avoir modifié les valeurs de domaine, vous pouvez effectuer d'autres tâches de gestion des domaines sur le domaine, effectuer une découverte des connaissances pour ajouter des connaissances au domaine ou ajouter une stratégie de correspondance au domaine. Pour plus d’informations, consultez [Effectuer une découverte des connaissances](../data-quality-services/perform-knowledge-discovery.md), [Gestion d’un domaine](../data-quality-services/managing-a-domain.md) ou [Créer une stratégie de correspondance](../data-quality-services/create-a-matching-policy.md).  

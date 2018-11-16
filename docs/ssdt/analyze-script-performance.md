@@ -13,12 +13,12 @@ ms.assetid: f4bbdd31-12a5-4c57-b0fe-1c6683820f11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e88dbe70181dfa4000858a48ce4ebe6250a65d52
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7386a1bceed8ed79dddf2636ae152d79c460a5ff
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836207"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51675049"
 ---
 # <a name="analyze-script-performance"></a>Analyser les performances de script
 Utilisez les outils fournis par SQL Server Data Tools pour déterminer si vous pouvez améliorer les performances de votre requête, de vos procédures stockées ou de vos scripts. Par exemple, en surveillant les statistiques du client, telles que les temps de réponse des requêtes les plus fréquentes, vous pouvez déterminer s'il faut modifier les requêtes ou les index des tables. Ces statistiques peuvent inclure le temps d'exécution du client, le profil de requête et les paquets/octets envoyés et reçus.  
@@ -32,7 +32,7 @@ Pour activer/désactiver la collecte de statistiques client, pointez sur **Édi
   
 Si les statistiques client sont activées, l’onglet **Statistiques** s’affiche à côté de l’onglet **Message** lors de l’exécution de la requête. Si elles sont désactivées, l’onglet **Statistiques** n’apparaît pas. Les statistiques provenant d'exécutions de requêtes successives sont répertoriées avec les valeurs moyennes.  
   
-Pour plus d’informations sur les statistiques collectées, voir [Volet Interroger les statistiques de fenêtre](http://msdn.microsoft.com/library/aa216969(SQL.80).aspx) et la section [Onglet Statistiques client](http://msdn.microsoft.com/library/aa833205.aspx) de cette rubrique.  
+Pour plus d’informations sur les statistiques collectées, voir [Volet Interroger les statistiques de fenêtre](https://msdn.microsoft.com/library/aa216969(SQL.80).aspx) et la section [Onglet Statistiques client](https://msdn.microsoft.com/library/aa833205.aspx) de cette rubrique.  
   
 ## <a name="using-execution-plans"></a>Utilisation des plans d'exécution  
 Les plans d'exécution affichent la façon dont le moteur de base de données parcourt les tables et utilise les index pour accéder aux données d'une requête ou de toute autre instruction DML (par exemple, une mise à jour) et les traiter. Cette approche graphique s'avère très utile pour la compréhension des caractéristiques de performances d'une requête.  
@@ -41,7 +41,7 @@ Ouvrez un script Transact\-SQL contenant les requêtes à analyser dans l’édi
   
 Une fois le script analysé ou exécuté, cliquez sur l’onglet **Plan d’exécution** pour voir une représentation graphique du résultat du plan d’exécution.  
   
-Le résultat du plan d'exécution graphique se lit de droite à gauche et de haut en bas. Chaque requête du traitement analysé est affichée, de même que le coût de chaque requête sous la forme d'un pourcentage du coût total du traitement. Pour afficher des informations supplémentaires, comme le coût et le fonctionnement de chaque étape, placez le curseur sur les [icônes des opérateurs logiques et physiques](http://msdn.microsoft.com/library/ms175913.aspx) sur le plan graphique.  
+Le résultat du plan d'exécution graphique se lit de droite à gauche et de haut en bas. Chaque requête du traitement analysé est affichée, de même que le coût de chaque requête sous la forme d'un pourcentage du coût total du traitement. Pour afficher des informations supplémentaires, comme le coût et le fonctionnement de chaque étape, placez le curseur sur les [icônes des opérateurs logiques et physiques](https://msdn.microsoft.com/library/ms175913.aspx) sur le plan graphique.  
   
 Pour modifier l’affichage du plan d’exécution, cliquez avec le bouton droit sur le **Plan d’exécution**, puis sélectionnez **Zoom avant**, **Zoom arrière**, **Zoom personnalisé** ou **Zoom pour ajuster**. **Zoom avant** et **Zoom arrière** permettent respectivement d’agrandir et de réduire l’affichage du plan d’exécution suivant des pourcentages fixes. **Zoom personnalisé** vous permet de définir votre propre facteur de zoom, par exemple 80 %.  **Zoom pour ajuster** ajuste le plan d’exécution au volet de résultats.  
   
@@ -52,5 +52,5 @@ Vous pouvez utiliser l'analyse du code pour découvrir d'éventuels problèmes d
   
 Pour utiliser l’analyse du code manuellement, cliquez avec le bouton droit sur votre projet dans **l’Explorateur de solutions** et sélectionnez **Exécuter l’analyse du code**. Les avertissements d'analyse du code s'affichent dans la fenêtre **Liste d'erreurs** . Vous pouvez double-cliquer sur un avertissement pour accéder au code source comportant le problème. Pour afficher des informations supplémentaires et les corrections possibles d’un avertissement, utilisez le menu contextuel **Afficher de l’aide sur l’erreur**.  
   
-Pour plus d’informations sur l’analyse du code, consultez [Analyse du code de la base de données pour améliorer la qualité du code](http://msdn.microsoft.com/library/dd172133.aspx).  
+Pour plus d’informations sur l’analyse du code, consultez [Analyse du code de la base de données pour améliorer la qualité du code](https://msdn.microsoft.com/library/dd172133.aspx).  
   

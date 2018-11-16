@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3202bef4631477b1dcb25bda412773830f7f0ccc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1ffa4178e4e0f5fc26dc7545edce4cf5326c17a5
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724887"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51671405"
 ---
 # <a name="memory-optimization-advisor"></a>Conseiller d'optimisation de la mémoire
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "47724887"
   
 -   Migrer une table et les données vers une table mémoire optimisée (si toutes les fonctionnalités sont prises en charge).  
     
- Pour plus d’informations sur les méthodologies de transfert, consultez [In-Memory OLTP – Common Workload Patterns and Migration Considerations](http://msdn.microsoft.com/library/dn673538.aspx)(OLTP en mémoire – Modèles de charge de travail courants et considérations relatives à la migration).  
+ Pour plus d’informations sur les méthodologies de transfert, consultez [In-Memory OLTP – Common Workload Patterns and Migration Considerations](https://msdn.microsoft.com/library/dn673538.aspx)(OLTP en mémoire – Modèles de charge de travail courants et considérations relatives à la migration).  
   
 ## <a name="walkthrough-using-the-memory-optimization-advisor"></a>Procédure pas à pas d'utilisation du Conseiller d'optimisation de la mémoire  
  Dans l’ **Explorateur d’objets**, cliquez avec le bouton droit sur la table que vous souhaitez convertir, puis sélectionnez **Conseiller d’optimisation de la mémoire**. Ce faisant, vous affichez la page d'accueil du **Conseiller d'optimisation de la mémoire de la table**.  
@@ -99,7 +99,7 @@ ms.locfileid: "47724887"
   
  S'il n'existe aucune clé primaire et que la table est migrée vers une table non durable, cet écran ne s'affiche pas.  
   
- Pour les colonnes textuelles (colonnes avec des types **char**, **nchar**, **varchar**et **nvarchar**), vous devez sélectionner un classement approprié. L'OLTP en mémoire prend uniquement en charge les classements BIN2 pour les colonnes d'une table mémoire optimisée, mais ne prend pas en charge les classements présentant des caractères supplémentaires. Consultez [Collations and Code Pages](http://msdn.microsoft.com/library/c626dcac-0474-432d-acc0-cfa643345372) pour plus d'informations sur les classements pris en charge et l'impact potentiel d'une modification du classement.  
+ Pour les colonnes textuelles (colonnes avec des types **char**, **nchar**, **varchar**et **nvarchar**), vous devez sélectionner un classement approprié. L'OLTP en mémoire prend uniquement en charge les classements BIN2 pour les colonnes d'une table mémoire optimisée, mais ne prend pas en charge les classements présentant des caractères supplémentaires. Consultez [Classements et pages de code](https://msdn.microsoft.com/library/c626dcac-0474-432d-acc0-cfa643345372) pour plus d'informations sur les classements pris en charge et l'impact potentiel d'une modification du classement.  
   
  Vous pouvez configurer les paramètres suivants pour la clé primaire :  
   
@@ -113,7 +113,7 @@ ms.locfileid: "47724887"
   
 -   Index NONCLUSTERED. Ce type d'index est idéal pour les index avec de nombreuses requêtes de plage. Vous pouvez configurer l'ordre de tri de chaque colonne dans la liste **Trier par colonne et ordre** .  
   
- Pour connaître le type d’index le plus approprié pour votre clé primaire, consultez [Index de hachage](http://msdn.microsoft.com/library/f4bdc9c1-7922-4fac-8183-d11ec58fec4e).  
+ Pour connaître le type d’index le plus approprié pour votre clé primaire, consultez [Index de hachage](https://msdn.microsoft.com/library/f4bdc9c1-7922-4fac-8183-d11ec58fec4e).  
   
  Cliquez sur **Suivant** après avoir effectué vos choix de clé primaire.  
   

@@ -19,12 +19,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fb3f0a99cea35b02b7aa6dce724c279ff729474b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 839ef762a20d413f5e1c61ca45c46ad80a153d99
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759697"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697325"
 ---
 # <a name="set-localvariable-transact-sql"></a>SET @local_variable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -186,7 +186,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
   
  Vous pouvez utiliser l'opérateur d'assignation composée partout où vous avez une assignation avec une expression à droite de l'opérateur, y compris des variables, et un SET dans une instruction UPDATE, SELECT et RECEIVE.  
   
- N'utilisez pas de variable dans une instruction INSERT pour concaténer les valeurs (c'est-à-dire, pour calculer des valeurs agrégées). Ceci peut engendrer des résultats de requête inattendus. Le motif en est que certaines expressions dans la liste SELECT (y compris les attributions) peuvent être exécutées plusieurs fois pour chaque ligne de sortie. Pour plus d’informations, consultez [cet article de la Base de connaissances](http://support.microsoft.com/kb/287515).  
+ N'utilisez pas de variable dans une instruction INSERT pour concaténer les valeurs (c'est-à-dire, pour calculer des valeurs agrégées). Ceci peut engendrer des résultats de requête inattendus. Le motif en est que certaines expressions dans la liste SELECT (y compris les attributions) peuvent être exécutées plusieurs fois pour chaque ligne de sortie. Pour plus d’informations, consultez [cet article de la Base de connaissances](https://support.microsoft.com/kb/287515).  
   
 ## <a name="permissions"></a>Permissions  
  Nécessite l'appartenance au rôle public. Tous les utilisateurs peuvent utiliser SET **@***local_variable*.  

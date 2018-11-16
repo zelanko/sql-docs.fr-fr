@@ -5,8 +5,7 @@ ms.date: 07/18/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: language-reference
 helpviewer_keywords:
 - SQL graph
@@ -16,12 +15,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4d6e3a5e26fd40fc4f2fca093a41048aa7e3c5b1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dcabc19d3c83cd1ed4c9ee7b8047759e2550863e
+ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695898"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51512704"
 ---
 # <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>Traitement des graphes avec SQL Server et de la base de données SQL Azure
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -30,7 +29,7 @@ ms.locfileid: "47695898"
 
 
 ## <a name="what-is-a-graph-database"></a>Qu’est une base de données de graphique ?  
-Une base de données de graphique est une collection de nœuds (ou les sommets) et de bords (ou relations). Un nœud représente une entité (par exemple, une personne ou organisation) et un bord représente une relation entre les deux nœuds auquel elle se connecte (par exemple, les mentions j’aime ou les amis). Les nœuds et les bords peuvent avoir des propriétés qui s’y rapportent. Voici quelques fonctionnalités qui rendent une base de données de graphique unique :  
+Une base de données de graphes est une collection de nœuds (ou sommets) et d’arêtes (ou relations). Un nœud représente une entité (par exemple, une personne ou organisation) et une arête représente une relation entre les deux nœuds qu’elle connecte (par exemple, les mentions J’aime ou les amis). Les nœuds et les bords peuvent avoir des propriétés qui s’y rapportent. Voici quelques fonctionnalités qui rendent une base de données de graphique unique :  
 -   Bords ou les relations sont des entités de première classes dans une base de données de graphique et peuvent avoir attributs ou les propriétés associées. 
 -   Un contour unique peut connecter plusieurs nœuds dans une base de données de graphique de manière flexible.
 -   Vous pouvez facilement exprimer critères spéciaux et les requêtes de navigation sur plusieurs sauts.
@@ -48,7 +47,7 @@ Nous avons commencé à ajouter des extensions de graphe à SQL Server, pour fac
 
 
 ### <a name="create-graph-objects"></a>Créer des objets graphiques
-[!INCLUDE[tsql-md](../../includes/tsql-md.md)] extensions permettra aux utilisateurs de créer des tables de nœuds ou d’arêtes. Les nœuds et les bords peuvent avoir des propriétés qui leur sont associées. Depuis, nœuds et les bords sont stockées en tant que tables, toutes les opérations qui sont pris en charge sur les tables relationnelles sont pris en charge sur la table de nœuds ou d’arêtes. Par exemple :  
+[!INCLUDE[tsql-md](../../includes/tsql-md.md)] extensions permettra aux utilisateurs de créer des tables de nœuds ou d’arêtes. Les nœuds et les bords peuvent avoir des propriétés qui leur sont associées. Depuis, nœuds et les bords sont stockées en tant que tables, toutes les opérations qui sont pris en charge sur les tables relationnelles sont pris en charge sur la table de nœuds ou d’arêtes. Voici un exemple :  
 
 ```   
 CREATE TABLE Person (ID INTEGER PRIMARY KEY, Name VARCHAR(100), Age INT) AS NODE;

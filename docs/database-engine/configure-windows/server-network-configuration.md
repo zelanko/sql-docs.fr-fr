@@ -19,12 +19,12 @@ ms.assetid: 890c09a1-6dad-4931-aceb-901c02ae34c5
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 441e329ce93ea0aa30a8a3ad0f2cbf587d7d196e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ed07e09663aa19ead617ce1c6ae63762fff0d67b
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47736629"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600279"
 ---
 # <a name="server-network-configuration"></a>Configuration réseau du serveur
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,10 +50,10 @@ ms.locfileid: "47736629"
  La prise en charge de la Protection étendue de l'authentification en utilisant la liaison de canal et la liaison de service est disponible pour les systèmes d'exploitation qui prennent en charge la Protection étendue. Pour plus d’informations, consultez [Se connecter au moteur de base de données à l’aide de la protection étendue](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md).  
   
 ## <a name="authenticating-by-using-kerberos"></a>Authentification à l'aide de Kerberos  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge l'authentification Kerberos. Pour plus d’informations, consultez [Inscrire un nom de principal du service pour les connexions Kerberos](../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md) et [Gestionnaire de Configuration de Microsoft Kerberos pour SQL Server](http://www.microsoft.com/download/details.aspx?id=39046).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge l'authentification Kerberos. Pour plus d’informations, consultez [Inscrire un nom de principal du service pour les connexions Kerberos](../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md) et [Gestionnaire de Configuration de Microsoft Kerberos pour SQL Server](https://www.microsoft.com/download/details.aspx?id=39046).  
   
 ### <a name="registering-a-server-principal-name-spn"></a>Inscription d'un nom principal de service (SPN)  
- Le service d'authentification Kerberos utilise un nom de principal de service (SPN) pour authentifier un service. Pour plus d’informations, consultez [Inscrire un nom de principal du service pour les connexions Kerberos](../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md).  
+ Le service d'authentification Kerberos utilise un nom de principal de service (SPN) pour authentifier un service. Pour plus d'informations, consultez [Register a Service Principal Name for Kerberos Connections](../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md).  
   
  Les noms de principaux du service peuvent également être utilisés pour sécuriser davantage l'authentification client lors d'une connexion avec NTLM. Pour plus d’informations, consultez [Se connecter au moteur de base de données à l’aide de la protection étendue](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md).  
   

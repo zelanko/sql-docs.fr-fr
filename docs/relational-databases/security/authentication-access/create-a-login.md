@@ -24,12 +24,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 28bda5c6e02b21343cef97ee04c36f80f124d9a9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bc1eb47e6cde8ff1fb34bde4bf82f4d79013d90e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630357"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51675415"
 ---
 # <a name="create-a-login"></a>Créer un compte de connexion
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -66,9 +66,9 @@ ms.locfileid: "47630357"
   
     2.  Sous **À partir de cet emplacement**, cliquez sur **Emplacements…** pour ouvrir la boîte de dialogue **Emplacements** et sélectionner un des emplacements de serveur disponibles. Lorsque vous avez terminé, cliquez sur **OK**.  
   
-    3.  Sous **Entrez le nom de l’objet à sélectionner (exemples)**, entrez l’utilisateur ou le nom de groupe que vous souhaitez rechercher. Pour plus d'informations, consultez [Boîte de dialogue Choisir des utilisateurs, des ordinateurs ou des groupes](http://technet.microsoft.com/library/cc771712.aspx).  
+    3.  Sous **Entrez le nom de l’objet à sélectionner (exemples)**, entrez l’utilisateur ou le nom de groupe que vous souhaitez rechercher. Pour plus d'informations, consultez [Boîte de dialogue Choisir des utilisateurs, des ordinateurs ou des groupes](https://technet.microsoft.com/library/cc771712.aspx).  
   
-    4.  Cliquez sur **Avancé…** pour obtenir davantage d'options de recherche avancée. Pour plus d’informations, consultez [Boîte de dialogue Choisir des utilisateurs, des ordinateurs ou des groupes - Page Avancé](http://technet.microsoft.com/library/cc733110.aspx).  
+    4.  Cliquez sur **Avancé…** pour obtenir davantage d'options de recherche avancée. Pour plus d’informations, consultez [Boîte de dialogue Choisir des utilisateurs, des ordinateurs ou des groupes - Page Avancé](https://technet.microsoft.com/library/cc733110.aspx).  
   
     5.  Cliquez sur **OK**.  
   
@@ -230,7 +230,7 @@ ms.locfileid: "47630357"
 ##  <a name="TsqlProcedure"></a> Créer une connexion à l’aide de l’authentification Windows à l’aide de T-SQL  
   
  
-1.  Dans l'**Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   
@@ -246,7 +246,7 @@ ms.locfileid: "47630357"
   
 ## <a name="create-a-login-using-sql-server-authentication-with-ssms"></a>Créer une connexion via l’authentification SQL Server avec SSMS  
   
-1.  Dans l'**Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   

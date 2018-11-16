@@ -28,12 +28,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9d49e9c7b8b567ff4628e4e2353a6ce0a7a4adc4
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: bbedfe588a66e166f46e9240db65689a2b2a6459
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50970560"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700344"
 ---
 # <a name="set-transaction-isolation-level-transact-sql"></a>SET TRANSACTION ISOLATION LEVEL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -87,7 +87,7 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
 -   Si READ_COMMITTED_SNAPSHOT a la valeur ON, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] utilise le contrôle de version de ligne pour présenter à chaque instruction un instantané cohérent des données (du point de vue transactionnel) telles qu'elles étaient au début de l'instruction. Les verrous ne sont pas utilisés pour protéger les données des mises à jour par d'autres transactions.
 
 > [!IMPORTANT]  
-> Le choix d'un niveau d'isolation n'a aucune influence sur les verrous acquis pour protéger les modifications de données. Une transaction acquiert toujours un verrou exclusif sur les données qu'elle modifie et garde celui-ci jusqu'à ce qu'elle ait terminé son travail, indépendamment du niveau d'isolation défini pour elle. De plus, une mise à jour effectuée au niveau d’isolation READ_COMMITTED utilise des verrous de mise à jour sur les lignes de données sélectionnées, tandis qu’une mise à jour apportée au niveau d’isolation SNAPSHOT utilise des versions de ligne pour sélectionner les lignes à mettre à jour. Dans le cas des opérations de lecture, le niveau d'isolation d'une transaction définit principalement son niveau de protection contre les effets des modifications apportées par les autres transactions. Pour plus d’informations, consultez [Guide du verrouillage des transactions et de la gestion de versions de ligne](https://docs.microsoft.com/en-us/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide).
+> Le choix d'un niveau d'isolation n'a aucune influence sur les verrous acquis pour protéger les modifications de données. Une transaction acquiert toujours un verrou exclusif sur les données qu'elle modifie et garde celui-ci jusqu'à ce qu'elle ait terminé son travail, indépendamment du niveau d'isolation défini pour elle. De plus, une mise à jour effectuée au niveau d’isolation READ_COMMITTED utilise des verrous de mise à jour sur les lignes de données sélectionnées, tandis qu’une mise à jour apportée au niveau d’isolation SNAPSHOT utilise des versions de ligne pour sélectionner les lignes à mettre à jour. Dans le cas des opérations de lecture, le niveau d'isolation d'une transaction définit principalement son niveau de protection contre les effets des modifications apportées par les autres transactions. Pour plus d’informations, consultez [Guide du verrouillage des transactions et de la gestion de versions de ligne](https://docs.microsoft.com/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide).
 
 > [!NOTE]  
 >  L'isolement d'instantané prend en charge les données FILESTREAM. En mode d'isolement d'instantané, les données FILESTREAM lues par n'importe quelle instruction d'une transaction représenteront la version cohérente d'un point de vue transactionnel des données qui existaient au début de la transaction.  

@@ -13,12 +13,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: d688a977222960710c84a197ae47f8b48aafc3eb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 311e0589e2257a1bb465ae210c013780cf9fee42
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47636927"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51605209"
 ---
 # <a name="install-sql-server-database-engine"></a>Installer le moteur de base de données SQL Server
 
@@ -65,7 +65,7 @@ Les fonctionnalités suivantes sont installées quand vous sélectionnez **Moteu
 -   Composants de documentation  
   
 > [!NOTE]  
->  Par défaut, les exemples de bases de données et les exemples de code ne sont pas installés dans le cadre de l'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour installer les exemples de bases de données et les exemples de code, consultez [Exemples Microsoft SQL Server](../../sample/microsoft-sql-server-samples.md). Pour des exemples plus anciens, consultez le [CodePlex](http://go.microsoft.com/fwlink/?LinkId=87843).  
+>  Par défaut, les exemples de bases de données et les exemples de code ne sont pas installés dans le cadre de l'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour installer les exemples de bases de données et les exemples de code, consultez [Exemples Microsoft SQL Server](../../sample/microsoft-sql-server-samples.md). Pour des exemples plus anciens, consultez le [CodePlex](https://go.microsoft.com/fwlink/?LinkId=87843).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Éditions et fonctionnalités prises en charge de SQL Server 2017](~/sql-server/editions-and-components-of-sql-server-2017.md)   

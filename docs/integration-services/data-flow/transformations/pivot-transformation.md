@@ -19,12 +19,12 @@ ms.assetid: 55f5db6e-6777-435f-8a06-b68c129f8437
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 57c3adc8418eaab839ef4f7c924c794eaa53bb05
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5a136d62eb71b4551478e4247c498555cad0fafe
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605907"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641016"
 ---
 # <a name="pivot-transformation"></a>transformation de tableau croisé dynamique
   La transformation de tableau croisé dynamique transforme un dataset normalisé en une version moins normalisée mais plus compacte en croisant dynamiquement les données d'entrée sur une valeur de colonne. Par exemple, un dataset **Commandes** normalisé comprenant le nom de client, le produit et la quantité achetée contient généralement plusieurs lignes pour un même client ayant acheté plusieurs produits ; chaque ligne indiquant les détails de commande d’un produit différent. En croisant dynamiquement le dataset sur la colonne de produit, la transformation de tableau croisé dynamique peut sortir un dataset contenant une seule ligne par client. Cette ligne unique indique tous les achats du client ; le nom des produits est indiqué sous forme de nom de colonne et la quantité sous forme de valeur de la colonne de produit. Dans la mesure où tous les clients n'achètent pas chacun des produits, de nombreuses colonnes peuvent contenir des valeurs null.  
@@ -127,7 +127,7 @@ ms.locfileid: "47605907"
   
  Pour plus d'informations sur les propriétés définissables dans la boîte de dialogue **Éditeur avancé** , cliquez sur l'une des rubriques suivantes :  
   
--   [Propriétés communes](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Propriétés communes](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Propriétés personnalisées des transformations](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   

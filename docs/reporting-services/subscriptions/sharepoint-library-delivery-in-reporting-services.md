@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: cb4e4f71-f2d5-475a-9284-ea324c93c7de
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3336112a7b422db606b93cab30b8942839aed862
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f511dc6bd39366d8c7706966ec78e36e3ed983b8
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674323"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813242"
 ---
 # <a name="sharepoint-library-delivery-in-reporting-services"></a>Remise à une bibliothèque SharePoint dans Reporting Services
   Un serveur de rapports configuré en mode intégré SharePoint inclut une extension de remise que vous pouvez utiliser pour envoyer un rapport à une bibliothèque SharePoint.  
@@ -72,7 +72,7 @@ ms.locfileid: "47674323"
  Spécifie une propriété **Titre** facultative pour le rapport dans la bibliothèque cible. Il s'agit d'une propriété standard pour tous les éléments stockés dans une bibliothèque. Les utilisateurs peuvent choisir de montrer ou de masquer cette propriété lorsqu'ils consultent le contenu de la bibliothèque sur un site SharePoint.  
   
  Chemin d'accès  
- Spécifie une URL complète vers la bibliothèque SharePoint, notamment l'application et le site Web SharePoint. Par exemple : `http://mySharePointWeb/MySite/MyDocLib`, où `http://mySharePointWeb` indique l’application web, « MySite » est le site SharePoint et « MyDocLib » est la bibliothèque SharePoint où est remis le rapport.  
+ Spécifie une URL complète vers la bibliothèque SharePoint, notamment l'application et le site Web SharePoint. Par exemple : `https://mySharePointWeb/MySite/MyDocLib`, où `https://mySharePointWeb` indique l’application web, « MySite » est le site SharePoint et « MyDocLib » est la bibliothèque SharePoint où est remis le rapport.  
   
  Vous ne pouvez pas spécifier une page, un site ou une liste. Le conteneur cible doit être une bibliothèque dans le même site ou batterie de serveurs.  
   

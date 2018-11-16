@@ -11,12 +11,12 @@ ms.assetid: e0179429-13ce-4d23-ae27-e6419de0a575
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 40151df5effd43cd48f005a0ddfd2e5faa673b40
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 45c7429dfc8824859b06ef16616b0b999a3f6fd0
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668897"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51666758"
 ---
 # <a name="how-to-configure-sql-server-unit-test-execution"></a>Procédure : configurer l'exécution de test unitaire SQL Server
 Lorsque vous configurez votre projet de test, vous spécifiez plusieurs paramètres qui contrôlent la façon dont vos tests unitaires SQL Server sont exécutés. Ces paramètres de configuration sont stockés dans le fichier app.config de votre projet de test. Si vous modifiez ce fichier directement, les nouvelles valeurs apparaissent dans la boîte de dialogue de configuration du test.  
@@ -30,7 +30,7 @@ Ces paramètres contrôlent la façon dont votre test se connecte à la base de 
 -   **Déploiement du schéma**. Un projet de base de données est une représentation hors connexion de votre base de données. Le projet de base de données représente la structure de vos objets de base de données, mais ne contient pas de données. Après avoir apporté des modifications au schéma dans un projet de base de données, vous pouvez le tester dans une base de données réelle. Dans l'étape de déploiement du schéma, les objets de base de données que vous souhaitez tester sont copiés de votre projet de base de données dans la base de données sur laquelle vous exécutez des tests. Pour plus d'informations sur le déploiement du schéma, consultez [Déployer un schéma de base de données](#DeployingDBSchema).  
   
     > [!NOTE]  
-    > Les tests ne s'exécutent pas dans le dossier de la solution, mais dans un dossier distinct sur le disque dur. Bien que vous puissiez configurer tous les aspects du déploiement de test, en général vous n'avez pas besoin de les configurer pour les tests unitaires. Pour plus d'informations sur le déploiement de test, consultez [Exécution de tests](http://msdn.microsoft.com/library/dd286680(VS.100).aspx).  
+    > Les tests ne s'exécutent pas dans le dossier de la solution, mais dans un dossier distinct sur le disque dur. Bien que vous puissiez configurer tous les aspects du déploiement de test, en général vous n'avez pas besoin de les configurer pour les tests unitaires. Pour plus d'informations sur le déploiement de test, consultez [Exécution de tests](https://msdn.microsoft.com/library/dd286680(VS.100).aspx).  
   
 ## <a name="SpecifyConnectionStrings"></a>Spécifier des chaînes de connexion  
   

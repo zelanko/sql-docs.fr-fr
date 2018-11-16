@@ -13,12 +13,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d4be2b5d0c7d1beacd7c13c1fc6cf57e02fc0113
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5cf7d56b973c08f88bc785e5d5ef2d45ea0260ac
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47661517"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51658748"
 ---
 # <a name="showplan-xml-statistics-profile-event-class"></a>Showplan XML Statistics Profile (classe d'événements)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "47661517"
   
  La classe d'événements Showplan XML Statistics Profile affiche les données de compilation complètes, si bien que les traces qui contiennent cette classe d'événements peuvent peser sensiblement sur les performances. Pour minimiser l'effet d'une telle charge, limitez l'utilisation de cette classe d'événements aux traces destinées à effectuer le suivi de problèmes précis pour de brèves durées.  
   
- Les documents Showplan XML ont un schéma qui leur est associé. Ce schéma se trouve sur le [site web de Microsoft](http://go.microsoft.com/fwlink/?LinkId=41740)ou dans le cadre de votre installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ Les documents Showplan XML ont un schéma qui leur est associé. Ce schéma se trouve sur le [site web de Microsoft](https://go.microsoft.com/fwlink/?LinkId=41740)ou dans le cadre de votre installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="showplan-xml-statistics-profile-event-class-data-columns"></a>Colonnes de données de la classe d'événements Showplan XML Statistics Profile  
   

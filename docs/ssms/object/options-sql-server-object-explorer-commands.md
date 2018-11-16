@@ -13,12 +13,12 @@ ms.assetid: 0e5afdb3-488c-4ea9-9e38-d42085ec00b1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6c7df43a5a6a0f00ec1f2bce13cf79f424265abf
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 7281b6862d1785fc1b2b93a543c10738a454adaa
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50098891"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700190"
 ---
 # <a name="options-sql-server-object-explorer---commands"></a>Options (Explorateur d’objets SQL Server - Commandes)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,5 +45,5 @@ Spécifie le nombre de lignes à retourner lorsque vous modifiez des lignes dans
 Spécifie le nombre de lignes à retourner qui est spécifié dans le script de l'éditeur de requête créé. La valeur par défaut est 1000 lignes.  
   
 ## <a name="see-also"></a> Voir aussi  
-[SQL Server Audit (moteur de base de données)](http://msdn.microsoft.com/0c1fca2e-f22b-4fe8-806f-c87806664f00)  
+[SQL Server Audit (moteur de base de données)](https://msdn.microsoft.com/0c1fca2e-f22b-4fe8-806f-c87806664f00)  
   

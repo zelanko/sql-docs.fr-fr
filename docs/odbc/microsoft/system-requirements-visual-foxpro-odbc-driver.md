@@ -19,18 +19,18 @@ ms.assetid: fb4d5157-9a3e-43bf-97b5-7a614558652c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fb94ee7b87f7e2e68f949f8a97b672182157c3f0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ff2db6cff725e133789804856b1913517c34ceb0
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47693387"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51664094"
 ---
 # <a name="system-requirements-visual-foxpro-odbc-driver"></a>Configuration système requise (pilote ODBC Visual FoxPro)
 La configuration système requise pour l’installation fournit le minimale du système d’exploitation et l’espace disque nécessaire pour installer correctement le pilote. Une fois que vous avez installé le pilote, vous pouvez sélectionner le logiciel d’application spécifique que vous souhaitez utiliser pour accéder aux données Visual FoxPro.  
   
 ## <a name="installation-requirements"></a>Spécifications de l’installation  
- Pour les exigences d’installation et d’autres informations, consultez [le site de téléchargement du pilote ODBC Visual FoxPro](http://go.microsoft.com/fwlink/?LinkId=121318).  
+ Pour les exigences d’installation et d’autres informations, consultez [le site de téléchargement du pilote ODBC Visual FoxPro](https://go.microsoft.com/fwlink/?LinkId=121318).  
   
 ## <a name="accessing-visual-foxpro-data"></a>L’accès aux données Visual FoxPro  
  Pour accéder à Microsoft Visual FoxPro ou FoxPro 2. *x* données, vous devez avoir les éléments suivants :  

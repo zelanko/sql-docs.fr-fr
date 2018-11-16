@@ -8,12 +8,12 @@ ms.topic: quickstart
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 6eeb2c71e821c9ccf5a89129a862b3d01a1d64bf
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 2e861bf2d8daf2460fbffcf2d92fcd33f859cd78
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085501"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699114"
 ---
 # <a name="quickstart-handle-data-types-and-objects-using-r-in-sql-server"></a>Démarrage rapide : Gérer les types de données et des objets à l’aide de R dans SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -108,7 +108,7 @@ $ X...      : Factor w/ 1 level " ": 1
 $ c..world..: Factor w/ 1 level "world": 1
 ```
 
-Comme vous pouvez le constater, un léger changement dans la syntaxe R transforme le schéma des résultats. Nous n’entrerons dans pourquoi, étant donné que les différences dans les types de données R sont décrites en détail dans cet article par Hadley Wickham : [des Structures de données R](http://adv-r.had.co.nz/Data-structures.html).
+Comme vous pouvez le constater, un léger changement dans la syntaxe R transforme le schéma des résultats. Nous n’entrerons dans pourquoi, étant donné que les différences dans les types de données R sont décrites en détail dans cet article par Hadley Wickham : [des Structures de données R](https://adv-r.had.co.nz/Data-structures.html).
 
 Pour l’instant, gardez seulement à l’esprit que vous devez vérifier les résultats attendus quand vous convertissez des objets R en trames de données.
 

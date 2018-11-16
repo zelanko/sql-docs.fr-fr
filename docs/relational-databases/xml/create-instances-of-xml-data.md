@@ -20,12 +20,12 @@ ms.assetid: dbd6c06f-db6e-44a7-855a-6a55bf374907
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ba81057640891eded10eb09cd9d22af9ff2dc8c8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d9a377c8ba73ed505db56c83704099aa0f7b9aac
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47779947"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670448"
 ---
 # <a name="create-instances-of-xml-data"></a>Créer des instances de données XML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ from OpenRowset(BULK 'filename.xml', SINGLE_BLOB) R(x)
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Le code XML est représenté en interne dans un format binaire encodé en UTF-16. L'encodage assuré par l'utilisateur n'est pas conservé, mais est pris en compte dans le processus d'analyse.  
   
 ### <a name="type-casting-clr-user-defined-types"></a>Conversion des types CLR définis par l'utilisateur  
- Si un type CLR défini par l'utilisateur présente une sérialisation XML, les instances de ce type peuvent être explicitement converties en un type de données XML. Pour obtenir des détails sur la sérialisation XML d’un type CLR défini par l’utilisateur, consultez [Sérialisation XML à partir d’objets de base de données CLR](http://msdn.microsoft.com/library/ac84339b-9384-4710-bebc-01607864a344).  
+ Si un type CLR défini par l'utilisateur présente une sérialisation XML, les instances de ce type peuvent être explicitement converties en un type de données XML. Pour obtenir des détails sur la sérialisation XML d’un type CLR défini par l’utilisateur, consultez [Sérialisation XML à partir d’objets de base de données CLR](https://msdn.microsoft.com/library/ac84339b-9384-4710-bebc-01607864a344).  
   
 ### <a name="white-space-handling-in-typed-xml"></a>Gestion des espaces blancs dans le code XML typé  
  Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les espaces blancs figurant dans le contenu d'un élément ne sont pas significatifs s'ils se trouvent dans une séquence de données de type caractères composée uniquement d'espaces blancs délimités par des balises (balise de début ou de fin) et qu'ils ne font pas appel au codage d'entité. (Les sections CDATA sont ignorées). Ce traitement des espaces blancs se différencie de la description des espaces blancs donnée dans la spécification XML 1.0 publiée par le W3C (World Wide Web Consortium). En effet, l'analyseur XML de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne reconnaît qu'un nombre limité des sous-ensembles DTD tels qu'ils existent dans XML 1.0. Pour plus d’informations sur les sous-ensembles DTD pris en charge dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [CAST et CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md).  

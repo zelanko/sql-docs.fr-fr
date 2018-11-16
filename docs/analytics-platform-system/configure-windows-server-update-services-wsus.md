@@ -9,17 +9,17 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 4868aa775ac2958cc0e034196a0e911b58e78a34
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 0b79db4806f22c7d25af4f292fedddb46b40d1e7
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018524"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696938"
 ---
 # <a name="configure-windows-server-update-services-wsus-in-analytics-platform-system"></a>Configurer Windows Server Update Services (WSUS) dans le système de plateforme d’Analytique
 Ces instructions vous guident dans les étapes d’utilisation de l’Assistant de Configuration de Windows Server Update Services (WSUS) pour configurer WSUS pour l’Analytique Platform System. Vous devez configurer WSUS avant de pouvoir appliquer des mises à jour logicielles à l’appliance. WSUS est déjà installé sur l’ordinateur virtuel VMM de l’appliance.  
   
-Pour plus d’informations sur la configuration de WSUS, consultez le [Guide d’Installation pas à pas WSUS](http://go.microsoft.com/fwlink/?LinkId=202417) sur le site Web WSUS. Après la configuration de WSUS, consultez [télécharger et appliquer les mises à jour Microsoft &#40;Analytique Platform System&#41; ](download-and-apply-microsoft-updates.md) pour lancer une mise à jour.  
+Pour plus d’informations sur la configuration de WSUS, consultez le [Guide d’Installation pas à pas WSUS](https://go.microsoft.com/fwlink/?LinkId=202417) sur le site Web WSUS. Après la configuration de WSUS, consultez [télécharger et appliquer les mises à jour Microsoft &#40;Analytique Platform System&#41; ](download-and-apply-microsoft-updates.md) pour lancer une mise à jour.  
   
 > [!WARNING]  
 > Si vous rencontrez des erreurs au cours de ce processus de configuration, arrêtez et contactez le support technique pour obtenir une assistance. Ne pas ignorer les erreurs ou continuer dans le processus après réception des erreurs.  
@@ -79,11 +79,11 @@ Pour configurer WSUS, vous devez :
   
 4.  Choisissez le serveur en amont.  
   
-    Sur le **choisir le serveur en amont** page de l’Assistant de configuration de WSUS, vous allez sélectionner comment WSUS sur le nœud de gestion de l’ordinateur virtuel doit se connecter à un serveur en amont pour obtenir des mises à jour logicielles. Vos deux choix sont pour synchroniser le serveur en amont avec [Microsoft Update](http://go.microsoft.com/fwlink/?LinkId=133349) ou de synchroniser les mises à jour avec un autre serveur Windows Server Update Services.  
+    Sur le **choisir le serveur en amont** page de l’Assistant de configuration de WSUS, vous allez sélectionner comment WSUS sur le nœud de gestion de l’ordinateur virtuel doit se connecter à un serveur en amont pour obtenir des mises à jour logicielles. Vos deux choix sont pour synchroniser le serveur en amont avec [Microsoft Update](https://go.microsoft.com/fwlink/?LinkId=133349) ou de synchroniser les mises à jour avec un autre serveur Windows Server Update Services.  
   
     #### <a name="to-update-by-using-microsoft-update"></a>Pour mettre à jour à l’aide de Microsoft Update  
   
-    1.  Si vous choisissez de synchroniser avec Microsoft Update, vous n’avez pas besoin d’apporter des modifications à la **choisir le serveur en amont** page. Cliquez sur **Suivant**.  
+    1.  Si vous choisissez de synchroniser avec Microsoft Update, vous n’avez pas besoin d’apporter des modifications à la **choisir le serveur en amont** page. Cliquer sur **Suivant**.  
   
         ![WSUS-synchronisation du serveur en amont](./media/configure-windows-server-update-services-wsus/WSUS_Wiz4a.png "WSUS_Wiz4a")  
   

@@ -5,8 +5,7 @@ ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: sql
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xml
 ms.topic: language-reference
 dev_langs:
 - XML
@@ -19,12 +18,12 @@ ms.assetid: 03924684-c5fd-44dc-8d73-c6ab90f5e069
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d496a846c49c002e77f0f8bc3bde13fad24755a9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 731877fced1d14e385f8681d4a436269e518595a
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854757"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51656798"
 ---
 # <a name="modules-and-prologs---xquery-prolog"></a>Modules et prologues : prologue XQuery
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "47854757"
  Par exemple, la requête XQuery ci-dessous est spécifiée sur la colonne Instructions de **xml** type qui stocke les instructions de fabrication au format XML. La requête récupère les instructions de fabrication pour l'emplacement de l'atelier `10`. Le `query()` méthode de la **xml** type de données est utilisé pour spécifier la requête XQuery.  
   
 ```  
-SELECT Instructions.query('declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";           
+SELECT Instructions.query('declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";           
     /AWMI:root/AWMI:Location[@LocationID=10]  
 ') AS Result   
 FROM  Production.ProductModel  
@@ -43,7 +42,7 @@ WHERE ProductModelID=7
   
  Notez les points suivants dans la requête précédente :  
   
--   Le prologue XQuery inclut une déclaration de préfixe (AWMI) espace de noms, `(namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";`.  
+-   Le prologue XQuery inclut une déclaration de préfixe (AWMI) espace de noms, `(namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";`.  
   
 -   Le mot clé `declare namespace` définit un préfixe d'espace de noms utilisé ultérieurement dans le corps de la requête.  
   
@@ -56,7 +55,7 @@ WHERE ProductModelID=7
   
 ```  
 SELECT CatalogDescription.query('  
-declare namespace PD="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+declare namespace PD="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
          /PD:ProductDescription/PD:Summary   
     ') as Result  
 FROM Production.ProductModel  
@@ -66,7 +65,7 @@ where ProductModelID=19
  Pour améliorer la lisibilité de la requête, vous pouvez déclarer les espaces de noms à l'aide de WITH XMLNAMESPACES au lieu de déclarer une liaison entre des préfixes et des espaces de noms dans le prologue de la requête à l'aide de `declare namespace`.  
   
 ```  
-WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS PD)  
+WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS PD)  
   
 SELECT CatalogDescription.query('  
          /PD:ProductDescription/PD:Summary   
@@ -84,7 +83,7 @@ where ProductModelID=19
   
 ```  
 SELECT CatalogDescription.query('  
-     declare default element namespace  "http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+     declare default element namespace  "https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
         /ProductDescription/Summary   
     ') as Result  
 FROM  Production.ProductModel  
@@ -94,7 +93,7 @@ WHERE ProductModelID=19
  Vous pouvez déclarer un espace de noms par défaut en utilisant WITH XMLNAMESPACES :  
   
 ```  
-WITH XMLNAMESPACES (DEFAULT 'http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription')  
+WITH XMLNAMESPACES (DEFAULT 'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription')  
 SELECT CatalogDescription.query('  
         /ProductDescription/Summary   
     ') as Result  

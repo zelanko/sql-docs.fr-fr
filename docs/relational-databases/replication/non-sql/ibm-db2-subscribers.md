@@ -17,12 +17,12 @@ ms.assetid: a1a27b1e-45dd-4d7d-b6c0-2b608ed175f6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e2fbcef1433f75be10cd9b0e916d1a49fd545208
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 091bc3b0ab56006e12064f6b873d419b4e0c5a7d
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731867"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51672378"
 ---
 # <a name="ibm-db2-subscribers"></a>Abonnés IBM DB2
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "47731867"
   
 1.  Installez la dernière version du fournisseur [!INCLUDE[msCoName](../../../includes/msconame-md.md)] OLE DB pour DB2 sur le serveur de distribution :  
   
-    -   Si vous utilisez [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)] Enterprise Edition, sur la page web [Téléchargements SQL Server](http://go.microsoft.com/fwlink/?LinkId=149256), dans la section **Téléchargements apparentés**, cliquez sur le lien pointant vers la dernière version de Microsoft SQL Server Feature Pack. Sur la page web **Microsoft SQL Server Feature Pack**, recherchez **Fournisseur Microsoft OLEDB pour DB2**.  
+    -   Si vous utilisez [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)] Enterprise Edition, sur la page web [Téléchargements SQL Server](https://go.microsoft.com/fwlink/?LinkId=149256), dans la section **Téléchargements apparentés**, cliquez sur le lien pointant vers la dernière version de Microsoft SQL Server Feature Pack. Sur la page web **Microsoft SQL Server Feature Pack**, recherchez **Fournisseur Microsoft OLEDB pour DB2**.  
   
     -   Si vous utilisez [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)] Standard Edition, installez la dernière version du serveur HIS ([!INCLUDE[msCoName](../../../includes/msconame-md.md)] Host [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]) qui inclut le fournisseur.  
   

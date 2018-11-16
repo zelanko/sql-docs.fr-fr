@@ -15,12 +15,12 @@ ms.assetid: 48f2fbb7-8964-484a-8311-5126cf594bfb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f1f3cf329f879398344ec67090c31ff1d07a1a65
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: efe373af865e815a71bb9377e2e7f35527f208b4
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703197"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51637736"
 ---
 # <a name="restart-packages-by-using-checkpoints"></a>Redémarrer des packages à l'aide de points de contrôle
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] peut redémarrer les packages ayant échoué à partir du point d'échec, au lieu de reprendre l'exécution du package tout entier. Si un package est configuré pour utiliser des points de contrôle, des informations sur l'exécution du package sont écrites dans un fichier de point de contrôle. Lorsque le package ayant échoué est relancé, le fichier de point de contrôle est utilisé pour redémarrer le package à partir du point d'échec. Si le package est exécuté avec succès, le fichier de point de contrôle est supprimé, puis recréé à l’exécution suivante du package.  
@@ -43,7 +43,7 @@ ms.locfileid: "47703197"
 > [!NOTE]  
 >  L'utilisation de points de contrôle et de transactions dans le même package peut entraîner des résultats inattendus. Par exemple, lorsqu'un package échoue et redémarre à partir d'un point de contrôle, il peut répéter une transaction qui a déjà été correctement validée.  
   
- Les données de point de contrôle ne sont pas enregistrées pour les conteneurs de boucles For et Foreach. Lorsqu'un package est redémarré, les conteneurs de boucles For et Foreach et les conteneurs enfants sont exécutés à nouveau. Si un conteneur enfant de la boucle est exécuté correctement, il n'est pas enregistré dans le fichier de point de contrôle et il est exécuté à nouveau. Pour plus d'informations et pour obtenir une solution de contournement, consultez [Les points de contrôle SSIS ne sont pas respectés pour les éléments de conteneur de boucles For ou Foreach](http://go.microsoft.com/fwlink/?LinkId=241633).  
+ Les données de point de contrôle ne sont pas enregistrées pour les conteneurs de boucles For et Foreach. Lorsqu'un package est redémarré, les conteneurs de boucles For et Foreach et les conteneurs enfants sont exécutés à nouveau. Si un conteneur enfant de la boucle est exécuté correctement, il n'est pas enregistré dans le fichier de point de contrôle et il est exécuté à nouveau. Pour plus d'informations et pour obtenir une solution de contournement, consultez [Les points de contrôle SSIS ne sont pas respectés pour les éléments de conteneur de boucles For ou Foreach](https://go.microsoft.com/fwlink/?LinkId=241633).  
   
  Si le package est redémarré, les configurations du package ne sont pas rechargées, mais le package utilise les informations de configuration écrites dans le fichier de point de contrôle. Cette procédure assure que le package utilise les mêmes configurations lorsqu'il est exécuté à nouveau qu'au moment où il a échoué.  
   
@@ -113,6 +113,6 @@ ms.locfileid: "47703197"
     
 ## <a name="external-resources"></a>Ressources externes  
   
--   Article technique, [Redémarrage automatique des packages SSIS après un basculement ou un échec](http://go.microsoft.com/fwlink/?LinkId=200407), sur social.technet.microsoft.com  
+-   Article technique, [Redémarrage automatique des packages SSIS après un basculement ou un échec](https://go.microsoft.com/fwlink/?LinkId=200407), sur social.technet.microsoft.com  
   
--   Article du Support technique Microsoft, [Les points de contrôle SSIS ne sont pas respectés pour les éléments de conteneur de boucles For ou Foreach](http://go.microsoft.com/fwlink/?LinkId=241633), sur le site support.microsoft.com.  
+-   Article du Support technique Microsoft, [Les points de contrôle SSIS ne sont pas respectés pour les éléments de conteneur de boucles For ou Foreach](https://go.microsoft.com/fwlink/?LinkId=241633), sur le site support.microsoft.com.  

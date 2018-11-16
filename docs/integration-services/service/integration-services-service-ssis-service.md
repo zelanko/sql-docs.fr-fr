@@ -23,12 +23,12 @@ ms.assetid: 2c785b3b-4a0c-4df7-b5cd-23756dc87842
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e6d3b3253488f09b6a20b1de4745f6c97ed77515
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4ef264a836b1081bdeba65fc09fce758b0faf897
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806509"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641806"
 ---
 # <a name="integration-services-service-ssis-service"></a>Service Integration Services (Service SSIS)
   Les rubriques de cette section décrivent le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , un service Windows de gestion des packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Ce service n'est pas obligatoire pour créer, enregistrer et exécuter des packages Integration Services. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] prend en charge le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pour la compatibilité avec les versions antérieures de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
@@ -187,7 +187,7 @@ Lorsque vous installez [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.
   
 ```xml
 \<?xml version="1.0" encoding="utf-8"?>  
-\<DtsServiceConfiguration xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
+\<DtsServiceConfiguration xmlns:xsd="https://www.w3.org/2001/XMLSchema" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">  
   <StopExecutingPackagesOnShutdown>true</StopExecutingPackagesOnShutdown>  
   <TopLevelFolders>  
     \<Folder xsi:type="SqlServerFolder">  
@@ -232,7 +232,7 @@ Lorsque vous installez [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.
   
 ```xml
 \<?xml version="1.0" encoding="utf-8"?>  
-\<DtsServiceConfiguration xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
+\<DtsServiceConfiguration xmlns:xsd="https://www.w3.org/2001/XMLSchema" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">  
   <StopExecutingPackagesOnShutdown>true</StopExecutingPackagesOnShutdown>  
   <TopLevelFolders>  
     \<Folder xsi:type="SqlServerFolder">  
@@ -251,7 +251,7 @@ Lorsque vous installez [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.
  La clé de Registre **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\SSIS\ServiceConfigFile** spécifie l’emplacement et le nom du fichier de configuration utilisé par le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. La valeur par défaut de la clé de Registre est **C:\Program Files\Microsoft SQL Server\130\DTS\Binn\MsDtsSrvr.ini.xml**. Vous pouvez mettre à jour la valeur de la clé de Registre pour utiliser un nom et un emplacement différents pour le fichier de configuration. Notez que le numéro de version présent dans le chemin (120 pour SQL Server [!INCLUDE[ssSQL14_md](../../includes/sssql14-md.md)], 130 pour [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], etc.) varie selon la version de SQL Server.
   
 > [!CAUTION]  
->  La modification incorrecte du Registre peut entraîner de graves problèmes et nécessiter la réinstallation du système d'exploitation. [!INCLUDE[msCoName](../../includes/msconame-md.md)] ne garantit pas que les problèmes résultant d'une modification incorrecte du Registre peuvent être résolus. Avant de modifier le Registre, sauvegardez toutes vos données importantes. Pour plus d'informations sur la méthode de sauvegarde, de restauration et de modification du Registre, consultez l'article [!INCLUDE[msCoName](../../includes/msconame-md.md)] Description du Registre de Microsoft Windows [de la Base de connaissances](http://support.microsoft.com/kb/256986).  
+>  La modification incorrecte du Registre peut entraîner de graves problèmes et nécessiter la réinstallation du système d'exploitation. [!INCLUDE[msCoName](../../includes/msconame-md.md)] ne garantit pas que les problèmes résultant d'une modification incorrecte du Registre peuvent être résolus. Avant de modifier le Registre, sauvegardez toutes vos données importantes. Pour plus d'informations sur la méthode de sauvegarde, de restauration et de modification du Registre, consultez l'article [!INCLUDE[msCoName](../../includes/msconame-md.md)] Description du Registre de Microsoft Windows [de la Base de connaissances](https://support.microsoft.com/kb/256986).  
   
  Lorsqu'il démarre, le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] charge le fichier de configuration. Toute modification de l'entrée de Registre nécessite le redémarrage du service.  
 
@@ -359,7 +359,7 @@ Pour plus d’informations, consultez [Getting Cross Domain Kerberos and Delegat
 > [!IMPORTANT]  
 >  Pour gérer des packages stockés sur un serveur distant, vous ne devez pas vous connecter à l’instance du service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sur ce serveur distant. Au lieu de cela, modifiez le fichier de configuration du service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] afin que [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] affiche les packages stockés sur le serveur distant.
   
- Le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] utilise le protocole DCOM. Pour plus d’informations sur le fonctionnement du protocole DCOM à travers les pare-feu, consultez l’article «[Using Distributed COM with Firewalls](http://go.microsoft.com/fwlink/?LinkId=12490)» (Utilisation de Distributed COM avec des pare-feu) dans MSDN Library.  
+ Le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] utilise le protocole DCOM. Pour plus d’informations sur le fonctionnement du protocole DCOM à travers les pare-feu, consultez l’article «[Using Distributed COM with Firewalls](https://go.microsoft.com/fwlink/?LinkId=12490)» (Utilisation de Distributed COM avec des pare-feu) dans MSDN Library.  
   
  De nombreux systèmes de pare-feu sont disponibles. Si vous exécutez un autre pare-feu que le Pare-feu Windows, consultez la documentation de votre pare-feu pour obtenir des informations spécifiques au système utilisé.  
   

@@ -18,12 +18,12 @@ ms.assetid: 5aa176da-3652-4afa-a742-4c40c77ce5c3
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 956ddabb6101f524de052afb107e5434d6d87892
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1231fc3c3f18711357ccf84daf06fb4821fa27a2
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47850978"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51664929"
 ---
 # <a name="clr-integration---overview"></a>Intégration du CLR - Vue d’ensemble
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,8 +60,8 @@ ms.locfileid: "47850978"
  Les procédures stockées étendues peuvent être créées pour remplir une fonctionnalité inaccessible via les procédures stockées [!INCLUDE[tsql](../../includes/tsql-md.md)]. Toutefois, les procédures stockées étendues peuvent compromettre l'intégrité du processus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], contrairement au code managé qui est soumis à une vérification pour être certain qu'il ne présente aucun risque. En outre, la gestion de la mémoire, la planification des threads et des fibres, et les services de synchronisation sont plus profondément intégrés entre le code managé du CLR et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Avec l'intégration du CLR, vous avez une solution plus sécurisée que les procédures stockées étendues pour écrire les procédures stockées qui vous sont nécessaires pour exécuter des tâches qui ne peuvent l'être dans [!INCLUDE[tsql](../../includes/tsql-md.md)]. Pour plus d’informations sur l’intégration du CLR et les procédures stockées étendues, consultez [performances d’intégration du CLR](../../relational-databases/clr-integration/clr-integration-architecture-performance.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Installation du .NET Framework](http://technet.microsoft.com/library/ms166014\(v=SQL.105\).aspx)   
- [Architecture d’intégration du CLR](http://msdn.microsoft.com/library/05e4b872-3d21-46de-b4d5-739b5f2a0cf9)   
+ [Installation du .NET Framework](https://technet.microsoft.com/library/ms166014\(v=SQL.105\).aspx)   
+ [Architecture d’intégration du CLR](https://msdn.microsoft.com/library/05e4b872-3d21-46de-b4d5-739b5f2a0cf9)   
  [Accès aux données à partir des objets de base de données CLR](../../relational-databases/clr-integration/data-access/data-access-from-clr-database-objects.md)   
  [Prise en main de l’intégration du CLR](../../relational-databases/clr-integration/database-objects/getting-started-with-clr-integration.md)  
   

@@ -12,12 +12,12 @@ ms.assetid: ca294f6d-eeb5-42ca-9306-156281a3f0f3
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: a03431a47838eefccce03d433f7cfebe7194e68c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 99c2f117eb5e7ce3844b4ea435c6f99ffa3c3557
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47609657"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51663418"
 ---
 # <a name="new-project-ssma-accesstosql"></a>Nouveau projet (SSMA) (AccessToSQL)
 Utilisez le **nouveau projet** boîte de dialogue pour créer un nouveau projet SSMA. Pour accéder à la **nouveau projet** boîte de dialogue le **fichier** menu, cliquez sur **nouveau projet**.  
@@ -49,5 +49,5 @@ Sélectionnez une de la version de base de données cible en dessous de la liste
   
 > [!IMPORTANT]  
 > Un nouveau projet de type de « SQL Azure » requiert, SQL Server Native Client (SNAC) version 10.5 ou ci-dessus pour lier l’accès aux tables à base de données SQL Azure.   
-> Vous pouvez obtenir la dernière version de SNAC de [Microsoft® SQL Server® 2008 R2 Feature Pack](http://go.microsoft.com/fwlink/?LinkId=196940).  
+> Vous pouvez obtenir la dernière version de SNAC de [Microsoft® SQL Server® 2008 R2 Feature Pack](https://go.microsoft.com/fwlink/?LinkId=196940).  
   

@@ -14,12 +14,12 @@ ms.assetid: d7da14d3-848c-44d4-8e49-d536a1158a61
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 66e660070bc525e26797ffa6c784354743d5bbf9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 63b1f719308206f47c698eba5ec137d1acd53359
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47784287"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51605219"
 ---
 # <a name="logins-and-jobs-for-availability-group-databases"></a>Connexions et travaux pour les bases de données de groupe de disponibilité
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "47784287"
      Si l’une de vos applications utilise l’authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou une connexion locale Windows, consultez [Connexions des applications qui utilisent l’authentification SQL Server ou une connexion locale Windows](../../../database-engine/availability-groups/windows/logins-and-jobs-for-availability-group-databases.md#SSauthentication), plus loin dans cette rubrique.  
   
     > [!NOTE]  
-    >  Un utilisateur de base de données pour lequel la connexion SQL Server n'est pas définie sur une instance de serveur, ou l'est de façon incorrecte, ne peut pas se connecter à cette instance. L'utilisateur devient donc un *utilisateur orphelin* de la base de données sur cette instance du serveur. Si un utilisateur est orphelin sur une instance de serveur donnée, vous pouvez configurer les connexions utilisateur à tout moment. Pour plus d’informations, consultez [Troubleshoot Orphaned Users &#40;SQL Server&#41;](../../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md).  
+    >  Un utilisateur de base de données pour lequel la connexion SQL Server n'est pas définie sur une instance de serveur, ou l'est de façon incorrecte, ne peut pas se connecter à cette instance. L'utilisateur devient donc un *utilisateur orphelin* de la base de données sur cette instance du serveur. Si un utilisateur est orphelin sur une instance de serveur donnée, vous pouvez configurer les connexions utilisateur à tout moment. Pour plus d’informations, consultez [Dépanner des utilisateurs orphelins &#40;SQL Server&#41;](../../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md).  
   
 -   **Métadonnées supplémentaires**  
   
@@ -49,12 +49,12 @@ ms.locfileid: "47784287"
 ##  <a name="SSauthentication"></a> Connexions des applications qui utilisent l’authentification SQL Server ou une connexion locale Windows  
  Si une application utilise l'authentification SQL Server ou une connexion locale Windows, des SID incompatibles peuvent empêcher la résolution de la connexion de l'application sur une instance distante de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. En cas de SID incompatibles, la connexion peut se solder par un utilisateur orphelin sur l'instance de serveur distante. Ce problème peut se produire lorsqu'une application se connecte à une base de données de copie des journaux de transaction ou une base de données mise en miroir suite à un basculement ou à une base de données d'abonné de réplication qui a été initialisée à partir d'une sauvegarde.  
   
- Pour éviter ce problème, nous vous recommandons de prendre des mesures préventives lorsque vous configurez une telle application de manière à utiliser une base de données hébergée par une instance distante de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. La prévention implique de transférer des connexions et des mots de passe de l'instance locale de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à l'instance distante de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Pour plus d’informations sur la manière d’éviter ce problème, consultez l’article 918992 de la base de connaissances Microsoft :[Comment transférer les connexions et les mots de passe entre des instances de SQL Server](http://support.microsoft.com/kb/918992/)).  
+ Pour éviter ce problème, nous vous recommandons de prendre des mesures préventives lorsque vous configurez une telle application de manière à utiliser une base de données hébergée par une instance distante de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. La prévention implique de transférer des connexions et des mots de passe de l'instance locale de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à l'instance distante de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Pour plus d’informations sur la manière d’éviter ce problème, consultez l’article 918992 de la base de connaissances Microsoft :[Comment transférer les connexions et les mots de passe entre des instances de SQL Server](https://support.microsoft.com/kb/918992/)).  
   
 > [!NOTE]  
 >  Ce problème affecte les comptes Windows locaux sur différents ordinateurs. Toutefois, ce problème ne se pose pas pour les comptes de domaine car le SID est identique sur chacun des ordinateurs.  
   
- Pour plus d’informations, consultez [Mise en miroir de bases de données et copie des journaux de transaction](http://blogs.msdn.com/b/sqlserverfaq/archive/2009/04/13/orphaned-users-with-database-mirroring-and-log-shipping.aspx) (blog du moteur de base de données).  
+ Pour plus d’informations, consultez [Mise en miroir de bases de données et copie des journaux de transaction](https://blogs.msdn.com/b/sqlserverfaq/archive/2009/04/13/orphaned-users-with-database-mirroring-and-log-shipping.aspx) (blog du moteur de base de données).  
   
 ##  <a name="RelatedTasks"></a> Tâches associées  
   

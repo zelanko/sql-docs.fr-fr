@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d8f37dfd8178d200a9df1203be70a771b57bf3a0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 58abfa4ff4add4415b71a536b0c9aeb1f6a9f472
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721957"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51702557"
 ---
 # <a name="view-information-about-an-operator"></a>Afficher des informations relatives à un opérateur
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -87,7 +87,7 @@ Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de ba
   
 #### <a name="to-view-information-about-an-operator"></a>Pour afficher des informations relatives à un opérateur  
   
-1.  Dans l'**Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   
@@ -104,5 +104,5 @@ Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de ba
     GO  
     ```  
   
-Pour plus d’informations, consultez [sp_help_operator (Transact-SQL)](http://msdn.microsoft.com/caedc43d-44b8-415a-897e-92923f6de3b8).  
+Pour plus d’informations, consultez [sp_help_operator (Transact-SQL)](https://msdn.microsoft.com/caedc43d-44b8-415a-897e-92923f6de3b8).  
   

@@ -10,12 +10,12 @@ ms.assetid: 01a9e3c1-2a5f-4b98-a424-0ffc15d312cf
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b81e501c153bb0789a1cf1cefd0c148dc9d96f9e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: aa46327ef5037c70c25c156b9d224ea66218020f
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731557"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601326"
 ---
 # <a name="clusterlog-always-on-availability-groups"></a>CLUSTER.LOG (groupes de disponibilité Always On)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,9 +26,9 @@ ms.locfileid: "47731557"
 ## <a name="generate-cluster-log"></a>Générer le journal de cluster  
  Vous pouvez générer les journaux de cluster de deux manières :  
   
-1.  À l’aide de la commande `cluster /log /g` à partir de l’invite de commandes. Cette commande génère les journaux de cluster dans le répertoire \windows\cluster\reports sur chaque nœud WSFC. L’avantage de cette méthode est que vous pouvez spécifier le niveau de détail dans les journaux générés à l’aide de l’option `/level`. L’inconvénient, c’est que vous ne pouvez pas spécifier le répertoire de destination pour les journaux de cluster générés. Pour plus d’informations, consultez [How to create the cluster.log in Windows Server 2008 Failover Clustering](http://blogs.msdn.com/b/clustering/archive/2008/09/24/8962934.aspx).  
+1.  À l’aide de la commande `cluster /log /g` à partir de l’invite de commandes. Cette commande génère les journaux de cluster dans le répertoire \windows\cluster\reports sur chaque nœud WSFC. L’avantage de cette méthode est que vous pouvez spécifier le niveau de détail dans les journaux générés à l’aide de l’option `/level`. L’inconvénient, c’est que vous ne pouvez pas spécifier le répertoire de destination pour les journaux de cluster générés. Pour plus d’informations, consultez [How to create the cluster.log in Windows Server 2008 Failover Clustering](https://blogs.msdn.com/b/clustering/archive/2008/09/24/8962934.aspx).  
   
-2.  Utilisez l’applet de commande PowerShell [Get-ClusterLog](http://technet.microsoft.com/library/ee461045.aspx). L’avantage de cette méthode est que vous pouvez générer le journal de cluster de tous les nœuds dans un seul répertoire de destination (sur le nœud où vous exécutez l’applet de commande). L’inconvénient, c’est que vous ne pouvez pas spécifier le niveau de détail dans les journaux générés.  
+2.  Utilisez l’applet de commande PowerShell [Get-ClusterLog](https://technet.microsoft.com/library/ee461045.aspx). L’avantage de cette méthode est que vous pouvez générer le journal de cluster de tous les nœuds dans un seul répertoire de destination (sur le nœud où vous exécutez l’applet de commande). L’inconvénient, c’est que vous ne pouvez pas spécifier le niveau de détail dans les journaux générés.  
   
  Les commandes PowerShell suivantes génèrent les journaux de cluster de tous les nœuds de cluster au cours des 15 dernières minutes et les placent dans le répertoire actif. Exécutez les commandes dans une fenêtre PowerShell avec des privilèges administratifs.  
   
@@ -57,7 +57,7 @@ Get-ClusterLog –TimeSpan 15 –Destination .
 8.  Recliquez avec le bouton droit sur la ressource de groupe de disponibilité, puis cliquez sur **Mettre cette ressource en ligne**.  
   
 ## <a name="availability-group-resource-events"></a>Événements de la ressource de groupe de disponibilité  
- Le tableau ci-dessous montre les différents genres d’événements que vous pouvez voir dans CLUSTER.LOG et qui appartiennent à la ressource de groupe de disponibilité. Pour plus d’informations sur le RHS (sous-système d’hébergement de ressources) et le RCM (moniteur de contrôle de ressource) dans WSFC, consultez [Resource Hosting Subsystem (RHS) In Windows Server 2008 Failover Clusters](http://blogs.technet.com/b/askcore/archive/2009/11/23/resource-hosting-subsystem-rhs-in-windows-server-2008-failover-clusters.aspx).  
+ Le tableau ci-dessous montre les différents genres d’événements que vous pouvez voir dans CLUSTER.LOG et qui appartiennent à la ressource de groupe de disponibilité. Pour plus d’informations sur le RHS (sous-système d’hébergement de ressources) et le RCM (moniteur de contrôle de ressource) dans WSFC, consultez [Resource Hosting Subsystem (RHS) In Windows Server 2008 Failover Clusters](https://blogs.technet.com/b/askcore/archive/2009/11/23/resource-hosting-subsystem-rhs-in-windows-server-2008-failover-clusters.aspx).  
   
 |Identificateur|Source|Exemple de CLUSTER.LOG|  
 |----------------|------------|------------------------------|  

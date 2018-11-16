@@ -11,15 +11,15 @@ ms.assetid: 3bfb9023-9597-4f59-9085-4b9057e7702e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 64b93604ae38ed74099d0c291007ecb68a650742
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6329a37a23e00753dd32ec43b2ef97915f668993
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47728827"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51637426"
 ---
 # <a name="installing-the-microsoft-connector-for-sap-bw"></a>Installation de Microsoft Connector pour SAP BW
-  Le [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector pour SAP BW pour SQL Server 2016 est un composant de SQL Server 2016 Feature Pack. Pour installer le composant Connector pour SAP BW et sa documentation, téléchargez et exécutez le package du programme d’installation à la [page Web SQL Server 2016 Feature Pack](http://go.microsoft.com/fwlink/?LinkId=746297).  
+  Le [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector pour SAP BW pour SQL Server 2016 est un composant de SQL Server 2016 Feature Pack. Pour installer le composant Connector pour SAP BW et sa documentation, téléchargez et exécutez le package du programme d’installation à la [page Web SQL Server 2016 Feature Pack](https://go.microsoft.com/fwlink/?LinkId=746297).  
 
 > [!IMPORTANT]
 > Microsoft ne prévoit pas de fournir une version mise à jour du connecteur pour SAP BW. Microsoft ne détient pas le code source des composants SAP BW, qui ont été développés par un tiers, et ne peut donc pas les mettre à jour. Achetez les derniers composants de connectivité SAP auprès d’un ISV partenaire de Microsoft comme [Theobald Software](https://theobald-software.com/en/xtract-is-productinfo.html). Les partenaires ISV de Microsoft ont adapté leurs composants de connectivité SAP pour SSIS à l’installation dans Azure.

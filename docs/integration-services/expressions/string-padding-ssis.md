@@ -15,12 +15,12 @@ ms.assetid: d3fed73d-e0d4-4c67-9355-fb7083a72dd6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 218b5d1aba71e5905937bd5433f9f1316c473ab8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8f41a1601ef6fe416eb1f429343bea32451f7716
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47740607"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638377"
 ---
 # <a name="string-padding-ssis"></a>Remplissage des chaînes (SSIS)
   L'évaluateur d'expression ne vérifie pas si une chaîne contient des espaces de début et de fin et ne complète pas les chaînes pour qu'elles aient la même longueur avant de les comparer. Pour compléter une chaîne dans une expression, vous pouvez concaténer des valeurs de colonne et des chaînes vides à l'aide de l'opérateur « + ». Pour plus d’informations, consultez [+ &#40;Concaténer&#41; &#40;expression SSIS&#41;](../../integration-services/expressions/concatenate-ssis-expression.md).  
@@ -31,6 +31,6 @@ ms.locfileid: "47740607"
 >  Le nombre de la fonction LEN inclut les espaces de début et de fin.  
   
 ## <a name="related-content"></a>Contenu associé  
- Article technique, [SSIS Expression Cheat Sheet](http://go.microsoft.com/fwlink/?LinkId=746575), sur pragmaticworks.com  
+ Article technique, [SSIS Expression Cheat Sheet](https://go.microsoft.com/fwlink/?LinkId=746575), sur pragmaticworks.com  
   
   

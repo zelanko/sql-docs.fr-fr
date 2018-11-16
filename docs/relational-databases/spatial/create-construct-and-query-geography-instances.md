@@ -15,12 +15,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c9f1a61507883ed6a583508f89d6d8cf7ba1a0be
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 716aa4485030a907c8e816f0daf3036c979e2ae5
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018414"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51660729"
 ---
 # <a name="create-construct-and-query-geography-instances"></a>Créer, construire et interroger des instances geography
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -107,7 +107,7 @@ ms.locfileid: "51018414"
 ###  <a name="gml"></a> Construction d'une instance geography à partir d'une entrée texte GML  
  Le type de données **geography** fournit une méthode qui génère une instance **geography** à partir de GML, représentation XML d’une instance **geography** . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge un sous-ensemble de GML.  
   
- Pour plus d’informations sur le langage GML (Geography Markup Language), consultez la spécification OGC : [OGC Specifications, Geography Markup Language (en anglais)](http://go.microsoft.com/fwlink/?LinkId=93629).  
+ Pour plus d’informations sur le langage GML (Geography Markup Language), consultez la spécification OGC : [OGC Specifications, Geography Markup Language (en anglais)](https://go.microsoft.com/fwlink/?LinkId=93629).  
   
  **Pour construire tout type d'instance geography à partir d'une entrée GML**  
  [GeomFromGML &#40;type de données geography&#41;](../../t-sql/spatial-geography/geomfromgml-geography-data-type.md)  

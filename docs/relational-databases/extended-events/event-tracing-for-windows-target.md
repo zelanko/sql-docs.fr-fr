@@ -16,21 +16,21 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2ad995a0165c02f9af769071b86cea6699ae35f5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 450e93877ecabb524e5307a5ec940de32859ead6
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659187"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51656949"
 ---
 # <a name="event-tracing-for-windows-target"></a>suivi d'événements pour cible Windows
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Avant d'utiliser le suivi d'événements pour Windows (ETW) comme cible, il est recommandé d'avoir une connaissance pratique du Suivi d'événements pour Windows. Le suivi ETW est utilisé conjointement avec les Événements étendus ou en tant que consommateur d'événements des Événements étendus. Les liens externes suivants fournissent un point de départ pour obtenir des informations générales sur le suivi ETW :  
   
--   [Événements Windows](http://go.microsoft.com/fwlink/?LinkId=92380)  
+-   [Événements Windows](https://go.microsoft.com/fwlink/?LinkId=92380)  
   
--   [Améliorer le débogage et le réglage des performances à l'aide du suivi ETW](http://go.microsoft.com/fwlink/?LinkId=92381)  
+-   [Améliorer le débogage et le réglage des performances à l'aide du suivi ETW](https://go.microsoft.com/fwlink/?LinkId=92381)  
   
  La cible du suivi ETW est une cible singleton, bien qu'elle puisse être ajoutée à plusieurs sessions. Si un événement est déclenché sur plusieurs sessions, l'événement sera propagé uniquement à la cible ETW une fois par occurrence de l'événement. Le moteur des Événements étendus est limité à une seule instance par processus.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "47659187"
     > [!IMPORTANT]  
     >  Le chemin d'accès ne peut pas être modifié une fois la première session démarrée.  
   
--   Les fichiers MOF (Managed Object Format) se trouvent dans le dossier *\<chemin de votre installation>* \Microsoft SQL Server\Shared. Pour plus d'informations, consultez [Format d'objet managé](http://go.microsoft.com/fwlink/?LinkId=92851) sur MSDN.  
+-   Les fichiers MOF (Managed Object Format) se trouvent dans le dossier *\<chemin de votre installation>* \Microsoft SQL Server\Shared. Pour plus d'informations, consultez [Format d'objet managé](https://go.microsoft.com/fwlink/?LinkId=92851) sur MSDN.  
   
 ## <a name="adding-the-target-to-a-session"></a>Ajout de la cible à une session  
  Pour ajouter la cible ETW à une session Événements étendus lorsque vous créez ou modifiez une session d'événements, vous devez inclure l'instruction suivante :  
@@ -91,7 +91,7 @@ ADD TARGET package0.etw_classic_sync_target
  Pour plus d’informations et pour obtenir un exemple complet qui montre comment utiliser la cible ETW (et notamment comment afficher les données), consultez [Surveiller l’activité système à l’aide d’événements étendus](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md).  
   
 ## <a name="see-also"></a> Voir aussi  
- [Cibles des Événements étendus SQL Server](http://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)   
+ [Cibles des Événements étendus SQL Server](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)   
  [sys.dm_xe_session_targets &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql.md)   
  [CREATE EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md)   
  [ALTER EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-event-session-transact-sql.md)  

@@ -29,12 +29,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9ebaeb1a0fce11d984f858247763c4222d4a8b27
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 90c611eff42a3cd31894e27b1a7737ca77e91bea
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603547"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670404"
 ---
 # <a name="xpath-data-types-sqlxml-40"></a>Types de données XPath (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "47603547"
  XPath possède trois types de données : **chaîne**, **nombre**, et **booléenne**. Le **nombre** type de données est toujours une IEEE 754 double précision à virgule flottante. Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **float (53)** type de données est la plus proche XPath **nombre**. Toutefois, **float (53)** n’est pas exactement IEEE 754. Par exemple, ni la valeur NaN (Not-a-Number,), ni une valeur infinie n'est employée. Tente de convertir une chaîne non numérique en **nombre** et de division par zéro entraîne une erreur.  
   
 ## <a name="xpath-conversions"></a>Conversions XPath  
- Lorsque vous utilisez une requête XPath, telle que `OrderDetail[@UnitPrice > "10.0"]`, les conversions de type de données implicites et explicites peuvent modifier la signification de la requête de manière subtile. Par conséquent, il est primordial de comprendre la manière dont les types de données Xpath sont implémentés. La spécification du langage XPath, XML Path Language (XPath) version 1.0 W3C Proposed Recommendation du 8 octobre 1999, peut être trouvée sur le site Web de W3C à http://www.w3.org/TR/1999/PR-xpath-19991008.html.  
+ Lorsque vous utilisez une requête XPath, telle que `OrderDetail[@UnitPrice > "10.0"]`, les conversions de type de données implicites et explicites peuvent modifier la signification de la requête de manière subtile. Par conséquent, il est primordial de comprendre la manière dont les types de données Xpath sont implémentés. La spécification du langage XPath, XML Path Language (XPath) version 1.0 W3C Proposed Recommendation du 8 octobre 1999, peut être trouvée sur le site Web de W3C à https://www.w3.org/TR/1999/PR-xpath-19991008.html.  
   
  Les opérateurs XPath sont divisés en quatre catégories :  
   

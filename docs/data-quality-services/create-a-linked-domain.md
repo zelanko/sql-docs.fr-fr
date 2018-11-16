@@ -14,12 +14,12 @@ ms.assetid: fd99d422-c53d-4d7c-9cdd-303c703683b6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6fa8579cf1642f736a60cd826049d0128c5c3090
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0bce721aec2958cca21a4ac002b0da5a90682fb9
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654409"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51702227"
 ---
 # <a name="create-a-linked-domain"></a>Créer un domaine lié
 
@@ -65,7 +65,7 @@ ms.locfileid: "47654409"
   
 6.  Si nécessaire, vous pouvez modifier le nom ou la description du domaine lié sous l'onglet Propriétés du domaine.  
   
-7.  Cliquez sur **Terminer** pour terminer l'activité de gestion de l'arborescence du domaine, comme décrit dans [End the Domain Management Activity](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
+7.  Cliquez sur **Terminer** pour terminer l'activité de gestion de l'arborescence du domaine, comme décrit dans [End the Domain Management Activity](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
   
 ##  <a name="Map"></a> Map two fields to linked domains  
   

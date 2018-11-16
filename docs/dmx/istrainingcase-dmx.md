@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 00344eeb38f3aae5cae7ac25c1b65b403cc85cb9
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 6c42ecb976884573e313c06adc4241e202e123df
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37994471"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51599930"
 ---
 # <a name="istrainingcase-dmx"></a>IsTrainingCase (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -42,7 +42,7 @@ IsTrainingCase()
  Pour retourner les cas qui font partie du jeu de données de test, utilisez la fonction [IsTestCase &#40;DMX&#41;](../dmx/istestcase-dmx.md).  
   
 ## <a name="examples"></a>Exemples  
- L’exemple suivant utilise le modèle d’exploration de données clustering à partir d’un scénario de publipostage ciblé dans le [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). La requête retourne uniquement les cas qui sont utilisés pour l'apprentissage du modèle d'exploration de données. De plus, les cas d'apprentissage sont limités aux clients âgés de moins de 40 ans.  
+ L’exemple suivant utilise le modèle d’exploration de données clustering à partir d’un scénario de publipostage ciblé dans le [Basic Data Mining Tutorial](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). La requête retourne uniquement les cas qui sont utilisés pour l'apprentissage du modèle d'exploration de données. De plus, les cas d'apprentissage sont limités aux clients âgés de moins de 40 ans.  
   
 ```  
 SELECT *  

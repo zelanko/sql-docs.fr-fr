@@ -14,12 +14,12 @@ ms.assetid: 0cc1f95c-5815-4d78-8868-a900be15e674
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 14abdd44fca86401238db0216febb5a6a002ffa2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 091c4034071394d03c1548290c5d6eea08d50b8e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596787"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51662338"
 ---
 # <a name="data-collection"></a>Collecte de données
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "47596787"
   
  Le collecteur de données vous permet d'ajuster l'étendue de la collecte de données pour l'adapter à vos environnements de test et de production. Le collecteur de données utilise également un entrepôt de données, une base de données relationnelle qui vous permet de gérer les données que vous collectez en définissant pour elles différentes périodes de rétention.  
   
- Le collecteur de données prend en charge le paramétrage dynamique de la collecte de données et il est extensible via son API. Pour plus d’informations, consultez [Programmation du collecteur de données](http://msdn.microsoft.com/library/53b4752b-055d-4716-b2bc-75b4cce84101).  
+ Le collecteur de données prend en charge le paramétrage dynamique de la collecte de données et il est extensible via son API. Pour plus d’informations, consultez [Programmation du collecteur de données](https://msdn.microsoft.com/library/53b4752b-055d-4716-b2bc-75b4cce84101).  
   
  L'illustration suivante montre l'intégration du collecteur de données dans la stratégie globale de la collecte et de la gestion de données dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -51,7 +51,7 @@ ms.locfileid: "47596787"
   
 -   Comptes proxy  
   
- Pour plus d’informations, consultez [Tâches d’administration automatisée &#40;SQL Server Agent&#41;](http://msdn.microsoft.com/library/541ee5ac-2c9f-4b74-b4f0-13b7bd5920b0).  
+ Pour plus d’informations, consultez [Tâches d’administration automatisée &#40;SQL Server Agent&#41;](https://msdn.microsoft.com/library/541ee5ac-2c9f-4b74-b4f0-13b7bd5920b0).  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) permet d’exécuter des packages qui collectent des données provenant de fournisseurs de données individuels. Vous devez maîtriser les outils et les concepts [!INCLUDE[ssIS](../../includes/ssis-md.md)] suivants :  
   

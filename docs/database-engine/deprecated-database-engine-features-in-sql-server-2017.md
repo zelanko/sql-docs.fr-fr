@@ -5,8 +5,7 @@ ms.date: 05/09/2018
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: release-landing
 ms.topic: conceptual
 helpviewer_keywords:
 - deprecated features [SQL Server]
@@ -17,12 +16,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 537df591affabf79be0b47aadd0b43a7e424f444
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 92872e5a185d820650d49fe962eff6a8a78aadf3
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031348"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606459"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2017"></a>Fonctionnalités du moteur de base de données dépréciées dans SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ Les fonctionnalités suivantes du [!INCLUDE[ssDEnoversion](../includes/ssdenover
 |Catégorie|Fonctionnalité déconseillée|Remplacement|Nom de la fonctionnalité|ID de la fonctionnalité|  
 |--------------|------------------------|-----------------|------------------|----------------|  
 |Sauvegarde et restauration|RESTORE { DATABASE &#124; LOG } WITH [MEDIA]PASSWORD est toujours déconseillé. BACKUP { DATABASE &#124; LOG } WITH PASSWORD et BACKUP { DATABASE &#124; LOG } WITH MEDIAPASSWORD ont été retirés.|Aucun.|BACKUP DATABASE ou LOG WITH PASSWORD<br /><br /> BACKUP DATABASE ou LOG WITH MEDIAPASSWORD|104<br /><br /> 103|  
-|Niveaux de compatibilité|Mettez à niveau à partir de la version 100 ([!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] et [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]).|Quand le [support](http://aka.ms/sqllifecycle) n’est plus assuré pour une version de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], le niveau de compatibilité de base de données associé est marqué comme étant déprécié. Cependant, nous continuons le plus longtemps possible d’assurer le support des applications certifiées sur n’importe quel niveau de compatibilité de base de données pris en charge de façon à faciliter la mise à niveau. Pour plus d’informations sur les niveaux de compatibilité, consultez [Niveau de compatibilité ALTER DATABASE &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md).|Niveau de compatibilité 100 de la base de données|108|  
+|Niveaux de compatibilité|Mettez à niveau à partir de la version 100 ([!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] et [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]).|Quand le [support](https://aka.ms/sqllifecycle) n’est plus assuré pour une version de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], le niveau de compatibilité de base de données associé est marqué comme étant déprécié. Cependant, nous continuons le plus longtemps possible d’assurer le support des applications certifiées sur n’importe quel niveau de compatibilité de base de données pris en charge de façon à faciliter la mise à niveau. Pour plus d’informations sur les niveaux de compatibilité, consultez [Niveau de compatibilité ALTER DATABASE &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md).|Niveau de compatibilité 100 de la base de données|108|  
 |Objets de base de données|Possibilité de retourner les jeux de résultats à partir de déclencheurs|Aucun|Le déclencheur retourne des résultats|12|  
 |Chiffrement|Le chiffrement à l'aide de RC4 ou RC4_128 est déconseillé et est planifié pour être supprimé dans la prochaine version. Le déchiffrement de RC4 et RC4_128 n'est pas déconseillé.|Utilisez un autre algorithme de chiffrement, par exemple AES.|Algorithme de chiffrement déconseillé|253|  
 |Serveurs distants|sp_addremotelogin<br /><br /> sp_addserver<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> sp_remoteoption|Remplacez les serveurs distants à l'aide de serveurs liés. sp_addserver ne peut être utilisé qu’avec l’option « local ».|sp_addremotelogin<br /><br /> sp_addserver<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> sp_remoteoption|70<br /><br /> 69<br /><br /> 71<br /><br /> 72<br /><br /> 73|  
@@ -126,7 +125,7 @@ Les fonctionnalités suivantes du [!INCLUDE[ssDEnoversion](../includes/ssdenover
 |Sécurité|sp_defaultdb<br /><br /> sp_defaultlanguage|ALTER LOGIN|sp_defaultdb<br /><br /> sp_defaultlanguage|47<br /><br /> 48|  
 |Sécurité|sp_denylogin<br /><br /> sp_grantlogin<br /><br /> sp_revokelogin|ALTER LOGIN DISABLE<br /><br /> CREATE LOGIN<br /><br /> DROP LOGIN|sp_denylogin<br /><br /> sp_grantlogin<br /><br /> sp_revokelogin|42<br /><br /> 41<br /><br /> 43|  
 |Sécurité|USER_ID|DATABASE_PRINCIPAL_ID|USER_ID|16|  
-|Sécurité|sp_srvrolepermission<br /><br /> sp_dbfixedrolepermission|Ces procédures stockées renvoient des informations qui étaient correctes dans [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)]. Le résultat ne reflète pas les modifications apportées aux hiérarchies d'autorisations implémentées dans [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]. Pour plus d'informations, consultez [Autorisations des rôles serveur fixes](http://msdn.microsoft.com/library/ms175892\(SQL.100\).aspx).|sp_srvrolepermission<br /><br /> sp_dbfixedrolepermission|61<br /><br /> 60|  
+|Sécurité|sp_srvrolepermission<br /><br /> sp_dbfixedrolepermission|Ces procédures stockées renvoient des informations qui étaient correctes dans [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)]. Le résultat ne reflète pas les modifications apportées aux hiérarchies d'autorisations implémentées dans [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]. Pour plus d'informations, consultez [Autorisations des rôles serveur fixes](https://msdn.microsoft.com/library/ms175892\(SQL.100\).aspx).|sp_srvrolepermission<br /><br /> sp_dbfixedrolepermission|61<br /><br /> 60|  
 |Sécurité|GRANT ALL<br /><br /> DENY ALL<br /><br /> REVOKE ALL|Autorisations spécifiques GRANT, DENY et REVOKE.|Autorisation ALL|35|  
 |Sécurité|Fonction intrinsèque PERMISSIONS|Interrogez à la place sys.fn_my_permissions.|PERMISSIONS|170|  
 |Sécurité|SETUSER|EXECUTE AS|SETUSER|165|  

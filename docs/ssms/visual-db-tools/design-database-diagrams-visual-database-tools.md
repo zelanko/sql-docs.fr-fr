@@ -19,12 +19,12 @@ ms.assetid: 6d2c14e1-3d73-4d10-ae5b-7f2b5d6c4ea8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e4dcaf21e561275e6379745f47c4eabd789c3965
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 66bb8485cb49180d80c682148f4de899b707f55d
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711907"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51695417"
 ---
 # <a name="design-database-diagrams-visual-database-tools"></a>Créer des schémas de base de données (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,7 +43,7 @@ Dans un schéma de base de données, chaque table peut être affichée avec troi
   
 Si vous avez modifié une table sans l'enregistrer, un astérisque (*) s'ajoute à la fin du nom de la table pour signaler les modifications non encore enregistrées. Pour plus d’informations sur l’enregistrement de tables et de schémas modifiés, consultez [Utiliser des schémas de base de données &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
   
-**Sélecteur de ligne** Vous pouvez cliquer sur le sélecteur de ligne pour sélectionner une colonne de la table. Le sélecteur de ligne affiche le symbole d'une clé si la colonne fait partie de la clé primaire de la table. Pour plus d’informations sur les clés primaires, consultez [Working with Keys (Visual Database Tools)](http://msdn.microsoft.com/31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd)(Utilisation des clés (Visual Database Tools)).  
+**Sélecteur de ligne** Vous pouvez cliquer sur le sélecteur de ligne pour sélectionner une colonne de la table. Le sélecteur de ligne affiche le symbole d'une clé si la colonne fait partie de la clé primaire de la table. Pour plus d’informations sur les clés primaires, consultez [Working with Keys (Visual Database Tools)](https://msdn.microsoft.com/31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd)(Utilisation des clés (Visual Database Tools)).  
   
 **Colonnes de propriétés** Cet ensemble de colonnes n’est visible que dans certaines vues de votre table. Il est possible de choisir entre cinq vues différentes d'une même table, ce qui permet de mieux gérer la taille et la présentation du schéma.  
   

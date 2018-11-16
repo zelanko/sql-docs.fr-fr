@@ -21,12 +21,12 @@ ms.assetid: 21ea07d1-e267-4fb1-a6cc-82c95a39beae
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 62f0b9b5fa11f93265d52e07c6a058ff5e98d576
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3c5c5590bb6bdeb9539fb42e4c17b8ea38c5c85f
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47850851"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641736"
 ---
 # <a name="raising-events-in-the-script-task"></a>Déclenchement d'événements dans la tâche de script
   Les événements offrent un moyen de signaler des erreurs, des avertissements et d'autres informations, telles que la progression ou l'état d'une tâche, au package conteneur. Le package fournit des gestionnaires d'événements pour gérer les notifications d'événements. La tâche de script peut déclencher des événements en appelant des méthodes sur la propriété <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Events%2A> de l’objet **Dts**. Pour plus d’informations sur la manière dont les packages [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] gèrent les événements, consultez [Gestionnaires d’événements Integration Services &#40;SSIS&#41;](../../../integration-services/integration-services-ssis-event-handlers.md).  
@@ -145,6 +145,6 @@ public class ScriptMain
   
 ## <a name="see-also"></a> Voir aussi  
  [Gestionnaires d’événements Integration Services &#40;SSIS&#41](../../../integration-services/integration-services-ssis-event-handlers.md)   
- [Ajouter un gestionnaire d’événements à un package](http://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78)  
+ [Ajouter un gestionnaire d’événements à un package](https://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78)  
   
   

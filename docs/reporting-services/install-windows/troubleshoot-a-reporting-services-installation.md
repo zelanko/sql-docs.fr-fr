@@ -7,18 +7,18 @@ ms.topic: conceptual
 ms.assetid: e2536f7f-d90c-4571-9ffd-6bbfe69018d6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0a448e9096fce3b799a601cb0218ad6767090bc1
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 4df963c826675b5c837200c4ab69037800b9dc5c
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50020323"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814022"
 ---
 # <a name="troubleshoot-a-reporting-services-installation"></a>Dépanner une installation de Reporting Services
 
   Si vous ne parvenez pas à installer [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] suite à des erreurs qui se produisent durant l’installation, utilisez les instructions fournies dans cet article pour étudier les conditions les plus susceptibles de provoquer des erreurs d’installation.  
   
- Pour plus d’informations sur d’autres erreurs et problèmes liés à [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], consultez [Résoudre les problèmes et erreurs de SSRS.](http://social.technet.microsoft.com/wiki/contents/articles/ssrs-troubleshooting-issues-and-errors.aspx)  
+ Pour plus d’informations sur d’autres erreurs et problèmes liés à [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], consultez [Résoudre les problèmes et erreurs de SSRS.](https://social.technet.microsoft.com/wiki/contents/articles/ssrs-troubleshooting-issues-and-errors.aspx)  
   
  Examinez les [notes de publication en ligne](https://go.microsoft.com/fwlink/?linkid=236893) si le problème que vous rencontrez est décrit dans les notes de mise à jour.  
   
@@ -165,7 +165,7 @@ ms.locfileid: "50020323"
   
 -   Consultez l’article SharePoint sur les environnements de développement. [Configuration d’un environnement de développement général pour SharePoint](https://msdn.microsoft.com/library/ee554869)  
   
--   Consultez la question du forum : [Central Administration returns page vierge après l’installation sur Windows 7](http://social.technet.microsoft.com/Forums/en/sharepoint2010setup/thread/a422a3c8-39f6-4b9e-988a-4c4d1e745694)  
+-   Consultez la question du forum : [Central Administration returns page vierge après l’installation sur Windows 7](https://social.technet.microsoft.com/Forums/en/sharepoint2010setup/thread/a422a3c8-39f6-4b9e-988a-4c4d1e745694)  
   
 -   Le compte de service que vous utilisez pour les services SharePoint tels que le service Administration centrale de SharePoint 2013/2016 doit être doté des privilèges d’administrateur du système d’exploitation local.  
   
@@ -267,9 +267,9 @@ ms.locfileid: "50020323"
 ##  <a name="bkmk_additional"></a> Ressources supplémentaires  
  Vous trouverez ci-dessous des ressources complémentaires pour vous aider à résoudre les problèmes :  
   
--   Wiki TechNet : [Dépanner SQL Server Reporting Services (SSRS) en mode intégré SharePoint 2010](http://social.technet.microsoft.com/wiki/contents/articles/troubleshoot-sql-server-reporting-services-ssrs-in-sharepoint-integrated-mode.aspx)  
+-   Wiki TechNet : [Dépanner SQL Server Reporting Services (SSRS) en mode intégré SharePoint 2010](https://social.technet.microsoft.com/wiki/contents/articles/troubleshoot-sql-server-reporting-services-ssrs-in-sharepoint-integrated-mode.aspx)  
   
--   [Forum : SQL Server Reporting Services](http://social.msdn.microsoft.com/Forums/sqlreportingservices/threads)  
+-   [Forum : SQL Server Reporting Services](https://social.msdn.microsoft.com/Forums/sqlreportingservices/threads)  
   
 -   Vous avez des commentaires ou d’autres questions ? Visitez [Microsoft SQL Server UserVoice](https://feedback.azure.com/forums/908035-sql-server).  
   

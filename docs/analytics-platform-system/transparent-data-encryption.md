@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: f30d22725e7d0fd099cf2976af42d74d08a93b22
-ms.sourcegitcommit: 2e038db99abef013673ea6b3535b5d9d1285c5ae
+ms.openlocfilehash: c29383e02746ac3abb60a15d2d0368483d2ee13e
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39400612"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699442"
 ---
 # <a name="transparent-data-encryption"></a>chiffrement transparent des données
 Vous pouvez prendre plusieurs précautions pour mieux sécuriser la base de données comme par exemple concevoir un système sécurisé, chiffrer les ressources confidentielles et créer un pare-feu autour des serveurs de base de données. Toutefois, pour un scénario dans lequel le support physique (par exemple, les lecteurs ou les bandes de sauvegarde) est volé, une personne malveillante peut juste restaurer ou attacher la base de données et parcourir les données. Une solution consiste à chiffrer les données sensibles dans la base de données et à protéger les clés utilisées pour chiffrer les données avec un certificat. Cela empêche toute personne qui ne dispose pas des clés d'utiliser les données, mais ce type de protection doit être planifié à l'avance.  
@@ -207,7 +207,7 @@ La clé de chiffrement de base de données (DEK) est protégée par les certific
   
 Le système peut accéder aux clés sans intervention humaine (par exemple, en fournissant un mot de passe). Si le certificat n’est pas disponible, le système génère un message d’erreur expliquant que la clé DEK ne peut pas être déchiffrée jusqu'à ce que le certificat approprié est disponible.  
   
-Lorsque vous déplacez une base de données à partir d’une appliance vers une autre, le certificat utilisé pour protéger son « clé DEK doit d’abord être restaurée sur le serveur de destination. Puis la base de données peut être restaurée comme d’habitude. Pour plus d’informations, consultez la documentation de SQL Server standard, à l’adresse [déplacer une base de données protégé par chiffrement transparent des données vers un autre serveur SQL](http://technet.microsoft.com/library/ff773063.aspx).  
+Lorsque vous déplacez une base de données à partir d’une appliance vers une autre, le certificat utilisé pour protéger son « clé DEK doit d’abord être restaurée sur le serveur de destination. Puis la base de données peut être restaurée comme d’habitude. Pour plus d’informations, consultez la documentation de SQL Server standard, à l’adresse [déplacer une base de données protégé par chiffrement transparent des données vers un autre serveur SQL](https://technet.microsoft.com/library/ff773063.aspx).  
   
 Certificats utilisés pour chiffrer le chiffrement doivent être conservées en tant qu’il existe des sauvegardes de base de données qui les utilisent. Sauvegardes de certificat doivent inclure la clé privée du certificat, car sans la clé privée, un certificat ne peut pas être utilisé pour la restauration de base de données. Ces sauvegardes de clé privée de certificat sont stockés dans un fichier distinct, protégé par un mot de passe doit être fourni pour la restauration de certificat.  
   

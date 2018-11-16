@@ -16,12 +16,12 @@ ms.assetid: 653084c6-87a3-45d5-b458-914ecf24d56a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e5b3fa0a640791f25da1fc16162f097a39502d86
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7524bd375dcf2c2d34395a0e87c1b3fe7d08ba63
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47765747"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640058"
 ---
 # <a name="add-or-delete-a-task-or-a-container-in-a-control-flow"></a>Ajouter ou supprimer une tâche ou un conteneur dans un flux de contrôle
   Quand vous travaillez dans le concepteur de flux de contrôle, la boîte à outils du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] énumère les tâches proposées par [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pour créer le flux de contrôle d’un package. Pour plus d’informations sur la boîte à outils, consultez [Boîte à outils SSIS](../../integration-services/ssis-toolbox.md).  
@@ -96,9 +96,9 @@ Vous pouvez définir la plupart des propriétés des tâches et des conteneurs �
   
 4.  Sur l’aire de conception de l’onglet **Flux de contrôle** , cliquez avec le bouton droit sur la tâche ou le conteneur, puis cliquez sur **Modifier** pour ouvrir l’éditeur de tâche ou de conteneur correspondant.  
   
-     Pour plus d’informations sur la configuration du conteneur de boucles For, consultez [Configurer un conteneur de boucles For](http://msdn.microsoft.com/library/b9cd7ea7-b198-4a35-8b16-6acf09611ca5).  
+     Pour plus d’informations sur la configuration du conteneur de boucles For, consultez [Configurer un conteneur de boucles For](https://msdn.microsoft.com/library/b9cd7ea7-b198-4a35-8b16-6acf09611ca5).  
   
-     Pour plus d’informations sur la configuration du conteneur de boucles Foreach, consultez [Configurer un conteneur de boucles Foreach](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25).  
+     Pour plus d’informations sur la configuration du conteneur de boucles Foreach, consultez [Configurer un conteneur de boucles Foreach](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25).  
   
     > [!NOTE]  
     >  Le conteneur de séquences ne possède pas d'éditeur personnalisé.  

@@ -23,12 +23,12 @@ ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 936daeb3e47c4acf57b3bc519f410861c4248945
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: c27a57b034e538971f9ed5e32634a2469c84b0b3
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50971000"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51702879"
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -41,7 +41,7 @@ Les systèmes de pare-feu empêchent les accès non autorisés aux ressources de
 Pour accéder à une instance du [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par le biais d'un pare-feu, vous devez configurer le pare-feu sur l'ordinateur exécutant [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le pare-feu est un composant de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. Vous pouvez également installer un pare-feu d'une autre société. Cet article explique comment configurer le Pare-feu Windows, mais les principes de base s’appliquent à d’autres programmes de pare-feu.  
   
 > [!NOTE]  
->  Cet article fournit une vue d’ensemble de la configuration du pare-feu et résume les informations présentant un intérêt pour un administrateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d'informations sur le pare-feu et pour des informations rigoureuses sur le pare-feu, consultez la documentation de pare-feu, par exemple [Pare-feu Windows avec fonctions avancées de sécurité et IPsec](http://go.microsoft.com/fwlink/?LinkID=116904).  
+>  Cet article fournit une vue d’ensemble de la configuration du pare-feu et résume les informations présentant un intérêt pour un administrateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d'informations sur le pare-feu et pour des informations rigoureuses sur le pare-feu, consultez la documentation de pare-feu, par exemple [Pare-feu Windows avec fonctions avancées de sécurité et IPsec](https://go.microsoft.com/fwlink/?LinkID=116904).  
   
  Les utilisateurs familiarisés avec l’élément **Pare-feu Windows** dans le Panneau de configuration et avec le composant logiciel enfichable MMC (Microsoft Management Console) du Pare-feu Windows avec fonctions avancées de sécurité et qui savent quels paramètres de pare-feu ils veulent configurer peuvent passer directement aux article de la liste suivante :  
   
@@ -62,11 +62,11 @@ Pour accéder à une instance du [!INCLUDE[ssNoVersion](../../includes/ssnoversi
   
  Le choix d'une stratégie de pare-feu est plus complexe que le fait de déterminer si un port donné doit être ouvert ou fermé. Lors de la conception d'une stratégie de pare-feu pour votre entreprise, veillez à prendre en considération toutes les règles et les options de configuration disponibles. Cet article n’examine pas toutes les options de pare-feu possibles. Nous vous recommandons de consulter les documents suivants :  
   
- [Guide de prise en main du Pare-feu Windows avec fonctions avancées de sécurité](http://go.microsoft.com/fwlink/?LinkId=116080)  
+ [Guide de prise en main du Pare-feu Windows avec fonctions avancées de sécurité](https://go.microsoft.com/fwlink/?LinkId=116080)  
   
- [Guide de conception du Pare-feu Windows avec fonctions avancées de sécurité (éventuellement en anglais)](http://go.microsoft.com/fwlink/?LinkId=116904)  
+ [Guide de conception du Pare-feu Windows avec fonctions avancées de sécurité (éventuellement en anglais)](https://go.microsoft.com/fwlink/?LinkId=116904)  
   
- [Introduction à l'isolation de serveur et de domaine](http://go.microsoft.com/fwlink/?LinkId=116081)  
+ [Introduction à l'isolation de serveur et de domaine](https://go.microsoft.com/fwlink/?LinkId=116081)  
   
 ##  <a name="BKMK_default"></a> Paramètres du pare-feu par défaut  
  Pour planifier votre configuration de pare-feu, la première étape est de déterminer l'état en cours du pare-feu de votre système d'exploitation. Si le système d'exploitation a été mis à niveau à partir d'une version précédente, les anciens paramètres du pare-feu ont pu être conservés. De même, les paramètres du pare-feu ont peut-être été modifiés par un autre administrateur ou par une Stratégie de groupe dans votre domaine.  
@@ -97,11 +97,11 @@ Configurez les paramètres du Pare-feu Windows avec **Microsoft Management Conso
   
      Pour plus d’informations sur **netsh**, consultez les liens suivants :  
   
-    -   [Comment utiliser l'outil Netsh.exe et les commutateurs de ligne de commande](http://support.microsoft.com/kb/242468)  
+    -   [Comment utiliser l'outil Netsh.exe et les commutateurs de ligne de commande](https://support.microsoft.com/kb/242468)  
   
-    -   [Comment utiliser le contexte « pare-feu netsh advfirewall » à la place du contexte « pare-feu netsh » pour contrôler le comportement de Pare-feu Windows dans Windows Server 2008 et Windows Vista](http://support.microsoft.com/kb/947709)  
+    -   [Comment utiliser le contexte « pare-feu netsh advfirewall » à la place du contexte « pare-feu netsh » pour contrôler le comportement de Pare-feu Windows dans Windows Server 2008 et Windows Vista](https://support.microsoft.com/kb/947709)  
   
-    -   [La commande de « netsh firewall » avec le paramètre « profile=all » ne configure pas le profil public sur un ordinateur Windows Vista](http://support.microsoft.com/kb/947213)  
+    -   [La commande de « netsh firewall » avec le paramètre « profile=all » ne configure pas le profil public sur un ordinateur Windows Vista](https://support.microsoft.com/kb/947213)  
   
 ## <a name="ports-used-by-includessnoversionincludesssnoversion-mdmd"></a>Ports utilisés par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  Les tableaux suivants peuvent vous aider à identifier les ports utilisés par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -194,24 +194,24 @@ Le tableau suivant répertorie les ports et services dont [!INCLUDE[ssNoVersion]
 |--------------|----------|--------------|  
 |Windows Management Instrumentation<br /><br /> Pour plus d'informations sur WMI, consultez [WMI Provider for Configuration Management Concepts](../../relational-databases/wmi-provider-configuration/wmi-provider-for-configuration-management.md).|WMI s'exécute dans le cadre d'un hôte de service partagé avec les ports attribués via DCOM. WMI peut utiliser le port TCP 135.<br /><br /> Consultez [Considérations spéciales relatives au port 135](#BKMK_port_135)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise WMI pour lister et gérer des services. Nous vous recommandons d’utiliser la règle préconfigurée **Windows Management Instrumentation (WMI)**. Pour plus d'informations, consultez ci-dessous la section [Interaction avec d'autres règles de pare-feu](#BKMK_other_rules) .|  
 |[!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator (MS DTC)|Port TCP 135<br /><br /> Consultez [Considérations spéciales relatives au port 135](#BKMK_port_135)|Si votre application utilise des transactions distribuées, vous devez éventuellement configurer le pare-feu pour autoriser le trafic MS DTC ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator) entre des instances MS DTC distinctes, et entre MS DTC et les gestionnaires de ressources tels que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Nous vous recommandons d'utiliser le groupe de règles préconfigurées **Distributed Transaction Coordinator** .<br /><br /> Lorsqu'un MS DTC partagé unique est configuré pour l'intégralité du cluster dans un groupe de ressources distinct, vous devez ajouter sqlservr.exe comme exception au pare-feu.|  
-|Le bouton Parcourir dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] utilise UDP pour se connecter au service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser. Pour plus d’informations, consultez [Service SQL Server Browser &#40;moteur de base de données et SSAS&#41;](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md).|Port UDP 1434|UDP est un protocole sans connexion.<br /><br /> Le pare-feu a un paramètre, nommé [Propriété UnicastResponsesToMulticastBroadcastDisabled de l’interface INetFwProfile](http://go.microsoft.com/fwlink/?LinkId=118371) , qui contrôle le comportement du pare-feu par rapport aux réponses de monodiffusion (unicast) à une demande UDP multidiffusion (ou multicast).  Il a deux comportements :<br /><br /> Si le paramètre est TRUE, aucune réponse de monodiffusion à une diffusion n'est autorisée. L'énumération des services échouera.<br /><br /> Si le paramètre est FALSE (valeur par défaut), les réponses de monodiffusion sont autorisées pendant 3 secondes. La durée n'est pas configurable. Dans un réseau encombré ou à latence élevée, ou pour les serveurs très chargés, toute tentative d’énumération des instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut retourner une liste partielle, qui peut induire les utilisateurs en erreur.|  
+|Le bouton Parcourir dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] utilise UDP pour se connecter au service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser. Pour plus d’informations, consultez [Service SQL Server Browser &#40;moteur de base de données et SSAS&#41;](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md).|Port UDP 1434|UDP est un protocole sans connexion.<br /><br /> Le pare-feu a un paramètre, nommé [Propriété UnicastResponsesToMulticastBroadcastDisabled de l’interface INetFwProfile](https://go.microsoft.com/fwlink/?LinkId=118371) , qui contrôle le comportement du pare-feu par rapport aux réponses de monodiffusion (unicast) à une demande UDP multidiffusion (ou multicast).  Il a deux comportements :<br /><br /> Si le paramètre est TRUE, aucune réponse de monodiffusion à une diffusion n'est autorisée. L'énumération des services échouera.<br /><br /> Si le paramètre est FALSE (valeur par défaut), les réponses de monodiffusion sont autorisées pendant 3 secondes. La durée n'est pas configurable. Dans un réseau encombré ou à latence élevée, ou pour les serveurs très chargés, toute tentative d’énumération des instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut retourner une liste partielle, qui peut induire les utilisateurs en erreur.|  
 |<a name="BKMK_IPsec"></a> Trafic IPsec|Port UDP 500 et port UDP 4500|Si la stratégie de domaine exige que les communications réseau s'effectuent par le biais du protocole IPsec, vous devez également ajouter les ports UDP 4500 et UDP 500 à la liste des exceptions. IPsec est une option de l’ **Assistant Nouvelle règle de trafic entrant** dans le composant logiciel enfichable Pare-feu Windows. Pour plus d’informations, consultez ci-dessous [Utilisation du composant logiciel enfichable Pare-feu Windows avec fonctions avancées de sécurité](#BKMK_WF_msc) .|  
-|Utilisation de l'authentification Windows avec les domaines approuvés|Les pare-feu doivent être configurés pour autoriser des demandes d'authentification.|Pour plus d'informations, consultez [Comment faire pour configurer un pare-feu pour les domaines et les approbations](http://support.microsoft.com/kb/179442/).|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et le clustering Windows|Le clustering requiert des ports supplémentaires qui ne sont pas directement en rapport avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|Pour plus d'informations, consultez [Activer un réseau pour une utilisation du cluster](http://go.microsoft.com/fwlink/?LinkId=118372).|  
-|Des espaces de noms réservés de l'URL dans l'API HTTP Server (HTTP.SYS)|Probablement le port TCP 80, mais la configuration d'autres ports est possible. Pour les informations générales, consultez [Configuration de HTTP et HTTPS](http://go.microsoft.com/fwlink/?LinkId=118373).|Pour des informations spécifiques à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en ce qui concerne la réservation d’un point de terminaison HTTP.SYS à l’aide de HttpCfg.exe, consultez [À propos des réservations et de l’inscription d’URL &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md).|  
+|Utilisation de l'authentification Windows avec les domaines approuvés|Les pare-feu doivent être configurés pour autoriser des demandes d'authentification.|Pour plus d'informations, consultez [Comment faire pour configurer un pare-feu pour les domaines et les approbations](https://support.microsoft.com/kb/179442/).|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et le clustering Windows|Le clustering requiert des ports supplémentaires qui ne sont pas directement en rapport avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|Pour plus d'informations, consultez [Activer un réseau pour une utilisation du cluster](https://go.microsoft.com/fwlink/?LinkId=118372).|  
+|Des espaces de noms réservés de l'URL dans l'API HTTP Server (HTTP.SYS)|Probablement le port TCP 80, mais la configuration d'autres ports est possible. Pour les informations générales, consultez [Configuration de HTTP et HTTPS](https://go.microsoft.com/fwlink/?LinkId=118373).|Pour des informations spécifiques à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en ce qui concerne la réservation d’un point de terminaison HTTP.SYS à l’aide de HttpCfg.exe, consultez [À propos des réservations et de l’inscription d’URL &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md).|  
   
 ##  <a name="BKMK_port_135"></a> Considérations spéciales relatives au port 135  
  Lorsque vous utilisez RPC avec TCP/IP ou avec UDP/IP comme transport, les ports entrants sont fréquemment attribués de manière dynamique aux services système en fonction des besoins ; les ports TCP/IP et UDP/IP qui sont supérieurs au port 1024 sont utilisés. Ces ports sont souvent appelés de façon informelle « ports RPC aléatoires ». Dans ces cas, les clients RPC comptent sur le mappeur de points de terminaison RPC pour leur indiquer quels ports dynamiques ont été attribués au serveur. Pour certains services basés sur RPC, vous pouvez configurer un port spécifique au lieu de laisser RPC en attribuer un dynamiquement. Vous pouvez également limiter la plage de ports que RPC attribue dynamiquement, indépendamment du service. Étant donné que le port 135 est utilisé pour de nombreux services, il est fréquemment attaqué par des utilisateurs malveillants. Lorsque vous ouvrez le port 135, pensez à restreindre l'étendue de la règle de pare-feu.  
   
  Pour plus d'informations sur le port 135, consultez les rubriques de référence suivantes :  
   
--   [Vue d'ensemble des services et exigences de ports réseau pour le système Windows Server](http://support.microsoft.com/kb/832017)  
+-   [Vue d'ensemble des services et exigences de ports réseau pour le système Windows Server](https://support.microsoft.com/kb/832017)  
   
--   [Comment faire pour corriger les erreurs du mappeur de points de terminaison RPC à l'aide d'outils de support Windows Server 2003 disponibles sur le CD-ROM du produit](http://support.microsoft.com/kb/839880)  
+-   [Comment faire pour corriger les erreurs du mappeur de points de terminaison RPC à l'aide d'outils de support Windows Server 2003 disponibles sur le CD-ROM du produit](https://support.microsoft.com/kb/839880)  
   
--   [Appel de procédure distante (RPC)](http://go.microsoft.com/fwlink/?LinkId=118375)  
+-   [Appel de procédure distante (RPC)](https://go.microsoft.com/fwlink/?LinkId=118375)  
   
--   [Comment faire pour configurer l'allocation de port dynamique RPC avec un pare-feu](http://support.microsoft.com/kb/154596/)  
+-   [Comment faire pour configurer l'allocation de port dynamique RPC avec un pare-feu](https://support.microsoft.com/kb/154596/)  
   
 ##  <a name="BKMK_other_rules"></a> Interaction avec d'autres règles de pare-feu  
  Le Pare-feu Windows utilise des règles et des groupes de règles pour établir sa configuration. Chaque règle ou groupe de règles est généralement associé à un programme ou service particulier, et ce programme ou service peut modifier ou supprimer qui règle à votre insu. Par exemple, les groupes de règles **Services World Wide Web (HTTP)** et **Services World Wide Web (HTTPS)** sont associés à IIS. L'activation de ces règles ouvrira les ports 80 et 443, et les fonctionnalités de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui dépendent des ports 80 et 443 fonctionneront si ces règles sont activées. Toutefois, les administrateurs qui configurent IIS peuvent modifier ou désactiver ces règles. Par conséquent, si vous utilisez le port 80 ou le port 443 pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous devez créer votre propre règle ou groupe de règles qui conserve votre configuration de port souhaitée indépendamment des autres règles IIS.  
@@ -219,7 +219,7 @@ Le tableau suivant répertorie les ports et services dont [!INCLUDE[ssNoVersion]
  Le composant logiciel enfichable MMC du Pare-feu Windows avec fonctions avancées de sécurité autorise tout trafic qui correspond aux règles d'autorisation applicables. S'il existe deux règles qui s'appliquent toutes deux au port 80 (avec des paramètres différents), le trafic qui correspond à l'une ou l'autre règle sera autorisé. Si une règle autorise le trafic sur le port 80 du sous-réseau local et l'autre règle autorise le trafic à partir de n'importe quelle adresse, le résultat fait que tout le trafic vers le port 80 est autorisé indépendamment de la source. Pour gérer efficacement l'accès à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les administrateurs doivent périodiquement examiner toutes les règles de pare-feu activées sur le serveur.  
   
 ##  <a name="BKMK_profiles"></a> Vue d'ensemble des profils de pare-feu  
- Les profils de pare-feu sont examinés dans le [Guide de prise en main du Pare-feu Windows avec fonctions avancées de sécurité](http://go.microsoft.com/fwlink/?LinkId=116080) de la section **Pare-feu d’hôte prenant en charge l’emplacement réseau**. Pour résumer, les systèmes d'exploitation identifient et gardent en mémoire chacun des réseaux auxquels ils se connectent (connectivité, connexions et catégorie).  
+ Les profils de pare-feu sont examinés dans le [Guide de prise en main du Pare-feu Windows avec fonctions avancées de sécurité](https://go.microsoft.com/fwlink/?LinkId=116080) de la section **Pare-feu d’hôte prenant en charge l’emplacement réseau**. Pour résumer, les systèmes d'exploitation identifient et gardent en mémoire chacun des réseaux auxquels ils se connectent (connectivité, connexions et catégorie).  
   
  Il existe trois types d'emplacements réseau dans le Pare-feu Windows avec fonctions avancées de sécurité :  
   
@@ -309,10 +309,10 @@ Le tableau suivant répertorie les ports et services dont [!INCLUDE[ssNoVersion]
   
          Le commutateur **-n** demande à **netstat** d’afficher l’adresse numérique et le numéro de port des connexions TCP actives. Le commutateur **-a** demande à **netstat** d’afficher les ports TCP et UDP écoutés par l’ordinateur.  
   
--   L’utilitaire **PortQry** peut être utilisé pour signaler l’état des ports TCP/IP comme à l’écoute, pas à l’écoute ou filtré. (Lorsque l'état est filtré, le port peut être à l'écoute ou non ; cet état indique que l'utilitaire n'a pas reçu de réponse du port.) l’utilitaire **PortQry** peut être téléchargé à partir du [Centre de téléchargement Microsoft](http://go.microsoft.com/fwlink/?LinkId=28590).  
+-   L’utilitaire **PortQry** peut être utilisé pour signaler l’état des ports TCP/IP comme à l’écoute, pas à l’écoute ou filtré. (Lorsque l'état est filtré, le port peut être à l'écoute ou non ; cet état indique que l'utilitaire n'a pas reçu de réponse du port.) l’utilitaire **PortQry** peut être téléchargé à partir du [Centre de téléchargement Microsoft](https://go.microsoft.com/fwlink/?LinkId=28590).  
   
 ## <a name="see-also"></a> Voir aussi  
- [Vue d'ensemble des services et exigences de ports réseau pour le système Windows Server](http://support.microsoft.com/kb/832017)   
+ [Vue d'ensemble des services et exigences de ports réseau pour le système Windows Server](https://support.microsoft.com/kb/832017)   
  [Procédure : configurer les paramètres de pare-feu (base de données SQL Azure)](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)  
   
   

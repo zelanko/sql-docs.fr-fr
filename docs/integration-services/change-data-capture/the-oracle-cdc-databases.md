@@ -11,12 +11,12 @@ ms.assetid: a96486e9-f79b-4b24-bfaf-56203dd0e435
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 28b06c57666f07430a87d8577b7534cf47cf35de
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 040fea749664fb63fa2911a2d4fcaab5185af912
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630347"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638901"
 ---
 # <a name="the-oracle-cdc-databases"></a>Bases de données de capture de données modifiées Oracle
   Une instance Oracle CDC est associée à une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par le même nom sur l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cible. Cette base de données est appelée base de données de capture de données modifiées Oracle (ou base de données CDC).  
@@ -31,7 +31,7 @@ ms.locfileid: "47630347"
   
 -   Un ensemble de tables de modifications et de fonctions de modification d'accès qui sont générées par le mécanisme SQL Server CDC et sont identiques à celles utilisées dans SQL Server CDC standard qui n'est pas fourni par Oracle.  
   
- Le schéma `cdc` n’est initialement accessible qu’aux membres du rôle de base de données fixe **dbowner** . L'accès aux tables de modifications et aux fonctions de modification est déterminé par le même modèle de sécurité que celui de SQL Server CDC. Pour plus d’informations sur le modèle de sécurité, consultez [Modèle de sécurité](http://go.microsoft.com/fwlink/?LinkId=231151).  
+ Le schéma `cdc` n’est initialement accessible qu’aux membres du rôle de base de données fixe **dbowner** . L'accès aux tables de modifications et aux fonctions de modification est déterminé par le même modèle de sécurité que celui de SQL Server CDC. Pour plus d’informations sur le modèle de sécurité, consultez [Modèle de sécurité](https://go.microsoft.com/fwlink/?LinkId=231151).  
   
 ## <a name="creating-the-cdc-database"></a>Création de la base de données CDC  
  Dans la plupart des cas, la base de données CDC est créée à l'aide de la console du concepteur CDC, mais elle peut également être créée à l'aide d'un script de déploiement de capture de données modifiées qui est généré à l'aide de la console du concepteur CDC. L'administrateur système [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut modifier les paramètres de la base de données si nécessaire (pour des éléments tels que le stockage, la sécurité ou la disponibilité).  
@@ -51,11 +51,11 @@ ms.locfileid: "47630347"
  Les tables miroir sont vides ; aucune donnée n'est stockée dans ces dernières. Elles servent à activer l'infrastructure standard SQL Server CDC utilisée par l'instance Oracle CDC. Pour empêcher l'insertion ou la mise à jour des données dans les tables miroir, toutes les opérations UPDATE, DELETE et INSERT sont refusées pour le rôle PUBLIC. Cela garantit qu'elles ne peuvent pas être modifiées.  
   
 ## <a name="access-to-change-data"></a>Accès aux données modifiées  
- En raison du modèle de sécurité [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisé pour accéder aux données modifiées associées à une instance de capture, l'utilisateur doit disposer de l'accès `select` à toutes les colonnes capturées de la table miroir associée (les autorisations d'accès aux tables d'origine Oracle ne permettent pas d'accéder aux tables de modifications dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]). Pour plus d’informations sur le modèle de sécurité [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consultez [Modèle de sécurité](http://go.microsoft.com/fwlink/?LinkId=231151).  
+ En raison du modèle de sécurité [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisé pour accéder aux données modifiées associées à une instance de capture, l'utilisateur doit disposer de l'accès `select` à toutes les colonnes capturées de la table miroir associée (les autorisations d'accès aux tables d'origine Oracle ne permettent pas d'accéder aux tables de modifications dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]). Pour plus d’informations sur le modèle de sécurité [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consultez [Modèle de sécurité](https://go.microsoft.com/fwlink/?LinkId=231151).  
   
  De plus, si un rôle de régulation est spécifié lors de la création de l'instance de capture, l'appelant doit également être membre du rôle de régulation spécifié. Les autres fonctions de capture de données modifiées générales pour accéder aux métadonnées sont accessibles à tous les utilisateurs de base de données par le biais du rôle PUBLIC, bien que l'accès aux métadonnées retournées soit en général également régulé par le biais de l'accès choisi aux tables sources sous-jacentes et par l'appartenance aux rôles de régulation définis.  
   
- Les données modifiées peuvent être lues en appelant les fonctions table spéciales générées par le composant SQL Server CDC lorsqu'une instance de capture est créée. Pour plus d’informations sur cette fonction, consultez [Fonctions de capture de données modifiées (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=231152).  
+ Les données modifiées peuvent être lues en appelant les fonctions table spéciales générées par le composant SQL Server CDC lorsqu'une instance de capture est créée. Pour plus d’informations sur cette fonction, consultez [Fonctions de capture de données modifiées (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=231152).  
   
  L'accès aux données CDC via le composant source [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] CDC est soumis aux mêmes règles.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "47630347"
   
  Lorsque la capture est initialement activée pour la table `<schema-name>.<table-name>`, le nom par défaut de l'instance de capture est `<schema-name>_<table-name>`. Par exemple, le nom par défaut de l'instance de capture pour la table Oracle HR.EMPLOYEES est HR_EMPLOYEES et la table de modifications associée est [cdc]. [HR_EMPLOYEES_CT].  
   
- Les tables de capture sont écrites par l'instance Oracle CDC. Elles sont lues à l'aide de fonctions table spéciales générées par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lorsque l'instance de capture est créée. Par exemple, `fn_cdc_get_all_changes_HR_EMPLOYEES`. Pour plus d’informations sur ces fonctions CDC, consultez [Fonctions de capture de données modifiées (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=231152).  
+ Les tables de capture sont écrites par l'instance Oracle CDC. Elles sont lues à l'aide de fonctions table spéciales générées par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lorsque l'instance de capture est créée. Par exemple, `fn_cdc_get_all_changes_HR_EMPLOYEES`. Pour plus d’informations sur ces fonctions CDC, consultez [Fonctions de capture de données modifiées (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=231152).  
   
 ###  <a name="BKMK_cdclsn_time_mapping"></a> cdc.lsn_time_mapping  
  La table **[cdc].[lsn_time_mapping]** est générée par le composant SQL Server CDC. Son utilisation dans le cas de capture de données modifiées Oracle est différente de son utilisation normale.  
@@ -98,7 +98,7 @@ ms.locfileid: "47630347"
 |Élément|Description|  
 |----------|-----------------|  
 |version|Effectue le suivi de la version de la configuration de l'instance CDC. Elle est mise à jour chaque fois que la table est mise à jour et chaque fois qu'une nouvelle instance de capture est ajoutée ou qu'une instance de capture existante est supprimée.|  
-|connect_string|Chaîne de connexion Oracle. Voici un exemple de base :<br /><br /> `<server>:<port>/<instance>` (par exemple, `erp.contoso.com:1521/orcl`).<br /><br /> La chaîne de connexion peut également spécifier un descripteur de connexion Oracle Net, par exemple, `(DESCRIPTION=(ADDRESS=(PROTOCOL=tcp) (HOST=erp.contoso.com) (PORT=1521)) (CONNECT_DATA=(SERVICE_NAME=orcl)))`.<br /><br /> Si vous utilisez un serveur d'annuaire ou des noms TNS, la chaîne de connexion peut être le nom de la connexion.<br /><br /> Pour plus d’informations sur les chaînes de connexion Oracle, consultez [http://go.microsoft.com/fwlink/?LinkId=231153](http://go.microsoft.com/fwlink/?LinkId=231153) pour obtenir des informations détaillées sur les chaînes de connexion de base de données Oracle pour le client Oracle Instant qui est utilisée par le service de capture des changements de données Oracle.|  
+|connect_string|Chaîne de connexion Oracle. Voici un exemple de base :<br /><br /> `<server>:<port>/<instance>` (par exemple, `erp.contoso.com:1521/orcl`).<br /><br /> La chaîne de connexion peut également spécifier un descripteur de connexion Oracle Net, par exemple, `(DESCRIPTION=(ADDRESS=(PROTOCOL=tcp) (HOST=erp.contoso.com) (PORT=1521)) (CONNECT_DATA=(SERVICE_NAME=orcl)))`.<br /><br /> Si vous utilisez un serveur d'annuaire ou des noms TNS, la chaîne de connexion peut être le nom de la connexion.<br /><br /> Pour plus d’informations sur les chaînes de connexion Oracle, consultez [https://go.microsoft.com/fwlink/?LinkId=231153](https://go.microsoft.com/fwlink/?LinkId=231153) pour obtenir des informations détaillées sur les chaînes de connexion de base de données Oracle pour le client Oracle Instant qui est utilisée par le service de capture des changements de données Oracle.|  
 |use_windows_authentication|Valeur booléenne qui peut être :<br /><br /> **0**: un nom d’utilisateur et un mot de passe Oracle sont fournis pour l’authentification (valeur par défaut) ;<br /><br /> **1**: l’authentification Windows est utilisée pour la connexion à la base de données Oracle. Vous ne pouvez utiliser cette option que si la base de données Oracle est configurée pour utiliser l'authentification Windows.|  
 |username|Nom de l'utilisateur de la base de données Oracle d'exploration de données de journaux. Requis uniquement si **use_windows_authentication = 0**.|  
 |password|Mot de passe de l'utilisateur de la base de données Oracle d'exploration de données de journaux. Requis uniquement si **use_windows_authentication = 0**.|  

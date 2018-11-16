@@ -41,12 +41,12 @@ ms.assetid: 32660a02-e5a1-411a-9e57-7066ca459df6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: cf944c001534a6b1dec008498122e5d020e1a0c1
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: 49a5a5681093c9a4f39f843d713aa286c86fc818
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49383824"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601959"
 ---
 # <a name="start-stop-pause-resume-restart-sql-server-services"></a>Démarrer, arrêter, suspendre, reprendre, redémarrer les services SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -118,7 +118,7 @@ ms.locfileid: "49383824"
 ###  <a name="Security"></a> Sécurité  
   
 ####  <a name="Permissions"></a> Permissions  
- Par défaut, seuls les membres du groupe des administrateurs locaux peuvent démarrer, arrêter, interrompre, reprendre ou redémarrer un service. Pour accorder aux non-administrateurs la capacité de gérer des services, consultez [Comment accorder aux utilisateurs des droits de gestion des services dans Windows Server 2003](http://support.microsoft.com/kb/325349). (le processus est semblable sur d'autres versions de Windows).  
+ Par défaut, seuls les membres du groupe des administrateurs locaux peuvent démarrer, arrêter, interrompre, reprendre ou redémarrer un service. Pour accorder aux non-administrateurs la capacité de gérer des services, consultez [Comment accorder aux utilisateurs des droits de gestion des services dans Windows Server 2003](https://support.microsoft.com/kb/325349). (le processus est semblable sur d'autres versions de Windows).  
   
  L’arrêt du [!INCLUDE[ssDE](../../includes/ssde-md.md)] à l’aide de la commande [!INCLUDE[tsql](../../includes/tsql-md.md)]**SHUTDOWN** requiert l’appartenance aux rôles serveur fixes **sysadmin** ou **serveradmin** , et n’est pas transférable.  
   
@@ -355,7 +355,7 @@ ms.locfileid: "49383824"
     ```  
   
 ## <a name="see-also"></a> Voir aussi  
- [Vue d'ensemble de la documentation d'installation de SQL Server](http://msdn.microsoft.com/library/2620439a-f9d3-4b3c-9968-48f60b4bb9a5)   
+ [Vue d'ensemble de la documentation d'installation de SQL Server](https://msdn.microsoft.com/library/2620439a-f9d3-4b3c-9968-48f60b4bb9a5)   
  [Afficher et lire les fichiers journaux d'installation de SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)   
  [Gestionnaire de configuration SQL Server](../../relational-databases/sql-server-configuration-manager.md)   
  [Démarrer SQL Server avec une configuration minimale](../../database-engine/configure-windows/start-sql-server-with-minimal-configuration.md)   

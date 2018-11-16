@@ -21,12 +21,12 @@ ms.assetid: 56af984d-88b4-4db8-b6a2-6b07315a699e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d7b05729795395111a1ab887c9da992f1c460536
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 285141958996c85de736020c33bee0afabb9b5b9
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47651577"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638786"
 ---
 # <a name="identifiers-ssis"></a>Identificateurs (SSIS)
   Dans les expressions, les identificateurs sont des colonnes et des variables disponibles pour l'opération. Les expressions peuvent utiliser des identificateurs standard et qualifiés.  
@@ -102,7 +102,7 @@ ms.locfileid: "47651577"
 ## <a name="unique-variable-names"></a>Noms de variable uniques  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] prend en charge les variables personnalisées et met à votre disposition un ensemble de variables système. Par défaut, les variables personnalisées appartiennent à l’espace de noms **User** , et les variables système à l’espace de noms **System** . Vous pouvez créer des espaces de noms supplémentaires pour les variables personnalisées et mettre à jour les noms d'espace de noms en fonction des besoins de votre application. Le générateur d'expressions répertorie dans tous les espaces de noms les variables qui sont dans leur portée respective.  
   
- Toutes les variables ont une portée et appartiennent à un espace de noms. Une variable a la portée d'un package ou celle d'un conteneur ou d'une tâche appartenant au package. Le générateur d'expressions du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ne répertorie que les variables comprises dans la portée. Pour plus d’informations, consultez [Variables Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) et [Utiliser des variables dans des packages](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
+ Toutes les variables ont une portée et appartiennent à un espace de noms. Une variable a la portée d'un package ou celle d'un conteneur ou d'une tâche appartenant au package. Le générateur d'expressions du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ne répertorie que les variables comprises dans la portée. Pour plus d’informations, consultez [Variables Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) et [Utiliser des variables dans des packages](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
   
  L'évaluateur d'expression ne peut correctement évaluer les expressions que si les variables utilisées dans celles-ci portent des noms uniques. Si un package utilise plusieurs variables de même nom, leurs espaces de noms doivent être différents. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] a un opérateur de résolution d'espace de noms, constitué de deux points (::), qui permet de qualifier une variable avec son espace de noms. Par exemple, l’expression suivante utilise deux variables nommées **Count**; l’une appartient à l’espace de noms **User** et l’autre à l’espace de noms **MyNamespace** .  
   
@@ -122,6 +122,6 @@ ms.locfileid: "47651577"
 ```  
   
 ## <a name="related-content"></a>Contenu associé  
- Article technique, [SSIS Expression Cheat Sheet](http://go.microsoft.com/fwlink/?LinkId=746575), sur pragmaticworks.com  
+ Article technique, [SSIS Expression Cheat Sheet](https://go.microsoft.com/fwlink/?LinkId=746575), sur pragmaticworks.com  
   
   

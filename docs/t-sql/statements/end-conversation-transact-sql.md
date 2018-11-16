@@ -25,12 +25,12 @@ ms.assetid: 4415a126-cd22-4a5e-b84a-d8c68515c83b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 02140750f49c326e7d7da84ffa08b798e0462f07
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8ff8f2d557fac07f588b278e2b2667b75e60f478
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799387"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701289"
 ---
 # <a name="end-conversation-transact-sql"></a>END CONVERSATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -70,9 +70,9 @@ END CONVERSATION conversation_handle
   
  Si [!INCLUDE[ssSB](../../includes/sssb-md.md)] n'a pas encore traité le message de fin de dialogue ou d'erreur de la conversation, [!INCLUDE[ssSB](../../includes/sssb-md.md)] avertit le côté distant que la conversation est terminée. Les messages que [!INCLUDE[ssSB](../../includes/sssb-md.md)] envoie au service distant dépendent des options spécifiées :  
   
--   Si la conversation se termine sans erreurs et qu’elle est toujours active avec le service distant, [!INCLUDE[ssSB](../../includes/sssb-md.md)] envoie un message de type `http://schemas.microsoft.com/SQL/ServiceBroker/EndDialog` au service distant. [!INCLUDE[ssSB](../../includes/sssb-md.md)] ajoute ce message à la file d'attente de transmission en respectant l'ordre de la conversation. [!INCLUDE[ssSB](../../includes/sssb-md.md)] envoie tous les messages de cette conversation qui se trouvent actuellement dans la file d'attente de transmission avant d'envoyer ce message.  
+-   Si la conversation se termine sans erreurs et qu’elle est toujours active avec le service distant, [!INCLUDE[ssSB](../../includes/sssb-md.md)] envoie un message de type `https://schemas.microsoft.com/SQL/ServiceBroker/EndDialog` au service distant. [!INCLUDE[ssSB](../../includes/sssb-md.md)] ajoute ce message à la file d'attente de transmission en respectant l'ordre de la conversation. [!INCLUDE[ssSB](../../includes/sssb-md.md)] envoie tous les messages de cette conversation qui se trouvent actuellement dans la file d'attente de transmission avant d'envoyer ce message.  
   
--   Si la conversation se termine avec une erreur et qu’elle est toujours active avec le service distant, [!INCLUDE[ssSB](../../includes/sssb-md.md)] envoie un message de type `http://schemas.microsoft.com/SQL/ServiceBroker/Error` au service distant. [!INCLUDE[ssSB](../../includes/sssb-md.md)] supprime, dans ce cas, tous les messages de cette conversation qui sont encore dans la file d'attente de transmission.  
+-   Si la conversation se termine avec une erreur et qu’elle est toujours active avec le service distant, [!INCLUDE[ssSB](../../includes/sssb-md.md)] envoie un message de type `https://schemas.microsoft.com/SQL/ServiceBroker/Error` au service distant. [!INCLUDE[ssSB](../../includes/sssb-md.md)] supprime, dans ce cas, tous les messages de cette conversation qui sont encore dans la file d'attente de transmission.  
   
 -   La clause WITH CLEANUP permet à un administrateur de base de données de supprimer les conversations qui ne peuvent pas se terminer normalement. Cette option supprime tous les messages et les entrées d'affichage catalogue concernant la conversation. Notez, dans ce cas, que le côté distant de la conversation n'est pas averti de la fin de la conversation et risque de ne pas recevoir les messages qui ont été envoyés par une application mais qui n'ont pas encore été transmis sur le réseau. Évitez d'utiliser cette option, sauf si la conversation ne peut pas se terminer normalement.  
   

@@ -22,12 +22,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5eb810817929132bfef67c543ddcb915852f923a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 984f9f2796edf1012e852d014e94ed6f6a6f7d57
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47637737"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51667270"
 ---
 # <a name="change-tracking-catalog-views---syschangetrackingdatabases"></a>Modifiez les vues de catalogue de suivi - sys.change_tracking_databases
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "47637737"
  Les vérifications d'autorisation effectuées pour sys.change_tracking_databases sont les mêmes que celles effectuées pour sys.databases. Si l'appelant de sys.change_tracking_databases n'est pas le propriétaire de la base de données, les autorisations minimales requises pour consulter la ligne correspondante sont des autorisations ALTER ANY DATABASE ou VIEW ANY DATABASE au niveau du serveur, ou encore l'autorisation CREATE DATABASE dans la base de données master ou la base de données active.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Le suivi des modifications des affichages catalogue &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/6e8fd949-5560-4b34-879f-4e25aa24b183)   
+ [Le suivi des modifications des affichages catalogue &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/6e8fd949-5560-4b34-879f-4e25aa24b183)   
  [Suivi des modifications de données &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)  
   
   

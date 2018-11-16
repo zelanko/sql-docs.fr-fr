@@ -13,12 +13,12 @@ ms.assetid: da265482-3953-440a-ac23-0ab7e42a55eb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b41df0872ca52a73a21db5f151bbaa1a03cf5bfe
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5f4755e76755a455ff5a4fca7a77a7c9188fd76f
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845897"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696138"
 ---
 # <a name="create-a-central-management-server-and-server-group"></a>Créer un serveur de gestion centralisée et un groupe de serveurs
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "47845897"
   
 4.  Dans **Serveur inscrit**, entrez un nom de serveur et une description facultative.  
   
-5.  Dans l'onglet **Propriétés de connexion** , consultez ou modifiez les propriétés réseau et de connexion. Pour plus d’informations, consultez [Se connecter au serveur &#40;page Propriétés de connexion&#41; — Moteur de base de données](http://msdn.microsoft.com/library/edc1143c-6a47-4b02-92ab-441bdea8ea8a).  
+5.  Dans l'onglet **Propriétés de connexion** , consultez ou modifiez les propriétés réseau et de connexion. Pour plus d’informations, consultez [Se connecter au serveur &#40;page Propriétés de connexion&#41; — Moteur de base de données](https://msdn.microsoft.com/library/edc1143c-6a47-4b02-92ab-441bdea8ea8a).  
   
 6.  Cliquez sur **Tester**pour tester la connexion.  
   

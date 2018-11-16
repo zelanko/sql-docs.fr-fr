@@ -11,19 +11,19 @@ ms.assetid: f5d4584f-e85f-4558-b056-83681c365978
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8652ebfdcdf5604cebc995ef7ecf2a5f3944b9e7
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: 6df3fa6dc005aab43e86d847ba76ce5e87678459
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49071712"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51674138"
 ---
 # <a name="how-to-debug-database-objects"></a>Procédure : déboguer des objets de base de données
 Un test unitaire SQL Server inclut les éléments suivants :  
   
 -   Code de test unitaire écrit en Visual C\# ou en Visual Basic. Ce code, généré par le Concepteur de test unitaire SQL Server, est chargé d'envoyer le script Transact\-SQL qui forme le corps du test.  
   
--   Une ou plusieurs conditions de test, écrites en Visual C\# ou en Visual Basic. Pour déboguer les conditions de test, suivez la procédure de débogage d'un test unitaire, tel que le décrit dans [Procédure : déboguer lors de l'exécution d'un test (Visual Studio 2010)](http://msdn.microsoft.com/library/ms182484(VS.100).aspx) ou [Procédure : déboguer lors de l'exécution d'un test (Visual Studio 2012)](http://msdn.microsoft.com/library/ms182484.aspx).  
+-   Une ou plusieurs conditions de test, écrites en Visual C\# ou en Visual Basic. Pour déboguer les conditions de test, suivez la procédure de débogage d'un test unitaire, tel que le décrit dans [Procédure : déboguer lors de l'exécution d'un test (Visual Studio 2010)](https://msdn.microsoft.com/library/ms182484(VS.100).aspx) ou [Procédure : déboguer lors de l'exécution d'un test (Visual Studio 2012)](https://msdn.microsoft.com/library/ms182484.aspx).  
   
 -   Un ou plusieurs scripts Transact\-SQL qui s'exécutent sur des objets de la base de données que vous testez. Vous ne pouvez pas déboguer ces scripts Transact\-SQL.  
   
@@ -98,5 +98,5 @@ Les procédures de cette rubrique décrivent comment déboguer des objets de bas
   
 ## <a name="see-also"></a> Voir aussi  
 [Exécuter des tests unitaires SQL Server](../ssdt/running-sql-server-unit-tests.md)  
-[Débogage de Transact-SQL (Visual Studio 2010)](http://go.microsoft.com/fwlink/?LinkId=163975)  
+[Débogage de Transact-SQL (Visual Studio 2010)](https://go.microsoft.com/fwlink/?LinkId=163975)  
   

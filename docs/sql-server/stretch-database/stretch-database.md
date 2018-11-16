@@ -11,12 +11,12 @@ ms.assetid: ce6db775-21a5-40bc-95a1-f560376d4ee2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6d9675dfc6a36407f788bfc9c419ce9aea1eccb4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ae4e7fc1879a530f2a97f41276d9d0d4237ba471
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47689587"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701991"
 ---
 # <a name="stretch-database"></a>Stretch Database
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -74,7 +74,7 @@ ms.locfileid: "47689587"
  Pour identifier les bases de données et tables pour Stretch Database, utilisez Stretch Database Advisor, une fonctionnalité du Conseiller de mise à niveau de SQL Server 2016. Pour plus d’informations, consultez [Identifier des bases de données et tables pour Stretch Database en exécutant Stretch Database Advisor](../../sql-server/stretch-database/stretch-database-databases-and-tables-stretch-database-advisor.md). Pour en savoir plus sur les problèmes de blocages potentiels, consultez [Limitations concernant Stretch Database](../../sql-server/stretch-database/limitations-for-stretch-database.md).  
 
 ## <a name="test-drive-stretch-database"></a>Tester Stretch Database  
- **Tester Stretch Database à l’aide de l’exemple de base de données AdventureWorks.** Pour obtenir l’exemple de base de données AdventureWorks, téléchargez au minimum le fichier de base de données et le fichier d’exemples et de scripts [ici](https://www.microsoft.com/en-us/download/details.aspx?id=49502). Après avoir restauré l’exemple de base de données dans une instance de SQL Server 2016, décompressez le fichier d’exemples et ouvrez le fichier d’exemples Stretch Database à partir du dossier Stretch DB. Exécutez les scripts de ce fichier pour vérifier l’espace utilisé par vos données avant et après l’activation de Stretch Database, pour suivre la progression de la migration des données et pour confirmer que vous pouvez continuer à interroger les données existantes et insérer de nouvelles données à la fois pendant et après la migration des données.  
+ **Tester Stretch Database à l’aide de l’exemple de base de données AdventureWorks.** Pour obtenir l’exemple de base de données AdventureWorks, téléchargez au minimum le fichier de base de données et le fichier d’exemples et de scripts [ici](https://www.microsoft.com/download/details.aspx?id=49502). Après avoir restauré l’exemple de base de données dans une instance de SQL Server 2016, décompressez le fichier d’exemples et ouvrez le fichier d’exemples Stretch Database à partir du dossier Stretch DB. Exécutez les scripts de ce fichier pour vérifier l’espace utilisé par vos données avant et après l’activation de Stretch Database, pour suivre la progression de la migration des données et pour confirmer que vous pouvez continuer à interroger les données existantes et insérer de nouvelles données à la fois pendant et après la migration des données.  
   
 ## <a name="next-step"></a>Étape suivante  
  **Identifier les bases de données et les tables qui peuvent être utilisées avec Stretch Database.** Pour identifier les bases de données et tables que vous pouvez utiliser avec Stretch Database, téléchargez le Conseiller de mise à niveau de SQL Server 2016 et exécutez Stretch Database Advisor. Stretch Database Advisor identifie également les blocages. Pour plus d’informations, consultez [Identifier des bases de données et tables pour Stretch Database en exécutant Stretch Database Advisor](../../sql-server/stretch-database/stretch-database-databases-and-tables-stretch-database-advisor.md).  

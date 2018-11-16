@@ -5,8 +5,7 @@ ms.date: 08/28/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.databaseproperties.options.f1
@@ -14,12 +13,12 @@ ms.assetid: a3447987-5507-4630-ac35-58821b72354d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9e2170bef87a87e05454f6092e5829797808d96c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 49e6357f4f108b05b0f28442d0e526445a5a5ad7
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706557"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51659368"
 ---
 # <a name="database-properties-options-page"></a>Propriétés de la base de données (page Options)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -83,7 +82,7 @@ ms.locfileid: "47706557"
  **Année de coupure à deux chiffres**  
  Indique le numéro d'année le plus élevé qui peut être entré en tant qu'année à deux chiffres. L'année répertoriée et les 99 années précédentes peuvent être entrées sous forme d'années à deux chiffres. Toutes les autres années doivent être entrées sous forme d'années à quatre chiffres.  
   
- Par exemple, le paramètre par défaut 2049 indique qu'une date entrée sous la forme "14/3/49" sera interprétée comme le 14 mars 2049, tandis qu'une date entrée sous la forme "14/3/50" sera interprétée comme le 14 mars 1950. Pour plus d’informations, voir [Configurer l'option de configuration de serveur two digit year cutoff](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md).  
+ Par exemple, le paramètre par défaut 2049 indique qu'une date entrée sous la forme "14/3/49" sera interprétée comme le 14 mars 2049, tandis qu'une date entrée sous la forme "14/3/50" sera interprétée comme le 14 mars 1950. Pour plus d’informations, voir [Configure the two digit year cutoff Server Configuration Option](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md).  
   
 ## <a name="cursor"></a>Curseur  
  **Fermer le curseur lors de l'activation de la validation**  
@@ -96,10 +95,10 @@ ms.locfileid: "47706557"
  SQL Server 2016 et Base de données SQL Azure comprennent plusieurs propriétés de configuration qui peuvent être étendues au niveau de la base de données. Pour plus d’informations sur tous ces paramètres, consultez [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).  
   
  **Estimation de la cardinalité héritée**  
- Spécifiez le modèle d’estimation de la cardinalité de l’optimiseur de requête pour la base de données primaire, quel que soit le niveau de compatibilité de la base de données. Cette propriété équivaut à l’ [indicateur de trace 9481](https://support.microsoft.com/en-us/kb/2801413).  
+ Spécifiez le modèle d’estimation de la cardinalité de l’optimiseur de requête pour la base de données primaire, quel que soit le niveau de compatibilité de la base de données. Cette propriété équivaut à l’ [indicateur de trace 9481](https://support.microsoft.com/kb/2801413).  
   
  **Estimation de la cardinalité héritée pour la base de données secondaire**  
- Spécifiez le modèle d’estimation de la cardinalité de l’optimiseur de requête pour les éventuelles bases de données secondaires, quel que soit le niveau de compatibilité de la base de données. Cette propriété équivaut à l’ [indicateur de trace 9481](https://support.microsoft.com/en-us/kb/2801413).  
+ Spécifiez le modèle d’estimation de la cardinalité de l’optimiseur de requête pour les éventuelles bases de données secondaires, quel que soit le niveau de compatibilité de la base de données. Cette propriété équivaut à l’ [indicateur de trace 9481](https://support.microsoft.com/kb/2801413).  
   
  **Degré de parallélisme maximal**  
  Spécifiez le paramètre [MAXDOP](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) par défaut pour le serveur principal à utiliser pour les instructions.  
@@ -108,16 +107,16 @@ ms.locfileid: "47706557"
  Spécifiez le paramètre [MAXDOP](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) par défaut pour les éventuels serveurs secondaires à utiliser pour les instructions.  
   
  **Détection de paramètres**  
- Active ou désactive la détection de paramètres sur la base de données primaire. Cette propriété est équivalente à l’ [indicateur de trace 4136](https://support.microsoft.com/en-us/kb/980653).  
+ Active ou désactive la détection de paramètres sur la base de données primaire. Cette propriété est équivalente à l’ [indicateur de trace 4136](https://support.microsoft.com/kb/980653).  
   
  **Détection de paramètre pour la base de données secondaire**  
- Active ou désactive la détection de paramètres sur les éventuelles bases de données secondaires. Cette propriété est équivalente à l’ [indicateur de trace 4136](https://support.microsoft.com/en-us/kb/980653).  
+ Active ou désactive la détection de paramètres sur les éventuelles bases de données secondaires. Cette propriété est équivalente à l’ [indicateur de trace 4136](https://support.microsoft.com/kb/980653).  
   
  **Correctifs de l’optimiseur de requête**  
- Active ou désactive les correctifs logiciels d’optimisation de requête sur la base de données primaire, quel que soit le niveau de compatibilité de la base de données. Cette propriété est équivalente à l’ [indicateur de trace 4199](https://support.microsoft.com/en-us/kb/974006).  
+ Active ou désactive les correctifs logiciels d’optimisation de requête sur la base de données primaire, quel que soit le niveau de compatibilité de la base de données. Cette propriété est équivalente à l’ [indicateur de trace 4199](https://support.microsoft.com/kb/974006).  
   
  **Correctifs logiciels de l’optimiseur de requête pour la base de données secondaire**  
- Active ou désactive les correctifs logiciels d’optimisation de requête sur les éventuelles bases de données secondaires, quel que soit le niveau de compatibilité de la base de données. Cette propriété est équivalente à l’ [indicateur de trace 4199](https://support.microsoft.com/en-us/kb/974006).  
+ Active ou désactive les correctifs logiciels d’optimisation de requête sur les éventuelles bases de données secondaires, quel que soit le niveau de compatibilité de la base de données. Cette propriété est équivalente à l’ [indicateur de trace 4199](https://support.microsoft.com/kb/974006).  
   
 ## <a name="filestream"></a>FILESTREAM  
  **Nom du répertoire FILESTREAM**  

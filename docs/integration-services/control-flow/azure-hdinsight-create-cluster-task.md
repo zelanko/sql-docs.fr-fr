@@ -14,12 +14,12 @@ ms.assetid: a8ec413a-38d3-45df-887e-6f5f4d9f8465
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c1635771d132d12ac078975f506cd51ac7076093
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4687c4508bea34e9435bbfe6d33ad47b1c6a9a45
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47787828"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638096"
 ---
 # <a name="azure-hdinsight-create-cluster-task"></a>Tâche de création d’un cluster Azure HDInsight
 La **tâche de création de cluster Azure HDInsight** permet à un package SSIS de créer un cluster Azure HDInsight dans le groupe de ressources et l’abonnement Azure spécifiés.
@@ -28,7 +28,7 @@ La **tâche de création de cluster Azure HDInsight** est un composant de [SQL S
   
 > [!NOTE]  
 > - La création d’un cluster HDInsight peut prendre 10 à 20 minutes.  
-> - Il existe un coût associé à la création et à l’exécution d’un cluster Azure HDInsight. Pour plus d’informations, consultez [Tarification HDInsight](http://azure.microsoft.com/pricing/details/hdinsight/).  
+> - Il existe un coût associé à la création et à l’exécution d’un cluster Azure HDInsight. Pour plus d’informations, consultez [Tarification HDInsight](https://azure.microsoft.com/pricing/details/hdinsight/).  
   
 Pour ajouter une **tâche de création de cluster Azure HDInsight**, faites-la glisser sur le concepteur SSIS, double-cliquez dessus ou cliquez dessus avec le bouton droit, puis cliquez sur **Modifier** pour afficher la boîte de dialogue **Éditeur de la tâche de création de cluster Azure HDInsight** .  
   

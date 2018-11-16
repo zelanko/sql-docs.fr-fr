@@ -17,12 +17,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 863c4664560b42103e3ed2ff288bdbcb7d69a52c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 38077378d0980d351c4c65ca25b1574b7a7d7bc2
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630167"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673575"
 ---
 # <a name="always-encrypted-wizard"></a>Assistant Always Encrypted
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ Utilisez l’ **Assistant Always Encrypted** pour protéger les données sensibl
  
  - Pour une procédure détaillée montrant comment configurer la fonctionnalité Always Encrypted avec l’Assistant et comment l’utiliser dans une application cliente, consultez [Didacticiel sur les bases de données SQL : Protéger les données à l’aide d’Always Encrypted](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/).  
  
- - Consultez [Prise en main d’Always Encrypted avec SSMS](https://channel9.msdn.com/events/DataDriven/SQLServer2016/AlwaysEncrypted)pour regarder une vidéo qui traite de l’utilisation de l’Assistant. Consultez également le blog de l’équipe de sécurité [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [Assistant de chiffrement SSMS - Activer Always Encrypted en quelques étapes](http://blogs.msdn.com/b/sqlsecurity/archive/2015/11/01/ssms-encryption-wizard-enabling-always-encrypted-made-easy.aspx).  
+ - Consultez [Prise en main d’Always Encrypted avec SSMS](https://channel9.msdn.com/events/DataDriven/SQLServer2016/AlwaysEncrypted)pour regarder une vidéo qui traite de l’utilisation de l’Assistant. Consultez également le blog de l’équipe de sécurité [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [Assistant de chiffrement SSMS - Activer Always Encrypted en quelques étapes](https://blogs.msdn.com/b/sqlsecurity/archive/2015/11/01/ssms-encryption-wizard-enabling-always-encrypted-made-easy.aspx).  
  
  - **Autorisations :** pour interroger des colonnes chiffrées et sélectionner des clés à l’aide de cet Assistant, vous devez disposer des autorisations `VIEW ANY COLUMN MASTER KEY DEFINITION` et `VIEW ANY COLUMN ENCRYPTION KEY DEFINITION` . Pour créer des clés, vous devez également disposer des autorisations `ALTER ANY COLUMN MASTER KEY` et `ALTER ANY COLUMN ENCRYPTION KEY` .  
  

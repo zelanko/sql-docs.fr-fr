@@ -22,12 +22,12 @@ ms.assetid: 83f18102-2035-4a87-acd0-8d96d03efad5
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7710885efe84c8d917fd120c667221fd9e531cc9
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: 1666835b53c72844aeb63cf48db5bde749e2b5ec
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50970960"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703618"
 ---
 # <a name="formatmessage-transact-sql"></a>FORMATMESSAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ FORMATMESSAGE ( { msg_number  | ' msg_string ' } , [ param_value [ ,...n ] ] )
  ID du message stocké dans sys.messages. Si *msg_number* est <= 13000 ou si le message n’existe pas dans sys.messages, la valeur NULL est retournée.  
   
  *msg_string*  
- **S'applique à**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] via la [version actuelle](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+ **S'applique à**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] via la [version actuelle](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
  Chaîne entre guillemets simples, contenant des espaces réservés de valeurs de paramètres. Le message d'erreur peut compter jusqu'à 2 047 caractères. Si le message contient au moins 2 048 caractères, seuls les 2 044 premiers sont affichés et des points de suspension sont ajoutés pour indiquer que le message a été tronqué. Notez que les paramètres de substitution utilisent plus de caractères que ce que la sortie affiche en raison de son comportement de stockage interne.  Pour obtenir des informations sur la structure d’une chaîne de message et l’utilisation de paramètres dans la chaîne, consultez la description de l’argument *msg_str* dans [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md).  
   
@@ -78,7 +78,7 @@ SELECT @var1;
   
 ### <a name="b-example-with-a-message-string"></a>B. Exemple avec une chaîne de message  
   
-**S'applique à**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] via la [version actuelle](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+**S'applique à**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] via la [version actuelle](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
  L’exemple suivant accepte une chaîne en tant qu’entrée.  
   
@@ -92,8 +92,9 @@ SELECT FORMATMESSAGE('This is the %s and this is the %s.', 'first variable', 'se
  Les exemples suivants montrent diverses options de mise en forme.  
   
 ```  
-SELECT FORMATMESSAGE('Signed int %i, %d %i, %d, %+i, %+d, %+i, %+d', 5, -5, 50, -50, -11, -11, 11, 11);  
-SELECT FORMATMESSAGE('Signed int with leading zero %020i', 5);  
+SELECT FORMATMESSAGE('Signed int %i, %d %i, %d, %+i, %+d, %+i, %+d', 5, -5, 50, -50, -11, -11, 11, 11);
+SELECT FORMATMESSAGE('Signed int with up to 3 leading zeros %03i', 5);  
+SELECT FORMATMESSAGE('Signed int with up to 20 leading zeros %020i', 5);  
 SELECT FORMATMESSAGE('Signed int with leading zero 0 %020i', -55);  
 SELECT FORMATMESSAGE('Bigint %I64d', 3000000000);
 SELECT FORMATMESSAGE('Unsigned int %u, %u', 50, -50);  

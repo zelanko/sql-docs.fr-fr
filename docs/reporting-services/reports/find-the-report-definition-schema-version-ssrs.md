@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 67954419-1b61-4481-a3b9-23b4ba7a5624
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c012c30b200a31c77b62bee12e979bba79e695b7
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: eff18cf56e606aa8cea96bd8828a7daaca27c0f4
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031548"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813952"
 ---
 # <a name="find-the-report-definition-schema-version-ssrs"></a>Rechercher la version du schéma de définition de rapport (SSRS)
 
@@ -30,11 +30,11 @@ Un fichier de définition de rapport spécifie l'espace de noms RDL de la versio
      L'élément de rapport XML indique l'espace de noms du schéma. Par exemple, l'élément de rapport suivant indique l'espace de noms pour le Concepteur de rapports et l'espace de noms pour la définition du rapport.  
   
     ```  
-    <Report xmlns:rd=http://schemas.microsoft.com/SQLServer/reporting/reportdesigner   
-    xmlns="http://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition">  
+    <Report xmlns:rd=https://schemas.microsoft.com/SQLServer/reporting/reportdesigner   
+    xmlns="https://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition">  
     ```  
   
-     L'espace de noms de la définition de rapport est spécifié par l'URL suivante : `http://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition`.  
+     L'espace de noms de la définition de rapport est spécifié par l'URL suivante : `https://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition`.  
   
 ### <a name="how-to-identify-the-rdl-schema-version-of-report-designer"></a>Procédure : identifier la version du schéma RDL du Concepteur de rapports  
   
@@ -53,17 +53,17 @@ Un fichier de définition de rapport spécifie l'espace de noms RDL de la versio
      L'élément de rapport XML indique l'espace de noms du schéma. Par exemple, l'élément de rapport suivant indique l'espace de noms pour le Concepteur de rapports et l'espace de noms pour la définition du rapport.  
   
     ```  
-    <Report xmlns:rd=http://schemas.microsoft.com/SQLServer/reporting/reportdesigner  
-    xmlns="http://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition">  
+    <Report xmlns:rd=https://schemas.microsoft.com/SQLServer/reporting/reportdesigner  
+    xmlns="https://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition">  
     ```  
   
-     L'espace de noms de la définition de rapport est spécifié par l'URL suivante : `http://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition`  
+     L'espace de noms de la définition de rapport est spécifié par l'URL suivante : `https://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition`  
   
 ### <a name="how-to-identify-the-rdl-schema-version-on-the-report-server"></a>Procédure : identifier la version du schéma RDL sur Report Server  
   
 -   Dans le Gestionnaire de rapports, tapez l'URL du serveur de rapports. Par exemple, l'URL suivante spécifie un serveur de rapports sur l'ordinateur local :  
   
-     `http://localhost/reportserver/reportdefinition.xsd`  
+     `https://localhost/reportserver/reportdefinition.xsd`  
   
      Le fichier .xsd s'ouvre dans le navigateur.  
   
@@ -71,13 +71,13 @@ Un fichier de définition de rapport spécifie l'espace de noms RDL de la versio
   
     ```  
     <xsd:schema   
-    targetNamespace="http://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition"   
-    xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
-    xmlns="http://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition"   
+    targetNamespace="https://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition"   
+    xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
+    xmlns="https://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition"   
     elementFormDefault="qualified">  
     ```  
   
-     L'espace de noms de la définition de rapport est spécifié par l'URL suivante : `http://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition`  
+     L'espace de noms de la définition de rapport est spécifié par l'URL suivante : `https://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition`  
 
 ## <a name="next-steps"></a>Étapes suivantes
 

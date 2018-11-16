@@ -17,12 +17,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b56fa606b23ed599b8e2994f52ce2324de82e472
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8c0c8624187fe53a34056f75eae056c189541e95
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47602838"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51660848"
 ---
 # <a name="view-or-change-registered-filters-and-word-breakers"></a>Afficher ou modifier des filtres et des analyseurs lexicaux inscrits
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -81,7 +81,7 @@ ms.locfileid: "47602838"
   
      **Pour installer et charger des filtres Microsoft Filter Pack IFilters**  
   
-    -   [Procédure : inscrire des filtres Microsoft Filter Pack IFilters avec SQL Server](http://go.microsoft.com/fwlink/?LinkId=130439)  
+    -   [Procédure : inscrire des filtres Microsoft Filter Pack IFilters avec SQL Server](https://go.microsoft.com/fwlink/?LinkId=130439)  
   
 4.  Utilisez **sp_fulltext_service** pour charger les filtres et les analyseurs lexicaux récemment installés dans l’instance de serveur, comme suit :  
   

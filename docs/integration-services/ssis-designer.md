@@ -25,12 +25,12 @@ ms.assetid: 006d68ea-1b5c-4c1e-8079-3910288e012c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8bed5ac354f31b809f7699cea2e9e09f99158928
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e70f5cffad52b660f0006d416dfa027fba355de4
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47820107"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51642126"
 ---
 # <a name="ssis-designer"></a>Concepteur SSIS
   [!INCLUDE[ssIS](../includes/ssis-md.md)] est un outil graphique permettant de créer et de gérer des packages [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . [!INCLUDE[ssIS](../includes/ssis-md.md)] est disponible dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] , en tant que projet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
@@ -89,7 +89,7 @@ ms.locfileid: "47820107"
 ### <a name="event-handlers-tab"></a>Onglet Gestionnaires d'événements  
  Les événements d'un package sont construits sur la surface de dessin de l'onglet **Gestionnaires d'événements** . Sous l'onglet **Gestionnaires d'événements** , vous devez sélectionner le package ou l'objet du package pour lequel vous voulez créer un gestionnaire d'événements, puis sélectionner l'événement à associer au gestionnaire d'événements. Un gestionnaire d'événements contient un flux de contrôle et des flux de données facultatifs.  
   
- Pour en savoir plus, voir [Add an Event Handler to a Package](http://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78).  
+ Pour en savoir plus, voir [Add an Event Handler to a Package](https://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78).  
   
 ### <a name="package-explorer-tab"></a>Onglet Explorateur de package  
  Les packages peuvent être complexes et inclure de nombreuses tâches, gestionnaires de connexions, variables et autres éléments. L'Explorateur de package permet d'afficher une liste complète des éléments du package.  
@@ -104,7 +104,7 @@ ms.locfileid: "47820107"
 #### <a name="connection-managers-area"></a>Zone Gestionnaires de connexion  
  Ajoutez et modifiez les gestionnaires de connexions utilisés par un package dans la zone **Gestionnaires de connexions** . [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] inclut des gestionnaires de connexions permettant de se connecter à différentes sources de données, telles que des fichiers texte, des bases de données OLE DB et des fournisseurs .NET.  
   
- Pour plus d’informations, consultez [Connexions Integration Services &#40;SSIS&#41;](../integration-services/connection-manager/integration-services-ssis-connections.md) et [Créer des gestionnaires de connexions](http://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345).  
+ Pour plus d’informations, consultez [Connexions Integration Services &#40;SSIS&#41;](../integration-services/connection-manager/integration-services-ssis-connections.md) et [Créer des gestionnaires de connexions](https://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345).  
  
 ## <a name="control-flow-tab"></a>Onglet Flux de contrôle
 Utilisez l'onglet **Flux de contrôle** du concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)] pour créer le flux de contrôle dans un package [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  

@@ -17,12 +17,12 @@ ms.assetid: f18d6ff6-e881-444c-a399-730b52130e7c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 43b3ec688f23d1ba50392c09b115301cfa2ae127
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4aca92b322d3eb0a3b987300d88a877d29cf3cda
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47707892"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639026"
 ---
 # <a name="troubleshooting-tools-for-package-execution"></a>Outils de dépannage pour l'exécution des packages
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] intègre des fonctionnalités et des outils que vous pouvez utiliser pour résoudre des problèmes liés aux packages que vous exécutez après les avoir menés à terme et les avoir déployés.  
@@ -82,7 +82,7 @@ ms.locfileid: "47707892"
   
     3.  **Si possible, capturez les données sur le nombre de lignes**. Si possible, créez une table séparée pour les informations concernant le nombre de lignes dans laquelle chaque instance d'exécution de package est identifiée par son ExecutionID. Utilisez la transformation de calcul du nombre de lignes pour enregistrer le nombre de lignes dans une série de variables à des étapes critiques du flux de données. À la fin du flux de données, utilisez une tâche d'exécution SQL pour insérer la série de valeurs dans une ligne de la table en vue d'une analyse et d'un rapport ultérieurs.  
   
-     Pour plus d'informations sur cette approche, consultez la section « ETL Auditing and Logging » dans le livre blanc [!INCLUDE[msCoName](../../includes/msconame-md.md)] [Project REAL: Business Intelligence ETL Design Practices](http://go.microsoft.com/fwlink/?LinkId=96602)(en anglais).  
+     Pour plus d'informations sur cette approche, consultez la section « ETL Auditing and Logging » dans le livre blanc [!INCLUDE[msCoName](../../includes/msconame-md.md)] [Project REAL: Business Intelligence ETL Design Practices](https://go.microsoft.com/fwlink/?LinkId=96602)(en anglais).  
   
 ## <a name="troubleshoot-package-execution-by-using-debug-dump-files"></a>Résoudre les problèmes liés à l'exécution des packages à l'aide de fichiers de vidage du débogage  
  Dans [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], vous pouvez créer des fichiers de vidage du débogage qui fourniront des informations sur l'exécution d'un package. Pour plus d’informations, voir [Generating Dump Files for Package Execution](../../integration-services/troubleshooting/generating-dump-files-for-package-execution.md).  
@@ -95,7 +95,7 @@ ms.locfileid: "47707892"
      La propriété **DelayValidation** peut être définie sur une tâche Flux de données mais pas sur des composants de flux de données individuels. Vous pouvez obtenir un résultat similaire en affectant la valeur <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> à la propriété **ValidateExternalMetadata**. Néanmoins, si cette propriété affiche la valeur **false**, le composant n'a pas connaissance des modifications apportées aux métadonnées des sources de données externes. Quand la valeur **true**est définie, la propriété <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> peut permettre d’éviter des problèmes de blocage provoqués par un verrouillage dans la base de données, surtout quand le package utilise des transactions.  
   
 ## <a name="troubleshoot-run-time-permissions-issues"></a>Résoudre les problèmes d'autorisations au moment de l'exécution  
- Si vous rencontrez des erreurs lorsque vous tentez d'exécuter des packages déployés à l'aide de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , il est possible que les comptes employés par ce dernier ne disposent pas des autorisations nécessaires. Pour plus d'informations sur la résolution des problèmes liés aux packages que vous exécutez à partir des travaux de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consultez [Un package SSIS n'est pas exécuté lorsque vous appelez le package SSIS à partir d'une étape de travail de SQL Server Agent](http://support.microsoft.com/kb/918760). Pour plus d’informations sur l’exécution de packages à partir des travaux de l’Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consultez [Travaux de l’Agent SQL Server pour les packages](../../integration-services/packages/sql-server-agent-jobs-for-packages.md).  
+ Si vous rencontrez des erreurs lorsque vous tentez d'exécuter des packages déployés à l'aide de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , il est possible que les comptes employés par ce dernier ne disposent pas des autorisations nécessaires. Pour plus d'informations sur la résolution des problèmes liés aux packages que vous exécutez à partir des travaux de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consultez [Un package SSIS n'est pas exécuté lorsque vous appelez le package SSIS à partir d'une étape de travail de SQL Server Agent](https://support.microsoft.com/kb/918760). Pour plus d’informations sur l’exécution de packages à partir des travaux de l’Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consultez [Travaux de l’Agent SQL Server pour les packages](../../integration-services/packages/sql-server-agent-jobs-for-packages.md).  
   
  Pour se connecter à des sources de données Excel ou Access, l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requiert un compte doté de l'autorisation de lire, écrire, créer et supprimer des fichiers temporaires dans le dossier spécifié par les variables d'environnement TEMP et TMP.  
   
@@ -110,4 +110,4 @@ ms.locfileid: "47707892"
  [Débogage d’un flux de données](../../integration-services/troubleshooting/debugging-data-flow.md)  
   
 ## <a name="related-content"></a>Contenu associé  
- Entrée de blog, [Ajout du nom de la colonne d'erreur à une sortie d'erreur](http://go.microsoft.com/fwlink/?LinkId=261546)sur dougbert.com.  
+ Entrée de blog, [Ajout du nom de la colonne d'erreur à une sortie d'erreur](https://go.microsoft.com/fwlink/?LinkId=261546)sur dougbert.com.  

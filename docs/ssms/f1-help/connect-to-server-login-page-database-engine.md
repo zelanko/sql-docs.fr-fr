@@ -13,12 +13,12 @@ ms.assetid: e08cfbc3-bed5-4401-a13b-1c66d902fe32
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b03cf7574830bd565cb1b8af9bf5032c9f5002f2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1a1e810a031480622c6ec7590156d2bdcd0d542b
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47831867"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696649"
 ---
 # <a name="connect-to-server-login-page-database-engine"></a>Se connecter au serveur (page Connexion) — Moteur de base de données
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,7 +38,7 @@ Lorsque vous inscrivez un serveur depuis l'Explorateur d'objets, sélectionnez l
   
 Quand vous vous connectez à une instance du moteur de base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par le biais de [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], vous devez utiliser l’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et spécifier une base de données dans la boîte de dialogue **Se connecter au serveur** , sous l’onglet **Propriétés de connexion** . Vérifiez que vous avez coché la case **Chiffrer la connexion** .  
   
-Par défaut, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se connecte à **master**. Si vous spécifiez une base de données utilisateur, vous voyez uniquement la base de données et ses objets dans l’Explorateur d'objets. Si vous vous connectez à **master**, vous pouvez voir toutes les bases de données. Pour plus d’informations, consultez [Présentation de la base de données SQL Azure Windows](http://go.microsoft.com/fwlink/?LinkId=163948).  
+Par défaut, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se connecte à **master**. Si vous spécifiez une base de données utilisateur, vous voyez uniquement la base de données et ses objets dans l’Explorateur d'objets. Si vous vous connectez à **master**, vous pouvez voir toutes les bases de données. Pour plus d’informations, consultez [Présentation de la base de données SQL Azure Windows](https://go.microsoft.com/fwlink/?LinkId=163948).  
   
 **Nom du serveur**  
 Sélectionnez l'instance de serveur à laquelle se connecter. La dernière instance de serveur à laquelle une connexion a été établie est affichée par défaut.  
@@ -48,7 +48,7 @@ La version actuelle de SSMS propose cinq modes d’authentification lorsque vous
   
 Quand vous vous connectez à une instance du moteur de base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par le biais de [!INCLUDE[ssSDS](../../includes/sssds-md.md)], vous devez utiliser l’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et spécifier une base de données dans la boîte de dialogue **Se connecter au serveur** , sous l’onglet **Propriétés de connexion** . Vérifiez que vous avez coché la case **Chiffrer la connexion** .  
   
-Par défaut, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se connecte à **master**. Si vous spécifiez une base de données utilisateur quand vous vous connectez à [!INCLUDE[ssSDS](../../includes/sssds-md.md)], vous voyez uniquement cette base de données et ses objets dans l’Explorateur d’objets. Si vous vous connectez à **master**, vous pouvez voir toutes les bases de données. Pour plus d’informations, consultez [Présentation de la base de données SQL Azure Windows](http://go.microsoft.com/fwlink/?LinkId=163948).  
+Par défaut, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se connecte à **master**. Si vous spécifiez une base de données utilisateur quand vous vous connectez à [!INCLUDE[ssSDS](../../includes/sssds-md.md)], vous voyez uniquement cette base de données et ses objets dans l’Explorateur d’objets. Si vous vous connectez à **master**, vous pouvez voir toutes les bases de données. Pour plus d’informations, consultez [Présentation de la base de données SQL Azure Windows](https://go.microsoft.com/fwlink/?LinkId=163948).  
   
   > **Authentification Windows**  
 [!INCLUDE[msCoName](../../includes/msconame_md.md)] Le mode d’authentification Windows permet à l’utilisateur de se connecter au moyen d’un compte d’utilisateur Windows.  

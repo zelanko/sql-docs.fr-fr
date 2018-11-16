@@ -14,12 +14,12 @@ ms.assetid: f5111896-c2fd-4209-b500-f2baa45489ad
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 680232b1a65bf811c5281da715e4fb93fd2f416f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d9be4170345ea7aab0d7d1a7dc848291e776e27d
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735687"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51665568"
 ---
 # <a name="promote-frequently-used-xml-values-with-computed-columns"></a>Promouvoir les valeurs XML les plus fréquentes à l'aide de colonnes calculées
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -177,7 +177,7 @@ WHERE    tblPropAuthor.propAuthor = 'David'
  Pour cela, vous devez commencer par créer la fonction multidiffusion dans CLR. Le type de données **xml** est exposé en tant que classe managée SqlXml dans ADO.NET et prend en charge la méthode **CreateReader()** qui retourne un flux XmlReader.  
   
 > [!NOTE]  
->  L'exemple de code de cette section utilise XPathDocument et XPathNavigator, ce qui vous oblige à charger tous les documents XML en mémoire. Si vous utilisez un code similaire dans votre application pour traiter plusieurs documents XML volumineux, ce code n'est pas évolutif. Au lieu de cela, laissez les allocations de mémoire petites et utilisez les interfaces multidiffusion chaque fois que possible. Pour plus d’informations sur les performances, consultez [Architecture d’intégration du CLR](http://msdn.microsoft.com/library/05e4b872-3d21-46de-b4d5-739b5f2a0cf9).  
+>  L'exemple de code de cette section utilise XPathDocument et XPathNavigator, ce qui vous oblige à charger tous les documents XML en mémoire. Si vous utilisez un code similaire dans votre application pour traiter plusieurs documents XML volumineux, ce code n'est pas évolutif. Au lieu de cela, laissez les allocations de mémoire petites et utilisez les interfaces multidiffusion chaque fois que possible. Pour plus d’informations sur les performances, consultez [Architecture d’intégration du CLR](https://msdn.microsoft.com/library/05e4b872-3d21-46de-b4d5-739b5f2a0cf9).  
   
 ```  
 public class c_streaming_xml_tvf {  

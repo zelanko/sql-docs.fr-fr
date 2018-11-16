@@ -22,12 +22,12 @@ ms.assetid: 59767e52-f732-4b3f-8602-be50d0a64ef2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 14292f4d5f1581d02881d565276422b09166de93
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: db2feb442aceb42d24757e59245914351e5100dc
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631477"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638076"
 ---
 # <a name="percentage-sampling-transformation"></a>transformation de l'échantillonnage du pourcentage
   La transformation de l'échantillonnage du pourcentage crée un échantillon d'ensemble de données en sélectionnant un pourcentage des lignes d'entrée de transformation. L'échantillon d'ensemble de données est une sélection aléatoire de lignes dans l'entrée de transformation, visant à rendre l'échantillon résultant représentatif de l'entrée.  
@@ -52,11 +52,11 @@ ms.locfileid: "47631477"
   
  La boîte de dialogue **Éditeur avancé** reflète les propriétés qui peuvent être définies par programmation. Pour plus d'informations sur les propriétés définissables dans la boîte de dialogue **Éditeur avancé** ou par programmation, cliquez sur l'une des rubriques suivantes :  
   
--   [Propriétés communes](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Propriétés communes](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Propriétés personnalisées des transformations](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
- Pour plus d’informations sur la définition des propriétés, consultez [Définir les propriétés d’un composant de flux de données](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
+ Pour plus d’informations sur la façon de définir les propriétés, consultez [Définir les propriétés d’un composant de flux de données](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
   
 ## <a name="percentage-sampling-transformation-editor"></a>Éditeur de transformation de l'échantillonnage du pourcentage
   La boîte de dialogue **Éditeur de transformation de l'échantillonnage du pourcentage** permet de fractionner une partie d'une entrée en un exemple par le biais d'un certain pourcentage de lignes. Cette transformation divise l'entrée en deux sorties distinctes.  

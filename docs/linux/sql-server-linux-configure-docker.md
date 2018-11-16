@@ -11,12 +11,12 @@ ms.technology: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.custom: sql-linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 0dbc72cf39e1dee5abad6ceb961f1b437287e5ba
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.openlocfilehash: 1a4b517374e19ab959a8c00b732d62643c32cff3
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51270022"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657983"
 ---
 # <a name="configure-sql-server-container-images-on-docker"></a>Configurer des images de conteneur de SQL Server sur Docker
 
@@ -62,7 +62,7 @@ docker pull mcr.microsoft.com/mssql/rhel/server:vNext-CTP2.0
 
 Le Guide de démarrage rapide dans la section précédente exécute l’édition développeur gratuite de SQL Server à partir de Docker Hub. La plupart des informations s’applique toujours si vous souhaitez exécuter des images de conteneur, telles que les éditions Enterprise, Standard ou Web de production. Toutefois, il existe quelques différences sont décrites ici.
 
-- Vous pouvez uniquement utiliser SQL Server dans un environnement de production si vous avez une licence valide. Vous pouvez obtenir une licence de production de SQL Server Express gratuite [ici](https://go.microsoft.com/fwlink/?linkid=857693). Les licences SQL Server Standard et Enterprise Edition sont disponibles via [licence en Volume Microsoft](https://www.microsoft.com/en-us/licensing/default.aspx).
+- Vous pouvez uniquement utiliser SQL Server dans un environnement de production si vous avez une licence valide. Vous pouvez obtenir une licence de production de SQL Server Express gratuite [ici](https://go.microsoft.com/fwlink/?linkid=857693). Les licences SQL Server Standard et Enterprise Edition sont disponibles via [licence en Volume Microsoft](https://www.microsoft.com/licensing/default.aspx).
 
 - Images de conteneur de SQL Server de production doivent être extraites de [Docker Store](https://store.docker.com). Si vous n’en avez déjà, créez un compte sur Docker Store.
 

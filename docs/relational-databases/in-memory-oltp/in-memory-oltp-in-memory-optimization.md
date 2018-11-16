@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e1de98e2d7009bb787b5904c33560655cabcc314
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4dfb694a6e9bd6bbdd3525251747a42b35271ab0
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809702"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51674118"
 ---
 # <a name="in-memory-oltp-in-memory-optimization"></a>OLTP en mémoire (optimisation en mémoire)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -60,12 +60,12 @@ Pour une présentation plus détaillée de l’OLTP en mémoire et un examen des
 |[Conditions requises pour l’utilisation des tables optimisées en mémoire](../../relational-databases/in-memory-oltp/requirements-for-using-memory-optimized-tables.md)|Décrit les configurations matérielle et logicielle requises et fournit des instructions pour l'utilisation des tables optimisées en mémoire.|  
 |[Exemples de code OLTP en mémoire](../../relational-databases/in-memory-oltp/in-memory-oltp-code-samples.md)|Contient des exemples de code qui montrent comment créer et utiliser une table optimisée en mémoire.|  
 |[Tables optimisées en mémoire](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)|Présente les tables optimisées en mémoire.|  
-|[Variables de table mémoire optimisée](http://msdn.microsoft.com/library/bd102e95-53e2-4da6-9b8b-0e4f02d286d3)|L'exemple de code illustre comment utiliser une variable de table optimisée en mémoire plutôt qu'une variable de table traditionnelle pour réduire l'utilisation de tempdb.|  
-|[Index sur des tables optimisées en mémoire](http://msdn.microsoft.com/library/86805eeb-6972-45d8-8369-16ededc535c7)|Présente les index optimisés en mémoire.|  
+|[Variables de table mémoire optimisée](https://msdn.microsoft.com/library/bd102e95-53e2-4da6-9b8b-0e4f02d286d3)|L'exemple de code illustre comment utiliser une variable de table optimisée en mémoire plutôt qu'une variable de table traditionnelle pour réduire l'utilisation de tempdb.|  
+|[Index sur des tables optimisées en mémoire](https://msdn.microsoft.com/library/86805eeb-6972-45d8-8369-16ededc535c7)|Présente les index optimisés en mémoire.|  
 |[Procédures stockées compilées en mode natif](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)|Présente les procédures stockées compilées en mode natif.|  
-|[Gestion de la mémoire pour l’OLTP en mémoire](http://msdn.microsoft.com/library/d82f21fa-6be1-4723-a72e-f2526fafd1b6)|Comprendre et gérer l'utilisation de la mémoire sur votre système.|  
+|[Gestion de la mémoire pour l’OLTP en mémoire](https://msdn.microsoft.com/library/d82f21fa-6be1-4723-a72e-f2526fafd1b6)|Comprendre et gérer l'utilisation de la mémoire sur votre système.|  
 |[Création et gestion du stockage des objets mémoire optimisés](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)|Traite des fichiers de données et delta, qui stockent les informations sur les transactions dans les tables optimisées en mémoire.|  
-|[Sauvegarder, restaurer et récupérer des tables optimisées en mémoire](http://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)|Décrit la sauvegarde, la restauration et la récupération des tables optimisées en mémoire.|  
+|[Sauvegarder, restaurer et récupérer des tables optimisées en mémoire](https://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)|Décrit la sauvegarde, la restauration et la récupération des tables optimisées en mémoire.|  
 |[Prise en charge d’OLTP en mémoire par Transact-SQL](../../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)|Décrit la prise en charge [!INCLUDE[tsql](../../includes/tsql-md.md)] pour l' [!INCLUDE[hek_2](../../includes/hek-2-md.md)].|  
 |[Prise en charge de la haute disponibilité pour les bases de données OLTP en mémoire](../../relational-databases/in-memory-oltp/high-availability-support-for-in-memory-oltp-databases.md)|Décrit les groupes de disponibilité et le clustering de basculement dans l' [!INCLUDE[hek_2](../../includes/hek-2-md.md)].|  
 |[Prise en charge d’OLTP en mémoire par SQL Server](../../relational-databases/in-memory-oltp/sql-server-support-for-in-memory-oltp.md)|Répertorie les nouveautés et les mises à jour en matière de syntaxe et de fonctionnalités prenant en charge les tables optimisées en mémoire.|  
@@ -79,13 +79,13 @@ Pour une présentation plus détaillée de l’OLTP en mémoire et un examen des
 
 -   [Livre blanc technique sur les mécanismes internes de la fonction OLTP en mémoire SQL Server](https://msdn.microsoft.com/library/mt764316.aspx)  
 
--   [Comparaison des fonctionnalités de Columnstore et d’OLTP en mémoire SQL Server](http://download.microsoft.com/download/D/0/0/D0075580-6D72-403D-8B4D-C3BD88D58CE4/SQL_Server_2016_In_Memory_OLTP_and_Columnstore_Comparison_White_Paper.pdf)
+-   [Comparaison des fonctionnalités de Columnstore et d’OLTP en mémoire SQL Server](https://download.microsoft.com/download/D/0/0/D0075580-6D72-403D-8B4D-C3BD88D58CE4/SQL_Server_2016_In_Memory_OLTP_and_Columnstore_Comparison_White_Paper.pdf)
 
 -   Nouveautés d’OLTP en mémoire dans SQL Server 2016, [partie 1](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2015/11/12/in-memory-oltp-whats-new-in-sql2016-ctp3/) et [partie 2](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/25/whats-new-for-in-memory-oltp-in-sql-server-2016-since-ctp3/)
   
--   [OLTP en mémoire – Modèles de charge de travail courants et considérations relatives à la migration](http://msdn.microsoft.com/library/dn673538.aspx)  
+-   [OLTP en mémoire – Modèles de charge de travail courants et considérations relatives à la migration](https://msdn.microsoft.com/library/dn673538.aspx)  
   
--   [Blog OLTP en mémoire](http://go.microsoft.com/fwlink/?LinkId=311696)  
+-   [Blog OLTP en mémoire](https://go.microsoft.com/fwlink/?LinkId=311696)  
   
 ## <a name="see-also"></a> Voir aussi  
  [Fonctionnalités de base de données](../../relational-databases/database-features.md)  

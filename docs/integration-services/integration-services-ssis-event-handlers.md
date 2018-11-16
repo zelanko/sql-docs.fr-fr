@@ -22,12 +22,12 @@ ms.assetid: 6f60cf93-35dc-431c-908d-2049c4ab66ba
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fb2e06d17fcea51da160b9d5c8d4002c5b3fd21b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0aab1631f282ff05af8f7e2a1089d7234325ef1e
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788697"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51642106"
 ---
 # <a name="integration-services-ssis-event-handlers"></a>Gestionnaires d'événements Integration Services (SSIS)
   Lors de l'exécution, les exécutables (packages, conteneurs de boucles Foreach, conteneurs de boucles For, conteneurs de séquences et conteneurs d'hôtes de tâches) déclenchent des événements. Par exemple, un événement OnError se déclenche lorsqu'une erreur se produit. Vous pouvez créer des gestionnaires d'événements personnalisés pour ces événements afin d'étendre les fonctionnalités des packages et les rendre plus faciles à gérer au moment de l'exécution. Les gestionnaires d'événements peuvent réaliser des tâches comme les suivantes :  
@@ -84,7 +84,7 @@ ms.locfileid: "47788697"
 |**OnProgress**|Gestionnaire d’événements de l’événement **OnProgress** . Cet événement est déclenché par un exécutable lorsqu'une progression mesurable est réalisée par l'exécutable.|  
 |**OnQueryCancel**|Gestionnaire d’événements de l’événement **OnQueryCancel** . Cet événement est déclenché par un exécutable pour déterminer si son exécution doit s'arrêter.|  
 |**OnTaskFailed**|Gestionnaire d’événements de l’événement **OnTaskFailed** . Cet événement est déclenché par une tâche lorsqu'elle échoue.|  
-|**OnVariableValueChanged**|Gestionnaire d’événements de l’événement **OnVariableValueChanged** . Cet événement est déclenché par un exécutable lorsque la valeur d'une variable change. L'événement est déclenché par l'exécutable sur lequel la variable est définie. Cet événement n’est pas déclenché si vous affectez à la propriété **RaiseChangeEvent** de la variable la valeur **False**. Pour plus d’informations, consultez [Integration Services &#40;SSIS&#41; Variables](../integration-services/integration-services-ssis-variables.md).|  
+|**OnVariableValueChanged**|Gestionnaire d’événements de l’événement **OnVariableValueChanged** . Cet événement est déclenché par un exécutable lorsque la valeur d'une variable change. L'événement est déclenché par l'exécutable sur lequel la variable est définie. Cet événement n’est pas déclenché si vous affectez à la propriété **RaiseChangeEvent** de la variable la valeur **False**. Pour plus d’informations, consultez [Variables Integration Services &#40;SSIS&#41;](../integration-services/integration-services-ssis-variables.md).|  
 |**OnWarning**|Gestionnaire d’événements de l’événement **OnWarning** . Cet événement est déclenché par un exécutable lorsqu'un avertissement se produit.|  
 
 ## <a name="add-an-event-handler-to-a-package"></a>Ajouter un gestionnaire d’événements à un package
@@ -96,7 +96,7 @@ Lors de l'exécution, les conteneurs et les tâches déclenchent des événement
   
  Quand l’onglet **Gestionnaires d’événements** est actif, les nœuds **Éléments de flux de contrôle** et **Tâches du plan de maintenance** de la Boîte à outils du concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)] contiennent la tâche et les conteneurs permettant de créer le flux de contrôle dans le gestionnaire d’événements. Les nœuds **Sources de flux de données**, **Transformations**et **Destinations du flux de données** contiennent les sources de données, les transformations et les destinations permettant de créer les flux de données dans le gestionnaire d’événements. Pour plus d’informations, consultez [Flux de contrôle](../integration-services/control-flow/control-flow.md) et [Flux de données](../integration-services/data-flow/data-flow.md).  
   
- L’onglet **Gestionnaires d’événements** contient aussi une zone **Gestionnaires de connexions** dans laquelle vous pouvez créer et modifier les gestionnaires de connexions utilisés par les gestionnaires d’événements pour se connecter aux serveurs et aux sources de données. Pour plus d’informations, consultez [Créer des gestionnaires de connexions](http://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345).  
+ L’onglet **Gestionnaires d’événements** contient aussi une zone **Gestionnaires de connexions** dans laquelle vous pouvez créer et modifier les gestionnaires de connexions utilisés par les gestionnaires d’événements pour se connecter aux serveurs et aux sources de données. Pour plus d’informations, consultez [Créer des gestionnaires de connexions](https://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345).  
   
 ### <a name="add-an-event-handler-on-the-event-handlers-tab"></a>Ajouter un gestionnaire d’événements sous l’onglet Gestionnaires d’événements  
   
@@ -125,11 +125,11 @@ Lors de l'exécution, les conteneurs et les tâches déclenchent des événement
 ## <a name="set-the-properties-of-an-event-handler"></a>Définir les propriétés d’un gestionnaire d’événements  
  Vous pouvez définir les propriétés dans la fenêtre **Propriétés** de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ou par programmation.  
   
- Pour plus d’informations sur la définition de ces propriétés dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], consultez [Définir les propriétés d’une tâche ou d’un conteneur](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b).  
+ Pour plus d’informations sur la définition de ces propriétés dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], consultez [Définir les propriétés d’une tâche ou d’un conteneur](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b).  
   
  Pour plus d'informations sur la définition par programmation de ces propriétés, consultez <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>.  
   
 ## <a name="related-tasks"></a>Tâches associées  
- Pour plus d’informations sur l’ajout d’un gestionnaire d’événements à un package, consultez [Ajouter un gestionnaire d’événements à un package](http://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78).  
+ Pour plus d’informations sur l’ajout d’un gestionnaire d’événements à un package, consultez [Ajouter un gestionnaire d’événements à un package](https://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78).  
   
   

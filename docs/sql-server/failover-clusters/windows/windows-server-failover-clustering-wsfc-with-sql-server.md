@@ -16,12 +16,12 @@ ms.assetid: 79d2ea5a-edd8-4b3b-9502-96202057b01a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5f0e34605946d00228ac3a5fed17e794f5f42abc
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 87bd6d36f7a17f3a5d8e1f9ff26de645353b3fdc
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120127"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699636"
 ---
 # <a name="windows-server-failover-clustering-with-sql-server"></a>Clustering de basculement Windows Server avec SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -85,7 +85,7 @@ ms.locfileid: "49120127"
 >  Pour plus d’informations, consultez [Conditions préalables requises, restrictions et recommandations pour les groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
 ### <a name="instance-level-high-availability-with-always-on-failover-cluster-instances"></a>Haute disponibilité au niveau de l’instance avec des instances de cluster de basculement AlwaysOn  
- Une *instance de cluster de basculement* AlwaysOn est une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installée sur des nœuds dans un cluster WSFC. Ce type d’instance dépend de ressources pour le stockage et le nom de réseau virtuel. Le stockage peut utiliser Fibre Channel, iSCSI, FCoE ou SAS pour le stockage sur disque partagé, ou encore un stockage attaché localement avec [espaces de stockage direct (S2D)](http://technet.microsoft.com/windows-server-docs/storage/storage-spaces/storage-spaces-direct-overview). La ressource de nom de réseau virtuel dépend d’une ou plusieurs adresses IP virtuelles situées chacune dans un sous-réseau distinct. Le service SQL Server et le service SQL Server Agent sont également des ressources. Tous deux sont dépendants des ressources de stockage et de nom de réseau virtuel.  
+ Une *instance de cluster de basculement* AlwaysOn est une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installée sur des nœuds dans un cluster WSFC. Ce type d’instance dépend de ressources pour le stockage et le nom de réseau virtuel. Le stockage peut utiliser Fibre Channel, iSCSI, FCoE ou SAS pour le stockage sur disque partagé, ou encore un stockage attaché localement avec [espaces de stockage direct (S2D)](https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/storage-spaces-direct-overview). La ressource de nom de réseau virtuel dépend d’une ou plusieurs adresses IP virtuelles situées chacune dans un sous-réseau distinct. Le service SQL Server et le service SQL Server Agent sont également des ressources. Tous deux sont dépendants des ressources de stockage et de nom de réseau virtuel.  
   
  En cas de basculement, le service WSFC transfère la propriété des ressources de l'instance à un nœud de basculement indiqué. L'instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] est ensuite redémarrée sur le nœud de basculement, et les bases de données sont récupérées comme à l'accoutumée. À un moment donné, seul un nœud dans le cluster peut héberger l'instance FCI et les ressources sous-jacentes.  
   
@@ -173,15 +173,15 @@ ms.locfileid: "49120127"
   
 ##  <a name="RelatedContent"></a> Contenu associé  
   
--   [Technologies de Windows Server : clusters de basculement](http://technet.microsoft.com/library/cc732488\(v=WS.10\).aspx)  
+-   [Technologies de Windows Server : clusters de basculement](https://technet.microsoft.com/library/cc732488\(v=WS.10\).aspx)  
 
--   [Espaces de stockage direct \(S2D\) Vue d’ensemble](http://technet.microsoft.com/windows-server-docs/storage/storage-spaces/storage-spaces-direct-overview)
+-   [Espaces de stockage direct \(S2D\) Vue d’ensemble](https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/storage-spaces-direct-overview)
 
--   [Clusters de basculement dans Windows Server 2008 R2](http://technet.microsoft.com/library/ff182338\(WS.10\).aspx)  
+-   [Clusters de basculement dans Windows Server 2008 R2](https://technet.microsoft.com/library/ff182338\(WS.10\).aspx)  
   
--   [Afficher les événements et journaux pour un cluster de basculement](http://technet.microsoft.com/library/cc772342\(WS.10\).aspx)  
+-   [Afficher les événements et journaux pour un cluster de basculement](https://technet.microsoft.com/library/cc772342\(WS.10\).aspx)  
   
--   [Applets de commande de cluster de basculement Get-ClusterLog](http://technet.microsoft.com/library/ee461045.aspx)  
+-   [Applets de commande de cluster de basculement Get-ClusterLog](https://technet.microsoft.com/library/ee461045.aspx)  
   
 ## <a name="see-also"></a> Voir aussi  
  [Instances de cluster de basculement Always On (SQL Server)](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)   
@@ -189,5 +189,5 @@ ms.locfileid: "49120127"
  [Modes de quorum WSFC et configuration de vote (SQL Server)](../../../sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md)   
  [Stratégie de basculement pour les instances de cluster de basculement](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)   
  [Récupération d’urgence WSFC par le quorum forcé (SQL Server)](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)  
- [SQL  Server 2016 prend en charge la fonctionnalité Espaces de stockage direct de Windows Server 2016](http://blogs.technet.microsoft.com/dataplatforminsider/2016/09/27/sql-server-2016-now-supports-windows-server-2016-storage-spaces-direct/)
+ [SQL  Server 2016 prend en charge la fonctionnalité Espaces de stockage direct de Windows Server 2016](https://blogs.technet.microsoft.com/dataplatforminsider/2016/09/27/sql-server-2016-now-supports-windows-server-2016-storage-spaces-direct/)
   

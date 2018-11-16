@@ -13,12 +13,12 @@ ms.assetid: e3d1c86c-1e58-4d2c-b625-d1b591b221aa
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: edad80b1e0172073f6be494519d2ae68f3a1dc90
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 10f5d9c55f25221ae767a960393f7d7d775eff96
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855137"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51659208"
 ---
 # <a name="using-test-conditions-in-sql-server-unit-tests"></a>Utilisation de conditions de test dans les tests unitaires SQL Server
 Dans un test unitaire SQL Server, un ou plusieurs scripts de test Transact\-SQL sont exécutés. Les résultats sont évalués dans le script Transact\-SQL et l'instruction THROW ou RAISERROR utilisée pour retourner une erreur et faire échouer le test, ou des conditions de test peuvent être définies dans le test pour évaluer les résultats. Le test retourne une instance de la classe [SqlExecutionResult](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.sqlexecutionresult.aspx). L'instance de cette classe contient un ou plusieurs DataSets, l'heure d'exécution et les lignes affectées par le script. Ces informations sont collectées pendant l'exécution du script. Vous pouvez évaluer ces résultats à l'aide de conditions de test. SQL Server Data Tools fournit un ensemble de conditions de test prédéfinies. Vous pouvez également créer et utiliser des conditions personnalisées ; consultez [Conditions de test personnalisées pour les tests unitaires SQL Server](../ssdt/custom-test-conditions-for-sql-server-unit-tests.md).  
@@ -92,7 +92,7 @@ Après avoir ajouté une condition de test Checksum de données à un test unita
   
     La boîte de dialogue **Configuration de TestConditionName** s'affiche.  
   
-5.  Spécifiez une connexion à la base de données à tester. Pour plus d'informations, consultez [Procédure : créer une connexion de base de données](http://msdn.microsoft.com/library/aa833420(VS.100).aspx).  
+5.  Spécifiez une connexion à la base de données à tester. Pour plus d'informations, consultez [Procédure : créer une connexion de base de données](https://msdn.microsoft.com/library/aa833420(VS.100).aspx).  
   
 6.  Par défaut, le corps Transact\-SQL de votre test s'affiche dans le volet d'édition. Modifiez le code si nécessaire, pour produire les résultats attendus. Par exemple, si le test possède du code dans l'avant test, vous devrez peut-être ajouter ce code.  
   
@@ -122,7 +122,7 @@ Après avoir ajouté une condition de test Schéma attendu à un test unitaire S
   
     La boîte de dialogue **Configuration de TestConditionName** s'affiche.  
   
-5.  Spécifiez une connexion à la base de données à tester. Pour plus d'informations, consultez [Procédure : créer une connexion de base de données](http://msdn.microsoft.com/library/aa833420(VS.100).aspx).  
+5.  Spécifiez une connexion à la base de données à tester. Pour plus d'informations, consultez [Procédure : créer une connexion de base de données](https://msdn.microsoft.com/library/aa833420(VS.100).aspx).  
   
 6.  Par défaut, le corps Transact\-SQL de votre test s'affiche dans le volet d'édition. Modifiez le code si nécessaire, pour produire les résultats attendus. Par exemple, si le test possède du code dans l'avant test, vous devrez peut-être ajouter ce code.  
   

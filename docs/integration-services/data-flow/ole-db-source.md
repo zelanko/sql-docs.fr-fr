@@ -19,12 +19,12 @@ ms.assetid: f87cc5f6-b078-40f3-9d87-7a65e13e4c86
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e7e61bde2da60e033d2d57d193eda750813d70f1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 37c720096cb27f19617744512c212c415373612b
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723517"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639616"
 ---
 # <a name="ole-db-source"></a>Source OLE DB
   La source OLE DB extrait des données d'une série de bases de données relationnelles compatibles OLE DB à l'aide d'une table de base de données, d'une vue ou d'une commande SQL. Par exemple, la source OLE DB peut extraire des données de tables de bases de données [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -97,7 +97,7 @@ ms.locfileid: "47723517"
   
  La boîte de dialogue **Éditeur avancé** reflète les propriétés qui peuvent être définies par programmation. Pour plus d'informations sur les propriétés définissables dans la boîte de dialogue **Éditeur avancé** ou par programmation, cliquez sur l'une des rubriques suivantes :  
   
--   [Propriétés communes](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Propriétés communes](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Propriétés personnalisées OLE DB](../../integration-services/data-flow/ole-db-custom-properties.md)  
   
@@ -107,12 +107,12 @@ ms.locfileid: "47723517"
   
 -   [Mapper des paramètres de requête à des variables dans un composant de flux de données](../../integration-services/data-flow/map-query-parameters-to-variables-in-a-data-flow-component.md)  
   
--   [Définir les propriétés d'un composant de flux de données](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
+-   [Définir les propriétés d’un composant de flux de données](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
 -   [Trier des données pour les transformations de fusion et de jointure de fusion](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
 ## <a name="related-content"></a>Contenu associé  
- Article Wiki, [SSIS with Oracle Connectors](http://go.microsoft.com/fwlink/?LinkId=220670)(SSIS avec connecteurs Oracle) sur social.technet.microsoft.com.  
+ Article Wiki, [SSIS with Oracle Connectors](https://go.microsoft.com/fwlink/?LinkId=220670)(SSIS avec connecteurs Oracle) sur social.technet.microsoft.com.  
   
 ## <a name="ole-db-source-editor-connection-manager-page"></a>Éditeur de source OLE DB (page Gestionnaire de connexions)
   La page **Gestionnaire de connexions** de la boîte de dialogue **Éditeur de source OLE DB** vous permet de sélectionner le gestionnaire de connexions OLE DB pour la source. Cette page vous permet également de sélectionner une table ou une vue à partir de la base de données.  
@@ -146,7 +146,7 @@ ms.locfileid: "47723517"
 |Option|Description|  
 |------------|-----------------|  
 |Table ou vue|Permet de récupérer les données d'une table ou d'une vue dans la source de données OLE DB.|  
-|Variable de nom de table ou de vue|Spécifiez le nom de la table ou de la vue dans une variable.<br /><br /> **Informations connexes :** [Utiliser des variables dans des packages](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
+|Variable de nom de table ou de vue|Spécifiez le nom de la table ou de la vue dans une variable.<br /><br /> **Informations connexes :** [Utiliser des variables dans des packages](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
 |Commande SQL|Récupérez les données de la source de données OLE DB à l'aide d'une requête SQL.|  
 |Commande SQL à partir d'une variable|Spécifiez le texte de la requête SQL dans une variable.|  
   

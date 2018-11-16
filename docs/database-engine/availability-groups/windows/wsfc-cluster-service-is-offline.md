@@ -15,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 0785cd58ffed215f9cebf29a62e40c70cc96c720
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 594dce3e2a973179d3c056fe6c6ff447bd59c844
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47850567"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51603769"
 ---
 # <a name="wsfc-cluster-service-is-offline"></a>Le service de cluster WSFC est hors connexion
 
@@ -41,7 +41,7 @@ ms.locfileid: "47850567"
  L'état de la stratégie est sain lorsque l'état du cluster est Quorum normal.  
   
 > [!NOTE]  
->  Pour cette version de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], les informations sur les causes et les solutions possibles sont situées sous [Le service de cluster WSFC est hors connexion](http://go.microsoft.com/fwlink/p/?LinkId=220849) sur TechNet Wiki.  
+>  Pour cette version de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], les informations sur les causes et les solutions possibles sont situées sous [Le service de cluster WSFC est hors connexion](https://go.microsoft.com/fwlink/p/?LinkId=220849) sur TechNet Wiki.  
   
 ## <a name="possible-causes"></a>Causes possibles  
  Ce problème peut être dû à un problème de service de cluster ou à la perte du quorum dans le cluster.  

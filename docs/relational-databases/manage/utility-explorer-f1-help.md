@@ -20,12 +20,12 @@ ms.assetid: 8697e4a4-4f59-4cda-af71-7de86005bd4a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 364c3ec544f0a019a81416b1b1c005e91601f94d
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 84db1d36a782fc054129b1ff753b620e82684499
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51031286"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51675368"
 ---
 # <a name="utility-explorer-f1-help"></a>Aide sur l'Explorateur d'objets accessible via la touche F1
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "51031286"
   
  Remarquez que lorsque vous cliquez sur un lien pour une catégorie d’utilisation, le nœud correspondant dans le volet de navigation Explorateur de l’utilitaire est ajouté avec **(filtré)** - c’est-à-dire, **Instances gérées** est étiqueté **Instances gérées (filtré)**. Pour consulter des paramètres de filtre, cliquez avec le bouton droit sur le nœud dans le volet de navigation et sélectionnez **Filtre**, puis cliquez sur **Paramètres du filtre**. Pour effacer des paramètres de filtre, cliquez avec le bouton droit sur le nœud dans le volet de navigation et sélectionnez **Filtre**, puis cliquez sur **Supprimer le filtre**.  
   
- Pour plus d’informations sur la consultation de l’état d’instances individuelles de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ou pour afficher ou modifier des paramètres de configuration de stratégie, consultez [Détails de l’instance gérée &#40;utilitaire SQL Server&#41;](http://msdn.microsoft.com/library/6e51b7bb-a733-4852-8c33-7f4dbdf931c2).  
+ Pour plus d’informations sur la consultation de l’état d’instances individuelles de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ou pour afficher ou modifier des paramètres de configuration de stratégie, consultez [Détails de l’instance gérée &#40;utilitaire SQL Server&#41;](https://msdn.microsoft.com/library/6e51b7bb-a733-4852-8c33-7f4dbdf931c2).  
   
  Résumé de l'utilitaire  
  Affiche le nombre d'instances managées de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et le nombre d'applications de couche Données gérées par l'utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -95,10 +95,10 @@ ms.locfileid: "51031286"
   
 -   aucune donnée disponible : les données ne sont pas disponibles pour les applications de couche Données parce que l'instance gérée de SQL Server qui contient l'application de couche Données ne signale pas de données.  
   
- L'état détaillé de chaque paramètre d'intégrité est répertorié dans des curseurs. La fraction située à droite des curseurs montre combien d'applications de couche Données se trouvent dans chaque catégorie d'état. Pour plus d’informations sur la consultation de l’état des instances de la couche Données, ou pour afficher ou modifier des paramètres de configuration de stratégie, consultez [Détails des applications de la couche Données déployées &#40;utilitaire SQL Server&#41;](http://msdn.microsoft.com/library/79c41dd9-abcb-434e-9326-00a341d5c867).  
+ L'état détaillé de chaque paramètre d'intégrité est répertorié dans des curseurs. La fraction située à droite des curseurs montre combien d'applications de couche Données se trouvent dans chaque catégorie d'état. Pour plus d’informations sur la consultation de l’état des instances de la couche Données, ou pour afficher ou modifier des paramètres de configuration de stratégie, consultez [Détails des applications de la couche Données déployées &#40;utilitaire SQL Server&#41;](https://msdn.microsoft.com/library/79c41dd9-abcb-434e-9326-00a341d5c867).  
   
  Historique de l'utilisation de l'utilitaire du stockage  
- L'historique de l'utilisation s'affiche dans un graphique temporel situé au bas du tableau de bord de l'utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Notez que les données temporelles affichent la date et l'heure locales du processeur à l'aide du type de données datetime. Pour plus d’informations, consultez la rubrique [datetime (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=164071) . Lorsque vous utilisez le modèle d'objet de l'utilitaire, notez que SSMS utilise le type de données datetimeoffset. Pour plus d’informations, consultez la rubrique [datetimeoffset (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=141713) .  
+ L'historique de l'utilisation s'affiche dans un graphique temporel situé au bas du tableau de bord de l'utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Notez que les données temporelles affichent la date et l'heure locales du processeur à l'aide du type de données datetime. Pour plus d’informations, consultez la rubrique [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) . Lorsque vous utilisez le modèle d'objet de l'utilitaire, notez que SSMS utilise le type de données datetimeoffset. Pour plus d’informations, consultez la rubrique [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) .  
   
  Utilisez les cases d'option situées à gauche de la zone d'affichage pour modifier la période de création de rapports pour le graphique.  
   
@@ -132,7 +132,7 @@ ms.locfileid: "51031286"
   
  La séquence des colonnes en mode Liste peut être modifiée en les faisant glisser vers la gauche ou la droite. Les colonnes en mode Liste peuvent être ajoutées ou supprimées en cliquant avec le bouton droit sur leurs en-tête et en les sélectionnant ou désélectionnant. Le menu contextuel offre également des options de tri. Le tri peut également être activé en cliquant en haut d'un nom de colonne.  
   
- Pour accéder aux options du filtre du mode Liste de l’utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , cliquez avec le bouton droit sur le nœud **Applications de la couche Données déployées** dans le volet de navigation de l’Explorateur de l’utilitaire et sélectionnez **Filtre**. Une fois les paramètres de filtrage implémentés, le nœud **Applications de la couche Données déployées** est étiqueté **Applications de la couche Données déployées (filtré)** dans l’Explorateur de l’utilitaire. Pour plus d’informations, consultez [Paramètres de filtre &#40;Explorateur d’objets et Explorateur de l’utilitaire&#41;](http://msdn.microsoft.com/library/4aab04bc-e1ab-4d4b-ab74-b287fc805bc2).  
+ Pour accéder aux options du filtre du mode Liste de l’utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , cliquez avec le bouton droit sur le nœud **Applications de la couche Données déployées** dans le volet de navigation de l’Explorateur de l’utilitaire et sélectionnez **Filtre**. Une fois les paramètres de filtrage implémentés, le nœud **Applications de la couche Données déployées** est étiqueté **Applications de la couche Données déployées (filtré)** dans l’Explorateur de l’utilitaire. Pour plus d’informations, consultez [Paramètres de filtre &#40;Explorateur d’objets et Explorateur de l’utilitaire&#41;](https://msdn.microsoft.com/library/4aab04bc-e1ab-4d4b-ab74-b287fc805bc2).  
   
  Par défaut, les colonnes suivantes affichent les informations d'état d'intégrité de chaque application de la couche Données.  
   
@@ -178,7 +178,7 @@ ms.locfileid: "51031286"
   
 -   Mode de récupération : (simple, complet ou en utilisant les journaux de transactions)  
   
--   Dernière heure signalée : cette colonne affiche l'heure et la date locales du processeur à l'aide du type de données datetime. Pour plus d’informations, consultez la rubrique [datetime (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=164071) . Lorsque vous utilisez le modèle d'objet de l'utilitaire, notez que SSMS utilise le type de données datetimeoffset. Pour plus d’informations, consultez la rubrique [datetimeoffset (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=141713) .  
+-   Dernière heure signalée : cette colonne affiche l'heure et la date locales du processeur à l'aide du type de données datetime. Pour plus d’informations, consultez la rubrique [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) . Lorsque vous utilisez le modèle d'objet de l'utilitaire, notez que SSMS utilise le type de données datetimeoffset. Pour plus d’informations, consultez la rubrique [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) .  
   
  Onglet Utilisation du processeur  
  L'onglet d'utilisation du processeur affiche côte à côte des graphiques de données d'historique pour l'application de la couche Données et l'utilisation du processeur de l'ordinateur.  
@@ -196,7 +196,7 @@ ms.locfileid: "51031286"
 -   1 an, affiché par intervalles de 1 mois.  
   
  Onglet Utilisation du stockage  
- L'arborescence de l'onglet Utilisation du stockage montre les détails de l'utilisation de stockage pour les fichiers de base de données et les fichiers journaux qui appartiennent à l'application de la couche Données sélectionnée en mode Liste. Notez que les données temporelles affichent la date et l'heure locales du processeur à l'aide du type de données datetime. Pour plus d’informations, consultez la rubrique [datetime (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=164071) . Lorsque vous utilisez le modèle d'objet de l'utilitaire, notez que SSMS utilise le type de données datetimeoffset. Pour plus d’informations, consultez la rubrique [datetimeoffset (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=141713) .  
+ L'arborescence de l'onglet Utilisation du stockage montre les détails de l'utilisation de stockage pour les fichiers de base de données et les fichiers journaux qui appartiennent à l'application de la couche Données sélectionnée en mode Liste. Notez que les données temporelles affichent la date et l'heure locales du processeur à l'aide du type de données datetime. Pour plus d’informations, consultez la rubrique [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) . Lorsque vous utilisez le modèle d'objet de l'utilitaire, notez que SSMS utilise le type de données datetimeoffset. Pour plus d’informations, consultez la rubrique [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) .  
   
  L'affichage peut être regroupé par groupe de fichiers ou par volume. Pour utiliser l’arborescence de groupe de fichiers, sélectionnez la case d’option **Groupe de fichiers** dans la sélection **Regrouper les fichiers par :** .  
   
@@ -255,7 +255,7 @@ ms.locfileid: "51031286"
   
 -   Mode de récupération : (simple, complet ou en utilisant les journaux de transactions)  
   
--   Dernière heure signalée : cette colonne affiche l'heure et la date locales du processeur à l'aide du type de données datetime. Pour plus d’informations, consultez la rubrique [datetime (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=164071) . Lorsque vous utilisez le modèle d'objet de l'utilitaire, notez que SSMS utilise le type de données datetimeoffset. Pour plus d’informations, consultez la rubrique [datetimeoffset (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=141713) .
+-   Dernière heure signalée : cette colonne affiche l'heure et la date locales du processeur à l'aide du type de données datetime. Pour plus d’informations, consultez la rubrique [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) . Lorsque vous utilisez le modèle d'objet de l'utilitaire, notez que SSMS utilise le type de données datetimeoffset. Pour plus d’informations, consultez la rubrique [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) .
 
 ## <a name="managed-instance-details-sql-server-utility"></a>Détails de l'instance gérée (utilitaire SQL Server)
  Les informations de la vue Instances managées de l’Explorateur de l’utilitaire fournissent des données d’utilisation pour les instances individuelles de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], un historique d’utilisation du processeur, les détails de l’utilisation du stockage au niveau du fichier, et la possibilité d’afficher et de mettre à jour des seuils de stratégie. Les seuils de stratégie peuvent être contrôlés au niveau de l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , pour un ordinateur, pour les fichiers de base de données et les fichiers journaux, ainsi qu’au niveau des volumes de stockage. Vous pouvez également consulter les détails des propriétés des instances managées individuelles de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -274,7 +274,7 @@ ms.locfileid: "51031286"
   
  La séquence des colonnes en mode Liste peut être modifiée en les faisant glisser vers la gauche ou la droite. Les colonnes en mode Liste peuvent être ajoutées ou supprimées en cliquant avec le bouton droit sur leurs en-tête et en les sélectionnant ou désélectionnant. Le menu contextuel offre également des options de tri. Le tri peut également être activé en cliquant en haut d'un nom de colonne.  
   
- Pour accéder aux options de filtre du mode Liste de l’utilitaire, cliquez avec le bouton droit sur le nœud **Instances managées** dans le volet de navigation de l’Explorateur de l’utilitaire et sélectionnez **Filtre**. Une fois que les paramètres de filtrage sont implémentés, le nœud **Instances managées** de l’Explorateur de l’utilitaire est étiqueté **Instances managées (filtré)**. Pour plus d’informations, consultez [Paramètres de filtre &#40;Explorateur d’objets et Explorateur de l’utilitaire&#41;](http://msdn.microsoft.com/library/4aab04bc-e1ab-4d4b-ab74-b287fc805bc2).  
+ Pour accéder aux options de filtre du mode Liste de l’utilitaire, cliquez avec le bouton droit sur le nœud **Instances managées** dans le volet de navigation de l’Explorateur de l’utilitaire et sélectionnez **Filtre**. Une fois que les paramètres de filtrage sont implémentés, le nœud **Instances managées** de l’Explorateur de l’utilitaire est étiqueté **Instances managées (filtré)**. Pour plus d’informations, consultez [Paramètres de filtre &#40;Explorateur d’objets et Explorateur de l’utilitaire&#41;](https://msdn.microsoft.com/library/4aab04bc-e1ab-4d4b-ab74-b287fc805bc2).  
   
  Par défaut, les colonnes suivantes affichent des informations sur l'état d'intégrité de chaque instance managée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -318,7 +318,7 @@ ms.locfileid: "51031286"
   
 -   Langue :  
   
--   Dernière heure signalée : cette colonne affiche l'heure et la date locales du processeur à l'aide du type de données datetime. Pour plus d’informations, consultez la rubrique [datetime (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=164071) . Lorsque vous utilisez le modèle d'objet de l'utilitaire, notez que SSMS utilise le type de données datetimeoffset. Pour plus d’informations, consultez la rubrique [datetimeoffset (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=141713) .  
+-   Dernière heure signalée : cette colonne affiche l'heure et la date locales du processeur à l'aide du type de données datetime. Pour plus d’informations, consultez la rubrique [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) . Lorsque vous utilisez le modèle d'objet de l'utilitaire, notez que SSMS utilise le type de données datetimeoffset. Pour plus d’informations, consultez la rubrique [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) .  
   
  Onglet Utilisation du processeur  
  L’onglet d’utilisation du processeur affiche côte à côte des graphiques de données d’historique pour l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et l’utilisation du processeur de l’ordinateur.  
@@ -336,7 +336,7 @@ ms.locfileid: "51031286"
 -   1 an, affiché par intervalles de 1 mois.  
   
  Onglet Utilisation du stockage  
- L'arborescence de l'onglet Utilisation du stockage affiche les détails de l'utilisation du stockage. Notez que les données temporelles affichent la date et l'heure locales du processeur à l'aide du type de données datetime. Pour plus d’informations, consultez la rubrique [datetime (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=164071) . Lorsque vous utilisez le modèle d'objet de l'utilitaire, notez que SSMS utilise le type de données datetimeoffset. Pour plus d’informations, consultez la rubrique [datetimeoffset (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=141713) .  
+ L'arborescence de l'onglet Utilisation du stockage affiche les détails de l'utilisation du stockage. Notez que les données temporelles affichent la date et l'heure locales du processeur à l'aide du type de données datetime. Pour plus d’informations, consultez la rubrique [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) . Lorsque vous utilisez le modèle d'objet de l'utilitaire, notez que SSMS utilise le type de données datetimeoffset. Pour plus d’informations, consultez la rubrique [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) .  
   
  L'affichage peut être regroupé par base de données ou par volume. Pour utiliser l’arborescence de la base de données, sélectionnez la case d’option **Base de données** dans la sélection **Regrouper les fichiers par** . Pour consulter l'état de l'utilisation du stockage pour des fichiers de base de données individuels, cliquez sur le signe plus en regard du nom d'une base de données dans l'arborescence. Les fichiers de base de données répertoriés incluent toutes les bases de données utilisateur et système qui appartiennent à l’instance managée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que vous avez sélectionnée en mode Liste.  
   
@@ -512,6 +512,6 @@ Utilisez les onglets Administration de l'utilitaire pour gérer les paramètres 
   
 ## <a name="see-also"></a> Voir aussi  
  [Fonctionnalités et tâches de l'utilitaire SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
- [Résolution des problèmes liés à l’utilitaire SQL Server](http://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)  
+ [Résolution des problèmes liés à l’utilitaire SQL Server](https://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)  
   
   

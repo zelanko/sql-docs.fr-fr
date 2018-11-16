@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 456b6f31-6b97-4e31-80ab-b40151ec4868
-ms.openlocfilehash: 36c2ce9cd3faabee34f4c68285ec94b8d8ad11ab
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: d255d242fa2f5b8615c06097620d7e85e0b895fd
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419074"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51659206"
 ---
 # <a name="whats-new-for-sql-server-on-linux"></a>Nouveautés de SQL Server sur Linux
 
@@ -26,7 +26,7 @@ Cet article décrit les principales fonctionnalités et les services disponibles
 Version préliminaire de SQL Server 2019 a été publié. Cet article ne couvre pas les versions préliminaires de SQL Server 2019. Pour en savoir plus sur la version préliminaire de SQL Server 2019, consultez [Nouveautés de la version préliminaire de SQL Server 2019 pour Linux](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15#sqllinux).
 
 > [!NOTE]
-> Outre ces fonctionnalités dans cet article, les mises à jour cumulatives sont publiées à intervalles réguliers après la version GA. Ces mises à jour cumulatives fournissent de nombreuses améliorations et correctifs. Pour plus d’informations sur la dernière version CU, consultez [ http://aka.ms/sql2017cu ](http://aka.ms/sql2017cu). Pour les téléchargements de packages et les problèmes connus, consultez le [notes de publication](sql-server-linux-release-notes.md).
+> Outre ces fonctionnalités dans cet article, les mises à jour cumulatives sont publiées à intervalles réguliers après la version GA. Ces mises à jour cumulatives fournissent de nombreuses améliorations et correctifs. Pour plus d’informations sur la dernière version CU, consultez [ https://aka.ms/sql2017cu ](https://aka.ms/sql2017cu). Pour les téléchargements de packages et les problèmes connus, consultez le [notes de publication](sql-server-linux-release-notes.md).
 
 ## <a name="sql-server-database-engine"></a>Moteur de base de données SQL Server
 

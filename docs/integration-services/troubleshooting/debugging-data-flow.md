@@ -17,12 +17,12 @@ ms.assetid: 1c574f1b-54f7-4c05-8e42-8620e2c1df0f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5c965c86385141a589a2de9f815f73ad7f9b5990
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0f9ea0da85324aa74b7ce9af17ab64b743a8f031
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854488"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638746"
 ---
 # <a name="debugging-data-flow"></a>Débogage d'un flux de données
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] et le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] incluent des fonctionnalités et des outils permettant de résoudre les problèmes des flux de données d’un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -210,7 +210,7 @@ order by source_component_name desc
 9. Dans la zone Colonnes à afficher, sélectionnez les colonnes à afficher dans la vue de source de données. Par défaut, toutes les colonnes disponibles sont sélectionnées et figurent dans la liste **Colonnes affichées** . Déplacez les colonnes que vous ne voulez pas utiliser dans la liste **Colonnes inutilisées** en les sélectionnant et en cliquant sur la flèche gauche.  
   
     > [!NOTE]  
-    >  Dans la grille, les valeurs qui représentent les types de données DT_DATE, DT_DBTIME2, DT_FILETIME, DT_DBTIMESTAMP, DT_DBTIMESTAMP2 et DT_DBTIMESTAMPOFFSET apparaissent sous forme de chaînes au format ISO 8601 et un espace de séparation remplace le séparateur **T** . Les valeurs qui représentent les types de données DT_DATE et DT_FILETIME incluent sept chiffres pour les fractions de seconde. Étant donné que le type de données DT_FILETIME stocke uniquement trois chiffres pour les fractions de seconde, la grille affiche des zéros pour les quatre chiffres restants. Les valeurs qui représentent le type de données DT_DBTIMESTAMP incluent trois chiffres pour les fractions de seconde. Pour les valeurs qui représentent les types de données DT_DBTIME2, DT_DBTIMESTAMP2 et DT_DBTIMESTAMPOFFSET, le nombre de chiffres pour les fractions de seconde correspond à l'échelle spécifiée pour le type de données de la colonne. Pour plus d'informations sur les formats ISO 8601, consultez [Date and Time Formats](http://msdn.microsoft.com/library/bed6e2c1-791a-4fa1-b29f-cbfdd1fa8d39). Pour plus d'informations sur les types de données, consultez [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
+    >  Dans la grille, les valeurs qui représentent les types de données DT_DATE, DT_DBTIME2, DT_FILETIME, DT_DBTIMESTAMP, DT_DBTIMESTAMP2 et DT_DBTIMESTAMPOFFSET apparaissent sous forme de chaînes au format ISO 8601 et un espace de séparation remplace le séparateur **T** . Les valeurs qui représentent les types de données DT_DATE et DT_FILETIME incluent sept chiffres pour les fractions de seconde. Étant donné que le type de données DT_FILETIME stocke uniquement trois chiffres pour les fractions de seconde, la grille affiche des zéros pour les quatre chiffres restants. Les valeurs qui représentent le type de données DT_DBTIMESTAMP incluent trois chiffres pour les fractions de seconde. Pour les valeurs qui représentent les types de données DT_DBTIME2, DT_DBTIMESTAMP2 et DT_DBTIMESTAMPOFFSET, le nombre de chiffres pour les fractions de seconde correspond à l'échelle spécifiée pour le type de données de la colonne. Pour plus d'informations sur les formats ISO 8601, consultez [Date and Time Formats](https://msdn.microsoft.com/library/bed6e2c1-791a-4fa1-b29f-cbfdd1fa8d39). Pour plus d'informations sur les types de données, consultez [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
   
 10. Cliquez sur **OK**.  
 
@@ -270,7 +270,7 @@ select * from [SSISDB].[catalog].execution_data_taps where execution_id=@execid
  Le fait d'activer le niveau de journalisation détaillée et d'ajouter des drainages de données augmente les opérations d'E/S effectuées par votre solution d'intégration de données. Par conséquent, il est recommandé d'ajouter des drainages de données uniquement à des fins de dépannage.  
   
 ### <a name="video"></a>Vidéo  
- Cette [vidéo sur TechNet](http://technet.microsoft.com/sqlserver/dn600163) montre comment ajouter/utiliser des drainages de données dans le catalogue SQL Server 2012 SSISDB qui permettent de déboguer des packages par programmation et de capturer les résultats partiels au moment de l’exécution. Elle explique également comment répertorier/supprimer ces drainages de données et les meilleures pratiques pour l'utilisation des drainages de données dans des packages SSIS.  
+ Cette [vidéo sur TechNet](https://technet.microsoft.com/sqlserver/dn600163) montre comment ajouter/utiliser des drainages de données dans le catalogue SQL Server 2012 SSISDB qui permettent de déboguer des packages par programmation et de capturer les résultats partiels au moment de l’exécution. Elle explique également comment répertorier/supprimer ces drainages de données et les meilleures pratiques pour l'utilisation des drainages de données dans des packages SSIS.  
  
 ## <a name="see-also"></a> Voir aussi  
  [Gestion des erreurs dans les données](../../integration-services/data-flow/error-handling-in-data.md)  

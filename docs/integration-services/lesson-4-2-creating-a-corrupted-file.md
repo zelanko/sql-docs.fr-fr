@@ -11,12 +11,12 @@ ms.assetid: cd0b18dc-66c3-4d88-86ef-8e40cb660fae
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7a348823679ab464bb35520d309d5c8cc50b3ae2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b77bcdee3a2382bef57d6b8c2ceb791da983d399
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47829629"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51637566"
 ---
 # <a name="lesson-4-2---creating-a-corrupted-file"></a>Leçon 4-2 : Création d’un fichier endommagé
 Afin de démontrer l'utilisation des fonctions de configuration et de gestion des erreurs de transformation, vous allez devoir créer un exemple de fichier plat qui, lors de son traitement, entraîne l'échec d'un composant.  
@@ -29,7 +29,7 @@ Au cours de cette tâche, vous allez créer une copie d'un fichier plat existant
   
     Les exemples de données sont inclus dans les packages de leçons SSIS. Pour télécharger ces exemples de données et les packages de leçons, procédez comme suit.  
   
-    1.  Accédez à [Exemples de produits Integration Services](http://go.microsoft.com/fwlink/?LinkID=267527).  
+    1.  Accédez à [Exemples de produits Integration Services](https://go.microsoft.com/fwlink/?LinkID=267527).  
   
     2.  Cliquez sur l'onglet **DOWNLOADS** (Téléchargements).  
   

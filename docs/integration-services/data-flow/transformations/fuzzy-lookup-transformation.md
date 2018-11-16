@@ -34,18 +34,18 @@ ms.assetid: 019db426-3de2-4ca9-8667-79fd9a47a068
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7408e6160a6d82779ceb7c470e773db4a128ffa8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 851f89487199b1deae2086352a255374621688c6
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782227"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638816"
 ---
 # <a name="fuzzy-lookup-transformation"></a>transformation de recherche floue
   La transformation de recherche floue effectue des tâches de nettoyage des données telles que la standardisation des données, la correction des données et la fourniture de données manquantes.  
   
 > [!NOTE]  
->  Pour plus d’informations sur la transformation de recherche floue, y compris les limitations en termes de performances et de mémoire, consultez le livre blanc, [Présentation des transformations Fuzzy Lookup (recherche approximative) et Fuzzy Grouping (regroupement approximatif) dans les services DTS (Data Transformation Services) de SQL Server 2005](http://go.microsoft.com/fwlink/?LinkId=96604).  
+>  Pour plus d’informations sur la transformation de recherche floue, y compris les limitations en termes de performances et de mémoire, consultez le livre blanc, [Présentation des transformations Fuzzy Lookup (recherche approximative) et Fuzzy Grouping (regroupement approximatif) dans les services DTS (Data Transformation Services) de SQL Server 2005](https://go.microsoft.com/fwlink/?LinkId=96604).  
   
  La transformation de recherche floue diffère de la transformation de recherche par son utilisation de la correspondance approximative. La transformation de recherche utilise une équijointure pour localiser les enregistrements équivalents dans la table de référence. Elle retourne les enregistrements avec au moins un enregistrement correspondant et les enregistrements sans enregistrements correspondants. Par contre, la transformation de recherche floue utilise la correspondance floue pour renvoyer un ou plusieurs résultats dont la correspondance est proche dans la table de référence.  
   
@@ -130,7 +130,7 @@ ms.locfileid: "47782227"
   
  Pour plus d'informations sur les propriétés définissables dans la boîte de dialogue **Éditeur avancé** ou par programmation, cliquez sur l'une des rubriques suivantes :  
   
--   [Propriétés communes](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Propriétés communes](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Propriétés personnalisées des transformations](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -216,7 +216,7 @@ ms.locfileid: "47782227"
   
 ## <a name="see-also"></a> Voir aussi  
  [Transformation de recherche](../../../integration-services/data-flow/transformations/lookup-transformation.md)   
- [Fuzzy Grouping Transformation](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)   
+ [Transformation de regroupement probable](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)   
  [Transformations Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
   

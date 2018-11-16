@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
 - Data sync
@@ -33,12 +32,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1427cea1e6a920b0c3705a5a305e165b4ccb99be
-ms.sourcegitcommit: ef15fa253d98c62538bf9b6fe191af7f8ef8f6c8
+ms.openlocfilehash: f6771cb18d227c4e81290129ed5611da584988e7
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49991093"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51665011"
 ---
 # <a name="database-lifecycle-management"></a>Gestion du cycle de vie de base de données
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -46,13 +45,13 @@ ms.locfileid: "49991093"
   
  L'approche DLM commence par une discussion sur la conception et l'objectif du projet, se poursuit par les activités de développement, de test, de génération, de déploiement, de maintenance et de sauvegarde de la base de données, puis se termine par l'archivage des données. Cette rubrique présente une vue d’ensemble des étapes de l’approche DLM, en commençant par le développement d’une base de données, suivi des activités de génération, de déploiement et de supervision. Les activités de gestion des données, ainsi que les opérations de portabilité des données de type importation/exportation, sauvegarde, migration et synchronisation, sont également abordées.  
   
- Pour lire l’intégralité de la rubrique, consultez [Gestion du cycle de vie de la base de données (DLM)](http://go.microsoft.com/fwlink/?LinkId=276949).  
+ Pour lire l’intégralité de la rubrique, consultez [Gestion du cycle de vie de la base de données (DLM)](https://go.microsoft.com/fwlink/?LinkId=276949).  
   
 ## <a name="see-also"></a> Voir aussi  
- [Page d'accueil de Microsoft Azure](http://www.windowsazure.com/)   
- [Centre de développement Microsoft Azure](http://www.windowsazure.com/develop/overview/)   
- [Centre de gestion Microsoft Azure](http://www.windowsazure.com/manage/overview/)   
- [Blog de l'équipe Windows Azure](http://www.windowsazure.com/community/blog/)   
- [Options de support Microsoft Azure](http://www.windowsazure.com/support/contact/)  
+ [Page d'accueil de Microsoft Azure](https://www.windowsazure.com/)   
+ [Centre de développement Microsoft Azure](https://www.windowsazure.com/develop/overview/)   
+ [Centre de gestion Microsoft Azure](https://www.windowsazure.com/manage/overview/)   
+ [Blog de l'équipe Windows Azure](https://www.windowsazure.com/community/blog/)   
+ [Options de support Microsoft Azure](https://www.windowsazure.com/support/contact/)  
   
   

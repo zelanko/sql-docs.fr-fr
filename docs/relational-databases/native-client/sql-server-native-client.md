@@ -11,12 +11,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2c14175fd58e11fd372c0ab523ccbd48e1f856f0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3ce8d425aeb1c1b66f198efb4b222dc94c6e24ff
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47627407"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677798"
 ---
 # <a name="sql-server-native-client"></a>SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,13 +45,13 @@ Pour plus d’informations sur le pilote ODBC pour SQL Server, consultez [Micros
 
 ODBC dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client prend en charge les trois fonctionnalités qui ont été ajoutées à ODBC standard dans le Kit de développement logiciel de Windows 7 :  
 
--   Exécution asynchrone sur les opérations relatives à une connexion. Pour plus d’informations, consultez [exécution asynchrone](http://go.microsoft.com/fwlink/?LinkID=191493).  
+-   Exécution asynchrone sur les opérations relatives à une connexion. Pour plus d’informations, consultez [exécution asynchrone](https://go.microsoft.com/fwlink/?LinkID=191493).  
 
--   C. Extensibilité du type de données Pour plus d’informations, consultez [des Types de données C dans ODBC](http://go.microsoft.com/fwlink/?LinkID=191495).  
+-   C. Extensibilité du type de données Pour plus d’informations, consultez [des Types de données C dans ODBC](https://go.microsoft.com/fwlink/?LinkID=191495).  
 
      Pour prendre en charge cette fonctionnalité dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, SQLGetDescField peut retourner **SQL_C_SS_TIME2** (pour **temps** types) ou **SQL_C_SS_TIMESTAMPOFFSET** (pour **datetimeoffset**) au lieu de **SQL_C_BINARY**, si votre application utilise ODBC 3.8. Pour plus d’informations, consultez [prise en charge du Type de données pour les améliorations ODBC Date / heure](../../relational-databases/native-client-odbc-date-time/data-type-support-for-odbc-date-and-time-improvements.md).  
 
--   Appel **SQLGetData** avec une petite mémoire tampon plusieurs fois afin de récupérer une valeur de paramètre élevée. Pour plus d’informations, consultez [récupération des paramètres de sortie à l’aide de SQLGetData](http://go.microsoft.com/fwlink/?LinkID=191494).  
+-   Appel **SQLGetData** avec une petite mémoire tampon plusieurs fois afin de récupérer une valeur de paramètre élevée. Pour plus d’informations, consultez [récupération des paramètres de sortie à l’aide de SQLGetData](https://go.microsoft.com/fwlink/?LinkID=191494).  
 
  Les rubriques suivantes décrivent des changements de comportement de Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
 

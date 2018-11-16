@@ -14,12 +14,12 @@ ms.assetid: 392de21a-57fa-4a69-8237-ced8ca86ed1d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f781dfcf0bc2d3ca1516cd45e7cddce7922ac348
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5336a318a5384402d10e44b905446e29b0b71aec
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47720617"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606529"
 ---
 # <a name="hide-an-instance-of-sql-server-database-engine"></a>Masquer une instance du moteur de base de données SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,6 +47,6 @@ ms.locfileid: "47720617"
 ## <a name="see-also"></a> Voir aussi  
  [Configuration réseau du serveur](../../database-engine/configure-windows/server-network-configuration.md)   
  [Description des connexions clientes du serveur virtuel SQL](https://support.microsoft.com/kb/273673)   
- [Affectation d’un port statique à une instance nommée SQL Server pour éviter un piège courant](http://blogs.msdn.com/b/arvindsh/archive/2012/09/08/how-to-assign-a-static-port-to-a-sql-server-named-instance-and-avoid-a-common-pitfall.aspx)  
+ [Affectation d’un port statique à une instance nommée SQL Server pour éviter un piège courant](https://blogs.msdn.com/b/arvindsh/archive/2012/09/08/how-to-assign-a-static-port-to-a-sql-server-named-instance-and-avoid-a-common-pitfall.aspx)  
   
   

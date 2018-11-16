@@ -30,12 +30,12 @@ ms.assetid: e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 8137ed37cdbe3bec62e8f7e5a900ade9513894fb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c4bb3d1b6fdc57e1251e9c8ca39f0c7437ffb126
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735183"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51666198"
 ---
 # <a name="converting-access-database-objects-accesstosql"></a>Convertir des objets de base de données Access (AccessToSQL)
 Une fois que vous avez ajouté des bases de données Access et connecté à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure, SSMA affiche les métadonnées pour l’accès et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou objets de base de données SQL Azure. Vous pouvez maintenant sélectionner les objets de base de données Access et puis de convertir les schémas dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou les schémas de SQL Azure.  
@@ -49,7 +49,7 @@ Convertir des objets de base de données accepte les définitions d’objets à 
 Lors de la conversion, SSMA imprime l’état sur le volet de sortie et messages d’erreur, avertissement et d’information vers le volet Liste d’erreurs. Ces informations permettent de déterminer si vous devez modifier vos bases de données Access ou de votre processus de conversion pour obtenir les résultats de la conversion souhaitée. Vous pouvez également utiliser les informations contenues dans le [préparation de bases de données Access pour la Migration](preparing-access-databases-for-migration-accesstosql.md) rubrique pour déterminer ce qui sera et ne seront pas converti.  
   
 ## <a name="setting-conversion-options"></a>Définition des Options de Conversion  
-Avant de convertir des objets, passez en revue les options de conversion de projet dans le **paramètres du projet** boîte de dialogue. À l’aide de cette boîte de dialogue, vous pouvez définir comment SSMA convertit les colonnes Mémo indexées, les clés primaires, les contraintes de clé étrangère, les horodateurs et les tables sans index. Pour plus d’informations, consultez [paramètres du projet (Conversion)](http://msdn.microsoft.com/bcebc635-c638-4ddb-924c-b9ccfef86388)  
+Avant de convertir des objets, passez en revue les options de conversion de projet dans le **paramètres du projet** boîte de dialogue. À l’aide de cette boîte de dialogue, vous pouvez définir comment SSMA convertit les colonnes Mémo indexées, les clés primaires, les contraintes de clé étrangère, les horodateurs et les tables sans index. Pour plus d’informations, consultez [paramètres du projet (Conversion)](https://msdn.microsoft.com/bcebc635-c638-4ddb-924c-b9ccfef86388)  
   
 ## <a name="conversion-results"></a>Résultats de la conversion  
 Le tableau suivant présente les objets d’accès sont convertis et résultant [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou objets de SQL Azure :  

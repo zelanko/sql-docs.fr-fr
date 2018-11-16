@@ -13,12 +13,12 @@ ms.assetid: fe050ca4-fe45-43d7-afa9-99478041f9a8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2e593351cd5ba5f0aa7efb1ced09af98cc40c3a2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 137310a0a8ef7ecf1d76d70b146b1e12ff4a2d5a
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47652377"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638776"
 ---
 # <a name="setup-of-the-data-profiling-task"></a>Configuration de la tâche de profilage des données
   Avant de pouvoir examiner un profil des données sources, vous devez tout d'abord configurer et exécuter la tâche de profilage des données. Vous créez cette tâche dans un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Pour configurer la tâche de profilage des données, vous utilisez l'Éditeur de tâche de profilage de données. Cet éditeur vous permet de sélectionner l'emplacement de sortie des profils et les profils à calculer. Après avoir configuré la tâche, vous exécutez le package pour calculer les profils des données.  
@@ -98,7 +98,7 @@ ms.locfileid: "47652377"
   
 -   pour construire des outils personnalisés qui fonctionnent avec les informations sur la qualité des données.  
   
- L’espace de noms cible est identifié dans le schéma en tant que [http://schemas.microsoft.com/sqlserver/2008/DataDebugger/](http://schemas.microsoft.com/sqlserver/2008/DataDebugger/).  
+ L’espace de noms cible est identifié dans le schéma en tant que [https://schemas.microsoft.com/sqlserver/2008/DataDebugger/](https://schemas.microsoft.com/sqlserver/2008/DataDebugger/).  
   
 ## <a name="next-step"></a>Étape suivante  
  [Visionneuse du profil des données](../../integration-services/control-flow/data-profile-viewer.md).  

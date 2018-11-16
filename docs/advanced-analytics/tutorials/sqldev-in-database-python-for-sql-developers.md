@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 8c992cbda06d158bec0b76d6d46d71157a08cf3e
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
-ms.translationtype: HT
+ms.openlocfilehash: 728ab56a844a6c7a14f5de7e39abc5d38146c85a
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032986"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51560376"
 ---
 # <a name="tutorial-in-database-python-analytics-for-sql-developers"></a>Didacticiel : Analytique en base de données Python pour les développeurs SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -40,7 +40,7 @@ Si vous êtes un programmeur SQL vous débutez avec Python ou Python développeu
 
 + [Leçon 1 : Explorer et visualiser les données à l’aide de Python](sqldev-py3-explore-and-visualize-the-data.md)
 
-+ [Leçon 2 : Créer des données de fonctionnalités à l’aide à l’aide de fonctions SQL personnalisées](sqldev-py4-create-data-features-using-t-sql.md)
++ [Leçon 2 : Créer des fonctionnalités de données à l’aide de fonctions SQL personnalisées](sqldev-py4-create-data-features-using-t-sql.md)
 
 + [Leçon 3 : Former et enregistrer un modèle de Python à l’aide de T-SQL](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 

@@ -11,12 +11,12 @@ author: Minewiskan
 ms.author: owend
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: erikre
-ms.openlocfilehash: 4283b58d3bdf3b74f663a2a6632d5aa00fba2381
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 9d68be09f17fcb9cbd084c5567c7edae87e0ca5a
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50100200"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51605419"
 ---
 # <a name="upgrade-power-pivot-for-sharepoint"></a>Mettre à niveau Power Pivot pour SharePoint
 
@@ -26,7 +26,7 @@ ms.locfileid: "50100200"
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2010 | SharePoint 2013  
   
- Pour obtenir les notes de mise à jour, consultez [Notes de mise à jour pour SQL Server 2016](http://go.microsoft.com/fwlink/?LinkID=398124).  
+ Pour obtenir les notes de mise à jour, consultez [Notes de mise à jour pour SQL Server 2016](https://go.microsoft.com/fwlink/?LinkID=398124).  
   
  **Dans cet article :**  
   
@@ -73,7 +73,7 @@ ms.locfileid: "50100200"
   
  **SharePoint 2010 :**  
   
--   Si l'installation existante exécute SharePoint 2010, installez SharePoint 2010 Service Pack 2 avant la mise à niveau vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]. Pour plus d'informations, consultez [Service Pack 2 pour Microsoft SharePoint 2010](http://www.microsoft.com/download/details.aspx?id=39672). Utilisez la commande PowerShell `(Get-SPfarm).BuildVersion.ToString()` pour vérifier la version. Pour référencer la version de la build à la date de version finale, consultez [Numéros de build SharePoint 2010](http://www.toddklindt.com/blog/Lists/Posts/Post.aspx?ID=224).  
+-   Si l'installation existante exécute SharePoint 2010, installez SharePoint 2010 Service Pack 2 avant la mise à niveau vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]. Pour plus d'informations, consultez [Service Pack 2 pour Microsoft SharePoint 2010](https://www.microsoft.com/download/details.aspx?id=39672). Utilisez la commande PowerShell `(Get-SPfarm).BuildVersion.ToString()` pour vérifier la version. Pour référencer la version de la build à la date de version finale, consultez [Numéros de build SharePoint 2010](https://www.toddklindt.com/blog/Lists/Posts/Post.aspx?ID=224).  
   
 ##  <a name="bkmk_uprgade_sharepoint2013"></a> Mettre à niveau une batterie de serveurs SharePoint 2013 existante  
  Pour mettre à niveau [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] déployé dans SharePoint 2013, procédez comme suit :  
@@ -92,7 +92,7 @@ ms.locfileid: "50100200"
   
 2.  Redémarrez le serveur.  
   
-3.  Exécutez le complément [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint (**spPowerPivot.msi**) sur chaque serveur de la batterie SharePoint 2013 pour installer les fournisseurs de données. Les serveurs sur lesquels vous avez exécuté l'Assistant Installation de SQL Server, qui permet également la mise à niveau des fournisseurs de données, font exception. Pour plus d’informations, consultez [Télécharger Microsoft SQL Server 2014 PowerPivot pour Microsoft SharePoint 2013](https://www.microsoft.com/en-us/download/details.aspx?id=42300) et [Installer ou désinstaller le complément PowerPivot pour SharePoint &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md).  
+3.  Exécutez le complément [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint (**spPowerPivot.msi**) sur chaque serveur de la batterie SharePoint 2013 pour installer les fournisseurs de données. Les serveurs sur lesquels vous avez exécuté l'Assistant Installation de SQL Server, qui permet également la mise à niveau des fournisseurs de données, font exception. Pour plus d’informations, consultez [Télécharger Microsoft SQL Server 2014 PowerPivot pour Microsoft SharePoint 2013](https://www.microsoft.com/download/details.aspx?id=42300) et [Installer ou désinstaller le complément PowerPivot pour SharePoint &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md).  
   
 4.  **Exécutez le complément [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint 2013** sur un des serveurs d’applications SharePoint pour configurer la batterie de serveurs SharePoint avec les fichiers de solution mis à jour installés par le complément. Vous ne pouvez pas utiliser l'Administration centrale SharePoint pour cette étape. Pour plus d'informations, consultez les documents suivants :  
   
@@ -144,7 +144,7 @@ ms.locfileid: "50100200"
   
  ![Mise à niveau de PowerPivot pour SharePoint 2010](../../database-engine/install-windows/media/as-powepivot-upgrade-flow-sharepoint2010.png "Mise à niveau de PowerPivot pour SharePoint 2010")  
   
-1.  Téléchargez le [Service Pack 2 pour Microsoft SharePoint 2010](http://www.microsoft.com/download/details.aspx?id=39672) et appliquez-le sur tous les serveurs de la batterie. Vérifiez que l'installation de SharePoint SP2 a réussi. Dans Administration centrale, dans la page Mise à niveau et migration, ouvrez la page Vérifier l'état d’installation du correctif et du produit pour afficher les messages d'état liés au SP2.  
+1.  Téléchargez le [Service Pack 2 pour Microsoft SharePoint 2010](https://www.microsoft.com/download/details.aspx?id=39672) et appliquez-le sur tous les serveurs de la batterie. Vérifiez que l'installation de SharePoint SP2 a réussi. Dans Administration centrale, dans la page Mise à niveau et migration, ouvrez la page Vérifier l'état d’installation du correctif et du produit pour afficher les messages d'état liés au SP2.  
   
 2.  Vérifiez que le service Windows Administration SharePoint 2010 est en cours d'exécution.  
   
@@ -182,7 +182,7 @@ ms.locfileid: "50100200"
   
          Cliquez sur **Oui** pour remplacer les classeurs par les versions plus récentes. Sinon, cliquez sur **Non** pour revenir à la page d'accueil. Enregistrez les classeurs à un emplacement différent de sorte de disposer d'une copie, puis revenez à cette étape lorsque vous êtes prêt à continuer.  
   
-         Pour plus d’informations sur la personnalisation des classeurs utilisés dans le tableau de bord, consultez [Personnalisation du tableau de bord de gestion Power Pivot](http://go.microsoft.com/fwlink/?linkID=229639).  
+         Pour plus d’informations sur la personnalisation des classeurs utilisés dans le tableau de bord, consultez [Personnalisation du tableau de bord de gestion Power Pivot](https://go.microsoft.com/fwlink/?linkID=229639).  
   
     5.  Passez en revue les actions dans la liste des tâches et excluez celles que l'outil ne doit pas réaliser. Toutes les actions sont incluses par défaut. Pour supprimer une action, sélectionnez-la dans la liste des tâches, puis désactivez la case à cocher **Incluez cette action dans la liste des tâches** sur la page Paramètres.  
   
@@ -351,15 +351,15 @@ Get-PowerPivotSystemService
 |Vérifiez que le service fonctionne sur tous les ordinateurs qui exécutent [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint.|[Démarrer ou arrêter un serveur PowerPivot pour SharePoint](../../analysis-services/power-pivot-sharepoint/start-or-stop-a-power-pivot-for-sharepoint-server.md)|  
 |Vérifiez l'activation des fonctionnalités au niveau de la collection de sites.|[Activer l’intégration des fonctionnalités Power Pivot pour des collections de sites dans l’Administration centrale](../../analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca.md)|  
 |Vérifiez que les classeurs [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] se chargent correctement en ouvrant un classeur et en cliquant sur les filtres et les segments pour initialiser une requête.|Recherchez la présence de fichiers mis en cache sur le disque dur. La présence de fichiers mis en cache confirme que les fichiers de données ont été chargés sur ce serveur physique. Recherchez les fichiers mis en cache dans le dossier c:\Program Files\Microsoft SQL Server\MSAS13.POWERPIVOT\OLAP\Backup.|  
-|Testez l'actualisation des données sur les classeurs sélectionnés configurés pour l'actualisation des données.|La méthode la plus simple pour tester l'actualisation des données consiste à modifier une planification d'actualisation des données, en activant la case à cocher **Aussi actualiser dès que possible** afin que l'actualisation des données s'exécute immédiatement. Cette étape détermine si l'actualisation des données aboutit pour le classeur actuel. Répétez ces étapes pour les autres classeurs fréquemment utilisés pour vous assurer que l'actualisation des données est fonctionnelle. Pour plus d’informations sur la planification de l’actualisation des données, consultez [Planifier une actualisation des données (PowerPivot pour SharePoint)](http://msdn.microsoft.com/8571208f-6aae-4058-83c6-9f916f5e2f9b).|  
+|Testez l'actualisation des données sur les classeurs sélectionnés configurés pour l'actualisation des données.|La méthode la plus simple pour tester l'actualisation des données consiste à modifier une planification d'actualisation des données, en activant la case à cocher **Aussi actualiser dès que possible** afin que l'actualisation des données s'exécute immédiatement. Cette étape détermine si l'actualisation des données aboutit pour le classeur actuel. Répétez ces étapes pour les autres classeurs fréquemment utilisés pour vous assurer que l'actualisation des données est fonctionnelle. Pour plus d’informations sur la planification de l’actualisation des données, consultez [Planifier une actualisation des données (PowerPivot pour SharePoint)](https://msdn.microsoft.com/8571208f-6aae-4058-83c6-9f916f5e2f9b).|  
 |Au fil du temps, vérifiez les rapports d’actualisation des données dans le tableau de bord de gestion [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour vous assurer qu’il n’y a pas d’erreurs d’actualisation des données.|[Tableau de bord de gestion Power Pivot et données d’utilisation](../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)|  
   
  Pour plus d’informations sur la configuration des paramètres et des fonctionnalités [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , consultez [Administration et configuration d’un serveur PowerPivot dans l’Administration centrale](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md).  
   
- Pour des instructions pas à pas qui vous guident dans toutes les tâches de configuration consécutives à l’installation, consultez [Configuration initiale (PowerPivot pour SharePoint)](http://msdn.microsoft.com/3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146).  
+ Pour des instructions pas à pas qui vous guident dans toutes les tâches de configuration consécutives à l’installation, consultez [Configuration initiale (PowerPivot pour SharePoint)](https://msdn.microsoft.com/3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146).  
   
 ## <a name="see-also"></a> Voir aussi  
  [Fonctionnalités prises en charge par les éditions de SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)   
- [Installation de PowerPivot pour SharePoint 2010](http://msdn.microsoft.com/8d47dde7-c941-4280-a934-e2fe3f9a938f)  
+ [Installation de PowerPivot pour SharePoint 2010](https://msdn.microsoft.com/8d47dde7-c941-4280-a934-e2fe3f9a938f)  
   
   

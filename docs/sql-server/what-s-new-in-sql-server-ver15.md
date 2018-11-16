@@ -1,22 +1,20 @@
 ---
 title: Nouveautés de SQL Server 2019 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/06/2018
 ms.prod: sql-server-2018
 ms.reviewer: ''
-ms.technology:
-- server-general
+ms.technology: release-landing
 ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 36a98e8c702b3d3ff772ccf42bdfd56153ddd7fc
-ms.sourcegitcommit: 87fec38a515a7c524b7c99f99bc6f4d338e09846
+ms.openlocfilehash: 55cf8c1bc9a7a74928ebe2f5c0c7060c94068e48
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "51272617"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703907"
 ---
 # <a name="whats-new-in-sql-server-2019"></a>Nouveautés de SQL Server 2019
 
@@ -25,7 +23,7 @@ ms.locfileid: "51272617"
 [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] s’appuie sur les versions précédentes pour faire de SQL Server une plateforme compatible avec de nombreux langages de développement, types de données et systèmes d’exploitation, localement ou sur le cloud. Cet article résume les nouveautés de SQL Server 2019. Pour obtenir plus d’informations et découvrir les problèmes connus, consultez les [Notes de publication de SQL Server 2019](sql-server-ver15-release-notes.md).
 
 **Essayez SQL Server 2019 !**
-- [![Télécharger à partir du Centre d’évaluation](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=862101) [Télécharger SQL Server 2019 en vue de l’installer sur Windows](http://go.microsoft.com/fwlink/?LinkID=862101)
+- [![Télécharger à partir du Centre d’évaluation](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=862101) [Télécharger SQL Server 2019 en vue de l’installer sur Windows](https://go.microsoft.com/fwlink/?LinkID=862101)
 - Installer sur Linux pour [Red Hat Enterprise Server](../linux/quickstart-install-connect-red-hat.md), [SUSE Linux Enterprise Server](../linux/quickstart-install-connect-suse.md) et [Ubuntu](../linux/quickstart-install-connect-ubuntu.md).
 - [Exécuter SQL Server 2019 sur Docker](../linux/quickstart-install-connect-docker.md).
 
@@ -178,7 +176,7 @@ Cette fonctionnalité peut engendrer des économies de stockage importantes, sel
 
   Sans cette fonctionnalité, si une opération de création d’index en ligne échoue, elle doit être réexécutée et redémarrée.
 
-Avec cette version, nous étendons les fonctionnalités pouvant être reprises en ajoutant cette fonctionnalité à la [reconstruction d’index en ligne pouvant être reprise](http://azure.microsoft.com/blog/modernize-index-maintenance-with-resumable-online-index-rebuild/).
+Avec cette version, nous étendons les fonctionnalités pouvant être reprises en ajoutant cette fonctionnalité à la [reconstruction d’index en ligne pouvant être reprise](https://azure.microsoft.com/blog/modernize-index-maintenance-with-resumable-online-index-rebuild/).
 
 En outre, vous pouvez définir cette fonctionnalité comme fonctionnalité par défaut pour une base de données spécifique à l’aide du [paramétrage par défaut au niveau de la base de données pour les opérations DDL en ligne et pouvant être reprises](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
 
@@ -264,7 +262,7 @@ Pour remplacer le paramétrage par défaut, incluez l’option ONLINE ou RESUMAB
 
 Sans cette fonctionnalité, vous devez spécifier les options ONLINE et RESUMABLE directement dans l’instruction DDL telle que la création et la regénération d’index.
 
-Pour plus d’informations sur les opérations d’index pouvant être reprises, consultez [Création d’index en ligne pouvant être reprise](http://azure.microsoft.com/blog/resumable-online-index-create-is-in-public-preview-for-azure-sql-db/).
+Pour plus d’informations sur les opérations d’index pouvant être reprises, consultez [Création d’index en ligne pouvant être reprise](https://azure.microsoft.com/blog/resumable-online-index-create-is-in-public-preview-for-azure-sql-db/).
 
 ### <a id="ha"></a>Groupes de disponibilité Always On : augmentation du nombre de réplicas synchrones (CTP 2.0)
 
@@ -331,7 +329,7 @@ Pour des informations détaillées, consultez [Nouveautés de SQL Server Machine
 
 L’infrastructure du profilage de requête léger fournit les données de performances de requête plus efficacement que les technologies de profilage standard. Le profilage léger est maintenant activé par défaut. Il a été introduit dans [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1. Le profilage léger offre un mécanisme de collecte des statistiques d’exécution des requêtes avec une surcharge attendue de 2 % pour l’UC, par rapport à une surcharge pouvant atteindre 75 % pour l’UC dans le cadre du mécanisme de profilage de requête standard. Sur les versions précédentes, il était désactivé (OFF) par défaut. Les administrateurs de base de données peuvent l’activer avec [l’indicateur de trace 7412](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). 
 
-Pour plus d’informations sur le profilage léger, consultez le billet de blog [Developers Choice: Query progress – anytime, anywhere](http://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/).
+Pour plus d’informations sur le profilage léger, consultez le billet de blog [Developers Choice: Query progress – anytime, anywhere](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/).
 
 ### <a id="polybase"></a>Nouveaux connecteurs PolyBase
 

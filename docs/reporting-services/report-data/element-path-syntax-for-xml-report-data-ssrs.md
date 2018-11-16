@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 07bd7a4e-fd7a-4a72-9344-3258f7c286d1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 543a3fde9b701bf35ee75444092a73f66ba98ae4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 836a043b3047a8116b969cfa8e95f26f1f6282f8
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688347"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813802"
 ---
 # <a name="element-path-syntax-for-xml-report-data-ssrs"></a>Syntaxe du chemin d'accès à l'élément pour des données de rapport XML (SSRS)
   Dans le Concepteur de rapports, vous spécifiez les données à utiliser pour un rapport à partir d'une source de données XML en définissant un chemin d'accès à l'élément qui respecte la casse. Le chemin d'accès à l'élément indique comment parcourir les nœuds hiérarchiques XML et leurs attributs dans la source de données XML. Pour utiliser le chemin de l’élément par défaut, laissez vide la requête du dataset ou le **ElementPath** XML du **Query** XML. Lorsque les données sont extraites de la source de données XML, les nœuds d'élément possédant des valeurs de texte et des attributs de nœud d'élément deviennent des colonnes dans le jeu de résultats. Les valeurs des nœuds et les attributs deviennent les données de ligne lorsque vous exécutez la requête. Les colonnes apparaissent sous la forme de collection de champs de dataset dans le volet des données de rapport. Cette rubrique décrit la syntaxe du chemin d'accès à l'élément.  
@@ -94,10 +94,10 @@ XMLLocalName :: =
   
 |JSON|Qty|ID|FirstName|LastName|Customer.ID|xmlns|  
 |-----------|---------|--------|---------------|--------------|-----------------|-----------|  
-|Chair|6|1|Bobby|Moore|11|http://www.adventure-works.com|  
-|Table de charge de travail|1|2|Bobby|Moore|11|http://www.adventure-works.com|  
-|Sofa|2|8|Crystal|Hu|20|http://www.adventure-works.com|  
-|EndTables|2|15|Wyatt|Diaz|33|http://www.adventure-works.com|  
+|Chair|6|1|Bobby|Moore|11|https://www.adventure-works.com|  
+|Table de charge de travail|1|2|Bobby|Moore|11|https://www.adventure-works.com|  
+|Sofa|2|8|Crystal|Hu|20|https://www.adventure-works.com|  
+|EndTables|2|15|Wyatt|Diaz|33|https://www.adventure-works.com|  
   
  **Exemple 2**: `Customers {}/Customer`  
   
@@ -134,11 +134,11 @@ XMLLocalName :: =
 |15|Wyatt|Diaz|33|  
   
 #### <a name="xml-document-customersxml"></a>Document XML : Customers.xml  
- Pour vous entraîner avec les exemples de chemin d’élément présentés dans la section précédente, vous pouvez copier ce code XML et l’enregistrer dans une URL à laquelle le Concepteur de rapports peut accéder, puis utiliser le document XML comme source de données XML : par exemple, `http://localhost/Customers.xml`.  
+ Pour vous entraîner avec les exemples de chemin d’élément présentés dans la section précédente, vous pouvez copier ce code XML et l’enregistrer dans une URL à laquelle le Concepteur de rapports peut accéder, puis utiliser le document XML comme source de données XML : par exemple, `https://localhost/Customers.xml`.  
   
 ```  
 <?xml version="1.0"?>  
-<Customers xmlns="http://www.adventure-works.com">  
+<Customers xmlns="https://www.adventure-works.com">  
    <Customer ID="11">  
       <FirstName>Bobby</FirstName>  
       <LastName>Moore</LastName>  
