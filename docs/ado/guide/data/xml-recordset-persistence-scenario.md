@@ -13,12 +13,12 @@ ms.assetid: 353d569a-043a-4397-9ee6-564c4af8d5f6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 252df4b5133861b6ff9892600bfe1c53206fefec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 65f4705eb926c116d935384163cffe4f33b11a88
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789217"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600239"
 ---
 # <a name="xml-recordset-persistence-scenario"></a>Scénario de persistance des recordsets XML
 Dans ce scénario, vous allez créer une application Active Server Pages (ASP) qui enregistre le contenu d’un objet Recordset directement à l’objet ASP Response.  
@@ -111,7 +111,7 @@ Dans ce scénario, vous allez créer une application Active Server Pages (ASP) q
 </HTML>  
 ```  
   
- Fermez le fichier default.htm et enregistrez-le dans le même dossier où vous avez enregistré XMLResponse.asp. À l’aide d’Internet Explorer 4.0 ou version ultérieure, ouvrez l’URL http://*sqlserver*/XMLPersist/default.htm et observez les résultats. Les données sont affichées dans un tableau DHTML lié. Ouvrez maintenant l’URL http:// *sqlserver* /XMLPersist/XMLResponse.asp et observez les résultats. Le code XML s’affiche.  
+ Fermez le fichier default.htm et enregistrez-le dans le même dossier où vous avez enregistré XMLResponse.asp. À l’aide d’Internet Explorer 4.0 ou version ultérieure, ouvrez l’URL https://*sqlserver*/XMLPersist/default.htm et observez les résultats. Les données sont affichées dans un tableau DHTML lié. Ouvrez maintenant l’URL https:// *sqlserver* /XMLPersist/XMLResponse.asp et observez les résultats. Le code XML s’affiche.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Save, méthode](../../../ado/reference/ado-api/save-method.md)   

@@ -16,18 +16,18 @@ ms.assetid: 1332035c-d6ed-424d-8234-46ad21168319
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1594b912a8914e253cc89ce236fd26ad7a1c32c5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f6811dc26bf473d5b720f843735f5f2f2ef3bab0
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47693857"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670628"
 ---
 # <a name="debugging-clr-database-objects"></a>Débogage d'objets de base de données CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge le débogage d'objets [!INCLUDE[tsql](../../includes/tsql-md.md)] et CLR dans la base de données. Les principaux atouts du débogage dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont la facilité d'installation et d'utilisation, et l'intégration du débogueur SQL Server avec le débogueur Microsoft Visual Studio. En outre, le débogage fonctionne sur plusieurs langages. Les utilisateurs peuvent effectuer de façon transparente un pas à pas détaillé dans les objets CLR à partir de [!INCLUDE[tsql](../../includes/tsql-md.md)] et vice versa. Le débogueur Transact-SQL dans SQL Server Management Studio ne peut pas être utilisé pour déboguer des objets de base de données managés, mais vous pouvez déboguer les objets en utilisant les débogueurs de Visual Studio. Le débogage d'objets de base de données managés dans Visual Studio prend en charge toutes les fonctionnalités de débogage classiques, par exemple, les instructions "step into" et "step over" dans les routines qui s'exécutent sur le serveur. Les débogueurs peuvent définir des points d'arrêt, inspecter la pile des appels, inspecter les variables et modifier des valeurs de variables en cours de débogage. Notez que Visual Studio .NET 2003 ne peut pas être utilisé pour le débogage ou la programmation de l'intégration du CLR. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inclut le .NET Framework préinstallé et Visual Studio .NET 2003 ne peut pas utiliser les assemblys .NET Framework 2.0.  
   
- Pour plus d’informations sur le débogage du code managé à l’aide de Visual Studio, consultez le «[Debugging Managed Code](http://go.microsoft.com/fwlink/?LinkId=120377)« rubrique dans la documentation de Visual Studio.  
+ Pour plus d’informations sur le débogage du code managé à l’aide de Visual Studio, consultez le «[Debugging Managed Code](https://go.microsoft.com/fwlink/?LinkId=120377)« rubrique dans la documentation de Visual Studio.  
   
 ## <a name="debugging-permissions-and-restrictions"></a>Autorisations et restrictions de débogage  
  Le débogage est une opération disposant de privilèges élevés et par conséquent, seuls les membres de la **sysadmin** rôle serveur fixe sont autorisés à effectuer dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -43,7 +43,7 @@ ms.locfileid: "47693857"
 ## <a name="overview-of-debugging-managed-database-objects"></a>Vue d'ensemble du débogage des objets de base de données managés  
  Le débogage dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] suit un modèle « par connexion ». Un débogueur peut détecter et déboguer des activités uniquement sur la connexion cliente à laquelle il est attaché. Comme les fonctionnalités du débogueur ne sont pas limitées par le type de connexion, il est possible de déboguer à la fois des TDS (Tabular Data Stream) et des connexions HTTP. Toutefois, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'autorise pas le débogage des connexions existantes. Le débogage prend en charge toutes les fonctionnalités de débogage communes dans les routines qui s'exécutent sur le serveur. L'interaction entre un débogueur et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'effectue par le biais d'un modèle COM (Component Object Model) distribué.  
   
- Pour plus d’informations et des scénarios de débogage des procédures stockées managées, les fonctions, les déclencheurs, les types définis par l’utilisateur et les agrégats, consultez le «[débogage pour la base de données SQL Server CLR Integration](http://go.microsoft.com/fwlink/?LinkId=120378)« rubrique dans Visual Studio documentation.  
+ Pour plus d’informations et des scénarios de débogage des procédures stockées managées, les fonctions, les déclencheurs, les types définis par l’utilisateur et les agrégats, consultez le «[débogage pour la base de données SQL Server CLR Integration](https://go.microsoft.com/fwlink/?LinkId=120378)« rubrique dans Visual Studio documentation.  
   
  Le protocole réseau TCP/IP doit être activé sur l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] afin d'utiliser Visual Studio pour le développement et le débogage distants. Pour plus d’informations sur l’activation du protocole TCP/IP sur le serveur, consultez [configurer des protocoles clients](../../database-engine/configure-windows/configure-client-protocols.md).  
   

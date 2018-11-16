@@ -11,12 +11,12 @@ ms.assetid: a1454493-1c86-46c2-ada8-d3c6fcdaf3c1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 41c340d2d84e80100788ae2d797a37fd048e4264
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 629ba98b4b30f5000cac7366f5b558e925cf20cf
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735518"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600009"
 ---
 # <a name="step-2-initialize-the-main-list-box"></a>Étape 2 : Initialiser la zone de liste principale
 Pour déclarer des objets globaux d’enregistrement et le jeu d’enregistrements, insérez le code suivant dans (général) (déclarations) pour Form1 :  
@@ -34,19 +34,19 @@ Dim grs As Recordset
   
 ```  
 Private Sub Form_Load()  
-    Set grec = New Record  
-    Set grs = New Recordset  
-    grec.Open "", "URL=http://servername/foldername/", , _  
-        adOpenIfExists Or adCreateCollection  
-    Set grs = grec.GetChildren  
-    While Not grs.EOF  
-        lstMain.AddItem grs(0)  
-        grs.MoveNext  
-    Wend  
+    Set grec = New Record  
+    Set grs = New Recordset  
+    grec.Open "", "URL=https://servername/foldername/", , _  
+        adOpenIfExists Or adCreateCollection  
+    Set grs = grec.GetChildren  
+    While Not grs.EOF  
+        lstMain.AddItem grs(0)  
+        grs.MoveNext  
+    Wend  
 End Sub  
 ```  
   
- Ce code instancie les objets globaux de l’enregistrement et le jeu d’enregistrements. L’objet Record, `grec`, est ouvert avec une URL spécifiée comme ActiveConnection. Si l’URL existe, il est ouvert ; Si elle n’existe pas déjà, il est créé. Notez que vous devez remplacer « http://servername/foldername/» avec une URL valide à partir de votre environnement.  
+ Ce code instancie les objets globaux de l’enregistrement et le jeu d’enregistrements. L’objet Record, `grec`, est ouvert avec une URL spécifiée comme ActiveConnection. Si l’URL existe, il est ouvert ; Si elle n’existe pas déjà, il est créé. Notez que vous devez remplacer « https://servername/foldername/» avec une URL valide à partir de votre environnement.  
   
  L’objet Recordset, `grs`, est ouvert sur les enfants de l’enregistrement, `grec`. Puis `lstMain` est rempli avec les noms de fichier des ressources publiées à l’URL.  
   

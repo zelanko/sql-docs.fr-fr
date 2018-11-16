@@ -44,8 +44,8 @@ Avant de créer le groupe de disponibilité, vous devez :
    L’exemple suivant montre `/etc/hosts` sur **node1** avec des ajouts pour **node1**, **node2** et **node3**. Dans ce document, **node1** fait référence au serveur qui héberge le réplica principal. Et **node2** et **node3** font référence aux serveurs qui hébergent les réplicas secondaires.
 
     ```
-    127.0.0.1   localhost localhost4 localhost4.localdomain4
-    ::1       localhost localhost6 localhost6.localdomain6
+    127.0.0.1   localhost localhost4 localhost4.localdomain4
+    ::1       localhost localhost6 localhost6.localdomain6
     10.128.18.12 node1
     10.128.16.77 node2
     10.128.15.33 node3
@@ -77,7 +77,7 @@ ALTER EVENT SESSION  AlwaysOn_health ON SERVER WITH (STARTUP_STATE=ON);
 GO
 ```
 
-Pour plus d’informations sur cette session XE, consultez [AlwaysOn événements étendus](http://msdn.microsoft.com/library/dn135324.aspx).
+Pour plus d’informations sur cette session XE, consultez [AlwaysOn événements étendus](https://msdn.microsoft.com/library/dn135324.aspx).
 
 ## <a name="create-a-certificate"></a>Créer un certificat
 
@@ -166,6 +166,6 @@ Le port TCP sur le pare-feu doit être ouvert pour le port de l’écouteur.
 >[!IMPORTANT]
 >Pour la version de SQL Server 2017, la seule méthode d’authentification pris en charge pour le point de terminaison de mise en miroir de base de données est `CERTIFICATE`. Le `WINDOWS` option est activée dans une version ultérieure.
 
-Pour plus d’informations, consultez [Point de terminaison de mise en miroir de bases de données (SQL Server)](http://msdn.microsoft.com/library/ms179511.aspx).
+Pour plus d’informations, consultez [Point de terminaison de mise en miroir de bases de données (SQL Server)](https://msdn.microsoft.com/library/ms179511.aspx).
 
 

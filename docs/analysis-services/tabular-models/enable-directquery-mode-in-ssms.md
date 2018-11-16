@@ -1,5 +1,5 @@
 ---
-title: Activer le mode DirectQuery dans SSMS | Documents Microsoft
+title: Activer le mode DirectQuery dans SSMS | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e643f90a5df9b113f2fd59a2328868131bf9c63d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: c0a6ddb7b06cf325235f3d3998b0f57d640667a9
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34045123"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700587"
 ---
 # <a name="enable-directquery-mode-in-ssms"></a>Activer le mode DirectQuery dans SSMS
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "34045123"
   
  Dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], les étapes de configuration de DirectQuery varient en fonction du niveau de compatibilité du modèle. Vous trouverez ci-dessous des étapes qui fonctionnent pour tous les niveaux de compatibilité.  
   
- Cet article suppose que vous avez créé et validé un modèle tabulaire en mémoire au niveau de compatibilité 1200 ou supérieur et seul est nécessaire pour activer l’accès de DirectQuery et de mettre à jour les chaînes de connexion. Si vous démarrez à partir d’un niveau de compatibilité inférieur, vous devez commencer par mettre à niveau le modèle manuellement. Pour connaître la procédure à suivre, consultez [Mettre à niveau Analysis Services](../../database-engine/install-windows/upgrade-analysis-services.md) .  
+ Cet article suppose que vous avez créé et validé un modèle tabulaire en mémoire au niveau de compatibilité 1200 ou supérieur et n’ont besoin pour activer l’accès de DirectQuery et de mettre à jour les chaînes de connexion. Si vous démarrez à partir d’un niveau de compatibilité inférieur, vous devez commencer par mettre à niveau le modèle manuellement. Pour connaître la procédure à suivre, consultez [Mettre à niveau Analysis Services](../../database-engine/install-windows/upgrade-analysis-services.md) .  
   
 > [!IMPORTANT]  
 >  Nous vous recommandons d’utiliser [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] au lieu de Management Studio pour basculer entre les modes de stockage de données. Lorsque vous utilisez  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] pour modifier le modèle, puis procédez au déploiement sur le serveur, le modèle et la base de données restent synchronisés. En outre, la modification des modes de stockage dans le modèle vous permet de consulter toutes les erreurs de validation qui se produisent. Lorsque vous utilisez [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] de la manière décrite dans cet article, les erreurs de validation ne sont pas signalées.  
@@ -128,6 +128,6 @@ ms.locfileid: "34045123"
  [Niveau de compatibilité](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)   
  [Sources de données prises en charge](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)   
  [Événements étendus](../../relational-databases/extended-events/extended-events.md)   
- [Surveiller une instance Analysis Services](../../analysis-services/instances/monitor-an-analysis-services-instance.md)  
+
   
   

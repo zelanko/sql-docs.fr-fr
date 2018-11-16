@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f6117efa06effea24fda8fac4c1567bbe8a6c390
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 050269e2c7183c8b4c318749bc3adc93be056119
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47697767"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51664828"
 ---
 # <a name="sqlcolumns"></a>SQLColumns
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "47697767"
   
  **SQLColumns** peut être exécutée sur un curseur côté serveur statique. Une tentative d’exécution **SQLColumns** sur un curseur modifiable (dynamique ou jeu de clés) retourne SQL_SUCCESS_WITH_INFO, indiquant que le type de curseur a été modifié.  
   
- Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client prend en charge des informations de rapport pour les tables des serveurs liés en acceptant un nom en deux parties pour le *CatalogName* paramètre : *nom_serveur_lié.Nom_Catalogue*.  
+ Le pilote ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client prend en charge les informations de création de rapport pour les tables des serveurs liés en acceptant un nom en deux parties pour le paramètre *CatalogName* : *Linked_Server_Name.Catalog_Name*.  
   
  Pour ODBC 2. *x* ne pas à l’aide de caractères génériques dans les applications *TableName*, **SQLColumns** retourne des informations sur les tables dont les noms correspondent à *TableName*et sont détenus par l’utilisateur actuel. Si l’utilisateur actuel ne possède aucune table dont le nom correspond à la *TableName* paramètre, **SQLColumns** retourne des informations sur toutes les tables possédées par d’autres utilisateurs dont le nom de la table correspond à la  *TableName* paramètre. Pour ODBC 2. *x* applications à l’aide des caractères génériques, **SQLColumns** retourne toutes les tables dont les noms correspondent à *TableName*. Pour ODBC 3. *x* applications **SQLColumns** retourne toutes les tables dont les noms correspondent à *TableName* , quel que soit le propriétaire ou indique si les caractères génériques sont utilisés.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "47697767"
  Pour plus d’informations sur les colonnes éparses dans ODBC, consultez [Sparse Columns Support &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [SQLColumns (fonction)](http://go.microsoft.com/fwlink/?LinkId=59336)   
+ [SQLColumns (fonction)](https://go.microsoft.com/fwlink/?LinkId=59336)   
  [Détails de l’implémentation d’API ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

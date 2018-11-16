@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/09/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +14,12 @@ ms.assetid: 80676831-6488-4dad-a558-c47c52256a22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 64570b9a6f2052fdc3f9e5544a442853110587b8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5e3b29fd5f4fab7e487be5be18752ac7de892537
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613147"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51560296"
 ---
 # <a name="address-book-command-buttons"></a>Boutons de commande de l’application Carnet d’adresses
 L’application de carnet d’adresses comprend les boutons de commande suivants :  
@@ -33,7 +33,7 @@ L’application de carnet d’adresses comprend les boutons de commande suivants
 -   Un **annuler les modifications** bouton pour ignorer les modifications.  
   
 > [!IMPORTANT]
->  Depuis Windows 8 et Windows Server 2012, composants de serveur Services Bureau à distance ne sont plus inclus dans le système d’exploitation Windows (voir Windows 8 et [Guide de compatibilité de Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) pour plus de détails). Composants du client RDS seront supprimées dans une future version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent des services Bureau à distance doivent migrer vers [Service de données WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Depuis Windows 8 et Windows Server 2012, composants de serveur Services Bureau à distance ne sont plus inclus dans le système d’exploitation Windows (voir Windows 8 et [Guide de compatibilité de Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) pour plus de détails). Composants du client RDS seront supprimées dans une future version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent des services Bureau à distance doivent migrer vers [Service de données WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="find-button"></a>Bouton Rechercher  
  En cliquant sur le **trouver** bouton Active la procédure Sub Find_OnClick de VBScript qui génère et envoie la requête SQL. Cliquez sur ce bouton remplit la grille de données.  
@@ -45,7 +45,7 @@ L’application de carnet d’adresses comprend les boutons de commande suivants
   
  Par exemple, si le **nom** boîte contenue l’entrée « Berge » et le **titre** boîte contenue l’entrée « Program Manager », l’instruction SQL (valeur de `myQuery`) lit :  
   
-```  
+```sql
 Select FirstName, LastName, Title, Email, Building, Room, Phone from Employee where lastname like 'Berge%' and title like 'Program Manager%'  
 ```  
   
@@ -54,7 +54,7 @@ Select FirstName, LastName, Title, Email, Building, Room, Phone from Employee wh
 ## <a name="preparing-and-sending-the-query"></a>Préparation et l’envoi de la requête  
  La dernière partie de la procédure Sub « Find_OnClick » se compose de deux instructions. La première instruction affecte le [SQL](../../../ado/reference/rds-api/sql-property.md) propriété de la [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) à l’objet. La deuxième instruction provoque la **RDS. DataControl** objet (`DC1`) pour interroger la base de données et afficher les nouveaux résultats de la requête dans la grille.  
   
-```  
+```vb
 Sub Find_OnClick  
    '...  
    DC1.SQL = myQuery  
@@ -65,7 +65,7 @@ End Sub
 ## <a name="update-profile-button"></a>Bouton de mise à jour le profil  
  En cliquant sur le **profil de mise à jour** bouton Active la procédure Sub Update_OnClick de VBScript qui exécute le [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) l’objet (`DC1`) [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md) et [Actualiser](../../../ado/reference/rds-api/refresh-method-rds.md) méthodes.  
   
-```  
+```vb
 Sub Update_OnClick  
    DC1.SubmitChanges  
    DC1.Refresh  
@@ -77,7 +77,7 @@ End Sub
 ## <a name="cancel-changes-button"></a>Modifications bouton Annuler  
  En cliquant sur **annuler les modifications** Active la procédure Sub Cancel_OnClick de VBScript qui exécute le [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) l’objet (`DC1)` [CancelUpdate](../../../ado/reference/rds-api/cancelupdate-method-rds.md) (méthode).  
   
-```  
+```vb
 Sub Cancel_OnClick  
    DC1.CancelUpdate  
 End Sub  

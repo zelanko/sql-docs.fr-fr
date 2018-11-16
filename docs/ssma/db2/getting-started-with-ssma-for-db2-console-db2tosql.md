@@ -10,12 +10,12 @@ ms.assetid: f245c017-023e-4880-8721-8908d339525e
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 472f830f41c5cc9d250a26b8e2612b7c0a6b68b9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3b8417d75ab0a08532dd073b3ce7f803b3f7490c
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47728760"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51668298"
 ---
 # <a name="getting-started-with-ssma--for-db2-console-db2tosql"></a>Bien démarrer avec SSMA pour DB2 Console (DB2ToSQL)
 Cette section décrit la procédure pour lancer et de vous familiariser avec l’application de console DB2. Dans la liste, dans le présent document, sont les conventions utilisées dans une fenêtre de sortie de Console SSMA classique.  
@@ -42,9 +42,9 @@ Une fois que la console est lancée avec succès sur votre système Windows, vou
   
 Fonctionnalités supplémentaires :  
   
-1.  [La gestion des mots de passe](http://msdn.microsoft.com/56d546e3-8747-4169-aace-693302667e94) et exporter / importer sur d’autres ordinateurs de la fenêtre  
+1.  [La gestion des mots de passe](https://msdn.microsoft.com/56d546e3-8747-4169-aace-693302667e94) et exporter / importer sur d’autres ordinateurs de la fenêtre  
   
-2.  [Génération de rapports](http://msdn.microsoft.com/69ef5fd9-190d-4c58-8199-b3f77d5e1883) pour afficher le code xml détaillé des rapports pour évaluation /conversion et migration des données de sortie. Rapports d’erreurs détaillées peuvent également être générées pour les commandes Actualiser et la synchronisation.  
+2.  [Génération de rapports](https://msdn.microsoft.com/69ef5fd9-190d-4c58-8199-b3f77d5e1883) pour afficher le code xml détaillé des rapports pour évaluation /conversion et migration des données de sortie. Rapports d’erreurs détaillées peuvent également être générées pour les commandes Actualiser et la synchronisation.  
   
 ## <a name="ssma-console-output-conventions"></a>Conventions de sortie de Console SSMA  
 Lors de l’exécution les commandes de script SSMA et options, le programme de console affiche les résultats et les messages (information, erreur, etc.) à l’utilisateur sur la console ou le cas échéant, redirige vers un fichier de sortie xml. Chaque type de message dans la sortie est signifié par une couleur unique. Par exemple, le message texte en couleur blanche indique les commandes du fichier de script ; celui de couleur verte représente une invite pour les entrées d’utilisateur et ainsi de suite.  
@@ -63,5 +63,5 @@ Interprétation de couleur de la sortie de console dans le tableau suivant :
 |Cyan|Guide de démarrage, terminer et le résultat d’une opération|  
   
 ## <a name="see-also"></a>Voir aussi  
-[Installation de SSMA pour DB2](http://msdn.microsoft.com/79fbe8ea-471b-407a-be2a-4100d9b57c61)  
+[Installation de SSMA pour DB2](https://msdn.microsoft.com/79fbe8ea-471b-407a-be2a-4100d9b57c61)  
   

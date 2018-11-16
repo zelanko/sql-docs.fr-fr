@@ -14,12 +14,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 838e28849a75db0f35a1917784a221987160650d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7325d9a9093e1b62ecf8564ca10c31499d915a45
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47639287"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51671308"
 ---
 # <a name="creating-altering-and-removing-indexes"></a>Création, modification et suppression d'index
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -188,7 +188,7 @@ $idx.Drop();
 ```  
   
 ## <a name="creating-an-xml-index-in-visual-basic"></a>Création d'un index XML en Visual Basic  
- Cet exemple de code montre comment créer un index XML sur un type de données XML. Le type de données XML est une collection de schémas XML appelée MySampleCollection, créée dans [à l’aide des schémas XML](../../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md). Les index XML présentent quelques restrictions, notamment ils doivent être créés sur une table possédant déjà une clé primaire en cluster.  
+ Cet exemple de code montre comment créer un index XML sur un type de données XML. Le type de données XML est une collection de schémas XML appelée MySampleCollection, créée dans [Using XML Schemas](../../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md). Les index XML présentent quelques restrictions, notamment ils doivent être créés sur une table possédant déjà une clé primaire en cluster.  
   
 ```  
 ' /r:Microsoft.SqlServer.Smo.dll  
@@ -208,7 +208,7 @@ Public Class A
         Dim tb As New Table(db1, "XmlTable3")  
   
         Dim mySample As New XmlSchemaCollection(db1, "Sample4", "dbo")  
-        mySample.Text = "<xsd:schema xmlns:xsd=""http://www.w3.org/2001/XMLSchema"" targetNamespace=""NS2""> <xsd:element name=""elem1"" type=""xsd:integer""/></xsd:schema>"  
+        mySample.Text = "<xsd:schema xmlns:xsd=""https://www.w3.org/2001/XMLSchema"" targetNamespace=""NS2""> <xsd:element name=""elem1"" type=""xsd:integer""/></xsd:schema>"  
         mySample.Create()  
   
         Dim col11 As Column  
@@ -251,7 +251,7 @@ End Class
 ```  
   
 ## <a name="creating-an-xml-index-in-visual-c"></a>Création d'un index XML en Visual C#  
- Cet exemple de code montre comment créer un index XML sur un type de données XML. Le type de données XML est une collection de schémas XML appelée MySampleCollection, créée dans [à l’aide des schémas XML](../../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md). Les index XML présentent quelques restrictions, notamment ils doivent être créés sur une table possédant déjà une clé primaire en cluster.  
+ Cet exemple de code montre comment créer un index XML sur un type de données XML. Le type de données XML est une collection de schémas XML appelée MySampleCollection, créée dans [Using XML Schemas](../../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md). Les index XML présentent quelques restrictions, notamment ils doivent être créés sur une table possédant déjà une clé primaire en cluster.  
   
 ```  
 // /r:Microsoft.SqlServer.Smo.dll  
@@ -271,7 +271,7 @@ public class A {
       Table tb = new Table(db1, "XmlTable3");  
   
       XmlSchemaCollection mySample = new XmlSchemaCollection(db1, "Sample4", "dbo");  
-      mySample.Text = "<xsd:schema xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" targetNamespace=\"NS2\"> <xsd:element name=\"elem1\" type=\"xsd:integer\"/></xsd:schema>";  
+      mySample.Text = "<xsd:schema xmlns:xsd=\"https://www.w3.org/2001/XMLSchema\" targetNamespace=\"NS2\"> <xsd:element name=\"elem1\" type=\"xsd:integer\"/></xsd:schema>";  
       mySample.Create();  
   
       Column col11;  
@@ -314,7 +314,7 @@ public class A {
 ```  
   
 ## <a name="creating-an-xml-index-in-powershell"></a>Création d'un index XML dans PowerShell  
- Cet exemple de code montre comment créer un index XML sur un type de données XML. Le type de données XML est une collection de schémas XML appelée MySampleCollection, créée dans [à l’aide des schémas XML](../../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md). Les index XML présentent quelques restrictions, notamment ils doivent être créés sur une table possédant déjà une clé primaire en cluster.  
+ Cet exemple de code montre comment créer un index XML sur un type de données XML. Le type de données XML est une collection de schémas XML appelée MySampleCollection, créée dans [Using XML Schemas](../../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md). Les index XML présentent quelques restrictions, notamment ils doivent être créés sur une table possédant déjà une clé primaire en cluster.  
   
 ```  
 # Set the path context to the local, default instance of SQL Server and get a reference to adventureworks2012  

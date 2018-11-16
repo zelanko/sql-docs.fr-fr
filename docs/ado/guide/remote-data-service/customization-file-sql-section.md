@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/09/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,18 +14,18 @@ ms.assetid: e65c2871-9986-44ff-b8b7-7f5eda91b3fa
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 36f6eec4b8203848dc6f4b8c99597f22c9cedeab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5efa6587ade3a15ce4b45b7247da1c3a896f69ee
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47625877"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51558526"
 ---
 # <a name="customization-file-sql-section"></a>Fichier de personnalisation, section SQL
 Le **sql** section peut contenir une nouvelle chaîne SQL qui remplace la chaîne de commande client. S’il n’existe aucune chaîne SQL dans la section, la section sera ignorée.  
   
 > [!IMPORTANT]
->  Depuis Windows 8 et Windows Server 2012, composants de serveur Services Bureau à distance ne sont plus inclus dans le système d’exploitation Windows (voir Windows 8 et [Guide de compatibilité de Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) pour plus de détails). Composants du client RDS seront supprimées dans une future version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent des services Bureau à distance doivent migrer vers [Service de données WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Depuis Windows 8 et Windows Server 2012, composants de serveur Services Bureau à distance ne sont plus inclus dans le système d’exploitation Windows (voir Windows 8 et [Guide de compatibilité de Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) pour plus de détails). Composants du client RDS seront supprimées dans une future version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent des services Bureau à distance doivent migrer vers [Service de données WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
  La nouvelle chaîne SQL peut être *paramétrable*. Autrement dit, les paramètres dans le **sql** section chaîne SQL (désigné par le ' ?' caractère) peuvent être remplacés par les arguments correspondants dans un *identificateur* dans la chaîne de commande client (désigné par un délimitée par des virgules liste entre parenthèses). L’identificateur et une liste d’arguments se comportent comme un appel de fonction.  
   
@@ -35,7 +35,7 @@ Le **sql** section peut contenir une nouvelle chaîne SQL qui remplace la chaîn
   
  Si la nouvelle chaîne d’instruction SQL n’est pas valide, l’exécution de l’instruction échoue. Le paramètre client est ignoré. Vous pouvez effectuer cela intentionnellement pour « désactiver » toutes les commandes SQL de client en spécifiant :  
   
-```  
+```console
 [SQL default]   
 SQL = " "  
 ```  

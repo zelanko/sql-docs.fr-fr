@@ -13,12 +13,12 @@ ms.assetid: f941cce4-d3e3-4aeb-a88a-4f101a97a9f4
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: f0390360aef76b15c9743780eff787dd0a2d275d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 04e58ec9c40f62932c4a711c1e96c0bd4e8162e2
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676497"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51666168"
 ---
 # <a name="using-test-repositories-oracletosql"></a>Utilisation de référentiels de tests (OracleToSQL)
 Les magasins de référentiel de Test de SSMA SSMA testeur de cas de test et les résultats des tests pour une utilisation ultérieure. Les données de référentiel sont enregistrées dans les tables SQL Server **TestCaseRepository** et **RunTestCaseResultRepository** dans le schéma **ssma_oracle_utilities** de **ssmatesterdb** base de données.  
@@ -50,7 +50,7 @@ Les boutons suivants sont disponibles sur la page de cas de Test :
   
 -   Cliquez sur le **modifier** bouton pour exécuter l’Assistant de cas de Test et de modifier le test sélectionné.  
   
--   Cliquez sur le **exécuter** bouton pour ouvrir la [en cours d’exécution de cas de Test (OracleToSQL)](http://msdn.microsoft.com/fc208cdb-7373-4f6b-8f6c-cdff9d3dcd02) boîte de dialogue et exécuter le test sélectionné.  
+-   Cliquez sur le **exécuter** bouton pour ouvrir la [en cours d’exécution de cas de Test (OracleToSQL)](https://msdn.microsoft.com/fc208cdb-7373-4f6b-8f6c-cdff9d3dcd02) boîte de dialogue et exécuter le test sélectionné.  
   
 ## <a name="test-results-repository"></a>Référentiel des résultats des tests  
 Vous pouvez afficher le référentiel des résultats des tests sur le **résultats des tests** page de la **référentiel de cas de Test** fenêtre. Ouvrez-le en cliquant sur **résultats des tests...** à partir de la **testeur** menu.  

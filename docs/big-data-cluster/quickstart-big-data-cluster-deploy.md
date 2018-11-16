@@ -7,12 +7,12 @@ manager: craigg
 ms.date: 11/06/2018
 ms.topic: quickstart
 ms.prod: sql
-ms.openlocfilehash: efa3d06feb138445c3e55e5d2ea3da7e60f3da20
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.openlocfilehash: c25474a30ace6ed6e1ab0560f1b3746a071690ef
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51269554"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697037"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Démarrage rapide : Déployer le cluster de données volumineux de SQL Server sur Azure Kubernetes Service (AKS)
 
@@ -56,7 +56,7 @@ Définition des variables d’environnement requises pour le déploiement de clu
 
 Avant de continuer, notez les instructions importantes suivantes :
 
-- Dans le [fenêtre de commande](http://docs.microsoft.com/visualstudio/ide/reference/command-window), guillemets doubles sont inclus dans les variables d’environnement. Si vous utilisez des guillemets pour encapsuler un mot de passe, les guillemets sont inclus dans le mot de passe.
+- Dans le [fenêtre de commande](https://docs.microsoft.com/visualstudio/ide/reference/command-window), guillemets doubles sont inclus dans les variables d’environnement. Si vous utilisez des guillemets pour encapsuler un mot de passe, les guillemets sont inclus dans le mot de passe.
 - Dans bash, les guillemets ne sont pas inclus dans la variable. Nos exemples utilisent des guillemets doubles `"`.
 - Vous pouvez définir les variables d’environnement le mot de passe à comme vous le souhaitez, mais assurez-vous qu’ils sont suffisamment complexes et n’utilisent pas le `!`, `&`, ou `'` caractères.
 - Pour la version CTP 2.1, ne modifiez pas les ports par défaut.

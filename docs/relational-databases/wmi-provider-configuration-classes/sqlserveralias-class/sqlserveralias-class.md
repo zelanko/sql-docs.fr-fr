@@ -18,12 +18,12 @@ ms.assetid: 475662b9-6985-45bf-b1e9-b0f26ef50443
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 75ca27fc8c035a2b62cc70bbf740dd746f341d45
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 91c7333f47306da90d634e45f50df44d1b6ae0f2
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603527"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51675328"
 ---
 # <a name="sqlserveralias-class"></a>Classe SqlServerAlias
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,6 +38,6 @@ ms.locfileid: "47603527"
  **Remarque :** la [classe SqlServerAlias](../../../relational-databases/wmi-provider-configuration-classes/sqlserveralias-class/sqlserveralias-class.md) hérite la méthode **Put** de la classe Provider. Toutefois, elle ne retourne pas de résultats comme indiqué par la méthode **Provider::Put** . Pour plus d'informations, consultez la documentation relative à WMI.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Configurer des protocoles clients](http://technet.microsoft.com/library/ms181035.aspx)  
+ [Configurer des protocoles clients](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

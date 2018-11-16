@@ -1,5 +1,5 @@
 ---
-title: SELECT FROM &lt;modèle&gt;. CAS (DMX) | Documents Microsoft
+title: SELECT FROM &lt;modèle&gt;. CAS (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: bba9e354eb1925ed4175f720f8008550364dc1a5
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.openlocfilehash: 4f65aa4dc64e795235286eccd9f3283216ba6f4f
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842802"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51604231"
 ---
 # <a name="select-from-ltmodelgtcases-dmx"></a>SELECT FROM &lt;modèle&gt;. CAS (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -48,7 +48,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CASES
  *model*  
  Identificateur du modèle  
   
- *Expression de condition*  
+ *expression de condition*  
  Condition pour restreindre les valeurs retournées de la liste des colonnes.  
   
  *expression*  
@@ -57,12 +57,12 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CASES
 ## <a name="remarks"></a>Notes  
  Si l'extraction est activée à la fois sur le modèle d'exploration de données et la structure d'exploration de données, les utilisateurs membres d'un rôle qui a des autorisations d'extraction sur le modèle et la structure peuvent accéder aux colonnes de la structure d'exploration de données qui ne sont pas incluses dans le modèle d'exploration de données. Par conséquent, pour protéger les données sensibles ou personnelles, vous devez construire votre vue de source de données pour masquer les informations personnelles et accorder **AllowDrillthrough** autorisation sur une structure d’exploration de données uniquement lorsque cela est nécessaire.  
   
- Le [Lag &#40;DMX&#41; ](../dmx/lag-dmx.md) fonction peut être utilisée avec les modèles de série chronologique pour retourner ou filtrer sur le délai entre chaque cas et la durée initiale.  
+ Le [Lag &#40;DMX&#41; ](../dmx/lag-dmx.md) fonction peut être utilisée avec des modèles de série chronologique à retourner ou filtrer sur le délai entre chaque cas et la durée initiale.  
   
- À l’aide de la [IsInNode &#40;DMX&#41; ](../dmx/isinnode-dmx.md) de fonction dans le **où** clause retourne uniquement les cas qui sont associées au nœud qui est spécifié par la colonne NODE_UNIQUE_NAME de l’ensemble de lignes de schéma.  
+ À l’aide de la [IsInNode &#40;DMX&#41; ](../dmx/isinnode-dmx.md) fonctionner dans le **où** clause retourne uniquement les cas qui sont associées au nœud qui est spécifié par la colonne NODE_UNIQUE_NAME de l’ensemble de lignes de schéma.  
   
 ## <a name="examples"></a>Exemples  
- Les exemples suivants sont basés sur la structure d’exploration de données Targeted Mailing, qui est basé sur le [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]de base de données et ses modèles d’exploration de données associée. Pour plus d’informations, consultez [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
+ Les exemples suivants sont basés sur la structure d’exploration de données Targeted Mailing, qui est basé sur le [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]base de données et ses modèles d’exploration de données associée. Pour plus d’informations, consultez [Basic Data Mining Tutorial](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
   
 ### <a name="example-1-drillthrough-to-model-cases-and-structure-columns"></a>Exemple 1 : Extraction dans des cas de modèles et des colonnes de structure  
  L'exemple suivant retourne les colonnes de tous les cas qui ont été utilisés pour tester le modèle Targeted Mailing. Si la structure d'exploration de données sur laquelle le modèle est construit ne possède pas de jeu de données du test d'exclusion, cette requête retourne 0 cas. Vous pouvez utiliser la liste d'expressions pour retourner uniquement les colonnes dont vous avez besoin.  
@@ -89,8 +89,8 @@ AND IsInNode('002')
   
 ## <a name="see-also"></a>Voir aussi  
  [SÉLECTIONNEZ &AMP;#40;DMX&AMP;#41;](../dmx/select-dmx.md)   
- [Data Mining Extensions &#40;DMX&#41; instructions de définition de données](../dmx/dmx-statements-data-definition.md)   
- [Data Mining Extensions &#40;DMX&#41; instructions de Manipulation de données](../dmx/dmx-statements-data-manipulation.md)   
+ [Data Mining Extensions &#40;DMX&#41; les instructions de définition de données](../dmx/dmx-statements-data-definition.md)   
+ [Data Mining Extensions &#40;DMX&#41; les instructions de Manipulation de données](../dmx/dmx-statements-data-manipulation.md)   
  [Guide de référence des instructions DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

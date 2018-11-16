@@ -21,18 +21,18 @@ ms.assetid: 9b80a9e0-08e7-4b4d-b5ec-cc998d3f5114
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: e78d5226a4ab726718eb7725640de22dd811a684
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9495ff7a58da124255cc6bf5674d92ebeef4c2b0
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764407"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677668"
 ---
 # <a name="preparing-access-databases-for-migration-accesstosql"></a>Préparation des bases de données Access pour la migration (AccessToSQL)
 Avant de migrer des bases de données Access [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous devez déterminer les bases de données à migrer et vous assurer que ces bases de données sont prêtes pour la migration.  
   
 ## <a name="determining-when-to-migrate-to-sql-server"></a>Détermination des cas de migrer vers SQL Server  
-Le moteur de base de données Jet, qui est utilisé en tant que le moteur de base de données pour l’accès, est une solution flexible et facile à utiliser pour la gestion des données. Toutefois, comme les bases de données deviennent plus volumineuses et plus stratégiques, de nombreux utilisateurs trouvent qu’elles nécessitent de meilleures performances, de sécurité ou de disponibilité. Pour les applications qui requièrent une plateforme de données plus robuste, envisagez de déplacer les bases de données sous-jacent pour les applications à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations sur le choix du moment auquel la migration, consultez le [page d’informations de migration](http://go.microsoft.com/fwlink/?LinkId=68571) sur le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] site Web.  
+Le moteur de base de données Jet, qui est utilisé en tant que le moteur de base de données pour l’accès, est une solution flexible et facile à utiliser pour la gestion des données. Toutefois, comme les bases de données deviennent plus volumineuses et plus stratégiques, de nombreux utilisateurs trouvent qu’elles nécessitent de meilleures performances, de sécurité ou de disponibilité. Pour les applications qui requièrent une plateforme de données plus robuste, envisagez de déplacer les bases de données sous-jacent pour les applications à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations sur le choix du moment auquel la migration, consultez le [page d’informations de migration](https://go.microsoft.com/fwlink/?LinkId=68571) sur le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] site Web.  
   
 Après la migration des bases de données à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous pouvez continuer à utiliser l’accès à l’aide de tables liées, ou vous pouvez migrer manuellement vos applications à [!INCLUDE[msCoName](../../includes/msconame_md.md)] code basé sur le .NET Framework qui interagit directement avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

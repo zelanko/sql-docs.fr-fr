@@ -15,12 +15,12 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: b7212118f018b616b1f82f3ed91aced97482e9c6
-ms.sourcegitcommit: eddf8cede905d2adb3468d00220a347acd31ae8d
+ms.openlocfilehash: f748189446ca3d5cfd49c748fa058cf8dbef7fe7
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49960783"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601819"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>Évaluer une entreprise et consolider les rapports d’évaluation avec le DMA
 
@@ -31,7 +31,7 @@ La procédure détaillée ci-dessous vous aider à utiliser l’Assistant Migrat
 - Désignez un ordinateur outils sur votre réseau à partir de laquelle DMA sera lancé. Vérifiez que cet ordinateur dispose d’une connectivité à votre cible de SQL Server.
 - Téléchargez et installez :
     - [Assistant Migration de données](https://www.microsoft.com/download/details.aspx?id=53595) version 3.6 ou version ultérieure.
-    - [PowerShell](http://aka.ms/wmf5download) v5.0 ou version ultérieure.
+    - [PowerShell](https://aka.ms/wmf5download) v5.0 ou version ultérieure.
     - [.NET framework](https://www.microsoft.com/download/details.aspx?id=30653) v4.5 ou version ultérieure.
     - [SSMS](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 17.0 ou version ultérieure.
     - [Power BI desktop](https://docs.microsoft.com/power-bi/desktop-get-the-desktop).

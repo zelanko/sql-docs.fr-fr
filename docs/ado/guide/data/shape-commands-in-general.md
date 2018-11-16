@@ -14,12 +14,12 @@ ms.assetid: 1fac7831-a187-4b15-9b43-aad380c5556c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1d35f549581e9ac0a12c37cef90f66969aff1659
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b42e515c4c124e19ad6079aca6ef68727fea3d2a
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633430"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601349"
 ---
 # <a name="shape-commands-in-general"></a>Généralités sur les commandes SHAPE
 Mise en forme des données définit les colonnes d’une forme **Recordset**, les relations entre les entités représentées par les colonnes et la façon dont le **Recordset** est rempli avec des données.  
@@ -46,7 +46,7 @@ Mise en forme des données définit les colonnes d’une forme **Recordset**, le
   
  Vous pouvez accéder à la **Recordset** composants de la forme **Recordset** par programmation ou via un contrôle visuel approprié.  
   
- Microsoft fournit un outil visuel qui génère des commandes shape (voir la [données environnement concepteur](http://go.microsoft.com/fwlink/?LinkId=5689) dans la documentation de Visual Basic 6) et une autre qui affiche des curseurs hiérarchiques (voir « à l’aide de la Microsoft hiérarchique Contrôle FlexGrid » dans la documentation de Visual Basic 6).  
+ Microsoft fournit un outil visuel qui génère des commandes shape (voir la [données environnement concepteur](https://go.microsoft.com/fwlink/?LinkId=5689) dans la documentation de Visual Basic 6) et une autre qui affiche des curseurs hiérarchiques (voir « à l’aide de la Microsoft hiérarchique Contrôle FlexGrid » dans la documentation de Visual Basic 6).  
   
  Pour plus d’informations sur la navigation dans une liste hiérarchique **Recordset**, consultez [accès aux lignes d’un Recordset hiérarchique](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md).  
   

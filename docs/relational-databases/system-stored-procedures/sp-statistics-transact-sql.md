@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d72e2c9f79e2029e26275be46e200d476dbf621a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4b365ad16ce7f96ba3e0dd14f278b1ce4db60a32
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704547"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657131"
 ---
 # <a name="spstatistics-transact-sql"></a>sp_statistics (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -90,7 +90,7 @@ sp_statistics [ @table_name = ] 'table_name'
 |**FILTER_CONDITION**|**varchar(128)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne retourne pas de valeur.|  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
- None  
+ Aucun  
   
 ## <a name="remarks"></a>Notes  
  Les index dans le jeu de résultats s’affichent dans l’ordre croissant en fonction des colonnes **NON_UNIQUE**, **TYPE**, **INDEX_NAME**, et **SEQ_IN_INDEX**.  
@@ -99,7 +99,7 @@ sp_statistics [ @table_name = ] 'table_name'
   
  Le type d'index haché accepte les recherches de concordance exacte ou d'intervalle, mais les recherches par critères spéciaux n'utilisent pas l'index.  
   
- **sp_statistics** équivaut à **SQLStatistics** dans ODBC. Les résultats obtenus sont triés par **NON_UNIQUE**, **TYPE**, **INDEX_QUALIFIER**, **INDEX_NAME**, et **SEQ_IN_ INDEX**. Pour plus d’informations, consultez le [ODBC API Reference](http://go.microsoft.com/fwlink/?LinkId=68323).  
+ **sp_statistics** équivaut à **SQLStatistics** dans ODBC. Les résultats obtenus sont triés par **NON_UNIQUE**, **TYPE**, **INDEX_QUALIFIER**, **INDEX_NAME**, et **SEQ_IN_ INDEX**. Pour plus d’informations, consultez le [ODBC API Reference](https://go.microsoft.com/fwlink/?LinkId=68323).  
   
 ## <a name="permissions"></a>Permissions  
  Nécessite l'autorisation SELECT sur le schéma.  

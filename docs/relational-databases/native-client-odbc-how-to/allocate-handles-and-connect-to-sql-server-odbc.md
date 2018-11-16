@@ -16,12 +16,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dfccae77af978ad0422d6eae0ca965624c8ee615
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2144513a5f5de453c93215edcc2bb416d53781bc
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47602667"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677378"
 ---
 # <a name="allocate-handles-and-connect-to-sql-server-odbc"></a>Allouer des handles et se connecter à SQL Server (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,13 +34,13 @@ ms.locfileid: "47602667"
   
 2.  Incluez le fichier d'en-tête spécifique au pilote [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Odbcss.h.  
   
-3.  Appelez [SQLAllocHandle](http://go.microsoft.com/fwlink/?LinkId=58396) avec un **HandleType** de SQL_HANDLE_ENV pour initialiser ODBC et allouer un handle d’environnement.  
+3.  Appelez [SQLAllocHandle](https://go.microsoft.com/fwlink/?LinkId=58396) avec un **HandleType** de SQL_HANDLE_ENV pour initialiser ODBC et allouer un handle d’environnement.  
   
 4.  Appelez [SQLSetEnvAttr](../../relational-databases/native-client-odbc-api/sqlsetenvattr.md) avec **attribut** défini à SQL_ATTR_ODBC_VERSION et **ValuePtr** défini à SQL_OV_ODBC3 pour indiquer l’application utilise la fonction d’au format 3.x ODBC appels.  
   
-5.  Le cas échéant, appelez [SQLSetEnvAttr](../../relational-databases/native-client-odbc-api/sqlsetenvattr.md) pour définir l’autre environnement options ou appel [SQLGetEnvAttr](http://go.microsoft.com/fwlink/?LinkId=58403) pour obtenir des options d’environnement.  
+5.  Le cas échéant, appelez [SQLSetEnvAttr](../../relational-databases/native-client-odbc-api/sqlsetenvattr.md) pour définir l’autre environnement options ou appel [SQLGetEnvAttr](https://go.microsoft.com/fwlink/?LinkId=58403) pour obtenir des options d’environnement.  
   
-6.  Appelez [SQLAllocHandle](http://go.microsoft.com/fwlink/?LinkId=58396) avec un **HandleType** de SQL_HANDLE_DBC pour allouer un handle de connexion.  
+6.  Appelez [SQLAllocHandle](https://go.microsoft.com/fwlink/?LinkId=58396) avec un **HandleType** de SQL_HANDLE_DBC pour allouer un handle de connexion.  
   
 7.  Le cas échéant, appelez [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) pour définir les options de connexion ou d’appel [SQLGetConnectAttr](../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md) pour obtenir des options de connexion.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "47602667"
 13. Appelez **SQLFreeHandle** avec un **HandleType** de SQL_HANDLE_ENV pour libérer le handle d’environnement.  
   
 > [!IMPORTANT]  
->  Lorsque c'est possible, utilisez l'authentification Windows. Si l'authentification Windows n'est pas disponible, invitez les utilisateurs à entrer leurs informations d'identification au moment de l'exécution. Évitez de stocker ces informations dans un fichier. Si vous devez rendre les informations d'identification persistantes, chiffrez-les avec l' [API de chiffrement Win32](http://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Lorsque c'est possible, utilisez l'authentification Windows. Si l'authentification Windows n'est pas disponible, invitez les utilisateurs à entrer leurs informations d'identification au moment de l'exécution. Évitez de stocker ces informations dans un fichier. Si vous devez rendre les informations d'identification persistantes, chiffrez-les avec l' [API de chiffrement Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ## <a name="example"></a>Exemple  
  Cet exemple montre un appel à **SQLDriverConnect** pour se connecter à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sans nécessiter une source de données ODBC existante. En passant une chaîne de connexion incomplète à **SQLDriverConnect**, le pilote ODBC inviter l’utilisateur à entrer les informations manquantes.  

@@ -28,12 +28,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5473cca90d26056f82d79a5b3189998d0723269b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 21b0f28d79f44fd21828475c22748450d8f3628b
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650707"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673768"
 ---
 # <a name="default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-40"></a>Mappage par défaut d'éléments et d'attributs XSD à des tables et des colonnes (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "47650707"
  Dans cet exemple, aucune annotation n'est spécifiée dans le schéma XSD. Le  **\<Person.Contact >** élément est de type complexe et, par conséquent, est mappé par défaut à la table Person.Contact dans la base de données AdventureWorks. Tous les attributs (ContactID, FirstName, LastName) de la  **\<Person.Contact >** élément sont de type simple et sont mappés par défaut aux colonnes portant le même nom dans la table Person.Contact.  
   
 ```  
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
+<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   <xsd:element name="Person.Contact" >  
      <xsd:complexType>  
@@ -97,7 +97,7 @@ ms.locfileid: "47650707"
  Dans cet exemple, le mappage par défaut a lieu également, car aucune annotation n'est utilisée. Le  **\<Person.Contact >** élément est de type complexe et est mappé à la table portant le même nom dans la base de données. Les éléments  **\<FirstName >** et  **\<LastName >** et **EmployeeID** attribut sont de type simple et, par conséquent, sont mappés à la colonnes portant le même nom. La seule différence entre ceci et l'exemple précédent réside dans le fait que les éléments sont utilisés pour le mappage des champs FirstName et LastName.  
   
 ```  
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
+<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   <xsd:element name="Person.Contact">  
     <xsd:complexType>  
@@ -151,7 +151,7 @@ ms.locfileid: "47650707"
  Dans cet exemple, le mappage par défaut a lieu également, car aucune annotation n'est utilisée. Le  **\<Production.ProductModel >** élément est de type complexe et est mappé à la table portant le même nom dans la base de données. Le **ProductModelID** attribut est de type simple et, par conséquent, sont mappés aux colonnes portant le même nom. La seule différence entre ceci et les exemples précédents est que le  **\<Instructions >** élément est mappé à une colonne qui utilise le **xml** type de données à l’aide de la **xsd : anyType** type.  
   
 ```  
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
+<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   <xsd:element name="Production.ProductModel">  
     <xsd:complexType>  

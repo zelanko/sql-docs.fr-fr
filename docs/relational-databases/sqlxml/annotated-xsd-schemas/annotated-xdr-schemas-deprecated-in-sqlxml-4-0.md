@@ -17,16 +17,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 114bf92f75fbea0973fc6d1003edae6339c8ddbc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d3e824bd50fb0cf9244706f1e5714285be8fce24
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731127"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51665898"
 ---
 # <a name="annotated-xdr-schemas-deprecated-in-sqlxml-40"></a>Schémas XDR annotés (déconseillés dans SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Les schémas XDR annotés sont déconseillés. Cette fonctionnalité ne fera plus l'objet d'aucun travail de développement. Évitez d'utiliser cette fonctionnalité dans un nouveau travail de développement. À la place, utilisez les schémas XSD annotés. Vous pouvez convertir les schémas XDR annotés existants en schémas XSD. Pour plus d’informations, consultez [conversion de schémas XDR annotés à des schémas XSD équivalents &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/converting-annotated-xdr-schemas-to-equivalent-xsd-schemas-sqlxml-4-0.md). Pour plus d’informations sur les schémas XDR déconseillés, consultez le [documentation SQL Server 2008](http://go.microsoft.com/fwlink/?LinkId=202011).  
+  Les schémas XDR annotés sont déconseillés. Cette fonctionnalité ne fera plus l'objet d'aucun travail de développement. Évitez d'utiliser cette fonctionnalité dans un nouveau travail de développement. À la place, utilisez les schémas XSD annotés. Vous pouvez convertir les schémas XDR annotés existants en schémas XSD. Pour plus d’informations, consultez [conversion de schémas XDR annotés à des schémas XSD équivalents &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/converting-annotated-xdr-schemas-to-equivalent-xsd-schemas-sqlxml-4-0.md). Pour plus d’informations sur les schémas XDR déconseillés, consultez le [documentation SQL Server 2008](https://go.microsoft.com/fwlink/?LinkId=202011).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Introduction aux schémas XSD annotés &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)  

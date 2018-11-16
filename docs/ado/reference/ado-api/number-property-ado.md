@@ -18,12 +18,12 @@ ms.assetid: f92323c5-dd11-4a63-a505-d9014a0f067f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 38135d1afa2fbdf680a7f2c1f89ddcbe513484f8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: afc9955920784af966ef5d793d76ce251df1bc1d
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47803037"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602899"
 ---
 # <a name="number-property-ado"></a>Number, propriété (ADO)
 Indique le numéro qui identifie de façon unique un [erreur](../../../ado/reference/ado-api/error-object.md) objet.  
@@ -34,7 +34,7 @@ Indique le numéro qui identifie de façon unique un [erreur](../../../ado/refer
 ## <a name="remarks"></a>Notes  
  Utilisez le **nombre** propriété afin de déterminer quelle erreur s’est produite. La valeur de la propriété est un nombre unique qui correspond à la condition d’erreur.  
   
- Le [erreurs](../../../ado/reference/ado-api/errors-collection-ado.md) collection retourne un HRESULT dans un format hexadécimal (par exemple, 0 x 80004005) ou une valeur longue (par exemple, 2147467259). Ces HRESULT peuvent être déclenchés par des composants sous-jacents, tels que OLE DB ou même OLE. Pour plus d’informations sur ces numéros, consultez [erreurs (OLE DB)](http://msdn.microsoft.com/ed74e62d-4948-4eeb-a7c9-fd7ad46af7fd) dans le [de référence du programmeur OLE DB](http://msdn.microsoft.com/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8)*.*  
+ Le [erreurs](../../../ado/reference/ado-api/errors-collection-ado.md) collection retourne un HRESULT dans un format hexadécimal (par exemple, 0 x 80004005) ou une valeur longue (par exemple, 2147467259). Ces HRESULT peuvent être déclenchés par des composants sous-jacents, tels que OLE DB ou même OLE. Pour plus d’informations sur ces numéros, consultez [erreurs (OLE DB)](https://msdn.microsoft.com/ed74e62d-4948-4eeb-a7c9-fd7ad46af7fd) dans le [de référence du programmeur OLE DB](https://msdn.microsoft.com/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8)*.*  
   
 ## <a name="applies-to"></a>S'applique à  
  [Error, objet](../../../ado/reference/ado-api/error-object.md)  

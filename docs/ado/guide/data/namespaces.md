@@ -13,12 +13,12 @@ ms.assetid: efff5569-db52-451d-a039-2e74870534da
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c3a190475a6feb48c3f8a4027e2ec1059d1d5d64
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5553072dcea3ed64ef8454019892ac5790c7a142
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623497"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600109"
 ---
 # <a name="namespaces"></a>Espaces de noms
 Le format de persistance XML dans ADO utilise quatre espaces de noms suivants.  
@@ -33,7 +33,7 @@ Le format de persistance XML dans ADO utilise quatre espaces de noms suivants.
 |rs|Fait référence à l’espace de noms des éléments conteneur et des attributs spécifiques aux propriétés de jeu d’enregistrements ADO et des attributs.|  
 |z|Fait référence au schéma de l’ensemble de lignes en cours.|  
   
- Un client ne devez pas ajouter ses propres balises à ces espaces de noms, tel que défini par la spécification. Par exemple, un client ne doit pas définir un espace de noms « urn : schemas-microsoft-rowset », puis écrire quelque chose comme « rs : MaPropreBalise ». Pour en savoir plus sur les espaces de noms, consultez le [espaces de noms W3C dans la recommandation XML](http://www.w3.org/TR/REC-xml-names/).  
+ Un client ne devez pas ajouter ses propres balises à ces espaces de noms, tel que défini par la spécification. Par exemple, un client ne doit pas définir un espace de noms « urn : schemas-microsoft-rowset », puis écrire quelque chose comme « rs : MaPropreBalise ». Pour en savoir plus sur les espaces de noms, consultez le [espaces de noms W3C dans la recommandation XML](https://www.w3.org/TR/REC-xml-names/).  
   
 > [!IMPORTANT]
 >  L’ID de la balise de schéma doit être « RowsetSchema » et l’espace de noms utilisé pour faire référence au schéma de l’ensemble de lignes en cours doit pointer vers « #RowsetSchema ».  

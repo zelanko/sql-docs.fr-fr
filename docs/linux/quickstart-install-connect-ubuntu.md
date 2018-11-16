@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
-ms.openlocfilehash: b37e3c27448f187b3c1717414599f2de120790d9
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.openlocfilehash: 917e43dd6a9c78e5199967df58a2d46c4843cf13
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51269722"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677944"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-ubuntu"></a>Démarrage rapide : Installer SQL Server et créer une base de données sur Ubuntu
 
@@ -41,7 +41,7 @@ Dans ce démarrage rapide, vous installez SQL Server 2019 aperçu sur Ubuntu 16.
 
 Vous devez disposer d’un ordinateur Ubuntu 16.04 avec **au moins 2 Go** de mémoire.
 
-Pour installer Ubuntu sur votre propre machine, accédez à [ http://www.ubuntu.com/download/server ](http://www.ubuntu.com/download/server). Vous pouvez également créer des machines virtuelles Ubuntu dans Azure. Consultez [créer et gérer des machines virtuelles Linux avec l’interface CLI Azure](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm).
+Pour installer Ubuntu sur votre propre machine, accédez à [ https://www.ubuntu.com/download/server ](https://www.ubuntu.com/download/server). Vous pouvez également créer des machines virtuelles Ubuntu dans Azure. Consultez [créer et gérer des machines virtuelles Linux avec l’interface CLI Azure](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm).
 
 > [!NOTE]
 > À ce stade, le [sous-système Windows pour Linux](https://msdn.microsoft.com/commandline/wsl/about) pour Windows 10 n’est pas pris en charge comme cible d’installation.

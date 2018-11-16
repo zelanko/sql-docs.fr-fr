@@ -27,12 +27,12 @@ ms.assetid: d280d359-08f0-47b5-a07e-67dd2a58ad73
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 10eaa071ed8fa57bb648e5ece87dc91bb4cb62e3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 455b7b8e5b12f330a970589b04844d3a62f983b8
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47779187"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661298"
 ---
 # <a name="clr-integration-architecture---clr-hosted-environment"></a>Architecture de l’intégration du CLR - Environnement hébergé CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +78,7 @@ ms.locfileid: "47779187"
  Un code de type sécurisé est un code qui accède aux structures de mémoire uniquement de façons bien définies. Prenons par exemple une référence d'objet valide, le code de type sécurisé peut accéder à la mémoire à des offsets fixes correspondant aux membres de champ réels. Cependant, si le code accède à la mémoire à des offsets arbitraires dans ou hors de la plage de mémoire qui appartient à l'objet, il n'est pas de type sécurisé. Lorsque des assemblys sont chargés dans le CLR, avant que le langage MSIL soit compilé à l'aide de la compilation juste-à-temps (JIT), le runtime effectue une phase de vérification qui examine le code pour déterminer s'il est de type sécurisé. Le code qui réussit cette vérification est appelé code de type sécurisé vérifié.  
   
 ###### <a name="application-domains"></a>Domaines d’application  
- Le CLR prend en charge la notion de domaines d'application comme des zones d'exécution au sein d'un processus hôte dans lesquelles des assemblys de code managé peuvent être chargés et exécutés. La limite du domaine d'application assure l'isolement entre les assemblys. Les assemblys sont isolés quant à la visibilité des variables statiques et des membres de données et à la capacité d'appeler dynamiquement le code. Les domaines d'application correspondent également au mécanisme de chargement et de déchargement du code. Le code peut être déchargé à partir de la mémoire seulement en déchargeant le domaine d'application. Pour plus d’informations, consultez [domaines d’Application et de sécurité de l’intégration CLR](http://msdn.microsoft.com/library/54ee904e-e21a-4ee7-b4ad-a6f6f71bd473).  
+ Le CLR prend en charge la notion de domaines d'application comme des zones d'exécution au sein d'un processus hôte dans lesquelles des assemblys de code managé peuvent être chargés et exécutés. La limite du domaine d'application assure l'isolement entre les assemblys. Les assemblys sont isolés quant à la visibilité des variables statiques et des membres de données et à la capacité d'appeler dynamiquement le code. Les domaines d'application correspondent également au mécanisme de chargement et de déchargement du code. Le code peut être déchargé à partir de la mémoire seulement en déchargeant le domaine d'application. Pour plus d’informations, consultez [domaines d’Application et de sécurité de l’intégration CLR](https://msdn.microsoft.com/library/54ee904e-e21a-4ee7-b4ad-a6f6f71bd473).  
   
 ###### <a name="code-access-security-cas"></a>Sécurité d'accès du code  
  Le système de sécurité du CLR offre un moyen pour à contrôler quels types d'opérations le code managé peut effectuer en assignant des autorisations au code. Les autorisations d'accès au code sont assignées en fonction de l'identité du code (par exemple, la signature de l'assembly ou l'origine du code).  

@@ -10,19 +10,19 @@ ms.assetid: 573e673e-a194-4cb2-9aba-aaac6e1a225c
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 295aca6d94eb7ec1ce2deb97d7f77e23999d7e13
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7dbdee734d6d8a1dac825ad8f502c5851f746f42
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759587"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51681077"
 ---
 # <a name="data-migration-settings-db2tosql"></a>Paramètres de Migration de données (DB2ToSQL)
   
 ## <a name="data-migration-settings"></a>Paramètres de migration de données  
 **Paramètres de Migration de données** permet à l’utilisateur d’écrire des requêtes personnalisées pour la migration de données.  
   
--   Cet onglet est disponible lorsque **étendu d’options de migration de données** a la valeur **afficher** et est masqué lorsque le paramètre est défini sur **masquer** dans Paramètres du projet. Pour plus d’informations sur les paramètres de Migration de projet, consultez [paramètres du projet (Migration)](http://msdn.microsoft.com/48aaa8e6-a9cb-487d-9ba5-fc3f1c4786ae) .  
+-   Cet onglet est disponible lorsque **étendu d’options de migration de données** a la valeur **afficher** et est masqué lorsque le paramètre est défini sur **masquer** dans Paramètres du projet. Pour plus d’informations sur les paramètres de Migration de projet, consultez [paramètres du projet (Migration)](https://msdn.microsoft.com/48aaa8e6-a9cb-487d-9ba5-fc3f1c4786ae) .  
   
 -   L’analyse des instructions SQL de personnalisé sera implémenté dans **les paramètres de migration de données** onglet du nœud de la Table.  
   
@@ -53,5 +53,5 @@ Il existe deux boutons présents reportages. :
 -   **Annuler :** cliquez sur **Annuler** pour restaurer les paramètres présents avant que les modifications sont apportées.  
   
 ## <a name="see-also"></a>Voir aussi  
-[Migration de données DB2 vers SQL Server](http://msdn.microsoft.com/86cbd39f-6dac-409a-9ce1-7dd54403f84b)  
+[Migration de données DB2 vers SQL Server](https://msdn.microsoft.com/86cbd39f-6dac-409a-9ce1-7dd54403f84b)  
   

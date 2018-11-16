@@ -10,12 +10,12 @@ ms.assetid: 56d546e3-8747-4169-aace-693302667e94
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 3761e7918b76b5917c53e93356bc07f51a521992
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 2a2ba7cfb16c4df96fa40edb23d9bccea3599005
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099220"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51675652"
 ---
 # <a name="managing-passwords-db2tosql"></a>La gestion des mots de passe (DB2ToSQL)
 Cette section concerne la sécurisation des mots de passe de base de données et la procédure pour importer ou exporter les sur les serveurs :  
@@ -129,5 +129,5 @@ Exemple :
 
   
 ## <a name="see-also"></a>Voir aussi  
-[Exécution de la console SSMA](http://msdn.microsoft.com/ce63f633-067d-4f04-b8e9-e1abd7ec740b)  
+[Exécution de la console SSMA](https://msdn.microsoft.com/ce63f633-067d-4f04-b8e9-e1abd7ec740b)  
   

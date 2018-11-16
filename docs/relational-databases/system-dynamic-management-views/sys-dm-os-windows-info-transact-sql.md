@@ -19,12 +19,12 @@ ms.assetid: adc81283-fdc2-46c0-bb48-abe82bbf2459
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b61127c2844117b2d9c042b352129a1860e227c6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f258d7e49f86ed8015d8e51f2373633b7d7f10c4
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47743187"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51663136"
 ---
 # <a name="sysdmoswindowsinfo-transact-sql"></a>sys.dm_os_windows_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,8 +37,8 @@ ms.locfileid: "47743187"
 |-----------------|---------------|-----------------|  
 |**windows_release**|**nvarchar (256)**|Pour Windows, retourne le numéro de version. Pour obtenir la liste de valeurs et les descriptions, consultez [Version de système d’exploitation (Windows)](/windows/desktop/SysInfo/operating-system-version). Ne peut pas avoir la valeur NULL.|  
 |**windows_service_pack_level**|**nvarchar (256)**| Pour Windows, retourne le numéro de service pack. Ne peut pas avoir la valeur NULL. |  
-|**windows_sku**|**Int**|Pour Windows, retourne l’ID d’unité de conservation des Stock (SKU) Windows. Pour obtenir la liste des ID de référence (SKU) et des descriptions, consultez [GetProductInfo, fonction](http://msdn.microsoft.com/library/ms724358.aspx). Est NULLable. |  
-|**os_language_version**|**Int**| Pour Windows, retourne l’identificateur de paramètres régionaux (LCID) Windows du système d’exploitation. Pour obtenir la liste des valeurs LCID et des descriptions, consultez [ID de paramètres régionaux assignés par Microsoft](http://go.microsoft.com/fwlink/?LinkId=208080). Ne peut pas avoir la valeur NULL.|  
+|**windows_sku**|**Int**|Pour Windows, retourne l’ID d’unité de conservation des Stock (SKU) Windows. Pour obtenir la liste des ID de référence (SKU) et des descriptions, consultez [GetProductInfo, fonction](https://msdn.microsoft.com/library/ms724358.aspx). Est NULLable. |  
+|**os_language_version**|**Int**| Pour Windows, retourne l’identificateur de paramètres régionaux (LCID) Windows du système d’exploitation. Pour obtenir la liste des valeurs LCID et des descriptions, consultez [ID de paramètres régionaux assignés par Microsoft](https://go.microsoft.com/fwlink/?LinkId=208080). Ne peut pas avoir la valeur NULL.|  
   
   
 ## <a name="permissions"></a>Permissions  

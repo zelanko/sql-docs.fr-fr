@@ -1,5 +1,5 @@
 ---
-title: IIf (MDX) | Documents Microsoft
+title: IIf (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ff85ddef47099462a8c38031141120d02bfd1019
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 0b05929d24533e0bdcdbcac59820307a373428ff
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740678"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700777"
 ---
 # <a name="iif-mdx"></a>IIf (MDX)
 
@@ -29,25 +29,25 @@ IIf(Logical_Expression, Expression1 [HINT <hints>], Expression2 [HINT <hints>])
 ```  
   
 ## <a name="arguments"></a>Arguments  
- La fonction IIf utilise trois arguments : iif (\<condition >, \<puis créer une branche >, \<autre branche >).  
+ La fonction IIf utilise trois arguments : iif (\<condition >, \<puis créer une branche >, \<else branch >).  
   
  *Logical_Expression*  
  Une condition qui prend la valeur **true** (1) ou **false** (0). Ce doit être une expression logique MDX (Multidimensional Expressions) valide.  
   
- *Indicateur de expression1 [hâtif | Strict | Lazy]]*  
- Utilisé lors de l’expression logique renvoie **true**. Expression1 doit être une expression MDX (Multidimensional Expressions) valide.  
+ *Indicateur de expression1 [hâtif | Strict | Différé]]*  
+ Utilisé lorsque l’expression logique prend la valeur **true**. Expression1 doit être une expression MDX (Multidimensional Expressions) valide.  
   
- *Indicateur de expression2 [hâtif | Strict | Lazy]]*  
- Utilisé lors de l’expression logique renvoie **false**. Expression2 doit être une expression MDX (Multidimensional Expressions) valide.  
+ *Indicateur de expression2 [hâtif | Strict | Différé]]*  
+ Utilisé lorsque l’expression logique prend la valeur **false**. Expression2 doit être une expression MDX (Multidimensional Expressions) valide.  
   
 ## <a name="remarks"></a>Notes  
- La condition spécifiée par l’expression logique prend la valeur de **false** lorsque la valeur de cette expression est zéro. Toute autre valeur prend la valeur de **true**.  
+ La condition spécifiée par l’expression logique prend la valeur **false** lorsque la valeur de cette expression est égale à zéro. Toute autre valeur prend la valeur **true**.  
   
  Lorsque la condition est **true**, le **IIf** fonction retourne la première expression. Sinon, la fonction retourne la seconde expression.  
   
  Les expressions spécifiées peuvent retourner des valeurs ou des objets MDX. De plus, leurs types ne doivent pas obligatoirement correspondre.  
   
- Le **IIf** fonction n’est pas recommandée pour la création d’un jeu de membres selon des critères de recherche. Utilisez plutôt le [filtre](../mdx/filter-mdx.md) (fonction) pour évaluer chaque membre d’un jeu spécifié par rapport à une expression logique et retourner un sous-ensemble de membres.  
+ Le **IIf** fonction n’est pas recommandée pour la création d’un jeu de membres selon des critères de recherche. Au lieu de cela, utilisez le [filtre](../mdx/filter-mdx.md) fonction à évaluer chaque membre d’un jeu spécifié par rapport à une expression logique et retourner un sous-ensemble de membres.  
   
 > [!NOTE]  
 >  Si l'une des expressions prend la valeur NULL, le jeu de résultats est NULL une fois cette condition satisfaite.  
@@ -64,10 +64,10 @@ IIf(Logical_Expression, Expression1 [HINT <hints>], Expression2 [HINT <hints>])
   
  EAGER et STRICT s'excluent mutuellement dans l'indicateur ; ils peuvent être utilisés dans la même fonction IIF(,,) sur des expressions différentes.  
   
- Pour plus d’informations, consultez [indicateurs de requête de fonction IIF dans SQL Server Analysis Services 2008](http://go.microsoft.com/fwlink/?LinkId=269540) et [des Plans d’exécution et indicateurs de Plan pour la fonction MDX IIF et l’instruction CASE](http://go.microsoft.com/fwlink/?LinkId=269565).  
+ Pour plus d’informations, consultez [indicateurs de requête de fonction IIF dans SQL Server Analysis Services 2008](https://go.microsoft.com/fwlink/?LinkId=269540) et [des Plans d’exécution et indicateurs de Plan pour la fonction MDX IIF et l’instruction CASE](https://go.microsoft.com/fwlink/?LinkId=269565).  
   
 ## <a name="examples"></a>Exemples  
- La requête suivante montre une utilisation simple de **IIF** à l’intérieur d’une mesure calculée pour retourner l’une des deux valeurs de chaîne différentes lorsque la mesure Internet Sales Amount est supérieure ou inférieure à 10 000 $:  
+ La requête suivante illustre une utilisation simple de **IIF** à l’intérieur d’une mesure calculée pour retourner l’une des deux valeurs de chaîne différentes lorsque la mesure Internet Sales Amount est supérieure ou inférieure à 10 000 $:  
   
  `WITH MEMBER MEASURES.IIFDEMO AS`  
   
@@ -131,7 +131,7 @@ IIf(Logical_Expression, Expression1 [HINT <hints>], Expression2 [HINT <hints>])
   
  `WHERE([Product].[Product Categories].[Subcategory].&[26])`  
   
- Voici un exemple de **IIF** qui retourne un des deux jeux à l’intérieur de la fonction Generate pour créer un jeu complexe de tuples sur les lignes :  
+ Voici un exemple de **IIF** retourner l’une des deux ensembles à l’intérieur de la fonction Generate pour créer un jeu complexe de tuples sur les lignes :  
   
  `SELECT {[Measures].[Internet Sales Amount]} ON 0,`  
   
@@ -178,6 +178,6 @@ IIf(Logical_Expression, Expression1 [HINT <hints>], Expression2 [HINT <hints>])
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guide de référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

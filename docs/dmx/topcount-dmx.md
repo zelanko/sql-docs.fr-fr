@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 182c83cf6b2850941c2f21924395c0ebe160db01
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: e67e1e408186e78f00c4b54399fb2e87ac673541
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37989850"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601739"
 ---
 # <a name="topcount-dmx"></a>TopCount (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -42,7 +42,7 @@ TopCount(<table expression>, <rank expression>, <count>)
  Toutefois, il existe des situations où vous faudra peut-être encore utiliser TopCount. Par exemple, DMX ne prend pas en charge la **haut** qualificateur dans une instruction de sous-sélection. Le [PredictHistogram &#40;DMX&#41; ](../dmx/predicthistogram-dmx.md) fonction également ne prend pas en charge l’ajout de **haut**.  
   
 ## <a name="examples"></a>Exemples  
- Les exemples suivants sont des requêtes de prédiction sur le modèle d’Association que vous générez à l’aide de la [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). Les requêtes retournent les mêmes résultats, mais le premier exemple utilise TopCount et le deuxième exemple utilise la fonction Predict.  
+ Les exemples suivants sont des requêtes de prédiction sur le modèle d’Association que vous générez à l’aide de la [Basic Data Mining Tutorial](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). Les requêtes retournent les mêmes résultats, mais le premier exemple utilise TopCount et le deuxième exemple utilise la fonction Predict.  
   
  Pour comprendre le fonctionne de TopCount, il peut être utile pour tout d’abord exécuter une requête de prédiction qui retourne uniquement la table imbriquée.  
   

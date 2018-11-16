@@ -1,7 +1,7 @@
 ---
 title: Problèmes de conception de sécurité ADO | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/08/2018
 ms.reviewer: ''
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +13,12 @@ ms.assetid: 86b83a38-efdf-4831-a6d5-7e470d517d1c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2c961c24f0ffcbb3f0cbafabce2988edb6c8d607
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 64f4a22d849572d6e32006dbe997dd134e5c2e0d
+ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716367"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51293125"
 ---
 # <a name="ado-security-design-features"></a>Fonctionnalités de conception de sécurité ADO
 Les sections suivantes décrivent les fonctionnalités de conception de sécurité dans ActiveX Data Objects (ADO) 2.8 et versions ultérieures. Ces modifications ont été apportées dans ADO 2.8 pour améliorer la sécurité. ADO 6.0, qui est inclus dans Windows DAC 6.0 dans Windows Vista, est fonctionnellement équivalent à ADO 2.8, qui a été inclus dans MDAC 2.8 dans Windows XP et Windows Server 2003. Cette rubrique fournit des informations sur la façon de mieux sécuriser vos applications dans ADO 2.8 ou ultérieure.
@@ -32,7 +32,7 @@ Les sections suivantes décrivent les fonctionnalités de conception de sécurit
 ### <a name="revised-and-improved-security-warning-message-box-now-used-to-alert-users"></a>Boîte de message d’avertissement de sécurité améliorées révisée maintenant utilisé pour avertir les utilisateurs
  Pour ADO 2.7 et versions antérieur, le message d’avertissement suivant s’affiche lorsqu’une page Web par script essaie d’exécuter du code ADO à partir d’un fournisseur non approuvé :
 
-```
+```console
 This page accesses data on another domain. Do you want to allow this? To
 avoid this message in Internet Explorer, you can add a secure Web site to
 your Trusted Sites zone on the Security tab of the Internet Options dialog
@@ -41,7 +41,7 @@ box.
 
  Pour ADO 2.8 et versions ultérieur, le message précédent n’apparaît plus. Au lieu de cela, le message suivant s’affiche dans ce contexte :
 
-```
+```console
 This Website uses a data provider that may be unsafe. If you trust the
 Website, click OK, otherwise click Cancel.
 ```
@@ -87,7 +87,7 @@ Website, click OK, otherwise click Cancel.
 
  Dans le cas où un avertissement de sécurité maintenant s’affiche, la boîte de message informe les utilisateurs :
 
-```
+```console
 This Website is using your identity to access a data source. If you trust this Website, click OK, otherwise click Cancel.
 ```
 

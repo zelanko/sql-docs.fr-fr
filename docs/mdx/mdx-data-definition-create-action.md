@@ -1,5 +1,5 @@
 ---
-title: Instruction CREATE ACTION (MDX) | Documents Microsoft
+title: Instruction CREATE ACTION (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 762c2c1cc18d67ccafb05b0f61d213e5215de8b2
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 1e55a35144fce7b90cf4bb33cbbb82f26d8db62c
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741288"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703087"
 ---
-# <a name="mdx-data-definition---create-action"></a>Définition de données MDX - créer une ACTION
+# <a name="mdx-data-definition---create-action"></a>Définition de données MDX - CREATE ACTION
 
 
   Crée une action qui peut être associée à un cube, une dimension, une hiérarchie ou un objet subordonné.  
@@ -83,10 +83,10 @@ FOR
   
 |Type d'action|Description|  
 |-----------------|-----------------|  
-|**URL**|La chaîne d'action retournée est une URL qui doit être ouverte dans un navigateur Internet.<br /><br /> Remarque : Si cette action ne commence pas par `http://` ou `https://`, l’action n’est pas disponible dans le navigateur, sauf si **SafetyOptions** a la valeur **DBPROPVAL_MSMD_SAFETY_OPTIONS_ALLOW_ALL**.|  
+|**URL**|La chaîne d'action retournée est une URL qui doit être ouverte dans un navigateur Internet.<br /><br /> Remarque : Si cette action ne commence pas par `https://` ou `https://`, l’action n’est pas disponible dans le navigateur, sauf si **SafetyOptions** a la valeur **DBPROPVAL_MSMD_SAFETY_OPTIONS_ALLOW_ALL**.|  
 |**HTML**|La chaîne d'action retournée est un script HTML. Cette chaîne doit être enregistrée dans un fichier, qui devra être rendu à l'aide d'un navigateur Internet. Dans ce cas, un script entier peut être exécuté en tant que partie du fichier HTML généré.|  
-|**INSTRUCTION**|La chaîne d’action retournée est une instruction qui doit être exécutée en définissant le **ICommand::SetText** méthode d’un objet de commande pour la chaîne et en appelant le **ICommand::Execute**(méthode). Si la commande échoue, un message d'erreur est retourné.|  
-|**JEU DE DONNÉES**|La chaîne d’action retournée est une instruction MDX qui doit être exécutée en définissant le **ICommand::SetText** méthode d’un objet de commande pour la chaîne et en appelant le **ICommand::Execute** (méthode). L’interface demandée ID (IID) doit être **IDataset**. Cette commande réussit si un dataset a été créé. L'application cliente doit autoriser l'utilisateur à parcourir le dataset retourné.|  
+|**INSTRUCTION**|La chaîne d’action retournée est une instruction qui doit être exécutée en définissant le **ICommand::SetText** méthode d’un objet de commande sur la chaîne et en appelant le **ICommand::Execute**(méthode). Si la commande échoue, un message d'erreur est retourné.|  
+|**JEU DE DONNÉES**|La chaîne d’action retournée est une instruction MDX qui doit être exécutée en définissant le **ICommand::SetText** méthode d’un objet de commande sur la chaîne et en appelant le **ICommand::Execute** (méthode). L’interface demandée ID (IID) doit être **IDataset**. Cette commande réussit si un dataset a été créé. L'application cliente doit autoriser l'utilisateur à parcourir le dataset retourné.|  
 |**ENSEMBLE DE LIGNES**|Semblable à **DATASET**, mais au lieu de demander un IID de **IDataset**, l’application cliente doit demander un IID de **IRowset**. Cette commande réussit si un ensemble de lignes a été créé. L'application cliente doit autoriser l'utilisateur à parcourir l'ensemble de lignes retourné.|  
 |**LIGNE DE COMMANDE**|L'application cliente doit exécuter la chaîne d'action. Cette chaîne est une ligne de commande.|  
 |**PROPRIÉTAIRE**|Une application cliente ne doit pas afficher ni exécuter l'action, à moins d'avoir une connaissance personnalisée, non générique, de cette action spécifique. Les actions propriétaires ne sont pas retournées à l’application cliente, sauf si l’application cliente demande explicitement en définissant la restriction appropriée sur le **APPLICATION_NAME**.|  
@@ -119,9 +119,9 @@ FOR
  Cette action s'applique uniquement à des cellules spécifiques.  
   
  Étendue de jeu  
- Cette action s'applique uniquement à un jeu. Le nom, **ActionParameterSet**, est réservé pour une utilisation par l’application à l’intérieur de l’expression de l’action.  
+ Cette action s'applique uniquement à un jeu. Le nom, **ActionParameterSet**, son utilisation est réservée par l’application à l’intérieur de l’expression de l’action.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Instructions MDX de définition de données &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
+ [Instructions de définition de données MDX &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

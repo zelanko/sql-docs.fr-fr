@@ -14,17 +14,17 @@ ms.assetid: 113e1c9a-8333-4805-86f2-e4b57ab816a5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a9ee58c367e83a61afef45d7df3358488dcb85a0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1e6201b83b909573476b043cdb1a10543f894def
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821067"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661808"
 ---
 # <a name="unicode"></a>Unicode
 La norme Unicode définit l’encodage des caractères dans de nombreux langages.  
   
- Pour plus d’informations sur la norme Unicode, consultez [du Unicode Consortium](http://www.unicode.org).  
+ Pour plus d’informations sur la norme Unicode, consultez [du Unicode Consortium](https://www.unicode.org).  
   
  La norme Unicode définit un jeu de caractères universels. Une page de codes Windows ANSI définit un jeu de caractères, contenant généralement des caractères pour une langue. Il peut être plus difficile à écrire une application qui est nécessaire pour utiliser les pages de codes différentes.  
   

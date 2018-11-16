@@ -14,25 +14,25 @@ ms.assetid: dec96be6-0b31-4953-9c9a-e962b5afcd18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d331bdf617e2b7b748039d69347f00f7fb4046a1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ed2d80793d70418e02d22bf104d21b6d3bec6c4d
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761217"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51599530"
 ---
 # <a name="createobject-method-rds"></a>CreateObject, méthode (RDS)
 Crée le proxy pour l’objet métier cible et retourne un pointeur vers elle. Les packages et marshale données proxy pour le stub côté serveur pour les communications avec l’objet métier envoyer des demandes et les données sur Internet. Pour les objets de composant in-process, aucun proxy ne sont utilisés, un pointeur vers l’objet est fourni.  
   
 > [!IMPORTANT]
->  Depuis Windows 8 et Windows Server 2012, composants de serveur Services Bureau à distance ne sont plus inclus dans le système d’exploitation Windows (voir Windows 8 et [Guide de compatibilité de Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) pour plus de détails). Composants du client RDS seront supprimées dans une future version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent des services Bureau à distance doivent migrer vers [Service de données WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Depuis Windows 8 et Windows Server 2012, composants de serveur Services Bureau à distance ne sont plus inclus dans le système d’exploitation Windows (voir Windows 8 et [Guide de compatibilité de Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) pour plus de détails). Composants du client RDS seront supprimées dans une future version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent des services Bureau à distance doivent migrer vers [Service de données WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="syntax"></a>Syntaxe  
  Service de données distant prend en charge les protocoles suivants : HTTP, HTTPS (HTTP over Secure Socket Layer), DCOM et in-process.  
   
 |Protocole|Syntaxe|  
 |--------------|------------|  
-|HTTP|Objet de jeu = DataSpace.CreateObject (« ProgId », « http://awebsrvr»)|  
+|HTTP|Objet de jeu = DataSpace.CreateObject (« ProgId », « https://awebsrvr»)|  
 |HTTPS|Objet de jeu = DataSpace.CreateObject (« ProgId », « https://awebsrvr»)|  
 |DCOM|Objet de jeu = DataSpace.CreateObject (« ProgId », « computername »)|  
 |In-process|Objet de jeu = DataSpace.CreateObject (« ProgId », « »)|  

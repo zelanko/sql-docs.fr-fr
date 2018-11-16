@@ -14,12 +14,12 @@ ms.assetid: ccad6262-01e1-447a-bd2b-c105154c80ce
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 8d3a51f05159967505c22854817b0331ff607d7e
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 22da46c214f42e5e561e51895f98b59d490eb389
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099514"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51671298"
 ---
 # <a name="generating-reports-oracletosql"></a>Génération de rapports (OracleToSQL)
 Les rapports de certaines activités effectuées à l’aide des commandes sont générées dans la Console SSMA au niveau d’arborescence objet.  
@@ -142,5 +142,5 @@ La commande **actualisation à partir de base de données** a **erreurs de rappo
 -   Échec-script  
   
 ## <a name="see-also"></a>Voir aussi  
-[Exécution de la Console SSMA (Oracle)](http://msdn.microsoft.com/7228ccba-c69f-4b4c-8664-01a2750183c5)  
+[Exécution de la Console SSMA (Oracle)](https://msdn.microsoft.com/7228ccba-c69f-4b4c-8664-01a2750183c5)  
   

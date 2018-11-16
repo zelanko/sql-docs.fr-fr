@@ -14,12 +14,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 13a8690a7ad088a6b7ecd9c04f71ada9cfc6e62d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 184668ba8dc844be7c0f1eea23ab5f4dfe69843e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846207"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673098"
 ---
 # <a name="managing-text-and-image-columns---use-data-at-execution-columns"></a>Gestion des colonnes texte et image - Utiliser des colonnes de données à l’exécution
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,20 +34,20 @@ ms.locfileid: "47846207"
   
     -   Pour le quatrième paramètre, entrez un identificateur de colonne défini par le programme.  
   
-2.  L'appel de [SQLSetPos](http://go.microsoft.com/fwlink/?LinkId=58407) retourne SQL_NEED_DATA, ce qui indique que les colonnes de données en cours d'exécution sont prêtes à être traitées.  
+2.  L'appel de [SQLSetPos](https://go.microsoft.com/fwlink/?LinkId=58407) retourne SQL_NEED_DATA, ce qui indique que les colonnes de données en cours d'exécution sont prêtes à être traitées.  
   
 3.  Pour chaque colonne de données en cours d'exécution :  
   
-    -   Appelez [SQLParamData](http://go.microsoft.com/fwlink/?LinkId=58405) pour obtenir le pointeur du tableau de colonne. SQL_NEED_DATA est retourné s'il existe une autre colonne de données en cours d'exécution.  
+    -   Appelez [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) pour obtenir le pointeur du tableau de colonne. SQL_NEED_DATA est retourné s'il existe une autre colonne de données en cours d'exécution.  
   
     -   Appelez [SQLPutData](../../relational-databases/native-client-odbc-api/sqlputdata.md) une ou plusieurs fois pour envoyer les données de la colonne jusqu'à ce que toute la longueur soit envoyée.  
   
-4.  Appelez [SQLParamData](http://go.microsoft.com/fwlink/?LinkId=58405) pour indiquer que toutes les données de la dernière colonne de données en cours d'exécution ont été envoyées. SQL_NEED_DATA n'est pas retourné.  
+4.  Appelez [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) pour indiquer que toutes les données de la dernière colonne de données en cours d'exécution ont été envoyées. SQL_NEED_DATA n'est pas retourné.  
   
 ## <a name="example"></a>Exemple  
  L'exemple suivant montre comment lire des données de type caractères SQL_LONG variables à l'aide de SQLGetData. Cet exemple n'est pas pris en charge sur la plateforme IA64.  
   
- Vous aurez besoin d'une source de données ODBC nommée AdventureWorks, dont la base de données par défaut est l'exemple de base de données AdventureWorks. (Vous pouvez télécharger l’exemple de base de données AdventureWorks à partir de la page d’accueil des [exemples et projets de communautés Microsoft SQL Server](http://go.microsoft.com/fwlink/?LinkID=85384).) Cette source de données doit être basée sur le pilote ODBC fourni par le système d'exploitation (le nom du pilote est « SQL Server »). Si vous générez et exécutez cet exemple comme une application 32 bits sur un système d'exploitation 64 bits, vous devez créer la source de données ODBC avec l'administrateur ODBC dans %windir%\SysWOW64\odbcad32.exe.  
+ Vous aurez besoin d'une source de données ODBC nommée AdventureWorks, dont la base de données par défaut est l'exemple de base de données AdventureWorks. (Vous pouvez télécharger l’exemple de base de données AdventureWorks à partir de la page d’accueil des [exemples et projets de communautés Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384).) Cette source de données doit être basée sur le pilote ODBC fourni par le système d'exploitation (le nom du pilote est « SQL Server »). Si vous générez et exécutez cet exemple comme une application 32 bits sur un système d'exploitation 64 bits, vous devez créer la source de données ODBC avec l'administrateur ODBC dans %windir%\SysWOW64\odbcad32.exe.  
   
  Cet exemple vous permet de vous connecter à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par défaut de votre ordinateur. Pour vous connecter à une instance nommée, modifiez la définition de la source de données ODBC pour spécifier l'instance en utilisant le format suivant : serveur\namedinstance. Par défaut, [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] est installé dans une instance nommée.  
   
@@ -189,6 +189,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Gestion des rubriques de procédures des colonnes text et image &#40;ODBC&#41;](http://msdn.microsoft.com/library/f97333ad-e2ab-4d26-9395-741ba25f2c28)  
+ [Gestion des rubriques de procédures des colonnes text et image &#40;ODBC&#41;](https://msdn.microsoft.com/library/f97333ad-e2ab-4d26-9395-741ba25f2c28)  
   
   

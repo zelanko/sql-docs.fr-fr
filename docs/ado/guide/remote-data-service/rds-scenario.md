@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/09/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,22 +14,22 @@ ms.assetid: a7dcad87-aaf0-4b02-9660-472f8469761c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: aaeedb6dffb992ac940eebd450c63d33badb299d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0e936b6b68a67c1616a00d38f6d84776d44ef327
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845277"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51559432"
 ---
 # <a name="rds-scenario"></a>Scénario RDS
 > [!IMPORTANT]
->  Depuis Windows 8 et Windows Server 2012, composants de serveur Services Bureau à distance ne sont plus inclus dans le système d’exploitation Windows (voir Windows 8 et [Guide de compatibilité de Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) pour plus de détails). Composants du client RDS seront supprimées dans une future version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent des services Bureau à distance doivent migrer vers [Service de données WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Depuis Windows 8 et Windows Server 2012, composants de serveur Services Bureau à distance ne sont plus inclus dans le système d’exploitation Windows (voir Windows 8 et [Guide de compatibilité de Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) pour plus de détails). Composants du client RDS seront supprimées dans une future version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent des services Bureau à distance doivent migrer vers [Service de données WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
  L’application de carnet d’adresses est un scénario qui vous montre comment utiliser le Service de données à distance (RDS) pour créer une application Web simple, prenant en charge les données, un carnet d’adresses d’entreprise en ligne. Ce scénario est utile pour Microsoft Visual Basic Scripting Edition (VBScript) et les programmeurs COM qui veulent apprendre à utiliser les contrôles ActiveX prenant en charge les données avec les services Bureau à distance et des logiciels plus expérimentés les développeurs qui souhaitent générer des applications Web orientées données.  
   
  Ce scénario suppose que vous savez comment utiliser des balises de mise en page HTML, les techniques de liaison de données utilisez DHTML et programme base avec des contrôles ActiveX.  
   
- Si vous avez installé le Kit de développement, vous trouverez le code source complet pour l’exemple d’application Carnet d’adresses dans le répertoire du Kit de développement logiciel au samples\dataaccess\rds\AddressBook\AddressBook.asp. Pour afficher le scénario de carnet d’adresses, dans Internet Explorer 4.0 ou version ultérieure, tapez **http://*webserver*/RDS/AddressBook/AddressBook.asp** où *webserver* est le nom donné sur votre ordinateur de serveur Windows NT 4.0 ou Windows 2000 Web qui exécute Internet Information Services (IIS) et ASP.  
+ Si vous avez installé le Kit de développement, vous trouverez le code source complet pour l’exemple d’application Carnet d’adresses dans le répertoire du Kit de développement logiciel au samples\dataaccess\rds\AddressBook\AddressBook.asp. Pour afficher le scénario de carnet d’adresses, dans Internet Explorer 4.0 ou version ultérieure, tapez **https://*webserver*/RDS/AddressBook/AddressBook.asp** où *webserver* est le nom Étant donné sur votre ordinateur serveur Windows NT 4.0 ou Windows 2000 Web qui exécute Internet Information Services (IIS) et ASP.  
   
 ## <a name="introduction-to-address-book"></a>Introduction au carnet d’adresses  
  L’exemple d’application Carnet d’adresses fournit un carnet d’adresses en ligne simple que vous pouvez utiliser pour publier un répertoire de recherche via un intranet. Le carnet d’adresses est conçu afin qu’un utilisateur peut entrer une chaîne de recherche dans un ou plusieurs champs pour demander des informations sur les employés. Pour vous montrer les fonctionnalités de base du Service de données distant, l’exemple d’application est intentionnellement réduite, avec un nombre minimal d’objets et des champs de recherche.  

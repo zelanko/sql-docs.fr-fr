@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/08/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,23 +15,23 @@ ms.assetid: a4360ed4-b70f-4734-9041-4025d033346b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b0c58d6c90b67369f969a37cc2ad7e03cc6cad82
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 65ed1ab997566c44aa67da44c8d14418304eecd0
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47624607"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600659"
 ---
 # <a name="microsoft-ole-db-remoting-provider-overview"></a>Vue d’ensemble du fournisseur Microsoft OLE DB Remoting
 Le fournisseur Microsoft OLE DB d’accès distant permet à un utilisateur local sur un ordinateur client appeler des fournisseurs de données sur un ordinateur distant. Spécifiez les paramètres de fournisseur de données pour la machine distante comme vous le feriez si vous étiez un utilisateur local sur l’ordinateur distant. Puis spécifiez les paramètres utilisés par le fournisseur de communication à distance pour accéder à l’ordinateur distant. Vous pouvez ensuite accéder à l’ordinateur distant comme si vous étiez un utilisateur local.
 
 > [!IMPORTANT]
->  Depuis Windows 8 et Windows Server 2012, composants de serveur Services Bureau à distance ne sont plus inclus dans le système d’exploitation Windows (voir Windows 8 et [Guide de compatibilité de Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) pour plus de détails). Composants du client RDS seront supprimées dans une future version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent des services Bureau à distance doivent migrer vers [Service de données WCF](http://go.microsoft.com/fwlink/?LinkId=199565).
+>  Depuis Windows 8 et Windows Server 2012, composants de serveur Services Bureau à distance ne sont plus inclus dans le système d’exploitation Windows (voir Windows 8 et [Guide de compatibilité de Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) pour plus de détails). Composants du client RDS seront supprimées dans une future version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent des services Bureau à distance doivent migrer vers [Service de données WCF](https://go.microsoft.com/fwlink/?LinkId=199565).
 
 ## <a name="provider-keyword"></a>Mot clé de fournisseur
  Pour appeler le fournisseur OLE DB d’accès distant, spécifiez le mot clé et la valeur suivante dans la chaîne de connexion. (Notez l’espace vide dans le nom du fournisseur).
 
-```
+```vb
 "Provider=MS Remote"
 ```
 
@@ -58,14 +58,14 @@ Le fournisseur Microsoft OLE DB d’accès distant permet à un utilisateur loca
 
  Vous pouvez également définir des propriétés dynamiques en écriture en spécifiant leurs noms en tant que mots clés dans la chaîne de connexion. Par exemple, définissez la **Internet Timeout** propriété dynamique à cinq secondes en spécifiant :
 
-```
+```vb
 Dim cn as New ADODB.Connection
 cn.Open "Provider=MS Remote;Internet Timeout=5000"
 ```
 
  Vous pouvez également définir ou extraire une propriété dynamique en spécifiant son nom comme index de la **propriétés** propriété. L’exemple suivant montre comment obtenir et imprimer la valeur actuelle de la **Internet Timeout** propriété dynamique et définissez une nouvelle valeur :
 
-```
+```vb
 Debug.Print cn.Properties("Internet Timeout")
 cn.Properties("Internet Timeout") = 5000
 ```
@@ -80,16 +80,16 @@ cn.Properties("Internet Timeout") = 5000
 ## <a name="example"></a>Exemple
  Cet exemple effectue une requête sur le **auteurs** table de la **Pubs** base de données sur un serveur nommé *YourServer*. Les noms de la source de données distante et le serveur distant sont fournis dans le [Open](../../../ado/reference/ado-api/open-method-ado-connection.md) méthode de la[connexion](../../../ado/reference/ado-api/connection-object-ado.md) objet et la requête SQL est spécifiée dans le[Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) méthode de la [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objet. Un **Recordset** objet est retourné, modifié et utilisé pour mettre à jour la source de données.
 
-```
+```vb
 Dim rs as New ADODB.Recordset
 Dim cn as New ADODB.Connection
-cn.Open  "Provider=MS Remote;Data Source=pubs;" & _
-         "Remote Server=http://YourServer"
+cn.Open  "Provider=MS Remote;Data Source=pubs;" & _
+         "Remote Server=https://YourServer"
 rs.Open "SELECT * FROM authors", cn
-...                'Edit the recordset
-rs.UpdateBatch     'Equivalent of RDS SubmitChanges
+...                'Edit the recordset
+rs.UpdateBatch     'Equivalent of RDS SubmitChanges
 ...
 ```
 
 ## <a name="see-also"></a>Voir aussi
- [Vue d’ensemble du fournisseur OLE DB communication à distance](http://msdn.microsoft.com/4083b72f-68c4-4252-b366-abb70db5ca2b)
+ [Vue d’ensemble du fournisseur OLE DB communication à distance](https://msdn.microsoft.com/4083b72f-68c4-4252-b366-abb70db5ca2b)

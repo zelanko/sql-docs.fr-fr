@@ -13,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 5efebacd3fd63aa9359ff11950281a237794b268
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5ddc8e7ee7f160d6673e9a698075e923740041b8
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788627"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51663018"
 ---
 # <a name="sysdmpdwdmsworkers-transact-sql"></a>Sys.dm_pdw_dms_workers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "47788627"
 |source_info|**nvarchar(4000)**|Pour un lecteur, la spécification des tables sources et des colonnes.||  
 |destination_info|**nvarchar(4000)**|Pour un writer, spécification des tables de destination.||  
   
- Pour plus d’informations sur le nombre maximal de lignes conservées par cette vue, consultez [valeurs de la vue système maximales](http://msdn.microsoft.com/5243f018-2713-45e3-9b61-39b2a57401b9).  
+ Pour plus d’informations sur le nombre maximal de lignes conservées par cette vue, consultez [valeurs de la vue système maximales](https://msdn.microsoft.com/5243f018-2713-45e3-9b61-39b2a57401b9).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Vues de gestion dynamique de l’entrepôt SQL Data Warehouse et Parallel Data &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  

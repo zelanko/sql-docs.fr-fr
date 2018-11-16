@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/09/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,17 +13,17 @@ ms.assetid: ef37e858-c05f-4f52-a65f-3ce6037e0d03
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5fcff12760076a47e31fc6b140e0f3cdb7fc590e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ee1d76052402ab775e9e8de20e1ef6da07e23432
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47657747"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51558447"
 ---
 # <a name="configuring-rds-on-windows-2000"></a>Configuration de RDS sur Windows 2000
 Si vous rencontrez des difficultés pour faire fonctionner correctement une fois que vous mettez à niveau vers Windows 2000 RDS, suivez ces étapes pour résoudre le problème :  
   
-1.  Assurez-vous que le premier que le Service de publication World Wide Web est en cours d’exécution en accédant à http:// serveur à l’aide d’Internet Explorer. Si vous ne pouvez pas accéder au serveur de Web de cette manière, ouvrez une invite de commandes et entrez la commande suivante, « NET démarrer W3SVC ».  
+1.  Assurez-vous que le premier que le Service de publication World Wide Web est en cours d’exécution en accédant à https:// server à l’aide d’Internet Explorer. Si vous ne pouvez pas accéder au serveur de Web de cette manière, ouvrez une invite de commandes et entrez la commande suivante, « NET démarrer W3SVC ».  
   
 2.  Dans le menu Démarrer, sélectionnez Exécuter. Tapez msdfmap.ini et puis cliquez sur OK pour ouvrir le fichier msdfmap.ini dans le bloc-notes. Consultez la section [CONNECT DEFAULT] et si le paramètre d’accès est la valeur NOACCESS, modifiez-le en lecture seule.  
   
@@ -38,7 +38,7 @@ Si vous rencontrez des difficultés pour faire fonctionner correctement une fois
  Veillez à essayer de redémarrer le serveur si les modifications n’apparaissent ne pas pour résoudre le problème dans un premier temps.  
   
 > [!IMPORTANT]
->  Depuis Windows 8 et Windows Server 2012, composants de serveur Services Bureau à distance ne sont plus inclus dans le système d’exploitation Windows (voir Windows 8 et [Guide de compatibilité de Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) pour plus de détails). Composants du client RDS seront supprimées dans une future version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent des services Bureau à distance doivent migrer vers [Service de données WCF](http://go.microsoft.com/fwlink/?LinkId=199565). Depuis Windows 8 et Windows Server 2012, composants de serveur Services Bureau à distance ne sont plus inclus dans le système d’exploitation Windows. Migrer des applications qui utilisent des services Bureau à distance à [Service de données WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Depuis Windows 8 et Windows Server 2012, composants de serveur Services Bureau à distance ne sont plus inclus dans le système d’exploitation Windows (voir Windows 8 et [Guide de compatibilité de Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) pour plus de détails). Composants du client RDS seront supprimées dans une future version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent des services Bureau à distance doivent migrer vers [Service de données WCF](https://go.microsoft.com/fwlink/?LinkId=199565). Depuis Windows 8 et Windows Server 2012, composants de serveur Services Bureau à distance ne sont plus inclus dans le système d’exploitation Windows. Migrer des applications qui utilisent des services Bureau à distance à [Service de données WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Principes de base de RDS](../../../ado/guide/remote-data-service/rds-fundamentals.md)

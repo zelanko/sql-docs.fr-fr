@@ -16,12 +16,12 @@ ms.assetid: 65120ce6-3900-4cd4-b322-3b9816d74737
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fdbff500a90ab4456b3e9ef252be4407c636cdec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e67ac30883a7665368f6f46045ff61d9375b8cd1
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47822107"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51603019"
 ---
 # <a name="parenturl-property-ado"></a>ParentURL, propriété (ADO)
 Indique l’URL absolue qui pointe vers le parent [enregistrement](../../../ado/reference/ado-api/record-object-ado.md) d’actuel **enregistrement** objet.  
@@ -35,13 +35,13 @@ Indique l’URL absolue qui pointe vers le parent [enregistrement](../../../ado/
  Supposons que « second » est un sous-dossier de sous « first ». Ouvrez le **enregistrement** objet à l’aide de la syntaxe suivante :  
   
 ```  
-record.ActiveConnection = "http://first"  
+record.ActiveConnection = "https://first"  
 record.Open "second"  
 ```  
   
- À présent, la valeur de `the` **ParentURL** propriété est `"http://first"`, la même en tant que **ActiveConnection**.  
+ À présent, la valeur de `the` **ParentURL** propriété est `"https://first"`, la même en tant que **ActiveConnection**.  
   
- La source peut également être une URL absolue, telle que, `"http://first/second"`. Le **ParentURL** propriété est alors `"http://first"`, du niveau supérieur `"second"`.  
+ La source peut également être une URL absolue, telle que, `"https://first/second"`. Le **ParentURL** propriété est alors `"https://first"`, du niveau supérieur `"second"`.  
   
  Cette propriété peut être une valeur null si :  
   

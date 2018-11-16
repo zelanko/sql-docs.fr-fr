@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 3b4a7987a0fc9d50bbc5c8803d741be13acf7433
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: 59897cbe6abc13b9842dc148ef8c2de4413926d0
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50050893"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51702953"
 ---
 # <a name="run-python-using-t-sql"></a>Exécuter Python avec T-SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -139,7 +139,7 @@ Par défaut, [sp_execute_external_script](../../relational-databases/system-stor
 
 Autres types d’entrée peuvent être passés en tant que variables SQL : par exemple, vous pouvez passer un modèle formé en tant que variable, à l’aide d’une fonction de sérialisation comme [pickle](https://docs.python.org/3.0/library/pickle.html) ou [rx_serialize_model](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model) pour écrire le modèle un format binaire.
 
-La procédure stockée retourne un seul Python [pandas](http://pandas.pydata.org/pandas-docs/stable/index.html) de trame de données en tant que sortie, mais vous pouvez également générer des valeurs scalaires et des modèles en tant que variables. Vous pouvez par exemple, un modèle formé en tant que binaire variable de sortie et passe à une instruction T-SQL INSERT, pour écrire ce modèle dans une table. Vous pouvez également générer des tracés (au format binaire) ou des valeurs scalaires (les valeurs individuelles, telles que la date et l’heure, la durée pour former le modèle et ainsi de suite).
+La procédure stockée retourne un seul Python [pandas](https://pandas.pydata.org/pandas-docs/stable/index.html) de trame de données en tant que sortie, mais vous pouvez également générer des valeurs scalaires et des modèles en tant que variables. Vous pouvez par exemple, un modèle formé en tant que binaire variable de sortie et passe à une instruction T-SQL INSERT, pour écrire ce modèle dans une table. Vous pouvez également générer des tracés (au format binaire) ou des valeurs scalaires (les valeurs individuelles, telles que la date et l’heure, la durée pour former le modèle et ainsi de suite).
 
 Pour l’instant, examinons simplement la valeur par défaut des variables d’entrée et de sortie de sp_execute_external_script : `InputDataSet` et `OutputDataSet`. 
 
@@ -313,7 +313,7 @@ Par conséquent, comment vous expose le résultat unique d’un calcul comme une
 
 Avoir converti nos résultats mathématiques scalaire vers une structure tabulaire, nous devons encore les convertir en un format que SQL Server peut gérer. 
 
-1. Pour convertir une série à une trame de données, appelez les pandas [DataFrame](http://pandas.pydata.org/pandas-docs/stable/dsintro.html#dataframe) (méthode).
+1. Pour convertir une série à une trame de données, appelez les pandas [DataFrame](https://pandas.pydata.org/pandas-docs/stable/dsintro.html#dataframe) (méthode).
 
     ```sql
     execute sp_execute_external_script 

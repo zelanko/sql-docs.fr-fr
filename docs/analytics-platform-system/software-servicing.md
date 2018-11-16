@@ -9,18 +9,18 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 79231b6e2867154bc4d826b83a0a4fd27487f438
-ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
+ms.openlocfilehash: 444d7f29e7f65da7e5d98dde310b2c1f8ad8dd4b
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37909799"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700208"
 ---
 # <a name="software-servicing-in-analytics-platform-system"></a>Maintenance des logiciels d’Analytique Platform System
 Cette section résume les logiciels de maintenance configuration requise pour les appliances Analytique Platform System, y compris les correctifs logiciels WSUS et Analytique Platform System.  
   
 ## <a name="Basics"></a>Bases de la maintenance des logiciels  
-**WSUS :** votre appliance Analytique Platform System doit être configuré pour recevoir des mises à jour à partir de Windows Server Update Services (WSUS). Ces mises à jour incluent des modifications importantes apportées au logiciel de l’application. Une fois configurés, nombreuses mises à jour seront installera automatiquement et ne nécessitent pas de gestion pratique. En règle générale, les mises à jour WSUS sont configurés au cours de la [configurer Windows Server Update Services &#40;WSUS&#41; &#40;Analytique Platform System&#41; ](configure-windows-server-update-services-wsus.md) étape effectuée pendant la configuration de l’appliance. Si ce n’est pas le cas, cette étape de configuration peut être effectuée plus tard. Pour plus d’informations sur WSUS, consultez le [site Web WSUS Guide](http://go.microsoft.com/fwlink/?LinkId=202417).  
+**WSUS :** votre appliance Analytique Platform System doit être configuré pour recevoir des mises à jour à partir de Windows Server Update Services (WSUS). Ces mises à jour incluent des modifications importantes apportées au logiciel de l’application. Une fois configurés, nombreuses mises à jour seront installera automatiquement et ne nécessitent pas de gestion pratique. En règle générale, les mises à jour WSUS sont configurés au cours de la [configurer Windows Server Update Services &#40;WSUS&#41; &#40;Analytique Platform System&#41; ](configure-windows-server-update-services-wsus.md) étape effectuée pendant la configuration de l’appliance. Si ce n’est pas le cas, cette étape de configuration peut être effectuée plus tard. Pour plus d’informations sur WSUS, consultez le [site Web WSUS Guide](https://go.microsoft.com/fwlink/?LinkId=202417).  
   
 **Correctifs logiciels :** en outre, vous devrez peut-être appliquer des correctifs de système de plateforme d’Analytique. Un *correctif* est une mise à jour logicielle qui est créé pour un client spécifique résoudre un problème avec le logiciel de système de plateforme d’Analytique. Chaque correctif est un fichier exécutable qui installe le correctif pour le problème spécifique au client. Chaque correctif contient également une accumulation de toutes les mises à jour logicielles précédemment publiées pour Windows, SQL Server et Analytique Platform System. Si vous avez besoin d’installer un correctif logiciel, le support Microsoft vous fournira le correctif logiciel et les instructions.  
   

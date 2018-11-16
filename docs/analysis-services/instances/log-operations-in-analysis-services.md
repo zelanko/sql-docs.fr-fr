@@ -1,5 +1,5 @@
 ---
-title: Enregistrer les opérations dans Analysis Services | Documents Microsoft
+title: Journalisation des opérations dans Analysis Services | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ba0be2d0a46790f1a330a75c25461983e0b7488a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: a4332497abe58a610a4ebba2d1c92b24aa9f5bd6
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018606"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701637"
 ---
 # <a name="log-operations-in-analysis-services"></a>Enregistrer les opérations dans Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -34,10 +34,8 @@ ms.locfileid: "34018606"
   
 -   [Fichiers de vidage minimal (.mdmp)](#bkmk_mdmp)  
   
--   [Conseils et meilleures pratiques](#bkmk_tips)  
+-   [Conseils et bonnes pratiques](#bkmk_tips)  
   
-> [!NOTE]  
->  Si vous recherchez des informations sur la journalisation, vous serez peut-être intéressé par les opérations de suivi qui montrent les détails de traitement et d'exécution de requêtes. Pour obtenir des informations sur les objets de trace pour le suivi ad hoc et maintenu (par exemple, l’audit de l’accès aux cubes), ainsi que des recommandations sur l’utilisation optimale de Flight Recorder, SQL Server Profiler et xEvents, consultez les liens accessibles dans cette page : [Analyser une instance Analysis Services](../../analysis-services/instances/monitor-an-analysis-services-instance.md).  
   
 ##  <a name="bkmk_location"></a> Emplacement et types de journaux  
  Analysis Services fournit les journaux décrits ci-dessous.  
@@ -55,7 +53,7 @@ ms.locfileid: "34018606"
   
  Dans la mesure du possible, nous vous suggérons de définir des propriétés de journalisation dans la page de propriétés du serveur de Management Studio. Toutefois, dans certains cas, vous devez modifier le fichier msmdsrv.ini directement pour configurer les paramètres qui ne sont pas visibles dans les outils d'administration.  
   
- ![Section du fichier de configuration indiquant des paramètres de journal](../../analysis-services/instances/media/ssas-logfilesettings.png "Section du fichier de configuration indiquant des paramètres de journal")  
+ ![Section du fichier de configuration affichant les paramètres du journal](../../analysis-services/instances/media/ssas-logfilesettings.png "Section du fichier de configuration affichant les paramètres du journal")  
   
 ##  <a name="bkmk_msmdsrv"></a> Fichier journal du service MSMDSRV  
  Analysis Services enregistre les opérations du serveur dans le fichier msmdsrv.log, un par instance, qui se trouve dans \program files\Microsoft SQL Server\\<instance\>\Olap\Log.  
@@ -99,7 +97,7 @@ ms.locfileid: "34018606"
 ##  <a name="bkmk_querylog"></a> Journaux des requêtes  
  Le journal des requêtes porte mal son nom, car il n'enregistre pas l'activité des requêtes MDX ou DAX de vos utilisateurs. Au lieu de cela, il recueille des données sur les requêtes générées par Analysis Services, qui sont ensuite utilisées comme entrées de données dans l'Assistant Optimisation de l'utilisation. Les données recueillies dans le journal des requêtes ne sont pas destinées à être analysées directement. Plus précisément, les datasets sont décrits dans des tableaux de bits, avec un chiffre zéro ou un indiquant que les parties du dataset sont comprises dans la requête. Là encore, ces données sont destinées à l'Assistant.  
   
- Pour l'analyse et le dépannage des requêtes, de nombreux développeurs et administrateurs utilisent un outil communautaire, **ASTrace**, pour analyser les requêtes. Vous pouvez également utiliser SQL Server Profiler, xEvents ou une trace Analysis Services. Pour obtenir des liens relatifs au suivi, consultez [Analyser une instance Analysis Services](../../analysis-services/instances/monitor-an-analysis-services-instance.md) .  
+ Pour l'analyse et le dépannage des requêtes, de nombreux développeurs et administrateurs utilisent un outil communautaire, **ASTrace**, pour analyser les requêtes. Vous pouvez également utiliser SQL Server Profiler, xEvents ou une trace Analysis Services.
   
  Quand faut-il utiliser le journal des requêtes ? Nous vous recommandons d'activer le journal des requêtes dans le cadre d'un exercice de réglage des performances de requête qui inclut l'Assistant Optimisation de l'utilisation. Le journal des requêtes n'existe qu'une fois que vous avez activé la fonctionnalité, créé les structures de données pour la prendre en charge et défini les propriétés utilisées par Analysis Services pour localiser et renseigner le journal.  
   
@@ -117,7 +115,7 @@ ms.locfileid: "34018606"
   
  Les paramètres du journal des requêtes sont applicables à l'échelle du serveur. Les paramètres que vous spécifiez sont utilisés par toutes les bases de données en cours d'exécution sur ce serveur.  
   
- ![Interrogation des paramètres de journal dans Management Studio](../../analysis-services/instances/media/ssas-querylogsettings.png "paramètres du journal des requêtes dans Management Studio")  
+ ![Interroger les paramètres de journal dans Management Studio](../../analysis-services/instances/media/ssas-querylogsettings.png "paramètres de journal de requête dans Management Studio")  
   
  Une fois les paramètres de configuration spécifiés, exécutez une requête MDX à plusieurs reprises. Si l'échantillonnage est défini sur 10, exécutez la requête 11 fois. Vérifiez que la table est créée. Dans Management Studio, connectez-vous au moteur de base de données relationnelle, ouvrez le dossier de base de données, ouvrez le dossier **Tables** et vérifiez que **OlapQueryLog** existe. Si la table n'est pas visible immédiatement, actualisez le dossier pour faire apparaître les modifications apportées à son contenu.  
   
@@ -180,8 +178,8 @@ ms.locfileid: "34018606"
 -   Utilisez ASTrace2012 plutôt qu'un journal des requêtes pour savoir qui interroge les cubes. Le journal des requêtes sert généralement à fournir une entrée pour l'Assistant Optimisation de l'utilisation. Les données qu'il capture ne sont pas faciles à lire ou à interpréter. ASTrace2012 est un outil de la communauté, largement utilisé, qui capture les opérations de requêtes. Consultez [Exemples de la communauté Microsoft SQL Server : Analysis Services](https://sqlsrvanalysissrvcs.codeplex.com/).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Gestion d’instances Analysis Services](../../analysis-services/instances/analysis-services-instance-management.md)   
- [Introduction à la surveillance d’Analysis Services avec SQL Server Profiler](../../analysis-services/instances/introduction-to-monitoring-analysis-services-with-sql-server-profiler.md)   
+ [Gestion d'instances Analysis Services](../../analysis-services/instances/analysis-services-instance-management.md)   
+ [Introduction à la surveillance d’Analysis Services à l’aide de SQL Server Profiler](../../analysis-services/instances/introduction-to-monitoring-analysis-services-with-sql-server-profiler.md)   
  [Propriétés du serveur dans Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md)  
   
   

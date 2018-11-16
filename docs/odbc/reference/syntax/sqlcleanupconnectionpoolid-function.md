@@ -13,19 +13,19 @@ ms.assetid: 1fc61908-e003-4587-b91a-32f40569fb99
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1dc2552c848b691346c57a0191f9c9200bad4523
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ce48e7aa89451131b7ed483fa5132af22565c170
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666167"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673548"
 ---
 # <a name="sqlcleanupconnectionpoolid-function"></a>SQLCleanupConnectionPoolID, fonction
 **Conformité**  
  Version introduite : ODBC normes 3,81 conformité : ODBC  
   
  **Résumé**  
- **SQLCleanupConnectionPoolID** informe un pilote qui a un ID de pool a été dépassé. Un pool d’ID peut le délai d’attente chaque fois que toutes les connexions dans un pool associé à cet ID de pool ont été a expiré. Consultez [le regroupement dans le Microsoft Data Access Components](http://msdn.microsoft.com/library/ms810829.aspx) pour plus d’informations sur le délai de connexion.  
+ **SQLCleanupConnectionPoolID** informe un pilote qui a un ID de pool a été dépassé. Un pool d’ID peut le délai d’attente chaque fois que toutes les connexions dans un pool associé à cet ID de pool ont été a expiré. Consultez [le regroupement dans le Microsoft Data Access Components](https://msdn.microsoft.com/library/ms810829.aspx) pour plus d’informations sur le délai de connexion.  
   
 ## <a name="syntax"></a>Syntaxe  
   

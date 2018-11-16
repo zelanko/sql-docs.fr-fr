@@ -17,12 +17,12 @@ ms.assetid: a2f4b086-078d-49b5-8971-8a1e3f6a6feb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: da16887ff7debf09e69fc72cf464f5838cf6ddc7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: abd4893368069217003ca9fa5a6f4dca9e4229de
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749739"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51681367"
 ---
 # <a name="spaddmergepullsubscriptionagent-transact-sql"></a>sp_addmergepullsubscription_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -294,13 +294,13 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
  Nom d'un travail de l'agent existant. *job_name* est **sysname**, avec NULL comme valeur par défaut. Ce paramètre n'est indiqué que lorsque l'abonnement est synchronisé grâce à un travail existant plutôt qu'un nouveau travail (étant le comportement par défaut). Si vous n’êtes pas membre de la **sysadmin** rôle serveur fixe, vous devez spécifier *job_login* et *job_password* lorsque vous spécifiez *nom_travail*.  
   
  [  **@dynamic_snapshot_location =** ] **'***dynamic_snapshot_location***'** ]  
- Le chemin d’accès au dossier où les fichiers d’instantanés seront lues à partir de si un instantané de données filtrées doit être utilisé. *dynamic_snapshot_location* est **nvarchar (260)**, avec NULL comme valeur par défaut. Pour plus d’informations, consultez [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+ Le chemin d’accès au dossier où les fichiers d’instantanés seront lues à partir de si un instantané de données filtrées doit être utilisé. *dynamic_snapshot_location* est **nvarchar (260)**, avec NULL comme valeur par défaut. Pour plus d'informations, voir [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
  [  **@use_web_sync =** ] *use_web_sync*  
  Indique que la synchronisation Web est activée. *use_web_sync* est **bits**, avec 0 comme valeur par défaut. **1** Spécifie que l’abonnement par extraction peut être synchronisé via internet à l’aide de HTTP.  
   
  [  **@internet_url =** ] **'***internet_url***'**  
- Emplacement qui représente l'écouteur de réplication (REPLISAPI.DLL) de la synchronisation Web. *internet_url* est **nvarchar (260)**, avec NULL comme valeur par défaut. *internet_url* est une URL qualifiée complète, au format `http://server.domain.com/directory/replisapi.dll`. Si le serveur est configuré de manière à être à l'écoute sur un port autre que le port 80, le numéro de port doit également être fourni sous la forme `http://server.domain.com:portnumber/directory/replisapi.dll`, où `portnumber` représente le port.  
+ Emplacement qui représente l'écouteur de réplication (REPLISAPI.DLL) de la synchronisation Web. *internet_url* est **nvarchar (260)**, avec NULL comme valeur par défaut. *internet_url* est une URL qualifiée complète, au format `https://server.domain.com/directory/replisapi.dll`. Si le serveur est configuré de manière à être à l'écoute sur un port autre que le port 80, le numéro de port doit également être fourni sous la forme `https://server.domain.com:portnumber/directory/replisapi.dll`, où `portnumber` représente le port.  
   
  [  **@internet_login =** ] **'***internet_login***'**  
  Nom de connexion que l'Agent de fusion utilise pour se connecter, à l'aide de l'authentification de base HTTP, au serveur Web qui héberge la synchronisation Web. *internet_login* est **sysname**, avec NULL comme valeur par défaut.  
@@ -353,7 +353,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 ## <a name="see-also"></a>Voir aussi  
  [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
- [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
+ [S’abonner aux Publications](../../relational-databases/replication/subscribe-to-publications.md)   
  [sp_addmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)   
  [sp_changemergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepullsubscription-transact-sql.md)   
  [sp_dropmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md)   

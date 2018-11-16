@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/09/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,16 +13,16 @@ ms.assetid: e776b4e3-fcc4-4bfb-a7e8-5ffae1d83833
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8c7e8b5d0583c2f0938c792d4e7fb9980e663a9b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cec3e79e3d37f064cb742588519a374737e01319
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47667237"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51558216"
 ---
 # <a name="required-client-settings"></a>Paramètres client obligatoires
 > [!IMPORTANT]
->  Depuis Windows 8 et Windows Server 2012, composants de serveur Services Bureau à distance ne sont plus inclus dans le système d’exploitation Windows (voir Windows 8 et [Guide de compatibilité de Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) pour plus de détails). Composants du client RDS seront supprimées dans une future version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent des services Bureau à distance doivent migrer vers [Service de données WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Depuis Windows 8 et Windows Server 2012, composants de serveur Services Bureau à distance ne sont plus inclus dans le système d’exploitation Windows (voir Windows 8 et [Guide de compatibilité de Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) pour plus de détails). Composants du client RDS seront supprimées dans une future version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent des services Bureau à distance doivent migrer vers [Service de données WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
  Spécifiez les paramètres suivants pour utiliser un personnalisé **DataFactory** gestionnaire.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "47667237"
   
  Supposez que les sections suivantes dans **MSDFMAP. INI** et le nom de source de données, AdvWorks, ont été définis précédemment :  
   
-```  
+```console
 [connect CustomerDataBase]  
 Access=ReadWrite  
 Connect="DSN=AdvWorks"  
@@ -51,10 +51,10 @@ SQL="SELECT * FROM Customers WHERE CustomerID = ?"
   
 ## <a name="rdsdatacontrol-version"></a>RDS. DataControl Version  
   
-```  
+```vb
 Dim dc as New RDS.DataControl  
 Set dc.Handler = "MSDFMAP.Handler"  
-Set dc.Server = "http://yourServer"  
+Set dc.Server = "https://yourServer"  
 Set dc.Connect = "Data Source=CustomerDatabase"  
 Set dc.SQL = "CustomerById(4)"  
 dc.Refresh  
@@ -62,7 +62,7 @@ dc.Refresh
   
 ## <a name="recordset-version"></a>Version du jeu d’enregistrements  
   
-```  
+```vb
 Dim rs as New ADODB.Recordset  
 rs.CursorLocation = adUseClient  
 ```  
@@ -71,9 +71,9 @@ rs.CursorLocation = adUseClient
   
  rs.Open "CustomerById(4)", "Handler=MSDFMAP.Handler;" & _  
   
-```  
+```vb
 "Provider=MS Remote;Data Source=CustomerDatabase;" & _  
-"Remote Server=http://yourServer"  
+"Remote Server=https://yourServer"  
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
@@ -84,25 +84,4 @@ rs.CursorLocation = adUseClient
  [Paramètres Client requis](../../../ado/guide/remote-data-service/required-client-settings.md)   
  [Présentation du fichier de personnalisation](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)   
  [Écriture d’un gestionnaire personnalisé](../../../ado/guide/remote-data-service/writing-your-own-customized-handler.md)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

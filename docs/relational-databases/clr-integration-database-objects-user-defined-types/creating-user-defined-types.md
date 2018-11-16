@@ -15,12 +15,12 @@ ms.assetid: 0feb8b08-4062-467b-8433-e88e4e302738
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 82349ca6935f685c441dfa15fede994d19173fb5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4222e8a63a29fe8c41d0e1715d2569bc9863068c
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47685932"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661260"
 ---
 # <a name="creating-user-defined-types"></a>Création de types définis par l’utilisateur
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ Reconfigure
 ## <a name="example"></a>Exemple  
  Le code suivant définit l’UDT Point, qui est décrite en détail dans [Coding User-Defined Types](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md).  
   
- Le code complet pour les autres exemples discutés dans cette section peut être obtenu en installant les exemples CLR. Pour obtenir des instructions sur l’installation de ces exemples, consultez [exemples pour le moteur de base de données SQL Server](http://msftengprodsamples.codeplex.com/).  
+ Le code complet pour les autres exemples discutés dans cette section peut être obtenu en installant les exemples CLR. Pour obtenir des instructions sur l’installation de ces exemples, consultez [exemples pour le moteur de base de données SQL Server](https://msftengprodsamples.codeplex.com/).  
   
  C#  
   

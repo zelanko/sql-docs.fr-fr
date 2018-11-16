@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 02/15/2017
+ms.date: 11/08/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +14,12 @@ ms.assetid: 2d7cb5b5-8307-49dd-b07e-c07069bb1626
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: edab19ee8b3ae4eee186835d25220ee638c41149
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ab4aaed1cfd661d38476c81f8bdc3dcab3aa0f88
+ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47786917"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51350493"
 ---
 # <a name="using-the-microsoft-sdk-for-java"></a>Utilisation du SDK Microsoft pour Java
 
@@ -38,13 +38,13 @@ Le SDK Microsoft pour Java est le kit de développement pour l’environnement d
   
 1.  Exécutez la commande suivante à une invite de commandes. Vous devez définir le chemin d’accès pour inclure le SDK Microsoft pour le répertoire Bin de Java, ou exécutez la commande à partir de cet emplacement. En règle générale, le SDK Microsoft pour Java est installé dans le même emplacement que Visual Studio. Il s’agit d’une instruction de commande unique.  
   
-    ```  
+    ```java
     \<path to DevStudio>\<path to Java SDK>\bin\JactiveX.exe /javatlb "C:\program files\common files\system\ado\msado15.dll"  
     ```  
   
 2.  Exécutez la commande suivante pour compiler les classes générées. Le commutateur/g : t active la génération de symboles de débogage afin que vous puissiez suivre la. Symboles de Java. Supprimer que les versions release.  
   
-    ```  
+    ```java
     jvc /g:t c:\<windows>\Java\trustlib\msado15\*.Java  
     ```  
   

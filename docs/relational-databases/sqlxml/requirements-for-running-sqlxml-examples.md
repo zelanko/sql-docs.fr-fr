@@ -17,12 +17,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0921b3c42518a5b0dfe318b0fec7666a9d2074ee
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 766425f6b0ac75699115146f5e471299bf0a8d41
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47760369"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51664048"
 ---
 # <a name="requirements-for-running-sqlxml-examples"></a>Configuration requise pour l'exécution des exemples SQLXML
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "47760369"
   
  Pour créer des exemples fonctionnels à l'aide des exemples de SQLXML 4.0, vous devez avoir installé les composants suivants.  
   
--   Exemple de base de données AdventureWorks. Pour plus d’informations, consultez [AdventureWorks Sample Databases](http://msftdbprodsamples.codeplex.com/).  
+-   Exemple de base de données AdventureWorks. Pour plus d’informations, consultez [AdventureWorks Sample Databases](https://msftdbprodsamples.codeplex.com/).  
   
 -   Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Pour plus d’informations, consultez [Installation de SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md).  
   

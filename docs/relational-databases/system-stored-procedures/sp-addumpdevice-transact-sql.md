@@ -19,17 +19,17 @@ ms.assetid: c2d2ae49-0808-46d8-8444-db69a69d0ec3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f5d8fe09af9133bd0a4f4a2c6a11824f16963698
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1a97dc3f074a1302f852f710f05eb51e1ba1350c
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649857"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51681227"
 ---
 # <a name="spaddumpdevice-transact-sql"></a>sp_addumpdevice (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   
-**S’applique à**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu’à [version actuelle](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+**S'applique à**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] via la [version actuelle](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
 
 Ajoute une unité de sauvegarde à une instance du [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -79,7 +79,7 @@ sp_addumpdevice [ @devtype = ] 'device_type'
  0 (réussite) ou 1 (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- None  
+ Aucun  
   
 ## <a name="remarks"></a>Notes  
  **sp_addumpdevice** ajoute une unité de sauvegarde à la **sys.backup_devices** vue de catalogue. Vous pouvez ensuite faire référence à cette unité de manière logique dans les instructions BACKUP et RESTORE. **sp_addumpdevice** n’effectue pas l’accès à l’appareil physique. L'accès à l'unité spécifié survient uniquement lorsqu'une instruction BACKUP ou RESTORE est exécutée. La création d'une unité de sauvegarde logique peut simplifier les instructions BACKUP et RESTORE, car la définition du nom de l'unité est une solution via l'utilisation d'une clause « TAPE = » ou « DISK = » pour spécifier le chemin d'accès de l'unité.  

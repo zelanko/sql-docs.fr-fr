@@ -21,12 +21,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d3e39c7e7d6c94ce83889fbd6e29b26da278862f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e55b8ee380645df874d10b04e54e341411105953
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618469"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51658291"
 ---
 # <a name="what39s-new-in-sqlxml-40-sp1"></a>Ce que&#39;s dans SQLXML 4.0 SP1
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "47618469"
 -   Problèmes de migration  
   
 ## <a name="installing-sqlxml-40-sp1"></a>Installation de SQLXML 4.0 SP1  
- Avant [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], SQLXML 4.0 était fourni avec SQL Server et faisait partie de l'installation par défaut de toutes les versions de SQL Server, à l'exception de SQL Server Express. À partir de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], la dernière version de SQLXML (SQLXML 4.0 SP1) n'est plus incluse dans SQL Server. Pour installer SQLXML 4.0 SP1, téléchargez-le à partir de [emplacement d’installation de SQLXML 4.0 SP1](http://www.microsoft.com/download/details.aspx?id=30403).  
+ Avant [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], SQLXML 4.0 était fourni avec SQL Server et faisait partie de l'installation par défaut de toutes les versions de SQL Server, à l'exception de SQL Server Express. À partir de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], la dernière version de SQLXML (SQLXML 4.0 SP1) n'est plus incluse dans SQL Server. Pour installer SQLXML 4.0 SP1, téléchargez-le à partir de [emplacement d’installation de SQLXML 4.0 SP1](https://www.microsoft.com/download/details.aspx?id=30403).  
   
  Les fichiers SQLXML 4.0 SP1 sont installés à l'emplacement suivant :  
   

@@ -11,12 +11,12 @@ ms.assetid: c63d5cae-24fc-4fee-89a9-ad0367cddc3e
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 87731fd9ebd2bf02f1fca2d81a918c330df08925
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3a7a38a3d71b28cc32b863bf95ca6b99fa2bddaa
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47820187"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661748"
 ---
 # <a name="developing-connection-pool-awareness-in-an-odbc-driver"></a>Développement de la reconnaissance des pools de connexions dans un pilote ODBC
 Cette rubrique décrit les détails du développement d’un pilote ODBC qui contient des informations sur la façon dont le pilote doit fournir des services de regroupement de connexion.  
@@ -68,7 +68,7 @@ Cette rubrique décrit les détails du développement d’un pilote ODBC qui con
 ## <a name="the-connection-rating"></a>L’évaluation de la connexion  
  Par rapport à l’établissement d’une nouvelle connexion, vous pouvez obtenir de meilleures performances en réinitialisant certaines informations de connexion (par exemple, la base de données) dans une connexion regroupée. Par conséquent, vous souhaiterez peut-être pas le nom de base de données dans votre jeu d’attributs de clé. Sinon, vous pouvez avoir un pool distinct pour chaque base de données, qui ne peut être appropriée dans les applications de niveau intermédiaire, où les clients utilisent différentes chaînes de connexion différents.  
   
- Chaque fois que vous réutilisez une connexion qui a une incompatibilité d’attribut, vous devez réinitialiser les attributs qui ne correspondent pas, en fonction de la nouvelle requête de l’application, afin que la connexion retournée est identique à la demande d’application (voir la discussion de l’attribut SQL_ATTR _DBC_INFO_TOKEN dans [fonction SQLSetConnectAttr](http://go.microsoft.com/fwlink/?LinkId=59368)). Toutefois, la réinitialisation de ces attributs peut diminuer les performances. Par exemple, la réinitialisation d’une base de données nécessite un appel de réseau au serveur. Par conséquent, réutiliser une connexion qui est parfaitement mis en correspondance, si celle-ci est disponible.  
+ Chaque fois que vous réutilisez une connexion qui a une incompatibilité d’attribut, vous devez réinitialiser les attributs qui ne correspondent pas, en fonction de la nouvelle requête de l’application, afin que la connexion retournée est identique à la demande d’application (voir la discussion de l’attribut SQL_ATTR _DBC_INFO_TOKEN dans [fonction SQLSetConnectAttr](https://go.microsoft.com/fwlink/?LinkId=59368)). Toutefois, la réinitialisation de ces attributs peut diminuer les performances. Par exemple, la réinitialisation d’une base de données nécessite un appel de réseau au serveur. Par conséquent, réutiliser une connexion qui est parfaitement mis en correspondance, si celle-ci est disponible.  
   
  Une fonction de contrôle d’accès dans le pilote peut évaluer une connexion existante avec une nouvelle demande de connexion. Par exemple, la fonction de contrôle d’accès du pilote peut déterminer :  
   
@@ -109,7 +109,7 @@ Cette rubrique décrit les détails du développement d’un pilote ODBC qui con
   
  Le Gestionnaire de pilotes **SQLAllocHandle** et **SQLFreeHandle** n’acceptera pas de ce nouveau type de handle.  
   
- SQL_HANDLE_DBC_INFO_TOKEN peut contenir des informations confidentielles telles que des informations d’identification. Par conséquent, un pilote doit effacer en toute sécurité de la mémoire tampon (à l’aide de [SecureZeroMemory](http://msdn.microsoft.com/library/windows/desktop/aa366877\(v=vs.85\).aspx)) qui contient les informations sensibles avant de libérer ce handle avec **SQLFreeHandle**. Chaque fois que le handle d’environnement d’une application est fermée, tous les pools de connexion associée va être fermées.  
+ SQL_HANDLE_DBC_INFO_TOKEN peut contenir des informations confidentielles telles que des informations d’identification. Par conséquent, un pilote doit effacer en toute sécurité de la mémoire tampon (à l’aide de [SecureZeroMemory](https://msdn.microsoft.com/library/windows/desktop/aa366877\(v=vs.85\).aspx)) qui contient les informations sensibles avant de libérer ce handle avec **SQLFreeHandle**. Chaque fois que le handle d’environnement d’une application est fermée, tous les pools de connexion associée va être fermées.  
   
 ## <a name="driver-manager-connection-pool-rating-algorithm"></a>Pool de connexions du Gestionnaire de pilotes Rating algorithme  
  Cette section décrit l’algorithme de classement pour le regroupement de connexions de gestionnaire de pilotes. Les développeurs de pilotes peuvent implémenter le même algorithme pour la compatibilité descendante. Cet algorithme ne peut pas être le mieux adapté. Vous devez affiner cette algorithme en fonction de votre implémentation (dans le cas contraire, il est inutile d’implémenter cette fonctionnalité).  

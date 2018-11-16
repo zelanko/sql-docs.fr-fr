@@ -10,12 +10,12 @@ ms.assetid: abb4264a-622e-4215-af5b-14e309b8a399
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: c4e3fcf3b9353a43a453dd1c70c24960bc331ff2
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: b5138dea4cfea23d77dae5d4bc766b4c2738f4e7
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099700"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51659063"
 ---
 # <a name="generating-reports-accesstosql"></a>Génération de rapports (AccessToSQL)
 Les rapports de certaines activités effectuées à l’aide des commandes sont générées dans la Console SSMA au niveau d’arborescence objet.  
@@ -143,5 +143,5 @@ La commande **actualisation à partir de base de données** a **erreurs de rappo
 -   Échec-script  
   
 ## <a name="see-also"></a>Voir aussi  
-[Exécution de la Console SSMA (accès)](http://msdn.microsoft.com/aa1bf665-8dc0-4259-b36f-46ae67197a43)  
+[Exécution de la Console SSMA (accès)](https://msdn.microsoft.com/aa1bf665-8dc0-4259-b36f-46ae67197a43)  
   
