@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 30d6949d43e0ca3b652953c96625df031d8ddec2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: af912eebf1274b911c6b48405ba9001e18592916
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47787800"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51659636"
 ---
 # <a name="native-compilation-advisor"></a>Conseiller de compilation native
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47787800"
   
  Dans une procédure stockée interprétée donnée, le conseiller de compilation native vous permet d’identifier toutes les fonctionnalités qui ne sont pas prises en charge dans les modules natifs. Le conseiller de compilation native fournit des liens de documentation permettant de résoudre ou de contourner les problèmes rencontrés.  
   
- Pour plus d’informations sur les méthodologies de transfert, consultez [OLTP en mémoire – Modèles de charge de travail courants et considérations relatives à la migration](http://msdn.microsoft.com/library/dn673538.aspx).  
+ Pour plus d’informations sur les méthodologies de transfert, consultez [OLTP en mémoire – Modèles de charge de travail courants et considérations relatives à la migration](https://msdn.microsoft.com/library/dn673538.aspx).  
   
 ## <a name="walkthrough-using-the-native-compilation-advisor"></a>Procédure pas à pas d'utilisation du Conseiller de compilation native  
  Dans l' **Explorateur d'objets**, cliquez avec le bouton droit sur la procédure stockée à convertir, puis sélectionnez **Conseiller de compilation native**. Ce faisant, vous affichez la page d'accueil du **Conseiller compilation native de procédure stockée**. Cliquez sur **Suivant** pour continuer.  

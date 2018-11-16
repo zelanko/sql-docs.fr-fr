@@ -11,12 +11,12 @@ ms.assetid: e062a9ab-1e6b-4061-845a-4f8a0552b09d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 14f27c373ac4cb054fa666992465f137ff23e481
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ee5b1f92bd834a22401377c7e0f16e0c4812379e
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47637473"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639236"
 ---
 # <a name="ado-net-custom-properties"></a>Propriétés personnalisées ADO NET
   **Propriétés personnalisées des sources**  
@@ -50,6 +50,6 @@ ms.locfileid: "47637473"
  Pour plus d’informations, consultez [Destination ADO NET](../../integration-services/data-flow/ado-net-destination.md).  
   
 ## <a name="see-also"></a> Voir aussi  
- [Propriétés communes](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+ [Propriétés communes](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
   

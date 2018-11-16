@@ -11,12 +11,12 @@ ms.assetid: 48076062-1ef5-419a-8a55-3c7b4234cc35
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c0fe82226d1c4de82883498ba92893ec98fc7b05
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bfb25121dcc417f2ead0d85bc723bc7b402cebab
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681967"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51675068"
 ---
 # <a name="how-to-create-test-conditions-for-the-sql-server-unit-test-designer"></a>Procédure : créer des conditions de test pour le Concepteur de test unitaire SQL Server
 Utilisez la classe [TestCondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx) extensible pour créer des conditions de test. Vous pouvez, par exemple, créer une condition de test qui vérifie le nombre de colonnes ou valeurs dans un jeu de résultats.  
@@ -49,7 +49,7 @@ Cette procédure explique comment créer une condition de test de façon à ce q
   
 10. Dérivez votre classe de la classe [TestCondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx).  
   
-11. Signez l'assembly avec un nom fort. Pour plus d'informations, consultez [Procédure : signer un assembly avec un nom fort](http://msdn.microsoft.com/library/xc31ft41.aspx).  
+11. Signez l'assembly avec un nom fort. Pour plus d'informations, consultez [Procédure : signer un assembly avec un nom fort](https://msdn.microsoft.com/library/xc31ft41.aspx).  
   
 12. Générez la bibliothèque de classes.  
   

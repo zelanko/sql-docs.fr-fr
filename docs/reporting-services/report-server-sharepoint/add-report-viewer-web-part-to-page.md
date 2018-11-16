@@ -7,12 +7,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3b9adedc8637acf84feccd5b24fa540892399ebc
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: c9e8950edd84f57e4e751533799faba451234ca0
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030418"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813022"
 ---
 # <a name="add-sql-server-reporting-services-report-viewer-web-part-to-a-sharepoint-page"></a>Ajouter le composant WebPart Visionneuse de rapports de SQL Server Reporting Services à un site SharePoint
 
@@ -46,7 +46,7 @@ Affichez un rapport, à partir de SQL Server Reporting Services ou de Power BI R
 
     ![Ajouter le composant WebPart Visionneuse de rapports.](media/sharepoint-report-viewer-web-part.png)
 
-    Il est possible qu’une erreur s’affiche. Celle-ci est liée au fait que l’URL du serveur de rapports par défaut est peut-être initialement définie sur *http://localhost* alors qu’il n’est peut-être pas disponible à cet emplacement.
+    Il est possible qu’une erreur s’affiche. Celle-ci est liée au fait que l’URL du serveur de rapports par défaut est peut-être initialement définie sur *https://localhost* alors qu’il n’est peut-être pas disponible à cet emplacement.
 
 ## <a name="configure-the-report-viewer-web-part"></a>Configurer le composant WebPart Visionneuse de rapports
 
@@ -56,7 +56,7 @@ Pour configurer le composant WebPart de manière à ce qu’il pointe vers votre
 
     ![Modifier le composant WebPart dans le menu déroulant du composant WebPart.](media/sharepoint-edit-web-part.png)
 
-2. Entrez l’**URL du serveur de rapports** qui héberge votre rapport. Elle doit ressembler à *http://myrsserver/reportserver*.
+2. Entrez l’**URL du serveur de rapports** qui héberge votre rapport. Elle doit ressembler à *https://myrsserver/reportserver*.
 
 3. Entrez le chemin et le nom du rapport que vous souhaitez afficher dans le composant WebPart. Par exemple, */Exemples de rapports AdventureWorks/Ventes de la société*. Dans cet exemple, le rapport *Ventes de la société* se trouve dans un dossier nommé *Exemples de rapports AdventureWorks*.
 

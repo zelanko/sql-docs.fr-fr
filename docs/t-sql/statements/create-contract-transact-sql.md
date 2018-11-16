@@ -22,12 +22,12 @@ ms.assetid: 494cbfa6-8e93-4161-a64d-90d681915211
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: ba861b5e0aa289f4ac7bd8a7f406f0f8a5958a91
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 64ea4a6f152ebeaa5898de35e386fbde8d09aab6
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713637"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703277"
 ---
 # <a name="create-contract-transact-sql"></a>CREATE CONTRACT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -83,7 +83,7 @@ CREATE CONTRACT contract_name
   
  Un contrat doit permettre à l'initiateur d'envoyer un message. L'instruction CREATE CONTRACT échoue lorsque le contrat ne contient pas au moins un type de message SENT BY ANY ou SENT BY INITIATOR.  
   
- Indépendamment du contrat, un service peut toujours recevoir les types de messages `http://schemas.microsoft.com/SQL/ServiceBroker/DialogTimer`, `http://schemas.microsoft.com/SQL/ServiceBroker/Error` et `http://schemas.microsoft.com/SQL/ServiceBroker/EndDialog`. [!INCLUDE[ssSB](../../includes/sssb-md.md)] utilise ces types de messages pour la communication entre le système et l'application.  
+ Indépendamment du contrat, un service peut toujours recevoir les types de messages `https://schemas.microsoft.com/SQL/ServiceBroker/DialogTimer`, `https://schemas.microsoft.com/SQL/ServiceBroker/Error` et `https://schemas.microsoft.com/SQL/ServiceBroker/EndDialog`. [!INCLUDE[ssSB](../../includes/sssb-md.md)] utilise ces types de messages pour la communication entre le système et l'application.  
   
  Un contrat ne peut pas être un objet temporaire. Les noms de contrats commençant par # sont autorisés mais ce sont des objets permanents.  
   

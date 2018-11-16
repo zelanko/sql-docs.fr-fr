@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: f9d3d446e629fd4898db71b0001f2b9f487f44c1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4128ed5937688ebd681c0fd99f7d346d66b0f263
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666033"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600739"
 ---
 # <a name="upgrade-master-data-services"></a>Mettre à niveau Master Data Services
 
@@ -98,7 +98,7 @@ ms.locfileid: "47666033"
         > [!IMPORTANT]  
         >  Votre application web MDS existante issue d’une version précédente de SQL Server ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ou [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) est disponible à la sélection dans la version [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] du Gestionnaire de configuration Master Data Services. Vous ne devez pas sélectionner l'application Web existante, mais plutôt créer une application Web [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] pour MDS. Sinon, vous allez recevoir une erreur lorsque vous tenterez d'associer l'application Web à la base de données MDS mise à niveau, indiquant que la page demandée n'est pas accessible, car les données de configuration de la page sont erronées.  
         >   
-        >  Si vous voulez utiliser le même nom (alias) pour l’application web MDS que le nom de votre application web existante ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ou [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]), vous devez d’abord supprimer l’application web et le pool d’applications associé d’IIS, puis créer une application web avec le même nom en utilisant la version [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] du Gestionnaire de configuration Master Data Services. Pour plus d’informations sur la suppression d’une application web et de pools d’applications d’IIS, consultez [Supprimer une application (IIS)](http://go.microsoft.com/fwlink/?LinkId=323537) et [Supprimer un pool d’applications (IIS)](http://go.microsoft.com/fwlink/?LinkId=323538).  
+        >  Si vous voulez utiliser le même nom (alias) pour l’application web MDS que le nom de votre application web existante ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ou [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]), vous devez d’abord supprimer l’application web et le pool d’applications associé d’IIS, puis créer une application web avec le même nom en utilisant la version [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] du Gestionnaire de configuration Master Data Services. Pour plus d’informations sur la suppression d’une application web et de pools d’applications d’IIS, consultez [Supprimer une application (IIS)](https://go.microsoft.com/fwlink/?LinkId=323537) et [Supprimer un pool d’applications (IIS)](https://go.microsoft.com/fwlink/?LinkId=323538).  
   
 4.  Associez la nouvelle application Web à la base de données MDS mise à niveau.  
   

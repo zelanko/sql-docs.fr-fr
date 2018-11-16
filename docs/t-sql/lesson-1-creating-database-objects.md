@@ -11,12 +11,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 15c87cdbe7f96b3775a4ecfc475436e2996c212e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6eb8e352e18331142adf23a76371d49d8403a4cd
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630117"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696817"
 ---
 # <a name="lesson-1-create-and-query-database-objects"></a>Leçon 1 : Créer et interroger des objets de base de données
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -24,7 +24,7 @@ Cette leçon vous montre comment créer une base de données, une table dans la 
   
 [!INCLUDE[tsql](../includes/tsql-md.md)] les instructions peuvent être écrites et soumises au [!INCLUDE[ssDE](../includes/ssde-md.md)] comme suit :  
   
--   À l'aide de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Ce didacticiel suppose que vous utilisez [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], mais vous pouvez aussi utiliser [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] Express, disponible gratuitement en téléchargement à partir du [Centre de téléchargement Microsoft](http://go.microsoft.com/fwlink/?linkid=67359).  
+-   À l'aide de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Ce didacticiel suppose que vous utilisez [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], mais vous pouvez aussi utiliser [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] Express, disponible gratuitement en téléchargement à partir du [Centre de téléchargement Microsoft](https://go.microsoft.com/fwlink/?linkid=67359).  
   
 -   À l’aide de [l’utilitaire sqlcmd](../tools/sqlcmd-utility.md).  
   
@@ -213,7 +213,7 @@ Pour des informations sur certaines fonctions que vous pouvez utiliser pour trav
 |||  
 |-|-|  
 |[Fonctions de chaîne &#40;Transact-SQL&#41;](../t-sql/functions/string-functions-transact-sql.md)|[Types de données et fonctions de date et d’heure &#40;Transact-SQL&#41;](../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)|  
-|[Fonctions mathématiques &#40;Transact-SQL&#41;](../t-sql/functions/mathematical-functions-transact-sql.md)|[Fonctions texte et image &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)|  
+|[Fonctions mathématiques &#40;Transact-SQL&#41;](../t-sql/functions/mathematical-functions-transact-sql.md)|[Fonctions texte et image &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)|  
 
 ## <a name="create-views-and-stored-procedures"></a>Créer des vues et des procédures stockées
 Une vue est une instruction SELECT stockée, et une procédure stockée correspond à une ou plusieurs instructions [!INCLUDE[tsql](../includes/tsql-md.md)] qui s'exécutent comme un traitement.  

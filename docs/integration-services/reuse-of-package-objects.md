@@ -17,12 +17,12 @@ ms.assetid: 08f723bf-15b5-44bd-9a46-04e8781bfbfb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fb638e8bf2715dafa1ae876c227c89f7cd20f7d1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: daaf8c7fcd44ac814bceeaba61a6d152e7051d99
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47600978"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51637496"
 ---
 # <a name="reuse-of-package-objects"></a>Réutiliser des objets de packages
   Fonctionnalités usuelles de packages que vous souhaitez réutiliser. Si vous avez par exemple créé un ensemble de tâches, il peut être utile de réutiliser des éléments rassemblés en groupe, ou un élément unique, tel qu'un gestionnaire de connexions créé dans un autre projet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
@@ -42,8 +42,8 @@ ms.locfileid: "47600978"
   
 -   [Copier des objets de packages](../integration-services/copy-package-objects.md)  
   
--   [Copier des éléments de projet](http://msdn.microsoft.com/library/1606c54d-20f9-49f3-a4ef-caad83a772aa)  
+-   [Copier des éléments de projet](https://msdn.microsoft.com/library/1606c54d-20f9-49f3-a4ef-caad83a772aa)  
   
--   [Enregistrer un package en tant que modèle de package](http://msdn.microsoft.com/library/efe66cec-3933-4f6e-8d35-fe3d300de66c)  
+-   [Enregistrer un package en tant que modèle de package](https://msdn.microsoft.com/library/efe66cec-3933-4f6e-8d35-fe3d300de66c)  
   
   

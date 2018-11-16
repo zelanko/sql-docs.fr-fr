@@ -20,12 +20,12 @@ ms.assetid: b5a121a1-b87c-441b-a42c-2cec628dc81c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d4864aedf00d616ee35e551035574430c808bd70
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e5c45761082fc37846cb732c6130718ba23efee0
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806027"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639119"
 ---
 # <a name="design-time-methods-of-a-data-flow-component"></a>Méthodes de conception d'un composant de flux de données
   Avant l'exécution, la tâche de flux de données est dite au moment de la conception, puisqu'elle subit des modifications incrémentielles. Les modifications peuvent inclure l'ajout ou la suppression de composants, l'ajout ou la suppression d'objets de chemin d'accès qui connectent des composants, ainsi que des modifications apportées aux métadonnées des composants. Lorsque des modifications de métadonnées se produisent, le composant peut les surveiller et y réagir. Par exemple, un composant peut rejeter certaines modifications ou apporter des modifications supplémentaires en réponse à une modification. Au moment de la conception, le concepteur interagit avec un composant via l'interface <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSDesigntimeComponent100> du moment de la conception.  
@@ -101,7 +101,7 @@ customProperty.TypeConverter = GetType(MyValidValues).AssemblyQualifiedName
 customProperty.Value = MyValidValues.ValueOne  
 ```  
   
- Pour plus d’informations, consultez « Conversion de type généralisée » et « Implémentation d’un convertisseur de type » dans la [MSDN Library](http://go.microsoft.com/fwlink/?LinkId=7022).  
+ Pour plus d’informations, consultez « Conversion de type généralisée » et « Implémentation d’un convertisseur de type » dans la [MSDN Library](https://go.microsoft.com/fwlink/?LinkId=7022).  
   
  Vous pouvez spécifier une boîte de dialogue d'éditeur personnalisée pour la valeur de votre propriété personnalisée en utilisant la propriété <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100.UITypeEditor%2A>, comme indiqué dans l'exemple suivant. Tout d’abord, vous devez créer un éditeur de types personnalisé qui hérite de **System.Drawing.Design.UITypeEditor**, si vous ne pouvez pas localiser une classe existante d’éditeur de type d’interface utilisateur qui répond à vos besoins.  
   
@@ -135,7 +135,7 @@ customProperty.Name = "My Custom Property"
 customProperty.UITypeEditor = GetType(MyCustomTypeEditor).AssemblyQualifiedName  
 ```  
   
- Pour plus d’informations, consultez « Implémentation d’un éditeur de type d’interface utilisateur » dans [MSDN Library](http://go.microsoft.com/fwlink/?LinkId=7022).  
+ Pour plus d’informations, consultez « Implémentation d’un éditeur de type d’interface utilisateur » dans [MSDN Library](https://go.microsoft.com/fwlink/?LinkId=7022).  
   
 ## <a name="see-also"></a> Voir aussi  
  [Méthodes d’exécution d’un composant de flux de données](../../../integration-services/extending-packages-custom-objects/data-flow/run-time-methods-of-a-data-flow-component.md)  

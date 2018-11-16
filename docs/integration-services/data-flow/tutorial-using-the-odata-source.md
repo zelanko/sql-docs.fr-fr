@@ -11,15 +11,15 @@ ms.assetid: 2c64cf8b-5edb-48df-8ffe-697096258f71
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d1f668fd09c2eb5bfc796f1fcd74d5f4d8e569ef
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7cda725134aeba441a1cd6a59c7d3e7ae57d76de
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716347"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51637756"
 ---
 # <a name="tutorial-using-the-odata-source"></a>Didacticiel : Utiliser la source OData
-  Ce tutoriel vous guide dans le processus d’extraction de la collection **Employees** de l’exemple de service OData **Northwind** (http://services.odata.org/V3/Northwind/Northwind.svc/)), puis de son chargement dans un fichier plat.  
+  Ce tutoriel vous guide dans le processus d’extraction de la collection **Employees** de l’exemple de service OData **Northwind** (https://services.odata.org/V3/Northwind/Northwind.svc/)), puis de son chargement dans un fichier plat.  
   
 ## <a name="1-create-an-integration-services-project"></a>1. Créer un projet Integration Services  
   
@@ -45,7 +45,7 @@ ms.locfileid: "47716347"
   
 5.  Cliquez sur **Nouveau…** pour ajouter un nouveau gestionnaire de connexions OData.  
   
-6.  Entrez l'URL du service OData pour l' **Emplacement du document de service**. Il peut s’agir de l’URL qui renvoie au document de service, ou bien à un flux ou une entité spécifique. Pour les besoins de ce tutoriel, entrez l’URL vers le document de service : [http://services.odata.org/V3/Northwind/Northwind.svc/](http://services.odata.org/V3/Northwind/Northwind.svc/).  
+6.  Entrez l'URL du service OData pour l' **Emplacement du document de service**. Il peut s’agir de l’URL qui renvoie au document de service, ou bien à un flux ou une entité spécifique. Pour les besoins de ce tutoriel, entrez l’URL vers le document de service : [https://services.odata.org/V3/Northwind/Northwind.svc/](https://services.odata.org/V3/Northwind/Northwind.svc/).  
   
 7.  Assurez-vous que l' **Authentification Windows** est sélectionnée pour l' **authentification** à utiliser pour accéder au service OData. L'**Authentification Windows** est sélectionnée par défaut.  
   

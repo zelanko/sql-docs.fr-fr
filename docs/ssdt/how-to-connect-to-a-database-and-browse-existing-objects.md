@@ -13,17 +13,17 @@ ms.assetid: 9b331800-3806-4459-ac58-88cdc98124d3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a0ac1a6b3363b826bab1530fb162ee6c0cb76c75
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7b29eac3b080a78f2552a2558b3ab3278b89a1bf
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608093"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670462"
 ---
 # <a name="how-to-connect-to-a-database-and-browse-existing-objects"></a>Procédure : se connecter à une base de données et parcourir les objets existants
 La connexion à une base de données active, la conception ou la navigation dans son schéma et l'exécution de requêtes relatives à ses objets sont des tâches très courantes pour les administrateurs et les développeurs de base de données. L'Explorateur d'objets SQL Server de Visual Studio contient à présent un nœud **SQL Server** dédié, sous lequel toutes les instances SQL Server connectées et leurs bases de données sont regroupées dans une hiérarchie de type SSMS. Les instances SQL Server connectées peuvent être une instance sur site, telle que le serveur SQL Server 2008 en cours d'exécution, ou une instance SQL Azure hors site.  
   
-La procédure suivante suppose que vous avez déjà installé l'exemple de base de données AdventureWorks. Utilisez [CodePlex](http://msftdbprodsamples.codeplex.com/) pour rechercher et installer des exemples de bases de données pour différentes versions de SQL Server. Si vous préférez, vous pouvez aussi suivre la procédure et utiliser une base de données existante sur votre serveur.  
+La procédure suivante suppose que vous avez déjà installé l'exemple de base de données AdventureWorks. Utilisez [CodePlex](https://msftdbprodsamples.codeplex.com/) pour rechercher et installer des exemples de bases de données pour différentes versions de SQL Server. Si vous préférez, vous pouvez aussi suivre la procédure et utiliser une base de données existante sur votre serveur.  
   
 ### <a name="to-connect-to-a-database-instance"></a>Pour se connecter à une instance de base de données  
   

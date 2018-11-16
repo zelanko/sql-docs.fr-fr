@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 50a5843fb6f96133cbf0af6a8ce8e8a46190eaef
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: f7e6bf628b30bedb157e17bd7dc785061dbc2d26
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120446"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51665618"
 ---
 # <a name="sample-database-for-in-memory-oltp"></a>Exemple de base de données pour OLTP en mémoire
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "49120446"
   
 -   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
   
--   Pour tester les performances, un serveur avec des caractéristiques semblables dans votre environnement de production. Pour cet exemple spécifique, vous devez disposer d’au moins 16 Go de mémoire disponible sur SQL Server. Pour obtenir des conseils généraux sur le matériel pour l’OLTP en mémoire, consultez le billet de blog suivant : [http://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx](http://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx)  
+-   Pour tester les performances, un serveur avec des caractéristiques semblables dans votre environnement de production. Pour cet exemple spécifique, vous devez disposer d’au moins 16 Go de mémoire disponible sur SQL Server. Pour obtenir des conseils généraux sur le matériel pour l’OLTP en mémoire, consultez le billet de blog suivant : [https://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx](https://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx)  
   
 ##  <a name="InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks"></a> Installation de l’exemple In-Memory OLTP basé sur AdventureWorks  
  Procédez comme suit pour installer l'exemple :  
@@ -183,7 +183,7 @@ ms.locfileid: "49120446"
   
  Les index HASH peuvent être utilisés pour optimiser davantage la charge de travail. Ils sont particulièrement optimisés pour les recherches de point et les insertions de ligne. Toutefois, il faut considérer qu'ils ne prennent pas en charge les analyses de plage, les analyses triées, ou la recherche sur les colonnes clés d'index. Par conséquent, leur utilisation est plus délicate. En outre, il est nécessaire de spécifier le bucket_count lors de la création. Celui-ci doit généralement correspondre à une valeur comprise entre le nombre de valeurs de clé d'index et son double, mais il peut généralement être surestimé.  
   
- Consultez la documentation en ligne pour plus de détails sur les [instructions d’index](http://technet.microsoft.com/library/dn133166\(v=sql.120\).aspx) et pour les recommandations concernant le [choix du bon bucket_count](http://technet.microsoft.com/library/dn494956\(v=sql.120\).aspx).  
+ Consultez la documentation en ligne pour plus de détails sur les [instructions d’index](https://technet.microsoft.com/library/dn133166\(v=sql.120\).aspx) et pour les recommandations concernant le [choix du bon bucket_count](https://technet.microsoft.com/library/dn494956\(v=sql.120\).aspx).  
   
  Les index des tables migrées ont été paramétrés pour la charge de travail de traitement des commandes de démonstration. La charge de travail repose sur les insertions et les recherches de point dans les tables Sales.SalesOrderHeader_inmem et Sales.SalesOrderDetail_inmem, elle porte également sur les recherches de point sur les colonnes clés primaires dans les tables Production.Product_inmem et Sales.SpecialOffer_inmem.  
   
@@ -271,7 +271,7 @@ ms.locfileid: "49120446"
   
     -   Met à jour les informations d'expédition d'une commande client spécifique. Met également à jour les informations d'expédition de tous les articles de la commande.  
   
-    -   Il s'agit d'une procédure wrapper pour les procédures stockées compilées en mode natif Sales.usp_UpdateSalesOrderShipInfo_native avec la logique de nouvelle tentative permettant de traiter les conflits potentiels (inattendus) avec des transactions simultanées qui mettent à jour la même commande. Pour plus d'informations sur la logique de nouvelle tentative, consultez la rubrique de la documentation en ligne [ici](http://technet.microsoft.com/library/dn169141\(v=sql.120\).aspx).  
+    -   Il s'agit d'une procédure wrapper pour les procédures stockées compilées en mode natif Sales.usp_UpdateSalesOrderShipInfo_native avec la logique de nouvelle tentative permettant de traiter les conflits potentiels (inattendus) avec des transactions simultanées qui mettent à jour la même commande. Pour plus d'informations sur la logique de nouvelle tentative, consultez la rubrique de la documentation en ligne [ici](https://technet.microsoft.com/library/dn169141\(v=sql.120\).aspx).  
   
 -   Sales.usp_UpdateSalesOrderShipInfo_native  
   
@@ -313,7 +313,7 @@ ms.locfileid: "49120446"
   
  Étapes d'installation :  
   
-1.  Téléchargez et exécutez le package d’installation x64 pour les utilitaires RML à partir de la page suivante : [http://blogs.msdn.com/b/psssql/archive/2013/10/29/cumulative-update-2-to-the-rml-utilities-for-microsoft-sql-server-released.aspx](http://blogs.msdn.com/b/psssql/archive/2013/10/29/cumulative-update-2-to-the-rml-utilities-for-microsoft-sql-server-released.aspx)  
+1.  Téléchargez et exécutez le package d’installation x64 pour les utilitaires RML à partir de la page suivante : [https://blogs.msdn.com/b/psssql/archive/2013/10/29/cumulative-update-2-to-the-rml-utilities-for-microsoft-sql-server-released.aspx](https://blogs.msdn.com/b/psssql/archive/2013/10/29/cumulative-update-2-to-the-rml-utilities-for-microsoft-sql-server-released.aspx)  
   
 2.  Si une boîte de dialogue indique que certains fichiers sont en cours d'utilisation, cliquez sur « Continuer ».  
   

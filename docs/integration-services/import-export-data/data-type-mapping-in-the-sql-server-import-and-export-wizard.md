@@ -11,12 +11,12 @@ ms.assetid: 669be403-cb17-4b12-bbbf-e7a74003c4b6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 826e7ca671272f859cd0d5da7059b34cf4cfedba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ee64f342f8ef865d8b264f37c332098b0c2d62cf
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47847267"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51637623"
 ---
 # <a name="data-type-mapping-in-the-sql-server-import-and-export-wizard"></a>Mappage de type de données dans l’Assistant Importation et Exportation SQL Server
  Dans l’Assistant Importation et Exportation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vous pouvez définir le nom, le type de données et les propriétés de type de données des colonnes des nouveaux fichiers et tables de destination, mais vous ne pouvez pas spécifier de conversions personnalisées pour les valeurs de colonnes. Le mappage intégré des types de données à partir de la source à la destination est donc important.  
@@ -32,7 +32,7 @@ L’Assistant utilise les fichiers de mappage installés par [!INCLUDE[ssNoVersi
 Si votre entreprise nécessite différents mappages entre types de données, vous pouvez mettre à jour les fichiers de mappage pour modifier les mappages utilisés par l’Assistant. Par exemple, si vous voulez que le type de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **nchar** soit mappé au type de données DB2 **GRAPHIC**et non au type de données DB2**VARGRAPHIC[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pendant le transfert de données de**  vers DB2, vous devez modifier le mappage **nchar** dans le fichier de mappage **qlClientToIBMDB2.xml** pour utiliser **GRAPHIC** à la place de **VARGRAPHIC**.  
   
 ## <a name="you-can-add-a-new-mapping-file"></a>Vous pouvez ajouter un nouveau fichier de mappage
-[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] installe les mappages entre de nombreuses combinaisons de source et de destination couramment utilisées. Vous pouvez également ajouter les nouveaux fichiers de mappage au répertoire **MappingFiles** pour prendre en charge d’autres sources et destinations. Les nouveaux fichiers de mappage doivent se conformer au schéma XSD publié et mapper une combinaison unique de source et de destination. Le schéma des fichiers de mappage, **DataTypeMapping.xsd**, est publié [ici](http://schemas.microsoft.com/sqlserver/2008/07/IntegrationServices/DataTypeMapping/DataTypeMapping.xsd).
+[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] installe les mappages entre de nombreuses combinaisons de source et de destination couramment utilisées. Vous pouvez également ajouter les nouveaux fichiers de mappage au répertoire **MappingFiles** pour prendre en charge d’autres sources et destinations. Les nouveaux fichiers de mappage doivent se conformer au schéma XSD publié et mapper une combinaison unique de source et de destination. Le schéma des fichiers de mappage, **DataTypeMapping.xsd**, est publié [ici](https://schemas.microsoft.com/sqlserver/2008/07/IntegrationServices/DataTypeMapping/DataTypeMapping.xsd).
  
 ## <a name="sample-mapping-file"></a>Exemple de fichier de mappage
 Voici une partie du fichier de mappage XML qui mappe les types de données SQL Server (ou, plus spécifiquement, les types de données utilisés par le fournisseur de données .NET Framework pour SQL Server) aux types de données Oracle. Par exemple, vous pouvez voir qu’un type de données **int** SQL Server est mappé à un type de données **INTEGER** Oracle.
@@ -40,8 +40,8 @@ Voici une partie du fichier de mappage XML qui mappe les types de données SQL S
 ```xml  
   
 <dtm:DataTypeMappings  
-    xmlns:dtm="http://www.microsoft.com/SqlServer/Dts/DataTypeMapping.xsd"   
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+    xmlns:dtm="https://www.microsoft.com/SqlServer/Dts/DataTypeMapping.xsd"   
+    xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"  
     SourceType="System.Data.SqlClient.SqlConnection"   
     MinSourceVersion="*"   
     MaxSourceVersion="*"   

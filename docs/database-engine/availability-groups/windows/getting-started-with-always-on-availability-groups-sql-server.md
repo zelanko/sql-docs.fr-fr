@@ -13,12 +13,12 @@ ms.assetid: 33f2f2d0-79e0-4107-9902-d67019b826aa
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1d499c14c346983478fb2d7291ae5b334414edd5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 644a789343b68e6808b5d1bf61f8c5768d01c70c
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688367"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51603949"
 ---
 # <a name="getting-started-with-always-on-availability-groups-sql-server"></a>Commencer à utiliser les groupes de disponibilité Always On (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +78,7 @@ Cette rubrique présente les étapes de configuration des instances de [!INCLUDE
   
 |Outil|Brève description|Liens|  
 |----------|-----------------------|-----------|  
-|Pack d'analyse System Center pour SQL Server|Le pack d'analyse pour SQL Server (SQLMP) est la solution recommandée pour la surveillance des groupes de disponibilité, des réplicas de disponibilité et des bases de données de disponibilité pour les administrateurs informatiques. Les fonctionnalités d'analyse particulièrement appropriées pour [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] incluent les suivantes :<br /><br /> Découverte automatique des groupes de disponibilité, des réplicas de disponibilité et des bases de données de disponibilité entre des centaines d'ordinateurs. Cette opération vous permet de suivre facilement votre inventaire [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] .<br /><br /> Fonctionnalités complètes d'alertes et tickets System Center Operations Manager (SCOM). Ces fonctionnalités offrent des connaissances détaillées qui permettent de résoudre plus rapidement un problème.<br /><br /> Extension personnalisée à l’analyse d’intégrité Always On à l’aide de la gestion basée sur des stratégies.<br /><br /> Intégrité regroupée des bases de données de disponibilité aux réplicas de disponibilité.<br /><br /> Tâches personnalisées qui gèrent [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] dans la console System Center Operations Manager.|Pour télécharger le pack d’analyse (SQLServerMP.msi) et *le Guide SQL Server Management Pack pour System Center Operations Manager* (SQLServerMPGuide.doc), consultez :<br /><br /> [Pack d'analyse System Center pour SQL Server](http://www.microsoft.com/download/details.aspx?displaylang=en&id=10631)|  
+|Pack d'analyse System Center pour SQL Server|Le pack d'analyse pour SQL Server (SQLMP) est la solution recommandée pour la surveillance des groupes de disponibilité, des réplicas de disponibilité et des bases de données de disponibilité pour les administrateurs informatiques. Les fonctionnalités d'analyse particulièrement appropriées pour [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] incluent les suivantes :<br /><br /> Découverte automatique des groupes de disponibilité, des réplicas de disponibilité et des bases de données de disponibilité entre des centaines d'ordinateurs. Cette opération vous permet de suivre facilement votre inventaire [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] .<br /><br /> Fonctionnalités complètes d'alertes et tickets System Center Operations Manager (SCOM). Ces fonctionnalités offrent des connaissances détaillées qui permettent de résoudre plus rapidement un problème.<br /><br /> Extension personnalisée à l’analyse d’intégrité Always On à l’aide de la gestion basée sur des stratégies.<br /><br /> Intégrité regroupée des bases de données de disponibilité aux réplicas de disponibilité.<br /><br /> Tâches personnalisées qui gèrent [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] dans la console System Center Operations Manager.|Pour télécharger le pack d’analyse (SQLServerMP.msi) et *le Guide SQL Server Management Pack pour System Center Operations Manager* (SQLServerMPGuide.doc), consultez :<br /><br /> [Pack d'analyse System Center pour SQL Server](https://www.microsoft.com/download/details.aspx?displaylang=en&id=10631)|  
 |[!INCLUDE[tsql](../../../includes/tsql-md.md)]|[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] fournissent une quantité d'informations sur vos groupes de disponibilité et leurs réplicas, bases de données, écouteurs et environnement de cluster WSFC.|[Surveiller des groupes de disponibilité &#40;Transact-SQL&#41;](../../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)|  
 |[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]|Le volet **Détails de l'Explorateur d'objets** affiche des informations de base sur les groupes de disponibilité hébergés sur l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à laquelle vous êtes connecté.<br /><br /> Conseil : utilisez ce volet pour sélectionner plusieurs groupes de disponibilité, réplicas ou bases de données et effectuer des tâches d’administration courantes sur les objets sélectionnés, comme la suppression de plusieurs réplicas de disponibilité ou bases de données dans un groupe de disponibilité.|[Utiliser le volet Détails de l'Explorateur d'objets pour surveiller les groupes de disponibilité](../../../database-engine/availability-groups/windows/use-object-explorer-details-to-monitor-availability-groups.md)|  
 |[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]|Les boîtes de dialogue**Propriétés** vous permettent d'afficher les propriétés des groupes de disponibilité, les réplicas ou les écouteurs et, dans certains cas, de modifier leurs valeurs.|[Propriétés d'un groupe de disponibilité](../../../database-engine/availability-groups/windows/view-availability-group-properties-sql-server.md)<br /><br /> [Propriétés d'un réplica de disponibilité](../../../database-engine/availability-groups/windows/view-availability-replica-properties-sql-server.md)<br /><br /> [Propriétés de l'écouteur d'un groupe de disponibilité](../../../database-engine/availability-groups/windows/view-availability-group-listener-properties-sql-server.md)|  
@@ -87,11 +87,11 @@ Cette rubrique présente les étapes de configuration des instances de [!INCLUDE
   
 ##  <a name="RelatedContent"></a> Contenu associé  
   
--   **Vidéo - Introduction à Always On :**  [Microsoft SQL Server Code-Named "Denali" Always On Series,Part 1: Introducing the Next Generation High Availability Solution](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
+-   **Vidéo - Introduction à Always On :**  [Microsoft SQL Server Code-Named "Denali" Always On Series,Part 1: Introducing the Next Generation High Availability Solution](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
   
--   **Vidéo - Présentation approfondie d’Always On :**  [Microsoft SQL Server Code-Named "Denali" Always On Series,Part 2: Building a Mission-Critical High Availability Solution Using Always On](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
+-   **Vidéo - Présentation approfondie d’Always On :**  [Microsoft SQL Server Code-Named "Denali" Always On Series,Part 2: Building a Mission-Critical High Availability Solution Using Always On](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   
--   **Livre blanc :**  [Microsoft SQL Server Always On Solutions Guide for High Availability and Disaster Recovery](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   **Livre blanc :**  [Microsoft SQL Server Always On Solutions Guide for High Availability and Disaster Recovery](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
 -   **Blogs:**  [Blog de l’équipe de SQL Server Always On : Blog officiel de l’équipe de SQL Server Always On](https://blogs.msdn.microsoft.com/sqlAlwaysOn/)  
   
