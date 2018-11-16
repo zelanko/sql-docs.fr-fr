@@ -11,12 +11,12 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 48580f2ca2e83a968f9599b98956c079f763bf71
-ms.sourcegitcommit: 0acd84d0b22a264b3901fa968726f53ad7be815c
+ms.openlocfilehash: 591dbbc9772378efccb37ca2f7b3af94d37f4529
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49307123"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677138"
 ---
 # <a name="configure-always-encrypted-with-secure-enclaves"></a>Configurer Always Encrypted avec enclaves sécurisées
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -70,7 +70,7 @@ Pour déterminer l’URL du service d’attestation, vous devez configurer vos o
 1. Connectez-vous à votre ordinateur SQL Server en tant qu’administrateur.
 2. Démarrez PowerShell en tant qu'administrateur.
 3. Exécutez [Get-HGSClientConfiguration](https://docs.microsoft.com/powershell/module/hgsclient/get-hgsclientconfiguration).
-4. Écrire et enregistrez la propriété AttestationServerURL. Cela devrait ressembler à ceci : `http://x.x.x.x/Attestation`.
+4. Écrire et enregistrez la propriété AttestationServerURL. Cela devrait ressembler à ceci : `https://x.x.x.x/Attestation`.
 
 
 ### <a name="install-tools"></a>Installer des outils
@@ -99,11 +99,11 @@ Sur l’ordinateur client/développement :
    WHERE [name] = 'column encryption enclave type'
    ```
 
-    La requête doit retourner une ligne qui ressemble à ceci :  
+    La requête doit retourner une ligne qui se présente comme suit :  
 
     | NAME                           | valeur | value_in_use |
     | ------------------------------ | ----- | -------------|
-    | type d’enclave de chiffrement de colonne | 0     | 0            |
+    | column encryption enclave type | 0     | 0            |
 
 3. Configurez le type d’enclave sécurisée pour les enclaves VBS.
 
@@ -112,22 +112,22 @@ Sur l’ordinateur client/développement :
    RECONFIGURE
    ```
 
-4. Redémarrez votre instance SQL Server pour que la modification précédente entre en vigueur. Vous pouvez redémarrer l’instance dans SSMS en cliquant dessus avec le bouton droit dans l’Explorateur d’objets et en sélectionnant Redémarrer. Une fois que l’instance redémarre, connectez-vous à nouveau.
+4. Redémarrez votre instance SQL Server pour que la modification précédente entre en vigueur. Vous pouvez redémarrer l’instance dans SSMS en cliquant dessus avec le bouton droit dans l’Explorateur d’objets et en sélectionnant Redémarrer. Une fois que l’instance a redémarré, connectez-vous à nouveau.
 
-5. Confirmez que l’enclave sécurisée est désormais chargée en exécutant la requête suivante :
+5. Vérifiez que l’enclave sécurisée est maintenant chargée en exécutant la requête suivante :
 
    ```sql
    SELECT [name], [value], [value_in_use] FROM sys.configurations
    WHERE [name] = 'column encryption enclave type'
    ```   
 
-    La requête doit retourner une ligne qui ressemble à ceci :  
+    La requête doit retourner une ligne qui se présente comme suit :  
 
     | NAME                           | valeur | value_in_use |
     | ------------------------------ | ----- | -------------- |
-    | type d’enclave de chiffrement de colonne | 1     | 1              |
+    | column encryption enclave type | 1     | 1              |
 
-6. Pour activer des calculs complexes sur des colonnes chiffrées, exécutez la requête suivante :
+6. Pour activer les calculs complexes dans les colonnes chiffrées, exécutez la requête suivante :
 
    ```sql
    DBCC traceon(127,-1)
@@ -162,18 +162,18 @@ Les étapes suivantes créent des clés prenant en charge les enclaves (requiert
     1. Cliquez avec le bouton droit sur **Clés Always Encrypted** et sélectionnez **Nouvelle clé principale de colonne...** .
     2. Sélectionnez le nom de votre clé principale de colonne.
     3. Assurez-vous que vous sélectionnez **Magasin de certificats Windows (utilisateur actuel ou ordinateur local)** ou **Azure Key Vault**.
-    4. Sélectionnez **Autoriser les calculs d'enclave**.
+    4. Sélectionnez **Autoriser les calculs d’enclave**.
     5. Si vous avez sélectionné Azure Key Vault, connectez-vous à Azure et sélectionnez votre coffre de clés. Pour plus d’informations sur la création d’un coffre de clés pour Always Encrypted, consultez [Gérer vos coffres de clés à partir du portail Azure](https://blogs.technet.microsoft.com/kv/2016/09/12/manage-your-key-vaults-from-new-azure-portal/).
-    6. Sélectionnez votre clé si elle existe déjà, ou suivez les instructions du formulaire pour créer une nouvelle clé.
+    6. Sélectionnez votre clé si elle existe déjà ou créez-en une en suivant les instructions du formulaire.
     7. Cliquez sur **OK**.
 
-        ![Autoriser les calculs d'enclave](./media/always-encrypted-enclaves/allow-enclave-computations.png)
+        ![Autoriser les calculs d’enclave](./media/always-encrypted-enclaves/allow-enclave-computations.png)
 
 4. Créer une nouvelle clé de chiffrement de colonne prenant en charge les enclaves :
 
     1. Cliquez avec le bouton droit sur **Clés Always Encrypted** et sélectionnez **Nouvelle clé de chiffrement de colonne**.
     2. Entrez un nom pour la nouvelle clé de chiffrement de colonne.
-    3. Dans le menu déroulant **Clé principale de colonne**, sélectionnez la clé principale de colonne créée lors des étapes précédentes.
+    3. Dans le menu déroulant **Clé principale de colonne**, sélectionnez la clé principale de colonne que vous avez créée aux étapes précédentes.
     4. Cliquez sur **OK**.
 
 ### <a name="provision-enclave-enabled-keys-using-powershell"></a>**Approvisionner des clés prenant en charge les enclaves avec PowerShell**
@@ -853,7 +853,7 @@ Pour utiliser Always Encrypted avec enclaves sécurisées dans une application .
 
 ### <a name="develop-and-test-your-app"></a>Développer et tester votre application 
 
-Pour utiliser Always Encrypted et les calculs d’enclave, votre application doit se connecter à la base de données avec les mots deux clés suivants dans la chaîne de connexion : `Column Encryption Setting = Enabled; Enclave Attestation Url=http://x.x.x.x/Attestation` (où xxxx peut être une adresse ip, un domaine, etc.).
+Pour utiliser Always Encrypted et les calculs d’enclave, votre application doit se connecter à la base de données avec les mots deux clés suivants dans la chaîne de connexion : `Column Encryption Setting = Enabled; Enclave Attestation Url=https://x.x.x.x/Attestation` (où xxxx peut être une adresse ip, un domaine, etc.).
 
 De plus, votre application doit se conformer aux instructions courantes qui s’appliquent aux applications utilisant Always Encrypted. Par exemple, votre application doit avoir accès aux clés principales de colonnes associées aux colonnes de base de données référencées dans les requêtes de l’application.
 
@@ -905,7 +905,7 @@ namespace ConsoleApp1
       static void Main(string\[\] args)
    {
 
-   string connectionString = "Data Source = myserver; Initial Catalog = ContosoHR; Column Encryption Setting = Enabled;Enclave Attestation Url = http://10.193.16.185/Attestation/attestationservice.svc/signingCertificates; Integrated Security = true";
+   string connectionString = "Data Source = myserver; Initial Catalog = ContosoHR; Column Encryption Setting = Enabled;Enclave Attestation Url = https://10.193.16.185/Attestation/attestationservice.svc/signingCertificates; Integrated Security = true";
 
 using (SqlConnection connection = new SqlConnection(connectionString))
 {

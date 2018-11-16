@@ -12,12 +12,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ce0d82f3c1808f96ce07c949f05cbadaed1cf248
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2ce64614e3c2f9d27bfafb9101e54ab49df2089e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659132"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51672618"
 ---
 # <a name="columnstore-indexes---data-warehouse"></a>Index columnstore - Entrepôt de données
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -125,7 +125,7 @@ END TRAN
 ```  
   
 ### <a name="snapshot-isolation-and-read-committed-snapshot-isolations"></a>Isolement d'instantané et isolements d’instantanés de lecture validée  
- Utilisez l’isolement d’instantané (SI) pour garantir la cohérence transactionnelle et les isolements d’instantanés de lecture validée (RCSI) pour garantir la cohérence au niveau de l’instruction des requêtes sur les index columnstore. Ainsi, les requêtes s’exécutent sans bloquer les enregistreurs de données. Ce comportement non bloquant réduit également sensiblement la probabilité de blocages pour les transactions complexes. Pour plus d’informations, consultez [Isolement d’instantané dans SQL Server](http://msdn.microsoft.com/library/tcbchxcb\(v=vs.110\).aspx) sur MSDN.  
+ Utilisez l’isolement d’instantané (SI) pour garantir la cohérence transactionnelle et les isolements d’instantanés de lecture validée (RCSI) pour garantir la cohérence au niveau de l’instruction des requêtes sur les index columnstore. Ainsi, les requêtes s’exécutent sans bloquer les enregistreurs de données. Ce comportement non bloquant réduit également sensiblement la probabilité de blocages pour les transactions complexes. Pour plus d’informations, consultez [Isolement d’instantané dans SQL Server](https://msdn.microsoft.com/library/tcbchxcb\(v=vs.110\).aspx) sur MSDN.  
   
 ## <a name="see-also"></a> Voir aussi  
  [Index columnstore - Guide de conception](../../relational-databases/indexes/columnstore-indexes-design-guidance.md)   

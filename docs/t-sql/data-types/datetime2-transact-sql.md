@@ -23,12 +23,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8c10e012010eb51973f3833573b09f0bb7e5fa18
-ms.sourcegitcommit: 2da0c34f981c83d7f1d37435c80aea9d489724d1
+ms.openlocfilehash: d71290c863f71894632d9092f3c51b2713d8d96f
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48782328"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696868"
 ---
 # <a name="datetime2-transact-sql"></a>datetime2 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -44,7 +44,7 @@ Définit une date qui est associée à une heure de la journée au format 24 he
 |Format de littéral de chaîne par défaut<br /><br /> (utilisé pour le client de bas niveau)|AAAA-MM-JJ hh:mm:ss[.fractions de seconde]<br /><br /> Pour plus d’informations, consultez la section « Compatibilité descendante pour les clients de bas niveau » ci-dessous.|  
 |Plage de dates|0001-01-01 à 9999-12-31<br /><br /> Du 1er janvier de l’an 1 au 31 décembre 9999|  
 |Plage temporelle|00:00:00 à 23:59:59.9999999|  
-|Plage de décalages de fuseau horaire|None|  
+|Plage de décalages de fuseau horaire|Aucun|  
 |Plages d'éléments|AAAA est un nombre de quatre chiffres, entre 0001 et 9999, qui représente une année.<br /><br /> MM est un nombre à deux chiffres, entre 01 et 12, qui représente un mois dans l'année spécifiée.<br /><br /> DD est un nombre à deux chiffres, entre 01 et 31 selon le mois, qui représente un jour du mois spécifié.<br /><br /> hh est un nombre à deux chiffres, entre 00 et 23, qui représente l'heure.<br /><br /> mm est un nombre à deux chiffres, entre 00 et 59, qui représente la minute.<br /><br /> ss est un nombre à deux chiffres, entre 00 et 59, qui représente la seconde.<br /><br /> n* est un nombre qui comprend entre zéro et sept chiffres, entre 0 et 9999999, qui représente les fractions de seconde. Dans Informatica, les fractions de seconde sont tronquées quand n > 3.|  
 |Longueur de caractère|19 positions au minimum (AAAA-MM-JJ hh:mm:ss) et 27 au maximum (AAAA-MM-JJ hh:mm:ss.0000000)|  
 |Précision, échelle|De 0 à 7 chiffres, avec une précision de 100 ns. La précision par défaut est de 7 chiffres.|  
@@ -159,7 +159,7 @@ SELECT @datetime2 AS '@datetime2', @datetime AS '@datetime';
 ```  
 
 > [!NOTE]
-> Sous le niveau de compatibilité de base de données 130, les conversions implicites des types de données datetime en datetime2 offrent une meilleure précision en prenant en compte les fractions de milliseconde, ce qui génère différentes valeurs converties, comme illustré dans l’exemple ci-dessus. Utilisez un transtypage explicite vers le type de données datetime2 chaque fois qu’il existe un scénario de comparaison mixte entre les types de données datetime et datetime2. Pour plus d’informations, consultez cet [article du Support technique Microsoft](http://support.microsoft.com/help/4010261).
+> Sous le niveau de compatibilité de base de données 130, les conversions implicites des types de données datetime en datetime2 offrent une meilleure précision en prenant en compte les fractions de milliseconde, ce qui génère différentes valeurs converties, comme illustré dans l’exemple ci-dessus. Utilisez un transtypage explicite vers le type de données datetime2 chaque fois qu’il existe un scénario de comparaison mixte entre les types de données datetime et datetime2. Pour plus d’informations, consultez cet [article du Support technique Microsoft](https://support.microsoft.com/help/4010261).
 
 ### <a name="converting-string-literals-to-datetime2"></a>Conversion de littéraux de chaîne en datetime2  
 Les conversions de littéraux de chaîne en types de date et d'heure sont autorisées si toutes les parties des chaînes sont dans des formats valides. Sinon, une erreur d'exécution est déclenchée. Les conversions implicites ou explicites qui ne spécifient pas de style à partir de types de date et d'heure en littéraux de chaîne seront au format par défaut de la session active. Le tableau suivant montre les règles de conversion d’un littéral de chaîne en type de données **datetime2**.

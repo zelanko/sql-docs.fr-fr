@@ -17,12 +17,12 @@ ms.assetid: aca5a0b5-34a9-45bc-a234-8e63ea51a1ee
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: aa43a9bac948f5d03d21689b4272f2c93317792b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0451f0bdb394d66fa8477c43aee801bd25ead1db
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654877"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638756"
 ---
 # <a name="execute-process-task"></a>Tâche d'exécution de processus
   La tâche d’exécution de processus exécute une application ou un fichier de commandes dans le cadre d’un flux de travail de package [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Bien qu’il soit possible d’utiliser la tâche d’exécution de processus pour ouvrir des applications standard telles que [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] ou [!INCLUDE[ofprword](../../includes/ofprword-md.md)], il est courant de l’utiliser pour exécuter des applications de gestion ou des fichiers de commandes fonctionnant sur une source de données. Par exemple, vous pouvez utiliser la tâche d'exécution de processus pour développer un fichier texte compressé. Ensuite, le package peut utiliser le fichier texte comme source de données pour le flux de données de ce package. Vous pouvez aussi utiliser la tâche d'exécution de processus pour démarrer une application [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] personnalisée qui génère quotidiennement un état des ventes. Ensuite, vous pouvez associer le rapport à une tâche Envoyer un message pour le transmettre à une liste de distribution.  
@@ -42,12 +42,12 @@ ms.locfileid: "47654877"
   
  Pour plus d'informations sur la définition de ces propriétés dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , cliquez sur la rubrique suivante :  
   
--   [Définir les propriétés d'une tâche ou d'un conteneur](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Définir les propriétés d'une tâche ou d'un conteneur](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ### <a name="property-settings"></a>Paramètres de propriété  
  Lorsque la tâche d'exécution de processus exécute une application personnalisée, elle fournit l'entrée à l'application via l'une des méthodes suivantes, ou les deux :  
   
--   Une variable que vous spécifiez dans le paramètre de propriété **StandardInputVariable**. Pour plus d’informations sur les variables, consultez [Variables Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) et [Utiliser des variables dans des packages](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
+-   Une variable que vous spécifiez dans le paramètre de propriété **StandardInputVariable**. Pour plus d’informations sur les variables, consultez [Variables Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) et [Utiliser des variables dans des packages](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
   
 -   Un argument que vous spécifiez dans le paramètre de propriété **Arguments**. (Par exemple, si la tâche ouvre un document dans Word, l'argument peut nommer le fichier .doc.)  
   
@@ -57,7 +57,7 @@ ms.locfileid: "47654877"
   
  Vous pouvez utiliser une expression pour définir différentes propriétés de tâche d'exécution de processus.  
   
- Quand vous configurez la tâche d’exécution de processus à l’aide de la propriété **StandardInputVariable** pour fournir l’entrée, appelez la méthode **Console.ReadLine** de l’application pour lire l’entrée. Pour plus d’informations, consultez la rubrique [Console.ReadLine, méthode](http://go.microsoft.com/fwlink/?LinkId=129201)de la bibliothèque de classes [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] .  
+ Quand vous configurez la tâche d’exécution de processus à l’aide de la propriété **StandardInputVariable** pour fournir l’entrée, appelez la méthode **Console.ReadLine** de l’application pour lire l’entrée. Pour plus d’informations, consultez la rubrique [Console.ReadLine, méthode](https://go.microsoft.com/fwlink/?LinkId=129201)de la bibliothèque de classes [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] .  
   
  Quand vous configurez la tâche d’exécution de processus à l’aide de la propriété **Arguments** pour fournir l’entrée, effectuez l’une des étapes suivantes pour obtenir les arguments :  
   
@@ -68,11 +68,11 @@ ms.locfileid: "47654877"
     Dim variable2 As String = My.Application.CommandLineArgs.Item(1)   
     ```  
   
-     Pour plus d’informations, consultez la rubrique [My.Application.CommandLineArgs, propriété](http://go.microsoft.com/fwlink/?LinkId=129200)dans la Référence [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .  
+     Pour plus d’informations, consultez la rubrique [My.Application.CommandLineArgs, propriété](https://go.microsoft.com/fwlink/?LinkId=129200)dans la Référence [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .  
   
 -   Si vous utilisez Microsoft Visual C# pour écrire l’application, utilisez la méthode **Main**.  
   
-     Pour plus d’informations, consultez la rubrique [Arguments de ligne de commande (Guide de programmation C#)](http://go.microsoft.com/fwlink/?LinkId=129406)du Guide de programmation C#.  
+     Pour plus d’informations, consultez la rubrique [Arguments de ligne de commande (Guide de programmation C#)](https://go.microsoft.com/fwlink/?LinkId=129406)du Guide de programmation C#.  
   
  La tâche d’exécution de processus comprend également les propriétés **StandardOutputVariable** et **StandardErrorVariable** à l’aide desquelles vous pouvez spécifier les variables qui exploitent la sortie et la sortie d’erreur standard de l’application, respectivement.  
   
@@ -115,7 +115,7 @@ ms.locfileid: "47654877"
  **StandardInputVariable**  
  Sélectionnez une variable pour fournir l’entrée au processus ou cliquez sur \<**Nouvelle variable...**> pour en créer une :  
   
- **Rubriques connexes :** [Ajouter une variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **Rubriques connexes :** [Ajouter une variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
  **StandardOutputVariable**  
  Sélectionnez une variable pour capturer la sortie du processus ou cliquez sur \<**Nouvelle variable...**> pour en créer une.  

@@ -13,12 +13,12 @@ ms.assetid: ae0b33dd-f44b-42df-b6f6-69861770ce10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8e58ab2c2b59e1440eaf1d38ba16e7a7293a38d4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fc9c1ba540e17baddcd1437a9b46d278aecddacf
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698957"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640547"
 ---
 # <a name="balanced-data-distributor-transformation"></a>Transformation du distributeur de données équilibrées (BDD)
   La transformation du distributeur de données équilibrées (BDD) bénéficie de la fonction de traitement simultané des unités centrales modernes. Elle distribue des tampons de lignes entrantes uniformément dans les sorties sur des threads distincts. En utilisant des threads distincts pour chaque chemin de sortie, le composant BDD améliore les performances d'un package SSIS sur des ordinateurs à plusieurs cœurs ou plusieurs processeurs.  
@@ -38,6 +38,6 @@ ms.locfileid: "47698957"
  Notez que si le goulot d'étranglement d'un package SSIS est dû à la fréquence de lecture des données de la source, le composant BDD ne permet pas d'améliorer les performances. Si le goulot d'étranglement se trouve dans un package SSIS, car la destination ne prend pas en charge le parallélisme, BDD ne change rien. Toutefois, vous pouvez effectuer toutes les transformations en parallèle et utiliser la transformation Union All pour combiner les données de sortie de différents chemins de sortie de la transformation BDD avant d'envoyer les données à la destination.  
   
 > [!IMPORTANT]  
->  Pour obtenir une présentation avec une démonstration de l’utilisation de la transformation, consultez la [vidéo Distributeur de données équilibrées](http://go.microsoft.com/fwlink/?LinkID=226278) dans la bibliothèque TechNet.  
+>  Pour obtenir une présentation avec une démonstration de l’utilisation de la transformation, consultez la [vidéo Distributeur de données équilibrées](https://go.microsoft.com/fwlink/?LinkID=226278) dans la bibliothèque TechNet.  
   
   

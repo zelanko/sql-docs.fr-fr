@@ -15,12 +15,12 @@ ms.assetid: 756840e3-aa09-45cd-9951-1a17af4b5925
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2aab2b6a4c19ed5cb8d3e1d5ea73af57cb6e506e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6a2cb16273cd19ee5ef58c1cfde74d3ba890f9ad
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47831657"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641376"
 ---
 # <a name="data-profiling-task-and-viewer"></a>Tâche de profilage des données et visionneuse
   La tâche de profilage des données fournit des fonctionnalités de profilage de données à l'intérieur du processus d'extraction, de transformation et de chargement de données. Grâce à la tâche de profilage des données, vous pouvez bénéficier des avantages suivants :  
@@ -70,6 +70,6 @@ ms.locfileid: "47831657"
  La tâche de profilage des données n'inclut pas de fonctionnalités intégrées vous permettant d'utiliser la logique conditionnelle pour connecter cette tâche aux tâches en aval basées sur la sortie du profil. Toutefois, vous pouvez ajouter facilement cette logique, avec un minimum de programmation, dans une tâche de script. Par exemple, vous pouvez définir une tâche de script qui effectue une requête XPath sur le fichier de sortie de la tâche de profilage des données. La requête peut déterminer si le pourcentage de valeurs NULL dans une colonne particulière dépasse un certain seuil. Si tel est le cas, vous pouvez interrompre le package et résoudre le problème dans les données sources avant de continuer. Pour plus d’informations, consultez [Incorporer une tâche de profilage des données dans le flux de travail du package](../../integration-services/control-flow/incorporate-a-data-profiling-task-in-package-workflow.md).  
   
 ## <a name="related-content"></a>Contenu associé  
- [Schéma du profileur de données](http://go.microsoft.com/fwlink/?LinkId=251524)  
+ [Schéma du profileur de données](https://go.microsoft.com/fwlink/?LinkId=251524)  
   
   

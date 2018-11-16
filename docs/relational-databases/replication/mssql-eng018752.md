@@ -13,12 +13,12 @@ ms.assetid: 405b2655-acb4-4e15-bcc6-b8f86bb22b37
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a7f2dea4a4bd04c3edccd710b4265fb13983dd1f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e05a58c9a88ffaa4292fd4d103cd56f5b827e9b5
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719157"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51665648"
 ---
 # <a name="mssqleng018752"></a>MSSQL_ENG018752
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "47719157"
   
 -   Redémarrez l'Agent de lecture du journal. Pour plus d’informations, consultez [Démarrer et arrêter un Agent de réplication &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md).  
   
--   Redémarrez le service de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (mettez-le hors ligne ou en ligne dans un cluster) sur le serveur de distribution. S'il est possible qu'une tâche planifiée ait exécuté **sp_repldone**, **sp_replcmds**ou **sp_replshowcmds** à partir d'autres instances [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , redémarrez également l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour ces instances. Pour plus d’informations, consultez [Démarrer, arrêter ou suspendre le service SQL Server Agent](http://msdn.microsoft.com/library/c95a9759-dd30-4ab6-9ab0-087bb3bfb97c).  
+-   Redémarrez le service de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (mettez-le hors ligne ou en ligne dans un cluster) sur le serveur de distribution. S'il est possible qu'une tâche planifiée ait exécuté **sp_repldone**, **sp_replcmds**ou **sp_replshowcmds** à partir d'autres instances [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , redémarrez également l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour ces instances. Pour plus d’informations, consultez [Démarrer, arrêter ou suspendre le service SQL Server Agent](https://msdn.microsoft.com/library/c95a9759-dd30-4ab6-9ab0-087bb3bfb97c).  
   
 -   Exécutez [sp_replflush &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md) sur le serveur de publication sur la base de données de publication, puis redémarrez l’Agent de lecture du journal.  
   

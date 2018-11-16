@@ -19,18 +19,18 @@ ms.assetid: f3b18af7-1af0-499d-a00d-a0af94895625
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: ab3ce18b1b79951c76b34be3f90b2d8782ba64e4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d15d7608879d9116832e083654cc07717c72e23e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773821"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51666468"
 ---
 # <a name="migrating-access-data-into-sql-server---azure-sql-db-accesstosql"></a>Migration de données Access vers SQL Server - Azure SQL DB (AccessToSQL)
 Une fois que vous avez créé les objets de base de données dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous pouvez migrer des données à partir de l’accès à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure.  
   
 ## <a name="setting-migration-options"></a>Définition des Options de Migration  
-Avant de migrer des données dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure, passez en revue les options de migration de projet dans le **paramètres du projet** boîte de dialogue. Dans cette boîte de dialogue, vous pouvez définir la taille de lot de migration, le verrouillage de table, la contrainte de vérification, le déclencheur d’insertion se déclencher, identité et manipulation, d’une valeur null et comment gérer les dates qui sont hors de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] plage. Pour plus d’informations, consultez [paramètres du projet (Migration)](http://msdn.microsoft.com/4caebc9c-8680-4b99-a8fa-89c43161c95d).  
+Avant de migrer des données dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure, passez en revue les options de migration de projet dans le **paramètres du projet** boîte de dialogue. Dans cette boîte de dialogue, vous pouvez définir la taille de lot de migration, le verrouillage de table, la contrainte de vérification, le déclencheur d’insertion se déclencher, identité et manipulation, d’une valeur null et comment gérer les dates qui sont hors de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] plage. Pour plus d’informations, consultez [paramètres du projet (Migration)](https://msdn.microsoft.com/4caebc9c-8680-4b99-a8fa-89c43161c95d).  
   
 ## <a name="migrating-data"></a>Migration de données  
 Migration de données sont une opération de chargement en masse qui déplace les lignes de données dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure dans des transactions. Le nombre de lignes à charger dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure dans chaque transaction est configuré dans les paramètres du projet.  

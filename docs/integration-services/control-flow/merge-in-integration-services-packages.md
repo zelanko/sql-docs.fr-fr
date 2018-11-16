@@ -13,12 +13,12 @@ ms.assetid: 7e44a5c2-e6d6-4fe2-a079-4f95ccdb147b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1c8198ea6c27b78125ac9b7c77989bf59fd57e34
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 921e2883985eed8b3640ef7da9e874b74b30c55f
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856107"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638006"
 ---
 # <a name="merge-in-integration-services-packages"></a>MERGE in Integration Services Packages
   Dans la version actuelle de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], l’instruction SQL d’une tâche d’exécution SQL peut contenir une instruction MERGE. Cette instruction MERGE vous permet d'accomplir plusieurs opérations INSERT, UPDATE et DELETE dans une même instruction.  
@@ -34,7 +34,7 @@ ms.locfileid: "47856107"
     > [!NOTE]  
     >  Bien qu'une instruction MERGE requière en général une table intermédiaire dans ce scénario, les performances de l'instruction MERGE dépassent habituellement celles de la recherche ligne par ligne effectuée par la transformation de recherche. L'instruction MERGE est également utile lorsque la grande taille d'une table de recherche pourrait tester la mémoire mise à la disposition de la transformation de recherche pour mettre en cache sa table de référence.  
   
- Pour obtenir un exemple de composant de destination prenant en charge l'utilisation de l'instruction MERGE, consultez l'exemple de la communauté CodePlex, [Destination de l'instruction MERGE](http://go.microsoft.com/fwlink/?LinkId=141215).  
+ Pour obtenir un exemple de composant de destination prenant en charge l'utilisation de l'instruction MERGE, consultez l'exemple de la communauté CodePlex, [Destination de l'instruction MERGE](https://go.microsoft.com/fwlink/?LinkId=141215).  
   
 ## <a name="using-merge"></a>Utilisation de MERGE  
  En général, vous utilisez l'instruction MERGE lorsque vous souhaitez appliquer des modifications qui incluent des insertions, des mises à jour et des suppressions d'une table à une autre table. Avant [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], ce processus requérait à la fois une transformation de recherche et plusieurs transformations de commande OLE DB. La transformation de recherche effectuait une recherche ligne par ligne pour déterminer si chaque ligne était nouvelle ou modifiée. Les transformations de commande OLE DB effectuaient alors les opérations INSERT, UPDATE et DELETE nécessaires. À compter de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], une instruction MERGE unique peut remplacer la transformation de recherche et les transformations de commande OLE DB correspondantes réunies.  

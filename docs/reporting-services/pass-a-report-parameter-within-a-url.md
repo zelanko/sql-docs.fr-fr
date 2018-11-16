@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: f93a94cc-27b5-435a-aa85-69e6ec6459ad
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c2a07266abcf2a1ebc10c4a6b37a28ee8179885f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a45460437b050275e2f679d64a5bd6a3fd5c4534
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686047"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812822"
 ---
 # <a name="pass-a-report-parameter-within-a-url"></a>Passer un paramètre de rapport dans une URL
   Vous pouvez passer des paramètres de rapport à un rapport en les incluant dans une URL de rapport. Ces paramètres URL ne sont pas préfixés parce qu'ils sont directement passés au moteur de traitement des rapports.  
@@ -49,13 +49,13 @@ parameter=value
  Par exemple, pour spécifier deux paramètres, « ReportMonth » et « ReportYear », définis dans un rapport, utilisez l'URL suivante pour un serveur de rapports en mode natif :  
   
 ```  
-http://myrshost/ReportServer?/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2&ReportMonth=3&ReportYear=2008  
+https://myrshost/ReportServer?/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2&ReportMonth=3&ReportYear=2008  
 ```  
   
  Par exemple, pour spécifier les deux paramètres définis dans un rapport, utilisez l'URL suivante pour un serveur de rapports SharePoint intégré : Notez le `/_vti_bin`:  
   
 ```  
-http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2.rdl&ReportMonth=3&ReportYear=2008  
+https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2.rdl&ReportMonth=3&ReportYear=2008  
 ```  
   
  Pour passer une valeur NULL pour un paramètre, utilisez la syntaxe suivante :  
@@ -100,11 +100,11 @@ https://myserver/Reportserver?/SQL+Server+User+Education+Team/_ContentTeams/fold
  L’exemple d’URL suivant passe un seul paramètre de *SellStartDate* avec une valeur « 7/1/2005 » pour un serveur de rapports en mode natif.  
   
 ```  
-http://myserver/ReportServer/Pages/ReportViewer.aspx?%2fProduct_and_Sales_Report_AdventureWorks&SellStartDate=7/1/2005  
+https://myserver/ReportServer/Pages/ReportViewer.aspx?%2fProduct_and_Sales_Report_AdventureWorks&SellStartDate=7/1/2005  
 ```  
   
 ## <a name="see-also"></a> Voir aussi  
  [Accès URL &#40;SSRS&#41;](../reporting-services/url-access-ssrs.md)   
- [Référence de paramètres d'accès URL](../reporting-services/url-access-parameter-reference.md)  
+ [Référence de paramètre d'accès URL](../reporting-services/url-access-parameter-reference.md)  
   
   

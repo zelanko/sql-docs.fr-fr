@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1d96c3f7-2fd4-40f7-8d1c-14a7f54cdb15
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5d8b28b0799ec5ffac1f00e54cf2305a1027bc35
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: d0a87e49956227a168bb77059ae9311d8c775c4e
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031408"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813229"
 ---
 # <a name="pin-reporting-services-items-to-power-bi-dashboards"></a>Épingler des éléments Reporting Services aux tableaux de bord Power BI
   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] permet aux utilisateurs d’épingler des éléments de rapport [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] à partir de la barre d’outils de la visionneuse de rapports à un tableau de bord [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] en tant que nouvelle vignette.   Pour que vous puissiez épingler des éléments, il faut que votre administrateur intègre au préalable votre serveur de rapports à Azure Active Directory et [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)].  
@@ -34,7 +34,7 @@ ms.locfileid: "50031408"
   
      ![ssRS_Report_PowerBI](../reporting-services/media/ssrs-report-powerbi.png)  
   
--   Vous épinglez les éléments à partir de la visionneuse de rapports [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] dans le [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] ; par exemple, `http://myserver/Reports`.  Vous ne pouvez pas épingler d’éléments à partir de [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)], du Concepteur de rapports dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]ou d’une URL de serveur de rapports.  Par exemple, `http://myserver/ReportServer`.  
+-   Vous épinglez les éléments à partir de la visionneuse de rapports [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] dans le [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] ; par exemple, `https://myserver/Reports`.  Vous ne pouvez pas épingler d’éléments à partir de [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)], du Concepteur de rapports dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]ou d’une URL de serveur de rapports.  Par exemple, `https://myserver/ReportServer`.  
   
 -   Votre navigateur doit être configuré pour autoriser l’affichage des fenêtres contextuelles en provenance du site de votre serveur de rapports.  
   

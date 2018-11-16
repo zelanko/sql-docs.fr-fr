@@ -42,19 +42,19 @@ ms.assetid: 56f5df6a-56f6-43df-bca9-08476a3bd931
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cee76028cbc0e416b320a8042eaf577dfeb621ec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 362d59ff4ba311f4903993cfdb455d0785a912e6
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47722937"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640736"
 ---
 # <a name="transformation-custom-properties"></a>Propriétés personnalisées des transformations
   En plus des propriétés qui sont communes à la plupart des objets de flux de données dans le modèle objet [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , de nombreux objets de flux de données possèdent des propriétés personnalisées qui sont spécifiques à l'objet. Ces propriétés personnalisées sont uniquement disponibles au moment de l'exécution et ne sont pas documentées dans la documentation de référence de la programmation managée de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] .  
   
- Cette rubrique présente et décrit les propriétés personnalisées des différentes transformations de flux de données. Pour plus d'informations sur les propriétés communes à la plupart des objets de flux de données, consultez [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796).  
+ Cette rubrique présente et décrit les propriétés personnalisées des différentes transformations de flux de données. Pour plus d'informations sur les propriétés communes à la plupart des objets de flux de données, consultez [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796).  
   
- Certaines propriétés de transformations peuvent être définies à l'aide d'expressions de propriété. Pour plus d’informations, consultez [Propriétés du flux de données pouvant être définies à l’aide d’expressions](http://msdn.microsoft.com/library/cd0e171a-08be-45d6-81dc-ed94f37698b8).  
+ Certaines propriétés de transformations peuvent être définies à l'aide d'expressions de propriété. Pour plus d’informations, consultez [Propriétés du flux de données pouvant être définies à l’aide d’expressions](https://msdn.microsoft.com/library/cd0e171a-08be-45d6-81dc-ed94f37698b8).  
   
 ## <a name="transformations-with-custom-properties"></a>Transformations avec les propriétés personnalisées  
   
@@ -184,7 +184,7 @@ ms.locfileid: "47722937"
   
 |Propriété|Type de données|Description|  
 |--------------|---------------|-----------------|  
-|FastParse|Booléen|Valeur qui indique si la colonne fait appel aux routines d'analyse fournies par [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] (routines plus rapides mais qui ne tiennent pas compte des paramètres régionaux) ou bien aux routines d'analyse standard qui prennent en compte les paramètres régionaux. La valeur par défaut de cette propriété est **False**. Pour plus d'informations, consultez [Fast Parse](http://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95) et [Standard Parse](http://msdn.microsoft.com/library/dfe835b1-ea52-4e18-a23a-5188c5b6f013). .<br /><br /> Remarque : cette propriété n’est pas disponible dans l’ **Éditeur de transformation de conversion de données**, mais peut être définie à l’aide de l’ **éditeur avancé**.|  
+|FastParse|Booléen|Valeur qui indique si la colonne fait appel aux routines d'analyse fournies par [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] (routines plus rapides mais qui ne tiennent pas compte des paramètres régionaux) ou bien aux routines d'analyse standard qui prennent en compte les paramètres régionaux. La valeur par défaut de cette propriété est **False**. Pour plus d'informations, consultez [Fast Parse](https://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95) et [Standard Parse](https://msdn.microsoft.com/library/dfe835b1-ea52-4e18-a23a-5188c5b6f013). .<br /><br /> Remarque : cette propriété n’est pas disponible dans l’ **Éditeur de transformation de conversion de données**, mais peut être définie à l’aide de l’ **éditeur avancé**.|  
 |SourceInputColumnLineageId|Entier|**LineageID** de la colonne d'entrée correspondant à la source de la colonne de sortie.|  
   
  L'entrée, les colonnes d'entrée et la sortie de la transformation de conversion de données ne disposent pas de propriétés personnalisées.  
@@ -629,8 +629,8 @@ ms.locfileid: "47722937"
   
 ## <a name="see-also"></a> Voir aussi  
  [Transformations Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
- [Propriétés communes](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)   
- [Propriétés du chemin](http://msdn.microsoft.com/library/89b1e347-9579-4f6b-af74-c6519ea08eea)   
- [Propriétés du flux de données pouvant être définies à l’aide d’expressions](http://msdn.microsoft.com/library/cd0e171a-08be-45d6-81dc-ed94f37698b8)  
+ [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)   
+ [Propriétés du chemin](https://msdn.microsoft.com/library/89b1e347-9579-4f6b-af74-c6519ea08eea)   
+ [Propriétés du flux de données pouvant être définies à l’aide d’expressions](https://msdn.microsoft.com/library/cd0e171a-08be-45d6-81dc-ed94f37698b8)  
   
   

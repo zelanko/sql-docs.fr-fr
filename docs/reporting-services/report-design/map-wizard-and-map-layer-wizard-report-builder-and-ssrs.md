@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 48cbe18b-1290-4107-8a1c-ec6acd71f73b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a8b90d0eddd10825abc2e05fd97da236a5049293
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 1353356a4fb0116e4eed34ef79a8d7a0997db0bb
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021053"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813772"
 ---
 # <a name="map-wizard-and-map-layer-wizard-report-builder-and-ssrs"></a>Assistant Carte et Assistant Couche (Générateur de rapports et SSRS)
  Dans les rapports paginés [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , l’Assistant Carte et l’Assistant Couche automatisent la tâche de création d’une carte, d’ajout d’une couche ou de modification des options de couche sur une couche existante.  
@@ -114,7 +114,7 @@ ms.locfileid: "50021053"
  La bibliothèque de cartes contient des cartes de rapports stockés dans le dossier Bibliothèque de cartes pour l'environnement de création de rapports. Les cartes de la bibliothèque fournissent un point de départ pratique pour ajouter rapidement une carte à votre rapport. Les cartes prédéfinies de la bibliothèque sont fournies par un fournisseur de cartes.  
   
 > [!NOTE]  
->  Cette fonctionnalité de cartographie [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] utilise des données de fichiers de forme TIGER/Line gracieusement fournis par Bureau de recensement ([http://www.census.gov/](http://www.census.gov/)). Les fichiers de forme TIGER/Line sont un extrait d'informations géographiques et cartographiques sélectionnées de la base de données MAF/TIGER du Bureau de recensement. Ces fichiers sont mis à disposition gratuitement par le Bureau de recensement. Pour plus d’informations sur les fichiers de forme TIGER/Line, consultez [http://www.census.gov/geo/www/tiger](http://www.census.gov/geo/www/tiger). Les informations de frontières dans les fichiers de forme TIGER/Line sont fournies à des fins de collecte et de tabulation de données statistiques uniquement ; leur description et leur désignation pour des objectifs statistiques ne constituent pas une détermination d'autorité juridictionnelle ou de droits de propriété et les informations ne constituent pas des descriptions juridiquement valables. Census TIGER et TIGER/Line sont des marques déposées du Bureau de recensement des États-Unis.  
+>  Cette fonctionnalité de cartographie [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] utilise des données de fichiers de forme TIGER/Line gracieusement fournis par Bureau de recensement ([https://www.census.gov/](https://www.census.gov/)). Les fichiers de forme TIGER/Line sont un extrait d'informations géographiques et cartographiques sélectionnées de la base de données MAF/TIGER du Bureau de recensement. Ces fichiers sont mis à disposition gratuitement par le Bureau de recensement. Pour plus d’informations sur les fichiers de forme TIGER/Line, consultez [https://www.census.gov/geo/www/tiger](https://www.census.gov/geo/www/tiger). Les informations de frontières dans les fichiers de forme TIGER/Line sont fournies à des fins de collecte et de tabulation de données statistiques uniquement ; leur description et leur désignation pour des objectifs statistiques ne constituent pas une détermination d'autorité juridictionnelle ou de droits de propriété et les informations ne constituent pas des descriptions juridiquement valables. Census TIGER et TIGER/Line sont des marques déposées du Bureau de recensement des États-Unis.  
   
  Pour étendre la bibliothèque de cartes, vous pouvez ajouter ou supprimer des rapports du répertoire de la bibliothèque de cartes et ajouter des dossiers pour organiser les cartes. Pour plus d’informations, consultez [Cartes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md).  
   

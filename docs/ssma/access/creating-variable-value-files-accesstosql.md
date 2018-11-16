@@ -10,12 +10,12 @@ ms.assetid: 808595c3-8ef1-40bd-a93e-5cf237950e08
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 005be9b3009ba8812219a6974fa13465bf786747
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f1a2840fbdf8fbafae3b4a8e17c200c32d4da65f
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47680947"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51669778"
 ---
 # <a name="creating-variable-value-files-accesstosql"></a>Création de fichiers de la valeur de la Variable (AccessToSQL)
 Un fichier de valeurs de Variable est un fichier XML contenant les valeurs de paramètre des commandes qui changent fréquemment sur les migrations de serveurs (par exemple, le nom du serveur source ou destination). En cas d’un grand nombre de migrations de base de données, plusieurs fichiers de variables pour stocker la valeur de chaque serveur source sont créés et référencés dans un fichier de script principal avec la **– v** passer à la ligne de commande. Ce comportement permet de conserver des valeurs statiques dans quelques fichiers de script avec les valeurs des variables dans plusieurs fichiers de variables.  
@@ -95,5 +95,5 @@ L’utilisateur peut valider facilement son fichier de la valeur de la variable 
 L’étape suivante de d’exploitation de la console est [création des fichiers de connexion de serveur &#40;AccessToSQL&#41;](../../ssma/access/creating-the-server-connection-files-accesstosql.md)  
   
 ## <a name="see-also"></a>Voir aussi  
-[Création des fichiers de connexion de serveur (accès)](http://msdn.microsoft.com/829153be-aa8e-4162-87e8-69882feecf19)  
+[Création des fichiers de connexion de serveur (accès)](https://msdn.microsoft.com/829153be-aa8e-4162-87e8-69882feecf19)  
   

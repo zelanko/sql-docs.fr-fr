@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: a104c3c7-f118-4d02-9a0f-6859f1469d11
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d86acb0dae3d8f9059229dda764403aa999fd817
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: c6dcae60590d6bcdeaaf06d41326a8fc0cb64f64
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030848"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812662"
 ---
 # <a name="power-pivot-connection-type-ssrs"></a>Type de connexion PowerPivot (SSRS)
   Vous pouvez utiliser l’extension de traitement des données SQL Server Analysis Services pour récupérer des données d’un classeur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] publié dans une Galerie SharePoint [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
@@ -29,7 +29,7 @@ ms.locfileid: "50030848"
  Utilisez le type de source de données de rapport **Microsoft SQL Server Analysis Services**.  
   
 ## <a name="connection-string"></a>Chaîne de connexion  
- La chaîne de connexion est l’URL du classeur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] publié sur SharePoint dans la Galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ou une autre bibliothèque, par exemple `http://contoso-srv/subsite/PowerPivotLibrary/ContosoSales.xlsx`.  
+ La chaîne de connexion est l’URL du classeur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] publié sur SharePoint dans la Galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ou une autre bibliothèque, par exemple `https://contoso-srv/subsite/PowerPivotLibrary/ContosoSales.xlsx`.  
   
 ## <a name="credentials"></a>Informations d'identification  
  Spécifiez les informations d’identification dont vous avez besoin pour accéder au classeur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] et au site SharePoint, par exemple l’authentification Windows (sécurité intégrée). Pour plus d’informations, consultez [Connexions de données, sources de données et chaînes de connexion &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) ou [Spécifier des informations d’identification dans le Générateur de rapports](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53).  

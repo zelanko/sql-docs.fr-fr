@@ -26,12 +26,12 @@ ms.assetid: 6c7975ff-acec-4e6e-82e5-a641e3a98afe
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ee1e6771bc2d4a10ff7c43bfc1d13bec7855529c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fbcf4fb0fb88ef90b234938252fa7cb48391d861
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681897"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51642216"
 ---
 # <a name="dtutil-utility"></a>dtutil (utilitaire)
   L’utilitaire d’invite de commandes **dtutil** sert à gérer les packages [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Cet utilitaire peut copier, déplacer ou supprimer un package, ou en vérifier l'existence. Ces actions peuvent être effectuées sur n'importe quel package [!INCLUDE[ssIS](../includes/ssis-md.md)] stocké à l'un des trois emplacements suivants : une base de données [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , le magasin de packages [!INCLUDE[ssIS](../includes/ssis-md.md)] et le système de fichiers. Si l'utilitaire accède à un package stocké dans **msdb**, il peut être nécessaire d'indiquer un nom d'utilisateur et un mot de passe à l'invite de commandes. Si l'instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilise l'authentification [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , il est nécessaire d'indiquer un nom d'utilisateur et un mot de passe à l'invite de commandes. Si le nom d'utilisateur est manquant, **dtutil** essaie de se connecter à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en utilisant l'authentification Windows. Le type de stockage du package est identifié par les options **/SQL**, **/FILE**et **/DTS** .  
@@ -264,7 +264,7 @@ dtutil /FILE srcPackage.dtsx /SIGN FILE;destpkg.dtsx;1767832648918a9d989fdac9819
 > [!NOTE]  
 >  Le hachage utilisé dans l'exemple ci-dessus n'est pas un hachage véritable.  
   
- Pour plus d'informations, consultez la section « CertMgr » de l'article (en anglais) « [Signing and Checking Code with Authenticode](http://go.microsoft.com/fwlink/?LinkId=78100)» (signature et vérification du code à l'aide d'Authenticode).  
+ Pour plus d'informations, consultez la section « CertMgr » de l'article (en anglais) « [Signing and Checking Code with Authenticode](https://go.microsoft.com/fwlink/?LinkId=78100)» (signature et vérification du code à l'aide d'Authenticode).  
   
 ### <a name="encrypt-examples"></a>Exemples d'Encrypt  
  L'exemple suivant chiffre le fichier PackageToEncrypt.dtsx dans le fichier EncryptedPackage.dts en utilisant un chiffrement de package complet, avec un mot de passe. Le mot de passe qui est utilisé pour le chiffrement est *EncPswd*.  

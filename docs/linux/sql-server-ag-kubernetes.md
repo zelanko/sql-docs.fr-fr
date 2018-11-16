@@ -10,35 +10,35 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 02d76e3eadd8852d1c512c263e74dd8f8d6013de
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: c74b39f4b7816221e2258bde2b1fef2b9e74d9d3
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356450"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51658571"
 ---
 # <a name="always-on-availability-groups-for-sql-server-containers"></a>Groupes de disponibilité Always On pour les conteneurs de SQL Server
 
-SQL Server 2019 prend en charge les groupes de disponibilité sur des conteneurs dans un Kubernetes. Pour les groupes de disponibilité, déployez le serveur SQL Server [Kubernetes opérateur](http://coreos.com/blog/introducing-operators.html) à votre cluster Kubernetes. L’opérateur facilite l’empaquetage, déployer et gérer le groupe de disponibilité dans un cluster.
+SQL Server 2019 prend en charge les groupes de disponibilité sur des conteneurs dans un Kubernetes. Pour les groupes de disponibilité, déployez le serveur SQL Server [Kubernetes opérateur](https://coreos.com/blog/introducing-operators.html) à votre cluster Kubernetes. L’opérateur facilite l’empaquetage, déployer et gérer le groupe de disponibilité dans un cluster.
 
 ![Groupe de disponibilité dans le conteneur de Kubernetes](media/tutorial-sql-server-ag-containers-kubernetes/KubernetesCluster.png)
 
 Dans l’image ci-dessus, un cluster de quatre nœuds kubernetes héberge un groupe de disponibilité avec trois réplicas. La solution inclut les composants suivants :
 
-* Un Kubernetes [ *déploiement*](http://kubernetes.io/docs/concepts/workloads/controllers/deployment/). Le déploiement inclut l’opérateur et une carte de configuration. Ils fournissent l’image de conteneur, les logiciels et les instructions nécessaires pour déployer des instances de SQL Server pour le groupe de disponibilité.
+* Un Kubernetes [ *déploiement*](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/). Le déploiement inclut l’opérateur et une carte de configuration. Ils fournissent l’image de conteneur, les logiciels et les instructions nécessaires pour déployer des instances de SQL Server pour le groupe de disponibilité.
 
-* Trois nœuds, chacune hébergeant un [ *StatefulSet*](http://kubernetes.io/docs/concepts/workloads/controllers/statefulset/). La ressource StatefulSet contient un [ *pod*](http://kubernetes.io/docs/concepts/workloads/pods/pod-overview/). Chaque pod contient :
+* Trois nœuds, chacune hébergeant un [ *StatefulSet*](https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/). La ressource StatefulSet contient un [ *pod*](https://kubernetes.io/docs/concepts/workloads/pods/pod-overview/). Chaque pod contient :
   * Un conteneur de SQL Server qui exécute une instance de SQL Server.
   * Un agent de groupe de disponibilité. 
 
-* Deux [ *ConfigMaps* ](http://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-configmap/) associées au groupe de disponibilité. Les ConfigMaps fournissent des informations sur :
+* Deux [ *ConfigMaps* ](https://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-configmap/) associées au groupe de disponibilité. Les ConfigMaps fournissent des informations sur :
   * Le déploiement de l’opérateur.
   * Groupe de disponibilité.
 
- * [*Volumes persistants* ](http://kubernetes.io/docs/concepts/storage/persistent-volumes/) sont des éléments de stockage. Un *revendication de volume persistant* (PVC) est une demande de stockage par un utilisateur. Chaque conteneur est affilié à un PVC pour le stockage de données et de journaux. Dans Azure Kubernetes Service (ACS), vous [créer une revendication de volume persistant](http://docs.microsoft.com/azure/aks/azure-disks-dynamic-pv) pour attribuer automatiquement le stockage basé sur une classe de stockage.
+ * [*Volumes persistants* ](https://kubernetes.io/docs/concepts/storage/persistent-volumes/) sont des éléments de stockage. Un *revendication de volume persistant* (PVC) est une demande de stockage par un utilisateur. Chaque conteneur est affilié à un PVC pour le stockage de données et de journaux. Dans Azure Kubernetes Service (ACS), vous [créer une revendication de volume persistant](https://docs.microsoft.com/azure/aks/azure-disks-dynamic-pv) pour attribuer automatiquement le stockage basé sur une classe de stockage.
 
 
-En outre, le cluster stocke [ *secrets* ](http://kubernetes.io/docs/concepts/configuration/secret/) pour les mots de passe, les certificats, les clés et les autres informations sensibles.
+En outre, le cluster stocke [ *secrets* ](https://kubernetes.io/docs/concepts/configuration/secret/) pour les mots de passe, les certificats, les clés et les autres informations sensibles.
 
 ## <a name="deploy-the-availability-group-in-kubernetes"></a>Déployer le groupe de disponibilité dans Kubernetes
 
@@ -74,11 +74,11 @@ Le code de l’opérateur, superviseur de haute disponibilité et SQL Server est
 
 * `mssql-operator`
 
-    Ce processus est déployé comme un déploiement Kubernetes séparé. Il enregistre le [ressource personnalisée Kubernetes](http://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/) appelé `SqlServer` (sqlservers.mssql.microsoft.com). Puis il écoute pour ces ressources est créé ou mis à jour dans le cluster Kubernetes. Pour chaque événement de ce type, il crée ou met à jour les ressources Kubernetes pour l’instance correspondante (par exemple la ressource StatefulSet, ou `mssql-server-k8s-init-sql` travail).
+    Ce processus est déployé comme un déploiement Kubernetes séparé. Il enregistre le [ressource personnalisée Kubernetes](https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/) appelé `SqlServer` (sqlservers.mssql.microsoft.com). Puis il écoute pour ces ressources est créé ou mis à jour dans le cluster Kubernetes. Pour chaque événement de ce type, il crée ou met à jour les ressources Kubernetes pour l’instance correspondante (par exemple la ressource StatefulSet, ou `mssql-server-k8s-init-sql` travail).
 
 * `mssql-server-k8s-health-agent`
 
-    Ce serveur web sert Kubernetes [sondes de l’activité](http://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-probes/) pour déterminer l’intégrité d’une instance de SQL Server. Analyse l’intégrité de l’instance de SQL Server locale en appelant `sp_server_diagnostics` et en comparant les résultats avec votre stratégie d’analyse.
+    Ce serveur web sert Kubernetes [sondes de l’activité](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-probes/) pour déterminer l’intégrité d’une instance de SQL Server. Analyse l’intégrité de l’instance de SQL Server locale en appelant `sp_server_diagnostics` et en comparant les résultats avec votre stratégie d’analyse.
 
 * `mssql-ha-supervisor`
 
@@ -92,7 +92,7 @@ Le code de l’opérateur, superviseur de haute disponibilité et SQL Server est
 
 * `mssql-server-k8s-init-sql`
   
-    Cette Kubernetes [travail](http://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/) s’applique une configuration d’état souhaité pour une instance de SQL Server. Le travail est créé par l’opérateur chaque fois qu’une ressource SQL Server est créée ou mis à jour. Elle garantit que l’instance de SQL Server cible correspondant à la ressource personnalisée a la configuration souhaitée décrite dans la ressource.
+    Cette Kubernetes [travail](https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/) s’applique une configuration d’état souhaité pour une instance de SQL Server. Le travail est créé par l’opérateur chaque fois qu’une ressource SQL Server est créée ou mis à jour. Elle garantit que l’instance de SQL Server cible correspondant à la ressource personnalisée a la configuration souhaitée décrite dans la ressource.
 
     Par exemple, si les paramètres suivants sont requis, il effectue les :
   * Mettre à jour le mot de passe SA

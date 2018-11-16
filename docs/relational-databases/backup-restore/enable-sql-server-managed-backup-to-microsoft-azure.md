@@ -11,18 +11,18 @@ ms.assetid: 68ebb53e-d5ad-4622-af68-1e150b94516e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 753c323030f5d854bba3e0cd7bd985f8fdc90d24
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2fedebfb082639114ec068f80db436af7b8a035b
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649697"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51672798"
 ---
 # <a name="enable-sql-server-managed-backup-to-microsoft-azure"></a>Activer la sauvegarde managée SQL Server sur Microsoft Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Cette rubrique décrit comment activer [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] avec les paramètres par défaut au niveau base de données et instance. Elle décrit également comment activer les notifications par courrier électronique et surveiller l'activité de sauvegarde.  
   
- Ce didacticiel utilise Azure PowerShell. Avant de commencer ce didacticiel, [téléchargez et installez Azure PowerShell](http://azure.microsoft.com/documentation/articles/powershell-install-configure/).  
+ Ce didacticiel utilise Azure PowerShell. Avant de commencer ce didacticiel, [téléchargez et installez Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/).  
   
 > [!IMPORTANT]  
 >  Si vous souhaitez également activer des options avancées ou utiliser une planification personnalisée, configurez ces paramètres avant d’activer [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Pour plus d'informations, consultez [Configure Advanced Options for SQL Server Managed Backup to Microsoft Azure](../../relational-databases/backup-restore/configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure.md).  
@@ -31,7 +31,7 @@ ms.locfileid: "47649697"
   
 #### <a name="create-the-azure-blob-container"></a>Création du conteneur Azure Blob  
   
-1.  **Inscrivez-vous à Azure :** Si vous avez déjà un abonnement Azure, passez à l'étape suivante. Sinon, vous pouvez commencer avec une [version d’évaluation gratuite](http://azure.microsoft.com/pricing/free-trial/) ou explorer les [options d’achat](http://azure.microsoft.com/pricing/purchase-options/).  
+1.  **Inscrivez-vous à Azure :** Si vous avez déjà un abonnement Azure, passez à l'étape suivante. Sinon, vous pouvez commencer avec une [version d’évaluation gratuite](https://azure.microsoft.com/pricing/free-trial/) ou explorer les [options d’achat](https://azure.microsoft.com/pricing/purchase-options/).  
   
 2.  **Créez un compte de stockage Azure :** Si vous avez déjà un compte de stockage, passez à l'étape suivante. Sinon, vous pouvez utiliser le [Portail de gestion Azure](https://manage.windowsazure.com/) ou Azure PowerShell pour créer le compte de stockage. La commande `New-AzureStorageAccount` suivante crée un compte de stockage nommé `managedbackupstorage` dans la région États-Unis de l'Est.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "47649697"
     New-AzureStorageAccount -StorageAccountName "managedbackupstorage" -Location "EAST US"  
     ```  
   
-     Pour plus d'informations sur les comptes de stockage, consultez [À propos des comptes de stockage Azure](http://azure.microsoft.com/documentation/articles/storage-create-storage-account/).  
+     Pour plus d'informations sur les comptes de stockage, consultez [À propos des comptes de stockage Azure](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/).  
   
 3.  **Créez un conteneur d'objets blob pour les fichiers de sauvegarde :** Vous pouvez créer un conteneur d'objets blob dans le portail de gestion Azure ou Azure PowerShell. La commande `New-AzureStorageContainer` suivante crée un conteneur d’objets blob nommé `backupcontainer` dans le compte de stockage `managedbackupstorage` .  
   
@@ -68,7 +68,7 @@ ms.locfileid: "47649697"
     |**URL du conteneur :**|https://managedbackupstorage.blob.core.windows.net/backupcontainer|  
     |**Jeton SAS :**|sv=2014-02-14&sr=c&sig=xM2LXVo1Erqp7LxQ%9BxqK9QC6%5Qabcd%9LKjHGnnmQWEsDf%5Q%se=2015-05-14T14%3B93%4V20X&sp=rwdl|  
   
-     Enregistrez l’URL du conteneur et le SAS pour les utiliser lors de la création d’informations d’identification SQL. Pour plus d’informations sur SAS, consultez [Signatures d’accès partagé, partie 1 : présentation du modèle SAS](http://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/).  
+     Enregistrez l’URL du conteneur et le SAS pour les utiliser lors de la création d’informations d’identification SQL. Pour plus d’informations sur SAS, consultez [Signatures d’accès partagé, partie 1 : présentation du modèle SAS](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/).  
   
 #### <a name="enable-includesssmartbackupincludesss-smartbackup-mdmd"></a>Activer [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]  
   

@@ -5,8 +5,7 @@ ms.date: 01/05/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - transaction log architecture guide
@@ -23,12 +22,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 738de181911733a5edd7f973a5c43e2503f63a2c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 262e55ab61f3e4ee68e905ea264ae15f450b58ed
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631867"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51658069"
 ---
 # <a name="sql-server-transaction-log-architecture-and-management-guide"></a>Guide d’architecture et gestion du journal des transactions SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -91,7 +90,7 @@ Il est conseillé d’affecter aux fichiers journaux une *taille* proche de la t
 Pour plus d’informations sur les arguments `FILEGROWTH` et `SIZE` de `ALTER DATABASE`, consultez [Options de fichiers et de groupes de fichiers &#40;Transact-SQL&#41; ALTER DATABASE](../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).
 
 > [!TIP]
-> Pour déterminer la distribution optimale des fichiers journaux virtuels pour la taille actuelle du journal des transactions de toutes les bases de données dans une instance donnée, ainsi que les incréments de croissance pour atteindre la taille nécessaire, consultez ce [script](http://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs).
+> Pour déterminer la distribution optimale des fichiers journaux virtuels pour la taille actuelle du journal des transactions de toutes les bases de données dans une instance donnée, ainsi que les incréments de croissance pour atteindre la taille nécessaire, consultez ce [script](https://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs).
   
  Le journal des transactions est un fichier cumulatif. Considérons, par exemple, une base de données possédant un fichier journal physique divisé en quatre fichiers journaux virtuels. Lors de la création de la base de données, le fichier journal logique commence au début du fichier journal physique. Les nouveaux enregistrements du journal sont ajoutés à la fin du journal logique, qui s'étend vers la fin du journal physique. Le fait de tronquer le journal permet de libérer tous les journaux virtuels dont les enregistrements précèdent tous le MinLSN (numéro séquentiel dans le journal minimum). Le *MinLSN* est le numéro séquentiel dans le journal du plus ancien enregistrement du journal requis pour une opération de restauration réussie de l’ensemble de la base de données. Le journal des transactions de la base de données exemple ressemblerait à celui de l'illustration suivante :  
   
@@ -143,12 +142,12 @@ Pour plus d’informations sur les arguments `FILEGROWTH` et `SIZE` de `ALTER DA
  Avant de pouvoir créer la première sauvegarde du journal, vous devez créer une sauvegarde complète, telle qu'une sauvegarde de base de données ou la première d'une série de sauvegardes de fichiers. La restauration d'une base de données à l'aide seulement de sauvegardes de fichiers peut être complexe. Par conséquent, nous vous recommandons de commencer par une sauvegarde de base de données complète dès que possible. Puis, sauvegardez le journal des transactions régulièrement. Vous pouvez ainsi réduire les risques de perte de travail mais aussi permettre la troncation du journal des transactions. En général, le journal des transactions est tronqué après chaque sauvegarde de journal conventionnelle.  
   
 > [!IMPORTANT]
-> Nous vous recommandons d’effectuer des sauvegardes de journaux suffisamment fréquentes pour répondre à vos besoins, en particulier votre tolérance des pertes de données comme celles causées par un stockage de journal endommagé. La fréquence appropriée des sauvegardes de journaux dépend de votre gestion des risques liés aux pertes de données et du nombre de sauvegardes de journaux qu'il vous est possible de stocker, gérer et potentiellement restaurer. Pensez à [l’objectif de délai de récupération](http://wikipedia.org/wiki/Recovery_time_objective) et à [l’objectif de point de récupération](http://wikipedia.org/wiki/Recovery_point_objective) quand vous implémentez votre stratégie de récupération, en particulier la cadence des sauvegardes de fichier journal.
+> Nous vous recommandons d’effectuer des sauvegardes de journaux suffisamment fréquentes pour répondre à vos besoins, en particulier votre tolérance des pertes de données comme celles causées par un stockage de journal endommagé. La fréquence appropriée des sauvegardes de journaux dépend de votre gestion des risques liés aux pertes de données et du nombre de sauvegardes de journaux qu'il vous est possible de stocker, gérer et potentiellement restaurer. Pensez à [l’objectif de délai de récupération](https://wikipedia.org/wiki/Recovery_time_objective) et à [l’objectif de point de récupération](https://wikipedia.org/wiki/Recovery_point_objective) quand vous implémentez votre stratégie de récupération, en particulier la cadence des sauvegardes de fichier journal.
 > Réaliser une sauvegarde de journal tous les 15 à 30 minutes peut être suffisant. Si vos besoins nécessitent de minimiser les risques de perte de travail, vous devez envisager des sauvegardes de journaux plus fréquentes. Une meilleure fréquence pour les sauvegardes de fichiers journaux offre l'avantage d'augmenter la fréquence de la troncation des journaux qui produit des fichiers journaux plus petits.  
   
 > [!IMPORTANT]
 > Pour limiter le nombre des sauvegardes de fichiers journaux à restaurer, il est essentiel de sauvegarder vos données régulièrement. Vous pouvez, par exemple, planifier une sauvegarde complète hebdomadaire et des sauvegardes différentielles quotidiennes de la base de données.  
-> Là encore, pensez à [l’objectif de délai de récupération](http://wikipedia.org/wiki/Recovery_time_objective) et à [l’objectif de point de récupération](http://wikipedia.org/wiki/Recovery_point_objective) quand vous implémentez votre stratégie de récupération, en particulier la cadence des sauvegardes différentielles et complètes de base de données.
+> Là encore, pensez à [l’objectif de délai de récupération](https://wikipedia.org/wiki/Recovery_time_objective) et à [l’objectif de point de récupération](https://wikipedia.org/wiki/Recovery_point_objective) quand vous implémentez votre stratégie de récupération, en particulier la cadence des sauvegardes différentielles et complètes de base de données.
 
 Pour plus d’informations sur les sauvegardes des journaux de transactions, consultez [Sauvegardes des journaux de transactions &#40;SQL Server&#41;](../relational-databases/backup-restore/transaction-log-backups-sql-server.md).
   
@@ -253,7 +252,7 @@ Pour plus d’informations sur le journal des transactions et les bonnes pratiqu
 [Configurer l’option de configuration de serveur d’intervalle de récupération](../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md)    
 [sys.dm_db_log_info &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)   
 [sys.dm_db_log_space_usage &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)    
-[Fonctionnement de la journalisation et de la récupération dans SQL Server, par Paul Randall](http://technet.microsoft.com/magazine/2009.02.logging.aspx)    
-[Gestion du journal des transactions SQL Server de Tony Davis et Gail Shaw](http://www.simple-talk.com/books/sql-books/sql-server-transaction-log-management-by-tony-davis-and-gail-shaw/)  
+[Fonctionnement de la journalisation et de la récupération dans SQL Server, par Paul Randall](https://technet.microsoft.com/magazine/2009.02.logging.aspx)    
+[Gestion du journal des transactions SQL Server de Tony Davis et Gail Shaw](https://www.simple-talk.com/books/sql-books/sql-server-transaction-log-management-by-tony-davis-and-gail-shaw/)  
   
   

@@ -5,8 +5,7 @@ ms.date: 07/06/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
 - index design guide
@@ -24,12 +23,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6deaaa7ac9774cc775801ae7946675452cc15a35
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e26f3436b821c1b6b42dec9f0b5f0c7170da780e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47822401"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51669598"
 ---
 # <a name="sql-server-index-architecture-and-design-guide"></a>Guide de conception et d’architecture d’index SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -825,7 +824,7 @@ Les index non-cluster sont l’un des types d’index possibles dans une table �
 
 ### <a name="in-memory-nonclustered-index-architecture"></a>Architecture des index non-cluster en mémoire
 
-Les index non-cluster en mémoire sont implémentés à l’aide d’une structure de données appelée arbre Bw (Bw-tree). Cette structure a initialement été conçue et décrite par Microsoft Research en 2011. Un arbre Bw est une variante sans verrous d’un arbre B (B-tree). Pour plus d’informations, consultez [The Bw-Tree: A B-tree for New Hardware Platforms](http://www.microsoft.com/research/publication/the-bw-tree-a-b-tree-for-new-hardware/). 
+Les index non-cluster en mémoire sont implémentés à l’aide d’une structure de données appelée arbre Bw (Bw-tree). Cette structure a initialement été conçue et décrite par Microsoft Research en 2011. Un arbre Bw est une variante sans verrous d’un arbre B (B-tree). Pour plus d’informations, consultez [The Bw-Tree: A B-tree for New Hardware Platforms](https://www.microsoft.com/research/publication/the-bw-tree-a-b-tree-for-new-hardware/). 
 
 Sur un plan très général, un arbre Bw peut être vu comme un mappage de pages organisées par ID de page (PidMap), un moyen d’allouer et de réutiliser des ID de page (PidAlloc) et un ensemble de pages liées entre elles dans le mappage de pages. Ces trois sous-composants principaux constituent la structure interne de base d’un arbre Bw.
 
@@ -892,8 +891,8 @@ Les performances d’un index non-cluster sont meilleures que celles d’un inde
 [CREATE XML INDEX &#40;Transact-SQL&#41;](../t-sql/statements/create-xml-index-transact-sql.md)  
 [CREATE SPATIAL INDEX &#40;Transact-SQL&#41;](../t-sql/statements/create-spatial-index-transact-sql.md)     
 [Réorganiser et reconstruire des index](../relational-databases/indexes/reorganize-and-rebuild-indexes.md)         
-[Amélioration des performances avec les vues indexées SQL Server 2008](http://msdn.microsoft.com/library/dd171921(v=sql.100).aspx)  
-[Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md)  
+[Amélioration des performances avec les vues indexées SQL Server 2008](https://msdn.microsoft.com/library/dd171921(v=sql.100).aspx)  
+[Tables et index partitionnés](../relational-databases/partitions/partitioned-tables-and-indexes.md)  
 [Créer des clés primaires](../relational-databases/tables/create-primary-keys.md)    
 [Index pour les tables optimisées en mémoire](../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)  
 [Index columnstore - Présentation](../relational-databases/indexes/columnstore-indexes-overview.md)  
@@ -902,4 +901,4 @@ Les performances d’un index non-cluster sont meilleures que celles d’un inde
 [Fonctions et vues de gestion dynamique relatives aux index &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)       
 [Index sur les colonnes calculées](../relational-databases/indexes/indexes-on-computed-columns.md)   
 [Index et ALTER TABLE](../t-sql/statements/alter-table-transact-sql.md#indexes-and-alter-table)      
-[Adaptive Index Defrag](http://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)      
+[Adaptive Index Defrag](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)      

@@ -13,12 +13,12 @@ ms.assetid: d2765828-2385-4019-aef2-1de3ab7d1b26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cb974864c6a4bc2a90308873a02a305e6d69acd2
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 876e6cc23bd5b4063c977de44af05c2e43ee002d
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43811985"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51672838"
 ---
 # <a name="monitor-data-tier-applications"></a>Analyser les applications de la couche Données
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,11 +30,11 @@ ms.locfileid: "43811985"
  L' **Explorateur d'objets** de SSMS affiche les informations de configuration de base sur chaque DAC déployée sur une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)], que l'instance soit gérée ou non dans l'utilitaire SQL Server. En outre, la base de données associée à une DAC déployée peut être analysée à l'aide des mêmes procédures d'analyse que celles employées pour toute base de données.  
   
 ## <a name="using-the-sql-server-utility"></a>Utilisation de l'utilitaire SQL Server  
- La page de détails **Applications de la couche de données déployées** dans l’ [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **Utility Explorer** displays a dashboard that reports the resource utilization of all DACs that have been deployed to managed instances of the [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Le volet supérieur de la page des détails répertorie chaque DAC déployée avec des indicateurs visuels qui signalent si leur utilisation du processeur et des ressources de fichiers se situe hors des stratégies définies pour l'utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Si vous sélectionnez une DAC en mode Liste, des détails supplémentaires sont affichés sous les onglets dans le volet inférieur de la page. Pour plus d’informations sur les informations présentées dans la page de détails, consultez [Détails des applications de la couche Données déployées &#40;utilitaire SQL Server&#41;](http://msdn.microsoft.com/library/79c41dd9-abcb-434e-9326-00a341d5c867).  
+ La page de détails **Applications de la couche de données déployées** dans l’ [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **Utility Explorer** displays a dashboard that reports the resource utilization of all DACs that have been deployed to managed instances of the [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Le volet supérieur de la page des détails répertorie chaque DAC déployée avec des indicateurs visuels qui signalent si leur utilisation du processeur et des ressources de fichiers se situe hors des stratégies définies pour l'utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Si vous sélectionnez une DAC en mode Liste, des détails supplémentaires sont affichés sous les onglets dans le volet inférieur de la page. Pour plus d’informations sur les informations présentées dans la page de détails, consultez [Détails des applications de la couche Données déployées &#40;utilitaire SQL Server&#41;](https://msdn.microsoft.com/library/79c41dd9-abcb-434e-9326-00a341d5c867).  
   
  Après avoir utilisé la page des détails **Applications de la couche Données déployées** pour identifier rapidement toutes les DAC qui utilisent trop ou pas assez leurs ressources matérielles, vous pouvez élaborer des plans pour traiter tous les problèmes. Plusieurs DAC qui n'utilisent pas pleinement leurs ressources matérielles actuelles pourraient être consolidées en un serveur unique, ce qui libérerait certains des serveurs pour d'autres utilisations. Si une DAC utilise trop les ressources sur son serveur en cours, elle peut être déplacée vers un plus grand serveur ou d'autres ressources peuvent être ajoutées au serveur en cours.  
   
- Les limites minimale et maximale pour l'utilisation des ressources sont définies par des stratégies d'analyse des applications définies dans la page des détails **Administration de l'utilitaire** . Les administrateurs de la base de données peuvent adapter les stratégies pour qu'elles correspondent aux limites établies par leurs organisations. Par exemple, une société peut définir 75 % comme utilisation maximale du processeur pour une DAC alors qu'une autre société peut affecter 80 % comme valeur maximale. Pour plus d’informations sur la définition des stratégies d’analyse des applications, consultez [Administration de l’utilitaire &#40;SQL Server Utility&#41;](http://msdn.microsoft.com/library/3e5a00c3-8905-40f0-9ddc-d924df9c2f0d).  
+ Les limites minimale et maximale pour l'utilisation des ressources sont définies par des stratégies d'analyse des applications définies dans la page des détails **Administration de l'utilitaire** . Les administrateurs de la base de données peuvent adapter les stratégies pour qu'elles correspondent aux limites établies par leurs organisations. Par exemple, une société peut définir 75 % comme utilisation maximale du processeur pour une DAC alors qu'une autre société peut affecter 80 % comme valeur maximale. Pour plus d’informations sur la définition des stratégies d’analyse des applications, consultez [Administration de l’utilitaire &#40;SQL Server Utility&#41;](https://msdn.microsoft.com/library/3e5a00c3-8905-40f0-9ddc-d924df9c2f0d).  
   
  Pour afficher la page des détails **Applications de la couche Données déployées** :  
   
@@ -68,7 +68,7 @@ ms.locfileid: "43811985"
 ## <a name="using-the-dac-system-views-and-tables"></a>Utilisation des vues et tables système de la DAC  
  La table système msdb.dbo.sysdac_history_internal enregistre la réussite ou l'échec de toutes les actions de gestion de la DAC effectuées sur une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)]. La table enregistre l'heure de chaque action et la connexion à l'origine de l'action. Pour plus d’informations, consultez [sysdac_history_internal &#40;Transact-SQL&#41;](../../relational-databases/system-tables/data-tier-application-tables-sysdac-history-internal.md).  
   
- Les vues système de la DAC signalent les informations de catalogue de base. Pour plus d’informations, consultez [Vues de l’application de la couche Données &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/0de01328-d7a6-4677-b7a0-dcd3098c23d4).  
+ Les vues système de la DAC signalent les informations de catalogue de base. Pour plus d’informations, consultez [Vues de l’application de la couche Données &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/0de01328-d7a6-4677-b7a0-dcd3098c23d4).  
   
 ## <a name="monitoring-dac-databases"></a>Analyse des bases de données de la DAC  
  Après le déploiement réussi d'une DAC, la base de données contenue dans la DAC fonctionne de la même façon que toute autre base de données. Utilisez des outils et techniques du [!INCLUDE[ssDE](../../includes/ssde-md.md)] standard pour analyser les performances, le journal, les événements et l'utilisation des ressources de la base de données.  

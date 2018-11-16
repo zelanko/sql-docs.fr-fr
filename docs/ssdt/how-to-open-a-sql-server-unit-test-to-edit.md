@@ -11,17 +11,17 @@ ms.assetid: c6af1b12-54cd-42f9-b2ef-7164f8078323
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 480f5c487c5fb8f9db9f1db61dd7b4126b6c8bb4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0c1f46ea807e7f51c92df16f7dfc21cfe49ad6bf
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47787427"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51659060"
 ---
 # <a name="how-to-open-a-sql-server-unit-test-to-edit"></a>Procédure : ouvrir un test unitaire SQL Server à modifier
 Après avoir créé un test unitaire SQL Server, utilisez le **Concepteur de test unitaire SQL Server** pour ajouter des instructions Transact\-SQL et des conditions de test. Les tests créés à l'aide du concepteur génèrent du code Visual C# ou Visual Basic. Ce code s'exécute lors de l'exécution du test.  
   
-Si le test vous convient, exécutez-le en l'état. Si vous souhaitez ajouter d'autres fonctionnalités à ce test unitaire, modifiez son code. Ce code réside dans un fichier .cs ou .vb dans votre projet de test. Pour plus d’informations, consultez [Fichiers de tests unitaires SQL Server](../ssdt/sql-server-unit-test-files.md). Vous pouvez également personnaliser vos tests lors de la création de nouvelles conditions de test. Pour plus d'informations, consultez [Procédure : créer des conditions de test pour le Concepteur de test unitaire de base de données (Visual Studio 2010)](http://msdn.microsoft.com/library/aa833409(VS.100).aspx).  
+Si le test vous convient, exécutez-le en l'état. Si vous souhaitez ajouter d'autres fonctionnalités à ce test unitaire, modifiez son code. Ce code réside dans un fichier .cs ou .vb dans votre projet de test. Pour plus d’informations, consultez [Fichiers de tests unitaires SQL Server](../ssdt/sql-server-unit-test-files.md). Vous pouvez également personnaliser vos tests lors de la création de nouvelles conditions de test. Pour plus d'informations, consultez [Procédure : créer des conditions de test pour le Concepteur de test unitaire de base de données (Visual Studio 2010)](https://msdn.microsoft.com/library/aa833409(VS.100).aspx).  
   
 > [!NOTE]  
 > Si vous supprimez une méthode de test en modifiant le fichier .cs ou .vb, la méthode de test continue d'apparaître dans le **Concepteur de test unitaire SQL Server**. Cette situation se produit parce que la méthode InitializeComponent de la classe de test contient toujours les variables des membres de ce test. Bien que le test s'affiche dans le concepteur, vous ne pouvez pas l'exécuter, car son code n'est plus présent. Pour régénérer la méthode de test pour ce test, modifiez les instructions Transact\-SQL dans l'éditeur, puis enregistrez le fichier de test .cs ou .vb ou reconstruisez le projet de test.  

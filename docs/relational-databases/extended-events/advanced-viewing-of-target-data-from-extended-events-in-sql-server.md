@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5246d6b78144e2235dba0c4557c91074f3563142
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d9ce1619d4ad2d61a784ace4ea16dc4064569e09
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47607233"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51658878"
 ---
 # <a name="advanced-viewing-of-target-data-from-extended-events-in-sql-server"></a>Affichage avancé des données cibles d’événements étendus dans SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ Cet article considère que vous savez déjà créer et démarrer une session d�
 
 Cet article considère aussi que vous avez installé une version mensuelle très récente de SSMS. Vous trouverez une aide à l’installation à la page suivante :
 
-- [Télécharger SQL Server Management Studio (SSMS)](http://msdn.microsoft.com/library/mt238290.aspx)
+- [Télécharger SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx)
 
 
 
@@ -65,7 +65,7 @@ Cet article a été rédigé du point de vue de SQL Server. Il utilise la cible 
 
 Pour plus d’informations sur les événements étendus propres à la Base de données SQL Azure, consultez :
 
-- [Événements étendus dans la Base de données SQL Azure](http://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)
+- [Événements étendus dans Azure SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)
 
 
 

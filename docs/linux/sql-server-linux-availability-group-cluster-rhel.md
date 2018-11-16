@@ -10,23 +10,23 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
-ms.openlocfilehash: c828c2345bf87461ba924cbdd23eb262336d1dcb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ec5ed0ce61c1b1f48ecc148326b9a1906ff95122
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47715457"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670818"
 ---
 # <a name="configure-rhel-cluster-for-sql-server-availability-group"></a>Configurer un Cluster RHEL pour le groupe de disponibilité de SQL Server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Ce document explique comment créer un cluster de groupe de disponibilité de trois nœuds pour SQL Server sur Red Hat Enterprise Linux. Pour la haute disponibilité, un groupe de disponibilité sur Linux nécessite trois nœuds, consultez [haute disponibilité et protection des données pour les configurations de groupe de disponibilité](sql-server-linux-availability-group-ha.md). La couche de clustering est basée sur Red Hat Enterprise Linux (RHEL) [module complémentaire HA](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf) , construit sur [Pacemaker](http://clusterlabs.org/). 
+Ce document explique comment créer un cluster de groupe de disponibilité de trois nœuds pour SQL Server sur Red Hat Enterprise Linux. Pour la haute disponibilité, un groupe de disponibilité sur Linux nécessite trois nœuds, consultez [haute disponibilité et protection des données pour les configurations de groupe de disponibilité](sql-server-linux-availability-group-ha.md). La couche de clustering est basée sur Red Hat Enterprise Linux (RHEL) [module complémentaire HA](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf) , construit sur [Pacemaker](https://clusterlabs.org/). 
 
 > [!NOTE] 
 > Accès à la documentation complète de Red Hat requiert un abonnement valide. 
 
-Pour plus d’informations sur la configuration du cluster, options d’agents de ressources et la gestion, visitez [documentation de référence RHEL](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html).
+Pour plus d’informations sur la configuration du cluster, options d’agents de ressources et la gestion, visitez [documentation de référence RHEL](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html).
 
 > [!NOTE] 
 > SQL Server n’est pas aussi étroitement intégré à Pacemaker sur Linux car il s’agit avec le clustering de basculement Windows Server. Une instance de SQL Server n’est pas conscient du cluster. Pacemaker fournit l’orchestration de ressource de cluster. En outre, le nom de réseau virtuel est spécifique au clustering de basculement Windows Server, il n’existe aucun équivalent dans Pacemaker. Disponibilité groupe vues de gestion dynamique (DMV) qui interrogent des informations de cluster retournent les lignes vides sur des clusters Pacemaker. Pour créer un écouteur pour une reconnexion après un basculement transparent, vous devez inscrire manuellement le nom de l’écouteur dans DNS avec l’adresse IP utilisée pour créer la ressource d’adresse IP virtuelle. 
@@ -58,7 +58,7 @@ Pour configurer la haute disponibilité pour RHEL, activer l’abonnement de hau
 
 ### <a name="enable-the-high-availability-subscription-for-rhel"></a>Activer l’abonnement de haute disponibilité pour RHEL
 
-Chaque nœud du cluster doit avoir un abonnement approprié pour RHEL et l’ajout de la haute disponibilité. Passez en revue les exigences à [comment installer des packages de cluster haute disponibilité dans Red Hat Enterprise Linux](http://access.redhat.com/solutions/45930). Suivez ces étapes pour configurer l’abonnement et les référentiels :
+Chaque nœud du cluster doit avoir un abonnement approprié pour RHEL et l’ajout de la haute disponibilité. Passez en revue les exigences à [comment installer des packages de cluster haute disponibilité dans Red Hat Enterprise Linux](https://access.redhat.com/solutions/45930). Suivez ces étapes pour configurer l’abonnement et les référentiels :
 
 1. Enregistrer le système.
 
@@ -88,7 +88,7 @@ Chaque nœud du cluster doit avoir un abonnement approprié pour RHEL et l’ajo
    sudo subscription-manager repos --enable=rhel-ha-for-rhel-7-server-rpms
    ```
 
-Pour plus d’informations, consultez [clusters Pacemaker – l’Open Source, de haute disponibilité](http://www.opensourcerers.org/pacemaker-the-open-source-high-availability-cluster/). 
+Pour plus d’informations, consultez [clusters Pacemaker – l’Open Source, de haute disponibilité](https://www.opensourcerers.org/pacemaker-the-open-source-high-availability-cluster/). 
 
 Une fois que vous avez configuré l’abonnement, procédez comme suit pour configurer Pacemaker :
 
@@ -110,9 +110,9 @@ Délimitation de niveau de nœud garantit qu’un nœud ne s’exécute pas tout
 
 Pour plus d’informations sur STONITH et délimitation, consultez les articles suivants :
 
-* [Clusters pacemaker à partir de zéro](http://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html)
-* [La délimitation et STONITH](http://clusterlabs.org/doc/crm_fencing.html)
-* [Module complémentaire de haute disponibilité de Red Hat avec Pacemaker : isolement](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/ch-fencing-HAAR.html)
+* [Clusters pacemaker à partir de zéro](https://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html)
+* [La délimitation et STONITH](https://clusterlabs.org/doc/crm_fencing.html)
+* [Module complémentaire de haute disponibilité de Red Hat avec Pacemaker : isolement](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/ch-fencing-HAAR.html)
 
 Étant donné que le niveau de nœud clôtures configuration dépend largement de votre environnement, désactivez-la pour ce didacticiel (il peut être configuré ultérieurement). Le script suivant désactive la délimitation de niveau de nœud :
 
@@ -149,7 +149,7 @@ pcs resource update ag1 meta failure-timeout=60s
 ```
 
 
-Pour plus d’informations sur les propriétés du cluster Pacemaker, consultez [propriétés des Clusters Pacemaker](http://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/ch-clusteropts-HAAR.html).
+Pour plus d’informations sur les propriétés du cluster Pacemaker, consultez [propriétés des Clusters Pacemaker](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/ch-clusteropts-HAAR.html).
 
 ## <a name="create-a-sql-server-login-for-pacemaker"></a>Créer une connexion SQL Server pour Pacemaker
 

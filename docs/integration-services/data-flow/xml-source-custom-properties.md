@@ -11,12 +11,12 @@ ms.assetid: eb29b28c-3159-41ec-b3d7-fce5b2f2be55
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bfad67095446d9a5143a4262f05520f76ff96dfe
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 60748312c4169eafa50bdf7685c9b5111b3bc66a
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47778437"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639156"
 ---
 # <a name="xml-source-custom-properties"></a>Propriétés personnalisées des sources XML
   La source XML comporte des propriétés personnalisées et les propriétés communes à l'ensemble des composants de flux de données.  
@@ -41,6 +41,6 @@ ms.locfileid: "47778437"
  Pour plus d'informations, consultez [XML Source](../../integration-services/data-flow/xml-source.md).  
   
 ## <a name="see-also"></a> Voir aussi  
- [Propriétés communes](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+ [Propriétés communes](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
   

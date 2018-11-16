@@ -20,12 +20,12 @@ ms.assetid: b148e907-e1f2-483b-bdb2-59ea596efceb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 88a79851dbb95a42ca35be1fb9e82db362564dc8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 82b71c24dc5aed407a50cfd4758ac13357eb29c2
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47617708"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673288"
 ---
 # <a name="add-articles-to-and-drop-articles-from-existing-publications"></a>Ajouter et supprimer des articles de publications existantes
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -83,7 +83,7 @@ ms.locfileid: "47617708"
  Comme indiqué ci-dessus, la suppression d'un article exige parfois la suppression, la recréation et la synchronisation des abonnements. Pour plus d’informations, consultez [S’abonner à des publications](../../../relational-databases/replication/subscribe-to-publications.md).et[Synchronisez les données](../../../relational-databases/replication/synchronize-data.md).  
  
  > [!NOTE]
- > **[!INCLUDE[ssSQL15](../../../includes/sssql14-md.md)] Service Pack 2** ou version ultérieure et **[!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] Service Pack 1** ou version ultérieure prennent en charge la suppression d’une table à l’aide de la commande DLL **DROP TABLE** pour les articles participant à une réplication transactionnelle. Si une DLL TABLE DROP est prise en charge par les publications, l’opération DROP TABLE supprime la table de la publication et de la base de données. L’Agent de lecture du journal publiera une commande de nettoyage pour la base de données de distribution de la table supprimée et effectuera le nettoyage des métadonnées du serveur de publication. Si l’Agent de lecture du journal n’a pas traité tous les enregistrements de journal qui font référence à la table supprimée, il ignore alors les nouvelles commandes qui sont associés à la table supprimée. Les enregistrements déjà traités seront remis à la base de données de distribution. Ils peuvent être appliqués sur la base de données de l’abonné si l’Agent de distribution les traite avant que l’agent de lecture du journal ne nettoie les articles obsolètes (supprimées) . **Par défaut**, les publications de réplication transactionnelle ne prennent pas en charge la DLL TABLE DROP. Pour plus d’informations sur cette amélioration, consultez l’article [3170123](https://support.microsoft.com/en-us/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactional-replication-in-sql-server-2014-or-in-sql-server-2016-sp1) de la Base de connaissances.
+ > **[!INCLUDE[ssSQL15](../../../includes/sssql14-md.md)] Service Pack 2** ou version ultérieure et **[!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] Service Pack 1** ou version ultérieure prennent en charge la suppression d’une table à l’aide de la commande DLL **DROP TABLE** pour les articles participant à une réplication transactionnelle. Si une DLL TABLE DROP est prise en charge par les publications, l’opération DROP TABLE supprime la table de la publication et de la base de données. L’Agent de lecture du journal publiera une commande de nettoyage pour la base de données de distribution de la table supprimée et effectuera le nettoyage des métadonnées du serveur de publication. Si l’Agent de lecture du journal n’a pas traité tous les enregistrements de journal qui font référence à la table supprimée, il ignore alors les nouvelles commandes qui sont associés à la table supprimée. Les enregistrements déjà traités seront remis à la base de données de distribution. Ils peuvent être appliqués sur la base de données de l’abonné si l’Agent de distribution les traite avant que l’agent de lecture du journal ne nettoie les articles obsolètes (supprimées) . **Par défaut**, les publications de réplication transactionnelle ne prennent pas en charge la DLL TABLE DROP. Pour plus d’informations sur cette amélioration, consultez l’article [3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactional-replication-in-sql-server-2014-or-in-sql-server-2016-sp1) de la Base de connaissances.
 
   
 ## <a name="see-also"></a> Voir aussi  

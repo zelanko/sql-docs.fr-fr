@@ -17,12 +17,12 @@ ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 930835c23ae211b6c909d62c693959bbbe6f2172
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 177d49376d7ed69c8a6ed14fa68326b1d54003fc
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662187"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51603569"
 ---
 # <a name="listeners-client-connectivity-application-failover"></a>Écouteurs, connectivité client et basculement d'application
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ ms.locfileid: "47662187"
  Un écouteur de groupe de disponibilité est défini par les élément suivants :  
   
  Un nom DNS unique.  
- Ce nom est aussi appelé un nom de réseau virtuel (VNN). Les règles d'attribution de noms Active Directory pour les noms d'hôte DNS s'appliquent. Pour plus d'informations, consultez l'article [Conventions d'affectation de noms dans Active Directory pour les ordinateurs, les domaines, les sites et les unités d'organisation](http://support.microsoft.com/kb/909264) de la Base de connaissances.  
+ Ce nom est aussi appelé un nom de réseau virtuel (VNN). Les règles d'attribution de noms Active Directory pour les noms d'hôte DNS s'appliquent. Pour plus d'informations, consultez l'article [Conventions d'affectation de noms dans Active Directory pour les ordinateurs, les domaines, les sites et les unités d'organisation](https://support.microsoft.com/kb/909264) de la Base de connaissances.  
   
  Une ou plusieurs adresses IP virtuelles (VIP)  
  Les adresses IP virtuelles sont configurées pour un ou plusieurs sous-réseaux vers lesquels le groupe de disponibilité peut basculer.  
@@ -237,7 +237,7 @@ setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp/svclogin2
   
 ##  <a name="RelatedContent"></a> Contenu associé  
   
--   [Guide de solutions Microsoft SQL Server Always On pour la haute disponibilité et la récupération d’urgence](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Guide de solutions Microsoft SQL Server Always On pour la haute disponibilité et la récupération d’urgence](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
 -   [Présentation de l’écouteur du groupe de disponibilité](https://blogs.msdn.microsoft.com/sqlalwayson/2012/01/16/introduction-to-the-availability-group-listener/) (blog de l’équipe SQL Server Always On)  
   

@@ -18,12 +18,12 @@ ms.assetid: 8cdd1515-0bd7-4f8c-a7fc-a33b575e20f6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e25793ba20a442b92feef901684290892604a245
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 983078a8dc713af70fb57fab655ff7eed9acad35
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47609269"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600999"
 ---
 # <a name="use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server"></a>Utiliser des seuils d'avertissement et d'alertes sur des métriques de performances de mise en miroir (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -107,7 +107,7 @@ ms.locfileid: "47609269"
   
  Lorsque vous définissez des alertes sur des événements de mise en miroir de bases de données, nous vous recommandons de définir des seuils d'avertissement et des alertes sur les deux instances de serveur partenaires. Les différents événements sont générés sur le serveur principal ou sur le serveur miroir, mais chaque partenaire peut assumer l'un ou l'autre rôle à tout moment. Pour vous assurer qu'une alerte continue de fonctionner après un basculement, vous devez la définir sur les deux partenaires.  
   
- Pour plus d'informations, consultez le livre blanc relatif aux alertes d'événements de mise en miroir de bases de donnes disponible sur ce [site Web SQL Server](http://go.microsoft.com/fwlink/?linkid=62373). Ce document contient des informations sur la façon de configurer des alertes à l'aide de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, sur les événements WMI de mise en miroir de bases de données, ainsi que des exemples de scripts.  
+ Pour plus d'informations, consultez le livre blanc relatif aux alertes d'événements de mise en miroir de bases de donnes disponible sur ce [site Web SQL Server](https://go.microsoft.com/fwlink/?linkid=62373). Ce document contient des informations sur la façon de configurer des alertes à l'aide de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, sur les événements WMI de mise en miroir de bases de données, ainsi que des exemples de scripts.  
   
 > [!IMPORTANT]  
 >  Pour toutes les sessions de mise en miroir, nous vous recommandons vivement de configurer la base de données de façon à envoyer une alerte sur tout événement de changement d'état. À moins qu'un changement d'état ne soit attendu suite à une modification de configuration manuelle, un événement risquant de compromettre vos données s'est produit. Pour aider à protéger vos données, identifiez et corrigez la cause d'un changement d'état inattendu.  

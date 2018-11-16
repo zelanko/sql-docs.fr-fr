@@ -11,12 +11,12 @@ ms.assetid: ea3aa222-538d-485f-99dc-01eb02cdcfea
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ab479625b40665749111a7d3e0851a029c706edb
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 3f03dfa50d19496b95a1c9ee4e3bf31e0c70cd79
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032656"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51702907"
 ---
 # <a name="options-environment---fonts-and-colors-page"></a>Options (Environnement - Page Polices et couleurs)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -84,5 +84,5 @@ Affiche un aperçu du modèle de style, de taille et de couleur des polices corr
   
 ## <a name="see-also"></a> Voir aussi  
 [Codage en couleurs dans les éditeurs de code](../../relational-databases/scripting/color-coding-in-query-editors.md)  
-[Options (Éditeur de texte/onglet Éditeur et page Barre d'état)](http://msdn.microsoft.com/e4815678-7885-4631-878f-c6a2b857ee05)  
+[Options (Éditeur de texte/onglet Éditeur et page Barre d'état)](https://msdn.microsoft.com/e4815678-7885-4631-878f-c6a2b857ee05)  
   

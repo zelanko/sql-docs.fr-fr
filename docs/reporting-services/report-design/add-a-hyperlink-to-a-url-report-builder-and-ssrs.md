@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: d3392c0b-7b62-4d27-bc04-2bd0c5487d08
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 67eab65f8ead5fe1cc4934671f8d11be2944044a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 30514478f54d71d88245ace385600cb2931101eb
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47737737"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814142"
 ---
 # <a name="add-a-hyperlink-to-a-url-report-builder-and-ssrs"></a>Ajouter un lien hypertexte à une URL (Générateur de rapports et SSRS)
 Découvrez comment ajouter des actions de lien hypertexte à des zones de texte, des images, des graphiques et des jauges aux rapports paginés [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]  . Les liens peuvent mener à d’autres rapports, aux signets d’un rapport ou à des URL dynamiques ou statiques. 
@@ -73,9 +73,9 @@ Vous pouvez définir un lien vers des signets menant à un emplacement du rappor
   
 4.  Dans **Sélectionner une URL**, entrez ou sélectionnez une URL ou une expression qui prend la valeur d’une URL, ou cliquez sur la flèche déroulante et cliquez sur le nom d’un champ qui contient une URL. 
 
-    Pour un élément publié sur un serveur de rapports configuré pour le mode natif, utilisez un chemin d'accès complet ou relatif. Par exemple, `http://<servername>/images/image1.jpg`. 
+    Pour un élément publié sur un serveur de rapports configuré pour le mode natif, utilisez un chemin d'accès complet ou relatif. Par exemple, `https://<servername>/images/image1.jpg`. 
     
-    Pour un élément publié sur un serveur de rapports configuré en mode intégré SharePoint, utilisez une URL complète. Par exemple, `http://<SharePointservername>/<site>/Documents/images/image1.jpg`.
+    Pour un élément publié sur un serveur de rapports configuré en mode intégré SharePoint, utilisez une URL complète. Par exemple, `https://<SharePointservername>/<site>/Documents/images/image1.jpg`.
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
 

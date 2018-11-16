@@ -10,12 +10,12 @@ ms.assetid: 685419f6-8606-462c-be12-8bace45bede6
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 5ec1a21a717c642a4ca3b9ba83f3aba9636c8e4c
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: ea6d9a77cc7639bc9adc8daa38f12d0e21dbfb71
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099380"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51664349"
 ---
 # <a name="creating-the-server-connection-files-db2tosql"></a>Création des fichiers de connexion de serveur (DB2ToSQL)
 Informations sur le serveur peuvent être spécifiées dans la section serveurs du fichier de script ou dans un fichier de connexion de serveur distinct. Le paramètre de ligne de commande pour le fichier de connexion de serveur est, `-c <serverconnectionfile>`. Si le même id de serveur est présent dans le fichier de script et le fichier de connexion de serveur, la définition du serveur dans le fichier de script est considéré comme.  
@@ -78,5 +78,5 @@ Informations sur le serveur peuvent être spécifiées dans la section serveurs 
 L’étape suivante de d’exploitation de la console est [l’exécution de la Console SSMA &#40;DB2ToSQL&#41;](../../ssma/db2/executing-the-ssma-console-db2tosql.md)  
   
 ## <a name="see-also"></a>Voir aussi  
-[Exécution de la console SSMA](http://msdn.microsoft.com/ce63f633-067d-4f04-b8e9-e1abd7ec740b)  
+[Exécution de la console SSMA](https://msdn.microsoft.com/ce63f633-067d-4f04-b8e9-e1abd7ec740b)  
   

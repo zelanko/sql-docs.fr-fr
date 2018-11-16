@@ -18,12 +18,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0a3591505fad4f0267948750008d9253ac19a481
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4c73ac14c951e1db5c7e7c96fc88f6d9cb1818fe
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821677"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51665528"
 ---
 # <a name="upgrade-full-text-search"></a>Mise à niveau de la fonction de recherche en texte intégral
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -114,7 +114,7 @@ Lorsqu'une base de données est mise à niveau vers [!INCLUDE[ssCurrent](../../i
 ## <a name="backup-and-imported-full-text-catalogs"></a>Sauvegarde et catalogues de texte intégral importés  
  Pour les catalogues de texte intégral qui sont reconstruits ou réinitialisés pendant la mise à niveau (et pour les nouveaux catalogues de texte intégral), le catalogue de texte intégral est un concept logique et ne réside pas dans un groupe de fichiers. Par conséquent, pour sauvegarder un catalogue de texte intégral dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], vous devez identifier tous les groupes de fichiers contenant un index de recherche en texte intégral du catalogue et les sauvegarder un par un. Pour plus d’informations, consultez [Sauvegarder et restaurer des catalogues et des index de recherche en texte intégral](../../relational-databases/search/back-up-and-restore-full-text-catalogs-and-indexes.md).  
   
- Pour les catalogues de texte intégral importés à partir de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], le catalogue de texte intégral est encore un fichier de base de données dans son propre groupe de fichiers. Le processus de sauvegarde [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] pour les catalogues de texte intégral s'applique encore mais le service MSFTESQL n'existe pas dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Pour plus d’informations sur le processus [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , consultez [Sauvegarde et restauration d’un catalogue de texte intégral](http://go.microsoft.com/fwlink/?LinkId=209154) dans la documentation en ligne de SQL Server 2005.  
+ Pour les catalogues de texte intégral importés à partir de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], le catalogue de texte intégral est encore un fichier de base de données dans son propre groupe de fichiers. Le processus de sauvegarde [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] pour les catalogues de texte intégral s'applique encore mais le service MSFTESQL n'existe pas dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Pour plus d’informations sur le processus [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , consultez [Sauvegarde et restauration d’un catalogue de texte intégral](https://go.microsoft.com/fwlink/?LinkId=209154) dans la documentation en ligne de SQL Server 2005.  
   
 ##  <a name="Upgrade_Db"></a> Migration d’index de recherche en texte intégral lors de la mise à niveau d’une base de données vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  Les fichiers de base de données et les catalogues de texte intégral d'une version précédente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peuvent être mis à niveau vers une instance de serveur [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] existante en utilisant un attachement, une restauration ou l'Assistant Copie de base de données. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Les index de recherche en texte intégral sont, le cas échéant, importés, réinitialisés ou reconstruits. La propriété de serveur **upgrade_option** détermine l’option de mise à niveau de texte intégral que l’instance de serveur utilise pendant ces mises à niveau de base de données.  
@@ -136,7 +136,7 @@ Lorsqu'une base de données est mise à niveau vers [!INCLUDE[ssCurrent](../../i
   
 -   Si le catalogue de texte intégral est hors connexion, la sauvegarde échouera.  
   
- Pour plus d’informations sur la sauvegarde et la restauration de catalogues de texte intégral [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , consultez [Sauvegarde et restauration de catalogues de texte intégral](http://go.microsoft.com/fwlink/?LinkId=121052) et [Restauration et sauvegarde de fichiers et catalogues de texte intégral](http://go.microsoft.com/fwlink/?LinkId=121053)dans la documentation en ligne de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .  
+ Pour plus d’informations sur la sauvegarde et la restauration de catalogues de texte intégral [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , consultez [Sauvegarde et restauration de catalogues de texte intégral](https://go.microsoft.com/fwlink/?LinkId=121052) et [Restauration et sauvegarde de fichiers et catalogues de texte intégral](https://go.microsoft.com/fwlink/?LinkId=121053)dans la documentation en ligne de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .  
   
  Lorsque la base de données est restaurée sur [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], un nouveau fichier de base de données est crée pour le catalogue de texte intégral. Le nom par défaut de ce fichier est ftrow_*nom-catalogue*.ndf. Par exemple, si *nom-catalogue* est `cat1`, le nom par défaut du fichier de base de données [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] serait `ftrow_cat1.ndf`. En revanche, si le nom par défaut est déjà utilisé dans le répertoire cible, le nouveau fichier de base de données serait nommé `ftrow_`*nom-catalogue*`{`*GUID*`}.ndf`, où *GUID* est l’identificateur global unique du nouveau fichier.  
   

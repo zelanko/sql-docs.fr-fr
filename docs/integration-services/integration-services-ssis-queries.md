@@ -18,12 +18,12 @@ ms.assetid: 8822bd29-4575-46c8-92a0-1a39bc2604c1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d275ad5ef272dc3bf6db8c5ce0079bcb1a8fea9b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f4e17af8134194e00fada93fd07904d95f478435
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47689517"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638736"
 ---
 # <a name="integration-services-ssis-queries"></a>Requêtes Integration Services (SSIS)
   La tâche Exécution SQL, la source OLE DB, la destination OLE DB et la transformation de recherche peuvent utiliser des requêtes SQL. Dans la tâche d'exécution SQL, les instructions SQL peuvent créer, mettre à jour et supprimer des données et des objets de base de données, exécuter des procédures stockées et des instructions SELECT. Dans la source OLE DB et la transformation de recherche, les instructions SQL sont généralement des instructions SELECT ou EXEC. Cette dernière exécute le plus souvent des procédures stockées qui retournent des jeux de résultats.  
@@ -58,13 +58,13 @@ Vous pouvez fournir l’instruction SQL de plusieurs manières :
   
  Vous pouvez également fournir une entrée directe en tapant la requête dans la boîte de dialogue de la tâche ou du composant de flux de données ou dans la fenêtre Propriétés.  
   
- Pour plus d’informations, consultez [Générateur de requêtes](http://msdn.microsoft.com/library/780752c9-6e3c-4f44-aaff-4f4d5e5a45c5).  
+ Pour plus d’informations, consultez [Générateur de requêtes](https://msdn.microsoft.com/library/780752c9-6e3c-4f44-aaff-4f4d5e5a45c5).  
   
 ## <a name="sql-in-files"></a>SQL dans des fichiers  
  L'instruction SQL pour la tâche d'exécution SQL peut également se trouver dans un fichier distinct. Par exemple, vous pouvez écrire des requêtes à l'aide d'outils tels que l'éditeur de requêtes dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], enregistrer la requête dans un fichier, puis lire la requête à partir du fichier lors de l'exécution d'un package. Le fichier ne peut contenir que les instructions SQL à exécuter et des commentaires. Pour utiliser une instruction SQL stockée dans un fichier, vous devez fournir une connexion de fichiers qui spécifie le nom et l'emplacement du fichier. Pour plus d’informations, consultez [File Connection Manager](../integration-services/connection-manager/file-connection-manager.md).  
   
 ## <a name="sql-in-variables"></a>SQL dans des variables  
- Si la source de l'instruction SQL dans la tâche d'exécution SQL est une variable, vous fournissez le nom de la variable qui contient la requête. La propriété Value de la variable contient le texte de la requête. Vous définissez la propriété ValueType de la variable en tant que type de données String, puis vous tapez ou copiez l’instruction SQL dans la propriété Value. Pour plus d’informations, consultez [Variables Integration Services &#40;SSIS&#41;](../integration-services/integration-services-ssis-variables.md) et [Utiliser des variables dans des packages](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
+ Si la source de l'instruction SQL dans la tâche d'exécution SQL est une variable, vous fournissez le nom de la variable qui contient la requête. La propriété Value de la variable contient le texte de la requête. Vous définissez la propriété ValueType de la variable en tant que type de données String, puis vous tapez ou copiez l’instruction SQL dans la propriété Value. Pour plus d’informations, consultez [Variables Integration Services &#40;SSIS&#41;](../integration-services/integration-services-ssis-variables.md) et [Utiliser des variables dans des packages](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
 
 ## <a name="query-builder-dialog-box"></a>Générateur de requêtes, boîte de dialogue
 Utilisez la boîte de dialogue **Générateur de requêtes** pour créer une requête à utiliser dans la tâche Exécution SQL, la source OLE DB et la destination OLE DB, ainsi que la transformation de recherche.  
@@ -83,7 +83,7 @@ Utilisez la boîte de dialogue **Générateur de requêtes** pour créer une req
   
  Pour en savoir plus sur le langage Transact-SQL et sa syntaxe, consultez [Référence Transact-SQL &#40;moteur de base de données&#41;](../t-sql/transact-sql-reference-database-engine.md).  
   
- Vous pouvez aussi utiliser des variables dans une requête pour fournir des valeurs à un paramètre d'entrée, pour capturer les valeurs des paramètres de sortie et pour stocker des codes de retour. Pour en savoir plus sur l’utilisation de variables dans les requêtes utilisées par les packages, consultez [Tâche d’exécution de requêtes SQL](../integration-services/control-flow/execute-sql-task.md), [Source OLE DB](../integration-services/data-flow/ole-db-source.md)et [Integration Services &#40;SSIS&#41; Queries](../integration-services/integration-services-ssis-queries.md). Pour en savoir plus sur l’utilisation de variables dans la tâche d’exécution de requêtes SQL, consultez [Paramètres et codes de retour dans la tâche d’exécution SQL](http://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663) et [Ensembles de résultats dans la tâche d’exécution SQL](http://msdn.microsoft.com/library/62605b63-d43b-49e8-a863-e154011e6109).  
+ Vous pouvez aussi utiliser des variables dans une requête pour fournir des valeurs à un paramètre d'entrée, pour capturer les valeurs des paramètres de sortie et pour stocker des codes de retour. Pour en savoir plus sur l’utilisation de variables dans les requêtes utilisées par les packages, consultez [Tâche d’exécution de requêtes SQL](../integration-services/control-flow/execute-sql-task.md), [Source OLE DB](../integration-services/data-flow/ole-db-source.md)et [Integration Services &#40;SSIS&#41; Queries](../integration-services/integration-services-ssis-queries.md). Pour en savoir plus sur l’utilisation de variables dans la tâche d’exécution de requêtes SQL, consultez [Paramètres et codes de retour dans la tâche d’exécution SQL](https://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663) et [Ensembles de résultats dans la tâche d’exécution SQL](https://msdn.microsoft.com/library/62605b63-d43b-49e8-a863-e154011e6109).  
   
  Les transformations de recherche et de recherche floue peuvent aussi utiliser des variables avec des paramètres et des codes de retour. Les informations relatives à la source OLE DB s'appliquent également à ces deux transformations.  
   

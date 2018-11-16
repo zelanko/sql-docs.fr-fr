@@ -16,12 +16,12 @@ ms.assetid: f4a44a35-0f44-4a42-91d5-d73ac658a3b0
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 226602debe898225405fb636eecec47c76cfedc8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9bf516256277abc02a8499f06707a518f2aadf75
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47685997"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51664939"
 ---
 # <a name="transaction-log-backups-sql-server"></a>Sauvegardes du journal des transactions (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,12 +55,12 @@ En règle générale, un administrateur de base de données crée une sauvegarde
 -   Par défaut, chaque opération de sauvegarde réussie ajoute une entrée au journal des erreurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et au journal des événements système. Si vous sauvegardez très fréquemment le journal, ces messages de réussite peuvent rapidement s'accumuler, créer des journaux d'erreurs très volumineux et compliquer la recherche d'autres messages. Dans de tels cas, vous pouvez supprimer ces entrées de journal en utilisant l'indicateur de trace 3226 si aucun de vos scripts ne dépend de ces entrées. Pour plus d’informations, consultez [Indicateurs de trace &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).  
 
 -   Effectuez des sauvegardes de journaux suffisamment fréquentes pour répondre à vos besoins, en particulier votre tolérance des pertes de données comme celles causées par un stockage de journal endommagé. 
-   -   La fréquence appropriée des sauvegardes de journaux dépend de votre gestion des risques liés aux pertes de données et du nombre de sauvegardes de journaux qu'il vous est possible de stocker, gérer et potentiellement restaurer. Pensez à [l’objectif de délai de récupération](http://wikipedia.org/wiki/Recovery_time_objective) et à [l’objectif de point de récupération](http://wikipedia.org/wiki/Recovery_point_objective) quand vous implémentez votre stratégie de récupération, en particulier la cadence des sauvegardes de fichier journal.
+   -   La fréquence appropriée des sauvegardes de journaux dépend de votre gestion des risques liés aux pertes de données et du nombre de sauvegardes de journaux qu'il vous est possible de stocker, gérer et potentiellement restaurer. Pensez à [l’objectif de délai de récupération](https://wikipedia.org/wiki/Recovery_time_objective) et à [l’objectif de point de récupération](https://wikipedia.org/wiki/Recovery_point_objective) quand vous implémentez votre stratégie de récupération, en particulier la cadence des sauvegardes de fichier journal.
    -   Réaliser une sauvegarde de journal tous les 15 à 30 minutes peut être suffisant. Si vos besoins nécessitent de minimiser les risques de perte de travail, vous devez envisager des sauvegardes de journaux plus fréquentes. Une meilleure fréquence pour les sauvegardes de fichiers journaux offre l'avantage d'augmenter la fréquence de la troncation des journaux qui produit des fichiers journaux plus petits.  
   
 > [!IMPORTANT]
 > Pour limiter le nombre des sauvegardes de fichiers journaux à restaurer, il est essentiel de sauvegarder vos données régulièrement. Vous pouvez, par exemple, planifier une sauvegarde complète hebdomadaire et des sauvegardes différentielles quotidiennes de la base de données.  
-> Là encore, pensez à [l’objectif de délai de récupération](http://wikipedia.org/wiki/Recovery_time_objective) et à [l’objectif de point de récupération](http://wikipedia.org/wiki/Recovery_point_objective) quand vous implémentez votre stratégie de récupération, en particulier la cadence des sauvegardes différentielles et complètes de base de données.
+> Là encore, pensez à [l’objectif de délai de récupération](https://wikipedia.org/wiki/Recovery_time_objective) et à [l’objectif de point de récupération](https://wikipedia.org/wiki/Recovery_point_objective) quand vous implémentez votre stratégie de récupération, en particulier la cadence des sauvegardes différentielles et complètes de base de données.
   
 ##  <a name="RelatedTasks"></a> Tâches associées  
  **Pour créer une sauvegarde du journal des transactions**  

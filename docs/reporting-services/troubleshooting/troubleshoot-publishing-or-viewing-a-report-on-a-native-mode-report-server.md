@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: df7720a1-d178-45bb-8d6f-63e208cae7fe
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d89b4156225de984854076f8218c29f033e4a0d3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ff2caeab1399ac45523b8b0adae753225271840e
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47653037"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51811772"
 ---
 # <a name="troubleshoot-publishing-or-viewing-a-report-on-a-native-mode-report-server"></a>Résolution des problèmes liés à la publication ou à l’affichage d’un rapport sur un serveur de rapports en mode natif
   
@@ -29,7 +29,7 @@ Le nom du serveur de rapports n'est pas spécifié correctement
   
 Lors du déploiement du rapport dans un serveur de rapports en mode natif, il arrive fréquemment de spécifier le nom du dossier de rapports au lieu du nom du serveur de rapports.   
   
-Vérifiez que l’URL du serveur de rapports correspond à l’adresse du serveur de rapports (par exemple, `http://localhost/reportserver`), et non à l’adresse du répertoire virtuel Gestionnaire de rapports (par exemple, `http://localhost/reports`). Si vous avez spécifié un numéro de port pour le serveur de rapports qui est différent du numéro de port par défaut (80), vous devez le spécifier dans l’adresse du serveur de rapports (par exemple, `http://localhost:81/reportserver`).   
+Vérifiez que l’URL du serveur de rapports correspond à l’adresse du serveur de rapports (par exemple, `https://localhost/reportserver`), et non à l’adresse du répertoire virtuel Gestionnaire de rapports (par exemple, `https://localhost/reports`). Si vous avez spécifié un numéro de port pour le serveur de rapports qui est différent du numéro de port par défaut (80), vous devez le spécifier dans l’adresse du serveur de rapports (par exemple, `https://localhost:81/reportserver`).   
   
  ## <a name="nothing-happens-when-i-toggle-items-in-my-published-report"></a>Rien ne se produit lorsque je bascule des éléments dans mon rapport publié.  
   Lorsque vous affichez un rapport dans l'aperçu local, vous pouvez basculer des éléments dans le rapport et les afficher ou les masquer. Lorsque vous affichez le même rapport une fois que celui-ci a été publié sur le serveur de rapports, basculez les éléments qui ne fonctionnent plus.   

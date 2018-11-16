@@ -22,12 +22,12 @@ ms.assetid: ae1d8fad-6649-4e93-b589-14a32d07da33
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 260512d99817084b6a7cc4af1e39e6557f6fea37
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 61956bf22dc15c95d986317d3a3cf18e9ca4d58b
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47720207"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639886"
 ---
 # <a name="message-queue-task"></a>Message Queue Task
   La tâche MSMQ vous permet d’utiliser Message Queuing (MSMQ) pour envoyer et recevoir des messages entre des packages [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ou pour envoyer des messages à une file d’attente d’application traitée par une application personnalisée. Ces messages peuvent être composés de texte brut, de fichiers ou de variables et leurs valeurs.  
@@ -42,7 +42,7 @@ ms.locfileid: "47720207"
   
  Lors de l'envoi ou de la réception de messages, la tâche MSMQ utilise l'un des quatre types de messages suivants : fichier de données, chaîne, message de type chaîne pour la variable ou variable. Le type de message « message de type chaîne pour la variable » peut être utilisé uniquement lors de la réception de messages.  
   
- La tâche utilise un gestionnaire de connexions MSMQ pour se connecter à une file d'attente de messages. Pour plus d’informations, consultez [Gestionnaire de connexions MSMQ](../../integration-services/connection-manager/msmq-connection-manager.md). Pour plus d’informations sur Message Queuing (MSMQ), consultez [MSDN Library](http://go.microsoft.com/fwlink/?LinkId=7022).  
+ La tâche utilise un gestionnaire de connexions MSMQ pour se connecter à une file d'attente de messages. Pour plus d’informations, consultez [Gestionnaire de connexions MSMQ](../../integration-services/connection-manager/msmq-connection-manager.md). Pour plus d’informations sur Message Queuing (MSMQ), consultez [MSDN Library](https://go.microsoft.com/fwlink/?LinkId=7022).  
   
  La tâche MSMQ exige que le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] soit installé. Parmi les composants [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que vous pouvez sélectionner dans la page **Composants à installer** ou **Sélection de fonctionnalités** de l’Assistant Installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , certains n’installent qu’un sous-ensemble partiel des composants [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Ces composants sont utiles pour des tâches spécifiques, mais les fonctionnalités de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] s'en trouvent limitées. Par exemple, l'option [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] installe les composants [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] nécessaires pour concevoir un package mais le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] n'est pas installé, par conséquent la tâche MSMQ ne fonctionne pas. Pour garantir une installation complète de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], vous devez sélectionner [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] dans la page **Composants à installer** . Pour plus d’informations sur l’installation et l’exécution de la tâche MSMQ, consultez [Installer Integration Services](../../integration-services/install-windows/install-integration-services.md).  
   
@@ -98,7 +98,7 @@ ms.locfileid: "47720207"
  Pour plus d’informations sur la définition par programmation de ces propriétés, consultez la documentation relative à la classe **Microsoft.SqlServer.Dts.Tasks.MessageQueueTask.MessageQueueTask** dans le Guide du développeur.  
   
 ## <a name="related-tasks"></a>Tâches associées  
- Pour plus d’informations sur la façon de définir ces propriétés dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , consultez [Définir les propriétés d’une tâche ou d’un conteneur](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b).  
+ Pour plus d’informations sur la façon de définir ces propriétés dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , consultez [Définir les propriétés d’une tâche ou d’un conteneur](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b).  
   
 ## <a name="message-queue-task-editor-general-page"></a>Éditeur de tâche MSMQ (page Général)
   Utilisez la page **Général** de la boîte de dialogue **Éditeur de tâche MSMQ** pour nommer et décrire la tâche MSMQ, pour spécifier le format du message et indiquer si la tâche envoie ou reçoit des messages.  
@@ -229,7 +229,7 @@ ms.locfileid: "47720207"
  **Variable**  
  Tapez le nom de la variable ou cliquez sur \<**Nouvelle variable…**>, puis configurez une nouvelle variable.  
   
- **Rubriques connexes :** [Ajouter une variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **Rubriques connexes :** [Ajouter une variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 #### <a name="filter-dynamic-options"></a>Options dynamiques de filtrage  
   
@@ -274,7 +274,7 @@ ms.locfileid: "47720207"
  **Variable**  
  Tapez le nom de la variable qui doit contenir le message reçu ou cliquez sur \<**Nouvelle variable…**>, puis configurez une nouvelle variable.  
   
- **Rubriques connexes :** [Ajouter une variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **Rubriques connexes :** [Ajouter une variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 ## <a name="select-variables"></a>Sélectionner des variables
   Utilisez la boîte de dialogue **Sélectionner des variables** pour spécifier les variables à utiliser dans une opération d'envoi de message de la tâche MSMQ. La liste **Variables disponibles** contient les variables système et définies par l’utilisateur exploitables par la tâche MSMQ ou son conteneur parent. La tâche utilise des variables de la liste **Variables sélectionnées** .  
@@ -295,7 +295,7 @@ ms.locfileid: "47720207"
  **Nouvelle variable**  
  Créez une nouvelle variable.  
   
- **Rubriques connexes :** [Ajouter une variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **Rubriques connexes :** [Ajouter une variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
 ## <a name="see-also"></a> Voir aussi  
  [Tâches Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   
  [Flux de contrôle](../../integration-services/control-flow/control-flow.md)  

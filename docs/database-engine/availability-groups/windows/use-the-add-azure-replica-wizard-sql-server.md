@@ -12,12 +12,12 @@ ms.assetid: b89cc41b-07b4-49f3-82cc-bc42b2e793ae
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 70f06d186ba77c1b65c6ef683a069e718b42c1c8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7a2f46a7451fa246065ae11b3771e22b7c609f4f
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47656387"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602959"
 ---
 # <a name="use-the-add-azure-replica-wizard-sql-server"></a>Utiliser l'Assistant Ajout d’un réplica Azure (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "47656387"
   
 -   Vous devez être connecté à l'instance de serveur qui héberge le réplica principal actuel.  
   
--   Vous devez travailler dans un environnement informatique hybride dans lequel votre sous-réseau local dispose d'un réseau privé virtuel (VPN) de site à site avec Windows Azure. Pour plus d’informations, consultez [Configurer un réseau privé virtuel (VPN) de site à site dans le portail de gestion](https://azure.microsoft.com/en-us/documentation/articles/vpn-gateway-site-to-site-create).  
+-   Vous devez travailler dans un environnement informatique hybride dans lequel votre sous-réseau local dispose d'un réseau privé virtuel (VPN) de site à site avec Windows Azure. Pour plus d’informations, consultez [Configurer un réseau privé virtuel (VPN) de site à site dans le portail de gestion](https://azure.microsoft.com/documentation/articles/vpn-gateway-site-to-site-create).  
   
 -   Votre groupe de disponibilité doit contenir des réplicas de disponibilité locaux.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "47656387"
   
 1.  Commencez par télécharger un certificat de gestion pour votre abonnement Windows Azure. Cliquez sur **Télécharger** pour ouvrir la page de connexion.  
   
-2.  Connectez-vous à Microsoft Azure avec votre compte Microsoft ou votre compte professionnel ou scolaire. Votre compte Microsoft ou votre compte d’organisation  a le format d’une adresse e-mail, comme HYPERLINK "mailto:patc@contoso.com" patc@contoso.com. Pour en savoir plus sur les informations d’identification Azure, consultez les rubriques suivantes : [Microsoft Account for Organizations FAQ (FAQ sur les comptes Microsoft pour les organisations)](http://technet.microsoft.com/jj592903) et [Résolution des problèmes de connexion avec votre compte d’organisation](https://support.microsoft.com/kb/2756852).  
+2.  Connectez-vous à Microsoft Azure avec votre compte Microsoft ou votre compte professionnel ou scolaire. Votre compte Microsoft ou votre compte d’organisation  a le format d’une adresse e-mail, comme HYPERLINK "mailto:patc@contoso.com" patc@contoso.com. Pour en savoir plus sur les informations d’identification Azure, consultez les rubriques suivantes : [Microsoft Account for Organizations FAQ (FAQ sur les comptes Microsoft pour les organisations)](https://technet.microsoft.com/jj592903) et [Résolution des problèmes de connexion avec votre compte d’organisation](https://support.microsoft.com/kb/2756852).  
   
 3.  Connectez-vous ensuite à votre abonnement en cliquant sur **Connexion**. Une fois que vous êtes connecté, les listes déroulantes sont remplies avec vos paramètres Microsoft Azure, tels que **Réseau virtuel** et **Sous-réseau de réseau virtuel**.  
   

@@ -15,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 43458e87144b5903a0d6436d5596bb5c3585d928
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: c58fcf00f0feb3f6dc78f1df095a5934edfde6f3
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49383320"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600889"
 ---
 # <a name="install-sql-server"></a>Installer SQL Server
 
@@ -38,7 +38,7 @@ ms.locfileid: "49383320"
 
 * **Exemples de bases de données et exemples de code**: 
     * Par défaut, ils ne sont pas installés dans le cadre de l’installation de SQL Server 
-    * Pour les installer avec les éditions non-Express de SQL Server, consultez [GitHub](http://github.com/Microsoft/sql-server-samples)
+    * Pour les installer avec les éditions non-Express de SQL Server, consultez [GitHub](https://github.com/Microsoft/sql-server-samples)
     
 
 ## <a name="get-the-installation-media"></a>Obtenir le média d’installation
@@ -70,7 +70,7 @@ ms.locfileid: "49383320"
 |[Installer le moteur de base de données SQL Server](../../database-engine/install-windows/install-sql-server-database-engine.md)|Explique comment installer et configurer le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].|  
 |[Installer la réplication SQL Server](../../database-engine/install-windows/install-sql-server-replication.md)|Explique comment installer et configurer la réplication [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |[Install Distributed Replay - Présentation](../../tools/distributed-replay/install-distributed-replay-overview.md)|Répertorie les articles pour installer la fonctionnalité Distributed Replay.|  
-|[Installer les Outils d’administration SQL Server avec SSMS](http://msdn.microsoft.com/library/af68d59a-a04d-4f23-9967-ad4ee2e63381)|Décrit comment installer et configurer les outils d'administration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
+|[Installer les Outils d’administration SQL Server avec SSMS](https://msdn.microsoft.com/library/af68d59a-a04d-4f23-9967-ad4ee2e63381)|Décrit comment installer et configurer les outils d'administration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |[Installer SQL Server PowerShell](../../database-engine/install-windows/install-sql-server-powershell.md)|Décrit les considérations relatives à l'installation des composants PowerShell [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
   
 

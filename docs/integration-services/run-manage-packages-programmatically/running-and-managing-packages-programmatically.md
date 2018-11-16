@@ -11,12 +11,12 @@ ms.assetid: 1a08c75e-ce8c-45ee-81bd-32248bbdb2b2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1e6dee6bea3a3d4c0c6cd5c2f7bb3f6ac51abe88
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 88e5780ffb31d3f917245e423e8d88ad4033e3e9
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47656697"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638306"
 ---
 # <a name="running-and-managing-packages-programmatically"></a>Exécution et gestion de packages par programme
   Si vous devez gérer et exécuter des packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] hors de l'environnement de développement, vous pouvez manipuler les packages par programme. Cette méthode vous offre un choix d'options :  
@@ -29,14 +29,14 @@ ms.locfileid: "47656697"
   
  Vous pouvez charger et exécuter un package existant à partir d'une application cliente en écrivant quelques lignes de code seulement.  
   
- Cette section décrit et explique comment exécuter un package existant par programme et comment accéder à la sortie du flux d'autres applications. Une option de programmation avancée vous permet de créer par programmation un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ligne par ligne, comme indiqué dans la rubrique [Génération de packages par programmation](../../integration-services/building-packages-programmatically/building-packages-programmatically.md).  
+ Cette section décrit et explique comment exécuter un package existant par programme et comment accéder à la sortie du flux d'autres applications. Une option de programmation avancée vous permet de créer par programme un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ligne par ligne, tel que décrit dans [Building Packages Programmatically](../../integration-services/building-packages-programmatically/building-packages-programmatically.md).  
   
  Cette section présente également d'autres tâches d'administration que vous pouvez effectuer par programme pour gérer des packages stockés, des packages en cours d'exécution et des rôles de package.  
   
 ## <a name="running-packages-on-the-integration-services-server"></a>Exécution de packages sur le serveur Integration Services  
  Lorsque vous déployez des packages sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], vous pouvez exécuter les packages par programme à l'aide de l'espace de noms <xref:Microsoft.SqlServer.Management.IntegrationServices>. L'assembly Microsoft.SqlServer.Management.IntegrationServices est compilé avec le .NET Framework 3.5. Si vous générez une application .NET Framework 4.0, vous devrez peut-être ajouter la référence d'assembly directement dans votre fichier projet.  
   
- Vous pouvez également utiliser l'espace de noms pour déployer et gérer des projets [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Pour obtenir une vue d'ensemble de l'espace de noms et des extraits de code, consultez l'entrée de blog, [A Glimpse of the SSIS Catalog Managed Object Model](http://go.microsoft.com/fwlink/?LinkId=253122), sur blogs.msdn.com.  
+ Vous pouvez également utiliser l'espace de noms pour déployer et gérer des projets [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Pour obtenir une vue d'ensemble de l'espace de noms et des extraits de code, consultez l'entrée de blog, [A Glimpse of the SSIS Catalog Managed Object Model](https://go.microsoft.com/fwlink/?LinkId=253122), sur blogs.msdn.com.  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Présentation des différences entre l’exécution locale et l’exécution distante](../../integration-services/run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)  
@@ -52,7 +52,7 @@ ms.locfileid: "47656697"
  Décrit comment exécuter un package sur l'ordinateur local et charger la sortie du flux de données dans une application cliente à l'aide de la destination DataReader et de l'espace de noms DtsClient.  
   
  [Énumération des packages disponibles par programmation](../../integration-services/run-manage-packages-programmatically/enumerating-available-packages-programmatically.md)  
- Décrit comment découvrir les packages disponibles gérés par le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
+ Décrit comment découvrir les packages disponibles gérés par le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
  [Gestion des packages et des dossiers par programmation](../../integration-services/run-manage-packages-programmatically/managing-packages-and-folders-programmatically.md)  
  Décrit comment créer, renommer et supprimer des packages et des dossiers.  

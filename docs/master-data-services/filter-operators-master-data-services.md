@@ -12,12 +12,12 @@ ms.assetid: 27914c8b-8951-4b7d-914d-1cbf528dd248
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: e9407e6c678945f6d4f483c4babbe4d4ce37cb0a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 24b21d901e30af96362198001033d56c51d6c9e4
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798043"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700373"
 ---
 # <a name="filter-operators-master-data-services"></a>Opérateurs de filtre (Master Data Services)
 
@@ -42,8 +42,8 @@ ms.locfileid: "47798043"
 |**Est inférieur ou égal à**|Retourne des valeurs d'attribut qui sont inférieures ou égales aux critères spécifiés. Par exemple, pour retourner des valeurs d’attribut qui démarrent par le chiffre **3** ou un chiffre inférieur, tapez **3**.|  
 |**Correspondances**|Utilise un index de recherche floue pour filtrer les résultats.<br /><br /> Utilisez le champ **Niveau de similarité** pour spécifier dans quelle mesure les valeurs d’attribut doivent correspondre aux critères de filtre spécifiés (avec une valeur par défaut de 30 %).<br /><br /> Sélectionnez une des valeurs suivantes dans la liste déroulante **Algorithme** :<br /><br /> **Levenshtein**: distance basée sur le nombre de modifications (par exemple, ajouts ou suppressions) nécessaires pour qu’une chaîne corresponde à une autre. Il s'agit du paramètre par défaut. Ne requiert aucun paramètre supplémentaire.<br /><br /> **Jaccard**: index qui fonctionne de manière optimale lorsque vous essayez de mettre plusieurs chaînes en correspondance. Cette recherche prend en charge un paramètre supplémentaire de relation contenant-contenu (voir ci-dessous).<br /><br /> **Jaro-Winkler**: distance qui convient le mieux pour rechercher des noms de personnes en double. Cette méthode retourne plus de résultats que toute autre méthode. Ne prend pas en charge la relation contenant-contenu.<br /><br /> **Sous-séquence commune la plus longue**: repose sur une sous-séquence dans laquelle les lettres d’un modèle s’affichent dans l’ordre, même si elles peuvent être séparées (par exemple, « MSR » est une sous-séquence de « master ». Cette recherche prend en charge un paramètre supplémentaire de relation contenant-contenu (voir ci-dessous).<br /><br /> <br /><br /> Remarque : pour les algorithmes **Jaccard** ou **Sous-séquence commune la plus longue** , ajoutez une **Valeur de relation contenant-contenu**. Il s'agit d'un seuil de longueur fourni sous forme de pourcentage décimal compris entre 0 et 1, avec une valeur par défaut de 0,62. Un seuil inférieur augmente le nombre de correspondances possibles retournées.|  
 |**Ne correspond pas**|Utilise un index de recherche floue pour filtrer les résultats. Utilisez le champ **Niveau de similarité** pour spécifier le niveau de précision de non correspondance des valeurs d’attribut par rapport aux critères de filtre spécifiés.|  
-|**Contient le modèle**|Utilise des expressions régulières .NET Framework pour filtrer les résultats selon un modèle spécifié. Pour plus d'informations sur les expressions régulières, consultez [Éléments du langage des expressions régulières](http://go.microsoft.com/fwlink/?LinkId=164401) dans MSDN Library.|  
-|**Ne contient pas le modèle**|Utilise les expressions régulières .NET Framework pour filtrer des résultats qui ne correspondent pas à un modèle spécifié. Pour plus d'informations sur les expressions régulières, consultez [Éléments du langage des expressions régulières](http://go.microsoft.com/fwlink/?LinkId=164401) dans MSDN Library.|  
+|**Contient le modèle**|Utilise des expressions régulières .NET Framework pour filtrer les résultats selon un modèle spécifié. Pour plus d'informations sur les expressions régulières, consultez [Éléments du langage des expressions régulières](https://go.microsoft.com/fwlink/?LinkId=164401) dans MSDN Library.|  
+|**Ne contient pas le modèle**|Utilise les expressions régulières .NET Framework pour filtrer des résultats qui ne correspondent pas à un modèle spécifié. Pour plus d'informations sur les expressions régulières, consultez [Éléments du langage des expressions régulières](https://go.microsoft.com/fwlink/?LinkId=164401) dans MSDN Library.|  
 |**Est NULL**|Retourne des valeurs d'attribut qui sont Null. Le champ **Critères** est désactivé lorsque vous sélectionnez l’opérateur **Est NULL** .|  
 |**N'est pas NULL**|Retourne des valeurs d'attribut qui ne sont pas null. Le champ **Critères** est désactivé lorsque vous sélectionnez l’opérateur **N’est pas NULL** .|  
   

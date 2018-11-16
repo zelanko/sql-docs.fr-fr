@@ -14,12 +14,12 @@ ms.assetid: 8ebfa061-be6f-4a07-923f-8dc832a82f70
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: bbfede87cf23da5e8867d33f4b8bad35b6af9c50
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1ae91f90bf601e4ef17ae2f363260dbb47a2822e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47679667"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677248"
 ---
 # <a name="getting-started-with-ssma-for-mysql-mysqltosql"></a>Bien démarrer avec SSMA pour MySQL (MySQLToSQL)
 SQL Server Migration Assistant (SSMA) pour MySQL vous permet de rapidement convertir des schémas de base de données MySQL en schémas SQL Server ou de la base de données SQL Azure, télécharger les schémas qui en résulte dans SQL Server ou Azure SQL DB et migrer des données de MySQL vers SQL Server ou de la base de données SQL Azure.  
@@ -73,7 +73,7 @@ SQL Server ou l’Explorateur de métadonnées de base de données SQL Azure aff
   
 Vous pouvez utiliser l’Explorateur de métadonnées pour sélectionner des objets de base de données MySQL convertis et ensuite synchroniser ces objets avec l’instance de SQL Server ou de la base de données SQL Azure.  
   
-Pour plus d’informations, consultez [synchronisation (MySQL vers SQL Server / Azure SQL DB)](http://msdn.microsoft.com/ac993a6d-0283-4823-8793-6b217677dfa3)  
+Pour plus d’informations, consultez [synchronisation (MySQL vers SQL Server / Azure SQL DB)](https://msdn.microsoft.com/ac993a6d-0283-4823-8793-6b217677dfa3)  
   
 ### <a name="metadata"></a>Métadonnées  
 À droite de chaque Explorateur de métadonnées des onglets qui décrivent l’objet sélectionné. Par exemple, si vous sélectionnez une table dans l’Explorateur de métadonnées MySQL, neuf onglets apparaissent : **Table**, **SQL**, **le mappage de Type**, **données**,  **Paramètres**, **mappage de jeu de caractères**, **Modes SQL**, **propriétés**, et **rapport**. Le **rapport** onglet contient des informations uniquement après avoir créé un rapport qui contient l’objet sélectionné. Si vous sélectionnez une table dans l’Explorateur de métadonnées SQL Server, trois onglets apparaissent : **Table**, **SQL** et **données**.  

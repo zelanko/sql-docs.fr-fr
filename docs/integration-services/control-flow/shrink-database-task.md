@@ -17,12 +17,12 @@ ms.assetid: e66286f8-97b1-4e5a-86b4-e56f1932b7d5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 26e5ab994e84a46a2a61b3fb57f98df4f9ea2959
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cfea8989d573ef107d6c8b493e213c6ea5050b0f
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47653024"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640078"
 ---
 # <a name="shrink-database-task"></a>tâche Réduire la base de données
   La tâche Réduire la base de données réduit la taille des fichiers journaux et de données de bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -54,6 +54,6 @@ ms.locfileid: "47653024"
   
  Pour plus d’informations sur la définition de ces propriétés dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , cliquez sur la rubrique suivante :  
   
--   [Définir les propriétés d'une tâche ou d'un conteneur](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Définir les propriétés d'une tâche ou d'un conteneur](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
   

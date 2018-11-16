@@ -15,12 +15,12 @@ ms.assetid: 3e090faf-085f-4c01-a565-79e3f1c36e3b
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d8ab9486b431a623237f16cf9cc2c0017d7b1783
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 14a042da7bc757f0f00c0325efa6dd8087aee6b1
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818467"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673498"
 ---
 # <a name="sqlpipe-object"></a>Objet SqlPipe
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "47818467"
   
  La méthode **Send** envoie des données directement au client ou à l'appelant. C'est généralement le client qui utilise la sortie de la méthode **SqlPipe**, mais dans le cas de procédures stockées CLR imbriquées, le consommateur de sortie peut également être une procédure stockée. Par exemple, Procedure1 appelle SqlCommand.ExecuteReader() avec le texte de commande "EXEC Procedure2". Procedure2 est également une procédure stockée managée. Si Procedure2 appelle maintenant SqlPipe.Send( SqlDataRecord), la ligne est envoyée au lecteur de Procedure1, pas au client.  
   
- Le **envoyer** méthode envoie un message de chaîne qui apparaît sur le client sous la forme d’un message d’information, équivalent à PRINT dans [!INCLUDE[tsql](../../includes/tsql-md.md)]. Elle peut également envoyer un jeu de résultats à ligne unique à l'aide de **SqlDataRecord**ou un jeu de résultats à plusieurs ligne à l'aide d'un **SqlDataReader**.  
+ La classe **Send** envoie un message de chaîne qui apparaît sur le client sous forme de message d'information, équivalent à PRINT dans [!INCLUDE[tsql](../../includes/tsql-md.md)]. Elle peut également envoyer un jeu de résultats à ligne unique à l'aide de **SqlDataRecord**ou un jeu de résultats à plusieurs ligne à l'aide d'un **SqlDataReader**.  
   
  L'objet **SqlPipe** possède également une méthode **ExecuteAndSend** . Cette méthode peut être utilisée pour exécuter une commande (passée en tant qu'objet **SqlCommand** ) et renvoyer les résultats directement à l'appelant. Si la commande qui a été envoyée contient des erreurs, des exceptions sont envoyées au canal, mais une copie est également envoyée au code managé appelant. Si le code appelant n'intercepte pas l'exception, elle se propage vers le haut de la pile jusqu'au code [!INCLUDE[tsql](../../includes/tsql-md.md)] et apparaît deux fois dans la sortie. Si le code appelant intercepte l'exception, le consommateur du canal continue à voir l'erreur, mais il n'y a pas d'erreur de duplication.  
   
@@ -142,7 +142,7 @@ EXEC uspGetProductLineVB 'T';
   
 ## <a name="see-also"></a>Voir aussi  
  [Objet SqlDataRecord](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqldatarecord-object.md)   
- [Procédures stockées CLR](http://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)   
+ [Procédures stockées CLR](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)   
  [Extensions spécifiques in-process de SQL Server à ADO.NET](../../relational-databases/clr-integration-data-access-in-process-ado-net/sql-server-in-process-specific-extensions-to-ado-net.md)  
   
   

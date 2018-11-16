@@ -11,12 +11,12 @@ ms.assetid: 294975b7-e7d1-491b-b66a-fdb1100d2acc
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: c3509c90a4fb5e72eab74742afae302bcbfaeaa2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8dbf17ab9e9340b793b4310427169be3bcdfe120
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821337"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51671318"
 ---
 # <a name="restore-and-recovery-of-memory-optimized-tables"></a>Restauration et récupération de tables à mémoire optimisée
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -68,6 +68,6 @@ Les tables à mémoire optimisée peuvent généralement être chargées dans la
 -   Les grandes tables à mémoire optimisée avec un ou plusieurs index non-cluster peuvent entraîner une utilisation élevée du processeur. Contrairement à un index de hachage dont le nombre de compartiments est défini lors de la création, les index non-cluster grossissent de manière dynamique.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Sauvegarder, restaurer et récupérer des tables optimisées en mémoire](http://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)  
+ [Sauvegarder, restaurer et récupérer des tables optimisées en mémoire](https://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)  
   
   

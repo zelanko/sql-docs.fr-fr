@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: edf4843a-2a0a-486f-be25-14a3c1c6bc72
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: eb30ef71e0467d6f35fdd21cc8a1b1c42eed76fa
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: de8212e368af4af5eea3f0dba358b93d211af539
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031358"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812682"
 ---
 # <a name="finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs"></a>Recherche et affichage de rapports à l'aide d'un navigateur (Générateur de rapports et SSRS)
   Vous pouvez utiliser n'importe quel navigateur Web pris en charge pour afficher un rapport par le biais d'une connexion directe avec le serveur de rapports. Sur un serveur de rapports, tous les rapports ont une adresse URL. Vous pouvez entrer l'adresse Web d'un rapport pour l'ouvrir dans une fenêtre de navigateur indépendamment d'une application Web. Le rapport s'ouvre au format HTML et comprend la barre d'outils Rapport afin que vous puissiez naviguer entre les pages ou effectuer des recherches sur les valeurs de données dans le rapport. Dans l'URL, vous pouvez définir des paramètres pour masquer la barre d'outils ou sélectionner le format de sortie du rapport.  
@@ -49,9 +49,9 @@ Dossiers dans un navigateur
 ## <a name="typing-the-url-address-of-a-report"></a>Saisie de l'adresse URL d'un rapport  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] prend en charge l'accès URL à des éléments spécifiques sur un serveur de rapports. L'URL doit inclure un chemin d'accès complet au rapport et les commandes pour rendre le rapport. Si le rapport inclut des paramètres, vous devez également spécifier les valeurs requises pour ouvrir le rapport. Si vous tapez une URL pour un rapport qui comprend des espaces dans le chemin d'accès, des valeurs de paramètres ou une extension de rendu, vous devez intégrer des caractères encodés dans l'URL pour obtenir les résultats attendus. L'exemple suivant représente une URL de rapport qui contient, dans son chemin d'accès, l'encodage des espaces, des paramètres et une extension de rendu :  
   
- `http://<Webservername>/reportserver?/<reportfolder>/employee+sales+summary&ReportYear=2004&ReportMonth=06&EmpID=24&rs:Command=Render&rs:Format=HTML4.0`  
+ `https://<Webservername>/reportserver?/<reportfolder>/employee+sales+summary&ReportYear=2004&ReportMonth=06&EmpID=24&rs:Command=Render&rs:Format=HTML4.0`  
   
- La limite maximale pour une URL dans Internet Explorer est 2 083 caractères. Pour plus d'informations, consultez [Longueur maximale d'une URL dans Internet Explorer](http://support.microsoft.com/kb/208427).  
+ La limite maximale pour une URL dans Internet Explorer est 2 083 caractères. Pour plus d'informations, consultez [Longueur maximale d'une URL dans Internet Explorer](https://support.microsoft.com/kb/208427).  
   
  Pour plus d'informations sur l'accès à un rapport via une URL, notamment des informations sur la construction d'une URL, consultez « Accès URL » dans la [documentation de Reporting Services](https://go.microsoft.com/fwlink/?linkid=121312) dans la documentation en ligne de SQL Server.  
   

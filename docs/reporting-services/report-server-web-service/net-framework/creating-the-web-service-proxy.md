@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b1217843-8d3d-49f3-a0d2-d35b0db5b2df
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 766ae518aad577c4f8a700dbbdd433e1794e9c75
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 05901af8c6f11379b186495d1ae744c5f7598d91
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47842247"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814272"
 ---
 # <a name="creating-the-web-service-proxy"></a>Création du proxy de service Web
   Un client et un service Web peuvent communiquer à l'aide de messages SOAP qui encapsulent les paramètres d'entrée et de sortie au format XML. Une classe proxy mappe des paramètres aux éléments XML puis envoie les messages SOAP sur un réseau. De cette manière, la classe proxy vous évite de devoir communiquer avec le service Web au niveau SOAP et vous permet d'appeler des méthodes de service Web dans tout environnement de développement qui prend en charge les proxies de service Web et SOAP.  
@@ -36,7 +36,7 @@ ms.locfileid: "47842247"
      Par exemple, l'instruction d'invite de commandes suivante spécifie une URL pour le point de terminaison de gestion du service Web Report Server :  
   
     ```  
-    wsdl /language:CS /n:"Microsoft.SqlServer.ReportingServices2010" http://<Server Name>/reportserver/reportservice2010.asmx?wsdl  
+    wsdl /language:CS /n:"Microsoft.SqlServer.ReportingServices2010" https://<Server Name>/reportserver/reportservice2010.asmx?wsdl  
     ```  
   
      L'outil WSDL accepte plusieurs arguments d'invite de commandes pour générer un proxy. L'exemple précédent spécifie le langage C#, un espace de noms suggéré à utiliser dans le proxy (évite la collision de nom en présence de plusieurs points de terminaison de service Web), et génère un fichier C# appelé ReportingService2010.cs. Si l'exemple avait spécifié [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)], l'exemple aurait généré un fichier proxy avec le nom ReportingService2010.vb. Ce fichier est créé dans le répertoire à partir duquel vous exécutez la commande.  
@@ -79,7 +79,7 @@ ReportingService2010 service = new ReportingService2010();
      Voici une URL simplifiée pour le point de terminaison d'exécution du rapport du service Web Report Server :  
   
     ```  
-    http://<Server Name>/reportserver/reportexecution2005.asmx  
+    https://<Server Name>/reportserver/reportexecution2005.asmx  
     ```  
   
      L'URL contient le domaine de déploiement du service Web Report Server, le nom du dossier qui contient le service, et le nom du fichier de découverte pour le service. Pour obtenir une description complète des différents éléments de l’URL, consultez [Accès à l’API SOAP](../../../reporting-services/report-server-web-service/accessing-the-soap-api.md).  
@@ -105,13 +105,13 @@ ReportingService2010 service = new ReportingService2010();
   
 ```vb  
 Dim rs As New myNamespace.myReferenceName.ReportExecutionService()  
-rs.Url = "http://<Server Name>/reportserver/reportexecution2005.asmx?wsdl"  
+rs.Url = "https://<Server Name>/reportserver/reportexecution2005.asmx?wsdl"  
 rs.Credentials = System.Net.CredentialCache.DefaultCredentials  
 ```  
   
 ```csharp  
 myNamespace.myReferenceName.ReportExecutionService rs = new myNamespace.myReferenceName.ReportExecutionService();  
-rs.Url = "http://<Server Name>/reportserver/reportexecution2005.asmx?wsdl";  
+rs.Url = "https://<Server Name>/reportserver/reportexecution2005.asmx?wsdl";  
 rs.Credentials = System.Net.CredentialCache.DefaultCredentials;  
   
 ```  
