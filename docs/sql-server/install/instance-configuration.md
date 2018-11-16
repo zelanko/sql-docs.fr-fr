@@ -16,12 +16,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 robots: noindex,nofollow
-ms.openlocfilehash: 0e6be5445533c6d86f5ae7b000bc1b9e7226abc8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7018c0f71f51fa482ef0c1fad78b1aac20bf79cd
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764837"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701061"
 ---
 # <a name="installation-wizard-help"></a>Aide de l’assistant Installation
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ Chaque instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con
 ### <a name="multiple-instances"></a>Instances multiples  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge plusieurs instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur un seul serveur ou processeur, mais une seule instance peut être l'instance par défaut. Toutes les autres instances doivent être des instances nommées. Un ordinateur peut exécuter simultanément plusieurs instances [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et chaque instance s'exécute indépendamment des autres.  
   
- Pour plus d’informations, consultez [Spécifications des capacités maximales pour SQL Server](../maximum-capacity-specifications-for-sql-server.md).  
+ Pour plus d'informations, consultez [Maximum Capacity Specifications for SQL Server](../maximum-capacity-specifications-for-sql-server.md).  
   
 ### <a name="options"></a>Options  
  Instances de cluster de basculement uniquement : Spécifiez le nom réseau du cluster de basculement de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ce nom identifie l'instance de cluster de basculement sur le réseau.  
@@ -121,7 +121,7 @@ Chaque instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con
  **Spécifier les administrateurs** - Vous devez spécifier au moins un administrateur de serveur pour l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les utilisateurs ou groupes que vous spécifiez deviendront membres du rôle des administrateurs de serveur de l'instance [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que vous installez. Ceux-ci doivent être des comptes d'utilisateur de domaine Windows dans le même domaine que l'ordinateur sur lequel vous installez le logiciel.  
   
 > [!NOTE]  
->  Le contrôle de compte d'utilisateur est une fonctionnalité de sécurité Windows qui requiert qu'un administrateur approuve de façon spécifique les actions ou applications administratives avant qu'elles soient autorisées à s'exécuter. Dans la mesure où le contrôle de compte d'utilisateur est activé par défaut, vous serez invité à autoriser des opérations spécifiques qui requièrent des privilèges élevés. Vous pouvez configurer le contrôle de compte d'utilisateur de manière à modifier son comportement par défaut ou à le personnaliser pour des programmes spécifiques. Pour plus d’informations sur la configuration des contrôles de compte d’utilisateur, consultez [Guide pas à pas du contrôle de compte d’utilisateur](http://go.microsoft.com/fwlink/?linkid=196350) et [User Account Control (Contrôle de compte d’utilisateur) Wikipédia](http://go.microsoft.com/fwlink/?linkid=196351).  
+>  Le contrôle de compte d'utilisateur est une fonctionnalité de sécurité Windows qui requiert qu'un administrateur approuve de façon spécifique les actions ou applications administratives avant qu'elles soient autorisées à s'exécuter. Dans la mesure où le contrôle de compte d'utilisateur est activé par défaut, vous serez invité à autoriser des opérations spécifiques qui requièrent des privilèges élevés. Vous pouvez configurer le contrôle de compte d'utilisateur de manière à modifier son comportement par défaut ou à le personnaliser pour des programmes spécifiques. Pour plus d’informations sur la configuration des contrôles de compte d’utilisateur, consultez [Guide pas à pas du contrôle de compte d’utilisateur](https://go.microsoft.com/fwlink/?linkid=196350) et [User Account Control (Contrôle de compte d’utilisateur) Wikipédia](https://go.microsoft.com/fwlink/?linkid=196351).  
   
 ### <a name="see-also"></a> Voir aussi  
  [Configurer les comptes de service &#40;Analysis Services&#41;](../../analysis-services/instances/configure-service-accounts-analysis-services.md) [Configurer les comptes de service Windows et les autorisations](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)  
@@ -250,7 +250,7 @@ Chaque instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con
  Pour plus d’informations sur les répertoires, les emplacements de fichiers et l’affectation de noms aux ID d’instance, consultez [Emplacements des fichiers pour les instances par défaut et les instances nommées de SQL Server](file-locations-for-default-and-named-instances-of-sql-server.md).  
   
     
- [Autorisations de partage et NTFS sur un serveur de fichiers](http://go.microsoft.com/fwlink/?LinkID=206571) 
+ [Autorisations de partage et NTFS sur un serveur de fichiers](https://go.microsoft.com/fwlink/?LinkID=206571) 
 
 ## <a name="database-engine-configuration---filestream"></a>Configuration du moteur de base de données - Filestream
   Utilisez cette page pour activer FILESTREAM pour cette installation de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. FILESTREAM intègre le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] avec un système de fichiers NTFS en stockant les données d’objet blob **varbinary(max)** en tant que fichiers dans le système de fichiers. Les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] peuvent insérer, mettre à jour, interroger, rechercher et sauvegarder des données FILESTREAM. Les interfaces de système de fichiers Win32 fournissent l'accès de diffusion en continu aux données.  
@@ -363,7 +363,7 @@ Chaque instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con
  Pour spécifier un partage de fichiers SMB comme répertoire, vous devez taper manuellement le chemin d'accès UNC pris en charge. La navigation vers un partage de fichiers SMB n'est pas prise en charge. Vous trouverez ci-dessous un format de chemin UNC pris en charge d’un partage de fichiers SMB : \\\NomServeur\NomPartage\\….  
   
 ### <a name="data-and-log-directories-for--a-stand-alone-instance-of--includessnoversionincludesssnoversion-mdmd"></a>Répertoires de données et des journaux pour une instance autonome de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
- Le tableau suivant répertorie les types de stockage pris en charge et les répertoires par défaut pour une instance autonome de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que vous pouvez configurer lors de l’installation.  
+ Le tableau suivant répertorie les types de stockage pris en charge et les répertoires par défaut pour une instance autonome de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que vous pouvez configurer pendant l’installation.  
   
 |Description|Type de stockage pris en charge|Répertoire par défaut|Recommandations|  
 |-----------------|----------------------------|-----------------------|---------------------|  
@@ -373,7 +373,7 @@ Chaque instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con
  *Même si les disques partagés sont pris en charge, cette méthode n’est pas recommandée pour une instance autonome de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ### <a name="data-and-log-directories-for-a-failover-cluster-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Répertoires de données et des journaux pour une instance de cluster de basculement de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
- Le tableau suivant répertorie les types de stockage pris en charge et les répertoires par défaut pour une instance de cluster de basculement de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui sont configurables par l'utilisateur pendant l'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ Le tableau suivant répertorie les types de stockage pris en charge et les répertoires par défaut pour une instance de cluster de basculement de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui sont configurables par l'utilisateur pendant l'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 |Description|Type de stockage pris en charge|Répertoire par défaut|Recommandations|  
 |-----------------|----------------------------|-----------------------|---------------------|  
@@ -428,7 +428,7 @@ Chaque instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con
   
 ### <a name="see-also"></a> Voir aussi  
  [Configurer les comptes de service Windows et les autorisations](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
- [Autorisations de partage et NTFS sur un serveur de fichiers](http://go.microsoft.com/fwlink/?LinkID=206571)  
+ [Autorisations de partage et NTFS sur un serveur de fichiers](https://go.microsoft.com/fwlink/?LinkID=206571)  
 
 ## <a name="database-engine-configuration---user-instance"></a>Configuration du moteur de base de données – Instance utilisateur
 La page **Instance utilisateur** permet de générer une instance distincte du [!INCLUDE[ssDE](../../includes/ssde-md.md)] pour les utilisateurs sans autorisations d’administrateur, et d’ajouter des utilisateurs dans le rôle d’administrateur.  
@@ -443,9 +443,9 @@ La page **Instance utilisateur** permet de générer une instance distincte du [
 >  Les connexions configurées en tant que membres du rôle serveur fixe **sysadmin** durant l’installation sont configurées en tant qu’administrateurs dans l’exemple de base de données. Si elles ne sont pas supprimées, elles sont membres du rôle serveur fixe **sysadmin** sur l’instance utilisateur.  
   
  Ajouter l'utilisateur au rôle Administrateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
- Par défaut, cette option est désactivée. Pour ajouter l'utilisateur du programme d'installation en cours au rôle Administrateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , activez la case à cocher.  
+ Par défaut, cette option est désactivée. Pour ajouter l'utilisateur du programme d'installation en cours au rôle Administrateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], activez la case à cocher.  
   
- Les utilisateurs [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] qui sont membres de BUILTIN\Administrateurs ne sont pas ajoutés automatiquement au rôle de serveur fixe sysadmin quand ils se connectent à [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. Seuls les utilisateurs [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] qui ont été ajoutés explicitement à un rôle d'administrateur de niveau serveur peuvent administrer [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. Tous les membres du groupe Built-In\Users peuvent se connecter à l'instance de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] , mais ils auront des autorisations limitées pour effectuer les tâches de base de données. Pour cette raison, les utilisateurs dont les privilèges [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] sont hérités de BUILTIN\Administrators et de Built-In\Users dans les versions précédentes de Windows doivent bénéficier explicitement des privilèges d’administrateur dans les instances de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] qui s’exécutent sur [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)].  
+ Les utilisateurs [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] qui sont membres de BUILTIN\Administrateurs ne sont pas ajoutés automatiquement au rôle serveur fixe sysadmin lorsqu'ils se connectent à [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. Seuls les utilisateurs [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] qui ont été ajoutés explicitement à un rôle d'administrateur de niveau serveur peuvent administrer [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. Tous les membres du groupe Built-In\Users peuvent se connecter à l'instance de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] , mais ils auront des autorisations limitées pour effectuer les tâches de base de données. Pour cette raison, les utilisateurs dont les privilèges [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] sont hérités de BUILTIN\Administrators et de Built-In\Users dans les versions précédentes de Windows doivent bénéficier explicitement des privilèges d’administrateur dans les instances de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] qui s’exécutent sur [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)].  
   
  Pour apporter des modifications quelconques aux rôles d'utilisateur une fois le programme d'installation terminé, utilisez l'outil Configuration de la surface d'exposition [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] (SQLSAC.exe). Pour mettre à jour la liste des utilisateurs dans le rôle Administrateur système [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , cliquez sur le lien **Ajouter un nouvel administrateur** .  
   

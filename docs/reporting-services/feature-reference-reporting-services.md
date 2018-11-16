@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 01daf21c-19c6-448d-ac30-accb54ad83da
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5835d17dcb628eebe99bff4c6e3182a10e41dbe7
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 0c343a3a0326fe8da74ed475bc8dbf6b018a27f0
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021043"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51811802"
 ---
 # <a name="feature-reference-reporting-services"></a>Références relatives aux fonctionnalités (Reporting Services)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] contient plusieurs outils et applications qui permettent de créer, gérer et afficher des rapports. Cette section répertorie les rubriques spécifiques qui décrivent les boîtes de dialogue, les pages Web et les Assistants de ces outils et applications.  
@@ -42,7 +42,7 @@ ms.locfileid: "50021043"
  [Concepts de Reporting Services &#40;SSRS&#41;](../reporting-services/reporting-services-concepts-ssrs.md)   
  [Rapports Reporting Services &#40;SSRS&#41;](../reporting-services/reports/reporting-services-reports-ssrs.md)   
  [Datasets de rapport &#40;SSRS&#41;](../reporting-services/report-data/report-datasets-ssrs.md)   
- [Mise en route avec le Générateur de rapports](http://www.microsoft.com/download/en/details.aspx?id=29072)   
+ [Mise en route avec le Générateur de rapports](https://www.microsoft.com/download/en/details.aspx?id=29072)   
  [Conception et implémentation de rapports à l’aide du Générateur de rapports version 1.0](https://go.microsoft.com/fwlink/?LinkId=142601)  
   
   

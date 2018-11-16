@@ -24,12 +24,12 @@ ms.assetid: 20e6e803-d6d5-48d5-b626-d1e0a73d174c
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 44951343e95d816171a9583b1e30e5a9e92c6f32
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4563eec091c31f879df497c4803f56ff8e3b61f4
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767037"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696207"
 ---
 # <a name="alter-database-transact-sql-set-hadr"></a>ALTER DATABASE (Transact-SQL) SET HADR 
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ ALTER DATABASE database_name
   
 -   La base de données doit déjà avoir été ajoutée au groupe de disponibilité sur le réplica principal.  
   
--   Le réplica principal doit être actif. Pour plus d’informations sur la façon de dépanner un réplica principal inactif, consultez [Résolution des problèmes de configuration des groupes de disponibilité AlwaysOn (SQL Server)](http://go.microsoft.com/fwlink/?LinkId=225834).  
+-   Le réplica principal doit être actif. Pour plus d’informations sur la façon de dépanner un réplica principal inactif, consultez [Résolution des problèmes de configuration des groupes de disponibilité AlwaysOn (SQL Server)](https://go.microsoft.com/fwlink/?LinkId=225834).  
   
 -   Le réplica principal doit être en ligne et le réplica secondaire doit être connecté au réplica principal.  
   
