@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 335888ba664751bb20348472736ad697b8fe2b6d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ad16bb39d693e78f0d6678cbf5d6b1c4abfb5816
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633477"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51663269"
 ---
 # <a name="sysdmoperationstatus-azure-sql-database"></a>sys.dm_operation_status (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "47633477"
 |percent_complete|**Int**|Pourcentage de l'opération terminée. Les valeurs ne sont pas continus et les valeurs valides sont répertoriées ci-dessous. Non NULL.<br/><br/>0 = l’opération n’a ne pas démarrée<br/>50 = opération en cours<br/>100 = opération terminée|  
 |error_code|**Int**|Code indiquant l'erreur qui s'est produite pendant une opération ayant échoué. 0 indique que l'opération pour cette étape s'est terminée avec succès.|  
 |error_desc|**nvarchar(2048)**|Description de l'erreur qui s'est produite pendant une opération ayant échoué.|  
-|error_severity|**Int**|Niveau de gravité de l'erreur qui s'est produite pendant une opération ayant échoué. Pour plus d’informations sur la gravité des erreurs, consultez [gravité des erreurs du moteur de base de données](http://go.microsoft.com/fwlink/?LinkId=251052).|  
+|error_severity|**Int**|Niveau de gravité de l'erreur qui s'est produite pendant une opération ayant échoué. Pour plus d’informations sur la gravité des erreurs, consultez [gravité des erreurs du moteur de base de données](https://go.microsoft.com/fwlink/?LinkId=251052).|  
 |error_state|**Int**|Réservé pour un usage ultérieur. La compatibilité future n'est pas garantie.|  
 |start_time|**datetime**|Horodateur du début de l'opération.|  
 |last_modify_time|**datetime**|Horodateur de la dernière modification de l'enregistrement d'une opération longue. Si les opérations se terminent avec succès, ce champ contient l'horodateur du moment où l'opération s'est terminée.|  

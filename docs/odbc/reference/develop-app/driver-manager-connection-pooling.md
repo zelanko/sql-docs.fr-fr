@@ -16,12 +16,12 @@ ms.assetid: ee95ffdb-5aa1-49a3-beb2-7695b27c3df9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8e03932fe9d6cc98648c2e0da2e2cdd963a8d67f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c247ab2681f2ff1b0891c15e0348a088f08e42c1
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826136"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677578"
 ---
 # <a name="driver-manager-connection-pooling"></a>Regroupement de connexions du gestionnaire de pilotes
 Le regroupement de connexions permet à une application d’utiliser une connexion à partir d’un pool de connexions qui ne doivent pas être rétablie pour chaque utilisation. Une fois qu’une connexion a été créée et placée dans un pool, une application peut réutiliser cette connexion sans effectuer le processus de connexion complète.  
@@ -59,11 +59,11 @@ Le regroupement de connexions permet à une application d’utiliser une connexi
     > [!NOTE]  
     >  Comment une connexion demandée est mis en correspondance avec une connexion regroupée est déterminée par l’attribut d’environnement SQL_ATTR_CP_MATCH. Pour plus d’informations, consultez [SQLSetEnvAttr](../../../odbc/reference/syntax/sqlsetenvattr-function.md).  
   
-     Les applications ODBC à l’aide du regroupement de connexions doivent appeler [CoInitializeEx](http://go.microsoft.com/fwlink/?LinkID=116307) pendant l’initialisation d’application et [CoUninitialize](http://go.microsoft.com/fwlink/?LinkId=116310) lorsque l’application se ferme.  
+     Les applications ODBC à l’aide du regroupement de connexions doivent appeler [CoInitializeEx](https://go.microsoft.com/fwlink/?LinkID=116307) pendant l’initialisation d’application et [CoUninitialize](https://go.microsoft.com/fwlink/?LinkId=116310) lorsque l’application se ferme.  
   
 5.  Appels **SQLDisconnect** lorsque vous avez terminé avec la connexion. La connexion est retournée au pool de connexions et devient disponible pour une réutilisation.  
   
- Pour une présentation détaillée, consultez [le regroupement dans le Microsoft Data Access Components](http://go.microsoft.com/fwlink/?LinkId=120776).  
+ Pour une présentation détaillée, consultez [le regroupement dans le Microsoft Data Access Components](https://go.microsoft.com/fwlink/?LinkId=120776).  
   
 ## <a name="connection-pooling-considerations"></a>Considérations de regroupement de connexions  
  Exécutant une des actions suivantes à l’aide d’une commande SQL (plutôt que via l’API ODBC), vous pouvez affecter l’état de la connexion et causer des problèmes inattendus lorsque le regroupement de connexions est actif :  
@@ -85,4 +85,4 @@ Le regroupement de connexions permet à une application d’utiliser une connexi
 ## <a name="see-also"></a>Voir aussi  
  [Connexion à une données Source ou pilote](../../../odbc/reference/develop-app/connecting-to-a-data-source-or-driver.md)   
  [Développement d’un pilote ODBC](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
- [Le regroupement dans les Microsoft Data Access Components](http://go.microsoft.com/fwlink/?LinkId=120776)
+ [Le regroupement dans les Microsoft Data Access Components](https://go.microsoft.com/fwlink/?LinkId=120776)

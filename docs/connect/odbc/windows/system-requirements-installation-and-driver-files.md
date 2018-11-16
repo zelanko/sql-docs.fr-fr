@@ -11,12 +11,12 @@ ms.assetid: d90fa182-1dab-4d6f-bd85-a04dd1479986
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d5e8a3234c7da4d350014463c3d1f96f417fa0b6
-ms.sourcegitcommit: 29760037d0a3cec8b9e342727334cc3d01db82a6
+ms.openlocfilehash: a38bcb91b0a074edbf80cea1245580ba16c237af
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "49084927"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600959"
 ---
 # <a name="system-requirements-installation-and-driver-files"></a>Configuration système requise, installation et fichiers de pilote
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -84,7 +84,7 @@ msiexec /i msodbcsql.msi APPGUID={ <Your dependent application's APPGUID> }
 
 ## <a name="command-line-tools-sqlcmdexe-and-bcpexe"></a>Outils en ligne de commande : sqlcmd.exe et bcp.exe
 
-Le `bcp.exe` et `sqlcmd.exe` tools pour l’utiliser avec le pilote peut être téléchargée sur [utilitaires de ligne de commande Microsoft 11 pour SQL Server](http://www.microsoft.com/download/details.aspx?id=36433), [Microsoft Command Line Utilities 13 pour SQL Server](https://www.microsoft.com/download/details.aspx?id=52680), ou [Utilitaires de ligne de commande Microsoft 13.1 pour SQL Server](https://www.microsoft.com/download/details.aspx?id=53591). Le pilote est un composant requis pour installer `sqlcmd.exe` et `bcp.exe`.
+Le `bcp.exe` et `sqlcmd.exe` tools pour l’utiliser avec le pilote peut être téléchargée sur [utilitaires de ligne de commande Microsoft 11 pour SQL Server](https://www.microsoft.com/download/details.aspx?id=36433), [Microsoft Command Line Utilities 13 pour SQL Server](https://www.microsoft.com/download/details.aspx?id=52680), ou [Utilitaires de ligne de commande Microsoft 13.1 pour SQL Server](https://www.microsoft.com/download/details.aspx?id=53591). Le pilote est un composant requis pour installer `sqlcmd.exe` et `bcp.exe`.
   
 `bcp.exe` et `sqlcmd.exe` sont installés dans le `110\Tools` sous-dossier de `%PROGRAMFILES%\Microsoft SQL Server\Client SDK\ODBC` pour la version 11, et `130\Tools` pour 13 et 13.1.
 

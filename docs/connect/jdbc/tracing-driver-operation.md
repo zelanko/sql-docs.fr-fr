@@ -11,12 +11,12 @@ ms.assetid: 723aeae7-6504-4585-ba8b-3525115bea8b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 32dc6e7c3f40517bc82aaa67e58a938651fe2161
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5f9ae95bc006017ed5456ee44e13d8dacf28d32b
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682517"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51605779"
 ---
 # <a name="tracing-driver-operation"></a>Suivi du fonctionnement du pilote
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "47682517"
   [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] prend en charge l’utilisation du suivi (ou de la journalisation) pour aider à résoudre les problèmes liés au pilote JDBC dans votre application. Pour permettre l’utilisation du suivi, le pilote JDBC utilise les API de journalisation de java.util.logging, qui offrent un ensemble de classes pour la création d’objets Logger et LogRecord.  
   
 > [!NOTE]  
->  Pour le composant natif (sqljdbc_xa.dll) fourni avec le pilote JDBC, le suivi est activé par le système de diagnostic intégré BID (Built-In Diagnostics). Pour obtenir des informations sur le système de diagnostic intégré BID, consultez [Data Access Tracing in SQL Server (Suivi de l’accès aux données dans SQL Server)](http://go.microsoft.com/fwlink/?LinkId=70042).  
+>  Pour le composant natif (sqljdbc_xa.dll) fourni avec le pilote JDBC, le suivi est activé par le système de diagnostic intégré BID (Built-In Diagnostics). Pour obtenir des informations sur le système de diagnostic intégré BID, consultez [Data Access Tracing in SQL Server (Suivi de l’accès aux données dans SQL Server)](https://go.microsoft.com/fwlink/?LinkId=70042).  
   
  Quand vous développez votre application, vous pouvez appeler des objets Logger, qui à leur tour créent des objets LogRecord, lesquels sont ensuite transmis aux objets Handler pour traitement. Enregistreur d’événements et le Gestionnaire d’objets utilisent des niveaux de journalisation, et éventuellement des filtres de journalisation pour réguler les LogRecords sont traitées. Une fois les opérations de journalisation terminées, les objets Handler peuvent éventuellement utiliser des objets Formatter pour publier les informations du journal.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "47682517"
 |TDS.Channel|Cette catégorie effectue le suivi des actions du canal de communication TCP avec SQL Server. Les messages journalisés incluent l'ouverture et la fermeture de sockets ainsi que les lectures et écritures. Elle effectue également le suivi des messages relatifs à l'établissement d'une connexion SSL (Secure Sockets Layer) à SQL Server.<br /><br /> Cette catégorie peut uniquement être activée en affectant le niveau de journalisation FINE, FINER ou FINEST.|  
 |TDS.Writer|Cette catégorie effectue le suivi des écritures dans le canal TDS. À noter que seule la longueur des écritures, et non le contenu, fait l'objet d'un suivi. Cette catégorie effectue également le suivi des problèmes lorsqu'un signal d'avertissement est envoyé au serveur pour annuler l'exécution d'une instruction.<br /><br /> Cette catégorie peut uniquement être activée en affectant le niveau de journalisation FINEST.|  
 |TDS.Reader|Cette catégorie effectue le suivi de certaines opérations de lecture à partir du canal TDS au niveau FINEST. Au niveau FINEST, le suivi peut être détaillé. Aux niveaux WARNING et SEVERE, cette catégorie effectue le suivi lorsque le pilote reçoit un protocole TDS non valide de SQL Server avant qu'il ne ferme la connexion.<br /><br /> Cette catégorie peut uniquement être activée en affectant le niveau de journalisation FINER et FINEST.|  
-|TDS.Command|Cette catégorie effectue le suivi des transitions d’état de bas niveau et d’autres informations associées à l’exécution de commandes TDS, telles que les exécutions d’instructions [!INCLUDE[tsql](../../includes/tsql-md.md)], les extractions de curseurs ResultSet, les validations, et ainsi de suite.<br /><br /> Cette catégorie peut uniquement être activée en affectant le niveau de journalisation FINEST.|  
+|TDS.Command|Cette catégorie effectue le suivi des transitions d'état de bas niveau et d'autres informations associées à l'exécution de commandes TDS, telles que les exécutions d'instructions [!INCLUDE[tsql](../../includes/tsql-md.md)], les extractions de curseurs ResultSet, les validations, etc.<br /><br /> Cette catégorie peut uniquement être activée en affectant le niveau de journalisation FINEST.|  
 |TDS.TOKEN|Cette catégorie ne journalise que les jetons des paquets TDS et est moins claire que la catégorie TDS.DATA. Elle peut uniquement être activée en affectant le niveau de journalisation FINEST.<br /><br /> Au niveau FINEST, cette catégorie effectue le suivi des jetons TDS lors de leur traitement dans la réponse. Au niveau SEVERE, cette catégorie effectue le suivi en cas de jeton TDS non valide.|  
 |SQLServerDatabaseMetaData|Journalise les messages dans la classe [SQLServerDatabaseMetaData](../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md). Les applications peuvent affecter le niveau de journalisation FINE.|  
 |SQLServerResultSetMetaData|Journalise les messages dans la classe [SQLServerResultSetMetaData](../../connect/jdbc/reference/sqlserverresultsetmetadata-class.md). Les applications peuvent affecter le niveau de journalisation FINE.|  

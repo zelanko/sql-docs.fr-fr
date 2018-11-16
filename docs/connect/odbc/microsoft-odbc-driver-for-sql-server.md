@@ -11,12 +11,12 @@ ms.assetid: 9f2ae91b-06af-4c9a-9d24-062df7bc4662
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8fb8dd7b195ca94751eca51da36340ce201246d1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4a36070adf041363953ddaaf08675a2b9d649feb
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669227"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51603729"
 ---
 # <a name="microsoft-odbc-driver-for-sql-server"></a>Pilote Microsoft ODBC pour SQL Server
 
@@ -74,5 +74,5 @@ L’exemple C++ suivant montre comment utiliser les API ODBC pour se connecter p
 
 
 ## <a name="community"></a>Communauté  
-- [Blog de l’équipe Microsoft ODBC Driver for SQL Server](http://blogs.msdn.com/sqlnativeclient/default.aspx)  
-- [Forum sur l’accès aux données SQL Server](http://social.technet.microsoft.com/Forums/en/sqldataaccess/threads)  
+- [Blog de l’équipe Microsoft ODBC Driver for SQL Server](https://blogs.msdn.com/sqlnativeclient/default.aspx)  
+- [Forum sur l’accès aux données SQL Server](https://social.technet.microsoft.com/Forums/en/sqldataaccess/threads)  

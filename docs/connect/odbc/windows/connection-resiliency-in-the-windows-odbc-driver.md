@@ -11,12 +11,12 @@ ms.assetid: 614fa0b4-e9fd-4c68-aab3-183f9b9df143
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 386618d9dc6dd0d1fe23fe0480105c3e8f01c914
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 147716f986fb89d756c1800ac6fd71e138fae6a1
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726379"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600859"
 ---
 # <a name="connection-resiliency-in-the-windows-odbc-driver"></a>Résilience de connexion du pilote ODBC Windows
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "47726379"
 > [!IMPORTANT]  
 >  La fonctionnalité de résilience de connexion est prise en charge sur les versions de serveur SQL Server 2014 (et versions ultérieures) et les bases de données Microsoft Azure SQL Database.  
   
- Pour plus d’informations sur la résilience des connexions inactives, consultez [Article technique, Résilience des connexions inactives](http://go.microsoft.com/fwlink/?LinkId=393996).  
+ Pour plus d’informations sur la résilience des connexions inactives, consultez [Article technique, Résilience des connexions inactives](https://go.microsoft.com/fwlink/?LinkId=393996).  
   
  Pour contrôler le comportement de reconnexion, ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur Windows propose deux options :  
   
@@ -36,7 +36,7 @@ ms.locfileid: "47726379"
   
      Vous pouvez modifier le nombre de tentatives de connexion quand vous :  
   
-    -   définissez ou modifiez une source de données qui utilise ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] avec le contrôle **Nombre de nouvelles tentatives de connexion**.  
+    -   définissez ou modifiez une source de données qui utilise ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] avec le contrôle **Nombre de tentatives de connexion** .  
   
     -   utilisez le mot clé de chaîne de connexion **ConnectRetryCount** .  
   
@@ -48,7 +48,7 @@ ms.locfileid: "47726379"
   
      Vous pouvez modifier l’intervalle de nouvelle tentative de connexion quand vous :  
   
-    -   définissez ou modifiez une source de données qui utilise ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] avec le contrôle **Intervalle avant nouvelle tentative de connexion**.  
+    -   définissez ou modifiez une source de données qui utilise ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] avec le contrôle **Intervalle avant nouvelle tentative de connexion** .  
   
     -   utilisez le mot clé de chaîne de connexion **ConnectRetryInterval** .  
   

@@ -11,12 +11,12 @@ ms.assetid: a7451a85-18e5-4fd0-bbcb-2f15a1117290
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cc3ecb2395d350c66423fbf9b9da66dd2d30cf2b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dab1e03a0c1f2364ec3557e375f7db044ad5b5cf
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770947"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51605129"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-php"></a>Étape 3 : preuve de concept pour la connexion à SQL via PHP
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -48,7 +48,7 @@ Cela **OpenConnection** fonction est appelée au début dans toutes les fonction
   
 ## <a name="step-2--execute-query"></a>Étape 2 : Exécution de requête  
   
-Le [sqlsrv_query()](http://php.net/manual/en/function.sqlsrv-query.php) fonction peut être utilisée pour récupérer un jeu de résultats d’une requête par rapport à la base de données SQL. Essentiellement, cette fonction accepte n’importe quelle requête et l’objet de connexion et retourne un jeu de résultats qui peut être itéré à l’utilisation de [sqlsrv_fetch_array()](http://php.net/manual/en/function.sqlsrv-fetch-array.php).  
+Le [sqlsrv_query()](https://php.net/manual/en/function.sqlsrv-query.php) fonction peut être utilisée pour récupérer un jeu de résultats d’une requête par rapport à la base de données SQL. Essentiellement, cette fonction accepte n’importe quelle requête et l’objet de connexion et retourne un jeu de résultats qui peut être itéré à l’utilisation de [sqlsrv_fetch_array()](https://php.net/manual/en/function.sqlsrv-fetch-array.php).  
   
 ```php  
     function ReadData()  

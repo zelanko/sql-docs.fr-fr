@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2a227848ac7f7fde500aa03a1ab206d19c11f3fb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d17cc2ccc46733c857f884f78a1b0c9b3f980586
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758717"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51674108"
 ---
 # <a name="wideworldimportersdw-etl-workflow"></a>Flux de travail WideWorldImportersDW ETL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ Ensuite, une série de tâches de flux de données charge chaque dimension. Ensu
 
 ## <a name="download"></a>Télécharger
 
-Pour obtenir la dernière version de l’exemple, consultez [wide world importers libération](http://go.microsoft.com/fwlink/?LinkID=800630). Téléchargez le *ETL.ispac quotidienne* fichier de package Integration Services.
+Pour obtenir la dernière version de l’exemple, consultez [wide world importers libération](https://go.microsoft.com/fwlink/?LinkID=800630). Téléchargez le *ETL.ispac quotidienne* fichier de package Integration Services.
 
 Pour le code source recréer la base de données, consultez [Wide wide world importers](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-integration-etl).
 

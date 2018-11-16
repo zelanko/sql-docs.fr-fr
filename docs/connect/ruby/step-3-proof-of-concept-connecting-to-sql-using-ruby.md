@@ -11,12 +11,12 @@ ms.assetid: cac20b18-0a6d-4243-bbda-a5d1b9476441
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9eed37349152b48ab49859b44cc23cb463d8541b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f384f179983012d5acf4726fb641245ca8a2cfb2
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47801377"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51599969"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-ruby"></a>Étape 3 : Preuve de concept pour la connexion à SQL à l’aide de Ruby
 
@@ -59,7 +59,7 @@ Dans cet exemple, vous verrez comment exécuter un [insérer](../../t-sql/statem
   
 Pour utiliser TinyTDS avec Azure, il est recommandé d’exécuter plusieurs `SET` instructions pour modifier la façon dont la session en cours gère des informations spécifiques. Recommandé `SET` instructions sont fournies dans l’exemple de code. Par exemple, `SET ANSI_NULL_DFLT_ON` permet aux nouvelles colonnes créées pour autoriser les valeurs null même si l’état de possibilité de valeur null de la colonne n’est pas défini explicitement.  
   
-Pour s’aligner avec le serveur Microsoft SQL Server [datetime](../../t-sql/data-types/datetime-transact-sql.md) mettre en forme, utilisez la [strftime](http://ruby-doc.org/core-2.2.0/Time.html#method-i-strftime) fonction pour convertir au format datetime correspondant.  
+Pour s’aligner avec le serveur Microsoft SQL Server [datetime](../../t-sql/data-types/datetime-transact-sql.md) mettre en forme, utilisez la [strftime](https://ruby-doc.org/core-2.2.0/Time.html#method-i-strftime) fonction pour convertir au format datetime correspondant.  
   
 ``` ruby
     require 'tiny_tds'  

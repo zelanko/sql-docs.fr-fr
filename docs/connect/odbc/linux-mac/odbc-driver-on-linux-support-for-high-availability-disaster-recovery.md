@@ -11,25 +11,25 @@ ms.assetid: fa656c5b-a935-40bf-bc20-e517ca5cd0ba
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5922753b28c401312f917ce662b56c7378634a77
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 952194b55ef14527e2f04d18edb5873e6098d2da
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47687038"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600099"
 ---
 # <a name="odbc-driver-on-linux-and-macos-support-for-high-availability-and-disaster-recovery"></a>Pilote ODBC sur Linux et macOS - Haute disponibilité et reprise d’activité
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
 Les pilotes ODBC pour la prise en charge de Linux et macOS [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]. Pour plus d’informations sur [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)], consultez :  
   
--   [Écouteurs de groupe de disponibilité, connectivité client et basculement d’application (SQL Server)](http://msdn.microsoft.com/library/hh213417.aspx)  
+-   [Écouteurs de groupe de disponibilité, connectivité client et basculement d’application (SQL Server)](https://msdn.microsoft.com/library/hh213417.aspx)  
   
--   [Création et configuration des groupes de disponibilité (SQL Server)](http://msdn.microsoft.com/library/ff878265.aspx)  
+-   [Création et configuration des groupes de disponibilité (SQL Server)](https://msdn.microsoft.com/library/ff878265.aspx)  
   
--   [Clustering de basculement et groupes de disponibilité AlwaysOn (SQL Server)](http://msdn.microsoft.com/library/ff929171.aspx)  
+-   [Clustering de basculement et groupes de disponibilité AlwaysOn (SQL Server)](https://msdn.microsoft.com/library/ff929171.aspx)  
   
--   [Secondaires actifs : réplicas secondaires lisibles (groupes de disponibilité d’AlwaysOn)](http://msdn.microsoft.com/library/ff878253.aspx)  
+-   [Secondaires actifs : réplicas secondaires lisibles (groupes de disponibilité d’AlwaysOn)](https://msdn.microsoft.com/library/ff878253.aspx)  
   
 Vous pouvez spécifier l’écouteur d’un groupe de disponibilité donné dans la chaîne de connexion. Si une application ODBC sur Linux ou macOS est connectée à une base de données dans un groupe de disponibilité qui bascule, la connexion d’origine est rompue et l’application doit ouvrir une nouvelle connexion pour reprendre le travail après le basculement.
 

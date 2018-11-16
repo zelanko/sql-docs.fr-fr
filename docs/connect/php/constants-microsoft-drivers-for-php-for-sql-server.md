@@ -13,12 +13,12 @@ ms.assetid: 9727c944-b645-48d6-9012-18dbde35ee3c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 28e5394d824a5999aec90cffb21e07e72dea1691
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3f391f25c6a8dc4914e0bb50362ef284ab9a1b4d
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605507"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51603749"
 ---
 # <a name="constants-microsoft-drivers-for-php-for-sql-server"></a>Constantes (Microsoft Drivers for PHP for SQL Server)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "47605507"
 Cette rubrique traite des constantes définies par le [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
 ## <a name="pdosqlsrv-driver-constants"></a>Constantes de pilote PDO_SQLSRV  
-Les constantes répertoriées sur le [site web PDO](http://php.net/manual/book.pdo.php) sont valides dans [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
+Les constantes répertoriées sur le [site web PDO](https://php.net/manual/book.pdo.php) sont valides dans [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
 Les sections qui suivent décrivent les constantes propres à Microsoft dans le pilote PDO_SQLSRV.  
   
@@ -132,7 +132,7 @@ La liste suivante répertorie les constantes qui permettent de spécifier la dir
 |SQLSRV_PARAM_OUT|Indique un paramètre de sortie.|  
   
 ### <a name="phptype-constants"></a>Constantes PHPTYPE  
-Le tableau suivant répertorie les constantes utilisées pour décrire des types de données PHP. Pour plus d’informations sur les types de données PHP, consultez [Types PHP](http://php.net/manual/en/language.types.php).  
+Le tableau suivant répertorie les constantes utilisées pour décrire des types de données PHP. Pour plus d’informations sur les types de données PHP par défaut, consultez [Types PHP](https://php.net/manual/en/language.types.php).  
   
 |Constante SQLSRV|Type de données PHP|  
 |-------------------|-----------------|  

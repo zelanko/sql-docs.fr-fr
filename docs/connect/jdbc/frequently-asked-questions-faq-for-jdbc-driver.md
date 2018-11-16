@@ -11,12 +11,12 @@ ms.assetid: cbc0e397-ecf2-4494-87b2-a492609bceae
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2f0197ed97f8d03784cd89d2bede5a4e7744e80f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 65963e0e41bc4bb85ac3c734efc30835f371191e
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613417"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51603089"
 ---
 # <a name="frequently-asked-questions-faq-for-jdbc-driver"></a>Questions fréquentes (FAQ) sur le pilote JDBC
 
@@ -105,25 +105,25 @@ Le tableau ci-dessous répertorie les options d’authentification disponibles. 
 Oui. Le pilote prend en charge l’utilisation d’adresses IPv6. Utilisez la collection de propriétés de connexion et la propriété de chaîne de connexion serverName. Pour plus d’informations, consultez [Création de l’URL de connexion](../../connect/jdbc/building-the-connection-url.md).
 
 **Qu’est-ce que la mise en mémoire tampon adaptative ?**  
-Mise en mémoire tampon adaptative a été introduite avec Microsoft SQL Server 2005 JDBC Driver version 1.2. Elle est conçue pour récupérer tout type de données de valeur élevée sans la charge mémoire associée aux curseurs côté serveur. La fonctionnalité de mise en mémoire tampon adaptative du pilote JDBC Driver pour Microsoft SQL Server fournit une propriété de chaîne de connexion, responseBuffering, qui peut avoir la valeur « adaptive » ou « full ». Dans la version 1.2, le mode de mise en mémoire tampon est « full » par défaut ; par ailleurs, l’application doit définir explicitement le mode de mise en mémoire tampon adaptative. À compter de la version 2.0 du pilote JDBC Driver, le comportement par défaut du pilote est « adaptive ». Par conséquent, votre application n’a pas besoin de requérir explicitement le comportement de la mise en mémoire tampon adaptative pour l’obtenir. Pour plus d’informations, consultez [Utilisation de la mise en mémoire tampon adaptative](../../connect/jdbc/using-adaptive-buffering.md) et le blog [What is adaptiveresponse buffering and why should I use it?](http://go.microsoft.com/fwlink/?LinkId=111575).
+Mise en mémoire tampon adaptative a été introduite avec Microsoft SQL Server 2005 JDBC Driver version 1.2. Elle est conçue pour récupérer tout type de données de valeur élevée sans la charge mémoire associée aux curseurs côté serveur. La fonctionnalité de mise en mémoire tampon adaptative du pilote JDBC Driver pour Microsoft SQL Server fournit une propriété de chaîne de connexion, responseBuffering, qui peut avoir la valeur « adaptive » ou « full ». Dans la version 1.2, le mode de mise en mémoire tampon est « full » par défaut ; par ailleurs, l’application doit définir explicitement le mode de mise en mémoire tampon adaptative. À compter de la version 2.0 du pilote JDBC Driver, le comportement par défaut du pilote est « adaptive ». Par conséquent, votre application n’a pas besoin de requérir explicitement le comportement de la mise en mémoire tampon adaptative pour l’obtenir. Pour plus d’informations, consultez [Utilisation de la mise en mémoire tampon adaptative](../../connect/jdbc/using-adaptive-buffering.md) et le blog [What is adaptiveresponse buffering and why should I use it?](https://go.microsoft.com/fwlink/?LinkId=111575).
 
 **Le pilote prend-il en charge le regroupement de connexions ?**  
-Le pilote prend en charge le regroupement de connexions Java EE 5 (Java Platform, Enterprise Edition 5). Le pilote implémente les interfaces JDBC 3.0 nécessaires pour qu’il puisse participer aux implémentations de regroupements de connexions fournies par des fournisseurs de serveurs d’applications intergicielles (middleware). Le pilote participe à des connexions regroupées dans ces environnements. Pour plus d’informations, consultez [Utilisation d’un regroupement de connexions](../../connect/jdbc/using-connection-pooling.md). Le pilote ne fournit pas sa propre implémentation de regroupement, mais il s’appuie sur des serveurs d’applications Java tiers.
+Le pilote prend en charge le regroupement de connexions Java EE 5 (Java Platform, Enterprise Edition 5). Le pilote implémente les interfaces JDBC 3.0 nécessaires pour qu’il puisse participer aux implémentations de regroupements de connexions fournies par des fournisseurs de serveurs d’applications intergicielles (middleware). Le pilote participe à des connexions regroupées dans ces environnements. Pour plus d’informations, consultez [Using Connection Pooling](../../connect/jdbc/using-connection-pooling.md). Le pilote ne fournit pas sa propre implémentation de regroupement, mais il s’appuie sur des serveurs d’applications Java tiers.
 
 **Le pilote bénéficie-t-il des services du support technique ?**  
-Plusieurs options de support technique sont disponibles. Vous pouvez publier votre question ou problème à notre [référentiel GitHub](https://github.com/microsoft/mssql-jdbc) qui est surveillé par Microsoft. [Forums](http://go.microsoft.com/fwlink/?LinkID=246673) sont gérés par Microsoft, MVP et la Communauté. Vous pouvez aussi contacter le support technique Microsoft. L’équipe de développement peut vous demander de reproduire le problème en dehors de tout serveur d’applications tiers. Si le problème ne peut pas être reproduit en dehors de l’environnement conteneur Java hôte, vous devez impliquer le tiers associé pour que l’équipe puisse continuer à vous aider. L’équipe peut également vous demander de reproduire le problème sur un système d’exploitation tels que Windows pour le problème peut être mieux pris en charge.
+Plusieurs options de support technique sont disponibles. Vous pouvez publier votre question ou problème à notre [référentiel GitHub](https://github.com/microsoft/mssql-jdbc) qui est surveillé par Microsoft. [Forums](https://go.microsoft.com/fwlink/?LinkID=246673) sont gérés par Microsoft, MVP et la Communauté. Vous pouvez aussi contacter le support technique Microsoft. L’équipe de développement peut vous demander de reproduire le problème en dehors de tout serveur d’applications tiers. Si le problème ne peut pas être reproduit en dehors de l’environnement conteneur Java hôte, vous devez impliquer le tiers associé pour que l’équipe puisse continuer à vous aider. L’équipe peut également vous demander de reproduire le problème sur un système d’exploitation tels que Windows pour le problème peut être mieux pris en charge.
 
 **Le pilote est-il certifié dans le cadre d’une utilisation avec des serveurs d’applications tiers ?**
 Le pilote a été testé sur divers serveurs d’applications, notamment IBM WebSphere et SAP Netweaver.
 
 **Comment activer le suivi ?**  
-Le pilote JDBC Driver prend en charge l’utilisation du suivi (ou journalisation) pour faciliter la résolution des problèmes liés à son utilisation dans votre application. Pour activer l’utilisation du suivi JAR côté client, le pilote JDBC Driver utilise les API de journalisation dans java.util.logging. Pour plus d’informations, consultez [Suivi du fonctionnement du pilote](../../connect/jdbc/tracing-driver-operation.md). Pour le suivi XA côté serveur, consultez [Suivi de l’accès aux données dans SQL Server](http://go.microsoft.com/fwlink/?LinkId=248705).
+Le pilote JDBC Driver prend en charge l’utilisation du suivi (ou journalisation) pour faciliter la résolution des problèmes liés à son utilisation dans votre application. Pour activer l’utilisation du suivi JAR côté client, le pilote JDBC Driver utilise les API de journalisation dans java.util.logging. Pour plus d’informations, consultez [Suivi du fonctionnement du pilote](../../connect/jdbc/tracing-driver-operation.md). Pour le suivi XA côté serveur, consultez [Suivi de l’accès aux données dans SQL Server](https://go.microsoft.com/fwlink/?LinkId=248705).
 
 **Où puis-je télécharger les anciennes versions du pilote, notamment le pilote JDBC pour SQL Server 2000, 2005 ou encore les versions 1.0, 1.1 ou 1.2 du pilote ?**  
 Ces versions du pilote ne sont pas disponibles en téléchargement, car elles ne sont plus prises en charge. Nous améliorons constamment la prise en charge de la connectivité Java. Nous vous recommandons donc vivement d’utiliser la dernière version du pilote Microsoft JDBC Driver.
 
 **J’utilise JRE 1.4. Quel est le pilote compatible avec JRE 1.4 ?**  
-Si vous utilisez des produits SAP et que vous devez assurer la prise en charge de JRE 1.4, contactez le [SAPService Marketplace](http://service.sap.com/) pour obtenir la version 1.2 du pilote Microsoft JDBC Driver.
+Si vous utilisez des produits SAP et que vous devez assurer la prise en charge de JRE 1.4, contactez le [SAPService Marketplace](https://service.sap.com/) pour obtenir la version 1.2 du pilote Microsoft JDBC Driver.
 
 **Le pilote peut-il communiquer à l’aide d’algorithmes validés par FIPS ?**  
 Le pilote Microsoft JDBC Driver ne contient aucun algorithme de chiffrement. Si un client exploite des algorithmes du système d’exploitation, d’applications et JVM jugés conformes aux normes FIPS (Federal Information Processing Standards) et qu’il configure le pilote de telle sorte qu’il utilise ces algorithmes, le pilote utilise uniquement les algorithmes désignés pour la communication.

@@ -13,12 +13,12 @@ ms.assetid: 4caebc9c-8680-4b99-a8fa-89c43161c95d
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 50556ffbe1ea88df7e62fdb75b9c9d260a0bd662
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 441366208d2bfd886794dd7e50dca7e0aef7b3ff
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099530"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51659338"
 ---
 # <a name="project-settings-migration-accesstosql"></a>Paramètres du projet (Migration) (AccessToSQL)
 Les paramètres de projet de Migration vous permettent de configurer la façon dont les données sont migrées à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure.  
@@ -88,5 +88,5 @@ Spécifie si SSMA devrait corriger les dates d’accès qui sont antérieurs au 
 Taille de lot utilisée pendant la migration de données. Une transaction est enregistrée après chaque lot. Par défaut, la taille de lot pour tous les schémas est 10 000.  
   
 ## <a name="see-also"></a>Voir aussi  
-[Reference(Access) d’Interface utilisateur](http://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
+[Reference(Access) d’Interface utilisateur](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
   

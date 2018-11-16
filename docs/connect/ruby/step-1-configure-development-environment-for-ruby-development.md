@@ -11,12 +11,12 @@ ms.assetid: 8cdbadeb-f640-406c-977c-d2d44b7b5368
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1de9ce8b14dd164ac24ac1bb7098494dbc134bfa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a298a7c7f65a198e5bfb0922f2b061fd44079739
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47778257"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51604699"
 ---
 # <a name="step-1-configure-development-environment-for-ruby-development"></a>Étape 1 : Configurer l’environnement de développement pour le développement Ruby
 Vous devez configurer votre environnement de développement avec la configuration requise pour développer une application en utilisant le pilote Ruby pour SQL Server.    
@@ -27,7 +27,7 @@ Notez que le pilote Ruby utilise le protocole TDS, qui est activé par défaut d
 ## <a name="windows"></a>Windows  
   
 1.  **Télécharger le programme d’installation de Ruby**  
-Si votre ordinateur ne dispose pas de Ruby installez-la. Pour les nouveaux utilisateurs ruby, nous vous recommandons de qu'utiliser les programmes d’installation de Ruby 2.2.X. Ils fournissent un langage stable et une liste complète des packages (perles) qui sont compatibles et mis à jour. Atteindre le [page de téléchargement Ruby](http://rubyinstaller.org/downloads/) et téléchargez le programme d’installation 2.1.x approprié. Par exemple, si vous êtes sur un ordinateur 64 bits, téléchargez le programme d’installation Ruby 2.1.6 (x64).   
+Si votre ordinateur ne dispose pas de Ruby installez-la. Pour les nouveaux utilisateurs ruby, nous vous recommandons de qu'utiliser les programmes d’installation de Ruby 2.2.X. Ils fournissent un langage stable et une liste complète des packages (perles) qui sont compatibles et mis à jour. Atteindre le [page de téléchargement Ruby](https://rubyinstaller.org/downloads/) et téléchargez le programme d’installation 2.1.x approprié. Par exemple, si vous êtes sur un ordinateur 64 bits, téléchargez le programme d’installation Ruby 2.1.6 (x64).   
   
 2.  **Installez Ruby**  
 Une fois le programme d’installation est téléchargé, procédez comme suit :  

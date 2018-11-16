@@ -18,16 +18,16 @@ ms.assetid: a66c756a-1311-4f4a-8088-818f8ed90056
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: f68d08d4902e6bdcde291c75cb463d8f525a3eb3
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: a785d94bd777117055e71b9f46a6122baa8b9813
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51217447"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51675728"
 ---
 # <a name="setenable-method-clientnetworkprotocol-class"></a>Méthode SetEnable (classe ClientNetworkProtocol)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  Active le protocole réseau client spécifié par le [configurer des protocoles clients](http://technet.microsoft.com/library/ms181035.aspx).  
+  Active le protocole réseau client spécifié par le [configurer des protocoles clients](https://technet.microsoft.com/library/ms181035.aspx).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -46,6 +46,6 @@ object.SetEnableMethod()
 ## <a name="remarks"></a>Notes  
   
 ## <a name="see-also"></a>Voir aussi  
- [Configuration des bibliothèques réseau et des protocoles réseau clients](http://technet.microsoft.com/library/ms181035.aspx)  
+ [Configuration des bibliothèques réseau et des protocoles réseau clients](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

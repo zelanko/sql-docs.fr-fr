@@ -13,12 +13,12 @@ ms.assetid: 9499ffdf-e0ee-4d3c-8bca-605371eb52d9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0edf87997b8b53266e7597b392bb217288590636
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9fc7f06a3b7c2455777b56de0875841c51905e95
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810147"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51604359"
 ---
 # <a name="using-integrated-authentication"></a>Utilisation de l’authentification intégrée
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -57,7 +57,7 @@ Vérifiez que vous utilisez `kinit` ou PAM (Pluggable Authentication Module) pou
 
 Quand une application s’exécute en tant que service, comme les informations d’identification Kerberos expirent de par leur conception, vous devez renouveler les informations d’identification pour garantir une disponibilité continue du service. Le pilote ODBC ne renouvelle pas d’informations d’identification lui-même ; Vérifiez qu’il existe un `cron` travail ou un script qui s’exécute périodiquement pour renouveler les informations d’identification avant leur expiration. Pour éviter d’exiger le mot de passe pour chaque renouvellement, vous pouvez utiliser un fichier keytab.  
   
-L’article[Kerberos Configuration and Use](http://commons.oreilly.com/wiki/index.php/Linux_in_a_Windows_World/Centralized_Authentication_Tools/Kerberos_Configuration_and_Use) fournit des détails sur l’implémentation de Kerberos pour les services sur Linux.
+L’article[Kerberos Configuration and Use](https://commons.oreilly.com/wiki/index.php/Linux_in_a_Windows_World/Centralized_Authentication_Tools/Kerberos_Configuration_and_Use) fournit des détails sur l’implémentation de Kerberos pour les services sur Linux.
   
 ## <a name="tracking-access-to-a-database"></a>Suivi de l’accès à une base de données
 
@@ -67,13 +67,13 @@ La connexion à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] uti
   
 Pour auditer les activités dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour le compte d’utilisateurs autres que le compte système, l’application doit utiliser [!INCLUDE[tsql](../../../includes/tsql-md.md)] **EXECUTE AS**.  
   
-Pour améliorer ses performances, une application peut utiliser le regroupement de connexions avec l’authentification intégrée et l’audit. Toutefois, le fait de combiner le regroupement de connexions, l’authentification intégrée et l’audit crée un risque de sécurité, car le Gestionnaire de pilotes unixODBC permet à différents utilisateurs de réutiliser les connexions regroupées. Pour plus d’informations, consultez [ODBC Connection Pooling](http://www.unixodbc.org/doc/conn_pool.html).  
+Pour améliorer ses performances, une application peut utiliser le regroupement de connexions avec l’authentification intégrée et l’audit. Toutefois, le fait de combiner le regroupement de connexions, l’authentification intégrée et l’audit crée un risque de sécurité, car le Gestionnaire de pilotes unixODBC permet à différents utilisateurs de réutiliser les connexions regroupées. Pour plus d’informations, consultez [ODBC Connection Pooling](https://www.unixodbc.org/doc/conn_pool.html).  
 
 Avant d’être réutilisée, une application doit réinitialiser les connexions regroupées en exécutant `sp_reset_connection`.  
 
 ## <a name="using-active-directory-to-manage-user-identities"></a>Utilisation d’Active Directory pour gérer les identités des utilisateurs
 
-Un administrateur système d’application n’a pas besoin de gérer des ensembles distincts d’informations d’identification de connexion pour [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Il est possible de configurer Active Directory comme Centre de distribution de clés pour l’authentification intégrée. Consultez [Microsoft Kerberos](/windows/desktop/SecAuthN/microsoft-kerberos) pour plus d’informations.
+Un administrateur système n’a pas besoin de gérer des ensembles distincts d’informations d’identification de connexion pour [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Il est possible de configurer Active Directory comme Centre de distribution de clés pour l’authentification intégrée. Consultez [Microsoft Kerberos](/windows/desktop/SecAuthN/microsoft-kerberos) pour plus d’informations.
 
 ## <a name="using-linked-server-and-distributed-queries"></a>Utilisation de serveur lié et de requêtes distribuées
 
@@ -83,7 +83,7 @@ Les développeurs peuvent déployer une application qui utilise un serveur lié 
   
 -   Le serveur d’applications s’authentifie en tant qu’autre base de données et se connecte à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] s’authentifie en tant qu’utilisateur de base de données pour une autre base de données ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]).  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] s’authentifie en tant qu’utilisateur de base de données à une autre base de données ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]).  
   
 Une fois l’authentification intégrée configurée, les informations d’identification sont transmises au serveur lié.  
   
@@ -126,7 +126,7 @@ L’heure sur l’ordinateur Linux ou macOS et l’heure sur le centre de Distri
 
 Si l’authentification Kerberos échoue, le pilote ODBC sur Linux ou macOS n’utilise pas l’authentification NTLM.  
 
-Pour plus d’informations sur l’authentification des ordinateurs Linux ou macOS avec Active Directory, consultez [authentifier les Clients Linux avec Active Directory](http://technet.microsoft.com/magazine/2008.12.linux.aspx#id0060048) et [meilleures pratiques pour intégrer OS X dans Active Directory](http://training.apple.com/pdf/Best_Practices_for_Integrating_OS_X_with_Active_Directory.pdf). Pour plus d’informations sur la configuration de Kerberos, consultez le [MIT Kerberos Documentation](https://web.mit.edu/kerberos/krb5-1.12/doc/index.html).
+Pour plus d’informations sur l’authentification des ordinateurs Linux ou macOS avec Active Directory, consultez [authentifier les Clients Linux avec Active Directory](https://technet.microsoft.com/magazine/2008.12.linux.aspx#id0060048) et [meilleures pratiques pour intégrer OS X dans Active Directory](https://training.apple.com/pdf/Best_Practices_for_Integrating_OS_X_with_Active_Directory.pdf). Pour plus d’informations sur la configuration de Kerberos, consultez le [MIT Kerberos Documentation](https://web.mit.edu/kerberos/krb5-1.12/doc/index.html).
 
 ## <a name="see-also"></a> Voir aussi  
 [Instructions de programmation](../../../connect/odbc/linux-mac/programming-guidelines.md)

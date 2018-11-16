@@ -10,12 +10,12 @@ ms.assetid: d315ad6a-0d50-4093-80c2-2f11217237c2
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2009d434b5faa3bf9cc63d5f9005ebe31be14d2a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 40c6bbf04f0c1fc5f2b4e2e360a3fcce5a68c6f7
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47728527"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600469"
 ---
 # <a name="support-for-localdb"></a>Prise en charge de la base de données locale
 
@@ -60,7 +60,7 @@ En bref, base de données locale vous permet de :
         . 'AttachDBFileName=c:\\myData.MDF', NULL, NULL);  
     ```
 
-Si nécessaire, vous pouvez créer une instance LocalDB avec sqllocaldb.exe. Vous pouvez également utiliser sqlcmd.exe pour ajouter et modifier des bases de données dans une instance LocalDB. Par exemple, `sqlcmd -S (localdb)\v11.0`. (Lors de l’exécution dans IIS, vous avez besoin pour s’exécuter sous le compte approprié pour obtenir les mêmes résultats que lorsque vous exécutez en ligne de commande ; consultez [à l’aide de LocalDB avec IIS complet, partie 2 : la propriété d’Instance](http://blogs.msdn.com/b/sqlexpress/archive/2011/12/09/using-localdb-with-full-iis-part-2-instance-ownership.aspx) pour plus d’informations.)
+Si nécessaire, vous pouvez créer une instance LocalDB avec sqllocaldb.exe. Vous pouvez également utiliser sqlcmd.exe pour ajouter et modifier des bases de données dans une instance LocalDB. Par exemple, `sqlcmd -S (localdb)\v11.0`. (Lors de l’exécution dans IIS, vous avez besoin pour s’exécuter sous le compte approprié pour obtenir les mêmes résultats que lorsque vous exécutez en ligne de commande ; consultez [à l’aide de LocalDB avec IIS complet, partie 2 : la propriété d’Instance](https://blogs.msdn.com/b/sqlexpress/archive/2011/12/09/using-localdb-with-full-iis-part-2-instance-ownership.aspx) pour plus d’informations.)
 
 Chaînes de connexion exemple à l’aide du pilote SQLSRV qui se connectent à une base de données dans une base de données locale d’une instance appelée myInstance nommée sont les suivantes :
 

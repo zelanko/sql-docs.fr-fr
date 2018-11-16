@@ -14,12 +14,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1277b565ccb60aaa7972f98ec731675b5a9bb7cd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b755c59a23a9b937c1de96236795cd1e01052842
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47813477"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51658574"
 ---
 # <a name="use-rowset-binding-odbc"></a>Utiliser une liaison d'ensembles de lignes (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "47813477"
   
     -   Allouez éventuellement un tableau de R (ou plus) tampons de colonnes pour le stockage des longueurs des données.  
   
-    -   Appelez [SQLBindCol](../../../relational-databases/native-client-odbc-api/sqlbindcol.md) pour lier la valeur de données et les tableaux de longueur de données de la colonne à la colonne de l’ensemble de lignes.  
+    -   Appelez [SQLBindCol](../../../relational-databases/native-client-odbc-api/sqlbindcol.md) pour lier la valeur de données de la colonne et les tableaux de longueur des données à la colonne de l'ensemble de lignes.  
   
 2.  Appelez [SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) pour définir les attributs suivants :  
   
@@ -48,7 +48,7 @@ ms.locfileid: "47813477"
   
 3.  Exécution de l'instruction.  
   
-4.  Chaque appel à [SQLFetch](http://go.microsoft.com/fwlink/?LinkId=58401) ou [SQLFetchScroll](../../../relational-databases/native-client-odbc-api/sqlfetchscroll.md) extrait des lignes R et transfère les données dans les colonnes liées.  
+4.  Chaque appel à [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401) ou [SQLFetchScroll](../../../relational-databases/native-client-odbc-api/sqlfetchscroll.md) extrait des lignes R et transfère les données dans les colonnes dépendantes.  
   
 ### <a name="to-use-row-wise-binding"></a>Pour utiliser la liaison selon les lignes  
   
@@ -68,11 +68,11 @@ ms.locfileid: "47813477"
   
     -   Définissez SQL_ATTR_PARAMS_STATUS_PTR de sorte qu'il pointe vers un tableau [R] de variables SQLUSSMALLINT contenant les indicateurs d'état de ligne.  
   
-3.  Pour chaque colonne du jeu de résultats, appelez [SQLBindCol](../../../relational-databases/native-client-odbc-api/sqlbindcol.md) pour diriger la valeur de données et le pointeur de longueur de données de la colonne vers leurs variables dans le premier élément du tableau de structures alloué à l’étape 1.  
+3.  Pour chaque colonne dans le jeu de résultats, appelez [SQLBindCol](../../../relational-databases/native-client-odbc-api/sqlbindcol.md) pour diriger les pointeurs de valeur de données et de longueur de données de colonne vers leurs variables dans le premier élément du tableau de structures alloué à l'étape 1.  
   
 4.  Exécution de l'instruction.  
   
-5.  Chaque appel à [SQLFetch](http://go.microsoft.com/fwlink/?LinkId=58401) ou [SQLFetchScroll](../../../relational-databases/native-client-odbc-api/sqlfetchscroll.md) extrait des lignes R et transfère les données dans les colonnes liées.  
+5.  Chaque appel à [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401) ou [SQLFetchScroll](../../../relational-databases/native-client-odbc-api/sqlfetchscroll.md) extrait des lignes R et transfère les données dans les colonnes dépendantes.  
   
 ## <a name="see-also"></a>Voir aussi  
  [À l’aide des rubriques de procédures de curseurs &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/using-cursors-how-to-topics-odbc.md)   

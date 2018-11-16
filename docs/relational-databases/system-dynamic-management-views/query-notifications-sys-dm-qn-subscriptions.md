@@ -19,12 +19,12 @@ ms.assetid: a3040ce6-f5af-48fc-8835-c418912f830c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2cbfdd765681f99e50b38efcdb5c7c61c8cbd08b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0157288c21e7b4f9b5d0b06bbf698369a216bf07
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834707"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657248"
 ---
 # <a name="query-notifications---sysdmqnsubscriptions"></a>Interroger des Notifications - sys.dm_qn_subscriptions
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "47834707"
 |**sid**|**varbinary(85)**|ID de sécurité du principal du serveur qui a créé cet abonnement et qui en est propriétaire.|  
 |**object_id**|**Int**|ID de la table interne qui stocke les informations sur les paramètres de l'abonnement.|  
 |**created**|**datetime**|Date et heure à laquelle l’abonnement a été créé.|  
-|**Délai d’attente**|**Int**|Délai d'expiration de l'abonnement, en secondes. La notification est marquée pour se déclencher après ce délai.<br /><br /> Remarque : L’heure de déclenchement réel peut être supérieur au délai d’attente spécifié. Cependant, si une modification qui invalide l'abonnement a lieu après le délai d'expiration, mais avant le déclenchement de l'abonnement, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fait en sorte que le déclenchement ait lieu au moment de la modification.|  
+|**timeout**|**Int**|Délai d'expiration de l'abonnement, en secondes. La notification est marquée pour se déclencher après ce délai.<br /><br /> Remarque : L’heure de déclenchement réel peut être supérieur au délai d’attente spécifié. Cependant, si une modification qui invalide l'abonnement a lieu après le délai d'expiration, mais avant le déclenchement de l'abonnement, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fait en sorte que le déclenchement ait lieu au moment de la modification.|  
 |**status**|**Int**|Indique l'état de l'abonnement. Consultez le tableau sous la section Remarques pour obtenir la liste de codes.|  
   
 ## <a name="relationship-cardinalities"></a>Cardinalités de la relation  
@@ -133,7 +133,7 @@ GO
   
 ## <a name="see-also"></a>Voir aussi  
  [Fonctions et vues de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Vues de gestion dynamique liées aux Notifications de requête &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/92eb22d8-33f3-4c17-b32e-e23acdfbd8f4)   
+ [Vues de gestion dynamique liées aux Notifications de requête &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/92eb22d8-33f3-4c17-b32e-e23acdfbd8f4)   
  [KILL QUERY NOTIFICATION SUBSCRIPTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/kill-query-notification-subscription-transact-sql.md)  
   
   

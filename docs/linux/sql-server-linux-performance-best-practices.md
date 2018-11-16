@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 4b05826bd25c711a70914982daf701b15edb1c93
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a9fdfb466f34e3eb40ad80d53c203f7ee8866f08
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629647"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51676901"
 ---
 # <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-on-linux"></a>Meilleures pratiques de performances et les instructions de configuration de SQL Server sur Linux
 
@@ -36,7 +36,7 @@ Il est recommandé d’effectuer les tâches de configuration suivantes après a
 
 - **Configurer plusieurs fichiers de données tempdb**
 
-   Une installation SQL Server sur Linux n’offre pas une option pour configurer plusieurs fichiers de tempdb, nous recommandons que vous envisagez de créer tempdb plusieurs fichiers de données après l’installation. Pour plus d’informations, consultez les instructions de l’article, [recommandations visant à réduire la contention d’allocation dans la base de données tempdb SQL Server](https://support.microsoft.com/en-us/help/2154845/recommendations-to-reduce-allocation-contention-in-sql-server-tempdb-d).
+   Une installation SQL Server sur Linux n’offre pas une option pour configurer plusieurs fichiers de tempdb, nous recommandons que vous envisagez de créer tempdb plusieurs fichiers de données après l’installation. Pour plus d’informations, consultez les instructions de l’article, [recommandations visant à réduire la contention d’allocation dans la base de données tempdb SQL Server](https://support.microsoft.com/help/2154845/recommendations-to-reduce-allocation-contention-in-sql-server-tempdb-d).
 
 ### <a name="advanced-configuration"></a>Configuration avancée
 

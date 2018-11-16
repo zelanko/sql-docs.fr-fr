@@ -13,12 +13,12 @@ ms.assetid: e5c114c5-8204-49c2-94eb-62ca63f5d3ec
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: eec1a271e10e85c9a22bfa45c75c8ac5efbbf7d6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3dd99ffa39de48dbf8839cbe06a8bb236fffbdf3
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785613"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606199"
 ---
 # <a name="loading-the-microsoft-drivers-for-php-for-sql-server"></a>Chargement des pilotes Microsoft SQL Server pour PHP
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -77,9 +77,9 @@ Pour charger le pilote SQLSRV au démarrage de PHP, commencez par déplacer un f
 3.  Redémarrez le serveur web.  
   
 > [!NOTE]  
-> Pour déterminer si le pilote a été correctement chargé, exécutez un script qui appelle [phpinfo()](http://php.net/manual/en/function.phpinfo.php).  
+> Pour déterminer si le pilote a été correctement chargé, exécutez un script qui appelle [phpinfo()](https://php.net/manual/en/function.phpinfo.php).  
   
-Pour plus d’informations sur les directives **php.ini**, consultez [Description des principales directives php.ini](http://php.net/manual/en/ini.core.php).  
+Pour plus d’informations sur les directives **php.ini**, consultez [Description des principales directives php.ini](https://php.net/manual/en/ini.core.php).  
   
 ## <a name="see-also"></a> Voir aussi  
 [Mise en route avec les pilotes Microsoft pour PHP pour SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)

@@ -11,12 +11,12 @@ ms.assetid: 3af61054-a886-4e1a-ad85-93f87c6d3584
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 134b5eef527b375e9107149ead9d55ab08933363
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e3b6790bce4cc3eb84ec707b56e909876606fa02
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47598387"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51603529"
 ---
 # <a name="using-table-valued-parameters"></a>Utilisation de paramètres table
 
@@ -35,9 +35,9 @@ Les valeurs de colonne dans les paramètres table sont accessibles à l’aide d
   
 | Ressource                                                                                                             | Description                                                                         |
 | -------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| [Paramètres table (moteur de base de données)](http://go.microsoft.com/fwlink/?LinkId=98363) dans la documentation en ligne de SQL Server | Décrit comment créer et utiliser des paramètres table                             |
-| [Types de tables définis par l’utilisateur](http://go.microsoft.com/fwlink/?LinkId=98364) dans la documentation en ligne de SQL Server                  | Décrit les types de table défini par l’utilisateur qui sont utilisés pour déclarer des paramètres table |
-| Le [moteur de base de données Microsoft SQL Server](http://go.microsoft.com/fwlink/?LinkId=120507) section de CodePlex        | Contient des exemples qui montrent comment utiliser les fonctionnalités de SQL Server  |
+| [Paramètres table (moteur de base de données)](https://go.microsoft.com/fwlink/?LinkId=98363) dans la documentation en ligne de SQL Server | Décrit comment créer et utiliser des paramètres table                             |
+| [Types de tables définis par l’utilisateur](https://go.microsoft.com/fwlink/?LinkId=98364) dans la documentation en ligne de SQL Server                  | Décrit les types de table défini par l’utilisateur qui sont utilisés pour déclarer des paramètres table |
+| Le [moteur de base de données Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkId=120507) section de CodePlex        | Contient des exemples qui montrent comment utiliser les fonctionnalités de SQL Server  |
   
 ## <a name="passing-multiple-rows-in-previous-versions-of-sql-server"></a>Passer plusieurs lignes dans les Versions précédentes de SQL Server  
 
@@ -53,7 +53,7 @@ Avant que les paramètres table ont été introduites dans SQL Server 2008, les 
   
 ## <a name="creating-table-valued-parameter-types"></a>Création de Types de paramètre table  
 
-Paramètres table sont basés sur les structures de table fortement typées qui sont définies à l’aide de Transact-SQL `CREATE TYPE` instructions. Vous devez créer un type de table et de définir la structure dans SQL Server avant de pouvoir utiliser des paramètres table dans vos applications clientes. Pour plus d’informations sur la création des types de tables, consultez [les Types de tables définis par l’utilisateur](http://go.microsoft.com/fwlink/?LinkID=98364) dans la documentation en ligne de SQL Server.  
+Paramètres table sont basés sur les structures de table fortement typées qui sont définies à l’aide de Transact-SQL `CREATE TYPE` instructions. Vous devez créer un type de table et de définir la structure dans SQL Server avant de pouvoir utiliser des paramètres table dans vos applications clientes. Pour plus d’informations sur la création des types de tables, consultez [les Types de tables définis par l’utilisateur](https://go.microsoft.com/fwlink/?LinkID=98364) dans la documentation en ligne de SQL Server.  
 
 ```sql
 CREATE TYPE dbo.CategoryTableType AS TABLE  
@@ -298,7 +298,7 @@ Les méthodes suivantes ont été ajoutées à cette classe pour prendre en char
 
 | Nom                                                                                                       | Description                                                                                                                                                                                                                                                                                                |
 | ------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| setStructured finale public void (int parameterIndex, chaîne tvpName, SQLServerDataTable tvpDataTbale)    | Remplit un paramètre à valeur de table avec une table de données. parameterIndex est l’index de paramètre, tvpName est le nom du paramètre de table et tvpDataTable est l’objet de table de données source.                                                                                                          |
+| setStructured finale public void (int parameterIndex, chaîne tvpName, SQLServerDataTable tvpDataTable)    | Remplit un paramètre à valeur de table avec une table de données. parameterIndex est l’index de paramètre, tvpName est le nom du paramètre de table et tvpDataTable est l’objet de table de données source.                                                                                                          |
 | setStructured finale public void (int parameterIndex, chaîne tvpName, tvpResultSet du jeu de résultats)             | Remplit un paramètre table valued avec un jeu de résultats récupéré à partir de la table d’un autre. parameterIndex est l’index de paramètre, tvpName est le nom du paramètre de table et tvpResultSet est l’objet source de l’ensemble de résultats.                                                                               |
 | setStructured finale public void (int parameterIndex, chaîne tvpName, ISQLServerDataRecord tvpDataRecord) | Remplit un paramètre table valued avec un objet ISQLServerDataRecord. ISQLServerDataRecord est utilisé pour la diffusion des données et l’utilisateur décide comment l’utiliser. parameterIndex est l’index de paramètre, tvpName est le nom du paramètre de table et tvpDataRecord est un objet ISQLServerDataRecord. |
   

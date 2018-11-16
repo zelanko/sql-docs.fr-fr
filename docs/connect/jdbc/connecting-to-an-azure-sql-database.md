@@ -11,12 +11,12 @@ ms.assetid: 49645b1f-39b1-4757-bda1-c51ebc375c34
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 86b2ca0e8f8dc0eb393feefcf9817d0aeab53e57
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c4caaa9ca14fd2f8eb396ef2c2869ba30bd48420
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47667397"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602209"
 ---
 # <a name="connecting-to-an-azure-sql-database"></a>Connexion à une base de données SQL Azure
 
@@ -33,11 +33,11 @@ Cet article aborde les problèmes rencontrés lors de l’utilisation de [!INCLU
 ## <a name="details"></a>Détails
 
 Lors de la connexion à un [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], vous devez vous connecter à la base de données master pour appeler **SQLServerDatabaseMetaData.getCatalogs**.  
-[!INCLUDE[ssAzure](../../includes/ssazure_md.md)] ne prend pas en charge le retour de l’ensemble complet de catalogues d’une base de données utilisateur. **SQLServerDatabaseMetaData.getCatalogs** utiliser la vue sys.databases pour obtenir les catalogues. Reportez-vous à la section autorisations dans [sys.databases (base de données SQL Azure)](http://go.microsoft.com/fwlink/?LinkId=217396) pour comprendre **SQLServerDatabaseMetaData.getCatalogs** comportement sur un [!INCLUDE[ssAzure](../../includes/ssazure_md.md)].  
+[!INCLUDE[ssAzure](../../includes/ssazure_md.md)] ne prend pas en charge le retour de l’ensemble complet de catalogues d’une base de données utilisateur. **SQLServerDatabaseMetaData.getCatalogs** utiliser la vue sys.databases pour obtenir les catalogues. Reportez-vous à la section autorisations dans [sys.databases (base de données SQL Azure)](https://go.microsoft.com/fwlink/?LinkId=217396) pour comprendre **SQLServerDatabaseMetaData.getCatalogs** comportement sur un [!INCLUDE[ssAzure](../../includes/ssazure_md.md)].  
   
 ## <a name="connections-dropped"></a>Connexions supprimées
 
-Lors de la connexion à [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], les connexions inactives peuvent être arrêtées par un composant réseau (comme un pare-feu) après une période d’inactivité. Il existe deux types de connexions inactives dans ce contexte :  
+Lors de la connexion à [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], les connexions inactives peuvent être arrêtées par un composant réseau (tel un pare-feu) après une période d'inactivité. Il existe deux types de connexions inactives dans ce contexte :  
 
 - Les connexions inactives sur la couche TCP, lorsque les connexions peuvent être supprimées par n'importe quel dispositif réseau.  
 

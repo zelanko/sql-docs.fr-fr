@@ -15,12 +15,12 @@ ms.assetid: f95cdbce-e7c2-4e56-a9f7-8fa3a920a125
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 09422214ac33ed7179d66a46aed9db09f2ef6039
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f1527b212385f280d16bf3f86ce753352b4fb744
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47805307"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51603939"
 ---
 # <a name="connecting-to-sql-server"></a>Connexion à SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -68,14 +68,14 @@ Vous pouvez utiliser le protocole SSL (Secure Sockets Layer) pour chiffrer les c
 
 L’activation du chiffrement renforce la sécurité au détriment des performances.
 
-Pour plus d’informations, consultez [chiffrement des connexions à SQL Server](http://go.microsoft.com/fwlink/?LinkId=220900) et [à l’aide du chiffrement sans Validation](https://docs.microsoft.com/sql/relational-databases/native-client/features/using-encryption-without-validation).
+Pour plus d’informations, consultez [chiffrement des connexions à SQL Server](https://go.microsoft.com/fwlink/?LinkId=220900) et [à l’aide du chiffrement sans Validation](https://docs.microsoft.com/sql/relational-databases/native-client/features/using-encryption-without-validation).
 
 Quels que soient les paramètres pour **Encrypt** et **TrustServerCertificate**, les informations d’identification de connexion serveur (nom d’utilisateur et mot de passe) sont toujours chiffrées. Le tableau suivant montre l’effet des paramètres **Encrypt** et **TrustServerCertificate** .  
 
 ||**TrustServerCertificate = non**|**TrustServerCertificate = yes**|  
 |-|-------------------------------------|------------------------------------|  
 |**Encrypt=no**|Le certificat de serveur n’est pas vérifié.<br /><br />Les données envoyées entre le client et le serveur ne sont pas chiffrées.|Le certificat de serveur n’est pas vérifié.<br /><br />Les données envoyées entre le client et le serveur ne sont pas chiffrées.|  
-|**Encrypt=yes**|Le certificat de serveur est vérifié.<br /><br />Les données envoyées entre le client et le serveur sont chiffrées.<br /><br />Le nom (ou l’adresse IP) indiqué dans un nom commun de l’objet ou autre nom de l’objet dans un certificat SSL [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] doit correspondre exactement au nom (ou à l’adresse IP) du serveur spécifié dans la chaîne de connexion.|Le certificat de serveur n’est pas vérifié.<br /><br />Les données envoyées entre le client et le serveur sont chiffrées.|  
+|**Encrypt=yes**|Le certificat de serveur est vérifié.<br /><br />Les données envoyées entre le client et le serveur sont chiffrées.<br /><br />Le nom (ou l’adresse IP) indiqué dans un nom commun sujet ou un autre nom de l’objet dans un certificat SSL [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] doit correspondre exactement au nom (ou à l’adresse IP) du serveur spécifié dans la chaîne de connexion.|Le certificat de serveur n’est pas vérifié.<br /><br />Les données envoyées entre le client et le serveur sont chiffrées.|  
 
 Par défaut, les connexions chiffrées vérifient toujours le certificat du serveur. Toutefois, si vous vous connectez à un serveur qui dispose d’un certificat auto-signé, également ajouter le `TrustServerCertificate` possibilité de contourner la vérification du certificat à la liste des autorités de certification approuvées :  
 

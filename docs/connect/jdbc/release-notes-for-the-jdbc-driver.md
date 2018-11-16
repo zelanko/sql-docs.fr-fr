@@ -11,12 +11,12 @@ ms.assetid: 074f211e-984a-4b76-bb15-ee36f5946f12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 344a2aabb3601761d250d18725d11ebc4585fa3a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f24089803b59e86a4fc8f8b98cd7822a11ba6c2e
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47737257"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600770"
 ---
 # <a name="release-notes-for-the-jdbc-driver"></a>Notes de publication pour le pilote JDBC
 
@@ -139,7 +139,7 @@ Microsoft JDBC Driver 6.2 pour SQL Server est entièrement conforme aux spécifi
 >
 > Une autre amélioration pour mettre à niveau la version de bibliothèque dépendante d’Azure Key Vault à 1.0.0 a eu lieu, et les nouveaux fichiers JAR (version 6.2.2) ont été publiés sur le 19 octobre 2017.
 >
-> Télécharger les dernières mises à jour dans JDBC Driver 6.2 sur [Microsoft Download Center](https://go.microsoft.com/fwlink/?linkid=852460), [GitHub](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.2), et [Maven Central](http://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22com.microsoft.sqlserver%22%20AND%20a%3A%22mssql-jdbc%22). Mettez à jour vos projets pour utiliser le 6.2.2 libérer les fichiers JAR. Veuillez consulter les notes pour [v6.2.1](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.1) et [v6.2.2](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.2) pour plus d’informations.
+> Télécharger les dernières mises à jour dans JDBC Driver 6.2 sur [Microsoft Download Center](https://go.microsoft.com/fwlink/?linkid=852460), [GitHub](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.2), et [Maven Central](https://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22com.microsoft.sqlserver%22%20AND%20a%3A%22mssql-jdbc%22). Mettez à jour vos projets pour utiliser le 6.2.2 libérer les fichiers JAR. Veuillez consulter les notes pour [v6.2.1](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.1) et [v6.2.2](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.2) pour plus d’informations.
 
 ### <a name="azure-active-directory-aad-support-for-linux"></a>Prise en charge de Azure Active Directory (AAD) pour Linux
 

@@ -11,12 +11,12 @@ ms.topic: reference
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 7f41b727fe84ab0454a85466cfa74c376788b9e7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c7da4795d3485f5165ac7844f00d5a46f0a29cc9
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730577"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51603666"
 ---
 # <a name="date-and-time-improvements"></a>Améliorations des types de données date et heure
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "47730577"
   
  Pour plus d’informations sur les améliorations de date/heure, consultez [améliorations Date / heure &#40;OLE DB&#41;](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md).  
   
- Pour plus d’informations sur les exemples d’applications qui illustrent cette fonctionnalité, consultez [Exemples de programmation de données SQL Server](http://msftdpprodsamples.codeplex.com/).  
+ Pour plus d’informations sur les exemples d’applications qui illustrent cette fonctionnalité, consultez [Exemples de programmation de données SQL Server](https://msftdpprodsamples.codeplex.com/).  
   
 ## <a name="usage"></a>Utilisation  
  Les sections suivantes décrivent les différentes façons d'utiliser les nouveaux types de date et d'heure.  

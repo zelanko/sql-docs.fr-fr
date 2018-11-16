@@ -11,12 +11,12 @@ ms.assetid: 2246ddeb-7c2f-46f3-8a91-cdd718d39b40
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 81042ababad2b8ec7107a4413dfd6e3dcecafb8c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ef8c981dea064595433568a89088e800d81876e7
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764057"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606819"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-pymssql"></a>Étape 3 : Preuve de concept pour se connecter à SQL à l’aide de pymssql
 [!INCLUDE[Driver_Python_Download](../../../includes/driver_python_download.md)]
@@ -25,7 +25,7 @@ Cet exemple doit être considérée comme une preuve de concept uniquement.  L�
   
 ## <a name="step-1--connect"></a>Étape 1 : se connecter  
   
-Le [pymssql.connect](http://pymssql.org/en/latest/ref/pymssql.html) fonction est utilisée pour se connecter à la base de données SQL.  
+Le [pymssql.connect](https://pymssql.org/en/latest/ref/pymssql.html) fonction est utilisée pour se connecter à la base de données SQL.  
   
 ```python
     import pymssql  
@@ -35,7 +35,7 @@ Le [pymssql.connect](http://pymssql.org/en/latest/ref/pymssql.html) fonction est
   
 ## <a name="step-2--execute-query"></a>Étape 2 : Exécution de requête  
   
-Le [cursor.execute](http://pymssql.org/en/latest/ref/pymssql.html#pymssql.Cursor.execute) fonction peut être utilisée pour récupérer un jeu de résultats d’une requête par rapport à la base de données SQL. Essentiellement, cette fonction accepte n’importe quelle requête et retourne un jeu de résultats qui peut être itéré à l’utilisation de [Cursor.fetchone ()](http://pymssql.org/en/latest/ref/pymssql.html#pymssql.Cursor.fetchone).  
+Le [cursor.execute](https://pymssql.org/en/latest/ref/pymssql.html#pymssql.Cursor.execute) fonction peut être utilisée pour récupérer un jeu de résultats d’une requête par rapport à la base de données SQL. Essentiellement, cette fonction accepte n’importe quelle requête et retourne un jeu de résultats qui peut être itéré à l’utilisation de [Cursor.fetchone ()](https://pymssql.org/en/latest/ref/pymssql.html#pymssql.Cursor.fetchone).  
   
   
 ```python

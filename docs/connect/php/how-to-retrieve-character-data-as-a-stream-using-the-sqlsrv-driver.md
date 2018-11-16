@@ -14,12 +14,12 @@ ms.assetid: 3c0dbca4-abfc-4449-b133-66c819681840
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: af84ebccf47802e157f75ac591f7cd96c5e822be
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 06bb27e8faf8269090bc5920889d1b70f85dc71e
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47754661"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600379"
 ---
 # <a name="how-to-retrieve-character-data-as-a-stream-using-the-sqlsrv-driver"></a>Procédure : récupérer des données caractères sous la forme d’un flux à l’aide du pilote SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -29,7 +29,7 @@ La récupération de données sous forme de flux est disponible uniquement dans 
 Le pilote SQLSRV tire parti des flux PHP pour récupérer de grandes quantités de données à partir du serveur. L’exemple de cette rubrique montre comment récupérer des données caractères sous la forme d’un flux.  
   
 ## <a name="example"></a> Exemple  
-L’exemple suivant récupère une ligne de la table *Production.ProductReview* de la base de données AdventureWorks. Le champ *Comments* de la ligne retournée est récupéré sous la forme d’un flux et affiché à l’aide de la fonction [fpassthru](http://php.net/manual/function.fpassthru.php) PHP.  
+L’exemple suivant récupère une ligne de la table *Production.ProductReview* de la base de données AdventureWorks. Le champ *Comments* de la ligne retournée est récupéré sous la forme d’un flux et affiché à l’aide de la fonction [fpassthru](https://php.net/manual/function.fpassthru.php) PHP.  
   
 La récupération de données sous la forme d’un flux s’effectue à l’aide de [sqlsrv_fetch](../../connect/php/sqlsrv-fetch.md) et [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) avec le type de retour spécifié en tant que flux de caractères. Le type de retour est spécifié à l’aide de la constante **SQLSRV_PHPTYPE_STREAM**. Pour plus d’informations sur les constantes **sqlsrv**, consultez [Constantes &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).  
   

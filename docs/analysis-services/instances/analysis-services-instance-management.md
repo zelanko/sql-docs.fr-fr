@@ -1,6 +1,6 @@
 ---
-title: Analysis Services de gestion de serveur | Documents Microsoft
-ms.date: 05/02/2018
+title: SQL Server Analysis Services de gestion de serveur | Microsoft Docs
+ms.date: 11/15/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,14 +9,17 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 62c350b13db727b747fc4573b3bb634ac59256f9
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 41c689b2dfb122b94204cfbb8d52f9f8e9a1a8fb
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015976"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700437"
 ---
-# <a name="analysis-services-server-management"></a>Gestion de serveur Analysis Services
+# <a name="sql-server-analysis-services-server-management"></a>Gestion de serveur SQL Server Analysis Services
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+
+Pour Azure Analysis Services, consultez [gérer Azure Analysis Services](https://docs.microsoft.com/azure/analysis-services/analysis-services-manage).
 
   Une instance de serveur d’Analysis Services est une copie de la **msmdsrv.exe** exécutable qui s’exécute comme un service de système d’exploitation. Chaque instance est entièrement indépendante des autres instances situées sur le même serveur et dispose de ses propres paramètres de configuration, autorisations, ports, comptes de démarrage, stockage de fichier, et propriétés de mode serveur.  
   
@@ -24,10 +27,10 @@ ms.locfileid: "34015976"
   
 -   Le nom du service de l’instance par défaut est MSSQLServerOLAPService.  
   
--   Le nom du service de chaque instance nommée est MSOLAP$ InstanceName.  
+-   Le nom de service de chaque instance nommée d’est MSOLAP$ InstanceName.  
   
 > [!NOTE]  
->  Si plusieurs instances sont installés, le programme d’installation installe également un service redirecteur, qui est intégré à le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service Browser. Le service redirecteur est chargé de diriger les clients vers les instances nommées appropriées [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser s'exécute toujours dans le contexte de sécurité du compte de service local, un compte d'utilisateur limité utilisé par Windows pour les services système qui n'accèdent pas aux ressources en dehors de l'ordinateur local.  
+>  Si plusieurs instances sont installés, le programme d’installation installe également un service redirecteur, qui est intégré à la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service Browser. Le service redirecteur est chargé de diriger les clients vers les instances nommées appropriées [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser s'exécute toujours dans le contexte de sécurité du compte de service local, un compte d'utilisateur limité utilisé par Windows pour les services système qui n'accèdent pas aux ressources en dehors de l'ordinateur local.  
   
  La notion d'instances multiples signifie que vous pouvez monter en puissance en installant plusieurs instances de serveur sur le même matériel. Pour Analysis Services en particulier, cela signifie également que vous pouvez prendre en charge différents modes serveur en disposant de plusieurs instances sur le même serveur, chacune étant configurée pour s'exécuter dans un mode spécifique.  
   
@@ -42,20 +45,20 @@ ms.locfileid: "34015976"
 > [!NOTE]  
 >  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint constitue toutefois une exception. L’administration de serveur d’un déploiement [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] s’effectue toujours dans le contexte d’une batterie de serveurs SharePoint. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] diffère des autres modes serveur en ceci qu’il est toujours à instance unique et est toujours géré à l’aide de l’Administration centrale de SharePoint ou de l’outil de configuration de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Bien qu’il soit possible de se connecter à [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint dans SQL Server Management Studio ou [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], cette méthode est déconseillée. Une batterie de serveurs SharePoint inclut l'infrastructure qui synchronise l'état du serveur et surveille la disponibilité du serveur. L'utilisation d'autres outils peut interférer avec ces opérations. Pour plus d’informations sur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] administration de serveur, consultez [Power Pivot pour SharePoint ](../../analysis-services/power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md).  
   
-## <a name="in-this-section"></a>Contenu de cette section  
+## <a name="common-server-management-topics"></a>Rubriques de gestion de serveur courants  
   
 |Lien|Description de la tâche|  
 |----------|----------------------|  
 |[Configuration consécutive à l’installation](../../analysis-services/instances/post-install-configuration-analysis-services.md)|Décrit les tâches obligatoires et facultatives qui complètent ou modifient une installation d'Analysis.|  
 |[Se connecter à Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)|Décrit les propriétés des chaînes de connexion, les bibliothèques clientes, les méthodologies d'authentification, ainsi que les étapes requises pour établir ou désactiver des connexions.|  
-|[Surveiller une Instance Analysis Services](../../analysis-services/instances/monitor-an-analysis-services-instance.md)|Décrit les outils et techniques permettant de surveiller une instance de serveur, notamment l'utilisation de l'Analyseur de performances et de SQL Server Profiler.|  
+|[Analyser une instance Analysis Services](../../analysis-services/instances/monitor-an-analysis-services-instance.md)|Décrit les outils et techniques permettant de surveiller une instance de serveur, notamment l'utilisation de l'Analyseur de performances et de SQL Server Profiler.|  
 |[Haute disponibilité et extensibilité](../../analysis-services/instances/high-availability-and-scalability-in-analysis-services.md)|Décrit les techniques couramment utilisées pour rendre les bases de données Analysis Services hautement disponibles et évolutives. |  
 |[Scénarios de globalisation pour Analysis Services](../../analysis-services/globalization-scenarios-for-analysis-services.md)|Explique la prise en charge linguistique et du classement, décrit les étapes permettant de modifier les deux propriétés et fournit des conseils pour définir et tester les comportements de langue et de classement.|  
 |[Enregistrer les opérations dans Analysis Services](../../analysis-services/instances/log-operations-in-analysis-services.md)|Décrit les journaux et explique comment les configurer.|  
   
   
 ## <a name="see-also"></a>Voir aussi  
- [Comparaison des Solutions multidimensionnelles et tabulaires ](../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md)   
- [Déterminer le mode serveur d’une instance Analysis Services](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
+ [Comparaison des Solutions tabulaires et multidimensionnelles ](../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md)   
+ [Déterminer le mode serveur d'une instance Analysis Services](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   

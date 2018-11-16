@@ -11,12 +11,12 @@ ms.assetid: 574e326f-0520-4003-bdf1-62d92c3db457
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a72f59535e3cac718f1c2e7821cd69962043987f
-ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
+ms.openlocfilehash: 66f12f33e7b6eaac901ca29961465be71e7996e3
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48851974"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51605649"
 ---
 # <a name="understanding-xa-transactions"></a>Présentation des transactions XA
 
@@ -45,7 +45,7 @@ Les recommandations supplémentaires suivantes s'appliquent aux transactions for
 
 - Lorsque vous utilisez des transactions XA avec Microsoft Distributed Transaction Coordinator (MS DTC), vous pouvez remarquer que la version actuelle de MS DTC ne prend pas en charge le comportement de branche XA fortement couplée. Par exemple, MS DTC a un mappage un-à-un entre un ID de transaction de branche XA (XID) et un ID de transaction MS DTC et le travail effectué par les branches XA couplées de manière lâche est isolé.  
   
-     Le correctif logiciel disponible sur la page web [MSDTC et transactions fortement couplées](http://support.microsoft.com/kb/938653) autorise la prise en charge des branches XA fortement couplées quand plusieurs branches XA avec le même ID de transaction globale (GTRID) sont mappées à un ID de transaction MS DTC unique. Cette prise en charge permet à plusieurs branches XA fortement couplées de voir les modifications apportées à chacune d’elles dans le gestionnaire de ressources, par exemple [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+     Le correctif logiciel disponible sur la page web [MSDTC et transactions fortement couplées](https://support.microsoft.com/kb/938653) autorise la prise en charge des branches XA fortement couplées quand plusieurs branches XA avec le même ID de transaction globale (GTRID) sont mappées à un ID de transaction MS DTC unique. Cette prise en charge permet à plusieurs branches XA fortement couplées de voir les modifications apportées à chacune d’elles dans le gestionnaire de ressources, par exemple [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 - Un indicateur [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) permet aux applications d’utiliser les transactions XA fortement couplées, qui ont des ID de transaction de branche XA (BQUAL) différents mais le même ID de transaction global (GTRID) et ID de format (FormatID). Pour utiliser cette fonctionnalité, vous devez définir le [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) sur le paramètre d’indicateurs de la méthode XAResource.start :  
   
@@ -102,7 +102,7 @@ Vous pouvez configurer les composants de transaction distribuée du pilote JDBC 
   
 3. Pour autoriser un utilisateur spécifique à participer à des transactions distribuées avec le pilote JDBC, ajoutez-le au rôle SqlJDBCXAUser.  
   
-Vous ne pouvez configurer qu’une seule version à la fois de l’assembly sqljdbc_xa.dll sur chaque instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les applications devront peut-être utiliser des versions différentes du pilote JDBC pour se connecter à la même instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par le biais de la connexion XA. Dans ce cas, sqljdbc_xa.dll, qui est livré avec le pilote JDBC le plus récent, doit être installé sur l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+Vous ne pouvez configurer qu'une seule version à la fois de l'assembly sqljdbc_xa.dll sur chaque instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les applications devront peut-être utiliser des versions différentes du pilote JDBC pour se connecter à la même instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par le biais de la connexion XA. Dans ce cas, sqljdbc_xa.dll, qui est livré avec le pilote JDBC le plus récent, doit être installé sur l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 Il existe trois façons de vérifier la version actuellement installée de sqljdbc_xa.dll sur l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
@@ -117,7 +117,7 @@ Il existe trois façons de vérifier la version actuellement installée de sqljd
 ### <a name="BKMK_ServerSide"></a> Configuration des paramètres du délai d’attente côté serveur pour la restauration automatique des transactions non préparées  
 
 > [!WARNING]  
-> Il s’agit d’une nouvelle option côté serveur proposée par Microsoft JDBC Driver 4.2 (et versions ultérieures) pour SQL Server. Pour obtenir le comportement mis à jour, vérifiez que le fichier sqljdbc_xa.dll est mis à jour. Pour plus d’informations sur la définition des délais d’expiration côté client, voir [XAResource.setTransactionTimeout()](http://docs.oracle.com/javase/8/docs/api/javax/transaction/xa/XAResource.html).  
+> Il s’agit d’une nouvelle option côté serveur proposée par Microsoft JDBC Driver 4.2 (et versions ultérieures) pour SQL Server. Pour obtenir le comportement mis à jour, vérifiez que le fichier sqljdbc_xa.dll est mis à jour. Pour plus d’informations sur la définition des délais d’expiration côté client, voir [XAResource.setTransactionTimeout()](https://docs.oracle.com/javase/8/docs/api/javax/transaction/xa/XAResource.html).  
 
 Il existe deux paramètres du Registre (valeurs DWORD) pour contrôler le comportement du délai d'attente des transactions distribuées :  
   
@@ -167,7 +167,7 @@ Lorsque vous installez une nouvelle version du pilote JDBC, vous devez utiliser 
   
 ### <a name="configuring-the-user-defined-roles"></a>Configuration des rôles définis par l'utilisateur
 
-Pour autoriser un utilisateur spécifique à participer à des transactions distribuées avec le pilote JDBC, ajoutez-le au rôle SqlJDBCXAUser. Par exemple, utilisez le code [!INCLUDE[tsql](../../includes/tsql-md.md)] suivant pour ajouter un utilisateur appelé « shelby » (« shelby » est un nom d’utilisateur standard d’ouverture de session SQL) au rôle SqlJDBCXAUser :  
+Pour autoriser un utilisateur spécifique à participer à des transactions distribuées avec le pilote JDBC, ajoutez-le au rôle SqlJDBCXAUser. Par exemple, utilisez le code [!INCLUDE[tsql](../../includes/tsql-md.md)] suivant pour ajouter un utilisateur appelé « shelby » (« shelby » est un nom d'utilisateur standard d'ouverture de session SQL) au rôle SqlJDBCXAUser :  
 
 ```sql
 USE master  

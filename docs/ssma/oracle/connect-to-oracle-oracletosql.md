@@ -10,12 +10,12 @@ ms.assetid: 23a48cb6-ff30-49bb-b4a7-603ebcab336f
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 3e2e84fd2117afe15075084741e65989a30960cb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: da846d4afb4ce8fe745b98c8503901fe804520e0
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674173"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51681107"
 ---
 # <a name="connect-to-oracle-oracletosql"></a>Se connecter à Oracle (OracleToSQL)
 Utilisez le **se connecter à Oracle** boîte de dialogue pour vous connecter à la base de données Oracle que vous souhaitez migrer.  
@@ -70,7 +70,7 @@ Si vous utilisez le mode de chaîne de connexion, entrez la chaîne de connexion
   
 Chaînes de connexion sont constitués de paires nom / valeur de paramètre.  
   
--   Pour plus d’informations de chaîne de connexion OLE DB, consultez [fournisseur Microsoft OLE DB pour Oracle](http://go.microsoft.com/fwlink/?LinkId=85640) article dans la bibliothèque MSDN.  
+-   Pour plus d’informations de chaîne de connexion OLE DB, consultez [fournisseur Microsoft OLE DB pour Oracle](https://go.microsoft.com/fwlink/?LinkId=85640) article dans la bibliothèque MSDN.  
   
 Pour les chaînes de connexion de SSMA, toujours inclure le paramètre de fournisseur. En outre, assurez-vous que vous incluez le paramètre de Port lorsque vous vous connectez à Oracle.  
   

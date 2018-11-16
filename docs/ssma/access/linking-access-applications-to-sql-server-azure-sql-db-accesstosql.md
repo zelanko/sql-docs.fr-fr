@@ -23,12 +23,12 @@ ms.assetid: 82374ad2-7737-4164-a489-13261ba393d4
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 61558536574750e7588124afb75cf26ee580b22a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 20efdf681baa8305b3b2be08b2e9f3efe999d3fa
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701507"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51668528"
 ---
 # <a name="linking-access-applications-to-sql-server---azure-sql-db-accesstosql"></a>Liaison des applications Access vers SQL Server - Azure SQL DB (AccessToSQL)
 Si vous souhaitez utiliser vos applications Access existantes avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous pouvez lier vos tables Access d’origine à migrées [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou des tables de SQL Azure. La liaison modifie la base de données Access afin que vos pages d’accès aux requêtes, formulaires, rapports et données utilisent les données dans le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou base de données SQL Azure au lieu des données dans votre base de données Access.  
@@ -56,7 +56,7 @@ Lorsque vous ouvrez une table dans Access, les données sont récupérées à l�
   
 > [!IMPORTANT]  
 > Pour lier des tables access avec une base de données Azure, vous devez Client(SNAC) Native de SQL Server version 10.5 ou version ultérieure.   
-> Vous pouvez obtenir la dernière version de SNAC de [Microsoft® SQL Server® 2008 R2 Feature Pack](http://go.microsoft.com/fwlink/?LinkId=196940).  
+> Vous pouvez obtenir la dernière version de SNAC de [Microsoft® SQL Server® 2008 R2 Feature Pack](https://go.microsoft.com/fwlink/?LinkId=196940).  
   
 ## <a name="unlinking-access-tables"></a>Dissociation accéder aux tables  
 Lorsque vous supprimez le lien d’une table Access à partir d’un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou table SQL Azure, SSMA restaure la table d’accès d’origine et ses données.  

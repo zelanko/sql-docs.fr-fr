@@ -20,19 +20,19 @@ ms.assetid: dbf9eb5a-bd99-42f7-b275-556d0def045d
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1defa76a4fb59812165929f91e14bb5fe7d9026d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f7ec6322489ba862d335c5c52021d643da73deb1
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47646207"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51662468"
 ---
 # <a name="clr-user-defined-aggregates---requirements"></a>Agrégats CLR définis par l’utilisateur - Exigences
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Un type dans un assembly CLR (Common Language Runtime) peut être enregistré comme une fonction d'agrégation définie par l'utilisateur, tant qu'il implémente le contrat d'agrégation requis. Ce contrat se compose de la **SqlUserDefinedAggregate** attribut et l’agrégation des méthodes de contrat. Le contrat d’agrégation inclut le mécanisme permettant d’enregistrer l’état intermédiaire de l’agrégation et le mécanisme permettant d’accumuler de nouvelles valeurs, qui se compose de quatre méthodes : **Init**, **Accumulate**,  **Fusion**, et **Terminer**. Lorsque ces conditions sont satisfaites, vous serez en mesure de tirer pleinement parti des agrégats définis par l’utilisateur dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les sections suivantes de cette rubrique fournissent des détails supplémentaires sur la façon de créer et d'utiliser les agrégats définis par l'utilisateur. Pour obtenir un exemple, consultez [Invoking CLR User-Defined les fonctions d’agrégation](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregate-invoking-functions.md).  
   
 ## <a name="sqluserdefinedaggregate"></a>SqlUserDefinedAggregate  
- Pour plus d’informations, consultez [SqlUserDefinedAggregateAttribute](http://go.microsoft.com/fwlink/?LinkId=124626).  
+ Pour plus d’informations, consultez [SqlUserDefinedAggregateAttribute](https://go.microsoft.com/fwlink/?LinkId=124626).  
   
 ## <a name="aggregation-methods"></a>Méthodes d'agrégation  
  La classe inscrite comme agrégat défini par l'utilisateur doit prendre en charge les méthodes d'instance suivantes. Ce sont les méthodes que le processeur de requêtes utilise pour calculer l'agrégation :  
@@ -45,7 +45,7 @@ ms.locfileid: "47646207"
 |**Mettre fin à**|`public return_type Terminate();`|Cette méthode termine le calcul d'agrégation et retourne le résultat de l'agrégation. Le *return_type* doit être managé [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de type de données qui est l’équivalent managé de *return_sqltype* spécifié dans le **CREATE AGGREGATE** instruction. Le *return_type* peut également être un type défini par l’utilisateur.|  
   
 ### <a name="table-valued-parameters"></a>Paramètres table  
- Les paramètres table (types de tables définis par l'utilisateur et passés dans une procédure ou une fonction) offrent un moyen efficace pour passer plusieurs lignes de données au serveur. Paramètres table fournissent des fonctionnalités similaires aux tableaux de paramètres, mais offrent une plus grande flexibilité et une intégration plus étroite avec [!INCLUDE[tsql](../../includes/tsql-md.md)]. Ils sont également susceptibles de générer de meilleures performances. Les paramètres table aident également à réduire le nombre d'allers-retours au serveur. Au lieu d'envoyer plusieurs demandes au serveur, comme avec une liste de paramètres scalaires, les données peuvent être envoyées au serveur en tant que paramètres table. Un type de table défini par l'utilisateur ne peut pas être passé en tant que paramètre table à une fonction ou à une procédure stockée managée s'exécutant dans le processus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ni être retourné à partir de ces dernières. Également, les paramètres table ne peuvent pas être utilisés dans l'étendue d'une connexion contextuelle. Toutefois, un paramètre table peut être utilisé avec SqlClient dans les procédures stockées managées ou les fonctions qui exécutent dans le processus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], s'il est utilisé dans une connexion qui n'est pas une connexion contextuelle. La connexion peut s'effectuer au serveur qui exécute la procédure managée ou la fonction. Pour plus d’informations sur les paramètres table, consultez [utiliser les paramètres &#40;moteur de base de données&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md).  
+ Les paramètres table (types de tables définis par l'utilisateur et passés dans une procédure ou une fonction) offrent un moyen efficace pour passer plusieurs lignes de données au serveur. Ils procurent une fonctionnalité semblable aux tableaux de paramètres, mais offrent une meilleure souplesse et une intégration plus étroite à [!INCLUDE[tsql](../../includes/tsql-md.md)]. Ils sont également susceptibles de générer de meilleures performances. Les paramètres table aident également à réduire le nombre d'allers-retours au serveur. Au lieu d'envoyer plusieurs demandes au serveur, comme avec une liste de paramètres scalaires, les données peuvent être envoyées au serveur en tant que paramètres table. Un type de table défini par l'utilisateur ne peut pas être passé en tant que paramètre table à une fonction ou à une procédure stockée managée s'exécutant dans le processus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ni être retourné à partir de ces dernières. Également, les paramètres table ne peuvent pas être utilisés dans l'étendue d'une connexion contextuelle. Toutefois, un paramètre table peut être utilisé avec SqlClient dans les procédures stockées managées ou les fonctions qui exécutent dans le processus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], s'il est utilisé dans une connexion qui n'est pas une connexion contextuelle. La connexion peut s'effectuer au serveur qui exécute la procédure managée ou la fonction. Pour plus d’informations sur les paramètres table, consultez [utiliser les paramètres &#40;moteur de base de données&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md).  
   
 ## <a name="change-history"></a>Historique des modifications  
   

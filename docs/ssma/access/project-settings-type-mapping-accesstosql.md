@@ -17,12 +17,12 @@ ms.assetid: b87b9683-abed-4677-8c50-18bdba704655
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 052681d249d3c93e54c23ebcf2b42cadf5724f2a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8a695217909641c737b7780fc4f8b80b2cb08152
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855107"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51681247"
 ---
 # <a name="project-settings-type-mapping-accesstosql"></a>Paramètres du projet (mappage de Type) (AccessToSQL)
 Les paramètres de mappage de Type de projet vous permettent de définir des mappages de type par défaut pour le projet SSMA. Vous pouvez également spécifier des mappages de type pour les objets de base de données individuelle. Pour plus d’informations, consultez [Source de mappage et les Types de données cible](mapping-source-and-target-data-types-accesstosql.md).  
@@ -75,5 +75,5 @@ Cliquez pour réinitialiser tous les mappages de type de données pour les valeu
   
 ## <a name="see-also"></a>Voir aussi  
 [Mappage de types de données sources et cibles](mapping-source-and-target-data-types-accesstosql.md)  
-[Reference(Access) d’Interface utilisateur](http://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
+[Reference(Access) d’Interface utilisateur](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
   

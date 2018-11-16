@@ -13,17 +13,17 @@ ms.assetid: 3eca5717-e50f-40db-be16-a1cebbdfee70
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: eff5cd89f349b3835eaace4d75c3a3a13655b4b0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bf2dbc66590360b5f7a06409eccff7244ba89224
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682637"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600159"
 ---
 # <a name="connecting-with-bcp"></a>Connexion avec bcp
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-L’utilitaire [bcp](http://go.microsoft.com/fwlink/?LinkID=190626) est disponible dans [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur Linux et macOS. Cette page décrit les différences de la version Windows de `bcp`.
+L’utilitaire [bcp](https://go.microsoft.com/fwlink/?LinkID=190626) est disponible dans [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur Linux et macOS. Cette page décrit les différences de la version Windows de `bcp`.
   
 - La marque de fin de champ est une tabulation (« \t  »).  
   
@@ -100,7 +100,7 @@ Exécute l'instruction SET QUOTED_IDENTIFIERS ON dans la connexion entre l'utili
 Spécifie l’indicateur de fin de ligne.  
   
 - -r  
-Spécifie que les données de type devise, date et heure sont copiées en bloc dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en utilisant le format régional défini par les paramètres régionaux de l'ordinateur client.  
+Spécifie que les données de type devise, date et heure sont copiées en bloc dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en utilisant le format régional défini par les paramètres régionaux de l’ordinateur client.  
   
 - -S *server*  
 Spécifie le nom de la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance auquel se connecter, ou si -D est utilisé, une source de données.  
@@ -112,7 +112,7 @@ Spécifie l’indicateur de fin de champ.
 Spécifie que l’utilitaire `bcp` se connecte à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] avec une connexion approuvée (sécurité intégrée).  
   
 - -U *login_id*  
-Spécifie l'ID de connexion utilisé pour une connexion à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+Spécifie l’ID de connexion utilisé pour une connexion à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 - -V  
 Indique le numéro de version et le copyright de l'utilitaire `bcp`.  

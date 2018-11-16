@@ -12,12 +12,12 @@ ms.assetid: 509cb65d-2f54-427a-83d7-37919cc4e3e3
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 9298a094187b38cf005928dfc4832fc529222b1b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 068ae849454fefbc6a4bd08d19a530a59d2788e8
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601782"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51666568"
 ---
 # <a name="converting-sap-ase-database-objects-sybasetosql"></a>Convertir des objets de base de données SAP ASE (SybaseToSQL)
 Après vous être connecté à SAP Adaptive Server Enterprise (ASE), connecté à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure et définir le projet et les options de mappage de données, vous pouvez convertir des objets de base de données SAP Adaptive Server Enterprise (ASE) à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou base de données SQL Azure objets.  
@@ -124,7 +124,7 @@ Pour chaque élément qui ne peut pas être converti, vous devez déterminer ce 
 -   Vous pouvez exclure l’objet de la migration. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou de l’Explorateur de métadonnées SQL Azure et l’Explorateur de métadonnées de Sybase, désactivez la case à cocher en regard de l’élément avant de charger les objets vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure et la migration des données à partir de SAP ASE.  
   
 ## <a name="next-steps"></a>Étapes suivantes  
-L’étape suivante du processus de migration est [le chargement des objets de base de données convertis dans SQL Server / SQL Azure (SybaseToSQL)](http://msdn.microsoft.com/4c59256f-99a8-4351-9559-a455813dbd06).  
+L’étape suivante du processus de migration est [le chargement des objets de base de données convertis dans SQL Server / SQL Azure (SybaseToSQL)](https://msdn.microsoft.com/4c59256f-99a8-4351-9559-a455813dbd06).  
   
 ## <a name="see-also"></a>Voir aussi  
 [Migration SAP ASE bases de données SQL Server - Azure SQL Database &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  

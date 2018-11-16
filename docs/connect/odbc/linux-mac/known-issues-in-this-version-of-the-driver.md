@@ -12,12 +12,12 @@ helpviewer_keywords:
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 25ebc4837eb37604a45e98112fa5fc24bdb3e69b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 15c0402f83dec65b6476d481b77553a037d4fa47
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742997"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602029"
 ---
 # <a name="known-issues-in-this-version-of-the-driver"></a>Problèmes connus dans cette version du pilote
 
@@ -25,7 +25,7 @@ ms.locfileid: "47742997"
 
 Cet article contient une liste des problèmes connus avec Microsoft ODBC Driver 13, 13.1 et 17 pour SQL Server sur Linux et macOS.
 
-D’autres problèmes seront publiés sur le [blog de l’équipe du pilote Microsoft ODBC](http://blogs.msdn.com/b/sqlnativeclient/).  
+D’autres problèmes seront publiés sur le [blog de l’équipe du pilote Microsoft ODBC](https://blogs.msdn.com/b/sqlnativeclient/).  
 
 - Windows, Linux et macOS convertissent différemment des caractères de la zone PUA (Private Use Area) ou des caractères EUDC (End User-Defined Characters). Les conversions effectuées sur le serveur dans [!INCLUDE[tsql](../../../includes/tsql-md.md)] utilisent la bibliothèque de conversion Windows. Les conversions dans le pilote utilisent les bibliothèques de conversion Windows, Linux ou macOS. Chaque bibliothèque peut produire des résultats différents lors de l’exécution de ces conversions. Pour plus d’informations, voir [Caractères End-User-Defined et Private Use Area](/windows/desktop/Intl/end-user-defined-characters).
 

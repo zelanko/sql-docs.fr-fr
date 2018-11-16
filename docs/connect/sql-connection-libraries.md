@@ -8,16 +8,16 @@ ms.custom: ''
 ms.topic: article
 ms.date: 06/18/2018
 ms.author: genemi
-ms.openlocfilehash: fa070ecfed9d962dc2716e5b72eaf690eff0fe7f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4286a9a1fcc2eff3becd483d658b371bb6452032
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806088"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600369"
 ---
 # <a name="connection-modules-for-microsoft-sql-databases"></a>Modules de connexion pour les bases de données Microsoft SQL
 
-Cet article fournit des liens de téléchargement pour les modules de connexion ou *pilotes* que vos programmes clients peuvent utiliser pour interagir avec [Microsoft SQL Server](../relational-databases/database-features.md)et avec sa représentation dans le cloud [Azure Base de données SQL](http://docs.microsoft.com/azure/sql-database/). Pilotes sont disponibles pour un large éventail de langages de programmation, en cours d’exécution sur les systèmes d’exploitation suivants :
+Cet article fournit des liens de téléchargement pour les modules de connexion ou *pilotes* que vos programmes clients peuvent utiliser pour interagir avec [Microsoft SQL Server](../relational-databases/database-features.md)et avec sa représentation dans le cloud [Azure Base de données SQL](https://docs.microsoft.com/azure/sql-database/). Pilotes sont disponibles pour un large éventail de langages de programmation, en cours d’exécution sur les systèmes d’exploitation suivants :
 
 - Linux (Ubuntu)
 - MacOS
@@ -43,13 +43,13 @@ original page is no longer the latest because the newer page is being added.
 But this policy is not agreed on or observed,
 putting the links in the following table at risk for being outdated.
 
-PHP driver in Github.com also uses this FWLink:  http://go.microsoft.com/fwlink/?LinkID=518036 ,
-although the FWLink is less precise than is http://github.com/Microsoft/msphpsql/tree/dev#install-unix .
+PHP driver in Github.com also uses this FWLink:  https://go.microsoft.com/fwlink/?LinkID=518036 ,
+although the FWLink is less precise than is https://github.com/Microsoft/msphpsql/tree/dev#install-unix .
 -->
 
 | Langue | Téléchargez le pilote SQL |
 | :------- | :---------------------- |
-| C# | [ADO.NET](http://www.microsoft.com/net/download/)<br /><br />[.NET core, pour Linux Ubuntu](https://www.microsoft.com/net/core#Ubuntu)<br />[.NET core, pour MacOS](https://www.microsoft.com/net/core#macos)<br />[.NET core, pour Windows](https://www.microsoft.com/net/core) |
+| C# | [ADO.NET](https://www.microsoft.com/net/download/)<br /><br />[.NET core, pour Linux Ubuntu](https://www.microsoft.com/net/core#Ubuntu)<br />[.NET core, pour MacOS](https://www.microsoft.com/net/core#macos)<br />[.NET core, pour Windows](https://www.microsoft.com/net/core) |
 | C++ | [ODBC](./odbc/download-odbc-driver-for-sql-server.md)<br /><br />[OLE DB](./oledb/download-oledb-driver-for-sql-server.md) |
 | Java | [JDBC](./jdbc/download-microsoft-jdbc-driver-for-sql-server.md) |
 | Node.js | [Pilote Node.js, instructions d’installation](./node-js/step-1-configure-development-environment-for-node-js-development.md) |
@@ -68,18 +68,18 @@ Le tableau suivant répertorie des exemples d’infrastructures objet mappage re
 
 | Langue | Téléchargement du pilote ORM |
 | :------- | :------------------ |
-| C# | [Entity Framework Core](http://docs.microsoft.com/ef/core/)<br />[Entity Framework (6.x ou version ultérieure)](http://docs.microsoft.com/ef/) |
-| Java | [Mise en veille prolongée ORM](http://hibernate.org/orm)|
-| PHP | [Parlant ORM, inclus dans l’installation de Laravel](http://laravel.com/docs/) |
-| Node.js | [Sequelize ORM](http://docs.sequelizejs.com) |
-| Python | [Django](http://www.djangoproject.com/) |
-| Ruby | [Ruby on Rails](http://rubyonrails.org/) |
+| C# | [Entity Framework Core](https://docs.microsoft.com/ef/core/)<br />[Entity Framework (6.x ou version ultérieure)](https://docs.microsoft.com/ef/) |
+| Java | [Mise en veille prolongée ORM](https://hibernate.org/orm)|
+| PHP | [Parlant ORM, inclus dans l’installation de Laravel](https://laravel.com/docs/) |
+| Node.js | [Sequelize ORM](https://docs.sequelizejs.com) |
+| Python | [Django](https://www.djangoproject.com/) |
+| Ruby | [Ruby on Rails](https://rubyonrails.org/) |
 
 
 <a name="anchor-60-build-an-app-webpages" />
 
 ## <a name="build-an-app-webpages"></a>Pages Web d’une application générée
-[http://aka.ms/sqldev](http://aka.ms/sqldev) vous accédez à un ensemble de *une application générée* pages Web. Les pages Web fournissent des informations sur les nombreuses combinaisons de langage de programmation, système d’exploitation et pilote de connexion SQL. Parmi les informations fournies par les pages Web d’une application générée contient les éléments suivants :
+[https://aka.ms/sqldev](https://aka.ms/sqldev) vous accédez à un ensemble de *une application générée* pages Web. Les pages Web fournissent des informations sur les nombreuses combinaisons de langage de programmation, système d’exploitation et pilote de connexion SQL. Parmi les informations fournies par les pages Web d’une application générée contient les éléments suivants :
 
 - Plus d’informations sur la prise en main dès le début, pour chaque combinaison de langue, système d’exploitation + pilote.
     - Instructions pour installer les derniers pilotes de connexion SQL.
@@ -97,7 +97,7 @@ Le tableau suivant répertorie des exemples d’infrastructures objet mappage re
 &nbsp;
 
 ## <a name="related-links"></a>Liens connexes
-- [Exemples pour la connexion à la base de données SQL Azure dans le cloud, avec Java et d’autres langages de code](http://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java).
+- [Exemples pour la connexion à la base de données SQL Azure dans le cloud, avec Java et d’autres langages de code](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java).
 
 <!-- Image references -->
 

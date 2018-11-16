@@ -14,12 +14,12 @@ ms.assetid: fee6e6b8-aad9-496b-84a2-18d2950470a4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 50c03fb857a2c136748a5f9c5c4630bff29b49c7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5424315950e33bda642b4c0e39474b3a87a63fbd
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47691817"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602169"
 ---
 # <a name="how-to-specify-php-data-types"></a>Procédure : spécifier des types de données PHP
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -34,10 +34,10 @@ Les étapes suivantes récapitulent la manière de spécifier des types de donn�
   
 3.  Récupérez les données de champ d’une ligne retournée à l’aide de [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) avec le type de données PHP souhaité spécifié en tant que troisième paramètre facultatif. Si le troisième paramètre facultatif n’est pas spécifié, les données sont retournées selon les types PHP par défaut. Pour plus d’informations sur les types de retour PHP par défaut, consultez [Default PHP Data Types](../../connect/php/default-php-data-types.md).  
   
-    Pour plus d’informations sur les constantes utilisées pour spécifier le type de données PHP, consultez la section PHPTYPE de [Constantes &#40;pilotes Microsoft pour PHP pour SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).  
+    Pour plus d’informations sur les constantes utilisées pour spécifier le type de données PHP, consultez la section PHPTYPE de [Constantes &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).  
   
 ## <a name="example"></a> Exemple  
-L’exemple suivant récupère des lignes de la table *Production.ProductReview* de la base de données AdventureWorks. Dans chaque ligne retournée, le champ *ReviewDate* est récupéré sous forme de chaîne et le champ *Comments* sous forme de flux. Les données de flux apparaissent à l’aide de la fonction [fpassthru](http://php.net/manual/en/function.fpassthru.php) PHP.  
+L’exemple suivant récupère des lignes de la table *Production.ProductReview* de la base de données AdventureWorks. Dans chaque ligne retournée, le champ *ReviewDate* est récupéré sous forme de chaîne et le champ *Comments* sous forme de flux. Les données de flux apparaissent à l’aide de la fonction [fpassthru](https://php.net/manual/en/function.fpassthru.php) PHP.  
   
 L’exemple part du principe que SQL Server et la base de données [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) sont installés sur l’ordinateur local.  Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
   

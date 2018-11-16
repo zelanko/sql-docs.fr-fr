@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 8a870ed2fb711599556178132e133039098f3051
-ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
+ms.openlocfilehash: f0acfa636a3432dcffb18cfec57ee7625c1eb01b
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37909819"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696428"
 ---
 # <a name="install-sql-server-operations-manager-scom-management-packs-for-analytics-platform-system"></a>Installer des packs d’administration de SQL Server Operations Manager (SCOM) pour le système de plateforme d’Analytique
 Suivez ces étapes pour télécharger et installer les packs d’administration de System Center Operations Manager (SCOM) pour SQL Server PDW. Les packs d’administration sont requises pour analyser SQL Server PDW à partir de SCOM.  
@@ -25,13 +25,13 @@ Suivez ces étapes pour télécharger et installer les packs d’administration 
 System Center Operations Manager doit être installé et en cours d’exécution. SQL Server 2012 PDW nécessite System Center Operations Manager 2007 R2, System Center Operations Manager 2012 ou System Center Operations Manager 2012 service pack 1.  
   
 ## <a name="Step1"></a>Étape 1 : Télécharger les packs d’administration  
-Pour la charge de travail APS PDW, téléchargez le [System Center Management Pack pour le système de plateforme d’Analytique Microsoft](http://go.microsoft.com/fwlink/?LinkId=396857).  
+Pour la charge de travail APS PDW, téléchargez le [System Center Management Pack pour le système de plateforme d’Analytique Microsoft](https://go.microsoft.com/fwlink/?LinkId=396857).  
   
-Pour la gestion de l’appliance, téléchargez le [le Pack d’administration de la Base de Appliance SQL Server](http://www.microsoft.com/en-us/download/details.aspx?displaylang=en&id=11436).  
+Pour la gestion de l’appliance, téléchargez le [le Pack d’administration de la Base de Appliance SQL Server](https://www.microsoft.com/download/details.aspx?displaylang=en&id=11436).  
   
-Pour les versions antérieures de PDW sans APS, téléchargez le[Pack d’analyse System Center pour Microsoft SQL Server 2012 Parallel Data Warehouse Appliance](http://go.microsoft.com/fwlink/p/?LinkId=282661).  
+Pour les versions antérieures de PDW sans APS, téléchargez le[Pack d’analyse System Center pour Microsoft SQL Server 2012 Parallel Data Warehouse Appliance](https://go.microsoft.com/fwlink/p/?LinkId=282661).  
   
-<!-- MISSING LINKS - For the HDInsight workload, download the [System Center Management Pack for HDInsight](http://go.microsoft.com/fwlink/?LinkId=390208).  -->
+<!-- MISSING LINKS - For the HDInsight workload, download the [System Center Management Pack for HDInsight](https://go.microsoft.com/fwlink/?LinkId=390208).  -->
   
 ## <a name="Step2"></a>Étape 2 : Installer les packs d’administration  
   

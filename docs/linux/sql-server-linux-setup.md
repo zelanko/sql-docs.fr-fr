@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
-ms.openlocfilehash: f277ca5984523ea25a0a7a8f02cde025d6e14789
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: 4e4de2fbb87fb7716ccde8de52924cd2402424fc
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419384"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51675458"
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Consignes d’installation pour SQL Server sur Linux
 
@@ -38,10 +38,10 @@ SQL Server 2017 est pris en charge sur Red Hat Enterprise Linux (RHEL), SUSE Lin
 
 | Plateforme | Version (s) pris en charge | Obtenir
 |-----|-----|-----
-| **Red Hat Enterprise Linux** | 7.3 ou 7.4 | [Obtenir RHEL 7.4](http://access.redhat.com/products/red-hat-enterprise-linux/evaluation)
+| **Red Hat Enterprise Linux** | 7.3 ou 7.4 | [Obtenir RHEL 7.4](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation)
 | **SUSE Linux Enterprise Server** | v12 SP2 | [Télécharger le SP2 de v12 SLES](https://www.suse.com/products/server)
-| **Ubuntu** | 16.04 | [Obtenir Ubuntu 16.04](http://www.ubuntu.com/download/server)
-| **Moteur docker** | 1.8+ | [Obtenir Docker](http://www.docker.com/products/overview)
+| **Ubuntu** | 16.04 | [Obtenir Ubuntu 16.04](https://www.ubuntu.com/download/server)
+| **Moteur docker** | 1.8+ | [Obtenir Docker](https://www.docker.com/products/overview)
 
 Microsoft prend également en charge le déploiement et la gestion des conteneurs de SQL Server à l’aide de OpenShift et Kubernetes.
 
@@ -88,7 +88,7 @@ Vous pouvez installer SQL Server 2017 sur Linux à partir de la ligne de command
 
 Vous pouvez installer la version préliminaire de SQL Server 2019 sur Linux en utilisant les mêmes liaisons de démarrage rapide dans la section précédente. Toutefois, vous devez inscrire le **aperçu (vNext)** référentiel au lieu du **CU** référentiel. Les Démarrages rapides fournissent des instructions sur comment effectuer cette opération.  
 
-Après avoir installé, envisagez d’apporter des modifications de configuration supplémentaires pour des performances optimales. Pour plus d’informations, consultez [performances meilleures pratiques et des instructions de configuration de SQL Server sur Linux](sql-server-linux-performance-best-practices.md).
+Après avoir installé, envisagez d’apporter des modifications de configuration supplémentaires pour des performances optimales. Pour plus d’informations, consultez les [Bonnes pratiques en matière de performances et instructions de configuration de SQL Server sur Linux](sql-server-linux-performance-best-practices.md).
 
 ## <a id="upgrade"></a> Mettre à jour de SQL Server
 

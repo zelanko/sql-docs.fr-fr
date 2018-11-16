@@ -13,19 +13,19 @@ ms.assetid: 417544ff-c25c-496e-add4-2f278f8a4911
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 800b2f3bbfe5547931bc66322817f9a221cf3a8a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c32b779370341be7b6026cf6d12cccbf3cc97b8a
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704017"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51663848"
 ---
 # <a name="supported-net-framework-libraries"></a>Bibliothèques .NET Framework prises en charge
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Avec le CLR (Common Language Runtime) hébergé dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], vous pouvez créer des procédures stockées, des déclencheurs, des fonctions définies par l'utilisateur, des types définis par l'utilisateur et des agrégats définis par l'utilisateur en code managé. Avec les fonctionnalités présentes dans les bibliothèques de classes .NET Framework, vous avez accès à des classes prégénérées qui fournissent des fonctionnalités pour la manipulation de chaînes, des opérations de mathématique avancées, l'accès au fichier, le chiffrement, etc. Ces classes sont accessibles à partir de procédures stockées managées, de types définis par l'utilisateur, de déclencheurs, de fonctions définies par l'utilisateur ou d'agrégats définis par l'utilisateur, quels qu'ils soient.  
   
 > [!NOTE]  
->  Si vous effectuez la maintenance ou mettez à niveau des assemblys non pris en charge dans le Global Assembly Cache (GAC), votre application [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] peut cesser de fonctionner. Cela est dû au fait que la maintenance ou la mise à niveau de bibliothèques dans le GAC ne met pas à jour ces assemblys dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. S'il existe un assembly dans une base de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et dans le GAC, les deux copies de l'assembly doivent être exactement les mêmes. Si ce n'est pas le cas, une erreur se produit lorsque l'assembly est utilisé par l'intégration du CLR [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Si le service ou de la mise à niveau de tous les assemblys dans le GAC qui sont également inscrits dans la base de données, y compris les assemblys .NET Framework non pris en charge, assurez-vous également de service ou mettre à niveau de la copie de l’assembly à l’intérieur de votre [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] des bases de données avec le  **ALTER ASSEMBLY** instruction. Pour plus d’informations, consultez [l’article 949080 de la de la Base de connaissances](http://support.microsoft.com/kb/949080).  
+>  Si vous effectuez la maintenance ou mettez à niveau des assemblys non pris en charge dans le Global Assembly Cache (GAC), votre application [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] peut cesser de fonctionner. Cela est dû au fait que la maintenance ou la mise à niveau de bibliothèques dans le GAC ne met pas à jour ces assemblys dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. S'il existe un assembly dans une base de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et dans le GAC, les deux copies de l'assembly doivent être exactement les mêmes. Si ce n'est pas le cas, une erreur se produit lorsque l'assembly est utilisé par l'intégration du CLR [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Si le service ou de la mise à niveau de tous les assemblys dans le GAC qui sont également inscrits dans la base de données, y compris les assemblys .NET Framework non pris en charge, assurez-vous également de service ou mettre à niveau de la copie de l’assembly à l’intérieur de votre [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] des bases de données avec le  **ALTER ASSEMBLY** instruction. Pour plus d’informations, consultez [l’article 949080 de la de la Base de connaissances](https://support.microsoft.com/kb/949080).  
   
 ## <a name="supported-libraries"></a>Bibliothèques prises en charge  
  À compter de [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prend en charge une liste de bibliothèques .NET Framework qui ont été testées pour vérifier qu'elles répondent aux normes de fiabilité et de sécurité en matière d'interaction avec [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Vous n'avez pas besoin d'inscrire explicitement les bibliothèques prises en charge sur le serveur avant de pouvoir les utiliser dans votre code ; [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] les charge directement à partir du Global Assembly Cache (GAC).  

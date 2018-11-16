@@ -1,7 +1,7 @@
 ---
 title: Chaînes de connexion et la source de données les mots clés et les attributs utilisés dans le pilote ODBC pour SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 03/21/2018
+ms.date: 11/07/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MightyPen
 ms.author: v-jizho2
 manager: craigg
-ms.openlocfilehash: 034efe241bb948c1e5739247e481a4057b0d7219
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a5c75876771efbc87eb30c368fb5246e12c60707
+ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838177"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51512858"
 ---
 # <a name="dsn-and-connection-string-keywords-and-attributes"></a>Attributs et mots clés de chaîne de connexion et DSN
 
@@ -40,7 +40,7 @@ Le tableau suivant répertorie les mots clés disponibles et les attributs de ch
 | [ColumnEncryption](../../connect/odbc/dsn-connection-string-attribute.md#columnencryption---sqlcoptsscolumnencryption) | [SQL_COPT_SS_COLUMN_ENCRYPTION](../../connect/odbc/dsn-connection-string-attribute.md#columnencryption---sqlcoptsscolumnencryption) | DANS LA LMW |
 | [ConnectRetryCount](../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md) | [SQL_COPT_SS_CONNECT_RETRY_COUNT](../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md) | W |
 | [ConnectRetryInterval](../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md) | [SQL_COPT_SS_CONNECT_RETRY_COUNT](../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md) | W |
-| [Base de données](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_ATTR_CURRENT_CATALOG](../../odbc/reference/syntax/sqlsetconnectattr-function.md) | DANS LA LMW |
+| [Sauvegarde de la base de données](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_ATTR_CURRENT_CATALOG](../../odbc/reference/syntax/sqlsetconnectattr-function.md) | DANS LA LMW |
 | [Description](../../connect/odbc/dsn-connection-string-attribute.md#description) | | DANS LA LMW |
 | [Driver](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | DANS LA LMW |
 | [DSN](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | DANS LA LMW |
@@ -159,6 +159,9 @@ Définit le mode d’authentification à utiliser lors de la connexion à SQL Se
 |ActiveDirectoryPassword|SQL_AU_AD_PASSWORD|Authentification par mot de passe Azure Active Directory.|
 |ActiveDirectoryInteractive|SQL_AU_AD_INTERACTIVE|Authentification interactive Azure Active Directory.|
 | |SQL_AU_RESET|Annuler la définition. Remplace tout DSN ou un paramètre de chaîne de connexion.|
+
+> [!NOTE]
+> Lorsque vous utilisez `Authentication` mot clé ou un attribut, vous devez explicitement spécifier `Encrypt` définissant la valeur souhaitée dans la chaîne de connexion / DSN / attribut de connexion. Reportez-vous à [Using Connection String Keywords with SQL Server Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) pour plus d’informations.
 
 ### <a name="columnencryption---sqlcoptsscolumnencryption"></a>ColumnEncryption - SQL_COPT_SS_COLUMN_ENCRYPTION
 
