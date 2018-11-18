@@ -11,12 +11,12 @@ ms.assetid: 00db8f21-7d4b-4347-ae43-3a7c314d2fa1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 37135e6bc1c30ea79e9ecda5ee53e90ea85c5f67
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1b831b54ed0755c8c7ef55364bdc0f8152f22b54
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761949"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51662500"
 ---
 # <a name="xml-data-type-and-columns-sql-server"></a>Type et colonnes de données XML (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,9 +61,9 @@ ms.locfileid: "47761949"
   
 -   Stockage en mode natif dans le type de données **xml**   
   
-     Les données sont stockées dans une représentation interne qui conserve le contenu XML des données. Cette représentation interne inclut des informations à propos de la hiérarchie de relations contenant-contenu, l'ordre des documents et les valeurs d'éléments et d'attributs. Plus précisément, le contenu InfoSet des données XML est préservé. Pour plus d’informations sur InfoSet, consultez [http://www.w3.org/TR/xml-infoset](http://go.microsoft.com/fwlink/?LinkId=48843). Le contenu InfoSet n'est pas une copie conforme du texte XML puisque les éléments suivants ne sont pas conservés : espaces non significatifs, ordre des attributs, préfixes d'espace de noms et déclaration XML.  
+     Les données sont stockées dans une représentation interne qui conserve le contenu XML des données. Cette représentation interne inclut des informations à propos de la hiérarchie de relations contenant-contenu, l'ordre des documents et les valeurs d'éléments et d'attributs. Plus précisément, le contenu InfoSet des données XML est préservé. Pour plus d’informations sur InfoSet, consultez [https://www.w3.org/TR/xml-infoset](https://go.microsoft.com/fwlink/?LinkId=48843). Le contenu InfoSet n'est pas une copie conforme du texte XML puisque les éléments suivants ne sont pas conservés : espaces non significatifs, ordre des attributs, préfixes d'espace de noms et déclaration XML.  
   
-     Pour un type de données **xml** typé, un type de données **xml** lié à des schémas XML, le jeu d’informations de validation post-schéma (PSVI) ajoute des informations de type dans le jeu d’informations et il est encodé dans la représentation interne. L'analyse s'en trouve considérablement accélérée. Pour plus d’informations, consultez les spécifications XML Schema de W3C sur [http://www.w3.org/TR/xmlschema-1](http://go.microsoft.com/fwlink/?LinkId=48881) et [http://www.w3.org/TR/xmlschema-2](http://go.microsoft.com/fwlink/?LinkId=4871).  
+     Pour un type de données **xml** typé, un type de données **xml** lié à des schémas XML, le jeu d’informations de validation post-schéma (PSVI) ajoute des informations de type dans le jeu d’informations et il est encodé dans la représentation interne. L'analyse s'en trouve considérablement accélérée. Pour plus d’informations, consultez les spécifications XML Schema de W3C sur [https://www.w3.org/TR/xmlschema-1](https://go.microsoft.com/fwlink/?LinkId=48881) et [https://www.w3.org/TR/xmlschema-2](https://go.microsoft.com/fwlink/?LinkId=4871).  
   
 -   Mappage entre stockage XML et relationnel  
   
@@ -142,7 +142,7 @@ ms.locfileid: "47761949"
   
 -   Vous voulez charger en masse les données XML, puis les répartir dans les tables sous-jacentes à l'aide de la vue XML.  
   
- Il pourrait s'agir de données relationnelles exposées au format XML pour l'échange des données et les services Web, et de données XML avec un schéma fixe. Pour plus d'informations, consultez [MSDN Online Library](http://go.microsoft.com/fwlink/?linkid=31174)(éventuellement en anglais).  
+ Il pourrait s'agir de données relationnelles exposées au format XML pour l'échange des données et les services Web, et de données XML avec un schéma fixe. Pour plus d'informations, consultez [MSDN Online Library](https://go.microsoft.com/fwlink/?linkid=31174)(éventuellement en anglais).  
   
 #### <a name="example-modeling-data-using-an-annotated-xml-schema-axsd"></a>Exemple : modélisation des données à l'aide d'un schéma XML annoté (AXSD)  
  Partons du principe que vous disposez de données relationnelles (clients, commandes et articles) et que vous voulez les gérer sous forme XML. Définissez une vue XML en utilisant AXSD sur les données relationnelles. La vue XML vous permet de charger en masse les données XML dans vos tables, puis d'interroger et de mettre à jour les données relationnelles à l'aide de la vue XML. Ce modèle s'avère très utile si vous avez à échanger des données contenant des balises XML avec d'autres applications alors que les applications SQL fonctionnent sans interruption.  

@@ -10,12 +10,12 @@ ms.assetid: 8d6d9954-ff6b-4e58-882e-eff0174f0d07
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6a1f55ad47ee17504118b3db5c00e61f39092e34
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0e950ae6cbbf71154bfaf402ae9e3246bd3d93fe
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47841007"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606929"
 ---
 # <a name="always-on-availability-groups-troubleshooting-and-monitoring-guide"></a>Guide de monitoring et de résolution des problèmes des groupes de disponibilité Always On
  Ce guide explique comment monitorer les groupes de disponibilité Always On et comment résoudre certains problèmes courants liés à ces groupes. Il comprend du contenu original ainsi que des liens vers d’autres informations utiles. Bien que ce guide ne traite pas de tous les problèmes susceptibles de se produire dans le vaste domaine des groupes de disponibilité, il peut vous donner des renseignements utiles qui vous aideront dans l’analyse des causes racines et la résolution des problèmes. 
@@ -31,8 +31,8 @@ ms.locfileid: "47841007"
 |--------------|-------------------|-----------------|  
 |[Résoudre les problèmes de configuration des groupes de disponibilité Always On &#40;SQL Server&#41;](troubleshoot-always-on-availability-groups-configuration-sql-server.md)|Configuration|Fournit des informations pour vous aider à résoudre les problèmes courants de configuration des instances de serveur pour les groupes de disponibilité. Voici quelques problèmes courants de configuration : les groupes de disponibilité sont désactivés, les comptes sont mal configurés, le point de terminaison de mise en miroir de bases de données n’existe pas, le point de terminaison est inaccessible (erreur SQL Server 1418), l’accès réseau n’existe pas et l’échec d’une commande de jointure de base de données (erreur SQL Server 35250).|  
 |[Résoudre une opération d’ajout de fichier ayant échoué &#40;groupes de disponibilité Always On&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)|Configuration|Une opération d’ajout de fichier a provoqué la suspension de la base de données secondaire et l’affectation à celle-ci de l’état SANS SYNCHRONISATION.|  
-|[Impossible de se connecter à l’écouteur de groupe de disponibilité dans un environnement de sous-réseaux multiples](http://support.microsoft.com/kb/2792139/en-us)|Connectivité client|Après avoir configuré l’écouteur de groupe de disponibilité, vous ne pouvez ni effectuer un test ping sur l’écouteur ni vous y connecter à partir d’une application.|  
-|[Résoudre les basculements automatiques ayant échoué](http://support.microsoft.com/kb/2833707)|Basculement|Un basculement automatique ne s’est pas déroulé correctement.|  
+|[Impossible de se connecter à l’écouteur de groupe de disponibilité dans un environnement de sous-réseaux multiples](https://support.microsoft.com/kb/2792139/en-us)|Connectivité client|Après avoir configuré l’écouteur de groupe de disponibilité, vous ne pouvez ni effectuer un test ping sur l’écouteur ni vous y connecter à partir d’une application.|  
+|[Résoudre les basculements automatiques ayant échoué](https://support.microsoft.com/kb/2833707)|Basculement|Un basculement automatique ne s’est pas déroulé correctement.|  
 |[Dépanner : dépassement de RTO du groupe de disponibilité](troubleshoot-availability-group-exceeded-rto.md)|Performances|Après un basculement automatique ou un basculement manuel planifié sans perte de données, le temps de basculement dépasse votre RTO. Vous pouvez aussi constater que votre estimation du temps de basculement d’un réplica secondaire avec validation synchrone (par exemple, un partenaire de basculement automatique) dépasse votre RTO.|  
 |[Dépanner : dépassement de RPO du groupe de disponibilité](troubleshoot-availability-group-exceeded-rpo.md)|Performances|À l’issue d’un basculement manuel forcé, la perte de données est supérieure à votre RPO. Vous pouvez aussi constater que votre calcul de la perte de données potentielle d’un réplica secondaire avec validation asynchrone dépasse votre RPO.|  
 |[Dépanner : les changements sur le réplica principal ne sont pas répercutés sur le réplica secondaire](troubleshoot-primary-changes-not-reflected-on-secondary.md)|Performances|L’application cliente mène à bien une mise à jour sur le réplica principal, mais l’exécution d’une requête sur le réplica secondaire montre que le changement n’a pas été répercuté.|  
@@ -65,15 +65,15 @@ ms.locfileid: "47841007"
 |-----------|-----------------|  
 |[Monitorer les performances des groupes de disponibilité Always On](monitor-performance-for-always-on-availability-groups.md)|Décrit le processus de synchronisation de données pour les groupes de disponibilité, les portes de contrôle de flux et les métriques utiles dans le cadre du monitoring d’un groupe de disponibilité. Montre également comment collecter les métriques RTO et RPO.|  
 |[Monitoring des groupes de disponibilité &#40;SQL Server&#41;](monitoring-of-availability-groups-sql-server.md)|Fournit des informations sur les outils permettant de monitorer un groupe de disponibilité.|  
-|[The Always On health model, part 1: Health model architecture](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/09/overview-of-the-alwayson-manageability-health-model.aspx)|Fournit une vue d’ensemble du modèle d’intégrité Always On.|  
-|[The Always On health model, part 2: Extending the health model](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)|Montre comment personnaliser le modèle d’intégrité Always On et personnaliser le tableau de bord Always On pour que celui-ci affiche des informations supplémentaires.|  
-|[Monitoring Always On health with PowerShell, part 1: Basic cmdlet overview](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-1.aspx)|Fournit une vue d’ensemble des applets de commande PowerShell Always On permettant de monitorer l’intégrité d’un groupe de disponibilité.|  
-|[Monitoring Always On health with PowerShell, part 2: Advanced cmdlet usage](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-2.aspx)|Fournit des informations sur l’utilisation avancée des applets de commande PowerShell Always On pour monitorer l’intégrité d’un groupe de disponibilité.|  
-|[Monitoring Always On health with PowerShell, part 3: A simple monitoring application](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/monitoring-alwayson-health-with-powershell-part-3.aspx)|Montre comment monitorer automatiquement un groupe de disponibilité avec une application.|  
-|[Monitoring Always On health with PowerShell, part 4: Integration with SQL Server Agent](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/the-always-on-health-model-part-4.aspx)|Explique comment intégrer le monitoring des groupes de disponibilité à SQL Server Agent et configurer l’envoi d’une notification aux parties concernées en cas de problème.|  
+|[The Always On health model, part 1: Health model architecture](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/09/overview-of-the-alwayson-manageability-health-model.aspx)|Fournit une vue d’ensemble du modèle d’intégrité Always On.|  
+|[The Always On health model, part 2: Extending the health model](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)|Montre comment personnaliser le modèle d’intégrité Always On et personnaliser le tableau de bord Always On pour que celui-ci affiche des informations supplémentaires.|  
+|[Monitoring Always On health with PowerShell, part 1: Basic cmdlet overview](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-1.aspx)|Fournit une vue d’ensemble des applets de commande PowerShell Always On permettant de monitorer l’intégrité d’un groupe de disponibilité.|  
+|[Monitoring Always On health with PowerShell, part 2: Advanced cmdlet usage](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-2.aspx)|Fournit des informations sur l’utilisation avancée des applets de commande PowerShell Always On pour monitorer l’intégrité d’un groupe de disponibilité.|  
+|[Monitoring Always On health with PowerShell, part 3: A simple monitoring application](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/monitoring-alwayson-health-with-powershell-part-3.aspx)|Montre comment monitorer automatiquement un groupe de disponibilité avec une application.|  
+|[Monitoring Always On health with PowerShell, part 4: Integration with SQL Server Agent](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/the-always-on-health-model-part-4.aspx)|Explique comment intégrer le monitoring des groupes de disponibilité à SQL Server Agent et configurer l’envoi d’une notification aux parties concernées en cas de problème.|  
 
 ## <a name="next-steps"></a>Étapes suivantes  
- [Blog de l’équipe SQL Server Always On](http://blogs.msdn.com/b/sqlalwayson/)   
- [Blogs des ingénieurs du Service clientèle et du Support technique de SQL Server](http://blogs.msdn.com/b/psssql/)  
+ [Blog de l’équipe SQL Server Always On](https://blogs.msdn.com/b/sqlalwayson/)   
+ [Blogs des ingénieurs du Service clientèle et du Support technique de SQL Server](https://blogs.msdn.com/b/psssql/)  
   
   

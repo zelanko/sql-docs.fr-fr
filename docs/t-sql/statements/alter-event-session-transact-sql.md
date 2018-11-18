@@ -20,12 +20,12 @@ ms.assetid: da006ac9-f914-4995-a2fb-25b5d971cd90
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: db06e014e735e9174cde6364f30ee3870977941d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6fb0c0e35b2350bf3b1753434425389eb8f3503d
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742087"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696791"
 ---
 # <a name="alter-event-session-transact-sql"></a>ALTER EVENT SESSION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -134,7 +134,7 @@ ON SERVER
 |DROP EVENT \<event_specifier>|Supprime l’événement identifié par *\<event_specifier>*. \<event_specifier> doit être valide dans la session d’événements.|  
 |ADD TARGET \<event_target_specifier>|Associe la cible identifiée par \<event_target_specifier> à la session d’événements.|
 |[*event_module_guid*].*event_package_name*.*target_name*|Nom d'une cible de la session d'événements, où :<br /><br /> -   *event_module_guid* est le GUID du module qui contient l’événement.<br />-   *event_package_name* est le package qui contient l’objet d’action.<br />-   *target_name* est l’action. Les actions apparaissent dans la vue sys.dm_xe_objects en tant qu'object_type « cible ».|  
-|SET { *target_parameter_name*= \<value> [, ...*n*] }|Définit un paramètre cible. Les paramètres cibles apparaissent dans la vue sys.dm_xe_object_columns sous la forme column_type 'customizable' et object_name = *target_name*.<br /><br /> **REMARQUE** Si vous utilisez la cible de mémoire tampon en anneau, il est préférable de configurer le paramètre cible max_memory avec 2 048 kilo-octets (Ko) pour éviter les éventuelles données tronquées dans le résultat XML. Pour plus d’informations sur le moment où les différents types de cibles doivent être utilisés, consultez [Cibles des événements étendus SQL Server](http://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384).|  
+|SET { *target_parameter_name*= \<value> [, ...*n*] }|Définit un paramètre cible. Les paramètres cibles apparaissent dans la vue sys.dm_xe_object_columns sous la forme column_type 'customizable' et object_name = *target_name*.<br /><br /> **REMARQUE** Si vous utilisez la cible de mémoire tampon en anneau, il est préférable de configurer le paramètre cible max_memory avec 2 048 kilo-octets (Ko) pour éviter les éventuelles données tronquées dans le résultat XML. Pour plus d’informations sur le moment où les différents types de cibles doivent être utilisés, consultez [Cibles des événements étendus SQL Server](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384).|  
 |DROP TARGET \<event_target_specifier>|Supprime la cible identifiée par \<event_target_specifier>. \<event_target_specifier> doit être valide dans la session d’événements.|  
 |EVENT_RETENTION_MODE = { **ALLOW_SINGLE_EVENT_LOSS** &#124; ALLOW_MULTIPLE_EVENT_LOSS &#124; NO_EVENT_LOSS }|Spécifie le mode de rétention des événements à utiliser pour gérer la perte d'événements.<br /><br /> **ALLOW_SINGLE_EVENT_LOSS**<br /> Il est possible de perdre un événement de la session. Un événement unique est abandonné uniquement lorsque toutes les mémoires tampons d'événements sont saturées. La perte d'un événement unique lorsque les mémoires tampons d'événements sont saturées permet d'obtenir des caractéristiques de performance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] acceptables, tout en réduisant la perte de données du flux d'événements traité.<br /><br /> ALLOW_MULTIPLE_EVENT_LOSS<br /> Il est possible de perdre des mémoires tampons d'événements saturées contenant plusieurs événements. Le nombre d’événements perdus dépend de la taille de la mémoire allouée à la session, du partitionnement de la mémoire et de la taille des événements dans la mémoire tampon. Cette option atténue l'impact sur les performances du serveur lorsque les mémoires tampons d'événements sont rapidement remplies, mais il est possible de perdre un grand nombre d'événements de la session.<br /><br /> NO_EVENT_LOSS<br /> Aucune perte d'événements n'est autorisée. Cette option garantit que tous les événements déclenchés seront conservés. Cette option force toutes les tâches qui déclenchent des événements à attendre que de l'espace se libère dans une mémoire tampon d'événements. Cela peut entraîner des problèmes de performance détectables pendant que la session d'événements est active. Les connexions utilisateur peuvent se bloquer en attendant que les événements soient supprimés de la mémoire tampon.|  
 |MAX_DISPATCH_LATENCY = { *seconds* SECONDS &#124; **INFINITE** }|Spécifie la durée pendant laquelle les événements sont mis en mémoire tampon avant d'être distribués aux cibles de la session d'événements. La valeur de latence minimale est 1 seconde. Toutefois, la valeur 0 peut être utilisée pour spécifier une latence INFINITE. Elle est par défaut de 30 secondes.<br /><br /> *seconds* SECONDS<br /> Durée (en secondes) à attendre avant de commencer à vider les mémoires tampons vers les cibles. *seconds* est un nombre entier.<br /><br /> **INFINITE**<br /> Vide les mémoires tampons vers les cibles uniquement lorsque les mémoires tampons sont saturées ou lors de la fermeture de la session d'événements.<br /><br /> **REMARQUE** MAX_DISPATCH_LATENCY = 0 SECONDS est équivalent à MAX_DISPATCH_LATENCY = INFINITE.|  
@@ -173,7 +173,7 @@ GO
 ## <a name="see-also"></a> Voir aussi  
  [CREATE EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md)   
  [DROP EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-event-session-transact-sql.md)   
- [Cibles des Événements étendus SQL Server](http://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)   
+ [Cibles des Événements étendus SQL Server](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)   
  [sys.server_event_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-event-sessions-transact-sql.md)   
  [sys.dm_xe_objects &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xe-objects-transact-sql.md)   
  [sys.dm_xe_object_columns &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xe-object-columns-transact-sql.md)  

@@ -13,12 +13,12 @@ ms.assetid: ad0bbf7f-b0de-406a-bd0a-cb779816b101
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 298377810a6d0f42b952c94ff6835be506d6559e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ca2831d69f454c1a8488946644c3f83ccac0ca29
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611757"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697618"
 ---
 # <a name="check-constraint-dialog-box-visual-database-tools"></a>Boîte de dialogue Contraintes de validation (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,7 +41,7 @@ Supprime la contrainte sélectionnée de la table. Pour annuler l'ajout d'une co
 Se développe pour afficher le champ de la propriété **Expression** .  
   
 **Expression**  
-Affiche l'expression pour la contrainte de validation sélectionnée. Pour les nouvelles contraintes, vous devez entrer l'expression avant de quitter cette zone. Vous pouvez également modifier des contraintes de validation existantes. Pour plus d’informations, consultez [Utilisation des contraintes (Visual Database Tools)](http://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e).  
+Affiche l'expression pour la contrainte de validation sélectionnée. Pour les nouvelles contraintes, vous devez entrer l'expression avant de quitter cette zone. Vous pouvez également modifier des contraintes de validation existantes. Pour plus d’informations, consultez [Utilisation des contraintes (Visual Database Tools)](https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e).  
   
 **Catégorie Identité**  
 Se développe pour afficher les propriétés de **Nom** et **Description**.  
@@ -65,6 +65,6 @@ Spécifie si la contrainte est appliquée lors de l'insertion ou de la mise à j
 Indique si la contrainte doit être appliquée lorsqu'un Agent de réplication effectue une requête Insert ou Update sur cette table.  
   
 ## <a name="see-also"></a> Voir aussi  
-[Utilisation des contraintes (Visual Database Tools)](http://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e)  
+[Utilisation des contraintes (Visual Database Tools)](https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e)  
 [Boîte de dialogue Index - Clés &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/indexes-keys-dialog-box-visual-database-tools.md)  
   

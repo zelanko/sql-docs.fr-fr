@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 54c1b3946a2e1495390f228d21198f40dae06c62
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cb0e8200fb90dd4455c60f650c5fd3e9f5afddd7
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47639417"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51665518"
 ---
 # <a name="creating-a-system-versioned-temporal-table"></a>Création d’une table temporelle avec gestion de version du système
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -94,7 +94,7 @@ WITH
   
 -   Si le schéma spécifié n’existe pas, l’instruction **CREATE TABLE** échoue.  
   
--   Si la table spécifiée par le paramètre **HISTORY_TABLE** existe déjà, elle est validée par rapport à la table temporelle nouvellement créée sur les plans [de la cohérence du schéma et de la cohérence des données temporelles](http://msdn.microsoft.com/library/dn935015.aspx). Si vous spécifiez une table de l’historique non valide, l’instruction **CREATE TABLE** échoue.  
+-   Si la table spécifiée par le paramètre **HISTORY_TABLE** existe déjà, elle est validée par rapport à la table temporelle nouvellement créée sur les plans [de la cohérence du schéma et de la cohérence des données temporelles](https://msdn.microsoft.com/library/dn935015.aspx). Si vous spécifiez une table de l’historique non valide, l’instruction **CREATE TABLE** échoue.  
   
 ## <a name="creating-a-temporal-table-with-a-user-defined-history-table"></a>Création d’une table temporelle avec une table de l’historique définie par l’utilisateur  
  La création d’une table temporelle avec une table de l’historique définie par l’utilisateur est une option pratique pour un utilisateur désireux de spécifier une table de l’historique avec des options de stockage et des index supplémentaires spécifiques. Dans l’exemple ci-dessous, une table de l’historique définie par l’utilisateur est créée avec un schéma qui est aligné avec la table temporelle qui sera créée. Sur cette table de l’historique définie par l’utilisateur, un index columnstore cluster et un index rowstore (Btree) non cluster supplémentaire sont créés pour les recherches de point. Une fois cette table de l’historique définie par l’utilisateur créée, la table temporelle avec contrôle de version du système est créée en spécifiant la table de l’historique définie par l’utilisateur en tant que la table de l’historique par défaut.  

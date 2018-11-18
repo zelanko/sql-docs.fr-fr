@@ -29,12 +29,12 @@ ms.assetid: d0821526-1603-4ea6-8322-2d901568fbeb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bd42fe5402c9da251464cfedf670478c4b0d6358
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f20a2bba58605ca7b518fa1a55ba1a75ffb366bb
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730247"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638946"
 ---
 # <a name="term-extraction-transformation"></a>Transformation d'extraction de terme
   La transformation d'extraction de terme extrait des termes à partir de texte d'une colonne d'entrée de transformation, puis écrit les termes dans une colonne de sortie de transformation. La transformation fonctionne uniquement avec du texte en langue anglaise et utilise uniquement son propre dictionnaire d'anglais et ses propres informations linguistiques.  
@@ -177,11 +177,11 @@ ms.locfileid: "47730247"
   
  Pour plus d'informations sur les propriétés définissables dans la boîte de dialogue **Éditeur avancé** ou par programmation, cliquez sur l'une des rubriques suivantes :  
   
--   [Propriétés communes](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Propriétés communes](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Propriétés personnalisées des transformations](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
- Pour plus d’informations sur la définition des propriétés, consultez [Définir les propriétés d’un composant de flux de données](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
+ Pour plus d’informations sur la façon de définir les propriétés, consultez [Définir les propriétés d’un composant de flux de données](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
   
 ## <a name="term-extraction-transformation-editor-term-extraction-tab"></a>Éditeur de transformation d'extraction de terme (onglet Extraction de terme)
   Utilisez l'onglet **Extraction de terme** de la boîte de dialogue **Éditeur de transformation d'extraction de terme** pour définir une colonne de texte qui contient le texte à extraire.  
@@ -197,7 +197,7 @@ ms.locfileid: "47730247"
  Fournissez un nom pour la colonne de sortie qui contiendra le score de chaque terme extrait.  
   
  **Configurer la sortie d’erreur**  
- Utilisez la boîte de dialogue [Configurer l’affichage des erreurs](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) pour spécifier la gestion des erreurs dans les lignes qui provoquent des erreurs.  
+ Utilisez la boîte de dialogue [Configurer l’affichage des erreurs](https://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) pour spécifier la gestion des erreurs dans les lignes qui provoquent des erreurs.  
   
 ## <a name="term-extraction-transformation-editor-exclusion-tab"></a>Éditeur de transformation d'extraction de terme (onglet Exclusion)
   Utilisez l'onglet **Exclusion** de la boîte de dialogue **Éditeur de transformation d'extraction de terme** pour définir une connexion à une table de connexion et les colonnes qui contiennent des termes d'exclusion.  
@@ -219,7 +219,7 @@ ms.locfileid: "47730247"
  Sélectionnez la colonne de la table ou de la vue qui contient les termes d'exclusion.  
   
  **Configurer la sortie d’erreur**  
- Utilisez la boîte de dialogue [Configurer l’affichage des erreurs](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) pour spécifier la gestion des erreurs dans les lignes qui provoquent des erreurs.  
+ Utilisez la boîte de dialogue [Configurer l’affichage des erreurs](https://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) pour spécifier la gestion des erreurs dans les lignes qui provoquent des erreurs.  
   
 ## <a name="term-extraction-transformation-editor-advanced-tab"></a>Éditeur de transformation d'extraction de terme (onglet Avancé)
   Utilisez l’onglet **Avancé** de la boîte de dialogue **Éditeur de transformation d’extraction de terme** pour définir les propriétés de l’extraction, telles que la fréquence et la longueur, et indiquer si les mots ou les phrases doivent être extraits.  
@@ -250,7 +250,7 @@ ms.locfileid: "47730247"
  Indiquez si l'extraction doit respecter la casse. La valeur par défaut est **False**.  
   
  **Configurer la sortie d'erreur**  
- Utilisez la boîte de dialogue [Configurer l’affichage des erreurs](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) pour spécifier la gestion des erreurs dans les lignes qui provoquent des erreurs.  
+ Utilisez la boîte de dialogue [Configurer l’affichage des erreurs](https://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) pour spécifier la gestion des erreurs dans les lignes qui provoquent des erreurs.  
   
 ## <a name="see-also"></a> Voir aussi  
  [Guide de référence des erreurs et des messages propres à Integration Services](../../../integration-services/integration-services-error-and-message-reference.md)   

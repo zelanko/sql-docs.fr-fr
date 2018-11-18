@@ -13,12 +13,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: dc5e566ecbb27e88f730af0423d179b8829f51ed
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: d647102d72b9ec3dc03e0887dbc1b9abe60a3308
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120426"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703817"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE (Azure SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -165,7 +165,7 @@ Crée une ou plusieurs partitions de table. Il s’agit de coupes de table horiz
 ### <a name="DataTypes"></a> Types de données
 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] prend en charge les types de données les plus couramment utilisés. Vous trouverez ci-dessous la liste des types de données pris en charge, les détails les concernant, ainsi que leur taille de stockage (en octets). Pour mieux comprendre les types de données et pour savoir comment les utiliser, consultez [Types de données pour les tables dans SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-data-types).
 
-Pour obtenir un tableau des conversions des types de données, consultez la section Conversions implicites de la rubrique [CAST et CONVERT (Transact-SQL)](http://msdn.microsoft.com/library/ms187928/).
+Pour obtenir un tableau des conversions des types de données, consultez la section Conversions implicites de la rubrique [CAST et CONVERT (Transact-SQL)](https://msdn.microsoft.com/library/ms187928/).
 
 `datetimeoffset` [ ( *n* ) ]  
  La valeur par défaut pour *n* est 7.  
@@ -291,7 +291,7 @@ Chaque table définie par l’utilisateur est divisée en plusieurs tables de pl
  
 Chaque distribution contient toutes les partitions de table. Par exemple, s’il existe 60 distributions et quatre partitions de table, il y aura 320 partitions. Si la table est un index cluster columnstore, il n’y aura qu’un seul index columnstore par partition, ce qui signifie qu’il y aura 320 index columnstore.
 
-Nous vous recommandons d’utiliser moins de partitions de table de sorte que chaque index columnstore contienne suffisamment de lignes pour pouvoir profiter des avantages liés aux index columnstore. Pour obtenir des conseils supplémentaires, consultez [Partitionnement des tables dans SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-partition/) et [Indexation des tables dans SQL Data Warehouse](https://azure.microsoft.com/en-us/documentation/articles/sql-data-warehouse-tables-index/)  
+Nous vous recommandons d’utiliser moins de partitions de table de sorte que chaque index columnstore contienne suffisamment de lignes pour pouvoir profiter des avantages liés aux index columnstore. Pour obtenir des conseils supplémentaires, consultez [Partitionnement des tables dans SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-partition/) et [Indexation des tables dans SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-index/)  
 
   
  ### <a name="rowstore-table-heap-or-clustered-index"></a>Table rowstore (segment de mémoire ou index cluster)  
@@ -304,7 +304,7 @@ Pour changer une table rowstore en table columnstore, supprimez tous les index e
 
 Pour plus d’informations, consultez ces articles :
 - [Synthèse des fonctionnalités des index columnstore en fonction des versions](https://msdn.microsoft.com/library/dn934994/)
-- [Indexation des tables dans SQL Data Warehouse](https://azure.microsoft.com/en-us/documentation/articles/sql-data-warehouse-tables-index/)
+- [Indexation des tables dans SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-index/)
 - [Guide des index columnstore](~/relational-databases/indexes/columnstore-indexes-overview.md) 
  
 <a name="LimitationsRestrictions"></a>  

@@ -18,12 +18,12 @@ ms.assetid: 1af22188-e08b-4c80-a27e-4ae6ed9ff969
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: a9d532ff5cf5da8719156a358ecc44abe3591afc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e3757c44ada2f4413693d6124e75bb726f63ac7d
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47614251"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51605389"
 ---
 # <a name="soft-numa-sql-server"></a>Soft-NUMA (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -70,10 +70,10 @@ L'instance A du [!INCLUDE[ssDE](../../includes/ssde-md.md)] est configurée pou
   
  L’instance A, confrontée à des E/S importantes, a maintenant deux threads d’E/S et un thread d’écriture différée. L’instance B, qui exécute des opérations nécessitant des ressources de processeur importantes, a un seul thread d’E/S et un seul thread d’écriture différée. Vous pouvez affecter des quantités de mémoire différentes aux instances, mais contrairement au NUMA matériel, elles reçoivent toutes deux la mémoire du même bloc mémoire de système d’exploitation et il n’y a pas d’affinité entre la mémoire et le processeur.  
   
- Le thread d’écriture différée est lié à la vue du système d’exploitation SQL des nœuds de mémoire NUMA physiques. Par conséquent, quel que soit le nombre de nœuds NUMA physiques que le matériel présente, il correspond au nombre de thread d'écriture différée qui sont créés. Pour plus d'informations, consultez [Fonctionnement : soft-NUMA, thread d'achèvement d'E/S, threads de travail d'écriture différée et nœuds de mémoire](http://blogs.msdn.com/b/psssql/archive/2010/04/02/how-it-works-soft-numa-i-o-completion-thread-lazy-writer-workers-and-memory-nodes.aspx).  
+ Le thread d’écriture différée est lié à la vue du système d’exploitation SQL des nœuds de mémoire NUMA physiques. Par conséquent, quel que soit le nombre de nœuds NUMA physiques que le matériel présente, il correspond au nombre de thread d'écriture différée qui sont créés. Pour plus d'informations, consultez [Fonctionnement : soft-NUMA, thread d'achèvement d'E/S, threads de travail d'écriture différée et nœuds de mémoire](https://blogs.msdn.com/b/psssql/archive/2010/04/02/how-it-works-soft-numa-i-o-completion-thread-lazy-writer-workers-and-memory-nodes.aspx).  
   
 > [!NOTE]
-> Les clés de Registre **NUMA logiciel** ne sont pas copiées quand vous mettez à niveau une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+> Les clés de Registre **Soft-NUMA** ne sont pas copiées lorsque vous mettez à niveau une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ### <a name="set-the-cpu-affinity-mask"></a>Définir le masque d'affinité de l'UC  
  Exécutez l'instruction suivante sur l'instance A de façon à la configurer pour qu'elle utilise les UC 0, 1, 2 et 3 en définissant le masque d'affinité de l'UC :  

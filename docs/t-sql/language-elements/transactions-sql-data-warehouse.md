@@ -13,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 9939a049b8157b1a9d1aa127cbab18629bc0af03
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 992784658a97e938b7793c612d32dfa7fc2a5574
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47616295"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696807"
 ---
 # <a name="transactions-sql-data-warehouse"></a>Transactions (SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -79,7 +79,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF } [;]
   
  Si une erreur autre qu’une erreur d’instruction au moment de l’exécution entrave le bon déroulement d’une transaction explicite, [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] la restaure automatiquement et libère toutes les ressources bloquées par la transaction. Par exemple, si la connexion réseau du client à une instance de [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] est interrompue ou que le client se déconnecte de l’application, toutes les transactions non validées pendant la connexion sont restaurées quand le réseau notifie l’instance de l’interruption.  
   
- Si une erreur d’instruction au moment de l’exécution se produit dans un lot, le comportement de [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] est conforme à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **XACT_ABORT** dont la valeur est **ON** et toute la transaction est restaurée. Pour plus d’informations sur le paramètre **XACT_ABORT**, consultez [SET XACT_ABORT (Transact-SQL)](http://msdn.microsoft.com/library/ms188792.aspx).  
+ Si une erreur d’instruction au moment de l’exécution se produit dans un lot, le comportement de [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] est conforme à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **XACT_ABORT** dont la valeur est **ON** et toute la transaction est restaurée. Pour plus d’informations sur le paramètre **XACT_ABORT**, consultez [SET XACT_ABORT (Transact-SQL)](https://msdn.microsoft.com/library/ms188792.aspx).  
   
 ## <a name="general-remarks"></a>Remarques d'ordre général  
  Une session ne peut exécuter qu’une seule transaction à un moment donné ; les points de sauvegarde et les transactions imbriquées ne sont pas pris en charge.  
