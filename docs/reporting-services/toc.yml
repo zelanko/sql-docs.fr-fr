@@ -16,21 +16,21 @@ items:
     items:
     - name: Fonctionnalités dépréciées
       href: deprecated-features-in-sql-server-reporting-services-ssrs.md
-    - name: Fonctionnalités supprimées de SQL Server Reporting Services dans SQL Server 2016
+    - name: Fonctionnalités supprimées dans SSRS dans SQL Server 2016
       href: discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md
-    - name: Modifications importantes de SQL Server Reporting Services dans SQL Server 2016
+    - name: Changements cassants dans SSRS dans SQL Server 2016
       href: breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md
     - name: Changements de comportement apportés à SQL Server Reporting Services dans SQL Server 2016
       href: behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md
 - name: Planification
   items:
-  - name: Choix des outils Microsoft Business Intelligence (BI) pour l’analyse et les rapports
+  - name: Choix des outils BI pour l’analyse et les rapports
     href: choosing-microsoft-business-intelligence-bi-tools-for-analysis-and-reporting.md
   - name: Prise en charge des navigateurs pour Reporting Services et Power View
     href: browser-support-for-reporting-services-and-power-view.md
-  - name: Planifier la conception de rapports et le déploiement de rapports | Reporting Services
+  - name: Planifier la conception de rapports et le déploiement de rapports
     href: plan-for-report-design-and-report-deployment-reporting-services.md
-  - name: Fonctionnalités Reporting Services prises en charge par les éditions de SQL Server 2016
+  - name: Fonctionnalités Reporting Services dans les éditions de SQL Server
     href: reporting-services-features-supported-by-the-editions-of-sql-server-2016.md
 - name: Install
   href: ../reporting-services/install-windows/install-reporting-services.md
@@ -39,17 +39,17 @@ items:
   items:
   - name: Personnalisation du portail web
     href: branding-the-web-portal.md
-  - name: Utilisation de datasets partagés (portail web)
+  - name: Utilisation de jeux de données partagés
     href: work-with-shared-datasets-web-portal.md
-  - name: Utilisation des rapports paginés (portail web)
+  - name: Utilisation des rapports paginés
     href: working-with-paginated-reports-web-portal.md
-  - name: Utilisation des instantanés (portail web)
+  - name: Utilisation des instantanés
     href: working-with-snapshots-web-portal.md
-  - name: Utilisation des abonnements (portail web)
+  - name: Utilisation des abonnements
     href: working-with-subscriptions-web-portal.md
-  - name: Utilisation des indicateurs de performance clés dans Reporting Services
+  - name: Utilisation d’indicateurs de performance clés
     href: working-with-kpis-in-reporting-services.md
-  - name: Mes paramètres pour l’intégration de Power BI (portail web)
+  - name: Mes paramètres pour l’intégration de Power BI
     href: my-settings-for-power-bi-integration-web-portal.md
 - name: Serveur de rapports
   href: ../reporting-services/report-server/reporting-services-report-server-native-mode.md
@@ -251,9 +251,9 @@ items:
       href: tutorial-creating-drillthrough-and-main-reports-report-builder.md
     - name: 'Didacticiel : introduction aux expressions'
       href: tutorial-introducing-expressions.md
-ms.openlocfilehash: 3846d92e32ce762f767407c535a58ebbe2e6bd7f
-ms.sourcegitcommit: 3b4a0ab8ccdd5d49f264e11b518640ceedbb467f
+ms.openlocfilehash: bf39fd7ed94dff4fb4efbbc80f25b954438c5494
+ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42899749"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51350583"
