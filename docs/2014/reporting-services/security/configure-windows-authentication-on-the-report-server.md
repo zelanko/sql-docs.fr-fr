@@ -101,7 +101,7 @@ ms.locfileid: "48116343"
   
      Notez que vous ne pouvez pas utiliser `Custom` avec les types `RSWindows`.  
   
-5.  Modifiez comme il convient les paramètres de la protection étendue. La protection étendue est désactivée par défaut.  Si ces entrées ne sont pas présentes, l'ordinateur actuel peut ne pas exécuter une version de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] qui prend en charge la protection étendue. Pour plus d'informations, consultez [Extended Protection for Authentication with Reporting Services](extended-protection-for-authentication-with-reporting-services.md)  
+5.  Modifiez comme il convient les paramètres de la protection étendue. La protection étendue est désactivée par défaut.  Si ces entrées ne sont pas présentes, l'ordinateur actuel peut ne pas exécuter une version de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] qui prend en charge la protection étendue. Pour plus d'informations, consultez [Protection étendue de l'authentification avec Reporting Services](extended-protection-for-authentication-with-reporting-services.md)  
   
     ```  
           <RSWindowsExtendedProtectionLevel>Allow</RSWindowsExtendedProtectionLevel>  

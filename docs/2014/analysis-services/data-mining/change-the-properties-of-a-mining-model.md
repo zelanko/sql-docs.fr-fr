@@ -26,7 +26,7 @@ ms.locfileid: "48172769"
   
  Les propriétés de modèle suivantes ont des éditeurs avancés que vous pouvez utiliser pour créer des expressions ou pour configurer les propriétés de modèle complexes. Les propriétés suivantes fournissent :  
   
--   `Filter` propriété : ouvre le [Data Set filtre or Model filtre Dialog Box](../data-set-filter-or-model-filter-dialog-box.md).  
+-   `Filter` propriété : ouvre le [Boîte de dialogue Filtre de jeu de données ou Filtre de modèle](../data-set-filter-or-model-filter-dialog-box.md).  
   
 -   `AlgorithmParameters` propriété : ouvre le [boîte dialogue Paramètres d’algorithme &#40;vue de modèles d’exploration de données&#41;](../algorithm-parameters-dialog-box-mining-models-view.md).  
   
