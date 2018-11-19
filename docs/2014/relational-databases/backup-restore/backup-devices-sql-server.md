@@ -210,7 +210,7 @@ GO
  Si une bande a été laissée ouverte par erreur, le moyen le plus rapide de la libérer consiste à utiliser la commande suivante : RESTORE REWINDONLY FROM TAPE **=***nom_unité_sauvegarde*. Pour plus d’informations, consultez [RESTORE REWINDONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-rewindonly-transact-sql).  
   
 ## <a name="using-the-windows-azure-blob-storage-service"></a>Utilisation du service de Stockage Blob Windows Azure  
- Les sauvegardes SQL Server peuvent être écrites dans le service de stockage d'objets blob Windows Azure.  Pour plus d'informations sur l'utilisation du service de stockage d'objets blob Windows Azure pour les sauvegardes, consultez [SQL Server Backup and Restore with Windows Azure Blob Storage Service](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+ Les sauvegardes SQL Server peuvent être écrites dans le service de stockage d'objets blob Windows Azure.  Pour plus d'informations sur l'utilisation du service de stockage d'objets blob Windows Azure pour les sauvegardes, consultez [Sauvegarde et restauration SQL Server avec le service de Stockage Blob Windows Azure](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
 ##  <a name="LogicalBackupDevice"></a> À l’aide d’une unité de sauvegarde logique  
  Une *unité de sauvegarde logique* est un nom facultatif défini par l’utilisateur qui pointe vers une unité de sauvegarde physique spécifique (un fichier disque ou un lecteur de bande). Une unité de sauvegarde logique vous permet d'utiliser l'indirection au moment de référencer l'unité de sauvegarde physique correspondante.  
