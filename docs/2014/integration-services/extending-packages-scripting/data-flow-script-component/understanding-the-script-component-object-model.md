@@ -137,7 +137,7 @@ public override void PreExecute()
   
 -   Substituez **\<inputbuffer>_ProcessInputRow** pour traiter les données dans chaque ligne d’entrée lors de leur transfert.  
   
--   Substituez **\<inputbuffer>_ProcessInput** uniquement si vous devez effectuer une autre opération pendant que vous parcourez les lignes d’entrée, (par exemple, lorsque vous devez vérifier si `EndOfRowset` exécute une autre action une fois que toutes les lignes ont été traitées). Appelez \<** inputbuffer>_ProcessInputRow pour effectuer le traitement de la ligne.  
+-   Substituez **\<inputbuffer>_ProcessInput** uniquement si vous devez effectuer une autre opération pendant que vous parcourez les lignes d’entrée, (par exemple, lorsque vous devez vérifier si `EndOfRowset` exécute une autre action une fois que toutes les lignes ont été traitées). Appelez **\<inputbuffer>_ProcessInputRow** pour effectuer le traitement de la ligne.  
   
 -   Substituez `FinishOutputs` si vous devez effectuer une opération sur les sorties avant leur fermeture.  
   
