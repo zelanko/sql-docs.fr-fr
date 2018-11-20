@@ -22,7 +22,7 @@ ms.locfileid: "50145839"
   Cette rubrique décrit les modifications de comportement dans [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] pour les déploiements Multidimensionnel, Tabulaire, Exploration de données et [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] . Les modifications de comportement affectent le mode de fonctionnement ou d’interaction des fonctionnalités dans la version actuelle de SQL Server par rapport aux versions précédentes.  
   
 > [!NOTE]  
->  En revanche, une modification avec rupture empêche un modèle de données ou une application intégrée à [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] de s’exécuter. Pour en savoir plus, consultez [Breaking Changes to Analysis Services Features in SQL Server 2014](breaking-changes-to-analysis-services-features-in-sql-server-2014.md).  
+>  En revanche, une modification avec rupture empêche un modèle de données ou une application intégrée à [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] de s’exécuter. Pour en savoir plus, consultez [Modifications avec rupture dans les fonctionnalités Analysis Services de SQL Server 2014](breaking-changes-to-analysis-services-features-in-sql-server-2014.md).  
   
  Dans cette rubrique :  
   
