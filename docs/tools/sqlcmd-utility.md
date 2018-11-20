@@ -5,8 +5,7 @@ ms.date: 09/12/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
 - statements [SQL Server], command prompt
@@ -29,12 +28,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 1b62fe2d79dfa947cb9c8f0f6ebbd0c484960e26
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: 9ba83c8913d9e906925986cc07e3a2816c131cc6
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49461164"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661238"
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd Utility
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -54,7 +53,7 @@ ms.locfileid: "49461164"
 L’utilitaire utilise ODBC pour exécuter des lots Transact-SQL. 
  
 > [!NOTE]
-> Les versions plus récentes de l’utilitaire sqlcmd sont disponibles en version web à partir du [Centre de téléchargement](http://go.microsoft.com/fwlink/?LinkID=825643). Vous avez besoin d’une version 13.1 ou supérieure pour prendre en charge Always Encrypted (`-g`) et l’authentification Azure Active Directory (`-G`). (Plusieurs versions de sqlcmd.exe peuvent être installées sur votre ordinateur. Assurez-vous d’utiliser la version correcte. Pour déterminer la version, exécutez `sqlcmd -?`.)
+> Les versions plus récentes de l’utilitaire sqlcmd sont disponibles en version web à partir du [Centre de téléchargement](https://go.microsoft.com/fwlink/?LinkID=825643). Vous avez besoin d’une version 13.1 ou supérieure pour prendre en charge Always Encrypted (`-g`) et l’authentification Azure Active Directory (`-G`). (Plusieurs versions de sqlcmd.exe peuvent être installées sur votre ordinateur. Assurez-vous d’utiliser la version correcte. Pour déterminer la version, exécutez `sqlcmd -?`.)
 
 Vous pouvez essayer de l’utilitaire sqlcmd à partir d’Azure Cloud Shell comme il est préinstallé par défaut : [ ![lancer Cloud Shell](https://shell.azure.com/images/launchcloudshell.png "lancer Cloud Shell")](https://shell.azure.com)
 
@@ -142,10 +141,10 @@ sqlcmd
  L’option **-E** ignore les éventuels paramètres de variables d’environnement de nom d’utilisateur et de mot de passe, tels que SQLCMDPASSWORD. Si l’option **-E** est utilisée avec l’option **-U** ou **-P** , un message d’erreur est généré.  
 
 **-g**  
-Définissez le paramètre de chiffrement de colonne sur `Enabled`. Pour plus d’informations, consultez [Always Encrypted](../relational-databases/security/encryption/always-encrypted-database-engine.md). Uniquement les clés principales stockées dans le magasin de certificats Windows sont prises en charge. Le commutateur -g nécessite au moins **sqlcmd** version [13.1](http://go.microsoft.com/fwlink/?LinkID=825643). Pour déterminer votre version, exécutez `sqlcmd -?`.
+Définissez le paramètre de chiffrement de colonne sur `Enabled`. Pour plus d’informations, consultez [Always Encrypted](../relational-databases/security/encryption/always-encrypted-database-engine.md). Uniquement les clés principales stockées dans le magasin de certificats Windows sont prises en charge. Le commutateur -g nécessite au moins **sqlcmd** version [13.1](https://go.microsoft.com/fwlink/?LinkID=825643). Pour déterminer votre version, exécutez `sqlcmd -?`.
 
  **-G**  
- Ce commutateur est utilisé par le client durant la connexion à SQL Database ou à SQL Data Warehouse pour indiquer que l’utilisateur soit authentifié à l’aide de l’authentification Azure Active Directory. Cette option définit la variable de script **sqlcmd** SQLCMDUSEAAD = true. Le commutateur -G nécessite au moins **sqlcmd** version [13.1](http://go.microsoft.com/fwlink/?LinkID=825643). Pour déterminer votre version, exécutez `sqlcmd -?`. Pour plus d’informations, voir [Connexion à la base de données SQL à l’aide de l’authentification Azure Active Directory](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/). L’option-a n’est pas pris en charge avec l’option -G.
+ Ce commutateur est utilisé par le client durant la connexion à SQL Database ou à SQL Data Warehouse pour indiquer que l’utilisateur soit authentifié à l’aide de l’authentification Azure Active Directory. Cette option définit la variable de script **sqlcmd** SQLCMDUSEAAD = true. Le commutateur -G nécessite au moins **sqlcmd** version [13.1](https://go.microsoft.com/fwlink/?LinkID=825643). Pour déterminer votre version, exécutez `sqlcmd -?`. Pour plus d’informations, voir [Connexion à la base de données SQL à l’aide de l’authentification Azure Active Directory](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/). L’option-a n’est pas pris en charge avec l’option -G.
 
 > [!IMPORTANT]
 > L’option **-G** s’applique uniquement à Azure SQL Database et à Azure Data Warehouse.
@@ -799,7 +798,7 @@ Lorsque vous appuyez sur Entrée, le message d'information suivant s'imprime : �
   
  `GO`  
   
- Lorsque vous appuyez sur Entrée, le jeu de résultats suivant est retourné.  
+ Lorsque vous appuyez sur ENTRÉE, le jeu de résultats suivant est retourné.  
   
  `BusinessEntityID FirstName    LastName`  
   

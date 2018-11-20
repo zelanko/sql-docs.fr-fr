@@ -9,12 +9,12 @@ ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: pensivebrian
 ms.author: broneill
 manager: craigg
-ms.openlocfilehash: b7bf75b16a9c7962ce1d04f51182d21107daa181
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: 2d16e9c805f9979a53a9e8bc8c2e265e06ccbab9
+ms.sourcegitcommit: 7e828cd92749899f4e1e45ef858ceb9a88ba4b6a
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50051221"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51629622"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -102,6 +102,8 @@ Une opération de publication SqlPackage.exe procède à une mise à jour incré
 |**/AccessToken:**|**/at**|{string}| Dans le cadre de l'authentification par jeton, spécifie le jeton d'accès à utiliser pour se connecter à la base de données cible. |
 |**/ AzureKeyVaultAuthMethod :**|**/akv**|{Interactive&#124;ClientIdSecret}|Spécifie la méthode d’authentification à utiliser pour accéder à Azure Key Vault. |
 |**/ClientId:**|**/CID**|{string}|Spécifie l'ID du client à utiliser dans l'authentification auprès d'Azure Key Vault quand c'est nécessaire. |
+|**/ DeployScriptPath :**|**/DSP**|{string}|Spécifie un chemin d’accès de fichier facultatif pour le script de déploiement de sortie. Dans les déploiements Azure, s’il existe des commandes TSQL permettant de créer et de modifier la base de données MASTER, un script est écrit dans le même chemin d’accès, mais avec le nom de fichier de sortie « NomFichier_Master.sql ». |
+|**/ DeployReportPath :**|**/DRP**|{string}|Spécifie un chemin d’accès de fichier facultatif pour le fichier xml de rapport déploiement de sortie. |
 |**/Diagnostics:**|**/d**|{True&#124;False}|Spécifie si la journalisation des diagnostics est affichée dans la console. Prend la valeur par défaut False. |
 |**/ DiagnosticsFile :**|**forme /DF**|{string}|Spécifie un fichier où stocker les journaux de diagnostic. |
 |**/ MaxParallelism :**|**/mp**|{int}| Spécifie le degré de parallélisme d'opérations simultanées sur une base de données. La valeur par défaut est 8. |
@@ -476,6 +478,8 @@ Une action de script **SqlPackage.exe** crée un script de mise à jour incréme
 |---|---|---|---|
 |**/Action:**|**/a**|Script|Indique l'action à effectuer. |
 |**/AccessToken:**|**/at**|{string}| Dans le cadre de l'authentification par jeton, spécifie le jeton d'accès à utiliser pour se connecter à la base de données cible. |
+|**/ DeployScriptPath :**|**/DSP**|{string}|Spécifie un chemin d’accès de fichier facultatif pour le script de déploiement de sortie. Dans les déploiements Azure, s’il existe des commandes TSQL permettant de créer et de modifier la base de données MASTER, un script est écrit dans le même chemin d’accès, mais avec le nom de fichier de sortie « NomFichier_Master.sql ». |
+|**/ DeployReportPath :**|**/DRP**|{string}|Spécifie un chemin d’accès de fichier facultatif pour le fichier xml de rapport déploiement de sortie. |
 |**/Diagnostics:**|**/d**|{True&#124;False}|Spécifie si la journalisation des diagnostics est affichée dans la console. Prend la valeur par défaut False. |
 |**/ DiagnosticsFile :**|**forme /DF**|{string}|Spécifie un fichier où stocker les journaux de diagnostic. |
 |**/ MaxParallelism :**|**/mp**|{int}| Spécifie le degré de parallélisme d'opérations simultanées sur une base de données. La valeur par défaut est 8. |

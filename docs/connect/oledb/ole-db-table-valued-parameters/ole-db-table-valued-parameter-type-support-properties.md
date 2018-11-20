@@ -13,12 +13,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 7e2e9fde43deb3b6efbac62dc39d27897d32c9ba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 90240caba9bbba0539c2b827d9471b4318592ba6
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47783197"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51559617"
 ---
 # <a name="ole-db-table-valued-parameter-type-support-properties"></a>Prise en charge du type de paramètre table OLE DB (Propriétés)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "47783197"
   Cette rubrique fournit des informations sur les propriétés et les jeux de propriétés OLE DB associés aux objets d'ensemble de lignes de paramètre table.  
   
 ## <a name="properties"></a>Propriétés  
- La liste qui suit répertorie les propriétés dévoilées via la méthode IRowsetInfo::GetPropeties dans les objets d’ensemble de lignes de paramètre table. Notez que toutes les propriétés de l'ensemble de lignes de paramètre table sont en lecture seule. Par conséquent, tentez de définir une de leurs propriétés via IOpenRowset::OpenRowset ou ITableDefinitionWithConstraints::CreateTableWithConstraints méthodes à leurs valeurs par défaut provoque une erreur et aucun objet ne sera créé.  
+ Voici la liste les propriétés exposées par la méthode IRowsetInfo::GetProperties sur des objets d’ensemble de lignes de paramètre table. Notez que toutes les propriétés de l'ensemble de lignes de paramètre table sont en lecture seule. Par conséquent, tentez de définir une de leurs propriétés via IOpenRowset::OpenRowset ou ITableDefinitionWithConstraints::CreateTableWithConstraints méthodes à leurs valeurs par défaut provoque une erreur et aucun objet ne sera créé.  
   
  Les propriétés non implémentées dans l'objet d'ensemble de lignes de paramètre table n'apparaissent pas dans cette liste. Pour obtenir une liste complète des propriétés, consultez la documentation OLE DB dans Windows Data Access Components.  
   
@@ -86,7 +86,7 @@ ms.locfileid: "47783197"
 |SSPROP_COL_COMPUTED|Lecture/écriture : lecture/écriture<br /><br /> Valeur par défaut : VARIANT_FALSE<br /><br /> Type : VT_BOOL<br /><br /> Description : cette propriété, si elle est définie sur VARIANT_TRUE, indique que la colonne est une colonne calculée. La valeur VARIANT_FALSE indique qu'il ne s'agit pas d'une colonne calculée.|  
   
 ### <a name="dbpropsetsqlserverparameter"></a>DBPROPSET_SQLSERVERPARAMETER  
- Ces propriétés sont lues par le consommateur durant la découverte des informations de type de paramètre table dans les appels à ISSCommandWithParamters::GetParameterProperties et définies par le consommateur lors de la définition des propriétés spécifiques sur le paramètre table via ISSCommandWithParameters::SetParameterProperties.  
+ Ces propriétés sont lues par le consommateur durant la découverte des informations de type de paramètre table dans les appels à ISSCommandWithParameters::GetParameterProperties et définies par le consommateur lors de la définition des propriétés spécifiques sur le paramètre table via ISSCommandWithParameters::SetParameterProperties.  
   
  Le tableau qui suit offre des descriptions détaillées de ces propriétés.  
   

@@ -16,12 +16,12 @@ ms.assetid: 7f8bd0f1-f340-4bb9-b559-0a6176124033
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e81c905a483972ab0dfe7b03573bc30bf6d474e7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2792bd3a13be5ceb4ee8965065f6c6619f389d22
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727187"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601230"
 ---
 # <a name="getcatalogs-method-sqlserverdatabasemetadata"></a>Méthode getCatalogs (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,10 +42,10 @@ public java.sql.ResultSet getCatalogs()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes   
- Cette méthode getCatalogs est spécifiée par la méthode getCatalogs dans l’interface java.sql.DatabaseMetaData.  
+ Cette méthode getCatalogs est spécifiée par la méthode getCatalogs de l’interface java.sql.DatabaseMetaData.  
   
 > [!NOTE]  
->  Sur SQL Azure, vous devez vous connecter à la base de données master pour appeler **SQLServerDatabaseMetaData.getCatalogs**. SQL Azure ne prend pas en charge le retour de l’ensemble complet des catalogues d’une base de données utilisateur. **SQLServerDatabaseMetaData.getCatalogs** utilise la vue sys.databases pour obtenir les catalogues. Reportez-vous à la section autorisations dans [sys.databases (base de données SQL Azure)](http://go.microsoft.com/fwlink/?LinkId=217396) pour comprendre **SQLServerDatabaseMetaData.getCatalogs** comportement sur SQL Azure.  
+>  Sur SQL Azure, vous devez vous connecter à la base de données master pour appeler **SQLServerDatabaseMetaData.getCatalogs**. SQL Azure ne prend pas en charge le retour de l’ensemble complet des catalogues d’une base de données utilisateur. **SQLServerDatabaseMetaData.getCatalogs** utilise la vue sys.databases pour obtenir les catalogues. Reportez-vous à la section autorisations dans [sys.databases (base de données SQL Azure)](https://go.microsoft.com/fwlink/?LinkId=217396) pour comprendre **SQLServerDatabaseMetaData.getCatalogs** comportement sur SQL Azure.  
   
  Le jeu de résultats retourné par la méthode getCatalogs contient les informations suivantes :  
   

@@ -5,20 +5,19 @@ ms.date: 09/24/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: ''
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 359144187de1b1a780ba3d866f4a4881c2444442
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.openlocfilehash: 0a0a46fb27c8695ead3cc68e17677ccdcf7cb6fc
+ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49643937"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51292975"
 ---
 # <a name="sql-tools-and-utilities-for-sql-server-azure-sql-database-and-azure-sql-data-warehouse"></a>Outils SQL et des utilitaires pour SQL Server, base de données SQL Azure et Azure SQL Data Warehouse
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +34,7 @@ Les outils d’interface graphique utilisateur graphique principal sont les suiv
 | Outil | Description | S’exécute sur |
 |:--|:--|:--|
 | [[!INCLUDE[name-sos](../includes/name-sos.md)]](../sql-operations-studio/download.md) | [!INCLUDE[name-sos](../includes/name-sos-short.md)] est un outil gratuit, léger, pour la gestion des bases de données partout où ils s’exécutent. Cette version préliminaire fournit des fonctionnalités de gestion de base de données, y compris un éditeur Transact-SQL étendue et personnalisable connaître l’état de fonctionnement de vos bases de données. | **[!INCLUDE[name-sos](../includes/name-sos-short.md)] s’exécute sur Windows, macOS et Linux**.|
-| [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) | Utilisez SQL Server Management Studio (SSMS) pour interroger, concevoir et gérer votre SQL Server, base de données SQL Azure et Azure SQL Data Warehouse. | **SSMS est exécuté sur Windows**.|
+| [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) | Utilisez SQL Server Management Studio (SSMS) pour interroger, concevoir et gérer votre SQL Server, base de données SQL Azure et Azure SQL Data Warehouse. | **SSMS s’exécute sur Windows**.|
 | [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md) | Transformez Visual Studio en un puissant environnement de développement pour SQL Server, base de données SQL Azure et Azure SQL Data Warehouse.| **SSDT s’exécute sur Windows**.|
 | [Visual Studio Code](https://code.visualstudio.com/)| Après avoir installé Visual Studio Code, installer le [extension mssql](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql) pour le développement de Microsoft SQL Server, base de données SQL Azure et SQL Data Warehouse.| **Visual Studio Code s’exécute sur Windows, macOS et Linux**.|
 
