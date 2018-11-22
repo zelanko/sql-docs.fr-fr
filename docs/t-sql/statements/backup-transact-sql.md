@@ -47,12 +47,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ea0a580f54af1296394b26ffd2175efad873657e
-ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
+ms.openlocfilehash: 5c0d52b75baa9850df8d6da546a3abbf31498df8
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48252206"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699337"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -257,7 +257,7 @@ Spécifie un fichier sur disque ou support à bandes, ou un service de stockage 
 > L’unité de disque NUL supprime toutes les informations qui lui sont envoyées et ne devrait être utilisée qu’à des fins de test. À ne pas utiliser en production.
   
 > [!IMPORTANT]  
-> De [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 jusqu’à [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], vous ne pouvez sauvegarder que sur une seule unité de disque lorsque vous effectuez une sauvegarde vers une URL. Pour effectuer une sauvegarde sur plusieurs unités lorsque vous sauvegardez vers une URL, vous devez utiliser [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ou [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], ainsi que des jetons de signature d’accès partagé. Pour obtenir des exemples de signatures d’accès partagé, consultez [Sauvegarde SQL Server vers une URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md) et [Simplifying creation of SQL Credentials with Shared Access Signature (SAS) tokens on Azure Storage with PowerShell](http://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx).  
+> De [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 jusqu’à [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], vous ne pouvez sauvegarder que sur une seule unité de disque lorsque vous effectuez une sauvegarde vers une URL. Pour effectuer une sauvegarde sur plusieurs unités lorsque vous sauvegardez vers une URL, vous devez utiliser [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ou [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], ainsi que des jetons de signature d’accès partagé. Pour obtenir des exemples de signatures d’accès partagé, consultez [Sauvegarde SQL Server vers une URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md) et [Simplifying creation of SQL Credentials with Shared Access Signature (SAS) tokens on Azure Storage with PowerShell](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx).  
   
 **L’URL s’applique à**  : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
   
@@ -279,7 +279,7 @@ MIRROR TO \<backup_device> [ **,**...*n* ] Spécifie un jeu constitué au maximu
 Cette option est disponible uniquement dans l'édition Enterprise de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
-> Pour MIRROR TO = DISK, BACKUP détermine automatiquement la taille de bloc appropriée des unités de disques. Pour plus d'informations sur la taille de bloc, consultez « BLOCKSIZE » ultérieurement dans ce tableau.  
+> Pour MIRROR TO = DISK, BACKUP détermine automatiquement la taille de bloc appropriée des unités de disques, en fonction de la taille du secteur. Si le disque MIRROR TO est formaté avec une taille de secteur différente de celle du disque spécifié comme unité de sauvegarde principale, la commande de sauvegarde échoue.  Pour mettre en miroir des sauvegardes sur des appareils qui ont des tailles de secteur différentes, le paramètre BLOCKSIZE doit être spécifié et doit être défini sur la taille de secteur la plus élevée parmi tous les appareils cibles.  Pour plus d’informations sur la taille de bloc, consultez « BLOCKSIZE » plus loin dans cette rubrique.  
   
 \<backup_device>Consultez « \<backup_device> », plus haut dans cette section.
   
@@ -361,7 +361,7 @@ Active explicitement la compression des sauvegardes.
 NO_COMPRESSION  
 Désactive explicitement la compression des sauvegardes.  
   
-DESCRIPTION **=** { **'**_text_**'** | **@**_text\_variable_ }  
+DESCRIPTION **=** { **’**_texte_**’** | **@**_variable\_texte_ }  
 Spécifie le texte de format libre servant à décrire le jeu de sauvegarde. La chaîne peut compter jusqu'à 255 caractères.  
   
 NAME **=** { *backup_set_name* | **@**_backup\_set\_var_ }  
@@ -470,7 +470,7 @@ Spécifie le nombre total de tampons d'E/S à utiliser pour l'opération de sauv
 L’espace total utilisé par les mémoires tampons est déterminé par : *buffercount/maxtransfersize*.  
   
 > [!NOTE]  
-> Pour des informations importantes sur l’utilisation de l’option `BUFFERCOUNT`, consultez le blog [Incorrect BufferCount data transfer option can lead to OOM condition](http://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx).  
+> Pour des informations importantes sur l’utilisation de l’option `BUFFERCOUNT`, consultez le blog [Incorrect BufferCount data transfer option can lead to OOM condition](https://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx).  
   
 MAXTRANSFERSIZE **=** { *maxtransfersize* | _**@** maxtransfersize\_variable_ } Spécifie la plus grande unité de transfert, en octets, à utiliser entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et le support de sauvegarde. Les valeurs possibles sont les multiples de 65536 octets (64 Ko), dans la limite de 4194304 octets (4 Mo).  
 
@@ -726,7 +726,7 @@ L'instruction BACKUP n'est pas autorisée dans une transaction explicite ou impl
 Les opérations de sauvegarde inter-plateformes, impliquant éventuellement des types de processeurs différents, peuvent être réalisées tant que le classement de la base de données est pris en charge par le système d'exploitation.  
  
 Lorsque vous utilisez la compression de sauvegarde avec des bases de données ne comprenant qu’un seul fichier de données et où [Transparent Data Encryption (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) est activé, il est recommandé d’utiliser pour le paramètre `MAXTRANSFERSIZE` une valeur **supérieure à 65 536 (64 Ko)**.   
-Avec [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et versions ultérieures, cela permet l’utilisation d’un algorithme de compression optimisé pour les bases de données chiffrées avec TDE, qui chiffre d’abord une page, la compresse, puis la chiffre de nouveau. Si vous utilisez `MAXTRANSFERSIZE = 65536` (64 Ko), la compression de sauvegarde pour les bases de données chiffrées avec TDE va directement compresser les pages chiffrées et peut ne pas fournir de bons taux de compression. Pour plus d’informations, consultez [Backup Compression for TDE-enabled Databases](http://blogs.msdn.microsoft.com/sqlcat/2016/06/20/sqlsweet16-episode-1-backup-compression-for-tde-enabled-databases/).
+Avec [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et versions ultérieures, cela permet l’utilisation d’un algorithme de compression optimisé pour les bases de données chiffrées avec TDE, qui chiffre d’abord une page, la compresse, puis la chiffre de nouveau. Si vous utilisez `MAXTRANSFERSIZE = 65536` (64 Ko), la compression de sauvegarde pour les bases de données chiffrées avec TDE va directement compresser les pages chiffrées et peut ne pas fournir de bons taux de compression. Pour plus d’informations, consultez [Backup Compression for TDE-enabled Databases](https://blogs.msdn.microsoft.com/sqlcat/2016/06/20/sqlsweet16-episode-1-backup-compression-for-tde-enabled-databases/).
 
 > [!NOTE]  
 > Dans certains cas, la valeur par défaut `MAXTRANSFERSIZE` est supérieure à 64 Ko :
@@ -1003,7 +1003,7 @@ TO URL
 Spécifie l’URL à utiliser pour l’opération de sauvegarde. Le format d’URL est utilisé pour créer des sauvegardes dans le service de stockage Microsoft Azure. 
 
 > [!IMPORTANT]  
-> Pour sauvegarder vers plusieurs unités quand l’opération s’effectue vers une URL, vous devez utiliser des jetons de signature d’accès partagé (SAP). Pour obtenir des exemples de signatures d’accès partagé, consultez [Sauvegarde SQL Server vers une URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md) et [Simplifying creation of SQL Credentials with Shared Access Signature (SAS) tokens on Azure Storage with PowerShell](http://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx).  
+> Pour sauvegarder vers plusieurs unités quand l’opération s’effectue vers une URL, vous devez utiliser des jetons de signature d’accès partagé (SAP). Pour obtenir des exemples de signatures d’accès partagé, consultez [Sauvegarde SQL Server vers une URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md) et [Simplifying creation of SQL Credentials with Shared Access Signature (SAS) tokens on Azure Storage with PowerShell](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx).  
   
 *n*  
 Espace réservé indiquant qu'il est possible de spécifier jusqu'à 64 unités de sauvegarde dans une liste séparée par des virgules.  
@@ -1045,7 +1045,7 @@ Active explicitement la compression des sauvegardes.
 NO_COMPRESSION  
 Désactive explicitement la compression des sauvegardes.  
   
-DESCRIPTION **=** { **'**_text_**'** | **@**_text\_variable_ }  
+DESCRIPTION **=** { **’**_texte_**’** | **@**_variable\_texte_ }  
 Spécifie le texte de format libre servant à décrire le jeu de sauvegarde. La chaîne peut compter jusqu'à 255 caractères.  
   
 NAME **=** { *backup_set_name* | **@**_backup\_set\_var_ }  
@@ -1068,7 +1068,7 @@ Spécifie le nombre total de tampons d'E/S à utiliser pour l'opération de sauv
 L’espace total utilisé par les mémoires tampons est déterminé par : *buffercount/maxtransfersize*.  
   
 > [!NOTE]  
-> Pour des informations importantes sur l’utilisation de l’option `BUFFERCOUNT`, consultez le blog [Incorrect BufferCount data transfer option can lead to OOM condition](http://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx).  
+> Pour des informations importantes sur l’utilisation de l’option `BUFFERCOUNT`, consultez le blog [Incorrect BufferCount data transfer option can lead to OOM condition](https://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx).  
   
 MAXTRANSFERSIZE **=** { *maxtransfersize* | _**@** maxtransfersize\_variable_ } Spécifie la plus grande unité de transfert, en octets, à utiliser entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et le support de sauvegarde. Les valeurs possibles sont les multiples de 65536 octets (64 Ko), dans la limite de 4194304 octets (4 Mo).  
 

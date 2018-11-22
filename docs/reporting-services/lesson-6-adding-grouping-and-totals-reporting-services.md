@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: e3d61228-2aa4-42cc-955e-602dbf3406a7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fc8a5e6bc796cf5e7c014c51ec93074eae863bb7
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: d391061ce82c0516bbfc30e9d05cce7bdedd65ed
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50051012"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813672"
 ---
 # <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lesson 6: Adding Grouping and Totals (Reporting Services)
 Dans cette leçon du didacticiel, vous allez ajouter un regroupement et des totaux à votre rapport [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] pour organiser et synthétiser vos données.  
@@ -115,7 +115,7 @@ Dans cette leçon du didacticiel, vous allez ajouter un regroupement et des tota
 3.  Dans **TargetServerURL** , tapez le nom de votre serveur de rapports ; par exemple,   
     - `http:/<servername>/reportserver`  
    
-    - `http://localhost/reportserver` fonctionne si vous concevez le rapport sur le serveur de rapports.  
+    - `https://localhost/reportserver` fonctionne si vous concevez le rapport sur le serveur de rapports.  
   
   
 4. Notez que TargetReportFolder a pour valeur tutorial, le nom du projet.  Il s’agit du nom du dossier sur lequel le rapport se déploiera au cours des prochaines étapes.  
@@ -129,7 +129,7 @@ Dans cette leçon du didacticiel, vous allez ajouter un regroupement et des tota
     > 'Sales Orders.rdl' ignoré. L’élément est à jour.  
     > Fin de la génération -- 0 erreur, 0 avertissement  
     > ------ Début du déploiement : Projet : tutorial, Configuration : Débogage ------  
-    > Déploiement vers http://[nom serveur]/reportserver  
+    > Déploiement vers https://[nom serveur]/reportserver  
     > Déploiement du rapport '/tutorial/Sales Orders'.  
     > Fin du déploiement -- 0 erreur, 0 avertissement  
     > ========== Génération : 1 a réussi ou est à jour, 0 a échoué, 0 a été ignoré ====================  
@@ -143,8 +143,8 @@ Dans cette leçon du didacticiel, vous allez ajouter un regroupement et des tota
   
     Accédez à l’URL du portail web [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] .   
     **Remarque :** L’URL du *portail* est « Reports », pas l’URL du *serveur* de rapports « Reportserver ».  Exemple :   
-    `http://<server name>/reports`.  
-    `http://localhost/reports` fonctionne si vous concevez le rapport sur le serveur de rapports.  
+    `https://<server name>/reports`.  
+    `https://localhost/reports` fonctionne si vous concevez le rapport sur le serveur de rapports.  
   
 8.  Accédez au dossier contenant le rapport. Le nom par défaut est *tutorial*, le nom du projet ou le nom que vous avez tapé dans le champ TargetReportFolder dans les propriétés du projet.   
 Cliquez sur le nom du rapport **Sales Orders** afin de consulter le rapport rendu dans le navigateur.  

@@ -1,7 +1,7 @@
 ---
 title: Sécurité au niveau des lignes | Microsoft Docs
 ms.custom: ''
-ms.date: 03/29/2017
+ms.date: 11/06/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -17,29 +17,31 @@ ms.assetid: 7221fa4e-ca4a-4d5c-9f93-1b8a4af7b9e8
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d75e4dd2499261fc28f97796d865fa71709bc663
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 13e2f3c63a9712ffa04bf7842815a51ba5a420c4
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47814677"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51672415"
 ---
 # <a name="row-level-security"></a>Sécurité au niveau des lignes
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   ![Graphique de sécurité au niveau des lignes](../../relational-databases/security/media/row-level-security-graphic.png "Graphique de sécurité au niveau des lignes")  
   
  La sécurité au niveau des lignes permet aux clients de contrôler l'accès aux lignes d'une table de base de données en fonction des caractéristiques de l'utilisateur exécutant une requête (appartenance à un groupe ou contexte d'exécution, par exemple).  
   
- La sécurité au niveau des lignes simplifie la conception et codage de la sécurité dans votre application. La sécurité au niveau des lignes vous permet d'implémenter des restrictions sur l'accès aux lignes de données. Par exemple, s'assurer que les employés peuvent accéder uniquement aux lignes de données pertinentes par rapport à leur service ou restreindre l'accès aux données d'un client aux seules données pertinentes pour son entreprise.  
+ La sécurité au niveau des lignes simplifie la conception et codage de la sécurité dans votre application. La sécurité au niveau des lignes vous aide à implémenter des restrictions sur l'accès aux lignes de données. Par exemple, vous pouvez garantir que les employés accéderont uniquement aux lignes de données pertinentes par rapport à leur service ou restreindre l'accès aux données des clients aux seules données pertinentes pour leur entreprise.  
   
  La logique de la restriction d'accès est située dans la couche de base de données plutôt que loin des données d'une autre couche Application. Le système de base de données applique les restrictions d'accès chaque fois que cet accès aux données est tenté à partir d'une couche quelconque. Votre système de sécurité est ainsi rendu plus fiable et plus robuste, grâce à une réduction de sa surface d'exposition.  
   
- Implémentez une sécurité au niveau des lignes à l’aide de l’instruction [CREATE SECURITY POLICY](../../t-sql/statements/create-security-policy-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] , et de prédicats créés en tant que [fonctions table incluses](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md).  
+ Implémentez une sécurité au niveau des lignes à l’aide de l’instruction [CREATE SECURITY POLICY](../../t-sql/statements/create-security-policy-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)], et de prédicats créés en tant que [fonctions table inline](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md).  
   
-**S’applique à**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu’à la [version actuelle](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([Obtenez-le](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).  
+**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu’à la [version actuelle](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([Obtenez-le](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)), [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].  
   
+> [!NOTE]
+> Azure SQL Data Warehouse prend en charge uniquement des prédicats de filtre. Les prédicats BLOCK ne sont pas actuellement pris en charge dans Azure SQL Data Warehouse.
 
 ##  <a name="Description"></a> Description  
  La sécurité au niveau des lignes prend en charge deux types de prédicats de sécurité.  
@@ -48,9 +50,9 @@ ms.locfileid: "47814677"
   
 -   Les prédicats BLOCK bloquent explicitement les opérations d’écriture (AFTER INSERT, AFTER UPDATE, BEFORE UPDATE et BEFORE DELETE) qui violent le prédicat.  
   
- L’accès aux données au niveau des lignes dans une table est restreint par un prédicat de sécurité défini en tant que fonction table incluse. La fonction est ensuite appelée et appliquée par une stratégie de sécurité. Pour les prédicats de filtre, rien n’indique à l’application que des lignes ont été filtrées du jeu de résultats. Si toutes les lignes sont filtrées, un jeu de valeurs null est retourné. Pour les prédicats BLOCK, toutes les opérations qui violent le prédicat échouent avec une erreur.  
+ L’accès aux données au niveau des lignes dans une table est restreint par un prédicat de sécurité défini en tant que fonction table incluse. La fonction est ensuite appelée et appliquée par une stratégie de sécurité. Pour les prédicats de filtre, l’application n’est pas consciente des lignes qui sont filtrées à partir du jeu de résultats. Si toutes les lignes sont filtrées, un jeu de valeurs null est retourné. Pour les prédicats BLOCK, toutes les opérations qui violent le prédicat échouent avec une erreur.  
   
- Les prédicats de filtre sont appliqués lors de la lecture des données de la table de base, et toutes les opérations get sont affectées : **SELECT**, **DELETE** (l’utilisateur ne peut pas supprimer des lignes filtrées) et **UPDATE** (l’utilisateur ne peut pas mettre à jour les lignes filtrées, bien qu’il soit possible de mettre à jour les lignes de sorte qu’elles soient filtrées par la suite). Les prédicats BLOCK affectent toutes les opérations d’écriture.  
+ Les prédicats de filtre sont appliqués lors de la lecture des données de la table de base, et ils affectent toutes les opérations get : **SELECT**, **DELETE** (l’utilisateur ne peut pas supprimer des lignes filtrées) et **UPDATE** (l’utilisateur ne peut pas mettre à jour des lignes filtrées, bien qu’il soit possible de mettre à jour les lignes de sorte qu’elles soient filtrées par la suite). Les prédicats BLOCK affectent toutes les opérations d’écriture.  
   
 -   Les prédicats AFTER INSERT et AFTER UPDATE peuvent empêcher les utilisateurs de mettre à jour des lignes avec des valeurs qui violent le prédicat.  
   
@@ -62,7 +64,7 @@ ms.locfileid: "47814677"
   
 -   Vous pouvez définir une fonction de prédicat qui crée une jointure avec une autre table et/ou appelle une fonction. Si la stratégie de sécurité est créée avec `SCHEMABINDING = ON`, alors la jointure ou la fonction est accessible à partir de la requête et fonctionne comme prévu, sans aucun contrôle d’autorisation supplémentaire. Si la stratégie de sécurité est créée avec `SCHEMABINDING = OFF`, alors les utilisateurs ont besoin d’autorisations **SELECT** ou **EXECUTE** sur ces tables et fonctions supplémentaires pour interroger la table cible.
   
--   Vous pouvez émettre une requête sur une table pour laquelle un prédicat de sécurité est défini, mais désactivé. Les lignes qui auraient été filtrées ou bloquées ne sont pas affectées.  
+-   Vous pouvez émettre une requête sur une table pour laquelle un prédicat de sécurité est défini, mais désactivé. Les lignes qui sont filtrées ou bloquées ne sont pas affectées.  
   
 -   Si l’utilisateur dbo, membre du rôle **db_owner** , ou le propriétaire de la table interrogent une table pour laquelle une stratégie de sécurité est définie et activée, les lignes sont filtrées ou bloquées conformément à celle-ci.  
   
@@ -76,13 +78,13 @@ ms.locfileid: "47814677"
   
  Les prédicats de filtre se comportent comme suit :  
   
--   Définir une stratégie de sécurité qui filtre les lignes d'une table. L'application ignore que des lignes ont été filtrées pour les opérations **SELECT**, **UPDATE**et **DELETE** , y compris dans les cas où la totalité des lignes a été filtrée. L'application peut **INSERT** toutes les lignes, qu'elles soient ou non filtrées lors de toute autre opération.  
+-   Définir une stratégie de sécurité qui filtre les lignes d'une table. L'application ignore que des lignes sont filtrées pour les opérations **SELECT**, **UPDATE** et **DELETE**, y compris dans les cas où la totalité des lignes sont filtrées. L'application peut insérer (**INSERT**) des lignes quelconques, qu'il soit prévu ou non de les filtrer lors de toute autre opération.  
   
  Les prédicats BLOCK se comportent comme sui  :  
   
 -   Les prédicats BLOCK pour l’opération UPDATE sont divisés en opérations distinctes pour BEFORE et AFTER. Vous ne pouvez donc pas, par exemple, bloquer des utilisateurs en les empêchant de mettre à jour une ligne pour obtenir une valeur supérieure à la valeur actuelle. Si ce type de logique est requis, vous devez utiliser des déclencheurs avec les tables intermédiaires DELETED et INSERTED pour référencer ensemble les valeurs anciennes et nouvelles.  
   
--   L’optimiseur ne vérifie pas un prédicat BLOCK AFTER UPDATE si aucune des colonnes utilisées par la fonction de prédicat n’a été modifiée. Par exemple : Alice ne doit pas pouvoir modifier un salaire en lui attribuant une valeur supérieure à 100 000, mais elle pouvoir modifier l’adresse d’un employé dont le salaire est déjà supérieur à 100 000 (et viole donc déjà le prédicat).  
+-   L’optimiseur ne vérifie pas un prédicat BLOCK AFTER UPDATE si aucune des colonnes utilisées par la fonction de prédicat n’a été modifiée. Par exemple : Alice ne doit pas pouvoir modifier un salaire en lui attribuant une valeur supérieure à 100 000, mais elle doit pouvoir modifier l’adresse d’un employé dont le salaire est déjà supérieur à 100 000 (car il viole déjà le prédicat).  
   
 -   Aucune modification n’a été apportée aux API bulk, y compris à BULK INSERT. Cela signifie que les prédicats BLOCK AFTER INSERT s’appliquent aux opérations d’insertion en bloc comme s’il s’agissait d’opérations d’insertion standard.  
   
@@ -94,7 +96,7 @@ ms.locfileid: "47814677"
   
 -   Une banque peut créer une stratégie pour limiter l'accès aux lignes de données financières en fonction de la division de l'entreprise de l'employé ou du rôle de l'employé au sein de la société.  
   
--   Une application mutualisée peut créer une stratégie afin d'appliquer une séparation logique entre les lignes de données de chaque locataire et celles des autres locataires. L'efficacité est obtenue grâce au stockage des données de nombreux locataires dans une seule table. Bien sûr, chaque locataire peut afficher uniquement ses lignes de données.  
+-   Une application mutualisée peut créer une stratégie afin d'appliquer une séparation logique entre les lignes de données de chaque locataire et celles des autres locataires. L'efficacité est obtenue grâce au stockage des données de nombreux locataires dans une seule table. Chaque locataire peut afficher uniquement ses lignes de données.  
   
  Les prédicats de filtre de la sécurité au niveau des lignes sont fonctionnellement équivalents à l'ajout d'une clause **WHERE** . Le prédicat peut être aussi sophistiqué que l'exigent les pratiques professionnelles, ou la clause aussi simple que `WHERE TenantId = 42`.  
   
@@ -141,7 +143,7 @@ ms.locfileid: "47814677"
    
   
 ##  <a name="SecNote"></a> Note de sécurité : Attaques côté canal  
- **Gestionnaire de stratégie de sécurité malveillant :** il est important d’observer qu’un gestionnaire de stratégie de sécurité malveillant, disposant d’autorisations suffisantes pour créer une stratégie de sécurité sur une colonne sensible, et qui est autorisé à créer ou à modifier des fonctions table incluses, pourrait agir en collusion avec un autre utilisateur ayant des autorisations select sur une table pour effectuer une exfiltration de données en créant à des fins malveillantes des fonctions table incluses destinées à utiliser des attaques côté canal pour inférer des données. Ces attaques nécessitent une collusion (ou des autorisations excessives accordées à un utilisateur malveillant) et probablement plusieurs itérations de modification de la stratégie (nécessitant l'autorisation de supprimer le prédicat pour rompre la liaison de schéma), de modification des fonctions table inline et d'exécution répétée d'instructions select sur la table cible. Il est fortement recommandé de limiter les autorisations au strict nécessaire et de surveiller toute activité suspecte, telle que la modification permanente des stratégies et des fonctions table inline associées à la sécurité au niveau des lignes.  
+ **Gestionnaire de stratégie de sécurité malveillant :** Il est important d’observer qu’un gestionnaire de stratégie de sécurité malveillant, disposant d’autorisations suffisantes pour créer une stratégie de sécurité sur une colonne sensible, et qui est autorisé à créer ou à modifier des fonctions table incluses, pourrait agir en collusion avec un autre utilisateur ayant des autorisations select sur une table pour effectuer une exfiltration de données en créant à des fins malveillantes des fonctions table incluses destinées à utiliser des attaques par canal auxiliaire pour déduire des données. Ces attaques nécessitent une collusion (ou des autorisations excessives accordées à un utilisateur malveillant) et probablement plusieurs itérations de modification de la stratégie (nécessitant l'autorisation de supprimer le prédicat pour rompre la liaison de schéma), de modification des fonctions table inline et d'exécution répétée d'instructions select sur la table cible. Nous vous recommandons vivement de limiter les autorisations au strict nécessaire et de surveiller toute activité suspecte, telle que la modification permanente des stratégies et des fonctions table inline associées à la sécurité au niveau des lignes.  
   
  **Requêtes élaborées avec soin :** il est possible de provoquer des fuites d’informations via l’utilisation de requêtes élaborées avec soin. Par exemple, `SELECT 1/(SALARY-100000) FROM PAYROLL WHERE NAME='John Doe'` permettrait à un utilisateur malveillant de savoir que le salaire de John Doe est 100 000 $. Même s'il existe un prédicat de sécurité en vigueur pour empêcher un utilisateur malveillant d'interroger directement le salaire d'autres personnes, l'utilisateur peut déterminer si la requête retourne une exception de division par zéro.  
    
@@ -149,23 +151,23 @@ ms.locfileid: "47814677"
 ##  <a name="Limitations"></a> Compatibilité entre fonctionnalités  
  En général, la sécurité au niveau des lignes fonctionne comme prévu pour les fonctionnalités. Il existe cependant quelques exceptions. Cette section contient plusieurs remarques et avertissements concernant l’utilisation de la sécurité au niveau des lignes avec certaines autres fonctionnalités de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   **DBCC SHOW_STATISTICS** fournit des statistiques sur des données non filtrées et peut donc entraîner des fuites d’informations qui sont autrement protégées par une stratégie de sécurité. C’est pourquoi, pour afficher un objet de statistiques pour une table faisant l’objet d’une politique de sécurité au niveau des lignes, l’utilisateur doit être propriétaire de la table ou membre du rôle serveur fixe sysadmin, du rôle de base de données fixe db_owner ou du rôle de base de données fixe db_ddladmin.  
+-   **DBCC SHOW_STATISTICS** fournit des statistiques sur des données non filtrées et peut entraîner des fuites d’informations qui sont autrement protégées par une stratégie de sécurité. C’est pourquoi, pour afficher un objet de statistiques pour une table faisant l’objet d’une politique de sécurité au niveau des lignes, l’utilisateur doit être propriétaire de la table ou membre du rôle serveur fixe sysadmin, du rôle de base de données fixe db_owner ou du rôle de base de données fixe db_ddladmin.  
   
 -   **Filestream** La sécurité au niveau des lignes est incompatible avec Filestream.  
   
--   **Polybase** La sécurité au niveau des lignes est incompatible avec Polybase.  
+-   **PolyBase** La sécurité au niveau des lignes est incompatible avec PolyBase.  
   
 -   **Tables optimisées en mémoire**La fonction table incluse utilisée comme prédicat de sécurité sur une table optimisée en mémoire doit être définie avec l’option `WITH NATIVE_COMPILATION` . Avec cette option, les fonctionnalités de langue non prises en charge par les tables optimisées en mémoire sont interdites, et l’erreur appropriée est au moment de la création. Pour plus d’informations, consultez la section **Sécurité au niveau des lignes dans les tables optimisées en mémoire** dans [Introduction aux tables optimisées en mémoire](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md).  
   
 -   **Vues indexées** En général, des stratégies de sécurité peuvent être créées sur des vues, et des vues créées sur des tables liées par des stratégies de sécurité. En revanche, des vues indexées ne peuvent pas être créées sur des tables ayant une stratégie de sécurité, car les recherches de ligne via l’index contourneraient la stratégie.  
   
--   **Capture des modifications de données** La capture des modifications de données peut entraîner une fuite de lignes entières qui devraient être filtrées pour les membres de **db_owner** ou les utilisateurs membres du rôle de régulation spécifié, lorsque la capture de données modifiées est activée pour une table (remarque : vous pouvez définir explicitement cela sur **NULL** pour permettre à tous les utilisateurs d’accéder aux modifications de données). En effet, **db_owner** et les membres de ce rôle de régulation peuvent voir toutes les modifications de données sur une table, même si une stratégie de sécurité s’applique à celle-ci.  
+-   **Capture des changements de données** La capture des changements de données peut entraîner une fuite de lignes entières qui devraient être filtrées pour les membres de **db_owner** ou les utilisateurs membres du rôle de régulation spécifié, lorsque la capture des changements de données est activée pour une table (remarque : vous pouvez définir explicitement cette fonction sur **NULL** pour permettre à tous les utilisateurs d’accéder aux données modifiées). En effet, **db_owner** et les membres de ce rôle de régulation peuvent voir toutes les modifications de données sur une table, même si une stratégie de sécurité s’applique à celle-ci.  
   
 -   **Suivi des modifications** Le suivi des modifications peut entraîner une fuite de la clé primaire de lignes qui devraient être filtrées pour les utilisateurs disposant d’autorisations **SELECT** et **VIEW CHANGE TRACKING** . La fuite n’a pas trait aux valeurs de données réelles, mais uniquement à la survenance d’une mise à jour, d’une insertion ou d’une suppression dans une colonne A pour la ligne contenant une clé primaire B. Cela peut être problématique si la clé primaire contient un élément confidentiel tel un numéro de sécurité sociale. Toutefois, dans la pratique, cette fonction **CHANGETABLE** est presque toujours jointe à la table d’origine afin d’obtenir les données les plus récentes.  
   
 -   **Recherche en texte intégral** Un gain de performances est attendu pour des requêtes utilisant les fonctions de recherche en texte intégral et de recherche sémantique ci-après, en raison d’une jointure supplémentaire introduite pour appliquer la sécurité au niveau des lignes et éviter la fuite les clés primaires de lignes qui devraient être filtrées : **CONTAINSTABLE**, **FREETEXTTABLE**, semantickeyphrasetable, semanticsimilaritydetailstable, semanticsimilaritytable.  
   
--   **Index columnstore** La sécurité au niveau des lignes est compatible avec les index columnstore tant cluster que non cluster. Toutefois, étant donné que la sécurité au niveau des lignes s’applique à une fonction, il est possible que l’optimiseur puisse modifier le plan de requête de façon à ce qu’il n’utilise pas le mode batch.  
+-   **Index columnstore** La sécurité au niveau des lignes est compatible avec les index columnstore tant cluster que non cluster. Toutefois, étant donné que la sécurité au niveau des lignes s’applique à une fonction, l’optimiseur peut modifier le plan de requête de façon à ne pas utiliser le mode batch.  
   
 -   **Vues partitionnées** Les prédicats BLOCK ne peuvent pas être définis sur des vues partitionnées, et celles-ci ne peuvent pas être créées sur des tables qui utilisent des prédicats BLOCK. Les prédicats de filtre sont compatibles avec les vues partitionnées.  
   
@@ -175,10 +177,13 @@ ms.locfileid: "47814677"
 ##  <a name="CodeExamples"></a> Exemples  
   
 ###  <a name="Typical"></a> A. Scénario pour les utilisateurs qui s’authentifient auprès de la base de données  
- Ce bref exemple crée trois utilisateurs, crée et remplit une table de 6 lignes, puis crée une fonction table inline et une stratégie de sécurité pour la table. L'exemple montre comment les instructions select sont filtrées pour les différents utilisateurs.  
+ Ce bref exemple crée trois utilisateurs, crée et remplit une table de six lignes, puis crée une fonction table inline et une stratégie de sécurité pour cette table. L'exemple montre comment les instructions select sont filtrées pour les différents utilisateurs.  
   
  Créez trois comptes d'utilisateur qui illustrent différentes fonctionnalités d'accès.  
-  
+
+> [!NOTE]
+> Azure SQL Data Warehouse ne prend pas en charge EXECUTE AS USER, si bien que vous devez créer au préalable une connexion (CREATE LOGIN) pour chaque utilisateur. Plus tard, vous vous connecterez en tant qu’utilisateur approprié pour tester ce comportement.
+
 ```sql  
 CREATE USER Manager WITHOUT LOGIN;  
 CREATE USER Sales1 WITHOUT LOGIN;  
@@ -197,7 +202,7 @@ CREATE TABLE Sales
     );  
 ```  
   
- Remplissez la table avec 6 lignes de données, en affichant 3 commandes pour chaque représentant commercial.  
+ Remplissez la table avec six lignes de données, en affichant trois commandes pour chaque représentant commercial.  
   
 ```  
 INSERT Sales VALUES   
@@ -233,6 +238,9 @@ AS
 WHERE @SalesRep = USER_NAME() OR USER_NAME() = 'Manager';  
 ```  
   
+> [!NOTE]
+> Azure SQL Data Warehouse ne prend pas en charge USER_NAME(). Par conséquent, utilisez SYSTEM_USER à la place.
+
  Créez une stratégie de sécurité en ajoutant la fonction comme prédicat de filtre. L'état doit être défini sur ON pour activer la stratégie.  
   
 ```  
@@ -257,8 +265,10 @@ EXECUTE AS USER = 'Manager';
 SELECT * FROM Sales;   
 REVERT;  
 ```  
-  
- L'utilisateur Manager doit afficher l'ensemble des 6 lignes. Les utilisateurs Sales1 et Sales2 doivent voir uniquement leurs propres ventes.  
+> [!NOTE]
+> Azure SQL Data Warehouse ne prend pas en charge EXECUTE AS USER. Par conséquent, connectez-vous en tant qu’utilisateur approprié pour tester le comportement ci-dessus.
+
+ L'utilisateur Manager doit visualiser l'ensemble des six lignes. Les utilisateurs Sales1 et Sales2 doivent voir uniquement leurs propres ventes.  
   
  Modifiez la stratégie de sécurité pour désactiver la stratégie.  
   
@@ -267,11 +277,14 @@ ALTER SECURITY POLICY SalesFilter
 WITH (STATE = OFF);  
 ```  
   
- Les utilisateurs Sales1 et Sales2 peuvent maintenant voir l'ensemble des 6 lignes.  
+ Les utilisateurs Sales1 et Sales2 peuvent maintenant visualiser l'ensemble des six lignes.  
   
   
 ###  <a name="MidTier"></a> B. Scénario pour les utilisateurs qui se connectent à la base de données via une application intermédiaire  
- Cet exemple montre comment une application de couche intermédiaire peut implémenter le filtrage des connexions, lorsque les utilisateurs (ou locataires) d'application partagent le même utilisateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (l'application). L’application définit l’ID d’utilisateur d’application actuel dans [SESSION_CONTEXT &#40;Transact-SQL&#41;](../../t-sql/functions/session-context-transact-sql.md) après la connexion à la base de données, puis les stratégies de sécurité filtrent en toute transparence les lignes qui ne devraient pas être visibles par cet ID, et empêchent l’utilisateur d’insérer des lignes pour l’ID d’utilisateur incorrect. Aucune autre modification de l’application n’est nécessaire.  
+> [!NOTE]
+> Cet exemple n’est pas applicable à Azure SQL Data Warehouse dans la mesure où les prédicats BLOCK et SESSION_CONTEXT ne sont pas actuellement pris en charge.
+
+Cet exemple montre comment une application de couche intermédiaire peut implémenter le filtrage des connexions, lorsque les utilisateurs (ou locataires) d'application partagent le même utilisateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (l'application). L’application définit l’ID d’utilisateur d’application actuel dans [SESSION_CONTEXT &#40;Transact-SQL&#41;](../../t-sql/functions/session-context-transact-sql.md) après la connexion à la base de données, puis les stratégies de sécurité filtrent en toute transparence les lignes qui ne devraient pas être visibles par cet ID, et empêchent l’utilisateur d’insérer des lignes pour l’ID d’utilisateur incorrect. Aucune autre modification de l'application n'est nécessaire.  
   
  Créez une table simple pour stocker des données.  
   
@@ -284,7 +297,7 @@ CREATE TABLE Sales (
 );  
 ```  
   
- Remplissez la table avec 6 lignes de données, en affichant 3 commandes pour chaque utilisateur de l'application.  
+ Remplissez la table avec six lignes de données, en affichant trois commandes pour chaque utilisateur d’application.  
   
 ```  
 INSERT Sales VALUES   
@@ -307,8 +320,8 @@ GRANT SELECT, INSERT, UPDATE, DELETE ON Sales TO AppUser;
 DENY UPDATE ON Sales(AppUserId) TO AppUser;  
 ```  
   
- Créez un schéma et une fonction de prédicat qui utilisent l’ID d’utilisateur de l’application stocké dans **SESSION_CONTEXT** pour filtrer les lignes.  
-  
+ Créez un schéma et une fonction de prédicat qui utilisent l’ID d’utilisateur de l’application stocké dans **SESSION_CONTEXT** pour filtrer les lignes.
+
 ```  
 CREATE SCHEMA Security;  
 GO  

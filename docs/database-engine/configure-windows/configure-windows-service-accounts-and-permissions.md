@@ -51,12 +51,12 @@ ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 772596b978cebc8b1581ac1a0e2e39f042afdf09
-ms.sourcegitcommit: 3e1efbe460723f9ca0a8f1d5a0e4a66f031875aa
+ms.openlocfilehash: ce8d3928a59acfb2c3b53e19b50934b8f30a0eda
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50237115"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51605980"
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>Configurer les comptes de service Windows et les autorisations
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -104,7 +104,7 @@ ms.locfileid: "50237115"
   
  - **Moteur SQL Server PolyBase** : fournit des fonctions de requête distribuée aux sources de données externes.
  
- - **Service de déplacement de données SQL Server PolyBase** : permet le déplacement de données entre SQL Server et les sources de données externes, ainsi qu’entre les nœuds SQL dans les groupes de scale-out PolyBase.
+ - **Service de mouvement de données PolyBase SQL Server** : permet le déplacement de données entre SQL Server et les sources de données externes ainsi qu’entre les nœuds SQL dans les groupes de scale-out PolyBase.
   
 ##  <a name="Serv_Prop"></a> Propriétés et configuration des services
 
@@ -180,9 +180,9 @@ Les comptes de service administrés, les comptes de service administrés de grou
   
      Un compte de service administré de groupe est un compte MSA pour plusieurs serveurs. Windows gère un compte de service pour les services en cours d’exécution sur un groupe de serveurs. Active Directory met automatiquement à jour le mot de passe du compte de service administré de groupe sans redémarrer les services. Vous pouvez configurer les services SQL Server pour utiliser un principal de compte de service administré de groupe. À compter de SQL Server 2014, SQL Server prend en charge les comptes de service administrés de groupe sur les instances autonomes et SQL Server 2016 et ultérieur pour les instances de cluster de basculement et les groupes de disponibilité.  
   
-    Pour utiliser un compte de service administré de groupe pour SQL Server 2014 ou version ultérieure, le système d’exploitation doit être Windows Server 2012 R2 ou version ultérieure. Les serveurs avec Windows Server 2012 R2 nécessitent l’application de l’article [2998082 de la Base de connaissances](http://support.microsoft.com/kb/2998082) afin que les services puissent se connecter sans interruption immédiatement après la modification du mot de passe.  
+    Pour utiliser un compte de service administré de groupe pour SQL Server 2014 ou version ultérieure, le système d’exploitation doit être Windows Server 2012 R2 ou version ultérieure. Les serveurs avec Windows Server 2012 R2 nécessitent l’application de l’article [2998082 de la Base de connaissances](https://support.microsoft.com/kb/2998082) afin que les services puissent se connecter sans interruption immédiatement après la modification du mot de passe.  
   
-    Pour plus d’informations, consultez [Comptes de service administrés de groupe](http://technet.microsoft.com/library/hh831782.aspx)  
+    Pour plus d’informations, consultez [Comptes de service administrés de groupe](https://technet.microsoft.com/library/hh831782.aspx)  
       
     > [!NOTE]  
     >  Le compte de service administré de groupe doit être créé dans Active Directory par l’administrateur de domaine avant que le programme d’installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne puisse l’utiliser pour les services [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -203,7 +203,7 @@ Les comptes de service administrés, les comptes de service administrés de grou
     |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent sur l’instance par défaut de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|**NT SERVICE\SQLSERVERAGENT**|  
     |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent sur une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nommée **PAYROLL**|**NT SERVICE\SQLAGENT$PAYROLL**|  
   
- Pour plus d’informations sur les comptes de service administrés et les comptes virtuels, consultez la section **Concepts liés aux comptes de service administrés et aux comptes virtuels** du [Guide pas à pas des comptes de service](http://technet.microsoft.com/library/dd548356\(WS.10\).aspx) et du [Forum aux questions des comptes de service administrés](http://technet.microsoft.com/library/ff641729\(WS.10\).aspx).  
+ Pour plus d’informations sur les comptes de service administrés et les comptes virtuels, consultez la section **Concepts liés aux comptes de service administrés et aux comptes virtuels** du [Guide pas à pas des comptes de service](https://technet.microsoft.com/library/dd548356\(WS.10\).aspx) et du [Forum aux questions des comptes de service administrés](https://technet.microsoft.com/library/ff641729\(WS.10\).aspx).  
   
  **Remarque relative à la sécurité :** [!INCLUDE[ssNoteLowRights](../../includes/ssnotelowrights-md.md)] Utilisez un [MSA](#MSA) ou les services Agent [virtual account](#VA_Desc) quand cela est possible. Lorsque MSA et les comptes virtuels ne sont pas possibles, utilisez un compte d'utilisateur ou compte de domaine doté de privilèges minimaux au lieu d'un compte partagé pour les services [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Utilisez des comptes distincts pour différents services [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . N'accordez aucune autorisation supplémentaire au compte de service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ni aux groupes de services. Les autorisations seront accordées par le biais de l'appartenance aux groupes ou accordées directement à un SID de service, lorsqu'un SID de service est pris en charge.  
   
@@ -283,7 +283,7 @@ Cette section décrit les autorisations configurées par le programme d'installa
  Selon la configuration du service, le compte de service pour un service ou un SID de service est ajouté en tant que membre du groupe de service lors de l'installation ou de la mise à niveau.
   
 ###  <a name="Windows"></a> Privilèges et droits Windows  
- Le compte affecté pour démarrer un service a besoin d' **autorisations de démarrage, arrêt et pause** pour le service. Le programme d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les affecte automatiquement.  En premier lieu, installez les Outils d'administration de serveur distant. Consultez la rubrique [Outils d'administration de serveur distant pour Windows 7](http://www.microsoft.com/downloads/en/details.aspx?FamilyID=7d2f6ad7-656b-4313-a005-4e344e43997d).
+ Le compte affecté pour démarrer un service a besoin d' **autorisations de démarrage, arrêt et pause** pour le service. Le programme d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les affecte automatiquement.  En premier lieu, installez les Outils d'administration de serveur distant. Consultez la rubrique [Outils d'administration de serveur distant pour Windows 7](https://www.microsoft.com/downloads/en/details.aspx?FamilyID=7d2f6ad7-656b-4313-a005-4e344e43997d).
   
  Le tableau suivant affiche les autorisations que le programme d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] demande pour les SID par service ou les groupes Windows locaux utilisés par les composants [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
   

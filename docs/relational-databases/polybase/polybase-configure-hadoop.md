@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2dd074f4cd7d3d9042e5f0deb3de6ee0731c4af9
-ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
+ms.openlocfilehash: e899430e196563d4477ae4cbe072cdc1078cd471
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49806719"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606559"
 ---
 # <a name="configure-polybase-to-access-external-data-in-hadoop"></a>Configurer PolyBase pour accéder à des données externes dans Hadoop
 
@@ -35,11 +35,9 @@ L’article explique comment utiliser PolyBase sur une instance SQL Server pour 
 
 - PolyBase prend en charge deux fournisseurs Hadoop, HDP (Hortonworks Data Platform) et CDH (Cloudera Distributed Hadoop). Hadoop suit le modèle « majeure.mineure.version » pour ses nouvelles versions, et toutes les versions d’une version majeure ou mineure prise en charge sont prises en charge. Les fournisseurs Hadoop suivants sont pris en charge :
 
-  - Hortonworks HDP 1.3 sur Linux/Windows Server  
-  - Hortonworks HDP 2.1 - 2.6 sur Linux
-  - Hortonworks HDP 2.1 - 2.3 sur Windows Server  
-  - Cloudera CDH 4.3 sur Linux  
-  - Cloudera CDH 5.1 – 5.5, 5.9 - 5.13 sur Linux
+  - Hortonworks HDP 1.3, 2.1-2.6, 3.0 sur Linux
+  - Hortonworks HDP 1.3, 2.1-2.3 sur Windows Server
+  - Cloudera CDH 4.3, 5.1 – 5.5, 5.9 - 5.13 sur Linux
 
 > [!NOTE]
 > PolyBase prend en charge les zones de chiffrement Hadoop à partir de SQL Server 2016 SP1 CU7 et SQL Server 2017 CU3. Si vous utilisez des [groupes de scale-out PolyBase](polybase-scale-out-groups.md), tous les nœuds doivent également être sur une build qui inclut la prise en charge des zones de chiffrement Haddop.
@@ -75,7 +73,7 @@ Pour améliorer les performances des requêtes, activez le calcul pushdown sur v
 1. Recherchez le fichier **yarn-site.XML** dans le chemin d’installation de SQL Server. En règle générale, le chemin d’accès est le suivant :  
 
    ```xml  
-   C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\PolybaseHadoopconf  
+   C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\PolyBaseHadoopconf  
    ```  
 
 1. Sur l’ordinateur Hadoop, recherchez le fichier analogue dans le répertoire de configuration Hadoop. Dans le fichier, recherchez et copiez la valeur de la clé de configuration yarn.application.classpath.  
@@ -96,7 +94,7 @@ Pour interroger les données dans votre source de données Hadoop, vous devez d�
     ## <a name="arguments"></a>Arguments
     PASSWORD ='password'
 
-    Mot de passe utilisé pour chiffrer la clé principale dans la base de données. Le mot de passe doit satisfaire aux critères de la stratégie de mot de passe Windows de l’ordinateur qui héberge l’instance SQL Server.
+    Mot de passe utilisé pour chiffrer la clé principale dans la base de données. Le mot de passe doit remplir les critères de la stratégie de mot de passe Windows de l’ordinateur qui héberge l’instance SQL Server.
 1. Créez des informations d’identification limitées à la base de données pour les clusters Hadoop sécurisés par Kerberos.
 
    ```sql

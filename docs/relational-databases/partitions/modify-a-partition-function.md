@@ -11,12 +11,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 90e24f7de0ca9950962cd078c7e7360572de89da
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b8ed3ce76d449e6e67418a13fe1d61baeed1edf0
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47673717"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638516"
 ---
 # <a name="modify-a-partition-function"></a>Modifier une fonction de partition
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "47673717"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'assure pas la prise en charge de la réplication lors de la modification d'une fonction de partition. Si vous voulez apporter des modifications à une fonction de partition dans la base de données de publication, vous devez le faire manuellement dans la base d'abonnement.  
   
--   Tous les groupes de fichiers concernés par l'instruction ALTER PARITITION FUNCTION doivent être en ligne.  
+-   Tous les groupes de fichiers concernés par l’instruction ALTER PARTITION FUNCTION doivent être en ligne.  
   
 ###  <a name="Security"></a> Sécurité  
   

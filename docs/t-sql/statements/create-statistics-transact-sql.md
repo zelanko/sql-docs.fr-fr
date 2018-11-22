@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2527a7ed3401ea2da3269efb98a01c4d74651132
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 32e830639abf73e85051486c8fa542bc0d1842a9
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799127"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51560192"
 ---
 # <a name="create-statistics-transact-sql"></a>CREATE STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -61,7 +61,7 @@ ON { table_or_indexed_view_name } ( column [ ,...n ] )
         [ [ FULLSCAN   
             [ [ , ] PERSIST_SAMPLE_PERCENT = { ON | OFF } ]    
           | SAMPLE number { PERCENT | ROWS }   
-            [ [ , ] PERSIST_SAMPLE_PERCENT = { ON | OFF } ]    
+            [ [ , ] PERSIST_SAMPLE_PERCENT = { ON | OFF } ]    
           | <update_stats_stream_option> [ ,...n ]    
         [ [ , ] NORECOMPUTE ]   
         [ [ , ] INCREMENTAL = { ON | OFF } ] 
@@ -288,19 +288,19 @@ CREATE STATISTICS CustomerStats1 ON DimCustomer (CustomerKey, EmailAddress);
 CREATE STATISTICS CustomerStats1 ON DimCustomer (CustomerKey, EmailAddress) WITH FULLSCAN;  
 ```  
 
-### <a name="e-using-create-statistics-with-fullscan-and-persistsamplepercent"></a>E. Utilisation de CREATE STATISTICS avec FULLSCAN et PERSIST_SAMPLE_PERCENT  
- L’exemple suivant crée les statistiques `ContactMail2` pour toutes les lignes des colonnes `BusinessEntityID` et `EmailPromotion` de la table `Contact`, et définit un pourcentage d’échantillonnage égal à 100 pour toutes les mises à jour ultérieures qui ne spécifient pas explicitement un pourcentage d’échantillonnage.  
+### <a name="e-using-create-statistics-with-fullscan-and-persistsamplepercent"></a>E. Utilisation de CREATE STATISTICS avec FULLSCAN et PERSIST_SAMPLE_PERCENT  
+ L’exemple suivant crée les statistiques `ContactMail2` pour toutes les lignes des colonnes `BusinessEntityID` et `EmailPromotion` de la table `Contact`, et définit un pourcentage d’échantillonnage égal à 100 pour toutes les mises à jour ultérieures qui ne spécifient pas explicitement un pourcentage d’échantillonnage.  
+  
+```sql  
+CREATE STATISTICS NamePurchase  
+    ON AdventureWorks2012.Person.Person (BusinessEntityID, EmailPromotion)  
+    WITH FULLSCAN, PERSIST_SAMPLE_PERCENT = ON;  
+```  
   
-```sql  
-CREATE STATISTICS NamePurchase  
-    ON AdventureWorks2012.Person.Person (BusinessEntityID, EmailPromotion)  
-    WITH FULLSCAN, PERSIST_SAMPLE_PERCENT = ON;  
-```  
+### Examples using AdventureWorksDW database. 
   
-### <a name="examples-using-adventureworksdw-database"></a>Exemples avec la base de données AdventureWorksDW. 
-  
-### <a name="f-create-statistics-on-two-columns"></a>F. Créer des statistiques sur deux colonnes  
- L’exemple suivant crée les statistiques `CustomerStats1`, en fonction des colonnes `CustomerKey` et `EmailAddress` de la table `DimCustomer`. Les statistiques sont créées d’après un échantillon statistiquement significatif des lignes dans la table `Customer`.  
+### F. Create statistics on two columns  
+ The following example creates the `CustomerStats1` statistics, based on the `CustomerKey` and `EmailAddress` columns of the `DimCustomer` table. The statistics are created based on a statistically significant sampling of the rows in the `Customer` table.  
   
 ```sql  
 CREATE STATISTICS CustomerStats1 ON DimCustomer (CustomerKey, EmailAddress);  

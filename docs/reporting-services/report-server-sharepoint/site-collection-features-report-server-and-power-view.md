@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e40163fe08b451e59dc28915002079b80e987e6f
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 9ae23135583dc09db8d8a8b0cfb7d356244fb753
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021183"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812276"
 ---
 # <a name="activate-the-report-server-and-power-view-integration-features-in-sharepoint"></a>Activer les fonctionnalités d’intégration du serveur de rapports et de Power View dans SharePoint
 
@@ -26,7 +26,7 @@ ms.locfileid: "50021183"
 > [!NOTE]
 > L’intégration de Reporting Services à SharePoint n’est plus disponible après SQL Server 2016.
 
- Si vous installez le complément Reporting Services pour les produits SharePoint 2010 après l’installation du produit SharePoint, la fonctionnalité d’intégration du serveur de rapports et la fonctionnalité d’intégration de Power View sont uniquement activées pour les collections de sites racines. Pour les autres collections de sites, vous devez activer manuellement ces fonctionnalités. Par exemple, si vous avez une collection de sites **http://[nom de mon serveur]/sites/[nom de collection de sites]**, vous devez activer manuellement les fonctionnalités de collection de sites de Reporting Services.  
+ Si vous installez le complément Reporting Services pour les produits SharePoint 2010 après l’installation du produit SharePoint, la fonctionnalité d’intégration du serveur de rapports et la fonctionnalité d’intégration de Power View sont uniquement activées pour les collections de sites racines. Pour les autres collections de sites, vous devez activer manuellement ces fonctionnalités. Par exemple, si vous avez une collection de sites **https://[nom de mon serveur]/sites/[nom de collection de sites]**, vous devez activer manuellement les fonctionnalités de collection de sites de Reporting Services.  
   
  S’il n’y a pas de collection de sites racine, le complément Reporting Services journalise un message semblable au suivant.  
   

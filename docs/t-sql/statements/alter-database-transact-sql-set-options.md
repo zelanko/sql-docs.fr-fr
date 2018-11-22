@@ -30,12 +30,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 096948b417e29b073ecc30abd9831c62ef520646
-ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
+ms.openlocfilehash: 15d83a8f15492e0d1f9c0cf1d804645f4b14c867
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48252196"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814352"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Options SET d'ALTER DATABASE (Transact-SQL) 
 
@@ -668,7 +668,7 @@ Voir [ALTER DATABASE SET HADR](../../t-sql/statements/alter-database-transact-sq
   
 **\<mixed_page_allocation_option> ::=**  
   
-**S’applique à**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu’à [version actuelle](http://go.microsoft.com/fwlink/p/?LinkId=299658)). 
+**S'applique à**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] via la [version actuelle](https://go.microsoft.com/fwlink/p/?LinkId=299658)). 
   
 MIXED_PAGE_ALLOCATION { OFF | ON } contrôle si la base de données peut créer des pages initiales à l’aide d’une extension mixte pour les huit premières pages d’une table ou d’un index.  
  
@@ -682,7 +682,7 @@ Ce paramètre est ON pour toutes les bases de données système. **tempdb** est 
   
 **\<PARAMETERIZATION_option> ::=**  
   
-Contrôle l'option de paramétrage.  
+Contrôle l'option de paramétrage. Pour plus d’informations sur le paramétrage, consultez [Guide d’architecture de traitement des requêtes](../../relational-databases/query-processing-architecture-guide.md#SimpleParam). 
   
 PARAMETERIZATION { SIMPLE | FORCED }  
 SIMPLE  
@@ -698,13 +698,13 @@ Vous pouvez déterminer la valeur actuelle de cette option en consultant la colo
 **S’applique à**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
   
 ON | OFF | CLEAR [ ALL ]  
-Contrôle si le magasin de requête est activé dans la base de données, ainsi que la suppression du contenu du magasin de requête.  
+Contrôle si le magasin de requête est activé dans la base de données, ainsi que la suppression du contenu du magasin de requête. Pour plus d’informations, consultez [Scénarios d’utilisation du magasin des requêtes](../../relational-databases/performance/query-store-usage-scenarios.md). 
   
 ON  
 Active le magasin de requêtes.  
   
 OFF  
-Désactive le magasin de requêtes.  Il s'agit de la valeur par défaut.   
+Désactive le magasin de requêtes. Il s'agit de la valeur par défaut.   
   
 CLEAR  
 Supprime le contenu du magasin de requêtes.  
@@ -809,7 +809,7 @@ Lors de la détection d'une page endommagée ou d'un échec de somme de contrôl
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] procède à quatre nouvelles tentatives pour une lecture qui échoue avec une erreur de somme de contrôle, de page endommagée ou d'E/S disque. Si la lecture réussit lors d'une de ces tentatives, un message est écrit dans le journal des erreurs et l'exécution de la commande qui a déclenché la lecture se poursuit. Si les tentatives de lecture échouent, la commande échoue elle aussi avec le message d'erreur 824.  
   
-Pour plus d’informations sur les messages d’erreur 823, 824 et 825, consultez [Comment faire pour dépanner une erreur Msg 823 dans SQL Server](http://support.microsoft.com/help/2015755), [How to troubleshoot Msg 824 in SQL Server (Guide pratique pour résoudre une erreur Msg 824 dans SQL Server)](http://support.microsoft.com/help/2015756) et [How to troubleshoot Msg 825 &#40;read retry&#41; in SQL Server (Guide pratique pour résoudre une erreur Msg 825 (nouvelle tentative de lecture) dans SQL Server)](http://support.microsoft.com/help/2015757).
+Pour plus d’informations sur les messages d’erreur 823, 824 et 825, consultez [Comment faire pour dépanner une erreur Msg 823 dans SQL Server](https://support.microsoft.com/help/2015755), [How to troubleshoot Msg 824 in SQL Server (Guide pratique pour résoudre une erreur Msg 824 dans SQL Server)](https://support.microsoft.com/help/2015756) et [How to troubleshoot Msg 825 &#40;read retry&#41; in SQL Server (Guide pratique pour résoudre une erreur Msg 825 (nouvelle tentative de lecture) dans SQL Server)](https://support.microsoft.com/help/2015757).
   
 Vous pouvez déterminer l’état de cette option en consultant la colonne *page_verify_option* de la vue de catalogue [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) ou la propriété *IsTornPageDetectionEnabled* de la fonction [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md).  
   
@@ -1135,7 +1135,7 @@ Toutes les options de base de données n’utilisent pas la clause WITH \<termin
 |\<change_tracking_option>|Oui|Oui|  
 |\<db_encryption_option>|Oui|non|  
   
-Le cache de plan pour l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est effacé par la configuration d'une des options suivantes :  
+Le cache de plan pour l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est effacé par la configuration d'une des options suivantes :  
   
 |||  
 |-|-|  
@@ -1159,7 +1159,7 @@ Cette opération entraîne la recompilation de tous les plans d'exécution ulté
 ## <a name="examples"></a>Exemples  
   
 ### <a name="a-setting-options-on-a-database"></a>A. Configuration des options d'une base de données  
-L'exemple suivant définit les options de mode de récupération et de vérification de pages de données pour l'exemple de base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
+L'exemple suivant définit les options de mode de récupération et de vérification de pages de données pour l'exemple de base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
 ```sql  
 USE master;  
@@ -1193,7 +1193,7 @@ GO
 ```  
   
 ### <a name="c-enabling-snapshot-isolation-on-a-database"></a>C. Activation de l'isolement d'instantané sur une base de données  
-L'exemple ci-dessous illustre l'activation de l'option d'infrastructure d'isolement d'instantané pour la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
+L'exemple ci-dessous illustre l'activation de l'option d'infrastructure d'isolement d'instantané pour la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -1219,7 +1219,7 @@ Le jeu de résultats montre que l'infrastructure d'isolement d'instantané est a
 |AdventureWorks2012   |1                        | ON |  
   
 ### <a name="d-enabling-modifying-and-disabling-change-tracking"></a>D. Activation, modification et désactivation du suivi des modifications  
-L'exemple ci-dessous illustre l'activation du suivi des modifications pour la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] et la définition d'une période de rétention de `2` jours.  
+L'exemple ci-dessous illustre l'activation du suivi des modifications pour la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] et la définition d'une période de rétention de `2` jours.  
   
 ```sql  
 ALTER DATABASE AdventureWorks2012  
@@ -1982,7 +1982,7 @@ GO
 ```  
   
 ### <a name="b-enabling-snapshot-isolation-on-a-database"></a>B. Activation de l'isolement d'instantané sur une base de données  
-L'exemple ci-dessous illustre l'activation de l'option d'infrastructure d'isolement d'instantané pour la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
+L'exemple ci-dessous illustre l'activation de l'option d'infrastructure d'isolement d'instantané pour la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -2008,7 +2008,7 @@ Le jeu de résultats montre que l'infrastructure d'isolement d'instantané est a
 |AdventureWorks2012   |1                        | ON |  
   
 ### <a name="c-enabling-modifying-and-disabling-change-tracking"></a>C. Activation, modification et désactivation du suivi des modifications  
-L'exemple ci-dessous illustre l'activation du suivi des modifications pour la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] et la définition d'une période de rétention de `2` jours.  
+L'exemple ci-dessous illustre l'activation du suivi des modifications pour la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] et la définition d'une période de rétention de `2` jours.  
   
 ```sql  
 ALTER DATABASE AdventureWorks2012  
@@ -2023,7 +2023,7 @@ ALTER DATABASE AdventureWorks2012
 SET CHANGE_TRACKING (CHANGE_RETENTION = 3 DAYS);  
 ```  
   
-L'exemple ci-dessous illustre comment désactiver le suivi des modifications pour la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
+L'exemple ci-dessous illustre comment désactiver le suivi des modifications pour la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
 ```sql  
 ALTER DATABASE AdventureWorks2012  
@@ -2684,7 +2684,7 @@ GO
 ```  
   
 ### <a name="b-enabling-snapshot-isolation-on-a-database"></a>B. Activation de l'isolement d'instantané sur une base de données  
-L'exemple ci-dessous illustre l'activation de l'option d'infrastructure d'isolement d'instantané pour la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
+L'exemple ci-dessous illustre l'activation de l'option d'infrastructure d'isolement d'instantané pour la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -2710,7 +2710,7 @@ Le jeu de résultats montre que l'infrastructure d'isolement d'instantané est a
 |AdventureWorks2012   |1                        | ON |  
   
 ### <a name="c-enabling-modifying-and-disabling-change-tracking"></a>C. Activation, modification et désactivation du suivi des modifications  
-L'exemple ci-dessous illustre l'activation du suivi des modifications pour la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] et la définition d'une période de rétention de `2` jours.  
+L'exemple ci-dessous illustre l'activation du suivi des modifications pour la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] et la définition d'une période de rétention de `2` jours.  
   
 ```sql  
 ALTER DATABASE AdventureWorks2012  
@@ -2725,7 +2725,7 @@ ALTER DATABASE AdventureWorks2012
 SET CHANGE_TRACKING (CHANGE_RETENTION = 3 DAYS);  
 ```  
   
-L'exemple ci-dessous illustre comment désactiver le suivi des modifications pour la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
+L'exemple ci-dessous illustre comment désactiver le suivi des modifications pour la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
 ```sql  
 ALTER DATABASE AdventureWorks2012  

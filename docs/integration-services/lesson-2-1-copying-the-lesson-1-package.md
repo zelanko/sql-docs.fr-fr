@@ -11,12 +11,12 @@ ms.assetid: 7f1616c2-2b4e-4010-be50-27d7b897403a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 29172f4a1abca10e5b2968b77cfdd62ee44810e8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b7638d36f78853612c312880cd9698625af1ffe3
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827107"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640476"
 ---
 # <a name="lesson-2-1---copying-the-lesson-1-package"></a>Leçon 2-1 : Copie du package de la leçon 1
 Dans cette tâche, vous allez créer une copie du package Lesson 1.dtsx que vous avez créé à la leçon 1. Si vous n’avez pas terminé la leçon 1, vous pouvez ajouter au projet le package final de la leçon 1 inclus avec le didacticiel, puis le copier à la place. Vous allez utiliser cette nouvelle copie tout au long de la leçon 2.  
@@ -39,7 +39,7 @@ Dans cette tâche, vous allez créer une copie du package Lesson 1.dtsx que vous
   
 7.  Dans la fenêtre Propriétés, mettez à jour la propriété **Nom** en lui affectant la valeur **Leçon 2**.  
   
-8.  Cliquez sur la zone de la propriété **ID** , sur la flèche déroulante, puis sur **<Generate New ID>**.  
+8.  Cliquez sur la zone de la propriété **ID**, puis sur la flèche déroulante, cliquez sur **\<Générer un nouvel ID\>**.  
   
 ### <a name="to-add-the-completed-lesson-1-package"></a>Pour ajouter le package final de la leçon 1  
   
@@ -53,7 +53,7 @@ Dans cette tâche, vous allez créer une copie du package Lesson 1.dtsx que vous
   
     Pour télécharger tous les packages de leçons de ce didacticiel, procédez comme suit.  
   
-    1.  Accédez à [Exemples de produits Integration Services](http://go.microsoft.com/fwlink/?LinkId=275027)  
+    1.  Accédez à [Exemples de produits Integration Services](https://go.microsoft.com/fwlink/?LinkId=275027)  
   
     2.  Cliquez sur l'onglet **DOWNLOADS** (Téléchargements).  
   

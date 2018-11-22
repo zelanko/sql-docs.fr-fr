@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.date: 09/24/2018
 ms.prod: sql
 ms.prod_service: polybase, sql-data-warehouse, pdw
-ms.openlocfilehash: 515a98fba15d6531ce106d2c47bb0a62d1a84572
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 890fc0156200c135b49f695811c983d94c418766
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47847227"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51270182"
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>Résoudre les problèmes de connectivité de PolyBase Kerberos
 
@@ -38,7 +38,7 @@ Vous devez tout d’abord avoir quelques notions élémentaires du protocole Ker
 1. Ressource sécurisée (HDFS, MR2, YARN, historique des travaux, etc.)
 1. Centre de distribution de clés (également appelé contrôleur de domaine dans Active Directory)
 
-Chacune des ressources sécurisées de Hadoop est inscrite auprès du **centre de distribution de clés (KDC)** avec un **nom de principal du service (SPN)** unique dans le cadre du processus de sécurisation du cluster Hadoop avec Kerberos. L’objectif est que le client obtienne un ticket d’utilisateur temporaire, appelé **TGT (Ticket Granting Ticket)**, afin de demander un autre ticket temporaire, appelé **ticket de service**, auprès du centre KDC pour le nom de principal du service spécifique auquel il veut accéder.  
+Chacune des ressources sécurisées de Hadoop est inscrite auprès du  **centre de distribution de clés (KDC)**  avec un  **nom de principal du service (SPN)**  unique dans le cadre du processus de sécurisation du cluster Hadoop avec Kerberos. L’objectif est que le client obtienne un ticket d’utilisateur temporaire, appelé  **TGT (Ticket Granting Ticket)**, afin de demander un autre ticket temporaire, appelé  **ticket de service**, auprès du centre KDC, pour le nom de principal du service auquel il veut accéder.  
 
 Dans PolyBase, quand une authentification est demandée pour une ressource sécurisée par Kerberos, la négociation suivante, qui implique quatre allers-retours, se produit :
 
@@ -64,11 +64,11 @@ PolyBase comprend plusieurs fichiers XML de configuration contenant les proprié
 
 Ces fichiers se trouvent sous :
 
-\\[Lecteur système\\]:{chemin d’installation}\\{instance}\\{nom}\\MSSQL\\Binn\\Polybase\\Hadoop\\conf
+\\[Lecteur système\\]:{chemin d’installation}\\{instance}\\{nom}\\MSSQL\\Binn\\PolyBase\\Hadoop\\conf
 
-Par exemple, l’emplacement par défaut pour SQL Server 2016 serait « C:\\Program Files\\Microsoft SQL Server\\MSSQL13.MSSQLSERVER\\MSSQL\\Binn\\Polybase\\Hadoop\\conf ».
+Par exemple, l’emplacement par défaut pour SQL Server 2016 serait « C:\\Program Files\\Microsoft SQL Server\\MSSQL13.MSSQLSERVER\\MSSQL\\Binn\\PolyBase\\Hadoop\\conf ».
 
-Mettez à jour l’un des fichiers de configuration de PolyBase, **core-site.xml** en utilisant les trois propriétés ci-dessous avec les valeurs définies en fonction de l’environnement :
+Mettez à jour l’un des fichiers de configuration de PolyBase,  **core-site.xml** en utilisant les trois propriétés ci-dessous avec les valeurs définies en fonction de l’environnement :
 
 ```xml
 <property>
@@ -90,7 +90,7 @@ Les autres fichiers XML devront également être mis à jour par la suite si des
 Comme l’outil s’exécute indépendamment de SQL Server, il n’a pas à être en cours d’exécution ni redémarré si des mises à jour sont apportées aux fichiers XML de configuration. Pour exécuter l’outil, exécutez les commandes suivantes sur l’hôte avec SQL Server installé :
 
 ```cmd
-> cd C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\Polybase  
+> cd C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\PolyBase  
 > java -classpath ".\Hadoop\conf;.\Hadoop\*;.\Hadoop\HDP2_2\*" com.microsoft.polybase.client.HdfsBridge {Name Node Address} {Name Node Port} {Service Principal} {Filepath containing Service Principal's Password} {Remote HDFS file path (optional)}
 ```
 
@@ -102,7 +102,7 @@ Comme l’outil s’exécute indépendamment de SQL Server, il n’a pas à êtr
 | *Name Node Port* | Port du nœud de nom. Cela fait référence à l’argument « LOCATION » dans votre instruction T-SQL CREATE EXTERNAL DATA SOURCE. Il s’agit généralement de 8020. |
 | *Service Principal* | Principal du service d’administration pour votre centre KDC. Cela doit correspondre à ce que vous utilisez comme argument « IDENTITY » dans votre instruction T-SQL CREATE DATABASE SCOPED CREDENTIAL.|
 | *Service Password* | Au lieu de taper votre mot de passe sur la console, stockez-le dans un fichier et indiquez le chemin du fichier ici. Le contenu du fichier doit correspondre à ce que vous utilisez comme argument « SECRET » dans votre instruction T-SQL CREATE DATABASE SCOPED CREDENTIAL. |
-| *Remote HDFS file path (facultatif) * | Chemin d’un fichier existant auquel accéder. S’il n’est pas spécifié, la racine « / » est utilisée. |
+| *Remote HDFS file path (facultatif) * | Chemin d’un fichier existant auquel accéder. S’il n’est pas spécifié, la racine « / » est utilisée. |
 
 ## <a name="example"></a> Exemple
 
@@ -210,12 +210,11 @@ Si l’outil a été exécuté et que les propriétés de fichier du chemin cibl
 
 ## <a name="debugging-tips"></a>Conseils de débogage
 
-### <a name="mit-kdc"></a>Centre KDC MIT  
+### <a name="mit-kdc"></a>Centre KDC MIT  
 
-Tous les noms de principal du service inscrits auprès du centre KDC, dont les administrateurs, peuvent être affichés en exécutant **kadmin.local** > (connexion admin) > **listprincs** sur l’hôte KDC ou tout client KDC configuré. Si le cluster Hadoop a été correctement sécurisé avec Kerberos, il doit exister un nom de principal du service pour chacun des nombreux services disponibles dans le cluster (par exemple, nn, dn, rm, yarn, spnego, etc.) Leurs fichiers keytab correspondants (substituts de mots de passe) peuvent être affichés sous **/etc/security/keytabs**, par défaut. Ils sont chiffrés avec la clé privée du centre KDC.  
+Tous les noms de principal du service inscrits auprès du centre KDC, dont les administrateurs, peuvent être affichés en exécutant  **kadmin.local** > (connexion admin) > **listprincs**  sur l’hôte KDC ou tout client KDC configuré. Si le cluster Hadoop a été correctement sécurisé avec Kerberos, il doit exister un nom de principal du service pour chacun des nombreux services disponibles dans le cluster (par exemple, nn, dn, rm, yarn, spnego, etc.) Leurs fichiers keytab correspondants (substituts de mots de passe) peuvent être affichés sous  **/etc/security/keytabs**, par défaut. Ils sont chiffrés avec la clé privée du centre KDC.  
 
-Envisagez également d’utiliser l’outil [kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html) pour vérifier les informations d’identification d’administrateur sur le centre KDC localement. Un exemple d’utilisation serait : *kinit identity@MYREALM.COM*. Une invite à entrer un mot de passe indique que l’identité existe.  
-Les journaux du centre KDC sont disponibles dans **/var/log/krb5kdc.log**, par défaut, ce qui inclut toutes les demandes de tickets, dont l’adresse IP du client qui a effectué la demande. Deux demandes doivent avoir été émises à partir de l’adresse IP de l’ordinateur SQL Server où l’outil a été exécuté : la première pour obtenir le ticket TGT auprès du serveur d’authentification comme **AS\_REQ**, suivie d’une demande **TGS\_REQ** pour obtenir le ticket de service auprès du serveur d’accord de tickets.
+Vous pouvez également utiliser l’outil  [kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html)  pour vérifier les informations d’identification d’administrateur du centre KDC localement. Voici un exemple d’utilisation :  *kinit identity@MYREALM.COM*. Une invite à entrer un mot de passe indique que l’identité existe.  Les journaux du centre KDC sont disponibles dans  **/var/log/krb5kdc.log**, par défaut, ce qui inclut toutes les demandes de tickets, dont l’adresse IP du client qui a effectué la demande. Deux demandes doivent avoir été émises à partir de l’adresse IP de l’ordinateur SQL Server où l’outil a été exécuté : la première pour obtenir le ticket TGT auprès du serveur d’authentification comme  **AS\_REQ**, suivie d’une demande  **TGS\_REQ**  pour obtenir le ticket de service auprès du serveur d’accord de tickets.
 
 ```bash
  [root@MY-KDC log]# tail -2 /var/log/krb5kdc.log 
@@ -225,11 +224,11 @@ Les journaux du centre KDC sont disponibles dans **/var/log/krb5kdc.log**, par d
 
 ### <a name="active-directory"></a>Active Directory 
 
-Dans Active Directory, les noms de principal du service peuvent être affichés en accédant au Panneau de configuration > Utilisateurs et ordinateurs Active Directory > *MonDomaine* > *MonUnitéOrganisation*. Si le cluster Hadoop a été correctement sécurisé avec Kerberos, il doit exister un nom de principal du service pour chacun des nombreux services disponibles (par exemple, nn, dn, rm, yarn, spnego, etc.)
+Dans Active Directory, les noms de principal du service peuvent être affichés en accédant au Panneau de configuration > Utilisateurs et ordinateurs Active Directory > *MonDomaine* > *MonUnitéOrganisation*. Si le cluster Hadoop a été correctement sécurisé avec Kerberos, il doit exister un nom de principal du service pour chacun des nombreux services disponibles (par exemple, nn, dn, rm, yarn, spnego, etc.)
 
 ## <a name="see-also"></a>Voir aussi
 
 [Integrating PolyBase with Cloudera using Active Directory Authentication](https://blogs.msdn.microsoft.com/microsoftrservertigerteam/2016/10/17/integrating-polybase-with-cloudera-using-active-directory-authentication)  
 [Cloudera’s Guide to setting up Kerberos for CDH](https://www.cloudera.com/documentation/enterprise/5-6-x/topics/cm_sg_principal_keytab.html)  
 [Hortonworks’ Guide to Setting up Kerberos for HDP](https://docs.hortonworks.com/HDPDocuments/Ambari-2.2.0.0/bk_Ambari_Security_Guide/content/ch_configuring_amb_hdp_for_kerberos.html)  
-[Résolution des problèmes de PolyBase](polybase-troubleshooting.md)
+[Résolution des problèmes de Polybase](polybase-troubleshooting.md)

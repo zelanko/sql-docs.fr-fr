@@ -11,22 +11,22 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 4ff000457e8328864ac8e77c5d21b0048da3b024
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: d414f256e0eb06bfe3925b0e8e1a61b4799c3c7c
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419404"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703767"
 ---
 # <a name="sql-server-2017-release-notes"></a>Notes de publication de SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 Cet article décrit les limitations et les problèmes de SQL Server 2017. Pour des informations connexes, consultez :
 - [Nouveautés de SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)
 - [Notes de publication de SQL Server sur Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-release-notes)
-- [Mises à jour cumulatives de SQL Server 2017](http://aka.ms/sql2017cu) pour plus d’informations sur la dernière version des mises à jour cumulatives
+- [Mises à jour cumulatives de SQL Server 2017](https://aka.ms/sql2017cu) pour plus d’informations sur la dernière version des mises à jour cumulatives
 
 **Essayer SQL Server**
-- [![Télécharger à partir du Centre d’évaluation](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) [Télécharger SQL Server 2017](http://go.microsoft.com/fwlink/?LinkID=829477)
+- [![Télécharger à partir du Centre d’évaluation](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=829477) [Télécharger SQL Server 2017](https://go.microsoft.com/fwlink/?LinkID=829477)
 - [![Créer une machine virtuelle ](../includes/media/azure-vm.png)](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) [Lancer une machine virtuelle avec SQL Server 2017](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)
 
 > [!NOTE]
@@ -44,12 +44,12 @@ Cet article décrit les limitations et les problèmes de SQL Server 2017. Pour 
     3. Recochez **Activer FILESTREAM pour l’accès aux E/S de fichier** avec le nom du partage d’origine, puis cliquez sur **Appliquer**.
 
 ### <a name="master-data-services-mds"></a>Master Data Services (MDS)
-- **Impact sur le problème et le client :** dans la page des autorisations des utilisateurs, quand vous accordez une autorisation au niveau racine dans l’arborescence des entités, vous voyez l’erreur suivante :`"The model permission cannot be saved. The object guid is not valid"`
+- **Impact sur le problème et le client :**  dans la page des autorisations des utilisateurs, quand vous accordez une autorisation au niveau racine dans l’arborescence des entités, vous voyez l’erreur suivante : `"The model permission cannot be saved. The object guid is not valid"`
 
 - **Solutions de contournement :** 
   - Accordez l’autorisation sur les sous-nœuds de l’arborescence au lieu de le faire au niveau racine.
   - ou Gestionnaire de configuration
-  - Exécutez le script décrit dans ce blog de l’équipe MDS : [erreur d’application d’une autorisation au niveau de l’entité](http://sqlblog.com/blogs/mds_team/archive/2017/09/05/sql-server-2016-sp1-cu4-regression-error-while-applying-permission-on-entity-level-quick-workaround.aspx)
+  - Exécutez le script décrit dans ce blog de l’équipe MDS : [erreur d’application d’une autorisation au niveau de l’entité](https://sqlblog.com/blogs/mds_team/archive/2017/09/05/sql-server-2016-sp1-cu4-regression-error-while-applying-permission-on-entity-level-quick-workaround.aspx)
 
 ### <a name="analysis-services"></a>Analysis Services
 - **Problème et impact sur le client :** les connecteurs de données pour les sources suivantes ne sont pas encore disponibles pour les modèles tabulaires au niveau de compatibilité 1400.

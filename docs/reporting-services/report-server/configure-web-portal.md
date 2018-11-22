@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: e918986c-af15-48f6-8178-256aed829c6a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f37cb519981b0f3ac0be532ad82e6ed74d073d8f
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 606b6fa37f5dc067cdf134792215fd7c2cd09067
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031702"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813212"
 ---
 # <a name="configure-the-web-portal"></a>Configurer le portail web
 
@@ -80,7 +80,7 @@ Vous pouvez créer un package de marque personnalisé pour modifier les couleurs
 
 2. Ouvrez Internet Explorer.
 
-3. Configurez l’URL du portail web. Par défaut, il s’agit de http://\<**nom_de_votre_serveur**>/reports, mais si vous avez installé Reporting Services sous la forme d’une instance nommée, l’URL par défaut sera http://\<**nom_de_votre_serveur**>/reports\<**_nominstance**>.
+3. Configurez l’URL du portail web. Par défaut, il s’agit de https://\<**nom_de_votre_serveur**>/reports, mais si vous avez installé Reporting Services sous la forme d’une instance nommée, l’URL par défaut sera https://\<**nom_de_votre_serveur**>/reports\<**_nominstance**>.
 
 4. Sélectionnez **Paramètres du site**.
 

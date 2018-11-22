@@ -28,12 +28,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6208a06f94b84fb145cd3fa1c4f2eef0e428f915
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: f5145db044f618727144dba0eae86ac4643f0a2d
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49461084"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51704137"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 
@@ -144,7 +144,7 @@ Spécifie le nom d'une clé asymétrique à associer à cette connexion. Cette c
 >  CHECK_EXPIRATION et CHECK_POLICY sont uniquement appliqués à Windows Server 2003 et ultérieur. Pour plus d'informations, consultez [Password Policy](../../relational-databases/security/password-policy.md). 
   
 - Les connexions créées à partir de certificats ou de clés asymétriques ne sont utilisées que pour la signature de code. Elles ne peuvent pas être utilisées pour se connecter à SQL Server. Vous pouvez créer une connexion à partir d'un certificat ou d'une clé asymétrique uniquement lorsque ceux-ci existent déjà dans la base de données master. 
-- Pour obtenir un script de transfert des connexions, consultez [Comment transférer les connexions et les mots de passe entre des instances de SQL Server 2005 et SQL Server 2008](http://support.microsoft.com/kb/918992).
+- Pour obtenir un script de transfert des connexions, consultez [Comment transférer les connexions et les mots de passe entre des instances de SQL Server 2005 et SQL Server 2008](https://support.microsoft.com/kb/918992).
 - La création d'une connexion active automatiquement la nouvelle connexion et accorde à la connexion l'autorisation **CONNECT SQL** au niveau du serveur. 
 - Le [mode d’authentification](../../relational-databases/security/choose-an-authentication-mode.md) du serveur doit correspondre au type de connexion pour autoriser l’accès.
 - Pour plus d’informations sur la conception d’un système d’autorisations, voir [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).
@@ -294,7 +294,7 @@ Utilisé pour recréer une connexion. S’applique uniquement aux connexions d�
   
 ## <a name="remarks"></a>Notes   
 - Les mots de passe respectent la casse.
-- Pour obtenir un script de transfert des connexions, consultez [Comment transférer les connexions et les mots de passe entre des instances de SQL Server 2005 et SQL Server 2008](http://support.microsoft.com/kb/918992).
+- Pour obtenir un script de transfert des connexions, consultez [Comment transférer les connexions et les mots de passe entre des instances de SQL Server 2005 et SQL Server 2008](https://support.microsoft.com/kb/918992).
 - La création d'une connexion active automatiquement la nouvelle connexion et accorde à la connexion l'autorisation **CONNECT SQL** au niveau du serveur. 
 - Le [mode d’authentification](../../relational-databases/security/choose-an-authentication-mode.md) du serveur doit correspondre au type de connexion pour autoriser l’accès.
     - Pour plus d’informations sur la conception d’un système d’autorisations, voir [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).
@@ -326,8 +326,8 @@ Seule la connexion principale au niveau du serveur (créée par le processus de 
 Après la création d’une connexion, celle-ci peut se connecter à SQL Database, mais elle dispose uniquement des autorisations accordées au rôle **public**. Envisagez d’effectuer certaines des activités suivantes. 
   
 - Pour vous connecter à une base de données, créez un utilisateur de base de données pour la connexion à cette base de données. Pour plus d’informations, consultez [CREATE USER](../../t-sql/statements/create-user-transact-sql.md). 
-- Pour accorder des autorisations à un utilisateur dans une base de données, utilisez l’instruction **ALTER SERVER ROLE** … **ADD MEMBER** pour ajouter l’utilisation à l’un des rôles de base de données intégrés ou à un rôle personnalisé, ou accordez directement des autorisations à l’utilisateur à l’aide de l’instruction [GRANT](../../t-sql/statements/grant-transact-sql.md). Pour plus d’informations, consultez [Utilisateurs non administrateurs](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md). https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles et l’instruction [GRANT](grant-transact-sql.md).
-- Pour accorder des autorisations à l’échelle du serveur, créez un utilisateur de base de données dans la base de données master et utilisez l’instruction **ALTER SERVER ROLE** … **ADD MEMBER** pour ajouter l’utilisation à l’un des rôles serveur d’administration. Pour plus d’informations, consultez [Rôles de niveau serveur](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) et [Rôles serveur](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles).
+- Pour accorder des autorisations à un utilisateur dans une base de données, utilisez l’instruction **ALTER SERVER ROLE** … Instruction **ADD MEMBER** pour ajouter l’utilisateur à l’un des rôles de base de données intégrés ou à un rôle personnalisé, ou pour accorder directement des autorisations à l’utilisateur à l’aide de l’instruction [GRANT](../../t-sql/statements/grant-transact-sql.md). Pour plus d’informations, consultez [Utilisateurs non administrateurs](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md). https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles et l’instruction [GRANT](grant-transact-sql.md).
+- Pour accorder des autorisations à l’échelle du serveur, créez un utilisateur de base de données dans la base de données master et utilisez l’instruction **ALTER SERVER ROLE** … Instruction **ADD MEMBER** pour ajouter l’utilisateur à l’un des rôles serveur d’administration. Pour plus d’informations, consultez [Rôles de niveau serveur](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) et [Rôles serveur](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles).
 - Utilisez l’instruction **GRANT** pour accorder des autorisations au niveau du serveur à la nouvelle connexion ou à un rôle qui contient la connexion. Pour plus d’informations, consultez [GRANT](../../t-sql/statements/grant-transact-sql.md).
   
 ## <a name="examples"></a>Exemples  
@@ -412,7 +412,7 @@ Utilisé pour recréer une connexion. S’applique uniquement aux connexions d�
   
 ## <a name="remarks"></a>Notes   
 - Les mots de passe respectent la casse.
-- Pour obtenir un script de transfert des connexions, consultez [Comment transférer les connexions et les mots de passe entre des instances de SQL Server 2005 et SQL Server 2008](http://support.microsoft.com/kb/918992).
+- Pour obtenir un script de transfert des connexions, consultez [Comment transférer les connexions et les mots de passe entre des instances de SQL Server 2005 et SQL Server 2008](https://support.microsoft.com/kb/918992).
 - La création d'une connexion active automatiquement la nouvelle connexion et accorde à la connexion l'autorisation **CONNECT SQL** au niveau du serveur. 
 - Le [mode d’authentification](../../relational-databases/security/choose-an-authentication-mode.md) du serveur doit correspondre au type de connexion pour autoriser l’accès.
     - Pour plus d’informations sur la conception d’un système d’autorisations, voir [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).
@@ -444,8 +444,8 @@ Seule la connexion principale au niveau du serveur (créée par le processus de 
 Après la création d’une connexion, celle-ci peut se connecter à SQL Database, mais elle dispose uniquement des autorisations accordées au rôle **public**. Envisagez d’effectuer certaines des activités suivantes. 
   
 - Pour vous connecter à une base de données, créez un utilisateur de base de données pour la connexion à cette base de données. Pour plus d’informations, consultez [CREATE USER](../../t-sql/statements/create-user-transact-sql.md). 
-- Pour accorder des autorisations à un utilisateur dans une base de données, utilisez l’instruction **ALTER SERVER ROLE** … **ADD MEMBER** pour ajouter l’utilisation à l’un des rôles de base de données intégrés ou à un rôle personnalisé, ou accordez directement des autorisations à l’utilisateur à l’aide de l’instruction [GRANT](../../t-sql/statements/grant-transact-sql.md). Pour plus d’informations, consultez [Utilisateurs non administrateurs](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md). https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles et l’instruction [GRANT](grant-transact-sql.md).
-- Pour accorder des autorisations à l’échelle du serveur, créez un utilisateur de base de données dans la base de données master et utilisez l’instruction **ALTER SERVER ROLE** … **ADD MEMBER** pour ajouter l’utilisation à l’un des rôles serveur d’administration. Pour plus d’informations, consultez [Rôles de niveau serveur](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) et [Rôles serveur](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles).
+- Pour accorder des autorisations à un utilisateur dans une base de données, utilisez l’instruction **ALTER SERVER ROLE** … Instruction **ADD MEMBER** pour ajouter l’utilisateur à l’un des rôles de base de données intégrés ou à un rôle personnalisé, ou pour accorder directement des autorisations à l’utilisateur à l’aide de l’instruction [GRANT](../../t-sql/statements/grant-transact-sql.md). Pour plus d’informations, consultez [Utilisateurs non administrateurs](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md). https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles et l’instruction [GRANT](grant-transact-sql.md).
+- Pour accorder des autorisations à l’échelle du serveur, créez un utilisateur de base de données dans la base de données master et utilisez l’instruction **ALTER SERVER ROLE** … Instruction **ADD MEMBER** pour ajouter l’utilisateur à l’un des rôles serveur d’administration. Pour plus d’informations, consultez [Rôles de niveau serveur](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) et [Rôles serveur](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles).
 - Utilisez l’instruction **GRANT** pour accorder des autorisations au niveau du serveur à la nouvelle connexion ou à un rôle qui contient la connexion. Pour plus d’informations, consultez [GRANT](../../t-sql/statements/grant-transact-sql.md).
   
 ## <a name="examples"></a>Exemples  
@@ -530,7 +530,7 @@ Les mots de passe respectent la casse. Les mots de passe doivent comporter au mo
   
 ## <a name="remarks"></a>Notes   
 - Les mots de passe respectent la casse.
-- Pour obtenir un script de transfert des connexions, consultez [Comment transférer les connexions et les mots de passe entre des instances de SQL Server 2005 et SQL Server 2008](http://support.microsoft.com/kb/918992).
+- Pour obtenir un script de transfert des connexions, consultez [Comment transférer les connexions et les mots de passe entre des instances de SQL Server 2005 et SQL Server 2008](https://support.microsoft.com/kb/918992).
 - La création d'une connexion active automatiquement la nouvelle connexion et accorde à la connexion l'autorisation **CONNECT SQL** au niveau du serveur. 
 - Le [mode d’authentification](../../relational-databases/security/choose-an-authentication-mode.md) du serveur doit correspondre au type de connexion pour autoriser l’accès.
     - Pour plus d’informations sur la conception d’un système d’autorisations, voir [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).
@@ -557,8 +557,8 @@ Seule la connexion principale au niveau du serveur (créée par le processus de 
 Après la création d’une connexion, celle-ci peut se connecter à SQL Database Warehouse, mais elle dispose uniquement des autorisations accordées au rôle **public**. Envisagez d’effectuer certaines des activités suivantes. 
   
 - Pour vous connecter à une base de données, créez un utilisateur de base de données pour la connexion. Pour plus d’informations, consultez [CREATE USER](../../t-sql/statements/create-user-transact-sql.md).
-- Pour accorder des autorisations à un utilisateur dans une base de données, utilisez l’instruction **ALTER SERVER ROLE** … **ADD MEMBER** pour ajouter l’utilisation à l’un des rôles de base de données intégrés ou à un rôle personnalisé, ou accordez directement des autorisations à l’utilisateur à l’aide de l’instruction [GRANT](grant-transact-sql.md). Pour plus d’informations, consultez [Utilisateurs non administrateurs](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md). https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles et l’instruction [GRANT](grant-transact-sql.md).
-- Pour accorder des autorisations à l’échelle du serveur, créez un utilisateur de base de données dans la base de données master et utilisez l’instruction **ALTER SERVER ROLE** … **ADD MEMBER** pour ajouter l’utilisation à l’un des rôles serveur d’administration. Pour plus d’informations, consultez [Rôles de niveau serveur](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) et [Rôles serveur](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles).
+- Pour accorder des autorisations à un utilisateur dans une base de données, utilisez l’instruction **ALTER SERVER ROLE** … Instruction **ADD MEMBER** pour ajouter l’utilisateur à l’un des rôles de base de données intégrés ou à un rôle personnalisé, ou pour accorder directement des autorisations à l’utilisateur à l’aide de l’instruction [GRANT](grant-transact-sql.md). Pour plus d’informations, consultez [Utilisateurs non administrateurs](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md). https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles et l’instruction [GRANT](grant-transact-sql.md).
+- Pour accorder des autorisations à l’échelle du serveur, créez un utilisateur de base de données dans la base de données master et utilisez l’instruction **ALTER SERVER ROLE** … Instruction **ADD MEMBER** pour ajouter l’utilisateur à l’un des rôles serveur d’administration. Pour plus d’informations, consultez [Rôles de niveau serveur](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) et [Rôles serveur](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles).
 
 - Utilisez l’instruction **GRANT** pour accorder des autorisations au niveau du serveur à la nouvelle connexion ou à un rôle qui contient la connexion. Pour plus d’informations, consultez [GRANT](../../t-sql/statements/grant-transact-sql.md). 
   
@@ -667,7 +667,7 @@ Spécifie que la connexion doit être mappée sur une connexion Windows.
 > [!IMPORTANT]  
 >  CHECK_EXPIRATION et CHECK_POLICY sont uniquement appliqués à Windows Server 2003 et ultérieur. Pour plus d'informations, consultez [Password Policy](../../relational-databases/security/password-policy.md). 
   
-- Pour obtenir un script de transfert des connexions, consultez [Comment transférer les connexions et les mots de passe entre des instances de SQL Server 2005 et SQL Server 2008](http://support.microsoft.com/kb/918992).
+- Pour obtenir un script de transfert des connexions, consultez [Comment transférer les connexions et les mots de passe entre des instances de SQL Server 2005 et SQL Server 2008](https://support.microsoft.com/kb/918992).
 - La création d'une connexion active automatiquement la nouvelle connexion et accorde à la connexion l'autorisation **CONNECT SQL** au niveau du serveur. 
 - Pour plus d’informations sur la conception d’un système d’autorisations, voir [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).
 

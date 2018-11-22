@@ -26,12 +26,12 @@ ms.assetid: 70866dac-0a8f-4235-8108-51547949ada4
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: dd91fdb2419be15b08fc42ee4928f8bf52c56a1f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 577e3013c3538d641da81d416cd016041df80143
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47709737"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51637866"
 ---
 # <a name="alter-partition-function-transact-sql"></a>ALTER PARTITION FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ ALTER PARTITION FUNCTION partition_function_name()
   
  Pour conserver la nouvelle partition, un groupe de fichiers doit être en ligne et être marqué par le schéma de partition qui utilise la fonction de partition comme étant le prochain utilisé (NEXT USED). Les groupes de fichiers sont alloués aux partitions dans une instruction CREATE PARTITION SCHEME. Si une instruction CREATE PARTITION SCHEME alloue plus de groupes de fichiers qu'il n'en faut (il y a alors moins de partitions créées dans l'instruction CREATE PARTITION FUNCTION qu'il n'y a de groupes de fichiers pour les accueillir), certains groupes de fichiers ne sont pas affectés, et l'un d'entre eux est marqué NEXT USED par le schéma de partition. C'est ce groupe de fichiers qui accueillera la nouvelle partition. Si aucun groupe de fichiers n'est marqué NEXT USED par le schéma de partition, vous devez utiliser ALTER PARTITION SCHEME pour ajouter un groupe de fichiers, ou en désigner un existant, afin d'accueillir la nouvelle partition. Un groupe de fichiers contenant déjà des partitions peut être désigné pour accueillir des partitions supplémentaires. Étant donné qu'une fonction de partition peut participer à plusieurs schémas de partition, tous les schémas de partition utilisant la fonction de partition à laquelle vous ajoutez des partitions doivent contenir un groupe de fichiers NEXT USED. À défaut, ALTER PARTITION FUNCTION échoue et génère une erreur indiquant le ou les schémas de partition qui sont dépourvus d'un groupe de fichiers NEXT USED.  
   
- Si vous créez toutes les partitions dans le même groupe de fichiers, celui-ci est initialement et automatiquement affecté comme le groupe de fichiers NEXT USED. Toutefois, après une opération de fractionnement, il n'y a plus de groupe de fichiers NEXT USED désigné. Vous devez affecter explicitement le groupe de fichiers comme groupe de fichiers NEXT USED à l'aide de ALTER PARTITION SCHEME, sinon toute opération de fractionnement ultérieure échoue.  
+ Si vous créez toutes les partitions dans le même groupe de fichiers, celui-ci est initialement et automatiquement affecté comme le groupe de fichiers NEXT USED. Toutefois, après une opération de fractionnement, il n'y a plus de groupe de fichiers NEXT USED désigné. Vous devez affecter explicitement le groupe de fichiers comme groupe de fichiers NEXT USED à l’aide de ALTER PARTITION SCHEME, sinon toute division ultérieure échouera.  
   
 > [!NOTE]  
 >  Limitations d’index columnstore : seules les partitions vides peuvent être fractionnées quand il existe un index columnstore sur la table. Vous devez supprimer ou désactiver l’index columnstore avant d’effectuer cette opération.  
@@ -93,7 +93,7 @@ ALTER PARTITION FUNCTION partition_function_name()
   
 -   Exécutez une séquence d'instructions ALTER PARTITION FUNCTION.  
   
- Tous les groupes de fichiers concernés par l'instruction ALTER PARITITION FUNCTION doivent être en ligne.  
+ Tous les groupes de fichiers concernés par l’instruction ALTER PARTITION FUNCTION doivent être en ligne.  
   
  ALTER PARTITION FUNCTION échoue s'il existe un index cluster désactivé dans une table qui utilise la fonction de partition.  
   

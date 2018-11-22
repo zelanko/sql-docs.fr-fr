@@ -14,19 +14,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 46b9a1a8be87c54858c760f4b53d30a83799ec84
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 62ac97c76f3b08a7dc13258fe2d45e88c9f5500a
+ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767077"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51571328"
 ---
 # <a name="set-or-change-the-database-collation"></a>Définir ou changer le classement de la base de données
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Cette rubrique explique comment définir et modifier le classement de base de données dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Si aucun classement n'est spécifié, celui du serveur est utilisé.  
  
 > [!NOTE]
-> Vous ne pouvez pas changer le classement pour une base de données Azure SQL Database après sa création.
+> Le classement ne peut pas être modifié une fois la base de données créée sur [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
  **Dans cette rubrique**  
   
@@ -51,6 +51,8 @@ ms.locfileid: "47767077"
 -   Les classements Windows Unicode seulement peuvent être utilisés uniquement avec la clause COLLATE pour appliquer des classements aux types de données **nchar**, **nvarchar**et **ntext** sur les données de niveau de colonne et de niveau d’expression. Ils ne peuvent pas être utilisés avec la clause COLLATE pour modifier le classement d'une instance de serveur ou de base de données.  
   
 -   Si le classement spécifié ou le classement utilisé par l'objet référencé utilise une page de codes non gérée par Windows, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] affiche une erreur.  
+
+-   Le classement ne peut pas être modifié une fois la base de données créée sur [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
   
 ###  <a name="Recommendations"></a> Recommandations  
   

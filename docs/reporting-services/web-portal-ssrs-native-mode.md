@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 7349e626-6ed5-4d21-b05f-cf042ad9ad70
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c7c7dd4137517f9ad4ec97dda1b0fa948f40feb4
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 9bb61746e2794faa9fab5f2fbc89c42fbe9ccd5f
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021893"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814332"
 ---
 # <a name="web-portal-ssrs-native-mode"></a>Portail web (SSRS en mode natif)
 
@@ -75,9 +75,9 @@ Pour démarrer le portail web à partir d’un navigateur, effectuez les tâches
 
 2. Dans la barre d’adresses du navigateur web, tapez l’URL du portail web.
 
-    Par défaut, l’URL est *http://[ComputerName]/reports*.
+    Par défaut, l’URL est *https://[NomOrdinateur]/reports*.
 
-    Le serveur de rapports peut être configuré pour utiliser un port spécifique. Par exemple, *http://[ComputerName]:80/reports* ou *http://[ComputerName]:8080/reports*,
+    Le serveur de rapports peut être configuré pour utiliser un port spécifique. Par exemple, *https://[NomOrdinateur]:80/reports* ou *https://[NomOrdinateur]:8080/reports*.
 
 ## <a name="grouping-by-categories"></a>Regroupement par catégories
 

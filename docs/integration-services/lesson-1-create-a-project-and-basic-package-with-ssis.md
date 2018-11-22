@@ -11,24 +11,24 @@ ms.assetid: 84d0b877-603f-4f8e-bb6b-671558ade5c2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 98f2039da862c64e8f223afdedba7889627a5116
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: a4431e593a74c7f6a656f78cd70abfd19c813bdd
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49384074"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51642076"
 ---
 # <a name="lesson-1-create-a-project-and-basic-package-with-ssis"></a>Leçon 1 : Créer un projet et un package de base avec SSIS
 
-Au cours de cette leçon, vous allez créer un package ETL simple qui extrait des données d'une seule source de fichier plat, transforme ces données en utilisant deux composants de transformation de recherche et les écrit dans la table de faits **FactCurrency** de la base de données **AdventureWorksDW2012**. Dans le cadre de cette leçon, vous allez apprendre à créer de nouveaux packages, ajouter et configurer des sources de données et des destinations et enfin, à utiliser le nouveau flux de contrôle et les composants de flux de données.  
+Au cours de cette leçon, vous allez créer un package ETL simple qui extrait des données d’une seule source de fichier plat, transforme ces données en utilisant deux composants de transformation de recherche et les écrit dans une copie de la table de faits **FactCurrencyRate** de l’entrepôt de données **AdventureWorksDW2012**. Dans le cadre de cette leçon, vous allez apprendre à créer de nouveaux packages, ajouter et configurer des sources de données et des destinations et enfin, à utiliser le nouveau flux de contrôle et les composants de flux de données.  
   
 > [!IMPORTANT]  
-> Pour suivre ce didacticiel, vous devez disposer de l'exemple de base de données **AdventureWorksDW2012** . Pour plus d’informations sur l’installation et le déploiement **d’AdventureWorksDW2012**, consultez [Reporting Services Product Samples sur CodePlex](http://go.microsoft.com/fwlink/p/?LinkID=526910).  
+> Pour suivre ce didacticiel, vous devez disposer de l'exemple de base de données **AdventureWorksDW2012** . Pour plus d'informations sur l'installation et le déploiement d' **AdventureWorksDW2012**, consultez [Reporting Services Product Samples sur CodePlex](https://go.microsoft.com/fwlink/p/?LinkID=526910).  
   
 ## <a name="understanding-the-package-requirements"></a>Connaissances préalables à la création d'un package  
 Ce didacticiel nécessite Microsoft SQL Server Data Tools.  
   
-Pour plus d’informations sur l’installation de SQL Server Data Tools, consultez [Téléchargement de SQL Server Data Tools](http://msdn.microsoft.com/data/hh297027).  
+Pour plus d’informations sur l’installation de SQL Server Data Tools, consultez [Téléchargement de SQL Server Data Tools](https://msdn.microsoft.com/data/hh297027).  
   
 Avant de créer un package, vous devez maîtriser les connaissances relatives au formatage utilisé pour les données sources et la destination. Une fois ces connaissances maîtrisées, vous êtes prêt à définir les transformations nécessaires pour mapper les données source avec les données de destination.  
   
@@ -51,24 +51,24 @@ Voici un exemple des données sources contenues dans le fichier SampleCurrencyDa
 Pour bien utiliser des données sources issues d'un fichier plat, il est important de comprendre comment le Gestionnaire de connexions de fichiers plats interprète les données du fichier plat. Si la source du fichier plat est au format Unicode, le gestionnaire de connexions de fichiers plats définit toutes les colonnes avec le type [DT_WSTR] et une largeur par défaut égale à 50. Si la source du fichier plat est au format ANSI, les colonnes sont définies avec le type [DT_STR] et une largeur égale à 50. Il vous faudra probablement modifier ces valeurs par défaut pour affecter aux colonnes des types String plus appropriés à vos données. Pour cela, vous allez examiner le type de données de la destination dans laquelle les données seront enregistrées, puis choisir le type de données qui convient dans le Gestionnaire de connexions de fichiers plats.  
   
 ### <a name="looking-at-the-destination"></a>Étude de la destination  
-La destination finale des données sources est la table de faits **FactCurrency** dans la base de données **AdventureWorksDW**. La table de faits **FactCurrency** contient quatre colonnes et des relations avec deux tables de dimension, comme illustré ci-après.  
+La destination finale des données sources est la copie de la table de faits **FactCurrencyRate** dans **AdventureWorksDW**. La table de faits **FactCurrencyRate** contient quatre colonnes et des relations avec deux tables de dimension, comme illustré ci-après.  
   
 |Nom de la colonne|Type de données|Table de recherche|Colonne de recherche|  
 |---------------|-------------|----------------|-----------------|  
-|AverageRate|FLOAT|None|None|  
+|AverageRate|FLOAT|Aucun|Aucun|  
 |CurrencyKey|int (FK)|DimCurrency|CurrencyKey (PK)|  
 |DateKey|int (FK)|DimDate|DateKey (PK)|  
-|EndOfDayRate|FLOAT|None|None|  
+|EndOfDayRate|FLOAT|Aucun|Aucun|  
   
 ### <a name="mapping-source-data-to-be-compatible-with-the-destination"></a>Mappage des données sources pour la compatibilité avec la destination  
 L'analyse du format des données sources et de destination indique que des recherches seront nécessaires pour les valeurs **CurrencyKey** et **DateKey** . Les transformations qui effectueront ces recherches obtiendront les valeurs **CurrencyKey** et **DateKey** en utilisant les autres clés des tables de dimension **DimCurrency** et **DimDate** .  
   
 |Colonne de fichier plat|Nom de la table|Nom de la colonne|Type de données|  
 |--------------------|--------------|---------------|-------------|  
-|0|FactCurrency|AverageRate|float|  
+|0|FactCurrencyRate|AverageRate|float|  
 |1|DimCurrency|CurrencyAlternateKey|nchar (3)|  
 |2|DimDate|FullDateAlternateKey|Date|  
-|3|FactCurrency|EndOfDayRate|FLOAT|  
+|3|FactCurrencyRate|EndOfDayRate|FLOAT|  
   
 ## <a name="lesson-tasks"></a>Tâches de la leçon  
 Cette leçon contient les tâches suivantes :  

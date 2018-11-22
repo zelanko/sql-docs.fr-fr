@@ -1,7 +1,7 @@
 ---
 title: Configurer la base de données de distribution SQL Server dans un groupe de disponibilité | Microsoft Docs
 ms.custom: ''
-ms.date: 10/04/2018
+ms.date: 11/13/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: replication
@@ -20,12 +20,12 @@ ms.assetid: 94d52169-384e-4885-84eb-2304e967d9f7
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b8d12a1626d6d2d76e24f5aeebfe6d3f50a66959
-ms.sourcegitcommit: 8aecafdaaee615b4cd0a9889f5721b1c7b13e160
+ms.openlocfilehash: 94616b5950ca1ff7f33d9061d2bbc8bab53fbc8c
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48817997"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602629"
 ---
 # <a name="set-up-replication-distribution-database-in-always-on-availability-group"></a>Configurer la base de données de distribution de réplication dans un groupe de disponibilité AlwaysOn
 
@@ -48,6 +48,7 @@ Une fois qu’une base de données de distribution du groupe de disponibilité a
 - Ajout ou suppression de nœuds dans un groupe de disponibilité de base de données de distribution existant
 - Un serveur de distribution peut comprendre plusieurs bases de données de distribution. Chaque base de données de distribution peut se trouver dans son propre groupe de disponibilité et n’être comprise dans aucun groupe de disponibilité. Plusieurs bases de données de distribution peuvent partager un même groupe de disponibilité.
 - Le serveur de publication et le serveur de distribution doivent se trouver sur des instances distinctes de SQL Server.
+- Si l’écouteur du groupe de disponibilité qui héberge la base de données de distribution est configuré pour utiliser un port non défini par défaut, il est nécessaire de configurer un alias pour l’écouteur et le port non défini par défaut.
 
 ## <a name="limitations-or-exclusions"></a>Limitations ou exclusions
 
@@ -63,6 +64,7 @@ Une fois qu’une base de données de distribution du groupe de disponibilité a
 - Vous devez configurer un écouteur pour le groupe de disponibilité de base de données de distribution.
 - Les réplicas secondaires d’un groupe de disponibilité de base de données de distribution peuvent être synchrones ou asynchrones. Le mode synchrone est recommandé.
 - La réplication transactionnelle bidirectionnelle n'est pas prise en charge.
+- SSMS n’indique pas que la base de données de distribution est en cours de synchronisation/synchronisée, lorsque la base de données de distribution est ajoutée à un groupe de disponibilité.
 
 
    >[!NOTE]
@@ -391,9 +393,9 @@ Go
 -- On Publisher, create the publication as one would normally do.
 -- On the Secondary replicas of the Distribution DB, add the Subscriber as a linked server.
 :CONNECT SQLNODE2
-EXEC master.dbo.sp_addlinkedserver @server = N'SQLNODE5', @srvproduct=N'SQL Server'
- /* For security reasons the linked server remote logins password is changed with ######## */
-EXEC master.dbo.sp_addlinkedsrvlogin @rmtsrvname=N'SQLNODE5',@useself=N'True',@locallogin=NULL,@rmtuser=NULL,@rmtpassword=NULL 
+EXEC master.dbo.sp_addlinkedserver @server = N'SQLNODE5', @srvproduct=N'SQL Server'
+ /* For security reasons the linked server remote logins password is changed with ######## */
+EXEC master.dbo.sp_addlinkedsrvlogin @rmtsrvname=N'SQLNODE5',@useself=N'True',@locallogin=NULL,@rmtuser=NULL,@rmtpassword=NULL 
 ```
 
 ## <a name="see-also"></a> Voir aussi  

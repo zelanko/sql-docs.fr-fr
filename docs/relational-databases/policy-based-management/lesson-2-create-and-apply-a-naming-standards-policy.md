@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: performance
 ms.topic: conceptual
 ms.assetid: 87e51f4e-156c-4def-8572-76a15075d75e
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 8564b621bd4f226ac01d12c5e64f082e01785094
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fb7082aec21e75c2852ac7efdc2d7a4fa565768d
+ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629487"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51512824"
 ---
 # <a name="lesson-2-create-and-apply-a-naming-standards-policy"></a>Leçon 2 : Créer et appliquer une stratégie de normes d'affectation de noms
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -156,7 +156,7 @@ Pour suivre ce tutoriel, vous avez besoin de SQL Server Management Studio et d�
 Ce didacticiel vous a montré comment créer des conditions, des stratégies et des groupes de stratégies de la Gestion basée sur des stratégies et comment appliquer des filtres et vérifier la conformité des cibles de la Gestion basée sur des stratégies.  
   
 ## <a name="next"></a>Suivant  
-Ce didacticiel est terminé. Pour revenir au début, visitez [Didacticiel : Administration de serveurs à l’aide de la Gestion basée sur des stratégies](../../relational-databases/policy-based-management/tutorial-administering-servers-by-using-policy-based-management.md).  
+Ce didacticiel est terminé. Pour revenir au début, visitez [Tutoriel : Administration de serveurs à l’aide de la Gestion basée sur des stratégies](../../relational-databases/policy-based-management/tutorial-administering-servers-by-using-policy-based-management.md).  
   
 Pour obtenir la liste des didacticiels, consultez [Didacticiels pour SQL Server 2016](../../sql-server/tutorials-for-sql-server-2016.md).  
   

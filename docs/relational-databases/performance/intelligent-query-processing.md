@@ -2,7 +2,7 @@
 title: Traitement de requêtes intelligent dans les bases de données Microsoft SQL | Microsoft Docs
 description: Fonctionnalités de traitement de requêtes intelligent pour améliorer les performances des requêtes dans SQL Server et Azure SQL Database.
 ms.custom: ''
-ms.date: 10/10/2018
+ms.date: 11/07/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -14,19 +14,19 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eba7eba4e21e0bb488664149347e8c58fae3e3ad
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: c4269cc9f61ecd1bd3130fe7fab0f1e5a1ae65bf
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51030936"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51660951"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>Traitement de requêtes intelligent dans les bases de données SQL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 La famille des fonctionnalités de **traitement de requêtes intelligent** inclut des fonctionnalités qui améliorent les performances des charges de travail existantes avec un minimum d’effort d’implémentation.
 
-![Fonctionnalités de traitement de requêtes intelligent](./media/2_IQPFeatureFamily.png)
+![Fonctionnalités de traitement de requêtes intelligent](./media/3_IQPFeatureFamily.png)
 
 ## <a name="adaptive-query-processing"></a>Traitement de requêtes adaptatif
 La fonctionnalité de traitement de requêtes adaptatif inclut des améliorations du traitement des requêtes, qui adaptent les stratégies d’optimisation aux conditions d’exécution de la charge de travail de votre application. Ces améliorations sont incluses : jointures adaptatives en mode batch, retour d’allocation de mémoire et exécution entrelacée pour les fonctions table à instructions multiples.
@@ -54,6 +54,14 @@ La compilation différée de variable de table améliore la qualité du plan et 
 Avec la compilation différée de la variable de table, la compilation d’une instruction qui fait référence à une variable de table est différée jusqu'à la première exécution réelle de l’instruction. Ce comportement de compilation différée est identique au comportement des tables temporaires, et ce changement entraîne l’utilisation de la cardinalité réelle au lieu de l’estimation d’origine d’une ligne. Pour activer la préversion publique de la compilation différée de variable de table dans Azure SQL Database, fixez le niveau de compatibilité à 150 pour la base de données à laquelle vous vous connectez lors de l’exécution de la requête.
 
 Pour plus d'informations, consultez [Compilation différée de variable de table](../../t-sql/data-types/table-transact-sql.md#table-variable-deferred-compilation ).
+
+## <a name="scalar-udf-inlining"></a>Incorporation (inlining) des fonctions UDF scalaires
+> [!NOTE]
+> La fonctionnalité d’incorporation des fonctions UDF scalaires est en préversion publique.  
+
+L’incorporation de fonctions UDF scalaires transforme des fonctions scalaires définies par l’utilisateur (UDF) en expressions relationnelles et les incorpore à la requête SQL d’appel, ce qui améliore les performances des charges de travail qui tirent parti des fonctions UDF scalaires. L’incorporation de fonctions UDF scalaires facilite l’optimisation du coût des opérations au sein des fonctions UDF et aboutit à des plans d’exécution efficaces, orientés ensembles et parallèles, par opposition à des plans inefficaces, itératifs et en série. Cette fonctionnalité est activée par défaut sous le niveau de compatibilité de base de données 150.
+
+Pour plus d’informations, consultez [Incorporation des fonctions UDF scalaires](https://docs.microsoft.com/sql/relational-databases/user-defined-functions/scalar-udf-inlining?view=sqlallproducts-allversions).
 
 ## <a name="approximate-query-processing"></a>Traitement des requêtes approximatif
 > [!NOTE]

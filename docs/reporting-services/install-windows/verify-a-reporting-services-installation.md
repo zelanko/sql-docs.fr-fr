@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 82a51a99-66f0-4b0c-b05b-07d22387adb0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e0303b080271ec85753d0f0f94eee970b3d7308a
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 3c3f3bb02022fe4bbb8090c2160fa3cf75cfefa7
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50027508"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814052"
 ---
 # <a name="verify-a-reporting-services-installation"></a>Verify a Reporting Services Installation
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] peuvent être installés au choix dans l'un des deux modes, natif ou SharePoint. Les étapes que vous devez suivre pour vérifier l'installation dépendent du mode de serveur de rapports.  
@@ -81,7 +81,7 @@ ms.locfileid: "50027508"
   
 2.  Ouvrez la fenêtre Services et vérifiez que le service Windows Report Server est en cours d'exécution. Pour afficher l’état du service Report Server, cliquez sur **Démarrer**, pointez sur **Panneau de configuration**, double-cliquez sur **Outils d’administration**, puis double-cliquez sur **Services**. Lorsque la liste des services s’affiche, recherchez **Report Server (MSSQLSERVER)**. L'état doit être **Démarré**.  
   
-3.  Ouvrez un navigateur et entrez l'URL du serveur de rapports dans la barre d'adresses. L'adresse se compose du nom du serveur et de celui du répertoire virtuel spécifiés pour le serveur de rapports lors de l'installation. Par défaut, le répertoire virtuel du serveur de rapports est appelé **ReportServer**. Vous pouvez utiliser l’URL suivante pour vérifier l’installation du serveur de rapports : http://*\<nom ordinateur>*/ReportServer*\<_nom instance>*. L'URL sera différente si vous avez installé le serveur de rapports en tant qu'instance nommée. Pour en savoir plus sur le format des URL, consultez [Configurer des URL de serveurs de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md). Si vous êtes administrateur local sur Windows Vista ou Windows Server 2008, consultez [Configure a Native Mode Report Server for Local Administration &#40;SSRS&#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md) (Configurer un serveur de rapports en mode natif pour l’administration locale).  
+3.  Ouvrez un navigateur et entrez l'URL du serveur de rapports dans la barre d'adresses. L'adresse se compose du nom du serveur et de celui du répertoire virtuel spécifiés pour le serveur de rapports lors de l'installation. Par défaut, le répertoire virtuel du serveur de rapports est appelé **ReportServer**. Vous pouvez utiliser l’URL suivante pour vérifier l’installation du serveur de rapports : https://*\<nom ordinateur>*/ReportServer*\<_nom instance>*. L'URL sera différente si vous avez installé le serveur de rapports en tant qu'instance nommée. Pour en savoir plus sur le format des URL, consultez [Configurer des URL de serveurs de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md). Si vous êtes administrateur local sur Windows Vista ou Windows Server 2008, consultez [Configure a Native Mode Report Server for Local Administration &#40;SSRS&#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md) (Configurer un serveur de rapports en mode natif pour l’administration locale).  
   
 4.  Exécutez les rapports pour tester le fonctionnement du serveur de rapports. Pour cette étape, vous pouvez créer un rapport d'exemple à partir d'un didacticiel. Pour plus d’informations, consultez [Créer un rapport de tableau de base &#40;didacticiel SSRS&#41;](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md).  
   
@@ -89,7 +89,7 @@ ms.locfileid: "50027508"
   
 1.  Ouvrez un navigateur et tapez l’URL du portail web dans la barre d’adresses. L’adresse se compose du nom du serveur et de celui du répertoire virtuel spécifiés pour le [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] lors de l’installation ou dans la page URL du portail web de l’outil de configuration de Reporting Services. Par défaut, le répertoire virtuel du [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] est **Reports**. Vous pouvez utiliser l’URL suivante pour vérifier l’installation du [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] :  
   
-     http://*\<nom ordinateur>*/Reports*\<_nom instance>*.  
+     https://*\<nom ordinateur>*/Reports*\<_nom instance>*.  
   
 2.  Utilisez le [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] pour créer un dossier ou chargez un fichier pour vérifier si les définitions sont transmises à la base de données du serveur de rapports. Si ces opérations réussissent, cela signifie que la connexion fonctionne.  
   

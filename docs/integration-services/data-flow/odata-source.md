@@ -16,12 +16,12 @@ ms.assetid: cc9003c9-638e-432b-867e-e949d50cec90
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8b0a2404d61f9eaeffae606cec86cedb1ecb491f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 820541da1699e2e74a9ec0b9a5f00f094a14f38c
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692127"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638657"
 ---
 # <a name="odata-source"></a>Source OData
 Utilisez le composant source OData dans un package SSIS pour consommer les données provenant d’un service OData (Open Data Protocol).
@@ -38,13 +38,13 @@ Le composant prend en charge les protocoles OData v3 et v4.
 
 La source OData prend en charge les sources de données suivantes :
 -   Microsoft Dynamics AX Online et Microsoft Dynamics CRM Online,
--   Listes SharePoint. Pour visualiser toutes les listes d’un serveur SharePoint, utilisez l’URL suivante : http://\<serveur>/_vti_bin/ListData.svc. Pour plus d'informations sur les conventions d'URL SharePoint, consultez [Interface REST de SharePoint Foundation](http://msdn.microsoft.com/library/ff521587.aspx).
+-   Listes SharePoint. Pour visualiser toutes les listes d’un serveur SharePoint, utilisez l’URL suivante : https://\<serveur>/_vti_bin/ListData.svc. Pour plus d'informations sur les conventions d'URL SharePoint, consultez [Interface REST de SharePoint Foundation](https://msdn.microsoft.com/library/ff521587.aspx).
 
 ## <a name="supported-data-types"></a>Types de données pris en charge
 
 La source OData prend en charge les types de données simples suivants : int, byte[], bool, byte, DateTime, DateTimeOffset, decimal, double, Guid, Int16, Int32, Int64, sbyte, float, string et TimeSpan.
 
-Pour découvrir les types de données des colonnes dans votre source de données, consultez la page `http://<OData feed endpoint>/$metadata`.
+Pour découvrir les types de données des colonnes dans votre source de données, consultez la page `https://<OData feed endpoint>/$metadata`.
 
 > [!IMPORTANT]
 > Le composant Source OData ne prend pas en charge les types complexes, comme les éléments à choix multiple, dans des listes SharePoint.

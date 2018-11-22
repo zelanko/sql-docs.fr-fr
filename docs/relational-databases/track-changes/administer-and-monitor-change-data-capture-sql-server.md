@@ -1,12 +1,10 @@
 ---
 title: Administrer et surveiller la capture de données modifiées (SQL Server) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - change data capture [SQL Server], monitoring
@@ -16,12 +14,12 @@ ms.assetid: 23bda497-67b2-4e7b-8e4d-f1f9a2236685
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d12ba58b2257425356b01c38c8fddeb41f6336a1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e6fafa2ba203ecbcd3141503a170c81c21282621
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780027"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51560516"
 ---
 # <a name="administer-and-monitor-change-data-capture-sql-server"></a>Administrer et surveiller la capture de données modifiées (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -86,18 +84,24 @@ ms.locfileid: "47780027"
 ### <a name="identify-sessions-with-empty-result-sets"></a>Identifier les sessions avec des jeux de résultats vides  
  Chaque ligne dans sys.dm_cdc_log_scan_sessions représente une session d'analyse du journal (sauf la ligne avec un ID de 0). Une session d’analyse du journal est équivalente à une exécution de [sp_cdc_scan](../../relational-databases/system-stored-procedures/sys-sp-cdc-scan-transact-sql.md). Pendant une session, l'analyse peut retourner des modifications ou un résultat vide. Si le jeu de résultats est vide, la colonne empty_scan_count dans sys.dm_cdc_log_scan_sessions est définie sur 1. S'il existe des jeux de résultats vides consécutifs, par exemple si le travail de capture s'exécute continuellement, empty_scan_count dans la dernière ligne existante est incrémenté. Ainsi, si sys.dm_cdc_log_scan_sessions contient déjà 10 lignes pour les analyses qui ont retourné des modifications et qu'il existe cinq résultats vides dans une ligne, la vue contient 11 lignes. La dernière ligne a une valeur de 5 dans la colonne empty_scan_count. Pour déterminer les sessions qui avaient une analyse vide, exécutez la requête suivante :  
   
- `SELECT * from sys.dm_cdc_log_scan_sessions where empty_scan_count <> 0`  
+```sql
+SELECT * from sys.dm_cdc_log_scan_sessions where empty_scan_count <> 0
+```
   
 ### <a name="determine-latency"></a>Déterminer la latence  
  La vue de gestion sys.dm_cdc_log_scan_sessions inclut une colonne qui enregistre la latence pour chaque session de capture. La latence correspond au temps écoulé entre la validation d'une transaction sur une table source et la dernière transaction capturée en cours de validation sur la table de modifications. La colonne de latence est remplie uniquement pour les sessions actives. Pour les sessions ayant une valeur supérieure à 0 dans la colonne empty_scan_count, la colonne de latence a la valeur 0. La requête suivante retourne la latence moyenne pour les sessions les plus récentes :  
   
- `SELECT latency FROM sys.dm_cdc_log_scan_sessions WHERE session_id = 0`  
+```sql
+SELECT latency FROM sys.dm_cdc_log_scan_sessions WHERE session_id = 0
+```
   
  Vous pouvez utiliser des données de latence pour déterminer si le processus de capture traite les transactions rapidement ou lentement. Ces données sont très utiles lorsque le processus de capture s'exécute continuellement. Si le processus de capture s'exécute selon une planification, la latence peut être élevée à cause du décalage entre les transactions qui sont validées sur la table source et le processus de capture qui s'exécute à l'heure planifiée.  
   
  Une autre mesure importante du rendement du processus de la capture est le débit. Il s'agit du nombre moyen de commandes par seconde qui sont traitées pendant chaque session. Pour déterminer le débit d'une session, divisez la valeur dans la colonne command_count par la valeur dans la colonne de durée. La requête suivante retourne le débit moyen pour les sessions les plus récentes :  
   
- `SELECT command_count/duration AS [Throughput] FROM sys.dm_cdc_log_scan_sessions WHERE session_id = 0`  
+```sql
+SELECT command_count/duration AS [Throughput] FROM sys.dm_cdc_log_scan_sessions WHERE session_id = 0
+```
   
 ### <a name="use-data-collector-to-collect-sampling-data"></a>Utiliser le collecteur de données pour recueillir des données d'échantillonnage  
  Le collecteur de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vous permet de collecter des instantanés des données à partir de n'importe quelle table ou vue de gestion dynamique et de construire un entrepôt de données de performance. Lorsque la capture de données modifiées est activée sur une base de données, il est utile de prendre des instantanés de la vue sys.dm_cdc_log_scan_sessions et de la vue sys.dm_cdc_errors à intervalles réguliers à des fins d'analyse ultérieure. La procédure suivante installe un collecteur de données pour recueillir les exemples de données de la vue de gestion sys.dm_cdc_log_scan_sessions.  
@@ -130,10 +134,10 @@ ms.locfileid: "47780027"
   
     -- Create a collection item using statistics from   
     -- the change data capture dynamic management view.  
-    DECLARE @paramters xml;  
+    DECLARE @parameters xml;  
     DECLARE @collection_item_id int;  
   
-    SELECT @paramters = CONVERT(xml,   
+    SELECT @parameters = CONVERT(xml,   
         N'<TSQLQueryCollector>  
             <Query>  
               <Value>SELECT * FROM sys.dm_cdc_log_scan_sessions</Value>  
@@ -146,7 +150,7 @@ ms.locfileid: "47780027"
     @collector_type_uid = N'302E93D1-3424-4BE7-AA8E-84813ECF2419',  
     @name = ' CDC Performance Data Collector',  
     @frequency = 5,   
-    @parameters = @paramters,  
+    @parameters = @parameters,  
     @collection_item_id = @collection_item_id output;  
   
     GO  

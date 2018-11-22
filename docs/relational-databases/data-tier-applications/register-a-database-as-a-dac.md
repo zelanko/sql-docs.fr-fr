@@ -19,12 +19,12 @@ ms.assetid: 08e52aa6-12f3-41dd-a793-14b99a083fd5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e94c6c8e96685f7b53348589ae4b30445447a2a0
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 53ca1a857e08b538f61067ba6a035a6ceab1e8c6
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43814995"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813992"
 ---
 # <a name="register-a-database-as-a-dac"></a>Inscrire une base de données en tant que DAC
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +78,7 @@ ms.locfileid: "43814995"
 ##  <a name="Set_properties"></a> Page Définir les propriétés  
  Utilisez cette page pour spécifier des propriétés au niveau de la DAC telles que le nom de l'application et sa version.  
   
- **Nom de l'application.** - Chaîne qui spécifie le nom utilisé pour identifier la définition de la DAC ; le champ est rempli par le nom de la base de données.  
+ **Nom de l'application.** - Chaîne qui spécifie le nom utilisé pour identifier la définition de la DAC. Le champ est renseigné avec le nom de la base de données.  
   
  **Version.** - Valeur numérique qui identifie la version de la DAC. La version de la DAC est utilisée dans Visual Studio pour identifier la version de la DAC sur laquelle les développeurs travaillent. Lors du déploiement d’une DAC, la version est stockée dans la base de données **msdb** et peut être affichée ultérieurement sous le nœud **Applications de la couche Données** dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   

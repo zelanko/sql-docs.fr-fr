@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: dee8ee42-156b-43b6-b202-02dfb9404284
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cef5578bc23c7ac49dceedaac6dfb18049600ca5
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 4124d8a88485332133baf2cd4a39eb52da56652e
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50032138"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813413"
 ---
 # <a name="view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs"></a>Afficher et explorer des rapports en mode natif à l’aide de composants WebPart SharePoint (SSRS)
 
@@ -140,7 +140,7 @@ ms.locfileid: "50032138"
   
 6.  Lorsque la page est en mode d'édition, cliquez sur **Modifier le composant WebPart** dans le composant WebPart Visionneuse de rapports.  
   
-7.  Dans **URL du Gestionnaire de rapports**, tapez une URL vers une instance du Gestionnaire de rapports associée au serveur de rapports en mode natif auquel vous souhaitez accéder. Par défaut, une URL du Gestionnaire de rapports a la syntaxe suivante : **http://\<nom_serveur>/reports**.  
+7.  Dans **URL du Gestionnaire de rapports**, tapez une URL vers une instance du Gestionnaire de rapports associée au serveur de rapports en mode natif auquel vous souhaitez accéder. Par défaut, une URL du Gestionnaire de rapports a la syntaxe suivante : **https://\<nom_serveur>/reports**.  
   
 8.  Dans **Chemin d'accès au rapport**, spécifiez une barre oblique suivie du chemin d'accès du dossier et du nom du rapport. N'incluez **pas** le nom du serveur ou le répertoire virtuel du Gestionnaire de rapports. Par exemple, pour ouvrir le rapport « Company Sales » dans le dossier Adventure Works, spécifiez **/Adventure Works/Company Sales**. Voici un autre exemple, où le rapport « Products » se trouve dans le dossier racine du serveur de rapports **/Products**.  
   

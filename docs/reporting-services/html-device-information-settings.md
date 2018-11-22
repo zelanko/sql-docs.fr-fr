@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: f505f478-dd6d-444a-957c-34f7cfb98911
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8f23ea32acdc0384bf0395f6cdd54913e33a0e51
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: df7cb6c2f5c04138d6738eadeb9b352d21f240f5
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47614777"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813682"
 ---
 # <a name="html-device-information-settings"></a>Paramètres d'informations de périphérique HTML
 Le tableau suivant répertorie les paramètres d'informations de périphérique qui permettent un rendu du rapport au format HTML.  
@@ -44,7 +44,7 @@ Le tableau suivant répertorie les paramètres d'informations de périphérique 
 |**ReplacementRoot(\*)**|Chaîne à ajouter à tous les liens d'extraction, de bascule et de signet dans le rapport lors du rendu hors du contrôle ReportViewer. Par exemple, ce paramètre est utilisé pour rediriger le clic d'un utilisateur vers une page personnalisée.|  
 |**ResourceStreamRoot(\*)**|Chaîne à ajouter à l'URL pour toutes les ressources d'image, telles que les images bascule ou de tri.|  
 |**Section**|Numéro de page du rapport dont le rendu est effectué. La valeur **0** indique que toutes les sections du rapport sont rendues. La valeur par défaut est **1**.|  
-|**StreamRoot (\*)**|Chemin d'accès utilisé pour préfixer la valeur de l'attribut **src** de l'élément IMG dans le rapport HTML retourné par le serveur de rapports. Par défaut, le serveur de rapports fournit le chemin d'accès. Vous pouvez utiliser ce paramètre pour spécifier un chemin racine pour les images contenues dans un rapport (par exemple, **http://\<nom_serveur>/resources/companyimages**).|  
+|**StreamRoot (\*)**|Chemin d'accès utilisé pour préfixer la valeur de l'attribut **src** de l'élément IMG dans le rapport HTML retourné par le serveur de rapports. Par défaut, le serveur de rapports fournit le chemin d'accès. Vous pouvez utiliser ce paramètre pour spécifier un chemin racine pour les images contenues dans un rapport (par exemple, **https://\<nom_serveur>/resources/companyimages**).|  
 |**StyleStream**|Indique si les styles et les scripts sont créés en tant que flux distinct plutôt que dans le document. La valeur par défaut est **false**.|  
 |**Barre d'outils**|Indique s'il faut afficher ou masquer la barre d'outils. La valeur par défaut de ce paramètre est **true**. Si la valeur de ce paramètre est **false**, toutes les options restantes (sauf le plan du document) sont ignorées. Si vous omettez ce paramètre, la barre d'outils s'affiche automatiquement pour les formats de rendu assurant sa prise en charge.<br /><br /> Le rendu de la barre d'outils de la Visionneuse de rapports est effectué lorsque vous utilisez l'accès URL pour effectuer le rendu d'un rapport. Le rendu de la barre d'outils ne s'effectue pas via l'API SOAP. Toutefois, le paramètre d'informations de périphérique **Toolbar** affecte la façon dont le rapport s'affiche lors de l'utilisation de la méthode SOAP **Render** . Si la valeur de ce paramètre est **true** lorsque vous utilisez SOAP pour effectuer un rendu au format HTML, seule la première section du rapport est rendue. Si la valeur est **false**, le rendu du rapport HTML entier est effectué sous la forme d'une page HTML unique.|  
 |**UserAgent**|Chaîne **user-agent** du navigateur qui effectue la demande, qui figure dans la requête HTTP.|  
@@ -53,7 +53,7 @@ Le tableau suivant répertorie les paramètres d'informations de périphérique 
   
 ## <a name="see-also"></a> Voir aussi  
  [Transmission de paramètres d'informations de périphérique aux extensions de rendu](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
- [Personnaliser les paramètres d’extension de rendu dans RSReportServer.Config](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
+ [Personnaliser les paramètres d'extension de rendu dans RSReportServer.Config](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
  [Informations techniques de référence &#40;SSRS&#41;](../reporting-services/technical-reference-ssrs.md)  
   
   

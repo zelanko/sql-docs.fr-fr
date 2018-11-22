@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 5edf3a09bb12f39541413e52ba5afcabe20fd5c8
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 5ce513473683d12d5ba2af68f08bc96c0f47d893
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021673"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814002"
 ---
 # <a name="manage-a-reporting-services-sharepoint-service-application"></a>Gérer une application de service Reporting Services SharePoint
 
@@ -92,7 +92,7 @@ ms.locfileid: "50021673"
 |Paramètre|Commentaires|  
 |-------------|--------------|  
 |Activer le téléchargement du Générateur de rapports|La valeur par défaut est TRUE.<br /><br /> Spécifie si les clients peuvent voir le bouton de téléchargement de l'application du générateur de rapports.|  
-|URL de lancement du Générateur de rapports|Spécifie une URL personnalisée lorsque le serveur de rapports n'utilise pas l'URL par défaut du Générateur de rapports. Ce paramètre est facultatif. Si vous ne spécifiez pas de valeur, l'URL par défaut est utilisée, laquelle lance le Générateur de rapports. Pour lancer le Générateur de rapports 3.0 en tant qu’application ClickOnce, entrez la valeur suivante : http://\<nom_ordinateur>/ReportServer/ReportBuilder/ReportBuilder_3_0_0_0.application.|  
+|URL de lancement du Générateur de rapports|Spécifie une URL personnalisée lorsque le serveur de rapports n'utilise pas l'URL par défaut du Générateur de rapports. Ce paramètre est facultatif. Si vous ne spécifiez pas de valeur, l'URL par défaut est utilisée, laquelle lance le Générateur de rapports. Pour lancer le Générateur de rapports 3.0 comme une application ClickOnce, entrez la valeur suivante : https://\<nom_ordinateur>/ReportServer/ReportBuilder/ReportBuilder_3_0_0_0.application.|  
 |Activer l'impression cliente|La valeur par défaut est TRUE.<br /><br /> Spécifie si les utilisateurs peuvent télécharger le contrôle côté client, qui fournit des options d'impression.|  
 |Modifier le délai d'expiration de la session|La valeur par défaut est 7200 secondes.|  
 |Modifier la limite du cache de sessions|La valeur par défaut est 5.|  

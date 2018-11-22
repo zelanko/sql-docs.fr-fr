@@ -22,12 +22,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6096869fb812034dbcd313cfbe0ab95373d27f23
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 8c4dd4b79881160f5fdfe61a7c60f76ce0ae2cf0
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50100290"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703957"
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -142,7 +142,7 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
  *database_name* . [ schema_name ] . | schema_name. ] *table_name*  
  Nom (composé d’une à trois parties) de la table à créer. Pour une table externe, seules les métadonnées de la table sont stockées dans SQL, avec des statistiques succinctes sur le fichier et ou le dossier référencé dans Hadoop ou Azure Blob Storage. Aucune donnée n’est déplacée ni stockée dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- \<column_definition> [ ,...*n* ] CREATE EXTERNAL TABLE autorise une ou plusieurs définitions de colonne. CREATE EXTERNAL TABLE et CREATE TABLE utilisent la même syntaxe pour définir une colonne. Il existe toutefois une exception à cela : vous ne pouvez pas utiliser DEFAULT CONSTRAINT sur des tables externes. Pour plus d’informations sur les définitions de colonne et leurs types de données, consultez [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md) et [CREATE TABLE dans Azure SQL Database](http://msdn.microsoft.com/library/d53c529a-1d5f-417f-9a77-64ccc6eddca1).  
+ \<column_definition> [ ,...*n* ] CREATE EXTERNAL TABLE autorise une ou plusieurs définitions de colonne. CREATE EXTERNAL TABLE et CREATE TABLE utilisent la même syntaxe pour définir une colonne. Il existe toutefois une exception à cela : vous ne pouvez pas utiliser DEFAULT CONSTRAINT sur des tables externes. Pour plus d’informations sur les définitions de colonne et leurs types de données, consultez [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md) et [CREATE TABLE dans Azure SQL Database](https://msdn.microsoft.com/library/d53c529a-1d5f-417f-9a77-64ccc6eddca1).  
   
  Les définitions de colonne, notamment les types de données et le nombre de colonnes, doivent correspondre aux données des fichiers externes. En cas de non correspondance, les lignes du fichier sont rejetées lors de l’interrogation des données.  
   
@@ -161,7 +161,7 @@ Dans SQL Data Warehouse et Analytics Platform System, l’instruction [CREATE EX
   
  ![Données récursives pour tables externes](../../t-sql/statements/media/aps-polybase-folder-traversal.png "Données récursives pour tables externes")  
   
- Pour modifier la valeur par défaut et uniquement lire les données du dossier racine, définissez l’attribut \<polybase.recursive.traversal> sur 'false' dans le fichier de configuration core-site.xml. Ce fichier se trouve sous `<SqlBinRoot>\Polybase\Hadoop\Conf with SqlBinRoot the bin root of SQl Server`. Par exemple, `C:\\Program Files\\Microsoft SQL Server\\MSSQL13.XD14\\MSSQL\\Binn`.  
+ Pour modifier la valeur par défaut et uniquement lire les données du dossier racine, définissez l’attribut \<polybase.recursive.traversal> sur 'false' dans le fichier de configuration core-site.xml. Ce fichier se trouve sous `<SqlBinRoot>\PolyBase\Hadoop\Conf with SqlBinRoot the bin root of SQl Server`. Par exemple, `C:\\Program Files\\Microsoft SQL Server\\MSSQL13.XD14\\MSSQL\\Binn`.  
   
  DATA_SOURCE = *external_data_source_name*  
  Spécifie le nom de la source de données externe qui contient l’emplacement des données externes. Cet emplacement est soit Hadoop, soit Azure Blob Storage. Pour créer une source de données externe, utilisez [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md).  
@@ -265,7 +265,7 @@ Les fichiers de raison et les fichiers de données ont tous deux le queryID asso
 ## <a name="general-remarks"></a>Remarques d'ordre général  
  Dans les scénarios de requête ad hoc (c’est-à-dire avec SELECT FROM EXTERNAL TABLE), PolyBase stocke les lignes extraites de la source de données externe dans une table temporaire. Une fois la requête terminée, PolyBase supprime la table temporaire. Aucune donnée permanente n’est stockée dans les tables SQL.  
   
- En revanche, dans le scénario d’importation (c’est-à-dire avec SELECT INTO FROM EXTERNAL TABLE), PolyBase stocke les lignes extraites de la source de données externe en tant que données permanentes dans la table SQL. La nouvelle table est créée lors de l’exécution de la requête, au moment où Polybase récupère les données externes.  
+ En revanche, dans le scénario d’importation (c’est-à-dire avec SELECT INTO FROM EXTERNAL TABLE), PolyBase stocke les lignes extraites de la source de données externe en tant que données permanentes dans la table SQL. La nouvelle table est créée lors de l’exécution de la requête, au moment où PolyBase récupère les données externes.  
   
  PolyBase peut envoyer (push) une partie du calcul des requêtes vers Hadoop pour améliorer les performances des requêtes. C’est ce que l’on appelle la poussée de prédicats. Pour ce faire, spécifiez l’option d’emplacement du gestionnaire de ressources Hadoop dans [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md).  
   
@@ -553,7 +553,7 @@ FROM ClickStream
 ```  
   
 ## <a name="see-also"></a> Voir aussi  
- [Exemples de requêtes de métadonnées courantes (SQL Server PDW)](http://msdn.microsoft.com/733fc99b-b9f6-4a29-b085-a1bd4f09f2ed)   
+ [Exemples de requêtes de métadonnées courantes (SQL Server PDW)](https://msdn.microsoft.com/733fc99b-b9f6-4a29-b085-a1bd4f09f2ed)   
  [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)   
  [CREATE EXTERNAL FILE FORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-file-format-transact-sql.md)   
  [CREATE EXTERNAL TABLE AS SELECT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-as-select-transact-sql.md)   

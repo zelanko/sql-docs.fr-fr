@@ -7,12 +7,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5f6f3e3d23c2d2777a3a17db16d047222991d48a
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 6feef76b565f8a1bb738175a06b8b6ab5d68c440
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030618"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813172"
 ---
 # <a name="deploy-the-sql-server-reporting-services-report-viewer-web-part-on-a-sharepoint-site"></a>Déployer le composant WebPart Visionneuse de rapports de SQL Server Reporting Services sur un site SharePoint
 
@@ -79,7 +79,7 @@ Cette section montre comment déployer le package de solution sur votre batterie
 
     ![Paramètres du site à partir de l’icône d’engrenage.](media/sharepoint-site-settings.png)
 
-    Par défaut, les applications Web SharePoint sont accessibles via le port 80. Cela signifie que vous pouvez souvent accéder à un site SharePoint en entrant *http://<computer name>* pour ouvrir la collection de sites racine.
+    Par défaut, les applications Web SharePoint sont accessibles via le port 80. Cela signifie que vous pouvez souvent accéder à un site SharePoint en entrant *https://<computer name>* pour ouvrir la collection de sites racine.
 
 3. Dans **Administration de la collection de sites**, cliquez sur **Fonctionnalités de la collection de sites**.
 
@@ -119,7 +119,7 @@ Le retrait de la solution ne supprime pas le composant WebPart Visionneuse de ra
 
     ![Paramètres du site à partir de l’icône d’engrenage.](media/sharepoint-site-settings.png)
 
-    Par défaut, les applications Web SharePoint sont accessibles via le port 80. Cela signifie que vous pouvez souvent accéder à un site SharePoint en entrant *http://<computer name>* pour ouvrir la collection de sites racine.
+    Par défaut, les applications Web SharePoint sont accessibles via le port 80. Cela signifie que vous pouvez souvent accéder à un site SharePoint en entrant *https://<computer name>* pour ouvrir la collection de sites racine.
 
 2. Sous **Galeries du concepteur web**, sélectionnez **Composants WebPart**.
 

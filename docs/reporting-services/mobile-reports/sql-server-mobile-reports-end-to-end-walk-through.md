@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: e198575e-b154-4342-b944-2bf19ec49bfd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a5e0f3461cee55781379fc598bbc6c61e51f5704
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 7db1fd9af6a36f0804819c389b06778ae04d2ebf
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021173"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813762"
 ---
 # <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>Rapports mobiles SQL Server : procédure pas à pas de bout en bout
 Étapes permettant de créer des rapports mobiles pour n’importe quelle taille d’écran avec [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] sur le portail web [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] et de les afficher dans les applications mobiles Power BI.
@@ -37,7 +37,7 @@ Pour suivre la procédure, vous avez besoin de ces produits :
 *  OU : exemple de base de données World Wide Importers, disponible à partir de la page [Exemples Microsoft SQL Server](../../sample/microsoft-sql-server-samples.md).
 * Pour afficher le résultat 
   *   [Inscrivez-vous au service Power BI](https://go.microsoft.com/fwlink/?LinkID=513879) et
-  *  [Téléchargez l’application mobile Power BI](https://powerbi.microsoft.com/en-us/documentation/powerbi-power-bi-apps-for-mobile-devices/) sur votre appareil mobile : iOS, téléphone Android ou appareil Windows 10.  
+  *  [Téléchargez l’application mobile Power BI](https://powerbi.microsoft.com/documentation/powerbi-power-bi-apps-for-mobile-devices/) sur votre appareil mobile : iOS, téléphone Android ou appareil Windows 10.  
 
   
 ## <a name="create-a-shared-data-source"></a>Créer une source de données partagée  
@@ -76,7 +76,7 @@ Utilisez un outil client [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md
    
 4. Dans le champ Nom, tapez le nom du serveur où vous avez enregistré votre source de données au format suivant :   
    
-   Nom : http://*localhost*/ReportServer  
+   Nom : https://*localhost*/ReportServer  
    Éléments de type : Sources de données (*.rsds)  
    
 5. Cliquez sur **Ouvrir**et accédez à la source de données que vous avez créée sur ce serveur.  
@@ -260,7 +260,7 @@ Vous pouvez enregistrer votre rapport localement ou sur un portail web [!INCLUDE
 Pour afficher votre rapport [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , vous devez d’abord :
 
 *  [Vous inscrire au service Power BI](https://go.microsoft.com/fwlink/?LinkID=513879), si vous n’avez pas encore de compte.
-*  [Télécharger l’application mobile Power BI](https://powerbi.microsoft.com/en-us/documentation/powerbi-power-bi-apps-for-mobile-devices/) sur votre appareil mobile.  
+*  [Télécharger l’application mobile Power BI](https://powerbi.microsoft.com/documentation/powerbi-power-bi-apps-for-mobile-devices/) sur votre appareil mobile.  
 
 ### <a name="view-your-mobile-report"></a>Afficher votre rapport mobile
   

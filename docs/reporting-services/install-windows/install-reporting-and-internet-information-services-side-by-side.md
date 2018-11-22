@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 9b651fa5-f582-4f18-a77d-0dde95d9d211
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 69be1793c824014abc7262ebdb7d231ce4bb66af
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 991eefb50ec949098e132f17f2c18691f4822987
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50020563"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813504"
 ---
 # <a name="install-reporting-and-internet-information-services-side-by-side"></a>Installer côte à côte Reporting Services et Internet Information Services
 
@@ -41,11 +41,11 @@ Vous pouvez installer et exécuter SQL Server Reporting Services (SSRS) et Inter
   
 | Exemple|Demande|  
 |-------------|-------------|  
-|`http://123.234.345.456:80/reports`|Reçoit toutes les requêtes envoyées à `http://123.234.345.456/reports` ou `http://\<computername>/reports` si un service de nom de domaine peut convertir l’adresse IP vers ce nom d’hôte.|  
-|`http://+:80/reports`|Reçoit toutes les requêtes envoyées à une adresse IP ou un nom d'hôte valide pour cet ordinateur, tant que l'URL contient le nom de répertoire virtuel « reports ».|  
-|`http://123.234.345.456:80`|Reçoit toute requête spécifiant `http://123.234.345.456` ou `http://\<computername>` si un service de nom de domaine peut convertir l’adresse IP vers ce nom d’hôte.|  
-|`http://+:80`|Reçoit les requêtes qui ne sont pas déjà reçues par d'autres applications, pour tous les points de terminaison d'application mappés à **Assigné**.|  
-|`http://*:80`|Reçoit les requêtes qui ne sont pas déjà reçues par d'autres applications, pour les points de terminaison d'application mappés à **Non assigné**.|  
+|`https://123.234.345.456:80/reports`|Reçoit toutes les requêtes envoyées à `https://123.234.345.456/reports` ou `https://\<computername>/reports` si un service de nom de domaine peut convertir l’adresse IP vers ce nom d’hôte.|  
+|`https://+:80/reports`|Reçoit toutes les requêtes envoyées à une adresse IP ou un nom d'hôte valide pour cet ordinateur, tant que l'URL contient le nom de répertoire virtuel « reports ».|  
+|`https://123.234.345.456:80`|Reçoit toute requête spécifiant `https://123.234.345.456` ou `https://\<computername>` si un service de nom de domaine peut convertir l’adresse IP vers ce nom d’hôte.|  
+|`https://+:80`|Reçoit les requêtes qui ne sont pas déjà reçues par d'autres applications, pour tous les points de terminaison d'application mappés à **Assigné**.|  
+|`https://*:80`|Reçoit les requêtes qui ne sont pas déjà reçues par d'autres applications, pour les points de terminaison d'application mappés à **Non assigné**.|  
   
  Le message d'erreur suivant indique un conflit de ports : « System.IO.FileLoadException : Le processus ne peut pas accéder au fichier, car il est utilisé par un autre processus. (Exception de HRESULT : 0x80070020). »  
   
@@ -54,9 +54,9 @@ Vous pouvez installer et exécuter SQL Server Reporting Services (SSRS) et Inter
   
 |Application|Réservation d'URL|Description|Réception de requête|  
 |-----------------|---------------------|-----------------|---------------------|  
-|Serveur de rapports|`http://+:80/ReportServer`|Caractère générique fort sur le port 80, avec le répertoire virtuel du serveur de rapports.|Reçoit toutes les requêtes sur le port 80 qui spécifient le répertoire virtuel du serveur de rapports. Le service web Report Server reçoit toutes les requêtes vers http://\<nom_ordinateur>/reportserver.|  
-|Portail web|`http://+:80/Reports`|Caractère générique fort sur le port 80, avec le répertoire virtuel Reports.|Reçoit toutes les requêtes sur le port 80 qui spécifient le répertoire virtuel reports. Le [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] reçoit toutes les requêtes vers http://\<nom_ordinateur>/reports.|  
-|IIS|`http://*:80/`|Caractère générique faible sur le port 80.|Reçoit toutes les requêtes restantes sur le port 80, qui ne sont pas reçues par une autre application.|  
+|Serveur de rapports|`https://+:80/ReportServer`|Caractère générique fort sur le port 80, avec le répertoire virtuel du serveur de rapports.|Reçoit toutes les requêtes sur le port 80 qui spécifient le répertoire virtuel du serveur de rapports. Le service Web Report Server reçoit toutes les requêtes dans https://\<nom_ordinateur>/reportserver.|  
+|Portail web|`https://+:80/Reports`|Caractère générique fort sur le port 80, avec le répertoire virtuel Reports.|Reçoit toutes les requêtes sur le port 80 qui spécifient le répertoire virtuel reports. Le [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] reçoit toutes les requêtes dans https://\<nom_ordinateur>/reports.|  
+|IIS|`https://*:80/`|Caractère générique faible sur le port 80.|Reçoit toutes les requêtes restantes sur le port 80, qui ne sont pas reçues par une autre application.|  
 
 ## <a name="side-by-side-deployments-of-sql-server-reporting-services-on-iis-80-85"></a>Déploiements côte à côte de SQL Server Reporting Services sur IIS 8.0, 8.5
 
@@ -66,7 +66,7 @@ Vous pouvez installer et exécuter SQL Server Reporting Services (SSRS) et Inter
   
 -   Instance du serveur de rapports installée dans la configuration par défaut, où la réservation d’URL spécifie également le port 80 et où l’application [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] utilise également « Reports » comme nom de répertoire virtuel.  
   
- Avec cette configuration, une requête envoyée à http://\<nom_ordinateur>: 80/reports sera reçue par le [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]. L’application accessible via le répertoire virtuel Reports dans IIS ne reçoit plus de requêtes une fois que l’instance du serveur de rapports est installée.  
+ Avec cette configuration, une requête envoyée à https://\<nom_ordinateur>:80/reports est reçue par le [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]. L’application accessible via le répertoire virtuel Reports dans IIS ne reçoit plus de requêtes une fois que l’instance du serveur de rapports est installée.  
   
  Si vous exécutez des déploiements côte à côte de versions plus anciennes et plus récentes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vous risquez de rencontrer le problème de routage qui vient d'être décrit. En effet, toutes les versions de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] utilisent « ReportServer » et « Reports » comme noms de répertoires virtuels pour le serveur de rapports et les applications [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] , ce qui augmente le risque d’avoir des répertoires virtuels « reports » et « reportserver » dans IIS.  
   

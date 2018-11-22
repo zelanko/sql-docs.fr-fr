@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3041a862639c8cbd71f2ad71378e980ec0b31fdc
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: b9294d9208b9cafc3610a9682c13cebcc970669e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48905133"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51672938"
 ---
 # <a name="improve-polybase-scale-out-groups-on-windows"></a>Améliorer les groupes de scale-out PolyBase sur Windows
 
@@ -52,7 +52,7 @@ Cet exemple présente les étapes de configuration d’un groupe PolyBase à l�
   
    - PQTH4A-CMP02  
   
-2. d’un compte de domaine : *PQTH4A\PolybaseUser*  
+2. Compte de domaine : *PQTH4A\PolyBaseUser*  
 
 ## <a name="install-sql-server-with-polybase-on-all-machines"></a>Installer SQL Server avec PolyBase sur toutes les machines
 
@@ -60,7 +60,7 @@ Cet exemple présente les étapes de configuration d’un groupe PolyBase à l�
   
 2. Sur la page de sélection de fonctionnalités, sélectionnez **Service de requête PolyBase pour données externes**.
   
-3. Dans la page Configuration du serveur, utilisez le **compte de domaine** PQTH4A\PolybaseUser pour le moteur PolyBase SQL Server et le service de mouvement de données PolyBase SQL Server.
+3. Dans la page Configuration du serveur, utilisez le **compte de domaine** PQTH4A\PolyBaseUser pour le moteur SQL Server PolyBase et le service de mouvement de données PolyBase SQL Server.
   
 4. Dans la page Configuration de PolyBase, sélectionnez l’option **Utiliser ce serveur SQL Server comme composant du groupe de scale-out PolyBase**. Elle ouvre le pare-feu pour autoriser les connexions entrantes aux services PolyBase.
   
@@ -106,6 +106,6 @@ Une fois l’installation terminée, les deux machines peuvent fonctionner en ta
   
 ## <a name="next-steps"></a>Étapes suivantes  
 
-Pour le dépannage, consultez [PolyBase troubleshooting with dynamic management views](http://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80).
+Pour le dépannage, consultez [PolyBase troubleshooting with dynamic management views](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80).
   
 Pour plus d’informations sur PolyBase, consultez [Vue d'ensemble de PolyBase](../../relational-databases/polybase/polybase-guide.md).
