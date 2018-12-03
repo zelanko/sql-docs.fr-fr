@@ -11,12 +11,12 @@ ms.assetid: 447792bb-f39b-49b4-9fd0-1ef4154c74ab
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a2ddf8f5c03d6f4c6724075e7209d800e10f7e39
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: afced2ca67c104b0bb01ccfe57fee2e309cc1b08
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724297"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52410166"
 ---
 # <a name="system-requirements-for-the-jdbc-driver"></a>Configuration requise pour le pilote JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "47724297"
   
  À compter du Pilote JDBC 4.1 Microsoft pour SQL Server, le Kit de développement Java (JDK) version 7.0 et l'environnement d'exécution Java (JRE, Java Runtime Environment) version 7.0 sont pris en charge.  
   
- À partir de [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)], la prise en charge de l’API Spec JDBC (Java Database Connectivity) par le pilote JDBC a été étendue pour inclure l’API JDBC 4.0. L'API JDBC 4.0 a été introduit dans le cadre du kit de développement logiciel JDK (Sun Java SE Development Kit) 6.0 et de l'environnement JRE (Java Runtime Environment) 6.0. JDBC 4.0 est un surensemble de l'API JDBC 3.0.  
+ À partir de [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)], la prise en charge de l'API Spec par le pilote JDBC (Java Database Connectivity) a été étendue pour inclure l'API JDBC 4.0. L'API JDBC 4.0 a été introduit dans le cadre du kit de développement logiciel JDK (Sun Java SE Development Kit) 6.0 et de l'environnement JRE (Java Runtime Environment) 6.0. JDBC 4.0 est un surensemble de l'API JDBC 3.0.  
   
  Quand vous déployez le [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] sur les systèmes d’exploitation Windows et UNIX, vous devez utiliser les packages d’installation, respectivement *sqljdbc_\<version>_enu.exe*, et *sqljdbc_\<version>_enu.tar.gz*. Pour plus d’informations sur la façon de déployer le pilote JDBC, consultez [déploiement du pilote JDBC](../../connect/jdbc/deploying-the-jdbc-driver.md) rubrique.  
   

@@ -13,12 +13,12 @@ ms.assetid: 61a2ec0d-1bcb-4231-bea0-cff866c21463
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 039b47f1a2affd12f53a8c45c931348eb4a2077e
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 21021402a10494306a3b667c5f7b83977dc7d205
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604759"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512539"
 ---
 # <a name="connecting-with-sqlcmd"></a>Connexion avec sqlcmd
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -28,8 +28,8 @@ L’utilitaire [sqlcmd](https://go.microsoft.com/fwlink/?LinkID=154481) est disp
 Les commandes suivantes montrent comment utiliser l’authentification Windows (Kerberos) et [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] l’authentification, respectivement :
   
 ```  
-sqlcmd –E –Sxxx.xxx.xxx.xxx  
-sqlcmd –Sxxx.xxx.xxx.xxx –Uxxx -Pxxx  
+sqlcmd -E -Sxxx.xxx.xxx.xxx  
+sqlcmd -Sxxx.xxx.xxx.xxx -Uxxx -Pxxx  
 ```  
   
 ## <a name="available-options"></a>Options disponibles
@@ -184,7 +184,7 @@ Sur la ligne de commande combiner `a.sql` et `b.sql` dans `c.sql` utilisant les 
   
 Exécutez `sqlcmd` et utiliser `c.sql` en tant que fichier d’entrée :  
   
-    slqcmd -S<…> -P<..> –U<..> -I c.sql  
+    slqcmd -S<...> -P<..> -U<..> -I c.sql  
 
 - z - *mot de passe* Change password.  
   
@@ -224,7 +224,7 @@ Dans un nom de source de données, seule l’entrée DRIVER est nécessaire, mai
 
 Si vous spécifiez la même option dans le nom de source de données et sur la ligne de commande `sqlcmd` ou `bcp`, l’option de ligne de commande remplace la valeur utilisée dans le nom de source de données. Par exemple, si le nom de source de données comporte une entrée DATABASE et que la ligne de commande `sqlcmd` inclut **-d**, la valeur passée à **-d** est utilisée. Si vous spécifiez **Trusted_Connection=yes** dans le nom de source de données, l’authentification Kerberos est utilisée et le nom d’utilisateur (**–U**) et le mot de passe (**–P**), s’ils sont fournis, sont ignorés.
 
-Vous pouvez modifier les scripts qui appellent `isql` pour qu’ils utilisent `sqlcmd` en définissant l’alias suivant : `alias isql="sqlcmd –D"`.  
+Vous pouvez modifier les scripts qui appellent `isql` pour qu’ils utilisent `sqlcmd` en définissant l’alias suivant : `alias isql="sqlcmd -D"`.  
 
 ## <a name="see-also"></a> Voir aussi  
 [Connexion avec **bcp**](../../../connect/odbc/linux-mac/connecting-with-bcp.md)  

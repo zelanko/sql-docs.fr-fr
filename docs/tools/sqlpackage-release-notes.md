@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: kenvh
-ms.openlocfilehash: c146426a9c325eec721e3289d711d0a00a632e2c
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: 69b3b5c9574578b286b882b7d2125b0bb984759b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50050851"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52413746"
 ---
 # <a name="sqlpackage-release-notes"></a>notes de publication de Sqlpackage
 
@@ -76,20 +76,22 @@ La version inclut les correctifs suivants :
 - Paramètre de ligne de commande ajouté /DiagnosticsFile:"C:\Temp\sqlpackage.log » pour spécifier un chemin d’accès de fichier pour enregistrer les informations de diagnostic.
 - Paramètre de ligne de commande ajouté /Diagnostics pour consigner des informations de diagnostic dans la console.
 
-## <a name="sqlpackage-on-macos-and-linux-001-preview"></a>Sqlpackage sur macOS et Linux 0.0.1 (version préliminaire)
+## <a name="sqlpackage-on-macos-and-linux-net-core-preview"></a>Sqlpackage sur macOS et Linux .NET Core (version préliminaire)
 
-Date de publication : 9 mai 2018  
-Build : 15.0.4057.1
+Date de publication : 15 novembre 2018  
+Build
 
-Cette version contient la version préliminaire d’inter-plateformes de sqlpackage qui cible .NET Core 2.0 et peut s’exécuter sur macOS et Linux. 
+Cette version contient la version préliminaire d’inter-plateformes de sqlpackage qui cible .NET Core 2.1 et peut s’exécuter sur macOS et Linux. 
+
+La version inclut les correctifs suivants :
+
+- Déplacé vers .NET Core 2.1 
+- Prise en charge pour les types CLR UDT, y compris les types SQL CLR UDT : SqlGeography, SqlGeometry & SqlHierarchyId.
 
 Cette version est une version préliminaire avec les problèmes connus suivants :
 
 - Le paramètre /p:CommandTimeout est difficile à 120.
 - Les contributeurs de génération et de déploiement ne sont pas pris en charge.
-  - Doit être corrigée après le passage à .NET Core 2.1 où System.ComponentModel.Composition.dll est pris en charge.
-  - Nécessité de gérer les chemins d’accès de la casse.
-- Types SQL CLR UDT ne sont pas pris en charge, y compris les Types d’UDT CLR SQL Server : SqlGeography, SqlGeometry & SqlHierarchyId.
 - Fichiers .dacpac et .bacpac plus anciens qui utilisent la sérialisation des données json ne sont pas pris en charge.
 - .Dacpacs référencé (par exemple master.dacpac) ne peut pas résoudre en raison de problèmes avec les systèmes de fichiers respectant la casse.
   - Une solution de contournement consiste à mettre en majuscule le nom du fichier de référence (par exemple le serveur maître. BACPAC).

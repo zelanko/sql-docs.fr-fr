@@ -9,12 +9,12 @@ ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 manager: craigg
 author: MightyPen
-ms.openlocfilehash: 6f51baee10a0f9b9cbb3595be816b2928f5bc0b0
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: a0c917c6f7200db2b5a04b47185ba6b61f59ad34
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604713"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506827"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>Utilisation d’Always Encrypted avec ODBC Driver for SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -365,9 +365,9 @@ Azure Key Vault est un outil est très pratique qui permet de stocker et de gér
 
 Le pilote prend en charge l’authentification auprès d’Azure Key Vault avec les types d’informations d’identification suivants :
 
-- Nom d’utilisateur/mot de passe : avec cette méthode, les informations d’identification sont le nom d’un utilisateur Azure Active Directory et son mot de passe.
+- Nom d’utilisateur/mot de passe - avec cette méthode, les informations d’identification sont le nom d’un utilisateur Azure Active Directory et son mot de passe.
 
-- ID de client/Secret : avec cette méthode, les informations d’identification sont un ID de client d’application et un secret d’application.
+- ID de client/Secret - avec cette méthode, les informations d’identification sont un ID de client d’application et un secret d’application.
 
 Pour autoriser le pilote à utiliser des clés CMK stockée dans AKV pour le chiffrement de colonne, utilisez les mots clés de chaîne de connexion uniquement suivants :
 

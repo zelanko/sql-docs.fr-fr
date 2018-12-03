@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: v-kaywon
 ms.author: v-kaywon
 manager: mbarwin
-ms.openlocfilehash: 29adbfcbce3701a853f18f7f1b3079bc0bb6f8ae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 531286af24740e37e125708a4b874b6aba27c3dc
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695677"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52403424"
 ---
 # <a name="using-always-encrypted-with-the-php-drivers-for-sql-server"></a>Utilisation d’Always Encrypted avec Microsoft Drivers for PHP for SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -155,7 +155,7 @@ $stmt->execute();
 Les exemples suivants montrent le filtrage des données en fonction des valeurs chiffrées et la récupération des données de texte en clair de colonnes chiffrées à l’aide les pilotes SQLSRV et PDO_SQLSRV. Notez les points suivants :
  -   La valeur utilisée dans la clause WHERE pour filtrer la colonne SSN doit être transmise avec un paramètre bind, afin que le pilote puisse la chiffrer de manière transparente avant de l’envoyer au serveur.
  -   Lorsque vous exécutez une requête avec des paramètres liés, les pilotes PHP détermine automatiquement le type SQL pour l’utilisateur, sauf si l’utilisateur spécifie explicitement le type SQL lors de l’utilisation du pilote SQLSRV.
- -   Toutes les valeurs sont imprimées par le programme sont en texte clair, étant donné que le pilote déchiffre de manière transparente les données récupérées à partir des colonnes SSN et BirthDate.
+ -   Toutes les valeurs imprimées par le programme sont en texte clair, car le pilote déchiffre de manière transparente les données récupérées à partir des colonnes SSN et BirthDate.
  
 Remarque : Les requêtes peuvent effectuer les comparaisons d’égalité sur des colonnes chiffrées uniquement si le chiffrement est déterministe. Pour plus d’informations, consultez [Sélection d’un chiffrement déterministe ou aléatoire](../../relational-databases/security/encryption/always-encrypted-database-engine.md#selecting--deterministic-or-randomized-encryption).
 

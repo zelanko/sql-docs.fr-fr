@@ -11,12 +11,12 @@ ms.assetid: 455ab165-8e4d-4df9-a1d7-2b532bfd55d6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1cc9e6673076cdbd071f2357ce1bd5c4d10c2092
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 56cb2a6a28e60aa34a2bb74d9d7c506f7d3b9523
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602509"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52403174"
 ---
 # <a name="driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server"></a>Regroupement de connexions prenant en charge le pilote dans le pilote ODBC pour SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "51602509"
   ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prend en charge le [regroupement de connexions prenant en charge les pilotes](https://msdn.microsoft.com/library/hh405031(VS.85).aspx). Cette rubrique décrit les améliorations apportées au regroupement de connexions prenant en charge les pilotes dans Microsoft ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur Windows :  
   
 -   Quelles que soient les propriétés de connexion, les connexions qui utilisent `SQLDriverConnect` arrivent dans un pool différent des connexions qui utilisent `SQLConnect`.
-- Quand vous utilisez l’authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et le regroupement de connexions prenant en charge les pilotes, le pilote n’utilise pas le contexte de sécurité de l’utilisateur Windows pour le thread actuel afin de séparer les connexions dans le pool. Autrement dit, si les paramètres des connexions sont équivalents pour les scénarios d’emprunt d’identité Windows avec l’authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et qu’elles utilisent les mêmes informations d’identification pour l’authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] lors de la connexion au serveur principal, différents utilisateurs Windows peuvent utiliser le même regroupement de connexions. Quand vous utilisez l’authentification Windows et le regroupement de connexions prenant en charge les pilotes, le pilote utilise le contexte de sécurité de l’utilisateur Windows actuel pour séparer les connexions dans le regroupement. Autrement dit, pour les scénarios d’emprunt d’identité Windows, les différents utilisateurs Windows ne partagent pas les connexions même si celles-ci utilisent les mêmes paramètres.
+- Quand vous utilisez l’authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et le regroupement de connexions prenant en charge les pilotes, le pilote n’utilise pas le contexte de sécurité de l’utilisateur Windows pour le thread actuel afin de séparer les connexions dans le pool. Autrement dit, si les paramètres des connexions sont équivalents pour les scénarios d’emprunt d’identité Windows avec l’authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et qu’elles utilisent les mêmes informations d’identification pour l’authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour se connecter au serveur principal, différents utilisateurs Windows peuvent utiliser le même regroupement de connexions. Quand vous utilisez l’authentification Windows et le regroupement de connexions prenant en charge les pilotes, le pilote utilise le contexte de sécurité de l’utilisateur Windows actuel pour séparer les connexions dans le regroupement. Autrement dit, pour les scénarios d’emprunt d’identité Windows, les différents utilisateurs Windows ne partagent pas les connexions même si celles-ci utilisent les mêmes paramètres.
 - Lorsque vous utilisez Azure Active Directory et le regroupement de connexions prenant en charge les pilotes, le pilote utilise également la valeur de l’authentification pour déterminer l’appartenance dans le pool de connexions.
   
 -   Le regroupement de connexions prenant en charge les pilotes empêche une mauvaise connexion d’être retournée à partir du regroupement.  
