@@ -19,12 +19,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3692d7dfb2f6d4c6f672ba1b18d7d47f1fae08dd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 18f3887d2cfa96c0a7c132cfe8396300b3143f06
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836518"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519771"
 ---
 # <a name="deny-search-property-list-permissions-transact-sql"></a>Autorisations de liste des propriétés de recherche DENY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -47,7 +47,7 @@ DENY permission [ ,...n ] ON
  *permission*  
  Nom d'une autorisation. Les mappages valides des autorisations des éléments sécurisables sont décrits dans la section « Notes », plus loin dans cette rubrique.  
   
-ON SEARCH PROPERTY LIST **::***search_property_list_name*  
+ON SEARCH PROPERTY LIST **::**_search_property_list_name_  
  Indique la liste de propriétés de recherche pour laquelle l'autorisation est refusée. Le qualificateur d'étendue :: est requis.  
   
 *database_principal*  

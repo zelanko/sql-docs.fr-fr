@@ -22,12 +22,12 @@ ms.assetid: 77158a9a-d638-4818-90a1-cb2eb57df514
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 05631087cc98f2b148072f954f3400bbcbaba41a
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 35366fbbeac73a551546f2778592f03da5c7e1e7
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600533"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617669"
 ---
 # <a name="logging-in-to-sql-server"></a>Connexion à SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "51600533"
 |Connexion à une instance nommée en spécifiant à la fois l'adresse IP et le port TCP utilisés, dans le cas présent 2828.|192.168.17.28\SQLEXPRESS,2828|  
 |Connexion à une instance par défaut par son nom, en imposant une connexion TCP.|tcp:APPHOST|  
 |Connexion à une instance nommée par son nom, en imposant une connexion TCP.|tcp:APPHOST\SQLEXPRESS|  
-|Connexion à une instance par défaut en spécifiant un nom de canal nommé.|\\\APPHOST\pipe\unit\app|  
+|Connexion à une instance par défaut en spécifiant un nom de canal nommé.|\\\APPHOST\pipe\SQL\query|  
 |Connexion à une instance nommée en spécifiant un nom de canal nommé.|\\\APPHOST\pipe\MSSQL$SQLEXPRESS\SQL\query|  
 |Connexion à une instance par défaut par son nom, en imposant une connexion par canaux nommés.|np:APPHOST|  
 |Connexion à une instance nommée par son nom, en imposant une connexion par canaux nommés.|np:APPHOST\SQLEXPRESS|  

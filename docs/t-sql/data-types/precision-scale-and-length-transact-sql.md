@@ -22,12 +22,12 @@ ms.assetid: fbc9ad2c-0d3b-4e98-8fdd-4d912328e40a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1e28639c3e0f167c61f63c4d63eadf703609b54b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bf6c6caf1162c3b2257ffea9c051fa7634250fd2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603517"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507261"
 ---
 # <a name="precision-scale-and-length-transact-sql"></a>Précision, échelle et longueur (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -63,10 +63,10 @@ Les expressions des opérandes sont notées e1 et e2, avec respectivement les pr
   
 \* La précision et l’échelle du résultat ne peuvent pas être supérieures à 38. Si la précision d’un résultat est supérieure à 38, elle est ramenée à 38 et l’échelle correspondante est réduite pour tenter d’empêcher la troncation de la partie entière du résultat. Dans certains cas, tels que la multiplication ou la division, le facteur d’échelle n’est pas réduit pour assurer une précision décimale, bien que l’erreur de dépassement puisse être générée.
 
-Dans les opérations d’addition et de soustraction, nous devons avoir `max(p1 – s1, p2 – s2)` pour stocker la partie entière du nombre décimal. Si l’espace est insuffisant pour cela, autrement dit `max(p1 – s1, p2 – s2) < min(38, precision) – scale`, l’échelle est réduite afin de fournir suffisamment d’espace pour la partie entière. L’échelle obtenue étant `MIN(precision, 38) - max(p1 – s1, p2 – s2)`, la partie fractionnaire peut être arrondie pour y contenir.
+Dans les opérations d’addition et de soustraction, nous devons avoir `max(p1 - s1, p2 - s2)` pour stocker la partie entière du nombre décimal. Si l’espace est insuffisant pour cela, autrement dit `max(p1 - s1, p2 - s2) < min(38, precision) - scale`, l’échelle est réduite afin de fournir suffisamment d’espace pour la partie entière. L’échelle obtenue étant `MIN(precision, 38) - max(p1 - s1, p2 - s2)`, la partie fractionnaire peut être arrondie pour y contenir.
 
 Dans les opérations de multiplication et de division, nous devons avoir `precision - scale` pour stocker la partie entière du résultat. L’échelle peut être réduite à l’aide des règles suivantes :
-1.  L’échelle obtenue est réduite à `min(scale, 38 – (precision-scale))` si la partie entière est inférieure à 32, car elle ne peut pas être supérieure à `38 – (precision-scale)`. Le résultat peut être arrondi dans ce cas.
+1.  L’échelle obtenue est réduite à `min(scale, 38 - (precision-scale))` si la partie entière est inférieure à 32, car elle ne peut pas être supérieure à `38 - (precision-scale)`. Le résultat peut être arrondi dans ce cas.
 1. L’échelle ne change pas si elle est inférieure à 6 et si la partie entière est supérieure à 32. Dans ce cas, une erreur de dépassement peut être générée si elle ne peut pas tenir dans decimal(38, scale) 
 1. L’échelle est fixée à 6 si elle est supérieure à 6 et si la partie entière est supérieure à 32. Dans ce cas, la partie entière et l’échelle sont toutes deux réduites et le type obtenu est decimal(38,6). Le résultat peut être arrondi à 6 décimales ou une erreur de dépassement est générée si la partie entière ne peut pas tenir dans 32 chiffres.
 
@@ -76,7 +76,7 @@ L’expression suivante retourne le résultat `0.00000090000000000` sans arrondi
 select cast(0.0000009000 as decimal(30,20)) * cast(1.0000000000 as decimal(30,20)) [decimal 38,17]
 ```
 Dans ce cas, la précision est égale à 61 et l’échelle à 40.
-La partie entière (précision-échelle = 21) étant inférieure à 32, il s’agit du cas (1) dans les règles de multiplication et l’échelle est calculée comme `min(scale, 38 – (precision-scale)) = min(40, 38 – (61-40)) = 17`. Le type de résultat est `decimal(38,17)`.
+La partie entière (précision-échelle = 21) étant inférieure à 32, il s’agit du cas (1) dans les règles de multiplication et l’échelle est calculée comme `min(scale, 38 - (precision-scale)) = min(40, 38 - (61-40)) = 17`. Le type de résultat est `decimal(38,17)`.
 
 L’expression suivante retourne le résultat `0.000001` pour tenir dans `decimal(38,6)` :
 ```sql

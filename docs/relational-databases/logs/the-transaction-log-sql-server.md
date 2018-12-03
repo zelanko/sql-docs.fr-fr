@@ -15,12 +15,12 @@ ms.assetid: d7be5ac5-4c8e-4d0a-b114-939eb97dac4d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fb02296dd980e0db7e093950bd33eed7d3c05cf3
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: d85c61376992e22488b4ddddffc227e2a371ac76
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677298"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711590"
 ---
 # <a name="the-transaction-log-sql-server"></a>Journal des transactions (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -114,9 +114,9 @@ Pour éviter de manquer d’espace, à moins que la troncation du journal soit r
 |7|DATABASE_SNAPSHOT_CREATION|Un instantané de base de données est créé. (Tous les modes de récupération)<br /><br /> Il s'agit d'une raison courante et habituellement brève du retard de la troncation du journal.|  
 |8|LOG_SCAN|Une analyse du journal se produit. (Tous les modes de récupération)<br /><br /> Il s'agit d'une raison courante et habituellement brève du retard de la troncation du journal.|  
 |9|AVAILABILITY_REPLICA|Un réplica secondaire d'un groupe de disponibilité applique les enregistrements du journal des transactions de cette base de données à une base de données secondaire associée. (Mode de récupération complète)<br /><br /> Pour plus d’informations, consultez [Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).|  
-|10|—|Usage interne uniquement|  
-|11|—|Usage interne uniquement|  
-|12|—|Usage interne uniquement|  
+|10|-|Usage interne uniquement|  
+|11|-|Usage interne uniquement|  
+|12|-|Usage interne uniquement|  
 |13|OLDEST_PAGE|Si une base de données est configurée pour utiliser des points de contrôle indirects, la page la plus ancienne dans la base de données peut être plus ancienne que le [numéro séquentiel dans le journal (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) du point de contrôle. Dans ce cas, la page la plus ancienne peut retarder la troncation du journal. (Tous les modes de récupération)<br /><br /> Pour plus d’informations sur les points de contrôle indirects, consultez [Points de contrôle de base de données &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md).|  
 |14|OTHER_TRANSIENT|Cette valeur n'est pas utilisée actuellement.|  
   
@@ -158,17 +158,17 @@ Lorsque la réplication transactionnelle est activée, les opérations SELECT IN
     -   Reconstruction d’un nouveau segment de mémoire [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md) (le cas échéant). La désallocation de pages d’index pendant une opération `DROP INDEX` est **toujours** entièrement journalisée.
   
 ##  <a name="RelatedTasks"></a> Related tasks  
- **Gestion du journal des transactions**  
+**Gestion du journal des transactions**  
   
 -   [Gérer la taille du fichier journal des transactions](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)  
   
 -   [Résoudre les problèmes liés à un journal des transactions saturé &#40;erreur SQL Server 9002&#41;](../../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)  
   
- **Sauvegarde du journal des transactions (mode de récupération complète)**  
+**Sauvegarde du journal des transactions (mode de récupération complète)**  
   
 -   [Sauvegarder un journal des transactions &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  
   
- **Restauration du journal des transactions (mode de récupération complète)**  
+**Restauration du journal des transactions (mode de récupération complète)**  
   
 -   [Restaurer une sauvegarde de journal des transactions &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  
   

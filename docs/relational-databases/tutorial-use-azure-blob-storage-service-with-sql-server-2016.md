@@ -3,26 +3,24 @@ title: 'Didacticiel : Utiliser le service Stockage Blob Azure avec SQL Server 
 ms.custom: ''
 ms.date: 01/07/2016
 ms.prod: sql
+ms.technology: ''
 ms.prod_service: database-engine
-ms.component: tutorial
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 applies_to:
 - SQL Server 2016
 ms.assetid: e69be67d-da1c-41ae-8c9a-6b12c8c2fb61
-caps.latest.revision: 23
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d6cba97149bde173d7cac233f3bc5742b710ce5d
-ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
+ms.openlocfilehash: abbccb66ca86fb80991c6f0733e1cbfa0ee8a8e8
+ms.sourcegitcommit: ba7fb4b9b4f0dbfe77a7c6906a1fde574e5a8e1e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51571378"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52302842"
 ---
 # <a name="tutorial-use-azure-blob-storage-service-with-sql-server-2016"></a>Didacticiel : Utiliser le service Stockage Blob Azure avec SQL Server 2016
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,6 +55,7 @@ Vous pouvez créer une stratégie d’accès stockée et une signature d’accè
 -   Compte de stockage  
 -   Conteneur d’objets blob Azure   
 -   Stratégie SAP    
+
 Ce script commence par déclarer plusieurs variables pour spécifier les noms des ressources ci-dessus et les noms des valeurs d’entrée requises suivantes :  
   
 -   Un nom de préfixe utilisé pour nommer les autres objets de ressource    

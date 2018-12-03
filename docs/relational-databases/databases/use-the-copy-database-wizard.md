@@ -26,12 +26,12 @@ ms.assetid: 7a999fc7-0a26-4a0d-9eeb-db6fc794f3cb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3513d85607582a8aab726804f2501ee675859460
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 8930cb9c01ab04f6166a710de66ab3bbb3241a05
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560506"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52403244"
 ---
 # <a name="use-the-copy-database-wizard"></a>Utiliser l'Assistant Copie de base de données
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -312,7 +312,7 @@ Que vous choisissiez **Déplacer** ou **Copier**, **Détacher et attacher** ou *
      > **REMARQUE** Vous pouvez lancer l’Assistant Copie de base de données à partir d’une base de données.  Vous pouvez utiliser l’Assistant Copie de base de données à partir du serveur source ou de destination.
   
 ### <a name="a--move-database-using-detach-and-attach-method-to-an-instance-on-a-different-physical-server--a-login-and-sql-server-agent-job-will-be-moved-as-well"></a>**A.  Déplacez la base de données en utilisant la méthode de détachement et d’attachement vers une instance située sur un autre serveur physique.  Une connexion et un travail SQL Server Agent sont également déplacés.**  
-L’exemple suivant déplace la base de données `Sales` , une connexion Windows nommée `contoso\Jennie` et un travail SQL Server Agent nommé `Jennie’s Report` depuis une instance 2008 de SQL Server sur `Server1` vers une instance 2016 de SQL Server sur `Server2`.  `Jennie’s Report` utilise la base de données `Sales` .  `Sales` n’existe pas déjà sur le serveur de destination `Server2`.  `Server1` sera réaffecté à une autre équipe après le déplacement de la base de données.
+L’exemple suivant déplace la base de données `Sales` , une connexion Windows nommée `contoso\Jennie` et un travail SQL Server Agent nommé `Jennie's Report` depuis une instance 2008 de SQL Server sur `Server1` vers une instance 2016 de SQL Server sur `Server2`.  `Jennie's Report` utilise la base de données `Sales` .  `Sales` n’existe pas déjà sur le serveur de destination `Server2`.  `Server1` sera réaffecté à une autre équipe après le déplacement de la base de données.
   
 6.  Comme indiqué dans [Limitations et Restrictions](#Restrictions)ci-dessus, une base de données shell devra être créée sur le serveur de destination lors du transfert d’un travail SQL Server Agent qui référence une base de données qui n’existe pas déjà sur le serveur de destination.  Créez une base de données shell appelée `Sales` sur le serveur de destination. 
 
@@ -322,7 +322,7 @@ L’exemple suivant déplace la base de données `Sales` , une connexion Windows
   
 9.  Page**Configurer la base de données de Destination** : l’ **Assistant** a déterminé que `Sales` existe déjà sur le serveur de destination, tel qu’elle a été créée à l’ **étape 6** ci-dessus et a ajouté `_new` au nom de la **base de données de destination** .  Supprimez `_new` de la zone de texte **Base de données de destination** .  Si vous le souhaitez, modifiez le **nom de fichier**et le **dossier de destination**.  Sélectionnez **Supprimer les bases de données portant le même nom sur le serveur de destination, puis poursuivre le transfert de base de données en remplaçant les fichiers de base de données existants**.  Cliquez sur **Suivant**.
   
-10. Page**Sélectionner des objets serveur** : dans le panneau **Objets connexes sélectionnés** , cliquez sur le bouton de sélection **Connexions des noms d’objets**.  Sous **Options de copie** , sélectionnez **Copier uniquement les connexions sélectionnées**.  Cochez la case **Afficher toutes les connexions serveur**.  Cochez la case **Connexion** pour `contoso\Jennie`.  Cliquez sur **OK**.  Dans le panneau **Objets connexes disponibles** , sélectionnez **Travaux SQL Server Agent** , puis cliquez sur le bouton **>** .  Dans le panneau **Objets connexes sélectionnés** , cliquez sur le bouton de sélection **Travaux SQL Server Agent**.  Sous **Options de copie** , sélectionnez **Copier uniquement les travaux sélectionnés**.  Cochez la case pour `Jennie’s Report`.  Cliquez sur **OK**.  Cliquez sur **Suivant**.  
+10. Page**Sélectionner des objets serveur** : dans le panneau **Objets connexes sélectionnés** , cliquez sur le bouton de sélection **Connexions des noms d’objets**.  Sous **Options de copie** , sélectionnez **Copier uniquement les connexions sélectionnées**.  Cochez la case **Afficher toutes les connexions serveur**.  Cochez la case **Connexion** pour `contoso\Jennie`.  Cliquez sur **OK**.  Dans le panneau **Objets connexes disponibles** , sélectionnez **Travaux SQL Server Agent** , puis cliquez sur le bouton **>** .  Dans le panneau **Objets connexes sélectionnés** , cliquez sur le bouton de sélection **Travaux SQL Server Agent**.  Sous **Options de copie** , sélectionnez **Copier uniquement les travaux sélectionnés**.  Cochez la case pour `Jennie's Report`.  Cliquez sur **OK**.  Cliquez sur **Suivant**.  
   
 11. Page**Emplacement des fichiers de base de données source** : cliquez sur le bouton de sélection **Partage de fichiers sur le serveur source** et accédez à l’emplacement du dossier donné.  Par exemple, pour l’emplacement du dossier `D:\MSSQL13.MSSQLSERVER\MSSQL\DATA` , utilisez `\\Server1\D$\MSSQL13.MSSQLSERVER\MSSQL\DATA` pour **Partage de fichier sur le serveur source**.  Cliquez sur **Suivant**.
   
@@ -354,7 +354,7 @@ L’exemple suivant déplace la base de données `Sales` , une connexion Windows
 Étant donné que `Server1` sera déplacé vers une autre équipe et que l’opération de **déplacement** ne sera pas répétée, pensez à effectuer les étapes suivantes :
      -    Suppression du package SSIS `SalesFromServer1toServer2_Move` sur `Server2`.
      -    Suppression du travail SQL Server Agent `SalesFromServer1toServer2_Move` sur `Server2`.
-     -    Suppression du travail SQL Server Agent `Jennie’s Report` sur `Server1`.
+     -    Suppression du travail SQL Server Agent `Jennie's Report` sur `Server1`.
      -    Suppression de la connexion `contoso\Jennie` sur `Server1`.
 
 

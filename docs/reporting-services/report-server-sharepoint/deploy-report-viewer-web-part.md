@@ -1,22 +1,22 @@
 ---
 title: Déployer le composant WebPart Visionneuse de rapports de SQL Server Reporting Services sur un site SharePoint | Microsoft Docs
-ms.date: 10/05/2017
+ms.date: 11/15/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6feef76b565f8a1bb738175a06b8b6ab5d68c440
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: e9b2d920b55e412f3b9fa119db0a7cf893659fca
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813172"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502816"
 ---
 # <a name="deploy-the-sql-server-reporting-services-report-viewer-web-part-on-a-sharepoint-site"></a>Déployer le composant WebPart Visionneuse de rapports de SQL Server Reporting Services sur un site SharePoint
 
-[!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
+[!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2016-2019](../../includes/ssrs-appliesto-sharepoint-2016-2019.md)] [!INCLUDE[ssrs-appliesto-not-sharepoint-online](../../includes/ssrs-appliesto-not-sharepoint-online.md)]
 
 Le composant WebPart Visionneuse de rapports est un composant WebPart personnalisé qui peut être utilisé pour afficher des rapports SQL Server Reporting Services (mode natif) au sein de votre site SharePoint. Vous pouvez l’utiliser pour afficher, parcourir, imprimer et exporter des rapports sur un serveur de rapports. Le composant WebPart Visionneuse de rapports est associé aux fichiers de définition de rapport (.rdl) qui sont traités par un serveur de rapports SQL Server Reporting Services ou un serveur Power BI Report Server. Il ne peut pas être utilisé avec les rapports Power BI hébergés dans Power BI Report Server.
 
@@ -54,7 +54,7 @@ Cette section montre comment déployer le package de solution sur votre batterie
 2. Exécutez [Add-SPSolution](https://technet.microsoft.com/library/ff607552(v=office.16).aspx) pour ajouter la solution de batterie de serveurs.
 
     ```
-    Add-SPSolution –LiteralPath "{path to file}\ReportViewerWebPart.wsp"
+    Add-SPSolution -LiteralPath "{path to file}\ReportViewerWebPart.wsp"
     ```
 
     L'applet de commande retourne le nom de la solution, son ID, et Deployed=False. À l'étape suivante, vous déploierez la solution.
@@ -64,13 +64,13 @@ Cette section montre comment déployer le package de solution sur votre batterie
     **SharePoint 2013**
 
     ```
-    Install-SPSolution –Identity ReportViewerWebPart.wsp -CompatibilityLevel "14,15" -GACDeployment -WebApplication {URL to web application}
+    Install-SPSolution -Identity ReportViewerWebPart.wsp -CompatibilityLevel "14,15" -GACDeployment -WebApplication {URL to web application}
     ```
 
     **SharePoint 2016**
 
     ```
-    Install-SPSolution –Identity ReportViewerWebPart.wsp -GACDeployment -WebApplication {URL to web application}
+    Install-SPSolution -Identity ReportViewerWebPart.wsp -GACDeployment -WebApplication {URL to web application}
     ```
 
 ## <a name="activate-feature"></a>Activer la fonctionnalité

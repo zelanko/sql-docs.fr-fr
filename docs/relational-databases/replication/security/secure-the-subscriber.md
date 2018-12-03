@@ -15,12 +15,12 @@ ms.assetid: c8f0d62a-8b5d-4a21-9aec-223da52bb708
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a36049bcbd2d5c043320f3e10d06005bf2f70b2c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d410a838083aeb52c090dee0f9878a8baa52cca3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47671217"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504046"
 ---
 # <a name="secure-the-subscriber"></a>Sécuriser l'abonné
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "47671217"
  Pour plus d’informations, consultez [Créer un abonnement pouvant être mis à jour pour une publication transactionnelle](../../../relational-databases/replication/publish/create-updatable-subscription-to-transactional-publication.md) et [Afficher et modifier les paramètres de sécurité de la réplication](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).  
   
 > [!IMPORTANT]  
->  Le compte spécifié pour la connexion doit uniquement avoir l'autorisation d'insérer, de mettre à jour et de supprimer des données sur les vues créées par la réplication dans la base de données de publication. Il ne doit pas bénéficier d'autres autorisations. Octroyez des autorisations sur les vues de la base de données de publication qui sont mentionnées dans le panneau **syncobj_***\<Nombre_hexadécimal>* pour le compte que vous avez configuré pour chaque abonné.  
+>  Le compte spécifié pour la connexion doit uniquement avoir l'autorisation d'insérer, de mettre à jour et de supprimer des données sur les vues créées par la réplication dans la base de données de publication. Il ne doit pas bénéficier d'autres autorisations. Octroyez des autorisations sur les vues de la base de données de publication qui sont mentionnées dans le panneau **syncobj_**_\<Nombre_hexadécimal>_ pour le compte que vous avez configuré pour chaque abonné.  
   
 ## <a name="queued-updating-subscriptions"></a>Abonnements mis à jour en attente  
  Quand vous configurez des abonnements mis à jour en attente, il faut garder à l'esprit deux points relatifs à la sécurité :  

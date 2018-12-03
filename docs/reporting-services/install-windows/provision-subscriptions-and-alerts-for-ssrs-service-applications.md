@@ -14,12 +14,12 @@ ms.assetid: d0de3f1f-4887-47fb-bacf-46aaad74c4be
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: a445496943b32fff113ae4eebeff23dc375ee323
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: 8ba0ec37bed5b47f0a78d78905f390eafda52ff9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50051101"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530411"
 ---
 # <a name="provision-subscriptions-and-alerts-for-ssrs-service-applications"></a>Configurer les abonnements et les alertes pour les applications de service de SSRS
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Les abonnements et les alertes de données nécessitent SQL Server Agent et peuvent exiger la configuration des autorisations de SQL Server Agent. Si des messages d'erreur apparaissent indiquant que SQL Server Agent est obligatoire et que vous avez vérifié le fonctionnement de SQL Server Agent, alors vous devez mettre à jour ou vérifier les autorisations. Cette rubrique traite de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode SharePoint et décrit trois méthodes pour mettre à jour les autorisations de SQL Server Agent avec les abonnements [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Les informations d'identification que vous utilisez pour les étapes de cette rubrique doivent disposer d'autorisations suffisantes pour accorder des autorisations EXECUTE au rôle RSExecRole pour les objets dans les bases de données de l'application de service, msdb et master.  
@@ -79,9 +79,9 @@ ms.locfileid: "50051101"
   
 4.  Mettez à jour l'applet de commande PowerShell suivant en remplaçant le nom de la base de données du serveur de rapports, le compte du pool d'applications, et le chemin d'accès de l'instruction.  
   
-     **Syntaxe d’applets de commande :** `Get-SPRSDatabaseRightsScript –DatabaseName <ReportingServices database name> -UserName <app pool account> -IsWindowsUser | Out-File <path of statement>`  
+     **Syntaxe d’applets de commande :** `Get-SPRSDatabaseRightsScript -DatabaseName <ReportingServices database name> -UserName <app pool account> -IsWindowsUser | Out-File <path of statement>`  
   
-     **Exemple d'une applet de commande :** `Get-SPRSDatabaseRightsScript –DatabaseName ReportingService_46fd00359f894b828907b254e3f6257c –UserName “NT AUTHORITY\NETWORK SERVICE” –IsWindowsUser | Out-File c:\SQLServerAgentrights.sql`  
+     **Exemple d'une applet de commande :** `Get-SPRSDatabaseRightsScript -DatabaseName ReportingService_46fd00359f894b828907b254e3f6257c -UserName "NT AUTHORITY\NETWORK SERVICE" -IsWindowsUser | Out-File c:\SQLServerAgentrights.sql`  
   
 ## <a name="using-the-transact-sql-script"></a>Utilisation du script Transact-SQL  
  Les procédures suivantes peuvent être utilisées avec des scripts téléchargés depuis les pages de configuration ou des scripts créés à l'aide de PowerShell.  

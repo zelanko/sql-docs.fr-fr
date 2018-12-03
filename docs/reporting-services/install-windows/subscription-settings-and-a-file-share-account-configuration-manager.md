@@ -9,12 +9,12 @@ f1_keywords:
 ms.assetid: fefa7bdb-b5f2-4db7-b91c-b58869279f3c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 61f8db13b3984825d37924a248ffebb31e2a5613
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: e0dd324cfbe9fbac48c85c31cea20887d650014c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813112"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52402111"
 ---
 # <a name="subscription-settings-and-a-file-share-account-configuration-manager"></a>Paramètres d'abonnement et compte de partage de fichiers (Gestionnaire de configuration)
   Utilisez la page **Paramètres d'abonnement** du Gestionnaire de configuration [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] afin de configurer un compte de partage de fichiers pour les serveurs de rapports en mode natif et les abonnements de partage de fichiers. Le compte de partage de fichiers vous permet d'utiliser un jeu unique d'informations d'identification dans plusieurs abonnements qui fournissent des rapports à un partage de fichiers. Au moment de modifier les informations d'identification, vous configurez la modification pour le compte de partage de fichiers et vous n'avez pas besoin de mettre à jour chaque abonnement individuel.  
@@ -43,7 +43,7 @@ ms.locfileid: "51813112"
 > [!IMPORTANT]
 > Le compte de service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] contrôle la remise des abonnements et interagit avec le compte utilisé pour les abonnements de partage de fichiers. Les fonctionnalités de sécurité Windows limitent les combinaisons 1) du compte de service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] et 2) du compte utilisé pour les comptes de partage de fichiers. Par exemple, si un compte de système d’exploitation intégré est utilisé comme compte de partage de fichiers, le compte de service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] doit être un autre compte de service avec des autorisations d’emprunt d’identité. Si un compte de partage de fichiers explicite et un mot de passe sont configurés, le compte de partage de fichiers nécessite un droit d'ouverture de session sur l'ordinateur exécutant le service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Si le compte de partage de fichiers n'a pas les autorisations requises, les abonnements qui utilisent le compte de partage de fichiers échouent et un message d'erreur semblable à ce qui suit s’affiche :  
 >   
->  `“Failure writing file {file} : An impersonation error occurred using the security context of the current user.”`  
+>  `"Failure writing file {file} : An impersonation error occurred using the security context of the current user."`  
   
 ## <a name="powershell-sample-to-audit-use-of-the-file-share-account"></a>Exemple PowerShell pour l’audit de l'utilisation du compte de partage de fichiers  
  Exécutez le script Windows PowerShell suivant pour répertorier tous les abonnements [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] configurés pour utiliser le **compte de partage de fichiers**. Mettez à jour `SERVERNAME` à l’aide d’une valeur appropriée pour votre serveur de rapports.  

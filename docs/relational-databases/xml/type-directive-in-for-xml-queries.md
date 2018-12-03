@@ -14,12 +14,12 @@ ms.assetid: a3df6c30-1f25-45dc-b5a9-bd0e41921293
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f5b77195b24c4b60b2ad11fc19e8557aec220d1e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 466786158509916d8f71f00eb9809d4753ee3dd9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658524"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52543836"
 ---
 # <a name="type-directive-in-for-xml-queries"></a>Directive TYPE dans les requêtes FOR XML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -89,7 +89,7 @@ FROM Person.Person
 FOR XML AUTO, TYPE).query('/Person.Person[1]');  
 ```  
   
- La requête `SELECT … FOR XML` interne retourne un résultat de type **xml** auquel la clause `SELECT` externe applique la méthode `query()` au type **xml**. Notez la directive `TYPE` spécifiée.  
+ La requête `SELECT ... FOR XML` interne retourne un résultat de type **xml** auquel la clause `SELECT` externe applique la méthode `query()` au type **xml**. Notez la directive `TYPE` spécifiée.  
   
  Voici le résultat obtenu :  
   
@@ -105,7 +105,7 @@ FOR XML AUTO, TYPE).query('/Person.Person[1]');
   
  `</Person.Person>`  
   
- Dans la requête suivante, la méthode `value()` du type de données **xml** permet de récupérer une valeur du résultat XML retourné par la requête `SELECT…FOR XML`. Pour plus d’informations, consultez [Méthode value&#40;&#41; &#40;type de données xml&#41;](../../t-sql/xml/value-method-xml-data-type.md).  
+ Dans la requête suivante, la méthode `value()` du type de données **xml** permet de récupérer une valeur du résultat XML retourné par la requête `SELECT...FOR XML`. Pour plus d’informations, consultez [Méthode value&#40;&#41; &#40;type de données xml&#41;](../../t-sql/xml/value-method-xml-data-type.md).  
   
 ```  
 USE AdventureWorks2012;  

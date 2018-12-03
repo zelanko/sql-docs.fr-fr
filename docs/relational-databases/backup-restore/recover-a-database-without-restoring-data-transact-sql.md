@@ -19,12 +19,12 @@ ms.assetid: 7e8fa620-315d-4e10-a718-23fa5171c09e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 64f79767c9ee4d77c1ed7fba2aea6c7908d7075d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 14f0c0a28ca4ecd6b8a58576b46add9b4009bcb7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670697"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502490"
 ---
 # <a name="recover-a-database-without-restoring-data-transact-sql"></a>Récupérer une base de données sans restaurer les données (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ RESTORE DATABASE AdventureWorks2012
   
  La syntaxe [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) pour une restauration de fichier avec récupération uniquement est la suivante :  
   
- RESTORE DATABASE *nom_base_de_données* { FILE **=***nom_fichier_logique* | FILEGROUP **=***nom_groupe_fichiers_logique* }[ **,**...* n* ] WITH RECOVERY  
+ RESTORE DATABASE *nom_base_de_données* { FILE **=**_nom_fichier_logique_ | FILEGROUP **=**_nom_groupe_fichiers_logique_ } [ **,**...*n* ] WITH RECOVERY  
   
  **Exemple**  
   
@@ -93,7 +93,7 @@ RESTORE DATABASE Sales FILEGROUP=SalesGroup2 WITH RECOVERY;
 ## <a name="see-also"></a> Voir aussi  
  [Restauration en ligne &#40;SQL Server&#41;](../../relational-databases/backup-restore/online-restore-sql-server.md)   
  [Restaurations fragmentaires &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)   
- [Restaurations de fichiers &#40;mode de récupération simple&#41;](../../relational-databases/backup-restore/file-restores-simple-recovery-model.md)   
+ [Restauration de fichiers &#40;mode de récupération simple&#41;](../../relational-databases/backup-restore/file-restores-simple-recovery-model.md)   
  [Restaurations de fichiers &#40;mode de récupération complète&#41;](../../relational-databases/backup-restore/file-restores-full-recovery-model.md)   
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  
   

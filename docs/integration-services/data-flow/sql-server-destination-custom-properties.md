@@ -11,12 +11,12 @@ ms.assetid: b736aa6d-c154-44a0-be08-f25733fca1d9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 58155e7529eb8bb94064fd4d7a9fd48df213f0f4
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 9667da7696e7fe2cd483504d4a44d14519d736f4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638866"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523209"
 ---
 # <a name="sql-server-destination-custom-properties"></a>Propriétés personnalisées de la destination SQL Server
   La destination [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a à la fois des propriétés personnalisées et des propriétés communes à tous les composants de flux de données.  

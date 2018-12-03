@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 026ca5fc-95da-46b6-b882-fa20f765b51d
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 88af4571f126098ecdda1eff8978112459d917e9
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 0ec072bae284fad63cea677830bad307d9961f4b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560087"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512241"
 ---
 # <a name="security-best-practices-with-contained-databases"></a>Meilleures pratiques de sécurité recommandées avec les bases de données autonomes
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ ALTER DATABASE DB1 SET TRUSTWORTHY ON;
 ### <a name="creating-a-user-that-duplicates-a-login"></a>Création d'un utilisateur qui duplique une connexion  
  Lorsqu'un utilisateur de base de données autonome est créé avec un mot de passe, si vous utilisez le même nom qu'une connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], et si la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'effectue en spécifiant la base de données autonome comme catalogue initial, la connexion à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sera impossible. La connexion sera évaluée en tant qu'utilisateur de base de données autonome avec principal de mot de passe sur la base de données autonome et non en tant qu'utilisateur basé sur la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cela risque de provoquer un déni de service intentionnel ou accidentel pour la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
--   Il est recommandé que les membres du rôle serveur fixe **sysadmin** se connectent toujours sans utiliser l'option de catalogue initial. Cela connecte la connexion à la base de données master et évite toute utilisation malveillante de la tentative de connexion de la part d'un propriétaire de base de données. L’administrateur peut ensuite passer à la base de données autonome en utilisant l’instruction **USE***\<base_de_données&gt;*. Vous pouvez également définir la base de données par défaut de la connexion sur la base de données autonome, qui complète la connexion à **master**, puis transférer la connexion vers la base de données autonome.  
+-   Il est recommandé que les membres du rôle serveur fixe **sysadmin** se connectent toujours sans utiliser l'option de catalogue initial. Cela connecte la connexion à la base de données master et évite toute utilisation malveillante de la tentative de connexion de la part d'un propriétaire de base de données. L’administrateur peut ensuite indiquer la base de données autonome, à l’aide de l’instruction **USE**_\<base_de_données&gt;_. Vous pouvez également définir la base de données par défaut de la connexion sur la base de données autonome, qui complète la connexion à **master**, puis transférer la connexion vers la base de données autonome.  
   
 -   Il est recommandé de ne pas créer d'utilisateurs de base de données autonome avec mot de passe en utilisant le même nom que les connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

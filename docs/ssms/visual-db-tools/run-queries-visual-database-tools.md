@@ -14,12 +14,12 @@ ms.assetid: 6c175c0e-55de-4bff-a53f-505c306abe25
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f9bffd6f227344d4f94b004af928f86f98d75eaa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d6e8d6912eef4722bb862946f93d00362db0bc0c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47715377"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526090"
 ---
 # <a name="run-queries-visual-database-tools"></a>Exécuter des requêtes (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +31,7 @@ Lorsque vous avez terminé le design de votre requête, vous pouvez l'exécuter.
   
 2.  Cliquez avec le bouton droit dans la fenêtre de la requête et sélectionnez **Exécuter SQL** dans le menu contextuel.  
   
-    - ou -  
+    -ou-  
   
     Appuyez sur les touches Ctrl+R.  
   

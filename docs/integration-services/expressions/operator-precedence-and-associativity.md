@@ -14,12 +14,12 @@ ms.assetid: 5094164f-dabc-45b5-b611-384feb2b3fe3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1724fcbf34817dbb87c2c57a68735c1502bcdce3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 86f8ef15874d9777aeb1b47481ba4f9933b13b4d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47651847"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502009"
 ---
 # <a name="operator-precedence-and-associativity"></a>Priorités et associativité des opérateurs
   Chaque opérateur de l'ensemble des opérateurs pris en charge par l'évaluateur d'expression se caractérise par une priorité dans la hiérarchie des priorités et par un sens d'évaluation. Le sens de l'évaluation d'un opérateur repose sur l'associativité des opérateurs. Les opérateurs dont le degré de priorité est le plus élevé sont évalués avant les opérateurs de priorité moindre. Si une expression complexe comporte plusieurs opérateurs, l'ordre de priorité détermine l'ordre d'exécution des opérations. Cet ordre peut affecter considérablement la valeur résultante. Certains opérateurs ont une priorité identique. Si une expression contient plusieurs opérateurs de priorité identique, ceux-ci sont évalués dans un certain sens, de la gauche vers la droite ou de la droite vers la gauche.  
@@ -29,10 +29,10 @@ ms.locfileid: "47651847"
 |Symbole d'opérateur|Type d’opération|Associativité|  
 |---------------------|-----------------------|-------------------|  
 |( )|Expression|De gauche à droite|  
-|–, !, ~|Unaire|De droite à gauche|  
+|-, !, ~|Unaire|De droite à gauche|  
 |Casts|Unaire|De droite à gauche|  
 |*, / ,%|Multiplicatif|De gauche à droite|  
-|+, –|Additive|De gauche à droite|  
+|+, -|Additive|De gauche à droite|  
 |\<, >, \<=, >=|Relationnel|De gauche à droite|  
 |==, !=|Égalité|De gauche à droite|  
 |&|ET au niveau du bit|De gauche à droite|  

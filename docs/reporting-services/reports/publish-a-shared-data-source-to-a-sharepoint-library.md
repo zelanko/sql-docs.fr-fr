@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 966ed425-3ce2-4e76-8237-3c1c977954ae
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ca366eeee5bbe0e291ccefa140237b9e977a9a90
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: a2b2d16b5815a665e718e16fb04f74ff408fefae
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51812812"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527590"
 ---
 # <a name="publish-a-shared-data-source-to-a-sharepoint-library"></a>publier une source de données partagée sur une bibliothèque SharePoint
   Pour publier une source de données partagée sur un serveur de rapports s'exécutant en mode intégré SharePoint, vous devez définir les propriétés du projet de rapport dans le Concepteur de rapports. Dans les propriétés du projet, toutes les références aux serveurs, aux rapports et aux sources de données partagées doivent être des URL complètes.  
@@ -28,7 +28,7 @@ ms.locfileid: "51812812"
   
 1.  Dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], ouvrez un projet Report Server nouveau ou existant.  
   
-2.  Dans le menu **Projet** , cliquez sur **Propriétés**. La boîte de dialogue *\<***Pages de propriétés de Projet** s’affiche.  
+2.  Dans le menu **Projet** , cliquez sur **Propriétés**. La boîte de dialogue **Pages de propriétés** de _\<projet_ s’affiche.  
   
 3.  Choisissez la **Configuration** que vous utilisez pour publier sur un site SharePoint.  
   

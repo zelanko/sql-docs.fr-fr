@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: be7ec052-28e2-4558-bc09-8479e5082926
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1c391d200e5e992572b27e8d99c92498e0ba297e
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: e04bdc6edaf53e73c7f26dd85a512dbda369ebb1
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031878"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711961"
 ---
 # <a name="subscriptions-and-delivery-reporting-services"></a>Abonnements et remise (Reporting Services)
   Un abonnement [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] est une configuration qui remet un rapport à une heure donnée ou en réponse à un événement, et dans un format de fichier que vous définissez. Par exemple, tous les mercredis, enregistrer le rapport MonthlySales.rdl au format de document Microsoft Word sur un partage de fichiers. Vous pouvez utiliser des abonnements pour planifier et automatiser la remise d'un rapport avec un ensemble de valeurs de paramètres de rapport spécifique.  
@@ -33,7 +33,7 @@ ms.locfileid: "50031878"
   
  ![exemple de flux d’abonnement ssrs](../../reporting-services/subscriptions/media/ssrs-subscription-example-flow.png "exemple de flux d’abonnement ssrs")  
   
- Les abonnements ne sont pas disponibles dans toutes les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prise en charge par les éditions de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+ Les abonnements ne sont pas disponibles dans toutes les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Éditions et fonctionnalités prises en charge de SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).  
   
  **Dans cette rubrique :**  
   

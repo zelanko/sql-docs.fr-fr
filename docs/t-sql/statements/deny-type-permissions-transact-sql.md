@@ -18,12 +18,12 @@ ms.assetid: 564e3500-c567-43dc-993b-9ab50e99cf3f
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: d390015877bc930ec70b2b858e077baa5ce920fd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b88fa209dba54482de1e113b7b7ee81528b43ab8
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650717"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519784"
 ---
 # <a name="deny-type-permissions-transact-sql"></a>DENY – refus d'autorisations de type (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ DENY permission  [ ,...n ] ON TYPE :: [ schema_name . ] type_name
  *permission*  
  Spécifie une autorisation qui peut être refusée sur un type. Pour obtenir la liste des autorisations, consultez la section Notes plus loin dans cette rubrique.  
   
- ON TYPE **::** [ *schema_name***.** ] *type_name*  
+ ON TYPE **::** [ _schema_name_**.** ] *type_name*  
  Spécifie le type sur lequel l'autorisation doit être refusée. Le qualificateur d’étendue (**::**) est obligatoire. Si *schema_name* n’est pas spécifié, le schéma par défaut est utilisé. Si *schema_name* est spécifié, le qualificateur d’étendue de schéma (**.**) est obligatoire.  
   
  TO \<database_principal>  

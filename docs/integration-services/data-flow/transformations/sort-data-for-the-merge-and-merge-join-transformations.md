@@ -14,12 +14,12 @@ ms.assetid: 22ce3f5d-8a88-4423-92c2-60a8f82cd4fd
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d71d22599d95cb55f1d7ca6f916987c6a462cda1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5826cdd783e7dd50a80d3e3a495dfffd16144f53
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47641637"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503240"
 ---
 # <a name="sort-data-for-the-merge-and-merge-join-transformations"></a>Trier des données pour les transformations de fusion et de jointure de fusion
   Dans [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], les transformations de fusion et de jointure de fusion nécessitent des données triées pour leurs entrées. Les données d'entrée doivent être triés physiquement et les options de tri doivent être définies sur les sorties et les colonnes de sortie dans la source ou dans la transformation amont. Si les options de tri indiquent que les données sont triées alors qu'elles ne le sont pas en réalité, les résultats de l'opération de fusion ou de jointure de fusion sont imprévisibles.  
@@ -39,7 +39,7 @@ ms.locfileid: "47641637"
   
      La transformation de tri utilise le classement Windows pour trier les valeurs de chaîne.  
   
-     —ou—  
+     -ou-  
   
 -   Utilisez l’opérateur Transact-SQL CAST pour commencer par effectuer un cast des valeurs **varchar** en valeurs **nvarchar** , puis utilisez la clause Transact-SQL ORDER BY pour trier les données.  
   
@@ -111,7 +111,7 @@ ms.locfileid: "47641637"
  [Transformation de fusion](../../../integration-services/data-flow/transformations/merge-transformation.md)   
  [Transformation de jointure de fusion](../../../integration-services/data-flow/transformations/merge-join-transformation.md)   
  [Transformations Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
- [Chemins Integration Services](../../../integration-services/data-flow/integration-services-paths.md)   
+ [Chemins d'accès d'Integration Services](../../../integration-services/data-flow/integration-services-paths.md)   
  [tâche de flux de données](../../../integration-services/control-flow/data-flow-task.md)  
   
   

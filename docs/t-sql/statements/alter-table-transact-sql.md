@@ -60,12 +60,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7676df1bf5d5a556b79cdcfe0797884438150190
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: cc42802f6263e7e7609ef6c11aa6dda4114cee97
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701117"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503653"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 
@@ -593,9 +593,9 @@ La modification de colonne en ligne permet aux statistiques créées par l'utili
   
 -   L'option `WAIT_AT_LOW_PRIORITY` ne peut pas être utilisée avec la modification de colonne en ligne.  
   
--   `ALTER COLUMN … ADD/DROP PERSISTED` n’est pas pris en charge pour modifier la colonne en ligne.  
+-   `ALTER COLUMN ... ADD/DROP PERSISTED` n’est pas pris en charge pour modifier la colonne en ligne.  
   
--   `ALTER COLUMN … ADD/DROP ROWGUIDCOL/NOT FOR REPLICATION` n’est pas affecté par la modification de colonne en ligne.  
+-   `ALTER COLUMN ... ADD/DROP ROWGUIDCOL/NOT FOR REPLICATION` n’est pas affecté par la modification de colonne en ligne.  
   
 -   La modification de colonne en ligne ne prend pas en charge la modification d'une table où le suivi des modifications est activé ou qui est un serveur de publication de la réplication de fusion.  
   
@@ -627,7 +627,7 @@ Utilisez WITH NOCHECK si vous ne voulez pas vérifier les nouvelles contraintes 
 
 ALTER INDEX *index_name* Spécifie que le nombre de compartiments pour *index_name* doit être modifié.
   
-La syntaxe ALTER TABLE … ADD/DROP/ALTER INDEX est uniquement prise en charge pour les tables optimisées en mémoire.    
+La syntaxe ALTER TABLE… ADD/DROP/ALTER INDEX est uniquement prise en charge pour les tables optimisées en mémoire.    
 
 > [!IMPORTANT]
 > En l’absence d’instruction ALTER TABLE, les instructions [CREATE INDEX](create-index-transact-sql.md), [DROP INDEX](drop-index-transact-sql.md), [ALTER INDEX](alter-index-transact-sql.md) et [PAD_INDEX](alter-table-index-option-transact-sql.md) ne sont pas prises en charge pour les index sur les tables à mémoire optimisée.
@@ -660,7 +660,7 @@ Il n'est pas possible de supprimer une contrainte PRIMARY KEY s'il existe un ind
 INDEX *nom_index*    
 Spécifie que *nom_index* est supprimé de la table.
   
-La syntaxe ALTER TABLE … ADD/DROP/ALTER INDEX est uniquement prise en charge pour les tables optimisées en mémoire.    
+La syntaxe ALTER TABLE… ADD/DROP/ALTER INDEX est uniquement prise en charge pour les tables optimisées en mémoire.    
 
 > [!IMPORTANT]
 > En l’absence d’instruction ALTER TABLE, les instructions [CREATE INDEX](create-index-transact-sql.md), [DROP INDEX](drop-index-transact-sql.md), [ALTER INDEX](alter-index-transact-sql.md) et [PAD_INDEX](alter-table-index-option-transact-sql.md) ne sont pas prises en charge pour les index sur les tables à mémoire optimisée.
@@ -1008,7 +1008,7 @@ Supprime, de manière conditionnelle, la colonne ou contrainte uniquement si ell
  Vous pouvez modifier la longueur, l'échelle ou la précision d'une colonne en spécifiant une nouvelle taille pour le type de données de la colonne dans la clause ALTER COLUMN. Si des données existent dans la colonne, la nouvelle taille ne peut pas être inférieure à la taille maximale des données. De même, la colonne ne peut pas être définie dans un index, sauf si la colonne est un type de données **varchar**, **nvarchar** ou **varbinary** et que l’index n’est pas le résultat d’une contrainte PRIMARY KEY. Voir l'exemple P.  
   
 ## <a name="locks-and-alter-table"></a>Verrous et ALTER TABLE  
- Les modifications spécifiées dans l'instruction ALTER TABLE sont implémentées immédiatement. Si elles nécessitent une modification des lignes de la table, ALTER TABLE met les lignes à jour. ALTER TABLE acquiert un verrou (SCH-M) de modification du schéma sur la table pour garantir qu'aucune autre connexion ne référence même les métadonnées de la table pendant la modification, à l'exception des opérations d'index en ligne qui nécessitent un verrouillage de type SCH-M à la fin. Dans une opération `ALTER TABLE…SWITCH`, le verrou est acquis à la fois sur la table source et sur la table cible. Les modifications effectuées sur la table sont consignées dans un journal et peuvent être récupérées entièrement. Les modifications qui affectent toutes les lignes d’une table de dimension importante, telles que la suppression d’une colonne ou, dans certaines éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], l’ajout d’une colonne NOT NULL avec une valeur par défaut, peuvent demander beaucoup de temps, tant pour s’exécuter que pour générer un grand nombre d’enregistrements dans le journal des transactions. Ces instructions ALTER TABLE doivent être exécutées avec le même soin que toute instruction INSERT, UPDATE ou DELETE qui affectent un grand nombre de lignes.  
+ Les modifications spécifiées dans l'instruction ALTER TABLE sont implémentées immédiatement. Si elles nécessitent une modification des lignes de la table, ALTER TABLE met les lignes à jour. ALTER TABLE acquiert un verrou (SCH-M) de modification du schéma sur la table pour garantir qu'aucune autre connexion ne référence même les métadonnées de la table pendant la modification, à l'exception des opérations d'index en ligne qui nécessitent un verrouillage de type SCH-M à la fin. Dans une opération `ALTER TABLE...SWITCH`, le verrou est acquis à la fois sur la table source et sur la table cible. Les modifications effectuées sur la table sont consignées dans un journal et peuvent être récupérées entièrement. Les modifications qui affectent toutes les lignes d’une table de dimension importante, telles que la suppression d’une colonne ou, dans certaines éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], l’ajout d’une colonne NOT NULL avec une valeur par défaut, peuvent demander beaucoup de temps, tant pour s’exécuter que pour générer un grand nombre d’enregistrements dans le journal des transactions. Ces instructions ALTER TABLE doivent être exécutées avec le même soin que toute instruction INSERT, UPDATE ou DELETE qui affectent un grand nombre de lignes.  
   
 ### <a name="adding-not-null-columns-as-an-online-operation"></a>Ajout de colonnes NOT NULL en tant qu'opération en ligne  
  À partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Enterprise Edition, l’ajout d’une colonne NOT NULL avec une valeur par défaut est une opération en ligne quand la valeur par défaut est une *constante d’exécution*. Cela signifie que l'opération est terminée presque instantanément indépendamment du nombre de lignes dans la table. Cela est dû au fait que les lignes existantes dans la table ne sont pas mises à jour pendant l'opération ; à la place, la valeur par défaut est stockée uniquement dans les métadonnées de la table et la valeur se trouve autant que nécessaire dans les requêtes qui accèdent à ces lignes. Ce comportement est automatique ; aucune syntaxe supplémentaire n'est nécessaire pour implémenter l'opération en ligne au-delà de la syntaxe COLUMN ADD. Une constante d'exécution est une expression qui produit la même valeur au moment de l'exécution pour chaque ligne dans la table quel que soit son déterminisme. Par exemple, l'expression constante « mes données temporaires », ou la fonction système GETUTCDATETIME () sont des constantes d'exécution. Par opposition, les fonctions `NEWID()` ou `NEWSEQUENTIALID()` ne sont pas des constantes d’exécution car une valeur unique est produite pour chaque ligne de la table. L'ajout d'une colonne NOT NULL avec une valeur par défaut qui n'est pas une constante d'exécution est toujours effectuée hors connexion et un verrou (SCH-M) exclusif est acquis pour la durée de l'opération.  

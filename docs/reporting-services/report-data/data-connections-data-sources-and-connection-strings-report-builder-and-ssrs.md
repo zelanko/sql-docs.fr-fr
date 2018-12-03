@@ -7,12 +7,12 @@ ms.technology: report-data
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 76d770e5a6e01707eaebef67a1db147719395f64
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: e9294579f338034ae7082f8fe05960af4e3a4fc4
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814012"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52394027"
 ---
 # <a name="data-connections-data-sources-and-connection-strings-report-builder-and-ssrs"></a>Connexions de données, sources de données et chaînes de connexion (Générateur de rapports et SSRS)
 
@@ -107,7 +107,7 @@ ms.locfileid: "51814012"
 |Azure SQL Database|`Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True`|Définissez **Microsoft Azure SQL Database** comme type de source de données. Pour plus d’informations, consultez [Type de connexion SQL Azure &#40;SSRS&#41;](../../reporting-services/report-data/sql-azure-connection-type-ssrs.md).|  
 |SQL Server Parallel Data Warehouse|`HOST=<IP address>;database= AdventureWorks; port=<port>`|Définissez **Microsoft SQL Server Parallel Data Warehouse**comme type de source de données. Pour plus d’informations, consultez [Type de connexion SQL Server Parallel Data Warehouse &#40;SSRS&#41;](../../reporting-services/report-data/sql-server-parallel-data-warehouse-connection-type-ssrs.md).|  
 |Base de données Analysis Services sur le serveur local|`data source=localhost;initial catalog=Adventure Works DW`|Définissez **Microsoft SQL Server Analysis Services**comme type de source de données. Pour plus d’informations, consultez [Type de connexion Analysis Services pour MDX &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md) ou [Type de connexion Analysis Services pour DMX &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md).|  
-|Base de données de modèles tabulaires Analysis Services avec une perspective Ventes|`Data source=<servername>;initial catalog= Adventure Works DW;cube='Sales’`|Définissez **Microsoft SQL Server Analysis Services**comme type de source de données. Spécifiez le nom de la perspective dans le paramètre cube=. Pour plus d’informations, consultez [Perspectives &#40;SSAS Tabulaire&#41;](../../analysis-services/tabular-models/perspectives-ssas-tabular.md).|  
+|Base de données de modèles tabulaires Analysis Services avec une perspective Ventes|`Data source=<servername>;initial catalog= Adventure Works DW;cube='Sales'`|Définissez **Microsoft SQL Server Analysis Services**comme type de source de données. Spécifiez le nom de la perspective dans le paramètre cube=. Pour plus d’informations, consultez [Perspectives &#40;SSAS Tabulaire&#41;](../../analysis-services/tabular-models/perspectives-ssas-tabular.md).|  
 |Source de données de modèle de rapport sur un serveur de rapports configuré en mode natif|`Server=https://myreportservername/reportserver; datasource=/models/Adventure Works`|Spécifiez l'URL du serveur de rapports ou de la bibliothèque de documents, ainsi que le chemin d'accès au modèle publié dans l'espace de noms du dossier du serveur de rapports ou du dossier de la bibliothèque de documents. Pour plus d’informations, consultez [Connexion à un modèle de rapport &#40;SSRS&#41;](../../reporting-services/report-data/report-model-connection-ssrs.md).|  
 |Source de données de modèle de rapport sur un serveur de rapports configuré en mode intégré SharePoint|`Server=https://server; datasource=https://server/site/documents/models/Adventure Works.smdl`|Spécifiez l'URL du serveur de rapports ou de la bibliothèque de documents, ainsi que le chemin d'accès au modèle publié dans l'espace de noms du dossier du serveur de rapports ou du dossier de la bibliothèque de documents.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Serveur SQL Server 2000 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|`provider=MSOLAP.2;data source=<remote server name>;initial catalog=FoodMart 2000`|Définissez **OLE DB Provider for OLAP Services 8.0**comme type de source de données.<br /><br /> Vous pouvez obtenir une connexion plus rapide aux sources de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2000 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en affectant à la propriété **ConnectTo** la valeur **8.0**. Pour définir cette propriété, utilisez l'onglet **Propriétés avancées** de la boîte de dialogue **Propriétés de connexion** .|  

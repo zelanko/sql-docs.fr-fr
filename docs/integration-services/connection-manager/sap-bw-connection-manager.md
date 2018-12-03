@@ -13,12 +13,12 @@ f1_keywords:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d891d0e4168274d796ca96227802a76c50bf0942
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 38482743b988419f2aa16d874bed5fdc7a60286d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641986"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528427"
 ---
 # <a name="sap-bw-connection-manager"></a>Gestionnaire de connexions SAP BW
   Le gestionnaire de connexions SAP BW est le composant de gestionnaire de connexions de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 pour SAP BW. Ainsi, le gestionnaire de connexions SAP BW fournit la connectivité à un système SAP Netweaver BW version 7 dont ont besoin les composants source et de destination de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 pour SAP BW. (La source et la destination SAP BW qui font partie du package [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 pour SAP BW sont les seuls composants [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] qui utilisent le gestionnaire de connexions SAP BW.)  
@@ -69,7 +69,7 @@ ms.locfileid: "51641986"
   
     -   Double-cliquez sur le gestionnaire de connexions SAP BW.  
   
-         —ou—  
+         -ou-  
   
     -   Cliquez avec le bouton droit sur le gestionnaire de connexions SAP BW, puis sélectionnez **Modifier**.  
   

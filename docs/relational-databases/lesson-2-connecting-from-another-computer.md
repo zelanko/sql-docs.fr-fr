@@ -11,12 +11,12 @@ ms.assetid: fd4ddeb8-0cb6-441b-9704-03575c07020f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 615aa894b7ceb07d471c281eb6be24db9c0e3a43
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 675379c6c182ad72ecdeefe09423fe981cf67b41
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657569"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520523"
 ---
 # <a name="lesson-2-connecting-from-another-computer"></a>Leçon 2 : Connexion depuis un autre ordinateur
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -124,10 +124,10 @@ Lorsque le service [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Browse
   
 2.  Dans la boîte de dialogue **Se connecter au serveur** , confirmez **Moteur de base de données** dans la zone **Type de serveur** .  
   
-3.  Dans la zone **Nom du serveur** , tapez **tcp:** pour spécifier le protocole, suivi du nom d'ordinateur, d'une virgule et du numéro de port. Pour vous connecter à l’instance par défaut, l’utilisation du port 1433 est implicite et n’a pas besoin d’être précisée. Ainsi, tapez **tcp:***<nom_ordinateur>*. Dans notre exemple d’instance nommée, tapez **tcp:***<nom_ordinateur>***,49172**.  
+3.  Dans la zone **Nom du serveur** , tapez **tcp:** pour spécifier le protocole, suivi du nom d'ordinateur, d'une virgule et du numéro de port. Pour vous connecter à l’instance par défaut, l’utilisation du port 1433 est implicite et n’a pas besoin d’être précisée. Ainsi, tapez **tcp:**_<nom_ordinateur>_. Dans notre exemple d’instance nommée, tapez **tcp:**_<nom_ordinateur>_**,49172**.  
   
     > [!NOTE]  
-    > Si vous omettez **tcp:** dans la zone **Nom du serveur** , le client essaie tous les protocoles activés, dans l’ordre spécifié dans sa configuration.  
+    > Si vous omettez  **tcp:** dans la zone **Nom du serveur**, le client essaie tous les protocoles activés, dans l’ordre spécifié dans sa configuration.  
   
 4.  Dans la zone **Authentification** , confirmez **Authentification Windows**, puis cliquez sur **Se connecter**.  
   

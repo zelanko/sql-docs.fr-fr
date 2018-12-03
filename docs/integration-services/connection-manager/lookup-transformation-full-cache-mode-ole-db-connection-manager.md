@@ -13,12 +13,12 @@ ms.assetid: c4150e1b-bdff-4f7a-af4c-3401c34def83
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a5bf791d21d9a3997a7284a6fdda7f4e8eab9c66
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 43edd7fbdaf744ae9c5ea401e28ccef930d91f2d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47616032"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506981"
 ---
 # <a name="lookup-transformation-full-cache-mode---ole-db-connection-manager"></a>Transformation de recherche en mode Cache complet - Gestionnaire de connexions OLE DB
   Vous pouvez configurer la transformation de recherche afin qu'elle utilise le mode Cache complet et un gestionnaire de connexions OLE DB. Dans le mode Cache complet, le dataset de référence est chargé dans le cache avant l’exécution de la transformation de recherche.  
@@ -52,11 +52,11 @@ ms.locfileid: "47616032"
   
     -   Cliquez sur **Utiliser une table ou une vue**, puis sélectionnez une table ou une vue, ou cliquez sur **Nouveau** pour créer une table ou une vue.  
   
-         —ou—  
+         -ou-  
   
     -   Cliquez sur **Utiliser les résultats d’une requête SQL**, puis générez une requête dans la fenêtre **Commande SQL** , ou cliquez sur **Générer la requête** pour générer une requête à l’aide des outils graphiques du **Générateur de requêtes** .  
   
-         —ou—  
+         -ou-  
   
     -   Vous pouvez aussi cliquer sur **Parcourir** pour importer une instruction SQL à partir d’un fichier.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "47616032"
     >  La transformation de recherche mappe automatiquement les colonnes ayant le même nom et le même type de données.  
   
     > [!NOTE]  
-    >  Les types de données des colonnes doivent correspondre pour que les colonnes puissent être mappées. Pour plus d'informations, consultez [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
+    >  Les types de données des colonnes doivent correspondre pour que les colonnes puissent être mappées. Pour plus d’informations, consultez [Types de données Integration Services](../../integration-services/data-flow/integration-services-data-types.md).  
   
 11. Incluez des colonnes de recherche dans la sortie en exécutant les tâches suivantes :  
   
@@ -83,7 +83,7 @@ ms.locfileid: "47616032"
 13. Cliquez sur **OK** pour enregistrer les modifications apportées à la transformation de recherche, puis exécutez le package.  
   
 ## <a name="see-also"></a> Voir aussi  
- [Implémenter une transformation de recherche en mode Cache complet à l’aide du gestionnaire de connexions du cache](../../integration-services/connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md)   
+ [Implémenter une transformation de recherche en mode Cache complet à l'aide du gestionnaire de connexions du cache](../../integration-services/connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md)   
  [Implémenter une recherche en mode Aucun cache ou Cache partiel](../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)   
  [Transformations Integration Services](../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 2d8e7232-42f4-41b6-98eb-c856f6c85d8c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7f6c17915293ec2ad654c6d8574d94623d6a16ed
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 49fd82957893f0394081da0de5303ee689857ce5
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47615537"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52407898"
 ---
 # <a name="configurationsetting-method---setextendedprotectionsettings"></a>Méthode ConfigurationSetting - SetExtendedProtectionSettings
   La méthode SetExtendedProtectionSettings sert à définir les propriétés RSWindowsExtendedProtectionLevel et RSWindowsExtendedProtectionScenario dans le fichier de configuration [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (RSReportServer.config).  
@@ -44,14 +44,14 @@ public void SetExtendedProtectionSettings(
   
  La liste suivante affiche les valeurs valides :  
   
- `”Off | Allow | Require”`  
+ `"Off | Allow | Require"`  
   
  *ExtendedProtectionScenario*  
  Définit RSWindowsExtendedProtectionScenario dans le fichier RSReportserver.config. La valeur est obligatoire et ne respecte pas la casse.  
   
  La liste suivante affiche les valeurs valides :  
   
- `”Any” | “Proxy” | “Direct”`  
+ `"Any" | "Proxy" | "Direct"`  
   
 ## <a name="remarks"></a>Notes   
  Les propriétés RSWindowsExtendedProtectionLevel et RSWindowsExtendedProtectionScenario s'appliquent lorsque AuthenticationTypes dans le fichier RSReportServer.config inclut RSWindowNTLM, RSWindowsNegotiate ou RSWindowsKerberos. La définition de ces propriétés change la manière dont les utilisateurs et le logiciel client sont authentifiés au niveau du serveur de rapports. Nous vous recommandons de lire la documentation relative à la protection étendue avant d’affecter la valeur **Allow** ou **Require**à la propriété ExtendedProtectionLevel.  
@@ -64,7 +64,7 @@ public void SetExtendedProtectionSettings(
 ## <a name="see-also"></a> Voir aussi  
  [Propriété RSWindowsExtendedProtectionScenario &#40;WMI MSReportServer_ConfigurationSetting&#41;](../../reporting-services/wmi-provider-library-reference/rswindowsextendedprotectionscenario-property.md)   
  [Propriété RSWindowsExtendedProtectionLevel &#40;WMI MSReportServer_ConfigurationSetting&#41;](../../reporting-services/wmi-provider-library-reference/rswindowsextendedprotectionlevel-property.md)   
- [Protection étendue de l’authentification avec Reporting Services](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md)   
+ [Protection étendue de l'authentification avec Reporting Services](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md)   
  [Fichier de configuration RSReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)  
   
   

@@ -26,12 +26,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: a9d56cab3d149490b176aade356708c15767cf9e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: db0fbc2125ca748f0426eea95c4c1a059e5b67f5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838497"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509962"
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -253,7 +253,7 @@ Spécifie un caractère qui sera utilisé comme caractère de guillemet dans le 
 >    Msg 491, Niveau 16, État 1, Ligne 20    
 >    Un nom de corrélation doit être spécifié pour l'ensemble de lignes en bloc dans la clause FROM.    
   
--   Une instruction `SELECT...FROM OPENROWSET(BULK...)` interroge directement les données d’un fichier, sans les importer dans une table. Les instructions `SELECT…FROM OPENROWSET(BULK...)` peuvent également énumérer les alias de colonnes en bloc en utilisant un fichier de format pour spécifier les noms de colonnes ainsi que les types de données.  
+-   Une instruction `SELECT...FROM OPENROWSET(BULK...)` interroge directement les données d’un fichier, sans les importer dans une table. Les instructions `SELECT...FROM OPENROWSET(BULK...)` peuvent également énumérer les alias de colonnes en bloc en utilisant un fichier de format pour spécifier les noms de colonnes ainsi que les types de données.  
   
 -   L’utilisation de `OPENROWSET(BULK...)` en tant que table source dans une instruction `INSERT` ou `MERGE` importe en bloc les données d’un fichier de données dans une table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [Importer des données en bloc à l’aide de BULK INSERT ou OPENROWSET&#40;BULK...&#41; &#40;SQL Server&#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).  
   

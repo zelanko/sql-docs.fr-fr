@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 3cf9a240-24cc-46d4-bec6-976f82d8f830
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 68cdbca9db8c1495569c8b3688215616fe2ba33f
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 740a342a11d7e02a3922fcf846855c4dc4d6e023
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814162"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52405896"
 ---
 # <a name="disable-or-pause-report-and-subscription-processing"></a>Désactiver ou suspendre le traitement des rapports et des abonnements
   Il existe plusieurs approches pour désactiver ou suspendre le traitement des rapports et des abonnements [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Les approches présentées dans cette rubrique couvrent la désactivation d’un abonnement jusqu’à la suspension de la connexion à la source de données. Certaines approches ne sont pas possibles avec les deux modes serveur [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Les tableaux suivants récapitulent les méthodes et les modes serveur [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pris en charge :  
@@ -64,7 +64,7 @@ ms.locfileid: "51814162"
 ```  
 #disable specific subscription  
 $rs2010 = New-WebServiceProxy -Uri "https://SERVERNAME/ReportServer/ReportService2010.asmx" -Namespace SSRS.ReportingService2010 -UseDefaultCredential;  
-$subscriptionID = "subscription guid”;  
+$subscriptionID = "subscription guid";  
 $rs2010.DisableSubscription($subscriptionID);  
   
 ```  

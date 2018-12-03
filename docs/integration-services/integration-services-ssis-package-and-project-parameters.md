@@ -9,17 +9,17 @@ ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.ssis.designer.parameter.f1
-- sql13.dts.designer.paramterwindow.f1
+- sql13.dts.designer.parameterwindow.f1
 ms.assetid: 9ed9ca8e-8b1e-48d9-907d-285516d6562b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4404b2af9114da376e007bf91533f9e083dbff10
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 27af358d3d6fb5feb1bd5d10fb194beb52df011e
+ms.sourcegitcommit: 1f10e9df1c523571a8ccaf3e3cb36a26ea59a232
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639876"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "51858699"
 ---
 # <a name="integration-services-ssis-package-and-project-parameters"></a>Paramètres de projet et de package Integration Services (SSIS)
   Les paramètres[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS) vous permettent d'affecter des valeurs aux propriétés dans des packages au moment de l'exécution du package. Vous pouvez créer des *paramètres de projet* au niveau du projet et des *paramètres de package* au niveau du package. Les paramètres du projet sont utilisés pour fournir une entrée externe que le projet reçoit à un ou plusieurs packages du projet. L'utilisation de paramètres de package vous permet de modifier l'exécution du package sans avoir à modifier et à redéployer le package.  

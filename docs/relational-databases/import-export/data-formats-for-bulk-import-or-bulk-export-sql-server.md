@@ -15,12 +15,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 84f44eb8ff2f35942660b8fd773962f2fda8cc9c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1b87bd6357b51803ff9535483b9991099b903e1b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753567"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527522"
 ---
 # <a name="data-formats-for-bulk-import-or-bulk-export-sql-server"></a>Formats de données pour l'importation en bloc ou l'exportation en bloc (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,12 +38,12 @@ ms.locfileid: "47753567"
   
 |Opération|Natif|Natif Unicode|Caractère|Caractère Unicode|  
 |---------------|------------|--------------------|---------------|-----------------------|  
-|Transferts en bloc de données entre plusieurs instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l'aide d'un fichier de données qui ne contient aucun caractère étendu ou codé sur deux octets (DBCS). Sauf si un fichier de format est utilisé, ces tables doivent être définies de façon identique.|Oui*|—|—|—|  
-|Pour les colonnes **sql_variant** , il est préférable d’utiliser le format de données natif, car il conserve les métadonnées de chaque valeur **sql_variant** , à la différence des formats caractère ou Unicode.|Oui|—|—|—|  
-|Transferts en bloc de données entre plusieurs instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l'aide d'un fichier de données qui contient des caractères étendus ou DBCS.|—|Oui|—|—|  
-|Importation en bloc de données à partir d'un fichier texte généré par un autre programme.|—|—|Oui|—|  
-|Exportation en bloc de données vers un fichier texte à utiliser dans un autre programme.|—|—|Oui|—|  
-|Transferts en bloc de données entre plusieurs instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l'aide d'un fichier de données qui contient des données Unicode et qui ne comporte aucun caractère étendu ou DBCS.|—|—|—|Oui|  
+|Transferts en bloc de données entre plusieurs instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l'aide d'un fichier de données qui ne contient aucun caractère étendu ou codé sur deux octets (DBCS). Sauf si un fichier de format est utilisé, ces tables doivent être définies de façon identique.|Oui*|-|-|-|  
+|Pour les colonnes **sql_variant** , il est préférable d’utiliser le format de données natif, car il conserve les métadonnées de chaque valeur **sql_variant** , à la différence des formats caractère ou Unicode.|Oui|-|-|-|  
+|Transferts en bloc de données entre plusieurs instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l'aide d'un fichier de données qui contient des caractères étendus ou DBCS.|-|Oui|-|-|  
+|Importation en bloc de données à partir d'un fichier texte généré par un autre programme.|-|-|Oui|-|  
+|Exportation en bloc de données vers un fichier texte à utiliser dans un autre programme.|-|-|Oui|-|  
+|Transferts en bloc de données entre plusieurs instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l'aide d'un fichier de données qui contient des données Unicode et qui ne comporte aucun caractère étendu ou DBCS.|-|-|-|Oui|  
   
  \* Méthode la plus rapide pour l’exportation en bloc de données à partir de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lors de l’utilisation de **bcp**.  
   

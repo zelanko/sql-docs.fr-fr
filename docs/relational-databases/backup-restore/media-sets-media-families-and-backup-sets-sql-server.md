@@ -24,12 +24,12 @@ ms.assetid: 2b8f19a2-ee9d-4120-b194-fbcd2076a489
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8135737f7abe250bfcd29b080b6875efad6286db
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a8023d72b28ec3ff9e9bafe2423b26620a5046ac
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676752"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534110"
 ---
 # <a name="media-sets-media-families-and-backup-sets-sql-server"></a>Jeux de supports, familles de supports et jeux de sauvegarde (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -140,7 +140,7 @@ WITH
   
  ![Deuxième jeu de sauvegarde réparti sur 3 bandes de supports de sauvegarde](../../relational-databases/backup-restore/media/bnr-mediaset-appendedto.gif "Deuxième jeu de sauvegarde réparti sur 3 bandes de supports de sauvegarde")  
   
- Au cours de la restauration de sauvegardes, vous pouvez utiliser l'option FILE pour spécifier les sauvegardes à utiliser. L’exemple suivant illustre l’utilisation des clauses FILE **=***numéro_fichier_jeu_sauvegardes* lors de la restauration d’une sauvegarde complète de la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] suivie d’une sauvegarde différentielle sur le même jeu de supports. Le jeu de supports fait appel à trois bandes de sauvegardes qui figurent sur les lecteurs de bande `\\.\tape0`, `tape1`, et `tape2`.  
+ Au cours de la restauration de sauvegardes, vous pouvez utiliser l'option FILE pour spécifier les sauvegardes à utiliser. L’exemple suivant illustre l’utilisation des clauses FILE **=**_backup_set_file_number_ lors de la restauration d’une sauvegarde complète de la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] suivie d’une sauvegarde différentielle sur le même jeu de supports. Le jeu de supports fait appel à trois bandes de sauvegardes qui figurent sur les lecteurs de bande `\\.\tape0`, `tape1`, et `tape2`.  
   
 ```  
 RESTORE DATABASE AdventureWorks2012 FROM TAPE = '\\.\tape0', TAPE = '\\.\tape1', TAPE = '\\.\tape2'  

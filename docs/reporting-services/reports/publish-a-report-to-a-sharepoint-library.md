@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3f6dfc28-50d8-4231-bd25-871b5f77cce6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b482f472d682a8cc1b78e106e1d9d1c289d9fbb4
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 7043001ee9942ec1e99e329209b56a670274b2ac
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814282"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527562"
 ---
 # <a name="publish-a-report-to-a-sharepoint-library"></a>publier un rapport dans une bibliothèque SharePoint
   Pour publier un rapport sur un site SharePoint configuré pour l'intégration SharePoint, vous devez définir les propriétés du projet dans le Concepteur de rapports. Dans les propriétés du projet, toutes les références aux serveurs, aux rapports et aux sources de données partagées doivent être des URL complètes. Dans la définition de rapport, toutes les références aux sous-rapports, aux rapports d'extraction et aux ressources, telles que des images Web, doivent être des URL complètes.  
@@ -28,7 +28,7 @@ ms.locfileid: "51814282"
   
 1.  Dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], ouvrez un projet Report Server nouveau ou existant.  
   
-2.  Dans le menu **Projet** , cliquez sur **Propriétés**. La boîte de dialogue *\<***Pages de propriétés de Projet** s’affiche.  
+2.  Dans le menu **Projet** , cliquez sur **Propriétés**. La boîte de dialogue **Pages de propriétés** de _\<projet_ s’affiche.  
   
 3.  Dans la liste **Configuration** , sélectionnez le nom d’une configuration de build de solution à utiliser pour générer et publier votre rapport. La configuration actuelle est répertoriée comme **Active**(*\<configuration>*).  
   

@@ -26,12 +26,12 @@ ms.assetid: 35a8e100-3ff2-4844-a5da-dd088c43cba4
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: dee6642a83eb56445d9c951e695d960e0358e9df
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1e70357c54b30d657eb773913abf19d7fbe78385
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47777407"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533034"
 ---
 # <a name="backup-devices-sql-server"></a>Unités de sauvegarde (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "47777407"
   
  BACKUP DATABASE *nom_base_de_données*  
   
- TO DISK **=** { **'***physical_backup_device_name***'** | **@***physical_backup_device_name_var* }  
+ TO DISK **=** { **’**_nom_unité_sauvegarde_physique_**’** | **@**_nom_unité_sauvegarde_physique_var_ }  
   
  Exemple :  
   
@@ -81,7 +81,7 @@ GO
   
  RESTORE { DATABASE | LOG } *nom_base_de_données*  
   
- FROM DISK **=** { **'***physical_backup_device_name***'** | **@***physical_backup_device_name_var* }  
+ FROM DISK **=** { **’**_nom_unité_sauvegarde_physique_**’** | **@**_nom_unité_sauvegarde_physique_var_ }  
   
  Par exemple,  
   
@@ -98,7 +98,7 @@ RESTORE DATABASE AdventureWorks2012
   
 ```sql  
 BACKUP DATABASE AdventureWorks2012   
-   TO DISK = ’AdventureWorks2012.bak’;  
+   TO DISK = 'AdventureWorks2012.bak';  
 GO  
 ```  
   
@@ -117,7 +117,7 @@ GO
     > **IMPORTANT !** La sauvegarde de données sur un réseau peut être sujette à des erreurs du réseau ; c'est pourquoi nous vous conseillons de vérifier l'opération de sauvegarde après l'avoir menée à terme si vous utilisez un disque distant. Pour plus d’informations, consultez [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
 ## <a name="specify-a-universal-naming-convention-unc-name"></a>Définir un nom UNC (Universal Naming Convention)  
- Pour préciser un partage réseau dans une opération de sauvegarde ou de restauration, utilisez le nom UNC (Universal Naming Convention) complet du fichier de l’unité de sauvegarde. Un nom UNC se présente sous la forme **\\\\***nom_système***\\***nom_partage***\\***chemin***\\***nom_fichier*.  
+ Pour préciser un partage réseau dans une opération de sauvegarde ou de restauration, utilisez le nom UNC (Universal Naming Convention) complet du fichier de l’unité de sauvegarde. Un nom UNC se présente sous la forme **\\\\**_nom_système_**\\**_nom_partage_**\\**_chemin_**\\**_nom_fichier_.  
   
  Exemple :  
   
@@ -147,7 +147,7 @@ GO
   
  BACKUP { DATABASE | LOG } *nom_base_de_données*  
   
- TO TAPE **=** { **'***physical_backup_device_name***'** | **@***physical_backup_device_name_var* }  
+ TO TAPE **=** { **’**_nom_unité_sauvegarde_physique_**’** | **@**_nom_unité_sauvegarde_physique_var_ }  
   
  Exemple :  
   
@@ -161,7 +161,7 @@ GO
   
  RESTORE { DATABASE | LOG } *nom_base_de_données*  
   
- FROM TAPE **=** { **'***physical_backup_device_name***'** | **@***physical_backup_device_name_var* }  
+ FROM TAPE **=** { **’**_nom_unité_sauvegarde_physique_**’** | **@**_nom_unité_sauvegarde_physique_ }  
   
 ###  <a name="TapeOptions"></a> Options BACKUP et RESTORE propres aux bandes (Transact-SQL)  
  Pour faciliter la gestion des bandes, l'instruction BACKUP fournit les options de bande suivantes :  
@@ -179,7 +179,7 @@ GO
 ###  <a name="OpenTapes"></a> Gestion de bandes ouvertes  
  Pour afficher une liste des périphériques à bandes ouverts et l’état des demandes de montage, interrogez la vue de gestion dynamique [sys.dm_io_backup_tapes](../../relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql.md) . Cette vue affiche toutes les bandes ouvertes. Elle inclut les bandes en cours d'utilisation provisoirement inactives et en attente de la prochaine opération BACKUP ou RESTORE.  
   
- Si une bande a été laissée ouverte par erreur, le moyen le plus rapide de la libérer consiste à utiliser la commande suivante : RESTORE REWINDONLY FROM TAPE **=***nom_unité_sauvegarde*. Pour plus d’informations, consultez [RESTORE REWINDONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md).  
+ Si une bande a été laissée ouverte par erreur, le moyen le plus rapide de la libérer consiste à utiliser la commande suivante : RESTORE REWINDONLY FROM TAPE **=**_nom_unité_sauvegarde_. Pour plus d’informations, consultez [RESTORE REWINDONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md).  
   
   
 ## <a name="using-the-windows-azure-blob-storage-service"></a>Utilisation du service de stockage d’objets blob Microsoft Azure  
@@ -190,7 +190,7 @@ GO
   
  La définition d'une unité de sauvegarde logique implique d'affecter un nom logique à une unité physique. Par exemple, vous pouvez définir une unité logique, AdventureWorksBackups, pour qu’elle pointe vers le fichier Z:\SQLServerBackups\AdventureWorks2012.bak ou le lecteur de bande \\\\.\tape0. Les commandes de sauvegarde et de restauration peuvent ensuite spécifier AdventureWorksBackups comme unité de sauvegarde au lieu de DISK = ’Z:\SQLServerBackups\AdventureWorks2012.bak’ ou TAPE = ’\\\\.\tape0’.  
   
- Le nom d'unité logique doit être unique parmi toutes les unités de sauvegarde logiques résidant sur l'instance de serveur. Pour afficher les noms d’unités logiques existantes, interrogez l’affichage catalogue [sys.backup_devices](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md) . Cet affichage affiche le nom de chaque unité de sauvegarde logique et décrit le type et le nom de fichier physique ou le chemin d'accès de l'unité de sauvegarde physique correspondante.  
+ Le nom d'unité logique doit être unique parmi toutes les unités de sauvegarde logiques résidant sur l'instance de serveur. Pour afficher les noms d'unités logiques existantes, interrogez l'affichage catalogue [sys.backup_devices](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md) . Cet affichage affiche le nom de chaque unité de sauvegarde logique et décrit le type et le nom de fichier physique ou le chemin d'accès de l'unité de sauvegarde physique correspondante.  
   
  Une fois définie une unité de sauvegarde logique, dans une commande BACKUP ou RESTORE, spécifiez l'unité de sauvegarde logique à la place du nom physique de l'unité. Par exemple, l'instruction suivante sauvegarde la base de données `AdventureWorks2012` dans l'unité de sauvegarde logique `AdventureWorksBackups` .  
   
@@ -223,7 +223,7 @@ GO
  Une autre approche d'archivage courante consiste à écrire des sauvegardes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur un disque de sauvegarde local, à les archiver sur des bandes, puis à stocker les bandes hors site.  
 
   
-##  <a name="RelatedTasks"></a> Tâches associées  
+##  <a name="RelatedTasks"></a> Related tasks  
  **Pour spécifier une unité de disque (SQL Server Management Studio)**  
   
 -   [Spécifier un disque ou une bande comme destination de sauvegarde &#40;SQL Server&#41;](../../relational-databases/backup-restore/specify-a-disk-or-tape-as-a-backup-destination-sql-server.md)  

@@ -26,12 +26,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ac987ef327b021665ae797aa3f14aad6446fcc4d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b899bc08ebdff746792cd8070ca966ca6f6edb84
+ms.sourcegitcommit: f62f70298651d6223fa5d215b6a7a0d2ffecbd0d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47807717"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "51947643"
 ---
 # <a name="grant-database-principal-permissions-transact-sql"></a>GRANT – octroi d'autorisations de principal de base de données (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -97,7 +97,7 @@ GRANT permission [ ,...n ]
  Spécifie un rôle d'application.  
   
  *Database_user_mapped_to_Windows_User*  
- Spécifie un utilisateur de base de données mappé à un utilisateur Windows.  
+ Spécifie un utilisateur de base de données mappé sur un utilisateur Windows.  
   
  *Database_user_mapped_to_Windows_Group*  
   
@@ -169,7 +169,7 @@ GRANT permission [ ,...n ]
 ## <a name="examples"></a>Exemples  
   
 ### <a name="a-granting-control-permission-on-a-user-to-another-user"></a>A. Octroi de l'autorisation CONTROL sur un utilisateur à un autre utilisateur  
- Dans l'exemple ci-dessous, l'autorisation `CONTROL` sur l'utilisateur `AdventureWorks2012` `Wanida` est accordée à l'utilisateur `RolandX`.  
+ Dans l'exemple ci-dessous, l'autorisation `CONTROL` sur l'utilisateur `AdventureWorks2012``Wanida` est accordée à l'utilisateur `RolandX`.  
   
 ```  
 GRANT CONTROL ON USER::Wanida TO RolandX;  
@@ -177,7 +177,7 @@ GO
 ```  
   
 ### <a name="b-granting-view-definition-permission-on-a-role-to-a-user-with-grant-option"></a>B. Octroi de l'autorisation VIEW DEFINITION sur un rôle à un utilisateur avec l'option GRANT OPTION  
- Dans l'exemple ci-dessous, l'autorisation `VIEW DEFINITION` sur le rôle `AdventureWorks2012` `SammamishParking` est accordée avec l'option `GRANT OPTION` à l'utilisateur de base de données `JinghaoLiu`.  
+ Dans l'exemple ci-dessous, l'autorisation `VIEW DEFINITION` sur le rôle `AdventureWorks2012``SammamishParking` est accordée avec l'option `GRANT OPTION` à l'utilisateur de base de données `JinghaoLiu`.  
   
 ```  
 GRANT VIEW DEFINITION ON ROLE::SammamishParking   
@@ -186,7 +186,7 @@ GO
 ```  
   
 ### <a name="c-granting-impersonate-permission-on-a-user-to-an-application-role"></a>C. Octroi de l'autorisation IMPERSONATE sur un utilisateur à un rôle d'application  
- Dans l'exemple ci-dessous, l'autorisation `IMPERSONATE` sur l'utilisateur `HamithaL` est accordée au rôle d'application `AdventureWorks2012` `AccountsPayable17`.  
+ Dans l'exemple ci-dessous, l'autorisation `IMPERSONATE` sur l'utilisateur `HamithaL` est accordée au rôle d'application `AdventureWorks2012``AccountsPayable17`.  
   
 **S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   

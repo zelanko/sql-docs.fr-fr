@@ -11,12 +11,12 @@ ms.assetid: e8db82f0-50ed-4531-9209-940006ed34cb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 963ea851b052d3a460aad1bbfd6e59051ecc6f7d
-ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
+ms.openlocfilehash: b9414215e82a6828152e1ab84265a5b70b6a2171
+ms.sourcegitcommit: ba7fb4b9b4f0dbfe77a7c6906a1fde574e5a8e1e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51571209"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52302682"
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>Leçon 1 : Connexion au moteur de base de données
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ Cette leçon contient les tâches suivantes :
 - [Autorisation de connexions supplémentaires](#additional) 
 
 ## <a name="tools">Outils de mise en route</a> 
- -Le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] est fourni avec un éventail d'outils. Cette rubrique décrit les premiers outils dont vous aurez besoin et vous aide à choisir l'outil adapté à votre travail. Vous pouvez accéder à tous les outils à partir du menu **Démarrer** . Certains outils, comme [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], ne sont pas installés par défaut. Vous devez sélectionner les outils en tant qu'éléments inhérents aux composants clients lors de l'installation. Pour obtenir une description complète des outils décrits ci-dessous, recherchez-les dans la documentation en ligne de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] contient uniquement un sous-ensemble des outils.  
+- Le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] est fourni avec un éventail d'outils. Cette rubrique décrit les premiers outils dont vous aurez besoin et vous aide à choisir l'outil adapté à votre travail. Vous pouvez accéder à tous les outils à partir du menu **Démarrer** . Certains outils, comme [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], ne sont pas installés par défaut. Vous devez sélectionner les outils en tant qu'éléments inhérents aux composants clients lors de l'installation. Pour obtenir une description complète des outils décrits ci-dessous, recherchez-les dans la documentation en ligne de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] contient uniquement un sous-ensemble des outils.  
 
 ### <a name="basic-tools"></a>Outils de base
 - [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) est l’outil principal employé pour administrer le [!INCLUDE[ssDE](../includes/ssde-md.md)] et écrire le code [!INCLUDE[tsql](../includes/tsql-md.md)] . Il est hébergé dans le shell [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . SSMS peut être téléchargé gratuitement depuis le [Centre de téléchargement Microsoft](https://msdn.microsoft.com/library/mt238290.aspx). La version la plus récente peut être utilisée avec les versions antérieures du [!INCLUDE[ssDE_md](../includes/ssde-md.md)].  
@@ -45,10 +45,10 @@ Les exemples de bases de données et les exemples ne sont pas fournis avec [!INC
 
 ##### <a name="to-start-sql-server-configuration-manager"></a>Pour démarrer le Gestionnaire de configuration SQL Server  
 - Dans les versions actuelles de Windows, dans la page **Démarrer** , tapez **Gestionnaire de configuration**, puis cliquez sur **Gestionnaire de configuration SQL Server *version* Gestionnaire de configuration**.   
- --   Si vous utilisez une version ancienne de Windows, dans le menu **Démarrer** , pointez successivement sur **Tous les programmes**, sur [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)], sur **Outils de configuration**, puis cliquez sur **Gestionnaire de configuration SQL Server**.  
- -  
+- Si vous utilisez une version ancienne de Windows, dans le menu **Démarrer** , pointez successivement sur **Tous les programmes**, sur [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)], sur **Outils de configuration**, puis cliquez sur **Gestionnaire de configuration SQL Server**.  
+
 ## <a name="connect"></a>Connexion à Management Studio  
- -La connexion au [!INCLUDE[ssDE](../includes/ssde-md.md)] à partir d’outils s’exécutant sur le même ordinateur est un jeu d’enfant si vous connaissez le nom de l’instance et si vous vous connectez en tant que membre du groupe Administrateurs local sur l’ordinateur. Vous devez effectuer les procédures suivantes sur le même ordinateur qui héberge [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+- La connexion au [!INCLUDE[ssDE](../includes/ssde-md.md)] à partir d’outils s’exécutant sur le même ordinateur est un jeu d’enfant si vous connaissez le nom de l’instance et si vous vous connectez en tant que membre du groupe Administrateurs local sur l’ordinateur. Vous devez effectuer les procédures suivantes sur le même ordinateur qui héberge [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
 
 > [!NOTE]  
 > Cette rubrique décrit la connexion à un serveur SQL Server local. Pour vous connecter à Azure SQL Database, consultez [Se connecter à SQL Database avec SQL Server Management Studio et exécuter un exemple de requête T-SQL](https://azure.microsoft.com/documentation/articles/sql-database-connect-query-ssms/).  

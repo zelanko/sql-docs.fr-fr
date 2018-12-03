@@ -17,12 +17,12 @@ ms.assetid: abf0fa24-f199-4273-9a1a-e8787ac9bee1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6a18484c470c3485fca750e1f6986702a9c37ff7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 975423cab6fb7b00baf279a9a4186336120e08c2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612454"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537927"
 ---
 # <a name="remote-servers"></a>Serveurs distants
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "47612454"
 >  Lorsque c'est possible, utilisez l'authentification Windows.  
   
 ### <a name="remote-server-security-example"></a>Exemple de sécurité de serveur distant  
- Prenons les installations [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] suivantes : **serverSend** et **serverReceive**. **serverReceive** est configuré pour un mappage entre une connexion d’accès entrant du serveur **serverSend**, appelée **Sales_Mary**, et une connexion authentifiée [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] du serveur **serverReceive**, appelée **Alice**. Une autre connexion d’accès entrant de **serverSend**, appelée **Joe** est mappée à une connexion authentifiée [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] du serveur **serverReceive**** appelée **Joe**.  
+ Prenons les installations [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] suivantes : **serverSend** et **serverReceive**. **serverReceive** est configuré pour un mappage entre une connexion d’accès entrant du serveur **serverSend**, appelée **Sales_Mary**, et une connexion authentifiée [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] du serveur **serverReceive**, appelée **Alice**. Une autre connexion d’accès entrant de **serverSend**appelée **Joe**est mappée sur une connexion authentifiée [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] du serveur **serverReceive**_,_ appelée **Joe**.  
   
  L’exemple de code Transact-SQL suivant illustre la configuration du serveur `serverSend` en vue de l’exécution de RPC sur le serveur `serverReceive`.  
   

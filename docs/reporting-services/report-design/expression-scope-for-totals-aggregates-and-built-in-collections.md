@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: a8d24287-8557-4b03-bea7-ca087f449b62
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8682e9016830309f7f8a0ce43d8dd72f6192e35f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 92156defdf08b3828fde898c7043a941bbd7326b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47738307"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52394012"
 ---
 # <a name="expression-scope-for-totals-aggregates-and-built-in-collections"></a>Étendue des expressions pour les totaux, les agrégats et les collections intégrées
   En écrivant des expressions, vous constaterez que le terme *étendue* est utilisé dans plusieurs contextes. L'étendue peut spécifier les données à utiliser pour l'évaluation d'une expression, le jeu de zones de texte dans une page rendue, le jeu des éléments de rapport qui peuvent être affichés ou masqués selon un élément de bascule. Vous verrez le terme *étendue* dans les rubriques relatives à une évaluation d'expression, une syntaxe de fonction d'agrégation, une visibilité conditionnelle et également dans les messages d'erreur liés à ces domaines. Utilisez les descriptions suivantes pour mieux différencier les significations du terme *étendue* qui s'appliquent :  
@@ -68,7 +68,7 @@ ms.locfileid: "47738307"
      L'expression suivante génère des années d'intervalle entre SellStartDate et LastReceiptDate. Ces champs sont compris dans deux datasets différents, DataSet1 et DataSet2. La [fonction First &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/report-builder-functions-first-function.md), qui est une fonction d’agrégation, renvoie la première valeur de SellStartDate dans DataSet1 et la première valeur de LastReceiptDate dans DataSet2.  
   
     ```  
-    =DATEDIFF(“yyyy”, First(Fields!SellStartDate.Value, "DataSet1"), First(Fields!LastReceiptDate.Value, "DataSet2"))  
+    =DATEDIFF("yyyy", First(Fields!SellStartDate.Value, "DataSet1"), First(Fields!LastReceiptDate.Value, "DataSet2"))  
     ```  
   
 -   **Étendue de domaine** Également appelée étendue de synchronisation. Type d'étendue de données qui s'applique à l'évaluation d'expression pour des régions de données imbriquées. L'étendue de domaine est utilisée pour spécifier des agrégats sur toutes les instances d'un groupe afin que les instances imbriquées puissent être facilement alignées et comparées. Par exemple, vous pouvez aligner la plage et la hauteur pour les graphiques sparkline incorporés dans une table afin que les valeurs s'alignent.  
@@ -159,7 +159,7 @@ ms.locfileid: "47738307"
   
 ## <a name="see-also"></a> Voir aussi  
  [Exemples d’expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
- [Exemples d’expressions de groupe &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)   
+ [Exemples d’expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)   
  [Création de groupes de hiérarchies récursives &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)   
  [Tables, matrices et listes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [Mise en forme du texte et des espaces réservés &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)  

@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 851e163a-ad2a-491e-bc1e-4df92327092f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 403946b29ebda9e8023b8f156daac9fbb9202df4
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 2638e15f21d21563d639b2597ad30b6597f9ecd1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813352"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509520"
 ---
 # <a name="configure-a-url--ssrs-configuration-manager"></a>Configurer une URL (Gestionnaire de configuration de SSRS)
   Avant de pouvoir utiliser le [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] ou le service web Report Server, vous devez configurer au moins une URL pour chaque application. La configuration des URL est obligatoire si vous avez installé [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode « fichiers uniquement » (autrement dit, en sélectionnant l’option **Installer mais ne pas configurer le serveur** dans la page Options d’installation du serveur de rapports dans l’Assistant Installation). Si vous avez installé [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dans la configuration par défaut, les URL sont déjà configurées pour chaque application.  
@@ -76,7 +76,7 @@ ms.locfileid: "51813352"
   
     -   À partir d'une invite de commandes, tapez la commande suivante pour retourner la liste des ports TCP utilisés :  
   
-         `netstat –anp tcp`  
+         `netstat -anp tcp`  
   
     -   Lisez l’article du support Microsoft [Informations relatives aux affectations de ports TCP/IP](https://support.microsoft.com/kb/174904)pour comprendre les attributions de port TCP et les différences entre les ports bien identifiés (0 à 1023), les ports inscrits (1024 à 49151) et les ports dynamiques ou privés (49152 à 65535).  
   

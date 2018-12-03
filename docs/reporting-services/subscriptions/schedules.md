@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ecccd16b-eba9-4e95-b55d-f15c621e003f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0e91e3572d962ec9c819aae7f501b7b274f5c452
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 10bdfa7e45324e845019e6b670321e56839a79bd
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029568"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711470"
 ---
 # <a name="schedules"></a>Planifications
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fournit des **planifications partagées** et des **planifications spécifiques aux rapports** pour vous aider à contrôler le traitement et la distribution des rapports. La différence entre ces deux types de planifications réside dans la façon dont elles sont définies, stockées et gérées. La construction interne des deux types de planifications est la même. Toutes les planifications spécifient un type de périodicité : mensuelle, hebdomadaire ou quotidienne. Dans le type de périodicité, vous définissez les intervalles et la plage pour configurer la fréquence à laquelle un événement se produit. Qu'il s'agisse de créer une planification partagée ou une planification spécifique aux rapports, le type de périodicité et la façon dont elle est spécifiée restent inchangés.
@@ -54,7 +54,7 @@ ms.locfileid: "50029568"
  Pour plus d'informations sur la création et la gestion des planifications, consultez [Create, Modify, and Delete Schedules](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md).  
   
 > [!NOTE]  
->  Les opérations de planification ne sont pas disponibles dans toutes les édition de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prises en charge par les éditions de SQL Server 2016](https://msdn.microsoft.com/library/22ad82d7-860c-43d3-b77a-77fb9eec5454).  
+>  Les opérations de planification ne sont pas disponibles dans toutes les édition de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Éditions et fonctionnalités prises en charge de SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).  
   
 ##  <a name="bkmk_compare"></a> Comparaison entre les planifications partagées et les planifications spécifiques aux rapports  
  Les deux types de planification produisent le même résultat.  

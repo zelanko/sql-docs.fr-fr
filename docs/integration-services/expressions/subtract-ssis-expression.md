@@ -14,12 +14,12 @@ ms.assetid: b48da086-37dd-460a-8a4b-912f52c9b158
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c5e94c9896c0ab6089b1672de52f11c07684e4f9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e544a284cca78a48835af719fe881a995ee87580
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47621657"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506122"
 ---
 # <a name="--subtract-ssis-expression"></a>- (Soustraction) (expression SSIS)
   Soustrait la deuxième expression numérique de la première.  
@@ -28,13 +28,13 @@ ms.locfileid: "47621657"
   
 ```  
   
-numeric_expression1 – numeric_expression2  
+numeric_expression1 - numeric_expression2  
   
 ```  
   
 ## <a name="arguments"></a>Arguments  
  *expression_numérique1, expression_numérique2*  
- Toute expression valide d'un type de données numérique. Pour plus d'informations, consultez [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
+ Toute expression valide d'un type de données numérique. Pour plus d’informations, consultez [Types de données Integration Services](../../integration-services/data-flow/integration-services-data-types.md).  
   
 ## <a name="result-types"></a>Types des résultats  
  Déterminés par les types de données des deux arguments. Pour plus d’informations, consultez [Types de données Integration Services dans les expressions](../../integration-services/expressions/integration-services-data-types-in-expressions.md).  

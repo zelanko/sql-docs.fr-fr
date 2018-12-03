@@ -22,12 +22,12 @@ ms.assetid: a0227cd8-6944-4547-87e8-7b2507e26442
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 110c9dea73d84417d54dc99ea946998aea85cfef
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 3b165b4579497f28ad1b7dc2cb930daf5162941a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640226"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503298"
 ---
 # <a name="sql-server-destination"></a>Destination SQL Server
   La destination SQL Server se connecte à une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] locale et charge en masse des données dans des tables et des vues [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Vous ne pouvez pas utiliser la destination SQL Server dans des packages ayant accès à une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur un serveur distant. Les packages doivent plutôt utiliser la destination OLE DB. Pour plus d’informations, consultez [OLE DB Destination](../../integration-services/data-flow/ole-db-destination.md).  
@@ -189,7 +189,7 @@ ms.locfileid: "51640226"
 >  Effacez la zone de texte dans **l’Éditeur de destination SQL** pour indiquer que vous ne voulez pas assigner de valeur à cette propriété. Utilisez -1 dans la fenêtre **Propriétés** , **l’Éditeur avancé**et le modèle objet.  
   
  **Nombre maximum d'erreurs**  
- Spécifie le nombre d'erreurs au-delà duquel l'insertion en bloc s'arrête. La valeur par défaut de cette propriété est **–1**, ce qui signifie qu’aucune valeur ne lui a été assignée.  
+ Spécifie le nombre d'erreurs au-delà duquel l'insertion en bloc s'arrête. La valeur par défaut de cette propriété est **-1**, ce qui signifie qu’aucune valeur ne lui a été assignée.  
   
 > [!NOTE]  
 >  Effacez la zone de texte dans **l’Éditeur de destination SQL** pour indiquer que vous ne voulez pas assigner de valeur à cette propriété. Utilisez -1 dans la fenêtre **Propriétés** , **l’Éditeur avancé**et le modèle objet.  

@@ -22,12 +22,12 @@ ms.assetid: f7b3de5b-198d-448d-8c71-1cdd9239676c
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 479aabd0ca4edfc7529d0a9a1d47b075a7e1cab2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 70f932e1372fb3cb185167b778b9f280dbbee816
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694777"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540301"
 ---
 # <a name="recover-to-a-log-sequence-number-sql-server"></a>Récupérer un numéro séquentiel dans le journal (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,11 +65,11 @@ ms.locfileid: "47694777"
 ## <a name="transact-sql-syntax-for-restoring-to-an-lsn"></a>Syntaxe Transact-SQL relative à la restauration d'après un LSN  
  Grâce à l'instruction [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) , vous pouvez vous arrêter à un LSN ou immédiatement avant ce point de la façon suivante :  
   
--   Utilisez la clause WITH STOPATMARK **='** lsn:*<numéro_lsn>***'**, où lsn:*\<numéro_lsn>* correspond à une chaîne spécifiant que l’enregistrement du journal qui contient le LSN spécifié est le point de récupération.  
+-   Utilisez la clause WITH STOPATMARK **='** lsn:_<numéro_lsn>_**'**, où lsn:*\<numéro_lsn* correspond à une chaîne précisant que l’enregistrement du journal qui contient le LSN spécifié équivaut au point de récupération.  
   
      STOPATMARK permet la restauration par progression jusqu'au NSE et inclut l'enregistrement correspondant issu du journal, dans la restauration.  
   
--   Utilisez la clause WITH STOPBEFOREMARK **='** lsn:*<numéro_lsn>***'**, où lsn:*\<numéro_lsn>* correspond à une chaîne spécifiant que l’entrée se trouvant dans le journal immédiatement avant celle qui contient le LSN précisé est le point de récupération.  
+-   Utilisez la clause WITH STOPBEFOREMARK **='** lsn:_<numéro_lsn>_**'**, où lsn:*\<numéro_lsn>* correspond à une chaîne précisant que l’entrée se trouvant dans le journal immédiatement avant celle qui contient le NSE précisé équivaut au point de récupération.  
   
      STOPBEFOREMARK permet la restauration par progression jusqu'au NSE mais exclut l'enregistrement correspondant, se trouvant dans le journal, de la restauration par progression.  
   

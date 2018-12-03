@@ -11,12 +11,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4bb8822d29e2dd3270d5947e62bab6fe498f86c2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5fd38e30039ee174ed2558a88c1ddc1e3785238d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629507"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514546"
 ---
 # <a name="columnstore-indexes---what39s-new"></a>Index columnstore - Nouveautés
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -78,7 +78,7 @@ ms.locfileid: "47629507"
   
 -   Les index columnstore prennent en charge l’isolement de capture instantanée Read Committed (RCSI) et l’isolement de capture instantanée (SI). Cela permet d’effectuer des requêtes analytiques cohérentes d’un point de vue transactionnel sans verrou.  
   
--   L’index columnstore prend en charge la défragmentation de l’index en éliminant les lignes supprimées sans nécessité de reconstruire explicitement l’index. L’instruction `ALTER INDEX … REORGANIZE` élimine les lignes supprimées de l’index columnstore selon une stratégie définie en interne, comme une opération en ligne  
+-   L’index columnstore prend en charge la défragmentation de l’index en éliminant les lignes supprimées sans nécessité de reconstruire explicitement l’index. L’instruction `ALTER INDEX ... REORGANIZE` élimine les lignes supprimées de l’index columnstore selon une stratégie définie en interne, comme une opération en ligne  
   
 -   Les index columnstore sont accessibles sur un réplica secondaire lisible AlwaysOn. Vous pouvez améliorer les performances d’analytique opérationnelle en déchargeant les requêtes analytiques sur un réplica secondaire AlwaysOn.  
   

@@ -26,12 +26,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 583f00394043b93eb81d9717d771ea087ce2f21c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2cd03ba4b9b0363ef1d8ebe9c3ff0721fc08e3f9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713998"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542269"
 ---
 # <a name="alter-user-transact-sql"></a>ALTER USER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -85,7 +85,7 @@ ALTER USER userName
   
 -- SQL Database syntax when connected to a federation member  
 ALTER USER userName  
-     WITH <set_item> [ ,… n ]   
+     WITH <set_item> [ ,... n ]   
 [;]  
   
 <set_item> ::=   
@@ -109,12 +109,12 @@ ALTER USER userName
  *userName*  
  Spécifie le nom qui identifie l'utilisateur dans cette base de données.  
   
- LOGIN **=***loginName*  
+ LOGIN **=**_loginName_  
  Remappe un utilisateur à une autre connexion en modifiant l'identificateur de sécurité (SID) de l'utilisateur de manière à ce qu'il corresponde au SID de la connexion.  
   
  Si l'instruction ALTER USER est la seule instruction d'un lot SQL, Microsoft Azure SQL Database prend en charge la clause WITH LOGIN. Si l'instruction ALTER USER n'est pas la seule instruction d'un lot SQL ou est exécutée en SQL dynamique, la clause WITH LOGIN n'est pas prise en charge.  
   
- NAME **=***newUserName*  
+ NAME **=**_newUserName_  
  Spécifie le nouveau nom de cet utilisateur. *newUserName* ne doit pas déjà exister dans la base de données active.  
   
  DEFAULT_SCHEMA **=** { *schemaName* | NULL }  
@@ -128,15 +128,15 @@ ALTER USER userName
 > [!NOTE]  
 >  Cette option est uniquement disponible pour les utilisateurs à relation contenant-contenu. Pour plus d’informations, consultez [Bases de données autonomes](../../relational-databases/databases/contained-databases.md) et [sp_migrate_user_to_contained &amp;#40;Transact-SQL&amp;#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md).  
   
- OLD_PASSWORD **=***'oldpassword'*  
- **S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ OLD_PASSWORD **=**_'oldpassword'_  
+ **S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Mot de passe de l’utilisateur actuel qui sera remplacé par '*password*'. Les mots de passe respectent la casse. *OLD_PASSWORD* est obligatoire pour changer un mot de passe, sauf si vous disposez de l’autorisation **ALTER ANY USER**. La spécification obligatoire du paramètre *OLD_PASSWORD* empêche les utilisateurs disposant de l’autorisation **IMPERSONATION** de changer le mot de passe.  
   
 > [!NOTE]  
 >  Cette option est uniquement disponible pour les utilisateurs à relation contenant-contenu.  
   
- DEFAULT_LANGUAGE **=***{ NONE | \<lcid> | \<language name> | \<language alias> }*  
+ DEFAULT_LANGUAGE **=**_{ NONE | \<lcid> | \<language name> | \<language alias> }_  
  **S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Spécifie une langue par défaut à affecter à l'utilisateur. Si cette option a la valeur NONE, la langue par défaut est la langue par défaut actuellement définie pour la base de données. Si la langue par défaut de la base de données est modifiée ultérieurement, la langue par défaut de l'utilisateur reste inchangée. *DEFAULT_LANGUAGE* peut être l’ID local (lcid), le nom de la langue ou l’alias de langue.  
@@ -228,7 +228,7 @@ GO
 ALTER USER Philip   
 WITH  NAME = Philipe   
     , DEFAULT_SCHEMA = Development   
-    , PASSWORD = 'W1r77TT98%ab@#’ OLD_PASSWORD = 'New Devel0per'   
+    , PASSWORD = 'W1r77TT98%ab@#' OLD_PASSWORD = 'New Devel0per'   
     , DEFAULT_LANGUAGE  = French ;  
 GO  
 ```  
