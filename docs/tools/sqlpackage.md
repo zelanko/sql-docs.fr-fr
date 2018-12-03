@@ -9,12 +9,12 @@ ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: pensivebrian
 ms.author: broneill
 manager: craigg
-ms.openlocfilehash: 2d16e9c805f9979a53a9e8bc8c2e265e06ccbab9
-ms.sourcegitcommit: 7e828cd92749899f4e1e45ef858ceb9a88ba4b6a
+ms.openlocfilehash: 8d06e0f985a9e50d1eee0a7e6c96f440d8ef7dcd
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51629622"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528572"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -273,7 +273,7 @@ Une action d’exportation de SqlPackage.exe exporte une base de données en dir
   
 ## <a name="import-parameters-and-properties"></a>Paramètres et propriétés d’importation
 
-Une action SqlPackage.exe importation importe les données de schéma et de table à partir d’un package BACPAC - fichier .bacpac – dans une base de données nouvel ou vide dans SQL Server ou une base de données SQL Azure. Au moment de l’opération d’importation dans une base de données existante, la base de données cible ne peut pas contenir d’objets de schéma définis par l’utilisateur.  
+Une action SqlPackage.exe importation importe les données de schéma et de table à partir d’un package BACPAC - fichier .bacpac - dans une base de données nouvel ou vide dans SQL Server ou de la base de données SQL Azure. Au moment de l’opération d’importation dans une base de données existante, la base de données cible ne peut pas contenir d’objets de schéma définis par l’utilisateur.  
   
 ### <a name="help-for-command-actions"></a>Aide relative aux actions de commande
 

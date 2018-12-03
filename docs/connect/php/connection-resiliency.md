@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: david-puglielli
 ms.author: v-dapugl
 manager: v-hakaka
-ms.openlocfilehash: 34d4bc2342397f5809ef16ef59ed342d6c86d421
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: 6afbf85f5e141736ac4a78dc381205228bd5ddaa
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460374"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527099"
 ---
 # <a name="idle-connection-resiliency"></a>Résilience des connexions inactives
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -32,7 +32,7 @@ Si le produit de **ConnectRetryCount** multipliée par **ConnectRetryInterval** 
 
 #### <a name="remarks"></a>Notes 
 
-Résilience des connexions s’applique lorsque la connexion est inactive. Les défaillances qui se produisent pendant l’exécution d’une transaction, par exemple, ne déclenche pas les tentatives de reconnexion : ils échoue comme prévu. Les cas suivants, appelés des États de session non récupérable, ne déclenchent pas les tentatives de reconnexion :
+Résilience des connexions s’applique lorsque la connexion est inactive. Les défaillances qui se produisent pendant l’exécution d’une transaction, par exemple, ne déclenche pas les tentatives de reconnexion - elles échoue comme prévu. Les cas suivants, appelés des États de session non récupérable, ne déclenchent pas les tentatives de reconnexion :
 
 * tables temporaires ;
 * Curseurs globaux et locaux

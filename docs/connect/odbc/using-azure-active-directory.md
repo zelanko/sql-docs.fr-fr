@@ -11,12 +11,12 @@ ms.assetid: 52205f03-ff29-4254-bfa8-07cced155c86
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 949ae2e19279db895ca9bca1441f06c2b2d8948f
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 7273baec814905d86e431c5a6a8f13313b9743e4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604099"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52536651"
 ---
 # <a name="using-azure-active-directory-with-the-odbc-driver"></a>Utilisation d’Azure Active Directory avec ODBC Driver
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -88,13 +88,13 @@ La boîte de dialogue invite affichée par SQLDriverConnect lorsqu’elle demand
 Ces options correspondent aux cinq mêmes disponibles dans la configuration du DSN UI ci-dessus.
 
 ### <a name="example-connection-strings"></a>Exemples de chaîne de connexion
-1. Authentification SQL Server – syntaxe héritée. Certificat de serveur n’est pas validé, et le chiffrement est utilisé uniquement si le serveur applique il. Le nom d’utilisateur/mot de passe est transmis dans la chaîne de connexion.
+1. Authentification SQL Server - syntaxe héritée. Certificat de serveur n’est pas validé, et le chiffrement est utilisé uniquement si le serveur applique il. Le nom d’utilisateur/mot de passe est transmis dans la chaîne de connexion.
 `server=Server;database=Database;UID=UserName;PWD=Password;`
-2. Authentification SQL – nouvelle syntaxe. Le client demande le chiffrement (la valeur par défaut `Encrypt` est `true`) et le certificat de serveur obtient validé, quel que soit le paramètre de chiffrement (à moins que `TrustServerCertificate` est défini sur `true`). Le nom d’utilisateur/mot de passe est transmis dans la chaîne de connexion.
+2. Authentification SQL - nouvelle syntaxe. Le client demande le chiffrement (la valeur par défaut `Encrypt` est `true`) et le certificat de serveur obtient validé, quel que soit le paramètre de chiffrement (à moins que `TrustServerCertificate` est défini sur `true`). Le nom d’utilisateur/mot de passe est transmis dans la chaîne de connexion.
  `server=Server;database=Database;UID=UserName;PWD=Password;Authentication=SqlPassword;`
-3. Authentification Windows (Kerberos sur Linux et macOS) intégrée à l’aide de SSPI (pour SQL Server ou SQL IaaS) – syntaxe actuelle. Certificat de serveur n’est pas validé, sauf si le chiffrement est utilisé. 
+3. Authentification Windows (Kerberos sur Linux et macOS) intégrée à l’aide de SSPI (pour SQL Server ou SQL IaaS) - syntaxe actuelle. Certificat de serveur n’est pas validé, sauf si le chiffrement est utilisé. 
 `server=Server;database=Database;Trusted_Connection=yes;`
-4. (_Uniquement les pilotes Windows_.) L’authentification Windows intégrée à l’aide de SSPI (si la base de données cible est dans SQL Server ou SQL IaaS) – nouvelle syntaxe. Le client demande le chiffrement (la valeur par défaut `Encrypt` est `true`) et le certificat de serveur obtient validé, quel que soit le paramètre de chiffrement (à moins que `TrustServerCertificate` est défini sur `true`). 
+4. (_Uniquement les pilotes Windows_.) L’authentification Windows intégrée à l’aide de SSPI (si la base de données cible est dans SQL Server ou SQL IaaS) - nouvelle syntaxe. Le client demande le chiffrement (la valeur par défaut `Encrypt` est `true`) et le certificat de serveur obtient validé, quel que soit le paramètre de chiffrement (à moins que `TrustServerCertificate` est défini sur `true`). 
 `server=Server;database=Database;Authentication=ActiveDirectoryIntegrated;`
 5. Nom d’utilisateur/mot de passe l’authentification AAD (si la base de données cible est dans la base de données SQL Azure). Certificat de serveur est validé, quel que soit le paramètre de chiffrement (à moins que `TrustServerCertificate` est défini sur `true`). Le nom d’utilisateur/mot de passe est transmis dans la chaîne de connexion. 
 `server=Server;database=Database;UID=UserName;PWD=Password;Authentication=ActiveDirectoryPassword;`

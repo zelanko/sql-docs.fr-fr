@@ -12,12 +12,12 @@ ms.assetid: 58ef7016-b105-42c2-90a0-364f411849a4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a966bec7dc015bf29d8a8ae2e2a217f3b7bf7402
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 900fdcafe18c2a885ea7191ce8619e46e8f0f963
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51656698"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531825"
 ---
 # <a name="sql-server-distributed-replay"></a>SQL Server Distributed Replay
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "51656698"
   
  Le tableau suivant explique à quel moment utiliser chacun des outils.  
   
-|Outil|Cas d'utilisation|  
+|Outil|Utilisation quand...|  
 |----------|---------------|  
 |[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]|Vous souhaitez utiliser le mécanisme de relecture classique sur un ordinateur unique. En particulier, vous avez besoin de fonctions de débogage ligne par ligne, telles que les commandes **Étape**, **Exécuter jusqu’au curseur**et **Basculer le point d’arrêt** .<br /><br /> Vous souhaitez relire une trace [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
 |Distributed Replay|Vous souhaitez évaluer la compatibilité des applications. Par exemple, vous souhaitez tester des scénarios de mise à niveau de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et du système d'exploitation, des mises à niveau du matériel ou des paramétrages d'index.<br /><br /> La simultanéité des accès de la trace capturée est si élevée qu'un seul client de relecture ne suffit pas à le simuler.|  
@@ -73,7 +73,7 @@ ms.locfileid: "51656698"
   
 ## <a name="see-also"></a> Voir aussi  
  [Forum de SQL Server Distributed Replay](https://social.technet.microsoft.com/Forums/sl/sqldru/)   
- [Utilisation de Distributed Replay pour le test de charge de SQL Server – Deuxième partie](https://blogs.msdn.com/b/mspfe/archive/2012/11/14/using-distributed-replay-to-load-test-your-sql-server-part-2.aspx)   
+ [Utilisation de Distributed Replay pour le test de charge de SQL Server – Partie 2](https://blogs.msdn.com/b/mspfe/archive/2012/11/14/using-distributed-replay-to-load-test-your-sql-server-part-2.aspx)   
  [Utilisation de Distributed Replay pour le test de charge de SQL Server – Partie 1](https://blogs.msdn.com/b/mspfe/archive/2012/11/08/using-distributed-replay-to-load-test-your-sql-server-part-1.aspx)  
   
   

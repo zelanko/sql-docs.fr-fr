@@ -11,12 +11,12 @@ ms.assetid: 614fa0b4-e9fd-4c68-aab3-183f9b9df143
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 147716f986fb89d756c1800ac6fd71e138fae6a1
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 6b7a27d9358d6f7f5719aaf1fea1fb292b2db1af
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600859"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545288"
 ---
 # <a name="connection-resiliency-in-the-windows-odbc-driver"></a>Résilience de connexion du pilote ODBC Windows
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "51600859"
   
 -   Intervalle avant nouvelle tentative de connexion.  
   
-     L’intervalle avant nouvelle tentative de connexion spécifie le nombre de secondes entre chaque nouvelle tentative de connexion. Les valeurs valides sont comprises entre 1 et 60. La durée totale de reconnexion ne peut pas dépasser le délai de maintien de la connexion (SQL_ATTR_QUERY_TIMEOUT dans SQLSetStmtAttr). La valeur par défaut est 10 secondes.  
+     L’intervalle avant nouvelle tentative de connexion spécifie le nombre de secondes entre chaque nouvelle tentative de connexion. Les valeurs valides sont : La durée totale de reconnexion ne peut pas dépasser le délai de maintien de la connexion (SQL_ATTR_QUERY_TIMEOUT dans SQLSetStmtAttr). La valeur par défaut est 10 secondes.  
   
      Vous pouvez modifier l’intervalle de nouvelle tentative de connexion quand vous :  
   

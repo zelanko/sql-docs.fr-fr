@@ -11,12 +11,12 @@ ms.assetid: 98fa7488-aac3-45b4-8aa4-83ed6ab638b4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e46023a364a39950a2fe82fef0cc8357bed6d601
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 01e3d8b002df2f939528bef8d4faa39d3a5c72f1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47762407"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520198"
 ---
 # <a name="understanding-data-type-conversions"></a>Conversions de types de données
 
@@ -107,7 +107,7 @@ Trois catégories de conversions sont prises en charge par les méthodes setObje
 
 - **Sans perte (x)** : conversions pour le cas numériques où le type setter est inférieur ou égal au type serveur sous-jacent. Par exemple, lors de l’appel de setBigDecimal sur une colonne **decimal** de serveur sous-jacente, aucune conversion n’est nécessaire. Pour les conversions de numérique à caractère, le type de données **numeric** Java est converti en **String**. Par exemple, l’appel de setDouble avec une valeur « 53 » sur une colonne varchar(50) produit une valeur caractère « 53 » dans cette colonne de destination.
 
-- **Converti (y)**: Conversions à partir de Java **numérique** type serveur sous-jacent **numérique** type qui est plus petite. Ces conversions sont standard et suivent les conventions de conversion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La précision est toujours tronquée (jamais arrondie) et les dépassements génèrent une erreur de conversion non prise en charge. Par exemple, l’utilisation de updateDecimal avec la valeur « 1,9999 » sur une colonne d’entiers sous-jacente produit « 1 » dans la colonne de destination ; en revanche, si la valeur « 3000000000 » est passée, le pilote génère une erreur.
+- **Converti (y)**: Conversions à partir de Java **numérique** type serveur sous-jacent **numérique** type qui est plus petite. Ces conversions sont standard et suivent les conventions de conversion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La précision est toujours tronquée (jamais arrondie) et tout dépassement de capacité génère une erreur de conversion non prise en charge. Par exemple, l’utilisation de updateDecimal avec la valeur « 1,9999 » sur une colonne d’entiers sous-jacente produit « 1 » dans la colonne de destination ; en revanche, si la valeur « 3000000000 » est passée, le pilote génère une erreur.
 
 - **Dépendant des données (z)**: Conversions à partir de Java **chaîne** type sous-jacent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] type de données varie selon les conditions suivantes : le pilote envoie le **chaîne** valeur à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] effectue des conversions, si nécessaire. Si la propriété de connexion sendStringParametersAsUnicode est définie sur true et que le type de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sous-jacent est **image**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n’autorise pas la conversion de **nvarchar** en **image** et lève une exception SQLServerException. Si sendStringParametersAsUnicode est défini sur false et que le type de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sous-jacent est **image**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permet la conversion de **varchar** en **image** et aucune exception n’est levée.
 

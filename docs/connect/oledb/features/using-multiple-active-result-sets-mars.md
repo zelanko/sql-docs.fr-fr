@@ -18,12 +18,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 7f0c8c9d13eca087db3d7202d57c058527e2c073
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d8f59034d6826bd1af3f1c48c81674dfc039b85e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610317"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545472"
 ---
 # <a name="using-multiple-active-result-sets-mars"></a>Utilisation de MARS (Multiple Active Result Sets)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -107,7 +107,7 @@ Data Source=MSSQL; Initial Catalog=AdventureWorks; Integrated Security=SSPI; Mul
   
  Modifications apportées par les instructions et les blocs atomic sont entrelacés sont isolées les uns des autres. Par exemple, si une instruction ou bloc atomic apporte des modifications et génère ensuite une autre instruction de l’exécution, la nouvelle instruction ne verrez pas les modifications apportées par la première instruction. En outre, lors de la première instruction reprend l’exécution, il ne verrez pas toutes les modifications apportées par d’autres instructions. Instructions ne voient que les modifications qui sont terminées et validées avant le démarrage de l’instruction.  
   
- Une nouvelle transaction de l’utilisateur peut être démarrée dans la transaction utilisateur actuel à l’aide de l’instruction BEGIN TRANSACTION : cela est pris en charge uniquement en mode interop BEGIN TRANSACTION ne peut être appelée à partir d’une instruction T-SQL et non à partir d’un compilées en mode natif stocké dans procédure. Vous pouvez créer un enregistrement point dans une transaction à l’aide de SAVE TRANSACTION ou un appel API à la transaction. Save(save_point_name) restauration au point de sauvegarde. Cette fonctionnalité est également activée uniquement à partir d’instructions T-SQL et non à partir d’en mode natif des procédures stockées compilées.  
+ Une nouvelle transaction de l’utilisateur peut être démarrée dans la transaction utilisateur actuel à l’aide de l’instruction BEGIN TRANSACTION : cela est pris en charge uniquement en mode interop afin de l’instruction BEGIN TRANSACTION ne peut être appelée à partir d’une instruction T-SQL et non à partir d’un compilées en mode natif stocké dans procédure. Vous pouvez créer un enregistrement point dans une transaction à l’aide de SAVE TRANSACTION ou un appel API à la transaction. Save(save_point_name) restauration au point de sauvegarde. Cette fonctionnalité est également activée uniquement à partir d’instructions T-SQL et non à partir d’en mode natif des procédures stockées compilées.  
   
  **MARS et les index columnstore**  
   
