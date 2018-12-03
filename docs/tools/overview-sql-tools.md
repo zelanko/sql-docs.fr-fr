@@ -1,7 +1,7 @@
 ---
 title: Outils SQL et des utilitaires pour SQL Server, base de données SQL Azure et Azure SQL Data Warehouse | Microsoft Docs
 ms.custom: ''
-ms.date: 09/24/2018
+ms.date: 11/19/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -12,12 +12,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 0a0a46fb27c8695ead3cc68e17677ccdcf7cb6fc
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: 84cebceddc18ee3d288226ebd00bc86ea25ac926
+ms.sourcegitcommit: eb1f3a2f5bc296f74545f17d20c6075003aa4c42
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51292975"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52190989"
 ---
 # <a name="sql-tools-and-utilities-for-sql-server-azure-sql-database-and-azure-sql-data-warehouse"></a>Outils SQL et des utilitaires pour SQL Server, base de données SQL Azure et Azure SQL Data Warehouse
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ Les outils d’interface graphique utilisateur graphique principal sont les suiv
 |:--|:--|:--|
 | [[!INCLUDE[name-sos](../includes/name-sos.md)]](../sql-operations-studio/download.md) | [!INCLUDE[name-sos](../includes/name-sos-short.md)] est un outil gratuit, léger, pour la gestion des bases de données partout où ils s’exécutent. Cette version préliminaire fournit des fonctionnalités de gestion de base de données, y compris un éditeur Transact-SQL étendue et personnalisable connaître l’état de fonctionnement de vos bases de données. | **[!INCLUDE[name-sos](../includes/name-sos-short.md)] s’exécute sur Windows, macOS et Linux**.|
 | [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) | Utilisez SQL Server Management Studio (SSMS) pour interroger, concevoir et gérer votre SQL Server, base de données SQL Azure et Azure SQL Data Warehouse. | **SSMS s’exécute sur Windows**.|
-| [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md) | Transformez Visual Studio en un puissant environnement de développement pour SQL Server, base de données SQL Azure et Azure SQL Data Warehouse.| **SSDT s’exécute sur Windows**.|
+| [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md) | Transformez Visual Studio en un puissant environnement de développement pour SQL Server, base de données SQL Azure et Azure SQL Data Warehouse.| **SSMS s’exécute sur Windows**.|
 | [Visual Studio Code](https://code.visualstudio.com/)| Après avoir installé Visual Studio Code, installer le [extension mssql](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql) pour le développement de Microsoft SQL Server, base de données SQL Azure et SQL Data Warehouse.| **Visual Studio Code s’exécute sur Windows, macOS et Linux**.|
 
 
@@ -49,7 +49,7 @@ Les principaux outils de ligne de commande sont les suivantes :
 | [**sqlpackage**](sqlpackage.md) |**Sqlpackage** est un utilitaire de ligne de commande qui automatise plusieurs tâches de développement de base de données. macOS et les versions de Linux de sqlpackage sont actuellement en version préliminaire. | Windows, macOS et Linux|
 |[**SQL Server PowerShell**](../powershell/sql-server-powershell.md)| **SQL Server PowerShell** fournit des applets de commande pour travailler avec SQL| Windows, macOS et Linux|
 | [**sqlcmd**](sqlcmd-utility.md) |**SQLCMD** utilitaire vous permet d’entrer des instructions Transact-SQL, des procédures système et des fichiers de script à l’invite de commandes. | Windows, macOS et Linux|
-|[**bcp**](../2014/tools/bcp-utility.md)|L’utilitaire **b**ulk **c**opy **p**rogram (**bcp**) copie en bloc des données entre une instance de [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et un fichier de données dans un format spécifié par l’utilisateur.|Windows, macOS et Linux|
+|[**bcp**](https://docs.microsoft.com/sql/tools/bcp-utility?view=sql-server-2014)|L’utilitaire **b**ulk **c**opy **p**rogram (**bcp**) copie en bloc des données entre une instance de [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et un fichier de données dans un format spécifié par l’utilisateur.|Windows, macOS et Linux|
 |[**MSSQL-Générateur de script (version préliminaire)**](https://github.com/Microsoft/mssql-scripter)|**MSSQL-scripter** est une expérience de ligne de commande multiplateforme pour les scripts de bases de données SQL Server|Windows, macOS et Linux|
 |[**MSSQL-conf**](../linux/sql-server-linux-configure-mssql-conf.md)|**MSSQL-conf** configure SQL Server s’exécutant sur Linux.|Linux|
 

@@ -11,12 +11,12 @@ ms.assetid: 44996746-d373-4f59-9863-a8a20bb8024a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d009a20b4e3a432cdea72a881024ca3aead1bc09
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 70a19f97f3949fd43b0fba86b876f0da606a114b
+ms.sourcegitcommit: ca038f1ef180e4e1b27910bbc5d87822cd1ed176
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658797"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52159107"
 ---
 # <a name="building-the-connection-url"></a>Création de l'URL de connexion
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -74,7 +74,7 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
  `jdbc:sqlserver://localhost;databaseName=AdventureWorks;integratedSecurity=true;applicationName=MyApp;`  
   
 ## <a name="named-and-multiple-sql-server-instances"></a>Instances SQL Server nommées et multiples  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permet d’installer plusieurs instances de bases de données par serveur. Chaque instance est identifiée par un nom spécifique. Pour établir une connexion avec une instance nommée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous pouvez soit spécifier le numéro de port de l’instance nommée (recommandé), soit spécifier le nom d’instance comme propriété d’URL JDBC ou comme propriété **datasource**. Si aucune propriété de nom d'instance ou de numéro de port n'est spécifiée, une connexion à l'instance par défaut est établie. Observez les exemples suivants :  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permet d'installer plusieurs instances de bases de données par serveur. Chaque instance est identifiée par un nom spécifique. Pour établir une connexion avec une instance nommée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous pouvez soit spécifier le numéro de port de l’instance nommée (recommandé), soit spécifier le nom d’instance comme propriété d’URL JDBC ou comme propriété **datasource**. Si aucune propriété de nom d'instance ou de numéro de port n'est spécifiée, une connexion à l'instance par défaut est établie. Observez les exemples suivants :  
   
  Pour utiliser un numéro de port, procédez comme suit :  
   
