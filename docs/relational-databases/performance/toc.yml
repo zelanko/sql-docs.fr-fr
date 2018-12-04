@@ -1,32 +1,119 @@
 items:
 - name: Centre de performances pour le moteur de base de données SQL Server et Azure SQL Database
   href: performance-center-for-sql-server-database-engine-and-azure-sql-database.md
-- name: Configuration des espaces de stockage avec un cache en écriture différée NVDIMM-N
-  href: configuring-storage-spaces-with-a-nvdimm-n-write-back-cache.md
 - name: Paramétrage automatique
   href: ../automatic-tuning/automatic-tuning.md
-- name: estimation de la cardinalité
-  href: cardinality-estimation-sql-server.md
+- name: Configuration des espaces de stockage avec un cache en écriture différée NVDIMM-N
+  href: configuring-storage-spaces-with-a-nvdimm-n-write-back-cache.md
+- name: Plans d’exécution
+  href: execution-plans.md
+  items:
+  - name: Infrastructure du profilage de requête
+    href: query-profiling-infrastructure.md
+  - name: Afficher et enregistrer des plans d'exécution
+    href: display-and-save-execution-plans.md
+    items:
+    - name: Affichage du plan d'exécution estimé
+      href: display-the-estimated-execution-plan.md
+    - name: Afficher un plan d'exécution réel
+      href: display-an-actual-execution-plan.md
+    - name: Enregistrer un plan d'exécution au format XML
+      href: save-an-execution-plan-in-xml-format.md
+  - name: Comparer et analyser des plans d’exécution
+    href: compare-and-analyze-execution-plans.md
+    items:
+    - name: Comparer des plans d’exécution
+      href: compare-execution-plans.md
+    - name: Analyser un plan d’exécution réel
+      href: analyze-an-actual-execution-plan.md
+  - name: Repères de plan
+    href: plan-guides.md
+    items:
+    - name: Créer un repère de plan
+      href: create-a-new-plan-guide.md
+    - name: Créer un repère de plan pour les requêtes paramétrables
+      href: create-a-plan-guide-for-parameterized-queries.md
+    - name: Spécifier le comportement du paramétrage de requêtes grâce aux repères de plan
+      href: specify-query-parameterization-behavior-by-using-plan-guides.md
+    - name: Appliquer un plan de requête fixe à un repère de plan
+      href: apply-a-fixed-query-plan-to-a-plan-guide.md
+    - name: Attacher des indicateurs de requête à un repère de plan
+      href: attach-query-hints-to-a-plan-guide.md
+    - name: Afficher les propriétés du repère de plan
+      href: view-plan-guide-properties.md
+    - name: Utiliser le Générateur de profils SQL Server pour créer et tester des repères de plan
+      href: use-sql-server-profiler-to-create-and-test-plan-guides.md
+    - name: Valider des repères de plan après la mise à niveau
+      href: validate-plan-guides-after-upgrade.md
+    - name: Supprimer un repère de plan
+      href: delete-a-plan-guide.md
+    - name: Activer ou désactiver un repère de plan
+      href: enable-or-disable-a-plan-guide.md
 - name: Traitement de requêtes intelligent
   href: intelligent-query-processing.md
   items:
   - name: Traitement de requêtes adaptatif
     href: adaptive-query-processing.md
+  - name: Incorporation de fonctions scalaires définies par l’utilisateur
+    href: ../user-defined-functions/scalar-udf-inlining.md
 - name: Surveiller et régler les performances
   href: monitor-and-tune-for-performance.md
   items:
   - name: Surveiller les composants SQL Server
     href: monitor-sql-server-components.md
+    items:
+    - name: Moniteur d'activité
+      href: ../performance-monitor/activity-monitor.md
+    - name: vues et fonctions de gestion dynamique.
+      href: ../system-dynamic-management-views/system-dynamic-management-views.md
+    - name: Événements étendus
+      href: ../extended-events/extended-events.md
+    - name: SQL Server Profiler
+      href: ../../tools/sql-server-profiler/sql-server-profiler.md
+    - name: Trace SQL
+      href: ../sql-trace/sql-trace.md
   - name: Outils d'analyse et de paramétrage des performances
     href: performance-monitoring-and-tuning-tools.md
+    items:
+    - name: Statistiques des requêtes dynamiques
+      href: live-query-statistics.md
+    - name: .
+      href: database-engine-tuning-advisor.md
+      items:
+      - name: Démarrer et utiliser l'Assistant Paramétrage du moteur de base de données
+        href: start-and-use-the-database-engine-tuning-advisor.md
+      - name: Réduire la charge de paramétrage du serveur de production
+        href: reduce-the-production-server-tuning-load.md
+        items:
+        - name: Observations relatives à l'utilisation de serveurs de test
+          href: considerations-for-using-test-servers.md
+      - name: Afficher et utiliser la sortie de l’Assistant Paramétrage du moteur de base de données
+        href: view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md
+      - name: Recommandations sur les index columnstore dans l’Assistant Paramétrage du moteur de base de données
+        href: columnstore-index-recommendations-in-database-engine-tuning-advisor-dta.md
+      - name: Paramétrage d’une base de données avec une charge de travail du Magasin des requêtes
+        href: tuning-database-using-workload-from-query-store.md
+      - name: Amélioration des performances avec les recommandations de l’Assistant Paramétrage du moteur de base de données
+        href: performance-improvements-using-dta-recommendations.md
+  - name: Mise à niveau des bases de données à l’aide de l’Assistant Paramétrage de requête
+    href: upgrade-dbcompat-using-qta.md
+  - name: Supervision des performances à l’aide du Magasin des requêtes
+    href: monitoring-performance-by-using-the-query-store.md
+    items:
+    - name: Utilisation du Magasin des requêtes avec l'OLTP en mémoire
+      href: using-the-query-store-with-in-memory-oltp.md
+    - name: Bonnes pratiques relatives au Magasin des requêtes
+      href: best-practice-with-the-query-store.md
+    - name: Scénarios d’utilisation du Magasin des requêtes
+      href: query-store-usage-scenarios.md
+    - name: Comment le Magasin des requêtes collecte les données
+      href: how-query-store-collects-data.md
   - name: Établir un niveau de référence des performances
     href: establish-a-performance-baseline.md
   - name: Isoler les problèmes de performance
     href: isolate-performance-problems.md
   - name: Identifier les goulots d'étranglement
     href: identify-bottlenecks.md
-  - name: Incorporation de fonctions scalaires définies par l’utilisateur
-    href: ../user-defined-functions/scalar-udf-inlining.md
   - name: Utiliser des vues de gestion dynamique pour déterminer l’utilisation et les performances des vues
     href: use-dmvs-determine-usage-performance-views.md
   - name: Analyse des performances et surveillance de l'activité du serveur
@@ -48,77 +135,47 @@ items:
       href: save-showplan-xml-events-separately-sql-server-profiler.md
     - name: Enregistrer les événements Showplan XML Statistics Profile séparément (SQL Server Profiler)
       href: save-showplan-xml-statistics-profile-events-separately-sql-server-profiler.md
-  - name: Afficher et enregistrer des plans d'exécution
-    href: display-and-save-execution-plans.md
-    items:
-    - name: Affichage du plan d'exécution estimé
-      href: display-the-estimated-execution-plan.md
-    - name: Afficher un plan d'exécution réel
-      href: display-an-actual-execution-plan.md
-    - name: Enregistrer un plan d'exécution au format XML
-      href: save-an-execution-plan-in-xml-format.md
-  - name: Statistiques des requêtes dynamiques
-    href: live-query-statistics.md
-  - name: Analyse des performances à l'aide du magasin de requêtes
-    href: monitoring-performance-by-using-the-query-store.md
-  - name: Utilisation du magasin de requêtes avec l'OLTP en mémoire
-    href: using-the-query-store-with-in-memory-oltp.md
-  - name: Bonnes pratiques relatives au magasin de requêtes
-    href: best-practice-with-the-query-store.md
-  - name: Scénarios d’utilisation du Magasin des requêtes
-    href: query-store-usage-scenarios.md
-  - name: Comment le magasin de requêtes collecte les données
-    href: how-query-store-collects-data.md
-- name: .
-  href: database-engine-tuning-advisor.md
+    - name: Utiliser la session system_health
+      href: ../extended-events/use-the-system-health-session.md
+  - name: Analyser l'utilisation des ressources (Moniteur système)
+    href: ../performance-monitor/monitor-resource-usage-system-monitor.md
+- name: Composants internes et architecture
+  href: ../sql-server-guides.md
   items:
-  - name: Démarrer et utiliser l'Assistant Paramétrage du moteur de base de données
-    href: start-and-use-the-database-engine-tuning-advisor.md
-  - name: Réduire la charge de paramétrage du serveur de production
-    href: reduce-the-production-server-tuning-load.md
+  - name: estimation de la cardinalité
+    href: cardinality-estimation-sql-server.md
+  - name: Curseurs
+    href: ../cursors.md
+  - name: Processus de nettoyage des enregistrements fantômes
+    href: ../ghost-record-cleanup-process-guide.md
+  - name: Architecture et conception des index
+    href: ../sql-server-index-design-guide.md
+  - name: Jointures
+    href: joins.md
+  - name: Architecture de gestion de la mémoire
+    href: ../memory-management-architecture-guide.md
     items:
-    - name: Observations relatives à l'utilisation de serveurs de test
-      href: considerations-for-using-test-servers.md
-  - name: Afficher et utiliser la sortie de l’Assistant Paramétrage du moteur de base de données
-    href: view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md
-  - name: Recommandations sur les index columnstore dans l’Assistant Paramétrage du moteur de base de données
-    href: columnstore-index-recommendations-in-database-engine-tuning-advisor-dta.md
-  - name: Paramétrage d’une base de données à l’aide d’une charge de travail du magasin de requêtes
-    href: tuning-database-using-workload-from-query-store.md
-  - name: Amélioration des performances avec les recommandations de l’Assistant Paramétrage du moteur de base de données
-    href: performance-improvements-using-dta-recommendations.md
-- name: Repères de plan
-  href: plan-guides.md
-  items:
-  - name: Créer un repère de plan
-    href: create-a-new-plan-guide.md
-  - name: Créer un repère de plan pour les requêtes paramétrables
-    href: create-a-plan-guide-for-parameterized-queries.md
-  - name: Spécifier le comportement du paramétrage de requêtes grâce aux repères de plan
-    href: specify-query-parameterization-behavior-by-using-plan-guides.md
-  - name: Appliquer un plan de requête fixe à un repère de plan
-    href: apply-a-fixed-query-plan-to-a-plan-guide.md
-  - name: Attacher des indicateurs de requête à un repère de plan
-    href: attach-query-hints-to-a-plan-guide.md
-  - name: Afficher les propriétés du repère de plan
-    href: view-plan-guide-properties.md
-  - name: Utiliser le Générateur de profils SQL Server pour créer et tester des repères de plan
-    href: use-sql-server-profiler-to-create-and-test-plan-guides.md
-  - name: Valider des repères de plan après la mise à niveau
-    href: validate-plan-guides-after-upgrade.md
-  - name: Supprimer un repère de plan
-    href: delete-a-plan-guide.md
-  - name: Activer ou désactiver un repère de plan
-    href: enable-or-disable-a-plan-guide.md
-- name: Analyser l'utilisation des ressources (Moniteur système)
-  href: ../performance-monitor/monitor-resource-usage-system-monitor.md
-- name: Jointures
-  href: joins.md
-- name: Sous-requêtes
-  href: subqueries.md
-ms.openlocfilehash: c1a06a77f377871a652f8295897e8e912ef353f2
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+    - name: Lecture de pages
+      href: ../reading-pages.md
+    - name: Écriture de pages
+      href: ../writing-pages.md
+  - name: Architecture des pages et étendues
+    href: ../pages-and-extents-architecture-guide.md
+  - name: Architecture de traitement des requêtes
+    href: ../query-processing-architecture-guide.md
+  - name: Guide de référence des opérateurs Showplan logiques et physiques
+    href: ../showplan-logical-and-physical-operators-reference.md
+  - name: Sous-requêtes
+    href: subqueries.md
+  - name: Architecture de threads et de tâches
+    href: ../thread-and-task-architecture-guide.md
+  - name: Architecture et gestion du journal des transactions
+    href: ../sql-server-transaction-log-architecture-and-management-guide.md
+  - name: Verrouillage des transactions et contrôle de version de ligne
+    href: ../sql-server-transaction-locking-and-row-versioning-guide.md
+ms.openlocfilehash: 2bf87948dbeb01794c7af547586e1204613994be
+ms.sourcegitcommit: f1cf91e679d1121d7f1ef66717b173c22430cb42
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51221525"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52586222"

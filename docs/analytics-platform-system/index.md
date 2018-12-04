@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 62fefedaa417e73820a7e14df9bf90f6215b9161
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: ed7ba4a6b5b2f69c51f06a4dbf2947d97981c38f
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51702447"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52419100"
 ---
 # <a name="microsoft-analytics-platform-system"></a>Microsoft Analytics Platform System  
 Microsoft Analytics Platform System (APS) est une plateforme de données conçue pour l’entreposage des données et l’analytique de Big Data. Cette plateforme offre les avantages suivants : intégration étroite des données, traitement très rapide des requêtes, stockage hautement extensible et maintenance simple pour vos solutions décisionnelles de bout en bout.  
@@ -32,14 +32,14 @@ Outre sa rapidité et son extensibilité, Analytics Platform System offre une re
   
 ## <a name="parallel-data-warehouse-software-designed-for-massively-parallel-processing"></a>Parallel Data Warehouse, un logiciel conçu pour le traitement MPP
   
-Utilisez PDW comme principal composant d’entreposage des données relationnelles pour vos solutions décisionnelles de bout en bout. Grâce à la conception MPP (Massively Parallel Processing) de PDW, les requêtes s’exécutent en moyenne 50 fois plus vite que les entrepôts de données standard reposant sur des systèmes de gestion de base de données SMP (Symmetric Multi-Processing).  
+Utilisez PDW comme principal composant d’entreposage des données relationnelles pour vos solutions décisionnelles de bout en bout. Avec la conception MPP (Massively Parallel Processing) de PDW, les requêtes s’exécutent en moyenne 50 fois plus vite que les entrepôts de données standard reposant sur des systèmes de gestion de base de données SMP (Symmetric Multi-Processing).  
   
 > [!NOTE]  
 > Avec cette vitesse d’exécution 50 fois plus rapide, les requêtes s’effectuent en quelques minutes au lieu de plusieurs heures, ou en quelques secondes au lieu de plusieurs minutes. Ce haut niveau de performance permet aux analystes de votre entreprise de fournir des résultats plus complets et plus rapides, et d’effectuer facilement des requêtes ad hoc ou des analyses plus détaillées des données. Votre entreprise peut alors prendre de meilleures décisions, plus rapidement.  
   
 En plus d’améliorer les performances d’exécution des requêtes, PDW facilite les opérations suivantes :  
   
--   Augmentez la capacité de votre entrepôt de données de quelques téraoctets jusqu’à plus de six pétaoctets de données dans une seule appliance en ajoutant des « unités d’échelle » à votre système existant.  
+-   Augmentez la capacité de votre entrepôt de données de quelques téraoctets jusqu’à plus de 6 pétaoctets de données dans une seule appliance en ajoutant des « unités d’échelle » à votre système existant.  
   
 -   Garantissez la disponibilité permanente de vos données grâce à la redondance élevée et à la haute disponibilité intégrées.  
   

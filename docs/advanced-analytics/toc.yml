@@ -3,7 +3,7 @@ items:
   href: index.md
 - name: Extensions Machine Learning (R, Python)
   items:
-  - name: Nouveautés
+  - name: What's New
     href: what-s-new-in-sql-server-machine-learning-services.md
   - name: SQL ML Services (R, Python)
     href: what-is-sql-server-machine-learning.md
@@ -71,7 +71,7 @@ items:
 - name: Didacticiels
   href: tutorials/machine-learning-services-tutorials.md
   items:
-  - name: data
+  - name: Exemples de données
     items:
     - name: Jeu de données Airline
       href: tutorials/demo-data-airlinedemo-in-sql.md
@@ -84,64 +84,60 @@ items:
     items:
     - name: Entraîner et utiliser votre premier modèle
       href: tutorials/train-score-using-python-in-tsql.md
+    - name: Créer un modèle Python à l’aide de revoscalepy
+      href: tutorials/use-python-revoscalepy-to-create-model.md
     - name: Découvrir l’analytique dans la base de données
       href: tutorials/sqldev-in-database-python-for-sql-developers.md
       items:
-      - name: 1 - Visualiser les données
+      - name: 1 - Exploration des données
         href: tutorials/sqldev-py3-explore-and-visualize-the-data.md
-      - name: 2 - Créer des caractéristiques de données
+      - name: 2 - Ingénierie des caractéristiques
         href: tutorials/sqldev-py4-create-data-features-using-t-sql.md
-      - name: 3 - Entraîner et enregistrer dans SQL
+      - name: 3 - Entraîner et déployer
         href: tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md
-      - name: 4 - Prédire les résultats
+      - name: 4 - Prédictions
         href: tutorials/sqldev-py6-operationalize-the-model.md
-    - name: Créer un modèle à l’aide de revoscalepy
-      href: tutorials/use-python-revoscalepy-to-create-model.md
   - name: R
     href: tutorials/sql-server-r-tutorials.md
     items:
     - name: Créer des modèles basés sur une partition
       href: tutorials/r-tutorial-create-models-per-partition.md
-    - name: Découvrir l’analytique dans la base de données
+    - name: Analytique dans la base de données pour les développeurs SQL
       href: tutorials/sqldev-in-database-r-for-sql-developers.md
       items:
-      - name: 1 - Visualiser les données
+      - name: 1 - Exploration des données
         href: tutorials/sqldev-explore-and-visualize-the-data.md
-      - name: 2 - Créer des caractéristiques de données
+      - name: 2 - Ingénierie des caractéristiques
         href: tutorials/sqldev-create-data-features-using-t-sql.md
-      - name: 3 - Entraîner et enregistrer dans SQL
+      - name: 3 - Entraîner et déployer
         href: tutorials/sqldev-train-and-save-a-model-using-t-sql.md
-      - name: 4 - Prédire les résultats
+      - name: 4 - Prédictions
         href: tutorials/sqldev-operationalize-the-model.md
-    - name: Procédure pas à pas pour une solution complète de science des données
+    - name: Analytique dans la base de données pour les scientifiques des données
       href: tutorials/walkthrough-data-science-end-to-end-walkthrough.md
       items:
-      - name: Préparer les données
-        href: tutorials/walkthrough-prepare-the-data.md
-      - name: Explorer les données à l’aide de SQL
-        href: tutorials/walkthrough-view-and-explore-the-data.md
-      - name: Résumer les données à l’aide de R
+      - name: 1 - Exploration des données
         href: tutorials/walkthrough-view-and-summarize-data-using-r.md
-      - name: Créer des graphes et des tracés
+      - name: 2 - Graphes et tracés
         href: tutorials/walkthrough-create-graphs-and-plots-using-r.md
-      - name: Créer des caractéristiques de données
+      - name: 3 - Ingénierie des caractéristiques
         href: tutorials/walkthrough-create-data-features.md
-      - name: Créer et enregistrer le modèle
+      - name: 4 - Créer et enregistrer le modèle
         href: tutorials/walkthrough-build-and-save-the-model.md
-      - name: Déployer et utiliser le modèle
+      - name: 5 - Déployer et utiliser le modèle
         href: tutorials/walkthrough-deploy-and-use-the-model.md
-    - name: Immersion avec RevoScaleR
+    - name: Présentation approfondie de RevoScaleR
       href: tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md
       items:
       - name: Créer une base de données et des autorisations
         href: tutorials/deepdive-work-with-sql-server-data-using-r.md
-      - name: Créer des objets de données à l’aide de RxSqlServerData
+      - name: Créer un objet RxSqlServerData
         href: tutorials/deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md
       - name: Interroger et modifier des données
         href: tutorials/deepdive-query-and-modify-the-sql-server-data.md
       - name: Définir un contexte de calcul
         href: tutorials/deepdive-define-and-use-compute-contexts.md
-      - name: Créer et exécuter des scripts R
+      - name: Calculer des statistiques de synthèse
         href: tutorials/deepdive-create-and-run-r-scripts.md
       - name: Visualiser les données
         href: tutorials/deepdive-visualize-sql-server-data-using-r.md
@@ -151,18 +147,16 @@ items:
         href: tutorials/deepdive-score-new-data.md
       - name: Transformer des données
         href: tutorials/deepdive-transform-data-using-r.md
-      - name: Charger des données en mémoire à l’aide de rxImport
+      - name: Charger des données avec rxImport
         href: tutorials/deepdive-load-data-into-memory-using-rximport.md
       - name: Créer une table avec rxDataStep
         href: tutorials/deepdive-create-new-sql-server-table-using-rxdatastep.md
-      - name: Effectuer une analyse de segmentation à l’aide de rxDataStep
+      - name: Effectuer une analyse de blocs
         href: tutorials/deepdive-perform-chunking-analysis-using-rxdatastep.md
-      - name: Analyser des données dans un contexte de calcul local
-        href: tutorials/deepdive-analyze-data-in-local-compute-context.md
       - name: Déplacer des données entre SQL Server et un fichier XDF
         href: tutorials/deepdive-move-data-between-sql-server-and-xdf-file.md
-      - name: Créer une simulation simple
-        href: tutorials/deepdive-create-a-simple-simulation.md
+      - name: Envoyer R personnalisé avec rxExec
+        href: tutorials/r-tutorial-custom-r-functions.md
 - name: Exemples
   href: https://github.com/Microsoft/sql-server-samples
 - name: Solutions
@@ -296,13 +290,13 @@ items:
       href: python/what-is-revoscalepy.md
 - name: Ressources
   items:
-  - name: Problèmes connus
-    href: known-issues-for-sql-server-machine-learning-services.md
   - name: Notes de publication
     href: https://docs.microsoft.com/sql/sql-server/sql-server-2017-release-notes
   - name: Dépannage
     href: machine-learning-troubleshooting-faq.md
     items:
+    - name: Problèmes connus
+      href: known-issues-for-sql-server-machine-learning-services.md
     - name: Collecte de données
       href: data-collection-ml-troubleshooting-process.md
     - name: Erreurs d’installation et de mise à niveau
@@ -325,9 +319,9 @@ items:
       href: https://social.msdn.microsoft.com/Forums/sqlserver/home?category=sqlserver
     - name: Machine Learning Server
       href: https://social.msdn.microsoft.com/Forums/en-US/home?forum=MicrosoftR
-ms.openlocfilehash: d2cf2947c60d3ac3550dfeeba3acbf46bd0e48bd
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: e400aa9026b3a2684ffc5f436e4fe43cba3c52d4
+ms.sourcegitcommit: 0395ffeb6e51b5d653fa23673e564c4c0cfe4f57
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697897"
+ms.lasthandoff: 12/01/2018
+ms.locfileid: "52717192"
