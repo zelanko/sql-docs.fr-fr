@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: bce46bab220ddda57d18cea6588c35475becd372
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 932f2384b24b55a6516fe84cd16f608a1a8e2d0e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601889"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533341"
 ---
 # <a name="install-sql-server-on-server-core"></a>Installer SQL Server sur Server Core
 
@@ -42,7 +42,7 @@ L’option d’installation Server Core offre l’environnement minimal requis p
   
 |Fonctionnalité|Pris en charge|Informations supplémentaires|  
 |-------------|---------------|----------------------------|  
-|du[!INCLUDE[ssDE](../../includes/ssde-md.md)] |Oui||  
+| du[!INCLUDE[ssDE](../../includes/ssde-md.md)] |Oui||  
 |Réplication[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] |Oui||  
 |Recherche en texte intégral|Oui||  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|Oui||  
@@ -55,7 +55,7 @@ L’option d’installation Server Core offre l’environnement minimal requis p
 |Kit de développement logiciel (SDK) des outils clients|non||  
 |Documentation en ligne[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] |non||  
 |Outils de gestion - Base|À distance uniquement|L’installation de ces fonctionnalités sur Server Core n’est pas prise en charge. Ces composants peuvent être installés sur un serveur autre que Server Core et être connectés aux services de [!INCLUDE[ssDE](../../includes/ssde-md.md)] installés sur Server Core.|  
-|Outils d'administration – Complets|À distance uniquement|L’installation de ces fonctionnalités sur Server Core n’est pas prise en charge. Ces composants peuvent être installés sur un serveur autre que Server Core et être connectés aux services de [!INCLUDE[ssDE](../../includes/ssde-md.md)] installés sur Server Core.|  
+|Outils de gestion - Complet|À distance uniquement|L’installation de ces fonctionnalités sur Server Core n’est pas prise en charge. Ces composants peuvent être installés sur un serveur autre que Server Core et être connectés aux services de [!INCLUDE[ssDE](../../includes/ssde-md.md)] installés sur Server Core.|  
 |Distributed Replay Controller|non||  
 |Distributed Replay Client|À distance uniquement|L’installation de ces fonctionnalités sur Server Core n’est pas prise en charge. Ces composants peuvent être installés sur un serveur autre que Server Core et être connectés aux services de [!INCLUDE[ssDE](../../includes/ssde-md.md)] installés sur Server Core.|  
 |Kit de développement logiciel (SDK) de l'option Connectivité client de SQL|Oui||  

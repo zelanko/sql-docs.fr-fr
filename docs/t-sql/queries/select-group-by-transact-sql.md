@@ -33,12 +33,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cd0f0157f1f3f0c684dcb8f07af725b97929c10f
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 3aafd6afb6e619cb9d4112fe5c7fcd1c1775d84b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906019"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509053"
 ---
 # <a name="select---group-by--transact-sql"></a>SELECT - GROUP BY- Transact-SQL
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -334,7 +334,7 @@ La clause GROUP BY prend en charge toutes les fonctions GROUP BY incluses dans l
   
 -   Les jeux de regroupement ne sont pas autorisés dans la clause GROUP BY, à moins de faire partie d'une liste GROUPING SETS explicite. Par exemple, `GROUP BY Column1, (Column2, ...ColumnN`) est autorisé dans la norme, mais pas dans Transact-SQL.  Transact-SQL prend en charge les syntaxes `GROUP BY C1, GROUPING SETS ((Column2, ...ColumnN))` et `GROUP BY Column1, Column2, ... ColumnN`, qui sont sémantiquement équivalentes. Ils sont sémantiquement équivalents à l'exemple `GROUP BY` précédent. Cela permet d’éviter que la syntaxe `GROUP BY Column1, (Column2, ...ColumnN`) soit interprétée de façon incorrecte comme la syntaxe `GROUP BY C1, GROUPING SETS ((Column2, ...ColumnN))`, ces deux syntaxes n’étant pas sémantiquement équivalentes.  
   
--   Les jeux de regroupement ne sont pas autorisés à l'intérieur des jeux de regroupement. Par exemple, `GROUP BY GROUPING SETS (A1, A2,…An, GROUPING SETS (C1, C2, ...Cn))` est autorisé dans la norme SQL-2006, mais pas dans Transact-SQL. Transact-SQL autorise les syntaxes `GROUP BY GROUPING SETS( A1, A2,...An, C1, C2, ...Cn )` et `GROUP BY GROUPING SETS( (A1), (A2), ... (An), (C1), (C2), ... (Cn) )`, qui sont sémantiquement équivalentes au premier exemple GROUP BY, tout en étant plus claires.  
+-   Les jeux de regroupement ne sont pas autorisés à l'intérieur des jeux de regroupement. Par exemple, `GROUP BY GROUPING SETS (A1, A2,...An, GROUPING SETS (C1, C2, ...Cn))` est autorisé dans la norme SQL-2006, mais pas dans Transact-SQL. Transact-SQL autorise les syntaxes `GROUP BY GROUPING SETS( A1, A2,...An, C1, C2, ...Cn )` et `GROUP BY GROUPING SETS( (A1), (A2), ... (An), (C1), (C2), ... (Cn) )`, qui sont sémantiquement équivalentes au premier exemple GROUP BY, tout en étant plus claires.  
   
 -   GROUP BY [ALL/DISTINCT] est uniquement autorisée dans une clause GROUP BY simple qui contient des expressions de colonne. Elle n’est pas autorisée avec les constructions GROUPING SETS, ROLLUP, CUBE, WITH CUBE ou WITH ROLLUP. ALL est la valeur par défaut et est implicite. Elle est uniquement autorisée dans la syntaxe à compatibilité descendante.
   
