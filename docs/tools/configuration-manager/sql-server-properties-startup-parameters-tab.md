@@ -12,12 +12,12 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: e28be468ff1c8e4f7248f0a6296ca9ca2476a63d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 81a0a2e9d5201943cc6b04ac4b931d1e8a9a561e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47602887"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540673"
 ---
 # <a name="sql-server-properties-startup-parameters-tab"></a>Propriétés SQL Server (onglet Paramètres de démarrage)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47602887"
   
 -   Les espaces de début et de fin sont supprimés des paramètres de démarrage.  
   
--   Tous les paramètres de démarrage commencent par un – (tiret) et la deuxième valeur est une lettre.  
+-   Tous les paramètres de démarrage commencent par un - (tiret) et la deuxième valeur est une lettre.  
   
 ## <a name="required-parameters"></a>Paramètres obligatoires  
  Les paramètres suivants sont obligatoires. Ils peuvent être modifiés, mais pas supprimés.  

@@ -21,12 +21,12 @@ ms.assetid: a0b210ce-9b58-4709-80cb-9363b68a1f5a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b9a091731d5eccbf7dca054450d4735077ad7d6d
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: 719e891168fcf6a0ce094d67ec8186c653d00f49
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51292495"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529122"
 ---
 # <a name="dta-utility"></a>dta (utilitaire)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ dta
 [ -? ] |  
 [  
       [ -S server_name[ \instance ] ]  
-      { { -U login_id [-P password ] } | –E  }  
+      { { -U login_id [-P password ] } | -E  }  
       { -D database_name [ ,...n ] }  
       [ -d database_name ]   
       [ -Tl table_list | -Tf table_list_file ]  
@@ -106,13 +106,13 @@ dta
  Spécifie le nom de chaque base de données à paramétrer. La première base de données est la base de données par défaut. Vous pouvez spécifier plusieurs bases de données en séparant les noms de bases de données avec des virgules, par exemple :  
   
 ```  
-dta –D database_name1, database_name2...  
+dta -D database_name1, database_name2...  
 ```  
   
  Vous pouvez également spécifier plusieurs bases de données en utilisant l'argument **-D** pour chaque nom de base de données, par exemple :  
   
 ```  
-dta –D database_name1 -D database_name2... n  
+dta -D database_name1 -D database_name2... n  
 ```  
   
  L’argument **-D** est obligatoire. Si l’argument **-d** n’a pas été spécifié, **dta** se connecte initialement à la base de données qui a été spécifiée avec la première clause `USE database_name` dans la charge de travail. Si la charge de travail ne comporte pas de clause `USE database_name` explicite, vous devez utiliser l’argument **-d** .  
@@ -152,7 +152,7 @@ dta -d AdventureWorks2012 ...
   
 |Paramètre|Valeur par défaut|Détails|  
 |---------------|-------------------|-------------|  
-|*database_name*|*database_name* spécifié avec l’option **–D**||  
+|*database_name*|*database_name* spécifié avec l’option **-D**||  
 |*owner_name*|**dbo**|*owner_name* doit avoir la valeur **dbo**. Si une autre valeur est spécifiée, l'exécution de **dta** échoue et il retourne une erreur.|  
 |*table_name*|Aucun||  
   
@@ -214,10 +214,10 @@ dta -d AdventureWorks2012 ...
  Spécifie un identificateur numérique pour la session de réglage. Si ce paramètre n'est pas spécifié, **dta** génère un numéro d'identification. Vous pouvez utiliser cet identificateur pour afficher des informations pour des sessions de réglage existantes. Si vous ne spécifiez pas de valeur pour **-ID**, un nom de session doit être spécifié avec **-s**.  
   
  **-ip**  
- Spécifie que le cache du plan est utilisé comme charge de travail. Les 1 000 premiers événements du cache du plan pour les bases de données explicitement sélectionnées sont analysés. Cette valeur peut être modifiée à l'aide de l'option **-n** .  
+ Spécifie que le cache du plan est utilisé comme charge de travail. Les 1 000 premiers événements du cache du plan pour les bases de données explicitement sélectionnées sont analysés. Cette valeur peut être modifiée à l'aide de l'option **-n**.  
  
 **-iq**  
- Spécifie que la requête Store servir la charge de travail. Les 1 000 premiers événements à partir de la requête Store pour les bases de données explicitement sélectionnées sont analysés. Cette valeur peut être modifiée à l'aide de l'option **-n** .  Pour plus d’informations, consultez [Magasin de requêtes](../../relational-databases/performance/how-query-store-collects-data.md) et [Paramétrage de base de données à l’aide des charges de travail du Magasin de requêtes](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md).
+ Spécifie que la requête Store servir la charge de travail. Les 1 000 premiers événements à partir de la requête Store pour les bases de données explicitement sélectionnées sont analysés. Cette valeur peut être modifiée à l'aide de l'option **-n**.  Pour plus d’informations, consultez [Magasin de requêtes](../../relational-databases/performance/how-query-store-collects-data.md) et [Paramétrage de base de données à l’aide des charges de travail du Magasin de requêtes](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md).
  ||  
 |-|  
 |**S'applique à**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
@@ -233,7 +233,7 @@ dta -d AdventureWorks2012 ...
   
 |Paramètre|Valeur par défaut|  
 |---------------|-------------------|  
-|*database_name*|*database_name* spécifié avec l’option **–D** .|  
+|*database_name*|*database_name* spécifié avec l’option **-D** .|  
 |*owner_name*|**dbo**.|  
 |*table_name*|Aucun.|  
   
@@ -371,7 +371,7 @@ Dans ce cas, DTA sera utiliser Query Store comme source de la charge de travail 
  Cet exemple utilise une connexion sécurisée (`-E`) pour se connecter à la base de données **tpcd1G** sur MyServer afin d’analyser une charge de travail et créer des recommandations. Il écrit la sortie dans un fichier de script nommé script.sql. Si script.sql existe déjà, **dta** remplace le fichier, car l'argument `-F` a été spécifié. La session de réglage se poursuit pendant une durée illimitée pour garantir l'analyse complète de la charge de travail (`-A 0`). La recommandation doit fournir une amélioration minimale de 5 % (`-m 5`). **dta** doit inclure des index et des vues indexées dans sa recommandation finale (`-fa IDX_IV`).  
   
 ```  
-dta –S MyServer –E -D tpcd1G -if tpcd_22.sql -F –of script.sql –A 0 -m 5 -fa IDX_IV  
+dta -S MyServer -E -D tpcd1G -if tpcd_22.sql -F -of script.sql -A 0 -m 5 -fa IDX_IV  
 ```  
   
  **B. Limiter l’utilisation du disque**  
@@ -379,7 +379,7 @@ dta –S MyServer –E -D tpcd1G -if tpcd_22.sql -F –of script.sql –A 0 -m 5
  Cet exemple limite la taille de base de données totale, qui inclut les données brutes et les index supplémentaires, à 3 gigaoctets (Go) (`-B 3000`) et dirige la sortie vers d:\result_dir\script1.sql. Il ne s'exécute pas plus d'une heure (`-A 60`).  
   
 ```  
-dta –D tpcd1G –if tpcd_22.sql -B 3000 –of "d:\result_dir\script1.sql" –A 60  
+dta -D tpcd1G -if tpcd_22.sql -B 3000 -of "d:\result_dir\script1.sql" -A 60  
 ```  
   
  **C. Limiter le nombre de requêtes optimisées**  
@@ -387,7 +387,7 @@ dta –D tpcd1G –if tpcd_22.sql -B 3000 –of "d:\result_dir\script1.sql" –A
  Cet exemple limite le nombre de requêtes lues du fichier orders_wkld.sql à un maximum de 10 (`-n 10`) et s'exécute pendant 15 minutes (`-A 15`), selon l'événement se produisant en premier. Pour être certain que toutes les 10 requêtes sont réglées, spécifiez une durée de réglage illimitée avec `-A 0`. Si le temps est important, spécifiez une limite de temps appropriée en spécifiant le nombre de minutes disponibles pour le réglage avec l'argument `-A` comme l'illustre cet exemple.  
   
 ```  
-dta –D orders –if orders_wkld.sql –of script.sql –A 15 -n 10  
+dta -D orders -if orders_wkld.sql -of script.sql -A 15 -n 10  
 ```  
   
  **D. Optimiser des tables spécifiques répertoriées dans un fichier**  
@@ -413,7 +413,7 @@ AdventureWorks2012.Production.Product  2000000
  La durée de réglage est de 2 heures (`-A 120`) et la sortie est écrite dans un fichier XML (`-ox XMLTune.xml`).  
   
 ```  
-dta –D pubs –if pubs_wkld.sql –ox XMLTune.xml –A 120 –Tf table_list.txt  
+dta -D pubs -if pubs_wkld.sql -ox XMLTune.xml -A 120 -Tf table_list.txt  
 ```  
   
 ## <a name="see-also"></a> Voir aussi  

@@ -11,12 +11,12 @@ ms.assetid: 21e19635-340d-49bb-b39d-4867102fb5df
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a8a936373f299530f4bd98f2873d10727c980cce
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b4d7fabdf0f3de8c413a4621e6adb646cb1122e7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47741757"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534689"
 ---
 # <a name="using-bulk-copy-with-the-jdbc-driver"></a>Utilisation de la copie en bloc avec le pilote JDBC
 
@@ -583,7 +583,7 @@ public class BulkCopyExistingTransactions {
   
 5. Sélectionnez **Écrire une requête pour spécifier les données à transférer**, puis **Suivant**.  Entrez votre **Instruction SQL** SELECT ProductID, Name, ProductNumber FROM Production.Product et cliquez sur **Suivant**.  
   
-6. Vérifiez la configuration : vous pouvez laisser la valeur {CR}{LF} comme séparateur de lignes et la virgule {,} comme séparateur de colonnes.  Sélectionnez **Modifier les mappages** et vérifiez que le **type** de données est correct pour chaque colonne (par exemple, un entier pour ProductID et une chaîne Unicode pour les autres).  
+6. Vérifiez la configuration : vous pouvez laisser la valeur {CR}{LF} comme séparateur de lignes et la virgule {,} comme séparateur de colonnes.  Sélectionnez **Modifier les mappages**... et vérifiez que le **type** de données est correct pour chaque colonne (par exemple, un entier pour ProductID et une chaîne Unicode pour les autres).  
   
 7. Sélectionnez **Terminer** et exécutez l’exportation.  
 
@@ -776,7 +776,7 @@ Notes et limitations de l'implémentation :
   
 3. Le séparateur spécifié pour le fichier CSV ne doit apparaître nulle part dans les données ; il doit être placé dans une séquence d'échappement adaptée s'il s'agit d'un caractère restreint dans les expressions régulières Java.  
   
-4. Dans l'implémentation de fichier CSV, les guillemets doubles sont traités comme faisant partie des données. Par exemple, la ligne hello,”world”,”hello,world” est considérée comme ayant quatre colonnes avec les valeurs hello, “world”, “hello et world” si le séparateur est une virgule.  
+4. Dans l'implémentation de fichier CSV, les guillemets doubles sont traités comme faisant partie des données. Par exemple, la ligne hello,« world »,« hello,world » est considérée comme ayant quatre colonnes avec les valeurs hello, « world », « hello et world » si le séparateur est une virgule.  
   
 5. Les caractères de nouvelle ligne sont utilisés comme indicateurs de fin de ligne ; ils ne sont autorisés nulle part dans les données.  
   

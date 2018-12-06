@@ -1,7 +1,7 @@
 ---
 title: Utilitaire bcp | Microsoft Docs
 ms.custom: ''
-ms.date: 02/12/2018
+ms.date: 11/27/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -29,17 +29,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 51c510345b83f7dcf9279692b30de639af64a2fb
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 777fb26703b4582662748a15d4ac6ed6e0fdfae0
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675378"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712500"
 ---
 # <a name="bcp-utility"></a>Utilitaire bcp
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-
- > Pour obtenir la dernière version de l’utilitaire bcp, consultez [14.0 d’utilitaires de ligne de commande Microsoft pour SQL Server ](https://go.microsoft.com/fwlink/?LinkID=825643)
 
  > Pour l’utilisation de bcp sur Linux, consultez [installer sqlcmd et bcp sur Linux](../linux/sql-server-linux-setup-tools.md).
 
@@ -50,10 +48,31 @@ ms.locfileid: "51675378"
  ![Icône de lien vers une rubrique](../database-engine/configure-windows/media/topic-link.gif "Icône de lien vers une rubrique") Pour plus d’informations sur les conventions de syntaxe utilisées pour **bcp**, consultez [Conventions de la syntaxe Transact-SQL &#40;Transact-SQL&#41;](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
 > [!NOTE]
-> Si vous utilisez **bcp** pour sauvegarder vos données, créez un fichier de format pour enregistrer le format de données. Les fichiers de données**bcp**  **n’incluent pas** de schéma ni d’informations de format, ce qui fait que si une table ou une vue est supprimée et si vous n’avez pas de fichier de format, il se peut que vous ne soyez pas en mesure d’importer les données.  
-  
+> Si vous utilisez **bcp** pour sauvegarder vos données, créez un fichier de format pour enregistrer le format de données. Les fichiers de données**bcp**  **n’incluent pas** de schéma ni d’informations de format, ce qui fait que si une table ou une vue est supprimée et si vous n’avez pas de fichier de format, il se peut que vous ne soyez pas en mesure d’importer les données.
+
+## <a name="download-the-latest-version-of-bcp-utility"></a>Téléchargez la dernière version de l’utilitaire bcp
+
+**[![télécharger](../ssdt/media/download.png) Télécharger les utilitaires de ligne de commande Microsoft 15.0 pour SQL Server (x64)](https://go.microsoft.com/fwlink/?linkid=2043518)**
+<br>**[![télécharger](../ssdt/media/download.png) Télécharger les utilitaires de ligne de commande Microsoft 15.0 pour SQL Server (x86)](https://go.microsoft.com/fwlink/?linkid=2043622)**
+
+Les outils de ligne de commande sont la disponibilité générale (GA), mais ils sont publiés avec le package d’installation [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
+
+**Informations sur la version**
+
+Numéro de version : 15.0 <br>
+Numéro de build : 15.0.1000.34<br>
+Date de publication : 18 octobre 2018
+
+La nouvelle version de SQLCMD prend en charge l’authentification Azure AD, y compris la prise en charge de l’authentification multifacteur (MFA) pour les fonctionnalités de base de données SQL, SQL Data Warehouse et toujours chiffrés.
+Le nouveau BCP prend en charge l’authentification Azure AD, y compris la prise en charge de l’authentification multifacteur (MFA) pour SQL Database et SQL Data Warehouse.
+
+**Configuration système requise** Windows 10, Windows 7, Windows 8, Windows 8.1, Windows Server 2008, Windows Server 2008 R2, Windows Server 2008 R2 SP1, Windows Server 2012, Windows Server 2012 R2 ce composant requiert [programme d’installation de Windows 4.5](https://www.microsoft.com/download/details.aspx?id=8483) et [Microsoft ODBC Driver 17.2 for SQL Server](https://www.microsoft.com/download/details.aspx?id=56567).
+ 
+Pour vérifier la version BCP exécuter `bcp /v` commande et confirmer que 15.0.1000.34 ou version ultérieure est en cours d’utilisation.
+
+
 <table><th>Syntaxe</th><tr><td><pre>
-bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a href="#tbl_name">table_name</a> | <a href="#vw_name">view_name</a> | <a href="#query">"query"</a>
+bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a href="#tbl_name">table_name</a> | <a href="#vw_name">view_name</a> | <a href="#query">"query"</a>}
     {<a href="#in">in</a> <a href="#data_file">data_file</a> | <a href="#out">out</a> <a href="#data_file">data_file</a> | <a href="#qry_out">queryout</a> <a href="#data_file">data_file</a> | <a href="#format">format</a> <a href="#format">nul</a>}
 <a>                                                                                                         </a>
     [<a href="#a">-a packet_size</a>]
@@ -185,6 +204,10 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 **-G**<a name="G"></a>  
  Ce commutateur est utilisé par le client lors de la connexion à Azure SQL Database ou à Azure SQL Data Warehouse, pour indiquer que l’utilisateur doit être authentifié avec l’authentification Azure Active Directory. Le commutateur-G nécessite [version 14.0.3008.27 ou version ultérieure](https://go.microsoft.com/fwlink/?LinkID=825643). Pour déterminer votre version, exécutez bcp -v. Pour plus d’informations, consultez [utilisez authentification Azure Active Directory pour l’authentification avec SQL Database ou SQL Data Warehouse](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication). 
 
+> [!IMPORTANT]
+> L’option **-G** s’applique uniquement à Azure SQL Database et à Azure Data Warehouse.
+> AAD intégrée et l’authentification Interactive n'est pas actuellement pris en charge Linux ou macOS.
+
 > [!TIP]
 >  Pour vérifier si votre version de l’utilitaire bcp inclut la prise en charge pour le type d’authentification Azure Active Directory (AAD) **bcp--** (bcp\<espace >\<dash >\<dash >) et vérifiez que vous voyez : Password-g dans la liste des arguments disponibles.
 
@@ -220,6 +243,29 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
     bcp bcptest in "c:\last\data2.dat" -S aadserver.database.windows.net -d testdb -G -c -t
     ```
 
+- **Azure Active Directory Interactive**  
+
+   L’authentification Interactive d’Azure AD pour Azure SQL Database et SQL Data Warehouse, vous permet d’utiliser une méthode interactive prenant en charge l’authentification multifacteur. Pour plus d’informations, consultez [authentification Interactive Active Directory](../ssdt/azure-active-directory.md#active-directory-interactive-authentication). 
+
+   Azure AD interactif nécessite **bcp** [version 15.0.1000.34](#download-the-latest-version-of-bcp-utility) ou version ultérieure ainsi que [ODBC version 17.2 ou ultérieure](https://www.microsoft.com/download/details.aspx?id=56567).  
+
+   Pour activer l’authentification interactive, fournissez l’option -G avec le nom d’utilisateur (-U) uniquement, sans mot de passe.   
+
+   L’exemple suivant exporte les données à l’aide de mode interactif Azure AD indiquant le nom d’utilisateur où utilisateur représente un compte AAD. Il s’agit du même exemple que celui utilisé dans la section précédente : *Azure Active Directory Username et Password*.  
+
+   Mode interactif nécessite un mot de passe doit être entré manuellement, ou pour des comptes avec l’authentification multifacteur est activée, terminer votre méthode d’authentification Multifacteur configurée. 
+
+   ``` 
+   bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com 
+   ``` 
+
+   Au cas où un utilisateur Azure AD est un domaine fédéré à un à l’aide de compte de Windows, le nom d’utilisateur requis dans la ligne de commande contient son compte de domaine (par exemple, joe@contoso.com voir ci-dessous) :   
+
+   ```
+   bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U joe@contoso.com 
+   ```
+
+   Si les utilisateurs invités dans un annuaire Azure AD spécifique et font partie d’un groupe qui existent dans la base de données SQL qui dispose des autorisations de base de données pour exécuter la commande bcp, leurs alias de l’utilisateur invité est utilisé (par exemple, *keith0@adventureworks.com*).
   
 **-h** _**"load hints**_[ ,... *n*]**"**<a name="h"></a> Spécifie le ou les indicateurs à utiliser lors de l’importation en bloc de données vers une table ou une vue.  
   
@@ -257,21 +303,21 @@ Spécifie qu'un verrou de niveau table d'une mise à jour en bloc est obtenu pou
 * **FIRE_TRIGGERS**  
 Spécifié avec l’argument **in** , n’importe quel déclencheur d’insertion sur la table de destination s’exécute pendant l’opération de copie en bloc. Si FIRE_TRIGGERS n'est pas spécifié, aucun déclencheur d'insertion ne s'exécute. FIRE_TRIGGERS est ignoré pour les arguments **out**, **queryout**et **format** .  
   
- **-i** _**input\_file**_<a name="i"></a>  
- Spécifie le nom d’un fichier réponse contenant les réponses aux questions d’invite de commandes pour chaque champ de données quand une copie en bloc est effectuée en mode interactif (**-n**, **-c**, **-w**ou **-N** non spécifié).  
+**-i** _**input\_file**_<a name="i"></a>  
+Spécifie le nom d’un fichier réponse contenant les réponses aux questions d’invite de commandes pour chaque champ de données quand une copie en bloc est effectuée en mode interactif (**-n**, **-c**, **-w**ou **-N** non spécifié).  
   
- Si *input_file* commence par un trait d’union (-) ou une barre oblique (/), n’incluez pas d’espace entre **-i** et la valeur *input_file* .  
+Si *input_file* commence par un trait d’union (-) ou une barre oblique (/), n’incluez pas d’espace entre **-i** et la valeur *input_file* .  
   
- **-k**<a name="k"></a>  
- Pendant l’opération, les colonnes vides doivent conserver une valeur NULL et les colonnes insérées ne doivent pas prendre de valeur par défaut. Pour plus d’informations, consultez [Conserver les valeurs NULL ou utiliser la valeur par défaut lors de l’importation en bloc &#40;SQL Server&#41;](../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md).  
+**-k**<a name="k"></a>  
+Pendant l’opération, les colonnes vides doivent conserver une valeur NULL et les colonnes insérées ne doivent pas prendre de valeur par défaut. Pour plus d’informations, consultez [Conserver les valeurs NULL ou utiliser la valeur par défaut lors de l’importation en bloc &#40;SQL Server&#41;](../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md).  
   
- **-K** _**application\_intent**_<a name="K"></a>   
- Déclare le type de la charge de travail de l'application lors de la connexion à un serveur. La seule valeur possible est **ReadOnly**(lecture seule). Si **-K** n’est pas spécifié, l’utilitaire bcp ne prend pas en charge la connectivité à un réplica secondaire dans un groupe de disponibilité Always On. Pour plus d’informations, consultez [Secondaires actifs : réplicas secondaires lisibles &#40;groupes de disponibilité Always On&#41;](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
+**-K** _**application\_intent**_<a name="K"></a>   
+Déclare le type de la charge de travail de l'application lors de la connexion à un serveur. La seule valeur possible est **ReadOnly**(lecture seule). Si **-K** n’est pas spécifié, l’utilitaire bcp ne prend pas en charge la connectivité à un réplica secondaire dans un groupe de disponibilité Always On. Pour plus d’informations, consultez [Secondaires actifs : réplicas secondaires lisibles &#40;groupes de disponibilité Always On&#41;](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
- **-L** _**last\_row**_<a name="L"></a>  
- Spécifie le numéro de la dernière ligne à exporter à partir d’une table ou à importer à partir d’un fichier de données. Ce paramètre nécessite une valeur supérieure à (>) 0 mais inférieure (<) ou égale au (=) numéro de la dernière ligne. En l'absence de ce paramètre, la valeur par défaut est la dernière ligne du fichier.  
+**-L** _**last\_row**_<a name="L"></a>  
+Spécifie le numéro de la dernière ligne à exporter à partir d’une table ou à importer à partir d’un fichier de données. Ce paramètre nécessite une valeur supérieure à (>) 0 mais inférieure (<) ou égale au (=) numéro de la dernière ligne. En l'absence de ce paramètre, la valeur par défaut est la dernière ligne du fichier.  
   
- *last_row* peut être un entier positif avec une valeur maximale de 2^63-1.  
+*last_row* peut être un entier positif avec une valeur maximale de 2^63-1.  
   
 **-m** _**max\_errors**_<a name="m"></a>  
 Spécifie le nombre maximal d’erreurs de syntaxe toléré avant l’annulation de l’opération **bcp** . Une erreur de syntaxe implique une erreur de conversion de données vers le type de données cible. Le total *max_errors* exclut les erreurs pouvant être détectées uniquement sur le serveur, telles que des violations de contrainte.  
@@ -313,7 +359,7 @@ Copie en bloc en faisant appel aux types de données natifs (base de données) d
  **-q**<a name="q"></a>  
  Exécute l’instruction SET QUOTED_IDENTIFIERS ON dans la connexion entre l’utilitaire **bcp** et une instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Utilisez cette option pour spécifier un nom de base de données, de propriétaire, de table ou de vue contenant un espace ou un guillemet simple. Mettez entre guillemets doubles (" ") les trois parties du nom de la table ou de la vue.  
   
- Pour spécifier un nom de base de données comportant un espace ou un guillemet simple, vous devez utiliser l’option **–q** .  
+ Pour spécifier un nom de base de données comportant un espace ou un guillemet simple, vous devez utiliser l’option **-q** .  
   
  **-q** ne s’applique pas aux valeurs transmises à **-d**.  
   
@@ -339,7 +385,7 @@ Copie en bloc en faisant appel aux types de données natifs (base de données) d
  Si *field_term* commence par un trait d’union (-) ou une barre oblique (/), n’incluez pas d’espace entre **-t** et la valeur *field_term* .  
   
  **-T**<a name="T"></a>  
- Spécifie que l'utilitaire **bcp** se connecte à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] avec une connexion approuvée qui utilise la sécurité intégrée. Les informations d’identification de sécurité de l’utilisateur réseau, *login_id*et *password* , ne sont pas requises. Si **–T** n’est pas spécifié, vous devez indiquer **–U** et **–P** pour pouvoir vous connecter.
+ Spécifie que l'utilitaire **bcp** se connecte à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] avec une connexion approuvée qui utilise la sécurité intégrée. Les informations d’identification de sécurité de l’utilisateur réseau, *login_id*et *password* , ne sont pas requises. Si **-T** n’est pas spécifié, vous devez indiquer **-U** et **-P** pour vous connecter.
  
 > [!IMPORTANT]
 > Quand l’utilitaire **bcp** se connecte à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] via une connexion approuvée utilisant la sécurité intégrée, utilisez l’option **-T** (connexion approuvée) à la place de la combinaison *user name* et *password* . Lorsque l’utilitaire **bcp** se connecte à la base de données SQL ou à SQL Data Warehouse à l’aide de l’authentification Windows, ou lorsque l’authentification Azure Active Directory n’est pas prise en charge. Utilisez les options **-U** et **-P** . 
@@ -661,3 +707,8 @@ bcp.exe MyTable out "D:\data.csv" -T -c -C 65001 -t , ...
  [Fichiers de format pour l’importation ou l’exportation de données &#40;SQL Server&#41;](../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)  
   
   
+## <a name="feedback"></a>Commentaires
+
+![needhelp_person_icon](../ssms/media/needhelp_person_icon.png) [Forum des outils clients SQL](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqltools)
+
+[!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

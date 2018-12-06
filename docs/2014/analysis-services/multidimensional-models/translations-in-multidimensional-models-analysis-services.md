@@ -65,8 +65,8 @@ ms.locfileid: "48218939"
   
     |Identificateur de langue spécifié|Identificateur de langue de remplacement|  
     |-----------------------------------|-----------------------------------|  
-    |3076 - Chinois (RAS de Hong Kong, RPC)|1028 - Chinois (Taïwan)|  
-    |5124 - Chinois (RAS de Macao)|1028 - Chinois (Taïwan)|  
+    |3076 - Chinois (Hong Kong (R.A.S.), RPC)|1028 - Chinois (Taïwan)|  
+    |5124 - Chinois (Macao (R.A.S.))|1028 - Chinois (Taïwan)|  
     |1028 - Chinois (Taïwan)|Langue par défaut|  
     |4100 - Chinois (Singapour)|2052 - Chinois (RPC)|  
     |2074 - Croate|Langue par défaut|  

@@ -130,8 +130,8 @@ SELECT * FROM sys.fn_helpcollations() WHERE name NOT LIKE 'SQL%';
 |Bosniaque (Bosnie-Herzégovine, cyrillique)|Bosnian_Cyrillic_100_|Non disponible|  
 |Bosniaque (Bosnie-Herzégovine, latin)|Bosnian_Latin_100_|Non disponible|  
 |Breton (France)|Breton_100_|Non disponible|  
-|Chinese (Macao SAR)|Chinese_Traditional_Pinyin_100_|Non disponible|  
-|Chinese (Macao SAR)|Chinese_Traditional_Stroke_Order_100_|Non disponible|  
+|Chinese (Macao (R.A.S.))|Chinese_Traditional_Pinyin_100_|Non disponible|  
+|Chinese (Macao (R.A.S.))|Chinese_Traditional_Stroke_Order_100_|Non disponible|  
 |Chinese (Singapore)|Chinese_Simplified_Stroke_Order_100_|Non disponible|  
 |Corse (France)|Corsican_100_|Non disponible|  
 |Croate (Bosnie-Herzégovine, latin)|Croatian_100_|Non disponible|  

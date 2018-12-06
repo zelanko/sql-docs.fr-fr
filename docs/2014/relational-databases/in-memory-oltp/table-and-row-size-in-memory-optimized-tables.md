@@ -12,7 +12,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9a21072b90c0e263e4ac561bdad23aea8f0b1fd7
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48084579"
@@ -99,17 +99,17 @@ Table mémoire optimisée, comportant des index et des lignes.
   
  ![Structure d’une table qui comporte deux colonnes et index.](../../database-engine/media/hekaton-tables-5.gif "Structure d’une table qui comporte deux colonnes et index.")  
   
- Dans cette illustration, les noms John et Jane sont hachés vers le premier compartiment. Susan est hachée vers le deuxième compartiment. Pékin et Bogota sont hachés vers le premier compartiment. Paris et Prague sont hachés vers le deuxième compartiment.  
+ Dans cette illustration, les noms John et Jane sont hachés vers le premier compartiment. Susan est hachée vers le deuxième compartiment. Beijing et Bogota sont hachés vers le premier compartiment. Paris et Prague sont hachés vers le deuxième compartiment.  
   
  Par conséquent, les chaînes de l'index de hachage sur le nom sont les suivantes :  
   
--   Première compartiment : (John, Pékin) ; (Jane, Prague)  
+-   Première compartiment : (John, Beijing) ; (Jane, Prague)  
   
 -   Deuxième compartiment : (Susan, Bogota)  
   
  Les chaînes de l'index de la ville sont les suivantes :  
   
--   Première compartiment : (John, Pékin), (Susan, Bogota)  
+-   Première compartiment : (John, Beijing), (Susan, Bogota)  
   
 -   Deuxième compartiment : (John, Paris), (Jane, Prague)  
   
@@ -119,7 +119,7 @@ Table mémoire optimisée, comportant des index et des lignes.
   
 |Nom   |Ville|  
 |----------|----------|  
-|John|Pékin|  
+|John|Beijing|  
 |Jane|Prague|  
   
  Toutefois, toutes les transactions actives avec une heure de début 100 verront la version de la table suivante :  

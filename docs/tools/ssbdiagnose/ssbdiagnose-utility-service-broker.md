@@ -26,12 +26,12 @@ ms.assetid: 0c1636e8-a3db-438e-be4c-1ea40d1f4877
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 66a576c33b805fb350b465ea47d2588e0dae7036
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: 23985f7a9c78993e154babdcbdd9980334f0fc36
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51291786"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541324"
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>Utilitaire ssbdiagnose (Service Broker)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -93,7 +93,7 @@ ssbdiagnose
   [ CONNECT TO <connectionoptions> ] [ ...n]  
   
 <connectionoptions> ::=  
-    [ –E | { -U login_id [ -P password ] } ]  
+    [ -E | { -U login_id [ -P password ] } ]  
   [ -S server_name[\instance_name] ]  
   [ -d database_name ]  
   [ -l login_timeout ]  
@@ -207,7 +207,7 @@ WHERE database_id = DB_ID();
  **\<runtimeconnectionoptions >**  
  Spécifie les informations de connexion pour les bases de données contenant les services associés aux éléments de conversation qui sont surveillés. Si tous les services se trouvent dans la même base de données, vous ne devez spécifier qu’une seule clause **CONNECT TO** . Si les services se trouvent dans des bases de données séparées, vous devez fournir une clause **CONNECT TO** pour chaque base de données. Si **runtimeconnectionoptions** n’est pas spécifié, **ssbdiagnose** utilise les informations de connexion de **baseconnectionoptions**.  
   
- **–E**  
+ **-E**  
  Ouvrir une connexion par le biais de l’authentification Windows à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] en utilisant votre compte Windows actuel comme ID de connexion. La connexion doit être membre du rôle serveur fixe **sysadmin** .  
   
  L'option -E ignore les paramètres d'utilisateur et de mot de passe des variables d'environnement SQLCMDUSER et SQLCMDPASSWORD.  
@@ -221,9 +221,9 @@ WHERE database_id = DB_ID();
   
  Si ni l’option **-E** ni l’option **-U** n’est spécifiée, **ssbdiagnose** utilise la valeur de la variable d’environnement SQLCMDUSER. Si cette variable n’est pas définie non plus, **ssbdiagnose** essaie de se connecter en utilisant le mode d’authentification Windows sur la base du compte Windows de l’utilisateur qui exécute **ssbdiagnose**.  
   
- Si l’option **-U** est utilisée avec l’option **-E** , un message d’erreur est généré. Si l’option **–U** est suivie de plusieurs arguments, un message d’erreur est généré et le programme se termine.  
+ Si l’option **-U** est utilisée avec l’option **-E** , un message d’erreur est généré. Si l’option **-U** est suivie de plusieurs arguments, un message d’erreur est généré et le programme se termine.  
   
- **-P** *mot_de_passe*  
+ **-P** *mot de passe*  
  Spécifie le mot de passe de l’ID de connexion **-U** . Les mots de passe respectent la casse. Si vous utilisez l’option **-U** mais pas l’option **-P** , **ssbdiagnose** utilise la valeur de la variable d’environnement SQLCMDPASSWORD. Si cette variable n’est pas définie non plus, **ssbdiagnose** invite l’utilisateur à entrer un mot de passe.  
   
 > [!IMPORTANT]  
