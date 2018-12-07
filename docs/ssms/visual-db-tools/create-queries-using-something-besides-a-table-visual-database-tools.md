@@ -14,12 +14,12 @@ ms.assetid: 8e4a1f0a-8a42-4733-be8d-e21d6dbddb33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 23c5961e3cc5c194690f99c8e614adf402ef31c7
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 86bd76e7d1e4cfce15343355a915d5d1bf5a0d9d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701956"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504083"
 ---
 # <a name="create-queries-using-something-besides-a-table-visual-database-tools"></a>Créer des requêtes qui utilisent autre chose qu'une table (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -133,7 +133,7 @@ Pour plus d’informations sur l’ajout d’une requête à une requête, consu
 ## <a name="using-a-user-defined-function-in-place-of-a-table"></a>Utilisation d'une fonction définie par l'utilisateur à la place d'une table  
 Dans SQL Server 2000 ou une version ultérieure, vous pouvez créer une fonction définie par l'utilisateur et retournant une table. Ce type de fonction permet d'utiliser une logique complexe ou procédurale.  
   
-Par exemple, supposons que la table employee contienne une colonne supplémentaire, employee.manager_emp_id, et qu'il existe une clé étrangère entre manager_emp_id et employee.emp_id. Sur chaque ligne de la table employee, la colonne manager_emp_id indique le supérieur hiérarchique de l'employé. Plus précisément, elle indique l'ID d'employé du responsable hiérarchique. La fonction que vous créez pourra renvoyer une table contenant une ligne par employé dépendant d'un responsable hiérarchique dont vous préciserez le niveau. Appelons cette fonction fn_GetWholeTeam et prévoyons dans son design l'utilisation d'une variable d'entrée — l'ID d'employé du responsable de l'équipe à extraire.  
+Par exemple, supposons que la table employee contienne une colonne supplémentaire, employee.manager_emp_id, et qu'il existe une clé étrangère entre manager_emp_id et employee.emp_id. Sur chaque ligne de la table employee, la colonne manager_emp_id indique le supérieur hiérarchique de l'employé. Plus précisément, elle indique l'ID d'employé du responsable hiérarchique. La fonction que vous créez pourra renvoyer une table contenant une ligne par employé dépendant d'un responsable hiérarchique dont vous préciserez le niveau. Appelons cette fonction fn_GetWholeTeam et prévoyons dans son design l’utilisation d’une variable d’entrée (l’ID d’employé du responsable de l’équipe à récupérer).  
   
 Il est possible d'écrire une requête utilisant la fonction fn_GetWholeTeam comme source de données. L'instruction SQL obtenue peut se présenter de la manière suivante :  
   

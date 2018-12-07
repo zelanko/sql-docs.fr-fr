@@ -14,12 +14,12 @@ ms.assetid: bed670a3-13bd-4d88-91a1-58d5b9524a97
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b7215ed9f2374a46ffd5034ce8a85ab0f40419ed
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c564788a1d77d9af83de28a2b4dbea022ea28ec1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840227"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530787"
 ---
 # <a name="how-to-create-a-snapshot-of-a-project"></a>Procédure : créer une capture instantanée d'un projet
 Chaque fichier d'**application de la couche Données** vous fournit une représentation en lecture seule du schéma de la base de données au moment de la création de l'instantané. Il est essentiellement traité comme un schéma de base de données à partir duquel vous pouvez réimporter les objets de schéma vers un projet. Vous pouvez aussi le comparer au schéma d'une base de données ou d'un projet, et mettre à jour la base de données ou le projet pour refléter le schéma défini dans l'instantané.  
@@ -31,11 +31,11 @@ Si une erreur utilisateur se produit dans un projet de base de données source, 
   
 ### <a name="to-create-a-snapshot"></a>Pour créer un instantané  
   
-1.  Dans l'**Explorateur de solutions**, cliquez avec le bouton droit sur le projet **TradeDev** et sélectionnez**Application de la couche Données (\*.dacpac)...**.  
+1.  Dans l’**Explorateur de solutions**, cliquez avec le bouton droit sur le projet **TradeDev** et sélectionnez**Application de la couche Données (\*.dacpac)...**.  
   
 2.  SSDT tentera de générer le projet en premier. Si aucune erreur de build n'est détectée, un dossier **Instantané** est créé dans l'**Explorateur de solutions**. Dans ce dossier, SSDT crée un fichier .dacpac au format de nom « <Project Name>_YYYYMMDD_HH-MM-SS.dacpac ».  
   
-3.  Cliquez avec le bouton droit sur le fichier .dacpac et sélectionnez **Renommer**. Remplacez le nom du fichier par défaut par TradeDev1.dacpac.  
+3.  Cliquez avec le bouton droit sur le fichier .dacpac et sélectionnez **Renommer**. Remplacez le nom du fichier par défaut par « TradeDev1.dacpac ».  
   
 4.  Dans l'**Explorateur de solutions**, cliquez avec le bouton droit sur la fonction **GetProductsBySupplier**, puis sélectionnez **Supprimer** pour la supprimer du projet.  
   
@@ -43,7 +43,7 @@ Si une erreur utilisateur se produit dans un projet de base de données source, 
   
 ### <a name="to-import-a-snapshot"></a>Pour importer un instantané  
   
-1.  Dans l'**Explorateur de solutions**, cliquez avec le bouton droit sur le projet **TradeDev** et sélectionnez **Importer**, puis **Application de la couche Données (\*.dacpac)...** dans les menus contextuels.  
+1.  Dans l’**Explorateur de solutions**, cliquez avec le bouton droit sur le projet **TradeDev**. Sélectionnez **Importer**, puis **Application de la couche Données (\*.dacpac)...** dans les menus contextuels.  
   
 2.  Dans la boîte de dialogue **Importer l'application de la couche Données**, cliquez sur **Parcourir** pour sélectionner le fichier **TradeDev1.dacpac** à utiliser comme source de l'importation.  
   

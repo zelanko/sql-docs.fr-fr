@@ -11,12 +11,12 @@ ms.assetid: d304c94d-3ab4-47b0-905d-3c8c2aba9db6
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 2093e1445f7328090d71c6c133960597da5ddf6e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0fe8886c5c826a6535a7d9898ad7d6f30756effd
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650147"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52419910"
 ---
 # <a name="durability-for-memory-optimized-tables"></a>Durabilité pour les tables optimisées en mémoire
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -102,7 +102,7 @@ ms.locfileid: "47650147"
 |CFP0 (30%), CFP1 (20%), CFP2 (50%), CFP3 (10%)|(CFP0, CFP1, CFP2). Les fichiers sont sélectionnés à partir de la gauche.<br /><br /> CTP3 n'est pas choisi car le fichier de données résultant sera supérieur à 100 % de la taille idéale.|  
 |CFP0 (80%), CFP1 (30%), CFP2 (10%), CFP3 (40%)|(CFP1, CFP2, CFP3). Les fichiers sont sélectionnés à partir de la gauche.<br /><br /> CFP0 est ignoré car si associé à CFP1, le fichier de données résultant sera supérieur à 100 % de la taille idéale.|  
   
- Toutes les paires de fichiers de point de contrôle avec de l'espace disponible ne sont pas qualifiées pour la fusion. Par exemple, si deux paires de fichiers de point de contrôle adjacentes sont complètes à 60 %, elles ne seront pas qualifiées pour la fusion et chacune des paires aura 40 % de stockage inutilisé. Dans le pire des cas, toutes les paires de fichiers de point de contrôle seront complètes à 50%, soit une utilisation du stockage de seulement 50 %. Alors que des lignes supprimées peuvent exister dans le stockage car les paires de fichiers de contrôle ne sont pas qualifiées pour la fusion, les lignes supprimées peuvent déjà avoir été supprimées de la mémoire par le garbage collection en mémoire. La gestion du stockage et de la mémoire est indépendante du garbage collection. Le stockage pris par des paires de fichiers de point de contrôle actives (certaines paires de fichiers de point de contrôle n'ont pas été mises à jour) peut être jusqu'à 2 fois supérieur à la taille des tables durables en mémoire.  
+ Toutes les paires de fichiers de point de contrôle avec de l'espace disponible ne sont pas qualifiées pour la fusion. Par exemple, si deux paires de fichiers de point de contrôle adjacentes sont complètes à 60 %, elles ne seront pas qualifiées pour la fusion et chacune des paires aura 40 % de stockage inutilisé. Dans le pire des cas, toutes les paires de fichiers de point de contrôle seront complètes à 50%, soit une utilisation du stockage de seulement 50 %. Alors que les lignes supprimées peuvent exister dans le stockage car les paires de fichiers de contrôle ne sont pas qualifiées pour la fusion, les lignes supprimées peuvent déjà avoir été supprimées de la mémoire par le garbage collection en mémoire. La gestion du stockage et de la mémoire est indépendante du garbage collection. Le stockage pris par des paires de fichiers de point de contrôle actives (certaines paires de fichiers de point de contrôle n'ont pas été mises à jour) peut être jusqu'à 2 fois supérieur à la taille des tables durables en mémoire.  
   
 ### <a name="life-cycle-of-a-cfp"></a>Cycle de vie d'une paire de fichiers de point de contrôle  
  Les fichiers CFP traversent plusieurs états avant de pouvoir être libérés. Les points de contrôle de base de données et les sauvegardes du journal sont indispensables au passage des fichiers par les différentes phases et au nettoyage final des fichiers superflus. Pour obtenir une description de ces phases, consultez [sys.dm_db_xtp_checkpoint_files &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql.md).  

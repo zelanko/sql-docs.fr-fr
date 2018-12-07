@@ -56,12 +56,12 @@ ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d0b16356be0c36f48f9e82b4a49e483c3eac529b
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 42247b11f00524ba08dd74f41f11da35fdcb2026
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51704087"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530353"
 ---
 # <a name="hints-transact-sql---query"></a>Indicateurs (Transact-SQL) - Requête
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -287,7 +287,7 @@ ms.locfileid: "51704087"
    > [!NOTE]
    > L’indicateur QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n ne remplace pas le paramètre d’estimation de cardinalité héritée ou par défaut, s’il est forcé via la configuration délimitée à la base de données, l’indicateur de suivi ou un autre indicateur de requête comme QUERYTRACEON.   
    > Cet indicateur affecte uniquement le comportement de l’optimiseur de requête. Il n’affecte pas les autres fonctionnalités de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui peuvent dépendre du [niveau de compatibilité de base de données](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md), comme la disponibilité de certaines fonctionnalités de la base de données.  
-   > Pour en savoir plus sur cet indicateur, consultez [Choix du développeur : modèle d’exécution de requête d’indicateur](https://blogs.msdn.microsoft.com/sql_server_team/developers-choice-hinting-query-execution-model).
+   > Pour en savoir plus sur cet indicateur, consultez [Developer’s Choice: Hinting Query Execution model](https://blogs.msdn.microsoft.com/sql_server_team/developers-choice-hinting-query-execution-model).
     
 *  'QUERY_PLAN_PROFILE'      
  Permet un profilage léger pour la requête. À la fin d’une requête contenant ce nouvel indicateur, un nouvel événement étendu, query_plan_profile, est déclenché. Cet événement étendu expose les statistiques d’exécution et le plan d’exécution réel XML semblable à l’événement étendu query_post_execution_showplan, mais uniquement pour les requêtes qui contiennent le nouvel indicateur. **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2CU3 et [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU11). 
@@ -296,7 +296,7 @@ ms.locfileid: "51704087"
   > Si vous activez la collecte de l’événement étendu query_post_execution_showplan, cette opération ajoutera l’infrastructure de profilage standard à chaque requête qui est en cours d’exécution sur le serveur et pourra, par conséquent, affecter les performances globales du serveur.      
   > Si vous activez la collection de l’événement étendu *query_thread_profile* pour utiliser l’infrastructure à profilage léger à la place, la performance sera beaucoup plus faible, mais les performances globales du serveur seront quand même affectées.       
   > Si vous activez l’événement étendu query_plan_profile, cela activera uniquement l’infrastructure de profilage léger pour une requête exécutée avec le QUERY_PLAN_PROFILE et, par conséquent, n’affectera pas d’autres charges de travail sur le serveur. Utilisez cet indicateur pour profiler une requête spécifique sans affecter d’autres parties de la charge de travail du serveur.
-  > Pour en savoir plus sur le profilage léger, consultez le billet de blog [Developers Choice: Query progress – anytime, anywhere](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/) (état d’avancement des requêtes : à tout moment, partout).
+  > Pour en savoir plus sur le profilage léger, consultez [Developers Choice: Query progress - anytime, anywhere](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/).
  
 Vous pouvez obtenir la liste de tous les noms d’indicateur USE HINT pris en charge en effectuant une requête sur la vue de gestion dynamique [sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md).    
 

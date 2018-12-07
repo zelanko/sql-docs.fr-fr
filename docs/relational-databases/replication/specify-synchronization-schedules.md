@@ -16,12 +16,12 @@ ms.assetid: 97f2535b-ec19-4973-823d-bcf3d5aa0216
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5c662d888d627b6dcce3d43161d16aee50a994ec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5b28271ae8ba64b9c07987f50891099ce46dda35
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668517"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523313"
 ---
 # <a name="specify-synchronization-schedules"></a>Spécifier des planifications de synchronisation
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -328,7 +328,7 @@ ms.locfileid: "47668517"
   
 ## <a name="see-also"></a> Voir aussi  
  [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)   
- [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
+ [S’abonner aux Publications](../../relational-databases/replication/subscribe-to-publications.md)   
  [Synchroniser un abonnement par émission de données](../../relational-databases/replication/synchronize-a-push-subscription.md)   
  [Synchroniser un abonnement par extraction](../../relational-databases/replication/synchronize-a-pull-subscription.md)   
  [Synchroniser les données](../../relational-databases/replication/synchronize-data.md)  

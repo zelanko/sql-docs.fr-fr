@@ -7,12 +7,12 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint
 ms.topic: conceptual
 ms.date: 09/15/2017
-ms.openlocfilehash: 7d45e74b7d4079094c37b449eece3b62406ae13f
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: d5a771bc28d4c6a6f248925d329fa708c4135f8d
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50020593"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52397153"
 ---
 # <a name="claims-to-windows-token-service-c2wts-and-reporting-services"></a>Service d'émission de jetons Revendications vers Windows (C2WTS) et Reporting Services
 
@@ -90,7 +90,7 @@ Si votre environnement utilise la délégation contrainte Kerberos, le service S
 
 3. Configurer les *appelants autorisés* dans C2WTS
 
-    C2WTS requiert que les identités des appelants soient explicitement répertoriées dans le fichier de configuration, **c2WTShost.exe.config**. C2WTS n'accepte pas de demandes de tous les utilisateurs authentifiés dans le système, sauf s'il est configuré pour cela. Dans ce cas, l’appelant est le groupe Windows WSS_WPG. Le fichier C2WTShost.exe.confi est enregistré à l’emplacement suivant :
+    C2WTS exige que les identités des appelants soient explicitement listées dans le fichier de configuration **c2WTShost.exe.config**. C2WTS n'accepte pas de demandes de tous les utilisateurs authentifiés dans le système, sauf s'il est configuré pour cela. Dans ce cas, l’appelant est le groupe Windows WSS_WPG. Le fichier C2WTShost.exe.confi est enregistré à l’emplacement suivant :
 
     La modification du compte de service dans l’Administration centrale de SharePoint, pour le service C2WTS, ajoute ce compte au groupe WSS_WPG.
 

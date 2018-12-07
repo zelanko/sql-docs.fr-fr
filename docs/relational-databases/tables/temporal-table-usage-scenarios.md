@@ -11,12 +11,12 @@ ms.assetid: 4b8fa2dd-1790-4289-8362-f11e6d63bb09
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: f0c9ddcd2fecd498e6bb00458bfde1e07b1d431b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f25c7527000cb95878b60f4dfe05be4b47f943bb
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747437"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532741"
 ---
 # <a name="temporal-table-usage-scenarios"></a>Scénarios d’utilisation de table temporelle
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -136,9 +136,9 @@ FROM Employee
   
 > [!TIP]  
 >  Les conditions de filtrage spécifiées dans des clauses temporelles avec FOR SYSTEM_TIME sont dites « SARG-able » ; en d’autres termes, SQL Server peut utiliser un index cluster sous-jacent pour effectuer une recherche au lieu d’une opération d’analyse.   
-> Si vous interrogez directement la table de l’historique, vérifiez que votre condition de filtrage est également « SARG-able » en spécifiant des filtres sous la forme \<colonne de période>  {< | > | =, …} condition_date AT TIME ZONE ‘UTC’.  
+> Si vous interrogez directement la table d’historique, vérifiez que votre condition de filtrage est aussi « SARG-able » en spécifiant des filtres sous la forme \<colonne de période>  {< | > | =, ...} date_condition AT TIME ZONE 'UTC'.  
 > Si vous appliquez AT TIME ZONE à des colonnes de période, SQL Server effectue une analyse de table/index, qui peut être très coûteuse. Évitez ce type de condition dans vos requêtes :  
-> \<colonne de période>  AT TIME ZONE '\<votre fuseau horaire>'  >  {< | > | =, …} condition_date.  
+> \<colonne de période>  AT TIME ZONE '\<votre fuseau horaire>'  >  {< | > | =, ...} condition_date.  
   
  Voir aussi [Interrogation des données dans une table temporelle avec versions gérées par le système](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md).  
   
@@ -147,7 +147,7 @@ FROM Employee
   
 -   Tendances des indicateurs importants dans les données historiques et les données actuelles  
   
--   Instantané exact de la totalité des données « depuis » (AS OF) n’importe quel point passé dans le temps (hier, il y a un mois , etc.)  
+-   Instantané exact de la totalité des données « depuis » (AS OF) n’importe quel instant dans le passé (hier, il y a un mois, etc.)  
   
 -   Différences entre deux points dans le temps dignes d’intérêt (il y a un mois et il y a trois mois, par exemple)  
   
@@ -368,7 +368,7 @@ JOIN vw_ProductInventoryDetails FOR SYSTEM_TIME AS OF @monthAgo AS inventoryMont
 Vous pouvez utiliser des tables temporelles avec version système pour détecter les anomalies qui se produisent régulièrement ou irrégulièrement, et vous pouvez effectuer des interrogations temporelles pour localiser rapidement des modèles spécifiques.  
 Le type de données que vous collectez et votre logique métier déterminent la nature des anomalies.  
   
- L’exemple suivant montre une logique simplifiée pour la détection des « pics » dans les chiffres de ventes. Supposons que vous travaillez avec une table temporelle qui collecte l’historique des produits achetés :  
+ L’exemple suivant illustre une logique simplifiée pour la détection des « pics » dans les chiffres de ventes. Supposons que vous travaillez avec une table temporelle qui collecte l’historique des produits achetés :  
   
 ```  
 CREATE TABLE [dbo].[Product]  
@@ -446,7 +446,7 @@ FROM CTE
  L’exemple suivant illustre ce processus et suppose que la table de dimension DimLocation possède déjà ValidFrom et ValidTo en tant que colonnes datetime2 remplies par le processus ETL et n’acceptant pas de valeurs NULL :  
   
 ```  
-/*Move “closed” row versions into newly created history table*/  
+/*Move "closed" row versions into newly created history table*/  
 SELECT * INTO  DimLocationHistory  
     FROM DimLocation  
         WHERE ValidTo < '9999-12-31 23:59:59.99';  

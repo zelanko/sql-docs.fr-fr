@@ -15,12 +15,12 @@ ms.assetid: dc842a10-0586-4b0f-9775-5ca0ecc761d9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 894570fc0f262c499bcadffc5c8d6d4bf6549b67
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 75f0c0b036a261c7262934f1ac03c4a0edf4e2f5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674957"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526708"
 ---
 # <a name="load-files-into-filetables"></a>Charger des fichiers dans FileTables
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -89,7 +89,7 @@ UPDATE PhotoMetadata
   
     -   BULK INSERT avec clause CHECK_CONSTRAINTS.  
   
-    -   INSERT INTO … SELECT * FROM OPENROWSET(BULK …) sans clause IGNORE_CONSTRAINTS.  
+    -   INSERT INTO ... SELECT * FROM OPENROWSET(BULK ...) sans clause IGNORE_CONSTRAINTS.  
   
 -   Les opérations de chargement en masse qui n'imposent pas de contraintes échouent à moins que les contraintes de FileTable définies par le système aient été désactivées. Cette catégorie comprend les opérations suivantes :  
   
@@ -97,7 +97,7 @@ UPDATE PhotoMetadata
   
     -   BULK INSERT sans clause CHECK_CONSTRAINTS.  
   
-    -   INSERT INTO … SELECT * FROM OPENROWSET(BULK …) avec clause IGNORE_CONSTRAINTS.  
+    -   INSERT INTO ... SELECT * FROM OPENROWSET(BULK ...) avec clause IGNORE_CONSTRAINTS.  
   
 ###  <a name="HowToBulkLoad"></a> Procédure : charger des fichiers en masse dans un FileTable  
  Vous pouvez faire appel à différentes méthodes pour charger en masse des fichiers dans un FileTable :  
@@ -114,7 +114,7 @@ UPDATE PhotoMetadata
   
     -   Désactivez l’espace de noms FileTable et effectuez un appel sans la clause **CHECK_CONSTRAINTS** . Ensuite, réactivez l'espace de noms FileTable.  
   
--   **INSERT INTO … SELECT \* FROM OPENROWSET(BULK …)**  
+-   **INSERT INTO ... SELECT \* FROM OPENROWSET(BULK ...)**  
   
     -   Effectuez un appel avec la clause **IGNORE_CONSTRAINTS** .  
   

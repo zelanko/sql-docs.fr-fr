@@ -28,12 +28,12 @@ ms.assetid: 0261ed9e-3b01-4e37-a9d4-d039c41029b6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 964ebe774bb33279fef618b31f5edc2bdb73266f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 141810965960031cf004f9c9999943760bc6c810
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701627"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532083"
 ---
 # <a name="package-management-ssis-service"></a>Gestion de packages (Service SSIS)
   La gestion de packages inclut la surveillance, la gestion, l’importation et l’exportation de packages.  
@@ -127,7 +127,7 @@ Pour arrêter un package en cours d’exécution dans le dossier **Exécution de
   
     -   Dans la zone **Type de serveur** , sélectionnez **Integration Services**.  
   
-    -   Dans la zone **Nom du serveur**, indiquez le nom du serveur ou cliquez sur **\<Parcourir**, puis recherchez le serveur à utiliser.  
+    -   Dans la zone **Nom du serveur**, indiquez le nom du serveur ou cliquez sur **\<Parcourir...>**, puis recherchez le serveur à utiliser.  
   
 3.  Si l'Explorateur d'objets n'est pas ouvert, dans le menu **Affichage** , cliquez sur **Explorateur d'objets**.  
   
@@ -151,7 +151,7 @@ Pour arrêter un package en cours d’exécution dans le dossier **Exécution de
   
 7.  Si vous le souhaitez, mettez à jour le nom du package.  
   
-8.  Pour mettre à jour le niveau de protection du package, cliquez sur le bouton Parcourir **(…)** et sélectionnez un niveau de protection différent dans la boîte de dialogue **Niveau de protection du package** . Si l'option **Chiffrer les données sensibles avec un mot de passe** ou **Chiffrer toutes les données avec un mot de passe** est sélectionnée, tapez un mot de passe et confirmez-le.  
+8.  Pour mettre à jour le niveau de protection du package, cliquez sur le bouton Parcourir **(...)** et sélectionnez un niveau de protection différent dans la boîte de dialogue **Niveau de protection du package** . Si l'option **Chiffrer les données sensibles avec un mot de passe** ou **Chiffrer toutes les données avec un mot de passe** est sélectionnée, tapez un mot de passe et confirmez-le.  
   
 9. Cliquez sur **OK** pour terminer l'importation.  
   
@@ -163,7 +163,7 @@ Pour arrêter un package en cours d’exécution dans le dossier **Exécution de
   
     -   Dans la zone **Type de serveur** , sélectionnez **Integration Services**.  
   
-    -   Dans la zone **Nom du serveur**, indiquez le nom du serveur ou cliquez sur **\<Parcourir**, puis recherchez le serveur à utiliser.  
+    -   Dans la zone **Nom du serveur**, indiquez le nom du serveur ou cliquez sur **\<Parcourir...>**, puis recherchez le serveur à utiliser.  
   
 3.  Si l'Explorateur d'objets n'est pas ouvert, dans le menu **Affichage** , cliquez sur **Explorateur d'objets**.  
   
@@ -175,17 +175,17 @@ Pour arrêter un package en cours d’exécution dans le dossier **Exécution de
   
     -   Pour exporter un package vers une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], sélectionnez l'option **SQL Server** , puis indiquez le serveur et sélectionnez le mode d'authentification. Si vous sélectionnez l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , indiquez un nom d'utilisateur et un mot de passe.  
   
-         Cliquez sur le bouton Parcourir **(…)**, puis développez le dossier **Packages SSIS** pour rechercher le dossier dans lequel enregistrer le package. Si vous le souhaitez, mettez à jour le nom par défaut du package, puis cliquez sur **OK**.  
+         Cliquez sur le bouton Parcourir **(...)**, puis développez le dossier **Packages SSIS** pour rechercher le dossier dans lequel enregistrer le package. Si vous le souhaitez, mettez à jour le nom par défaut du package, puis cliquez sur **OK**.  
   
     -   Pour exporter un package vers le système de fichiers, sélectionnez l'option **Système de fichiers** .  
   
-         Cliquez sur le bouton Parcourir **(…)** pour rechercher le dossier dans lequel exporter le package, tapez le nom du fichier de package, puis cliquez sur **Enregistrer**.  
+         Cliquez sur le bouton Parcourir **(...)** pour rechercher le dossier dans lequel exporter le package, tapez le nom du fichier de package, puis cliquez sur **Enregistrer**.  
   
     -   Pour exporter un package vers le magasin de packages [!INCLUDE[ssIS](../../includes/ssis-md.md)] , sélectionnez l'option **Magasin de packages SSIS** , puis indiquez le serveur.  
   
-         Cliquez sur le bouton Parcourir **(…)**, développez le dossier **Packages SSIS** , puis sélectionnez le dossier dans lequel enregistrer le package. Si vous le souhaitez, entrez un nouveau nom pour le package dans la zone de texte **Nom du package** . [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+         Cliquez sur le bouton Parcourir **(...)**, développez le dossier **Packages SSIS**, puis sélectionnez le dossier dans lequel enregistrer le package. Si vous le souhaitez, entrez un nouveau nom pour le package dans la zone de texte **Nom du package** . [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-7.  Pour mettre à jour le niveau de protection du package, cliquez sur le bouton Parcourir **(…)** et sélectionnez un niveau de protection différent dans la boîte de dialogue **Niveau de protection du package**. Si l'option **Chiffrer les données sensibles avec un mot de passe** ou **Chiffrer toutes les données avec un mot de passe** est sélectionnée, tapez un mot de passe et confirmez-le.  
+7.  Pour mettre à jour le niveau de protection du package, cliquez sur le bouton Parcourir **(...)** et sélectionnez un niveau de protection différent dans la boîte de dialogue **Niveau de protection du package** . Si l'option **Chiffrer les données sensibles avec un mot de passe** ou **Chiffrer toutes les données avec un mot de passe** est sélectionnée, tapez un mot de passe et confirmez-le.  
   
 8.  Cliquez sur **OK** pour terminer l'exportation.  
 
@@ -221,13 +221,13 @@ Pour arrêter un package en cours d’exécution dans le dossier **Exécution de
  Si vous utilisez l’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , entrez un mot de passe.  
   
  **Chemin d'accès au package**  
- Tapez le chemin du package ou cliquez sur le bouton Parcourir **(…)** pour rechercher le package.  
+ Tapez le chemin du package ou cliquez sur le bouton Parcourir **(...)** pour rechercher le package.  
   
  **Nom du package**  
  Éventuellement, renommez le package. Par défaut, son nom est celui du package à importer.  
   
  **Niveau de protection**  
- Cliquez sur le bouton Parcourir **(…)** et, dans la boîte de dialogue **Niveau de protection du package** , mettez à jour le niveau de protection. Pour plus d’informations, consultez [Boîte de dialogue Niveau de protection du package](../../integration-services/security/access-control-for-sensitive-data-in-packages.md#protection_dialog).  
+ Cliquez sur le bouton Parcourir **(...)** et, dans la boîte de dialogue **Niveau de protection du package**, mettez à jour le niveau de protection. Pour plus d’informations, consultez [Boîte de dialogue Niveau de protection du package](../../integration-services/security/access-control-for-sensitive-data-in-packages.md#protection_dialog).  
 
 ## <a name="export-package-dialog-box-ui-reference"></a>Référence de l'interface utilisateur de la boîte de dialogue Exporter un package
   Utilisez la boîte de dialogue **Exporter un package** , disponible dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], pour exporter un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] vers un autre emplacement et éventuellement modifier son niveau de protection.  
@@ -261,10 +261,10 @@ Pour arrêter un package en cours d’exécution dans le dossier **Exécution de
  Si vous utilisez l’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , entrez un mot de passe.  
   
  **Chemin d'accès au package**  
- Tapez le chemin du package ou cliquez sur le bouton Parcourir **(…)** pour rechercher le dossier dans lequel stocker le package.  
+ Tapez le chemin du package ou cliquez sur le bouton Parcourir **(...)** pour rechercher le dossier dans lequel stocker le package.  
   
  **Niveau de protection**  
- Cliquez sur le bouton Parcourir **(…)** et mettez à jour le niveau de protection dans la boîte de dialogue **Niveau de protection du package** . Pour plus d’informations, consultez [Boîte de dialogue Niveau de protection du package](../../integration-services/security/access-control-for-sensitive-data-in-packages.md#protection_dialog).  
+ Cliquez sur le bouton Parcourir **(...)** et mettez à jour le niveau de protection dans la boîte de dialogue **Niveau de protection du package**. Pour plus d’informations, consultez [Boîte de dialogue Niveau de protection du package](../../integration-services/security/access-control-for-sensitive-data-in-packages.md#protection_dialog).  
 
 ## <a name="back-up-and-restore-packages"></a>Sauvegarder et restaurer les packages
   

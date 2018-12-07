@@ -15,12 +15,12 @@ ms.assetid: 47d69e37-8778-4630-809b-2261b5c41c2c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e22a148595e8aac059193a21a1b5d4688f5d6f4c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ecf449319df1d2edc24a061165a983ba08b24347
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686557"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542379"
 ---
 # <a name="create-alter-and-drop-filetables"></a>Créer, modifier et supprimer des FileTables
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -98,7 +98,7 @@ GO
   
 -   Puisqu'un FileTable contient une colonne FILESTREAM, un FileTable requiert un groupe de fichiers FILESTREAM valide. Vous pouvez éventuellement spécifier un groupe de fichiers FILESTREAM valide dans le cadre de la commande **CREATE TABLE** pour la création d'un FileTable. Si vous ne spécifiez pas de groupe de fichiers, le FileTable utilise le groupe de fichiers FILESTREAM par défaut pour la base de données. Si la base de données n'a pas de groupe de fichiers FILESTREAM, une erreur est générée.  
   
--   Vous ne pouvez pas créer de contrainte de table dans le cadre d'une instruction **CREATE TABLE…AS FILETABLE** . Toutefois, vous pouvez ajouter la contrainte ultérieurement à l'aide d'une instruction **ALTER TABLE** .  
+-   Vous ne pouvez pas créer de contrainte de table dans le cadre d’une instruction **CREATE TABLE...AS FILETABLE**. Toutefois, vous pouvez ajouter la contrainte ultérieurement à l'aide d'une instruction **ALTER TABLE** .  
   
 -   Vous ne pouvez pas créer de FileTable dans la base de données **tempdb** ni dans aucune des autres bases de données système.  
   
@@ -141,7 +141,7 @@ GO
   
 -   Le répertoire FileTable et les sous-répertoires qu'il contenait disparaissent de la hiérarchie de répertoires et de fichiers FILESTREAM de la base de données.  
   
- La commande DROP TABLE échoue si des descripteurs de fichiers sont ouverts dans l'espace de noms du fichier du FileTable. Pour plus d’informations sur la fermeture de descripteurs ouverts, consultez [Gérer des FileTables](../../relational-databases/blob/manage-filetables.md).  
+ La commande DROP TABLE échoue si des descripteurs de fichiers sont ouverts dans l’espace de noms du fichier du FileTable. Pour plus d’informations sur la fermeture de descripteurs ouverts, consultez [Gérer des FileTables](../../relational-databases/blob/manage-filetables.md).  
   
 ##  <a name="BasicsOtherObjects"></a> D'autres objets de base de données sont créés lorsque vous créez un FileTable  
  Lorsque vous créez un nouveau FileTable, quelques contraintes et index définis par le système sont également créés. Vous ne pouvez pas modifier ou supprimer ces objets ; ils disparaissent uniquement lorsque le FileTable lui-même est supprimé. Pour consulter la liste de ces objets, interrogez l’affichage catalogue [sys.filetable_system_defined_objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-filetable-system-defined-objects-transact-sql.md).  

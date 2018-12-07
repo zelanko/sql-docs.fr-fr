@@ -11,12 +11,12 @@ ms.assetid: 1c0efed1-c2b3-4f20-a3a1-ad91283b7c0a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 508f752b04307e8930b19f0175608667c5ef1d90
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 24f5bb65aa7c9545bbe1842f97e8f43546c14848
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788537"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52411486"
 ---
 # <a name="tokencount-ssis-expression"></a>TOKENCOUNT (expression SSIS)
   Retourne le nombre de jetons d'une chaîne qui contient des jetons séparés par les délimiteurs spécifiés.  
@@ -32,7 +32,7 @@ TOKENCOUNT(character_expression, delimiter_string)
  Chaîne qui contient des jetons séparés par des délimiteurs.  
   
  *delimiter_string*  
- Chaîne qui contient les caractères de délimitation. Par exemple, « ; , » contient trois caractères de délimitation : le point-virgule, un espace vide et une virgule.  
+ Chaîne qui contient les caractères de délimitation. Par exemple, « ; , » contient trois caractères de délimitation : le point-virgule, un espace vide et une virgule.  
   
 ## <a name="result-types"></a>Types des résultats  
  DT_I4  
@@ -51,13 +51,13 @@ TOKENCOUNT(character_expression, delimiter_string)
 -   Vous pouvez utiliser des variables et des colonnes en tant qu'arguments pour cette expression.  
   
 ## <a name="expression-examples"></a>Exemples d'expressions  
- Dans l'exemple suivant, la fonction TOKENCOUNT retourne 3, car la chaîne contient trois jetons : « 01 », « 12 », « 2011 ».  
+ Dans l’exemple suivant, la fonction TOKENCOUNT retourne 3, car la chaîne contient trois jetons : « 01 », « 12 », « 2011 ».  
   
 ```  
 TOKENCOUNT("01/12/2011", "/")  
 ```  
   
- Dans l'exemple suivant, la fonction TOKENCOUNT retourne 4, car il existe quatre jetons (« a », « little », « white », « dog »).  
+ Dans l’exemple suivant, la fonction TOKENCOUNT retourne 4, car il existe quatre jetons (« a », « little », « white », « dog »).  
   
 ```  
 TOKENCOUNT("a little white dog"," ")  
@@ -69,7 +69,7 @@ TOKENCOUNT("a little white dog"," ")
 TOKENCOUNT("a little white dog","|")  
 ```  
   
- Dans l'exemple suivant, la fonction TOKENCOUNT retourne 4. La chaîne de délimitation de cet exemple contient 5 délimiteurs. La chaîne d'entrée contient 4 jetons : « a », « little », « white », « dog ».  
+ Dans l'exemple suivant, la fonction TOKENCOUNT retourne 4. La chaîne de délimitation de cet exemple contient 5 délimiteurs. La chaîne d’entrée contient 4 jetons : « a », « little », « white », « dog ».  
   
 ```  
 TOKENCOUNT("a:little|white dog","| ,.:")  

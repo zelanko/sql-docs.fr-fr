@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f5e8ebbbd4b9b507e8f41af26be70c676afe61c7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4adfad731797d7c210787bdfaae3defa3e0a12ea
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47803487"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519563"
 ---
 # <a name="plan-your-adoption-of-in-memory-oltp-features-in-sql-server"></a>Planifier votre adoption des fonctionnalités OLTP en mémoire dans SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -216,7 +216,7 @@ Pour une présentation des index de tables optimisées en mémoire, consultez :
 
 Les index de hachage peuvent être les plus rapides pour accéder à une ligne spécifique par le biais de la valeur exacte de sa clé primaire, à l’aide de l’opérateur '**=**'.
 
-- Les opérateurs tels que '**!=**', '**>**' ou '**BETWEEN**' nuiront aux performances si vous les utilisez avec un index de hachage.
+- Les opérateurs inexacts comme '**!=**', '**>**' ou '**BETWEEN**' nuiront aux performances si vous les utilisez avec un index de hachage.
 
 - Un index de hachage peut ne pas constituer le meilleur choix si la vitesse de duplication de la valeur de clé est trop élevée.
 
@@ -297,7 +297,7 @@ Dans SQL Server 2016 :
 Vous pouvez renforcer vos scripts Transact-SQL par rapport à une possible erreur de transaction en leur ajoutant une *logique de nouvelle tentative* . La logique de nouvelle tentative peut aider en cas d’appels UPDATE et DELETE fréquents, ou si la table optimisée en mémoire est référencée par une clé étrangère d’une autre table. Pour plus d’informations, consultez :
 
 - [Transactions avec tables optimisées en mémoire](../../relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md)
-- [Limites des dépendances de transaction avec des tables optimisées en mémoire – Erreur 41839](https://blogs.msdn.microsoft.com/sqlcat/2016/07/11/transaction-dependency-limits-with-memory-optimized-tables-error-41839/)
+- [Limites des dépendances de transaction avec des tables à mémoire optimisée - Erreur 41839](https://blogs.msdn.microsoft.com/sqlcat/2016/07/11/transaction-dependency-limits-with-memory-optimized-tables-error-41839/)
 
 
 

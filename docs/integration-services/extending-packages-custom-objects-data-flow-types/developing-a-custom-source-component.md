@@ -22,12 +22,12 @@ ms.assetid: 4dc0f631-8fd6-4007-b573-ca67f58ca068
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 79e015043fe256037e808d68a4188e1091780797
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 14b512a4ec1260c188752869d887e8e8d6ee8ff9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629187"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528774"
 ---
 # <a name="developing-a-custom-source-component"></a>Développement d'un composant source personnalisé
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] permet aux développeurs d’écrire des composants sources capables de se connecter à des sources de données personnalisées et de fournir des données, à partir de ces sources, à d’autres composants dans une tâche de flux de données. La possibilité de créer des sources personnalisées est particulièrement utile lorsque vous devez vous connecter à des sources de données qui ne sont pas accessibles à l'aide de l'une des sources [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] existantes.  
@@ -40,7 +40,7 @@ ms.locfileid: "47629187"
  Pour implémenter les fonctionnalités au moment de la conception d'un composant source, il est nécessaire de spécifier une connexion à une source de données externe, d'ajouter et configurer des colonnes de sortie qui reflètent la source de données et de confirmer que le composant est prêt à être exécuté. Par définition, un composant source possède zéro entrée et une ou plusieurs sorties asynchrones.  
   
 ### <a name="creating-the-component"></a>Création du composant  
- Les composants sources se connectent à des sources de données externes à l'aide d'objets <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> définis dans un package. Ils indiquent leur besoin d'un gestionnaire de connexions en ajoutant un élément à la collection <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A> de la propriété <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A>. Cette collection remplit deux fonctions : conserver les références aux gestionnaires de connexions dans le package utilisé par le composant et publier la nécessité d'un gestionnaire de connexions sur le concepteur. Une fois que <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100> a été ajouté à la collection, l’**Éditeur avancé** affiche l’onglet **Propriétés de connexion**, qui permet aux utilisateurs de sélectionner ou de créer une connexion dans le package.  
+ Les composants sources se connectent à des sources de données externes à l'aide d'objets <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> définis dans un package. Ils indiquent leur besoin d'un gestionnaire de connexions en ajoutant un élément à la collection <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A> de la propriété <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A>. Cette collection remplit deux fonctions : conserver les références aux gestionnaires de connexions dans le package utilisé par le composant et publier la nécessité d’un gestionnaire de connexions sur le concepteur. Une fois que <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100> a été ajouté à la collection, l’**Éditeur avancé** affiche l’onglet **Propriétés de connexion**, qui permet aux utilisateurs de sélectionner ou de créer une connexion dans le package.  
   
  L'exemple de code suivant présente une implémentation de <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProvideComponentProperties%2A> qui ajoute une sortie, puis ajoute un objet <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100> à <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A>.  
   

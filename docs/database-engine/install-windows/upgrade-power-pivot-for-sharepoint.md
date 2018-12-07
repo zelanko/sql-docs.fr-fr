@@ -11,12 +11,12 @@ author: Minewiskan
 ms.author: owend
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: erikre
-ms.openlocfilehash: 9d68be09f17fcb9cbd084c5567c7edae87e0ca5a
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 921994834433e7a4e2e081d6b8b43ce6294f6e09
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605419"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518305"
 ---
 # <a name="upgrade-power-pivot-for-sharepoint"></a>Mettre à niveau Power Pivot pour SharePoint
 
@@ -104,7 +104,7 @@ ms.locfileid: "51605419"
   
          Dans le menu **Démarrer** , pointez sur **Tous les programmes**, puis sur [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], sur **Outils de configuration**, puis cliquez sur **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint 2013**. Notez que cet outil est répertorié uniquement lorsque [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] est installé sur le serveur local.  
   
-    2.  Au démarrage, l’outil de configuration vérifie l’état de mise à niveau de la solution de batterie de serveurs [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] et de la solution d’application web [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Si des versions antérieures de ces solutions sont détectées, le message « **De nouvelles versions des fichiers de solution [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ont été détectées » s’affiche. Sélectionnez l’option de mise à niveau appropriée pour mettre à niveau votre batterie de serveurs** ». Cliquez sur **OK** pour fermer le message de validation système.  
+    2.  Au démarrage, l’outil de configuration vérifie l’état de mise à niveau de la solution de batterie de serveurs [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] et de la solution d’application web [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Si des versions antérieures de ces solutions sont détectées, le message « **De nouvelles versions des fichiers de solution [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ont été détectées » s’affiche. Sélectionnez l’option de mise à niveau appropriée pour mettre à niveau votre batterie de serveurs** ». Cliquez sur **OK** pour fermer le message de validation système.  
   
     3.  Cliquez sur **Mettre à niveau des fonctionnalités, des services, des applications et des solutions**, puis cliquez sur **OK**.  
   
@@ -121,11 +121,11 @@ ms.locfileid: "51605419"
         > [!IMPORTANT]  
         >  La première action, **Mettre à niveau une solution de batterie de serveurs**, doit toujours être traitée en premier. Elle inscrit les applets de commande PowerShell qui sont utilisées pour configurer le serveur. Si vous obtenez une erreur sur cette action, ne continuez pas. À la place, utilisez les informations fournies par l'erreur pour diagnostiquer et résoudre le problème avant de traiter des actions supplémentaires dans la liste des tâches.  
   
-    7.  Cliquez sur **Exécuter** pour exécuter toutes les actions qui sont valides pour cette tâche. **Exécuter** est disponible uniquement lorsque le contrôle de validation a réussi. Lorsque vous cliquez sur **Exécuter**, l’avertissement suivant apparaît, vous rappelant que les actions sont traitées en mode batch : « **Tous les paramètres de configuration marqués comme étant valides dans l’outil seront appliqués à la batterie de serveurs SharePoint. Voulez-vous continuer ?** ».  
+    7.  Cliquez sur **Exécuter** pour exécuter toutes les actions qui sont valides pour cette tâche. **Exécuter** est disponible uniquement lorsque le contrôle de validation a réussi. Lorsque vous cliquez sur **Exécuter**, l’avertissement suivant apparaît, vous rappelant que les actions sont traitées par lots : « **Tous les paramètres de configuration marqués comme étant valides dans l’outil seront appliqués à la batterie de serveurs SharePoint. Voulez-vous continuer ?**  ».  
   
     8.  Cliquez sur **OK** pour continuer.  
   
-    9. La mise à niveau des solutions et des fonctionnalités de la batterie de serveurs peut prendre plusieurs minutes. Pendant ce temps, les demandes de connexion concernant des données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] **échouent** avec des erreurs comme : « **Impossible d’actualiser les données** » ou « **Une erreur s’est produite lors de l’exécution de l’action demandée. Réessayez** ». Une fois la mise à niveau terminée, le serveur devient disponible et ces erreurs ne se produiront plus.  
+    9. La mise à niveau des solutions et des fonctionnalités de la batterie de serveurs peut prendre plusieurs minutes. Pendant ce temps, les requêtes de connexion concernant des données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] **échouent** avec des erreurs comme : « **Impossible d’actualiser les données** » ou « **Une erreur s’est produite lors de l’exécution de l’action demandée. Réessayez**. » Une fois la mise à niveau terminée, le serveur devient disponible et ces erreurs ne se produiront plus.  
   
      Pour plus d'informations, consultez les documents suivants :  
   
@@ -172,11 +172,11 @@ ms.locfileid: "51605419"
   
     1.  Dans le menu **Démarrer**, pointez sur **Tous les programmes**, cliquez sur [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)] et sur **Outils de configuration**, puis cliquez sur **Outil de configuration [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**. Notez que cet outil est répertorié uniquement lorsque [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] est installé sur le serveur local.  
   
-    2.  Au démarrage, l’outil de configuration vérifie l’état de mise à niveau de la solution de batterie de serveurs [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] et de la solution d’application web [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Si des versions antérieures de ces solutions sont détectées, le message « De nouvelles versions des fichiers de solution [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ont été détectées » s’affiche. Sélectionnez l'option de mise à niveau appropriée pour mettre à niveau votre batterie de serveurs. » Cliquez sur **OK** pour fermer le message.  
+    2.  Au démarrage, l’outil de configuration vérifie l’état de mise à niveau de la solution de batterie de serveurs [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] et de la solution d’application web [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Si des versions antérieures de ces solutions sont détectées, le message « De nouvelles versions des fichiers de solution [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ont été détectées » s’affiche. Sélectionnez l’option de mise à niveau appropriée pour mettre à niveau votre batterie de serveurs ». Cliquez sur **OK** pour fermer le message.  
   
     3.  Cliquez sur **Mettre à niveau des fonctionnalités, des services, des applications et des solutions**, puis sur **OK** pour continuer.  
   
-    4.  L’avertissement suivant s’affiche : « Les classeurs du Tableau de bord de gestion [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] sont sur le point d’être mis à niveau vers la dernière version. Les personnalisations apportées aux classeurs existants seront perdues. Voulez-vous continuer ? »  
+    4.  L’avertissement suivant s’affiche : « Les classeurs du Tableau de bord de gestion [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] sont sur le point d’être mis à niveau vers la dernière version. Les personnalisations apportées aux classeurs existants seront perdues. Voulez-vous continuer ? ».  
   
          Cet avertissement fait référence aux classeurs du tableau de bord de gestion [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] qui rendent compte de l’activité d’actualisation des données. Si vous avez personnalisé ces classeurs, toutes les modifications que vous avez apportées à ces classeurs seront perdues lorsque des fichiers existants seront remplacés par des versions plus récentes.  
   
@@ -197,11 +197,11 @@ ms.locfileid: "51605419"
         > [!IMPORTANT]  
         >  La première action, **Mettre à niveau une solution de batterie de serveurs**, doit toujours être traitée en premier. Elle inscrit les applets de commande PowerShell qui sont utilisées pour configurer le serveur. Si vous obtenez une erreur sur cette action, ne continuez pas. À la place, utilisez les informations fournies par l'erreur pour diagnostiquer et résoudre le problème avant de traiter des actions supplémentaires dans la liste des tâches.  
   
-    8.  Cliquez sur **Exécuter** pour exécuter toutes les actions qui sont valides pour cette tâche. **Exécuter** est disponible uniquement lorsque le contrôle de validation a réussi. Lorsque vous cliquez sur **Exécuter**, l'avertissement suivant apparaît, vous rappelant que les actions sont traitées par lot : « Tous les paramètres de configuration marqués comme étant valides dans l'outil seront appliqués à la batterie de serveurs SharePoint. Voulez-vous continuer ? »  
+    8.  Cliquez sur **Exécuter** pour exécuter toutes les actions qui sont valides pour cette tâche. **Exécuter** est disponible uniquement lorsque le contrôle de validation a réussi. Lorsque vous cliquez sur **Exécuter**, l’avertissement suivant apparaît, vous rappelant que les actions sont traitées par lots : « Tous les paramètres de configuration marqués comme étant valides dans l’outil seront appliqués à la batterie de serveurs SharePoint. Voulez-vous continuer ? ».  
   
     9. Cliquez sur **OK** pour continuer.  
   
-    10. La mise à niveau des solutions et des fonctionnalités de la batterie de serveurs peut prendre plusieurs minutes. Pendant ce temps, les demandes de connexion concernant des données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] échouent en raison d’erreurs telles que : « Impossible d’actualiser les données » ou « Une erreur s’est produite lors de l’exécution de l’action demandée. Réessayez. » Une fois la mise à niveau terminée, le serveur devient disponible et ces erreurs ne se produiront plus.  
+    10. La mise à niveau des solutions et des fonctionnalités de la batterie de serveurs peut prendre plusieurs minutes. Pendant ce temps, les requêtes de connexion concernant des données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] échouent en raison d’erreurs telles que : « Impossible d’actualiser les données » ou « Une erreur s’est produite lors de l’exécution de l’action demandée. Réessayez. » Une fois la mise à niveau terminée, le serveur devient disponible et ces erreurs ne se produiront plus.  
   
 8.  **Répétez le processus** pour chaque service SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]) dans la batterie de serveurs : 1) Exécutez le programme d’installation de SQL Server 2) Exécutez l’outil de configuration de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
@@ -216,15 +216,15 @@ ms.locfileid: "51605419"
     1.  Démarrez SharePoint 2010 Management Shell en tant qu'administrateur, puis exécutez la commande suivante pour afficher les travaux dans la file d'attente :  
   
         ```  
-        Stsadm –o enumdeployments  
+        Stsadm -o enumdeployments  
         ```  
   
     2.  Consultez les informations suivantes pour les déploiements existants : **Type** indique une rétraction ou un déploiement, **Fichier** correspond à powerpivotwebapp.wsp ou à powerpivotfarm.wsp.  
   
-    3.  Pour les déploiements ou les rétractions liés aux solutions [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , copiez la valeur GUID de **JobId** , puis collez-la dans la commande suivante (utilisez les commandes Marquer, Copier et Coller dans le menu Edition de l’interpréteur de commandes afin de copier le GUID) :  
+    3.  Pour les déploiements ou les rétractions liés aux solutions [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)], copiez la valeur GUID de **JobId**, puis collez-la dans la commande suivante (utilisez les commandes Mark, Copy et Paste du menu Edit de l’interpréteur de commandes afin de copier le GUID) :  
   
         ```  
-        Stsadm –o canceldeployment –id “<GUID>”  
+        Stsadm -o canceldeployment -id "<GUID>"  
         ```  
   
     4.  Réexécutez la tâche dans l'outil de configuration en cliquant sur **Valider** suivi d' **Exécuter**.  

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f2e6dcc9-978f-4c2c-bafe-36c330247fd0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: abaa798e164df9fb552360357dbfc7a4943c9124
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d08234fcf8e50851d40a86859244e6bc2840fd1f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47857081"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526403"
 ---
 # <a name="configurationsetting-method---generatedatabaserightsscript"></a>Méthode ConfigurationSetting - GenerateDatabaseRightsScript
   Génère un script SQL pouvant être utilisé pour accorder des droits d'utilisateur à la base de données du serveur de rapports et à d'autres bases de données requises pour l'exécution d'un serveur de rapports. Il est prévu que l'appelant se connecte au serveur de base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et exécute le script.  
@@ -68,7 +68,7 @@ out Int32 HRESULT);
   
  Quand *IsWindowsUser* a la valeur **true**, le script généré accorde des droits de connexion à l’utilisateur pour le serveur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](en définissant la base de données du serveur de rapports comme base de données par défaut) et il accorde le rôle **RSExec** sur la base de données du serveur de rapports, la base de données temporaire du serveur de rapports, la base de données MASTER et la base de données système MSDB.  
   
- Quand *IsWindowsUser* a la valeur **true**, la méthode accepte les SID Windows standard comme entrée. Lorsqu'un nom de compte de service ou un SID Windows standard est fourni, il est converti en une chaîne de nom d'utilisateur. Si la base de données est locale, le compte est converti en la représentation localisée correcte du compte. Si la base de données est distante, le compte est représenté en tant que compte de l'ordinateur.  
+ Quand *IsWindowsUser* a la valeur **true**, la méthode accepte les SID Windows standard comme entrée. Lorsqu'un nom de compte de service ou un SID Windows standard est fourni, il est converti en une chaîne de nom d'utilisateur. Si la base de données est locale, le compte est converti en la représentation localisée correcte du compte. Si la base de données est distante, le compte est représenté en tant que compte de l’ordinateur.  
   
  Le tableau suivant répertorie les comptes qui sont convertis et indique leur représentation distante.  
   
@@ -91,9 +91,9 @@ out Int32 HRESULT);
   
 |Valeur de DatabaseServerName| Exemple|  
 |---------------------------------|-------------|  
-|“.”||  
-|“(local)”||  
-|“LOCAL”||  
+|"."||  
+|"(local)"||  
+|"LOCAL"||  
 |localhost||  
 |\<Nom ordinateur>|labtest14|  
 |\<FQDN_ordinateur>|example.redmond.microsoft.com|  

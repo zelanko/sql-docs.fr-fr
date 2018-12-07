@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: f22497b7-f6c1-4c7b-b831-8c731e26ae37
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 89d5396d70afa05055ac5905e8fa1a204b6d7d97
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e0e9cb87260aa04deaa2e91e928f17b2a94261a3
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47844047"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418130"
 ---
 # <a name="exporting-to-a-pdf-file-report-builder-and-ssrs"></a>Exportation vers un fichier PDF (Générateur de rapports et SSRS)
   L’extension de rendu PDF présente les rapports paginés [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] sous forme de fichiers qui peuvent être ouverts dans des visionneuses telles qu’Adobe Acrobat si elles prennent en charge le format PDF 1.3. Bien que PDF 1.3 soit compatible avec Adobe Acrobat 4.0 et versions ultérieures, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] prend en charge Adobe Acrobat 11.0 ou version ultérieure. Cette extension de rendu ne nécessite pas les logiciels Adobe pour effectuer le rendu du rapport. Toutefois, les visionneuses PDF comme Adobe Acrobat sont indispensables pour afficher ou imprimer un rapport au format PDF.  
@@ -94,7 +94,7 @@ ms.locfileid: "47844047"
  Pour conserver la compression des images incluses dans le fichier PDF lorsque cela est possible, les images JPEG sont stockées au format JPEG et tous les autres types d'images sont stockés au format BMP.  
   
 > [!NOTE]  
->  Les fichiers PDF ne prennent pas en charge l'incorporation d'images PNG.  
+>  Les fichiers PDF ne prennent pas en charge l’incorporation d’images PNG.  
   
   
 ##  <a name="DeviceInfo"></a> Paramètres d'informations de périphérique  

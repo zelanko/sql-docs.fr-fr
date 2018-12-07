@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 41a03695526a669f33b74833137415a35db02929
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: d4872ffea819c23ca27ec0d01e4709a231f95cf5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51812743"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514401"
 ---
 # <a name="develop-with-the-rest-apis-for-reporting-services"></a>Développer avec les API REST pour Reporting Services
 
@@ -55,7 +55,7 @@ Une paire demande/réponse d’API REST peut être divisée en cinq composants :
 
 ## <a name="api-documentation"></a>Documentation de l’API
 
-Une API REST moderne exige une documentation d’API moderne. L’API REST repose sur la spécification OpenAPI (également appelé spécification Swagger), et la documentation est disponible sur [SwaggerHub](https://app.swaggerhub.com/api/microsoft-rs/SSRS/2.0). Au-delà de la documentation de l’API, SwaggerHub permet de générer une bibliothèque cliente dans le langage souhaité : JavaScript, TypeScript, C#, Java, Python, Ruby, entre autres.
+Une API REST moderne exige une documentation d’API moderne. L’API REST repose sur la spécification OpenAPI (également appelé spécification Swagger), et la documentation est disponible sur [SwaggerHub](https://app.swaggerhub.com/api/microsoft-rs/SSRS/2.0). Au-delà de la documentation de l’API, SwaggerHub permet de générer une bibliothèque cliente dans le langage souhaité : JavaScript, TypeScript, C#, Java, Python, Ruby, entre autres.
 
 ## <a name="testing-api-calls"></a>Test des appels d’API
 

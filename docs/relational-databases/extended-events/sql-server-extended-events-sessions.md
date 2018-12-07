@@ -16,12 +16,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 913088e4dd3f132704642dba698ecfbe46e84754
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 51124deb3e2c5d9acc6de2108b3345d50f062427
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120078"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398822"
 ---
 # <a name="sql-server-extended-events-sessions"></a>Sessions Événements étendus SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ ms.locfileid: "49120078"
   
  **Suivi de causalité**  
   
- Le suivi de causalité permet d'effectuer le suivi d'un travail sur plusieurs tâches. Lorsque le suivi de causalité est activé, chaque événement déclenché possède un ID d'activité unique sur le système. L'ID d'activité est constitué d'une valeur GUID qui demeure constante sur tous les événements liés à une tâche et d'un numéro de séquence qui est incrémenté chaque fois qu'un événement est déclenché. Lorsqu'une tâche entraîne l'exécution d'une autre tâche pour un même travail, l'ID d'activité de la tâche parent est envoyé à la tâche enfant. La tâche enfant fournit en sortie l'ID d'activité de la tâche parent la première fois qu'elle déclenche un événement.  
+ Le suivi de causalité permet d'effectuer le suivi d'un travail sur plusieurs tâches. Lorsque le suivi de causalité est activé, chaque événement déclenché possède un ID d'activité unique sur le système. L'ID d'activité est constitué d'une valeur GUID qui demeure constante sur tous les événements liés à une tâche et d'un numéro de séquence qui est incrémenté chaque fois qu'un événement est déclenché. Lorsqu'une tâche entraîne l'exécution d'une autre tâche pour un même travail, l'ID d'activité de la tâche parent est envoyé à la tâche enfant. La tâche enfant fournit en sortie l’ID d’activité de la tâche parent la première fois qu’elle déclenche un événement.  
   
  L'architecture des Événements étendus fournit un système flexible qui permet d'utiliser conjointement divers objets pour résoudre des problèmes spécifiques.  
   

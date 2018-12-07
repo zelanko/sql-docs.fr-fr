@@ -1,7 +1,7 @@
 ---
 title: Options de fichiers et de groupes de fichiers ALTER DATABASE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 10/02/2018
+ms.date: 11/16/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -43,12 +43,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 9a07b7c9536f3d1f98293317f56e4c10dbae25e0
-ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
+ms.openlocfilehash: 1191ae28c9683a89d06830c942a22941fccfb943
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48252146"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52403555"
 ---
 # <a name="alter-database-transact-sql-file-and-filegroup-options"></a>Options de fichiers et de groupes de fichiers ALTER DATABASE (Transact-SQL) 
 
@@ -145,7 +145,7 @@ Supprime la description du fichier logique d'une instance de [!INCLUDE[ssNoVersi
 Nom logique utilisé pour référencer le fichier dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!WARNING]  
-> Vous pouvez supprimer un fichier de base de données qui est associé à des sauvegardes FILE_SNAPSHOT, mais les instantanés associés ne sont pas supprimés pour éviter l’invalidation des sauvegardes qui font référence au fichier de base de données. Le fichier est tronqué, mais il n’est pas supprimé physiquement afin de conserver les sauvegardes FILE_SNAPSHOT. Pour plus d’informations, consultez [Sauvegarde et restauration SQL Server avec le service de stockage d’objets blob Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). **S’applique à**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
+> Vous pouvez supprimer un fichier de base de données qui est associé à des sauvegardes `FILE_SNAPSHOT`, mais les instantanés associés ne sont pas supprimés pour éviter l’invalidation des sauvegardes qui font référence au fichier de base de données. Le fichier est tronqué, mais il n’est pas supprimé physiquement afin de conserver les sauvegardes FILE_SNAPSHOT. Pour plus d’informations, consultez [Sauvegarde et restauration SQL Server avec le service de stockage d’objets blob Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). **S’applique à**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
   
 MODIFY FILE  
 Spécifie le fichier à modifier. Vous pouvez modifier une seule propriété \<filespec> à la fois. La clause NAME doit toujours être spécifiée dans \<filespec> pour identifier le fichier à modifier. Si vous définissez l'option SIZE, la nouvelle taille doit être supérieure à la taille actuelle du fichier.  
@@ -171,7 +171,7 @@ Pour un groupe de fichiers FILESTREAM, NAME peut être modifié en ligne. FILENA
 Vous pouvez définir un fichier FILESTREAM sur OFFLINE. Lorsqu'un fichier FILESTREAM est hors connexion, son groupe de fichiers parent est marqué en interne comme hors connexion ; par conséquent, tout accès aux données FILESTREAM dans ce groupe de fichiers échoue.  
   
 > [!NOTE]  
->  Les options \<add_or_modify_files&gt; ne sont pas disponibles dans une base de données autonome.
+> Les options \<add_or_modify_files&gt; ne sont pas disponibles dans une base de données autonome.
   
 **\<filespec>::=**  
   
@@ -195,7 +195,8 @@ Spécifie un nom de fichier du système d'exploitation (physique).
 ' *os_file_name* '  
 Pour un groupe de fichiers standard (ROWS), il s'agit du chemin d'accès et du nom de fichier utilisés par le système d'exploitation lorsque vous créez le fichier. Le fichier doit résider sur le serveur hébergeant [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le chemin d'accès spécifié doit exister avant l'exécution de l'instruction ALTER DATABASE.  
   
-Les paramètres SIZE, MAXSIZE et FILEGROWTH ne peuvent pas être définis lorsqu'un chemin d'accès UNC est spécifié pour le fichier.  
+> [!NOTE]
+> Les paramètres SIZE, MAXSIZE et FILEGROWTH ne peuvent pas être définis lorsqu'un chemin d'accès UNC est spécifié pour le fichier.  
   
 > [!NOTE]  
 > Les bases de données système ne peuvent pas résider dans les répertoires partagés UNC.  
@@ -205,16 +206,20 @@ Les fichiers de données ne doivent pas être placés sur des systèmes de fichi
 Si le fichier se trouve sur une partition brute, *os_file_name* doit spécifier uniquement la lettre d’une unité correspondant à une partition brute existante. Chaque partition brute ne peut contenir qu'un seul fichier.  
   
 **'** *filestream_path* **'**  
-Pour un groupe de fichiers FILESTREAM, FILENAME fait référence à un chemin d'accès où les données FILESTREAM seront stockées. Le chemin d'accès jusqu'au dernier dossier doit exister, et le dernier dossier ne doit pas exister. Par exemple, si vous spécifiez le chemin d'accès C:\MyFiles\MyFilestreamData, C:\MyFiles doit exister avant l'exécution d'ALTER DATABASE, mais le dossier MyFilestreamData ne doit pas exister.  
+Pour un groupe de fichiers FILESTREAM, FILENAME fait référence à un chemin d'accès où les données FILESTREAM seront stockées. Le chemin d'accès jusqu'au dernier dossier doit exister, et le dernier dossier ne doit pas exister. Par exemple, si vous spécifiez le chemin `C:\MyFiles\MyFilestreamData`, `C:\MyFiles` doit exister avant l’exécution de ALTER DATABASE, mais le dossier `MyFilestreamData` ne doit pas exister.  
   
-Les propriétés SIZE et FILEGROWTH ne s'appliquent pas à un groupe de fichiers FILESTREAM.  
+> [!NOTE]
+> Les propriétés SIZE et FILEGROWTH ne s'appliquent pas à un groupe de fichiers FILESTREAM.  
   
 **'** *memory_optimized_data_path* **'**  
-Pour un groupe de fichiers mémoire optimisé, FILENAME fait référence à un chemin d'accès où les données mémoire optimisées sont stockées. Le chemin d'accès jusqu'au dernier dossier doit exister, et le dernier dossier ne doit pas exister. Par exemple, si vous spécifiez le chemin d'accès C:\MyFiles\MyData, C:\MyFiles doit exister avant l'exécution d'ALTER DATABASE, mais le dossier MyData ne doit pas exister.  
+Pour un groupe de fichiers mémoire optimisé, FILENAME fait référence à un chemin d'accès où les données mémoire optimisées sont stockées. Le chemin d'accès jusqu'au dernier dossier doit exister, et le dernier dossier ne doit pas exister. Par exemple, si vous spécifiez le chemin `C:\MyFiles\MyData`, `C:\MyFiles` doit exister avant l’exécution de ALTER DATABASE, mais le dossier `MyData` ne doit pas exister.  
   
 Le groupe de fichiers et le fichier (`<filespec>`) doivent être créés dans la même instruction.  
   
-Les propriétés SIZE, MAXSIZE et FILEGROWTH ne s'appliquent pas à un groupe de fichiers mémoire optimisé.  
+> [!NOTE]
+> Les propriétés SIZE et FILEGROWTH ne s’appliquent pas à un groupe de fichiers MEMORY_OPTIMIZED_DATA.  
+
+Pour plus d’informations sur les groupes de fichiers à mémoire optimisée, consultez [Groupes de fichiers à mémoire optimisée](../../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md).
   
 SIZE *size*  
 Spécifie la taille du fichier. SIZE ne s'applique pas aux groupes de fichiers FILESTREAM.  
@@ -227,6 +232,11 @@ Quand elle est spécifiée avec l’instruction ADD FILE, la propriété *size* 
 Quand la propriété *size* n’est pas spécifiée pour le fichier primaire, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise la taille du fichier primaire dans la base de données **model**. Quand un fichier de données secondaire ou un fichier journal est spécifié sans sa propriété *size*, [!INCLUDE[ssDE](../../includes/ssde-md.md)] utilise une taille de fichier égale à 1 Mo.  
   
 Les indications Ko, Mo, Go et To peuvent être utilisées pour indiquer qu'il s'agit de kilo-octets, mégaoctets, gigaoctets ou téraoctets. La valeur par défaut est Mo. Précisez un nombre entier sans aucune décimale. Pour spécifier une fraction d'un mégaoctet, convertissez la valeur en kilo-octet en multipliant le nombre par 1024. Par exemple, spécifiez 1536 Ko au lieu de 1,5 MB (1,5 x 1024 = 1536).  
+
+> [!NOTE] 
+> `SIZE` ne peut pas être défini :
+> - Quand un chemin UNC est spécifié pour le fichier  
+> - Pour les groupes de fichiers `FILESTREAM` et `MEMORY_OPTIMIZED_DATA`   
   
 MAXSIZE { *max_size*| UNLIMITED }  
 Spécifie la taille maximale que peut atteindre le fichier.  
@@ -236,6 +246,9 @@ Taille de fichier maximale. Les indications Ko, Mo, Go et To peuvent être utili
   
 UNLIMITED  
 Précise que la taille du fichier peut croître jusqu'à ce que le disque soit saturé. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], un fichier journal spécifié avec une croissance illimitée a une taille maximale de 2 To et un fichier de données une taille maximale de 16 To. Aucune taille maximale n'est définie lorsque cette option est spécifiée pour un conteneur FILESTREAM. Il continue à grandir jusqu'à ce que le disque soit saturé.  
+
+> [!NOTE] 
+> `MAXSIZE` ne peut pas être défini quand un chemin UNC est spécifié pour le fichier.
   
 FILEGROWTH *growth_increment*  
 Spécifie l'incrément de croissance automatique du fichier. Le paramètre FILEGROWTH d'un fichier ne peut dépasser le paramètre MAXSIZE. FILEGROWTH ne s'applique pas aux groupes de fichiers FILESTREAM.  
@@ -254,12 +267,17 @@ Si FILEGROWTH n’est pas spécifié, les valeurs par défaut sont les suivantes
 |À compter de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|64 Mo de données. 64 Mo de fichiers journaux.|  
 |À compter de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|1 Mo de données. 10 % de fichiers journaux.|  
 |Avant [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|10 % de données. 10 % de fichiers journaux.|  
-  
+
+> [!NOTE] 
+> `FILEGROWTH` ne peut pas être défini :
+> - Quand un chemin UNC est spécifié pour le fichier  
+> - Pour les groupes de fichiers `FILESTREAM` et `MEMORY_OPTIMIZED_DATA`   
+
 OFFLINE  
 Place le fichier en mode hors connexion et rend tous les objets du groupe de fichiers inaccessibles.  
   
 > [!CAUTION]  
->  Utilisez cette option uniquement lorsque le fichier est endommagé et peut être restauré. Un fichier configuré avec l'option OFFLINE ne peut être remis en ligne qu'en le restaurant à partir d'une sauvegarde. Pour plus d’informations sur la restauration d’un fichier unique, consultez [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md).  
+> Utilisez cette option uniquement lorsque le fichier est endommagé et peut être restauré. Un fichier configuré avec l'option OFFLINE ne peut être remis en ligne qu'en le restaurant à partir d'une sauvegarde. Pour plus d’informations sur la restauration d’un fichier unique, consultez [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md).  
   
 > [!NOTE]  
 > Les options \<filespec&gt; ne sont pas disponibles dans une base de données autonome.  
@@ -278,21 +296,13 @@ CONTAINS MEMORY_OPTIMIZED_DATA
 
 **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
   
-Spécifie que le groupe de fichiers stocke des données mémoire optimisées dans le système de fichiers. Pour plus d’informations, consultez [OLTP en mémoire &#40;optimisation en mémoire&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md). Un seul groupe de fichiers MEMORY_OPTIMIZED_DATA est autorisé par base de données. Pour créer des tables mémoire optimisées, le groupe de fichiers ne peut pas être vide. Il doit y avoir au moins un fichier. *filegroup_name* fait référence à un chemin. Le chemin d'accès jusqu'au dernier dossier doit exister, et le dernier dossier ne doit pas exister.  
-  
-L'exemple suivant crée un groupe de fichiers qui est ajouté à une base de données nommée xtp_db, puis ajoute un fichier dans le groupe de fichiers. Le groupe de fichiers stocke des données optimisées en mémoire.  
-  
-```sql  
-ALTER DATABASE xtp_db ADD FILEGROUP xtp_fg CONTAINS MEMORY_OPTIMIZED_DATA;  
-GO  
-ALTER DATABASE xtp_db ADD FILE (NAME='xtp_mod', FILENAME='d:\data\xtp_mod') TO FILEGROUP xtp_fg;  
-```  
-  
+Spécifie que le groupe de fichiers stocke des données mémoire optimisées dans le système de fichiers. Pour plus d’informations, consultez [OLTP en mémoire &#40;optimisation en mémoire&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md). Un seul groupe de fichiers `MEMORY_OPTIMIZED_DATA` est autorisé par base de données. Pour créer des tables mémoire optimisées, le groupe de fichiers ne peut pas être vide. Il doit y avoir au moins un fichier. *filegroup_name* fait référence à un chemin. Le chemin d'accès jusqu'au dernier dossier doit exister, et le dernier dossier ne doit pas exister.  
+ 
 REMOVE FILEGROUP *filegroup_name*  
 Supprime un groupe de fichiers de la base de données. Le groupe de fichiers ne peut pas être supprimé s'il n'est pas vide. Commencez par supprimer tous les fichiers du groupe. Pour plus d’informations, consultez « REMOVE FILE *logical_file_name* », plus haut dans cette rubrique.  
   
 > [!NOTE]  
-> Sauf dans le cas où le garbage collector FILESTREAM a supprimé tous les fichiers d'un conteneur FILESTREAM, l'opération ALTER DATABASE REMOVE FILE pour supprimer un conteneur FILESTREAM échoue et retourne une erreur. Consultez la section « Supprimer le conteneur FILESTREAM » dans les Notes dans la suite de cette rubrique.  
+> Sauf dans le cas où le garbage collector FILESTREAM a supprimé tous les fichiers d’un conteneur FILESTREAM, l’opération `ALTER DATABASE REMOVE FILE` pour supprimer un conteneur FILESTREAM échoue et retourne une erreur. Consultez la section [Supprimer un conteneur FILESTREAM](#removing-a-filestream-container) plus loin dans cette rubrique.  
   
 MODIFY FILEGROUP *filegroup_name* { \<filegroup_updatability_option> | DEFAULT | NAME **=**_new\_filegroup\_name_ } Modifie le groupe de fichiers en définissant l’état sur READ_ONLY ou READ_WRITE, en définissant le groupe de fichiers comme groupe par défaut pour la base de données ou en changeant le nom du groupe de fichiers.  
   
@@ -327,21 +337,21 @@ READ_ONLY | READONLY
 Précise que le groupe de fichiers est en mode lecture seule. La mise à jour des objets n'est pas autorisée. Le groupe de fichiers principal ne peut pas être en mode lecture seule. Pour modifier cet état, vous devez bénéficier d'un accès exclusif à la base de données. Pour plus d'informations, consultez la clause SINGLE_USER.  
   
 Étant donné qu'une base de données en lecture seule interdit la modification des données :  
-  
 - La récupération automatique est ignorée au démarrage du système.  
 - Le compactage de la base de données est impossible.  
 - Tout verrouillage est impossible dans les bases de données en lecture seule, ce qui améliore les performances des requêtes.  
   
 > [!NOTE]  
->  Le mot clé READONLY sera supprimé dans une version ultérieure de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Évitez d'utiliser READONLY dans le développement de nouvelles applications et prévoyez de modifier celles qui utilisent actuellement READONLY. Utilisez à la place READ_ONLY.  
+> Le mot clé `READONLY` sera supprimé dans une version ultérieure de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Évitez d’utiliser `READONLY` dans les nouveaux développements et prévoyez de modifier les applications qui utilisent actuellement `READONLY`. Utilisez à la place `READ_ONLY` .  
   
 READ_WRITE | READWRITE  
 Spécifie que le groupe a l'option READ_WRITE. Les objets du groupe de fichiers peuvent être mis à jour. Pour modifier cet état, vous devez bénéficier d'un accès exclusif à la base de données. Pour plus d'informations, consultez la clause SINGLE_USER.  
   
 > [!NOTE]  
->  Le mot clé `READWRITE` sera supprimé dans une version ultérieure de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Évitez d’utiliser `READWRITE` dans les nouveaux travaux de développement et prévoyez de modifier les applications qui utilisent `READWRITE` actuellement pour qu’elles utilisent `READ_WRITE` à la place.  
+> Le mot clé `READWRITE` sera supprimé dans une version ultérieure de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Évitez d’utiliser `READWRITE` dans les nouveaux travaux de développement et prévoyez de modifier les applications qui utilisent `READWRITE` actuellement pour qu’elles utilisent `READ_WRITE` à la place.  
   
-Vous pouvez déterminer l’état de ces options en consultant la colonne **is_read_only** de la vue de catalogue **sys.databases** ou la propriété **Updateability** de la fonction `DATABASEPROPERTYEX`.  
+> [!TIP]
+> Vous pouvez déterminer l’état de ces options en consultant la colonne **is_read_only** de la vue de catalogue **sys.databases** ou la propriété **Updateability** de la fonction `DATABASEPROPERTYEX`.  
   
 ## <a name="remarks"></a>Notes   
 Pour diminuer la taille d'une base de données, utilisez [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md).  
@@ -352,7 +362,15 @@ Un maximum de 32 767 fichiers et 32 767 groupes de fichiers peut être spécifi�
   
 Dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou une version ultérieure, l’état d’un fichier de base de données (par exemple, en ligne ou hors connexion) est géré indépendamment de l’état de la base de données. Pour plus d’informations, consultez [États des fichiers](../../relational-databases/databases/file-states.md). 
 - L'état des fichiers dans un groupe de fichiers détermine la disponibilité de tout le groupe de fichiers. Pour qu'un groupe de fichiers soit disponible, tous ses fichiers doivent être en ligne. 
-- Si un groupe de fichiers est hors connexion, toute tentative d'accès au groupe par une instruction SQL échoue avec une erreur. Quand vous créez des plans de requête pour des instructions `SELECT`, l’optimiseur de requête n’utilise pas les index non-cluster et les vues indexées qui se trouvent dans les groupes de fichiers hors connexion. Cela permet aux instructions de s'exécuter correctement. Cependant, si le groupe de fichiers hors connexion contient le segment ou l’index cluster d’une table cible, les instructions `SELECT` échouent. Les instructions `INSERT`, `UPDATE` ou `DELETE` qui modifient une table avec un index dans un groupe de fichiers hors connexion échouent également.  
+- Si un groupe de fichiers est hors connexion, toute tentative d'accès au groupe par une instruction SQL échoue avec une erreur. Quand vous créez des plans de requête pour des instructions `SELECT`, l’optimiseur de requête n’utilise pas les index non-cluster et les vues indexées qui se trouvent dans les groupes de fichiers hors connexion. Cela permet aux instructions de s'exécuter correctement. Cependant, si le groupe de fichiers hors connexion contient le segment ou l’index cluster d’une table cible, les instructions `SELECT` échouent. Les instructions `INSERT`, `UPDATE` ou `DELETE` qui modifient une table avec un index dans un groupe de fichiers hors connexion échouent également. 
+
+Les paramètres SIZE, MAXSIZE et FILEGROWTH ne peuvent pas être définis lorsqu'un chemin d'accès UNC est spécifié pour le fichier. 
+
+Les paramètres SIZE et FILEGROWTH ne peuvent pas être définis pour les groupes de fichiers à mémoire optimisée. 
+
+Le mot clé `READONLY` sera supprimé dans une version ultérieure de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Évitez d’utiliser `READONLY` dans les nouveaux développements et prévoyez de modifier les applications qui l’utilisent actuellement. Utilisez à la place `READ_ONLY` . 
+
+Le mot clé `READWRITE` sera supprimé dans une version ultérieure de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Évitez d’utiliser `READWRITE` dans les nouveaux travaux de développement et prévoyez de modifier les applications qui utilisent `READWRITE` actuellement pour qu’elles utilisent `READ_WRITE` à la place. 
   
 ## <a name="moving-files"></a>Déplacement de fichiers  
 Vous pouvez déplacer des données système ou définies par l'utilisateur ainsi que des fichiers journaux en spécifiant le nouvel emplacement dans FILENAME. Cela peut être utile dans les cas suivants :  
@@ -373,8 +391,8 @@ Par défaut, les fichiers de données et journaux sont initialisés en remplissa
   
 Les fichiers de données peuvent être initialisés de manière instantanée. Dès lors, l'exécution de ces opérations de fichiers est très rapide. Pour plus d’informations, consultez [Initialisation des fichiers de base de données](../../relational-databases/databases/database-instant-file-initialization.md). 
   
-## <a name="removing-a-filestream-container"></a>Suppression d'un conteneur FILESTREAM  
-Même si le conteneur FILESTREAM a peut-être été vidé à l'aide de l'opération DBCC SHRINKFILE, la base de données peut encore peut-être conserver des références aux fichiers supprimés pour des raisons de maintenance du système. [sp_filestream_force_garbage_collection &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-filestream-force-garbage-collection.md) exécutera le garbage collector FILESTREAM pour supprimer ces fichiers quand l’opération pourra être faite en toute sécurité. Sauf dans le cas où le récupérateur de mémoire FILESTREAM a supprimé tous les fichiers d’un conteneur FILESTREAM, l’opération ALTER DATABASE REMOVE FILE ne parviendra pas à supprimer le conteneur FILESTREAM et retournera une erreur. Le processus suivant est recommandé pour supprimer un conteneur FILESTREAM.  
+## <a name="removing-a-filestream-container"></a> Suppression d’un conteneur FILESTREAM  
+Même si le conteneur FILESTREAM peut avoir été vidé avec l’opération « DBCC SHRINKFILE », la base de données peut encore conserver des références aux fichiers supprimés pour différentes raisons de maintenance du système. [sp_filestream_force_garbage_collection &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-filestream-force-garbage-collection.md) exécutera le garbage collector FILESTREAM pour supprimer ces fichiers quand l’opération pourra être faite en toute sécurité. Sauf dans le cas où le récupérateur de mémoire FILESTREAM a supprimé tous les fichiers d’un conteneur FILESTREAM, l’opération ALTER DATABASE REMOVE FILE ne parviendra pas à supprimer le conteneur FILESTREAM et retournera une erreur. Le processus suivant est recommandé pour supprimer un conteneur FILESTREAM.  
   
 1. Exécutez [DBCC SHRINKFILE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md) avec l’option EMPTYFILE pour déplacer le contenu actif de ce conteneur vers d’autres conteneurs.  
   
@@ -408,7 +426,6 @@ ADD FILE
     FILEGROWTH = 5MB  
 );  
 GO  
-  
 ```  
   
 ### <a name="b-adding-a-filegroup-with-two-files-to-a-database"></a>B. Ajout d'un groupe de deux fichiers à une base de données  
@@ -438,7 +455,6 @@ ADD FILE
 )  
 TO FILEGROUP Test1FG1;  
 GO  
-  
 ```  
   
 ### <a name="c-adding-two-log-files-to-a-database"></a>C. Ajout de deux fichiers journaux à une base de données  
@@ -464,7 +480,6 @@ ADD LOG FILE
     FILEGROWTH = 5MB  
 );  
 GO  
-  
 ```  
   
 ### <a name="d-removing-a-file-from-a-database"></a>D. Suppression d'un fichier d'une base de données  
@@ -586,8 +601,7 @@ GO
 L'exemple de code suivant ajoute un `FILEGROUP` qui contient la clause `FILESTREAM` à la base de données `FileStreamPhotoDB`.  
   
 ```sql  
---Create and add a FILEGROUP that CONTAINS the FILESTREAM clause to  
---the FileStreamPhotoDB database.  
+--Create and add a FILEGROUP that CONTAINS the FILESTREAM clause.  
 ALTER DATABASE FileStreamPhotoDB  
 ADD FILEGROUP TodaysPhotoShoot  
 CONTAINS FILESTREAM;  
@@ -602,7 +616,27 @@ ADD FILE
 )  
 TO FILEGROUP TodaysPhotoShoot;  
 GO  
-```      
+```     
+
+L'exemple de code suivant ajoute un `FILEGROUP` qui contient la clause `MEMORY_OPTIMIZED_DATA` à la base de données `xtp_db`. Le groupe de fichiers stocke des données à mémoire optimisée.  
+  
+```sql 
+--Create and add a FILEGROUP that CONTAINS the MEMORY_OPTIMIZED_DATA clause.
+ALTER DATABASE xtp_db 
+ADD FILEGROUP xtp_fg 
+CONTAINS MEMORY_OPTIMIZED_DATA;  
+GO  
+
+--Add a file for storing memory optimized data to FILEGROUP
+ALTER DATABASE xtp_db 
+ADD FILE 
+(
+    NAME='xtp_mod', 
+    FILENAME='d:\data\xtp_mod'
+) 
+TO FILEGROUP xtp_fg;  
+GO
+```  
         
 ### <a name="j-change-filegroup-so-that-when-a-file-in-the-filegroup-meets-the-autogrow-threshold-all-files-in-the-filegroup-grow"></a>J. Changement d’un groupe de fichiers pour que la taille de tous les fichiers augmente quand un fichier du groupe de fichiers atteint le seuil de croissance automatique
  L’exemple suivant génère les instructions `ALTER DATABASE` nécessaires pour modifier les groupes de fichiers en lecture-écriture avec le paramètre `AUTOGROW_ALL_FILES`.  
@@ -1057,6 +1091,6 @@ GO
 [sys.data_spaces](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)   
 [sys.filegroups](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
 [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
-[DBCC SHRINKFIL](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md)  
- 
-::: moniker-end
+[DBCC SHRINKFILE](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md)   
+[Groupe de fichiers à mémoire optimisée](../../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md) 
+

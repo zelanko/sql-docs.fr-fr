@@ -35,12 +35,12 @@ ms.assetid: db65c726-9892-480c-873b-3af29afcee44
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ee630731ac4cfa1648eb6096f5c80ee817d0d989
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: 533447273bb174eadeace6cd3b8a2b2f95504811
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51217937"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544153"
 ---
 # <a name="use-the-maintenance-plan-wizard"></a>Utiliser l'Assistant Plan de maintenance
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -89,7 +89,7 @@ Vous devez activer [Agent XPs (option de configuration de serveur)](../../databa
   
     5.  Si vous avez sélectionné **Planification unique pour la totalité du plan ou pas de planification**sous **Planification**, cliquez sur **Modifier**.  
   
-        1.  Dans la boîte de dialogue **Nouvelle planification du travail** , dans la zone **Nom** , entrez le nom de la planification du travail.  
+        1.  Dans la boîte de dialogue **Nouvelle planification du travail**, dans la zone **Nom**, entrez le nom de la planification du travail.  
   
         2.  Dans la liste **Type de planification** , sélectionnez le type de la planification :  
   
@@ -113,15 +113,15 @@ Vous devez activer [Agent XPs (option de configuration de serveur)](../../databa
   
                 -   Si vous sélectionnez **Mensuelle**, sélectionnez **Jour** ou **Le**.  
   
-                    -   Si vous sélectionnez **Jour**, entrez la date du mois à laquelle vous souhaitez que la planification du travail s'exécute, ainsi que la fréquence de répétition de la planification du travail en mois. Par exemple, si vous souhaitez que la planification du travail s'exécute le 15 du mois un mois sur deux, sélectionnez **Jour** , puis entrez « 15 » dans la première zone et « 2 » dans la deuxième zone. Notez également que le nombre maximum autorisé dans la deuxième zone est « 99 ».  
+                    -   Si vous sélectionnez **Jour**, entrez la date du mois à laquelle vous souhaitez que la planification du travail s'exécute, ainsi que la fréquence de répétition de la planification du travail en mois. Par exemple, si vous souhaitez que la planification du travail s’exécute le 15 du mois un mois sur deux, sélectionnez **Jour**, puis entrez « 15 » dans la première zone et « 2 » dans la deuxième zone. Notez que le nombre maximum autorisé dans la deuxième zone est « 99 ».  
   
-                    -   Si vous sélectionnez **Le**, sélectionnez le jour spécifique de la semaine et du mois pendant lequel vous voulez que la planification du travail s'exécute et la fréquence à laquelle la planification du travail doit se répéter en mois. Par exemple, si vous souhaitez que la planification du travail s'exécute le dernier jour de la semaine un mois sur deux, sélectionnez **Jour**, puis **dernier** dans la première liste, **jour ouvrable** dans la deuxième liste et « 2 » dans la dernière zone. Vous pouvez également sélectionner **premier**, **deuxième**, **troisième**ou **quatrième**, ainsi que des jours de la semaine spécifiques (par exemple, dimanche ou mercredi) dans les deux premières listes. Notez également que le nombre maximum autorisé dans la dernière zone est « 99 ».  
+                    -   Si vous sélectionnez **Le**, sélectionnez le jour spécifique de la semaine et du mois pendant lequel vous voulez que la planification du travail s'exécute et la fréquence à laquelle la planification du travail doit se répéter en mois. Par exemple, si vous souhaitez que la planification du travail s’exécute le dernier jour de la semaine un mois sur deux, sélectionnez **Jour**, puis **dernier** dans la première liste, **jour ouvrable** dans la deuxième liste, et entrez « 2 » dans la dernière zone. Vous pouvez également sélectionner **premier**, **deuxième**, **troisième**ou **quatrième**, ainsi que des jours de la semaine spécifiques (par exemple, dimanche ou mercredi) dans les deux premières listes. Notez que le nombre maximum autorisé dans la dernière zone est « 99 ».  
   
             2.  Sous **Fréquence quotidienne**, spécifiez la fréquence à laquelle la planification du travail se répète le jour de son exécution :  
   
                 -   Si vous sélectionnez **Une fois à**, entrez l'heure spécifique à laquelle la planification du travail doit s'exécuter dans la zone **Une fois à** . Entrez l'heure, les minutes et les secondes du jour, ainsi que AM ou PM.  
   
-                -   Si vous sélectionnez **Toutes les**, spécifiez la fréquence à laquelle la planification du travail s'exécute pendant la journée choisie sous **Fréquence**. Par exemple, si vous souhaitez que la planification du travail se répète toutes les 2 heures le jour d’exécution de la planification du travail, sélectionnez **Toutes les**, entrez « 2 » dans la première zone, puis sélectionnez **heure(s)** dans la liste. Dans cette liste, vous pouvez également sélectionner **minute(s)** et **seconde(s)**. Notez également que le nombre maximum autorisé dans la première zone est « 100 ».  
+                -   Si vous sélectionnez **Toutes les**, spécifiez la fréquence à laquelle la planification du travail s'exécute pendant la journée choisie sous **Fréquence**. Par exemple, si vous souhaitez que la planification du travail se répète toutes les 2 heures le jour d’exécution de la planification du travail, sélectionnez **Toutes les**, entrez « 2 » dans la première zone, puis sélectionnez **heure(s)** dans la liste. Dans cette liste, vous pouvez également sélectionner **minute(s)** et **seconde(s)**. Notez que le nombre maximum autorisé dans la première zone est « 100 ».  
   
                      Dans la zone **Début** , entrez l'heure à laquelle l'exécution de la planification du travail doit démarrer. Dans la zone **Fin** , entrez l'heure à laquelle la planification du travail doit s'arrêter. Entrez l'heure, les minutes et les secondes du jour, ainsi que AM ou PM.  
   
@@ -143,7 +143,7 @@ Vous devez activer [Agent XPs (option de configuration de serveur)](../../databa
   
     > **REMARQUE :** les tâches que vous sélectionnez ici déterminent les pages que vous devrez remplir après la page **Sélectionner l’ordre des tâches de maintenance** ci-dessous.  
   
-8.  Dans la page **Sélectionner l'ordre des tâches de maintenance** , sélectionnez une tâche et cliquez sur **Monter…** ou **Descendre…** pour modifier son ordre d'exécution. Lorsque vous avez terminé, ou si vous êtes satisfait de l'ordre actuel de tâches, cliquez sur **Suivant**.  
+8.  Dans la page **Sélectionner l’ordre des tâches de maintenance**, sélectionnez une tâche et cliquez sur **Monter…** ou **Descendre…** pour modifier son ordre d’exécution. Lorsque vous avez terminé, ou si vous êtes satisfait de l'ordre actuel de tâches, cliquez sur **Suivant**.  
   
     > **REMARQUE :** si vous avez sélectionné **Planification distincte pour chaque tâche** dans la page **Sélectionner les propriétés de plan** ci-dessus, vous ne pouvez pas modifier l’ordre des tâches de maintenance sur cette page.  
   
@@ -206,7 +206,7 @@ Case à cocher**Inclure les index**
   
 ## <a name="define-the-index-tasks"></a>Définir les tâches d'index  
   
-1.  Dans la page **Définir la tâche Réorganiser l'index** , sélectionnez le serveur ou les serveurs où vous déplacerez les pages d'index dans un ordre de recherche plus efficace. La tâche utilise l'instruction `ALTER INDEX … REORGANIZE`. Pour plus d’informations, consultez [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md). Lorsque vous avez terminé, cliquez sur **Suivant**.  
+1.  Dans la page **Définir la tâche Réorganiser l'index** , sélectionnez le serveur ou les serveurs où vous déplacerez les pages d'index dans un ordre de recherche plus efficace. La tâche utilise l'instruction `ALTER INDEX ... REORGANIZE`. Pour plus d’informations, consultez [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md). Lorsque vous avez terminé, cliquez sur **Suivant**.  
   
      Les options supplémentaires suivantes sont disponibles sur cette page.  
   
@@ -220,9 +220,9 @@ Case à cocher**Inclure les index**
      Spécifie les tables ou les index faisant l'objet de cette tâche. Non disponible quand **Tables et vues** est sélectionné dans la zone Objet.  
   
      Case à cocher**Compacter les objets importants**   
-     Annule l'allocation de l'espace pour les tables et les vues si possible. Cette option utilise `ALTER INDEX … LOB_COMPACTION = ON`.  
+     Annule l'allocation de l'espace pour les tables et les vues si possible. Cette option utilise `ALTER INDEX ... LOB_COMPACTION = ON`.  
   
-2.  Dans la page **Définir la tâche Reconstruire l’index** , sélectionnez chaque base de données où vous allez recréer plusieurs index. La tâche utilise l'instruction `ALTER INDEX … REBUILD PARTITION`. Pour plus d’informations, consultez [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).) Quand vous avez terminé, cliquez sur **Suivant**.  
+2.  Dans la page **Définir la tâche Reconstruire l’index** , sélectionnez chaque base de données où vous allez recréer plusieurs index. La tâche utilise l'instruction `ALTER INDEX ... REBUILD PARTITION`. Pour plus d’informations, consultez [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).) Quand vous avez terminé, cliquez sur **Suivant**.  
   
      Les options supplémentaires suivantes sont disponibles sur cette page.  
   
@@ -423,7 +423,7 @@ Case à cocher**Inclure les index**
     |**Compresser la sauvegarde**|Cliquez sur cette option pour compresser la sauvegarde, indépendamment de la valeur par défaut au niveau du serveur.<br /><br /> **\*\* Important \*\*** Par défaut, la compression augmente considérablement l’utilisation de l’UC et l’UC supplémentaire consommée par le processus de compression peut nuire aux opérations simultanées. Par conséquent, il peut être préférable, dans une session où l'utilisation de l'UC est limitée, de créer une sauvegarde compressée de priorité basse à l'aide de Resource Governor. Pour plus d'informations, consultez [Utiliser Resource Governor pour limiter l’utilisation de l’UC par compression de la sauvegarde &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md).|  
     |**Ne pas compresser la sauvegarde**|Cliquez sur cette option pour créer une sauvegarde non compressée, indépendamment de la valeur par défaut au niveau du serveur.|  
   
-2.  Dans la page **Définir la tâche Sauvegarder la base de données (différentielle)** , sélectionnez chaque base de données sur laquelle effectuer une sauvegarde partielle. Consultez la liste des définitions à l'étape 16 ci-dessus pour plus d'informations sur les options disponibles sur cette page. La tâche utilise l'instruction `BACKUP DATABASE … WITH DIFFERENTIAL`. Pour plus d’informations, consultez [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md).  Lorsque vous avez terminé, cliquez sur **Suivant**.  
+2.  Dans la page **Définir la tâche Sauvegarder la base de données (différentielle)** , sélectionnez chaque base de données sur laquelle effectuer une sauvegarde partielle. Consultez la liste des définitions à l'étape 16 ci-dessus pour plus d'informations sur les options disponibles sur cette page. La tâche utilise l'instruction `BACKUP DATABASE ... WITH DIFFERENTIAL`. Pour plus d’informations, consultez [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md).  Lorsque vous avez terminé, cliquez sur **Suivant**.  
   
 3.  Dans la page **Définir la tâche Sauvegarder la base de données (journal des transactions)** , sélectionnez chaque base de données sur laquelle effectuer une sauvegarde d’un journal des transactions. Consultez la liste des définitions à l'étape 16 ci-dessus pour plus d'informations sur les options disponibles sur cette page. La tâche utilise l'instruction `BACKUP LOG`. Pour plus d’informations, consultez [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md). Lorsque vous avez terminé, cliquez sur **Suivant**.  
   
@@ -519,10 +519,10 @@ Case à cocher**Inclure les index**
      Ouvre la boîte de dialogue **Enregistrer le rapport sous** .  
   
      **Copier le rapport dans le Presse-papiers**  
-     Copie les résultats du rapport de progression de l'Assistant dans le presse-papiers.  
+     Copie les résultats du rapport de progression de l’Assistant dans le Presse-papiers.  
   
      **Envoyer le rapport sous forme de courrier électronique**  
-     Copie les résultats du rapport de progression de l'Assistant dans un courrier électronique.  
+     Copie les résultats du rapport de progression de l’Assistant dans un e-mail.  
   
   
 

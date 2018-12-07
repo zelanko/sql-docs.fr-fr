@@ -19,12 +19,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ade996ce083c37bbf9ef2eeae30fb6e62a5786c8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: caec4221795ed991c01d635931989499302b0c1d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47680487"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515083"
 ---
 # <a name="create-unique-indexes"></a>Créer des index uniques
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -116,7 +116,7 @@ ms.locfileid: "47680487"
   
 7.  Dans la grille principale, sous **(Général)**, sélectionnez **Type** puis choisissez **Index** dans la liste.  
   
-8.  Sélectionnez **Colonnes**, puis cliquez sur le bouton de sélection **(…)**.  
+8.  Sélectionnez **Colonnes**, puis cliquez sur les points de suspension **(…)**.  
   
 9. Dans la boîte de dialogue **Colonnes d'index** , sous **Nom de la colonne**, sélectionnez les colonnes que vous souhaitez indexer. Vous pouvez sélectionner jusqu'à 16 colonnes. Si vous souhaitez que les performances soient optimales, évitez d'en sélectionner plus de deux par index. Pour chaque colonne sélectionnée, vous pouvez indiquer si l'index organise ses valeurs en ordre croissant ou décroissant.  
   
@@ -138,13 +138,13 @@ ms.locfileid: "47680487"
   
 3.  Développez la table sur laquelle vous souhaitez créer un index unique.  
   
-4.  Cliquez avec le bouton droit sur le dossier **Index** , pointez sur **Nouvel index**, puis sélectionnez **Index non cluster**.  
+4.  Cliquez avec le bouton droit sur le dossier **Index**, pointez sur **Nouvel index**, puis sélectionnez **Index non cluster...**.  
   
 5.  Dans la boîte de dialogue **Nouvel index** , sur la page **Général** , entrez le nom du nouvel index dans la zone **Nom de l'index** .  
   
 6.  Activez la case à cocher **Unique** .  
   
-7.  Sous **Colonnes clés d'index**, cliquez sur **Ajouter…**.  
+7.  Sous **Colonnes clés d’index**, cliquez sur **Ajouter…**.  
   
 8.  Dans la boîte de dialogue **Sélectionner des colonnes dans** _nom\_table_, cochez les cases correspondant aux colonnes de table à ajouter à l’index unique.  
   

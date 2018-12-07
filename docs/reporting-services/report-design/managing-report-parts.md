@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 41947b4c-8ecf-4e4f-b30e-66e1d6692b74
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1db5322685b4bddb0ec6b468365b5a4206e6e96a
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: fabed689d832cc71bcfe14a7f017d91b33244d84
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50100350"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52394063"
 ---
 # <a name="managing-report-parts"></a>Gestion de parties de rapport
   Les parties de rapports peuvent être réutilisées dans les rapports paginés par plusieurs utilisateurs et dans plusieurs rapports. Les utilisateurs peuvent rechercher des parties de rapports sur le serveur et les ajouter à un rapport.  Les utilisateurs peuvent également être informés des mises à jour apportées à la partie de rapport sur le serveur et republier de nouvelles versions d'une partie de rapport. Ces actions de création du rapport peuvent être affectées et contrôlées par les autorisations de sécurité de Reporting Services.  Cette rubrique passe en revue les propriétés et le comportement des parties de rapports une fois que celles-ci sont sur le serveur.  
@@ -84,7 +84,7 @@ ms.locfileid: "50100350"
     > [!IMPORTANT]  
     >  Dans chacune de ces étapes, vérifiez que les parties de rapports sont réutilisées dans les rapports à partir d'emplacements et d'utilisateurs de confiance.  
   
--   Les parties de rapport utilisent les mêmes stratégies d'autorisation que le type d'élément « Resource » existant. Dans un dossier, il n'y a aucune différenciation entre les éléments de ressource traditionnels et les parties de rapports, du point de vue de l'héritage de la sécurité. La partie de rapport héritera de la même stratégie d'autorisation que les images qui figurent dans le même dossier. Lorsque cette distinction est nécessaire, la sécurité au niveau des éléments peut être configurée pour les parties de rapports souhaitées. Sinon, vous pouvez placer les parties de rapports dans des dossiers séparés avec les autorisations appropriées configurées.  
+-   Les parties de rapports utilisent les mêmes stratégies d’autorisation que le type d’élément « Resource » existant. Dans un dossier, il n'y a aucune différenciation entre les éléments de ressource traditionnels et les parties de rapports, du point de vue de l'héritage de la sécurité. La partie de rapport héritera de la même stratégie d'autorisation que les images qui figurent dans le même dossier. Lorsque cette distinction est nécessaire, la sécurité au niveau des éléments peut être configurée pour les parties de rapports souhaitées. Sinon, vous pouvez placer les parties de rapports dans des dossiers séparés avec les autorisations appropriées configurées.  
   
 ## <a name="see-also"></a> Voir aussi  
  [Parties de rapports et datasets dans le Générateur de rapports](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   

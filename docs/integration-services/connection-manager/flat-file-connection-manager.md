@@ -23,12 +23,12 @@ ms.assetid: 7830f80d-af32-4e8f-a6fc-f03af6bc1946
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1570c643375d9ca7b327b7e5f630657ff9aeaeed
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e6a920aa5f31bb18d717ea3da8edd328bd398a92
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694980"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52420540"
 ---
 # <a name="flat-file-connection-manager"></a>Gestionnaire de connexions de fichiers plats
   Un gestionnaire de connexions de fichiers plats permet à un package d'accéder aux données d'un fichier plat. Ainsi, les sources et destinations de fichiers plats peuvent utiliser des gestionnaires de connexions de fichiers plats pour extraire et charger des données.  
@@ -61,7 +61,7 @@ ms.locfileid: "47694980"
   
 -   Spécifiez un caractère d'identificateur de texte. Chaque colonne peut être configurée pour reconnaître un identificateur de texte.  
   
-     L’utilisation d’un caractère qualificateur pour incorporer un caractère qualificateur dans une chaîne qualifiée est désormais prise en charge par le gestionnaire de connexions de fichiers plats. La double instance d'un qualificateur de texte est interprétée comme une instance littérale et unique de cette chaîne. Par exemple, si l'identificateur de texte est un guillemet simple et si les données d'entrée sont 'abc', 'def', 'g'hi', les données de sortie sont abc, def, g'hi. Toutefois, une instance d’un qualificateur incorporé dans une chaîne qualifiée provoque l’échec de la source du fichier plat avec l’erreur DTS_E_PRIMEOUTPUTFAILED.
+     L’utilisation d’un caractère qualificateur pour incorporer un caractère qualificateur dans une chaîne qualifiée est désormais prise en charge par le gestionnaire de connexions de fichiers plats. La double instance d'un qualificateur de texte est interprétée comme une instance littérale et unique de cette chaîne. Par exemple, si l’identificateur de texte est un guillemet simple et si les données d’entrée sont 'abc', 'def', 'g'hi', les données de sortie sont abc, def, g'hi. Toutefois, une instance d’un qualificateur incorporé dans une chaîne qualifiée provoque l’échec de la source du fichier plat avec l’erreur DTS_E_PRIMEOUTPUTFAILED.
   
 -   Définissez des propriétés comme le nom, le type de données et la largeur maximale pour des colonnes individuelles.  
   
@@ -254,9 +254,9 @@ ms.locfileid: "47694980"
 |**DataType**|Sélectionnez un type de données dans la liste des types de données disponibles. Pour plus d'informations, consultez [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).|  
 |**TextQualified**|Indique si les données de texte sont entourées par des caractères identificateurs de texte, tels que des caractères de guillemets.<br /><br /> True : les données texte du fichier plat sont qualifiées. False : les données texte du fichier plat ne sont pas qualifiées.|  
 |**Nom**|Précisez un nom de colonne descriptif. Si vous n'entrez aucun nom, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crée automatiquement un nom au format Colonne 0, Colonne 1, et ainsi de suite.|  
-|**DataScale**|Spécifiez l'échelle des données numériques. L'échelle est le nombre de décimales. Pour plus d'informations, consultez [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).|  
+|**DataScale**|Spécifiez l'échelle des données numériques. L'échelle est le nombre de décimales. Pour plus d’informations, consultez [Types de données Integration Services](../../integration-services/data-flow/integration-services-data-types.md).|  
 |**ColumnDelimiter**|Sélectionnez un délimiteur de colonnes dans la liste des séparateurs de colonnes disponibles. Veillez à choisir un caractère de séparation qu'il est peu probable de rencontrer dans le texte. Cette valeur est ignorée dans le cas des colonnes à largeur fixe.<br /><br /> **{CR}{LF}**. Les colonnes sont délimitées par une combinaison retour chariot-saut de ligne.<br /><br /> **{CR}**. Les colonnes sont séparées par un retour chariot.<br /><br /> **{LF}**. Les colonnes sont séparées par un saut de ligne.<br /><br /> **Point-virgule {;}**. Les colonnes sont séparées par un point-virgule.<br /><br /> **Deux-points {:}**. Les colonnes sont séparées par un deux-points.<br /><br /> **Virgule {,}**. Les colonnes sont séparées par une virgule.<br /><br /> **Tabulation {t}**. Les colonnes sont séparées par une tabulation.<br /><br /> **Barre verticale {&#124;}**. Les colonnes sont séparées par une barre verticale.|  
-|**DataPrecision**|Spécifiez la précision des données numériques. La précision indique le nombre total de chiffres. Pour plus d'informations, consultez [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).|  
+|**DataPrecision**|Spécifiez la précision des données numériques. La précision indique le nombre total de chiffres. Pour plus d’informations, consultez [Types de données Integration Services](../../integration-services/data-flow/integration-services-data-types.md).|  
 |**InputColumnWidth**|Indiquez une valeur spécifiant la largeur de colonne en nombre d'octets. Pour les fichiers Unicode, cette valeur est exprimée en nombre de caractères. Cette valeur est ignorée dans le cas des colonnes délimitées.<br /><br /> **Remarque** : Dans le modèle objet, le nom de cette propriété est ColumnWidth.|  
   
  **Nouveau**  

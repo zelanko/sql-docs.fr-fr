@@ -12,12 +12,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7fca24650ef1d7b26dc9fac93c0ab5d714bf7d90
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 33faa406912e2f80d6911e9e4f94b27397e89cef
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47841927"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534765"
 ---
 # <a name="create-and-store-column-master-keys-always-encrypted"></a>Créer et stocker des clés principales de colonne (Always Encrypted)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -127,7 +127,7 @@ $azureLocation = "<key vault location>"
 $akvName = "<key vault name>"
 $akvKeyName = "<column master key name>"
 $azureCtx = Set-AzureRMContext -SubscriptionId $SubscriptionId # Sets the context for the below cmdlets to the specified subscription.
-New-AzureRmResourceGroup –Name $resourceGroup –Location $azureLocation # Creates a new resource group - skip, if you desire group already exists.
+New-AzureRmResourceGroup -Name $resourceGroup -Location $azureLocation # Creates a new resource group - skip, if you desire group already exists.
 New-AzureRmKeyVault -VaultName $akvName -ResourceGroupName $resourceGroup -Location $azureLocation -SKU premium # Creates a new key vault - skip if your vault already exists.
 Set-AzureRmKeyVaultAccessPolicy -VaultName $akvName -ResourceGroupName $resourceGroup -PermissionsToKeys get, create, delete, list, update, import, backup, restore, wrapKey, unwrapKey, sign, verify -UserPrincipalName $azureCtx.Account
 $akvKey = Add-AzureKeyVaultKey -VaultName $akvName -Name $akvKeyName -Destination HSM
@@ -139,7 +139,7 @@ Pour obtenir un didacticiel pas à pas qui utilise SSMS et stocke les clés Alwa
 
 ### <a name="making-azure-key-vault-keys-available-to-applications-and-users"></a>Mise à disposition des clés Azure Key Vault pour les applications et les utilisateurs
 
-Lorsque vous utilisez une clé Azure Key Vault comme clé principale de colonne, votre application doit s’authentifier auprès d’Azure et l’identité de votre application doit disposer des autorisations suivantes dans le coffre de clés : *get*, *unwrapKey*et *verify*. 
+Lorsque vous utilisez une clé Azure Key Vault comme clé principale de colonne, votre application doit s’authentifier auprès d’Azure et l’identité de votre application doit disposer des autorisations suivantes dans le coffre de clés : *get*, *unwrapKey* et *verify*. 
 
 Pour mettre en service les clés de chiffrement de colonne qui sont protégées par une clé principale de colonne stockée dans Azure Key Vault, vous devez disposer des autorisations *get*, *unwrapKey*, *wrapKey*, *sign*et *verify* . En outre, pour créer une nouvelle clé dans un coffre de clés Azure, vous devez disposer de l’autorisation *create* . Pour afficher le contenu du coffre de clés, vous devez disposer de l’autorisation *list* .
 

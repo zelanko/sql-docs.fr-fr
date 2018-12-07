@@ -19,12 +19,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 18579eba7d7a66b9efd1a10de4a0815d2503744e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: d79d404e72f13ade55f6bd64f261741d86b78347
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51672528"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532548"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>Améliorer les performances des index de recherche en texte intégral
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -132,23 +132,23 @@ Les parties variables du nom de fichier du journal d’analyse sont les suivante
   
 Pour obtenir des informations essentielles sur les formules suivantes, consultez les remarques qui suivent le tableau.  
   
-|Plateforme|Estimation des besoins en mémoire de fdhost.exe en Mo :*F*^1|Formule de calcul de la mémoire maximum du serveur :*M*^2|  
+|Plateforme|Estimation des besoins en mémoire de fdhost.exe en Mo : *F*^1|Formule de calcul de la mémoire maximum du serveur : *M*^2|  
 |--------------|-----------------------------------------------------------|-----------------------------------------------------|  
-|x86|*F* = *Nombre de plages d’analyse* * 50|*M* =minimum(*T*, 2000) – F – 500|  
-|x64|*F* = *Nombre de plages d’analyse* * 10 * 8|*M* = *T* – *F* – 500|  
+|x86|*F* = *Nombre de plages d’analyse* * 50|*M* =minimum(*T*, 2000) - F - 500|  
+|x64|*F* = *Nombre de plages d’analyse* * 10 * 8|*M* = *T* - *F* - 500|  
 
 **Remarques sur les formules**
-1.  Si plusieurs alimentations complètes sont en cours, calculez séparément les besoins en mémoire de chaque processus fdhost.exe, comme *F1*, *F2*, etc. Ensuite, calculez *M* comme *T***–** sigma **(***F*i**)**.  
+1.  Si plusieurs alimentations complètes sont en cours, calculez séparément les besoins en mémoire de chaque processus fdhost.exe, comme *F1*, *F2*, etc. Ensuite, calculez *M* comme _T_**-** sigma **(**_F_i **)**.  
 2.  500 Mo est une estimation de la mémoire requise par les autres processus dans le système. Si le système effectue un travail supplémentaire, augmentez cette valeur en conséquence.  
 3.  .*ism_size* est censé être de 8 Mo pour les plateformes x64.  
   
  #### <a name="example-estimate-the-memory-requirements-of-fdhostexe"></a>Exemple : estimation des besoins en mémoire de fdhost.exe  
   
- Cet exemple se rapporte à un ordinateur 64 bits avec 8 Go de mémoire vive (RAM) et 4 processeurs double cœur. Les premières estimations de calcul de la mémoire requise par fdhost.exe :*F*. Le nombre de plages d'analyse est `8`.  
+ Cet exemple se rapporte à un ordinateur 64 bits avec 8 Go de mémoire vive (RAM) et 4 processeurs double cœur. Les premières estimations de calcul de la mémoire requise par fdhost.exe : *F*. Le nombre de plages d'analyse est `8`.  
   
  `F = 8*10*8=640`  
   
- Le calcul suivant obtient la valeur optimale de **mémoire maximum du serveur**—*M*. La mémoire physique totale disponible sur ce système en Mo—*T*—est `8192`.  
+ Le calcul suivant obtient la valeur optimale de **mémoire maximum du serveur**-*M*. La mémoire physique totale disponible sur ce système en Mo -*T*- est `8192`.  
   
  `M = 8192-640-500=7052`  
   

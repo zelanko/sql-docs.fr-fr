@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9bbc734c-9e69-48c2-8bec-8abe7c6cc987
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: db904742a73ec3837bfffe1eaecffbe37ca5c154
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a63512de9229f26e6e04ad5f44c5dd1c757cb881
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763247"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52391692"
 ---
 # <a name="configurationsetting-method---setwindowsserviceidentity"></a>Méthode ConfigurationSetting - SetWindowsServiceIdentity
   Fait en sorte que le service Windows Report Server s'exécute en tant qu'utilisateur Windows spécifié et accorde des autorisations de système de fichiers suffisantes à ce compte pour permettre au serveur de rapports de fonctionner.  
@@ -56,7 +56,7 @@ public void SetWindowsServiceIdentity(boolean UseBuiltInAccount,
 ## <a name="remarks"></a>Notes   
  Quand le paramètre *UseBuiltInAccount* a la valeur **true** et que le serveur de rapports s’exécute sur Microsoft [!INCLUDE[win2kfamily](../../includes/win2kfamily-md.md)] ou Windows XP, la valeur des paramètres *Name*, *Domain*et *Password* est ignorée et le compte système Local est utilisé.  
   
- Quand le paramètre *UseBuiltInAccount* a la valeur **true** et que le serveur de rapports s’exécute sur Windows Server 2003, les propriétés *Domain* et *Password* sont ignorées et le champ de nom doit contenir « Builtin\NetworkService », « Builtin\System » ou « Builtin\LocalService ».  
+ Quand le paramètre *UseBuiltInAccount* a la valeur **true** et que le serveur de rapports s’exécute sur Windows Server 2003, les propriétés *Domain* et *Password* sont ignorées et le champ de nom doit contenir « Builtin\NetworkService », « Builtin\System » ou « Builtin\LocalService ».  
   
  La méthode SetWindowsServiceIdentity définit des autorisations d’accès aux fichiers sur les fichiers et les dossiers dans le répertoire d’installation du serveur de rapports.  
   

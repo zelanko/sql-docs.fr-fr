@@ -1,7 +1,7 @@
 ---
 title: Statistiques des requêtes actives | Microsoft Docs
 ms.custom: ''
-ms.date: 10/28/2015
+ms.date: 11/21/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
@@ -11,29 +11,37 @@ helpviewer_keywords:
 - live query statistics
 - debugging [SQL Server], live query stats
 - statistics [SQL Server], live query statistics
+- query profiling
+- lightweight query profiling
+- lightweight profiling
 ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ecfcf242fc0c56bd7e232b5ac22823526193ad9d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 42c1612916ec1de69e02ce50febd6a2820cd9684
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47648527"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52412606"
 ---
 # <a name="live-query-statistics"></a>Statistiques des requêtes dynamiques
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] offre la possibilité de visualiser le plan d’exécution dynamique d’une requête active. Ce plan de requête active fournit des insights en temps réel sur le processus d’exécution des requêtes à mesure que les contrôles passent d’un [opérateur de plan de requête](../../relational-databases/showplan-logical-and-physical-operators-reference.md) à un autre. Le plan de requête active affiche la progression globale de la requête ainsi que des statistiques d’exécution de niveau opérateur telles que le nombre de lignes produites, le temps écoulé, la progression de l’opérateur, etc. Vous pouvez accéder à ces données en temps réel sans avoir à attendre l’exécution de la requête ; ces statistiques d’exécution se révèlent donc extrêmement utiles pour résoudre les problèmes de performances de requêtes. Cette fonctionnalité est disponible avec [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], mais elle peut également fonctionner avec [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
+
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] offre la possibilité de visualiser le plan d’exécution dynamique d’une requête active. Ce plan de requête active fournit des insights en temps réel sur le processus d’exécution des requêtes à mesure que les contrôles passent d’un [opérateur de plan de requête](../../relational-databases/showplan-logical-and-physical-operators-reference.md) à un autre. Le plan de requête active affiche la progression globale de la requête ainsi que des statistiques d’exécution de niveau opérateur telles que le nombre de lignes produites, le temps écoulé, la progression de l’opérateur, etc. Vous pouvez accéder à ces données en temps réel sans avoir à attendre l’exécution de la requête ; ces statistiques d’exécution se révèlent donc extrêmement utiles pour résoudre les problèmes de performances de requêtes. Cette fonctionnalité est disponible avec [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], mais elle peut également fonctionner avec [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
+
+> [!NOTE]
+> En interne, les statistiques des requêtes actives utilisent la vue de gestion dynamique [sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md).
   
 **S’applique à**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
   
 > [!WARNING]  
-> Cette fonctionnalité est principalement utilisée à des fins de dépannage. Son utilisation peut légèrement ralentir les performances globales de la requête. Cette fonctionnalité peut être utilisée avec le [débogueur Transact-SQL](../../relational-databases/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md).  
+> Cette fonctionnalité est principalement utilisée à des fins de dépannage. Son utilisation peut légèrement ralentir les performances globales des requêtes, en particulier dans [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. Pour plus d’informations, consultez [Infrastructure du profilage de requête](../../relational-databases/performance/query-profiling-infrastructure.md).  
+> Cette fonctionnalité peut être utilisée avec le [débogueur Transact-SQL](../../relational-databases/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md).  
   
-#### <a name="to-view-live-query-statistics"></a>Affichage des statistiques de requêtes actives  
+## <a name="to-view-live-query-statistics-for-one-query"></a>Pour afficher les statistiques des requêtes actives pour une requête 
   
-1.  Pour afficher le plan d’exécution des requêtes actives, accédez au menu Outils et cliquez sur l’icône **Statistiques des requêtes actives** .  
+1.  Pour afficher le plan d’exécution des requêtes actives, accédez au menu Outils et cliquez sur l’icône **Inclure les statistiques des requêtes actives**.  
   
      ![Bouton statistiques des requêtes actives sur la barre d’outils](../../relational-databases/performance/media/livequerystatstoolbar.png "Bouton statistiques des requêtes actives sur la barre d’outils")  
   
@@ -45,34 +53,17 @@ ms.locfileid: "47648527"
   
      ![Bouton Statistiques des requêtes actives du plan d’exécution de requêtes](../../relational-databases/performance/media/livequerystatsplan.png "Bouton Statistiques des requêtes actives du plan d’exécution de requêtes")  
   
- Vous pouvez également cliquer avec le bouton droit sur les requêtes de votre choix dans la table **Requêtes coûteuses actives** du **Moniteur d’activité** pour accéder au plan d’exécution dynamique.  
+## <a name="to-view-live-query-statistics-for-any-query"></a>Pour afficher les statistiques des requêtes actives pour n’importe quelle requête 
+
+Vous pouvez également cliquer avec le bouton droit sur n’importe quelle requête dans la table **Processus** ou **Requêtes coûteuses actives** du **[Moniteur d’activité](../../relational-databases/performance-monitor/activity-monitor.md)** pour accéder au plan d’exécution actif.  
   
  ![Bouton Statistiques des requêtes actives du Moniteur d’activité](../../relational-databases/performance/media/livequerystatsactmon.png "Bouton Statistiques des requêtes actives du Moniteur d’activité")  
   
 ## <a name="remarks"></a>Notes   
- L’infrastructure de profil de statistiques doit être activée pour que les statistiques de requêtes actives puissent capturer des informations sur la progression des requêtes. En spécifiant le paramètre **Inclure les statistiques des requêtes actives** dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] , vous pouvez activer l’infrastructure de statistiques pour la session de requête en cours. 
- 
-Jusqu’à [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], deux autres façons permettent d’activer l’infrastructure de statistiques pour afficher les statistiques des requêtes actives d’autres sessions (par exemple, à partir du Moniteur d’activité) :  
-  
--   Exécutez `SET STATISTICS XML ON;` ou `SET STATISTICS PROFILE ON;` dans la session cible.  
-  
- ou Gestionnaire de configuration  
-  
--   Activez l’événement étendu **query_post_execution_showplan** . Ce paramètre de niveau serveur permet d’activer les statistiques de requêtes actives sur toutes les sessions. Pour activer les événements étendus, consultez [Monitor System Activity Using Extended Events](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md).  
-
-À compter de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inclut une version légère de l’infrastructure de profil de statistiques. Deux façons permettent d’activer l’infrastructure légère de statistiques pour afficher les statistiques des requêtes actives d’autres sessions (par exemple, à partir du Moniteur d’activité) :
-
--   Utilisez l’indicateur de trace global 7412.  
-  
- ou Gestionnaire de configuration  
-  
--   Activez l’événement étendu **query_thread_profile** . Ce paramètre de niveau serveur permet d’activer les statistiques de requêtes actives sur toutes les sessions. Pour activer les événements étendus, consultez [Monitor System Activity Using Extended Events](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md).
-  
- > [!NOTE]
- > Les procédures stockées compilées en mode natif ne sont pas prises en charge.  
+ L’infrastructure de profil de statistiques doit être activée pour que les statistiques de requêtes actives puissent capturer des informations sur la progression des requêtes. En fonction de la version, la surcharge peut être significative. Pour plus d’informations sur cette surcharge, consultez [Infrastructure du profilage de requête](../../relational-databases/performance/query-profiling-infrastructure.md).
   
 ## <a name="permissions"></a>Permissions  
- Nécessite une autorisation **SHOWPLAN** de niveau base de données pour l’écriture de données dans la page de résultats **Statistiques des requêtes actives** , une autorisation **VIEW SERVER STATE** de niveau serveur pour l’affichage des statistiques actives, ainsi que toutes les autorisations nécessaires pour l’exécution de la requête.  
+ Nécessite une autorisation `SHOWPLAN` au niveau de la base de données pour l’écriture de données dans la page de résultats **Statistiques des requêtes actives**, une autorisation `VIEW SERVER STATE` au niveau du serveur pour l’affichage des statistiques actives, ainsi que toutes les autorisations nécessaires pour l’exécution de la requête.  
   
 ## <a name="see-also"></a> Voir aussi  
  [Surveiller et optimiser les performances](../../relational-databases/performance/monitor-and-tune-for-performance.md)     
@@ -83,4 +74,5 @@ Jusqu’à [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], deux autres façon
  [sys.dm_exec_query_statistics_xml](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md)     
  [sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md)     
  [Indicateurs de trace](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)    
- [Guide de référence des opérateurs Showplan logiques et physiques](../../relational-databases/showplan-logical-and-physical-operators-reference.md)
+ [Guide de référence des opérateurs Showplan logiques et physiques](../../relational-databases/showplan-logical-and-physical-operators-reference.md)     
+ [Infrastructure du profilage de requête](../../relational-databases/performance/query-profiling-infrastructure.md)   

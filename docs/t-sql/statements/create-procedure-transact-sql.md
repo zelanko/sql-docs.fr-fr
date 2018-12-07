@@ -47,12 +47,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 32f201e6eb386119fd61aa9fb34fdc90a7ab4b25
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 67e1f72fef6c10551f3d0670aff694777f52e391
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559447"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512114"
 ---
 # <a name="create-procedure-transact-sql"></a>CREATE PROCEDURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -231,7 +231,7 @@ ENCRYPTION
 EXECUTE AS *clause*  
  Indique le contexte de sécurité dans lequel la procédure doit être exécutée.  
   
- Les procédures stockées compilées en mode natif ne présentent aucune limitation sur la clause EXECUTE AS depuis [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et dans [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Dans [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] les clauses SELF, OWNER et *'user_name'* sont prises en charge avec des procédures stockées compilées en mode natif.  
+ Les procédures stockées compilées en mode natif ne présentent aucune limitation sur la clause EXECUTE AS depuis [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et dans [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Dans [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], les clauses SELF, OWNER et *’user_name’* sont prises en charge avec des procédures stockées compilées en mode natif.  
   
  Pour plus d’informations, consultez [Clause EXECUTE AS &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md).  
   
@@ -362,7 +362,7 @@ Consultez [Exemples](#Examples) à la fin de cette rubrique pour obtenir beaucou
   
 -   Utilisez l'instruction SET NOCOUNT ON comme première instruction dans le corps de la procédure. Autrement dit, placez-la juste après le mot clé AS. Cela permet de désactiver les messages renvoyés par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] au client une fois les instructions SELECT, INSERT, UPDATE, MERGE et DELETE exécutées. Les performances globales de la base de données et de l'application peuvent être améliorées en éliminant toute surcharge réseau inutile. Pour plus d’informations, consultez [SET NOCOUNT &#40;Transact-SQL&#41;](../../t-sql/statements/set-nocount-transact-sql.md).  
   
--   Utilisez des noms de schémas lorsque vous créez ou référencez des objets de base de données dans la procédure. Il faut moins de temps au [!INCLUDE[ssDE](../../includes/ssde-md.md)] pour résoudre les noms d’objets s’il n’a pas à effectuer des recherches dans plusieurs schémas. Cela évite également les problèmes d’autorisation et d’accès causés par le schéma par défaut d’un utilisateur qui est affecté lors de la création d’objets sans spécifier le schéma.  
+-   Utilisez des noms de schémas lorsque vous créez ou référencez des objets de base de données dans la procédure. Il faut moins de temps au [!INCLUDE[ssDE](../../includes/ssde-md.md)] pour résoudre les noms d’objets s’il n’a pas à effectuer des recherches dans plusieurs schémas. Ceci évite également les problèmes d’autorisation et d’accès causés par le schéma par défaut d’un utilisateur qui est affecté lors de la création d’objets sans spécification du schéma.  
   
 -   Évitez les fonctions de renvoi à la ligne pour les fonctions autour des colonnes spécifiées dans les clauses WHERE et JOIN. Les colonnes seront ainsi non déterministes, ce qui empêche le processeur de requêtes d'utiliser des index.  
   
@@ -374,7 +374,7 @@ Consultez [Exemples](#Examples) à la fin de cette rubrique pour obtenir beaucou
   
 -   Utilisez des transactions explicites avec BEGIN/COMMIT TRANSACTION, et privilégiez, autant que possible, les transactions courtes. Les transactions plus longues entraînent un verrouillage plus long des enregistrements et un plus grand risque de blocage.  
   
--   Utilisez la fonction [!INCLUDE[tsql](../../includes/tsql-md.md)] TRY…CATCH pour la gestion des erreurs au sein d'une procédure. TRY…CATCH peut encapsuler un bloc entier d'instructions [!INCLUDE[tsql](../../includes/tsql-md.md)]. Cela entraîne non seulement une moindre diminution des performances, mais contribue également à améliorer la création de rapports d'erreurs avec une programmation beaucoup moins lourde.  
+-   Utilisez la fonction [!INCLUDE[tsql](../../includes/tsql-md.md)] TRY...CATCH pour la gestion des erreurs au sein d’une procédure. TRY...CATCH peut encapsuler un bloc entier d’instructions [!INCLUDE[tsql](../../includes/tsql-md.md)]. Cela entraîne non seulement une moindre diminution des performances, mais contribue également à améliorer la création de rapports d'erreurs avec une programmation beaucoup moins lourde.  
   
 -   Utilisez le mot clé DEFAULT sur toutes les colonnes de table qui sont référencées par des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE TABLE ou ALTER TABLE dans le corps de la procédure. Cela évite de passer une valeur NULL aux colonnes qui n’autorisent pas cette valeur.  
   
@@ -498,7 +498,7 @@ GO
 |[Syntaxe de base](#BasicSyntax)|CREATE PROCEDURE|  
 |[Passage de paramètres](#Parameters)|@parameter <br> &nbsp;&nbsp;  • = default <br> &nbsp;&nbsp; • OUTPUT <br> &nbsp;&nbsp; • type de paramètre table <br> &nbsp;&nbsp; • CURSOR VARYING|  
 |[Modification des données à l’aide d’une procédure stockée](#Modify)|UPDATE|  
-|[Gestion des erreurs](#Error)|TRY…CATCH|  
+|[Gestion des erreurs](#Error)|TRY...CATCH|  
 |[Obscurcissement de la définition de procédure](#Encrypt)|WITH ENCRYPTION|  
 |[Recompilation forcée de la procédure](#Recompile)|WITH RECOMPILE|  
 |[Définition du contexte de sécurité](#Security)|EXECUTE AS|  
@@ -797,8 +797,8 @@ EXEC HumanResources.Update_VacationHours 40;
 ###  <a name="Error"></a> Gestion des erreurs  
  Les exemples de cette section présentent des méthodes pour gérer les erreurs qui peuvent se produire lorsque la procédure stockée est exécutée.  
   
-#### <a name="j-using-trycatch"></a>J. Utilisation de TRY…CATCH  
- L'exemple suivant illustre l'utilisation de la construction TRY… CATCH pour retourner des informations sur les erreurs interceptées pendant l'exécution d'une procédure stockée.  
+#### <a name="j-using-trycatch"></a>J. Utilisation de TRY...CATCH  
+ L’exemple suivant illustre l’utilisation de la construction TRY...CATCH pour retourner des informations sur les erreurs interceptées pendant l’exécution d’une procédure stockée.  
   
 ```sql  
 CREATE PROCEDURE Production.uspDeleteWorkOrder ( @WorkOrderID int )  

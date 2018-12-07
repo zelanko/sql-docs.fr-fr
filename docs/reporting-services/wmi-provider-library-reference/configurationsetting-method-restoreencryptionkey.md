@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 37e949f5-15af-4858-848a-f482ee94fcd9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cf89b1839fe17df60d97719482c4418f7234eeff
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6d19ecb9c4f14c0f9750a7344a6c2c442785cbb0
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692230"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52416136"
 ---
 # <a name="configurationsetting-method---restoreencryptionkey"></a>Méthode ConfigurationSetting - RestoreEncryptionKey
   Réapplique la clé de chiffrement spécifiée à la base de données du serveur de rapports.  
@@ -58,7 +58,7 @@ public void RestoreEncryptionKey(out Byte[] KeyFile, out Int32 Length,
  Retourne un paramètre *HRESULT* qui indique si l'appel de la méthode a réussi ou a échoué. Une valeur 0 indique que l'appel de méthode a réussi. Une valeur différente de zéro indique qu'une erreur s'est produite.  
   
 ## <a name="remarks"></a>Notes   
- S'il existe déjà une entrée pour le serveur de rapports dans la base de données du serveur de rapports, elle est supprimée. La nouvelle entrée est ensuite créée à l'aide de la clé de chiffrement spécifiée et de la clé publique du serveur de rapports.  
+ S'il existe déjà une entrée pour le serveur de rapports dans la base de données du serveur de rapports, elle est supprimée. La nouvelle entrée est ensuite créée à l’aide de la clé de chiffrement spécifiée et de la clé publique du serveur de rapports.  
   
  Cette méthode est très efficace quand elle est appelée après la méthode [DeleteEncryptionKey](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-deleteencryptionkey.md) , qui efface la liste de clés de chiffrement.  
   

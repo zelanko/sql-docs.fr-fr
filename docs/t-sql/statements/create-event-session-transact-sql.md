@@ -23,12 +23,12 @@ ms.assetid: 67683027-2b0f-47aa-b223-604731af8b4d
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: d98dfd2c96322a2ba1b042a0edfcff8f7e6fb518
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: a87156a7987b3386f452944c49076d47fdaffa59
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696677"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52401324"
 ---
 # <a name="create-event-session-transact-sql"></a>CREATE EVENT SESSION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,8 +39,7 @@ ms.locfileid: "51696677"
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
-  
+```    
 CREATE EVENT SESSION event_session_name  
 ON SERVER  
 {  
@@ -230,7 +229,7 @@ ON SERVER
  Spécifie si cette session d'événements doit être lancée automatiquement au démarrage de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
->  Si STARTUP_STATE = ON, la session d'événements se lance uniquement si SQL Server est arrêté, puis redémarré.  
+> Si `STARTUP_STATE = ON`, la session d’événements est lancée uniquement si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est arrêté puis redémarré.  
   
  ON  
  La session d'événements est lancée au démarrage.  
@@ -239,15 +238,15 @@ ON SERVER
  La session d'événements n'est pas lancée au démarrage.  
   
 ## <a name="remarks"></a>Notes   
- L'ordre de priorité des opérateurs logiques est NOT (la plus élevée), puis AND, puis OR.  
+L’ordre de priorité des opérateurs logiques est `NOT`(la plus élevée), puis `AND`, puis `OR`.  
   
 ## <a name="permissions"></a>Permissions  
- Requiert l'autorisation ALTER ANY EVENT SESSION.  
+Nécessite l’autorisation `ALTER ANY EVENT SESSION`.  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant montre comment créer une session d'événements appelée `test_session`. Cet exemple ajoute deux événements et utilise la cible du suivi d'événements pour Windows.  
   
-```  
+```sql  
 IF EXISTS(SELECT * FROM sys.server_event_sessions WHERE name='test_session')  
     DROP EVENT session test_session ON SERVER;  
 GO  

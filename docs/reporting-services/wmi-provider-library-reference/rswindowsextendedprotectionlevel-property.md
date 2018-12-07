@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 162ffe86-69c3-49d2-b9ed-49d097c05551
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f3fb05b9ed2ee446343227b584ae271954a01e78
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 91f3e68d165ab288fd3329b2335797b6323e0e46
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47699157"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52407456"
 ---
 # <a name="rswindowsextendedprotectionlevel-property"></a>Propriété RSWindowsExtendedProtectionLevel
   Retourne une valeur de chaîne indiquant le niveau de protection configuré pour le serveur de rapports. Cette propriété est en lecture seule.  
@@ -29,9 +29,9 @@ public string RSWindowsExtendedProtectionLevel;
 ```  
   
 ## <a name="remarks"></a>Notes   
- Retourne une valeur de chaîne indiquant le niveau de protection configuré pour le serveur de rapports. Si le serveur de rapports auquel le fournisseur WMI est connecté ne prend pas en charge la protection étendue, “” (chaîne vide) est retourné. La liste suivante affiche les valeurs valides :  
+ Retourne une valeur de chaîne indiquant le niveau de protection configuré pour le serveur de rapports. Si le serveur de rapports auquel le fournisseur WMI est connecté ne prend pas en charge la protection étendue, "" (chaîne vide) est retourné. La liste suivante affiche les valeurs valides :  
   
- `“Off” | “Allow” | “Require”`  
+ `"Off" | "Allow" | "Require"`  
   
 ## <a name="example-code"></a>Exemple de code  
  [Classe MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-class.md)  

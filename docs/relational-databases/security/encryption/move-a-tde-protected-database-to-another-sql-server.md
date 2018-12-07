@@ -13,12 +13,12 @@ ms.assetid: fb420903-df54-4016-bab6-49e6dfbdedc7
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 9b4036967c0e542aa418fe80cf42c60c602a1ae1
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 1549c672211d328a723ab8eb056e8f227f1107ca
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169299"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521115"
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>Déplacer une base de données protégée par le chiffrement transparent des données vers un autre serveur SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ Les procédures suivantes vous montrent comment créer une base de données prot
   
 4.  Dans la boîte de dialogue **Nouvelle base de données** , dans la zone **Nom de la base de données** , entrez le nom de la nouvelle base de données.  
   
-5.  Dans la zone **Propriétaire** , entrez le nom du propriétaire de la nouvelle base de données. Vous pouvez également cliquer sur les points de suspension **(…)** pour ouvrir la boîte de dialogue **Sélectionner le propriétaire de la base de données** . Pour plus d'informations sur la création d'une nouvelle base de données, consultez [Create a Database](../../../relational-databases/databases/create-a-database.md).  
+5.  Dans la zone **Propriétaire** , entrez le nom du propriétaire de la nouvelle base de données. Vous pouvez également cliquer sur les points de suspension **(…)** pour ouvrir la boîte de dialogue **Sélectionner le propriétaire de la base de données**. Pour plus d'informations sur la création d'une nouvelle base de données, consultez [Create a Database](../../../relational-databases/databases/create-a-database.md).  
   
 6.  Dans l'Explorateur d'objets, cliquez sur le signe plus pour développer le dossier **Bases de données** .  
   
@@ -172,7 +172,7 @@ Les procédures suivantes vous montrent comment déplacer une base de données p
   
     -   Lorsqu'une base de données est impliquée dans la réplication, l' **État** est **Non prêt** et la colonne **Message** indique **Base de données répliquée**.  
   
-    -   Quand und base de données a une ou plusieurs connexions actives, l’**État** est **Non prêt** et la colonne **Message** affiche _\<nombre\_de\_connexions\_actives\>_**Connexion(s) active(s)**, par exemple, **1 connexion(s) active(s)**. Avant de détacher la base de données, vous devez déconnecter toutes les connexions actives en cliquant sur **Supprimer les connexions**.  
+    -   Quand une base de données a une ou plusieurs connexions actives, l’**État** est **Non prêt** et la colonne **Message** affiche _\<nombre\_de\_connexions\_actives\>_**Connexion(s) active(s)**, par exemple **1 connexion(s) active(s)**. Avant de détacher la base de données, vous devez déconnecter toutes les connexions actives en cliquant sur **Supprimer les connexions**.  
   
      Pour obtenir plus d'informations sur un message, cliquez sur le texte du lien hypertexte pour ouvrir le Moniteur d'activité.  
   
@@ -186,11 +186,11 @@ Les procédures suivantes vous montrent comment déplacer une base de données p
   
 6.  Recréez le certificat de serveur à l'aide du fichier de sauvegarde du certificat de serveur d'origine. Pour plus d’informations, consultez **Utilisation de Transact-SQL** ci-dessous.  
   
-7.  Dans l’Explorateur d’objets, dans [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], cliquez avec le bouton droit sur le dossier **Bases de données** , puis sélectionnez **Attacher…**.  
+7.  Dans l’Explorateur d’objets, dans [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], cliquez avec le bouton droit sur le dossier **Bases de données** et sélectionnez **Attacher…**.  
   
 8.  Dans la boîte de dialogue **Attacher des bases de données** , sous **Bases de données à attacher**, cliquez sur **Ajouter**.  
   
-9. Dans la boîte de dialogue **Rechercher les fichiers de base de données –**_server\_name_, sélectionnez le fichier de base de données à attacher au nouveau serveur et cliquez sur **OK**.  
+9. Dans la boîte de dialogue **Rechercher les fichiers de base de données-**_nom\_serveur_, sélectionnez le fichier de base de données à attacher au nouveau serveur et cliquez sur **OK**.  
   
      Les options suivantes sont disponibles dans la boîte de dialogue **Attacher des bases de données** .  
   
@@ -234,7 +234,7 @@ Les procédures suivantes vous montrent comment déplacer une base de données p
      Supprime le fichier sélectionné de la grille **Bases de données à attacher** .  
   
      **"** *<database_name>* **»détails de la base de données**  
-     Affiche le nom des fichiers à attacher. Pour vérifier ou modifier le nom du chemin d’accès d’un fichier, cliquez sur le bouton **Parcourir** (**…**).  
+     Affiche le nom des fichiers à attacher. Pour vérifier ou modifier le nom de chemin d’un fichier, cliquez sur le bouton **Parcourir** (**...**).  
   
     > [!NOTE]  
     >  Si un fichier n'existe pas, la colonne **Message** affiche « Introuvable ». Si un fichier journal est introuvable, cela signifie qu'il se trouve dans un autre répertoire ou qu'il a été supprimé. Vous devez mettre à jour le chemin d'accès du fichier dans la grille **Détails de la base de données** pour désigner l'emplacement correct ou supprimer le fichier journal de la grille. Si un fichier de données .ndf est introuvable, vous devez mettre à jour son chemin d'accès dans la grille pour désigner l'emplacement correct.  

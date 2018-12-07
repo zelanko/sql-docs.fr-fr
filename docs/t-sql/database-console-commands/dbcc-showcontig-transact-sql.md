@@ -24,12 +24,12 @@ ms.assetid: 1df2123a-1197-4fff-91a3-25e3d8848aaa
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: 1937d8b4da1b824b0a1b46808b5e03f9bbdc77d9
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 2d66330f4c575972b019d7df68cf0f1d00f2fab4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697587"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510711"
 ---
 # <a name="dbcc-showcontig-transact-sql"></a>DBCC SHOWCONTIG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -163,7 +163,7 @@ Lorsqu'un index est très fragmenté, vous disposez des méthodes alternatives s
 -   Supprimez puis créez de nouveau un index cluster.  
      La nouvelle création d'un index cluster permet de réorganiser les données, ce qui entraîne des pages de données remplies entièrement. Vous pouvez configurer le niveau de remplissage à l'aide de l'option FILLFACTOR de l'instruction CREATE INDEX. Cette méthode présente deux inconvénients : l'index est en mode hors connexion pendant la phase de suppression et de recréation, et l'opération est atomique. Si la création de l'index est interrompue, l'index n'est pas recréé.  
 -   Réorganisez les pages de niveau feuille de l'index selon un ordre logique.  
-     Utilisez l'instruction ALTER INDEX…REORGANIZE pour réorganiser les pages de niveau feuille de l'index selon un ordre logique. Comme il s'agit d'une opération en ligne, l'index est disponible lorsque l'instruction est exécutée. L'interruption de cette opération entraîne la perte du travail effectué. L'inconvénient de cette méthode est que la réorganisation des données est moins efficace que celle obtenue par l'opération de suppression et de recréation d'un index cluster.  
+     Utilisez l’instruction ALTER INDEX...REORGANIZE pour réorganiser les pages de niveau feuille de l’index selon un ordre logique. Comme il s'agit d'une opération en ligne, l'index est disponible lorsque l'instruction est exécutée. L'interruption de cette opération entraîne la perte du travail effectué. L'inconvénient de cette méthode est que la réorganisation des données est moins efficace que celle obtenue par l'opération de suppression et de recréation d'un index cluster.  
 -   Reconstruisez l'index.  
      Utilisez ALTER INDEX avec REBUILD pour reconstruire l'index. Pour plus d’informations, consultez [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).  
   

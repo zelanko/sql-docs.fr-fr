@@ -22,12 +22,12 @@ ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 95cda6788643ac19fd21c2838f10c8a3c3e54f8a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c2b85546e79e426f078ff77ab11b4eb9eb076aea
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828727"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519525"
 ---
 # <a name="server-memory-server-configuration-options"></a>server memory (options de configuration du serveur)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ Le paramètre par défaut de l’option **min server memory** est 0 et celui de 
 La taille mémoire minimale autorisée pour **max server memory** est de 128 Mo.
   
 > [!IMPORTANT]  
-> Si vous affectez à **max server memory** une valeur trop élevée, une instance unique de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut être contrainte de rivaliser avec d’autres instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hébergées sur le même hôte pour obtenir de la mémoire. Toutefois, une valeur trop faible peut entraîner des problèmes importants liés aux performances et à la sollicitation de la mémoire. Si vous affectez à **max server memory** la valeur minimale, vous pouvez même empêcher [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de démarrer. Si vous ne pouvez plus démarrer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] après avoir changé cette option, démarrez-le au moyen de l’option de démarrage ***–f*** et restaurez **max server memory** à sa valeur antérieure. Pour plus d’informations, consultez [Options de démarrage du service moteur de base de données](../../database-engine/configure-windows/database-engine-service-startup-options.md).  
+> Si vous affectez à **max server memory** une valeur trop élevée, une instance unique de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut être contrainte de rivaliser avec d’autres instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hébergées sur le même hôte pour obtenir de la mémoire. Toutefois, une valeur trop faible peut entraîner des problèmes importants liés aux performances et à la sollicitation de la mémoire. Si vous affectez à **max server memory** la valeur minimale, vous pouvez même empêcher [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de démarrer. Si vous ne pouvez plus démarrer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] après avoir changé cette option, démarrez-le au moyen de l’option de démarrage ***-f*** et restaurez **max server memory** à sa valeur antérieure. Pour plus d’informations, consultez [Options de démarrage du service moteur de base de données](../../database-engine/configure-windows/database-engine-service-startup-options.md).  
     
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut utiliser dynamiquement la mémoire ; cependant, vous pouvez configurer manuellement les options de mémoire et limiter la mémoire à laquelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut accéder. Avant de définir la mémoire allouée à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], déterminez la valeur adaptée pour la mémoire : pour cela, vous devez soustraire de la mémoire physique totale la mémoire exigée par le système d’exploitation, par les allocations de mémoire non contrôlées à l’aide du paramètre max_server_memory et par toute autre instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ainsi que par d’autres systèmes si l’ordinateur n’est pas totalement dédié à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]). Cette différence représente la mémoire maximale que vous pouvez allouer à l’instance actuelle de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
  

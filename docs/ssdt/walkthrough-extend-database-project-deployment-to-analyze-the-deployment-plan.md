@@ -11,12 +11,12 @@ ms.assetid: 9ead8470-93ba-44e3-8848-b59322e37621
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: deed72fce55d5e80f54ba53596c213288aae249d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: daae5aa71c227591a3349de4abd6526e83131f8c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51664628"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512609"
 ---
 # <a name="walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan"></a>Procédure pas à pas : Étendre le déploiement du projet de base de données pour analyser le plan de déploiement
 Vous pouvez créer des contributeurs de déploiement pour effectuer des actions personnalisées lorsque vous déployez un projet SQL. Vous pouvez créer soit un DeploymentPlanModifier soit un DeploymentPlanExecutor. Utilisez un DeploymentPlanModifier pour changer le plan avant son exécution et un DeploymentPlanExecutor pour effectuer des opérations alors que le plan est en cours d'exécution. Dans cette procédure pas à pas, vous allez créer un DeploymentPlanExecutor nommé DeploymentUpdateReportContributor qui crée un rapport sur les actions qui sont effectuées lorsque vous déployez un projet de base de données. Ce contributeur de génération acceptant un paramètre pour contrôler si le rapport est généré, vous devez effectuer une étape supplémentaire requise.  
@@ -92,7 +92,7 @@ Pour créer un contributeur de déploiement, vous devez effectuer les tâches su
         /// passed as an additional argument to the DacServices API. To set in a project file, add the following:  
         ///   
         /// <PropertyGroup>  
-        ///     <ContributorArguments Condition="'$(Configuration)' == 'Debug’”>  
+        ///     <ContributorArguments Condition="'$(Configuration)' == 'Debug'">  
         /// $(ContributorArguments);DeploymentUpdateReportContributor.GenerateUpdateReport=true;  
         ///     </ContributorArguments>  
         /// <PropertyGroup>  
@@ -114,7 +114,7 @@ Pour créer un contributeur de déploiement, vous devez effectuer les tâches su
   
     ```  
   
-    Dans ce cas le premier paramètre de l'attribut doit être un identificateur unique qui sera utilisé pour identifier un contributeur dans des fichiers de projet. Il est recommandé d'associer l'espace de noms de la bibliothèque (dans cette procédure pas à pas, MyDeploymentContributor) au nom de la classe (dans cette procédure pas à pas, DeploymentUpdateReportContributor) pour générer l'identificateur.  
+    Dans ce cas le premier paramètre de l’attribut doit être un identificateur unique qui sera utilisé pour identifier un contributeur dans des fichiers de projet. Il est recommandé d’associer l’espace de noms de la bibliothèque (ici, MyDeploymentContributor) au nom de la classe (ici, DeploymentUpdateReportContributor) pour générer l’identificateur.  
   
 3.  Ensuite, ajoutez le membre suivant que vous utiliserez pour permettre à ce fournisseur d'accepter un paramètre de ligne de commande :  
   
@@ -526,7 +526,7 @@ Pour créer un contributeur de déploiement, vous devez effectuer les tâches su
     |-----------------|--------------------|  
     |Membres de classe|[TSqlModel](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlmodel.aspx), [ModelComparisonResult](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.modelcomparisonresult.aspx), [DeploymentStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentstep.aspx)|  
     |Méthode WriteReport|XmlWriter et XmlWriterSettings|  
-    |Méthode ReportPlanOperations|Les types dignes d'intérêt sont les suivants : [DeploymentStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentstep.aspx), [SqlRenameStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqlrenamestep.aspx), [SqlMoveSchemaStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqlmoveschemastep.aspx), [SqlTableMigrationStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqltablemigrationstep.aspx), [CreateElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.createelementstep.aspx), [AlterElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.alterelementstep.aspx), [DropElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.dropelementstep.aspx).<br /><br />Il existe de nombreuses autres étapes – consultez la documentation API pour en obtenir une liste complète.|  
+    |Méthode ReportPlanOperations|Les types dignes d'intérêt sont les suivants : [DeploymentStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentstep.aspx), [SqlRenameStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqlrenamestep.aspx), [SqlMoveSchemaStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqlmoveschemastep.aspx), [SqlTableMigrationStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqltablemigrationstep.aspx), [CreateElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.createelementstep.aspx), [AlterElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.alterelementstep.aspx), [DropElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.dropelementstep.aspx).<br /><br />Il existe de nombreuses autres étapes. Consultez la documentation API pour en obtenir la liste complète.|  
     |GetElementCategory|[TSqlObject](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx)|  
     |GetElementName|[TSqlObject](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx)|  
   
@@ -586,9 +586,9 @@ La deuxième méthode consiste à créer un fichier de cibles qui contient les a
   
 1.  Accédez à %Program Files%\Msbuild.  
   
-2.  Créez un nouveau dossier « MyContributors » où vos fichiers de cibles seront stockés.  
+2.  Créez un dossier « MyContributors » où vos fichiers de cibles seront stockés.  
   
-3.  Créez un nouveau fichier « MyContributors.targets » dans ce répertoire, ajoutez le texte suivant et enregistrez le fichier :  
+3.  Créez un fichier « MyContributors.targets » dans ce répertoire, ajoutez le texte suivant, puis enregistrez le fichier :  
   
     ```  
     <?xml version="1.0" encoding="utf-8"?>  
@@ -610,16 +610,16 @@ La deuxième méthode consiste à créer un fichier de cibles qui contient les a
 Après avoir suivi une de ces approches, vous pouvez utiliser Msbuild pour transmettre les paramètres des générations par ligne de commande.  
   
 > [!NOTE]  
-> Vous devez toujours mettre à jour la propriété « DeploymentContributors » pour spécifier votre ID de contributeur Il s'agit du même ID que celui utilisé dans l'attribut « ExportDeploymentPlanExecutor » dans le fichier source du contributeur. Sans cet ID le contributeur ne s'exécute pas lors de la génération du projet. La propriété « ContributorArguments » doit être mise à jour uniquement si vous avez des arguments requis pour que votre collaborateur s'exécute.  
+> Vous devez toujours mettre à jour la propriété « DeploymentContributors » pour spécifier votre ID de contributeur Il s’agit du même ID que celui utilisé dans l’attribut « ExportDeploymentPlanExecutor », dans le fichier source du contributeur. Sans cet ID le contributeur ne s'exécute pas lors de la génération du projet. La propriété « ContributorArguments » doit être mise à jour uniquement si des arguments sont nécessaires à l’exécution de votre contributeur.  
   
 ### <a name="deploy-the-database-project"></a>Déployer le projet de base de données  
-Votre projet peut être publié ou déployé normalement dans Visual Studio. Ouvrez simplement une solution contenant votre projet SQL et choisissez l'option « Publier... » dans le menu contextuel du projet, ou utilisez la touche F5 pour un déploiement de débogage vers LocalDB. Dans cet exemple, nous utiliserons la boîte de dialogue « Publier » pour générer un script de déploiement.  
+Votre projet peut être publié ou déployé normalement dans Visual Studio. Ouvrez une solution qui contient votre projet SQL et sélectionnez l’option « Publier... » dans le menu contextuel du projet, ou appuyez sur la touche F5 pour un déploiement de débogage dans LocalDB. Dans cet exemple nous utiliserons la boîte de dialogue « Publier… » pour générer un script de déploiement.  
   
 ##### <a name="to-deploy-your-sql-project-and-generate-a-deployment-report"></a>Pour déployer votre projet SQL et générer un rapport de déploiement  
   
 1.  Ouvrez Visual Studio et ouvrez la solution qui contient votre projet SQL.  
   
-2.  Sélectionnez votre projet et appuyez sur la touche « F5 » pour effectuer un déploiement de débogage. Remarque : puisque l'élément ContributorArguments est configuré pour être inclus uniquement si la configuration est « Débogage », le rapport de déploiement est pour l'instant généré uniquement pour les déploiements de débogage. Pour changer cela, supprimez l’instruction Condition="'$(Configuration)' == 'Debug'" de la définition ContributorArguments.  
+2.  Sélectionnez votre projet et appuyez sur la touche « F5 » pour effectuer un déploiement de débogage. Remarque : Puisque l’élément ContributorArguments est configuré pour être inclus uniquement si la configuration est de type « Débogage », le rapport de déploiement est généré uniquement pour les déploiements de débogage. Pour changer cela, supprimez l’instruction Condition="'$(Configuration)' == 'Debug'" de la définition ContributorArguments.  
   
 3.  Une sortie semblable à celle-ci doit être présente dans la fenêtre de sortie :  
   

@@ -21,12 +21,12 @@ ms.assetid: 442c54bf-a0a6-4108-ad20-db910ffa6e3c
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: afac7a2ed586f53994bc60ea89e323389c979714
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7c3b106d89db436ebf2a2d60abe7f5eee5fca2f1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635777"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514720"
 ---
 # <a name="alter-resource-governor-transact-sql"></a>ALTER RESOURCE GOVERNOR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -88,7 +88,7 @@ ALTER RESOURCE GOVERNOR
 > [!IMPORTANT]  
 >  L'instruction ALTER RESOURCE GOVERNOR RECONFIGURE doit être exécutée pour que les modifications de configuration soient appliquées.  
   
- CLASSIFIER_FUNCTION = { *schema_name ***.*** function_name* | NULL }  
+ CLASSIFIER_FUNCTION = { _schema_name_**.**_function_name_ | NULL }  
  Enregistre la fonction de classification spécifiée par *schema_name.function_name*. Cette fonction classifie chaque nouvelle session et assigne les demandes et requêtes de session à un groupe de charges de travail. Lorsque la valeur NULL est utilisée, les nouvelles sessions sont assignées automatiquement au groupe de charges de travail par défaut.  
   
  RESET STATISTICS  

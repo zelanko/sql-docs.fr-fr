@@ -19,12 +19,12 @@ ms.assetid: c27555c4-208c-43c8-b511-a4de2a8a3344
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 77947ba03e3f094077c950981a394a3566e24f0e
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 27976be0f3b6091450650f2bf3a73d1afbe42d20
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639089"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518471"
 ---
 # <a name="data-flow-task"></a>tâche de flux de données
   La tâche de flux de données encapsule le moteur de flux de données chargé de déplacer des données entre les sources et les destinations et permet à l'utilisateur de transformer, nettoyer et modifier les données au cours de leur déplacement. L'ajout d'une tâche de flux de données à un flux de contrôle de package permet au package d'extraire, de transformer et de charger des données.  
@@ -56,7 +56,7 @@ ms.locfileid: "51639089"
 |**OnPipelinePrePrimeOutput**|Indique que le composant est sur le point de recevoir son appel de la méthode **PrimeOutput** . Selon le flux de données, plusieurs entrées de journal peuvent être écrites.|  
 |**OnPipelineRowsSent**|Indique le nombre de lignes fournies à une entrée de composant par un appel de la méthode **ProcessInput** . L'entrée du journal inclut le nom du composant.|  
 |**PipelineBufferLeak**|Donne des informations sur tout composant qui maintient l'activité des tampons après la fermeture du gestionnaire de tampons. Si un tampon est toujours actif, cela signifie que des ressources des tampons n'ont pas été libérées et qu'elles peuvent provoquer des fuites de mémoire. L'entrée du journal fournit le nom du composant et l'ID du tampon.|  
-|**PipelineComponentTime**|Signale le temps (en millisecondes) que le composant a passé dans chacune de ses cinq étapes de traitement majeures : Validate, PreExecute, PostExecute, ProcessInput et ProcessOutput.|  
+|**PipelineComponentTime**|Signale le temps (en millisecondes) que le composant a passé dans chacune de ses cinq étapes de traitement majeures : Validate, PreExecute, PostExecute, ProcessInput et ProcessOutput.|  
 |**PipelineExecutionPlan**|Indique le plan d'exécution du flux de données. Le plan d'exécution fournit des informations sur la manière dont les tampons sont envoyés aux composants. Ces informations, conjuguées à l'entrée PipelineExecutionTrees du journal, décrivent ce qui se passe dans la tâche de flux de données.|  
 |**PipelineExecutionTrees**|Indique les arborescences d'exécution de la disposition du flux de données. Le planificateur du moteur du flux de données utilise les arborescences pour construire le plan d'exécution du flux de données.|  
 |**PipelineInitialization**|Donne des informations d'initialisation relatives à la tâche. Ces informations incluent les répertoires à utiliser pour le stockage temporaire des données blob, la taille par défaut de la mémoire tampon, ainsi que le nombre de lignes contenues dans une mémoire tampon. Selon la configuration de la tâche de flux de données, plusieurs entrées de journal peuvent être écrites.|  

@@ -18,12 +18,12 @@ ms.assetid: b6bdbc54-331a-43cc-ab3d-3872d6a12100
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c86460fa6e06a6bc0ab25edfb2787547583092f8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: de4b1ac25cfefe1df9e8e3a0db8d8019d63763bb
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47673403"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52404434"
 ---
 # <a name="sessioncontext-transact-sql"></a>SESSION_CONTEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ SESSION_CONTEXT(N'key')
  Tout utilisateur peut lire le contexte de session pour sa session.  
   
 ## <a name="remarks"></a>Notes   
- Le comportement MARS de SESSION_CONTEXT est similaire à celui de CONTEXT_INFO. Si un lot MARS définit une paire clé-valeur, la nouvelle valeur n’est pas renvoyée dans d’autres lots MARS sur la même connexion, sauf s’ils ont démarré après le lot qui a défini la nouvelle valeur. Si plusieurs lots MARS sont actifs sur une connexion, les valeurs ne peuvent pas être définies comme « read_only ». Cela empêche les conditions de concurrence et le non-déterminisme quant à la valeur qui « gagne ».  
+ Le comportement MARS de SESSION_CONTEXT est similaire à celui de CONTEXT_INFO. Si un lot MARS définit une paire clé-valeur, la nouvelle valeur n’est pas renvoyée dans d’autres lots MARS sur la même connexion, sauf s’ils ont démarré après le lot qui a défini la nouvelle valeur. Si plusieurs lots MARS sont actifs sur une connexion, les valeurs ne peuvent pas être définies en « read_only ». Ceci empêche les conditions de concurrence et le non-déterminisme quant à la valeur qui « gagne ».  
   
 ## <a name="examples"></a>Exemples  
  L’exemple simple suivant attribue la valeur 4 au contexte de session pour la clé `user_id`, puis utilise la fonction **SESSION_CONTEXT** pour extraire la valeur.  

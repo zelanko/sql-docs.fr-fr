@@ -2,7 +2,7 @@
 title: CREATE DATABASE (Transact-SQL) | Microsoft Docs
 description: Syntaxe de création de base de données pour SQL Server, Azure SQL Database, Azure SQL Data Warehouse et Parallel Data Warehouse.
 ms.custom: ''
-ms.date: 10/02/2018
+ms.date: 11/16/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -38,12 +38,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 95823c0c63e65532213e1a195b978e98df9d9986
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 5642af0a47cff5ffa7c45aa910fb3101ad831df0
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701047"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532558"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -898,7 +898,7 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 <edition_options> ::= 
 {  
 
-  MAXSIZE = { 100 MB | 250 MB | 500 MB | 1 … 1024 … 4096 GB }  
+  MAXSIZE = { 100 MB | 250 MB | 500 MB | 1 ... 1024 ... 4096 GB }  
   | ( EDITION = {  'basic' | 'standard' | 'premium' | 'GeneralPurpose' | 'BusinessCritical' | 'Hyperscale' } 
   | SERVICE_OBJECTIVE = 
     {  'basic' | 'S0' | 'S1' | 'S2' | 'S3' | 'S4'| 'S6'| 'S7'| 'S9'| 'S12' | 
@@ -1075,10 +1075,7 @@ Nom de la base de données copiée.
 Les bases de données dans [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ont plusieurs paramètres par défaut définis lors de la création de la base de données. Pour plus d’informations sur ces paramètres par défaut, consultez la liste de valeurs dans [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md).  
   
 MAXSIZE permet de limiter la taille de la base de données. Si la taille de la base de données atteint sa valeur MAXSIZE, vous recevez un code d’erreur 40544. Lorsque cela se produit, vous ne pouvez pas insérer ou mettre à jour des données, ni créer des objets (tels que des tables, des procédures stockées, des vues et des fonctions). Toutefois, vous pouvez encore lire et supprimer des données, tronquer des tables, supprimer des tables et des index et reconstruire des index. Vous pouvez ensuite mettre à jour MAXSIZE avec une valeur supérieure à votre taille de base de données actuelle ou supprimer certaines données afin de libérer de l'espace de stockage. Vous devrez peut-être patienter jusqu'à quinze minutes avant de pouvoir insérer de nouvelles données.  
-  
-> [!IMPORTANT]  
->  L'instruction `CREATE DATABASE` doit être la seule instruction dans un lot [!INCLUDE[tsql](../../includes/tsql-md.md)]. 
-  
+   
 Pour modifier ultérieurement les valeurs de taille, d’édition ou d’objectif de service, utilisez [ALTER DATABASE &#40;Azure SQL Database&#41;](../../t-sql/statements/alter-database-transact-sql.md?&tabs=sqldbls).  
 
 L’argument CATALOG_COLLATION est uniquement disponible lors de la création de base de données. 
@@ -1186,7 +1183,7 @@ CREATE DATABASE db_copy
 L’exemple suivant définit le classement de catalogue sur DATABASE_DEFAULT lors de création de bases de données, rendant le classement de catalogue identique au classement de base de données.
 
 ```sql
-CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140  (MAXSIZE = 100 MB, EDITION = ‘basic’)  
+CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140  (MAXSIZE = 100 MB, EDITION = 'basic')  
   WITH CATALOG_COLLATION = DATABASE_DEFAULT 
 ```
   
@@ -1318,13 +1315,13 @@ Pour plus d’informations sur les noms de classements Windows et SQL, consultez
 Spécifie la couche de service de la base de données. Pour [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] utilisez 'datawarehouse'.  
   
 *MAXSIZE*  
-La valeur par défaut est 245 760 Go (240 To).  
+La valeur par défaut est 245 760 Go (240 To).  
 
-**S’applique à :** Niveau de performance Optimisé pour l’élasticité
+**S’applique à :** Optimisé pour le calcul Gen1
 
 Taille maximale autorisée pour la base de données. La base de données ne peut pas croître au-delà de MAXSIZE. 
 
-**S’applique à :** Niveau de performance Optimisé pour le calcul
+**S’applique à :** Optimisé pour le calcul Gen2
 
 Taille maximale autorisée pour les données rowstore dans la base de données. Les données stockées dans les tables rowstore, dans un deltastore d’index columnstore ou un index non cluster sur un index columnstore cluster ne peuvent pas croître au-delà de MAXSIZE.  Les données compressées au format columnstore n’ont pas de taille limite et ne sont pas restreintes par MAXSIZE.
   

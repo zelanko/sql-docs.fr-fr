@@ -12,18 +12,18 @@ ms.assetid: b82f6f81-6e9c-4918-9ea9-4ab5f5d11b15
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 279198ba384acf33656d7567ed417a633eae7266
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0e607136bf7e13994e931166831b68d531d229dc
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826407"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52404524"
 ---
 # <a name="automatically-generate-attribute-values-other-than-code-master-data-services"></a>Générer automatiquement les valeurs des attributs autres que Code (Master Data Services)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], générez automatiquement les valeurs des valeurs d’attribut d’une entité lorsque vous souhaitez qu’un entier soit attribué automatiquement comme valeur chaque fois que les règles d’entreprise sont appliquées.  
+  Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], générez automatiquement les valeurs des valeurs d’attribut d’une entité quand vous souhaitez qu’un entier soit attribué automatiquement comme valeur chaque fois que les règles d’entreprise sont appliquées.  
   
 ## <a name="prerequisites"></a>Conditions préalables requises  
  Pour effectuer cette procédure :  
@@ -54,7 +54,7 @@ ms.locfileid: "47826407"
   
 9. Dans le volet **Composants** , développez le nœud **Actions** .  
   
-10. Dans le nœud Valeur par défaut, cliquez sur **prend par défaut une valeur générée** et faites-la glisser vers le libellé **Actions** du volet **THEN** .  
+10. Dans le nœud Valeur par défaut, cliquez sur **prend par défaut une valeur générée** et faites-la glisser vers le libellé **Actions** du volet **THEN**.  
   
 11. Dans le volet **Attributs** , cliquez sur l’attribut avec la valeur à générer et faites-le glisser vers le libellé **Sélectionner un attribut** du volet **Modifier l’action** .  
   

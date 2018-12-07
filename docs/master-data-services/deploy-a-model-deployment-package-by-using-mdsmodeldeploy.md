@@ -12,12 +12,12 @@ ms.assetid: fb2a4df4-5e0d-4b34-818f-383dbde1b15c
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 41d20108ae2fd1c8060627ae09b150e2b1bab9b3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 95ca303d9bed86f92cbd58776d4a24c4d92cce2a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47656767"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398200"
 ---
 # <a name="deploy-a-model-deployment-package-by-using-mdsmodeldeploy"></a>Déployer un package de déploiement de modèle à l'aide de MDSModelDeploy
 
@@ -43,7 +43,7 @@ ms.locfileid: "47656767"
   
 -   Vous devez être administrateur dans l'environnement où vous déployez le modèle. Pour plus d’informations, consultez [Administrateurs &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
--   Si vous mettez à jour un modèle avec des données, la version que vous déployez ne peut pas avoir l'état **Verrouillé** ou **Activé**.  
+-   Si vous mettez à jour un modèle avec des données, la version que vous déployez ne peut pas avoir l’état **Verrouillé** ou **Activé**.  
   
 ### <a name="to-deploy-a-model-deployment-package"></a>Pour déployer un package de déploiement de modèle  
   
@@ -94,7 +94,7 @@ ms.locfileid: "47656767"
   
      Où *PackageName* est le nom du fichier de package (.pkg), *ModelName* est le nom du nouveau modèle, *VersionName* est le nom de la version et *ServiceName* est le nom du service que vous avez retourné à l’étape précédente. Vérifiez que les noms de modèle et de version correspondent aux noms en respectant la casse.  
   
-6.  Lorsque le package est déployé, un message indiquant que l'opération de MDSModelDeploy est terminée s'affiche.  
+6.  Quand le package est déployé, un message indiquant que l’opération de MDSModelDeploy est terminée s’affiche.  
   
  **Remarques :**  
   

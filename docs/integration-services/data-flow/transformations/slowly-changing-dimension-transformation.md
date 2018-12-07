@@ -18,12 +18,12 @@ ms.assetid: f8849151-c171-4725-bd25-f2c33a40f4fe
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d334d7aac70cdbadef5bdeede6d9f3a53c74caa7
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 9aeb16eff9632fe5a6859985f70e8aefddd0fea4
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638326"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52414536"
 ---
 # <a name="slowly-changing-dimension-transformation"></a>Transformation de dimension à variation lente
   La transformation de dimension à variation lente coordonne la mise à jour et l'insertion d'enregistrements dans des tables de dimension d'entrepôts de données. Par exemple, vous pouvez utiliser cette transformation pour configurer les sorties de la transformation qui insèrent et mettent à jour des enregistrements dans la table DimProduct de la base de données [!INCLUDE[ssSampleDBDWobject](../../../includes/sssampledbdwobject-md.md)] à l’aide des données de la table Production.Products de la base de données OLTP AdventureWorks.  
@@ -69,7 +69,7 @@ ms.locfileid: "51638326"
 |------------|-----------------|----------------------------|  
 |**Sortie de mises à jour d’attribut de validation**|L'enregistrement de la table de recherche est mis à jour. Cette sortie est utilisée pour les lignes à attributs variables.|Une transformation de commande OLE DB met à jour l'enregistrement à l'aide d'une instruction UPDATE.|  
 |**Sortie d’attribut fixe**|Les valeurs des lignes qui ne doivent pas changer ne correspondent pas aux valeurs de la table de recherche. Cette sortie est utilisée pour les lignes à attributs fixes.|Aucun flux de données par défaut n'est créé. Si la transformation est configurée de façon à continuer après avoir rencontré des modifications de colonnes d'attributs fixes, vous devez créer un flux de données qui capture ces lignes.|  
-|**Sortie d’insertions d’attribut d’historique**|La table de recherche contient au moins une ligne correspondante. La ligne marquée comme « active » doit maintenant être marquée comme ayant « expiré ». Cette sortie est utilisée pour les lignes d'attributs d'historique.|Les transformations de colonnes dérivées créent des colonnes pour les indicateurs de ligne active et de ligne expirée. Une transformation de commande OLE DB met à jour l'enregistrement qui doit maintenant être marqué comme « expiré ». La ligne avec les nouvelles valeurs de colonne est dirigée vers la nouvelle sortie, où la ligne est insérée et marquée comme « active ».|  
+|**Sortie d’insertions d’attribut d’historique**|La table de recherche contient au moins une ligne correspondante. La ligne marquée comme « active » doit maintenant être marquée comme ayant « expiré ». Cette sortie est utilisée pour les lignes d'attributs d'historique.|Les transformations de colonnes dérivées créent des colonnes pour les indicateurs de ligne active et de ligne expirée. Une transformation de commande OLE DB met à jour l'enregistrement qui doit maintenant être marqué comme « expiré ». La ligne avec les nouvelles valeurs de colonne est dirigée vers la nouvelle sortie, où la ligne est insérée et marquée comme « active ».|  
 |**Sortie de mises à jour de membre déduit**|Des lignes pour les membres de dimension inférés sont insérées. Cette sortie est utilisée pour les lignes de membres inférés.|Une transformation de commande OLE DB met à jour l'enregistrement à l'aide d'une instruction SQL UPDATE.|  
 |**Nouvelle sortie**|La table de recherche ne contient aucune ligne correspondante. La ligne est ajoutée à la table de dimension. Cette sortie est utilisée pour les nouvelles lignes et les modifications de lignes à attributs d'historique.|Une transformation de colonnes dérivées définit l'indicateur de ligne active et une destination OLE DB insère la ligne.|  
 |**Sortie inchangée**|Les valeurs de la table de recherche correspondent aux valeurs de lignes. Cette sortie est utilisée pour les lignes inchangées.|Aucun flux de données n'est créé car la transformation de dimension à variation lente n'effectue aucune opération. Si vous souhaitez capturer ces lignes, vous devez créer un flux de données pour cette sortie.|  

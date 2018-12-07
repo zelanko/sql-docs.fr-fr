@@ -17,12 +17,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2ed0fb7bcc834127254a6d3298d3baba7404386c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d1b4bcffb5ec575c90561daf5c8c3757b3cdcb65
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47699357"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539125"
 ---
 # <a name="join-a-role"></a>joindre un rôle
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -79,9 +79,9 @@ ms.locfileid: "47699357"
   
 4.  Cliquez avec le bouton droit sur le rôle à modifier, puis sélectionnez **Propriétés**.  
   
-5.  Dans la boîte de dialogue **Propriétés du rôle de serveur –**_nom\_rôle\_serveur_, dans la page **Membres**, cliquez sur **Ajouter**.  
+5.  Dans la boîte de dialogue **Propriétés du rôle de serveur -**_nom\_rôle\_serveur_, dans la page **Membres**, cliquez sur **Ajouter**.  
   
-6.  Dans la boîte de dialogue **Sélectionner la connexion au serveur ou le rôle de serveur** , sous **Entrez les noms des objets à sélectionner (exemples)**, entrez la connexion ou le rôle serveur à ajouter à ce rôle serveur. Ou bien, cliquez sur **Parcourir…** et sélectionnez tout ou partie des objets disponibles dans la boîte de dialogue **Rechercher des objets** . Cliquez sur **OK** pour revenir à la boîte de dialogue **Propriétés du rôle de serveur –**_nom\_rôle\_serveur_.  
+6.  Dans la boîte de dialogue **Sélectionner la connexion au serveur ou le rôle de serveur** , sous **Entrez les noms des objets à sélectionner (exemples)**, entrez la connexion ou le rôle serveur à ajouter à ce rôle serveur. Vous pouvez également cliquer sur **Parcourir…** et sélectionner l’ensemble ou certains des objets disponibles dans la boîte de dialogue **Rechercher des objets**. Cliquez sur **OK** pour revenir à la boîte de dialogue **Propriétés du rôle de serveur -**_nom\_rôle\_serveur_.  
   
 7.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -101,9 +101,9 @@ ms.locfileid: "47699357"
   
 7.  Cliquez avec le bouton droit sur le rôle à modifier, puis sélectionnez **Propriétés**.  
   
-8.  Dans la boîte de dialogue **Propriétés du rôle de base de données –**_nom\_rôle\_base de données_, dans la page **Général**, cliquez sur **Ajouter**.  
+8.  Dans la boîte de dialogue **Propriétés du rôle de base de données -**_nom\_rôle\_base de données_, dans la page **Général**, cliquez sur **Ajouter**.  
   
-9. Dans la boîte de dialogue **Sélectionner l’utilisateur ou le rôle de la base de données** , sous **Entrez les noms des objets à sélectionner (exemples)**, entrez la connexion ou le rôle de base de données à ajouter à ce rôle de base de données. Ou bien, cliquez sur **Parcourir…** et sélectionnez tout ou partie des objets disponibles dans la boîte de dialogue **Rechercher des objets** . Cliquez sur **OK** pour revenir à la boîte de dialogue **Propriétés du rôle de base de données –**_nom\_rôle\_base de données_.  
+9. Dans la boîte de dialogue **Sélectionner l’utilisateur ou le rôle de la base de données** , sous **Entrez les noms des objets à sélectionner (exemples)**, entrez la connexion ou le rôle de base de données à ajouter à ce rôle de base de données. Vous pouvez également cliquer sur **Parcourir…** et sélectionner l’ensemble ou certains des objets disponibles dans la boîte de dialogue **Rechercher des objets**. Cliquez sur **OK** pour revenir à la boîte de dialogue **Propriétés du rôle de base de données-**_nom\_rôle\_base de données_.  
   
 10. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -111,7 +111,7 @@ ms.locfileid: "47699357"
   
 #### <a name="to-add-a-member-to-a-fixed-server-role"></a>Pour ajouter un membre à un rôle serveur fixe  
   
-1.  Dans l'**Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   

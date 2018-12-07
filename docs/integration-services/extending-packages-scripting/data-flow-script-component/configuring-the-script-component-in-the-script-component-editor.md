@@ -18,12 +18,12 @@ ms.assetid: 586dd799-f383-4d6d-b1a1-f09233d14f0a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a1633811117b65b397f3f961898895b785cb86d5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c5d13e7ee8fa8bcf058abfada37583c7d69cfa72
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47648797"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527433"
 ---
 # <a name="configuring-the-script-component-in-the-script-component-editor"></a>Configuration du composant Script dans l'éditeur de composant de script
   Avant d’écrire du code personnalisé dans le composant Script, vous devez sélectionner le type de composant de flux de données que vous souhaitez créer (source, transformation ou destination), puis configurer les métadonnées et propriétés du composant dans l’**Éditeur de transformation de script**.  
@@ -87,7 +87,7 @@ Dim currentCustomerName as String = CustomerInput.CustomerName
 >   
 >  Si vous créez un composant à sorties synchrones, la propriété **SynchronousInputID** de chaque sortie doit avoir comme valeur l’**ID** de l’entrée du composant. Par conséquent, la valeur zéro de la propriété **SynchronousInputID** de chaque sortie créée par l’éditeur après la première sortie doit être remplacée par l’**ID** de l’entrée du composant.  
 >   
->  Si vous créez un composant à sorties asynchrones, la propriété **SynchronousInputID** de chaque sortie doit avoir la valeur zéro. Par conséquent, la valeur de la propriété **SynchronousInputID** de la première sortie, qui correspond à l’**ID** de l’entrée du composant, doit être remplacée par zéro.  
+>  Si vous créez un composant à sorties asynchrones, la propriété **SynchronousInputID** de chaque sortie doit avoir la valeur zéro. Ainsi, la valeur de la propriété **SynchronousInputID** de la première sortie, qui correspond à l’**ID** de l’entrée du composant, doit être remplacée par zéro.  
   
  Pour obtenir un exemple de direction de lignes vers l’une des deux sorties synchrones dans le composant Script, consultez [Création d’une transformation synchrone à l’aide du composant Script](../../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md).  
   

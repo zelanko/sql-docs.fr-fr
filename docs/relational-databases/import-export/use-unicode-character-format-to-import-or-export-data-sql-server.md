@@ -15,12 +15,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 41f52b1a60ebc5fc456b0b90b998c173356c5c7e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6f81e94012e4c976dc1d4fdb1013ec34e22ff51d
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809637"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52413306"
 ---
 # <a name="use-unicode-character-format-to-import-or-export-data-sql-server"></a>Utiliser le format caractère Unicode pour importer ou exporter des données (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -163,7 +163,7 @@ REM Review results is SSMS
 ```
 
 ### **Utilisation de bcp et du format caractère Unicode pour importer des données avec un fichier de format non XML**<a name="bcp_widechar_import_fmt"></a>
-Commutateurs **-w** et **-f** switches et **IN** commet.  Vous devez utiliser une solution de contournement dans la mesure où cet exemple implique bcp, un fichier de format, le caractère Unicode, et le premier champ de données dans le fichier de données n’est pas de type caractère.  Consultez [Considérations spéciales relatives à l’utilisation du format caractère Unicode, de bcp et d’un fichier de format](#special_considerations)ci-dessus.  Le fichier de données `myWidechar.bcp` est modifié par l’ajout d’un enregistrement supplémentaire « factice » qui est ensuite ignoré avec le commutateur `-F 2` .
+Commutateurs **-w** et **-f** switches et **IN** commet.  Vous devez utiliser une solution de contournement dans la mesure où cet exemple implique bcp, un fichier de format, le caractère Unicode, et le premier champ de données dans le fichier de données n’est pas de type caractère.  Consultez [Considérations spéciales relatives à l’utilisation du format caractère Unicode, de bcp et d’un fichier de format](#special_considerations)ci-dessus.  Le fichier de données `myWidechar.bcp` est modifié par l’ajout d’un enregistrement supplémentaire « factice » qui est ensuite ignoré avec le commutateur `-F 2`.
 
 À l’invite de commandes, entrez les commandes suivantes et suivez la procédure de modification :
 ```
@@ -243,6 +243,6 @@ Pour utiliser des formats de données pour l'importation ou l'exportation en blo
  [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
  [Types de données &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [Prise en charge d'Unicode et du classement](../../relational-databases/collations/collation-and-unicode-support.md)  
+ [Prise en charge d’Unicode et du classement](../../relational-databases/collations/collation-and-unicode-support.md)  
   
   

@@ -11,12 +11,12 @@ ms.assetid: b987b141-5abf-4161-a073-4cfc3e7f5aae
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 4516be4acd8512feee743e986eea9fd554e4089e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0ae5e6ad40a9a4c071ca452d893ca6644dae133d
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808657"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52403894"
 ---
 # <a name="filter-dialog-box-mds-add-in-for-excel"></a>Boîte de dialogue Filtrer (Complément MDS pour Excel)
 
@@ -43,7 +43,7 @@ ms.locfileid: "47808657"
   
 |Nom du contrôle|Description|  
 |------------------|-----------------|  
-|Attribute|Affiche l'attribut utilisé pour filtrer. Si aucun attribut n'est répertorié, les attributs n'ont pas été ajoutés.<br /><br /> Remarque : vous pouvez filtrer à l’aide d’attributs que vous n’envisagez pas d’afficher dans la feuille de calcul.|  
+|Attribute|Affiche l'attribut utilisé pour filtrer. Si aucun attribut n’est répertorié, les attributs n’ont pas été ajoutés.<br /><br /> Remarque : Vous pouvez filtrer à l’aide d’attributs que vous n’envisagez pas d’afficher dans la feuille de calcul.|  
 |Opérateur|Affiche les opérateurs qui correspondent au type d'attribut sélectionné. Pour plus d’informations, consultez [Opérateurs de filtre &#40;Master Data Services&#41;](../../master-data-services/filter-operators-master-data-services.md).|  
 |Critères|Critères qui doivent servir de filtre.|  
 |Résumé de la mise à jour|Si vous utilisez de grands datasets, cliquez pour mettre à jour la section **Résumé** avec les informations relatives à la quantité de données qui seront chargées.|  
@@ -64,6 +64,6 @@ ms.locfileid: "47808657"
   
 ## <a name="see-also"></a> Voir aussi  
  [Filtrer les données avant l’exportation &#40;Complément MDS pour Excel&#41;](../../master-data-services/microsoft-excel-add-in/filter-data-before-exporting-mds-add-in-for-excel.md)   
- [Vue d’ensemble : exportation de données vers Excel &#40;Complément MDS pour Excel&#41;](../../master-data-services/microsoft-excel-add-in/overview-exporting-data-to-excel-mds-add-in-for-excel.md)  
+ [Vue d’ensemble : exportation de données vers Excel &#40;complément MDS pour Excel&#41;](../../master-data-services/microsoft-excel-add-in/overview-exporting-data-to-excel-mds-add-in-for-excel.md)  
   
   

@@ -14,12 +14,12 @@ ms.assetid: 93af982c-b4fe-4be0-8268-11f86dae27e1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2a444079d45ea75de7cb5b57bed05f96877e41e3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e1d2d1dbd025db3a72251435133149cdc80275f0
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704003"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52411776"
 ---
 # <a name="manage-filetables"></a>Gérer des FileTables
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -221,7 +221,7 @@ GO
   
  De nombreux outils et opérations d'administration (notamment la sauvegarde, la sauvegarde de fichier journal et la réplication transactionnelle) lisent les données cohérentes au niveau transactionnel en lisant les journaux des transactions. À ce stade, ils lisent toutes les données FILESTREAM mises à jour dans le cadre d'une transaction. Si l'accès non transactionnel n'est pas activé au niveau de la base de données, ces outils et opérations fonctionnent avec une cohérence transactionnelle complète.  
   
- Toutefois, lorsque l'accès non transactionnel complet est activé, un FileTable pourrait contenir des données mises à jour plus récemment (via une mise à jour non transactionnelle) que la transaction que l'outil ou le processus lit à partir du journal des transactions. Cela signifie qu'une opération de restauration à un point précis dans le temps dans une transaction spécifique peut contenir des données FILESTREAM plus récentes que cette transaction. Il s'agit du comportement attendu lorsque des mises à jour non transactionnelles sont autorisées sur les FileTables.  
+ Toutefois, lorsque l'accès non transactionnel complet est activé, un FileTable pourrait contenir des données mises à jour plus récemment (via une mise à jour non transactionnelle) que la transaction que l'outil ou le processus lit à partir du journal des transactions. Cela signifie qu’une opération de restauration à un point précis dans le temps dans une transaction spécifique peut contenir des données FILESTREAM plus récentes que cette transaction. Il s'agit du comportement attendu lorsque des mises à jour non transactionnelles sont autorisées sur les FileTables.  
   
 ##  <a name="Monitor"></a> SQL Server Profiler et FileTables  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Profiler peut capturer les opérations Windows File Open et File Close dans le résultat de trace pour les fichiers stockés dans un FileTable.  

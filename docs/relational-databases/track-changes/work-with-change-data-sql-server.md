@@ -15,12 +15,12 @@ ms.assetid: 5346b852-1af8-4080-b278-12efb9b735eb
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 33490ce81c66d12d0309b56112b0a843d99fc969
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 62c705432367b8d2ad7b5de7de30c840be368aac
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560251"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52405234"
 ---
 # <a name="work-with-change-data-sql-server"></a>Utiliser les données modifiées (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -81,7 +81,7 @@ ms.locfileid: "51560251"
  Les sections ci-après décrivent des scénarios courants permettant de rechercher des données de capture des données modifiées en utilisant les fonctions de requête cdc.fn_cdc_get_all_changes_<instance_capture> et cdc.fn_cdc_get_net_changes_<instance_capture>.  
   
 ### <a name="querying-for-all-changes-within-the-capture-instance-validity-interval"></a>Recherche de toutes les modifications dans l'intervalle de validité d'instance de capture  
- La recherche de données modifiées la plus simple est celle qui retourne toutes les données modifiées actuelles dans l'intervalle de validité d'une instance de capture. Avant d'exécuter cette requête, commencez par déterminer les limites LSN inférieures et supérieures de l'intervalle de validité. Ensuite, utilisez ces valeurs pour identifier les paramètres @from_lsn et @to_lsn transmis à la fonction de requête cdc.fn_cdc_get_all_changes<instance_capture> ou cdc.fn_cdc_get_net_changes_<instance_capture>. Utilisez la fonction [sys.fn_cdc_get_min_lsn](../../relational-databases/system-functions/sys-fn-cdc-get-min-lsn-transact-sql.md) pour obtenir la limite inférieure et la fonction [sys.fn_cdc_get_max_lsn](../../relational-databases/system-functions/sys-fn-cdc-get-max-lsn-transact-sql.md) pour obtenir la limite supérieure. Consultez le modèle utilisé pour énumérer toutes les modifications pour la plage valide afin d'obtenir un exemple de code dans lequel toutes les modifications valides actuelles sont recherchées à l'aide de la fonction de requête cdc.fn_cdc_get_all_changes_<instance_capture>. Consultez le modèle utilisé pour énumérer les modifications nettes pour la plage valide afin d'obtenir un exemple semblable d'utilisation de la fonction cdc.fn_cdc_get_net_changes_<instance_capture>.  
+ La recherche de données modifiées la plus simple est celle qui retourne toutes les données modifiées actuelles dans l’intervalle de validité d’une instance de capture. Avant d'exécuter cette requête, commencez par déterminer les limites LSN inférieures et supérieures de l'intervalle de validité. Ensuite, utilisez ces valeurs pour identifier les paramètres @from_lsn et @to_lsn transmis à la fonction de requête cdc.fn_cdc_get_all_changes<instance_capture> ou cdc.fn_cdc_get_net_changes_<instance_capture>. Utilisez la fonction [sys.fn_cdc_get_min_lsn](../../relational-databases/system-functions/sys-fn-cdc-get-min-lsn-transact-sql.md) pour obtenir la limite inférieure et la fonction [sys.fn_cdc_get_max_lsn](../../relational-databases/system-functions/sys-fn-cdc-get-max-lsn-transact-sql.md) pour obtenir la limite supérieure. Consultez le modèle utilisé pour énumérer toutes les modifications pour la plage valide afin d'obtenir un exemple de code dans lequel toutes les modifications valides actuelles sont recherchées à l'aide de la fonction de requête cdc.fn_cdc_get_all_changes_<instance_capture>. Consultez le modèle utilisé pour énumérer les modifications nettes pour la plage valide afin d'obtenir un exemple semblable d'utilisation de la fonction cdc.fn_cdc_get_net_changes_<instance_capture>.  
   
 ### <a name="querying-for-all-new-changes-since-the-last-set-of-changes"></a>Recherche de toutes les nouvelles modifications depuis le dernier ensemble de modifications  
  Pour les applications conventionnelles, la recherche de données modifiées est un processus continu, qui effectue des demandes périodiques pour toutes les modifications qui se sont produites depuis la dernière demande. Avec de telles requêtes, vous pouvez utiliser la fonction [sys.fn_cdc_increment_lsn](../../relational-databases/system-functions/sys-fn-cdc-increment-lsn-transact-sql.md) pour obtenir la limite inférieure de la requête actuelle à partir de la limite supérieure de la requête précédente. Cette méthode garantit qu'aucune ligne n'est répétée car l'intervalle de requête est toujours traité comme un intervalle fermé dans lequel les deux points d'arrêt sont inclus. Ensuite, utilisez la fonction [sys.fn_cdc_get_max_lsn](../../relational-databases/system-functions/sys-fn-cdc-get-max-lsn-transact-sql.md) pour obtenir le point d’arrêt supérieur pour le nouvel intervalle de requête. Consultez le modèle utilisé pour énumérer toutes les modifications depuis la dernière demande afin d'obtenir un exemple de code permettant de déplacer systématiquement la fenêtre de requête et d'obtenir toutes les modifications depuis la dernière demande.  

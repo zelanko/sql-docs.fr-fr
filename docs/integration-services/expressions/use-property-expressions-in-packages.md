@@ -20,12 +20,12 @@ ms.assetid: a4bfc925-3ef6-431e-b1dd-7e0023d3a92d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f04de3c323f5655e7503d6d375df536897654740
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: b55b675cf28bd0e61dd74b011aad9c50cd8325fa
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641386"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531613"
 ---
 # <a name="use-property-expressions-in-packages"></a>Expressions de propriété dans des packages
   Une expression de propriété est une expression affectée à une propriété pour permettre la mise à jour dynamique de la propriété au moment de l'exécution. Par exemple, une expression de propriété peut mettre à jour la ligne À utilisée par une tâche Envoyer un message en insérant une adresse électronique qui est stockée dans une variable.  
@@ -70,7 +70,7 @@ ms.locfileid: "51641386"
   
  ![Interface utilisateur pour les expressions de propriété](../../integration-services/expressions/media/ssis-propertyexpressionui.gif "Interface utilisateur pour les expressions de propriété")  
   
- Dans la fenêtre **Propriétés** et dans la page **Expressions** , cliquez sur le bouton de navigation **(…)** au niveau de la collection **Expressions** pour ouvrir la boîte de dialogue **Éditeur d’expressions de la propriété** . L'Éditeur d'expressions de la propriété permet de mapper une propriété à une expression et de taper une expression de propriété. Si vous souhaitez utiliser les outils d’expression graphique pour créer, puis valider l’expression, cliquez sur le bouton de navigation **(…)** au niveau de l’expression pour ouvrir la boîte de dialogue **Générateur d’expressions** , puis créez ou modifiez et éventuellement validez l’expression.  
+ Dans la fenêtre **Propriétés** et dans la page **Expressions**, cliquez sur le bouton de navigation **(...)** au niveau de la collection **Expressions** pour ouvrir la boîte de dialogue **Éditeur d’expressions de la propriété**. L'Éditeur d'expressions de la propriété permet de mapper une propriété à une expression et de taper une expression de propriété. Si vous souhaitez utiliser les outils d’expression graphique pour créer, puis valider l’expression, cliquez sur le bouton de navigation **(...)** au niveau de l’expression pour ouvrir la boîte de dialogue **Générateur d’expressions**, puis créez ou modifiez et éventuellement validez l’expression.  
   
  Vous pouvez également ouvrir la boîte de dialogue **Générateur d'expression** à partir de la boîte de dialogue **Éditeur d'expressions de la propriété** .  
   
@@ -88,7 +88,7 @@ ms.locfileid: "51641386"
   
  Vous ne verrez donc pas les valeurs mises à jour des propriétés des objets du package qui utilisent des expressions de la propriété dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] tant que vous n'avez pas enregistré le package, exécuté le package ou rouvert le package après avoir ajouté des expressions de propriété.  
   
- Les expressions de propriété associées à différents types d'objets (gestionnaires de connexions, modules fournisseurs d'informations et énumérateurs) sont également chargées lorsque des méthodes spécifiques de ce type d'objet sont appelées. Par exemple, les propriétés des gestionnaires de connexions sont chargées avant que [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ne crée une instance de la connexion.  
+ Les expressions de propriété associées à différents types d’objets (gestionnaires de connexions, modules fournisseurs d’informations et énumérateurs) sont également chargées quand des méthodes spécifiques de ce type d’objet sont appelées. Par exemple, les propriétés des gestionnaires de connexions sont chargées avant que [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ne crée une instance de la connexion.  
   
  Les expressions de propriété sont chargées après le chargement des configurations de package. Par exemple, les variables sont d'abord mises à jour par leurs configurations, puis les expressions de propriété qui utilisent les variables sont évaluées et chargées. Cela signifie que les expressions de propriété utilisent toujours les valeurs de variables qui sont définies par des configurations.  
   

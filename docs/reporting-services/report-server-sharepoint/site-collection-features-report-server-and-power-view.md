@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 9ae23135583dc09db8d8a8b0cfb7d356244fb753
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 18a805e049dfeedc3b8984c1c92da3af40b5bfda
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51812276"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52405711"
 ---
 # <a name="activate-the-report-server-and-power-view-integration-features-in-sharepoint"></a>Activer les fonctionnalités d’intégration du serveur de rapports et de Power View dans SharePoint
 
@@ -32,7 +32,7 @@ ms.locfileid: "51812276"
   
  « L'application Web SharePoint 80 n'a pas de collection de sites racine »  
   
- Ce message se trouve dans le journal d’installation du complément, nommé « RS_SP_#.log », où # est un nombre incrémenté. Le fichier journal se trouve dans le dossier Temp de l’utilisateur actuel, par exemple C:\Users\\[nom utilisateur]\AppData\Local\Temp. Pour plus d’informations sur les options de journalisation du complément, consultez [Installer ou désinstaller le complément Reporting Services pour SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md).  
+ Ce message se trouve dans le journal d’installation du complément, nommé « RS_SP_#.log », où # est un nombre incrémentiel. Le fichier journal se trouve dans le dossier Temp de l’utilisateur actuel, par exemple C:\Users\\[nom utilisateur]\AppData\Local\Temp. Pour plus d’informations sur les options de journalisation du complément, consultez [Installer ou désinstaller le complément Reporting Services pour SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md).  
 
 ## <a name="activate-the-report-server-and-power-view-integration-site-collection-features"></a>Activer les fonctionnalités de collection de sites d’intégration du serveur de rapports et d’intégration de Power View
   

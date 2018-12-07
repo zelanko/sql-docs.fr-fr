@@ -24,12 +24,12 @@ ms.assetid: 72f5afa3-d636-410b-9e81-2ffa27772a8c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6cf546af42ff08a587c0d786026d2b89efffa296
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 4efe82fa71303bdaf4f8615c80ce45ae3dfda857
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639136"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514127"
 ---
 # <a name="integration-services-ssis-connections"></a>Connexions Integration Services (SSIS)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] utilisent des connexions pour effectuer différentes tâches et pour implémenter des fonctionnalités [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] :  
@@ -159,7 +159,7 @@ Un gestionnaire de connexions peut être créé au niveau du package ou au nivea
   
     -   Cliquez sur le type du gestionnaire de connexions à ajouter au package.  
   
-         —ou—  
+         -ou-  
   
     -   Si le type que vous voulez ajouter ne figure pas dans la liste, cliquez sur **Nouvelle connexion** pour ouvrir la boîte de dialogue **Ajout d’un gestionnaire de connexions SSIS** , sélectionnez un type de gestionnaire de connexions, puis cliquez sur **OK**.  
   
@@ -226,7 +226,7 @@ Un gestionnaire de connexions peut être créé au niveau du package ou au nivea
 4.  Le cas échéant, cliquez avec le bouton droit sur le gestionnaire de connexions dans la fenêtre **Explorateur de solutions** sous le nœud **Gestionnaires de connexions** (ou) sous l’onglet **Gestionnaires de connexions** de la fenêtre **Concepteur SSIS** , cliquez **Renommer**, puis modifiez le nom par défaut du gestionnaire de connexions.  
   
     > [!NOTE]  
-    >  Sous l’onglet **Gestionnaires de connexions** de la fenêtre **Concepteur SSIS** , vous ne pouvez pas remplacer le préfixe **(project)** dans le nom du gestionnaire de connexions. C'est la procédure normale.  
+    >  Sous l’onglet **Gestionnaires de connexions** de la fenêtre **Concepteur SSIS**, vous ne pouvez pas remplacer le préfixe **(project)** dans le nom du gestionnaire de connexions. C'est la procédure normale.  
 
 ### <a name="add-ssis-connection-manager-dialog-box"></a>Boîte de dialogue Ajout d’un gestionnaire de connexions SSIS
 La boîte de dialogue **Ajout d'un gestionnaire de connexions SSIS** vous permet de sélectionner le type de connexion à ajouter à un package.  

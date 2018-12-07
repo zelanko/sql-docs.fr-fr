@@ -22,12 +22,12 @@ ms.assetid: a62d9dd7-3667-4751-a294-a61fc9caae7c
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7437ae3e5a0489d582699c77af6d8d13c4ef6ae2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8dbb81d75413909fe8d205d781cef1ec89640044
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47657517"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533373"
 ---
 # <a name="quorum-how-a-witness-affects-database-availability-database-mirroring"></a>Quorum : effets d'un témoin sur la disponibilité de la base de données (mise en miroir de bases de données)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -75,7 +75,7 @@ ms.locfileid: "47657517"
   
     -   Toutes les instances de serveur perdent le quorum, mais le miroir et le témoin se reconnectent par la suite. La base de données ne sera pas utilisée dans ce cas.  
   
-     À de rares occasions, la connexion réseau entre les partenaires de basculement est perdue alors que les deux partenaires restent connectés au témoin. Dans ce cas, deux quorums distincts de témoin à partenaire existent, avec le témoin comme liaison. Le témoin informe le serveur miroir que le serveur principal est toujours connecté. De ce fait, le basculement automatique n'intervient pas. À la place, le serveur miroir conserve le rôle de miroir et attend de se reconnecter au principal. Si la file d'attente de restauration par progression contient des enregistrements de journaux à ce stade, le serveur miroir continue de restaurer par progression la base de données miroir. Lors de la reconnexion, le serveur miroir resynchronisera la base de données miroir.  
+     À de rares occasions, la connexion réseau entre les partenaires de basculement est perdue alors que les deux partenaires restent connectés au témoin. Dans ce cas, il existe deux quorums distincts de témoin à partenaire, avec le témoin comme liaison. Le témoin informe le serveur miroir que le serveur principal est toujours connecté. De ce fait, le basculement automatique n'intervient pas. À la place, le serveur miroir conserve le rôle de miroir et attend de se reconnecter au principal. Si la file d'attente de restauration par progression contient des enregistrements de journaux à ce stade, le serveur miroir continue de restaurer par progression la base de données miroir. Lors de la reconnexion, le serveur miroir resynchronisera la base de données miroir.  
   
 -   Un *quorum de partenaire à partenaire* composé des deux partenaires.  
   

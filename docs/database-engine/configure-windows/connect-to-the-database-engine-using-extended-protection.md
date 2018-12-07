@@ -18,12 +18,12 @@ ms.assetid: ecfd783e-7dbb-4a6c-b5ab-c6c27d5dd57f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d03661990e6316b7faa223cac63c8c63939fb998
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: f820161dcf242a06054e3f64198aad1f827ed3dd
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606009"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395352"
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>Se connecter au moteur de base de données à l'aide de la protection étendue
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,9 +33,9 @@ ms.locfileid: "51606009"
 >  Windows n'active pas la **protection étendue** par défaut. Pour plus d'informations sur l'activation de la **protection étendue** dans Windows, consultez [Protection étendue de l'authentification](https://support.microsoft.com/kb/968389)  
   
 ## <a name="description-of-extended-protection"></a>Description de la protection étendue  
- La**protection étendue** utilise la liaison de canal et la liaison de service pour mieux empêcher une attaque de relais d'authentification. Dans une attaque de relais d'authentification, un client qui peut effectuer l'authentification NTLM (par exemple, l'Explorateur Windows, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Outlook, une application SqlClient .NET, etc.), se connecte à une personne malveillante (par exemple, un serveur de fichiers CIFS nuisible). La personne malveillante utilise les informations d'identification du client pour se faire passer pour le client et s'authentifier auprès d'un service (par exemple, une instance du service [!INCLUDE[ssDE](../../includes/ssde-md.md)] ).  
+ La**protection étendue** utilise la liaison de canal et la liaison de service pour mieux empêcher une attaque de relais d'authentification. Dans une attaque de relais d'authentification, un client qui peut effectuer l'authentification NTLM (par exemple, l'Explorateur Windows, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Outlook, une application SqlClient .NET, etc.), se connecte à une personne malveillante (par exemple, un serveur de fichiers CIFS nuisible). L’attaquant utilise les informations d’identification du client pour se faire passer pour le client et s’authentifier auprès d’un service (par exemple, une instance du service [!INCLUDE[ssDE](../../includes/ssde-md.md)]).  
   
- Cette attaque se présente sous deux formes :  
+ Cette attaque se présente sous deux formes :  
   
 -   Dans une attaque par ruse, le client est attiré dans un piège pour se connecter volontairement à la personne malveillante.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "51606009"
  La liaison de service répond aux attaques par leurre en demandant à un client d'envoyer un nom de principal du service (SPN) signé du service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auquel il envisage de se connecter. Dans le cadre de la réponse d'authentification, le service valide que le SPN reçu dans le paquet correspond à son propre SPN. Si un client est leurré pour se connecter à une personne malveillante, le client inclura le SPN signé de la personne malveillante. La personne malveillante ne peut pas relayer le paquet pour s'authentifier auprès du véritable service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] comme client, parce qu'il inclurait le SPN de la personne malveillante. La liaison de service implique un coût unique et négligeable, mais ne traite pas les attaques d'usurpation. La liaison de service se produit lorsqu'une application cliente n'utilise pas le chiffrement pour se connecter à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ### <a name="channel-binding"></a>liaison de canal  
- La liaison de canal établit un canal sécurisé (Schannel) entre un client et une instance du service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Le service vérifie l'authenticité du client en comparant le jeton de liaison de canal du client spécifique à ce canal à son propre jeton de liaison de canal. La liaison de canal répond à la fois aux attaques par leurre et d'usurpation. Toutefois, elle implique un coût d'exécution plus important, car elle nécessite le chiffrement TLS (Transport Layer Security) de tout le trafic de session. La liaison de canal se produit lorsqu'une application cliente utilise le chiffrement pour se connecter à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], que le chiffrement soit appliqué par le client ou par le serveur.  
+ La liaison de canal établit un canal sécurisé (Schannel) entre un client et une instance du service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Le service vérifie l’authenticité du client en comparant le jeton de liaison de canaux du client à son propre jeton de liaison de canaux. La liaison de canal répond à la fois aux attaques par leurre et d'usurpation. Toutefois, elle implique un coût d'exécution plus important, car elle nécessite le chiffrement TLS (Transport Layer Security) de tout le trafic de session. La liaison de canal se produit lorsqu'une application cliente utilise le chiffrement pour se connecter à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], que le chiffrement soit appliqué par le client ou par le serveur.  
   
 > [!WARNING]  
 >  Les fournisseurs de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[msCoName](../../includes/msconame-md.md)] pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prennent en charge TLS 1.0 et SSL 3.0. Si vous appliquez un autre protocole (comme TLS 1.1 ou TLS 1.2) en apportant des modifications dans la couche SChannel du système d’exploitation, vos connexions à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] risquent d’échouer.  

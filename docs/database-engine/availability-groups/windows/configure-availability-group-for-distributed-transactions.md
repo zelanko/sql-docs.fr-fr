@@ -16,12 +16,12 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 53c1a7c5ce6c7d529fb07f356d87e0adc5c02e31
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 9a4a035c33efa17f901e721ed23faf41c068c507
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639121"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513680"
 ---
 # <a name="configure-availability-group-for-distributed-transactions"></a>Configurer un groupe de disponibilité pour les transactions distribuées
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "51639121"
 Afin de garantir des transactions distribuées, le groupe de disponibilité doit être configuré pour inscrire les bases de données en tant que gestionnaires de ressources de transactions distribuées.  
 
 >[!NOTE]
->[!INCLUDE[SQL2016](../../../includes/sssql15-md.md)]Service Pack 2 et versions ultérieures fournissent une prise en charge complète des transactions distribuées dans les groupes de disponibilité. Dans les versions de [!INCLUDE[SQL2016]](../../../includes/sssql15-md.md)] antérieures à Service Pack 2, les transactions distribuées entre bases de données (autrement dit, les transactions qui utilisent des bases de données sur la même instance de SQL Server) impliquant une base de données dans un groupe de disponibilité ne sont pas prises en charge. [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] n’a pas cette limitation. 
+>[!INCLUDE[SQL2016](../../../includes/sssql15-md.md)]Service Pack 2 et versions ultérieures fournissent une prise en charge complète des transactions distribuées dans les groupes de disponibilité. Dans les versions de [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] antérieures au Service Pack 2, les transactions distribuées entre bases de données (autrement dit, les transactions qui utilisent des bases de données sur la même instance de SQL Server) impliquant une base de données dans un groupe de disponibilité ne sont pas prises en charge. [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] n’a pas cette limitation. 
 >
 >Dans [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)], les étapes de configuration sont les mêmes que dans [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)].
 
@@ -192,4 +192,4 @@ Pour plus d’informations sur la résolution des transactions incertaines, cons
 
 [Prise en charge des transactions XA](https://technet.microsoft.com/library/cc753563(v=ws.10).aspx)
 
-[Fonctionnement : Session/SPID – (2) pour les transactions DTC](https://blogs.msdn.microsoft.com/bobsql/2016/08/04/how-it-works-sessionspid-2-for-dtc-transactions/)
+[Fonctionnement : Session/SPID (-2) pour les transactions DTC](https://blogs.msdn.microsoft.com/bobsql/2016/08/04/how-it-works-sessionspid-2-for-dtc-transactions/)

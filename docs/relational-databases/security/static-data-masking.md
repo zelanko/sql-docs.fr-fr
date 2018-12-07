@@ -11,12 +11,12 @@ author: egranet
 ms.author: esgranet
 manager: ajayj
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 50b39571179528f96f19370c4935b87e457b214f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 18dd28aeb4c1678b4b6ae454c065d3d96770cb5a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662995"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539113"
 ---
 # <a name="static-data-masking"></a>Masquage statique des données
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -104,7 +104,7 @@ Voici un guide pas à pas pour l’exécution du masquage statique des données.
  
  ![Liste déroulante des fonctions de masquage](../../relational-databases/security/media/sql-static-data-masking/masking_functions.PNG)
  
- REMARQUE : La plupart de ces fonctions de masquage ont des paramètres de configuration supplémentaires. Pour le masquage par réarrangement, la fonctionnalité Masquage statique des données fournit un paramètre par défaut. Pour le masquage par réarrangement de groupe, à valeur unique ou à chaîne composée, l’utilisateur doit fournir des paramètres de configuration. Pour modifier ou fournir des paramètres de configuration, cliquez sur l’option **Configurer...** et spécifiez une valeur (de remplacement) pour le paramètre dans la boîte de dialogue qui s’affiche. Une description détaillée de chaque fonction de masquage est fournie dans [Fonctions de masquage](#masking-functions).
+ REMARQUE : La plupart de ces fonctions de masquage ont des paramètres de configuration supplémentaires. Pour le masquage par réarrangement, la fonctionnalité Masquage statique des données fournit un paramètre par défaut. Pour le masquage par réarrangement de groupe, à valeur unique ou à chaîne composée, l’utilisateur doit fournir des paramètres de configuration. Pour modifier ou spécifier un paramètre de configuration, cliquez sur l’option **Configurer...** et attribuez une (autre) valeur au paramètre dans la boîte de dialogue qui s’affiche. Une description détaillée de chaque fonction de masquage est fournie dans [Fonctions de masquage](#masking-functions).
  
  ![Bouton de configuration des fonctions de masquage](../../relational-databases/security/media/sql-static-data-masking/masking_functions_configure.png)
  
@@ -122,7 +122,7 @@ Voici un guide pas à pas pour l’exécution du masquage statique des données.
  
  ![Fichier de configuration](../../relational-databases/security/media/sql-static-data-masking/load_save_config.PNG)
  
-6. Le masquage statique des données crée un dossier dans le dossier **Documents** de l’utilisateur, nommé Masquage statique des données, et y place les fichiers journaux. Les fichiers journaux peuvent être utiles à des fins de débogage. Le nom du fichier journal est indiqué au bas de la fenêtre de configuration. 
+6. Le masquage statique des données crée un dossier dans le dossier **Documents** de l’utilisateur, nommé Masquage statique des données et y place les fichiers journaux. Les fichiers journaux peuvent être utiles à des fins de débogage. Le nom du fichier journal est indiqué au bas de la fenêtre de configuration. 
   
  
 7. (SQL Server uniquement) Si vous utilisez le masquage statique des données sur une base de données locale, cette fonctionnalité effectue une opération de sauvegarde/restauration. Dans **Étape 2 : Emplacement du fichier .BAK dupliqué**, indiquez l’emplacement sur le serveur où le fichier de sauvegarde sera stocké. 
@@ -135,7 +135,7 @@ Le masquage NULL remplace toutes les valeurs dans la colonne par la valeur NULL.
 
 ### <a name="single-value-masking"></a>Masquage à valeur unique
 
-Le masquage à valeur unique remplace toutes les valeurs dans la colonne par une valeur fixe unique, spécifiée par l’utilisateur. Le format de l’entrée doit être convertible vers le type quelconque de la colonne sélectionnée. Pour spécifier la valeur, cliquez sur **Configurer...** et fournissez une valeur, puis cliquez sur **OK**. 
+Le masquage à valeur unique remplace toutes les valeurs dans la colonne par une valeur fixe unique, spécifiée par l’utilisateur. Le format de l’entrée doit être convertible vers le type quelconque de la colonne sélectionnée. Pour spécifier la valeur, cliquez sur **Configurer...**, fournissez une valeur, puis cliquez sur **OK**. 
 
 ![Paramètre de masquage à valeur unique](../../relational-databases/security/media/sql-static-data-masking/single_value_parameter.PNG)
 

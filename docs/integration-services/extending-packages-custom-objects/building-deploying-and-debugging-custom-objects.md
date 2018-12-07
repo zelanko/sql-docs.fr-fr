@@ -13,12 +13,12 @@ ms.assetid: b03685bc-5398-4c3f-901a-1219c1098fbe
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0b67c3deaa58efe3b9a180f51d812ee0cec96f03
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 424fb19d14d1851cd647f0fa21a4d3271c8dd2b6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826527"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502883"
 ---
 # <a name="building-deploying-and-debugging-custom-objects"></a>Génération, déploiement et débogage d'objets personnalisés
   Après avoir écrit le code d’un objet personnalisé pour [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], vous devez générer l’assembly, le déployer, l’intégrer dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] afin qu’il puisse être utilisé dans des packages, puis le tester et le déboguer.  
@@ -62,7 +62,7 @@ ms.locfileid: "47826527"
 ##  <a name="building"></a> Génération de l’assembly  
  Après avoir signé le projet, vous devez générer ou regénérer le projet ou la solution en utilisant les commandes disponibles dans le menu **Générer** de [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Votre solution peut contenir un projet séparé d' interface utilisateur personnalisée, lequel doit également être signé avec un nom fort et peut être généré en même temps.  
   
- La méthode la plus pratique pour effectuer les deux étapes suivantes, à savoir le déploiement de l'assembly et son installation dans le Global Assembly Cache, consiste à écrire le script de ces étapes sous la forme d'un événement post-build dans [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]. Les événements de génération sont disponibles sur la page **Compiler** des propriétés d’un projet [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] et sur la page **Événements de génération** d’un projet C#. Le chemin complet est requis pour les utilitaires d’invite de commandes tels que **gacutil.exe**. Les guillemets sont requis à la fois autour des chemins d'accès qui contiennent des espaces et autour des macros telles que $(TargetPath) qui s'étendent aux chemins d'accès qui contiennent des espaces.  
+ La méthode la plus pratique pour effectuer les deux étapes suivantes, à savoir le déploiement de l’assembly et son installation dans le Global Assembly Cache, consiste à écrire le script de ces étapes sous la forme d’un événement post-build dans [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]. Les événements de génération sont disponibles sur la page **Compiler** des propriétés d’un projet [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] et sur la page **Événements de génération** d’un projet C#. Le chemin complet est requis pour les utilitaires d’invite de commandes tels que **gacutil.exe**. Les guillemets sont requis à la fois autour des chemins d'accès qui contiennent des espaces et autour des macros telles que $(TargetPath) qui s'étendent aux chemins d'accès qui contiennent des espaces.  
   
  Voici un exemple de ligne de commande d'événement après génération pour un module fournisseur d'informations personnalisé :  
   

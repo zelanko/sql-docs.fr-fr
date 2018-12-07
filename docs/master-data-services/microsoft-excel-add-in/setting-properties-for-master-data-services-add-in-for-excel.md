@@ -11,12 +11,12 @@ ms.assetid: cab1c662-5d40-4c16-9f5c-36ff9608810b
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 4ca842edd22eb0b4eadd7a44ededcd30530654f9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 42d00e95ad228d38b3984cb38a3ef5f976a2dad6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644477"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52414116"
 ---
 # <a name="setting-properties-for-master-data-services-add-in-for-excel"></a>Définition des propriétés pour le complément Master Data Services pour Excel
 
@@ -42,7 +42,7 @@ ms.locfileid: "47644477"
 |Données : Filtres|Lignes au maximum|Sélectionnez le seuil pour le nombre de lignes chargées, au delà duquel un avertissement de filtrage est publié.|  
 |Données : Filtres|Colonnes au maximum|Sélectionnez le seuil pour le nombre de colonnes chargées, au delà duquel un avertissement de filtrage est publié.|  
 |Données : Format de cellule|Modifier la couleur de cellule quand : Modification des valeurs d'attributs|Cliquez pour indiquer que la couleur d'une cellule change si la valeur d'attribut de cette cellule est modifiée lorsque vous actualisez la table du complément Excel avec de nouvelles données provenant du référentiel MDS.|  
-|Données : Format de cellule|Modifier la couleur de cellule quand : Des membres sont ajoutés|Cliquez pour indiquer que la couleur des cellules d'une ligne change si un nouveau membre est ajouté à la ligne lorsque vous actualisez la table du complément Excel avec de nouvelles données provenant du référentiel MDS.|  
+|Données : Format de cellule|Modifier la couleur de cellule quand : Des membres sont ajoutés|Cliquez pour indiquer que la couleur des cellules d’une ligne change si un nouveau membre est ajouté à la ligne quand vous actualisez la table du complément Excel avec de nouvelles données provenant du référentiel MDS.|  
 |Données : Format de cellule|Format d’affichage|Sélectionnez le format d’affichage souhaité pour les valeurs d’attributs basés sur un domaine. Les options possibles sont Code {Name}, Code et Nom {Code}.|  
   
   

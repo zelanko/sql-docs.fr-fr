@@ -10,18 +10,18 @@ ms.assetid: c1862d8a-5f82-4647-a280-3e588b82a6dc
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 87bb360140f71cca4739f48bba9b5c309104bcf8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c9a41540e9617f9eb9543677c9982b8bbb5985c3
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695134"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52405001"
 ---
 # <a name="always-on-availability-groups-health-diagnostics-log"></a>Journal de diagnostic d’intégrité des groupes de disponibilité Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Pour monitorer l’intégrité du réplica de disponibilité principal, la DLL de ressource SQL Server exécutée par le cluster WSFC (clustering de basculement Windows Server) utilise une procédure stockée dans l’instance SQL Server appelée [sp_server_diagnostics](~/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md).  
   
- La DLL de ressource SQL Server garde une connexion ouverte dédiée à l’instance SQL Server, via laquelle l’instance SQL Server envoie régulièrement des diagnostics d’intégrité détaillés à la DLL de ressource SQL Server. Le cluster utilise les diagnostics d’intégrité, ainsi que la stratégie de basculement configurée dans la ressource du groupe de disponibilité du cluster (propriété FailoverConditionLevel), pour déterminer s’il faut redémarrer ou basculer la ressource du groupe de disponibilité. Cette procédure stockée est la « pulsation » entre l’instance SQL Server 2012 et ultérieur et le cluster WSFC. Elle est plus précise et plus fiable que dans SQL Server 2008 R2 ou antérieur, où une connexion périodique à l’instance est établie au moyen de la requête `SELECT @@SERVERNAME`. Vous pouvez ensuite contrôler les conditions qui déclenchent des basculements en définissant la propriété FailureConditonLevel du groupe de disponibilité.  
+ La DLL de ressource SQL Server garde une connexion ouverte dédiée à l’instance SQL Server, via laquelle l’instance SQL Server envoie régulièrement des diagnostics d’intégrité détaillés à la DLL de ressource SQL Server. Le cluster utilise les diagnostics d’intégrité, ainsi que la stratégie de basculement configurée dans la ressource du groupe de disponibilité du cluster (propriété FailoverConditionLevel), pour déterminer s’il faut redémarrer ou basculer la ressource du groupe de disponibilité. Cette procédure stockée constitue la « pulsation » entre l’instance SQL Server 2012 (et versions ultérieures) et le cluster WSFC. Elle est plus précise et plus fiable que dans SQL Server 2008 R2 (et versions antérieures), où une connexion périodique à l’instance est établie au moyen de la requête `SELECT @@SERVERNAME`. Vous pouvez ensuite contrôler les conditions qui déclenchent des basculements en définissant la propriété FailureConditonLevel du groupe de disponibilité.  
   
  **Utiliser les journaux de diagnostic du cluster de basculement SQL Server**
  

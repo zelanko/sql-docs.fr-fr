@@ -13,12 +13,12 @@ ms.assetid: 895d220c-6749-4954-9dd3-2ea4c6a321ff
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a369cf9f73508f5d891b0b2af8807c490eb9fd47
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 502403eab1376679471b6825fb6b58333947c47f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51672468"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52522309"
 ---
 # <a name="enable-semantic-search-on-tables-and-columns"></a>Activer la recherche sémantique sur les tables et les colonnes
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "51672468"
   
 -   Vous pouvez spécifier tout type de document pris en charge pour l’indexation de texte intégral pour des colonnes **varbinary(max)** . Pour plus d'informations, consultez [Procédure : déterminer les types de documents pouvant être indexés](#doctypes) dans cette rubrique.  
   
--   L'indexation sémantique crée deux types d'index pour les colonnes que vous sélectionnez : un index d'expressions clés et un index de similarité de document. Vous ne pouvez pas sélectionner un seul type d'index lorsque vous activez l'indexation sémantique. En revanche, vous interroger ces deux index de manière indépendante. Pour plus d’informations, consultez [Rechercher des expressions clés dans les documents avec la recherche sémantique](../../relational-databases/search/find-key-phrases-in-documents-with-semantic-search.md) et [Rechercher des documents similaires ou connexes avec la recherche sémantique](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md).  
+-   L’indexation sémantique crée deux types d’index pour les colonnes que vous sélectionnez : un index d’expressions clés et un index de similarité de document. Vous ne pouvez pas sélectionner un seul type d'index lorsque vous activez l'indexation sémantique. En revanche, vous interroger ces deux index de manière indépendante. Pour plus d’informations, consultez [Rechercher des expressions clés dans les documents avec la recherche sémantique](../../relational-databases/search/find-key-phrases-in-documents-with-semantic-search.md) et [Rechercher des documents similaires ou connexes avec la recherche sémantique](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md).  
   
 -   Si vous ne spécifiez pas de LCID explicitement pour un index sémantique, seules la langue principale et ses statistiques linguistiques associées sont utilisées pour l'indexation sémantique.  
   

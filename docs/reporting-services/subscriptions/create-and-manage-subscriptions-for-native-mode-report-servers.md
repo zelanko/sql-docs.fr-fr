@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5ab1c661-9bfa-434a-b315-faac34ed12b1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 26826171d9d240e5daf919faabeb6023e77b86f8
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: cc5d22756ce35acb3469dbf385a5a21e3c969ef0
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021683"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400902"
 ---
 # <a name="create-and-manage-subscriptions-for-native-mode-report-servers"></a>Créer et gérer des abonnements pour les serveurs de rapports en mode natif
   L'abonnement standard est un abonnement créé par des utilisateurs individuels qui souhaitent recevoir des rapports par messagerie électronique ou dans un dossier partagé. Cette rubrique fournit des informations sur les abonnements standard qui sont créés et gérés par des utilisateurs individuels. Les abonnements pilotés par les données ne fonctionnent pas de la même façon et sont décrits dans une rubrique distincte. Pour plus d’informations, consultez [Créer, modifier ou supprimer des abonnement pilotés par les données](../../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md).  
@@ -112,7 +112,7 @@ ms.locfileid: "50021683"
     > [!NOTE]  
     >  En fonction de vos autorisations, vous pouvez taper l'adresse de messagerie à laquelle le rapport doit être remis. Si vous spécifiez plusieurs adresses, séparez-les par des points-virgules (;). Vous pouvez aussi taper des adresses e-mail supplémentaires dans les zones de texte **Cc**, **Cci**et **Répondre à** . Pour cela, vous devez disposer de l'autorisation de gestion de tous les abonnements.  
   
-7.  **Objet**: a pour valeur par défaut « @ReportName a été exécuté à @ExecutionTime ». Vous pouvez modifier l’objet, mais notez que @ReportName et @ExecutionTime sont les seules variables globales prises en charge dans le champ **Objet**.  
+7.  **Objet** : a pour valeur par défaut « @ReportName a été exécuté à @ExecutionTime ». Vous pouvez modifier l’objet, mais notez que @ReportName et @ExecutionTime sont les seules variables globales prises en charge dans le champ **Objet**.  
   
 8.  Sélectionnez les options de remise comme suit :  
   
@@ -163,7 +163,7 @@ ms.locfileid: "50021683"
 ##  <a name="bkmk_delete_subscription"></a> Pour supprimer un abonnement  
  Pour supprimer un abonnement  
   
-1.  Démarrez le [Report Manager  &#40;SSRS Native Mode&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
+1.  Démarrez le [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
 2.  Dans le Gestionnaire de rapports, cliquez sur **Mes abonnements** dans la barre d'outils et parcourez l'arborescence jusqu'à l'abonnement à modifier ou à supprimer.  
   

@@ -18,12 +18,12 @@ ms.assetid: e57cd31d-140e-422f-8178-2761c27b9deb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 66f4d5e1a419d9a194532902e0df259eccc35590
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dddd2ea5c0abb9cf2aaa1258bbbb5cff14e6ca99
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838537"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519160"
 ---
 # <a name="table-value-constructor-transact-sql"></a>Constructeur de valeurs de table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ VALUES ( <row value expression list> ) [ ,...n ]
  Constante, variable ou expression. L'expression ne peut pas contenir d'instruction EXECUTE.  
   
 ## <a name="limitations-and-restrictions"></a>Limitations et restrictions  
- Les constructeurs de valeurs de table peuvent être utilisés de deux façons : directement dans la liste VALUES d’une instruction INSERT... VALUES, ou en tant que table dérivée quand les tables dérivées sont autorisées. L’erreur 10738 est retournée si le nombre de lignes dépasse la valeur maximale. Pour insérer plus de lignes que le nombre limite, utilisez une des méthodes suivantes :  
+ Les constructeurs de valeurs de table peuvent être utilisés de deux façons : directement dans la liste VALUES d’une instruction INSERT ... VALUES, ou en tant que table dérivée quand les tables dérivées sont autorisées. L’erreur 10738 est retournée si le nombre de lignes dépasse la valeur maximale. Pour insérer plus de lignes que le nombre limite, utilisez une des méthodes suivantes :  
   
 -   Créer plusieurs instructions INSERT  
   

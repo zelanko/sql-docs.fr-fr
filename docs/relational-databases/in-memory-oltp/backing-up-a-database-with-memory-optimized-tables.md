@@ -11,12 +11,12 @@ ms.assetid: 83d47694-e56d-4dae-b54e-14945bf8ba31
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: f0faaa704bb7a160d4a17d80a97efd2bae85b629
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 0cf5f24bc4c330c40323ee18189cc10b0aed080e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671241"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398732"
 ---
 # <a name="backing-up-a-database-with-memory-optimized-tables"></a>Sauvegarde d'une base de données avec des tables mémoire optimisées
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "51671241"
 > [!NOTE]  
 >  Lors d’une sauvegarde, si vous détectez une erreur CHECKSUM dans un ou plusieurs fichiers d’un groupe de fichiers à mémoire optimisée, la sauvegarde échoue. Dans ce cas, vous devez restaurer votre base de données à partir de la dernière sauvegarde connue et fiable.  
 >   
->  Si vous ne disposez pas d'une sauvegarde, exportez des données des tables mémoire optimisées et des tables sur disque et rechargez-les après avoir supprimé et recréé la base de données.  
+>  Si vous ne disposez pas d’une sauvegarde, exportez les données des tables à mémoire optimisée et des tables sur disque, et rechargez-les après avoir supprimé et recréé la base de données.  
   
  Une sauvegarde complète d'une base de données avec une ou plusieurs tables mémoire optimisées comprend le stockage alloué pour les tables sur disque (le cas échéant), le journal des transactions actives, et les paires de fichiers de données et delta (également appelées des « paires de fichiers de point de contrôle ») pour les tables mémoire optimisées. Cependant, comme décrit dans [Durabilité pour les tables optimisées en mémoire](../../relational-databases/in-memory-oltp/durability-for-memory-optimized-tables.md), le stockage utilisé par les tables optimisées en mémoire peut être bien supérieur à sa taille en mémoire, et cela a une incidence sur la taille de la sauvegarde de base de données.  
   

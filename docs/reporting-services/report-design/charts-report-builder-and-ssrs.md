@@ -18,12 +18,12 @@ f1_keywords:
 ms.assetid: d56d0521-362f-4361-843a-acf2c897a87c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: dc7dac6572ac10d6526fbf4052a046a2093bbd52
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2197d120799041cb679453b6b6a1c3dc2070e7d3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662817"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507610"
 ---
 # <a name="charts-report-builder-and-ssrs"></a>Graphiques (Générateur de rapports et SSRS)
 Apprenez à utiliser les régions de données de graphique pour aider les lecteurs de vos rapports paginés [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] à comprendre en un coup d’œil des volumes importants de données agrégées.  
@@ -38,7 +38,7 @@ Plus vous passerez du temps à préparer avec soin vos données et à les compre
   
  
 ##  <a name="DesigningChart"></a> Conception d'un graphique  
- Après avoir ajouté une région de données de graphique à l'aire de conception, vous pouvez faire glisser des champs de dataset du rapport pour les données numériques et non numériques vers le volet Données du graphique du graphique. Lorsque vous cliquez sur le graphique sur l'aire de conception, le volet Données du graphique s'affiche avec trois zones : Groupes d'abscisses, Groupes de séries et Valeurs. Si le rapport comporte un dataset partagé ou incorporé, les champs du dataset s'affichent dans le volet Données du rapport. Faites glisser les champs du dataset vers la zone appropriée du volet Données du graphique. Par défaut, lorsqu'un champ est ajouté à l'une des zones du graphique, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] calcule un agrégat pour ce champ. Vous pouvez également regrouper des séries pour générer dynamiquement des séries. Un graphique est [organisé comme une matrice](#SimilarMatrix).  
+ Après avoir ajouté une région de données de graphique à l'aire de conception, vous pouvez faire glisser des champs de dataset du rapport pour les données numériques et non numériques vers le volet Données du graphique du graphique. Quand vous cliquez sur le graphique dans l’aire de conception, le volet Données du graphique s’affiche avec trois zones : Groupes de catégories, Groupes de séries et Valeurs. Si le rapport comporte un dataset partagé ou incorporé, les champs du dataset s'affichent dans le volet Données du rapport. Faites glisser les champs du dataset vers la zone appropriée du volet Données du graphique. Par défaut, lorsqu'un champ est ajouté à l'une des zones du graphique, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] calcule un agrégat pour ce champ. Vous pouvez également regrouper des séries pour générer dynamiquement des séries. Un graphique est [organisé comme une matrice](#SimilarMatrix).  
   
  ![rs_chartwSeriesCategories](../../reporting-services/report-design/media/rs-chartwseriescategories.gif "rs_chartwSeriesCategories")  
   
@@ -139,8 +139,8 @@ Plus vous passerez du temps à préparer avec soin vos données et à les compre
  [Images, zones de texte, rectangles et lignes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/images-text-boxes-rectangles-and-lines-report-builder-and-ssrs.md)   
  [Tri interactif, Explorateurs de documents et liens &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
  [Régions de données imbriquées &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)   
- [Didacticiel : ajouter un histogramme à un rapport &#40;Générateur de rapports&#41;](../../reporting-services/tutorial-add-a-column-chart-to-your-report-report-builder.md)   
+ [Didacticiel : ajouter un histogramme à un rapport &#40;Générateur de rapports&#41;](../../reporting-services/tutorial-add-a-column-chart-to-your-report-report-builder.md)   
  [Didacticiel : ajouter un graphique à secteurs à un rapport &#40;Générateur de rapports&#41;](../../reporting-services/tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
- [Didacticiel : ajouter un graphique à barres à un rapport &#40;Générateur de rapports&#41;](../../reporting-services/tutorial-add-a-bar-chart-to-your-report-report-builder.md)  
+ [Didacticiel : ajouter un graphique à barres à un rapport &#40;Générateur de rapports&#41;](../../reporting-services/tutorial-add-a-bar-chart-to-your-report-report-builder.md)  
   
   

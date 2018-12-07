@@ -19,17 +19,17 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7aff73be9d9213cea3c9336a926a0ad0de0a3c80
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3a9c57b68a7aabc2d275dd5fa64c7e7cb00c3969
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47803257"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505915"
 ---
 # <a name="throw-transact-sql"></a>THROW (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-  Lève une exception et transfère l'exécution à un bloc CATCH d'une construction TRY…CATCH dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+  Lève une exception et transfère l’exécution à un bloc CATCH d’une construction TRY...CATCH dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -55,7 +55,7 @@ THROW [ { error_number | @local_variable },
 ## <a name="remarks"></a>Notes   
  L'instruction qui précède l'instruction THROW doit être suivie du terminateur d'instruction, le point-virgule (;).  
   
- Si une construction TRY…CATCH n’est pas disponible, le lot d’instructions est terminé. Le numéro de ligne et la procédure où l'exception est levée sont définis. La gravité est définie sur 16.  
+ Si une construction TRY...CATCH n’est pas disponible, le lot d’instructions se termine. Le numéro de ligne et la procédure où l'exception est levée sont définis. La gravité est définie sur 16.  
   
  Si l'instruction THROW est spécifiée sans paramètres, elle doit apparaître à l'intérieur d'un bloc CATCH. Cela provoque la levée de l'exception interceptée. Toute erreur qui se produit dans une instruction THROW entraîne la fin du lot d’instructions.  
   

@@ -15,12 +15,12 @@ ms.assetid: d0a0a394-6cb6-416a-a25f-9babf8ba294a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c7a570dda05c5fe83227b7f88209eecdc25529e0
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c5cf17437f97aa649ee81f2fb0f71061df04fec8
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51667098"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400392"
 ---
 # <a name="import-into-a-database-project"></a>Importer dans un projet de base de données
 Vous pouvez utiliser la fonction Importer pour remplir un projet avec de nouveaux objets provenant d'une base de données active ou d'un fichier .dacpac, ou pour mettre à jour des objets existants dans votre projet avec une nouvelle définition d'un script. Il convient de noter plusieurs différences de comportement entre ces trois choix, comme décrit ci-dessous.  
@@ -40,7 +40,7 @@ Vous pouvez utiliser la fonction Importer pour remplir un projet avec de nouveau
 ## <a name="bkmk_import_source_db"></a>Source d’importation : base de données ou application de la couche Données (*.dacpac)  
 La possibilité d'importer un schéma depuis une base de données ou un fichier .dacpac n'est disponible que si aucun objet de schéma n'est encore défini dans le projet. Cela n'inclut pas les fichiers RefactorLogs ni les scripts de prédéploiement et de post-déploiement.  
   
-Lors de l'importation, les définitions d'objet sont écrites via un script dans les fichiers de projet à l'aide des valeurs organisationnelles par défaut de SSDT pour les nouveaux objets : nouveaux fichiers pour les objets de niveau supérieur, enfants hiérarchiques définis dans le même fichier que le parent, contraintes de table/colonne définies en ligne lorsque cela est possible. Pour disposer d'un meilleur contrôle et d'une visibilité ciblée pour chaque objet, utilisez Comparaison de schémas au lieu d'Importer.  
+Lors de l’importation, les définitions d’objet sont écrites via un script dans les fichiers de projet à l’aide des valeurs organisationnelles par défaut de SSDT pour les nouveaux objets : nouveaux fichiers pour les objets de niveau supérieur, enfants hiérarchiques définis dans le même fichier que le parent, contraintes de table/colonne définies en ligne lorsque cela est possible. Pour disposer d'un meilleur contrôle et d'une visibilité ciblée pour chaque objet, utilisez Comparaison de schémas au lieu d'Importer.  
   
 Si la source d'importation contient des scripts de prédéploiement et de post-déploiement, des fichiers RefactorLogs ou des définitions de variable SQLCMD, ils seront importés dans le projet. Si le projet contient déjà l’un de ces artefacts, les fichiers importés seront ajoutés à un dossier **Ignoré lors de l’importation** dans le projet.  
   
@@ -54,7 +54,7 @@ Tous les objets de la source d’importation qui n’existent *pas* encore dans 
 > [!NOTE]  
 > Il existe deux bogues connues dans cette méthode. Elles seront corrigées dans une prochaine version :  
 >   
-> -   Si les contraintes de table/colonne sont définies à l'extérieur de l'instruction CREATE TABLE dans la définition de la table du projet, l'importation remplace la définition de la table de sorte que cette contrainte soit en ligne. Toutefois, elle laisse la contrainte hors ligne, ce qui se traduit par des contraintes en double dans le projet.  
+> -   Si les contraintes de table/colonne sont définies à l’extérieur de l’instruction CREATE TABLE dans la définition de la table du projet, l’importation remplace la définition de la table de sorte que cette contrainte soit inline. Toutefois, elle laisse la contrainte hors ligne, ce qui se traduit par des contraintes en double dans le projet.  
 > -   Toutes les clés principales ou les clés de chiffrement de base de données de votre script source qui existent déjà dans le projet sont dupliquées lors de l'importation. Supprimez ces doublons afin de pouvoir générer le projet.  
   
 Le processus d'importation à partir d'un script ne comprend pas les scripts de prédéploiement et de post-déploiement, les variables SQLCMD ni les fichiers RefactorLog. Ces éléments, ainsi que toutes les autres constructions non prises en charge qui sont détectées lors de l’importation, seront placés dans un fichier **ScriptsIgnoredOnImport.sql** au sein d’un dossier **Scripts** dans votre projet.  

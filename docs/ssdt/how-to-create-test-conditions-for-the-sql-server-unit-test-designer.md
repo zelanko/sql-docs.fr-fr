@@ -11,12 +11,12 @@ ms.assetid: 48076062-1ef5-419a-8a55-3c7b4234cc35
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bfb25121dcc417f2ead0d85bc723bc7b402cebab
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 0b58d17340eeee18fdda5b6ea56f9aebd291ba1f
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675068"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400033"
 ---
 # <a name="how-to-create-test-conditions-for-the-sql-server-unit-test-designer"></a>Procédure : créer des conditions de test pour le Concepteur de test unitaire SQL Server
 Utilisez la classe [TestCondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx) extensible pour créer des conditions de test. Vous pouvez, par exemple, créer une condition de test qui vérifie le nombre de colonnes ou valeurs dans un jeu de résultats.  
@@ -178,7 +178,7 @@ La classe de la condition de test personnalisée hérite de la classe [TestCondi
   
 |Paramètre d'attribut|Position|Description|  
 |-----------------------|------------|---------------|  
-|DisplayName|1|Identifie la chaîne dans la zone de liste déroulante Conditions de test. Ce nom doit être unique. Si deux conditions portent le même nom complet, la première condition détectée sera affichée et un avertissement apparaîtra dans le Gestionnaire d'erreurs Visual Studio.|  
+|DisplayName|1|Identifie la chaîne dans la zone de liste déroulante « Conditions de test ». Ce nom doit être unique. Si deux conditions portent le même nom complet, la première condition détectée sera affichée et un avertissement apparaîtra dans le Gestionnaire d'erreurs Visual Studio.|  
 |ImplementingType|2|Ce paramètre s'utilise pour identifier de manière unique l'extension. Vous devez le modifier de façon à ce qu'il corresponde au type sur lequel vous placez l'attribut. Cet exemple utilise le type **ResultSetColumnCountCondition**, donc utilisez **typeof(ResultSetColumnCountCondition)**. Si votre type est **NewTestCondition**, utilisez **typeof(NewTestCondition)**.|  
   
 Dans cet exemple, vous ajoutez deux propriétés. Les utilisateurs de la condition de test personnalisée peuvent utiliser la propriété ResultSet de façon à indiquer pour quel jeu de résultats le nombre de colonnes doit être vérifié. Ensuite, ils peuvent utiliser la propriété Count pour indiquer le nombre de colonnes attendu.  

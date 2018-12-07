@@ -11,12 +11,12 @@ ms.assetid: d44935ce-63bf-46df-976a-5a54866c8119
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a8fa6573f852eebe34801db57ba62cd29f9da3e5
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 9841763f003b0a177913da72cf6dd3efd0c4d3d3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659138"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523423"
 ---
 # <a name="walkthrough-extend-database-project-build-to-generate-model-statistics"></a>Procédure pas à pas : étendre la génération du projet de base de données à la génération de statistiques de modèle
 Vous pouvez créer un contributeur de génération pour effectuer des actions personnalisées lorsque vous générez un projet de base de données. Dans cette procédure pas à pas, vous allez créer un contributeur de génération nommé ModelStatistics qui génère des statistiques de base de données SQL lorsque vous créez un projet de base de données. Ce contributeur de génération acceptant des paramètres lorsque vous effectuez la génération, quelques étapes supplémentaires sont nécessaires.  
@@ -46,7 +46,7 @@ Les contributeurs de génération sont exécutés pendant la génération du pro
   
 -   Génération de statistiques de modèle et communication à l'utilisateur. Il s'agit de l'exemple ci-après.  
   
-Le point d'entrée principal pour les contributeurs de génération est la méthode OnExecute. Toutes les classes héritant de BuildContributor doivent implémenter cette méthode. Un objet BuildContributorContext est transmis à cette méthode – il contient toutes les données pertinentes pour la génération, telles qu'un modèle de base de données, les propriétés de génération et les arguments et les fichiers que les contributeurs de génération doivent utiliser.  
+Le point d'entrée principal pour les contributeurs de génération est la méthode OnExecute. Toutes les classes héritant de BuildContributor doivent implémenter cette méthode. Un objet BuildContributorContext est transmis à cette méthode. Il contient toutes les données pertinentes pour la génération, telles qu’un modèle de base de données, les propriétés de génération et les arguments et les fichiers que les contributeurs de génération doivent utiliser.  
   
 **TSqlModel et API de la base de données modèle**  
   
@@ -56,8 +56,8 @@ Voici certaines commandes utilisées par l'exemple de contributeur dans cette pr
   
 |**Classe**|**Méthode/propriété**|**Description**|  
 |-------------|------------------------|-------------------|  
-|[TSqlModel](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlmodel.aspx)|GetObjects()|Interroge le modèle d'objets, est le point d'entrée principal à l'API du modèle. Seuls les types de niveau supérieur tels que Table ou Vue peuvent être interrogés – les types tels que Colonnes sont trouvés uniquement en parcourant le modèle. Si aucun filtre ModelTypeClass n'est spécifié, tous les types de niveau supérieur sont retournés.|  
-|[TSqlObject](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx)|GetReferencedRelationshipInstances()|Recherche des relations aux éléments référencés par TSqlObject actuel. Par exemple, pour une table, cette méthode retourne des objets comme des colonnes de la table. Dans ce cas, un filtre ModelRelationshipClass peut être utilisé pour spécifier les relations exactes à interroger (par exemple le filtre « Table.Columns » garantirait que seules des colonnes soient retournées).<br /><br />Il existe plusieurs méthodes semblables, telles que GetReferencingRelationshipInstances, GetChildren et GetParent. Pour plus d'informations, consultez la documentation relative à API.|  
+|[TSqlModel](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlmodel.aspx)|GetObjects()|Interroge le modèle d'objets, est le point d'entrée principal à l'API du modèle. Seuls les types de niveau supérieur comme Table et Vue peuvent être interrogés. Les types comme Colonnes peuvent être trouvés uniquement en parcourant le modèle. Si aucun filtre ModelTypeClass n'est spécifié, tous les types de niveau supérieur sont retournés.|  
+|[TSqlObject](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx)|GetReferencedRelationshipInstances()|Recherche des relations aux éléments référencés par TSqlObject actuel. Par exemple, pour une table, cette méthode retourne des objets comme des colonnes de la table. Dans ce cas, un filtre ModelRelationshipClass peut être utilisé pour spécifier les relations exactes à interroger (par exemple le filtre « Table.Columns » garantirait que seules des colonnes sont retournées).<br /><br />Il existe plusieurs méthodes semblables, telles que GetReferencingRelationshipInstances, GetChildren et GetParent. Pour plus d'informations, consultez la documentation relative à API.|  
   
 **Identifier un collaborateur de manière unique**  
   
@@ -68,7 +68,7 @@ Lors de la génération, les contributeurs personnalisés sont chargés à parti
   
 ```  
   
-Dans ce cas le premier paramètre de l'attribut doit être un identificateur unique qui sera utilisé pour identifier un contributeur dans des fichiers de projet. Il est recommandé d'associer l'espace de noms de la bibliothèque (dans cette procédure pas à pas, « ExampleContributors ») au nom de la classe (dans cette procédure pas à pas, « ModelStatistics ») pour générer l'identificateur. Vous pouvez voir comment cet espace de noms est utilisé pour spécifier que votre contributeur doit être exécuté ultérieurement dans la chronologie.  
+Dans ce cas le premier paramètre de l’attribut doit être un identificateur unique qui sera utilisé pour identifier un contributeur dans des fichiers de projet. Il est recommandé d’associer l’espace de noms de la bibliothèque (ici, « ExampleContributors ») au nom de la classe (ici, « ModelStatistics ») pour générer l’identificateur. Vous pouvez voir comment cet espace de noms est utilisé pour spécifier que votre contributeur doit être exécuté ultérieurement dans la chronologie.  
   
 ## <a name="CreateBuildContributor"></a>Créer un contributeur de génération  
 Pour créer un contributeur de génération, vous devez effectuer les tâches suivantes :  
@@ -87,7 +87,7 @@ Pour créer un contributeur de génération, vous devez effectuer les tâches su
   
 1.  Créez un projet Bibliothèque de classes Visual Basic ou Visual C# nommé MyBuildContributor.  
   
-2.  Renommez le fichier « Class1.cs » en « ModelStatistics.cs ».  
+2.  Renommez le fichier « Class1.cs » en « ModelStatistics.cs ».  
   
 3.  Dans l’Explorateur de solutions, cliquez avec le bouton droit sur le nœud du projet, puis cliquez sur **Ajouter une référence**.  
   
@@ -480,7 +480,7 @@ Vous pouvez le faire de deux façons :
   
     ```  
     /// <PropertyGroup>  
-    ///     <ContributorArguments Condition="'$(Configuration)' == 'Debug'”>  
+    ///     <ContributorArguments Condition="'$(Configuration)' == 'Debug'">  
     ///         $(ContributorArguments);ModelStatistics.GenerateModelStatistics=true;ModelStatistics.SortModelStatisticsBy="name";  
     ///     </ContributorArguments>  
     /// <PropertyGroup>  
@@ -493,9 +493,9 @@ Vous pouvez le faire de deux façons :
   
     1.  Accédez à %Program Files%\MSBuild\\.  
   
-    2.  Créez un nouveau dossier « MyContributors » où vos fichiers de cibles seront stockés.  
+    2.  Créez un dossier « MyContributors » où vos fichiers de cibles seront stockés.  
   
-    3.  Créez un nouveau fichier « MyContributors.targets » dans ce répertoire, ajoutez le texte suivant, puis enregistrez le fichier :  
+    3.  Créez un fichier « MyContributors.targets » dans ce répertoire, ajoutez le texte suivant, puis enregistrez le fichier :  
   
         ```  
         <?xml version="1.0" encoding="utf-8"?>  
@@ -517,13 +517,13 @@ Vous pouvez le faire de deux façons :
 Après avoir suivi une de ces approches, vous pouvez utiliser Msbuild pour transmettre les paramètres des générations par ligne de commande.  
   
 > [!NOTE]  
-> Vous devez toujours mettre à jour la propriété « BuildContributors » pour spécifier votre ID de contributeur. Il s'agit du même ID que celui utilisé dans l'attribut « ExportBuildContributor » dans le fichier source du contributeur. Sans cet ID, le contributeur ne s'exécute pas lors de la génération du projet. La propriété « ContributorArguments » doit être mise à jour uniquement si vous avez des arguments requis pour que votre collaborateur s'exécute.  
+> Vous devez toujours mettre à jour la propriété « BuildContributors » pour spécifier votre ID de contributeur. Il s’agit du même ID que celui utilisé dans l’attribut « ExportBuildContributor » dans le fichier source du contributeur. Sans cet ID, le contributeur ne s'exécute pas lors de la génération du projet. La propriété « ContributorArguments » doit être mise à jour uniquement si des arguments sont nécessaires pour l’exécution du contributeur.  
   
 ### <a name="build-the-sql-project"></a>Générez le projet SQL.  
   
 ##### <a name="to-rebuild-your-database-project-by-using-msbuild-and-generate-statistics"></a>Pour reconstruire un projet de base de données à l'aide de Msbuild et générer des statistiques  
   
-1.  Dans Visual Studio, cliquez avec le bouton droit sur le projet et sélectionnez « Reconstruire ». Cela reconstruit le projet, puis les statistiques du modèle sont générées, et la sortie comprise dans la sortie de la génération et enregistrée dans ModelStatistics.xml. Notez que vous pouvez être amené à sélectionner « Afficher tous les fichiers » dans l'Explorateur de solutions pour visualiser le fichier XML.  
+1.  Dans Visual Studio, cliquez avec le bouton droit sur le projet et sélectionnez « Regénérer ». Cela reconstruit le projet, puis les statistiques du modèle sont générées, et la sortie comprise dans la sortie de la génération et enregistrée dans ModelStatistics.xml. Notez que vous pouvez être amené à sélectionner « Afficher tous les fichiers » dans l’Explorateur de solutions pour visualiser le fichier XML.  
   
 2.  Ouvrez une invite de commandes Visual Studio : dans le menu **Démarrer**, cliquez sur **Tous les programmes**, sur **Microsoft Visual Studio <Visual Studio Version>**, cliquez sur **Outils Visual Studio**, puis sur **Invite de commandes Visual Studio (<Visual Studio Version>)**.  
   

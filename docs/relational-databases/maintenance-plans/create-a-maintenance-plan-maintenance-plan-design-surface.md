@@ -13,12 +13,12 @@ ms.assetid: 2ef803ee-a9f8-454a-ad63-fedcbe6838d1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 570a859d3db7a2d5dbe219199bb251515d9862cf
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: 436dfee205c5e200d469741075ac2e61b1e7d875
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51217947"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514392"
 ---
 # <a name="create-a-maintenance-plan-maintenance-plan-design-surface"></a>Créer un plan de maintenance (aire de conception de plan de maintenance)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -201,7 +201,7 @@ ms.locfileid: "51217947"
   
     3.  Dans la boîte de dialogue **Propriétés de connexion** , dans la zone **Nom de la connexion** , entrez le nom de la connexion que vous créez.  
   
-    4.  Sous **Spécifiez les éléments suivants pour vous connecter aux données de SQL Server**, dans la zone **Sélectionnez un serveur ou entrez un nom de serveur** , entrez le nom du serveur SQL à utiliser ou cliquez sur le bouton de sélection **(…)** et sélectionnez un serveur dans la boîte de dialogue **SQL Server** . Si vous sélectionnez un serveur dans la boîte de dialogue **SQL Server** , cliquez sur **OK**.  
+    4.  Sous **Spécifiez les éléments suivants pour vous connecter aux données de SQL Server**, dans la zone **Sélectionnez ou entrez un nom de serveur**, entrez le nom du serveur SQL Server à utiliser ou cliquez sur les points de suspension **(…)** et sélectionnez un serveur dans la boîte de dialogue **SQL Server**. Si vous sélectionnez un serveur dans la boîte de dialogue **SQL Server** , cliquez sur **OK**.  
   
     5.  Sous **Entrez des informations pour vous connecter au serveur**, sélectionnez **Utiliser la sécurité intégrée de Windows NT** ou **Utiliser un nom d'utilisateur et un mot de passe spécifiques**. Si vous choisissez d'utiliser un nom d'utilisateur et un mot de passe spécifiques, entrez ces informations dans les zones **Nom d'utilisateur** et **Mot de passe** , respectivement.  
   
@@ -217,7 +217,7 @@ ms.locfileid: "51217947"
   
         1.  Si vous sélectionnez **Générer un rapport de fichier texte**, sélectionnez **Créer un nouveau fichier** ou **Ajouter au fichier**.  
   
-        2.  En fonction de la sélection ci-dessus, entrez le nom et le chemin complet du nouveau fichier ou du fichier à ajouter dans les zones **Dossier** ou **Nom de fichier** . Vous pouvez également cliquer sur le bouton de sélection **(...)**, puis sélectionner le chemin d'accès au dossier ou le nom de fichier à partir des boîtes de dialogue **Localiser le dossier  –**_server\_name_ ou **Rechercher les fichiers de la base de données  –**_server\_ name_.  
+        2.  En fonction de la sélection ci-dessus, entrez le nom et le chemin complet du nouveau fichier ou du fichier à ajouter dans les zones **Dossier** ou **Nom de fichier** . Vous pouvez également cliquer sur les points de suspension **(...)**, puis sélectionner le chemin du dossier ou le nom de fichier à partir des boîtes de dialogue **Localiser le dossier -**_nom\_serveur_ ou **Rechercher les fichiers de la base de données -**_nom\_serveur_.  
   
         3.  Si vous sélectionnez **Envoyer le rapport à un destinataire de messagerie**, dans la liste **Opérateur d'agent** , sélectionnez le destinataire du rapport envoyé par messagerie électronique.  
   
@@ -232,7 +232,7 @@ ms.locfileid: "51217947"
   
 12. Pour consulter les résultats dans la visionneuse du fichier journal, dans **l’Explorateur d’objets**, cliquez avec le bouton droit sur le dossier **Plans de maintenance** ou sur le plan de maintenance spécifique et sélectionnez **Afficher l’historique**.  
   
-     Les options suivantes sont disponibles dans la boîte de dialogue **Visionneuse du fichier journal –**_server\_name_.  
+     Les options suivantes sont disponibles dans la boîte de dialogue **Visionneuse du fichier journal -**_nom\_serveur_.  
   
      **Charger le journal**  
      Ouvre une boîte de dialogue dans laquelle vous pouvez spécifier un fichier journal à charger.  

@@ -21,12 +21,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7e96392c4dfd81e8b875227403b315a78419f318
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a25ec8508701f99602392176ef8210588e872b36
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719257"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52517708"
 ---
 # <a name="create-external-file-format-transact-sql"></a>CREATE EXTERNAL FILE FORMAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -190,7 +190,7 @@ Remarques sur ce tableau :
 |SmallDateTime|DATE_FORMAT =  'yyyy-MM-dd HH:mm'|Outre l’année, le mois et le jour, ce format de date inclut de 00 à 23 heures et de 00 à 59 minutes.|  
 |SmallDateTime|DATE_FORMAT =  'yyyy-MM-dd hh:mmtt'|Outre l’année, le mois et le jour, ce format de date inclut de 00 à 11 heures, de 00 à 59 minutes, pas de secondes, et la mention AM, am, PM ou pm.|  
 |Date|DATE_FORMAT =  'yyyy-MM-dd'|L’année, le mois et le jour. Aucun élément d’heure n’est inclus.|  
-|Date|DATE_FORMAT = 'yyyy-MMM-dd'|L’année, le mois et le jour. Lorsque le mois est spécifié avec 3 M, la valeur d’entrée est l’une des chaînes suivantes : Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov ou Dec.|  
+|Date|DATE_FORMAT = 'yyyy-MMM-dd'|L’année, le mois et le jour. Quand le mois est spécifié avec 3 M, la valeur d’entrée est une des chaînes suivantes : Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov ou Dec.|  
 |datetime2|DATE_FORMAT = 'yyyy-MM-dd HH:mm:ss.fffffff'|Outre l’année, le mois et le jour, ce format de date inclut de 00 à 23 heures, de 00 à 59 minutes, de 00 à 59 secondes, ainsi que 7 chiffres pour les millisecondes.|  
 |datetime2|DATE_FORMAT = 'yyyy-MM-dd hh:mm:ss.ffffffftt'|Outre l’année, le mois et le jour, ce format de date inclut de 00 à 11 heures, de 00 à 59 minutes, de 00 à 59 secondes, 7 chiffres pour les millisecondes, ainsi que la mention AM, am, PM ou pm.|  
 |DateTimeOffset|DATE_FORMAT = 'yyyy-MM-dd HH:mm:ss.fffffff zzz'|Outre l’année, le mois et le jour, ce format de date inclut de 00 à 23 heures, de 00 à 59 minutes, de 00 à 59 secondes, 7 chiffres pour les millisecondes, ainsi que le décalage des fuseaux horaires que vous placez dans le fichier ainsi : `{+&#124;-}HH:ss`. Par exemple, étant donné que l’heure de Los Angeles, sans l’heure d’été, est en retard de 8 heures par rapport à l’heure UTC, la valeur -08:00, dans le fichier d’entrée va spécifier le fuseau horaire de Los Angeles.|  
@@ -216,7 +216,7 @@ Remarques sur ce tableau :
   
  Détails :  
   
--   Pour séparer le mois, du jour et de l’année, vous pouvez utiliser les caractères « – », « / » ou « . ». Par souci de simplicité, le tableau utilise uniquement le séparateur « – ».
+-   Pour séparer les valeurs du mois, du jour et de l’année, vous pouvez utiliser les caractères « - », « / » ou « . ». Par souci de simplicité, le tableau utilise uniquement le séparateur « - ».
   
 -   Pour spécifier le mois sous forme de texte, utilisez les trois caractères (ou plus). Les mois constitués d’un ou deux caractères sont interprétés comme des nombres.
   

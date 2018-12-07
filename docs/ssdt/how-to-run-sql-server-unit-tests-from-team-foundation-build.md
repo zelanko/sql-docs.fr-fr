@@ -11,12 +11,12 @@ ms.assetid: 24f5b85d-d6f9-415f-b09f-933b78dc0b67
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fe4b6dd462a8f8fec6797c26f7ae0461c4b0a4ce
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 1857f503abe300127d92c26ba5591407b863ebc0
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51669858"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527921"
 ---
 # <a name="how-to-run-sql-server-unit-tests-from-team-foundation-build"></a>Procédure : exécuter des tests unitaires SQL Server en utilisant Team Foundation Build
 Utilisez Team Foundation Build pour exécuter vos tests unitaires SQL Server dans un test de vérification de la génération. Configurez les tests unitaires pour déployer la base de données, générer des données de test, puis exécuter les tests sélectionnés. Si vous n'êtes pas familiarisé avec Team Foundation Build, vous devez vérifier les informations suivantes avant de suivre les procédures de cette rubrique :  
@@ -93,7 +93,7 @@ En règle générale, lorsque vous créez une définition de build pour effectue
   
 2.  Sélectionnez un test.  
   
-3.  Dans le volet des propriétés, cliquez sur **Catégories de test**, puis cliquez sur les points de suspension (…) dans la colonne la plus à droite.  
+3.  Dans le volet des propriétés, cliquez sur **Catégories de test**, puis cliquez sur le bouton de sélection (…) dans la colonne la plus à droite.  
   
 4.  Dans la fenêtre **Catégorie de test**, dans la zone **Ajouter une catégorie**, tapez un nom pour la nouvelle catégorie de test.  
   

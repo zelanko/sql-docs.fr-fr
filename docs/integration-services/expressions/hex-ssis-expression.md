@@ -14,12 +14,12 @@ ms.assetid: f5d471ee-aeef-421c-b6e1-55b9676c3842
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4a1f1dd3e474845716b6fe9e116dea41b0ce7465
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7b17dbcb21362a60ed9076134256ec99f3c264a8
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47791227"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52517992"
 ---
 # <a name="hex-ssis-expression"></a>HEX (expression SSIS)
   Renvoie une chaîne représentant la valeur hexadécimale d'un entier.  
@@ -41,7 +41,7 @@ HEX(integer_expression)
 ## <a name="remarks"></a>Notes   
  HEX retourne null si *integer_expression* est null.  
   
- L’argument *integer_expression* doit correspondre à un nombre entier. Pour plus d'informations, consultez [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
+ L’argument *integer_expression* doit correspondre à un nombre entier. Pour plus d’informations, consultez [Types de données Integration Services](../../integration-services/data-flow/integration-services-data-types.md).  
   
  Le résultat obtenu ne comprend pas de qualificateurs tels que le préfixe « 0x ». Pour inclure un préfixe, utilisez l'opérateur « + » (concaténer). Pour plus d’informations, consultez [+ &#40;Concaténer&#41; &#40;expression SSIS&#41;](../../integration-services/expressions/concatenate-ssis-expression.md).  
   

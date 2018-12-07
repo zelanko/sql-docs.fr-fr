@@ -16,12 +16,12 @@ ms.assetid: 4bfe5734-3003-4165-afd4-b1131ea26e2b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: e397d797568d14cd184d8246425db13d9fb2a0b6
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 2d80647230c13b31ca9e5ae540798609fc93f527
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697677"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527400"
 ---
 # <a name="restore-statements---arguments-transact-sql"></a>Instructions RESTORE – Arguments (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -389,7 +389,7 @@ FILE **=**{ *backup_set_file_number* | **@**_backup\_set\_file\_number_ }
  CONTINUE_AFTER_ERROR  
  Spécifie que l'opération de restauration doit continuer après la détection d'une erreur.  
   
- Si une sauvegarde contient des pages endommagées, il est préférable de répéter l'opération de restauration en utilisant une autre sauvegarde qui ne contient pas ces erreurs (par exemple, une sauvegarde effectuée avant que les pages aient été endommagées). Toutefois, en dernier ressort, vous pouvez restaurer une sauvegarde endommagée à l'aide de l'option CONTINUE_AFTER_ERROR de l'instruction RESTORE et essayer de sauver les données.  
+ Si une sauvegarde contient des pages endommagées, il est préférable de répéter l’opération de restauration en utilisant une autre sauvegarde qui ne contient pas ces erreurs (par exemple une sauvegarde effectuée avant que les pages aient été endommagées). Toutefois, en dernier ressort, vous pouvez restaurer une sauvegarde endommagée à l'aide de l'option CONTINUE_AFTER_ERROR de l'instruction RESTORE et essayer de sauver les données.  
   
 ##### <a name="filestream-options"></a>Options FILESTREAM  
  FILESTREAM ( DIRECTORY_NAME =*directory_name* )  
@@ -582,20 +582,20 @@ Utilisez KEEP_REPLICATION quand vous couplez la réplication à la copie des jou
 > [!NOTE]  
 >  L'option PARTIAL est uniquement prise en charge par RESTORE DATABASE.  
   
- Le tableau suivant répertorie les options WITH utilisées par une ou plusieurs instructions et indique quelles instructions prennent en charge quelle option. Une coche (√) indique qu'une option est prise en charge ; un tiret (—) signale qu'une option n'est pas prise en charge.  
+ Le tableau suivant répertorie les options WITH utilisées par une ou plusieurs instructions et indique quelles instructions prennent en charge quelle option. Une coche (√) indique qu’une option est prise en charge ; un tiret (-) indique qu’une option n’est pas prise en charge.  
   
 |Option WITH|RESTORE|RESTORE FILELISTONLY|RESTORE HEADERONLY|RESTORE LABELONLY|RESTORE REWINDONLY|RESTORE VERIFYONLY|  
 |-----------------|-------------|--------------------------|------------------------|-----------------------|------------------------|------------------------|  
-|{ CHECKSUM<br /><br /> &#124; NO_CHECKSUM }|√|√|√|√|—|√|  
-|{ CONTINUE_AFTER_ERROR<br /><br /> &#124; STOP_ON_ERROR }|√|√|√|√|—|√|  
-|FILE<sup>1</sup>|√|√|√|—|—|√|  
-|LOADHISTORY|—|—|—|—|—|√|  
-|MEDIANAME|√|√|√|√|—|√|  
-|MEDIAPASSWORD|√|√|√|√|—|√|  
-|MOVE|√|—|—|—|—|√|  
-|PASSWORD|√|√|√|—|—|√|  
-|{ REWIND &#124; NOREWIND }|√|REWIND uniquement|REWIND uniquement|REWIND uniquement|—|√|  
-|STATS|√|—|—|—|—|√|  
+|{ CHECKSUM<br /><br /> &#124; NO_CHECKSUM }|√|√|√|√|-|√|  
+|{ CONTINUE_AFTER_ERROR<br /><br /> &#124; STOP_ON_ERROR }|√|√|√|√|-|√|  
+|FILE<sup>1</sup>|√|√|√|-|-|√|  
+|LOADHISTORY|-|-|-|-|-|√|  
+|MEDIANAME|√|√|√|√|-|√|  
+|MEDIAPASSWORD|√|√|√|√|-|√|  
+|MOVE|√|-|-|-|-|√|  
+|PASSWORD|√|√|√|-|-|√|  
+|{ REWIND &#124; NOREWIND }|√|REWIND uniquement|REWIND uniquement|REWIND uniquement|-|√|  
+|STATS|√|-|-|-|-|√|  
 |{ UNLOAD &#124; NOUNLOAD }|√|√|√|√|√|√|  
   
  <sup>1</sup> FILE **=**_backup\_set\_file\_number_, qui est différent de {FILE | FILEGROUP}.  

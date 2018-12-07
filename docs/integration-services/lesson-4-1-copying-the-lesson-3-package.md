@@ -11,12 +11,12 @@ ms.assetid: 0d053786-5203-43f3-a613-27a8dd2bc44a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4ce3f4e559e9ed708154b8c5b5710540c701b44e
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 573a0eeb49640b44af5179f0cb44ec8dfb6753f9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638496"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544724"
 ---
 # <a name="lesson-4-1---copying-the-lesson-3-package"></a>Leçon 4-1 : Copie du package de la leçon 3
 Dans cette tâche, vous allez créer une copie du package Lesson 3.dtsx que vous avez créé à la leçon 3. Si vous n'avez pas terminé la leçon 3, vous pouvez également ajouter au projet le package final de la leçon 3 inclus avec le didacticiel, puis le copier pour l'utiliser. Vous allez utiliser cette nouvelle copie tout au long de la leçon 4.  
@@ -49,7 +49,7 @@ Dans cette tâche, vous allez créer une copie du package Lesson 3.dtsx que vous
   
 3.  Dans la boîte de dialogue **Ajouter une copie des packages existants** , dans **Emplacement du package**, sélectionnez **Système de fichiers**.  
   
-4.  Cliquez sur le bouton de navigation **(...)** , accédez à Lesson 3.dtsx sur votre ordinateur, puis cliquez sur **Ouvrir**.  
+4.  Cliquez sur le bouton de navigation **(...)**, accédez à Lesson 3.dtsx sur votre ordinateur, puis cliquez sur **Ouvrir**.  
   
     Pour télécharger tous les packages de leçons de ce didacticiel, procédez comme suit.  
   

@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
-ms.openlocfilehash: 608021d678f57bda86b1fc77950e029efceea7ad
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: ef9d3882a00792606daa357508677b1af6fbe570
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663608"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502780"
 ---
 # <a name="store-json-documents-in-sql-server-or-sql-database"></a>Stocker des documents JSON dans SQL Server ou SQL Database
 SQL Server et Azure SQL Database ont des fonctions JSON natives qui vous permettent d’analyser des documents JSON à l’aide du langage SQL standard. Vous pouvez désormais stocker des documents JSON dans SQL Server ou SQL Database et interroger les données JSON comme dans une base de données NoSQL. Cet article explique comment stocker des documents JSON dans SQL Server ou SQL Database.
@@ -48,17 +48,17 @@ Chaque fois qu’un utilisateur insère ou met à jour un document dans la table
 Quand vous stockez vos documents JSON dans la table, vous pouvez utiliser le langage Transact-SQL standard pour les interroger. Exemple :
 
 ```sql
-SELECT TOP 100 JSON_VALUE(log, ‘$.severity’), AVG( CAST( JSON_VALUE(log,’$.duration’) as float))
+SELECT TOP 100 JSON_VALUE(log, '$.severity'), AVG( CAST( JSON_VALUE(log,'$.duration') as float))
  FROM WebSite.Logs
- WHERE CAST( JSON_VALUE(log,’$.date’) as datetime) > @datetime
- GROUP BY JSON_VALUE(log, ‘$.severity’)
- HAVING AVG( CAST( JSON_VALUE(log,’$.duration’) as float) ) > 100
- ORDER BY AVG( CAST( JSON_VALUE(log,’$.duration’) as float) ) DESC
+ WHERE CAST( JSON_VALUE(log,'$.date') as datetime) > @datetime
+ GROUP BY JSON_VALUE(log, '$.severity')
+ HAVING AVG( CAST( JSON_VALUE(log,'$.duration') as float) ) > 100
+ ORDER BY AVG( CAST( JSON_VALUE(log,'$.duration') as float) ) DESC
 ```
 
 La possibilité d’utiliser *n’importe quelle* clause de requête et fonction T-SQL pour interroger des documents JSON est un réel avantage. SQL Server et SQL Database n’introduisent aucune contrainte dans les requêtes que vous pouvez utiliser pour analyser des documents JSON. Vous pouvez extraire des valeurs d’un document JSON avec la fonction `JSON_VALUE` et les utiliser dans la requête comme toute autre valeur.
 
-Cette possibilité d’utiliser une syntaxe de requête T-SQL étendue est la principale différence entre d’une part SQL Server et SQL Database, et d’autre part les bases de données NoSQL classiques : dans Transact-SQL, vous avez probablement toutes les fonctions dont vous avez besoin pour traiter les données JSON.
+Cette possibilité d’utiliser une syntaxe de requête T-SQL étendue est la principale différence entre d’une part SQL Server et SQL Database, et d’autre part les bases de données NoSQL classiques : dans Transact-SQL, vous avez probablement toutes les fonctions dont vous avez besoin pour traiter les données JSON.
 
 ## <a name="indexes"></a>Index
 
@@ -107,7 +107,7 @@ L’exemple précédent utilise un objet de séquence pour attribuer des valeurs
 
 ## <a name="frequently-changing-documents--memory-optimized-tables"></a>Changement fréquent de documents et de tables à mémoire optimisée
 
-Si vous prévoyez un grand nombre d’opérations de suppression, d’insertion et de mise à jour dans vos collections, vous pouvez stocker vos documents JSON dans des tables optimisées en mémoire. Les collections JSON à mémoire optimisée conservant toujours les données en mémoire, il n’existe aucune surcharge d’E/S pour le stockage. De plus, les collections JSON à mémoire optimisée sont complètement dépourvues de verrou ; autrement dit, les actions sur les documents ne bloquent aucune autre opération.
+Si vous prévoyez un grand nombre d’opérations de suppression, d’insertion et de mise à jour dans vos collections, vous pouvez stocker vos documents JSON dans des tables optimisées en mémoire. Les collections JSON à mémoire optimisée conservant toujours les données en mémoire, il n’existe aucune surcharge d’E/S pour le stockage. De plus, les collections JSON à mémoire optimisée sont complètement dépourvues de verrou ; autrement dit, les actions sur les documents ne bloquent aucune autre opération.
 
 La seule chose à faire pour convertir une collection classique en collection optimisée en mémoire est de spécifier l’option **with (memory_optimized=on)** après la définition de table, comme indiqué dans l’exemple suivant. Vous disposez alors d’une version à mémoire optimisée de la collection JSON.
 

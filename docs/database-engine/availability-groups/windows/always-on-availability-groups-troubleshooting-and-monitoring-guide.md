@@ -10,12 +10,12 @@ ms.assetid: 8d6d9954-ff6b-4e58-882e-eff0174f0d07
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 0e950ae6cbbf71154bfaf402ae9e3246bd3d93fe
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 6af848993830329f9f5bbc6b2dc42be416a36fcc
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606929"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398862"
 ---
 # <a name="always-on-availability-groups-troubleshooting-and-monitoring-guide"></a>Guide de monitoring et de résolution des problèmes des groupes de disponibilité Always On
  Ce guide explique comment monitorer les groupes de disponibilité Always On et comment résoudre certains problèmes courants liés à ces groupes. Il comprend du contenu original ainsi que des liens vers d’autres informations utiles. Bien que ce guide ne traite pas de tous les problèmes susceptibles de se produire dans le vaste domaine des groupes de disponibilité, il peut vous donner des renseignements utiles qui vous aideront dans l’analyse des causes racines et la résolution des problèmes. 
@@ -55,7 +55,7 @@ ms.locfileid: "51606929"
 |[Mémoires tampons en anneau Always On](always-on-ring-buffers.md)|Enregistrent les alertes émises dans le système SQL Server pour établir des diagnostics internes et déboguer les problèmes liés aux groupes de disponibilité.|  
   
 ##  <a name="BKMK_MONITOR"></a> Monitoring des groupes de disponibilité  
- Dans l’idéal, un problème lié à un groupe de disponibilité doit être résolu avant qu’il ne nécessite un basculement (automatique ou manuel). Vous devez pour cela monitorer les métriques de performances du groupe de disponibilité et envoyer des alertes quand le niveau de performance des réplicas de disponibilité se situe en dehors des limites de votre SLA (contrat de niveau de service). Par exemple, si un réplica secondaire synchrone présente des problèmes de performances qui entraînent l’augmentation du temps de basculement, n’attendez pas qu’un basculement automatique se produise pour découvrir que le temps de basculement dépasse votre RTO (objectif de temps de récupération).  
+ Dans l’idéal, un problème lié à un groupe de disponibilité doit être résolu avant qu’il ne nécessite un basculement (automatique ou manuel). Vous devez pour cela superviser les métriques de performances du groupe de disponibilité et envoyer des alertes quand le niveau de performance des réplicas de disponibilité se situe en dehors des limites de votre contrat de niveau de service (SLA). Par exemple, si un réplica secondaire synchrone présente des problèmes de performances qui entraînent l’augmentation du temps de basculement, n’attendez pas qu’un basculement automatique se produise pour découvrir que le temps de basculement dépasse votre RTO (objectif de temps de récupération).  
   
  Les groupes de disponibilité étant une solution de récupération d’urgence haute disponibilité, les métriques de performance les plus importantes à monitorer sont le temps de basculement estimé, qui affecte votre RTO, et le risque de perte de données en cas d’urgence, qui affecte votre RPO (objectif de point de récupération). Vous pouvez à tout moment collecter ces métriques à partir des données exposées par SQL Server et être tenu informé des problèmes liés aux fonctionnalités HADR (haute disponibilité et récupération d’urgence) de votre système avant même l’apparition d’événements d’échec réels. Il est donc important que vous vous familiarisiez avec le processus de synchronisation des données des groupes de disponibilité et que vous collectiez les métriques appropriées.  
   

@@ -29,12 +29,12 @@ ms.assetid: e43f17bd-9d13-4a8f-9f29-cce44cac1025
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6dd2866ef242ad51a90de24051b5f39c3f68a8f7
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 48b6e5a48822401f543a494b8fd59638c4ea9609
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638899"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540885"
 ---
 # <a name="fuzzy-grouping-transformation"></a>Transformation de regroupement approximatif
   La transformation de regroupement probable effectue des tâches de nettoyage des données en identifiant les lignes de données susceptibles d'être des doublons et en sélectionnant une ligne canonique de données à utiliser pour standardiser les données.  
@@ -44,7 +44,7 @@ ms.locfileid: "51638899"
   
  La transformation de regroupement approximatif nécessite une connexion à une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour créer les tables temporaires [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nécessaires à l'algorithme de transformation. La connexion doit correspondre à un utilisateur disposant de l'autorisation de créer des tables dans la base de données.  
   
- Pour configurer la transformation, vous devez sélectionner les colonnes d'entrée à utiliser lors de l'identification des doublons, et vous devez sélectionner le type de correspondance (approximative ou exacte) pour chaque colonne. Une correspondance exacte garantit que seules les lignes possédant des valeurs identiques dans cette colonne seront regroupées. La correspondance exacte peut être appliquée aux colonnes de n'importe quel type de données [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , à l'exception des types DT_TEXT, DT_NTEXT et DT_IMAGE. Une correspondance approximative regroupe des lignes ayant à peu près les mêmes valeurs. La méthode utilisée pour la correspondance approximative des données est basée sur un score de similarité spécifié par l'utilisateur. Seules les colonnes avec les types de données DT_WSTR et DT_STR peuvent être utilisées dans la correspondance approximative. Pour plus d’informations, consultez [Types de données Integration Services](../../../integration-services/data-flow/integration-services-data-types.md).  
+ Pour configurer la transformation, vous devez sélectionner les colonnes d’entrée à utiliser pendant l’identification des doublons, et vous devez sélectionner le type de correspondance (approximative ou exacte) pour chaque colonne. Une correspondance exacte garantit que seules les lignes possédant des valeurs identiques dans cette colonne seront regroupées. La correspondance exacte peut être appliquée aux colonnes de n'importe quel type de données [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , à l'exception des types DT_TEXT, DT_NTEXT et DT_IMAGE. Une correspondance approximative regroupe des lignes ayant à peu près les mêmes valeurs. La méthode utilisée pour la correspondance approximative des données est basée sur un score de similarité spécifié par l'utilisateur. Seules les colonnes avec les types de données DT_WSTR et DT_STR peuvent être utilisées dans la correspondance approximative. Pour plus d’informations, consultez [Types de données Integration Services](../../../integration-services/data-flow/integration-services-data-types.md).  
   
  La sortie de transformation comprend toutes les colonnes d'entrée, une ou plusieurs colonnes avec des données standardisées et une colonne contenant le score de similarité. Le score est représenté par une valeur décimale entre 0 et 1. La ligne canonique obtient le score de 1. Les scores des autres lignes dans le regroupement probable indiquent leur degré de correspondance avec cette ligne canonique. Plus le score se rapproche de 1, plus la ligne correspond à la ligne canonique. Si le regroupement probable comprend des lignes qui sont des doublons exacts de la ligne canonique, ces lignes ont également pour score la valeur 1. La transformation ne supprime pas les lignes dupliquées, mais les regroupe en créant une clé qui associe la ligne canonique à des lignes similaires.  
   

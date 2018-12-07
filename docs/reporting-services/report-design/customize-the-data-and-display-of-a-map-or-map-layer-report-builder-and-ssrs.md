@@ -21,12 +21,12 @@ f1_keywords:
 ms.assetid: fdd9b994-d138-4990-a291-279b0249eb72
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a17aac87516dcc3903c6802435762f962258efe9
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 8afb64d468c895e0cfa52e8c7380ab54501180ac
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50028788"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538736"
 ---
 # <a name="customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs"></a>Personnaliser des données et l'affichage d'une carte ou d'une couche (Générateur de rapports et SSRS)
   Après avoir ajouté une carte ou une couche à un rapport paginé [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] en utilisant un Assistant, vous pouvez modifier l’apparence de la carte dans le rapport. Vous pouvez apporter des améliorations en considérant les points suivants :  
@@ -117,7 +117,7 @@ ms.locfileid: "50028788"
  Pour plus d’informations sur les couches, consultez [Ajouter, modifier ou supprimer une carte ou une couche &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md).  
   
 ##  <a name="DataGrouping"></a> Modifier le groupement de données de la couche  
- Vous pouvez personnaliser la façon d'agréger des données spatiales pour vos propres formes. Pour définir les propriétés de groupe pour une couche, sélectionnez la couche dans le volet Carte et, dans le volet Propriétés de la couche, cliquez sur **Groupe**, puis sur les points de suspension (…) pour ouvrir les propriétés du groupe. Dans cette boîte de dialogue, vous pouvez spécifier des expressions de groupe, créer des variables de groupe et filtrer les données utilisées pour le regroupement.  
+ Vous pouvez personnaliser la façon d'agréger des données spatiales pour vos propres formes. Pour définir les propriétés de groupe pour une couche, sélectionnez la couche dans le volet Carte puis, dans le volet Propriétés de la couche, cliquez sur **Groupe** et sur les points de suspension (...) pour ouvrir les propriétés du groupe. Dans cette boîte de dialogue, vous pouvez spécifier des expressions de groupe, créer des variables de groupe et filtrer les données utilisées pour le regroupement.  
   
  L'expression de groupe spécifie comment les données analytiques en relation avec les données spatiales sont regroupées pour chaque élément cartographique de la couche. Par défaut, l'expression de groupe est le jeu de champs de correspondance spécifié pour la relation entre les données spatiales et les données analytiques. Par exemple, pour une carte à bulles affichant les villes et la taille de la population d'un pays ou d'une région, les champs de correspondance incluent le nom de ville [Ville] et le nom de région [Région] parce que plusieurs villes peuvent avoir le même nom. L'expression de groupe correspondante inclut deux champs : [Ville] et [Région].  
   

@@ -17,12 +17,12 @@ ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 177d49376d7ed69c8a6ed14fa68326b1d54003fc
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: b02b430acbc2fc56942e1c7287ea1c7e4527ccc4
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51603569"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52408886"
 ---
 # <a name="listeners-client-connectivity-application-failover"></a>Écouteurs, connectivité client et basculement d'application
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -139,9 +139,9 @@ Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI
 -   [Configurer le routage en lecture seule pour un groupe de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md)  
   
 ###  <a name="ReadOnlyAppIntent"></a> Intention de l'application en lecture seule et routage en lecture seule  
- La propriété de chaîne de connexion de l'intention d'application exprime le souhait de l'application cliente d'être redirigée vers une version en lecture-écriture ou en lecture seule d'une base de données de groupe de disponibilité. Pour utiliser le routage en lecture seule, un client doit utiliser une intention d'application en lecture seule dans la chaîne de connexion pour la connexion à l'écouteur de groupe de disponibilité. Sans intention d'application en lecture seule, les connexions à l'écouteur de groupe de disponibilité sont dirigées vers la base de données sur le réplica principal.  
+ La propriété de chaîne de connexion de l’intention d’application exprime le souhait de l’application cliente d’être redirigée vers une version en lecture-écriture ou en lecture seule d’une base de données de groupe de disponibilité. Pour utiliser le routage en lecture seule, un client doit utiliser une intention d'application en lecture seule dans la chaîne de connexion pour la connexion à l'écouteur de groupe de disponibilité. Sans intention d'application en lecture seule, les connexions à l'écouteur de groupe de disponibilité sont dirigées vers la base de données sur le réplica principal.  
   
- L'attribut d'intention d'application est stocké dans la session du client lors de la connexion ; l'instance de SQL Server traite ensuite cette intention et détermine ce qu'il faut faire, selon la configuration du groupe de disponibilité et l'état en lecture-écriture actuel de la base de données cible dans le réplica secondaire.  
+ L’attribut d’intention d’application est stocké dans la session du client lors de la connexion. L’instance de SQL Server traite ensuite cette intention et détermine ce qu’il faut faire, selon la configuration du groupe de disponibilité et l’état en lecture-écriture actuel de la base de données cible dans le réplica secondaire.  
   
  Voici un exemple de chaîne de connexion pour le fournisseur ADO.NET (System.Data.SqlClient) qui indique l'intention d'application en lecture seule :  
   
@@ -180,10 +180,10 @@ Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;Appli
 ##  <a name="CCBehaviorOnFailover"></a> Comportement des connexions clientes lors du basculement  
  Lorsqu'un basculement de groupe de disponibilité se produit, les connexions persistantes existantes au groupe de disponibilité prennent fin et le client doit établir une nouvelle connexion afin de continuer à utiliser la même base de données primaire ou base de données secondaire en lecture seule.  Lorsqu'un basculement se produit côté serveur, la connectivité au groupe de disponibilité peut échouer, forçant l'application cliente à réessayer une nouvelle connexion jusqu'à ce que le serveur principal soit entièrement remis en ligne.  
   
- Si le groupe de disponibilité revient en ligne pendant une tentative de connexion d'une application cliente, mais avant l'expiration du délai d'attente de connexion, le pilote client peut se connecter avec succès au cours de l'une de ses tentatives de reprise interne et aucune erreur ne sera visible dans l'application dans ce cas.  
+ Si le groupe de disponibilité revient en ligne pendant une tentative de connexion d’une application cliente, mais avant l’expiration du délai d’attente de connexion, le pilote client peut se connecter au cours de l’une de ses tentatives de reprise interne, auquel cas, aucune erreur n’est visible dans l’application.  
   
 ##  <a name="SupportAgMultiSubnetFailover"></a> Prise en charge de basculements de sous-réseaux multiples de groupe de disponibilité  
- Si vous utilisez des bibliothèques clientes qui prennent en charge l'option de connexion MultiSubnetFailover dans la chaîne de connexion, vous pouvez optimiser le basculement du groupe de disponibilité vers un sous-réseau différent en définissant MultiSubnetFailover sur « True » ou « Yes », selon la syntaxe du fournisseur que vous utilisez.  
+ Si vous utilisez des bibliothèques clientes qui prennent en charge l’option de connexion MultiSubnetFailover dans la chaîne de connexion, vous pouvez optimiser le basculement du groupe de disponibilité vers un sous-réseau différent en définissant MultiSubnetFailover sur « True » ou « Yes », selon la syntaxe du fournisseur que vous utilisez.  
   
 > [!NOTE]  
 >  Nous vous recommandons de définir ce paramètre à la fois pour les connexions à un seul ou à plusieurs sous-réseaux aux écouteurs de groupes de disponibilité et aux noms d'instance de cluster de basculement SQL Server.  L'activation de cette option ajoute des optimisations supplémentaires, même pour les scénarios de sous-réseau unique.  

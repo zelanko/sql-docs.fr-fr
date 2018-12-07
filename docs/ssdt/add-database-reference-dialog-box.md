@@ -13,12 +13,12 @@ ms.assetid: 838caa2a-4117-48bc-8c6c-9e7ceab38893
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d6ebccd038bd2dc96f540e17c9ad67a135ec6ceb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 821af23f45cbf190f094931643b9be6ddbed9a35
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47651650"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400603"
 ---
 # <a name="add-database-reference-dialog-box"></a>Boîte de dialogue Ajouter une référence de base de données (boîte de dialogue )
 Cette rubrique décrit les procédures que vous pouvez effectuer dans la boîte de dialogue **Ajouter une référence de base de données**.  
@@ -42,7 +42,7 @@ Sélectionnez **Base de données système** si vous souhaitez sélectionner l'un
   
 Sélectionnez **Application de la couche Données (fichier .dacpac)** si vous référencez une base de données dans un fichier DACPAC, puis accédez au répertoire qui contient le fichier DACPAC.  
   
-## <a name="selecting-the-databases-relative-location"></a>Sélection de l'emplacement relatif de la base de données  
+## <a name="selecting-the-databases-relative-location"></a>Sélection de l’emplacement relatif de la base de données  
 Après avoir sélectionné la base de données que vous souhaitez référencer, vous pouvez spécifier l'emplacement attendu de l'objet de base de données, par rapport au projet de référencement.  
   
 Les références peuvent être résolues pour des objets dans l'un des emplacements suivants :  

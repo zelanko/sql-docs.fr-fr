@@ -11,12 +11,12 @@ ms.assetid: 543e7ce7-8639-4281-8a91-85314755e5de
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c51fde6d4fa7587b4fd305d1744934d42e76bad9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ca62b3b637f5983f7448a99fd9073f60a509a809
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732827"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526062"
 ---
 # <a name="how-to-outline-and-add-snippets-to-transact-sql-script"></a>Procédure : structurer et ajouter des extraits de code à un script Transact-SQL
 SQL Server Data Tools comprend une bibliothèque de codes composée d’extraits de code prêts à être insérés dans une application. Chaque extrait de code effectue une tâche de script complète, comme créer une fonction, une table, un déclencheur, un index, un affichage, un type de données défini par l’utilisateur, etc. Vous pouvez insérer un extrait de code dans votre code source en quelques clics. Ces extraits de code augmentent votre productivité en réduisant le temps passé à la saisie.  
@@ -42,7 +42,7 @@ Par défaut, tout le texte est affiché dans l’Éditeur Transact\-SQL, mais vo
   
 ### <a name="to-outline-code"></a>Pour passer du code en mode Plan  
   
-1.  Remarquez la présence du signe **–** à côté de l’instruction CREATE TABLE. Cliquez sur le signe **-** situé à côté d’une section du script pour la masquer.  
+1.  Remarquez la présence du signe **-** à côté de l’instruction CREATE TABLE. Cliquez sur le signe **-** situé à côté d’une section du script pour la masquer.  
   
 2.  Cliquez avec le bouton droit sur l’Éditeur Transact\-SQL et sélectionnez **Mode Plan**, puis **Arrêter le mode Plan** pour supprimer les informations du mode Plan sans affecter le code sous-jacent dans l’éditeur.  
   

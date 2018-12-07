@@ -11,12 +11,12 @@ ms.assetid: e26d7884-e772-46fa-bfdc-38567fe976a1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1563485139b438580afc14da1262eff61b74be4b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1fe0017d3797f260aede9e712cbf1cecfe6a45a6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47642147"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52420570"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2017"></a>Nouveautés d’Integration Services dans SQL Server 2017
 Cette rubrique décrit les fonctionnalités qui ont été ajoutées ou mises à jour dans [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].
@@ -72,7 +72,7 @@ Vous pouvez maintenant développer des projets et des packages SSIS qui ciblent 
 
 -   Vous pouvez maintenant utiliser le paramètre **Use32BitRuntime** quand vous déclenchez l’exécution dans Scale Out.
 -   Les performances de journalisation dans SSISDB pour les exécutions de package dans Scale Out ont été améliorées. Les journaux Message d’événement et Contexte de message sont désormais écrits dans SSISDB en mode batch plutôt qu’un par un. Voici quelques remarques supplémentaires sur cette amélioration :        
-    - Certains rapports dans la version actuelle de SQL Server Management Studio (SSMS) n’affichent actuellement pas ces journaux pour les exécutions dans Scale Out. Nous estimons qu’ils seront pris en charge dans la prochaine version de SSMS. Les rapports affectés incluent le rapport *Toutes les connexions*, le rapport *Contexte de l’erreur* et la section *Informations de connexion* dans le tableau de bord Integration Services.
+    - Certains rapports dans la version actuelle de SQL Server Management Studio (SSMS) n’affichent pas ces journaux pour les exécutions dans Scale Out. Nous estimons qu’ils seront pris en charge dans la prochaine version de SSMS. Les rapports affectés incluent le rapport *Toutes les connexions*, le rapport *Contexte de l’erreur* et la section *Informations de connexion* dans le tableau de bord Integration Services.
     - Une nouvelle colonne **event_message_guid** a été ajoutée. Utilisez cette colonne pour joindre les vues [catalog].[event_message_context] et [catalog].[event_messages] au lieu d’utiliser **event_message_id** quand vous interrogez ces journaux d’exécutions dans Scale Out.
 -   Pour obtenir l’application de gestion pour SSIS Scale Out, [téléchargez SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 17.1 ou version ultérieure.
 

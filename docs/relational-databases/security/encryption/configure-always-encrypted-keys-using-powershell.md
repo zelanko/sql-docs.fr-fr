@@ -11,12 +11,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6fb82567b3d30955db1ccb7e8f3f1229e4ef3249
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 48596269a6e87f28127a5749ff662d1b401608a9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843837"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532767"
 ---
 # <a name="configure-always-encrypted-keys-using-powershell"></a>Configurer des clés Always Encrypted à l’aide de PowerShell
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -95,7 +95,7 @@ $azureLocation = "<datacenter location>"
 $akvName = "<key vault name>"
 $akvKeyName = "<key name>"
 $azureCtx = Set-AzureRMConteXt -SubscriptionId $SubscriptionId # Sets the context for the below cmdlets to the specified subscription.
-New-AzureRmResourceGroup –Name $resourceGroup –Location $azureLocation # Creates a new resource group - skip, if you desire group already exists.
+New-AzureRmResourceGroup -Name $resourceGroup -Location $azureLocation # Creates a new resource group - skip, if you desire group already exists.
 New-AzureRmKeyVault -VaultName $akvName -ResourceGroupName $resourceGroup -Location $azureLocation # Creates a new key vault - skip if your vault already exists.
 Set-AzureRmKeyVaultAccessPolicy -VaultName $akvName -ResourceGroupName $resourceGroup -PermissionsToKeys get, create, delete, list, update, import, backup, restore, wrapKey,unwrapKey, sign, verify -UserPrincipalName $azureCtx.Account
 $akvKey = Add-AzureKeyVaultKey -VaultName $akvName -Name $akvKeyName -Destination "Software"
@@ -132,7 +132,7 @@ New-SqlColumnEncryptionKey -Name $cekName -InputObject $database -ColumnMasterKe
 
 Le script ci-dessous est un exemple de bout en bout de génération d’une clé principale de colonne dans un magasin de clés qui implémente l’API CNG (Cryptography Next Generation), de génération et de chiffrement d’une clé de chiffrement de colonne, et de création de métadonnées de clé dans une base de données SQL Server.
 
-L’exemple s’appuie sur le magasin de clés qui utilise le fournisseur de stockage de clés (KSP) des logiciels Microsoft. Vous pouvez choisir de modifier l’exemple pour utiliser un autre magasin, tel que votre module de sécurité matériel. Pour ce faire, vous devez vérifier que le fournisseur du magasin de clés qui implémente CNG pour votre appareil est correctement installé sur votre ordinateur. Vous devez remplacer « Microsoft Software Key Storage Provider » par le nom du fournisseur KSP de l’appareil.
+L’exemple s’appuie sur le magasin de clés qui utilise le fournisseur de stockage de clés (KSP) des logiciels Microsoft. Vous pouvez choisir de modifier l’exemple pour utiliser un autre magasin, tel que votre module de sécurité matériel. Pour ce faire, vous devez vérifier que le fournisseur du magasin de clés qui implémente CNG pour votre appareil est correctement installé sur votre ordinateur. Vous devez remplacer « Microsoft Software Key Storage Provider » par le nom du fournisseur KSP de l’appareil.
 
 
 ```

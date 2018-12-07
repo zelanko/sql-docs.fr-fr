@@ -10,12 +10,12 @@ f1_keywords:
 ms.assetid: 957f664c-8a7a-4532-b5a6-5f859c5840bd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4697eada10910db5ef9b37e9884b9746df360b8a
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: adedbb3c4e173a1b27c0f1d911f847c5e69fe956
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021943"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542216"
 ---
 # <a name="report-parts-report-builder-and-ssrs"></a>Publication de parties de rapports (Générateur de rapports et SSRS)
   Les éléments de rapport tels que les tableaux, matrices, graphiques et images peuvent être publiés en tant que *parties de rapports*. Les parties de rapports sont des éléments de rapports paginés qui ont été publiés séparément sur un serveur de rapports et qui peuvent être réutilisés dans d’autres rapports paginés. Les parties de rapports ont l'extension de fichier .rsc.  
@@ -85,12 +85,12 @@ ms.locfileid: "50021943"
  La façon la plus facile de créer un rapport est d'ajouter une partie de rapport existante, comme une table ou un graphique, à votre rapport à partir de la bibliothèque de parties de rapport. Après l'avoir ajoutée à votre rapport, vous pouvez la modifier comme vous le souhaitez ou accepter les mises à jour du serveur. La modification de l'élément de rapport dans votre rapport n'affectera pas l'instance de la partie de rapport publiée sur le site ou serveur et ne rompra pas non plus la relation entre l'instance dans le rapport et sur le site ou serveur. Si vous avez des autorisations suffisantes, vous pouvez enregistrer à nouveau la copie mise à jour sur le site ou serveur. Si quelqu'un d'autre modifie la copie sur le site ou serveur, vous pouvez décider de garder votre copie telle quelle ou la mettre à jour pour qu'elle soit identique à celle du site ou serveur.  
   
 ### <a name="searching-for-report-parts"></a>Recherche de parties de rapport  
- Vous recherchez des parties de rapport à ajouter à votre rapport dans la bibliothèque de parties de rapport. Vous pouvez filtrer les parties de rapport en fonction de leur nom ou d'une partie de celui-ci, de leur créateur, de la personne qui a apporté la dernière modification ou du moment de cette dernière modification, de l'emplacement de stockage ou de leur type. Par exemple, vous pourriez rechercher tous les graphiques créés la semaine dernière par l'un de vos collègues.  
+ Vous recherchez des parties de rapport à ajouter à votre rapport dans la bibliothèque de parties de rapport. Vous pouvez filtrer les parties de rapport en fonction de leur nom ou d’une partie de celui-ci, de leur créateur, de la personne qui a apporté la dernière modification ou du moment où elle a été apportée, de leur emplacement de stockage ou de leur type. Par exemple, vous pourriez rechercher tous les graphiques créés la semaine dernière par l'un de vos collègues.  
   
  Vous pouvez afficher les résultats de la recherche sous la forme de miniatures ou d'une liste et les trier par nom, par dates de création et de modification, et par créateur. Pour plus d’informations, consultez [Rechercher des parties de rapports et définir un dossier par défaut &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md).  
   
 ### <a name="what-comes-with-a-report-part"></a>Éléments associés à une partie de rapport  
- Lorsque vous ajoutez une partie de rapport à votre rapport, vous ajoutez également tout ce qu'elle doit comporter pour fonctionner. Par exemple, tout objet qui affiche des données dépend d'un dataset, autrement dit, une requête et une connexion à une source de données. Elle peut également avoir un ou plusieurs paramètres. Tous les éléments dont elle dépend sont ses *dépendances*, et l’ensemble de ces éléments, ou les pointeurs vers ces derniers, sont inclus avec la partie de rapport du moment où vous l’ajoutez à votre rapport. Le dataset et les paramètres apparaissent dans le volet des données de rapport de votre rapport.  
+ Lorsque vous ajoutez une partie de rapport à votre rapport, vous ajoutez également tout ce qu'elle doit comporter pour fonctionner. Par exemple, tout objet qui affiche des données dépend d’un dataset, autrement dit, une requête et une connexion à une source de données. Elle peut également avoir un ou plusieurs paramètres. Tous les éléments dont elle dépend sont ses *dépendances*, et l’ensemble de ces éléments, ou les pointeurs vers ces derniers, sont inclus avec la partie de rapport du moment où vous l’ajoutez à votre rapport. Le dataset et les paramètres apparaissent dans le volet des données de rapport de votre rapport.  
   
  Le dataset pour la partie de rapport peut être incorporé dans la partie de rapport, ou il peut s'agir d'un dataset séparé et partagé vers lequel la partie de rapport pointe. S'il est incorporé dans la partie de rapport, vous êtes peut-être en mesure de le modifier. Dans le cas d'un dataset partagé, il s'agit d'un objet séparé pour lequel vous avez besoin d'autorisations. Pour plus d’informations sur les datasets incorporés et partagés, consultez [Datasets de rapport &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md).  
   

@@ -1,26 +1,26 @@
 ---
 title: Personnaliser le composant WebPart Visionneuse de rapports | Microsoft Docs
-ms.date: 09/25/2017
+ms.date: 11/26/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bd5749c287f76dd018066ba6e63b3006e6f7d118
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 6676e1ae64161d042fa32976bedc5c32288477ca
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021523"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52411636"
 ---
 # <a name="customize-the-report-viewer-web-part"></a>Personnaliser le composant WebPart Visionneuse de rapports
 
-[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2016-2019](../../includes/ssrs-appliesto-sharepoint-2016-2019.md)] [!INCLUDE[ssrs-appliesto-not-sharepoint-online](../../includes/ssrs-appliesto-not-sharepoint-online.md)]
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
-Vous pouvez utiliser le composant WebPart Visionneuse de rapports pour afficher les rapports qui s’exécutent sur un serveur de rapports configuré pour l’intégration SharePoint. Les rapports consultables comprennent des fichiers de définition de rapport (.rdl) et des rapports Générateur de rapports. Les rapports s’ouvrent automatiquement dans le composant WebPart Visionneuse de rapports dans une nouvelle page, mais vous pouvez aussi ajouter un composant WebPart Visionneuse de rapports à une page ou un site web existant si vous souhaitez qu’un rapport particulier soit toujours visible sur cette page.
+Vous pouvez utiliser le composant WebPart Visionneuse de rapports pour afficher les rapports qui s’exécutent sur un serveur de rapports configuré pour l’intégration SharePoint. Les rapports consultables comprennent des fichiers de définition de rapport (.rdl) et des rapports Générateur de rapports. Les rapports s’ouvrent automatiquement dans le composant WebPart Visionneuse de rapports dans une nouvelle page. Vous pouvez aussi ajouter un composant WebPart Visionneuse de rapports à une page ou un site web existant si vous voulez qu’un rapport déterminé soit toujours visible dans cette page.
 
 > [!NOTE]
 > Même si leurs noms sont identiques, le composant WebPart Visionneuse de rapports installé via le complément [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] est différent du composant WebPart Visionneuse de rapports inclus dans le fichier RSWebParts.cab. Les instructions de cette rubrique sont spécifiques au composant WebPart Visionneuse de rapports installé à l’aide du complément [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].
@@ -41,7 +41,7 @@ Vous pouvez utiliser le composant WebPart Visionneuse de rapports pour afficher 
   
 ### <a name="change-default-properties"></a>Modifier les propriétés par défaut
 
- Le composant WebPart Visionneuse de rapports a des propriétés par défaut qui conviennent parfaitement à l’ouverture de rapports à la demande à partir d’un dossier ou d’une bibliothèque. Par défaut, tous les contrôles disponibles sont affichés dans la barre d’outils, tandis que la hauteur et la largeur sont définies pour utiliser tout l’espace disponible sur la page web. Si vous voulez modifier les propriétés par défaut, vous pouvez personnaliser le composant WebPart via **Paramètres du site**.  
+ Le composant WebPart Visionneuse de rapports a des propriétés par défaut qui conviennent parfaitement à l’ouverture de rapports à la demande à partir d’un dossier ou d’une bibliothèque. Par défaut, tous les contrôles disponibles sont affichés dans la barre d’outils. La hauteur et la largeur sont définies de façon à utiliser tout l’espace disponible dans la page web. Si vous voulez modifier les propriétés par défaut, vous pouvez personnaliser le composant WebPart via **Paramètres du site**.  
   
 1.  Dans le menu **Actions de site** , cliquez sur **Paramètres du site**.  
   
@@ -53,7 +53,7 @@ Vous pouvez utiliser le composant WebPart Visionneuse de rapports pour afficher 
   
 ### <a name="customize-an-embedded-report-viewer-in-a-web-page"></a>Personnaliser une Visionneuse de rapports incorporée dans une page web
 
- Vous pouvez définir des propriétés pour intégrer la Visionneuse de rapports dans une page web. La Visionneuse de rapports peut utiliser le même style et les couleurs que la page qui la contient. Vous pouvez masquer tout ou une partie de la barre d'outils, de l'explorateur de document et de la zone des paramètres pour maximiser la zone d'affichage des rapports dans l'espace alloué. Le rapport utilise toujours les styles qui lui sont attribués à sa création ; vous ne pouvez pas personnaliser l'aspect des rapports après leur publication dans une bibliothèque SharePoint.  
+ Vous pouvez définir des propriétés pour intégrer la Visionneuse de rapports dans une page web. La Visionneuse de rapports peut utiliser le même style et les couleurs que la page qui la contient. Vous pouvez masquer tout ou une partie de la barre d'outils, de l'explorateur de document et de la zone des paramètres pour maximiser la zone d'affichage des rapports dans l'espace alloué. Le rapport utilise toujours les styles que vous avez définis pour celui-ci au moment de le créer. Vous ne pouvez pas personnaliser l’apparence du rapport après l’avoir publié dans une bibliothèque SharePoint.  
   
  Si vous incorporez le composant WebPart Visionneuse de rapports dans une page web, vous devez attribuer à la propriété **URL de rapport** un rapport spécifique. Dans le cas contraire, la Visionneuse de rapports affiche des instructions de liaison à un rapport. Vous ne pouvez pas personnaliser ou supprimer les instructions.  
   

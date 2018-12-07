@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: fb0bc38f-dc56-4350-8457-cd135c0346e1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2115aa8933396d14f6f6f32e0c02f85f75321700
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 7cab15eb6feb4a502957c7e8a1b929601cd6fd1a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029188"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537348"
 ---
 # <a name="working-with-paginated-reports-web-portal"></a>Utilisation des rapports paginés (portail web)
 
@@ -40,7 +40,7 @@ Procédez comme suit pour créer un dataset partagé.
 Procédez comme suit pour gérer un rapport paginé existant.  
   
 > [!NOTE]
-> Si vous ne voyez pas de rapports paginés dans le dossier, vérifiez que vous affichez bien les rapports paginés. Vous pouvez sélectionner **Afficher** dans la barre de menus dans le coin supérieur droit du portail web. Vérifiez que **Rapports paginés** est coché.  
+> Si vous ne voyez pas de rapports paginés dans le dossier, vérifiez que les rapports paginés sont affichés. Vous pouvez sélectionner **Afficher** dans la barre de menus dans le coin supérieur droit du portail web. Vérifiez que **Rapports paginés** est coché.  
   
 1.  Sélectionnez les **points de suspension (...)** correspondant au dataset que vous souhaitez gérer.  
       

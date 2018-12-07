@@ -25,12 +25,12 @@ ms.assetid: a1e9be0e-4115-47d8-9d3a-3316d876a35e
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: e93a5f78129b0d3ca9d687600a99b35dbf2be203
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4580926a6aff40e5c2d4b7da588cf394b6bdfcda
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47651777"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516175"
 ---
 # <a name="alter-service-master-key-transact-sql"></a>ALTER SERVICE MASTER KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -89,7 +89,7 @@ ALTER SERVICE MASTER KEY
 ## <a name="remarks"></a>Notes   
  La clé principale de service est générée automatiquement la première fois qu'elle est requise pour chiffrer un mot de passe, des informations d'identification ou la clé principale de base de données d'un serveur lié. La clé principale de service est chiffrée à l'aide de la clé de l'ordinateur local ou de l'API de protection des données Windows. Cette API utilise une clé dérivée des informations d'identification Windows du compte de service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] utilise l’algorithme de chiffrement AES pour protéger la clé principale du service (SMK) et la clé principale de base de données (DMK). AES est un algorithme de chiffrement plus récent que 3DES, qui était utilisé dans les versions antérieures. Au terme de la mise à niveau d'une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] vers [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], les clés SMK et DMK doivent être régénérées pour mettre à niveau les clés principales vers AES. Pour plus d’informations sur la régénération de la clé DMK, consultez [ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md).  
+ [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] utilise l’algorithme de chiffrement AES pour protéger la clé principale du service (SMK) et la clé principale de base de données (DMK). AES est un algorithme de chiffrement plus récent que 3DES, qui était utilisé dans les versions antérieures. Au terme de la mise à niveau d'une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] vers [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] , les clés SMK et DMK doivent être régénérées pour mettre à niveau les clés principales vers AES. Pour plus d’informations sur la régénération de la clé DMK, consultez [ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md).  
   
 ##  <a name="_changing"></a> Modification du compte de service SQL Server  
  Pour modifier le compte de service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], utilisez le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour gérer une modification du compte de service, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stocke une copie redondante de la clé principale de service protégée par le compte d’ordinateur qui dispose des autorisations nécessaires accordées au groupe de service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si l'ordinateur fait l'objet d'une reconstruction, le même utilisateur de domaine utilisé précédemment par le compte de service peut récupérer la clé principale de service. Cela ne fonctionne pas avec les comptes locaux, ni avec le compte système local, le compte de service local ou le compte de service réseau. Quand vous déplacez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vers un autre ordinateur, migrez la clé principale de service à l’aide des fonctionnalités de sauvegarde et de restauration.  
@@ -101,7 +101,7 @@ ALTER SERVICE MASTER KEY
 > [!CAUTION]  
 >  La clé principale de service représente la racine de la hiérarchie de chiffrement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La clé principale de service protège de manière directe ou indirecte toutes les autres clés et tous les secrets de l'arborescence. Si une clé dépendante ne peut pas être déchiffrée au cours d'une régénération forcée, les données sécurisées par cette clé sont perdues.  
   
- Si vous déplacez SQL sur un autre ordinateur, vous devez utiliser le même compte de service pour déchiffrer la clé SMK. SQL Server résoudra automatiquement le chiffrement du compte d'ordinateur.  
+ Si vous déplacez SQL sur un autre ordinateur, vous devez utiliser le même compte de service pour déchiffrer la clé SMK. SQL Server résoudra automatiquement le chiffrement du compte d’ordinateur.  
   
 ## <a name="permissions"></a>Permissions  
  Requiert l'autorisation CONTROL SERVER sur le serveur.  

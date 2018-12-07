@@ -16,12 +16,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9cb85fe53517bcbed16ff86be801578c6d80d21d
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 4c69b0ebfe9750d904e46ee3e6bdc7665ef5d0b7
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51643346"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398832"
 ---
 # <a name="specify-a-breakpoint-action"></a>Spécifier une action de point d'arrêt
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "51643346"
   
  Le message à afficher est indiqué dans l’option **Afficher un message** et spécifié comme une chaîne de texte qui inclut des expressions contenant des informations issues du [!INCLUDE[tsql](../../includes/tsql-md.md)] débogué. Ces expressions sont notamment les suivantes.  
   
--   Une expression [!INCLUDE[tsql](../../includes/tsql-md.md)] comprise entre des accolades ({}). Les expressions peuvent inclure des variables [!INCLUDE[tsql](../../includes/tsql-md.md)] , des paramètres et des fonctions intégrées, par exemple {@MyVariable}, {@NameParameter}, {@@SPID} ou {SERVERPROPERTY(‘ProcessID’)}.  
+-   Une expression [!INCLUDE[tsql](../../includes/tsql-md.md)] comprise entre des accolades ({}). Les expressions peuvent inclure des variables [!INCLUDE[tsql](../../includes/tsql-md.md)] , des paramètres et des fonctions intégrées, par exemple {@MyVariable}, {@NameParameter}, {@@SPID} ou {SERVERPROPERTY(’ProcessID')}.  
   
 -   Un des mots clés suivants :  
   
@@ -44,7 +44,7 @@ ms.locfileid: "51643346"
   
     4.  $FUNCTION retourne le nom de la procédure stockée ou de la fonction définie par l'utilisateur dans laquelle le point d'arrêt est défini. Si le point d'arrêt est défini dans la fenêtre de l'éditeur, $FUNCTION retourne le nom du fichier de script modifié.  
   
-    5.  $PID et $PNAME retournent l'ID et le nom du processus de système d'exploitation qui exécute l'instance du moteur de base de données où le code [!INCLUDE[tsql](../../includes/tsql-md.md)] s'exécute. $PID retourne le même ID que SERVERPROPERTY(‘ProcessID’), mais $PID est une valeur hexadécimale alors que SERVERPROPERTY(‘ProcessID’) est une valeur décimale.  
+    5.  $PID et $PNAME retournent l'ID et le nom du processus de système d'exploitation qui exécute l'instance du moteur de base de données où le code [!INCLUDE[tsql](../../includes/tsql-md.md)] s'exécute. $PID retourne le même ID que SERVERPROPERTY('ProcessID'), mais $PID est une valeur hexadécimale alors que SERVERPROPERTY('ProcessID') est une valeur décimale.  
   
     6.  $TID et $TNAME retournent l'ID et le nom du thread de système d'exploitation qui exécute le lot [!INCLUDE[tsql](../../includes/tsql-md.md)] . Le thread est associé au processus qui exécute l'instance du moteur de base de données. $TID retourne la même valeur que SELECT kpid FROM sys.sysprocesses WHERE spid = @@SPID, mais $TID est une valeur hexadécimale alors que kpid est une valeur décimale.  
   

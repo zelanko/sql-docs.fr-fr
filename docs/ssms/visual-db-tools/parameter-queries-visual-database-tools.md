@@ -13,12 +13,12 @@ ms.assetid: 4897c41a-324a-47b8-a30b-cbc9e9e19a8b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 323a630d1c3178f079319e00069e311b054f982a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dd110c3ac8a222bb808e1ca5b084e36d4056b367
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833188"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505266"
 ---
 # <a name="parameter-queries-visual-database-tools"></a>Requêtes avec paramètres (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +33,7 @@ WHERE (au_id = ?)
 ```  
   
 ## <a name="where-you-can-use-parameters"></a>Où utiliser des paramètres  
-Les paramètres sont des espaces réservés à des littéraux — à remplacer par du texte ou des valeurs numériques. La plupart du temps, les paramètres sont utilisés en tant qu'espaces réservés dans des conditions de recherche de lignes individuelles ou de groupes (c'est-à-dire dans les clauses WHERE ou HAVING d'une instruction SQL).  
+Vous pouvez utiliser des paramètres comme des espaces réservés pour les valeurs littérales (textuelles ou numériques). La plupart du temps, les paramètres sont utilisés en tant qu'espaces réservés dans des conditions de recherche de lignes individuelles ou de groupes (c'est-à-dire dans les clauses WHERE ou HAVING d'une instruction SQL).  
   
 Dans les expressions, vous pouvez utiliser les paramètres comme des espaces réservés. Par exemple, il est possible de calculer des prix avec remise en fournissant une remise différente à chaque exécution de la requête. Dans ce cas, vous pourriez spécifier l'expression suivante :  
   

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 2641ea84-9343-4e6f-aec1-25339031b163
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5f8e1ebaaeaf6ea6ee413bf20f83beaddcbdd465
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 85d63fa9515552f2c2acc5851f36e38f52017dda
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50020353"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539105"
 ---
 # <a name="work-with-shared-datasets---web-portal"></a>Utilisation de datasets partagés (portail web)
 
@@ -46,7 +46,7 @@ Procédez comme suit pour créer un dataset partagé.
 Procédez comme suit pour gérer un dataset existant.  
   
 > [!NOTE]
-> Si vous ne voyez pas le dataset partagé dans le dossier, assurez-vous que vous affichez des jeux de données. Vous pouvez sélectionner **Afficher** dans la barre de menus dans le coin supérieur droit du portail web. Assurez-vous que **Datasets** est activé.  
+> Si vous ne voyez pas le dataset partagé dans le dossier, vérifiez que les datasets sont bien affichés. Vous pouvez sélectionner **Afficher** dans la barre de menus dans le coin supérieur droit du portail web. Assurez-vous que **Datasets** est activé.  
   
 1.  Sélectionnez les **points de suspension (...)** correspondant au dataset que vous souhaitez gérer.  
   

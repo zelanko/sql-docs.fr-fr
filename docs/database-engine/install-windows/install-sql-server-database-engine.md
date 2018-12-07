@@ -13,12 +13,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 311e0589e2257a1bb465ae210c013780cf9fee42
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 83fb5aa641537e99f7562f6c4fd7981b8e2233b5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605209"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532763"
 ---
 # <a name="install-sql-server-database-engine"></a>Installer le moteur de base de données SQL Server
 
@@ -43,7 +43,7 @@ Les fonctionnalités suivantes sont installées quand vous sélectionnez **Moteu
 
 -   Recherche en texte intégral (composant facultatif)  
   
--   Data Quality Services. est un composant facultatif  
+-   Data Quality Services est un composant facultatif  
   
     > [!NOTE]  
     >  Dans cette version, le fait de cocher la case **Data Quality Services** au moment de l’installation n’installe pas le serveur Data Quality Services (DQS). Vous devrez procéder à des étapes supplémentaires après l'installation pour installer le serveur DQS. Pour plus d’informations, consultez [Installer Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md).  

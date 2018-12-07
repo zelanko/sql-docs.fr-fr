@@ -7,12 +7,12 @@ ms.topic: conceptual
 ms.assetid: 6b2291bb-1d20-4d08-81cb-a16dd8e01faf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 916709e73cd7cad750683dca984d9e897b84997d
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: c77e8fdb5c3c7f4e163472b5a2fc8325d8d3583a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813182"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396832"
 ---
 # <a name="install-report-builder"></a>Install Report Builder
   [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] est une application autonome installée sur votre ordinateur par vos propres soins ou par un administrateur. Vous pouvez l’installer à partir du Centre de téléchargement Microsoft, d’un serveur de rapport [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] le serveur de rapports ou d’un site SharePoint intégré avec [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
@@ -97,9 +97,9 @@ ms.locfileid: "51813182"
   
      Le plus utile est de définir le site SharePoint ou le portail web [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] par défaut. Pour plus d’informations, consultez [Set default options for Report Builder](../../reporting-services/report-builder/set-default-options-for-report-builder.md).  
   
--   Cliquez sur **Générateur de rapports** .  
+-   Cliquez sur **Générateur de rapports**.  
   
-     Si le serveur de rapports ne figure pas dans la liste des serveurs existants, fermez la boîte de dialogue **Ouvrir un rapport** , puis cliquez sur **Se connecter** en bas de l’ [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] pour vous connecter au serveur.  
+     Si le serveur de rapports ne figure pas dans la liste des serveurs existants, fermez la boîte de dialogue **Ouvrir un rapport**, puis cliquez sur **Se connecter** au bas de [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] pour vous connecter au serveur.  
   
 ## <a name="see-also"></a> Voir aussi  
  [Démarrer le Générateur de rapports](../../reporting-services/report-builder/start-report-builder.md)   

@@ -14,12 +14,12 @@ ms.assetid: c288daab-5181-4d4b-ba2a-8a147098e758
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f2cd74f8912d711b7cd6be93e63aca322172754c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3e7fda419f9d855bc4a7c89cab92dd8d15caebdd
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706787"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52517506"
 ---
 # <a name="set-the-history-retention-period-sql-server-management-studio"></a>définir la période de rétention de l'historique (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "47706787"
   
 ### <a name="to-specify-the-history-retention-period"></a>Pour spécifier la période de rétention de l'historique  
   
-1.  Dans la page **Général** de la boîte de dialogue **Propriétés du serveur de distribution - \<Serveurdedistribution>**, cliquez sur le bouton des propriétés (**…**) de la base de données de distribution.  
+1.  Dans la page **Général** de la boîte de dialogue **Propriétés du serveur de distribution - \<Serveur_de_distribution>**, cliquez sur le bouton des propriétés (**...**) de la base de données de distribution.  
   
 2.  Entrez une valeur dans la zone **Stocker l'historique des performances de réplication au moins chaque** .  
   

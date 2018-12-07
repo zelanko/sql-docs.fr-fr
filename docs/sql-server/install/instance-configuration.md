@@ -16,12 +16,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 robots: noindex,nofollow
-ms.openlocfilehash: 7018c0f71f51fa482ef0c1fad78b1aac20bf79cd
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 7ef6aa3dbfb10b0b17a6648270541c5e87e2142d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701061"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535736"
 ---
 # <a name="installation-wizard-help"></a>Aide de l’assistant Installation
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ Chaque instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con
 ### <a name="options"></a>Options  
  Instances de cluster de basculement uniquement : Spécifiez le nom réseau du cluster de basculement de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ce nom identifie l'instance de cluster de basculement sur le réseau.  
   
- Instance par défaut ou instance nommée — Prenez ces informations en compte lorsque vous décidez d'installer une instance par défaut ou une instance nommée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
+ Instance par défaut ou instance nommée : Prenez ces informations en compte lorsque vous décidez d’installer une instance par défaut ou une instance nommée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
 -   Si vous envisagez d'installer une seule instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur un serveur de bases de données, ce doit être une instance par défaut.  
   
@@ -437,7 +437,7 @@ La page **Instance utilisateur** permet de générer une instance distincte du [
  Activer les instances utilisateur  
  Par défaut, cette option est activée. Pour désactiver la fonction qui active les instances utilisateur, désactivez cette case à cocher.  
   
- L'instance utilisateur, également désignée comme instance enfant ou client, est une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui est générée par l'instance parent (l'instance principale exécutée en tant que service, telle que [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]) pour le compte d'un utilisateur. L'instance utilisateur s'exécute en tant que processus utilisateur dans le contexte de sécurité de cet utilisateur. L'instance utilisateur est isolée de l'instance parent et de toutes les autres instances utilisateur exécutées sur l'ordinateur. La fonction d'instance utilisateur est également appelée RANU (« Run As Normal User », exécution en mode utilisateur normal).  
+ L'instance utilisateur, également désignée comme instance enfant ou client, est une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui est générée par l'instance parent (l'instance principale exécutée en tant que service, telle que [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]) pour le compte d'un utilisateur. L'instance utilisateur s'exécute en tant que processus utilisateur dans le contexte de sécurité de cet utilisateur. L'instance utilisateur est isolée de l'instance parent et de toutes les autres instances utilisateur exécutées sur l'ordinateur. La fonction d’instance utilisateur est également appelée RANU (« Run As Normal User », exécution en mode utilisateur normal).  
   
 > [!NOTE]  
 >  Les connexions configurées en tant que membres du rôle serveur fixe **sysadmin** durant l’installation sont configurées en tant qu’administrateurs dans l’exemple de base de données. Si elles ne sont pas supprimées, elles sont membres du rôle serveur fixe **sysadmin** sur l’instance utilisateur.  
@@ -451,6 +451,6 @@ La page **Instance utilisateur** permet de générer une instance distincte du [
   
  Vérifiez que le champ **Utilisateur à mettre en service** contient les paramètres DomainName\UserName de l’utilisateur dont les autorisations doivent être mises à jour. Sélectionnez le rôle à mettre à jour dans la liste des instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans le volet **Privilèges disponibles** , puis cliquez sur la flèche droite. Pour ajouter l'utilisateur à tous les rôles disponibles pour toutes les instances disponibles de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et tous les rôles disponibles, cliquez sur la double flèche vers la droite.  
   
- Pour implémenter les modifications une fois votre sélection terminée, [!INCLUDE[clickOK](../../includes/clickok-md.md)]. Pour quitter l’outil sans apporter de modification, cliquez sur **Annuler**.  
+ Pour implémenter les modifications une fois vos sélections terminées, [!INCLUDE[clickOK](../../includes/clickok-md.md)] Pour quitter l’outil sans apporter de modifications, cliquez sur **Annuler**.  
   
   

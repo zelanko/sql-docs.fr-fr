@@ -47,12 +47,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6492f067d05a3606c5304e473162c8eabdcee5f0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bddf69ebe967767c67f92782afdaaa2484fe2531
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845707"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537780"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -75,7 +75,7 @@ ALTER INDEX { index_name | ALL } ON <object>
     | DISABLE  
     | REORGANIZE  [ PARTITION = partition_number ] [ WITH ( <reorganize_option>  ) ]  
     | SET ( <set_index_option> [ ,...n ] )   
-    | RESUME [WITH (<resumable_index_options>,[…n])]
+    | RESUME [WITH (<resumable_index_options>,[...n])]
     | PAUSE
     | ABORT
 }  
@@ -224,7 +224,7 @@ ALTER INDEX { index_name | ALL }
   
 1.  N’utilise pas l’ordre de tri.  
   
-2.  Acquiert un verrou exclusif sur la table ou la partition lorsque la reconstruction se produit.  Les données sont hors connexion et indisponibles pendant la reconstruction, même si vous utilisez NOLOCK, RCSI ou SI.  
+2.  Acquiert un verrou exclusif sur la table ou la partition lorsque la reconstruction se produit.  Les données sont « hors connexion » et indisponibles pendant la reconstruction, même si vous utilisez NOLOCK, RCSI ou SI.  
   
 3.  Recompresse toutes les données dans le columnstore. Il existe deux copies de l'index columnstore pendant la reconstruction. Lorsque la reconstruction est terminée, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supprime l'index columnstore d'origine.  
   
@@ -654,7 +654,7 @@ Dans [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et les versions ultéri
   
 Pour reconstruire un index cluster columnstore, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
-1.  Acquiert un verrou exclusif sur la table ou la partition lorsque la reconstruction se produit. Les données sont hors connexion et indisponibles pendant la reconstruction.  
+1.  Acquiert un verrou exclusif sur la table ou la partition lorsque la reconstruction se produit. Les données sont « hors connexion » et indisponibles pendant la reconstruction.  
   
 2.  Défragmente le columnstore en supprimant physiquement les lignes qui ont été logiquement supprimées de la table ; les octets supprimés sont récupérés sur le support physique.  
   
@@ -720,7 +720,7 @@ La reconstruction d’index en ligne est spécifiée comme pouvant être reprise
  
 -  La réexécution de l’instruction ALTER INDEX REBUILD d’origine avec les mêmes paramètres reprend une opération de reconstruction d’index mise en pause. Vous pouvez également reprendre une opération de reconstruction d’index en pause en exécutant l’instruction ALTER INDEX RESUME.
 -  L’option SORT_IN_TEMPDB=ON n’est pas prise en charge pour l’index pouvant être repris. 
--  La commande DDL avec RESUMABLE=ON ne peut pas être exécutée dans une transaction explicite (ne peut pas faire partie de begin tran ... commit  block).
+-  Il n’est pas possible d’exécuter la commande DDL avec RESUMABLE=ON dans une transaction explicite (ne peut pas faire partie d’un block begin tran ... commit).
 -  Seules les opérations d’index qui sont mises en pause peuvent être reprises.
 -  Quand vous reprenez une opération d’index qui est en pause, vous pouvez remplacer la valeur MAXDOP par une nouvelle valeur.  Si MAXDOP n’est pas spécifié lors de la reprise d’une opération d’index qui est en pause, la dernière valeur MAXDOP est prise. Si l’option MAXDOP n’est pas du tout spécifiée pour l’opération de reconstruction d’index, la valeur par défaut est prise.
 - Pour mettre tout de suite en pause l’opération d’index, vous pouvez arrêter la commande en cours (Ctrl-C) ou vous pouvez exécuter la commande ALTER INDEX PAUSE ou la commande KILL *session_id*. Une fois la commande en pause, elle peut être reprise avec l’option RESUME.
@@ -733,7 +733,7 @@ Les fonctionnalités suivantes sont désactivées pour les opérations de recons
    -    La reconstruction d’un index désactivé n’est pas prise en charge avec RESUMABLE=ON
    -    La commande ALTER INDEX REBUILD ALL
    -    ALTER TABLE avec la reconstruction d’index  
-   -    La commande DDL avec “RESUMEABLE = ON” ne peut pas être exécutée dans une transaction explicite (ne peut pas faire partie de begin tran ... commit  block)
+   -    Il n’est pas possible d’exécuter la commande DDL avec « RESUMABLE=ON » dans une transaction explicite (ne peut pas faire partie d’un block begin tran ... commit)
    -    La reconstruction d’un index qui a calculé ou horodaté (TIMESTAMP) la ou les colonnes en tant que colonnes clés.
 -   Si la table de base contient une ou plusieurs colonnes LOB, la reconstruction d’index cluster pouvant être reprise nécessite un verrou Sch-M au début de cette opération
    -    L’option SORT_IN_TEMPDB=ON n’est pas prise en charge pour l’index pouvant être repris. 
@@ -768,7 +768,7 @@ Les restrictions suivantes s'appliquent aux index partitionnés :
 -   La syntaxe ALTER INDEX \<index> ... REBUILD WITH ... reconstruit toutes les partitions de l'index.  
   
 ## <a name="statistics"></a>Statistiques  
- Lorsque vous exécutez **ALTER INDEX ALL...** sur une table, seules les statistiques associées aux index sont mises à jour. Les statistiques automatiques ou manuelles créées sur la table (au lieu d'un index) ne sont pas mises à jour.  
+ Quand vous exécutez **ALTER INDEX ALL ...** sur une table, seules les statistiques associées aux index sont mises à jour. Les statistiques automatiques ou manuelles créées sur la table (au lieu d'un index) ne sont pas mises à jour.  
   
 ## <a name="permissions"></a>Permissions  
  Pour pouvoir exécuter l'instruction ALTER INDEX, vous devez obligatoirement bénéficier au minimum d'autorisations nécessaires pour exécuter les instructions ALTER sur la table ou la vue.  

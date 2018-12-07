@@ -13,12 +13,12 @@ ms.assetid: d32d9761-93fb-4020-bf82-231439c6f3ac
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 126dad89a25ccf1a11958676cb0be439fb4aac65
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 968ae6356d2f9d9b84b8cf2d5bf6b012b000b7b2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641566"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521233"
 ---
 # <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>Procédure pas à pas : publier un package SSIS en tant que vue SQL
   Cette procédure pas à pas fournit des étapes détaillées sur la publication d’un package SSIS en tant que vue SQL dans une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -243,7 +243,7 @@ GO
  Syntaxe de la fonction OPENQUERY :  
   
 ```sql 
-SELECT * FROM OPENQUERY(<LinkedServer Name>, N’Folder=<Folder Name from SSIS Catalog>; Project=<SSIS Project Name>; Package=<SSIS Package Name>; Use32BitRuntime=[True | False];Parameters=”<parameter_name_1>=<value1>; parameter_name_2=<value2>”;Timeout=<Number of Seconds>;’)  
+SELECT * FROM OPENQUERY(<LinkedServer Name>, N'Folder=<Folder Name from SSIS Catalog>; Project=<SSIS Project Name>; Package=<SSIS Package Name>; Use32BitRuntime=[True | False];Parameters="<parameter_name_1>=<value1>; parameter_name_2=<value2>";Timeout=<Number of Seconds>;')  
 ```  
   
  Les paramètres Folder, Project et Package sont obligatoires. Use32BitRuntime, Timeout et Parameters sont facultatifs.  
@@ -256,15 +256,15 @@ SELECT * FROM OPENQUERY(<LinkedServer Name>, N’Folder=<Folder Name from SSIS C
   
  La liste suivante indique les caractères spéciaux autorisés dans la clause de requête :  
   
--   Guillemet simple (‘) - Pris en charge par la fonction OPENQUERY standard. Si vous souhaitez utiliser le guillemet simple dans la clause de requête, utilisez deux guillemets simples (‘’).  
+-   Guillemet simple (') - Pris en charge par la fonction OPENQUERY standard. Si vous souhaitez utiliser le guillemet simple dans la clause de requête, utilisez deux guillemets simples ('').  
   
--   Guillemet (“) - La partie relative aux paramètres de la requête est placée entre guillemets. Si une valeur de paramètre contient elle-même un guillemet, utilisez le caractère d’échappement. Exemple : \”.  
+-   Guillemet (") - La partie relative aux paramètres de la requête est placée entre guillemets. Si une valeur de paramètre contient elle-même un guillemet, utilisez le caractère d’échappement. Par exemple : \".  
   
--   Crochets gauche et droit ([ et ]) - Ces caractères sont utilisés pour indiquer les espaces de début/de fin. Par exemple, « [ des espaces ] » représente la chaîne « des espaces » avec un espace de début et un espace de fin. Si ces caractères sont eux-mêmes utilisés dans la clause de requête, ils doivent faire l’objet d’une séquence d’échappement. Par exemple, \\[ et \\].  
+-   Crochets gauche et droit ([ et ]) - Ces caractères sont utilisés pour indiquer les espaces de début/de fin. Par exemple, « [ des espaces ] » représente la chaîne « des espaces » avec un espace de début et un espace de fin. Si ces caractères sont eux-mêmes utilisés dans la clause de requête, ils doivent faire l’objet d’une séquence d’échappement. Par exemple, \\[ et \\].  
   
--   Barre oblique (\\) – Chaque caractère \ utilisé dans la clause de la requête doit être précédé du caractère d’échappement. Par exemple, \\\ est évalué comme \ dans la clause de la requête.  
+-   Barre oblique (\\) - Chaque caractère \ utilisé dans la clause de la requête doit être précédé du caractère d’échappement. Par exemple, \\\ est évalué comme \ dans la clause de la requête.  
   
- Barre oblique (\\) – Chaque caractère \ utilisé dans la clause de la requête doit être précédé du caractère d’échappement. Par exemple, \\\ est évalué comme \ dans la clause de la requête.  
+ Barre oblique (\\) - Chaque caractère \ utilisé dans la clause de la requête doit être précédé du caractère d’échappement. Par exemple, \\\ est évalué comme \ dans la clause de la requête.  
   
 ## <a name="see-also"></a> Voir aussi  
  [Data Streaming Destination](../../integration-services/data-flow/data-streaming-destination.md)   

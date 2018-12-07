@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 87ddb651-a1d0-4a42-8ea9-04dea3f6afa4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 89bed7eb00e04a354b1dd1fd59b0c36899aed044
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 3415084fcc93098f77ea367217b74ae2df7729f6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814322"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393218"
 ---
 # <a name="expression-examples-report-builder-and-ssrs"></a>Exemples d'expressions (Générateur de rapports et SSRS)
 Les expressions sont fréquemment utilisées dans les rapports paginés [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour en contrôler le contenu et l’apparence. Les expressions sont écrites en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)], et peuvent utiliser des fonctions intégrées, du code personnalisé, des variables de rapport et de groupe, et des variables définies par l’utilisateur. Les expressions commencent par un signe égal (=). Pour plus d’informations sur l’éditeur d’expressions et les types de références que vous pouvez inclure, consultez [Utilisation d’expressions dans les rapports &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md), et [Ajouter une expression &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md).  
@@ -165,7 +165,7 @@ Pour apprendre à écrire des expressions qui utilisent plusieurs fonctions et o
 -   L'expression suivante génère des années d'intervalle entre SellStartDate et LastReceiptDate. Ces champs sont compris dans deux datasets différents, DataSet1 et DataSet2. La [fonction First &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/report-builder-functions-first-function.md), qui est une fonction d’agrégation, renvoie la première valeur de SellStartDate dans DataSet1 et la première valeur de LastReceiptDate dans DataSet2.  
   
     ```  
-    =DATEDIFF(“yyyy”, First(Fields!SellStartDate.Value, "DataSet1"), First(Fields!LastReceiptDate.Value, "DataSet2"))  
+    =DATEDIFF("yyyy", First(Fields!SellStartDate.Value, "DataSet1"), First(Fields!LastReceiptDate.Value, "DataSet2"))  
     ```  
   
 -   La fonction **DatePart** renvoie une valeur entière contenant le composant spécifié d'une valeur donnée de Date. L'expression suivante renvoie l'année de la première valeur de SellStartDate dans DataSet1. L'étendue du dataset est spécifiée, car le rapport contient plusieurs datasets.  
@@ -229,7 +229,7 @@ Pour apprendre à écrire des expressions qui utilisent plusieurs fonctions et o
      L'exemple suivant donne le même résultat que l'exemple ci-dessus et affiche une chaîne de texte avant la liste de valeurs sélectionnées.  
   
     ```  
-    =”Report for “ & JOIN(Parameters!MySelection.Value, “ & “)  
+    ="Report for " & JOIN(Parameters!MySelection.Value, " & ")  
   
     ```  
   
@@ -244,7 +244,7 @@ Pour apprendre à écrire des expressions qui utilisent plusieurs fonctions et o
   
 ### <a name="lookup"></a>Lookup  
   
--   En spécifiant un champ clé, vous pouvez utiliser la fonction **Lookup** pour récupérer une valeur à partir d’un dataset pour une relation un-à-un, par exemple une paire clé-valeur. L'expression suivante affiche le nom de produit d'un dataset (« Product »), étant donné l'identificateur de produit sur lequel effectuer une correspondance :  
+-   En spécifiant un champ clé, vous pouvez utiliser la fonction **Lookup** pour récupérer une valeur à partir d’un dataset pour une relation un-à-un, par exemple une paire clé-valeur. L’expression suivante affiche le nom de produit d’un dataset (« Product »), compte tenu de l’identificateur de produit qui doit être mis en correspondance :  
   
     ```  
     =Lookup(Fields!PID.Value, Fields!ProductID.Value, Fields.ProductName.Value, "Product")  
@@ -543,7 +543,7 @@ Pour apprendre à écrire des expressions qui utilisent plusieurs fonctions et o
     End Function  
     ```  
   
-     L'expression suivante montre comment appeler ce code personnalisé depuis une zone de texte, pour le conteneur « ColumnGroupByYear » (groupe ou région de données).  
+     L’expression suivante montre comment appeler ce code personnalisé à partir d’une zone de texte, pour le conteneur « ColumnGroupByYear » (groupe ou région de données).  
   
     ```  
     =Code.GetDeltaPercentage(Previous(Sum(Fields!Sales.Value),"ColumnGroupByYear"), Sum(Fields!Sales.Value))  

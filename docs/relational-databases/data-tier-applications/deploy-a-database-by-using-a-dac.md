@@ -20,12 +20,12 @@ ms.assetid: 08c506e8-4ba0-4a19-a066-6e6a5c420539
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ba87cc9564183c45f4c00765f05bbaa363d231ce
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: ff2967c06b32540b92f40007f66ebe346eedca40
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673348"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540395"
 ---
 # <a name="deploy-a-database-by-using-a-dac"></a>Déployer une base de données à l'aide d'une DAC
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +69,7 @@ ms.locfileid: "51673348"
   
 3.  Développez le nœud **Bases de données** .  
   
-4.  Cliquez avec le bouton droit sur la base de données que vous voulez déployer, sélectionnez **Tâches**, puis sélectionnez **Déployer la base de données dans SQL Azure…**  
+4.  Cliquez avec le bouton droit sur la base de données que vous voulez déployer, sélectionnez **Tâches**, puis sélectionnez **Déployer la base de données dans SQL Azure...**.  
   
 5.  Renseignez les boîtes de dialogue de l'Assistant :  
   
@@ -92,22 +92,22 @@ ms.locfileid: "51673348"
   
 -   **Suivant** : passe à la page **Paramètres de déploiement** .  
   
--   **Annuler** : annule l'opération et ferme l'Assistant.  
+-   **Annuler** - Annule l’opération et ferme l’Assistant.  
   
 ##  <a name="Deployment_settings"></a> Page Paramètres de déploiement  
  Utilisez cette page pour spécifier le serveur de destination et fournir des détails sur votre nouvelle base de données.  
   
  **Hôte local :**  
   
--   **Connexion serveur** – Spécifiez les détails de connexion au serveur, puis cliquez sur **Se connecter** pour vérifier la connexion.  
+-   **Connexion serveur** - Spécifiez les détails de connexion au serveur, puis cliquez sur **Se connecter** pour vérifier la connexion.  
   
--   **Nouveau nom de la base de données** – Spécifiez un nom pour la nouvelle base de données.  
+-   **Nouveau nom de la base de données** - Spécifiez un nom pour la nouvelle base de données.  
   
  **[!INCLUDE[ssSDS](../../includes/sssds-md.md)] :**  
   
--   **Édition [!INCLUDE[ssSDS](../../includes/sssds-md.md)]** : sélectionnez l’édition de [!INCLUDE[ssSDS](../../includes/sssds-md.md)] dans le menu déroulant.  
+-   **Édition [!INCLUDE[ssSDS](../../includes/sssds-md.md)]** - Sélectionnez l’édition de [!INCLUDE[ssSDS](../../includes/sssds-md.md)] dans le menu déroulant.  
   
--   **Taille maximale de base de données** : sélectionnez la taille maximale de la base de données dans le menu déroulant.  
+-   **Taille maximale de base de données** - Sélectionnez la taille maximale de la base de données dans le menu déroulant.  
   
  **Autres paramètres :**  
   

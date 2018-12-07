@@ -14,12 +14,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 15b8c62e501e13ce0145524c140a1c24deb2bcc5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b6f47c0b1139e78119a345cfbb7565500dc346a1
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47653797"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52401082"
 ---
 # <a name="use-sql-server-connector-with-sql-encryption-features"></a>Utiliser le connecteur SQL Server avec les fonctionnalités de chiffrement SQL
 [!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "47653797"
  Exécutez les parties I à IV de la rubrique [Étapes de la configuration de la gestion de clés extensible à l’aide d’Azure Key Vault](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)avant de suivre les étapes de cette rubrique.  
  
 > [!NOTE]  
->  Les versions 1.0.0.440 et antérieures ont été remplacées et ne sont plus prises en charge dans les environnements de production. Effectuez la mise à niveau vers la version 1.0.1.0 ou ultérieure en accédant au [Centre de téléchargement Microsoft](https://www.microsoft.com/download/details.aspx?id=45344) et en utilisant les instructions de la page [Résolution des problèmes et maintenance du connecteur SQL Server](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md) sous « Mise à niveau du connecteur SQL Server ».  
+>  Les versions 1.0.0.440 et antérieures ont été remplacées et ne sont plus prises en charge dans les environnements de production. Effectuez la mise à niveau vers la version 1.0.1.0 ou ultérieure en accédant au [Centre de téléchargement Microsoft](https://www.microsoft.com/download/details.aspx?id=45344) et en utilisant les instructions fournies dans la page [Résolution des problèmes et maintenance du connecteur SQL Server](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md) sous « Mise à niveau du connecteur SQL Server ».  
   
 ## <a name="transparent-data-encryption-by-using-an-asymmetric-key-from-azure-key-vault"></a>Chiffrement TDE (Transparent Data Encryption) à l’aide d’une clé asymétrique dans Azure Key Vault  
  Une fois les parties I à IV de la rubrique Étapes de la configuration de la gestion de clés extensible à l’aide d’Azure Key Vault terminées, utilisez la clé Azure Key Vault pour chiffrer la clé de chiffrement de base de données à l’aide du chiffrement TDE.  

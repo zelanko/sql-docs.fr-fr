@@ -15,12 +15,12 @@ ms.assetid: 756840e3-aa09-45cd-9951-1a17af4b5925
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6a2cb16273cd19ee5ef58c1cfde74d3ba890f9ad
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: c91b162bfd64b8fb7a2408c796c384981cea917e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641376"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52517209"
 ---
 # <a name="data-profiling-task-and-viewer"></a>Tâche de profilage des données et visionneuse
   La tâche de profilage des données fournit des fonctionnalités de profilage de données à l'intérieur du processus d'extraction, de transformation et de chargement de données. Grâce à la tâche de profilage des données, vous pouvez bénéficier des avantages suivants :  
@@ -49,7 +49,7 @@ ms.locfileid: "51641376"
   
 -   la distribution des valeurs dans la colonne City ;  
   
--   la puissance de la dépendance fonctionnelle de la colonne State sur la colonne Zip (en d'autres termes, un État américain doit toujours être le même pour une valeur de code postal donnée).  
+-   la puissance de la dépendance fonctionnelle de la colonne State sur la colonne Zip (en d’autres termes, un État américain doit toujours être le même pour une valeur de code postal donnée).  
   
  Les statistiques fournies par un profil de données vous donnent les informations nécessaires pour minimiser de manière efficace les problèmes de qualité qui peuvent résulter de l'utilisation des données sources.  
   

@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 028753b3af98748bd99c9b4b7adfa0801c1751e8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 37fe6d7b3dfe92e2cdf53e7a7b26ab363a567510
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595249"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409160"
 ---
 # <a name="stopping-system-versioning-on-a-system-versioned-temporal-table"></a>Arrêt du contrôle de version par le système sur une table temporelle à version contrôlée par le système
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "47595249"
 Pour ce faire, vous pouvez affecter à la clause **SYSTEM_VERSIONING** la valeur **OFF**.  
   
 ## <a name="setting-systemversioning--off"></a>Configuration de SYSTEM_VERSIONING = OFF  
- Arrêtez le contrôle de version par le système si vous souhaitez effectuer des opérations de maintenance spécifiques sur la table temporelle ou si vous n’avez plus besoin une table avec version. Suite à cette opération, vous obtiendrez deux tables indépendantes :  
+ Arrêtez le contrôle de version du système d’exploitation si vous souhaitez effectuer des opérations de maintenance spécifiques sur la table temporelle ou si vous n’avez plus besoin d’une table avec version. Suite à cette opération, vous obtiendrez deux tables indépendantes :  
   
 -   La table actuelle avec définition de la période  
   

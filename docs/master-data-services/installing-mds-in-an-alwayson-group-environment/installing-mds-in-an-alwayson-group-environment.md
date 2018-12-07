@@ -11,12 +11,12 @@ ms.assetid: ''
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 8d6625b72cadddb7c6f587f664ae5134730f9939
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 86a56f8394dbddccf00025b750256364aa51e99d
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692187"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395677"
 ---
 # <a name="high-availability-and-disaster-recovery-for-master-data-services"></a>Haute disponibilité et récupération d’urgence pour Master Data Services
 
@@ -78,7 +78,7 @@ Cette configuration permet d’effectuer une récupération si le centre de donn
 
 Figure 1. Configuration classique du groupe de disponibilité AlwaysOn
 
-Si vous n’avez pas besoin d’envisager une récupération d’urgence, un réplica dans un second centre de données est superflu. Si vous devez améliorer la haute disponibilité, vous pouvez avoir davantage de réplicas synchrones dans le même centre de données principal.
+Si vous n’avez pas besoin d’envisager une reprise d’activité, un réplica dans un second centre de données est superflu. Si vous devez améliorer la haute disponibilité, vous pouvez avoir davantage de réplicas synchrones dans le même centre de données principal.
 
 Il est donc important de tenir compte des scénarios et des impératifs, et de choisir le nombre de réplicas synchrones et asynchrones nécessaires, ainsi que le centre de données devant les accueillir.
 
@@ -92,7 +92,7 @@ Cette section couvre les tâches suivantes.
 
 Comme l’indique la figure 1 de la section précédente, la solution décrite dans cet article inclut le cluster de basculement Windows Server (WSFC). Nous devons configurer le cluster WSFC, car SQL AlwaysOn en dépend pour la détection des défaillances et le basculement.
 
-Le cluster WSFC est une fonctionnalité destinée à améliorer la haute disponibilité des applications et des services. Il se compose d’un groupe d’instances de Windows Server indépendantes sur lesquelles s’exécute le service de cluster de basculement Microsoft. Les instances de Windows Server (parfois appelées « nœuds ») sont connectées afin qu’elles puissent communiquer entre elles, rendant ainsi possible la détection de défaillance. Le cluster WSFC fournit des fonctionnalités de détection de défaillance et de basculement. Si un nœud ou un service échoue dans le cluster, la défaillance est détectée, puis un autre nœud commence automatiquement ou manuellement à fournir les services hébergés sur le nœud défaillant. Ainsi, les utilisateurs ne connaissent que des interruptions minimales des services, dont la disponibilité se trouve améliorée.  
+Le cluster WSFC est une fonctionnalité destinée à améliorer la haute disponibilité des applications et des services. Il se compose d’un groupe d’instances de Windows Server indépendantes sur lesquelles s’exécute le service de cluster de basculement Microsoft. Les instances de Windows Server (parfois appelées « nœuds ») sont connectées afin qu’elles puissent communiquer entre elles, rendant ainsi possible la détection de défaillance. Le cluster WSFC fournit des fonctionnalités de détection de défaillance et de basculement. Si un nœud ou un service échoue dans le cluster, la défaillance est détectée, puis un autre nœud commence automatiquement ou manuellement à fournir les services hébergés sur le nœud défaillant. Ainsi, les utilisateurs ne connaissent que des interruptions minimales des services, dont la disponibilité se trouve améliorée.  
 
 ### <a name="prerequisites"></a>Conditions préalables requises
 
@@ -156,8 +156,8 @@ Une fois la fonctionnalité WSFC installée sur toutes les instances, vous pouve
 7.  Dans la page **Résumé**, recherchez les éventuels messages d’avertissement ou d’erreur.
 
     Vous devez corriger les erreurs. En revanche, les avertissements ne correspondent pas nécessairement à des problèmes. Un message d’avertissement signifie que « l’élément testé répond éventuellement aux exigences, mais que vous devez vérifier quelque chose ». Par exemple, la figure 7 présente un avertissement « Valider la latence de l’accès au disque », éventuellement lié au fait que le disque est temporairement occupé à d’autres tâches ; vous pouvez ignorer cet avertissement. Pour plus de détails, vous devez consulter la documentation en ligne de chaque avertissement et message d’erreur. Voir figure 7.
- 
-    ![Assistant Validation d’une configuration, page Validation](media/Fig6_ValidationTests.png)
+ 
+![Assistant Validation d’une configuration, page Validation](media/Fig6_ValidationTests.png)
 
     Figure 6
 
@@ -326,7 +326,7 @@ Un groupe de disponibilité ne peut être créé que sur des bases de données e
     d.  Entrez DHCP dans la zone de texte **Mode réseau**, puis cliquez sur **Suivant** pour continuer.
 
     >[!NOTE] 
-    >Si vous le souhaitez, vous pouvez choisir « Adresse IP statique » comme **Mode réseau**, puis entrer une adresse IP statique. Vous pouvez également entrer un port autre que 1433. 
+    >Si vous le souhaitez, vous pouvez choisir « Adresse IP statique » comme **Mode réseau**, puis entrer une adresse IP statique. Vous pouvez également entrer un port autre que 1433. 
 
     ![Configurer l’écouteur](media/Fig18_AvailabilityGroupCreateListener.png)
 
@@ -338,7 +338,7 @@ Un groupe de disponibilité ne peut être créé que sur des bases de données e
 
     ![Configurer la synchronisation des données](media/Fig19_AvailabilityGroupDataSync.png)
 
-    Figure 19 
+    Figure 19 
 
 10. Dans la page **Validation**, vérifiez que toutes les validations réussissent et corrigez les erreurs éventuelles. Cliquez sur **Suivant** pour continuer.
 
@@ -354,11 +354,11 @@ Un groupe de disponibilité ne peut être créé que sur des bases de données e
 
     ![Afficher le tableau de bord](media/Fig20_ShowDashboard.png)
 
-    Figure 20 
+    Figure 20 
 
 3.  Cliquez sur **Basculer** pour effectuer un basculement vers un réplica synchrone et un réplica asynchrone. Vous vérifiez ainsi que le basculement se déroule correctement.
 
- La configuration du groupe de disponibilité AlwaysOn est terminée.
+ La configuration du groupe de disponibilité AlwaysOn est terminée.
 
 Pour plus d’informations sur le groupe de disponibilité AlwaysOn, consultez [Groupes de disponibilité AlwaysOn SQL Server 2016](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/always-on-availability-groups-sql-server).
 

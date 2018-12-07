@@ -13,12 +13,12 @@ ms.assetid: 4a28d43d-eb5e-444d-aace-5df691f38709
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f339b8c73a2bed5a36f61fd1afea7f01afc433dc
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 8192bd6c074f5ed90868af9f256935e6222fc525
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659119"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396882"
 ---
 # <a name="how-to-work-with-clr-database-objects"></a>Procédure : utilisation des objets de base de données CLR
 Outre le langage de programmation Transact\-SQL, vous pouvez utiliser les langages .NET Framework pour créer des objets de base de données et récupérer et mettre à jour des données pour les bases de données SQL Server. Les objets de base de données écrits en code managé sont appelés objets de base de données Common Language Runtime (CLR) de SQL Server. Pour obtenir une explication des avantages de l'utilisation des objets de base de données CLR hébergés dans SQL Server, ainsi que sur le choix entre Transact\-SQL et CLR, consultez [Avantages de l'intégration du CLR](../relational-databases/clr-integration/clr-integration-overview.md) et [Avantages de l'utilisation du code managé pour créer des objets de base de données](https://msdn.microsoft.com/library/k2e1fb36.aspx).  
@@ -83,7 +83,7 @@ Pour plus d'informations sur les conditions de création d'objets de base de don
   
 1.  Dans l'**Explorateur d'objets SQL Server**, accédez à la base de données locale dans laquelle vous avez déployé votre projet.  
   
-2.  Par défaut, la fonctionnalité d'intégration du CLR est désactivée dans SQL Server. Pour utiliser des objets de base de données CLR, vous devez activer l'intégration du CLR. Pour cela, utilisez l'option CLR activé de la procédure stockée sp_configure. Pour plus d'informations, consultez la rubrique [Option CLR activé](../relational-databases/clr-integration/clr-integration-enabling.md).  
+2.  Par défaut, la fonctionnalité d'intégration du CLR est désactivée dans SQL Server. Pour utiliser des objets de base de données CLR, vous devez activer l'intégration du CLR. Pour cela, utilisez l’option « clr enabled » (CLR activé) de la procédure stockée sp_configure. Pour plus d'informations, consultez la rubrique [Option CLR activé](../relational-databases/clr-integration/clr-integration-enabling.md).  
   
     Cliquez avec le bouton droit sur la base de données et sélectionnez **Nouvelle requête**. Collez le code suivant dans le volet de requête et cliquez sur le bouton **Exécuter la requête**.  
   

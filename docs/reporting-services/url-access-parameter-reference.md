@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1c3e680a-83ea-4979-8e79-fa2337ae12a3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 701c91f58f4629385b70ec2abc750f0edb8d8059
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: e0848c1574a5ca46c1db922be72b0dceedf091ed
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813722"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515125"
 ---
 # <a name="url-access-parameter-reference"></a>Référence de paramètre d’accès URL
   Vous pouvez utiliser les paramètres suivants dans une URL afin de configurer l’apparence de vos rapports [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]. Les paramètres les plus courants sont répertoriés dans cette section. Les paramètres ne sont pas sensibles à la casse et commencent par le préfixe de paramètre *rs:* s’ils sont dirigés vers le serveur de rapports ou par *rc:* s’ils sont dirigés vers une visionneuse HTML. Vous pouvez également spécifier des paramètres spécifiques aux périphériques ou des extensions de rendu. Pour plus d’informations sur les paramètres spécifiques au périphérique, consultez [Spécifier les paramètres d’informations de périphérique dans une URL](../reporting-services/specify-device-information-settings-in-a-url.md).  
@@ -117,7 +117,7 @@ ms.locfileid: "51813722"
   
 -   *Stylesheet*: spécifie une feuille de style à appliquer à la visionneuse HTML.  
   
--   Paramètre d’informations de périphérique : spécifie un paramètre d’informations de périphérique sous la forme `rc:tag=value`, où *tag* est le nom d’un ensemble de paramètres d’informations de périphérique spécifique à l’extension de rendu actuellement utilisée (consultez la description du paramètre *Format* ). Par exemple, vous pouvez utiliser le paramètre d’informations de périphérique *OutputFormat* pour que l’extension de rendu IMAGE restitue le rapport sous la forme d’une image JPEG à l’aide des paramètres suivants dans la chaîne d’accès URL : `…&rs:Format=IMAGE&rc:OutputFormat=JPEG`. Pour plus d’informations sur tous les paramètres d’informations de périphérique spécifiques aux extensions, consultez [Paramètres d’informations de périphérique pour les extensions de rendu &#40;Reporting Services&#41;](../reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md).  
+-   Paramètre d’informations de périphérique : spécifie un paramètre d’informations de périphérique sous la forme `rc:tag=value`, où *tag* est le nom d’un ensemble de paramètres d’informations de périphérique spécifique à l’extension de rendu actuellement utilisée (consultez la description du paramètre *Format* ). Par exemple, vous pouvez utiliser le paramètre d’informations de périphérique *OutputFormat* pour que l’extension de rendu IMAGE restitue le rapport sous la forme d’une image JPEG à l’aide des paramètres suivants dans la chaîne d’accès URL : `...&rs:Format=IMAGE&rc:OutputFormat=JPEG`. Pour plus d’informations sur tous les paramètres d’informations de périphérique spécifiques aux extensions, consultez [Paramètres d’informations de périphérique pour les extensions de rendu &#40;Reporting Services&#41;](../reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md).  
   
 ##  <a name="bkmk_reportserver"></a> Commandes du serveur de rapports (rs:)  
  Les commandes de serveur de rapports sont précédées de *rs:* et sont utilisées pour cibler le serveur de rapports :  
@@ -310,7 +310,7 @@ ms.locfileid: "51813722"
   
 -   *AsyncRender*: spécifie si un rapport doit être ou non généré de façon asynchrone. La valeur par défaut est **true**; cette valeur indique un rendu de rapport asynchrone. La valeur doit être une valeur booléenne **true** ou **false**.  
   
--   *ParamMode*: contrôle la manière dont est affichée la zone de message de paramètre du composant WebPart Visionneuse de rapports en mode pleine page. La valeur par défaut est **Full**. Les valeurs valides sont :  
+-   *ParamMode* : contrôle la manière dont est affichée la zone de message de paramètre du composant WebPart Visionneuse de rapports en mode pleine page. La valeur par défaut est **Full**. Les valeurs valides sont :  
   
     -   **Full**: afficher la zone de message du paramètre.  
   
@@ -324,7 +324,7 @@ ms.locfileid: "51813722"
     https://myspsite/_vti_bin/reportserver?https://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:ParamMode=Collapsed  
     ```  
   
--   *DocMapMode*: contrôle la manière dont est affichée la zone de l’explorateur de documents du composant WebPart Visionneuse de rapports en mode pleine page. La valeur par défaut est **Full**. Les valeurs valides sont :  
+-   *DocMapMode* : contrôle la manière dont est affichée la zone de l’explorateur de documents du composant WebPart Visionneuse de rapports en mode pleine page. La valeur par défaut est **Full**. Les valeurs valides sont :  
   
     -   **Full**: afficher la zone d'explorateur de documents.  
   
@@ -332,7 +332,7 @@ ms.locfileid: "51813722"
   
     -   **Hidden**: masquer la zone d'explorateur de documents.  
   
--   *DockToolBar*: détermine si la barre d’outils du composant WebPart Visionneuse de rapports est ancrée en haut ou en bas. Les valeurs possibles sont **Top** et **Bottom**. La valeur par défaut est **Top**.  
+-   *DockToolBar* : détermine si la barre d’outils du composant WebPart Visionneuse de rapports est ancrée en haut ou en bas. Les valeurs possibles sont **Top** et **Bottom**. La valeur par défaut est **Top**.  
   
      Par exemple, en mode **SharePoint** , pour ancrer la barre d'outils dans la partie inférieure.  
   
@@ -340,7 +340,7 @@ ms.locfileid: "51813722"
     https://myspsite/_vti_bin/reportserver?https://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:DockToolBar=Bottom  
     ```  
   
--   *ToolBarItemsDisplayMode*: détermine les éléments de la barre d’outils à afficher. Il s'agit d'une valeur d'énumération de bits. Pour inclure un élément de la barre d'outils, ajoutez la valeur de l'élément à la valeur totale. Par exemple : pour aucun menu Actions, utilisez rv : ToolBarItemsDisplayMode=63 (ou 0x3F), qui est 1+2+4+8+16+32 ; pour les éléments du menu Actions uniquement, utilisez rv : ToolBarItemsDisplayMode=960 (ou 0x3C0). La valeur par défaut, qui inclut tous les éléments de la barre d’outils, est **-1**. Les valeurs valides sont :  
+-   *ToolBarItemsDisplayMode*: détermine les éléments de la barre d’outils à afficher. Il s'agit d'une valeur d'énumération de bits. Pour inclure un élément de la barre d’outils, ajoutez la valeur de l’élément à la valeur totale. Par exemple : pour aucun menu Actions, utilisez rv : ToolBarItemsDisplayMode=63 (ou 0x3F), qui est 1+2+4+8+16+32 ; pour les éléments du menu Actions uniquement, utilisez rv : ToolBarItemsDisplayMode=960 (ou 0x3C0). La valeur par défaut, qui inclut tous les éléments de la barre d’outils, est **-1**. Les valeurs valides sont :  
   
     -   1 (0x1) : le bouton **Retour**  
   

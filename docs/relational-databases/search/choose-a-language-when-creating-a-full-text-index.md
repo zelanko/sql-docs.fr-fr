@@ -21,12 +21,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ad984721f43f478f35adc53b68c3d207fb2a2527
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2aa416e1913925c095e75888a624021f7eb3543f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696608"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541267"
 ---
 # <a name="choose-a-language-when-creating-a-full-text-index"></a>Choisir une langue lors de la création d'un index de recherche en texte intégral
 
@@ -108,7 +108,7 @@ ms.locfileid: "47696608"
 ##  <a name="type"></a> Effet du type de colonne sur la recherche en texte intégral  
  Un autre point à prendre en considération dans le choix de la langue est lié au mode de représentation des données. Pour les données non stockées dans une colonne **varbinary(max)** , aucun filtrage particulier n’est effectué. À la place, le texte est généralement traité tel quel par le composant de séparation des mots.  
   
- Les analyseurs lexicaux sont, aussi, principalement conçus pour traiter le texte écrit. Par conséquent, si votre texte contient un balisage quelconque (par exemple du code HTML), vous risquez de ne pas obtenir une précision linguistique importante durant l'indexation et la recherche. Dans ce cas, vous avez deux possibilités : la méthode recommandée consiste simplement à stocker les données de texte dans la colonne **varbinary(max)** et à indiquer le type de document correspondant pour permettre un filtrage. Si ce choix ne vous convient pas, utilisez un analyseur lexical neutre et, si possible, ajoutez des données de balisage (par exemple « br » en langage HTML) à vos listes de mots parasites.  
+ Les analyseurs lexicaux sont, aussi, principalement conçus pour traiter le texte écrit. Par conséquent, si votre texte contient un balisage quelconque (par exemple du code HTML), vous risquez de ne pas obtenir une précision linguistique importante durant l'indexation et la recherche. Dans ce cas, vous avez deux possibilités : la méthode recommandée consiste simplement à stocker les données de texte dans la colonne **varbinary(max)** et à indiquer le type de document correspondant pour permettre un filtrage. Si ce choix ne vous convient pas, utilisez un analyseur lexical neutre et, si possible, ajoutez des données de balisage (par exemple « br » en langage HTML) à vos listes de mots parasites.  
   
 > [!NOTE]  
 >  L'identification de la racine linguistique n'intervient pas lorsque vous spécifiez la langue neutre.  

@@ -12,12 +12,12 @@ ms.date: 02/13/2018
 ms.author: giladm
 author: giladm
 manager: shaik
-ms.openlocfilehash: c3c9936c7a69ec2d4f54f1f4412c5b39f60035e4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 18495f81289981d4ce5a72ac943150bfea4c4f3d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47607097"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539134"
 ---
 # <a name="sql-data-discovery-and-classification"></a>Découverte et classification des données SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,16 +32,16 @@ La découverte et la classification de vos données les plus sensibles (professi
 
 ## <a id="subheading-1"></a>Vue d'ensemble
 La fonctionnalité Découverte et classification des données introduit un ensemble de services avancées, qui forment un nouveau paradigme de protection des informations SQL visant à protéger les données et pas seulement la base de données :
-* **Découverte et recommandations** : Le moteur de classification analyse votre base de données et identifie les colonnes contenant des données potentiellement sensibles. Il fournit ensuite un moyen simple d’examiner et appliquer les recommandations de classification appropriée, ainsi que de classifier manuellement des colonnes.
-* **Étiquetage** : Des étiquettes de classification de sensibilité peuvent être marquées de manière permanente sur les colonnes.
-* **Visibilité** : L’état de classification de la base de données peut être consulté dans un rapport détaillé imprimable/exportable à utiliser à des fins de conformité et d’audit, ainsi que pour d’autres besoins.
+* **Découverte et recommandations** : le moteur de classification analyse votre base de données et identifie les colonnes contenant des données potentiellement sensibles. Il fournit ensuite un moyen simple d’examiner et appliquer les recommandations de classification appropriée, ainsi que de classifier manuellement des colonnes.
+* **Étiquetage** : des étiquettes de classification de sensibilité peuvent être marquées de manière permanente sur les colonnes.
+* **Visibilité** : l’état de classification de la base de données peut être consulté dans un rapport détaillé imprimable/exportable à utiliser à des fins de conformité et d’audit, ainsi que pour d’autres besoins.
 
 ## <a id="subheading-2"></a>Découverte, classification et étiquetage des colonnes sensibles
 La section suivante décrit les étapes de découverte, classification et étiquetage des colonnes contenant des données sensibles dans votre base de données, ainsi que l’affichage de l’état de classification actuel de votre base de données et l’exportation de rapports.
 
 La classification comprend deux attributs de métadonnées :
-* Étiquettes : principaux attributs de classification, utilisés pour définir le niveau de sensibilité des données stockées dans la colonne.  
-* Types d’informations : fournissent un niveau de granularité supplémentaire dans le type de données stockées dans la colonne.
+* Étiquettes : principaux attributs de classification utilisés pour définir le niveau de sensibilité des données stockées dans la colonne.  
+* Types d’informations : fournissent un niveau de granularité supplémentaire dans le type de données stockées dans la colonne.
 
 <br>
 **Pour classifier votre base de données SQL Server :**

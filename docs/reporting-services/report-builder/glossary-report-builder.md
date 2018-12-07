@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 525820a2-7eba-4982-8518-e6db041b1fc6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6e96093d286fa9ca7d5d76fd30206043ef8396b9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bddefafa610718710a6b8a41d267ceb8e3b5515d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47857157"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541807"
 ---
 # <a name="glossary-report-builder"></a>Glossaire (Générateur de rapports)
   
@@ -155,7 +155,7 @@ ms.locfileid: "47857157"
 |jauge|Une jauge est une région de données qui présente les données sous forme de plage dans laquelle figure un indicateur qui pointe vers une valeur spécifique.|  
 |panneau de jauge|Élément externe englobant qui contient une ou plusieurs jauges radiales et linéaires.  Utilisez le panneau de jauge pour définir les propriétés qui s'appliquent à toutes les jauges d'un panneau de jauge.|  
 |pointeur de jauge|Aiguille, marqueur ou barre qui indique la valeur actuelle de la jauge.  Un pointeur de jauge est toujours lié à une échelle de jauge.|  
-|plage de jauge|Plage colorée qui représente une « zone critique », toujours délimitée par une valeur de début et une valeur de fin, sur l’échelle de jauge.|  
+|plage de jauge|Plage colorée qui représente une « zone critique », toujours délimitée par une valeur de début et une valeur de fin, sur l’échelle de jauge.|  
 |échelle de jauge|Plage de valeurs, délimitée par une valeur minimale et une valeur maximale, indiquée sur la jauge.  En règle générale, une échelle de jauge contient des étiquettes et des graduations qui permettent de lire avec précision la valeur indiquée par le pointeur de la jauge.|  
 |données géodésiques|Données qui spécifient des points, des lignes ou des zones sur une surface courbe.|  
 |données géographiques|Type de données spatiales SQL Server qui représente les données dans un système de coordonnées de monde sphérique, telles que des coordonnées de latitude et de longitude GPS.|  
@@ -186,7 +186,7 @@ ms.locfileid: "47857157"
 |Indicateur de performance clé|Voir le terme : indicateur de performance clé.|  
 |champ d'étiquette|Champ de dataset de rapport qui identifie une étiquette pour un champ clé correspondant. Les paramètres et régions de données peuvent afficher l'étiquette pour un champ clé à la place de la valeur.|  
 |latence|Durée s'écoulant entre l'application d'une modification de données sur un serveur et sa répercussion sur un autre serveur.|  
-|latitude|Coordonnée de latitude sous la forme d'une valeur de degré décimale en données WGS (World Geodetic System) 84. La plage valide se situe entre –90,0 et +90,0.|  
+|latitude|Coordonnée de latitude sous la forme d'une valeur de degré décimale en données WGS (World Geodetic System) 84. La plage valide se situe entre -90.0 et +90.0.|  
 |couche|Dans un élément de rapport cartographique, une couche spécifie le type et la présentation d'un seul type de données spatiales. Un élément de rapport cartographique est un conteneur pour plusieurs couches.|  
 |LCID|Numéro qui identifie un paramètre régional de Windows.|  
 |légende|Dans une région de données de type graphique, carte ou jauge du rapport, élément qui fournit un repère entre la présentation des données et les valeurs des données sous-jacentes.|  
@@ -199,7 +199,7 @@ ms.locfileid: "47857157"
 |fichier journal|Fichier ou ensemble de fichiers qui contient les enregistrements des modifications apportées à une base de données.|  
 |nom logique|Nom utilisé par SQL Server pour identifier un fichier.|  
 |opérateurs logiques|Opérateurs AND, OR et NOT. Ils servent à combiner des conditions de recherche dans les clauses WHERE.|  
-|longitude|Coordonnée sous la forme d'une valeur de degré décimale en données WGS (World Geodetic System) 84. La plage valide se situe entre –180.0 et +180.0.|  
+|longitude|Coordonnée sous la forme d'une valeur de degré décimale en données WGS (World Geodetic System) 84. La plage valide se situe entre -180.0 et +180.0.|  
 |relation plusieurs à plusieurs|Relation entre deux tables, dans laquelle les lignes de chaque table ont plusieurs correspondances dans la table associée. Par exemple, chaque facture peut contenir plusieurs produits, mais chaque produit peut apparaître sur plusieurs factures.|  
 |relation plusieurs-à-un|Relation entre deux tables, dans laquelle une ligne d'une table peut être associée à plusieurs lignes de l'autre table.|  
 |carte|Élément de rapport qui est un conteneur pour des titres, différents types de légendes et des couches.|  

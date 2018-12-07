@@ -14,12 +14,12 @@ ms.assetid: f5af876e-f937-4110-ba09-07999c35a699
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1e8d82ed31033d32c714889a2835df95a70bf589
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d49a3b4de2edfb3dc0c027ce54b5f6677d00abb6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808547"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535512"
 ---
 # <a name="summarize-or-aggregate-values-for-all-rows-in-a-table-visual-database-tools"></a>Synthétiser ou regrouper des valeurs de toutes les lignes d'une table (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,7 +47,7 @@ Si vous ajoutez une condition de recherche, vous pouvez agréger le sous-ensembl
   
 Lorsque vous créez une seule valeur d'agrégation pour toutes les lignes d'une table, seules les valeurs agrégées s'affichent. Par exemple, si vous totalisez la valeur de la colonne `price` de la table `titles` , les titres individuels, les noms des éditeurs, etc. ne sont pas affichés.  
  
- **!** Si vous calculez des sous-totaux, en d'autres termes si vous créez des groupes, vous pouvez afficher des valeurs de colonne pour chaque groupe. Pour plus d’informations, consultez [Regrouper des lignes dans les résultats de requête &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/group-rows-in-query-results-visual-database-tools.md).  
+ **!** Si vous calculez des sous-totaux, en d’autres termes si vous créez des groupes, vous pouvez afficher des valeurs de colonne pour chaque groupe. Pour plus d’informations, consultez [Regrouper des lignes dans les résultats de requête &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/group-rows-in-query-results-visual-database-tools.md).  
 
 ## <a name="aggregate-values-for-all-rows"></a>Agréger les valeurs de toutes les lignes  
   

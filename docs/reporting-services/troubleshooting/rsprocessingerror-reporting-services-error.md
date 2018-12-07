@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 414ee58a-8251-4367-9a8e-10c068d17280
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 29acfcbe2ff3b94abdd0edf52adf0f594fe768e6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3d13ce445269ceb4d6de0663a5e8789598b71c58
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47620818"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409590"
 ---
 # <a name="rsprocessingerror---reporting-services-error"></a>rsProcessingError - Erreur Reporting Services
     
@@ -109,7 +109,7 @@ ms.locfileid: "47620818"
   
  Vous pouvez également passer le nom d'une étendue spécifique à une fonction d'agrégation. L'étendue peut faire référence au nom d'un dataset, une région de données ou le nom d'une étendue plus élevée dans la hiérarchie de données. Cela s'applique aux messages suivants :  
   
--   L’étendue « *\<nom_étendue>*  » de l’élément *\<type_élément_rapport>* '*\<nom_élément_rapport>*' n’est pas valide. L'étendue doit être l'étendue actuelle ou doit se trouver dans l'étendue actuelle.  
+-   L’étendue « *\<nom_étendue>*  » de l’élément *\<type_élément_rapport>* « *\<nom_élément_rapport>*  » n’est pas valide. L'étendue doit être l'étendue actuelle ou doit se trouver dans l'étendue actuelle.  
   
 -   L’expression de la propriété *\<nom_propriété* de l’objet *\<type_élément_rapport>* '*\<nom_élément_rapport>*' possède un paramètre d’étendue qui n’est pas valide pour une fonction d’agrégation. Le paramètre d'étendue doit être défini sur une constante de chaîne qui est égale au nom d'un groupe conteneur, au nom d'une région de données conteneur, ou au nom d'un dataset.  
   

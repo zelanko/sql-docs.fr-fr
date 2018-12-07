@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: a7ead67d-1404-4e67-97e7-4c7b0d942070
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0a76c8c745101a6327be13f6865bcbc392cc40c2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 17819ebf76409602108fe6eaa656a44190a12ab0
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808757"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52414097"
 ---
 # <a name="report-server-executionlog-and-the-executionlog3-view"></a>Journal des exécutions du serveur de rapports et vue ExecutionLog3
   Le journal des exécutions du serveur de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]contient des informations sur les rapports qui sont exécutés sur le serveur ou sur plusieurs serveurs dans le cadre d’un déploiement évolutif en mode natif ou sur une batterie de serveurs SharePoint. Vous pouvez l'utiliser pour connaître la fréquence de demande d'un rapport, les formats de sortie les plus utilisés et le nombre de millisecondes de traitement consacré à chaque phrase du traitement. Le journal contient des informations sur le temps passé pour l'exécution d'une requête de dataset dans un rapport et le temps passé pour le traitement des données. Si vous êtes administrateur de serveur de rapports, vous pouvez passer en revue les informations du journal, identifier les tâches longues et faire des suggestions aux auteurs de rapports pour améliorer des zones du rapport (dataset ou traitement).  
@@ -26,7 +26,7 @@ ms.locfileid: "47808757"
 ##  <a name="bkmk_top"></a> Affichage des informations des journaux  
  Le serveur de rapports consigne les données sur l'exécution des rapports dans une table de base de données interne. Les informations de la table sont fournies par les vues de SQL Server.  
   
- Le journal d'exécution des rapports est stocké dans la base de données du serveur de rapports nommée par défaut **ReportServer**. Les vues SQL fournissent les informations associées au journal d'exécution. Les vues « 2 » et « 3 » ont été ajoutées dans les dernières versions et contiennent de nouveaux champs ou des champs avec des noms plus conviviaux que dans les versions précédentes. Les anciennes vues sont toujours présentes dans le produit de sorte que les applications personnalisées qui dépendent d'elles ne sont pas impactées. Si vous n'avez pas de dépendance sur une vue plus ancienne, par exemple ExecutionLog, il est recommandé d'utiliser la vue la plus récente, soit ExecutionLog**3**.  
+ Le journal d'exécution des rapports est stocké dans la base de données du serveur de rapports nommée par défaut **ReportServer**. Les vues SQL fournissent les informations associées au journal d'exécution. Les vues « 2 » et « 3 » ont été ajoutées dans les dernières versions et contiennent de nouveaux champs ou des champs avec des noms plus conviviaux que dans les versions précédentes. Les anciennes vues sont toujours présentes dans le produit de sorte que les applications personnalisées qui dépendent d'elles ne sont pas impactées. Si vous n'avez pas de dépendance sur une vue plus ancienne, par exemple ExecutionLog, il est recommandé d'utiliser la vue la plus récente, soit ExecutionLog**3**.  
   
  Dans cette rubrique :  
   
@@ -78,7 +78,7 @@ ms.locfileid: "47808757"
   
  **Pour activer la journalisation des exécutions :**  
   
-1.  Ouvrez SQL Server Management Studio avec des privilèges d'administrateur. Par exemple, cliquez avec le bouton droit sur l'icône de Management Studio et sélectionnez « Exécuter en tant qu'administrateur ».  
+1.  Ouvrez SQL Server Management Studio avec des privilèges d'administrateur. Par exemple, cliquez avec le bouton droit sur l’icône Management Studio et cliquez sur « Exécuter en tant qu’administrateur ».  
   
 2.  Connectez-vous au serveur de rapports souhaité.  
   
@@ -324,7 +324,7 @@ select * from ExecutionLog2 order by TimeStart DESC
 |colonne|Description|  
 |------------|-----------------|  
 |InstanceName|Nom de l'instance du serveur de rapports qui a géré la demande.|  
-|ReportPath|Structure du chemin d'accès au rapport.  Par exemple un rapport nommé « test » qui se trouve dans le dossier racine du gestionnaire de rapports, aura un ReportPath « /test ».<br /><br /> Un rapport nommé « test » qui est enregistré dans le dossier « samples » du gestionnaire de rapports, aura un ReportPath « /Samples/test/ »|  
+|ReportPath|Structure du chemin d'accès au rapport.  Par exemple, pour un rapport nommé « test » qui se trouve dans le dossier racine du gestionnaire de rapports, le ReportPath sera « /test ».<br /><br /> Pour un rapport nommé « test » qui est enregistré dans le dossier « samples » du gestionnaire de rapports, le ReportPath sera « /Samples/test/ »|  
 |UserName|Identificateur de l'utilisateur.|  
 |ExecutionID||  
 |RequestType|Type de demande (utilisateur ou système).|  

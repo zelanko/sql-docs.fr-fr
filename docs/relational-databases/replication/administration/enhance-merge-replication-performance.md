@@ -20,12 +20,12 @@ ms.assetid: f929226f-b83d-4900-a07c-a62f64527c7f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c4319663f79c07772bb3b72c9de9d4120f8d83ca
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c5cb5603b98701597847e1997c17714affa7b923
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47718977"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535284"
 ---
 # <a name="enhance-merge-replication-performance"></a>Améliorer les performances de réplication de fusion
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -93,7 +93,7 @@ ms.locfileid: "47718977"
   
 -   Échelonnez les planifications de synchronisation des abonnements.  
   
-     Si un grand nombre d'Abonnés se synchronisent avec un serveur de publication, envisagez d'échelonner les planifications de façon à ce que les Agents de fusion s'exécutent à des moments différents. Pour plus d'informations, voir [Specify Synchronization Schedules](../../../relational-databases/replication/specify-synchronization-schedules.md).  
+     Si un grand nombre d'Abonnés se synchronisent avec un serveur de publication, envisagez d'échelonner les planifications de façon à ce que les Agents de fusion s'exécutent à des moments différents. Pour plus d’informations, consultez [Spécifier des planifications de synchronisation](../../../relational-databases/replication/specify-synchronization-schedules.md).  
   
 ## <a name="merge-agent-parameters"></a>Paramètres de l'Agent de fusion  
  Pour plus d'informations sur l'Agent de fusion et sur ses paramètres, consultez [Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md).  
@@ -102,9 +102,9 @@ ms.locfileid: "47718977"
   
      La mise à niveau de l'Abonné vers [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ou version ultérieure met à niveau l'Agent de fusion utilisé par les abonnements sur cet Abonné. Pour tirer parti des nouvelles fonctionnalités et optimisations des performances, l'Agent de fusion [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ou version ultérieure est obligatoire.  
   
--   Si un abonnement est synchronisé par le biais d’une connexion rapide et si des modifications sont envoyées à partir du serveur de publication et à partir de l’Abonné, utilisez le paramètre **–ParallelUploadDownload** pour l’Agent de fusion.  
+-   Si un abonnement est synchronisé par le biais d’une connexion rapide et si des modifications sont envoyées à partir du serveur de publication et à partir de l’Abonné, utilisez le paramètre **-ParallelUploadDownload** pour l’Agent de fusion.  
   
-     [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] a introduit un nouveau paramètre pour l’Agent de fusion : **–ParallelUploadDownload**. La définition de ce paramètre permet à l'Agent de fusion de traiter en parallèle les modifications chargées vers le serveur de publication et celles qui sont téléchargées vers l'Abonné. Ceci est utile dans les environnements où les volumes sont élevés, avec une bande passante réseau élevée. Les paramètres des agents peuvent être spécifiés dans des profils d'agent et sur la ligne de commande. Pour plus d'informations, consultez :  
+     [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] a introduit un nouveau paramètre pour l’Agent de fusion : **-ParallelUploadDownload**. La définition de ce paramètre permet à l'Agent de fusion de traiter en parallèle les modifications chargées vers le serveur de publication et celles qui sont téléchargées vers l'Abonné. Ceci est utile dans les environnements où les volumes sont élevés, avec une bande passante réseau élevée. Les paramètres des agents peuvent être spécifiés dans des profils d'agent et sur la ligne de commande. Pour plus d'informations, consultez :  
   
     -   [Utiliser des profils d’agent de réplication](../../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)  
   

@@ -13,12 +13,12 @@ ms.assetid: 73000ef6-52a2-4dec-8320-0e79acf0c2c5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 988675dd00135599fa053acb5cb96d58e81d9e14
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ddbb902789cfc4cbef5135d024ba8f6e2e1c7e98
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47628577"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530271"
 ---
 # <a name="set-the-properties-of-a-data-flow-component"></a>Définir les propriétés d’un composant de flux de données
   Pour définir les propriétés de composants de flux de données, qui incluent des sources, des destinations et des transformations, utilisez l'une des fonctionnalités suivantes :  
@@ -249,7 +249,7 @@ Les objets de flux de données dans le modèle objet [!INCLUDE[msCoName](../../i
 |Propriété|Type de données|Description|  
 |--------------|---------------|-----------------|  
 |CodePage|Entier|Spécifie la page de codes pour les données de chaîne qui ne sont pas Unicode.|  
-|DataType|Integer (énumération)|Type de données [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] de la colonne. Pour plus d'informations, consultez [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).|  
+|DataType|Integer (énumération)|Type de données [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] de la colonne. Pour plus d’informations, consultez [Types de données Integration Services](../../integration-services/data-flow/integration-services-data-types.md).|  
 |Longueur|Entier|Longueur d'une colonne en caractères.|  
 |Précision|Entier|Précision d'une colonne numérique.|  
 |Échelle|Entier|Échelle d'une colonne numérique.|  

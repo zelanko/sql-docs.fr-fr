@@ -11,12 +11,12 @@ ms.assetid: 5281f080-53d5-4679-aa26-f4cd4ac7a2df
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2fbb7e2458432bb39ff452b703441fc320d2e645
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: a06dcac3487220a84d8a22f6c92e02859e91a6f8
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639576"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510059"
 ---
 # <a name="microsoft-connector-for-sap-bw"></a>Microsoft Connector pour SAP BW
   [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector pour SAP BW comprend un jeu de trois composants qui vous permettent d’extraire ou de charger des données dans un système SAP Netweaver BW version 7.  
@@ -35,11 +35,11 @@ ms.locfileid: "51639576"
 ## <a name="components"></a>Components  
  [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector pour SAP BW comprend les éléments suivants :  
   
--   **Source SAP BW**— La source SAP BW est un composant source de flux de données qui vous permet d'extraire des données d'un système SAP Netweaver BW version 7.  
+-   **Source SAP BW** : la source SAP BW est un composant source de flux de données qui vous permet d’extraire des données d’un système SAP Netweaver BW version 7.  
   
--   **Destination SAP BW**— La destination SAP BW est un composant de destination de flux de données qui vous permet de charger des données dans un système SAP Netweaver BW version 7.  
+-   **Destination SAP BW** : la destination SAP BW est un composant de destination de flux de données qui vous permet de charger des données dans un système SAP Netweaver BW version 7.  
   
--   **Gestionnaire de connexions SAP BW**— Le gestionnaire de connexions SAP BW connecte une source SAP BW ou une destination SAP BW à un système SAP Netweaver BW version 7.  
+-   **Gestionnaire de connexions SAP BW** : le gestionnaire de connexions SAP BW connecte une source SAP BW ou une destination SAP BW à un système SAP Netweaver BW version 7.  
   
  Pour obtenir la procédure pas à pas qui montre comment configurer et utiliser le gestionnaire de connexions, la source et la destination SAP BW, consultez le livre blanc [Utilisation de SQL Server Integration Services avec SAP BI 7.0](https://go.microsoft.com/fwlink/?LinkId=301897). Ce livre blanc explique également comment configurer les objets nécessaires dans SAP BW.  
   

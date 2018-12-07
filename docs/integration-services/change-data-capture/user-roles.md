@@ -11,12 +11,12 @@ ms.assetid: be0ec384-e03b-4483-96ca-02b289804d6a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: eadcee634436016626d6096544035e29c0d9c27e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 506987635969a1f9a6b6484e7deeda02712f9eb6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47599447"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398002"
 ---
 # <a name="user-roles"></a>Rôles d'utilisateur
   Cette section décrit les rôles d'utilisateur du service de capture de données modifiées pour Oracle par Attunity. Les rôles décrits sont des rôles de base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , les rôles Windows ou des rôles de base de données Oracle.  
@@ -129,7 +129,7 @@ ms.locfileid: "47599447"
   
  L'administrateur de base de données Oracle peut obtenir les scripts Oracle SQL à exécuter de façon à les évaluer avant de les exécuter. L'administrateur de base de données Oracle peut également exécuter directement des scripts Oracle SQL à partir de la console du concepteur de capture de données modifiées Oracle.  
   
- Si l'administrateur de base de données Oracle choisit d'utiliser la console du concepteur de capture de données modifiées Oracle, les informations d'identification de l'administrateur ne sont pas conservées sauf le contexte (dialogue) dans lequel elles ont été utilisées.  
+ Si l’administrateur de base de données Oracle choisit d’utiliser la console du concepteur de capture de données modifiées Oracle, les informations d’identification de l’administrateur ne sont pas conservées sauf le contexte (dialogue) dans lequel elles ont été utilisées.  
   
  L'administrateur de base de données Oracle travaille de concert avec l'administrateur de service de capture de données modifiées Oracle sur la configuration des instances Oracle CDC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   

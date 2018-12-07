@@ -11,12 +11,12 @@ ms.assetid: 9fdd06bf-5bc9-445c-95bf-709e0ca5989b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 447e132edc25da64984ec6fb165ab0d032cdb1ec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 19e2499bddf07720bdeba3ba49dd4a07258dd31b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747937"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396954"
 ---
 # <a name="token--ssis-expression"></a>TOKEN  (expression SSIS)
   Retourne un jeton (sous-chaîne) à partir d'une chaîne en fonction des délimiteurs spécifiés qui séparent les jetons de la chaîne et du numéro de jeton qui indique le jeton à retourner.  
@@ -32,7 +32,7 @@ TOKEN(character_expression, delimiter_string, occurrence)
  Chaîne qui contient des jetons séparés par des délimiteurs.  
   
  *delimiter_string*  
- Chaîne qui contient les caractères de délimitation. Par exemple, « ; , » contient trois caractères de délimitation : le point-virgule, un espace vide et une virgule.  
+ Chaîne qui contient les caractères de délimitation. Par exemple, « ; , » contient trois caractères de délimitation : le point-virgule, un espace vide et une virgule.  
   
  *occurrence*  
  Entier signé ou non signé qui spécifie le jeton à retourner. Par exemple, si vous spécifiez 3 comme valeur pour ce paramètre, le troisième jeton de la chaîne est retourné.  
@@ -58,13 +58,13 @@ TOKEN(character_expression, delimiter_string, occurrence)
 -   Vous pouvez utiliser des variables et des colonnes comme valeurs de tous les arguments de l'expression.  
   
 ## <a name="expression-examples"></a>Exemples d'expressions  
- Dans l’exemple suivant, la fonction TOKEN retourne « a ». La chaîne « a little white dog » comprend 4 jetons (« a », « little », « white », « dog ») séparés par le délimiteur «   » (espace). Le deuxième argument, une chaîne de délimitation, spécifie un seul délimiteur, l'espace, à utiliser dans le fractionnement de la chaîne d'entrée en jetons. Le dernier argument, 1, indique le premier jeton à retourner. Le premier jeton est « a » dans cet exemple de chaîne.  
+ Dans l’exemple suivant, la fonction TOKEN retourne « a ». La chaîne « a little white dog » comprend 4 jetons (« a », « little », « white », « dog ») séparés par le délimiteur «   » (espace). Le deuxième argument, une chaîne de délimitation, spécifie un seul délimiteur, l'espace, à utiliser dans le fractionnement de la chaîne d'entrée en jetons. Le dernier argument, 1, indique le premier jeton à retourner. Le premier jeton est « a » dans cet exemple de chaîne.  
   
 ```  
 TOKEN("a little white dog"," ",1)  
 ```  
   
- Dans l'exemple suivant, la fonction TOKEN retourne « dog ». La chaîne de délimitation de cet exemple contient 5 délimiteurs. La chaîne d'entrée contient 4 jetons : « a », « little », « white », « dog ».  
+ Dans l'exemple suivant, la fonction TOKEN retourne « dog ». La chaîne de délimitation de cet exemple contient 5 délimiteurs. La chaîne d’entrée contient 4 jetons : « a », « little », « white », « dog ».  
   
 ```  
 TOKEN("a:little|white dog","| ,.:",4)  
@@ -82,7 +82,7 @@ TOKEN("a little white dog"," ",99)
 TOKEN("a little white dog","|",1)  
 ```  
   
- Dans l'exemple suivant, la fonction TOKEN retourne « a ». Elle ignore tous les espaces de début.  
+ Dans l’exemple suivant, la fonction TOKEN retourne « a ». Elle ignore tous les espaces de début.  
   
 ```  
 TOKEN("        a little white dog", " ", 1)  
@@ -94,7 +94,7 @@ TOKEN("        a little white dog", " ", 1)
 TOKEN("2009/01/01", "/"), 1  
 ```  
   
- Dans l'exemple suivant, la fonction TOKEN retourne le nom de fichier figurant dans le chemin d'accès spécifié. Par exemple, si la valeur de User::Path est « c:\program files\data\myfile.txt », la fonction TOKEN retourne « myfile.txt ». La fonction TOKENCOUNT retourne 4 et la fonction TOKEN retourne le 4ème jeton, « myfile.txt ».  
+ Dans l'exemple suivant, la fonction TOKEN retourne le nom de fichier figurant dans le chemin d'accès spécifié. Par exemple, si la valeur de User::Path est « c:\program files\data\myfile.txt », la fonction TOKEN retourne « myfile.txt ». La fonction TOKENCOUNT retourne 4 et la fonction TOKEN retourne le 4ème jeton, « myfile.txt ».  
   
 ```  
 TOKEN(@[User::Path], "\\", TOKENCOUNT(@[User::Path], "\\"))  

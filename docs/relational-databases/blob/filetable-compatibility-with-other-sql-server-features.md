@@ -13,12 +13,12 @@ ms.assetid: f12a17e4-bd3d-42b0-b253-efc36876db37
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b3e0a936d4898988dfeacfefe1bf00058b16fa5a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4b8205fdb8dc5e869a9ef96ab4d76739e08ce386
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47757807"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52522369"
 ---
 # <a name="filetable-compatibility-with-other-sql-server-features"></a>Compatibilité de FileTable avec d'autres fonctionnalités SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ ms.locfileid: "47757807"
   
 -   En plus de ces impacts, les déclencheurs sur les FileTables doivent gérer quelques comportements supplémentaires :  
   
-    -   En cas d'opérations de mise à jour non transactionnelles sur le FileTable via le système de fichiers, il est possible que le contenu FILESTREAM soit verrouillé exclusivement par d'autres opérations Win32 et ne puisse pas être accessible en lecture/écriture via le corps du déclencheur. Dans ce cas, toute tentative d'accès au contenu FILESTREAM dans le corps du déclencheur peut provoquer une erreur de violation de partage. Les déclencheurs doivent être conçus pour gérer ces erreurs convenablement.  
+    -   En cas d'opérations de mise à jour non transactionnelles sur le FileTable via le système de fichiers, il est possible que le contenu FILESTREAM soit verrouillé exclusivement par d'autres opérations Win32 et ne puisse pas être accessible en lecture/écriture via le corps du déclencheur. Dans ce cas, toute tentative d’accès au contenu FILESTREAM dans le corps du déclencheur peut provoquer une erreur de violation de partage. Les déclencheurs doivent être conçus pour gérer ces erreurs convenablement.  
   
     -   L'image AFTER du FILESTREAM peut ne pas être stable, car dans certains cas, d'autres mises à jour non transactionnelles peuvent y écrire de manière active en même temps (en raison des modes de partage autorisés dans l'accès au système de fichiers).  
   
@@ -86,11 +86,11 @@ ms.locfileid: "47757807"
   
 -   La vue n'aura pas de sémantique FileTable. autrement dit les colonnes de l’affichage (notamment les colonnes d’attributs de fichier) se comportent comme des colonnes d’affichage normales sans sémantique spéciale. Ceci est également vrai pour les lignes qui représentent des fichiers/répertoires.  
   
--   La vue peut être modifiable selon la sémantique de la « vue modifiable », mais les contraintes de table sous-jacentes peuvent refuser les mises à jour comme dans la table.  
+-   La vue peut être modifiable selon la sémantique de la « vue modifiable », mais les contraintes de table sous-jacentes peuvent refuser les mises à jour comme dans la table.  
   
 -   Le chemin d'accès à un fichier peut être visualisé dans la vue en l'ajoutant en tant que colonne explicite dans la vue. Exemple :  
   
-     `CREATE VIEW MP3FILES AS SELECT column1, column2, …, GetFileNamespacePath() AS PATH, column3,…  FROM Documents`  
+     `CREATE VIEW MP3FILES AS SELECT column1, column2, ..., GetFileNamespacePath() AS PATH, column3,...  FROM Documents`  
   
  **Vues indexées**  
  Actuellement, les vues indexées ne peuvent pas inclure de colonnes FILESTREAM ni de colonnes calculées/calculées persistantes qui dépendent des colonnes FILESTREAM. Ce comportement reste également inchangé avec les vues définies sur le FileTable.  

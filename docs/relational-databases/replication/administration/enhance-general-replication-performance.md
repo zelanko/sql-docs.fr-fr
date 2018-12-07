@@ -22,12 +22,12 @@ ms.assetid: 895b1ad7-ffb9-4a5c-bda6-e1dfbd56d9bf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1c57fd45ac2633e8027e916055b2850033bf69e7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8d10759ad75dd1df48aa3f59d3c17ab9f632755d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47665037"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539186"
 ---
 # <a name="enhance-general-replication-performance"></a>Améliorer les performances générales de la réplication
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -98,7 +98,7 @@ ms.locfileid: "47665037"
   
      Les modifications peuvent être partitionnées en publiant des sous-ensembles de données sur chaque abonné, ou en utilisant une application qui dirige les modifications d'une ligne donnée sur un nœud donné :  
   
-    -   La réplication de fusion prend en charge la publication de sous-ensembles de données à l'aide de paramètres filtrés avec une seule publication. Pour plus d'informations, voir [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+    -   La réplication de fusion prend en charge la publication de sous-ensembles de données à l'aide de paramètres filtrés avec une seule publication. Pour plus d’informations, consultez [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
     -   La réplication transactionnelle prend en charge la publication de sous-ensembles de données à l'aide de filtres statiques avec plusieurs publications. Pour plus d’informations, consultez [Filtrer des données publiées](../../../relational-databases/replication/publish/filter-published-data.md).  
   
@@ -154,11 +154,11 @@ ms.locfileid: "47665037"
   
 -   Réduisez les niveaux de détail des Agents de réplication, sauf au cours des test initiaux, de l'analyse ou du débogage.  
   
-     Réduisez le paramètre **–HistoryVerboseLevel** et le paramètre **–OutputVerboseLevel** des Agents de distribution ou de fusion. Cela diminue la quantité de nouvelles lignes insérées pour le suivi de l'historique et des valeurs de sortie de l'Agent. En contrepartie, les messages d'historique antérieurs présentant le même état sont mis à jour à partir des nouvelles informations d'historique. Augmentez les niveaux de commentaire pour les tests, l'analyse et le débogage afin d'obtenir le plus d'informations possibles sur l'activité de l'Agent.  
+     Réduisez le paramètre **-HistoryVerboseLevel** et le paramètre **-OutputVerboseLevel** des Agents de distribution ou de fusion. Cela diminue la quantité de nouvelles lignes insérées pour le suivi de l'historique et des valeurs de sortie de l'Agent. En contrepartie, les messages d'historique antérieurs présentant le même état sont mis à jour à partir des nouvelles informations d'historique. Augmentez les niveaux de commentaire pour les tests, l'analyse et le débogage afin d'obtenir le plus d'informations possibles sur l'activité de l'Agent.  
   
--   Utilisez le paramètre **–MaxBCPThreads** de l’Agent d’instantané, de l’Agent de fusion et de l’Agent de distribution (le nombre de threads spécifié ne doit pas dépasser le nombre de processeurs sur l’ordinateur). Ce paramètre indique le nombre d'opérations de copie en bloc pouvant être effectuées en parallèle lorsque l'instantané est créé et appliqué.  
+-   Utilisez le paramètre **-MaxBCPThreads** de l’Agent d’instantané, de l’Agent de fusion et de l’Agent de distribution (le nombre de threads spécifié ne doit pas dépasser le nombre de processeurs sur l’ordinateur). Ce paramètre indique le nombre d'opérations de copie en bloc pouvant être effectuées en parallèle lorsque l'instantané est créé et appliqué.  
   
--   Utilisez le paramètre **–UseInprocLoader** de l’Agent de distribution et de l’Agent de fusion (il est impossible d’utiliser ce paramètre si des tables publiées comportent des colonnes XML). Ce paramètre entraîne l'utilisation de la commande BULK INSERT par l'Agent lorsque l'instantané est appliqué.  
+-   Utilisez le paramètre **-UseInprocLoader** de l’Agent de distribution et de l’Agent de fusion (il est impossible d’utiliser ce paramètre si des tables publiées comportent des colonnes XML). Ce paramètre entraîne l'utilisation de la commande BULK INSERT par l'Agent lorsque l'instantané est appliqué.  
   
  Les paramètres des agents peuvent être spécifiés dans des profils d'agent et sur la ligne de commande. Pour plus d'informations, consultez :  
   

@@ -11,12 +11,12 @@ ms.assetid: a96486e9-f79b-4b24-bfaf-56203dd0e435
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 040fea749664fb63fa2911a2d4fcaab5185af912
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 2dc364cc2665d800e311625d754716e4582b6b65
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638901"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52392862"
 ---
 # <a name="the-oracle-cdc-databases"></a>Bases de données de capture de données modifiées Oracle
   Une instance Oracle CDC est associée à une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par le même nom sur l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cible. Cette base de données est appelée base de données de capture de données modifiées Oracle (ou base de données CDC).  
@@ -115,7 +115,7 @@ ms.locfileid: "51638901"
 |target_max_batched_transactions|100|1|1000|True|Nombre maximal de transactions Oracle qui peuvent être traitées comme une transaction avec mise à jour de tables SQL Server CT.|  
 |target_idle_lsn_update_interval|10|0|1|False|Intervalle (en secondes) de mise à jour de la table **lsn_time_mapping** quand les tables capturées n’ont aucune activité.|  
 |trace_retention_period|24|1|24*31|False|Durée (en heures pour conserver les messages dans la table de trace).|  
-|sql_reconnect_interval|2|2|3600|False|Délai (en secondes) qui doit s'écouler avant la reconnexion à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cet intervalle est utilisé en plus du délai d'attente de connexion du client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
+|sql_reconnect_interval|2|2|3600|False|Délai (en secondes) qui doit s'écouler avant la reconnexion à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cet intervalle est utilisé en plus du délai d’attente de connexion du client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |sql_reconnect_limit|-1|-1|-1|False|Nombre maximal de reconnexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La valeur par défaut -1 signifie que le processus tente de se reconnecter jusqu'à ce qu'il s'arrête.|  
 |cdc_restart_limit|6|-1|3600|False|Dans la plupart des cas, le service de capture de données modifiées redémarre automatiquement une instance CDC qui s'est terminée de façon anormale. Cette propriété définit après combien d'échecs par heure le service cesse de redémarrer l'instance. La valeur -1 signifie que l'instance doit toujours être redémarrée.<br /><br /> Le service retourne pour redémarrer l'instance après toute mise à jour de la table de configuration.|  
 |cdc_memory_report|0|0|1000|False|Si la valeur du paramètre a été modifiée, l'instance CDC imprime son rapport mémoire sur la table de trace.|  

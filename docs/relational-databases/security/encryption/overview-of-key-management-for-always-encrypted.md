@@ -12,12 +12,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4399368e139d9ba6875e7b724c2c401bab8b7615
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b9250b8e8ceb392973c5799d8cf473d8b94a267b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47790228"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535389"
 ---
 # <a name="overview-of-key-management-for-always-encrypted"></a>Vue d’ensemble de la gestion des clés pour Always Encrypted
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ Le processus de gestion de clés implique les tâches principales suivantes :
 
 - **Mise en service des clés** : création des clés physiques dans un magasin de clés approuvé (par exemple dans le Magasin de certificats Windows, Azure Key Vault ou un module de sécurité matériel), chiffrement de clés de chiffrement de colonne avec des clés principales de colonne, et création de métadonnées pour les deux types de clés dans la base de données.
 
-- **Permutation des clés** : remplacement périodique d’une clé existante par une nouvelle clé. Vous devrez peut-être effectuer la permutation d’une clé si elle a été compromise, ou pour vous conformer aux stratégies ou aux réglementations de conformité de votre organisation qui régissent la permutation des clés de chiffrement. 
+- **Permutation des clés** : remplacement périodique d’une clé existante par une nouvelle clé. Vous devrez peut-être permuter une clé si elle a été compromise, ou pour vous conformer aux stratégies ou aux réglementations de conformité de votre organisation qui régissent la permutation des clés de chiffrement. 
 
 
 ## <a name="KeyManagementRoles"></a> Rôles de gestion de clés
@@ -52,7 +52,7 @@ Le processus de gestion de clés implique les tâches principales suivantes :
 Deux rôles d’utilisateurs distincts gèrent les clés Always Encrypted, les administrateurs de sécurité et les administrateurs de base de données :
 
 - **Administrateur de sécurité** : génère des clés de chiffrement de colonne et des clés principales de colonne, et gère les magasins de clés contenant les clés principales de colonne. Pour effectuer ces tâches, un administrateur de sécurité doit pouvoir accéder aux clés et au magasin de clés, mais il n’a pas besoin de l’accès à la base de données.
-- **Administrateur de base de données** : gère les métadonnées relatives aux clés dans la base de données. Pour effectuer les tâches de gestion de clés, un administrateur de base de données doit pouvoir gérer les métadonnées de clés dans la base de données, mais il n’a pas besoin de l’accès aux clés ou au magasin de clés contenant les clés principales de colonne.
+- **Administrateur de base de données** : gère les métadonnées relatives aux clés dans la base de données. Pour effectuer les tâches de gestion de clés, un administrateur de base de données doit pouvoir gérer les métadonnées de clés dans la base de données, mais il n’a pas besoin de l’accès aux clés ou au magasin de clés contenant les clés principales de colonne.
 
 Si l’on considère les rôles ci-dessus, il existe deux façons d’effectuer des tâches de gestion de clés pour Always Encrypted : *avec séparation des rôles*et *sans séparation des rôles*. En fonction des besoins de votre organisation, vous pouvez sélectionner le processus de gestion de clés qui correspond le mieux à vos besoins.
 
@@ -70,14 +70,14 @@ Quand les clés Always Encrypted sont gérées sans séparation des rôles, une 
 
 Vous pouvez gérer les clés Always Encrypted à l’aide de [SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/ms174173.aspx) et [PowerShell](../../scripting/sql-server-powershell.md):
 
-- **SQL Server Management Studio (SSMS)** : fournit des boîtes de dialogue et des Assistants qui combinent des tâches impliquant l’accès au magasin de clés et l’accès à la base de données. SSMS ne prend pas en charge la séparation des rôles, mais il simplifie la configuration des clés. Pour plus d’informations sur la gestion des clés à l’aide de SSMS, consultez :
+- **SQL Server Management Studio (SSMS)**  : fournit des boîtes de dialogue et des Assistants qui combinent des tâches impliquant l’accès au magasin de clés et l’accès à la base de données. SSMS ne prend pas en charge la séparation des rôles, mais il simplifie la configuration des clés. Pour plus d’informations sur la gestion des clés à l’aide de SSMS, consultez :
     - [Approvisionnement des clés principales de colonne](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md#provisioncmk)
     - [Approvisionnement des clés de chiffrement de colonne](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md#provisioncek)
     - [Permutation des clés principales de colonne](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md#rotatecmk)
     - [Permutation des clés de chiffrement de colonne](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md#rotatecek)
 
 
-- **SQL Server PowerShell** : inclut des applets de commande pour la gestion des clés Always Encrypted avec et sans séparation des rôles. Pour plus d'informations, consultez :
+- **SQL Server PowerShell** : inclut des applets de commande pour la gestion des clés Always Encrypted avec et sans séparation des rôles. Pour plus d'informations, consultez :
     - [Configurer des clés Always Encrypted à l’aide de PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md)
     - [Permuter des clés Always Encrypted à l’aide de PowerShell](../../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md)
 
@@ -93,7 +93,7 @@ L’objectif principal d’Always Encrypted consiste à garantir la sécurité d
 
 Pour qu’Always Encrypted soit efficace contre ces types d’attaques, votre processus de gestion de clés doit garantir que les clés principales de colonne et les clés de chiffrement de colonne, ainsi que les informations d’identification pour l’accès à un magasin de clé contenant les clés principales de colonne, ne sont jamais révélées à un intrus potentiel. Voici quelques recommandations à suivre :
 
-- Ne générez jamais de clés principales de colonne ou de clés de chiffrement de colonne sur un ordinateur qui héberge votre base de données. Au lieu de cela, générez les clés sur un ordinateur distinct dédié à la gestion de clés ou hébergeant des applications qui auront besoin d’un accès aux clés. Cela signifie que **vous ne devez jamais exécuter les outils utilisés pour générer les clés sur l’ordinateur qui héberge votre base de données** , car si un intrus accède à un ordinateur utilisé pour mettre en service ou gérer vos clés Always Encrypted, il risque d’obtenir vos clés, même si elles apparaissent uniquement dans la mémoire de l’outil pendant une courte durée.
+- Ne générez jamais de clés principales de colonne ou de clés de chiffrement de colonne sur un ordinateur qui héberge votre base de données. Au lieu de cela, générez les clés sur un ordinateur distinct dédié à la gestion de clés ou hébergeant des applications qui auront besoin d’un accès aux clés. Cela signifie que **vous ne devez jamais exécuter les outils utilisés pour générer les clés sur l’ordinateur qui héberge votre base de données** car, si un intrus accède à un ordinateur utilisé pour provisionner ou gérer vos clés Always Encrypted, il risque d’obtenir vos clés, même si elles apparaissent uniquement dans la mémoire de l’outil pendant une courte durée.
 - Pour vous assurer que votre processus de gestion de clés ne révèle pas par inadvertance les clés principales de colonne ou les clés de chiffrement de colonne, vous devez impérativement identifier les adversaires potentiels et les menaces de sécurité avant de définir et d’implémenter un processus de gestion de clés. Par exemple, si votre objectif est de vous assurer que les administrateurs de base de données n’ont pas accès aux données sensibles, un administrateur de base de données ne doit pas être responsable de la génération des clés. En revanche, un administrateur de base de données *peut* gérer les métadonnées de clés dans la base de données, puisqu’elles ne contiennent pas les clés en clair.
 
 ## <a name="next-steps"></a>Next Steps

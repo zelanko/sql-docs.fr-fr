@@ -12,12 +12,12 @@ ms.assetid: 83a03b85-ea7f-4b4a-b19b-f7eca534ffae
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 8ddcd6d754ce1b760d91462847b796e4ec8de933
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 235c64cf0920ec27bedd4ba032f742e206e6e78a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47594607"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52390354"
 ---
 # <a name="test-a-user39s-permissions-master-data-services"></a>Tester les autorisations d’un utilisateur (Master Data Services)
 
@@ -25,7 +25,7 @@ ms.locfileid: "47594607"
 
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], vous pouvez créer un utilisateur de test et vous connecter à l'application Web pour tester les autorisations. Lorsqu'un utilisateur tente d'accéder à l'URL [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] , les informations d'identification de l'utilisateur sont authentifiées. Dans Internet Explorer, les paramètres de sécurité déterminent si cette opération se produit automatiquement ou si l'utilisateur doit entrer un nom d'utilisateur et un mot de passe. Pour modifier ces paramètres, procédez comme suit :  
   
-### <a name="to-test-a-users-security"></a>Pour tester la sécurité d'un utilisateur  
+### <a name="to-test-a-users-security"></a>Pour tester la sécurité d’un utilisateur  
   
 1.  Dans Internet Explorer 7 et version ultérieure, cliquez sur **Outils**, sur **Options Internet**, puis sur l'onglet **Sécurité** .  
   

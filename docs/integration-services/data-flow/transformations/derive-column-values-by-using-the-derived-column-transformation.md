@@ -16,12 +16,12 @@ ms.assetid: 28b07746-fc6f-42b2-b741-9de6fac3f29c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cbc19d879e52f758f168cc7dce0e5bb5db75db9e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dafef2f6008e924bceda759404d0be23e920c3f1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47614547"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534611"
 ---
 # <a name="derive-column-values-by-using-the-derived-column-transformation"></a>Dériver les valeurs de colonnes à l'aide de la transformation de colonne dérivée
   Pour pouvoir ajouter et configurer une transformation de colonne dérivée, le package doit inclure au moins une tâche de flux de données et une source.  
@@ -61,7 +61,7 @@ ms.locfileid: "47614547"
   
 ## <a name="see-also"></a> Voir aussi  
  [Derived Column Transformation](../../../integration-services/data-flow/transformations/derived-column-transformation.md)   
- [Types de données d’Integration Services](../../../integration-services/data-flow/integration-services-data-types.md)   
+ [Types de données d'Integration Services](../../../integration-services/data-flow/integration-services-data-types.md)   
  [Transformations Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Chemins Integration Services](../../../integration-services/data-flow/integration-services-paths.md)   
  [Tâche de flux de données](../../../integration-services/control-flow/data-flow-task.md)   

@@ -24,12 +24,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1c5e3e3e1cdfda5126392e6295fc45cf29b9f507
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 6fb94ddf437439fe2dcb414fb69f3049d1a4dbd9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657078"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513820"
 ---
 # <a name="export-a-data-tier-application"></a>Exporter une application de la couche Données
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "51657078"
 ## <a name="before-you-begin"></a>Avant de commencer  
  Le processus d'exportation génère un fichier d'exportation DAC en deux étapes.  
   
-1.  L'exportation génère une définition de la DAC dans le fichier d'exportation (fichier BACPAC), de la même manière que l'extraction d'une DAC génère une définition de la DAC dans un fichier de package DAC. La définition de la DAC exportée inclut tous les objets de la base de données active. Si le processus d'exportation est exécuté sur une base de données à l'origine déployée à partir de la DAC et si des modifications ont été apportées directement à la base de données après le déploiement, la définition exportée correspond au jeu d'objets dans la base de données, pas à ce qui a été défini dans la DAC d'origine.  
+1.  L’exportation génère une définition de la DAC dans le fichier d’exportation (fichier BACPAC), de la même manière que l’extraction d’une DAC génère une définition de la DAC dans un fichier de package DAC. La définition de la DAC exportée inclut tous les objets de la base de données active. Si le processus d'exportation est exécuté sur une base de données à l'origine déployée à partir de la DAC et si des modifications ont été apportées directement à la base de données après le déploiement, la définition exportée correspond au jeu d'objets dans la base de données, pas à ce qui a été défini dans la DAC d'origine.  
   
 2.  L'exportation copie en bloc les données de toutes les tables dans la base de données et les incorpore dans le fichier d'exportation.  
   
@@ -65,7 +65,7 @@ Sur Azure SQL DB, vous devez accorder **pour chaque base de données** l’autor
   
 3.  Cliquez avec le bouton droit sur le nom de la base de données.  
   
-4.  Cliquez sur **Tâches** , puis sélectionnez **Exporter une application de la couche Données…**  
+4.  Cliquez sur **Tâches**, puis sélectionnez **Exporter une application de la couche Données...**  
   
 5.  Renseignez les boîtes de dialogue de l'Assistant :  
   
@@ -90,12 +90,12 @@ Sur Azure SQL DB, vous devez accorder **pour chaque base de données** l’autor
   
  **Suivant** - Passe à la page **Sélectionner le package DAC** .  
   
- **Annuler** : annule l'opération et ferme l'Assistant.  
+ **Annuler** - Annule l’opération et ferme l’Assistant.  
   
 ##  <a name="Export_settings"></a> Page Paramètres d'exportation  
  Utilisez cette page pour indiquer l'emplacement où vous souhaitez créer le fichier BACPAC.  
   
--   **Enregistrer sur le disque local** - Crée un fichier de BACPAC dans un répertoire sur l’ordinateur local. Cliquez sur **Parcourir...** pour explorer l'ordinateur local, ou spécifiez le chemin d'accès dans l'espace fourni. Le chemin d'accès doit inclure un nom de fichier et l'extension .bacpac.  
+-   **Enregistrer sur le disque local** - Crée un fichier de BACPAC dans un répertoire sur l’ordinateur local. Cliquez sur **Parcourir...** pour explorer l’ordinateur local, ou spécifiez le chemin d’accès dans l’espace fourni. Le chemin d'accès doit inclure un nom de fichier et l'extension .bacpac.  
   
 -   **Enregistrer dans Windows Azure** - Crée un fichier BACPAC dans un conteneur Windows Azure. Vous devez vous connecter à un conteneur Windows Azure afin de valider cette option. Notez que cette option requiert également que vous spécifiiez un répertoire local pour le fichier temporaire. Notez que le fichier temporaire est créé à l'emplacement spécifié et qu'il y reste une fois l'opération terminée.  
   

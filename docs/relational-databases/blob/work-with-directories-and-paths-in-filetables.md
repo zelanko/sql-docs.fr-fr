@@ -13,12 +13,12 @@ ms.assetid: f1e45900-bea0-4f6f-924e-c11e1f98ab62
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2a229648a71d80c23145e61be35c3b3e8744578d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c13eb6089e9be42733782c54d757a0e3035fe6f7
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47802247"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418449"
 ---
 # <a name="work-with-directories-and-paths-in-filetables"></a>Travailler avec des répertoires et des chemins d'accès dans FileTables
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ GO
   
  `\\<machine>\<instance-level FILESTREAM share>\<database-level directory>\<FileTable directory>\`  
   
- Cette hiérarchie de répertoires forme la racine de l'espace de noms de fichiers du FileTable. Sous cette hiérarchie de répertoires, les données FILESTREAM pour le FileTable sont stockées en tant que fichiers, et comme sous-répertoires qui peuvent également contenir des fichiers et des sous-répertoires.  
+ Cette hiérarchie de répertoires forme la racine de l’espace de noms de fichiers du FileTable. Sous cette hiérarchie de répertoires, les données FILESTREAM pour le FileTable sont stockées en tant que fichiers, et comme sous-répertoires qui peuvent également contenir des fichiers et des sous-répertoires.  
   
  Il est important de se souvenir que la hiérarchie de répertoires créée sous le partage FILESTREAM au niveau de l'instance est une hiérarchie de répertoires virtuels. Cette hiérarchie est stockée dans la base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et n'est pas représentée physiquement dans le système de fichiers NTFS. Toutes les opérations qui accèdent à des fichiers et des répertoires sous le partage FILESTREAM et dans le FileTables qu'il contient sont interceptées et gérées par un composant de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] incorporé dans le système de fichiers.  
   

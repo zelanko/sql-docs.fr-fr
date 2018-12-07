@@ -14,12 +14,12 @@ ms.assetid: 9d922118-1412-4a9d-9c02-70d6c48d6c0d
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 49528d0fda3bbbe9798a4a7bdce2cbdd5b7369f1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 87d9d0ea6ea2310f305eb6cb58ec8e39ecab8649
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47820012"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52416670"
 ---
 # <a name="entity-dependencies-explorer"></a>Explorateur Dépendances d’entité
 
@@ -28,7 +28,7 @@ ms.locfileid: "47820012"
   
 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 2016 contient un nouvel explorateur, appelé Dépendances d’entité, qui permet de visualiser les relations entre les membres d’une entité dans un modèle, spécifiés par la valeur de leurs attributs basés sur un domaine (DBA), mais sans avoir à définir préalablement une hiérarchie dérivée.   
   
-Il vous aide à répondre à la question « qui utilise mon entité et comment ? ». La vue est similaire à la page de l’explorateur Hiérarchie dérivée, mais elle est plus inclusive. Elle montre toutes les relations DBA, pas seulement celles définies dans le cadre d’une hiérarchie particulière. Aucune définition de la hiérarchie n’est nécessaire, car la structure hiérarchique affichée est simplement déduite des attributs DBA existants.  
+Il vous aide à répondre à la question « qui utilise mon entité et comment ? ». La vue est similaire à la page de l’explorateur Hiérarchie dérivée, mais elle est plus inclusive. Elle montre toutes les relations DBA, pas seulement celles définies dans le cadre d’une hiérarchie particulière. Aucune définition de la hiérarchie n’est nécessaire, car la structure hiérarchique affichée est simplement déduite des attributs DBA existants.  
   
 Dans le menu de la page Explorateur, l’option Dépendances d’entité répertorie toutes les entités du modèle dont dépend au moins une entité (par exemple, au moins une entité a un DBA qui fait référence à l’entité répertoriée). Le nombre de dépendances (directes et indirectes) est indiqué en regard du nom de l’entité, et la liste est triée en fonction de ce nombre, les entités les plus référencées apparaissant en premier. La capture d’écran ci-dessous, prises à partir du modèle Client des [données exemples](https://msdn.microsoft.com/library/master-data-services-sample.aspx), indique que l’entité BigArea est référencée (directement ou indirectement) par 7 entités :  
   
@@ -42,7 +42,7 @@ Une entité peut être consommée directement par plusieurs entités. Dans l’e
   
 ![MDS_EntityDependencies_Entity_Node.jpg](../master-data-services/media/mds-entitydependencies-entity-node-jpg.jpg)  
   
-Ces nœuds de l’arborescence de conteneurs ont une icône de grille à gauche du nom d’entité, et la couleur du texte correspond au niveau dans la hiérarchie. L’exemple ci-dessus montre que l’entité SubRegion « CDSR {Canada} » a une référence DBA à l’entité Region « CDR {Canada} » qui fait référence à l’entité Area « CDA {Canada} », laquelle fait référence à l’entité BigArea « NAm {N. America} ».  
+Ces nœuds de l’arborescence de conteneurs ont une icône de grille à gauche du nom d’entité, et la couleur du texte correspond au niveau dans la hiérarchie. L’exemple ci-dessus montre que l’entité SubRegion « CDSR {Canada} » a une référence DBA à l’entité Region « CDR {Canada} » qui fait référence à l’entité Area « CDA {Canada} », laquelle fait référence à l’entité BigArea « NAm {N. America} ».  
   
 Cette vue est totalement modifiable, comme dans la page Explorateur de hiérarchies. Les relations parent-enfant sont modifiables dans l’arborescence par couper-coller ou glisser-déplacer de membres enfants d’un parent à un autre. Les autres valeurs d’attribut de membre peuvent être modifiées dans le panneau de détails à droite de l’arborescence.   
   

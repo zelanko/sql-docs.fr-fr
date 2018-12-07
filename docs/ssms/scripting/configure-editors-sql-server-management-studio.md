@@ -12,27 +12,27 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4fbc8d15cace6ea33f8b64936e18bae25a28708c
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 8a4d94524bfe9b991f59dfbe21a5160c5b726ef1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51702413"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52501986"
 ---
 # <a name="configure-editors-sql-server-management-studio"></a>Configurer des éditeurs (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   Vous pouvez personnaliser le fonctionnement des éditeurs [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] en configurant les options pour chaque éditeur.  
   
 ## <a name="settng-editor-options"></a>Définition des options d'éditeur  
- La plupart des options d'éditeur sont définies à l'aide du menu **Outils** , en sélectionnant **Options** pour afficher une boîte de dialogue **Options** . Dans la boîte de dialogue **Options** , ouvrez le nœud **Éditeur de texte** dans le volet gauche pour définir les options d'édition de code et de texte. Les nœuds sous Éditeur de texte s'appliquent à des éditeurs spécifiques :  
+ La plupart des options d’éditeur peuvent être définies dans le menu **Outils**, en sélectionnant **Options...** pour afficher la boîte de dialogue **Options**. Dans la boîte de dialogue **Options** , ouvrez le nœud **Éditeur de texte** dans le volet gauche pour définir les options d'édition de code et de texte. Les nœuds sous Éditeur de texte s'appliquent à des éditeurs spécifiques :  
   
-1.  **Tous les langages** - les options définies à l'aide de ce nœud s'appliquent à tous les éditeurs [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] . Vous pouvez remplacer ces paramètres en utilisant les autres nœuds pour définir différentes options pour un éditeur spécifique.  
+1.  **Tous les langages** : les options définies à l’aide de ce nœud s’appliquent à tous les éditeurs [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Vous pouvez remplacer ces paramètres en utilisant les autres nœuds pour définir différentes options pour un éditeur spécifique.  
   
-2.  **Texte brut** - les options définies à l'aide de ce nœud s'appliquent à MDX, DMX et aux éditeurs de texte.  
+2.  **Texte brut** : les options définies à l’aide de ce nœud s’appliquent aux éditeurs MDX, DMX ainsi qu’aux éditeurs de texte.  
   
-3.  **Transact-SQL** - les options définies à l’aide de ce nœud s’appliquent à l’éditeur de requête du moteur de base de données.  
+3.  **Transact-SQL** : les options définies à l’aide de ce nœud s’appliquent à l’éditeur de requête du moteur de base de données.  
   
-4.  **XML** - les options définies à l'aide de ce nœud s'appliquent à l'éditeur XML for Analysis.  
+4.  **XML** : les options définies à l’aide de ce nœud s’appliquent à l’éditeur XML for Analysis.  
   
  Ouvrez les nœuds **Exécution de la requête** ou **Résultats de la requête** pour personnaliser l'exécution des requêtes et la façon dont les résultats sont affichés.  
   

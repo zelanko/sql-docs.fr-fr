@@ -12,12 +12,12 @@ ms.assetid: 02405b21-3d4e-4c2d-b4b3-d7b1ec05edb4
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cd8f3051f1de73a8eabb60401af176a92a04c4d9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2d96408100616f6939c7a61ea7a76a69e8b4a1e7
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855867"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398713"
 ---
 # <a name="mssqlserver21898"></a>MSSQLSERVER_21898
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,5 +40,5 @@ ms.locfileid: "47855867"
 Exécutez la procédure stockée **sp_changedistpublisher** pour remplacer la base de données de distribution du nouveau serveur de publication et utiliser celle utilisée par le serveur de publication d’origine.  
   
 > [!NOTE]  
-> L’exécution de **sp_changedistpublisher** résout le problème si la base de données de distribution incorrecte a été configurée quand **sp_adddistpublisher** a été exécuté sur le serveur de distribution pour le serveur de publication. Toutefois, si le serveur de publication distant possède des publications existantes provenant d'une autre base de données de publication qui utilisent la base de données de distribution identifiée, cette modification n'est pas appropriée. La réplication utilisant la base de données de distribution nommée doit être systématiquement supprimée puis rétablie à l'aide de la base de données de distribution d'origine du serveur de publication pour que le nouveau serveur de publication fonctionne comme un hôte approprié.  
+> L’exécution de **sp_changedistpublisher** résout le problème si la base de données de distribution incorrecte a été configurée quand **sp_adddistpublisher** a été exécuté sur le serveur de distribution pour le serveur de publication. Toutefois, si le serveur de publication distant possède des publications existantes provenant d'une autre base de données de publication qui utilisent la base de données de distribution identifiée, cette modification n'est pas appropriée. La réplication utilisant la base de données de distribution nommée doit être systématiquement supprimée puis rétablie à l’aide de la base de données de distribution d’origine du serveur de publication pour que le nouveau serveur de publication fonctionne comme un hôte approprié.  
   

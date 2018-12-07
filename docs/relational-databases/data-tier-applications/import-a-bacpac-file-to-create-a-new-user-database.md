@@ -26,16 +26,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2227cb838c52bf309373a6d67f4d006841e30a4f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c92dc9aad30134f0d9b8b834798a416fb610e142
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673668"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521242"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>Importer un fichier BACPAC pour créer une nouvelle base de données utilisateur
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Importez un fichier d'application de couche Données (DAC) – un fichier .bacpac – pour créer une copie de la base de données d'origine, avec ses données, sur une nouvelle instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] ou vers [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. Les opérations d'exportation-importation peuvent être combinées pour migrer une DAC ou une base de données entre différentes instances, ou pour créer une sauvegarde logique, telles qu'une copie sur site d'une base de données déployée dans [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+  Importez un fichier d’application de couche Données (DAC), fichier portant l’extension .bacpac, pour créer une copie de la base de données d’origine, avec ses données, sur une nouvelle instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] ou vers [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. Les opérations d'exportation-importation peuvent être combinées pour migrer une DAC ou une base de données entre différentes instances, ou pour créer une sauvegarde logique, telles qu'une copie sur site d'une base de données déployée dans [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
 ## <a name="before-you-begin"></a>Avant de commencer  
  L'importation génère une nouvelle DAC en deux étapes.  
@@ -90,18 +90,18 @@ ms.locfileid: "51673668"
   
  **Options**  
   
--   **Ne plus afficher cette page** : cochez la case pour ne plus afficher la page Introduction à l'avenir.  
+-   **Ne plus afficher cette page.** - Activez la case à cocher pour ne plus afficher la page Introduction à l'avenir.  
   
--   **Suivant** – Passe à la page **Paramètres d'importation** .  
+-   **Suivant** : passe à la page **Paramètres d’importation**.  
   
--   **Annuler** – Annule l'opération et ferme l'Assistant.  
+-   **Annuler** : annule l’opération et ferme l’Assistant.  
   
 ###  <a name="Import_settings"></a> Page Paramètres d'importation  
  Utilisez cette page pour spécifier l'emplacement du fichier .bacpac à importer.  
   
--   **Importer à partir du disque local** – Cliquez sur **Parcourir...** pour explorer l'ordinateur local, ou entrez le chemin d'accès dans la zone réservée à cet effet. Le chemin d'accès doit inclure un nom de fichier et l'extension .bacpac.  
+-   **Importer à partir du disque local** : cliquez sur **Parcourir...** pour explorer l’ordinateur local, ou entrez le chemin d’accès dans la zone réservée à cet effet. Le chemin d'accès doit inclure un nom de fichier et l'extension .bacpac.  
   
--   **Importer à partir d’Azure** – Importe un fichier BACPAC à partir d’un conteneur Microsoft Azure. Vous devez vous connecter à un conteneur Microsoft Azure afin de valider cette option. Notez que cette option requiert également que vous spécifiiez un répertoire local pour le fichier temporaire. Le fichier temporaire est créé à l'emplacement spécifié et reste à cet endroit une fois l'opération terminée.  
+-   **Importer à partir d’Azure** : importe un fichier BACPAC à partir d’un conteneur Microsoft Azure. Vous devez vous connecter à un conteneur Microsoft Azure afin de valider cette option. Notez que cette option requiert également que vous spécifiiez un répertoire local pour le fichier temporaire. Le fichier temporaire est créé à l'emplacement spécifié et reste à cet endroit une fois l'opération terminée.  
   
      Lorsque vous parcourez Azure, vous pouvez basculer entre les conteneurs au sein d’un seul compte. Vous devez spécifier un seul fichier .bacpac pour continuer l'opération d'importation. Notez que vous pouvez trier les colonnes par **Nom**, **Taille**ou **Date de modification**.  
   
@@ -112,11 +112,11 @@ ms.locfileid: "51673668"
   
  **Pour une instance SQL Server locale :**  
   
--   **Nouveau nom de la base de données** – Fournissez un nom pour la base de données importée.  
+-   **Nouveau nom de la base de données** : fournissez un nom pour la base de données importée.  
   
--   **Chemin d'accès du fichier de données** – Fournissez un répertoire local pour les fichiers de données. Cliquez sur **Parcourir...** pour explorer l'ordinateur local, ou entrez le chemin d'accès dans la zone réservée à cet effet.  
+-   **Chemin d’accès du fichier de données** : fournissez un répertoire local pour les fichiers de données. Cliquez sur **Parcourir...** pour explorer l’ordinateur local, ou spécifiez le chemin d’accès dans l’espace fourni.  
   
--   **Chemin d'accès du fichier journal** – Spécifiez un répertoire local pour les fichiers journaux. Cliquez sur **Parcourir...** pour explorer l'ordinateur local, ou entrez le chemin d'accès dans la zone réservée à cet effet.  
+-   **Chemin d’accès du fichier journal** : spécifiez un répertoire local pour les fichiers journaux. Cliquez sur **Parcourir...** pour explorer l’ordinateur local, ou spécifiez le chemin d’accès dans l’espace fourni.  
   
  Pour continuer, cliquez sur **Suivant**.  
   

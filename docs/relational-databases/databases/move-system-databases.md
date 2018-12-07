@@ -28,12 +28,12 @@ ms.assetid: 72bb62ee-9602-4f71-be51-c466c1670878
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e1de19a956656b744b5f3e21e3efc21c971c6857
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: eb3ae1a8437ddf73b371f317d6a9c85f200cff8c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558816"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531480"
 ---
 # <a name="move-system-databases"></a>Déplacer des bases de données système
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -151,11 +151,11 @@ ms.locfileid: "51558816"
   
 3.  Dans la boîte de dialogue **Propriétés de SQL Server (***nom_instance***)** , cliquez sur l’onglet **Paramètres de démarrage**.  
   
-4.  Dans la zone **Paramètres existants** , sélectionnez le paramètre –d pour déplacer le fichier de données MASTER. Cliquez sur **Mettre à jour** pour enregistrer les modifications.  
+4.  Dans la zone **Paramètres existants**, sélectionnez le paramètre -d pour déplacer le fichier de données MASTER. Cliquez sur **Mettre à jour** pour enregistrer les modifications.  
   
      Dans la zone **Spécifiez un paramètre de démarrage** , modifiez le paramètre par le nouveau chemin d’accès de la base de données MASTER.  
   
-5.  Dans la zone **Paramètres existants** , sélectionnez le paramètre –l pour déplacer le fichier journal MASTER. Cliquez sur **Mettre à jour** pour enregistrer les modifications.  
+5.  Dans la zone **Paramètres existants**, sélectionnez le paramètre -l pour déplacer le fichier journal MASTER. Cliquez sur **Mettre à jour** pour enregistrer les modifications.  
   
      Dans la zone **Spécifiez un paramètre de démarrage** , modifiez le paramètre par le nouveau chemin d’accès de la base de données MASTER.  
   

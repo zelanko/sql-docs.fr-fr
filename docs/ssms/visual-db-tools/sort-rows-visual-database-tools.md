@@ -14,12 +14,12 @@ ms.assetid: 780ef467-f96e-4373-8235-6dacbedb05a2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b1c4cbf7909a6ab779d34be4595a0434bdf5812a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 06a68464cbc0eeaa5536deca73497229b0e0e435
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668227"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505359"
 ---
 # <a name="sort-rows-visual-database-tools"></a>Trier des lignes (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -62,7 +62,7 @@ Vous disposez de plusieurs méthodes pour trier les résultats d'une requête :
     ORDER BY price DESC  
     ```  
   
--   **Vous pouvez trier en fonction des colonnes dérivées** Par exemple, dans l'ensemble des résultats, chaque ligne contiendra le titre d'un livre, les livres les plus rentables à l'unité étant présentés en premier. L'instruction SQL obtenue peut se présenter de la manière suivante :  
+-   **Vous pouvez trier en fonction des colonnes dérivées** Par exemple, dans l’ensemble des résultats, chaque ligne contiendra le titre d’un livre, les livres les plus rentables à l’unité étant présentés en premier. L'instruction SQL obtenue peut se présenter de la manière suivante :  
   
     ```  
     SELECT title, price * royalty / 100 as royalty_per_unit  
@@ -74,7 +74,7 @@ Vous disposez de plusieurs méthodes pour trier les résultats d'une requête :
   
     Pour calculer une colonne dérivée, vous pouvez utiliser une syntaxe SQL (comme dans l'exemple précédent) ou une fonction définie par l'utilisateur qui retourne une valeur scalaire. Pour plus d'informations sur les fonctions définies par l'utilisateur, consultez la documentation SQL Server.  
   
--   **Vous pouvez trier des lignes groupées** Par exemple, dans l'ensemble des résultats, chaque ligne contiendra une ville et le nombre d'auteurs qui y résident — les villes comprenant le plus grand nombre d'auteurs apparaîtront en premier. L'instruction SQL obtenue peut se présenter de la manière suivante :  
+-   **Vous pouvez trier des lignes groupées** Par exemple, dans l’ensemble des résultats, chaque ligne contiendra une ville et le nombre d’auteurs qui y résident. Les villes comprenant le plus grand nombre d’auteurs seront affichées en premier. L'instruction SQL obtenue peut se présenter de la manière suivante :  
   
     ```  
     SELECT city, state, COUNT(*)  

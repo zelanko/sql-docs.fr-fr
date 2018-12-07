@@ -23,12 +23,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ed9b7d2b24b2687de6e5736e6ef2ca523c2ade6a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 801cdcf393ebadb9c0fd287fdd97e65cad87c284
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635957"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533009"
 ---
 # <a name="date-transact-sql"></a>date (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -80,10 +80,10 @@ Les tableaux suivants affichent les formats de littéraux de chaîne valides pou
   
 |Format XML W3C|Description|  
 |--------------------|-----------------|  
-|aaaa-mm-jjTZD|Spécifiquement pris en charge pour une utilisation XML/SOAP.<br /><br /> TZD est l'indicateur de fuseau horaire (Z ou +hh:mm ou -hh:mm) :<br /><br /> -   hh:mm représente le décalage de fuseau horaire. hh comprend deux chiffres, entre 0 et 14, qui représentent le nombre d'heures dans le décalage de fuseau horaire.<br />-   MM comprend deux chiffres, entre 0 et 59, qui représentent le nombre de minutes supplémentaires dans le décalage de fuseau horaire.<br />-   + (plus) ou – (moins) est le signe obligatoire du décalage de fuseau horaire. Cela indique si le décalage de fuseau horaire est ajouté au temps universel coordonné ou soustrait de celui-ci pour obtenir l'heure locale. La plage valide du décalage de fuseau horaire se situe entre -14:00 et +14:00.|  
+|aaaa-mm-jjTZD|Spécifiquement pris en charge pour une utilisation XML/SOAP.<br /><br /> TZD est l'indicateur de fuseau horaire (Z ou +hh:mm ou -hh:mm) :<br /><br /> -   hh:mm représente le décalage de fuseau horaire. hh comprend deux chiffres, entre 0 et 14, qui représentent le nombre d'heures dans le décalage de fuseau horaire.<br />-   MM comprend deux chiffres, entre 0 et 59, qui représentent le nombre de minutes supplémentaires dans le décalage de fuseau horaire.<br />-   + (plus) ou - (moins) est le signe obligatoire du décalage de fuseau horaire. Cela indique si le décalage de fuseau horaire est ajouté au temps universel coordonné ou soustrait de celui-ci pour obtenir l'heure locale. La plage valide du décalage de fuseau horaire se situe entre -14:00 et +14:00.|  
   
 ## <a name="ansi-and-iso-8601-compliance"></a>Conformité ANSI et ISO 8601  
-**date** est conforme à la définition de la norme SQL ANSI pour le calendrier grégorien : « NOTE 85 - Les types de données Datetime autorisent le stockage des dates au format grégorien dans la plage 0001–01–01 à 9999–12–31 ».
+**date** est conforme à la définition de la norme SQL ANSI pour le calendrier grégorien : « NOTE 85 - Les types de données Datetime autorisent le stockage des dates au format grégorien dans la plage 0001-01-01 CE à 9999-12-31 CE ».
   
 Le format de littéral de chaîne par défaut (utilisé pour les clients de bas niveau) s'alignera avec le format standard SQL qui est défini comme AAAA-MM-JJ. Ce format est le même que la définition ISO 8601 pour DATE.
   

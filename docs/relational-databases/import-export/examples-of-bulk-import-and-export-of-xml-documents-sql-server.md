@@ -19,12 +19,12 @@ ms.assetid: dff99404-a002-48ee-910e-f37f013d946d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 76859771490cf744db4dff1e247188f978426cfa
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 8bca6661ce0401cf5f24398e60f263a644584b7c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670598"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530555"
 ---
 # <a name="examples-of-bulk-import-and-export-of-xml-documents-sql-server"></a>Exemples d'importation et d'exportation en bloc de documents XML (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ Pour plus d'informations, consultez les rubriques ci-dessous.
 -  [E. Exportation en bloc de données XML](#bulk_export_xml_data)  
   
 ## <a name="binary_byte_stream"></a>Importation en bloc de données XML sous forme de flux d'octets binaires  
- Si vous importez en bloc des données XML à partir d'un fichier contenant la déclaration d'encodage à appliquer, spécifiez l'option SINGLE_BLOB dans la clause OPENROWSET(BULK…). Cette option permet à l’analyseur XML de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] d’importer les données conformément au schéma d’encodage spécifié dans la déclaration XML.  
+ Si vous importez en bloc des données XML à partir d’un fichier contenant la déclaration d’encodage à appliquer, spécifiez l’option SINGLE_BLOB dans la clause OPENROWSET(BULK...). Cette option permet à l’analyseur XML de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] d’importer les données conformément au schéma d’encodage spécifié dans la déclaration XML.  
   
 #### <a name="sample-table"></a>Exemple de table  
  Pour tester l’exemple A ci-dessous, créez l’exemple de table `T`.  
@@ -158,7 +158,7 @@ GO
   
  Pour résoudre ce problème, vous pouvez importer des données XML à partir d'un fichier de données qui contient une DTD à l'aide de la fonction `OPENROWSET(BULK...)` et en spécifiant l'option `CONVERT` dans la clause `SELECT` de la commande. La syntaxe de base pour la commande est la suivante :  
   
- `INSERT ... SELECT CONVERT(…) FROM OPENROWSET(BULK...)`  
+ `INSERT ... SELECT CONVERT(...) FROM OPENROWSET(BULK...)`  
   
 #### <a name="sample-data-file"></a>Fichier de données d'exemple  
  Avant de pouvoir tester cet exemple d’importation en bloc, créez un fichier (`C:\temp\Dtdfile.xml`) qui contient l’instance d’exemple suivant :  

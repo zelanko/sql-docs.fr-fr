@@ -31,12 +31,12 @@ ms.assetid: 41b9962c-0c71-4227-80a0-08fdc19f5fe4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8269d0b8913d0ccde1a351ee2489a7818b00c45e
-ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
+ms.openlocfilehash: b4bef219ec0e9bd4526b8f7c015a1800d9753656
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49336288"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529869"
 ---
 # <a name="output-clause-transact-sql"></a>Clause OUTPUT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -215,7 +215,7 @@ DELETE Sales.ShoppingCartItem
 ## <a name="parallelism"></a>Parallelism
  Une clause OUTPUT qui retourne des résultats au client utilise toujours un plan en série.
 
-Dans le contexte d’une base de données définie à un niveau de compatibilité de 130 ou supérieur, si une opération INSERT...SELECT utilise un indicateur WITH (TABLOCK) pour l’instruction SELECT et utilise également l’instruction OUTPUT…INTO pour insérer les résultats dans une table temporaire ou une table utilisateur, la table cible pour l’instruction INSERT…SELECT est éligible pour le parallélisme en fonction du coût des sous-arborescences.  La table cible référencée dans la clause OUTPUT INTO n’est pas éligible pour le parallélisme. 
+Dans le contexte d’une base de données définie à un niveau de compatibilité de 130 ou supérieur, si une opération INSERT...SELECT utilise un indicateur WITH (TABLOCK) pour l’instruction SELECT et utilise également l’instruction OUTPUT...INTO pour insérer les résultats dans une table temporaire ou une table utilisateur, la table cible pour l’instruction INSERT...SELECT est éligible pour le parallélisme en fonction du coût des sous-arborescences.  La table cible référencée dans la clause OUTPUT INTO n’est pas éligible pour le parallélisme. 
  
 ## <a name="triggers"></a>Déclencheurs  
  Les colonnes retournées depuis l'instruction OUTPUT illustrent les données, telles qu'elles sont après la fin de l'instruction INSERT, UPDATE ou DELETE mais avant l'exécution des déclencheurs.  

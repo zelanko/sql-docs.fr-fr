@@ -14,12 +14,12 @@ ms.assetid: 9e4060ba-80c3-468f-bccb-e12e99f672c2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f38f7da3ae5dc67a8f4282f38e5d8ebd6b110129
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: cf2d4565166dc94569a7bb3815ce3d69112116c6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699456"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518383"
 ---
 # <a name="indexes---keys-dialog-box-visual-database-tools"></a>Boîte de dialogue Index - Clés (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,7 +42,7 @@ Supprime la clé ou l’index sélectionné dans la liste **Clé ou index Primar
 Développée, elle affiche les propriétés **Colonnes**, **Est unique**et **Type**.  
   
 **Colonnes**  
-Répertorie les ordres de tri choisis pour les colonnes de la clé ou de l'index, et donne accès à une boîte de dialogue permettant de définir les ordres de tri. Pour afficher la boîte de dialogue, cliquez sur **Colonnes** , puis sur le bouton de sélection (...) qui apparaît à droite du champ de propriété.  
+Répertorie les ordres de tri choisis pour les colonnes de la clé ou de l'index, et donne accès à une boîte de dialogue permettant de définir les ordres de tri. Pour afficher la boîte de dialogue, cliquez sur **Colonnes**, puis sur le bouton de sélection (...) qui apparaît à droite du champ de propriété.  
   
 **Est unique**  
 Indique si les données entrées dans cet index ou cette clé doivent être uniques. Cette option n'est pas disponible pour les index XML.  
@@ -57,7 +57,7 @@ Développée, elle affiche les champs de propriété de **Nom** et **Description
 Indique le nom de la clé ou de l'index. Lorsqu'un nouvel index ou une nouvelle clé sont créés, ils obtiennent un nom par défaut basé sur la table affichée dans la fenêtre active du Concepteur de tables. Vous pouvez modifier le nom à tout moment.  
   
 **Description**  
-Fournit un endroit auquel décrire la clé ou l'index. Pour écrire une description plus détaillée, cliquez sur **Description** , puis sur le bouton de sélection **(...)** qui apparaît à droite du champ de propriété. Vous obtiendrez une zone d'écriture plus large.  
+Fournit un endroit auquel décrire la clé ou l'index. Pour écrire une description plus détaillée, cliquez sur **Description**, puis sur le bouton de sélection **(...)** qui apparaît à droite du champ de propriété. Vous obtiendrez une zone d'écriture plus large.  
   
 **Catégorie Concepteur de tables**  
 Développée, elle affiche des informations pour **Créer comme Clustered**.  

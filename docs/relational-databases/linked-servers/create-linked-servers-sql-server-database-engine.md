@@ -18,12 +18,12 @@ ms.assetid: 3228065d-de8f-4ece-a9b1-e06d3dca9310
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f057c890f5779bfb40591235fd8a870396ffeb90
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.openlocfilehash: 68ffba6177eb86944ad62cc4876effdd7a63af8c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512924"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52391243"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>Créer des serveurs liés (moteur de base de données SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -86,7 +86,7 @@ ms.locfileid: "51512924"
   
 3.  Dans la zone **Type de serveur** , sélectionnez **SQL Server** pour indiquer que le serveur lié est une autre instance de **SQL Server**.  
   
-4.  Dans la page **Sécurité** , spécifiez le contexte de sécurité qui sera utilisé lorsque le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] d'origine se connectera au serveur lié. Dans un environnement de domaine où les utilisateurs se connectent à l'aide de leurs connexions de domaine, sélectionner **Seront effectuées dans le contexte de sécurité de la connexion actuelle** est souvent le meilleur choix. Lorsque les utilisateurs se connectent au **SQL Server** d'origine en utilisant un compte de connexion **SQL Server** , le meilleur choix est souvent de sélectionner **Seront effectuées dans ce contexte de sécurité**, puis de fournir les informations d'identification nécessaires pour l'authentification sur le serveur lié.  
+4.  Dans la page **Sécurité** , spécifiez le contexte de sécurité qui sera utilisé lorsque le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] d'origine se connectera au serveur lié. Dans un environnement de domaine où les utilisateurs se connectent à l’aide de leurs connexions de domaine, la sélection de **Seront effectuées dans le contexte de sécurité de la connexion actuelle** est souvent le meilleur choix. Lorsque les utilisateurs se connectent au **SQL Server** d'origine en utilisant un compte de connexion **SQL Server** , le meilleur choix est souvent de sélectionner **Seront effectuées dans ce contexte de sécurité**, puis de fournir les informations d'identification nécessaires pour l'authentification sur le serveur lié.  
   
      **Connexion locale**  
      Affiche la connexion locale qui peut se connecter au serveur lié. La connexion locale peut être une connexion utilisant l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou une connexion utilisant l'authentification Windows. Utilisez cette liste pour restreindre la connexion à des connexions spécifiques ou pour autoriser certaines connexions à se connecter sous une connexion différente.  

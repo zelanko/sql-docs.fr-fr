@@ -24,12 +24,12 @@ ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 694f1c2d29ced11a4f66a05bd983fe704e1be241
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 8b172eb0635c54bf6b9e0289ac220676eb08fd9c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642376"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52411986"
 ---
 # <a name="data-flow-performance-features"></a>Fonctionnalités de performances de flux de données
   Cette rubrique offre des suggestions pour éviter les problèmes de performances les plus fréquents lors de la conception de packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Cette rubrique fournit également des informations sur les fonctionnalités et les outils que vous pouvez utiliser pour résoudre des problèmes liés aux performances des packages.  
@@ -183,7 +183,7 @@ ms.locfileid: "51642376"
   
 -   Article technique, [Les 10 meilleures pratiques pour SQL Server Integration Services](https://go.microsoft.com/fwlink/?LinkId=220818), sur le site sqlcat.com.  
   
--   Article technique et exemple, [« Distributeur de données équilibrées » pour SSIS](https://go.microsoft.com/fwlink/?LinkId=220822), sur le site sqlcat.com.  
+-   Article technique et exemple, [« Distributeur de données équilibrées » pour SSIS](https://go.microsoft.com/fwlink/?LinkId=220822), sur le site sqlcat.com.  
   
 -   Publication de blog [Résolution des problèmes de performances des packages SSIS](https://go.microsoft.com/fwlink/?LinkId=238156)sur blogs.msdn.com.  
   

@@ -13,22 +13,23 @@ helpviewer_keywords:
 - user-defined functions [SQL Server], creating
 - CREATE FUNCTION statement
 - valid statements [SQL Server]
+- UDF
+- TVF
 ms.assetid: f0d5dd10-73fd-4e05-9177-07f56552bdf7
 author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 98be7e368a48c495d65f44d01e1e2e4b15e23a4f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6b2ff8188f2733fd0467ac39266bc9f0510de621
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47738417"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515479"
 ---
 # <a name="create-user-defined-functions-database-engine"></a>Créer des fonctions définies par l'utilisateur (moteur de base de données)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
   Cette rubrique décrit comment créer une fonction définie par l’utilisateur (UDF) dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’aide de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
-
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
@@ -36,42 +37,42 @@ ms.locfileid: "47738417"
   
 -   Les fonctions définies par l'utilisateur ne permettent pas d'exécuter des actions qui modifient l'état des bases de données.  
   
--   Les fonctions définies par l'utilisateur ne peuvent pas contenir de clause OUTPUT INTO avec une table comme cible.  
+-   Les fonctions définies par l’utilisateur ne peuvent pas contenir de clause `OUTPUT INTO` avec une table comme cible.  
   
 -   Les fonctions définies par l'utilisateur ne peuvent pas renvoyer plusieurs jeux de résultats. Utilisez une procédure stockée si vous devez renvoyer plusieurs jeux de résultats.  
   
--   La gestion des erreurs est restreinte dans une fonction définie par l'utilisateur. Une fonction définie par l’utilisateur ne prend pas en charge TRY…CATCH, @ERROR ou RAISERROR.  
+-   La gestion des erreurs est restreinte dans une fonction définie par l'utilisateur. Une fonction UDF ne prend pas en charge `TRY...CATCH`, `@ERROR` ou `RAISERROR`.  
   
 -   Les fonctions définies par l'utilisateur ne peuvent pas appeler une procédure stockée, mais elles peuvent appeler une procédure stockée étendue.  
   
 -   Les fonctions définies par l'utilisateur ne peuvent pas utiliser des tables SQL dynamiques ou temporaires. Les variables de table sont autorisées.  
   
--   Les instructions SET ne sont pas autorisées dans une fonction définie par l'utilisateur.  
+-   Les instructions `SET` ne sont pas autorisées dans une fonction définie par l’utilisateur.  
   
--   La clause FOR XML n'est pas autorisée.  
+-   La clause `FOR XML` n’est pas autorisée.  
   
 -   Les fonctions définies par l'utilisateur peuvent être imbriquées ; en d'autres termes, une fonction définie par l'utilisateur peut en appeler une autre. Le niveau d'imbrication est incrémenté lorsque la fonction appelée commence à s'exécuter, et décrémenté lorsque l'exécution est terminée. Les fonctions définies par l'utilisateur peuvent être imbriquées jusqu'à 32 niveaux. Le dépassement des niveaux d'imbrication maximum autorisés, provoque l'échec de la totalité de la chaîne de fonctions appelantes. Toute référence à du code managé depuis une fonction Transact-SQL définie par l'utilisateur compte pour un niveau parmi les 32 niveaux d'imbrication possibles. Les méthodes appelées à partir du code managé ne comptent pas par rapport à cette limite.  
   
--   Les instructions Service Broker suivantes **ne peuvent pas être incluses** dans la définition d’une fonction Transact-SQL définie par l’utilisateur :  
+-   Les instructions Service Broker suivantes **ne peuvent pas être incluses** dans la définition d’une fonction [!INCLUDE[tsql](../../includes/tsql-md.md)] définie par l’utilisateur :  
   
-    -   BEGIN DIALOG CONVERSATION  
+    -   `BEGIN DIALOG CONVERSATION`  
   
-    -   END CONVERSATION  
+    -   `END CONVERSATION`  
   
-    -   GET CONVERSATION GROUP  
+    -   `GET CONVERSATION GROUP`  
   
-    -   MOVE CONVERSATION  
+    -   `MOVE CONVERSATION`  
   
-    -   RECEIVE  
+    -   `RECEIVE`  
   
-    -   SEND  
+    -   `SEND`  
   
 ###  <a name="Security"></a> Autorisations 
 
-Nécessite l'autorisation CREATE FUNCTION dans la base de données et l'autorisation ALTER sur le schéma dans lequel la fonction est en cours de création. Si la fonction spécifie un type défini par l'utilisateur, elle requiert l'autorisation EXECUTE sur le type.  
+Nécessite l’autorisation `CREATE FUNCTION` dans la base de données et l’autorisation `ALTER` sur le schéma dans lequel la fonction est créée. Si la fonction spécifie un type défini par l’utilisateur, elle nécessite l’autorisation `EXECUTE` sur le type.  
   
 ##  <a name="Scalar"></a> Fonctions scalaires  
- L'exemple suivant illustre la création d'une fonction scalaire à instructions multiples dans la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] . À partir d'une valeur d'entrée unique ( `ProductID`), la fonction retourne une valeur de donnée unique, en l'occurrence, la quantité totale du produit spécifié en stock.  
+ L’exemple suivant illustre la création d’une **fonction scalaire (fonction UDF scalaire)** à instructions multiples dans la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. À partir d'une valeur d'entrée unique ( `ProductID`), la fonction retourne une valeur de donnée unique, en l'occurrence, la quantité totale du produit spécifié en stock.  
   
 ```sql  
 IF OBJECT_ID (N'dbo.ufnGetInventoryStock', N'FN') IS NOT NULL  
@@ -100,9 +101,12 @@ SELECT ProductModelID, Name, dbo.ufnGetInventoryStock(ProductID)AS CurrentSupply
 FROM Production.Product  
 WHERE ProductModelID BETWEEN 75 and 80;  
 ```  
-  
+
+> [!NOTE]  
+> Pour obtenir des informations complémentaires et des exemples de fonctions scalaires, consultez [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md). 
+
 ##  <a name="TVF"></a> Fonctions table  
- L'exemple suivant crée une fonction table en ligne dans la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] . À partir d'un paramètre d'entrée unique (storeID), la fonction retourne les colonnes `ProductID`, `Name`, ainsi que le total cumulé des ventes ( `YTD Total` ) pour chaque produit vendu au magasin du client.  
+L’exemple suivant crée une **fonction table incluse** dans la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. À partir d'un paramètre d'entrée unique (storeID), la fonction retourne les colonnes `ProductID`, `Name`, ainsi que le total cumulé des ventes ( `YTD Total` ) pour chaque produit vendu au magasin du client.  
   
 ```sql  
 IF OBJECT_ID (N'Sales.ufn_SalesByStore', N'IF') IS NOT NULL  
@@ -123,13 +127,13 @@ RETURN
 );  
 ```  
   
- L'exemple suivant appelle la fonction et spécifie l'ID client 602.  
+L'exemple suivant appelle la fonction et spécifie l'ID client 602.  
   
 ```sql  
 SELECT * FROM Sales.ufn_SalesByStore (602);  
 ```  
   
- L'exemple suivant crée une fonction table dans la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] . À partir d'un paramètre d'entrée unique, `EmployeeID` , la fonction retourne la liste de tous les employés qui sont sous la responsabilité directe ou indirecte de l'employé spécifié. La fonction est ensuite appelée en spécifiant l'ID d'employé 19.  
+L’exemple suivant crée une **fonction table à instructions multiples** dans la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. À partir d'un paramètre d'entrée unique, `EmployeeID` , la fonction retourne la liste de tous les employés qui sont sous la responsabilité directe ou indirecte de l'employé spécifié. La fonction est ensuite appelée en spécifiant l'ID d'employé 19.  
   
 ```sql  
 IF OBJECT_ID (N'dbo.ufn_FindReports', N'TF') IS NOT NULL  
@@ -170,16 +174,42 @@ ON p.BusinessEntityID = e.BusinessEntityID
    RETURN  
 END;  
 GO  
--- Example invocation  
+```  
+  
+L’exemple suivant appelle la fonction et spécifie l’ID d’employé 1.  
+  
+```sql  
 SELECT EmployeeID, FirstName, LastName, JobTitle, RecursionLevel  
 FROM dbo.ufn_FindReports(1);  
 ```  
+
+> [!NOTE]  
+> Pour obtenir des informations complémentaires et des exemples de fonctions table incluses et de fonctions table à instructions multiples, consultez [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md). 
+
+## <a name="best-practices"></a>Bonnes pratiques  
+Si une fonction définie par l’utilisateur (UDF) n’est pas créée avec la clause `SCHEMABINDING`, les modifications apportées aux objets sous-jacents peuvent affecter la définition de la fonction et produire des résultats inattendus quand elle est appelée. Nous vous recommandons d'implémenter l'une des méthodes suivantes pour vous assurer que la fonction ne devient pas obsolète en raison des modifications apportées à ses objets sous-jacents :  
   
-## <a name="more-examples"></a>Plus d'exemples  
- - [Fonctions définies par l'utilisateur](../../relational-databases/user-defined-functions/user-defined-functions.md)   
- - [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md) 
- - [ALTER FUNCTION (Transact SQL)](../../tools/sql-server-profiler/start-sql-server-profiler.md) 
- - [DROP FUNCTION (Transact SQL)](../../tools/sql-server-profiler/start-sql-server-profiler.md)
- - [DROP PARTITION FUNCTION (Transact-SQL)](../../t-sql/statements/drop-partition-function-transact-sql.md)
- - Plus d’exemples dans la [communauté](https://www.bing.com/search?q=user%20defined%20function%20%22sql%20server%202016%22%20examples&qs=n&form=QBRE&pq=user%20defined%20function%20%22sql%20server%202016%22%20examples&sc=0-48&sp=-1&sk=&cvid=C3AD337125A840AD9EEFA3AAC36A3712)
+-   Spécifiez la clause `WITH SCHEMABINDING` au moment de créer la fonction UDF. Vous vous assurez ainsi que les objets référencés dans la définition de la fonction ne peuvent pas être modifiés sauf si la fonction est également modifiée.  
+  
+-   Exécutez la procédure stockée [sp_refreshsqlmodule](../../relational-databases/system-stored-procedures/sp-refreshsqlmodule-transact-sql.md) après avoir modifié tout objet spécifié dans la définition de la fonction UDF.  
+
+Si la fonction UDF que vous créez n’accède pas à des données, spécifiez l’option `SCHEMABINDING`. Elle empêche l’optimiseur de requête de générer des opérateurs de spool inutiles pour les plans de requête impliquant ces fonctions UDF. Pour plus d’informations sur les spools, consultez le [Guide de référence des opérateurs Showplan logiques et physiques](../../relational-databases/showplan-logical-and-physical-operators-reference.md). Pour plus d’informations sur la création d’une fonction liée à un schéma, consultez [Fonctions liées à un schéma](../../relational-databases/user-defined-functions/user-defined-functions.md#SchemaBound).
+
+Il est possible de se joindre à une fonction table à instructions multiples dans une clause `FROM`, mais cela peut nuire aux performances. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne peut pas employer toutes les techniques optimisées sur certaines instructions pouvant être incluses dans une fonction table à instructions multiples. De ce fait, le plan de requête obtenu n’est pas optimal. Pour obtenir de meilleures performances, quand cela est possible, utilisez des jointures entre les tables de base au lieu des fonctions.  
+
+> [!IMPORTANT]
+> Les fonctions table à instructions multiples ont une estimation de cardinalité fixe égale à 100 à compter de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], et égale à 1 pour les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].    
+> Depuis [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], l’optimisation d’un plan d’exécution qui utilise des fonctions table à instructions multiples peut tirer parti de l’exécution entrelacée. Résultat : la cardinalité réelle est utilisée à la place de l’approche heuristique ci-dessus.     
+> Pour plus d’informations, consultez [Exécution entrelacée pour les fonctions table à instructions multiples](../../relational-databases/performance/adaptive-query-processing.md#interleaved-execution-for-multi-statement-table-valued-functions).
+
+> [!NOTE]  
+> ANSI_WARNINGS n'est pas honoré lorsque vous transmettez des paramètres dans une procédure stockée, dans une fonction définie par l'utilisateur ou lorsque vous déclarez et définissez des variables dans une instruction par lot. Par exemple, si une variable est définie comme **char(3)** et qu’une valeur de plus de trois caractères lui est attribuée, les données sont tronquées en fonction de la taille définie, et l’instruction `INSERT` ou `UPDATE` réussit.
+
+## <a name="see-also"></a> Voir aussi  
+ [Fonctions définies par l’utilisateur](../../relational-databases/user-defined-functions/user-defined-functions.md)     
+ [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md)    
+ [ALTER FUNCTION &#40;Transact-SQL&#41;](../../tools/sql-server-profiler/start-sql-server-profiler.md)    
+ [DROP FUNCTION &#40;Transact-SQL&#41;](../../tools/sql-server-profiler/start-sql-server-profiler.md)     
+ [DROP PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-partition-function-transact-sql.md)    
+ Plus d’exemples dans la [communauté](https://www.bing.com/search?q=user%20defined%20function%20%22sql%20server%202016%22%20examples&qs=n&form=QBRE&pq=user%20defined%20function%20%22sql%20server%202016%22%20examples&sc=0-48&sp=-1&sk=&cvid=C3AD337125A840AD9EEFA3AAC36A3712)   
   

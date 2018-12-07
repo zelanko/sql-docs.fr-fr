@@ -8,12 +8,12 @@ ms.assetid: 38fc34a6-aae7-4dde-9ad2-f1eee0c42a9f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 29b5ba7b28781351232ba1a51ad20b6b84fbfce7
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: 26c28f65737fe989b416078e609f7742cfcf07b1
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50050861"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52410366"
 ---
 # <a name="configure-e-mail-for-a-reporting-services-service-application"></a>Configurer la messagerie électronique pour une application de service Reporting Services
 
@@ -52,16 +52,16 @@ ms.locfileid: "50050861"
   
     -   Échec de l’envoi du message électronique : le serveur SMTP requiert une connexion sécurisée ou le client n’était pas authentifié. La réponse du serveur était : 5.7.1 Le client n’était pas authentifié. Le message ne sera pas renvoyé.  
   
-     Modifiez **SMTPAuthenticate** pour utiliser une valeur de 2. Cette valeur ne peut pas être modifiée à partir de l'interface utilisateur. L'exemple de script PowerShell suivant met à jour la configuration complète pour l'extension de remise du courrier électronique par le serveur de rapports pour l'application de service nommée SSRS_TESTAPPLICATION. Notez que certains nœuds répertoriés dans le script peuvent également être définis à partir de l'interface utilisateur, par exemple l'adresse « De ».  
+     Modifiez **SMTPAuthenticate** pour utiliser la valeur « 2 ». Cette valeur ne peut pas être modifiée à partir de l'interface utilisateur. L’exemple de script PowerShell suivant met à jour la configuration complète pour l’extension de remise par messagerie du serveur de rapports pour l’application de service nommée « SSRS_TESTAPPLICATION ». Notez que certains nœuds répertoriés dans le script peuvent aussi être définis à partir de l’interface utilisateur, par exemple l’adresse « De ».  
   
     ```  
     $app=get-sprsserviceapplication |where {$_.name -like "SSRS_TESTAPPLICATION *"}  
     $emailCfg = Get-SPRSExtension -identity $app -ExtensionType "Delivery" -name "Report Server Email" | select -ExpandProperty ConfigurationXml   
     $emailXml = [xml]$emailCfg   
-    $emailXml.SelectSingleNode("//SMTPServer").InnerText = “your email server name"  
+    $emailXml.SelectSingleNode("//SMTPServer").InnerText = "your email server name"  
     $emailXml.SelectSingleNode("//SendUsing").InnerText = "2"  
     $emailXml.SelectSingleNode("//SMTPAuthenticate").InnerText = "2"  
-    $emailXml.SelectSingleNode("//From").InnerText = “your FROM email address”  
+    $emailXml.SelectSingleNode("//From").InnerText = "your FROM email address"  
     Set-SPRSExtension -identity $app -ExtensionType "Delivery" -name "Report Server Email" -ExtensionConfiguration $emailXml.OuterXml  
     ```  
   
@@ -71,14 +71,14 @@ ms.locfileid: "50050861"
     get-sprsserviceapplication  
     ```  
   
-3.  L'exemple suivant retourne les valeurs actuelles de l'extension de messagerie pour l'application de service nommée SSRS_TESTAPPLICATION.  
+3.  L’exemple suivant retourne les valeurs actuelles de l’extension de messagerie pour l’application de service nommée « SSRS_TESTAPPLICATION ».  
   
     ```  
     $app=get-sprsserviceapplication |where {$_.name -like "SSRSTEST_APPLICATION*"}  
     Get-SPRSExtension -identity $app -ExtensionType "Delivery" -name "Report Server Email" | select -ExpandProperty ConfigurationXml  
     ```  
   
-4.  L'exemple suivant crée un nouveau fichier nommé emailconfig.txt contenant les valeurs actuelles de l'extension de messagerie pour l'application de service nommée SSRS_TESTAPPLICATION  
+4.  L’exemple suivant crée un fichier nommé « emailconfig.txt » avec les valeurs actuelles de l’extension de messagerie pour l’application de service nommée « SSRS_TESTAPPLICATION ».  
   
     ```  
     $app=get-sprsserviceapplication |where {$_.name -like "SSRS_TESTAPPLICATION*"}  

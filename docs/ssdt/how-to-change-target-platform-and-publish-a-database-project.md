@@ -14,12 +14,12 @@ ms.assetid: 6012e120-5f72-4f4f-ae6e-f9a57ae1dea7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b7b84f8d8de17b64d99b8e308ab45c36479b4a2b
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 5dc61811562a8c9fb121d170d89b0b28806b29f4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668885"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516699"
 ---
 # <a name="how-to-change-target-platform-and-publish-a-database-project"></a>Procédure : modifier la plateforme cible et publier un projet de base de données
 Vous pouvez remplacer la version cible de SQL Server de votre projet de base de données SQL Server Data Tools (SSDT) par n’importe quelle instance prise en charge de SQL Server (SQL Server 2005, 2008, 2008 R2, Microsoft SQL Server 2012 ou SQL Azure). Cela vous permettra de centraliser le développement de votre base de données dans un seul projet, tout en la publiant dans plusieurs instances SQL Server en cas de besoin.  
@@ -29,7 +29,7 @@ SSDT simplifie aussi cette tâche en tenant compte de votre plateforme cible et 
 > [!WARNING]  
 > Les procédures suivantes utilisent les entités créées dans les procédures précédentes des sections [Développement de base de données connectée](../ssdt/connected-database-development.md) et [Développement de base de données hors connexion orienté projet](../ssdt/project-oriented-offline-database-development.md).  
   
-### <a name="to-change-a-projects-target-platform"></a>Pour modifier la plateforme cible d'un projet  
+### <a name="to-change-a-projects-target-platform"></a>Pour modifier la plateforme cible d’un projet  
   
 1.  Cliquez avec le bouton droit sur votre projet dans **l’Explorateur de solutions**, puis sélectionnez **Propriétés**. Cliquez sur l'onglet **Paramètres du projet** à gauche pour accéder à la page de propriétés **Paramètres du projet** .  
   
@@ -63,7 +63,7 @@ SSDT simplifie aussi cette tâche en tenant compte de votre plateforme cible et 
   
 6.  Vous pouvez aussi enregistrer les paramètres de publication dans un profil, afin que vous puissiez réutiliser les mêmes paramètres à des fins de publication ultérieure. Pour cela, cliquez sur le bouton **Enregistrer le profil sous** dans la boîte de dialogue **Publier la base de données** . À l'avenir, vous pourrez cliquer sur le bouton **Charger le profil** lorsque vous souhaiterez recharger des paramètres existants.  
   
-7.  Notez les messages dans la fenêtre **Opérations des outils de données** . Cliquez sur le lien Afficher l'aperçu situé à droite de **Création de l'aperçu de la publication…** . Le rapport d'aperçu du déploiement s'ouvre. Si la plateforme cible de votre projet n'est pas identique au serveur de base de données sur lequel le projet est publié, SSDT émettra un avertissement dans ce rapport.  Par exemple, si la plateforme cible de votre projet est Microsoft SQL Server 2012 et que vous tentez de publier le projet sur une instance de serveur SQL Server 2008 R2, l’avertissement suivant s’affiche dans la fenêtre **Sortie** :  
+7.  Notez les messages dans la fenêtre **Opérations des outils de données** . Cliquez sur le lien « Afficher l’aperçu » situé à droite de **Création de l’aperçu de la publication…** . Le rapport d'aperçu du déploiement s'ouvre. Si la plateforme cible de votre projet n’est pas identique au serveur de base de données sur lequel le projet est publié, SSDT émet un avertissement dans ce rapport.  Par exemple, si la plateforme cible de votre projet est Microsoft SQL Server 2012 et que vous tentez de publier le projet sur une instance de serveur SQL Server 2008 R2, l’avertissement suivant s’affiche dans la fenêtre **Sortie** :  
   
 **Un projet qui spécifie Microsoft SQL Server 2012 comme plateforme cible risque de rencontrer des problèmes de compatibilité avec SQL Server 2008.** S’il contient des entités (par exemple, un objet Séquence) introduites dans Microsoft SQL Server 2012, l’opération de publication échouera.  
   

@@ -13,12 +13,12 @@ ms.assetid: 8bb15b97-9827-46bc-aca6-068534ab18c4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 051fb627684e8a094ac0f39d5fffad9d9e399d0f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0d7544f30f065b9acbef3efc55ac7165b58da2e6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47841627"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52417915"
 ---
 # <a name="hadoop-connection-manager"></a>Gestionnaire de connexions Hadoop
   Le Gestionnaire de connexions Hadoop permet à un package SSIS (SQL Server Integration Services) de se connecter à un cluster Hadoop en utilisant les valeurs que vous spécifiez pour les propriétés.  
@@ -205,7 +205,7 @@ Exécutez la commande **Ksetup** suivante pour ajouter une entrée de domaine.
 
 ## <a name="see-also"></a>Voir aussi  
  [Tâche Hive Hadoop](../../integration-services/control-flow/hadoop-hive-task.md)   
- [Hadoop Pig, tâche](../../integration-services/control-flow/hadoop-pig-task.md)   
+ [Tâche Pig Hadoop](../../integration-services/control-flow/hadoop-pig-task.md)   
  [Tâche du système de fichiers Hadoop](../../integration-services/control-flow/hadoop-file-system-task.md)  
   
   

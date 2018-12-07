@@ -17,12 +17,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ef1ca3b64ee0e70dd71bfcea3fc270790343e204
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: de24fe5caaafc1475e647c84ea5a300c5221e5f0
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661108"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511771"
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>Guide du verrouillage des transactions et du contrôle de version de ligne
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -130,7 +130,7 @@ ms.locfileid: "51661108"
   
  Si une instruction génère une erreur d'exécution (comme une violation de contrainte) dans un traitement, la réaction par défaut du [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] est de restaurer seulement l'instruction ayant généré l'erreur. Vous pouvez modifier ce comportement à l’aide de l’instruction `SET XACT_ABORT`. Après l’exécution de `SET XACT_ABORT` ON, toute erreur d’exécution causée par une instruction déclenche automatiquement la restauration de la transaction en cours. Les erreurs de compilation, comme les erreurs de syntaxe, ne sont pas affectées par `SET XACT_ABORT`. Pour plus d’informations, consultez [SET XACT_ABORT &#40;Transact-SQL&#41;](../t-sql/statements/set-xact-abort-transact-sql.md).  
   
- Quand une erreur se produit, l’action corrective (`COMMIT` ou `ROLLBACK`) doit être incluse dans le code de l’application. Pour gérer efficacement les erreurs, notamment celles qui surviennent au cours de transactions, utilisez la construction `TRY…CATCH` dans [!INCLUDE[tsql](../includes/tsql-md.md)]. Pour plus d’informations et d’exemples portant sur les transactions, consultez [TRY...CATCH &#40;Transact-SQL&#41;](../t-sql/language-elements/try-catch-transact-sql.md). À partir de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], l’instruction `THROW` peut être utilisée pour lever une exception et transférer l’exécution à un bloc `CATCH` d’une construction `TRY…CATCH`. Pour plus d’informations, consultez [THROW &#40;Transact-SQL&#41;](../t-sql/language-elements/throw-transact-sql.md).  
+ Quand une erreur se produit, l’action corrective (`COMMIT` ou `ROLLBACK`) doit être incluse dans le code de l’application. Pour gérer efficacement les erreurs, notamment celles qui surviennent au cours de transactions, utilisez la construction `TRY...CATCH` dans [!INCLUDE[tsql](../includes/tsql-md.md)]. Pour plus d’informations et d’exemples portant sur les transactions, consultez [TRY...CATCH &#40;Transact-SQL&#41;](../t-sql/language-elements/try-catch-transact-sql.md). À partir de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], l’instruction `THROW` peut être utilisée pour lever une exception et transférer l’exécution à un bloc `CATCH` d’une construction `TRY...CATCH`. Pour plus d’informations, consultez [THROW &#40;Transact-SQL&#41;](../t-sql/language-elements/throw-transact-sql.md).  
   
 ##### <a name="compile-and-run-time-errors-in-autocommit-mode"></a>Erreurs de compilation et d'exécution en mode de validation automatique  
  En mode de validation automatique, il peut arriver qu'une instance du [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] semble restaurer un lot entier au lieu d'une instruction SQL unique. Ceci se produit en cas d'erreur de compilation et non en cas d'erreur d'exécution. Une erreur de compilation empêche le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] de créer un plan d'exécution, de telle sorte qu'aucune instruction du traitement n'est exécutée. Bien qu'il semble que toutes les instructions précédant celle qui a produit l'erreur soient restaurées, en réalité l'erreur rend impossible l'exécution de toutes les instructions du lot. Dans l'exemple qui suit, une erreur de compilation empêche l'exécution de toutes les instructions `INSERT` du troisième lot. Les deux premières instructions `INSERT` semblent avoir été restaurées alors qu'elles n'ont en fait jamais été exécutées.  
@@ -421,7 +421,7 @@ GO
 -   L’indicateur **TABLOCK** est spécifié ou l’option de table **table lock on bulk load** est définie à l’aide de **sp_tableoption**.  
   
 > [!TIP]  
-> Contrairement à l'instruction BULK INSERT, qui maintient un verrou de mise à jour en bloc moins restrictif, INSERT INTO…SELECT avec l'indicateur TABLOCK maintient un verrou exclusif (X) sur la table. Cela signifie que vous ne pouvez pas insérer de lignes à l'aide d'opérations d'insertion parallèles.  
+> Contrairement à l’instruction BULK INSERT, qui maintient un verrou de mise à jour en bloc moins restrictif, INSERT INTO...SELECT avec l’indicateur TABLOCK maintient un verrou exclusif (X) sur la table. Cela signifie que vous ne pouvez pas insérer de lignes à l'aide d'opérations d'insertion parallèles.  
   
 #### <a name="key_range"></a> Verrous d’étendues de clés  
  Les verrous d'étendues de clés protègent une plage de lignes implicitement incluses dans un jeu d'enregistrements lu par une instruction [!INCLUDE[tsql](../includes/tsql-md.md)] lors de l'utilisation du niveau d'isolement des transactions sérialisable. Le verrouillage d'étendues de clés empêche les lectures fantômes. Les verrous d'étendues de clés couvrent des enregistrements individuels et les étendues entre les enregistrements, empêchant les insertions ou les suppressions fantômes dans un ensemble d'enregistrements auquel accède une transaction.  
@@ -1839,7 +1839,7 @@ GO
   
  Une transaction longue peut entraîner de graves problèmes pour une base de données, comme suit :  
   
--   Si une instance de serveur est arrêtée après qu’une transaction active a effectué de nombreuses modifications non validées, la phase de récupération du redémarrage suivant peut prendre plus de temps que le temps indiqué par l’option de configuration du serveur **recovery interval** ou par l’option `ALTER DATABASE … SET TARGET_RECOVERY_TIME`. Ces options contrôlent la fréquence des points de contrôle actifs et indirects, respectivement. Pour plus d’informations sur les types de points de contrôle, consultez [Points de contrôle de base de données &#40;SQL Server&#41;](../relational-databases/logs/database-checkpoints-sql-server.md).  
+-   Si une instance de serveur est arrêtée après qu’une transaction active a effectué de nombreuses modifications non validées, la phase de récupération du redémarrage suivant peut prendre plus de temps que le temps indiqué par l’option de configuration du serveur **recovery interval** ou par l’option `ALTER DATABASE ... SET TARGET_RECOVERY_TIME`. Ces options contrôlent la fréquence des points de contrôle actifs et indirects, respectivement. Pour plus d’informations sur les types de points de contrôle, consultez [Points de contrôle de base de données &#40;SQL Server&#41;](../relational-databases/logs/database-checkpoints-sql-server.md).  
   
 -   Plus important, bien qu'une transaction en attente génère très peu d'entrées de journal, elle empêche la troncation du journal et entraîne ainsi sa croissance et son remplissage. Si le journal des transactions est rempli, la base de données ne peut plus effectuer de mises à jour. Pour plus d’informations, consultez [Guide d’architecture et gestion du journal des transactions SQL Server](../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md), [Résoudre les problèmes liés à un journal des transactions saturé &#40;erreur SQL Server 9002&#41;](../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md) et [Journal des transactions &#40;SQL Server&#41;](../relational-databases/logs/the-transaction-log-sql-server.md).  
   

@@ -13,12 +13,12 @@ ms.assetid: 4048b7f8-71a9-47ad-b812-3fc1e8066240
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ef93616fb6f96911d08a56326e014305b4e818b3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6d1b5a5c1a20f52d9a0060e54ce38f6cca816a63
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701527"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396785"
 ---
 # <a name="how-to-update-a-connected-database-with-power-buffer"></a>Procédure : mettre à jour une base de données connectée avec Power Buffer
 La technologie SQL Server Data Tools Power Buffer facilite l'application de modifications à votre base de données connectée en stockant toutes vos modifications dans la session active. Les erreurs dues à la modification dans la fenêtre Power Buffer (dans l'Éditeur Transact\-SQL ou le Concepteur de tables) s'affichent immédiatement dans le volet **Liste d'erreurs**, ce qui vous permet de suivre les erreurs identifiées pour la résolution. Vous pouvez vérifier vos modifications en attente jusqu'à ce que vous soyez prêt à les appliquer dans votre base de données. Au cours du processus de mise à jour, SSDT crée automatiquement un script ALTER basé sur vos modifications, et vous avertit de tout problème potentiel. Vous pouvez ensuite appliquer toutes les modifications accumulées dans les fenêtres Power Buffer ouvertes à la même base de données, ou enregistrer le script ALTER à déployer ultérieurement.  
@@ -29,7 +29,7 @@ Les procédures suivantes utilisent les entités créées dans les procédures p
   
 ### <a name="to-apply-the-changes-made-in-the-previous-procedures"></a>Pour appliquer les modifications apportées au cours des procédures précédentes  
   
-1.  Cliquez sur le bouton vert **Mettre à jour** sur la barre d'outils (l'info-bulle « Mettre à jour la base de données » s'affiche si vous pointez sur le bouton). La barre d'outils se trouve au-dessus de la Grille Colonnes du Concepteur de tables.  
+1.  Cliquez sur le bouton vert **Mettre à jour** dans la barre d’outils (l’info-bulle « Mettre à jour la base de données » s’affiche si vous placez le curseur sur le bouton). La barre d'outils se trouve au-dessus de la Grille Colonnes du Concepteur de tables.  
   
 2.  La boîte de dialogue **Aperçu des mises à jour de la base de données** apparaît. Un script de déploiement basé sur vos modifications est généré en arrière-plan. La boîte de dialogue affiche ensuite un résumé des actions qui seront effectuées par SSDT (par exemple, création ou suppression d'entités de base de données), ainsi que les problèmes potentiels identifiés (cela ne s'applique pas à notre procédure, mais est pratique lorsque votre définition de base de données contient des erreurs qui empêchent une mise à jour tant qu'elles ne sont pas résolues).  
   

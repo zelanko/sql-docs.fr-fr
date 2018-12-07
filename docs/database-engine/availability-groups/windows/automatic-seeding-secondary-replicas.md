@@ -3,7 +3,7 @@ title: Amorçage automatique pour les réplicas secondaires (SQL Server) | Micro
 description: Utilisez l’amorçage automatique pour initialiser les réplicas secondaires.
 services: data-lake-analytics
 ms.custom: ''
-ms.date: 09/25/2017
+ms.date: 11/27/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
@@ -14,17 +14,17 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b519e70c46f697c4ef819f59c122fba6c4e40ea2
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: d6a8359fede2b688292fa47e59a64d5ef43d424d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51603619"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506689"
 ---
 # <a name="automatic-seeding-for-secondary-replicas"></a>Amorçage automatique pour les réplicas secondaires
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Dans SQL Server 2012 et 2014, la seule façon d’initialiser un réplica secondaire dans un groupe de disponibilité SQL Server Always On est d’utiliser la sauvegarde, la copie et la restauration. SQL Server 2016 introduit une nouvelle fonctionnalité pour initialiser un réplica secondaire, *l’amorçage automatique*. L’amorçage automatique utilise le transport de flux de journaux pour transmettre en continu la sauvegarde à l’aide de VDI vers le réplica secondaire pour chaque base de données du groupe de disponibilité, en utilisant les points de terminaison configurés. Cette nouvelle fonctionnalité peut être utilisée lors de la création initiale d’un groupe de disponibilité ou quand une base de données lui est ajoutée. L’amorçage automatique est disponible dans toutes les éditions de SQL Server prenant en charge les groupes de disponibilité Always On et peut être utilisé avec les groupes de disponibilité traditionnels et les [groupes de disponibilité distribués](distributed-availability-groups.md).
+Dans SQL Server 2012 et 2014, la seule façon d’initialiser un réplica secondaire dans un groupe de disponibilité SQL Server Always On est d’utiliser la sauvegarde, la copie et la restauration. SQL Server 2016 introduit une nouvelle fonctionnalité pour initialiser un réplica secondaire : l’*amorçage automatique*. L’amorçage automatique utilise le transport de flux de journaux pour transmettre en continu la sauvegarde à l’aide de VDI vers le réplica secondaire pour chaque base de données du groupe de disponibilité, en utilisant les points de terminaison configurés. Cette nouvelle fonctionnalité peut être utilisée lors de la création initiale d’un groupe de disponibilité ou quand une base de données lui est ajoutée. L’amorçage automatique est disponible dans toutes les éditions de SQL Server prenant en charge les groupes de disponibilité Always On et peut être utilisé avec les groupes de disponibilité traditionnels et les [groupes de disponibilité distribués](distributed-availability-groups.md).
 
 ## <a name="considerations"></a>Observations
 
@@ -117,16 +117,14 @@ La définition de `SEEDING_MODE` sur un réplica principal pendant une instructi
 
 Sur une instance qui devient un réplica secondaire, une fois que l’instance est jointe, le message suivant est ajouté dans le journal SQL Server :
 
->Le réplica de disponibilité local pour le groupe de disponibilité « nom_groupe_de_disponibilité » n’a pas reçu l’autorisation de créer des bases de données, mais son paramètre `SEEDING_MODE` est défini sur `AUTOMATIC`. Utilisez `ALTER AVAILABILITY GROUP … GRANT CREATE ANY DATABASE` pour autoriser la création de bases de données amorcée par le réplica de disponibilité principal.
+>Le réplica de disponibilité local pour le groupe de disponibilité « nom_groupe_de_disponibilité » n’a pas reçu l’autorisation de créer des bases de données, mais son paramètre `SEEDING_MODE` est défini sur `AUTOMATIC`. Utilisez `ALTER AVAILABILITY GROUP ... GRANT CREATE ANY DATABASE` pour autoriser la création de bases de données amorcée par le réplica de disponibilité principal.
 
 ### <a name = "grantCreate"></a> Octroyer l’autorisation de créer une base de données sur un réplica secondaire au groupe de disponibilité
 
 Après la jointure, accordez au groupe de disponibilité l’autorisation de créer des bases de données sur l’instance de réplica secondaire de SQL Server. Pour que l’amorçage automatique fonctionne, le groupe de disponibilité a besoin de l’autorisation de créer une base de données. 
 
 >[!TIP]
->Quand le groupe de disponibilité crée une base de données sur un réplica secondaire, il définit le propriétaire de la base de données en tant que compte qui a exécuté l’instruction `ALTER AVAILABILITY GROUP` pour accorder l’autorisation de créer une base de données. La plupart des applications exigent que le propriétaire de la base de données sur le réplica secondaire soit le même que sur le réplica principal.
->
->Pour être sûr que toutes les bases de données sont créées avec le même propriétaire de base de données que le réplica principal, exécutez l’exemple de commande ci-dessous dans le contexte de sécurité de la connexion qui est propriétaire de la base de données sur le réplica principal. Notez que cette connexion doit avoir l’autorisation `ALTER AVAILABILITY GROUP`. 
+>Lorsque le groupe de disponibilité crée une base de données sur un réplica secondaire, il définit « sa » (c’est-à-dire, le compte avec le sid 0x01) en tant que propriétaire de la base de données. 
 >
 >Pour changer le propriétaire de la base de données après qu’un réplica secondaire a créé automatiquement une base de données, utilisez `ALTER AUTHORIZATION`. Consultez [ALTER AUTHORIZATION (Transact-SQL)](../../../t-sql/statements/alter-authorization-transact-sql.md).
  
@@ -153,7 +151,7 @@ En cas de réussite, la ou les bases de données sont créées automatiquement s
 
 ## <a name="combine-backup-and-restore-with-automatic-seeding"></a>Combiner la sauvegarde et la restauration avec l’amorçage automatique
 
-Il est possible de combiner la sauvegarde, la copie et la restauration traditionnelles avec l’amorçage automatique. Dans ce cas, restaurez d’abord la base de données sur un réplica secondaire, y compris tous les journaux de transactions disponibles. Ensuite, activez l’amorçage automatique lors de la création du groupe de disponibilité pour « rattraper »la base de données du réplica secondaire, comme si une sauvegarde de la fin du journal était restaurée (consultez [Sauvegardes de la fin du journal (SQL Server)](../../../relational-databases/backup-restore/tail-log-backups-sql-server.md)).
+Il est possible de combiner la sauvegarde, la copie et la restauration traditionnelles avec l’amorçage automatique. Dans ce cas, restaurez d’abord la base de données sur un réplica secondaire, y compris tous les journaux de transactions disponibles. Ensuite, activez l’amorçage automatique lors de la création du groupe de disponibilité pour « rattraper » la base de données du réplica secondaire, comme si une sauvegarde de la fin du journal était restaurée (consultez [Sauvegardes de la fin du journal (SQL Server)](../../../relational-databases/backup-restore/tail-log-backups-sql-server.md)).
 
 ## <a name="add-a-database-to-an-availability-group-with-automatic-seeding"></a>Ajouter une base de données à un groupe de disponibilité par amorçage automatique
 
@@ -221,7 +219,7 @@ CREATE EVENT SESSION [AG_autoseed] ON SERVER
     ADD EVENT sqlserver.hadr_physical_seeding_restore_state_change,
     ADD EVENT sqlserver.hadr_physical_seeding_submit_callback
     ADD TARGET package0.event_file(
-        SET filename=N’autoseed.xel’,
+        SET filename=N'autoseed.xel',
         max_file_size=(5),
         max_rollover_files=(4)
         )

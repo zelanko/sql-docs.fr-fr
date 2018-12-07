@@ -16,12 +16,12 @@ ms.assetid: d330aa4e-6ade-4b09-b376-1b15d6c78f7d
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 69a2c06ca2a365814dd87b72d0641d91516def95
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: ca34e83b313a267f607ee9e45f8bf68fd1b0b357
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703597"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418770"
 ---
 # <a name="administrators-master-data-services"></a>Administrateurs (Master Data Services)
 
@@ -30,7 +30,7 @@ ms.locfileid: "51703597"
   Cet article décrit les types d’administrateurs dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]: administrateurs de modèle, administrateurs d’entité et super utilisateur.  
   
 ## <a name="model-administrators"></a>Administrateurs de modèle  
- Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], un administrateur de modèle est un utilisateur qui a l’autorisation **d’administrateur** sur l’objet modèle de niveau supérieur sous l’onglet **Objets de modèle** . Quand un utilisateur a une autorisation d’administrateur sur un modèle particulier, toutes les autres autorisations sur les objets enfants du modèle (à la fois les autorisations de membre et d’objet de modèle) sont ignorées et remplacées par l’autorisation **d’administrateur** du modèle.  
+ Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], un administrateur de modèle est un utilisateur qui a l’autorisation **d’administrateur** sur l’objet modèle de niveau supérieur sous l’onglet **Objets de modèle** . Quand un utilisateur a une autorisation d’administrateur sur un modèle particulier, toutes les autres autorisations sur les objets enfants du modèle (à la fois les autorisations de membre et d’objet de modèle) sont ignorées et remplacées par l’autorisation d’**administrateur** du modèle.  
   
 -   Si l'utilisateur a accès à la zone fonctionnelle **Explorateur** , il peut ajouter, supprimer et mettre à jour toutes les données de référence dans cette zone.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "51703597"
  Un utilisateur peut être configuré en tant qu'administrateur de modèle dans [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] ou par programme. Pour plus d’informations, consultez [Créer un administrateur de modèle &#40;Master Data Services&#41;](../master-data-services/create-a-model-administrator-master-data-services.md).  
   
 ## <a name="entity-administrators"></a>Administrateurs d’entité  
- Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], un administrateur d’entité est un utilisateur qui a des autorisations d’administrateur sur l’objet entité, sous l’onglet Objets de modèle. Lorsqu’un utilisateur a des autorisations d’administrateur sur une entité, toutes les autres autorisations sur les objets enfants de l’entité (à la fois les autorisations de membre et d’objet de modèle) sont ignorées et remplacées par les autorisations d’administrateur.  
+ Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], un administrateur d’entité est un utilisateur qui a des autorisations d’administrateur sur l’objet entité, sous l’onglet Objets de modèle. Quand un utilisateur a des autorisations d’administrateur sur une entité, toutes les autres autorisations sur les objets enfants de l’entité (à la fois les autorisations de membre et d’objet de modèle) sont ignorées et remplacées par les autorisations d’administrateur.  
   
 -   Si l'utilisateur a accès à la zone fonctionnelle **Explorateur** , il peut ajouter, supprimer et mettre à jour toutes les données de référence dans cette zone.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "51703597"
   
 |Type d'administrateur|Description|  
 |------------------------|-----------------|  
-|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Super utilisateur|Les autorisations affectées dans [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] n'ont aucun effet sur l'accès de l'administrateur.<br /><br /> Peut être super utilisateur en fonction des autorisations de zones fonctionnelles qui lui sont affectées explicitement ou de celles héritées d’un groupe.<br /><br /> Dispose automatiquement de toutes les autorisations sur tous les modèles.<br /><br /> Accès automatique à toutes les zones fonctionnelles.|  
+|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Super utilisateur|Les autorisations affectées dans [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] n’ont aucun effet sur l’accès de l’administrateur.<br /><br /> Peut être super utilisateur en fonction des autorisations de zones fonctionnelles qui lui sont affectées explicitement ou de celles héritées d’un groupe.<br /><br /> Dispose automatiquement de toutes les autorisations sur tous les modèles.<br /><br /> Accès automatique à toutes les zones fonctionnelles.|  
 |Administrateur de modèle|Peut être administrateur de modèle en fonction des autorisations d’administrateur qui lui sont affectées explicitement ou de celles héritées d’un groupe.<br /><br /> Accès uniquement aux zones fonctionnelles auxquelles l'accès est accordé.<br /><br /> Dispose automatiquement de toutes les autorisations sur tous les objets et membres dans le modèle spécifique.|  
 |Administrateur d’entité|Peut être administrateur d’entité en fonction des autorisations d’administrateur qui lui sont affectées explicitement ou de celles héritées d’un groupe.<br /><br /> Accès uniquement aux zones fonctionnelles auxquelles l'accès est accordé.<br /><br /> Dispose automatiquement de toutes les autorisations sur tous les objets et membres dans l’entité spécifique.<br /><br /> Peut approuver les ensembles de modifications en attente si les modifications de l’entité doivent être approuvées.|  
   

@@ -24,12 +24,12 @@ ms.assetid: 873a2fa0-2a02-41fc-a80a-ec9767f36a8a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6fb8aaaabd83d6e5f5f234c58f3c9dcfab1ee7fa
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: e9eccb240bbce57f16442092996698dc619f5fab
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640130"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525318"
 ---
 # <a name="ole-db-destination"></a>Destination OLE DB
   La destination OLE DB charge des données dans différentes bases de données compatibles OLE DB à l'aide d'une table ou d'une vue de base de données ou d'une commande SQL. Par exemple, la source OLE DB peut charger des données dans des tables de bases de données [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -161,7 +161,7 @@ ms.locfileid: "51640130"
 > [!NOTE]  
 >  Quand vous cliquez sur **Nouvelle**, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] génère une instruction CREATE TABLE par défaut, basée sur la source de données connectée. Cette instruction CREATE TABLE par défaut n'inclut pas l'attribut FILESTREAM, même si la table source inclut une colonne dans laquelle l'attribut FILESTREAM est déclaré. Pour exécuter un composant [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] avec l'attribut FILESTREAM, implémentez d'abord le stockage FILESTREAM sur la base de données de destination. Ajoutez ensuite l’attribut FILESTREAM à l’instruction CREATE TABLE dans la boîte de dialogue **Créer une table**. Pour plus d’informations, consultez [Données blob &#40;Binary Large Object&#41; &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
   
-#### <a name="data-access-mode--table-or-view--fast-load"></a>Mode d'accès aux données = Table ou vue - chargement rapide  
+#### <a name="data-access-mode--table-or-view---fast-load"></a>Mode d’accès aux données = Table ou vue - chargement rapide  
  **Nom de la table ou de la vue**  
  Sélectionnez une table ou une vue dans la base de données à l’aide de cette liste, ou créez une table en cliquant sur **Nouveau**.  
   
@@ -184,7 +184,7 @@ ms.locfileid: "51640130"
  Spécifiez si la destination vérifie les contraintes lors du chargement des données. La valeur par défaut de cette propriété est **true**.  
   
  **Lignes par lot**  
- Permet d'indiquer le nombre de lignes contenues dans un traitement. La valeur par défaut de cette propriété est **–1**, ce qui signifie qu’aucune valeur n’a été attribuée.  
+ Permet d'indiquer le nombre de lignes contenues dans un traitement. La valeur par défaut de cette propriété est **-1**, ce qui signifie qu’aucune valeur n’a été attribuée.  
   
 > [!NOTE]  
 >  Effacez la zone de texte dans **l’Éditeur de destination OLE DB** pour indiquer que vous ne voulez pas assigner de valeur personnalisée à cette propriété.  
@@ -204,7 +204,7 @@ ms.locfileid: "51640130"
  **Nom de la variable**  
  Sélectionnez la variable qui contient le nom de la table ou de la vue.  
   
-#### <a name="data-access-mode--table-name-or-view-name-variable--fast-load"></a>Mode d'accès aux données = Variable de nom de table ou de vue - chargement rapide  
+#### <a name="data-access-mode--table-name-or-view-name-variable---fast-load"></a>Mode d’accès aux données = Variable de nom de table ou de vue - chargement rapide  
  **Nom de la variable**  
  Sélectionnez la variable qui contient le nom de la table ou de la vue.  
   
@@ -227,7 +227,7 @@ ms.locfileid: "51640130"
  Spécifiez si la tâche vérifie les contraintes. La valeur par défaut de cette propriété est **false**.  
   
  **Lignes par lot**  
- Permet d'indiquer le nombre de lignes contenues dans un traitement. La valeur par défaut de cette propriété est **–1**, ce qui signifie qu’aucune valeur n’a été attribuée.  
+ Permet d'indiquer le nombre de lignes contenues dans un traitement. La valeur par défaut de cette propriété est **-1**, ce qui signifie qu’aucune valeur n’a été attribuée.  
   
 > [!NOTE]  
 >  Effacez la zone de texte dans **l’Éditeur de destination OLE DB** pour indiquer que vous ne voulez pas assigner de valeur personnalisée à cette propriété.  

@@ -20,12 +20,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9e6b18b3248bf74ee85f849a8f62fcb87815558d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7bce0be6e849dc2e374ca8af1025a5da386b27a2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47750248"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533584"
 ---
 # <a name="view-user-defined-functions"></a>Afficher les fonctions définies par l'utilisateur
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "47750248"
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
-#### <a name="to-show-a-user-defined-functions-properties"></a>Pour afficher les propriétés d'une fonction définies par l'utilisateur  
+#### <a name="to-show-a-user-defined-functions-properties"></a>Pour afficher les propriétés d’une fonction définie par l’utilisateur  
   
 1.  Dans l' **Explorateur d'objets**, cliquez sur le signe plus (+) en regard de la base de données qui contient la fonction dont vous souhaitez afficher les propriétés, puis cliquez sur le signe plus (+) pour développer le dossier **Programmabilité** .  
   
@@ -71,7 +71,7 @@ ms.locfileid: "47750248"
   
 4.  Cliquez avec le bouton droit sur la fonction dont vous voulez afficher les propriétés, puis sélectionnez **Propriétés**.  
   
-     Les propriétés suivantes s’affichent dans la boîte de dialogue **Propriétés de la fonction –** *nom_fonction* .  
+     Les propriétés suivantes s’affichent dans la boîte de dialogue **Propriétés de la fonction -** *nom_fonction*.  
   
      **Sauvegarde de la base de données**  
      Nom de la base de données contenant cette fonction.  

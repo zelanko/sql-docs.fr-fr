@@ -11,12 +11,12 @@ ms.assetid: 45d66152-883a-49a7-a877-2e8ab45f8f79
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 637993cecd7b5a7c750956042b245f670d9aa0f1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1cbccb0ba6fa66cba9b8e57e628bef4710414cf7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47628627"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533393"
 ---
 # <a name="define-a-state-variable"></a>Définir une variable d’état
   Cette procédure explique comment définir une variable de package dans laquelle l'état de capture de données modifiées est stocké.  
@@ -33,7 +33,7 @@ ms.locfileid: "47628627"
 |**CS**|Cela marque le point de départ de la plage de traitement actuelle (début actuel).|  
 |**\<CS-lsn>**|Il s'agit du dernier numéro séquentiel dans le journal (NSE) traité dans l'exécution de capture de données modifiées précédente.|  
 |**CE**|Cela marque le point d'arrivée de la plage de traitement actuelle (fin actuelle). La présence du composant CE dans l'état de capture de données modifiées indique qu'un package de capture de données modifiées est actuellement en cours de traitement ou qu'un package de capture de données modifiées a échoué avant la fin du traitement complet de sa plage de traitement de capture de données modifiées.|  
-|**\<ce-lsn>**|Il s'agit du dernier numéro séquentiel dans le journal à traiter dans l'exécution de capture de données modifiées actuelle. On part du principe que le dernier numéro de séquence à traiter correspond au maximum (0xFFF…).|  
+|**\<ce-lsn>**|Il s'agit du dernier numéro séquentiel dans le journal à traiter dans l'exécution de capture de données modifiées actuelle. On part du principe que le dernier numéro de séquence à traiter correspond au maximum (0xFFF...).|  
 |**IR**|Cela marque la plage de traitement initiale.|  
 |**\<ir-start>**|Il s'agit d'un numéro séquentiel dans le journal d'un changement juste avant le début de la charge initiale.|  
 |**\<ir-end>**|Il s'agit d'un numéro séquentiel dans le journal d'un changement juste après la fin de la charge initiale.|  

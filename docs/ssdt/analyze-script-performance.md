@@ -13,12 +13,12 @@ ms.assetid: f4bbdd31-12a5-4c57-b0fe-1c6683820f11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7386a1bceed8ed79dddf2636ae152d79c460a5ff
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: ed6f127b8f1a692f1cd71839570cd38d21213482
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675049"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396915"
 ---
 # <a name="analyze-script-performance"></a>Analyser les performances de script
 Utilisez les outils fournis par SQL Server Data Tools pour déterminer si vous pouvez améliorer les performances de votre requête, de vos procédures stockées ou de vos scripts. Par exemple, en surveillant les statistiques du client, telles que les temps de réponse des requêtes les plus fréquentes, vous pouvez déterminer s'il faut modifier les requêtes ou les index des tables. Ces statistiques peuvent inclure le temps d'exécution du client, le profil de requête et les paquets/octets envoyés et reçus.  
@@ -32,7 +32,7 @@ Pour activer/désactiver la collecte de statistiques client, pointez sur **Édi
   
 Si les statistiques client sont activées, l’onglet **Statistiques** s’affiche à côté de l’onglet **Message** lors de l’exécution de la requête. Si elles sont désactivées, l’onglet **Statistiques** n’apparaît pas. Les statistiques provenant d'exécutions de requêtes successives sont répertoriées avec les valeurs moyennes.  
   
-Pour plus d’informations sur les statistiques collectées, voir [Volet Interroger les statistiques de fenêtre](https://msdn.microsoft.com/library/aa216969(SQL.80).aspx) et la section [Onglet Statistiques client](https://msdn.microsoft.com/library/aa833205.aspx) de cette rubrique.  
+Pour plus d’informations sur les statistiques collectées, consultez [Volet Interroger les statistiques de fenêtre](https://msdn.microsoft.com/library/aa216969(SQL.80).aspx) et la section [Onglet Statistiques client](https://msdn.microsoft.com/library/aa833205.aspx) de cette rubrique.  
   
 ## <a name="using-execution-plans"></a>Utilisation des plans d'exécution  
 Les plans d'exécution affichent la façon dont le moteur de base de données parcourt les tables et utilise les index pour accéder aux données d'une requête ou de toute autre instruction DML (par exemple, une mise à jour) et les traiter. Cette approche graphique s'avère très utile pour la compréhension des caractéristiques de performances d'une requête.  

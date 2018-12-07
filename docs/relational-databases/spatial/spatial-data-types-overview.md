@@ -16,12 +16,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9a9e4f02d0662150c8f8458da7bde3b5a4838022
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 99f6a05b3d033a32b9a45ec305faa92f214e59e4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668028"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535818"
 ---
 # <a name="spatial-data-types-overview"></a>Présentation des types de données spatiales
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -85,7 +85,7 @@ La spécification OGC Simple Features for SQL traite des anneaux externes et int
 
 Pour plus d'informations sur les spécifications OGC, reportez-vous aux sites Web suivants :  
 -   [OGC Specifications, Simple Feature Access Part 1 - Common Architecture](https://go.microsoft.com/fwlink/?LinkId=93627)  
--   [OGC Specifications, Simple Feature Access Part 2 – SQL Options (en anglais)](https://go.microsoft.com/fwlink/?LinkId=93628)  
+-   [OGC Specifications, Simple Feature Access Part 2 – SQL Options](https://go.microsoft.com/fwlink/?LinkId=93628)  
 
 ##  <a name="circular"></a> Segments d'arc de cercle  
 Trois types instanciables acceptent des segments d’arc de cercle : **CircularString**, **CompoundCurve**et **CurvePolygon**.  Un segment d'arc de cercle est défini par trois points dans un plan à deux dimensions ; le troisième point doit être différent du premier point.  
@@ -124,7 +124,7 @@ SELECT @g1.STLength() AS [LS Length], @g2.STLength() AS [CS Length];
 Cet extrait de code produit les résultats suivants :  
 ```
 LS LengthCS Length
-5.65685…6.28318…
+5.65685...6.28318...
 ```
 
 Les instances **CircularString** utilisent moins de points pour stocker des limites de courbe avec une précision supérieure que les instances **LineString**. Les instances**CircularString** conviennent particulièrement bien au stockage de limites circulaires, comme par exemple un rayon de recherche de 20 kilomètres autour d’un point spécifique. Les instances**LineString** conviennent particulièrement bien au stockage de limites qui sont linéaires, comme un bloc d’agglomération carré.  

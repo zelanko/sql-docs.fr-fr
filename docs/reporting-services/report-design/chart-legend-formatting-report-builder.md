@@ -25,12 +25,12 @@ f1_keywords:
 ms.assetid: b035b2e0-ab1e-4a37-bff7-a42d1e914bac
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e3b748da4e74ce9ade370df965bd8df1c388a3b7
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 94cff6197fc4648b465881624976cbce0a03e55d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50028970"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502690"
 ---
 # <a name="chart-legend---formatting-report-builder"></a>Légende de graphique - Mise en forme (Générateur de rapports)
   La légende du graphique contient des descriptions pour chaque catégorie d'un graphique. Une légende contient toujours un ou plusieurs éléments de légende. Chaque élément de légende consiste en une zone colorée qui représente les séries et une chaîne de texte qui décrit ces dernières, comme indiqué dans l'illustration ci-dessous.  
@@ -67,7 +67,7 @@ ms.locfileid: "50028970"
  Vous ne pouvez pas faire glisser la légende à l'intérieur ou à l'extérieur de la zone de graphique. Si vous souhaitez placer la légende à l’intérieur de la zone de graphique, dans la boîte de dialogue **Propriétés de la légende** , sous **Ancrage**, sélectionnez **Par défaut** dans la liste déroulante et désactivez l’option **Afficher la légende en dehors de la zone de graphique** . En plaçant la légende à l'intérieur de la zone de graphique, vous pouvez agrandir l'espace pour les points de données sur le graphique. Toutefois, selon le dataset, cela peut provoquer un chevauchement de la légende et de certains points de données sur la zone de graphique et rendre la lecture du graphique plus difficile.  
   
 ## <a name="displaying-legend-items-horizontally"></a>Affichage horizontal des éléments de légende  
- Par défaut, la légende est mise en forme sous la forme d'une liste d'une ou de plusieurs lignes contenant chacune un élément de légende. La zone de légende s'étend pour s'adapter au nombre d'éléments de légende. Si la légende ne peut pas s'étendre, des points de suspension (…) sont affichés. Selon le style de légende spécifié, la légende peut s'étendre verticalement ou horizontalement. Vous pouvez modifier le style de disposition dans la boîte de dialogue **Propriétés de la légende** ou modifier l'espace alloué pour afficher tous les éléments de légende.  
+ Par défaut, la légende est mise en forme sous la forme d'une liste d'une ou de plusieurs lignes contenant chacune un élément de légende. La zone de légende s'étend pour s'adapter au nombre d'éléments de légende. Si la légende ne peut pas s’étendre, des points de suspension (...) sont affichés. Selon le style de légende spécifié, la légende peut s'étendre verticalement ou horizontalement. Vous pouvez modifier le style de disposition dans la boîte de dialogue **Propriétés de la légende** ou modifier l'espace alloué pour afficher tous les éléments de légende.  
   
  Pour afficher la légende horizontalement, ancrez la légende en haut ou en bas du graphique. La légende s'étend ainsi horizontalement. Vous pouvez également affecter la valeur **Ligne** ou **Tableau large**à la propriété Layout. Définissez la propriété MaxAutoSize dans le volet Propriétés pour contrôler l’espace vertical alloué à la légende quand elle est ancrée en haut ou en bas de la zone de graphique.  
   

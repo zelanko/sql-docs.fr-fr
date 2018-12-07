@@ -20,12 +20,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0bce4439473aa19790435fc89dff3e4107311bb7
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 1f6bb16f3e6b7c2cd7c2e2a01a40132f7df6e585
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661080"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503055"
 ---
 # <a name="search-document-properties-with-search-property-lists"></a>Rechercher les propriétés du document à l’aide des listes de propriétés de recherche
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -49,11 +49,11 @@ ms.locfileid: "51661080"
 ### <a name="indexing-of-registered-properties"></a>Indexation de propriétés inscrites  
  Une fois qu'un index de recherche en texte intégral est associé à une liste de propriétés de recherche, l'index doit être rempli à nouveau pour indexer les termes de recherche spécifiques à la propriété. Lors de l'indexation de texte intégral, le contenu de toutes les propriétés est stocké dans l'index de recherche en texte intégral avec les autres contenus. Toutefois, lors de l'indexation d'un terme de recherche présent dans une propriété enregistrée, l'indexeur de texte intégral stocke également l'ID de propriété interne correspondant au terme. En revanche, si une propriété n'est pas enregistrée, elle est stockée dans l'index de recherche en texte intégral comme si elle faisait partie du corps du document, et a la valeur zéro comme ID de propriété interne.  
   
- L'illustration suivante montre une vue logique de la façon dont les termes de recherche apparaissent dans un index de recherche en texte intégral associé à la liste de propriétés de recherche figurant dans l'illustration précédente. L'exemple de document Document 1 contient trois propriétés : Title, Author et Keywords, ainsi que le corps du document. Pour les propriétés Title et Keywords, spécifiées dans la liste de propriétés de recherche, des termes de recherche sont associés à leurs ID de propriété internes correspondants dans l'index de recherche en texte intégral. En revanche, le contenu de la propriété Author est indexé comme s'il faisait partie du corps du document. Cela signifie que l'inscription d'une propriété augmente un peu la taille de l'index de recherche en texte intégral, en fonction du volume du contenu stocké dans la propriété.  
+ L'illustration suivante montre une vue logique de la façon dont les termes de recherche apparaissent dans un index de recherche en texte intégral associé à la liste de propriétés de recherche figurant dans l'illustration précédente. L’exemple de document Document 1 contient trois propriétés : Title, Author et Keywords, ainsi que le corps du document. Pour les propriétés Title et Keywords, spécifiées dans la liste de propriétés de recherche, des termes de recherche sont associés à leurs ID de propriété internes correspondants dans l'index de recherche en texte intégral. En revanche, le contenu de la propriété Author est indexé comme s'il faisait partie du corps du document. Cela signifie que l'inscription d'une propriété augmente un peu la taille de l'index de recherche en texte intégral, en fonction du volume du contenu stocké dans la propriété.  
   
  ![Index de recherche en texte intégral qui utilise une liste de propriétés de recherche](../../relational-databases/search/media/ifts-spl-and-fti.gif "Index de recherche en texte intégral qui utilise une liste de propriétés de recherche")  
   
- Les termes de recherche de la propriété Title (« Favorite », « Biking », et « Trails ») sont associés à l'ID de propriété interne 1, affecté à Title pour cet index. Les termes de recherche de la propriété Keywords (« biking » et « mountain ») sont associés à l'ID de propriété interne 2, affecté à Tags pour cet index. Pour les termes de recherche de la propriété Author (« Jane » et « Doe ») et les termes de recherche dans le corps du document, l'ID de propriété interne est 0. Le terme « biking » est présent dans la propriété Title, dans la propriété Keywords (Tags) et dans le corps du document. Une recherche de propriété sur « biking » dans la propriété Title ou Keywords (Tags) retournerait ce document dans les résultats. Une requête de texte intégral générique sur « biking » retournerait également ce document, comme si l’index n’avait pas été configuré pour la recherche de propriétés. Une recherche de propriété sur « biking » dans la propriété Author ne retournerait pas ce document.  
+ Les termes recherchés de la propriété Title (« Favorite », « Biking » et « Trails ») sont associés à l’ID de propriété interne 1, affecté à Title pour cet index. Les termes recherchés de la propriété Keywords (« biking » et « mountain ») sont associés à l’ID de propriété interne 2, affecté à Tags pour cet index. Pour les termes recherchés de la propriété Author (« Jane » et « Doe ») et les termes recherchés dans le corps du document, l’ID de propriété interne est 0. Le terme « biking » est présent dans la propriété Title, dans la propriété Keywords (Tags) et dans le corps du document. Une recherche de propriété sur « biking » dans la propriété Title ou Keywords (Tags) retournerait ce document dans les résultats. Une requête de texte intégral générique sur « biking » retournerait également ce document, comme si l’index n’avait pas été configuré pour la recherche de propriétés. Une recherche de propriété sur « biking » dans la propriété Author ne retournerait pas ce document.  
   
  Une requête de texte intégral de portée propriété utilise les ID de propriété internes enregistrés pour la liste de propriétés de recherche actuelle de l'index de recherche en texte intégral.  
   

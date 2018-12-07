@@ -26,12 +26,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 48f4de868657978e62285907d4f513b313f484b5
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: f04a60e28b96c97890ab34157df50bd1dfc39891
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699827"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526398"
 ---
 # <a name="select---over-clause-transact-sql"></a>SELECT - Clause OVER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -132,7 +132,7 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
   
  Limite davantage les lignes dans la partition en spécifiant les points de départ et de terminaison dans la partition. Cette opération s'effectue en spécifiant une plage de lignes par rapport à la ligne actuelle par association logique ou association physique. L'association physique est réalisée en utilisant la clause ROWS.  
   
- La clause ROWS limite les lignes dans une partition en spécifiant un nombre fixe de lignes précédant ou suivant la ligne actuelle. Également, la clause RANGE limite logiquement les lignes dans une partition en spécifiant une plage de valeurs par rapport à la valeur de la ligne actuelle. Les lignes précédentes et suivantes sont définies en fonction de l'organisation dans la clause ORDER BY. Le frame de fenêtre « RANGE … CURRENT ROW… » inclut toutes les lignes qui ont les mêmes valeurs dans l’expression ORDER BY que la ligne actuelle. Par exemple, ROWS BETWEEN 2 PRECEDING AND CURRENT ROW signifie que la fenêtre de lignes traitées par la fonction comprend trois lignes, en commençant par les deux lignes qui précèdent la ligne actuelle (ligne actuelle comprise).  
+ La clause ROWS limite les lignes dans une partition en spécifiant un nombre fixe de lignes précédant ou suivant la ligne actuelle. Également, la clause RANGE limite logiquement les lignes dans une partition en spécifiant une plage de valeurs par rapport à la valeur de la ligne actuelle. Les lignes précédentes et suivantes sont définies en fonction de l'organisation dans la clause ORDER BY. Le frame de fenêtre « RANGE ... CURRENT ROW ... » inclut toutes les lignes qui ont les mêmes valeurs dans l’expression ORDER BY que la ligne actuelle. Par exemple, ROWS BETWEEN 2 PRECEDING AND CURRENT ROW signifie que la fenêtre de lignes traitées par la fonction comprend trois lignes, en commençant par les deux lignes qui précèdent la ligne actuelle (ligne actuelle comprise).  
   
 > [!NOTE]  
 >  ROWS ou RANGE requièrent que la clause ORDER BY soit spécifiée. Si ORDER BY contient plusieurs expressions d'ordre, CURRENT ROW FOR RANGE prend en compte toutes les colonnes dans la liste ORDER BY lors de la détermination de la ligne actuelle.  

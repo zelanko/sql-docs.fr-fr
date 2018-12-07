@@ -14,12 +14,12 @@ ms.assetid: c1f29c27-5168-48cb-b649-7029e4816906
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 422b8e8d8436430ec01cd92045e951850ee913ff
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 253dd918fb3fec410e2bcf28d6fba7cd24786d04
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663355"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52522922"
 ---
 # <a name="sql-server-tde-extensible-key-management-using-azure-key-vault---setup-steps"></a>Gestion de clés extensible de SQL server TDE avec Azure Key Vault - Étapes de configuration
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -147,7 +147,7 @@ Version de SQL Server  |Lien d’installation du package redistribuable
 4.  **Accorder au principal du service Azure Active Directory des autorisations d’accès au coffre de clés**  
   
      Vous pouvez autoriser d’autres utilisateurs et applications à utiliser votre coffre de clés.   
-    Dans le cas présent, utilisons le principal du service Azure Active Directory créé dans la partie I pour autoriser l’instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+    Dans le cas présent, utilisons le principal du service Azure Active Directory créé dans la partie I pour autoriser l’instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
     > [!IMPORTANT]  
     >  Le principal du service Azure Active Directory doit avoir au moins les autorisations `get`, `wrapKey` et `unwrapKey` pour le coffre de clés.  
@@ -160,7 +160,7 @@ Version de SQL Server  |Lien d’installation du package redistribuable
       -PermissionsToKeys get, wrapKey, unwrapKey  
     ```  
   
-     Appelez l’applet de commande `Get-AzureRmKeyVault` pour vérifier les autorisations. Dans la sortie de l’instruction, sous « Access Policies », vous devez voir le nom de votre application AAD répertorié en tant qu’autre client ayant accès à ce coffre de clés.  
+     Appelez l’applet de commande `Get-AzureRmKeyVault` pour vérifier les autorisations. Dans la sortie de l’instruction, sous « Access Policies », vous devez voir le nom de votre application AAD listé comme autre locataire ayant accès à ce coffre de clés.  
   
        
 5.  **Générer une clé asymétrique dans le coffre de clés**  
@@ -190,7 +190,7 @@ Version de SQL Server  |Lien d’installation du package redistribuable
     -   **Protégées par HSM :** créées et protégées par un module de sécurité matériel HSM pour une sécurité renforcée. Le coût est d’environ 1 $ par version de clé.  
   
         > [!IMPORTANT]  
-        >  Le connecteur SQL Server exige que le nom de clé utilise uniquement les caractères « a-z », « A-Z », « 0-9 » et « - », avec une limite de 26 caractères.   
+        >  Le connecteur SQL Server exige que le nom de clé utilise uniquement les caractères « a-z », « A-Z », « 0-9 » et « - », avec une limite de 26 caractères.   
         > Des versions de clés différentes sous le même nom de clé dans Azure Key Vault ne fonctionnent pas avec le connecteur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Pour permuter une clé Azure Key Vault utilisée par [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], reportez-vous aux étapes relatives à la substitution des clés dans la section [Résolution des problèmes et maintenance du connecteur SQL Server](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md).  
 
     ### <a name="import-an-existing-key"></a>Importer une clé existante   
@@ -198,8 +198,8 @@ Version de SQL Server  |Lien d’installation du package redistribuable
     Si vous avez une clé à protection logicielle RSA 2048 bits existante, vous pouvez charger la clé dans Azure Key Vault. Par exemple, si vous disposez d’un fichier .PFX enregistré sur votre lecteur `C:\\` dans un fichier nommé `softkey.pfx` et que vous souhaitez charger cette clé dans Azure Key Vault, tapez la commande suivante pour définir la variable `securepfxpwd` avec un mot de passe `12987553` pour le fichier .PFX :  
   
     ``` powershell  
-    $securepfxpwd = ConvertTo-SecureString –String '12987553' `  
-      –AsPlainText –Force  
+    $securepfxpwd = ConvertTo-SecureString -String '12987553' `  
+      -AsPlainText -Force  
     ```  
   
     Ensuite, vous pouvez taper la commande suivante pour importer la clé à partir du fichier .PFX, afin de protéger la clé par matériel (recommandé) dans le service Key Vault :  
@@ -215,7 +215,7 @@ Version de SQL Server  |Lien d’installation du package redistribuable
 
     ### <a name="create-a-new-key"></a>Créer une clé
     #### <a name="example"></a>Exemple :  
-    Vous pouvez aussi créer une nouvelle clé de chiffrement directement dans Azure Key Vault, et la protéger par logiciel ou par HSM.  Dans cet exemple, nous allons créer une clé à protection logicielle à l’aide de l’ `Add-AzureKeyVaultKey cmdlet`:  
+    Vous pouvez aussi créer une nouvelle clé de chiffrement directement dans Azure Key Vault, et la protéger par logiciel ou par HSM.  Dans cet exemple, nous allons créer une clé à protection logicielle à l’aide de l’`Add-AzureKeyVaultKey cmdlet` :  
 
     ``` powershell  
     Add-AzureKeyVaultKey -VaultName 'ContosoDevKeyVault' `  
@@ -242,7 +242,7 @@ Version de SQL Server  |Lien d’installation du package redistribuable
  Téléchargez le connecteur SQL Server à partir du [Centre de téléchargement Microsoft](https://go.microsoft.com/fwlink/p/?LinkId=521700). (Cette opération doit être effectuée par l’administrateur de l’ordinateur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .)  
 
 > [!NOTE]  
->  Les versions 1.0.0.440 et antérieures ont été remplacées et ne sont plus prises en charge dans les environnements de production. Effectuez la mise à niveau vers la version 1.0.1.0 ou ultérieure en accédant au [Centre de téléchargement Microsoft](https://www.microsoft.com/download/details.aspx?id=45344) et en utilisant les instructions fournies dans la page [Résolution des problèmes et maintenance du connecteur SQL Server](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md) sous « Mise à niveau du connecteur SQL Server ».
+>  Les versions 1.0.0.440 et antérieures ont été remplacées et ne sont plus prises en charge dans les environnements de production. Effectuez la mise à niveau vers la version 1.0.1.0 ou ultérieure en accédant au [Centre de téléchargement Microsoft](https://www.microsoft.com/download/details.aspx?id=45344) et en utilisant les instructions fournies dans la page [Résolution des problèmes et maintenance du connecteur SQL Server](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md) sous « Mise à niveau du connecteur SQL Server ».
 
 > [!NOTE]  
 > Un changement cassant figure dans la version 1.0.5.0, lié à l’algorithme d’empreinte numérique. Vous pouvez rencontrer un échec de restauration de base de données après la mise à niveau vers la version 1.0.5.0. Reportez-vous à l’article de la Base de connaissances [447099](https://support.microsoft.com/help/4470999/db-backup-problems-to-sql-server-connector-for-azure-1-0-5-0).

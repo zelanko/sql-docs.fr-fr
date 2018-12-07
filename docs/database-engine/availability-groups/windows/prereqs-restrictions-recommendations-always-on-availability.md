@@ -19,12 +19,12 @@ ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b5f815cba0bf8cf2777053a502597cd19ccd6a20
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 0343bef5bcd6ba26539bfe3f4a726ab538bb24a1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600949"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516464"
 ---
 # <a name="prereqs-restrictions-recommendations---always-on-availability-groups"></a>Prérequis, restrictions et recommandations - Groupes de disponibilité Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -152,7 +152,7 @@ ms.locfileid: "51600949"
   
      Les threads sont partagés à la demande, comme suit :  
   
-    -   En général, il existe 3 à 10 threads partagés, mais ce nombre peut augmenter en fonction de la charge de travail du réplica principal.  
+    -   En général, il existe 3 à 10 threads partagés, mais ce nombre peut augmenter en fonction de la charge de travail du réplica principal.  
   
     -   Si un thread donné est inactif pendant un certain temps, il est remis à disposition dans le pool de threads [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à usage général. Normalement, un thread inactif est libéré après environ 15 secondes d'inactivité. Toutefois, selon la dernière activité, un thread inactif peut être conservé plus longtemps.  
 

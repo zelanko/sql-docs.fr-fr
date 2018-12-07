@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 47f5a405d212750913904aa0d30bc9d46098b605
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: e173c84a3f501d848b5687f2bf78d8d84662a6ea
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658258"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507209"
 ---
 # <a name="migrating-to-in-memory-oltp"></a>Migration vers OLTP en mémoire
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -42,9 +42,9 @@ ms.locfileid: "51658258"
   
 -   [Requêtes de bases de données croisées](../../relational-databases/in-memory-oltp/cross-database-queries.md)  
   
--   [Implémentation d'IDENTITY dans une table mémoire optimisée](../../relational-databases/in-memory-oltp/implementing-identity-in-a-memory-optimized-table.md)  
+-   [Implémentation d’IDENTITY dans une table à mémoire optimisée](../../relational-databases/in-memory-oltp/implementing-identity-in-a-memory-optimized-table.md)  
   
- Pour plus d’informations sur les méthodologies de migration, consultez [In-Memory OLTP – Common Workload Patterns and Migration Considerations](https://msdn.microsoft.com/library/dn673538.aspx)(OLTP en mémoire – Modèles de charge de travail courants et considérations relatives à la migration).  
+ Pour plus d’informations sur les méthodologies de migration, consultez [OLTP en mémoire - Modèles de charge de travail courants et considérations relatives à la migration](https://msdn.microsoft.com/library/dn673538.aspx).  
   
 ## <a name="see-also"></a> Voir aussi  
  [OLTP en mémoire &#40;Optimisation en mémoire&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)   

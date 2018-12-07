@@ -12,17 +12,17 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e5a968cfc8cbe06a492528d60022ba4aef03cd34
-ms.sourcegitcommit: fff9db8affb094a8cce9d563855955ddc1af42d2
+ms.openlocfilehash: f9e1e9c58b88e7edd48fe3a1390f56e313572adf
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49324582"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418810"
 ---
 # <a name="querying-data-in-a-system-versioned-temporal-table"></a>Interrogation des données dans une table temporelle avec système par version
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Lorsque vous souhaitez obtenir l’état le plus récent (réel) des données d’une table temporelle, l’interrogation est exactement la même que pour une table non temporelle. Si les colonnes PERIOD ne sont pas masquées, leurs valeurs apparaissent dans une requête SELECT \* . Si vous avez spécifié les colonnes **PERIOD** comme étant masquées, leurs valeurs n’apparaissent pas dans une requête SELECT \* . Lorsque les colonnes **PERIOD** sont masquées, référencez spécifiquement les colonnes **PERIOD** dans la clause SELECT pour retourner les valeurs de ces colonnes.  
+  Lorsque vous souhaitez obtenir l’état le plus récent (réel) des données d’une table temporelle, l’interrogation est exactement la même que pour une table non temporelle. Si les colonnes PERIOD ne sont pas masquées, leurs valeurs apparaissent dans une requête SELECT \* . Si vous avez spécifié les colonnes **PERIOD** comme étant masquées, leurs valeurs n’apparaissent pas dans une requête SELECT \*. Lorsque les colonnes **PERIOD** sont masquées, référencez spécifiquement les colonnes **PERIOD** dans la clause SELECT pour retourner les valeurs de ces colonnes.  
   
  Pour exécuter une analyse temporelle, utilisez la nouvelle clause **FOR SYSTEM_TIME** avec quatre sous-clauses temporelles spécifiques pour interroger les données des tables actuelles et d’historique. Pour plus d’informations sur ces clauses, consultez [Tables temporelles](../../relational-databases/tables/temporal-tables.md) et [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)  
   

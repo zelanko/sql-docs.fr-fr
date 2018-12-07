@@ -11,12 +11,12 @@ ms.assetid: 13a82d41-dd7a-4708-bc84-4407a536c877
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b9942a24879e9e9c8d3b2bfa0c20c0f3f7400992
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: cb7cf5fed46000c77634ad0c5461b926d6c361dd
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638986"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524511"
 ---
 # <a name="ole-db-custom-properties"></a>Propriétés personnalisées OLE DB
   **Propriétés personnalisées des sources**  
@@ -52,7 +52,7 @@ ms.locfileid: "51638986"
   
 |Nom de la propriété|Type de données|Description|  
 |-------------------|---------------|-----------------|  
-|AccessMode|Integer (énumération)|Valeur qui spécifie la manière dont la destination accède à sa base de données de destination.<br /><br /> Cette propriété peut prendre les valeurs suivantes :<br /><br /> <br /><br /> **OpenRowset** (0) : vous devez fournir le nom d’une table ou d’une vue.<br /><br /> **OpenRowset à partir de Variable** (1) : vous devez fournir le nom d’une variable qui contient le nom d’une table ou d’une vue.<br /><br /> **OpenRowset à l’aide de FastLoad** (3) : vous devez fournir le nom d’une table ou d’une vue.<br /><br /> **OpenRowset à l’aide de FastLoad à partir de Variable** (4) : vous devez fournir le nom d’une variable qui contient le nom d’une table ou d’une vue.<br /><br /> **Commande SQL** (2) : vous devez fournir une instruction SQL.|  
+|AccessMode|Integer (énumération)|Valeur qui spécifie la manière dont la destination accède à sa base de données de destination.<br /><br /> Cette propriété peut prendre les valeurs suivantes :<br /><br /> <br /><br /> **OpenRowset** (0) : vous devez fournir le nom d’une table ou d’une vue.<br /><br /> **OpenRowset à partir de Variable** (1) : vous devez fournir le nom d’une variable qui contient le nom d’une table ou d’une vue.<br /><br /> **OpenRowset à l’aide de FastLoad** (3) : vous devez fournir le nom d’une table ou d’une vue.<br /><br /> **OpenRowset à l’aide de FastLoad à partir de Variable** (4) : vous devez fournir le nom d’une variable qui contient le nom d’une table ou d’une vue.<br /><br /> **Commande SQL** (2) : vous devez fournir une instruction SQL.|  
 |AlwaysUseDefaultCodePage|Booléen|Valeur qui indique s'il faut utiliser la valeur de la propriété **DefaultCodePage** pour chaque colonne ou tenter de dériver la page de codes à partir des paramètres régionaux de chaque colonne. La valeur par défaut de cette propriété est **False**.|  
 |CommandTimeout|Entier|Nombre maximal de secondes pendant lesquelles la commande SQL peut être exécutée avant d'arriver à expiration. La valeur 0 indique un délai infini. La valeur par défaut de cette propriété est 0.<br /><br /> Remarque : cette propriété n’est pas disponible dans **l’Éditeur de destination OLE DB**, mais vous pouvez la définir à l’aide de **l’éditeur avancé**.|  
 |DefaultCodePage|Entier|Page de codes par défaut associée à la destination OLE DB.|  

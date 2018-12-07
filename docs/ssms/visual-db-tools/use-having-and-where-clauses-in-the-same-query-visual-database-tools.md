@@ -21,12 +21,12 @@ ms.assetid: 1e07cf56-b4b7-4c49-8ddd-c276812a7148
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 35f30ac6e2e597f822fde99d52840a2d39ac23ce
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5a6e778155ad0a470bd5b9e97484aea94d205055
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608972"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537303"
 ---
 # <a name="use-having-and-where-clauses-in-the-same-query-visual-database-tools"></a>Utiliser les clauses HAVING et WHERE dans la même requête (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,7 +38,7 @@ Une clause HAVING est similaire à une clause WHERE si ce n'est qu'elle s'appliq
   
 -   La clause HAVING est ensuite appliquée aux lignes du jeu de résultats. Seuls les groupes qui répondent aux conditions HAVING figurent dans le résultat de la requête. Vous ne pouvez appliquer une clause HAVING qu'aux colonnes qui apparaissent également dans la clause GROUP BY ou dans une fonction d'agrégation.  
   
-Imaginons, par exemple, que vous décidiez de joindre les tables `titles` et `publishers` pour créer une requête affichant le prix moyen d'un livre pour un ensemble d'éditeurs. Seul le prix moyen d'un ensemble donné d'éditeurs vous intéresse, en l'occurrence ceux répertoriés en Californie. Par ailleurs, vous ne souhaitez afficher le prix moyen que si ce dernier est supérieur à 10 $.  
+Imaginons, par exemple, que vous décidiez de joindre les tables `titles` et `publishers` pour créer une requête affichant le prix moyen d'un livre pour un ensemble d'éditeurs. Seul le prix moyen d’un ensemble donné d’éditeurs vous intéresse, en l’occurrence ceux répertoriés en Californie. Par ailleurs, vous ne souhaitez afficher le prix moyen que si ce dernier est supérieur à 10 $.  
   
 Vous définissez la première condition en incluant une clause WHERE qui rejette tous les éditeurs non répertoriés en Californie, avant de calculer les prix moyens. La seconde condition nécessite une clause HAVING dans la mesure où elle est fondée sur les résultats du regroupement et de la synthèse des données. L’instruction SQL obtenue peut se présenter de la manière suivante :  
   

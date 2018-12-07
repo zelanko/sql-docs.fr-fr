@@ -11,12 +11,12 @@ helpviewer_keywords:
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d786294fb6f5c6c60243912d31bb9339a079a12e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: f77ab925ebfba6ab1d3fd524d7d740eca58fcba6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51674228"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523479"
 ---
 # <a name="install-polybase-on-windows"></a>Installer PolyBase sur Windows
 
@@ -180,11 +180,11 @@ SELECT SERVERPROPERTY ('IsPolyBaseInstalled') AS IsPolyBaseInstalled;
 
 Le programme d’installation de SQL Server PolyBase crée les règles de pare-feu suivantes sur l’ordinateur :  
    
-- SQL Server PolyBase – Moteur de base de données - \<NomInstanceSQLServer> (TCP-entrant)  
+- SQL Server PolyBase - Moteur de base de données - \<NomInstanceSQLServer> (TCP-entrant)  
    
-- SQL Server PolyBase – Services PolyBase - \<NomInstanceSQLServer> (TCP-entrant)  
+- SQL Server PolyBase - Services PolyBase - \<NomInstanceSQLServer> (TCP-entrant)  
 
-- SQL Server PolyBase – SQL Browser - (UDP-entrant)  
+- SQL Server PolyBase - SQL Browser - (UDP-entrant)  
    
 Lors de l’installation, si vous utilisez l’instance de SQL Server dans le cadre d’un groupe de scale out PolyBase, ces règles sont activées. Le pare-feu s’ouvre pour autoriser les connexions entrantes. Elles sont autorisées pour le moteur de base de données SQL Server, le moteur PolyBase SQL Server, le service Mouvement de données PolyBase SQL Server et SQL Browser. Si le service de pare-feu de l’ordinateur n’est pas en cours d’exécution au moment de l’installation, la configuration de SQL Server ne peut pas activer ces règles. Dans ce cas, démarrez le service de pare-feu sur l’ordinateur et activez ces règles après l’installation.  
    

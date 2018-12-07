@@ -14,12 +14,12 @@ ms.assetid: 143c68a5-589f-4e7f-be59-02707e1a430a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fd3762adabe4098d48bfd5352a0a159672b76ecd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9270b71457bdbb6e932015ddcad8118ef2f42cdd
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47599097"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529921"
 ---
 # <a name="database-mirroring---establish-session---windows-authentication"></a>Mise en miroir de base de données - Établir une session - Authentification Windows
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -75,7 +75,7 @@ ms.locfileid: "47599097"
   
      où _\<adresse-système>_ est une chaîne qui identifie de façon non ambiguë l’ordinateur de destination et _\<port>_ est le numéro de port utilisé par le point de terminaison de la mise en miroir de l’instance de serveur partenaire. Pour plus d’informations, consultez [Spécifier une adresse réseau de serveur &#40;mise en miroir de bases de données&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md).  
   
-     Par exemple, sur l'instance de serveur miroir, l'instruction ALTER DATABASE suivante définit le partenaire comme instance de serveur principal d'origine. Le nom de la base de données est **AdventureWorks**, l'adresse système est DBSERVER1 (nom du système du partenaire) et le port utilisé par le point de terminaison de la mise en miroir de la base de données du partenaire est 7022 :  
+     Par exemple, sur l'instance de serveur miroir, l'instruction ALTER DATABASE suivante définit le partenaire comme instance de serveur principal d'origine. Le nom de la base de données est **AdventureWorks**, l’adresse système est DBSERVER1 (nom du système du partenaire) et le port utilisé par le point de terminaison de la mise en miroir de la base de données du partenaire est 7022 :  
   
     ```  
     ALTER DATABASE AdventureWorks   
@@ -90,7 +90,7 @@ ms.locfileid: "47599097"
   
      Pour plus d'informations, consultez l'étape 4.  
   
-     Par exemple, sur l'instance de serveur principal, l'instruction ALTER DATABASE suivante définit le partenaire comme instance de serveur miroir d'origine. Le nom de la base de données est **AdventureWorks**, l'adresse système est DBSERVER2 – nom du système du partenaire, et le port utilisé par le point de terminaison de la mise en miroir de la base de données du partenaire est 7025 :  
+     Par exemple, sur l'instance de serveur principal, l'instruction ALTER DATABASE suivante définit le partenaire comme instance de serveur miroir d'origine. Le nom de la base de données est **AdventureWorks**, l’adresse système est DBSERVER2 (nom du système du partenaire) et le port utilisé par le point de terminaison de la mise en miroir de la base de données du partenaire est 7025 :  
   
     ```  
     ALTER DATABASE AdventureWorks SET PARTNER = 'TCP://DBSERVER2:7022'  
@@ -222,7 +222,7 @@ ms.locfileid: "47599097"
  [Mise en miroir de bases de données et réplication &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)   
  [Configuration de la mise en miroir d’une base de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)   
  [Spécifier une adresse réseau de serveur &#40;mise en miroir de bases de données&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)   
- [Modes de fonctionnement de la mise en miroir de bases de données](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)  
+ [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)  
   
   
 

@@ -14,12 +14,12 @@ ms.assetid: cd308bc9-9468-40cc-ad6e-1a8a69aca6c8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 32b0e29977dea2d3269972ff06bc34f9af214012
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: b74eddf6fa77c63d7b4657375883e9b83e1893d4
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697447"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400622"
 ---
 # <a name="compute-capacity-limits-by-edition-of-sql-server"></a>Limites de capacité de calcul des éditions SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -89,7 +89,7 @@ Le tableau suivant présente les limites de capacité de calcul pour une instanc
   
 Dans un environnement virtualisé, la limite de capacité de calcul est basée sur le nombre de processeurs logiques et non sur le nombre de cœurs. La raison est que l’architecture de processeurs n’est pas visible aux applications invitées. 
 
-Par exemple, un serveur avec quatre sockets comprenant des processeurs quadruple cœur et autorisant l’activation de deux hyperthreads par cœur, contient 32 processeurs logiques avec l'hyperthreading activé. Mais il contient seulement 16 processeurs logiques avec l’hyperthreading désactivé. Ces processeurs logiques peuvent être mappés aux machines virtuelles sur le serveur. La charge de calcul des machines virtuelles sur ce processeur logique est mappée à un thread d'exécution sur le processeur physique du serveur hôte.  
+Par exemple, un serveur avec quatre sockets comprenant des processeurs quadruple cœur et autorisant l’activation de deux hyperthreads par cœur, contient 32 processeurs logiques avec l'hyperthreading activé. Mais il contient seulement 16 processeurs logiques avec l’hyperthreading désactivé. Ces processeurs logiques peuvent être mappés aux machines virtuelles sur le serveur. La charge de calcul des machines virtuelles sur ce processeur logique est mappée à un thread d’exécution sur le processeur physique du serveur hôte.  
   
 Vous pouvez désactiver l’hyperthreading quand les performances de chaque processeur virtuel sont importantes. Vous pouvez activer ou désactiver l’hyperthreading à l’aide d’un paramètre BIOS du processeur au cours de la configuration du BIOS. Mais c’est généralement une opération limitée au serveur qui affecte toutes les charges de travail exécutées sur le serveur. Dans ce cas, la solution peut être de séparer les charges de travail qui s'exécutent dans des environnements virtualisés des charges de travail qui tirent parti de l'amélioration des performances grâce à l'hyperthreading dans un environnement de système d'exploitation physique.  
   

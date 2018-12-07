@@ -22,12 +22,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 94b77d9ce0e036e0b3c5727d3731d0effc074f33
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 09422e46babcb966fdc4c86153e91439a5e46c88
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782447"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507393"
 ---
 # <a name="create-table-transact-sql-identity-property"></a>CREATE TABLE (Transact-SQL) IDENTITY (propriété)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -64,13 +64,13 @@ IDENTITY [ (seed , increment) ]
   
  La propriété d'identité sur une colonne ne garantit pas ce qui suit :  
   
--   **Unicité de la valeur** – L’unicité doit être appliquée à l’aide d’une contrainte **PRIMARY KEY** ou **UNIQUE** , ou d’un index **UNIQUE**.  
+-   **Unicité de la valeur** : l’unicité doit être appliquée avec une contrainte **PRIMARY KEY** ou **UNIQUE**, ou avec un index **UNIQUE**.  
   
--   **Valeurs consécutives dans une transaction** – Il n’est pas garanti qu’une transaction qui insère plusieurs lignes obtienne des valeurs consécutives pour les lignes car d’autres insertions simultanées peuvent se produire sur la table. Si les valeurs doivent être consécutives, alors la transaction doit utiliser un verrou sur la table ou le niveau d’isolation **SERIALIZABLE**.  
+-   **Valeurs consécutives dans une transaction** : il n’est pas garanti qu’une transaction insérant plusieurs lignes obtienne des valeurs consécutives pour les lignes, car d’autres insertions simultanées peuvent se produire sur la table. Si les valeurs doivent être consécutives, alors la transaction doit utiliser un verrou sur la table ou le niveau d’isolation **SERIALIZABLE**.  
   
--   **Valeurs consécutives après le redémarrage du serveur ou d’autres échecs** – [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut mettre en cache les valeurs d’identité pour garantir les performances, et certaines valeurs affectées peuvent être perdues lors d’un échec de base de données ou du redémarrage du serveur. Cela peut entraîner des intervalles de valeur d'identité à l'insertion. Si les intervalles ne sont pas acceptables, alors l'application doit utiliser son propre mécanisme pour générer des valeurs clés. L’utilisation d’un générateur de séquence avec l’option **NOCACHE** peut limiter les intervalles pour les transactions qui ne sont jamais validées.  
+-   **Valeurs consécutives après le redémarrage du serveur ou d’autres échecs** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut mettre en cache les valeurs d’identité pour des raisons de performance, et certaines valeurs affectées peuvent être perdues lors d’un échec de base de données ou du redémarrage du serveur. Cela peut entraîner des intervalles de valeur d'identité à l'insertion. Si les intervalles ne sont pas acceptables, alors l'application doit utiliser son propre mécanisme pour générer des valeurs clés. L’utilisation d’un générateur de séquence avec l’option **NOCACHE** peut limiter les intervalles pour les transactions qui ne sont jamais validées.  
   
--   **Réutilisation des valeurs** – Pour une propriété d’identité donnée, avec une valeur/un incrément spécifique, les valeurs d’identité ne sont pas réutilisées par le moteur. Si une instruction d'insertion donnée échoue, ou si l'instruction d'insertion est restaurée, alors les valeurs d'identité consommées sont perdues et ne peuvent plus être générées. Cela peut entraîner des intervalles lorsque les valeurs d'identité ultérieures sont générées.  
+-   **Réutilisation des valeurs** : pour une propriété d’identité donnée, avec une valeur/un incrément spécifique, les valeurs d’identité ne sont pas réutilisées par le moteur. Si une instruction d'insertion donnée échoue, ou si l'instruction d'insertion est restaurée, alors les valeurs d'identité consommées sont perdues et ne peuvent plus être générées. Cela peut entraîner des intervalles lorsque les valeurs d'identité ultérieures sont générées.  
   
  Ces restrictions sont dues à la conception et visent à améliorer les performances, car elles sont acceptables dans la plupart des situations. Si vous ne pouvez pas utiliser les valeurs d'identité en raison de ces restrictions, créez une table distincte contenant une valeur actuelle et gérez l'accès à la table et l'affectation de numéro dans votre application.  
   

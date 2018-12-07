@@ -42,12 +42,12 @@ ms.assetid: 56f5df6a-56f6-43df-bca9-08476a3bd931
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 362d59ff4ba311f4903993cfdb455d0785a912e6
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 69dda6d5c0fbe7f8b66bf453b5f240588ad878ac
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640736"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507709"
 ---
 # <a name="transformation-custom-properties"></a>Propriétés personnalisées des transformations
   En plus des propriétés qui sont communes à la plupart des objets de flux de données dans le modèle objet [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , de nombreux objets de flux de données possèdent des propriétés personnalisées qui sont spécifiques à l'objet. Ces propriétés personnalisées sont uniquement disponibles au moment de l'exécution et ne sont pas documentées dans la documentation de référence de la programmation managée de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] .  
@@ -82,16 +82,16 @@ ms.locfileid: "51640736"
 |--------------|---------------|-----------------|  
 |AutoExtendFactor|Entier|Valeur entre 1 et 100 qui spécifie le pourcentage d'extension possible de la mémoire lors de l'opération d'agrégation. La valeur par défaut de cette propriété est de **25**.|  
 |CountDistinctKeys|Entier|Valeur précisant le nombre exact de comptages de valeurs que l'agrégation peut écrire. Si une valeur CountDistinctScale est spécifiée, la valeur dans CountDistinctKeys est prioritaire.|  
-|CountDistinctScale|Integer (énumération)|Valeur qui décrit le nombre approximatif de valeurs distinctes que peut totaliser l'agrégation dans une colonne. Cette propriété peut prendre les valeurs suivantes :<br /><br /> **Bas** (1) : indique jusqu'à 500 000 valeurs de clés.<br /><br /> **Moyen** (2) : indique jusqu'à 5 millions de valeurs de clés.<br /><br /> **Haut** (3) : indique plus de 25 millions de valeurs de clés.<br /><br /> **Non spécifié** (0) : indique qu’aucune valeur CountDistinctScale n’est utilisée. L’utilisation de l’option **Non spécifié** (0) peut avoir un impact sur les performances dans les jeux de données volumineux.|  
+|CountDistinctScale|Integer (énumération)|Valeur qui décrit le nombre approximatif de valeurs distinctes que peut totaliser l'agrégation dans une colonne. Cette propriété peut prendre les valeurs suivantes :<br /><br /> **Bas** (1) : indique jusqu’à 500 000 valeurs de clés.<br /><br /> **Moyen** (2) : indique jusqu’à 5 millions de valeurs de clés.<br /><br /> **Haut** (3) : indique plus de 25 millions de valeurs de clés.<br /><br /> **Non spécifié** (0) : indique qu’aucune valeur CountDistinctScale n’est utilisée. L’utilisation de l’option **Non spécifié** (0) peut avoir un impact sur les performances dans les jeux de données volumineux.|  
 |Keys|Entier|Valeur qui spécifie le nombre exact de clés GROUP BY écrites par l'agrégation. Si une valeur KeyScalevalue est spécifiée, la valeur dans Keys est prioritaire.|  
-|KeyScale|Integer (énumération)|Valeur qui décrit le nombre approximatif de valeurs de clés GROUP BY que l'agrégation peut écrire. Cette propriété peut prendre les valeurs suivantes :<br /><br /> **Bas** (1) : indique jusqu'à 500 000 valeurs de clés.<br /><br /> **Moyen** (2) : indique jusqu'à 5 millions de valeurs de clés.<br /><br /> **Haut** (3) : indique plus de 25 millions de valeurs de clés.<br /><br /> **Non spécifié** (0) : indique qu’aucune valeur KeyScale n’est utilisée.|  
+|KeyScale|Integer (énumération)|Valeur qui décrit le nombre approximatif de valeurs de clés GROUP BY que l'agrégation peut écrire. Cette propriété peut prendre les valeurs suivantes :<br /><br /> **Bas** (1) : indique jusqu’à 500 000 valeurs de clés.<br /><br /> **Moyen** (2) : indique jusqu’à 5 millions de valeurs de clés.<br /><br /> **Haut** (3) : indique plus de 25 millions de valeurs de clés.<br /><br /> **Non spécifié** (0) : indique qu’aucune valeur KeyScale n’est utilisée.|  
   
  Le tableau suivant décrit les propriétés personnalisées de la sortie de la transformation d'agrégation. Toutes les propriétés sont en lecture/écriture.  
   
 |Propriété|Type de données|Description|  
 |--------------|---------------|-----------------|  
 |Keys|Entier|Valeur qui spécifie le nombre exact de clés GROUP BY que l'agrégation peut écrire. Si une valeur KeyScale est spécifiée, la valeur dans Keys est prioritaire.|  
-|KeyScale|Integer (énumération)|Valeur qui décrit le nombre approximatif de valeurs de clés GROUP BY que l'agrégation peut écrire. Cette propriété peut prendre les valeurs suivantes :<br /><br /> **Bas** (1) : indique jusqu'à 500 000 valeurs de clés.<br /><br /> **Moyen** (2) : indique jusqu'à 5 millions de valeurs de clés.<br /><br /> **Haut** (3) : indique plus de 25 millions de valeurs de clés.<br /><br /> **Non spécifié** (0) : indique qu’aucune valeur KeyScale n’est utilisée.|  
+|KeyScale|Integer (énumération)|Valeur qui décrit le nombre approximatif de valeurs de clés GROUP BY que l'agrégation peut écrire. Cette propriété peut prendre les valeurs suivantes :<br /><br /> **Bas** (1) : indique jusqu’à 500 000 valeurs de clés.<br /><br /> **Moyen** (2) : indique jusqu’à 5 millions de valeurs de clés.<br /><br /> **Haut** (3) : indique plus de 25 millions de valeurs de clés.<br /><br /> **Non spécifié** (0) : indique qu’aucune valeur KeyScale n’est utilisée.|  
   
  Le tableau suivant décrit les propriétés personnalisées des colonnes de sortie de la transformation d'agrégation. Toutes les propriétés sont en lecture/écriture.  
   
@@ -101,7 +101,7 @@ ms.locfileid: "51640736"
 |AggregationComparisonFlags|Entier|Valeur qui spécifie la manière dont la transformation d'agrégation compare les données de chaîne dans une colonne. Pour plus d'informations, voir [Comparing String Data](../../../integration-services/data-flow/comparing-string-data.md).|  
 |AggregationType|Integer (énumération)|Valeur qui spécifie l'opération d'agrégation à appliquer à la colonne. Cette propriété peut prendre les valeurs suivantes :<br /><br /> **Group by** (0)<br /><br /> **Count** (1)<br /><br /> **Count all** (2)<br /><br /> **Countdistinct** (3)<br /><br /> **Sum** (4)<br /><br /> **Average** (5)<br /><br /> **Maximum** (7)<br /><br /> **Minimum** (6)|  
 |CountDistinctKeys|Entier|Valeur spécifiant le nombre exact de clés que l'agrégation peut écrire lorsque le type d'agrégation est **COUNT DISTINCT**. Si une valeur CountDistinctScale est spécifiée, la valeur dans CountDistinctKeys est prioritaire.|  
-|CountDistinctScale|Integer (énumération)|Valeur qui décrit le nombre approximatif de valeurs de clés que peut écrire l'agrégation lorsque le type d'agrégation est **COUNT DISTINCT**. Cette propriété peut prendre les valeurs suivantes :<br /><br /> **Bas** (1) : indique jusqu'à 500 000 valeurs de clés.<br /><br /> **Moyen** (2) : indique jusqu'à 5 millions de valeurs de clés.<br /><br /> **Haut** (3) : indique plus de 25 millions de valeurs de clés.<br /><br /> **Non spécifié** (0) : indique qu’aucune valeur CountDistinctScale n’est utilisée.|  
+|CountDistinctScale|Integer (énumération)|Valeur qui décrit le nombre approximatif de valeurs de clés que peut écrire l'agrégation lorsque le type d'agrégation est **COUNT DISTINCT**. Cette propriété peut prendre les valeurs suivantes :<br /><br /> **Bas** (1) : indique jusqu’à 500 000 valeurs de clés.<br /><br /> **Moyen** (2) : indique jusqu’à 5 millions de valeurs de clés.<br /><br /> **Haut** (3) : indique plus de 25 millions de valeurs de clés.<br /><br /> **Non spécifié** (0) : indique qu’aucune valeur CountDistinctScale n’est utilisée.|  
 |IsBig|Booléen|Valeur qui indique si la colonne contient une valeur supérieure à 4 milliards ou une valeur avec une meilleure précision qu'une valeur à virgule flottante double précision. La valeur peut être 0 ou 1. 0 indique que IsBig a la valeur **False** et que la colonne ne contient aucune valeur élevée ou exacte. La valeur par défaut de cette propriété est 1.|  
   
  L'entrée et les colonnes d'entrée de la transformation d'agrégation ne sont pas dotées de propriétés personnalisées.  
@@ -272,7 +272,7 @@ ms.locfileid: "51640736"
 |--------------|---------------|-----------------|  
 |ExactFuzzy|Integer (énumération)|Valeur qui spécifie si la transformation réalise une correspondance approximative ou une correspondance exacte. Les valeurs valides sont **Exacte** et **Approximative**. La valeur par défaut de cette propriété est **Approximative**.|  
 |FuzzyComparisonFlags|Integer (énumération)|Valeur qui spécifie la manière dont la transformation compare les données de chaîne dans une colonne. Cette propriété peut prendre les valeurs suivantes :<br /><br /> **FullySensitive**<br /><br /> **IgnoreCase**<br /><br /> **IgnoreKanaType**<br /><br /> **IgnoreNonSpace**<br /><br /> **IgnoreSymbols**<br /><br /> **IgnoreWidth**<br /><br /> <br /><br /> Pour plus d'informations, voir [Comparing String Data](../../../integration-services/data-flow/comparing-string-data.md).|  
-|LeadingTrailingNumeralsSignificant|Integer (énumération)|Valeur qui précise l'importance des chiffres. Cette propriété peut prendre les valeurs suivantes :<br /><br /> **NumeralsNotSpecial** (0) : à utiliser si les chiffres ne sont pas significatifs.<br /><br /> **LeadingNumeralsSignificant** (1) : à utiliser si les premiers chiffres sont significatifs.<br /><br /> **TrailingNumeralsSignificant** (2) : à utiliser si les derniers chiffres sont significatifs.<br /><br /> **LeadingAndTrailingNumeralsSignificant** (3) : à utiliser si les premiers et les derniers chiffres sont significatifs.|  
+|LeadingTrailingNumeralsSignificant|Integer (énumération)|Valeur qui précise l'importance des chiffres. Cette propriété peut prendre les valeurs suivantes :<br /><br /> **NumeralsNotSpecial** (0) : à utiliser si les chiffres ne sont pas significatifs.<br /><br /> **LeadingNumeralsSignificant** (1) : à utiliser si les premiers chiffres sont significatifs.<br /><br /> **TrailingNumeralsSignificant** (2) : à utiliser si les derniers chiffres sont significatifs.<br /><br /> **LeadingAndTrailingNumeralsSignificant** (3) : à utiliser si les premiers et les derniers chiffres sont significatifs.|  
 |MinSimilarity|Double|Seuil de similarité (exprimé par une valeur comprise entre 0 et 1) utilisé pour la jointure sur la colonne. Seules les lignes supérieures au seuil sont validées comme des correspondances.|  
 |ToBeCleaned|Booléen|Valeur qui spécifie si la colonne est utilisée pour identifier des doublons, à savoir s'il s'agit d'une colonne dans laquelle vous procédez à des regroupements. La valeur par défaut de cette propriété est **False**.|  
   

@@ -9,12 +9,12 @@ ms.assetid: 8464ab9d-afe1-4490-955f-9f3319bcbf8d
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: c96de7a5f5141e97a9e3670711e09eb3c20cd324
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: f58c39fb0be119da6164b62d91d3e3da8e0a5c48
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021613"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504110"
 ---
 # <a name="create-a-data-alert-in-data-alert-designer"></a>Créer une alerte de données dans le Concepteur d’alertes
 
@@ -75,15 +75,15 @@ Vous pouvez créer les définitions d'alerte de données dans le Concepteur d'al
   
 10. Tapez la valeur de comparaison.  
   
-11. Éventuellement, recliquez sur le bouton de sélection **(…)** .  
+11. Vous pouvez éventuellement cliquer à nouveau sur le bouton de sélection **(...)**.  
   
-     Les points de suspension **(…)** apparaissent sur la ligne qui contient la première clause.  
+     Les points de suspension **(...)** apparaissent sur la ligne qui contient la première clause.  
   
      La clause OR est ajoutée au-dessous et dans la règle AND.  
   
 12. Éventuellement, cliquez sur la flèche vers le bas, sélectionnez **Mode de sélection de champ**, puis sélectionnez une colonne dans la liste.  
   
-     Vous remarquerez que les points de suspension **(…)** qui vous permettent d’ajouter des clauses OR ont disparu.  
+     Vous remarquerez que les points de suspension **(...)** qui vous permettent d’ajouter des clauses OR ont disparu.  
   
 13. Éventuellement, recliquez sur **Ajouter une règle** pour ajouter des règles supplémentaires.  
   

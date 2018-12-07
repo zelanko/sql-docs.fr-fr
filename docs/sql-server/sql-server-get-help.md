@@ -9,12 +9,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: e4e48ba424b9c9c8ef56d1280d774c7ee3120ffe
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 4eb0d351eeb3555f9f0162670209a9c15af6d964
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51698227"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531490"
 ---
 # <a name="sql-server-help-and-feedback"></a>Aide et commentaires pour SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,6 +28,12 @@ L’équipe d’ingénierie de SQL Server garde un œil sur [User Voice](https:/
 
 ## <a name="i-want-to-make-a-suggestion-about-sql-server-management-studio"></a>Je veux faire une suggestion concernant SQL Server Management Studio
 L’équipe de SQL Server Management Studio (SSMS) surveille aussi étroitement [User Voice](https://feedback.azure.com/forums/908035-sql-server) pour SQL Server. Par conséquent, si vous voulez signaler des problèmes ou si vous avez des suggestions, User Voice est le meilleur endroit pour ce faire. 
+
+## <a name="i-want-to-access-the-sql-server-technical-documentation-offline"></a>Je souhaite accéder à la documentation technique SQL Server hors connexion
+Si vous souhaitez afficher la documentation SQL Server sur un système hors ligne, vous disposez de deux options. Vous pouvez créer un fichier PDF à n’importe quel endroit de la documentation technique SQL Server, ou vous pouvez télécharger le contenu hors connexion à l’aide de la [visionneuse d’aide hors connexion SQL Server](sql-server-help-installation.md). 
+
+Si vous souhaitez créer un fichier PDF, cliquez sur le lien **Télécharger le PDF** situé au bas de chaque table des matières.
+![Télécharger le PDF](media/sql-server-get-help/download-pdf.png)
 
 ## <a name="i-want-to-contact-microsoft-support"></a>Je veux contacter le support Microsoft
 Si vous êtes un utilisateur professionnel, veuillez consulter les [options de support](https://support.microsoft.com/gp/support-options-for-business?forceorigin=esmc).
@@ -77,12 +83,14 @@ Il existe quelques médias sociaux qui peuvent vous permettre de contacter l’�
 - [MashaMSFT Twitter](https://twitter.com/mashamsft)
 - [MikeRayMSFT Twitter](https://twitter.com/mncray)
 
+## <a name="i-want-to-contribute-to-sql-server-documentation"></a>Je souhaite contribuer à la documentation SQL Server
+
+###<a name="edit-contentincludesmediaedit-topic-pencilpng-editing-content"></a>![modifier contenu](../includes/media/edit-topic-pencil.png) Modification du contenu
+Avez-vous trouvé du contenu erroné dans notre documentation ? Souhaitez-vous apporter une contribution pour améliorer notre documentation ? Sachez que vous pouvez modifier le contenu vous-même sur docs.microsoft.com. Dans ce cas, non seulement notre documentation sera améliorée, mais vous serez également cité en tant que contributeur à la page ! Pour plus d’informations, consultez [https://aka.ms/editsqldocs](https://aka.ms/editsqldocs). 
+
+Toutes les contributions publiques sont examinées par l’équipe du contenu SQL afin de vérifier leur exactitude technique et leur cohérence. 
+
 ## <a name="i-want-to-provide-feedback-for-sql-docs-content"></a>Je souhaite fournir des commentaires sur le contenu des documents SQL
-
-### <a name="edit-contentincludesmediaedit-topic-pencilpng-editing-content"></a>![modifier contenu](../includes/media/edit-topic-pencil.png) Modification du contenu
-Avez-vous trouvé du contenu erroné dans notre documentation ? Saviez-vous que vous pouvez modifier le contenu vous-même ? Dans ce cas, non seulement notre documentation sera améliorée, mais vous serez également cité en tant que contributeur à la page ! Pour plus d’informations, consultez [https://aka.ms/editsqldocs](https://aka.ms/editsqldocs). 
-
-### <a name="surveys"></a>Enquêtes
 Si vous avez un peu de temps à perdre et si vous souhaitez partager vos réflexions sur votre expérience avec les documents SQL, veuillez répondre à notre enquête ! Vous la trouverez sur [https://aka.ms/SQLDocSurvey](https://aka.ms/SQLDocSurvey) et cela devrait vous prendre entre 10 et 15 minutes. 
 
 Si vous avez quelque chose à partager avec l’équipe en charge du contenu SQL, une idée, une suggestion, des commentaires, quoi que ce soit ! Vous pouvez le faire sur [https://aka.ms/SQLDocsFeedback](https://aka.ms/SQLDocsFeedback). 

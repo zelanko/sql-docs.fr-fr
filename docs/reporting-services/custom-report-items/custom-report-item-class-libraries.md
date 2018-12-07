@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: f18c5d8f-1d6b-4f0b-8657-c14896c2ce0d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3a52dbdd40605d9a1634495066b4249bd0567075
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 09ffdde2f04c45d02bfd69369c0fbba8bd2fb5ab
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50028103"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398882"
 ---
 # <a name="custom-report-item-class-libraries"></a>Bibliothèques de classes d'éléments de rapport personnalisés
   Les éléments de rapport personnalisés utilisent des classes de l’espace de noms **Microsoft.ReportDesigner**. Les classes utilisées pour implémenter un élément de rapport personnalisé peuvent être divisées en deux catégories principales : les classes uniques conçues pour prendre en charge l'infrastructure d'éléments de rapport personnalisés et les classes wrapper managées qui encapsulent les fonctionnalités d'éléments RDL (Report Definition Language) pertinents. Pour un exemple de code montrant comment utiliser ces classes, consultez [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889) (Exemples Reporting Services pour le produit SQL Server).  
@@ -45,7 +45,7 @@ ms.locfileid: "50028103"
 |**Style**|Propriétés de style destinées à l'élément de rapport personnalisé.|  
 |**Adornment**|Fenêtre d'ornement utilisée pour modifier de manière interactive le contrôle.|  
 |**Site**|**ISite** du composant.|  
-|**DesignerVerbCollection**|Tableau de verbes personnalisés destinés au menu contextuel du contrôle.|  
+|**DesignerVerbCollection**|Tableau de verbes personnalisés pour le menu contextuel du contrôle.|  
   
 #### <a name="public-methods"></a>M&#233;thodes publiques  
   

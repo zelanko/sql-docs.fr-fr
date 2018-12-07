@@ -14,12 +14,12 @@ ms.assetid: ca0d59ef-25f0-4047-9130-e2282d058283
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 134831664f7b13177dac016bb9b92906a2974eb5
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: ec96dd777f338af847602fdb4b595f9fefc76a9d
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703587"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52404094"
 ---
 # <a name="wsfc-quorum-modes-and-voting-configuration-sql-server"></a>Modes de quorum WSFC et configuration de vote (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ ms.locfileid: "51703587"
   
  Aucun nœud d'un cluster WSFC ne peut définitivement déterminer seul que le cluster est globalement intègre ou pas.  À tout moment, du point de vue de chaque nœud, certains autres nœuds peuvent sembler être hors connexion, ou en cours de basculement, ou ne pas répondre en raison d'une défaillance de communication réseau.  Une fonction principale du vote de quorum consiste à déterminer si l'état apparent de chaque nœud du cluster WSFC correspond à l'état réel du nœud.  
   
- Pour tous les modèles de quorum à l'exception de « Disque uniquement », l'efficacité d'un vote de quorum dépend de la fiabilité des communications entre tous les nœuds votants du cluster. Les communications réseau entre les nœuds sur le même sous-réseau physique doivent être considérées comme fiables ; le vote du quorum doit être approuvé.  
+ Pour tous les modes de quorum à l’exception de « Disque uniquement », l’efficacité d’un vote de quorum dépend de la fiabilité des communications entre tous les nœuds votants du cluster. Les communications réseau entre les nœuds sur le même sous-réseau physique doivent être considérées comme fiables ; le vote du quorum doit être approuvé.  
   
  Toutefois, si un nœud d'un autre sous-réseau est considéré comme non-réactif dans un vote de quorum alors qu'il en ligne et intègre, ceci est probablement dû à une défaillance de communication réseau entre les sous-réseaux.  En fonction de la topologie de cluster, du mode de quorum et de la configuration de la stratégie de basculement, l'échec de communication réseau peut effectivement créer plusieurs ensembles (ou sous-ensembles) de nœuds votants.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "51703587"
 >  [KB2494036](https://support.microsoft.com/kb/2494036): un correctif est disponible pour vous permettre de configurer un nœud de cluster qui n'a pas de votes de quorum dans [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] et dans [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]  
   
 ##  <a name="RecommendedAdjustmentstoQuorumVoting"></a> Réglages recommandés pour le vote du quorum  
- Lorsque vous activez ou désactivez le vote d'un nœud WSFC donné, respectez les instructions suivantes :  
+ Lorsque vous activez ou désactivez le vote d’un nœud WSFC donné, respectez les instructions suivantes :  
   
 -   **Aucun vote par défaut.** Imaginons que chaque nœud ne doit pas voter sans justification explicite.  
   

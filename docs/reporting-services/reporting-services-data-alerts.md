@@ -9,12 +9,12 @@ ms.assetid: 8c234077-b670-45c0-803f-51c5a5e0866e
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ccf3376c13ef02699913d5d494d5752d35f13006
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 9e0032e303951ebfc531b3feb0831f1a48061914
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021603"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539926"
 ---
 # <a name="reporting-services-data-alerts"></a>Alertes de données Reporting Services
 
@@ -31,13 +31,13 @@ Les messages d'alerte de données sont envoyés par courrier électronique. Selo
 
 ##  <a name="AlertingWF"></a> Architecture des alertes de données et flux de travail
 
-Voici les zones clés des alertes de données d' [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] :
+Voici les zones clés des alertes de données [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] :
 
--   **Définition et enregistrement des alertes de données**. Vous pouvez consulter un rapport, créer des règles qui identifient des valeurs de données intéressantes, définir les périodicités d'envoi de l'alerte de données et spécifier les destinataires du message d'alerte.  
+-   **Définition et enregistrement des alertes de données** : vous exécutez un rapport, créez des règles qui identifient les valeurs de données intéressantes, définissez les périodicités d’envoi de du message d’alerte de données et spécifiez les destinataires du message d’alerte.  
   
--   **Exécution des définitions d'alerte de données**. Le service d'alerte traite les définitions d'alerte selon la périodicité définie, récupère les données du rapport et crée des alertes de données en fonction des règles dans la définition d'alerte.  
+-   **Exécution des définitions d’alerte de données** : le service d’alerte traite les définitions d’alerte au moment prévu, récupère les données de rapport et crée des instances d’alerte de données en fonction des règles de la définition d’alerte.  
   
--   **Remise des messages d'alerte de données aux destinataires**. Le service d'alerte créé une instance d'alerte et envoie un message d'alerte aux destinataires par courrier électronique.  
+-   **Remise des messages d’alerte de données aux destinataires** : le service d’alerte créé une instance d’alerte et envoie un message d’alerte aux destinataires par courrier électronique.  
   
  En outre, en tant que propriétaire de l'alerte de données, vous pouvez afficher les informations relatives aux alertes de données et supprimer et modifier vos définitions d'alerte. Une alerte a un seul propriétaire, la personne qui l'a créée.  
   
@@ -190,7 +190,7 @@ Voici les zones clés des alertes de données d' [!INCLUDE[ssRSnoversion](../inc
   
  `<IsAlertingService>True</IsAlertingService>`  
   
- `…`  
+ `...`  
   
  `</Service>`  
   
@@ -291,11 +291,11 @@ Voici les zones clés des alertes de données d' [!INCLUDE[ssRSnoversion](../inc
 -   Dans la section**Configurer les abonnements et les alertes** vous déterminez si Reporting Services peut utiliser SQL Server Agent pour les alertes de données et télécharger les scripts qui autorisent l'accès à SQL Server Agent. Pour plus d’informations, consultez [Configurer les abonnements et les alertes pour les applications de service de SSRS](../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md).  
   
 ##  <a name="Globalization"></a> Globalisation des alertes de données  
- Certain script tel que l'arabe et hébreu sont écrits de droite à gauche. Les alertes de données prennent en charge les scripts de droite à gauche ainsi que les scripts de gauche à droite. Les alertes de données détectent la culture et modifient en conséquence l'apparence et le comportement de l'interface utilisateur, ainsi que la disposition des messages d'alerte de données. La culture est dérivée du paramètre régional du système d'exploitation sur l'ordinateur de l'utilisateur. La culture est enregistrée chaque fois que vous mettez à jour puis resauvegardez la définition d'une alerte de données.  
+ Certain script tel que l'arabe et hébreu sont écrits de droite à gauche. Les alertes de données prennent en charge les scripts de droite à gauche ainsi que les scripts de gauche à droite. Les alertes de données détectent la culture et modifient en conséquence l'apparence et le comportement de l'interface utilisateur, ainsi que la disposition des messages d'alerte de données. La culture est dérivée du paramètre régional du système d’exploitation de l’ordinateur de l’utilisateur. La culture est enregistrée chaque fois que vous mettez à jour puis resauvegardez la définition d'une alerte de données.  
   
  La culture de la définition de l'alerte peut déterminer si oui ou non les données satisfont aux règles dans la définition de l'alerte. Les comparaisons de chaînes sont très fréquemment affectées par les règles spécifiques à la culture.  
   
- La culture de la définition de l'alerte peut déterminer si oui ou non les données d'un rapport satisfont aux règles dans la définition de l'alerte. Cela se produit le plus souvent dans les chaînes. Par exemple, dans une définition d'alerte de culture allemande, une règle qui compare la lettre anglaise « o » et la lettre allemande « ö » ne sera pas satisfaite. Si la même définition d'alerte avait utilisé la culture anglaise la règle aurait été satisfaite.  
+ La culture de la définition de l'alerte peut déterminer si oui ou non les données d'un rapport satisfont aux règles dans la définition de l'alerte. Cela se produit le plus souvent dans les chaînes. Par exemple, dans une définition d’alerte de culture allemande, une règle qui compare la lettre anglaise « o » et la lettre allemande « ö » ne sera pas satisfaite. Si la même définition d'alerte avait utilisé la culture anglaise la règle aurait été satisfaite.  
   
  La mise en forme des données est également basée sur la culture de la définition de l'alerte. Par exemple, si la culture utilise un point comme symbole décimal, la valeur s'affiche au format 45.67 ; alors qu'une culture qui utilise une virgule comme symbole décimal, affichera une valeur 45,67.  
   

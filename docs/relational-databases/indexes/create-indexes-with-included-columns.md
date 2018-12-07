@@ -22,12 +22,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 90acf990b3e498c73d8b25cc4a11f414f6e24c31
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0c32b38b0327c8c418929514c7f82e26a3a41584
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717937"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539721"
 ---
 # <a name="create-indexes-with-included-columns"></a>Créer des index avec colonnes incluses
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "47717937"
   
 -   Les colonnes calculées dérivées des types de données **image**, **ntext**et **text** peuvent être des colonnes non-clés tant que le type de données de la colonne calculée est autorisé en tant que colonne d'index non-clé.  
   
--   Les colonnes non-clés ne peuvent pas être supprimées d'une table, sauf si l'index de cette table est d'abord supprimé.  
+-   Les colonnes non-clés ne peuvent pas être supprimées d’une table, sauf si l’index de cette table est d’abord supprimé.  
   
 -   Les colonnes non-clés ne peuvent pas être modifiées, sauf pour effectuer les opérations suivantes :  
   
@@ -84,17 +84,17 @@ ms.locfileid: "47717937"
   
 3.  Cliquez sur le signe plus (+) pour développer la table sur laquelle vous souhaitez créer un index avec des colonnes non-clés.  
   
-4.  Cliquez avec le bouton droit sur le dossier **Indexes** , pointez sur **Nouvel index**, puis sélectionnez **Index non cluster…**.  
+4.  Cliquez avec le bouton droit sur le dossier **Index**, pointez sur **Nouvel index**, puis sélectionnez **Index non cluster...**.  
   
 5.  Dans la boîte de dialogue **Nouvel index** , sur la page **Général** , entrez le nom du nouvel index dans la zone **Nom de l'index** .  
   
-6.  Sous l'onglet **Colonnes de clés d'index** , cliquez sur **Ajouter…**.  
+6.  Sous l’onglet **Colonnes clés d’index**, cliquez sur **Ajouter…**.  
   
 7.  Dans la boîte de dialogue **Sélectionner des colonnes dans** _nom\_table_, cochez les cases correspondant aux colonnes de table à ajouter à l’index.  
   
 8.  Cliquez sur **OK**.  
   
-9. Sous l'onglet **Colonnes incluses** , cliquez sur **Ajouter…**.  
+9. Sous l’onglet **Colonnes incluses**, cliquez sur **Ajouter...**.  
   
 10. Dans la boîte de dialogue **Sélectionner des colonnes dans** _nom\_table_, cochez les cases correspondant aux colonnes de table à ajouter à l’index en tant que colonnes non-clés.  
   

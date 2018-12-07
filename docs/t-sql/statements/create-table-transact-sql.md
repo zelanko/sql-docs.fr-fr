@@ -47,12 +47,12 @@ ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: f53679294052b114ab2247ee47916aac6ff5fd3f
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: a74cdb7827351c6616a7d37ad3deb80a068a375c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697823"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52394520"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -1047,7 +1047,7 @@ GO
 
 ## <a name="database-scoped-global-temporary-tables-azure-sql-database"></a>Tables temporaires globales délimitées à la base de données (Azure SQL Database)
 
-Les tables temporaires globales pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (dont le nom de table commence par ##) sont stockées dans tempdb et partagées parmi les sessions de tous les utilisateurs dans toute l’instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations sur les types de tables SQL, consultez la section ci-dessus sur CREATE TABLE.  
+Les tables temporaires globales pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (dont le nom de table commence par ##) sont stockées dans tempdb et partagées entre les sessions de tous les utilisateurs dans toute l’instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations sur les types de tables SQL, consultez la section ci-dessus sur CREATE TABLE.  
 
 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] prend en charge les tables temporaires globales qui sont également stockées dans tempdb et dont l’étendue est limitée à la base de données. Cela signifie que les tables temporaires globales sont partagées pour les sessions de tous les utilisateurs au sein de la même [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Les sessions utilisateur d’autres instances de bases de données n’ont pas accès aux tables temporaires globales.
 

@@ -33,12 +33,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e2c24413499991277e93c882c581cc57a7c07478
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: be8577fca914627434314fa4b7352d6610ff72c2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51704047"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52522911"
 ---
 # <a name="insert-transact-sql"></a>INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -226,7 +226,7 @@ Clause OUTPUT
  *execute_statement*  
  Toute instruction EXECUTE valide qui retourne des données avec les instructions SELECT ou READTEXT. Pour plus d’informations, consultez [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md).  
   
- Les options RESULT SETS de l'instruction EXECUTE ne peuvent pas être spécifiées dans une instruction INSERT… EXEC.  
+ Les options RESULT SETS de l’instruction EXECUTE ne peuvent pas être spécifiées dans une instruction INSERT...EXEC.  
   
  Si *execute_statement* est utilisé avec INSERT, chaque jeu de résultats doit être compatible avec les colonnes de la table ou de *column_list*.  
   
@@ -307,7 +307,7 @@ Pour obtenir des informations spécifiques à l’insertion de données dans des
   
 ### <a name="best-practices-for-bulk-importing-data"></a>Recommandations pour l'importation de données en bloc  
   
-#### <a name="using-insert-intoselect-to-bulk-import-data-with-minimal-logging"></a>Utilisation d'INSERT INTO…SELECT pour les données d'importation en bloc avec une journalisation minimale  
+#### <a name="using-insert-intoselect-to-bulk-import-data-with-minimal-logging"></a>Utilisation d’INSERT INTO...SELECT pour importer des données en bloc avec une journalisation minimale  
  Vous pouvez utiliser `INSERT INTO <target_table> SELECT <columns> FROM <source_table>` pour transférer efficacement un grand nombre de lignes d’une table, par exemple une table intermédiaire, vers une autre table avec une journalisation minimale. La journalisation minimale peut améliorer les performances de l'instruction et réduire le risque de voir l'opération remplir l'espace disponible du journal des transactions au cours de la transaction.  
   
  La journalisation minimale pour cette instruction comporte les impératifs suivants :  
@@ -322,7 +322,7 @@ Pour obtenir des informations spécifiques à l’insertion de données dans des
   
 Les lignes insérées dans un segment de mémoire à la suite d'une action d'insertion dans une instruction MERGE peuvent également être journalisées de façon minimale.  
   
- Contrairement à l'instruction BULK INSERT, qui maintient un verrou de mise à jour en bloc moins restrictif, INSERT INTO…SELECT avec l'indicateur TABLOCK maintient un verrou exclusif (X) sur la table. Cela signifie que vous ne pouvez pas insérer de lignes à l'aide d'opérations d'insertion parallèles.  
+ Contrairement à l’instruction BULK INSERT, qui maintient un verrou de mise à jour en bloc moins restrictif, INSERT INTO...SELECT avec l’indicateur TABLOCK maintient un verrou exclusif (X) sur la table. Cela signifie que vous ne pouvez pas insérer de lignes à l'aide d'opérations d'insertion parallèles.  
   
 #### <a name="using-openrowset-and-bulk-to-bulk-import-data"></a>Utilisation d'OPENROWSET et de BULK pour les données d'importation en bloc  
  La fonction OPENROWSET peut accepter les indicateurs de table suivants, lesquels offrent des optimisations de chargement en masse avec l'instruction INSERT :  
@@ -380,7 +380,7 @@ Ces optimisations sont similaires à celles disponibles avec la commande BULK IN
     ```  
   
 ## <a name="error-handling"></a>Gestion des erreurs  
- Vous pouvez implémenter la gestion des erreurs pour l'instruction INSERT en spécifiant cette dernière dans une construction TRY…CATCH.  
+ Vous pouvez implémenter la gestion des erreurs pour l’instruction INSERT en spécifiant cette dernière dans une construction TRY...CATCH.  
   
  Si une instruction INSERT enfreint une contrainte ou une règle, ou si elle comprend une valeur incompatible avec le type de données de la colonne, l'instruction échoue et un message d'erreur est retourné.  
   
@@ -406,7 +406,7 @@ Dans Parallel Data Warehouse, la clause ORDER BY n'est pas valide dans VIEWS, CR
 ## <a name="security"></a>Sécurité  
  Au cours d'une connexion à un serveur lié, le serveur émetteur fournit un nom et un mot de passe de connexion afin de se connecter au serveur récepteur. Pour que cette connexion fonctionne, vous devez créer un mappage de connexion entre les serveurs liés en utilisant [sp_addlinkedsrvlogin](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md).  
   
- Lorsque vous utilisez OPENROWSET(BULK…), il est important que vous compreniez la manière dont [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gère l'emprunt d'identité. Pour plus d’informations, consultez « Considérations relatives à la sécurité » dans [Importer des données en bloc à l’aide de BULK INSERT ou OPENROWSET&#40;BULK...&#41; &#40;SQL Server&#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).  
+ Quand vous utilisez OPENROWSET(BULK…), il est important de bien comprendre comment [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gère l’emprunt d’identité. Pour plus d’informations, consultez « Considérations relatives à la sécurité » dans [Importer des données en bloc à l’aide de BULK INSERT ou OPENROWSET&#40;BULK...&#41; &#40;SQL Server&#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).  
   
 ### <a name="permissions"></a>Permissions  
  L'autorisation INSERT est obligatoire sur la table cible.  
@@ -421,10 +421,10 @@ Dans Parallel Data Warehouse, la clause ORDER BY n'est pas valide dans VIEWS, CR
 |--------------|------------------------------|  
 |[Syntaxe de base](#BasicSyntax)|INSERT • constructeur de valeurs de table|  
 |[Gestion de valeurs de colonnes](#ColumnValues)|IDENTITY • NEWID • valeurs par défaut • types définis par l'utilisateur|  
-|[Insertion de données à partir d’autres tables](#OtherTables)|INSERT…SELECT • INSERT…EXECUTE • WITH expression de table commune • TOP • OFFSET FETCH|  
+|[Insertion de données à partir d’autres tables](#OtherTables)|INSERT...SELECT • INSERT...EXECUTE • WITH expression de table commune • TOP • OFFSET FETCH|  
 |[Spécification d’objets cibles autres que les tables standard](#TargetObjects)|Vues • variables de table|  
 |[Insertion de lignes dans une table distante](#RemoteTables)|Serveur lié • fonction d'ensemble de lignes OPENQUERY • fonction d'ensemble de lignes OPENDATASOURCE|  
-|[Chargement en masse de données à partir de tables ou de fichiers de données](#BulkLoad)|INSERT…SELECT • fonction OPENROWSET|  
+|[Chargement en masse de données à partir de tables ou de fichiers de données](#BulkLoad)|INSERT...SELECT • fonction OPENROWSET|  
 |[Remplacement du comportement par défaut de l’optimiseur de requête à l’aide d’indicateurs](#TableHints)|Indicateurs de table|  
 |[Capture des résultats de l’instruction INSERT](#CaptureResults)|Clause OUTPUT|  
   
@@ -537,7 +537,7 @@ INSERT INTO dbo.Points (PointValue) VALUES (CAST ('1,99' AS Point));
  Les exemples fournis dans cette section présentent des méthodes d'insertion de lignes d'une table dans une autre table.  
   
 #### <a name="h-using-the-select-and-execute-options-to-insert-data-from-other-tables"></a>H. Utilisation des options SELECT et EXECUTE pour insérer des données provenant d'autres tables  
- L'exemple suivant montre comment insérer des données d'une table dans une autre table à l'aide de INSERT…SELECT ou de INSERT…EXECUTE. Chaque méthode s'appuie sur une instruction SELECT basée sur plusieurs tables qui inclut une expression et une valeur littérale dans la liste des colonnes.  
+ L’exemple suivant montre comment insérer des données d’une table dans une autre table avec INSERT...SELECT ou INSERT...EXECUTE. Chaque méthode s'appuie sur une instruction SELECT basée sur plusieurs tables qui inclut une expression et une valeur littérale dans la liste des colonnes.  
   
  La première instruction INSERT utilise une instruction SELECT pour dériver les données des tables sources (`Employee`, `SalesPerson` et `Person`) dans la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] et stocker le jeu de résultats dans la table `EmployeeSales`. La deuxième instruction INSERT utilise la clause EXECUTE pour appeler une procédure stockée qui contient l'instruction SELECT, et la troisième instruction INSERT utilise la clause EXECUTE pour référencer l'instruction SELECT en tant que chaîne littérale.  
   
@@ -812,7 +812,7 @@ WHERE T2.YearMeasured = 2009 and T2.Speed > 40;
  Les exemples fournis dans cette section présentent deux méthodes permettant de charger en masse des données dans une table en utilisant l'instruction INSERT.  
   
 #### <a name="q-inserting-data-into-a-heap-with-minimal-logging"></a>Q. Insertion de données dans un segment de mémoire avec une journalisation minimale  
- L'exemple suivant crée une nouvelle table (un segment de mémoire) et y insère des données provenant d'une autre table en utilisant une journalisation minimale. L'exemple suppose que le mode de récupération de la base de données `AdventureWorks2012` a la valeur FULL. Pour garantir une journalisation minimale, le mode de récupération de la base de données `AdventureWorks2012` a la valeur BULK_LOGGED avant l'insertion des lignes ; il reprend ensuite la valeur FULL après l'utilisation de l'instruction INSERT INTO…SELECT. En outre, l'indicateur TABLOCK est spécifié pour la table cible `Sales.SalesHistory`. Cela permet de garantir que l'instruction utilise un espace minimal dans le journal des transactions et qu'elle s'exécute de manière efficace.  
+ L'exemple suivant crée une nouvelle table (un segment de mémoire) et y insère des données provenant d'une autre table en utilisant une journalisation minimale. L'exemple suppose que le mode de récupération de la base de données `AdventureWorks2012` a la valeur FULL. Pour obtenir une journalisation minimale, le mode de récupération de la base de données `AdventureWorks2012` est défini sur BULK_LOGGED avant l’insertion des lignes ; il reprend ensuite la valeur FULL après l’instruction INSERT INTO...SELECT. En outre, l'indicateur TABLOCK est spécifié pour la table cible `Sales.SalesHistory`. Cela permet de garantir que l'instruction utilise un espace minimal dans le journal des transactions et qu'elle s'exécute de manière efficace.  
   
 ```sql
 -- Create the target heap.  

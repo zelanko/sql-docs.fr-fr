@@ -15,12 +15,12 @@ ms.assetid: ed530b0d-438d-4c93-8e91-13f2b2b6a8b2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8e44ac5f9f5c1eee8af10dd48fa8577b3056cd70
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 8df0a074741f135d9c445a65c31b796f02bb5782
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641136"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523514"
 ---
 # <a name="add-copy-of-existing-package"></a>Ajouter une copie des packages existants
   Utilisez la boîte de dialogue **Ajouter une copie des packages existants** pour ajouter à un projet [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]une copie d'un package stocké dans [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , le système de fichiers ou le magasin de packages SSIS.  
@@ -42,7 +42,7 @@ ms.locfileid: "51641136"
  Si vous utilisez l’authentification [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , entrez un mot de passe.  
   
  **Chemin d'accès au package**  
- Tapez le chemin du package ou cliquez sur le bouton Parcourir **(…)** pour rechercher le package à copier.  
+ Tapez le chemin du package ou cliquez sur le bouton Parcourir **(...)** pour rechercher le package à copier.  
   
 ## <a name="see-also"></a> Voir aussi  
  [Enregistrer une copie du package](https://msdn.microsoft.com/library/7b44c0d7-d8fa-4491-8836-0899f621d3a8)   

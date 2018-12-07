@@ -24,12 +24,12 @@ ms.assetid: 3c0fa2f8-cb6a-4371-b184-7447be001de1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5b3f90acc0f7fefea0ffd142c4b0acd6a8e59549
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 9d3d52a5a1f63933bc383601a650bf8e044d22dc
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640156"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52522716"
 ---
 # <a name="term-lookup-transformation"></a>transformation de recherche de terme
   La transformation de recherche de terme met en correspondance des termes extraits de texte d'une colonne d'entrée de transformation avec les termes d'une table de référence. Elle compte ensuite le nombre de fois où un terme de la table de recherche apparaît dans le dataset d'entrée, puis écrit ce nombre et le terme de la table de référence dans les colonnes de la sortie de la transformation. Cette transformation est utile pour créer une liste personnalisée de termes reposant sur le texte d'entrée et complétée de statistiques de fréquence.  
@@ -58,7 +58,7 @@ ms.locfileid: "51640156"
   
 -   Si le texte de la colonne d'entrée est une phrase nominale contenant des lemmes, seul le dernier mot de la phrase nominale est affecté par la normalisation. Par exemple, la version avec lemmes de *visites avec les médecins* est *visite avec les médecins*.  
   
- Lorsqu'un élément de recherche contient des termes débordant du cadre de référence, autrement dit si un sous-terme est trouvé dans plusieurs enregistrements de référence, la transformation de recherche de terme ne renvoie qu'un seul résultat de recherche. L'exemple suivant illustre le résultat trouvé lorsqu'un élément de recherche présente un sous-terme de chevauchement. Dans cet exemple, le sous-terme est *Windows*, que l’on retrouve dans deux termes de référence. Toutefois, la transformation ne retourne pas deux résultats, mais un seul terme de référence uniquement, *Windows*. Le second terme de référence, *Windows 7 Professionnel*, n’est pas retourné.  
+ Quand un élément de recherche contient des termes débordant du cadre de référence, autrement dit si un sous-terme est trouvé dans plusieurs enregistrements de référence, la transformation de recherche de terme ne retourne qu’un seul résultat de recherche. L'exemple suivant illustre le résultat trouvé lorsqu'un élément de recherche présente un sous-terme de chevauchement. Dans cet exemple, le sous-terme est *Windows*, que l’on retrouve dans deux termes de référence. Toutefois, la transformation ne retourne pas deux résultats, mais un seul terme de référence uniquement, *Windows*. Le second terme de référence, *Windows 7 Professionnel*, n’est pas retourné.  
   
 |Élément|Valeur|  
 |----------|-----------|  
@@ -66,7 +66,7 @@ ms.locfileid: "51640156"
 |Termes de référence|Windows, Windows 7 Professionnel|  
 |Sortie|Windows|  
   
- La transformation de recherche de terme peut mettre en correspondance des noms et des phrases nominales contenant des caractères spéciaux. Les données de la table de référence peuvent inclure ces caractères. Les caractères spéciaux sont les suivants :%, @, &, $, #, \*, :, ;, ., **,** , !, ?, \<, >, +, =, ^, ~, |, \\, /, (, ), [, ], {, }, “, et ‘.  
+ La transformation de recherche de terme peut mettre en correspondance des noms et des phrases nominales contenant des caractères spéciaux. Les données de la table de référence peuvent inclure ces caractères. Les caractères spéciaux sont les suivants : %, @, &, $, #, \*, :, ;, ., **,** , !, ?, \<, >, +, =, ^, ~, |, \\, /, (, ), [, ], {, }, " et '.  
   
 ## <a name="data-types"></a>Types de données  
  La transformation de recherche de terme ne peut utiliser qu'une colonne contenant le type de données DT_WSTR ou DT_NTEXT. Si une colonne contient du texte, mais pas l'un de ces types de données, la transformation de conversion de données peut ajouter une colonne avec le type de données DT_WSTR ou DT_NTEXT au flux de données, puis copier les valeurs de la colonne dans cette nouvelle colonne. La sortie de la transformation de conversion de données peut ensuite être utilisée comme entrée de la transformation de recherche de terme. Pour plus d’informations, voir [Data Conversion Transformation](../../../integration-services/data-flow/transformations/data-conversion-transformation.md).  

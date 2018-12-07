@@ -28,12 +28,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c4c8a1a6571f72237b19c05dbf15d9ff70f9f7f3
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: ebc5c6b688bf7871ff3e75ab30fbb7dadb31f315
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50970530"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521222"
 ---
 # <a name="datepart-transact-sql"></a>DATEPART (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -162,12 +162,12 @@ Les systèmes de numérotation des différents pays peuvent ne pas se conformer 
   
 |Premier jour de la semaine|La première semaine de l'année contient|Semaines assignées deux fois|Utilisé par/dans|  
 |---|---|---|---|
-|Dimanche|1er janvier,<br /><br /> Premier samedi,<br /><br /> 1 à 7 jours de l'année|Oui|United States|  
-|Lundi|1er janvier,<br /><br /> Premier dimanche,<br /><br /> 1 à 7 jours de l'année|Oui|Majorité de l'Europe et Royaume-Uni|  
-|Lundi|4 janvier<br /><br /> Premier jeudi,<br /><br /> 4 à 7 jours de l’année|non|ISO 8601, Norvège et Suède|  
+|Dimanche|1er janvier,<br /><br /> Premier samedi,<br /><br /> 1 à 7 jours de l’année|Oui|United States|  
+|Lundi|1er janvier,<br /><br /> Premier dimanche,<br /><br /> 1 à 7 jours de l’année|Oui|Majorité de l'Europe et Royaume-Uni|  
+|Lundi|4 janvier<br /><br /> Premier jeudi,<br /><br /> 4 à 7 jours de l’année|non|ISO 8601, Norvège et Suède|  
 |Lundi|7 janvier,<br /><br /> Premier lundi,<br /><br /> 7 jours de l'année|non||  
-|Mercredi|1er janvier,<br /><br /> Premier mardi,<br /><br /> 1 à 7 jours de l'année|Oui||  
-|Samedi|1er janvier,<br /><br /> Premier vendredi,<br /><br /> 1 à 7 jours de l'année|Oui||  
+|Mercredi|1er janvier,<br /><br /> Premier mardi,<br /><br /> 1 à 7 jours de l’année|Oui||  
+|Samedi|1er janvier,<br /><br /> Premier vendredi,<br /><br /> 1 à 7 jours de l’année|Oui||  
   
 ## <a name="tzoffset"></a>TZoffset  
 `DATEPART` retourne la valeur **TZoffset** (**tz**) sous la forme du nombre de minutes (signé). L’instruction suivante retourne un décalage de fuseau horaire de 310 minutes :

@@ -20,12 +20,12 @@ ms.assetid: 8697e4a4-4f59-4cda-af71-7de86005bd4a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 84db1d36a782fc054129b1ff753b620e82684499
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 0468195ebe718db73dfa4a302185b677f76c6896
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675368"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52413166"
 ---
 # <a name="utility-explorer-f1-help"></a>Aide sur l'Explorateur d'objets accessible via la touche F1
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -152,7 +152,7 @@ ms.locfileid: "51675368"
   
     -   Flèche bas verte : l'état d'intégrité d'au moins un groupe de fichiers ou du groupe de fichiers journaux est sous-exploité et aucun groupe de fichiers ou groupe de fichiers journaux n'est surexploité.  
   
-    -   Flèche haut rouge : l'état d'intégrité d'au moins un groupe de fichiers ou du groupe de fichier journal est surexploité. Notez que si la base de données se trouve dans l'état « urgence », l'état d'intégrité affiche l'espace de fichier journal surexploité.  
+    -   Flèche haut rouge : l'état d'intégrité d'au moins un groupe de fichiers ou du groupe de fichier journal est surexploité. Notez que, si une base de données se trouve dans l’état « urgence », l’état d’intégrité affiche l’espace de fichier journal surexploité.  
   
      Pour afficher ou modifier les limites de la stratégie d’espace de fichier, cliquez sur l’onglet **Utilisation du stockage** .  
   
@@ -216,7 +216,7 @@ ms.locfileid: "51675368"
   
 -   Flèche bas verte : l'utilisation de l'espace de fichier d'au moins un fichier de données du groupe de fichiers est sous-exploitée et aucun fichier du groupe de fichiers n'est surexploité.  
   
--   Flèche haut rouge : l'utilisation de l'espace de fichier de tous les fichiers de données du groupe de fichiers est surexploitée. Notez que si la base de données se trouve dans l'état « urgence », l'état d'intégrité affiche l'espace de fichier journal surexploité.  
+-   Flèche haut rouge : l'utilisation de l'espace de fichier de tous les fichiers de données du groupe de fichiers est surexploitée. Notez que, si une base de données se trouve dans l’état « urgence », l’état d’intégrité affiche l’espace de fichier journal surexploité.  
   
  Pour consulter les fichiers par volume, sélectionnez la case d’option **Volume** dans la sélection **Regrouper les fichiers par** . Le graphique d'historique de l'utilisation du stockage montre l'espace de fichier utilisé par tous les fichiers de données et tous les fichiers journaux du volume de stockage. Développez l'arborescence pour voir le détail des fichiers des données et des fichiers journaux de la base de données.  
   

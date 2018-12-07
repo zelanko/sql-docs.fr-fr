@@ -14,12 +14,12 @@ ms.assetid: a655225d-8c54-4b30-95fd-31f588167899
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8799fe2cd73aea2fc2ae1a799e6bda634b8e6763
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 232514d75f55f8f3105fe87e2f3f4ecac9f38805
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700390"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503484"
 ---
 # <a name="before-installing-failover-clustering"></a>Avant l'installation du clustering de basculement
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -243,7 +243,7 @@ ms.locfileid: "51700390"
   
 -   Utilisation de l'instance par défaut du cluster de MSDTC, sinon  
   
--   Utilisation l'instance de MSDTC installée sur les ordinateurs locaux  
+-   Utiliser l’instance de MSDTC installée sur l’ordinateur local  
   
 > [!IMPORTANT]  
 >  Si l'instance MSDTC installée dans le groupe de clusters local de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] échoue, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] n'essaie pas automatiquement d'utiliser l'instance de cluster par défaut ou l'instance de MSDTC de l'ordinateur local. Vous devrez supprimer complètement l'instance non réussie de MSDTC du groupe [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour utiliser une autre instance de MSDTC. De même, si vous créez un mappage pour [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et si l'instance mappée de MSDTC échoue, vos transactions distribuées échoueront également. Si vous souhaitez que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilise une autre instance de MSDTC, vous devez ajouter une instance de MSDTC au groupe de clusters local de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou supprimer le mappage.  

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 36f5686d-7e40-4f31-be81-bd197ca33a02
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: eaa61ab4f13bb96b2ee9d00bae31f76056929622
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: aa2b5df78043d202d87cc01849aa9a9d10911b0a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031238"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52397131"
 ---
 # <a name="deployment-and-version-support-in-sql-server-data-tools-ssdt"></a>Prise en charge des déploiements et des versions dans SQL Server Data Tools (SSDT)
   [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] prend en charge les scénarios suivants :  
@@ -39,7 +39,7 @@ ms.locfileid: "50031238"
   
 -   OutputPath est une propriété de génération qui identifie le chemin des dossiers où stocker la définition de rapport utilisée dans la vérification de la génération, le déploiement et l’aperçu de rapports.  
   
--   ErrorLevel est une propriété de génération qui identifie la gravité des problèmes de génération signalés comme erreurs. Les problèmes avec des niveaux de gravité inférieurs ou égaux à la valeur de ErrorLevel sont signalés comme erreurs ; sinon, les problèmes sont signalés comme avertissements. Pour plus d’informations, consultez la section « Niveaux de validation et d’erreur de rapport » dans [Concevoir des rapports à l’aide du Concepteur de rapports &#40;SSRS&#41;](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md).  
+-   ErrorLevel est une propriété de génération qui identifie la gravité des problèmes de génération signalés comme erreurs. Les problèmes avec des niveaux de gravité inférieurs ou égaux à la valeur de ErrorLevel sont signalés comme erreurs ; sinon, les problèmes sont signalés comme avertissements. Pour plus d’informations, consultez la section « Niveaux de validation et d’erreur de rapport » dans [Concevoir des rapports à l’aide du Concepteur de rapports &#40;SSRS&#41;](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md).  
   
 -   TargetServerVersion est une propriété de déploiement qui identifie la version attendue de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installée sur le serveur de rapports cible spécifié dans la propriété TargetServerURL.  
   

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 74f726fc-2167-47af-9093-1644e03ef01f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d1e0f1af0b3dff47607960d8c2d37af84f4b00fc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 71ba67e4abb97a0de9ed4143adcd072b2f3eef8a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47663117"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400023"
 ---
 # <a name="exporting-to-microsoft-excel-report-builder-and-ssrs"></a>Exportation vers Microsoft Excel (Générateur de rapports et SSRS)
   L’extension de rendu Excel de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] restitue un rapport paginé [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] au format [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] (.xlsx). Avec l'extension de rendu Excel, la largeur des colonnes dans Excel correspond plus précisément à la largeur des colonnes dans les rapports.  
@@ -67,7 +67,7 @@ ms.locfileid: "47663117"
   
 -   L'effet de texte « Surligné » n'est pas pris en charge dans Excel.  
   
--   Excel ajoute une marge intérieure par défaut d'environ 3,75 points à gauche et à droite des cellules. Si les paramètres de marge intérieure d'une zone de texte sont inférieurs à 3,75 points et ne sont assez larges pour accommoder le texte, le texte est renvoyé à la ligne dans Excel.  
+-   Excel ajoute une marge intérieure par défaut d'environ 3,75 points à gauche et à droite des cellules. Si les paramètres de marge intérieure d’une zone de texte sont inférieurs à 3,75 points et ne sont assez larges pour accueillir le texte, le texte est renvoyé à la ligne dans Excel.  
   
     > [!NOTE]  
     >  Pour corriger ce problème, augmentez la largeur de la zone de texte dans le rapport.  
@@ -161,7 +161,7 @@ ms.locfileid: "47663117"
   
  `<Extension Name="EXCEL" Type="Microsoft.ReportingServices.Rendering.ExcelRenderer.ExcelRenderer,Microsoft.ReportingServices.ExcelRendering" Visible="false"/>`  
   
- L’extension EXCELOPENXML définit le convertisseur Excel pour les fichiers Excel actuels (.xlsx). L'extension EXCEL définit la version d'Excel 2003. `Visible = “false”` indique que le convertisseur Excel 2003 est masqué. Pour plus d’informations, consultez [Fichier de configuration RsReportserver.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) et [Fichier de configuration RSReportDesigner](../../reporting-services/report-server/rsreportdesigner-configuration-file.md).  
+ L’extension EXCELOPENXML définit le convertisseur Excel pour les fichiers Excel actuels (.xlsx). L'extension EXCEL définit la version d'Excel 2003. `Visible = "false"` indique que le convertisseur Excel 2003 est masqué. Pour plus d’informations, consultez [Fichier de configuration RsReportserver.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) et [Fichier de configuration RSReportDesigner](../../reporting-services/report-server/rsreportdesigner-configuration-file.md).  
   
 ### <a name="differences-between-the-current-xlsx-excel-and-excel-2003-renderers"></a>Différences entre les convertisseurs de fichiers Excel actuels (.xlsx) et Excel 2003  
  Les rapports restitués avec les convertisseurs de fichiers Excel actuels (.xlsx) ou Excel 2003 sont en général identiques, et rares sont les cas où vous remarquerez des différences entre les deux formats. Le tableau suivant compare les convertisseurs Excel et Excel 2003.  
@@ -171,7 +171,7 @@ ms.locfileid: "47663117"
 |Nombre maximal de colonnes par feuille de travail|256|16,384|  
 |Nombre maximal de lignes par feuille de travail|65,536|1,048,576|  
 |Nombre de couleurs autorisé dans une feuille de travail|56 (palette)<br /><br /> Si plus de 56 couleurs sont utilisées dans le rapport, l'extension de rendu fait correspondre la couleur requise à l'une des 56 couleurs déjà disponibles dans la palette personnalisée.|Approximativement 16 millions (couleurs 24 bits)|  
-|Fichiers compressés ZIP|None|Compression ZIP|  
+|Fichiers compressés ZIP|Aucun|Compression ZIP|  
 |Famille de polices par défaut|Arial|Calibri|  
 |Taille de police par défaut|10pt|11pt|  
 |Hauteur de ligne par défaut|12,75 pt|15 pt|  
@@ -251,10 +251,10 @@ ms.locfileid: "47663117"
  Le nœud racine de la carte est le nom de rapport, \<*nom_rapport*>.rdl, qui n’est pas interactif. La police des liens de l'explorateur de documents est Arial, 10pt.  
   
 ### <a name="drillthrough-links"></a>Liens d'extraction  
- Les liens d'extraction qui s'affichent dans les zones de texte sont rendus sous forme de liens hypertexte Excel dans la cellule dans laquelle le texte est rendu. Les liens d'extraction des images et des graphiques sont rendus sous forme de liens hypertexte Excel dans l'image lors du rendu. Lors d'un clic, le lien d'extraction ouvre le navigateur par défaut du client et ouvre la vue HTML de la cible.  
+ Les liens d'extraction qui s'affichent dans les zones de texte sont rendus sous forme de liens hypertexte Excel dans la cellule dans laquelle le texte est rendu. Les liens d'extraction des images et des graphiques sont rendus sous forme de liens hypertexte Excel dans l'image lors du rendu. Quand vous cliquez dessus, le lien d’extraction ouvre le navigateur par défaut du client et accède à la vue HTML de la cible.  
   
 ### <a name="hyperlinks"></a>Liens hypertexte  
- Les liens hypertexte qui s'affichent dans les zones de texte sont rendus sous forme de liens hypertexte Excel dans la cellule dans laquelle le texte est rendu. Les liens hypertexte des images et des graphiques sont rendus sous forme de liens hypertexte Excel dans l'image lors du rendu. Lors d'un clic, le lien hypertexte ouvre le navigateur par défaut du client et navigue jusqu'à l'URL cible.  
+ Les liens hypertexte qui s'affichent dans les zones de texte sont rendus sous forme de liens hypertexte Excel dans la cellule dans laquelle le texte est rendu. Les liens hypertexte des images et des graphiques sont rendus sous forme de liens hypertexte Excel dans l'image lors du rendu. Quand vous cliquez dessus, le lien hypertexte ouvre le navigateur par défaut du client et accède à l’URL cible.  
   
 ### <a name="interactive-sorting"></a>Tri interactif  
  Excel ne prend pas en charge le tri interactif.  

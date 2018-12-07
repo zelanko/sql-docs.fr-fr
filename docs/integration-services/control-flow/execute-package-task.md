@@ -20,12 +20,12 @@ ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8cb0ba9c72da4fe69988fa580ba3080237b3b078
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 2148cf2e25e6cdddab20a29751cea82238159668
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640676"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535696"
 ---
 # <a name="execute-package-task"></a>Tâche d'exécution de package
   La tâche d'exécution de package étend les fonctionnalités d'entreprise de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en permettant à des packages d'exécuter d'autres packages au sein d'un flux de travail.  
@@ -103,7 +103,7 @@ ms.locfileid: "51640676"
  Pour plus d’informations, consultez [Utiliser les valeurs des variables et des paramètres dans un package enfant](../../integration-services/packages/legacy-package-deployment-ssis.md#child).  
   
 ### <a name="accessing-parent-package-variables"></a>Accès aux variables de package parent  
- Les packages enfants peuvent accéder à des variables de package parent à l'aide de la tâche de script. Lorsque vous entrez le nom de la variable de package parent sur la page **Script** dans l' **Éditeur de tâche de script**, n'incluez pas **Utilisateur :** dans le nom de la variable. Sinon, le package enfant ne localise pas la variable lorsque vous exécutez le package parent.  
+ Les packages enfants peuvent accéder à des variables de package parent à l'aide de la tâche de script. Quand vous entrez le nom de la variable de package parent sur la page **Script** dans l’**Éditeur de tâche de script**, n’incluez pas **Utilisateur :** dans le nom de la variable. Sinon, le package enfant ne localise pas la variable quand vous exécutez le package parent.  
   
 ## <a name="configuring-the-execute-package-task"></a>Configuration de la tâche d'exécution de package  
  Vous pouvez définir les propriétés par le biais du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou par programmation.  
@@ -158,7 +158,7 @@ ms.locfileid: "51640676"
 >  L’option **ReferenceType** est en lecture seule et est définie sur **Référence externe** si le projet qui contient le package n’a pas été converti en modèle de déploiement de projet. [Déployer des projets et des packages Integration Services (SSIS)](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
   
  **Mot de passe**  
- Si le package enfant s'avère protégé par un mot de passe, indiquez ce dernier ou cliquez sur le bouton représentant des points de suspension (…) afin de définir un nouveau mot de passe.  
+ Si le package enfant s’avère protégé par un mot de passe, indiquez ce dernier ou cliquez sur le bouton représentant des points de suspension (...) afin de définir un nouveau mot de passe.  
   
  **ExecuteOutOfProcess**  
  Spécifiez si le package enfant s'exécute dans le processus du package parent ou dans un processus distinct. Par défaut, la propriété ExecuteOutOfProcess de la tâche d’exécution du package a la valeur **False**, et le package enfant s’exécute dans le même processus que le package parent. Si vous affectez la valeur **true**à cette propriété, le package enfant s'exécute dans un processus indépendant. Cela peut ralentir le lancement du package enfant. En outre, si vous avez défini la propriété sur **true**, vous ne pouvez pas déboguer le package dans une installation d’outils uniquement : vous devez installer le produit [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Pour plus d’informations, consultez [Installer Integration Services](../../integration-services/install-windows/install-integration-services.md).  
@@ -193,7 +193,7 @@ ms.locfileid: "51640676"
  **Rubriques connexes :** [Gestionnaire de connexions OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md)  
   
  **PackageName**  
- Permet de saisir le nom du package enfant ou de cliquer sur le bouton représenté par des points de suspension (…) pour atteindre le package.  
+ Permet d’entrer le nom du package enfant ou de cliquer sur le bouton représenté par des points de suspension (...) pour atteindre le package.  
   
 ##### <a name="location--file-system"></a>Emplacement = Système de fichiers  
  **Connexion**  

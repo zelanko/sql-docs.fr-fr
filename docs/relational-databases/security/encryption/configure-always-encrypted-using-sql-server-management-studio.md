@@ -17,12 +17,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6ee365b25b272d0a442632d23cbd407bb21090a2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d12db3ef11d3dc4d658b7126319ea53ddf12a91f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603577"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535362"
 ---
 # <a name="configure-always-encrypted-using-sql-server-management-studio"></a>Configurer Always Encrypted à l’aide de SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -209,7 +209,7 @@ WHERE [SSN] = @SSN;
 
 Pour exécuter des requêtes sur des colonnes chiffrées, y compris des requêtes qui extraient des données en texte chiffré, vous avez besoin des autorisations `VIEW ANY COLUMN MASTER KEY DEFINITION` et `VIEW ANY COLUMN ENCRYPTION KEY DEFINITION` dans la base de données.   
 Outre les autorisations ci-dessus, pour déchiffrer des résultats de requête ou pour chiffrer les paramètres de requête (générés par le paramétrage de variables Transact-SQL), vous devez également accéder à la clé principale de colonne protégeant les colonnes cibles :   
-- **Magasin de certificats – Ordinateur local** Vous devez avoir un accès `Read` au certificat utilisé comme clé principale de colonne, ou être l’administrateur de l’ordinateur.   
+- **Magasin de certificats - Ordinateur local** Vous devez avoir un accès `Read` au certificat utilisé comme clé principale de colonne, ou être l’administrateur de l’ordinateur.   
 - **Azure Key Vault** Vous avez besoin des autorisations `get`, `unwrapKey`et verify sur le coffre contenant la clé principale de colonne.   
 - **Fournisseur du magasin de clés (CNG)** Vous pouvez être invité à fournir les informations d’identification et autorisations nécessaires quand vous utilisez un magasin de clés ou une clé, selon le magasin et la configuration du fournisseur KSP.   
 - **Fournisseur de services de chiffrement (CAPI)** Vous pouvez être invité à fournir les informations d’identification et autorisations nécessaires quand vous utilisez un magasin de clés ou une clé, selon le magasin et la configuration du fournisseur CSP.   
@@ -226,10 +226,10 @@ La boîte de dialogue **Nouvelle clé principale de colonne** vous permet de gé
 2.  Cliquez avec le bouton droit sur le dossier **Clés principales de colonne** et sélectionnez **Nouvelle clé principale de colonne...**. 
 3.  Dans la boîte de dialogue **Nouvelle clé principale de colonne** , entrez le nom de l’objet de métadonnées de clé principale de colonne.
 4.  Sélectionnez un magasin de clés :
-    - **Magasin de certificats – Utilisateur actuel** : indique l’emplacement du magasin de certificats de l’utilisateur actuel dans le magasin de certificats Windows, qui est votre magasin personnel. 
-    - **Magasin de certificats – Ordinateur local** : indique l’emplacement du magasin de certificats de l’ordinateur local dans le magasin de certificats Windows. 
-    - **Azure Key Vault** : vous devez vous connecter à Azure (cliquez sur **Connexion**). Une fois que vous êtes connecté, vous pouvez choisir l’un de vos abonnements Azure et un coffre de clés.
-    - **Fournisseur du magasin de clés (CNG)** : indique un magasin de clés qui est accessible via un fournisseur KSP qui implémente l’API CNG (Cryptography Next Generation). En règle générale, ce type de magasin est un module de sécurité matériel. Après avoir sélectionné cette option, vous devez choisir un fournisseur KSP. Le**fournisseur de stockage de clés des logiciels Microsoft** est sélectionné par défaut. Si vous souhaitez utiliser une clé principale de colonne stockée dans un module de sécurité matériel, sélectionnez un fournisseur KSP pour votre appareil (il doit être installé et configuré sur l’ordinateur avant d’ouvrir la boîte de dialogue).
+    - **Magasin de certificats - Utilisateur actuel** : indique l’emplacement du magasin de certificats de l’utilisateur actuel dans le magasin de certificats Windows, qui est votre magasin personnel. 
+    - **Magasin de certificats - Ordinateur local** : indique l’emplacement du magasin de certificats de l’ordinateur local dans le magasin de certificats Windows. 
+    - **Azure Key Vault** : vous devez vous connecter à Azure (cliquez sur **Se connecter**). Une fois que vous êtes connecté, vous pouvez choisir l’un de vos abonnements Azure et un coffre de clés.
+    - **Fournisseur du magasin de clés (CNG)**  : indique un magasin de clés qui est accessible via un fournisseur KSP qui implémente l’API CNG (Cryptography Next Generation). En règle générale, ce type de magasin est un module de sécurité matériel. Après avoir sélectionné cette option, vous devez choisir un fournisseur KSP. Le**fournisseur de stockage de clés des logiciels Microsoft** est sélectionné par défaut. Si vous souhaitez utiliser une clé principale de colonne stockée dans un module de sécurité matériel, sélectionnez un fournisseur KSP pour votre appareil (il doit être installé et configuré sur l’ordinateur avant d’ouvrir la boîte de dialogue).
     -   **Fournisseur de services de chiffrement (CAPI)** : magasin de clés qui est accessible via un fournisseur de services de chiffrement (CSP) qui implémente l’API de chiffrement (CAPI). En règle générale, un tel magasin est un module de sécurité matériel. Après avoir sélectionné cette option, vous devez choisir un fournisseur CSP.  Si vous souhaitez utiliser une clé principale de colonne stockée dans un module de sécurité matériel, sélectionnez un fournisseur CSP pour votre appareil (il doit être installé et configuré sur l’ordinateur avant d’ouvrir la boîte de dialogue).
     
     >   [!NOTE]
@@ -261,10 +261,10 @@ SQL Server Management Studio génère une clé de chiffrement de colonne, puis r
 
 Vous avez besoin des autorisations relatives à la base de données *ALTER ANY ENCRYPTION MASTER KEY* et *VIEW ANY COLUMN MASTER KEY DEFINITION* dans la base de données pour que la boîte de dialogue crée les métadonnées de clé de chiffrement de colonne et accède aux métadonnées de clé principale de colonne.
 Pour accéder à un magasin de clés et utiliser la clé principale de colonne, vous pouvez avoir besoin d’autorisations sur le magasin de clés et/ou la clé :
-- **Magasin de certificats – Ordinateur local** : vous devez avoir un accès en lecture au certificat utilisé comme clé principale de colonne, ou être l’administrateur de l’ordinateur.
-- **Azure Key Vault** : vous avez besoin des autorisations *get*, *unwrapKey*, *wrapKey*, *sign*et *verify*  sur le coffre contenant la clé principale de colonne.
-- **Fournisseur du magasin de clés (CNG)** : vous pouvez être invité à fournir les informations d’identification et autorisations nécessaires quand vous utilisez un magasin de clés ou une clé, selon le magasin et la configuration du fournisseur KSP.
-- **Fournisseur de services de chiffrement (CAPI)** : vous pouvez être invité à fournir les informations d’identification et autorisations nécessaires quand vous utilisez un magasin de clés ou une clé, selon le magasin et la configuration du fournisseur CSP.
+- **Magasin de certificats - Ordinateur local** : vous devez avoir un accès en lecture au certificat utilisé comme clé principale de colonne, ou être l’administrateur de l’ordinateur.
+- **Azure Key Vault** : vous avez besoin des autorisations *get*, *unwrapKey*, *wrapKey*, *sign* et *verify* sur le coffre contenant la clé principale de colonne.
+- **Fournisseur du magasin de clés (CNG)**  : vous pouvez être invité à fournir les informations d’identification et autorisations nécessaires quand vous utilisez un magasin de clés ou une clé, selon le magasin et la configuration du fournisseur KSP.
+- **Fournisseur de services de chiffrement (CAPI)**  : vous pouvez être invité à fournir les informations d’identification et autorisations nécessaires quand vous utilisez un magasin de clés ou une clé, selon le magasin et la configuration du fournisseur CSP.
 
 Pour plus d’informations, consultez [Créer et stocker des clés principales de colonne (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md).
 
@@ -297,8 +297,8 @@ SQL Server Management Studio obtient les métadonnées des clés de chiffrement 
 
 Dans cette étape, vous devez vérifier que toutes vos applications clientes qui interrogent des colonnes de base de données protégées par la clé principale de colonne en permutation (c’est-à-dire les colonnes de base de données chiffrées avec une clé de chiffrement de colonne elle-même chiffrée avec la clé principale de colonne en permutation) peuvent accéder à la nouvelle clé principale de colonne. Cette étape dépend du type de magasin de clés dans lequel est stockée votre nouvelle clé principale de colonne. Exemple :
 - Si la nouvelle clé principale de colonne est un certificat stocké dans le magasin de certificats Windows, vous devez déployer le certificat au même emplacement de magasin de certificats (*Utilisateur actuel* ou *Ordinateur local*) en tant qu’emplacement spécifié dans le chemin d’accès à la clé de votre clé principale de colonne dans la base de données. L’application doit être en mesure d’accéder au certificat :
-    - Si le certificat est stocké à l’emplacement du magasin de certificats *Utilisateur actuel* , il doit être importé dans le magasin de l’utilisateur actuel de l’identité Windows de l’application (utilisateur).
-    - Si le certificat est stocké à l’emplacement du magasin de certificats *Ordinateur local* , l’identité Windows de l’application doit disposer d’une autorisation d’accès au certificat.
+    - Si le certificat est stocké à l’emplacement du magasin de certificats *Utilisateur actuel*, il doit être importé dans le magasin de l’utilisateur actuel de l’identité Windows de l’application (utilisateur).
+    - Si le certificat est stocké à l’emplacement du magasin de certificats *Ordinateur local*, l’identité Windows de l’application doit disposer d’une autorisation d’accès au certificat.
 - Si la nouvelle clé principale de colonne est stockée dans Microsoft Azure Key Vault, l’application doit être implémentée afin de pouvoir s’authentifier auprès d’Azure et a l’autorisation d’accéder à la clé.
 
 Pour plus d’informations, consultez [Créer et stocker des clés principales de colonne (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md).
@@ -336,16 +336,16 @@ Si vous choisissez de supprimer la définition de l’ancienne clé principale d
 
 La permutation d’une clé principale de colonne nécessite les autorisations relatives à la base de données suivantes :
 
-- **ALTER ANY COLUMN MASTER KEY** : obligatoire pour créer des métadonnées pour la nouvelle clé principale de colonne et supprimer les métadonnées pour l’ancienne clé principale de colonne.
-- **ALTER ANY COLUMN ENCRYPTION KEY** : obligatoire pour modifier les métadonnées de clé de chiffrement de colonne (ajouter les nouvelles valeurs chiffrées).
+- **ALTER ANY COLUMN MASTER KEY** : obligatoire pour créer des métadonnées pour la nouvelle clé principale de colonne et supprimer les métadonnées pour l’ancienne clé principale de colonne.
+- **ALTER ANY COLUMN ENCRYPTION KEY** : obligatoire pour modifier les métadonnées de clé de chiffrement de colonne (ajouter les nouvelles valeurs chiffrées).
 - **VIEW ANY COLUMN MASTER KEY DEFINITION** : obligatoire pour accéder aux métadonnées des clés principales de colonne et les lire.
 - **VIEW ANY COLUMN ENCRYPTION KEY DEFINITION** : obligatoire pour accéder aux métadonnées des clés de chiffrement de colonne et les lire. 
 
 Vous devez également être en mesure d’accéder à l’ancienne clé principale de colonne et à la nouvelle clé principale de colonne dans leurs magasins de clés. Pour accéder à un magasin de clés et utiliser une clé principale de colonne, vous pouvez avoir besoin d’autorisations sur le magasin de clés et/ou la clé :
-- **Magasin de certificats – Ordinateur local** : vous devez avoir un accès en lecture au certificat utilisé comme clé principale de colonne, ou être l’administrateur de l’ordinateur.
-- **Azure Key Vault** : vous avez besoin des autorisations *create*, *get*, *unwrapKey*, *wrapKey*, *sign*et *verify* sur le coffre contenant les clés principales de colonne.
-- **Fournisseur du magasin de clés (CNG)** : vous pouvez être invité à fournir les informations d’identification et autorisations nécessaires quand vous utilisez un magasin de clés ou une clé, selon le magasin et la configuration du fournisseur KSP.
-- **Fournisseur de services de chiffrement (CAPI)** : vous pouvez être invité à fournir les informations d’identification et autorisations nécessaires quand vous utilisez un magasin de clés ou une clé, selon le magasin et la configuration du fournisseur CSP.
+- **Magasin de certificats - Ordinateur local** : vous devez avoir un accès en lecture au certificat utilisé comme clé principale de colonne, ou être l’administrateur de l’ordinateur.
+- **Azure Key Vault** : vous avez besoin des autorisations *create*, *get*, *unwrapKey*, *wrapKey*, *sign* et *verify* sur le coffre contenant les clés principales de colonne.
+- **Fournisseur du magasin de clés (CNG)**  : vous pouvez être invité à fournir les informations d’identification et autorisations nécessaires quand vous utilisez un magasin de clés ou une clé, selon le magasin et la configuration du fournisseur KSP.
+- **Fournisseur de services de chiffrement (CAPI)**  : vous pouvez être invité à fournir les informations d’identification et autorisations nécessaires quand vous utilisez un magasin de clés ou une clé, selon le magasin et la configuration du fournisseur CSP.
 
 Pour plus d’informations, consultez [Créer et stocker des clés principales de colonne (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md).
 
@@ -361,7 +361,7 @@ Pour permuter une clé de chiffrement de colonne, utilisez l’Assistant Always 
 1.  Ouvrez l’Assistant pour votre base de données : cliquez avec le bouton droit sur votre base de données, pointez sur **Tâches**, puis cliquez sur **Chiffrer les colonnes**.
 2.  Examinez la page **Introduction** , puis cliquez sur **Suivant**.
 3.  Dans la page **Sélection de la colonne** , développez les tables et recherchez toutes les colonnes à remplacer qui sont actuellement chiffrés avec l’ancienne clé de chiffrement de colonne.
-4.  Pour chaque colonne chiffrée avec l’ancienne clé de chiffrement de colonne, affectez à **Clé de chiffrement** une nouvelle clé générée automatiquement. **Remarque :** Vous pouvez également créer une clé de chiffrement de colonne avant d’exécuter l’Assistant ; consultez la section *Mise en service des clés de chiffrement de colonne* ci-dessus.
+4.  Pour chaque colonne chiffrée avec l’ancienne clé de chiffrement de colonne, affectez à **Clé de chiffrement** une nouvelle clé générée automatiquement. **Remarque :** Vous pouvez également créer une clé de chiffrement de colonne avant d’exécuter l’Assistant ; consultez la section *Provisionnement des clés de chiffrement de colonne* ci-dessus.
 5.  Dans la page **Configuration de la clé principale** , sélectionnez un emplacement pour stocker la nouvelle clé et une source de clé principale, puis cliquez sur **Suivant**. **Remarque :** Si vous utilisez une clé de chiffrement de colonne existante (et non générée automatiquement), aucune action ne doit être effectuée dans cette page.
 6.  Dans la page **Validation**, indiquez si vous souhaitez exécuter le script immédiatement ou créer un script PowerShell, puis cliquez sur **Suivant**.
 7.  Dans la page **Résumé** , passez en revue les options que vous avez sélectionnées, puis cliquez sur **Terminer** et fermez l’Assistant à la fin.
@@ -369,16 +369,16 @@ Pour permuter une clé de chiffrement de colonne, utilisez l’Assistant Always 
 
 ### <a name="permissions"></a>Permissions
 
-La permutation d’une clé de chiffrement de colonne nécessite les autorisations relatives à la base de données suivantes : **ALTER ANY COLUMN MASTER KEY** : obligatoire si vous utilisez une nouvelle clé de chiffrement de colonne générée automatiquement (une clé principale de colonne et ses métadonnées sont également générées).
-**ALTER ANY COLUMN ENCRYPTION KEY** : obligatoire pour ajouter des métadonnées pour la nouvelle clé de chiffrement de colonne.
+La permutation d’une clé de chiffrement de colonne nécessite les autorisations relatives à la base de données suivantes : **ALTER ANY COLUMN MASTER KEY** : obligatoire si vous utilisez une nouvelle clé de chiffrement de colonne générée automatiquement (une clé principale de colonne et ses métadonnées sont également générées).
+**ALTER ANY COLUMN ENCRYPTION KEY** : obligatoire pour ajouter des métadonnées pour la nouvelle clé de chiffrement de colonne.
 **VIEW ANY COLUMN MASTER KEY DEFINITION** : obligatoire pour accéder aux métadonnées des clés principales de colonne et les lire.
 **VIEW ANY COLUMN ENCRYPTION KEY DEFINITION** : obligatoire pour accéder aux métadonnées des clés de chiffrement de colonne et les lire.
 
 Vous devez également être en mesure d’accéder aux clés principales de colonne pour l’ancienne et la nouvelle clés de chiffrement de colonne. Pour accéder à un magasin de clés et utiliser une clé principale de colonne, vous pouvez avoir besoin d’autorisations sur le magasin de clés et/ou la clé :
-- **Magasin de certificats – Ordinateur local** : vous devez avoir l’accès en lecture au certificat utilisé comme clé principale de colonne, ou être l’administrateur de l’ordinateur.
-- **Azure Key Vault** : vous avez besoin des autorisations get, unwrapKey et verify sur le coffre contenant la clé principale de colonne.
-- **Fournisseur du magasin de clés (CNG)** : vous pouvez être invité à fournir les informations d’identification et autorisations nécessaires quand vous utilisez un magasin de clés ou une clé, selon le magasin et la configuration du fournisseur KSP.
-- **Fournisseur de services de chiffrement (CAPI)** : vous pouvez être invité à fournir les informations d’identification et autorisations nécessaires quand vous utilisez un magasin de clés ou une clé, selon le magasin et la configuration du fournisseur CSP.
+- **Magasin de certificats - Ordinateur local** : vous devez avoir l’accès en lecture au certificat utilisé comme clé principale de colonne, ou être l’administrateur de l’ordinateur.
+- **Azure Key Vault** : vous avez besoin des autorisations get, unwrapKey et verify sur le coffre contenant la clé principale de colonne.
+- **Fournisseur du magasin de clés (CNG)**  : vous pouvez être invité à fournir les informations d’identification et autorisations nécessaires quand vous utilisez un magasin de clés ou une clé, selon le magasin et la configuration du fournisseur KSP.
+- **Fournisseur de services de chiffrement (CAPI)**  : vous pouvez être invité à fournir les informations d’identification et autorisations nécessaires quand vous utilisez un magasin de clés ou une clé, selon le magasin et la configuration du fournisseur CSP.
 
 Pour plus d’informations, consultez [Créer et stocker des clés principales de colonne (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md).
 
@@ -407,10 +407,10 @@ Pour effectuer une opération de mise à niveau de la DAC si Always Encrypted es
 *ALTER ANY COLUMN MASTER KEY*, *ALTER ANY COLUMN ENCRYPTION KEY*, *VIEW ANY COLUMN MASTER KEY DEFINITION*, *VIEW ANY COLUMN ENCRYPTION KEY DEFINITION*
 
 Si l’opération de mise à niveau déclenche une opération de chiffrement de données, vous devez également être en mesure d’accéder aux clés principales de colonne configurées pour les colonnes concernées :
-- **Magasin de certificats – Ordinateur local** : vous devez avoir un accès en lecture au certificat utilisé comme clé principale de colonne, ou être l’administrateur de l’ordinateur.
-- **Azure Key Vault** : vous avez besoin des autorisations *create*, *get*, *unwrapKey*, *wrapKey*, *sign*et *verify* sur le coffre contenant la clé principale de colonne.
-- **Fournisseur du magasin de clés (CNG)** : vous pouvez être invité à fournir les informations d’identification et autorisations nécessaires quand vous utilisez un magasin de clés ou une clé, selon le magasin et la configuration du fournisseur KSP.
-- **Fournisseur de services de chiffrement (CAPI)** : vous pouvez être invité à fournir les informations d’identification et autorisations nécessaires quand vous utilisez un magasin de clés ou une clé, selon le magasin et la configuration du fournisseur CSP.
+- **Magasin de certificats - Ordinateur local** : vous devez avoir un accès en lecture au certificat utilisé comme clé principale de colonne, ou être l’administrateur de l’ordinateur.
+- **Azure Key Vault** : vous avez besoin des autorisations *create*, *get*, *unwrapKey*, *wrapKey*, *sign* et *verify* sur le coffre contenant la clé principale de colonne.
+- **Fournisseur du magasin de clés (CNG)**  : vous pouvez être invité à fournir les informations d’identification et autorisations nécessaires quand vous utilisez un magasin de clés ou une clé, selon le magasin et la configuration du fournisseur KSP.
+- **Fournisseur de services de chiffrement (CAPI)**  : vous pouvez être invité à fournir les informations d’identification et autorisations nécessaires quand vous utilisez un magasin de clés ou une clé, selon le magasin et la configuration du fournisseur CSP.
 
 Pour plus d’informations, consultez [Créer et stocker des clés principales de colonne (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md).
 
@@ -451,10 +451,10 @@ Le tableau ci-dessous répertorie les scénarios de migration possibles et comme
 Pour **chiffrer** ou **déchiffrer** des données stockées dans la source de données, vous avez besoin des autorisations *VIEW ANY COLUMN MASTER KEY DEFINITION* et *VIEW ANY COLUMN ENCRYPTION KEY DEFINITION* dans la base de données source.
 
 Vous devez également pouvoir accéder aux clés principales de colonne, configurées pour les colonnes, qui stockent les données que vous chiffrez ou déchiffrez :
-- **Magasin de certificats – Ordinateur local** : vous devez avoir l’accès en lecture au certificat utilisé comme clé principale de colonne, ou être l’administrateur de l’ordinateur.
-- **Azure Key Vault** : vous avez besoin des autorisations get, unwrapKey, wrapKey, sign et verify sur le coffre contenant la clé principale de colonne.
-- **Fournisseur du magasin de clés (CNG)** : vous pouvez être invité à fournir les informations d’identification et autorisations nécessaires quand vous utilisez un magasin de clés ou une clé, selon le magasin et la configuration du fournisseur KSP.
-- **Fournisseur de services de chiffrement (CAPI)** : vous pouvez être invité à fournir les informations d’identification et autorisations nécessaires quand vous utilisez un magasin de clés ou une clé, selon le magasin et la configuration du fournisseur CSP.
+- **Magasin de certificats - Ordinateur local** : vous devez avoir l’accès en lecture au certificat utilisé comme clé principale de colonne, ou être l’administrateur de l’ordinateur.
+- **Azure Key Vault** : vous avez besoin des autorisations get, unwrapKey, wrapKey, sign et verify sur le coffre contenant la clé principale de colonne.
+- **Fournisseur du magasin de clés (CNG)**  : vous pouvez être invité à fournir les informations d’identification et autorisations nécessaires quand vous utilisez un magasin de clés ou une clé, selon le magasin et la configuration du fournisseur KSP.
+- **Fournisseur de services de chiffrement (CAPI)**  : vous pouvez être invité à fournir les informations d’identification et autorisations nécessaires quand vous utilisez un magasin de clés ou une clé, selon le magasin et la configuration du fournisseur CSP.
 Pour plus d’informations, consultez [Créer et stocker des clés principales de colonne (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md).
 
 ## <a name="see-also"></a> Voir aussi

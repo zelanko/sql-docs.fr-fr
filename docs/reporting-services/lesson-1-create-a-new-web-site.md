@@ -8,15 +8,15 @@ ms.topic: conceptual
 ms.assetid: 3f226bc8-614e-4dac-9078-3448a83342b5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9766b511d5dfce57dd91a4f19466249e00ad7ad8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 14d0cb8c5b4f5c11ee979724a7ebe519abfdf3f0
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47816317"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396443"
 ---
 # <a name="lesson-1-create-a-new-web-site"></a>Leçon 1 : créer un nouveau site Web
-Dans cette leçon vous allez apprendre à créer un projet de site Web à l'aide du modèle de site Web ASP.NET pour Visual C#.  
+Dans cette leçon, vous allez apprendre à créer un projet de site web en utilisant le modèle de site web ASP.NET pour Visual C#.  
   
 ## <a name="to-create-a-new-website"></a>Pour créer un nouveau site Web  
   
@@ -31,4 +31,4 @@ Dans cette leçon vous allez apprendre à créer un projet de site Web à l'aide
 Le projet de site web s’ouvre et lance **l’Assistant Rapport**. Sélectionnez**Annuler** pour quitter l’Assistant Rapport, car nous allons créer un dataset personnalisé à la prochaine étape.  
   
 ## <a name="next-task"></a>Tâche suivante  
-Vous venez de créer un projet de site Web. Vous allez à présent créer une connexion de données et une table de données pour le rapport parent. Consultez [Leçon 2 : Définir une connexion de données et une table de données pour le rapport parent](../reporting-services/lesson-2-define-a-data-connection-and-data-table-for-parent-report.md).
+Vous avez réussi à créer un projet de site web. Vous allez à présent créer une connexion de données et une table de données pour le rapport parent. Consultez [Leçon 2 : Définir une connexion de données et une table de données pour le rapport parent](../reporting-services/lesson-2-define-a-data-connection-and-data-table-for-parent-report.md).

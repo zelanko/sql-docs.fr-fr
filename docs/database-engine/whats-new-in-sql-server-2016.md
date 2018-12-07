@@ -14,12 +14,12 @@ ms.assetid: 8f625d5a-763c-4440-97b8-4b823a6e2439
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 7b69a59b2b4741894a6242998b67a9b7f9f3d5fe
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 2c82a2400020baf0d97cda595c630c2b7b55a9b1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604339"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504510"
 ---
 # <a name="whats-new-in-database-engine---sql-server-2016"></a>Nouveautés du moteur de base de données - SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -91,7 +91,7 @@ Cette version propose des améliorations des index columnstore, notamment des in
 
 Pour plus d’informations, consultez les rubriques suivantes dans la section [Guide des index columnstore](../relational-databases/indexes/columnstore-indexes-overview.md) de la documentation en ligne :
 
-- [Synthèse des fonctionnalités des index columnstore en fonction des versions](~/relational-databases/indexes/columnstore-indexes-what-s-new.md) : inclut les nouveautés.
+- [Récapitulatif des fonctionnalités des index columnstore en fonction des versions](~/relational-databases/indexes/columnstore-indexes-what-s-new.md) : inclut les nouveautés.
 
 - [Chargement de données d’index columnstore](../relational-databases/indexes/columnstore-indexes-data-loading-guidance.md)
 
@@ -293,7 +293,7 @@ SQL Server 2016 offre une prise en charge intégrée de l’importation et l’e
  Pour plus d’informations, consultez [Guide de PolyBase](../relational-databases/polybase/polybase-guide.md).
 
 ## <a name="stretch-database"></a>Stretch Database
- Stretch Database est une nouvelle fonctionnalité dans [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] qui fait migrer vos données d’historique en toute sécurité et de façon transparente vers le cloud Microsoft Azure. Vous pouvez accéder de façon transparente à vos données SQL Server, que celles-ci soient locales ou étendues vers le cloud. Définissez la stratégie qui détermine où les données sont stockées et SQL Server gère le déplacement des données en arrière-plan. La table entière est toujours en ligne et peut toujours être interrogée. De plus, Stretch Database ne nécessite aucune modification des requêtes ou applications existantes : l’emplacement des données est totalement transparent pour l’application. Pour plus d'informations, consultez [Stretch Database](../sql-server/stretch-database/stretch-database.md).
+ Stretch Database est une nouvelle fonctionnalité dans [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] qui fait migrer vos données d’historique en toute sécurité et de façon transparente vers le cloud Microsoft Azure. Vous pouvez accéder facilement à vos données SQL Server, que celles-ci soient locales ou étendues au cloud. Définissez la stratégie qui détermine où les données sont stockées et SQL Server gère le déplacement des données en arrière-plan. La table entière est toujours en ligne et peut toujours être interrogée. De plus, Stretch Database ne nécessite aucune modification des requêtes ou applications existantes : l’emplacement des données est totalement transparent pour l’application. Pour plus d'informations, consultez [Stretch Database](../sql-server/stretch-database/stretch-database.md).
  
 ## <a name="support-for-utf-8"></a>Prise en charge du codage UTF-8
 [bcp Utility](../tools/bcp-utility.md), [BULK INSERT](../t-sql/statements/bulk-insert-transact-sql.md) et [OPENROWSET](../t-sql/functions/openrowset-transact-sql.md) prennent désormais en charge la page de codes UTF-8. Pour plus d’informations, consultez ces rubriques et [Créer un fichier de format &#40;SQL Server&#41;](../relational-databases/import-export/create-a-format-file-sql-server.md).
@@ -382,11 +382,11 @@ La sécurité au niveau des lignes introduit le contrôle d’accès basé sur l
 
 
 ### <a name="always-encrypted"></a>Always Encrypted
-Avec Always Encrypted, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] peut effectuer des opérations sur des données chiffrées. Qui plus est, la clé de chiffrement réside avec l’application à l’intérieur de l’environnement approuvé du client, et non sur le serveur. Always Encrypted sécurise les données client pour que les administrateurs de base de données n’aient pas accès aux données en texte brut. Le chiffrement et le déchiffrement des données se produisent en toute transparence au niveau du pilote, minimisant ainsi les modifications qui doivent être apportées aux applications existantes. Pour plus d’informations, consultez [Always Encrypted &#40;moteur de base de données&#41;](../relational-databases/security/encryption/always-encrypted-database-engine.md).
+Avec Always Encrypted, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] peut effectuer des opérations sur des données chiffrées. En outre, la clé de chiffrement réside avec l’application à l’intérieur de l’environnement approuvé du client, et non sur le serveur. Always Encrypted sécurise les données client pour que les administrateurs de base de données n’aient pas accès aux données en texte brut. Le chiffrement et le déchiffrement des données se produisent en toute transparence au niveau du pilote, minimisant ainsi les modifications qui doivent être apportées aux applications existantes. Pour plus d’informations, consultez [Always Encrypted &#40;moteur de base de données&#41;](../relational-databases/security/encryption/always-encrypted-database-engine.md).
 
 
 ### <a name="dynamic-data-masking"></a>Masquage dynamique des données
-Le masquage dynamique des données limite l’exposition des données sensibles en les masquant aux utilisateurs sans privilège. Le masquage dynamique des données permet d’empêcher les accès non autorisés à des données sensibles. Pour cela, les clients peuvent indiquer la quantité de données sensibles à exposer avec un impact minimal sur la couche Application. Il s’agit d’une fonctionnalité de sécurité basée sur des stratégies qui masque les données sensibles dans le jeu de résultats d’une requête sur des champs de base de données désignés (les données dans la base de données ne sont pas modifiées). Pour plus d’informations, consultez [Dynamic Data Masking](../relational-databases/security/dynamic-data-masking.md).
+Le masquage dynamique des données limite l’exposition des données sensibles en les masquant aux utilisateurs sans privilège. Le masquage dynamique des données permet d’empêcher les accès non autorisés à des données sensibles. Pour cela, les clients peuvent indiquer la quantité de données sensibles à exposer avec un impact minimal sur la couche Application. Il s’agit d’une fonctionnalité de sécurité basée sur des stratégies qui masque les données sensibles dans le jeu de résultats d’une requête, sur des champs de base de données désignés (les données dans la base de données ne sont pas modifiées). Pour plus d’informations, consultez [Dynamic Data Masking](../relational-databases/security/dynamic-data-masking.md).
 
 
 ### <a name="new-permissions"></a>Nouvelles autorisations
@@ -426,7 +426,7 @@ Il est désormais possible de combiner deux groupes de disponibilité figurant d
 
 L’amorçage direct permet de répliquer automatiquement un réplica secondaire sur le réseau (contrairement à un amorçage manuel qui nécessite une sauvegarde physique de la base de données cible pour une restauration sur le serveur secondaire). Pour spécifier l’amorçage direct, définissez **SEEDING_MODE=AUTOMATIC** dans les instructions [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../t-sql/statements/create-availability-group-transact-sql.md) ou [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../t-sql/statements/alter-availability-group-transact-sql.md). Vous devez également spécifier **GRANT CREATE ANY DATABASE** avec [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../t-sql/statements/alter-availability-group-transact-sql.md) sur chaque réplica secondaire utilisé avec l’amorçage direct.
 
-**Améliorations des performances** : le débit de la synchronisation des groupes de disponibilité a été augmenté de ~10x grâce à la compression parallèle et plus rapide des blocs de journal sur le réplica principal, à un protocole de synchronisation optimisé et à la décompression parallèle et la restauration par progression des enregistrements de journal sur le réplica secondaire. L’actualisation des réplicas secondaires accessibles en lecture est ainsi accrue et le temps de récupération de la base de données en cas de basculement réduit. Notez que la restauration par progression des tables optimisées en mémoire n’est pas encore parallèle dans SQL Server 2016.
+**Améliorations des performances** : le débit de la synchronisation des groupes de disponibilité a été augmenté de ~10x grâce à la compression parallèle et plus rapide des blocs de journal sur le réplica principal, à un protocole de synchronisation optimisé et à la décompression parallèle et la restauration par progression des enregistrements de journal sur le réplica secondaire. L’actualisation des réplicas secondaires accessibles en lecture est ainsi accrue et le temps de récupération de la base de données en cas de basculement réduit. Notez que la restauration par progression des tables optimisées en mémoire n’est pas encore parallèle dans SQL Server 2016.
 
 ## <a name="replication-enhancements"></a>Améliorations apportées à la réplication
 - La réplication des tables optimisées en mémoire est désormais prise en charge. Pour plus d’informations, consultez [Abonnés à la réplication de tables optimisées en mémoire](../relational-databases/replication/replication-to-memory-optimized-table-subscribers.md).

@@ -11,17 +11,17 @@ ms.assetid: 055d86c9-befd-4e63-acb1-6dfe833549d2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7d44c57600719b35340295723f0ab25b4e1ae56f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c89486bb4d33ba52d1e0516d51eede715ddd9987
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808667"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52405647"
 ---
 # <a name="catalogsetexecutionparametervalue-ssisdb-database"></a>catalog.set_execution_parameter_value (base de données SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Définit la valeur d'un paramètre pour une instance d'exécution dans le catalogue [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
+  Définit la valeur d'un paramètre pour une instance d'exécution dans le catalogue [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
  Une valeur de paramètre ne peut pas être modifiée après qu'une instance d'exécution a commencé.  
   
@@ -76,32 +76,32 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
   
 |Valeur|Description|  
 |-----------|-----------------|  
-|0|None<br /><br /> La journalisation est désactivée. Seul l'état d'exécution du package est enregistré.|  
+|0|Aucun<br /><br /> La journalisation est désactivée. Seul l'état d'exécution du package est enregistré.|  
 |1|Simple<br /><br /> Tous les événements sont enregistrés, sauf les événements personnalisés et de diagnostic. Il s'agit de la valeur par défaut.|  
 |2|Performances<br /><br /> Seules les statistiques de performances, et les événements OnError et OnWarning, sont enregistrés.|  
 |3|Commentaires<br /><br /> Tous les événements sont enregistrés, y compris les événements personnalisés et de diagnostic. <br />Les événements personnalisés sont notamment ces événements consignés par les tâches Integration Services. Pour plus d’informations, consultez [Messages personnalisés pour la journalisation](../../integration-services/performance/integration-services-ssis-logging.md#custom_messages).|  
 |4|Lignage de l’exécution<br /><br /> Collecte les données nécessaires au suivi du lignage dans le flux de données.|  
 |100|Niveau de journalisation personnalisée<br /><br /> Spécifiez les valeurs du paramètre CUSTOMIZED_LOGGING_LEVEL. Pour plus d’informations sur les valeurs que vous pouvez spécifier, consultez [catalog.create_customized_logging_level](../../integration-services/system-stored-procedures/catalog-create-customized-logging-level.md).<br /><br /> Pour plus d’informations sur les niveaux de journalisation personnalisée, consultez [Activer la journalisation des exécutions de package sur le serveur SSIS](../../integration-services/performance/integration-services-ssis-logging.md#server_logging).|  
   
- Pour spécifier que le serveur Integration Services doit générer des fichiers de vidage lorsqu'une erreur se produit pendant une exécution de package, définissez les valeurs de paramètre suivantes pour une instance d'exécution qui n'a pas été exécutée.  
+ Pour spécifier que le serveur Integration Services doit générer des fichiers de vidage quand une erreur se produit pendant une exécution de package, définissez les valeurs de paramètre suivantes pour une instance d’exécution qui n’a pas été exécutée.  
   
 |Paramètre|Valeur|  
 |---------------|-----------|  
 |*execution_id*|Identificateur unique de l'instance d'exécution|  
 |*object_type*|50|  
-|*parameter_name*|‘DUMP_ON_ERROR|  
+|*parameter_name*|'DUMP_ON_ERROR|  
 |*parameter_value*|1|  
   
- Pour spécifier que le serveur Integration Services doit générer des fichiers de vidage lorsque des événements se produisent pendant une exécution de package, définissez les valeurs de paramètre suivantes pour une instance d'exécution qui n'a pas été exécutée.  
+ Pour spécifier que le serveur Integration Services doit générer des fichiers de vidage quand des événements se produisent pendant une exécution de package, définissez les valeurs de paramètre suivantes pour une instance d’exécution qui n’a pas été exécutée.  
   
 |Paramètre|Valeur|  
 |---------------|-----------|  
 |*execution_id*|Identificateur unique de l'instance d'exécution|  
 |*object_type*|50|  
-|*parameter_name*|‘DUMP_ON_EVENT|  
+|*parameter_name*|'DUMP_ON_EVENT|  
 |*parameter_value*|1|  
   
- Pour spécifier les événements lors d'une exécution de package qui provoquent la génération de fichiers de vidage par le serveur Integration Services, définissez les valeurs de paramètre suivantes pour une instance d'exécution qui n'a pas été exécutée. Séparez plusieurs codes d'événement à l'aide d'un point-virgule.  
+ Pour spécifier les événements pendant une exécution de package qui provoquent la génération de fichiers de vidage par le serveur Integration Services, définissez les valeurs de paramètre suivantes pour une instance d’exécution qui n’a pas été exécutée. Séparez plusieurs codes d'événement à l'aide d'un point-virgule.  
   
 |Paramètre|Valeur|  
 |---------------|-----------|  
@@ -134,7 +134,7 @@ exec catalog.set_execution_parameter_value  @execution_id, 50, 'DUMP_EVENT_CODE'
  0 (succès)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- None  
+ Aucun  
   
 ## <a name="permissions"></a>Permissions  
  Cette procédure stockée requiert l'une des autorisations suivantes :  

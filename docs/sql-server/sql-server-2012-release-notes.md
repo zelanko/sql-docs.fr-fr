@@ -13,12 +13,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: c53f178bb532eb038d4c06ca882d067aa7ae4eb5
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: d1e3b8c76da30f9216b8f5d44df40b92360350dc
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703937"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540559"
 ---
 # <a name="sql-server-2012-release-notes"></a>Notes de publication de SQL Server 2012
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -35,9 +35,9 @@ Lisez les informations répertoriées ci-dessous avant d'installer [!INCLUDE[ssC
 **Solution de contournement :** référez-vous au rapport d'analyse de configuration système pour en savoir plus sur ces règles d'installation. L'analyse de configuration système génère un rapport qui contient une brève description de chaque règle exécutée et de l'état d'exécution. Le rapport de contrôle de configuration du système se trouve à l’emplacement %programfiles%\Microsoft SQL Server\110\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\.  
   
 ### <a name="12-adding-a-local-user-account-for-the-distributed-replay-controller-service-might-terminate-setup-unexpectedly"></a>1.2 L'ajout d'un compte d'utilisateur local pour le service Distributed Replay Controller peut interrompre l'installation de façon inattendue  
-**Problème :** dans la page **Distributed Replay Controller** de l'installation de SQL Server, si vous essayez d'ajouter un compte d'utilisateur local pour le service Distributed Replay Controller, l'installation s'interrompt de façon inattendue avec un message d'erreur « Erreur du programme d'installation de SQL Server ».  
+**Problème :** dans la page **Distributed Replay Controller** de l’installation de SQL Server, si vous essayez d’ajouter un compte d’utilisateur local pour le service Distributed Replay Controller, l’installation s’interrompt de façon inattendue avec un message d’erreur « Erreur du programme d’installation de SQL Server ».  
   
-**Solution de contournement :** au cours de l'installation de SQL, n'ajoutez pas de comptes d'utilisateurs locaux à l'aide des options « Ajouter l'utilisateur actuel » ou « Ajouter… ». Après l'installation, ajoutez un compte d'utilisateur local manuellement en procédant comme suit :  
+**Solution de contournement :** au cours de l’installation de SQL, n’ajoutez pas de comptes d’utilisateurs locaux à l’aide des options « Ajouter l’utilisateur actuel » ou « Ajouter… ». Après l'installation, ajoutez un compte d'utilisateur local manuellement en procédant comme suit :  
   
 1.  Arrêter le service SQL Server Distributed Replay Controller  
   
@@ -188,9 +188,9 @@ Les points suivants décrivent le comportement d'installation des composants req
   
 -   Windows PowerShell 2.0 est un élément prérequis pour l'installation des composants de moteur de base de données SQL Server 2012 et de SQL Server Management Studio, mais Windows PowerShell n'est plus installé par le programme d'installation SQL Server. Si PowerShell 2.0 n'est pas présent sur votre ordinateur, activez-le en suivant les instructions de la page [Infrastructure de gestion Windows](https://support.microsoft.com/kb/968929) . La manière d'obtenir Windows PowerShell 2.0 dépend du système d'exploitation que vous exécutez :  
   
-    -   Windows Server 2008 – Windows PowerShell 1.0 est une fonctionnalité qui peut être ajoutée. Les versions Windows PowerShell 2.0 sont téléchargées et installées (efficacement en tant que correctif de système d'exploitation).  
+    -   Windows Server 2008 - Windows PowerShell 1.0 est une fonctionnalité qui peut être ajoutée. Les versions Windows PowerShell 2.0 sont téléchargées et installées (efficacement en tant que correctif de système d'exploitation).  
   
-    -   Windows 7/Windows Server 2008 R2 – Windows PowerShell 2.0 sont installés par défaut.  
+    -   Windows 7/Windows Server 2008 R2 - Windows PowerShell 2.0 sont installés par défaut.  
   
 -   Si vous envisagez d'utiliser les fonctionnalités SQL Server 2012 dans un environnement SharePoint, SharePoint Server 2010 Service Pack 1 (SP1) et la mise à jour cumulative d'août de SharePoint sont requis. Vous devez installer SP1 et la [mise à jour cumulative d'août](https://blogs.technet.com/b/stefan_gossner/archive/2010/09/02/august-2010-cumulative-update-for-sharepoint-has-been-released.aspx)de SharePoint, puis corriger intégralement la batterie de serveurs avant de lui ajouter les fonctionnalités SQL Server 2012. Cette condition requise concerne les fonctionnalités SQL Server 2012 suivantes : l'utilisation d'une instance du moteur de base de données en tant que serveur de base de données de la batterie de serveurs, la configuration de PowerPivot pour SharePoint ou le déploiement de Reporting Services en mode SharePoint.  
   
@@ -308,9 +308,9 @@ Il existe un certain nombre de problèmes avec la tâche de traitement AS lorsqu
   
 **Solution de contournement**: pour résoudre ce problème, activez IPv4 ou suivez les étapes ci-après pour ajouter une entrée de Registre et créer une liste de contrôle d'accès (ACL) afin d'activer IPv6 pour la visionneuse de l'aide :  
   
-1.  Créez une clé de registre ayant pour nom « IPv6 » et pour valeur «1 (DWORD(32 bit)) » sous HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Help\v1.0.  
+1.  Créez une clé de registre ayant pour nom « IPv6 » et pour valeur « 1 (DWORD(32 bit)) » sous HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Help\v1.0.  
   
-2.  Définissez l'ACL de sécurité pour le port d'IPv6, en exécutant la commande qui suit à partir d'une fenêtre CMD d'administration  
+2.  Définissez l’ACL de sécurité pour le port d’IPv6, en exécutant la commande qui suit à partir d’une fenêtre CMD d’administration :  
   
     ```  
     netsh http add urlacl url=https://[::1]:47873/help/ sddl=D:(A;;GX;;;WD)  
@@ -341,7 +341,7 @@ Il existe un certain nombre de problèmes avec la tâche de traitement AS lorsqu
 **Solution de contournement** : pour éviter ce problème, publiez le travail que vous souhaitez conserver dans la base de connaissances avant de démarrer une nouvelle activité.  
   
 ### <a name="45-controls-do-not-scale-properly-on-large-font-sizes"></a>4.5 Les contrôles ne sont pas mis à l'échelle correctement sur les polices de grande taille  
-**Problème :** si vous agrandissez la taille du texte de 150 % ou plus (dans Windows Server 2008 ou Windows 7) ou si vous changez le paramètre d'échelle personnalisée à 200 % (dans Windows 7), les boutons **Annuler** et **Créer** de la **Base de connaissances** ne sont plus accessibles.  
+**Problème :** si vous agrandissez la taille du texte de 150 % ou plus (dans Windows Server 2008 ou Windows 7) ou si vous changez le paramètre d’échelle personnalisée à 200 % (dans Windows 7), les boutons **Annuler** et **Créer** de la **Base de connaissances** ne sont plus accessibles.  
   
 **Solution de contournement**: pour résoudre ce problème, attribuez une valeur plus petite à la police.  
   
@@ -403,7 +403,7 @@ Problème : vous risquez de recevoir l'erreur suivante si vous ouvrez une base d
   
 Cela se produit en raison de la différence dans la manière dont DQS compare les chaînes dans C# et la base de données SQL Server. La comparaison des chaînes dans la base de données SQL Server ne respecte pas la casse, alors qu'elle le fait dans C#.  
   
-Prenons un exemple pour illustrer ce propos. L'utilisateur Domaine\user1 se connecte à l'ordinateur Data Quality Client à l'aide du compte « user1 » et travaille sur une base de connaissances. DQS stocke la base de connaissances récente pour chaque utilisateur sous forme d'un enregistrement dans la table A_CONFIGURATION de la base de données DQS_MAIN. Dans ce cas, l'enregistrement sera stocké sous le nom suivant : RecentList:KB:Domaine\user1. Par la suite, l'utilisateur se connecte à l'ordinateur Data Quality Client en tant que « User1 » (notez le U majuscule) et essaie d'ouvrir la base de connaissances dans la liste **Base de connaissances récente** pour l'activité de gestion de domaines. Le code sous-jacent dans DQS compare les deux chaînes, RecentList:KB:DOMAINE\user1 et DOMAINE\User1. Compte tenu du respect de la casse dans la comparaison des chaînes dans C#, les chaînes ne correspondent pas. Par conséquent, DQS essaie d'insérer un nouvel enregistrement pour l'utilisateur (User1) dans la table A_CONFIGURATION de la base de données DQS_MAIN. Toutefois, la comparaison des chaînes ne respectant pas la casse dans la base de données SQL, cette chaîne existe déjà dans la table A_CONFIGURATION de la base de données DQS_MAIN, ce qui fait que l'opération d'insertion échoue.  
+Prenons un exemple pour illustrer ce propos. L'utilisateur Domaine\user1 L’utilisateur se connecte à l’ordinateur Data Quality Client à l’aide du compte « user1 » et travaille sur une base de connaissances. DQS stocke la base de connaissances récente pour chaque utilisateur sous forme d'un enregistrement dans la table A_CONFIGURATION de la base de données DQS_MAIN. Dans ce cas, l'enregistrement sera stocké sous le nom suivant : RecentList:KB:Domaine\user1. Par la suite, l’utilisateur se connecte à l’ordinateur Data Quality Client en tant que « User1 » (notez le U majuscule) et essaie d’ouvrir la base de connaissances dans la liste **Base de connaissances récente** pour l’activité de gestion de domaines. Le code sous-jacent dans DQS compare les deux chaînes, RecentList:KB:DOMAINE\user1 et DOMAINE\User1. Compte tenu du respect de la casse dans la comparaison des chaînes dans C#, les chaînes ne correspondent pas. Par conséquent, DQS essaie d’insérer un nouvel enregistrement pour l’utilisateur (User1) dans la table A_CONFIGURATION de la base de données DQS_MAIN. Toutefois, la comparaison des chaînes ne respectant pas la casse dans la base de données SQL, cette chaîne existe déjà dans la table A_CONFIGURATION de la base de données DQS_MAIN, ce qui fait que l'opération d'insertion échoue.  
   
 **Solution de contournement** : pour résoudre ce problème, effectuez l'une des opérations suivantes :  
   

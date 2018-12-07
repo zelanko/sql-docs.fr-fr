@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: f505f478-dd6d-444a-957c-34f7cfb98911
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: df7cb6c2f5c04138d6738eadeb9b352d21f240f5
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: a8acf400f03ec77aff21d839dee132ba5258f54f
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813682"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52403634"
 ---
 # <a name="html-device-information-settings"></a>Paramètres d'informations de périphérique HTML
 Le tableau suivant répertorie les paramètres d'informations de périphérique qui permettent un rendu du rapport au format HTML.  
@@ -41,7 +41,7 @@ Le tableau suivant répertorie les paramètres d'informations de périphérique 
 |**OutlookCompat**|Indique s'il convient d'effectuer le rendu avec des métadonnées supplémentaires qui font que l'aspect du rapport est meilleur dans Outlook. Pour d'autres, la valeur par défaut est **false**.|  
 |**Paramètres**|Indique s'il faut afficher ou masquer la zone des paramètres de la barre d'outils. Si vous affectez à ce paramètre la valeur **true**, la zone des paramètres de la barre d'outils s'affiche. La valeur par défaut de ce paramètre est **true**.|  
 |**PrefixId**|Lorsque ce paramètre est utilisé avec **HTMLFragment**, ajoute le préfixe spécifié à tous les attributs **ID** dans le fragment HTML qui est créé.|  
-|**ReplacementRoot(\*)**|Chaîne à ajouter à tous les liens d'extraction, de bascule et de signet dans le rapport lors du rendu hors du contrôle ReportViewer. Par exemple, ce paramètre est utilisé pour rediriger le clic d'un utilisateur vers une page personnalisée.|  
+|**ReplacementRoot(\*)**|Chaîne à ajouter à tous les liens d'extraction, de bascule et de signet dans le rapport lors du rendu hors du contrôle ReportViewer. Par exemple, ce paramètre est utilisé pour rediriger le clic d’un utilisateur vers une page personnalisée.|  
 |**ResourceStreamRoot(\*)**|Chaîne à ajouter à l'URL pour toutes les ressources d'image, telles que les images bascule ou de tri.|  
 |**Section**|Numéro de page du rapport dont le rendu est effectué. La valeur **0** indique que toutes les sections du rapport sont rendues. La valeur par défaut est **1**.|  
 |**StreamRoot (\*)**|Chemin d'accès utilisé pour préfixer la valeur de l'attribut **src** de l'élément IMG dans le rapport HTML retourné par le serveur de rapports. Par défaut, le serveur de rapports fournit le chemin d'accès. Vous pouvez utiliser ce paramètre pour spécifier un chemin racine pour les images contenues dans un rapport (par exemple, **https://\<nom_serveur>/resources/companyimages**).|  

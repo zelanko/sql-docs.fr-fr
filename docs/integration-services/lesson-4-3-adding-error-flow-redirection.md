@@ -11,12 +11,12 @@ ms.assetid: 5683a45d-9e73-4cd5-83ca-fae8b26b488c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 03e6618461a81fa086e66db65d72de4e49fea634
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: aaaa071f447b77242196da7a83a7b71f6f2ca395
+ms.sourcegitcommit: ba7fb4b9b4f0dbfe77a7c6906a1fde574e5a8e1e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710287"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52302882"
 ---
 # <a name="lesson-4-3---adding-error-flow-redirection"></a>Leçon 4-3 : Ajout de redirection de flux d’erreurs
 Comme nous l'avons démontré au cours de la tâche précédente, la transformation Lookup Currency Key ne peut pas générer de correspondance lorsqu'elle tente de traiter le fichier plat exemple endommagé qui a généré une erreur. Du fait que la transformation utilise les paramètres par défaut pour l'affichage en sortie des erreurs, toute erreur qui survient entraîne un échec de la transformation. Si la transformation échoue, le reste du package échoue également.  
@@ -51,7 +51,7 @@ Pour améliorer l'utilité de la sortie d'erreur, vous allez utiliser un composa
   
 9. Dans la propriété **Name** , tapez **ErrorDescription** et attribuez à la propriété **DataType** la valeur **Unicode string [DT_WSTR]**.  
   
-10. Dans la page **Script** , vérifiez que la propriété **LocaleID** a la valeur **Anglais (États-Unis)**.  
+10. Dans la page **Script**, vérifiez que la propriété **LocaleID** a la valeur **Anglais (États-Unis)**.  
   
 11. Cliquez sur **Modifier le script** pour ouvrir [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Tools for Applications (VSTA). Dans la méthode **Input0_ProcessInputRow** , tapez ou collez le code suivant.  
   

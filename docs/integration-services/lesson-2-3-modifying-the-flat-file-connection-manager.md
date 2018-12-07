@@ -11,12 +11,12 @@ ms.assetid: 459e3995-2116-4f15-aaa2-32f26113869c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 80ddd9fb25dcd9246da0b9cb9ac86e8872888e7c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 79c6f65a6ceba8eef0a61f27512fa09b6fb3f474
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785873"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531800"
 ---
 # <a name="lesson-2-3---modifying-the-flat-file-connection-manager"></a>Leçon 2-3 : Modification du Gestionnaire de connexions de fichiers plats
 Dans cette tâche, vous allez modifier le gestionnaire de connexions de fichiers plats que vous avez créé et configuré dans la leçon 1. Le gestionnaire de connexions de fichiers plats a été configuré au départ pour charger statiquement un seul fichier. Pour faire en sorte que le Gestionnaire de connexions de fichiers plats charge les fichiers interactivement, vous devez modifier la propriété ConnectionString du Gestionnaire de connexions afin que la variable `User:varFileName`définie par l’utilisateur soit acceptée. Cette variable contient le chemin du fichier qui doit être chargé au moment de l’exécution.  
@@ -27,11 +27,11 @@ La modification du Gestionnaire de connexions pour qu’il utilise la variable `
   
 1.  Dans le volet **Gestionnaires de connexions** , cliquez avec le bouton droit sur **Sample Flat File Source Data**, puis sélectionnez **Propriétés**.  
   
-2.  Dans la fenêtre des propriétés, pour **Expressions**, cliquez dans la cellule vide, puis sur le bouton **(…)**.  
+2.  Dans la fenêtre Propriétés, pour **Expressions**, cliquez dans la cellule vide, puis sur le bouton **(...)**.  
   
 3.  Dans la boîte de dialogue **Éditeur d’expressions de la propriété** , dans la colonne **Propriété** , tapez ou sélectionnez **ConnectionString**.  
   
-4.  Dans la colonne **Expression** , cliquez sur le bouton **(…)** pour ouvrir la boîte de dialogue **Générateur d’expression** .  
+4.  Dans la colonne **Expression**, cliquez sur le bouton **(...)** pour ouvrir la boîte de dialogue **Générateur d’expression**.  
   
 5.  Dans la boîte de dialogue **Générateur d’expression** , développez le nœud **Variables** .  
   

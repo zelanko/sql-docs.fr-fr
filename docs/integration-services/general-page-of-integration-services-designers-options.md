@@ -13,12 +13,12 @@ ms.assetid: d695690a-923b-4036-945e-7621e8651deb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4bd6d830a2c8fc612a7b9030de60e9c8ff458301
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e5ae792d2237e1c2eaafddfe78cc0314f1240bd5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649037"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526923"
 ---
 # <a name="general-page-of-integration-services-designers-options"></a>Page Général des Options des Concepteurs Integration Services
   Utilisez la page **Général** de la page **Concepteurs de services d'intégration** dans la boîte de dialogue **Options** pour spécifier les options de chargement, d'affichage et de mise à niveau des packages.  
@@ -37,7 +37,7 @@ ms.locfileid: "47649037"
  Sélectionnez cette option pour afficher un avertissement lors du chargement d'un package qui n'est pas signé.  
   
  **Afficher les étiquettes de contrainte de précédence**  
- Sélectionnez l'étiquette (Réussite, Échec ou À l'achèvement) à afficher sur les contraintes de précédence lors de la consultation de packages dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
+ Sélectionnez l’étiquette (Réussite, Échec ou À l’achèvement) à afficher sur les contraintes de précédence pendant la consultation de packages dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
  **Langage de script**  
  Sélectionnez le langage de script par défaut pour les nouvelles tâches de script et les composants Script.  

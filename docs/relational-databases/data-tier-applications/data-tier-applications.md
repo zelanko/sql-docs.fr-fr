@@ -15,16 +15,16 @@ ms.assetid: a04a2aba-d07a-4423-ab8a-0a31658f6317
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 98dd4481e6f7afdc1c0f140073e26650392ee746
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 72595a95c08d89bec7db4a9b4252fe8873b12195
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47680307"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525720"
 ---
 # <a name="data-tier-applications"></a>Applications de la couche Données
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Une application de la couche Données (DAC) est une entité de gestion de base de données logique qui définit tous les objets [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], notamment les tables, les vues et les objets d'instance, y compris les connexions, qui sont associés à une base de données utilisateur. Une application DAC est une unité autonome de déploiement de base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui permet aux développeurs et aux administrateurs de base de données de la couche Données d'empaqueter les objets [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans un artefact portable appelé « package DAC », ou encore DACPAC.  
+  Une application de la couche Données (DAC) est une entité de gestion de base de données logique qui définit tous les objets [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], notamment les tables, les vues et les objets d’instance, y compris les connexions, qui sont associés à une base de données utilisateur. Une application DAC est une unité autonome de déploiement de base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui permet aux développeurs et aux administrateurs de base de données de la couche Données d'empaqueter les objets [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans un artefact portable appelé « package DAC », ou encore DACPAC.  
   
  Un BACPAC est un artefact connexe qui encapsule le schéma de la base de données, ainsi que les données stockées dans la base de données.  
   
@@ -35,14 +35,14 @@ ms.locfileid: "47680307"
   
  L'avantage d'un déploiement piloté par une DAC par rapport à celui piloté par script est que l'outil aide l'administrateur à identifier et à valider les comportements émanant de bases de données sources et cibles différentes. Lors de mises à niveau, l'outil avertit l'administrateur si la mise à niveau peut entraîner la perte de données ; il fournit également un plan de mise à niveau. L'administrateur peut évaluer le plan, puis utiliser l'outil pour poursuivre la mise à niveau.  
   
- Les DAC prennent également en charge le contrôle de version pour aider le développeur et l'administrateur à conserver et à gérer le lignage d'une base de données par son cycle de vie.  
+ Les DAC prennent également en charge le contrôle de version pour aider le développeur et l’administrateur à conserver et à gérer le lignage d’une base de données par son cycle de vie.  
   
 ## <a name="dac-concepts"></a>Concepts DAC  
  Une DAC simplifie le développement, le déploiement et la gestion des éléments de la couche Données qui prennent en charge une application :  
   
--   Une application de la couche Données (DAC) est une entité de gestion de base de données logique qui définit tous les objets SQL Server, tels que les tables, les vues et les objets d'instance, qui sont associés à une base de données utilisateur. Il s'agit d'une unité autonome d'un déploiement de base de données SQL Server qui permet aux développeurs de la couche Données et aux administrateurs de bases de données d'empaqueter des objets SQL Server dans un artefact portable appelé « package DAC », ou fichier .dacpac.  
+-   Une application de la couche Données (DAC) est une entité de gestion de base de données logique qui définit tous les objets SQL Server, tels que les tables, les vues et les objets d’instance, qui sont associés à une base de données utilisateur. Il s'agit d'une unité autonome d'un déploiement de base de données SQL Server qui permet aux développeurs de la couche Données et aux administrateurs de bases de données d'empaqueter des objets SQL Server dans un artefact portable appelé « package DAC », ou fichier .dacpac.  
   
--   Pour qu'une base de données SQL Server soit traitée comme une DAC, elle doit être inscrite, soit explicitement par une opération utilisateur, soit implicitement par l'une des opérations DAC. Lorsqu'une base de données est inscrite, la version de la DAC et d'autres propriétés sont enregistrées dans le cadre des métadonnées de la base de données. Inversement, l'inscription d'une base de données peut également être annulée et les propriétés de la DAC supprimées.  
+-   Pour qu’une base de données SQL Server soit traitée comme une DAC, elle doit être inscrite, soit explicitement par une opération utilisateur, soit implicitement par l’une des opérations DAC. Lorsqu'une base de données est inscrite, la version de la DAC et d'autres propriétés sont enregistrées dans le cadre des métadonnées de la base de données. Inversement, l'inscription d'une base de données peut également être annulée et les propriétés de la DAC supprimées.  
   
 -   En général, les outils DAC sont capables de lire des fichiers DACPAC générés par les outils DAC de versions précédentes de SQL Server, et peuvent également déployer des fichiers DACPAC dans des versions précédentes de SQL Server. Toutefois, les outils DAC de versions antérieures ne peuvent pas lire les fichiers DACPAC générés par les outils DAC de versions ultérieures. Plus précisément :  
   
@@ -86,15 +86,15 @@ ms.locfileid: "47680307"
 ## <a name="dac-operations"></a>Opérations DAC  
  Une DAC prend en charge les opérations suivantes :  
   
--   **EXTRACT** : l'utilisateur peut extraire une base de données dans un DACPAC.  
+-   **EXTRACT** : l’utilisateur peut extraire une base de données dans un DACPAC.  
   
--   **DEPLOY** : l'utilisateur peut déployer un DACPAC sur un serveur hôte. Une fois le déploiement terminé à partir d'un outil de gestion comme SQL Server Management Studio ou du portail de gestion de SQL Azure, la base de données obtenue sur le serveur hôte est implicitement inscrite en tant qu'application de la couche Données.  
+-   **DEPLOY** : l’utilisateur peut déployer un DACPAC sur un serveur hôte. Une fois le déploiement terminé à partir d'un outil de gestion comme SQL Server Management Studio ou du portail de gestion de SQL Azure, la base de données obtenue sur le serveur hôte est implicitement inscrite en tant qu'application de la couche Données.  
   
--   **REGISTER** : l’utilisateur peut inscrire une base de données en tant qu’application de la couche Données.  
+-   **REGISTER** : l’utilisateur peut inscrire une base de données en tant qu’application de la couche Données.  
   
--   **UNREGISTER** : il est possible d'annuler l'inscription d'une base de données déjà inscrite comme DAC.  
+-   **UNREGISTER** : il est possible d’annuler l’inscription d’une base de données déjà inscrite comme DAC.  
   
--   **UPGRADE** : une base de données peut être mise à niveau à l'aide d'un DACPAC. La mise à niveau est prise en charge même sur les bases de données qui ne sont pas déjà inscrites en tant qu'applications de la couche Données, mais qui le sont implicitement suite à une mise à niveau.  
+-   **UPGRADE** : une base de données peut être mise à niveau à l’aide d’un DACPAC. La mise à niveau est prise en charge même sur les bases de données qui ne sont pas déjà inscrites en tant qu'applications de la couche Données, mais qui le sont implicitement suite à une mise à niveau.  
   
 ## <a name="bacpac"></a>BACPAC  
  Un BACPAC est un fichier Windows avec une extension .bacpac qui = encapsule le schéma et les données d’une base de données. L’utilisation principale d’un BACPAC consiste à déplacer une base de données d’un serveur vers un autre, ou de [migrer une base de données d’un serveur local vers le cloud](https://azure.microsoft.com/documentation/articles/sql-database-cloud-migrate/), et à archiver une base de données existante dans un format ouvert.  
@@ -105,9 +105,9 @@ ms.locfileid: "47680307"
   
  Un BACPAC, en revanche, consiste principalement à capturer le schéma et les données prenant en charge deux opérations majeures :  
   
--   **EXPORT**: l'utilisateur peut exporter le schéma et les données d'une base de données vers un BACPAC.  
+-   **EXPORT** : l’utilisateur peut exporter le schéma et les données d’une base de données vers un BACPAC.  
   
--   **IMPORT** : l'utilisateur peut importer le schéma et les données dans une nouvelle base de données du serveur hôte.  
+-   **IMPORT** : l’utilisateur peut importer le schéma et les données dans une nouvelle base de données du serveur hôte.  
   
  Ces deux fonctionnalités sont prises en charge par les outils de gestion de bases de données : SQL Server Management Studio, le portail Azure et l’API DACFx.  
   

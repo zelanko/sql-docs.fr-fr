@@ -11,12 +11,12 @@ ms.assetid: 005218ab-8dd5-48e9-a185-6bc60cd43a7a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: be26ab7526d4ff270efc1ed11e592ad8552b0b22
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e9ce064f0d1e629ea8492dfbee3292d9a580d676
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47634767"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505758"
 ---
 # <a name="lesson-5-2---enabling-and-configuring-package-configurations"></a>Leçon 5-2 : Activation et configuration des configurations de package
 Au cours de cette tâche, vous allez convertir le projet en modèle de déploiement de package et activer les configurations du package à l'aide de l'Assistant Configuration de package. Vous allez utiliser cet Assistant pour générer un fichier de configuration XML qui contient les paramètres de configuration de la propriété **Directory** du conteneur de boucles Foreach. La valeur de la propriété Directory est fournie par la nouvelle variable de niveau package que vous pouvez mettre à jour au moment de l'exécution. De plus, vous allez remplir un nouveau dossier de données exemple à utiliser au cours du test.  
@@ -40,11 +40,11 @@ Au cours de cette tâche, vous allez convertir le projet en modèle de déploiem
   
 7.  Réaffichez l’onglet **Flux de contrôle** et double-cliquez sur le conteneur **Foreach File in Folder** .  
   
-8.  Dans la page **Collection** de **l’Éditeur de boucle Foreach**, cliquez sur **Expressions**, puis sur le bouton **(…)**.  
+8.  Dans la page **Collection** de l’**Éditeur de boucle Foreach**, cliquez sur **Expressions**, puis sur le bouton **(...)**.  
   
 9. Dans **l’Éditeur d’expressions de la propriété**, cliquez dans la liste **Propriété** , puis sélectionnez **Directory**.  
   
-10. Dans la zone **Expression** , cliquez sur le bouton **(…)**.  
+10. Dans la zone **Expression**, cliquez sur le bouton **(...)**.  
   
 11. Dans le **Générateur d’expressions**, développez le dossier Variables et faites glisser la variable **User::varFolderName** vers la zone **Expression** .  
   
@@ -88,7 +88,7 @@ Au cours de cette tâche, vous allez convertir le projet en modèle de déploiem
   
 16. Cliquez sur **Fermer**.  
   
-17. L’Assistant crée un fichier de configuration appelé SSISTutorial.dtsConfig, qui contient les paramètres de configuration pour la**valeur** de la variable, qui définit à son tour la propriété **Directory** de l’énumérateur.  
+17. L’Assistant crée un fichier de configuration appelé SSISTutorial.dtsConfig, qui contient les paramètres de configuration pour la valeur (**Value**) de la variable, qui définit à son tour la propriété **Directory** de l’énumérateur.  
   
     > [!NOTE]  
     > Un fichier de configuration contient généralement des informations complexes sur les propriétés de package, mais dans le cadre de ce didacticiel, la seule information qui nous concerne est :  

@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bddc53e898acd23ab0f29902703ea53c74987730
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b21a93ad09aecc13842f37b488a8230347cab283
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854817"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514773"
 ---
 # <a name="modify-views"></a>Modifier des vues
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -69,11 +69,11 @@ ms.locfileid: "47854817"
   
     1.  Activez ou désactivez les cases à cocher des éléments à ajouter ou supprimer.  
   
-    2.  Cliquez avec le bouton droit dans le volet Schéma, sélectionnez **Ajouter une table…**, puis les colonnes supplémentaires à ajouter à la vue dans la boîte de dialogue **Ajouter une table** .  
+    2.  Cliquez avec le bouton droit dans le volet Diagramme, sélectionnez **Ajouter une table...**, puis les colonnes supplémentaires à ajouter à la vue dans la boîte de dialogue **Ajouter une table**.  
   
     3.  Cliquez avec le bouton droit sur la barre de titre de la table que vous souhaitez supprimer et sélectionnez **Supprimer**.  
   
-4.  Dans le menu **Fichier** , cliquez sur **Enregistrer**_nom_vue_.  
+4.  Dans le menu **Fichier** , cliquez sur **Enregistrer**_nom de la vue_.  
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   

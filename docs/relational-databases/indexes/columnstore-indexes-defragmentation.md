@@ -12,12 +12,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 67fe252e91145a427e7bd42064733ae78835d8cc
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c33b07af2ad43f15913580ce55c173d04a876366
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51667588"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511543"
 ---
 # <a name="columnstore-indexes---defragmentation"></a>Index columnstore - Défragmentation
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -182,7 +182,7 @@ Utilisez l’exemple dans [sys.dm_db_column_store_row_group_physical_stats &#40;
 ## <a name="rebuild"></a> Utilisation d’ALTER INDEX REBUILD pour défragmenter l’index columnstore hors connexion  
  Pour [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et les versions ultérieures, la reconstruction de l’index columnstore n’est généralement pas nécessaire, car `REORGANIZE` effectue l’essentiel de la reconstruction en arrière-plan sous la forme d’une opération en ligne.  
   
- La reconstruction d’un index columnstore supprime la fragmentation et déplace toutes les lignes dans le columnstore. Utilisez [CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md) or [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md) pour effectuer une reconstruction complète d’un index columnstore cluster existant. En outre, vous pouvez utiliser ALTER INDEX... REBUILD pour reconstruire une partition spécifique.  
+ La reconstruction d’un index columnstore supprime la fragmentation et déplace toutes les lignes dans le columnstore. Utilisez [CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md) or [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md) pour effectuer une reconstruction complète d’un index columnstore cluster existant. En outre, vous pouvez utiliser ALTER INDEX ... REBUILD pour reconstruire une partition spécifique.  
   
 ### <a name="rebuild-process"></a>Processus de reconstruction  
  Pour reconstruire un index columnstore, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  

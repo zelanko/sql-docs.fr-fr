@@ -1,7 +1,7 @@
 ---
 title: CAST et CONVERT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/13/2018
+ms.date: 11/19/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -36,12 +36,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 81a94dcde2f149ef16b5e1f42428bac706bbfaf5
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 267e1c145a6a67976f1d057c0c98186f192f9247
+ms.sourcegitcommit: eb1f3a2f5bc296f74545f17d20c6075003aa4c42
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697457"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52191069"
 ---
 # <a name="cast-and-convert-transact-sql"></a>CAST et CONVERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -325,7 +325,9 @@ Le tableau ci-dessous répertorie les styles pour lesquels la conversion chaîne
 |113|130|  
   
 <sup>1</sup>  À l’exception des styles 20 et 21
-  
+
+Pour plus d’informations, consultez [Conversion non déterministe de chaînes de date littérale en valeurs DATE](../data-types/nondeterministic-convert-date-literals.md).
+
 ## <a name="supplementary-characters-surrogate-pairs"></a>Caractères supplémentaires (paires de substitution)
 Depuis [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], si vous utilisez les classements de caractères supplémentaires (SC), une opération de conversion CAST du type **nchar** ou **nvarchar** en type **nchar** ou **nvarchar** de plus petite longueur n’est pas tronquée à l’intérieur d’une paire de substitution. Au lieu de cela, elle est tronquée avant le caractère supplémentaire. Par exemple, le fragment de code suivant laisse `@x` avec seulement `'ab'`. Il n'y a pas assez d'espace pour conserver le caractère supplémentaire.
   

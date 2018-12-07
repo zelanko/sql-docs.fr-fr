@@ -15,17 +15,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8042627fcc85cf6b9418f7a0b16eae9255441a57
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2cb94b594be62bf19ad90c00ffaef6145eb90fc9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684057"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531620"
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>Déterminer si un tableau ou une procédure stockée doit être déplacée vers l'OLTP en mémoire
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  Le rapport d’analyse des performances de transaction de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] vous aide à déterminer si l’OLTP en mémoire améliore les performances de votre application de base de données. Il vous indique également le volume de travail nécessaire pour activer l'OLTP en mémoire dans votre application. Après avoir identifié une table sur disque pour la fonctionnalité OLTP en mémoire, utilisez le [Conseiller d’optimisation de la mémoire](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md)pour migrer la table. De même, le [Conseiller de compilation native](../../relational-databases/in-memory-oltp/native-compilation-advisor.md) vous aide à déplacer une procédure stockée vers une procédure stockée compilée en mode natif. Pour plus d’informations sur les méthodologies de migration, consultez [In-Memory OLTP – Common Workload Patterns and Migration Considerations](https://msdn.microsoft.com/library/dn673538.aspx)(OLTP en mémoire – Modèles de charge de travail courants et considérations relatives à la migration).  
+  Le rapport d’analyse des performances de transaction dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] vous aide à évaluer si l’OLTP en mémoire améliore les performances de votre application de base de données. Il vous indique également le volume de travail nécessaire pour activer l'OLTP en mémoire dans votre application. Après avoir identifié une table sur disque pour la fonctionnalité OLTP en mémoire, utilisez le [Conseiller d’optimisation de la mémoire](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md)pour migrer la table. De même, le [Conseiller de compilation native](../../relational-databases/in-memory-oltp/native-compilation-advisor.md) vous aide à déplacer une procédure stockée vers une procédure stockée compilée en mode natif. Pour plus d’informations sur les méthodologies de migration, consultez [OLTP en mémoire - Modèles de charge de travail courants et considérations relatives à la migration](https://msdn.microsoft.com/library/dn673538.aspx).  
   
  Le rapport d’analyse des performances de transaction est exécuté directement sur la base de données de production ou sur une base de données test avec une charge de travail active similaire à la charge de travail de production.  
   
@@ -89,7 +89,7 @@ Les statistiques d'analyse et de contention dans le rapport détaillé de la tab
   
     -   Durée totale d'exécution. Durée d'exécution totale de la procédure stockée pendant le profilage. Plus la différence entre ce chiffre et le temps processeur est élevée, moins le temps processeur est utilisé efficacement par la procédure stockée.  
   
-    -   Total des absences dans le cache. Nombre d'absences dans le cache (lectures depuis un stockage physique) causées par les exécutions de la procédure stockée pendant le profilage.  
+    -   Total des absences dans le cache. Nombre d’absences dans le cache (lectures depuis un stockage physique) causées par les exécutions de la procédure stockée pendant le profilage.  
   
     -   Nombre d'exécutions. Nombre de fois que la procédure stockée est exécutée pendant le profilage.  
   
@@ -137,12 +137,12 @@ Les statistiques d'analyse et de contention dans le rapport détaillé de la tab
 2.  Entrez la commande suivante.  
   
     ```  
-    Save-SqlMigrationReport –FolderPath “<folder_path>”  
+    Save-SqlMigrationReport -FolderPath "<folder_path>"  
     ```  
   
 3.  Vérifiez les éléments suivants.  
   
-    -   Le chemin du dossier est créé s'il n'existe pas déjà.  
+    -   Le chemin du dossier est créé s’il n’existe pas déjà.  
   
     -   Le rapport de liste de contrôle de migration est généré pour toutes les tables et procédures stockées dans la base de données, et se trouve dans l'emplacement spécifié par folder_path.  
   
@@ -158,12 +158,12 @@ Les statistiques d'analyse et de contention dans le rapport détaillé de la tab
     ```  
   
     ```  
-    Save-SqlMigrationReport –Server "<instance_name>" -Database "<db_name>" -FolderPath "<folder_path1>"  
+    Save-SqlMigrationReport -Server "<instance_name>" -Database "<db_name>" -FolderPath "<folder_path1>"  
   
     ```  
   
     ```  
-    Save-SqlMigrationReport –Server "<instance_name>" -Database "<db_name>" -Object <object_name> -FolderPath "<folder_path2>"  
+    Save-SqlMigrationReport -Server "<instance_name>" -Database "<db_name>" -Object <object_name> -FolderPath "<folder_path2>"  
   
     ```  
   

@@ -5,7 +5,7 @@ ms.date: 05/03/2016
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology: performance-monitor
+s.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:Deprecated Features
@@ -16,12 +16,12 @@ ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 179829be2e7aed6e6e71d31c5baadc57bfeb1e38
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 07fe67c8d52f69f018acb68f64782be4af0c6c00
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665408"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523345"
 ---
 # <a name="sql-server-deprecated-features-object"></a>SQL Server, objet Deprecated Features
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -134,9 +134,9 @@ Le tableau suivant décrit l’objet de performance **Deprecated Features** .
 |PERMISSIONS|Des références à la fonction intrinsèque PERMISSIONS ont été rencontrées. Interrogez à la place sys.fn_my_permissions. Se produit une fois par requête.|  
 |ProcNums|La syntaxe déconseillée ProcNums a été rencontrée. Réécrivez les instructions de manière à supprimer ces références. Se produit une fois par compilation.|  
 |READTEXT|La syntaxe READTEXT a été rencontrée. Réécrivez les applications de manière à utiliser le type de données **varchar(max)** et à supprimer la syntaxe du type de données **text** . Se produit une fois par requête.|  
-|RESTORE DATABASE ou LOG WITH DBO_ONLY|La syntaxe RESTORE … WITH DBO_ONLY a été rencontrée. Utilisez plutôt RESTORE … RESTRICTED_USER.|  
-|RESTORE DATABASE ou LOG WITH MEDIAPASSWORD|La syntaxe RESTORE … WITH MEDIAPASSWORD a été rencontrée. WITH MEDIAPASSWORD fournit un faible niveau de sécurité et doit être supprimé.|  
-|RESTORE DATABASE ou LOG WITH PASSWORD|La syntaxe RESTORE … WITH PASSWORD a été rencontrée. WITH PASSWORD fournit un faible niveau de sécurité et doit être supprimé.|  
+|RESTORE DATABASE ou LOG WITH DBO_ONLY|La syntaxe RESTORE ... WITH DBO_ONLY a été rencontrée. Utilisez plutôt RESTORE … RESTRICTED_USER.|  
+|RESTORE DATABASE ou LOG WITH MEDIAPASSWORD|La syntaxe RESTORE ... WITH MEDIAPASSWORD a été rencontrée. WITH MEDIAPASSWORD fournit un faible niveau de sécurité et doit être supprimé.|  
+|RESTORE DATABASE ou LOG WITH PASSWORD|La syntaxe RESTORE ... WITH PASSWORD a été rencontrée. WITH PASSWORD fournit un faible niveau de sécurité et doit être supprimé.|  
 |Le déclencheur retourne des résultats|Cet événement se produit une fois par appel de déclencheur. Réécrivez le déclencheur de manière à ce qu'il ne retourne pas de jeux de résultats.|  
 |ROWGUIDCOL|La syntaxe ROWGUIDCOL a été rencontrée. Réécrivez les instructions de manière à utiliser la syntaxe $rowguid. Se produit une fois par compilation.|  
 |SET ANSI_NULLS OFF|La syntaxe SET ANSI_NULLS OFF a été rencontrée. Supprimez cette syntaxe déconseillée. Se produit une fois par compilation.|  
@@ -173,13 +173,13 @@ Le tableau suivant décrit l’objet de performance **Deprecated Features** .
 |sp_configure 'ft notify bandwidth (min)'|L'option ft notify bandwidth (min) de sp_configure a été rencontrée. Ne pas utiliser. Se produit une fois par requête.|  
 |sp_configure 'locks'|L'option locks de sp_configure a été rencontrée. Les verrous ne peuvent plus être configurés. Ne pas utiliser. Se produit une fois par requête.|  
 |sp_configure 'open objects'|L'option open objects de sp_configure a été rencontrée. Le nombre d'objets ouverts ne peut plus être configuré. Ne pas utiliser. Se produit une fois par requête.|  
-|sp_configure "priority boost"|L'option renforcement de priorité de sp_configure a été rencontrée. Ne pas utiliser. Se produit une fois par requête. À la place, utilisez l’option start /high … program.exe de Windows.|  
+|sp_configure "priority boost"|L'option renforcement de priorité de sp_configure a été rencontrée. Ne pas utiliser. Se produit une fois par requête. Utilisez plutôt l’option start /high … program.exe de Windows.|  
 |sp_configure 'remote proc trans'|L'option remote proc trans de sp_configure a été rencontrée. Ne pas utiliser. Se produit une fois par requête.|  
 |sp_configure 'set working set size'|L'option set working set size de sp_configure a été rencontrée. La taille de la plage de travail ne peut plus être configurée. Ne pas utiliser. Se produit une fois par requête.|  
 |sp_control_dbmasterkey_password|La procédure stockée sp_control_dbmasterkey_password ne vérifie pas s'il existe une clé principale. Cette opération est autorisée à des fins de compatibilité descendante, mais affiche un avertissement. Ce comportement est déconseillé. Dans une version ultérieure, la clé principale doit exister et le mot de passe utilisé dans la procédure stockée sp_control_dbmasterkey_password doit être identique à un des mots de passe utilisés pour chiffrer la clé principale de la base de données.|  
 |sp_create_removable|La procédure sp_create_removable a été rencontrée. Utilisez à la place CREATE DATABASE. Se produit une fois par requête.|  
 |sp_db_vardecimal_storage_format|Le format de stockage **vardecimal** a été rencontré. Utilisez à la place la compression de données.|  
-|sp_dbcmptlevel|La procédure sp_dbcmptlevel a été rencontrée. Utilisez plutôt ALTER DATABASE … SET COMPATIBILITY_LEVEL. Se produit une fois par requête.|  
+|sp_dbcmptlevel|La procédure sp_dbcmptlevel a été rencontrée. Utilisez ALTER DATABASE ... SET COMPATIBILITY_LEVEL. Se produit une fois par requête.|  
 |sp_dbfixedrolepermission|La procédure sp_dbfixedrolepermission a été rencontrée. Ne pas utiliser. Se produit une fois par requête.|  
 |sp_dboption|La procédure sp_dboption a été rencontrée. Utilisez à la place ALTER DATABASE et DATABASEPROPERTYEX. Se produit une fois par compilation.|  
 |sp_dbremove|La procédure sp_dbremove a été rencontrée. Utilisez à la place DROP DATABASE. Se produit une fois par requête.|  

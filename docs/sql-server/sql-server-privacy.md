@@ -10,12 +10,12 @@ helpviewer_keywords: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 63425a2a280154522c0219a89033e67c4e8bdeda
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 179573dbe83167067ea2b6b4ec6ffd856dcb42e2
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703258"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409726"
 ---
 # <a name="sql-server-privacy-supplement"></a>Avenant à la déclaration de confidentialité de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ Cet article récapitule le comportement des différents objets de données utili
 - Assistant de migration SQL Server
 - Extension MS-SQL
 
-Définition des *scénarios d’usages autorisés*. Dans le contexte de cet article, Microsoft définit « Scénarios d’usages autorisés » comme les actions ou activités lancées par Microsoft.
+Définition des *scénarios d’usages autorisés*. Dans le contexte de cet article, Microsoft définit les « Scénarios d’usages autorisés » comme des actions ou activités démarrées par Microsoft.
 
 ## <a name="access-control"></a>Contrôle d’accès
 
@@ -137,7 +137,7 @@ Microsoft examine les valeurs des noms d’application définies par d’autres 
 |Scénario  |Restrictions d'accès  |Conditions de rétention|
 |---------|---------|---------|
 |Peut être utilisé par Microsoft pour améliorer les fonctionnalités ou corriger les bogues dans les fonctionnalités actuelles.|Limité à un usage interne Microsoft sans accès à des tiers. |90 jours minimum, 3 ans maximum |
-|Peut être utilisé pour faire des suggestions au client.  Par exemple, « D’après votre utilisation du produit, utilisez la fonctionnalité *X* pour obtenir de meilleures performances ». |Microsoft peut exposer les données au client d’origine, par exemple, à travers des tableaux de bord. |Journaux de sécurité de données client : 3 ans minimum, 6 ans maximum |
+|Peut être utilisé pour faire des suggestions au client.  Par exemple, « D’après votre utilisation du produit, utilisez la fonctionnalité *X* pour obtenir de meilleures performances ». |Microsoft peut exposer les données au client d’origine, par exemple, à travers des tableaux de bord. |Journaux de sécurité de données client : 3 ans minimum, 6 ans maximum |
 Peut être utilisé par Microsoft pour la planification du produit futur. |Microsoft peut partager ces informations avec d’autres fournisseurs de matériel et de logiciel afin d’améliorer le fonctionnement de leurs produits exécutés avec les logiciels Microsoft. |90 jours minimum, 3 ans maximum|
 |Peut être utilisé par Microsoft pour fournir des services cloud basés sur les commentaires sur l’utilisation envoyés. Par exemple, le tableau de bord d’un client affichant l’utilisation des fonctionnalités sur toutes les installations de SQL Server dans une organisation. |Microsoft peut exposer les données au client d’origine, par exemple, à travers des tableaux de bord. |90 jours minimum, 3 ans maximum |
 |Les clients avec leur consentement peuvent envoyer via les Commentaires des utilisateurs du contenu client à Microsoft. |Limité à un usage interne Microsoft sans accès à des tiers. Microsoft peut exposer les données au client d’origine. |Commentaires de l’utilisateur : 1 an maximum |

@@ -11,12 +11,12 @@ ms.assetid: afa01165-39e0-4efe-ac0e-664edb8599fd
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 08d95d5ba1f6a0c1a46218dde190e09af2452eae
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 5c041ee4a56b2df2190eabb0da0ef472f0b8ee49
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677858"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52397052"
 ---
 # <a name="sql-server-managed-backup-to-microsoft-azure"></a>Sauvegarde managée SQL Server sur Microsoft Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -75,7 +75,7 @@ ms.locfileid: "51677858"
  Vous pouvez spécifier une planification de sauvegarde personnalisée à l’aide de la procédure stockée système [managed_backup.sp_backup_config_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md). Si vous ne spécifiez pas de planification personnalisée, le type des sauvegardes planifiées et leur fréquence sont déterminés en fonction de la charge de travail de la base de données. Les paramètres de période de rétention sont utilisés pour déterminer la période pendant laquelle un fichier de sauvegarde doit être retenu dans le stockage et la capacité à restaurer une base de données à un point précis dans le temps au cours de la période de rétention.  
   
 ### <a name="backup-file-naming-conventions"></a>Conventions d’affectation de noms aux fichiers de sauvegarde  
- [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] utilise le conteneur que vous spécifiez, donc vous pouvez contrôler le nom du conteneur. Les fichiers de sauvegarde des bases de données autres que des bases de données de disponibilité sont nommés en utilisant les 40 premiers caractères du nom de la base de données, le GUID de la base de données sans le symbole ‘-‘ et l’horodateur. Le caractère de soulignement est inséré entre les segments comme délimiteurs. L'extension **.bak** est utilisée pour le fichier en cas de sauvegarde complète et l'extension **.log** est utilisée pour les sauvegardes de journal. Pour les bases de données d'un groupe de disponibilité, en plus de la convention d'attribution de noms décrite ci-dessus, le GUID de la base de données du groupe de disponibilité est ajouté après les 40 caractères du nom de la base de données. La valeur du GUID de la base de données du groupe de disponibilité est la valeur de group_database_id dans sys.databases.  
+ [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] utilise le conteneur que vous spécifiez, donc vous pouvez contrôler le nom du conteneur. Les fichiers de sauvegarde des bases de données autres que des bases de données de disponibilité sont nommés en utilisant les 40 premiers caractères du nom de la base de données, le GUID de la base de données sans le symbole « - » et l’horodateur. Le caractère de soulignement est inséré entre les segments comme délimiteurs. L'extension **.bak** est utilisée pour le fichier en cas de sauvegarde complète et l'extension **.log** est utilisée pour les sauvegardes de journal. Pour les bases de données d'un groupe de disponibilité, en plus de la convention d'attribution de noms décrite ci-dessus, le GUID de la base de données du groupe de disponibilité est ajouté après les 40 caractères du nom de la base de données. La valeur du GUID de la base de données du groupe de disponibilité est la valeur de group_database_id dans sys.databases.  
   
 ### <a name="full-database-backup"></a>Sauvegarde de base de données complète  
  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] planifie une sauvegarde de base de données complète si l'une des conditions suivantes est vraie.  

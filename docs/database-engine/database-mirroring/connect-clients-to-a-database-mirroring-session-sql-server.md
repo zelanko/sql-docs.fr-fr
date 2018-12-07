@@ -16,12 +16,12 @@ ms.assetid: 0d5d2742-2614-43de-9ab9-864addb6299b
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ac89758902c3df3f69eb7e82b4c2ba1fc320ef14
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f35ed02444cc1fc4773eec528af73df76cde5bb5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47647975"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534682"
 ---
 # <a name="connect-clients-to-a-database-mirroring-session-sql-server"></a>Connecter des clients à une session de mise en miroir de bases de données (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -195,7 +195,7 @@ Server=123.34.45.56,4724;
   
   
 ### <a name="retry-delays-during-failover"></a>Délais entre deux tentatives lors d'un basculement  
- Si un client tente de se connecter à un partenaire qui fait l'objet d'un basculement, le partenaire répond immédiatement qu'il est inactif. Dans ce cas, chaque nouvelle tentative de connexion est beaucoup plus brève que le délai imparti entre deux tentatives. Ceci signifie que de nombreux essais de connexion peuvent survenir avant l'expiration du délai de connexion. Pour éviter que les partenaires ne soient surchargés par une série rapide de tentatives de connexion lors d'un basculement, le fournisseur d'accès aux données ajoute un délai court entre deux tentatives après chaque cycle. La durée d'un délai entre deux tentatives est déterminée par l'algorithme de délai entre deux tentatives. Après le premier essai, le délai est de 100 millisecondes. Après chacun des trois essais suivants, le délai entre deux tentatives est multiplié par deux : 200, 400 et 800. Pour tous les essais ultérieurs, le délai entre deux tentatives est de 1 seconde tant que la tentative de connexion n'a pas réussi ou que le délai n'a pas expiré.  
+ Si un client tente de se connecter à un partenaire qui fait l'objet d'un basculement, le partenaire répond immédiatement qu'il est inactif. Dans ce cas, chaque nouvelle tentative de connexion est beaucoup plus brève que le délai imparti entre deux tentatives. Ceci signifie que de nombreux essais de connexion peuvent survenir avant l'expiration du délai de connexion. Pour éviter que les partenaires ne soient surchargés par une série rapide de tentatives de connexion lors d'un basculement, le fournisseur d'accès aux données ajoute un délai court entre deux tentatives après chaque cycle. La durée d'un délai entre deux tentatives est déterminée par l'algorithme de délai entre deux tentatives. Après le premier essai, le délai est de 100 millisecondes. Après chacun des trois essais suivants, le délai entre deux tentatives est multiplié par deux : 200, 400 et 800. Pour tous les essais ultérieurs, le délai entre deux tentatives est de 1 seconde tant que la tentative de connexion n'a pas réussi ou que le délai n'a pas expiré.  
   
 > [!NOTE]  
 >  Si l'instance de serveur n'est pas arrêtée, la demande de connexion échoue immédiatement.  

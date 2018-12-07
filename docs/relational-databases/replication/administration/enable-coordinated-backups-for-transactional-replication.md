@@ -19,12 +19,12 @@ ms.assetid: 73a914ba-8b2d-4f4d-ac1b-db9bac676a30
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8a42406af2eb1a3133ffb3e6e65699f75f08bf46
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3e5eeeaa390b4a8607df47ddfd058bc9e1752395
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47660417"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524814"
 ---
 # <a name="enable-coordinated-backups-for-transactional-replication"></a>Activer les sauvegardes coordonnées pour la réplication transactionnelle
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47660417"
 2.  Si la fonction de l’étape 1 retourne **0**, exécutez [sp_replicationdboption &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md) sur le serveur de publication de la base de données de publication. Spécifiez la valeur **sync with backup** pour **@optname**et **true** pour **@value**.  
   
     > [!NOTE]  
-    >  Si vous modifiez l'option **sync with backup** en **false**, le point de troncation de la base de données de publication sera mis à jour après que l'Agent de lecture du journal se soit exécuté ou après un intervalle si l'Agent de lecture du journal s'exécute continuellement. L'intervalle maximal est contrôlé par le paramètre d'agent **-MessageInterval** (lequel a une valeur par défaut de 30 secondes).  
+    >  Si vous modifiez l'option **sync with backup** en **false**, le point de troncation de la base de données de publication sera mis à jour après que l'Agent de lecture du journal se soit exécuté ou après un intervalle si l'Agent de lecture du journal s'exécute continuellement. L’intervalle maximal est contrôlé par le paramètre d’agent **-MessageInterval** (lequel a une valeur par défaut de 30 secondes).  
   
 ### <a name="to-enable-coordinated-backups-for-a-distribution-database"></a>Pour activer des sauvegardes coordonnées pour une base de données de distribution  
   

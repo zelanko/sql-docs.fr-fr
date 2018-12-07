@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 95cf78e827e2f1d7fcb3fa99c096f3184b1cb0d9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 855a61fe37f6b5d347e050687e73c894c227d1b6
+ms.sourcegitcommit: 98324d9803edfa52508b6d5d3554614d0350a0b9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834817"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52321735"
 ---
 # <a name="convert-an-existing-sql-trace-script-to-an-extended-events-session"></a>Convertir un script Trace SQL existant en session d'événements étendus
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "47834817"
   
 2.  Obtenez l'ID de la trace. Pour cela, utilisez la requête suivante :  
   
-    ```  
+    ```sql
     SELECT * FROM sys.traces;  
     GO  
     ```  
@@ -58,7 +58,7 @@ ms.locfileid: "47834817"
     > [!NOTE]  
     >  Dans cet exemple, l'ID de trace pour la trace par défaut (1) est utilisé.  
   
-    ```  
+    ```sql
     USE MASTER;  
     GO  
     DECLARE @trace_id int;  
@@ -85,7 +85,7 @@ ms.locfileid: "47834817"
   
     3.  Utilisez la requête suivante pour identifier les champs de données corrects à utiliser pour les événements que vous avez identifiés à l'étape précédente. La requête affiche les champs de données d'événements étendus dans la colonne « event_field ». Dans la requête, remplacez *<event_name>* par le nom d’un événement que vous avez spécifié à l’étape précédente.  
   
-        ```  
+        ```sql
         SELECT xp.name package_name, xe.name event_name  
            ,xc.name event_field, xc.description  
         FROM sys.trace_xe_event_map AS em  
@@ -104,9 +104,9 @@ ms.locfileid: "47834817"
 ## <a name="to-create-the-extended-events-session"></a>Pour créer la session d'événements étendus  
  Utilisez l'Éditeur de requête pour créer la session d'événements étendus, et écrire la sortie dans une cible de fichier. Les étapes suivantes décrivent une requête unique, avec les explications indiquant comment générer la requête. Pour obtenir un exemple de requête complet, consultez la section Exemple de cette rubrique.  
   
-1.  Ajoutez les instructions pour créer la session d’événements, en remplaçant*session_name* par le nom à utiliser pour la session d’événements étendus.  
+1.  Ajoutez les instructions pour créer la session d’événements, en remplaçant *session_name* par le nom à utiliser pour la session d’événements étendus.  
   
-    ```  
+    ```sql
     IF EXISTS(SELECT * FROM sys.server_event_sessions WHERE name='session_name')  
        DROP EVENT SESSION [Session_Name] ON SERVER;  
     CREATE EVENT SESSION [Session_Name]  
@@ -133,7 +133,7 @@ ms.locfileid: "47834817"
   
      Pour convertir ceci en équivalents d’événements étendus, les événements sqlserver.sp_statement_starting et sqlserver.sp_statement_completed sont ajoutés, avec une liste d’actions. Les instructions de prédicat sont incluses comme clauses WHERE.  
   
-    ```  
+    ```sql
     ADD EVENT sqlserver.sp_statement_starting  
        (ACTION  
           (  
@@ -159,9 +159,9 @@ ms.locfileid: "47834817"
        )  
     ```  
   
-3.  Ajoutez la cible de fichier asynchrone, en remplaçant les chemins d'accès de fichier par l'emplacement où vous souhaitez enregistrer la sortie. Lorsque vous spécifiez la cible de fichier, vous devez inclure un fichier journal et un fichier du chemin d'accès du fichier de métadonnées.  
+3.  Ajoutez la cible de fichier asynchrone, en remplaçant les chemins d’accès de fichier par l’emplacement où vous souhaitez enregistrer la sortie. Lorsque vous spécifiez la cible de fichier, vous devez inclure un fichier journal et un fichier du chemin d'accès du fichier de métadonnées.  
   
-    ```  
+    ```sql
     ADD TARGET package0.asynchronous_file_target(  
        SET filename='c:\temp\ExtendedEventsStoredProcs.xel', metadatafile='c:\temp\ExtendedEventsStoredProcs.xem');  
     ```  
@@ -170,7 +170,7 @@ ms.locfileid: "47834817"
   
 1.  Vous pouvez utiliser la fonction sys.fn_xe_file_target_read_file pour afficher la sortie. Pour cela, exécutez la requête suivante, en remplaçant les chemins d'accès aux fichiers par les chemins d'accès que vous avez spécifiés :  
   
-    ```  
+    ```sql
     SELECT *, CAST(event_data as XML) AS 'event_data_XML'  
     FROM sys.fn_xe_file_target_read_file('c:\temp\ExtendedEventsStoredProcs*.xel', 'c:\temp\ExtendedEventsStoredProcs*.xem', NULL, NULL);  
   
@@ -181,7 +181,7 @@ ms.locfileid: "47834817"
   
      Pour plus d’informations sur la fonction sys.fn_xe_file_target_read_file, consultez [sys.fn_xe_file_target_read_file &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql.md).  
   
-    ```  
+    ```sql
     IF EXISTS(SELECT * FROM sys.server_event_sessions WHERE name='session_name')  
        DROP EVENT SESSION [session_name] ON SERVER;  
     CREATE EVENT SESSION [session_name]  
@@ -217,7 +217,7 @@ ms.locfileid: "47834817"
   
 ## <a name="example"></a> Exemple  
   
-```  
+```sql
 IF EXISTS(SELECT * FROM sys.server_event_sessions WHERE name='session_name')  
    DROP EVENT SESSION [session_name] ON SERVER;  
 CREATE EVENT SESSION [session_name]  

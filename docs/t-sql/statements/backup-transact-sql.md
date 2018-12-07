@@ -47,12 +47,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 5c0d52b75baa9850df8d6da546a3abbf31498df8
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: ecd7626e28faae1626809e6f45141c93dd4021e3
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699337"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52404514"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -1266,7 +1266,7 @@ L’appliance cible pour la restauration de la sauvegarde doit comprendre au moi
   
 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] effectue le suivi des sauvegardes de base de données ayant réussi et ayant échoué.  
   
-Une sauvegarde différentielle est uniquement autorisée si la dernière sauvegarde complète a réussi. Par exemple, supposons que lundi vous ayez créé une sauvegarde complète de la base de données Ventes et que la sauvegarde ait réussi. Supposons ensuite que mardi, vous ayez créé une sauvegarde complète de la base de données Ventes et que celle-ci ait échoué. Après cet échec, vous ne pourrez pas créer une sauvegarde différentielle basée sur la sauvegarde complète de lundi. Pour créer une sauvegarde différentielle, une sauvegarde complète réussie est nécessaire.  
+Une sauvegarde différentielle est uniquement autorisée si la dernière sauvegarde complète a réussi. Par exemple, supposons que lundi vous ayez créé une sauvegarde complète de la base de données Ventes et que la sauvegarde ait réussi. Supposons ensuite que mardi, vous ayez créé une sauvegarde complète de la base de données Ventes et que celle-ci ait échoué. Après cet échec, vous ne pouvez pas créer une sauvegarde différentielle basée sur la sauvegarde complète de lundi. Pour créer une sauvegarde différentielle, une sauvegarde complète réussie est nécessaire.  
   
 ## <a name="metadata"></a>Métadonnées  
 Ces vues de gestion dynamique contiennent des informations sur toutes les opérations de sauvegarde, de restauration et de chargement. Ces informations sont conservées après le redémarrage du système.  

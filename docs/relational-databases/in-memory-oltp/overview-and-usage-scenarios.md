@@ -12,12 +12,12 @@ author: jodebrui
 ms.author: jodebrui
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c7c22748f79ecf91239255374716e29c729eca34
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 1ca7cb161bb4b3bebf2d7c65018b5221fd5bf1cf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51660368"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533406"
 ---
 # <a name="overview-and-usage-scenarios"></a>Vue d’ensemble et scénarios d’utilisation
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ Voici une liste de scénarios et de modèles d’application pour lesquels des c
 
 C’est le scénario principal pour lequel nous avons créé l’OLTP en mémoire : prendre en charge de grands volumes de transactions, avec une latence faible homogène pour les transactions individuelles.
 
-Les scénarios de charge de travail les plus fréquents sont les suivants : négoce d’instruments financiers, paris sportifs, jeux mobiles et diffusion publicitaire. Un autre modèle courant observé est un « catalogue » souvent lu ou mis à jour. Par exemple, vous avez des fichiers volumineux, qui sont répartis sur plusieurs nœuds de cluster, et vous cataloguez l’emplacement de chaque partition de fichier dans une table à mémoire optimisée.
+Les scénarios de charge de travail les plus fréquents sont les suivants : négoce d’instruments financiers, paris sportifs, jeux mobiles et diffusion publicitaire. Un autre modèle courant observé est un « catalogue » souvent lu et/ou mis à jour. Par exemple, vous avez des fichiers volumineux, qui sont répartis sur plusieurs nœuds de cluster, et vous cataloguez l’emplacement de chaque partition de fichier dans une table à mémoire optimisée.
 
 #### <a name="implementation-considerations"></a>Considérations relatives à l’implémentation
 
@@ -67,7 +67,7 @@ Pour commencer avec une application existante :
 #### <a name="customer-case-studies"></a>Études de cas clients
 
 - CMC Markets utilise l’OLTP en mémoire dans [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] pour obtenir une latence faible homogène : [Because a second is too long to wait, this financial services firm is updating its trading software now.](https://customers.microsoft.com/story/because-a-second-is-too-long-to-wait-this-financial-services-firm-is-updating-its-trading-software)
-- Derivco utilise l’OLTP en mémoire dans [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] pour prendre en charge les hausses de débit et gérer les pics de charge de travail : [When an online gaming company doesn’t want to risk its future, it bets on [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].](https://customers.microsoft.com/story/when-an-online-gaming-company-doesnt-want-to-risk-its-future-it-bets-on-sql-server-2016)
+- Derivco utilise l’OLTP en mémoire dans [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] pour prendre en charge les hausses de débit et gérer les pics de charge de travail : [When an online gaming company doesn’t want to risk its future, it bets on [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].](https://customers.microsoft.com/story/when-an-online-gaming-company-doesnt-want-to-risk-its-future-it-bets-on-sql-server-2016)
 
 
 ### <a name="data-ingestion-including-iot-internet-of-things"></a>Intégration de données, IoT (Internet des objets) compris
@@ -83,7 +83,7 @@ Les modèles d’application courants sont les suivants :
 Utilisez une table optimisée en mémoire pour l’intégration de données. Si l’intégration consiste principalement en des insertions (plutôt que des mises à jour) et l’encombrement de stockage des données dans l’OLTP en mémoire est un critère important :
 
 - Utilisez un travail pour décharger régulièrement les données par lot dans une table sur disque comportant un [index Columnstore cluster](../indexes/columnstore-indexes-overview.md), à l’aide d’un travail qui exécute `INSERT INTO <disk-based table> SELECT FROM <memory-optimized table>`; ou
-- Utilisez une [table optimisée en mémoire temporelle](../tables/system-versioned-temporal-tables-with-memory-optimized-tables.md) pour gérer les données d’historique ; dans ce mode, les données d’historique se trouvent sur le disque et le déplacement des données est géré par le système.
+- Utilisez une [table à mémoire optimisée temporelle](../tables/system-versioned-temporal-tables-with-memory-optimized-tables.md) pour gérer les données d’historique ; dans ce mode, les données d’historique se trouvent sur le disque et le déplacement des données est géré par le système.
 
 Le référentiel d’exemples [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contient une application de réseau de distribution d’électricité intelligent qui utilise une table temporelle à mémoire optimisée, un type de table à mémoire optimisée et une procédure stockée compilée en mode natif afin d’accélérer l’ingestion des données tout en gérant l’encombrement de stockage des données de capteur dans l’OLTP en mémoire : 
 
@@ -232,4 +232,4 @@ Une démonstration des performances avec l’OLTP en mémoire est disponible ici
 [Improving temp table and table variable performance using memory optimization](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/21/improving-temp-table-and-table-variable-performance-using-memory-optimization/) (Amélioration des performances des tables temporaires et des variables de table à l’aide de l’optimisation de la mémoire)   
 [Optimiser les performances à l’aide des technologies en mémoire dans SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-in-memory)  
 [Tables temporelles avec version gérée par le système avec tables à mémoire optimisée](../tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)  
-[In-Memory OLTP – Common Workload Patterns and Migration Considerations](https://msdn.microsoft.com/library/dn673538.aspx)(OLTP en mémoire – Modèles de charge de travail courants et considérations relatives à la migration). 
+[OLTP en mémoire - Modèles de charge de travail courants et considérations relatives à la migration](https://msdn.microsoft.com/library/dn673538.aspx) 

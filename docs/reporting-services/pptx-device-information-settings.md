@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4dc2045f-8025-41a3-8f9d-5635fb24cf4a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 16a9ad6bc26b304be0ad3308c2e5afe2084a3a8d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: eb658507dd7e28100338e1f300ff24ca0aeadf92
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732297"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52394852"
 ---
 # <a name="pptx-device-information-settings"></a>Paramètres d’informations de périphérique PPTX
   Le tableau ci-après répertorie les paramètres d’informations de périphérique qui permettent de restituer les rapports [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] au format PPTX.  
@@ -37,12 +37,12 @@ ms.locfileid: "47732297"
 |**PageHeight**|Hauteur de page, exprimée en pouces, à définir pour le rapport. Vous devez inclure un entier ou un nombre à virgule, puis l’abréviation « in » (par exemple, **11in**). Cette valeur remplace les paramètres d'origine du rapport.|  
 |**PageWidth**|Largeur de page, exprimée en pouces, à définir pour le rapport. Vous devez inclure un entier ou un nombre à virgule, puis l’abréviation « in » (par exemple, **8.5in**). Cette valeur remplace les paramètres d'origine du rapport.|  
 |**StartPage**|Première page du rapport à restituer. Lorsque ce paramètre a pour valeur **0** , cela signifie que toutes les pages sont restituées. La valeur par défaut est **1**.|  
-|**UseReportPageSize**|Si UseReportPageSize =**false** , la taille de diapositive par défaut correspond à la valeur par défaut PowerPoint de 13,333” x 7,5” (proportions 16:9). Si UseReportPageSize = true, la taille de diapositive par défaut est la taille de page de définition du rapport.<br /><br /> La valeur par défaut est **false**<br /><br /> Notez que les paramètres PageWidth et PageHeight remplacent les valeurs de largeur et de hauteur par défaut.|  
+|**UseReportPageSize**|Si UseReportPageSize =**false**, la taille de diapositive par défaut correspond à la valeur par défaut de PowerPoint, à savoir 13,333” x 7,5” (proportions 16:9). Si UseReportPageSize = true, la taille de diapositive par défaut est la taille de page de définition du rapport.<br /><br /> La valeur par défaut est **false**<br /><br /> Notez que les paramètres PageWidth et PageHeight remplacent les valeurs de largeur et de hauteur par défaut.|  
   
 ## <a name="see-also"></a> Voir aussi  
  <xref:ReportExecution2005.ReportExecutionService.Render%2A>   
  [Transmission de paramètres d'informations de périphérique aux extensions de rendu](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
- [Personnaliser les paramètres d’extension de rendu dans RSReportServer.Config](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
+ [Personnaliser les paramètres d'extension de rendu dans RSReportServer.Config](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
  [Informations techniques de référence &#40;SSRS&#41;](../reporting-services/technical-reference-ssrs.md)  
   
   

@@ -11,12 +11,12 @@ ms.assetid: 486ee339-165b-4aeb-b760-d2ba023d7d0a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1caa27c607c82da066e350113d8c29e412c2ce39
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 289fd23355fabab6ddbbbde34b2bbdfaeb57753f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731357"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505883"
 ---
 # <a name="specify-paths-and-optimization-hints-for-selective-xml-indexes"></a>Spécifier les chemins d'accès et les indicateurs d'optimisation des index XML sélectifs
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ mypath03 = '/a/b/d'
 )  
 ```  
   
- Le mode de mappage défini par l'utilisateur vous permet de spécifier un type et une cardinalité du nœud pour obtenir de meilleures performances. Toutefois, ces performances accrues sont obtenues au détriment de la sécurité, car une conversion peut échouer et en général seul le type spécifié est mis en correspondance avec l'index XML sélectif.  
+ Le mode de mappage défini par l'utilisateur vous permet de spécifier un type et une cardinalité du nœud pour obtenir de meilleures performances. Toutefois, ces performances accrues sont obtenues au détriment de la sécurité, car une conversion peut échouer et en général seul le type spécifié est mis en correspondance avec l’index XML sélectif.  
   
  Les types XQuery pris en charge pour le XML non typé sont les suivants :  
   
@@ -103,8 +103,8 @@ mypath= '/a/b' as XQUERY 'node()',
 pathX = '/a/b/c' as XQUERY 'xs:double' SINGLETON,  
 pathY = '/a/b/d' as XQUERY 'xs:string' MAXLENGTH(200) SINGLETON  
 )  
--- mypath – Only the node value is needed; storage is saved.  
--- pathX – Performance is improved; secondary indexes are possible.  
+-- mypath - Only the node value is needed; storage is saved.  
+-- pathX - Performance is improved; secondary indexes are possible.  
 -- pathY - Performance is improved; secondary indexes are possible; storage is saved.  
 ```  
   
@@ -351,7 +351,7 @@ WHERE T.xmldata.exist('
   
  L'utilisation des indicateurs d'optimisation est facultative. Vous pouvez toujours accepter les mappages par défaut, qui sont fiables mais ne permettent pas des performances et un stockage optimaux.  
   
- Certains indicateurs d'optimisation (par exemple, l'indicateur SINGLETON, introduisent des contraintes sur vos données. Dans certains cas, des erreurs peuvent être générées lorsque ces contraintes ne sont pas satisfaites.  
+ Certains indicateurs d’optimisation (par exemple, l’indicateur SINGLETON) introduisent des contraintes sur vos données. Dans certains cas, des erreurs peuvent être générées lorsque ces contraintes ne sont pas satisfaites.  
   
 ### <a name="benefits-of-optimization-hints"></a>Avantages des indicateurs d'optimisation  
  Le tableau suivant identifie les indicateurs d'optimisation qui prennent en charge un stockage plus efficace ou de meilleures performances.  

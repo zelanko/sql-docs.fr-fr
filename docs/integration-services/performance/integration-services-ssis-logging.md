@@ -30,12 +30,12 @@ ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9be97427a20f7277088422734f0108d999a7302d
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: c3843517e906cd2a1e6eaa7bcfe80d029525a902
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641256"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542892"
 ---
 # <a name="integration-services-ssis-logging"></a>Journalisation d'Integration Services (SSIS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] contient des modules fournisseur d'informations que vous pouvez utiliser pour implémenter la journalisation dans les packages, les conteneurs et les tâches. Avec la journalisation, vous pouvez capturer des informations d'exécution sur un package qui vous aideront à auditer et à résoudre les problèmes d'un package à chaque exécution. Un journal peut ainsi capturer le nom de l'opérateur ayant exécuté le package et l'heure à laquelle le package a débuté et s'est terminé.  
@@ -209,7 +209,7 @@ ms.locfileid: "51641256"
   
 -   La transformation de la colonne dérivée nommée « Calculate LineItemTotalCost » a passé 356 ms à exécuter des calculs sur les lignes entrantes.  
   
--   La transformation d'agrégation nommée "Sum Quantity and LineItemTotalCost" a passé un total de 220 ms (141 ms dans PrimeOutput et 79 ms dans ProcessInput) à effectuer des calculs et à passer les données à la transformation suivante.  
+-   La transformation d’agrégation nommée « Sum Quantity and LineItemTotalCost » a passé un total de 220 ms (141 ms dans PrimeOutput et 79 ms dans ProcessInput) à effectuer des calculs et à passer les données à la transformation suivante.  
 
 ## <a name="ssdt"></a> Activer la journalisation des packages dans les outils de données SQL Server
   Cette procédure décrit comment ajouter des journaux à un package, configurer la journalisation au niveau du package et enregistrer la configuration dans un fichier XML. Vous ne pouvez ajouter des journaux qu'au niveau du package, mais le package n'a pas besoin d'effectuer une journalisation pour activer la journalisation dans les conteneurs inclus dans ce package.  

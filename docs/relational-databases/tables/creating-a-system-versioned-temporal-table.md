@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cb0e8200fb90dd4455c60f650c5fd3e9f5afddd7
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: eae7dfb2a198cf7cb3b1563f8f5b35c5fbb0b4eb
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665518"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409616"
 ---
 # <a name="creating-a-system-versioned-temporal-table"></a>Création d’une table temporelle avec gestion de version du système
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "51665518"
 -   Table temporelle avec table de l’historique définie par l’utilisateur créée au préalable : vous créez une table de l’historique adaptée à vos besoins, puis référencez cette table lors de la création de la table temporelle.  
   
 ## <a name="creating-a-temporal-table-with-an-anonymous-history-table"></a>Création d’une table temporelle avec une table de l’historique anonyme  
- La création d’une table temporelle avec une table de l’historique « anonyme » est une option pratique pour créer rapidement un objet, en particulier dans des environnements de test et de prototypage. Il s’agit également de la méthode la plus simple pour créer une table temporelle, car elle ne nécessite aucun paramètre dans la clause **SYSTEM_VERSIONING** . Dans l’exemple ci-dessous, une nouvelle table est créée, avec contrôle de version du système activé, sans qu’il faille définir le nom de la table de l’historique.  
+ La création d’une table temporelle avec une table de l’historique « anonyme » est une option pratique pour créer rapidement un objet, en particulier dans des environnements de test et de prototypage. Il s’agit aussi de la méthode la plus simple pour créer une table temporelle, car elle ne nécessite aucun paramètre dans la clause **SYSTEM_VERSIONING**. Dans l’exemple ci-dessous, une nouvelle table est créée, avec contrôle de version du système activé, sans qu’il faille définir le nom de la table de l’historique.  
   
 ```  
 CREATE TABLE Department   

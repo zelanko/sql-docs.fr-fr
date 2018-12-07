@@ -17,19 +17,19 @@ ms.assetid: da702289-035a-4d14-bd74-04461fbfee1b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d377673177bd5aa2a5ac77b48e93153bdf420f41
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: c189be4aa134ee15314571008ed29a3f53c467d2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640856"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518785"
 ---
 # <a name="transfer-error-messages-task"></a>Tâche de transfert de messages d'erreur
   La tâche de transfert de messages d’erreur transfère un ou plusieurs messages d’erreur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] définis par l’utilisateur entre des instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les messages définis par l'utilisateur sont des messages avec un identificateur supérieur ou égal à 50 000. Les messages dont l'identificateur est inférieur à 50 000 sont des messages d'erreur système qui ne peuvent pas être transférés à l'aide de la tâche de transfert de messages d'erreur.  
   
  La tâche de transfert de messages d'erreur peut être configurée pour transférer tous les messages d'erreur ou uniquement les messages d'erreur spécifiés. Les messages d'erreur définis par l'utilisateur peuvent être disponibles en différentes langues et la tâche peut être configurée pour ne transférer que les messages dans des langues sélectionnées. Une version us_english du message qui utilise la page de codes 1033 doit exister sur le serveur de destination avant que vous ne puissiez transférer d'autres versions linguistiques du message vers ce serveur.  
   
- La table sysmessages dans la base de données master contient tous les messages d'erreur (système et définis par l'utilisateur) utilisés par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ La table sysmessages dans la base de données master contient tous les messages d’erreur (système et définis par l’utilisateur) utilisés par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Les messages définis par l'utilisateur à transférer peuvent déjà exister à l'emplacement de destination. Un message d'erreur est défini comme message d'erreur dupliqué si l'identificateur et la langue sont identiques. La tâche de transfert de messages d'erreur peut être configurée pour traiter les messages d'erreur existants de différentes manières :  
   
@@ -116,13 +116,13 @@ ms.locfileid: "51640856"
 |**False**|Copie uniquement les messages définis par l'utilisateur spécifiés.|  
   
  **ErrorMessagesList**  
- Cliquez sur le bouton Parcourir **(…)** pour sélectionner les messages d’erreur à copier.  
+ Cliquez sur le bouton Parcourir **(...)** pour sélectionner les messages d’erreur à copier.  
   
 > [!NOTE]  
 >  Vous devez spécifier **SourceConnection** avant de pouvoir sélectionner les messages d’erreur à copier.  
   
  **ErrorMessageLanguagesList**  
- Cliquez sur le bouton Parcourir **(…)** pour sélectionner les langues pour lesquelles copier les messages d’erreur définis par l’utilisateur sur le serveur de destination. Une version us_english (page de codes 1033) du message doit exister sur le serveur de destination avant de pouvoir transférer vers ce serveur d'autres versions de langue du message.  
+ Cliquez sur le bouton Parcourir **(...)** pour sélectionner les langues pour lesquelles copier les messages d’erreur définis par l’utilisateur sur le serveur de destination. Une version us_english (page de codes 1033) du message doit exister sur le serveur de destination avant de pouvoir transférer vers ce serveur d'autres versions de langue du message.  
   
 > [!NOTE]  
 >  Vous devez spécifier **SourceConnection** avant de pouvoir sélectionner les messages d’erreur à copier.  

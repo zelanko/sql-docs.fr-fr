@@ -25,12 +25,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 81a690c550a3010a69d6356a0525eecdfc6410c8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0dbf0368c86b906a2f482010779407353f771db8
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47751057"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52392883"
 ---
 # <a name="set-index-options"></a>Définir les options d'index
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -68,11 +68,11 @@ ms.locfileid: "47751057"
   
 #### <a name="to-modify-the-properties-of-an-index-in-table-designer"></a>Pour modifier les propriétés d'un index dans le Concepteur de tables  
   
-1.  Dans l'Explorateur d'objets, cliquez sur le signe plus (+) pour développer la base de données qui contient la table pour laquelle vous souhaitez modifier les propriétés d'un index.  
+1.  Dans l’Explorateur d’objets, cliquez sur le signe plus (+) pour développer la base de données qui contient la table sur laquelle vous souhaitez modifier les propriétés d’un index.  
   
 2.  Cliquez sur le signe plus (+) pour développer le dossier **Tables** .  
   
-3.  Cliquez avec le bouton droit sur la table pour laquelle vous voulez modifier les propriétés d’un index et sélectionnez **Conception**.  
+3.  Cliquez avec le bouton droit sur la table sur laquelle vous voulez modifier les propriétés d’un index et sélectionnez **Conception**.  
   
 4.  Dans le menu **Concepteur de tables** , cliquez sur **Index/Clés**.  
   
@@ -86,11 +86,11 @@ ms.locfileid: "47751057"
   
 #### <a name="to-modify-the-properties-of-an-index-in-object-explorer"></a>Pour modifier les propriétés d'un index dans l'Explorateur d'objets  
   
-1.  Dans l'Explorateur d'objets, cliquez sur le signe plus (+) pour développer la base de données qui contient la table pour laquelle vous souhaitez modifier les propriétés d'un index.  
+1.  Dans l’Explorateur d’objets, cliquez sur le signe plus (+) pour développer la base de données qui contient la table sur laquelle vous souhaitez modifier les propriétés d’un index.  
   
 2.  Cliquez sur le signe plus (+) pour développer le dossier **Tables** .  
   
-3.  Cliquez sur le signe plus (+) pour développer la table pour laquelle vous souhaitez modifier les propriétés d'un index.  
+3.  Cliquez sur le signe plus (+) pour développer la table sur laquelle vous souhaitez modifier les propriétés d’un index.  
   
 4.  Cliquez sur le signe plus (+) pour développer le dossier **Index** .  
   

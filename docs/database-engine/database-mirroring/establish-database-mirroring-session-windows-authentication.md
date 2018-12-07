@@ -13,12 +13,12 @@ ms.assetid: 7cb418d6-dce1-4a0d-830e-9c5ccfe3bd72
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e3a8430437bd4a4dae43e9a9b99f98c004a1b3c7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a33e5f09ee0bda2bb1967b90902e47663f1846be
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838937"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52522324"
 ---
 # <a name="establish-database-mirroring-session---windows-authentication"></a>Établir une session de mise en miroir de base de données - authentification Windows
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,14 +28,14 @@ ms.locfileid: "47838937"
   
  Pour établir une session de mise en miroir de bases de données et modifier les propriétés de la mise en miroir d'une base de données, utilisez la page **Mise en miroir** de la boîte de dialogue **Propriétés de la base de données** . Avant d'utiliser la page **Mise en miroir** pour configurer la mise en miroir de bases de données, assurez -vous que les conditions suivantes sont remplies :  
   
--   Les instances du principal et du serveur miroir doivent exécuter la même édition de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](Standard ou Enterprise). En outre, nous vous conseillons vivement d'exécuter les instances sur des systèmes comparables pouvant gérer des charges de travail identiques.  
+-   Les instances du principal de serveur et du serveur miroir doivent exécuter la même édition de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Standard ou Enterprise). En outre, nous vous conseillons vivement d'exécuter les instances sur des systèmes comparables pouvant gérer des charges de travail identiques.  
   
     > [!NOTE]  
     >  Une instance de serveur témoin n'est pas disponible dans toutes les éditions de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prise en charge par les éditions de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
 -   La base de données miroir doit exister et être active.  
   
-     La création d'une base de données miroir nécessite la restauration d'une sauvegarde récente de la base de données principale (au moyen de WITH NORECOVERY) sur l'instance de serveur miroir. Elle requiert également de prendre une ou plusieurs sauvegardes de journaux après la sauvegarde complète et de les restaurer dans l'ordre dans la base de données miroir (à l'aide de WITH NORECOVERY). Pour plus d’informations, consultez [Préparer une base de données miroir pour la mise en miroir &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md).  
+     La création d'une base de données miroir nécessite la restauration d'une sauvegarde récente de la base de données principale (au moyen de WITH NORECOVERY) sur l'instance de serveur miroir. Elle requiert également de prendre une ou plusieurs sauvegardes de journaux après la sauvegarde complète et de les restaurer dans l'ordre dans la base de données miroir (à l'aide de WITH NORECOVERY). Pour plus d’informations, consultez [Prepare a Mirror Database for Mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md).  
   
 -   Si les instances de serveurs s'exécutent sous différents comptes d'utilisateurs de domaine, chacune requiert une connexion dans la base de données **master** des autres. Si la connexion n'existe pas, vous devez la créer avant de configurer la mise en miroir. Pour plus d’informations, consultez [Autoriser l’accès sur le réseau à un point de terminaison de mise en miroir de bases de données au moyen de l’authentification Windows &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-allow-network-access-windows-authentication.md).  
   
@@ -89,7 +89,7 @@ ms.locfileid: "47838937"
  [Supprimer une mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/remove-database-mirroring-sql-server.md)   
  [Gestion des connexions et des travaux après un basculement de rôle &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)   
  [Configuration de la mise en miroir d’une base de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)   
- [Gérer les métadonnées durant la mise à disposition d’une base de données sur une autre instance de serveur &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)   
+ [Gérer les métadonnées lors de la mise à disposition d’une base de données sur une autre instance de serveur &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)   
  [Ajouter ou remplacer un témoin de mise en miroir de bases de données &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md)  
   
   

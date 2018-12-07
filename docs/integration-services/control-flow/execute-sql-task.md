@@ -21,12 +21,12 @@ ms.assetid: bebb2e8c-0410-43b2-ac2f-6fc80c8f2e9e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cd627ea368aea84611863b491ee3b0aaab1cc190
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 674dd31df5acbe93fd48ad9b0b3ab504cebbc98a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641819"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504073"
 ---
 # <a name="execute-sql-task"></a>Tâche d’exécution de requêtes SQL
   La tâche d'exécution SQL exécute des instructions ou des procédures stockées SQL à partir d'un package. La tâche peut contenir une seule ou plusieurs instructions SQL s'exécutant de façon séquentielle. Vous pouvez utiliser la tâche d'exécution SQL aux fins suivantes :  
@@ -181,7 +181,7 @@ Pour plus d’informations sur le langage Transact-SQL, consultez [Référence T
   
 #### <a name="sqlsourcetype--direct-input"></a>SQLSourceType = Entrée directe  
  **SQLStatement**  
- Dans la zone des options, tapez l’instruction SQL à exécuter ou cliquez sur le bouton d’exploration (…) pour taper l’instruction SQL dans la boîte de dialogue **Entrer une requête SQL** . Vous pouvez également cliquer sur **Générer la requête** pour composer l’instruction à l’aide de la boîte de dialogue **Générateur de requêtes** .  
+ Dans la zone des options, tapez l’instruction SQL à exécuter ou cliquez sur le bouton d’exploration (...) pour taper l’instruction SQL dans la boîte de dialogue **Entrer une requête SQL**. Vous pouvez également cliquer sur **Générer la requête** pour composer l’instruction à l’aide de la boîte de dialogue **Générateur de requêtes**.  
   
  **Rubriques connexes :** [Générateur de requêtes](https://msdn.microsoft.com/library/780752c9-6e3c-4f44-aaff-4f4d5e5a45c5)  
   
@@ -278,10 +278,10 @@ Les instructions et les procédures stockées SQL utilisent fréquemment des par
   
 |Type de connexion|Marqueur de paramètre|Nom du paramètre|Exemple de commande SQL|  
 |---------------------|----------------------|--------------------|-------------------------|  
-|ADO|?|Param1, Param2, …|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
+|ADO|?|Param1, Param2, ...|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
 |[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|\@\<nom du paramètre>|\@\<nom du paramètre>|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = \@parmContactID|  
-|ODBC|?|1, 2, 3, …|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
-|EXCEL et OLE DB|?|0, 1, 2, 3, …|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
+|ODBC|?|1, 2, 3, ...|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
+|EXCEL et OLE DB|?|0, 1, 2, 3, ...|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
   
 #### <a name="use-parameters-with-adonet-and-ado-connection-managers"></a>Utiliser des paramètres avec les gestionnaires de connexions ADO.NET et ADO  
  Les gestionnaires de connexions [!INCLUDE[vstecado](../../includes/vstecado-md.md)] et ADO ont des spécifications particulières pour les commandes SQL qui utilisent des paramètres :  
@@ -440,10 +440,10 @@ Cette section décrit comment utiliser une instruction SQL paramétrable dans l
   
     |Type de connexion|Nom du paramètre|  
     |---------------------|--------------------|  
-    |ADO|Param1, Param2, …|  
+    |ADO|Param1, Param2, ...|  
     |ADO.NET et SQLMOBILE|\@\<nom du paramètre>|  
-    |ODBC|1, 2, 3, …|  
-    |EXCEL et OLE DB|0, 1, 2, 3, …|  
+    |ODBC|1, 2, 3, ...|  
+    |EXCEL et OLE DB|0, 1, 2, 3, ...|  
   
 10. Dans la liste **Nom de variable** , sélectionnez une variable. Pour plus d’informations, consultez [Ajouter, supprimer, modifier l’étendue de la variable définie par l’utilisateur dans un package](https://msdn.microsoft.com/library/cbf40c7f-3c8a-48cd-aefa-8b37faf8b40e).  
   
@@ -464,7 +464,7 @@ Cette section décrit comment utiliser une instruction SQL paramétrable dans l
 ##  <a name="Return_codes"></a> Obtenir les valeurs de codes de retour  
  Une procédure stockée peut retourner une valeur entière appelée « code de retour » pour indiquer l'état d'exécution d'une procédure. Pour implémenter des codes de retour dans la tâche d’exécution SQL, vous utilisez des paramètres du type **ReturnValue** .  
   
- Le tableau suivant présente par type de connexion des exemples de commandes EXEC qui implémentent des codes de retour. Tous les exemples utilisent un paramètre **d’entrée** . Les règles d’utilisation des marqueurs de paramètres et des noms de paramètres sont les mêmes pour tous les types de paramètre :**Input**, **Output**et **ReturnValue**.  
+ Le tableau suivant présente par type de connexion des exemples de commandes EXEC qui implémentent des codes de retour. Tous les exemples utilisent un paramètre **d’entrée** . Les règles d’utilisation des marqueurs de paramètres et des noms de paramètres sont les mêmes pour tous les types de paramètre : **Input**, **Output** et **ReturnValue**.  
   
  Certaines syntaxes ne prennent pas en charge les littéraux de paramètres. Dans ce cas, vous devez fournir la valeur du paramètre en utilisant une variable.  
   

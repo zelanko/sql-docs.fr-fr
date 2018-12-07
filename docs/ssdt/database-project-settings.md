@@ -41,12 +41,12 @@ ms.assetid: 34418730-1aaa-4948-aee2-8f1e62cda85c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8eb14ed03dc43a1a27254a1998f84b786e39694d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 94eea6f9e8d76875c11a6e52de423812c16b255e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671401"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516016"
 ---
 # <a name="database-project-settings"></a>Paramètres du projet de base de données
 Vous utilisez des paramètres de projet de base de données pour contrôler des aspects de vos configurations de build, de débogage et de bases de données. Ces paramètres peuvent être répartis dans les catégories suivantes :  
@@ -87,7 +87,7 @@ Les paramètres du tableau suivant s'appliquent à toutes les configurations de 
 |Champ|Valeur par défaut|Description|  
 |---------|-----------------|---------------|  
 |Plateforme cible|Microsoft SQL Server 2012|Spécifie la version de SQL Server que vous ciblez avec ce projet de base de données.|  
-|Activer la vérification Transact\-SQL étendue pour les objets communs.|Cette option n'est pas activée lorsque vous créez un projet.<br /><br />Cette option est activée lorsque vous créez un projet à partir de l'Explorateur d'objets SQL Server connecté à SQL Azure, importez une base de données SQL Azure dans le projet ou modifiez la plateforme cible d'un projet afin qu'elle corresponde à SQL Azure.|Lorsque cette option est activée, les erreurs détectées dans le projet, pour lequel la vérification SQL Server Compiler a échoué, sont signalées. Si vous modifiez votre plateforme cible pour qu'elle corresponde à SQL Azure, la vérification étendue est activée. L'option n'est pas désactivée si vous modifiez la plateforme cible.<br /><br />Vous pouvez activer cette option pour d'autres versions de SQL Server, mais la validation est limitée aux bases de données partiellement autonomes Microsoft SQL Server 2012 et à SQL Azure. Les versions de SQL Server ne prennent pas toutes en charge la syntaxe Transact\-SQL.<br /><br />Pour plus d’informations, consultez [Vérification Transact-SQL étendue](#bkmk_evf) plus loin dans cette rubrique|  
+|Activer la vérification Transact\-SQL étendue pour les objets communs.|Cette option n'est pas activée lorsque vous créez un projet.<br /><br />Cette option est activée lorsque vous créez un projet à partir de l’Explorateur d’objets SQL Server connecté à SQL Azure, importez une base de données SQL Azure dans le projet ou modifiez la plateforme cible d’un projet afin qu’elle corresponde à SQL Azure.|Lorsque cette option est activée, les erreurs détectées dans le projet, pour lequel la vérification SQL Server Compiler a échoué, sont signalées. Si vous modifiez votre plateforme cible pour qu'elle corresponde à SQL Azure, la vérification étendue est activée. L'option n'est pas désactivée si vous modifiez la plateforme cible.<br /><br />Vous pouvez activer cette option pour d'autres versions de SQL Server, mais la validation est limitée aux bases de données partiellement autonomes Microsoft SQL Server 2012 et à SQL Azure. Les versions de SQL Server ne prennent pas toutes en charge la syntaxe Transact\-SQL.<br /><br />Pour plus d’informations, consultez [Vérification Transact-SQL étendue](#bkmk_evf) plus loin dans cette rubrique|  
 |Types de sortie|||  
 |Application de la couche Données (fichier .dacpac)|Activé et verrouillé. La sortie de la génération d'un projet de base de données génère toujours un package .dacpac lorsque le projet est généré.|Si vous utilisez la version de SQL Server Data Tools (SSDT) qui comporte l'option « Créer un fichier .dacpac de bas niveau supplémentaire (v2.0) », vérifiez si vous souhaitez que le package soit compatible avec SQL Server Management Studio ou avec le portail de gestion SQL Azure. Vous pouvez déployer un package .dacpac directement à partir de SSDT, mais vous pouvez déployer uniquement un fichier .dacpac version 2.0 via SQL Server Management Studio lors de la publication de SQL Server Data Tools.|  
 |Créer un script (fichier .sql)||Spécifie si un script SQL CREATE complet est généré pour tous les objets du projet et placé dans le dossier bin/debug lorsque le projet est généré. Vous pouvez créer un script de mise à jour incrémentielle à l'aide de la commande **Publier le projet** ou de l'utilitaire SQL Compare.|  
@@ -102,7 +102,7 @@ Les paramètres du tableau suivant s'appliquent à toutes les configurations de 
 > [!IMPORTANT]  
 > La fonctionnalité Vérification Transact-SQL étendue sera supprimée de la prochaine version de fonctionnalité de SQL Server Data Tools et de la prochaine version majeure de Visual Studio.  
   
-La vérification Transact-SQL étendue est une fonctionnalité du système de projet de base de données qui permet aux développeurs de soumettre leur projet de base de données à Transact-SQL Compiler Service, au moment de la génération, afin de valider le code par rapport à l'interpréteur et à l'analyseur du moteur SQL Server.  
+La vérification Transact-SQL étendue est une fonctionnalité du système de projet de base de données qui permet aux développeurs de soumettre leur projet de base de données à Transact-SQL Compiler Service, au moment de la génération, afin de valider le code par rapport à l’interpréteur et à l’analyseur du moteur SQL Server.  
   
 ### <a name="transact-sql-compiler-service"></a>Transact-SQL Compiler Service  
 Transact-SQL Compiler Service est un composant basé sur le moteur de base de données Microsoft SQL Server 2012. Ce service permet de valider la syntaxe et la sémantique des instructions DDL avec la même fidélité qu'un moteur de base de données Microsoft SQL Server 2012. Cela signifie, de manière intrinsèque, que le Compiler Service ne prend pas en charge la syntaxe ou les fonctionnalités qui ont été déconseillées dans Microsoft SQL Server 2012. Pour plus d’informations sur les fonctionnalités dépréciées, consultez [Fonctionnalités du moteur de base de données supprimées dans SQL Server 2012](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md).  
@@ -147,7 +147,7 @@ La fonctionnalité de vérification étendue peut également être utilisée lor
 1.  Dans l'**Explorateur de solutions**, cliquez avec le bouton droit sur un fichier .sql.  
   
     > [!NOTE]  
-    > Pour pouvoir désactiver la fonctionnalité de vérification Transact\-SQL étendue au niveau du fichier, la propriété **Action de génération** du fichier doit être définie sur **Générer**.  
+    > Pour désactiver la fonctionnalité de vérification Transact\-SQL étendue au niveau du fichier, vous devez définir la propriété **Action de génération** du fichier sur **Générer**.  
   
 2.  Dans **Propriétés**, affectez à la propriété **Vérification Transact-SQL étendue** la valeur **False**.  
   
@@ -162,7 +162,7 @@ Pour plus d'informations sur les options d'assembly, consultez [Boîte de dialog
 Pour plus d'informations sur la signature, consultez la section **Signature de l'assembly** de la rubrique [Page Signature, Concepteur de projets](https://msdn.microsoft.com/library/0k50fs3b.aspx?queryresult=true) .  
   
 ## <a name="bkmk_sqlclr_sqlclrbuild"></a>SQLCLR et Build SQLCLR  
-Les pages de propriétés **SQLCLR** et **Build SQLCLR** contiennent de nombreux paramètres d'utilisation des objets CLR SQL dans votre projet. Plus particulièrement, la page de propriétés **SQLCLR** dispose d'un paramètre de niveau d'autorisation pour définir les autorisations sur l'assembly SQLCLR. Elle possède aussi le paramètre Générer le DDL pour contrôler si le DDL des objets SQLCLR ajoutés au projet doit être généré. La page de propriétés **Build** SQLCLR contient toutes les options du compilateur que vous pouvez définir pour configurer la compilation du code SQLCLR dans le projet.  
+Les pages de propriétés **SQLCLR** et **Build SQLCLR** contiennent de nombreux paramètres d'utilisation des objets CLR SQL dans votre projet. Plus particulièrement, la page de propriétés **SQLCLR** dispose d'un paramètre de niveau d'autorisation pour définir les autorisations sur l'assembly SQLCLR. Elle comprend aussi le paramètre Générer le DDL pour contrôler si le DDL des objets SQLCLR ajoutés au projet doit être généré. La page de propriétés **Build** SQLCLR contient toutes les options du compilateur que vous pouvez définir pour configurer la compilation du code SQLCLR dans le projet.  
   
 La page de propriétés **Build SQLCLR** contient des paramètres de build avancés pour la génération de vos objets CLR SQL. Différentes options sont fournies en fonction du langage (VB ou C#)) utilisé pour coder les objets SQL CLR.  
   

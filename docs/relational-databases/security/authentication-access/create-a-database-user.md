@@ -25,12 +25,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f3b2ec3e4a055d331799efab64223012b162a1fc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 11e155be4678c2cb57b9b551b412570e4578eb46
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47648107"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516657"
 ---
 # <a name="create-a-database-user"></a>Créer un utilisateur de base de données
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -74,9 +74,9 @@ ms.locfileid: "47648107"
   
 2.  Développez la base de données où créer le nouvel utilisateur de base de données.  
   
-3.  Cliquez avec le bouton droit sur le dossier **Sécurité** , pointez sur **Nouveau**, puis sélectionnez **Utilisateur**.  
+3.  Cliquez avec le bouton droit sur le dossier **Sécurité**, pointez sur **Nouveau**, puis sélectionnez **Utilisateur...**.  
   
-4.  Dans la boîte de dialogue **Utilisateur de base de données – Nouveau** , sur la page **Général** , sélectionnez un des types d'utilisateur suivants à partir de la liste **type d’utilisateur** :  
+4.  Dans la boîte de dialogue **Nouvel utilisateur de base de données**, dans la page **Général**, sélectionnez un des types d’utilisateurs suivants à partir de la liste **Type d’utilisateur** :  
   
     -   **utilisateur SQL avec connexion**  
   
@@ -93,10 +93,10 @@ ms.locfileid: "47648107"
 5.  Lorsque vous sélectionnez une option, les options restantes dans la boîte de dialogue peuvent changer. Certaines options s'appliquent uniquement à des types spécifiques d'utilisateurs de base de données. Certaines options peuvent être vides et utiliser la valeur par défaut.  
   
      **Nom d'utilisateur**  
-     Entrez le nom du nouvel utilisateur. Si vous avez choisi **Utilisateur Windows** dans la liste **Type d’utilisateur** , vous pouvez également cliquer sur les points de suspension **(...)** pour ouvrir la boîte de dialogue **Sélectionner l’utilisateur ou le groupe** .  
+     Entrez le nom du nouvel utilisateur. Si vous avez choisi **Utilisateur Windows** dans la liste **Type d’utilisateur**, vous pouvez également cliquer sur les points de suspension **(...)** pour ouvrir la boîte de dialogue **Sélectionner un utilisateur ou un groupe**.  
   
      **Nom d'accès**  
-     Entrez le nom de connexion de l'utilisateur. Vous pouvez également cliquer sur les points de suspension **(…)** pour ouvrir la boîte de dialogue **Sélectionner la connexion** . **Nom de connexion** est disponible si vous sélectionnez **Utilisateur SQL avec connexion** ou **Utilisateur Windows** dans la liste **Type d'utilisateur** .  
+     Entrez le nom de connexion de l'utilisateur. Vous pouvez également cliquer sur les points de suspension **(…)** pour ouvrir la boîte de dialogue **Sélectionner la connexion**. **Nom de connexion** est disponible si vous sélectionnez **Utilisateur SQL avec connexion** ou **Utilisateur Windows** dans la liste **Type d'utilisateur** .  
   
      **Mot de passe** et **Confirmer le mot de passe**  
      Entrez un mot de passe pour les utilisateurs qui s'authentifient auprès de la base de données.  
@@ -105,18 +105,18 @@ ms.locfileid: "47648107"
      Entrez la langue par défaut de l’utilisateur.  
   
      **Schéma par défaut**  
-     Entrez le schéma qui possédera les objets créés par cet utilisateur. Vous pouvez également cliquer sur les points de suspension **(…)** pour ouvrir la boîte de dialogue **Sélectionner le schéma** . **Schéma par défaut** est disponible si vous sélectionnez **Utilisateur SQL avec connexion**, **Utilisateur SQL sans connexion**ou **Utilisateur Windows** dans la liste **Type d'utilisateur** .  
+     Entrez le schéma qui possédera les objets créés par cet utilisateur. Vous pouvez également cliquer sur les points de suspension **(…)** pour ouvrir la boîte de dialogue **Sélectionner le schéma**. **Schéma par défaut** est disponible si vous sélectionnez **Utilisateur SQL avec connexion**, **Utilisateur SQL sans connexion**ou **Utilisateur Windows** dans la liste **Type d'utilisateur** .  
   
      **Nom du certificat**  
-     Entrez le certificat à utiliser pour l'utilisateur de base de données. Vous pouvez également cliquer sur les points de suspension **(…)** pour ouvrir la boîte de dialogue **Sélectionner un certificat** . **Nom du certificat** est disponible si vous sélectionnez **Utilisateur mappé à un certificat** dans la liste **Type d'utilisateur** .  
+     Entrez le certificat à utiliser pour l'utilisateur de base de données. Vous pouvez également cliquer sur les points de suspension **(…)** pour ouvrir la boîte de dialogue **Sélectionner le certificat**. **Nom du certificat** est disponible si vous sélectionnez **Utilisateur mappé à un certificat** dans la liste **Type d'utilisateur** .  
   
      **Nom de la clé asymétrique**  
-     Entrez la clé à utiliser pour l'utilisateur de base de données. Vous pouvez éventuellement cliquer sur les points de suspension **(…)** pour ouvrir la boîte de dialogue **Sélectionner la clé asymétrique** . **Nom de la clé asymétrique** est disponible si vous sélectionnez **Utilisateur mappé à une clé asymétrique** dans la liste **Type d'utilisateur** .  
+     Entrez la clé à utiliser pour l'utilisateur de base de données. Vous pouvez également cliquer sur les points de suspension **(…)** pour ouvrir la boîte de dialogue **Sélectionner la clé asymétrique**. **Nom de la clé asymétrique** est disponible si vous sélectionnez **Utilisateur mappé à une clé asymétrique** dans la liste **Type d'utilisateur** .  
   
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="additional-options"></a>Options supplémentaires  
- La boîte de dialogue **Nouvel utilisateur de base de données** offre également des options sur quatre pages supplémentaires : **Schémas appartenant à un rôle**, **Appartenance**, **Éléments sécurisables**et **Propriétés étendues**.  
+ La boîte de dialogue **Nouvel utilisateur de base de données** offre également des options dans quatre pages supplémentaires : **Schémas appartenant à un rôle**, **Appartenance**, **Éléments sécurisables** et **Propriétés étendues**.  
   
 -   La page **Schémas appartenant à un rôle** répertorie tous les schémas possibles qui peuvent être détenus par le nouvel utilisateur de base de données. Pour ajouter des schémas à un utilisateur de base de données ou lui en supprimer, sous **Schémas appartenant à cet utilisateur**, activez ou désactivez les cases à cocher en regard de ces schémas.  
   
@@ -135,15 +135,15 @@ ms.locfileid: "47648107"
      **Propriétés**  
      Affiche ou spécifie les propriétés étendues de l'objet. Chaque propriété étendue est constituée d'une paire nom/valeur de métadonnées associées à l'objet.  
   
-     **Points de suspension (…)**  
-     Cliquez sur les points de suspension **(…)** figurant après **Valeur** pour ouvrir la boîte de dialogue **Valeur de la propriété étendue** . Tapez ou affichez la valeur de la propriété étendue dans cet emplacement de plus grande taille. Pour plus d'informations, consultez [Boîte de dialogue Valeur de la propriété étendue](../../databases/value-for-extended-property-dialog-box.md).  
+     **Points de suspension (...)**  
+     Cliquez sur les points de suspension **(…)** figurant après **Valeur** pour ouvrir la boîte de dialogue **Valeur de la propriété étendue**. Tapez ou affichez la valeur de la propriété étendue dans cet emplacement de plus grande taille. Pour plus d'informations, consultez [Boîte de dialogue Valeur de la propriété étendue](../../databases/value-for-extended-property-dialog-box.md).  
   
      **Supprimer**  
      Supprime la propriété étendue sélectionnée.  
   
 ##  <a name="TsqlProcedure"></a> Créer un utilisateur à l’aide de T-SQL  
     
-1.  Dans l'**Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils **Standard** , cliquez sur **Nouvelle requête**.  
   

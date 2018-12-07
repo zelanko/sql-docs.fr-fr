@@ -35,12 +35,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e2f3642a8638fc39c538bb2609e061c2491a0136
-ms.sourcegitcommit: f9b4078dfa3704fc672e631d4830abbb18b26c85
+ms.openlocfilehash: 8c36325e68fbf9692c9f8f057e5aa215de2ad49b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50966037"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52408806"
 ---
 # <a name="from-transact-sql"></a>FROM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -710,7 +710,7 @@ JOIN DimProduct AS dp
 ON dp.ProductKey = fis.ProductKey;  
 ```  
   
- Vous pouvez aussi utiliser une clause `WHERE` avec cette requête pour limiter les résultats retournés. Cet exemple limite les résultats aux valeurs `SalesOrderNumber` supérieures à SO5000 :  
+ Vous pouvez aussi utiliser une clause `WHERE` avec cette requête pour limiter les résultats retournés. Cet exemple limite les résultats aux valeurs de `SalesOrderNumber` supérieures à « SO5000 » :  
   
 ```sql
 -- Uses AdventureWorks  
@@ -810,7 +810,7 @@ ORDER BY fis.SalesOrderNumber;
 ```  
   
 ### <a name="r-using-a-derived-table"></a>R. Utilisation d'une table dérivée  
- L’exemple suivant utilise une table dérivée (une instruction `SELECT` après la clause `FROM`) pour retourner les colonnes `CustomerKey` et `LastName` de tous les clients dans la table `DimCustomer` dont la valeur `BirthDate` est ultérieure au 1er janvier 1970 et dont le nom de famille est « Smith ».  
+ L’exemple suivant utilise une table dérivée (une instruction `SELECT` après la clause `FROM`) pour retourner les colonnes `CustomerKey` et `LastName` de tous les clients dans la table `DimCustomer` dont la valeur `BirthDate` est postérieure au 1er janvier 1970 et dont le nom de famille est « Smith ».  
   
 ```sql
 -- Uses AdventureWorks  

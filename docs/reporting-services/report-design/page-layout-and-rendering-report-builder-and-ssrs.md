@@ -8,15 +8,15 @@ ms.topic: conceptual
 ms.assetid: e2358653-35bc-4496-810a-d3ccf02f229f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d525d686b8be1e17214dd8908017b86358f87ec2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d78d5bd802b1c194cb4b1cf09a81a1eecc9f54df
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605997"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52413695"
 ---
 # <a name="page-layout-and-rendering-report-builder-and-ssrs"></a>Mise en page et rendu (Générateur de rapports et SSRS)
-Découvrez les extensions de rendu [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour les rapports paginés, grâce auxquelles vous pouvez donner à votre rapport l’aspect souhaité, notamment en ce qui concerne la disposition, les sauts de page et le format de papier. 
+Découvrez les extensions de rendu [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour les rapports paginés, grâce auxquelles vous pouvez donner à votre rapport l’aspect souhaité, notamment en ce qui concerne la mise en page, les sauts de page et le format de papier. 
 
  Quand vous affichez des rapports dans le serveur de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ou dans le volet de visualisation du Générateur de rapports ou du Concepteur de rapports, le rapport est tout d’abord restitué par le convertisseur HTML. Vous pouvez ensuite exporter le rapport vers différents formats tels qu’Excel ou des fichiers délimités par des virgules (CSV). Le rapport exporté peut alors être utilisé pour une analyse supplémentaire dans Excel ou comme source de données pour des applications prenant en charge l’importation et l’utilisation de fichiers CSV.  
   

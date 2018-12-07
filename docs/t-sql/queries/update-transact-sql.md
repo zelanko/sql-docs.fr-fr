@@ -39,12 +39,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5118700c017167664b0e33867f43ec6dbd46813d
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 9ab6a40f49ce64e4e157c4eacccb59b6135ed4ff
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51704057"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520846"
 ---
 # <a name="update-transact-sql"></a>UPDATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -459,7 +459,7 @@ ID     Value
  Une instruction UPDATE acquiert toujours un verrou exclusif (X) sur la table qu'elle modifie et maintient ce verrou jusqu'à la fin de la transaction. Avec un verrou exclusif, aucune autre transaction ne peut modifier des données. Vous pouvez spécifier des indicateurs de table pour remplacer ce comportement par défaut pour la durée de l'instruction UPDATE en spécifiant une autre méthode de verrouillage ; toutefois, nous vous recommandons de ne recourir aux indicateurs qu'en dernier ressort et seulement si vous êtes un développeur ou un administrateur de base de données expérimenté. Pour plus d’informations, consultez [Indicateurs de table &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
 ## <a name="logging-behavior"></a>Comportement de journalisation  
- L’instruction UPDATE est journalisée. Cependant, les mises à jour partielles de données de valeurs élevées à l’aide de la clause **.** WRITE sont journalisées de façon minimale. Pour plus d'informations, consultez la rubrique « Mise à jour des données de valeurs élevées » de la section précédente « Types de données ».  
+ L’instruction UPDATE est journalisée. Cependant, les mises à jour partielles de données de valeurs élevées à l’aide de la clause **.** WRITE sont journalisées de façon minimale. Pour plus d’informations, consultez « Mise à jour des données de valeurs élevées » de la section précédente « Types de données ».  
   
 ## <a name="security"></a>Sécurité  
   
@@ -482,7 +482,7 @@ ID     Value
 |[Mise à jour de types définis par l’utilisateur](#UDTs)|types définis par l'utilisateur|  
 |[Substitution du comportement par défaut de l’optimiseur de requête à l’aide d’indicateurs](#TableHints)|indicateurs de table • indicateurs de requête|  
 |[Capture des résultats de l’instruction UPDATE](#CaptureResults)|Clause OUTPUT|  
-|[Utilisation de l’instruction UPDATE dans d’autres instructions](#Other)|Procédures stockées • TRY…CATCH|  
+|[Utilisation de l’instruction UPDATE dans d’autres instructions](#Other)|Procédures stockées • TRY...CATCH|  
   
 ###  <a name="BasicSyntax"></a> Syntaxe de base  
  Les exemples fournis dans cette section présentent les fonctionnalités de base de l'instruction UPDATE en utilisant la syntaxe minimale requise.  
@@ -1033,8 +1033,8 @@ GO
 EXEC HumanResources.Update_VacationHours 40;  
 ```  
   
-#### <a name="ac-using-update-in-a-trycatch-block"></a>AC. Utilisation de l'instruction UPDATE dans un bloc TRY…CATCH  
- L’exemple suivant utilise une instruction UPDATE dans un bloc TRY…CATCH pour gérer les erreurs d’exécution qui peuvent se produire pendant une mise à jour.  
+#### <a name="ac-using-update-in-a-trycatch-block"></a>AC. Utilisation de l’instruction UPDATE dans un bloc TRY...CATCH  
+ L’exemple suivant utilise une instruction UPDATE dans un bloc TRY...CATCH pour gérer les erreurs d’exécution qui peuvent se produire pendant l’opération de mise à jour.  
   
 ```sql  
 USE AdventureWorks2012;  

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: f02dee0c-85ad-45d4-b707-10e9e8541db9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4d284bc507c3398c85cf823528f17fdbd671e96a
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 43cd64469ef5a1cf08b1c99e42ee5f6dd20ab85b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021773"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52391722"
 ---
 # <a name="lesson-2-define-a-data-connection-and-data-table-for-parent-report"></a>Leçon 2 : définir une connexion de données et une table de données pour le rapport parent
 Après avoir créé un projet de site Web à l'aide du modèle de site Web ASP.NET pour Visual C#, l'étape suivante consiste à créer une connexion de données et une table de données pour le rapport parent. Dans ce didacticiel, la connexion de données doit s’établir avec la base de données AdventureWorks2014.  
@@ -28,9 +28,9 @@ Après avoir créé un projet de site Web à l'aide du modèle de site Web ASP.N
   
 3.  À partir de la fenêtre Boîte à outils, faites glisser un contrôle **[TableAdapter](https://msdn.microsoft.com/library/bz9tthwx.aspx)** dans l’aire de conception. Cette opération permet de lancer l’Assistant de configuration de **TableAdapter** .  
   
-4.  Dans la page **Choisir votre connexion de données** , sélectionnez **Nouvelle connexion**.  
+4.  Dans la page **Choisir votre connexion de données**, sélectionnez **Nouvelle connexion**.  
   
-5.  S’il s’agit de la première fois que vous avez créé une source de données dans Visual Studio, vous verrez s’afficher la page **Choisir une source de données** . Dans la zone **Source de données** , sélectionnez **Microsoft SQL Server**.  
+5.  Si vous avez créé une source de données dans Visual Studio pour la première fois, la page **Choisir une source de données** s’affiche. Dans la zone **Source de données** , sélectionnez **Microsoft SQL Server**.  
   
 6.  Dans la boîte de dialogue **Ajouter une connexion** , effectuez les étapes suivantes :  
   

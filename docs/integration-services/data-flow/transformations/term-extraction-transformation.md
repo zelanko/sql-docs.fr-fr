@@ -29,12 +29,12 @@ ms.assetid: d0821526-1603-4ea6-8322-2d901568fbeb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f20a2bba58605ca7b518fa1a55ba1a75ffb366bb
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 85a35b34610982ac4418e0e8ab05d3e1b188b968
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638946"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507474"
 ---
 # <a name="term-extraction-transformation"></a>Transformation d'extraction de terme
   La transformation d'extraction de terme extrait des termes à partir de texte d'une colonne d'entrée de transformation, puis écrit les termes dans une colonne de sortie de transformation. La transformation fonctionne uniquement avec du texte en langue anglaise et utilise uniquement son propre dictionnaire d'anglais et ses propres informations linguistiques.  
@@ -57,7 +57,7 @@ ms.locfileid: "51638946"
 ## <a name="exclusion-terms"></a>Termes d'exclusion  
  Éventuellement, la transformation d'extraction de terme peut faire référence à une colonne de table qui contient des termes d'exclusion, à savoir des termes qui doivent être ignorés par la transformation lors de l'extraction de termes à partir d'un jeu de données. Cela est utile lorsqu'un ensemble de termes a déjà été identifié comme sans importance dans un secteur d'activité ou une industrie particulière, en général parce qu'ils apparaissent à une fréquence tellement élevée qu'ils en deviennent des mots non significatifs. Par exemple, lors de l'extraction de termes à partir d'un dataset qui contient des informations de support clientèle sur une marque de véhicules spécifique, le nom de la marque peut être exclu car il sera mentionné trop fréquemment pour être significatif. Par conséquent, les valeurs de la liste d'exclusion doivent être personnalisées en fonction du jeu de données avec lequel vous travaillez.  
   
- Lorsque vous ajoutez un terme à la liste d'exclusion, tous les termes—mots ou expressions nominales—qui contiennent le terme sont également exclus. Par exemple, si la liste d’exclusion comprend le mot simple *données*, tous les termes qui contiennent ce mot, comme *données*, *exploration de données*, *intégrité des données*et *validation des données* sont également exclus. Si vous souhaitez exclure uniquement les termes composés qui contiennent le mot *données*, vous devez les ajouter explicitement à la liste d’exclusion. Par exemple, si vous souhaitez extraire les occurrences de *données*tout en excluant *validation des données*, vous ajoutez *validation des données* à la liste d’exclusion et vous vérifiez que *données* est supprimé de celle-ci.  
+ Quand vous ajoutez un terme à la liste d’exclusion, tous les termes (mots ou expressions nominales) qui contiennent le terme sont également exclus. Par exemple, si la liste d’exclusion comprend le mot simple *données*, tous les termes qui contiennent ce mot, comme *données*, *exploration de données*, *intégrité des données*et *validation des données* sont également exclus. Si vous souhaitez exclure uniquement les termes composés qui contiennent le mot *données*, vous devez les ajouter explicitement à la liste d’exclusion. Par exemple, si vous souhaitez extraire les occurrences de *données*tout en excluant *validation des données*, vous ajoutez *validation des données* à la liste d’exclusion et vous vérifiez que *données* est supprimé de celle-ci.  
   
  La table de référence doit être une table d'une base de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou Access. La transformation d'extraction de terme utilise une connexion OLE DB distincte pour se connecter à la table de référence. Pour plus d’informations, consultez [OLE DB Connection Manager](../../../integration-services/connection-manager/ole-db-connection-manager.md).  
   
@@ -142,7 +142,7 @@ ms.locfileid: "51638946"
   
 -   Caractères de sauts de ligne ASCII 0x0d (retour chariot) et 0x0a (saut de ligne). Pour que ce caractère soit utilisé comme limite de phrase, il doit y avoir deux caractères de saut de ligne ou plus sur une ligne.  
   
--   Traits d'union (–). Pour que ce caractère soit utilisé comme limite de phrase, les caractères situés immédiatement à gauche et à droite du trait d'union ne doivent pas être des lettres.  
+-   Traits d’union (-). Pour que ce caractère soit utilisé comme limite de phrase, les caractères situés immédiatement à gauche et à droite du trait d'union ne doivent pas être des lettres.  
   
 -   Caractère de soulignement (_). Pour que ce caractère soit utilisé comme limite de phrase, les caractères situés immédiatement à gauche et à droite du trait d'union ne doivent pas être des lettres.  
   
@@ -150,7 +150,7 @@ ms.locfileid: "51638946"
   
 -   Combinaison de nombres, signes de ponctuation et caractères alphabétiques. Par exemple, *A23B#99* retourne le terme *A23B*.  
   
--   Caractères %, @, &, $, #, \*, :, ;, ., **,** , !, ?, \<, >, +, =, ^, ~, |, \\, /, (, ), [, ], {, }, “, et ‘.  
+-   Caractères %, @, &, $, #, \*, :, ;, ., **,** , !, ?, \<, >, +, =, ^, ~, |, \\, /, (, ), [, ], {, }, " et '.  
   
     > [!NOTE]  
     >  Les acronymes incluant un ou plusieurs points (.) ne sont pas divisés en plusieurs phrases.  

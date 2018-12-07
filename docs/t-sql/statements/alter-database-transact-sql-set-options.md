@@ -30,12 +30,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 15d83a8f15492e0d1f9c0cf1d804645f4b14c867
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 6e89d2803fda21563b69bb2ba658df2f9a8f0bef
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814352"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545451"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Options SET d'ALTER DATABASE (Transact-SQL) 
 
@@ -1079,7 +1079,7 @@ Vous pouvez déterminer l'état de cette option en consultant la colonne is_recu
   
 Spécifie la fréquence des points de contrôle indirects en fonction de chaque base de données. Depuis [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], la valeur par défaut pour les nouvelles bases de données est une minute, ce qui signifie que la base de données utilise les points de contrôle indirects. Pour les versions antérieures, la valeur par défaut est 0, ce qui indique que la base de données utilise les points de contrôle automatiques, dont la fréquence dépend du paramètre d’intervalle de récupération de l’instance de serveur. [!INCLUDE[msCoName](../../includes/msconame-md.md)] recommande une valeur d’une minute pour la plupart des systèmes.  
   
-TARGET_RECOVERY_TIME **=***target_recovery_time* { SECONDS | MINUTES }  
+TARGET_RECOVERY_TIME **=**_target_recovery_time_ { SECONDS | MINUTES }  
 *target_recovery_time*  
 Spécifie la limite maximale de durée de récupération de la base de données spécifiée en cas de sinistre.  
   
@@ -1910,7 +1910,7 @@ Vous pouvez déterminer l'état de cette option en consultant la colonne is_recu
   
 Spécifie la fréquence des points de contrôle indirects en fonction de chaque base de données. Depuis [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], la valeur par défaut pour les nouvelles bases de données est une minute, ce qui signifie que la base de données utilise les points de contrôle indirects. Pour les versions antérieures, la valeur par défaut est 0, ce qui indique que la base de données utilise les points de contrôle automatiques, dont la fréquence dépend du paramètre d’intervalle de récupération de l’instance de serveur. [!INCLUDE[msCoName](../../includes/msconame-md.md)] recommande une valeur d’une minute pour la plupart des systèmes.  
   
-TARGET_RECOVERY_TIME **=***target_recovery_time* { SECONDS | MINUTES }  
+TARGET_RECOVERY_TIME **=**_target_recovery_time_ { SECONDS | MINUTES }  
 *target_recovery_time*  
 Spécifie la limite maximale de durée de récupération de la base de données spécifiée en cas de sinistre.  
   
@@ -2638,7 +2638,7 @@ Vous pouvez déterminer l'état de cette option en consultant la colonne is_recu
   
 Spécifie la fréquence des points de contrôle indirects en fonction de chaque base de données. Depuis [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], la valeur par défaut pour les nouvelles bases de données est une minute, ce qui signifie que la base de données utilise les points de contrôle indirects. Pour les versions antérieures, la valeur par défaut est 0, ce qui indique que la base de données utilise les points de contrôle automatiques, dont la fréquence dépend du paramètre d’intervalle de récupération de l’instance de serveur. [!INCLUDE[msCoName](../../includes/msconame-md.md)] recommande une valeur d’une minute pour la plupart des systèmes.  
   
-TARGET_RECOVERY_TIME **=***target_recovery_time* { SECONDS | MINUTES }  
+TARGET_RECOVERY_TIME **=**_target_recovery_time_ { SECONDS | MINUTES }  
 *target_recovery_time*  
 Spécifie la limite maximale de durée de récupération de la base de données spécifiée en cas de sinistre.  
   

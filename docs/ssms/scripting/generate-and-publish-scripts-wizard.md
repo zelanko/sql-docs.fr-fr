@@ -44,12 +44,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 409da0193276741d11a09d14018d016afbe449a6
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 846769ff6330edf5576e4342a3c145829a18196a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700267"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530563"
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>Assistant Générer et publier des scripts
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -126,7 +126,7 @@ Pour un tutoriel plus détaillé sur l’utilisation de l’Assistant Générer 
 
   ![Enregistrer](media/generate-and-publish-scripts-wizard/save.png)   
   
--   **Enregistrer dans le fichier** - Permet d’enregistrer le script dans un ou plusieurs fichiers .sql. Cliquez sur le bouton**Parcourir**pour spécifier le nom et l’emplacement du fichier. Activez la case à cocher **Remplacer le fichier existant** pour remplacer le fichier s'il en existe déjà un du même nom. Cliquez sur **Fichier unique** ou **Fichier unique par objet** pour spécifier comment les scripts doivent être générés. Cliquez sur **Texte Unicode** ou **Texte ANSI** pour spécifier le type de texte qui doit être utilisé dans le script.  
+-   **Enregistrer dans le fichier** - Permet d’enregistrer le script dans un ou plusieurs fichiers .sql. Cliquez sur le bouton (**...**) pour spécifier le nom et l’emplacement du fichier. Activez la case à cocher **Remplacer le fichier existant** pour remplacer le fichier s'il en existe déjà un du même nom. Cliquez sur **Fichier unique** ou **Fichier unique par objet** pour spécifier comment les scripts doivent être générés. Cliquez sur **Texte Unicode** ou **Texte ANSI** pour spécifier le type de texte qui doit être utilisé dans le script.  
   
 -   **Enregistrer dans le Presse-papiers** - Permet d’enregistrer le script Transact-SQL dans le Presse-papiers.  
   
@@ -149,7 +149,7 @@ Pour un tutoriel plus détaillé sur l’utilisation de l’Assistant Générer 
   
  **Options** - Spécifiez les options avancées en sélectionnant une valeur dans la liste des paramètres disponibles située à droite de chaque option.  
   
- **Général** - Les options suivantes s'appliquent au script entier.  
+ **Général** - Les options suivantes s’appliquent au script entier.  
   
 -   **Remplissage ANSI** - Inclut **ANSI PADDING ON** dans le script. La valeur par défaut est **True**.  
   
@@ -199,7 +199,7 @@ Pour un tutoriel plus détaillé sur l’utilisation de l’Assistant Générer 
   
 -   **Générer le script de suivi des modifications** - Génère le script de suivi des modifications s’il est activé sur la base de données d’origine ou sur des tables dans la base de données d’origine. La valeur par défaut est **False**. Pour plus d’informations, consultez [À propos du suivi des modifications &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-tracking-sql-server.md).  
   
--   **Générer un script pour les contraintes de validation** – Ajoute des contraintes **CHECK** au script. La valeur par défaut est **True**. Les contraintes**CHECK** exigent que les données entrées dans une table satisfassent à certaines conditions spécifiées. Pour plus d’informations, consultez [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md).  
+-   **Générer un script pour les contraintes de validation** - Ajoute des contraintes **CHECK** au script. La valeur par défaut est **True**. Les contraintes**CHECK** exigent que les données entrées dans une table satisfassent à certaines conditions spécifiées. Pour plus d’informations, consultez [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md).  
   
 -   **Générer un script des options de compression de données** - Génère un script des options de compression de données si elles sont configurées sur la base de données d’origine ou sur des tables dans la base de données d’origine. Pour plus d’informations, consultez [Compression de données](../../relational-databases/data-compression/data-compression.md). La valeur par défaut est **False**.  
   
@@ -239,7 +239,7 @@ Pour un tutoriel plus détaillé sur l’utilisation de l’Assistant Générer 
   
  **Options** - Spécifiez les options avancées en sélectionnant une valeur dans la liste des paramètres disponibles située à droite de chaque option.  
   
- **Général** - Les options suivantes s'appliquent à la publication entière.  
+ **Général** - Les options suivantes s’appliquent à la publication entière.  
   
 1.  **Convertir les UDDT en types de base** - Lorsque cette option a la valeur **True**, les types de données définis par l’utilisateur (UDDT) sont convertis en types de données de base sous-jacents, ceux-là même qui ont été utilisés pour les créer. Utilisez **True** lorsque l'UDDT n'existe pas dans la base de données où le script s'exécutera. Lorsque cette option a la valeur **False**, les UDDT sont utilisés. La valeur par défaut est **False**.  
   
@@ -265,7 +265,7 @@ Pour un tutoriel plus détaillé sur l’utilisation de l’Assistant Générer 
   
 12. **Types de données à publier** - Sélectionne ce qui doit être inclus dans le script : **Données seulement**, **Schéma uniquement** ou les deux. La valeur par défaut est **Schéma et données**.  
   
- **Options de publication** - Spécifie s'il faut utiliser des transactions lors de la publication au fournisseur de serveur Web.  
+ **Options de publication** - Spécifie s’il faut utiliser des transactions lors de la publication dans le fournisseur de serveur web.  
   
 1.  **Publier à l’aide d’une transaction** - Utilise les transactions lors de la publication sur un fournisseur d’hébergement web distant. Si la base de données cible ne peut pas terminer la publication, les transactions sont restaurées. La valeur par défaut est **True**.  
   
@@ -340,7 +340,7 @@ Pour un tutoriel plus détaillé sur l’utilisation de l’Assistant Générer 
  
 ## <a name="generating-scripts-on-azure-sql-data-warehouse"></a>Génération de scripts dans Azure SQL Data Warehouse  
 
-Si la syntaxe générée lors de l’utilisation de « Script comme » ne ressemble pas à la syntaxe [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] ou si vous recevez un message d’erreur, vous devrez peut-être définir vos options de script dans SQL Server Management Studio sur [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)].  
+Si la syntaxe générée par l’utilisation de « Script comme » ne ressemble pas à la syntaxe [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] ou si vous recevez un message d’erreur, vous devrez peut-être définir vos options de script dans SQL Server Management Studio sur [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)].  
 
 ### <a name="how-to-set-default-scripting-options-to-sql-data-warehouse"></a>Comment définir les options de script par défaut sur SQL Data Warehouse  
 

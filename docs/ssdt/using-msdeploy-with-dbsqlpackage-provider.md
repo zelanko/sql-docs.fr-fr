@@ -11,12 +11,12 @@ ms.assetid: 213b91ab-03e9-431a-80f0-17eed8335abe
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 06df375e2887a58ed00370989921b654497afa84
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: b4e9112840f6329bd846c62bd7f8dbb8b5d99340
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670138"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520952"
 ---
 # <a name="using-msdeploy-with-dbsqlpackage-provider"></a>Utilisation de MSDeploy avec le fournisseur dbSqlPackage
 **DbSqlPackage**est un fournisseur **MSDeploy** qui vous permet d'interagir avec des bases de données SQL Server/SQL Azure. **DbSqlPackage** prend en charge les actions suivantes :  
@@ -39,16 +39,16 @@ Pour plus d’informations concernant DACFx, consultez la documentation sur l’
   
 ```  
   
-MSDeploy –verb: MSDeploy-verb –source:dbSqlPackage="Input"[,dbSqlPackage-source-parameters] –dest:dpSqlPackage="Input"[,dbSqlPackage-target-parameters]  
+MSDeploy -verb: MSDeploy-verb -source:dbSqlPackage="Input"[,dbSqlPackage-source-parameters] -dest:dpSqlPackage="Input"[,dbSqlPackage-target-parameters]  
 ```  
   
 ## <a name="ms-deploy-verbs"></a>Verbes MS-Deploy  
-Vous devez spécifier les verbes MS-Deploy à l'aide du commutateur **-verb** depuis la ligne de commande MS-Deploy. Le fournisseur **dbSqlPackage** prend en charge les verbes **MSDeploy** suivants :  
+Vous devez spécifier les verbes MS-Deploy à l’aide du commutateur **-verb** à partir de la ligne de commande MS-Deploy. Le fournisseur **dbSqlPackage** prend en charge les verbes **MSDeploy** suivants :  
   
 |Verbe|Description|  
 |--------|---------------|  
-|dump|Fournit les informations (y compris le nom, le numéro de version et la description) relatives à une base de données source contenue dans un fichier .dacpac. Spécifiez la base de données source depuis la ligne de commande en utilisant le format suivant :<br /><br />**msdeploy –verb:dump –source:dbSqlPackage=”***.dacpac-file-path***”**|  
-|sync|Spécifie les actions dbSqlPackage depuis la ligne de commande en utilisant le format suivant :<br /><br />**msdeploy –verb:sync –source:dbSqlPackage**=”input” *[,DbSqlPackage-source-parameters] -***dest:dbSqlPackage**=”input” *[,DbSqlPackage-destination-parameters]*<br /><br />Pour obtenir les paramètres source et de destination valide pour le verbe sync, consultez les sections ci-dessous.|  
+|dump|Fournit les informations (y compris le nom, le numéro de version et la description) relatives à une base de données source contenue dans un fichier .dacpac. Spécifiez la base de données source depuis la ligne de commande en utilisant le format suivant :<br /><br />**msdeploy -verb:dump -source:dbSqlPackage="***.dacpac-file-path***"**|  
+|sync|Spécifie les actions dbSqlPackage depuis la ligne de commande en utilisant le format suivant :<br /><br />**msdeploy -verb:sync -source:dbSqlPackage**="input" *[,DbSqlPackage-source-parameters] -***dest:dbSqlPackage**="input" *[,DbSqlPackage-destination-parameters]*<br /><br />Pour obtenir les paramètres source et de destination valide pour le verbe sync, consultez les sections ci-dessous.|  
   
 ## <a name="dbsqlpackage-source"></a>Source dbSqlPackage  
 Le fournisseur **dbSqlPackage** accepte une entrée qui correspond à une chaîne de connexion SQL Server/SQL Azure valide ou à un chemin d'accès à un fichier .dacpac présent sur le disque.  La syntaxe de spécification de la source d'entrée pour le fournisseur est la suivante :  
@@ -134,7 +134,7 @@ Les paramètres **Destination** suivants sont disponibles pour toutes les opéra
 |**IgnoreLockHintsOnIndexes= {True &#124; False}**|**False**|Spécifie si les différences situées au niveau des indicateurs de verrou des index doivent être ignorées ou mises à jour au moment de la publication vers une base de données.|  
 |**IgnoreLoginSids= {True &#124; False}**|**True**|Spécifie si les différences situées au niveau de l'identificateur de sécurité (SID) doivent être ignorées ou mises à jour au moment de la publication vers une base de données.|  
 |**IgnoreNotForReplication= {True &#124; False}**|**False**|Spécifie si les différences situées au niveau du paramètre Pas pour la réplication doivent être ignorées ou mises à jour au moment de la publication vers une base de données.|  
-|**IgnoreObjectPlacementOnPartitionScheme= {True &#124; False}**|**True**|Spécifie si les différences situées au niveau du positionnement d'un objet au sein du schéma de partition doivent être ignorées ou mises à jour au moment de la publication vers une base de données.|  
+|**IgnoreObjectPlacementOnPartitionScheme= {True &#124; False}**|**True**|Spécifie si les différences situées au niveau du positionnement d’un objet au sein du schéma de partition doivent être ignorées ou mises à jour au moment de la publication dans une base de données.|  
 |**IgnorePartitionSchemes= {True &#124; False}**|**False**|Spécifie si les différences situées au niveau des schémas et des fonctions de partition doivent être ignorées ou mises à jour au moment de la publication vers une base de données.|  
 |**IgnorePermissions= {True &#124; False}**|**False**|Spécifie si les différences situées au niveau des autorisations doivent être ignorées ou mises à jour au moment de la publication vers une base de données.|  
 |**IgnoreQuotedIdentifiers= {True &#124; False}**|**False**|Spécifie si les différences situées au niveau des paramètres des identificateurs entre guillemets doivent être ignorées ou mises à jour au moment de la publication vers une base de données.|  
@@ -183,24 +183,24 @@ Les paramètres **Destination** suivants sont disponibles uniquement pour les op
 Ce qui suit est un exemple de syntaxe pour une opération **Extraire** utilisant **dbSqlPackage** :  
   
 ```  
-MSDeploy.exe –verb:sync –source:dbSqlPackage="<source connection string>”,<source parameter> –dest:dbSqlPackage="<target dacpac file path>”  
+MSDeploy.exe -verb:sync -source:dbSqlPackage="<source connection string>",<source parameter> -dest:dbSqlPackage="<target dacpac file path>"  
 ```  
   
 Ce qui suit est un exemple de syntaxe pour une opération **Publier** utilisant **dbSqlPackage** :  
   
 ```  
-MSDeploy.exe –verb:sync –source:dbSqlPackage="<source dacpac file path>" –dest:dbSqlPackage="<target SQL Server/SQL Azure connection string>",Action=Publish,<destination parameters>  
+MSDeploy.exe -verb:sync -source:dbSqlPackage="<source dacpac file path>" -dest:dbSqlPackage="<target SQL Server/SQL Azure connection string>",Action=Publish,<destination parameters>  
 ```  
   
 Ce qui suit est un exemple de syntaxe pour une opération **DeployReport** utilisant **dbSqlPackage** :  
   
 ```  
-MSDeploy.exe –verb:sync –source:dbSqlPackage="<source dacpac file path>" –dest:dbSqlPackage="<target SQL Server/SQL Azure connection string>",Action=DeployReport,OutputPath="<path to output XML file>",<destination parameters>  
+MSDeploy.exe -verb:sync -source:dbSqlPackage="<source dacpac file path>" -dest:dbSqlPackage="<target SQL Server/SQL Azure connection string>",Action=DeployReport,OutputPath="<path to output XML file>",<destination parameters>  
 ```  
   
 Ce qui suit est un exemple de syntaxe pour une opération **Script** utilisant **dbSqlPackage** :  
   
 ```  
-MSDeploy.exe –verb:sync –source:dbSqlPackage="<source dacpac file path>" –dest:dbSqlPackage="<target SQL Server/SQL Azure connection string>",Action=Script,OutputPath="<path to output sql script>",<destination parameters>  
+MSDeploy.exe -verb:sync -source:dbSqlPackage="<source dacpac file path>" -dest:dbSqlPackage="<target SQL Server/SQL Azure connection string>",Action=Script,OutputPath="<path to output sql script>",<destination parameters>  
 ```  
   

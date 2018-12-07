@@ -15,12 +15,12 @@ ms.assetid: a9f9e41a-2461-4845-b947-58b3a205543f
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 97c774afa437340e584a0b2f94e6170fe7ca94fe
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1e265ee9e55f11249ce84d15a2e0851d8d03752a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806513"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52404494"
 ---
 # <a name="business-rules-master-data-services"></a>Règles d'entreprise (Master Data Services)
 
@@ -37,7 +37,7 @@ ms.locfileid: "47806513"
   
  Pour utiliser des règles d'entreprise vous devez d'abord les créer et les publier, puis appliquer les règles publiées aux données. Vous pouvez appliquer des règles à des sous-ensembles de données ou à toutes les données d'une version en validant la version. Une version ne peut pas être validée tant que tous les attributs n'ont pas passé la validation de la règle d'entreprise.  
   
- Si un utilisateur tente d'ajouter une valeur d'attribut qui n'a pas passé la validation de la règle d'entreprise, la valeur peut toujours être enregistrée. Vous pouvez examiner et corriger les problèmes de validation qui s'affichent dans [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].  
+ Si un utilisateur tente d’ajouter une valeur d’attribut qui n’a pas passé la validation de la règle d’entreprise, la valeur peut toujours être enregistrée. Vous pouvez examiner et corriger les problèmes de validation qui s'affichent dans [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].  
   
  Lorsque vous créez un package de déploiement de modèle, si vous souhaitez inclure des règles d'entreprise, vous devez inclure les données de la version dans le package.  
   

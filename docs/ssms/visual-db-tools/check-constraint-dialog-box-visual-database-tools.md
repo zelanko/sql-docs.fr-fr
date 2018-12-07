@@ -13,12 +13,12 @@ ms.assetid: ad0bbf7f-b0de-406a-bd0a-cb779816b101
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ca2831d69f454c1a8488946644c3f83ccac0ca29
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 45c47dcde8bfa7546c62741e1130b33b6883b316
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697618"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504011"
 ---
 # <a name="check-constraint-dialog-box-visual-database-tools"></a>Boîte de dialogue Contraintes de validation (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -50,7 +50,7 @@ Se développe pour afficher les propriétés de **Nom** et **Description**.
 Indique le nom de la contrainte de validation sélectionnée. Pour modifier le nom de cette contrainte, tapez directement le texte dans le champ de la propriété.  
   
 **Description**  
-Description de cette contrainte de validation. Vous pouvez modifier la description en la tapant dans le champ de propriété ou cliquer sur le bouton de sélection (**...**) qui s’affiche à droite du champ de propriété et modifier la description dans la boîte de dialogue **Propriété de la description** .  
+Description de cette contrainte de validation. Vous pouvez modifier la description en la tapant dans le champ de propriété ou cliquer sur le bouton de sélection (**...**) qui s’affiche à droite du champ de propriété et modifier la description dans la boîte de dialogue **Propriété de la description**.  
   
 **Catégorie Concepteur de tables**  
 Se développe pour afficher les propriétés de **Vérifier les données existantes à la création ou à la réactivation**, **Appliquer INSERTs et UPDATEs**et **Appliquer la réplication**.  

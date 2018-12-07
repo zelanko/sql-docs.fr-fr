@@ -13,12 +13,12 @@ ms.assetid: 55dd0946-bd67-4490-9971-12dfb5b9de94
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fca9cfa8f04e5c3c506e1c4ba6d0226c26db4711
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fc5fb2da6ab1d276ac4a5397b8ea9832878b1c5a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650217"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418030"
 ---
 # <a name="create-the-function-to-retrieve-the-change-data"></a>Créer la fonction de récupération des données modifiées
   Une fois que vous avez terminé le flux de contrôle d’un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] qui effectue un chargement incrémentiel des données modifiées, la tâche suivante consiste à créer une fonction table qui récupère les données modifiées. Vous ne devez créer cette fonction qu'une seule fois avant le premier chargement incrémentiel.  
@@ -133,9 +133,9 @@ deallocate #hfunctions
   
 -   Toutes les colonnes de données modifiées requises.  
   
--   Une colonne appelée __CDC_OPERATION qui utilise un champ à un ou deux caractères qui identifie l'opération associée à la ligne. Les valeurs valides pour ce champ sont les suivantes : « I » pour insert (insertion), « D » pour delete (suppression), « UO » pour update old values (mise à jour des anciennes valeurs) et « UN » pour update old values (mise à jour des nouvelles valeurs).  
+-   Une colonne appelée __CDC_OPERATION qui utilise un champ à un ou deux caractères qui identifie l'opération associée à la ligne. Les valeurs valides pour ce champ sont les suivantes : « I » pour insert (insertion), « D » pour delete (suppression), « UO » pour update old values (mise à jour des anciennes valeurs) et « UN » pour update new values (mise à jour des nouvelles valeurs).  
   
--   Indicateurs de mise à jour, lorsque vous les demandez, qui apparaissent sous la forme de colonnes de bits après le code d'opération et dans l'ordre spécifié dans le paramètre *@update_flag_list* . Ces colonnes sont nommées en ajoutant « _uflag » au nom de colonne associé.  
+-   Indicateurs de mise à jour, lorsque vous les demandez, qui apparaissent sous la forme de colonnes de bits après le code d'opération et dans l'ordre spécifié dans le paramètre *@update_flag_list* . Ces colonnes sont nommées en ajoutant « _uflag » au nom de colonne associé.  
   
  Si votre package appelle une fonction wrapper qui interroge toutes les modifications, elle retourne également les colonnes __CDC_STARTLSN et \__CDC_SEQVAL. Ces deux colonnes deviennent les première et deuxième colonnes, respectivement, du jeu de résultats. La fonction wrapper trie également le jeu de résultats en fonction de ces deux colonnes.  
   

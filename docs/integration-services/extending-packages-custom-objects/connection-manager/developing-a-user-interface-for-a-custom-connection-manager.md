@@ -14,17 +14,17 @@ ms.assetid: 908bf2ac-fc84-4af8-a869-1cb43573d2df
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ae1f86ce6127a963256bfb88f00621af1fb2cb14
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 963c6f24cd5aea9e84544b1b3d0e05045f8aa588
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681656"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511339"
 ---
 # <a name="developing-a-user-interface-for-a-custom-connection-manager"></a>Développement d'une interface utilisateur pour un gestionnaire de connexions personnalisé
   Après avoir remplacé l'implémentation des propriétés et méthodes de la classe de base afin de fournir vos fonctionnalités personnalisées, vous pouvez créer une interface utilisateur personnalisée pour votre gestionnaire de connexions. Si vous ne créez pas d'interface utilisateur personnalisée, les utilisateurs peuvent configurer votre gestionnaire de connexions uniquement en utilisant la fenêtre Propriétés.  
   
- Dans un projet d'interface utilisateur ou d'assembly personnalisé, vous avez normalement deux classes : une classe qui implémente l'objet <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI> et le formulaire Windows qu'il affiche pour collecter des informations auprès de l'utilisateur.  
+ Dans un projet d’interface utilisateur ou d’assembly personnalisé, vous avez normalement deux classes : une classe qui implémente l’objet <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI> et le formulaire Windows qu’il affiche pour collecter des informations auprès de l’utilisateur.  
   
 > [!IMPORTANT]  
 >  Après avoir signé et généré votre interface utilisateur personnalisée, puis l’avoir installée dans le Global Assembly Cache comme décrit dans [Codage d’un gestionnaire de connexions personnalisé](../../../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md), n’oubliez pas de fournir le nom complet de cette classe dans la propriété <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute.UITypeName%2A> de la classe <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute>.  

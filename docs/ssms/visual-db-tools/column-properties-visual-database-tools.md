@@ -17,12 +17,12 @@ ms.assetid: e549a2a8-4154-4ec8-b146-614564169b39
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5ce67b078a4410f67a1c877951e83dece65af1b6
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: b6914306472ae5eb438c8d7384f2a5e0d9128c17
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51698777"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527083"
 ---
 # <a name="column-properties-visual-database-tools"></a>Propriétés de la colonne (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -113,7 +113,7 @@ Affiche le nombre maximal de chiffres qui peuvent apparaître à droite de la vi
 S'étend pour afficher les propriétés restantes.  
   
 **Classement**  
-Affiche le paramètre de classement pour la colonne sélectionnée. Pour modifier ce paramètre, cliquez sur **Classement** , puis sur les points de suspension **(…)** à droite de la valeur.  
+Affiche le paramètre de classement pour la colonne sélectionnée. Pour modifier ce paramètre, cliquez sur **Classement**, puis sur le bouton de sélection **(…)** à droite de la valeur.  
   
 **Catégorie Spécification de la colonne calculée**  
 Peut être développée pour afficher les propriétés **Formule** et **Est persistant**. Si la colonne est calculée, la formule est également affichée. Pour modifier la formule, développez cette catégorie et modifiez-la dans la propriété **Formule** .  
@@ -128,7 +128,7 @@ Permet d'enregistrer la colonne calculée avec la source de données. Une colonn
 Affiche les informations relatives au type de données contenu dans le champ, selon le même format que l'instruction SQL CREATE TABLE. Par exemple, un champ contenant une chaîne de longueur variable d'une longueur maximale de 20 caractères serait représenté comme « varchar(20) ». Pour modifier cette propriété, tapez directement la valeur.  
   
 **Description**  
-Affiche la description de la colonne. Pour afficher la description complète ou pour la modifier, cliquez sur Description, puis sur les points de suspension **(…)** à droite de la propriété.  
+Affiche la description de la colonne. Pour afficher la description complète ou pour la modifier, cliquez sur Description, puis sur le bouton de sélection **(…)** à droite de la propriété.  
   
 **Catégorie Spécification de texte intégral**  
 Peut être développée pour afficher les propriétés spécifiques aux colonnes de texte intégral.  

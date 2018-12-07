@@ -19,12 +19,12 @@ ms.assetid: 4b0c002e-1ffd-4425-a980-11fdc1f24af7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 45d5aa53bc64b8146b4afe8de98d8136c0abbec8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d30c93cd56467c6137db647e52ea97f2cc7641ac
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818317"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509584"
 ---
 # <a name="all-transact-sql"></a>ALL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ scalar_expression { = | <> | != | > | >= | !> | < | <= | !< } ALL ( subquery )
  **Booléen**  
   
 ## <a name="result-value"></a>Valeur des résultats  
- Retourne la valeur TRUE lorsque la comparaison spécifiée a la valeur TRUE pour toutes les paires (*scalar_expression ***,*** x)*, quand *x* est une valeur du jeu de valeurs de la colonne ; dans le cas contraire, la valeur FALSE est retournée.  
+ Retourne la valeur TRUE quand la comparaison spécifiée a la valeur TRUE pour toutes les paires (_scalar_expression_**,**_x)_, quand *x* est une valeur du jeu de valeurs de la colonne ; dans le cas contraire, la valeur FALSE est retournée.  
   
 ## <a name="remarks"></a>Notes   
  ALL requiert que l’argument *scalar_expression* corresponde à toutes les valeurs retournées par la sous-requête. Par exemple, si la sous-requête retourne les valeurs 2 et 3, *scalar_expression* < = ALL (sous-requête) a la valeur TRUE pour une *scalar_expression* égale à 2. Si la sous-requête retourne les valeurs 2 et 3, l’instruction *scalar_expression* = ALL (sous-requête) donne FALSE comme résultat étant donné que certaines des valeurs de la sous-requête (à savoir 3) ne répondent pas aux critères de l’expression.  

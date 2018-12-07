@@ -16,12 +16,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e8ee65149173effd4ec43965dc56cdf9e308f23b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9ce984371d1dd618c7a99b081667115208b7afb7
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833037"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52406466"
 ---
 # <a name="recompile-a-stored-procedure"></a>Recompiler une procédure stockée
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "47833037"
   
 ###  <a name="Recommendations"></a> Recommandations  
   
--   Lorsqu'une procédure est compilée pour la première fois ou recompilée, son plan de requête est optimisé pour l'état actuel de la base de données et de ses objets. Si une base de données subit des modifications significatives au niveau de ses données ou de sa structure, le fait de recompiler la procédure met à jour et optimise son plan de requête en fonction ces modifications. Cela peut améliorer les performances de traitement de la procédure.  
+-   Quand une procédure est compilée pour la première fois ou recompilée, son plan de requête est optimisé pour l’état actuel de la base de données et de ses objets. Si une base de données subit des modifications significatives au niveau de ses données ou de sa structure, la recompilation de la procédure a pour effet de mettre à jour et d’optimiser son plan de requête en fonction de ces modifications. Les performances de traitement de la procédure peuvent s’en trouver améliorées.  
   
 -   Parfois, la recompilation de procédure doit être forcée, et parfois elle se produit automatiquement. La recompilation automatique se produit chaque fois que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] redémarre. Elle se produit également si une table sous-jacente référencée par la procédure a été modifiée au niveau de sa conception physique.  
   
@@ -105,7 +105,7 @@ AS
   
 3.  Copiez et collez l'exemple suivant dans la fenêtre de requête, puis cliquez sur **Exécuter**. Cet exemple crée une procédure simple qui retourne tous les employés (prénom et nom), leur poste et le nom de leur service à partir d'une vue.  
   
-     Puis, copiez et collez le second exemple de code dans la fenêtre de requête et cliquez sur **Exécuter**. Cela exécute la procédure et recompile son plan de requête.  
+     Puis, copiez et collez le second exemple de code dans la fenêtre de requête et cliquez sur **Exécuter**. La procédure est alors exécutée et son plan de requête recompilé.  
   
 ```sql  
 USE AdventureWorks2012;  

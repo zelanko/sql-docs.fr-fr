@@ -20,12 +20,12 @@ ms.assetid: f212397d-1bfd-496b-a246-668952891d09
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2684a24c333014ee351359ee229d32603ee11acd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bc8f5b10cd0dce7b3d9b6e8acc5b6018eff0e85a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833397"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515461"
 ---
 # <a name="monitor-performance-with-replication-monitor"></a>Analyser les performances avec le Moniteur de réplication
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ ms.locfileid: "47833397"
   
     |Excellent|Bonne|Correcte|Médiocre|Critique|  
     |---------------|----------|----------|----------|--------------|  
-    |0 – 34%|35 – 59%|60 – 84%|85 – 99%|100% +|  
+    |0 - 34 %|35 - 59 %|60 - 84 %|85 - 99 %|100% +|  
   
 -   Pour la réplication de fusion, la qualité des performances est indépendante des seuils (le seuil de traitement des lignes détermine si la valeur **Critique pour les performances** est affichée dans la colonne **État** ). La qualité des performances est déterminée en comparant la performance d'abonnements individuels à la performance historique moyenne des abonnements à la publication avec le même type de connexion (d'accès distant ou LAN). Le moniteur de réplication affiche une valeur après cinq synchronisations avec au moins 50 modifications chacune via le même type de connexion. S'il y a eu moins de cinq synchronisations comprenant 50 modifications ou plus ou que la synchronisation la plus récente inclut moins de 50 modifications, il n'affiche pas de valeur.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "47833397"
   
     |Excellent|Bonne|Correcte|Médiocre|  
     |---------------|----------|----------|----------|  
-    |151+%|76 – 150%|26 – 75%|0 – 25%|  
+    |151+%|76 - 150 %|26 - 75 %|0 - 25 %|  
   
  Pour plus d’informations, consultez [Afficher des informations et effectuer des tâches pour un abonnement &#40;moniteur de réplication&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md).  
   
@@ -100,6 +100,6 @@ ms.locfileid: "47833397"
   
 ## <a name="see-also"></a> Voir aussi  
  [Surveillance de la réplication](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)   
- [Définir des seuils et des avertissements dans le moniteur de réplication](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)  
+ [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)  
   
   

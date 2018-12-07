@@ -1,7 +1,7 @@
 ---
 title: Trace SQL | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 11/27/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -11,30 +11,32 @@ ms.assetid: 83c6d1d9-19ce-43fe-be9a-45aaa31f20cb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fc3432906e9d96b10def455aea07d4ef22cfe89d
-ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
+ms.openlocfilehash: de20ad37cf5393f2498f00b7d5b1e78bd5285b34
+ms.sourcegitcommit: 60739bcb48ccce17bca4e11a85df443e93ca23e3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51571448"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52439801"
 ---
 # <a name="sql-trace"></a>Trace SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Dans la trace SQL, les événements sont collectés si ce sont des instances de classes d'événements répertoriées dans la définition de la trace. Ces événements peuvent être extraits de la trace par filtrage ou placés dans la file d'attente de leur destination. La destination peut être un fichier ou des objets SMO ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Object), qui peuvent utiliser les informations de la trace dans les applications gérant [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+Dans la trace SQL, les événements sont collectés si ce sont des instances de classes d'événements répertoriées dans la définition de la trace. Ces événements peuvent être extraits de la trace par filtrage ou placés dans la file d'attente de leur destination. La destination peut être un fichier ou des objets SMO ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Object), qui peuvent utiliser les informations de la trace dans les applications gérant [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-> [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Utilisez plutôt des événements étendus.  
-  
+> [!IMPORTANT]
+> Trace SQL et [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] sont déconseillés. L’espace de noms *Microsoft.SqlServer.Management.Trace* qui contient les objets Trace et Replay Microsoft SQL Server est aussi déconseillé. 
+> [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 
+> Utilisez plutôt des événements étendus. Pour plus d’informations sur les [événements étendus](../../relational-databases/extended-events/extended-events.md), consultez [Démarrage rapide : événements étendus dans SQL Server](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md) et [SSMS XEvent Profiler](../../relational-databases/extended-events/use-the-ssms-xe-profiler.md).
+
 ## <a name="benefits-of-sql-trace"></a>Avantages de Trace SQL  
- Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit des procédures stockées système [!INCLUDE[tsql](../../includes/tsql-md.md)] pour créer des traces sur une instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Ces procédures stockées système permettent, à partir de vos propres applications, de créer des traces manuellement au lieu d'utiliser le [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Vous pouvez ainsi écrire des applications personnalisées spécifiques des besoins de votre entreprise.  
+Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit des procédures stockées système [!INCLUDE[tsql](../../includes/tsql-md.md)] pour créer des traces sur une instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Ces procédures stockées système permettent, à partir de vos propres applications, de créer des traces manuellement au lieu d'utiliser le [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Vous pouvez ainsi écrire des applications personnalisées spécifiques des besoins de votre entreprise.  
   
 ## <a name="sql-trace-architecture"></a>Architecture de Trace SQL  
- Les sources d'événement peuvent être n'importe quelle source produisant l'événement de trace, telle que des traitements [!INCLUDE[tsql](../../includes/tsql-md.md)] , ou bien des événements [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , comme des blocages par exemple. Pour plus d’informations sur les événements, consultez [Référence de classe d’événements SQL Server](../../relational-databases/event-classes/sql-server-event-class-reference.md). Dès qu'un événement se produit, si la classe d'événements a été incluse dans une définition de trace, les informations relatives à l'événement sont collectées par la trace. Si des filtres ont été définis pour la classe d'événements dans la définition de la trace, ils sont appliqués et les informations relatives aux événements de la trace sont transmises à une file d'attente. À partir de la file d'attente, les informations de la trace sont écrites dans un fichier ou peuvent être utilisées par un objet SMO dans des applications telles que le [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Le schéma suivant montre comment la trace SQL collecte les événements lors d'un traçage.  
+Les sources d'événement peuvent être n'importe quelle source produisant l'événement de trace, telle que des traitements [!INCLUDE[tsql](../../includes/tsql-md.md)] , ou bien des événements [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , comme des blocages par exemple. Pour plus d’informations sur les événements, consultez [Référence de classe d’événements SQL Server](../../relational-databases/event-classes/sql-server-event-class-reference.md). Dès qu'un événement se produit, si la classe d'événements a été incluse dans une définition de trace, les informations relatives à l'événement sont collectées par la trace. Si des filtres ont été définis pour la classe d'événements dans la définition de la trace, ils sont appliqués et les informations relatives aux événements de la trace sont transmises à une file d'attente. À partir de la file d'attente, les informations de la trace sont écrites dans un fichier ou peuvent être utilisées par un objet SMO dans des applications telles que le [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Le schéma suivant montre comment la trace SQL collecte les événements lors d'un traçage.  
   
- ![Processus de suivi d’événements du moteur de base de données](../../relational-databases/sql-trace/media/tracarch.gif "Processus de suivi d’événements du moteur de base de données")  
+![Processus de suivi d’événements du moteur de base de données](../../relational-databases/sql-trace/media/tracarch.gif "Processus de suivi d’événements du moteur de base de données")  
   
 ## <a name="sql-trace-terminology"></a>Terminologie associée à Trace SQL  
- Les termes suivants décrivent les concepts fondamentaux de Trace SQL.  
+Les termes suivants décrivent les concepts fondamentaux de Trace SQL.  
   
  **Événement**  
  Action survenue dans une instance de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
@@ -70,7 +72,7 @@ ms.locfileid: "51571448"
  Dans [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], table créée lorsqu'une trace est enregistrée dans une table.  
   
 ## <a name="use-data-columns-to-describe-returned-events"></a>Utiliser des colonnes de données pour décrire les événements renvoyés  
- La trace SQL utilise les colonnes de données du résultat de la trace pour décrire les événements qui sont renvoyés lors de son exécution. Le tableau suivant décrit les colonnes de données de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] , qui sont les mêmes que celles utilisées par la trace SQL, et indique les colonnes sélectionnées par défaut.  
+La trace SQL utilise les colonnes de données du résultat de la trace pour décrire les événements qui sont renvoyés lors de son exécution. Le tableau suivant décrit les colonnes de données de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] , qui sont les mêmes que celles utilisées par la trace SQL, et indique les colonnes sélectionnées par défaut.  
   
 |Colonne de données|Numéro de colonne|Description|  
 |-----------------|-------------------|-----------------|  

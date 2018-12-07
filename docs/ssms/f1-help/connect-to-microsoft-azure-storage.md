@@ -14,12 +14,12 @@ ms.assetid: ''
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ff61f3f69b5ce5c73a96d6f9c06141e5bd17f75a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cd9af00c06b2e999ec38d201e11fe305f7bb4e71
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47839377"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523569"
 ---
 # <a name="connect-to-microsoft-azure-storage"></a>Se connecter au service Stockage Microsoft Azure
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +39,7 @@ Spécifiez les informations suivantes sur votre compte Windows Azure, puis cliqu
 
 2.  **Clé de compte** - Indiquez la clé de compte pour le compte de stockage spécifié.  
   
-3.  **Utiliser des points de terminaison sécurisés (HTTPS)** – Cette option utilise la communication chiffrée et l’identification sécurisée d’un serveur web du réseau.  
+3.  **Utiliser des points de terminaison sécurisés (HTTPS)** - Cette option utilise la communication chiffrée et l’identification sécurisée d’un serveur web du réseau.  
   
 4.  **Enregistrer la clé de compte** - Cette option enregistre votre mot de passe dans un fichier chiffré.  
   

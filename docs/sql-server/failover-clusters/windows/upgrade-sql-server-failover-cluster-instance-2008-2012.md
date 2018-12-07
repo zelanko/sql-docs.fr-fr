@@ -11,12 +11,12 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e4d12f59b94771a73f6f3b5db5290747940c768d
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 1c72f5294a7727b7d5a7903e0c12f8daa8c93cbf
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700937"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52394146"
 ---
 # <a name="upgrade-sql-server-instances-running-on-windows-server-20082008-r22012-clusters"></a>Mettre à niveau les instances de SQL Server s’exécutant sur des clusters Windows Server 2008/2008 R2/2012
 
@@ -107,11 +107,11 @@ Si vous avez un environnement [!INCLUDE[ssNoVersion](../../../includes/ssnoversi
 
 7.  Copiez les bases de données système à partir des ordinateurs d’origine sur leur ordinateur cible parallèle.
 
-8.  Dans l’environnement d’origine dans le Gestionnaire du cluster de basculement, remplacez le nom de la ressource de nom du serveur de chaque rôle d’instance de cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
+8.  Dans l’environnement d’origine, dans le Gestionnaire du cluster de basculement, remplacez le nom de la ressource « Nom du serveur » de chaque rôle FCI [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
 
 9.  Maintenant, remettez juste la ressource de nom du serveur renommée en ligne pour chacun des rôles d’instance de cluster de basculement SQL.
 
-10. Maintenant, sur le cluster cible dans le Gestionnaire du cluster de basculement, réaffectez à la ressource de nom du serveur de chacun des rôles d’instance de cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] le nom précédemment détenu par le cluster d’origine.
+10. Maintenant, sur le cluster cible dans le Gestionnaire du cluster de basculement, réaffectez à la ressource de nom du serveur de chacun des rôles FCI [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] le nom précédemment détenu par le cluster d’origine.
 
     >[!NOTE]
     >Les erreurs qui surviennent parce que le nom est déjà détenu par un autre ordinateur ne s’affichent plus une fois que les enregistrements DNS pour le nom sont supprimés.
@@ -122,7 +122,7 @@ Si vous avez un environnement [!INCLUDE[ssNoVersion](../../../includes/ssnoversi
 
 ## <a name="scenario-3-windows-cluster-has-both-sql-fcis-and-sql-server-availability-groups"></a>Scénario 3 : Le cluster Windows dispose à la fois d’instances de cluster de basculement SQL et de groupes de disponibilité SQL Server
 
-Si vous avez un programme d’installation [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui n’utilise aucune instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] autonome, uniquement des instances de cluster de basculement SQL contenues dans au moins un groupe de disponibilité, vous pouvez effectuer cette migration vers un nouveau cluster à l’aide de méthodes similaires à celles du scénario « aucun groupe de disponibilité, aucune instance autonome ». Avant de copier des tables système sur les disques partagés d’instance de cluster de basculement cible, vous devez supprimer tous les groupes de disponibilité dans l’environnement d’origine. Une fois que toutes les bases de données ont été migrées vers les ordinateurs cibles, vous allez recréer les groupes de disponibilité avec les mêmes noms de schéma et d’écouteur. Ce faisant, les ressources de cluster de basculement Windows Server sont correctement formées et gérées sur le cluster cible. **Always On doit être activé dans le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur chaque ordinateur dans l’environnement cible avant la migration.**
+Si vous avez un programme d’installation [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui n’utilise aucune instance autonome de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], uniquement des instances de cluster de basculement SQL contenues dans au moins un groupe de disponibilité, vous pouvez effectuer cette migration vers un nouveau cluster à l’aide de méthodes similaires à celles du scénario « aucun groupe de disponibilité, aucune instance autonome ». Avant de copier des tables système sur les disques partagés d’instance de cluster de basculement cible, vous devez supprimer tous les groupes de disponibilité dans l’environnement d’origine. Une fois que toutes les bases de données ont été migrées vers les ordinateurs cibles, vous allez recréer les groupes de disponibilité avec les mêmes noms de schéma et d’écouteur. Ce faisant, les ressources de cluster de basculement Windows Server sont correctement formées et gérées sur le cluster cible. **Always On doit être activé dans le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur chaque ordinateur dans l’environnement cible avant la migration.**
 
 ### <a name="to-perform-the-upgrade"></a>Pour effectuer la mise à niveau
 
@@ -142,11 +142,11 @@ Si vous avez un programme d’installation [!INCLUDE[ssNoVersion](../../../inclu
 
 8.  Copiez les bases de données système à partir des ordinateurs d’origine sur leur ordinateur cible parallèle.
 
-9.  Dans l’environnement d’origine dans le Gestionnaire du cluster de basculement, remplacez le nom de la ressource de nom du serveur de chaque rôle d’instance de cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
+9.  Dans l’environnement d’origine, dans le Gestionnaire du cluster de basculement, remplacez le nom de la ressource « Nom du serveur » de chaque rôle FCI [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
 
 10. Maintenant, remettez juste la ressource de nom du serveur renommée en ligne pour chacun des rôles d’instance de cluster de basculement SQL.
 
-11. Maintenant, sur le cluster cible dans le Gestionnaire du cluster de basculement, réaffectez à la ressource de nom du serveur de chacun des rôles d’instance de cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] le nom précédemment détenu par le cluster d’origine.
+11. Maintenant, sur le cluster cible dans le Gestionnaire du cluster de basculement, réaffectez à la ressource de nom du serveur de chacun des rôles FCI [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] le nom précédemment détenu par le cluster d’origine.
 
 12. Une fois que toutes les instances de cluster de basculement ont été renommées, redémarrez tous les ordinateurs dans le nouveau cluster.
 
@@ -160,7 +160,7 @@ Si vous avez un programme d’installation [!INCLUDE[ssNoVersion](../../../inclu
 
 ## <a name="scenario-4-windows-cluster-with-standalone-sql-server-instances-and-no-availability-groups"></a>Scénario 4 : Cluster Windows avec des instances SQL Server autonomes et aucun groupe de disponibilité
 
-La migration d’un cluster avec des instances autonomes est similaire au processus de migration d’un cluster [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] avec uniquement des instances de cluster de basculement mais, au lieu de modifier le nom de réseau virtuel de la ressource de cluster de l’instance de cluster de basculement, vous changez le nom de l’ordinateur autonome d’origine et « volez » le nom de l’ancien ordinateur sur l’ordinateur cible. Cette opération génère un temps d’arrêt supplémentaire par rapport aux scénarios sans instance autonome, car vous ne pouvez pas joindre l’ordinateur autonome cible au cluster WSFC tant que vous n’avez pas obtenu le nom de réseau de l’ancien ordinateur.
+La migration d’un cluster avec des instances autonomes est similaire au processus de migration d’un cluster [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] avec uniquement des instances de cluster de basculement mais, au lieu de modifier le nom de réseau virtuel de la ressource de cluster de l’instance de cluster de basculement, vous changez le nom de l’ordinateur autonome d’origine et « volez » le nom de l’ancien ordinateur sur l’ordinateur cible. Cette opération génère un temps d’arrêt supplémentaire par rapport aux scénarios sans instance autonome, car vous ne pouvez pas joindre l’ordinateur autonome cible au cluster WSFC tant que vous n’avez pas obtenu le nom de réseau de l’ancien ordinateur.
 
 ###  <a name="to-perform-the-upgrade"></a>Pour effectuer la mise à niveau
 
@@ -180,7 +180,7 @@ La migration d’un cluster avec des instances autonomes est similaire au proces
 
 8.  Copiez les bases de données système sur les ordinateurs cibles.
 
-9.  Dans l’environnement d’origine dans le Gestionnaire du cluster de basculement, affectez un nouveau nom unique à la ressource de nom du serveur de chaque rôle d’instance de cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
+9.  Dans l’environnement d’origine dans le Gestionnaire du cluster de basculement, affectez un nouveau nom unique à la ressource « Nom du serveur » de chaque rôle FCI [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
 
 10. Maintenant, remettez juste la ressource de nom du serveur renommée en ligne pour chacun des rôles d’instance de cluster de basculement SQL.
 
@@ -188,7 +188,7 @@ La migration d’un cluster avec des instances autonomes est similaire au proces
 
 12. Après le redémarrage, joignez tous les ordinateurs autonomes au cluster de basculement Windows Server cible.
 
-13. Maintenant, sur le cluster cible dans le Gestionnaire du cluster de basculement, réaffectez à la ressource de nom du serveur de chacun des rôles d’instance de cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] le nom précédemment détenu par le cluster d’origine.
+13. Maintenant, sur le cluster cible dans le Gestionnaire du cluster de basculement, réaffectez à la ressource de nom du serveur de chacun des rôles FCI [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] le nom précédemment détenu par le cluster d’origine.
 
 14. Une fois que toutes les instances de cluster de basculement ont été renommées, redémarrez tous les ordinateurs dans le nouveau cluster.
 
@@ -218,7 +218,7 @@ La migration d’un cluster qui utilise des groupes de disponibilité avec des r
 
 9.  Copiez les bases de données système sur les ordinateurs cibles.
 
-10. Dans l’environnement d’origine dans le Gestionnaire du cluster de basculement, affectez un nouveau nom unique à la ressource de nom du serveur de chaque rôle d’instance de cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
+10. Dans l’environnement d’origine dans le Gestionnaire du cluster de basculement, affectez un nouveau nom unique à la ressource « Nom du serveur » de chaque rôle FCI [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
 
 11. Maintenant, remettez juste la ressource de nom du serveur renommée en ligne pour chacun des rôles d’instance de cluster de basculement SQL.
 
@@ -226,7 +226,7 @@ La migration d’un cluster qui utilise des groupes de disponibilité avec des r
 
 13. Après le redémarrage, joignez tous les ordinateurs autonomes au cluster de basculement Windows Server cible.
 
-14. Maintenant, sur le cluster cible dans le Gestionnaire du cluster de basculement, réaffectez à la ressource de nom du serveur de chacun des rôles d’instance de cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] le nom précédemment détenu par le cluster d’origine.
+14. Maintenant, sur le cluster cible dans le Gestionnaire du cluster de basculement, réaffectez à la ressource de nom du serveur de chacun des rôles FCI [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] le nom précédemment détenu par le cluster d’origine.
 
 15. Une fois que toutes les instances de cluster de basculement ont été renommées, redémarrez tous les ordinateurs dans le nouveau cluster.
 

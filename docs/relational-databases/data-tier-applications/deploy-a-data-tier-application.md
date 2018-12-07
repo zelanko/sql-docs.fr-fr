@@ -22,12 +22,12 @@ ms.assetid: c117af35-aa53-44a5-8034-fa8715dc735f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c13158bf5790af4603f691936a0599ddef3c4deb
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 58fa8d8009806f22153a22d63ea83b238140d431
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43820245"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52517441"
 ---
 # <a name="deploy-a-data-tier-application"></a>Déployer une application de la couche Données
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ Le déploiement d'une DAC avec des connexions à [!INCLUDE[ssSDS](../../includes
   
 1.  Dans l' **Explorateur d'objets**, développez le nœud pour l'instance vers laquelle vous voulez déployer la DAC.  
   
-2.  Cliquez avec le bouton droit sur le nœud **Bases de données** , puis sélectionnez **Déployer une application de la couche Données...**.  
+2.  Cliquez avec le bouton droit sur le nœud **Bases de données**, puis sélectionnez **Déployer une application de la couche Données...**.  
   
 3.  Renseignez les boîtes de dialogue de l’Assistant, puis cliquez sur Terminer.
 Plus d’informations sur certaines pages de l’Assistant sont fournies ci-dessous : 

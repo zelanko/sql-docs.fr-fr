@@ -18,12 +18,12 @@ ms.assetid: 74bc40bb-9f57-44e4-8988-1d69c0585eb6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 791253a685908baf69fe789aabd199a5cad7e921
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 0775eb7bd5cb87c902a6871eeebd4409dbe0cf2f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600749"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531530"
 ---
 # <a name="configure-backup-on-availability-replicas-sql-server"></a>Configurer la sauvegarde sur des réplicas de disponibilité (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -188,8 +188,8 @@ ms.locfileid: "51600749"
 ```  
 IF (NOT sys.fn_hadr_backup_is_preferred_replica(@DBNAME))  
 BEGIN  
-      Select ‘This is not the preferred replica, exiting with success’;  
-      RETURN 0 – This is a normal, expected condition, so the script returns success  
+      Select 'This is not the preferred replica, exiting with success';  
+      RETURN 0 - This is a normal, expected condition, so the script returns success  
 END  
 BACKUP DATABASE @DBNAME TO DISK=<disk>  
    WITH COPY_ONLY;  
@@ -198,7 +198,7 @@ BACKUP DATABASE @DBNAME TO DISK=<disk>
  L'écriture d'un script de travail de sauvegarde à l'aide de cette logique vous permet de planifier le travail à exécuter sur chaque réplica de disponibilité sur la même planification. Chacun de ces travaux recherche les mêmes données pour déterminer quel est le travail à exécuter, de sorte qu'un seul des travaux planifiés passe à l'étape de sauvegarde.  En cas de basculement, aucun des scripts ou des travaux ne doit être modifié. De plus, si vous reconfigurez un groupe de disponibilité afin d'ajouter un réplica de disponibilité, la gestion du travail de sauvegarde nécessite simplement la copie ou la planification du travail de sauvegarde. Si vous supprimez un réplica de disponibilité, supprimez simplement le travail de sauvegarde de l'instance de serveur qui a hébergé ce réplica.  
   
 > [!TIP]  
->  Si vous utilisez l’[Assistant Plan de maintenance](../../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)pour créer un travail de sauvegarde donné, le travail inclut automatiquement la logique de script qui appelle et vérifie la fonction **sys.fn_hadr_backup_is_preferred_replica** . Toutefois, le travail de sauvegarde ne retourne pas le message « This is not the preferred replica… ». Assurez-vous de créer le ou les travaux pour chaque base de données de disponibilité sur chaque instance de serveur qui héberge un réplica de disponibilité pour le groupe de disponibilité.  
+>  Si vous utilisez l’[Assistant Plan de maintenance](../../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)pour créer un travail de sauvegarde donné, le travail inclut automatiquement la logique de script qui appelle et vérifie la fonction **sys.fn_hadr_backup_is_preferred_replica** . Cependant, le travail de sauvegarde ne va pas retourner le message indiquant qu’il ne s’agit pas du réplica par défaut. Veillez donc à créer le ou les travaux pour chaque base de données de disponibilité sur chacune des instances de serveur qui hébergent un réplica de disponibilité pour le groupe de disponibilité.  
   
 ##  <a name="ForInfoAboutBuPref"></a> Pour obtenir des informations sur les paramètres de préférence de la sauvegarde  
  Voici des ressources utiles pour obtenir des informations pertinentes sur la sauvegarde de réplicas secondaires.  

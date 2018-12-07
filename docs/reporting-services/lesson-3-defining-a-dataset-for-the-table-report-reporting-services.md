@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: ee93dfcb-8f52-4d63-b4f6-0d38e00fd350
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bc5ee5a106bf8b412f4096c06255be2e16f90a2f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 60f613e075c032faa9e81b30a48b9d6f630c0b5c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47594838"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516984"
 ---
 # <a name="lesson-3-defining-a-dataset-for-the-table-report-reporting-services"></a>Leçon 3 : définition d'un dataset destiné à un rapport de table (Reporting Services)
 Après avoir défini une source de données, vous devez spécifier un dataset. Dans [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], les données utilisées par les rapports sont contenues dans des *datasets*. Les datasets contiennent un pointeur qui renvoient à la source des données, la requête que doit utiliser le rapport ainsi que des champs et variables calculées.  
@@ -22,7 +22,7 @@ Utilisez le Concepteur de requêtes du Concepteur de rapports pour définir le d
   
 ### <a name="to-define-a-transact-sql-query-for-report-data"></a>Pour définir une requête Transact-SQL pour les données du rapport  
   
-1.  Dans le volet **Données du rapport** , cliquez sur **Nouveau**, puis sur **Dataset…**. La boîte de dialogue **Propriétés du dataset** s'ouvre.  
+1.  Dans le volet **Données de rapport**, cliquez sur **Nouveau**, puis sur **Dataset...**. La boîte de dialogue **Propriétés du dataset** s'ouvre.  
   
 2.  Dans la zone **Nom** , tapez **AdventureWorksDataset**.  
   

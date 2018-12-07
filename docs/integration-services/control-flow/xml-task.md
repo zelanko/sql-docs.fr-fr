@@ -17,12 +17,12 @@ ms.assetid: 9f761846-390e-46d5-9db7-858943d40849
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fb9fcf4c03fdf2fb17d69d2d0f0b624d111f7e3f
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: e5dcf629121edc7d4502b0cedbf9825e74813587
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639676"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530642"
 ---
 # <a name="xml-task"></a>Tâche XML
   La tâche XML est utilisée pour travailler avec des données XML. À l'aide de cette tâche, un package peut extraire des documents XML, appliquer des opérations aux documents en utilisant des feuilles de style XSLT (Extensible Stylesheet Language Transformations) et des expressions XPath, fusionner plusieurs documents, ou bien valider, comparer et enregistrer les documents mis à jour dans des fichiers et des variables.  
@@ -165,7 +165,7 @@ ms.locfileid: "51639676"
 |**Variable**|Permet de définir la source sur une variable contenant le document XML.|  
   
  **Source**  
- Si **Source** a la valeur **Entrée directe**, indiquez le code XML ou cliquez sur le bouton de sélection **(…)** pour fournir le code XML nécessaire dans la boîte de dialogue **Éditeur de source de document**.  
+ Si **Source** a la valeur **Entrée directe**, indiquez le code XML ou cliquez sur le bouton de sélection **(...)** pour fournir le code XML nécessaire dans la boîte de dialogue **Éditeur de source de document**.  
   
  Si **Source** est défini sur **Connexion de fichiers**, sélectionnez un gestionnaire de connexions de fichiers existant ou cliquez sur \<**Nouvelle connexion...**> pour en créer un.  
   
@@ -226,7 +226,7 @@ ms.locfileid: "51639676"
 |**Variable**|Permet de définir la source sur une variable contenant le document XML.|  
   
  **SecondOperand**  
- Si **SecondOperandType** a la valeur **Entrée directe**, indiquez le code XML ou cliquez sur le bouton de sélection **(…)** pour fournir le code XML nécessaire dans la boîte de dialogue **Éditeur de source**.  
+ Si **SecondOperandType** a la valeur **Entrée directe**, indiquez le code XML ou cliquez sur le bouton de sélection **(...)** pour fournir le code XML nécessaire dans la boîte de dialogue **Éditeur de source**.  
   
  Si **SecondOperandType** a la valeur **Connexion de fichiers**, sélectionnez un gestionnaire de connexions de fichiers existant ou cliquez sur <\<**Nouvelle connexion...**> pour en créer un.  
   
@@ -272,7 +272,7 @@ ms.locfileid: "51639676"
 |**Variable**|Permet de définir la source sur une variable contenant le document XML.|  
   
  **SecondOperand**  
- Si **SecondOperandType** a la valeur **Entrée directe**, indiquez le code XML ou cliquez sur le bouton de sélection **(…)** pour fournir le code XML nécessaire dans la boîte de dialogue **Éditeur de source**.  
+ Si **SecondOperandType** a la valeur **Entrée directe**, indiquez le code XML ou cliquez sur le bouton de sélection **(...)** pour fournir le code XML nécessaire dans la boîte de dialogue **Éditeur de source**.  
   
  Si **SecondOperandType** a la valeur **Connexion de fichiers**, sélectionnez un gestionnaire de connexions de fichiers existant ou cliquez sur <\<**Nouvelle connexion...**> pour en créer un.  
   
@@ -318,7 +318,7 @@ ms.locfileid: "51639676"
 |**Variable**|Permet de définir la source sur une variable contenant le document XML.|  
   
  **SecondOperand**  
- Si **SecondOperandType** a la valeur **Entrée directe**, indiquez le code XML ou cliquez sur le bouton de sélection **(…)** pour fournir le code XML nécessaire dans la boîte de dialogue **Éditeur de source**.  
+ Si **SecondOperandType** a la valeur **Entrée directe**, indiquez le code XML ou cliquez sur le bouton de sélection **(...)** pour fournir le code XML nécessaire dans la boîte de dialogue **Éditeur de source**.  
   
  Si **SecondOperandType** a la valeur **Connexion de fichiers**, sélectionnez un gestionnaire de connexions de fichiers existant ou cliquez sur <\<**Nouvelle connexion...**> pour en créer un.  
   
@@ -353,7 +353,7 @@ ms.locfileid: "51639676"
 |**Variable**|Permet de définir la source sur une variable contenant le document XML.|  
   
  **XPathStringSource**  
- Si **XPathStringSourceType** a la valeur **Entrée directe**, indiquez le code XML ou cliquez sur le bouton de sélection **(…)** pour fournir le code XML nécessaire dans la boîte de dialogue **Éditeur de source de document**.  
+ Si **XPathStringSourceType** a la valeur **Entrée directe**, indiquez le code XML ou cliquez sur le bouton de sélection **(...)** pour fournir le code XML nécessaire dans la boîte de dialogue **Éditeur de source de document**.  
   
  Si **XPathStringSourceType** a la valeur **Connexion de fichiers**, sélectionnez un gestionnaire de connexions de fichiers existant ou cliquez sur \<**Nouvelle connexion...**> pour en créer un.  
   
@@ -398,7 +398,7 @@ ms.locfileid: "51639676"
 |**Variable**|Permet de définir la source sur une variable contenant le document XML.|  
   
  **SecondOperand**  
- Si **SecondOperandType** a la valeur **Entrée directe**, indiquez le code XML ou cliquez sur le bouton de sélection **(…)** pour fournir le code XML nécessaire dans la boîte de dialogue **Éditeur de source de document** .  
+ Si **SecondOperandType** a la valeur **Entrée directe**, indiquez le code XML ou cliquez sur le bouton de sélection **(...)** pour fournir le code XML nécessaire dans la boîte de dialogue **Éditeur de source de document** .  
   
  Si **SecondOperandType** a la valeur **Connexion de fichiers**, sélectionnez un gestionnaire de connexions de fichiers existant ou cliquez sur <\<**Nouvelle connexion...**> pour en créer un.  
   
@@ -473,7 +473,7 @@ ms.locfileid: "51639676"
 |**Variable**|Permet de définir la source sur une variable contenant le document XML.|  
   
  **SecondOperand**  
- Si **SecondOperandType** a la valeur **Entrée directe**, indiquez le code XML ou cliquez sur le bouton de sélection **(…)** pour fournir le code XML nécessaire dans la boîte de dialogue **Éditeur de source de document** .  
+ Si **SecondOperandType** a la valeur **Entrée directe**, indiquez le code XML ou cliquez sur le bouton de sélection **(...)** pour fournir le code XML nécessaire dans la boîte de dialogue **Éditeur de source de document** .  
   
  Si **SecondOperandType** a la valeur **Connexion de fichiers**, sélectionnez un gestionnaire de connexions de fichiers existant ou cliquez sur <\<**Nouvelle connexion...**> pour en créer un.  
   
@@ -519,7 +519,7 @@ ms.locfileid: "51639676"
 |**Variable**|Permet de définir la source sur une variable contenant le document XML.|  
   
  **SecondOperand**  
- Si **SecondOperandType** a la valeur **Entrée directe**, indiquez le code XML ou cliquez sur le bouton de sélection **(…)** pour fournir le code XML nécessaire dans la boîte de dialogue **Éditeur de source de document** .  
+ Si **SecondOperandType** a la valeur **Entrée directe**, indiquez le code XML ou cliquez sur le bouton de sélection **(...)** pour fournir le code XML nécessaire dans la boîte de dialogue **Éditeur de source de document** .  
   
  Si **SecondOperandType** a la valeur **Connexion de fichiers**, sélectionnez un gestionnaire de connexions de fichiers existant ou cliquez sur <\<**Nouvelle connexion...**> pour en créer un.  
   

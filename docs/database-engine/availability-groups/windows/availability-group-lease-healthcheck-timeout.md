@@ -10,12 +10,12 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 23dee7c1639f030e5dfbb2cb44309a100bf01861
-ms.sourcegitcommit: 448106b618fe243e418bbfc3daae7aee8d8553d2
+ms.openlocfilehash: 25728b2c12d31d53f9638d08c952d75ae929bf9c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48264899"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393982"
 ---
 # <a name="mechanics-and-guidelines-of-lease-cluster-and-health-check-timeouts"></a>Explications et instructions concernant les délais d’expiration des baux et des clusters, et les délais d’attente du contrôle d’intégrité 
 
@@ -39,13 +39,13 @@ Si la détection de l’état d’intégrité ne parvient pas à signaler une mi
 
 ## <a name="lease-mechanism"></a>Mécanisme de bail  
 
-Contrairement à d’autres mécanismes de basculement, l’instance SQL Server joue un rôle actif dans le mécanisme de bail. Lors de la mise en ligne d’un groupe de disponibilité en tant que réplica principal, l’instance SQL Server génère un thread de travail de bail dédié pour le groupe de disponibilité. Le travail de bail partage une petite zone de mémoire avec l’hôte des ressources qui contient les événements de renouvellement et d’arrêt de bail. Le travail de bail et l’hôte des ressources fonctionnent de façon circulaire, en signalant leurs événements de renouvellement de bail respectifs, puis en se mettant en veille et en attendant que l’autre signale son propre événement de renouvellement ou d’arrêt de bail. L’hôte des ressources et le thread de bail SQL Server ont une valeur de durée de vie, qui est mise à jour chaque fois que le thread sort de veille, après avoir été signalé par l’autre thread. Si la durée de vie est atteinte lors de l’attente du signal, le bail expire et le réplica passe à l’état de résolution pour le groupe de disponibilité en question. Si l’événement d’arrêt de bail est signalé, le réplica prend un rôle de résolution. 
+Contrairement à d’autres mécanismes de basculement, l’instance SQL Server joue un rôle actif dans le mécanisme de bail. Le mécanisme de bail est utilisé comme une validation de type « Semble actif » entre l’hôte des ressources du cluster et le processus SQL Server. Le mécanisme est utilisé pour garantir que les deux côtés (le service de cluster et le service SQL Server) sont fréquemment en contact dans le but de vérifier l’état de l’autre et empêcher un scénario de type Split-Brain.  Lors de la mise en ligne d’un groupe de disponibilité en tant que réplica principal, l’instance SQL Server génère un thread de travail de bail dédié pour le groupe de disponibilité. Le travail de bail partage une petite zone de mémoire avec l’hôte des ressources qui contient les événements de renouvellement et d’arrêt de bail. Le travail de bail et l’hôte des ressources fonctionnent de façon circulaire, en signalant leurs événements de renouvellement de bail respectifs, puis en se mettant en veille et en attendant que l’autre signale son propre événement de renouvellement ou d’arrêt de bail. L’hôte des ressources et le thread de bail SQL Server ont une valeur de durée de vie, qui est mise à jour chaque fois que le thread sort de veille, après avoir été signalé par l’autre thread. Si la durée de vie est atteinte lors de l’attente du signal, le bail expire et le réplica passe à l’état de résolution pour le groupe de disponibilité en question. Si l’événement d’arrêt de bail est signalé, le réplica prend un rôle de résolution. 
 
 ![image](media/availability-group-lease-healthcheck-timeout/image1.png) 
 
 Le mécanisme de bail applique la synchronisation entre SQL Server et le cluster de basculement Windows Server. Lorsqu’une commande de basculement est émise, le service de cluster effectue un appel hors connexion à la DLL de ressource du réplica principal actuel. La DLL de ressource essaie d’abord de mettre le groupe de disponibilité hors connexion à l’aide d’une procédure stockée. Si cette procédure stockée échoue ou expire, l’échec est signalé au service de cluster, qui, à son tour, émet une commande de fin d’exécution. La commande de fin d’exécution tente à nouveau d’exécuter la même procédure stockée. Toutefois, cette fois-ci, le cluster n’attend pas que la DLL de ressource signale une réussite ou un échec avant de mettre en ligne le groupe de disponibilité sur un nouveau réplica. Si ce deuxième appel de procédure échoue, l’hôte des ressources devra compter sur le mécanisme de bail pour mettre l’instance hors connexion. Lorsque la DLL de ressource est appelée pour mettre le groupe de disponibilité hors connexion, la DLL de ressource signale l’événement d’arrêt de bail, et sort de veille le thread de travail de bail SQL Server pour mettre le groupe de disponibilité hors connexion. Même si cet événement d’arrêt n’est pas signalé, le bail expire, et le réplica passe à l’état de résolution. 
 
-Le bail est principalement un mécanisme de synchronisation entre l’instance principale et le cluster, mais il peut également créer des conditions d’échec là où un basculement n’était pas nécessaire. Par exemple, une sollicitation élevée de l’UC ou de tempdb peut entraîner une privation du thread de travail de bail, empêchant ainsi le renouvellement du bail de l’instance SQL et provoquant un basculement. 
+Le bail est principalement un mécanisme de synchronisation entre l’instance principale et le cluster, mais il peut également créer des conditions d’échec là où un basculement n’était pas nécessaire. Par exemple, les situations d’utilisation élevée du processeur, de mémoire insuffisante, d’absence de réponse du processus SQL lors de la génération d’un vidage de mémoire, de blocage à l’échelle du système ou de pression sur tempdb peuvent priver de ressources le thread du travail de bail, ce qui empêche le renouvellement du bail de l’instance SQL et provoque un basculement. 
 
 ## <a name="guidelines-for-cluster-timeout-values"></a>Recommandations concernant les valeurs de délai d’expiration des clusters 
 
@@ -130,7 +130,7 @@ Le mécanisme de bail est contrôlé par une seule valeur qui est spécifique à
 
 Deux valeurs définissent le contrôle d’intégrité AlwaysOn : FailureConditionLevel et HealthCheckTimeout. FailureConditionLevel indique le niveau de tolérance pour les conditions d’échec signalées par `sp_server_diagnostics`, et HealthCheckTimeout définit le délai pendant lequel la DLL de ressource peut fonctionner sans recevoir de mise à jour de `sp_server_diagnostics`. L’intervalle de mise à jour pour `sp_server_diagnostics` est toujours égal à un tiers de HealthCheckTimeout. 
 
-Pour configurer le niveau de condition de basculement, utilisez l’option `FAILURE_CONDITION_LEVEL = <n>` de l’instruction `CREATE` ou `ALTER` `AVAILABILITY GROUP`, où `<n>` est un entier compris entre 1 et 5. La commande suivante définit le niveau de condition d’échec sur 1 pour le groupe de disponibilité « AG1 » : 
+Pour configurer le niveau de condition de basculement, utilisez l’option `FAILURE_CONDITION_LEVEL = <n>` de l’instruction `CREATE` ou `ALTER` `AVAILABILITY GROUP`, où `<n>` est un entier compris entre 1 et 5. La commande suivante définit le niveau de condition d’échec sur 1 pour le groupe de disponibilité « AG1 » : 
 
 ```sql
 ALTER AVAILABILITY GROUP AG1 SET (FAILURE_CONDITION_LEVEL = 1); 

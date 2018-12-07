@@ -15,12 +15,12 @@ ms.assetid: ccc212a1-fd13-48d6-85e5-5ff310c34bbd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cf8c50739d1579087000aabf9dfbb9e958663118
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 125da46c853c66d79abc7a28efa5000223711f50
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670047"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532820"
 ---
 # <a name="remove-joins-visual-database-tools"></a>Supprimer des jointures (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,7 +29,7 @@ Si vous ne souhaitez pas que les tables soient liées par une jointure interne o
 > [!NOTE]  
 > La suppression d'une jointure n'a aucune répercussion sur la relation sous-jacente existant dans la base de données.  
   
-Si deux tables jointes font partie de votre requête et que vous supprimez toutes les conditions de jointure entre elles, la requête obtenue devient le produit des deux tables, en d'autres termes une instruction CROSS JOIN.  
+Si deux tables jointes font partie de votre requête et que vous supprimez toutes les conditions de jointure entre elles, la requête obtenue devient le produit des deux tables, en d’autres termes une instruction CROSS JOIN.  
   
 ### <a name="to-remove-a-join"></a>Pour supprimer une jointure  
   

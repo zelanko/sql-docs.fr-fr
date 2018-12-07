@@ -11,12 +11,12 @@ ms.assetid: f855e931-7502-44bd-8a8b-b8543645c7f4
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 1b0c54bf494055567e7a8c8fc59fe001ac843cfa
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: dfd06b590ba54efc935bab1bbe8c898101e827ae
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671683"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518606"
 ---
 # <a name="resolve-out-of-memory-issues"></a>Résoudre les problèmes de mémoire insuffisante
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,13 +27,13 @@ ms.locfileid: "51671683"
   
 |Rubrique|Vue d'ensemble|  
 |-----------|--------------|  
-|[Résoudre les problèmes de restauration de base de données en cas d'insuffisance de mémoire](#bkmk_resolveRecoveryFailures)|Explique la procédure à suivre si vous recevez le message d’erreur « Échec de l’opération de restauration pour la base de données « *\<nom_base_de_données>*  » en raison d’une mémoire insuffisante dans le pool de ressources « *\<nom_pool_de_ressources>*  » ».|  
+|[Résoudre les problèmes de restauration de base de données en cas d'insuffisance de mémoire](#bkmk_resolveRecoveryFailures)|Explique la procédure à suivre si vous recevez le message d’erreur « Échec de l’opération de restauration pour la base de données « *\<nom_base_de_données>*  » en raison d’une mémoire insuffisante dans le pool de ressources « *\<nom_pool_de_ressources>*  ». »|  
 |[Résoudre les problèmes d'insuffisance de mémoire ayant un impact sur la charge de travail](#bkmk_recoverFromOOM)|Explique la procédure à suivre si vous constatez que les problèmes d'insuffisance de mémoire ont un effet négatif sur les performances.|  
-|[Résoudre les échecs d'allocation de pages dus à une mémoire insuffisante alors qu'il y a suffisamment de mémoire à disposition](#bkmk_PageAllocFailure)|Explique la procédure à suivre si vous recevez le message d’erreur « Interdiction des allocations de pages pour la base de données « *\<nom_base_de_données>*  » en raison d’une mémoire insuffisante dans le pool de ressources « *\<nom_pool_de_ressources>*  ». … » lorsque la mémoire disponible est suffisante pour l'opération.|
+|[Résoudre les échecs d'allocation de pages dus à une mémoire insuffisante alors qu'il y a suffisamment de mémoire à disposition](#bkmk_PageAllocFailure)|Explique la procédure à suivre si vous recevez le message d’erreur « Interdiction des allocations de pages pour la base de données « *\<nom_base_de_données>*  » en raison d’une mémoire insuffisante dans le pool de ressources « *\<nom_pool_de_ressources>*  ». ... » lorsque la mémoire disponible est suffisante pour l’opération.|
 |[Bonnes pratiques concernant l’utilisation de l’OLTP en mémoire dans un environnement de machine virtuelle](#bkmk_VMs)|Ce qu’il faut savoir avant d’utiliser l’OLTP en mémoire dans un environnement virtualisé.|
   
 ##  <a name="bkmk_resolveRecoveryFailures"></a> Résoudre les problèmes de restauration de base de données en cas d'insuffisance de mémoire  
- Quand vous tentez de restaurer une base de données, il se peut que le message d’erreur suivant s’affiche : « Échec de l’opération de restauration pour la base de données « *\<nom_base_de_données>*  » en raison d’une mémoire insuffisante dans le pool de ressources « *\<nom_pool_de_ressources>*  » ». Cela indique que le serveur ne dispose pas de suffisamment de mémoire pour la restauration de la base de données. 
+ Quand vous tentez de restaurer une base de données, il se peut que le message d’erreur suivant s’affiche : « Échec de l’opération de restauration pour la base de données « *\<nom_base_de_données>*  » en raison d’une mémoire insuffisante dans le pool de ressources « *\<nom_pool_de_ressources>*  ». » Cela indique que le serveur ne dispose pas de suffisamment de mémoire pour la restauration de la base de données. 
    
 Le serveur sur lequel vous restaurez une base de données doit disposer de suffisamment de mémoire pour les tables à mémoire optimisée dans la sauvegarde de base de données. Dans le cas contraire, la base de données n’est pas mise en ligne et est marquée comme suspecte.  
   
@@ -79,7 +79,7 @@ Si le serveur n’a pas suffisamment de mémoire physique, et que cette erreur p
 2.  [Prendre une mesure corrective](#bkmk_takeCorrectiveAction)  
   
 ###  <a name="bkmk_openDAC"></a> Ouvrir une connexion administrateur dédiée (DAC).  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit une connexion administrateur dédiée. Cette connexion DAC permet à un administrateur d'accéder à une instance active du moteur de base de données SQL Server afin de résoudre les problèmes sur le serveur, même si ce serveur ne répond pas aux autres connexions clientes. La connexion administrateur dédiée est disponible via l'utilitaire `sqlcmd` et [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit une connexion administrateur dédiée. Cette connexion DAC permet à un administrateur d’accéder à une instance active du moteur de base de données SQL Server afin de résoudre les problèmes sur le serveur, même si ce serveur ne répond pas aux autres connexions clientes. La connexion administrateur dédiée est disponible via l'utilitaire `sqlcmd` et [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  Pour obtenir des conseils sur l’utilisation de DAC par le biais de SSMS ou de `sqlcmd`, consultez [Connexion de diagnostic pour les administrateurs de base de données](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md).  
   
@@ -89,7 +89,7 @@ Si le serveur n’a pas suffisamment de mémoire physique, et que cette erreur p
 #### <a name="free-up-existing-memory"></a>Libérer de la mémoire existante  
   
 ##### <a name="delete-non-essential-memory-optimized-table-rows-and-wait-for-garbage-collection"></a>Supprimer les lignes non essentielles des tables mémoire optimisées et patienter jusqu'au prochain garbage collection  
- Vous pouvez supprimer les lignes non essentielles d'une table mémoire optimisée. Le garbage collector remet à disposition la mémoire utilisée par ces lignes. Le moteur de l'OLTP en mémoire collecte les lignes à nettoyer de façon agressive. Cependant, une transaction longue peut empêcher cette opération de garbage collection. Par exemple, si une transaction s'exécute pendant cinq minutes, les versions de ligne créées par des opérations de mise à jour ou de suppression alors que la transaction était active ne peuvent pas être récupérées par le garbage collector.  
+ Vous pouvez supprimer les lignes non essentielles d'une table mémoire optimisée. Le garbage collector remet à disposition la mémoire utilisée par ces lignes. Le moteur de l'OLTP en mémoire collecte les lignes à nettoyer de façon agressive. Cependant, une transaction longue peut empêcher cette opération de garbage collection. Par exemple, si une transaction s’exécute pendant 5 minutes, les versions de ligne créées par des opérations de mise à jour ou de suppression alors que la transaction était active ne peuvent pas être récupérées par le garbage collector.  
   
 ##### <a name="move-one-or-more-rows-to-a-disk-based-table"></a>Déplacer une ou plusieurs lignes dans une table sur disque  
  Les articles TechNet suivants donnent des conseils pour déplacer des lignes d'une table mémoire optimisée vers une table sur disque.  
@@ -153,7 +153,7 @@ Certaines bonnes pratiques pour virtualiser et gérer SQL Server ont besoin d’
 -  Si vous utilisez le paramètre min server memory, il vaut mieux allouer uniquement la quantité de mémoire nécessaire, afin qu’une mémoire suffisante reste disponible pour d’autres processus (évitant ainsi la pagination).
 -  Ne définissez pas la préallocation de mémoire sur une valeur trop élevée. Sinon, les autres processus ne disposeront pas de suffisamment de mémoire au moment où ils en ont besoin, ce qui peut entraîner une pagination de mémoire.
 
-Si vous suivez les pratiques ci-dessus lorsque votre base de données possède présente des tables à mémoire optimisée, vous voyez que la tentative de récupération et restauration d’une base de données peut entraîner le blocage de la base de données à l’état « Récupération en attente », même si vous avez suffisamment de mémoire disponible pour la récupérer. En effet, au démarrage, l’OLTP en mémoire met les données en mémoire plus rapidement que l’allocation de mémoire dynamique n’alloue la mémoire nécessaire à la base de données.
+Si vous suivez les pratiques ci-dessus pour une base de données avec des tables à mémoire optimisée, une tentative de récupération et de restauration d’une base de données peut entraîner le blocage de la base de données à l’état « Récupération en attente », même si vous avez suffisamment de mémoire disponible pour la récupérer. En effet, au démarrage, l’OLTP en mémoire met les données en mémoire plus rapidement que l’allocation de mémoire dynamique n’alloue la mémoire nécessaire à la base de données.
 
 ### <a name="resolution"></a>Résolution
 Pour atténuer ce problème, préallouez suffisamment de mémoire à la base de données pour la récupération ou le redémarrage ; ne vous contentez pas d'une valeur minimale en comptant sur la mémoire dynamique pour fournir la mémoire supplémentaire lorsque cela est nécessaire.

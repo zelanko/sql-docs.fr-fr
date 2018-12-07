@@ -24,12 +24,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bc1eb47e6cde8ff1fb34bde4bf82f4d79013d90e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 3702cdd2e09b101b3a779926fa170a976b39c958
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675415"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516644"
 ---
 # <a name="create-a-login"></a>Créer un compte de connexion
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -56,19 +56,19 @@ ms.locfileid: "51675415"
   
 1.  Dans l'Explorateur d'objets, développez le dossier de l'instance du serveur où vous souhaitez créer le compte de connexion.  
   
-2.  Cliquez avec le bouton droit sur le dossier **Sécurité** , pointez sur **Nouveau**, puis sélectionnez **Connexion…**.  
+2.  Cliquez avec le bouton droit sur le dossier **Sécurité**, pointez sur **Nouveau**, puis sélectionnez **Connexion…**.  
   
-3.  Dans la boîte de dialogue **Nouvelle connexion** , sur la page **Général** , entrez le nom d'un utilisateur dans la zone **Nom de la connexion** . Vous pouvez également cliquer sur **Rechercher…** pour ouvrir la boîte de dialogue **Sélectionner l'utilisateur ou le groupe** .  
+3.  Dans la boîte de dialogue **Nouvelle connexion**, dans la page **Général**, entrez le nom d’un utilisateur dans la zone **Nom de la connexion**. Vous pouvez également cliquer sur **Rechercher…** pour ouvrir la boîte de dialogue **Sélectionner un utilisateur ou un groupe**.  
   
-     Si vous cliquez sur **Rechercher…**:  
+     Si vous cliquez sur **Rechercher…**  :  
   
-    1.  Sous **Sélectionner ce type d'objet**, cliquez sur **Types d'objets…** pour ouvrir la boîte de dialogue **Types d’objets** et sélectionnez tout ou partie des éléments suivants : **Principaux de sécurité intégrés**, **Groupes**et **Utilisateurs**. Les options**Principaux de sécurité intégrés** et **Utilisateurs** sont sélectionnées par défaut. Lorsque vous avez terminé, cliquez sur **OK**.  
+    1.  Sous **Sélectionner ce type d’objet**, cliquez sur **Types d’objets…** pour ouvrir la boîte de dialogue **Types d’objets** et sélectionnez l’ensemble ou certains des éléments suivants : **Principaux de sécurité intégrés**, **Groupes** et **Utilisateurs**. Les options**Principaux de sécurité intégrés** et **Utilisateurs** sont sélectionnées par défaut. Lorsque vous avez terminé, cliquez sur **OK**.  
   
     2.  Sous **À partir de cet emplacement**, cliquez sur **Emplacements…** pour ouvrir la boîte de dialogue **Emplacements** et sélectionner un des emplacements de serveur disponibles. Lorsque vous avez terminé, cliquez sur **OK**.  
   
     3.  Sous **Entrez le nom de l’objet à sélectionner (exemples)**, entrez l’utilisateur ou le nom de groupe que vous souhaitez rechercher. Pour plus d'informations, consultez [Boîte de dialogue Choisir des utilisateurs, des ordinateurs ou des groupes](https://technet.microsoft.com/library/cc771712.aspx).  
   
-    4.  Cliquez sur **Avancé…** pour obtenir davantage d'options de recherche avancée. Pour plus d’informations, consultez [Boîte de dialogue Choisir des utilisateurs, des ordinateurs ou des groupes - Page Avancé](https://technet.microsoft.com/library/cc733110.aspx).  
+    4.  Cliquez sur **Avancé…** pour obtenir davantage d’options de recherche avancée. Pour plus d’informations, consultez [Boîte de dialogue Choisir des utilisateurs, des ordinateurs ou des groupes - Page Avancé](https://technet.microsoft.com/library/cc733110.aspx).  
   
     5.  Cliquez sur **OK**.  
   
@@ -99,7 +99,7 @@ ms.locfileid: "51675415"
 11. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="additional-options"></a>Options supplémentaires  
- La boîte de dialogue **Nouvelle connexion** offre également des options sur quatre pages supplémentaires : **Rôles de serveur**, **Mappage de l'utilisateur**, **Éléments sécurisables**et **État**.  
+ La boîte de dialogue **Nouvelle connexion** offre également des options dans quatre pages supplémentaires : **Rôles de serveur**, **Mappage de l’utilisateur**, **Éléments sécurisables** et **État**.  
   
 ### <a name="server-roles"></a>Rôles de serveur  
  La page **Rôles de serveur** répertorie tous les rôles possibles qui peuvent être affectés au nouveau compte de connexion. Les options suivantes sont disponibles :  
@@ -165,13 +165,13 @@ ms.locfileid: "51675415"
   
 1.  Cliquez sur **Rechercher**.  
   
-2.  Dans la boîte de dialogue **Ajouter des objets**, sélectionnez une des options suivantes : **Objets spécifiques…**, **Tous les objets des types…** ou **Le serveur**_nom\_serveur_. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+2.  Dans la boîte de dialogue **Ajouter des objets**, sélectionnez une des options suivantes : **Objets spécifiques…**, **Tous les objets correspondant aux types…** ou **Le serveur**_nom\_serveur_. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
     > **REMARQUE :** La sélection de l’option **Le serveur**_nom\_serveur_ remplit automatiquement la grille supérieure avec tous les objets sécurisables de ce serveur.  
   
-3.  Si vous sélectionnez **Objets spécifiques…**:  
+3.  Si vous sélectionnez **Objets spécifiques…**  :  
   
-    1.  Dans la boîte de dialogue **Sélectionner les objets** , sous **Sélectionnez ces types d'objets**, cliquez sur **Types d'objets…**.  
+    1.  Dans la boîte de dialogue **Sélectionner les objets**, sous **Sélectionnez ces types d’objets**, cliquez sur **Types d’objets…**.  
   
     2.  Dans la boîte de dialogue **Sélectionner les types d'objets** , sélectionnez tout ou partie des types d'objets suivants : **Points de terminaison**, **Connexions**, **Serveurs**, **Groupes de disponibilité**et **Rôles de serveur**. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -181,7 +181,7 @@ ms.locfileid: "51675415"
   
     5.  Dans la boîte de dialogue **Sélectionner des objets** , cliquez sur **OK**.  
   
-4.  Si vous sélectionnez **Tous les objets correspondant aux types…**, dans la boîte de dialogue **Sélectionner les types d'objets** , sélectionnez tout ou partie des types d'objets suivants : **Points de terminaison**, **Connexions**, **Serveurs**, **Groupes de disponibilité**et **Rôles de serveur**. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+4.  Si vous sélectionnez **Tous les objets correspondant aux types…**, dans la boîte de dialogue **Sélectionner les types d’objets**, sélectionnez l’ensemble ou certains des types d’objets suivants : **Points de terminaison**, **Connexions**, **Serveurs**, **Groupes de disponibilité** et **Rôles de serveur**. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
  **Nom**  
  Nom de chaque principal ou élément sécurisable ajouté à la grille.  

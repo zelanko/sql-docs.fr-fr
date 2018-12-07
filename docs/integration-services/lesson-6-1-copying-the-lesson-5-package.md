@@ -11,12 +11,12 @@ ms.assetid: a25fcc13-987e-4f3d-8f0c-76f7e6e59920
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 82ac3a5bb3a18c83246a55c9fa6e2154de58dc6f
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: b7d58507dac1d1071f0b546e0610f39381b648de
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642036"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52501816"
 ---
 # <a name="lesson-6-1---copying-the-lesson-5-package"></a>Leçon 6-1 : Copie du package de la leçon 5
 Dans cette tâche, vous allez créer une copie du package Lesson 5.dtsx que vous avez créé à la leçon 5. Vous pouvez également ajouter au projet le package final de la leçon 5 inclus avec le didacticiel, puis le copier à la place. Vous allez utiliser cette nouvelle copie tout au long de la leçon 6.  
@@ -49,7 +49,7 @@ Dans cette tâche, vous allez créer une copie du package Lesson 5.dtsx que vous
   
 3.  Dans la boîte de dialogue Ajouter une copie des packages existants, sous Emplacement du package, sélectionnez Système de fichiers.  
   
-4.  Cliquez sur le bouton de navigation (…), accédez à Lesson 5.dtsx sur votre ordinateur, puis cliquez sur **Ouvrir**.  
+4.  Cliquez sur le bouton de navigation (...), accédez à Lesson 5.dtsx sur votre ordinateur, puis cliquez sur **Ouvrir**.  
   
     Pour télécharger tous les packages de leçons de ce didacticiel, procédez comme suit.  
   

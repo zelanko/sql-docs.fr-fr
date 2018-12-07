@@ -23,17 +23,17 @@ ms.assetid: 47335734-0baf-45a6-8b3b-6c4fd80d2cb8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fe54b0a56e90dd7c4645fd0e78db7e97f6c838f1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b9c847b6b04aa4ec1a67b89bf3fa6473b91e13bf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770977"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515869"
 ---
 # <a name="errorline-transact-sql"></a>ERROR_LINE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Cette fonction retourne le numéro de ligne d’occurrence d’une erreur qui a provoqué l’exécution du bloc CATCH d’une construction TRY…CATCH.  
+Cette fonction retourne le numéro de ligne de l’occurrence d’une erreur qui a provoqué l’exécution du bloc CATCH d’une construction TRY...CATCH.  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -58,7 +58,7 @@ Un appel à `ERROR_LINE` peut se produire n’importe où dans l’étendue d’
   
 `ERROR_LINE` retourne le numéro de la ligne de survenue de l’erreur. Cela se produit quel que soit l’emplacement de l’appel à `ERROR_LINE` dans l’étendue du bloc CATCH et quel que soit le nombre d’appels à `ERROR_LINE`. Ce comportement contraste avec celui de fonctions comme @@ERROR. @@ERROR retourne un numéro d’erreur dans l’instruction immédiatement après celle qui a provoqué une erreur ou dans la première instruction d’un bloc CATCH.  
   
-Dans les blocs CATCH imbriqués, `ERROR_LINE` retourne le numéro de ligne de l’erreur spécifique à l’étendue du bloc CATCH référencé. Par exemple, le bloc CATCH d'une construction TRY…CATCH peut inclure une construction TRY…CATCH imbriquée. Dans un bloc CATCH imbriqué, `ERROR_LINE` retourne le numéro de ligne de l’erreur qui a appelé le bloc CATCH imbriqué. Si `ERROR_LINE` s’exécute dans le bloc CATCH externe, elle retourne le numéro de ligne de l’erreur qui a appelé ce bloc CATCH spécifique.  
+Dans les blocs CATCH imbriqués, `ERROR_LINE` retourne le numéro de ligne de l’erreur spécifique à l’étendue du bloc CATCH référencé. Par exemple, le bloc CATCH d’une construction TRY...CATCH peut contenir une construction TRY...CATCH imbriquée. Dans un bloc CATCH imbriqué, `ERROR_LINE` retourne le numéro de ligne de l’erreur qui a appelé le bloc CATCH imbriqué. Si `ERROR_LINE` s’exécute dans le bloc CATCH externe, elle retourne le numéro de ligne de l’erreur qui a appelé ce bloc CATCH spécifique.  
   
 ## <a name="examples"></a>Exemples  
   

@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 04ca2c0792b1b10ffd4baf182ac8aa12fb5c1f04
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 92b1b2098d1486c8dbc6958c9668387c815047d8
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810434"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52403444"
 ---
 # <a name="modifying-data-in-a-system-versioned-temporal-table"></a>Modification des données dans une table temporelle avec système par version
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -121,7 +121,7 @@ SWITCH TO [dbo].[Department] PARTITION 2;
   
 ```  
   
- Si vous essayez d'effectuer un BASCULEMENT DE PARTITION à partir d'une table sans définition de période, vous obtiendrez le message d'erreur : `Msg 13577, Level 16, State 1, Line 25    ALTER TABLE SWITCH statement failed on table 'MyDB.dbo.Staging_Department_2015_09_26' because target table has SYSTEM_TIME PERIOD while source table does not have it.`  
+ Si vous essayez d’effectuer un BASCULEMENT DE PARTITION à partir d'une table sans définition de période, vous obtenez ce message d’erreur : `Msg 13577, Level 16, State 1, Line 25    ALTER TABLE SWITCH statement failed on table 'MyDB.dbo.Staging_Department_2015_09_26' because target table has SYSTEM_TIME PERIOD while source table does not have it.`  
   
 ## <a name="updating-data"></a>mise à jour des données  
  Vous mettez à jour les données de la table actuelle avec une instruction **UPDATE** normale. Vous pouvez mettre à jour les données de la table actuelle à partir de la table d'historique pour le scénario « Désolé ». Toutefois, vous ne pouvez pas mettre à jour les colonnes **PERIOD** et que vous ne pouvez pas directement mettre à jour les données de la table d’historique si **SYSTEM_VERSIONING = ON**.   
@@ -147,7 +147,7 @@ Cannot update GENERATED ALWAYS columns in table 'TmpDev.dbo.Department'.
 ```  
   
 ### <a name="updating-the-current-table-from-the-history-table"></a>Mise à jour de la table actuelle à partir de la table d'historique  
- Vous pouvez utiliser **UPDATE** sur la table actuelle pour rétablir l’état réel de la ligne à un état valide à point précis dans le passé (retour à la « dernière bonne version de ligne connue »). L'exemple suivant montre un retour des valeurs dans la table d'historique en date du 2015-04-25 où DeptID = 10.  
+ Vous pouvez utiliser **UPDATE** sur la table actuelle pour rétablir l’état réel de la ligne à un état valide à un moment précis dans le passé (retour à la « dernière bonne version de ligne connue »). L'exemple suivant montre un retour des valeurs dans la table d'historique en date du 2015-04-25 où DeptID = 10.  
   
 ```  
 UPDATE Department   

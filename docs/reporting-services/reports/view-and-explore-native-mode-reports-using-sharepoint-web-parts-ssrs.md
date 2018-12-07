@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: dee8ee42-156b-43b6-b202-02dfb9404284
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4124d8a88485332133baf2cd4a39eb52da56652e
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: c78f6e02a2aef893aa3e8702158a5f3c63cea76a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813413"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52417280"
 ---
 # <a name="view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs"></a>Afficher et explorer des rapports en mode natif à l’aide de composants WebPart SharePoint (SSRS)
 
@@ -114,7 +114,7 @@ ms.locfileid: "51813413"
     STSADM.EXE -o addwppack -filename "C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Reporting Services\SharePoint\RSWebParts.cab" -globalinstall  
     ```  
   
-4.  Vous devez voir le message « L'opération s'est déroulée avec succès ».  
+4.  Vous devez voir le message « L’opération s’est déroulée avec succès. ».  
   
      La définition de `-globalinstall` ajoute les composants WebPart au GAC (Global Assembly Cache). Cette étape est nécessaire si vous souhaitez vous connecter aux composants WebPart.  
   
@@ -142,7 +142,7 @@ ms.locfileid: "51813413"
   
 7.  Dans **URL du Gestionnaire de rapports**, tapez une URL vers une instance du Gestionnaire de rapports associée au serveur de rapports en mode natif auquel vous souhaitez accéder. Par défaut, une URL du Gestionnaire de rapports a la syntaxe suivante : **https://\<nom_serveur>/reports**.  
   
-8.  Dans **Chemin d'accès au rapport**, spécifiez une barre oblique suivie du chemin d'accès du dossier et du nom du rapport. N'incluez **pas** le nom du serveur ou le répertoire virtuel du Gestionnaire de rapports. Par exemple, pour ouvrir le rapport « Company Sales » dans le dossier Adventure Works, spécifiez **/Adventure Works/Company Sales**. Voici un autre exemple, où le rapport « Products » se trouve dans le dossier racine du serveur de rapports **/Products**.  
+8.  Dans **Chemin d'accès au rapport**, spécifiez une barre oblique suivie du chemin d'accès du dossier et du nom du rapport. N'incluez **pas** le nom du serveur ou le répertoire virtuel du Gestionnaire de rapports. Par exemple, pour ouvrir le rapport « Company Sales » dans le dossier Adventure Works, spécifiez **/Adventure Works/Company Sales**. Voici un autre exemple où le rapport « Products » se trouve dans le dossier racine du serveur de rapports **/Products**.  
   
 9. Cliquez sur **OK**.  
   

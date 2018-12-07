@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: c200a97b-67f2-499f-8374-3ed1ebe3f33c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1c44173f34c1560da036ca1914649774365fdf42
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 48b1d2e88389ac19c2c2d3bcf753ece1df952689
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51812802"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542414"
 ---
 # <a name="create-a-document-map-report-builder-and-ssrs"></a>Créer un explorateur de documents (Générateur de rapports et SSRS)
 
@@ -27,7 +27,7 @@ Un explorateur de documents fournit un ensemble de liens de navigation permettan
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ##  <a name="DocMapRenderExtensions"></a> Explorateurs de document et extensions de rendu  
- L'explorateur de document est destiné à être utilisé dans l'extension de rendu HTML, par exemple dans l'Aperçu ou la Visionneuse de rapports. Les autres extensions de rendu articulent un explorateur de document différemment :  
+ L’explorateur de document est destiné à être utilisé dans l’extension de rendu HTML, par exemple dans l’Aperçu ou la Visionneuse de rapports. Les autres extensions de rendu articulent un explorateur de document différemment :  
   
 -   L'extension PDF restitue un plan de document sous la forme du volet Signets.  
   

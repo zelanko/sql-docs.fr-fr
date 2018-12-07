@@ -14,12 +14,12 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c4269cc9f61ecd1bd3130fe7fab0f1e5a1ae65bf
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: d48f9fd87ff375a518b038d9ed4ef4a8d42675cc
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51660951"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52403924"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>Traitement de requêtes intelligent dans les bases de données SQL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -29,10 +29,15 @@ La famille des fonctionnalités de **traitement de requêtes intelligent** inclu
 ![Fonctionnalités de traitement de requêtes intelligent](./media/3_IQPFeatureFamily.png)
 
 ## <a name="adaptive-query-processing"></a>Traitement de requêtes adaptatif
-La fonctionnalité de traitement de requêtes adaptatif inclut des améliorations du traitement des requêtes, qui adaptent les stratégies d’optimisation aux conditions d’exécution de la charge de travail de votre application. Ces améliorations sont incluses : jointures adaptatives en mode batch, retour d’allocation de mémoire et exécution entrelacée pour les fonctions table à instructions multiples.
+La fonctionnalité de traitement de requêtes adaptatif inclut des améliorations du traitement des requêtes, qui adaptent les stratégies d’optimisation aux conditions d’exécution de la charge de travail de votre application. Ces améliorations comprennent : 
+-  Jointures adaptatives en mode batch
+-  Rétroaction d’allocation de mémoire
+-  Exécution entrelacée pour les fonctions table à instructions multiples (MSTVF)
 
 ### <a name="batch-mode-adaptive-joins"></a>Jointures adaptatives en mode batch
 Cette fonctionnalité permet à votre plan de basculer dynamiquement sur une meilleure stratégie de jointure pendant l’exécution à l’aide d’un seul plan mis en cache.
+
+Pour plus d’informations sur les jointures adaptatives en mode batch, consultez [Traitement de requêtes adaptatif dans les bases de données SQL](../../relational-databases/performance/adaptive-query-processing.md).
 
 ### <a name="row-and-batch-mode-memory-grant-feedback"></a>Retour d’allocation de mémoire en mode en ligne et en mode batch
 > [!NOTE]
@@ -40,10 +45,12 @@ Cette fonctionnalité permet à votre plan de basculer dynamiquement sur une mei
 
 Cette fonctionnalité recalcule la mémoire réelle nécessaire pour une requête, puis met à jour la valeur d’allocation pour le plan mis en cache, ce qui réduit les allocations de mémoire excessives qui impactent la concurrence et corrige les allocations de mémoire sous-estimées qui entraînent des dépassements coûteux sur le disque.
 
-### <a name="interleaved-execution-for-multi-statement-table-valued-functions-mstvfs"></a>Exécution entrelacée pour les fonctions table à instructions multiples (MSTVF)
-Avec l’exécution entrelacée, le nombre réel de lignes de la fonction est utilisé pour prendre des décisions de plan de requête en aval plus avisées. 
+Pour plus d’informations sur la rétroaction d’allocation de mémoire, consultez [Traitement adaptatif des requêtes dans les bases de données SQL](../../relational-databases/performance/adaptive-query-processing.md).
 
-Pour plus d’informations, consultez [Traitement adaptatif des requêtes dans les bases de données SQL](../../relational-databases/performance/adaptive-query-processing.md).
+### <a name="interleaved-execution-for-multi-statement-table-valued-functions-mstvfs"></a>Exécution entrelacée pour les fonctions table à instructions multiples (MSTVF)
+Avec l’exécution entrelacée, le nombre réel de lignes de la fonction est utilisé pour prendre des décisions de plan de requête en aval plus avisées. Pour plus d’informations sur les fonctions table à instructions multiples (MSTVF), consultez [Fonctions table](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF).
+
+Pour plus d’informations sur l’exécution entrelacée, consultez [Traitement adaptatif des requêtes dans les bases de données SQL](../../relational-databases/performance/adaptive-query-processing.md).
 
 ## <a name="table-variable-deferred-compilation"></a>Compilation différée de variable de table
 > [!NOTE]
@@ -59,7 +66,7 @@ Pour plus d'informations, consultez [Compilation différée de variable de table
 > [!NOTE]
 > La fonctionnalité d’incorporation des fonctions UDF scalaires est en préversion publique.  
 
-L’incorporation de fonctions UDF scalaires transforme des fonctions scalaires définies par l’utilisateur (UDF) en expressions relationnelles et les incorpore à la requête SQL d’appel, ce qui améliore les performances des charges de travail qui tirent parti des fonctions UDF scalaires. L’incorporation de fonctions UDF scalaires facilite l’optimisation du coût des opérations au sein des fonctions UDF et aboutit à des plans d’exécution efficaces, orientés ensembles et parallèles, par opposition à des plans inefficaces, itératifs et en série. Cette fonctionnalité est activée par défaut sous le niveau de compatibilité de base de données 150.
+L’inlining de fonctions UDF scalaires transforme des [fonctions scalaires définies par l’utilisateur (UDF)](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#Scalar) en expressions relationnelles et les incorpore à la requête SQL d’appel, ce qui améliore les performances des charges de travail qui tirent parti des fonctions UDF scalaires. L’inlining de fonctions UDF scalaires facilite l’optimisation du coût des opérations au sein des fonctions UDF et aboutit à des plans d’exécution efficaces, orientés ensembles et parallèles, par opposition à des plans inefficaces, itératifs et en série. Cette fonctionnalité est activée par défaut sous le niveau de compatibilité de base de données 150.
 
 Pour plus d’informations, consultez [Incorporation des fonctions UDF scalaires](https://docs.microsoft.com/sql/relational-databases/user-defined-functions/scalar-udf-inlining?view=sqlallproducts-allversions).
 
@@ -76,9 +83,9 @@ Pour plus d’informations, consultez [APPROX_COUNT_DISTINCT (Transact-SQL)](../
 > Mode Batch sur Rowstore est une fonctionnalité en préversion publique.  
 
 ### <a name="background"></a>Arrière-plan
-SQL Server 2012 a introduit une nouvelle fonctionnalité pour accélérer les charges de travail analytiques : les index columnstore. Nous avons étendu les cas d’utilisation et amélioré les performances des index columnstore dans chaque version suivante. Jusqu’à présent, nous avons présenté et documenté toutes ces fonctionnalités sous la forme d’une fonctionnalité unique. Vous créez des index columnstore sur vos tables et votre charge de travail analytique « va simplement plus vite ». En coulisses, cependant, il existe deux jeux de technologies connexes mais distincts :
+[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a introduit une nouvelle fonctionnalité pour accélérer les charges de travail analytiques : les index columnstore. Nous avons étendu les cas d’utilisation et amélioré les performances des index columnstore dans chaque version suivante. Jusqu’à présent, nous avons présenté et documenté toutes ces fonctionnalités sous la forme d’une fonctionnalité unique. Vous créez des index columnstore sur vos tables et votre charge de travail analytique « va simplement plus vite ». En coulisses, cependant, il existe deux jeux de technologies connexes mais distincts :
 - Les index **ColumnStore** permettent aux requêtes analytiques d’accéder uniquement aux données dans les colonnes nécessaires. Le format columnstore permet également la compression beaucoup plus efficace que celle obtenue avec la compression de page dans des index « rowstore » traditionnels. 
-- Le traitement en **mode Batch** permet aux opérateurs de requête de traiter plus efficacement les données en travaillant sur un lot de lignes à la fois, au lieu d’une ligne à la fois. Plusieurs autres améliorations d’évolutivité sont liées au traitement en mode Batch.
+- Le traitement en **mode Batch** permet aux opérateurs de requête de traiter plus efficacement les données en travaillant sur un lot de lignes à la fois, au lieu d’une ligne à la fois. Plusieurs autres améliorations d’évolutivité sont liées au traitement en mode Batch. Pour plus d’informations sur le mode batch, consultez [Modes d’exécution](../../relational-databases/query-processing-architecture-guide.md#execution-modes).
 
 Les deux ensembles de fonctionnalités fonctionnent ensemble pour améliorer les E/S et l’utilisation du processeur :
 - Les index ColumnStore permettent à davantage de vos données de tenir en mémoire, réduisant ainsi la nécessité des E/S.
@@ -106,7 +113,7 @@ Même si une requête n’implique aucune table avec un index columnstore, le pr
 1.  Une vérification initiale des tailles de la table, des opérateurs utilisés et des cardinalités estimées dans la requête d’entrée.
 2.  Des points de contrôle supplémentaires, lorsque l’optimiseur détecte des plans nouveaux et à moindre coût pour la requête. Si ces autres plans n’utilisent pas le mode Batch de manière significative, l’optimiseur cesse d’explorer les alternatives du mode Batch.
 
-Si le mode Batch sur rowstore est utilisé, dans le plan d’exécution de la requête vous verrez le mode d’exécution réel en tant que « mode Batch » utilisé par l’opérateur d’analyse des segments de mémoire sur disque et des index B-tree.  Cette analyse en mode Batch peut évaluer les filtres de bitmap du mode Batch.  Vous pouvez également voir d’autres opérateurs en mode Batch dans le plan, comme les jonctions de hachage, les agrégats basés sur le hachage, les tris, les agrégats de fenêtre, les filtres, la concaténation et les opérateurs scalaires de calcul.
+Si le mode batch sur rowstore est utilisé, dans le plan d’exécution de la requête vous verrez le mode d’exécution réel en tant que « mode Batch » utilisé par l’opérateur d’analyse des segments de mémoire sur disque et des index B-tree.  Cette analyse en mode Batch peut évaluer les filtres de bitmap du mode Batch.  Vous pouvez également voir d’autres opérateurs en mode Batch dans le plan, comme les jonctions de hachage, les agrégats basés sur le hachage, les tris, les agrégats de fenêtre, les filtres, la concaténation et les opérateurs scalaires de calcul.
 
 ### <a name="remarks"></a>Notes 
 1.  Il n’existe aucune garantie que les plans de requête utiliseront le mode Batch. L’optimiseur de requête peut décider que le mode Batch ne semble pas utile pour la requête. 
@@ -117,6 +124,7 @@ Si le mode Batch sur rowstore est utilisé, dans le plan d’exécution de la re
 
 ### <a name="configuring-batch-mode-on-rowstore"></a>Configuration du mode Batch sur rowstore
 La configuration limitée à la base de données BATCH_MODE_ON_ROWSTORE est activée par défaut et peut être utilisée pour désactiver le mode Batch sur rowstore sans nécessiter de changer le niveau de compatibilité de la base de données :
+
 ```sql
 -- Disabling batch mode on rowstore
 ALTER DATABASE SCOPED CONFIGURATION SET BATCH_MODE_ON_ROWSTORE = OFF;
@@ -124,7 +132,9 @@ ALTER DATABASE SCOPED CONFIGURATION SET BATCH_MODE_ON_ROWSTORE = OFF;
 -- Enabling batch mode on rowstore
 ALTER DATABASE SCOPED CONFIGURATION SET BATCH_MODE_ON_ROWSTORE = ON;
 ```
+
 Vous pouvez désactiver le mode Batch sur rowstore via la configuration limitée à la base de données, mais remplacez toujours le paramètre au niveau de la requête à l’aide de l’indicateur de requête ALLOW_BATCH_MODE. L’exemple suivant active le mode Batch sur rowstore même avec la fonctionnalité désactivée via la configuration limitée à la base de données :
+
 ```sql
 SELECT [Tax Rate], [Lineage Key], [Salesperson Key], SUM(Quantity) AS SUM_QTY, SUM([Unit Price]) AS SUM_BASE_PRICE, COUNT(*) AS COUNT_ORDER
 FROM Fact.OrderHistoryExtended
@@ -133,7 +143,9 @@ GROUP BY [Tax Rate], [Lineage Key], [Salesperson Key]
 ORDER BY [Tax Rate], [Lineage Key], [Salesperson Key]
 OPTION(RECOMPILE, USE HINT('ALLOW_BATCH_MODE'));
 ```
+
 Vous pouvez aussi désactiver le mode Batch sur rowstore pour une requête spécifique à l’aide de l’indicateur de requête DISALLOW_BATCH_MODE. Exemple :
+
 ```sql
 SELECT [Tax Rate], [Lineage Key], [Salesperson Key], SUM(Quantity) AS SUM_QTY, SUM([Unit Price]) AS SUM_BASE_PRICE, COUNT(*) AS COUNT_ORDER
 FROM Fact.OrderHistoryExtended

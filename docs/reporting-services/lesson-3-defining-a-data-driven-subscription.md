@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 89197b9b-7502-4fe2-bea3-ed7943eebf3b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ad6781d27078053a67d236c6a96b21fd67e355df
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3ed9f661a49e6ad64642938672f6355a1d19d9f6
+ms.sourcegitcommit: ba7fb4b9b4f0dbfe77a7c6906a1fde574e5a8e1e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703477"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52302553"
 ---
 # <a name="lesson-3-defining-a-data-driven-subscription"></a>Leçon 3 : Définition d'un abonnement piloté par les données
 Au cours de cette leçon du didacticiel [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] , vous utilisez les pages d’abonnement pilotées par les données des portails web [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] pour vous connecter à une source de données d’abonnement, créer une requête qui extrait des données d’abonnement et mapper le jeu de résultats aux options de remise et de rapport.  
@@ -32,14 +32,17 @@ Cette leçon suppose que vous avez terminé les leçons 1 et 2, et que la source
   
 ## <a name="define-a-description"></a>Définir une description  
 1.  Tapez **Sales Order delivery** comme description.
+
 ## <a name="type"></a>Tapez
 1.  cliquez sur **Abonnement piloté par les données**.  
+
 ## <a name="schedule"></a>Planifier
 1. Dans la section Planification, cliquez sur **Planification spécifique aux rapports**.
 2. Cliquez sur **Modifier la planification**.
 3.  Dans **Détails de la planification**, cliquez sur **Une fois**.  
 4.  Spécifiez une heure de début quelques minutes avant l'heure actuelle.  
 5.  Cliquez sur **Appliquer**.
+
 ## <a name="destination"></a>Destination  
 1.  Dans la section Destination, sélectionnez **Partage de fichiers Windows** pour la méthode de remise.  
 
@@ -53,22 +56,24 @@ Cette leçon suppose que vous avez terminé les leçons 1 et 2, et que la source
     data source=localhost; initial catalog=Subscribers
     ```
     
- ## <a name="credentials"></a>Informations d'identification
- 1. Sélectionnez **À l’aide des informations d’identification suivantes**.
- 2. Sélectionnez **Nom d’utilisateur et mot de passe de Windows**.
- 3.  Dans les zones **Nom d'utilisateur** et **Mot de passe**, tapez le nom d'utilisateur et le mot de passe de votre domaine. Prenez en compte à la fois le domaine et le compte d'utilisateur au moment de définir le **Nom d'utilisateur**.
-     > [!NOTE]  
+## <a name="credentials"></a>Informations d'identification
+1. Sélectionnez **À l’aide des informations d’identification suivantes**.
+2. Sélectionnez **Nom d’utilisateur et mot de passe de Windows**.
+3.  Dans les zones **Nom d'utilisateur** et **Mot de passe**, tapez le nom d'utilisateur et le mot de passe de votre domaine. Prenez en compte à la fois le domaine et le compte d'utilisateur au moment de définir le **Nom d'utilisateur**.
+    > [!NOTE]  
     > Les informations d'identification utilisées pour la connexion à la source de données d'un abonné ne sont pas renvoyées à [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]. Si vous modifiez l'abonnement ultérieurement, vous devrez retaper le mot de passe utilisé pour la connexion à la source de données.
+
 ## <a name="query"></a>Requête      
 1.  Dans la zone de requête, tapez la requête suivante :  
   
-    ```  
+    ```sql
     Select * from OrderInfo  
     ```  
   
 2.  Spécifiez un délai d'expiration de 30 secondes.  
   
 3.  Cliquez sur **Valider la requête**, puis sur **Appliquer**.
+
 ## <a name="delivery-options"></a>Options de remise
 Renseignez les valeurs suivantes :
 

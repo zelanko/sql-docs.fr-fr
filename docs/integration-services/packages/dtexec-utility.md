@@ -11,12 +11,12 @@ ms.assetid: 7b6867fa-1039-49b3-90fb-85b84678a612
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 83346a846e180cd2e77c6ba895bac7a899b1143a
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: bcbef7c771d402d1532ecaece4426666920f785b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639177"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513393"
 ---
 # <a name="dtexec-utility"></a>Utilitaire dtexec
   L’utilitaire d’invite de commandes **dtexec** permet de configurer et d’exécuter des packages [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . L’utilitaire **dtexec** donne accès à toutes les fonctions de configuration et d’exécution de packages, telles que les paramètres, les connexions, les propriétés, les variables, la journalisation et les indicateurs de progression. L’utilitaire **dtexec** vous permet de charger des packages à partir des sources suivantes : le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , un fichier projet .ispac, une base de données [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , le Magasin de packages [!INCLUDE[ssIS](../../includes/ssis-md.md)] et le système de fichiers.  
@@ -168,7 +168,7 @@ dtexec /option [value] [/option [value]]...
   
      Vous pouvez utiliser l’option **/ConfigFile** pour charger, au moment de l’exécution, des configurations supplémentaires que vous n’aviez pas spécifiées au moment de la conception. Cependant, vous ne pouvez pas utiliser l’option **/ConfigFile** pour remplacer des valeurs configurées que vous aviez aussi spécifiées au moment de la conception. Pour comprendre le fonctionnement de l'application des configurations de package, consultez [Package Configurations](../../integration-services/packages/package-configurations.md).  
   
--   **/Conn[ection]** *id_or_name;connection_string [[;id_or_name;connection_string]…]*: (Facultatif). Spécifie que le gestionnaire de connexions avec le nom ou le GUID indiqué est fourni dans le package et spécifie une chaîne de connexion valide.  
+-   **/Conn[ection]** *id_or_name;connection_string [[;id_or_name;connection_string]...]*: (Facultatif). Spécifie que le gestionnaire de connexions avec le nom ou le GUID indiqué est fourni dans le package et spécifie une chaîne de connexion valide.  
   
      Cette option exige la spécification des deux paramètres : le nom ou le GUID du gestionnaire de connexions doit être fourni dans l’argument *id_or_name*, et une chaîne de connexion valide doit être spécifiée dans l’argument *connection_string*. Pour plus d’informations, consultez [Connexions Integration Services &#40;SSIS&#41;](../../integration-services/connection-manager/integration-services-ssis-connections.md).  
   
@@ -222,7 +222,7 @@ dtexec /option [value] [/option [value]]...
   
 -   **/De [crypt]**  *password*: (Facultatif). Définit le mot de passe de déchiffrement qui est utilisé lorsque vous chargez un package avec chiffrement de mot de passe.  
   
--   (Facultatif) Crée les fichiers de vidage du débogage, .mdmp et .tmp, lorsqu'un ou plusieurs événements spécifiés se produisent pendant l'exécution du package. L'argument *error code* spécifie le type de code d'événement (erreur, avertissement ou information) qui déclenchera la création, par le système, des fichiers de vidage du débogage. Pour spécifier plusieurs codes d’événement, séparez chaque argument *error code* par un point-virgule (;). N'incluez pas de guillemets avec l'argument *error code* .  
+-   (Facultatif) Crée les fichiers de vidage du débogage, .mdmp et .tmp, lorsqu'un ou plusieurs événements spécifiés se produisent pendant l'exécution du package. L’argument *error code* spécifie le type de code d’événement (erreur, avertissement ou information) qui déclenchera la création, par le système, des fichiers de vidage du débogage. Pour spécifier plusieurs codes d’événement, séparez chaque argument *error code* par un point-virgule (;). N'incluez pas de guillemets avec l'argument *error code* .  
   
      L'exemple suivant génère les fichiers de vidage du débogage lorsqu'une erreur DTS_E_CANNOTACQUIRECONNECTIONFROMCONNECTIONMANAGER se produit.  
   
@@ -333,7 +333,7 @@ dtexec /option [value] [/option [value]]...
   
      Voici un exemple qui illustre l'exécution d'un package et la spécification de myvalue pour le paramètre de projet (myparam) et de la valeur entière 12 pour le paramètre de package (anotherparam).  
   
-     `Dtexec /isserver “SSISDB\MyFolder\MyProject\MyPackage.dtsx” /server “.” /parameter $Project::myparam;myvalue /parameter anotherparam(int32);12`  
+     `Dtexec /isserver "SSISDB\MyFolder\MyProject\MyPackage.dtsx" /server "." /parameter $Project::myparam;myvalue /parameter anotherparam(int32);12`  
   
      Vous pouvez également définir les propriétés du Gestionnaire de connexions à l'aide des paramètres. Utilisez le préfixe CM pour désigner un paramètre du Gestionnaire de connexions.  
   
@@ -625,7 +625,7 @@ dtexec /isserver "\SSISDB\MyFolder\MyProject\MyPackage.dtsx" /server "."
  L’exemple suivant montre comment utiliser l’option **/ISServer** et comment définir les paramètres relatifs au projet et au gestionnaire de connexions.  
   
 ```  
-/Server localhost /ISServer “\SSISDB\MyFolder\Integration Services Project1\Package.dtsx” /Par "$Project::ProjectParameter(Int32)";1 /Par "CM.SourceServer.InitialCatalog";SourceDB  
+/Server localhost /ISServer "\SSISDB\MyFolder\Integration Services Project1\Package.dtsx" /Par "$Project::ProjectParameter(Int32)";1 /Par "CM.SourceServer.InitialCatalog";SourceDB  
   
 ```  
   

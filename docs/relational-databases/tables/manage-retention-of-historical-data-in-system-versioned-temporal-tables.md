@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a209033dc614ad2cccd6c1138d89c462f5152a7e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b0b63123e9d48ca7f89d888dca82b6b988942893
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698597"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52417940"
 ---
 # <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>Gérer la rétention des données d’historique dans les tables temporelles avec version gérée par le système
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "47698597"
 
 -   [Stratégie de rétention](https://msdn.microsoft.com/library/mt637341.aspx#using-temporal-history-retention-policy-approach)  
 
- Pour chacune de ces méthodes, la logique de migration ou de nettoyage des données d’historique est basée sur la colonne qui correspond à la fin de période dans la table active. La valeur de fin de période de chaque ligne détermine le moment où la version de la ligne devient « fermée », c’est-à-dire où elle arrive dans la table d’historique. Par exemple, la condition `SysEndTime < DATEADD (DAYS, -30, SYSUTCDATETIME ())` spécifie que les données d’historique de plus d’un mois doivent être supprimées ou déplacées de la table d’historique.  
+ Pour chacune de ces méthodes, la logique de migration ou de nettoyage des données d’historique est basée sur la colonne qui correspond à la fin de période dans la table active. La valeur de fin de période de chaque ligne détermine le moment où la version de la ligne devient « fermée », c’est-à-dire où elle arrive dans la table d’historique. Par exemple, la condition `SysEndTime < DATEADD (DAYS, -30, SYSUTCDATETIME ())` spécifie que les données d’historique de plus d’un mois doivent être supprimées ou déplacées de la table d’historique.  
   
 > **REMARQUE :**  les exemples de cette rubrique utilisent cet [exemple de table temporelle](creating-a-system-versioned-temporal-table.md).  
   
@@ -108,7 +108,7 @@ SET (REMOTE_DATA_ARCHIVE = ON (MIGRATION_STATE = OUTBOUND));
 ```  
   
 ### <a name="using-transact-sql-to-stretch-a-portion-of-the-history-table"></a>Utilisation de Transact-SQL pour activer Stretch sur une partie de la table d’historique  
- Pour activer Stretch uniquement sur une partie de la table d’historique, commencez par créer une [fonction de prédicat inline](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md). Pour cet exemple, supposons que vous avez configuré la fonction de prédicat inline pour la première fois le 1er décembre 2015 et que voulez activer Stretch sur Azure pour toutes les dates d’historique antérieures au 1er novembre 2015. Pour ce faire, commencez par créer la fonction suivante :  
+ Pour activer Stretch uniquement sur une partie de la table d’historique, commencez par créer une [fonction de prédicat inline](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md). Pour cet exemple, supposons que vous avez configuré la fonction de prédicat incluse pour la première fois le 1er décembre 2015 et que voulez activer Stretch sur Azure pour toutes les dates d’historique antérieures au 1er novembre 2015. Pour ce faire, commencez par créer la fonction suivante :  
   
 ```  
 CREATE FUNCTION dbo.fn_StretchBySystemEndTime20151101(@systemEndTime datetime2)   
@@ -174,7 +174,7 @@ COMMIT ;
   
 -   des tâches de maintenance de partition périodiques.  
   
- Pour illustrer cela, supposons que vous voulez conserver les données d’historique pendant six mois et que vous voulez conserver les données de chaque mois dans une partition distincte. Par ailleurs, supposons que vous avez activé la gestion système des versions en septembre 2015.  
+ Pour illustrer cela, supposons que vous voulez conserver les données d’historique pendant 6 mois et que vous voulez conserver les données de chaque mois dans une partition distincte. Par ailleurs, supposons que vous avez activé le contrôle de version du système d’exploitation en septembre 2015.  
   
  Une tâche de configuration du partitionnement permet de créer la configuration initiale du partitionnement de la table d’historique. Pour cet exemple, il faudrait créer le même nombre de partitions que la taille de fenêtre défilante, exprimée en mois, plus une partition vide préparée à l’avance (voir ci-après). Cette configuration est l’assurance que le système pourra stocker correctement les nouvelles données quand la tâche de maintenance périodique sera lancée pour la première fois. De même, elle garantit que les partitions ne seront jamais fractionnées avec des données pour éviter des mouvements de données coûteux. Vous devez effectuer cette tâche à l’aide de Transact-SQL en utilisant le script d’exemple ci-après.  
   
@@ -333,7 +333,7 @@ COMMIT TRANSACTION
 ### <a name="performance-considerations-with-table-partitioning"></a>Considérations relatives aux performances du partitionnement de table  
  Il est important d’effectuer les opérations MERGE et SPLIT RANGE pour éviter tout déplacement de données, qui peut entraîner une baisse significative des performances. Pour plus d’informations, consultez [Modifier une fonction de partition](../../relational-databases/partitions/modify-a-partition-function.md). Pour ce faire, utilisez RANGE LEFT au lieu de RANGE RIGHT quand vous utilisez [CREATE PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-function-transact-sql.md).  
   
- Pour commencer, expliquons visuellement la signification des options RANGE LEFT et RANGE RIGHT :  
+ Pour commencer, expliquons visuellement la signification des options RANGE LEFT et RANGE RIGHT :  
   
  ![Partitioning3](../../relational-databases/tables/media/partitioning3.png "Partitioning3")  
   
@@ -341,7 +341,7 @@ COMMIT TRANSACTION
   
  Dans un scénario de fenêtre glissante, la limite de partition inférieure est toujours supprimée.  
   
--   Cas RANGE LEFT : dans le cas de RANGE LEFT, la limite inférieure appartient à la partition 1, qui est vide (après l’extraction de partition). Autrement dit, MERGE RANGE n’entraîne aucun déplacement de données.  
+-   Cas RANGE LEFT : dans le cas de RANGE LEFT, la limite de partition inférieure appartient à la partition 1, qui est vide (après l’extraction de partition). Autrement dit, MERGE RANGE ne subit aucun déplacement de données.  
   
 -   Cas RANGE RIGHT : dans le cas de RANGE RIGHT, la limite inférieure appartient à la partition 2, qui n’est pas vide, étant entendu que la partition 1 a été vidée par l’extraction. Dans ce cas, MERGE RANGE entraîne un déplacement de données (les données de la partition 2 sont déplacées vers la partition 1). Pour éviter cela, dans le scénario de fenêtre glissante, RANGE RIGHT doit avoir la partition 1, qui est toujours vide. Cela signifie que si nous utilisons RANGE RIGHT, nous devons créer et maintenir une partition supplémentaire par rapport au cas RANGE LEFT.  
   

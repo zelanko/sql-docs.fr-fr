@@ -15,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: bb130bbf8c3c2e66bd5b64458ca5f07b83f9b532
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: adf5a2daee8231746a3ed364619f511f05d011f6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606769"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52405224"
 ---
 # <a name="change-the-database-compatibility-level-and-use-the-query-store"></a>Modifier le niveau de compatibilité de la base de données et utiliser le magasin des requêtes
 
@@ -30,7 +30,7 @@ Dans [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu’à [!INCLUDE[ssCu
   
 - Étant donné que la mise à niveau est une opération unidirectionnelle (il est impossible de faire passer le format de fichier à une version antérieure), le fait de séparer l’activation de nouvelles fonctionnalités pour en faire une opération distincte dans la base de données, comporte un intérêt. Il est possible de rétablir un paramètre à un niveau de compatibilité de la base de données antérieur.  Le nouveau modèle réduit le nombre d’éléments devant se produire lors de l’interruption d’une fenêtre.  
   
-- Les modifications apportées au processeur de requêtes peuvent avoir des effets complexes. Même si une « bonne » modification apportée au système peut être intéressante pour la plupart des charges de travail, elle peut provoquer une régression inacceptable sur une requête importante pour d’autres. Le fait de séparer cette logique du processus de mise à niveau permet à des fonctionnalités telles que le magasin des requêtes, d’atténuer rapidement les régressions de choix de plan ou même de les éviter complètement dans les serveurs de production.  
+- Les modifications apportées au processeur de requêtes peuvent avoir des effets complexes. Même si une « bonne » modification apportée au système peut être intéressante pour la plupart des charges de travail, elle peut provoquer une régression inacceptable sur une requête importante pour d’autres. Le fait de séparer cette logique du processus de mise à niveau permet à des fonctionnalités telles que le magasin des requêtes, d’atténuer rapidement les régressions de choix de plan ou même de les éviter complètement dans les serveurs de production.  
   
 > [!IMPORTANT]  
 > Voici les comportements auxquels vous pouvez vous attendre avec [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] quand une base de données est attachée ou restaurée et après une mise à niveau sur place :

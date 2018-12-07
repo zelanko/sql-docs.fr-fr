@@ -28,12 +28,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 34aeae9faee8d0818f5a8db3c499850e0e969835
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 7d3b1b147bd954ce449315b9efb459767941b045
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51676649"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518090"
 ---
 # <a name="database-checkpoints-sql-server"></a>Points de contrôle de base de données (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -41,14 +41,14 @@ ms.locfileid: "51676649"
  
   
 ##  <a name="Overview"></a> Vue d'ensemble   
-Pour des raisons de performances, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] procède aux modifications des pages de base de données en mémoire (dans le cache des tampons) sans les écrire à chaque fois sur le disque. En revanche, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] publie périodiquement un point de contrôle dans chaque base de données. Un *point de contrôle* écrit les pages modifiées en mémoire actuelles (appelées *pages de modifications*), les informations du journal des transactions de la mémoire vers le disque et enregistre également les informations concernant le journal des transactions.  
+Pour des raisons de performances, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] procède aux modifications des pages de base de données en mémoire (dans le cache des tampons) sans écrire ces pages sur le disque après chaque modification. En revanche, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] publie périodiquement un point de contrôle dans chaque base de données. Un *point de contrôle* écrit les pages modifiées en mémoire actuelles (appelées *pages de modifications*), les informations du journal des transactions de la mémoire vers le disque et enregistre également les informations concernant le journal des transactions.  
   
  Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] prend en charge plusieurs types de points de contrôle : automatique, indirect, manuel et interne. Le tableau suivant récapitule les types de **points de contrôle**.
   
 |Nom   |[!INCLUDE[tsql](../../includes/tsql-md.md)] .|Description|  
 |----------|----------------------------------|-----------------|  
 |Automatic|EXEC sp_configure **'** recovery interval **','**_seconds_**'**|Émis automatiquement en arrière-plan pour respecter la limite de durée supérieure suggérée par l'option de configuration de serveur **recovery interval** . Les points de contrôle automatiques s'exécutent jusqu'à la fin.  Les points de contrôle automatiques sont accélérés en fonction du nombre d’écritures en attente et si le [!INCLUDE[ssDE](../../includes/ssde-md.md)] détecte une augmentation de latence d’écriture supérieure à 50 millisecondes.<br /><br /> Pour plus d'informations, consultez [Configure the recovery interval Server Configuration Option](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md).|  
-|Indirect|ALTER DATABASE … SET TARGET_RECOVERY_TIME **=**_temps\_récupération\_cible_ { SECONDES &#124; MINUTES }|Émis en arrière-plan pour obtenir un temps de récupération cible spécifié par l'utilisateur pour une base de données. À partir de [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)], la valeur par défaut est de 1 minute. La valeur par défaut est 0 pour les anciennes versions, ce qui indique que la base de données utilisera les points de contrôle automatiques, dont la fréquence dépend du paramètre d’intervalle de récupération de l’instance de serveur.<br /><br /> Pour plus d'informations, consultez [Modifier la durée de récupération cible d’une base de données &#40;SQL Server&#41;](../../relational-databases/logs/change-the-target-recovery-time-of-a-database-sql-server.md).|  
+|Indirect|ALTER DATABASE ... SET TARGET_RECOVERY_TIME **=**_temps\_récupération\_cible_ { SECONDES &#124; MINUTES }|Émis en arrière-plan pour obtenir un temps de récupération cible spécifié par l'utilisateur pour une base de données. À partir de [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)], la valeur par défaut est de 1 minute. La valeur par défaut est 0 pour les anciennes versions, ce qui indique que la base de données utilisera les points de contrôle automatiques, dont la fréquence dépend du paramètre d’intervalle de récupération de l’instance de serveur.<br /><br /> Pour plus d'informations, consultez [Modifier la durée de récupération cible d’une base de données &#40;SQL Server&#41;](../../relational-databases/logs/change-the-target-recovery-time-of-a-database-sql-server.md).|  
 |Manuel|CHECKPOINT [*durée_point_de_contrôle*]|Émis lorsque vous exécutez une commande CHECKPOINT [!INCLUDE[tsql](../../includes/tsql-md.md)] . Le point de contrôle manuel intervient dans la base de données active pour votre connexion. Par défaut, les points de contrôle manuels s'exécutent jusqu'à la fin. L'accélération fonctionne de la même manière que pour les points de contrôle automatiques.  Le paramètre *checkpoint_duration* peut aussi spécifier la durée demandée (en secondes) de l’exécution du point de contrôle.<br /><br /> Pour plus d'informations, consultez [CHECKPOINT &#40;Transact-SQL&#41;](../../t-sql/language-elements/checkpoint-transact-sql.md).|  
 |Interne|Aucun.|Émis par différentes opérations de serveur, telles que la création de sauvegarde et d'instantané de base de données pour garantir que les images de disque correspondent à l'état actuel du journal.|  
   
@@ -61,7 +61,7 @@ Pour des raisons de performances, le [!INCLUDE[ssDE](../../includes/ssde-md.md)]
 > Les transactions non validées longues augmentent le temps de récupération pour tous les types de points de contrôle.   
   
 ##  <a name="InteractionBwnSettings"></a> Interaction des options TARGET_RECOVERY_TIME et « recovery interval »  
- Le tableau suivant résume l’interaction entre le paramètre **sp_configure’** recovery interval **’** à l’échelle du serveur et le paramètre ALTER DATABASE… TARGET_RECOVERY_TIME spécifique à la base de données.  
+ Le tableau suivant résume l’interaction entre le paramètre **sp_configure'** recovery interval **'** à l’échelle du serveur et le paramètre ALTER DATABASE ... TARGET_RECOVERY_TIME spécifique à la base de données.  
   
 |target_recovery_time|'recovery interval'|Type de point de contrôle utilisé|  
 |----------------------------|-------------------------|-----------------------------|  

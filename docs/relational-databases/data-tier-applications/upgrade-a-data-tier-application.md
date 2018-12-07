@@ -23,12 +23,12 @@ ms.assetid: c117df94-f02b-403f-9383-ec5b3ac3763c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c20a95bcdb8c91059c63590c333c71a10542473a
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 31b1fb369ee6b5007e79c96ebb7a536d6e2a147e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43814045"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514040"
 ---
 # <a name="upgrade-a-data-tier-application"></a>Upgrade a Data-tier Application
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -83,7 +83,7 @@ ms.locfileid: "43814045"
   
 2.  Développez le nœud **Gestion** , puis le nœud **Applications de la couche Données** .  
   
-3.  Cliquez avec le bouton droit sur le nœud de la DAC à mettre à niveau, puis sélectionnez **Mettre à niveau l’application de la couche Données…**.  
+3.  Cliquez avec le bouton droit sur le nœud de la DAC à mettre à niveau, puis sélectionnez **Mettre à niveau l’application de la couche Données...**.  
   
 4.  Renseignez les boîtes de dialogue de l'Assistant :  
   
@@ -178,7 +178,7 @@ ms.locfileid: "43814045"
 ## <a name="options-page"></a>Page Options  
  Utilisez cette page pour sélectionner l'option de restauration en cas de échec de la mise à niveau.  
   
- **Restauration en cas d'échec** - Sélectionnez cette option pour inclure la mise à niveau dans une transaction que l'Assistant peut tenter de restaurer en cas de erreur. Pour plus d'informations sur l'option, consultez [Choix des options de mise à niveau de la DAC](#ChoseDACUpgOptions).  
+ **Restauration en cas d’échec** - Sélectionnez cette option pour inclure la mise à niveau dans une transaction que l’Assistant peut tenter de restaurer en cas de erreur. Pour plus d'informations sur l'option, consultez [Choix des options de mise à niveau de la DAC](#ChoseDACUpgOptions).  
   
  **Paramètres par défaut** : rétablit la valeur par défaut (False) de l’option.  
   
@@ -193,13 +193,13 @@ ms.locfileid: "43814045"
   
  **Les actions suivantes permettront de mettre à niveau la DAC.** - Vérifiez les informations affichées pour vous assurer que les actions prises seront correctes. La colonne **Action** affiche les actions, telles que les instructions Transact-SQL, qui seront exécutées pour effectuer la mise à niveau. La colonne **Perte de données** contiendra un avertissement si l'action associée risque de supprimer des données.  
   
- **Actualiser** – Actualise la liste des actions.  
+ **Actualiser** - Actualise la liste des actions.  
   
- **Enregistrer le rapport d'action** - Enregistre le contenu de la fenêtre d'action dans un fichier HTML.  
+ **Enregistrer le rapport d’action** - Enregistre le contenu de la fenêtre d’action dans un fichier HTML.  
   
  **Poursuivre malgré la perte possible des modifications** : indique que vous êtes conscient que certains objets ou données dans la base de données actuelle ne seront pas présents dans la nouvelle base de données, et que vous souhaitez poursuivre la mise à niveau. Vous ne devez sélectionner ce bouton que si vous avez analysé le rapport des modifications et si vous connaissez la procédure à effectuer pour transférer manuellement tous les objets ou données nécessaires dans la nouvelle base de données. Si vous n’en êtes pas sûr, cliquez sur le bouton **Enregistrer le rapport d’action** pour enregistrer le rapport des modifications et sur le bouton **Enregistrer les scripts** pour enregistrer le script Transact-SQL, puis cliquez sur **Annuler**. Analysez le rapport et le script, organisez le transfert de tous les objets et données nécessaires une fois la mise à niveau terminée, puis redémarrez l'Assistant.  
   
- **Enregistrer les scripts** : enregistre les instructions Transact-SQL qui permettront d’effectuer la mise à niveau vers un fichier texte.  
+ **Enregistrer les scripts** : enregistre les instructions Transact-SQL qui permettront d’effectuer la mise à niveau vers un fichier texte.  
   
  **Paramètres par défaut** : rétablit la valeur par défaut (False) de l’option.  
   

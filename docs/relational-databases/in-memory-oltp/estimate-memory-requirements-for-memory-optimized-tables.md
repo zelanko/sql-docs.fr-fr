@@ -12,19 +12,19 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3b01a26ac0db5d41f23343dda7a106c52524dea1
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 1cdacecf1c6d6c8c08411eff57c65adc0872dd39
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51672688"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531513"
 ---
 # <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>Estimer les besoins en mémoire des tables mémoire optimisées
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 Les tables mémoire optimisées nécessitent suffisamment de mémoire pour conserver tous les index et les lignes en mémoire. Dans la mesure où la mémoire est une ressource limitée, il est important de comprendre et de gérer l'utilisation de la mémoire sur votre système. Les rubriques de cette section traitent de scénarios courants d'utilisation et de gestion de la mémoire.
 
-Si vous créez une table mémoire optimisée ou migrez une table existante basée sur disque vers une table mémoire optimisée [!INCLUDE[hek_2](../../includes/hek-2-md.md)] , il est important d'estimer avec justesse les besoins en mémoire de chaque table, de façon à configurer le serveur avec suffisamment de mémoire. Cette section explique comment estimer la quantité de mémoire nécessaire pour accueillir les données d'une table mémoire optimisée.  
+Si vous créez une table à mémoire optimisée ou migrez une table existante basée sur disque vers une table à mémoire optimisée [!INCLUDE[hek_2](../../includes/hek-2-md.md)], il est important d’estimer avec justesse les besoins en mémoire de chaque table, de façon à provisionner le serveur avec suffisamment de mémoire. Cette section explique comment estimer la quantité de mémoire nécessaire pour accueillir les données d'une table mémoire optimisée.  
   
 Si vous envisagez d’effectuer une migration à partir de tables sur disque vers des tables optimisées en mémoire, avant de poursuivre la lecture de cette rubrique, consultez [Déterminer si une table ou une procédure stockée doit être déplacée vers l’OLTP en mémoire](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md) pour obtenir des conseils sur les tables les plus judicieuses à faire migrer. Toutes les rubriques sous [Migration vers OLTP en mémoire](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md) fournissent des conseils sur la migration à partir de tables sur disque vers des tables optimisées en mémoire. 
   
@@ -102,13 +102,13 @@ Voici un calcul de taille de 5 millions de lignes dans une table mémoire optimi
   
 #### <a name="memory-for-the-tables-rows"></a>Mémoire pour les lignes de la table  
   
-Selon les calculs ci-dessus, la taille de chaque ligne de la table mémoire optimisée est de 24 + 32 + 200, ou 256 octets.  Étant donné qu'il y a 5 millions de lignes, la table consommera 5 000 000 * 256 octets, ou 1 280 000 000 octets (soit environ 1,28 Go).  
+Selon les calculs ci-dessus, la taille de chaque ligne de la table mémoire optimisée est de 24 + 32 + 200, ou 256 octets.  Étant donné qu’il y a 5 millions de lignes, la table consommera 5 000 000 * 256 octets, ou 1 280 000 000 octets (soit environ 1,28 Go).  
   
 ###  <a name="bkmk_IndexMeemory"></a> Mémoire pour les index  
 
 #### <a name="memory-for-each-hash-index"></a>Mémoire pour chaque index de hachage  
   
-Chaque index de hachage est un tableau de hachage de pointeurs d'adresse 8 octets.  La taille du tableau est déterminée par le nombre de valeurs d'index uniques pour cet index – par exemple, le nombre de valeurs uniques Col2 est un bon point de départ pour la taille du tableau de t1c2_index. Un tableau de hachage qui est trop grand gaspille de la mémoire.  Un tableau de hachage qui est trop petit ralentit les performances, car il y a trop de collisions par valeurs d'index qui hachent au même index.  
+Chaque index de hachage est un tableau de hachage de pointeurs d'adresse 8 octets.  La taille du tableau est mieux déterminée par le nombre de valeurs d’index uniques pour cet index, par exemple le nombre de valeurs uniques Col2 est un bon point de départ pour la taille du tableau de t1c2_index. Un tableau de hachage qui est trop grand gaspille de la mémoire.  Un tableau de hachage qui est trop petit ralentit les performances, car il y a trop de collisions par valeurs d'index qui hachent au même index.  
   
 Les index de hachage exécutent des recherches d'égalité rapides, notamment :  
   

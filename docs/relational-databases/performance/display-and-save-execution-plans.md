@@ -19,24 +19,24 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8f50c6209c926a4ab4a97e80f7a88a36b9d4cc5c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1a4ee1dd477473a7415a222a0b479ae01a608d8b
+ms.sourcegitcommit: ba7fb4b9b4f0dbfe77a7c6906a1fde574e5a8e1e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47689087"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52302752"
 ---
 # <a name="display-and-save-execution-plans"></a>Afficher et enregistrer des plans d'exécution
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Cette section explique comment afficher des plans d'exécution et les enregistrer dans un fichier au format XML en utilisant Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+Cette section explique comment afficher des plans d'exécution et les enregistrer dans un fichier au format XML en utilisant Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
- Les plans d’exécution affichent graphiquement les méthodes de récupération des données choisies par l’Optimiseur de requête de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les plans d’exécution représentent le coût d’exécution de requêtes et d’instructions spécifiques dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par des icônes plutôt que par la représentation tabulaire résultant des instructions [SET SHOWPLAN_ALL](../../t-sql/statements/set-showplan-all-transact-sql.md) ou [SET SHOWPLAN_TEXT](../../t-sql/statements/set-showplan-text-transact-sql.md). Cette approche graphique s'avère très utile pour la compréhension des caractéristiques de performances d'une requête.  
+Les plans d’exécution affichent graphiquement les méthodes de récupération des données choisies par l’Optimiseur de requête de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les plans d’exécution représentent le coût d’exécution de requêtes et d’instructions spécifiques dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par des icônes plutôt que par la représentation tabulaire résultant des instructions [SET SHOWPLAN_ALL](../../t-sql/statements/set-showplan-all-transact-sql.md) ou [SET SHOWPLAN_TEXT](../../t-sql/statements/set-showplan-text-transact-sql.md). Cette approche graphique se révèle utile pour la compréhension des caractéristiques de performances d'une requête.  
 
- Bien que l’Optimiseur de requête de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne génère qu’un seul plan d’exécution, il existe le concept de plan d’exécution **estimé** et de plan d’exécution **réel**.
- -  Un [plan d’exécution estimé](../../relational-databases/performance/display-the-estimated-execution-plan.md) retourne le plan d’exécution produit par l’Optimiseur de requête au moment de la compilation. Le fait de produire le plan d’exécution estimé n’exécute pas réellement la requête ou le lot, et par conséquent ne contient aucune information d’exécution, comme des avertissements d’exécution ou des métriques d’utilisation des ressources réelles. 
- -  Un [plan d’exécution réel](../../relational-databases/performance/display-an-actual-execution-plan.md) retourne le plan d’exécution produit par l’Optimiseur de requête, et une fois que les requêtes ou les lots ont été exécutés. Cela inclut les informations d’exécution concernant les métriques d’utilisation des ressources et les avertissements d’exécution.  
+Bien que l’Optimiseur de requête de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne génère qu’un seul plan d’exécution, il existe le concept de plan d’exécution **estimé** et de plan d’exécution **réel**.
+-  Un [plan d’exécution estimé](../../relational-databases/performance/display-the-estimated-execution-plan.md) retourne le plan d’exécution produit par l’Optimiseur de requête au moment de la compilation. Le fait de produire le plan d’exécution estimé n’exécute pas réellement la requête ou le lot, et par conséquent ne contient aucune information d’exécution, comme des avertissements d’exécution ou des métriques d’utilisation des ressources réelles. 
+-  Un [plan d’exécution réel](../../relational-databases/performance/display-an-actual-execution-plan.md) retourne le plan d’exécution produit par l’Optimiseur de requête, et une fois que les requêtes ou les lots ont été exécutés. Cela inclut les informations d’exécution concernant les métriques d’utilisation des ressources et les avertissements d’exécution.  
 
- Pour plus d’informations, consultez le [Guide d’architecture de traitement des requêtes](../../relational-databases/query-processing-architecture-guide.md).
+Pour plus d’informations sur les plans d’exécution de requête, consultez le [Guide d’architecture de traitement des requêtes](../../relational-databases/query-processing-architecture-guide.md).
   
 ## <a name="in-this-section"></a>Dans cette section  
   

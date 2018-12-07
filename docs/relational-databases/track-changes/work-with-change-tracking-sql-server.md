@@ -22,12 +22,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ad1d14ef3d727aab417a9b755aeff56fb3d2687d
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: e2f41329c10544686194524327ddb7fd560cb57d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559226"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514155"
 ---
 # <a name="work-with-change-tracking-sql-server"></a>Utiliser le suivi des modifications (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,16 +40,16 @@ ms.locfileid: "51559226"
 ### <a name="about-the-change-tracking-functions"></a>À propos des fonctions de suivi des modifications  
  Les applications peuvent utiliser les fonctions suivantes pour obtenir les modifications apportées à une base de données et les informations concernant ces modifications.  
   
- Fonction CHANGETABLE(CHANGES...)  
+ Fonction CHANGETABLE(CHANGES ...)  
  Cette fonction d'ensemble de lignes permet d'exécuter des requêtes d'informations de modifications. Elle interroge les données stockées dans les tables de suivi des modifications internes. Elle renvoie un jeu de résultats qui contient les clés primaires des lignes qui ont changé, ainsi que d'autres informations de modification telles que l'opération, les colonnes mises à jour et la version de la ligne.  
   
- La fonction CHANGETABLE(CHANGES...) prend une dernière version de synchronisation en tant qu'argument. La dernière version de synchronisation est obtenue à l'aide de la variable `@last_synchronization_version` . La sémantique de la dernière version de synchronisation est la suivante :  
+ La fonction CHANGETABLE(CHANGES ...) prend une dernière version de synchronisation comme argument. La dernière version de synchronisation est obtenue à l'aide de la variable `@last_synchronization_version` . La sémantique de la dernière version de synchronisation est la suivante :  
   
 -   Le client appelant a obtenu les modifications et connaît toutes les modifications jusqu'à la dernière version de synchronisation comprise.  
   
 -   La fonction CHANGETABLE(CHANGES ...) retourne par conséquent toutes les modifications qui se sont produites après la dernière version de synchronisation.  
   
-     L'illustration suivante montre comment CHANGETABLE(CHANGES…) est utilisée pour obtenir des modifications.  
+     L’illustration suivante montre comment CHANGETABLE(CHANGES ...) est utilisée pour obtenir des modifications.  
   
      ![Exemple de résultat de requête du suivi des modifications](../../relational-databases/track-changes/media/queryoutput.gif "Exemple de résultat de requête du suivi des modifications")  
   
@@ -60,7 +60,7 @@ ms.locfileid: "51559226"
  Permet d'obtenir la version valide minimale qu'un client doit avoir pour obtenir des résultats valides à partir de CHANGETABLE(). Le client doit vérifier la dernière version de synchronisation par rapport à la valeur renvoyée par cette fonction. Si la dernière version de synchronisation est inférieure à la version retournée par cette fonction, le client ne pourra pas obtenir de résultats valides de CHANGETABLE() et devra effectuer une réinitialisation.  
   
 ### <a name="obtaining-initial-data"></a>Obtention des données initiales  
- Pour pouvoir obtenir des modifications pour la première fois, une application doit envoyer une requête afin d'obtenir les données initiales et la version de synchronisation. L'application doit obtenir les données appropriées directement à partir de la table, puis utiliser CHANGE_TRACKING_CURRENT_VERSION() pour obtenir la version initiale. Cette version sera passée à CHANGETABLE (CHANGES…) la première fois que des modifications seront obtenues.  
+ Pour pouvoir obtenir des modifications pour la première fois, une application doit envoyer une requête afin d'obtenir les données initiales et la version de synchronisation. L'application doit obtenir les données appropriées directement à partir de la table, puis utiliser CHANGE_TRACKING_CURRENT_VERSION() pour obtenir la version initiale. Cette version sera passée à CHANGETABLE (CHANGES ...) la première fois que des modifications seront obtenues.  
   
  L'exemple suivant montre comment obtenir la version de synchronisation initiale et le jeu de données initial.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "51559226"
 ```  
   
 ### <a name="using-the-change-tracking-functions-to-obtain-changes"></a>Utilisation de fonctions de suivi des modifications pour obtenir des modifications  
- Pour obtenir les lignes modifiées d'une table ainsi que des informations sur les modifications, utilisez CHANGETABLE(CHANGES…). Par exemple, la requête suivante obtient les modifications pour la table `SalesLT.Product` .  
+ Pour obtenir les lignes modifiées d’une table ainsi que des informations sur les modifications, utilisez CHANGETABLE(CHANGES...). Par exemple, la requête suivante obtient les modifications pour la table `SalesLT.Product` .  
   
 ```sql  
 SELECT  
@@ -87,7 +87,7 @@ FROM
   
 ```  
   
- Habituellement, un client souhaite obtenir les données les plus récentes d'une ligne plutôt qu'uniquement les clés primaires de la ligne. Par conséquent, une application doit joindre les résultats de CHANGETABLE(CHANGES…) aux données de la table utilisateur. Par exemple, la requête suivante établit une jointure avec la table `SalesLT.Product` afin d'obtenir les valeurs des colonnes `Name` et `ListPrice` . Notez l'utilisation de `OUTER JOIN`. Cela est nécessaire afin de s'assurer que les informations relatives aux modifications sont retournées pour les lignes qui ont été supprimées de la table utilisateur.  
+ Habituellement, un client souhaite obtenir les données les plus récentes d'une ligne plutôt qu'uniquement les clés primaires de la ligne. Par conséquent, une application doit joindre les résultats de CHANGETABLE(CHANGES ...) aux données de la table utilisateur. Par exemple, la requête suivante établit une jointure avec la table `SalesLT.Product` afin d'obtenir les valeurs des colonnes `Name` et `ListPrice` . Notez l'utilisation de `OUTER JOIN`. Cela est nécessaire afin de s'assurer que les informations relatives aux modifications sont retournées pour les lignes qui ont été supprimées de la table utilisateur.  
   
 ```sql  
 SELECT  
@@ -108,7 +108,7 @@ ON
 SET @synchronization_version = CHANGE_TRACKING_CURRENT_VERSION()  
 ```  
   
- Lorsqu'une application obtient des modifications, elle doit utiliser à la fois CHANGETABLE(CHANGES…) et CHANGE_TRACKING_CURRENT_VERSION(), comme indiqué dans l'exemple suivant.  
+ Quand une application obtient des modifications, elle doit utiliser à la fois CHANGETABLE(CHANGES ...) et CHANGE_TRACKING_CURRENT_VERSION(), comme indiqué dans l’exemple suivant.  
   
 ```sql  
 -- Obtain the current synchronization version. This will be used the next time CHANGETABLE(CHANGES...) is called.  
@@ -133,7 +133,7 @@ ON
 ### <a name="validating-the-last-synchronized-version"></a>Validation de la dernière version synchronisée  
  Les informations relatives aux modifications sont maintenues pour une durée limitée. Cette durée est contrôlée par le paramètre CHANGE_RETENTION qui peut être spécifié dans le cadre d'ALTER DATABASE.  
   
- Notez que la durée spécifiée pour CHANGE_RETENTION détermine la fréquence à laquelle toutes les applications doivent demander des modifications à la base de données. Si une application a une valeur de *last_synchronization_version* antérieure à la version de synchronisation minimale valide pour une table, cette application ne peut pas effectuer d’énumération de modification valide. Cela est dû au fait que certaines informations de modification ont pu être nettoyées. Avant d’obtenir des modifications à l’aide de CHANGETABLE(CHANGES…), l’application doit valider la valeur de *last_synchronization_version* qu’elle prévoie de passer à CHANGETABLE(CHANGES…). Si la valeur de *last_synchronization_version* n’est pas valide, cette application doit réinitialiser toutes les données.  
+ Notez que la durée spécifiée pour CHANGE_RETENTION détermine la fréquence à laquelle toutes les applications doivent demander des modifications à la base de données. Si une application a une valeur de *last_synchronization_version* antérieure à la version de synchronisation minimale valide pour une table, cette application ne peut pas effectuer d’énumération de modification valide. Cela est dû au fait que certaines informations de modification ont pu être nettoyées. Avant d’obtenir des modifications à l’aide de CHANGETABLE(CHANGES ...), l’application doit valider la valeur de *last_synchronization_version* qu’elle prévoit de passer à CHANGETABLE(CHANGES ...). Si la valeur de *last_synchronization_version* n’est pas valide, cette application doit réinitialiser toutes les données.  
   
  L'exemple suivant montre vérifier la validité de la valeur de `last_synchronization_version` pour chaque table.  
   
@@ -204,15 +204,15 @@ ON
   
 2.  Obtenir la version qui peut être utilisée pour obtenir les modifications lors de la prochaine interrogation à l'aide de CHANGE_TRACKING_CURRENT_VERSION().  
   
-3.  Obtenir les modifications de la table Sales à l'aide de CHANGETABLE(CHANGES…).  
+3.  Obtenez les modifications de la table Sales à l’aide de CHANGETABLE(CHANGES ...).  
   
-4.  Obtenir les modifications de la table SalesOrders à l'aide de CHANGETABLE(CHANGES…).  
+4.  Obtenez les modifications de la table SalesOrders à l’aide de CHANGETABLE(CHANGES ...).  
   
  Deux processus qui se produisent dans la base de données peuvent affecter les résultats retournés par les étapes précédentes :  
   
 -   Le processus de nettoyage s'exécute en arrière-plan et supprime les informations de suivi des modifications antérieures à la période de rétention spécifiée.  
   
-     Le processus de nettoyage est un processus d'arrière-plan distinct qui utilise la période de rétention spécifiée lorsque vous configurez le suivi des modifications pour la base de données. Le problème réside dans le fait que le processus de nettoyage peut se produire entre la validation de la dernière version de synchronisation et l'appel à CHANGETABLE(CHANGES…). Une dernière version de synchronisation qui était juste valide peut ne plus l'être au moment où les modifications sont obtenues. Par conséquent, des résultats incorrects peuvent être retournés.  
+     Le processus de nettoyage est un processus d'arrière-plan distinct qui utilise la période de rétention spécifiée lorsque vous configurez le suivi des modifications pour la base de données. Le problème réside dans le fait que le processus de nettoyage peut se produire entre la validation de la dernière version de synchronisation et l’appel à CHANGETABLE(CHANGES ...). Une dernière version de synchronisation qui était juste valide peut ne plus l'être au moment où les modifications sont obtenues. Par conséquent, des résultats incorrects peuvent être retournés.  
   
 -   Des opérations DML sont en cours dans les tables Sales et SalesOrders, telles que les suivantes :  
   
@@ -233,17 +233,17 @@ ON
   
 3.  Obtenez la version à utiliser lors de la prochaine interrogation à l'aide de CHANGE_TRACKING_CURRENT_VERSION().  
   
-4.  Obtenez les modifications de la table Sales à l'aide de CHANGETABLE(CHANGES…).  
+4.  Obtenez les modifications de la table Sales à l’aide de CHANGETABLE(CHANGES ...).  
   
-5.  Obtenez les modifications de la table SalesOrders à l'aide de CHANGETABLE(CHANGES…).  
+5.  Obtenez les modifications de la table SalesOrders à l’aide de CHANGETABLE(CHANGES ...).  
   
 6.  Validez la transaction.  
   
  Quelques points à noter étant donné que toutes les étapes d'obtention de modifications ont lieu à l'intérieur d'une transaction d'instantané :  
   
--   Si le nettoyage se produit après la validation de la dernière version de synchronisation, les résultats de CHANGETABLE(CHANGES…) seront tout de même valides car les opérations de suppression effectuées par le nettoyage ne seront pas visibles à l'intérieur de la transaction.  
+-   Si le nettoyage se produit après la validation de la dernière version de synchronisation, les résultats de CHANGETABLE(CHANGES ...) seront tout de même valides, car les opérations de suppression effectuées par le nettoyage ne seront pas visibles à l’intérieur de la transaction.  
   
--   Toute modification apportée à la table Sales ou SalesOrders après l'obtention de la version de synchronisation suivante sera invisible et les appels à CHANGETABLE(CHANGES…) ne retourneront jamais de modifications avec une version ultérieure à celle retournée par CHANGE_TRACKING_CURRENT_VERSION(). La cohérence entre la table Sales et la table SalesOrders sera également maintenue car les transactions validées entre les appels à CHANGETABLE(CHANGES…) ne seront pas visibles.  
+-   Toute modification apportée à la table Sales ou SalesOrders après l’obtention de la version de synchronisation suivante sera invisible et les appels à CHANGETABLE(CHANGES ...) ne retourneront jamais de modifications avec une version ultérieure à celle retournée par CHANGE_TRACKING_CURRENT_VERSION(). La cohérence entre la table Sales et la table SalesOrders sera aussi maintenue, car les transactions validées entre les appels à CHANGETABLE(CHANGES ...) ne seront pas visibles.  
   
  L'exemple ci-dessous montre comment le niveau d'isolement d'instantané est activé pour une base de données.  
   
@@ -303,7 +303,7 @@ COMMIT TRAN
   
  Pour effectuer les opérations précédentes, une application de synchronisation peut utiliser les fonctions suivantes :  
   
--   CHANGETABLE(VERSION…)  
+-   CHANGETABLE(VERSION...)  
   
      Lorsqu'une application apporte des modifications, elle peut utiliser cette fonction pour vérifier s'il existe des conflits. Cette fonction obtient les informations de suivi des modifications les plus récentes pour une ligne spécifiée dans une table sujette au suivi des modifications. Les informations de suivi des modifications incluent la version de la dernière ligne modifiée. Ces informations permettent à une application de déterminer si la ligne a été modifiée après la dernière synchronisation de l'application.  
   
@@ -314,7 +314,7 @@ COMMIT TRAN
 ### <a name="checking-for-conflicts"></a>Recherche de conflits  
  Dans un scénario de synchronisation bidirectionnelle, l'application cliente doit déterminer si une ligne n'a pas été mise à jour depuis la dernière obtention des modifications.  
   
- L'exemple suivant montre comment utiliser la fonction CHANGETABLE(VERSION …) pour vérifier l'existence de conflits de la manière la plus efficace, sans requête distincte. Dans l'exemple, `CHANGETABLE(VERSION …)` détermine `SYS_CHANGE_VERSION` pour la ligne spécifiée par `@product id`. `CHANGETABLE(CHANGES …)` peut obtenir les mêmes informations, mais il est moins efficace. Si la valeur de `SYS_CHANGE_VERSION` pour la ligne est supérieure à la valeur de `@last_sync_version`, il existe un conflit. En cas de conflit, la ligne ne sera pas mise à jour. Le contrôle `ISNULL()` est nécessaire car il se peut qu'il n'y ait aucune information de modification disponible pour la ligne. Aucune information de modification n'existe si la ligne n'a pas été mise à jour depuis l'activation du suivi des modifications ou depuis le nettoyage des informations de modification.  
+ L’exemple suivant montre comment utiliser la fonction CHANGETABLE(VERSION ...) pour vérifier l’existence de conflits de la manière la plus efficace, sans requête distincte. Dans l'exemple, `CHANGETABLE(VERSION ...)` détermine `SYS_CHANGE_VERSION` pour la ligne spécifiée par `@product id`. `CHANGETABLE(CHANGES ...)` peut obtenir les mêmes informations, mais il est moins efficace. Si la valeur de `SYS_CHANGE_VERSION` pour la ligne est supérieure à la valeur de `@last_sync_version`, il existe un conflit. En cas de conflit, la ligne ne sera pas mise à jour. Le contrôle `ISNULL()` est nécessaire car il se peut qu'il n'y ait aucune information de modification disponible pour la ligne. Aucune information de modification n'existe si la ligne n'a pas été mise à jour depuis l'activation du suivi des modifications ou depuis le nettoyage des informations de modification.  
   
 ```sql  
 -- Assumption: @last_sync_version has been validated.  
@@ -358,7 +358,7 @@ END
 ```  
   
 ### <a name="setting-context-information"></a>Définition des informations de contexte  
- Avec la clause WITH CHANGE_TRACKING_CONTEXT, une application peut stocker des informations de contexte avec les informations de modifications. Ces informations peuvent ensuite être obtenues à partir de la colonne SYS_CHANGE_CONTEXT retournée par CHANGETABLE(CHANGES …).  
+ Avec la clause WITH CHANGE_TRACKING_CONTEXT, une application peut stocker des informations de contexte avec les informations de modifications. Ces informations peuvent ensuite être obtenues à partir de la colonne SYS_CHANGE_CONTEXT retournée par CHANGETABLE(CHANGES ...).  
   
  Les informations de contexte sont utilisées en général pour identifier la source des modifications. Si la source de la modification peut être identifiée, ces informations peuvent être utilisées par une banque de données afin d'éviter d'obtenir les modifications lors de la synchronisation suivante.  
   
@@ -392,9 +392,9 @@ SET TRANSACTION ISOLATION LEVEL SNAPSHOT;
 BEGIN TRAN  
     -- Verify that last_sync_version is valid.  
     IF (@last_sync_version <  
-CHANGE_TRACKING_MIN_VALID_VERSION(OBJECT_ID(‘SalesLT.Product’)))  
+CHANGE_TRACKING_MIN_VALID_VERSION(OBJECT_ID('SalesLT.Product')))  
     BEGIN  
-       RAISERROR (N’Last_sync_version too old’, 16, -1);  
+       RAISERROR (N'Last_sync_version too old', 16, -1);  
     END  
     ELSE  
     BEGIN  

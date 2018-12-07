@@ -11,12 +11,12 @@ ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 26e58796bc49105c45df52213a9210426338812c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 7030a99d5afed1c2c996eb34271fc130650e2aa3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51667418"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514467"
 ---
 # <a name="sql-server-backup-to-url"></a>Sauvegarde SQL Server vers une URL
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -83,7 +83,7 @@ Lorsque vous sauvegardez sur un objet blob de blocs, vous pouvez spécifier une 
  **Capture instantanée Azure :** capture instantanée d’objet blob Azure effectuée à un point dans le temps. Pour plus d’informations, consultez [Création d’un instantané d’objet blob](https://msdn.microsoft.com/library/azure/hh488361.aspx). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend désormais en charge les sauvegardes de captures instantanées Azure de fichiers de base de données stockés dans le service de stockage d’objets blob Microsoft Azure. Pour plus d’informations, consultez [Sauvegarde d’instantanés de fichiers pour les fichiers de base de données dans Azure](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md).  
   
 ###  <a name="sqlserver"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Components  
- **URL :** une URL spécifie un URI (Uniform Resource Identifier) vers un fichier de sauvegarde unique. L'URL est utilisée pour indiquer l'emplacement et le nom du fichier de sauvegarde de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . L’URL doit pointer vers un objet blob réel et pas un simple conteneur. Si l’objet blob n’existe pas, il est créé. Si un objet blob existant est spécifié, la sauvegarde échoue, sauf si l’option « WITH FORMAT » est spécifiée pour remplacer le fichier de sauvegarde existant dans l’objet blob.  
+ **URL :** une URL spécifie un URI (Uniform Resource Identifier) vers un fichier de sauvegarde unique. L'URL est utilisée pour indiquer l'emplacement et le nom du fichier de sauvegarde de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . L’URL doit pointer vers un objet blob réel et pas un simple conteneur. Si l’objet blob n’existe pas, il est créé. Si un objet blob existant est spécifié, la sauvegarde échoue, sauf si l’option « WITH FORMAT » est spécifiée pour remplacer le fichier de sauvegarde existant dans l’objet blob.  
   
  Voici un exemple de valeur d’URL : http[s]://NOMCOMPTE.Blob.core.windows.net/\<CONTENEUR>/\<NOMFICHIER.bak>. HTTPS n'est pas obligatoire, mais est recommandé.  
   
@@ -115,7 +115,7 @@ Lorsque vous sauvegardez sur un objet blob de blocs, vous pouvez spécifier une 
   
 -   La spécification des options du jeu de sauvegarde **RETAINDAYS** et **EXPIREDATE** n’est pas prise en charge.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est soumis à une limite de 259 caractères pour le nom d'une unité de sauvegarde. BACKUP TO URL utilise 36 caractères pour les éléments requis utilisés pour spécifier l’URL « https://.blob.core.windows.net//.bak », ce qui laisse 223 caractères pour les noms de compte, de conteneur et d’objet blob réunis.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est soumis à une limite de 259 caractères pour le nom d'une unité de sauvegarde. BACKUP TO URL utilise 36 caractères pour les éléments requis utilisés pour spécifier l’URL « https://.blob.core.windows.net//.bak », ce qui laisse 223 caractères pour les noms de compte, de conteneur et d’objet blob réunis.  
   
 ###  <a name="Support"></a> Prise en charge des instructions de sauvegarde/restauration  
   

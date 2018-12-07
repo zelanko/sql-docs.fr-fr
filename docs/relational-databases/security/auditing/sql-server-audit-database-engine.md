@@ -17,12 +17,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 511436c7c6c5fc73f3bb8a5c02a91ea01f3e8791
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 2736c3cf0d8373b80a41277a6b80b4b12b0ecd3a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670560"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510704"
 ---
 # <a name="sql-server-audit-database-engine"></a>SQL Server Audit (moteur de base de données)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -86,9 +86,9 @@ ms.locfileid: "51670560"
   
  Si un administrateur d'audit copie le fichier à un autre emplacement (entre autres, à des fins d'archivage), les listes de contrôle d'accès du nouvel emplacement doivent disposer uniquement des autorisations suivantes :  
   
--   Administrateur d'audit – Lecture/Écriture  
+-   Administrateur d’audit - Lecture/Écriture  
   
--   Lecteur d'audit – Lecture  
+-   Lecteur d’audit - Lecture  
   
  Nous conseillons de générer des rapports d'audit à partir d'une instance distincte de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], telle une instance de [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)], accessible uniquement aux administrateurs ou lecteurs d'audit. En utilisant une instance distincte du [!INCLUDE[ssDE](../../../includes/ssde-md.md)] pour la création de rapports, vous pouvez mieux empêcher les utilisateurs non autorisés d'obtenir un accès à l'enregistrement d'audit.  
   
@@ -114,9 +114,9 @@ ms.locfileid: "51670560"
  Pour plus d'informations, consultez [Créer un audit du serveur et une spécification d’audit du serveur](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md) et [Créer une spécification de l’audit du serveur et de la base de données](../../../relational-databases/security/auditing/create-a-server-audit-and-database-audit-specification.md).  
   
 ## <a name="considerations"></a>Observations  
- En cas d'échec pendant le lancement de l'audit, le serveur ne démarre pas. Dans ce cas, vous pouvez démarrer le serveur en saisissant l’option **–f** sur la ligne de commande.  
+ En cas d'échec pendant le lancement de l'audit, le serveur ne démarre pas. Dans ce cas, vous pouvez démarrer le serveur en saisissant l’option **-f** sur la ligne de commande.  
   
- Lorsqu'un échec de l'audit provoque l'arrêt ou empêche le démarrage du serveur car l'instruction ON_FAILURE=SHUTDOWN est spécifiée pour l'audit, l'événement MSG_AUDIT_FORCED_SHUTDOWN est écrit dans le journal. Étant donné que l'arrêt se produit lors de la première rencontre de ce paramètre, l'événement est écrit une seule fois. Cet événement est écrit après le message d'échec d'audit qui provoque l'arrêt. Un administrateur peut contourner les arrêts provoqués par l’audit en démarrant [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en mode mono-utilisateur, à l’aide de l’indicateur **–m** . Un démarrage en mode mono-utilisateur rétrograde les audits pour lesquels ON_FAILURE=SHUTDOWN est spécifié pour s'exécuter dans cette session comme ON_FAILURE=CONTINUE. Quand [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] est démarré à l’aide de l’indicateur **-m** , le message MSG_AUDIT_SHUTDOWN_BYPASSED est écrit dans le journal des erreurs.  
+ Lorsqu'un échec de l'audit provoque l'arrêt ou empêche le démarrage du serveur car l'instruction ON_FAILURE=SHUTDOWN est spécifiée pour l'audit, l'événement MSG_AUDIT_FORCED_SHUTDOWN est écrit dans le journal. Étant donné que l'arrêt se produit lors de la première rencontre de ce paramètre, l'événement est écrit une seule fois. Cet événement est écrit après le message d'échec d'audit qui provoque l'arrêt. Un administrateur peut contourner les arrêts provoqués par l’audit en démarrant [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en mode mono-utilisateur, à l’aide de l’indicateur **-m**. Un démarrage en mode mono-utilisateur rétrograde les audits pour lesquels ON_FAILURE=SHUTDOWN est spécifié pour s'exécuter dans cette session comme ON_FAILURE=CONTINUE. Quand [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] est démarré à l’aide de l’indicateur **-m**, le message MSG_AUDIT_SHUTDOWN_BYPASSED est écrit dans le journal des erreurs.  
   
  Pour plus d’informations sur les options de démarrage de service, consultez [Options de démarrage du service moteur de base de données](../../../database-engine/configure-windows/database-engine-service-startup-options.md).  
   

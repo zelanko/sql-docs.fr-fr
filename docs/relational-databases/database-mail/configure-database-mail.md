@@ -40,12 +40,12 @@ ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f0e9e904da503db5e88cc873c376f4ccd59da06f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 0d0f86f70a4cd496c4f4f32dd0a88077337cf645
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51678018"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505144"
 ---
 # <a name="configure-database-mail"></a>Configuration de la Messagerie de base de données
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -104,11 +104,11 @@ ms.locfileid: "51678018"
 ###  <a name="Welcome"></a> Page d'accueil  
  Cette page décrit les étapes de configuration de la messagerie de base de données.  
   
- **Ne plus afficher cette page** - activez cette option pour ignorer cette page d'accueil.  
+ **Ne plus afficher cette page** : activez cette option pour ignorer cette page d’accueil.  
   
  **Suivant** - passe à la page **Sélectionner une tâche de configuration** .  
   
- **Annuler** - termine l'Assistant sans configurer la messagerie de base de données  
+ **Annuler** : termine l’Assistant sans configurer l’e-mail de base de données  
   
  [Assistant Configuration de la messagerie de base de données](#DBWizard)  
   

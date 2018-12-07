@@ -11,18 +11,18 @@ ms.assetid: 6038697b-36a9-49e8-a02a-2ad9e2e60e5a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b874fa5fa15e765f087327bbf60a3be0d9561077
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 7f9f97120451e1cb5e4f05c256567d50c6fc904b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671878"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502381"
 ---
 # <a name="compare-options-for-storing-blobs-sql-server"></a>Comparer les options pour le stockage des objets blob (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Explique et compare les options disponibles pour stocker des fichiers et des documents dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-##  <a name="Expectations"></a> Stockage de fichiers dans la base de données – Avantages et attentes  
+##  <a name="Expectations"></a> Stockage de fichiers dans la base de données - Avantages et attentes  
  Un pourcentage important des données d'entreprise correspond à des données non structurées par nature et est stocké en général sous la forme de fichiers et de documents dans des systèmes de fichiers. La plupart de ces données sont produites, gérées et consommées par des applications qui accèdent aux fichiers via des API Windows. Les entreprises conservent en général ces données dans le système de fichiers, en stockant les métadonnées connexes des fichiers dans une base de données relationnelle.  
   
  L'intégration de données non structurées à la base de données relationnelle apporte des avantages significatifs. Ces avantages incluent ce qui suit :  

@@ -26,12 +26,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 13703e197580c544b28a2ebf45d192cedfd2f581
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f92c64d5270cfbb24bbedb5c649fe9a15ba56e9a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47683097"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52413846"
 ---
 # <a name="set-quotedidentifier-transact-sql"></a>SET QUOTED_IDENTIFIER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -81,10 +81,10 @@ SET QUOTED_IDENTIFIER ON
   
  SET QUOTED_IDENTIFIER prend effet au moment de l’analyse. Il affecte uniquement l’analyse, et non l’exécution des requêtes.  
   
- Pour un lot ad hoc de niveau supérieur, l’analyse commence à utiliser le paramètre actuel de la session défini pour QUOTED_IDENTIFIER.  Lors de l’analyse du lot, toute occurrence de SET QUOTED_IDENTIFIER change le comportement de l’analyse à partir de ce point, et enregistre ce paramètre pour la session.  Par conséquent, une fois le lot analysé et exécuté, le paramètre QUOTED_IDENTIFER de la session est défini en fonction de la dernière occurrence de SET QUOTED_IDENTIFIER dans le lot.  
+ Pour un lot ad hoc de plus haut niveau, l’analyse commence en utilisant le paramètre actuel de la session défini pour QUOTED_IDENTIFIER.  Lors de l’analyse du lot, toute occurrence de SET QUOTED_IDENTIFIER change le comportement de l’analyse à partir de ce point, et enregistre ce paramètre pour la session.  Par conséquent, une fois le lot analysé et exécuté, le paramètre QUOTED_IDENTIFER de la session est défini en fonction de la dernière occurrence de SET QUOTED_IDENTIFIER dans le lot.  
  Le code SQL statique d’une procédure stockée est analysée à l’aide de l’option QUOTED_IDENTIFIER en vigueur pour le lot qui a créé ou modifié la procédure stockée.  SET QUOTED_IDENTIFIER n’a aucun effet quand il apparaît dans le corps d’une procédure stockée sous forme de code SQL statique.  
   
- Pour un lot imbriqué à l’aide de sp_executesql ou exec(), l’analyse commence en utilisant l’option QUOTED_IDENTIFIER de la session.  Si le lot imbriqué se trouve à l’intérieur d’une procédure stockée, l’analyse commence en utilisant l’option QUOTED_IDENTIFIER de la procédure stockée.  Lors de l’analyse du lot imbriqué, toute occurrence de SET QUOTED_IDENTIFIER modifiera le comportement de l’analyse à partir de ce point, mais le paramètre QUOTED_IDENTIFIER de la session ne sera pas mis à jour.  
+ Pour un lot imbriqué à l’aide de sp_executesql ou exec(), l’analyse commence en utilisant l’option QUOTED_IDENTIFIER de la session.  Si le lot imbriqué se trouve à l’intérieur d’une procédure stockée, l’analyse commence en utilisant l’option QUOTED_IDENTIFIER de la procédure stockée.  Lors de l’analyse du lot imbriqué, toute occurrence de SET QUOTED_IDENTIFIER modifie le comportement de l’analyse à partir de ce point, mais le paramètre QUOTED_IDENTIFIER de la session n’est pas mis à jour.  
   
  L’utilisation de crochets, **[** et **]**, pour délimiter des identificateurs n’est pas affectée par le paramètre QUOTED_IDENTIFIER.  
   

@@ -15,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 115435aae796ea846e6412e6db5526cd9eb50526
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 621811a2cf4c3f7e08143f8608dd0fdced65a816
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47599307"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505829"
 ---
 # <a name="configure-flexible-automatic-failover-policy"></a>Configurer la stratégie de basculement automatique flexible
 
@@ -114,7 +114,7 @@ ms.locfileid: "47599307"
   
     -   Pour définir le niveau de condition de basculement, utilisez le paramètre **FailureConditionLevel***niveau*, où *niveau* est une des valeurs suivantes :  
   
-        |Valeur|Niveau|Le basculement automatique démarre lorsque…|  
+        |Valeur|Level|Le basculement automatique démarre lorsque…|  
         |-----------|-----------|-------------------------------------------|  
         |**OnServerDown**|Un|Le serveur est arrêté. Le service SQL Server s'arrête à cause d'un basculement ou d'un redémarrage.|  
         |**OnServerUnresponsive**|Deux|Le serveur ne répond pas. Toutes les conditions qui correspondent à une valeur inférieure sont remplies, le service SQL Server est connecté au cluster et le seuil du délai d'attente de contrôle d'intégrité est dépassé, ou le réplica principal actuel est dans un état d'échec.|  

@@ -10,18 +10,20 @@ ms.assetid: 51f8a08c-51d0-41d8-8bc5-1cb4d42622fb
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e9a1ae0aac049fef58d8007c26dce6ce355344a6
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: e05a241d81d4a051bd11dc8ce8b80858627afec0
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700527"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514534"
 ---
 # <a name="sql-server-offline-help-and-help-viewer"></a>Visionneuse d’aide et aide en mode hors connexion SQL Server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Vous pouvez utiliser la visionneuse d’aide dans SSMS (SQL Server Management Studio) ou VS (Visual Studio) pour télécharger et installer les packages d’aide SQL Server à partir de sources en ligne ou du disque et les afficher hors connexion. Cet article décrit les outils qui installent la visionneuse d’aide, comment installer le contenu de l’aide en mode hors connexion et comment afficher l’aide de [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)], SQL Server 2016 et SQL Server 2017.
+
+Une fois que le contenu a été téléchargé sur un système ayant accès à Internet, vous pouvez effectuer la migration du contenu vers un système qui n’a pas accès à Internet. 
 
 > [!NOTE]
 > L’aide de SQL Server 2016 et celle de SQL Server 2017 sont combinées, même si certaines rubriques s’appliquent aux versions individuelles là où cela est mentionné. La plupart des rubriques s’appliquent aux deux.
@@ -125,7 +127,8 @@ Pour afficher l’aide installée dans Visual Studio :
    ![Afficher l’aide](../sql-server/media/sql-server-help-installation/viewhelp.png)
 
    La table des matières de l’aide s’affiche sur la gauche et la rubrique d’aide sélectionnée sur la droite. 
-   
+
+  
 ## <a name="use-help-viewer-v1x"></a>Utiliser la visionneuse d’aide version 1.x
 
 Les versions antérieures de SSMS et VS utilisent la visionneuse d’aide version 1.x, qui prend en charge l’aide de SQL Server 2014. 
@@ -165,13 +168,15 @@ Ce processus utilise la visionneuse d’aide version 1.x pour télécharger l’
    
    ![HelpViewer1_withContentInstalled_ZoomedIn](../sql-server/media/sql-server-help-installation/helpviewer1-withcontentinstalled-zoomedin.png)  
    
+
+
 ## <a name="view-online-help"></a>Afficher l’aide en ligne
 
 L’aide en ligne affiche toujours le contenu le plus récent. 
 
 **Pour afficher l’aide en ligne de SQL Server dans SSMS 17.x**
 
-- Cliquez sur **Afficher l’aide** dans le menu **Aide**. La documentation la plus récente de SQL Server 2016/2017 dans [ https://docs.microsoft.com/sql/ https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation ](https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation) s’affiche dans un navigateur. 
+- Cliquez sur **Afficher l’aide** dans le menu **Aide**. La documentation la plus récente de SQL Server 2016/2017 dans [ https://docs.microsoft.com/sql/https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation ](https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation) s’affiche dans un navigateur. 
 
    ![Afficher l’aide](../sql-server/media/sql-server-help-installation/viewhelp.png)
 
@@ -204,6 +209,22 @@ Quand vous appuyez sur F1, ou cliquez sur **Aide** ou l’icône **?** dans une 
 
 >  [!NOTE]
 >  L’aide F1 fonctionne uniquement quand vous êtes connecté. Il n’existe aucune source hors connexion pour l’aide F1. 
+
+## <a name="systems-without-internet-access"></a>Systèmes sans accès à Internet
+Une fois que vous avez suivi les [étapes mentionnées précédemment](#use-help-viewer-v2x) pour télécharger le contenu hors connexion à l’aide de la visionneuse d’aide SQL Server sur un système ayant accès à Internet, vous pouvez effectuer la migration de ce contenu vers un système qui n’a pas accès à Internet. Pour cela, suivez les étapes ci-dessous. 
+
+  >[!NOTE]
+  >Vous devez installer un logiciel prenant en charge la visionneuse d’aide (par exemple, SQL Server Management Studio) sur le système hors connexion. 
+
+1. Ouvrez la visionneuse d’aide (Ctrl + Alt + F1).
+1. Sélectionnez la documentation qui vous intéresse. Par exemple, utilisez le filtre SQL, puis sélectionnez la documentation technique de SQL Server. 
+1. Recherchez le chemin physique des fichiers sur disque, qui se trouve sous **Chemin d’accès au stockage local**.
+1. Accédez à cet emplacement à l’aide de l’Explorateur du système de fichiers. 
+    1.  L’emplacement par défaut est : `C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\ManagementStudio\Extensions\Application`
+1. Sélectionnez les trois dossiers (**ContentStore**, **Incoming**, **IndexStore**) et copiez-les au même emplacement de votre système hors connexion. Vous devrez peut-être utiliser un support intermédiaire, comme une clé USB ou un CD. 
+1. Une fois ces fichiers déplacés, lancez la visionneuse d’aide sur le système hors connexion pour accéder à la documentation technique SQL Server.
+
+![physical-location-of-offline-content.png](media/sql-server-help-installation/physical-location-of-offline-content.png)
    
 
 ## <a name="next-steps"></a>Étapes suivantes

@@ -21,12 +21,12 @@ ms.assetid: a801c619-611b-4e82-a8d8-d1e01691b7a1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ff7bffcb3a31a697300d98e0de03a7f3e3111701
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: f928fcfc873e1a5e6209338b075a9df0ff543691
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51681337"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509791"
 ---
 # <a name="enroll-an-instance-of-sql-server-sql-server-utility"></a>Inscrire une instance de SQL Server (utilitaire SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -89,7 +89,7 @@ ms.locfileid: "51681337"
 -   [Inscription de l'instance de SQL Server](#Enrolling)  
   
 ##  <a name="Welcome"></a> Introduction à l'Assistant d'inscription d'instance  
- Pour lancer l’Assistant, développez l’arborescence de l’Explorateur de l’utilitaire sur un point de contrôle d’utilitaire, cliquez avec le bouton droit sur **Instances managées**et sélectionnez **Ajouter une instance managée…**.  
+ Pour lancer l’Assistant, développez l’arborescence de l’Explorateur de l’utilitaire sur un point de contrôle d’utilitaire, cliquez avec le bouton droit sur **Instances gérées** et sélectionnez **Ajouter une instance gérée…**.  
   
  Pour continuer, cliquez sur **Suivant**.  
   
@@ -176,7 +176,7 @@ ms.locfileid: "51681337"
 >  Pour plus d’informations sur la résolution de ce problème, consultez [Résolution des problèmes liés à l’utilitaire SQL Server](https://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453).  
   
 > [!IMPORTANT]  
->  Ne modifiez pas les propriétés du jeu d'éléments de collecte « Informations sur l'utilitaire » sur une instance managée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], et n'activez pas ou ne désactivez pas manuellement la collecte de données, car la collecte de données est contrôlée par un travail d'agent Utilitaire.  
+>  Ne modifiez pas les propriétés du jeu d’éléments de collecte « Informations sur l’utilitaire » sur une instance gérée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], et n’activez pas ou ne désactivez pas manuellement la collecte de données, car la collecte de données est contrôlée par un travail d’agent Utilitaire.  
   
  Après avoir effectué l'Assistant Inscription d'instance, cliquez sur le nœud **Instances gérées** dans le volet **Navigation de l'Explorateur de l'utilitaire** dans SSMS. Les instances inscrites de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont affichées en mode Liste dans le volet **Contenu de l'Explorateur de l'utilitaire** .  
   

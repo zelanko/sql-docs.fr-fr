@@ -16,12 +16,12 @@ ms.assetid: b2018116-cf1a-4e54-b29c-39e0ca2bda77
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 7de5dfc840c02faac0d915dc75b83ab82fd489fe
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 16688920d157a9f0fcbd68a12b3112418a81237e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031168"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511662"
 ---
 # <a name="data-alert-designer"></a>Concepteur d’alertes de données
 
@@ -82,9 +82,9 @@ Vous pouvez créer et modifier les définitions d'alerte de données dans le Con
 ### <a name="rules-and-clauses"></a>Règles et clauses  
  L'étendue des modifications apportées aux données et les règles de l'alerte définissent les modifications qui déclenchent l'alerte. Les types de modifications apportées aux données sont les suivants :  
   
--   **Au moins une donnée a**indique qu’au moins une valeur dans les données suit les règles spécifiées dans la condition.  
+-   **Au moins une donnée a** indique qu’au moins une valeur dans les données suit les règles spécifiées dans la condition.  
   
--   **Aucune donnée n’a**indique qu’aucune valeur ne suit les règles spécifiées dans la condition.  
+-   **Aucune donnée n’a** indique qu’aucune valeur ne suit les règles spécifiées dans la condition.  
   
  Une règle contient zéro, une, ou plusieurs clauses. Plusieurs règles sont combinées par l'opérateur logique AND. Une règle peut inclure plusieurs clauses combinées par l'opérateur OR si la colonne a le type de données de chaîne. Voici des règles de base qui utilisent une seule clause, plusieurs règles combinées à l'aide de l'opérateur AND et plusieurs règles ayant une ou plusieurs clauses OR.  
   
@@ -153,13 +153,13 @@ Vous pouvez créer et modifier les définitions d'alerte de données dans le Con
 ### <a name="schedule-settings"></a>Paramètres de planification  
  La planification que vous définissez pour l'alerte de données définit la périodicité d'envoi du message d'alerte et le début et la fin de l'envoi des messages d'alerte. Les modèles sont : une seule fois, toutes les minutes, une fois par jour et une fois par semaine. Bien qu'une alerte n'ait q'une seule planification possible, vous pouvez créer des périodicités complexes répondant à la plupart des exigences opérationnelles à l'aide de ces intervalles. Voici quelques exemples de périodicités communément utilisées dans les planifications :  
   
--   **Une fois par jour, tous les 10 jours** — Envoie une alerte une fois par jour, tous les 10 jours.  
+-   **Une fois par jour, tous les 10 jours** : envoie une alerte une fois par jour, tous les 10 jours.  
   
--   **Une fois par semaine, toutes les 2 semaines, le lundi** — Envoie une alerte toutes les deux semaines, uniquement le lundi.  
+-   **Une fois par semaine, toutes les 2 semaines, le lundi** : envoie une alerte toutes les deux semaines, uniquement le lundi.  
   
--   **Toutes les 12 heures** — Envoie une alerte toutes les 12 heures.  
+-   **Toutes les 12 heures** : envoie une alerte toutes les 12 heures.  
   
--   **Toutes les 30 minutes** — Envoie une alerte toutes les 30 minutes.  
+-   **Toutes les 30 minutes** : envoie une alerte toutes les 30 minutes.  
   
  La périodicité spécifie quand l'alerte est envoyée. Si les règles sont satisfaites au cours de l'intervalle spécifié par le modèle, l'alerte n'est envoyée qu'à la fil de l'intervalle.  
   

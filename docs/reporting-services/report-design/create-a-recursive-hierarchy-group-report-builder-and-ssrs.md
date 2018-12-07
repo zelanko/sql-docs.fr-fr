@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 8b830ba5-4d64-4348-a2b1-76b9338a1462
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d4e262ab70d75ef1f8ddff4772ceaf7adc68fec3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b1e2cf655389529c6211ad2ed29ba2e9a309dcfa
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701347"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542470"
 ---
 # <a name="create-a-recursive-hierarchy-group-report-builder-and-ssrs"></a>Créer un groupe de hiérarchies récursives (Générateur de rapports et SSRS)
 Dans les rapports paginés [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , un groupe de hiérarchies récursives organise les données d’un dataset de rapport unique qui inclut plusieurs niveaux hiérarchiques, tels que la structure de rapports pour les relations entre directeur et employé dans une hiérarchie d’organisation.  
@@ -48,7 +48,7 @@ Dans les rapports paginés [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion
     > [!NOTE]  
     >  Si vous ne voyez pas le volet Propriétés, cliquez sur **Propriétés** sous l’onglet **Affichage** .  
   
-2.  Dans le volet Propriétés, développez le nœud **Remplissage**, cliquez sur **Gauche**, puis, dans la liste déroulante, sélectionnez **\<Expression…>**.  
+2.  Dans le volet Propriétés, développez le nœud **Remplissage**, cliquez sur **Gauche** puis, dans la liste déroulante, sélectionnez **\<Expression...>**.  
   
 3.  Dans le volet Expression, tapez l'expression suivante :  
   

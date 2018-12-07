@@ -11,12 +11,12 @@ ms.assetid: 9d3001d9-8d0f-4e4a-8e04-4f666bf0df69
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 3e59151d342d73bc3ea45ab1c778cf8fe5b2ed01
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 597012bc5f008402ade7bd3d18888a3321ba6a9a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792617"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398112"
 ---
 # <a name="change-the-attribute-type-mds-add-in-for-excel"></a>Modifier le type d'attribut (complément MDS pour Excel)
 
@@ -34,7 +34,7 @@ ms.locfileid: "47792617"
   
 -   Vous devez avoir l'autorisation d'accéder aux zones fonctionnelles **Administration de système** et **Explorateur** .  
   
--   Vous devez être administrateur de modèle. Pour plus d’informations, consultez [Administrators &#40;Master Data Services&#41;](../../master-data-services/administrators-master-data-services.md).  
+-   Vous devez être administrateur de modèle. Pour plus d’informations, consultez [Administrateurs &#40;Master Data Services&#41;](../../master-data-services/administrators-master-data-services.md).  
   
 -   Un modèle, une entité et un attribut doivent exister.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "47792617"
   
 -   Modifie le type de données de l’attribut.  
   
--   Génère une copie de l’attribut avec le suffixe « _old » qui contient les valeurs précédentes. Il s’agit de ce que l’on appelle un attribut déconseillé.  
+-   Génère une copie de l’attribut avec le suffixe « _old » qui contient les valeurs précédentes. Il s’agit de ce que l’on appelle un attribut déconseillé.  
   
 ## <a name="see-also"></a> Voir aussi  
  [Attributs &#40;Master Data Services&#41;](../../master-data-services/attributes-master-data-services.md)   

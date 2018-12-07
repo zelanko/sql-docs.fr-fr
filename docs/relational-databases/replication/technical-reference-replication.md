@@ -14,12 +14,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2d8e08d9ef6221897b5e975702e4767943c174d5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 85cc48506377e8c884ee0423d40bc0fe6391df25
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47851017"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52536833"
 ---
 # <a name="technical-reference-replication"></a>Références techniques (réplication)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -35,14 +35,14 @@ ms.locfileid: "47851017"
   
  [New Publication Wizard](../../relational-databases/replication/new-publication-wizard.md)  
   
- [Plus…](../../relational-databases/replication/properties-reference-replication.md)  
+ [Plus...](../../relational-databases/replication/properties-reference-replication.md)  
   
  ![Petite icône de dossier de fichiers](../../analysis-services/media/filefolder-small.png "Petite icône de dossier de fichiers") **Agents de réplication**  
  [Replication Snapshot Agent](../../relational-databases/replication/agents/replication-snapshot-agent.md)  
   
  [Replication Distribution Agent](../../relational-databases/replication/agents/replication-distribution-agent.md)  
   
- [Plus…](../../relational-databases/replication/agents/replication-agents.md)  
+ [Plus...](../../relational-databases/replication/agents/replication-agents.md)  
   
  ![Petite icône de dossier de fichiers](../../analysis-services/media/filefolder-small.png "Petite icône de dossier de fichiers") **Procédures stockées de réplication**  
  [sp_addarticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)  
@@ -55,7 +55,7 @@ ms.locfileid: "47851017"
   
  [sp_addsubscriber &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql.md)  
   
- [Plus…](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
+ [Plus...](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
  ![Petite icône de dossier de fichiers](../../analysis-services/media/filefolder-small.png "Petite icône de dossier de fichiers") **Tables de réplication**  
  [MSmerge_conflicts_info &#40;Transact-SQL&#41;](../../relational-databases/system-tables/msmerge-conflicts-info-transact-sql.md)  
@@ -64,14 +64,14 @@ ms.locfileid: "47851017"
   
  [syssubscriptions &#40;Transact-SQL&#41;](../../relational-databases/system-tables/syssubscriptions-transact-sql.md)  
   
- [Plus…](../../relational-databases/system-tables/replication-tables-transact-sql.md)  
+ [Plus...](../../relational-databases/system-tables/replication-tables-transact-sql.md)  
   
  ![Petite icône de dossier de fichiers](../../analysis-services/media/filefolder-small.png "Petite icône de dossier de fichiers") **Vues de réplication**  
  [syspublications &#40;vue système&#41; &#40;Transact-SQL&#41;](../../relational-databases/system-views/syspublications-system-view-transact-sql.md)  
   
  [syssubscriptions &#40;vue système&#41; &#40;Transact-SQL&#41;](../../relational-databases/system-views/syssubscriptions-system-view-transact-sql.md)  
   
- [Plus…](../../relational-databases/system-views/replication-views-transact-sql.md)  
+ [Plus...](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
  ![Petite icône de dossier de fichiers](../../analysis-services/media/filefolder-small.png "Petite icône de dossier de fichiers") **Bibliothèque de classes de réplication**  
  <xref:Microsoft.SqlServer.Replication>  

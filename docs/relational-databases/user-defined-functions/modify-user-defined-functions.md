@@ -12,16 +12,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 492bce94e029f432a7a36b7e60d81435b6b1e0ce
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b3b558913488a6e8ded7b4e7df38c97af377331b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613733"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535583"
 ---
 # <a name="modify-user-defined-functions"></a>Modifier les fonctions définies par l'utilisateur
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
-  Vous pouvez modifier les fonctions définies par l'utilisateur dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Le fait de modifier des fonctions définies par l'utilisateur comme décrit ci-dessous n'affecte pas les autorisations des fonctions et n'a aucune incidence sur les fonctions, les procédures stockées et les déclencheurs qui en dépendent.  
+  Vous pouvez modifier les fonctions définies par l'utilisateur dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Le fait de modifier des fonctions définies par l’utilisateur comme décrit ci-dessous n’affecte pas les autorisations des fonctions et n’a aucune incidence sur les fonctions, les procédures stockées et les déclencheurs qui en dépendent.  
   
  **Dans cette rubrique**  
   
@@ -73,7 +73,7 @@ ms.locfileid: "47613733"
   
 5.  Dans la fenêtre de requête, apportez les modifications nécessaires à l'instruction ALTER FUNCTION.  
   
-6.  Dans le menu **Fichier**, cliquez sur **Enregistrer***nom_fonction*.  
+6.  Dans le menu **Fichier** , cliquez sur **Enregistrer**_nom_fonction_.  
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   

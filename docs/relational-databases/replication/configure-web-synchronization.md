@@ -33,12 +33,12 @@ ms.assetid: 21f8e4d4-cd07-4856-98f0-9c9890ebbc82
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 18f27adad094effd34ab3778f54ac5d362dd4534
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 36d70b56432fee62d157bb8e6cf192d906e84bc3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834627"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519337"
 ---
 # <a name="configure-web-synchronization"></a>Configurer la synchronisation Web
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -136,7 +136,7 @@ ms.locfileid: "47834627"
   
 -   Si vous répliquez d'importants volumes de données, vous pouvez être amené à ajuster la taille de lot de l'Agent de fusion.  
   
- La taille de lot pour la réplication de fusion est mesurée en *générations*, lesquelles sont des collections de modifications par article. Le nombre de générations dans un lot est spécifié à l’aide des paramètres –**DownloadGenerationsPerBatch** et –**UploadGenerationsPerBatch** de l’Agent de fusion. Pour plus d’informations, voir [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md).  
+ La taille de lot pour la réplication de fusion est mesurée en *générations*, lesquelles sont des collections de modifications par article. Le nombre de générations dans un lot est spécifié à l’aide des paramètres -**DownloadGenerationsPerBatch** et -**UploadGenerationsPerBatch** de l’Agent de fusion. Pour plus d’informations, voir [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md).  
   
  Pour d'importants volumes de données, spécifiez un petit nombre pour chaque paramètre de traitement par lot. Nous vous recommandons de commencer avec une valeur de 10, puis d'ajuster cette valeur selon les besoins et les performances des applications. En général, ces paramètres sont spécifiés dans un profil d'agent. Pour plus d'informations sur ces profils, consultez [Replication Agent Profiles](../../relational-databases/replication/agents/replication-agent-profiles.md).  
   

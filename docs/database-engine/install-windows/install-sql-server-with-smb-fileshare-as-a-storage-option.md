@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: d81475de98512e01be65b4c8c23c40809eec73fe
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: b7e44d2a4e9d5e368b9232706ab53e1fd8ad6eac
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51603629"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52416510"
 ---
 # <a name="install-sql-server-with-smb-fileshare-storage"></a>Installer SQL Server avec le stockage de partage de fichiers SMB
 
@@ -63,9 +63,9 @@ Depuis [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], les bases de données 
   
 ### <a name="installation-options"></a>Options d'installation  
   
--   Dans la page « Configuration du moteur de base de données » de l’interface utilisateur de l’installation, sous l’onglet « Répertoires de données », affectez au paramètre « Répertoire de données racine » la valeur «\\\fileserver1\share1\ ».  
+-   Dans la page « Configuration du moteur de base de données » de l’interface utilisateur de l’installation, sous l’onglet « Répertoires de données », affectez au paramètre « Répertoire de données racine » la valeur « \\\fileserver1\share1\" ».  
   
--   Dans l’installation à partir de l’invite de commandes, affectez à « /INSTALLSQLDATADIR » la valeur «\\\fileserver1\share1\ ».  
+-   Dans l’installation à partir de l’invite de commandes, affectez à « /INSTALLSQLDATADIR » la valeur « \\\fileserver1\share1\" ».  
   
      Voici l'exemple de syntaxe qui permet d'installer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur un serveur autonome à l'aide de l'option de partage de fichiers SMB :  
   

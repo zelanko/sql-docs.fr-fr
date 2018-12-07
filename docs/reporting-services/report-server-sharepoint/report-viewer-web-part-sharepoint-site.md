@@ -1,22 +1,22 @@
 ---
 title: Composant WebPart Visionneuse de rapports sur un site SharePoint - SSRS | Microsoft Docs
-ms.date: 09/25/2017
+ms.date: 11/15/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: aa3f4717b3a26a2cfeed8766e449591e8e4a028e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c849ec1ee515263b54b4931be59780ab5bf8ae75
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47673137"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52415746"
 ---
 # <a name="report-viewer-web-part-on-a-sharepoint-site---reporting-services"></a>Composant WebPart Visionneuse de rapports sur un site SharePoint - Reporting Services
 
-[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)])
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)]  [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2016-2019](../../includes/ssrs-appliesto-sharepoint-2016-2019.md)] [!INCLUDE[ssrs-appliesto-not-sharepoint-online](../../includes/ssrs-appliesto-not-sharepoint-online.md)]
 
 Le composant WebPart Visionneuse de rapports à une composant WebPart personnalisé. Vous pouvez l’utiliser pour afficher, parcourir, imprimer et exporter des rapports sur un serveur de rapports dans un site SharePoint. Le composant WebPart Visionneuse de rapports est associé aux fichiers de définition de rapport (.rdl) qui sont traités par un serveur de rapports Microsoft SQL Server Reporting Services. 
 
@@ -26,7 +26,7 @@ Le composant WebPart Visionneuse de rapports le plus récent peut également fou
 
 Le composant WebPart Visionneuse de rapports était disponible dans le complément Reporting Services pour les produits SharePoint. Il était spécifique aux serveurs de rapports en mode intégré SharePoint. Le mode intégré SharePoint a été déprécié après SQL Server 2016.
 
-Depuis SQL Server 2017, il n’existe qu’un seul mode d’installation de Reporting Services : le **mode natif**. Vous pouvez incorporer tous les types de rapports à l’aide d’un composant WebPart Visionneuse de pages en indiquant le paramètre d’URL *rs:Embed=true*. L’incorporation de rapports dans les pages SharePoint est un scénario d’intégration demandé par les clients et le composant WebPart Visionneuse de rapports mis à jour permet ce scénario pour les rapports paginés.
+Depuis SQL Server 2017, il n’existe qu’un seul mode d’installation pour Reporting Services : le **mode natif**. Vous pouvez incorporer tous les types de rapports à l’aide d’un composant WebPart Visionneuse de pages en indiquant le paramètre d’URL *rs:Embed=true*. L’incorporation de rapports dans les pages SharePoint est un scénario d’intégration demandé par les clients et le composant WebPart Visionneuse de rapports mis à jour permet ce scénario pour les rapports paginés.
 
 Même si le composant WebPart Visionneuse de pages suffit à incorporer un rapport paginé dans une page SharePoint, le composant WebPart Visionneuse de rapports mis à jour offre des fonctionnalités supplémentaires.
 

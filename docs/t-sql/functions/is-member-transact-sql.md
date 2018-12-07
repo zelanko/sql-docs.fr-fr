@@ -28,12 +28,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 654cd8331398746213afa892e8bf0c6acc86c269
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4b7da52e047b004fe4be394c72a784dfe3ccec21
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735507"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52391272"
 ---
 # <a name="ismember-transact-sql"></a>IS_MEMBER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -76,7 +76,7 @@ IS_MEMBER ( { 'group' | 'role' } )
   
  Cette fonction évalue l'appartenance au rôle, et non l'autorisation sous-jacente. Par exemple, le rôle de base de données fixe **db_owner** dispose de l’autorisation **CONTROL DATABASE**. Si l’utilisateur possède l’autorisation **CONTROL DATABASE**, mais n’est pas membre du rôle, cette fonction signale correctement que l’utilisateur n’est pas membre du rôle **db_owner**, bien qu’il dispose des mêmes autorisations.  
   
- Les membres du rôle de serveur fixe **sysadmin** se connectent comme utilisateur **dbo** dans toutes les bases de données. La vérification de l’autorisation pour le membre du rôle de serveur fixe **sysadmin** vérifie les autorisations pour **dbo**, et pas pour le compte de connexion d’origine. Étant donné que **dbo** ne peut pas être ajouté à un rôle de base de données et qu’il n’existe pas dans les groupes Windows, **dbo** renvoie toujours 0 (ou NULL si le rôle n’existe pas).  
+ Les membres du rôle de serveur fixe **sysadmin** se connectent comme utilisateur **dbo** dans toutes les bases de données. La vérification de l’autorisation pour le membre du rôle de serveur fixe **sysadmin** vérifie les autorisations pour **dbo**, et pas pour le compte de connexion d’origine. Étant donné que **dbo** ne peut pas être ajouté à un rôle de base de données et qu’il n’existe pas dans les groupes Windows, **dbo** retourne toujours 0 (ou NULL si le rôle n’existe pas).  
   
 ## <a name="related-functions"></a>Fonctions connexes  
  Pour déterminer si une autre connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est membre d’un rôle de base de données, utilisez [IS_ROLEMEMBER &#40;Transact-SQL&#41;](../../t-sql/functions/is-rolemember-transact-sql.md). Pour déterminer si une connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est membre d’un rôle de serveur, utilisez [IS_SRVROLEMEMBER &#40;Transact-SQL&#41;](../../t-sql/functions/is-srvrolemember-transact-sql.md).  

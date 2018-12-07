@@ -11,12 +11,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: e00e45f15923955d7ae4e65e8d39e92121a33a1b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0a0c98bc640a28642277ad16ca3ec209ddaaf0c3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838677"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541395"
 ---
 # <a name="whats-new-in-database-engine---sql-server-2017"></a>Nouveautés du moteur de base de données - SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ Cette rubrique décrit les améliorations apportées à [!INCLUDE[ssdenoversion-
 - AMÉLIORATION DES PERFORMANCES POUR LA GÉNÉRATION DES INDEX NON-CLUSTER SUR LES TABLES À MÉMOIRE OPTIMISÉE. Les performances de la regénération d’index bwtree (non-cluster) pour les tables MEMORY_OPTIMIZED lors de la récupération d’une base de données ont été considérablement optimisées. Cette amélioration réduit de façon substantielle le temps de récupération de la base de données quand des index non-cluster sont utilisés.  
 - [sys.dm_os_sys_info](../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md) a trois nouvelles colonnes : socket_count, cores_per_socket et numa_node_count. Ceci est utile lorsque vous exécutez votre serveur dans une machine virtuelle car une valeur NUMA trop élevée risque de créer des hôtes survalidés (overcommited), ce qui, au final, entraîne des problèmes de performances.
 - Une nouvelle colonne modified_extent_page_count\, a été introduite dans [sys.dm_db_file_space_usage](../relational-databases/system-dynamic-management-views/sys-dm-db-file-space-usage-transact-sql.md) pour effectuer le suivi des modifications différentielles dans chaque fichier de la base de données. La nouvelle colonne modified_extent_page_count vous permet de générer des solutions de sauvegarde optimisées, qui effectuent une sauvegarde différentielle si le pourcentage des pages qui ont changé dans la base de données ne dépasse pas un certain seuil (disons 70 à 80 %), et qui sinon effectuent une sauvegarde complète de la base de données.
-- SELECT INTO … ON groupe_fichiers : [SELECT INTO](../t-sql/queries/select-into-clause-transact-sql.md) prend désormais en charge le chargement d’une table dans un groupe de fichiers autre qu’un groupe de fichiers par défaut de l’utilisateur, avec la prise en charge du mot clé **ON** ajoutée à la syntaxe TSQL de SELECT INTO.
+- SELECT INTO... ON groupe_fichiers : [SELECT INTO](../t-sql/queries/select-into-clause-transact-sql.md) prend désormais en charge le chargement d’une table dans un groupe de fichiers autre qu’un groupe de fichiers par défaut de l’utilisateur, avec la prise en charge du mot clé **ON** ajoutée à la syntaxe TSQL de SELECT INTO.
 - Améliorations du programme d’installation de tempdb : le programme d’installation permet de spécifier une taille initiale du fichier tempdb allant jusqu’à **256 Go (262 144 Mo)** par fichier, avec un avertissement donné aux clients si la taille du fichier est définie avec une valeur supérieure à 1 Go et si l’initialisation instantanée de fichiers n’est pas activée. Si vous n’activez pas l’initialisation instantanée de fichiers, le temps d’installation peut augmenter de façon exponentielle en fonction de la taille initiale spécifiée pour le fichier de données tempdb. L’initialisation instantanée de fichiers n’est pas applicable à la taille du journal des transactions : si vous spécifiez une valeur supérieure pour le journal des transactions, le temps d’installation peut augmenter invariablement lors du démarrage de tempdb à l’installation, quelle que soit la valeur de l’initialisation instantanée de fichiers pour le compte de service SQL Server.
 - Une nouvelle vue de gestion dynamique [sys.dm_tran_version_store_space_usage](../relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-space-usage.md) est introduite pour suivre l’utilisation de la banque des versions par base de données. Cette nouvelle vue de gestion dynamique est utile pour surveiller l’utilisation de la banque des versions dans tempdb, de façon à vous permettre de planifier de façon proactive le dimensionnement de tempdb en fonction des exigences d’utilisation de la banque des versions par base de données, sans pénaliser les performances ni entraîner un travail supplémentaire pour l’exécuter sur des serveurs de production.
 - Une nouvelle fonction de gestion dynamique, [sys.dm_db_log_info](../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md), est introduite pour exposer les informations de fichier journal virtuel similaires à DBCC LOGINFO, afin de surveiller, alerter et éviter les problèmes potentiels du journal des transactions causés par les problèmes de fichiers journaux virtuels, de taille du fichier journal virtuel ou de SHRINKFILE rencontrés par les clients.

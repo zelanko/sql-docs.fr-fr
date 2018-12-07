@@ -23,20 +23,20 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 20ce7b15fcfedfe77ff3a03a4dfde1e47969ffad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c004a991872257baa045be6e0253d7d63979f2f7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701927"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542445"
 ---
 # <a name="import-bulk-data-by-using-bulk-insert-or-openrowsetbulk-sql-server"></a>Importer des données en bloc à l’aide de BULK INSERT ou OPENROWSET(BULK...) (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  Cette rubrique fournit une vue d'ensemble de l'utilisation de l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] BULK INSERT et de l'instruction INSERT...SELECT * FROM OPENROWSET(BULK...) destinées à l'importation en bloc de données à partir d'un fichier de données dans une table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cette rubrique décrit aussi des règles de sécurité relatives à l'utilisation de BULK INSERT et OPENROWSET(BULK…), et l'utilisation de ces méthodes pour l'importation en bloc à partir d'une source de données distante.  
+  Cette rubrique fournit une vue d'ensemble de l'utilisation de l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] BULK INSERT et de l'instruction INSERT...SELECT * FROM OPENROWSET(BULK...) destinées à l'importation en bloc de données à partir d'un fichier de données dans une table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cette rubrique décrit aussi des règles de sécurité relatives à l’utilisation de BULK INSERT et OPENROWSET(BULK...), et l’utilisation de ces méthodes pour l’importation en bloc à partir d’une source de données distante.  
   
 > [!NOTE]
-> Lorsque vous utilisez BULK INSERT ou OPENROWSET(BULK…), il est important de comprendre la manière dont la version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gère l'emprunt d'identité. Pour plus d'informations, consultez « Considérations sur la sécurité» plus loin dans cette rubrique.  
+> Quand vous utilisez BULK INSERT ou OPENROWSET(BULK...), il est important de comprendre la manière dont la version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gère l’emprunt d’identité. Pour plus d'informations, consultez « Considérations sur la sécurité» plus loin dans cette rubrique.  
   
 ## <a name="bulk-insert-statement"></a>BULK INSERT, instruction  
  BULK INSERT charge les données d'un fichier de données dans une table. Cette fonctionnalité est similaire à celle fournie par l’option **in** de la commande **bcp** , mais le fichier de données est lu par le processus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour obtenir une description de la syntaxe BULK INSERT, consultez [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md).  
@@ -68,12 +68,12 @@ ms.locfileid: "47701927"
   
 -   [Utiliser un fichier de format pour mapper les colonnes d’une table sur les champs d’un fichier de données &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
-## <a name="openrowsetbulk-function"></a>Fonction OPENROWSET(BULK…)  
- Le fournisseur d'ensembles de lignes en bloc OPENROWSET est accessible en appelant la fonction OPENROWSET et en spécifiant l'option BULK. La fonction OPENROWSET(BULK…) vous permet d'accéder aux données distantes en vous connectant à une source de données distante (un fichier de données) par l'intermédiaire d'un fournisseur OLE DB.  
+## <a name="openrowsetbulk-function"></a>OPENROWSET(BULK...) Fonction  
+ Le fournisseur d'ensembles de lignes en bloc OPENROWSET est accessible en appelant la fonction OPENROWSET et en spécifiant l'option BULK. La fonction OPENROWSET(BULK...) vous permet d’accéder aux données distantes en vous connectant à une source de données distante (un fichier de données) par l’intermédiaire d’un fournisseur OLE DB.  
 
 **S’applique à :** `OPENROWSET` n’est pas disponible dans [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].
   
- Pour importer en bloc des données, appelez OPENROWSET(BULK…) à partir d'une clause SELECT…FROM dans une instruction INSERT. La syntaxe de base pour l'importation en bloc de données est la suivante :  
+ Pour importer en bloc des données, appelez OPENROWSET(BULK...) à partir d’une clause SELECT...FROM dans une instruction INSERT. La syntaxe de base pour l'importation en bloc de données est la suivante :  
   
  INSERT ... SELECT * FROM OPENROWSET(BULK...)  
   
@@ -109,7 +109,7 @@ ms.locfileid: "47701927"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows peuvent être configurés afin de permettre à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de se connecter à une autre instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en transmettant les informations d'un utilisateur Windows authentifié. Ce procédé est appelé *emprunt d'identité* ou *délégation*. Il importe de comprendre comment la version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gère les aspects de sécurité en matière d'emprunt d'identité lorsque vous utilisez l'instruction BULK INSERT ou OPENROWSET. L'emprunt d'identité permet au fichier de données de résider sur un ordinateur différent du processus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou de l'utilisateur. Par exemple, si un utilisateur sur **Ordinateur_A** a accès à un fichier de données sur **Ordinateur_B**, et que la délégation des informations d’identification a été correctement définie, l’utilisateur peut se connecter à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s’exécutant sur **Ordinateur_C**, accéder au fichier de données sur **Ordinateur_B**, et importer les données en bloc de ce fichier dans une table résidant sur **Ordinateur_C**.  
   
 ## <a name="bulk-importing-from-a-remote-data-file"></a>Importation en bloc à partir d’un fichier de données distant  
- Pour utiliser BULK INSERT ou INSERT...SELECT \* FROM OPENROWSET(BULK...) pour effectuer l’importation en bloc de données à partir d’un autre ordinateur, le fichier de données doit être partagé entre les deux ordinateurs. Pour spécifier un fichier de données partagé, utilisez son nom UNC (Universal Naming Convention), dont le format général est **\\\\***nom_serveur***\\***nom_partage***\\***chemin***\\***nom_fichier*. En outre, le compte utilisé pour accéder au fichier de données doit avoir reçu les autorisations requises pour lire le fichier sur le disque distant.  
+ Pour utiliser BULK INSERT ou INSERT...SELECT \* FROM OPENROWSET(BULK...) pour effectuer l’importation en bloc de données à partir d’un autre ordinateur, le fichier de données doit être partagé entre les deux ordinateurs. Pour spécifier un fichier de données partagé, utilisez son nom UNC (Universal Naming Convention), dont le format général est **\\\\**_nom_serveur_**\\**_nom_partage_**\\**_chemin_**\\**_nom_fichier_. En outre, le compte utilisé pour accéder au fichier de données doit avoir reçu les autorisations requises pour lire le fichier sur le disque distant.  
   
  Par exemple, l'instruction `BULK INSERT` ci-dessous importe en bloc des données dans la table `SalesOrderDetail` de la base de données `AdventureWorks` à partir d'un fichier de données nommé `newdata.txt`. Ce fichier de données réside dans un dossier partagé nommé `\dailyorders`, dans un répertoire partagé du réseau nommé `salesforce`, sur un système nommé `computer2`.  
   

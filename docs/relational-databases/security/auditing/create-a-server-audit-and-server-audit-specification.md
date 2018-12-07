@@ -18,12 +18,12 @@ ms.assetid: 6624b1ab-7ec8-44ce-8292-397edf644394
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 6742cefe44c2fd4a545b243d22993e0d7615e585
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 803ce49a254bc6f0e969828192d914facf46ef3c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845407"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523034"
 ---
 # <a name="create-a-server-audit-and-server-audit-specification"></a>Créer un audit du serveur et une spécification d'audit du serveur
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "47845407"
   
 1.  Dans l'Explorateur d'objets, développez le dossier **Sécurité** .  
   
-2.  Cliquez avec le bouton droit sur le dossier **Audits** et sélectionnez **Nouvel audit**.  
+2.  Cliquez avec le bouton droit sur le dossier **Audits** et sélectionnez **Nouvel audit...**.  
   
      Les options suivantes sont disponibles sur la page **Général** de la boîte de dialogue **Créer un audit** .  
   
@@ -96,8 +96,8 @@ ms.locfileid: "47845407"
      **Chemins d'accès au fichier**  
      Spécifie l’emplacement du dossier dans lequel les données d’audit sont écrites quand la **destination de l’audit** est un fichier.  
   
-     **Points de suspension (…)**  
-     Ouvre la boîte de dialogue **Rechercher un dossier –**_nom\_serveur_ qui permet de spécifier un chemin de fichier ou de créer un dossier dans lequel écrire le fichier d’audit.  
+     **Points de suspension (...)**  
+     Ouvre la boîte de dialogue **Rechercher un dossier -**_nom\_serveur_ qui permet de spécifier un chemin de fichier ou de créer un dossier dans lequel écrire le fichier d’audit.  
   
      **Limites maximales du fichier d'audit :**  
      **Fichiers de substitution maximale**  
@@ -126,7 +126,7 @@ ms.locfileid: "47845407"
   
 1.  Dans l'Explorateur d'objets, cliquez sur le signe plus pour développer le dossier **Sécurité** .  
   
-2.  Cliquez avec le bouton droit sur le dossier **Spécifications de l’audit du serveur** , puis sélectionnez **Nouvelle spécification de l’audit du serveur**.  
+2.  Cliquez avec le bouton droit sur le dossier **Spécifications de l’audit du serveur**, puis sélectionnez **Nouvelle spécification de l’audit du serveur...**.  
   
      Les options suivantes sont disponibles dans la boîte de dialogue **Créer la spécification de l'audit du serveur** .  
   
@@ -145,13 +145,13 @@ ms.locfileid: "47845407"
      **Nom de l’objet**  
      Nom de l'objet à auditer. Disponible uniquement pour les actions d'audit ; ne s'applique pas aux groupes d'audit.  
   
-     **Points de suspension (…)**  
+     **Points de suspension (...)**  
      Ouvre la boîte de dialogue **Sélectionner des objets** permettant de rechercher et sélectionner un objet disponible, en fonction du **Type d'action de l'audit**spécifié.  
   
      **Nom principal**  
      Compte par lequel filtrer l'audit pour l'objet audité.  
   
-     **Points de suspension (…)**  
+     **Points de suspension (...)**  
      Ouvre la boîte de dialogue **Sélectionner des objets** permettant de rechercher et sélectionner un objet disponible, en fonction du **Nom de l'objet**spécifié.  
   
 3.  Lorsque vous avez terminé, cliquez sur **OK**.  
@@ -174,7 +174,7 @@ ms.locfileid: "47845407"
   
 #### <a name="to-create-a-server-audit-specification"></a>Pour créer une spécification d'audit de serveur  
   
-1.  Dans l'**Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   

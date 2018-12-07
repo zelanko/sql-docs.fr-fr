@@ -15,12 +15,12 @@ ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e63424772029acf5862d19362e9a7e9bd0e082c1
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 41ed2ef9899e4c0df7cb6aa3aa8f00ac62d6ffb2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641406"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535540"
 ---
 # <a name="ssis-catalog"></a>Catalogue SSIS
   Le catalogue **SSISDB** est l’élément central pour l’utilisation des projets [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] (SSIS) que vous avez déployés sur le serveur [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)]. Ainsi, c'est dans ce catalogue que vous définissez les paramètres de projet et de package, configurez les environnements pour spécifier des valeurs d'exécution pour les packages, exécutez et résolvez les problèmes relatifs aux packages, et gérez les opérations du serveur [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] .  
@@ -394,7 +394,7 @@ Pour exécuter le **travail de maintenance du serveur SSIS**, SSIS crée la conn
 
   [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] comprend la base de données SSISDB. Interrogez les vues de la base de données SSISDB pour inspecter les objets, les paramètres et les données opérationnelles stockés dans le catalogue **SSISDB** . Cette rubrique fournit des instructions sur la sauvegarde et la restauration de la base de données.  
   
- Le catalogue **SSISDB** stocke les packages que vous avez déployés sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Pour plus d’informations sur le catalogue, consultez [Catalogue SSIS](../../integration-services/catalog/ssis-catalog.md).  
+ Le catalogue **SSISDB** stocke les packages que vous avez déployés sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Pour plus d’informations sur le catalogue, consultez [Catalogue SSIS](../../integration-services/catalog/ssis-catalog.md).  
   
 ###  <a name="backup"></a> Pour sauvegarder la base de données SSIS  
   
@@ -627,7 +627,7 @@ Indiquez le mot de passe que vous avez spécifié durant la création du catalog
 > [!WARNING]  
 >  Le basculement automatique de la base de données SSISDB n’est pas pris en charge tant que vous n’activez pas la prise en charge de SSIS pour AlwaysOn.  
   
- Les réplicas secondaires récemment ajoutés à partir du groupe de disponibilité Always On apparaissent dans le tableau. Cliquez sur **connexion** pour chaque réplica figurant dans la liste, puis entrez les informations d’identification pour la connexion au réplica. Le compte d’utilisateur doit être membre du groupe sysadmin sur chaque réplica pour pouvoir activer la prise en charge d’Always On par SSIS. Une fois connecté à chaque réplica, cliquez sur **OK** pour activer la prise en charge de SSIS pour AlwaysOn.  
+ Les réplicas secondaires récemment ajoutés à partir du groupe de disponibilité Always On apparaissent dans le tableau. Cliquez sur le bouton de **connexion** pour chaque réplica figurant dans la liste, puis entrez les informations d’identification d’authentification pour la connexion au réplica. Le compte d’utilisateur doit être membre du groupe sysadmin sur chaque réplica pour pouvoir activer la prise en charge d’Always On par SSIS. Une fois connecté à chaque réplica, cliquez sur **OK** pour activer la prise en charge de SSIS pour AlwaysOn.  
  
 Si l’option **Activer la prise en charge d’Always On** du menu contextuel semble désactivée une fois que vous avez rempli les autres prérequis, essayez d’effectuer les actions suivantes :
 1.  Actualisez le menu contextuel en cliquant sur l’option **Actualiser**.
@@ -635,7 +635,7 @@ Si l’option **Activer la prise en charge d’Always On** du menu contextuel se
 3.  Vérifiez que la version de SQL Server est au moins égale à 13.0. SSIS prend en charge Always On uniquement sur SQL Server 2016 et les versions ultérieures.
 
 ###  <a name="Upgrade"></a> Mise à niveau de la base de données SSISDB dans un groupe de disponibilité  
- Si vous mettez à niveau SQL Server à partir d’une version précédente et si la base de données SSISDB se trouve dans un groupe de disponibilité AlwaysOn, la mise à niveau peut être bloquée par la règle « Vérification : SSISDB est dans des groupes de disponibilité AlwaysOn ». Ce blocage se produit parce que la mise à niveau s’exécute en mode mono-utilisateur, alors qu’une base de données de disponibilité doit être une base de données multi-utilisateurs. Par conséquent, durant une mise à niveau ou une mise à jour corrective, toutes les bases de données de disponibilité, y compris la base de données SSISDB, sont mises hors connexion, et ne sont pas mises à niveau ou corrigées. Pour permettre la poursuite de la mise à niveau, supprimez la base de données SSISDB du groupe de disponibilité, mettez à niveau ou corrigez chaque nœud, puis rajoutez la base de données SSISDB au groupe de disponibilité.  
+ Si vous mettez à niveau SQL Server à partir d’une version précédente et si la base de données SSISDB se trouve dans un groupe de disponibilité AlwaysOn, la mise à niveau peut être bloquée par la règle « Vérification : SSISDB est dans des groupes de disponibilité AlwaysOn ». Ce blocage se produit parce que la mise à niveau s’exécute en mode mono-utilisateur, alors qu’une base de données de disponibilité doit être une base de données multi-utilisateurs. Par conséquent, durant une mise à niveau ou une mise à jour corrective, toutes les bases de données de disponibilité, y compris la base de données SSISDB, sont mises hors connexion, et ne sont pas mises à niveau ou corrigées. Pour permettre la poursuite de la mise à niveau, supprimez la base de données SSISDB du groupe de disponibilité, mettez à niveau ou corrigez chaque nœud, puis rajoutez la base de données SSISDB au groupe de disponibilité.  
   
  Si la règle « Vérification : SSISDB dans un groupe de disponibilité Always On » vous bloque, mettez à niveau SQL Server en effectuant les étapes suivantes.  
   

@@ -19,12 +19,12 @@ ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8cbdfeec8b603c4ca474088e0134f9fb2c319c08
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 926b099e6cadadb130717159188f2fcc87dbc218
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661125"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52517672"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>Démarrer et utiliser l'Assistant Paramétrage du moteur de base de données
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -245,16 +245,16 @@ Pour plus d’informations, consultez [Paramétrage de base de données à l’a
     dta -E -D DatabaseName -ip -s SessionName  
     ```  
   
-2.  Pour modifier le nombre d'événements à utiliser pour l'analyse, spécifiez l'option **-n** . L'exemple suivant augmente le nombre d'entrées du cache à 2 000.  
+2.  Pour modifier le nombre d’événements à utiliser pour l’analyse, spécifiez l’option **-n**. L'exemple suivant augmente le nombre d'entrées du cache à 2 000.  
   
     ```  
-    dta -E -D DatabaseName -ip –n 2000-s SessionName1  
+    dta -E -D DatabaseName -ip -n 2000-s SessionName1  
     ```  
   
 3.  Pour analyser les événements pour toutes les bases de données de l’instance, spécifiez l’option **-ipf** .  
   
     ```  
-    dta -E -D DatabaseName -ip –ipf –n 2000 -s SessionName2  
+    dta -E -D DatabaseName -ip -ipf -n 2000 -s SessionName2  
     ```  
   
 ##### <a name="to-tune-a-database-by-using-a-workload-and-dta-utility-default-settings"></a>Pour paramétrer une base de données en utilisant les paramètres par défaut d'une charge de travail et de l'utilitaire dta  

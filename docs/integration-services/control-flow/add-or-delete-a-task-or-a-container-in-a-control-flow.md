@@ -16,12 +16,12 @@ ms.assetid: 653084c6-87a3-45d5-b458-914ecf24d56a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7524bd375dcf2c2d34395a0e87c1b3fe7d08ba63
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 6f0362ef230cfb620603c874a76e0614f89ab460
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640058"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523107"
 ---
 # <a name="add-or-delete-a-task-or-a-container-in-a-control-flow"></a>Ajouter ou supprimer une tâche ou un conteneur dans un flux de contrôle
   Quand vous travaillez dans le concepteur de flux de contrôle, la boîte à outils du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] énumère les tâches proposées par [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pour créer le flux de contrôle d’un package. Pour plus d’informations sur la boîte à outils, consultez [Boîte à outils SSIS](../../integration-services/ssis-toolbox.md).  
@@ -80,7 +80,7 @@ Vous pouvez définir la plupart des propriétés des tâches et des conteneurs �
 5.  Dans la fenêtre **Propriétés** , mettez à jour la valeur de la propriété.  
   
     > [!NOTE]  
-    >  Vous pouvez définir les propriétés en tapant une valeur directement dans la zone de texte ou en sélectionnant une valeur dans une liste. Néanmoins, certaines propriétés sont plus complexes et disposent d'un éditeur de propriétés personnalisées. Pour définir la propriété, cliquez dans la zone de texte, puis sur le bouton Générer **(…)** pour ouvrir l’éditeur personnalisé.  
+    >  Vous pouvez définir les propriétés en tapant une valeur directement dans la zone de texte ou en sélectionnant une valeur dans une liste. Néanmoins, certaines propriétés sont plus complexes et disposent d'un éditeur de propriétés personnalisées. Pour définir la propriété, cliquez dans la zone de texte, puis sur le bouton Générer **(...)** pour ouvrir l’éditeur personnalisé.  
   
 6.  Si vous le souhaitez, créez des expressions de propriété afin de mettre à jour de manière dynamique les propriétés de la tâche ou du conteneur. Pour plus d’informations, consultez [Ajouter ou modifier une Expression de propriété](../../integration-services/expressions/add-or-change-a-property-expression.md).  
   

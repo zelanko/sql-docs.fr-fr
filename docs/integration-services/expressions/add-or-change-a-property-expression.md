@@ -14,12 +14,12 @@ ms.assetid: cb5da499-065f-4fa6-9f6d-5bc5f385241e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: db2423abafdc0ae9e3949e1cac55d0b963a4fc3a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 54c2f0a9a77b3cbcd4dd1ecc652b78f2bd2909bf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47754357"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505982"
 ---
 # <a name="add-or-change-a-property-expression"></a>Ajouter ou modifier une expression de propriété
   Vous pouvez créer des expressions de propriété pour les packages, les tâches, les conteneurs de boucles For ou Foreach, les conteneurs de séquences, les gestionnaires d'événements, les gestionnaires de connexions aux niveaux des packages et du projet, ainsi que les modules fournisseurs d'informations.  
@@ -38,13 +38,13 @@ ms.locfileid: "47754357"
   
     -   Cliquez avec le bouton droit sur l’élément, puis cliquez sur **Propriétés**.  
   
-3.  Cliquez sur la zone **Expressions** , puis sur les points de suspension (...).  
+3.  Cliquez sur la zone **Expressions**, puis sur les points de suspension (...).  
   
 4.  Dans l’ **Éditeur d’expressions de la propriété**, sélectionnez une propriété dans la liste **Propriété** , puis effectuez l’une des actions suivantes :  
   
     -   Tapez l’expression de propriété ou modifiez-la directement dans la colonne **Expression** , puis cliquez sur **OK**.  
   
-         —ou—  
+         -ou-  
   
     -   Dans la ligne d’expression de la propriété, cliquez sur les points de suspension (...) pour ouvrir le **Générateur d’expressions**.  
   

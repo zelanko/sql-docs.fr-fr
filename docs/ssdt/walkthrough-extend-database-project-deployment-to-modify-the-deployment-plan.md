@@ -11,12 +11,12 @@ ms.assetid: 22b077b1-fa25-49ff-94f6-6d0d196d870a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ced46d8239c18a91963f4834f49dd4f36cc032c8
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 073d32e69df1ab852271b1c921f1f3e99bae92c4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51681347"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531564"
 ---
 # <a name="walkthrough-extend-database-project-deployment-to-modify-the-deployment-plan"></a>Procédure pas à pas : Étendre le déploiement du projet de base de données pour modifier le plan de déploiement
 Vous pouvez créer des contributeurs de déploiement pour effectuer des actions personnalisées lorsque vous déployez un projet SQL. Vous pouvez créer soit un [DeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx) ou un [DeploymentPlanExecutor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx). Utilisez un [DeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx) pour changer le plan avant son exécution et un [DeploymentPlanExecutor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx) pour effectuer des opérations alors que le plan est en cours d'exécution. Dans cette procédure pas à pas, vous allez créer un [DeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx) nommé SqlRestartableScriptContributor qui ajoute des instructions IF aux lots dans le script de déploiement pour permettre la réexécution du script jusqu'à son aboutissement si une erreur se produit pendant l'exécution.  
@@ -191,7 +191,7 @@ Commencez ensuite à ajouter le code à la classe.
     // user's project does not have a pre/post deployment script  
     if (currentStep is BeginPreDeploymentScriptStep)  
     {  
-        // This step marks the begining of the predeployment script.  
+        // This step marks the beginning of the predeployment script.  
         // Save the step and move on.  
         beforePreDeploy = (BeginPreDeploymentScriptStep)currentStep;  
         continue;  
@@ -368,7 +368,7 @@ Commencez ensuite à ajouter le code à la classe.
     |IsStatementEscaped|Définit la méthode IsStatementEscaped. Cette méthode détermine si le type d'élément de modèle requiert l'instruction à inclure dans une instruction EXEC sp_executesql avant son placement dans une instruction IF. Les méthodes, les propriétés et les types de clés sont les suivants : TSqlObject.ObjectType, ModelTypeClass et la propriété TypeClass pour les types de modèles suivants : Schema, Procedure, View,  TableValuedFunction, ScalarFunction, DatabaseDdlTrigger, DmlTrigger, ServerDdlTrigger.|  
     |CreateBatchCompleteInsert|Définit la méthode CreateBatchCompleteInsert. Cette méthode crée l'instruction INSERT qui sera ajoutée au script de déploiement pour assurer le suivi de l'exécution du script. Les méthodes, les propriétés et les types de clés sont les suivants : InsertStatement, NamedTableReference, ColumnReferenceExpression, ValuesInsertSource et RowValue.|  
     |CreateIfNotExecutedStatement|Définit la méthode CreateIfNotExecutedStatement. Cette méthode génère une instruction IF qui vérifie si la table d'exécution des lots temporaires indique que ce lot a déjà été exécuté. Les méthodes, les propriétés et les types de clés sont les suivants : IfStatement, ExistsPredicate, ScalarSubquery, NamedTableReference, WhereClause, ColumnReferenceExpression, IntegerLiteral, BooleanComparisonExpression et BooleanNotExpression.|  
-    |GetStepInfo|Définit la méthode GetStepInfo. Cette méthode extrait les informations sur l'élément de modèle utilisé pour créer le script de l'étape, en plus du nom de l'étape. Les types et méthodes dignes d'intérêt sont les suivants : [DeploymentPlanContributorContext](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplancontributorcontext.aspx), [DeploymentScriptDomStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentscriptdomstep.aspx), [TSqlObject](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx), [CreateElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.createelementstep.aspx), [AlterElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.alterelementstep.aspx) et [DropElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.dropelementstep.aspx).|  
+    |GetStepInfo|Définit la méthode GetStepInfo. Cette méthode extrait les informations sur l’élément de modèle utilisé pour créer le script de l’étape, en plus du nom de l’étape. Les types et méthodes dignes d'intérêt sont les suivants : [DeploymentPlanContributorContext](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplancontributorcontext.aspx), [DeploymentScriptDomStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentscriptdomstep.aspx), [TSqlObject](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx), [CreateElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.createelementstep.aspx), [AlterElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.alterelementstep.aspx) et [DropElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.dropelementstep.aspx).|  
     |GetElementName|Crée un nom mis en forme pour un TSqlObject.|  
   
 1.  Ajoutez le code suivant pour définir les méthodes d'assistance :  
@@ -672,9 +672,9 @@ Vous devez toujours mettre à jour le fichier de projet SQL pour spécifier l'ID
   
     1.  Accédez à %Program Files%\Msbuild.  
   
-    2.  Créez un nouveau dossier « MyContributors » où vos fichiers de cibles seront stockés.  
+    2.  Créez un dossier « MyContributors » où vos fichiers de cibles seront stockés.  
   
-    3.  Créez un nouveau fichier « MyContributors.targets » dans ce répertoire, ajoutez le texte suivant et enregistrez le fichier :  
+    3.  Créez un fichier « MyContributors.targets » dans ce répertoire, ajoutez le texte suivant, puis enregistrez le fichier :  
   
         ```  
         <?xml version="1.0" encoding="utf-8"?>  
@@ -697,17 +697,17 @@ Vous devez toujours mettre à jour le fichier de projet SQL pour spécifier l'ID
 Après avoir suivi une de ces approches, vous pouvez utiliser Msbuild pour transmettre les paramètres des générations par ligne de commande.  
   
 > [!NOTE]  
-> Vous devez toujours mettre à jour la propriété « DeploymentContributors » pour spécifier votre ID de contributeur Il s'agit du même ID que celui utilisé dans l'attribut « ExportDeploymentPlanModifier » dans le fichier source du contributeur. Sans cet ID le contributeur ne s'exécute pas lors de la génération du projet. La propriété « ContributorArguments » doit être mise à jour uniquement si vous avez des arguments requis pour que votre collaborateur s'exécute.  
+> Vous devez toujours mettre à jour la propriété « DeploymentContributors » pour spécifier votre ID de contributeur Il s’agit du même ID que celui utilisé dans l’attribut « ExportDeploymentPlanModifier » dans le fichier source du contributeur. Sans cet ID le contributeur ne s'exécute pas lors de la génération du projet. La propriété « ContributorArguments » doit être mise à jour uniquement si des arguments sont nécessaires à l’exécution de votre contributeur.  
   
 ## <a name="deploy-the-database-project"></a>Déployer le projet de base de données  
   
 #### <a name="to-deploy-your-sql-project-and-generate-a-deployment-report"></a>Pour déployer votre projet SQL et générer un rapport de déploiement  
   
--   Votre projet peut être publié ou déployé normalement dans Visual Studio. Ouvrez simplement une solution contenant votre projet SQL et choisissez l'option Publier... dans le menu contextuel du projet, ou utilisez la touche F5 pour un déploiement de débogage vers LocalDB. Dans cet exemple, nous utiliserons la boîte de dialogue « Publier » pour générer un script de déploiement.  
+-   Votre projet peut être publié ou déployé normalement dans Visual Studio. Ouvrez une solution qui contient votre projet SQL et sélectionnez l’option Publier dans le menu contextuel du projet, ou appuyez sur la touche F5 pour un déploiement de débogage dans LocalDB. Dans cet exemple nous utiliserons la boîte de dialogue « Publier… » pour générer un script de déploiement.  
   
     1.  Ouvrez Visual Studio et ouvrez la solution qui contient votre projet SQL.  
   
-    2.  Dans l'Explorateur de solutions, cliquez avec le bouton droit sur le projet, puis sélectionnez l’option **Publier...**. option.  
+    2.  Dans l’Explorateur de solutions, cliquez avec le bouton droit sur le projet, puis sélectionnez l’option **Publier...**.  
   
     3.  Définissez le nom du serveur et le nom de la base de données sur lesquels publier.  
   

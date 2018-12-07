@@ -15,12 +15,12 @@ ms.assetid: 5020ee68-b988-4d57-8066-67d183e61237
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0e73ba6315113f1bd73e309816a2ec5f3184c369
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f4e6ffeeeb6c6c39b161c6957677f65843959b13
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808437"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540219"
 ---
 # <a name="create-a-subscription-for-a-non-sql-server-subscriber"></a>Créer un abonnement pour un Abonné non-SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -98,7 +98,7 @@ ms.locfileid: "47808437"
   
     -   Pour IBM DB2, la base de données est spécifiée dans la propriété **Catalogue initial** de la chaîne de connexion DB2, qui peut être entrée dans le champ **Options de connexion supplémentaires** décrit plus loin.  
   
-8.  Dans la page **Sécurité de l'Agent de distribution** , cliquez sur le bouton de propriétés (**…**) à côté de l'Abonné pour accéder à la boîte de dialogue **Sécurité de l'Agent de distribution** .  
+8.  Dans la page **Sécurité de l’Agent de distribution**, cliquez sur le bouton des propriétés (**...**) à côté de l’Abonné pour accéder à la boîte de dialogue **Sécurité de l’Agent de distribution**.  
   
 9. Dans la boîte de dialogue **Sécurité de l'Agent de distribution** :  
   
@@ -188,7 +188,7 @@ ms.locfileid: "47808437"
  [IBM DB2 Subscribers](../../relational-databases/replication/non-sql/ibm-db2-subscribers.md)   
  [Oracle Subscribers](../../relational-databases/replication/non-sql/oracle-subscribers.md)   
  [Autres abonnés non-SQL Server](../../relational-databases/replication/non-sql/other-non-sql-server-subscribers.md)   
- [Replication System Stored Procedures Concepts](../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
- [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)  
+ [Concepts liés aux procédures stockées système de réplication](../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
+ [Bonnes pratiques en matière de sécurité de la réplication](../../relational-databases/replication/security/replication-security-best-practices.md)  
   
   

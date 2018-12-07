@@ -26,12 +26,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c80abd458a0275aeed00c2e97f29d07b0ce17f07
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6d313a2e98bd80a5b2621fd7ce8b30b70cb63f0b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47715027"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537413"
 ---
 # <a name="populate-full-text-indexes"></a>Alimenter des index de recherche en texte intégral
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -100,9 +100,9 @@ Il existe deux types de suivi des modifications :
   
      **Pour commencer le suivi des modifications avec alimentation automatique**  
   
-    -   [CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md) … WITH CHANGE_TRACKING AUTO  
+    -   [CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md) ... WITH CHANGE_TRACKING AUTO  
   
-    -   [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) … SET CHANGE_TRACKING AUTO  
+    -   [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) ... SET CHANGE_TRACKING AUTO  
   
     **Exemple - Modifier un index de recherche en texte intégral pour qu’il utilise le suivi des modifications automatique**  
     L'exemple ci-après modifie l'index de recherche en texte intégral de la table `HumanResources.JobCandidate` de l'exemple de base de données `AdventureWorks` pour qu'il utilise le suivi des modifications avec alimentation automatique.  
@@ -116,13 +116,13 @@ Il existe deux types de suivi des modifications :
   
 -   **Alimentation manuelle**  
   
-     Si vous spécifiez CHANGE_TRACKING MANUAL, le moteur d'indexation et de recherche en texte intégral utilise le remplissage manuel sur l'index de recherche en texte intégral. Une fois le remplissage complet initial terminé, les données modifiées dans la table de base font l'objet d'un suivi. Toutefois, elles ne sont pas propagées à l’index de recherche en texte intégral tant que vous n’exécutez pas une instruction ALTER FULLTEXT INDEX … START UPDATE POPULATION . Vous pouvez utiliser l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour appeler régulièrement cette instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
+     Si vous spécifiez CHANGE_TRACKING MANUAL, le moteur d'indexation et de recherche en texte intégral utilise le remplissage manuel sur l'index de recherche en texte intégral. Une fois le remplissage complet initial terminé, les données modifiées dans la table de base font l'objet d'un suivi. Toutefois, elles ne sont pas propagées à l’index de recherche en texte intégral tant que vous n’exécutez pas une instruction ALTER FULLTEXT INDEX ... START UPDATE POPULATION . Vous pouvez utiliser l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour appeler régulièrement cette instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
      **Pour commencer le suivi des modifications avec remplissage manuel**  
   
-    -   [CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md) … WITH CHANGE_TRACKING MANUAL  
+    -   [CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md) ... WITH CHANGE_TRACKING MANUAL  
   
-    -   [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) … SET CHANGE_TRACKING MANUAL  
+    -   [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) ... SET CHANGE_TRACKING MANUAL  
   
     **Exemple - Créer un index de recherche en texte intégral avec le suivi des modifications manuel**  
     L'exemple ci-après crée un index de recherche en texte intégral qui utilisera le suivi des modifications avec alimentation manuelle sur la table `HumanResources.JobCandidate` de l'exemple de base de données `AdventureWorks` .  
@@ -150,9 +150,9 @@ Il existe deux types de suivi des modifications :
    
 ### <a name="disable-change-tracking"></a>Désactiver le suivi des modifications 
   
--   [CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md) … WITH CHANGE_TRACKING OFF  
+-   [CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md) ... WITH CHANGE_TRACKING OFF  
   
--   [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) … SET CHANGE_TRACKING OFF  
+-   [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) ... SET CHANGE_TRACKING OFF  
    
   
 ## <a name="incremental-population-based-on-a-timestamp"></a>Alimentation incrémentielle basée sur un horodatage  

@@ -11,12 +11,12 @@ ms.assetid: a79f1006-54e8-4cbf-96f8-5ed143ebb830
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6a1b585c5d4288d05e00d24e0f17b4823899a418
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: ff408f0fd410e330f0ab5e3dfcdeee965a72a051
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640977"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545233"
 ---
 # <a name="catalogcleanupserverexecutionkeys"></a>catalog.cleanup_server_execution_keys
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -66,9 +66,9 @@ catalog.cleanup_server_execution_keys [ @cleanup_flag = ] cleanup_flag ,
 ## <a name="remarks"></a>Notes   
  SQL Server 2012 Service Pack 2 a ajouté la propriété SERVER_OPERATION_ENCRYPTION_LEVEL à la table **internal.catalog_properties**. Cette propriété a deux valeurs possibles :  
   
--   **PER_EXECUTION (1)** : le certificat et la clé symétrique utilisés pour la protection des paramètres d’exécution sensibles et des journaux d’exécution sont créés pour chaque exécution. Il s'agit de la valeur par défaut. Vous risquez de rencontrer des problèmes de performances (blocages, échecs de travaux de maintenance, etc.) dans un environnement de production, car les certificats/clés sont générés pour chaque exécution. Toutefois, ce paramètre offre un niveau de sécurité supérieur à l’autre valeur (2).  
+-   **PER_EXECUTION (1)**  : le certificat et la clé symétrique utilisés pour la protection des paramètres d’exécution sensibles et des journaux d’exécution sont créés pour chaque exécution. Il s'agit de la valeur par défaut. Vous risquez de rencontrer des problèmes de performances (blocages, échecs de travaux de maintenance, etc.) dans un environnement de production, car les certificats/clés sont générés pour chaque exécution. Toutefois, ce paramètre offre un niveau de sécurité supérieur à l’autre valeur (2).  
   
--   **PER_PROJECT (2)** : le certificat et la clé symétrique utilisés pour protéger les paramètres sensibles sont créés pour chaque projet. Vous obtenez de meilleures performances qu’avec le niveau PER_EXECUTION, car la clé et le certificat sont générés une fois par projet et non à chaque exécution.  
+-   **PER_PROJECT (2)**  : le certificat et la clé symétrique utilisés pour protéger les paramètres sensibles sont créés pour chaque projet. Vous obtenez de meilleures performances qu’avec le niveau PER_EXECUTION, car la clé et le certificat sont générés une fois par projet et non à chaque exécution.  
   
  Vous devez exécuter la procédure stockée [catalog.cleanup_server_log](../../integration-services/system-stored-procedures/catalog-cleanup-server-log.md) avant de pouvoir changer SERVER_OPERATION_ENCRYPTION_LEVEL de 1 en 2 (ou de 2 en 1). Avant d’exécuter cette procédure stockée, effectuez les opérations suivantes :  
   

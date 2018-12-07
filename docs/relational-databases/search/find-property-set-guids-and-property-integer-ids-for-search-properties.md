@@ -15,18 +15,18 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 85e6537fe5b9df976724d9d2392f14520ccf48d5
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: bb9628196ae08e94b9076e9e1bb422eaad0331e0
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657808"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532139"
 ---
 # <a name="find-property-set-guids-and-property-integer-ids-for-search-properties"></a>Recherche des GUID du jeu de propriétés et des ID d'entier de propriétés pour les propriétés de recherche
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Cette rubrique explique comment extraire les valeurs requises avant d'ajouter une propriété à une liste de propriétés de recherche et les rendre détectables par la recherche en texte intégral. Ces valeurs incluent le GUID du jeu de propriétés et l'identificateur entier d'une propriété de document.  
   
- Les propriétés de document qui sont extraites par IFilters à partir des données binaires, c’est-à-dire les données stockées dans un type de colonne de données **varbinary**, **varbinary(max)** (y compris **FILESTREAM**) ou **image** , peuvent être rendues disponibles pour la recherche en texte intégral. Pour rendre une propriété extraite détectable, la propriété doit être ajoutée manuellement à une liste de propriétés de recherche. La liste des propriétés de recherche doit également être associée à un ou plusieurs index de recherche en texte intégral. Pour plus d’informations, consultez [Rechercher les propriétés du document à l’aide des listes de propriétés de recherche](../../relational-databases/search/search-document-properties-with-search-property-lists.md).  
+ Les propriétés de document qui sont extraites par IFilters à partir des données binaires, c’est-à-dire les données stockées dans une colonne de type de données **varbinary**, **varbinary(max)** (notamment **FILESTREAM**) ou **image**, peuvent être rendues disponibles pour la recherche en texte intégral. Pour rendre une propriété extraite détectable, la propriété doit être ajoutée manuellement à une liste de propriétés de recherche. La liste des propriétés de recherche doit également être associée à un ou plusieurs index de recherche en texte intégral. Pour plus d’informations, consultez [Rechercher les propriétés du document à l’aide des listes de propriétés de recherche](../../relational-databases/search/search-document-properties-with-search-property-lists.md).  
   
  Avant d'ajouter une propriété disponible à une liste de propriétés, vous devez obtenir deux informations sur la propriété :  
   
@@ -78,10 +78,10 @@ ms.locfileid: "51657808"
 .  
 propertyDescription  
 name = System.Author  
-…  
+...  
 formatID = F29F85E0-4FF9-1068-AB91-08002B27B3D9  
 propID = 4  
-…  
+...  
 ```  
   
  Pour obtenir la description complète de cette propriété, consultez [System.Author](https://go.microsoft.com/fwlink/?LinkId=144337) dans la documentation Windows Search.  

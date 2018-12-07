@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 09e8ece5-0200-41f2-87c1-9fab19e261be
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f0c94ab62231ba2167e52c9999f18cf4bd1e9ca5
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: b1990930387dbd68ea843073b9d372ce735273f9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50028128"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542010"
 ---
 # <a name="working-with-subscriptions-web-portal"></a>Utilisation des abonnements (portail web)
 
@@ -28,7 +28,7 @@ Avant de créer un abonnement, vous devez vérifier que la source de données du
   
 ![ssRSWebPortal-subscriptions1](../reporting-services/media/ssrswebportal-subscriptions1.png)  
    
-Vous pouvez accéder à la page Abonnements en sélectionnant les **points de suspension (...)** correspondant à un rapport, en sélectionnant **Gérer**, puis en sélectionnant **Abonnements**.  
+Vous pouvez accéder à la page Abonnements en sélectionnant successivement les **points de suspension (...)** d’un rapport, **Gérer**, puis **Abonnements**.  
   
 À partir de la page Abonnements, vous pouvez créer des abonnements en sélectionnant **Nouvel abonnement**. Vous pouvez également modifier des abonnements existants, ou supprimer des abonnements que vous avez sélectionnés.  
   

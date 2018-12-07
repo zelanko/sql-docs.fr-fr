@@ -11,12 +11,12 @@ ms.assetid: f91fbb89-4626-4c47-b96d-56052dc45861
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a884d0faf7f3f688e00ed83e2c7eeab770791f7b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0a346d55b84b115a7a128d02fdedd1ff7f6b800d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47646796"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527144"
 ---
 # <a name="lesson-3-2---running-the-package-installation-wizard"></a>Leçon 3-2 : Exécution de l’Assistant Installation de package
 Au cours de cette tâche, vous allez exécuter l'Assistant Installation de package pour déployer les packages du projet Didacticiel de déploiement dans une instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Seuls des packages peuvent être installés dans la table sysssispackages de la base de données [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] msdb, les fichiers de support inclus dans l'application de déploiement seront déployés dans le système de fichiers.  
@@ -29,7 +29,7 @@ Dans une leçon précédente, vous avez modifié les packages dans le didacticie
   
 1.  Sur l'ordinateur de destination, recherchez l'application de déploiement.  
   
-    Si vous avez utilisé la valeur par défaut—bin\Deployment—comme emplacement de l'utilitaire de déploiement, l'application de déploiement correspond au dossier Deployment dans le projet Didacticiel de déploiement.  
+    Si vous avez utilisé la valeur par défaut, bin\Deployment, comme emplacement de l’utilitaire de déploiement, l’application de déploiement correspond au dossier Deployment dans le projet Didacticiel de déploiement.  
   
 2.  Dans le dossier Déploiement, double-cliquez sur le fichier de manifeste, Didacticiel de déploiement.SSISDeploymentManifest.  
   

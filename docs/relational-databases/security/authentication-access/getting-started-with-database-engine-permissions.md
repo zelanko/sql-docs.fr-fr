@@ -14,12 +14,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c73e625f6447d5afd1e60acf8ec0e9159dcdb04e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 00d28b0750ba599e4bc73fa2ec6586271b683545
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849587"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52410856"
 ---
 # <a name="getting-started-with-database-engine-permissions"></a>Prise en main des autorisations du moteur de base de données
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -104,7 +104,7 @@ AUTHORIZATION  PERMISSION  ON  SECURABLE::NAME  TO  PRINCIPAL;
   
 -   `PERMISSION` établit l’action autorisée ou interdite. [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] peut spécifier 230 autorisations. [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] a moins d’autorisations, car certaines actions ne sont pas pertinentes dans Azure. Les autorisations sont répertoriées dans la rubrique [Autorisations &#40;moteur de base de données&#41;](../../../relational-databases/security/permissions-database-engine.md) et dans le graphique ci-dessous.  
   
--   `ON SECURABLE::NAME` est le type d’élément sécurisable (serveur, objet serveur, base de données ou objet de base de données) et son nom. Certaines autorisations n’exigent pas `ON SECURABLE::NAME` , car le contexte ne le justifie pas. Par exemple, l’autorisation `CREATE TABLE` n’exige pas la clause `ON SECURABLE::NAME` . (Par exemple, `GRANT CREATE TABLE TO Mary;` permet à Mary de créer des tables.)  
+-   `ON SECURABLE::NAME` est le type d’élément sécurisable (serveur, objet serveur, base de données ou objet de base de données) et son nom. Certaines autorisations n’exigent pas `ON SECURABLE::NAME` , car le contexte ne le justifie pas. Par exemple, l’autorisation `CREATE TABLE` n’exige pas la clause `ON SECURABLE::NAME`. (Par exemple, `GRANT CREATE TABLE TO Mary;` permet à Mary de créer des tables.)  
   
 -   `PRINCIPAL` est le principal de sécurité (connexion, utilisateur ou rôle) qui reçoit ou perd l’autorisation. Accordez des autorisations aux rôles chaque fois que possible.  
   

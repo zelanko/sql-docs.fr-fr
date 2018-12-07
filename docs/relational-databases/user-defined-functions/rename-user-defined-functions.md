@@ -12,12 +12,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2a0bbb55ddb23cfcbebd081cfc25e9a4ee5d6ffa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c75caf73aed97e2f7d0774de3da0dacc7a8708cc
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47685127"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52417840"
 ---
 # <a name="rename-user-defined-functions"></a>Renommer des fonctions définies par l'utilisateur
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -75,7 +75,7 @@ ms.locfileid: "47685127"
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
  **Pour renommer des fonctions définies par l'utilisateur**  
   
- Cette tâche ne peut pas être effectuée à l'aide d'instructions Transact-SQL. Pour renommer une fonction définie par l'utilisateur à l'aide de Transact-SQL, vous devez d'abord supprimer la fonction existante puis la recréer sous son nouveau nom. Vérifiez que l'ensemble du code et des applications qui utilisaient l'ancien nom de la fonction utilisent désormais le nouveau nom.  
+ Cette tâche ne peut pas être effectuée à l'aide d'instructions Transact-SQL. Pour renommer une fonction définie par l'utilisateur à l'aide de Transact-SQL, vous devez d'abord supprimer la fonction existante puis la recréer sous son nouveau nom. Vérifiez que l’ensemble du code et des applications qui utilisaient l’ancien nom de la fonction utilisent désormais le nouveau nom.  
   
  Pour plus d’informations, consultez [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md) et [DROP VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/drop-function-transact-sql.md).  
   

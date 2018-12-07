@@ -19,12 +19,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 32c1cfde6f887074e3aa40486ea93f73f3865782
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 494272f6609af4d8cf8747aff8d3dd5eda85483f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47672097"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510175"
 ---
 # <a name="create-statistics"></a>Créer des statistiques
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -69,7 +69,7 @@ ms.locfileid: "47672097"
   
 3.  Cliquez sur le signe plus (+) pour développer la table dans laquelle vous souhaitez créer une statistique.  
   
-4.  Cliquez avec le bouton droit sur le dossier **Statistiques** et sélectionnez **Nouvelles statistiques**.  
+4.  Cliquez avec le bouton droit sur le dossier **Statistiques** et sélectionnez **Nouvelles statistiques...**.  
   
      Les propriétés suivantes s’affichent dans la page **Général** dans la boîte de dialogue **Nouvelles statistiques sur la table**_nom\_table_.  
   
@@ -118,7 +118,7 @@ ms.locfileid: "47672097"
      Les propriétés suivantes s’affichent dans la page **Filtre** dans la boîte de dialogue **Nouvelles statistiques sur la table**_nom\_table_.  
   
      **Expression de filtre**  
-     Définit quelles lignes de données inclure dans les statistiques filtrées. Par exemple, `Production.ProductSubcategoryID IN ( 1,2,3 )`  
+     Définit quelles lignes de données inclure dans les statistiques filtrées. Par exemple : `Production.ProductSubcategoryID IN ( 1,2,3 )`  
   
 5.  Dans la boîte de dialogue **Nouvelles statistiques sur la table**_nom\_table_, dans la page **Général**, cliquez sur **Ajouter**.  
   

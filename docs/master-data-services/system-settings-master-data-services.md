@@ -15,12 +15,12 @@ ms.assetid: 83075cdf-f059-4646-8ba2-19be8202f130
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: b67636c618343b4f5beb5ec000f8d94236fb64a6
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: f58c276968fd88b64ef5c48995eafbc553e14987
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696977"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507284"
 ---
 # <a name="system-settings-master-data-services"></a>Paramètres système (Master Data Services)
 
@@ -84,7 +84,7 @@ ms.locfileid: "51696977"
   
 |Paramètre du Gestionnaire de configuration|Paramètre système|Description|  
 |-----------------------------------|--------------------|-----------------|  
-|**Nombre de membres dans la hiérarchie par défaut**|**HierarchyChildNodeLimit**|Dans la zone fonctionnelle [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **de** , nombre maximal de membres affichés dans chaque nœud de la hiérarchie avant que **…plus…** ne s'affiche. Vous pouvez cliquer sur **…plus…** pour afficher le groupe de membres suivant. La valeur par défaut est de **50**.|  
+|**Nombre de membres dans la hiérarchie par défaut**|**HierarchyChildNodeLimit**|Dans la zone fonctionnelle **Explorateur** de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], nombre maximal de membres affichés dans chaque nœud de la hiérarchie avant que **...plus...** ne s’affiche. Vous pouvez cliquer sur **...plus...** pour afficher le groupe de membres suivant. La valeur par défaut est de **50**.|  
 |**Afficher les noms dans la hiérarchie**|**ShowNamesInHierarchy**|Dans la zone fonctionnelle [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **de** , détermine le paramètre par défaut sélectionné lorsque vous affichez des hiérarchies.<br /><br /> La valeur par défaut est **Oui** ou **1**, ce qui indique que le nom et le code de chaque membre sont affichés. Remplacez-la par la valeur **Non** ou **2** pour afficher le code uniquement.|  
 |**Limite de la liste d'attributs basés sur un domaine**|**DBAListRowLimit**|Dans la zone fonctionnelle [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **Explorer** functional area, the number of attributes that are displayed in a list when you double-click a domain-based attribute value in the grid. La valeur par défaut est de **50**. S'il existe plus de 50 membres, une boîte de dialogue permettant d'effectuer des recherches s'affiche à la place.|  
 ||**GridFilterDefaultFuzzySimilarityLevel**|Dans la zone fonctionnelle [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **de** , niveau de ressemblance utilisé lors de l'utilisation des critères de filtre **Correspond à** . La valeur par défaut est de **0,3**. Définissez une valeur proche de **1** pour retourner une correspondance proche des critères de recherche. Définissez la valeur **1** pour une correspondance exacte.|  

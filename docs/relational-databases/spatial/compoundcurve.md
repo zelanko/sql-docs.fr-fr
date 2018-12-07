@@ -11,12 +11,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 26495b201fcfc29b891a83c4f7cc4011cfd7cbd9
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 3ed40a84fba304dab0d9c11c7c6bbe950f2511e8
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658918"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511843"
 ---
 # <a name="compoundcurve"></a>CompoundCurve
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -140,7 +140,7 @@ SET @g = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING(0 2, 2 0, 4 2), CIRCULARS
 SELECT @g.STLength();  
 ```  
   
- Cela produit la sortie suivante : 12.566370… qui équivaut à 4∏. L'instance `CompoundCurve` de l'exemple stocke un cercle avec un rayon de 2. Les deux exemples de code précédents n'ont pas eu à utiliser un `CompoundCurve`. Pour le premier exemple, une instance `LineString` aurait été plus simple et pour le deuxième exemple, une instance `CircularString` . Toutefois, l'exemple suivant montre en quoi un `CompoundCurve` constitue une meilleure solution.  
+ Cela génère la sortie suivante : 12.566370... qui est l’équivalent de 4∏. L'instance `CompoundCurve` de l'exemple stocke un cercle avec un rayon de 2. Les deux exemples de code précédents n'ont pas eu à utiliser un `CompoundCurve`. Pour le premier exemple, une instance `LineString` aurait été plus simple et pour le deuxième exemple, une instance `CircularString` . Toutefois, l'exemple suivant montre en quoi un `CompoundCurve` constitue une meilleure solution.  
   
 ### <a name="f-using-a-compoundcurve-to-store-a-semicircle"></a>F. Utilisation d'un CompoundCurve pour stocker un demi-cercle  
  L'exemple suivant utilise une instance `CompoundCurve` pour stocker un demi-cercle.  
@@ -182,8 +182,8 @@ SELECT 'Circle Two', @g2.STLength() AS Perimeter;  -- now we get an accurate amo
  La sortie est la suivante :  
   
 ```  
-Circle One11.940039…  
-Circle Two12.566370…  
+Circle One11.940039...  
+Circle Two12.566370...  
 ```  
   
  Le périmètre de Circle Two est approximativement de 4∏, ce qui correspond à la valeur réelle du périmètre. Toutefois, le périmètre de Circle One est exagérément inexact. L'instance `CompoundCurve` de Circle One stocke un segment d'arc de cercle (ABC) et deux segments de ligne (CD, DA). L'instance `CompoundCurve` doit stocker deux segments d'arc de cercle (ABC, CDA) pour définir un cercle. Une instance `LineString` définit le deuxième ensemble de points (4 2, 2 4, 0 2) dans l'instance `CompoundCurve` de Circle One. Vous devez déclarer de manière explicite une instance `CircularString` à l'intérieur d'un `CompoundCurve`.  

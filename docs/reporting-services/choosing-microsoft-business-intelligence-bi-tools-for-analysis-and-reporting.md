@@ -8,19 +8,19 @@ ms.topic: conceptual
 ms.assetid: d0e16108-7123-4788-87b3-05db962dbc94
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2e4f359f5ba8a1a55452985375e3c6f0754e5f6b
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 95806dd597798b5a8a629d8b49d8502fff4de9ae
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031658"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52399172"
 ---
 # <a name="choosing-microsoft-business-intelligence-bi-tools-for-analysis-and-reporting"></a>Choix des outils Microsoft Business Intelligence (BI) pour l’analyse et les rapports
 Le choix de l’outil professionnel approprié de Business Intelligence peut être accablant. En savoir plus sur les différentes offres de Microsoft et trouver celle qui convient le mieux à vos besoins.
 
 Le tableau suivant mappe les charges de travail pour l'analyse et la création de rapports de données aux outils Microsoft BI qui sont le mieux adaptés à ces charges de travail. Pour plus d'informations sur un produit, cliquez sur le lien correspondant dans la table.  
   
- Pour une vue d’ensemble de ces outils et pour déterminer quels outils sont le mieux adaptés à votre cas, consultez [Introducing Microsoft Business Intelligence (BI) Tools](https://msdn.microsoft.com/library/dn655131.aspx).  
+ Pour obtenir une brève présentation de ces outils et choisir ceux qui vous conviennent le mieux, consultez [Introducing Microsoft Business Intelligence (BI) Tools](https://msdn.microsoft.com/library/dn655131.aspx).  
   
 |Charges de travail|Utilisateur|||Outils BI|||  
 |---------------|----------|-|-|--------------|-|-|  

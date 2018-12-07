@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 23cc15f2-2883-48e2-bc6c-fa0ab61a2e21
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 83e3d6d960e4fce7e96d9b8195e2a0f06e8f4dd4
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 0a72bb8d81564afbe632a68908baf4bad4dead82
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031338"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507459"
 ---
 # <a name="bind-a-report-to-a-shared-data-source-ssrs"></a>Lier un rapport à une source de données partagée (SSRS)
   Dans certaines situations, par exemple si vous déplacez un rapport d’un serveur test vers un serveur de production, vous pouvez envisager d’enregistrer le fichier sur votre ordinateur local puis de le télécharger sur un autre serveur de rapports. Si vous téléchargez le rapport sur le nouveau serveur, vous devez le lier de nouveau à une source de données partagée stockée sur le nouveau serveur de rapports. Si vous ne liez pas de nouveau le rapport, celui-ci ne fonctionnera pas correctement en cas d’accès à partir du nouveau serveur de rapports.  
@@ -50,7 +50,7 @@ ms.locfileid: "50031338"
   
 5.  Dans la zone **Type de connexion** , vérifiez que **Source de données partagée** est activée.  
   
-6.  Dans la zone **Lien de source de données** , cliquez sur le bouton (...).  
+6.  Dans la zone **Lien de source de données**, cliquez sur le bouton de sélection (...).  
   
 7.  Localisez la source de données que vous souhaitez utiliser.  
   

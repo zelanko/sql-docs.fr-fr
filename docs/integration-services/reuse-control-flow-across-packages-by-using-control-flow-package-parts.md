@@ -16,15 +16,15 @@ ms.assetid: 1edc91d9-1fab-4fe5-aed3-6f581fe32c18
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5951daccc88e8593c27365254d208c4b2ee84118
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 11b6d7d881a034fa79315c37345d7845d868fc2b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753787"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542641"
 ---
 # <a name="reuse-control-flow-across-packages-by-using-control-flow-package-parts"></a>Réutiliser un flux de contrôle sur des packages à l’aide de composants de package de flux de contrôle
-  Enregistrez une tâche ou un conteneur de flux de contrôle couramment utilisés dans un fichier de pièce (fichier « .dtsxp ») autonome, et réutilisez celui-ci plusieurs fois dans un ou plusieurs packages à l’aide de composants de package de flux de contrôle. Cette réutilisation facilite la conception et la gestion des packages SSIS.  
+  Enregistrez une tâche ou un conteneur de flux de contrôle couramment utilisés dans un fichier de pièce (fichier « .dtsxp ») autonome, et réutilisez celui-ci plusieurs fois dans un ou plusieurs packages à l’aide de composants de package de flux de contrôle. Cette possibilité de réutilisation facilite la conception et la gestion des packages SSIS.  
   
 ## <a name="create-a-new-control-flow-package-part"></a>Créer un composant de package de flux de contrôle  
  Pour créer un composant de package de flux contrôle, dans l’Explorateur de solutions, développez le dossier **Package Parts** (Composants de package). Cliquez avec le bouton droit sur **Control Flow** (Flux de contrôle), puis sélectionnez **New Control Flow Package Part**(Nouveau composant de package de flux de contrôle).  
@@ -141,13 +141,13 @@ ms.locfileid: "47753787"
 ## <a name="package-parts-are-a-design-time-feature-only"></a>Les composants de package sont des fonctionnalités disponibles uniquement au moment de la conception.  
  Les composants de package sont des fonctionnalités disponibles au moment du design caractéristiques. Le concepteur SSIS crée, ouvre, enregistre et met à jour des composants, et ajoute, configure ou supprime des instances de composant dans un package. En revanche, le runtime SSIS n’est pas informé de la présence de composants. Voici comment le concepteur accomplit cette séparation.  
   
--   Le concepteur enregistre les instances de composant de package avec leurs propriétés configurées pour un fichier « .dtsx.designer ».  
+-   Le concepteur enregistre les instances de composant de package avec leurs propriétés configurées pour un fichier « .dtsx.designer ».  
   
--   Lorsque le concepteur enregistre le fichier « .dtsx.designer », il extrait également le contenu des composants référencés par ce fichier et remplace les instances de composant dans le package par le contenu des composants.  
+-   Quand le concepteur enregistre le fichier « .dtsx.designer », il extrait également le contenu des composants référencés par ce fichier et remplace les instances de composant dans le package par le contenu des composants.  
   
--   Enfin, tout le contenu, qui n’inclut plus d’informations sur le composant, est réenregistré dans le fichier de package « .dtsx ». Il s’agit du fichier que le runtime SSIS exécute.  
+-   Enfin, tout le contenu, qui n’inclut plus d’informations sur le composant, est réenregistré dans le fichier de package « .dtsx ». Il s’agit du fichier que le runtime SSIS exécute.  
   
- Le diagramme ci-dessous illustre la relation entre les composants (fichiers « .dtsxp »), le concepteur SSIS et le runtime SSIS.  
+ Le diagramme ci-dessous illustre la relation entre les composants (fichiers « .dtsxp »), le concepteur SSIS et le runtime SSIS.  
   
  ![Fichiers de modèles de flux de contrôle et flux](../integration-services/media/control-flow-templates-intro.png "Fichiers de modèles de flux de contrôle et flux")  
   

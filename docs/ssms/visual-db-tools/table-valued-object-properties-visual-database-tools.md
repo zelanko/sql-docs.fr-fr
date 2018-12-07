@@ -13,12 +13,12 @@ ms.assetid: eaf06cbf-8242-4483-894f-80ae02a4840e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b99978fa5b861ce6fe8481bb0172b91e42d8e72e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 243ad5c0489f2af49823eb0663efbb8b6b474056
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47616817"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519847"
 ---
 # <a name="table-valued-object-properties-visual-database-tools"></a>Propriétés de l'objet table (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,11 +46,11 @@ Peut être développée pour afficher les propriétés de **Alias**, **Liste de 
 Affiche l'alias de l'objet table sélectionné. Pour ajouter ou modifier un alias, tapez son nom dans le champ.  
   
 **Liste de colonnes**  
-Affiche les colonnes incluses dans l'objet table sélectionné. Pour les afficher dans une fenêtre distincte, cliquez sur Liste de colonnes, puis sur les points de suspension (…) à droite de la propriété.  
+Affiche les colonnes incluses dans l'objet table sélectionné. Pour les afficher dans une fenêtre distincte, cliquez sur Liste de colonnes, puis sur le bouton de sélection (…) à droite de la propriété.  
   
 **Nom complet**  
 Affiche le nom de l'objet table sélectionné, notamment des informations supplémentaires telles que le schéma ou la source de données de l'objet.  
   
 **Liste de paramètres**  
-Affiche les paramètres définis pour l'objet table sélectionné. Pour définir une valeur pour les paramètres, cliquez sur Liste de paramètres, puis sur les points de suspension (…) à droite de la propriété. Dans la boîte de dialogue Paramètres de fonction, tapez les valeurs. Cette propriété est disponible uniquement lorsqu'une fonction table est sélectionnée.  
+Affiche les paramètres définis pour l'objet table sélectionné. Si vous souhaitez définir une valeur pour les paramètres, cliquez sur Liste de paramètres, puis sur le bouton de sélection (…) à droite de la propriété. Dans la boîte de dialogue Paramètres de fonction, tapez les valeurs. Cette propriété est disponible uniquement lorsqu'une fonction table est sélectionnée.  
   

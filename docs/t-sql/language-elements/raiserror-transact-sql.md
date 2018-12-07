@@ -30,17 +30,17 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 787a402f51fd9caf9f02c319dae0ed87455bb56d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 23294229be50c987be4b2f59568889910b605596
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47625887"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502858"
 ---
 # <a name="raiserror-transact-sql"></a>RAISERROR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Génère un message d'erreur et lance le traitement d'erreur pour la session. RAISERROR peut soit faire référence à un message défini par l’utilisateur et stocké dans la vue de catalogue sys.messages, soit générer un message de manière dynamique. Ce message est renvoyé en tant que message d'erreur du serveur à l'application appelante ou à un bloc CATCH associé d'une structure TRY…CATCH. Les nouvelles applications doivent utiliser [THROW](../../t-sql/language-elements/throw-transact-sql.md) à la place.  
+  Génère un message d'erreur et lance le traitement d'erreur pour la session. RAISERROR peut soit faire référence à un message défini par l’utilisateur et stocké dans la vue de catalogue sys.messages, soit générer un message de manière dynamique. Le message est retourné en tant que message d’erreur du serveur à l’application appelante ou à un bloc CATCH associé d’une structure TRY...CATCH. Les nouvelles applications doivent utiliser [THROW](../../t-sql/language-elements/throw-transact-sql.md) à la place.  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

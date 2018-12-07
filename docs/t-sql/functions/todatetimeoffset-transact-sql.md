@@ -25,12 +25,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2bbce4d5261543ee5f1fdbc90a0ab9da7deb4475
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f2829710d348c56a5b3fcc09d06436929bcbfe16
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818297"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418320"
 ---
 # <a name="todatetimeoffset-transact-sql"></a>TODATETIMEOFFSET (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -53,7 +53,7 @@ TODATETIMEOFFSET ( expression , time_zone )
 >  L’expression ne peut pas être de type **text**, **ntext** ou **image**, car ces types ne sont pas implicitement convertibles en **varchar** ou **nvarchar**.  
   
  *time_zone*  
- Expression qui représente le décalage de fuseau horaire en minutes (pour un entier), par exemple -120, les heures et les minutes (pour une chaîne), par exemple « +13.00 ». La plage va de +14 à -14 (en heures). L'expression est interprétée en heure locale pour le time_zone spécifié.  
+ Expression qui représente le décalage de fuseau horaire en minutes (pour un entier), par exemple -120, ou en heures et en minutes (pour une chaîne), par exemple « +13.00 ». La plage va de +14 à -14 (en heures). L'expression est interprétée en heure locale pour le time_zone spécifié.  
   
 > [!NOTE]  
 >  Si l'expression est une chaîne de caractères, elle doit être au format {+|-}TZH:THM.  

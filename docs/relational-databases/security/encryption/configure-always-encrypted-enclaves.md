@@ -11,12 +11,12 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 591dbbc9772378efccb37ca2f7b3af94d37f4529
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 246fa155a8de930cd81d65df633d3f47bed9f56e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677138"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534771"
 ---
 # <a name="configure-always-encrypted-with-secure-enclaves"></a>Configurer Always Encrypted avec enclaves sécurisées
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -143,7 +143,7 @@ L’introduction de clés prenant en charge les enclaves ne change pas fondament
 - La propriété **ENCLAVE_COMPUTATIONS** dans les métadonnées de clé principale de colonne de la base de données est définie.
 - Les valeurs de propriété de la clé principale de colonne (notamment le paramétrage de **ENCLAVE_COMPUTATIONS**) sont signées numériquement. L’outil ajoute la signature, qui est générée à l’aide de la clé principale de colonne actuelle, aux métadonnées. L’objectif de la signature est d’empêcher des administrateurs de bases de données et d’ordinateurs malveillants de falsifier le paramètre **ENCLAVE_COMPUTATIONS**. Les pilotes du client SQL vérifient les signatures avant d’autoriser l’utilisation de l’enclave. Cela permet aux administrateurs de sécurité de contrôler des données de la colonne pouvant être calculées à l’intérieur de l’enclave.
 
-La propriété **ENCLAVE_COMPUTATIONS** propriété d’une clé principale de colonne est immuable : vous ne pouvez pas la modifier après que la clé a été approvisionnée. Vous pouvez, cependant, remplacer la clé principale de colonne par une nouvelle clé dont la valeur de la propriété **ENCLAVE_COMPUTATIONS** est différente de celle de la clé d’origine, via un processus appelé [remplacement de clé principale de colonne](#initiate-the-rotation-from-the-current-column-master-key-to-the-new-column-master-key). Pour plus d’informations sur la propriété **ENCLAVE_COMPUTATIONS**, consultez [CREATE COLUMN MASTER KEY](../../../t-sql/statements/create-column-master-key-transact-sql.md).
+La propriété **ENCLAVE_COMPUTATIONS** d’une clé principale de colonne est immuable : vous ne pouvez pas la modifier après que la clé a été provisionnée. Vous pouvez, cependant, remplacer la clé principale de colonne par une nouvelle clé dont la valeur de la propriété **ENCLAVE_COMPUTATIONS** est différente de celle de la clé d’origine, via un processus appelé [remplacement de clé principale de colonne](#initiate-the-rotation-from-the-current-column-master-key-to-the-new-column-master-key). Pour plus d’informations sur la propriété **ENCLAVE_COMPUTATIONS**, consultez [CREATE COLUMN MASTER KEY](../../../t-sql/statements/create-column-master-key-transact-sql.md).
 
 Pour approvisionner une clé de chiffrement de colonne prenant en charge les enclaves, vous devez vous assurer que la clé principale de colonne qui chiffre la clé de chiffrement de colonne prend en charge les enclaves.
 
@@ -157,9 +157,9 @@ Les étapes suivantes créent des clés prenant en charge les enclaves (requiert
 
 1. Vous connecter à votre base de données avec SSMS.
 2. Dans l’**Explorateur d’objets**, développez votre base de données et accédez à **Sécurité** > **Clés Always Encrypted**.
-3. Approvisionner une clé principale de colonne prenant en charge les enclaves :
+3. Provisionnez une nouvelle clé principale de colonne prenant en charge les enclaves :
 
-    1. Cliquez avec le bouton droit sur **Clés Always Encrypted** et sélectionnez **Nouvelle clé principale de colonne...** .
+    1. Cliquez avec le bouton droit sur **Clés Always Encrypted** et sélectionnez **Nouvelle clé principale de colonne...**.
     2. Sélectionnez le nom de votre clé principale de colonne.
     3. Assurez-vous que vous sélectionnez **Magasin de certificats Windows (utilisateur actuel ou ordinateur local)** ou **Azure Key Vault**.
     4. Sélectionnez **Autoriser les calculs d’enclave**.
@@ -180,7 +180,7 @@ Les étapes suivantes créent des clés prenant en charge les enclaves (requiert
 
 Les sections suivantes fournissent des exemples de scripts PowerShell pour l’approvisionnement des clés prenant en charge les enclaves. Les étapes qui sont spécifiques à Always Encrypted (nouvelles) avec des enclaves sécurisées sont mises en surbrillance. Pour plus d’informations (non spécifiques à Always Encrypted avec enclaves sécurisées) sur l’approvisionnement des clés à l’aide de PowerShell, consultez [Configurer des clés Always Encrypted à l’aide de PowerShell](https://docs.microsoft.com/sql/relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell).
 
-**Approvisionnement des clés de prenant en charge les enclaves – Magasin de certificats Windows**
+**Provisionnement des clés prenant en charge l’enclave - Magasin de certificats Windows**
 
 Sur l’ordinateur client/développement, ouvrez Windows PowerShell ISE et exécutez le script suivant.
 
@@ -213,7 +213,7 @@ New-SqlColumnEncryptionKey -Name $cekName -InputObject $database -ColumnMasterKe
 ```
 
 
-### <a name="provisioning-enclave-enabled-keys--azure-key-vault"></a>Approvisionnement des clés de prenant en charge les enclaves – Azure Key Vault
+### <a name="provisioning-enclave-enabled-keys---azure-key-vault"></a>Provisionnement des clés prenant en charge l’enclave - Azure Key Vault
 
 Sur l’ordinateur client/développement, ouvrez Windows PowerShell ISE et exécutez le script suivant.
 
@@ -237,7 +237,7 @@ $akvKeyName = "<key name>"
 $azureCtx = Set-AzureRMConteXt -SubscriptionId $SubscriptionId
 
 # Create a new resource group - skip, if your desired group already exists.
-New-AzureRmResourceGroup –Name $resourceGroup –Location $azureLocation
+New-AzureRmResourceGroup -Name $resourceGroup -Location $azureLocation
 
 # Create a new key vault - skip if your vault already exists.
 New-AzureRmKeyVault -VaultName $akvName -ResourceGroupName $resourceGroup -Location $azureLocation
@@ -511,7 +511,7 @@ Voici les trois approches de prise en charge d’enclaves pour des colonnes exis
 - Inconvénients :
   - Ne prend pas en charge le passage du type de chiffrement déterministe au type aléatoire et ne permet donc pas les calculs complexes lors du déverrouillage du chiffrement sur place pour les colonnes chiffrées de façon déterministe.
   - Ne vous permet pas de convertir certaines colonnes de manière sélective en liaison avec une clé principale de colonne donnée.
-  - Surcroît de travail lié à la gestion des clés : vous devez créer une clé principale de colonne et la mettre à la disposition des applications qui requièrent les colonnes affectées.  
+  - Surcroît de travail lié à la gestion des clés : vous devez créer une clé principale de colonne et la mettre à la disposition des applications qui interrogent les colonnes affectées.  
 
 
 #### <a name="option-2-this-approach-involves-two-steps-1-rotating-the-column-master-key-as-in-option-1-and-2-re-encrypting-a-subset-of-deterministically-encrypted-columns-using-randomized-encryption-to-enable-rich-computations-for-those-columns"></a>Option 2 : cette approche implique deux étapes : 1) remplacement de la clé principale de colonne (comme dans l’option 1) et 2) nouveau chiffrement d’un sous-ensemble de colonnes chiffrées de façon déterministe avec le chiffrement aléatoire afin d’y permettre des calculs complexes.
@@ -522,7 +522,7 @@ Voici les trois approches de prise en charge d’enclaves pour des colonnes exis
   
 - Inconvénients :
   - Ne vous permet pas de convertir certaines colonnes de manière sélective en liaison avec une clé principale de colonne donnée.
-  - Surcroît de travail lié à la gestion des clés : vous devez créer une clé principale de colonne et la mettre à la disposition des applications qui requièrent les colonnes affectées.
+  - Surcroît de travail lié à la gestion des clés : vous devez créer une clé principale de colonne et la mettre à la disposition des applications qui interrogent les colonnes affectées.
 
 #### <a name="option-3-re-encrypting-selected-columns-with-a-new-enclave-enabled-column-encryption-key-and-randomized-encryption-if-needed-on-the-client-side"></a>Option 3 : nouveau chiffrement des colonnes sélectionnées avec une nouvelle clé de chiffrement de colonne prenant en charge les enclaves et le chiffrement aléatoire (le cas échéant) côté client.
   
@@ -724,7 +724,7 @@ Si votre colonne est chiffrée avec une clé de chiffrement de colonne prenant e
 
 #### <a name="example"></a> Exemple
 
-En supposant que la colonne SSN soit chiffrée et que le classement actuel défini au niveau de la colonne soit Latin1\_général\_BIN2, l’instruction ci-dessous déchiffre la colonne (sans modifier le classement – vous pouvez également choisir de transformer le classement, par exemple en classement non-BIN2, dans la même instruction).
+En supposant que la colonne SSN soit chiffrée et que le classement actuel défini au niveau de la colonne soit Latin1\_général\_BIN2, l’instruction ci-dessous déchiffre la colonne (sans modifier le classement ; vous pouvez également choisir de transformer le classement, par exemple en classement non-BIN2, dans la même instruction).
 
 
 ```sql

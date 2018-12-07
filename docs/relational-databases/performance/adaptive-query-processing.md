@@ -2,7 +2,7 @@
 title: Traitement de requêtes adaptatif dans les bases de données Microsoft SQL | Microsoft Docs | Microsoft Docs
 description: Fonctionnalités de traitement de requêtes adaptatif pour améliorer les performances des requêtes dans SQL Server (2017 et versions ultérieures) et Azure SQL Database.
 ms.custom: ''
-ms.date: 10/15/2018
+ms.date: 11/15/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -14,25 +14,27 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 60f02a303e6e085dc14a165ec51e316a2bc88f8e
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: f4494b91315c8d2cd155e2ac80d6b5005685ff32
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51031196"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503414"
 ---
 # <a name="adaptive-query-processing-in-sql-databases"></a>Traitement de requêtes adaptatif dans les bases de données SQL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 Cet article décrit les fonctionnalités de traitement de requêtes adaptatif que vous pouvez utiliser pour améliorer les performances des requêtes dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (depuis [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) et [!INCLUDE[ssSDS](../../includes/sssds-md.md)] :
-- Retour d’allocation de mémoire en mode batch.
-- Jointure adaptative en mode batch.
-- Exécution entrelacée. 
+- Retour d’allocation de mémoire en mode batch
+- Jointure adaptative en mode batch
+- Exécution entrelacée
 
-Au niveau général, SQL Server exécute une requête de la façon suivante :
+Au niveau général, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exécute une requête de la façon suivante :
 1. Le processus d’optimisation des requêtes génère un ensemble de plans d’exécution possibles pour une requête spécifique. Pendant ce temps, le coût des options de plan est estimé et le plan dont le coût estimé est le plus faible est utilisé.
 1. Le processus d’exécution des requêtes prend le plan choisi par l’optimiseur de requête et l’utilise pour l’exécution.
-    
+
+Pour plus d’informations sur le traitement des requêtes et les modes d’exécution dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez le [Guide d’architecture de traitement des requêtes](../../relational-databases/query-processing-architecture-guide.md).
+
 Parfois, le plan choisi par l’optimiseur de requête n’est pas optimal pour diverses raisons. Par exemple, le nombre estimé de lignes dans le flux du plan de requête peut être incorrect. Les coûts estimés permettent de déterminer le plan à utiliser dans l’exécution. Si les estimations de cardinalité sont incorrectes, le plan d’origine est quand même utilisé malgré les mauvaises hypothèses de départ.
 
 ![Fonctionnalités de traitement de requêtes adaptatif](./media/1_AQPFeatures.png)
@@ -88,7 +90,7 @@ La rétroaction d’allocation de mémoire peut être désactivée dans l’éte
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK = ON;
 ```
 
-Quand il est activé, ce paramètre apparaît comme étant activé dans sys.database_scoped_configurations.
+Quand il est activé, ce paramètre apparaît comme étant activé dans [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md).
 
 Pour réactiver la rétroaction d’allocation de mémoire en mode batch pour toutes les exécutions de requête en provenance de la base de données, exécutez ce qui suit dans le contexte de la base de données applicable :
 
@@ -96,7 +98,7 @@ Pour réactiver la rétroaction d’allocation de mémoire en mode batch pour to
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK = OFF;
 ```
 
-Vous pouvez aussi désactiver la rétroaction d’allocation de mémoire en mode batch pour une requête spécifique en désignant DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK en tant qu’indicateur de requête USE HINT.  Exemple :
+Vous pouvez aussi désactiver la rétroaction d’allocation de mémoire en mode batch pour une requête spécifique en désignant `DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK` en tant qu’[indicateur de requête USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint). Exemple :
 
 ```sql
 SELECT * FROM Person.Address  
@@ -107,23 +109,23 @@ OPTION (USE HINT ('DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK'));
 Un indicateur de requête USE HINT est prioritaire par rapport à une configuration incluse dans l’étendue d’une base de données ou à un paramètre d’indicateur de trace.
 
 ## <a name="row-mode-memory-grant-feedback"></a>Rétroaction d’allocation de mémoire en mode ligne
-**S’applique à** : SQL Database (fonctionnalité en préversion publique)
+**S’applique à :** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (fonctionnalité en préversion publique)
 
 > [!NOTE]
 > La rétroaction d’allocation de mémoire en mode ligne est une fonctionnalité en préversion publique.  
 
 La rétroaction d’allocation de mémoire en mode ligne étend la fonctionnalité de rétroaction d’allocation de mémoire en mode batch en ajustant les tailles d’allocation de mémoire pour les opérateurs du mode batch et du mode ligne.  
 
-Pour activer la préversion publique de la rétroaction d’allocation de mémoire en mode ligne dans Azure SQL Database, fixez le niveau de compatibilité à 150 pour la base de données à laquelle vous vous connectez lors de l’exécution de la requête.
+Pour activer la préversion publique de la rétroaction d’allocation de mémoire en mode ligne dans [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], fixez le niveau de compatibilité à 150 pour la base de données à laquelle vous vous connectez lors de l’exécution de la requête.
 
 L’activité de la rétroaction d’allocation de mémoire en mode ligne sera visible par le biais du XEvent **memory_grant_updated_by_feedback**. 
 
-Avec la rétroaction d’allocation de mémoire en mode ligne, deux nouveaux attributs de plan de requête apparaissent pour les plans réels après exécution : **IsMemoryGrantFeedbackAdjusted** et **LastRequestedMemory**, qui sont ajoutés à l’élément XML du plan de requête MemoryGrantInfo. 
+Avec la rétroaction d’allocation de mémoire en mode ligne, deux nouveaux attributs de plan de requête apparaissent pour les plans réels après exécution : ***IsMemoryGrantFeedbackAdjusted*** et ***LastRequestedMemory***, qui sont ajoutés à l’élément XML du plan de requête *MemoryGrantInfo*. 
 
-LastRequestedMemory indique la mémoire allouée en kilo-octets (Ko) à partir de l’exécution de la requête précédente. L’attribut IsMemoryGrantFeedbackAdjusted permet de vérifier l’état de la rétroaction d’allocation de mémoire de l’instruction au sein d’un plan d’exécution de requête réel. Les valeurs affichées dans cet attribut sont les suivantes :
+*LastRequestedMemory* indique la mémoire allouée en kilo-octets (Ko) à partir de l’exécution de la requête précédente. L’attribut *IsMemoryGrantFeedbackAdjusted* permet de vérifier l’état de la rétroaction d’allocation de mémoire de l’instruction au sein d’un plan d’exécution de requête réel. Les valeurs affichées dans cet attribut sont les suivantes :
 
 | Valeur IsMemoryGrantFeedbackAdjusted | Description |
-|--- |--- |
+|---|---|
 | Non : première exécution | La rétroaction d’allocation de mémoire n’ajuste pas la mémoire pour la première compilation et l’exécution associée.  |
 | Non : allocation précise | S’il n’y a pas de dépassement sur disque et que l’instruction utilise au moins 50 % de la mémoire allouée, la rétroaction d’allocation de mémoire n’est pas déclenchée. |
 | Non : rétroaction désactivée | Si la rétroaction d’allocation de mémoire est déclenchée en permanence et varie entre des opérations d’augmentation et de diminution de la mémoire, nous la désactivons pour l’instruction. |
@@ -131,7 +133,7 @@ LastRequestedMemory indique la mémoire allouée en kilo-octets (Ko) à partir d
 | Oui : stable | La rétroaction d’allocation de mémoire a été appliquée et la mémoire allouée est maintenant stable ; en d’autres termes, ce qui a été alloué pour l’exécution précédente est identique à ce qui a été alloué pour l’exécution actuelle. |
 
 > [!NOTE]
-> Les attributs du plan de rétroaction d’allocation de mémoire en mode ligne en préversion publique sont visibles dans les plans d’exécution de requêtes graphique SQL Server Management Studio dans les versions 17.9 et ultérieures. 
+> Les attributs du plan de rétroaction d’allocation de mémoire en mode ligne en préversion publique sont visibles dans les plans d’exécution de requêtes graphique [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] dans les versions 17.9 et ultérieures. 
 
 ### <a name="disabling-row-mode-memory-grant-feedback-without-changing-the-compatibility-level"></a>Désactivation du retour d’allocation de mémoire en mode ligne sans modification du niveau de compatibilité
 Le retour d’allocation de mémoire en mode ligne peut être désactivé dans l’étendue de la base de données ou de l’instruction tout en maintenant le niveau de compatibilité de la base de données à au moins 150. Pour le retour d’allocation de mémoire en mode ligne pour toutes les exécutions de requêtes provenant de la base de données, exécutez ce qui suit dans le contexte de la base de données applicable :
@@ -146,7 +148,7 @@ Pour réactiver le retour d’allocation de mémoire en mode ligne pour toutes l
 ALTER DATABASE SCOPED CONFIGURATION SET ROW_MODE_MEMORY_GRANT_FEEDBACK = ON;
 ```
 
-Vous pouvez aussi désactiver le retour d’allocation de mémoire en mode ligne pour une requête spécifique en désignant DISABLE_ROW_MODE_MEMORY_GRANT_FEEDBACK en tant qu’indicateur de requête USE HINT.  Exemple :
+Vous pouvez aussi désactiver la rétroaction d’allocation de mémoire en mode ligne pour une requête spécifique en désignant `DISABLE_ROW_MODE_MEMORY_GRANT_FEEDBACK` en tant qu’[indicateur de requête USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint). Exemple :
 
 ```sql
 SELECT * FROM Person.Address  
@@ -166,28 +168,26 @@ Fonctionnement de l’opération :
 La requête suivante est utilisée pour illustrer un exemple de jointure adaptative :
 
 ```sql
-SELECT  [fo].[Order Key], [si].[Lead Time Days],
-[fo].[Quantity]
+SELECT [fo].[Order Key], [si].[Lead Time Days], [fo].[Quantity]
 FROM [Fact].[Order] AS [fo]
 INNER JOIN [Dimension].[Stock Item] AS [si]
        ON [fo].[Stock Item Key] = [si].[Stock Item Key]
 WHERE [fo].[Quantity] = 360;
 ```
 
-Cette requête retourne 336 lignes. En activant les [statistiques des requêtes actives](../../relational-databases/performance/live-query-statistics.MD), nous observons le plan suivant :
+Cette requête retourne 336 lignes. En activant les [statistiques des requêtes actives](../../relational-databases/performance/live-query-statistics.md), nous observons le plan suivant :
 
 ![Résultat de la requête : 336 lignes](./media/4_AQPStats336Rows.png)
 
 Dans le plan, nous voyons les éléments suivants :
 1. Nous avons une analyse d’index columnstore utilisée pour fournir des lignes pendant la phase de génération de la jointure hachée.
 1. Nous avons le nouvel opérateur de jointure adaptative. Cet opérateur définit un seuil qui sert à déterminer le moment où il faut basculer vers un plan de boucles imbriquées. Dans notre exemple, le seuil est de 78 lignes. Tout plan avec &gt;= 78 lignes utilise une jointure hachée. Si le nombre de lignes est inférieur au seuil, une jointure de boucles imbriquées est utilisée.
-1. Comme dans notre exemple nous obtenons 336 lignes, nous dépassons le seuil et la deuxième branche représente donc la phase de sondage d’une opération de jointure hachée standard. Notez que les statistiques des requêtes actives affichent les lignes qui sont traitées par les opérateurs – dans notre exemple « 672 sur 672 ».
+1. Comme dans notre exemple nous obtenons 336 lignes, nous dépassons le seuil et la deuxième branche représente donc la phase de sondage d’une opération de jointure hachée standard. Notez que les statistiques des requêtes actives affichent les lignes qui sont traitées par les opérateurs (dans notre exemple, « 672 sur 672 »).
 1. La dernière branche est notre recherche d’index cluster que doit utiliser la jointure de boucles imbriquées, pour laquelle le seuil n’a pas été dépassé. Notez que nous voyons « 0 sur 336 » lignes affichées (la branche n’est pas utilisée).
  Maintenant, nous allons comparer le plan avec la même requête, mais cette fois pour une valeur *Quantité* comprenant une seule ligne dans la table :
  
 ```sql
-SELECT  [fo].[Order Key], [si].[Lead Time Days],
-[fo].[Quantity]
+SELECT [fo].[Order Key], [si].[Lead Time Days], [fo].[Quantity]
 FROM [Fact].[Order] AS [fo]
 INNER JOIN [Dimension].[Stock Item] AS [si]
        ON [fo].[Stock Item Key] = [si].[Stock Item Key]
@@ -249,14 +249,14 @@ Pour désactiver les jointures adaptatives pour toutes les exécutions de requê
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_ADAPTIVE_JOINS = ON;
 ```
 
-Quand il est activé, ce paramètre apparaît comme étant activé dans sys.database_scoped_configurations.
+Quand il est activé, ce paramètre apparaît comme étant activé dans [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md).
 Pour réactiver les jointures adaptatives pour toutes les exécutions de requête en provenance de la base de données, exécutez ce qui suit dans le contexte de la base de données applicable :
 
 ```sql
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_ADAPTIVE_JOINS = OFF;
 ```
 
-Vous pouvez aussi désactiver les jointures adaptatives pour une requête spécifique en désignant DISABLE_BATCH_MODE_ADAPTIVE_JOINS en tant qu’indicateur de requête USE HINT.  Exemple :
+Vous pouvez aussi désactiver les jointures adaptatives pour une requête spécifique en désignant `DISABLE_BATCH_MODE_ADAPTIVE_JOINS` en tant qu’indicateur de requête [USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint). Exemple :
 
 ```sql
 SELECT s.CustomerID,
@@ -264,17 +264,18 @@ SELECT s.CustomerID,
        sc.CustomerCategoryName
 FROM Sales.Customers AS s
 LEFT OUTER JOIN Sales.CustomerCategories AS sc
-ON s.CustomerCategoryID = sc.CustomerCategoryID
+       ON s.CustomerCategoryID = sc.CustomerCategoryID
 OPTION (USE HINT('DISABLE_BATCH_MODE_ADAPTIVE_JOINS')); 
 ```
 
 Un indicateur de requête USE HINT est prioritaire par rapport à une configuration incluse dans l’étendue d’une base de données ou à un paramètre d’indicateur de trace.
 
 ## <a name="interleaved-execution-for-multi-statement-table-valued-functions"></a>Exécution entrelacée pour les fonctions table à instructions multiples
-L’exécution entrelacée change la limite unidirectionnelle entre les phases d’exécution et d’optimisation pour l’exécution d’une seule requête, et permet d’adapter les plans selon les estimations de cardinalité révisées. Pendant l’optimisation, si nous rencontrons un candidat pour l’exécution entrelacée, c’est-à-dire des **fonctions table à instructions multiples (MSTVF)**, nous suspendons l’optimisation, exécutons la sous-arborescence applicable, capturons des estimations de cardinalité précises, puis reprenons l’optimisation pour les opérations en aval.
-Les MSTVF ont une estimation de cardinalité fixe égale à 100 dans [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], et égale à 1 pour les versions antérieures. L’exécution entrelacée entraîne des problèmes de performance des charges de travail qui sont liés à ces estimations de cardinalité fixes associées aux fonctions table à instructions multiples.
+L’exécution entrelacée change la limite unidirectionnelle entre les phases d’exécution et d’optimisation pour l’exécution d’une seule requête, et permet d’adapter les plans selon les estimations de cardinalité révisées. Pendant l’optimisation, si nous rencontrons un candidat pour l’exécution entrelacée, c’est-à-dire des **fonctions table à instructions multiples (MSTVF)**, nous suspendons l’optimisation, exécutons la sous-arborescence applicable, capturons des estimations de cardinalité précises, puis reprenons l’optimisation pour les opérations en aval.   
 
-L’image suivante illustre une sortie de statistiques de requêtes actives, un sous-ensemble d’un plan d’exécution global qui montre l’impact des estimations de cardinalité fixes des MSTVF. Vous pouvez comparer le flux de lignes réel et les lignes estimées. Il y a trois zones notables dans le plan (le flux va de droite à gauche) :
+Les MSTVF ont une estimation de cardinalité fixe égale à 100 à compter de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], et égale à 1 pour les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. L’exécution entrelacée entraîne des problèmes de performance des charges de travail qui sont liés à ces estimations de cardinalité fixes associées aux MSTVF. Pour plus d’informations sur les MSTVF, consultez [Créer des fonctions définies par l’utilisateur &#40;moteur de base de données&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF).
+
+L’image suivante illustre une sortie de [Statistiques des requêtes actives](../../relational-databases/performance/live-query-statistics.md), un sous-ensemble d’un plan d’exécution global qui montre l’impact des estimations de cardinalité fixes des MSTVF. Vous pouvez comparer le flux de lignes réel et les lignes estimées. Il y a trois zones notables dans le plan (le flux va de droite à gauche) :
 1. L’analyse de table MSTVF utilise une estimation fixe de 100 lignes. Dans cet exemple, toutefois, l’analyse de table présente un flux de 527 597 lignes, comme indiqué dans les statistiques des requêtes actives par *527597 sur 100* (nombre réel sur nombre estimé). L’estimation fixe est donc considérablement biaisée.
 1. Pour l’opération de boucles imbriquées, seules 100 lignes sont supposées être retournées par le côté extérieur de la jointure. Étant donné le nombre élevé de lignes retournées par la MSTVF, vous avez tout intérêt à utiliser un autre algorithme de jointure.
 1. Pour l’opération de correspondance de hachage, notez le petit symbole d’avertissement qui indique dans ce cas un dépassement de capacité sur le disque.
@@ -297,10 +298,10 @@ En règle générale, plus le décalage est important entre le nombre de lignes 
 En général, l’exécution entrelacée bénéficie aux requêtes dans les situations suivantes :
 1. Il y a un décalage important entre le nombre réel et le nombre estimé de lignes pour le jeu de résultats intermédiaire (dans ce cas, la MSTVF).
 1. En outre, la requête globale est sensible à un changement de taille du résultat intermédiaire. Cela se produit généralement quand une arborescence complexe englobe la sous-arborescence dans le plan de requête.
-Une simple instruction « SELECT * » d’une MSTVF ne tire aucun bénéfice de l’exécution entrelacée.
+Une simple instruction `SELECT *` d’une MSTVF ne tire aucun bénéfice de l’exécution entrelacée.
 
 ### <a name="interleaved-execution-overhead"></a>Surcharge de l’exécution entrelacée
-La surcharge doit être minime, voire nulle. Les MSTVF ont déjà été matérialisées avant l’introduction de l’exécution entrelacée, toutefois, cette fois nous autorisons une optimisation différée et nous tirons parti de l’estimation de cardinalité de l’ensemble des lignes matérialisées.
+La surcharge doit être minime, voire nulle. Les MSTVF ont déjà été matérialisées avant l’introduction de l’exécution entrelacée, mais cette fois nous autorisons une optimisation différée et nous tirons parti de l’estimation de cardinalité de l’ensemble des lignes matérialisées.
 Comme c’est le cas avec n’importe quel changement affectant le plan, certains plans peuvent changer à un point tel que l’amélioration de la cardinalité de la sous-arborescence entraîne un plan complètement inadapté pour la requête globale. Pour atténuer cet effet, vous pouvez rétablir le niveau de compatibilité ou utiliser le Magasin des requêtes pour forcer l’utilisation de la version non régressée du plan.
 
 ### <a name="interleaved-execution-and-consecutive-executions"></a>Exécution entrelacée et exécutions consécutives
@@ -339,18 +340,18 @@ L’exécution entrelacée peut être désactivée dans l’étendue de la base 
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_INTERLEAVED_EXECUTION_TVF = ON;
 ```
 
-Quand il est activé, ce paramètre apparaît comme étant activé dans sys.database_scoped_configurations.
+Quand il est activé, ce paramètre apparaît comme étant activé dans [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md).
 Pour réactiver l’exécution entrelacée pour toutes les exécutions de requête en provenance de la base de données, exécutez ce qui suit dans le contexte de la base de données applicable :
 
 ```sql
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_INTERLEAVED_EXECUTION_TVF = OFF;
 ```
 
-Vous pouvez aussi désactiver l’exécution entrelacée pour une requête spécifique en désignant DISABLE_INTERLEAVED_EXECUTION_TVF en tant qu’indicateur de requête USE HINT.  Exemple :
+Vous pouvez aussi désactiver l’exécution entrelacée pour une requête spécifique en désignant `DISABLE_INTERLEAVED_EXECUTION_TVF` en tant qu’[indicateur de requête USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint). Exemple :
 
 ```sql
-SELECT  [fo].[Order Key], [fo].[Quantity], [foo].[OutlierEventQuantity]
-FROM    [Fact].[Order] AS [fo]
+SELECT [fo].[Order Key], [fo].[Quantity], [foo].[OutlierEventQuantity]
+FROM [Fact].[Order] AS [fo]
 INNER JOIN [Fact].[WhatIfOutlierEventQuantity]('Mild Recession',
                             '1-01-2013',
                             '10-15-2014') AS [foo] ON [fo].[Order Key] = [foo].[Order Key]
@@ -371,5 +372,6 @@ Un indicateur de requête USE HINT est prioritaire par rapport à une configurat
 [Guide d’architecture de traitement des requêtes](../../relational-databases/query-processing-architecture-guide.md)    
 [Guide de référence des opérateurs Showplan logiques et physiques](../../relational-databases/showplan-logical-and-physical-operators-reference.md)    
 [Jointures](../../relational-databases/performance/joins.md)    
-[Illustration du traitement de requêtes adaptatif](https://github.com/joesackmsft/Conferences/blob/master/Data_AMP_Detroit_2017/Demos/AQP_Demo_ReadMe.md)          
-
+[Illustration du traitement de requêtes adaptatif](https://github.com/joesackmsft/Conferences/blob/master/Data_AMP_Detroit_2017/Demos/AQP_Demo_ReadMe.md)    
+[Indicateur de requête USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint)   
+[Créer des fonctions définies par l’utilisateur (moteur de base de données)](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF)  

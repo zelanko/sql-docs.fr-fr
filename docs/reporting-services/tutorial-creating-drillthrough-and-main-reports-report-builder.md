@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a1f756c0f2e843f2a13e394bb739647530feda09
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 44480672cc835e455062c70943e87379a18a059e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029161"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526181"
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>Didacticiel : création d'un rapport principal et d'un rapport d'extraction (Générateur de rapports)
 Ce didacticiel vous apprend comment créer deux types de rapports paginés [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] : un rapport d’extraction et un rapport principal. Les exemples de données de ventes utilisés dans ces rapports sont récupérés d'un cube Analysis Services. 
@@ -101,7 +101,7 @@ Dans un rapport, vous pouvez utiliser un dataset partagé qui comprend une requ�
   
 #### <a name="to-create-query-filters"></a>Pour créer des filtres de requête  
   
-1.  Dans la page **Créer une requête** , dans le volet Métadonnées, cliquez sur le bouton **(…)**.  
+1.  Dans la page **Créer une requête**, dans le volet Métadonnées, cliquez sur le bouton **(...)**.  
   
 2.  Dans la boîte de dialogue **Sélection de cube** , cliquez sur Sales, puis sur **OK**.  
   
@@ -392,7 +392,7 @@ Vous allez ajouter une source de données incorporée au rapport principal.
   
 #### <a name="to-create-query-filters"></a>Pour créer des filtres de requête  
   
-1.  Dans la page **Créer une requête** , dans le volet Métadonnées, dans la section du cube, cliquez sur le bouton de sélection **(…)**.  
+1.  Dans la page **Créer une requête**, dans le volet Métadonnées, dans la section du cube, cliquez sur le bouton de sélection **(...)**.  
   
 2.  Dans la boîte de dialogue **Sélection de cube** , cliquez sur Sales, puis sur **OK**.  
   

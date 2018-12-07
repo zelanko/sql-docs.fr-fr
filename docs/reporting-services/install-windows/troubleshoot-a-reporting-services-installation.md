@@ -7,12 +7,12 @@ ms.topic: conceptual
 ms.assetid: e2536f7f-d90c-4571-9ffd-6bbfe69018d6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4df963c826675b5c837200c4ab69037800b9dc5c
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 2051f89e5f7b9d07dccacbb441d95a72ff1de22a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814022"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52391662"
 ---
 # <a name="troubleshoot-a-reporting-services-installation"></a>Dépanner une installation de Reporting Services
 
@@ -99,7 +99,7 @@ ms.locfileid: "51814022"
         Get-SPServiceInstance -all |where {$_.TypeName -like "SQL Server Reporting*"} | Start-SPServiceInstance  
         ```  
   
-2.  Vérifiez que le service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] affiche l’état « **Démarré** » sur la page : Administration centrale de SharePoint 2013/2016 -> **Gestion des applications** -> **Gérer les services sur le serveur**.  
+2.  Vérifiez que le service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] indique l’état **Démarré** dans la page : Administration centrale de SharePoint 2013/2016 -> **Gestion des applications** -> **Gérer les services sur le serveur**.  
   
  ![Icône de flèche utilisée avec le lien Retour au début](../../analysis-services/instances/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour au début") [Résoudre les problèmes liés aux installations en mode SharePoint](#bkmk_tshoot_sharepoint)  
   
@@ -135,7 +135,7 @@ ms.locfileid: "51814022"
  
  - L’application de service SSRS n’est pas mappée à cette application Web. Utilisez les pages d'application de service SSRS pour associer le proxy d'application de service SSRS au Groupe de proxy d'application pour cette application Web. 
   
- **Solution de contournement :** le message d'erreur suggère trois étapes pour résoudre ce problème. La première suggestion dans le message « Un serveur de rapports URL n'est pas configuré... ». s'applique lors de l'intégration à la version de serveur de rapports antérieure à [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. La configuration SharePoint pour les versions de serveurs de rapports précédentes est effectuée dans la page **Paramètres généraux de l’application** , à l’aide de **SQL Server Reporting Services (2008 et 2008 R2)**.  
+ **Solution de contournement :** le message d'erreur suggère trois étapes pour résoudre ce problème. La première suggestion dans le message « Une URL de serveur de rapports n’est pas configuré » s'applique lors de l'intégration à la version de serveur de rapports antérieure à [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. La configuration SharePoint pour les versions de serveurs de rapports précédentes est effectuée dans la page **Paramètres généraux de l’application** , à l’aide de **SQL Server Reporting Services (2008 et 2008 R2)**.  
   
  **Autres informations :** vous verrez ce message d'erreur lorsque vous tenterez d'utiliser une fonctionnalité [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] qui requiert une connexion au service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Cela inclut :  
   
@@ -183,7 +183,7 @@ ms.locfileid: "51814022"
 ###  <a name="bkmk_RS_SHP_notsupported"></a> Un message d'erreur indiquant que RS_SHP n'est pas pris en charge avec PREPAREIMAGE s'affiche  
  **Description :** lorsque vous essayez d’exécuter PREPAREIMAGE pour [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], un message d’erreur semblable à celui-ci s’affiche :  
   
- « La fonctionnalité spécifiée « RS_SHP » n'est pas prise en charge lors de l'exécution de l'action de PREPAREIMAGE, car elle ne prend pas en charge SysPrep. Supprimez les fonctionnalités incompatibles avec SysPrep et exécutez de nouveau le programme d'installation. »  
+ « La fonctionnalité spécifiée « RS_SHP » n’est pas prise en charge lors de l’exécution de l’action PREPAREIMAGE, car elle ne prend pas en charge SysPrep. Supprimez les fonctionnalités qui ne sont pas compatibles avec SysPrep et réexécutez le programme d'installation. »  
   
  **Solution de contournement :** il n'existe aucune solution de contournement. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ne prend pas en charge SYSPREP (PREPAREIMAGE). [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ne prends pas en charge SYSPREP.  
   

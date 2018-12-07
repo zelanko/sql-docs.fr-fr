@@ -11,18 +11,18 @@ ms.assetid: 14106cc9-816b-493a-bcb9-fe66a1cd4630
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 35ef666a70cc92f094035bebefda21b42a4f4819
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.openlocfilehash: 7558ff9f09d003088dc1f7c4d00d3a032d8c478a
+ms.sourcegitcommit: 1f10e9df1c523571a8ccaf3e3cb36a26ea59a232
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51269742"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "51858554"
 ---
 # <a name="the-memory-optimized-filegroup"></a>Groupe de fichiers mémoire optimisé
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Pour créer des tables mémoire optimisées, vous devez d'abord créer un groupe de fichiers mémoire optimisé. Le groupe de fichiers mémoire optimisé contient un ou plusieurs conteneurs. Chaque conteneur contient des fichiers de données, des fichiers delta ou les deux.  
   
- Bien que les lignes de données dans les tables SCHEMA_ONLY ne soient pas conservées et que les métadonnées des tables mémoire optimisées et des procédures stockées compilées en mode natif soient stockées dans des catalogues traditionnels, le moteur [!INCLUDE[hek_2](../../includes/hek-2-md.md)] requiert toujours un groupe de fichiers mémoire optimisé pour les tables mémoire optimisées SCHEMA_ONLY afin de fournir une expérience uniforme pour les bases de données avec des tables mémoire optimisées.  
+ Bien que les lignes de données dans les tables `SCHEMA_ONLY` ne soient pas conservées et que les métadonnées des tables à mémoire optimisée et des procédures stockées compilées en mode natif soient stockées dans des catalogues traditionnels, le moteur [!INCLUDE[hek_2](../../includes/hek-2-md.md)] requiert toujours un groupe de fichiers à mémoire optimisée pour les tables à mémoire optimisée `SCHEMA_ONLY` afin de fournir une expérience uniforme pour les bases de données avec des tables à mémoire optimisée.  
   
  Le groupe de fichiers mémoire optimisé est basé sur le groupe de fichiers de flux de fichier, avec les différences suivantes :  
   
@@ -48,16 +48,21 @@ Les limitations suivantes s’appliquent à un groupe de fichiers optimisé en m
   
 -   Une fois que vous utilisez un groupe de fichiers à mémoire optimisée, vous ne pouvez le supprimer qu’en supprimant la base de données. Dans un environnement de production, il est peu probable que vous deviez supprimer le groupe de fichiers mémoire optimisé.  
   
--   Vous ne pouvez pas supprimer un conteneur non vide ni déplacer des paires de fichiers de données et delta vers un autre conteneur dans le groupe de fichiers mémoire optimisé.  
-  
--   Vous ne pouvez pas spécifier `MAXSIZE` pour le conteneur.  
+-   Vous ne pouvez pas supprimer un conteneur non vide ni déplacer des paires de fichiers de données et delta vers un autre conteneur dans le groupe de fichiers mémoire optimisé.    
   
 ## <a name="configuring-a-memory-optimized-filegroup"></a>Configuration d'un groupe de fichiers mémoire optimisé  
- Vous devez envisager de créer plusieurs conteneurs dans le groupe de fichiers mémoire optimisé et de les répartir sur différents lecteurs afin d'obtenir davantage de bande passante pour transmettre en continu les données en mémoire.  
+Envisagez de créer plusieurs conteneurs dans le groupe de fichiers à mémoire optimisée et de les répartir sur différents lecteurs afin d’obtenir davantage de bande passante pour transmettre en continu les données en mémoire. 
+ 
+Dans un scénario à plusieurs conteneurs et à plusieurs lecteurs, les fichiers de données et delta sont alloués dans des conteneurs selon le principe du tourniquet. Le premier fichier de données est alloué depuis le premier conteneur, le fichier delta depuis le conteneur suivant, et ainsi de suite. Cette méthode d'allocation répartit les fichiers de données et delta de manière uniforme entre les conteneurs si vous avez un nombre impair de lecteurs, chacun étant mappé à un conteneur. Toutefois, si vous avez un nombre pair de lecteurs, chacun étant mappé à un conteneur, cela peut entraîner un stockage déséquilibré, les fichiers de données étant mappés aux lecteurs impairs et les fichiers delta aux lecteurs pairs. Pour obtenir un flux équilibré d’E/S lors de la récupération, envisagez de placer des paires de fichiers de données et delta sur les mêmes broches/stockages.
   
- Lors de la configuration du stockage, vous devez fournir un espace libre correspondant à quatre fois la taille des tables mémoire optimisées durables. Vous devez également vérifier que votre sous-système d’E/S prend en charge les IOPS nécessaires pour votre charge de travail. Si les paires de fichiers de données et delta sont définies à un niveau d'IOPS donné, vous avez besoin de 3 fois cette valeur d'IOPS pour tenir compte des opérations de stockage et de fusion. Vous pouvez ajouter une capacité de stockage et des IOPS en ajoutant un ou plusieurs conteneurs au groupe de fichiers mémoire optimisé.  
+Lors de la configuration du stockage, vous devez fournir un espace libre correspondant à quatre fois la taille des tables mémoire optimisées durables. Vérifiez également que votre sous-système d’E/S prend en charge les IOPS nécessaires pour votre charge de travail. Si les paires de fichiers de données et delta sont définies à un niveau d’IOPS donné, vous avez besoin de trois fois cette valeur d’IOPS pour tenir compte des opérations de stockage et de fusion. Vous pouvez ajouter une capacité de stockage et des IOPS en ajoutant un ou plusieurs conteneurs au groupe de fichiers mémoire optimisé.  
+ 
+> [!CAUTION]
+> Si une valeur `MAXSIZE` est définie pour le groupe de fichiers à mémoire optimisée et que les fichiers de point de contrôle dépassent la taille maximale du conteneur, la base de données présente l’état SUSPECT.   
+> Dans ce cas, n’essayez pas de définir les options OFFLINE et ONLINE de base de données, ce qui amène la base de données à rester dans l’état RECOVERY_PENDING.
   
 ## <a name="see-also"></a> Voir aussi  
- [Création et gestion du stockage des objets mémoire optimisés](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  
- [Groupes de fichiers et fichiers de base de données](../../relational-databases/databases/database-files-and-filegroups.md) 
-  
+[Création et gestion du stockage des objets mémoire optimisés](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  
+[Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md)    
+[Options de fichiers et de groupes de fichiers ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md) 
+

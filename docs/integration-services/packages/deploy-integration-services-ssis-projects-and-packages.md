@@ -19,12 +19,12 @@ ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9c6e008139eb9e52583045690cdc51b812ef8e73
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 5723f60855952e9e14e7cdff07ac312d10e38732
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642266"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526606"
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>Déployer des projets et des packages Integration Services (SSIS)
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] prend en charge deux modèles de déploiement : le modèle de déploiement de projet et le modèle de déploiement de package hérité. Le modèle de déploiement de projet vous permet de déployer vos projets sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -98,9 +98,9 @@ Pour plus d’informations sur l’erreur décrite dans cette section et sur les
 > [!NOTE]  
 >  À l’instar des versions antérieures d’ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], la version actuelle vous permet aussi de déployer vos packages sur une instance de SQL Server et d’utiliser le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pour exécuter et gérer les packages. Utilisez le modèle de déploiement de package. Pour plus d’informations, consultez [Déploiement de packages hérités &#40;SSIS&#41;](../../integration-services/packages/legacy-package-deployment-ssis.md).  
   
- Pour déployer un projet sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], effectuez les tâches suivantes :  
+ Pour déployer un projet sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , effectuez les tâches suivantes :  
   
-1.  Créez un catalogue SSISDB, si vous ne l'avez pas encore fait. Pour plus d’informations, consultez [Catalogue SSIS](../../integration-services/catalog/ssis-catalog.md).  
+1.  Créez un catalogue SSISDB, si vous ne l’avez pas encore fait. Pour plus d’informations, consultez [Catalogue SSIS](../../integration-services/catalog/ssis-catalog.md).  
   
 2.  Convertissez le projet en modèle de déploiement de projet en exécutant **l’Assistant Conversion de projet Integration Services** . Pour plus d’informations, consultez les instructions ci-dessous : [Pour convertir un projet en modèle de déploiement de projet](#convert).  
   
@@ -293,7 +293,7 @@ Lancer l’Assistant en :
 
 **OR**
 
- - En recherchant le fichier exécutable **ISDeploymentWizard.exe** sous le dossier d’installation de SQL Server, par exemple : « C:\Program Files (x86)\Microsoft SQL Server\130\DTS\Binn». 
+ - En recherchant le fichier exécutable **ISDeploymentWizard.exe** sous le dossier d’installation de SQL Server, par exemple : « C:\Program Files (x86)\Microsoft SQL Server\130\DTS\Binn ». 
  
  > **REMARQUE :** cliquez sur **Suivant** sur la page **Introduction** pour afficher la page **Sélectionner une source** . 
  
@@ -318,7 +318,7 @@ Lancer l’Assistant en :
 #### <a name="select-source"></a>Sélectionner une source  
  La page **Sélectionner une source** dans l’ **Assistant Déploiement d’Integration Services** affiche les paramètres spécifiques au modèle de déploiement de package si vous avez sélectionné l’option **Déploiement de package** comme **modèle de déploiement**.  
   
- Pour sélectionner les packages source, cliquez sur **Parcourir...** pour sélectionner le **dossier** that contains the packages or type the dossier path in the **Packages dossier path** et cliquez sur le bouton **Actualiser** au bas de la page. Tous les packages contenus dans le dossier spécifié doivent s’afficher dans la zone de liste. Par défaut, tous les packages sont sélectionnés. Cliquez sur la **case à cocher** dans la première colonne pour choisir les packages à déployer sur le serveur.  
+ Pour sélectionner les packages source, cliquez sur **Parcourir...** pour sélectionner le **dossier** qui contient les packages ou tapez le chemin du dossier dans la zone de texte **Chemin d’accès au dossier Packages** et cliquez sur le bouton **Actualiser** au bas de la page. Tous les packages contenus dans le dossier spécifié doivent s’afficher dans la zone de liste. Par défaut, tous les packages sont sélectionnés. Cliquez sur la **case à cocher** dans la première colonne pour choisir les packages à déployer sur le serveur.  
   
  Consultez les colonnes **État** et **Message** pour vérifier l’état du package. Si l’état est défini sur **Prêt** ou **Avertissement**, l’Assistant Déploiement ne bloquera pas le processus de déploiement. Si l’état est défini sur **Erreur**, l’Assistant ne procédera pas au déploiement des packages sélectionnés. Pour afficher les messages d’avertissement/d’erreur détaillés, cliquez sur le lien dans la colonne **Message** .  
   
@@ -327,7 +327,7 @@ Lancer l’Assistant en :
  Si l’état de tous les packages sélectionnés n’est pas défini sur **Erreur**, le bouton **Suivant** est activé pour vous permettre de poursuivre le processus de déploiement de package.  
   
 #### <a name="select-destination"></a>Sélectionner la destination  
- Après avoir sélectionné les sources de package, cliquez sur le bouton **Suivant** pour afficher la page **Sélectionner la destination** . Les packages doivent être déployés dans un projet dans le catalogue SSIS (SSISDB). Par conséquent, avant de déployer des packages, vérifiez que le projet de destination existe déjà dans le catalogue SSIS. Dans le cas contraire, créez un projet vide. Sur la page **Sélectionner la destination** , tapez le nom du serveur dans la zone de texte **Nom du serveur** ou cliquez sur le bouton **Parcourir...** pour sélectionner une instance de serveur. Cliquez ensuite sur le bouton **Parcourir...** en regard de la zone de texte **Chemin d’accès** pour spécifier le projet de destination. Si le projet n’existe pas, cliquez sur **Nouveau projet...** pour créer un projet vide comme projet de destination. Le projet **DOIT** être créé dans un dossier.  
+ Après avoir sélectionné les sources de package, cliquez sur le bouton **Suivant** pour afficher la page **Sélectionner la destination** . Les packages doivent être déployés dans un projet dans le catalogue SSIS (SSISDB). Par conséquent, avant de déployer des packages, vérifiez que le projet de destination existe déjà dans le catalogue SSIS. Dans le cas contraire, créez un projet vide. Dans la page **Sélectionner la destination**, tapez le nom du serveur dans la zone de texte **Nom du serveur** ou cliquez sur le bouton **Parcourir...** pour sélectionner une instance de serveur. Cliquez ensuite sur le bouton **Parcourir...** en regard de la zone de texte **Chemin d’accès** pour spécifier le projet de destination. Si le projet n’existe pas, cliquez sur **Nouveau projet...** pour créer un projet vide comme projet de destination. Le projet **DOIT** être créé dans un dossier.  
   
 #### <a name="review-and-deploy"></a>Vérifier et déployer  
  Cliquez sur **Suivant** sur la page **Sélectionner la destination** pour afficher la page **Vérifier** dans l’ **Assistant Déploiement d’Integration Services**. Sur la page de vérification, passez en revue le rapport de synthèse sur l’action de déploiement. Après la vérification, cliquez sur le bouton **Déployer** pour exécuter le déploiement.  
@@ -336,7 +336,7 @@ Lancer l’Assistant en :
  Une fois le déploiement terminé, la page **Résultats** doit s’afficher. Sur la page **Résultats** , passez en revue les résultats de chaque étape du processus de déploiement. Sur la page **Résultats** , cliquez sur **Enregistrer le rapport** pour enregistrer le rapport de déploiement ou cliquez sur **Fermer** pour fermer l’Assistant.  
 
 ## <a name="create-and-map-a-server-environment"></a>Créer et mapper un environnement serveur
-  Vous créez un environnement serveur pour spécifier les valeurs d'exécution des packages contenus dans un projet que vous avez déployé sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Vous pouvez ensuite mapper les variables d'environnement aux paramètres, pour un package spécifique, pour les packages de point d'entrée, ou pour tous les packages dans un projet donné. Un package de point d'entrée est généralement un package parent qui exécute un package enfant.  
+  Vous créez un environnement serveur pour spécifier les valeurs d’exécution des packages contenus dans un projet que vous avez déployé sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Vous pouvez ensuite mapper les variables d'environnement aux paramètres, pour un package spécifique, pour les packages de point d'entrée, ou pour tous les packages dans un projet donné. Un package de point d'entrée est généralement un package parent qui exécute un package enfant.  
   
 > [!IMPORTANT]  
 >  Pour une exécution données, un package peut s'exécuter uniquement avec les valeurs contenues dans un seul environnement.  
@@ -380,7 +380,7 @@ Lancer l’Assistant en :
 7.  Pour générer un script de l'environnement, cliquez sur **Script**. Par défaut, le script s'affiche dans une nouvelle fenêtre de l'Éditeur de requête.  
   
     > [!TIP]  
-    >  Vous devez cliquer sur **Script** après avoir apporté des modifications aux propriétés d'environnement, telles que l'ajout d'une variable, et avant de cliquer sur **OK** dans la boîte de dialogue **Propriétés d'environnement** . Sinon, aucun script n'est généré.  
+    >  Vous devez cliquer sur **Script** après avoir apporté des modifications aux propriétés d’environnement, telles que l’ajout d’une variable, et avant de cliquer sur **OK** dans la boîte de dialogue **Propriétés d’environnement**. Sinon, aucun script n'est généré.  
   
 8.  Cliquez sur **OK** pour enregistrer les propriétés de l'environnement.  
   
@@ -676,7 +676,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **Supprimer les configurations de tous les packages après la conversion**  
  Il est recommandé de supprimer toutes les configurations de projet en sélectionnant cette option.  
   
- Si vous ne sélectionnez pas cette option, seules les configurations que vous avez sélectionnées pour remplacement à l'aide de paramètres sont supprimées.  
+ Si vous ne sélectionnez pas cette option, seules les configurations que vous avez sélectionnées pour remplacement à l’aide de paramètres sont supprimées.  
   
 ###  <a name="createParameters"></a> Définir les options sur la page Créer des paramètres  
  Sélectionnez le nom et l'étendue du paramètre pour chaque propriété de configuration.  
@@ -711,7 +711,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
 ###  <a name="review"></a> Définir les options de la page Vérifier  
  Utilisez la page **Vérifier** pour confirmer l’exactitude des options sélectionnées pour la conversion du projet.  
   
- **Previous**  
+ **Précédent**  
  Cliquez pour modifier une option.  
   
  **Convert**  

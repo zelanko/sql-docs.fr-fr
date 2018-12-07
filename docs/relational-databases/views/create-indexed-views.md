@@ -1,7 +1,7 @@
 ---
 title: Créer des vues indexées | Microsoft Docs
 ms.custom: ''
-ms.date: 01/22/2018
+ms.date: 11/19/2018
 ms.prod: sql
 ms.prod_service: table-view-index, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c37482e2adb298af1c2d650c5a6c0e5d06ece2b4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f29c5c3fbe0a0d9e3e8bb724ad2f7b2af7ad545e
+ms.sourcegitcommit: eb1f3a2f5bc296f74545f17d20c6075003aa4c42
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650967"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52191049"
 ---
 # <a name="create-indexed-views"></a>Créer des vues indexées
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -66,7 +66,8 @@ Pour pouvoir gérer correctement les vues et retourner des résultats cohérents
 |ARITHABORT|ON|ON|OFF|OFF|  
 |CONCAT_NULL_YIELDS_NULL|ON|ON|ON|OFF|  
 |NUMERIC_ROUNDABORT|OFF|OFF|OFF|OFF|  
-|QUOTED_IDENTIFIER|ON|ON|ON|OFF|  
+|QUOTED_IDENTIFIER|ON|ON|ON|OFF| 
+|&nbsp;|&nbsp;|&nbsp;|&nbsp;|&nbsp;|
   
 <sup>1</sup> Définir `ANSI_WARNINGS` sur ON définit implicitement `ARITHABORT` sur ON.  
   
@@ -107,6 +108,7 @@ Outre les options SET et les conditions requises pour les fonctions déterminist
     |PRECISE = TRUE|Doit être déclarée explicitement comme attribut de la méthode .NET Framework.|  
     |DATA ACCESS = NO SQL|Déterminée en affectant à l'attribut DataAccess la valeur DataAccessKind.None et à l'attribut SystemDataAccess la valeur SystemDataAccessKind.None.|  
     |EXTERNAL ACCESS = NO|Cette propriété a la valeur NO par défaut pour les routines CLR.|  
+    |&nbsp;|&nbsp;|
   
 -   La vue doit être créée avec l’option `WITH SCHEMABINDING`.  
   
@@ -126,6 +128,7 @@ Outre les options SET et les conditions requises pour les fonctions déterminist
     |les variables de tables ;|`OUTER APPLY` ou `CROSS APPLY`|`PIVOT`, `UNPIVOT`|  
     |Jeux de colonnes éparses|Fonctions table incluse ou fonctions table à instructions multiples|`OFFSET`|  
     |`CHECKSUM_AGG`|||  
+    |&nbsp;|&nbsp;|&nbsp;|
   
      <sup>1</sup> La vue indexée peut contenir des colonnes **float**, mais ces colonnes ne peuvent pas être incluses dans la clé d’index cluster.  
   
@@ -152,8 +155,9 @@ Lors de l’exécution d’instructions DML (comme `UPDATE`, `DELETE` ou `INSERT
   
  Les index sur les tables et les vues peuvent être désactivés. Lorsqu'un index cluster sur une table est désactivé, les index sur les vues associées à la table le sont également.  
  
-<a name="nondeterministic"></a> Les expressions qui impliquent une conversion implicite de chaînes de caractères en **datetime** ou **smalldatetime** sont considérées comme non déterministes. Cela est dû au fait que les résultats dépendent des paramètres LANGUAGE et DATEFORMAT de la session serveur. Par exemple, les résultats de l'expression `CONVERT (datetime, '30 listopad 1996', 113)` dépendent du paramètre LANGUAGE, car la chaîne '`listopad`' désigne des mois différents selon la langue. De même, dans l'expression `DATEADD(mm,3,'2000-12-01')`, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interprète la chaîne `'2000-12-01'` en fonction du paramètre DATEFORMAT. La conversion implicite de données caractères non-Unicode entre les classements est également considérée comme non déterministe.  
-  
+<a name="nondeterministic"></a> Les expressions qui impliquent une conversion implicite de chaînes de caractères en **datetime** ou **smalldatetime** sont considérées comme non déterministes. Pour plus d’informations, consultez [Conversion non déterministe de chaînes de date littérale en valeurs DATE](../../t-sql/data-types/nondeterministic-convert-date-literals.md).
+
+
 ###  <a name="Security"></a> Sécurité  
   
 ####  <a name="Permissions"></a> Permissions  

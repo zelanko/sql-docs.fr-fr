@@ -11,12 +11,12 @@ ms.assetid: ce6db775-21a5-40bc-95a1-f560376d4ee2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ae4e7fc1879a530f2a97f41276d9d0d4237ba471
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 4386963a4ca821b86e03129a958d38373aa3ecbe
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701991"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503789"
 ---
 # <a name="stretch-database"></a>Stretch Database
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "51701991"
  Étendez les données transactionnelles à chaud et à froid dynamiquement de SQL Server vers Microsoft Azure avec SQL Server Stretch Database. Vos données sont toujours en ligne et disponibles pour les requêtes, ce qui n’est pas le cas avec le stockage de données à froid habituel. Vous pouvez sans vous ruiner fournir des durées de conservation de données plus longues pour des tables volumineuses telles que l’historique des commandes client. Tirez parti du faible coût d’Azure plutôt que d’essayer de mettre à l’échelle un stockage local coûteux. Vous pouvez choisir le niveau de tarification et configurer les paramètres dans le portail Azure afin de garder le contrôle des prix et des coûts. Montez ou descendez en puissance selon vos besoins. Pour plus d’informations, consultez [Tarification de SQL Server Stretch Database](https://azure.microsoft.com/pricing/details/sql-server-stretch-database/) .  
   
  **Aucune modification des requêtes ou des applications nécessaire**  
- Accédez de façon transparente à vos données SQL Server, que celles-ci soient locales ou étendues vers le cloud.  Définissez la stratégie qui détermine où les données sont stockées et SQL Server gère le déplacement des données en arrière-plan. La table entière est toujours en ligne et peut toujours être interrogée. De plus, Stretch Database ne nécessite aucune modification des requêtes ou applications existantes : l’emplacement des données est totalement transparent pour l’application.  
+ Accédez facilement à vos données SQL Server, que celles-ci soient locales ou étendues au cloud.  Définissez la stratégie qui détermine où les données sont stockées et SQL Server gère le déplacement des données en arrière-plan. La table entière est toujours en ligne et peut toujours être interrogée. De plus, Stretch Database ne nécessite aucune modification des requêtes ou applications existantes : l’emplacement des données est totalement transparent pour l’application.  
   
  **Simplification de la maintenance locale des données**  
  Réduisez la maintenance et le stockage locaux de vos données. Les sauvegardes de vos données locales sont exécutées plus rapidement et se terminent dans la fenêtre de maintenance. Les sauvegardes de la partie de vos données stockées dans le cloud sont exécutées automatiquement. Vos besoins en stockage local sont considérablement réduits. Le stockage Azure peut vous coûter 80 % de moins que l’extension du SSD local.  

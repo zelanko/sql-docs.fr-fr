@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: e918986c-af15-48f6-8178-256aed829c6a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 606b6fa37f5dc067cdf134792215fd7c2cd09067
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 01c235ec53d0b8f70611b8523a4286790623d990
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813212"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52415406"
 ---
 # <a name="configure-the-web-portal"></a>Configurer le portail web
 
@@ -27,7 +27,7 @@ Pour utiliser le portail web, vous devez satisfaire aux prérequis suivants :
 
 - Vous devez disposer d'un serveur de rapports doté d'une configuration minimale. Pour plus d’informations sur la configuration minimale d’un serveur de rapports, consultez [Configurer un serveur de rapports](../../reporting-services/report-server/configure-a-report-server-reporting-services-native-mode.md).
 
-- Votre serveur de rapports doit s'exécuter en mode natif. Vous ne pouvez pas utiliser le portail web avec un serveur de rapports configuré pour le mode intégré SharePoint. Dans SQL Server 2012, vous ne pouvez pas basculer un serveur de rapports d'un mode à un autre. Si vous souhaitez modifier le type de serveur de rapports que votre environnement utilise, vous devez installer le mode souhaité du serveur de rapports, puis copier ou déplacer les éléments de rapport vers le nouveau serveur de rapports. Ce processus est habituellement désigné sous le terme de « migration ». Les étapes nécessaires pour la migration dépendent du mode vers lequel vous effectuez la migration et de la version d'origine de la migration. Pour plus d'informations, consultez [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md).
+- Votre serveur de rapports doit s'exécuter en mode natif. Vous ne pouvez pas utiliser le portail web avec un serveur de rapports configuré pour le mode intégré SharePoint. Dans SQL Server 2012, vous ne pouvez pas basculer un serveur de rapports d'un mode à un autre. Si vous souhaitez modifier le type de serveur de rapports que votre environnement utilise, vous devez installer le mode souhaité du serveur de rapports, puis copier ou déplacer les éléments de rapport vers le nouveau serveur de rapports. Ce processus est habituellement désigné sous le terme de « migration ». Les étapes nécessaires pour la migration dépendent du mode vers lequel vous effectuez la migration et de la version d'origine de la migration. Pour plus d'informations, consultez [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md).
 
 - Internet Explorer 11 ou ultérieur avec activation des scripts doit également être installé. Pour plus d’informations, consultez [Prise en charge des navigateurs pour Reporting Services et Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md).
 

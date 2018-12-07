@@ -11,12 +11,12 @@ ms.assetid: 55d8be9c-9282-47d3-be7f-e2c26f00c95e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8da09c20837b060606b087c0edebb7bf9713675e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 34cea0d4a251266d21218cefaee2d5f122e574ff
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671242"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52543905"
 ---
 # <a name="using-transact-sql-assertions-in-sql-server-unit-tests"></a>Utilisation d'assertions Transact-SQL dans les tests unitaires SQL Server
 Dans un test unitaire SQL Server, un script de test Transact\-SQL s'exécute et retourne un résultat. Parfois, les résultats sont retournés sous la forme d'un jeu de résultats. Validez les résultats à l'aide de conditions de test. Par exemple, utilisez une condition de test pour vérifier le nombre de lignes qui ont été retournées dans un jeu de résultats spécifique ou pour vérifier le temps qui a été nécessaire à l'exécution d'un test spécifique. Pour plus d’informations sur les conditions de test, consultez [Utilisation de conditions de test dans les tests unitaires SQL Server](../ssdt/using-test-conditions-in-sql-server-unit-tests.md).  
@@ -72,7 +72,7 @@ où :
   
 @ErrorMessage est un message d'erreur défini par l'utilisateur. Vous pouvez mettre en forme cette chaîne de message de la même façon que la fonction printf_s.  
   
-@ErrorSeverity est un niveau de gravité défini par l'utilisateur compris entre 0 et 18.  
+@ErrorSeverity est un niveau de gravité défini par l’utilisateur compris entre 0 et 18.  
   
 > [!NOTE]  
 > Les valeurs « 0 » et « 10 » du niveau de gravité ne provoquent pas l'échec du test unitaire SQL Server. Utilisez toute autre valeur comprise entre 0 et 18 pour provoquer l'échec du test.  

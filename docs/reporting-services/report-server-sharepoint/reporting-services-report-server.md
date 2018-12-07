@@ -7,12 +7,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fe29406395b782b2bf25367e22f6f23f9bff0505
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 624d00d0c9cd27acbaa00fefa52f6880c7a69916
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021623"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400582"
 ---
 # <a name="reporting-services-report-server"></a>Serveur de rapports Reporting Services
 
@@ -43,7 +43,7 @@ Un serveur de rapports Reporting Services s’exécute dans l’un des deux mode
   
 -   **Mode SharePoint**, dans lequel un serveur de rapports est installé dans le cadre d'une batterie de serveurs SharePoint.  Déployez et configurez le mode SharePoint à l'aide de commandes PowerShell ou des pages de gestion de contenu SharePoint.  
   
- Dans SQL Server Reporting Services, vous ne pouvez pas basculer un serveur de rapports d’un mode à un autre. Si vous souhaitez modifier le type de serveur de rapports utilisé par votre environnement, vous devez installer le mode du serveur de rapports souhaité, puis copier ou déplacer les éléments de rapport ou la base de données du serveur de rapports de l'ancien serveur de rapports avec version vers le nouveau serveur de rapports. Ce processus est habituellement désigné sous le terme de « migration ». Les étapes nécessaires pour la migration dépendent du mode vers lequel vous effectuez la migration et de la version d'origine de la migration. Pour plus d'informations, consultez [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)  
+ Dans SQL Server Reporting Services, vous ne pouvez pas basculer un serveur de rapports d’un mode à un autre. Si vous souhaitez modifier le type de serveur de rapports utilisé par votre environnement, vous devez installer le mode du serveur de rapports souhaité, puis copier ou déplacer les éléments de rapport ou la base de données du serveur de rapports de l'ancien serveur de rapports avec version vers le nouveau serveur de rapports. Ce processus est habituellement désigné sous le terme de « migration ». Les étapes nécessaires pour la migration dépendent du mode vers lequel vous effectuez la migration et de la version d'origine de la migration. Pour plus d'informations, consultez [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)  
   
 ## <a name="feature-comparison-of-sharepoint-and-native-mode"></a>Comparaison des fonctionnalités du mode natif et du mode SharePoint
   

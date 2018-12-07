@@ -1,22 +1,22 @@
 ---
 title: Ajouter le composant WebPart Visionneuse de rapports de SQL Server Reporting Services à un site SharePoint | Microsoft Docs
-ms.date: 09/26/2017
+ms.date: 11/26/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c9e8950edd84f57e4e751533799faba451234ca0
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 39379fa6d6471f9d0d624dbbd2b05331c7e7a36a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813022"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398346"
 ---
 # <a name="add-sql-server-reporting-services-report-viewer-web-part-to-a-sharepoint-page"></a>Ajouter le composant WebPart Visionneuse de rapports de SQL Server Reporting Services à un site SharePoint
 
-[!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2016-2019](../../includes/ssrs-appliesto-sharepoint-2016-2019.md)] [!INCLUDE[ssrs-appliesto-not-sharepoint-online](../../includes/ssrs-appliesto-not-sharepoint-online.md)]
 
 Affichez un rapport, à partir de SQL Server Reporting Services ou de Power BI Report Server, en ajoutant un composant WebPart Visionneuse de rapports à une page SharePoint.
 
@@ -46,7 +46,7 @@ Affichez un rapport, à partir de SQL Server Reporting Services ou de Power BI R
 
     ![Ajouter le composant WebPart Visionneuse de rapports.](media/sharepoint-report-viewer-web-part.png)
 
-    Il est possible qu’une erreur s’affiche. Celle-ci est liée au fait que l’URL du serveur de rapports par défaut est peut-être initialement définie sur *https://localhost* alors qu’il n’est peut-être pas disponible à cet emplacement.
+    Il se peut qu’une erreur initiale se produise. Celle-ci est liée au fait que l’URL du serveur de rapports par défaut est peut-être initialement définie sur *https://localhost* alors qu’il n’est peut-être pas disponible à cet emplacement.
 
 ## <a name="configure-the-report-viewer-web-part"></a>Configurer le composant WebPart Visionneuse de rapports
 
@@ -56,7 +56,7 @@ Pour configurer le composant WebPart de manière à ce qu’il pointe vers votre
 
     ![Modifier le composant WebPart dans le menu déroulant du composant WebPart.](media/sharepoint-edit-web-part.png)
 
-2. Entrez l’**URL du serveur de rapports** qui héberge votre rapport. Elle doit ressembler à *https://myrsserver/reportserver*.
+2. Entrez l’**URL du serveur de rapports** qui héberge votre rapport. Elle doit se présenter comme ceci : *https://myrsserver/reportserver*.
 
 3. Entrez le chemin et le nom du rapport que vous souhaitez afficher dans le composant WebPart. Par exemple, */Exemples de rapports AdventureWorks/Ventes de la société*. Dans cet exemple, le rapport *Ventes de la société* se trouve dans un dossier nommé *Exemples de rapports AdventureWorks*.
 

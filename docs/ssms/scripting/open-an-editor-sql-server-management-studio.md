@@ -11,12 +11,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3c123c562a9f0d6c581fb6a69fcc52d0126302a6
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 6e2d05ae0034f7826044f2ae2f29a8d6ca2a07df
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51643241"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52508730"
 ---
 # <a name="open-an-editor-sql-server-management-studio"></a>Ouvrir un éditeur (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "51643241"
   
 -   **Requête avec la connexion actuelle** - Ouvre une nouvelle fenêtre d’éditeur du type associé à la connexion active dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. La fenêtre de l'éditeur utilise les mêmes informations d'authentification que la connexion active. Par exemple, si vous sélectionnez une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] dans l’Explorateur d’objets, puis choisissez **Requête avec la connexion actuelle**, [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ouvre un Éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] qui est connecté à la même instance en utilisant les mêmes informations d’identification.  
   
--   **Requête de moteur de base de données** - Ouvre un nouvel Éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] et une boîte de dialogue dans laquelle vous devez entrer les informations requises pour vous connecter à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+-   **Requête de moteur de base de données** - Ouvre un nouvel Éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] et une boîte de dialogue dans laquelle vous devez entrer les informations nécessaires pour vous connecter à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 -   **Requête MDX Analysis Services** - Ouvre un nouvel Éditeur de requête MDX [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] et une boîte de dialogue dans laquelle vous devez entrer les informations requises pour vous connecter à une instance de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
@@ -57,7 +57,7 @@ ms.locfileid: "51643241"
   
 -   **Nouvelle requête** - Ouvre une nouvelle fenêtre d’éditeur du type associé à la connexion active dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. La fenêtre de l'éditeur utilise les mêmes informations d'authentification que la connexion active. Par exemple, si vous sélectionnez une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] dans l’Explorateur d’objets, puis cliquez sur **Nouvelle requête** , [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ouvre un Éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] qui est connecté à la même instance en utilisant les mêmes informations d’identification.  
   
--   **Requête de moteur de base de données** - Ouvre un nouvel Éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] et une boîte de dialogue dans laquelle vous devez entrer les informations requises pour vous connecter à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+-   **Requête de moteur de base de données** - Ouvre un nouvel Éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] et une boîte de dialogue dans laquelle vous devez entrer les informations nécessaires pour vous connecter à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 -   **Requête MDX Analysis Services** - Ouvre un nouvel Éditeur de requête MDX [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] et une boîte de dialogue dans laquelle vous devez entrer les informations requises pour vous connecter à une instance de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   

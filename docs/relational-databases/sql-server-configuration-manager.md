@@ -22,12 +22,12 @@ ms.assetid: e6beaea4-164c-4078-95ae-b9e28b0aefe8
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3a635138aa7488b9580a69560bb43295257b2915
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: ee3a0ed473c40f21781eeb061d2d10436ebd47bd
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657030"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510585"
 ---
 # <a name="sql-server-configuration-manager"></a>Gestionnaire de configuration SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -73,11 +73,11 @@ ms.locfileid: "51657030"
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vous permet de créer ou de supprimer des alias, de modifier l'ordre d'utilisation des protocoles ou d'afficher les propriétés de l'alias d'un serveur, notamment :  
   
--   Alias de serveur — Alias du serveur utilisé pour l'ordinateur auquel le client se connecte.  
+-   Alias de serveur - Alias de serveur utilisé pour l’ordinateur auquel le client se connecte.  
   
--   Protocole — Protocole réseau utilisé pour l'entrée de configuration.  
+-   Protocole - Protocole réseau utilisé pour l’entrée de configuration.  
   
--   Paramètres de connexion — Paramètres associés à l'adresse de connexion pour la configuration du protocole réseau.  
+-   Paramètres de connexion - Paramètres associés à l’adresse de connexion pour la configuration du protocole réseau.  
   
  Le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vous permet également d'afficher des informations sur les instances de cluster de basculement, bien que l'Administrateur de cluster doive être utilisé pour certaines actions comme le démarrage et l'arrêt des services.  
   

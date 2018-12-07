@@ -12,12 +12,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 49e547f591debaf4bfd3497a2a4c2d1d5580bca8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 907cd0278119351c9bfabf2c2c64e514a7840c7a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739737"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531545"
 ---
 # <a name="get-started-with-columnstore-for-real-time-operational-analytics"></a>Prise en main de Columnstore pour l’analytique opérationnelle en temps réel
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -121,7 +121,7 @@ ms.locfileid: "47739737"
 >  Un index non cluster columnstore filtré n’est pris en charge que sur les tables sur disque. Il n’est pas pris en charge sur les tables optimisées en mémoire.  
   
 ### <a name="example-a-access-hot-data-from-btree-index-warm-data-from-columnstore-index"></a>Exemple A : Accès aux données chaudes à partir de l’index BTree, aux données tièdes à partir de l’index columnstore  
- Cet exemple utilise une condition filtrée (accountkey > 0) pour déterminer les lignes qui seront dans l’index columnstore. L’objectif est de concevoir la condition filtrée et les requêtes suivantes pour accéder aux données « chaudes » qui changent fréquemment à partir de l’index BTree et pour accéder aux données « tièdes » plus stables à partir de l’index columnstore.  
+ Cet exemple utilise une condition filtrée (accountkey > 0) pour déterminer les lignes qui seront dans l’index columnstore. L’objectif est de concevoir la condition filtrée et les requêtes suivantes pour accéder aux données « chaudes » qui changent fréquemment à partir de l’index BTree et pour accéder aux données « tièdes » plus stables à partir de l’index columnstore.  
   
  ![Index combinés de données tièdes et chaudes](../../relational-databases/indexes/media/de-columnstore-warmhotdata.png "Index combinés de données tièdes et chaudes")  
   
@@ -130,7 +130,7 @@ ms.locfileid: "47739737"
   
 ```  
 --Use a filtered condition to separate hot data in a rowstore table  
--- from “warm” data in a columnstore index.  
+-- from "warm" data in a columnstore index.  
   
 -- create the table  
 CREATE TABLE  orders (  
@@ -206,7 +206,7 @@ CREATE NONCLUSTERED COLUMNSTORE index t_colstor_cci on t_colstor (accountkey, ac
 -   **Charge de travail OLTP :** si la charge de travail est de type DML lourd (autrement dit, de nombreuses mises à jour, suppressions et insertions associées), vous pouvez voir la fragmentation des index columnstore en examinant la vue de gestion de données sys. dm_db_column_store_row_group_physical_stats. Si vous voyez que plus de 10 % des lignes sont marquées comme supprimées dans des rowgroups récemment compressés, vous pouvez utiliser l’option COMPRESSION_DELAY pour ajouter un délai quand les lignes sont éligibles pour la compression. Si les données récemment insérées pour votre charge de travail restent « chaudes » (autrement dit, si elles sont mises à jour plusieurs fois) pendant, par exemple, 60 minutes, vous devez choisir la valeur 60 pour COMPRESSION_DELAY.  
   
  Nous pensons que la plupart des clients n’auront besoin de rien faire. La valeur par défaut de l’option COMPRESSION_DELAY doit leur convenir.  
-Aux utilisateurs expérimentés, nous recommandons d’exécuter la requête ci-dessous et de collecter un pourcentage de lignes supprimées dans les 7 derniers jours.  
+Aux utilisateurs expérimentés, nous recommandons d’exécuter la requête ci-dessous et de collecter un pourcentage de lignes supprimées dans les 7 derniers jours.  
   
 ```  
 SELECT row_group_id,cast(deleted_rows as float)/cast(total_rows as float)*100 as [% fragmented], created_time  
@@ -218,7 +218,7 @@ WHERE object_id = object_id('FactOnlineSales2')
 ORDER BY created_time DESC  
 ```  
   
- Si le nombre de lignes supprimées dans les rowgroups compressés est supérieur à 20 %, stable dans les anciens rowgroups avec une variation inférieure à 5 % (désignés sous le nom de rowgroups froids), définissez COMPRESSION_DELAY = (youngest_rowgroup_created_time –  current_time). Notez que cette approche fonctionne mieux avec une charge de travail stable et relativement homogène.  
+ Si le nombre de lignes supprimées dans les rowgroups compressés est supérieur à 20 %, stable dans les anciens rowgroups avec une variation inférieure à 5 % (désignés sous le nom de rowgroups froids), définissez COMPRESSION_DELAY = (youngest_rowgroup_created_time –  current_time). Notez que cette approche fonctionne mieux avec une charge de travail stable et relativement homogène.  
   
 ## <a name="see-also"></a> Voir aussi  
  [Guide des index columnstore](../../relational-databases/indexes/columnstore-indexes-overview.md)   

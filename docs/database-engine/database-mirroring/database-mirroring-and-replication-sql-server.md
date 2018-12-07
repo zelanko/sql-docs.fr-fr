@@ -14,12 +14,12 @@ ms.assetid: 82796217-02e2-4bc5-9ab5-218bae11a2d6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a88bb5e660d992139ed9bf748544a52ed9839b0f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 029ad55778a1c4239bdb83d587ca9a1f21bcaf20
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47637487"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534444"
 ---
 # <a name="database-mirroring-and-replication-sql-server"></a>Mise en miroir de bases de données et réplication (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ ms.locfileid: "47637487"
   
     -   Donnez au paramètre **@working_directory** le nom du dossier d’instantanés utilisé par le principal.  
   
-4.  Spécifiez le nom du miroir pour le paramètre d’agent **–PublisherFailoverPartner** . Agent Ce paramètre est obligatoire ; il permet aux agents suivants d'identifier le miroir après le basculement :  
+4.  Spécifiez le nom du miroir pour le paramètre d’agent **-PublisherFailoverPartner**. Agent Ce paramètre est obligatoire ; il permet aux agents suivants d'identifier le miroir après le basculement :  
   
     -   Agent d'instantané (pour toutes les publications)  
   
@@ -99,7 +99,7 @@ ms.locfileid: "47637487"
   
     -   [Concepts des exécutables de l'agent de réplication](../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   
-     Nous vous conseillons d’ajouter le paramètre **–PublisherFailoverPartner** à un profil d’agent, puis de spécifier le nom du miroir dans le profil. Par exemple, si vous configurez la réplication à l'aide de procédures stockées :  
+     Nous vous conseillons d’ajouter le paramètre **-PublisherFailoverPartner** à un profil d’agent, puis de spécifier le nom du miroir dans le profil. Par exemple, si vous configurez la réplication à l'aide de procédures stockées :  
   
     ```  
     -- Execute sp_help_agent_profile in the context of the distribution database to get the list of profiles.  

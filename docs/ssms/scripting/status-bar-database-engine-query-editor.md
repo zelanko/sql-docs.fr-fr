@@ -11,12 +11,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d2d9dcbb729c09ef327861430a36f4565c2645d3
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: d9d870762becec1ff0717c4e9d7aef5eda7be94c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642797"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541901"
 ---
 # <a name="status-bar-database-engine-query-editor"></a>Barre d'état (éditeur de requête du moteur de base de données)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,13 +36,13 @@ ms.locfileid: "51642797"
 ##  <a name="SetOEServerColor"></a> Définir la couleur d'état pour un serveur dans l'Explorateur d'objets  
  **Pour définir une couleur d'état de serveur dans l'Explorateur d'objets**  
   
-1.  Dans l' **Explorateur d'objets**, sélectionnez **Se connecter** , puis **Moteur de base de données**.  
+1.  Dans l’**Explorateur d’objets**, sélectionnez **Se connecter**, puis **Moteur de base de données...**.  
   
 2.  Dans la boîte de dialogue **Se connecter au serveur**, sélectionnez **Options >>**.  
   
 3.  Activez la case à cocher **Utiliser une couleur personnalisée** .  
   
-4.  Pour choisir la couleur, sélectionnez le bouton **Sélectionner** .  
+4.  Pour choisir la couleur, sélectionnez le bouton **Sélectionner...**.  
   
 5.  Sélectionnez une couleur de base ou personnalisée, puis cliquez sur OK.  
   
@@ -51,13 +51,13 @@ ms.locfileid: "51642797"
 ##  <a name="SetRegServerColor"></a> Définir la couleur d'état pour un serveur inscrit  
  **Pour définir une couleur de serveur pour un serveur inscrit**  
   
-1.  Dans **Serveurs inscrits**, cliquez avec le bouton droit sur le nœud de serveur, puis sélectionnez **Propriétés**.  
+1.  Dans **Serveurs inscrits**, cliquez avec le bouton droit sur le nœud de serveur, puis sélectionnez **Propriétés...**.  
   
 2.  Dans la boîte de dialogue **Modifier les propriétés d'inscription du serveur** , sélectionnez l'onglet **Propriétés de connexion** .  
   
 3.  Activez la case à cocher **Utiliser une couleur personnalisée** .  
   
-4.  Pour choisir la couleur, sélectionnez le bouton **Sélectionner** .  
+4.  Pour choisir la couleur, sélectionnez le bouton **Sélectionner...**.  
   
 5.  Sélectionnez une couleur de base ou personnalisée, puis cliquez sur OK.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "51642797"
   
 -   Activez la case à cocher **Utiliser une couleur personnalisée** .  
   
--   Pour choisir la couleur, sélectionnez le bouton **Sélectionner** .  
+-   Pour choisir la couleur, sélectionnez le bouton **Sélectionner...**.  
   
 -   Sélectionnez une couleur de base ou personnalisée, puis cliquez sur OK.  
   

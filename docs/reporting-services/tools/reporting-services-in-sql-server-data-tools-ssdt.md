@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7309f4669a0672ca65b0c74961c14e83d073a4c6
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: ab97e64bacf15cf95c6594f45edceac05a24eef2
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030378"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52403004"
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>Reporting Services dans les outils de données SQL Server (SSDT)
 
@@ -56,7 +56,7 @@ ms.locfileid: "50030378"
   
 -   **Datasets** Chaque dataset comprend une requête qui spécifie les données à extraire de la source de données. Développez le dataset pour afficher la collection de champs définie par la requête du dataset.  
   
-     Dans certains concepteurs de requêtes pour les datasets multidimensionnels, vous pouvez spécifier des filtres dans le volet des filtres et indiquer s'il faut créer des paramètres de rapport. Si vous spécifiez l'option de paramètre de rapport, un dataset particulier est créé automatiquement pour remplir la liste des valeurs valides du paramètre.  Par défaut, le dataset n'apparaît pas dans le volet des données de rapport. Pour plus d’informations, consultez [Afficher des datasets masqués pour les valeurs de paramètres des données multidimensionnelles &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/show-hidden-datasets-for-parameter-values-multidimensional-data.md).  
+     Dans certains concepteurs de requêtes pour les datasets multidimensionnels, vous pouvez spécifier des filtres dans le volet des filtres et indiquer s'il faut créer des paramètres de rapport. Si vous spécifiez l’option de paramètre de rapport, un dataset particulier est créé automatiquement pour remplir la liste des valeurs valides du paramètre.  Par défaut, le dataset n'apparaît pas dans le volet des données de rapport. Pour plus d’informations, consultez [Afficher des datasets masqués pour les valeurs de paramètres des données multidimensionnelles &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/show-hidden-datasets-for-parameter-values-multidimensional-data.md).  
   
 -   **Paramètres de rapport** La liste des paramètres de rapport. Les paramètres peuvent être créés manuellement ou automatiquement lorsqu'une requête de dataset comprend des paramètres de requête.  
   
@@ -237,7 +237,7 @@ ms.locfileid: "50030378"
   
 
 ##  <a name="bkmk_SourceControl"></a> contrôle de code source ;  
- [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] peut intégrer des plug-ins de source. Utilisez les pages Projets et Solutions de la boîte de dialogue Options** pour spécifier le plug-in et configurer les paramètres.  
+ [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] peut intégrer des plug-ins de source. Utilisez les pages Projets et Solutions de la boîte de dialogue **Options** pour spécifier le plug-in et configurer les paramètres.  
   
 ##  <a name="bkmk_CustomReportTemplates"></a> Modèles de rapports personnalisés  
  Pour utiliser des rapports personnalisés comme modèles pour de nouveaux rapports, il suffit de les copier dans le dossier ReportProject sur l'ordinateur sur lequel [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] est installé. Par défaut, ce dossier se trouve dans l’emplacement suivant : `<drive>:\Program Files\Microsoft Visual Studio 14.0\Common7\IDE\Private Assemblies\ProjectItems\ReportProject`. Lorsque vous ajoutez un nouvel élément au projet de rapport, votre rapport personnalisé s'affiche dans le volet Modèles.  

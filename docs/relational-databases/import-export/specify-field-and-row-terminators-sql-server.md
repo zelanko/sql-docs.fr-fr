@@ -18,12 +18,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e3a171b8a55394ae974cdc9e891e94bd84c9511f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bc197fdb8571df79e1ea39cf49086a1cea68b4f0
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47653367"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52543804"
 ---
 # <a name="specify-field-and-row-terminators-sql-server"></a>Spécifier des indicateurs de fin de champ et de fin de ligne (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "47653367"
 |Barre oblique inverse*|\\\|  
 |Indicateur de fin NULL (indicateur de fin non visible)**|\0|  
 |Tout caractère imprimable (les caractères de contrôle ne le sont pas, sauf les valeurs NULL, tabulation, saut de ligne et retour chariot)|(*, A, t, l, etc.)|  
-|Une chaîne de 10 caractères imprimables maximum, y compris certains ou tous les indicateurs de fin énumérés précédemment|(**\t\*\*, fin, !!!!!!!!!!, \t—\n, etc.)|  
+|Une chaîne de 10 caractères imprimables maximum, y compris certains ou tous les indicateurs de fin énumérés précédemment|(**\t\*\*, fin, !!!!!!!!!!, \t-\n, etc.)|  
   
  *Seuls les caractères t, n, r, 0, et '\0' fonctionnent avec le caractère d’échappement Barre oblique inverse pour générer un caractère de contrôle.  
   

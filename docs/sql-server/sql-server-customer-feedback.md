@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: ''
 ms.technology: configuration
-ms.openlocfilehash: 6f9f6b87abbac930bc51d5b0f5a32d48e0afb730
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 47d911c6a05af96d042211f98b5365230dd57084
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701981"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525201"
 ---
 # <a name="configure-sql-server-to-send-feedback-to-microsoft"></a>Configurer SQL Server pour envoyer des commentaires à Microsoft
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ En particulier, Microsoft n’envoie par ce mécanisme aucune information de ces
 
 L’exemple de scénario suivant comprend des informations sur l’utilisation des fonctionnalités, qui permettent d’améliorer le produit.
 
-SQL Server 2017 prend en charge les index columnstore pour proposer des scénarios d’analytique rapides. Les index columnstore combinent une structure d’index traditionnelle en « arbre B » (« B-tree ») pour les données récemment insérées avec une structure compressée orientée colonnes spéciale pour compresser les données et accélérer l’exécution des requêtes. Le produit contient des heuristiques pour migrer des données de la structure en arbre B vers la structure compressée en arrière-plan, ce qui accélérer les résultats de requêtes ultérieurs.
+SQL Server 2017 prend en charge les index columnstore pour proposer des scénarios d’analytique rapides. Les index columnstore combinent une structure d’index traditionnelle en « arbre B » (« B-tree ») pour les données récemment insérées avec une structure compressée orientée colonnes permettant de compresser les données et accélérer l’exécution des requêtes. Le produit contient des heuristiques pour migrer des données de la structure en arbre B vers la structure compressée en arrière-plan, ce qui accélérer les résultats de requêtes ultérieurs.
 
 Si l’opération en arrière-plan ne suit pas le rythme d’insertion des données, les performances des requêtes peuvent être plus lentes que prévu. Pour améliorer le produit, Microsoft collecte des informations sur la capacité de SQL Server à suivre le processus de compression automatique des données. L’équipe produit utilise ces informations pour ajuster la fréquence et le parallélisme du code qui effectue la compression. Cette requête est exécutée occasionnellement pour collecter ces informations afin que nous (Microsoft) puissions évaluer la vitesse de déplacement des données. Ceci nous permet d’optimiser les heuristiques du produit.  
 
@@ -94,7 +94,7 @@ Les clients d’entreprise peuvent configurer les paramètres de stratégie de g
     Type d’entrée DWORD : 0 pour accepter ; 1 pour refuser
 
 > [!NOTE]
-> {Major Version} fait référence à la version de SQL Server, par exemple, 140 pour SQL Server 2017
+> {Major Version} fait référence à la version de SQL Server, par exemple, 140 pour SQL Server 2017
 
 - Pour SQL Server Management Studio :
   

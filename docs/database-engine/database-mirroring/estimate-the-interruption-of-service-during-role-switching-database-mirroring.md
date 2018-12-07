@@ -18,12 +18,12 @@ ms.assetid: 586a6f25-672b-491b-bc2f-deab2ccda6e2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 405c8ed92f76c2b08baf8c4fd7b7e29a366344f1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 85dc2bd0bb86362e71aa99ee277f2edaafbb53fa
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47720627"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534089"
 ---
 # <a name="estimate-the-interruption-of-service-during-role-switching-database-mirroring"></a>Estimer l'interruption de service au cours d'un basculement de rôle (mise en miroir de bases de données)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "47720627"
  Le temps de basculement de la base de données dépend de la rapidité avec laquelle le serveur miroir peut restaurer par progression le journal dans la file d'attente de restauration par progression qui est ensuite déterminé principalement par la configuration matérielle du système et par la charge de travail en cours. Il peut arriver qu'une base de données principale soit si occupée que le serveur principal envoie le journal au serveur miroir beaucoup plus rapidement que s'il restaurait le journal par progression. Dans ce cas, le basculement peut durer un temps significatif pendant que le serveur miroir restaure par progression le journal dans la file d'attente de restauration par progression. Pour connaître la taille actuelle de la file d’attente de restauration par progression, utilisez le compteur **File d’attente de restauration par progression** de l’objet de performance de mise en miroir de bases de données. Pour plus d’informations, consultez [SQL Server, objet Database Mirroring](../../relational-databases/performance-monitor/sql-server-database-mirroring-object.md).  
   
 ### <a name="estimating-the-failover-redo-rate"></a>Estimation du taux de restauration par progression du basculement  
- Vous pouvez mesurer le temps nécessaire à la restauration par progression des enregistrements de journal ( *taux de restauration par progression*) à l’aide d’une copie de test de la base de données de production.  
+ Vous pouvez mesurer le temps nécessaire à la restauration par progression des enregistrements de journal (*vitesse de restauration par progression*) à l’aide d’une copie de test de la base de données de production.  
   
  La méthode permettant d'estimer la durée de la restauration par progression pendant le basculement dépend du nombre de threads utilisés par le serveur miroir pendant la phase de restauration par progression. Le nombre de threads dépend des éléments suivants :  
   

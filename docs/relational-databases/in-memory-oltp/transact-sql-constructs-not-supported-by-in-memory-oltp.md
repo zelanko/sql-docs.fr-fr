@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8ca94f7ef5ed0c6f070424c47aee10c7848a061d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e8023d29ccdf04ff46b995e1f698bb54a905df5d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47822447"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503625"
 ---
 # <a name="transact-sql-constructs-not-supported-by-in-memory-oltp"></a>Constructions Transact-SQL non prises en charge par l’OLTP en mémoire
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -86,7 +86,7 @@ ms.locfileid: "47822447"
 |Fonctionnalité|Index filtré|Les index filtrés ne sont pris en charge avec les tables optimisées en mémoire. Omettez la clause **WHERE** de la spécification d'index.|  
 |Fonctionnalité|Colonnes incluses|La spécification de colonnes incluses n'est pas nécessaire pour les tables mémoire optimisées. Toutes les colonnes de la table mémoire optimisée sont incluses implicitement dans chaque index mémoire optimisé.|  
 |Opération|DROP INDEX|La suppression des index sur les tables mémoire optimisées n'est pas prise en charge. Vous pouvez supprimer des index à l’aide de ALTER TABLE.<br /><br /> Pour plus d’informations, consultez [Modification des tables mémoire optimisées](../../relational-databases/in-memory-oltp/altering-memory-optimized-tables.md).|  
-|Option d'index|*Option d’index*|Une seule option d’index est prise en charge : BUCKET_COUNT pour les index de hachage.|  
+|Option d'index|*Option d’index*|Une seule option d’index est prise en charge : BUCKET_COUNT pour les index de hachage.|  
   
 ## <a name="nonclustered-hash-indexes"></a>Index de hachage non cluster  
  Le tableau suivant répertorie les fonctionnalités et les mots clés [!INCLUDE[tsql](../../includes/tsql-md.md)] qui peuvent s'afficher dans le texte d'un message d'erreur qui implique un index de hachage non cluster, ainsi que l'action corrective à entreprendre pour résoudre l'erreur.  
@@ -105,7 +105,7 @@ ms.locfileid: "47822447"
 |Fonctionnalité|Valeurs par défaut non constantes des paramètres|Lors de l'utilisation des valeurs par défaut avec des paramètres sur les procédures stockées compilées en mode natif, les valeurs doivent être constantes. Supprimez les caractères génériques des déclarations de paramètre.|  
 |Fonctionnalité|EXTERNAL|Les procédures stockées CLR ne peuvent pas être compilées en mode natif. Supprimez la clause AS EXTERNAL ou l'option NATIVE_COMPILATION de l'instruction CREATE PROCEDURE.|  
 |Fonctionnalité|Procédures stockées numérotées|Les procédures stockées compilées en mode natif ne peuvent pas être numérotées. Supprimez le **;***numéro* de l’instruction **CREATE PROCEDURE**.|  
-|Fonctionnalité|Instructions INSERT … VALUES multilignes|Impossible d'insérer plusieurs lignes en utilisant la même instruction **INSERT** dans une procédure stockée compilée en mode natif. Créez des instructions **INSERT** pour chaque ligne.|  
+|Fonctionnalité|Instructions INSERT ... VALUES multilignes|Impossible d'insérer plusieurs lignes en utilisant la même instruction **INSERT** dans une procédure stockée compilée en mode natif. Créez des instructions **INSERT** pour chaque ligne.|  
 |Fonctionnalité|Expressions de table communes|Les expressions de table communes ne sont pas prises en charge dans les procédures stockées compilées en mode natif. Réécrire la requête.|  
 |Fonctionnalité|COMPUTE|La clause **COMPUTE** n'est pas prise en charge. Supprimez-la de la requête.|  
 |Fonctionnalité|SELECT INTO|La clause **INTO** n'est pas prise en charge avec l'instruction **SELECT** . Réécrivez la requête ainsi : **INSERT INTO** *Table* **SELECT**.|  

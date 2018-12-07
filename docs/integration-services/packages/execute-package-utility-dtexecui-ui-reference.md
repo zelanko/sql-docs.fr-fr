@@ -24,12 +24,12 @@ ms.assetid: 3d71df39-126b-4c8e-bd77-128bbd5b0887
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ae61a794d9eea4a9fbd0aae72ec0bcdd1d636988
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: ec072be872bbee61b00839b70327fa3397f1fe92
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169109"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506241"
 ---
 # <a name="execute-package-utility-dtexecui"></a>Utilitaire d’exécution de package (dtexecui)
   Utilisez l' **Utilitaire d'exécution de package** pour exécuter des packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . L’utilitaire exécute les packages stockés à l’un des trois emplacements suivants : la base de données [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , le magasin de packages [!INCLUDE[ssIS](../../includes/ssis-md.md)] et le système de fichiers. Cette interface utilisateur, qui peut être ouverte à partir de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou en tapant **dtexecui** à partir d’une invite de commandes, offre un autre moyen d’exécuter des packages à l’aide de l’outil d’invite de commandes **DTExec** .  
@@ -99,11 +99,11 @@ ms.locfileid: "49169109"
 >  Lorsque c'est possible, utilisez l'authentification Windows.  
   
  **Package**  
- Tapez le nom du package ou cliquez sur le bouton de sélection **(…)** pour identifier l’emplacement d’un package grâce à la boîte de dialogue **Sélectionner un package SSIS** .  
+ Tapez le nom du package ou cliquez sur le bouton de sélection **(...)** pour identifier l’emplacement d’un package grâce à la boîte de dialogue **Sélectionner un package SSIS**.  
   
 #### <a name="package-source--file-system"></a>Source du package = Système de fichiers  
  **Package**  
- Tapez le nom du package ou cliquez sur le bouton qui contient des points de suspension **(…)** pour identifier l’emplacement d’un package grâce à la boîte de dialogue Ouvrir. Par défaut, cette boîte de dialogue répertorie uniquement les fichiers dotés de l'extension .dtsx.  
+ Tapez le nom du package ou cliquez sur le bouton qui contient des points de suspension **(...)** pour identifier l’emplacement d’un package grâce à la boîte de dialogue Ouvrir. Par défaut, cette boîte de dialogue répertorie uniquement les fichiers dotés de l'extension .dtsx.  
   
 #### <a name="package-source--ssis-package-store"></a>Source du package = Magasin de packages SSIS  
  **Server**  
@@ -119,7 +119,7 @@ ms.locfileid: "49169109"
  Cette option est désactivée quand vous exécutez un package stocké dans le **Magasin de packages SSIS**.  
   
  **Package**  
- Tapez le nom du package ou cliquez sur le bouton de sélection **(…)** pour identifier l’emplacement d’un package grâce à la boîte de dialogue **Sélectionner un package SSIS** .  
+ Tapez le nom du package ou cliquez sur le bouton de sélection **(...)** pour identifier l’emplacement d’un package grâce à la boîte de dialogue **Sélectionner un package SSIS**.  
   
 ## <a name="configurations-page"></a>Page Configurations  
  Utilisez la page **Configurations** de la boîte de dialogue **Utilitaire d'exécution de package** pour sélectionner les fichiers de configuration à charger au moment de l'exécution et spécifier l'ordre de chargement.  
@@ -207,7 +207,7 @@ ms.locfileid: "49169109"
  Affiche le fichier de points de contrôle que le package utilise, si vous activez les points de contrôle du package.  
   
  **Parcourir**  
- Cliquez sur le bouton Parcourir **(…)** pour rechercher le fichier de points de contrôle au moyen de la boîte de dialogue **Ouvrir** , si vous activez les points de contrôle du package. Si un fichier de points de contrôle est déjà spécifié, il est remplacé par le fichier sélectionné.  
+ Cliquez sur le bouton Parcourir **(...)** pour rechercher le fichier de points de contrôle au moyen de la boîte de dialogue **Ouvrir**, si vous activez les points de contrôle du package. Si un fichier de points de contrôle est déjà spécifié, il est remplacé par le fichier sélectionné.  
   
  **Substituer les options de redémarrage**  
  Indique s'il faut ignorer les options de redémarrage, si vous activez les points de contrôle du package.  

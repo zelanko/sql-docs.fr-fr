@@ -18,12 +18,12 @@ ms.assetid: 5c7206f1-7d6a-4923-8dff-3c4912da4157
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 20a92ccb6d9bfbc84fa13b7d26528544ae027a51
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: f6dde11eba11acc7e0136c34025e74fead99f9e1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642346"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502608"
 ---
 # <a name="web-service-task"></a>Tâche de service Web
   La tâche de service Web exécute une méthode de service Web. Vous pouvez utiliser la tâche de service Web pour :  
@@ -92,7 +92,7 @@ ms.locfileid: "51642346"
  **Rubriques connexes :**  [Gestionnaire de connexions HTTP](../../integration-services/connection-manager/http-connection-manager.md), [Éditeur du gestionnaire de connexions HTTP &#40;page Server (Serveur)&#41;](../../integration-services/connection-manager/http-connection-manager-editor-server-page.md)  
   
  **WSDLFile**  
- Tapez le chemin d’accès qualifié complet d’un fichier WSDL qui est en local sur l’ordinateur ou cliquez sur le bouton Parcourir **(…)** et recherchez ce fichier.  
+ Tapez le chemin d’accès qualifié complet d’un fichier WSDL qui est en local sur l’ordinateur ou cliquez sur le bouton Parcourir **(...)** et recherchez ce fichier.  
   
  Si vous avez déjà téléchargé manuellement le fichier WSDL sur l'ordinateur, sélectionnez-le. Toutefois, si le fichier WSDL n'a pas encore été téléchargé, procédez comme suit :  
   
@@ -137,7 +137,7 @@ ms.locfileid: "51642346"
  Dans la liste, sélectionnez la méthode Web que doit exécuter la tâche.  
   
  **WebMethodDocumentation**  
- Entrez la description de la méthode web ou cliquez sur le bouton Parcourir **(…)** et entrez la description dans la boîte de dialogue **Documentation de la méthode Web** .  
+ Entrez la description de la méthode web ou cliquez sur le bouton Parcourir **(...)** et entrez la description dans la boîte de dialogue **Documentation de la méthode Web**.  
   
  **Nom**  
  Contient la liste des noms des entrées dans la méthode Web.  

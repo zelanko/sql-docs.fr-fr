@@ -26,12 +26,12 @@ ms.assetid: 13f81c3e-2b18-4f83-b445-a2f4a2c560aa
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bb0840c67ff34759e9d17426b33ce2d32f4e1143
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: bb7ed2c7f9989344a44a2ad2de9a59d2c4a2e1fa
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642236"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525264"
 ---
 # <a name="set-package-properties"></a>Définir les propriétés d'un package
   Lorsque vous créez un package dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] à l'aide de l'interface graphique fournie par [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , vous définissez les propriétés de l'objet de package dans la fenêtre Propriétés.  
@@ -118,8 +118,8 @@ ms.locfileid: "51642236"
   
 |Propriété|Description|  
 |--------------|-----------------|  
-|**Configurations**|Ensemble de configurations utilisées par le package. Cliquez sur le bouton Parcourir **(…)** pour afficher et configurer les configurations du package.|  
-|**Expressions**|Cliquez sur le bouton Parcourir **(…)** pour créer des expressions pour les propriétés du package.<br /><br /> Remarque : vous pouvez créer des expressions pour toutes les propriétés du package incluses dans le modèle d’objet, et non seulement pour les propriétés énumérées dans la fenêtre Propriétés.<br /><br /> Pour plus d’informations, consultez [Expressions de propriété dans des packages](../integration-services/expressions/use-property-expressions-in-packages.md).<br /><br /> Pour afficher les expressions de propriétés existantes, développez **Expressions**. Cliquez sur le bouton **(…)** dans la zone de texte d’une expression pour modifier et évaluer une expression.|  
+|**Configurations**|Ensemble de configurations utilisées par le package. Cliquez sur le bouton Parcourir **(...)** pour afficher et configurer les configurations du package.|  
+|**Expressions**|Cliquez sur le bouton Parcourir **(...)** pour créer des expressions pour les propriétés du package.<br /><br /> Remarque : vous pouvez créer des expressions pour toutes les propriétés du package incluses dans le modèle d’objet, et non seulement pour les propriétés énumérées dans la fenêtre Propriétés.<br /><br /> Pour plus d’informations, consultez [Expressions de propriété dans des packages](../integration-services/expressions/use-property-expressions-in-packages.md).<br /><br /> Pour afficher les expressions de propriétés existantes, développez **Expressions**. Cliquez sur le bouton **(...)** dans la zone de texte d’une expression pour modifier et évaluer une expression.|  
 |**ForceExecutionResult**|Résultat d'exécution du package. Cette propriété peut prendre les valeurs **None**, **Success**, **Failure**et **Completion**. La valeur par défaut de cette propriété est **None**. Pour plus d’informations, consultez T:Microsoft.SqlServer.Dts.Runtime.DTSForcedExecResult.|  
 |**LocaleId**|Paramètre régional Microsoft Win32. La valeur par défaut de cette propriété est le paramètre régional du système d'exploitation sur l'ordinateur local.|  
 |**LoggingMode**|Valeur qui indique le comportement de journalisation du package. Ces valeurs sont **Disabled**, **Enabled**et **UseParentSetting**. La valeur par défaut de cette propriété est **UseParentSetting**. Pour plus d'informations, consultez <xref:Microsoft.SqlServer.Dts.Runtime.DTSLoggingMode>.|  

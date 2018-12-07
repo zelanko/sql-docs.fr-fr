@@ -12,12 +12,12 @@ ms.assetid: 7f5b73fc-e699-49ac-a22d-f4adcfae62b1
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 1acf0e20eb84502fdba5915dfafbf5d4873130c8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b7bf2dcebf6b9b453a0f5ff839b9eb627698899e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649507"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520689"
 ---
 # <a name="sql-server-connector-maintenance-amp-troubleshooting"></a>Résolution des problèmes et maintenance du connecteur SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,8 +30,8 @@ ms.locfileid: "47649507"
 ### <a name="key-rollover"></a>Substitution de clé  
   
 > [!IMPORTANT]  
->  Le connecteur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] exige que le nom de clé utilise uniquement les caractères « a-z », « A-Z », « 0-9 » et « - », avec une limite de 26 caractères.   
-> Des versions de clés différentes sous le même nom de clé dans Azure Key Vault ne fonctionnent pas avec le connecteur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Pour faire pivoter une clé Azure Key Vault qui est utilisée par [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], une nouvelle clé portant un nouveau nom de la clé doit être créée.  
+>  Le connecteur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] exige que le nom de clé utilise uniquement les caractères « a-z », « A-Z », « 0-9 » et « - », avec une limite de 26 caractères.   
+> Des versions de clés différentes sous le même nom de clé dans Azure Key Vault ne fonctionnent pas avec le connecteur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Pour permuter une clé Azure Key Vault utilisée par [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], une clé portant un nouveau nom de clé doit être créée.  
   
  En général, les clés asymétriques de serveur pour le chiffrement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] doivent faire l’objet d’une gestion des versions une fois par an ou une fois tous les deux ans. Bien que le coffre de clés prenne en charge la gestion des versions des clés, les clients ne doivent pas utiliser cette fonctionnalité pour implémenter la gestion des versions. Le connecteur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ne peut pas traiter les modifications apportées à la version des clés du coffre de clés. Pour implémenter la gestion des versions des clés, le client doit créer une clé dans le coffre de clés, puis chiffrer à nouveau la clé de chiffrement de données dans [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)].  
   
@@ -71,7 +71,7 @@ ms.locfileid: "47649507"
     ```sql  
     CREATE CREDENTIAL Azure_EKM_TDE_cred2  
         WITH IDENTITY = 'ContosoDevKeyVault',   
-       SECRET = 'EF5C8E094D2A4A769998D93440D8115DAADsecret123456789=’   
+       SECRET = 'EF5C8E094D2A4A769998D93440D8115DAADsecret123456789='   
     FOR CRYPTOGRAPHIC PROVIDER EKM;  
   
     ALTER LOGIN TDE_Login2  
@@ -119,7 +119,7 @@ Si vous utilisez actuellement la version 1.0.0.440 ou une version plus récente,
   
 3.  Désinstallez le connecteur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à l’aide de la fonctionnalité Programmes et fonctionnalités de Windows.  
   
-     Vous pouvez également renommer le dossier dans lequel se trouve le fichier DLL. Le nom par défaut du dossier est «[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour Microsoft Azure Key Vault ».  
+     Vous pouvez également renommer le dossier dans lequel se trouve le fichier DLL. Le nom par défaut du dossier est « [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour Microsoft Azure Key Vault ».  
   
 4.  Installez la version la plus récente du connecteur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à partir du Centre de téléchargement Microsoft.  
   
@@ -148,7 +148,7 @@ Voici un récapitulatif des étapes :
   
 * Sauvegarder la clé de coffre (à l’aide de l’applet de commande PowerShell Backup-AzureKeyVaultKey).  
 * En cas de défaillance du coffre, créer un coffre dans la même région géographique*. L’utilisateur qui effectue cette création doit se trouver dans le même répertoire par défaut que le programme d’installation du principal du service pour SQL Server.  
-* Restaurer la clé dans le nouveau coffre (à l’aide de l’applet de commande PowerShell Restore-AzureKeyVaultKey : cette opération restaure la clé en utilisant le même nom qu’avant). S’il existe déjà une clé portant le même nom, la restauration échoue.  
+* Restaurer la clé dans le nouveau coffre (à l’aide de l’applet de commande PowerShell Restore-AzureKeyVaultKey : cette opération restaure la clé en utilisant le même nom qu’avant). S’il existe déjà une clé portant le même nom, la restauration échoue.  
 * Accorder des autorisations au principal du service SQL Server pour utiliser ce nouveau coffre.  
 * Modifier les informations d’identification SQL Server utilisées par le moteur de base de données afin qu’elles reflètent le nom du nouveau coffre (le cas échéant).  
   
@@ -238,9 +238,9 @@ Code d'erreur  |Symbole  |Description
 3018 | ErrorHttpQueryHeaderUpdateBufferLength | Impossible de mettre à jour la longueur de la mémoire tampon lors de l’interrogation de l’en-tête de réponse.    
 3019 | ErrorHttpReadData | Impossible de lire les données de la réponse en raison d’une erreur réseau. 
 3076 | ErrorHttpResourceNotFound | Le serveur a répondu par une erreur 404, car le nom de la clé est introuvable. Vérifiez que le nom de la clé existe dans le coffre.
-3077 | ErrorHttpOperationForbidden | Le serveur a répondu par une erreur 403, car l’utilisateur n’a pas l’autorisation appropriée pour effectuer l’action. Vérifiez que vous disposez des autorisations pour l’opération spécifiée. Au minimum, le connecteur exige des autorisations « get, list, wrapKey, unwrapKey » pour fonctionner correctement.   
+3077 | ErrorHttpOperationForbidden | Le serveur a répondu par une erreur 403, car l’utilisateur n’a pas l’autorisation appropriée pour effectuer l’action. Vérifiez que vous disposez des autorisations pour l’opération spécifiée. Au minimum, le connecteur exige des autorisations « get, list, wrapKey, unwrapKey » pour fonctionner correctement.   
   
-Si votre code d’erreur ne figure pas dans ce tableau, voici d’autres raisons pouvant expliquer pourquoi l’erreur se produit :   
+Si votre code d’erreur ne figure pas dans ce tableau, voici d’autres raisons pouvant expliquer pourquoi l’erreur se produit :   
   
 -   Vous ne disposez peut-être pas d’un accès Internet et vous ne pouvez pas accéder à votre service Azure Key Vault. Vérifiez votre connexion Internet.  
   
@@ -248,7 +248,7 @@ Si votre code d’erreur ne figure pas dans ce tableau, voici d’autres raisons
   
 -   Vous avez peut-être supprimé la clé asymétrique d’Azure Key Vault ou de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Restaurez la clé.  
   
--   Si vous obtenez l’erreur « Impossible de charger la bibliothèque », vérifiez que la version de Visual Studio C++ Redistribuable dont vous disposez convient à la version de SQL Server que vous exécutez. Le tableau ci-dessous indique la version à installer à partir du Centre de téléchargement Microsoft.   
+-   Si vous obtenez l’erreur « Impossible de charger la bibliothèque », vérifiez que la version de Visual Studio C++ Redistribuable dont vous disposez convient à la version de SQL Server que vous exécutez. Le tableau ci-dessous indique la version à installer à partir du Centre de téléchargement Microsoft.   
   
 Version de SQL Server  |Lien d’installation du package redistribuable    
 ---------|--------- 

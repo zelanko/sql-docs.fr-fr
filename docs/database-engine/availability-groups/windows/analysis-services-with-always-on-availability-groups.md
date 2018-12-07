@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: erikre
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: a83aa8029ce66db969256ee672ae9418d1bc48a6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 252353bd71cbbc5d3cdeb18ae0bcf49b7be440b0
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635017"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395452"
 ---
 # <a name="analysis-services-with-always-on-availability-groups"></a>Analysis Services avec les groupes de disponibilité Always On
 
@@ -120,11 +120,11 @@ ms.locfileid: "47635017"
   
 3.  Modifiez le script en remplaçant les espaces réservés par des valeurs valides pour votre déploiement :  
   
-    -   Remplacez « Computer01 » par le nom de l'instance de serveur qui héberge le réplica principal.  
+    -   Remplacez « Computer01 » par le nom de l’instance de serveur qui héberge le réplica principal.  
   
-    -   Remplacez « Computer02 » par le nom de l'instance de serveur qui héberge le réplica secondaire.  
+    -   Remplacez « Computer02 » par le nom de l’instance de serveur qui héberge le réplica secondaire.  
   
-    -   Remplacez « contoso.com » par le nom de votre domaine, ou omettez-le du script si tous les ordinateurs se trouvent dans le même domaine. Conservez le numéro de port si l'écouteur utilise le port par défaut. Le port réellement utilisé par l'écouteur est répertorié dans la page des propriétés dans [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)].  
+    -   Remplacez « contoso.com » par le nom de votre domaine, ou omettez-le du script si tous les ordinateurs se trouvent dans le même domaine. Conservez le numéro de port si l'écouteur utilise le port par défaut. Le port réellement utilisé par l'écouteur est répertorié dans la page des propriétés dans [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)].  
   
 4.  Exécutez le script.  
   
@@ -212,9 +212,9 @@ ms.locfileid: "47635017"
 9. Répétez le traitement ou la commande de requête dans la solution Analysis Services, puis affichez les traces côte à côte dans le Générateur de profils SQL Server. Vous devez voir le traitement sur l'autre instance, qui est désormais le nouveau réplica secondaire.  
   
 ##  <a name="bkmk_whathappens"></a> Que se passe-t-il après un basculement  
- Lors d'un basculement, un réplica secondaire adopte le rôle principal et l'ancien réplica principal joue le rôle secondaire. Toutes les connexions clientes sont terminées, la propriété de l'écouteur du groupe de disponibilité passe avec le rôle de réplica principal vers une nouvelle instance de SQL Server et le point de terminaison de l'écouteur est lié aux adresses IP virtuelles et aux ports TCP de la nouvelle instance. Pour plus d’informations, consultez [À propos de l’accès de la connexion client aux réplicas de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md).  
+ Lors d'un basculement, un réplica secondaire adopte le rôle principal et l'ancien réplica principal joue le rôle secondaire. Toutes les connexions clientes sont terminées, la propriété de l’écouteur du groupe de disponibilité passe avec le rôle de réplica principal à une nouvelle instance de SQL Server, et le point de terminaison de l’écouteur est lié aux adresses IP virtuelles et aux ports TCP de la nouvelle instance. Pour plus d’informations, consultez [À propos de l’accès de la connexion client aux réplicas de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md).  
   
- Si le basculement se produit lors du traitement, l'erreur suivante apparaît dans Analysis Services dans le fichier journal ou la fenêtre de sortie : « Erreur OLE DB : Erreur OLE DB ou ODBC : Échec de la liaison de communication ; 08S01 ; Fournisseur de TPC : Une connexion existante a dû être fermée par l'hôte distant. ; 08S01. »  
+ Si le basculement se produit lors du traitement, l’erreur suivante apparaît dans Analysis Services dans le fichier journal ou la fenêtre de sortie : « Erreur OLE DB : Erreur OLE DB ou ODBC : Échec de la liaison de communication ; 08S01 ; Fournisseur de TPC : Une connexion existante a dû être fermée par l’hôte distant. ; 08S01. »  
   
  Cette erreur devrait être résolue si vous attendez une minute avant de recommencer. Si le groupe de disponibilité est configuré correctement pour le réplica secondaire lisible, le traitement continue sur le nouveau réplica secondaire lorsque vous réexécutez le traitement.  
   
@@ -223,7 +223,7 @@ ms.locfileid: "47635017"
 ##  <a name="bkmk_writeback"></a> Écriture différée lors de l’utilisation d’une base de données de disponibilité Always On  
  L'écriture différée est une fonctionnalité Analysis Services qui prend en charge l'analyse Scénario dans Excel. Elle est généralement utilisée pour budgéter et prévoir des tâches dans des applications personnalisées.  
   
- La prise en charge de l'écriture différée nécessite une connexion cliente READWRITE. Dans Excel, si vous tentez d’écrire en différé sur une connexion en lecture seule, l’erreur suivante se produit : « Impossible de récupérer les données de la source de données externe. ». « Impossible de récupérer les données de la source de données externe. »  
+ La prise en charge de l'écriture différée nécessite une connexion cliente READWRITE. Dans Excel, si vous tentez d’écrire en différé sur une connexion en lecture seule, l’erreur suivante se produit : « Impossible de récupérer les données de la source de données externe. ». « Impossible de récupérer les données de la source de données externe. »  
   
  Si vous avez configuré une connexion pour accéder toujours à un réplica secondaire lisible, vous devez maintenant configurer une connexion qui utilise une connexion READWRITE au réplica principal.  
   

@@ -17,12 +17,12 @@ ms.assetid: 10e7bac7-4121-48c2-be01-10083a8c65af
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f0c4ec35fa7f25e7ece372914bc7109d298817ca
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: a2dfe969dff2f9058af9391293dd1b3aabfdfdc5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602889"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544040"
 ---
 # <a name="availability-modes-always-on-availability-groups"></a>Modes de disponibilité (Groupes de disponibilité Always On)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "51602889"
 -   [Contenu connexe](#RelatedContent)  
   
 ##  <a name="SupportedAvModes"></a> Modes de disponibilité pris en charge  
- [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] prend en charge trois modes de disponibilité (le mode avec validation asynchrone, le mode avec validation synchrone et le mode de configuration uniquement) de la façon suivante :  
+ [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] prend en charge trois modes de disponibilité (le mode avec validation asynchrone, le mode avec validation synchrone et le mode de configuration uniquement) de la façon suivante :  
   
 -   Le*mode avec validation asynchrone* est une solution de récupération d’urgence qui fonctionne bien quand les réplicas de disponibilité sont séparés par des distances considérables. Si chaque réplica secondaire s'exécute en mode avec validation asynchrone, le réplica principal n'attend pas que les réplicas secondaires renforcent le journal. En revanche, immédiatement après l'écriture d'un enregistrement de journal dans le journal local, le réplica principal envoie une confirmation de transaction au client. Le réplica principal s'exécute avec une latence de transaction minimale par rapport à un réplica secondaire configuré pour le mode avec validation asynchrone.  Si le serveur principal actuel est configuré pour le mode de disponibilité avec validation asynchrone, il valide les transactions de façon asynchrone pour tous les réplicas secondaires, indépendamment de leurs paramètres de mode de disponibilité.  
   

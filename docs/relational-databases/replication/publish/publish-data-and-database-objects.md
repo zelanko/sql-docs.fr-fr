@@ -42,12 +42,12 @@ ms.assetid: d986032c-3387-4de1-a435-3ec5e82185a2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bedb57a3e9505503cc367619c4827bc1e348abf0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b9d1acf8774331ca5e789d9c8d9c50e05a6a3b1e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843647"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523074"
 ---
 # <a name="publish-data-and-database-objects"></a>Publier des données et des objets de base de données
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,8 +57,8 @@ ms.locfileid: "47843647"
 |---------------------|--------------------------------------------------------|-----------------------|  
 |Tables|X|X|  
 |Tables partitionnées|X|X|  
-|Procédures stockées – Définition ([!INCLUDE[tsql](../../../includes/tsql-md.md)] et CLR)|X|X|  
-|Procédures stockées – Exécution ([!INCLUDE[tsql](../../../includes/tsql-md.md)] et CLR)|X|non|  
+|Procédures stockées - Définition ([!INCLUDE[tsql](../../../includes/tsql-md.md)] et CLR)|X|X|  
+|Procédures stockées - Exécution ([!INCLUDE[tsql](../../../includes/tsql-md.md)] et CLR)|X|non|  
 |Vues|X|X|  
 |Vues indexées|X|X|  
 |Vues indexées comme des tables|X|non|  
@@ -93,7 +93,7 @@ ms.locfileid: "47843647"
   
 -   [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)  
   
--   [Define an Article](../../../relational-databases/replication/publish/define-an-article.md)  
+-   [Définir un article](../../../relational-databases/replication/publish/define-an-article.md)  
   
 -   [Afficher et modifier les propriétés d’une publication](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)  
   

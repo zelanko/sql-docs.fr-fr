@@ -13,12 +13,12 @@ ms.assetid: 89cb0055-5262-447f-8464-7203d4caba78
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 77c42bdf35fce0bb2106e99818e14d5b42992647
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: d20532a4fb3aad70ca2ff972d6236680db221768
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51217197"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525644"
 ---
 # <a name="job-activity-monitor-filter-settings"></a>Moniteur d'activité des travaux (Paramètres du filtre)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "51217197"
  Cette zone sans nom fournit une brève description des critères lors de leur sélection.  
   
  **Appliquer le filtre**  
- Pour appliquer le filtre, cliquez sur **Appliquer****le filtre** , puis sur **OK**. Pour conserver les paramètres du filtre dans la boîte de dialogue **Paramètres****du filtre** , sans les appliquer, désactivez l’option **Appliquer****le filtre**, puis cliquez sur **OK**, pour afficher toutes les lignes.  
+ Pour appliquer le filtre, cliquez sur **Appliquer le filtre**, puis sur **OK**. Pour conserver les paramètres du filtre dans la boîte de dialogue **Paramètres du filtre**, sans les appliquer, désactivez l’option **Appliquer le filtre**, puis cliquez sur **OK** pour afficher toutes les lignes.  
   
  **Désactiver**  
  Rétablit les paramètres par défaut du filtre.  

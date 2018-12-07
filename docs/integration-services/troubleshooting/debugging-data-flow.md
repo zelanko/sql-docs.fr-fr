@@ -17,12 +17,12 @@ ms.assetid: 1c574f1b-54f7-4c05-8e42-8620e2c1df0f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0f9ea0da85324aa74b7ce9af17ab64b743a8f031
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 38152544ed3f0684cc13db7c2f429b46ed9ef5b1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638746"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521543"
 ---
 # <a name="debugging-data-flow"></a>Débogage d'un flux de données
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] et le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] incluent des fonctionnalités et des outils permettant de résoudre les problèmes des flux de données d’un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -40,7 +40,7 @@ ms.locfileid: "51638746"
   
  Une visionneuse de données peut afficher des données dans une grille. Dans une grille, vous sélectionnez les colonnes à afficher. Les valeurs des colonnes sélectionnées s'affichent sous forme de tableau.  
   
- Vous pouvez également inclure plusieurs visionneuses de données dans un chemin d'accès. Vous pouvez afficher les mêmes données dans différents formats ; par exemple créer un graphique et une grille des données, ou créer des visionneuses de données distinctes pour différentes colonnes de données.  
+ Vous pouvez également inclure plusieurs visionneuses de données dans un chemin d'accès. Vous pouvez afficher les mêmes données dans différents formats ; par exemple créer un graphique et une grille des données, ou créer des visionneuses de données distinctes pour différentes colonnes de données.  
   
  Quand vous ajoutez une visionneuse de données à un chemin, le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ajoute une icône de visionneuse de données sur l’aire de conception de l’onglet **Flux de données** , en regard du chemin. Les transformations acceptant les sorties multiples (telles que la transformation de fractionnement conditionnel) peuvent inclure une visionneuse de données sur chaque chemin d'accès.  
   
@@ -89,9 +89,9 @@ order by source_component_name, destination_component_name
   
 -   **total_rows** - Somme de toutes les lignes envoyées par le composant  
   
--   **wall_clock_time_ms** – Durée d'exécution écoulée totale en millisecondes pour chaque composant  
+-   **wall_clock_time_ms** - Durée d’exécution écoulée totale en millisecondes pour chaque composant  
   
--   **num_rows_per_millisecond** – Nombre de lignes par milliseconde envoyées par chaque composant  
+-   **num_rows_per_millisecond** - Nombre de lignes par milliseconde envoyées par chaque composant  
   
  La clause **HAVING** est utilisée pour éviter une erreur de division par zéro dans les calculs.  
   

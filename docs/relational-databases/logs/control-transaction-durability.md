@@ -15,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 403f29c972b8137a7f2181962ce48a796ac4c753
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ac96a7ea691a02c61aa132ea0efcdf5bc2d68ab1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47817582"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513752"
 ---
 # <a name="control-transaction-durability"></a>Contrôler la durabilité d'une transaction
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -95,19 +95,19 @@ ms.locfileid: "47817582"
  En tant qu'administrateur de base de données, vous pouvez contrôler si les utilisateurs peuvent utiliser la durabilité retardée des transactions sur une base de données avec l'instruction suivante. Vous devez définir le paramètre de durabilité retardée avec ALTER DATABASE.    
     
 ```sql    
-ALTER DATABASE … SET DELAYED_DURABILITY = { DISABLED | ALLOWED | FORCED }    
+ALTER DATABASE ... SET DELAYED_DURABILITY = { DISABLED | ALLOWED | FORCED }    
 ```    
     
  **DISABLED**    
  [Valeur par défaut] Avec ce paramètre, toutes les transactions qui sont validées sur la base de données ont une durabilité complète, quel que soit le paramètre de niveau de validation ([DELAYED_DURABILITY= ON | OFF]). Aucune modification ni recompilation de procédure stockée n'est nécessaire. Cela vous permet de vous assurer que les données ne sont jamais mises en danger par la durabilité retardée.    
     
  **ALLOWED**    
- Avec ce paramètre, la durabilité de chaque transaction est déterminée au niveau de la transaction – DELAYED_DURABILITY = { *OFF* | ON }. Pour plus d’informations, consultez [Contrôle au niveau du bloc atomique – Procédures stockées compilées en mode natif](../../relational-databases/logs/control-transaction-durability.md#CompiledProcControl) et [Contrôle au niveau de la validation – Transact-SQL](../../relational-databases/logs/control-transaction-durability.md#bkmk_T-SQLControl) .    
+ Avec ce paramètre, la durabilité de chaque transaction est déterminée au niveau de la transaction - DELAYED_DURABILITY = { *OFF* | ON }. Pour plus d’informations, consultez [Contrôle au niveau du bloc atomique - Procédures stockées compilées en mode natif](../../relational-databases/logs/control-transaction-durability.md#CompiledProcControl) et [Contrôle au niveau de la validation - Transact-SQL](../../relational-databases/logs/control-transaction-durability.md#bkmk_T-SQLControl).    
     
  **FORCED**    
  Avec ce paramètre, chaque transaction qui est validée sur la base de données a une durabilité retardée, même si la transaction spécifie une durabilité complète (DELAYED_DURABILITY = OFF) ou omette toute indication de durabilité. Ce paramètre est utile lorsque la durabilité retardée des transactions a un intérêt pour une base de données, mais que vous ne souhaitez pas modifier le code de l'application.    
     
-###  <a name="CompiledProcControl"></a> Contrôle au niveau du bloc atomique – Procédures stockées compilées en mode natif    
+###  <a name="CompiledProcControl"></a> Contrôle au niveau du bloc atomique - Procédures stockées compilées en mode natif    
  Le code suivant s'insère à l'intérieur du bloc atomique.    
     
 ```sql    
@@ -123,14 +123,14 @@ DELAYED_DURABILITY = { OFF | ON }
  **Exemple de code :**    
     
 ```sql    
-CREATE PROCEDURE <procedureName> …    
+CREATE PROCEDURE <procedureName> ...    
 WITH NATIVE_COMPILATION, SCHEMABINDING, EXECUTE AS OWNER    
 AS BEGIN ATOMIC WITH     
 (    
     DELAYED_DURABILITY = ON,    
     TRANSACTION ISOLATION LEVEL = SNAPSHOT,    
     LANGUAGE = N'English'    
-    …    
+    ...    
 )    
 END    
 ```    
@@ -142,7 +142,7 @@ END
 |**DELAYED_DURABILITY = OFF**|Le bloc atomique démarre une nouvelle transaction à durabilité complète.|Le bloc atomique crée un point d'enregistrement dans la transaction existante, puis démarre la nouvelle transaction.|    
 |**DELAYED_DURABILITY = ON**|Le bloc atomique démarre une nouvelle transaction à durabilité retardée.|Le bloc atomique crée un point d'enregistrement dans la transaction existante, puis démarre la nouvelle transaction.|    
     
-###  <a name="bkmk_T-SQLControl"></a> Contrôle au niveau de la validation (COMMIT) –[!INCLUDE[tsql](../../includes/tsql-md.md)]    
+###  <a name="bkmk_T-SQLControl"></a> Contrôle au niveau de la validation -[!INCLUDE[tsql](../../includes/tsql-md.md)]    
  La syntaxe de l'option COMMIT est étendue pour vous permettre de forcer la durabilité retardée des transactions. Si DELAYED_DURABILITY a la valeur DISABLED ou FORCED au niveau de la base de données (voir ci-dessus), cette option COMMIT est ignorée.    
     
 ```sql    

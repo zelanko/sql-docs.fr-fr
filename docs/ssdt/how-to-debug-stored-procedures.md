@@ -13,12 +13,12 @@ ms.assetid: e3c8707f-0f6b-4265-8a5a-81f079330b52
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 70ed380939046fd66f3d829c96d798190c039918
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8b0aafe7ed2eddd189f57929b9d4ed971540dc57
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605147"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533422"
 ---
 # <a name="how-to-debug-stored-procedures"></a>Procédure : déboguer des procédures stockées
 Le débogueur Transact\-SQL permet de déboguer interactivement des procédures stockées en affichant la pile des appels SQL, les variables locales et les paramètres de la procédure stockée SQL. Comme pour le débogage dans d’autres langages de programmation, il est possible d’afficher et modifier les variables locales et les paramètres, d’afficher les variables globales et de contrôler et gérer les points d’arrêt lors du débogage du script Transact\-SQL.  
@@ -57,7 +57,7 @@ Cet exemple explique comment créer et déboguer une procédure stockée Transac
   
 7.  Cliquez sur la flèche déroulante vers le bas du bouton représentant une flèche verte dans la barre d’outils de l’Éditeur Transact\-SQL et sélectionnez **Exécuter avec le débogueur** pour exécuter la requête en mode débogage.  
   
-8.  Vous pouvez également lancer le débogage à partir de l’Explorateur d’objets SQL Server. Cliquez avec le bouton droit sur la procédure stockée **AddProduct** (sous **Local** -> **base de données TradeDev** -> **Programmabilité** -> **Procédures stockées**). Sélectionnez **Déboguer la procédure…**. Si l’objet exige des paramètres, la boîte de dialogue **Déboguer la procédure** affiche une table comportant une ligne par paramètre. Chaque ligne dans la table contient une colonne pour le nom du paramètre, et une pour la valeur de ce paramètre. Entrez les valeurs pour chaque paramètre et cliquez sur OK.  
+8.  Vous pouvez également lancer le débogage à partir de l’Explorateur d’objets SQL Server. Cliquez avec le bouton droit sur la procédure stockée **AddProduct** (sous **Local** -> **base de données TradeDev** -> **Programmabilité** -> **Procédures stockées**). Sélectionnez **Déboguer la procédure...**. Si l’objet exige des paramètres, la boîte de dialogue **Déboguer la procédure** affiche une table comportant une ligne par paramètre. Chaque ligne dans la table contient une colonne pour le nom du paramètre, et une pour la valeur de ce paramètre. Entrez les valeurs pour chaque paramètre et cliquez sur OK.  
   
 9. Vérifiez que la fenêtre **Variables locales** est ouverte. Si ce n’est pas le cas, cliquez sur le menu **Déboguer**, sélectionnez **Fenêtres** et **Variables locales**.  
   

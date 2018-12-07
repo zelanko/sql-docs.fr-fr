@@ -7,18 +7,18 @@ ms.technology: reporting-services
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fd469eb38d23a72037ab34dc6cceb45da39411a6
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 01c93f13a94533c6562516ca398d76034564beb7
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51812992"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52397706"
 ---
 # <a name="branding-the-web-portal"></a>Personnalisation du portail web
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)])
 
-Vous pouvez modifier l'apparence du portail web en le personnalisant à l’image de votre entreprise. Cette opération s'effectue via un package de marque. Vous pouvez créer ce package de marque même si vous n’avez les connaissances approfondies requises en matière de feuille de style en cascade (CSS).  
+Vous pouvez modifier l'apparence du portail web en le personnalisant à l’image de votre entreprise. Cette opération s'effectue via un package de marque. Ce package de marque a été conçu pour vous permettre de le créer même si vous n’avez pas les connaissances approfondies nécessaires en matière de feuille de style en cascade (CSS).  
   
 <iframe width="560" height="315" src="https://www.youtube.com/embed/m08kLuofwFA?list=PLv2BtOtLblH3F--8WmK9QcLbx6dV_lVkL" frameborder="0" allowfullscreen></iframe>  
    

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 12ad0e77-4c28-4bbb-ab11-473ae89ec9f1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5a7823a0757cb4980a52b9ab9577829ce9d6102f
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: b6492cc78c9cbdc23f8deed9b1a577341637c300
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029978"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52402077"
 ---
 # <a name="add-a-multi-value-parameter-to-a-report"></a>Ajouter un paramètre à valeurs multiples sur un rapport
   Il est possible d'ajouter à un rapport un paramètre qui permet à l'utilisateur de sélectionner plus d'une valeur pour le paramètre.  
@@ -38,7 +38,7 @@ ms.locfileid: "50029978"
     > [!IMPORTANT]  
     > *  Le texte de la requête ne doit pas inclure l'instruction DECLARE pour la variable de requête.  
     > *  Le texte de la variable de requête doit inclure l’opérateur **IN** , comme indiqué dans l’exemple ci-dessus.  
-    > *  Veillez à inclure les parenthèses autour de la variable, comme indiqué ci-dessus. Sinon, le rapport échoue et l’erreur « La variable scalaire doit être déclarée » s’affiche.  
+    > *  Veillez à inclure les parenthèses autour de la variable, comme indiqué ci-dessus. Sinon, le rapport échoue et l’erreur « La variable scalaire doit être déclarée » s’affiche.  
   
     Un paramètre de dataset pour un dataset incorporé ou partagé est créé automatiquement pour la variable de la requête. Un paramètre de rapport est créé automatiquement pour le paramètre du dataset.  
   

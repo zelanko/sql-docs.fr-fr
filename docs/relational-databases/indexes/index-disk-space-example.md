@@ -18,12 +18,12 @@ ms.assetid: e5c71f55-0be3-4c93-97e9-7b3455c8f581
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 294e4230ac932deb2f86aadb45ffd9eda98f72e3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9c7abfc8f9ae7837ad1a89214c2e956ed5ff63a7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726187"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520921"
 ---
 # <a name="index-disk-space-example"></a>Exemple d'espace disque d'un index
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,9 +63,9 @@ ms.locfileid: "47726187"
   
      Index cluster : 1 million * 200 octets / 80 % ~ 250 Mo  
   
-     Index non cluster A : 1 million * (50 – 8 + 24) octets / 80 % ~ 83 Mo  
+     Index non cluster A : 1 million * (50 - 8 + 24) octets / 80 % ~ 83 Mo  
   
-     Index non cluster B : 1 million * (80 – 8 + 24) octets / 80 % ~ 120 Mo  
+     Index non cluster B : 1 million * (80 - 8 + 24) octets / 80 % ~ 120 Mo  
   
      Taille totale des nouvelles structures : 453 Mo  
   

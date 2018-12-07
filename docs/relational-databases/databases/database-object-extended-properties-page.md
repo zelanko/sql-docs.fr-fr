@@ -14,12 +14,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 65d7ed2f7b7639ae2b92222ad97af6edba873f6c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 773edf9a47ab10af5a1b00ee7f64b27f60c14191
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671868"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52522249"
 ---
 # <a name="database-object-extended-properties-page"></a>Objet de base de données (page Propriétés étendues)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "51671868"
  Affiche ou spécifie les propriétés étendues de l'objet. Chaque propriété étendue est constituée d'une paire nom/valeur de métadonnées associées à l'objet.  
   
  **Bouton Parcourir**  
- Cliquez sur le bouton Parcourir (…) qui suit **Valeur** pour ouvrir la boîte de dialogue **Valeur de la propriété étendue** . Tapez ou affichez la valeur de la propriété étendue dans cet emplacement de plus grande taille.  
+ Cliquez sur le bouton Parcourir (...) qui suit **Valeur** pour ouvrir la boîte de dialogue **Valeur de la propriété étendue**. Tapez ou affichez la valeur de la propriété étendue dans cet emplacement de plus grande taille.  
   
  **Supprimer**  
  Supprime la propriété étendue sélectionnée.  

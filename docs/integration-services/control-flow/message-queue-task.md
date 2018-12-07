@@ -22,12 +22,12 @@ ms.assetid: ae1d8fad-6649-4e93-b589-14a32d07da33
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 61956bf22dc15c95d986317d3a3cf18e9ca4d58b
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: d100819807cd669803ef698d4614373b0b997905
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639886"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503990"
 ---
 # <a name="message-queue-task"></a>Message Queue Task
   La tâche MSMQ vous permet d’utiliser Message Queuing (MSMQ) pour envoyer et recevoir des messages entre des packages [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ou pour envoyer des messages à une file d’attente d’application traitée par une application personnalisée. Ces messages peuvent être composés de texte brut, de fichiers ou de variables et leurs valeurs.  
@@ -153,17 +153,17 @@ ms.locfileid: "51639886"
   
 #### <a name="messagetype--data-file-message"></a>MessageType = Message de fichiers de données  
  **DataFileMessage**  
- Tapez le chemin du fichier de données ou cliquez sur le bouton avec les points de suspension **(…)** et recherchez le fichier.  
+ Tapez le chemin du fichier de données ou cliquez sur le bouton avec les points de suspension **(...)** et recherchez le fichier.  
   
 #### <a name="messagetype--variable-message"></a>MessageType = Message de type variable  
  **VariableMessage**  
- Tapez les noms de variables ou cliquez sur les points de suspension **(…)** et sélectionnez les variables. Les variables sont séparées par des virgules.  
+ Tapez les noms de variables ou cliquez sur les points de suspension **(...)** et sélectionnez les variables. Les variables sont séparées par des virgules.  
   
  **Rubriques connexes :** Sélectionner des variables  
   
 #### <a name="messagetype--string-message"></a>MessageType = Message de type chaîne  
  **StringMessage**  
- Tapez le message de type chaîne ou cliquez sur les points de suspension **(…)** et entrez le message dans la boîte de dialogue **Entrer le message de type chaîne** .  
+ Tapez le message de type chaîne ou cliquez sur les points de suspension **(...)** et entrez le message dans la boîte de dialogue **Entrer le message de type chaîne** .  
   
 ## <a name="message-queue-task-editor-receive-page"></a>Éditeur de tâche MSMQ (page Recevoir)
   La page **Recevoir** de la boîte de dialogue **Éditeur de tâche MSMQ** permet de configurer une tâche MSMQ pour recevoir des messages MSMQ (Message Queuing) [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
@@ -192,7 +192,7 @@ ms.locfileid: "51639886"
   
 #### <a name="messagetype--data-file-message"></a>MessageType = Message de fichiers de données  
  **SaveFileAs**  
- Tapez le chemin du fichier à utiliser ou cliquez sur le bouton avec des points de suspension **(…)** et recherchez le fichier.  
+ Tapez le chemin du fichier à utiliser ou cliquez sur le bouton avec des points de suspension **(...)** et recherchez le fichier.  
   
  **Remplacer**  
  Indiquez si vous voulez remplacer les données dans un fichier existant lors de l'enregistrement du contenu d'un message de fichiers de données. La valeur par défaut est **False**.  
@@ -212,8 +212,8 @@ ms.locfileid: "51639886"
  Cette option est en lecture seule. Elle peut être vide ou contenir le GUID d'un package lorsque la propriété Filtrer a été définie.  
   
 ##### <a name="filter--from-package"></a>Filtrer = À partir du package  
- **Identifier**  
- Si vous choisissez d’appliquer un filtre, tapez l’identificateur unique du package à partir duquel les messages peuvent être reçus, ou cliquez sur le bouton de sélection **(…)** et spécifiez le package.  
+ **Identificateur**  
+ Si vous choisissez d’appliquer un filtre, tapez l’identificateur unique du package à partir duquel les messages peuvent être reçus, ou cliquez sur le bouton de sélection **(...)** et spécifiez le package.  
   
  **Rubriques connexes :** [Sélectionner un package](../../integration-services/control-flow/select-a-package.md)  
   
@@ -227,7 +227,7 @@ ms.locfileid: "51639886"
 |**À partir du package**|Le message reçoit uniquement les messages du package spécifié. Cette valeur affiche l’option dynamique **Identifier**.|  
   
  **Variable**  
- Tapez le nom de la variable ou cliquez sur \<**Nouvelle variable…**>, puis configurez une nouvelle variable.  
+ Tapez le nom de la variable ou cliquez sur \<**Nouvelle variable...**>, puis configurez une nouvelle variable.  
   
  **Rubriques connexes :** [Ajouter une variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
@@ -238,8 +238,8 @@ ms.locfileid: "51639886"
  Cette option est vide.  
   
 ##### <a name="filter--from-package"></a>Filtrer = À partir du package  
- **Identifier**  
- Si vous choisissez d’appliquer un filtre, tapez l’identificateur unique du package à partir duquel les messages peuvent être reçus, ou cliquez sur le bouton de sélection **(…)** et spécifiez le package.  
+ **Identificateur**  
+ Si vous choisissez d’appliquer un filtre, tapez l’identificateur unique du package à partir duquel les messages peuvent être reçus, ou cliquez sur le bouton de sélection **(...)** et spécifiez le package.  
   
  **Rubriques connexes :** [Sélectionner un package](../../integration-services/control-flow/select-a-package.md)  
   
@@ -272,7 +272,7 @@ ms.locfileid: "51639886"
  Si l’option **Comparer** n’est pas définie sur **Aucun**, indiquez la chaîne à laquelle le message doit être comparé.  
   
  **Variable**  
- Tapez le nom de la variable qui doit contenir le message reçu ou cliquez sur \<**Nouvelle variable…**>, puis configurez une nouvelle variable.  
+ Tapez le nom de la variable qui doit contenir le message reçu ou cliquez sur \<**Nouvelle variable...**>, puis configurez une nouvelle variable.  
   
  **Rubriques connexes :** [Ajouter une variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   

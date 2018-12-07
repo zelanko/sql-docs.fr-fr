@@ -12,12 +12,12 @@ ms.assetid: 50dd0a0b-a407-4aeb-bc8b-b02a793aa30a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: cb90a4311a1fe37905d5962e66572f7431db7a2a
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.openlocfilehash: 18f025f4ba212849d3823466d6555733f305ac91
+ms.sourcegitcommit: ba7fb4b9b4f0dbfe77a7c6906a1fde574e5a8e1e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49085255"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52302692"
 ---
 # <a name="database-engine-tuning-advisor"></a>Database Engine Tuning Advisor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "49085255"
 -   Gérer l'espace de stockage  
   
 ## <a name="database-engine-tuning-advisor-benefits"></a>Avantages de l'Assistant Paramétrage du moteur de base de données  
- L'optimisation des performances des requêtes peut être difficile sans une compréhension complète de la structure de la base de données et des requêtes exécutées sur la base de données. L'Assistant Paramétrage du moteur de base de données peut simplifier cette tâche en analysant le cache du plan de requête actuel ou une charge de travail des requêtes [!INCLUDE[tsql](../../includes/tsql-md.md)] que vous créez, puis en recommandant une conception physique appropriée. Pour les administrateurs de base de données plus avancés, l'Assistant Paramétrage du moteur de base de données expose un mécanisme puissant pour effectuer une analyse de simulation exploratoire des différentes alternatives de conception physique. L'Assistant Paramétrage du moteur de base de données peut fournir les informations suivantes :  
+ L'optimisation des performances des requêtes peut être difficile sans une compréhension complète de la structure de la base de données et des requêtes exécutées sur la base de données. L’Assistant **Paramétrage du moteur de base de données (DTA)** peut simplifier cette tâche en analysant le cache du plan de requête actuel ou une charge de travail des requêtes [!INCLUDE[tsql](../../includes/tsql-md.md)] que vous créez, puis en recommandant une conception physique appropriée. Pour les administrateurs de base de données plus avancés, l'Assistant Paramétrage du moteur de base de données expose un mécanisme puissant pour effectuer une analyse de simulation exploratoire des différentes alternatives de conception physique. L'Assistant Paramétrage du moteur de base de données peut fournir les informations suivantes :  
   
 -   recommander la meilleure combinaison d’index [columnstore](../../relational-databases/performance/columnstore-index-recommendations-in-database-engine-tuning-advisor-dta.md) pour les bases de données, en utilisant l’optimiseur de requête pour analyser des requêtes dans une charge de travail ;  
   
@@ -50,10 +50,10 @@ ms.locfileid: "49085255"
 
 -   prendre en compte d'autres solutions dans lesquelles vous fournissez des choix de conception possibles sous forme de configurations hypothétiques que l'Assistant Paramétrage du moteur de base de données évalue.
 
--  paramétrer les charges de travail à partir de diverses sources, notamment le magasin de requêtes SQL Server, le cache du plan, une table ou un fichier de trace SQL Server Profiler, ou encore un fichier .SQL.
+-   paramétrer les charges de travail à partir de diverses sources, notamment le magasin de requêtes SQL Server, le cache du plan, une table ou un fichier de trace SQL Server Profiler, ou encore un fichier .SQL.
 
   
- L'Assistant Paramétrage du moteur de base de données est conçu pour gérer les types de charges de travail de requêtes suivants :  
+L'Assistant Paramétrage du moteur de base de données est conçu pour gérer les types de charges de travail de requêtes suivants :  
   
 -   Requêtes de traitement transactionnel en ligne (OLTP) uniquement  
   
@@ -66,22 +66,22 @@ ms.locfileid: "49085255"
 -   Charges de travail à nombre élevé de mises à jour (plus de modifications de données que de requêtes)  
   
 ## <a name="dta-components-and-concepts"></a>Composants et concepts liés à l'Assistant Paramétrage du moteur de base de données  
- Interface utilisateur graphique de l'Assistant Paramétrage du moteur de base de données  
+ **Interface graphique utilisateur de l'Assistant Paramétrage du moteur de base de données**  
  Interface simple d'utilisation dans laquelle vous pouvez spécifier la charge de travail et sélectionner plusieurs options de paramétrage.  
   
  Utilitaire**dta**   
  Version d'invite de commandes de l'Assistant Paramétrage du moteur de base de données. L'utilitaire **dta** est conçu pour permettre l'utilisation de l'Assistant Paramétrage du moteur de base de données dans des applications et des scripts.  
   
- charge de travail  
+ **charge de travail**  
  Fichier de script Transact-SQL, fichier de trace ou table de trace qui contient une charge de travail représentative pour les bases de données à paramétrer. À compter de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], vous pouvez spécifier le cache du plan comme charge de travail.  À compter de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], vous pouvez [spécifier le magasin de requêtes comme charge de travail](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md). 
   
- Fichier d'entrée XML  
- Fichier formaté en XML que l'Assistant Paramétrage du moteur de base de données peut utiliser pour paramétrer les charges de travail. Le fichier d’entrée XML prend en charge les options avancées de paramétrage disponibles dans l’interface utilisateur graphique ou l’utilitaire **dta** .  
+ **Fichier d'entrée XML**  
+ Fichier au format XML que l'Assistant Paramétrage du moteur de base de données peut utiliser pour paramétrer les charges de travail. Le fichier d’entrée XML prend en charge les options avancées de paramétrage disponibles dans l’interface utilisateur graphique ou l’utilitaire **dta** .  
   
 ## <a name="limitations-and-restrictions"></a>Limitations et restrictions  
  L'Assistant Paramétrage du moteur de base de données présente les limitations et restrictions suivantes :  
   
--   Il ne peut pas ajouter ni supprimer des index uniques ou des index qui imposent des contraintes PRIMARY KEY ou UNIQUE.  
+-   Il ne peut pas ajouter ni supprimer des index uniques ou des index qui imposent des contraintes `PRIMARY KEY` ou `UNIQUE`.  
   
 -   Il ne peut pas analyser une base de données qui est définie en mode mono-utilisateur.  
   

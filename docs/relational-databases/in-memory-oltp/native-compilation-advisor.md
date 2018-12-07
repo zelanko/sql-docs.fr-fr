@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: af912eebf1274b911c6b48405ba9001e18592916
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: a91aa69fcc3fc375c1a6469274613fa656813b8b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659636"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507843"
 ---
 # <a name="native-compilation-advisor"></a>Conseiller de compilation native
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "51659636"
   
  Dans une procédure stockée interprétée donnée, le conseiller de compilation native vous permet d’identifier toutes les fonctionnalités qui ne sont pas prises en charge dans les modules natifs. Le conseiller de compilation native fournit des liens de documentation permettant de résoudre ou de contourner les problèmes rencontrés.  
   
- Pour plus d’informations sur les méthodologies de transfert, consultez [OLTP en mémoire – Modèles de charge de travail courants et considérations relatives à la migration](https://msdn.microsoft.com/library/dn673538.aspx).  
+ Pour plus d’informations sur les méthodologies de migration, consultez [OLTP en mémoire - Modèles de charge de travail courants et considérations relatives à la migration](https://msdn.microsoft.com/library/dn673538.aspx).  
   
 ## <a name="walkthrough-using-the-native-compilation-advisor"></a>Procédure pas à pas d'utilisation du Conseiller de compilation native  
  Dans l' **Explorateur d'objets**, cliquez avec le bouton droit sur la procédure stockée à convertir, puis sélectionnez **Conseiller de compilation native**. Ce faisant, vous affichez la page d'accueil du **Conseiller compilation native de procédure stockée**. Cliquez sur **Suivant** pour continuer.  

@@ -11,12 +11,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: 611d882b0711d19e8b9015e0d5081c1a22d0d11d
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 49dea1b469a7e8e79810e4a0ab2da6c40b97d3cb
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701097"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503270"
 ---
 # <a name="sql-server-2012-service-pack-release-notes"></a>Notes de publication de SQL Server 2012 Service Pack
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ Les Service Packs sont disponibles en ligne uniquement et non sur le support d�
 - **Nouvelle DMF pour remplacer la commande DBCC INPUTBUFFER** : la nouvelle fonction de gestion dynamique, sys.dm_input_buffer, utilise le paramètre session_id et remplace la commande DBCC INPUTBUFFER
 - **Amélioration des événements XEvent liés à un échec du routage en lecture seule pour un groupe de disponibilité** : actuellement, l’événement XEvent read_only_rout_fail est déclenché uniquement si aucun des serveurs de la liste de routage existante n’est disponible pour les connexions. Cette amélioration apporte des informations supplémentaires pour vous aider à résoudre ce type de problème. Elle étend également les points de code où un événement XEvent peut être déclenché. 
 - **Amélioration de la gestion de Service Broker avec basculement du groupe de disponibilité** : actuellement, quand Service Broker est activé sur des bases de données du groupe de disponibilité et qu’il y a un basculement du groupe de disponibilité, toutes les connexions Service Broker créées à partir du réplica principal restent ouvertes. L’amélioration ferme toutes les connexions ouvertes pendant un basculement du groupe de disponibilité.
-- **Partitionnement de NUMA logiciel automatique** : dans SQL Server 2014 SP2, le partitionnement de [NUMA logiciel](../database-engine/configure-windows/soft-numa-sql-server.md) automatique est utilisé quand l’indicateur de trace 8079 est activé au niveau du serveur. Quand l’indicateur de trace 8079 est activé au démarrage, SQL Server 2014 SP2 vérifie la disposition matérielle et configure automatiquement le NUMA logiciel sur les systèmes ayant 8 UC ou plus par nœud NUMA. Le comportement du NUMA logiciel automatique est compatible Hyperthread (processeur logique/HT). Le partitionnement et la création de nœuds supplémentaires permettent de dimensionner le traitement en arrière-plan en augmentant le nombre d’écouteurs, le nombre d’instances, ainsi que les capacités réseau et de chiffrement. Il est recommandé de tester les performances de la charge de travail avec le NUMA logiciel automatique avant de mettre en œuvre cette fonctionnalité dans un environnement de production.
+- **Partitionnement de NUMA logiciel automatique** : dans SQL Server 2014 SP2, le partitionnement de [NUMA logiciel](../database-engine/configure-windows/soft-numa-sql-server.md) automatique est utilisé quand l’indicateur de trace 8079 est activé au niveau du serveur. Quand l’indicateur de trace 8079 est activé au démarrage, SQL Server 2014 SP2 vérifie la disposition matérielle et configure automatiquement le NUMA logiciel sur les systèmes ayant 8 UC ou plus par nœud NUMA. Le comportement du NUMA logiciel automatique est compatible Hyperthread (processeur logique/HT). Le partitionnement et la création de nœuds supplémentaires permettent de dimensionner le traitement en arrière-plan en augmentant le nombre d’écouteurs, le nombre d’instances, ainsi que les capacités réseau et de chiffrement. Il est recommandé de tester les performances de la charge de travail avec le NUMA logiciel automatique avant de mettre en œuvre cette fonctionnalité dans un environnement de production.
 
 ## <a name="service-pack-3-release-notes"></a>Notes de publication de Service Pack 3
 
@@ -226,11 +226,11 @@ Précédemment, DACFx ne conservait pas l'état (WITH CHECK / NOCHECK) des contr
   
 **Mises à jour de SqlPackage.exe (outil de ligne de commande DACFx)**  
   
--   Extraire DACPAC avec les données - Crée un fichier d'instantanés de base de données (.dacpac) à partir d'une Base de données SQL Windows Azure ou SQL Server active qui contient les données des tables d'utilisateur en plus du schéma de la base de données. Ces packages peuvent être publiés sur une nouvelle ou existante Microsoft Azure SQL Database ou SQL Server avec l'action Publier SqlPackage.exe. Les données contenues dans le package remplacent les données existantes dans la base de données cible.  
+-   Extraire DACPAC avec les données - Crée un fichier d’instantanés de base de données (.dacpac) à partir d’une Base de données SQL Windows Azure ou SQL Server active qui contient les données des tables d’utilisateur en plus du schéma de la base de données. Ces packages peuvent être publiés sur une nouvelle ou existante Microsoft Azure SQL Database ou SQL Server avec l'action Publier SqlPackage.exe. Les données contenues dans le package remplacent les données existantes dans la base de données cible.  
   
 -   Exporter BACPAC - Crée un fichier de sauvegarde logique (.bacpac) à partir d'une Base de données SQL Windows Azure ou SQL Server active qui contient le schéma de la base de données et les données utilisateur qui peuvent être utilisés pour migrer une base de données de la Base de données SQL Server sur site à la Base de données SQL Windows Azure. Les bases de données compatibles avec Azure peuvent être exportées et importées entre les versions prises en charge de SQL Server.  
   
--   Importer BACPAC – Importe un fichier .bacpac à fin de créer une nouvelle Base de données SQL Windows Azure ou SQL Server, ou en remplir une vide.  
+-   Importer BACPAC - Importe un fichier .bacpac afin de créer une nouvelle base de données SQL Windows Azure ou SQL Server, ou en remplir une vide.  
   
 Vous trouverez la documentation complète de SqlPackage.exe sur MSDN [ici](https://msdn.microsoft.com/library/hh550080%28v=vs.103%29.aspx).  
   

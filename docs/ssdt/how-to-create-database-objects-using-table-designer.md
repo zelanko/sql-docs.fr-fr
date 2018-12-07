@@ -14,12 +14,12 @@ ms.assetid: 9c9479c1-9bfc-4039-837e-e53fce67723d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7001819d4603c392b034d54fffaee7b901400c20
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1b253e8b820652bf76771047e498dabd119bcb81
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47779277"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396142"
 ---
 # <a name="how-to-create-database-objects-using-table-designer"></a>Procédure : créer des objets de base de données à l'aide du Concepteur de tables
 Non seulement le nouveau nœud **SQL Server** de l'**Explorateur d'objets SQL Server** est très similaire à SSMS visuellement, mais vous pouvez aussi créer de nouveaux objets à l'aide de menus contextuels dont le fonctionnement est semblable à celui de leurs homologues SSMS.  
@@ -59,14 +59,14 @@ Par exemple, vous pouvez créer une nouvelle base de données sous le nœud **Ba
     > [!WARNING]  
     > Lorsque vous modifiez des objets d'une base de données connectée, ne les enregistrez pas sur le disque local. Pour enregistrer correctement vos modifications dans la base de données, suivez les étapes de la prochaine [Procédure : mettre à jour une base de données connectée avec Power Buffer](../ssdt/how-to-update-a-connected-database-with-power-buffer.md).  
   
-6.  Répétez les étapes précédentes pour créer une autre table nommée **Customer**. Cette fois-ci, ajoutez les colonnes suivantes à la table Customer à l'aide de la Grille Colonnes. Et n'oubliez pas de modifier le script afin que le nom de la table soit `[dbo].[Customer]`.  
+6.  Répétez les étapes précédentes pour créer une autre table nommée **Customer**. Cette fois-ci, ajoutez les colonnes suivantes à la table Customer à l'aide de la Grille Colonnes. Et n’oubliez pas de modifier le script afin que le nom de la table soit `[dbo].[Customer]`.  
   
     |Nom   |Type de données|**Null autorisé**|  
     |--------|-------------|-------------------|  
     |Id|INT|unchecked|  
     |Nom   |nvarchar (128)|unchecked|  
   
-7.  Créez une autre table nommée **Products**. Ajoutez les colonnes suivantes à la table Products à l'aide de la Grille Colonnes. Et n'oubliez pas de modifier le script afin que le nom de la table soit `[dbo].[Products]`.  
+7.  Créez une autre table nommée **Products**. Ajoutez les colonnes suivantes à la table Products à l'aide de la Grille Colonnes. Et n’oubliez pas de modifier le script afin que le nom de la table soit `[dbo].[Products]`.  
   
     |Nom   |Type de données|**Null autorisé**|  
     |--------|-------------|-------------------|  

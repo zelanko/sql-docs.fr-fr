@@ -22,12 +22,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8c4dd4b79881160f5fdfe61a7c60f76ce0ae2cf0
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 4409d67e60fd4d82d339ac31e96ca75b578171fe
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703957"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52402814"
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -170,7 +170,7 @@ Dans SQL Data Warehouse et Analytics Platform System, l’instruction [CREATE EX
  Spécifie le nom de l’objet de format de fichier externe qui stocke le type de fichier et la méthode de compression des données externes. Pour créer un format de fichier externe, utilisez [CREATE EXTERNAL FILE FORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-file-format-transact-sql.md).  
   
  Options REJECT  
- Vous pouvez spécifier les paramètres REJECT qui déterminent la façon dont PolyBase traite les enregistrements *incorrects* qu’il récupère à partir de la source de données externe. Un enregistrement de données est considéré comme « incorrect » si les types de données ou le nombre de colonnes ne correspondent pas aux définitions de colonne de la table externe.  
+ Vous pouvez spécifier les paramètres REJECT qui déterminent la façon dont PolyBase traite les enregistrements *incorrects* qu’il récupère à partir de la source de données externe. Un enregistrement de données est considéré comme « incorrect » si les types de données ou le nombre de colonnes ne correspondent pas aux définitions des colonnes de la table externe.  
   
  Si vous ne spécifiez pas ou ne modifiez pas les valeurs REJECT, PolyBase utilise les valeurs par défaut. Ces informations sur les paramètres REJECT sont stockées en tant que métadonnées supplémentaires lorsque vous créez une table externe avec l’instruction CREATE EXTERNAL TABLE.   Lorsqu’une prochaine instruction SELECT ou SELECT INTO SELECT sélectionne des données dans la table externe, PolyBase utilise les options REJECT pour déterminer le nombre ou le pourcentage de lignes pouvant être rejetées avant de provoquer l’échec de la requête. . La requête retourne les résultats (partiels) jusqu’à ce que le seuil de rejet soit dépassé. Ensuite, elle échoue avec le message d’erreur correspondant.  
   
@@ -220,7 +220,7 @@ Exemple :
 REJECTED_ROW_LOCATION = *Emplacement de répertoire*
   
   Spécifie le répertoire dans la Source de données externe dans lequel les lignes rejetées et le fichier d’erreur correspondant doivent être écrits.
-Si le chemin spécifié n’existe pas, PolyBase en crée un en votre nom. Un répertoire enfant est créé sous le nom « _rejectedrows ». Le caractère «_   » garantit que le répertoire est placé dans une séquence d’échappement pour le traitement d’autres données, sauf s’il est explicitement nommé dans le paramètre d’emplacement (location). Dans ce répertoire figure un dossier qui est créé d’après l’heure de soumission du chargement dans le format YearMonthDay - HourMinuteSecond (par exemple, 20180330-173205). Dans ce dossier, deux types de fichiers sont écrits : le fichier _reason (raison) et le fichier de données. 
+Si le chemin spécifié n’existe pas, PolyBase en crée un en votre nom. Un répertoire enfant est créé sous le nom « _rejectedrows ». Le caractère «_   » garantit que le répertoire est placé dans une séquence d’échappement pour le traitement d’autres données, sauf s’il est explicitement nommé dans le paramètre d’emplacement. Dans ce répertoire figure un dossier qui est créé d’après l’heure de soumission du chargement dans le format YearMonthDay - HourMinuteSecond (par exemple, 20180330-173205). Dans ce dossier, deux types de fichiers sont écrits : le fichier _reason (raison) et le fichier de données. 
 
 Les fichiers de raison et les fichiers de données ont tous deux le queryID associé à l’instruction CTAS. Comme les données et la raison se trouvent dans des fichiers distincts, les fichiers correspondants ont un suffixe analogue. 
   
