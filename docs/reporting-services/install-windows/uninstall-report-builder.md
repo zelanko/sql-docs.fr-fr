@@ -7,12 +7,12 @@ ms.topic: conceptual
 ms.assetid: 009538c6-4941-4393-b14b-9144cffdbdaf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 581ffe4fc93116892085cbe6b7701e7a3349cd00
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: f99654ed02b96ed2f1b0d26f7e5b4f64851d815b
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50028078"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52710930"
 ---
 # <a name="uninstall-report-builder"></a>Désinstaller le Générateur de rapports
 
@@ -28,7 +28,7 @@ Si les dossiers utilisés par le Générateur de rapports incluent des fichiers 
   
 2.  Dans le Panneau de configuration, cliquez sur **Programmes et fonctionnalités**.  
   
-3.  Recherchez Générateur de rapports [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server 2016 dans la liste **Nom**, puis cliquez dessus.  
+3.  Recherchez Générateur de rapports [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server dans la liste **Nom**, puis cliquez dessus.  
   
 4.  Cliquez sur **Désinstaller**.  
   

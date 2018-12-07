@@ -5,19 +5,18 @@ ms.date: 07/31/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: b36af13b-9fcc-4168-bb92-214d600b1c93
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 53b1636c4871e31eac5fe1376d10f84c892b1477
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: bd057885bbaa3aa6439079a744ac0b2d341dd638
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51695671"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52616729"
 ---
 # <a name="using-the-dqs-default-knowledge-base"></a>Utilisation de la base de connaissances par défaut DQS
 
@@ -39,7 +38,7 @@ ms.locfileid: "51695671"
   
 -   **États-Unis - État**: contient le nom long conventionnel (officiel) et l'abréviation à deux lettres de chaque État des États-unis. La valeur principale est le nom conventionnel de l'État.  
   
--   **États-Unis - État (en-tête à deux lettres)**: contient le nom long conventionnel (officiel) et l'abréviation à deux lettres de chaque État des États-unis. La valeur principale est l'abréviation de deux lettres pour le nom de l'État.  
+-   **États-Unis - État (en-tête à deux lettres)**  : contient le nom long conventionnel (officiel) et l’abréviation à deux lettres de chaque État des États-unis. La valeur principale est l'abréviation de deux lettres pour le nom de l'État.  
   
 ## <a name="using-the-default-knowledge-base"></a>Utilisation de la base de connaissances par défaut  
  Vous pouvez utiliser la base de connaissances par défaut, Données DQS, comme suit :  

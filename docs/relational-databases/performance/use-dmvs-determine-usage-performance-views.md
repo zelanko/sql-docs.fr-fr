@@ -9,25 +9,22 @@ ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
 ms.topic: conceptual
-ms.openlocfilehash: 05a02bae41ff2d39d9415154fd1aeabeee065c82
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 4181615840f62b6e4e8a7447f559f4f0c50eb206
+ms.sourcegitcommit: f1cf91e679d1121d7f1ef66717b173c22430cb42
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668548"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52586312"
 ---
 # <a name="use-dmvs-to-determine-usage-statistics-and-performance-of-views"></a>Utiliser des vues de gestion dynamique pour déterminer les statistiques d’utilisation et les performances des vues
+Cet article décrit la méthodologie et les scripts utilisés pour obtenir des informations sur les **performances des requêtes qui utilisent des vues**. Le but de ces scripts est de fournir des indicateurs sur l’utilisation et les performances des différentes vues trouvées dans une base de données. 
 
-Cet article décrit la méthodologie et les scripts utilisés pour obtenir des informations sur les **performances des requêtes qui utilisent des vues** dans un objet de base de données. Le but de ces scripts est de fournir des indicateurs de l’utilisation et des performances des différentes vues trouvées dans une base de données. 
+## <a name="sysdmexecqueryoptimizerinfo"></a>sys.dm_exec_query_optimizer_info
+La vue de gestion dynamique [sys.dm_exec_query_optimizer_info](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-optimizer-info-transact-sql.md) expose des statistiques sur les optimisations effectuées par l’optimiseur de requête de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ces valeurs sont cumulatives et leur enregistrement commence au démarrage de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations sur l’optimiseur de requête, consultez [Guide d’architecture de traitement des requêtes](../../relational-databases/query-processing-architecture-guide.md).   
 
-## <a name="sysdmexecqueryoptimizerinfo"></a>Sys.dm_exec_query_optimizer_info
+L’expression de table commune ci-dessous utilise cette vue de gestion dynamique pour fournir des informations sur la charge de travail, comme le pourcentage des requêtes qui référencent une vue. Les résultats retournés par cette requête n’indiquent pas par eux-mêmes un problème de performance, mais peuvent faire apparaître des problèmes sous-jacents quand ils sont combinés avec les plaintes des utilisateurs concernant des requêtes dont l’exécution est lente. 
 
-La vue de gestion dynamique [sys.dm_exec_query_optimizer_info](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-optimizer-info-transact-sql) expose des statistiques sur les optimisations effectuées par l’optimiseur de requête de SQL Server. Ces valeurs sont cumulatives et leur enregistrement commence au démarrage de SQL Server.  
-
-L’expression de table commune ci-dessous utilise cette vue de gestion dynamique pour fournir des informations sur la charge de travail, comme le pourcentage de requêtes qui référencent une vue. Les résultats retournés par cette requête n’indiquent pas par eux-mêmes un problème de performance, mais peuvent faire apparaître des problèmes sous-jacents quand ils sont combinés avec les plaintes des utilisateurs concernant des requêtes dont l’exécution est lente. 
-
-
-```SQL
+```sql
 WITH CTE_QO AS
 (
   SELECT
@@ -104,17 +101,17 @@ PIVOT (MAX([%]) FOR [counter]
       ,[fast forward cursor request])) AS p;
 GO
 ```
-Combinez les résultats de cette requête avec les résultats de la vue système [sys.views](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/sys-views-transact-sql) pour identifier les statistiques de la requête, le texte de la requête et le plan d’exécution mis en cache. 
 
-## <a name="sysviews"></a>Sys.views
+Combinez les résultats de cette requête avec les résultats de la vue système [sys.views](../../relational-databases/system-catalog-views/sys-views-transact-sql.md) pour identifier les statistiques de la requête, le texte de la requête et le plan d’exécution mis en cache. 
 
+## <a name="sysviews"></a>sys.views
 L’expression de table commune ci-dessous fournit des informations sur le nombre d’exécutions, la durée totale d’exécution et les pages lues à partir de la mémoire. Les résultats peuvent être utilisés pour identifier les requêtes candidates pour l’optimisation. 
   
-  >[!NOTE]
-  > Les résultats de cette requête peuvent varier en fonction de la version de SQL Server.  
+> [!NOTE]
+> Les résultats de cette requête peuvent varier en fonction de la version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 
 
-```SQL
+```sql
 WITH CTE_VW_STATS AS
 (
   SELECT
@@ -168,12 +165,10 @@ CROSS APPLY
 GO
 ```
 
-## <a name="sysdmvexeccachedplans"></a>Sys.dmv_exec_cached_plans
+## <a name="sysdmvexeccachedplans"></a>sys.dmv_exec_cached_plans
+La dernière requête fournit des informations sur les vues non utilisées avec la vue de gestion dynamique [sys.dmv_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md). Cependant, le cache de plan d’exécution étant dynamique, les résultats peuvent varier. Utilisez donc cette requête au fil du temps pour déterminer si une vue est réellement utilisée ou non. 
 
-La dernière requête fournit des informations sur les vues non utilisées avec la vue de gestion dynamique [sys.dmv_exec_cached_plans](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql). Cependant, le cache de plan d’exécution étant dynamique, les résultats peuvent varier. Utilisez donc cette requête au fil du temps pour déterminer si une vue est réellement utilisée ou non. 
-
-
-```SQL
+```sql
 SELECT
   SCHEMA_NAME(vw.schema_id) AS schemaname
   ,vw.name AS name
@@ -198,11 +193,11 @@ WHERE
 GO
 ```
 
-## <a name="related-external-resources"></a>Ressources externes associées
-
-- [DMVs for Performance Tuning (Vidéo - SQL Saturday Pordenone)](https://www.youtube.com/watch?v=9FQaFwpt3-k)
-- [DMVs for Performance Tuning (Slide e Demo - SQL Saturday Pordenone)](https://www.sqlsaturday.com/589/Sessions/Details.aspx?sid=57409)
-- [SQL Server Tuning in capsule form (movie-SQL Saturday Parma)](https://vimeo.com/200980883)
-- [SQL Server Tuning in a nutshell (slides and Demo-SQL Saturday Parma)](https://www.sqlsaturday.com/566/Sessions/Details.aspx?sid=53988)
-- [Performance Tuning With SQL Server Dynamic Management Views](https://www.red-gate.com/library/performance-tuning-with-sql-server-dynamic-management-views)
-- [The Most Prominent Wait Types of your SQL Server 2016](https://channel9.msdn.com/Blogs/MVP-Data-Platform/The-Most-Prominent-Wait-Types-of-your-SQL-Server-2016)
+## <a name="see-also"></a>Voir aussi
+[Fonctions et vues de gestion dynamique](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+[DMVs for Performance Tuning (Vidéo - SQL Saturday Pordenone)](https://www.youtube.com/watch?v=9FQaFwpt3-k)   
+[DMVs for Performance Tuning (Slide e Demo - SQL Saturday Pordenone)](https://www.sqlsaturday.com/589/Sessions/Details.aspx?sid=57409)   
+[SQL Server Tuning in capsule form (movie-SQL Saturday Parma)](https://vimeo.com/200980883)    
+[SQL Server Tuning in a nutshell (slides and Demo-SQL Saturday Parma)](https://www.sqlsaturday.com/566/Sessions/Details.aspx?sid=53988)   
+[Performance Tuning With SQL Server Dynamic Management Views](https://www.red-gate.com/library/performance-tuning-with-sql-server-dynamic-management-views)   
+[The Most Prominent Wait Types of your SQL Server 2016](https://channel9.msdn.com/Blogs/MVP-Data-Platform/The-Most-Prominent-Wait-Types-of-your-SQL-Server-2016)   

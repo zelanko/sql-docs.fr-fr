@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 5599300d-6bcd-4704-aba5-fa98e01c78a9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2d28ffb546476d2e18fd1dc57d04c837f7176142
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 8e19127cd13ddb5e71ce245b4e0a832c63ecad76
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029691"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711010"
 ---
 # <a name="finding-viewing-and-managing-reports-report-builder-and-ssrs-"></a>Recherche, affichage et gestion des rapports (Générateur de rapports et SSRS)
   Le Générateur de rapports vous permet de parcourir les dossiers d'un serveur de rapports ou site SharePoint pour y rechercher des rapports, des sources de données partagées, des modèles et d'autres éléments de rapport connexes, ainsi que de parcourir votre ordinateur pour trouver des rapports en local. Pour faciliter la recherche de rapports, le Générateur de rapports gère une liste de serveurs et sites récemment utilisés, et fournit l'accès direct aux dossiers Bureau, Mes documents et Poste de travail dans le système de fichiers de votre ordinateur.  
@@ -147,7 +147,7 @@ Barre d'outils Rapports
   
 ## <a name="see-also"></a> Voir aussi  
  [Enregistrement des rapports &#40;Générateur de rapports&#41;](../../reporting-services/report-builder/saving-reports-report-builder.md)   
- [Générateur de rapports dans SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
+ [Générateur de rapports dans SQL Server](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
  [Installer et désinstaller le Générateur de rapports](https://msdn.microsoft.com/library/2c9a5814-17bf-4947-8fb3-6269e7caa416)  
   
   

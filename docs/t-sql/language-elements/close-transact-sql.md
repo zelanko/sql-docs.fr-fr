@@ -20,24 +20,23 @@ ms.assetid: 21546874-97e3-4b93-970f-87c27f6b78c7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 778c3bdb9fc17a27af4fbc3a7b0fd6e2aa89f402
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4c98cff1909bc74ff550ea9d68359d7a845d04d7
+ms.sourcegitcommit: f1cf91e679d1121d7f1ef66717b173c22430cb42
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629109"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52586232"
 ---
 # <a name="close-transact-sql"></a>CLOSE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Ferme un curseur ouvert en libérant le jeu de résultats actuel et tous les verrous de curseur dans les lignes sur lesquelles le curseur est positionné. L'instruction CLOSE garde les structures de données disponibles pour une réouverture éventuelle, mais les extractions et les mises à jour positionnées ne sont pas autorisées jusqu'à la réouverture du curseur. L'instruction CLOSE doit être exécutée sur un curseur ouvert. Elle n'est pas autorisée sur un curseur qui a seulement été déclaré ou qui est déjà fermé.  
+  Ferme un curseur ouvert en libérant le jeu de résultats actuel et tous les verrous de curseur dans les lignes sur lesquelles le curseur est positionné. `CLOSE` garde les structures de données disponibles pour une réouverture éventuelle, mais les extractions et les mises à jour positionnées ne sont pas autorisées jusqu’à la réouverture du curseur. `CLOSE` doit être émise sur un curseur ouvert. Elle n’est pas autorisée sur un curseur qui a seulement été déclaré ou qui est déjà fermé.  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 CLOSE { { [ GLOBAL ] cursor_name } | cursor_variable_name }  
 ```  
   
@@ -54,7 +53,7 @@ CLOSE { { [ GLOBAL ] cursor_name } | cursor_variable_name }
 ## <a name="examples"></a>Exemples  
  L'exemple suivant illustre comment positionner correctement l'instruction `CLOSE` dans un processus basé sur un curseur.  
   
-```  
+```sql  
 DECLARE Employee_Cursor CURSOR FOR  
 SELECT EmployeeID, Title FROM AdventureWorks2012.HumanResources.Employee;  
 OPEN Employee_Cursor;  

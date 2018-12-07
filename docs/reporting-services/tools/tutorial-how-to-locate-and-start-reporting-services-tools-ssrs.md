@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 51ad69d8-fe92-4662-a7cd-d235692f0c03
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: be1056992fea4b9b1ee7bcd0857ca566d67cab40
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 2a720f17e43dc22c5bb554c1e7a83cc7e845b835
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813852"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711300"
 ---
 # <a name="tutorial-how-to-locate-and-start-reporting-services-tools-ssrs"></a>Didacticiel : comment localiser et démarrer les outils Reporting Services (SSRS)
 
@@ -132,7 +132,7 @@ Téléchargez [SQL Server Data Tools](https://go.microsoft.com/fwlink/?LinkID=61
  Pour commencer votre premier rapport, consultez [Créer un rapport de table de base &#40;didacticiel SSRS&#41;](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md). Pour en savoir plus sur les concepteurs de requêtes que vous pouvez utiliser dans le Concepteur de rapports, consultez [Outils de création de requêtes &#40;SSRS&#41;](../../reporting-services/report-data/query-design-tools-ssrs.md).  
   
 ##  <a name="bkmk_report_builder"></a> [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]  
- Le[Générateur de rapports dans SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md) est une application autonome que vous pouvez utiliser pour créer des rapports paginés en dehors de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Vous pouvez personnaliser et mettre à jour tous les rapports existants, qu’ils aient été créés dans le Concepteur de rapports ou dans des versions précédentes du [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]. Vous pouvez l’installer depuis le portail web de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou le Centre de téléchargement Microsoft.  
+ Le[Générateur de rapports de SQL Server](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md) est une application autonome que vous pouvez utiliser pour créer des rapports paginés en dehors de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Vous pouvez personnaliser et mettre à jour tous les rapports existants, qu’ils aient été créés dans le Concepteur de rapports ou dans des versions précédentes du [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]. Vous pouvez l’installer depuis le portail web de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou le Centre de téléchargement Microsoft.  
   
  [Téléchargez le Générateur de rapports](https://go.microsoft.com/fwlink/?LinkID=219138) depuis le Centre de téléchargement Microsoft.  
   

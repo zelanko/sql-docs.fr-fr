@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 99311b36-5dc5-4039-ac93-4d2826701327
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a51c8ac3fce465e6742001eb884332d2eb1e4309
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fab47f8994be4500cca49bc427aa7ec7292be2a2
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800573"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52710990"
 ---
 # <a name="report-authoring-concepts-report-builder-and-ssrs"></a>Concepts de création de rapport (Générateur de rapports et SSRS)
   Cette section définit brièvement certains concepts clés utilisés pour décrire les rapports paginés dans la documentation du Générateur de rapports et du Concepteur de rapports. Pour obtenir des définitions de mots ou de termes spécifiques, consultez le [Glossaire &#40;Générateur de rapports&#41;](../../reporting-services/report-builder/glossary-report-builder.md).  
@@ -38,6 +38,6 @@ ms.locfileid: "47800573"
  Décrit les moyens de définir et d'utiliser les paramètres de rapport, ainsi que la façon de les gérer indépendamment à partir de la définition de rapport sur le serveur de rapports.  
   
 ## <a name="see-also"></a> Voir aussi  
- [Générateur de rapports dans SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
+ [Générateur de rapports dans SQL Server](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
   

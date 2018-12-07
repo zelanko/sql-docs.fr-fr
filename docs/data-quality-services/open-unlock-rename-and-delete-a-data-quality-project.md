@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.dqproject.opendqproject.f1
@@ -19,12 +18,12 @@ ms.assetid: de8a2b04-4673-4beb-b4cf-96a28cdf3a93
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2cc3dd7357788f1a4aa305161f5c4d837e5f9a64
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5ead34cab28f4988f649c6bc9dcfec5d282a08f1
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773193"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617819"
 ---
 # <a name="open-unlock-rename-and-delete-a-data-quality-project"></a>Ouvrir, déverrouiller, renommer et supprimer un projet de qualité des données
 
@@ -64,9 +63,9 @@ ms.locfileid: "47773193"
   
 4.  Le projet de qualité des données s'ouvre dans le même état d'activité que celui dans lequel il se trouvait lorsqu'il a été fermé pour la dernière fois. Un projet de qualité des données peut prendre les états suivants :  
   
-    -   Pour l'activité **Nettoyage** , un projet de qualité des données peut prendre les états suivants : **Nettoyage - Mapper**, **Nettoyage - Nettoyer**, **Nettoyage – Gérer et afficher les résultats**et **Nettoyage – Exporter**.  
+    -   Pour l’activité **Nettoyage**, un projet de qualité des données peut prendre les états suivants : **Nettoyage - Mapper**, **Nettoyage - Nettoyer**, **Nettoyage - Gérer et afficher les résultats** et **Nettoyage - Exporter**.  
   
-    -   Pour l'activité **Correspondance** , un projet de qualité des données peut prendre les états suivants : **Correspondance - Mapper**, **Correspondance - Correspondance**, **Correspondance – Survivance**et **Correspondance – Exporter**.  
+    -   Pour l’activité **Correspondance**, un projet de qualité des données peut prendre les états suivants : **Correspondance - Mapper**, **Correspondance - Correspondance**, **Correspondance - Survivance** et **Correspondance - Exporter**.  
   
 ##  <a name="Unlock"></a> Déverrouiller un projet de qualité des données  
  Lorsque vous créez un projet de qualité des données, il se trouve dans un état verrouillé pour empêcher son utilisation ou sa modification par d'autres utilisateurs. Vous devez déverrouiller le projet de qualité des données une fois votre travail terminé si vous voulez que d'autres utilisateurs travaillent dessus. Un symbole de verrou est affiché pour les projets verrouillés.  

@@ -5,19 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: a8bad2f1-8fb0-4d14-a978-11a5720e62d6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f1bc37f06c1a2d8299f9fd5d23a9002709839291
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: eb91f7c7b570fb678e2b503ed1841c5d3b45dcae
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830777"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52616280"
 ---
 # <a name="open-integration-services-projects-in-data-quality-client"></a>Ouvrir des projets Integration Services dans Data Quality Client
 
@@ -52,7 +51,7 @@ ms.locfileid: "47830777"
   
 3.  Dans l'écran **Ouvrir le projet** , vous pouvez identifier un projet Integration Services de l'une des manières suivantes :  
   
-    1.  **Nom du projet** : les projets Integration Services sont répertoriés selon la convention de nommage suivante : « Package.DQS Cleansing_*\<DATE>**\<HEURE>*_{GUID} ». Chaque fois que vous exécutez correctement le même package dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], un nouveau projet est répertorié dans l’écran **Ouvrir le projet** .  
+    1.  **Nom du projet** : les projets Integration Services sont listés selon la convention de nommage suivante : « Package.DQS Cleansing_*\<DATE>**\<HEURE>*_{GUID} ». Chaque fois que vous exécutez correctement le même package dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], un nouveau projet est répertorié dans l’écran **Ouvrir le projet** .  
   
     2.  **Type de projet**: les projets Integration Services ont **SSIS** comme type de projet dans l'écran **Ouvrir le projet** .  
   

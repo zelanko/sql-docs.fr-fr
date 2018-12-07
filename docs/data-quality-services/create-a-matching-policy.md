@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.kb.kbmatchingmap.f1
@@ -16,12 +15,12 @@ ms.assetid: cce77a06-ca31-47b6-8146-22edf001d605
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2a8c91398f1543e2ebc23030ab56c6eea42027e0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 73ef1d5301310656cfcb02aef7d488541968d8a9
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47672397"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617689"
 ---
 # <a name="create-a-matching-policy"></a>Créer une stratégie de correspondance
 
@@ -48,13 +47,13 @@ ms.locfileid: "47672397"
   
 -   Poids : pour chaque domaine de la règle, entrez un poids numérique qui détermine comment l'analyse de correspondance pour le domaine sera comparée à celle de chaque autre domaine de la règle. Le poids indique la contribution du score du champ au score de correspondance global entre deux enregistrements. Les scores calculés affectés à chaque champ source sont additionnés pour obtenir un score de correspondance composite pour les deux enregistrements. Pour chaque champ qui n'est pas un élément requis (avec Exacte ou Similaire comme valeur de similarité), définissez le poids entre 10 et 100. La somme des poids des domaines qui ne sont pas des éléments requis doit être égale à 100. Si la valeur est un élément requis, le poids a la valeur 0 et ne peut pas être modifié.  
   
--   Exacte comme valeur de similarité : sélectionnez **Exacte** si les valeurs du même domaine de deux enregistrements distincts doivent être identiques pour être considérées comme une correspondance. Si elles sont identiques, le score de correspondance pour ce domaine a la valeur « 100 », et DQS utilise ce score et les scores des autres domaines de la règle pour déterminer le score de correspondance total. Si elles ne sont pas identiques, le score de correspondance à ce domaine a la valeur « 0 », et le traitement de la règle passera à la condition suivante. Si vous configurez une règle de correspondance pour un domaine numérique et que vous sélectionnez **Similaire**, vous pouvez entrer une tolérance sous la forme d'un pourcentage ou d'un entier. Pour un domaine de type date, vous pouvez entrer une tolérance telle qu'un jour, un mois ou une année (entier) si vous sélectionnez **Similaire**; il n'y a aucune tolérance sous forme de pourcentage pour un domaine de date. Si vous sélectionnez **Exacte**, vous n'avez pas cette possibilité.  
+-   Exacte comme valeur de similarité : sélectionnez **Exacte** si les valeurs du même domaine de deux enregistrements distincts doivent être identiques pour être considérées comme une correspondance. Si elles sont identiques, le score de correspondance pour ce domaine a la valeur « 100 », et DQS utilise ce score et les scores des autres domaines de la règle pour déterminer le score de correspondance total. Si elles ne sont pas identiques, le score de correspondance à ce domaine a la valeur « 0 », et le traitement de la règle passera à la condition suivante. Si vous configurez une règle de correspondance pour un domaine numérique et que vous sélectionnez **Similaire**, vous pouvez entrer une tolérance sous la forme d'un pourcentage ou d'un entier. Pour un domaine de type date, vous pouvez entrer une tolérance telle qu'un jour, un mois ou une année (entier) si vous sélectionnez **Similaire**; il n'y a aucune tolérance sous forme de pourcentage pour un domaine de date. Si vous sélectionnez **Exacte**, vous n'avez pas cette possibilité.  
   
 -   Similaire comme valeur de similarité : sélectionnez **Similaire** si deux valeurs du même champ de deux enregistrements distincts peuvent être considérées comme une correspondance, même si elles ne sont pas identiques. Lorsque DQS exécute la règle, il calcule un score de correspondance pour ce domaine, et utilise ce score et les scores des autres domaines de la règle pour déterminer le score de correspondance total. La similarité minimale entre les valeurs d'un champ est de 60 %. Si le score de correspondance calculé pour un champ de deux enregistrements est inférieur à 60, la valeur 0 est automatiquement affectée au score de similarité. Si vous configurez une règle de correspondance pour un champ numérique et que vous sélectionnez **Similaire**, vous pouvez entrer une tolérance sous la forme d'un pourcentage ou d'un entier. Si vous configurez une règle de correspondance pour un champ de date, et que vous sélectionnez **Similaire**, vous pouvez entrer une tolérance numérique.  
   
 -   Condition préalable : sélectionnez **Condition préalable** pour spécifier que les valeurs du même champ de deux enregistrements distincts doivent retourner une correspondance de 100 %, sans quoi les enregistrements ne sont pas considérés comme une correspondance et les autres clauses de la règle sont ignorées. Lorsque l'option **Condition préalable** est sélectionnée, le champ de poids du domaine est supprimé afin que vous ne puissiez pas définir un poids pour le domaine. Vous devez réinitialiser un ou plusieurs poids de domaine afin que la somme pondérée soit égale à 100. Les domaines requis ne contribuent pas au score de correspondance des enregistrements. Le score de correspondance des enregistrements est déterminé en comparant les valeurs des champs pour lesquels la similarité a la valeur Similaire ou Exact. Lorsque vous faites d'un champ une condition préalable, la valeur Exacte est automatiquement définie comme similarité pour ce domaine.  
   
- Le score de correspondance minimal est le seuil auquel ou au-delà duquel deux enregistrements sont considérés comme une correspondance (et l'état affecté aux enregistrements est « Correspondants »). Entrez une valeur entière par incréments de « 1 » ou cliquez sur la flèche haut ou bas pour augmenter ou diminuer la valeur par incréments de « 10 ». La valeur minimale est 80. Si le score de correspondance est inférieur à 80, les deux enregistrements ne sont pas considérés comme une correspondance. Vous ne pouvez pas modifier la plage du score de correspondance minimal dans cette page. Le plus faible score de correspondance minimal est 80. Vous pouvez, toutefois, modifier le plus faible score de correspondance minimal dans la page Administration (si vous êtes administrateur DQS).  
+ Le score de correspondance minimal est le seuil auquel, ou au-delà duquel, deux enregistrements sont considérés comme correspondant l’un à l’autre (et l’état affecté aux enregistrements est « Correspondants »). Entrez une valeur entière par incréments de « 1 » ou cliquez sur la flèche haut ou bas pour augmenter ou diminuer la valeur par incréments de « 10 ». La valeur minimale est 80. Si le score de correspondance est inférieur à 80, les deux enregistrements ne sont pas considérés comme une correspondance. Vous ne pouvez pas modifier la plage du score de correspondance minimal dans cette page. Le plus faible score de correspondance minimal est 80. Vous pouvez, toutefois, modifier le plus faible score de correspondance minimal dans la page Administration (si vous êtes administrateur DQS).  
   
  La création d’une règle de correspondance est un processus itératif, car vous devrez peut-être modifier les poids relatifs des domaines dans la règle, ou bien la similarité ou la propriété requise d’un domaine, ou encore le score de correspondance minimal pour la règle, afin d’obtenir les résultats dont vous avez besoin. Vous pouvez également souhaiter créer plusieurs règles, qui seront chacune exécutées pour créer le score de correspondance. Il peut être difficile d'obtenir le résultat dont vous avez besoin avec une seule règle. Plusieurs règles fournissent des vues différentes d'une correspondance requise. Avec plusieurs règles, vous pourrez peut-être inclure moins de domaines dans chaque règle, utiliser des poids plus élevés pour chaque domaine et obtenir de meilleurs résultats. Si les données sont moins précises et moins complètes, vous pouvez avoir besoin de davantage de règles pour trouver les correspondances requises. Si les données sont plus précises et complètes, vous avez besoin de moins de règles.  
   
@@ -83,7 +82,7 @@ ms.locfileid: "47672397"
     > [!NOTE]  
     >  Vous pouvez mapper vos données source à un domaine DQS lors de la création d'une stratégie de correspondance uniquement si le type de données source est pris en charge dans DQS et correspond au type de données du domaine DQS. Pour plus d'informations sur les types de données pris en charge dans DQS, consultez [Types de données SQL Server et SSIS pris en charge pour les domaines DQS](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md).  
   
-5.  Cliquez sur le contrôle **plus (+)** pour ajouter une ligne à la table Mappages ou sur le contrôle **moins (–)** pour en supprimer une.  
+5.  Cliquez sur le contrôle **plus (+)** pour ajouter une ligne à la table Mappages ou sur le contrôle **moins (-)** pour en supprimer une.  
   
 6.  Cliquez sur **Aperçu de la source de données** pour afficher les données de la table ou de la vue SQL Server que vous avez sélectionnée, ou de la feuille de calcul Excel que vous avez sélectionnée.  
   
@@ -114,7 +113,7 @@ ms.locfileid: "47672397"
   
 6.  Pour **Similarité**, sélectionnez **Similaire** si deux valeurs du même champ de deux enregistrements distincts peuvent être considérées comme une correspondance, même si elles ne sont pas identiques. Sélectionnez **Exacte** si deux valeurs du même domaine de deux enregistrements distincts doivent être identiques pour être considérées comme une correspondance. (Pour plus d'informations, consultez [Comment définir des paramètres de règle de correspondance](#MatchingRules).)  
   
-7.  Pour **Poids**, entrez une valeur qui détermine la contribution du score de correspondance d'un domaine au score de correspondance global pour deux enregistrements.  
+7.  Pour **Poids**, entrez une valeur qui détermine la contribution du score de correspondance d’un domaine au score de correspondance global pour deux enregistrements.  
   
     > [!NOTE]  
     >  Lorsque vous définissez un poids pour un domaine composite, vous pouvez entrer un poids différent pour chaque domaine unique du domaine composite, auquel cas un poids distinct n'est pas affecté au domaine composite, ou vous pouvez entrer un poids unique pour le domaine composite, auquel cas des poids distincts ne sont pas affectés aux domaines uniques du domaine composite.  
@@ -133,7 +132,7 @@ ms.locfileid: "47672397"
   
     -   Dans **Filtre**, sélectionnez **Correspondants** pour afficher toutes les lignes correspondantes et leur score. Les lignes qui ne sont pas considérées comme des correspondances (c'est-à-dire qui ont un score de correspondance inférieur au score de correspondance minimal) ne sont pas affichées dans la table des résultats de correspondance. Sélectionnez **Sans correspondance** pour afficher toutes les lignes sans correspondance.  
   
-    -   Dans la zone de liste déroulante **Pourcentage**, sélectionnez un pourcentage, par incréments de « 5 ». Toutes les lignes ayant un score de correspondance supérieur ou égal à ce pourcentage seront affichées dans la table des résultats de correspondance.  
+    -   Dans la zone de liste déroulante **Pourcentage**, sélectionnez un pourcentage, par incréments de « 5 ». Toutes les lignes ayant un score de correspondance supérieur ou égal à ce pourcentage seront affichées dans la table des résultats de correspondance.  
   
     -   Si vous double-cliquez sur un enregistrement dans la table des résultats de correspondance, DQS affiche une fenêtre **Détails du score de correspondance** qui présente l'enregistrement pivot et l'enregistrement source (ainsi que les valeurs de tous leurs champs), le score entre elles et une exploration de correspondance d'enregistrement. L'exploration affiche les valeurs de chaque champ de l'enregistrement pivot et de l'enregistrement source pour vous permettre de les comparer, et indique le score de correspondance auquel chaque champ contribue dans le score de correspondance global pour les deux enregistrements.  
   
@@ -165,7 +164,7 @@ ms.locfileid: "47672397"
   
     -   Dans **Filtre**, sélectionnez **Correspondants** pour afficher toutes les lignes correspondantes et leur score. Les lignes qui ne sont pas considérées comme des correspondances (c'est-à-dire qui ont un score de correspondance inférieur au score de correspondance minimal) ne sont pas affichées dans la table des résultats de correspondance. Sélectionnez **Sans correspondance** pour afficher toutes les lignes sans correspondance.  
   
-    -   Dans la zone de liste déroulante **Pourcentage**, sélectionnez un pourcentage, par incréments de « 5 ». Toutes les lignes ayant un score de correspondance supérieur ou égal à ce pourcentage seront affichées dans la table des résultats de correspondance.  
+    -   Dans la zone de liste déroulante **Pourcentage**, sélectionnez un pourcentage, par incréments de « 5 ». Toutes les lignes ayant un score de correspondance supérieur ou égal à ce pourcentage seront affichées dans la table des résultats de correspondance.  
   
     -   Si vous double-cliquez sur un enregistrement dans la table des résultats de correspondance, DQS affiche une fenêtre **Détails du score de correspondance** qui présente l'enregistrement pivot et l'enregistrement source (ainsi que les valeurs de tous leurs champs), le score entre elles et une exploration de correspondance d'enregistrement. L'exploration affiche les valeurs de chaque champ de l'enregistrement pivot et de l'enregistrement source pour vous permettre de les comparer, et indique le score de correspondance auquel chaque champ contribue dans le score de correspondance global pour les deux enregistrements.  
   
@@ -178,13 +177,13 @@ ms.locfileid: "47672397"
   
 7.  Si vous êtes satisfait des résultats de toutes les règles, cliquez sur **Terminer** pour terminer le processus de stratégie de correspondance, puis cliquez sur l'une des options suivantes :  
   
-    -   **Oui. Publier la base de connaissances et quitter**: la base de connaissances sera publiée en vue de son utilisation par l'utilisateur actuel ou d'autres. La base de connaissances ne sera pas verrouillée, l'état de la base de connaissances (dans la table de bases de connaissances) sera défini sur Vide, et les activités de gestion de l'arborescence du domaine et de découverte des connaissances seront disponibles. L'écran Ouvrir la base de connaissances s'affichera à nouveau.  
+    -   **Oui. Publier la base de connaissances et quitter** : la base de connaissances sera publiée en vue de son utilisation par l’utilisateur actuel ou d’autres utilisateurs. La base de connaissances ne sera pas verrouillée, l'état de la base de connaissances (dans la table de bases de connaissances) sera défini sur Vide, et les activités de gestion de l'arborescence du domaine et de découverte des connaissances seront disponibles. L'écran Ouvrir la base de connaissances s'affichera à nouveau.  
   
-    -   **Non. Enregistrer le travail dans la base de connaissances et quitter**: votre travail sera enregistré, la base de connaissances restera verrouillée et l'état de la base de connaissances sera défini sur **En cours**. Les activités de gestion de l'arborescence du domaine et de découverte des connaissances seront disponibles. La page d'accueil s'affichera à nouveau.  
+    -   **Non. Enregistrer le travail dans la base de connaissances et quitter** : votre travail sera enregistré, la base de connaissances restera verrouillée et l’état de la base de connaissances sera défini sur **En cours**. Les activités de gestion de l'arborescence du domaine et de découverte des connaissances seront disponibles. La page d'accueil s'affichera à nouveau.  
   
-    -   **Annuler. Rester sur l'écran actif**: la fenêtre sera fermée et l'écran de gestion de l'arborescence du domaine s'affichera à nouveau.  
+    -   **Annuler. Rester sur l’écran actif** : la fenêtre sera fermée et l’écran de gestion de l’arborescence du domaine s’affichera à nouveau.  
   
-8.  Cliquez sur **Fermer** pour enregistrer votre travail et revenir à la page d'accueil de DQS. L'état de la base de connaissances affiche la chaîne « Stratégie de correspondance – », ainsi que l'état actuel. Si vous cliquez sur **Fermer** lorsque vous êtes dans l'écran **Résultats de correspondance** , l'état affiche : « Stratégie de correspondance - Résultats ». Si vous cliquez sur Fermer lorsque vous êtes dans l'écran **Stratégie de correspondance** , l'état affiche : « Stratégie de correspondance - Stratégie de correspondance ». Après avoir cliqué sur **Fermer**, pour effectuer l'activité **Découverte des connaissances** , revenez à l'activité **Stratégie de correspondance** , cliquez sur **Terminer**, puis sur **Oui** pour publier la base de connaissances ou sur **Non** pour enregistrer le travail dans la base de connaissances et quitter.  
+8.  Cliquez sur **Fermer** pour enregistrer votre travail et revenir à la page d'accueil de DQS. L’état de la base de connaissances affiche la chaîne « Stratégie de correspondance - » ainsi que l’état actuel. Si vous cliquez sur **Fermer** lorsque vous êtes dans l'écran **Résultats de correspondance** , l'état affiche : « Stratégie de correspondance - Résultats ». Si vous cliquez sur Fermer lorsque vous êtes dans l’écran **Stratégie de correspondance**, l’état affiche : « Stratégie de correspondance - Stratégie de correspondance ». Après avoir cliqué sur **Fermer**, pour effectuer l'activité **Découverte des connaissances** , revenez à l'activité **Stratégie de correspondance** , cliquez sur **Terminer**, puis sur **Oui** pour publier la base de connaissances ou sur **Non** pour enregistrer le travail dans la base de connaissances et quitter.  
   
     > [!NOTE]  
     >  Si vous cliquez sur **Fermer** alors qu'un processus de correspondance est en cours d'exécution, ce dernier ne se termine pas lorsque vous cliquez sur **Fermer**. Vous pouvez rouvrir la base de connaissances et voir soit que le processus est toujours en cours d'exécution, soit, s'il est terminé, que les résultats sont affichés. Si le processus n'est pas terminé, l'écran affiche la progression.  

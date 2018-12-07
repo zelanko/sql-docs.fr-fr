@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8f25e6dc-b753-400e-9e9a-50f4f35bf6c4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ac129843dafffbc53c32f639e0ed1113d53eec6b
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 8598ed98c9a7f8876d210b8b358b66ffb8cbff7c
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813662"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712380"
 ---
 # <a name="install-reporting-services-2016-native-mode-report-server"></a>Installer le serveur de rapports Reporting Services 2016 en mode natif
 
@@ -64,7 +64,7 @@ Un serveur de rapports en mode natif [!INCLUDE[ssRSnoversion](../../includes/ssr
 ##  <a name="bkmk_requirements"></a> Spécifications  
  L'option de configuration par défaut utilise les valeurs par défaut pour configurer les paramètres principaux obligatoires pour rendre un serveur de rapports opérationnel. Elle comporte les impératifs suivants :  
   
--   Consultez [Hardware and Software Requirements for Installing SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md) .  
+-   Consultez [Configurations matérielle et logicielle requises pour l’installation de SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  
   
 -   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] doivent être installés ensemble dans la même instance. L'instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] héberge la base de données du serveur de rapports que le programme d'installation crée et configure.  
   

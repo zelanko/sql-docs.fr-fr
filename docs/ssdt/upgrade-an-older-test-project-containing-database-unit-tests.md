@@ -11,15 +11,15 @@ ms.assetid: 42782ff3-e8cf-4c9d-8dac-a95b236edfc4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f4c40f2173ac2ee907aa6999539e83cd4d8eba0a
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c2006cad1fd9ef8708257c331c2411fa916cca89
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661218"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52616225"
 ---
 # <a name="upgrade-an-older-test-project-containing-database-unit-tests"></a>Mettre à niveau un projet de test antérieur contenant des tests unitaires de base de données
-Mettez à niveau un ancien projet de test créé dans Visual Studio 2010 et contenant des tests unitaires de base de données pour utiliser les nouveaux outils et runtime de test unitaire de base de données SQL Server Data Tools. Après avoir mis à niveau un projet antérieur, ajoutez des tests unitaires SQL Server au projet (pour plus d'informations, consultez [Création et définition de tests unitaires SQL Server](../ssdt/creating-and-defining-sql-server-unit-tests.md)).  
+Mettez à niveau un ancien projet de test créé dans Visual Studio 2010 et contenant des tests unitaires de base de données pour utiliser les nouveaux outils et runtime de test unitaire de base de données SQL Server Data Tools. Après avoir mis à niveau un projet antérieur, ajoutez des tests unitaires SQL Server au projet (pour plus d’informations, consultez [Création et définition de tests unitaires SQL Server](../ssdt/creating-and-defining-sql-server-unit-tests.md)).  
   
 > [!TIP]  
 > Si vous utilisez Visual Studio 2010, après avoir ajouté des tests unitaires SQL Server à un projet de test, n'ajoutez pas de tests unitaires utilisant le modèle de test unitaire de base de données antérieur. Le cas échéant, vous devrez reconvertir le projet avant de pouvoir exécuter les tests.  

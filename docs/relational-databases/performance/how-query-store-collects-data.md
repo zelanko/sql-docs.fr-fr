@@ -1,7 +1,7 @@
 ---
 title: Comment le magasin de requêtes collecte les données | Microsoft Docs
 ms.custom: ''
-ms.date: 09/13/2016
+ms.date: 11/29/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -14,15 +14,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bb78849cf72f9cb38a6d99082e21e8c4d0c6b4c9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a5d262b72fec278e037c99662d1d5aecd93190cf
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47775057"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711071"
 ---
 # <a name="how-query-store-collects-data"></a>Comment le magasin de requêtes collecte les données
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   Le magasin de requêtes fonctionne comme un **enregistreur de données de vol** . Il collecte constamment des informations de compilation et d'exécution relatives aux requêtes et aux plans. Les données relatives aux requêtes sont conservées dans les tables internes et présentées aux utilisateurs selon différents affichages.  
   
@@ -30,8 +30,7 @@ ms.locfileid: "47775057"
  Le diagramme suivant montre les affichages du magasin de requêtes et leurs relations logiques avec les informations de compilation présentées sous la forme d'entités bleues :  
   
  ![query-store-process-2views](../../relational-databases/performance/media/query-store-process-2views.png "query-store-process-2views")  
-  
- **Description des affichages**  
+**Description des affichages**  
   
 |Affichage|Description|  
 |----------|-----------------|  
@@ -42,7 +41,7 @@ ms.locfileid: "47775057"
 |**sys.query_store_runtime_stats_interval**|Le magasin de requêtes divise le temps en périodes générées automatiquement (intervalles) et stocke les statistiques agrégées sur cet intervalle pour chaque plan exécuté. La taille de l’intervalle est contrôlée par l’option de configuration Intervalle de collecte des statistiques (dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]) ou `INTERVAL_LENGTH_MINUTES` à l’aide des [Options ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).|  
 |**sys.query_store_runtime_stats**|Statistiques d'exécution agrégées pour les plans exécutés. Toutes les métriques capturées sont exprimées sous forme de 4 fonctions statistiques : Moyenne, Minimum, Maximum et Écart type.|  
   
- Pour plus d'informations sur les affichages du magasin de requêtes, consultez la section **Affichages, fonctions et procédures associés** de [Analyse des performances à l'aide du magasin de requêtes](monitoring-performance-by-using-the-query-store.md).  
+ Pour plus d’informations sur les affichages du Magasin des requêtes, consultez la section **Affichages, fonctions et procédures associés** de [Analyse des performances à l’aide du magasin de requêtes](monitoring-performance-by-using-the-query-store.md).  
   
 ## <a name="query-processing"></a>Traitement des requêtes  
  Le magasin de requêtes interagit avec le pipeline de traitement des requêtes sur les points clés suivants :  
@@ -63,10 +62,10 @@ ms.locfileid: "47775057"
   
  ![query-store-process-3plan](../../relational-databases/performance/media/query-store-process-3.png "query-store-process-3plan")  
   
- Dans le cas d'un incident du système, le magasin de requêtes peut perdre des données d’exécution jusqu'à la quantité définie avec `DATA_FLUSH_INTERVAL_SECONDS`. La valeur par défaut de 900 secondes (15 minutes) représente un équilibre optimal entre les performances de capture de requête et la disponibilité des données.  
-En cas de sollicitation de la mémoire, les statistiques d'exécution peuvent être vidées sur le disque plus tôt que ce qui est défini avec `DATA_FLUSH_INTERVAL_SECONDS`.  
+ Si le système se plante, le Magasin des requêtes peut perdre des données d’exécution jusqu’à la quantité définie avec `DATA_FLUSH_INTERVAL_SECONDS`. La valeur par défaut de 900 secondes (15 minutes) représente un équilibre optimal entre les performances de capture de requête et la disponibilité des données.  
+Si le système est soumis à une sollicitation élevée de la mémoire, les statistiques d’exécution peuvent être vidées sur le disque plus tôt que ce qui est défini avec `DATA_FLUSH_INTERVAL_SECONDS`.  
 Lors de la lecture des données du magasin de requêtes, les données en mémoire et sur disque sont unifiées en toute transparence.
-En cas d’interruption de la session ou de blocage/redémarrage de l’application cliente, les statistiques sur les requêtes ne sont pas enregistrées.  
+Si une session est arrêtée ou que l’application cliente redémarre ou se plante, les statistiques de requêtes ne seront pas enregistrées.  
   
  ![query-store-process-4planinfo](../../relational-databases/performance/media/query-store-process-4planinfo.png "query-store-process-4planinfo")    
 

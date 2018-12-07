@@ -5,8 +5,7 @@ ms.date: 11/08/2011
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.dm.values.f1
@@ -14,12 +13,12 @@ ms.assetid: 8c90ab70-3aea-4eaf-a174-4159485c87d3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 21e2f8c20e4a1fcaadeb8747ed2f9fde29d9c10b
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: e9a804f90b3e318c9cfd665502b8f3349bf16ce7
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699919"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617589"
 ---
 # <a name="change-domain-values"></a>Modifier les valeurs de domaine
 
@@ -69,13 +68,13 @@ ms.locfileid: "51699919"
   
 4.  Affichez les valeurs que vous devez modifier dans la table **Valeur** . Pour plus d'informations, consultez [How to Display the Appropriate Values](#Display) ci-dessous.  
   
-5.  Pour modifier l'état d'une valeur, procédez comme suit :  
+5.  Pour modifier l’état d’une valeur, effectuez les étapes suivantes :  
   
-    -   **Définir les valeurs du domaine sélectionné en tant que valeurs corrigées**: pour modifier l'état d'une valeur erronée ou non valide en correcte, sélectionnez la valeur, puis cliquez sur **Définir les valeurs du domaine sélectionné en tant que valeurs corrigées** (coche) à partir de la flèche vers le bas de la barre d'icônes ou de la liste déroulante Type. Si la valeur erronée ou non valide est regroupée avec une valeur correcte, supprimez cette valeur après l'opération.  
+    -   **Définir les valeurs du domaine sélectionné en tant que valeurs corrigées** : pour modifier l’état d’une valeur erronée ou non valide en correcte, sélectionnez la valeur, puis cliquez sur **Définir les valeurs du domaine sélectionné en tant que valeurs corrigées** (coche) à partir de la flèche vers le bas de la barre d’icônes ou de la liste déroulante Type. Si la valeur erronée ou non valide est regroupée avec une valeur correcte, supprimez cette valeur après l'opération.  
   
-    -   **Définir les valeurs du domaine sélectionné en tant qu'erreurs**: pour modifier l'état d'une valeur correcte ou non valide en erronée, sélectionnez la valeur, puis cliquez sur l'icône **Définir les valeurs du domaine sélectionné en tant qu'erreurs** (croix) à partir de la flèche vers le bas de la barre d'icônes ou de la liste déroulante Type. Vous pouvez entrer une correction dans la colonne **Corriger vers** , ou la laisser vide.  
+    -   **Définir les valeurs du domaine sélectionné en tant qu’erreurs** : pour modifier l’état d’une valeur correcte ou non valide en erronée, sélectionnez la valeur, puis cliquez sur l’icône **Définir les valeurs du domaine sélectionné en tant qu’erreurs** (croix) à partir de la flèche vers le bas de la barre d’icônes ou de la liste déroulante Type. Vous pouvez entrer une correction dans la colonne **Corriger vers** , ou la laisser vide.  
   
-    -   **Définir les valeurs du domaine sélectionné en tant que valeurs non valides**: pour modifier l'état d'une valeur correcte ou erronée en non valide, sélectionnez la valeur, puis cliquez sur l'icône **Définir les valeurs du domaine sélectionné en tant que valeurs non valides** (triangle) à partir de la flèche vers le bas de la barre d'icônes ou de la liste déroulante Type. Vous pouvez entrer une correction dans la colonne **Corriger vers** , ou la laisser vide.  
+    -   **Définir les valeurs du domaine sélectionné en tant que valeurs non valides** : pour modifier l’état d’une valeur correcte ou erronée en non valide, sélectionnez la valeur, puis cliquez sur l’icône **Définir les valeurs du domaine sélectionné en tant que valeurs non valides** (triangle) à partir de la flèche vers le bas de la barre d’icônes ou de la liste déroulante Type. Vous pouvez entrer une correction dans la colonne **Corriger vers** , ou la laisser vide.  
   
     -   **Corriger vers**: après avoir défini une valeur comme erronée ou non valide, entrez une nouvelle valeur dans la colonne **Corriger vers** . DQS ajoute une nouvelle ligne pour la valeur de remplacement, l'indique comme correcte, puis regroupe les deux valeurs. La nouvelle valeur sera affichée comme valeur de début, avec la valeur de début en gras et la valeur erronée ou non valide mise en retrait.  
   
@@ -111,11 +110,11 @@ ms.locfileid: "51699919"
 ##  <a name="Meaning"></a> Signification des valeurs correctes, erronées et non valides  
  Chaque valeur de la table **Valeur** de la page **Valeurs du domaine** se voit affecter un paramètre **Type** égal à **Correcte**, **Erronée**ou **Non valide**. Le type de la valeur est généré initialement par l'activité de découverte des connaissances, et vous pouvez le modifier à votre convenance. Le type final, basé sur la découverte et les modifications interactives, est généré par l'activité de nettoyage. Ces valeurs ont les significations suivantes :  
   
--   **Correcte** : valeur qui appartient au domaine et ne comporte aucune erreur de syntaxe. Par exemple, « Chicago » dans le champ « Ville » est une valeur correcte.  
+-   **Correcte** : valeur qui appartient au domaine et ne comporte aucune erreur de syntaxe. Par exemple, « Chicago » dans le champ « Ville » est une valeur correcte.  
   
--   **Erreur** : valeur qui appartient au domaine, mais qui est incorrecte. Par exemple, « Shicago » au lieu de « Chicago » dans « Ville » est une erreur. DQS indique une valeur comme erronée s'il détecte une erreur de syntaxe et une correction associée dans le processus de découverte. Les erreurs de syntaxe incluent les fautes d'orthographe.  
+-   **Erreur** : valeur qui appartient au domaine, mais qui est incorrecte. Par exemple, « Shicago » au lieu de « Chicago » dans « Ville » est une erreur. DQS indique une valeur comme erronée s'il détecte une erreur de syntaxe et une correction associée dans le processus de découverte. Les erreurs de syntaxe incluent les fautes d'orthographe.  
   
--   **Non valide** : valeur qui n'appartient pas au domaine et qui n'a pas de correction. Par exemple, la valeur « 12345 » dans un champ « Ville » n'est pas valide. DQS indique une valeur comme non valide quand elle ne respecte pas une règle de domaine.  
+-   **Non valide** : valeur qui n'appartient pas au domaine et qui n'a pas de correction. Par exemple, la valeur « 12345 » dans un champ « Ville » n’est pas valide. DQS indique une valeur comme non valide quand elle ne respecte pas une règle de domaine.  
   
  Vous pouvez modifier manuellement le type d'une valeur en l'une des deux autres valeurs. DQS n'applique pas la sémantique de validation et d'erreur sur les opérations manuelles. Vous pouvez écrire une correction pour une valeur valide sans modifier son état. Vous pouvez désigner une valeur comme non valide même si elle respecte une règle de domaine. Vous pouvez désigner une valeur comme erronée même si le processus de découverte n'indique pas d'erreur de syntaxe. Vous pouvez également supprimer une correction d'une valeur erronée, marquée comme correcte, sans modifier son état.  
   

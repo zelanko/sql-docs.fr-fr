@@ -1,7 +1,7 @@
 ---
 title: Analyse des performances à l’aide du Magasin des requêtes | Microsoft Docs
 ms.custom: ''
-ms.date: 07/23/2018
+ms.date: 11/29/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,15 +15,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1c8daab3f7a68ee846d8f02012d572a1687058cc
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: e36a66564564bb468592df491e12d97a87d5dc4b
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673328"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711500"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Surveillance des performances à l’aide du magasin de requêtes
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   La fonctionnalité de magasin de requêtes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vous fournit des informations sur le choix de plan de requête et sur les performances. Elle simplifie la résolution des problèmes de performances en vous permettant de trouver rapidement les différences de performances provoquées par des changements de plan de requête. Le magasin de requête capture automatiquement l'historique des requêtes, des plans et des statistiques d'exécution et les conserve à des fins de révision. Elle sépare les données en périodes, ce qui vous permet de voir les modèles d'utilisation de base de données et de comprendre à quel moment les changements de plan de requête ont eu lieu sur le serveur. Vous pouvez configurer le magasin de requêtes à l’aide de l’option [ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md) . 
   
@@ -101,18 +101,30 @@ INNER JOIN sys.query_store_query_text AS Txt
 ```  
  
 ##  <a name="Regressed"></a> Utiliser la fonctionnalité des requêtes régressées  
- Après avoir activé le Magasin des requêtes, actualisez la partie de la base de données du volet de l'Explorateur d'objets pour ajouter la section **Magasin des requêtes** .  
+Après avoir activé le Magasin des requêtes, actualisez la partie de la base de données du volet de l'Explorateur d'objets pour ajouter la section **Magasin des requêtes** .  
   
- ![Arborescence du Magasin des requêtes de l’Explorateur d’objets](../../relational-databases/performance/media/objectexplorerquerystore.PNG "Arborescence du Magasin des requêtes de l’Explorateur d’objets")  
+![Arborescence du Magasin des requêtes SQL Server 2016 dans l’Explorateur d’objets SSMS](../../relational-databases/performance/media/objectexplorerquerystore.PNG "Arborescence du Magasin des requêtes SQL Server 2016 dans l’Explorateur d’objets SSMS")   ![Arborescence du Magasin des requêtes SQL Server 2017 dans l’Explorateur d’objets SSMS](../../relational-databases/performance/media/objectexplorerquerystore_sql17.PNG "Arborescence du Magasin des requêtes SQL Server 2017 dans l’Explorateur d’objets SSMS") 
   
- Sélectionnez **Requêtes régressées** pour ouvrir le volet **Requêtes régressées** dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Le volet Requêtes régressées affiche les requêtes et les plans du magasin de requêtes. Utilisez les listes déroulantes situées en haut du volet vous permettent de sélectionner les requêtes selon différents critères. Sélectionnez un plan pour afficher le plan de requête sous forme graphique. Des boutons permettent d'afficher la requête source, de forcer un plan de requête et d’annuler son application forcée, ainsi que d'actualiser l'affichage.  
+Sélectionnez **Requêtes régressées** pour ouvrir le volet **Requêtes régressées** dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Le volet Requêtes régressées affiche les requêtes et les plans du magasin de requêtes. Utilisez les zones de liste déroulante en haut pour filtrer les requêtes en fonction de différents critères : **Durée (ms)** (par défaut), Temps processeur (ms), Lectures logiques (Ko), Écritures logique (Ko), Lectures physiques (Ko), Temps CLR (ms), DOP, Consommation de mémoire (Ko), Nombre de lignes, Mémoire utilisée par la journalisation (Ko), Mémoire utilisée par la base de données temporaire (Ko) et Temps d’attente (ms).  
+Sélectionnez un plan pour afficher le plan de requête sous forme graphique. Des boutons sont disponibles pour afficher la requête source, forcer et désactiver l’application forcée d’un plan de requête, basculer entre les formats de grille et de graphique, comparer des plans sélectionnés (si plusieurs plans sont sélectionnés) et actualiser l’affichage.  
   
- ![Requêtes de régression de l’Explorateur d’objets](../../relational-databases/performance/media/objectexplorerregressedqueries.PNG "Requêtes de régression de l’Explorateur d’objets")  
+![Requêtes régressées SQL Server 2016 dans l’Explorateur d’objets SSMS](../../relational-databases/performance/media/objectexplorerregressedqueries.PNG "Requêtes régressées SQL Server 2016 dans l’Explorateur d’objets SSMS")  
   
- Pour forcer un plan, sélectionnez une requête et un plan, puis cliquez sur **Forcer le plan.** Vous pouvez uniquement forcer des plans qui ont été enregistrés par la fonctionnalité de plan de requête et sont toujours conservés dans le cache du plan de requête.  
+Pour forcer un plan, sélectionnez une requête et un plan, puis cliquez sur **Forcer le plan.** Vous pouvez uniquement forcer des plans qui ont été enregistrés par la fonctionnalité de plan de requête et sont toujours conservés dans le cache du plan de requête.
+
 ##  <a name="Waiting"></a> Recherche de requêtes d’attente
 
-À partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CTP 2.0 et [!INCLUDE[ssSDS](../../includes/sssds-md.md)], des statistiques d’attente par requête sur la durée sont disponibles dans le Magasin des requêtes. Dans le Magasin des requêtes, les types d’attente sont combinés en **catégories d’attente**. Vous trouverez dans [sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md#wait-categories-mapping-table) une correspondance entre les catégories d’attente et les types d’attente.
+À partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CTP 2.0 et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], des statistiques d’attente par requête sur la durée sont disponibles dans le Magasin des requêtes. Dans le Magasin des requêtes, les types d’attente sont combinés en **catégories d’attente**. Vous trouverez dans [sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md#wait-categories-mapping-table) une correspondance entre les catégories d’attente et les types d’attente.
+
+Sélectionnez **Statistiques d’attente des requêtes** pour ouvrir le volet **Statistiques d’attente des requêtes** dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18 ou version ultérieure. Le volet Statistiques d’attente des requêtes contient un graphique à barres qui indique les principales catégories d’attente dans le Magasin des requêtes. Utilisez la liste déroulante en haut pour sélectionner un critère d’agrégation pour le temps d’attente : moy, max, min, écart type et **total** (valeur par défaut).
+
+ ![Statistiques d’attente des requêtes SQL Server 2017 dans l’Explorateur d’objets SSMS](../../relational-databases/performance/media/query-store-waits.PNG "Statistiques d’attente des requêtes SQL Server 2017 dans l’Explorateur d’objets SSMS")
+
+Sélectionnez une catégorie d’attente en cliquant sur la barre. Un affichage détaillé de la catégorie d’attente sélectionnée apparaît. Ce nouveau graphique à barres contient les requêtes qui ont contribué à cette catégorie d’attente. 
+  
+ ![Affichage détaillé des Statistiques d’attente des requêtes SQL Server 2017 dans l’Explorateur d’objets SSMS](../../relational-databases/performance/media/query-store-waits-detail.PNG "Affichage détaillé des Statistiques d’attente des requêtes SQL Server 2017 dans l’Explorateur d’objets SSMS")
+
+Utilisez la zone de liste déroulante en haut pour filtrer les requêtes en fonction de différents critères de temps d’attente pour la catégorie d’attente sélectionnée : moy, max, min, écart type et **total** (valeur par défaut). Sélectionnez un plan pour afficher le plan de requête sous forme graphique. Des boutons permettent d'afficher la requête source, de forcer un plan de requête et d’annuler son application forcée, ainsi que d'actualiser l'affichage.  
 
 Les **catégories d’attente** combinent différents types d’attente dans des compartiments similaires par nature. Différentes catégories d’attente nécessitent une analyse de suivi différente pour résoudre le problème, mais les types d’attente d’une même catégorie entraînent des expériences de résolution de problèmes très similaires à condition que la requête affectée au dessus des attentes soit l’élément manquant de la plupart de ces expériences.
 
@@ -127,7 +139,6 @@ Voici quelques exemples vous permettant d’obtenir plus d’insights sur votre 
 |Attentes élevées de SOS_SCHEDULER_YIELD par base de données|Attentes élevées du processeur dans le Magasin des requêtes pour des requêtes spécifiques|Recherchez les requêtes les plus consommatrices de processeur dans le Magasin des requêtes. Parmi elles, identifiez celles pour lesquelles la tendance de processeur élevé correspond aux attentes élevées de processeur pour les requêtes concernées. Concentrez-vous sur l’optimisation de ces requêtes : il peut y avoir une régression de plan ou peut-être un index manquant.|
 
 ##  <a name="Options"></a> Options de configuration 
-
 Les options suivantes sont disponibles pour configurer les paramètres du magasin de requête.
 
 *OPERATION_MODE*  
@@ -555,19 +566,23 @@ OPTION (MERGE JOIN);
 ```  
  
 ###  <a name="Stability"></a> Maintien de la stabilité des performances des requêtes  
- Pour les requêtes exécutées plusieurs fois, vous pouvez remarquer que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise différents plans, ce qui entraîne une utilisation des ressources et une durée différentes. Le magasin de requêtes permet de détecter le moment où les performances des requêtes ont régressé et de déterminer le plan optimal dans un délai donné. Vous pouvez ensuite forcer l'application de ce plan optimal pour l'exécution de requêtes ultérieures.  
+Pour les requêtes exécutées plusieurs fois, vous pouvez remarquer que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise différents plans, ce qui entraîne une utilisation des ressources et une durée différentes. Le magasin de requêtes permet de détecter le moment où les performances des requêtes ont régressé et de déterminer le plan optimal dans un délai donné. Vous pouvez ensuite forcer l'application de ce plan optimal pour l'exécution de requêtes ultérieures.  
   
- Vous pouvez également identifier les performances de requêtes incohérentes avec des paramètres (définis manuellement ou automatiquement). Parmi les différents plans, vous pouvez identifier le plan qui est suffisamment rapide et optimal pour la totalité ou la plupart des valeurs de paramètre et forcer ce plan, en maintenant ainsi des performances prévisibles pour un ensemble plus large de scénarios utilisateur.  
+Vous pouvez également identifier les performances de requêtes incohérentes avec des paramètres (définis manuellement ou automatiquement). Parmi les différents plans, vous pouvez identifier le plan qui est suffisamment rapide et optimal pour la totalité ou la plupart des valeurs de paramètre et forcer ce plan, en maintenant ainsi des performances prévisibles pour un ensemble plus large de scénarios utilisateur.  
   
- **Forcer un plan pour une requête (appliquer une stratégie de forçage).** Lorsqu'un plan est forcé pour une requête donnée, chaque fois qu'une requête est exécutée, elle l'est avec le plan forcé.  
-  
+ ### <a name="force-a-plan-for-a-query-apply-forcing-policy"></a>Forcer un plan pour une requête (appliquer une stratégie de forçage)
+
+Quand un plan est forcé pour une requête donnée, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tente de forcer le plan dans l’optimiseur. Si le forçage de plan échoue, un XEvent est déclenché et l’optimiseur est tenu d’optimiser de façon normale.
+
 ```sql  
 EXEC sp_query_store_force_plan @query_id = 48, @plan_id = 49;  
 ```  
   
- Quand vous utilisez **sp_query_store_force_plan** , vous pouvez uniquement forcer des plans qui ont été enregistrés par le magasin de requêtes en tant que plan pour cette requête. En d'autres termes, les plans disponibles pour une requête sont uniquement ceux qui ont déjà été utilisés pour exécuter cette requête lorsque le magasin de requêtes était actif.  
+Quand vous utilisez **sp_query_store_force_plan** , vous pouvez uniquement forcer des plans qui ont été enregistrés par le magasin de requêtes en tant que plan pour cette requête. En d'autres termes, les plans disponibles pour une requête sont uniquement ceux qui ont déjà été utilisés pour exécuter cette requête lorsque le magasin de requêtes était actif.  
   
- **Supprimer l’application forcée du plan pour une requête.** Pour vous appuyer à nouveau sur l’optimiseur de requête [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour calculer le plan de requête optimal, utilisez **sp_query_store_unforce_plan** pour annuler l’application forcée du plan qui était sélectionné pour la requête.  
+### <a name="remove-plan-forcing-for-a-query"></a>Annuler l’application forcée du plan pour une requête
+
+Pour vous appuyer à nouveau sur l’optimiseur de requête [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour calculer le plan de requête optimal, utilisez **sp_query_store_unforce_plan** pour annuler l’application forcée du plan qui était sélectionné pour la requête.  
   
 ```sql  
 EXEC sp_query_store_unforce_plan @query_id = 48, @plan_id = 49;  

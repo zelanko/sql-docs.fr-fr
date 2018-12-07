@@ -8,12 +8,12 @@ ms.assetid: c2804a9a-08ea-4f4a-805d-a2c19c68733d
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 6b6abe93a63e24a2526da7b29caeb469db0c1750
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: 55c88749d84290636fd6a9fc3ac3866f5499450f
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50051171"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711610"
 ---
 # <a name="install-or-uninstall-the-reporting-services-add-in-for-sharepoint"></a>Installer ou désinstaller le complément Reporting Services pour SharePoint
 
@@ -51,7 +51,7 @@ ms.locfileid: "50051171"
 ##  <a name="bkmk_3ways_to_install"></a> Vue d'ensemble des méthodes d'installation  
  Le complément SQL Server 2016 Reporting Services pour les produits SharePoint peut être installé en utilisant l’une des deux méthodes suivantes :  
   
--   **Assistant Installation :** ![remarque](../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "remarque")Nouveauté de SQL Server 2016, le complément peut être installé par l’Assistant Installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Choisissez **Complément Reporting Services pour les produits SharePoint** dans la page **Sélection de fonctionnalités** de l’Assistant.  
+-   **Assistant Installation :** ![remarque](../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "remarque")Dans SQL Server 2016, le complément peut être installé par l’Assistant Installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Choisissez **Complément Reporting Services pour les produits SharePoint** dans la page **Sélection de fonctionnalités** de l’Assistant.  
   
 -   **rsSharepoint.msi :** le complément peut être installé directement à partir du support d’installation ou téléchargé et installé. Le fichier rsSharepoint.msi prend en charge à la fois une interface utilisateur graphique et une installation à partir de la ligne de commande. Vous devez exécuter le fichier .msi avec les privilèges d'administrateur ; pour ce faire, commencez par ouvrir une fenêtre d'invite de commandes avec des autorisations élevées, puis exécutez rsSharepoint.msi à partir de la ligne de commande. Pour plus d’informations sur le téléchargement du complément, consultez [Où trouver le complément Reporting Services pour les produits SharePoint](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
   
@@ -114,7 +114,7 @@ Rssharepoint.msi /?
     3.  Le temps requis pour que les modifications soient appliquées peut varier, selon votre environnement serveur. Vous pouvez également exécuter **iisreset** pour forcer une mise à jour plus rapide.  
   
 ### <a name="quiet-installation-for-scripting"></a>Installation silencieuse de script  
- Vous pouvez utiliser le commutateur **/q** ou **/quiet** pour une installation « silencieuse » qui n’affiche pas de boîtes de dialogue ni d’avertissements. L'installation silencieuse est utile si vous souhaitez écrire un script d'installation du complément.  
+ Vous pouvez utiliser le commutateur **/q** ou **/quiet** pour une installation « silencieuse » qui n’affiche pas de boîtes de dialogue ni d’avertissements. L'installation silencieuse est utile si vous souhaitez écrire un script d'installation du complément.  
   
 > [!NOTE]  
 >  Si vous utilisez le commutateur **/q** pour une installation silencieuse à partir de la ligne de commande, le Contrat de Licence Utilisateur Final ne sera pas affiché. Quelle que soit la méthode d'installation, l'utilisation de ce logiciel est régie par un contrat de licence et vous devez respecter les termes contractuels de ce contrat.  
@@ -234,13 +234,13 @@ Rssharepoint.msi /?
   
 #### <a name="view-a-log-file-with-powershell"></a>Afficher un journal avec PowerShell  
   
-1.  Tapez la commande suivante à partir de SharePoint Management Shell pour retourner une liste filtrée des lignes du fichier, qui contiennent « ssrscustomactionerror » :  
+1.  Tapez la commande suivante à partir de SharePoint Management Shell pour retourner une liste filtrée des lignes du fichier, qui contiennent « ssrscustomactionerror » :  
   
     ```  
     Get-content -path C:\Users\<UserName\AppData\Local\Temp\rs_sp_0.log | select-string "ssrscustomactionerror"  
     ```  
   
-2.  La sortie ressemble à l'exemple suivant :  
+2.  La sortie ressemble à l'exemple suivant :  
   
      `2011-05-23 12:40:12: SSRSCustomActionError: SharePoint is installed, but not configured`.  
   

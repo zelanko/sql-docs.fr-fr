@@ -5,19 +5,18 @@ ms.date: 10/01/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: fe66d098-bec3-4258-b42a-479ae460feb3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d2f587ce68a05e8c09438323d8ce3bc75bb3d2ed
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0464dc24bcb2842c822ac2b2a38e19283b428ad2
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702127"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617359"
 ---
 # <a name="data-matching"></a>Correspondance de données
 
@@ -69,7 +68,7 @@ ms.locfileid: "47702127"
   
  Un projet de correspondance des données se compose d'un processus assisté par ordinateur et d'un processus interactif. Le projet de correspondance applique les règles de correspondance de la stratégie de correspondance à la source de données à évaluer. Ce processus évalue la probabilité que deux lignes soient des correspondances dans un score de correspondance. Seuls les enregistrements ayant une probabilité de correspondance supérieure à une valeur définie par le gestionnaire de données dans la stratégie de correspondance sont considérés comme une correspondance.  
   
- Lorsque DQS exécute l'analyse de correspondance, il crée des clusters des enregistrements qu'il considère comme des correspondances. DQS identifie de façon aléatoire un des enregistrements de chaque cluster comme l'enregistrement pivot, ou principal. Le gestionnaire de données vérifie les résultats de correspondance, puis refuse tout enregistrement qui n'est pas une correspondance appropriée pour un cluster. Le gestionnaire de données sélectionne ensuite une règle de survivance que DQS utilise pour déterminer l'enregistrement qui survivra au processus de correspondance et remplacer les enregistrements correspondants. La règle de survivance peut être « Enregistrement pivot » (par défaut), « Enregistrement le plus complet et le plus long », « Enregistrement le plus complet » ou « Enregistrement le plus long ». DQS détermine l'enregistrement survivant (principal) de chaque cluster en fonction de l'enregistrement se rapprochant le plus du ou des critères dans la règle de survivance. Si plusieurs enregistrements d'un cluster donné respectent à la règle de survivance, DQS sélectionne l'un de ces enregistrements de façon aléatoire. DQS vous donne la possibilité d'afficher les clusters qui ont des enregistrements en commun sous la forme d'un seul cluster en sélectionnant « Afficher les clusters qui ne se chevauchent pas ». Vous devez exécuter le processus de correspondance pour afficher les résultats en fonction de ce paramètre.  
+ Lorsque DQS exécute l'analyse de correspondance, il crée des clusters des enregistrements qu'il considère comme des correspondances. DQS identifie de façon aléatoire un des enregistrements de chaque cluster comme l'enregistrement pivot, ou principal. Le gestionnaire de données vérifie les résultats de correspondance, puis refuse tout enregistrement qui n'est pas une correspondance appropriée pour un cluster. Le gestionnaire de données sélectionne ensuite une règle de survivance que DQS utilise pour déterminer l'enregistrement qui survivra au processus de correspondance et remplacer les enregistrements correspondants. La règle de survivance peut être « Enregistrement pivot » (par défaut), « Enregistrement le plus complet et le plus long », « Enregistrement le plus complet » ou « Enregistrement le plus long ». DQS détermine l'enregistrement survivant (principal) de chaque cluster en fonction de l'enregistrement se rapprochant le plus du ou des critères dans la règle de survivance. Si plusieurs enregistrements d'un cluster donné respectent à la règle de survivance, DQS sélectionne l'un de ces enregistrements de façon aléatoire. DQS vous donne la possibilité d’afficher les clusters qui ont des enregistrements en commun sous la forme d’un seul cluster en sélectionnant « Afficher les clusters qui ne se chevauchent pas ». Vous devez exécuter le processus de correspondance pour afficher les résultats en fonction de ce paramètre.  
   
  Vous pouvez exporter les résultats du processus de correspondance vers une table SQL Server ou vers un fichier .csv. Vous pouvez exporter les résultats de correspondance sous deux formes : soit les enregistrements à correspondance et les enregistrements sans correspondance, soit les enregistrements survivants qui incluent uniquement l'enregistrement survivant d'un cluster et les résultats sans correspondances. Dans les enregistrements survivants, si le même enregistrement est identifié en tant que survivant pour plusieurs clusters, cet enregistrement ne sera exporté qu'une seule fois.  
   

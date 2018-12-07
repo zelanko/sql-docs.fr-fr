@@ -5,19 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 7d1076e0-7710-469a-9107-e293e4bd80ac
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d201f4cd41acb71a1b6502e0a6dd2b2d27ceb9f4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5c25c25223f660f4e5a71897bf599b986135bf7a
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47754647"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617431"
 ---
 # <a name="cleanse-data-in-a-composite-domain"></a>Nettoyer les données dans un domaine composite
 
@@ -43,7 +42,7 @@ ms.locfileid: "47754647"
   
  Prenons l'exemple suivant : il existe un domaine composite, Product, avec trois domaines individuels : ProductName, CompanyName et ProductVersion. Créez la règle entre domaines définitive suivante :  
   
- SI la valeur « CompanyName » du domaine contient *Microsoft* , que la valeur « ProductName » du domaine est égale à *Office* et que la valeur « ProductVersion » est égale à *2010* , ALORS la valeur « ProductName » du domaine est égale à *Microsoft Office 2010*.  
+ SI la valeur « CompanyName » du domaine contient *Microsoft*, que la valeur « ProductName » du domaine est égale à *Office* et que la valeur « ProductVersion » est égale à *2010*, ALORS la valeur « ProductName » du domaine est égale à *Microsoft Office 2010*.  
   
  Lorsque cette règle entre domaines s'exécute, les données sources (ProductName) sont remplacées par ce qui suit après l'activité de nettoyage :  
   
@@ -59,7 +58,7 @@ ms.locfileid: "47754647"
 |-----------------|-----------------|--------------------|  
 |Microsoft Office 2010|Microsoft Inc.|2010|  
   
- Lorsque vous testez la règle entre domaines *Then* définitive, **La valeur est égale à**, la boîte de dialogue **Tester la règle de domaine composite** contient une nouvelle colonne, **Corriger vers**, qui affiche les données correctes. Dans un projet de qualité des données de nettoyage, cette règle entre domaines définitive modifie les données avec un niveau de confiance de 100 % et la colonne **Raison** affiche le message suivant : Corrigé par la règle «*\<Nom de la règle entre domaines>*. Pour plus d'informations sur les règles entre domaines, consultez [Create a Cross-Domain Rule](../data-quality-services/create-a-cross-domain-rule.md).  
+ Lorsque vous testez la règle entre domaines *Then* définitive, **La valeur est égale à**, la boîte de dialogue **Tester la règle de domaine composite** contient une nouvelle colonne, **Corriger vers**, qui affiche les données correctes. Dans un projet de qualité de nettoyage des données, cette règle inter-domaines définitive modifie les données avec un niveau de confiance de 100 % et la colonne **Raison** affiche le message suivant : Corrigé par la règle « *\<Nom de la règle inter-domaines>*  ». Pour plus d'informations sur les règles entre domaines, consultez [Create a Cross-Domain Rule](../data-quality-services/create-a-cross-domain-rule.md).  
   
 > [!NOTE]  
 >  La règle entre domaines définitive ne fonctionne pas pour les domaines composites joints au service de données de référence.  

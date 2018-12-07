@@ -21,12 +21,12 @@ ms.assetid: f3059e42-5f6f-4a64-903c-86dca212a4b4
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: e219907601a7c517c7fb7f53bb301bee14b06e6b
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 52149ae289f0cea89ff31a501acaaf8d0c7cbd3e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703647"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545621"
 ---
 # <a name="alter-server-configuration-transact-sql"></a>ALTER SERVER CONFIGURATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -161,11 +161,11 @@ SET <optionspec>
  VERBOSE LOGGING = { 'logging_detail' | DEFAULT }  
  Définit le niveau de journalisation pour le clustering de basculement SQL Server. Il peut être activé pour fournir des détails supplémentaires dans les journaux des erreurs à des fins de dépannage.  
   
--   0 – La journalisation est désactivée (valeur par défaut)  
+-   0 - La journalisation est désactivée (valeur par défaut)  
   
 -   1 - Erreurs uniquement  
   
--   2 – Erreurs et avertissements  
+-   2 - Erreurs et avertissements  
   
 SQLDUMPEREDUMPFLAGS  
  Détermine le type de fichiers dump généré par l'utilitaire SQL Server SQLDumper. Le paramètre par défaut est 0. Pour plus d’informations, consultez [l’article de la base de connaissances consacré à l’utilitaire SQL Server Dumper](https://go.microsoft.com/fwlink/?LinkId=206173).  

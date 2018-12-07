@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 312c6bb8-b3f7-4142-a55f-c69ee15bbf52
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b3cb1aef270d2fb512d6234227b5ed6ab8b09a51
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: e997b12f84189ac738c5a93b513d19696beb6c10
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51812862"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52710790"
 ---
 # <a name="configure-a-native-mode-report-server-for-local-administration-ssrs"></a>Configurer un serveur de rapports en mode natif pour l'administration locale (SSRS)
-  Le déploiement d'un serveur de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sur l'un des systèmes d'exploitation suivants requiert davantage d'étapes de configuration si vous souhaitez administrer l'instance du serveur de rapports localement. Cette rubrique explique comment configurer le serveur de rapports pour l'administration locale. Si vous n’avez pas encore installé ou configuré le serveur de rapports, consultez [Installer SQL Server 2016 avec l’Assistant Installation &#40;programme d’installation&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) et [Gérer un serveur de rapports Reporting Services (SSRS) en mode natif](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md).  
+  Le déploiement d'un serveur de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sur l'un des systèmes d'exploitation suivants requiert davantage d'étapes de configuration si vous souhaitez administrer l'instance du serveur de rapports localement. Cette rubrique explique comment configurer le serveur de rapports pour l'administration locale. Si vous n’avez pas encore installé ou configuré le serveur de rapports, consultez [Installer SQL Server avec l’Assistant Installation &#40;programme d’installation&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) et [Gérer un serveur de rapports Reporting Services (SSRS) en mode natif](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md).  
   
 ||  
 |-|  
@@ -160,7 +160,7 @@ ms.locfileid: "51812862"
   
 -   Lorsque vous tentez de déployer des éléments de rapport sur le serveur de rapports local, vous voyez un message d'erreur similaire au suivant dans la fenêtre **Liste d'erreurs** :  
   
-    -   Les autorisations accordées à l’utilisateur « Domaine\\<nom utilisateur\> » sont insuffisantes pour vous permettre d’accomplir cette opération.  
+    -   Les autorisations accordées à l’utilisateur « Domaine\\<nom utilisateur\> » sont insuffisantes pour effectuer cette opération.  
   
  **Pour exécuter avec des autorisations élevées chaque fois que vous ouvrez SSDT :**  
   

@@ -1,7 +1,7 @@
 ---
 title: Télécharger SQL Server Management Studio (SSMS) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/16/2018
+ms.date: 11/22/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -24,12 +24,12 @@ ms.assetid: adafeeef-4255-4924-8042-02f503d599ca
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d36dd71c7b67b079f2a87ca2875412a38f14aa93
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: efc8c7ec6408e2f6c5fe7fb2262d581e82c4b1b9
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699432"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712080"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>Télécharger SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -43,20 +43,29 @@ Utilisez SQL Server Management Studio (SSMS) pour interroger, concevoir et gére
 
 **SSMS est gratuit !**
 
-**[La préversion publique 5 de SSMS 18.0, maintenant disponible](#ssms-180-preview-5), est la dernière génération de *SQL Server Management Studio* et offre une prise en charge de [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] !**
+**[La préversion publique 5 de SSMS 18.0 est maintenant disponible](#ssms-180-preview-5). Il s’agit de la dernière génération de *SQL Server Management Studio*, qui offre une prise en charge de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].**
 
-## <a name="ssms-179-is-the-current-general-availability-ga-version-of-ssms"></a>SSMS 17.9 est la version en disponibilité générale actuelle de SSMS
+## <a name="ssms-1791-is-the-current-general-availability-ga-version-of-ssms"></a>SSMS 17.9.1 est la version en disponibilité générale actuelle de SSMS
 
-**[![télécharger](../ssdt/media/download.png) Télécharger SQL Server Management Studio 17.9](https://go.microsoft.com/fwlink/?linkid=2014306)**
-<br>**[![télécharger](../ssdt/media/download.png) Télécharger le package de mise à niveau SQL Server Management Studio 17.9 (met à niveau 17.x vers 17.9)](https://go.microsoft.com/fwlink/?linkid=2014215)**
+**[![télécharger](../ssdt/media/download.png) Télécharger SQL Server Management Studio 17.9.1](https://go.microsoft.com/fwlink/?linkid=2043154)**
+<br>**[![télécharger](../ssdt/media/download.png) Télécharger le package de mise à niveau SQL Server Management Studio 17.9.1 (met à niveau 17.x vers 17.9.1)](https://go.microsoft.com/fwlink/?linkid=2043430)**
 
-### <a name="available-languages-ssms-179"></a>Langues disponibles (SSMS 17.9)
+**Informations sur la version**
 
-[Chinois (simplifié)](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x804) | [Chinois (traditionnel)](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x404) | [Anglais (États-Unis)](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x409) | [Français](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x40c) | [Allemand](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x407) | [Italien](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x410) | [Japonais](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x411) | [Coréen](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x412) | [Portugais (Brésil)](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x416) | [Russe](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x419) | [Espagnol](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x40a)
+- Numéro de version : 17.9.1<br>
+- Numéro de build : 14.0.17289.0<br>
+- Date de publication : 21 novembre 2018
 
-Pour plus d’informations sur SSMS 17.9, consultez le [journal des modifications de SSMS 17.9](sql-server-management-studio-changelog-ssms.md#ssms-179-latest-ga-release).
+### <a name="available-languages-ssms-1791"></a>Langues disponibles (SSMS 17.9.1)
 
-## <a name="ssms-installation-tips-and-issues-ssms-179"></a>Problèmes et conseils pour l’installation de SSMS (SSMS 17.9)
+> [!NOTE]
+> Les versions non anglaises localisées de SSMS 17.x nécessitent la [mise à jour de sécurité KB 2862966](https://support.microsoft.com/kb/2862966) si l’installation est effectuée sur : Windows 8, Windows 7, Windows Server 2012 et Windows Server 2008 R2.
+
+[Chinois (simplifié)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x804) | [Chinois (traditionnel)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x404) | [Anglais (États-Unis)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x409) | [Français](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x40c) | [Allemand](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x407) | [Italien](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x410) | [Japonais](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x411) | [Coréen](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x412) | [Portugais (Brésil)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x416) | [Russe](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x419) | [Espagnol](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x40a)
+
+Pour plus d’informations sur SSMS 17.9.1, consultez le [journal des modifications de SSMS 17.9.1](sql-server-management-studio-changelog-ssms.md#ssms-1791-latest-ga-release).
+
+## <a name="ssms-installation-tips-and-issues-ssms-1791"></a>Problèmes et conseils pour l’installation de SSMS (SSMS 17.9.1)
 
 ### <a name="minimize-installation-reboots"></a>Réduire les redémarrages de l’installation
 
@@ -69,7 +78,7 @@ Pour plus d’informations sur SSMS 17.9, consultez le [journal des modificatio
 
 ## <a name="ssms-180-preview-5"></a>SSMS 18.0 (préversion 5)
 
-**La préversion publique 5 de SSMS 18.0, maintenant disponible, est la dernière génération de *SQL Server Management Studio* et offre une prise en charge de [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] !**
+**La préversion publique 5 de SSMS 18.0, maintenant disponible, est la dernière génération de *SQL Server Management Studio* et offre une prise en charge de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].**
 
 **[![télécharger](../ssdt/media/download.png) Télécharger SQL Server Management Studio 18.0 (préversion 5)](https://go.microsoft.com/fwlink/?linkid=2041155)**
 
@@ -111,7 +120,7 @@ Pour plus d’informations sur les nouveautés de cette version, consultez [le j
 
 ## <a name="supported-sql-offerings-ssms-180-preview-5"></a>Produits SQL pris en charge (préversion 5 de SSMS 18.0)
 
-* Cette version de SSMS fonctionne avec toutes les [versions prises en charge de SQL Server 2008 - [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)]](https://support.microsoft.com/lifecycle?C2=1044) et offre le meilleur niveau de prise en charge pour une utilisation des dernières fonctionnalités cloud d’Azure SQL Database et Azure SQL Data Warehouse.
+* Cette version de SSMS fonctionne avec toutes les [versions prises en charge de SQL Server 2008 - [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]](https://support.microsoft.com/lifecycle?C2=1044) et offre le meilleur niveau de prise en charge pour une utilisation des dernières fonctionnalités cloud d’Azure SQL Database et Azure SQL Data Warehouse.
 * Par ailleurs, SSMS 18.x peut être installé côte à côte avec SSMS 17.x, SSMS 16.x ou SSMS SQL Server 2014 et versions antérieures.
 * SQL Server Integration Services (SSIS) : SSMS version 17.x ou ultérieure ne prend pas en charge la connexion au service SQL Server Integration Services hérité. Pour vous connecter à une version antérieure du service Integration Services hérité, utilisez la version de SSMS alignée sur la version de SQL Server. Par exemple, utilisez SSMS 16.x pour vous connecter au service SQL Server 2016 Integration Services hérité. SSMS 17.x et SSMS 16.x peuvent être installés côte à côte sur le même ordinateur. Depuis la version de SQL Server 2012, la base de données du catalogue SSIS, SSISDB, est la méthode recommandée pour stocker, gérer, exécuter et surveiller des packages Integration Services. Pour plus d’informations, consultez [Catalogue SSIS](../integration-services/catalog/ssis-catalog.md).
 

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: a79003d0-c905-4d4c-9560-93a7cc1e1dd4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f980f4bb625fb0686911c7aa1cad28ca574faaf6
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 23227bc3b7863610a94998ebd4c69350edadd21b
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030948"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52710800"
 ---
 # <a name="configure-report-builder-access"></a>Configurer l'accès au Générateur de rapports
   Le Générateur de rapports est un outil de génération d’états ad hoc qui s’installe avec un serveur de rapports [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] configuré pour le mode natif ou pour le mode intégré SharePoint.  
@@ -33,7 +33,7 @@ ms.locfileid: "50030948"
  Pour utiliser le Générateur de rapports, vous devez disposer d'un modèle de rapport publié avec lequel travailler.  
   
 ## <a name="prerequisites"></a>Conditions préalables requises  
- Le Générateur de rapports n’est pas disponible dans toutes les éditions de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prise en charge par les éditions de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+ Le Générateur de rapports n’est pas disponible dans toutes les éditions de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prises en charge par les éditions de SQL Server 2017](~/sql-server/editions-and-components-of-sql-server-2017.md).  
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2.0 doit être installé sur l’ordinateur client. Le [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] fournit l’infrastructure permettant d’exécuter les applications [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] .  
   

@@ -6,12 +6,12 @@ ms.prod_service: reporting-services-native
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: dced97164a9ba37fe6a2f5102f109c4c3c4ac90f
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: 60ed9bf8c11dba87df9c41ed1caae0413ed32bc5
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50050898"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712220"
 ---
 # <a name="create-a-report-server-database"></a>Créer une base de données du serveur de rapports
 
@@ -43,7 +43,7 @@ ms.locfileid: "50050898"
   
  **Mode SharePoint :** la page d’options d’installation du serveur de rapports n’offre que l’option **Installer uniquement** pour le mode SharePoint. Cette option installe tous les fichiers [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ainsi que le service partagé [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . L'étape suivante consiste à créer au moins une application de service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de l'une des manières suivantes :  
   
--   Utilisez l'Administration centrale de SharePoint pour créer une application de service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Pour plus d’informations, consultez la section « Application de service » dans [Étape 3 : créer une application de service Reporting Services](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md#bkmk_create_serrviceapplication).  
+-   Utilisez l'Administration centrale de SharePoint pour créer une application de service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Pour plus d’informations, consultez la section « Application de service » dans [Étape 3 : créer une application de service Reporting Services](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md#bkmk_create_serrviceapplication).  
   
 -   Utilisez les applets de commande PowerShell [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour créer une application de service et les bases de données du serveur de rapports. Pour plus d’informations, consultez l’exemple pour la création d’applications de service dans la rubrique [Applets de commande PowerShell pour le mode SharePoint de Reporting Services](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md).  
   
@@ -66,7 +66,7 @@ ms.locfileid: "50050898"
 >  Le serveur de rapports et l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hébergeant la base de données du serveur de rapports peuvent appartenir à des domaines différents. Dans le cadre d'un déploiement Internet, il est courant d'utiliser un serveur situé derrière un pare-feu. Si vous configurez un serveur de rapports de manière à accéder à Internet, utilisez les informations d'identification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour vous connecter à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] située derrière le pare-feu et recourez à IPSEC pour sécuriser la connexion.  
   
 ## <a name="database-server-edition-requirements"></a>Conditions requises pour une édition du serveur de bases de données  
- Lors de la création d’une base de données de serveur de rapports, soyez conscient que certaines éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne peuvent pas être utilisées pour héberger la base de données. Pour plus d’informations, consultez [Conditions requises pour l’édition SQL Server de la base de données du serveur de rapports](../reporting-services-features-supported-by-the-editions-of-sql-server-2016.md#report-server-database-server-edition-requirements) dans [Fonctionnalités Reporting Services prises en charge par les éditions de SQL Server 2016](../reporting-services-features-supported-by-the-editions-of-sql-server-2016.md).  
+ Lors de la création d’une base de données de serveur de rapports, soyez conscient que certaines éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne peuvent pas être utilisées pour héberger la base de données. Pour plus d’informations, consultez [Conditions requises pour l’édition du serveur de base de données du serveur de rapports](../reporting-services-features-supported-by-the-editions-of-sql-server-2016.md#report-server-database-server-edition-requirements) dans [Fonctionnalités Reporting Services prises en charge par les éditions de SQL Server 2017](../reporting-services-features-supported-by-the-editions-of-sql-server-2016.md).  
 
 ## <a name="next-steps"></a>Étapes suivantes
 

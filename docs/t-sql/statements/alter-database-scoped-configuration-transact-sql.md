@@ -22,12 +22,12 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 7fa7bf2f5d315bda158ed45f3965fbc2a952fb00
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 744895bc3e2a60d8eb3edad4554f08bc1aaf6a95
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700297"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52641500"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -111,7 +111,7 @@ Cette valeur est valide uniquement pour les bases de données secondaires lorsqu
 
 PARAMETER_SNIFFING **=** { **ON** | OFF | PRIMARY}
 
-Active ou désactive la [détection de paramètres](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing). La valeur par défaut est ON. La définition du paramètre PARAMETER_SNIFFING sur ON équivaut à activer [l’indicateur de trace 4136](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
+Active ou désactive la [détection de paramètres](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing). La valeur par défaut est ON. La définition de PARAMETER_SNIFFING sur ON équivaut à activer [l’indicateur de trace 4136](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
 
 > [!TIP]
 > Pour définir cette option au niveau de la requête, utilisez [l’indicateur de requête](../../t-sql/queries/hints-transact-sql-query.md) **OPTIMIZE FOR UNKNOWN**.
@@ -121,7 +121,7 @@ PRIMARY
 
 Cette valeur est valide uniquement pour les bases de données secondaires lorsque la base de données est définie sur PRIMARY, et indique que, sur toutes les bases de données secondaires, ce paramètre est défini sur la valeur de la base de données primaire. Si la configuration de la [détection de paramètres](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing) est modifiée sur la base de données primaire, la valeur des bases de données secondaires est modifiée en conséquence, sans que vous ayez à la définir explicitement. PRIMARY est le paramètre par défaut des bases de données secondaires.
 
-QUERY_OPTIMIZER_HOTFIXES **=** { ON | **OFF** | PRIMARY }
+<a name="qo_hotfixes"></a> QUERY_OPTIMIZER_HOTFIXES **=** { ON | **OFF** | PRIMARY }
 
 Active ou désactive les correctifs logiciels d’optimisation de requête, quel que soit le niveau de compatibilité de la base de données. La valeur par défaut est **OFF**, laquelle désactive les correctifs logiciels d’optimisation des requêtes qui ont été publiés après l’arrivée du plus haut niveau de compatibilité d’une version donnée (post-RTM). L’utilisation de la valeur **ON** équivaut à activer [l’indicateur de trace 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
 
@@ -259,7 +259,7 @@ Les paramètres granulaires peuvent remplacer les paramètres globaux, et le gou
 
   - Si l’indicateur de requête n’est pas défini sur 0, il est limité par le paramètre Resource Governor.
 
-- Le paramètre défini au niveau de la base de données (sauf s’il est défini sur 0) remplace le paramètre sp_configure, sauf s’il existe un indicateur de requête et sauf s’il est limité par le paramètre Resource Governor.
+- Le paramètre délimité au niveau de la base de données (sauf s’il est défini sur 0) remplace le paramètre sp_configure, sauf s’il existe un indicateur de requête et qu’il est limité par le paramètre Resource Governor.
 
 - Le paramètre sp_configure est remplacé par le paramètre Resource Governor.
 

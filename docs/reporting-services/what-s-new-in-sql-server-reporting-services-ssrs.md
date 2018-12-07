@@ -7,12 +7,12 @@ ms.technology: reporting-services
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c7fe58cb279924ac60c2902c29dcd6bade82dd6f
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: b72f5bfef28c5f434cff07b2a931519c3fefd295
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813822"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712400"
 ---
 # <a name="whats-new-in-sql-server-reporting-services-ssrs"></a>Nouveautés de SQL Server Reporting Services (SSRS)
 
@@ -31,7 +31,7 @@ Pour télécharger SQL Server 2017 Reporting Services, accédez au **[Centre de 
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
 ## <a name="sql-server-2019-preview-reporting-services"></a>Préversion de SQL Server 2019 Reporting Services
 
-[!INCLUDE[sql-server-2019]](../includes/sssqlv15-md.md)] Reporting Services n’est pas disponible pour la version CTP 2.1. Installez la version actuelle, [SQL Server 2017 Reporting Services](install-windows/install-reporting-services.md).
+[!INCLUDE[sql-server-2019]](../includes/sssqlv15-md.md)] Reporting Services n’est pas disponible pour la version CTP 2.1. Installez la version actuelle, [SQL Server 2017 Reporting Services](install-windows/install-reporting-services.md).
 ::: moniker-end
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
@@ -59,7 +59,7 @@ Dans le Générateur de rapports et de SQL Server Data Tools, vous pouvez mainte
  
 Des informations supplémentaires sont disponibles dans le [blog de Reporting Services](https://blogs.msdn.microsoft.com/sqlrsteamblog/2017/03/09/query-designer-support-for-dax-now-available-in-report-builder-and-sql-server-data-tools/).
 
-* Téléchargez le [Générateur de rapports Microsoft SQL Server 2016](https://go.microsoft.com/fwlink/?LinkId=734968).
+* Téléchargez le [Générateur de rapports SQL Server](https://go.microsoft.com/fwlink/?LinkId=734968).
 * Téléchargez [SSDT (SQL Server Data Tools) - Version Release Candidate](https://docs.microsoft.com/sql/ssdt/sql-server-data-tools-ssdt-release-candidate).
 
 > **Remarque** : Vous pouvez utiliser le Concepteur de requêtes pour DAX uniquement avec des sources de données tabulaires SSAS générés dans SQL Server 2016+.
@@ -67,7 +67,7 @@ Des informations supplémentaires sont disponibles dans le [blog de Reporting Se
  
 ## <a name="ssrs-2016"></a>SSRS 2016
   
-### <a name="reporting-services-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd"></a> [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)]  
+### <a name="reporting-services-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd"></a>[!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] Reporting Services  
  Un nouveau [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] est disponible. Il s’agit d’un portail mis à jour et moderne qui inclut des indicateurs de performance clés, des rapports mobiles, des rapports paginés, ainsi que des fichiers Excel et Power BI Desktop. Le [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] remplace le Gestionnaire de rapports des versions antérieures. Vous pouvez également télécharger l’Éditeur de rapports mobiles et le Générateur de rapports à partir du [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] sans avoir besoin de la technologie ClickOnce.
  
  Pour créer des rapports mobiles, vous avez besoin de l’ [!INCLUDE[SS_MobileReptPub_Short](../includes/ss-mobilereptpub-short.md)].  
@@ -192,7 +192,7 @@ https://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freport
 
 [Nouveautés d’Analysis Services](https://msdn.microsoft.com/aa69c299-b8f4-4969-86d8-b3292fe13f08)  
 [Compatibilité descendante](reporting-services-backward-compatibility.md)   
-[Fonctionnalités Reporting Services prises en charge par les éditions de SQL Server 2016](https://msdn.microsoft.com/39f03d2d-6e48-4b34-a9d3-07f86313b937)   
+[Fonctionnalités Reporting Services prises en charge par les éditions de SQL Server](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)   
 [Mettre à niveau et migrer Reporting Services](../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
 [Reporting Services](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)  
 

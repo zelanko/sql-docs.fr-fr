@@ -5,19 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: afb445b5-bdbe-4bfe-844f-344766cdc2b2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9ff1856d340c5a95c1ed02109b74621361952f41
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dfc154bfb253542e5bdd633504f71e9987caa625
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47768807"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617149"
 ---
 # <a name="grant-dqs-roles-to-users"></a>Affecter des rôles DQS aux utilisateurs
 
@@ -39,13 +38,13 @@ ms.locfileid: "47768807"
   
 3.  Cliquez avec le bouton droit sur le dossier **Sécurité** , pointez sur **Nouveau**, puis cliquez sur **Connexion**.  
   
-4.  Dans la boîte de dialogue **Nouvelle connexion** , spécifiez le nom d'un utilisateur Windows dans la zone **Nom de connexion** , spécifiez le type d'authentification **Authentification Windows**et cliquez sur **Rechercher** pour valider l'utilisateur.  
+4.  Dans la boîte de dialogue **Nouvelle connexion**, spécifiez le nom d’un utilisateur Windows dans la zone **Nom de connexion**, spécifiez le type d’authentification **Authentification Windows**, puis cliquez sur **Rechercher** pour valider l’utilisateur.  
   
 5.  Une fois l'utilisateur validé, dans le volet de gauche, cliquez sur **Mappage de l'utilisateur** .  
   
-6.  Dans le volet droit, cochez la case sous la colonne **Mappage** pour la base de données **DQS_MAIN** , puis cochez la case **dqs_administrator**, **dqs_kb_editor**ou **dqs_kb_operator** dans le volet **Appartenance au rôle de base de données : DQS_MAIN** , selon le niveau d’accès nécessaire pour l’utilisateur. Pour plus d'informations sur les trois rôles DQS, consultez [DQS Security](../../data-quality-services/dqs-security.md).  
+6.  Dans le volet droit, cochez la case sous la colonne **Mappage** pour la base de données **DQS_MAIN** , puis cochez la case **dqs_administrator**, **dqs_kb_editor**ou **dqs_kb_operator** dans le volet **Appartenance au rôle de base de données : DQS_MAIN** , selon le niveau d’accès nécessaire pour l’utilisateur. Pour plus d'informations sur les trois rôles DQS, consultez [Sécurité DQS](../../data-quality-services/dqs-security.md).  
   
-7.  Dans la boîte de dialogue **Nouvelle connexion** , cliquez sur **OK** pour appliquer les modifications.  
+7.  Dans la boîte de dialogue **Nouvelle connexion**, cliquez sur **OK** pour appliquer les modifications.  
   
     > [!NOTE]  
     >  Si vous accordez le rôle **dqs_administrator** à un utilisateur, appliquez les modifications, puis revérifiez les autorisations de l’utilisateur ; les deux autres cases de rôles DQS (**dq_kb_editor** et **dqs_kb_operator**) sont aussi cochées.  

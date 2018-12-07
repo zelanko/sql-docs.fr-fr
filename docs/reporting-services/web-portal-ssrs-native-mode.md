@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 7349e626-6ed5-4d21-b05f-cf042ad9ad70
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9bb61746e2794faa9fab5f2fbc89c42fbe9ccd5f
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: c5f8405a36595b7a5ddaade9aa00952642625c65
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814332"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711220"
 ---
 # <a name="web-portal-ssrs-native-mode"></a>Portail web (SSRS en mode natif)
 
@@ -54,7 +54,7 @@ Vous pouvez utiliser le portail web pour parcourir les dossiers du serveur de ra
 
 Le portail web est uniquement utilisé pour les serveurs de rapports qui s’exécutent en mode natif. Il n'est pas pris en charge sur un serveur de rapports que vous configurez en mode intégré SharePoint.
 
-Certaines fonctionnalités du portail web sont disponibles uniquement dans les éditions spécifiées de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [Fonctionnalités Reporting Services prises en charge par les éditions de SQL Server 2016](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md).
+Certaines fonctionnalités du portail web sont disponibles uniquement dans les éditions spécifiées de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [Fonctionnalités Reporting Services prises en charge par les éditions de SQL Server](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md).
 
 Dans le cas d'une nouvelle installation, seuls les administrateurs locaux possèdent les autorisations suffisantes pour travailler avec le contenu et les paramètres. Pour octroyer des autorisations à d'autres utilisateurs, un administrateur local doit créer des attributions de rôles permettant d'accéder au serveur de rapports. Les pages et les tâches auxquelles un utilisateur pourra ensuite accéder dépendent des attributions de rôles qui ont été définies pour cet utilisateur. Pour plus d’informations, consultez [Accorder à un utilisateur l’accès à un serveur de rapports](security/grant-user-access-to-a-report-server-report-manager.md)
 
@@ -104,7 +104,7 @@ Vous pouvez télécharger, organiser et gérer les autorisations pour les rappor
 
 ![ssRSWebPortal-view-pbi-and-excel](../reporting-services/media/ssrswebportal-view-pbi-and-excel.png)
 
-Les fichiers sont stockés dans Reporting Services, de la même façon que les autres fichiers de ressources. Sélectionner un de ces éléments permet de le télécharger localement sur votre bureau. Vous pouvez enregistrer les modifications apportées en les téléchargeant à nouveau sur le serveur de rapports.
+Les fichiers sont stockés dans Reporting Services, de la même façon que les autres fichiers de ressources. Sélectionner un de ces éléments permet de le télécharger localement sur votre bureau. Vous pouvez enregistrer les modifications que vous avez apportées en les chargeant à nouveau sur le serveur de rapports.
 
 ## <a name="search-for-items"></a>Recherche d’éléments
 
@@ -126,6 +126,6 @@ Vous pouvez entrer une équipe de recherche pour voir tout ce à quoi vous pouve
 [Configurer une URL (Gestionnaire de configuration de SSRS)](../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  
 [Outils de Reporting Services](../reporting-services/tools/reporting-services-tools.md)  
 [Planification de la prise en charge des navigateurs par Reporting Services](../reporting-services/browser-support-for-reporting-services-and-power-view.md)  
-[Fonctionnalités Reporting Services prises en charge par les éditions de SQL Server 2016](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)  
+[Fonctionnalités Reporting Services prises en charge par les éditions de SQL Server](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)  
 
 D’autres questions ? [Essayez le forum Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

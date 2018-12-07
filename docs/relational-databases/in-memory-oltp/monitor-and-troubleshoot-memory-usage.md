@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 292b6a00e92ced31fc57c604c5d614df832dd9fc
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: b250f4ec67db43c975d61f5944b7d6eaee8ccc73
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666678"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712001"
 ---
 # <a name="monitor-and-troubleshoot-memory-usage"></a>Surveiller l'utilisation de la mémoire et résoudre les problèmes connexes
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -129,7 +129,7 @@ ms.locfileid: "51666678"
 ##  <a name="bkmk_Monitoring"></a> Surveillance de l'utilisation de la mémoire  
   
 ###  <a name="bkmk_UsingSSMS"></a> Utilisant [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
- [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] inclut des rapports standard intégrés pour surveiller la mémoire consommée par les tables en mémoire. Accédez à ces rapports à l'aide de l'Explorateur d'objets comme décrit [ici](https://blogs.msdn.com/b/managingsql/archive/2006/05/16/ssms-reports-1.aspx). Vous pouvez également utiliser l'Explorateur d'objets pour surveiller la mémoire consommée par les tables optimisées en mémoire individuelles.  
+ [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] inclut des rapports standard intégrés pour surveiller la mémoire consommée par les tables en mémoire. Vous pouvez accéder à ces rapports à l’aide de l’Explorateur d’objets. Vous pouvez également utiliser l'Explorateur d'objets pour surveiller la mémoire consommée par les tables optimisées en mémoire individuelles.  
   
 #### <a name="consumption-at-the-database-level"></a>Consommation au niveau de la base de données  
  Surveillez l'utilisation de la mémoire au niveau de la base de données comme suit.  

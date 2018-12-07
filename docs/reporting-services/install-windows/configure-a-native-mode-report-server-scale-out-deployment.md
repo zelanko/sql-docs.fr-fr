@@ -1,6 +1,6 @@
 ---
 title: Configurer un déploiement avec montée en puissance parallèle de serveurs de rapports en mode natif | Microsoft Docs
-ms.date: 05/24/2018
+ms.date: 11/29/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
@@ -11,22 +11,22 @@ helpviewer_keywords:
 ms.assetid: b30d0308-4d9b-4f85-9f83-dece4dcb2775
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1b026e4e361ff6664dfdc78d0215ec3ed723fe93
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: a0e990b52a9433f959288dcf2e3518f85b8a6f67
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021643"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52710640"
 ---
 # <a name="configure-a-native-mode-report-server-scale-out-deployment"></a>Configurer un déploiement par montée en puissance parallèle de serveurs de rapports en mode natif.
 
-[!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../../includes/ssrs-appliesto-not-pbirs.md)])
+[!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE [ssrs-appliesto-pbirs](../../includes/ssrs-appliesto-pbirs.md)])
 
 Le mode natif de Reporting Services prend en charge un modèle de déploiement par montée en puissance parallèle qui vous permet d'exécuter plusieurs instances de serveur de rapports partageant une base de données du serveur de rapports unique. Les déploiements avec montée en puissance parallèle sont utilisés pour augmenter l'évolutivité des serveurs de rapports afin de gérer davantage d'utilisateurs simultanés et de plus grandes charges d'exécution de rapport. Ils peuvent également être utilisés pour dédier des serveurs spécifiques à traiter des rapports interactifs ou planifiés.
 
 Pour Power BI Report Server, vous devez configurer l’affinité du client (parfois appelée « sessions persistantes ») sur l’équilibreur de charge de n’importe quel environnement de montée en puissance parallèle, afin d’assurer des performances adéquates.  
   
-Pour SQL Server 2016 Reporting Services, les serveurs de rapports en mode SharePoint utilisent l’infrastructure de produits SharePoint pour la montée en puissance parallèle. La montée en puissance parallèle en mode SharePoint est effectuée en ajoutant des serveurs de rapports en mode SharePoint à la batterie de serveurs SharePoint. Pour plus d’informations sur la montée en puissance parallèle en mode SharePoint, consultez [Ajouter un serveur de rapports supplémentaires à une batterie de serveurs &#40;montée en puissance SSRS&#41;](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md).  
+Pour SQL Server 2016 Reporting Services et les versions antérieures, les serveurs de rapports en mode SharePoint utilisent l’infrastructure de produits SharePoint pour le scale-out. La montée en puissance parallèle en mode SharePoint est effectuée en ajoutant des serveurs de rapports en mode SharePoint à la batterie de serveurs SharePoint. Pour plus d’informations sur la montée en puissance parallèle en mode SharePoint, consultez [Ajouter un serveur de rapports supplémentaires à une batterie de serveurs &#40;montée en puissance SSRS&#41;](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md).  
  
   Un *déploiement avec montée en puissance parallèle* est utilisé dans les scénarios suivants :  
   
@@ -46,7 +46,7 @@ Pour SQL Server 2016 Reporting Services, les serveurs de rapports en mode ShareP
   
  **Pour planifier, installer et configurer un déploiement avec montée en puissance parallèle, suivez ces étapes :**  
   
--   Pour obtenir des instructions sur l’installation d’instances de serveur de rapports, consultez [Installer SQL Server 2016 avec l’Assistant Installation &#40;programme d’installation&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) dans la documentation en ligne [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   Pour obtenir des instructions sur l’installation d’instances de serveur de rapports, consultez [Installer SQL Server avec l’Assistant Installation &#40;programme d’installation&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md).  
   
 -   Si vous prévoyez d'héberger le déploiement avec montée en puissance parallèle sur un cluster à charge réseau équilibrée, vous devez configurer le cluster avant de configurer le déploiement avec montée en puissance parallèle. Pour plus d’informations, consultez [Configurer un serveur de rapports sur un cluster avec équilibrage de la charge réseau](../../reporting-services/report-server/configure-a-report-server-on-a-network-load-balancing-cluster.md).  
   
@@ -133,7 +133,7 @@ Ce problème est intermittent dans le sens où seul le serveur qui a créé la t
 3.  Dans la page Déploiement avec montée en puissance parallèle, sélectionnez l’instance de serveur de rapports qui doit joindre le déploiement, puis sélectionnez **Ajouter le serveur**.  
   
     > [!NOTE]  
-    >  **Problème :** au moment de joindre une instance de serveur de rapports Reporting Services au déploiement avec montée en puissance parallèle, un message d’erreur du type « Accès refusé » peut s’afficher.  
+    >  **Problème :** au moment de joindre une instance de serveur de rapports Reporting Services au déploiement de scale-out, un message d’erreur du type « Accès refusé » peut s’afficher.  
     >   
     >  **Solution :** sauvegardez la clé de chiffrement [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de la première instance [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] et restaurez la clé dans le deuxième serveur de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Puis, essayez de joindre le second serveur au déploiement avec montée en puissance parallèle de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   

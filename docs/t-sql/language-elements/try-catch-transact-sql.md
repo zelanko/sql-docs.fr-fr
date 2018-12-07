@@ -30,12 +30,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 77b782d10d323ea7e548a149a873812359552345
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3374d7ae2f86ce27de46fad9027f78a040ca356b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674927"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545751"
 ---
 # <a name="trycatch-transact-sql"></a>TRY...CATCH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -61,32 +61,32 @@ END CATCH
  Toute instruction [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  *statement_block*  
- Tout groupe d'instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] dans un lot ou contenues dans un bloc BEGIN…END.  
+ Tout groupe d’instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] dans un lot ou contenues dans un bloc BEGIN...END.  
   
 ## <a name="remarks"></a>Notes   
- La construction TRY…CATCH intercepte toutes les erreurs d'exécution dont la gravité est supérieure à 10 et qui ne ferment pas la connexion de la base de données.  
+ Une construction TRY...CATCH intercepte toutes les erreurs d’exécution dont la gravité est supérieure à 10 et qui ne ferment pas la connexion de la base de données.  
   
  Un bloc TRY doit être suivi immédiatement d'un bloc CATCH associé. L'inclusion d'une autre instruction entre les instructions END TRY et BEGIN CATCH génère une erreur de syntaxe.  
   
- Une construction TRY…CATCH ne peut pas s'étendre sur plusieurs lots. Une construction TRY…CATCH ne peut pas s'étendre sur plusieurs blocs d'instructions [!INCLUDE[tsql](../../includes/tsql-md.md)]. Par exemple, une construction TRY…CATCH ne peut pas s'étendre sur deux blocs BEGIN…END d'instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] et ne peut pas s'étendre sur une construction IF…ELSE.  
+ Une construction TRY...CATCH ne peut pas s’étendre sur plusieurs lots. Une construction TRY...CATCH ne peut pas s’étendre sur plusieurs blocs d’instructions [!INCLUDE[tsql](../../includes/tsql-md.md)]. Par exemple, une construction TRY...CATCH ne peut pas s’étendre sur deux blocs BEGIN...END d’instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] et ne peut pas s’étendre sur une construction IF...ELSE.  
   
  Si le code inclus dans un bloc TRY ne contient aucune erreur, lorsque l'exécution de la dernière instruction du bloc TRY est terminée, le contrôle est passé à l'instruction qui se trouve immédiatement après l'instruction END CATCH associée. S'il existe une erreur dans le code inclus dans le bloc TRY, le contrôle est passé à la première instruction du bloc CATCH associé. Si l'instruction END CATCH se trouve dans la dernière instruction d'une procédure stockée ou d'un déclencheur, le contrôle revient à l'instruction qui a appelé la procédure stockée ou activé le déclencheur.  
   
  Lorsque le code du bloc CATCH est terminé, le contrôle est passé à l'instruction qui se trouve immédiatement après l'instruction END CATCH. Les erreurs interceptées par un bloc CATCH ne sont pas renvoyées à l'application appelante. Si une partie des informations sur les erreurs doivent être renvoyées à l'application, le code dans le bloc CATCH doit pour ce faire utiliser des mécanismes tels que les jeux de résultats SELECT ou les instructions RAISERROR et PRINT.  
   
- Les constructions TRY…CATCH peuvent être imbriquées. Un bloc TRY ou CATCH peut contenir des constructions imbriquées TRY…CATCH. Par exemple, un bloc CATCH peut contenir une construction TRY…CATCH imbriquée pour gérer les erreurs rencontrées par le code CATCH.  
+ Les constructions TRY...CATCH peuvent être imbriquées. Un bloc TRY ou CATCH peut contenir des constructions imbriquées TRY...CATCH. Par exemple, un bloc CATCH peut contenir une construction TRY...CATCH imbriquée pour gérer les erreurs rencontrées par le code CATCH.  
   
- Les erreurs rencontrées dans un bloc CATCH sont traitées comme les erreurs générées à n'importe quel autre emplacement. Lorsqu'un bloc CATCH contient une construction TRY…CATCH imbriquée, toute erreur dans le bloc imbriqué TRY fera passer le contrôle au bloc CATCH imbriqué. S'il n'existe pas de construction TRY…CATCH imbriquée, l'erreur est renvoyée à l'appelant.  
+ Les erreurs rencontrées dans un bloc CATCH sont traitées comme les erreurs générées à n'importe quel autre emplacement. Quand un bloc CATCH contient une construction TRY...CATCH imbriquée, toute erreur dans le bloc imbriqué TRY passe le contrôle au bloc CATCH imbriqué. S’il n’existe pas de construction TRY...CATCH imbriquée, l’erreur est renvoyée à l’appelant.  
   
- Les constructions TRY…CATCH interceptent des erreurs non gérées provenant de procédures stockées ou de déclencheurs exécutés par le code dans le bloc TRY. Les procédures stockées ou les déclencheurs peuvent également contenir leurs propres constructions TRY…CATCH pour gérer les erreurs générées par leur code. Par exemple, lorsqu'un bloc TRY exécute une procédure stockée et qu'une erreur survient dans la procédure stockée, l'erreur peut être gérée des manières suivantes :  
+ Les constructions TRY...CATCH interceptent les erreurs non gérées provenant de procédures stockées ou de déclencheurs exécutés par le code dans le bloc TRY. Les procédures stockées ou les déclencheurs peuvent également contenir leurs propres constructions TRY...CATCH pour gérer les erreurs générées par leur code. Par exemple, lorsqu'un bloc TRY exécute une procédure stockée et qu'une erreur survient dans la procédure stockée, l'erreur peut être gérée des manières suivantes :  
   
--   Si la procédure stockée ne contient pas sa propre construction TRY…CATCH, l'erreur renvoie le contrôle au bloc CATCH associé au bloc TRY qui contient l'instruction EXECUTE.  
+-   Si la procédure stockée ne contient pas sa propre construction TRY...CATCH, l’erreur retourne le contrôle au bloc CATCH associé au bloc TRY qui contient l’instruction EXECUTE.  
   
--   Si la procédure stockée contient une construction TRY…CATCH, l'erreur transfère le contrôle au bloc CATCH dans la procédure stockée. Lorsque le code du bloc CATCH est terminé, le contrôle est renvoyé à l'instruction qui se trouve immédiatement après l'instruction EXECUTE qui a appelé la procédure stockée.  
+-   Si la procédure stockée contient une construction TRY...CATCH, l’erreur transfère le contrôle au bloc CATCH dans la procédure stockée. Lorsque le code du bloc CATCH est terminé, le contrôle est renvoyé à l'instruction qui se trouve immédiatement après l'instruction EXECUTE qui a appelé la procédure stockée.  
   
  Les instructions GOTO ne peuvent pas être utilisées pour entrer un bloc TRY ou CATCH. Les instructions GOTO peuvent être utilisées pour accéder directement à une étiquette dans le même bloc TRY ou CATCH ou pour quitter un bloc TRY ou CATCH.  
   
- La construction TRY...CATCH ne peut pas être utilisée dans une fonction définie par l'utilisateur.  
+ La construction TRY...CATCH ne peut pas être utilisée dans une fonction définie par l’utilisateur.  
   
 ## <a name="retrieving-error-information"></a>Extraction des informations sur les erreurs  
  Dans la portée d'un bloc CATCH, les fonctions système suivantes peuvent être utilisées pour obtenir des informations sur l'erreur qui a entraîné l'exécution du bloc CATCH :  
@@ -103,7 +103,7 @@ END CATCH
   
 -   [ERROR_MESSAGE()](../../t-sql/functions/error-message-transact-sql.md) renvoie le texte complet du message d’erreur. Le texte comprend les valeurs fournies pour tous les paramètres remplaçables, tels que les longueurs, les noms d'objet ou les heures.  
   
- Ces fonctions renvoient la valeur NULL si elles sont appelées en dehors de l'étendue du bloc CATCH. Les informations sur les erreurs peuvent être récupérées à l'aide de ces fonctions à partir de n'importe quel emplacement dans l'étendue du bloc CATCH. Par exemple, le script suivant montre une procédure stockée contenant des fonctions de gestion des erreurs : dans le bloc `CATCH` d'une construction `TRY…CATCH`, la procédure stockée est appelée et les informations sur l'erreur sont retournées.  
+ Ces fonctions renvoient la valeur NULL si elles sont appelées en dehors de l'étendue du bloc CATCH. Les informations sur les erreurs peuvent être récupérées à l'aide de ces fonctions à partir de n'importe quel emplacement dans l'étendue du bloc CATCH. Par exemple, le script suivant montre une procédure stockée contenant des fonctions de gestion des erreurs : dans le bloc `CATCH` d'une construction `TRY...CATCH`, la procédure stockée est appelée et les informations sur l'erreur sont retournées.  
   
 ```sql  
 -- Verify that the stored procedure does not already exist.  
@@ -135,18 +135,18 @@ END CATCH;
   
  Les fonctions ERROR\_\* fonctionnent également dans un bloc `CATCH` à l’intérieur d’une [procédure stockée compilée en mode natif](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md).  
   
-## <a name="errors-unaffected-by-a-trycatch-construct"></a>Erreurs non affectées par une construction TRY…CATCH  
- Les constructions TRY…CATCH n'interceptent pas les conditions suivantes :  
+## <a name="errors-unaffected-by-a-trycatch-construct"></a>Erreurs non affectées par une construction TRY...CATCH  
+ Les constructions TRY...CATCH n’interceptent pas les conditions suivantes :  
   
 -   Les avertissements ou messages d'information dont la gravité est inférieure ou égale à 10.  
   
--   Les erreurs dont le niveau de gravité est supérieur ou égal à 20 interrompent le traitement des tâches du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] pour la session. Si une erreur dont le niveau de gravité est supérieur ou égal à 20 survient et que la connexion à la base de données n'est pas interrompue, TRY…CATCH gère l'erreur.  
+-   Les erreurs dont le niveau de gravité est supérieur ou égal à 20 interrompent le traitement des tâches du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] pour la session. Si une erreur dont le niveau de gravité est supérieur ou égal à 20 survient et que la connexion à la base de données n’est pas interrompue, TRY...CATCH gère l’erreur.  
   
 -   Un événement d'avertissement, tel qu'une requête d'interruption par le client ou une rupture de connexion avec le client, se produit.  
   
 -   Cela survient lorsque la session est terminée par un administrateur système utilisant l'instruction KILL.  
   
- Les types d'erreur suivants ne sont pas gérés par un bloc CATCH lorsqu'ils surviennent au même niveau d'exécution que la construction TRY…CATCH :  
+ Les types d’erreurs suivants ne sont pas gérés par un bloc CATCH quand elles surviennent au même niveau d’exécution que la construction TRY...CATCH :  
   
 -   Les erreurs de compilation, telles que les erreurs de syntaxe, qui empêchent un traitement de s'exécuter.  
   
@@ -154,9 +154,9 @@ END CATCH;
   
  Ces erreurs sont renvoyées au niveau qui a exécuté le traitement, la procédure stockée ou le déclencheur.  
   
- Si une erreur survient pendant la compilation ou la recompilation au niveau de l'instruction à un niveau d'exécution inférieur (par exemple, lors de l'exécution de sp_executesql ou d'une procédure stockée définie par l'utilisateur) à l'intérieur du bloc TRY, l'erreur survient à un niveau inférieur à la construction TRY…CATCH et sera gérée par le bloc CATCH associé.  
+ Si une erreur survient pendant la compilation ou la recompilation au niveau de l’instruction à un niveau d’exécution inférieur (par exemple lors de l’exécution de sp_executesql ou d’une procédure stockée définie par l’utilisateur) à l’intérieur du bloc TRY, l’erreur survient à un niveau inférieur à la construction TRY...CATCH et est gérée par le bloc CATCH associé.  
   
- L'exemple suivant montre comment une erreur de résolution de noms d'objets générée par une instruction `SELECT` n'est pas interceptée par la construction `TRY…CATCH`, mais par le bloc `CATCH` lorsque la même instruction `SELECT` est exécutée au sein d'une procédure stockée.  
+ L'exemple suivant montre comment une erreur de résolution de noms d'objets générée par une instruction `SELECT` n'est pas interceptée par la construction `TRY...CATCH`, mais par le bloc `CATCH` lorsque la même instruction `SELECT` est exécutée au sein d'une procédure stockée.  
   
 ```sql  
 BEGIN TRY  
@@ -171,9 +171,9 @@ BEGIN CATCH
 END CATCH  
 ```  
   
- L'erreur n'est pas interceptée et le contrôle est passé de la construction `TRY…CATCH` au niveau supérieur suivant.  
+ L'erreur n'est pas interceptée et le contrôle est passé de la construction `TRY...CATCH` au niveau supérieur suivant.  
   
- L'exécution de l'instruction `SELECT` au sein d'une procédure stockée entraîne l'occurrence de l'erreur à un niveau inférieur à celui du bloc `TRY`. L'erreur sera gérée par la construction `TRY…CATCH`.  
+ L'exécution de l'instruction `SELECT` au sein d'une procédure stockée entraîne l'occurrence de l'erreur à un niveau inférieur à celui du bloc `TRY`. L'erreur sera gérée par la construction `TRY...CATCH`.  
   
 ```sql  
 -- Verify that the stored procedure does not exist.  
@@ -205,7 +205,7 @@ END CATCH;
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-using-trycatch"></a>A. Utilisation de TRY…CATCH  
+### <a name="a-using-trycatch"></a>A. Utilisation de TRY...CATCH  
  L'exemple suivant illustre une instruction `SELECT` qui génère une erreur de division par zéro. L'erreur entraîne le saut de l'exécution vers le bloc `CATCH` associé.  
   
 ```sql  
@@ -225,8 +225,8 @@ END CATCH;
 GO  
 ```  
   
-### <a name="b-using-trycatch-in-a-transaction"></a>B. Utilisation de TRY…CATCH dans une transaction  
- L'exemple suivant montre comment un bloc `TRY…CATCH` fonctionne dans une transaction. L'instruction dans le bloc `TRY` génère une erreur de violation de contrainte.  
+### <a name="b-using-trycatch-in-a-transaction"></a>B. Utilisation de TRY...CATCH dans une transaction  
+ L'exemple suivant montre comment un bloc `TRY...CATCH` fonctionne dans une transaction. L'instruction dans le bloc `TRY` génère une erreur de violation de contrainte.  
   
 ```sql  
 BEGIN TRANSACTION;  
@@ -254,8 +254,8 @@ IF @@TRANCOUNT > 0
 GO  
 ```  
   
-### <a name="c-using-trycatch-with-xactstate"></a>C. Utilisation de TRY…CATCH avec XACT_STATE  
- L'exemple suivant montre comment utiliser la construction `TRY…CATCH` pour gérer les erreurs qui surviennent dans une transaction. La fonction `XACT_STATE` détermine si la transaction doit être validée ou annulée. Dans cet exemple, `SET XACT_ABORT` est `ON`. Cela rend la transaction non validable lorsque l'erreur de violation de contrainte se produit.  
+### <a name="c-using-trycatch-with-xactstate"></a>C. Utilisation de TRY...CATCH avec XACT_STATE  
+ L'exemple suivant montre comment utiliser la construction `TRY...CATCH` pour gérer les erreurs qui surviennent dans une transaction. La fonction `XACT_STATE` détermine si la transaction doit être validée ou annulée. Dans cet exemple, `SET XACT_ABORT` est `ON`. Cela rend la transaction non validable lorsque l'erreur de violation de contrainte se produit.  
   
 ```sql  
 -- Check to see whether this stored procedure exists.  
@@ -323,7 +323,7 @@ GO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-using-trycatch"></a>D. Utilisation de TRY…CATCH  
+### <a name="d-using-trycatch"></a>D. Utilisation de TRY...CATCH  
  L'exemple suivant illustre une instruction `SELECT` qui génère une erreur de division par zéro. L'erreur entraîne le saut de l'exécution vers le bloc `CATCH` associé.  
   
 ```sql  

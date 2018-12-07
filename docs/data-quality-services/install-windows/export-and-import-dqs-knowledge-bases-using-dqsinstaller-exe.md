@@ -5,19 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 8234c63b-a018-4e55-8184-9a6bdf03274d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0e1f999908a0cf5ed006c651da31701cb4aa93ad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2b76eca15b4c435230c2449d79dd892fd9bd736a
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772177"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617449"
 ---
 # <a name="export-and-import-dqs-knowledge-bases-using-dqsinstallerexe"></a>Exporter et importer des bases de connaissances DQS à l'aide de DQSInstaller.exe
 
@@ -33,7 +32,7 @@ ms.locfileid: "47772177"
 -   Pour exporter toutes les bases de connaissances d'un [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] dans un fichier de sauvegarde DQS (.dqsb), exécutez DQSInstaller.exe avec le paramètre `exportkbs` à partir de l'invite de commandes, avec le chemin d'accès complet et le nom du fichier dans lequel vous voulez exporter les bases de connaissances. Par exemple, pour exporter toutes les bases de connaissances dans le fichier DQSBackup.dqsb du lecteur C :  
   
     ```  
-    dqsinstaller.exe –exportkbs c:\DQSBackup.dqsb  
+    dqsinstaller.exe -exportkbs c:\DQSBackup.dqsb  
     ```  
   
     > [!NOTE]  
@@ -42,7 +41,7 @@ ms.locfileid: "47772177"
 -   Pour exporter toutes les bases de connaissances dans un fichier de sauvegarde DQS lors de la désinstallation de [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)], exécutez DQSInstaller.exe avec le paramètre `uninstall` à partir de l'invite de commandes, avec le chemin d'accès complet et le nom du fichier dans lequel vous voulez exporter les bases de connaissances. Ainsi, pour exporter toutes les bases de connaissances dans le fichier DQSBackup.dqsb du lecteur C, puis désinstaller [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]:  
   
     ```  
-    dqsinstaller.exe –uninstall c:\DQSBackup.dqsb  
+    dqsinstaller.exe -uninstall c:\DQSBackup.dqsb  
     ```  
   
     > [!NOTE]  
@@ -54,15 +53,15 @@ ms.locfileid: "47772177"
  Exécutez le fichier DQSInstaller.exe avec le paramètre `importkbs` à partir de l'invite de commandes, avec le chemin d'accès complet et le nom du fichier à partir duquel vous souhaitez importer les bases de connaissances. Par exemple, pour importer toutes les bases de connaissances à partir du fichier DQSBackup.dqsb du lecteur C :  
   
 ```  
-dqsinstaller.exe –importkbs c:\DQSBackup.dqsb  
+dqsinstaller.exe -importkbs c:\DQSBackup.dqsb  
 ```  
   
- Si votre [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] contient des bases de connaissances portant le même nom que celles que vous importez, les noms des bases de connaissances importées sont complétés par un trait de soulignement (_) suivi d'une valeur entière en commençant par 1. Par exemple, si le domaine « CompanyName » apparaît deux fois, le nom de domaine importé est « CompanyName_1 ».  
+ Si votre [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] contient des bases de connaissances portant le même nom que celles que vous importez, les noms des bases de connaissances importées sont complétés par un trait de soulignement (_) suivi d'une valeur entière en commençant par 1. Par exemple, si le domaine « CompanyName » apparaît deux fois, le nom de domaine importé est « CompanyName_1 ».  
   
 ## <a name="see-also"></a> Voir aussi  
  [Exécuter DQSInstaller.exe pour terminer l'installation du serveur DQS](../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md)   
  [Installer Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)   
- [Exporter une base de connaissances vers un fichier .dqs](../../data-quality-services/export-a-knowledge-base-to-a-dqs-file.md)   
- [Importer une base de connaissances à partir d’un fichier .dqs](../../data-quality-services/import-a-knowledge-base-from-a-dqs-file.md)  
+ [Exporter une base de connaissances dans un fichier .dqs](../../data-quality-services/export-a-knowledge-base-to-a-dqs-file.md)   
+ [Importer une base de connaissances à partir d'un fichier .dqs](../../data-quality-services/import-a-knowledge-base-from-a-dqs-file.md)  
   
   

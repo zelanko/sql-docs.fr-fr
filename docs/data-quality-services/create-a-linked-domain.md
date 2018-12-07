@@ -5,8 +5,7 @@ ms.date: 11/08/2011
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.kb.linkeddomain.f1
@@ -14,12 +13,12 @@ ms.assetid: fd99d422-c53d-4d7c-9cdd-303c703683b6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0bce721aec2958cca21a4ac002b0da5a90682fb9
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 40757d069ce849b71f93d7f420247dddcc8d229a
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51702227"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617889"
 ---
 # <a name="create-a-linked-domain"></a>Créer un domaine lié
 
@@ -36,7 +35,7 @@ ms.locfileid: "51702227"
 ### <a name="controlling-data-flow-to-composite-domains"></a>Contrôle du flux de données dans des domaines composites  
  Les domaines liés vous permettent de contrôler le flux de données entre les champs et les domaines composites. Vous pouvez distinguer le moment où des données d'un champ passent dans un domaine composite du moment où les données d'un autre champ très similaire ne passent pas dans un domaine composite. Pour ce faire, spécifiez qu'entre deux domaines liés, l'un fait partie d'un domaine composite, et l'autre non. Du point de vue des domaines, les domaines liés sont identiques. Ils contiennent les mêmes connaissances. Toutefois, du point de vue des domaines composites, les domaines liés sont différents. L'un participe au domaine composite, et l'autre non.  
   
- C'est le cas, par exemple, si un enregistrement contient les champs suivants : Prénom du client, Nom de famille du client et Prénom du parent. Supposons que vous mappez le prénom du client et le prénom du parent à un domaine Prénom, puis que vous définissiez le domaine Prénom et le domaine Nom de famille en tant que partie d'un domaine composite Nom complet. Le problème est que le prénom du parent sera ajouté au domaine composite sans nom de famille. Si, en revanche, vous liez chacun des deux champs de prénom à un domaine, puis que vous liez les deux domaines, vous pouvez alors ajouter le domaine Prénom du client au domaine composite Nom complet, et ne pas ajouter le champ Prénom du parent au domaine composite, ce qui évite que le Prénom du parent soit ajouté au domaine composite.  
+ C’est le cas, par exemple, si un enregistrement contient les champs suivants : Prénom du client, Nom de famille du client et Prénom du parent. Supposons que vous mappiez le prénom du client et le prénom du parent à un domaine Prénom, puis que vous définissiez le domaine Prénom et le domaine Nom de famille en tant que partie d’un domaine composite Nom complet. Le problème est que le prénom du parent sera ajouté au domaine composite sans nom de famille. Si, en revanche, vous liez chacun des deux champs de prénom à un domaine, puis que vous liez les deux domaines, vous pouvez alors ajouter le domaine Prénom du client au domaine composite Nom complet, et ne pas ajouter le champ Prénom du parent au domaine composite, ce qui évite que le Prénom du parent soit ajouté au domaine composite.  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   

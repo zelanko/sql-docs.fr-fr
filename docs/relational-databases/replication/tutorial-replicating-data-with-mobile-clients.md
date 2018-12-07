@@ -14,12 +14,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 66f33552c8ccd615cfb2894da0ef3ba337a43cc7
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: bc09bcca6e70d80e256cba8cd8a1ad6a477a4742
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51681327"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545544"
 ---
 # <a name="tutorial-configure-replication-between-a-server-and-mobile-clients-merge"></a>Tutoriel : Configurer la réplication entre un serveur et des clients mobiles (réplication de fusion)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -205,7 +205,7 @@ Dans cette section, vous allez ajouter un abonnement à la publication de fusion
 
    ![Sélections pour l’ajout d’une base de données à l’abonné](media/tutorial-replicating-data-with-mobile-clients/addsubdb.png)
   
-8. Dans la page **Sécurité de l’agent de fusion**, cliquez sur le bouton de sélection (**...** ). Entrez <*nom_ordinateur_abonné*>**\repl_merge** dans la zone **Compte de processus** et fournissez le mot de passe pour ce compte. Sélectionnez **OK**, **Suivant**, puis à nouveau **Suivant**.  
+8. Dans la page **Sécurité de l’Agent de fusion**, cliquez sur les points de suspension (**...**). Entrez <*nom_ordinateur_abonné*>**\repl_merge** dans la zone **Compte de processus** et fournissez le mot de passe pour ce compte. Sélectionnez **OK**, **Suivant**, puis à nouveau **Suivant**.  
 
    ![Sélections pour la sécurité de l’Agent de fusion](media/tutorial-replicating-data-with-mobile-clients/mergeagentsecurity.png)
 

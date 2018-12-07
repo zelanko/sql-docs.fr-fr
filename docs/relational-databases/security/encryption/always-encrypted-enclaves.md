@@ -11,12 +11,12 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 742c3dfb66add1a8e81fb9f530923b11e17bfea8
-ms.sourcegitcommit: 0acd84d0b22a264b3901fa968726f53ad7be815c
+ms.openlocfilehash: 9dfc5e2cf7bab164d650f2da1767b2a0e7c399aa
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49307113"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711180"
 ---
 # <a name="always-encrypted-with-secure-enclaves"></a>Always Encrypted avec enclaves sécurisées
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -48,14 +48,14 @@ Pendant le traitement de la requête, les données ou les clés de chiffrement d
 
 Avec les enclaves sécurisées, Always Encrypted protège la confidentialité des données sensibles, tout en offrant les avantages suivants :
 
-- **Chiffrement sur place** : les opérations de chiffrement des données sensibles (par exemple : le chiffrement des données initiales ou la permutation d’une clé de chiffrement de colonne) sont effectuées à l’intérieur de l’enclave sécurisée et ne nécessitent pas le déplacement des données en dehors de la base de données. Vous pouvez émettre le chiffrement sur place à l’aide de l’instruction Transact-SQL ALTER TABLE, et vous n’avez pas besoin d’utiliser des outils, comme l’Assistant Always Encrypted dans SSMS ou la cmdlet PowerShell Set-SqlColumnEncryption.
+- **Chiffrement sur place** : les opérations de chiffrement des données sensibles (par exemple, le chiffrement des données initiales ou la permutation d’une clé de chiffrement de colonne) sont effectuées à l’intérieur de l’enclave sécurisée et ne nécessitent pas le déplacement des données en dehors de la base de données. Vous pouvez émettre le chiffrement sur place à l’aide de l’instruction Transact-SQL ALTER TABLE, et vous n’avez pas besoin d’utiliser des outils, comme l’Assistant Always Encrypted dans SSMS ou la cmdlet PowerShell Set-SqlColumnEncryption.
 
-- **Calculs riches (préversion)** : les opérations sur des colonnes chiffrées, notamment les critères spéciaux (prédicat LIKE) et les comparaisons de plages, sont prises en charge à l’intérieur de l’enclave sécurisée, ce qui rend Always Encrypted accessible à une large gamme d’applications et de scénarios qui requièrent que ces calculs s’effectuent dans le système de base de données.
+- **Calculs riches (préversion)**  : les opérations sur des colonnes chiffrées, notamment les critères spéciaux (prédicat LIKE) et les comparaisons de plages, sont prises en charge à l’intérieur de l’enclave sécurisée, ce qui rend Always Encrypted accessible à une large gamme d’applications et de scénarios qui requièrent que ces calculs s’effectuent dans le système de base de données.
 
 > [!IMPORTANT]
-> Dans [!INCLUDE[sql-server-2019](..\..\..\includes\sssqlv15-md.md)], les calculs riches sont en attente de plusieurs optimisations des performances, incluent des fonctionnalités limitées (aucune indexation, etc.) et sont actuellement désactivés par défaut. Pour activer les calculs riches, consultez [Activer les calculs riches](configure-always-encrypted-enclaves.md#configure-a-secure-enclave).
+> Dans [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)], les calculs riches sont en attente de plusieurs optimisations des performances, incluent des fonctionnalités limitées (aucune indexation, etc.) et sont actuellement désactivés par défaut. Pour activer les calculs riches, consultez [Activer les calculs riches](configure-always-encrypted-enclaves.md#configure-a-secure-enclave).
 
-Dans [!INCLUDE[sql-server-2019](..\..\..\includes\sssqlv15-md.md)], Always Encrypted avec enclaves sécurisées utilise des enclaves mémoire sécurisées [VBS (sécurité basée sur la virtualisation)](https://cloudblogs.microsoft.com/microsoftsecure/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/) (également appelées Mode sécurisé virtuel ou enclaves VSM) de Windows.
+Dans [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)], Always Encrypted avec enclaves sécurisées utilise des enclaves mémoire sécurisées de [sécurité basée sur la virtualisation (VBS)](https://cloudblogs.microsoft.com/microsoftsecure/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/), également appelées mode sécurisé virtuel ou enclaves VSM, dans Windows.
 
 ## <a name="secure-enclave-attestation"></a>Attestation d’enclave sécurisée
 
@@ -63,18 +63,18 @@ L’enclave sécurisée à l’intérieur du moteur SQL Server peut accéder aux
 
 Le processus de vérification de l’enclave est appelé **attestation d’enclave**, et il implique généralement qu’un pilote client dans l’application (et parfois également SQL Server) contacte un service d’attestation externe. Les détails du processus d’attestation dépendent de la technologie de l’enclave et du service d’attestation.
 
-Le processus d’attestation pris en charge par SQL Server pour les enclaves sécurisées VBS dans [!INCLUDE[sql-server-2019](..\..\..\includes\sssqlv15-md.md)] est l’attestation de runtime Windows Defender System Guard, qui utilise le service SGH (Host Guardian Service) comme service d’attestation. Vous devez configurer SGH dans votre environnement et inscrire l’ordinateur qui héberge votre instance SQL Server dans SGH. Vous devez également configurer vos outils ou applications client (par exemple, SQL Server Management Studio) avec une attestation SGH.
+Le processus d’attestation pris en charge par SQL Server pour les enclaves sécurisées VBS dans [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] est l’attestation de runtime Windows Defender System Guard, qui utilise le service HGS (Host Guardian Service) comme service d’attestation. Vous devez configurer SGH dans votre environnement et inscrire l’ordinateur qui héberge votre instance SQL Server dans SGH. Vous devez également configurer vos outils ou applications client (par exemple, SQL Server Management Studio) avec une attestation SGH.
 
 ## <a name="secure-enclave-providers"></a>Fournisseurs d’enclave sécurisée
 
-Pour utiliser Always Encrypted avec enclaves sécurisées, une application doit utiliser un pilote client qui prend en charge la fonctionnalité. Dans [!INCLUDE[sql-server-2019](..\..\..\includes\sssqlv15-md.md)], vos applications doivent utiliser .NET Framework 4.7.2 et le fournisseur de données .NET Framework pour SQL Server. En outre, les applications .NET doivent être configurées avec un **fournisseur d’enclave sécurisée** spécifique au type de l’enclave (par exemple, VBS) et au service d’attestation (par exemple, SGH), que vous utilisez. Les fournisseurs d’enclave pris en charge sont expédiés séparément dans un package NuGet, que vous devez intégrer à votre application. Un fournisseur d’enclave implémente la logique côté client pour le protocole d’attestation et pour établir un canal sécurisé avec une enclave sécurisée d’un type donné.
+Pour utiliser Always Encrypted avec enclaves sécurisées, une application doit utiliser un pilote client qui prend en charge la fonctionnalité. Dans [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)], vos applications doivent utiliser .NET Framework 4.7.2 et le fournisseur de données .NET Framework pour SQL Server. En outre, les applications .NET doivent être configurées avec un **fournisseur d’enclave sécurisée** spécifique au type de l’enclave (par exemple, VBS) et au service d’attestation (par exemple, SGH), que vous utilisez. Les fournisseurs d’enclave pris en charge sont expédiés séparément dans un package NuGet, que vous devez intégrer à votre application. Un fournisseur d’enclave implémente la logique côté client pour le protocole d’attestation et pour établir un canal sécurisé avec une enclave sécurisée d’un type donné.
 
 ## <a name="enclave-enabled-keys"></a>Clés prenant en charge l’enclave
 
 Always Encrypted avec enclaves sécurisées introduit le concept des clés prenant en charge l’enclave :
 
-- **Clé principale de colonne prenant en charge l’enclave** : une clé principale de colonne qui possède la propriété ENCLAVE_COMPUTATIONS spécifiée dans l’objet de métadonnées de la clé principale de colonne à l’intérieur de la base de données. L’objet de métadonnées de la clé principale de colonne doit également contenir une signature valide des propriétés des métadonnées.
-- **Clé de chiffrement de colonne prenant en charge l’enclave** : une clé de chiffrement de colonne qui est chiffrée avec une clé principale de colonne prenant en charge l’enclave.
+- **Clé principale de colonne prenant en charge l’enclave** : clé principale de colonne qui possède la propriété ENCLAVE_COMPUTATIONS spécifiée dans l’objet de métadonnées de la clé principale de colonne à l’intérieur de la base de données. L’objet de métadonnées de la clé principale de colonne doit également contenir une signature valide des propriétés des métadonnées.
+- **Clé de chiffrement de colonne prenant en charge l’enclave** : clé de chiffrement de colonne qui est chiffrée avec une clé principale de colonne prenant en charge l’enclave.
 
 Lorsque le moteur SQL Server détermine les opérations, spécifiées dans une requête, qui doivent être effectuées à l’intérieur de l’enclave sécurisée, le moteur SQL Server demande que le pilote client partage les clés de chiffrement de colonne qui sont nécessaires pour les calculs avec l’enclave sécurisée. Le pilote client partage les clés de chiffrement de colonne uniquement si les clés prennent en charge l’enclave (c’est-à-dire qu’elles sont chiffrées avec des clés principales de colonne prenant en charge l’enclave) et qu’elles sont correctement signées. Sinon, la requête échoue.
 
@@ -121,7 +121,7 @@ Limitations générales :
 
 - La comparaison d’égalité reste le seul opérateur Transact-SQL pris en charge avec le chiffrement déterministe et les comparaisons d’égalité sont effectuées en comparant les valeurs de texte chiffré en dehors de l’enclave, peu importe si la clé de chiffrement de colonne prend en charge l’enclave ou pas. La seule nouvelle fonctionnalité qui est déverrouillée avec les clés de chiffrement de colonne prenant en charge l’enclave pour le chiffrement déterministe, sont les opérations de chiffrement sur place. Si vous avez une colonne qui est chiffrée à l’aide du chiffrement déterministe (et une clé ne prenant pas en charge l’enclave), pour permettre des calculs riches (critères spéciaux, opérations de comparaison), vous devez chiffrer à nouveau la colonne à l’aide du chiffrement aléatoire.
 
-- La restriction existante sur l’utilisation de classements s’applique aux colonnes chiffrées avec des clés de chiffrement de colonne prenant en charge l’enclave : les colonnes de chaîne de caractères (char, nchar, varchar, nvarchar) chiffrées à l’aide du chiffrement déterministe doivent utiliser des classements avec un ordre de tri binaire 2 (classements BIN2). Les colonnes de chaîne de caractères utilisant des classements non BIN2 peuvent être chiffrées à l’aide du chiffrement aléatoire. Cependant, la seule nouvelle fonctionnalité activée pour ces colonnes (si elles sont chiffrées avec des clés de chiffrement de colonne prenant en charge l’enclave) est le chiffrement sur place. **Pour prendre en charge les calculs riches (critères spéciaux, opérations de comparaison), une colonne doit utiliser un classement BIN2** (et la colonne doit être chiffrée à l’aide du chiffrement aléatoire et d’une clé de chiffrement de colonne prenant en charge l’enclave).
+- La restriction existante sur l’utilisation de classements s’applique aux colonnes chiffrées avec des clés de chiffrement de colonne prenant en charge l’enclave : les colonnes de chaîne de caractères (char, nchar, varchar, nvarchar) chiffrées à l’aide du chiffrement déterministe doivent utiliser des classements avec un ordre de tri binaire 2 (classements BIN2). Les colonnes de chaîne de caractères utilisant des classements non-BIN2 peuvent être chiffrées à l’aide du chiffrement aléatoire. Cependant, la seule nouvelle fonctionnalité activée pour ces colonnes (si elles sont chiffrées avec des clés de chiffrement de colonne prenant en charge l’enclave) est le chiffrement sur place. **Pour prendre en charge les calculs riches (critères spéciaux, opérations de comparaison), une colonne doit utiliser un classement BIN2** (et la colonne doit être chiffrée à l’aide du chiffrement aléatoire et d’une clé de chiffrement de colonne prenant en charge l’enclave).
 
 - L’utilisation de clés prenant en charge l’enclave pour les colonnes dans des tables en mémoire n’est pas prise en charge.
 
@@ -143,4 +143,4 @@ Les limitations suivantes s’appliquent à la préversion actuelle, mais il est
 
 ## <a name="next-steps"></a>Next Steps
 
-- Configurer votre environnement de test et tester la fonctionnalité Always Encrypted avec enclaves sécurisées dans SSMS. Consultez [Tutoriel : prise en main d’Always Encrypted avec enclaves sécurisées à l’aide de SSMS](../tutorial-getting-started-with-always-encrypted-enclaves.md).
+- Configurer votre environnement de test et tester la fonctionnalité Always Encrypted avec enclaves sécurisées dans SSMS. Consultez [Tutoriel : Bien démarrer avec Always Encrypted avec enclaves sécurisées en utilisant SSMS](../tutorial-getting-started-with-always-encrypted-enclaves.md).

@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 1544472c-2803-448d-af52-e901cb457a00
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: da0c23b3fcc746fa2ad8614f88ce539386e71b6e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 42fdd43e7e535452d01701fd7d230484ae30fcae
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47775317"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712160"
 ---
 # <a name="report-design-view-report-builder"></a>Vue Conception de rapport (Générateur de rapports)
   La fenêtre du Générateur de rapports est conçu pour vous aider à organiser facilement vos ressources de rapport et à générer rapidement les rapports paginés dont vous avez besoin. L’aire de conception se trouve au centre de la fenêtre, avec le ruban et les volets autour d’elle. L'aire de conception est l'espace où vous ajoutez et organisez vos éléments de rapport. Cet article décrit les volets que vous utilisez pour ajouter, sélectionner et organiser vos ressources de rapport, ainsi que pour modifier les propriétés des éléments de rapport.  
@@ -108,7 +108,7 @@ ms.locfileid: "47775317"
 ##  <a name="ReptPartGallery"></a> Bibliothèque de parties de rapports  
  La façon la plus simple de créer un rapport est de rechercher une partie de rapport existante, par exemple un tableau ou un graphique, sur le serveur de rapports ou un serveur de rapports intégré à un site SharePoint.  
   
- Cliquez sur **Parties de rapports** sous l’onglet Insertion pour ouvrir la bibliothèque de parties de rapports. Vous pouvez y rechercher des parties de rapports à ajouter à votre rapport. Vous pouvez filtrer les parties de rapports en fonction de leur nom ou d'une partie de celui-ci, de leur créateur, de la personne qui a apporté la dernière modification ou du moment de cette dernière modification, de l'emplacement de stockage ou de leur type. Par exemple, vous pourriez rechercher tous les graphiques créés la semaine dernière par l'un de vos collègues.  
+ Cliquez sur **Parties de rapports** sous l’onglet Insertion pour ouvrir la bibliothèque de parties de rapports. Vous pouvez y rechercher des parties de rapports à ajouter à votre rapport. Vous pouvez filtrer les parties de rapport en fonction de leur nom ou d’une partie de celui-ci, de leur créateur, de la personne qui a apporté la dernière modification ou du moment où elle a été apportée, de leur emplacement de stockage ou de leur type. Par exemple, vous pourriez rechercher tous les graphiques créés la semaine dernière par l'un de vos collègues.  
   
 > [!NOTE]  
 >  Pour afficher la bibliothèque de parties de rapports, vous devez être connecté à un serveur.  
@@ -170,6 +170,6 @@ ms.locfileid: "47775317"
   
 ## <a name="see-also"></a> Voir aussi  
  [Recherche, affichage et gestion des rapports &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
- [Générateur de rapports dans SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
+ [Générateur de rapports dans SQL Server](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
   

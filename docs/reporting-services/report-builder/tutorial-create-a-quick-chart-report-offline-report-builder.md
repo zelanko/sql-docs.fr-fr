@@ -12,18 +12,18 @@ helpviewer_keywords:
 ms.assetid: 6b1db67a-cf75-494c-b70c-09f1e6a8d414
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 283ed465cf38b0653e24dfc8503a1dd98e4df9f9
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: bfb9b14f518b20cd318cd6a532ca96787bfbfe31
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021704"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711358"
 ---
 # <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>Didacticiel : créer un rapport de graphique rapide en mode hors connexion (Générateur de rapports)
 
   Dans ce didacticiel, vous allez utiliser un assistant pour créer un graphique à secteurs dans un rapport paginé [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dans le [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]. Vous ajoutez ensuite des pourcentages et modifiez légèrement le graphique à secteurs. 
   
-Vous pouvez effectuer ce didacticiel de deux façons différentes. Les deux méthodes aboutissent au même résultat, à savoir un graphique à secteurs semblable à celui de cette illustration :  
+Vous pouvez effectuer ce didacticiel de deux façons différentes. Les deux méthodes aboutissent au même résultat, à savoir un graphique à secteurs semblable à celui de cette illustration :  
   
  ![Générateur de rapports - Graphique à secteurs rapide](../../reporting-services/report-builder/media/report-builder-quick-pie-chart.png "Générateur de rapports - Graphique à secteurs rapide")  
   
@@ -231,6 +231,6 @@ Notez que l’aire de conception s’agrandit lorsque vous faites glisser.
 ## <a name="next-steps"></a>Étapes suivantes
 
 [Didacticiels du Générateur de rapports](../../reporting-services/report-builder-tutorials.md)   
-[Générateur de rapports dans SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
+[Générateur de rapports dans SQL Server](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
 
 D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

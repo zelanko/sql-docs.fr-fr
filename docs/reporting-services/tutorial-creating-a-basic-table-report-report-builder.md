@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: d9e30521-f8ae-4c45-89c3-d40727f622f7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6a241d0c1bde3eea57c21ca8a14b465a79aa89c3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5a97a0cfc446a32e02172d22391dec8e5ca13af6
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47627887"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712350"
 ---
 # <a name="tutorial-creating-a-basic-table-report-report-builder"></a>Didacticiel : création d'un rapport de tableau de base (Générateur de rapports)
 Ce didacticiel vous apprend à créer un rapport de tableau de base à partir des exemples de données de ventes. L’illustration suivante montre le rapport que vous allez créer.  
@@ -312,7 +312,7 @@ Le rapport est enregistré sur le serveur de rapports. Le nom du serveur de rapp
 4.  Cliquez sur **Enregistrer**.  
   
 ## <a name="Export"></a>7. Exporter le rapport  
-Les rapports peuvent être exportés dans différents formats, par exemple, Microsoft Excel et les fichiers de valeurs séparées par des virgules (CSV). Pour plus d’informations, consultez [Export Reports &#40;Report Builder and SSRS&#41;](../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md).  
+Les rapports peuvent être exportés dans différents formats, par exemple, Microsoft Excel et les fichiers de valeurs séparées par des virgules (CSV). Pour plus d’informations, consultez [Exporter des rapports &#40;Générateur de rapports et SSRS&#41;](../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md).  
   
 Dans ce didacticiel, vous allez exporter le rapport vers Excel et définir une propriété du rapport afin de fournir un nom personnalisé pour l'onglet de classeur.  
   
@@ -355,6 +355,6 @@ Ceci conclut la procédure pas à pas décrivant comment créer un rapport de ta
   
 ## <a name="see-also"></a> Voir aussi  
 [Didacticiels du Générateur de rapports](../reporting-services/report-builder-tutorials.md)  
-[Générateur de rapports dans SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
+[Générateur de rapports dans SQL Server](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
 

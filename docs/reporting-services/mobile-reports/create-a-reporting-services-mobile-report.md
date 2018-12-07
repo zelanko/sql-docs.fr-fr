@@ -8,15 +8,15 @@ ms.topic: conceptual
 ms.assetid: e84dc855-aede-4fb4-b721-e6d8787961f4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5f074f3bbdb3b3a7920f1e3ad86270a6bf51059b
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: b3fd0fc3530ec35da61e2314ef7a80a58d9bdd7d
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030198"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52710700"
 ---
 # <a name="create-a-reporting-services-mobile-report"></a>Créer un rapport mobile Reporting Services
-L’Éditeur de rapports mobiles SQL Server vous permet de créer rapidement des rapports mobiles SQL Server 2016 Reporting Services bien adaptés à la taille de votre écran, sur une aire de conception dotée de lignes et de colonnes de grille réglables, ainsi que d’éléments de rapport mobile flexibles.  
+L’Éditeur de rapports mobiles SQL Server vous permet de créer rapidement des rapports mobiles SQL Server Reporting Services bien adaptés à la taille de votre écran, sur une aire de conception dotée de lignes et de colonnes de grille réglables ainsi que d’éléments de rapport mobile flexibles.  
   
 Quand vous créez un rapport mobile pour la première fois, vous pouvez installer Éditeur de rapports mobiles SQL Server sur votre machine locale à partir du portail web de Reporting Services. Vous pouvez aussi l’installer à partir du [Centre de téléchargement Microsoft](https://go.microsoft.com/fwlink/?LinkID=733527). Après cela, vous pouvez le démarrer à partir du portail web ou localement.   
     
@@ -62,7 +62,7 @@ Quand vous créez un rapport mobile pour la première fois, vous pouvez installe
   
 11. Il est désormais temps d’enregistrer votre rapport. Sélectionnez l’icône Enregistrer dans le coin supérieur gauche, puis **Enregistrer localement** ou **Enregistrer sur le serveur**.  
   
-   Pour l’enregistrer sur un serveur, vous devez avoir accès à un serveur de rapports SQL Server 2016 Reporting Services.  
+   Pour l’enregistrer sur un serveur, vous devez avoir accès à un serveur de rapports SQL Server Reporting Services.  
      
    ### <a name="see-also"></a>Voir aussi  
      

@@ -12,18 +12,18 @@ helpviewer_keywords:
 ms.assetid: cf2c396e-b0c6-41f9-8c45-ddc8406f7e85
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4d129704681c308c093033ff69e1f1e3ec2bc5fb
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 2273d2c0108d96478aa5f5645abcb0034f6c89e5
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021833"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52710780"
 ---
 # <a name="clickthrough-reports-ssrs"></a>Rapports générés interactifs (SSRS)
   Dans le Générateur de rapports, un rapport généré interactif est un rapport qui fournit des informations détaillées sur les données contenues dans le rapport principal. Un rapport consultable à l'aide de clics est affiché lorsque l'utilisateur clique sur des données interactives apparaissant dans le rapport principal. Ces rapports sont automatiquement générés par le serveur de rapports. En tant que concepteur de modèle, vous déterminez ce qui est affiché dans les rapports générés interactifs en définissant les propriétés **DefaultDetailAttribute** et **DefaultAggregateAttribute** que vous affectez à une entité dans le modèle de rapport.  
   
 > [!NOTE]  
->  Les rapports générés interactifs ne sont pas disponibles dans toutes les éditions de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prise en charge par les éditions de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md). Si vous ne savez pas quelle édition de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est utilisée par votre organisation, contactez votre administrateur de base de données.  
+>  Les rapports générés interactifs ne sont pas disponibles dans toutes les éditions de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prises en charge par les éditions de SQL Server 2017](~/sql-server/editions-and-components-of-sql-server-2017.md). Si vous ne savez pas quelle édition de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est utilisée par votre organisation, contactez votre administrateur de base de données.  
   
 ## <a name="using-default-templates"></a>Utilisation de modèles par défaut  
  Par défaut, le serveur de rapports génère deux types de modèles générés interactifs pour chaque entité : un modèle à instance unique et un modèle à plusieurs instances. L'élément sur lequel vous cliquez détermine le modèle utilisé. Si la personne lisant le rapport clique sur un attribut scalaire, le modèle à instance unique est utilisé. Si la personne lisant le rapport clique sur un attribut d'agrégation, le modèle à plusieurs instances est utilisé.  

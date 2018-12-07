@@ -8,19 +8,19 @@ ms.assetid: c1a6b683-15cf-44ae-ac60-ceee63a60aaf
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 530b37d346235f829c0ac1e8ccacd4cbcfb157cc
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: c68f8070bba8f392ded453f36078f0141d80ee04
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50051201"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711892"
 ---
 # <a name="add-an-additional-report-server-to-a-farm-ssrs-scale-out"></a>Ajouter un serveur de rapports supplémentaire à une batterie (montée en puissance SSRS)
 
   L'ajout d'un second serveur de rapports en mode SharePoint, ou plus, à votre batterie de serveurs SharePoint peut améliorer les performances et le temps de réponse du traitement du serveur de rapports. Si vous avez trouvé que les performances ralentissaient alors que vous ajoutiez des utilisateurs, des rapports et autres applications au serveur de rapports, l'ajout de serveurs de rapports peut améliorer les performances. Il est également recommandé d'ajouter un second serveur de rapports pour augmenter la disponibilité des serveurs de rapports lorsqu'il existe des problèmes liés au matériel ou lorsque vous effectuez la maintenance générale sur des serveurs individuels de votre environnement. À compter de la version [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] , les étapes de la montée en puissance parallèle d'un environnement [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode SharePoint suivent le déploiement standard d'une batterie de serveurs SharePoint et exploitent les fonctionnalités d'équilibrage de charge SharePoint.  
   
 > [!IMPORTANT]  
->  Le déploiement avec montée en puissance parallèle de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] n'est pas pris en charge par toutes les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez la section [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de l’article [Fonctionnalités prises en charge par les éditions de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+>  Le déploiement avec montée en puissance parallèle de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] n'est pas pris en charge par toutes les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez la section [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de l’article [Fonctionnalités prises en charge par les éditions de SQL Server](~/sql-server/editions-and-components-of-sql-server-2017.md#SSRS).  
   
 > [!TIP]  
 >  À compter de la version [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] , vous n'utilisez pas le Gestionnaire de configuration [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour ajouter des serveurs et déployer des serveurs de rapports avec montée en puissance parallèle. Les produits SharePoint gèrent le déploiement avec montée en puissance parallèle de Reporting Services sous forme de serveurs SharePoint avec l'ajout du service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] à la batterie de serveurs.  

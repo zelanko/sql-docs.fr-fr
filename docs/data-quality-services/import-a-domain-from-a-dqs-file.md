@@ -5,19 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: fabd88b0-22b3-4543-a993-6d5b202ded80
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 26af15dea92c143fe995e0072f80d3782a3adaab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7961facbec5f194c45c8677481af5b43bdfaa1e8
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47787223"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52616399"
 ---
 # <a name="import-a-domain-from-a-dqs-file"></a>Importer un domaine à partir d'un fichier .dqs
 
@@ -27,7 +26,7 @@ ms.locfileid: "47787223"
   
  L'utilisation d'un fichier de données .dqs pour exporter un domaine d'une base de connaissances puis l'importer vers une autre base de connaissances simplifie le processus de génération de connaissances, et permet d'économiser aussi bien du temps que des efforts. Il vous permet de partager un domaine et ses connaissances avec d'autres, ce qui leur fait gagner du temps. Vous pouvez importer un domaine unique ou un domaine composite (contenant plusieurs domaines uniques). Un fichier .dqs contenant un domaine unique inclut toutes les données du domaine avec les propriétés de domaine, les valeurs et les données des règles, à l'exception des informations de données de référence mappées. Un fichier .dqs contenant un domaine composite inclut toutes les données du domaine composite, notamment toutes les données des domaines uniques contenus dans le domaine composite, ainsi que les propriétés, les relations de valeur et les règles du domaine composite, à l'exception des données de référence mappées. Les données publiées et non publiées seront importées.  
   
- Lorsque vous importez un domaine, le nom du domaine reste le même que le nom du domaine exporté à l'origine, à moins que ce nom de domaine existe déjà, auquel cas DQS ajoute « _1 » au nom. C'est également le cas si vous importez un domaine composite qui contient un domaine individuel portant le même nom qu'un domaine existant.  
+ Lorsque vous importez un domaine, le nom du domaine reste le même que le nom du domaine exporté à l’origine, à moins que ce nom de domaine existe déjà, auquel cas DQS ajoute « _1 » au nom. C'est également le cas si vous importez un domaine composite qui contient un domaine individuel portant le même nom qu'un domaine existant.  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   

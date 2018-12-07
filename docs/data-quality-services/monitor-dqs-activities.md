@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.administration.activitymonitoring.f1
@@ -17,12 +16,12 @@ ms.assetid: 1d4c76f3-0d7b-498e-b792-4db4a0349814
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e0864e25376f514186da5afe35d9dd4355ae939c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 84e084b6db8576f4bd1f7c7d020ac9fe908a0eec
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47801797"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617529"
 ---
 # <a name="monitor-dqs-activities"></a>Surveiller les activités DQS
 
@@ -127,7 +126,7 @@ ms.locfileid: "47801797"
   
     -   **Étapes de l'activité**: affiche une grille des processus de calcul (étapes de l'activité) associés à l'activité sélectionnée. Il peut exister plusieurs étapes d'activité affichées pour une activité sous cet onglet. Cela peut se produire au cas où la même étape de l'activité serait exécutée plusieurs fois par l'utilisateur. Par exemple, l'étape d'activité a été arrêtée et démarrée à nouveau. La grille figurant sous cet onglet affiche les informations suivantes pour étape associée à l'activité : **Type**, **État actuel**, **Heure de début**, **Temps écoulé**et **Heure de fin**.  
   
-    -   **Générateur de profils**: affiche les informations de profilage des activités en cours et historiques. Pour les activités courantes, les informations sont partielles mais cohérentes. Les informations de profilage d'une activité sont exportées vers un fichier Excel lorsque vous exportez les détails d'activité correspondants dans un fichier Excel. Les informations sont disponibles dans les feuilles de **Générateur de profils – source** et de **Générateur de profils – champs** dans le fichier Excel exporté.  
+    -   **Générateur de profils**: affiche les informations de profilage des activités en cours et historiques. Pour les activités courantes, les informations sont partielles mais cohérentes. Les informations de profilage d'une activité sont exportées vers un fichier Excel lorsque vous exportez les détails d'activité correspondants dans un fichier Excel. Les informations sont disponibles dans les feuilles de **Générateur de profils - source** et de **Générateur de profils - champs** dans le fichier Excel exporté.  
   
 ##  <a name="Export"></a> Exporter les détails des activités DQS  
  Vous pouvez exporter les propriétés d'activité, les processus d'activité, et les informations de profilage d'une activité de l'écran d'analyse vers un fichier Excel. Pour cela :  

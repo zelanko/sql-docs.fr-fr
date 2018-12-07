@@ -9,18 +9,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 55cf8c1bc9a7a74928ebe2f5c0c7060c94068e48
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 4cafa82c6c5dd7712daa930b9b9aaf4be2bf66fc
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703907"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711830"
 ---
 # <a name="whats-new-in-sql-server-2019"></a>Nouveautés de SQL Server 2019
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-[!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] s’appuie sur les versions précédentes pour faire de SQL Server une plateforme compatible avec de nombreux langages de développement, types de données et systèmes d’exploitation, localement ou sur le cloud. Cet article résume les nouveautés de SQL Server 2019. Pour obtenir plus d’informations et découvrir les problèmes connus, consultez les [Notes de publication de SQL Server 2019](sql-server-ver15-release-notes.md).
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] s’appuie sur les versions précédentes pour faire de SQL Server une plateforme compatible avec de nombreux langages de développement, types de données et systèmes d’exploitation, localement ou dans le cloud. Cet article résume les nouveautés de SQL Server 2019. Pour obtenir plus d’informations et découvrir les problèmes connus, consultez les [Notes de publication de SQL Server 2019](sql-server-ver15-release-notes.md).
 
 **Essayez SQL Server 2019 !**
 - [![Télécharger à partir du Centre d’évaluation](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=862101) [Télécharger SQL Server 2019 en vue de l’installer sur Windows](https://go.microsoft.com/fwlink/?LinkID=862101)
@@ -29,7 +29,7 @@ ms.locfileid: "51703907"
 
 ## <a name="ctp-21"></a>CTP 2.1
 
-Community Technology Preview (CTP) 2.1 est la première version publique de [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)]. Les fonctionnalités suivantes sont ajoutées ou améliorées pour [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] CTP 2.1.
+Community Technology Preview (CTP) 2.1 est la première version publique de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. Les fonctionnalités suivantes sont ajoutées ou améliorées pour [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.1.
 
 - [Clusters Big Data](#bigdatacluster)
   - Déployer des applications Python et R
@@ -46,7 +46,7 @@ Community Technology Preview (CTP) 2.1 est la première version publique de [!I
 
 ## <a name="ctp-20"></a>CTP 2.0 
 
-Community Technology Preview (CTP) 2.0 est la première version publique de [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)]. Les fonctionnalités suivantes sont ajoutées ou améliorées pour [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] CTP 2.0.
+Community Technology Preview (CTP) 2.0 est la première version publique de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. Les fonctionnalités suivantes sont ajoutées ou améliorées pour [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.0.
 
 - [Clusters Big Data](#bigdatacluster)
   - Déployer un cluster Big Data avec des conteneurs SQL et Spark Linux sur Kubernetes
@@ -163,7 +163,7 @@ Prise en charge complète du codage de caractères UTF-8 courant en tant qu’en
 
 Par exemple,`LATIN1_GENERAL_100_CI_AS_SC` en `LATIN1_GENERAL_100_CI_AS_SC_UTF8`. UTF-8 est uniquement disponible pour les classements Windows qui prennent en charge les caractères supplémentaires, comme introduit dans SQL Server 2012. `NCHAR` et `NVARCHAR` autorisent uniquement l’encodage UTF-16 et restent inchangés.
 
-Cette fonctionnalité peut engendrer des économies de stockage importantes, selon le jeu de caractères utilisé. Par exemple, le fait de changer un type de données de colonne comportant des chaînes Latin de `NCHAR(10)` en `CHAR(10)` avec un classement compatible UTF-8 se traduit par une réduction de près de 50 % des besoins en stockage. En effet, `NCHAR(10)` nécessite 22 octets pour le stockage, tandis que `CHAR(10)` nécessite 12 octets pour la même chaîne Unicode.
+Cette fonctionnalité peut engendrer des économies de stockage importantes, selon le jeu de caractères utilisé. Par exemple, le fait de changer un type de données de colonne comportant des chaînes Latin de `NCHAR(10)` en `CHAR(10)` avec un classement compatible UTF-8 se traduit par une réduction de 50 % des besoins en stockage. En effet, `NCHAR(10)` nécessite 20 octets pour le stockage, tandis que `CHAR(10)` nécessite 10 octets pour la même chaîne Unicode.
 
 ### <a name="resumable-online-index-create-ctp-20"></a>Création d’index en ligne pouvant être reprise (CTP 2.0)
 
@@ -329,7 +329,7 @@ Pour des informations détaillées, consultez [Nouveautés de SQL Server Machine
 
 L’infrastructure du profilage de requête léger fournit les données de performances de requête plus efficacement que les technologies de profilage standard. Le profilage léger est maintenant activé par défaut. Il a été introduit dans [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1. Le profilage léger offre un mécanisme de collecte des statistiques d’exécution des requêtes avec une surcharge attendue de 2 % pour l’UC, par rapport à une surcharge pouvant atteindre 75 % pour l’UC dans le cadre du mécanisme de profilage de requête standard. Sur les versions précédentes, il était désactivé (OFF) par défaut. Les administrateurs de base de données peuvent l’activer avec [l’indicateur de trace 7412](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). 
 
-Pour plus d’informations sur le profilage léger, consultez le billet de blog [Developers Choice: Query progress – anytime, anywhere](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/).
+Pour plus d’informations sur le profilage léger, consultez [Developers Choice: Query progress - anytime, anywhere](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/).
 
 ### <a id="polybase"></a>Nouveaux connecteurs PolyBase
 

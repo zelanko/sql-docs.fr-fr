@@ -10,12 +10,12 @@ ms.assetid: e360ba3a-e96b-4f85-b588-ed1f767fa973
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 6aa72013df7e229c76154b6de1839c2ff0e0f0dc
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: a51b4a791de70421a80f7a62a1ab13b865688529
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701247"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52641475"
 ---
 # <a name="secure-a-master-data-manager-web-application"></a>Sécuriser une application Web Master Data Manager
 
@@ -59,8 +59,11 @@ ms.locfileid: "51701247"
 10. Ouvrez maintenant le fichier web.config sous *lecteur*:\Program Files\Microsoft SQL Server\130\Master Data Services\WebApplication.  
   
 11. Recherchez la chaîne `<security mode="Message">` et modifiez-la en `<security mode="Transport">`.  
-  
-12. Enregistrez et fermez le fichier. Si vous obtenez une erreur, cela peut être dû au fait que vous avez activé le contrôle de compte d'utilisateur. Pour plus d'informations, consultez le [Guide pas à pas du contrôle de compte d'utilisateur Windows](https://technet.microsoft.com/library/cc709691\(WS.10\).aspx). Les utilisateurs doivent maintenant être en mesure d'utiliser HTTPS pour accéder au site.  
+
+12. Remplacez `<serviceMetadata httpGetEnable="true" httpsGetEnabled="false">` par `<serviceMetadata httpGetEnable="false" httpsGetEnabled="true">` afin d’éviter les problèmes susceptibles d’apparaître dans le client Silverlight.
+
+13. Enregistrez et fermez le fichier. Si vous obtenez une erreur, cela peut être dû au fait que vous avez activé le contrôle de compte d'utilisateur. Pour plus d'informations, consultez le [Guide pas à pas du contrôle de compte d'utilisateur Windows](http://technet.microsoft.com/library/cc709691\(WS.10\).aspx). Les utilisateurs doivent maintenant être en mesure d'utiliser HTTPS pour accéder au site.  
+
   
 ## <a name="see-also"></a> Voir aussi  
  [Créer une application Web Master Data Manager &#40;Master Data Services&#41;](../../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md)  

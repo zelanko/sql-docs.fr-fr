@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 60e0a0b2-8a47-4eda-a5df-3e5e403dbdbc
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 23938f5885fd207aed8143686f7b762d81fc8130
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 92655853880919ba29b4736404fe1637471e8f15
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813892"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712630"
 ---
 # <a name="rsreportserverconfig-configuration-file"></a>Fichier de configuration RSReportServer.config
 Le fichier [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**RsReportServer.config** stocke les paramètres utilisés par le service Web Report Server et le traitement en arrière-plan. Toutes les applications [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] s'exécutent au sein d'un processus unique qui lit les paramètres de configuration stockés dans le fichier RSReportServer.config. Les serveurs de rapports en mode natif et en mode SharePoint utilisent le fichier RSReportServer.config. Toutefois, les deux modes n'utilisent pas les mêmes paramètres dans le fichier de configuration. La version en mode SharePoint du fichier est moins volumineuse car de nombreux paramètres du mode SharePoint sont stockés dans des bases de données de configuration SharePoint plutôt que dans le fichier. Cette rubrique décrit le fichier de configuration par défaut installé en mode natif ou en mode SharePoint, et certains paramètres et comportements importants qui sont contrôlés par le fichier de configuration.  
@@ -29,20 +29,22 @@ RSReportServer.config se trouve dans les dossiers suivants, selon le mode du ser
 
 
   
-### <a name="native-mode-report-server"></a>Serveur de rapports en mode natif  
+### <a name="native-mode-report-server"></a>Serveur de rapports en mode natif 
 
  
-**[!INCLUDE[applies](../../includes/applies-md.md)]**  SQL Server 2016
+**[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)]** [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)]
+
 ```  
 C:\Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\ReportServer  
 ```
 
-**[!INCLUDE[applies](../../includes/applies-md.md)]** Version d’évaluation technique de janvier 2017 des rapports Power BI de SQL Server Reporting Services
+**[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)]** [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
+
 ```  
 C:\Program Files\Microsoft SQL Server Reporting Services\RSServer\ReportServer
 ```  
   
-### <a name="sharepoint-mode-report-server"></a>Serveur de rapports en mode SharePoint
+### <a name="sharepoint-mode-report-server"></a>Serveur de rapports en mode SharePoint 
 
 > [!NOTE]
 > En mode intégré, SharePoint n’est pas disponible avec la version d’évaluation technique de janvier 2017 des rapports Power BI de SQL Server Reporting Services.
@@ -57,7 +59,7 @@ Pour plus d’informations sur la modification du fichier, consultez [Modifier u
  Le tableau suivant fournit des informations sur les paramètres de configuration généraux qui apparaissent dans la première partie du fichier. Les paramètres sont présentés dans l'ordre dans lequel ils apparaissent dans le fichier de configuration. La dernière colonne du tableau indique si le paramètre s’applique à un serveur de rapports en mode natif **(N)** , à un serveur de rapports en mode SharePoint **(S)** ou aux deux.  
   
 > [!NOTE]  
->  Dans cette rubrique, « entier maximal » désigne la valeur INT_MAX de 2147483647.  Pour plus d'informations, consultez [Limites des ressources](https://msdn.microsoft.com/library/296az74e\(v=vs.110\).aspx) (https://msdn.microsoft.com/library/296az74e(v=vs.110).aspx).  
+>  Dans cette rubrique, « entier maximal » désigne la valeur INT_MAX de 2147483647.  Pour plus d'informations, consultez [Limites des ressources](https://msdn.microsoft.com/library/296az74e\(v=vs.110\).aspx) (https://msdn.microsoft.com/library/296az74e(v=vs.110).aspx).  
   
 |Paramètre|Description|Mode|  
 |-------------|-----------------|----------|  

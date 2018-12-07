@@ -5,8 +5,7 @@ ms.date: 11/22/2011
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.dm.testcdrule.f1
@@ -15,12 +14,12 @@ ms.assetid: 0f3f5ba4-cc47-4d66-866e-371a042d1f21
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 07004bdd1285d919f2d7480e6ee0c99573d62732
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: ca00ce6884ca1e36d25a7c593b0f65ac6b5c2809
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696267"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617399"
 ---
 # <a name="create-a-cross-domain-rule"></a>Créer une règle inter-domaines
 
@@ -30,7 +29,7 @@ ms.locfileid: "51696267"
   
  La clause If et la clause Then d'une règle inter-domaines sont définies chacune pour l'un des domaines uniques du domaine composite. Chaque clause doit être définie pour un seul domaine. Une règle inter-domaines doit être en relation avec plusieurs domaines uniques ; vous ne pouvez pas définir une règle simple de domaine (pour un seul domaine) pour un domaine composite. Pour cela, définissez une règle de domaine pour un seul domaine. La clause If et la clause Then peuvent chacune contenir une ou plusieurs conditions.  
   
- Une règle inter-domaines ayant des conditions définitives applique la logique de règles aux synonymes de la valeur des conditions, ainsi qu'aux valeurs elles-mêmes. Les conditions définitives pour les clauses If et Then sont La valeur est égale à, La valeur n'est pas égale à, La valeur se trouve dans, ou La valeur ne se trouve pas dans. Par exemple, imaginons que vous ayez la règle inter-domaines suivante pour un domaine composite : « Pour « Ville », si la valeur est égale « à Los Angeles », alors pour « État », la valeur est égale à « CA ». « Si « Los Angeles » et « LA » sont synonymes, cette règle retourne comme corrects « Los Angeles CA » et « LA CA », et comme erronés « Los Angeles WA » et « LA WA ».  
+ Une règle inter-domaines ayant des conditions définitives applique la logique de règles aux synonymes de la valeur des conditions, ainsi qu'aux valeurs elles-mêmes. Les conditions définitives pour les clauses If et Then sont La valeur est égale à, La valeur n'est pas égale à, La valeur se trouve dans, ou La valeur ne se trouve pas dans. Par exemple, imaginons que vous ayez la règle inter-domaines suivante pour un domaine composite : « Pour « Ville », si la valeur est égale à « Los Angeles », alors pour « État », la valeur est égale à « CA ». « Si « Los Angeles » et « LA » sont synonymes, cette règle retourne comme corrects « Los Angeles CA » et « LA CA », et comme erronés « Los Angeles WA » et « LA WA ».  
   
  En dehors de vous permettre de connaître la validité d'une règle inter-domaines, la clause finale *Then* d'une règle inter-domaines, **La valeur est égale à**, corrige également les données pendant l'activité de nettoyage. Pour plus d'informations, consultez [Data Correction using Definitive Cross-Domain Rules](../data-quality-services/cleanse-data-in-a-composite-domain.md#CDCorrection) dans [Cleanse Data in a Composite Domain](../data-quality-services/cleanse-data-in-a-composite-domain.md).  
   

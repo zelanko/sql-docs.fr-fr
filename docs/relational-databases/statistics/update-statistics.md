@@ -14,12 +14,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1841f9ac3408726bd54817c2f59291261a5fc641
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1e3017d2f90f1b9ef7988b110e6767864924217c
+ms.sourcegitcommit: f1cf91e679d1121d7f1ef66717b173c22430cb42
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788477"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52586282"
 ---
 # <a name="update-statistics"></a>Mettre à jour les statistiques
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -60,11 +60,11 @@ ms.locfileid: "47788477"
   
 5.  Cliquez avec le bouton droit sur l’objet de statistiques à mettre à jour et sélectionnez **Propriétés**.  
   
-6.  Dans la boîte de dialogue **Propriétés des statistiques –**_nom\_statistiques_, cochez la case **Mettre à jour les statistiques pour ces colonnes**, puis cliquez sur **OK**.  
+6.  Dans la boîte de dialogue **Propriétés des statistiques -**_nom\_statistiques_, cochez la case **Mettre à jour les statistiques pour ces colonnes**, puis cliquez sur **OK**.  
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
-#### <a name="to-update-a-specific-statistics-object"></a>Pour mettre à jour un objet de statistiques spécifique  
+### <a name="to-update-a-specific-statistics-object"></a>Pour mettre à jour un objet de statistiques spécifique  
   
 1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -80,7 +80,7 @@ ms.locfileid: "47788477"
     GO  
     ```  
   
-#### <a name="to-update-all-statistics-in-a-table"></a>Pour mettre à jour toutes les statistiques d'une table  
+### <a name="to-update-all-statistics-in-a-table"></a>Pour mettre à jour toutes les statistiques d'une table  
   
 1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -96,9 +96,9 @@ ms.locfileid: "47788477"
     GO  
     ```  
   
- Pour plus d’informations, consultez [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md).  
+Pour plus d’informations, consultez [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md).  
   
-#### <a name="to-update-all-statistics-in-a-database"></a>Pour mettre à jour toutes les statistiques d'une base de données  
+### <a name="to-update-all-statistics-in-a-database"></a>Pour mettre à jour toutes les statistiques d'une base de données  
   
 1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -112,7 +112,9 @@ ms.locfileid: "47788477"
     -- The following example updates the statistics for all tables in the database.   
     EXEC sp_updatestats;  
     ```  
-  
- Pour plus d’informations, consultez [sp_updatestats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md).  
-  
-  
+
+Pour plus d’informations, consultez [sp_updatestats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md).   
+
+### <a name="automatic-index-and-statistics-management"></a>Gestion automatique des index et des statistiques
+Tirez parti de solutions comme [Adaptive Index Defrag](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag) pour gérer automatiquement la défragmentation des index et les mises à jour des statistiques pour une ou plusieurs bases de données. Cette procédure choisit automatiquement s’il faut reconstruire ou réorganiser un index en fonction de son niveau de fragmentation, entre autres, et mettre à jour les statistiques avec un seuil linéaire.
+

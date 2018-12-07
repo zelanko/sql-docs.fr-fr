@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 8d831356-7efa-40cc-ae95-383b3eecf833
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 36fc882093d13b366419015f058d6e889dfe4f05
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 4db47bde02745ddc554f17e1f951c836c1542cc8
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029388"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712710"
 ---
 # <a name="tutorial-map-report-report-builder"></a>Didacticiel : Rapport cartographique (Générateur de rapports)
 Dans ce didacticiel [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] , vous allez découvrir les fonctionnalités cartographiques que vous pouvez utiliser pour afficher des données sur un arrière-plan géographique d’un rapport paginé [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] . 
@@ -543,7 +543,7 @@ Pour plus d’informations, consultez [Cartes &#40;Générateur de rapports et S
   
 ## <a name="see-also"></a> Voir aussi  
 [Didacticiels du Générateur de rapports](../reporting-services/report-builder-tutorials.md)  
-[Générateur de rapports dans SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
+[Générateur de rapports dans SQL Server](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
 [Assistant Carte et Assistant Couche &#40;Générateur de rapports et SSRS&#41;](../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)  
 [Modifier l’affichage des polygones, des lignes et des points à l’aide de règles et de données analytiques &#40;Générateur de rapports et SSRS&#41;](../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)  
   

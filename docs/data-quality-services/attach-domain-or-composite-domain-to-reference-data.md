@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.dm.refdata.f1
@@ -15,12 +14,12 @@ ms.assetid: 36af981c-d0d0-4dc6-afe5-bbb3c97845dc
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2a317f61002d185b73c146a8fd1392252211928c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 358b1779ebc24f17035cb50eda77c7249456ff9a
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730817"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617080"
 ---
 # <a name="attach-domain-or-composite-domain-to-reference-data"></a>Attacher un domaine ou un domaine composite à des données de référence
 
@@ -34,9 +33,9 @@ ms.locfileid: "47730817"
 > [!WARNING]  
 >  Le domaine composite associé à un service de données de référence est disponible dans la liste déroulante des domaines lors du mappage des domaines aux colonnes du schéma de service de données de référence. Ne mappez pas le domaine composite à une colonne dans le schéma de service de données de référence ; vous devez uniquement mapper les domaines individuels au sein d'un domaine composite aux colonnes appropriées dans le schéma de service de données de référence. Sinon, cela génère une erreur.  
   
- Un schéma de service de données de référence peut avoir une colonne obligatoire qui doit être mappée au domaine approprié si vous choisissez d'utiliser le schéma. La colonne obligatoire d'un schéma de données de référence est identifiée par « (M) » au niveau de son nom. Par exemple, **Adresse** est la colonne de schéma obligatoire dans **Melissa Data – Address Data** et **CompanyName** est la colonne de schéma obligatoire dans **Digital Trowel Inc. – Us companies and professional data for SQL users**.  
+ Un schéma de service de données de référence peut avoir une colonne obligatoire qui doit être mappée au domaine approprié si vous choisissez d'utiliser le schéma. La colonne obligatoire d’un schéma de données de référence est identifiée par « (M) » au niveau de son nom. Par exemple, **Adresse** est la colonne de schéma obligatoire dans **Melissa Data - Address Data** et **CompanyName** est la colonne de schéma obligatoire dans **Digital Trowel Inc. - Us companies and professional data for SQL users**.  
   
- Dans cette rubrique, nous allons créer quatre domaines : **Address Line**, **City**, **State**et **Zip**, sous un domaine composite **Address Verification**; joignez le domaine composite au service de données de référence **Melissa Data – Address Check** , puis mappez les domaines dans le domaine composite aux colonnes appropriées dans le schéma de service de données de référence.  
+ Dans cette rubrique, nous allons créer quatre domaines : **Address Line**, **City**, **State**et **Zip**, sous un domaine composite **Address Verification**. Joignez le domaine composite au service de données de référence **Melissa Data - Address Check**, puis mappez les domaines dans le domaine composite aux colonnes appropriées dans le schéma de service de données de référence.  
   
 ## <a name="before-you-begin"></a>Avant de commencer  
   
@@ -66,9 +65,9 @@ ms.locfileid: "47730817"
   
 8.  Dans la boîte de dialogue **Catalogue des fournisseurs de données de référence en ligne** :  
   
-    1.  Sous **DataMarket Data Quality Services**, sélectionnez la zone de **Melissa Data – Contrôle d'adresse** .  
+    1.  Sous **DataMarket Data Quality Services**, sélectionnez la zone **Melissa Data - Contrôle d’adresse**.  
   
-    2.  Mappez les colonnes du service de données de référence Melissa Data – Address Check aux domaines appropriés (Address Line, City, State et Zip). Vous mappez les colonnes en sélectionnant une colonne de service de données de référence dans la colonne **Schéma de service de données de référence** , puis en sélectionnant le domaine approprié dans la colonne **Domaine** . Pour ajouter des lignes à la table, cliquez sur l'icône **Ajouter une entrée de schéma** .  
+    2.  Mappez les colonnes du service de données de référence Melissa Data - Address Check aux domaines appropriés (Address Line, City, State et Zip). Vous mappez les colonnes en sélectionnant une colonne de service de données de référence dans la colonne **Schéma de service de données de référence** , puis en sélectionnant le domaine approprié dans la colonne **Domaine** . Pour ajouter des lignes à la table, cliquez sur l'icône **Ajouter une entrée de schéma** .  
   
     3.  Cliquez sur **OK** pour enregistrer les modifications et fermez la boîte de dialogue **Catalogue des fournisseurs de données de référence en ligne** .  
   

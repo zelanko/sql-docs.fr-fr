@@ -8,15 +8,15 @@ ms.topic: conceptual
 ms.assetid: 6956ebd6-0217-4087-a4fa-5cc1c3804691
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9cfffb3e3df68d28fc7798461f1f45133f47148e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8e6855a7a6a47021a635e12b2c53515ed20aa6f4
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785646"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712440"
 ---
 # <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>Didacticiel : ajouter un graphique à barres à un rapport (Générateur de rapports)
-Dans ce tutoriel, vous allez utiliser un Assistant dans [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] pour créer un graphique à barres dans un rapport paginé [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)]. Ensuite, vous ajouterez un filtre et améliorerez le graphique. 
+Dans ce didacticiel, vous allez utiliser un Assistant dans [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] pour créer un graphique à barres dans un rapport paginé [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] . Ensuite, vous ajouterez un filtre et améliorerez le graphique. 
 
 Un graphique à barres représente les données de catégorie horizontalement. Cela peut aider à :  
   
@@ -298,6 +298,6 @@ Vous avez réalisé le didacticiel d'ajout d'un graphique à barres à votre rap
   
 ## <a name="see-also"></a> Voir aussi  
 [Didacticiels du Générateur de rapports](../reporting-services/report-builder-tutorials.md)  
-[Générateur de rapports dans SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
+[Générateur de rapports dans SQL Server](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
 

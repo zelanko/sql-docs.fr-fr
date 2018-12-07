@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: a3a822ddfdd954e0811e83ca4c92a2c3dc7e5b90
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: a3f79fd96bdfb51bb9ca0301552876a536336df7
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51812972"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712650"
 ---
 # <a name="install-sql-server-reporting-services-2017-and-later"></a>Installer SQL Server Reporting Services (2017 et versions ultérieures)
 
@@ -124,7 +124,7 @@ Vous devez ouvrir le port TCP que vous avez configuré pour l’URL de votre ser
 
 ## <a name="related-information"></a>Informations connexes
 
-Pour plus d’informations sur l’installation SQL Server 2016 Reporting Services en mode natif, consultez [Installer le serveur de rapports Reporting Services en mode natif](install-reporting-services-native-mode-report-server.md). Pour plus d’informations sur l’installation de SQL Server 2016 Reporting Services en mode intégré SharePoint, consultez [Installer le premier serveur de rapports en mode SharePoint](install-the-first-report-server-in-sharepoint-mode.md).
+Pour plus d’informations sur l’installation de SQL Server Reporting Services en mode natif, consultez [Installer le serveur de rapports Reporting Services en mode natif](install-reporting-services-native-mode-report-server.md). Pour plus d’informations sur l’installation de SQL Server 2016 Reporting Services (et versions antérieures) en mode intégré SharePoint, consultez [Installer le premier serveur de rapports en mode SharePoint](install-the-first-report-server-in-sharepoint-mode.md).
 
 ## <a name="next-steps"></a>Étapes suivantes
 

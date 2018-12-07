@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 79ab0572-43e9-4dc4-9b5a-cd8b627b8274
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fa047ea7506c4fd9111345e0b5cbb6beca877356
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 20bcd05c479debbbb17883d354390899c1a1f10c
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47815403"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712520"
 ---
 # <a name="create-a-data-driven-subscription-ssrs-tutorial"></a>Créer un abonnement piloté par les données (didacticiel SSRS)
 Ce tutoriel [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] vous enseigne les concepts des abonnements pilotés par les données en décrivant un exemple simple qui crée un abonnement piloté par les données pour générer et enregistrer une sortie de rapport filtrée dans un partage de fichiers. 
@@ -56,7 +56,7 @@ Ce didacticiel utilise le rapport *Sales order* créé dans le didacticiel [Cré
   
 Pour utiliser ce didacticiel, vous devez avoir installé les éléments suivants sur votre ordinateur :  
   
--   Une édition de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] qui prend en charge les abonnements pilotés par les données. Pour plus d’informations, consultez [Éditions et composants de SQL Server 2016](../sql-server/editions-and-components-of-sql-server-2016.md).  
+-   Une édition de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] qui prend en charge les abonnements pilotés par les données. Pour plus d’informations, consultez [Éditions et fonctionnalités de SQL Server 2017](../sql-server/editions-and-components-of-sql-server-2017.md).  
   
 -   Le serveur de rapports doit être exécuté en mode natif. L'interface utilisateur décrite dans ce didacticiel est basée sur un serveur de rapports en mode natif. Les abonnements sont pris en charge sur les serveurs de rapports en mode SharePoint, mais l'interface utilisateur sera différente de ce qui est décrit dans ce didacticiel.  
   

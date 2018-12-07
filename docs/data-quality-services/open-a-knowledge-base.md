@@ -5,8 +5,7 @@ ms.date: 06/04/2013
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.kb.openkb.f1
@@ -14,12 +13,12 @@ ms.assetid: a5f010a5-b762-41c9-881b-bf0c192dca83
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0b96887fc805833fd8339798bbecdf22f6ce3159
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e724810a6626a15b9a2a81cfce9354c126680366
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47667563"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617789"
 ---
 # <a name="open-a-knowledge-base"></a>Ouvrir une base de connaissances
 
@@ -84,7 +83,7 @@ ms.locfileid: "47667563"
   
 -   **\<Vide>**  : le champ État est vide pour une base de connaissances qui a été publiée en cliquant sur **Publier** dans l’activité de gestion de l’arborescence du domaine, puis sur **Oui. Publier la base de connaissances et quitter**.  
   
--   **En cours**: le travail effectué dans la base de connaissances a été enregistré en cliquant sur **Publier** dans l'activité de gestion de l'arborescence du domaine, puis sur **Non. Enregistrer le travail dans la base de connaissances et quitter**.  
+-   **En cours** : le travail effectué dans la base de connaissances a été enregistré en cliquant sur **Publier** dans l’activité de gestion de l’arborescence du domaine, puis sur **Non. Enregistrer le travail dans la base de connaissances et quitter**.  
   
 -   **Gestion de l'arborescence du domaine**: des données ont été entrées pour un domaine dans la base de connaissances, mais la base de connaissances n'a pas été publiée et le travail reste dans l'activité de gestion de l'arborescence du domaine. L'activité de découverte des connaissances n'est pas disponible. Cela se produit lorsque vous cliquez sur **Fermer** dans l'écran **Gestion de l'arborescence du domaine** .  
   
@@ -92,10 +91,10 @@ ms.locfileid: "47667563"
   
 -   **Découverte - Découvrir**: la base de connaissances a été fermée sur la page **Gestion de la base de connaissances : Analyse** . La base de connaissances est verrouillée et l'activité de gestion de l'arborescence du domaine n'est pas disponible.  
   
--   **Découverte - Gestion des valeurs**: la base de connaissances a été fermée sur la page **Gestion de la base de connaissances : Gestion des termes de domaine** . La base de connaissances est verrouillée et l'activité de gestion de l'arborescence du domaine n'est pas disponible.  
+-   **Découverte - Gestion des valeurs** : la base de connaissances a été fermée sur la page **Gestion de la base de connaissances : Gestion des termes de domaine**. La base de connaissances est verrouillée et l'activité de gestion de l'arborescence du domaine n'est pas disponible.  
   
--   **Stratégie de correspondance - Stratégie de correspondance**: la base de connaissances a été fermée sur la page **Stratégie de correspondance - Stratégie de correspondance** . La base de connaissances est verrouillée, et les activités de découverte des connaissances et de gestion de l'arborescence du domaine ne sont pas disponibles.  
+-   **Stratégie de correspondance - Stratégie de correspondance** : la base de connaissances a été fermée sur la page **Stratégie de correspondance - Stratégie de correspondance**. La base de connaissances est verrouillée, et les activités de découverte des connaissances et de gestion de l'arborescence du domaine ne sont pas disponibles.  
   
--   **Stratégie de correspondance - Résultats de correspondance**: la base de connaissances a été fermée sur la page **Stratégie de correspondance - Résultats de correspondance** . La base de connaissances est verrouillée, et les activités de découverte des connaissances et de gestion de l'arborescence du domaine ne sont pas disponibles.  
+-   **Stratégie de correspondance - Résultats de correspondance** : la base de connaissances a été fermée sur la page **Stratégie de correspondance - Résultats de correspondance**. La base de connaissances est verrouillée, et les activités de découverte des connaissances et de gestion de l'arborescence du domaine ne sont pas disponibles.  
   
   

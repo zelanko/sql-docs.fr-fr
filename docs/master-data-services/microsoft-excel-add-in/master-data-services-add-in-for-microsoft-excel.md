@@ -11,12 +11,12 @@ ms.assetid: 33d9c8fc-9602-494d-b9ab-8f0f42785974
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 8158439e20b5f841c01914f83490b8d9ab128fbb
-ms.sourcegitcommit: f9b4078dfa3704fc672e631d4830abbb18b26c85
+ms.openlocfilehash: 5b9e328f3abd3a53bfb4764470138d6d6b966236
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50965967"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617599"
 ---
 # <a name="master-data-services-add-in-for-microsoft-excel"></a>Complément Master Data Services pour Microsoft Excel
 
@@ -29,14 +29,14 @@ ms.locfileid: "50965967"
  Dans [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], vous pouvez utiliser Data Quality Services (DQS) pour faire correspondre des données avant de les charger dans MDS. Cela évite la duplication des données dans MDS.  
 
 ## <a name="downloads"></a>Téléchargements 
->*  Téléchargez le complément Master Data Services pour Excel pour SQL Server 2016 SP1 depuis cette [page du Centre de téléchargement Microsoft](https://go.microsoft.com/fwlink/?linkid=836866). 
+>*  Téléchargez le complément Master Data Services pour Excel pour SQL Server 2016 SP2 depuis cette [page du Centre de téléchargement Microsoft](https://www.microsoft.com/download/details.aspx?id=56838). 
 >* Téléchargez le [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] pour SQL Server 2017 à partir de [cette page du Centre de téléchargement Microsoft](https://go.microsoft.com/fwlink/?linkid=836867).
  
   
 ## <a name="terms"></a>Termes  
  Si vous utilisez le complément, vous devez connaître les termes suivants. Pour plus d’informations sur ces concepts, consultez [Vue d’ensemble de Master Data Services &#40;MDS&#41;](../../master-data-services/master-data-services-overview-mds.md).  
   
--   Le *référentiel MDS* est l'emplacement où toutes les données de référence sont stockées. Il s'agit d'une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configurée pour stocker des données MDS. Pour manipuler des données à partir du référentiel, vous devez les charger dans Excel, puis lorsque vous avez terminé votre travail, vous pouvez publier vos modifications dans le référentiel. Les administrateurs peuvent ajouter de nouvelles entités et de nouveaux attributs au référentiel.  
+-   Le *référentiel MDS* est l'emplacement où toutes les données de référence sont stockées. Il s'agit d'une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configurée pour stocker des données MDS. Pour manipuler des données à partir du référentiel, vous devez les charger dans Excel, puis quand vous avez terminé votre travail, vous pouvez publier vos modifications dans le référentiel. Les administrateurs peuvent ajouter de nouvelles entités et de nouveaux attributs au référentiel.  
   
 -   Les données*gérées par MDS* sont les données stockées dans le référentiel MDS que vous chargez dans Excel, les données étant affichées sous la forme de lignes en surbrillance. Vous pouvez ajouter des données non managées MDS à votre feuille de calcul, dans ce cas, celles-ci ne seront pas concernées par l'actualisation des données managées MDS.  
   

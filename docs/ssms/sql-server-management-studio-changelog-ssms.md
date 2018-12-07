@@ -1,7 +1,7 @@
 ---
 title: SQL Server Management Studio - Journal des modifications (SSMS) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/16/2018
+ms.date: 11/22/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fd9e5b79aaf16454e74eb1e63325f95bf5f45a40
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: db6f79e16f65494bdb45b297324541668d69d567
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703987"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712730"
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Journal des modifications (SSMS)
 
@@ -198,10 +198,10 @@ SSMS n’est pas ajouté à la variable d’environnement PATH :
 
 - Le chemin de SSMS. EXE (et des outils en général) n’est plus ajouté au chemin. Les utilisateurs peuvent l’ajouter par eux-mêmes ou, s’ils utilisent une version moderne de Windows, ils peuvent se servir du menu Démarrer.
 
-Prise en charge de [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)]
+Prise en charge de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
 
-- C’est la première version de SSMS qui *perçoit* entièrement [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] (compatLevel de 150, etc.).
-- Prise en charge de « BATCH_STARTED_GROUP » et de « BATCH_COMPLETED_GROUP » dans [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] et de Managed Instance dans SSMS.
+- C’est la première version de SSMS qui *perçoit* entièrement [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] (compatLevel de 150, etc.).
+- Prise en charge de « BATCH_STARTED_GROUP » et de « BATCH_COMPLETED_GROUP » dans [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], et de Managed Instance dans SSMS.
 - GraphDB : ajout d’un indicateur dans le plan d’exécution de requêtes pour Graph TC Sequence.
 - Always Encrypted : ajout de la prise en charge d’[Always Encrypted avec enclaves sécurisées](../relational-databases/security/encryption/always-encrypted-enclaves.md).
   - La boîte de dialogue Connexion contient un nouvel onglet « Always Encrypted » quand l’utilisateur clique sur le bouton « Options » pour activer et configurer la prise en charge des enclaves.
@@ -418,7 +418,7 @@ Les fonctionnalités suivantes ne sont plus disponibles dans SSMS :
 Les problèmes connus de la version actuelle sont les suivants :
 
 > [!IMPORTANT]
-> Quand les utilisateurs ont recours à l’authentification *universelle Active Directory avec prise en charge de MFA* avec l’Éditeur de requête SQL, leur connexion peut se fermer et se rouvrir à chaque appel de requête. Cette fermeture peut avoir pour effet de supprimer de façon inattendue les tables temporaires globales voire dans certains d’attribuer un nouveau SPID à la connexion. Cette fermeture ne se produit pas en présence d’une transaction ouverte sur la connexion. Pour contourner ce problème, les utilisateurs peuvent définir `persist security info=true` dans les paramètres de connexion.
+> Quand les utilisateurs ont recours à l’authentification *universelle Active Directory avec prise en charge de MFA* dans l’Éditeur de requête SQL, leur connexion peut se fermer et se rouvrir à chaque appel de requête. Cette fermeture peut avoir pour effet de supprimer de façon inattendue les tables temporaires globales voire dans certains d’attribuer un nouveau SPID à la connexion. Cette fermeture ne se produit pas en présence d’une transaction ouverte sur la connexion. Pour contourner ce problème, les utilisateurs peuvent définir `persist security info=true` dans les paramètres de connexion.
 
 SSMS
 
@@ -428,9 +428,38 @@ SSMS
 SSIS
 
 - Il est impossible de déployer ou d’exécuter un package qui cible une ancienne version de SQL Server et qui contient en même temps le composant Tâche de script/Script.
-- SSMS ne peut pas se connecter à Integration Services à distance.
+- SSMS ne peut pas se connecter à distance à Integration Services.
 
-## <a name="ssms-179-latest-ga-release"></a>SSMS 17.9 (dernière version en disponibilité générale)
+
+## <a name="ssms-1791-latest-ga-release"></a>SSMS 17.9.1 (dernière version en disponibilité générale)
+
+![télécharger](../ssdt/media/download.png) [SSMS 17.9.1](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x409)
+
+- Numéro de version : 17.9.1<br>
+- Numéro de build : 14.0.17289.0<br>
+- Date de publication : 21 novembre 2018
+
+17.9.1 est une petite mise à jour de la version 17.9 qui comporte les correctifs suivants :
+
+- Correction d’un problème où les utilisateurs qui utilisaient l’authentification universelle Active Directory avec prise en charge de MFA dans l’Éditeur de requête SQL voyaient leur connexion se fermer et se rouvrir à chaque appel de requête. Cette fermeture pouvait avoir pour effet de supprimer de façon inattendue les tables temporaires globales, voire dans certains cas, d’attribuer un nouveau SPID à la connexion.
+- Correction d’un problème de longue date où aucun plan de restauration n’était trouvé, ou lors duquel le plan de restauration était inefficace dans certains cas.
+- Correction d’un problème dans l’Assistant « Importer une application de la couche Données », qui pouvait entraîner une erreur en cas de connexion à une base de données SQL Azure.
+
+
+
+> [!NOTE]
+> Les versions non anglaises localisées de SSMS 17.x nécessitent la [mise à jour de sécurité KB 2862966](https://support.microsoft.com/kb/2862966) si l’installation est effectuée sur : Windows 8, Windows 7, Windows Server 2012 et Windows Server 2008 R2.
+
+[Chinois (simplifié)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x804) | [Chinois (traditionnel)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x404) | [Anglais (États-Unis)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x409) | [Français](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x40c) | [Allemand](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x407) | [Italien](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x410) | [Japonais](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x411) | [Coréen](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x412) | [Portugais (Brésil)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x416) | [Russe](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x419) | [Espagnol](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x40a)
+
+
+
+
+
+
+
+
+## <a name="ssms-179"></a>SSMS 17.9
 
 ![télécharger](../ssdt/media/download.png) [SSMS 17.9](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x409)
 
@@ -496,7 +525,7 @@ Moniteur d’activité :
 
 Intégration de Microsoft Azure : 
 
-- Correction du problème selon lequel SSMS affichait seulement les 50 premiers abonnements (boîtes de dialogue Always Encrypted, Sauvegarder/restaurer à partir d’une URL, etc.). 
+- Correction du problème selon lequel SSMS affichait seulement les 50 premiers abonnements (boîtes de dialogue Always Encrypted, Sauvegarder/Restaurer à partir d’une URL, etc.). 
 - Correction d’un problème lié à SSMS qui levait une exception (« Index hors limites ») quand il tentait de se connecter à un compte Microsoft Azure sans compte de stockage (dans la boîte de dialogue Restaurer la sauvegarde à partir d’une URL). 
 
 Scripts d’objets : 
@@ -513,7 +542,7 @@ Help :
 
 
 > [!IMPORTANT]
-> Quand les utilisateurs ont recours à l’authentification *universelle Active Directory avec prise en charge de MFA* avec l’Éditeur de requête SQL, leur connexion peut se fermer et se rouvrir à chaque appel de requête. Cette fermeture peut avoir pour effet de supprimer de façon inattendue les tables temporaires globales voire dans certains d’attribuer un nouveau SPID à la connexion. Cette fermeture ne se produit pas en présence d’une transaction ouverte sur la connexion. Pour contourner ce problème, les utilisateurs peuvent définir `persist security info=true` dans les paramètres de connexion.
+> Quand les utilisateurs ont recours à l’authentification *universelle Active Directory avec prise en charge de MFA* dans l’Éditeur de requête SQL, leur connexion peut se fermer et se rouvrir à chaque appel de requête. Cette fermeture peut avoir pour effet de supprimer de façon inattendue les tables temporaires globales voire dans certains d’attribuer un nouveau SPID à la connexion. Cette fermeture ne se produit pas en présence d’une transaction ouverte sur la connexion. Pour contourner ce problème, les utilisateurs peuvent définir `persist security info=true` dans les paramètres de connexion.
 
 
 
@@ -924,7 +953,7 @@ Disponibilité générale | Numéro de build : 14.0.17199.0
 
 - XEvent : 
    - Correction d’un problème où SSMS ouvrait uniquement une partie des événements dans le fichier .xel.
-   - Amélioration de l’expérience « Observer les données actives » quand la base de données par défaut n’est pas définie à 'master' - [Article Connect 1222582](https://connect.microsoft.com/SQLServer/feedback/details/1222582).
+   - Amélioration de l’expérience « Observer les données actives » quand la base de données par défaut n’est pas définie sur 'master' - [Article Connect 1222582](https://connect.microsoft.com/SQLServer/feedback/details/1222582).
 - AlwaysOn : correction du problème pouvant provoquer l’échec de la restauration des sauvegardes de journaux avec l’erreur « Le journal dans ce jeu de sauvegarde se termine au numéro de séquence d’enregistrement x, ce qui est trop tôt pour une application à la base de données ».
 - Moniteur d’activité des travaux : correction des icônes incohérentes - [Article Connect 3133100](https://connect.microsoft.com/SQLServer/feedback/details/3133100).
 - Magasin des requêtes : correction du problème qui empêchait l’utilisateur de choisir une plage de dates « personnalisée » pour les rapports du magasin des requêtes. Consultez les articles Connect suivants :
@@ -978,7 +1007,7 @@ Réactivation du bouton « Script » lors du ciblage d’objets SQL Azure.
 **SSMS général**
 
 - Les fonctionnalités SSMS suivantes ne sont pas prises en charge pour l’authentification Azure AD qui utilise l’agent utilisateur avec MFA :
-   - L’Assistant Paramétrage du moteur de base de données n’est pas pris en charge pour l’authentification Azure AD ; il existe un problème connu qui fait que l’utilisateur voit apparaître un message d’erreur énigmatique : « Impossible de charger le fichier ou l’assembly "Microsoft.IdentityModel.Clients.ActiveDirectory", … » au lieu du message attendu « L’Assistant Paramétrage du moteur de base de données ne prend pas en charge Microsoft Azure SQL Database ». (DTAClient) ».
+   - L’Assistant Paramétrage du moteur de base de données n’est pas pris en charge pour l’authentification Azure AD. Il existe un problème connu qui fait que l’utilisateur voit apparaître un message d’erreur énigmatique : « Impossible de charger le fichier ou l’assembly "Microsoft.IdentityModel.Clients.ActiveDirectory",… » au lieu du message attendu « L’Assistant Paramétrage du moteur de base de données ne prend pas en charge Microsoft Azure SQL Database ». (DTAClient) ».
 - La tentative d’analyse d’une requête dans les résultats DTA provoque une erreur : « L’objet doit implémenter IConvertible. mscorlib ».
 - L’option *Requêtes régressées* ne figure pas dans la liste Magasin des requêtes des rapports affichés dans l’Explorateur d’objets.
    - Solution de contournement : cliquez avec le bouton droit sur le nœud **Magasin des requêtes** et sélectionnez **Afficher les requêtes régressées**.
@@ -1061,7 +1090,7 @@ The connection is broken and recovery is not possible. The client driver attempt
   - Le concepteur **Nouvelle table/vue** affiche l’ancienne invite de connexion et ne fonctionne pas pour l’authentification Azure AD.
   - La fonctionnalité **Modifier les 200 premières lignes** ne prend pas en charge l’authentification Azure AD.
   - Le composant **Serveur inscrit** ne prend pas en charge l’authentification Azure AD.
-  - L’**Assistant Paramétrage du moteur de base de données** n’est pas pris en charge pour l’authentification Azure AD. Il existe un problème connu où le message d’erreur présenté à l’utilisateur est loin d’être utile : *Impossible de charger le fichier ou l’assembly ’Microsoft.IdentityModel.Clients.ActiveDirectory,...* au lieu du message attendu : *L’Assistant Paramétrage du moteur de base de données ne prend pas en charge Microsoft Azure SQL Database. (DTAClient)* .
+  - L’**Assistant Paramétrage du moteur de base de données** n’est pas pris en charge pour l’authentification Azure AD. Il existe un problème connu qui fait que l’utilisateur voit apparaître un message d’erreur énigmatique : *Impossible de charger le fichier ou l’assembly "Microsoft.IdentityModel.Clients.ActiveDirectory", …* au lieu du message attendu *L’Assistant Paramétrage du moteur de base de données ne prend pas en charge Microsoft Azure SQL Database. (DTAClient)* .
 
 **Analysis Services (AS)**
 
@@ -1224,7 +1253,7 @@ Correction d’un problème dans l’Assistant AE dont la page de connexion Azur
 - Correction d’un problème où l’élément de menu contextuel Afficher le journal SQL Server apparaît de manière incorrecte pour les types de serveurs non relationnels (AS\RS\IS) 
 - Correction d’un problème dans lequel la vérification de la syntaxe d’une requête de partition Analysis Services à l’aide de l’authentification SQL pouvait entraîner un message d’échec de connexion
 - Correction d’un problème dans lequel le fait de renommer un modèle tabulaire AS de niveau de compatibilité 1400 d’aperçu pouvait échouer dans SSMS
-- Correction d’un problème lié au message « échec de l’opération sur le modèle » qui pouvait se produire après avoir tenté une opération non valide sur le serveur AS dans de rares circonstances et rétablir les modifications locales suite à un échec d’enregistrement sur le modèle
+- Correction d’un problème lié au message « échec de l’opération sur le modèle » qui pouvait se produire après avoir tenté une opération non valide sur le serveur AS dans de rares circonstances et rétablir les modifications locales suite à un échec d’enregistrement sur le modèle
 - Correction d’une faute d’orthographe dans la boîte de dialogue contextuelle de synchronisation des bases de données Analysis Services
 - Les boîtes de dialogue de sauvegarde/restauration de conteneur se trouvent en dehors de l’écran dans les configurations avec plusieurs moniteurs. 
 - La création d’une stratégie de sécurité échoue si le nom de l’objet cible contient le caractère « ] ».
@@ -1271,7 +1300,7 @@ https://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-mana
 - Résolution du problème de troncation de l’interface utilisateur dans la boîte de dialogue « Nouvelle inscription de serveur »
 - Correction de la mise à jour incorrecte par l’interface utilisateur des conditions DMF pour les expressions contenant des valeurs de constante de chaîne incluant des guillemets
 - Résolution d’un problème pouvant provoquer le blocage de SSMS lors de l’exécution de rapports personnalisés
-- Ajout de l’élément de menu « Exécution dans Scale Out... » au nœud du dossier
+- Ajouter l’élément de menu « Execution in Scale Out... » (Exécution en mode scale-out) au nœud de dossier
 - Correction d’un problème avec la fonctionnalité des adresses IP de la liste verte de pare-feu SQL Azure DB
 - Correction d’un problème dans SSMS qui provoquait une exception de référence d’objet non définie lors de la modification de la source d’une partition multidimensionnelle AS
 - Correction d’un problème dans SSMS qui provoquait une exception de référence d’objet non définie lors de la suppression d’un assembly de client d’un serveur AS multidimensionnel

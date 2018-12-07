@@ -5,8 +5,7 @@ ms.date: 03/05/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Domains
@@ -14,12 +13,12 @@ ms.assetid: 5350214c-7333-41d0-ae83-1b7d8454ebec
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 44fc2fd9ff3a47272c031ff71cda6e2a75f59a72
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: b124775b451740c03a5c15fbb1ac281328cc7717
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700277"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617339"
 ---
 # <a name="introduction-to-data-quality-services"></a>Présentation de Data Quality Services
 
@@ -32,7 +31,7 @@ ms.locfileid: "51700277"
   
  Des données de qualité supérieure sont essentielles à la rentabilité des entreprises et des institutions. Les organisations de toutes tailles peuvent utiliser DQS pour améliorer la valeur informative de leurs données afin que celles-ci soient mieux adaptées à l'usage prévu. Une solution de qualité des données peut améliorer la fiabilité, l'accessibilité et la réutilisabilité des données. Elle peut améliorer exhaustivité, l'exactitude, la conformité et la cohérence de vos données, résolvant ainsi les problèmes dus à des données incorrectes dans les charges de travail de business intelligence ou d'entrepôt de données, ainsi que dans les systèmes opérationnels OLTP.  
   
- DQS permet à un utilisateur professionnel, un travailleur de l'information ou un professionnel de l'informatique non spécialiste des bases de données ou de la programmation de créer, de gérer et d'exécuter les opérations de qualité des données de son organisation avec un minimum de configuration ou de préparation.  
+ DQS permet à un utilisateur professionnel, un travailleur de l’information ou un professionnel de l’informatique non spécialiste des bases de données ou de la programmation, de créer, gérer et exécuter les opérations de qualité des données de son organisation avec un minimum de configuration et de préparation.  
   
 ##  <a name="Answer"></a> Répondre au besoin avec DQS  
  La qualité des données n'est pas définie en termes absolus. Elle dépend de la pertinence des données vis-à-vis de l'objectif qu'elle doit atteindre. DQS identifie les données potentiellement incorrectes et vous fournit une estimation de la probabilité d'inexactitude des données. DQS vous fournit une présentation sémantique des données afin de vous permettre de déterminer leur pertinence. DQS vous permet de résoudre les problèmes résultant de la non-exhaustivité, de l'absence de conformité, de l'incohérence, de l'inexactitude, de la non-validité et de la duplication des données.  

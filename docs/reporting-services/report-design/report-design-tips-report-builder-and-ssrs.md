@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: c1490ff0-5b8a-43c1-8d22-e459395db4f6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 51983605c640bddafae41463c27843282820041e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2a68a953609b8f76b4ea441d3d35fbf04a72af7a
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764077"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711240"
 ---
 # <a name="report-design-tips-report-builder-and-ssrs"></a>Conseils de création de rapport (Générateur de rapports et SSRS)
   Utilisez les conseils suivants pour concevoir vos rapports paginés [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
@@ -156,7 +156,7 @@ ms.locfileid: "47764077"
  La combinaison de ce comportement, des propriétés de hauteur et de largeur des éléments de rapport, de la taille du corps du rapport, de la définition de hauteur de page et de largeur de page, des paramètres de marge du rapport parent, ainsi que de la prise en charge de la pagination spécifique au convertisseur détermine quels éléments du rapport s'ajustent dans une page rendue. Pour plus d’informations, voir [Pagination dans Reporting Services &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a> Voir aussi  
- [Générateur de rapports dans SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
+ [Générateur de rapports dans SQL Server](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
  [Didacticiels sur Reporting Services &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)   
  [Didacticiels du Générateur de rapports](../../reporting-services/report-builder-tutorials.md)  
   

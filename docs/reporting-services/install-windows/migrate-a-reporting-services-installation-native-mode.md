@@ -7,12 +7,12 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.date: 11/06/2018
-ms.openlocfilehash: 67866bf7c201d9a00eb56195d3db10cdf272ef2b
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 2e7c5d6ecaebcdad5b3e2d9d23b4660f12e0bad7
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602939"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712420"
 ---
 # <a name="migrate-a-reporting-services-installation-native-mode"></a>Migrer une installation Reporting Services (mode natif)
 
@@ -147,9 +147,9 @@ Pour plus d’informations sur les changements effectués dans SQL Server Report
   
  Cliquez sur l'un des liens suivants pour obtenir des instructions sur l'installation d'une nouvelle instance de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]:  
   
-* [Installer SQL Server 2016 avec l’Assistant Installation &#40;programme d’installation&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)  
+* [Installer SQL Server à partir de l’Assistant Installation &#40;programme d’installation&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)  
   
-* [Installer SQL Server 2016 à partir de l’invite de commandes](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)  
+* [Installer SQL Server à partir de l’invite de commandes](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)  
 
 ## <a name="bkmk_move_database"></a> Déplacement de la base de données du serveur de rapports
 

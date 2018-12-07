@@ -5,19 +5,18 @@ ms.date: 10/01/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: e67136cc-f8c6-4cb3-ba0b-c966c636256c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d17a0c27fa6ae4ed3c8cb609a41c44ad0342adae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2505215ccc58c9f85d256a5aa4a9de1d292cb5e8
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47653267"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617609"
 ---
 # <a name="data-cleansing"></a>Data Cleansing
 
@@ -33,7 +32,7 @@ ms.locfileid: "47653267"
   
 -   Fournit un processus de nettoyage des données en deux étapes : *assisté par ordinateur* et *interactif*. Le processus assisté par ordinateur utilise les connaissances figurant dans une base de connaissances DQS pour traiter automatiquement les données et suggérer des remplacements/corrections. Le processus suivant est interactif. Il permet au gestionnaire de données d'approuver, de rejeter ou de modifier les modifications proposées par DQS au cours du nettoyage assisté par ordinateur.  
   
--   Normalise et enrichit les données client à l'aide de valeurs de domaine, de règles de domaine et de données de référence. Par exemple, normalisez l'utilisation du terme en remplaçant « St ». par « Street »,  enrichissez les données en remplissant les éléments manquants en remplaçant « 1 Microsoft way Redmond 98006 » par « 1 Microsoft Way, Redmond, WA 98006 ».  
+-   Normalise et enrichit les données client à l'aide de valeurs de domaine, de règles de domaine et de données de référence. Par exemple, normalisez l’utilisation du terme en remplaçant « St. » par « Street », enrichissez les données en remplissant les éléments manquants en remplaçant « 1 Microsoft way Redmond 98006 » par « 1 Microsoft Way, Redmond, WA 98006 ».  
   
 -   Fournit une interface de type Assistant à la fois simple, intuitive, et cohérente permettant à l'utilisateur de parcourir les données et d'examiner les erreurs dans un ensemble de données très volumineux.  
   
@@ -92,7 +91,7 @@ ms.locfileid: "47653267"
  ![Nettoyage des données dans Data Quality Client](../data-quality-services/media/dqs-cleansingindqsclient.gif "Nettoyage des données dans Data Quality Client")  
   
 ##  <a name="Leading"></a> Correction de la valeur de début  
- La correction de la valeur de début s'applique aux valeurs de domaine qui ont des synonymes, lorsque l'utilisateur veut utiliser une des valeurs synonymes comme valeur de début en remplacement d'autres valeurs pour homogénéiser la représentation de la valeur. Par exemple, « New York », « NYC », et « Big Apple » sont des synonymes, et l'utilisateur veut utiliser « New York » comme valeur de début au lieu de « NYC » et « Big Apple ». DQS prend en charge la correction de la valeur de début pendant le processus de nettoyage pour vous aider à normaliser vos données. La correction de la valeur de début est effectuée uniquement si cette option a été activée pour le domaine lors de sa création. Par défaut, la correction de la valeur de début est activée pour tous les domaines, sauf si vous avez désactivé la case à cocher **Utiliser des valeurs de début** lors de la création d'un domaine. Pour plus d'informations sur cette case à cocher, consultez [Set Domain Properties](../data-quality-services/set-domain-properties.md).  
+ La correction de la valeur de début s'applique aux valeurs de domaine qui ont des synonymes, lorsque l'utilisateur veut utiliser une des valeurs synonymes comme valeur de début en remplacement d'autres valeurs pour homogénéiser la représentation de la valeur. Par exemple, « New York », « NYC », et « Big Apple » sont des synonymes, et l’utilisateur veut utiliser « New York » comme valeur de début au lieu de « NYC » et « Big Apple ». DQS prend en charge la correction de la valeur de début pendant le processus de nettoyage pour vous aider à normaliser vos données. La correction de la valeur de début est effectuée uniquement si cette option a été activée pour le domaine lors de sa création. Par défaut, la correction de la valeur de début est activée pour tous les domaines, sauf si vous avez désactivé la case à cocher **Utiliser des valeurs de début** lors de la création d'un domaine. Pour plus d'informations sur cette case à cocher, consultez [Set Domain Properties](../data-quality-services/set-domain-properties.md).  
   
 ##  <a name="Standardize"></a> Normalisation des données nettoyées  
  Vous pouvez choisir s'il faut exporter les données nettoyées au format normalisé en fonction du format de sortie défini pour les domaines. Lors de la création d'un domaine, vous pouvez sélectionner la mise en forme qui est appliquée lorsque les valeurs de données du domaine sont générées. Pour plus d'informations sur la spécification des formats de sortie pour un domaine, consultez la liste **Mettre en forme la sortie vers** de la rubrique [Set Domain Properties](../data-quality-services/set-domain-properties.md).  

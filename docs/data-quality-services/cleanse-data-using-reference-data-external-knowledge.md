@@ -5,19 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 158009e9-8069-4741-8085-c14a5518d3fc
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 04193939b04167f3103d72b162f41044c89b435c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 05fd04b48f878fc157e8f4c7bb8237e4f3c3f515
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47736517"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617189"
 ---
 # <a name="cleanse-data-using-reference-data-external-knowledge"></a>Nettoyer les données à l'aide de la connaissance des données de référence (externes)
 
@@ -50,7 +49,7 @@ ms.locfileid: "47736517"
 ## <a name="before-you-begin"></a>Avant de commencer  
   
 ###  <a name="Prerequisites"></a> Conditions préalables  
- Vous devez avoir mappé les domaines obligatoires d'une base de connaissances DQS au service de données de référence approprié. En outre, la base de connaissances doit contenir la connaissance sur le type de données que vous souhaitez nettoyer. Par exemple, si vous souhaitez nettoyer vos données sources qui contiennent des adresses américaines, vous devez mapper les domaines à un fournisseur de services de données de référence qui propose des données de haute qualité pour les adresses américaines. Pour plus d’informations, consultez [Attacher un domaine ou un domaine composite à des données de référence](../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md).  
+ Vous devez avoir mappé les domaines obligatoires d'une base de connaissances DQS au service de données de référence approprié. En outre, la base de connaissances doit contenir la connaissance sur le type de données que vous souhaitez nettoyer. Par exemple, si vous souhaitez nettoyer les données sources qui contiennent des adresses américaines, vous devez mapper les domaines à un fournisseur de services de données de référence qui propose des données de haute qualité pour les adresses américaines. Pour plus d’informations, consultez [Attacher un domaine ou un domaine composite à des données de référence](../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md).  
   
 ###  <a name="Security"></a> Sécurité  
   
@@ -72,7 +71,7 @@ ms.locfileid: "47736517"
     > [!NOTE]  
     >  Sur la page **Nettoyer** , DQS affiche les informations sur les domaines joints au service des données de référence de deux façons :  
     >   
-    >  -   Un message s’affiche sous le bouton **Démarrer** : « Les domaines \<Domaine1>, \<Domaine2>,… \<DomaineN> sont nettoyés à l’aide du fournisseur de services de données de référence ». Dans cet exemple, le message suivant s’affiche : « La vérification d’adresse de domaine est nettoyée à l’aide du fournisseur de services de données de référence. »  
+    >  -   Un message s’affiche sous le bouton **Démarrer** : « Les domaines \<Domaine1>, \<Domaine2>,… \<DomaineN> sont nettoyés à l’aide du fournisseur de services de données de référence ». Dans cet exemple, le message suivant s’affiche : « La vérification d’adresse de domaine est nettoyée à l’aide du fournisseur de services de données de référence. »  
     > -   Une icône, ![Le domaine est attaché à un fournisseur de services de données](../data-quality-services/media/dqs-rdsindicator.JPG "Le domaine est attaché à un fournisseur de services de données"), est affichée dans la zone **Générateur de profils** sur les domaines joints au fournisseur de services de données de référence. Dans cet exemple, l'icône sera affichée sur le domaine composite **Contrôle d'adresse** .  
   
 4.  Dans la page **Gérer et afficher les résultats** , vérifiez les valeurs de domaine. Le service de données de référence peut afficher plusieurs suggestions, si elles sont disponibles, pour une valeur en fonction du nombre maximal de suggestions spécifiées dans la zone **Candidats suggérés** lors du mappage du domaine au service des données de référence. Par exemple, deux suggestions s'affichent pour l'adresse américaine suivante :  

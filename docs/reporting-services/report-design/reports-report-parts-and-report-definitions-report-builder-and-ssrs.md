@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 2d746550-f8cc-4e97-8a06-d0f03cffc18d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 40055e2138c419eed82f4d4dabd1bfa37b3c6644
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 40b055260c82e1237f21ae55fffff800f23c5014
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704197"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711910"
 ---
 # <a name="reports-report-parts-and-report-definitions-report-builder-and-ssrs"></a>Rapports, parties de rapports et définitions de rapports (Générateur de rapports et SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] utilise un certain nombre de termes pour décrire un rapport paginé dans différents états, notamment la définition initiale, le rapport publié et le rapport affiché tel qu’il apparaît à l’utilisateur.  
@@ -64,7 +64,7 @@ ms.locfileid: "47704197"
   
 ## <a name="see-also"></a> Voir aussi  
  [Concepts de création de rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)   
- [Générateur de rapports dans SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
+ [Générateur de rapports dans SQL Server](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
  [Recherche, affichage et gestion des rapports &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Exporter des rapports &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)  
   

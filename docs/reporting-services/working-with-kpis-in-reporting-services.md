@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: a28cf500-6d47-4268-a248-04837e7a09eb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0cd0827109cff1cda866ed8a0d85f9cb37ab54f6
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: c9612cb4cf45ec71bb511750bab9a84914a0e7f5
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021583"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712490"
 ---
 # <a name="working-with-kpis-in-reporting-services"></a>Utilisation des indicateurs de performance clés dans Reporting Services
 
@@ -21,7 +21,7 @@ ms.locfileid: "50021583"
 
 Un indicateur de performance clé (KPI) est un indice visuel qui représente la progression vers un objectif.  Les Indicateurs de performance clés sont utiles pour les équipes, les responsables et les entreprises pour évaluer rapidement l’état d’avancement par rapport à des objectifs mesurables.   
   
-À l’aide des indicateurs de performance clés dans SQL Server 2016 Reporting Services, vous pouvez facilement visualiser les réponses aux questions suivantes :  
+En utilisant les indicateurs de performance clés dans SQL Server Reporting Services, vous pouvez facilement visualiser les réponses aux questions suivantes :  
   
 -   Suis-je en avance ou en retard ?  
   
@@ -60,7 +60,7 @@ Vous pouvez assigner des valeurs statiques ou utiliser les données issues d’u
   
 > **Avertissement**: bien que vous pouvez utiliser la valeur texte pour le champ **État** au moment de la conception, vous devez utiliser la valeur numérique en cas d’actualisation d’un dataset. Si vous actualisez un dataset avec la valeur texte, au lieu de la valeur numérique, cela peut endommager les indicateurs de performance clés sur votre serveur.  
   
-> **Remarque**: les champs **Valeur**, **Objectif** et **État** peuvent uniquement choisir une valeur à partir de la première ligne du résultat d’un dataset. Toutefois, le champ **Ensemble de tendances** peut choisir la colonne qui reflète la tendance.  
+> **Remarque** : les champs **Valeur**, **Objectif** et **État** peuvent uniquement choisir une valeur à partir de la première ligne du résultat d’un dataset. Toutefois, le champ **Ensemble de tendances** peut choisir la colonne qui reflète la tendance.  
   
 Procédez comme suit pour utiliser les données d’un dataset partagé.  
   

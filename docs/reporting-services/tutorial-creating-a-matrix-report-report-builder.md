@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 9ee19c2e-2a8c-4bb0-9274-04a5812c2e96
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8721c5fda498fc0e8874ced102c058a98ff9b9be
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ed53800a1b45dd79548c59aaab57f71bd700d94d
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47600617"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712370"
 ---
 # <a name="tutorial-creating-a-matrix-report-report-builder"></a>Didacticiel : création d'un rapport de matrice (Générateur de rapports)
 Ce didacticiel vous montre comment créer un rapport paginé [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] avec une matrice d’exemples de données de ventes dans des groupes de lignes et de colonnes imbriqués. 
@@ -361,6 +361,6 @@ Ainsi s'achève le didacticiel de création d'un rapport de matrice. Pour plus d
   
 ## <a name="see-also"></a> Voir aussi  
 [Didacticiels du Générateur de rapports](../reporting-services/report-builder-tutorials.md)  
-[Générateur de rapports dans SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
+[Générateur de rapports dans SQL Server](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
 

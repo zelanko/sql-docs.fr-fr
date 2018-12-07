@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.matchingproject.map.f1
@@ -16,12 +15,12 @@ ms.assetid: 6aa9d199-83ce-4b5d-8497-71eef9258745
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c9d855f0f1a43c3c5d885941b6a924835732161d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 93ad673f1566d1045705c390b0b0064859ba18fd
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702927"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617949"
 ---
 # <a name="run-a-matching-project"></a>Exécuter un projet de correspondance
 
@@ -67,7 +66,7 @@ ms.locfileid: "47702927"
     > [!NOTE]  
     >  Vous pouvez mapper vos données source à un domaine DQS uniquement si le type de données source est pris en charge dans DQS et correspond au type de données du domaine DQS. Pour plus d'informations sur les types de données pris en charge dans DQS, consultez [Types de données SQL Server et SSIS pris en charge pour les domaines DQS](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md).  
   
-4.  Cliquez sur le contrôle **plus (+)** pour ajouter une ligne à la table Mappages ou sur le contrôle **moins (–)** pour en supprimer une.  
+4.  Cliquez sur le contrôle **plus (+)** pour ajouter une ligne à la table Mappages ou sur le contrôle **moins (-)** pour en supprimer une.  
   
 5.  Cliquez sur **Aperçu de la source de données** pour afficher les données de la table ou de la vue SQL Server que vous avez sélectionnée, ou de la feuille de calcul Excel que vous avez sélectionnée.  
   
@@ -126,9 +125,9 @@ ms.locfileid: "47702927"
   
      Les éléments suivants sont exportés pour les résultats de correspondance :  
   
-    -   Une liste de clusters et les enregistrements correspondants dans chaque cluster, y compris le nom de la règle et le score. L'enregistrement pivot est marqué comme « Pivot ». Les clusters s'affichent en premier dans la liste d'exportation.  
+    -   Une liste de clusters et les enregistrements correspondants dans chaque cluster, y compris le nom de la règle et le score. L’enregistrement pivot est marqué comme « Pivot ». Les clusters s'affichent en premier dans la liste d'exportation.  
   
-    -   Une liste des enregistrements sans correspondance, avec « NULL » dans les colonnes de score et de nom de la règle. Ces enregistrements sont ajoutés à la liste d'exportation après les clusters.  
+    -   Une liste des enregistrements sans correspondance, avec « NULL » dans les colonnes de score et de nom de la règle. Ces enregistrements sont ajoutés à la liste d'exportation après les clusters.  
   
      Les éléments suivants sont exportés pour les résultats de survivance :  
   

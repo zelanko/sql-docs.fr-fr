@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9d11d055-a3be-45aa-99a7-46447a94ed42
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7a08ece8729125bf1cc60bb96385d58ba5c3a6ee
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 13e03572ee4ce886288f1c72b89a97b476d3b35c
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813862"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712570"
 ---
 # <a name="data-sources-supported-by-reporting-services-ssrs"></a>Sources de données prises en charge par Reporting Services (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] récupère des données de rapport dans des sources de données par l’intermédiaire d’une couche de données extensibles et modulaire qui utilise des extensions pour le traitement des données. Pour récupérer des données de rapport à partir d’une source de données, vous devez sélectionner une extension pour le traitement des données qui prend en charge le type de source de données, la version du logiciel s’exécutant sur la source de données ainsi que la plateforme de la source de données ( [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]32 bits ou 64 bits).  
@@ -68,7 +68,7 @@ ms.locfileid: "51813862"
  Pour plus d’informations sur les extensions pour le traitement des données personnalisées, consultez [Implémentation d’une extension pour le traitement des données](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md). Pour plus d’informations sur les fournisseurs de données [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] standard, consultez l’espace de noms <xref:System.Data> .   
   
 ## <a name="platform-support-for-report-data-sources"></a>Prise en charge de plateforme pour les sources de données de rapport  
- Les sources de données utilisables dans un déploiement [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] varient selon l’édition [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , la version [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] et la plateforme. Pour plus d’informations sur les fonctionnalités, consultez [Fonctionnalités Reporting Services prises en charge par les éditions de SQL Server 2016](../../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md). Le tableau plus loin dans cette rubrique fournit des informations sur les sources de données prises en charge par version et par plateforme.  
+ Les sources de données utilisables dans un déploiement [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] varient selon l’édition [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , la version [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] et la plateforme. Pour plus d’informations sur les fonctionnalités, consultez [Fonctionnalités Reporting Services prises en charge par les éditions de SQL Server](../../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md). Le tableau plus loin dans cette rubrique fournit des informations sur les sources de données prises en charge par version et par plateforme.  
   
  Les considérations relatives aux plateformes pour les sources de données [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] diffèrent pour le client de création de rapports et pour le serveur de rapports.  
   

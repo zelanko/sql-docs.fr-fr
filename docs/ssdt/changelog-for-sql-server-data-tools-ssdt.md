@@ -12,12 +12,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 4fafda7376f5c44c795fab85c6659cf5824522e1
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 91709818cad0609fda4c624f9bd7585af0c9eea9
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677898"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712605"
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>Journal des modifications de SQL Server Data Tools (SSDT)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -49,7 +49,7 @@ Date de publication : 27 septembre 2018
 
 **SSIS :**
 
-1. Ajout de la prise en charge de [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)].
+1. Ajout de la prise en charge de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
 2. Suppression de la prise en charge de SQL Server 2012.
 
 ### <a name="known-issues"></a>Problèmes connus :
@@ -68,7 +68,7 @@ Date de publication : 5 septembre 2018
 **SSIS :**
 
 1. Correction d’une régression dans VS 15.8 : l’enregistrement du composant/de la tâche de script provoquait une erreur de compilation.
-1. Correction d’une régression dans VS 15.8 : l’Assistant Déploiement ne fonctionnait pas.
+1. Correctif dans VS 15.8 : l’Assistant Déploiement ne fonctionnait pas.
 1. Correction d’un problème : le gestionnaire de connexions ADO.NET ne prenait pas en charge le fournisseur ADO.NET tiers.
 
 **Programme d’installation :**
@@ -92,7 +92,7 @@ Date de publication : 2 juillet 2018
 **SSIS :**
 
 - Prise en charge de la nouvelle autorité AAD Azure Government (login.microsoftonline.us), utilisée avec les tâches AS.
-- Résolution du problème selon lequel l’interface utilisateur des tâches de traitement AS affichait « Méthode introuvable » lorsque la version du serveur cible était SQL Server 2016.
+- Résolution du problème selon lequel l’interface utilisateur des tâches de traitement AS affichait « Méthode introuvable » lorsque la version du serveur cible était SQL Server 2016.
 - Résolution du problème selon lequel certains composants de pipeline ne pouvaient pas s’exécuter lorsque la version du serveur cible était SQL Server 2012.
 
 **Programme d’installation :**
@@ -102,7 +102,7 @@ Date de publication : 2 juillet 2018
 ### <a name="known-issues"></a>Problèmes connus :
 
 - La tâche d’exécution de package SSIS ne prend pas en charge le débogage quand ExecuteOutOfProcess a la valeur True. Ce problème s’applique uniquement au débogage. L’enregistrement, le déploiement et l’exécution via DTExec.exe ou le catalogue SSIS ne sont pas impactés.
-- L’installation de SSDT sous Windows 10 avec « Installer la nouvelle instance SQL Server Data Tools pour Visual Studio 2017 » échoue sur « L’opération de métafichier demandée n’est pas prise en charge ». Redémarrez l’ordinateur et relancez le programme d’installation SSDT pour continuer l’installation.
+- L’installation de SSDT sur Windows 10 avec « Installer la nouvelle instance SQL Server Data Tools pour Visual Studio 2017 » échoue sur « L’opération de métafichier demandée n’est pas prise en charge ». Redémarrez l’ordinateur et relancez le programme d’installation SSDT pour continuer l’installation.
 
 
 
@@ -118,7 +118,7 @@ Date de publication : 4 juin 2018
 - Résolution du problème lié au ratio de luminosité du texte dans *l’Éditeur de transformation de tri*.  
 - Résolution du problème entraînant la disparition de la boîte de dialogue *Résoudre les références* quand vous tentiez de modifier une zone de liste modifiable.  
 - Résolution du problème lié au non-fonctionnement du lien d’aide (F1) du *Gestionnaire de connexions Hadoop*.  
-- Résolution du problème entraînant la perte du code d’une tâche de script dans un conteneur en cas de ciblage de SQL Server 2016.  
+- Résolution du problème entraînant la perte du code d’une tâche de script dans un conteneur en cas de ciblage de SQL Server 2016.  
 
 
 **Programme d’installation :**
@@ -207,7 +207,7 @@ SSDT pour Visual Studio 2017 (15.5.0) qui était en préversion est désormais e
 1. L’icône est remplacée par une version de qualité supérieure.
 
 **Integration Services (IS)**
-1. Ajout d’une étape de validation de package dans l’Assistant Déploiement lors du déploiement sur le runtime d’intégration Azure-SSIS dans ADF, ce qui permet de détecter les éventuels problèmes de compatibilité dans les packages SSIS à exécuter dans le runtime d’intégration Azure-SSIS. Pour plus d’informations, consultez [Valider des packages SSIS déployés sur Azure](..\integration-services\lift-shift\ssis-azure-validate-packages.md).
+1. Ajout d’une étape de validation de package dans l’Assistant Déploiement lors du déploiement sur le runtime d’intégration Azure-SSIS dans ADF, ce qui permet de détecter les éventuels problèmes de compatibilité dans les packages SSIS à exécuter dans le runtime d’intégration Azure-SSIS. Pour plus d’informations, consultez [Valider des packages SSIS déployés sur Azure](../integration-services/lift-shift/ssis-azure-validate-packages.md).
 1. L’extension SSIS est localisée.
 
 ### <a name="bug-fixes"></a>Correctifs de bogues
@@ -234,7 +234,7 @@ Numéro de build : 14.0.61712.050
   - Run background analysis (Exécuter une analyse en arrière-plan) : quand cette option est activée, l’éditeur de requête pour les sources de données modernes exécute des requêtes sur la source de données lors du chargement des requêtes afin d’analyser le schéma de sortie de la requête.
 
 **Integration Services (IS)**
-- Ajout d’une étape de validation de package dans l’Assistant Déploiement lors du déploiement sur le runtime d’intégration Azure-SSIS dans ADF, ce qui permet de détecter les éventuels problèmes de compatibilité dans les packages SSIS à exécuter dans le runtime d’intégration Azure-SSIS. Pour plus d’informations, consultez [Valider des packages SSIS déployés sur Azure](..\integration-services\lift-shift\ssis-azure-validate-packages.md).
+- Ajout d’une étape de validation de package dans l’Assistant Déploiement lors du déploiement sur le runtime d’intégration Azure-SSIS dans ADF, ce qui permet de détecter les éventuels problèmes de compatibilité dans les packages SSIS à exécuter dans le runtime d’intégration Azure-SSIS. Pour plus d’informations, consultez [Valider des packages SSIS déployés sur Azure](../integration-services/lift-shift/ssis-azure-validate-packages.md).
 
 
 ### <a name="bug-fixes"></a>Correctifs de bogues
@@ -529,7 +529,7 @@ Numéro de build : 14.0.61704.140
 
 ### <a name="bug-fixes"></a>Correctifs de bogues
 **Projets AS :**
-- Correction de la priorité du modèle pour les projets BI pour qu’ils ne s’affichent plus en haut des catégories Nouveaux projets dans VS
+- Correction de la priorité du modèle pour les projets BI pour qu’ils ne s’affichent plus en haut des catégories Nouveaux projets dans VS
 - Correction d’un incident VS susceptible de survenir rarement lors de l’ouverture de la solution SSIS, SSAS ou SSRS
 - Tabulaire : Améliorations et correctifs de performances pour l’analyse et la barre de formules DAX.
 - Tabulaire : L’Explorateur de modèles tabulaires ne sera plus visible si aucun projet tabulaire SSAS n’est ouvert.
@@ -543,11 +543,11 @@ Numéro de build : 14.0.61704.140
 - Tabulaire : Résolution d’un problème où l’opération coller dans la barre de formule DAX collait les images ou d’autres contenus au lieu du texte lors d’une opération coller à partir de certaines applications.
 - Tabulaire : Résolution d’un problème où certains anciens modèles dans 1103 ne pouvaient pas être ouverts en raison de la présence de mesures avec une définition spécifique.
 - Tabulaire : Résolution d’un problème où les sessions XEvent ne pouvaient pas être supprimées.
-- Correction d’un problème lié à l’échec de la tentative de génération de fichiers « smproj » avec devenv.com
+- Correction d’un problème lié à l’échec de la tentative de génération de fichiers « smproj » avec devenv.com
 - Correction d’un problème lié à la finalisation trop fréquente des modifications de texte lors de l’utilisation de l’éditeur IME coréen dans les titres d’onglet de feuille de modèle tabulaire AS
 - Correction d’un problème lié au dysfonctionnement de la fonction intellisense pour l’affichage de colonnes d’autres tables
 - Amélioration de l’importation de projet tabulaire AS à partir de la boîte de dialogue de base de données par le tri de la liste des bases de données AS
-- Correction d’un problème survenant lors de la création de tables calculées dans le modèle tabulaire AS où les tables ne sont pas répertoriées en tant qu’objets suggérés dans l’expression
+- Correction d’un problème survenant lors de la création de tables calculées dans le modèle tabulaire AS où les tables ne sont pas listées en tant qu’objets suggérés dans l’expression
 - Correction d’un problème lié aux modèles AS 1400 d’aperçu lors de leur tentative d’ouverture à l’aide du serveur d’espace de travail intégré après affichage du code
 - Correction d’un problème qui empêchait, dans certains cas, le fonctionnement correct de certaines sources de données (sans prise en charge du catalogue initial) 
 - L’Assistant de déploiement doit appliquer les modifications aux partitions de tables calculées même lorsque l’option de conservation des partitions est activée
@@ -617,11 +617,11 @@ Exemple d’utilisation :
 
 **Action Publier**
 
-```Sqlpackage.exe /a:Publish /tsn:(localdb)\ProjectsV13 /tdn:MyDatabase /deployscriptpath:”My\DeployScript.sql” /deployreportpath:”My\DeployReport.xml”```
+```Sqlpackage.exe /a:Publish /tsn:(localdb)\ProjectsV13 /tdn:MyDatabase /deployscriptpath:"My\DeployScript.sql" /deployreportpath:"My\DeployReport.xml"```
 
 **Action Script**
 
-```Sqlpackage.exe /a:Script /tsn:(localdb)\ProjectsV13 /tdn:MyDatabase /deployscriptpath:”My\DeployScript.sql” /deployreportpath:”My\DeployReport.xml”```
+```Sqlpackage.exe /a:Script /tsn:(localdb)\ProjectsV13 /tdn:MyDatabase /deployscriptpath:"My\DeployScript.sql" /deployreportpath:"My\DeployReport.xml"```
 
 Dans DacFx, deux nouvelles API ont été ajoutées : DacServices.Publish() et DacServices.Script(). Celles-ci prennent également en charge les actions de publication + script + rapport dans une même opération. Exemple d’utilisation :
 
@@ -660,10 +660,10 @@ Pour plus d’informations, lisez le [billet du blog Analysis Services](https://
 
 * [Bogue Connect 3055711](https://connect.microsoft.com/SQLServer/feedback/details/3055711/columns-cannot-be-selected-from-cross-apply-openjson-with-explicit-schema) : impossible de sélectionner des colonnes depuis CROSS APPLY OPENJSON avec un schéma explicite
 * Correction : Problème avec les index de tables d’historique auto-générés, où DacFx supprimait l’index lors du redéploiement
-* Correction : Problème avec l’analyseur de lot DacFx qui n’analysait pas le caractère crochet dans une séquence d’échappement ’]’, ce qui conduisait à l’échec de la publication
+* Correction : Problème avec l’analyseur de lot DacFx qui n’analysait pas le caractère crochet dans une séquence d’échappement ']', ce qui conduisait à l’échec de la publication
 * Amélioration : SqlPackage comprend des descriptions de chaque action dans l’aide
 * Correction : L’option « Mémoriser le mot de passe » de la boîte de dialogue de connexion n’était pas conservée lors de la modification des options avancées et d’une chaîne de connexion enregistrée dans Publier, Comparaison de schémas ou d’autres fichiers
-* Correction : Pour les connexions affichées dans l’onglet Historique avec IntegratedAuthentication = true, le champ Authentification était vide dans les propriétés de la connexion. Maintenant, il indique « Authentification Windows » comme il se doit
+* Correction : Pour les connexions affichées dans l’onglet Historique avec IntegratedAuthentication = true, le champ Authentification était vide dans les propriétés de la connexion. Maintenant, il indique « Authentification Windows » comme prévu
 * Correction : Les modifications apportées aux paramètres Intellisense des outils SQL Server sous Outils-> Options-> Éditeur de texte n’étaient pas conservées
 * Amélioration : Le bouton Épingler/Désépingler dans l’onglet Historique de la boîte de dialogue de connexion est désormais plus compact, ce qui rend moins probable l’affichage d’une barre de défilement
 * Correction : Plusieurs problèmes d’accessibilité ont été résolus dans la boîte de dialogue de connexion.
@@ -693,7 +693,7 @@ Numéro de build : 14.0.60918
 
 La comparaison de schémas est maintenant prise en charge dans SqlPackage.exe et l’API d’infrastructure d’application de couche Données (DacFx). Pour plus d’informations, consultez  [Schema Compare in SqlPackage and the Data-Tier Application Framework](https://blogs.msdn.microsoft.com/ssdt/2016/09/20/schema-compare-in-sqlpackage-and-the-data-tier-application-framework-dacfx/).
 
-**Analysis Services – Mode Espace de travail intégré pour le modèle tabulaire SSDT (SSAS)**
+**Analysis Services - Mode Espace de travail intégré pour le modèle tabulaire SSDT (SSAS)**
 
 Le modèle tabulaire SSDT comprend désormais une instance SSAS interne qu’il démarre automatiquement en arrière-plan si le mode Espace de travail intégré est activé afin que vous puissiez ajouter et afficher des tables, des colonnes et des données dans le générateur de modèles sans avoir à fournir une instance de serveur d’espace de travail externe. Le mode d’espace de travail intégré ne modifie pas le fonctionnement du modèle tabulaire SSDT avec une base de données et un serveur d’espace de travail. Le changement réside dans l’emplacement où le modèle tabulaire SSDT héberge la base de données d’espace de travail. Pour activer le mode Espace de travail intégré, sélectionnez l’option Espace de travail intégré dans la boîte de dialogue Générateur de modèles tabulaires qui s’affiche lors de la création d’un projet tabulaire. Pour les projets tabulaires existants qui utilisent un serveur d’espace de travail explicite, vous pouvez basculer en mode Espace de travail intégré en définissant le paramètre Mode Espace de travail intégré avec la valeur True dans la fenêtre Propriétés qui s’affiche lorsque vous sélectionnez le fichier Model.bim dans l’Explorateur de solutions. Pour plus d’informations, consultez le [billet de blog Analysis Services](https://blogs.msdn.microsoft.com/analysisservices/2016/09/20/introducing-integrated-workspace-mode-for-sql-server-data-tools-for-analysis-services-tabular-projects-ssdt-tabular/).
 
@@ -704,7 +704,7 @@ Le modèle tabulaire SSDT comprend désormais une instance SSAS interne qu’il 
 - [Problème Connect 1026648](https://connect.microsoft.com/SQLServer/feedback/details/1026648) : IsPersistedNullable est différent dans la comparaison de SSDT
 - [Problème Connect 2054735](https://connect.microsoft.com/SQLServer/feedback/details/2054735) : L’identité est réinitialisée lors de l’importation d’un fichier BACPAC
 - [Problème Connect 2900167](https://connect.microsoft.com/SQLServer/feedback/details/2900167) : L’exécution de tests unitaires SSDT laisse des fichiers temporaires
-- [Problème Connect 1807712](https://connect.microsoft.com/SQLServer/feedback/details/1807712) : Rupture de compatibilité descendante – AppLocal et Nugetization
+- [Problème Connect 1807712](https://connect.microsoft.com/SQLServer/feedback/details/1807712) : Rupture de compatibilité descendante - AppLocal et Nugetization
 
 **Analysis Services & Reporting Services**
 
@@ -732,8 +732,8 @@ Numéro de build de : 14.0.60812.0
 **Nouveautés**
 
 - **Gestion et numérotation des versions :** Les versions sont maintenant nommées avec des chiffres et non plus avec des mois. Cette initiative s’inscrit dans la nouvelle politique SSMS et simplifie les cas où plusieurs versions ou correctifs sont publiés au cours d’un même mois. Cette version est la 16.3, autrement dit la troisième mise à jour après la publication de la version RTM. Les correctifs seront numérotés 16.3.1 et ainsi de suite jusqu’à notre prochaine mise à jour (prévue le mois prochain) qui sera la version 16.4.
-- **Analysis Services – Explorateur de modèles tabulaires :** L’Explorateur de modèles tabulaires vous permet de naviguer facilement dans les différents objets de métadonnées d’un modèle, tels que les sources de données, les tables, les mesures et les relations. Il est implémenté comme fenêtre d’outils distincte que vous pouvez afficher en ouvrant le menu Affichage dans Visual Studio, en pointant sur Autres fenêtres, puis en cliquant sur Explorateur de modèles tabulaires. L’Explorateur de modèles tabulaires s’affiche par défaut dans la zone Explorateur de solutions sous un onglet distinct. L’Explorateur de modèles tabulaires organise les objets de métadonnées dans une arborescence qui ressemble beaucoup au schéma d’un modèle tabulaire 1200 et propose beaucoup d’autres nouvelles fonctionnalités.
-- **Outils de base de données – Always Encrypted** : Cette version propose de nouvelles boîtes de dialogue de [gestion des clés Always Encrypted](../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md) permettant de facilement ajouter des clés principales de colonne ou des clés de chiffrement de colonne à votre projet de base de données ou une base de données active dans l’Explorateur d’objets SQL Server. Cette version prend en charge les certificats dans le magasin de certificats Windows. Dans les versions à venir, Azure Key Vault et les fournisseurs CNG seront pris en charge.
+- **Analysis Services - Explorateur de modèles tabulaires :** L’Explorateur de modèles tabulaires vous permet de naviguer facilement dans les différents objets de métadonnées d’un modèle, tels que les sources de données, les tables, les mesures et les relations. Il est implémenté comme fenêtre d’outils distincte que vous pouvez afficher en ouvrant le menu Affichage dans Visual Studio, en pointant sur Autres fenêtres, puis en cliquant sur Explorateur de modèles tabulaires. L’Explorateur de modèles tabulaires s’affiche par défaut dans la zone Explorateur de solutions sous un onglet distinct. L’Explorateur de modèles tabulaires organise les objets de métadonnées dans une arborescence qui ressemble beaucoup au schéma d’un modèle tabulaire 1200 et propose beaucoup d’autres nouvelles fonctionnalités.
+- **Outils de base de données - Always Encrypted** : Cette version propose de nouvelles boîtes de dialogue de [gestion des clés Always Encrypted](../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md) permettant de facilement ajouter des clés principales de colonne ou des clés de chiffrement de colonne à votre projet de base de données ou une base de données active dans l’Explorateur d’objets SQL Server. Cette version prend en charge les certificats dans le magasin de certificats Windows. Dans les versions à venir, Azure Key Vault et les fournisseurs CNG seront pris en charge.
     - Quand vous créez une clé principale de colonne ou une clé de chiffrement de colonne, vous pouvez constater que les modifications ne sont pas immédiatement répercutées dans l’Explorateur d’objets SQL Server après avoir cliqué sur Mettre à jour la base de données. Pour contourner ce problème, actualisez le nœud de base de données dans l’Explorateur d’objets SQL Server.
     - Si vous essayez de chiffrer une colonne dans une table contenant des données à partir de l’Explorateur d’objets SQL Server, vous risquez d’échouer. Actuellement, cette fonctionnalité est prise en charge uniquement dans les projets de base de données SSDT et SSMS. La prise en charge de l’Explorateur d’objets SQL Server est prévue dans une version ultérieure.
 

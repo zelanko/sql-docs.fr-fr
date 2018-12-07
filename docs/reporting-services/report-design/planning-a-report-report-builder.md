@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 79113505-1ce8-4f8c-9260-d861838f7813
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ab5c01a12200ed62cfc462fa25d3d75a95fd8589
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 385d8cfa69e7407aec2f31ee99962b2a1200e4aa
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716627"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52710850"
 ---
 # <a name="planning-a-report-report-builder"></a>Planification d'un rapport (Générateur de rapports)
   Le Générateur de rapports vous permet de créer divers types de rapports paginés. Par exemple, vous pouvez créer des rapports qui indiquent des données de ventes récapitulatives ou détaillées, des tendances de ventes et de marketing, ou bien des rapports opérationnels ou des tableaux de bord. Vous pouvez également créer des rapports qui tirent parti de texte enrichi, tels que des commandes clients, des catalogues de produits ou des lettres types. Tous ces rapports sont créés à l'aide de différentes combinaisons des mêmes blocs de construction dans le Générateur de rapports. Pour créer un rapport utile et facilement compréhensible, il est préférable de le planifier au préalable. Voici quelques éléments à prendre en considération avant de commencer :  
@@ -50,7 +50,7 @@ ms.locfileid: "47716627"
      Vous pouvez enregistrer votre rapport sur votre ordinateur local et continuer à travailler dessus ou l'exécuter localement à des fins d'informations personnelles. Toutefois, pour partager votre rapport avec d'autres personnes, vous devez l'enregistrer sur un serveur de rapports configuré en mode natif, ou sur un serveur de rapports en mode intégré SharePoint. Le fait de l'enregistrer sur un serveur permet à d'autres personnes de l'exécuter lorsqu'elles le souhaitent. En guise d'alternative, l'administrateur du serveur de rapports peut configurer un abonnement au rapport ou la remise du rapport par messagerie électronique à d'autres utilisateurs. Vous pouvez faire remettre le rapport dans un format d'exportation spécifique si vous préférez. Pour plus d’informations, consultez [Recherche, affichage et gestion des rapports &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a> Voir aussi  
- [Générateur de rapports dans SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
+ [Générateur de rapports dans SQL Server](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
  [Concepts de création de rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)   
  [Didacticiels du Générateur de rapports](../../reporting-services/report-builder-tutorials.md)  
   

@@ -12,12 +12,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dca46f2aa08235e69c93efb4a9538ef5004b71b5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e52e83a630a81b87f30e2c07d954fc9bb14696d9
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47652987"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617839"
 ---
 # <a name="rotate-always-encrypted-keys-using-powershell"></a>Permuter des clés Always Encrypted à l’aide de PowerShell
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -106,7 +106,7 @@ Un administrateur de base de données récupère les métadonnées concernant la
 
 | Tâche | Article | Accède au magasin de clés/aux clés en texte clair| Accède à la base de données
 |:---|:---|:---|:---
-|Étape 1. Démarrer un environnement PowerShell et importer le module SqlServer. | [Importer le module SQL Server](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#importsqlservermodule) | non | None
+|Étape 1. Démarrer un environnement PowerShell et importer le module SqlServer. | [Importer le module SQL Server](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#importsqlservermodule) | non | Aucun
 |Étape 2. Se connecter à votre serveur et à une base de données. | [Se connecter à une base de données](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase) | non | Oui
 |Étape 3. Récupérer les métadonnées relatives à l’ancienne clé principale de colonne.| [Get-SqlColumnMasterKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/get-sqlcolumnmasterkey) | non | Oui
 |Étape 4. Récupérer les métadonnées relatives aux clés de chiffrement de colonne, protégées avec l’ancienne clé principale de colonne, notamment leurs valeurs chiffrées. | [Get-SqlColumnEncryptionKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/get-sqlcolumnencryptionkey) | non | Oui

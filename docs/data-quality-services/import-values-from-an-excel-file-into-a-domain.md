@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.kb.importfailing.f1
@@ -16,12 +15,12 @@ ms.assetid: 04cde693-2043-477f-8417-fcc463ca7195
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3fd18c3f8614a47a96f5a917fdeb6e59025a2590
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 394fbfd149e9631148ca495675d93bda0ed652f1
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828587"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52616889"
 ---
 # <a name="import-values-from-an-excel-file-into-a-domain"></a>Importer les valeurs d'un fichier Excel dans un domaine
 
@@ -67,9 +66,9 @@ ms.locfileid: "47828587"
   
 10. Cliquez sur **OK**. Une barre de progression s'affiche, avec indication sur le nombre de valeurs importées avec succès, le nombre de valeurs non importées et le nombre total de valeurs. Cliquez sur le bouton **Annuler** pour annuler le processus.  
   
-11. Vérifiez que « Importation terminée » s'affiche dans la boîte de dialogue **Importer les valeurs du domaine** . Consultez les valeurs importées avec succès et celles qui ne l'ont pas été. Sont indiqués le nom du fichier et le chemin d'accès du fichier, l'état d'achèvement de l'opération, le nombre de valeurs importées avec succès, le nombre de valeurs non importées et le nombre total de valeurs traitées.  
+11. Vérifiez que « Importation terminée » s’affiche dans la boîte de dialogue **Importer les valeurs du domaine**. Consultez les valeurs importées avec succès et celles qui ne l'ont pas été. Sont indiqués le nom du fichier et le chemin du fichier, l’état d’achèvement de l’opération, le nombre de valeurs importées avec succès, le nombre de valeurs non importées et le nombre total de valeurs traitées.  
   
-12. Pour les valeurs qui n'ont pas été importées avec succès, cliquez sur **Journal** pour afficher la boîte de dialogue **Importer les valeurs du domaine – Valeurs erronées** pour voir pourquoi l'opération d'importation a échoué. La colonne **Valeur erronée** montre les valeurs qui n'ont pas pu être importées à partir d'un fichier Excel dans un domaine et la colonne **Raison** explique pourquoi l'importation a échoué. Cliquez sur **Copier dans le Presse-papiers** pour copier la table **Valeur erronée** dans le presse-papiers, à partir duquel vous pouvez le copier dans un autre programme, tel qu'une feuille de calcul Excel ou un fichier du Bloc-notes. Cliquez sur **OK** pour fermer la boîte de dialogue **Valeurs erronées** .  
+12. Pour les valeurs qui n’ont pas été importées avec succès, cliquez sur **Journal** pour afficher la boîte de dialogue **Importer les valeurs du domaine - Valeurs erronées** pour voir pourquoi l’opération d’importation a échoué. La colonne **Valeur erronée** montre les valeurs qui n'ont pas pu être importées à partir d'un fichier Excel dans un domaine et la colonne **Raison** explique pourquoi l'importation a échoué. Cliquez sur **Copier dans le Presse-papiers** pour copier la table **Valeur erronée** dans le presse-papiers, à partir duquel vous pouvez le copier dans un autre programme, tel qu'une feuille de calcul Excel ou un fichier du Bloc-notes. Cliquez sur **OK** pour fermer la boîte de dialogue **Valeurs erronées** .  
   
 13. Cliquez sur **OK** pour terminer l'opération d'importation et fermer la boîte de dialogue. Lorsque l'importation s'est terminé avec succès, la liste des valeurs du domaine de la page **Valeurs du domaine** est actualisée et inclut les nouvelles valeurs importées. Le filtre est modifié en **Toutes les valeurs** et **Afficher seulement les nouvelles valeurs** est sélectionné. Lorsque **Afficher seulement les nouvelles valeurs** est sélectionné après l'opération d'importation, seules les valeurs importées à partir du fichier Excel s'affichent.  
   
@@ -102,7 +101,7 @@ ms.locfileid: "47828587"
   
 -   Une valeur qui contredit une règle de domaine est importée comme valeur non valide.  
   
--   Une valeur ne sera pas importée à partir du fichier si la valeur n'est pas du type de données du domaine ou est NULL.  
+-   Une valeur ne sera pas importée à partir du fichier si la valeur n’est pas du type de données du domaine ou est NULL.  
   
 -   Les valeurs sont importées dans l'ordre où elles apparaissent dans le fichier.  
   
@@ -116,7 +115,7 @@ ms.locfileid: "47828587"
   
     -   Le format attendu est que la première colonne correspond aux valeurs de départ et la deuxième colonne et les colonnes suivantes aux synonymes.  
   
-    -   Vous pouvez importer plusieurs synonymes dans la même ligne ou dans des lignes différentes. Par exemple, si vous souhaitez importer « NYC » et « New York » City en tant que synonymes de « New York », vous pouvez importer une seule ligne avec « New York » dans la colonne 1, « NYC » dans la colonne 2, et « New York City » dans la colonne 3 ; ou vous pouvez importer une ligne avec « New York » dans la colonne 1 et « NYC » dans la colonne 2, et une autre ligne avec « New York » dans la colonne 1 et « New York City » dans la colonne 2. Notez que si la valeur « New York » existe déjà dans le domaine, seuls les synonymes seront ajoutés et l'utilisateur ne recevra pas d'erreur pendant l'importation lui indiquant que la valeur existe déjà. Si la première valeur n'existe pas déjà, elle est ajoutée au domaine.  
+    -   Vous pouvez importer plusieurs synonymes dans la même ligne ou dans des lignes différentes. Par exemple, si vous souhaitez importer « NYC » et « New York » City en tant que synonymes de « New York », vous pouvez importer une seule ligne avec « New York » dans la colonne 1, « NYC » dans la colonne 2, et « New York City » dans la colonne 3 ; ou vous pouvez importer une ligne avec « New York » dans la colonne 1 et « NYC » dans la colonne 2, et une autre ligne avec « New York » dans la colonne 1 et « New York City » dans la colonne 2. Notez que si la valeur « New York » existe déjà dans le domaine, seuls les synonymes seront ajoutés et l’utilisateur ne recevra pas d’erreur pendant l’importation lui indiquant que la valeur existe déjà. Si la première valeur n'existe pas déjà, elle est ajoutée au domaine.  
   
  Les règles suivantes s'appliquent au fichier Excel utilisé pour l'importation :  
   

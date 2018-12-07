@@ -12,12 +12,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 01be3d3e15f85a5b95a0d704f40bfb0cc0017732
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 085764ce76a5a6eb18d23c1c77ef67dd63282a56
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47625768"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545698"
 ---
 # <a name="columnstore-indexes---design-guidance"></a>Index columnstore - Guide de conception
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -183,7 +183,7 @@ Il s’agit de tâches pour créer et tenir à jour des index columnstore.
 |Supprimer une ligne d’un index columnstore|[DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)|Utilisez [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md) pour supprimer une ligne.<br /><br /> Ligne**columnstore** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] marque la ligne comme étant supprimée logiquement, mais ne récupère pas le stockage physique pour la ligne tant que l’index n’est pas reconstruit.<br /><br /> Ligne**deltastore** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supprime la ligne logiquement et physiquement.|  
 |Mettre à jour une ligne dans l’index columnstore|[UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)|Utilisez [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md) pour mettre à jour une ligne.<br /><br /> Ligne**columnstore** :  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] marque la ligne comme étant supprimée logiquement, puis insère la ligne mise à jour dans le deltastore.<br /><br /> Ligne**deltastore** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] met à jour la ligne dans le deltastore.|  
 |Obliger toutes les lignes du deltastore à aller dans le columnstore.|[ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md) ... REBUILD<br /><br /> [Index columnstore - défragmentation](../../relational-databases/indexes/columnstore-indexes-defragmentation.md)|ALTER INDEX avec l’option REBUILD oblige toutes les lignes à aller dans le columnstore.|  
-|Défragmenter un index columnstore|[ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)|ALTER INDEX … REORGANIZE défragmente les index columnstore en ligne.|  
+|Défragmenter un index columnstore|[ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)|ALTER INDEX ... REORGANIZE défragmente les index columnstore en ligne.|  
 |Fusionner des tables avec les index columnstore|[MERGE &#40;Transact-SQL&#41;](../../t-sql/statements/merge-transact-sql.md)|
 
 

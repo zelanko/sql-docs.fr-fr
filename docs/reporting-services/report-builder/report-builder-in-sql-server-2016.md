@@ -1,6 +1,6 @@
 ---
-title: Générateur de rapports dans SQL Server 2016 | Microsoft Docs
-ms.date: 03/30/2017
+title: Générateur de rapports dans SQL Server| Microsoft Docs
+ms.date: 11/29/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-builder
@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 55bf4f9c-d037-412f-ae57-3fc39ce32fa5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 15762e449c61642989dd507897682d30b4c1421d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 381f0070a8e045aeec707c1f8dc9a6df9cd157d9
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47690957"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711417"
 ---
-# <a name="report-builder-in-sql-server-2016"></a>Générateur de rapports dans SQL Server 2016
-  Le [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]est un outil de création de rapports paginés pour les utilisateurs professionnels qui préfèrent travailler dans un environnement autonome plutôt que d’utiliser le Concepteur de rapports dans Visual Studio.  Lorsque vous concevez un rapport paginé, vous créez une définition de rapport qui spécifie l’emplacement des données à obtenir, leur nature et leur mode d’affichage. Au moment de l’exécution du rapport, le processeur de rapports assimile la définition de rapport que vous avez spécifiée, puis il récupère les données et les combine à la mise en page du rapport pour générer le rapport. Vous pouvez afficher un aperçu de votre rapport dans [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] et le publier sur un serveur de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode natif ou intégré SharePoint, pour permettre à d’autres utilisateurs de l’exécuter.  
+# <a name="report-builder-in-sql-server"></a>Générateur de rapports dans SQL Server
+  Le [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] est un outil de création de rapports paginés pour les utilisateurs professionnels qui préfèrent travailler dans un environnement autonome plutôt que d’utiliser le Concepteur de rapports dans Visual Studio.  Lorsque vous concevez un rapport paginé, vous créez une définition de rapport qui spécifie l’emplacement des données à obtenir, leur nature et leur mode d’affichage. Au moment de l’exécution du rapport, le processeur de rapports assimile la définition de rapport que vous avez spécifiée, puis il récupère les données et les combine à la mise en page du rapport pour générer le rapport. Vous pouvez afficher un aperçu de votre rapport dans le [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]. Publiez ensuite votre rapport sur un serveur de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode natif ou intégré SharePoint (2016 et versions antérieures). Vous pouvez aussi publier un rapport paginé dans le service Power BI. En savoir plus sur les [rapports paginés dans Power BI Premium](https://docs.microsoft.com/power-bi/paginated-reports-report-builder-power-bi) (préversion).
   
  ![rs_GettingStartedReport](../../reporting-services/report-builder/media/rs-gettingstartedreport.png "rs_GettingStartedReport")  
   
@@ -71,7 +71,7 @@ ms.locfileid: "47690957"
   
   [Installer le générateur de rapports](../../reporting-services/install-windows/install-report-builder.md)
 
-  [Nouveautés dans Reporting Services et le Générateur de rapports pour SQL Server 2016](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)  
+  [Nouveautés dans SQL Server Reporting Services et le Générateur de rapports](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)  
   Décrit les nouvelles fonctionnalités de cette version de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] et du [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)].   
   [Didacticiel : création d'un rapport de graphique rapide en mode hors connexion](../../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
  Présente le [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] et les Assistants disponibles pour vous permettre de créer des rapports. Il fournit un ensemble de données que vous pouvez utiliser pour vous éviter d'avoir à vous connecter à une source de données pour la mise en route.  
@@ -80,7 +80,7 @@ ms.locfileid: "47690957"
  Fournit des informations sur les éléments à prendre en considération avant de commencer à créer un rapport.  
   
  [Concepts de création de rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
- Définit les concepts clés utilisés dans la documentation du [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)].  
+ Définit les concepts clés utilisés dans la documentation du [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] .  
   
  [Mode Conception de rapport &#40;Générateur de rapports&#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)  
  Explique les différents volets et régions du mode création de rapport.  

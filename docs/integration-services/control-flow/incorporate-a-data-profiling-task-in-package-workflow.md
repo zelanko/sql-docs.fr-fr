@@ -13,12 +13,12 @@ ms.assetid: 39a51586-6977-4c45-b80b-0157a54ad510
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0304d7e1a27d9ff31be603ee4d3248f9b4c472eb
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 621d19785793115c924243fd750b2d78c503c1ba
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638797"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545794"
 ---
 # <a name="incorporate-a-data-profiling-task-in-package-workflow"></a>Incorporer une tâche de profilage des données dans le flux de travail du package
   Le profilage des données et le nettoyage des données ne sont pas des candidats pour un processus automatisé à leur stade initial. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], la sortie de la tâche de profilage des données doit habituellement faire l’objet d’une analyse visuelle et d’un jugement personnel pour qu’il soit déterminé si les violations signalées sont significatives ou excessives. Même après avoir reconnu des problèmes de qualité des données, un plan soigneusement pensé doit être appliqué pour déterminer la meilleure approche pour le nettoyage.  
@@ -264,7 +264,7 @@ ms.locfileid: "51638797"
   
 8.  Fermez l'environnement de développement de script, puis l'éditeur de tâche de script.  
   
-#### <a name="alternative-codereading-the-profile-output-from-a-variable"></a>Code alternatif – Lecture de la sortie du profil à partir d'une variable  
+#### <a name="alternative-code-reading-the-profile-output-from-a-variable"></a>Code alternatif - Lecture de la sortie du profil à partir d’une variable  
  La procédure précédente montre comment charger la sortie de la tâche de profilage des données à partir d'un fichier. Toutefois, une méthode alternative consiste à charger cette sortie à partir d'une variable de package. Pour charger la sortie à partir d'une variable, vous devez apporter les modifications suivantes dans l'exemple de code :  
   
 -   Appelez la méthode **LoadXml** de la classe **XmlDocument** à la place de la méthode **Load** .  

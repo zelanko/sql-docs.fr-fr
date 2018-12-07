@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.dqproject.interactivecleansing.f1
@@ -17,12 +16,12 @@ ms.assetid: c96b13ad-02a6-4646-bcc7-b4a8d490f5cc
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 94800c20ae6b5ad5dfc45f9a17779242cd430286
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: af37e0dd65edebe2037d305d085e5c65872d03f8
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47822037"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617649"
 ---
 # <a name="cleanse-data-using-dqs-internal-knowledge"></a>Nettoyer des données à l'aide de la base de connaissances DQS (interne)
 
@@ -38,7 +37,7 @@ ms.locfileid: "47822037"
   
 -   Vous devez avoir spécifié les valeurs de seuil appropriées pour l'activité de nettoyage. Pour plus d'informations sur cette opération, consultez [Configurer les valeurs de seuil pour le nettoyage et la correspondance](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md).  
   
--   Une base de connaissances DQS à utiliser pour comparer et nettoyer vos données sources doit être disponible sur [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] . En outre, la base de connaissances doit contenir la connaissance sur le type de données que vous souhaitez nettoyer. Par exemple, si vous voulez nettoyer vos données sources qui contiennent des adresses des États-Unis, vous devez disposer d'une base de connaissances créée avec un échantillon de données de « haute qualité » pour les adresses des États-Unis.  
+-   Une base de connaissances DQS à utiliser pour comparer et nettoyer vos données sources doit être disponible sur [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] . En outre, la base de connaissances doit contenir la connaissance sur le type de données que vous souhaitez nettoyer. Par exemple, si vous voulez nettoyer vos données sources qui contiennent des adresses des États-Unis, vous devez disposer d’une base de connaissances créée avec un échantillon de données de « haute qualité » pour les adresses des États-Unis.  
   
 -   Microsoft Excel doit être installé sur l'ordinateur [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] si les données sources à nettoyer se trouvent dans un fichier Excel. Sinon, vous ne pourrez pas sélectionner le fichier Excel à l'étape de mappage. Les fichiers créés par Microsoft Excel peuvent avoir une extension .xlsx, .xls ou .csv. Si la version 64 bits d'Excel est utilisée, seuls les fichiers Excel 2003 (.xls) sont pris en charge ; les fichiers Excel 2007 ou 2010 (.xlsx) ne sont pas pris en charge. Si vous utilisez la version 64 bits d'Excel 2007 ou 2010, enregistrez le fichier comme fichier .xls ou fichier .csv, ou installez une version 32 bits d'Excel à la place.  
   
@@ -129,7 +128,7 @@ ms.locfileid: "47822037"
   
     -   Le volet inférieur affiche des occurrences individuelles de la valeur de domaine sélectionnée dans le volet supérieur droit. Les informations suivantes sont affichées : une zone pour spécifier une autre valeur (correcte), le niveau de confiance (non disponible pour les valeurs affichées sous l'onglet **Correct** ), la raison de l'action de DQS sur la valeur, l'option permettant d'approuver et de refuser les corrections et les suggestions pour la valeur, ainsi que la valeur d'origine.  
   
-3.  Si vous avez activé la fonctionnalité **Vérificateur d'orthographe** pour un domaine lors de sa création, des traits de soulignement ondulés rouges s'affichent pour de telles valeurs de domaine qui sont identifiées comme une erreur potentielle. Le trait de soulignement est affiché pour la totalité de la valeur. Par exemple, si « New York » est mal orthographié en tant que « Neu York », le vérificateur d'orthographe affiche un trait de soulignement rouge sous « Neu York », et pas seulement sous « Neu ». Si vous cliquez avec le bouton droit sur la valeur, des suggestions de corrections s'affichent. S'il existe plus de 5 suggestions, vous pouvez cliquer sur **Plus de suggestions** dans le menu contextuel pour afficher celles restantes. Comme pour l'affichage des erreurs, les suggestions sont des remplacements de la totalité de la valeur. Par exemple, dans l'exemple précédent, « New York » sera affiché comme suggestion, et pas simplement « New ». Vous pouvez choisir l'une des suggestions ou ajouter au dictionnaire une valeur à afficher pour cette valeur. Les valeurs sont stockées en le dictionnaire à un niveau de compte d'utilisateur. Lorsque vous sélectionnez une suggestion dans le menu contextuel du vérificateur d'orthographe, la suggestion sélectionnée est ajoutée à la colonne **Corriger vers** . Toutefois, si vous sélectionnez une suggestion dans la colonne **Corriger vers** , la valeur de la colonne est remplacée par la suggestion sélectionnée.  
+3.  Si vous avez activé la fonctionnalité **Vérificateur d'orthographe** pour un domaine lors de sa création, des traits de soulignement ondulés rouges s'affichent pour de telles valeurs de domaine qui sont identifiées comme une erreur potentielle. Le trait de soulignement est affiché pour la totalité de la valeur. Par exemple, si « New York » est mal orthographié en tant que « Neu York », le vérificateur d’orthographe affiche un trait de soulignement rouge sous « Neu York », et pas seulement sous « Neu ». Si vous cliquez avec le bouton droit sur la valeur, des suggestions de corrections s'affichent. S'il existe plus de 5 suggestions, vous pouvez cliquer sur **Plus de suggestions** dans le menu contextuel pour afficher celles restantes. Comme pour l'affichage des erreurs, les suggestions sont des remplacements de la totalité de la valeur. Par exemple, dans l’exemple précédent, « New York » est affiché comme suggestion, et pas simplement « New ». Vous pouvez choisir l'une des suggestions ou ajouter au dictionnaire une valeur à afficher pour cette valeur. Les valeurs sont stockées en le dictionnaire à un niveau de compte d'utilisateur. Lorsque vous sélectionnez une suggestion dans le menu contextuel du vérificateur d'orthographe, la suggestion sélectionnée est ajoutée à la colonne **Corriger vers** . Toutefois, si vous sélectionnez une suggestion dans la colonne **Corriger vers** , la valeur de la colonne est remplacée par la suggestion sélectionnée.  
   
      La fonctionnalité de vérificateur d'orthographe est activée par défaut à l'étape de nettoyage interactif. Vous pouvez désactiver le vérificateur d'orthographe à l'étape de nettoyage interactif en cliquant sur l'icône **Activer/désactiver le vérificateur d'orthographe** , ou en cliquant avec le bouton droit dans la zone des valeurs de domaine, puis en cliquant sur **Vérificateur d'orthographe** dans le menu contextuel. Pour l'activer de nouveau, faites de même.  
   
@@ -150,9 +149,9 @@ ms.locfileid: "47822037"
   
     1.  **SQL Server**: sélectionnez **DQS_STAGING_DATA** comme base de données de destination si vous voulez exporter vos données ici, puis indiquez le nom de la table qui sera créée pour stocker vos données exportées. Sinon, sélectionnez une autre base de données si vous voulez exporter des données vers une base de données différente, puis spécifiez le nom de la table qui sera créée pour stocker vos données exportées. Pour être disponible dans la liste déroulante [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] Base de données **, votre base de données de destination doit être présente dans la même instance de SQL Server que** .  
   
-    2.  **Fichier CSV**: cliquez sur **Parcourir**, puis indiquez le nom et l'emplacement du fichier .csv où vous voulez exporter les données nettoyées. Vous pouvez également taper le nom du fichier .csv avec le chemin d'accès complet où vous voulez exporter les données nettoyées. Par exemple, « c:\ExportedData.csv ». Le fichier est enregistré sur l'ordinateur où [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] est installé.  
+    2.  **Fichier CSV**: cliquez sur **Parcourir**, puis indiquez le nom et l'emplacement du fichier .csv où vous voulez exporter les données nettoyées. Vous pouvez également taper le nom du fichier .csv avec le chemin d'accès complet où vous voulez exporter les données nettoyées. Par exemple, « c:\ExportedData.csv ». Le fichier est enregistré sur l'ordinateur où [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] est installé.  
   
-    3.  **Fichier Excel**: cliquez sur **Parcourir**, puis indiquez le nom et l'emplacement du fichier Excel où vous voulez exporter les données nettoyées. Vous pouvez également taper le nom du fichier Excel avec le chemin d'accès complet où vous voulez exporter les données nettoyées. Par exemple, « c:\ExportedData.xlsx ». Le fichier est enregistré sur l'ordinateur où [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] est installé.  
+    3.  **Fichier Excel**: cliquez sur **Parcourir**, puis indiquez le nom et l'emplacement du fichier Excel où vous voulez exporter les données nettoyées. Vous pouvez également taper le nom du fichier Excel avec le chemin d'accès complet où vous voulez exporter les données nettoyées. Par exemple, « c:\ExportedData.xlsx ». Le fichier est enregistré sur l'ordinateur où [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] est installé.  
   
 2.  Activez la case à cocher **Normaliser la sortie** pour normaliser la sortie en fonction du format de sortie sélectionné pour le domaine. Par exemple, mettez la valeur de chaîne en majuscules ou mettez une majuscule à la première lettre du mot. Pour plus d'informations sur la spécification du format de sortie d'un domaine, consultez la liste **Mettre en forme la sortie vers** de la rubrique [Définir les propriétés du domaine](../data-quality-services/set-domain-properties.md).  
   
@@ -172,7 +171,7 @@ ms.locfileid: "47822037"
   
         -   **\<Domaine>_État** : état de la valeur de domaine après le nettoyage des données. Par exemple, **Suggérés**, **Nouveau**, **Non valide**, **Corrigés**ou **Correct**.  
   
-        -   **État de l’enregistrement** : en plus d’avoir un champ d’état pour chaque domaine mappé **(\<Nom_domaine>_État**), le champ **État de l’enregistrement** affiche l’état d’un enregistrement. Si l'état d'un des domaines dans l'enregistrement est *Nouveau* ou *Correct*, l' **État de l'enregistrement** est défini sur *Correct*. Si l'état d'un des domaines dans l'enregistrement est *Suggérés*, *Non valide*, ou *Corrigés*, l' **État de l'enregistrement** a la valeur correspondante. Par exemple, si l'état d'un des domaines dans l'enregistrement est *Suggérés*, l' **État de l'enregistrement** est défini sur *Suggérés*.  
+        -   **État de l’enregistrement** : en plus d’avoir un champ d’état pour chaque domaine mappé **(\<Nom_domaine>_État**), le champ **État de l’enregistrement** affiche l’état d’un enregistrement. Si l’état d’un des domaines dans l’enregistrement est *Nouveau* ou *Correct*, l’**État de l’enregistrement** est défini sur *Correct*. Si l’état d’un des domaines dans l’enregistrement est *Suggéré*, *Non valide*, ou *Corrigé*, l’**État de l’enregistrement** a la valeur correspondante. Par exemple, si l’état d’un des domaines dans l’enregistrement est *Suggéré*, l’**État de l’enregistrement** est défini sur *Suggéré*.  
   
             > [!NOTE]  
             >  Si vous utilisez le service de données de référence pour l'opération de nettoyage, certaines informations supplémentaires sur la valeur de domaine peuvent également être exportées. Pour plus d’informations, consultez [Nettoyer les données à l’aide de la connaissance des données de référence &#40;externes&#41;](../data-quality-services/cleanse-data-using-reference-data-external-knowledge.md).  

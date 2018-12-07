@@ -5,8 +5,7 @@ ms.date: 11/08/2011
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.dm.testdomainrule.f1
@@ -15,12 +14,12 @@ ms.assetid: 339fa10d-e22c-4468-b366-080c33f1a23f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e330306aac704bc2cb94885777449731e9648230
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 865c5a9430f7c17f120e96b015ffe2818a68801f
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699178"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617639"
 ---
 # <a name="create-a-domain-rule"></a>Créer une règle de domaine
 
@@ -55,7 +54,7 @@ ms.locfileid: "51699178"
   
 6.  Sélectionnez **Active** pour spécifier que la règle sera exécutée (valeur par défaut) ou désactivez l'option pour empêcher la règle de s'exécuter.  
   
-7.  Dans le volet **Créer une règle** , sélectionnez une condition dans la liste déroulante de la zone de la clause de la règle.  
+7.  Dans le volet **Créer une règle**, sélectionnez une condition dans la liste déroulante de la zone de la clause de la règle.  
   
 8.  Si la condition requiert une valeur, entrez la valeur dans la zone de texte associée.  
   
@@ -83,7 +82,7 @@ ms.locfileid: "51699178"
   
 3.  Cliquez sur l'icône **Tester la règle de domaine sur tous les termes** .  
   
-4.  Vérifiez la validité de chaque terme. Une coche signifie « correct », une croix « erreur » et un triangle « non valide ».  
+4.  Vérifiez la validité de chaque terme. Une coche signifie « correct », une croix « erreur » et un triangle « non valide ».  
   
 5.  Une fois terminé, cliquez sur **Fermer** .  
   
@@ -110,9 +109,9 @@ ms.locfileid: "51699178"
   
  Lorsqu'une règle de domaine est appliquée et qu'une valeur de domaine ne respecte pas la règle, la valeur est indiquée comme Non valide. Une valeur indiquée comme Non valide sera modifiée en Correcte si la règle qui la rend non valide est supprimée ou désactivée, ou que la règle a été modifiée de telle sorte que la valeur ne respecte plus la règle. Si vous avez désigné manuellement une valeur comme non valide (sous l'onglet Valeurs de domaine de l'activité Gestion de l'arborescence du domaine) et qu'une règle que la valeur ne respecte pas a été supprimée, désactivée ou changée, la valeur toujours sera indiquée comme Non valide, selon la désignation manuelle.  
   
- Une règle de domaine qui a une condition définitive appliquera la logique des règles aux synonymes de la valeur de la ou des conditions, ainsi qu'aux valeurs elles-mêmes. Les conditions définitives sont La valeur est égale à, La valeur n'est pas égale à, La valeur se trouve dans, ou La valeur ne se trouve pas dans. Par exemple, imaginons que vous avez la règle de domaine suivante : « Pour « Ville », la valeur est égale « à Los Angeles » ». Si « Los Angeles » et « LA » sont synonymes, les deux sont correctes. En revanche, si votre règle ne contenait pas de condition définitive, telle que « Pour Ville, la valeur se termine par « s », « Los Angeles » serait une valeur correcte, mais son synonyme « LA » serait une erreur.  
+ Une règle de domaine qui a une condition définitive appliquera la logique des règles aux synonymes de la valeur de la ou des conditions, ainsi qu'aux valeurs elles-mêmes. Les conditions définitives sont La valeur est égale à, La valeur n'est pas égale à, La valeur se trouve dans, ou La valeur ne se trouve pas dans. Par exemple, imaginons que vous ayez la règle de domaine suivante : « Pour « Ville », la valeur est égale à « Los Angeles » ». Si « Los Angeles » et « LA » sont synonymes, les deux sont correctes. En revanche, si votre règle ne contenait pas de condition définitive, telle que « Pour Ville, la valeur se termine par « s », « Los Angeles » serait une valeur correcte, mais son synonyme « LA » serait une erreur.  
   
- Vous avez différentes alternatives pour créer une règle de domaine. Par exemple, pour valider si les valeurs commencent par la lettre A, B, ou C, vous pouvez créer une règle simple avec une condition complexe (telle qu'une expression régulière avec des barres verticales), ou vous pouvez créer une règle complexe qui contient plusieurs conditions simples. Un exemple de la première règle est « La valeur contient l'expression régulière (^A|^B|^C) ». Un exemple de la deuxième règle est « La valeur commence par un A OR La valeur commence par un B OR La valeur commence par un C ».  
+ Vous avez différentes alternatives pour créer une règle de domaine. Par exemple, pour valider si les valeurs commencent par la lettre A, B, ou C, vous pouvez créer une règle simple avec une condition complexe (telle qu'une expression régulière avec des barres verticales), ou vous pouvez créer une règle complexe qui contient plusieurs conditions simples. Un exemple de la première règle est « La valeur contient l’expression régulière (^A|^B|^C) ». Un exemple de la deuxième règle est « La valeur commence par un A OR La valeur commence par un B OR La valeur commence par un C ».  
   
 |Condition|Description| Exemple|  
 |---------------|-----------------|-------------|  
@@ -127,13 +126,13 @@ ms.locfileid: "51699178"
 |La valeur se termine par|Seules les valeurs qui se terminent par les caractères de l'opérande sont valides.|Exemple d'opérande : AA<br /><br /> Valeurs valides : 1AA<br /><br /> Valeurs non valides : 1AAB|  
 |La valeur est numérique|Seules les valeurs ayant un type de données numérique SQL Server sont valides. Cela inclut int, decimal, float, etc.|Exemple d'opérande : N/A<br /><br /> Valeurs valides : 1, 25, 345,1234<br /><br /> Valeurs non valides : 2b, bcdef|  
 |La valeur est date/heure|Seules les valeurs ayant un type de données date/heure SQL Server sont valides. Cela inclut datetime, time, date, etc.|Exemple d'opérande : N/A<br /><br /> Valeurs valides : 1916-06-04 ; 1916-06-04 18:24:24 ; 21 mars 2001, 5/18/2011 ; 18:24:24<br /><br /> Valeurs non valides : Mars 213, 2006|  
-|La valeur se trouve dans|Seules les valeurs qui sont dans l'ensemble de l'opérande sont valides.<br /><br /> Pour écrire les valeurs de l'ensemble, cliquez dans la zone de texte de l'opérande, entrez la première valeur, appuyez sur ENTRÉE, entrez la seconde valeur, répétez ces étapes pour toutes les valeurs que vous souhaitez entrer, puis cliquez de nouveau dans la zone de texte de l'opérande. DQS ajoute une virgule entre les valeurs de l'ensemble. Si vous entrez une chaîne unique avec des virgules et aucun retour chariot (par exemple, « A1, B1 »), DQS considère cette chaîne comme une valeur unique dans l'ensemble.|Exemple d'opérande : [A1, B1]<br /><br /> Valeurs valides : A1, B1<br /><br /> Valeurs non valides : AA, 11|  
+|La valeur se trouve dans|Seules les valeurs qui sont dans l'ensemble de l'opérande sont valides.<br /><br /> Pour écrire les valeurs de l'ensemble, cliquez dans la zone de texte de l'opérande, entrez la première valeur, appuyez sur ENTRÉE, entrez la seconde valeur, répétez ces étapes pour toutes les valeurs que vous souhaitez entrer, puis cliquez de nouveau dans la zone de texte de l'opérande. DQS ajoute une virgule entre les valeurs de l'ensemble. Si vous entrez une chaîne unique avec des virgules et aucun retour chariot (par exemple, « A1, B1 »), DQS considère cette chaîne comme une valeur unique dans l’ensemble.|Exemple d'opérande : [A1, B1]<br /><br /> Valeurs valides : A1, B1<br /><br /> Valeurs non valides : AA, 11|  
 |La valeur ne se trouve pas dans|Seules les valeurs qui ne se trouvent pas dans l'ensemble de l'opérande sont valides.|Exemple d'opérande : [A1, B1]<br /><br /> Valeurs valides : AA, 11<br /><br /> Valeurs non valides : A1, B1|  
-|La valeur correspond au modèle|Seules les valeurs qui correspondent au modèle de caractères, chiffres ou caractères spéciaux de l'opérande sont valides.<br /><br /> Toute lettre (A… Z) peut être utilisée comme modèle pour toute lettre ; respecte la casse. Tout chiffre (0… 9) peut être utilisé comme modèle pour tout chiffre. Tout caractère spécial, sauf une lettre ou un chiffre, peut être utilisé comme modèle pour lui-même. Les crochets, [], définissent la correspondance facultative.|Exemple d'opérande : AA:000 (un modèle de deux caractères *quelconques* suivis de deux-points (:), puis suivis par trois chiffres *quelconques* .<br /><br /> Valeurs valides : AB:012, df:257<br /><br /> Valeurs non valides : abc:123, FJ-369<br /><br /> Pour plus d'informations et des exemples sur les règles de modèle dans DQS, consultez [Correspondance de modèle dans les règles de domaine DQS](https://blogs.msdn.com/b/dqs/archive/2012/10/08/pattern-matching-in-dqs-domain-rules.aspx).|  
+|La valeur correspond au modèle|Seules les valeurs qui correspondent au modèle de caractères, chiffres ou caractères spéciaux de l'opérande sont valides.<br /><br /> Toute lettre (A…Z) peut être utilisée comme modèle pour toute lettre ; respecte la casse. Tout chiffre (0…9) peut être utilisé comme modèle pour tout chiffre. Tout caractère spécial, sauf une lettre ou un chiffre, peut être utilisé comme modèle pour lui-même. Les crochets, [], définissent la correspondance facultative.|Exemple d'opérande : AA:000 (un modèle de deux caractères *quelconques* suivis de deux-points (:), puis suivis par trois chiffres *quelconques* .<br /><br /> Valeurs valides : AB:012, df:257<br /><br /> Valeurs non valides : abc:123, FJ-369<br /><br /> Pour plus d'informations et des exemples sur les règles de modèle dans DQS, consultez [Correspondance de modèle dans les règles de domaine DQS](https://blogs.msdn.com/b/dqs/archive/2012/10/08/pattern-matching-in-dqs-domain-rules.aspx).|  
 |La valeur ne correspond pas au modèle|Seules les valeurs qui ne correspondent pas au modèle de caractères, chiffres ou caractères spéciaux de l'opérande sont valides.|Exemple d'opérande : A1 (la valeur ne doit pas correspondre à un modèle d'un caractère *quelconque* , suivi par un chiffre *quelconque* ).<br /><br /> Valeurs valides : AB1, A, A:5<br /><br /> Valeurs non valides : B7, c9|  
 |La valeur contient le modèle|Seules les valeurs qui contiennent le modèle de caractères, chiffres ou caractères spéciaux de l'opérande sont valides.|Exemple d'opérande : AA-12 (la valeur contient un modèle de deux caractères *quelconques* suivis d'un tiret (-), qui est encore suivi de deux chiffres *quelconques* ).<br /><br /> Valeurs valides : AAA-01, ab-975<br /><br /> Valeur non valide : A7, AA-6, C-45, AA ; 98|  
 |La valeur ne contient pas le modèle|Seules les valeurs qui ne contiennent pas le modèle de caractères de l'opérande sont valides.|Exemple d'opérande : AB-12 (la valeur ne doit pas contenir un modèle de deux caractères *quelconques* suivis d'un tiret (-), qui est encore suivi de deux chiffres *quelconques* ).<br /><br /> Valeurs valides : A7, AA-6, C-45, aa;98<br /><br /> Valeur non valide : AAA-01, ab-975|  
-|La valeur correspond à l'expression régulière|Seules les valeurs qui correspondent à l'expression régulière de l'opérande sont considérées comme valides.<br /><br /> N'incluez pas les caractères « ^ » ou « $ » à l'expression régulière, car DQS ajoute automatiquement ces caractères à une clause contenant une valeur correspondant à l'expression régulière. (Ou bien, vous pouvez placer l'expression régulière contenant les caractères « ^ » et « $ » entre parenthèses.) Pour plus d'informations sur les expressions régulières, consultez [Éléments du langage des expressions régulières](https://go.microsoft.com/fwlink/?LinkId=225561).|Exemple d'opérande : [1-5]+ (chaque caractère doit être un chiffre numérique de 1 à 5, présent une ou plusieurs fois)<br /><br /> Valeurs valides : 123, 12345, 14352<br /><br /> Valeurs non valides : 456, ABC|  
+|La valeur correspond à l'expression régulière|Seules les valeurs qui correspondent à l'expression régulière de l'opérande sont considérées comme valides.<br /><br /> N’incluez pas les caractères « ^ » ou « $ » dans l’expression régulière, car DQS ajoute automatiquement ces caractères à une clause contenant une valeur correspondant à l’expression régulière. (Ou bien, vous pouvez placer l’expression régulière contenant les caractères « ^ » et « $ » entre parenthèses.) Pour plus d'informations sur les expressions régulières, consultez [Éléments du langage des expressions régulières](https://go.microsoft.com/fwlink/?LinkId=225561).|Exemple d'opérande : [1-5]+ (chaque caractère doit être un chiffre numérique de 1 à 5, présent une ou plusieurs fois)<br /><br /> Valeurs valides : 123, 12345, 14352<br /><br /> Valeurs non valides : 456, ABC|  
 |La valeur ne correspond pas à une expression régulière|Seules les valeurs qui ne correspondent pas à l'expression régulière de l'opérande sont considérées comme valides.|Exemple d'opérande : [1-5]+ (la chaîne ne doit pas être composée seulement des chiffres numériques de 1 à 5)<br /><br /> Valeurs valides : 456, ABC<br /><br /> Valeur non valide : 123, 123456, 14352|  
   
   

@@ -5,19 +5,18 @@ ms.date: 10/01/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: b5879041-db1e-4c6c-b49a-33784ade2942
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1bb4a6f9013f9b8bf4f6334489f1799fe4e0cbb3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 81dba339c76674e2f8d1268c40a7762d15d7786d
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47619333"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617469"
 ---
 # <a name="dqs-knowledge-bases-and-domains"></a>Bases de connaissances et domaines DQS
 
@@ -61,7 +60,7 @@ ms.locfileid: "47619333"
 ##  <a name="Discovery"></a> Découverte des connaissances  
  À la base, la création d'une base de connaissances est un processus assisté par ordinateur. L'activité de découverte des connaissances génère la base de connaissances en analysant un exemple de données en fonction de critères de qualité des données à la recherche d'incohérences dans les données et d'erreurs de syntaxe et en proposant des modifications à apporter aux données. Cette analyse est basée sur des algorithmes intégrés dans DQS.  
   
- Le gestionnaire de données prépare le processus en liant une base de connaissances à une vue ou une table de base de données SQL Server qui contient des exemples de données semblables aux données que la base de connaissances utilisera pour l'analyse. Le gestionnaire de données mappe ensuite un domaine de base de connaissances à chaque colonne des exemples de données à analyser. Un domaine peut être soit un domaine unique mappé à un champ unique, soit un domaine composite comprenant plusieurs domaines mappés chacun à une partie des données contenues dans un champ unique (consultez « Domaines composites » ci-dessous). Lorsque vous exécutez une découverte des connaissances, DQS extrait les informations de qualité des données des exemples de données dans des domaines de la base de connaissances. Après avoir exécuté l'analyse de découverte des connaissances, vous disposez d'une base de connaissances à l'aide de laquelle vous pouvez procéder à la correction des données.  
+ Le gestionnaire de données prépare le processus en liant une base de connaissances à une vue ou une table de base de données SQL Server qui contient des exemples de données semblables aux données que la base de connaissances utilisera pour l'analyse. Le gestionnaire de données mappe ensuite un domaine de base de connaissances à chaque colonne des exemples de données à analyser. Un domaine peut être soit un domaine unique mappé à un champ unique, soit un domaine composite comprenant plusieurs domaines mappés chacun à une partie des données contenues dans un champ unique (voir « Domaines composites » ci-dessous). Lorsque vous exécutez une découverte des connaissances, DQS extrait les informations de qualité des données des exemples de données dans des domaines de la base de connaissances. Après avoir exécuté l'analyse de découverte des connaissances, vous disposez d'une base de connaissances à l'aide de laquelle vous pouvez procéder à la correction des données.  
   
  La base de connaissances DQS est extensible. Dans le cadre de l'activité de découverte des connaissances, vous pouvez ajouter des connaissances à la base de connaissances de manière interactive après l'analyse de découverte des connaissances assistée par ordinateur. Vous pouvez ajouter manuellement des modifications de valeurs et vous pouvez importer des valeurs de domaine à partir d'un fichier Excel. En outre, vous pouvez réexécuter le processus de découverte des connaissances ultérieurement en cas de modification des données fournies en exemple. Vous pouvez appliquer des connaissances supplémentaires à partir de l'activité de l'activité de gestion de l'arborescence du domaine et de l'activité de mise en correspondance de données (voir ci-dessous).  
   
@@ -131,7 +130,7 @@ ms.locfileid: "47619333"
   
 -   L'analyse des différents domaines uniques qui constituent un domaine composite peut permettre d'évaluer plus efficacement la qualité des données.  
   
--   Lorsque vous utilisez un domaine composite, vous pouvez également créer des règles inter-domaines qui vous permettent de vérifier que la relation entre les données de plusieurs champs est appropriée. Par exemple, vous pouvez vérifier que la chaîne « Londres » dans un champ de ville correspond à la chaîne « Angleterre » dans un champ de pays. Notez que les règles de domaine prévalent sur les règles inter-domaines.  
+-   Lorsque vous utilisez un domaine composite, vous pouvez également créer des règles inter-domaines qui vous permettent de vérifier que la relation entre les données de plusieurs champs est appropriée. Par exemple, vous pouvez vérifier que la chaîne « Londres » dans un champ de ville correspond à la chaîne « Angleterre » dans un champ de pays. Notez que les règles de domaine prévalent sur les règles inter-domaines.  
   
 -   Les données des champs composites peuvent être jointes à une source de données de référence, auquel cas le domaine composite sera envoyé au fournisseur de données de référence. Cela se produit souvent avec les données d'adresse.  
   

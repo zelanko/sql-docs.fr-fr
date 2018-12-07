@@ -5,19 +5,18 @@ ms.date: 10/01/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: ef217717-6d05-443e-af26-44dc745a349d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 75492ffdd6246050c086deea74975921a19156b4
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: a491ae673059d9373067428ef226d5819a7a34ad
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51702217"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617699"
 ---
 # <a name="reference-data-services-in-dqs"></a>Services de données de référence dans DQS
 
@@ -53,7 +52,7 @@ ms.locfileid: "51702217"
  Vous pouvez effectuer ces activités sous l'onglet **Données de référence** de l'écran **Configuration** dans [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)].  
   
 ##  <a name="Direct"></a> Utilisation de données de référence provenant directement de fournisseurs de données de référence tiers  
- Si vous n'êtes pas connecté à Internet et que vous ne pouvez donc pas utiliser Marketplace, DQS prend également en charge la connexion directe à des fournisseurs de données disponibles dans le réseau de votre organisation. Pour utiliser des données de référence provenant de fournisseurs de données de référence tiers en ligne directs, vous devez créer un enregistrement pour le fournisseur de données dans DQS.  
+ Si vous n’êtes pas connecté à Internet et que vous ne pouvez donc pas utiliser Marketplace, DQS prend également en charge la connexion directe à des fournisseurs de données disponibles dans le réseau de votre organisation. Pour utiliser des données de référence provenant de fournisseurs de données de référence tiers en ligne directs, vous devez créer un enregistrement pour le fournisseur de données dans DQS.  
   
 ##  <a name="HowToCleanse"></a> Procédure : nettoyer des données à l'aide de données de référence  
  Le nettoyage de vos données dans DQS à l'aide de données de référence inclut les trois étapes suivantes :  

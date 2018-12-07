@@ -5,8 +5,7 @@ ms.date: 11/08/2011
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.dm.kbtermsbased.f1
@@ -14,20 +13,20 @@ ms.assetid: 66db9277-d892-4dae-8a82-060fd3ba6949
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d1d46bc9edd1c907c1d8b13fb5677f1bec5f7c2f
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: d15ecb6a7ef4c9db9ce10fd2fd51882c68883aaa
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700867"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617269"
 ---
 # <a name="create-term-based-relations"></a>Créer des relations à base de termes
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  Cette rubrique décrit comment créer des relations à base de termes pour un domaine dans [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Une relation à base de termes (TBR) vous permet d'effectuer une correction sur un terme qui fait partie d'une valeur d'un domaine. Plusieurs valeurs qui sont identiques à l'exception de l'orthographe d'une partie commune peuvent ainsi être considérées comme synonymes identiques. Par exemple, vous pouvez installer une relation à base de termes qui remplace le terme « Inc. » par « Incorporated ». Le terme « Inc. » est modifié chaque fois qu’il apparaît dans le domaine. Les instances de « Contoso, Inc. » sont remplacées par « Contoso, Incorporated », et les deux valeurs sont considérées comme des synonymes exacts.  
+  Cette rubrique décrit comment créer des relations à base de termes pour un domaine dans [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Une relation à base de termes (TBR) vous permet d'effectuer une correction sur un terme qui fait partie d'une valeur d'un domaine. Plusieurs valeurs qui sont identiques à l'exception de l'orthographe d'une partie commune peuvent ainsi être considérées comme synonymes identiques. Par exemple, vous pouvez installer une relation à base de termes qui remplace le terme « Inc. » par « Incorporated ». Le terme « Inc. » est modifié chaque fois qu’il apparaît dans le domaine. Les instances de « Contoso, Inc. » sont remplacées par « Contoso, Incorporated », et les deux valeurs sont considérées comme des synonymes exacts.  
   
- Pour utiliser les relations à base de termes, vous créez une liste de paires Valeur/Correct, telles que « Inc. » et « Incorporated », ou« Senior » et « Sr. ». L'utilisation d'une relation à base de termes vous permet de modifier un terme dans l'ensemble du domaine sans définir manuellement des valeurs de domaine en tant que synonymes. Vous pouvez spécifier qu'une valeur est corrigée même si la découverte des connaissances n'a pas découvert cette valeur précédemment. Si la transformation d'une relation à base de termes rend deux valeurs identiques, DQS crée une relation de synonyme entre elles (dans la découverte des connaissances) ou une relation de correction entre elles (dans la correction des données) ou une correspondance exacte (dans la correspondance).  
+ Pour utiliser les relations à base de termes, vous créez une liste de paires Valeur/Correct, telles que « Inc. » et « Incorporated », ou« Senior » et « Sr. ». L'utilisation d'une relation à base de termes vous permet de modifier un terme dans l'ensemble du domaine sans définir manuellement des valeurs de domaine en tant que synonymes. Vous pouvez spécifier qu'une valeur est corrigée même si la découverte des connaissances n'a pas découvert cette valeur précédemment. Si la transformation d'une relation à base de termes rend deux valeurs identiques, DQS crée une relation de synonyme entre elles (dans la découverte des connaissances) ou une relation de correction entre elles (dans la correction des données) ou une correspondance exacte (dans la correspondance).  
   
  La transformation de relations à base de termes et la transformation de symboles (où les caractères spéciaux sont remplacés par un espace ou la valeur null) sont toutes deux effectuées dans une étape de prétraitement avant analyse. Si l'analyse de domaine composite est demandée, elle sera effectuée avant les deux transformations, car l'analyse du séparateur requiert des symboles. D'autres opérations, telles que les règles de domaine et les modifications de valeurs de domaine, sont exécutées après les transformations. Pour qu'il y ait correspondance, les relations à base de termes sont appliquées aux données de la source avant l'activité correspondante, indépendamment du nettoyage.  
   

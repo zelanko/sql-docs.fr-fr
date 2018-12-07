@@ -1,7 +1,7 @@
 ---
 title: Scénarios d’utilisation du Magasin des requêtes | Microsoft Docs
 ms.custom: ''
-ms.date: 02/02/2018
+ms.date: 11/29/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -14,36 +14,32 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d556922a6bdb0e6edd538630e34dd21d428f2953
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 4c28419488adc2f0d8123c9052466659fb9fdfd9
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673828"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711200"
 ---
 # <a name="query-store-usage-scenarios"></a>Scénarios d’utilisation du Magasin des requêtes
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   Le magasin de requêtes peut être utilisé dans un vaste ensemble de scénarios quand il est essentiel de suivre et de garantir les performances de charges de travail prévisibles. Voici quelques exemples que vous pouvez examiner :  
   
 -   Repérer et résoudre des requêtes avec des régressions de choix de plan  
-  
 -   Identifier et paramétrer les principales requêtes consommatrices de ressources  
-  
 -   Test A/B  
-  
 -   Maintenir la stabilité des performances lors de la mise à niveau vers une version plus récente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
-  
 -   Identifier et améliorer les charges de travail ad hoc  
   
 ## <a name="pinpoint-and-fix-queries-with-plan-choice-regressions"></a>Repérer et résoudre des requêtes avec des régressions de choix de plan  
- Quand il exécute des requêtes classiques, l’optimiseur de requête peut décider de choisir un autre plan, car des entrées importantes ont changé : la cardinalité des données a changé, des index ont été créés, changés ou supprimés, les statistiques ont été mises à jour, etc. Dans l’ensemble, le nouveau plan est mieux ou sensiblement le même que le plan précédemment utilisé. Toutefois, dans certains cas, quand le nouveau plan est nettement plus mauvais, cette situation est qualifiée de « régression due à un changement de plan ». Avant le magasin de requêtes, il était très difficile d’identifier et de résoudre ce problème, car [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne fournissait pas de magasin de données intégré permettant aux utilisateurs de rechercher les plans d’exécution qui étaient utilisés dans le temps.  
+ Quand il exécute des requêtes classiques, l’optimiseur de requête peut décider de choisir un autre plan, car des entrées importantes ont changé : la cardinalité des données a changé, des index ont été créés, changés ou supprimés, les statistiques ont été mises à jour, etc. Dans l’ensemble, le nouveau plan est mieux ou sensiblement le même que le plan précédemment utilisé. Toutefois, dans certains cas, quand le nouveau plan est nettement plus mauvais, cette situation est qualifiée de « régression due à un changement de plan ». Avant le Magasin des requêtes, il était difficile d’identifier et de résoudre ce problème, car [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne fournissait pas de magasin de données intégré permettant aux utilisateurs de rechercher les plans d’exécution qui étaient utilisés dans le temps.  
   
  Avec le Magasin des requêtes, vous pouvez rapidement effectuer les opérations suivantes :  
   
 -   Identifier toutes les requêtes dont les métriques d’exécution ont été dégradées, au cours de la période digne d’intérêt (dernière heure, journée, semaine, etc.). Utilisez **Requêtes régressées** dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pour accélérer votre analyse.  
   
--   Parmi les requêtes régressées, il est très facile de trouver celles qui avaient plusieurs plans et qui ont subi une dégradation en raison du choix d’un plan incorrect. Utilisez le volet **Résumé du plan** dans **Requêtes régressées** pour visualiser tous les plans d’une requête régressée et leurs performances de requête dans le temps.  
+-   Parmi les requêtes régressées, il est facile de trouver celles qui avaient plusieurs plans et qui ont subi une dégradation en raison du choix d’un plan incorrect. Utilisez le volet **Résumé du plan** dans **Requêtes régressées** pour visualiser tous les plans d’une requête régressée et leurs performances de requête dans le temps.  
   
 -   Forcer l’application du plan précédent de l’historique, s’il a été identifié comme étant meilleur. Utilisez le bouton **Forcer le plan** dans **Requêtes régressées** pour forcer l’application du plan sélectionné pour la requête.  
   
@@ -60,7 +56,7 @@ ms.locfileid: "51673828"
   
  Examinez le résumé du plan situé à droite pour analyser l’historique d’exécution et en savoir plus sur les différents plans et leurs statistiques d’exécution. Utilisez le volet inférieur pour examiner les différents plans ou les comparer visuellement, en les affichant côte à côte (à l’aide du bouton Comparer).  
   
-Quand vous identifiez une requête dont les performances ne sont pas optimales, votre action dépend de la nature du problème :  
+Quand vous identifiez une requête dont les performances ne sont pas optimales, votre action dépend de la nature du problème :  
   
 1.  Si la requête a été exécutée avec plusieurs plans et que le dernier est nettement plus mauvais que le précédent, vous pouvez utiliser le mécanisme de forçage d’application du plan pour garantir que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisera le plan optimal pour les exécutions futures.  
   
@@ -105,7 +101,7 @@ L’illustration suivante montre l’analyse du magasin de requêtes (étape 4) 
   
 ![query-store-usage-3](../../relational-databases/performance/media/query-store-usage-3.png "query-store-usage-3")  
   
-De plus, vous pouvez comparer les plans avant et après la création d’index en les affichant côte à côte. (Utilisez l’option « Comparez les plans pour la requête sélectionnée dans une fenêtre distincte » de la barre d’outils, signalée par un carré rouge.)  
+De plus, vous pouvez comparer les plans avant et après la création d’index en les affichant côte à côte. (Utilisez l’option « Comparez les plans pour la requête sélectionnée dans une fenêtre distincte » de la barre d’outils, signalée par un carré rouge.)  
   
 ![query-store-usage-4](../../relational-databases/performance/media/query-store-usage-4.png "query-store-usage-4")  
   
@@ -122,7 +118,7 @@ Avant [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], les utilisateurs étaie
   
 ![query-store-usage-5](../../relational-databases/performance/media/query-store-usage-5.png "query-store-usage-5")  
   
-1.  Mettez à niveau [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sans changer le niveau de compatibilité de base de données. Cela n’expose pas les derniers changements de l’optimiseur de requête, mais fournit quand même les fonctionnalités [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les plus récentes, qui incluent le Magasin des requêtes.  
+1.  Mettez à niveau [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sans changer le niveau de compatibilité de base de données. Cela n’expose pas les derniers changements de l’optimiseur de requête, mais fournit quand même les fonctionnalités [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les plus récentes, notamment le Magasin des requêtes.  
   
 2.  Activez le Magasin des requêtes. Pour plus d’informations sur ce sujet, consultez [Ajuster le Magasin des requêtes à votre charge de travail](../../relational-databases/performance/best-practice-with-the-query-store.md#Configure).
 
@@ -145,10 +141,10 @@ Certaines charges de travail n’ont pas de requêtes dominantes que vous pouvez
   
 Utilisez la métrique **Nombre d’exécutions** pour analyser si vos requêtes principales sont ad hoc (vous devez, pour cela, exécuter le Magasin des requêtes avec `QUERY_CAPTURE_MODE = ALL`). Dans le diagramme ci-dessus, vous pouvez voir que 90 % de vos **principales requêtes consommatrices de ressources** sont exécutées une seule fois.  
   
-Vous pouvez également exécuter un script [!INCLUDE[tsql](../../includes/tsql-md.md)] pour obtenir le nombre total de textes de requêtes, de requêtes et de plans dans le système, et déterminer dans quelle mesure elles sont différentes en comparant leurs valeurs query_hash et plan_hash :  
+Vous pouvez également exécuter un script [!INCLUDE[tsql](../../includes/tsql-md.md)] pour obtenir le nombre total de textes de requêtes, de requêtes et de plans dans le système, et déterminer dans quelle mesure elles sont différentes en comparant les valeurs query_hash et plan_hash :  
   
 ```sql  
-/*Do cardinality analysis when suspect on ad hoc workloads*/  
+--Do cardinality analysis when suspect on ad hoc workloads
 SELECT COUNT(*) AS CountQueryTextRows FROM sys.query_store_query_text;  
 SELECT COUNT(*) AS CountQueryRows FROM sys.query_store_query;  
 SELECT COUNT(DISTINCT query_hash) AS CountDifferentQueryRows FROM  sys.query_store_query;  
@@ -169,7 +165,7 @@ Si vous contrôlez le code d’application, vous pouvez envisager de récrire la
 L’approche avec des modèles de requête individuels requiert la création d’un repère de plan :  
   
 ```sql  
-/*Apply plan guide for the selected query template*/  
+--Apply plan guide for the selected query template 
 DECLARE @stmt nvarchar(max);  
 DECLARE @params nvarchar(max);  
 EXEC sp_get_query_template   
@@ -188,10 +184,10 @@ EXEC sp_create_plan_guide
   
 La solution avec les repères de plan est plus précise, mais elle nécessite plus de travail.  
   
-Si toutes vos requêtes (ou la majorité d’entre elles) sont idéales pour un autoparamétrage, il peut être préférable d’opter pour la modification de `FORCED PARAMETERIZATION` pour l’ensemble de la base de données :  
+Si toutes vos requêtes (ou la plupart d’entre elles) sont idéales pour un autoparamétrage, il peut être préférable d’opter pour la modification de `FORCED PARAMETERIZATION` pour l’ensemble de la base de données :  
   
 ```sql  
-/*Apply forced parameterization for entire database*/  
+--Apply forced parameterization for entire database  
 ALTER DATABASE <database name> SET PARAMETERIZATION FORCED;  
 ```  
 

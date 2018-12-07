@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 4de9c3dd-0ee7-49b3-88bb-209465ca9d86
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9b41f81a9a42ca572633d858fd22113d8a6d718a
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 992239e7b2e07ac555eb2c474716f341bf4d7870
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031608"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617799"
 ---
 # <a name="configure-windows-authentication-on-the-report-server"></a>Configurer une authentification Windows sur le serveur de rapports
   Par défaut, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] accepte les demandes qui spécifient l'authentification Negotiate ou NTLM. Si votre déploiement inclut des applications clientes et des navigateurs clients qui utilisent ces fournisseurs de sécurité, vous pouvez utiliser les valeurs par défaut sans configuration supplémentaire. Si vous voulez utiliser un fournisseur de sécurité différent pour la sécurité intégrée de Windows (par exemple, si vous voulez utiliser Kerberos directement), ou si vous avez modifié les valeurs par défaut et que vous voulez restaurer les paramètres d'origine, vous pouvez utiliser les informations de cette rubrique pour spécifier des paramètres d'authentification sur le serveur de rapports.  
@@ -168,7 +168,7 @@ ms.locfileid: "50031608"
   
 -   Les valeurs sous \<Explicit> contiendront les noms de principaux du service configurés dans Active Directory pour le compte de service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
- Si vous ne voulez pas continuer à utiliser la protection étendue, rétablissez les valeurs par défaut de configuration et redémarrez le compte de service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
+ Si vous ne voulez pas continuer à utiliser la protection étendue, rétablissez les valeurs par défaut de configuration et redémarrez le compte de service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
 ```  
 <RSWindowsExtendedProtectionLevel>Off</RSWindowsExtendedProtectionLevel>  

@@ -1,7 +1,7 @@
 ---
 title: STRING_SPLIT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/15/2018
+ms.date: 11/28/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -18,12 +18,12 @@ ms.assetid: 3273dbf3-0b4f-41e1-b97e-b4f67ad370b9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: daad1b738030efa48d5a85f91b70ebf747d4702c
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 5fb13510e4894e3f2bc77293a1f4aac0b186f1f0
+ms.sourcegitcommit: f1cf91e679d1121d7f1ef66717b173c22430cb42
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51812524"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52586252"
 ---
 # <a name="stringsplit-transact-sql"></a>STRING_SPLIT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -31,13 +31,15 @@ ms.locfileid: "51812524"
 > [!div class="nextstepaction"]
 > [Participez à l’amélioration de la documentation SQL Server](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
 
-Fractionne l’expression de caractères à l’aide du séparateur spécifié.  
-  
-> [!NOTE]  
-> La fonction **STRING_SPLIT** est disponible uniquement sous le niveau de compatibilité 130 et supérieur. Si votre niveau de compatibilité de base de données est inférieur à 130, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne peut pas trouver et exécuter la fonction **STRING_SPLIT**. Pour changer le niveau de compatibilité d’une base de données, consultez [Afficher ou changer le niveau de compatibilité d’une base de données](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md).
-> Notez que le niveau de compatibilité 120 peut être le niveau par défaut même dans les nouvelles [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
-  
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+Fonction table qui divise une chaîne en lignes de sous-chaînes, en fonction d’un caractère de séparation spécifié.
+
+#### <a name="compatibility-level-130"></a>Niveau de compatibilité 130
+
+STRING_SPLIT nécessite que le niveau de compatibilité soit au moins 130. Quand le niveau est inférieur à 130, SQL Server ne peut pas trouver la fonction STRING_SPLIT.
+
+Pour changer le niveau de compatibilité d’une base de données, consultez [Afficher ou changer le niveau de compatibilité d’une base de données](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md).
+
+![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -50,30 +52,41 @@ STRING_SPLIT ( string , separator )
  [Expression](../../t-sql/language-elements/expressions-transact-sql.md) de n’importe quel type de caractère (par exemple, **nvarchar**, **varchar**, **nchar** ou **char**).  
   
  *separator*  
- [Expression](../../t-sql/language-elements/expressions-transact-sql.md) à caractère unique de n’importe quel type de caractère (par exemple, **nvarchar(1)**, **varchar(1)**, **nchar(1)** ou **char(1)**) qui est utilisée comme séparateur pour les chaînes concaténées.  
+ [Expression](../../t-sql/language-elements/expressions-transact-sql.md) d’un seul caractère de n’importe quel type de caractère (par exemple **nvarchar(1)**, **varchar(1)**, **nchar(1)** ou **char(1)**) qui est utilisée comme séparateur pour les sous-chaînes concaténées.  
   
 ## <a name="return-types"></a>Types de retour  
- Retourne une table d’une seule colonne avec des fragments. Le nom de la colonne est **value**. Retourne **nvarchar** si un des arguments d’entrée est de type **nvarchar** ou **nchar**. Sinon, retourne **varchar**. La longueur du type de retour est identique à la longueur de l’argument de chaîne.  
+
+Retourne une table d’une seule colonne dont les lignes sont les sous-chaînes. Le nom de la colonne est **value**. Retourne **nvarchar** si un des arguments d’entrée est de type **nvarchar** ou **nchar**. Sinon, retourne **varchar**. La longueur du type de retour est identique à la longueur de l’argument de chaîne.  
   
 ## <a name="remarks"></a>Notes   
-**STRING_SPLIT** accepte une chaîne qui doit être divisée et le séparateur qui sera utilisé pour diviser la chaîne. La fonction retourne une table d’une seule colonne avec des sous-chaînes. Par exemple, l’instruction suivante `SELECT value FROM STRING_SPLIT('Lorem ipsum dolor sit amet.', ' ');` qui utilise l’espace comme séparateur, retourne le tableau de résultats suivant :  
+
+**STRING_SPLIT** prend en entrée une chaîne qui a des sous-chaînes délimitées, et un caractère à utiliser comme délimiteur ou séparateur. STRING_SPLIT produit une table à une seule colonne dont les lignes contiennent les sous-chaînes. Le nom de la colonne de sortie est **value**.
+
+Les lignes résultantes peuvent être dans n’importe quel ordre. Il n’est _pas_ garanti que l’ordre corresponde à l’ordre des sous-chaînes dans la chaîne en entrée. Vous pouvez remplacer l’ordre de tri final avec une clause ORDER BY sur l’instruction SELECT (`ORDER BY value`).
+
+Les sous-chaînes vides de longueur nulle sont présentes quand la chaîne en entrée contient plusieurs occurrences consécutives du caractère délimiteur. Les sous-chaînes vides sont traitées de la même façon que les sous-chaînes contenant du texte. Vous pouvez filtrer les lignes contenant la sous-chaîne vide avec la clause WHERE (`WHERE value <> ''`). Si la chaîne en entrée est NULL, la fonction table STRING_SPLIT retourne une table vide.  
+
+Par exemple, l’instruction SELECT suivante utilise le caractère « espace » comme séparateur :
+
+```sql
+SELECT value FROM STRING_SPLIT('Lorem ipsum dolor sit amet.', ' ');
+```
+
+À titre d’exemple, l’instruction SELECT précédente a retourné la table de résultats suivante :  
   
 |valeur|  
-|-----------|  
+| :-- |  
 |Lorem|  
 |ipsum|  
 |dolor|  
 |sit|  
 |amet.|  
-  
-Si la chaîne d’entrée est **NULL**, la fonction table **STRING_SPLIT** retourne une table vide.  
-  
-**STRING_SPLIT** requiert au moins le mode de compatibilité 130.  
-  
+| &nbsp; |
+
 ## <a name="examples"></a>Exemples  
   
 ### <a name="a-split-comma-separated-value-string"></a>A. Diviser une chaîne de valeurs séparées par des virgules  
-Analysez une liste de valeurs séparées par des virgules et renvoyez tous les jetons non vides :  
+Analysez une liste de valeurs séparées par des virgules et retournez tous les jetons non vides :  
   
 ```sql  
 DECLARE @tags NVARCHAR(400) = 'clothing,road,,touring,bike'  
@@ -157,9 +170,9 @@ FROM Product
 JOIN STRING_SPLIT('1,2,3',',')   
     ON value = ProductId;  
 ```  
-  
-Ceci constitue un remplacement pour un anti-patron courant, tel que la création d’une chaîne SQL dynamique dans la couche d’application ou [!INCLUDE[tsql](../../includes/tsql-md.md)], à l’aide de l’opérateur LIKE :  
-  
+
+L’utilisation de STRING_SPLIT précédente est un remplacement pour un antimodèle courant. Un tel antimodèle peut impliquer la création d’une chaîne SQL dynamique dans la couche application ou dans Transact-SQL. Un antimodèle peut aussi être obtenu avec l’opérateur LIKE. Considérez l’exemple d’instruction SELECT suivante :
+
 ```sql  
 SELECT ProductId, Name, Tags  
 FROM Product  

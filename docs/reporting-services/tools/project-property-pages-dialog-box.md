@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 209d9e22-37fc-418f-8739-83adcf447d3f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: eb5c0c7e3e955bb4489e93943303cce4bd42c8d6
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 37868fcc35bc5ba09339a24151f2d8d6e4c1f6ba
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021863"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712180"
 ---
 # <a name="project-property-pages-dialog-box"></a>Pages de propriétés du projet, boîte de dialogue
 
-  Utilisez les pages de propriétés du projet pour configurer les propriétés de déploiement d'un projet Report Server. Pour ouvrir cette boîte de dialogue, dans le menu **Projet**, cliquez sur *\<Nom du projet de rapport>***Propriétés**.  
+  Utilisez les pages de propriétés du projet pour configurer les propriétés de déploiement d'un projet Report Server. Pour ouvrir cette boîte de dialogue, dans le menu **Projet**, cliquez sur _\<Nom du projet de rapport>_**Propriétés**.  
   
  Après avoir défini les propriétés de configuration, sélectionnez une configuration dans la liste déroulante **Configurations de solutions** de la barre d’outils.  
 
@@ -54,7 +54,7 @@ ms.locfileid: "50021863"
  Sélectionnez **True** pour remplacer la source de données du serveur par celle du projet lorsque les rapports sont publiés. Sélectionnez **False** pour conserver la source de données existante sur le serveur.  
   
  **TargetServerVersion**  
- Sélectionnez la version [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ou sélectionnez **Détecter la version** pour déterminer automatiquement la version installée sur le serveur identifié par la propriété **TargetServer URL** . La valeur par défaut est **SQL Server 2016**.  
+ Sélectionnez la version [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ou sélectionnez **Détecter la version** pour déterminer automatiquement la version installée sur le serveur identifié par la propriété **TargetServer URL** . La valeur par défaut est **SQL Server 2017**.  
   
  **TargetDataSourceFolder**  
  Nom du dossier dans lequel les sources de données partagées publiées sont stockées. Si vous ne spécifiez pas de dossier, la source de données est publiée dans le même dossier que le rapport. Si le dossier n'existe pas sur le serveur de rapports, le Générateur de rapports le crée lors de la publication des rapports.  

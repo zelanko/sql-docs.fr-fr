@@ -5,19 +5,18 @@ ms.date: 07/31/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 47821eff-800b-4053-8d36-e42bbc267f54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 959b778d613376197774a01de8efb6fa031cee14
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6bb5b57845613a408a0e374fd26dd67ebad7cd82
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47621857"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617169"
 ---
 # <a name="managing-a-composite-domain"></a>Gestion d'un domaine composite
 
@@ -27,7 +26,7 @@ ms.locfileid: "47621857"
   
  Les domaines uniques d'un domaine composite doivent avoir une zone commune de connaissance. Un exemple est une zone adresse qui a une rue, une ville, un état, un pays et un code postal. Les différents termes de ce champ peuvent avoir différents types de données. Pour gérer cela, vous mappez ces termes aux différents domaines individuels. Un autre exemple est un champ de nom complet qui contient le prénom, le deuxième prénom et le nom. Pour utiliser un domaine composite, vous devez pouvoir analyser les données du champ dans différents domaines individuels, en créant un domaine composite pour le champ et un domaine individuel pour une partie du champ.  
   
- Les domaines composites ont des fonctions différentes des domaines individuels. Vous ne pouvez pas modifier les valeurs du domaine composite – vous ne devez le faire que dans un domaine simple. Avec les domaines composites, vous pouvez utiliser les règles inter-domaines pour tester les valeurs des domaines simples du domaine composite. Vous pouvez également afficher les combinaisons de valeurs trouvées dans les domaines composites.  
+ Les domaines composites ont des fonctions différentes des domaines individuels. Vous ne pouvez pas modifier les valeurs du domaine composite. Vous ne devez le faire que dans un domaine simple. Avec les domaines composites, vous pouvez utiliser les règles inter-domaines pour tester les valeurs des domaines simples du domaine composite. Vous pouvez également afficher les combinaisons de valeurs trouvées dans les domaines composites.  
   
 ## <a name="in-this-section"></a>Dans cette section  
  L'utilisation d'un domaine composite permet d'effectuer les opérations suivantes :  

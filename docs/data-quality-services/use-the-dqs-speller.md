@@ -5,19 +5,18 @@ ms.date: 11/08/2011
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 65e4e53e-2699-4cae-a9e0-fe78547755b5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 704af229a0d61238ebd4bae9c306fec17c35816a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 20764d8e2d377ae22f72cb4212d24d76ab92b993
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655366"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52616690"
 ---
 # <a name="use-the-dqs-speller"></a>Utiliser le vérificateur d'orthographe DQS
 
@@ -73,7 +72,7 @@ ms.locfileid: "47655366"
  Après avoir exécuté le vérificateur d'orthographe, complétez l'activité dans laquelle le domaine est pour utiliser les corrections suggérées par le vérificateur d'orthographe. Si vous êtes dans l'activité de découverte des connaissances, de gestion des domaines ou de stratégie de correspondance, publiez la base de connaissances afin que les résultats de l'analyse du vérificateur d'orthographe soient utilisables dans la base de connaissances. Pour plus d’informations, consultez [Effectuer une découverte des connaissances](../data-quality-services/perform-knowledge-discovery.md), [Gestion d’un domaine](../data-quality-services/managing-a-domain.md) ou [Créer une stratégie de correspondance](../data-quality-services/create-a-matching-policy.md).  
   
 ##  <a name="How"></a> Fonctionnement du vérificateur d'orthographe  
- Le vérificateur d'orthographe DQS marque toute erreur potentielle de valeur de type chaîne avec un trait de soulignement rouge affiché pour la valeur entière. Par exemple, si « New York » est mal orthographié en « Neu York », le vérificateur d'orthographe affiche un trait de soulignement rouge sous « Neu York », et pas seulement sous « Neu ». Si vous cliquez avec le bouton droit sur la valeur, les suggestions de corrections s'affichent pour la valeur complète. Vous pouvez également cliquer sur **Plus de suggestions** s'il existe plus de cinq suggestions. Vous pouvez choisir l'une des suggestions ou ajouter une valeur au dictionnaire (à un niveau compte d'utilisateur) à afficher pour la valeur d'origine. Les valeurs ajoutées au dictionnaire s'appliquent à tous les domaines. La correction sera effectuée dans le domaine uniquement si vous indiquez explicitement une suggestion. Lorsque vous sélectionnez une suggestion dans le menu contextuel Vérificateur d'orthographe, le type de valeur devient (ou demeure) une erreur. La suggestion sélectionnée sera ajoutée à la colonne de correction. Notez qu'une valeur peut avoir le **Type** **Correct** mais être marquée comme erreur potentielle par le vérificateur d'orthographe.  
+ Le vérificateur d'orthographe DQS marque toute erreur potentielle de valeur de type chaîne avec un trait de soulignement rouge affiché pour la valeur entière. Par exemple, si « New York » est mal orthographié en « Neu York », le vérificateur d’orthographe affiche un trait de soulignement rouge sous « Neu York », et pas seulement sous « Neu ». Si vous cliquez avec le bouton droit sur la valeur, les suggestions de corrections s'affichent pour la valeur complète. Vous pouvez également cliquer sur **Plus de suggestions** s'il existe plus de cinq suggestions. Vous pouvez choisir l'une des suggestions ou ajouter une valeur au dictionnaire (à un niveau compte d'utilisateur) à afficher pour la valeur d'origine. Les valeurs ajoutées au dictionnaire s'appliquent à tous les domaines. La correction sera effectuée dans le domaine uniquement si vous indiquez explicitement une suggestion. Lorsque vous sélectionnez une suggestion dans le menu contextuel Vérificateur d'orthographe, le type de valeur devient (ou demeure) une erreur. La suggestion sélectionnée sera ajoutée à la colonne de correction. Notez qu'une valeur peut avoir le **Type** **Correct** mais être marquée comme erreur potentielle par le vérificateur d'orthographe.  
   
  DQS fournit des suggestions pour les valeurs de la colonne **Valeur** et de la colonne **Corriger vers** de la table **Valeur** . Lorsque vous sélectionnez une suggestion dans la colonne **Valeur** , le type de la valeur est défini sur **Erreur**et la suggestion est copiée dans la colonne **Corriger vers** , comme si vous l'aviez insérée manuellement. S'il y avait une correction existante, elle devient une suggestion. Dans la page **Gérer et afficher les résultats** de l'activité **Nettoyage** , lorsque vous sélectionnez une suggestion dans la colonne **Corriger vers** , DQS remplace la valeur actuellement sélectionnée par la sélection, et la valeur actuellement sélectionnée devient une suggestion. Dans la page **Gérer et afficher les résultats** de l'activité **Nettoyage** , aucune suggestion n'est effectuée au niveau enregistrement (grille inférieure).  
   
