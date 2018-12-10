@@ -52,7 +52,7 @@ Pour installer le Gestionnaire de pilotes
   
 5.  Quand vous êtes prêt pour l’installation et si votre ordinateur peut accéder à un site externe par le biais de FTP, exécutez la commande suivante : **./build_dm.sh**.
 
-Si votre ordinateur ne peut pas accéder à un site externe par le biais de FTP, obtenez `unixODBC-2.3.0.tar.gz`. Vous pouvez obtenir `unixODBC-2.3.0.tar.gz` de [ https://www.unixodbc.org ](https://www.unixodbc.org/). Cliquez sur le lien Télécharger** sur le côté gauche de la page pour accéder à la page de téléchargement. Cliquez ensuite sur le lien approprié pour télécharger unixODBC-2.3.0 (et non unixODBC-2.3.1). unixODBC-2.3.1 n’est pas pris en charge avec cette version de [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Exécutez la commande suivante pour commencer l’installation du Gestionnaire de pilotes unixODBC : **./build_dm.sh--url de téléchargement = file://unixODBC-2.3.0.tar.gz**.  
+Si votre ordinateur ne peut pas accéder à un site externe par le biais de FTP, obtenez `unixODBC-2.3.0.tar.gz`. Vous pouvez obtenir `unixODBC-2.3.0.tar.gz` de [ https://www.unixodbc.org ](https://www.unixodbc.org/). Cliquez sur le lien Télécharger** sur le côté gauche de la page pour accéder à la page de téléchargement. Cliquez ensuite sur le lien approprié pour télécharger unixODBC-2.3.0 (et non unixODBC-2.3.1). unixODBC-2.3.1 n’est pas pris en charge avec cette version de [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Exécutez la commande suivante pour commencer l’installation du Gestionnaire de pilotes unixODBC : **./build_dm.sh --download-url=file://unixODBC-2.3.0.tar.gz**.  
 
 6.  Tapez **OUI** pour poursuivre la décompression des fichiers. Cette partie du processus peut prendre jusqu’à cinq minutes.  
 
@@ -72,11 +72,11 @@ Si le script d’installation ne peut pas se terminer, configurez et générez l
   
 4.  Accédez au répertoire unixODBC-2.3.0.  
   
-5.  À l’invite de commandes, exécutez la commande : **CPPFLAGS = «-DSIZEOF_LONG_INT = 8 »**.  
+5.  À l’invite de commandes, exécutez la commande : **CPPFLAGS="-DSIZEOF_LONG_INT=8"**.  
   
-6.  À l’invite de commandes, exécutez la commande : **exporter CPPFLAGS**.  
+6.  À l’invite de commandes, exécutez la commande : **export CPPFLAGS**.  
   
-7.  À l’invite de commandes, exécutez la commande : **«. / configure--= / usr--libdir = / usr/lib64--sysconfdir = / etc.--enable-interface utilisateur graphique de préfixe = no--enable-pilotes = no--enable-iconv--avec-iconv-char-enc = UTF8--avec-iconv-ucode-enc = UTF16LE »**.  
+7.  À l’invite de commandes, exécutez la commande : **"./configure --prefix=/usr --libdir=/usr/lib64 --sysconfdir=/etc --enable-gui=no --enable-drivers=no --enable-iconv --with-iconv-char-enc=UTF8 --with-iconv-ucode-enc=UTF16LE"**.  
   
 8.  À l’invite de commandes (connecté en tant que racine), exécutez la commande suivante : **make**.  
   
