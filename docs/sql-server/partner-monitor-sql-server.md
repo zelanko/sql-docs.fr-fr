@@ -67,8 +67,8 @@ Pour plus d’informations sur quelques autres de nos partenaires, consultez [Pa
 
 <!--Marketplace Links -->
 <!----Not available[idera_marketplace]:https://azure.microsoft.com/marketplace/-->  
-[place_de_marché_quest] :https://azuremarketplace.microsoft.com/marketplace/apps/dell_software.spotlight-enterprise-12-0?tab=Overview  
-[place_de_marché_solarwinds] :https://azuremarketplace.microsoft.com/marketplace/apps/solarwinds.solarwinds-database-performance-analyzer?tab=Overview  
+[quest_marketplace]:https://azuremarketplace.microsoft.com/marketplace/apps/dell_software.spotlight-enterprise-12-0?tab=Overview  
+[solarwinds_marketplace]:https://azuremarketplace.microsoft.com/marketplace/apps/solarwinds.solarwinds-database-performance-analyzer?tab=Overview  
 
 <!--Press links-->
 <!--[idera_press]:-->
