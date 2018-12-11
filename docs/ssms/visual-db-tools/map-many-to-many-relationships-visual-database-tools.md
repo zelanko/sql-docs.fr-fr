@@ -32,7 +32,7 @@ Les relations plusieurs-à-plusieurs entre les tables sont enregistrées dans le
   
 ### <a name="to-create-a-many-to-many-relationship-between-tables"></a>Pour créer une relation plusieurs-à-plusieurs entre des tables  
   
-1.  Dans votre schéma de base de données, ajoutez les tables entre lesquelles vous voulez créer une relation plusieurs-à-plusieurs.  
+1.  Dans votre diagramme de base de données, ajoutez les tables entre lesquelles vous voulez créer une relation plusieurs-à-plusieurs.  
   
 2.  Créez une troisième table : cliquez avec le bouton droit sur le schéma, puis, dans le menu contextuel, cliquez sur **Nouvelle table** . Cette table sera la table de jonction.  
   
@@ -45,7 +45,7 @@ Les relations plusieurs-à-plusieurs entre les tables sont enregistrées dans le
 6.  Définissez une relation un-à-plusieurs entre chacune des deux tables primaires et la table de jonction. La table de jonction doit se trouver du côté « plusieurs » des deux relations créées. Pour plus d’informations, consultez [Procédure : créer des relations entre tables (Visual Database Tools)](https://msdn.microsoft.com/867a54b8-5be4-46e6-9702-49ae6dabf67c).  
   
     > [!NOTE]  
-    > Lorsque vous créez une table de jonction dans un schéma de base de données, les données des tables connexes ne sont pas insérées dans la table de jonction. Pour plus d’informations sur l’insertion de données dans une table, consultez [Créer des requêtes Insert Results &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-insert-results-queries-visual-database-tools.md).  
+    > Lorsque vous créez une table de jonction dans un diagramme de base de données, les données des tables connexes ne sont pas insérées dans la table de jonction. Pour plus d’informations sur l’insertion de données dans une table, consultez [Créer des requêtes Insert Results &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-insert-results-queries-visual-database-tools.md).  
   
 ## <a name="see-also"></a> Voir aussi  
 [Utiliser des schémas de base de données &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
