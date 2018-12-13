@@ -24,7 +24,7 @@ ms.locfileid: "47797437"
 ---
 # <a name="change-the-font-color-size-and-style-in-diagrams-visual-database-tools"></a>Modifier la couleur de police, la taille et le style dans les schémas (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Vous pouvez personnaliser le mode d'affichage du texte dans les schémas de base de données en modifiant la couleur de la police, la taille et le style. Les modifications sont appliquées aux nouveaux schémas et à des schémas existants si vous les modifiez.  
+Vous pouvez personnaliser le mode d’affichage du texte dans les diagrammes de base de données en modifiant la couleur de la police, la taille et le style. Les modifications sont appliquées aux nouveaux schémas et à des schémas existants si vous les modifiez.  
   
 ### <a name="to-change-the-font-color-size-and-style-in-diagrams"></a>Pour modifier la couleur de police, la taille et le style dans les schémas  
   

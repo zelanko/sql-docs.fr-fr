@@ -26,7 +26,7 @@ ms.author: heidist
 manager: craigg
 ms.openlocfilehash: 5338e17678f31a4bcdef1a6f7a73696f903bb76a
 ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 10/12/2018
 ms.locfileid: "49120476"
@@ -396,7 +396,7 @@ ms.locfileid: "49120476"
 |entrepôt de données|Base de données qui stocke les données opérationnelles pendant de longues périodes. Ces données sont ensuite utilisées par le serveur de rapports Operations Manager pour générer des rapports. Cette base de données se nomme OperationsManagerDW par défaut.|  
 |administrateur de base de données|Personne qui gère une base de données. L'administrateur détermine le contenu, la structure interne et la stratégie d'accès d'une base de données, il définit la sécurité et l'intégrité, et il contrôle les performances.|  
 |catalogue de la base de données|Partie d'une base de données qui contient la définition de la base de données et de tous les objets inclus dans celle-ci.|  
-|schéma de base de données|Représentation graphique de toute partie d'un schéma de la base de données. Ce peut être une image entière ou une image partielle de la structure de la base de données. Elle inclut les tables, les colonnes qu'elles contiennent et les relations entre les tables.|  
+|diagramme de base de données|Représentation graphique de toute partie d'un schéma de la base de données. Ce peut être une image entière ou une image partielle de la structure de la base de données. Elle inclut les tables, les colonnes qu'elles contiennent et les relations entre les tables.|  
 |moteur de base de données|Modules de programme qui fournissent l'accès à un système de gestion de base de données (SGBD).|  
 |Assistant Paramétrage du moteur de base de données|Outil permettant de paramétrer la conception de base de données physique afin d'aider les utilisateurs à sélectionner et à créer un ensemble optimal d'index, de vues indexées et de partitionnements.|  
 |explorateur de base de données|Outil d'administration de base de données simple qui permet à l'utilisateur d'effectuer des opérations de base de données telles que la création de tables, l'interrogation et la modification de données existantes, ainsi que d'autres fonctions du développement de base de données.|  
@@ -483,7 +483,7 @@ ms.locfileid: "49120476"
 |membre de dimension|Position ou élément unique dans une dimension. Les membres de dimension peuvent être définis par l'utilisateur ou prédéfinis, et des propriétés peuvent leur être associées.|  
 |propriété de membre de dimension|Caractéristique d'un membre de dimension. Les propriétés de membre de dimension peuvent être alphanumériques, booléennes ou de types de données de date/heure, et peuvent être définies par l'utilisateur ou être prédéfinies.|  
 |table de dimension|Table d’un entrepôt de données dont les entrées décrivent les données d'une table de faits.|  
-|connexion directe|Situation de connexion à une base de données principale dans laquelle toute modification apportée à un schéma de base de données met automatiquement à jour la base de données en cas de sauvegarde du diagramme ou d'éléments sélectionnés dans celui-ci.|  
+|connexion directe|Situation de connexion à une base de données principale dans laquelle toute modification apportée à un diagramme de base de données met automatiquement à jour la base de données en cas de sauvegarde du diagramme ou d’éléments sélectionnés dans celui-ci.|  
 |mode de réponse directe|Mode par défaut dans lequel les statistiques SQL Server sont collectées indépendamment de l'écran Statistiques SQL Server.|  
 |page de modifications|Page tampon qui contient les modifications qui n'ont pas été enregistrées sur le disque.|  
 |lecture erronée|Lecture contenant des données non validées.|  
@@ -1411,7 +1411,7 @@ ms.locfileid: "49120476"
 |ID de sécurité|Dans les systèmes Windows, valeur unique qui identifie un utilisateur, un groupe ou un compte d'ordinateur dans une entreprise. Chaque compte reçoit un SID lorsqu'il est créé.|  
 |identificateur de sécurité|Dans les systèmes Windows, valeur unique qui identifie un utilisateur, un groupe ou un compte d'ordinateur dans une entreprise. Chaque compte reçoit un SID lorsqu'il est créé.|  
 |segmentation|Technique d'exploration de données permettant d'analyser les données afin de découvrir les collections d'enregistrements s'excluant mutuellement et partageant des ensembles d'attributs similaires.|  
-|jointure réflexive|Jointure dans laquelle des enregistrements d'une table sont associés à d'autres enregistrements de la même table en cas de correspondance des valeurs dans les champs joints. Une jointure réflexive peut être une jointure interne ou externe. Dans les schémas de base de données, une jointure réflexive est appelée relation réflexive.|  
+|jointure réflexive|Jointure dans laquelle des enregistrements d'une table sont associés à d'autres enregistrements de la même table en cas de correspondance des valeurs dans les champs joints. Une jointure réflexive peut être une jointure interne ou externe. Dans les diagrammes de base de données, une jointure réflexive est appelée relation réflexive.|  
 |modèle d'inscription libre-service|Modèle d'inscription CLM (Certificate Lifecycle Manager) dans lequel un abonné de certificat effectue ou demande directement des activités de gestion de certificat à l'aide d'une interface Web.|  
 |entité de suivi automatique|Entité constituée à partir d'un modèle Text Template Transformation Toolkit (T4) qui a la capacité d'enregistrer les modifications dans les propriétés scalaires, complexes et de navigation.|  
 |Semantic Model Definition Language (SMDL)|Ensemble d'instructions qui décrivent les informations de requête et de mise en page des rapports créés dans le Générateur de rapports.|  
@@ -1605,7 +1605,7 @@ ms.locfileid: "49120476"
 |base de données d'abonnement|Base de données côté Abonné qui reçoit des données et objets de base de données publiés par un serveur de publication.|  
 |règle d'événement d'abonnement|Règle qui traite les informations relatives aux abonnements pilotés par les événements.|  
 |règle d'abonnements planifiée|Une ou plusieurs instructions Transact-SQL qui traitent les informations des abonnements planifiés.|  
-|sous-ensemble|Sélection de tables et des lignes de relation correspondantes faisant partie d'un schéma de base de données plus étendu.|  
+|sous-ensemble|Sélection de tables et des lignes de relation correspondantes faisant partie d’un diagramme de base de données plus étendu.|  
 |soustraction|Effectuer l'opération mathématique de base consistant à déduire quelque chose de quelque chose d'autre.|  
 |Nombre de supports|Option dynamique qui affiche le nombre de lignes dans lesquelles la valeur de colonne déterminante détermine la colonne dépendante.|  
 |Pourcentage de supports|Option dynamique qui affiche le pourcentage de lignes dans lesquelles la colonne déterminante détermine la colonne dépendante.|  

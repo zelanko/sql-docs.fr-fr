@@ -14,17 +14,17 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c81952706f2e2353406a9d916c8e53d4336d2c07
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48125259"
 ---
 # <a name="save-selected-tables-on-a-diagram-visual-database-tools"></a>Enregistrer des tables sélectionnées dans un schéma (Visual Database Tools)
-  Si vous ne souhaitez pas enregistrer toutes les modifications que vous avez apportées à un schéma de base de données, vous pouvez enregistrer une table ou un groupe de tables spécifique.  
+  Si vous ne souhaitez pas enregistrer toutes les modifications que vous avez apportées à un diagramme de base de données, vous pouvez enregistrer une table ou un groupe de tables spécifique.  
   
 ### <a name="to-save-selected-tables"></a>Pour enregistrer les tables sélectionnées  
   
-1.  Dans votre schéma de base de données, sélectionnez les tables que vous voulez enregistrer.  
+1.  Dans votre diagramme de base de données, sélectionnez les tables que vous voulez enregistrer.  
   
 2.  Dans le menu **Fichier** , cliquez sur **Enregistrer la sélection**.  
   

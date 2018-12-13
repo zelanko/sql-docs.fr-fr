@@ -22,11 +22,11 @@ ms.locfileid: "47819897"
 ---
 # <a name="save-selected-tables-on-a-diagram-visual-database-tools"></a>Enregistrer des tables sélectionnées dans un schéma (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Si vous ne souhaitez pas enregistrer toutes les modifications que vous avez apportées à un schéma de base de données, vous pouvez enregistrer une table ou un groupe de tables spécifique.  
+Si vous ne souhaitez pas enregistrer toutes les modifications que vous avez apportées à un diagramme de base de données, vous pouvez enregistrer une table ou un groupe de tables spécifique.  
   
 ### <a name="to-save-selected-tables"></a>Pour enregistrer les tables sélectionnées  
   
-1.  Dans votre schéma de base de données, sélectionnez les tables que vous voulez enregistrer.  
+1.  Dans votre diagramme de base de données, sélectionnez les tables que vous voulez enregistrer.  
   
 2.  Dans le menu **Fichier** , cliquez sur **Enregistrer la sélection**.  
   

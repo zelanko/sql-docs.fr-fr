@@ -39,6 +39,6 @@ ms.locfileid: "48206669"
  Fournit une aide pour [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] et les boîtes de dialogue connexes.  
   
  [Aide (F1) de Visual Database Tools](../ssms/visual-db-tools/visual-database-tools-f1-help.md)  
- Fournit une aide pour les outils du Concepteur de schémas de base de données, du Concepteur de tables et du Concepteur de requêtes et de vues, ainsi que pour les boîtes de dialogue connexes.  
+ Fournit une aide pour les outils du Concepteur de diagrammes de base de données, du Concepteur de tables et du Concepteur de requêtes et de vues, ainsi que pour les boîtes de dialogue connexes.  
   
   

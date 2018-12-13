@@ -12,7 +12,7 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 019735db006eadc5f61485533e6fcce94b013a9c
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48212979"
@@ -25,7 +25,7 @@ ms.locfileid: "48212979"
   
 |**Description**|**Rubrique**|  
 |---------------------|---------------|  
-|Décrit l'outil de schéma de base de données.|[Créer des schémas de base de données &#40;Visual Database Tools&#41;](design-database-diagrams-visual-database-tools.md)|  
+|Décrit l’outil de diagramme de base de données.|[Créer des schémas de base de données &#40;Visual Database Tools&#41;](design-database-diagrams-visual-database-tools.md)|  
 |Décrit l'outil de conception de table visuelle.|[Concevoir des tables &#40;Visual Database Tools&#41;](design-tables-visual-database-tools.md)|  
 |Décrit le concepteur de requêtes visuel.|[Rubriques de procédures relatives à la conception de requêtes et de vues &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)|  
   

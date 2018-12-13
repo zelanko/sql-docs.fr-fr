@@ -24,11 +24,11 @@ ms.locfileid: "47681857"
 ---
 # <a name="arrange-tables-in-diagrams-visual-database-tools"></a>Réorganiser des tables dans des schémas (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Vous pouvez réorganiser rapidement les tables dans un schéma de base de données afin d'afficher clairement chaque table et chaque relation.  
+Vous pouvez réorganiser rapidement les tables dans un diagramme de base de données afin d’afficher clairement chaque table et chaque relation.  
   
 ### <a name="to-arrange-tables-in-diagrams"></a>Pour réorganiser des tables dans des schémas  
   
-1.  Cliquez avec le bouton droit dans l'espace vide de la fenêtre Schéma de base de données.  
+1.  Cliquez avec le bouton droit dans l’espace vide de la fenêtre Diagramme de base de données.  
   
 2.  Dans le menu contextuel, cliquez sur **Réorganiser les tables**.  
   

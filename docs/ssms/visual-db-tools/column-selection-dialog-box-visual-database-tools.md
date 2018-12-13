@@ -23,7 +23,7 @@ ms.locfileid: "47845809"
 ---
 # <a name="column-selection-dialog-box-visual-database-tools"></a>Boîte de dialogue Sélectionner les colonnes (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Vous permet de modifier la vue personnalisée des tables dans le schéma de base de données. La vue personnalisée montre uniquement les propriétés des colonnes identifiées par l'utilisateur.  
+Vous permet de modifier la vue personnalisée des tables dans le diagramme de base de données. La vue personnalisée montre uniquement les propriétés des colonnes identifiées par l'utilisateur.  
   
 Cette boîte de dialogue apparaît quand vous cliquez avec le bouton droit sur une table, puis choisissez **Modifier la vue personnalisée** dans le menu contextuel.  
   
@@ -42,7 +42,7 @@ Utilisez les flèches > et >> pour ajouter une ou l'ensemble des propriétés à
 Utilisez les flèches < et << pour supprimer une ou l'ensemble des propriétés de la vue personnalisée.  
   
 **Enregistrer comme valeur par défaut**  
-Remplace la vue personnalisée par défaut par les colonnes sélectionnées dans cette boîte de dialogue. Si cette option est désactivée, la sélection de colonnes spécifiée dans la boîte de dialogue s'appliquera uniquement à la table sélectionnée dans le schéma de base de données.  
+Remplace la vue personnalisée par défaut par les colonnes sélectionnées dans cette boîte de dialogue. Si cette option est désactivée, la sélection de colonnes spécifiée dans la boîte de dialogue s’appliquera uniquement à la table sélectionnée dans le diagramme de base de données.  
   
 **OK**  
 Enregistre la vue personnalisée.  

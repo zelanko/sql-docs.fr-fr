@@ -24,16 +24,16 @@ ms.locfileid: "47767107"
 ---
 # <a name="discard-changes-made-to-diagrams-visual-database-tools"></a>Abandonner les modifications apportées aux schémas (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Vous pouvez abandonner les modifications apportées à votre schéma de base de données que vous ne souhaitez pas enregistrer dans la base de données.  
+Vous pouvez abandonner les modifications apportées à votre diagramme de base de données que vous ne souhaitez pas enregistrer dans la base de données.  
   
 ### <a name="to-discard-pending-modifications"></a>Pour abandonner les modifications en attente  
   
-1.  Fermez votre schéma de base de données ou la fenêtre de design de table.  
+1.  Fermez votre diagramme de base de données ou la fenêtre de design de table.  
   
 2.  Un message vous demande d'enregistrer les modifications. Choisissez **Non**.  
   
     > [!CAUTION]  
-    > Si d'autres schémas de base de données sont ouverts ou si des fenêtres de création de table sont connectées à la même base de données, fermez-les également sans enregistrer des modifications.  
+    > Si d’autres diagrammes de base de données sont ouverts ou si des fenêtres de création de table sont connectées à la même base de données, fermez-les également sans enregistrer des modifications.  
   
 ## <a name="see-also"></a> Voir aussi  
 [Utiliser des schémas de base de données &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  

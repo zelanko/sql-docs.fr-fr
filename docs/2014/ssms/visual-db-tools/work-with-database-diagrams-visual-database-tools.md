@@ -1,5 +1,5 @@
 ---
-title: Utiliser des schémas de base de données (Visual Database Tools) | Microsoft Docs
+title: Utiliser des diagrammes de base de données (Visual Database Tools) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,13 +19,13 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6bccafb6aab4fe27e85567f4bc8c37e39d7dcc09
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48155741"
 ---
-# <a name="work-with-database-diagrams-visual-database-tools"></a>Utiliser des schémas de base de données (Visual Database Tools)
-  Vous pouvez créer un schéma visuel de votre base de données à l'aide du Concepteur de bases de données. Les rubriques suivantes décrivent l'essentiel de l'utilisation du concepteur dans le cadre de l'exploitation des schémas de base de données.  
+# <a name="work-with-database-diagrams-visual-database-tools"></a>Utiliser des diagrammes de base de données (Visual Database Tools)
+  Vous pouvez créer un schéma visuel de votre base de données à l'aide du Concepteur de bases de données. Les rubriques suivantes décrivent les bases de l’utilisation du concepteur pour travailler avec des diagrammes de base de données.  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Créer un schéma de base de données &#40;Visual Database Tools&#41;](visual-database-tools.md)  

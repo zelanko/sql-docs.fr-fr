@@ -1,5 +1,5 @@
 ---
-title: Enregistrer des schémas de base de données (Visual Database Tools) | Microsoft Docs
+title: Enregistrer des diagrammes de base de données (Visual Database Tools) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -22,11 +22,11 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47740027"
 ---
-# <a name="save-database-diagrams-visual-database-tools"></a>Enregistrer des schémas de base de données (Visual Database Tools)
+# <a name="save-database-diagrams-visual-database-tools"></a>Enregistrer des diagrammes de base de données (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Lorsque vous enregistrez un schéma de base de données, vous pouvez enregistrer toutes les modifications que vous y avez apportées, y compris les modifications effectuées dans les tables, les colonnes et les autres objets de base de données.  
+Lorsque vous enregistrez un diagramme de base de données, vous pouvez enregistrer toutes les modifications que vous y avez apportées, y compris les modifications effectuées dans les tables, les colonnes et les autres objets de base de données.  
   
-### <a name="to-save-the-database-diagram"></a>Pour enregistrer le schéma de base de données  
+### <a name="to-save-the-database-diagram"></a>Pour enregistrer le diagramme de base de données  
   
 1.  Dans le menu **Fichier** , choisissez **Enregistrer \<**_nom de la table_**>**.  
   

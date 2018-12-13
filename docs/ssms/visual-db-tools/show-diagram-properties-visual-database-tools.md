@@ -23,13 +23,13 @@ ms.locfileid: "47747527"
 ---
 # <a name="show-diagram-properties-visual-database-tools"></a>Afficher les propriétés d'un schéma (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Vous pouvez afficher les propriétés d'un schéma de base de données dans la fenêtre Propriétés.  
+Vous pouvez afficher les propriétés d’un diagramme de base de données dans la fenêtre Propriétés.  
   
-### <a name="to-show-database-diagram-properties-in-the-properties-window"></a>Pour afficher les propriétés d'un schéma de base de données dans la fenêtre Propriétés  
+### <a name="to-show-database-diagram-properties-in-the-properties-window"></a>Pour afficher les propriétés d’un diagramme de base de données dans la fenêtre Propriétés  
   
-1.  Ouvrez le Concepteur de schémas de base de données.  
+1.  Ouvrez le Concepteur de diagrammes de base de données.  
   
-2.  Assurez-vous qu'aucun objet n'est sélectionné dans le Concepteur de schémas de base de données en cliquant n'importe où dans celui-ci, sauf sur un objet.  
+2.  Assurez-vous qu’aucun objet n’est sélectionné dans le Concepteur de diagrammes de base de données en cliquant n’importe où dans celui-ci, sauf sur un objet.  
   
 3.  Dans le menu **Affichage** , cliquez sur **Fenêtre Propriétés**.  
   

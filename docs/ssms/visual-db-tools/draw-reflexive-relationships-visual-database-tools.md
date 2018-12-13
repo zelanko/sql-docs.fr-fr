@@ -30,7 +30,7 @@ Avant de créer une relation, vous devez définir une clé primaire ou une contr
   
 ### <a name="to-draw-a-reflexive-relationship"></a>Pour dessiner une relation réflexive  
   
-1.  Dans votre schéma de base de données, cliquez sur le sélecteur de ligne correspondant à la colonne que vous voulez mettre en relation avec une autre colonne et faites glisser le pointeur à l'extérieur de la table jusqu'à ce qu'une ligne apparaisse.  
+1.  Dans votre diagramme de base de données, cliquez sur le sélecteur de ligne correspondant à la colonne que vous voulez mettre en relation avec une autre colonne et faites glisser le pointeur à l’extérieur de la table jusqu’à ce qu’une ligne apparaisse.  
   
 2.  Refaites glisser la ligne vers la table sélectionnée.  
   

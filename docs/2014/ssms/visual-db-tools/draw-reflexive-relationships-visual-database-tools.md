@@ -16,7 +16,7 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b08dc1bdca83ae207527d5dbf4c0cbe9c13b7b9d
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48063629"
@@ -28,7 +28,7 @@ ms.locfileid: "48063629"
   
 ### <a name="to-draw-a-reflexive-relationship"></a>Pour dessiner une relation réflexive  
   
-1.  Dans votre schéma de base de données, cliquez sur le sélecteur de ligne correspondant à la colonne que vous voulez mettre en relation avec une autre colonne et faites glisser le pointeur à l'extérieur de la table jusqu'à ce qu'une ligne apparaisse.  
+1.  Dans votre diagramme de base de données, cliquez sur le sélecteur de ligne correspondant à la colonne que vous voulez mettre en relation avec une autre colonne et faites glisser le pointeur à l’extérieur de la table jusqu’à ce qu’une ligne apparaisse.  
   
 2.  Refaites glisser la ligne vers la table sélectionnée.  
   

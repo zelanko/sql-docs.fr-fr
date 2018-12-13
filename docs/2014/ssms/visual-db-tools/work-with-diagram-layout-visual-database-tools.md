@@ -16,13 +16,13 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bf9eb6121f11e970b13ad1ad5d24829265b20a8b
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48121989"
 ---
 # <a name="work-with-diagram-layout-visual-database-tools"></a>Utiliser une disposition de schémas (Visual Database Tools)
-  Vous pouvez personnaliser l'apparence de vos schémas de base de données.  
+  Vous pouvez personnaliser l’apparence de vos diagrammes de base de données.  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Personnaliser la quantité d’informations affichées dans les schémas &#40;Visual Database Tools&#41;](visual-database-tools.md)  

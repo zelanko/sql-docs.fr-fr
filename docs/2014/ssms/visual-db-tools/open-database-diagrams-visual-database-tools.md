@@ -1,5 +1,5 @@
 ---
-title: Ouvrir des schémas de base de données (Visual Database Tools) | Microsoft Docs
+title: Ouvrir des diagrammes de base de données (Visual Database Tools) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,25 +16,25 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 49d7153a2acc98e31095e76cd7d6ff6a3a771220
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48112659"
 ---
-# <a name="open-database-diagrams-visual-database-tools"></a>Ouvrir des schémas de base de données (Visual Database Tools)
-  Vous pouvez ouvrir des schémas de base de données en vue d'afficher ou de modifier la structure du schéma.  
+# <a name="open-database-diagrams-visual-database-tools"></a>Ouvrir des diagrammes de base de données (Visual Database Tools)
+  Vous pouvez ouvrir des diagrammes de base de données en vue d’afficher ou de modifier la structure du diagramme.  
   
-### <a name="to-open-a-database-diagram"></a>Pour ouvrir un schéma de base de données  
+### <a name="to-open-a-database-diagram"></a>Pour ouvrir un diagramme de base de données  
   
-1.  Dans l’Explorateur d’objets, développez le dossier **Schémas de base de données** .  
+1.  Dans l’Explorateur d’objets, développez le dossier **Diagrammes de base de données**.  
   
-2.  Double-cliquez sur le nom du schéma de base de données que vous souhaitez ouvrir.  
+2.  Double-cliquez sur le nom du diagramme de base de données que vous souhaitez ouvrir.  
   
      -ou-  
   
-     Cliquez avec le bouton droit sur le nom du schéma de base de données que vous souhaitez ouvrir, puis choisissez **Création Schéma de base de données**.  
+     Cliquez avec le bouton droit sur le nom du diagramme de base de données que vous souhaitez ouvrir, puis choisissez **Création Diagramme de base de données**.  
   
- Le schéma de base de données s'ouvre dans le Concepteur de schémas de base de données à partir duquel vous pouvez modifier le schéma.  
+ Le diagramme de base de données s’ouvre dans le Concepteur de diagrammes de base de données à partir duquel vous pouvez modifier le diagramme.  
   
 > [!NOTE]  
 >  Seul le propriétaire du schéma ou un membre du rôle db_owner de la base de données peut ouvrir le schéma.  

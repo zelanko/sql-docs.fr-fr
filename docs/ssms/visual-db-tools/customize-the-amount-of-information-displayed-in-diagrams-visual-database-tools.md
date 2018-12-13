@@ -25,7 +25,7 @@ ms.locfileid: "47807417"
 ---
 # <a name="customize-the-amount-of-information-displayed-in-diagrams-visual-database-tools"></a>Personnaliser la quantité d'informations affichées dans les schémas (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Lorsque vous ajoutez une table à un schéma de base de données, elle apparaît avec un nombre déterminé de propriétés affichées. Vous pouvez choisir dans un menu de variations la quantité d'informations qui s'affichent ou créer un jeu de propriétés personnalisé.  
+Lorsque vous ajoutez une table à un diagramme de base de données, elle apparaît avec un nombre déterminé de propriétés affichées. Vous pouvez choisir dans un menu de variations la quantité d'informations qui s'affichent ou créer un jeu de propriétés personnalisé.  
   
 Les choix sont les suivants :  
   
@@ -43,13 +43,13 @@ Les choix sont les suivants :
   
 ### <a name="to-choose-a-table-view"></a>Pour choisir la vue de la table  
   
-1.  Cliquez avec le bouton droit sur une table dans le Concepteur de schémas de base de données.  
+1.  Cliquez avec le bouton droit sur une table dans le Concepteur de diagrammes de base de données.  
   
 2.  Dans le menu contextuel, pointez sur Vue Table, puis cliquez sur la vue de votre choix.  
   
 ### <a name="to-create-a-custom-table-view"></a>Pour créer une vue de table personnalisée  
   
-1.  Cliquez avec le bouton droit sur une table dans le Concepteur de schémas de base de données.  
+1.  Cliquez avec le bouton droit sur une table dans le Concepteur de diagrammes de base de données.  
   
 2.  Dans le menu contextuel, pointez sur **Vue Table** , puis cliquez sur **Modifier la vue personnalisée**.  
   

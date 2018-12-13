@@ -22,23 +22,23 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: dabe5913b62231b7d75862b720c632c7d3bbfdf4
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48182799"
 ---
 # <a name="visual-database-tool-designers"></a>Concepteurs Visual Database Tools
-  Visual Database Tools est une combinaison d'outils de conception que vous pouvez utiliser pour traiter une source de données. Vous pouvez les utiliser pour créer des requêtes, concevoir ou modifier une structure de base de données ou mettre à jour des données. Les outils disponibles sont le Concepteur de schémas de base de données, le Concepteur de tables et le Concepteur de requêtes et de vues.  
+  Visual Database Tools est une combinaison d'outils de conception que vous pouvez utiliser pour traiter une source de données. Vous pouvez les utiliser pour créer des requêtes, concevoir ou modifier une structure de base de données ou mettre à jour des données. Les outils disponibles sont le Concepteur de diagrammes de base de données, le Concepteur de tables et le Concepteur de requêtes et de vues.  
   
 ## <a name="properties-window"></a>Fenêtre Propriétés  
  La fenêtre de propriétés n'est pas spécifique à Visual Database Tools, mais vous pouvez apporter de nombreuses modifications à cet endroit. Elle affiche les propriétés de l'élément actuellement sélectionné (sous la forme d'une table) et vous permet de modifier ces propriétés (du nom des propriétés au classement d'une colonne). Certaines propriétés peuvent être affichées dans la fenêtre de propriétés, mais doivent être modifiées dans un autre outil.  
   
-## <a name="database-diagram-designer"></a>Concepteur de schémas de base de données  
- Le Concepteur de schémas de base de données fournit une fenêtre dans laquelle vous pouvez créer, modifier et afficher visuellement les tables et les relations contenues dans une base de données.  
+## <a name="database-diagram-designer"></a>Concepteur de diagrammes de base de données  
+ Le Concepteur de diagrammes de base de données fournit une fenêtre dans laquelle vous pouvez créer, modifier et afficher visuellement les tables et les relations contenues dans une base de données.  
   
- Pour afficher le Concepteur de schémas de base de données, ouvrez un schéma existant ou cliquez avec le bouton droit sur le nœud Base de données dans l’Explorateur d’objets et choisissez **Nouveau schéma de base de données** dans le menu déroulant.  
+ Pour afficher le Concepteur de diagrammes de base de données, ouvrez un diagramme existant ou cliquez avec le bouton droit sur le nœud Base de données dans l’Explorateur d’objets et choisissez **Nouveau diagramme de base de données** dans le menu déroulant.  
   
- Une fois le concepteur ouvert, le menu **Schéma de base de données** apparaît dans le menu principal. Ce menu est le point d'accès aux fonctionnalités spéciales du concepteur.  
+ Une fois le concepteur ouvert, le menu **Diagramme de base de données** apparaît dans le menu principal. Ce menu est le point d'accès aux fonctionnalités spéciales du concepteur.  
   
 > [!NOTE]  
 >  Ce concepteur fonctionne avec les bases de données Microsoft SQL Server.  

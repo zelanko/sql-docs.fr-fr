@@ -20,21 +20,21 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cd94322c3d4314f2fb8705cc2d770a7ad5b4751d
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48065149"
 ---
-# <a name="upgrade-database-diagrams-from-previous-editions-visual-database-tools"></a>Mettre à niveau des schémas de base de données d'éditions antérieures (Visual Database Tools)
-  Les schémas de base de données créés sur les éditions antérieures de bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont automatiquement mis à niveau lors de l'installation du schéma de base de données dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Pour connaître la procédure de configuration des schémas, consultez [Set Up Database Diagram Designer &#40;Visual Database Tools&#41;](visual-database-tools.md).  
+# <a name="upgrade-database-diagrams-from-previous-editions-visual-database-tools"></a>Mettre à niveau des diagrammes de base de données d’éditions antérieures (Visual Database Tools)
+  Les diagrammes de base de données créés sur les éditions antérieures de bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont automatiquement mis à niveau lors de l’installation du diagramme de base de données dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Pour connaître la procédure de configuration des schémas, consultez [Set Up Database Diagram Designer &#40;Visual Database Tools&#41;](visual-database-tools.md).  
   
-### <a name="to-upgrade-legacy-database-diagrams"></a>Pour mettre à niveau des schémas de base de données hérités  
+### <a name="to-upgrade-legacy-database-diagrams"></a>Pour mettre à niveau des diagrammes de base de données hérités  
   
 1.  Dans l'Explorateur d'objets, développez la base de données.  
   
-2.  Développez le nœud Schéma de base de données sous la base de données.  
+2.  Développez le nœud Diagramme de base de données sous la base de données.  
   
-3.  Sélectionnez **Oui** quand vous êtes invité à spécifier si vous souhaitez installer le schéma de base de données.  
+3.  Sélectionnez **Oui** quand vous êtes invité à spécifier si vous souhaitez installer le diagramme de base de données.  
   
      Cela permet de mettre à niveau les schémas stockés dans la base de données.  
   

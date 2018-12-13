@@ -27,7 +27,7 @@ Utilisez les tâches suivantes pour commencer à utiliser Visual Database Tools 
   
 |**Description**|**Rubrique**|  
 |-------------------|-------------|  
-|Décrit l'outil de schéma de base de données.|[Créer des schémas de base de données (Visual Database Tools)](../../ssms/visual-db-tools/design-database-diagrams-visual-database-tools.md)|  
+|Décrit l’outil de diagramme de base de données.|[Créer des schémas de base de données (Visual Database Tools)](../../ssms/visual-db-tools/design-database-diagrams-visual-database-tools.md)|  
 |Décrit l'outil de conception de table visuelle.|[Concevoir des tables (Visual Database Tools)](../../ssms/visual-db-tools/design-tables-visual-database-tools.md)|  
 |Décrit le concepteur de requêtes visuel.|[Rubriques de procédures relatives à la conception de requêtes et de vues (Visual Database Tools)](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)|  
   

@@ -1,5 +1,5 @@
 ---
-title: Copier des tables d’un schéma de base de données vers un autre | Microsoft Docs
+title: Copier des tables d’un diagramme de base de données vers un autre | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -21,17 +21,17 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47805537"
 ---
-# <a name="copy-tables-from-one-database-diagrams-to-another-visual-database-tools"></a>Copier des tables d'un schéma de base de données vers un autre (Visual Database Tools)
+# <a name="copy-tables-from-one-database-diagrams-to-another-visual-database-tools"></a>Copier des tables d’un diagramme de base de données vers un autre (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Vous pouvez copier une table d'un schéma de base de données à l'autre dans la même base de données.  
+Vous pouvez copier une table d’un diagramme de base de données à l’autre dans la même base de données.  
   
-Cette opération ajoute une référence à la table dans le deuxième schéma. La table n'est pas dupliquée dans la base de données. Par exemple, si vous copiez la table `authors` d'un schéma de base de données à un autre, les deux schémas font référence à la même table `authors` de la base de données.  
+Cette opération ajoute une référence à la table dans le deuxième diagramme. La table n'est pas dupliquée dans la base de données. Par exemple, si vous copiez la table `authors` d’un diagramme de base de données à un autre, les deux diagrammes font référence à la même table `authors` de la base de données.  
   
-### <a name="to-copy-a-table-from-another-database-diagram"></a>Pour copier une table à partir d'un autre schéma de base de données  
+### <a name="to-copy-a-table-from-another-database-diagram"></a>Pour copier une table à partir d’un autre diagramme de base de données  
   
 1.  Vérifiez que vous êtes connecté à la base de données dont vous voulez copier une table.  
   
-2.  Ouvrez les schémas de base de données source et cible, puis, dans le schéma source, sélectionnez la table que vous voulez copier vers le schéma cible.  
+2.  Ouvrez les diagrammes de base de données source et cible, puis, dans le diagramme source, sélectionnez la table que vous voulez copier vers le diagramme cible.  
   
 3.  Dans la barre d’outils, cliquez sur le bouton **Copier** . Cette action place la définition de la table sélectionnée dans le Presse-papiers.  
   

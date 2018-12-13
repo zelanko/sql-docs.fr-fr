@@ -23,7 +23,7 @@ ms.locfileid: "52502212"
 ---
 # <a name="add-tables-to-diagrams-visual-database-tools"></a>Ajouter des tables à des schémas (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Vous pouvez ajouter une table à votre schéma de base de données, afin de modifier sa structure ou de la mettre en relation avec d'autres tables du schéma. Vous pouvez soit ajouter des tables de base de données existantes à un schéma, soit insérer une nouvelle table qui n'a pas encore été définie dans la base de données.  
+Vous pouvez ajouter une table à votre diagramme de base de données, afin de modifier sa structure ou de la mettre en relation avec d’autres tables du diagramme. Vous pouvez soit ajouter des tables de base de données existantes à un schéma, soit insérer une nouvelle table qui n'a pas encore été définie dans la base de données.  
   
 ### <a name="to-insert-a-new-table-into-a-diagram"></a>Pour insérer une nouvelle table dans un schéma  
   
@@ -48,7 +48,7 @@ Vous pouvez ajouter une table à votre schéma de base de données, afin de modi
 5.  Répétez les étapes 3 et 4 pour chaque colonne que vous souhaitez ajouter à la table.  
   
 > [!NOTE]  
-> Lorsque vous enregistrez votre schéma de base de données, la nouvelle table est ajoutée à votre base de données.  
+> Lorsque vous enregistrez votre diagramme de base de données, la nouvelle table est ajoutée à votre base de données.  
   
 ### <a name="to-add-an-existing-table-to-a-diagram"></a>Pour ajouter une table existante à un schéma  
   
@@ -56,7 +56,7 @@ Vous pouvez ajouter une table à votre schéma de base de données, afin de modi
   
 2.  Sélectionnez une table dans le dossier **Tables** .  
   
-3.  Faites glisser la table jusqu'à votre schéma de base de données.  
+3.  Faites glisser la table jusqu’à votre diagramme de base de données.  
   
 4.  Relâchez le bouton de la souris.  
   
@@ -65,7 +65,7 @@ Vous pouvez ajouter une table à votre schéma de base de données, afin de modi
   
 ### <a name="to-add-related-tables-to-a-diagram"></a>Pour ajouter des tables connexes à un schéma  
   
-1.  Sélectionnez une ou plusieurs tables associées à des contraintes de clé étrangère dans le schéma de base de données.  
+1.  Sélectionnez une ou plusieurs tables associées à des contraintes de clé étrangère dans le diagramme de base de données.  
   
 2.  Cliquez avec le bouton droit sur l’une des tables sélectionnées et, dans le menu contextuel, cliquez sur **Ajouter les tables connexes**.  
   

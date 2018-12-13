@@ -24,7 +24,7 @@ ms.locfileid: "47828817"
 ---
 # <a name="work-with-diagram-layout-visual-database-tools"></a>Utiliser une disposition de schémas (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Vous pouvez personnaliser l'apparence de vos schémas de base de données.  
+Vous pouvez personnaliser l’apparence de vos diagrammes de base de données.  
   
 ## <a name="in-this-section"></a>Dans cette section  
 [Personnaliser la quantité d’informations affichées dans les schémas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/customize-the-amount-of-information-displayed-in-diagrams-visual-database-tools.md)  

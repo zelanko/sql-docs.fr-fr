@@ -1,5 +1,5 @@
 ---
-title: Naviguer dans le Concepteur de schémas de base de données (Visual Database Tools) | Microsoft Docs
+title: Naviguer dans le Concepteur de diagrammes de base de données (Visual Database Tools) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -22,13 +22,13 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47764007"
 ---
-# <a name="navigate-in-database-diagram-designer-visual-database-tools"></a>Naviguer dans le Concepteur de schémas de base de données (Visual Database Tools)
+# <a name="navigate-in-database-diagram-designer-visual-database-tools"></a>Naviguer dans le Concepteur de diagrammes de base de données (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Vous pouvez travailler dans le Concepteur de schémas de base de données à l'aide du clavier ou de la souris. Pour connaître les méthodes spécifiques utilisées dans le Concepteur de schémas de base de données, consultez les tableaux suivants.  
+Vous pouvez travailler dans le Concepteur de diagrammes de base de données à l’aide du clavier ou de la souris. Pour connaître les méthodes spécifiques utilisées dans le Concepteur de diagrammes de base de données, consultez les tableaux suivants.  
   
 |**Pour**|**Appuyez sur**|  
 |----------|-------------|  
-|Accéder au menu Schéma de base de données|Alt+M|  
+|Accéder au menu Diagramme de base de données|Alt+M|  
 |Vous déplacer au sein des tables et des relations éventuelles|Tab ou Maj+Tab|  
 |Vous déplacer entre des colonnes dans une table|Touches de direction|  
 |Supprimer la table sélectionnée du schéma|Suppression|  

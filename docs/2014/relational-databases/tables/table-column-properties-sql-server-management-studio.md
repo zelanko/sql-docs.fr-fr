@@ -17,7 +17,7 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3c5892e4824ae31bebe2b0f2047a52b751da025a
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48057756"
@@ -26,7 +26,7 @@ ms.locfileid: "48057756"
   Ces propriétés apparaissent dans le volet en bas du Concepteur de tables. Sauf indication contraire, vous pouvez modifier ces propriétés dans la fenêtre Propriétés lorsque la colonne est sélectionnée. Les **Propriétés des colonnes** peuvent être affichées par catégories ou par ordre alphabétique. Un grand nombre de propriétés apparaissent uniquement ou peuvent uniquement être modifiées pour certains types de données.  
   
 > [!NOTE]  
->  Si la table est publiée pour réplication, vous devez apporter vos modifications au schéma à l’aide de l’instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql) ou de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SMO (SQL Server Management Objects). Lorsque les modifications sont apportées au schéma à l'aide du Concepteur de tables ou du Concepteur de schémas de base de données, celui-ci tente d'abandonner la table et de la recréer. Toutefois, il est impossible d'abandonner les objets publiés, par conséquent les modifications du schéma échoueront.  
+>  Si la table est publiée pour réplication, vous devez apporter vos modifications au schéma à l’aide de l’instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql) ou de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SMO (SQL Server Management Objects). Lorsque les modifications sont apportées au diagramme à l’aide du Concepteur de tables ou du Concepteur de diagrammes de base de données, celui-ci tente d’abandonner la table et de la recréer. Toutefois, il est impossible d'abandonner les objets publiés, par conséquent les modifications du schéma échoueront.  
   
  **Général**  
  Peut être développée pour afficher **Nom**, **Autoriser les valeurs NULL**, **Type de données**, **Valeur ou liaison par défaut**, **Longueur**, **Précision**et **Échelle**.  

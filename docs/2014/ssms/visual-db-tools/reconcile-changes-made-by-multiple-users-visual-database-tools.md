@@ -16,15 +16,15 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 10d432ca5ba341bda0d3aacdb9ef9a9a90f4820c
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48172309"
 ---
 # <a name="reconcile-changes-made-by-multiple-users-visual-database-tools"></a>Rapprocher les modifications effectuées par plusieurs utilisateurs (Visual Database Tools)
-  Dans un environnement multi-utilisateur, des modifications peuvent être apportées à un même objet par plusieurs utilisateurs simultanément. Cela peut se produire lorsque vous travaillez sur la structure de l'objet dans le Concepteur de tables ou dans le Concepteur de schémas de base de données, ou dans les valeurs des résultats retournés dans le volet Résultats du Concepteur de requêtes et de vues. Cela peut provoquer des conflits que vous souhaiterez résoudre.  
+  Dans un environnement multi-utilisateur, des modifications peuvent être apportées à un même objet par plusieurs utilisateurs simultanément. Cela peut se produire lorsque vous travaillez sur la structure de l’objet dans le Concepteur de tables ou dans le Concepteur de diagrammes de base de données, ou dans les valeurs des résultats retournés dans le volet Résultats du Concepteur de requêtes et de vues. Cela peut provoquer des conflits que vous souhaiterez résoudre.  
   
-## <a name="conflicts-in-the-table-or-database-diagram-designers"></a>Conflits dans le Concepteur de tables ou le Concepteur de schémas de base de données  
+## <a name="conflicts-in-the-table-or-database-diagram-designers"></a>Conflits dans le Concepteur de tables ou le Concepteur de diagrammes de base de données  
  Par exemple, un autre utilisateur peut supprimer ou renommer une table pendant que vous l'utilisez ou que vous travaillez avec une table connexe dans le Concepteur de tables. Si vous tentez d’enregistrer votre table, la [Boîte de dialogue Modifications détectées dans la base de données &#40;Visual Database Tools&#41;](visual-database-tools.md) vous avertit que la base de données a été modifiée depuis que vous avez ouvert la table.  
   
  Elle affiche également la liste des objets de base de données qui seront affectés si vous enregistrez la table. À ce stade, vous pouvez prendre une des mesures suivantes :  

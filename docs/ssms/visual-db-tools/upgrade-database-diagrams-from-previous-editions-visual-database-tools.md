@@ -1,5 +1,5 @@
 ---
-title: Mettre à niveau des schémas de base de données d’éditions antérieures | Microsoft Docs
+title: Mettre à niveau des diagrammes de base de données d’éditions antérieures | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -26,17 +26,17 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47738070"
 ---
-# <a name="upgrade-database-diagrams-from-previous-editions-visual-database-tools"></a>Mettre à niveau des schémas de base de données d'éditions antérieures (Visual Database Tools)
+# <a name="upgrade-database-diagrams-from-previous-editions-visual-database-tools"></a>Mettre à niveau des diagrammes de base de données d’éditions antérieures (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Les schémas de base de données créés sur les éditions antérieures de bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont automatiquement mis à niveau lors de l'installation du schéma de base de données dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Pour obtenir plus d’instructions sur la configuration des schémas, consultez [Configurer le Concepteur de schémas de base de données (Visual Database Tools)](../../ssms/visual-db-tools/set-up-database-diagram-designer-visual-database-tools.md).  
+Les diagrammes de base de données créés sur les éditions antérieures de bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont automatiquement mis à niveau lors de l’installation du diagramme de base de données dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Pour obtenir plus d’instructions sur la configuration des diagrammes, consultez [Configurer le Concepteur de diagrammes de base de données (Visual Database Tools)](../../ssms/visual-db-tools/set-up-database-diagram-designer-visual-database-tools.md).  
   
-### <a name="to-upgrade-legacy-database-diagrams"></a>Pour mettre à niveau des schémas de base de données hérités  
+### <a name="to-upgrade-legacy-database-diagrams"></a>Pour mettre à niveau des diagrammes de base de données hérités  
   
 1.  Dans l'Explorateur d'objets, développez la base de données.  
   
-2.  Développez le nœud Schéma de base de données sous la base de données.  
+2.  Développez le nœud Diagramme de base de données sous la base de données.  
   
-3.  Sélectionnez **Oui** quand vous êtes invité à spécifier si vous souhaitez installer le schéma de base de données.  
+3.  Sélectionnez **Oui** quand vous êtes invité à spécifier si vous souhaitez installer le diagramme de base de données.  
   
     Cela permet de mettre à niveau les schémas stockés dans la base de données.  
   

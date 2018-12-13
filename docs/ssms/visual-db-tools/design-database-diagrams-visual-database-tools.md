@@ -1,5 +1,5 @@
 ---
-title: Créer des schémas de base de données (Visual Database Tools) | Microsoft Docs
+title: Créer des diagrammes de base de données (Visual Database Tools) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -26,18 +26,18 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 11/15/2018
 ms.locfileid: "51695417"
 ---
-# <a name="design-database-diagrams-visual-database-tools"></a>Créer des schémas de base de données (Visual Database Tools)
+# <a name="design-database-diagrams-visual-database-tools"></a>Créer des diagrammes de base de données (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Outil visuel Concepteur de base de données permettant de concevoir et de visualiser une base de données à laquelle vous êtes connecté. Lors du design d'une base de données, le Concepteur de bases de données permet de créer, de modifier ou de supprimer des tables, des colonnes, des clés, des index, des relations et des contraintes. Pour visualiser une base de données, vous pouvez créer un ou plusieurs schémas illustrant toutes les tables, colonnes, clés et relations, ou quelques-unes d'entre elles.  
   
 ![Schéma de base de données illustrant les relations entre tables](../../ssms/visual-db-tools/media/dv3w7c1.gif "Schéma de base de données illustrant les relations entre tables")  
   
-Pour n'importe quelle base de données, vous pouvez créer autant de schémas de base de données que vous le souhaitez ; chaque table de la base de données peut figurer dans un ou plusieurs schémas. Cela permet de créer différents schémas pour visualiser diverses parties de la base de données ou accentuer divers aspects du design. Par exemple, vous pouvez créer un schéma général pour montrer toutes les tables et toutes les colonnes et un schéma plus petit pour ne montrer que les tables sans les colonnes.  
+Pour n’importe quelle base de données, vous pouvez créer autant de diagrammes de base de données que vous le souhaitez ; chaque table de la base de données peut figurer dans un ou plusieurs diagrammes. Cela permet de créer différents schémas pour visualiser diverses parties de la base de données ou accentuer divers aspects du design. Par exemple, vous pouvez créer un schéma général pour montrer toutes les tables et toutes les colonnes et un schéma plus petit pour ne montrer que les tables sans les colonnes.  
   
-Chaque schéma de base de données que vous créez est stocké dans la base de données associée.  
+Chaque diagramme de base de données que vous créez est stocké dans la base de données associée.  
   
-## <a name="tables-and-columns-in-a-database-diagram"></a>Tables et colonnes dans un schéma de base de données  
-Dans un schéma de base de données, chaque table peut être affichée avec trois fonctionnalités distinctes : une barre de titre, un sélecteur de ligne et un ensemble de colonnes de propriétés.  
+## <a name="tables-and-columns-in-a-database-diagram"></a>Tables et colonnes dans un diagramme de base de données  
+Dans un diagramme de base de données, chaque table peut être affichée avec trois fonctionnalités distinctes : une barre de titre, un sélecteur de ligne et un ensemble de colonnes de propriétés.  
   
 **Barre de titre** Elle affiche le nom de la table  
   
@@ -49,8 +49,8 @@ Si vous avez modifié une table sans l'enregistrer, un astérisque (*) s'ajoute 
   
 Pour plus d’informations sur les vues des tables, consultez [Personnaliser la quantité d’informations affichées dans les schémas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/customize-the-amount-of-information-displayed-in-diagrams-visual-database-tools.md).  
   
-## <a name="relationships-in-a-database-diagram"></a>Relations dans un schéma de base de données  
-Dans un schéma de base de données, chaque relation peut être affichée avec trois fonctionnalités distinctes : extrémités, style de ligne et tables en relation.  
+## <a name="relationships-in-a-database-diagram"></a>Relations dans un diagramme de base de données  
+Dans un diagramme de base de données, chaque relation peut être affichée avec trois fonctionnalités distinctes : extrémités, style de ligne et tables en relation.  
   
 **Extrémités** Situées au bout des lignes, elles indiquent si la relation est de type un-à-un ou un-à-plusieurs. Si une relation a une clé à une extrémité et le symbole infini à l'autre, elle est de type un-à-plusieurs. Si elle a une clé aux deux extrémités, elle est de type un-à-un.  
   

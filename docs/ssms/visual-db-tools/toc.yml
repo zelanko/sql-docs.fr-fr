@@ -1,3 +1,4 @@
+items:
 - name: Visual Database Tools
   href: visual-database-tools.md
 - name: Boîte de dialogue Ajouter une table (Concepteurs de requêtes et de vues)
@@ -20,9 +21,9 @@
   href: full-text-index-dialog-box-visual-database-tools.md
 - name: Boîte de dialogue Index XML (Visual Database Tools)
   href: xml-indexes-dialog-box-visual-database-tools.md
-- name: Utiliser des tables dans les schémas de base de données (Visual Database Tools)
+- name: Utiliser des tables dans les diagrammes de base de données (Visual Database Tools)
   href: work-with-tables-in-database-diagram-visual-database-tools.md
-- name: Rapprocher un schéma de base de données et une base de données modifiée (Visual Database Tools)
+- name: Rapprocher un diagramme de base de données et une base de données modifiée (Visual Database Tools)
   href: reconcile-a-database-diagram-with-a-modified-database-visual-database-tools.md
 - name: Redimensionner automatiquement des tables sélectionnées dans des schémas (Visual Database Tools)
   href: autosize-selected-tables-in-diagrams-visual-database-tools.md
@@ -60,11 +61,11 @@
   href: remove-joins-visual-database-tools.md
 - name: Propriétés de la table (Visual Database Tools)
   href: table-properties-visual-database-tools.md
-- name: 'Bases de données de développement, de test et de production (Visual Database Tools)'
+- name: Bases de données de développement, de test et de production (Visual Database Tools)
   href: development-test-and-production-databases-visual-database-tools.md
 - name: Résumé des résultats d'une requête (Visual Database Tools)
   href: summarize-query-results-visual-database-tools.md
-- name: Mettre à niveau des schémas de base de données d'éditions antérieures (Visual Database Tools)
+- name: Mettre à niveau des diagrammes de base de données d’éditions antérieures (Visual Database Tools)
   href: upgrade-database-diagrams-from-previous-editions-visual-database-tools.md
 - name: Concevoir des tables (Visual Database Tools)
   href: design-tables-visual-database-tools.md
@@ -76,7 +77,7 @@
   href: add-related-tables-to-diagrams-visual-database-tools.md
 - name: Concepteurs Visual Database Tools
   href: visual-database-tool-designers.md
-- name: 'Erreurs de syntaxe SQL, boîte de dialogue (Visual Database Tools)'
+- name: Erreurs de syntaxe SQL, boîte de dialogue (Visual Database Tools)
   href: sql-syntax-errors-encountered-dialog-box-visual-database-tools.md
 - name: Spécifier la clause TOP dans des requêtes (Visual Database Tools)
   href: specify-the-top-clause-in-queries-visual-database-tools.md
@@ -90,7 +91,7 @@
   href: location-dialog-box-visual-database-tools.md
 - name: Créer des requêtes UNION (Visual Database Tools)
   href: create-union-queries-visual-database-tools.md
-- name: 'Liste des colonnes, boîte de dialogue (Visual Database Tools)'
+- name: Liste des colonnes, boîte de dialogue (Visual Database Tools)
   href: partition-column-list-dialog-box-visual-database-tools.md
 - name: Ouvrir le Concepteur de requêtes et de vues (Visual Database Tools)
   href: open-the-query-and-view-designer-visual-database-tools.md
@@ -100,7 +101,7 @@
   href: group-rows-in-query-results-visual-database-tools.md
 - name: Trier et regrouper des résultats de requête (Visual Database Tools)
   href: sort-and-group-query-results-visual-database-tools.md
-- name: "Boîte de dialogue Contraintes de validation\_(Visual Database Tools)"
+- name: Boîte de dialogue Contraintes de validation (Visual Database Tools)
   href: check-constraint-dialog-box-visual-database-tools.md
 - name: Exclure les doublons de lignes (Visual Database Tools)
   href: exclude-duplicate-rows-visual-database-tools.md
@@ -122,9 +123,9 @@
   href: indexes-keys-dialog-box-visual-database-tools.md
 - name: Joindre manuellement des tables (Visual Database Tools)
   href: join-tables-manually-visual-database-tools.md
-- name: Ouvrir le Concepteur de schémas de base de données (Visual Database Tools)
+- name: ouvrir le Concepteur de diagrammes de base de données (Visual Database Tools)
   href: open-database-diagram-designer-visual-database-tools.md
-- name: Configurer le Concepteur de schémas de base de données (Visual Database Tools)
+- name: Configurer le Concepteur de diagrammes de base de données (Visual Database Tools)
   href: set-up-database-diagram-designer-visual-database-tools.md
 - name: Boîte de dialogue Modifications détectées dans la base de données (Visual Database Tools)
   href: database-changes-detected-dialog-box-visual-database-tools.md
@@ -152,13 +153,13 @@
   href: show-diagram-properties-visual-database-tools.md
 - name: Boîte de dialogue Colonnes d'index (outils Visual Database)
   href: index-columns-dialog-box-visual-database-tools.md
-- name: Créer un schéma de base de données (Visual Database Tools)
+- name: Créer un diagramme de base de données (Visual Database Tools)
   href: create-a-new-database-diagram-visual-database-tools.md
 - name: Ajouter des colonnes à des requêtes (Visual Database Tools)
   href: add-columns-to-queries-visual-database-tools.md
-- name: Copier une image d'un schéma de base de données dans le Presse-papiers (Visual Database Tools)
+- name: Copier une image d’un diagramme de base de données dans le Presse-papiers (Visual Database Tools)
   href: copy-an-image-of-a-database-diagram-to-the-clipboard-visual-database-tools.md
-- name: 'Enregistrer (non autorisé), boîte de dialogue'
+- name: Enregistrer (non autorisé), boîte de dialogue
   href: save-not-permitted-dialog-box.md
 - name: Abandonner les modifications apportées aux requêtes (Visual Database Tools)
   href: discard-changes-made-to-queries-visual-database-tools.md
@@ -172,7 +173,7 @@
   href: types-of-queries-visual-database-tools.md
 - name: Réorganiser les colonnes de sortie (Visual Database Tools)
   href: reorder-output-columns-visual-database-tools.md
-- name: Enregistrer des schémas de base de données (Visual Database Tools)
+- name: Enregistrer des diagrammes de base de données (Visual Database Tools)
   href: save-database-diagrams-visual-database-tools.md
 - name: Réduire des groupes de lignes (Visual Database Tools)
   href: collapse-groups-of-rows-visual-database-tools.md
@@ -184,7 +185,7 @@
   href: remove-columns-from-queries-visual-database-tools.md
 - name: Ouvrir des requêtes (Visual Database Tools)
   href: open-queries-visual-database-tools.md
-- name: Créer des schémas de base de données (Visual Database Tools)
+- name: Créer des diagrammes de base de données (Visual Database Tools)
   href: design-database-diagrams-visual-database-tools.md
 - name: Exécuter des requêtes (Visual Database Tools)
   href: run-queries-visual-database-tools.md
@@ -222,7 +223,7 @@
   href: sort-multiple-columns-in-queries-visual-database-tools.md
 - name: Boîte de dialogue Choisir la table cible pour Insert Results (Visual Database Tools)
   href: choose-target-table-for-insert-results-dialog-box-visual-database-tools.md
-- name: Naviguer dans le Concepteur de schémas de base de données (Visual Database Tools)
+- name: Naviguer dans le Concepteur de diagrammes de base de données (Visual Database Tools)
   href: navigate-in-database-diagram-designer-visual-database-tools.md
 - name: Utiliser des données du volet de résultats (Visual Database Tools)
   href: work-with-data-in-the-results-pane-visual-database-tools.md
@@ -234,7 +235,7 @@
   href: use-the-query-and-view-designer-with-international-data-visual-database-tools.md
 - name: Afficher les propriétés d'une requête (Visual Database Tools)
   href: show-query-properties-visual-database-tools.md
-- name: Comprendre la propriété du schéma de base de données (Visual Database Tools)
+- name: Comprendre la propriété du diagramme de base de données (Visual Database Tools)
   href: understand-database-diagram-ownership-visual-database-tools.md
 - name: Créer des alias de tables (Visual Database Tools)
   href: create-table-aliases-visual-database-tools.md
@@ -264,15 +265,15 @@
   href: summarize-or-aggregate-values-using-custom-expressions-visual-database-tools.md
 - name: Environnements multi-utilisateurs (Visual Database Tools)
   href: multiuser-environments-visual-database-tools.md
-- name: 'Paramètres de la requête, boîte de dialogue (Visual Database Tools)'
+- name: Paramètres de la requête, boîte de dialogue (Visual Database Tools)
   href: query-parameters-dialog-box-visual-database-tools.md
 - name: Personnaliser la quantité d'informations affichées dans les schémas (Visual Database Tools)
   href: customize-the-amount-of-information-displayed-in-diagrams-visual-database-tools.md
-- name: Supprimer un schéma de base de données (Visual Database Tools)
+- name: Supprimer un diagramme de base de données (Visual Database Tools)
   href: delete-a-database-diagram-visual-database-tools.md
 - name: Requête avec des paramètres (Visual Database Tools)
   href: query-with-parameters-visual-database-tools.md
-- name: Utiliser des schémas de base de données (Visual Database Tools)
+- name: Utiliser des diagrammes de base de données (Visual Database Tools)
   href: work-with-database-diagrams-visual-database-tools.md
 - name: Boîte de dialogue Enregistrer (Visual Database Tools)
   href: save-dialog-box-visual-database-tools.md
@@ -284,7 +285,7 @@
   href: map-many-to-many-relationships-visual-database-tools.md
 - name: Créer des relations entre des tables sur un diagramme (Visual Database Tools)
   href: create-relationships-between-tables-on-a-diagram-visual-database-tools.md
-- name: Renommer un schéma de base de données (Visual Database Tools)
+- name: Renommer un diagramme de base de données (Visual Database Tools)
   href: rename-a-database-diagram-visual-database-tools.md
 - name: Spécifier des conditions pour des groupes (Visual Database Tools)
   href: specify-conditions-for-groups-visual-database-tools.md
@@ -292,7 +293,7 @@
   href: specify-search-criteria-visual-database-tools.md
 - name: Réorganiser des tables dans des schémas (Visual Database Tools)
   href: arrange-tables-in-diagrams-visual-database-tools.md
-- name: "Procédure pas à pas\_: ajouter et modifier un schéma de base de données"
+- name: 'Procédure pas à pas : ajout et modification d’un diagramme de base de données'
   href: walkthrough-adding-and-changing-a-database-diagram.md
 - name: Propriétés de l’objet table (colonne) (Visual Database Tools)
   href: table-valued-object-column-properties-visual-database-tools.md
@@ -326,15 +327,15 @@
   href: create-update-queries-visual-database-tools.md
 - name: Boîte de dialogue Mettre à jour une table (Visual Database Tools)
   href: update-table-dialog-box-visual-database-tools.md
-- name: Copier des tables d'un schéma de base de données vers un autre (Visual Database Tools)
+- name: Copier des tables d’un diagramme de base de données vers un autre (Visual Database Tools)
   href: copy-tables-from-one-database-diagrams-to-another-visual-database-tools.md
-- name: 'Modifier la couleur de police, la taille et le style dans les schémas (Visual Database Tools)'
+- name: Modifier la couleur de police, la taille et le style dans les schémas (Visual Database Tools)
   href: change-the-font-color-size-and-style-in-diagrams-visual-database-tools.md
 - name: Vérifier des requêtes (Visual Database Tools)
   href: verify-queries-visual-database-tools.md
 - name: Outils du concepteur de requêtes et de vues (Visual Database Tools)
   href: query-and-view-designer-tools-visual-database-tools.md
-- name: Supprimer des tables de schémas de base de données (Visual Database Tools)
+- name: Supprimer des tables de diagrammes de base de données (Visual Database Tools)
   href: remove-tables-from-database-diagrams-visual-database-tools.md
 - name: Ajouter des annotations de texte aux schémas (Visual Database Tools)
   href: add-text-annotations-to-diagrams-visual-database-tools.md
@@ -346,7 +347,7 @@
   href: delete-queries-visual-database-tools.md
 - name: Propriétés de la requête (Visual Database Tools)
   href: query-properties-visual-database-tools.md
-- name: Ouvrir des schémas de base de données (Visual Database Tools)
+- name: Ouvrir des diagrammes de base de données (Visual Database Tools)
   href: open-database-diagrams-visual-database-tools.md
 - name: Spécifier plusieurs conditions de recherche pour plusieurs colonnes (Visual Database Tools)
   href: specify-multiple-search-conditions-for-multiple-columns-visual-database-tools.md
@@ -358,3 +359,9 @@
   href: sql-editor-visual-database-tools.md
 - name: Imprimer les résultats d'une requête (Visual Database Tools)
   href: print-query-results-visual-database-tools.md
+ms.openlocfilehash: 064ef933c2066684b78de29ca5001a24c734155e
+ms.sourcegitcommit: 9def1e583e012316367c7812c31505f34af7f714
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39313659"

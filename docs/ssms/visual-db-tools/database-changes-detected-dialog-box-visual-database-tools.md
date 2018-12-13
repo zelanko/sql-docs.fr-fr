@@ -24,14 +24,14 @@ ms.locfileid: "47789087"
 ---
 # <a name="database-changes-detected-dialog-box-visual-database-tools"></a>Modifications détectées dans la base de données, boîte de dialogue (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Cette boîte de dialogue apparaît si vous essayez d'enregistrer un schéma de base de données ou des tables sélectionnées, mais certains des objets de la base de données qui seront affectés par l'action d'enregistrement sont devenus obsolètes pour la base de données. Le fait d'accepter les modifications indiquées dans cette boîte de dialogue met à jour la base de données pour qu'elle corresponde à votre schéma et écrase les modifications des autres utilisateurs.  
+Cette boîte de dialogue apparaît si vous essayez d’enregistrer un diagramme de base de données ou des tables sélectionnées, mais certains des objets de la base de données qui seront affectés par l’action d’enregistrement sont devenus obsolètes pour la base de données. Le fait d'accepter les modifications indiquées dans cette boîte de dialogue met à jour la base de données pour qu'elle corresponde à votre schéma et écrase les modifications des autres utilisateurs.  
   
 > [!NOTE]  
-> Bien que vous ne puissiez pas annuler les modifications apportées à une table ou à un schéma de base de données, les modifications ne seront enregistrées dans la base de données que lorsque vous enregistrerez la table ou le schéma. Vous pouvez ignorer les modifications non enregistrées en choisissant **Non** et en fermant tous les schémas ouverts sans les enregistrer.  
+> Bien que vous ne puissiez pas annuler les modifications apportées à une table ou à un diagramme de base de données, les modifications ne seront enregistrées dans la base de données que lorsque vous enregistrerez la table ou le diagramme. Vous pouvez ignorer les modifications non enregistrées en choisissant **Non** et en fermant tous les schémas ouverts sans les enregistrer.  
   
 ## <a name="options"></a>Options  
 **Signaler les différences de détection**  
-Spécifie si cette boîte de dialogue apparaît à la prochaine tentative d'enregistrement du schéma de base de données ou des tables sélectionnées. Si l'option est activée, la boîte de dialogue continue d'apparaître chaque fois que vous enregistrez un schéma ou une table devenus obsolètes pour la base de données. Si l'option est désactivée, elle signifie que la boîte de dialogue n'apparaît pas. Par défaut, cette case est activée. Si vous décochez cette option, vous pouvez la recocher dans la boîte de dialogue **Options** .  
+Spécifie si cette boîte de dialogue apparaît à la prochaine tentative d’enregistrement du diagramme de base de données ou des tables sélectionnées. Si l'option est activée, la boîte de dialogue continue d'apparaître chaque fois que vous enregistrez un schéma ou une table devenus obsolètes pour la base de données. Si l'option est désactivée, elle signifie que la boîte de dialogue n'apparaît pas. Par défaut, cette case est activée. Si vous décochez cette option, vous pouvez la recocher dans la boîte de dialogue **Options** .  
   
 **Oui**  
 Met à jour la base de données avec toutes les modifications indiquées dans la liste.  
