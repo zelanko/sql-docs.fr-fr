@@ -299,7 +299,7 @@ Get-PowerPivotSystemService
   
 3.  Cliquez sur **Fournisseurs de données approuvés**. Vous devez voir MSOLAP.5 (Fournisseur Microsoft OLE DB pour OLAP Services 11.0). Si vous avez effectué la mise à niveau de votre installation [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] , vous verrez également MSOLAP.4 de la version antérieure.  
   
-4.  Pour plus d'informations, consultez [Add MSOLAP.5 as a Trusted Data Provider in Excel Services](../../analysis-services/power-pivot-sharepoint/add-msolap-5-as-a-trusted-data-provider-in-excel-services.md).  
+4.  Pour plus d'informations, consultez [Ajouter MSOLAP.5 en tant que fournisseur de données approuvé dans Excel Services](../../analysis-services/power-pivot-sharepoint/add-msolap-5-as-a-trusted-data-provider-in-excel-services.md).  
   
  MSOLAP.4 est décrit comme Fournisseur Microsoft OLE DB pour OLAP Services 10.0. Cette version peut être la version par défaut de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] installée avec Excel Services, ou ce peut être la version [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] . La version par défaut que SharePoint installe ne prend pas en charge l’accès aux données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . La version [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] ou ultérieure doit se connecter aux classeurs [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] sur SharePoint. Pour vérifier que vous disposez de la version [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] , suivez les instructions de la section précédente qui expliquent comment vérifier la version en consultant les propriétés du fichier.  
   
