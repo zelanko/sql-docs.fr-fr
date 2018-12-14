@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - SSIS, operators
@@ -16,12 +15,12 @@ ms.assetid: 33df3a3d-1f5c-429b-a3b9-52b7d8689089
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cbceb75a036343b0d116481c5e36e3da3aa63a85
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 1cb952d965c2ddb316b0890a03e2d10947c2e61a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51272587"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52766831"
 ---
 # <a name="operators-ssis-expression"></a>Opérateurs (expression SSIS)
   Cette section décrit les opérateurs du langage d'expression ainsi que l'associativité et la priorité des opérateurs utilisées par l'évaluateur d'expression.  
@@ -41,13 +40,13 @@ ms.locfileid: "51272587"
 |[&#40;modulo&#41; &#40;expression SSIS&#41;](modulo-ssis-expression.md)|Fournit le reste entier de la division de la première expression numérique par la deuxième.|  
 |[&#124;&#124; &#40;OR logique&#41; &#40;expression SSIS&#41;](logical-or-ssis-expression.md)|Effectue une opération OR logique.|  
 |[&& &#40;AND logique&#41; &#40;expression SSIS&#41;](logical-and-ssis-expression.md)|Effectue une opération AND logique.|  
-|[\! &#40;NOT logique&#41; &#40;SSIS Expression&#41;](logical-not-ssis-expression.md)|Inverse un opérande booléen.|  
+|[\! &#40;NOT logique&#41; &#40;expression SSIS&#41;](logical-not-ssis-expression.md)|Inverse un opérande booléen.|  
 |[&#124; &#40;opération OR inclusive au niveau du bit&#41; &#40;expression SSIS&#41;](bitwise-inclusive-or-ssis-expression.md)|Effectue une opération OR au niveau du bit avec deux valeurs entières.|  
 |[^ &#40;opération OR exclusive au niveau du bit&#41; &#40;expression SSIS&#41;](bitwise-exclusive-or-ssis-expression.md)|Effectue une opération OR exclusive au niveau du bit avec deux valeurs entières.|  
 |[& &#40;AND au niveau du bit&#41; &#40;expression SSIS&#41;](bitwise-and-ssis-expression.md)|Effectue une opération AND au niveau du bit avec deux valeurs entières.|  
 |[~ &#40;Not au niveau du bit&#41; &#40;expression SSIS&#41;](bitwise-not-ssis-expression.md)|Effectue une négation au niveau du bit d'un entier.|  
 |[== &#40;Égal&#41; &#40;expression SSIS&#41;](equal-ssis-expression.md)|Effectue une comparaison pour déterminer si deux expressions sont égales.|  
-|[!= &#40;Non égal&#41; &#40;expression SSIS&#41;](unequal-ssis-expression.md)|Effectue une comparaison pour déterminer si deux expressions sont différentes.|  
+|[\!= &#40;Non égal&#41; &#40;expression SSIS&#41;](unequal-ssis-expression.md)|Effectue une comparaison pour déterminer si deux expressions sont différentes.|  
 |[&#62; &#40;Supérieur à&#41; &#40;expression SSIS&#41;](greater-than-ssis-expression.md)|Effectue une comparaison pour déterminer si la première expression est supérieure à la deuxième.|  
 |[&#60; &#40;Inférieur à&#41; &#40;expression SSIS&#41;](less-than-ssis-expression.md)|Effectue une comparaison pour déterminer si la première expression est inférieure à la deuxième.|  
 |[&#62;= &#40;Supérieur ou égal à&#41; &#40;expression SSIS&#41;](greater-than-or-equal-to-ssis-expression.md)|Effectue une comparaison pour déterminer si la première expression est supérieure ou égale à la deuxième.|  
