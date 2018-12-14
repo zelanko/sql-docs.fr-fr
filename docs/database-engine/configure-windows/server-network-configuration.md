@@ -53,7 +53,7 @@ ms.locfileid: "51600279"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge l'authentification Kerberos. Pour plus d’informations, consultez [Inscrire un nom de principal du service pour les connexions Kerberos](../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md) et [Gestionnaire de Configuration de Microsoft Kerberos pour SQL Server](https://www.microsoft.com/download/details.aspx?id=39046).  
   
 ### <a name="registering-a-server-principal-name-spn"></a>Inscription d'un nom principal de service (SPN)  
- Le service d'authentification Kerberos utilise un nom de principal de service (SPN) pour authentifier un service. Pour plus d'informations, consultez [Register a Service Principal Name for Kerberos Connections](../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md).  
+ Le service d'authentification Kerberos utilise un nom de principal de service (SPN) pour authentifier un service. Pour plus d’informations, consultez [Inscrire un nom de principal du service pour les connexions Kerberos](../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md).  
   
  Les noms de principaux du service peuvent également être utilisés pour sécuriser davantage l'authentification client lors d'une connexion avec NTLM. Pour plus d’informations, consultez [Se connecter au moteur de base de données à l’aide de la protection étendue](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md).  
   
