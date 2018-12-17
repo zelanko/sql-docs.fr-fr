@@ -115,7 +115,7 @@ Cannot insert duplicate key row in object <system table> with unique index 'inde
 ```
 
 > [!IMPORTANT]
-> Si vous avez des index columnstore, consultez [Considerations when you tune the queries with Columnstore indexes on clone databases](https://blogs.msdn.microsoft.com/sql_server_team/considerations-when-tuning-your-queries-with-columnstore-indexes-on-clone-databases/) pour mettre à jour les statistiques d’index columnstore avant d’exécuter la commande **DBCC CLONEDATABASE**.  À compter de SQL Server 2019, les étapes manuelles listées dans l’article ci-dessus ne seront plus requises, car la commande **DBCC CLONEDATABASE** collecte automatiquement ces informations.
+> Si vous avez des index columnstore, consultez [Remarques à prendre en compte lors de l'optimisation des requêtes avec des index Columnstore sur des bases de données clones](https://blogs.msdn.microsoft.com/sql_server_team/considerations-when-tuning-your-queries-with-columnstore-indexes-on-clone-databases/) pour mettre à jour les statistiques d’index columnstore avant d’exécuter la commande **DBCC CLONEDATABASE**.  À compter de SQL Server 2019, les étapes manuelles listées dans l’article ci-dessus ne seront plus requises, car la commande **DBCC CLONEDATABASE** collecte automatiquement ces informations.
 
 Pour plus d’informations sur la sécurité des données dans les bases de données clonées, consultez [Understanding data security in cloned databases](https://blogs.msdn.microsoft.com/sql_server_team/understanding-data-security-in-cloned-databases-created-using-dbcc-clonedatabase/).
 
