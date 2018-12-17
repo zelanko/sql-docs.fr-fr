@@ -77,7 +77,7 @@ Ressource d’instruction. Si l’instruction ne peut pas être créée et/ou ex
 ## <a name="remarks"></a>Notes   
 La fonction **sqlsrv_query** convient bien aux requêtes à usage unique. Elle doit être le choix par défaut pour exécuter des requêtes, sauf en cas de circonstances particulières. Cette fonction fournit une méthode simplifiée pour exécuter une requête avec une quantité minimale de code. La fonction **sqlsrv_query** effectue à la fois la préparation et l’exécution des instructions. Vous pouvez l’utiliser pour exécuter des requêtes paramétrables.  
   
-Pour plus d’informations, consultez [How to: Retrieve Output Parameters Using the SQLSRV Driver](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md).  
+Pour plus d’informations, consultez [Procédure : récupérer des paramètres de sortie à l’aide du pilote SQLSRV](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md).  
   
 ## <a name="example"></a> Exemple  
 Dans l’exemple suivant, une seule ligne est insérée dans la table *Sales.SalesOrderDetail* de la base de données AdventureWorks. L’exemple part du principe que SQL Server et la base de données [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) sont installés sur l’ordinateur local.  Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
