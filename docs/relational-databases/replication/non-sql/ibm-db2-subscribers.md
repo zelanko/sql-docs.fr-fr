@@ -120,7 +120,7 @@ ms.locfileid: "51672378"
 |**geography**|IMAGE|  
 |**geometry**|IMAGE|  
 |**hierarchyid**|IMAGE|  
-|**image**|VARCHAR(0) FOR BIT DATA|  
+|**image**|VARCHAR(0) FOR BIT DATA*|  
 |**into**|INT|  
 |**money**|DECIMAL(19,4)|  
 |**nchar(1-4000)**|VARCHAR(1-4000)|  
@@ -142,7 +142,7 @@ ms.locfileid: "51672378"
 |**uniqueidentifier**|CHAR(38)|  
 |**varbinary(1-8000)**|VARCHAR(1-8000) FOR BIT DATA|  
 |**varchar(1-8000)**|VARCHAR(1-8000)|  
-|**varbinary(max)**|VARCHAR(0) FOR BIT DATA|  
+|**varbinary(max)**|VARCHAR(0) FOR BIT DATA*|  
 |**varchar(max)**|VARCHAR(0)*|  
 |**xml**|VARCHAR(0)*|  
   
