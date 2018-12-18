@@ -49,7 +49,7 @@ Un travail maître [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Age
 ### <a name="Security"></a>Sécurité  
   
 #### <a name="Permissions"></a>Permissions  
-Vous pouvez modifier uniquement les travaux dont vous êtes propriétaire, à moins d'être membre du rôle de serveur fixe **sysadmin** . Pour plus d'informations, consultez [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md).  
+Vous pouvez modifier uniquement les travaux dont vous êtes propriétaire, à moins d'être membre du rôle de serveur fixe **sysadmin** . Pour plus d'informations, consultez [Implémenter la sécurité de SQL Server Agent](../../ssms/agent/implement-sql-server-agent-security.md).  
   
 ## <a name="SSMSProcedure"></a>Utilisation de SQL Server Management Studio  
   
