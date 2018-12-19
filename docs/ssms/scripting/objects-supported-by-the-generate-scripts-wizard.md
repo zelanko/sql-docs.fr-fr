@@ -30,7 +30,7 @@ ms.locfileid: "51643424"
 |Rôle d'application|Rôle de base de données|schéma|Agrégat défini par l'utilisateur|Affichage*|  
 |Assembly|Contrainte DEFAULT|Procédure stockée*|Type de données défini par l'utilisateur|Collection de schémas XML|  
 |Contrainte CHECK|Catalogue de texte intégral|Synonyme|Fonction définie par l'utilisateur||  
-|Procédure stockée CLR (Common Language Runtime)|Index|Table de charge de travail|Table définie par l'utilisateur||  
+|Procédure stockée CLR (Common Language Runtime)*|Index|Table de charge de travail|Table définie par l'utilisateur||  
 |Fonction CLR définie par l'utilisateur|Règle|Utilisateur**|Type défini par l'utilisateur||  
   
  *Publié sans chiffrement.  
