@@ -205,7 +205,7 @@ $Tcp
  Pour obtenir des détails supplémentaires sur [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], consultez [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md).  
   
 ##  <a name="BKMK_Auditing"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit  
- Vous pouvez utiliser [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)] à distance pour définir un audit. Une fois l'audit créé et activé, la cible reçoit des entrées. Pour plus d’informations sur la création et la gestion d’audits [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [SQL Server Audit &#40Moteur de base de données&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
+ Vous pouvez utiliser [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)] à distance pour définir un audit. Une fois l'audit créé et activé, la cible reçoit des entrées. Pour plus d’informations sur la création et la gestion d’audits [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [SQL Server Audit &#40;Moteur de base de données &#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
 ##  <a name="BKMK_CMD"></a> Utilitaires de ligne de commande  
  Vous pouvez utiliser les utilitaires d'invite de commandes suivants pour écrire des opérations [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur un ordinateur Server Core. Le tableau suivant contient la liste des utilitaires d'invite de commandes fournis avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour Server Core :  

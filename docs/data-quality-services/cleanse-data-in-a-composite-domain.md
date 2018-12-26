@@ -68,6 +68,6 @@ ms.locfileid: "52617431"
   
  Le profilage fournira probablement des statistiques de précision fiables pour les domaines composites, car vous pouvez mesurer la précision de plusieurs colonnes ensemble. Comme la valeur de ces données se trouve dans l'agrégation composite, vous pouvez mesurer la précision avec un domaine composite.  
   
- Pour plus d’informations sur le profilage des données pendant l’activité de nettoyage, consultez [Statistiques du Générateur de profils](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md#Profiler) dans [Nettoyer des données à l’aide de la base de connaissances DQS &#40 ;interne&#41;](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md).  
+ Pour plus d’informations sur le profilage des données pendant l’activité de nettoyage, consultez [Statistiques du Générateur de profils](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md#Profiler) dans [Nettoyer des données à l’aide de la base de connaissances DQS &#40;interne&#41;](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md).  
   
   
