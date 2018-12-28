@@ -337,7 +337,7 @@ Valeur par défaut pour le paramètre. Si une valeur *default* est définie, la 
   
  Dans les fonctions table en ligne, la valeur de retour TABLE est définie via une instruction SELECT unique. Aucune variable retournée n'est associée à une fonction en ligne.  
   
- <a name="mstvf"></a> Dans les fonctions table à instructions multiples, @*return_variable* est une variable TABLE, utilisée pour stocker et cumuler les lignes à retourner comme valeur de la fonction. @*return_variable* peut être spécifié uniquement pour les fonctions [!INCLUDE[tsql](../../includes/tsql-md.md)], et pas pour les fonctions CLR.  
+ <a name="mstvf"></a> Dans les fonctions table à instructions multiples, @*return_variable* est une variable TABLE, utilisée pour stocker et cumuler les lignes à retourner comme valeur de la fonction. @ *return_variable* peut être spécifié uniquement pour les fonctions [!INCLUDE[tsql](../../includes/tsql-md.md)], et pas pour les fonctions CLR.  
   
  *select_stmt*  
  Représente l’instruction SELECT unique qui définit la valeur de retour d’une fonction table en ligne.  

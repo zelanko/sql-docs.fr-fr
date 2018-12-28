@@ -132,7 +132,7 @@ Spécifie le nom du nouvel index.
   
 Si la table a déjà un index cluster columnstore, vous pouvez spécifier le même nom que l’index existant, ou vous pouvez utiliser l’option DROP EXISTING pour spécifier un nouveau nom.  
   
-ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*  
+ON [*database_name*. [*schema_name* ] . |  *schema_name* . ] *table_name*  
    Spécifie le nom à une, deux ou trois parties de la table à stocker en tant qu'index columnstore cluster. Si la table est un segment ou un index cluster, elle est convertie de rowstore en columnstore. Si la table est déjà un index columnstore, cette instruction reconstruit l’index cluster columnstore.  
   
 #### <a name="with-options"></a>Options WITH  

@@ -64,7 +64,7 @@ Les fonctionnalités [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s
   
 - Curseurs de jeu de clés et dynamiques sur les requêtes qui accèdent aux tables à mémoire optimisée. Ces curseurs sont dégradés en statique et en lecture seule.  
   
-- L’utilisation de **MERGE INTO***cible*, où *cible* est une table à mémoire optimisée, n’est pas prise en charge.
+- L’utilisation de **MERGE INTO** *cible* , où *cible* est une table à mémoire optimisée, n’est pas prise en charge.
     - **MERGE USING** *source* est pris en charge pour les tables à mémoire optimisée.  
   
 - Le type de données ROWVERSION (TIMESTAMP) n’est pas pris en charge. Pour plus d’informations, consultez [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md).
