@@ -98,7 +98,7 @@ PARSE ( string_value AS data_type [ USING culture ] )
   
 |Nom complet|Alias|LCID|Culture spécifique|  
 |---------------|-----------|----------|----------------------|  
-|us_english|Anglais|1033|fr-FR|  
+|us_english|Anglais|1033|en-US|  
 |Deutsch|German|1031|de-DE|  
 |Français|Français|1036|fr-FR|  
 |日本語|Japonais|1041|ja-JP|  
