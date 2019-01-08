@@ -1,7 +1,7 @@
 ---
 title: Sauvegarder la clé principale du service | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 01/02/2019
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -12,59 +12,49 @@ ms.assetid: f60b917c-6408-48be-b911-f93b05796904
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: a5eafe9bfc66dca1949d308b307addad059d3bef
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8ad7bbe4ff7ab1ccf72e84c51d91c1732face24a
+ms.sourcegitcommit: fa2f85b6deeceadc0f32aa7f5f4e2b6e4d99541c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856927"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53997481"
 ---
 # <a name="back-up-the-service-master-key"></a>Sauvegarder la clé principale du service
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Cet article explique comment sauvegarder la clé principale du service dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l’aide de [!INCLUDE[tsql](../../../includes/tsql-md.md)]. La clé principale du service représente la racine de la hiérarchie de chiffrement. Elle doit être sauvegardée et stockée en lieu sûr, en dehors de votre lieu de travail. La création de cette sauvegarde doit être l'une des premières actions administratives effectuées sur le serveur.  
+
+## <a name="before-you-begin"></a>Avant de commencer  
   
- **Dans cet article**  
+### <a name="limitations-and-restrictions"></a>Limitations et restrictions  
+
+- La clé principale doit être ouverte et, par conséquent, déchiffrée avant d'être sauvegardée. Si elle est chiffrée avec la clé principale du service, la clé principale ne doit pas être explicitement ouverte ; toutefois, si la clé principale est chiffrée uniquement avec un mot de passe, elle doit être ouverte explicitement.  
   
--   **Avant de commencer :**  
+- Nous vous conseillons de sauvegarder la clé principale dès sa création et de stocker cette sauvegarde en lieu sûr, en dehors de votre lieu de travail.  
   
-     [Limitations et restrictions](#Restrictions)  
+## <a name="security"></a>Sécurité  
   
-     [Sécurité](#Security)  
+### <a name="permissions"></a>Permissions
+Requiert l'autorisation CONTROL sur la base de données.  
   
--   [Pour sauvegarder la clé principale du service](#Procedure)  
+## <a name="using-transact-sql"></a>Utilisation de Transact-SQL  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+### <a name="to-back-up-the-service-master-key"></a>Pour sauvegarder la clé principale du service
   
-###  <a name="Restrictions"></a> Limitations et restrictions  
+1. Dans [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], connectez-vous à l'instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] contenant la clé principale du service à sauvegarder.  
   
--   La clé principale doit être ouverte et, par conséquent, déchiffrée avant d'être sauvegardée. Si elle est chiffrée avec la clé principale du service, la clé principale ne doit pas être explicitement ouverte ; toutefois, si la clé principale est chiffrée uniquement avec un mot de passe, elle doit être ouverte explicitement.  
+2. Choisissez un mot de passe qui servira à chiffrer la clé principale du service sur le support de sauvegarde. Ce mot de passe est sujet à des vérifications de complexité. Pour plus d'informations, consultez [Password Policy](../../../relational-databases/security/password-policy.md).  
   
--   Nous vous conseillons de sauvegarder la clé principale dès sa création et de stocker cette sauvegarde en lieu sûr, en dehors de votre lieu de travail.  
+3. Procurez-vous un support de sauvegarde amovible pour stocker une copie de la clé sauvegardée.  
   
-###  <a name="Security"></a> Sécurité  
+4. Identifiez un répertoire NTFS où créer la sauvegarde de la clé. Ce répertoire est l’emplacement où vous allez créer le fichier spécifié à l’étape suivante. Le répertoire doit être protégé par des listes de contrôle d'accès très restrictives.  
   
-####  <a name="Permissions"></a> Permissions  
- Requiert l'autorisation CONTROL sur la base de données.  
+5. Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
-##  <a name="Procedure"></a> Utilisation de Transact-SQL  
+6. Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   
-#### <a name="to-back-up-the-service-master-key"></a>Pour sauvegarder la clé principale du service  
+7. Copiez et collez l'exemple suivant dans la fenêtre de requête, puis cliquez sur **Exécuter**.  
   
-1.  Dans [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], connectez-vous à l'instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] contenant la clé principale du service à sauvegarder.  
-  
-2.  Choisissez un mot de passe qui servira à chiffrer la clé principale du service sur le support de sauvegarde. Ce mot de passe est sujet à des vérifications de complexité. Pour plus d'informations, consultez [Password Policy](../../../relational-databases/security/password-policy.md).  
-  
-3.  Procurez-vous un support de sauvegarde amovible pour stocker une copie de la clé sauvegardée.  
-  
-4.  Identifiez un répertoire NTFS où créer la sauvegarde de la clé. Ce répertoire est l’emplacement où vous allez créer le fichier spécifié à l’étape suivante. Le répertoire doit être protégé par des listes de contrôle d'accès très restrictives.  
-  
-5.  Dans l'**Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
-  
-6.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
-  
-7.  Copiez et collez l'exemple suivant dans la fenêtre de requête, puis cliquez sur **Exécuter**.  
-  
-    ```  
+    ```sql
     -- Creates a backup of the service master key.
     USE master;
     GO
@@ -74,12 +64,10 @@ ms.locfileid: "47856927"
     ```  
   
     > [!NOTE]  
-    >  Le chemin d'accès à la clé et le mot de passe de la clé (s'il existe) seront différents de ce qui est indiqué ci-dessus. Vérifiez que les deux sont spécifiques à votre installation de serveur et de clé.  
+    > Le chemin d'accès à la clé et le mot de passe de la clé (s'il existe) seront différents de ce qui est indiqué ci-dessus. Vérifiez que les deux sont spécifiques à votre installation de serveur et de clé.
   
-8.  Copiez le fichier sur le support de sauvegarde et vérifiez la copie.  
+8. Copiez le fichier sur le support de sauvegarde et vérifiez la copie.  
   
 9. Conservez la sauvegarde en lieu sûr, en dehors de votre lieu de travail.  
   
  Pour plus d’informations, consultez [OPEN MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/open-master-key-transact-sql.md) et [BACKUP MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/backup-master-key-transact-sql.md).  
-  
-  

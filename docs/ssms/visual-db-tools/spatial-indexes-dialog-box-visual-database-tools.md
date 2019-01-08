@@ -13,12 +13,12 @@ ms.assetid: 4d84239a-68c7-4aa2-8602-2b51dd07260f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: eb31f067ceb052a165cd6e3830e778d6af15e875
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 9e5b9b4d25c7fd6f0384c3390e09c4b427228ebb
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509362"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589613"
 ---
 # <a name="spatial-indexes-dialog-box-visual-database-tools"></a>Index spatiaux, boîte de dialogue (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -111,7 +111,7 @@ Donne aux pages de cet index le même pourcentage d'espace libre (de remplissage
 **Verrouillage de page autorisé**  
 Spécifie si le verrouillage au niveau des pages est autorisé dans cet index. L'autorisation ou non du verrouillage au niveau de la page affecte les performances de la base de données.  
   
-**Recalculer** **les statistiques**  
+**Recalculer les statistiques**  
 Spécifie si de nouvelles statistiques sont calculées une fois l'index créé. Le calcul des statistiques ralentit la génération des index, mais améliore généralement les performances des requêtes.  
   
 **Verrouillage de ligne autorisé**  

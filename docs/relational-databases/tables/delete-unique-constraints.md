@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6b93de07afe217b475c55e74170a5b2e453494b5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2c61ba41037065c49e4a6e49a5cd0adc3b760a10
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630220"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589593"
 ---
 # <a name="delete-unique-constraints"></a>Supprimer des contraintes UNIQUE
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -69,7 +69,7 @@ ms.locfileid: "47630220"
   
 4.  Cliquez sur **Supprimer**.  
   
-5.  Dans le menu **Fichier**, cliquez sur **Enregistrer** *nom de la table*.  
+5.  Dans le menu **Fichier**, cliquez sur **Enregistrer** _nom de la table_.  
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   

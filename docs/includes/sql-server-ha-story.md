@@ -35,7 +35,7 @@ Comme les groupes de disponibilité fournissent une protection uniquement au niv
 
 Un groupe de disponibilité a également un autre composant qui est l’écouteur. Il permet aux applications et aux utilisateurs finaux de se connecter sans avoir besoin de connaître l’instance de SQL Server qui héberge le réplica principal. Chaque groupe de disponibilité a son propre écouteur. Bien que les implémentations de l’écouteur soient légèrement différentes sur Windows Server et Linux, la fonctionnalité qu’il fournit et son utilisation sont identiques. L’image ci-dessous montre un groupe de disponibilité Windows Server qui utilise un cluster de basculement Windows Server (WSFC). La disponibilité repose sur un cluster sous-jacent au niveau de la couche du système d’exploitation, aussi bien sur Linux que sur Windows Server. L’exemple montre une configuration simple de deux serveurs, ou nœuds, où le cluster sous-jacent est un cluster WSFC. 
 
-![Groupe de disponibilité simple][SimpleAG]
+![Groupe de disponibilité simple](media/sql-server-ha-story/image1.png)
  
 Les éditions Standard et Entreprise prennent chacune en charge un nombre maximal de réplicas différent. Un groupe de disponibilité dans l’édition Standard, appelé groupe de disponibilité de base, prend en charge deux réplicas (un réplica principal et un secondaire) et une seule base de données dans le groupe de disponibilité. L’édition Entreprise permet non seulement de configurer plusieurs bases de données dans un seul groupe de disponibilité, mais prend en charge également jusqu'à neuf réplicas au total (un réplica principal et huit secondaires). L’édition Entreprise fournit d’autres avantages comme des réplicas secondaires accessibles en lecture, la possibilité d’effectuer des sauvegardes d’un réplica secondaire, et bien plus encore.
 
@@ -68,7 +68,7 @@ Parce que la pile de cluster est différente, les groupes de disponibilité sont
 
 * WSFC 
 * External
-* Aucun
+* None
 
 Tous les groupes de disponibilité qui ont besoin de disponibilité doivent utiliser un cluster sous-jacent. Dans le cas de SQL Server 2017, il s’agit d’un cluster WSFC ou de Pacemaker. Pour les groupes de disponibilité de base Windows Server qui utilisent un cluster WSFC sous-jacent, le type de cluster par défaut est WSFC et ne doit pas nécessairement être défini. Pour les groupes de disponibilité Linux, lors de la création du groupe de disponibilité, vous devez définir le type de cluster sur Externe. L’intégration à Pacemaker est configurée après la création du groupe de disponibilité, tandis que sur un cluster WSFC, elle est effectuée au moment de la création.
 
@@ -81,13 +81,13 @@ Pour ceux qui veulent simplement ajouter des copies de base de données en lectu
 
 La capture d’écran ci-dessous montre la prise en charge des différents types de cluster dans SSMS. Vous devez exécuter la version 17.1 ou ultérieure. La capture d’écran ci-dessous concerne la version 17.2.
 
-![Options de groupe de disponibilité dans SSMS][SSMSAGOptions]
+![Options de groupe de disponibilité dans SSMS](media/sql-server-ha-story/image2.png)
  
 ##### <a name="requiredsynchronizedsecondariestocommit"></a>REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT
 
 Dans SQL Server 2016, la prise en charge du nombre de réplicas synchrones est passée de deux à trois dans l’édition Entreprise. Toutefois, si un réplica secondaire était synchronisé, mais que l’autre rencontrait un problème, il n’existait aucun moyen de contrôler le comportement pour indiquer au réplica principal d’attendre le réplica concerné ou de continuer. Cela signifie que le réplica principal à un moment donné continue de recevoir du trafic en écriture, même si le réplica secondaire n’est pas synchronisé, ce qui implique une perte de données sur le réplica secondaire.
 Dans SQL Server 2017, il existe désormais une option pour contrôler le comportement en cas de réplicas synchrones : REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT. L’option fonctionne de la façon suivante :
-* Il existe trois valeurs possibles : 0, 1 et 2
+* Il existe trois valeurs possibles : 0, 1 et 2
 * La valeur est le nombre de réplicas secondaires qui doivent être synchronisés, ce qui a des implications sur la perte de données, la disponibilité du groupe de disponibilité et le basculement
 * Pour les clusters WSFC et un type de cluster Aucun, la valeur par défaut est 0 et peut être définie manuellement sur 1 ou 2
 * Pour un type de cluster Externe, par défaut, le mécanisme de cluster définit cette valeur qui peut être remplacée manuellement. Pour les trois réplicas synchrones, la valeur par défaut est égale à 1.
@@ -111,11 +111,11 @@ Autre amélioration de la prise en charge de DTC pour les groupes de disponibili
 #### <a name="always-on-failover-cluster-instances"></a>Instances de cluster de basculement Always On
 Les installations en cluster sont une fonctionnalité de SQL Server depuis la version 6.5. Les instances FCI sont une méthode testée qui permet d’assurer la disponibilité d’une installation entière de SQL Server, c’est-à-dire une instance. Cela signifie que tout ce que contient l’instance, y compris les bases de données, les travaux de SQL Server Agent, les serveurs liés, etc., est déplacé sur un autre serveur si le serveur sous-jacent rencontre un problème. Toutes les instances FCI nécessitent une sorte de stockage partagé, même s’il est fourni sur un réseau. Les ressources d’une instance FCI peuvent uniquement être exécutées et détenues par un seul nœud à un moment donné. Dans l’image ci-dessous, le premier nœud du cluster possède l’instance FCI, ce qui signifie également qu’il possède les ressources de stockage partagé associées, représenté par la ligne continue vers le stockage.
 
-![Instance de cluster de basculement][BasicFCI]
+![Instance de cluster de basculement](media/sql-server-ha-story/image3.png)
  
 Après un basculement, la propriété change, comme illustré dans l’image ci-dessous.
 
-![Après le basculement][PostFailoverFCI]
+![Après le basculement](media/sql-server-ha-story/image4.png)
  
 Il n’y a pas de perte de données avec une instance FCI, mais le stockage partagé sous-jacent est un point d’échec unique, car il n’y a qu’une seule copie des données. Les instances FCI sont souvent associées à une autre méthode de disponibilité, comme un groupe de disponibilité ou la copie des journaux de transaction, pour avoir des copies redondantes des bases de données. La méthode supplémentaire déployée doit utiliser un stockage séparé physiquement de l’instance FCI. Quand l’instance FCI bascule sur un autre nœud, elle s’arrête sur un nœud et démarre sur l’autre, ce qui a le même effet que si vous éteignez un serveur et le rallumez. Une instance FCI suit le processus de récupération normal, ce qui signifie que toutes les transactions qui doivent être restaurées par progression le sont, et toutes les transactions incomplètes sont annulées. Par conséquent, la base de données est cohérente par rapport à un point de données jusqu’au moment de l’échec ou du basculement manuel, il n’y a donc aucune perte de données. Les bases de données sont disponibles uniquement après la récupération, le temps de récupération dépend donc de plusieurs facteurs et est généralement plus long que le basculement sur un groupe de disponibilité. L’inconvénient est que quand vous basculez un groupe de disponibilité, des tâches supplémentaires peuvent être nécessaires pour que la base de données soit utilisable, comme l’activation d’un travail de SQL Server Agent.
 
@@ -132,7 +132,7 @@ Si les objectifs de point de récupération et de délai de récupération sont 
 > [!IMPORTANT] 
 > Sur Linux, les travaux de SQL Server Agent ne font pas partie de l’installation de SQL Server elle-même. Ils sont disponibles dans le package mssql-server-Agent jobs qui doit également être installé pour utiliser la copie des journaux de transaction.
 
-![Copie des journaux de transactions][LogShipping]
+![Copie des journaux de transactions](media/sql-server-ha-story/image5.png)
  
 Le principal avantage de l’utilisation de la copie des journaux de transaction dans une capacité est sans doute qu’elle prend en compte l’erreur humaine. L’application des journaux de transactions peut être différée. Par conséquent, si un utilisateur envoie une commande de type UPDATE sans clause WHERE, le serveur de secours peut ne pas avoir pris en compte le changement et vous pouvez donc l’utiliser pendant que vous réparez le système principal. Bien que la copie des journaux de transaction soit facile à configurer, le basculement du réplica principal sur un secours semi-automatique, appelé changement de rôle, est toujours manuel. Un changement de rôle est lancé via Transact-SQL et, tout comme pour un groupe de disponibilité, tous les objets qui ne sont pas capturés dans le journal des transactions doivent être synchronisés manuellement. Par ailleurs, la copie des journaux de transaction doit être configurée pour chaque base de données, tandis qu’un seul groupe de disponibilité peut contenir plusieurs bases de données. Contrairement au groupe de disponibilité ou à l’instance FCI, la copie des journaux de transaction ne récupère rien pour le changement de rôle. Les applications doivent être en mesure de le gérer. Des techniques comme l’alias DNS (CNAME) peuvent être utilisées, mais il existe des avantages et des inconvénients, par exemple, le temps que prend le système DNS pour l’actualisation après le basculement.
 
@@ -144,17 +144,17 @@ Quand votre emplacement de disponibilité principal subit un événement catastr
 
 L’un des avantages des groupes de disponibilité est que la haute disponibilité et la récupération d’urgence peuvent être configurées à l’aide d’une seule fonctionnalité. S’il n’est pas nécessaire de garantir la haute disponibilité du stockage partagé, il est bien plus facile d’avoir des réplicas locaux dans un seul centre de données pour la haute disponibilité et des réplicas distants dans d’autres centres de données pour la récupération d’urgence, chacun avec un stockage séparé. La redondance entraîne en contrepartie des copies supplémentaires de la base de données. L’exemple ci-dessous illustre un groupe de disponibilité sur plusieurs centres de données. Un seul réplica principal est responsable de la synchronisation de tous les réplicas secondaires.
 
-![Groupe de disponibilité][AG]
+![Groupe de disponibilité](media/sql-server-ha-story/image6.png)
  
 À l’exception des groupes de disponibilité avec un type de cluster Aucun, les groupes de disponibilité nécessitent que tous les réplicas fassent partie du même cluster sous-jacent, qu’il s’agisse d’un cluster WSFC ou de Pacemaker. Cela signifie que, dans l’illustration ci-dessus, le cluster WSFC est étiré sur deux centres de données différents, ce qui augmente la complexité, quelle que soit la plateforme (Windows Server ou Linux). Le fait d’étirer les clusters sur la distance ajoute de la complexité. À compter de SQL Server 2016, un groupe de disponibilité distribué permet à un groupe de disponibilité de configurer des groupes de disponibilité sur des clusters différents. Ceci permet de découpler l’exigence selon laquelle tous les nœuds doivent participer au même cluster et facilite donc la configuration de la récupération d’urgence. Pour plus d’informations sur les groupes de disponibilité distribués, consultez [Groupes de disponibilité distribués](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/distributed-availability-groups).
 
-![Groupe de disponibilité distribué][DAG]
+![Groupe de disponibilité distribué](media/sql-server-ha-story/image11.png)
  
 ### <a name="always-on-failover-cluster-instances"></a>Instances de cluster de basculement Always On
 
 Les instances FCI peuvent être utilisées pour la récupération d’urgence. Tout comme avec un groupe de disponibilité normal, le mécanisme de cluster sous-jacent doit également être étendu à tous les emplacements, ce qui augmente la complexité. Il existe un élément supplémentaire à prendre en compte pour les instances FCI : le stockage partagé. Les mêmes disques doivent être disponibles dans les sites principal et secondaires. Une méthode externe (comme les fonctionnalités fournies par le fournisseur de stockage au niveau de la couche matérielle ou le réplica de stockage dans Windows Server) est donc nécessaire pour vérifier que les disques utilisés par l’instance FCI existent ailleurs. 
 
-![Instance FCI Always On][AlwaysOnFCI]
+![Instance FCI Always On](media/sql-server-ha-story/image8.png)
  
 ### <a name="log-shipping"></a>Copie des journaux de transaction
 La copie des journaux de transaction est l’une des méthodes les plus anciennes pour la récupération d’urgence des bases de données SQL Server. La copie des journaux de transaction est souvent utilisée conjointement avec les groupes de disponibilité et les instances FCI pour assurer une récupération d’urgence économique et plus simple par rapport à d’autres options plus complexes en raison de l’environnement, des compétences administratives ou du budget. De la même façon que la haute disponibilité pour la copie des journaux de transaction, de nombreux environnements diffèrent le chargement d’un journal de transactions pour prendre en compte l’erreur humaine.
@@ -174,7 +174,7 @@ Si l’objectif est de migrer vers de nouveaux serveurs et de ne pas changer la 
 
 Les groupes de disponibilité distribués permettent eux aussi de migrer vers une nouvelle configuration ou de mettre à niveau SQL Server. Comme un groupe de disponibilité distribué prend en charge différents groupes de disponibilité sous-jacents sur différentes architectures, vous pouvez par exemple passer de SQL Server 2016 exécuté sur Windows Server 2012 R2 à SQL Server 2017 exécuté sur Windows Server 2016. 
 
-![Groupe de disponibilité distribué][image10]
+![Groupe de disponibilité distribué](media/sql-server-ha-story/image10.png)
 
 Enfin, les groupes de disponibilité avec un type de cluster Aucun peuvent également être utilisés pour la migration ou la mise à niveau. Comme vous ne pouvez pas mélanger et mettre en correspondance différents types de cluster dans une configuration standard de groupe de disponibilité, tous les réplicas doivent être de type Aucun. Un groupe de disponibilité distribué peut être utilisé pour englober des groupes de disponibilité configurés avec différents types de cluster. Cette méthode est également prise en charge sur différentes plateformes de système d’exploitation.
 
@@ -218,7 +218,7 @@ Avant d’aborder les scénarios multiplateformes et d’interopérabilité, vou
 
 Les groupes de disponibilité distribués sont conçus pour englober les configurations de groupe de disponibilité, que les deux clusters sous-jacents des groupes de disponibilité soient deux clusters WSFC distincts, des distributions Linux ou un cluster WSFC et une distribution Linux. Le groupe de disponibilité distribué est la méthode principale pour une solution multiplateforme. Un groupe de disponibilité distribué constitue également la solution principale pour les migrations comme la conversion d’une infrastructure SQL Server basée sur Windows Server en infrastructure basée sur Linux si tel est le souhait de votre entreprise. Comme indiqué ci-dessus, les groupes de disponibilité et notamment les groupes de disponibilité distribués réduisent le temps d’indisponibilité d’une application. Voici un exemple de groupe de disponibilité distribué qui englobe un cluster WSFC et Pacemaker.
 
-![Groupe de disponibilité distribué][BasicDAG]
+![Groupe de disponibilité distribué](media/sql-server-ha-story/image9.png)
  
 Si un groupe de disponibilité est configuré avec un type de cluster Aucun, il peut s’étendre sur Windows Server et Linux, ainsi que sur plusieurs distributions Linux. Comme cette configuration n’est pas vraiment une configuration de haute disponibilité, elle ne doit pas être utilisée pour les déploiements critiques, mais plutôt dans des scénarios de migration/mise à jour ou d’échelle lecture.
 
@@ -230,12 +230,12 @@ La copie des journaux de transaction est uniquement basée sur la sauvegarde et 
 
 Depuis leur introduction dans SQL Server 2012, les réplicas secondaires peuvent être utilisés pour les requêtes en lecture seule. Il existe deux manières de le faire avec un groupe de disponibilité : en autorisant un accès direct au réplica secondaire et en [configurant un routage en lecture seule](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server) qui nécessite l’utilisation de l’écouteur.  SQL Server 2016 a introduit la possibilité d’équilibrer la charge des connexions en lecture seule via l’écouteur à l’aide d’un algorithme de type tourniquet (Round Robin), ce qui permet aux demandes en lecture seule d’être réparties sur tous les réplicas accessibles en lecture. 
 
-> [!NOTE] 
-La fonctionnalité des réplicas secondaires accessibles en lecture est uniquement disponible dans l’édition Entreprise, et chaque instance qui héberge un réplica accessible en lecture doit disposer d’une licence SQL Server.
+> [!NOTE]
+> La fonctionnalité des réplicas secondaires accessibles en lecture est uniquement disponible dans l’édition Entreprise, et chaque instance qui héberge un réplica accessible en lecture doit disposer d’une licence SQL Server.
 
 La possibilité de mettre à plus haute échelle des copies accessibles en lecture d’une base de données via les groupes de disponibilité a été introduite avec les groupes de disponibilité distribués dans SQL Server 2016. Cela permet aux entreprises d’avoir des copies en lecture seule de la base de données non seulement localement, mais aussi au niveau régional et mondial avec un minimum de configuration, et de réduire le trafic réseau et la latence en exécutant les requêtes localement. Chaque réplica principal d’un groupe de disponibilité peut amorcer deux autres groupes de disponibilité, même s’il ne s’agit pas d’une copie entièrement accessible en lecture/écriture, de sorte que chaque groupe de disponibilité distribué peut prendre en charge jusqu'à 27 copies des données accessibles en lecture. 
 
-![Groupe de disponibilité distribué][DAG]
+![Groupe de disponibilité distribué](media/sql-server-ha-story/image11.png)
 
 À partir de SQL Server 2017, il est possible de créer pratiquement en temps réel une solution en lecture seule avec des groupes de disponibilité configurés avec un type de cluster Aucun. Si l’objectif est d’utiliser des groupes de disponibilité pour des réplicas secondaires accessibles en lecture et non pour la disponibilité, cette opération est plus simple que l’utilisation d’un cluster WSFC ou de Pacemaker, et donne au groupe de disponibilité l’avantage de l’accessibilité en lecture dans une méthode de déploiement plus simple. 
 

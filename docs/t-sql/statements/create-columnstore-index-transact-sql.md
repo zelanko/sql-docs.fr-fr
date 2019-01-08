@@ -30,12 +30,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a7f9c78dc06da0cbb12e34483d3bdd7b469a8f78
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: c6c384df7810cce06f3e10003ec85771b2bcea58
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398045"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215648"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -215,7 +215,7 @@ Créez un index columnstore non-cluster en mémoire sur une table rowstore stock
     Spécifie les colonnes à stocker. Un index columnstore non-cluster est limité à 1 024 colonnes.  
    Chaque colonne doit appartenir à un type de données pris en charge pour les index columnstore. Pour obtenir la liste des types de données pris en charge, consultez [Limitations et Restrictions](../../t-sql/statements/create-columnstore-index-transact-sql.md#LimitRest).  
 
-ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*  
+ON [*database_name*. [*schema_name* ] . |  *schema_name* . ] *table_name*  
    Spécifie un nom en une, deux ou trois parties pour la table qui contient l’index.  
 
 #### <a name="with-options"></a>Options WITH
@@ -234,7 +234,7 @@ ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*
   
    Pour plus d’informations, consultez [Configurer des opérations d’index parallèles](../../relational-databases/indexes/configure-parallel-index-operations.md).  
   
-> [!NOTE]  
+> [!NOTE]
 >  Les opérations d’index parallèles ne sont pas disponibles dans toutes les éditions de [!INCLUDE[msC](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prises en charge par les éditions de SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
 ###### <a name="online--on--off"></a>ONLINE = [ON | OFF]   
@@ -425,7 +425,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX cci_Simple ON SimpleTable;
 GO  
 ```  
   
-### <a name="b-convert-a-clustered-index-to-a-clustered-columnstore-index-with-the-same-name"></a>B. Convertir un index cluster en un index columnstore cluster ayant le même nom.  
+### <a name="b-convert-a-clustered-index-to-a-clustered-columnstore-index-with-the-same-name"></a>b. Convertir un index cluster en un index columnstore cluster ayant le même nom.  
  Cet exemple suivant crée une table avec un index cluster, puis illustre la syntaxe de conversion de l'index cluster en un index columnstore cluster. Cela modifie le stockage de la table entière qui change de rowstore en columnstore.  
   
 ```sql  
@@ -614,7 +614,7 @@ ON SimpleTable
 GO  
 ```  
   
-### <a name="b-create-a-simple-nonclustered-columnstore-index-using-all-options"></a>B. Créer un index columnstore non-cluster simple à l’aide de toutes les options  
+### <a name="b-create-a-simple-nonclustered-columnstore-index-using-all-options"></a>b. Créer un index columnstore non-cluster simple à l’aide de toutes les options  
  L'exemple suivant illustre la syntaxe de création d'un index columnstore non cluster à l'aide de toutes les options.  
   
 ```sql  
@@ -694,7 +694,7 @@ ON xdimProduct
 WITH ( DROP_EXISTING = ON );  
 ```  
   
-### <a name="b-rebuild-a-clustered-columnstore-index"></a>B. Reconstruire un index cluster columnstore  
+### <a name="b-rebuild-a-clustered-columnstore-index"></a>b. Reconstruire un index cluster columnstore  
  S’appuyant sur l’exemple précédent, cet exemple utilise CREATE CLUSTERED COLUMNSTORE INDEX pour reconstruire l’index cluster columnstore existant appelé cci_xDimProduct.  
   
 ```sql  

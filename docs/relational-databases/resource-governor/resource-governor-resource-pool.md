@@ -11,15 +11,15 @@ helpviewer_keywords:
 - resource pool [SQL Server], overview
 - resource pool [SQL Server]
 ms.assetid: 306b6278-e54f-42e6-b746-95a9315e0cbe
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: e53c61ed06282553be01d383753b8a45db56de8b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 37d6a896057085353d81e8c9acbd161a25014d51
+ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47624887"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53380950"
 ---
 # <a name="resource-governor-resource-pool"></a>Pool de ressources du gouverneur de ressources
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "47624887"
   
 -   **AFFINITY**  
   
-     Ce paramètre permet de définir l'affinité d'un pool de ressources en fonction d'un ou de plusieurs planificateurs ou nœuds NUMA pour un niveau d'isolation supérieur des ressources du processeur. Dans le scénario précédemment décrit, nous supposons que le service des ventes a besoin d'un environnement mieux isolé et souhaite disposer en permanence de 100 % d'un cœur d'UC. L'option AFFINITY permet de planifier les charges de travail Ventes et Marketing sur différentes UC. En supposant que la limite CAP_CPU_PERCENT est encore appliquée sur le pool marketing, la charge de travail Marketing continue à utiliser jusqu'à 30 % d'un cœur, tandis que la charge de travail Ventes utilise 100 % de l'autre cœur. Les charges de travail Ventes et Marketing s'exécutent sur deux ordinateurs isolés.  
+     Ce paramètre permet de définir l'affinité d'un pool de ressources en fonction d'un ou de plusieurs planificateurs ou nœuds NUMA pour un niveau d'isolation supérieur des ressources du processeur. Dans le scénario précédemment décrit, nous supposons que le service des ventes a besoin d'un environnement mieux isolé et souhaite disposer en permanence de 100 % d'un cœur d'UC. L'option AFFINITY permet de planifier les charges de travail Ventes et Marketing sur différentes UC. En supposant que la limite CAP_CPU_PERCENT est encore appliquée sur le pool marketing, la charge de travail Marketing continue à utiliser jusqu'à 30 % d'un cœur, tandis que la charge de travail Ventes utilise 100 % de l'autre cœur. Les charges de travail Ventes et Marketing s'exécutent sur deux ordinateurs isolés.  
   
 -   **MIN_IOPS_PER_VOLUME et MAX_IOPS_PER_VOLUME**  
   
@@ -59,8 +59,8 @@ Le tableau suivant illustre quelques-uns des concepts précédents. Le tableau p
 |---------------|-------------------|-------------------|--------------------------------|-------------------------|-------------|  
 |interne|0|100|100|0|Les valeurs % MAX effectif et % partagé ne sont pas applicables au pool interne.|  
 |par défaut|0|100|30|30|La valeur MAX effectif est calculée comme suit : min(100,100-(20+50)) = 30. Le % partagé est calculé comme suit : MAX effectif - MIN = 30.|  
-|Pool 1|20|100|50|30|La valeur MAX effectif est calculée comme suit : min(100,100-50) = 50. Le % partagé est calculé comme suit : MAX effectif - MIN = 30.|  
-|Pool 2|50|70|70|20|La valeur MAX effectif est calculée comme suit : min(70,100-20) = 70. Le % partagé est calculé comme suit : MAX effectif - MIN = 20.|  
+|Pool 1|20|100|50|30|La valeur MAX effectif est calculée comme suit : min(100,100-50) = 50. Le % partagé est calculé comme suit : MAX effectif - MIN = 30.|  
+|Pool 2|50|70|70|20|La valeur MAX effectif est calculée comme suit : min(70,100-20) = 70. Le % partagé est calculé comme suit : MAX effectif - MIN = 20.|  
 Les formules suivantes calculent le pourcentage MAX (% MAX) effectif et le pourcentage (%) partagé dans la table ci-dessus :  
   
 -   Min(X,Y) représente la valeur plus petite de X et Y.  

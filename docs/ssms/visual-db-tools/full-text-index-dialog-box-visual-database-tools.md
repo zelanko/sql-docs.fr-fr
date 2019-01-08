@@ -13,21 +13,21 @@ ms.assetid: ef45b585-2567-4abe-b421-9fd0994e0146
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7b98cab5bffef09bdbbfd353f9f72bbb6d093c9c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: f9d44df32b29f2c2efaad86386690020fe19818f
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509003"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213508"
 ---
 # <a name="full-text-index-dialog-box-visual-database-tools"></a>Boîte de dialogue Index de texte intégral (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Cette boîte de dialogue permet de créer un index de texte intégral si vous souhaitez effectuer des recherches en texte intégral sur les colonnes de type texte de vos tables de base de données. Un index de texte intégral se base sur un index normal ; vous devez donc d'abord le créer. L'index normal doit être créé sur une colonne unique, non null ; il est conseillé de choisir une colonne contenant des petites valeurs plutôt que des grandes.  
   
-> [!NOTE]  
+> [!NOTE]
 > Pour créer un index de texte intégral, vous devez d'abord créer un catalogue de texte intégral pour la base de données à l'aide d'un outil extérieur, tel que [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou Enterprise Manager.  
-  
-> [!NOTE]  
+> 
+> [!NOTE]
 > La fonctionnalité d’index de texte intégral n’est pas disponible dans toutes les éditions de [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prises en charge par les éditions de SQL Server 2012](https://msdn.microsoft.com/5da61ff5-12b9-48e6-b3c8-0dacca1751c4).  
   
 ## <a name="options"></a>Options  
@@ -65,7 +65,7 @@ Développée, elle affiche les propriétés qui dictent le mode d'exécution de 
 Indique si vous pouvez actuellement exécuter une recherche en texte intégral à l'aide de cet index de texte intégral.  
   
 **Paramètre du suivi des modifications**  
-Décrit le statut du suivi des modifications pour cet index : Manuel, Auto ou Inactif.  
+Décrit le statut du suivi des modifications pour cet index : Manuel, Auto ou Inactif.  
   
 **Analyse terminée**  
 Indique si l'analyse la plus récente est terminée. Si cette propriété a la valeur Non, une analyse est actuellement en cours.  
@@ -89,7 +89,7 @@ Affiche la date et l'heure de démarrage de l'analyse actuelle ou de la dernièr
 Affiche la date et l'heure de démarrage de la prochaine analyse.  
   
 **Type de l'analyse actuelle ou de la dernière analyse**  
-Affiche le type de l'analyse actuelle ou de la dernière analyse : Complet, Incrémentiel, Mettre à jour ou Propagation automatique.  
+Affiche le type de l'analyse actuelle ou de la dernière analyse : Complet, Incrémentiel, Mettre à jour ou Propagation automatique.  
   
 **Nom d'index unique**  
 Affiche la liste de tous les noms de colonnes de cette base de données qui possèdent des index uniques à une seule colonne. Ces colonnes peuvent être utilisées pour créer un index de texte intégral.  

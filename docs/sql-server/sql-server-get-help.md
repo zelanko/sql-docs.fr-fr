@@ -9,12 +9,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4eb0d351eeb3555f9f0162670209a9c15af6d964
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 746150438e87746c6fefc81fa7c0bff354147ed6
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531490"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205328"
 ---
 # <a name="sql-server-help-and-feedback"></a>Aide et commentaires pour SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -85,7 +85,7 @@ Il existe quelques médias sociaux qui peuvent vous permettre de contacter l’�
 
 ## <a name="i-want-to-contribute-to-sql-server-documentation"></a>Je souhaite contribuer à la documentation SQL Server
 
-###<a name="edit-contentincludesmediaedit-topic-pencilpng-editing-content"></a>![modifier contenu](../includes/media/edit-topic-pencil.png) Modification du contenu
+### <a name="edit-contentincludesmediaedit-topic-pencilpng-editing-content"></a>![modifier contenu](../includes/media/edit-topic-pencil.png) Modification du contenu
 Avez-vous trouvé du contenu erroné dans notre documentation ? Souhaitez-vous apporter une contribution pour améliorer notre documentation ? Sachez que vous pouvez modifier le contenu vous-même sur docs.microsoft.com. Dans ce cas, non seulement notre documentation sera améliorée, mais vous serez également cité en tant que contributeur à la page ! Pour plus d’informations, consultez [https://aka.ms/editsqldocs](https://aka.ms/editsqldocs). 
 
 Toutes les contributions publiques sont examinées par l’équipe du contenu SQL afin de vérifier leur exactitude technique et leur cohérence. 

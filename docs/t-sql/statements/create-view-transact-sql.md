@@ -38,12 +38,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e91131cdd88d9439ad51432f18e7c88a65432e64
-ms.sourcegitcommit: ef15fa253d98c62538bf9b6fe191af7f8ef8f6c8
+ms.openlocfilehash: 7f0e93aaff4ed0f8eb02de0acb3e9362c1a390a1
+ms.sourcegitcommit: a11e733bd417905150567dfebc46a137df85a2fa
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49991242"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53991912"
 ---
 # <a name="create-view-transact-sql"></a>CREATE VIEW (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -181,7 +181,7 @@ OR ALTER
   
 -   Les colonnes étant modifiées dans la vue doivent faire référence directement aux données sous-jacentes se trouvant dans les colonnes des tables. Les colonnes ne peuvent être dérivées de quelque autre façon, telle que par :  
   
-    -   Une fonction d'agrégation : (AVG, COUNT, SUM, MIN, MAX, GROUPING, STDEV, STDEVP, VAR et VARP) ;  
+    -   Une fonction d'agrégation : AVG, COUNT, SUM, MIN, MAX, GROUPING, STDEV, STDEVP, VAR et VARP.  
   
     -   un calcul, car la colonne ne peut être calculée à partir d'une expression utilisant d'autres colonnes ; de même, les colonnes formées par le biais des opérateurs UNION, UNION ALL, CROSSJOIN, EXCEPT et INTERSECT équivalent à une somme de calculs et ne peuvent donc pas être mises à jour.  
   
@@ -367,7 +367,7 @@ GO
   
 ```  
   
-### <a name="b-using-with-encryption"></a>B. Utilisation de WITH ENCRYPTION  
+### <a name="b-using-with-encryption"></a>b. Utilisation de WITH ENCRYPTION  
  Cet exemple utilise l'option `WITH ENCRYPTION` et montre les colonnes calculées, les colonnes renommées et les colonnes multiples.  
   
 **S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] et [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
@@ -458,7 +458,7 @@ UNION ALL
 SELECT supplyID, supplier  
   FROM dbo.SUPPLY4;  
 GO
-INSERT dbo.SUPPLY1 VALUES ('1', 'CaliforniaCorp'), ('5', 'BraziliaLtd')  
+INSERT dbo.all_supplier_view VALUES ('1', 'CaliforniaCorp'), ('5', 'BraziliaLtd')    
 , ('231', 'FarEast'), ('280', 'NZ')  
 , ('321', 'EuroGroup'), ('442', 'UKArchip')  
 , ('475', 'India'), ('521', 'Afrique');  

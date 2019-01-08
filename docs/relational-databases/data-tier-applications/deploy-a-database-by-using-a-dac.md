@@ -20,15 +20,15 @@ ms.assetid: 08c506e8-4ba0-4a19-a066-6e6a5c420539
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ff2967c06b32540b92f40007f66ebe346eedca40
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d9cdb5c17a74b600b640872d7b153f715da8e15a
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540395"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590233"
 ---
 # <a name="deploy-a-database-by-using-a-dac"></a>Déployer une base de données à l'aide d'une DAC
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Utilisez l’Assistant **Déploiement de base de données dans SQL Azure** pour déployer une base de données entre une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] et un serveur [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] , ou entre deux serveurs [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)].  
   
 ##  <a name="BeforeBegin"></a> Avant de commencer  
@@ -53,7 +53,7 @@ ms.locfileid: "52540395"
  Une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] doit exécuter [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) ou version ultérieure pour fonctionner avec l'Assistant. Si une base de données sur une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] contient des objets qui ne sont pas pris en charge sur [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)], vous ne pouvez pas utiliser l'Assistant pour déployer la base de données dans [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. Si une base de données sur [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] contient des objets qui ne sont pas pris en charge par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous ne pouvez pas utiliser l'Assistant pour déployer la base de données sur des instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ###  <a name="Security"></a> Sécurité  
- Pour améliorer la sécurité, les connexions d'authentification SQL Server sont stockées dans un fichier DAC BACPAC sans mot de passe. Lorsque le fichier BACPAC est importé, la connexion est créée en tant que connexion désactivée avec un mot de passe généré. Pour activer les connexions, connectez-vous à l'aide d'une connexion qui possède l'autorisation ALTER ANY LOGIN et utilisez ALTER LOGIN pour activer la connexion et affecter un nouveau mot de passe pouvant être communiqué à l'utilisateur. Cela n'est pas nécessaire pour les connexions d'authentification Windows car leurs mots de passe ne sont pas gérés par SQL Server.  
+ Pour améliorer la sécurité, les connexions d'authentification SQL Server sont stockées dans un fichier DAC BACPAC sans mot de passe. Lorsque le fichier BACPAC est importé, la connexion est créée en tant que connexion désactivée avec un mot de passe généré. Pour activer les connexions, connectez-vous à l'aide d'une connexion qui possède l'autorisation ALTER ANY LOGIN et utilisez ALTER LOGIN pour activer la connexion et affecter un nouveau mot de passe pouvant être communiqué à l'utilisateur. Cela n'est pas nécessaire pour les connexions d'authentification Windows car leurs mots de passe ne sont pas gérés par SQL Server.  
   
 #### <a name="permissions"></a>Permissions  
  L'Assistant a besoin d'autorisations d'exportation DAC dans la base de données source. La connexion nécessite au minimum des autorisations ALTER ANY LOGIN et VIEW DEFINITION de la portée de la base de données, ainsi que des autorisations SELECT sur **sys.sql_expression_dependencies**. L'exportation d'une DAC peut être réalisée par les membres du rôle serveur fixe securityadmin également membres du rôle de base de données fixe database_owner dans la base de données à partir de laquelle est extraite la DAC. Les membres du rôle serveur fixe sysadmin ou le compte d’administrateur système intégré de SQL Server nommé **sa** peuvent également exporter une DAC.  

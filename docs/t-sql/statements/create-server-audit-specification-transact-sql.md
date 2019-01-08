@@ -18,17 +18,17 @@ ms.assetid: db77fa77-fedb-40ac-83e6-06343063e518
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 144bc0915836fadf0965a305d8d10014106a85b0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1cf66db2279aa6400f96564d0b364fb998009e1c
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47598448"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979275"
 ---
 # <a name="create-server-audit-specification-transact-sql"></a>CREATE SERVER AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Crée un objet de spécification d'audit de serveur à l'aide de la fonctionnalité [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit. Pour plus d’informations, consultez [SQL Server Audit &#40moteur de base de données&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
+  Crée un objet de spécification d'audit de serveur à l'aide de la fonctionnalité [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit. Pour plus d’informations, consultez [SQL Server Audit &#40;moteur de base de données&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -68,11 +68,11 @@ FOR SERVER AUDIT audit_name
  Une fois qu’une spécification d’audit du serveur est créée, elle est consultable par des principaux disposant des autorisations CONTROL SERVER ou ALTER ANY SERVER AUDIT, le compte sysadmin ou des principaux ayant un accès explicite à l’audit.  
   
 ## <a name="examples"></a>Exemples  
- L'exemple suivant crée une spécification de l'audit du serveur nommée `HIPPA_Audit_Specification` qui audite les échecs de connexion, pour un audit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nommé `HIPPA_Audit`.  
+ L'exemple suivant crée une spécification de l'audit du serveur nommée `HIPAA_Audit_Specification` qui audite les échecs de connexion, pour un audit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nommé `HIPAA_Audit`.  
   
 ```  
-CREATE SERVER AUDIT SPECIFICATION HIPPA_Audit_Specification  
-FOR SERVER AUDIT HIPPA_Audit  
+CREATE SERVER AUDIT SPECIFICATION HIPAA_Audit_Specification  
+FOR SERVER AUDIT HIPAA_Audit  
     ADD (FAILED_LOGIN_GROUP);  
 GO  
 ```  

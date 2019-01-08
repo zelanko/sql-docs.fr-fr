@@ -14,16 +14,16 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2e4fad8c85b620b817439529bfabd65361ed0207
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e8521fb6bb67f79ae88e026a3231d733490c5719
+ms.sourcegitcommit: c51f7f2f5d622a1e7c6a8e2270bd25faba0165e7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52536141"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53626343"
 ---
 # <a name="sql-injection"></a>Injection SQL
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  Une attaque par injection SQL consiste à insérer un code malveillant dans les chaînes transmises ultérieurement à une instance de SQL Server en vue de leur analyse et de leur exécution. Les procédures qui permettent de créer des instructions SQL doivent être vérifiées et analysées à la recherche d’éventuelles failles autorisant cette injection, car SQL Server exécute toutes les requêtes syntaxiquement correctes qu’il reçoit. Même les données paramétrables peuvent être manipulées par un pirate compétent et déterminé.  
+  Une attaque par injection SQL consiste à insérer un code malveillant dans les chaînes transmises ultérieurement à une instance de SQL Server en vue de leur analyse et de leur exécution. Les procédures qui permettent de créer des instructions SQL doivent être vérifiées et analysées à la recherche d’éventuelles failles autorisant cette injection, car SQL Server exécute toutes les requêtes syntaxiquement correctes qu’il reçoit. Même les données paramétrables peuvent être manipulées par un pirate compétent et déterminé.  
   
 ## <a name="how-sql-injection-works"></a>Comment fonctionne l’injection SQL  
  Les injections SQL prennent principalement la forme d'insertions directes de code dans les variables d'entrée utilisateur qui sont concaténées avec des commandes SQL et exécutées. Des attaques par injection moins directes insèrent un code malveillant dans les chaînes destinées à être stockées dans une table ou en tant que métadonnées. Lorsque les chaînes stockées sont ensuite concaténées dans une commande SQL dynamique, le code nuisible est exécuté.  
@@ -32,7 +32,7 @@ ms.locfileid: "52536141"
   
  Le script suivant montre un exemple d'injection SQL simple. Il crée une requête SQL en concaténant des chaînes codées de manière irréversible avec une chaîne entrée par l'utilisateur :  
   
-```  
+```csharp
 var Shipcity;  
 ShipCity = Request.form ("ShipCity");  
 var sql = "select * from OrdersTable where ShipCity = '" + ShipCity + "'";  
@@ -40,19 +40,19 @@ var sql = "select * from OrdersTable where ShipCity = '" + ShipCity + "'";
   
  L'utilisateur est invité à entrer le nom d'une ville. Si l'utilisateur entre `Redmond`, la requête assemblée par le script ressemble à ce qui suit :  
   
-```  
+```sql
 SELECT * FROM OrdersTable WHERE ShipCity = 'Redmond'  
 ```  
   
  Mais supposons que l'utilisateur entre ce qui suit :  
   
-```  
+```sql
 Redmond'; drop table OrdersTable--  
 ```  
   
- Dans ce cas, la requête assemblée par le script est la suivante :  
+ Dans ce cas, la requête assemblée par le script est la suivante :  
   
-```  
+```sql
 SELECT * FROM OrdersTable WHERE ShipCity = 'Redmond';drop table OrdersTable--'  
 ```  
   
@@ -86,7 +86,7 @@ SELECT * FROM OrdersTable WHERE ShipCity = 'Redmond';drop table OrdersTable--'
   
 -   Ne concaténez jamais une entrée utilisateur qui n'est pas validée. La concaténation de chaîne est le point d'entrée principal pour l'injection de scripts.  
   
--   N'acceptez pas les chaînes suivantes dans les champs à partir desquels les noms de fichiers peuvent être construits : AUX, CLOCK$, de COM1 à COM8, CON, CONFIG$, de LPT1 à LPT8, NUL et PRN.  
+-   N'acceptez pas les chaînes suivantes dans les champs à partir desquels les noms de fichiers peuvent être construits : AUX, CLOCK$, COM1 à COM8, CON, CONFIG$, LPT1 à LPT8, NUL et PRN.  
   
  Si possible, rejetez les entrées qui contiennent les caractères suivants.  
   
@@ -101,7 +101,7 @@ SELECT * FROM OrdersTable WHERE ShipCity = 'Redmond';drop table OrdersTable--'
 ### <a name="use-type-safe-sql-parameters"></a>Utilisation de paramètres SQL de type sécurisé  
  La collection **Parameters** de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit le contrôle du type et la validation de la longueur. Si vous utilisez la collection **Parameters** , les entrées sont traitées en tant que valeurs littérales et non pas en tant que code exécutable. L’utilisation de la collection **Parameters** présente un avantage supplémentaire, car elle permet d’appliquer des contrôles de type et de longueur. Les valeurs qui ne sont pas comprises dans les limites autorisées déclenchent une exception. L’extrait de code suivant illustre l’utilisation de la collection **Parameters** :  
   
-```  
+```csharp
 SqlDataAdapter myCommand = new SqlDataAdapter("AuthorLogin", conn);  
 myCommand.SelectCommand.CommandType = CommandType.StoredProcedure;  
 SqlParameter parm = myCommand.SelectCommand.Parameters.Add("@au_id",  
@@ -114,7 +114,7 @@ parm.Value = Login.Text;
 ### <a name="use-parameterized-input-with-stored-procedures"></a>Utilisation d'entrées paramétrables avec des procédures stockées  
  Les procédures stockées peuvent être la cible des injections SQL si elles utilisent des entrées non filtrées. Par exemple, le code suivant est vulnérable :  
   
-```  
+```csharp
 SqlDataAdapter myCommand =   
 new SqlDataAdapter("LoginStoredProcedure '" +   
                                Login.Text + "'", conn);  
@@ -125,7 +125,7 @@ new SqlDataAdapter("LoginStoredProcedure '" +
 ### <a name="use-the-parameters-collection-with-dynamic-sql"></a>Utilisation de la collection Parameters avec des instructions SQL dynamiques  
  Si vous ne pouvez pas utiliser de procédure stockée, vous pouvez toujours utiliser des paramètres, comme illustré dans l’exemple de code suivant :  
   
-```  
+```csharp
 SqlDataAdapter myCommand = new SqlDataAdapter(  
 "SELECT au_lname, au_fname FROM Authors WHERE au_id = @au_id", conn);  
 SQLParameter parm = myCommand.SelectCommand.Parameters.Add("@au_id",   
@@ -136,7 +136,7 @@ Parm.Value = Login.Text;
 ### <a name="filtering-input"></a>Filtrage des entrées  
  Le filtrage des entrées peut également être utile pour protéger des risques d'injection SQL par la suppression des caractères d'échappement. Toutefois, en raison du grand nombre de caractères susceptibles de poser des problèmes, ce moyen de défense n'est pas fiable. L'exemple suivant permet de rechercher les délimiteurs de chaînes de caractères.  
   
-```  
+```csharp
 private string SafeSqlLiteral(string inputSQL)  
 {  
   return inputSQL.Replace("'", "''");  
@@ -146,7 +146,7 @@ private string SafeSqlLiteral(string inputSQL)
 ### <a name="like-clauses"></a>Clauses LIKE  
  Notez que si vous utilisez une clause `LIKE` , les caractères génériques devront quand même être séparés par des caractères d’échappement :  
   
-```  
+```csharp
 s = s.Replace("[", "[[]");  
 s = s.Replace("%", "[%]");  
 s = s.Replace("_", "[_]");  
@@ -155,7 +155,7 @@ s = s.Replace("_", "[_]");
 ## <a name="reviewing-code-for-sql-injection"></a>Examen du code à la recherche d'injection SQL  
  Vous devez examiner l’ensemble du code appelant `EXECUTE`, `EXEC`, ou `sp_executesql`. Vous pouvez utiliser des requêtes similaires à l'exemple suivant pour faciliter l'identification des procédures contenant ces instructions. Cette requête recherche les 1, 2, 3 ou 4 espaces après les mots `EXECUTE` ou `EXEC`.  
   
-```  
+```sql
 SELECT object_Name(id) FROM syscomments  
 WHERE UPPER(text) LIKE '%EXECUTE (%'  
 OR UPPER(text) LIKE '%EXECUTE  (%'  
@@ -174,17 +174,17 @@ OR UPPER(text) LIKE '%SP_EXECUTESQL%';
 |@variable|Wrapper recommandé|  
 |---------------|-------------------------|  
 |Nom d'un élément sécurisable|`QUOTENAME(@variable)`|  
-|Chaîne ≤ à 128 caractères|`QUOTENAME(@variable, '''')`|  
+|Chaîne ≤ à 128 caractères|`QUOTENAME(@variable, '''')`|  
 |Chaîne de > 128 caractères|`REPLACE(@variable,'''', '''''')`|  
   
  Lorsque vous utilisez cette technique, une instruction SET peut être révisée comme suit :  
   
-```  
---Before:  
+```sql
+-- Before:  
 SET @temp = N'SELECT * FROM authors WHERE au_lname ='''   
  + @au_lname + N'''';  
   
---After:  
+-- After:  
 SET @temp = N'SELECT * FROM authors WHERE au_lname = '''   
  + REPLACE(@au_lname,'''','''''') + N'''';  
 ```  
@@ -192,7 +192,7 @@ SET @temp = N'SELECT * FROM authors WHERE au_lname = '''
 ### <a name="injection-enabled-by-data-truncation"></a>Injection activée par la troncature des données  
  Tout code [!INCLUDE[tsql](../../includes/tsql-md.md)] dynamique affecté à une variable sera tronqué s'il est d'une taille supérieure à la mémoire tampon allouée à cette variable. Un attaquant capable de forcer la troncature d'une instruction en transmettant des chaînes inhabituellement longues à une procédure stockée peut manipuler le résultat. Par exemple, la procédure stockée créée par le script suivant court un risque d'injection permis par la troncature.  
   
-```  
+```sql
 CREATE PROCEDURE sp_MySetPassword  
 @loginname sysname,  
 @old sysname,  
@@ -222,7 +222,7 @@ GO
   
  En transmettant 154 caractères dans une mémoire tampon de 128 caractères, un attaquant peut définir un nouveau mot de passe pour sa sans connaître l’ancien.  
   
-```  
+```sql
 EXEC sp_MySetPassword 'sa', 'dummy',   
 '123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012'''''''''''''''''''''''''''''''''''''''''''''''''''   
 ```  
@@ -232,7 +232,7 @@ EXEC sp_MySetPassword 'sa', 'dummy',
 ### <a name="truncation-when-quotenamevariable--and-replace-are-used"></a>Troncature lors de l’utilisation de QUOTENAME(@variable, '''') et REPLACE()  
  Les chaînes renvoyées par QUOTENAME() et REPLACE() seront tronquées en mode silencieux si elles dépassent l'espace alloué. La procédure stockée créée dans l'exemple suivant illustre les conséquences possibles.  
   
-```  
+```sql
 CREATE PROCEDURE sp_MySetPassword  
     @loginname sysname,  
     @old sysname,  
@@ -269,13 +269,13 @@ GO
   
  Par conséquent, l’instruction suivante va définir les mots de passe de tous les utilisateurs à la valeur qui a été transmise dans le code précédent.  
   
-```  
+```sql
 EXEC sp_MyProc '--', 'dummy', '12345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678'  
 ```  
   
  Vous pouvez forcer la troncature de chaîne en dépassant l'espace de mémoire tampon alloué lors de l'utilisation de REPLACE(). La procédure stockée créée dans l'exemple suivant illustre les conséquences possibles.  
   
-```  
+```sql
 CREATE PROCEDURE sp_MySetPassword  
     @loginname sysname,  
     @old sysname,  
@@ -314,7 +314,7 @@ GO
   
  Le calcul suivant couvre tous les cas :  
   
-```  
+```sql
 WHILE LEN(@find_string) > 0, required buffer size =  
 ROUND(LEN(@input)/LEN(@find_string),0) * LEN(@new_string)   
  + (LEN(@input) % LEN(@find_string))  
@@ -323,7 +323,7 @@ ROUND(LEN(@input)/LEN(@find_string),0) * LEN(@new_string)
 ### <a name="truncation-when-quotenamevariable--is-used"></a>Troncature lors de l’utilisation de QUOTENAME(@variable, ']')  
  La troncature peut se produire quand le nom d'un élément sécurisable [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est transmis à des instructions utilisant la forme `QUOTENAME(@variable, ']')`. L'exemple suivant illustre cela.  
   
-```  
+```sql
 CREATE PROCEDURE sp_MyProc  
     @schemaname sysname,  
     @tablename sysname,  

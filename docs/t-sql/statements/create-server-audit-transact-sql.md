@@ -23,17 +23,17 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: fb561e2001940fef59429236dd85d376a1c3c27f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 624e20f25deda3e226cf060f0793c33022289b1c
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834757"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979945"
 ---
 # <a name="create-server-audit-transact-sql"></a>CREATE SERVER AUDIT (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  Crée un objet d'audit de serveur à l'aide de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit. Pour plus d’informations, consultez [SQL Server Audit &#40moteur de base de données&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
+  Crée un objet d'audit de serveur à l'aide de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit. Pour plus d’informations, consultez [SQL Server Audit &#40;moteur de base de données&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
 
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -160,15 +160,15 @@ Force l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 
 ## <a name="examples"></a>Exemples  
   
 ### <a name="a-creating-a-server-audit-with-a-file-target"></a>A. Création d'un audit du serveur avec une cible de fichier  
- L'exemple suivant crée un audit du serveur nommé `HIPPA_Audit` avec un fichier binaire comme cible et aucune option.  
+ L'exemple suivant crée un audit du serveur nommé `HIPAA_Audit` avec un fichier binaire comme cible et aucune option.  
   
 ```sql  
 CREATE SERVER AUDIT HIPAA_Audit  
     TO FILE ( FILEPATH ='\\SQLPROD_1\Audit\' );  
 ```  
   
-### <a name="b-creating-a-server-audit-with-a-windows-application-log-target-with-options"></a>B. Création d'un audit du serveur avec le journal des applications Windows comme cible et des options  
- L'exemple suivant crée un audit du serveur nommé `HIPPA_Audit` avec la cible définie sur le journal des applications Windows. La file d'attente est écrite chaque seconde et arrête le moteur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en cas d'échec.  
+### <a name="b-creating-a-server-audit-with-a-windows-application-log-target-with-options"></a>b. Création d'un audit du serveur avec le journal des applications Windows comme cible et des options  
+ L'exemple suivant crée un audit du serveur nommé `HIPAA_Audit` avec la cible définie sur le journal des applications Windows. La file d'attente est écrite chaque seconde et arrête le moteur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en cas d'échec.  
   
 ```sql  
 CREATE SERVER AUDIT HIPAA_Audit  

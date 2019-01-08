@@ -23,12 +23,12 @@ ms.assetid: ee6b9116-a7ff-463a-a9f0-b360804d8678
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 6eeaf835671b624b61f7c542760a00b0acb45ff0
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 2c9e95ee5fd9b337c9efddf6a3708373ef061f32
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507583"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980495"
 ---
 # <a name="create-spatial-index-transact-sql"></a>CREATE SPATIAL INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -114,12 +114,12 @@ CREATE SPATIAL INDEX index_name
   
 <named_bb_coordinate> ::= { XMIN = xmin | YMIN = ymin | XMAX = xmax | YMAX=ymax }  
   
-<tesselation_grid> ::=  
+<tessellation_grid> ::=  
 {   
     GRIDS = ( { <grid_level> [ ,...n ] | <grid_size>, <grid_size>, <grid_size>, <grid_size>  }   
         )  
 }  
-<tesseallation_cells_per_object> ::=  
+<tessellation_cells_per_object> ::=  
 {   
    CELLS_PER_OBJECT = n   
 }  
@@ -496,7 +496,7 @@ MAXDOP =*max_degree_of_parallelism*
   
  Pour plus d’informations, consultez [Configurer des opérations d’index parallèles](../../relational-databases/indexes/configure-parallel-index-operations.md).  
   
-> [!NOTE]  
+> [!NOTE]
 > Les opérations d’index parallèles ne sont pas disponibles dans toutes les éditions de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prise en charge par les éditions de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
 DATA_COMPRESSION = {NONE | ROW | PAGE}  
@@ -565,7 +565,7 @@ CREATE SPATIAL INDEX SIndx_SpatialTable_geometry_col1
    WITH ( BOUNDING_BOX = ( 0, 0, 500, 200 ) );  
 ```  
   
-### <a name="b-creating-a-spatial-index-on-a-geometry-column"></a>B. Création d'un index spatial sur une colonne de type geometry  
+### <a name="b-creating-a-spatial-index-on-a-geometry-column"></a>b. Création d'un index spatial sur une colonne de type geometry  
  L'exemple suivant crée un deuxième index spatial, `SIndx_SpatialTable_geometry_col2`, sur `geometry_col` dans la table `SpatialTable`. L'exemple spécifie `GEOMETRY_GRID` comme schéma de pavage. L'exemple spécifie également le rectangle englobant, des densités différentes sur des niveaux de grille différents et 64 cellules par objet. L'exemple attribue aussi la valeur `ON` au remplissage d'index.  
   
 ```sql  

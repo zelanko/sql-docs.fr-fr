@@ -14,12 +14,12 @@ ms.assetid: a82df075-2243-4e19-bfe1-ae6d65dabd0f
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e5da3ebf716c227e2724d7ca2676405aa34b7241
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 51f7f52e3237d6fbbf5bd6b9224d1434a129e3e5
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663288"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202200"
 ---
 # <a name="create-clr-functions"></a>Créer des fonctions CLR
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -34,10 +34,10 @@ ms.locfileid: "51663288"
   
 -   Créez la fonction qui fait référence à l’assembly inscrit à l’aide de l’instruction [CREATE FUNCTION](../../t-sql/statements/create-function-transact-sql.md) .  
   
-> [!NOTE]  
+> [!NOTE]
 >  Le déploiement d’un projet SQL Server dans [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] inscrit un assembly dans la base de données spécifiée pour le projet. Le déploiement du projet crée aussi les fonctions CLR dans la base de données pour toutes les méthodes annotées avec l’attribut **SqlFunction** . Pour plus d’informations, consultez [Déploiement d’objets de base de données CLR](../../relational-databases/clr-integration/deploying-clr-database-objects.md).  
-  
-> [!NOTE]  
+> 
+> [!NOTE]
 >  La fonctionnalité d'exécution du code CLR par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est désactivée par défaut. Vous pouvez créer, modifier et supprimer des objets de base de données qui font référence à des modules de code managé, mais ces références ne s’exécutent pas dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si l’option [clr enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md) n’est pas activée à l’aide de [sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
   
 ## <a name="accessing-external-resources"></a>Accès aux ressources externes  

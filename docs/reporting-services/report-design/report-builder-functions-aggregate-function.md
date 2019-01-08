@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 16ce643f-bbb3-40a5-ba78-7aed73156f3e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b97d2a45a0312e2d2db0425f89262526ddbe76ae
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: ea1a6e2a0cca043fc7465a3dd7408ec24ab98286
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030528"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202588"
 ---
 # <a name="report-builder-functions---aggregate-function"></a>Fonctions du Générateur de rapports - Aggregate
   Retourne un agrégat personnalisé de l'expression spécifiée, comme défini par le fournisseur de données.  
@@ -47,7 +47,7 @@ Aggregate(expression, scope)
   
  Vous pouvez modifier ce comportement par défaut en changeant la valeur de l'option **Interpréter les sous-totaux comme des lignes de détails** dans la boîte de dialogue **Propriétés du dataset** . Lorsque cette option a la valeur **True**, toutes les données, y compris les agrégats de serveur, apparaissent comme données de détail. Lorsque cette option a la valeur **False**, les agrégats de serveur apparaissent comme totaux. Le paramètre de cette propriété affecte toutes les régions de données liées à ce dataset.  
   
-> [!NOTE]  
+> [!NOTE]
 >  Tous les groupes conteneurs de l’élément de rapport qui fait référence à **Aggregate** doivent disposer de références de champ simples pour leurs expressions de groupe, par exemple `[FieldName]`. Vous ne pouvez pas utiliser **Aggregate** dans une région de données qui utilise des expressions de groupe complexes. Pour l’extension pour le traitement des données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , votre requête doit inclure des champs MDX de type **LevelProperty** (et non **MemberProperty**) pour prendre en charge l’agrégation à l’aide de la fonction **Aggregate**.  
   
  *Expression* peut contenir des appels aux fonctions d'agrégation imbriquées avec les exceptions et conditions suivantes :  

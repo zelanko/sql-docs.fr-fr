@@ -13,12 +13,12 @@ ms.assetid: 301ea227-0455-40ba-9009-d38f8676b325
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f186e6236930b6bfdc4d5a9a461695e328212879
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 223d1f8cab99a75d78bfa75b25a2092e4ba83865
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761953"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591573"
 ---
 # <a name="login-for-updatable-subscriptions"></a>Connexion des abonnements pouvant être mis à jour
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "47761953"
   
  Les connexions sont utilisées par les déclencheurs qui sont activés pour l’Abonné et propagent les modifications sur le serveur de publication. Ce compte est nécessaire même si vous avez sélectionné **Mettre les modifications en file d’attente et valider dès que possible** dans la page **Abonnements pouvant être mis à jour**. L’Assistant Nouvel abonnement par défaut configure la mise à jour en attente avec la possibilité de passer à une mise à jour immédiate si nécessaire.  
   
-> **IMPORTANT** Le compte spécifié pour la connexion doit uniquement avoir l’autorisation d’insérer, de mettre à jour et de supprimer des données sur les vues créées par la réplication dans la base de données de publication. Il ne doit pas bénéficier d’autres autorisations. Accordez des autorisations sur les vues de la base de données de publication se présentant sous la forme **syncobj_***\<Nombre_hexadécimal>* au compte que vous avez configuré pour chaque abonné.  
+> **IMPORTANT** Le compte spécifié pour la connexion doit uniquement avoir l’autorisation d’insérer, de mettre à jour et de supprimer des données sur les vues créées par la réplication dans la base de données de publication. Il ne doit pas bénéficier d’autres autorisations. Accordez des autorisations sur les vues de la base de données de publication se présentant sous la forme **syncobj_**_\<Nombre_hexadécimal>_ au compte que vous avez configuré pour chaque Abonné.  
   
  Trois options sont possibles pour le type de connexion :  
   

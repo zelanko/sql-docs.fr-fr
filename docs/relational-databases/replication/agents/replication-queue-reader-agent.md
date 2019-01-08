@@ -16,12 +16,12 @@ ms.assetid: 8e227793-11f6-47c6-99dc-ffc282f5d4bf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 34e7f949741ceb562ba85e6104e6f2f0c1b1af4a
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: f794ccc0191454bc900b039af16cd31258821c61
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52392542"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591163"
 ---
 # <a name="replication-queue-reader-agent"></a>Agent de lecture de la file d'attente de réplication
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,19 +61,19 @@ qrdrsvc [-?]
  **-Continuous**  
  Spécifie si l'agent tente de traiter les transactions en attente de manière continue. S'il est spécifié, l'agent poursuit l'exécution même si aucune transaction n'est en attente au niveau des Abonnés.  
   
- **-DefinitionFile** *def_path_and_file_name*  
+ **-DefinitionFile** _def_path_and_file_name_  
  Chemin d'accès du fichier de définition d'agent. Un fichier de définition d'agent contient des arguments de ligne de commande pour l'agent. Le contenu du fichier est analysé en tant que fichier exécutable. Utilisez des guillemets doubles (") pour spécifier des valeurs d'argument qui contiennent des caractères arbitraires.  
   
- **-Distributor** *server_name*[**\\***instance_name*]  
+ **-Distributor** _server_name_[**\\**_instance_name_]  
  Nom du serveur de distribution. Spécifiez *server_name* pour l'instance par défaut de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur ce serveur. Spécifiez *server_name*\\*instance_name* pour une instance nommée de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur ce serveur. S'il n'est pas spécifié, le nom a comme valeur par défaut le nom de l'instance par défaut de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur l'ordinateur local.  
   
- **-DistributionDB** *distribution_database*  
+ **-DistributionDB** _distribution_database_  
  Nom de la base de données de distribution.  
   
- **-DistributorLogin** *distributor_login*  
+ **-DistributorLogin** _distributor_login_  
  Nom de connexion du serveur de distribution.  
   
- **-DistributorPassword** *distributor_password*  
+ **-DistributorPassword** _distributor_password_  
  Mot de passe du serveur de distribution.  
   
  **-DistributorSecurityMode** [ **0**| **1**]  
@@ -103,25 +103,25 @@ qrdrsvc [-?]
 |**2**|Insère de nouveaux enregistrements d'historique, y compris des messages inactifs ou des messages de travail de longue durée.|  
 |**3**|Insère de nouveaux enregistrements d'historique incluant des détails supplémentaires qui peuvent s'avérer utiles pour le dépannage.|  
   
- **-LoginTimeOut** *login_time_out_seconds*  
+ **-LoginTimeOut** _login_time_out_seconds_  
  Nombre de secondes avant l'expiration de la connexion. La valeur par défaut est 15 secondes.  
   
- **-Output** *output_path_and_file_name*  
+ **-Output** _output_path_and_file_name_  
  Chemin d'accès du fichier de sortie de l'agent. Si le nom du fichier n'est pas spécifié, la sortie est envoyée à la console. Si le nom de fichier spécifié existe, la sortie est ajoutée au fichier.  
   
  **-OutputVerboseLevel** [ **0**| **1**| **2**]  
  Spécifie si la sortie doit être en clair. Si le niveau de détail est **0**, seuls les messages d'erreur sont imprimés. Si le niveau de détail est **1**, tous les messages du rapport de progression sont imprimés. Si le niveau de détail est **2** (valeur par défaut), tous les messages d'erreur et tous les messages du rapport de progression sont imprimés, ce qui peut s'avérer utile lors du débogage.  
   
- **-PollingInterval** *polling_interval*  
+ **-PollingInterval** _polling_interval_  
  Ne s'applique qu'à la mise à jour d'abonnements qui utilisent des files d'attente basées sur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Spécifie la fréquence, en secondes, à laquelle la file d'attente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] est interrogée au sujet des transactions de file d'attente en cours. La valeur peut être comprise entre 0 et 240 secondes. La valeur par défaut est 5 secondes.  
   
- **-PublisherFailoverPartner** *server_name*[**\\***instance_name*]  
+ **-PublisherFailoverPartner** _server_name_[**\\**_instance_name_]  
  Spécifie l'instance du partenaire de basculement de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] participant à une session de mise en miroir de bases de données avec la base de données de publication. Pour plus d’informations, consultez [Database Mirroring and Replication &#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md).  
   
- **-ProfileName** *agent_profile_name*  
+ **-ProfileName** _agent_profile_name_  
  Nom d'un profil d'agent utilisé pour fournir un jeu de valeurs par défaut à l'agent. Pour plus d’informations, consultez [Profils de l’Agent de réplication](../../../relational-databases/replication/agents/replication-agent-profiles.md).  
   
- **-QueryTimeOut** *query_time_out_seconds*  
+ **-QueryTimeOut** _query_time_out_seconds_  
  Nombre de secondes avant l'expiration de la requête. La valeur par défaut est 1800 secondes.  
   
  **-ResolverState** [ **1**| **2**| **3**]  

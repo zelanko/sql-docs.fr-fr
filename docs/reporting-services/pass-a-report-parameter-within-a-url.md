@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: f93a94cc-27b5-435a-aa85-69e6ec6459ad
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b0848b6c5d34470964bc363b827e82c466f78326
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: a78727d3b0ab3ee1909f9e86032ab392642b5603
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52390482"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211208"
 ---
 # <a name="pass-a-report-parameter-within-a-url"></a>Passer un paramètre de rapport dans une URL
   Vous pouvez passer des paramètres de rapport à un rapport en les incluant dans une URL de rapport. Ces paramètres URL ne sont pas préfixés parce qu'ils sont directement passés au moteur de traitement des rapports.  
@@ -28,12 +28,12 @@ ms.locfileid: "52390482"
   
  Tous les paramètres de requête peuvent avoir des paramètres de rapport correspondants. Vous passez un paramètre de requête à un rapport en transmettant le paramètre de rapport correspondant. Pour plus d’informations, consultez [Générer une requête dans le Concepteur de requêtes relationnelles &#40;Générateur de rapports et SSRS&#41;](../reporting-services/report-data/build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md).  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  Les paramètres de rapport respectent la casse.  
-  
-> [!NOTE]  
+> 
+> [!NOTE]
 >  Les paramètres de rapport respectent la casse et utilisent les caractères spéciaux suivants :  
->   
+> 
 >  -   Tout espace figurant dans la chaîne d'URL est remplacé par le caractère « % 20 », conformément aux normes d'encodage des URL.  
 > -   Un espace dans la partie Paramètre de l'URL est remplacé par un caractère Plus (+).  
 > -   Un point-virgule dans toute partie de la chaîne est remplacé par les caractères « %3A ».  

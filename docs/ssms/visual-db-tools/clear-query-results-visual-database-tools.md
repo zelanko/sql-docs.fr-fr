@@ -17,16 +17,16 @@ ms.assetid: 4ed9692e-5170-47d4-8b0b-028c967d47ff
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d743652fa35a5f3cb6a8438d0ad6dffd66e7a01d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7367a3f3ce663966b583f6946923e3c312a5eb41
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47736007"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213608"
 ---
 # <a name="clear-query-results-visual-database-tools"></a>Effacer les résultats d'une requête (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Quand vous avez exécuté une requête dans le **Concepteur de requêtes et de vues**, vous pouvez effacer le volet Résultats. Cette procédure s’applique aux requêtes créées à l’aide de l’option **Ouvrir la vue** ou **Ouvrir la table** de l’Explorateur d’objets. Dans[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], après l’exécution d’une requête dans l’Éditeur de requête, le volet Résultats ne peut être effacé qu’en fermant la fenêtre Éditeur de requête ou en exécutant une autre requête.  
+Quand vous avez exécuté une requête dans le **Concepteur de requêtes et de vues**, vous pouvez effacer le volet Résultats. Cette procédure s’applique aux requêtes créées à l’aide de l’option **Ouvrir la vue** ou **Ouvrir la table** de l’Explorateur d’objets. Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], après l'exécution d'une requête dans l'Éditeur de requête, le volet Résultats ne peut être effacé qu'en fermant la fenêtre Éditeur de requête ou en exécutant une autre requête.  
   
 > [!NOTE]  
 > Cela n'annule pas les modifications que vous avez apportées à la base de données. Pour plus d’informations sur le fonctionnement du volet des résultats, consultez [Utiliser des données du volet de résultats &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md).  

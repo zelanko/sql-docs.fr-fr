@@ -16,12 +16,12 @@ ms.assetid: f405e5ce-ef69-4c58-8c7d-a3d44dfe9ab0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: eaa6caf40a44ba8579b5e5cff31f0c4c10f2eb4a
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 9c34a12bf9532d87c599ea02ee7be068facda93a
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52420510"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205948"
 ---
 # <a name="variables-window"></a>Fenêtre Variables
   La fenêtre **Variables** permet de créer et de modifier les variables définies par l’utilisateur et d’afficher les variables système.  
@@ -30,7 +30,7 @@ ms.locfileid: "52420510"
   
  Vous pouvez éventuellement afficher la fenêtre **Variables** en mappant la commande View.Variables avec une combinaison de clés de votre choix dans la page **Clavier** de la boîte de dialogue **Options** .  
   
-> [!NOTE]  
+> [!NOTE]
 >  La valeur des propriétés **Nom** et **Espace de noms** doit commencer par une lettre de l’alphabet, conformément à la convention Unicode Standard 2.0, ou par un trait de soulignement (_). Les caractères suivants peuvent être des lettres ou des chiffres, conformément à la convention Unicode standard 2.0, ou un trait de soulignement (\_).  
   
 ## <a name="options"></a>Options  

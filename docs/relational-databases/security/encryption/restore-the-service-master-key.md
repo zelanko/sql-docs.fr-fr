@@ -1,7 +1,7 @@
 ---
 title: Restaurer la clé principale du service | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 01/02/2019
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -13,61 +13,51 @@ ms.assetid: 14bdbbbe-d384-4692-b670-4243d2466fe1
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: fab7845b9ed356d46d1a4df70d6cffc1a095c58a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cf93c5a2918089bffd8bfe724f165d20722af086
+ms.sourcegitcommit: fa2f85b6deeceadc0f32aa7f5f4e2b6e4d99541c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681257"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53997531"
 ---
 # <a name="restore-the-service-master-key"></a>Restaurer la clé principale du service
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Cette rubrique explique comment restaurer la clé principale de service dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
 > [!WARNING]  
->  Il est peu probable que vous ayez jamais à restaurer cette clé. Si vous deviez le faire, observez la plus grande prudence. Pour plus d’informations, consultez [Back Up the Service Master Key](../../../relational-databases/security/encryption/back-up-the-service-master-key.md).  
+> Il est peu probable que vous ayez jamais à restaurer cette clé. Si vous deviez le faire, observez la plus grande prudence. Pour plus d’informations, consultez [Back Up the Service Master Key](../../../relational-databases/security/encryption/back-up-the-service-master-key.md).  
   
- **Dans cette rubrique**  
+## <a name="before-you-begin"></a>Avant de commencer  
   
--   **Avant de commencer :**  
+### <a name="limitations-and-restrictions"></a>Limitations et restrictions  
   
-     [Limitations et restrictions](#Restrictions)  
+- Lorsque la clé principale de service est restaurée, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] déchiffre toutes les clés et les secrets qui ont été chiffrés au moyen de la clé principale de service en cours, puis les chiffre au moyen de la clé principale de service chargée à partir du fichier de sauvegarde.  
   
-     [Sécurité](#Security)  
+- Si l'un des déchiffrements échoue, la restauration échoue. Vous pouvez utiliser l'option FORCE pour ignorer les erreurs, mais cette option entraîne la perte de toutes les données ne pouvant pas être déchiffrées.  
   
--   [Pour restaurer la clé principale de service à l'aide de Transact-SQL](#SSMSProcedure)  
-  
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
-  
-###  <a name="Restrictions"></a> Limitations et restrictions  
-  
--   Lorsque la clé principale de service est restaurée, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] déchiffre toutes les clés et les secrets qui ont été chiffrés au moyen de la clé principale de service en cours, puis les chiffre au moyen de la clé principale de service chargée à partir du fichier de sauvegarde.  
-  
--   Si l'un des déchiffrements échoue, la restauration échoue. Vous pouvez utiliser l'option FORCE pour ignorer les erreurs, mais cette option entraîne la perte de toutes les données ne pouvant pas être déchiffrées.  
-  
--   La régénération de la hiérarchie de chiffrement est une opération qui consomme beaucoup de ressources. Par conséquent, vous devez planifier cette opération au cours d'une période de faible demande.  
+- La régénération de la hiérarchie de chiffrement est une opération qui consomme beaucoup de ressources. Par conséquent, vous devez planifier cette opération au cours d'une période de faible demande.  
   
 > [!CAUTION]  
->  La clé principale de service représente la racine de la hiérarchie de chiffrement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . La clé principale de service sécurise de manière directe ou indirecte toutes les autres clés de l'arborescence. Si une clé dépendante ne peut pas être déchiffrée au cours d'une restauration forcée, les données sécurisées par cette clé sont perdues.  
+> La clé principale de service représente la racine de la hiérarchie de chiffrement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . La clé principale de service sécurise de manière directe ou indirecte toutes les autres clés de l'arborescence. Si une clé dépendante ne peut pas être déchiffrée au cours d'une restauration forcée, les données sécurisées par cette clé sont perdues.  
   
-###  <a name="Security"></a> Sécurité  
+## <a name="security"></a>Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
- Requiert l'autorisation CONTROL SERVER sur le serveur.  
+### <a name="permissions"></a>Permissions  
+Requiert l'autorisation CONTROL SERVER sur le serveur.  
   
-##  <a name="SSMSProcedure"></a> Utilisation de Transact-SQL  
+## <a name="using-transact-sql"></a>Utilisation de Transact-SQL  
   
-#### <a name="to-restore-the-service-master-key"></a>Pour restaurer la clé principale du service  
+### <a name="to-restore-the-service-master-key"></a>Pour restaurer la clé principale du service  
   
-1.  Récupérez une copie de la clé principale du service sauvegardée, à partir d'un support de sauvegarde physique ou d'un répertoire sur le système de fichiers local.  
+1. Récupérez une copie de la clé principale du service sauvegardée, à partir d'un support de sauvegarde physique ou d'un répertoire sur le système de fichiers local.  
   
-2.  Dans l'**Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+2. Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
-3.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
+3. Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   
-4.  Copiez et collez l'exemple suivant dans la fenêtre de requête, puis cliquez sur **Exécuter**.  
+4. Copiez et collez l'exemple suivant dans la fenêtre de requête, puis cliquez sur **Exécuter**.  
   
-    ```  
+    ```sql
     -- Restores the service master key from a backup file.  
     RESTORE SERVICE MASTER KEY   
         FROM FILE = 'c:\temp_backups\keys\service_master_key'   
@@ -76,6 +66,4 @@ ms.locfileid: "47681257"
     ```  
   
     > [!NOTE]  
-    >  Le chemin d'accès à la clé et le mot de passe de la clé (s'il existe) seront différents de ce qui est indiqué ci-dessus. Assurez-vous que les deux sont spécifiques à votre installation de serveur et de clé.  
-  
-  
+    > Le chemin d'accès à la clé et le mot de passe de la clé (s'il existe) seront différents de ce qui est indiqué ci-dessus. Assurez-vous que les deux sont spécifiques à votre installation de serveur et de clé.

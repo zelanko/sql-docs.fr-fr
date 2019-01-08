@@ -5,19 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: c57bf8b8-55a6-4b6c-9adb-91b5f4f1ee3c
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 5d52335f4b80a4cd1ff06e9fe8084d46a8d0d089
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8fc6c932dd3cb75a01cd5ad328ca47f1c51f9879
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854997"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52759681"
 ---
 # <a name="custom-index-master-data-services"></a>Index personnalisé (Master Data Services)
 
@@ -50,7 +49,7 @@ ms.locfileid: "47854997"
   
 -   Vous pouvez créer un index personnalisé sur les attributs de membre feuille, à l’exclusion des attributs de fichier.  
   
--   Si vous souhaitez supprimer un attribut inclus dans un index personnalisé, les règles suivantes s’appliquent :  
+-   Si vous souhaitez supprimer un attribut inclus dans un index personnalisé, les règles suivantes s’appliquent :  
   
     -   Si l’index n’est créé que sur un seul attribut (index unique), l’attribut et l’index sont tous deux supprimés.  
   

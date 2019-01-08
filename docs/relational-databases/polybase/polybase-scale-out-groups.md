@@ -14,18 +14,18 @@ ms.assetid: c7810135-4d63-4161-93ab-0e75e9d10ab5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a145b7ae7194720c8366f0c647a511e086fe4a2d
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: ad890736cf0536c5f4f776d2bd4949e195dd26d6
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52412636"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205418"
 ---
 # <a name="polybase-scale-out-groups"></a>Groupes de scale-out PolyBase
 
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Une instance de SQL Server autonome avec PolyBase peut se transformer en goulot d’étranglement de performances lors du traitement de gros volumes de jeux données dans Hadoop ou le stockage d’objets Blob Azure. La fonctionnalité Groupe PolyBase vous permet de créer un cluster d’instances de SQL Server pour traiter de grands volumes de jeux de données à partir de sources de données externes telles que Hadoop ou le stockage d’objets Blob Azure, sous forme de montée en puissance (scale-out) parallèle pour des performances de requête optimisées. Vous pouvez maintenant adapter votre calcul SQL Server pour répondre aux besoins de performances de votre charge de travail. Les groupes de scale-out PolyBase, groupe d’instances SQL Server, vous permettent de traiter de grands jeux de données externes dans une architecture de traitement parallèle. Les performances de chargement de données et de requête peuvent augmenter de façon linéaire quand vous ajoutez d’autres instances SQL Server au groupe. 
+Une instance de SQL Server autonome avec PolyBase peut se transformer en goulot d’étranglement de performances lors du traitement de gros volumes de jeux données dans Hadoop ou le Stockage Blob Azure. La fonctionnalité Groupe PolyBase vous permet de créer un cluster d’instances de SQL Server pour traiter de grands volumes de jeux de données à partir de sources de données externes telles que Hadoop ou le stockage d’objets Blob Azure, sous forme de montée en puissance (scale-out) parallèle pour des performances de requête optimisées. Vous pouvez maintenant adapter votre calcul SQL Server pour répondre aux besoins de performances de votre charge de travail. Les groupes de scale-out PolyBase, groupe d’instances SQL Server, vous permettent de traiter de grands jeux de données externes dans une architecture de traitement parallèle. Les performances de chargement de données et de requête peuvent augmenter de façon linéaire quand vous ajoutez d’autres instances SQL Server au groupe. 
   
 Consultez [Prise en main de PolyBase](../../relational-databases/polybase/get-started-with-polybase.md) et [Guide de PolyBase](../../relational-databases/polybase/polybase-guide.md).
   
@@ -46,7 +46,7 @@ Quand des instances SQL Server, Oracle ou Teradata externes sont interrogées, l
 Par exemple, supposons que vous avez une table SQL Server externe avec 12 partitions mensuelles et un groupe de scale-out PolyBase à 3 nœuds, chaque nœud utilise 4 lecteurs PolyBase pour traiter chacune des 12 partitions. En voici une illustration dans l’image suivante. 
 
 > [!NOTE]
- C’est différent des lectures scale-out sur Hadoop. 
+>  C’est différent des lectures scale-out sur Hadoop. 
 
 ![Groupes de scale-out PolyBase](../../relational-databases/polybase/media/polybase-scale-out-groups2.png "Groupes de scale-out PolyBase")
   

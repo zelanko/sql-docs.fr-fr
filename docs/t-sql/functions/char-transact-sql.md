@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - TSQL
 helpviewer_keywords:
-- converting int ACSII code to character
+- converting int ASCII code to character
 - control characters
 - tab
 - ASCII conversions
@@ -28,12 +28,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4603333bce62f363a70c82936dfdbb28478f6a0d
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 6900fc7741cba1ec444ab745dd8ea63e3ec3b29c
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701937"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979615"
 ---
 # <a name="char-transact-sql"></a>CHAR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -110,7 +110,7 @@ GO
 110         n  
 ```
   
-### <a name="b-using-char-to-insert-a-control-character"></a>B. Utilisation de CHAR pour l'insertion d'un caractère de contrôle  
+### <a name="b-using-char-to-insert-a-control-character"></a>b. Utilisation de CHAR pour l'insertion d'un caractère de contrôle  
 Cet exemple utilise `CHAR(13)` pour imprimer le nom et l’adresse e-mail d’un employé sur des lignes distinctes, quand la requête retourne ses résultats sous forme de texte. Cet exemple utilise la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].
   
 ```sql

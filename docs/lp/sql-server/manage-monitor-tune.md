@@ -6,12 +6,12 @@ description: Découvrez les fonctionnalités qui vous aident à gérer, surveill
 ms.topic: hub-page
 featureFlags:
 - clicktale
-ms.openlocfilehash: 5ea660552e228438dd002ab2d274db280fd90ec6
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: cdcd99d5b25d267a4518d67f167b935c0e246525
+ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51698384"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54046489"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -73,7 +73,7 @@ ms.locfileid: "51698384"
         </ul>
     </div>
     <div class="container">
-        <h1>SQL Server : gérer, surveiller et paramétrer</h1>
+        <h1>SQL Server : Gérer, superviser et optimiser</h1>
         <ul class="pivots tabLess">
             <li class="pivotItem" style="display: list-item;" data-id="#products">
                 <a href="#products" data-linktype="self-bookmark"></a>
@@ -436,7 +436,7 @@ ms.locfileid: "51698384"
                                 </a>
                             </li> 
                             <li>
-                                <a href="/sql/relational-databases/statistics/statistics?view=sql-server-2017/">
+                                <a href="/sql/relational-databases/statistics/statistics?view=sql-server-2017">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">

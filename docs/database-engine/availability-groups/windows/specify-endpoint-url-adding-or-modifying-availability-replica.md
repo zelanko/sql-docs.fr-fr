@@ -15,12 +15,12 @@ ms.assetid: d7520c13-a8ee-4ddc-9e9a-54cd3d27ef1c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fc5c128de983fc2bf2c4287b53f74495ff76ebb2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 6c7ed2edb5eb62b6182b53859877b7f5d9b5b453
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518248"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589663"
 ---
 # <a name="specify-endpoint-url---adding-or-modifying-availability-replica"></a>Spécifier l’URL de point de terminaison - Ajout ou modification d’un réplica de disponibilité
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "52518248"
 ##  <a name="SyntaxOfURL"></a> Syntaxe pour une URL de point de terminaison  
  La syntaxe d'une URL de point de terminaison est la suivante :  
   
- TCP**://***\<system-address>***:***\<port>*  
+ TCP<strong>://</strong>*\<adresse-système>*<strong>:</strong>*\<port>*  
   
  où  
   
@@ -48,15 +48,15 @@ ms.locfileid: "52518248"
   
     -   Étant donné que les nœuds du cluster WSFC (clustering de basculement Windows Server) figurent dans le même domaine, vous pouvez utiliser le nom du système informatique, par exemple `SYSTEM46`.  
   
-    -   Pour pouvoir utiliser une adresse IP, elle doit être unique dans votre environnement. Nous vous recommandons d'utiliser une adresse IP seulement si elle est statique. L'adresse IP peut être une adresse IP Version 4 (IPv4) ou IP Version 6 (IPv6). Une adresse IPv6 doit être placée entre crochets, par exemple : **[***<adresse_IPv6>***]**.  
+    -   Pour pouvoir utiliser une adresse IP, elle doit être unique dans votre environnement. Nous vous recommandons d'utiliser une adresse IP seulement si elle est statique. L'adresse IP peut être une adresse IP Version 4 (IPv4) ou IP Version 6 (IPv6). Une adresse IPv6 doit être placée entre crochets, par exemple : **[**_<adresse_IPv6>_**]**.  
   
          Pour connaître l'adresse IP d'un système, à l'invite de commandes Windows, entrez la commande **ipconfig** .  
   
     -   L'utilisation du nom de domaine complet garantit un fonctionnement correct. Il s'agit d'une chaîne d'adresse définie localement qui prend des formes différentes dans des emplacements différents. Souvent, mais pas systématiquement, un nom de domaine complet correspond à un nom composé qui inclut le nom de l'ordinateur et une série de segments de domaine séparés par des points, de la forme :  
   
-         *nom_ordinateur* **.** *domain_segment*[...**.***domain_segment*]  
+         _nom_ordinateur_ **.** _segment_domaine_[...**.**_segment_domaine_]  
   
-         où *nom_ordinateur* correspond au nom réseau de l’ordinateur qui exécute l’instance de serveur et *segment_domaine*[...**.***segment_domaine*] représente les autres informations de domaine du serveur ; par exemple : `localinfo.corp.Adventure-Works.com`.  
+         où *nom_ordinateur*correspond au nom réseau de l’ordinateur qui exécute l’instance de serveur et *segment_domaine*[...**.**_segment_domaine_] représente les autres informations de domaine du serveur ; par exemple : `localinfo.corp.Adventure-Works.com`.  
   
          Le contenu et le nombre de segments de domaine sont déterminés au sein de la société ou de l'organisation. Pour plus d'informations, consultez [Recherche du nom de domaine complet](#Finding_FQDN), plus loin dans cette rubrique.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "52518248"
   
  `TCP://SYSTEM46:7022`  
   
-#### <a name="b-using-a-fully-qualified-domain-name"></a>B. Utilisation d'un nom de domaine complet  
+#### <a name="b-using-a-fully-qualified-domain-name"></a>b. Utilisation d'un nom de domaine complet  
  L'URL de point de terminaison suivante spécifie un nom de domaine complet, `DBSERVER8.manufacturing.Adventure-Works.com`, et le port `7024`.  
   
  `TCP://DBSERVER8.manufacturing.Adventure-Works.com:7024`  
@@ -105,7 +105,7 @@ ms.locfileid: "52518248"
   
  Pour former le nom de domaine complet, concaténez les valeurs de *<host_name>* et *<Primary_Dns_Suffix>* de la manière suivante :  
   
- *&lt;nom_hôte&gt;* **.** *<Suffixe_DNS_principal>*  
+ _&lt;nom_hôte&gt;_ **.** _<Suffixe_DNS_principal>_  
   
  Par exemple, la configuration IP  
   

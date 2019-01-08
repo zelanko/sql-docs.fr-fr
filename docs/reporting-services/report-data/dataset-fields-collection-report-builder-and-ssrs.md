@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: b3884576-1f7e-4d40-bb7d-168312333bb3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 56ab751d420fe323b641d3fea0e7454d20447e15
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 90b1e966a2f62877e658658048b12427bca109cc
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031858"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202408"
 ---
 # <a name="dataset-fields-collection-report-builder-and-ssrs"></a>Collection de champs de dataset (Générateur de rapports et SSRS)
   Les champs de dataset représentent les données d'une connexion de données. Un champ peut représenter des données numériques ou non numériques. À titre d'exemples, citons des chiffres d'affaires, des totaux de ventes, des noms de client, des identificateurs de base de données, des URL, des images, des données spatiales et des adresses de messagerie. Sur l'aire de conception, les champs s'affichent sous la forme d'expressions dans les éléments de rapport tels que les zones de texte, les tables et les graphiques.  
@@ -55,7 +55,7 @@ ms.locfileid: "50031858"
 ### <a name="using-extended-field-properties"></a>Utilisation des propriétés de champ étendues  
  Les sources de données qui prennent en charge des requêtes multidimensionnelles, comme [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], prennent en charge les propriétés de champ sur les champs. Les propriétés de champ apparaissent dans le jeu de résultats d'une requête, mais ne sont pas visibles dans le volet **Données du rapport** . Elles sont néanmoins disponibles pour les utiliser dans votre rapport. Pour vous référer à la propriété d'un champ, faites glisser le champ dans le rapport et remplacez la propriété par défaut **Value** par le nom de champ de la propriété souhaitée. Dans un cube [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] par exemple, vous pouvez définir des formats pour les valeurs dans les cellules de cube. La valeur mise en forme est disponible à l'aide de la propriété de champ **FormattedValue**. Pour utiliser directement la valeur au lieu d'utiliser une valeur, puis de définir la propriété de format de la zone de texte, faites glisser le champ vers la zone de texte et remplacez l'expression par défaut `=Fields!FieldName.Value` par `=Fields!FieldName.FormattedValue`.  
   
-> [!NOTE]  
+> [!NOTE]
 >  Certaines propriétés **Field** ne peuvent pas être utilisées pour toutes les sources de données. Les propriétés **Value** et **IsMissing** sont définies pour toutes les sources de données. D’autres propriétés prédéfinies (comme **Key**, **UniqueName**et **ParentUniqueName** pour les sources de données multidimensionnelles) sont prises en charge uniquement si la source de données les fournit. Certains fournisseurs de données prennent en charge les propriétés personnalisées. Pour plus d’informations, consultez les rubriques spécifiques relatives aux propriétés de champ étendues correspondant à votre type de source de données dans [Datasets incorporés dans le rapport et datasets partagés &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md). Pour obtenir un exemple relatif à une source de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], consultez [Propriétés de champ étendues pour une base de données Analysis Services &#40;SSRS&#41;](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md).  
   
   

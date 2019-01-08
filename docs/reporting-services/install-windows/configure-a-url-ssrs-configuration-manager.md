@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 851e163a-ad2a-491e-bc1e-4df92327092f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2638e15f21d21563d639b2597ad30b6597f9ecd1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 912f0473db120c9874e231334d1d393e18518c71
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509520"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202488"
 ---
 # <a name="configure-a-url--ssrs-configuration-manager"></a>Configurer une URL (Gestionnaire de configuration de SSRS)
   Avant de pouvoir utiliser le [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] ou le service web Report Server, vous devez configurer au moins une URL pour chaque application. La configuration des URL est obligatoire si vous avez installé [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode « fichiers uniquement » (autrement dit, en sélectionnant l’option **Installer mais ne pas configurer le serveur** dans la page Options d’installation du serveur de rapports dans l’Assistant Installation). Si vous avez installé [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dans la configuration par défaut, les URL sont déjà configurées pour chaque application.  
@@ -92,17 +92,17 @@ ms.locfileid: "52509520"
   
 10. Testez l'URL en cliquant sur le lien dans la section **URL** de la page. Notez que la base de données du serveur de rapports doit être créée et configurée avant que vous puissiez tester l'URL. Pour obtenir des instructions, consultez [Créer une base de données du serveur de rapports en mode natif &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
 
-> [!NOTE]  
+> [!NOTE]
 >  Si vous disposez de liaisons SSL et de réservations d'URL existantes et souhaitez modifier la liaison SSL, vous pouvez utiliser un certificat ou un en-tête d'hôte différent. Il est recommandé de réaliser les étapes suivantes dans l'ordre indiqué :  
->   
+> 
 >  1.  Commencez par supprimer toutes les réservations d'URL.  
 > 2.  Puis, supprimez toutes les liaisons SSL.  
 > 3.  puis de recréer les URL et les liaisons SSL.  
->   
+> 
 >  Les étapes précédentes peuvent être effectuées à partir du Gestionnaire de configuration [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
->   
+> 
 >  Microsoft Windows prend en charge une liaison pour chaque combinaison d'adresse IP/port. Si vous configurez un serveur de rapports de façon à utiliser une valeur d'en-tête d'hôte spécifique et le certificat sur la combinaison port/adresse IP est également émis à une valeur d'en-tête d'hôte différente, un avertissement indiquant que le certificat ne correspond pas à l'URL utilisée s'affiche dans le navigateur.  
->   
+> 
 >  Pour corriger le problème, supprimez toutes les liaisons, puis créez des liaisons possédant des paramètres uniques, ou configurez l'inscription d'URL Reporting Services à l'aide de caractères génériques.
   
 ### <a name="to-create-a-url-reservation-for-the-includessrswebportalincludesssrswebportalmd"></a>Pour créer une réservation d’URL pour le [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]  

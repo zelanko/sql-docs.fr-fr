@@ -15,12 +15,12 @@ ms.assetid: 61347757-f5a3-481d-8b05-1fed086629b6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b8f64fb29a90f38d777d0963b9f985bb65e2e2a8
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 6c48e1dd5a5fbcdc2141f14288e10f452b64c850
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701338"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53201438"
 ---
 # <a name="save-as"></a>Enregistrer sous
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,8 +33,8 @@ Recherchez le dossier de projet existant dans ce menu déroulant. Si vous sélec
 **Nom de fichier**  
 Utilisez cette option pour afficher le nom de fichier actuel, changer le nom de fichier ou filtrer les fichiers et les dossiers qui sont affichés. Pour filtrer les fichiers et les dossiers affichés, entrez un nom de fichier complet ou partiel sur lequel doit s'effectuer le filtrage. Vous pouvez utiliser l'astérisque (`*`) comme caractère générique.  
   
-> [!TIP]  
-> Pour afficher des fichiers qui se trouvent sur le web ou sur un réseau, entrez une URL ou un chemin réseau dans la zone **Nom de fichier** . Par exemple, « https://mywebsite » affiche les fichiers disponibles à l’emplacement « monsiteweb », tandis que «\\\monserveur\partage » affiche les fichiers disponibles à l’emplacement « partage » sur « monserveur ».  
+> [!TIP]
+> Pour afficher des fichiers qui se trouvent sur le web ou sur un réseau, entrez une URL ou un chemin réseau dans la zone **Nom de fichier** . Par exemple, « <https://mywebsite> » affiche les fichiers disponibles à l’emplacement « monsiteweb », tandis que «\\\monserveur\partage » affiche les fichiers disponibles à l’emplacement « partage » sur « monserveur ».  
   
 **Enregistrer en tant que**  
 Utilisez cette option pour choisir un nouveau type de fichier pour l'élément sélectionné. Les types de fichiers proposés représentent tous les types de fichiers disponibles dans lesquels l'élément sélectionné peut être converti.  

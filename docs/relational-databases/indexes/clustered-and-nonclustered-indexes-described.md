@@ -15,12 +15,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4687887715ffb9df13168bc1ee1dc78418c196c3
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: 1ce02d6d6c177eec37a8a2279931f454368f3e54
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49383914"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210688"
 ---
 # <a name="clustered-and-nonclustered-indexes-described"></a>Description des index cluster et non-cluster
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "49383914"
   
 -   Cluster  
   
-    -   Les index cluster trient et stockent les lignes de données de la table ou la vue en fonction de leurs valeurs de clé. Ce sont les colonnes incluses dans la définition de l'index. Il ne peut y avoir qu’un index cluster par table car les lignes de données peuvent être stockées dans un seul ordre.  
+    -   Les index cluster trient et stockent les lignes de données de la table ou la vue en fonction de leurs valeurs de clé. Ce sont les colonnes incluses dans la définition de l'index. Il ne peut y avoir qu’un index cluster par table car les lignes de données peuvent être stockées dans un seul ordre.  
   
     -   Le seul moment où les lignes de données d'une table sont stockées dans l'ordre de tri se produit lorsque la table contient un index cluster. Lorsqu'une table possède un index cluster, elle est appelée table cluster. En l'absence de cet index, ses lignes de données sont stockées dans une structure désordonnée nommée segment.  
   

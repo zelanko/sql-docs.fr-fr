@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 11d72068-2d97-495e-948f-12d1e8c1957d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c2756cbd4dc0a075662b47aaa81d4e4158074147
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: c88606a1c361b1aad4b4a113986dfa73ef20440d
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52410835"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202458"
 ---
 # <a name="exporting-to-xml-report-builder-and-ssrs"></a>Exportation vers XML (Générateur de rapports et SSRS)
   L’extension de rendu XML retourne un rapport paginé au format XML. Le schéma du rapport XML est spécifique du rapport et contient uniquement des données. Les informations de mise en page ne sont pas rendues et la pagination n'est pas conservée par l'extension de rendu XML. La sortie XML générée par cette extension peut être importée dans une base de données, utilisée en tant que message de données XML ou envoyée à une application personnalisée.  
@@ -76,11 +76,11 @@ ms.locfileid: "52410835"
   
  Les définitions d'espaces de noms XML et les attributs de référence de schéma sont également inclus dans l'élément de rapport. Les variables sont notées en gras :  
   
- <**Report** xmlns="**SchemaName**" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xsi:**schemaLocation**="**SchemaNameReportURL**&amp;rc%3aSchema=true" Name="ReportName">  
+ <**Report** xmlns="**SchemaName**" xmlns:xsi="<https://www.w3.org/2001/XMLSchema-instance>" xsi:**schemaLocation**="**SchemaNameReportURL**&amp;rc%3aSchema=true" Name="ReportName">  
   
  Les valeurs des variables sont les suivantes :  
   
-|Nom   |Valeur|  
+|Créer une vue d’abonnement|Valeur|  
 |----------|-----------|  
 |Rapport|Report.DataElementName|  
 |ReportURL|URL absolue URLEncoded d'accès au rapport sur le serveur.|  

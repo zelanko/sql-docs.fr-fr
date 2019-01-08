@@ -27,12 +27,12 @@ ms.assetid: 2202236b-e09f-40a1-bbc7-b8cff7488905
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 6dae0f33308ca37bb9a5fd4b0f1f94280ecbf146
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.openlocfilehash: fba367c376084ff4842ef165382fb5a91f410724
+ms.sourcegitcommit: 1e7ec3b11f25d469163bdc9096a475411eacf79a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512894"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53266000"
 ---
 # <a name="create-type-transact-sql"></a>CREATE TYPE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,8 +56,10 @@ CREATE TYPE [ schema_name. ] type_name
     [ ( precision [ , scale ] ) ]  
     [ NULL | NOT NULL ]   
   | EXTERNAL NAME assembly_name [ .class_name ]   
-  | AS TABLE ( { <column_definition> | <computed_column_definition> }  
-        [ <table_constraint> ] [ ,...n ] )    
+AS TABLE ( { <column_definition> | <computed_column_definition> [ ,... n ] }
+    | [ <table_constraint> ] [ ,... n ]    
+    | [ <table_index> ] [ ,... n ] } )
+ 
 } [ ; ]  
   
 <column_definition> ::=  
@@ -112,14 +114,18 @@ column_name AS computed_column_expression
 {  
     IGNORE_DUP_KEY = { ON | OFF }  
 }  
+
+< table_index > ::=  
+  INDEX constraint_name  
+     [ CLUSTERED | NONCLUSTERED ]   (column [ ASC | DESC ] [ ,... n ] )} }  
 ```  
   
 ```  
--- User-defined Table Types Syntax  
+-- User-defined Memory Optimized Table Types Syntax  
 CREATE TYPE [schema_name. ] type_name  
-AS TABLE ( { <column_definition> }  
-    |  [ <table_constraint> ] [ ,... n ]    
-    | [ <table_index> ] [ ,... n ]    } )
+AS TABLE ( { <column_definition> [ ,... n ] }  
+    | [ <table_constraint> ] [ ,... n ]    
+    | [ <table_index> ] [ ,... n ] } )
     [ WITH ( <table_option> [ ,... n ] ) ]  
  [ ; ]  
   
@@ -219,6 +225,12 @@ column_name <data_type>
   
  \<index_option>  
  Spécifie la réponse aux erreurs de valeurs de clés dupliquées dans une opération d'insertion de plusieurs lignes dans un index cluster unique ou un index non cluster unique. Pour plus d’informations sur les options d’index, consultez [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
+ 
+  `INDEX *index_name* [ CLUSTERED | NONCLUSTERED ] (*column_name* [ ASC | DESC ] [ ,... *n* ] )`  
+     
+**S’applique à** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+
+Indique qu’il faut créer un index sur la table. Il peut s’agir d’un index cluster ou non-cluster. L’index contiendra les colonnes répertoriées et triera les données dans l’ordre croissant ou décroissant.
   
  INDEX  
  Vous devez spécifier les index de table et de colonne dans le cadre de l'instruction CREATE TABLE. CREATE INDEX et DROP INDEX ne sont pas pris en charge pour les tables optimisées en mémoire.  
@@ -281,7 +293,7 @@ CREATE TYPE SSN
 FROM varchar(11) NOT NULL ;  
 ```  
   
-### <a name="b-creating-a-user-defined-type"></a>B. Création d'un type défini par l'utilisateur  
+### <a name="b-creating-a-user-defined-type"></a>b. Création d'un type défini par l'utilisateur  
  L’exemple suivant crée un type `Utf8String` qui référence la classe `utf8string` dans l’assembly `utf8string`. Avant de créer le type, l'assembly `utf8string` est enregistré dans la base de données locale. Remplacez la partie binaire de l'instruction CREATE ASSEMBLY par une description valide.  
   
 **S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  

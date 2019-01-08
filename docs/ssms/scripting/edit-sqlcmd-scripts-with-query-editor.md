@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4d1afb4913b758397d4d072859c3fb80879f2e46
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 0999d5011df80bae97c767ac910b2a5fd810127c
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642790"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211808"
 ---
 # <a name="edit-sqlcmd-scripts-with-query-editor"></a>Modifier des scripts SQLCMD à l'aide de l'Éditeur de requête
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -112,7 +112,7 @@ ms.locfileid: "51642790"
   
 -   L’éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] prend en charge les variables d’environnement et les variables définies dans un script SQLCMD, mais il ne prend pas en charge les variables SQLCMD intégrées ni les variables **osql** . Le traitement SQLCMD de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] respecte la casse pour les variables. Par exemple, PRINT '$ (COMPUTERNAME)' génère le bon résultat et PRINT '$ (ComputerName)' retourne une erreur.  
   
-> [!CAUTION]  
+> [!CAUTION]
 >  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] utilise [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]SqlClient pour les exécutions en mode normal et SQLCMD. Lorsqu'il est exécuté à partir de la ligne de commande, SQLCMD utilise le fournisseur OLE DB. Dans la mesure où des options par défaut peuvent s'appliquer, il est possible d'obtenir un comportement différent pendant l'exécution de la même requête en mode SQLCMD [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] et dans l'utilitaire SQLCMD.  
   
 ## <a name="supported-sqlcmd-syntax"></a>Syntaxe SQLCMD prise en charge  

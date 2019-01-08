@@ -1,6 +1,6 @@
 ---
 title: Activer et désactiver la capture de données modifiées (SQL Server) | Microsoft Docs
-ms.date: 03/06/2017
+ms.date: 01/02/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -15,15 +15,15 @@ ms.assetid: b741894f-d267-4b10-adfe-cbc14aa6caeb
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 01dd23b4c7143280c54137b0e1474eb59fdcd0d3
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 61ca34394e2cab5cf16862f6ddae20573c4e17a0
+ms.sourcegitcommit: a11e733bd417905150567dfebc46a137df85a2fa
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558782"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53991832"
 ---
 # <a name="enable-and-disable-change-data-capture-sql-server"></a>Activer et désactiver la capture de données modifiées (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
   Cette rubrique décrit l'activation et la désactivation de la capture de données modifiées pour une base de données et une table.  
   
 ## <a name="enable-change-data-capture-for-a-database"></a>Activer la capture des données modifiées pour une base de données  
@@ -142,7 +142,7 @@ EXEC sys.sp_cdc_enable_table
 GO  
 ```  
   
-> [!NOTE]  
+> [!NOTE]
 >  Si la capture de données modifiées est activée sur une table avec une clé primaire existante, et que le paramètre *@index_name* n’est pas utilisé pour identifier un autre index unique, la fonctionnalité de capture de données modifiées utilisera la clé primaire. Les modifications ultérieures à la clé primaire ne seront pas autorisées sans désactivation préalable de la capture de données modifiées pour la table. Cela est vrai, que la prise en charge des requêtes de modifications nettes ait été demandée ou non lors de la configuration de la capture de données. Si une table ne contient pas de clé primaire au moment de son activation pour la capture de données modifiées, tout ajout ultérieur de clé primaire sera ignoré par la capture des données modifiées. Étant donné que la capture de données modifiées n'utilisera pas de clé primaire créée une fois la table activée, la clé et les colonnes clés peuvent être supprimées sans restrictions.  
   
 ## <a name="disable-change-data-capture-for-a-table"></a>Désactiver la capture des données modifiées pour une table  

@@ -21,12 +21,12 @@ ms.assetid: 8cd437f6-9af1-44ce-9cb0-4d10c83da9ce
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 708b8c242098251211e3f0dc17df003669b68991
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 1c6683da3464e094db8e85eca71baa45e3c2d031
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696637"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53201869"
 ---
 # <a name="network-protocols-and-network-libraries"></a>Protocoles réseau et bibliothèques réseau
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -43,9 +43,9 @@ ms.locfileid: "51696637"
 ## <a name="server-message-block-protocol"></a>Protocole SMB  
  Les serveurs déployés dans le réseau de périmètre doivent avoir tous les protocoles inutilisés désactivés, y compris le protocole SMB (Server Message Block). Les serveurs Web et les serveurs DNS (Domain Name System) ne nécessitent pas SMB. Ce protocole doit être désactivé pour limiter le risque lié à l'énumération des utilisateurs.  
   
-> [!WARNING]  
+> [!WARNING]
 >  La désactivation du protocole SMB empêchera au service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou Windows Cluster d'accéder au partage de fichiers distant. Ne désactivez pas SMB si vous effectuez l'une des opérations suivantes ou si vous planifiez de le faire :  
->   
+> 
 >  -   Utiliser le nœud de cluster Windows et le mode de quorum majoritaire du partage de fichiers.  
 > -   Spécifier un partage de fichiers SMB comme répertoire de données pendant l'installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
 > -   Créer un fichier de base de données sur un partage de fichiers SMB.  

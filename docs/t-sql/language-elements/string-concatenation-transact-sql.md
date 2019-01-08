@@ -22,12 +22,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7e15f069c14131f6e75c1062e981b04aa6ef93a0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a23f24cc0ad15ab217f328a1a2dd42737e7c6b57
+ms.sourcegitcommit: a11e733bd417905150567dfebc46a137df85a2fa
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47835919"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53991792"
 ---
 # <a name="-string-concatenation-transact-sql"></a>+ (Concaténation de chaîne) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -48,7 +48,7 @@ expression + expression
   
  Pour concaténer des chaînes binaires et tout caractère compris entre ces chaînes, il faut utiliser une conversion explicite en données de type caractère. L’exemple suivant illustre dans quel cas utiliser `CONVERT` ou `CAST` avec une concaténation binaire et dans quel cas il n’est pas nécessaire d’utiliser `CONVERT` ou `CAST`.  
   
-```  
+```sql
 DECLARE @mybin1 varbinary(5), @mybin2 varbinary(5)  
 SET @mybin1 = 0xFF  
 SET @mybin2 = 0xA5  
@@ -78,7 +78,7 @@ SELECT CAST(@mybin1 AS varchar(5)) + ' '
 ### <a name="a-using-string-concatenation"></a>A. Utilisation de la concaténation de chaîne  
  L'exemple suivant crée une seule colonne sous l'en-tête `Name` à partir de plusieurs colonnes de caractères, avec le nom de famille de la personne suivi d'une virgule, d'un espace puis de son prénom. Le jeu de résultats est classé par ordre alphabétique croissant sur le nom de famille puis sur le prénom.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT (LastName + ', ' + FirstName) AS Name  
@@ -86,10 +86,10 @@ FROM Person.Person
 ORDER BY LastName ASC, FirstName ASC;  
 ```  
   
-### <a name="b-combining-numeric-and-date-data-types"></a>B. Combinaison des types de données numérique et date  
+### <a name="b-combining-numeric-and-date-data-types"></a>b. Combinaison des types de données numérique et date  
  L’exemple suivant utilise la fonction `CONVERT` pour concaténer des types de données **numeric** et **date**.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT 'The order is due on ' + CONVERT(varchar(12), DueDate, 101)  
@@ -109,7 +109,7 @@ GO
 ### <a name="c-using-multiple-string-concatenation"></a>C. Utilisation de la concaténation de plusieurs chaînes  
  L'exemple suivant concatène plusieurs chaînes pour constituer une chaîne longue et afficher le nom de famille et l'initiale des vice-présidents [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)]. Le nom de famille est suivi d'une virgule ; l'initiale est suivie d'un point.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT (LastName + ',' + SPACE(1) + SUBSTRING(FirstName, 1, 1) + '.') AS Name, e.JobTitle  
@@ -136,7 +136,7 @@ GO
 ### <a name="d-using-large-strings-in-concatenation"></a>D. Utilisation de longues chaînes dans la concaténation
 L’exemple suivant concatène plusieurs chaînes pour former une seule et même longue chaîne, puis essaie de calculer la longueur de la chaîne finale. La longueur finale du jeu de résultats est 16 000, car l’évaluation de l’expression commence à gauche, autrement dit, @x + @z + @y = > (@x + @z) + @y. Dans cet exemple, le résultat de (@x + @z) est tronqué à 8 000 octets, puis @y est ajouté au jeu de résultats, ce qui permet d’obtenir une longueur de chaîne finale de 16 000. Étant donné que @y est une chaîne de type de valeur élevée, la troncation n’a pas lieu.
 
-```
+```sql
 DECLARE @x varchar(8000) = replicate('x', 8000)
 DECLARE @y varchar(max) = replicate('y', 8000)
 DECLARE @z varchar(8000) = replicate('z',8000)
@@ -159,7 +159,7 @@ GO
 ### <a name="e-using-multiple-string-concatenation"></a>E. Utilisation de la concaténation de plusieurs chaînes  
  L’exemple suivant concatène plusieurs chaînes pour constituer une seule longue chaîne permettant d’afficher le nom de famille et la première initiale des vice-présidents issus d’un exemple de base de données. Le nom de famille est suivi d'une virgule ; l'initiale est suivie d'un point.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT (LastName + ', ' + SUBSTRING(FirstName, 1, 1) + '.') AS Name, Title  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 - plan guides [SQL Server]
 - USE PLAN query hint
 ms.assetid: bfc97632-c14c-4768-9dc5-a9c512f6b2bd
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 736ce0ea9cc700d9064a3fa5fc87a27f9b38e71a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 606778f5505e6ba7e22ade1394a0169fce4a918b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47765758"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375241"
 ---
 # <a name="plan-guides"></a>Repères de plan
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "47765758"
   
  Le nombre total de repères de plan que vous pouvez créer est uniquement tributaire des ressources système disponibles. Toutefois, les repères de plan doivent se limiter au traitement des requêtes critiques ciblées à des fins d'amélioration ou de stabilisation des performances. Les repères de plan ne doivent pas influencer la majeure partie de la charge de requête d'une application déployée.  
   
-> [!NOTE]  
+> [!NOTE]
 >  Les repères de plan ne peuvent pas être utilisés dans toutes les éditions de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prise en charge par les éditions de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md). Les repères de plan sont visibles dans n'importe quelle édition. En outre, vous pouvez attacher une base de données qui contient des repères de plan à n'importe quelle édition. Les repères de plan demeurent intacts lorsque vous restaurez ou attachez une base de données à une version mise à niveau de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="types-of-plan-guides"></a>Types de repères de plan  
@@ -57,7 +57,7 @@ BEGIN
 END;  
 ```  
   
- Supposons que cette procédure stockée a été compilée et optimisée pour `@Country_region = N'AU'` (Australie). Toutefois, comme il y a relativement peu de commandes client qui proviennent d'Australie, les performances diminuent lorsque la requête s'exécute à l'aide de valeurs de paramètre de pays contenant plus de commandes client. La plupart des commandes provenant des États-Unis, un plan de requête généré pour `@Country_region = N'US'` obtiendrait de meilleures performances pour toutes les valeurs possibles du paramètre `@Country_region`.  
+ Supposons que cette procédure stockée a été compilée et optimisée pour `@Country_region = N'AU'` (Australie). Toutefois, comme il y a relativement peu de commandes client qui proviennent d'Australie, les performances diminuent lorsque la requête s'exécute à l'aide de valeurs de paramètre de pays contenant plus de commandes client. Dans la mesure où les États-Unis constituent le pays qui arrive en première position en termes de commandes remportées, un plan de requête généré pour `@Country_region = N'US'` obtiendrait de meilleures performances pour toutes les valeurs possibles du paramètre `@Country_region` .  
   
  Vous pouvez résoudre ce problème en modifiant la procédure stockée pour ajouter l'indicateur de requête `OPTIMIZE FOR` à la requête. Toutefois, étant donné que la procédure stockée se trouve dans une application déployée, vous ne pouvez pas modifier directement le code de cette dernière. Vous pouvez en revanche créer le repère de plan suivant dans la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   

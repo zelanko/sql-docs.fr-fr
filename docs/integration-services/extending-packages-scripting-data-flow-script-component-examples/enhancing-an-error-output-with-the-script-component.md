@@ -1,7 +1,7 @@
 ---
 title: Amélioration d’une sortie d’erreur à l’aide du composant Script | Microsoft Docs
 ms.custom: ''
-ms.date: 03/17/2017
+ms.date: 01/04/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -16,12 +16,12 @@ ms.assetid: f7c02709-f1fa-4ebd-b255-dc8b81feeaa5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 68973d2d0464372b070667a5d59dcc4327b211bf
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 4ffc8c50b44285279b88d73e8fd68e34b0aab3ec
+ms.sourcegitcommit: 15b780aa5abe3f42cd70b6edf7d5a645e990b618
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527950"
+ms.lasthandoff: 01/07/2019
+ms.locfileid: "54069050"
 ---
 # <a name="enhancing-an-error-output-with-the-script-component"></a>Amélioration d'une sortie d'erreur à l'aide du composant Script
   Par défaut, les deux colonnes supplémentaires d’une sortie d’erreur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], ErrorCode et ErrorColumn, contiennent uniquement des codes numériques identifiant un numéro d’erreur et l’ID de la colonne dans laquelle l’erreur s’est produite. Ces valeurs numériques peuvent se révéler d’une utilité limitée en l’absence de la description d’erreur et du nom de colonne correspondants.  
@@ -63,44 +63,55 @@ ms.locfileid: "52527950"
 10. Attachez la sortie du composant Script à une destination appropriée. Les destinations de fichiers plats sont les plus faciles à configurer à des fins de test ad hoc.  
   
 11. Exécutez le package.  
-  
-```vb  
-Public Class ScriptMain  
-    Inherits UserComponent  
-    Public Overrides Sub Input0_ProcessInputRow(ByVal Row As Input0Buffer)  
-  
-      Row.ErrorDescription = _  
-        Me.ComponentMetaData.GetErrorDescription(Row.ErrorCode)  
-  
-      Dim componentMetaData130 = TryCast(Me.ComponentMetaData, IDTSComponentMetaData130)  
-      If componentMetaData130 IsNot Nothing Then  
-        Row.ColumnName = componentMetaData130.GetIdentificationStringByID(Row.ErrorColumn)  
-         End If  
-  
-    End Sub  
-End Class  
-```  
-  
-```csharp  
-public class ScriptMain:  
-    UserComponent  
-{  
-    public override void Input0_ProcessInputRow(Input0Buffer Row)  
-    {  
-  
-      Row.ErrorDescription = this.ComponentMetaData.GetErrorDescription(Row.ErrorCode);  
-  
-      var componentMetaData130 = this.ComponentMetaData as IDTSComponentMetaData130;  
-      if (componentMetaData130 != null)  
-        {  
-            Row.ColumnName = componentMetaData130.GetIdentificationStringByID(Row.ErrorColumn);  
-        }  
-  
-    }  
-}  
-  
-```  
-  
+
+```vb
+Public Class ScriptMain      ' VB
+    Inherits UserComponent
+    Public Overrides Sub Input0_ProcessInputRow(ByVal Row As Input0Buffer)
+
+        Row.ErrorDescription = _
+            Me.ComponentMetaData.GetErrorDescription(Row.ErrorCode)
+
+        Dim componentMetaData130 = TryCast(Me.ComponentMetaData, IDTSComponentMetaData130)
+
+        If componentMetaData130 IsNot Nothing Then
+
+            If 0 = Row.ErrorColumn Then
+                ' 0 means no specific column is identified by ErrorColumn, this time.
+                Row.ColumnName = "Check the row for a violation of a foreign key constraint."
+            Else
+                Row.ColumnName = componentMetaData130.GetIdentificationStringByID(Row.ErrorColumn)
+            End If
+        End If
+    End Sub
+End Class
+```
+
+```csharp
+public class ScriptMain:      // C#
+    UserComponent
+{
+    public override void Input0_ProcessInputRow(Input0Buffer Row)
+    {
+        Row.ErrorDescription = this.ComponentMetaData.GetErrorDescription(Row.ErrorCode);
+
+        var componentMetaData130 = this.ComponentMetaData as IDTSComponentMetaData130;
+        if (componentMetaData130 != null)
+        {
+            // 0 means no specific column is identified by ErrorColumn, this time.
+            if (Row.ErrorColumn == 0)
+            {
+                Row.ColumnName = "Check the row for a violation of a foreign key constraint.";
+            }
+            else
+            {
+                Row.ColumnName = componentMetaData130.GetIdentificationStringByID(Row.ErrorColumn);
+            }
+        }
+    }
+}
+```
+
 ## <a name="see-also"></a> Voir aussi  
  [Gestion des erreurs dans les données](../../integration-services/data-flow/error-handling-in-data.md)   
  [Utilisation de sorties d’erreur dans un composant de flux de données](../../integration-services/extending-packages-custom-objects/data-flow/using-error-outputs-in-a-data-flow-component.md)   
