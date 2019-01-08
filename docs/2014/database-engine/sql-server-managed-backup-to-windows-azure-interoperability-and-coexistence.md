@@ -1,5 +1,5 @@
 ---
-title: 'SQL Server sauvegarde managée sur Windows Azure : interopérabilité et Coexistence | Microsoft Docs'
+title: 'Sauvegarde managée SQL Server sur Windows Azure : Interopérabilité et Coexistence | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -10,18 +10,18 @@ ms.assetid: 78fb78ed-653f-45fe-a02a-a66519bfee1b
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c825ca99e120dce81cb4a18dc65413c1f5d03c4a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d4d883d54a1ad933d4e248f292d9b6a222915a00
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184239"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509132"
 ---
-# <a name="sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence"></a>Sauvegarde managée SQL Server sur Windows Azure - Interopérabilité et coexistence
-  Cette rubrique présente l'interopérabilité et la coexistence de [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] avec plusieurs fonctionnalités dans [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Ces fonctionnalités sont les suivantes : les groupes de disponibilité AlwaysOn, la mise en miroir de bases de données, les plans de maintenance de sauvegarde, la copie des journaux de transactions, les sauvegardes ad hoc, le détachement d'une base de données et la suppression d'une base de données.  
+# <a name="sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence"></a>Sauvegarde managée SQL Server sur Windows Azure : Interopérabilité et coexistence
+  Cette rubrique présente l'interopérabilité et la coexistence de [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] avec plusieurs fonctionnalités dans [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Ces fonctionnalités incluent les suivantes : Groupes de disponibilité AlwaysOn, mise en miroir de base de données, Plans de Maintenance de sauvegarde, envoi de journaux, les sauvegardes Ad hoc, détachez la base de données et Drop Database.  
   
 ### <a name="alwayson-availability-groups"></a>Groupes de disponibilité AlwaysOn  
- Les groupes de disponibilité AlwaysOn qui sont configurés exclusivement sur Windows Azure sont pris en charge pour la [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]. Les configurations de groupes de disponibilité AlwaysOn locaux ou hybrides ne sont pas prises en charge. Pour plus d’informations et d’autres considérations, consultez [configuration SQL Server Managed Backup pour Windows Azure pour les groupes de disponibilité](../../2014/database-engine/setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups.md)  
+ Groupes de disponibilité AlwaysOn qui sont configurés comme une solution Azure uniquement pris en charge pour Windows [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]. Les configurations de groupes de disponibilité AlwaysOn locaux ou hybrides ne sont pas prises en charge. Pour plus d’informations et d’autres considérations, consultez [configuration SQL Server Managed Backup pour Windows Azure pour les groupes de disponibilité](../../2014/database-engine/setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups.md)  
   
 ### <a name="database-mirroring"></a>Mise en miroir de bases de données  
  La [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] est prise en charge uniquement sur la base de données principale. Si la base de données principale et le miroir sont configurés pour utiliser la [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)], la base de données mise en miroir est ignorée et ne sera pas sauvegardée. Toutefois, en cas de basculement, la [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] commence le processus de sauvegarde après que le miroir a terminé de permuter le rôle, et est en ligne. Dans ce cas, les sauvegardes seront restaurées dans un nouveau conteneur. Si le miroir n'est pas configuré pour utiliser la [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)], en cas de basculement, aucune sauvegarde n'est effectuée. Nous vous recommandons de configurer la [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] sur le serveur principal et le miroir de façon à ce que les sauvegardes continuent en cas de basculement.  
@@ -53,9 +53,9 @@ ms.locfileid: "48184239"
 ### <a name="log-backups-using-other-backup-tools-or-custom-scripts"></a>Sauvegarde de fichier journal avec d'autres outils de sauvegarde ou des scripts personnalisés  
  Deux sauvegardes qui sont configurées pour effectuer des sauvegardes de fichier journal sur la même base de données entraîneront une interruption de la séquence des journaux de sauvegarde. Bien que la [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] tente de remédier à l'interruption dans la séquence de sauvegarde en planifiant des sauvegardes complètes lorsqu'une interruption est détectée, cela revient à suivre de façon permanente les interruptions périodiques et les sauvegardes de fichier journal effectuées par deux outils concurrents. Cela peut également affecter la récupérabilité de la base de données car aucun outil ne peut avoir un jeu complet de sauvegardes en séquence. Bien que cela s'applique à toutes les fonctionnalités ou outils effectuant des sauvegardes de fichier journal, il est utile de donner des exemples spécifiques, comme décrit ci-dessous. Cela sert également à résoudre les problèmes de configuration des plans de maintenance ou de copie des journaux de transaction décrits dans les premières sections de cette rubrique.  
   
- **Sauvegardes basées sur Data Protection Manager (DPM) :** Microsoft Data Protection Manager vous permet de faire des sauvegardes complètes et incrémentielles. Les sauvegardes incrémentielles sont des sauvegardes de fichier journal qui effectuent une troncation de journal après la création d'une sauvegarde de fichier journal T. Par conséquent, la configuration de DPM et de la [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] pour la même base de données n'est pas prise en charge.  
+ **Sauvegardes de Data Protection Manager (DPM) basées sur :** Microsoft Data Protection Manager vous permet de faire des sauvegardes complètes et incrémentielles. Les sauvegardes incrémentielles sont des sauvegardes de fichier journal qui effectuent une troncation de journal après la création d'une sauvegarde de fichier journal T. Par conséquent, la configuration de DPM et de la [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] pour la même base de données n'est pas prise en charge.  
   
- **Des outils tiers ou des Scripts :** n’importe quel outil tiers ou des scripts qui effectuent des sauvegardes du journal entraînant la troncation du journal n’est pas compatible avec [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]et n’est pas pris en charge.  
+ **Des outils tiers ou des Scripts :** N’importe quel outil tiers ou des scripts qui effectuent des sauvegardes du journal entraînant la troncation du journal n’est pas compatible avec [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]et n’est pas pris en charge.  
   
  Si vous avez [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] activé pour une instance de base de données, et que vous souhaitez effectuer une sauvegarde ad hoc, vous pouvez utiliser la [smart_admin.sp_backup_on_demand &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/managed-backup-sp-backup-on-demand-transact-sql) procédure stockée comme décrit plus haut section. Si vous avez également besoin de planifier des sauvegardes régulièrement en dehors la [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)], utilisez la sauvegarde de copie uniquement.  Pour plus d’informations, consultez [Sauvegardes de copie uniquement &#40;SQL Server&#41;](../relational-databases/backup-restore/copy-only-backups-sql-server.md).  
   

@@ -14,12 +14,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f70f0a6f6c4dc8ba4e72b30918c882c103c9410f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d9d88d2084533904dcbb47aad0d629b1aa8171e8
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669107"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544241"
 ---
 # <a name="sysdmcolumnstoreobjectpool-transact-sql"></a>Sys.dm_column_store_object_pool (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -35,12 +35,12 @@ ms.locfileid: "47669107"
 |`column_id`|`int`|ID de la colonne columnstore. Il s’agit de la valeur NULL DELETE_BITMAP.| 
 |`row_group_id`|`int`|ID du rowgroup.|
 |`object_type`|`smallint`|1 = COLUMN_SEGMENT<br /><br /> 2 = COLUMN_SEGMENT_PRIMARY_DICTIONARY<br /><br /> 3 = COLUMN_SEGMENT_SECONDARY_DICTIONARY<br /><br /> 4 = COLUMN_SEGMENT_BULKINSERT_DICTIONARY<br /><br /> 5 = COLUMN_SEGMENT_DELETE_BITMAP|  
-|`object_type_desc`|`nvarchar(60)`|COLUMN_SEGMENT – un segment de colonne. `object_id` est l’ID de segment. Un segment stocke toutes les valeurs pour une colonne au sein d’un groupe de lignes. Par exemple, si une table a 10 colonnes, il existe des segments de colonne 10 par groupe de lignes. <br /><br /> COLUMN_SEGMENT_PRIMARY_DICTIONARY – dictionnaire global qui contient des informations de recherche pour tous les segments de colonne dans la table.<br /><br /> COLUMN_SEGMENT_SECONDARY_DICTIONARY - un dictionnaire local associé à une colonne.<br /><br /> COLUMN_SEGMENT_BULKINSERT_DICTIONARY – il s’agit d’une autre représentation du dictionnaire global. Ainsi, une recherche inversée de valeur à dictionary_id. Utilisé pour créer des segments compressés en tant que partie du moteur de Tuple ou de chargement en masse.<br /><br /> COLUMN_SEGMENT_DELETE_BITMAP – supprime de la bitmap qui effectue le suivi de segment. Il existe une seule bitmap de suppression par partition.|  
+|`object_type_desc`|`nvarchar(60)`|COLUMN_SEGMENT - un segment de colonne. `object_id` est l’ID de segment. Un segment stocke toutes les valeurs pour une colonne au sein d’un groupe de lignes. Par exemple, si une table a 10 colonnes, il existe des segments de colonne 10 par groupe de lignes. <br /><br /> COLUMN_SEGMENT_PRIMARY_DICTIONARY - global dictionnaire qui contient des informations de recherche pour tous les segments de colonne dans la table.<br /><br /> COLUMN_SEGMENT_SECONDARY_DICTIONARY - un dictionnaire local associé à une colonne.<br /><br /> COLUMN_SEGMENT_BULKINSERT_DICTIONARY - il s’agit d’une autre représentation du dictionnaire global. Ainsi, une recherche inversée de valeur à dictionary_id. Utilisé pour créer des segments compressés en tant que partie du moteur de Tuple ou de chargement en masse.<br /><br /> COLUMN_SEGMENT_DELETE_BITMAP - supprime de la bitmap qui effectue le suivi de segment. Il existe une seule bitmap de suppression par partition.|  
 |`access_count`|`int`|Nombre de lire ou écrire les accès à cet objet.|  
 |`memory_used_in_bytes`|`bigint`|Mémoire utilisée par cet objet dans le pool d’objets.|  
 |`object_load_time`|`datetime`|Heure pour Lorsque object_id a été placée dans le pool d’objets.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
 
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], nécessite `VIEW SERVER STATE` autorisation.   
 Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], nécessite le `VIEW DATABASE STATE` autorisation dans la base de données.   

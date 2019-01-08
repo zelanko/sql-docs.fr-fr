@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - queries [SQL Server], types
@@ -16,12 +16,12 @@ ms.assetid: 8770d630-09cc-47ec-a0e9-e9de2d7bbc89
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 68197c2fa00cd6853e719a1304be5863144ec9af
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ebffc2246f0940c4643af2267086e727882a0633
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068555"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52763111"
 ---
 # <a name="create-insert-results-queries-visual-database-tools"></a>Créer des requêtes Insert Results (Visual Database Tools)
   Vous pouvez copier des lignes d'une table à une autre ou au sein d'une même table à l'aide d'une requête Insert Results. Dans une table `titles` par exemple, vous pouvez utiliser une requête Insert Results pour copier des informations sur les titres publiés par un éditeur dans une seconde table que vous pouvez mettre à la disposition de cet éditeur. Une requête Insert Results ressemble à une requête Make Table, à la seule différence qu'elle copie des lignes dans une table existante.  

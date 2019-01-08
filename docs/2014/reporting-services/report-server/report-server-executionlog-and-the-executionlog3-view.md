@@ -14,22 +14,22 @@ ms.assetid: a7ead67d-1404-4e67-97e7-4c7b0d942070
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 90c42f4eaafac152305c50a855f1bce1388def3d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8972427f2ba2529880715ca12d85a560a02eb31f
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095879"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52405003"
 ---
 # <a name="report-server-execution-log-and-the-executionlog3-view"></a>Journal des exécutions du serveur de rapports et vue ExecutionLog3
   Le journal d'exécution du serveur de rapports contient des informations sur les rapports qui sont exécutés sur le serveur ou sur plusieurs serveurs en mode natif regroupés dans un déploiement évolutif ou une batterie de serveurs SharePoint. Vous pouvez l'utiliser pour connaître la fréquence de demande d'un rapport, les formats de sortie les plus utilisés et le nombre de millisecondes de traitement consacré à chaque phrase du traitement. Le journal contient des informations sur le temps passé pour l'exécution d'une requête de dataset dans un rapport et le temps passé pour le traitement des données. Si vous êtes administrateur de serveur de rapports, vous pouvez passer en revue les informations du journal, identifier les tâches longues et faire des suggestions aux auteurs de rapports pour améliorer des zones du rapport (dataset ou traitement).  
   
- Les serveurs de rapports configurés pour le mode SharePoint peuvent également utiliser les journaux ULS de SharePoint. Pour plus d’informations, consultez [Activer des événements Reporting Services pour le journal des traces SharePoint &#40;ULS&#41;](turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md).  
+ Les serveurs de rapports configurés pour le mode SharePoint peuvent également utiliser les journaux ULS de SharePoint. Pour plus d’informations, consultez [Activer des événements Reporting Services pour le journal des traces SharePoint &#40;ULS&#41;](turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)  
   
 ##  <a name="bkmk_top"></a> Affichage des informations des journaux  
  Le serveur de rapports consigne les données sur l'exécution des rapports dans une table de base de données interne. Les informations de la table sont fournies par les vues de SQL Server.  
   
- Le journal d'exécution des rapports est stocké dans la base de données du serveur de rapports nommée par défaut **ReportServer**. Les vues SQL fournissent les informations associées au journal d'exécution. Les vues « 2 » et « 3 » ont été ajoutées dans les dernières versions et contiennent de nouveaux champs ou des champs avec des noms plus conviviaux que dans les versions précédentes. Les anciennes vues sont toujours présentes dans le produit de sorte que les applications personnalisées qui dépendent d'elles ne sont pas impactées. Si vous n'avez pas de dépendance sur une vue plus ancienne, par exemple ExecutionLog, il est recommandé d'utiliser la vue la plus récente, soit ExecutionLog**3**.  
+ Le journal d'exécution des rapports est stocké dans la base de données du serveur de rapports nommée par défaut **ReportServer**. Les vues SQL fournissent les informations associées au journal d'exécution. Les vues « 2 » et « 3 » ont été ajoutées dans les dernières versions et contiennent de nouveaux champs ou des champs avec des noms plus conviviaux que dans les versions précédentes. Les anciennes vues sont toujours présentes dans le produit de sorte que les applications personnalisées qui dépendent d'elles ne sont pas impactées. Si vous n'avez pas de dépendance sur une vue plus ancienne, par exemple ExecutionLog, il est recommandé d'utiliser la vue la plus récente, soit ExecutionLog**3**.  
   
  Dans cette rubrique :  
   
@@ -81,7 +81,7 @@ ms.locfileid: "48095879"
   
  **Pour activer la journalisation des exécutions :**  
   
-1.  Ouvrez SQL Server Management Studio avec des privilèges d'administrateur. Par exemple, cliquez avec le bouton droit sur l'icône de Management Studio et sélectionnez « Exécuter en tant qu'administrateur ».  
+1.  Ouvrez SQL Server Management Studio avec des privilèges d'administrateur. Par exemple, cliquez avec le bouton droit sur l’icône Management Studio et cliquez sur « Exécuter en tant qu’administrateur ».  
   
 2.  Connectez-vous au serveur de rapports souhaité.  
   
@@ -124,7 +124,7 @@ select * from ExecutionLog3 order by TimeStart DESC
 |TimeDataRetrieval|Nombre de millisecondes passées pour la récupération des données.|  
 |TimeProcessing|Nombre de millisecondes passées pour le traitement du rapport.|  
 |TimeRendering|Nombre de millisecondes passées pour le rendu du rapport.|  
-|Source|Source d'exécution du rapport. Valeurs possibles :<br /><br /> **Live**<br /><br /> **Cache**: indique une exécution mise en cache, par exemple, jeu de données de requêtes ne sont pas exécutées en temps réel.<br /><br /> **Snapshot**<br /><br /> **Historique**<br /><br /> **Ad hoc** : indique soit un rapport généré dynamiquement en fonction de modèle d’extraction, soit un rapport du Générateur de rapports affiché en aperçu sur un client utilisant le serveur de rapports pour le traitement et de rendu.<br /><br /> **Session**: indique une requête de suivi dans une session déjà établie.  Par exemple, la requête initiale concerne l'affichage de la page 1 et la requête de suivi concerne l'exportation vers Excel avec l'état de la session active.<br /><br /> **RDCE**: indique une Report Definition Customization Extension. Une extension RDCE personnalisée peut personnaliser dynamiquement une définition de rapport avant qu'elle ne soit passée au moteur de traitement lors de l'exécution.|  
+|Source|Source d'exécution du rapport. Valeurs possibles :<br /><br /> **Live**<br /><br /> **Cache**: Indique une exécution mise en cache, par exemple, jeu de données de requêtes ne sont pas exécutées en temps réel.<br /><br /> **Snapshot**<br /><br /> **Historique**<br /><br /> **Ad hoc** : indique soit un rapport d'extraction basé sur un modèle généré dynamiquement, soit un rapport du Générateur de rapports affiché en aperçu sur un client utilisant le serveur de rapports pour le traitement et le rendu.<br /><br /> **Session**: indique une requête de suivi dans une session déjà établie.  Par exemple, la requête initiale concerne l'affichage de la page 1 et la requête de suivi concerne l'exportation vers Excel avec l'état de la session active.<br /><br /> **RDCE**:  Indique une Report Definition Customization Extension. Une extension RDCE personnalisée peut personnaliser dynamiquement une définition de rapport avant qu'elle ne soit passée au moteur de traitement lors de l'exécution.|  
 |État|État (soit rsSuccess, soit un code d'erreur. En cas de plusieurs erreurs, seule la première est enregistrée).|  
 |ByteCount|Taille en octets des rapports rendus.|  
 |RowCount|Nombre de lignes retournées par les requêtes.|  
@@ -225,11 +225,11 @@ select * from ExecutionLog3 order by TimeStart DESC
   
  La section suivante décrit certaines des propriétés que s’affiche dans le champ AdditionalInfo :  
   
--   **ProcessingEngine**: 1 = SQL Server 2005, 2 = le nouveau moteur de traitement de la demande. Si la plupart de vos rapports affichent toujours la valeur 1, vous pouvez envisager de les reconcevoir afin qu'ils utilisent le nouveau moteur de traitement à la demande, plus efficace.  
+-   **ProcessingEngine**: 1=SQL Server 2005, 2=Nouveau moteur de traitement à la demande. Si la plupart de vos rapports affichent toujours la valeur 1, vous pouvez envisager de les reconcevoir afin qu'ils utilisent le nouveau moteur de traitement à la demande, plus efficace.  
   
      `<ProcessingEngine>2</ProcessingEngine>`  
   
--   **ScalabilityTime**: le nombre de millisecondes passées pour exécuter des opérations d’échelle dans le moteur de traitement. La valeur 0 indique qu'aucune période de temps supplémentaire n'a été passée sur les opérations d'échelle et indique également que la demande ne présente pas une mémoire insuffisante.  
+-   **ScalabilityTime**: Nombre de millisecondes passées pour exécuter des opérations d'échelle dans le moteur de traitement. La valeur 0 indique qu'aucune période de temps supplémentaire n'a été passée sur les opérations d'échelle et indique également que la demande ne présente pas une mémoire insuffisante.  
   
     ```  
     <ScalabilityTime>  
@@ -237,7 +237,7 @@ select * from ExecutionLog3 order by TimeStart DESC
     </ScalabilityTime>  
     ```  
   
--   **EstimatedMemoryUsageKB**: une estimation de la quantité maximale de mémoire, en kilo-octets, consommée par chaque composant pendant une requête particulière.  
+-   **EstimatedMemoryUsageKB**: Estimation de la quantité maximale de mémoire, en kilo-octets, consommée par chaque composant pendant une requête particulière.  
   
     ```  
     <EstimatedMemoryUsageKB>  
@@ -245,7 +245,7 @@ select * from ExecutionLog3 order by TimeStart DESC
     </EstimatedMemoryUsageKB>  
     ```  
   
--   **DataExtension**: les types d’extensions de données ou sources de données utilisées dans le rapport. Le nombre représente le nombre d'occurrences de la source de données spécifique.  
+-   **DataExtension**: Types d'extensions de données ou de sources de données utilisées dans le rapport. Le nombre représente le nombre d'occurrences de la source de données spécifique.  
   
     ```  
     <DataExtension>  
@@ -263,7 +263,7 @@ select * from ExecutionLog3 order by TimeStart DESC
     </ExternalImages>  
     ```  
   
--   **Connexions**: une structure à plusieurs niveaux. Ajout dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
+-   **Connexions**: Une structure à plusieurs niveaux. Ajout dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
     ```  
     <Connections>  
@@ -311,7 +311,7 @@ select * from ExecutionLog2 order by TimeStart DESC
 |colonne|Description|  
 |------------|-----------------|  
 |InstanceName|Nom de l'instance du serveur de rapports qui a géré la demande.|  
-|ReportPath|Structure du chemin d'accès au rapport.  Par exemple un rapport nommé « test » qui se trouve dans le dossier racine du gestionnaire de rapports, aura un ReportPath « /test ».<br /><br /> Un rapport nommé « test » qui est enregistré dans le dossier « samples » du gestionnaire de rapports, aura un ReportPath « /Samples/test/ »|  
+|ReportPath|Structure du chemin d'accès au rapport.  Par exemple, pour un rapport nommé « test » qui se trouve dans le dossier racine du gestionnaire de rapports, le ReportPath sera « /test ».<br /><br /> Pour un rapport nommé « test » qui est enregistré dans le dossier « samples » du gestionnaire de rapports, le ReportPath sera « /Samples/test/ »|  
 |UserName|Identificateur de l'utilisateur.|  
 |ExecutionID||  
 |RequestType|Type de demande (utilisateur ou système).|  
@@ -359,8 +359,8 @@ select * from ExecutionLog order by TimeStart DESC
 |RowCount|Nombre de lignes retournées par les requêtes.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Activer des événements de Reporting Services pour le journal des traces SharePoint &#40;ULS&#41;](turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)   
+ [Activer des événements Reporting Services pour le journal des traces SharePoint &#40;ULS&#41;](turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)   
  [Fichiers journaux et sources de Reporting Services](../report-server/reporting-services-log-files-and-sources.md)   
- [Erreurs et événements référence &#40;Reporting Services&#41;](../troubleshooting/errors-and-events-reference-reporting-services.md)  
+ [Guide de référence des erreurs et des événements &#40;Reporting Services&#41;](../troubleshooting/errors-and-events-reference-reporting-services.md)  
   
   

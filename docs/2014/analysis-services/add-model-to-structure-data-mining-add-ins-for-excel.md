@@ -13,12 +13,12 @@ ms.assetid: 8efd5bf4-4e6a-4ee8-971a-6efaed5f3b76
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7cbbbbcd154642ef3437b0860d8346d76f84bd97
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1aa72d2c9e2fcf953e8c34d7fdddd656c76b0685
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104789"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521038"
 ---
 # <a name="add-model-to-structure-data-mining-add-ins-for-excel"></a>Ajouter le modèle à la structure (Compléments d'exploration de données pour Excel)
   ![Ajouter un modèle au bouton de la Structure](media/dmc-addmodel.gif "ajouter le modèle à un bouton de la Structure")  
@@ -37,15 +37,15 @@ ms.locfileid: "48104789"
   
      **Conseil**: Si vous n’êtes pas sûr de la structure d’exploration de données contient les données que vous avez besoin, utilisez le **Document modèle** Assistant pour afficher les colonnes et les statistiques de base sur les données.  
   
-     Si vous ne parvenez pas à trouver une structure d'exploration de données, vérifiez la connexion utilisée. Vous devrez peut-être établir une connexion à un serveur différent.  
+     Si vous ne trouvez pas une structure d’exploration de données, vérifiez la connexion que vous utilisez actuellement. Vous devrez peut-être établir une connexion à un serveur différent.  
   
 3.  Dans le **sélectionner l’algorithme d’exploration de données** boîte de dialogue, sélectionnez un algorithme d’exploration de données à utiliser dans le nouveau modèle d’exploration de données.  
   
-     Notez que la boîte de dialogue fournit plus d'options que celles disponibles dans les Assistants. Vous pouvez créer un modèle à l'aide de n'importe quel algorithme pris en charge sur votre serveur [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], si vos données sont compatibles.  
+     Notez que la boîte de dialogue fournit beaucoup plus d’options que vous le verrez dans les Assistants. Vous pouvez créer un modèle à l'aide de n'importe quel algorithme pris en charge sur votre serveur [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], si vos données sont compatibles.  
   
 4.  Nous vous conseillons également le **paramètres** bouton pour ouvrir la **paramètres d’algorithme** boîte de dialogue zone et personnaliser les paramètres de l’algorithme. Cette option est la méthode la plus facile pour créer des modèles d'exploration de données personnalisés.  
   
-5.  Cliquez sur **Suivant**.  
+5.  Cliquer sur **Suivant**.  
   
 6.  Dans le **sélectionner des colonnes** boîte de dialogue, passez en revue la liste des colonnes et si nécessaire, modifiez l’utilisation des colonnes à une des valeurs suivantes :  
   
@@ -90,12 +90,12 @@ ms.locfileid: "48104789"
 |Option|Commentaires|  
 |------------|--------------|  
 |**Sélectionnez une Structure ou un modèle** boîte de dialogue|Choisissez la structure d'exploration de données existante à utiliser en tant que base pour générer un nouveau modèle.  La structure que vous choisissez doit se trouver sur la connexion actuelle. Dans le cas contraire, modifier les connexions à l’aide de la [se connecter à la Source de données &#40;Client d’exploration de données pour Excel&#41; ](connect-to-source-data-data-mining-client-for-excel.md) outil.|  
-|**Sélectionnez l’algorithme d’exploration de données** boîte de dialogue|La liste des algorithmes d'exploration de données varie selon le serveur auquel vous êtes connecté. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fournit différents algorithmes dans les éditions Standard et Enterprise. L'administrateur peut également avoir ajouté des algorithmes personnalisés.<br /><br /> Si les algorithmes ne s'affichent pas, vérifiez que vous êtes connecté à une instance d'[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].|  
+|**Sélectionnez l’algorithme d’exploration de données** boîte de dialogue|La liste des algorithmes d'exploration de données varie selon le serveur auquel vous êtes connecté. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fournit différents algorithmes dans les éditions Standard et Enterprise. L'administrateur peut également avoir ajouté des algorithmes personnalisés.<br /><br /> Si vous ne voyez pas tous les algorithmes, vérifiez que vous êtes connecté à une instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].|  
 |**Paramètres d’algorithme** boîte de dialogue|Dans ces paramètres, vous pouvez personnaliser chaque algorithme en utilisant des paramètres spécifiques à la méthode analytique. Vous pouvez également définir une valeur initiale afin de garantir que les résultats du modèle peuvent être reproduits sur plusieurs passes d'apprentissage.<br /><br /> Pour plus d’informations, consultez [paramètres d’algorithme &#40;SQL Server Data Mining Add-ins&#41;](algorithm-parameters-sql-server-data-mining-add-ins.md).|  
 |**Définir les indicateurs de modèle de colonne** boîte de dialogue|Les indicateurs de modélisation permettent d'améliorer le modèle en spécifiant la façon dont les données manquantes doivent être gérées. Pour plus d’informations, consultez [Indicateurs de modélisation &#40;Exploration de données&#41;](data-mining/modeling-flags-data-mining.md).|  
   
 ###  <a name="Bkmk_mdlcolumn"></a> Définition de l’utilisation de colonne  
- Lorsque vous ajoutez un nouveau modèle à une structure d'exploration de données existante, vous devez spécifier la façon dont le modèle utilisera chaque colonne de données dans la structure d'exploration de données. Vous observerez probablement que les options de cet Assistant sont beaucoup plus détaillées que les options de la structure d'exploration de données. Pourquoi ?  
+ Lorsque vous ajoutez un nouveau modèle à une structure d'exploration de données existante, vous devez spécifier la façon dont le modèle utilisera chaque colonne de données dans la structure d'exploration de données. Vous observerez probablement que les options de cet Assistant sont beaucoup plus détaillées que les options sur la structure d’exploration de données. Pourquoi ?  
   
  En effet, lorsque vous créez un modèle et une structure en utilisant un Assistant, la plupart des options qui contrôlent la manière dont les données sont exploitées par l'algorithme sont définies automatiquement. Toutefois, lorsque vous ajoutez un modèle à une structure existante, vous devez consulter ces options manuellement, puis spécifier si les données doivent être utilisées pour l'analyse, si le type de données est correct, et ainsi de suite.  
   
@@ -109,11 +109,11 @@ ms.locfileid: "48104789"
   
      Les modèles de clustering peuvent être créés sans valeur prévisible, mais d'autres modèles exigent généralement que vous spécifiiez une colonne unique pour la prédiction.  
   
--   La composition des données est incompatible avec l'algorithme choisi.  
+-   La composition des données n’est pas compatible avec l’algorithme que vous avez choisie.  
   
      Certains types d'analyses requièrent des données structurées avec soin d'après des règles uniques. Par exemple, les modèles de prévision et les modèles d'association. Vous pouvez ajouter facilement des modèles du même type, éventuellement avec des personnalisations, mais les données ne fonctionnent pas avec d'autres algorithmes.  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  Pour créer des modèles d'exploration de données, vous devez disposer d'une connexion à une instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Pour plus d’informations sur la création ou modification d’une connexion, consultez [se connecter à la Source de données &#40;Client d’exploration de données pour Excel&#41;](connect-to-source-data-data-mining-client-for-excel.md).  
   
  Si la structure d'exploration de données que vous voulez utiliser n'est pas visible, il se peut qu'elle ait été enregistrée dans une autre instance ou une base de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] différente. Pour plus d’informations sur la modification à une connexion d’exploration de données différentes, consultez [se connecter à un serveur d’exploration de données](connect-to-a-data-mining-server.md).  

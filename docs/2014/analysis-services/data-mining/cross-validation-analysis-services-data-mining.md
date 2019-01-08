@@ -16,12 +16,12 @@ ms.assetid: 718b9072-0f35-482a-a803-9178002ff5b9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1620b1dc5f25506e1da54c426333817efd29882a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 550914167b005803e7ff39ebbcf3727f7b6b0b8c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118189"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526104"
 ---
 # <a name="cross-validation-analysis-services---data-mining"></a>Validation croisée (Analysis Services - Exploration de données)
   La *validation croisée* est un outil d’analyse standard et une fonctionnalité importante quand il s’agit de développer et d’optimiser des modèles d’exploration de données. Vous recourez à la validation croisée après avoir créé une structure d'exploration de données et des modèles d'exploration de données connexes dans le but d'établir la validité du modèle.  Les applications de la validation croisée sont les suivantes :  
@@ -87,7 +87,7 @@ ms.locfileid: "48118189"
   
  Une fois que vous avez sélectionné l'attribut prédictible, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] teste automatiquement tous les modèles qui utilisent le même attribut prédictible. Si l'attribut cible contient des valeurs discrètes, une fois que vous avez sélectionné la colonne prédictible, vous pouvez taper facultativement un état cible, si vous souhaitez prédire une valeur spécifique.  
   
- La sélection de l'état cible affecte les mesures retournées. Si vous spécifiez un attribut cible (c'est-à-dire un nom de colonne) et ne choisissez pas de valeur spécifique que le modèle doit prédire, le modèle sera évalué par défaut sur sa prédiction de l'état le plus probable.  
+ La sélection de l'état cible affecte les mesures retournées. Si vous spécifiez un attribut cible-autrement dit, un nom de colonne- et ne choisissez pas une valeur spécifique que vous souhaitez que le modèle pour prédire, par défaut, le modèle doit être évalué selon sa prédiction de l’état le plus probable.  
   
  Quand vous utilisez la validation croisée avec des modèles de clustering, il n’existe aucune colonne prédictible. Vous sélectionnez à la place **#Cluster** dans la liste de la zone de liste **Attribut cible** . Après avoir sélectionné cette option, d’autres options non applicables aux modèles de clustering, telles que **État cible**, sont désactivées. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] testera tous les modèles de clustering associés à la structure d’exploration de données.  
   
@@ -182,16 +182,16 @@ ms.locfileid: "48118189"
   
 |Rubriques|Liens|  
 |------------|-----------|  
-|Décrit la définition des paramètres de validation croisée dans SQL Server Development Studio.|[Onglet Validation croisée &#40;vue graphique d’analyse de précision d’exploration de données&#41;](../cross-validation-tab-mining-accuracy-chart-view.md)|  
+|Décrit la définition des paramètres de validation croisée dans SQL Server Development Studio.|[Onglet Validation croisée &#40;vue Graphique d’analyse de précision de l’exploration de données&#41;](../cross-validation-tab-mining-accuracy-chart-view.md)|  
 |Décrit les mesures fournies par la validation croisée|[Formules de validation croisée](cross-validation-formulas.md)|  
 |Explique le format des rapports de validation croisée et définit les mesures statistiques fournies pour chaque type de modèle.|[Mesures dans le rapport de validation croisée](measures-in-the-cross-validation-report.md)|  
 |Répertorie les procédures stockées pour calculer des statistiques de validation croisée.|[Procédures stockées d’exploration de données &#40;Analysis Services - Exploration de données&#41;](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)|  
 |||  
 |Décrit la création d'un jeu de données de test pour les structures d'exploration de données et les modèles associés.|[Jeux de données d’apprentissage et de test](training-and-testing-data-sets.md)|  
 |Consultez des exemples d'autres types de graphiques d'analyse de précision.|[Matrice de classification &#40;Analysis Services - Exploration de données&#41;](classification-matrix-analysis-services-data-mining.md)<br /><br /> [Graphique de courbes d’élévation &#40;Analysis Services - Exploration de données&#41;](lift-chart-analysis-services-data-mining.md)<br /><br /> [Graphique des bénéfices &#40;Analysis Services - Exploration de données&#41;](profit-chart-analysis-services-data-mining.md)<br /><br /> [Nuage de points &#40;Analysis Services - Exploration de données&#41;](scatter-plot-analysis-services-data-mining.md)|  
-|Décrit les étapes de création de différents graphiques d'analyse de précision.|[Test et des tâches de Validation et des procédures &#40;exploration de données&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)|  
+|Décrit les étapes de création de différents graphiques d'analyse de précision.|[Tâches de test et validation et procédures &#40;exploration de données&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Test et Validation &#40;exploration de données&#41;](testing-and-validation-data-mining.md)  
+ [Test et validation &#40;exploration de données&#41;](testing-and-validation-data-mining.md)  
   
   

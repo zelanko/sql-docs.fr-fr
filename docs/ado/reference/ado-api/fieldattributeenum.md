@@ -16,17 +16,17 @@ ms.assetid: 6e34d886-005a-40dc-bd5c-6adcbf81e5cd
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 80fb27aa51d6e0a44f8f006711708e24cd04bef3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: db3b72b7bdaf60febdeb41eb6f6e1e86c5064f63
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47632317"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507157"
 ---
 # <a name="fieldattributeenum"></a>FieldAttributeEnum
 Spécifie un ou plusieurs attributs d’un [champ](../../../ado/reference/ado-api/field-object.md) objet.  
   
-|Constante|Valeur|Description|  
+|Constante|Value|Description|  
 |--------------|-----------|-----------------|  
 |**adFldCacheDeferred**|0x1000|Indique que le fournisseur met en cache les valeurs de champ et que les lectures suivantes sont effectuées à partir du cache.|  
 |**adFldFixed**|0x10|Indique que le champ contienne des données de longueur fixe.|  
@@ -38,7 +38,7 @@ Spécifie un ou plusieurs attributs d’un [champ](../../../ado/reference/ado-ap
 |**adFldIsRowURL**|0x10000|Indique que le champ contient l’URL que les noms de la ressource à partir du magasin de données représenté par l’enregistrement.|  
 |**adFldLong**|0x80|Indique que le champ est un champ binaire longue. Indique également que vous pouvez utiliser la [AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md) et [GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md) méthodes.|  
 |**adFldMayBeNull**|0x40|Indique que vous pouvez lire les valeurs null à partir du champ.|  
-|**adFldMayDefer**|0x2|Indique que le champ est différé, autrement dit, les valeurs de champ ne sont pas récupérées à partir de la source de données avec l’intégralité de l’enregistrement, mais uniquement lorsque vous y accédez de manière explicite.|  
+|**adFldMayDefer**|0x2|Indique que le champ est différé qu’est, les valeurs de champ ne sont pas récupérées à partir de la source de données avec l’intégralité de l’enregistrement, mais uniquement lorsque vous y accédez de manière explicite.|  
 |**adFldNegativeScale**|0x4000|Indique que le champ représente une valeur numérique à partir d’une colonne qui prend en charge les valeurs d’échelle négative. La mise à l’échelle est spécifiée par le [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md) propriété.|  
 |**adFldRowID**|0x100|Indique que le champ contient un identificateur de ligne persistant qui ne peuvent pas être écrits à et n’a aucune valeur significative, excepté pour identifier la ligne (par exemple, un numéro d’enregistrement, identificateur unique et ainsi de suite).|  
 |**adFldRowVersion**|0x200|Indique que le champ contienne un cachet de date ou d’heure utilisé pour effectuer le suivi des mises à jour.|  

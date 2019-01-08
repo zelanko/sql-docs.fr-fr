@@ -21,12 +21,12 @@ ms.assetid: ccfaf62c-9f87-43cf-a5e7-8942e91dd041
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 74f44195e0c365b46794fdd03ff296a1fa4040dc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e857682f5bb03256b129521840f8969e797e1a5f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47640477"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535735"
 ---
 # <a name="sysdmhadrinstancenodemap-transact-sql"></a>sys.dm_hadr_instance_node_map (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -40,10 +40,10 @@ ms.locfileid: "47640477"
 |Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**ag_resource_id**|**nvarchar (256)**|ID unique du groupe de disponibilité en tant que ressource dans le cluster WSFC.|  
-|**instance_name**|**nvarchar (256)**|Nom —*server*/*instance*, d’une instance de serveur qui héberge un réplica du groupe de disponibilité.|  
+|**instance_name**|**nvarchar (256)**|Nom -*server*/*instance*-d’une instance de serveur qui héberge un réplica du groupe de disponibilité.|  
 |**nom_nœud**|**nvarchar (256)**|Nom du nœud de cluster WSFC.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  requièrent l'autorisation VIEW SERVER STATE sur le serveur.  
   
 ## <a name="see-also"></a>Voir aussi  

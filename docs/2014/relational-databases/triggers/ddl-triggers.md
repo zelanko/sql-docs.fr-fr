@@ -12,12 +12,12 @@ ms.assetid: 1a4a6564-9820-4a14-9305-2c0e9ea37454
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 25559152ebb3b748cee44a3a04dec2c23b7432b8
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: 87f260bc69a582726c2e995ed1934d10a1481db9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072033"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52772341"
 ---
 # <a name="ddl-triggers"></a>Déclencheurs DDL
   Les déclencheurs DDL sont activés en réponse à différents événements DDL (Data Definition Language). Ces événements correspondent principalement à des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] commençant par les mots clés CREATE, ALTER, DROP, GRANT, DENY, REVOKE ou UPDATE STATISTICS. Certaines procédures stockées système qui effectuent des opérations de type DDL peuvent également activer des déclencheurs DDL.  
@@ -35,7 +35,7 @@ ms.locfileid: "49072033"
   
 ## <a name="types-of-ddl-triggers"></a>Types de déclencheurs DDL  
  Déclencheur Transact-SQL DDL  
- Un type spécial de [!INCLUDE[tsql](../../includes/tsql-md.md)] procédure stockée qui exécute une ou plusieurs [!INCLUDE[tsql](../../includes/tsql-md.md)] instructions en réponse à un événement de l’étendue de base de données ou de serveur. Par exemple, un déclencheur DDL peut être activé si une instruction comme ALTER SERVER CONFIGURATION est exécutée ou si une table est supprimée à l'aide de DROP TABLE.  
+ Type spécial de procédure stockée [!INCLUDE[tsql](../../includes/tsql-md.md)] qui exécute une ou plusieurs instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] en réponse à un événement d'étendue de serveur ou de base de données. Par exemple, un déclencheur DDL peut être activé si une instruction comme ALTER SERVER CONFIGURATION est exécutée ou si une table est supprimée à l'aide de DROP TABLE.  
   
  Déclencheur DDL CLR  
  Au lieu d'exécuter une procédure stockée [!INCLUDE[tsql](../../includes/tsql-md.md)] , un déclencheur CLR exécute une ou plusieurs méthodes écrites en code managé que les membres d'un assembly ont créées dans .NET Framework et téléchargées dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

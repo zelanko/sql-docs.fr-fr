@@ -13,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: eeed58e54510748969b1111e09c3791a9320d23c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: de2cd6746b23ebec2b51e124ba7b5d2e22fb91e4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732771"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520859"
 ---
 # <a name="syspdwnodescolumnstoredictionaries-transact-sql"></a>sys.pdw_nodes_column_store_dictionaries (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -32,13 +32,13 @@ ms.locfileid: "47732771"
 |**column_id**|**Int**|ID de la colonne columnstore.|  
 |**dictionary_id**|**Int**|ID du dictionnaire.|  
 |**version**|**Int**|Version du format de dictionnaire.|  
-|**type**|**Int**|Type de dictionnaire :<br /><br /> 1 – dictionnaire de hachage contenant **int** valeurs<br /><br /> 2 – Non utilisé<br /><br /> 3 – Dictionnaire de hachage contenant des valeurs de chaîne<br /><br /> 4 – hachage dictionnaire contenant **float** valeurs|  
+|**type**|**Int**|Type de dictionnaire :<br /><br /> 1 - dictionnaire de hachage contenant **int** valeurs<br /><br /> 2 - non utilisé<br /><br /> 3 - dictionnaire de hachage contenant des valeurs de chaîne<br /><br /> 4 - dictionnaire de hachage contenant **float** valeurs|  
 |**last_id**|**Int**|Dernier ID de données dans le dictionnaire.|  
 |**entry_count**|**bigint**|Nombre d'entrées dans le dictionnaire.|  
 |**on_disc_size**|**bigint**|Taille du dictionnaire en octets.|  
 |**pdw_node_id**|**Int**|Identificateur unique d’un [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] nœud.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert l'autorisation VIEW SERVER STATE.  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Business_Intelligence_Designers.Data_Transformation_Designers.General
@@ -13,12 +12,12 @@ ms.assetid: d695690a-923b-4036-945e-7621e8651deb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 16a62e70239db5688fc37b34f3b11752f43178d6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ce643cbaa6cfade08b84894bdd1af9b24533392b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48151016"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52750112"
 ---
 # <a name="general-page"></a>Page Général
   Utilisez la page **Général** de la page **Concepteurs de services d'intégration** dans la boîte de dialogue **Options** pour spécifier les options de chargement, d'affichage et de mise à niveau des packages.  
@@ -37,7 +36,7 @@ ms.locfileid: "48151016"
  Sélectionnez cette option pour afficher un avertissement lors du chargement d'un package qui n'est pas signé.  
   
  **Afficher les étiquettes de contrainte de précédence**  
- Sélectionnez l'étiquette (Réussite, Échec ou À l'achèvement) à afficher sur les contraintes de précédence lors de la consultation de packages dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
+ Sélectionnez l’étiquette (Réussite, Échec ou À l’achèvement) à afficher sur les contraintes de précédence pendant la consultation de packages dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
  **Langage de script**  
  Sélectionnez le langage de script par défaut pour les nouvelles tâches de script et les composants Script.  

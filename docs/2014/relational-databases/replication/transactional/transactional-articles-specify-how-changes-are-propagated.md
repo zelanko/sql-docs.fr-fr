@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - transactional replication, propagation methods
@@ -13,12 +12,12 @@ ms.assetid: a10c5001-22cc-4667-8f0b-3d0818dca2e9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 557820cc0e1832a5e80f3a66a4a4f67859f2a8d0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: de28a4353c5d690e30cd2cefc20f50e4911c6ff1
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107689"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52754161"
 ---
 # <a name="specify-how-changes-are-propagated-for-transactional-articles"></a>Spécifier le mode de propagation des modifications des articles transactionnels
   La réplication transactionnelle permet de préciser comment les modifications des données sont propagées entre le serveur de publication et les Abonnés. Pour chaque table publiée, vous pouvez spécifier l'une des quatre méthodes de propagation possibles d'une opération (INSERT, UPDATE ou DELETE) vers l'Abonné :  
@@ -117,7 +116,7 @@ pkc1, pkc2, pkc3,... pkcn
   
 #### <a name="scall-syntax"></a>Syntaxe SCALL  
  Procédures stockées UPDATE  
- Les procédures stockées gérant des instructions UPDATE ne recevront les valeurs mises à jour que pour les colonnes qui ont été modifiées, suivies tout d'abord des valeurs d'origine des colonnes clés primaire, puis d'un paramètre de masque binaire (`binary(n)`) indiquant les colonnes modifiées. Dans l'exemple suivant, la colonne 2 (c2) n'a pas été modifiée :  
+ Les procédures stockées gérant des instructions UPDATE ne recevront les valeurs mises à jour que pour les colonnes qui ont été modifiées, suivies tout d'abord des valeurs d'origine des colonnes clés primaire, puis d'un paramètre de masque binaire (`binary(n)`) indiquant les colonnes modifiées. Dans l'exemple suivant, la colonne 2 (c2) n'a pas été modifiée :  
   
 ```  
 c1, , c3,... cn, pkc1, pkc2, pkc3,... pkcn, bitmask  

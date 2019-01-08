@@ -17,17 +17,17 @@ ms.assetid: d02b199e-1e52-4cc9-b118-750952ae7f63
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6140fe9fc991356a0138c533e8dcbfdb53ca0959
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ae03c7dccdc702ccb4deae068013a69d7852d623
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789475"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529628"
 ---
 # <a name="ado-for-visual-c-syntax-index-for-com"></a>Index de la syntaxe ADO pour Visual C++ pour COM
 Cet index est un renvoi à la référence du langage ADO basé sur Microsoft Visual C++.  
   
- Si vous utilisez le **#import** directive dans votre application, un fichier d’en-tête sera généré qui vous permettra d’utiliser une syntaxe semblable à Microsoft Visual Basic. Les noms de propriété sous la forme **get_ *** PropertyName* et **put_ *** PropertyName* peut être traitée comme si elles ont été déclarées comme simple *PropertyName*. Une propriété peut alors être traitée comme un membre de données au lieu d’une fonction.  
+ Si vous utilisez le **#import** directive dans votre application, un fichier d’en-tête sera généré qui vous permettra d’utiliser une syntaxe semblable à Microsoft Visual Basic. Les noms de propriété sous la forme **get_**_PropertyName_ et **put_**_PropertyName_ peut être traitée comme si elles ont été déclarées comme simple *PropertyName*. Une propriété peut alors être traitée comme un membre de données au lieu d’une fonction.  
   
  Toutes les méthodes, propriétés et événements sont des fonctions qui retournent un **HRESULT**, que vous pouvez tester pour déterminer si la fonction a été exécutée avec succès.  
   

@@ -14,12 +14,12 @@ ms.assetid: d00d1e1e-14b1-41a2-a00f-2a3cb7396f15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7bcb96b2bd0710af94b944d2f8e3417d9cfbcee6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ad7331fbbfed123da5d7121d83558ba4bbabc912
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47720705"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527252"
 ---
 # <a name="parameter-ado---wfc-syntax"></a>Paramètre (ADO - syntaxe WFC)
 ## <a name="package-commswfcdata"></a>package com.ms.wfc.data  
@@ -70,9 +70,9 @@ public AdoProperties getProperties()
   
  ADO/WFC implémente la **valeur** propriété avec le **getValue** (méthode), qui retourne un objet de type VARIANT ; et le **setValue** (méthode), qui prend une variante en tant qu’argument. Variantes sont très efficaces dans certains langages, tels que Microsoft Visual Basic.  
   
- Outre le **valeur** propriété, ADO/WFC fournit *accesseur* les méthodes qui utilisent des types de données Java pour obtenir et définir le contenu de **paramètre** objets. La plupart de ces méthodes ont des noms au format **obtenir *** DataType* ou **Définir *** DataType*.  
+ Outre le **valeur** propriété, ADO/WFC fournit *accesseur* les méthodes qui utilisent des types de données Java pour obtenir et définir le contenu de **paramètre** objets. La plupart de ces méthodes ont des noms au format **obtenir**_DataType_ ou **définir**_DataType_.  
   
- Il existe une exception notable : il existe aucune **getNull** propriété ; au lieu de cela, il existe un **isNull** propriété qui retourne une valeur booléenne indiquant si le champ est null.  
+ Il existe une exception notable : Il existe aucune **getNull** propriété ; au lieu de cela, il existe un **isNull** propriété qui retourne une valeur booléenne indiquant si le champ est null.  
   
 ```  
 public boolean getBoolean()  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - initializing subscriptions [SQL Server replication], reinitializing
@@ -15,12 +14,12 @@ ms.assetid: ca3625c5-c62e-4ab7-9829-d511f838e385
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 738b9179143b4c6b0c986f7f6a16464980b60f8f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3f148cc75ba7ae1987d0114186b76273f35e8d03
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130336"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52771391"
 ---
 # <a name="reinitialize-a-subscription"></a>Réinitialiser un abonnement
   Cette rubrique explique comment réinitialiser un abonnement par extraction de données (pull) dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], de [!INCLUDE[tsql](../../includes/tsql-md.md)]ou d'objets RMO (Replication Management Objects). Des abonnements individuels peuvent être marqués pour réinitialisation afin qu'un nouvel instantané soit appliqué lors de la synchronisation suivante.  
@@ -110,7 +109,7 @@ ms.locfileid: "48130336"
   
 1.  Sur l’Abonné, dans la base de données d’abonnement, exécutez [sp_reinitpullsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-reinitpullsubscription-transact-sql). Specify **@publisher**, de **@publisher_db**et **@publication**. L'abonnement est alors marqué pour réinitialisation lors de la prochaine exécution de l'Agent de distribution.  
   
-2.  (Facultatif) Démarrez l'Agent de distribution sur l'Abonné pour synchroniser l'abonnement. Pour plus d’informations, consultez [Synchroniser un abonnement par extraction (pull)](synchronize-a-pull-subscription.md).  
+2.  (Facultatif) Démarrez l'Agent de distribution sur l'Abonné pour synchroniser l'abonnement. Pour plus d'informations, voir [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md).  
   
 #### <a name="to-reinitialize-a-push-subscription-to-a-transactional-publication"></a>Pour réinitialiser un abonnement par émission de données à une publication transactionnelle  
   
@@ -174,7 +173,7 @@ ms.locfileid: "48130336"
 3.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> pour obtenir les propriétés de l'objet.  
   
     > [!NOTE]  
-    >  Si cette méthode retourne `false`, soit les propriétés d’abonnement à l’étape 2 ont été définies de manière incorrecte ou l’abonnement par extraction n’existe pas.  
+    >  Si cette méthode retourne `false`, les propriétés de l'abonnement définies à l'étape 2 sont incorrectes ou l'abonnement par extraction n'existe pas.  
   
 4.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.TransPullSubscription.Reinitialize%2A> . Cette méthode marque l'abonnement pour réinitialisation.  
   
@@ -189,7 +188,7 @@ ms.locfileid: "48130336"
 3.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> pour obtenir les propriétés de l'objet.  
   
     > [!NOTE]  
-    >  Si cette méthode retourne `false`, soit les propriétés d’abonnement à l’étape 2 ont été définies de manière incorrecte ou l’envoi d’abonnement n’existe pas.  
+    >  Si cette méthode retourne `false`, les propriétés de l'abonnement définies à l'étape 2 sont incorrectes ou l'abonnement par émission de données n'existe pas.  
   
 4.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.TransSubscription.Reinitialize%2A> . Cette méthode marque l'abonnement pour réinitialisation.  
   
@@ -204,7 +203,7 @@ ms.locfileid: "48130336"
 3.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> pour obtenir les propriétés de l'objet.  
   
     > [!NOTE]  
-    >  Si cette méthode retourne `false`, soit les propriétés d’abonnement à l’étape 2 ont été définies de manière incorrecte ou l’abonnement par extraction n’existe pas.  
+    >  Si cette méthode retourne `false`, les propriétés de l'abonnement définies à l'étape 2 sont incorrectes ou l'abonnement par extraction n'existe pas.  
   
 4.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.MergePullSubscription.Reinitialize%2A> . Passez la valeur `true` pour télécharger les modifications sur l'Abonné avant la réinitialisation ou la valeur `false` pour réinitialiser et perdre toute modification en attente sur l'Abonné. Cette méthode marque l'abonnement pour réinitialisation.  
   
@@ -222,14 +221,14 @@ ms.locfileid: "48130336"
 3.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> pour obtenir les propriétés de l'objet.  
   
     > [!NOTE]  
-    >  Si cette méthode retourne `false`, soit les propriétés d’abonnement à l’étape 2 ont été définies de manière incorrecte ou l’envoi d’abonnement n’existe pas.  
+    >  Si cette méthode retourne `false`, les propriétés de l'abonnement définies à l'étape 2 sont incorrectes ou l'abonnement par émission de données n'existe pas.  
   
 4.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.MergeSubscription.Reinitialize%2A> . Passez la valeur `true` pour télécharger les modifications sur l'Abonné avant la réinitialisation ou la valeur `false` pour réinitialiser et perdre toute modification en attente sur l'Abonné. Cette méthode marque l'abonnement pour réinitialisation.  
   
     > [!NOTE]  
     >  Les modifications ne peuvent pas être téléchargées si l'abonnement a expiré. Pour plus d'informations, voir [Set the Expiration Period for Subscriptions](publish/set-the-expiration-period-for-subscriptions.md).  
   
-5.  Synchronisez l'abonnement par émission de données. Pour plus d’informations, consultez [Synchroniser un abonnement par émission (push)](synchronize-a-push-subscription.md).  
+5.  Synchronisez l'abonnement par émission de données. Pour plus d'informations, voir [Synchronize a Push Subscription](synchronize-a-push-subscription.md).  
   
 ###  <a name="PShellExample"></a> Exemples (RMO)  
  Cet exemple réinitialise un abonnement par extraction à une publication transactionnelle.  

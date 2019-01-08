@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/22/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - connections [SQL Server], firewall systems
@@ -15,12 +14,12 @@ ms.assetid: 0093b43c-c6b5-4574-9b30-3a0e91e1a1f9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: bc7f87e7e648e81b4af7411a9f9474b6cc9818da
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 6e0eafd8a8eb1d9d73f71ab069dc8bf0795a87bc
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48905912"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52640050"
 ---
 # <a name="configure-a-windows-firewall-for-database-engine-access"></a>Configurer un pare-feu Windows pour accéder au moteur de base de données
   Cette rubrique explique comment configurer un pare-feu Windows pour l'accès du moteur de base de données dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide du Gestionnaire de configuration SQL Server. Les systèmes de pare-feu empêchent les accès non autorisés aux ressources de l'ordinateur. Pour accéder à une instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] par le biais d'un pare-feu, vous devez configurer le pare-feu de l'ordinateur exécutant [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour autoriser l'accès.  
@@ -47,7 +46,7 @@ ms.locfileid: "48905912"
   
      [Sécurité](#Security)  
   
--   **Pour configurer un pare-feu Windows pour accéder au moteur de base de données de, à l’aide de :**  
+-   **Pour configurer un pare-feu Windows donnant accès au moteur de base de données avec :**  
   
      [Gestionnaire de configuration SQL Server](#SSMSProcedure)  
   
@@ -69,7 +68,7 @@ ms.locfileid: "48905912"
   
 3.  Dans la boîte de dialogue **Type de règle** , sélectionnez **Port**, puis cliquez sur **Suivant**.  
   
-4.  Dans la boîte de dialogue **Protocoles et ports** , sélectionnez **TCP**. Sélectionnez **ports locaux spécifiques**, puis tapez le numéro de port de l’instance de la [!INCLUDE[ssDE](../../includes/ssde-md.md)], tel que `1433` pour l’instance par défaut. Cliquez sur **Suivant**.  
+4.  Dans la boîte de dialogue **Protocoles et ports** , sélectionnez **TCP**. Sélectionnez **ports locaux spécifiques**, puis tapez le numéro de port de l’instance de la [!INCLUDE[ssDE](../../includes/ssde-md.md)], tel que `1433` pour l’instance par défaut. Cliquer sur **Suivant**.  
   
 5.  Dans la boîte de dialogue **Action** , sélectionnez **Autoriser la connexion**, puis cliquez sur **Suivant**.  
   
@@ -85,7 +84,7 @@ ms.locfileid: "48905912"
   
 3.  Dans la boîte de dialogue **Type de règle** , sélectionnez **Programme**, puis cliquez sur **Suivant**.  
   
-4.  Dans la boîte de dialogue **Programme** , sélectionnez **Ce chemin d'accès au programme**. Cliquez sur **Parcourir**et accédez à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à laquelle vous voulez accéder par le biais du pare-feu, puis cliquez sur **Ouvrir**. Par défaut, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se trouve dans **C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Binn\Sqlservr.exe**. Cliquez sur **Suivant**.  
+4.  Dans la boîte de dialogue **Programme** , sélectionnez **Ce chemin d'accès au programme**. Cliquez sur **Parcourir**et accédez à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à laquelle vous voulez accéder par le biais du pare-feu, puis cliquez sur **Ouvrir**. Par défaut, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se trouve dans **C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Binn\Sqlservr.exe**. Cliquer sur **Suivant**.  
   
 5.  Dans la boîte de dialogue **Action** , sélectionnez **Autoriser la connexion**, puis cliquez sur **Suivant**.  
   

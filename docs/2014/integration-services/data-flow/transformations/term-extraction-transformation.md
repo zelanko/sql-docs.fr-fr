@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.termextractiontrans.f1
@@ -26,12 +25,12 @@ ms.assetid: d0821526-1603-4ea6-8322-2d901568fbeb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1a0e333b31bef63c0f0f8fcf3a9d54dbdba579a4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f6d63836dbc6827eb47daaf4110bc678357012d3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155129"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52762436"
 ---
 # <a name="term-extraction-transformation"></a>Transformation d'extraction de terme
   La transformation d'extraction de terme extrait des termes à partir de texte d'une colonne d'entrée de transformation, puis écrit les termes dans une colonne de sortie de transformation. La transformation fonctionne uniquement avec du texte en langue anglaise et utilise uniquement son propre dictionnaire d'anglais et ses propres informations linguistiques.  
@@ -54,7 +53,7 @@ ms.locfileid: "48155129"
 ## <a name="exclusion-terms"></a>Termes d'exclusion  
  Éventuellement, la transformation d'extraction de terme peut faire référence à une colonne de table qui contient des termes d'exclusion, à savoir des termes qui doivent être ignorés par la transformation lors de l'extraction de termes à partir d'un jeu de données. Cela est utile lorsqu'un ensemble de termes a déjà été identifié comme sans importance dans un secteur d'activité ou une industrie particulière, en général parce qu'ils apparaissent à une fréquence tellement élevée qu'ils en deviennent des mots non significatifs. Par exemple, lors de l'extraction de termes à partir d'un dataset qui contient des informations de support clientèle sur une marque de véhicules spécifique, le nom de la marque peut être exclu car il sera mentionné trop fréquemment pour être significatif. Par conséquent, les valeurs de la liste d'exclusion doivent être personnalisées en fonction du jeu de données avec lequel vous travaillez.  
   
- Lorsque vous ajoutez un terme à la liste d'exclusion, tous les termes—mots ou expressions nominales—qui contiennent le terme sont également exclus. Par exemple, si la liste d’exclusion comprend le mot simple *données*, tous les termes qui contiennent ce mot, comme *données*, *exploration de données*, *intégrité des données*et *validation des données* sont également exclus. Si vous souhaitez exclure uniquement les termes composés qui contiennent le mot *données*, vous devez les ajouter explicitement à la liste d’exclusion. Par exemple, si vous souhaitez extraire les occurrences de *données*tout en excluant *validation des données*, vous ajoutez *validation des données* à la liste d’exclusion et vous vérifiez que *données* est supprimé de celle-ci.  
+ Quand vous ajoutez un terme à la liste d’exclusion, tous les termes (mots ou expressions nominales) qui contiennent le terme sont également exclus. Par exemple, si la liste d’exclusion comprend le mot simple *données*, tous les termes qui contiennent ce mot, comme *données*, *exploration de données*, *intégrité des données*et *validation des données* sont également exclus. Si vous souhaitez exclure uniquement les termes composés qui contiennent le mot *données*, vous devez les ajouter explicitement à la liste d’exclusion. Par exemple, si vous souhaitez extraire les occurrences de *données*tout en excluant *validation des données*, vous ajoutez *validation des données* à la liste d’exclusion et vous vérifiez que *données* est supprimé de celle-ci.  
   
  La table de référence doit être une table d'une base de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou Access. La transformation d'extraction de terme utilise une connexion OLE DB distincte pour se connecter à la table de référence. Pour plus d’informations, consultez [OLE DB Connection Manager](../../connection-manager/ole-db-connection-manager.md).  
   
@@ -139,7 +138,7 @@ ms.locfileid: "48155129"
   
 -   Caractères de sauts de ligne ASCII 0x0d (retour chariot) et 0x0a (saut de ligne). Pour que ce caractère soit utilisé comme limite de phrase, il doit y avoir deux caractères de saut de ligne ou plus sur une ligne.  
   
--   Traits d'union (–). Pour que ce caractère soit utilisé comme limite de phrase, les caractères situés immédiatement à gauche et à droite du trait d'union ne doivent pas être des lettres.  
+-   Traits d’union (-). Pour que ce caractère soit utilisé comme limite de phrase, les caractères situés immédiatement à gauche et à droite du trait d'union ne doivent pas être des lettres.  
   
 -   Caractère de soulignement (_). Pour que ce caractère soit utilisé comme limite de phrase, les caractères situés immédiatement à gauche et à droite du trait d'union ne doivent pas être des lettres.  
   
@@ -147,7 +146,7 @@ ms.locfileid: "48155129"
   
 -   Combinaison de nombres, signes de ponctuation et caractères alphabétiques. Par exemple, *A23B#99* retourne le terme *A23B*.  
   
--   Caractères %, @, &, $, #, \*, :, ;, ., **,** , !, ?, \<, >, +, =, ^, ~, |, \\, /, (, ), [, ], {, }, “, et ‘.  
+-   Caractères %, @, &, $, #, \*, :, ;, ., **,** , !, ?, \<, >, +, =, ^, ~, |, \\, /, (, ), [, ], {, }, " et '.  
   
     > [!NOTE]  
     >  Les acronymes incluant un ou plusieurs points (.) ne sont pas divisés en plusieurs phrases.  
@@ -174,11 +173,11 @@ ms.locfileid: "48155129"
   
  Pour plus d’informations sur les propriétés que vous pouvez définir dans la boîte de dialogue **Éditeur de transformation d’extraction de terme** , cliquez sur une des rubriques suivantes :  
   
--   [Éditeur de Transformation d’Extraction de terme &#40;onglet Extraction de terme&#41;](../../term-extraction-transformation-editor-term-extraction-tab.md)  
+-   [Éditeur de transformation d’extraction de terme &#40;onglet Extraction de terme&#41;](../../term-extraction-transformation-editor-term-extraction-tab.md)  
   
--   [Éditeur de Transformation d’Extraction de terme &#40;onglet Exclusion&#41;](../../term-extraction-transformation-editor-exclusion-tab.md)  
+-   [Éditeur de transformation d’extraction de terme &#40;onglet Exclusion&#41;](../../term-extraction-transformation-editor-exclusion-tab.md)  
   
--   [Éditeur de Transformation d’Extraction de terme &#40;onglet Avancé&#41;](../../term-extraction-transformation-editor-advanced-tab.md)  
+-   [Éditeur de transformation d’extraction de terme &#40;onglet Avancé&#41;](../../term-extraction-transformation-editor-advanced-tab.md)  
   
  Pour plus d'informations sur les propriétés définissables dans la boîte de dialogue **Éditeur avancé** ou par programmation, cliquez sur l'une des rubriques suivantes :  
   

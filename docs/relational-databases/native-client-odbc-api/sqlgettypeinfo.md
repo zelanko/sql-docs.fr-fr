@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3ea75578bdd1cfd67255ab8c76149920452d1245
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: e6d813848a45326ee9a74ea38616ceef9dd02cd5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670798"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524053"
 ---
 # <a name="sqlgettypeinfo"></a>SQLGetTypeInfo
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "51670798"
  Pour le **xml** type de données, le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client indique SQL_SS_LENGTH_UNLIMITED pour COLUMN_SIZE afin de dénoter une taille illimitée.  
   
 ## <a name="sqlgettypeinfo-and-table-valued-parameters"></a>SQLGetTypeInfo et paramètres table  
- Le type de table pour les paramètres table est en réalité un métatype, autrement dit un type utilisé pour définir d'autres types. Par conséquent, il ne devra pas être exposés via SQLGetTypeInfo. Applications doivent utiliser SQLTables, plutôt que de SQLGetTypeInfo, pour récupérer des métadonnées pour les types de table utilisé avec les paramètres table.  
+ Le type de table pour les paramètres table est effectivement un meta-type-, un type utilisé pour définir d’autres types. Par conséquent, il ne devra pas être exposés via SQLGetTypeInfo. Applications doivent utiliser SQLTables, plutôt que de SQLGetTypeInfo, pour récupérer des métadonnées pour les types de table utilisé avec les paramètres table.  
   
  Pour plus d’informations sur l’extraction de métadonnées pour les paramètres table, consultez [instruction attributs que les paramètres Affect Table-Valued](../../relational-databases/native-client-odbc-table-valued-parameters/statement-attributes-that-affect-table-valued-parameters.md).  
   

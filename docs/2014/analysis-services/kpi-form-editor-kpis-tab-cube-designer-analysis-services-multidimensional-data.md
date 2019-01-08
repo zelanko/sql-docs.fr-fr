@@ -13,12 +13,12 @@ ms.assetid: 45c6453a-bbe2-4ca5-836e-c7ef11cfcb65
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 49df3dcaf89d98d42da0a89ea7de0b8114093913
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 233e8f36f103d1a5adac6937d47e1040dfe6395d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166379"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523474"
 ---
 # <a name="kpi-form-editor-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>Éditeur de formulaire d'indicateur de performance clé (onglet Indicateurs de performance clés, Concepteur de cube) (Analysis Services - Données multidimensionnelles)
   Utilisez le volet **Éditeur de formulaire d’indicateur de performance clé** de l’onglet **Indicateurs de performance clés** dans le Concepteur de cube pour créer ou modifier l’indicateur de performance clé sélectionné.  
@@ -61,10 +61,10 @@ ms.locfileid: "48166379"
   
  Faites glisser les éléments sélectionnés du volet **Outils de calcul** dans cette option pour inclure la syntaxe MDX de l'élément sélectionné.  
   
- Il est recommandé que cette expression retourne une valeur décimale comprise entre –1 et 1. Une valeur inférieure représente une situation négative alors qu'une valeur supérieure représente une situation positive.  
+ Il est recommandé que cette expression retourne un nombre décimal compris entre -1 et 1. Une valeur inférieure représente une situation négative alors qu'une valeur supérieure représente une situation positive.  
   
 > [!NOTE]  
->  Il est possible d'utiliser des valeurs inférieures à –1 et supérieures à 1, mais elles peuvent ne pas être interprétées correctement par les applications clientes tierces.  
+>  Les valeurs entre -1 et 1 sont possibles, mais ne peuvent pas être interprétées correctement par les applications clientes de tiers.  
   
  **Tendance**  
  Développez pour afficher les options **Graphique de tendance** et **Expression de tendance** .  
@@ -80,10 +80,10 @@ ms.locfileid: "48166379"
   
  Faites glisser les éléments sélectionnés du volet **Outils de calcul** dans cette option pour inclure la syntaxe MDX de l'élément sélectionné.  
   
- L'expression de tendance peut être basée sur un critère temps qui a une signification dans un contexte d'entreprise. Il est recommandé que cette expression retourne une valeur décimale comprise entre –1 et 1. Une valeur inférieure représente une tendance négative dans le temps alors qu'une valeur supérieure représente une tendance positive.  
+ L'expression de tendance peut être basée sur un critère temps qui a une signification dans un contexte d'entreprise. Il est recommandé que cette expression retourne un nombre décimal compris entre -1 et 1. Une valeur inférieure représente une tendance négative dans le temps alors qu'une valeur supérieure représente une tendance positive.  
   
 > [!NOTE]  
->  Il est possible d'utiliser des valeurs inférieures à –1 et supérieures à 1, mais elles peuvent ne pas être interprétées correctement par les applications clientes tierces.  
+>  Les valeurs entre -1 et 1 sont possibles, mais ne peuvent pas être interprétées correctement par les applications clientes de tiers.  
   
  **Propriétés supplémentaires**  
  Développez pour afficher les options **Afficher le dossier**, **Indicateur de performance clé parent**, **Membre à l’heure actuelle**, **Poids**et **Description** .  

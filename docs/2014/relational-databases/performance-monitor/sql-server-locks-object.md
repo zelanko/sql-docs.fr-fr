@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - Locks object
@@ -13,12 +13,12 @@ ms.assetid: ace04f0d-3993-4444-8317-ca39d7087e49
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a9999ff5f82fd0a37bc583af36dd1609ba07ce1a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cd7773177f6ec9d02df9d3d669abf561919ffe0b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48126289"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52748401"
 ---
 # <a name="sql-server-locks-object"></a>SQL Server, objet Locks
   L'objet **SQLServer:Locks** dans Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit des informations sur les verrous [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans les types de ressources individuels. Des verrous sont placés sur les ressources [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , telles que les lignes lues ou modifiées lors d'une transaction, pour empêcher d'autres transactions d'utiliser simultanément les ressources. Par exemple, si un verrou exclusif (X) est mis en place dans une ligne de table par une transaction, aucune autre transaction ne peut modifier cette ligne jusqu'à ce que le verrou soit débloqué. Un nombre minimal de verrous favorise la concurrence, ce qui peut améliorer les performances. Plusieurs instances de l'objet **Verrous** peuvent être surveillées simultanément, chaque instance représentant un verrou sur un type de ressource.  
@@ -49,7 +49,7 @@ ms.locfileid: "48126289"
 |**Clé**|Verrou sur une ligne d'index|  
 |**Métadonnées**|Verrou sur une partie des informations de catalogue (appelée également métadonnées).|  
 |**Objet**|Verrou sur une table, une procédure stockée, une vue, etc. y compris toutes les données et tous les index. L’objet peut correspondre à tout élément ayant une entrée dans **sys.all_objects**.|  
-|**Radiomessagerie**|Verrou sur une page de 8 kilo-octets (Ko) dans une base de données.|  
+|**Page**|Verrou sur une page de 8 kilo-octets (Ko) dans une base de données.|  
 |**RID**|ID de ligne. Verrou sur une seule ligne dans un segment de mémoire.|  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c63c004b3a7ac631a4914c681f7613b0bb010dd6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ffdedf95865e2653ea434c30eb5c07f19ba8286f
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47728187"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409159"
 ---
 # <a name="sysdmexecdescribefirstresultsetforobject-transact-sql"></a>sys.dm_exec_describe_first_result_set_for_object (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -62,8 +62,8 @@ sys.dm_exec_describe_first_result_set_for_object
 |**system_type_id**|**Int**|Contient le system_type_id du type de données de la colonne comme spécifié dans sys.types. Pour les types CLR, bien que la colonne system_type_name retourne NULL, cette colonne retournera la valeur 240.|  
 |**system_type_name**|**nvarchar (256)**|Contient le nom du type de données. Inclut des arguments (tels que la longueur, la précision, l'échelle) spécifiés pour le type de données de la colonne. Si le type de données est un type d'alias défini par l'utilisateur, le type de système sous-jacent est spécifié ici. S'il s'agit d'un type clr défini par l'utilisateur, NULL est retourné dans cette colonne.|  
 |**max_length**|**smallint**|Longueur maximale (en octets) de la colonne.<br /><br /> -1 = la colonne est de type de données **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, ou **xml**.<br /><br /> Pour **texte** colonnes, le **max_length** valeur sera 16 ou la valeur définie par **sp_tableoption 'text in row'**.|  
-|**Précision**|**tinyint**|Précision de la colonne si elle est numérique. Dans le cas contraire, retourne la valeur 0.|  
-|**Mise à l’échelle**|**tinyint**|Échelle de la colonne si elle est numérique. Dans le cas contraire, retourne la valeur 0.|  
+|**precision**|**tinyint**|Précision de la colonne si elle est numérique. Dans le cas contraire, retourne la valeur 0.|  
+|**scale**|**tinyint**|Échelle de la colonne si elle est numérique. Dans le cas contraire, retourne la valeur 0.|  
 |**collation_name**|**sysname**|Nom du classement de la colonne si elle est basée sur les caractères. Sinon, retourne NULL.|  
 |**user_type_id**|**Int**|Pour les types d'alias et CLR, contient l'information user_type_id du type de données de la colonne comme spécifié dans sys.types. Sinon, a la valeur NULL.|  
 |**user_type_database**|**sysname**|Pour les types d'alias et CLR, contient le nom de la base de données dans laquelle le type est défini. Sinon, a la valeur NULL.|  
@@ -111,14 +111,14 @@ sys.dm_exec_describe_first_result_set_for_object
 |5|CLR_PROCEDURE|Le résultat n'a pas pu être déterminé parce qu'une procédure stockée clr pourrait éventuellement retourner le premier résultat.|  
 |6|CLR_TRIGGER|Le résultat n'a pas pu être déterminé parce qu'un déclencheur CLR pourrait éventuellement retourner le premier résultat.|  
 |7|EXTENDED_PROCEDURE|Le résultat n'a pas pu être déterminé parce qu'une procédure stockée étendue pourrait éventuellement retourner le premier résultat.|  
-|8|UNDECLARED_PARAMETER|Le résultat n'a pas pu être déterminé car le type de données d'une ou plusieurs des colonnes du jeu de résultats dépend potentiellement d'un paramètre non déclaré.|  
+|8|UNDECLARED_PARAMETER|Le résultat n’a pas pu être déterminé, car le type de données d’un ou plusieurs des colonnes de l’ensemble de résultats dépend potentiellement un paramètre non déclaré.|  
 |9|RECURSION|Le résultat n'a pas pu être déterminé car le lot contient une instruction récursive.|  
 |10|TEMPORARY_TABLE|Le résultat n’a pas pu être déterminé car le lot contient une table temporaire et n’est pas pris en charge par **sp_describe_first_result_set** .|  
 |11|UNSUPPORTED_STATEMENT|Le résultat n’a pas pu être déterminé car le lot contient une instruction qui n’est pas pris en charge par **sp_describe_first_result_set** (par exemple, FETCH, REVERT etc..).|  
 |12|OBJECT_ID_NOT_SUPPORTED|Le @object_id passé à la fonction est pas pris en charge (autrement dit, pas une procédure stockée)|  
 |13|OBJECT_ID_DOES_NOT_EXIST|Le @object_id transmis à la fonction est introuvable dans le catalogue système.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l’autorisation d’exécuter le @tsql argument.  
   
 ## <a name="examples"></a>Exemples  
@@ -138,7 +138,7 @@ SELECT * FROM sys.dm_exec_describe_first_result_set_for_object(OBJECT_ID('TestPr
 GO  
 ```  
   
-### <a name="b-combining-the-sysdmexecdescribefirstresultsetforobject-function-and-a-table-or-view"></a>B. Combinaison de la fonction sys.dm_exec_describe_first_result_set_for_object avec une table ou une vue  
+### <a name="b-combining-the-sysdmexecdescribefirstresultsetforobject-function-and-a-table-or-view"></a>b. Combinaison de la fonction sys.dm_exec_describe_first_result_set_for_object avec une table ou une vue  
  L’exemple suivant utilise à la fois la vue de catalogue de système sys.procedures et **sys.dm_exec_describe_first_result_set_for_object** (fonction) pour afficher les métadonnées des jeux de résultats de toutes les procédures stockées dans le [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] base de données.  
   
 ```  

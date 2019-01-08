@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - merge replication [SQL Server replication], about merge replication
@@ -14,12 +13,12 @@ ms.assetid: ff87c368-4c00-4e48-809d-ea752839551e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4c734af98b906be974a92e2c4286e7b91b6e1d25
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d0e7f4d0c1b8f6e4b1f4442c9b3ae6538b0eabef
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148239"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52752352"
 ---
 # <a name="merge-replication"></a>Réplication de fusion
   La réplication de fusion, comme la réplication transactionnelle, démarre généralement avec un instantané des objets et des données de la base de données de publication. Les modifications de données et de schéma ultérieures qui sont effectuées sur le serveur de publication et sur les Abonnés sont suivies avec des déclencheurs. L'abonné est synchronisé avec l'éditeur lorsqu'il est connecté au réseau et il échange toutes les lignes qui ont changé entre l'éditeur et l'abonné depuis la dernière synchronisation.  
@@ -40,7 +39,7 @@ ms.locfileid: "48148239"
   
  La réplication de fusion est implémentée par l'Agent d'instantané et l'Agent de fusion [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Si la publication est non filtrée ou si elle utilise des filtres statiques, l'Agent d'instantané crée un  instantané unique. Si la publication utilise des filtres paramétrés, l'Agent d'instantané crée un instantané pour chaque partition de données. L'Agent de fusion applique les instantanés initiaux aux Abonnés. Il fusionne également les modifications de données incrémentielles effectuées sur le serveur de publication ou les Abonnés après la création de l'instantané initial, puis détecte et résout les éventuels conflits en fonction des règles que vous avez définies.  
   
- Pour permettre le suivi des modifications, la réplication de fusion (ainsi que la réplication transactionnelle avec mise à jour d'abonnements en attente) doit pouvoir identifier de manière unique chaque ligne dans chaque table publiée. Pour ce faire, la réplication de fusion ajoute la colonne `rowguid` à chaque table, à moins que la table ne dispose déjà d'une colonne de type de données `uniqueidentifier` avec la propriété `ROWGUIDCOL` définie (auquel cas cette colonne est utilisée). Si la table est supprimée de la publication, le `rowguid` colonne est supprimée ; si une colonne existante était utilisée pour le suivi, la colonne n’est pas supprimée. Aucun filtre ne doit inclure le `rowguidcol` utilisé par la réplication pour identifier les lignes. La fonction `newid()` est fournie en tant que fonction par défaut pour la colonne `rowguid`. Toutefois, les clients peuvent fournir un GUID pour chaque ligne, si nécessaire. Toutefois, ne fournissez pas la valeur 00000000-0000-0000-0000-000000000000.  
+ Pour permettre le suivi des modifications, la réplication de fusion (ainsi que la réplication transactionnelle avec mise à jour d'abonnements en attente) doit pouvoir identifier de manière unique chaque ligne dans chaque table publiée. Pour ce faire, la réplication de fusion ajoute la colonne `rowguid` à chaque table, à moins que la table ne dispose déjà d'une colonne de type de données `uniqueidentifier` avec la propriété `ROWGUIDCOL` définie (auquel cas cette colonne est utilisée). Si la table est supprimée de la publication, la colonne `rowguid` est supprimée ; si une colonne existante était utilisée pour le suivi, la colonne n'est pas supprimée. Aucun filtre ne doit inclure le `rowguidcol` utilisé par la réplication pour identifier les lignes. La fonction `newid()` est fournie en tant que fonction par défaut pour la colonne `rowguid`. Toutefois, les clients peuvent fournir un GUID pour chaque ligne, si nécessaire. Toutefois, ne fournissez pas la valeur 00000000-0000-0000-0000-000000000000.  
   
  Le diagramme suivant montre les composants utilisés dans la réplication de fusion.  
   

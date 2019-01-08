@@ -15,12 +15,12 @@ ms.assetid: 4f0ee6ec-a0a8-4c38-aa61-8293ab6ac7fd
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 66777a5db1812d1a63e100d4a02522bc1ac3b43a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4ea74f0361d5152ade31a91424d594d376e513f8
+ms.sourcegitcommit: b5cea9c67c7f896944065f09dace17b4929a34f7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092851"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "52267894"
 ---
 # <a name="event-file-target"></a>Event File Target
   La cible de fichier d'événements est une cible qui écrit des tampons complets sur le disque.  
@@ -34,7 +34,7 @@ ms.locfileid: "48092851"
 |max_rollover_files|Tout entier de 32 bits. Cette valeur est facultative.|Nombre maximal de fichiers à conserver dans le système de fichiers. La valeur par défaut est 5.|  
 |increment|Tout entier de 32 bits. Cette valeur est facultative.|Croissance incrémentielle, en mégaoctets (Mo), pour le fichier. Si cette option n'est pas spécifiée, la valeur par défaut pour l'incrément est égale à deux fois la taille de la mémoire tampon de session.|  
   
- La première fois qu’une cible de fichier d’événements est créée, le nom de fichier que vous spécifiez reçoit le suffixe _0\_ et une valeur d’entier long. La valeur entière est calculée en tant que nombre de millisecondes écoulées entre le 1er janvier 1600 et la date et l'heure de création du fichier. Les fichiers de substitution suivants utilisent également ce format. En examinant la valeur de l'entier long, vous pouvez déterminer le fichier le plus actuel. L'exemple suivant illustre comment les fichiers sont nommés dans un scénario où vous spécifiez l'option de nom de fichier comme C:\OutputFiles\MyOutput.xel :  
+ La première fois qu’une cible de fichier d’événements est créée, le nom de fichier que vous spécifiez reçoit le suffixe _0\_ et une valeur d’entier long. La valeur entière est calculée en tant que le nombre de millisecondes écoulées entre le 1er janvier 1601 et la date et l’heure du fichier est créé. Les fichiers de substitution suivants utilisent également ce format. En examinant la valeur de l'entier long, vous pouvez déterminer le fichier le plus actuel. L'exemple suivant illustre comment les fichiers sont nommés dans un scénario où vous spécifiez l'option de nom de fichier comme C:\OutputFiles\MyOutput.xel :  
   
 -   premier fichier créé - C:\OutputFiles\MyOutput_0_128500310259380000.xel  
   
