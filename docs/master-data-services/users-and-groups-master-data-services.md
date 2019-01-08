@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - users [Master Data Services]
@@ -17,12 +16,12 @@ ms.assetid: ed08dd2d-248e-4b68-91d4-e9961cb50eed
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: a7e632883bdbfc235e2e9e242f9efd91de46fb19
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 00c51ad3a3b3d428a9a89ef5aafed54c26db76cf
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47693468"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52781781"
 ---
 # <a name="users-and-groups-master-data-services"></a>Utilisateurs et groupes (Master Data Services)
 
@@ -41,7 +40,7 @@ ms.locfileid: "47693468"
   
  Si un utilisateur ou un groupe a besoin d’un accès à d’autres zones fonctionnelles, l’utilisateur ou le groupe doit se voir attribuer un accès à ladite zone fonctionnelle.  
   
-## <a name="best-practice"></a>Meilleure pratique  
+## <a name="best-practice"></a>Bonne pratique  
  Pour simplifier l'administration, créez des groupes et affectez à chaque groupe l'autorisation sur des zones fonctionnelles et objets modèles. Vous pouvez ensuite ajouter et supprimer des utilisateurs dans les groupes sans accéder à l'interface utilisateur de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] .  
   
  N'affectez pas d'autorisations supplémentaires à un utilisateur individuel et n'incluez pas un utilisateur dans plusieurs groupes qui ont accès à [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]. De plus, n'utilisez pas d'autorisations des membres de la hiérarchie à moins que vous ne souhaitiez qu'un groupe ait un accès limité à des membres spécifiques.  
