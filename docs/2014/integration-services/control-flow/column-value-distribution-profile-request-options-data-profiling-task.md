@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
@@ -13,12 +12,12 @@ ms.assetid: c1e5f5de-04f5-4d00-a9f0-55817186bdf9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a28070a2229e016bbc03b90d559252bd8851ac78
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6768eba62eec59bc37ce360014d9c000aa01c724
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215139"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375201"
 ---
 # <a name="column-value-distribution-profile-request-options-data-profiling-task"></a>Options Demande de profil de distribution de valeurs de colonne (tâche de profilage des données)
   Utilisez le volet **Propriétés de la demande** de la page **Demandes de profil** pour définir les options de la **Demande de profil de distribution de valeurs de colonne** sélectionnée dans le volet Demandes. Un profil de distribution de valeurs de colonne permet de préciser toutes les valeurs distinctes dans la colonne sélectionnée, ainsi que le pourcentage de lignes dans la table que représente chaque valeur. Le profil peut également signaler des valeurs qui représentent beaucoup plus qu'un pourcentage de lignes spécifié dans la table. Il peut vous aider à identifier des problèmes dans vos données, tels qu'un nombre incorrect de valeurs distinctes dans une colonne. Par exemple, vous établissez le profil d'une colonne des états des États-Unis et découvrez plus de 50 valeurs distinctes.  
@@ -71,7 +70,7 @@ ms.locfileid: "48215139"
 > [!NOTE]  
 >  Si vous utilisez le caractère générique **(\*)** pour **ColumnName**, **CompareOptions** est en lecture seule et est définie avec le paramètre **Default**.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**Default**|Trie et compare des données d'après le classement de la colonne dans la table source.|  
 |**BinarySort**|Trie et compare les données en fonction des modèles binaires définis pour chaque caractère. L'ordre de tri binaire respecte la casse et les accents. Il s'agit aussi de l'ordre de tri le plus rapide.|  
@@ -79,7 +78,7 @@ ms.locfileid: "48215139"
   
  Si vous sélectionnez **DictionarySort**, vous pouvez également sélectionner toutes les combinaisons d’options répertoriées dans le tableau suivant. Par défaut, aucune de ces options supplémentaires n'est sélectionnée.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**IgnoreCase**|Indique si la comparaison fait la distinction entre les lettres majuscules et minuscules. Si cette option est définie, la comparaison de chaînes ignore la casse. Par exemple, « ABC » est alors identique à « abc ».|  
 |**IgnoreNonSpace**|Indique si la comparaison fait la distinction entre les caractères avec espace et les caractères diacritiques. Si cette option est définie, la comparaison ignore les caractères diacritiques. Par exemple, « å » est identique à « a ».|  
@@ -94,7 +93,7 @@ ms.locfileid: "48215139"
  **ValueDistributionOption**  
  Spécifiez si la distribution est à calculer pour toutes les valeurs de colonne. La valeur par défaut de cette option est **FrequentValues**.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**AllValues**|La distribution est calculée pour toutes les valeurs de colonne.|  
 |**FrequentValues**|La distribution est calculée uniquement pour les valeurs dont la fréquence dépasse la valeur minimale spécifiée dans **FrequentValueThreshold**. Les valeurs qui ne correspondent pas à **FrequentValueThreshold** sont exclues du rapport de sortie.|  
@@ -103,7 +102,7 @@ ms.locfileid: "48215139"
  Spécifiez le seuil (au moyen d'une valeur comprise entre 0 et 1) au-dessus duquel la valeur de colonne doit être précisée. Cette option est désactivée quand vous sélectionnez **AllValues** comme **ValueDistributionOption**. La valeur par défaut de cette option est 0,001.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Éditeur de tâche de profilage des données &#40;Page Général&#41;](../general-page-of-integration-services-designers-options.md)   
+ [Éditeur de tâche de profilage de données &#40;page Général&#41;](../general-page-of-integration-services-designers-options.md)   
  [Formulaire de profil rapide de table simple &#40;tâche de profilage des données&#41;](single-table-quick-profile-form-data-profiling-task.md)  
   
   

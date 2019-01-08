@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 07aa401cbc752382142bea6a6549080b6b20976b
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 36c5e28d3e669f05ee0f014e949182b13e816685
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671228"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211758"
 ---
 # <a name="sysdmexectextqueryplan-transact-sql"></a>sys.dm_exec_text_query_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "51671228"
   
 -   Les instructions individuelles dans le traitement peuvent être spécifiées.  
   
-**S’applique à**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu’à la [version actuelle](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**S’applique aux**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] via [version actuelle](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -67,7 +67,7 @@ Le descripteur de plan peut être obtenu à partir des objets de gestion dynamiq
 -  [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
   
 *statement_start_offset* | 0 | PAR DÉFAUT  
-Indique, en octets, la position de début de la requête que la ligne décrit dans le texte de son traitement ou de son objet persistant. *statement_start_offset* est **int**. La valeur 0 indique le début du traitement. La valeur par défaut est 0 :  
+Indique, en octets, la position de début de la requête que la ligne décrit dans le texte de son traitement ou de son objet persistant. *statement_start_offset* est **int**. La valeur 0 indique le début du traitement. La valeur par défaut est 0.  
   
 Le décalage de début de l'instruction peut être obtenu à partir des objets de gestion dynamiques suivants :  
   
@@ -103,7 +103,7 @@ La valeur -1 indique la fin du traitement. La valeur par défaut est -1.
   
 Lorsqu’une requête ad hoc utilise [simple](../../relational-databases/query-processing-architecture-guide.md#SimpleParam) ou [paramétrage forcé](../../relational-databases/query-processing-architecture-guide.md#ForcedParam), le **query_plan** colonne contiendra uniquement le texte de l’instruction et pas le plan de requête. Pour retourner le plan de requête, appelez **sys.dm_exec_text_query_plan** pour le descripteur de plan de la requête paramétrable préparée. Vous pouvez déterminer si la requête a été paramétrée en référençant le **sql** colonne de la [sys.syscacheobjects](../../relational-databases/system-compatibility-views/sys-syscacheobjects-transact-sql.md) vue ou la colonne de texte de la [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)vue de gestion dynamique.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Pour exécuter **sys.dm_exec_text_query_plan**, un utilisateur doit être un membre de la **sysadmin** rôle serveur fixe ou avoir l’autorisation VIEW SERVER STATE sur le serveur.  
   
 ## <a name="examples"></a>Exemples  
@@ -143,7 +143,7 @@ FROM sys.dm_exec_text_query_plan (0x06000100A27E7C1FA821B10600,0,-1);
 GO  
 ```  
   
-### <a name="b-retrieving-every-query-plan-from-the-plan-cache"></a>B. Récupération de chaque plan de requête à partir de la mémoire cache des plans  
+### <a name="b-retrieving-every-query-plan-from-the-plan-cache"></a>b. Récupération de chaque plan de requête à partir de la mémoire cache des plans  
  Pour récupérer un instantané de tous les plans de requête résidant dans la mémoire cache des plans, procurez-vous les descripteurs de tous les plans de requête dans la mémoire cache via une requête dans la vue de gestion dynamique `sys.dm_exec_cached_plans`. Les descripteurs de plan sont stockés dans la colonne `plan_handle` de `sys.dm_exec_cached_plans`. Utilisez ensuite l'opérateur CROSS APPLY pour transmettre les descripteurs à `sys.dm_exec_text_query_plan` comme suit. Le plan d’exécution de sortie pour chaque plan actuellement dans le cache de plan se trouve dans le `query_plan` colonne de la table qui est retournée.  
   
 ```sql  

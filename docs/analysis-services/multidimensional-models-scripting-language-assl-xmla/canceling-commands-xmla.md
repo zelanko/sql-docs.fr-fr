@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: babdafaaa1c507a609760b02895f9438baf21581
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 313708ad1575c7b9922ac796791d0d623c51b54b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145015"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207518"
 ---
 # <a name="canceling-commands-xmla"></a>Annulation de commandes (XMLA)
   En fonction des autorisations d’administration de l’utilisateur qui émet la commande, le [Annuler](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/cancel-element-xmla) commande au format XML pour Analysis (XMLA) peut annuler une commande sur une session, une session, une connexion, un processus de serveur ou une session associée ou connexion.  
@@ -36,7 +36,7 @@ ms.locfileid: "50145015"
 ## <a name="canceling-connections"></a>Annulation de connexions  
  En spécifiant un identificateur de connexion dans le [ConnectionID](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/connectionid-element-xmla) propriété de la **Annuler** commande, un administrateur de serveur peut annuler toutes les sessions associées à une connexion donnée, y compris tous les exécution des commandes et annuler la connexion.  
   
-> [!NOTE]  
+> [!NOTE]
 >  Si l’instance de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ne peut pas localiser et annuler les sessions associées à une connexion, telles que lorsque la pompe à données ouvre plusieurs sessions en fournissant une connectivité HTTP, l’instance ne peut pas annuler la connexion. Si ce cas est rencontré pendant l’exécution d’un **Annuler** commande, une erreur se produit.  
   
  Un administrateur de serveur peut récupérer les connexions actives pour un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance en récupérant l’ensemble de lignes de schéma DISCOVER_CONNECTIONS à l’aide de XMLA **Discover** (méthode).  

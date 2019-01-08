@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: wmi
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.setbreakpoints.f1
@@ -15,12 +14,12 @@ ms.assetid: 876e61b7-875c-43f4-bbce-d7eeb90f6730
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 9269cd8d4e01257f4af2642ad767353d09444a6e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0c2c543343bd602be75d600a489edfd84663790b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130335"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52776099"
 ---
 # <a name="set-breakpoints"></a>Définir des points d’arrêt
   Utilisez la boîte de dialogue **Définir des points d'arrêt** pour spécifier les événements pour lesquels activer des points d'arrêt et pour gérer le contrôle du point d'arrêt.  
@@ -35,7 +34,7 @@ ms.locfileid: "48130335"
  **Type du nombre d'accès**  
  Spécifiez le moment où le point d'arrêt entre en vigueur.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**Always**|L'exécution est toujours suspendue lorsque le point d'arrêt est atteint.|  
 |**Égal au nombre d'accès**|L'exécution est suspendue lorsque le nombre de fois où s'est produit le point d'arrêt est égal au nombre d'accès.|  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - checkpoints [Integration Services]
@@ -15,17 +14,17 @@ ms.assetid: 48f2fbb7-8964-484a-8311-5126cf594bfb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 703514e884ede08db13fbb70f5fa27247e75503b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 945bb384f522aa483c490fccd92768078a2d315a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133375"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365053"
 ---
 # <a name="restart-packages-by-using-checkpoints"></a>Redémarrer des packages à l'aide de points de contrôle
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] peut redémarrer les packages ayant échoué à partir du point d'échec, au lieu de reprendre l'exécution du package tout entier. Si un package est configuré pour utiliser des points de contrôle, des informations sur l'exécution du package sont écrites dans un fichier de point de contrôle. Lorsque le package ayant échoué est relancé, le fichier de point de contrôle est utilisé pour redémarrer le package à partir du point d'échec. Si le package est exécuté avec succès, le fichier de point de contrôle est supprimé, puis recréé à l’exécution suivante du package.  
   
- L'utilisation des points de contrôle dans un package offre les avantages suivants :  
+ L'utilisation des points de contrôle dans un package offre les avantages suivants :  
   
 -   Éviter de répéter le téléchargement ascendant et descendant de gros fichiers. Par exemple, un package qui télécharge plusieurs gros fichiers à l'aide d'une tâche FTP pour chaque téléchargement peut être redémarré après l'échec du téléchargement d'un seul fichier, puis ne reprendre le téléchargement que pour ce fichier.  
   
@@ -33,7 +32,7 @@ ms.locfileid: "48133375"
   
 -   Éviter de répéter l'agrégation de valeurs. Par exemple, un package qui calcule de nombreux agrégats, tels que des moyennes et des sommes, à l'aide d'une tâche de flux de données distincte pour la réalisation de chaque agrégation, peut être redémarré en cas d'échec du calcul d'une agrégation pour ne recalculer que cette agrégation.  
   
- Si un package est configuré pour utiliser les points de contrôle, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] capture le point de redémarrage dans le fichier de point de contrôle. Le type de conteneur qui échoue et l'implémentation de fonctionnalités telles que les transactions affectent le point de redémarrage enregistré dans le fichier de point de contrôle. Les valeurs actuelles des variables sont également capturées dans le fichier de point de contrôle. Toutefois, les valeurs des variables qui ont le `Object` type de données ne sont pas enregistrées dans les fichiers de point de contrôle.  
+ Si un package est configuré pour utiliser les points de contrôle, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] capture le point de redémarrage dans le fichier de point de contrôle. Le type de conteneur qui échoue et l'implémentation de fonctionnalités telles que les transactions affectent le point de redémarrage enregistré dans le fichier de point de contrôle. Les valeurs actuelles des variables sont également capturées dans le fichier de point de contrôle. Toutefois, les valeurs des variables de type de données `Object` ne sont pas enregistrées dans les fichiers de point de contrôle.  
   
 ## <a name="defining-restart-points"></a>Définition des points de redémarrage  
  Le conteneur d'hôte de tâche, qui encapsule une seule tâche, est la plus petite unité atomique à pouvoir être redémarrée. Le conteneur de boucles Foreach et un conteneur transactionnel sont également traités comme des unités atomiques de travail.  
@@ -43,7 +42,7 @@ ms.locfileid: "48133375"
 > [!NOTE]  
 >  L'utilisation de points de contrôle et de transactions dans le même package peut entraîner des résultats inattendus. Par exemple, lorsqu'un package échoue et redémarre à partir d'un point de contrôle, il peut répéter une transaction qui a déjà été correctement validée.  
   
- Les données de point de contrôle ne sont pas enregistrées pour les conteneurs de boucles For et Foreach. Lorsqu'un package est redémarré, les conteneurs de boucles For et Foreach et les conteneurs enfants sont exécutés à nouveau. Si un conteneur enfant de la boucle est exécuté correctement, il n'est pas enregistré dans le fichier de point de contrôle et il est exécuté à nouveau. Pour plus d'informations et pour obtenir une solution de contournement, consultez [Les points de contrôle SSIS ne sont pas respectés pour les éléments de conteneur de boucles For ou Foreach](http://go.microsoft.com/fwlink/?LinkId=241633).  
+ Les données de point de contrôle ne sont pas enregistrées pour les conteneurs de boucles For et Foreach. Lorsqu'un package est redémarré, les conteneurs de boucles For et Foreach et les conteneurs enfants sont exécutés à nouveau. Si un conteneur enfant de la boucle est exécuté correctement, il n'est pas enregistré dans le fichier de point de contrôle et il est exécuté à nouveau. Pour plus d'informations et pour obtenir une solution de contournement, consultez [Les points de contrôle SSIS ne sont pas respectés pour les éléments de conteneur de boucles For ou Foreach](https://go.microsoft.com/fwlink/?LinkId=241633).  
   
  Si le package est redémarré, les configurations du package ne sont pas rechargées, mais le package utilise les informations de configuration écrites dans le fichier de point de contrôle. Cette procédure assure que le package utilise les mêmes configurations lorsqu'il est exécuté à nouveau qu'au moment où il a échoué.  
   
@@ -67,7 +66,7 @@ ms.locfileid: "48133375"
 ### <a name="checkpoint-usage"></a>Utilisation des points de contrôle  
  La propriété CheckpointUsage peut avoir les valeurs suivantes :  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |`Never`|Spécifie que le fichier de point de contrôle n'est pas utilisé et que le package est exécuté à partir du début du flux de travail du package.|  
 |`Always`|Spécifie que le fichier de point de contrôle est toujours utilisé et que le package redémarre à partir du point de l'échec de la précédente exécution. Si le fichier de point de contrôle est introuvable, le package échoue.|  
@@ -85,9 +84,9 @@ ms.locfileid: "48133375"
   
 ## <a name="external-resources"></a>Ressources externes  
   
--   Article technique, [Redémarrage automatique des packages SSIS après un basculement ou un échec](http://go.microsoft.com/fwlink/?LinkId=200407), sur social.technet.microsoft.com  
+-   Article technique, [Redémarrage automatique des packages SSIS après un basculement ou un échec](https://go.microsoft.com/fwlink/?LinkId=200407), sur social.technet.microsoft.com  
   
--   Article du Support technique Microsoft, [Les points de contrôle SSIS ne sont pas respectés pour les éléments de conteneur de boucles For ou Foreach](http://go.microsoft.com/fwlink/?LinkId=241633), sur le site support.microsoft.com.  
+-   Article du Support technique Microsoft, [Les points de contrôle SSIS ne sont pas respectés pour les éléments de conteneur de boucles For ou Foreach](https://go.microsoft.com/fwlink/?LinkId=241633), sur le site support.microsoft.com.  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQL Server Integration Services](../sql-server-integration-services.md)  

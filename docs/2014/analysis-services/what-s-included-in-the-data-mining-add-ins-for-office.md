@@ -13,12 +13,12 @@ ms.assetid: 6c3d2b96-6646-42ef-b219-fea2e0cd3459
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c2652dd6ababc37a3883eef0cf385914a880ebdd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c7776ed3550d5bfa8caec4c017c46946e31845af
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157629"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519087"
 ---
 # <a name="what39s-included-in-the-data-mining-add-ins-for-office"></a>Ce que&#39;s inclus dans les données des compléments d’exploration de données pour Office
   Lorsque vous installez les Compléments d'exploration de données pour Office 2013, et sélectionnez toutes les options d'installation, les barres d'outils et les modèles suivants sont ajoutés :  
@@ -31,7 +31,7 @@ ms.locfileid: "48157629"
   
 -   [Client d’exploration de données pour Excel &#40;compléments d’exploration de données SQL Server&#41;](data-mining-client-for-excel-sql-server-data-mining-add-ins.md)  
   
-     Ce complément fournit des outils pour toutes les fonctionnalités d'exploration de données dont vous avez besoin, allant du nettoyage et de l'échantillonnage des données à la création de modèles au test de la précision des modèles et à la validation croisée. Vous pouvez également gérer et documenter les modèles et créer des requêtes DMX à partir des modèles.  
+     Ce complément fournit des outils pour chaque tâche d’exploration de données que vous devrez peut-être-allant du nettoyage et d’échantillonnage des données, à la création de modèles, le test de précision du modèle et à la validation croisée. Vous pouvez également gérer et documenter les modèles et créer des requêtes DMX à partir des modèles.  
   
      Les utilisateurs avancés de l'exploration de données apprécieront l'accès à tous les outils disponibles dans l'exploration de données SQL Server, notamment l'importation et l'exportation de modèle, les requêtes de prédiction et les requêtes de contenu.  
   

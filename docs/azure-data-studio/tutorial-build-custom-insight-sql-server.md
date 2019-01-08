@@ -1,7 +1,8 @@
 ---
-title: 'Didacticiel : Créer un widget d’analyse personnalisée dans Azure Data Studio | Microsoft Docs'
+title: 'Didacticiel : Générer un widget d’analyse personnalisée'
+titleSuffix: Azure Data Studio
 description: Ce didacticiel montre comment créer des widgets d’analyse personnalisées et ajoutez-les à la base de données et serveur des tableaux de bord dans Azure Data Studio.
-ms.custom: tools|sos
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,14 +11,14 @@ ms.topic: tutorial
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: caecf780f5c8cc656f6b0b2a95dd3d68c48355cb
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: ab545d4d058780503778fb470bc5802ecae9d077
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356340"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030033"
 ---
-# <a name="tutorial-build-a-custom-insight-widget"></a>Didacticiel : Créer un widget d’analyse personnalisée
+# <a name="tutorial-build-a-custom-insight-widget"></a>Didacticiel : Générer un widget d’analyse personnalisée
 
 Ce didacticiel montre comment utiliser vos propres requêtes insight pour créer des widgets d’analyse personnalisés.
 
@@ -163,7 +164,7 @@ Dans cette étape, exécutez un script sql pour interroger les sessions actives 
     ![activesession insight](./media/tutorial-build-custom-insight-sql-server/insight-activesession-detail.png)
 
 ## <a name="next-steps"></a>Étapes suivantes
-Dans ce didacticiel, vous avez appris comment :
+Dans ce didacticiel, vous avez appris à :
 > [!div class="checklist"]
 > * Exécuter votre propre requête et l’afficher dans un graphique
 > * Générer un widget d’analyse personnalisée à partir du graphique

@@ -11,12 +11,12 @@ ms.assetid: ead8a1fe-60d8-4017-8fb8-6fe32168e46d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 35883a1cb34a7d3ff6bd4e37f15ef0125aea7951
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: eb208d3b19e7ca2d49198a2f57edaf48214bb78f
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206479"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395372"
 ---
 # <a name="comparing-predictions-for-forecasting-models-intermediate-data-mining-tutorial"></a>Comparaison de prédictions pour les modèles de prévision (Didacticiel intermédiaire sur l'exploration de données) 
   Dans les étapes précédentes de ce didacticiel, vous avez créé plusieurs modèles de série chronologique :  
@@ -36,7 +36,7 @@ ms.locfileid: "48206479"
  [REPLACE_MODEL_CASES](#bkmk_REPLACE)  
   
 ##  <a name="bkmk_EXTEND"></a> Comparaison des résultats d’origine avec les résultats après l’ajout de données  
- Regardons les données uniquement pour la gamme de produits M200 dans la région Pacific, pour voir comment la mise à jour du modèle avec de nouvelles données affecte les résultats. Souvenez-vous que la série de données d'origine s'est terminée en juin 2004 et nous avons obtenu de nouvelles données pour juillet, août et septembre.  
+ Examinons les données pour juste la gamme de produits M200 dans la région Pacific, pour voir comment la mise à jour le modèle avec de nouvelles données affecte les résultats. Souvenez-vous que la série de données d'origine s'est terminée en juin 2004 et nous avons obtenu de nouvelles données pour juillet, août et septembre.  
   
 -   La première colonne affiche les nouvelles données ajoutées.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "48206479"
  En général, l'algorithme pondère les modifications apportées aux nouvelles données de manière plus importante que la pondération des données issues du début des données de modèle. Toutefois, dans ce cas, les nouveaux chiffres de vente représentent une augmentation de uniquement 20-30 pour cent par rapport à la période précédente, il y a donc une augmentation minimale des projections de ventes, après quoi les prévisions de vente baissent à nouveau, plus fidèles à la tendance des mois précédant les nouvelles données.  
   
 ##  <a name="bkmk_REPLACE"></a> Comparaison des résultats d’origine et la prédiction croisée  
- Souvenez-vous que le modèle d'exploration de données d'origine révélait des différences importantes entres les régions et entre les gammes de produits. Par exemple, les ventes pour le modèle M200 étaient très élevées, tandis que les ventes pour le modèle T1000 étaient relativement basses dans toutes les régions. De plus, certaines séries n'avaient que peu de données. La série est déséquilibrée, ce qui signifie qu'elle n'a pas le même point de départ.  
+ Souvenez-vous que le modèle d'exploration de données d'origine révélait des différences importantes entres les régions et entre les gammes de produits. Par exemple, les ventes pour le modèle M200 étaient très élevées, tandis que les ventes pour le modèle T1000 étaient relativement basses dans toutes les régions. En outre, certaines séries ne contenaient pas beaucoup de données. La série est déséquilibrée, ce qui signifie qu’ils n’avaient pas le même point de départ.  
   
  ![Série de prédire la quantité M200 et T1000](../../2014/tutorials/media/6series-defaultforecasting.gif "M200 et T1000 la quantité de prédiction de série")  
   

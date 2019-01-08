@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.spatialindexes
@@ -12,12 +12,12 @@ ms.assetid: 4d84239a-68c7-4aa2-8602-2b51dd07260f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3ef93973a6be743a6c79b2ba46c2f05d2af6bae5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b347715a601be779b864500a6bc28655141ceeeb
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113358"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52773471"
 ---
 # <a name="spatial-indexes-dialog-box-visual-database-tools"></a>Index spatiaux, boîte de dialogue (Visual Database Tools)
   Utilisez la boîte de dialogue **Index spatiaux** pour créer des index pour les colonnes du type de données **géométrie** or **géographie** (*colonnes spatiales*), qui ne peuvent pas être indexées à l'aide de la boîte de dialogue **Index/Clés** . Chaque colonne spatiale peut avoir plusieurs index spatiaux, mais ils doivent être créés un par un.  
@@ -88,7 +88,7 @@ ms.locfileid: "48113358"
  Indique le nom de l'index spatial. Lorsqu'un nouvel index est créé, il obtient un nom par défaut basé sur la table affichée dans la fenêtre active du Concepteur de tables. Vous pouvez modifier le nom à tout moment.  
   
  **Description**  
- Décrit l'index. Pour écrire une description plus détaillée, cliquez sur **Description** , puis sur le bouton de sélection **(...)** qui apparaît à droite du champ de propriété. Vous obtiendrez une zone d'écriture plus large.  
+ Décrit l'index. Pour écrire une description plus détaillée, cliquez sur **Description**, puis sur le bouton de sélection (**...**) qui s’affiche à droite du champ de propriété. Vous obtiendrez une zone d'écriture plus large.  
   
  **Catégorie Concepteur de tables**  
  Développée, elle affiche des informations sur les propriétés de cet index spatial.  
@@ -109,13 +109,13 @@ ms.locfileid: "48113358"
  **Verrouillage de page autorisé**  
  Spécifie si le verrouillage au niveau des pages est autorisé dans cet index. L'autorisation ou non du verrouillage au niveau de la page affecte les performances de la base de données.  
   
- **Recalculer****statistiques**   
+ **Recalculer****statistiques**  
  Spécifie si de nouvelles statistiques sont calculées une fois l'index créé. Le calcul des statistiques ralentit la génération des index, mais améliore généralement les performances des requêtes.  
   
  **Verrouillage de ligne autorisé**  
  Spécifie si le verrouillage au niveau des lignes est autorisé dans cet index. L'autorisation ou non du verrouillage au niveau de la ligne affecte les performances de la base de données.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Vue d’ensemble des index spatiaux](../../relational-databases/spatial/spatial-indexes-overview.md)  
+ [Vue d'ensemble des index spatiaux](../../relational-databases/spatial/spatial-indexes-overview.md)  
   
   

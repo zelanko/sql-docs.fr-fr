@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.summary.new.custom.report.f1
@@ -14,12 +14,12 @@ ms.assetid: 1ba3f758-f39b-4f5f-91ca-516cedc78979
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a1a1f66753b1ff002a43f59fb065134967e15254
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3417b4905fd43734fb058d05db81f7318d87539d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208892"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354684"
 ---
 # <a name="custom-reports-in-management-studio"></a>Rapports personnalisés dans Management Studio
   Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], un grand nombre de nœuds de l’Explorateur d’objets proposent un ensemble de rapports standard créés par [!INCLUDE[msCoName](../../includes/msconame-md.md)]. Ces rapports fournissent généralement les informations serveur demandées. À partir de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2, les administrateurs peuvent exécuter des rapports personnalisés qui ont été créés dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] à partir de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
@@ -60,7 +60,7 @@ ms.locfileid: "48208892"
 ## <a name="managing-custom-reports"></a>Gestion des rapports personnalisés  
  Nous recommandons aux utilisateurs qui possèdent un grand nombre de rapports personnalisés de les organiser à l'aide de dossiers de système de fichiers dotés des autorisations du système de fichiers NTFS appropriées.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Les rapports personnalisés sont exécutés avec les autorisations de l'utilisateur actuel. Pour empêcher tout utilisateur malveillant de modifier les requêtes exécutées par le rapport, les autorisations définies dans le dossier de système de fichiers contenant les fichiers de rapports doivent l'être avec un accès restreint.  
   
  L'utilisateur tout comme le compte utilisé par le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doivent bénéficier d'un accès en lecture au dossier de système de fichiers contenant les fichiers de rapports.  
@@ -71,7 +71,7 @@ ms.locfileid: "48208892"
 >  Toute instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] valide peut être incorporée dans un rapport et exécutée depuis ce rapport. L'exécution d'un rapport avec un compte d'utilisateur doté de privilèges élevés permet d'exécuter sans aucune difficulté toutes ces instructions incorporées.  
   
 ## <a name="report-samples"></a>Exemples de rapports  
- [Exemples de rapports](http://go.microsoft.com/fwlink/?LinkId=81792), y compris les rapports standards créés par [!INCLUDE[msCoName](../../includes/msconame-md.md)], sont disponibles au téléchargement. Vous pouvez modifier ces exemples à l'aide de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+ [Exemples de rapports](https://go.microsoft.com/fwlink/?LinkId=81792), y compris les rapports standards créés par [!INCLUDE[msCoName](../../includes/msconame-md.md)], sont disponibles au téléchargement. Vous pouvez modifier ces exemples à l'aide de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 ## <a name="see-also"></a>Voir aussi  
  [Ajouter un rapport personnalisé à Management Studio](add-a-custom-report-to-management-studio.md)   

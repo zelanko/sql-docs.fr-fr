@@ -14,12 +14,12 @@ ms.assetid: b456448d-1757-48c8-8bbb-2d1c2d6d61e9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 53f514e83e980e0a91184581d186bcb4046727c3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1368d29801a414de866003b86c63fb4823c4a7b8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192743"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355764"
 ---
 # <a name="always-on-client-connectivity-sql-server"></a>Connectivité client Always On (SQL Server)
   Cette rubrique décrit les considérations relatives à la connectivité client aux groupes de disponibilité AlwaysOn, y compris les conditions préalables requises, les restrictions et les recommandations concernant les paramètres et les configurations de clients.  
@@ -33,17 +33,17 @@ ms.locfileid: "48192743"
   
  Le tableau suivant récapitule les pilotes pris en charge pour [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]:  
   
-|Pilote|Basculement de sous-réseaux multiples|Intention de l'application|Routage en lecture seule|Basculement de sous-réseaux multiples : basculement plus rapide du point de terminaison d'un sous-réseau unique|Basculement de sous-réseaux multiples : résolution d'instance nommée pour des instances de cluster SQL|  
+|Pilote|Basculement de sous-réseaux multiples|Intention de l'application|Routage en lecture seule|Basculement de sous-réseaux multiples : Basculement plus rapide du point de terminaison d'un sous-réseau unique|Basculement de sous-réseaux multiples : Résolution de noms pour les instances cluster SQL|  
 |------------|----------------------------|------------------------|------------------------|--------------------------------------------------------------------|-----------------------------------------------------------------------------------|  
 |SQL Native Client 11.0 ODBC|Oui|Oui|Oui|Oui|Oui|  
-|SQL Native Client 11.0 OLEDB|non|Oui|Oui|non|non|  
+|SQL Native Client 11.0 OLEDB|Non|Oui|Oui|Non|Non|  
 |ADO.NET avec .NET Framework 4.0 et correctif logiciel de connectivité**<sup>*</sup>**|Oui|Oui|Oui|Oui|Oui|  
 |ADO.NET avec .NET Framework 3.5 SP1 et correctif logiciel de connectivité **<sup>**</sup>**|Oui|Oui|Oui|Oui|Oui|  
 |Microsoft JDBC Driver 4.0 pour SQL Server|Oui|Oui|Oui|Oui|Oui|  
   
- **<sup>*</sup>**  Télécharger le correctif logiciel de connectivité pour ADO .NET avec .NET Framework 4.0 : [ http://support.microsoft.com/kb/2600211 ](http://support.microsoft.com/kb/2600211).  
+ **<sup>*</sup>**  Télécharger le correctif logiciel de connectivité pour ADO .NET avec .NET Framework 4.0 : [ https://support.microsoft.com/kb/2600211 ](https://support.microsoft.com/kb/2600211).  
   
- **<sup>**</sup>** Téléchargez le correctif logiciel de connectivité pour ADO .NET avec .NET Framework 3.5 SP1 : [ http://support.microsoft.com/kb/2654347 ](http://support.microsoft.com/kb/2654347).  
+ **<sup>**</sup>** Téléchargez le correctif logiciel de connectivité pour ADO .NET avec .NET Framework 3.5 SP1 : [ https://support.microsoft.com/kb/2654347 ](https://support.microsoft.com/kb/2654347).  
   
 > [!IMPORTANT]  
 >  Pour se connecter à un écouteur de groupe de disponibilité, un client doit utiliser une chaîne de connexion TCP.  
@@ -62,10 +62,10 @@ ms.locfileid: "48192743"
  [Conditions préalables, Restrictions et recommandations pour les groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
  [Écouteurs de groupe de disponibilité, connectivité client et basculement d’application &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
  [À propos de l’accès de la connexion client aux réplicas de disponibilité &#40;SQL Server&#41;](about-client-connection-access-to-availability-replicas-sql-server.md)   
- [Guide de Solutions Microsoft SQL Server AlwaysOn pour une haute disponibilité et récupération d’urgence](http://go.microsoft.com/fwlink/?LinkId=227600)   
- [Blog de l’équipe AlwaysOn SQL Server : Le Blog officiel de SQL Server AlwaysOn Team](http://blogs.msdn.com/b/sqlalwayson/)   
- [Un long délai se produit quand vous vous reconnectez à une connexion IPSec à partir d’un ordinateur qui exécute Windows Server 2003, Windows Vista, Windows Server 2008, Windows 7 ou Windows Server 2008 R2](http://support.microsoft.com/kb/980915)   
- [Il faut environ 30 secondes au service de cluster pour basculer des adresses IP IPv6 dans Windows Server 2008 R2](http://support.microsoft.com/kb/2578113)   
- [Ralentissez l’opération de basculement s’il n’existe aucun routeur entre le cluster et un serveur d’applications](http://support.microsoft.com/kb/2582281)  
+ [Guide de Solutions Microsoft SQL Server AlwaysOn pour une haute disponibilité et récupération d’urgence](https://go.microsoft.com/fwlink/?LinkId=227600)   
+ [Blog de l’équipe AlwaysOn SQL Server : Blog officiel de SQL Server AlwaysOn Team](https://blogs.msdn.com/b/sqlalwayson/)   
+ [Un long délai se produit quand vous vous reconnectez à une connexion IPSec à partir d’un ordinateur qui exécute Windows Server 2003, Windows Vista, Windows Server 2008, Windows 7 ou Windows Server 2008 R2](https://support.microsoft.com/kb/980915)   
+ [Il faut environ 30 secondes au service de cluster pour basculer des adresses IP IPv6 dans Windows Server 2008 R2](https://support.microsoft.com/kb/2578113)   
+ [Ralentissez l’opération de basculement s’il n’existe aucun routeur entre le cluster et un serveur d’applications](https://support.microsoft.com/kb/2582281)  
   
   

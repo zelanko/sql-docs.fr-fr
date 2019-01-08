@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
@@ -13,12 +12,12 @@ ms.assetid: 9ccb8fc5-f65e-41a2-9511-7fa55586eb8b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 41c79a6390c89c01a5ff7e5c7fe949cbebff6c6c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d22be3bc8d99edd5d8b799e4121e2a591977b255
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48097569"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52767222"
 ---
 # <a name="column-pattern-profile-request-options-data-profiling-task"></a>Options Demande de profil de modèle de colonne (tâche de profilage des données)
   Utilisez le volet **Propriétés de la demande** de la page **Demandes de profil** pour définir les options de la **Demande de profil de modèle de colonne** sélectionnée dans le volet Demandes. Un profil de modèle de colonne signale un ensemble d'expressions régulières qui reflètent le pourcentage spécifié des valeurs dans une colonne de chaîne. Ce profil peut vous aider à identifier des problèmes dans vos données, tels que les chaînes non valides, et peut suggérer des expressions régulières susceptibles d'être utilisées à l'avenir pour la validation de nouvelles valeurs. Par exemple, le profil de modèle d'une colonne États-Unis/Codes postaux peut générer les expressions régulières \d{5}-\d{4}, \d{5} et \d{9}. Si vous rencontrez d'autres expressions régulières, il est probable que vos données contiennent des valeurs qui ne sont pas valides ou utilisent un format incorrect.  
@@ -40,7 +39,7 @@ ms.locfileid: "48097569"
  Tous les séparateurs sont normalisés en un espace unique dans le cadre du processus de création de jetons tandis que les symboles sont conservés.  
   
 ## <a name="understanding-the-use-of-the-tag-table"></a>Fonctionnement de l'utilisation de la table des balises  
- Vous pouvez éventuellement regrouper des jetons associés au moyen d’une balise unique en stockant les balises et les termes associés dans une table spéciale que vous créez dans une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La table des balises doit être composée de deux colonnes de chaîne, l’une appelée « Balise », l’autre « Terme ». Ces colonnes peuvent être de type `char`, `nchar`, `varchar`, ou `nvarchar`, mais pas `text` ou `ntext`. Vous pouvez fusionner plusieurs balises et leurs termes correspondants dans une seule et unique table. Une demande de profil de modèle de colonne peut utiliser une seule table des balises. Vous pouvez recourir à un gestionnaire de connexions [!INCLUDE[vstecado](../../includes/vstecado-md.md)] pour vous connecter à la table des balises. La table des balises peut donc être stockée dans une autre base de données ou sur un autre serveur que les données sources.  
+ Vous pouvez éventuellement regrouper des jetons associés au moyen d’une balise unique en stockant les balises et les termes associés dans une table spéciale que vous créez dans une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La table des balises doit être composée de deux colonnes de chaîne, l’une appelée « Balise », l’autre « Terme ». Ces colonnes peuvent être de type `char`, `nchar`, `varchar` ou `nvarchar`, mais pas `text` ou `ntext`. Vous pouvez fusionner plusieurs balises et leurs termes correspondants dans une seule et unique table. Une demande de profil de modèle de colonne peut utiliser une seule table des balises. Vous pouvez recourir à un gestionnaire de connexions [!INCLUDE[vstecado](../../includes/vstecado-md.md)] pour vous connecter à la table des balises. La table des balises peut donc être stockée dans une autre base de données ou sur un autre serveur que les données sources.  
   
  Par exemple, vous pouvez regrouper les valeurs « East », « West », « North » et « South » susceptibles d'apparaître dans des adresses postales en utilisant la balise unique « Direction ». Un exemple de cette table des balises est proposé ci-dessous.  
   
@@ -144,7 +143,7 @@ ms.locfileid: "48097569"
  Pour plus d'informations, consultez la section « Fonctionnement de l'utilisation de la table des balises » plus haut dans cette rubrique.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Éditeur de tâche de profilage des données &#40;Page Général&#41;](../general-page-of-integration-services-designers-options.md)   
+ [Éditeur de tâche de profilage de données &#40;page Général&#41;](../general-page-of-integration-services-designers-options.md)   
  [Formulaire de profil rapide de table simple &#40;tâche de profilage des données&#41;](single-table-quick-profile-form-data-profiling-task.md)  
   
   

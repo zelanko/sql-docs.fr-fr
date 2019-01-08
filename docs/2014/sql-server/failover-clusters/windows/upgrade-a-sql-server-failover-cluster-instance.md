@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: high-availability
 ms.topic: conceptual
 helpviewer_keywords:
 - upgrading failover clusters
@@ -15,12 +14,12 @@ ms.assetid: daac41fe-7d0b-4f14-84c2-62952ad8cbfa
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3397ac65b4c3ca5f5d7ac9e8068ca3e078d466c8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 421aac2c58755b192eff51a85d668b03a2fc8a8e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211188"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823873"
 ---
 # <a name="upgrade-a-sql-server-failover-cluster"></a>Mettre à niveau un cluster de basculement SQL Server
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prend en charge la mise à niveau du [!INCLUDE[ssDE](../../../includes/ssde-md.md)] et d'[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] à partir des clusters de basculement [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] et [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] séparément sur tous les nœuds de cluster de basculement.  
@@ -29,7 +28,7 @@ ms.locfileid: "48211188"
   
 -   La mise à niveau est prise en charge par le biais de l'interface utilisateur et à partir de l'invite de commandes. Pour plus d’informations, consultez [Mettre à niveau une instance de cluster de basculement SQL Server &#40;programme d’installation&#41;](upgrade-a-sql-server-failover-cluster-instance-setup.md) et [Installer SQL Server 2014 à partir de l’invite de commandes](../../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  
   
--   Mise à niveau à partir de [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] — Vous pouvez exécuter une mise à niveau à partir de l'invite de commandes sur chaque nœud de cluster de basculement. Vous pouvez aussi utiliser l'interface utilisateur du programme d'installation pour mettre à niveau chaque nœud de cluster. Si les fonctionnalités Recherche en texte intégral et Réplication n'existent pas sur l'instance mise à niveau, elles seront automatiquement installées, sans option pour les omettre.  
+-   La mise à niveau à partir de [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] -vous pouvez exécuter la mise à niveau à partir de l’invite de commandes sur chaque nœud de cluster de basculement, ou à l’aide de l’interface utilisateur d’installation pour mettre à niveau chaque nœud du cluster. Si les fonctionnalités Recherche en texte intégral et Réplication n'existent pas sur l'instance mise à niveau, elles seront automatiquement installées, sans option pour les omettre.  
   
 -   Installation de Service Packs - Vous devez appliquer les Service Packs et correctifs logiciels [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] aux clusters de basculement [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] séparément sur tous les nœuds.  
   
@@ -44,7 +43,7 @@ ms.locfileid: "48211188"
 -   Pour plus d’informations, consultez [ Instances de Cluster de basculement AlwaysOn (SQL Server)](always-on-failover-cluster-instances-sql-server.md).  
   
 ## <a name="upgrading-a-includessnoversionincludesssnoversion-mdmd-multi-subnet-failover-cluster"></a>Mise à niveau d'un cluster de basculement de sous-réseaux multiples [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
- Vous ne pouvez pas mettre directement à niveau un cluster de basculement qui n'est pas de sous-réseaux multiples [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vers un cluster de basculement de sous-réseaux multiples [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [Mettre à niveau une instance de cluster de basculement SQL Server &#40;programme d’installation&#41;](upgrade-a-sql-server-failover-cluster-instance-setup.md).  
+ Vous ne pouvez pas mettre à niveau directement un non-sous-réseaux multiples [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de cluster de basculement à un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cluster de basculement de sous-réseaux multiples. Pour plus d’informations, consultez [Mettre à niveau une instance de cluster de basculement SQL Server &#40;programme d’installation&#41;](upgrade-a-sql-server-failover-cluster-instance-setup.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Mises à niveau de la version et de l'édition prises en charge](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   

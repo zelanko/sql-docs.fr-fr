@@ -13,15 +13,15 @@ ms.assetid: d0535fce-2bf5-4f6d-b517-ffe6fa13738d
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 23832b226bb9408ab4e5b2fbb50718e1ead710b4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f40aebd3d6f1b6b9b6c7580845f6d80da9eedbc6
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217289"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373821"
 ---
-# <a name="task-9-configuring-a-reference-data-service"></a>Tâche 9 : Configuration d'un service de données de référence
-  Dans cette tâche, vous allez configurer DQS pour utiliser un service de données de référence dans Windows Azure Marketplace. Dans la tâche suivante, vous allez configurer le domaine **Validation d'adresses** pour utiliser ce service. Au moment de l'exécution, pendant l'activité de nettoyage, DQS passe les valeurs des domaines du domaine **Validation d'adresses** au service pour le nettoyage. Consultez [Configurer DQS pour utiliser des données de référence](http://msdn.microsoft.com/library/hh213070.aspx) pour plus de détails.  
+# <a name="task-9-configuring-a-reference-data-service"></a>Tâche 9 : Configuration d'un service de données de référence
+  Dans cette tâche, vous allez configurer DQS pour utiliser un service de données de référence dans la Place de marché Microsoft Azure. Dans la tâche suivante, vous allez configurer le domaine **Validation d'adresses** pour utiliser ce service. Au moment de l'exécution, pendant l'activité de nettoyage, DQS passe les valeurs des domaines du domaine **Validation d'adresses** au service pour le nettoyage. Consultez [Configurer DQS pour utiliser des données de référence](https://msdn.microsoft.com/library/hh213070.aspx) pour plus de détails.  
   
 1.  Dans la page principale du **Client DQS**, cliquez sur **Configuration** dans le volet **Administration**.  
   
@@ -40,6 +40,6 @@ ms.locfileid: "48217289"
 7.  Cliquez sur **Fermer** en bas de la page pour passer à la page principale du Client DQS.  
   
 ## <a name="next-task"></a>Tâche suivante  
- [Tâche 10 : Configuration d’un domaine pour utiliser un service de données de référence](../../2014/tutorials/task-10-configuring-composite-domain-to-use-reference-data-service.md)  
+ [Tâche 10 : Configuration d’un domaine pour utiliser le Service de données de référence](../../2014/tutorials/task-10-configuring-composite-domain-to-use-reference-data-service.md)  
   
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.newpubwizard.addeditfilter.f1
@@ -13,12 +12,12 @@ ms.assetid: bdd7c71d-1c59-4044-bfe8-c85f908345bb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3f1590275aaabd47524ba969615b28ab91f2b100
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fa12421f39119fbbb5e40c8c2b6dc7f103cd9a45
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195109"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52758051"
 ---
 # <a name="add-or-edit-filter"></a>Ajouter un filtre ou Modifier le filtre
   Les boîtes de dialogue **Ajouter un filtre** et **Modifier le filtre** permettent d'ajouter et de modifier des filtres de lignes statiques ou paramétrés.  
@@ -64,7 +63,7 @@ ms.locfileid: "48195109"
  [Create a Publication](publish/create-a-publication.md)   
  [Afficher et modifier les propriétés d’une publication](publish/view-and-modify-publication-properties.md)   
  [Filtrer des données publiées](publish/filter-published-data.md)   
- [Join Filters](merge/join-filters.md)   
+ [Filtres de jointure](merge/join-filters.md)   
  [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md)   
  [Publier des données et des objets de base de données](publish/publish-data-and-database-objects.md)  
   

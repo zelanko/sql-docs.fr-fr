@@ -20,19 +20,19 @@ ms.assetid: eddef353-83f3-4a3c-8f24-f9ed888890a4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0240d5fe1f701715f11adc4f68e80abed896d704
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1b8453d76dc2af0499dc8d8af2ca1ec3024aee83
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742687"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523808"
 ---
 # <a name="sqldescribecol-function"></a>Fonction SQLDescribeCol
 **Conformité**  
- Version introduite : La mise en conformité des normes 1.0 ODBC : ISO 92  
+ Version introduite : Conformité aux normes 1.0 ODBC : ISO 92  
   
  **Résumé**  
- **SQLDescribeCol** retourne le descripteur de résultat : nom de colonne, type, taille de colonne, des chiffres décimaux et possibilité de valeur null, pour une colonne dans le résultat défini. Ces informations sont également disponibles dans les champs de l’IRD.  
+ **SQLDescribeCol** retourne le descripteur de résultat - nom de colonne, type, taille de colonne, des chiffres décimaux et possibilité de valeur NULL - pour une colonne dans le jeu de résultats. Ces informations sont également disponibles dans les champs de l’IRD.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -75,18 +75,18 @@ SQLRETURN SQLDescribeCol(
   
  Lorsque *ColumnNumber* est égal à 0 (pour une colonne de signet), SQL_BINARY est retourné dans  *\*DataTypePtr* pour les signets de longueur variable. (SQL_INTEGER est retournée si les signets sont utilisés par un ODBC 3. *x* application fonctionne avec une API ODBC 2. *x* pilote ou par un ODBC 2. *x* application fonctionne avec un ODBC 3. *x* pilote.)  
   
- Pour plus d’informations sur ces types de données, consultez [les Types de données SQL](../../../odbc/reference/appendixes/sql-data-types.md) annexe d : Types de données. Pour plus d’informations sur les types de données spécifiques au pilote SQL, consultez la documentation du pilote.  
+ Pour plus d’informations sur ces types de données, consultez [les Types de données SQL](../../../odbc/reference/appendixes/sql-data-types.md) dans l’annexe d : Types de données. Pour plus d’informations sur les types de données spécifiques au pilote SQL, consultez la documentation du pilote.  
   
  *ColumnSizePtr*  
- [Sortie] Pointeur vers une mémoire tampon dans lequel retourner la taille (en caractères) de la colonne sur la source de données. Si la taille de colonne ne peut pas être déterminée, le pilote retourne 0. Pour plus d’informations sur la taille de colonne, consultez [taille de colonne, des chiffres décimaux, transférer la longueur en octets et la taille d’affichage](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) annexe d : Types de données.  
+ [Sortie] Pointeur vers une mémoire tampon dans lequel retourner la taille (en caractères) de la colonne sur la source de données. Si la taille de colonne ne peut pas être déterminée, le pilote retourne 0. Pour plus d’informations sur la taille de colonne, consultez [taille de colonne, des chiffres décimaux, transférer la longueur en octets et la taille d’affichage](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) dans l’annexe d : Types de données.  
   
  *DecimalDigitsPtr*  
- [Sortie] Pointeur vers une mémoire tampon dans lequel retourner le nombre de chiffres décimaux de la colonne sur la source de données. Si le nombre de chiffres décimaux ne peut pas être déterminé ou n’est pas applicable, le pilote retourne 0. Pour plus d’informations sur les chiffres décimaux, consultez [taille de colonne, des chiffres décimaux, transférer la longueur en octets et la taille d’affichage](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) annexe d : Types de données.  
+ [Sortie] Pointeur vers une mémoire tampon dans lequel retourner le nombre de chiffres décimaux de la colonne sur la source de données. Si le nombre de chiffres décimaux ne peut pas être déterminé ou n’est pas applicable, le pilote retourne 0. Pour plus d’informations sur les chiffres décimaux, consultez [taille de colonne, des chiffres décimaux, transférer la longueur en octets et la taille d’affichage](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) dans l’annexe d : Types de données.  
   
  *NullablePtr*  
  [Sortie] Pointeur vers une mémoire tampon dans lequel retourner une valeur qui indique si la colonne autorise des valeurs NULL. Cette valeur est lue à partir du champ SQL_DESC_NULLABLE de l’IRD. Les valeurs possibles sont les suivantes :  
   
- SQL_NO_NULLS : La colonne n’autorise pas les valeurs NULL.  
+ SQL_NO_NULLS : La colonne n'accepte pas les valeurs NULL.  
   
  SQL_NULLABLE : La colonne autorise des valeurs NULL.  
   

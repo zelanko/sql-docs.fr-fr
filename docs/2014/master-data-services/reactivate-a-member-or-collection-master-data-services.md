@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - collections [Master Data Services], reactivating
@@ -18,12 +17,12 @@ ms.assetid: bb4884c0-3658-4763-92d1-636804278b1c
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 7fb16b3d7cb01f955d8be8de2483807b3f9dc98f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 208f801522e53eb8d8075cced223d2d0360f257b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140399"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52762451"
 ---
 # <a name="reactivate-a-member-or-collection-master-data-services"></a>Réactiver un membre ou une collection (Master Data Services)
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], vous pouvez réactiver un membre qui a été :  
@@ -36,7 +35,7 @@ ms.locfileid: "48140399"
   
  La réactivation d’un membre permet de restaurer ses attributs et son appartenance aux hiérarchies et collections.  
   
- Vous pouvez également réactiver des collections. Lorsque vous procédez ainsi, les attributs et les membres de la collection qui appartiennent à la collection sont restaurés.  
+ Vous pouvez également réactiver des collections. Quand vous procédez ainsi, les attributs et les membres de la collection qui appartiennent à la collection sont restaurés.  
   
  Lorsqu'une collection ou un membre est réactivé, toutes les transactions précédentes sont restaurées.  
   
@@ -45,7 +44,7 @@ ms.locfileid: "48140399"
   
 -   Dans [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], vous devez avoir l’autorisation d’accéder à la zone fonctionnelle **Gestion des versions** .  
   
--   Vous devez être administrateur de modèle. Pour plus d’informations, consultez [Administrators &#40;Master Data Services&#41;](administrators-master-data-services.md).  
+-   Vous devez être administrateur de modèle. Pour plus d’informations, consultez [Administrateurs &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
 ### <a name="to-reactivate-a-member-or-collection"></a>Pour réactiver un membre ou une collection  
   
@@ -65,7 +64,7 @@ ms.locfileid: "48140399"
   
 ## <a name="see-also"></a>Voir aussi  
  [Désactiver ou supprimer des membres à l’aide du processus de mise en lots &#40;Master Data Services&#41;](add-update-and-delete-data-master-data-services.md)   
- [Supprimer un membre ou une Collection &#40;Master Data Services&#41;](../../2014/master-data-services/delete-a-member-or-collection-master-data-services.md)   
+ [Supprimer un membre ou une collection &#40;Master Data Services&#41;](../../2014/master-data-services/delete-a-member-or-collection-master-data-services.md)   
  [Membres &#40;Master Data Services&#41;](../../2014/master-data-services/members-master-data-services.md)   
  [Collections &#40;Master Data Services&#41;](../../2014/master-data-services/collections-master-data-services.md)  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords:
 - adding nodes
@@ -18,12 +17,12 @@ ms.assetid: 30e06a7d-75e9-44e2-bca3-b3b0c4a33f61
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: dd742a01e52f63aa7c357d954c2de025d2f4d509
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 696d8becd23f7a7136011a5e1c61eb9669c58e12
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116795"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359381"
 ---
 # <a name="create-a-new-sql-server-failover-cluster-setup"></a>Créer un cluster de basculement SQL Server (programme d'installation)
   Pour installer ou mettre à niveau un cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , vous devez exécuter le programme d'installation sur chaque nœud du cluster de basculement. Pour ajouter un nœud à un cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] existant, vous devez exécuter le programme d'installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur le nœud destiné à être ajouté à l'instance de cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . N'exécutez pas le programme d'installation sur le nœud actif pour gérer les autres nœuds.  
@@ -36,7 +35,7 @@ ms.locfileid: "48116795"
   
  Les options suivantes sont disponibles pour l'installation d'un cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  
   
- **Option 1 : installation Integration avec ajout de nœud**  
+ **Option 1 : Installation Integration avec ajout de nœud**  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] L’installation intégrée de cluster de basculement comprend les étapes suivantes :  
   
@@ -46,7 +45,7 @@ ms.locfileid: "48116795"
   
     -   Si le nœud que vous ajoutez a des sous-réseaux supplémentaires ou différents, le programme d'installation vous permet de spécifier des adresses IP supplémentaires. Si le nœud que vous ajoutez se trouve sur un sous-réseau différent, vous devez également confirmer la modification de dépendance de ressource d'adresse IP sur OR. Pour plus d’informations sur les différents scénarios possibles pendant les opérations d’ajout de nœuds, consultez [Ajouter ou supprimer des nœuds dans un cluster de basculement SQL Server &#40;programme d’installation&#41;](add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).  
   
- **Option 2 : installation avancée/entreprise**  
+ **Option 2 : Installation avancée/entreprise**  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] L’installation avancée/entreprise de cluster de basculement comprend les étapes suivantes :  
   
@@ -67,7 +66,7 @@ ms.locfileid: "48116795"
   
  Pour plus d’informations sur une installation distante, consultez [Mises à niveau de la version et de l’édition prises en charge](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md).  
   
- Pour plus d’informations sur l’installation d’ [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] dans un cluster de basculement Windows, consultez [Procédure : mettre en cluster SQL Server Analysis Services](http://go.microsoft.com/fwlink/p/?LinkId=396548).  
+ Pour plus d’informations sur l’installation d’ [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] dans un cluster de basculement Windows, consultez [Procédure : mettre en cluster SQL Server Analysis Services](https://go.microsoft.com/fwlink/p/?LinkId=396548).  
   
 ## <a name="prerequisites"></a>Prérequis  
  Avant de commencer, consultez les rubriques suivantes dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  
@@ -124,17 +123,17 @@ ms.locfileid: "48116795"
   
 11. Dans la page Configuration de l'instance, spécifiez s'il faut installer une instance par défaut ou une instance nommée. Pour plus d'informations, consultez [Instance Configuration](../../install/instance-configuration.md).  
   
-     **Nom réseau [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]** : indiquez un nom réseau pour le nouveau cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Il s'agit du nom qui est utilisé pour identifier votre cluster de basculement sur le réseau.  
+     **Nom réseau [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**  : indiquez un nom réseau pour le nouveau cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Il s'agit du nom qui est utilisé pour identifier votre cluster de basculement sur le réseau.  
   
     > [!NOTE]  
     >  Il s'agit du nom [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] virtuel dans les versions antérieures des clusters de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
-     **ID d'instance** — Par défaut, le nom de l'instance est utilisé comme ID d'instance. Il permet d'identifier les répertoires d'installation et les clés de Registre de votre instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Tel est le cas pour les instances par défaut et les instances nommées. Pour une instance par défaut, le nom de l'instance et l'ID d'instance sont MSSQLSERVER. Pour utiliser un ID d’instance non défini par défaut, cochez la case **ID d’instance** et entrez une valeur.  
+     **ID d’instance** : Par défaut, le nom de l’instance est utilisé comme ID d’instance. Il permet d'identifier les répertoires d'installation et les clés de Registre de votre instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Tel est le cas pour les instances par défaut et les instances nommées. Pour une instance par défaut, le nom de l'instance et l'ID d'instance sont MSSQLSERVER. Pour utiliser un ID d’instance non défini par défaut, cochez la case **ID d’instance** et entrez une valeur.  
   
     > [!NOTE]  
     >  Les instances autonomes classiques de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], qu’il s’agisse d’instances par défaut ou d’instances nommées, n’utilisent pas de valeur non définie par défaut pour la case à cocher **ID d’instance** .  
   
-     **Répertoire racine de l’instance** : par défaut, le répertoire racine de l’instance est C:\Program Files\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]\\. Pour spécifier un répertoire racine non défini par défaut, utilisez le champ fourni ou cliquez sur le bouton de sélection afin de rechercher un dossier d'installation.  
+     **Répertoire racine de l’instance** : par défaut, le répertoire racine de l’instance est C:\Program Files\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]\\. Pour spécifier un répertoire racine non défini par défaut, utilisez le champ fourni ou cliquez sur le bouton de sélection afin de rechercher un dossier d'installation.  
   
      **Fonctionnalités et instances de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] détectées sur cet ordinateur** : la grille affiche les instances de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui se trouvent sur l’ordinateur où le programme d’installation s’exécute. Si une instance par défaut est déjà installée sur l'ordinateur, vous devez installer une instance nommée de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Cliquez sur **Suivant** pour continuer.  
   
@@ -167,7 +166,7 @@ ms.locfileid: "48116795"
   
 16. Le flux de travail du reste de cette rubrique dépend des fonctionnalités que vous avez spécifiées pour votre installation. Il est possible que les pages ne soient pas toutes visibles, en fonction de vos sélections ([!INCLUDE[ssDE](../../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]et [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]).  
   
-17. Dans la page Configuration du serveur — Comptes de service, spécifiez les comptes de connexion des services [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Les services réels configurés dans cette page dépendent des fonctionnalités que vous avez choisi d'installer.  
+17. Dans la page Configuration du serveur - Comptes de service, spécifiez les comptes de connexion des services [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Les services réels configurés dans cette page dépendent des fonctionnalités que vous avez choisi d'installer.  
   
      Vous pouvez attribuer le même compte de connexion à tous les services [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou configurer chaque compte de service individuellement. Le type de démarrage est défini sur manuel pour tous les services prenant en charge les clusters, notamment la recherche en texte intégral et l'Agent [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , et ne peut pas être modifié pendant l'installation. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] vous recommande de configurer les comptes de service individuellement afin de fournir des privilèges moindres pour chaque service, sachant que les services [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] disposent des autorisations minimales requises pour effectuer leurs tâches. Pour plus d’informations, consultez [Configuration du serveur - Comptes de service](../../install/server-configuration-service-accounts.md) et [Configurer les comptes de service Windows et les autorisations](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
@@ -179,13 +178,13 @@ ms.locfileid: "48116795"
   
 18. Utilisez l’onglet **Configuration du serveur — Classement** pour spécifier les classements non définis par défaut pour le [!INCLUDE[ssDE](../../../includes/ssde-md.md)] et [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Pour plus d’informations, consultez [Configuration du serveur - Classement](../../install/server-configuration-collation.md).  
   
-19. Utilisez la page Configuration du [!INCLUDE[ssDE](../../../includes/ssde-md.md)] — Mise en service du compte pour spécifier les éléments suivants :  
+19. Utilisez la page Configuration du [!INCLUDE[ssDE](../../../includes/ssde-md.md)] - Attribution de privilèges d’accès aux comptes pour spécifier les éléments suivants :  
   
     -   Mode de sécurité - sélectionnez l'authentification Windows ou le mode d'authentification mixte pour votre instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Si vous sélectionnez Mode d'authentification mixte, vous devez fournir un mot de passe fort pour le compte administrateur système [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] intégré.  
   
-         Lorsque la connexion d'un périphérique à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]est établie, le mécanisme de sécurité est le même pour l'authentification Windows et le mode mixte. Pour plus d’informations, consultez [Configuration du moteur de base de données - l’approvisionnement de comptes](../../install/database-engine-configuration-account-provisioning.md).  
+         Lorsque la connexion d'un périphérique à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]est établie, le mécanisme de sécurité est le même pour l'authentification Windows et le mode mixte. Pour plus d'informations, consultez [Database Engine Configuration - Account Provisioning](../../install/database-engine-configuration-account-provisioning.md).  
   
-    -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Administrateurs : vous devez spécifier au moins un administrateur système pour l’instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Pour ajouter le compte sous lequel le programme d'installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] s'exécute, cliquez sur **Ajouter l'utilisateur actuel**. Pour ajouter ou supprimer des comptes dans la liste des administrateurs système, cliquez sur **Ajouter** ou sur **Supprimer**, puis modifiez la liste des utilisateurs, groupes ou ordinateurs qui disposeront des privilèges d'administrateur pour l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [Configuration du moteur de base de données - l’approvisionnement de comptes](../../install/database-engine-configuration-account-provisioning.md).  
+    -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Administrateurs : vous devez spécifier au moins un administrateur système pour l’instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Pour ajouter le compte sous lequel le programme d'installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] s'exécute, cliquez sur **Ajouter l'utilisateur actuel**. Pour ajouter ou supprimer des comptes dans la liste des administrateurs système, cliquez sur **Ajouter** ou sur **Supprimer**, puis modifiez la liste des utilisateurs, groupes ou ordinateurs qui disposeront des privilèges d'administrateur pour l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Pour plus d'informations, consultez [Database Engine Configuration - Account Provisioning](../../install/database-engine-configuration-account-provisioning.md).  
   
      Lorsque vous avez terminé de modifier la liste, [!INCLUDE[clickOK](../../../includes/clickok-md.md)]. Vérifiez la liste d'administrateurs dans la boîte de dialogue de configuration. Une fois la liste complète, cliquez sur **Suivant**.  
   
@@ -201,11 +200,11 @@ ms.locfileid: "48116795"
   
 21. Utilisez la page Configuration du [!INCLUDE[ssDE](../../../includes/ssde-md.md)] - FILESTREAM pour activer FILESTREAM pour votre instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Pour plus d’informations sur FILESTREAM, consultez [Configuration du moteur de base de données - Filestream](../../install/database-engine-configuration-filestream.md). Cliquez sur **Suivant** pour continuer.  
   
-22. Utilisez la page Configuration d' [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] — Attribution de privilèges d'accès aux comptes pour spécifier les utilisateurs ou comptes qui ont les autorisations d'administrateur pour [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Vous devez spécifier au moins un administrateur système pour [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Pour ajouter le compte sous lequel le programme d'installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] s'exécute, cliquez sur **Ajouter l'utilisateur actuel**. Pour ajouter ou supprimer des comptes dans la liste des administrateurs système, cliquez sur **Ajouter** ou **Supprimer**, puis modifiez la liste des utilisateurs, groupes ou ordinateurs qui disposeront des privilèges d'administrateur pour [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Pour plus d’informations, consultez [Configuration d’Analysis Services - l’approvisionnement de comptes](../../install/analysis-services-configuration-account-provisioning.md).  
+22. Utilisez la page Configuration d'[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] - Attribution de privilèges d'accès aux comptes pour spécifier les utilisateurs ou comptes qui ont les autorisations d'administrateur pour [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Vous devez spécifier au moins un administrateur système pour [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Pour ajouter le compte sous lequel le programme d'installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] s'exécute, cliquez sur **Ajouter l'utilisateur actuel**. Pour ajouter ou supprimer des comptes dans la liste des administrateurs système, cliquez sur **Ajouter** ou **Supprimer**, puis modifiez la liste des utilisateurs, groupes ou ordinateurs qui disposeront des privilèges d'administrateur pour [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Pour plus d’informations, consultez [Configuration Analysis Services – Mise en service de compte](../../install/analysis-services-configuration-account-provisioning.md).  
   
      Lorsque vous avez terminé de modifier la liste, [!INCLUDE[clickOK](../../../includes/clickok-md.md)]. Vérifiez la liste d'administrateurs dans la boîte de dialogue de configuration. Une fois la liste complète, cliquez sur **Suivant**.  
   
-23. Utilisez la page Configuration d' [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] - Répertoires de données pour spécifier les répertoires d'installation non définis par défaut. Pour installer sur les répertoires par défaut, cliquez sur **Suivant**.  
+23. Utilisez la page Configuration du [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] - Répertoires de données pour spécifier les répertoires d'installation non définis par défaut. Pour installer sur les répertoires par défaut, cliquez sur **Suivant**.  
   
     > [!IMPORTANT]  
     >  Si vous spécifiez des répertoires d'installation autres que les répertoires par défaut, assurez-vous que les dossiers d'installation sont uniques à cette instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Aucun des répertoires dans cette boîte de dialogue ne doit être partagé avec des répertoires d'autres instances de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Les répertoires de données doivent se trouver sur le disque de cluster partagé pour le cluster de basculement.  
@@ -235,7 +234,7 @@ ms.locfileid: "48116795"
   
 ##  <a name="prepare"></a> Préparation  
   
-#### <a name="advancedenterprise-failover-cluster-install-step-1-prepare"></a>Installation avancée/entreprise de cluster de basculement Étape 1 : Préparer  
+#### <a name="advancedenterprise-failover-cluster-install-step-1-prepare"></a>Installation avancée/entreprise de cluster de basculement Étape 1 : Préparation  
   
 1.  Insérez le support d'installation [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et, dans le dossier racine, double-cliquez sur Setup.exe. Pour effectuer l'installation à partir d'un partage réseau, accédez au dossier racine sur le partage, puis double-cliquez sur Setup.exe. Pour plus d’informations sur l’installation des composants requis, consultez [Avant l’installation du clustering de basculement](before-installing-failover-clustering.md). Il se peut que vous deviez installer les composants requis si ceux-ci ne sont pas déjà présents sur l'ordinateur.  
   
@@ -271,7 +270,7 @@ ms.locfileid: "48116795"
   
 11. Dans la page Configuration de l'instance, spécifiez s'il faut installer une instance par défaut ou une instance nommée. Pour plus d'informations, consultez [Instance Configuration](../../install/instance-configuration.md).  
   
-     **ID d'instance** — Par défaut, le nom de l'instance est utilisé comme ID d'instance. Il permet d'identifier les répertoires d'installation et les clés de Registre de votre instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Tel est le cas pour les instances par défaut et les instances nommées. Pour une instance par défaut, le nom de l'instance et l'ID d'instance sont MSSQLSERVER. Pour utiliser un ID d’instance non défini par défaut, sélectionnez la zone de texte **ID d’instance** et entrez une valeur.  
+     **ID d’instance** : Par défaut, le nom de l’instance est utilisé comme ID d’instance. Il permet d'identifier les répertoires d'installation et les clés de Registre de votre instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Tel est le cas pour les instances par défaut et les instances nommées. Pour une instance par défaut, le nom de l'instance et l'ID d'instance sont MSSQLSERVER. Pour utiliser un ID d’instance non défini par défaut, sélectionnez la zone de texte **ID d’instance** et entrez une valeur.  
   
     > [!NOTE]  
     >  Les instances autonomes classiques de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], qu’il s’agisse d’instances par défaut ou d’instances nommées, n’utilisent pas de valeur non définie par défaut pour la zone de texte **ID d’instance** .  
@@ -279,7 +278,7 @@ ms.locfileid: "48116795"
     > [!IMPORTANT]  
     >  Utilisez le même ID d'instance pour tous les nœuds préparés pour le cluster de basculement  
   
-     **Répertoire racine de l’instance** : par défaut, le répertoire racine de l’instance est C:\Program Files\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]\\. Pour spécifier un répertoire racine non défini par défaut, utilisez le champ fourni ou cliquez sur le bouton de sélection afin de rechercher un dossier d'installation.  
+     **Répertoire racine de l’instance** : par défaut, le répertoire racine de l’instance est C:\Program Files\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]\\. Pour spécifier un répertoire racine non défini par défaut, utilisez le champ fourni ou cliquez sur le bouton de sélection afin de rechercher un dossier d'installation.  
   
      **Instances installées** : la grille affiche les instances de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui se trouvent sur l’ordinateur où le programme d’installation s’exécute. Si une instance par défaut est déjà installée sur l'ordinateur, vous devez installer une instance nommée de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Cliquez sur **Suivant** pour continuer.  
   
@@ -295,7 +294,7 @@ ms.locfileid: "48116795"
   
 14. Le flux de travail du reste de cette rubrique dépend des fonctionnalités que vous avez spécifiées pour votre installation. Il est possible que les pages ne soient pas toutes visibles, en fonction de vos sélections.  
   
-15. Dans la page Configuration du serveur — Comptes de service, spécifiez les comptes de connexion des services [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Les services réels configurés dans cette page dépendent des fonctionnalités que vous avez choisi d'installer.  
+15. Dans la page Configuration du serveur - Comptes de service, spécifiez les comptes de connexion des services [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Les services réels configurés dans cette page dépendent des fonctionnalités que vous avez choisi d'installer.  
   
      Vous pouvez attribuer le même compte de connexion à tous les services [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou configurer chaque compte de service individuellement. Le type de démarrage est défini sur manuel pour tous les services prenant en charge les clusters, notamment la recherche en texte intégral et l'Agent [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , et ne peut pas être modifié pendant l'installation. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] vous recommande de configurer les comptes de service individuellement afin de fournir des privilèges moindres pour chaque service, sachant que les services [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] disposent des autorisations minimales requises pour effectuer leurs tâches. Pour plus d’informations, consultez [Configuration du serveur - Comptes de service](../../install/server-configuration-service-accounts.md) et [Configurer les comptes de service Windows et les autorisations](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
@@ -329,7 +328,7 @@ ms.locfileid: "48116795"
   
 ## <a name="complete"></a>Terminé  
   
-#### <a name="advancedenterprise-failover-cluster-install-step-2-complete"></a>Installation avancée/entreprise de cluster de basculement Étape 2 : Finaliser  
+#### <a name="advancedenterprise-failover-cluster-install-step-2-complete"></a>Installation avancée/entreprise de cluster de basculement Étape 2 : Terminé  
   
 1.  Une fois tous les nœuds préparés de la façon décrite dans [l’étape de préparation](#prepare), lancez le programme d’installation sur l’un des nœuds préparés, de préférence sur le nœud propriétaire du disque partagé. Dans la page **Avancé** du Centre d’installation [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , cliquez sur **Création de cluster avancée**.  
   
@@ -363,19 +362,19 @@ ms.locfileid: "48116795"
   
 10. Dans la page Configuration du réseau de cluster, spécifiez les ressources réseau de votre instance de cluster de basculement :  
   
-    -   **Paramètres réseau** : spécifiez le type IP et l’adresse IP pour tous les nœuds et sous-réseaux de votre instance de cluster de basculement. Vous pouvez spécifier plusieurs adresses IP pour un cluster de basculement de sous-réseaux multiples, mais une seule adresse IP par sous-réseau est prise en charge. Chaque nœud préparé doit être le propriétaire d'au moins une adresse IP. Si vous avez plusieurs sous-réseaux dans votre cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , vous serez invité à définir la dépendance de ressource d'adresse IP sur OR.  
+    -   **Paramètres réseau** : spécifiez le type IP et l’adresse IP pour tous les nœuds et sous-réseaux de votre instance de cluster de basculement. Vous pouvez spécifier plusieurs adresses IP pour un cluster de basculement de sous-réseaux multiples, mais une seule adresse IP par sous-réseau est prise en charge. Chaque nœud préparé doit être le propriétaire d'au moins une adresse IP. Si vous avez plusieurs sous-réseaux dans votre cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , vous serez invité à définir la dépendance de ressource d'adresse IP sur OR.  
   
      Cliquez sur **Suivant** pour continuer.  
   
 11. Le flux de travail du reste de cette rubrique dépend des fonctionnalités que vous avez spécifiées pour votre installation. Il est possible que les pages ne soient pas toutes visibles, en fonction de vos sélections.  
   
-12. Utilisez la page Configuration du [!INCLUDE[ssDE](../../../includes/ssde-md.md)] — Mise en service du compte pour spécifier les éléments suivants :  
+12. Utilisez la page Configuration du [!INCLUDE[ssDE](../../../includes/ssde-md.md)] - Attribution de privilèges d’accès aux comptes pour spécifier les éléments suivants :  
   
     -   Mode de sécurité - sélectionnez l'authentification Windows ou le mode d'authentification mixte pour votre instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Si vous sélectionnez Mode d'authentification mixte, vous devez fournir un mot de passe fort pour le compte administrateur système [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] intégré.  
   
-         Lorsque la connexion d'un périphérique à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]est établie, le mécanisme de sécurité est le même pour l'authentification Windows et le mode mixte. Pour plus d’informations, consultez [Configuration du moteur de base de données - l’approvisionnement de comptes](../../install/database-engine-configuration-account-provisioning.md).  
+         Lorsque la connexion d'un périphérique à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]est établie, le mécanisme de sécurité est le même pour l'authentification Windows et le mode mixte. Pour plus d'informations, consultez [Database Engine Configuration - Account Provisioning](../../install/database-engine-configuration-account-provisioning.md).  
   
-    -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Administrateurs : vous devez spécifier au moins un administrateur système pour l’instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Pour ajouter le compte sous lequel le programme d'installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] s'exécute, cliquez sur **Ajouter l'utilisateur actuel**. Pour ajouter ou supprimer des comptes dans la liste des administrateurs système, cliquez sur **Ajouter** ou sur **Supprimer**, puis modifiez la liste des utilisateurs, groupes ou ordinateurs qui disposeront des privilèges d'administrateur pour l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [Configuration du moteur de base de données - l’approvisionnement de comptes](../../install/database-engine-configuration-account-provisioning.md).  
+    -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Administrateurs : vous devez spécifier au moins un administrateur système pour l’instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Pour ajouter le compte sous lequel le programme d'installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] s'exécute, cliquez sur **Ajouter l'utilisateur actuel**. Pour ajouter ou supprimer des comptes dans la liste des administrateurs système, cliquez sur **Ajouter** ou sur **Supprimer**, puis modifiez la liste des utilisateurs, groupes ou ordinateurs qui disposeront des privilèges d'administrateur pour l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Pour plus d'informations, consultez [Database Engine Configuration - Account Provisioning](../../install/database-engine-configuration-account-provisioning.md).  
   
      Lorsque vous avez terminé de modifier la liste, [!INCLUDE[clickOK](../../../includes/clickok-md.md)]. Vérifiez la liste d'administrateurs dans la boîte de dialogue de configuration. Une fois la liste complète, cliquez sur **Suivant**.  
   
@@ -386,11 +385,11 @@ ms.locfileid: "48116795"
   
      Pour plus d’informations, consultez [Configuration du moteur de base de données – Répertoires de données](../../install/database-engine-configuration-data-directories.md).  
   
-14. Utilisez la page Configuration d' [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] — Attribution de privilèges d'accès aux comptes pour spécifier les utilisateurs ou comptes qui ont les autorisations d'administrateur pour [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Vous devez spécifier au moins un administrateur système pour [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Pour ajouter le compte sous lequel le programme d'installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] s'exécute, cliquez sur **Ajouter l'utilisateur actuel**. Pour ajouter ou supprimer des comptes dans la liste des administrateurs système, cliquez sur **Ajouter** ou **Supprimer**, puis modifiez la liste des utilisateurs, groupes ou ordinateurs qui disposeront des privilèges d'administrateur pour [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Pour plus d’informations, consultez [Configuration d’Analysis Services - l’approvisionnement de comptes](../../install/analysis-services-configuration-account-provisioning.md).  
+14. Utilisez la page Configuration d'[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] - Attribution de privilèges d'accès aux comptes pour spécifier les utilisateurs ou comptes qui ont les autorisations d'administrateur pour [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Vous devez spécifier au moins un administrateur système pour [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Pour ajouter le compte sous lequel le programme d'installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] s'exécute, cliquez sur **Ajouter l'utilisateur actuel**. Pour ajouter ou supprimer des comptes dans la liste des administrateurs système, cliquez sur **Ajouter** ou **Supprimer**, puis modifiez la liste des utilisateurs, groupes ou ordinateurs qui disposeront des privilèges d'administrateur pour [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Pour plus d’informations, consultez [Configuration Analysis Services – Mise en service de compte](../../install/analysis-services-configuration-account-provisioning.md).  
   
      Lorsque vous avez terminé de modifier la liste, [!INCLUDE[clickOK](../../../includes/clickok-md.md)]. Vérifiez la liste d'administrateurs dans la boîte de dialogue de configuration. Une fois la liste complète, cliquez sur **Suivant**.  
   
-15. Utilisez la page Configuration d' [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] - Répertoires de données pour spécifier les répertoires d'installation non définis par défaut. Pour installer sur les répertoires par défaut, cliquez sur **Suivant**.  
+15. Utilisez la page Configuration du [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] - Répertoires de données pour spécifier les répertoires d'installation non définis par défaut. Pour installer sur les répertoires par défaut, cliquez sur **Suivant**.  
   
     > [!IMPORTANT]  
     >  Si vous spécifiez des répertoires d'installation autres que les répertoires par défaut, assurez-vous que les dossiers d'installation sont uniques à cette instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Aucun des répertoires dans cette boîte de dialogue ne doit être partagé avec des répertoires d'autres instances de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Les répertoires de données doivent se trouver sur le disque de cluster partagé pour le cluster de basculement.  
@@ -406,7 +405,7 @@ ms.locfileid: "48116795"
 19. Après l'installation, la page **Terminé** fournit un lien vers le fichier journal résumé de l'installation et d'autres remarques importantes. Pour terminer le processus d'installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , cliquez sur **Fermer**. Avec cette procédure, tous les nœuds préparés pour le même cluster de basculement font partie du cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] terminé.  
   
 ## <a name="next-steps"></a>Étapes suivantes  
- **Configurer votre nouvelle installation [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]** : pour réduire la surface d’exposition vulnérable aux attaques d’un système, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installe et active de manière sélective les services et fonctionnalités clés. Pour plus d'informations, consultez [Surface Area Configuration](../../../relational-databases/security/surface-area-configuration.md).  
+ **Configurer votre nouvelle installation [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]** - Pour réduire la surface d’exposition vulnérable aux attaques d’un système, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installe et active de manière sélective les services et fonctionnalités clés. Pour plus d'informations, consultez [Surface Area Configuration](../../../relational-databases/security/surface-area-configuration.md).  
   
  Pour plus d’informations sur l’emplacement des fichiers journaux, consultez [Afficher et lire les fichiers journaux d’installation de SQL Server](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  
   

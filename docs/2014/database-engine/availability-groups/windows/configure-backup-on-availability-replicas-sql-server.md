@@ -18,18 +18,18 @@ ms.assetid: 74bc40bb-9f57-44e4-8988-1d69c0585eb6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 117391f9cbefeb7ed7fbc76d2c1d93376e5a1fa6
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.openlocfilehash: 29868763c34944b0a33953e7a56c3d365afcd4d5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49085335"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363921"
 ---
 # <a name="configure-backup-on-availability-replicas-sql-server"></a>Configurer la sauvegarde sur des réplicas de disponibilité (SQL Server)
   Cette rubrique explique comment configurer la sauvegarde sur des réplicas secondaires pour un groupe de disponibilité AlwaysOn à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], de [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou de PowerShell dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
 > [!NOTE]  
->  Pour une introduction à la sauvegarde sur les réplicas secondaires, consultez [ secondaires actifs : sauvegarde sur les réplicas secondaires (groupes de disponibilité AlwaysOn)](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
+>  Pour une introduction à la sauvegarde sur les réplicas secondaires, consultez [ secondaires actifs : Sauvegarde sur les réplicas secondaires (groupes de disponibilité AlwaysOn)](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
   
  
   
@@ -44,7 +44,7 @@ ms.locfileid: "49085335"
   
 ####  <a name="Permissions"></a> Permissions  
   
-|Tâche|Permissions|  
+|Tâche|Autorisations|  
 |----------|-----------------|  
 |Pour configurer la sauvegarde sur les réplicas secondaires en créant un groupe de disponibilité|Requiert l’appartenance au rôle serveur fixe **sysadmin** et l’autorisation de serveur CREATE AVAILABILITY GROUP, l’autorisation ALTER ANY AVAILABILITY GROUP ou l’autorisation CONTROL SERVER.|  
 |Pour modifier un groupe de disponibilité ou un réplica de disponibilité|Requiert l'autorisation ALTER AVAILABILITY GROUP sur le groupe de disponibilité, l'autorisation CONTROL AVAILABILITY GROUP, l'autorisation ALTER ANY AVAILABILITY GROUP ou l'autorisation CONTROL SERVER.|  
@@ -78,7 +78,7 @@ ms.locfileid: "49085335"
      Spécifie que vous préférez que les travaux de sauvegarde ignorent le rôle des réplicas de disponibilité lorsque vous choisissez le réplica pour effectuer les sauvegardes. Notez que les travaux de sauvegarde peuvent évaluer d'autres facteurs tels que la priorité de sauvegarde de chaque réplica de disponibilité en association avec son état opérationnel et son état connecté.  
   
     > [!IMPORTANT]  
-    >  Il n'y a aucune mise en application du paramètre de préférence de sauvegarde automatisée. La traduction de cette préférence dépend de la logique, le cas échéant, que vous avez écrite dans les travaux de sauvegarde pour les bases de données dans un groupe de disponibilité donné. Le paramètre de préférence de sauvegarde automatisée n'a aucun impact sur les sauvegardes ad-hoc. Pour plus d'informations, consultez [Suivi : après la configuration de la sauvegarde sur les réplicas secondaires](#FollowUp) , plus loin dans cette rubrique.  
+    >  Il n'y a aucune mise en application du paramètre de préférence de sauvegarde automatisée. La traduction de cette préférence dépend de la logique, le cas échéant, que vous avez écrite dans les travaux de sauvegarde pour les bases de données dans un groupe de disponibilité donné. Le paramètre de préférence de sauvegarde automatisée n'a aucun impact sur les sauvegardes ad-hoc. Pour plus d’informations, consultez [suivi : Après la configuration de la sauvegarde sur les réplicas secondaires](#FollowUp) plus loin dans cette rubrique.  
   
 6.  Utilisez la grille **Priorités de sauvegarde de réplica** pour modifier la priorité de sauvegarde des réplicas de disponibilité. Cette grille affiche la priorité de sauvegarde actuelle de chaque instance de serveur qui héberge un réplica pour le groupe de disponibilité. Les colonnes de la grille sont les suivantes :  
   
@@ -146,7 +146,7 @@ ms.locfileid: "49085335"
      Spécifie que vous préférez que les travaux de sauvegarde ignorent le rôle des réplicas de disponibilité lorsque vous choisissez le réplica pour effectuer les sauvegardes. Notez que les travaux de sauvegarde peuvent évaluer d'autres facteurs tels que la priorité de sauvegarde de chaque réplica de disponibilité en association avec son état opérationnel et son état connecté.  
   
     > [!IMPORTANT]  
-    >  Aucune application de `AutomatedBackupPreference`. La traduction de cette préférence dépend de la logique, le cas échéant, que vous avez écrite dans les travaux de sauvegarde pour les bases de données dans un groupe de disponibilité donné. Le paramètre de préférence de sauvegarde automatisée n'a aucun impact sur les sauvegardes ad-hoc. Pour plus d'informations, consultez [Suivi : après la configuration de la sauvegarde sur les réplicas secondaires](#FollowUp) , plus loin dans cette rubrique.  
+    >  Aucune application de `AutomatedBackupPreference`. La traduction de cette préférence dépend de la logique, le cas échéant, que vous avez écrite dans les travaux de sauvegarde pour les bases de données dans un groupe de disponibilité donné. Le paramètre de préférence de sauvegarde automatisée n'a aucun impact sur les sauvegardes ad-hoc. Pour plus d’informations, consultez [suivi : Après la configuration de la sauvegarde sur les réplicas secondaires](#FollowUp) plus loin dans cette rubrique.  
   
      Par exemple, la commande suivante définit la propriété `AutomatedBackupPreference` sur le groupe de disponibilité `MyAg` à `SecondaryOnly`. Les sauvegardes automatiques des bases de données dans ce groupe de disponibilité ne se produiront jamais sur le réplica principal, mais seront redirigées vers le réplica secondaire avec la priorité de sauvegarde la plus élevée.  
   
@@ -165,14 +165,14 @@ ms.locfileid: "49085335"
   
 -   [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)  
   
-##  <a name="FollowUp"></a> Suivi : après la configuration de la sauvegarde sur les réplicas secondaires  
+##  <a name="FollowUp"></a> Suivi : Après avoir configuré la sauvegarde sur les réplicas secondaires  
  Pour prendre en compte la préférence de sauvegarde automatisée pour un groupe de disponibilité donné, sur chaque instance de serveur qui héberge un réplica de disponibilité dont la priorité de sauvegarde est supérieure à zéro (>0), vous avez besoin de créer un script pour les travaux de sauvegarde des bases de données du groupe de disponibilité. Pour déterminer si le réplica actuel est le réplica de sauvegarde par défaut, utilisez la fonction [sys.fn_hadr_backup_is_preferred_replica](/sql/relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql) dans votre script de sauvegarde. Si le réplica de disponibilité hébergé par l'instance de serveur actuelle est le réplica par défaut des sauvegardes, cette fonction retourne la valeur 1. Dans le cas contraire, la fonction retourne la valeur 0. En exécutant un simple script sur chaque réplica de disponibilité qui interroge cette fonction, vous pouvez déterminer quel réplica doit exécuter un travail de sauvegarde donné. Par exemple, un extrait de code classique d'un script de travail de sauvegarde se présenterait comme suit :  
   
 ```  
 IF (NOT sys.fn_hadr_backup_is_preferred_replica(@DBNAME))  
 BEGIN  
-      Select ‘This is not the preferred replica, exiting with success’;  
-      RETURN 0 – This is a normal, expected condition, so the script returns success  
+      Select 'This is not the preferred replica, exiting with success';  
+      RETURN 0 - This is a normal, expected condition, so the script returns success  
 END  
 BACKUP DATABASE @DBNAME TO DISK=<disk>  
    WITH COPY_ONLY;  
@@ -181,7 +181,7 @@ BACKUP DATABASE @DBNAME TO DISK=<disk>
  L'écriture d'un script de travail de sauvegarde à l'aide de cette logique vous permet de planifier le travail à exécuter sur chaque réplica de disponibilité sur la même planification. Chacun de ces travaux recherche les mêmes données pour déterminer quel est le travail à exécuter, de sorte qu'un seul des travaux planifiés passe à l'étape de sauvegarde.  En cas de basculement, aucun des scripts ou des travaux ne doit être modifié. De plus, si vous reconfigurez un groupe de disponibilité afin d'ajouter un réplica de disponibilité, la gestion du travail de sauvegarde nécessite simplement la copie ou la planification du travail de sauvegarde. Si vous supprimez un réplica de disponibilité, supprimez simplement le travail de sauvegarde de l'instance de serveur qui a hébergé ce réplica.  
   
 > [!TIP]  
->  Si vous utilisez l’[Assistant Plan de maintenance](../../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)pour créer un travail de sauvegarde donné, le travail inclut automatiquement la logique de script qui appelle et vérifie la fonction **sys.fn_hadr_backup_is_preferred_replica** . Toutefois, le travail de sauvegarde ne retourne pas le message « This is not the preferred replica… ». Assurez-vous de créer le ou les travaux pour chaque base de données de disponibilité sur chaque instance de serveur qui héberge un réplica de disponibilité pour le groupe de disponibilité.  
+>  Si vous utilisez l’[Assistant Plan de maintenance](../../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)pour créer un travail de sauvegarde donné, le travail inclut automatiquement la logique de script qui appelle et vérifie la fonction **sys.fn_hadr_backup_is_preferred_replica** . Cependant, le travail de sauvegarde ne va pas retourner le message indiquant qu’il ne s’agit pas du réplica par défaut. Veillez donc à créer le ou les travaux pour chaque base de données de disponibilité sur chacune des instances de serveur qui hébergent un réplica de disponibilité pour le groupe de disponibilité.  
   
 ##  <a name="ForInfoAboutBuPref"></a> Pour obtenir des informations sur les paramètres de préférence de la sauvegarde  
  Voici des ressources utiles pour obtenir des informations pertinentes sur la sauvegarde de réplicas secondaires.  
@@ -195,9 +195,9 @@ BACKUP DATABASE @DBNAME TO DISK=<disk>
   
 ##  <a name="RelatedContent"></a> Contenu associé  
   
--   [Guide de Solutions Microsoft SQL Server AlwaysOn pour une haute disponibilité et récupération d’urgence](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Guide de Solutions Microsoft SQL Server AlwaysOn pour une haute disponibilité et récupération d’urgence](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
--   [Blog de l’équipe AlwaysOn SQL Server : Le Blog officiel de SQL Server AlwaysOn Team](http://blogs.msdn.com/b/sqlalwayson/)  
+-   [Blog de l’équipe AlwaysOn SQL Server : Blog officiel de SQL Server AlwaysOn Team](https://blogs.msdn.com/b/sqlalwayson/)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble des groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   

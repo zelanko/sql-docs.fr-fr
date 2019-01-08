@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 1a114fbb79ff3c6df57991f0db695f357d743adc
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 2f6568e39b364b0e7d486e0d9e0318709141be63
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38983464"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52402644"
 ---
 # <a name="power-pivot-authentication-and-authorization"></a>Authentification et autorisation PowerPivot
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "38983464"
 ##  <a name="bkmk_auth"></a> Authentification Windows à l'aide de la spécification de connexion en mode classique  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint prend en charge un ensemble réduit d’options d’authentification disponibles dans SharePoint. Parmi les options d’authentification disponibles, seule l’authentification Windows est prise en charge pour un déploiement de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint. En outre, l'application Web via laquelle la connexion se produit doit être configurée pour le mode classique.  
   
- L’authentification Windows est requise car le moteur de données Analysis Services dans un déploiement [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint prend uniquement en charge l’authentification Windows. Excel Services établit les connexions à Analysis Services via le fournisseur OLE DB MSOLAP à l'aide d'une identité d'utilisateur Windows qui a été authentifiée via NTLM ou du protocole Kerberos.  
+ L’authentification Windows est requise car le moteur de données Analysis Services dans un déploiement [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint prend uniquement en charge l’authentification Windows. Excel Services établit les connexions à Analysis Services via le fournisseur OLE DB MSOLAP à l'aide d'une identité d'utilisateur Windows qui a été authentifiée via NTLM ou du protocole Kerberos.  
   
  La deuxième spécification, l’authentification en mode classique sur l’application web, est nécessaire pour garantir l’opérabilité du service web [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Le service web est un composant qui s’exécute sur un serveur web frontal et fournit la redirection HTTP vers un serveur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint dans la batterie. Tandis que le service web prend en charge les revendications pour les communications entre services, il ne les prend pas en charge pour les demandes de connexion de données qu’il achemine vers un service partagé [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] dans la batterie de serveurs. Les demandes de chargement de données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] sont prises en charge uniquement pour les connexions authentifiées émanant d’IIS à l’aide d’une identité Windows. La connexion en mode classique sur l’application web permet une connexion réussie du service web [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] aux services partagés [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] dans la batterie.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "38983464"
 |Administrateur de batteries de serveurs ou de services|Installation, activation et configuration de services et d'applications.<br /><br /> Utilisation du tableau de bord de gestion [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] et affichage des rapports d’administration.|  
 |Contrôle total|Activation de l’intégration des fonctionnalités [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] au niveau de la collection de sites.<br /><br /> Création d’une bibliothèque [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .<br /><br /> Création d'une bibliothèque de flux de données.|  
 |Collaboration|Ajout, modification, suppression et téléchargement de classeurs [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .<br /><br /> Configuration de l'actualisation des données.<br /><br /> Création de classeurs et rapports basés sur des classeurs [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] sur un site SharePoint.<br /><br /> Création de documents de service de données dans une bibliothèque de flux de données|  
-|Lire|Accès à des classeurs [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] comme source de données externe, où l’URL du classeur est explicitement entrée dans une boîte de dialogue de connexion (par exemple, dans l’Assistant Connexion de données Excel).|  
+|Lire|Accès [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] classeurs comme source de données externe, où l’URL du classeur est explicitement entrée dans une boîte de dialogue de connexion (par exemple, dans l’Assistant de connexion de données d’Excel).|  
 |Vue seule|Affichage de classeurs [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .<br /><br /> Affichage de l'historique d'actualisation des données.<br /><br /> Connexion d’un classeur local à un classeur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] sur un site SharePoint pour réutiliser ses données d’une autre façon.<br /><br /> Téléchargement d'un instantané du classeur. L'instantané est une copie statique des données, sans segments, filtres, formules ou connexions de données. Le contenu de l'instantané est similaire à la copie de valeurs de cellules de la fenêtre de navigateur.|  
   
 ##  <a name="excel"></a> Considérations relatives à la sécurité Excel Services pour les classeurs PowerPivot  
@@ -112,7 +112,7 @@ ms.locfileid: "38983464"
   
 ## <a name="see-also"></a>Voir aussi  
  [Configuration des comptes de service Power Pivot](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts.md)   
- [Configurer le Power Pivot (Power Pivot pour SharePoint) de compte d’actualisation des données sans assistance](http://msdn.microsoft.com/81401eac-c619-4fad-ad3e-599e7a6f8493)   
+ [Configurer le compte d’actualisation des données PowerPivot sans assistance (PowerPivot pour SharePoint)](http://msdn.microsoft.com/81401eac-c619-4fad-ad3e-599e7a6f8493)   
  [Créer un emplacement approuvé pour les sites Power Pivot](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
  [Architecture de sécurité PowerPivot](http://go.microsoft.com/fwlink/?linkID=220970)  
   

@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
-ms.openlocfilehash: 4bd04ee62af21255f40363de602c6461aeb350a6
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 3686ab7df82a3241ee97948ab2ffa9a0b1d41df3
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677912"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215455"
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>Résoudre les problèmes de SQL Server sur Linux
 
@@ -95,18 +95,18 @@ Vous pouvez arrêter ou redémarrer le service SQL Server en fonction des besoin
 ## <a name="access-the-log-files"></a>Accéder aux fichiers journaux
    
 SQL Server stocke ses journaux dans le fichier /var/opt/mssql/log/errorlog dans les installations sous Linux et Docker.
- Vous devez être en mode de 'super utilisateur' pour parcourir ce répertoire.
+ Vous devez être en mode de « superutilisateur » pour parcourir ce répertoire.
 
-Le programme d’installation enregistre ici : /var/opt/mssql/setup-< horodatage qui représente l'heure d’installation> Vous pouvez parcourir les fichiers journaux des erreurs avec n’importe quel outil compatible UTF-16 tel que « vim » ou « cat » comme suit : 
+Le programme d’installation enregistre ici : / var/opt/mssql/le programme d’installation-< horodatage représentant le moment de l’installation > vous pouvez parcourir les fichiers du journal des erreurs avec n’importe quel outil compatible UTF-16 comme « vim » ou « cat » comme suit : 
 
    ```bash
    sudo cat errorlog
    ```
 
-Si vous préférez, vous pouvez également convertir les fichiers vers UTF-8 pour les lire avec « more » ou « less » avec la commande suivante :
+Si vous préférez, vous pouvez également convertir les fichiers UTF-8 pour les lire avec « more » ou « moins » avec la commande suivante :
    
    ```bash
-   sudo iconv –f UTF-16LE –t UTF-8 <errorlog> -o <output errorlog file>
+   sudo iconv -f UTF-16LE -t UTF-8 <errorlog> -o <output errorlog file>
    ```
 ## <a name="extended-events"></a>Événements étendus
 
@@ -119,9 +119,9 @@ Recherchez les vidages dans le répertoire de journaux dans Linux. Recherchez da
 Pour les vidages principaux 
    ```bash
    sudo ls /var/opt/mssql/log | grep .tar.gz2 
-   ```
+   ```
 
-For SQL dumps 
+Pour les vidages sur SQL 
    ```bash
    sudo ls /var/opt/mssql/log | grep .mdmp 
    ```
@@ -206,7 +206,7 @@ Il existe de nombreux facteurs affectent les performances, notamment la concepti
 
    Consultez la section Dépannage de l’article, [se connecter à SQL Server sur Linux](#connection).
 
-2. Erreur : Le nom d’hôte doit compter 15 caractères maximum.
+2. ERREUR : Nom d’hôte doit être de 15 caractères ou moins.
 
    Il s’agit d’un problème connu qui se produit chaque fois que le nom de l’ordinateur sur lequel on tente d’installer le package Debian SQL Server est supérieur à 15 caractères. Il n’existe actuellement aucune solution de contournement autre que la modification du nom de l’ordinateur. Une façon d’effectuer cette opération est de modifier le fichier de nom d’hôte et de redémarrer l’ordinateur. Le [guide du site Web](https://www.cyberciti.biz/faq/ubuntu-change-hostname-command/) suivant explique cela en détail.
 
@@ -240,7 +240,7 @@ Il existe de nombreux facteurs affectent les performances, notamment la concepti
    sqlcmd -S myserver -U sa -P Test\$\$
    ```
 
-   Ressources : [caractères spéciaux](https://tldp.org/LDP/abs/html/special-chars.html)
+   Ressources : [Caractères spéciaux](https://tldp.org/LDP/abs/html/special-chars.html)
    [Escaping](https://tldp.org/LDP/abs/html/escapingsection.html)
 
 [!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]

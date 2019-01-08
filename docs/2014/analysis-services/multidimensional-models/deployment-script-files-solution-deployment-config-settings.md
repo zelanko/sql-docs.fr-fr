@@ -17,12 +17,12 @@ ms.assetid: 953814a3-85ef-40cc-b46a-d532aa7a6569
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 126a0814bb30018c6bcc8fca21c71dd8da84a6c3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e3f0f24aec895c482ba357dbc4330baaf2798ba6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179519"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519411"
 ---
 # <a name="specifying-configuration-settings-for-solution-deployment"></a>Spécification de paramètres de configuration pour le déploiement de solutions
   Le [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Assistant Déploiement de lit la partition et le rôle des options de déploiement que vous utilisez dans le script de déploiement à partir de la \< *nom_projet*> .configsettings fichier. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] crée ce fichier lorsque vous générez le projet [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] utilise les paramètres de configuration du projet actuel pour créer le \< *nom_projet*> .configsettings fichier.  
@@ -52,17 +52,17 @@ ms.locfileid: "48179519"
   
 -   Exécutez l'Assistant Déploiement de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en mode interactif et, dans la page **Paramètres de configuration** , spécifiez les paramètres de configuration pour les objets déployés.  
   
-     —ou—  
+     -ou-  
   
 -   Exécutez l'Assistant Déploiement de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] à l'invite de commandes en mode fichier de réponses. Pour plus d'informations sur le mode fichier de réponses, consultez [Running the Analysis Services Deployment Wizard](running-the-analysis-services-deployment-wizard.md).  
   
-     —ou—  
+     -ou-  
   
 -   Modifier le \< *nom_projet*> fichier .configsettings à l’aide de n’importe quel éditeur de texte.  
   
 ## <a name="see-also"></a>Voir aussi  
- [En spécifiant la cible d’Installation](deployment-script-files-specifying-the-installation-target.md)   
- [Spécification des partitions et des Options de déploiement de rôle](deployment-script-files-partition-and-role-deployment-options.md)   
+ [Spécification de la cible d'installation](deployment-script-files-specifying-the-installation-target.md)   
+ [Spécification des options de déploiement de partitions et de rôles](deployment-script-files-partition-and-role-deployment-options.md)   
  [Spécification d’options de traitement](deployment-script-files-specifying-processing-options.md)  
   
   

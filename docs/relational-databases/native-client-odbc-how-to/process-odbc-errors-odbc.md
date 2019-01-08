@@ -14,18 +14,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5911783558ff259eef7488df082560cfe56a4dfb
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 028da8892406be7c29d604cc0357f0006bacc4cb
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665918"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215435"
 ---
 # <a name="process-odbc-errors-odbc"></a>Traiter les erreurs ODBC (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  Deux appels de fonctions ODBC peuvent être utilisés pour récupérer les messages ODBC : [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) et [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md). Pour obtenir les informations ODBC de base dans les champs de diagnostic **SQLState**, **pfNative** et **ErrorMessage**, appelez [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) jusqu’à ce que SQL_NO_DATA soit retourné. Pour chaque enregistrement de diagnostic, [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) peut être appelé pour extraire les champs individuels. Tous les champs spécifiques au pilote doivent être extraits à l’aide de **SQLGetDiagField**.  
+  Deux appels de fonction ODBC peuvent être utilisés pour récupérer les messages ODBC : [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) et [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md). Pour obtenir les informations ODBC de base dans les champs de diagnostic **SQLState**, **pfNative** et **ErrorMessage**, appelez [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) jusqu’à ce que SQL_NO_DATA soit retourné. Pour chaque enregistrement de diagnostic, [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) peut être appelé pour extraire les champs individuels. Tous les champs spécifiques au pilote doivent être extraits à l’aide de **SQLGetDiagField**.  
   
  [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) et [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) sont traités par le gestionnaire de pilote ODBC, et non par un pilote individuel. Le Gestionnaire de pilote ODBC ne met pas en cache les champs de diagnostic spécifiques aux pilotes tant qu'une connexion n'a pas été établie avec succès. L’appel de [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) pour les champs de diagnostic spécifiques aux pilotes n’est pas possible avant une connexion réussie. Les commandes de connexion ODBC sont incluses dans ce cas de figure, même si elles retournent SQL_SUCCESS_WITH_INFO. Les champs de diagnostic spécifiques au pilote ne seront pas disponibles jusqu'au prochain appel d'une fonction ODBC.  
   
@@ -43,11 +43,11 @@ ms.locfileid: "51665918"
   
  Cet exemple vous permet de vous connecter à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par défaut de votre ordinateur. Pour vous connecter à une instance nommée, modifiez la définition de la source de données ODBC pour spécifier l'instance en utilisant le format suivant : serveur\namedinstance. Par défaut, [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] est installé dans une instance nommée.  
   
- Exécutez la première liste de code ([!INCLUDE[tsql](../../includes/tsql-md.md)]) pour créer la procédure stockée utilisée par cet exemple.  
+ Exécutez la première ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) liste pour créer la procédure stockée utilisée par cet exemple de code.  
   
  Compilez la deuxième liste de code (C++)  avec odbc32.lib. Puis, exécutez le programme.  
   
- Exécutez la troisième liste de code ([!INCLUDE[tsql](../../includes/tsql-md.md)]) pour supprimer la procédure stockée utilisée par cet exemple.  
+ Exécutez la troisième ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) liste pour supprimer la procédure stockée utilisée par cet exemple de code.  
   
 ### <a name="code"></a>Code  
   

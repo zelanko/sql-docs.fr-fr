@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_changemergepublication_TSQL
@@ -17,12 +16,12 @@ ms.assetid: 81fe1994-7678-4852-980b-e02fedf1e796
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 89e1ca46f323bb565eea9080a0118fb19b39af08
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: 9eb6d52d72dec4efab7e744fd4eafd2d9a5eb612
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072293"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52788481"
 ---
 # <a name="spchangemergepublication-transact-sql"></a>sp_changemergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ sp_changemergepublication [ @publication= ] 'publication'
   
  Le tableau ci-dessous décrit les propriétés modifiables de la publication ainsi que les limites liées aux valeurs de ces propriétés.  
   
-|Propriété|Valeur|Description|  
+|Propriété|Value|Description|  
 |--------------|-----------|-----------------|  
 |**allow_anonymous**|**true**|Les abonnements anonymes sont autorisés.|  
 ||**false**|Les abonnements anonymes ne sont pas autorisés.|  
@@ -106,7 +105,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 ||**false**|Supprime les informations de publication d'Active Directory.|  
 |**replicate_ddl**|**1**|Instructions DDL (Definition Language) de données qui sont exécutées sur le serveur de publication sont répliquées.|  
 ||**0**|Les instructions DDL ne sont pas répliquées.|  
-|**retention**||Il s’agit d’un **int** qui représente le nombre de *retention_period_unit* unités pour lequel enregistrer les modifications pour la publication concernée. L'abonnement expire et doit être réinitialisé s'il n'est pas synchronisé pendant la période de rétention et que les modifications en attente qu'il aurait dû recevoir ont été supprimées par une opération de nettoyage sur le serveur de distribution. La période de rétention maximale autorisée correspond au nombre de jours entre la date actuelle et le 31 décembre 9999.<br /><br /> Remarque : La période de rétention pour les publications de fusion a une période de grâce de 24 heures pour prendre en charge les abonnés dans des fuseaux horaires différents.|  
+|**retention**||Il s’agit d’un **int** qui représente le nombre de *retention_period_unit* unités pour lequel enregistrer les modifications pour la publication concernée. L'abonnement expire et doit être réinitialisé s'il n'est pas synchronisé pendant la période de rétention et que les modifications en attente qu'il aurait dû recevoir ont été supprimées par une opération de nettoyage sur le serveur de distribution. La période de rétention maximale autorisée correspond au nombre de jours entre la date actuelle et le 31 décembre 9999.<br /><br /> Remarque : La période de rétention des publications de fusion dispose d'un délai de grâce de 24 heures pour prendre en charge les Abonnés situés dans différents fuseaux horaires.|  
 |**retention_period_unit**|**day**|La période de rétention est spécifiée en jours.|  
 ||**week**|La période de rétention est spécifiée en semaines.|  
 ||**month**|La période de rétention est spécifiée en mois.|  
@@ -119,13 +118,13 @@ sp_changemergepublication [ @publication= ] 'publication'
 ||**inactif**|La publication est dans un état inactif.|  
 |**sync_mode**|**natif** ou<br /><br /> **bcp natif**|La sortie programme de la copie en bloc en mode natif de toutes les tables est utilisée pour l'instantané initial.|  
 ||**character**<br /><br /> ou **bcp caractère**|La sortie programme de la copie en bloc en mode caractère de toutes les tables est utilisée pour l'instantané initial, ce qui est requis pour tous les Abonnés non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**use_partition_groups**<br /><br /> Remarque : après avoir utilisé partition_groups, si vous revenez à l’utilisation **« setupbelongs »** et définissez **use_partition_groups = false** dans **changemergearticle**, cela ne peut pas être reflété correctement après qu’un instantané est créé. Les déclencheurs générés par l'instantané sont conformes avec les groupes de partition.<br /><br /> La solution de contournement pour ce scénario consiste à définir l’état inactif, modifiez le **use_partition_groups**, puis définissez le statut actif.|**true**|La publication utilise des partitions précalculées.|  
+|**use_partition_groups**<br /><br /> Remarque : Après avoir utilisé partition_groups, si vous revenez à l’utilisation **« setupbelongs »** et définissez **use_partition_groups = false** dans **changemergearticle**, cela est peut-être pas correctement reflétées après qu’un instantané est créé. Les déclencheurs générés par l'instantané sont conformes avec les groupes de partition.<br /><br /> La solution de contournement pour ce scénario consiste à définir l’état inactif, modifiez le **use_partition_groups**, puis définissez le statut actif.|**true**|La publication utilise des partitions précalculées.|  
 ||**false**|La publication n'utilise pas de partitions précalculées.|  
 |**validate_subscriber_info**||Répertorie les fonctions utilisées pour extraire des informations d'Abonné. Puis, valide les critères de filtrage dynamiques utilisés pour l'Abonné pour vérifier que les informations sont partitionnées régulièrement.|  
 |**web_synchronization_url**||Valeur par défaut de l'URL Internet utilisée pour la synchronisation Web.|  
 |NULL (par défaut)||Retourne la liste des valeurs prises en charge pour *propriété*.|  
   
- [  **@force_invalidate_snapshot =** ] *àce_invalidate_snapshot*  
+ [ **@force_invalidate_snapshot =** ] *àce_invalidate_snapshot*  
  Confirme que l’action entreprise par cette procédure stockée peut invalider un instantané existant. *àce_invalidate_snapshot* est un **bits**, avec une valeur par défaut **0**.  
   
  **0** Spécifie que la modification de la publication n’invalide pas l’instantané. Si la procédure stockée détecte que la modification requiert un nouvel instantané, une erreur se produit et aucune modification n'est effectuée.  
@@ -190,12 +189,12 @@ sp_changemergepublication [ @publication= ] 'publication'
 ## <a name="example"></a>Exemple  
  [!code-sql[HowTo#sp_changemergepublication](../../relational-databases/replication/codesnippet/tsql/sp-changemergepublicatio_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Seuls les membres de la **sysadmin** rôle serveur fixe ou **db_owner** rôle de base de données fixe peuvent exécuter **sp_changemergepublication**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Afficher et modifier les propriétés d’une publication](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
- [Modifier les propriétés des publications et des articles](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
+ [Changer les propriétés des publications et des articles](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
  [sp_addmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)   
  [sp_dropmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql.md)   
  [sp_helpmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)   

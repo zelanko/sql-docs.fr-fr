@@ -11,12 +11,12 @@ ms.assetid: f22497b7-f6c1-4c7b-b831-8c731e26ae37
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 91db405d30b3d7dbcfc351b6a7a0c95e5238902a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 362ead31e7cb7b1a35411fa6f8b211e65342a721
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099775"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393729"
 ---
 # <a name="exporting-to-a-pdf-file-report-builder-and-ssrs"></a>Exportation vers un fichier PDF (Générateur de rapports et SSRS)
   L'extension de rendu PDF présente les rapports sous forme de fichiers s'affichant dans des visionneuses comme Adobe Acrobat si elles prennent en charge le format PDF 1.3. Bien que PDF 1.3 soit compatible avec Adobe Acrobat 4.0 et versions ultérieures, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] prend en charge Adobe Acrobat 6 ou version ultérieure. Cette extension de rendu ne nécessite pas les logiciels Adobe pour effectuer le rendu du rapport. Toutefois, les visionneuses PDF comme Adobe Acrobat sont indispensables pour afficher ou imprimer un rapport au format PDF.  
@@ -68,7 +68,7 @@ ms.locfileid: "48099775"
 |`Subject`|Élément RDL `Description`|  
 |`Creator`|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|  
 |`Producer`|Nom et version de l'extension de rendu|  
-|`CreationDate`|Signaler des temps d’exécution en PDF `datetime` format.|  
+|`CreationDate`|Heure de l'exécution du rapport au format `datetime` PDF|  
   
   
   
@@ -100,7 +100,7 @@ ms.locfileid: "48099775"
  Pour conserver la compression des images incluses dans le fichier PDF lorsque cela est possible, les images JPEG sont stockées au format JPEG et tous les autres types d'images sont stockés au format BMP.  
   
 > [!NOTE]  
->  Les fichiers PDF ne prennent pas en charge l'incorporation d'images PNG.  
+>  Les fichiers PDF ne prennent pas en charge l’incorporation d’images PNG.  
   
   
   
@@ -112,7 +112,7 @@ ms.locfileid: "48099775"
 ## <a name="see-also"></a>Voir aussi  
  [Pagination dans Reporting Services &#40;Générateur de rapports et SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Comportements de rendu &#40;Générateur de rapports et SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [Fonctionnalité interactive des différentes Extensions de rendu de rapport &#40;Générateur de rapports et SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
+ [Fonctionnalités interactives des différentes extensions de rendu de rapport &#40;Générateur de rapports et SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
  [Rendu des éléments de rapport &#40;Générateur de rapports et SSRS&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [Tables, matrices et listes &#40;Générateur de rapports et SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   

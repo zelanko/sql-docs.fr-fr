@@ -1,5 +1,5 @@
 ---
-title: Traitement d’un modèle multidimensionnel (Analysis Services) | Documents Microsoft
+title: Traitement d’un modèle multidimensionnel Analysis Services | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a09e1c4118576535371e16aa5e1a39a169b406fe
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: a6116019898e61cc414a14a05273a3f2839267a0
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024206"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072486"
 ---
 # <a name="processing-a-multidimensional-model-analysis-services"></a>Traitement d’un modèle multidimensionnel (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "34024206"
   
  Cette rubrique comprend les sections suivantes :  
   
- [Configuration requise](#bkmk_prereq)  
+ [Conditions préalables](#bkmk_prereq)  
   
  [Choix d'un outil ou d'une approche](#bkmk_tool)  
   
@@ -32,7 +32,7 @@ ms.locfileid: "34024206"
   
  [Reprocessing Objects](#bkmk_reproc)  
   
-##  <a name="bkmk_prereq"></a> Configuration requise  
+##  <a name="bkmk_prereq"></a> Conditions préalables  
   
 -   Le traitement nécessite des autorisations d'administration sur l'instance Analysis Services. Si effectuez le traitement de manière interactive dans [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] ou [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], vous devez être membre du rôle administrateur de serveur sur l'instance [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . En ce qui concerne le traitement sans assistance, par exemple à l'aide d'un package SSIS que vous planifiez via SQL Server Agent, le compte utilisé pour exécuter le package doit être membre du rôle administrateur de serveur. Pour plus d’informations sur la définition des autorisations d’administrateur, consultez [Accorder des droits d’administrateur de serveur à une instance Analysis Services](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md).  
   
@@ -69,6 +69,6 @@ ms.locfileid: "34024206"
   
 ## <a name="see-also"></a>Voir aussi  
  [Architecture logique &#40;Analysis Services - Données multidimensionnelles&#41;](../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
- [Les objets de base de données & #40 ; Analysis Services - données multidimensionnelles & #41 ;](../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
+ [Objets de bases de données &#40;Analysis Services - Données multidimensionnelles&#41;](../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   
   

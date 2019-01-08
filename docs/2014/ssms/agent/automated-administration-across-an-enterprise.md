@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - enterprise automatic administration [SQL Server]
@@ -20,12 +20,12 @@ ms.assetid: 44d8365b-42bd-4955-b5b2-74a8a9f4a75f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5f4e14eabe3d94f4497d6c4e622ff62e0ef8258b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b3be16ea856b5d632ba5a0285bad2c4d2d93709c
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181901"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210178"
 ---
 # <a name="automated-administration-across-an-enterprise"></a>Administration automatisée à l'échelle d'une entreprise
   Le fait d’automatiser l’administration sur plusieurs instances de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] est appelé *administration multiserveur*. Utilisez l'administration multiserveur dans les cas suivants :  
@@ -64,7 +64,7 @@ ms.locfileid: "48181901"
  Contient des informations sur la manière dont l'utilisation de comptes Windows non administratifs ou du compte système local pour le service [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent peut affecter les environnements multiserveurs.  
   
  [Définir des options de chiffrement sur des serveurs cibles](set-encryption-options-on-target-servers.md)  
- Contient des informations sur la définition de la sous-clé de Registre[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent MsxEncryptChannelOptions sur les serveurs cibles.  
+ Contient des informations sur la définition de la sous-clé de Registre [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent MsxEncryptChannelOptions sur les serveurs cibles.  
   
  [Gérer des travaux à l'échelle d'une entreprise](manage-jobs-across-an-enterprise.md)  
  Contient des informations concernant la vérification de l'état des travaux, la modification des serveurs cibles pour les travaux, la synchronisation des horloges des serveurs cibles et l'interrogation des serveurs maîtres quant à l'état des travaux en cours.  

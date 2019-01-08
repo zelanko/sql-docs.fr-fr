@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - OR operator
@@ -15,12 +14,12 @@ ms.assetid: a3c07c09-f121-4187-9617-b01adcf843c4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e63c829e1865213b29aca6e75d1de52021b4d5ac
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0945d9e749014648b257499374fc9dc41bb511b6
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48052319"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52805171"
 ---
 # <a name="-logical-or-ssis-expression"></a>|| (OU logique) (expression SSIS)
   Effectue une opération OR logique. L'expression renvoie la valeur TRUE si au moins une des deux conditions s'évalue à TRUE.  
@@ -42,7 +41,7 @@ boolean_expression1 || boolean_expression2
 ## <a name="remarks"></a>Notes  
  Le tableau suivant indique le résultat de l'opérateur « || »  
   
-|Résultats|Expression|Expression|  
+|Résultat|Expression|Expression|  
 |------------|----------------|----------------|  
 |TRUE|TRUE|TRUE|  
 |TRUE|TRUE|FALSE|  
@@ -65,9 +64,9 @@ StandardCost < @SPrice || ListPrice > @LPrice
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [&#124;&#40;Au niveau du bit OR inclusif&#41; &#40;SSIS Expression&#41;](bitwise-inclusive-or-ssis-expression.md)   
+ [&#124; &#40;opération OR inclusive au niveau du bit&#41; &#40;expression SSIS&#41;](bitwise-inclusive-or-ssis-expression.md)   
  [^ &#40;OR exclusif au niveau du bit&#41; &#40;expression SSIS&#41;](bitwise-exclusive-or-ssis-expression.md)   
- [Opérateurs et associativité](operator-precedence-and-associativity.md)   
- [Opérateurs &#40;SSIS Expression&#41;](operators-ssis-expression.md)  
+ [Priorités et associativité des opérateurs](operator-precedence-and-associativity.md)   
+ [Opérateurs &#40;expression SSIS&#41;](operators-ssis-expression.md)  
   
   

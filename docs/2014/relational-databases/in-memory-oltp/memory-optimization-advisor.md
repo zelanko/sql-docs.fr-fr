@@ -13,19 +13,19 @@ ms.assetid: 181989c2-9636-415a-bd1d-d304fc920b8a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d616312ffec682ad7c37da62c23c4ada1eb98f00
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1d2fe137a21f2bd48113e65524b4315494f40a49
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140989"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359271"
 ---
 # <a name="memory-optimization-advisor"></a>Conseiller d'optimisation de la mémoire
-  L’outil de génération de rapports sur les performances des transactions (voir [Déterminer si un tableau ou une procédure stockée doit être déplacée vers l’OLTP en mémoire](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) indiquent quelles tables de votre base de données tireront parti de l’utilisation de la fonctionnalité OLTP en mémoire. Après avoir identifié une table que vous souhaitez déplacer pour utiliser l'OLTP en mémoire, utilisez le Conseiller d'optimisation de la mémoire pour vous aider à migrer la table de base de données sur disque vers l'OLTP en mémoire.  
+  L'outil de génération de rapports sur les performances des transactions (voir [Determining if a Table or Stored Procedure Should Be Ported to In-Memory OLTP](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) vous indique quelles tables de votre base de données tireront parti de l'utilisation de la fonctionnalité OLTP en mémoire. Après avoir identifié une table que vous souhaitez déplacer pour utiliser l'OLTP en mémoire, utilisez le Conseiller d'optimisation de la mémoire pour vous aider à migrer la table de base de données sur disque vers l'OLTP en mémoire.  
   
  Pour démarrer, connectez-vous à l'instance contenant la table de base de données sur disque. Vous pouvez vous connecter à une instance [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ou [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] . Toutefois, si vous souhaitez effectuer une opération de migration avec le conseiller, vous devez vous connecter à une instance [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] sur laquelle la fonctionnalité OLTP en mémoire est activée. Pour plus d'informations sur les spécifications applicables à la fonctionnalité OLTP en mémoire, consultez [Requirements for Using Memory-Optimized Tables](memory-optimized-tables.md).  
   
- Pour plus d’informations sur les méthodologies de transfert, consultez [OLTP en mémoire – Modèles de charge de travail courants et considérations relatives à la migration](http://msdn.microsoft.com/library/dn673538.aspx).  
+ Pour plus d’informations sur les méthodologies de migration, consultez [OLTP en mémoire - Modèles de charge de travail courants et considérations relatives à la migration](https://msdn.microsoft.com/library/dn673538.aspx).  
   
 ## <a name="walkthrough-using-the-memory-optimization-advisor"></a>Procédure pas à pas d'utilisation du Conseiller d'optimisation de la mémoire  
  Dans l’ **Explorateur d’objets**, cliquez avec le bouton droit sur la table que vous souhaitez convertir, puis sélectionnez **Conseiller d’optimisation de la mémoire**. Ce faisant, vous affichez la page d'accueil du **Conseiller d'optimisation de la mémoire de la table**.  
@@ -89,7 +89,7 @@ ms.locfileid: "48140989"
 ### <a name="review-primary-key-conversion"></a>Vérifier la conversion de la clé primaire  
  L'écran suivant est **Vérifier la conversion de la clé primaire**. Le Conseiller d'optimisation de la mémoire détecte s'il existe une ou plusieurs clés primaires dans la table, puis remplit la liste des colonnes à partir des métadonnées de clé primaire. Sinon, si vous souhaitez effectuer une migration vers une table mémoire optimisée durable, vous devez créer une clé primaire.  
   
- S'il n'existe aucune clé primaire et que la table est migrée vers une table non durable, cet écran ne s'affiche pas.  
+ S’il n’existe aucune clé primaire et que la table est migrée vers une table non durable, cet écran ne s’affiche pas.  
   
  Pour les colonnes textuelles (colonnes avec les types `char`, `nchar`, `varchar` et `nvarchar`), vous devez sélectionner un classement approprié. L'OLTP en mémoire prend uniquement en charge les classements BIN2 pour les colonnes d'une table mémoire optimisée, mais ne prend pas en charge les classements présentant des caractères supplémentaires. Consultez [Classements et pages de code](../../database-engine/collations-and-code-pages.md) pour plus d'informations sur les classements pris en charge et l'impact potentiel d'une modification du classement.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "48140989"
 ### <a name="review-index-conversion"></a>Vérifier la conversion de l'index  
  La page suivante est **Vérifier la conversion de l'index**. Le Conseiller d'optimisation de la mémoire détecte s'il existe un ou plusieurs index dans la table, puis remplit la liste de colonnes et le type de données. Les paramètres que vous pouvez configurer dans la page **Vérifier la conversion de l'index** sont similaires à ceux de la page précédente, **Vérifier la conversion de la clé primaire** .  
   
- Si la table ne possède qu'une clé primaire et qu'elle est migrée vers une table durable, cet écran ne s'affiche pas.  
+ Si la table ne possède qu’une clé primaire et qu’elle est migrée vers une table durable, cet écran ne s’affiche pas.  
   
  Après avoir pris une décision pour chaque index de la table, cliquez sur **Suivant**.  
   

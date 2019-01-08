@@ -1,5 +1,5 @@
 ---
-title: Octroyer un accès personnalisé à des données de cellule (Analysis Services) | Documents Microsoft
+title: Octroyer un accès personnalisé aux données des cellules (Analysis Services) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,24 +9,24 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 5e3b354d2bd4f4561962391bf3f0495b63833290
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 42348298676334a84d9c4d3664aec2eeda4feed6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025239"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539037"
 ---
 # <a name="grant-custom-access-to-cell-data-analysis-services"></a>Octroyer un accès personnalisé à des données de cellule (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   La sécurité de cellule permet d'accorder ou de refuser l'accès à des données de mesure dans un cube. L'illustration ci-dessous montre une combinaison de mesures autorisées et refusées dans un tableau croisé dynamique, quand vous êtes connecté en tant qu'utilisateur dont le rôle autorise uniquement l'accès à certaines mesures. Dans cet exemple, **Reseller Sales Amount** et **Reseller Total Product Cost** sont les seules mesures accessibles avec ce rôle. L'accès à toutes les autres mesures est refusé de manière implicite (les étapes nécessaires pour obtenir ce résultat sont fournies plus bas dans la section suivante, intitulée Autoriser l'accès à des mesures spécifiques).  
   
- ![Tableau croisé dynamique montrant autorisé et refusé les cellules](../../analysis-services/multidimensional-models/media/ssas-permscellsallowed.png "tableau croisé dynamique montrant autorisé et refusé les cellules")  
+ ![Tableau croisé dynamique montrant autorisés et refusés des cellules](../../analysis-services/multidimensional-models/media/ssas-permscellsallowed.png "tableau croisé dynamique montrant autorisés et refusés des cellules")  
   
  Les autorisations de cellules s'appliquent aux données qui figurent à l'intérieur des cellules, et non à leurs métadonnées. Notez que la cellule est encore visible dans les résultats d’une requête et contient la valeur **#N/A** au lieu de sa valeur réelle. La valeur **#N/A** apparaît dans la cellule, à moins que l’application cliente traduise la valeur ou qu’une autre valeur soit spécifiée en définissant la propriété Secured Cell Value dans la chaîne de connexion.  
   
- Pour masquer complètement la cellule, vous devez limiter les membres (dimensions, attributs de dimension et membres d'attributs de dimension) qui sont visibles. Pour plus d’informations, consultez [Octroyer un accès personnalisé à des données de dimension &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md).  
+ Pour masquer complètement la cellule, vous devez limiter les dimensions de membres, les attributs de dimension et les membres d’attribut de dimension-qui sont visibles. Pour plus d’informations, consultez [Octroyer un accès personnalisé à des données de dimension &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md).  
   
- En tant qu'administrateur, vous pouvez spécifier si les membres d'un rôle disposent d'autorisations de lecture, de lecture du contingent ou de lecture/écriture sur les cellules d'un cube. Définir des autorisations sur une cellule est le niveau de sécurité le plus bas autorisé. Avant de commencer à appliquer des autorisations à ce niveau, vous devez par conséquent tenir compte des facteurs suivants :  
+ En tant qu'administrateur, vous pouvez spécifier si les membres d'un rôle disposent d'autorisations de lecture, de lecture du contingent ou de lecture/écriture sur les cellules d'un cube. Définir des autorisations sur une cellule est le niveau de sécurité le plus bas autorisé. Avant de commencer à appliquer des autorisations à ce niveau, vous devez par conséquent tenir compte des facteurs suivants :  
   
 -   La sécurité au niveau de la cellule ne peut pas étendre des droits qui ont été restreints à un niveau supérieur. Exemple : si un rôle refuse l’accès à des données de dimension, la sécurité au niveau de la cellule ne peut pas remplacer le jeu refusé. Autre exemple : imaginez un rôle disposant de l’autorisation **Lecture** sur un cube et de l’autorisation **Lecture/Écriture** sur une cellule. L’autorisation sur les données de la cellule ne sera pas **Lecture/Écriture**, mais **Lecture**.  
   
@@ -89,10 +89,10 @@ AND (NOT Measures.CurrentMember IS [Measures].[Reseller Total Product Cost])
   
 ## <a name="see-also"></a>Voir aussi  
  [Générateur MDX &#40;Analysis Services - Données multidimensionnelles&#41;](http://msdn.microsoft.com/library/fecbf093-65ea-4e1b-b637-f04876f1cb0f)   
- [Le Script MDX de base & #40 ; MDX & #41 ;](../../analysis-services/multidimensional-models/mdx/the-basic-mdx-script-mdx.md)   
- [Accorder des autorisations de processus &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-process-permissions-analysis-services.md)   
- [Accorder des autorisations sur une dimension &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-a-dimension-analysis-services.md)   
- [Octroyer un accès personnalisé à la dimension de données & #40 ; Analysis Services & #41 ;](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md)   
- [Grant – octroi cube ou autorisations de modèle & #40 ; Analysis Services & #41 ;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)  
+ [Script MDX de base &#40;MDX&#41;](../../analysis-services/multidimensional-models/mdx/the-basic-mdx-script-mdx.md)   
+ [Octroyer des autorisations de traitement &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-process-permissions-analysis-services.md)   
+ [Octroyer des autorisations sur une dimension &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-a-dimension-analysis-services.md)   
+ [Octroyer un accès personnalisé à des données de dimension &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md)   
+ [Octroyer des autorisations de cube ou de modèle &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)  
   
   

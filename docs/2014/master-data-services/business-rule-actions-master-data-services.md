@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: cdc4daca-3dff-46d8-b7f0-57f7826dd61a
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: c9350c34f457d2fc7b198e300f8dc849b380c4ae
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dca11c580ea8427ce04619720af659f16d6df9ea
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229959"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357719"
 ---
 # <a name="business-rule-actions-master-data-services"></a>Actions de règle d'entreprise (Master Data Services)
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], les actions de règle d'entreprise sont la conséquence de l'évaluation des conditions des règles d'entreprise. Si une condition est vraie (True), l'action est initiée.  
@@ -50,8 +49,8 @@ ms.locfileid: "48229959"
 |---------------------|-----------------|  
 |**est requis**|L'attribut sélectionné **est requis**, ce qui signifie qu'il ne peut pas être null ou vide.<br /><br /> Cette action est valide pour les valeurs de texte, nombre, date et lien.|  
 |**n'est pas valide**|L'attribut sélectionné **n'est pas valide**.<br /><br /> Cette action est valide pour les valeurs de texte, nombre, date et lien.|  
-|**doit contenir le modèle**|L'attribut sélectionné **doit contenir le modèle** spécifié. Utilisez des expressions régulières .NET Framework pour spécifier le modèle.<br /><br /> Pour plus d'informations sur les expressions régulières, consultez [Éléments du langage des expressions régulières](http://go.microsoft.com/fwlink/?LinkId=164401) dans MSDN Library.<br /><br /> Cette action est valide pour les valeurs de texte et de lien.|  
-|**doit être unique**|L'attribut sélectionné **doit être unique** indépendamment ou en association avec des attributs définis.<br /><br /> **Meilleure pratique :** associez cette action à une condition obligatoire pour garantir la validité des champs d'index dans les systèmes d'abonnement.<br /><br /> Cette action est valide pour les valeurs de texte, nombre, date et lien.|  
+|**doit contenir le modèle**|L'attribut sélectionné **doit contenir le modèle** spécifié. Utilisez des expressions régulières .NET Framework pour spécifier le modèle.<br /><br /> Pour plus d'informations sur les expressions régulières, consultez [Éléments du langage des expressions régulières](https://go.microsoft.com/fwlink/?LinkId=164401) dans MSDN Library.<br /><br /> Cette action est valide pour les valeurs de texte et de lien.|  
+|**doit être unique**|L'attribut sélectionné **doit être unique** indépendamment ou en association avec des attributs définis.<br /><br /> **Recommandation :** Associez cette action avec une condition obligatoire pour garantir la validité des champs d’index dans les systèmes d’abonnement.<br /><br /> Cette action est valide pour les valeurs de texte, nombre, date et lien.|  
 |**doit avoir l'une des valeurs suivantes**|L'attribut sélectionné **doit avoir l'une des valeurs** spécifiées dans une liste.<br /><br /> Cette action est valide pour les valeurs de texte.|  
 |**doit être supérieur à**|L'attribut sélectionné **doit être supérieur à** un attribut spécifique, une valeur d'attribut spécifique, ou être vide.<br /><br /> Cette action est valide pour les valeurs de texte, nombre et date.|  
 |**doit être égal**|L'attribut sélectionné **doit être égal** à une valeur d'attribut définie, un autre attribut, ou être vide.<br /><br /> Cette action est valide pour les valeurs de texte, nombre, date et lien.|  
@@ -67,11 +66,11 @@ ms.locfileid: "48229959"
   
 |Nom de l'action|Description|  
 |-----------------|-----------------|  
-|**démarrer le flux de travail**|Initialise un flux de travail externe. Les données qui ont provoqué cette action sont transmises au flux de travail. Pour plus d'informations, consultez [Intégration de flux de travail SharePoint avec Master Data Services](http://msdn.microsoft.com/library/gg690195.aspx).<br /><br /> Cette action est valide pour les valeurs de texte, nombre, date et lien.|  
+|**démarrer le flux de travail**|Initialise un flux de travail externe. Les données qui ont provoqué cette action sont transmises au flux de travail. Pour plus d'informations, consultez [Intégration de flux de travail SharePoint avec Master Data Services](https://msdn.microsoft.com/library/gg690195.aspx).<br /><br /> Cette action est valide pour les valeurs de texte, nombre, date et lien.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Conditions de règle d’entreprise &#40;Master Data Services&#41;](business-rule-conditions-master-data-services.md)   
- [Les règles d’entreprise &#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)   
+ [Règles d’entreprise &#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)   
  [Créer et publier une règle d’entreprise &#40;Master Data Services&#41;](../../2014/master-data-services/create-and-publish-a-business-rule-master-data-services.md)  
   
   

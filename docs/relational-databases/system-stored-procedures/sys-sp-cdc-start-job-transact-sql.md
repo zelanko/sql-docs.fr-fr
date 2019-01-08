@@ -20,12 +20,12 @@ ms.assetid: cf443a67-7705-4799-9f39-0e3a6a8a0708
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d6598d507f936af43b7c81734b6d67e7a4c0e7f9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 842f7a9f677312501a92a42301017eedaee0f5d4
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47725387"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589143"
 ---
 # <a name="sysspcdcstartjob-transact-sql"></a>sys.sp_cdc_start_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ sys.sp_cdc_start_job [ [ @job_type = ] 'job_type' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [[  **@job_type=** ] **'***type_du_travail***'** ]  
+ [[  **@job_type=** ] **'**_type_du_travail_**'** ]  
  Type du travail à ajouter. *type_du_travail* est **nvarchar (20)** avec une valeur par défaut **capturer**. Les entrées valides sont **capturer** et **nettoyage**.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
@@ -54,7 +54,7 @@ sys.sp_cdc_start_job [ [ @job_type = ] 'job_type' ]
 ## <a name="remarks"></a>Notes  
  sys.sp_cdc_start_job peut être utilisée par un administrateur pour démarrer de manière explicite le travail de capture ou le travail de nettoyage.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle de base de données fixe db_owner.  
   
 ## <a name="examples"></a>Exemples  
@@ -69,7 +69,7 @@ EXEC sys.sp_cdc_start_job;
 GO  
 ```  
   
-### <a name="b-starting-a-cleanup-job"></a>B. Démarrage d'un travail de nettoyage  
+### <a name="b-starting-a-cleanup-job"></a>b. Démarrage d'un travail de nettoyage  
  L'exemple suivant démarre un travail de nettoyage pour la base de données `AdventureWorks2012`.  
   
 ```  

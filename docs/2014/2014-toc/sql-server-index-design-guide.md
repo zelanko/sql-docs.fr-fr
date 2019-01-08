@@ -10,17 +10,17 @@ ms.assetid: b856ee9a-49e7-4fab-a88d-48a633fce269
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 3d939e8d1576e31de3ba42eaa7deba59a2801bb1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9af1d66612485f3a790de1ebc8149b7a9e374103
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178255"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360411"
 ---
 # <a name="sql-server-index-design-guide"></a>Guide de conception d'index SQL Server
   L'engorgement des applications de base de données est souvent imputable à des index mal conçus ou en nombre insuffisant. La conception d'index efficaces est primordiale pour le bon fonctionnement des bases de données et des applications. Ce guide de conception d'index SQL Server contient les informations et les meilleures pratiques nécessaires à la création d'index efficaces pour répondre aux besoins de votre application.  
   
-**S’applique aux**: [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] via [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] , sauf indication contraire.  
+**S'applique à**: [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] et [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] , sauf indication contraire.  
   
  Ce guide suppose que le lecteur connaît les types d'index disponibles dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Pour obtenir description générale des types d'index, consultez [Types d'index](../relational-databases/indexes/indexes.md).  
   
@@ -290,7 +290,7 @@ ON Purchasing.PurchaseOrderDetail
   
 -   Les bases de données ou les tables dont les mises à jour sont faibles, mais qui contiennent des volumes importants de données peuvent tirer parti de nombreux index non-cluster en vue d'améliorer les performances des requêtes. Envisagez de créer des index filtrés pour les sous-ensembles de données bien définis afin d'améliorer les performances des requêtes, réduire les coûts de stockage d'index et réduire les coûts de maintenance d'index par rapport aux index non cluster de table entière.  
   
-     Les applications et bases de données d'aide à la décision contenant principalement des données en lecture seule peuvent tirer parti de nombreux index non-cluster. L'optimiseur de requête doit choisir parmi davantage d'index pour déterminer la méthode d'accès la plus rapide ; les caractéristiques de mise à jour faible de la base de données sont synonymes d'une maintenance d'index qui n'entravera pas les performances.  
+     Les applications et bases de données d'aide à la décision contenant principalement des données en lecture seule peuvent tirer parti de nombreux index non-cluster. L'optimiseur de requête doit choisir parmi davantage d'index pour déterminer la méthode d'accès la plus rapide ; les caractéristiques de mise à jour faible de la base de données sont synonymes d'une maintenance d'index qui n'entravera pas les performances.  
   
 -   Les applications et bases de données OLTP (traitement transactionnel en ligne) qui contiennent des tables largement mises à jour doivent éviter la sur-indexation. Les index doivent en outre être réduits, c'est-à-dire contenir le moins de colonnes possible.  
   
@@ -376,7 +376,7 @@ INCLUDE (FileName);
   
 -   Vous devez spécifier au moins une colonne clé. Le nombre maximal de colonnes non-clés est de 1023. Il équivaut au nombre maximal de colonnes de table moins 1.  
   
--   Les colonnes de clés d'index, colonnes non-clés exclues, doivent respecter les restrictions existantes de taille d'index, à savoir 16 colonnes clés au maximum et une taille totale de clé d'index de 900 octets.  
+-   Les colonnes de clés d'index, colonnes non-clés exclues, doivent respecter les restrictions existantes de taille d'index, à savoir 16 colonnes clés au maximum et une taille totale de clé d'index de 900 octets.  
   
 -   La taille totale de toutes les colonnes non-clés est limitée uniquement par la taille des colonnes spécifiées dans la clause INCLUDE ; par exemple, les colonnes `varchar(max)` sont limitées à 2 Go.  
   
@@ -387,9 +387,9 @@ INCLUDE (FileName);
   
 -   Les colonnes non-clés ne peuvent pas être modifiées, sauf pour effectuer les opérations suivantes :  
   
-    -   modifier la possibilité de valeur NULL de la colonne de NOT NULL à NULL ;  
+    -   modifier la possibilité de valeur NULL de la colonne de NOT NULL à NULL ;  
   
-    -   Augmentez la longueur de `varchar`, `nvarchar`, ou `varbinary` colonnes.  
+    -   augmenter la longueur des colonnes `varchar`, `nvarchar` ou `varbinary`.  
   
         > [!NOTE]  
         >  Ces restrictions sur la modification des colonnes s'appliquent également aux colonnes de clés d'index.  
@@ -595,7 +595,7 @@ WHERE b = CONVERT(Varbinary(4), 1);
  ![Icône de flèche utilisée avec le lien Retour au début](media/uparrow16x16.gif "icône de flèche utilisée avec le lien Retour au début") [dans ce Guide](#Top)  
   
 ##  <a name="Additional_Reading"></a> Lecture supplémentaire  
- [Amélioration des performances avec les vues indexées SQL Server 2008](http://msdn.microsoft.com/library/dd171921(v=sql.100).aspx)  
+ [Amélioration des performances avec les vues indexées SQL Server 2008](https://msdn.microsoft.com/library/dd171921(v=sql.100).aspx)  
   
  [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md)  
   

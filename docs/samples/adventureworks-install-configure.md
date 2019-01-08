@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e7881400c3e4696426b1999229e917630cf905d0
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 474cc691a8adc0e022e10e52c766368e9f655d8a
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657509"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979405"
 ---
 # <a name="adventureworks-installation-and-configuration"></a>Installation d’AdventureWorks et la configuration
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -102,5 +102,5 @@ Si vous n’avez pas encore d’un serveur SQL Server dans Azure, accédez à la
 
 
 ## <a name="see-also"></a>Voir aussi
-[Didacticiels pour SQL Server Management Studio](../ssms/tutorials/tutorial-sql-server-management-studio.md)
-[didacticiels pour le moteur de base de données SQL Server](../relational-databases/database-engine-tutorials.md)
+[Didacticiels pour SQL Server Management Studio](../ssms/tutorials/tutorial-sql-server-management-studio.md)   
+[Didacticiels pour le moteur de base de données SQL Server](../relational-databases/database-engine-tutorials.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Tâche 5 : Exportation des résultats du nettoyage vers un fichier Excel | Microsoft Docs'
+title: 'Tâche 5 : Exportation des résultats du nettoyage vers un fichier Excel | Microsoft Docs'
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -13,15 +13,15 @@ ms.assetid: eaeafd65-d0d4-4a7d-a3ad-110ef644e90b
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d2d52304ff9a8dae16e74d9d5aa7324adb2aac4f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e9b01c9394419a4e526969c4a8ecccaf262f576d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138169"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368211"
 ---
-# <a name="task-5-exporting-cleansing-results-to-an-excel-file"></a>Tâche 5 : Exportation des résultats du nettoyage vers un fichier Excel
-  Dans cette tâche, vous allez exporter les résultats de l'activité de nettoyage dans un fichier Excel. Consultez [étape d’exportation](http://msdn.microsoft.com/library/hh213061.aspx#Export) rubrique pour plus d’informations.  
+# <a name="task-5-exporting-cleansing-results-to-an-excel-file"></a>Tâche 5 : Exportation des résultats du nettoyage vers un fichier Excel
+  Dans cette tâche, vous allez exporter les résultats de l'activité de nettoyage dans un fichier Excel. Consultez [étape d’exportation](https://msdn.microsoft.com/library/hh213061.aspx#Export) rubrique pour plus d’informations.  
   
 1.  Dans le volet droit, sélectionnez **Excel** pour le **Type de Destination**.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "48138169"
   
 7.  Ouvrez le **Cleansed Supplier List.xls** et procédez comme suit :  
   
-    1.  Vérifiez qu'aucune adresse de messagerie ne se termine par adventure-work.com (sans caractère « s ») en recherchant « adventure-work.com » dans la feuille de calcul.  
+    1.  Vérifiez qu’il n’y a aucune adresse de messagerie qui se termine par adventure-Work.com (sans du caractère ') en recherchant adventure-Work.com dans la feuille de calcul.  
   
     2.  Voir qu’il y a aucune **USA** valeur dans le **pays** colonne.  
   
@@ -50,6 +50,6 @@ ms.locfileid: "48138169"
     5.  Supprimer le **Validation d’adresses** colonne à partir de la feuille de calcul et enregistrez le fichier excel. Cette colonne supplémentaire correspond au domaine composite Validation d'adresses.  
   
 ## <a name="next-step"></a>Étape suivante  
- [Tâche 6 : Importation de valeurs depuis le projet de nettoyage de la liste des fournisseurs](../../2014/tutorials/task-6-importing-values-from-the-cleanse-supplier-list-project.md)  
+ [Tâche 6 : Importation de valeurs depuis le projet de nettoyage fournisseurs liste](../../2014/tutorials/task-6-importing-values-from-the-cleanse-supplier-list-project.md)  
   
   

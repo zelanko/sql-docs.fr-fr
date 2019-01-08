@@ -10,12 +10,12 @@ ms.assetid: abb4264a-622e-4215-af5b-14e309b8a399
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: b5138dea4cfea23d77dae5d4bc766b4c2738f4e7
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: fe6f45b2e35761fac5f8c49012b1eb370645bcb1
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659063"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52412766"
 ---
 # <a name="generating-reports-accesstosql"></a>Génération de rapports (AccessToSQL)
 Les rapports de certaines activités effectuées à l’aide des commandes sont générées dans la Console SSMA au niveau d’arborescence objet.  
@@ -87,7 +87,7 @@ Utilisez la procédure suivante pour générer des rapports :
 ### <a name="synchronize-target"></a>synchroniser-cible :  
 La commande **cible synchroniser** a **erreurs de rapports pour** paramètre, qui spécifie l’emplacement du rapport d’erreurs pour l’opération de synchronisation. Ensuite, un fichier par nom **TargetSynchronizationReport&lt;n&gt;. XML** est créé à l’emplacement spécifié, où **&lt;n&gt;** est le nombre de fichiers uniques qui incrémente par un chiffre à chaque exécution de la même commande.  
   
-**Remarque :** si le chemin du dossier est donné, 'rapports erreurs-pour' paramètre devient alors un attribut facultatif pour la commande 'synchroniser-target'.  
+**Remarque :** Si le chemin du dossier est indiqué, 'rapports erreurs-pour' paramètre devient un attribut facultatif pour la commande 'synchroniser-target'.  
   
 ```xml  
 <!-- Example: Synchronize target entire Database with all attributes-->  
@@ -115,7 +115,7 @@ La commande **cible synchroniser** a **erreurs de rapports pour** paramètre, qu
 ### <a name="refresh-from-database"></a>actualisation-de-base de données :  
 La commande **actualisation à partir de base de données** a **erreurs de rapports pour** paramètre, qui spécifie l’emplacement du rapport d’erreurs pour l’opération d’actualisation. Ensuite, un fichier par nom **SourceDBRefreshReport&lt;n&gt;. XML** est créé à l’emplacement spécifié, où **&lt;n&gt;** est le nombre de fichiers uniques qui incrémente par un chiffre à chaque exécution de la même commande.  
   
-**Remarque :** si le chemin du dossier est donné, 'rapports erreurs-pour' paramètre devient alors un attribut facultatif pour la commande 'synchroniser-target'.  
+**Remarque :** Si le chemin du dossier est indiqué, 'rapports erreurs-pour' paramètre devient un attribut facultatif pour la commande 'synchroniser-target'.  
   
 ```xml  
 <!-- Example: Refresh entire Schema (with all attributes)-->  

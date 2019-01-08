@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.adonetdest.f1
@@ -16,17 +15,17 @@ ms.assetid: cb883990-d875-4d8b-b868-45f9f15ebeae
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ebabe8a6b188c704a45ce022b430156fed17d861
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: aefe3276e11cb4da2523d0e089afc7220eb07ded
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165069"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351369"
 ---
 # <a name="ado-net-destination"></a>Destination ADO NET
   La destination ADO NET charge des données dans différentes bases de données compatibles [!INCLUDE[vstecado](../../includes/vstecado-md.md)]qui utilisent une table ou une vue de base de données. Vous pouvez charger ces données dans une table ou une vue existante ou créer une table et y charger les données.  
   
- Vous pouvez utiliser la destination ADO .NET. pour vous connecter à [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. La connexion à [!INCLUDE[ssSDS](../../includes/sssds-md.md)] via OLE DB n'est pas prise en charge. Pour plus d’informations sur [!INCLUDE[ssSDS](../../includes/sssds-md.md)], consultez [Consignes et limitations générales de base de données SQL Azure](http://go.microsoft.com/fwlink/?LinkId=248228).  
+ Vous pouvez utiliser la destination ADO .NET. pour vous connecter à [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. La connexion à [!INCLUDE[ssSDS](../../includes/sssds-md.md)] via OLE DB n'est pas prise en charge. Pour plus d’informations sur [!INCLUDE[ssSDS](../../includes/sssds-md.md)], consultez [Consignes et limitations générales de base de données SQL Azure](https://go.microsoft.com/fwlink/?LinkId=248228).  
   
 ## <a name="troubleshooting-the-ado-net-destination"></a>Résolution des problèmes liés à la destination ADO NET  
  Vous pouvez consigner les appels que la destination ADO NET effectue auprès de fournisseurs de données externes. Cette fonctionnalité de journalisation permet de résoudre des problèmes liés à l'enregistrement de données vers des sources de données externes que réalise la destination ADO NET. Pour consigner les appels aux fournisseurs de données externes effectués par la destination ADO.NET, activez la journalisation du package et sélectionnez l’événement **Diagnostic** au niveau du package. Pour plus d’informations, consultez [Outils de dépannage pour l’exécution des packages](../troubleshooting/troubleshooting-tools-for-package-execution.md).  
@@ -48,11 +47,11 @@ ms.locfileid: "48165069"
   
  Pour plus d’informations sur les propriétés que vous pouvez définir dans la boîte de dialogue **Éditeur de destination ADO.NET** , cliquez sur une des rubriques suivantes :  
   
--   [Éditeur de Destination ADO NET &#40;Page Gestionnaire de connexions&#41;](../ado-net-destination-editor-connection-manager-page.md)  
+-   [Éditeur de destination ADO.NET &#40;page Gestionnaire de connexions&#41;](../ado-net-destination-editor-connection-manager-page.md)  
   
--   [Éditeur de Destination ADO NET &#40;Page mappages&#41;](../ado-net-destination-editor-mappings-page.md)  
+-   [Éditeur de destination ADO NET &#40;page Mappages&#41;](../ado-net-destination-editor-mappings-page.md)  
   
--   [Éditeur de Destination ADO NET &#40;Page sortie d’erreur&#41;](../ado-net-destination-editor-error-output-page.md)  
+-   [Éditeur de destination ADO NET &#40;page Sortie d’erreur&#41;](../ado-net-destination-editor-error-output-page.md)  
   
  La boîte de dialogue **Éditeur avancé** reflète les propriétés qui peuvent être définies par programmation. Pour plus d'informations sur les propriétés définissables dans la boîte de dialogue **Éditeur avancé** ou par programmation, cliquez sur l'une des rubriques suivantes :  
   
@@ -60,6 +59,6 @@ ms.locfileid: "48165069"
   
 -   [Propriétés personnalisées ADO NET](ado-net-custom-properties.md)  
   
- Pour plus d’informations sur la façon de définir des propriétés, consultez [Définir les propriétés d’un composant de flux de données](set-the-properties-of-a-data-flow-component.md).  
+ Pour plus d’informations sur la façon de définir les propriétés, consultez [Définir les propriétés d’un composant de flux de données](set-the-properties-of-a-data-flow-component.md).  
   
   

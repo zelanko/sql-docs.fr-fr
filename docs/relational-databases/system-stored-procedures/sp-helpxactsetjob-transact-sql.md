@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_helpxactsetjob
@@ -17,12 +16,12 @@ ms.assetid: 242cea3e-e6ac-4f84-a072-b003b920eb33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cc52a4069ae9d8dbe88fe992d0af3ae3507f13f3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7402fcc825e6f537703268c1fd3fead9c88b1f5e
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47754727"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204678"
 ---
 # <a name="sphelpxactsetjob-transact-sql"></a>sp_helpxactsetjob (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ sp_helpxactsetjob [ @publisher = ] 'publisher'
   
 ## <a name="arguments"></a>Arguments  
  [**@publisher** =] **'***publisher***'**  
- Nom du serveur de publication non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auquel le travail appartient. *serveur de publication* est **sysname**, sans valeur par défaut.  
+ Est le nom de la non - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serveur de publication à laquelle appartient la tâche. *serveur de publication* est **sysname**, sans valeur par défaut.  
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
@@ -68,7 +67,7 @@ sp_helpxactsetjob [ @publisher = ] 'publisher'
   
  **sp_helpxactsetjob** retourne toujours les paramètres actuels pour le travail Xactset (HREPL_XactSetJob) sur le serveur de publication. Si le travail Xactset est actuellement dans la file d'attente des travaux, il renvoie en outre des attributs du travail à partir de la vue du dictionnaire de données USER_JOB créée sous le compte administrateur sur le serveur de publication Oracle.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Seul un membre de la **sysadmin** du rôle serveur fixe peuvent exécuter **sp_helpxactsetjob**.  
   
 ## <a name="see-also"></a>Voir aussi  

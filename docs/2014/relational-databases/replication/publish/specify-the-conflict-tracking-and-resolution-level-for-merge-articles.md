@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - merge replication conflict resolution [SQL Server replication], levels
@@ -15,12 +14,12 @@ ms.assetid: 81e9ecb6-1d31-4a78-b32a-96f7f4d67077
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 11eed64a7acefb0202553c4e3e99d18333b47910
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3ff61c601be83ac27c4febb7f31598bdb8fce037
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48228419"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52810271"
 ---
 # <a name="specify-the-conflict-tracking-and-resolution-level-for-merge-articles"></a>Spécifier le niveau de suivi et de résolution des conflits pour des articles de fusion
   Cette rubrique explique comment spécifier le niveau de suivi et de résolution des conflits pour les articles de fusion dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
@@ -56,7 +55,7 @@ ms.locfileid: "48228419"
   
 2.  Cliquez sur **Propriétés de l'article**, puis cliquez sur **Définir les propriétés de l'article de Table en surbrillance** ou sur **Définir les propriétés de tous les articles de table**.  
   
-3.  Sous l’onglet **Propriétés** de la boîte de dialogue **Propriétés de l’article - \<Article>**, sélectionnez l’une des valeurs suivantes pour la propriété **Niveau de suivi** : **Suivi au niveau des lignes** ou **Suivi au niveau des colonnes**.  
+3.  Sur le **propriétés** onglet de la **propriétés de l’Article \<Article >** boîte de dialogue, sélectionnez une de ces valeurs pour le **niveau de suivi** propriété : **Le suivi au niveau des lignes** ou **le suivi au niveau de la colonne**.  
   
 4.  Si vous êtes dans la boîte de dialogue **Propriétés de la publication - \<Publication>**, cliquez sur **OK** pour enregistrer et fermer la boîte de dialogue.  
   
@@ -83,8 +82,8 @@ ms.locfileid: "48228419"
      Affectez la valeur **1** à **@force_invalidate_snapshot** et **@force_reinit_subscription**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Advanced Merge Replication Conflict Detection and Resolution](../merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
- [Détection et résolution des conflits dans les enregistrements logiques](../merge/advanced-merge-replication-conflict-resolving-in-logical-record.md)   
+ [Détection et résolution des conflits de réplication de fusion avancée](../merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
+ [Detecting and Resolving Conflicts in Logical Records](../merge/advanced-merge-replication-conflict-resolving-in-logical-record.md)   
  [Définir une relation d’enregistrement logique entre des articles de table de fusion](define-a-logical-record-relationship-between-merge-table-articles.md)   
  [Détecter et résoudre des conflits de réplication de fusion](../merge/advanced-merge-replication-resolve-merge-replication-conflicts.md)  
   

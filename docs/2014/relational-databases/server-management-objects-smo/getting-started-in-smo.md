@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQL Server Management Objects, about SQL Server Management Objects
@@ -15,12 +13,12 @@ ms.assetid: ecc62702-c0d5-4180-b3c2-16ec5030caa7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 57cc3c9cdde3c13b47fe9719f26630e7def55484
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 52365cbe64a50b9622ded5587f0baf2ed46cce98
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192659"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52770791"
 ---
 # <a name="getting-started-in-smo"></a>Mise en route avec SMO
   Cette rubrique contient des informations sur la mise en route avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO). La section SMO s'adresse aux développeurs. La liste suivante vous aidera à trouver des informations sur la hiérarchie des objets SMO, la préparation de l'écriture de programmes dans SMO, l'écriture d'un programme SMO dans différents langages de programmation, ainsi que des informations sur des tâches de programmation générales et spécifiques.  

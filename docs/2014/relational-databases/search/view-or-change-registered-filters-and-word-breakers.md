@@ -15,12 +15,12 @@ ms.assetid: f88c54df-b1aa-4701-807f-dc92c32363fd
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bd05102a9a146a4aa9439e86a76212872556a08d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3ae427f9f8d3391d8a8fcd0bff06a6ea3b97044c
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070999"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375711"
 ---
 # <a name="view-or-change-registered-filters-and-word-breakers"></a>Afficher ou modifier des filtres et des analyseurs lexicaux inscrits
   Après l'installation ou la désinstallation des analyseurs lexicaux ou des filtres sur un système, les modifications n'entrent pas automatiquement en vigueur sur les instances de serveur. Cette rubrique explique comment afficher les analyseurs lexicaux ou les filtres actuellement inscrits et comment inscrire les analyseurs lexicaux et les filtres récemment installés sur une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -78,7 +78,7 @@ ms.locfileid: "48070999"
   
      **Pour installer et charger des filtres Microsoft Filter Pack IFilters**  
   
-    -   [Procédure : inscrire des filtres Microsoft Filter Pack IFilters avec SQL Server](http://go.microsoft.com/fwlink/?LinkId=130439)  
+    -   [Procédure : inscrire des filtres Microsoft Filter Pack IFilters avec SQL Server](https://go.microsoft.com/fwlink/?LinkId=130439)  
   
 4.  Utilisez **sp_fulltext_service** pour charger les filtres et les analyseurs lexicaux récemment installés dans l’instance de serveur, comme suit :  
   

@@ -14,12 +14,12 @@ ms.assetid: 62605b63-d43b-49e8-a863-e154011e6109
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 25f917dc3831f0915b87c4a93dbb4197a3d25df0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c9ac0e67e4e1c48fd1ccdd8d8b4021541b0bf4c9
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053365"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366311"
 ---
 # <a name="result-sets-in-the-execute-sql-task"></a>Ensembles de résultats dans la tâche d’exécution SQL
   Dans un package [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , le retour d'un jeu de résultats à la tâche d'exécution SQL dépend du type de commande SQL que la tâche utilise. Par exemple, une instruction SELECT retourne généralement un ensemble de résultats, contrairement à une instruction INSERT.  
@@ -58,18 +58,18 @@ ms.locfileid: "48053365"
   
  Lorsque vous associez une variable à un ensemble de résultats à l'aide du type **Ligne unique** , la variable doit être d'un type de données compatible avec celui de la colonne contenue dans l'ensemble de résultats. Par exemple, vous ne pouvez pas associer un ensemble de résultats contenant un type de données `String` à une variable de type de données numérique. Lorsque vous définissez la **TypeConversionMode** propriété `Allowed`, la tâche d’exécution SQL tente de convertir le paramètre de sortie et le type de résultats aux données de la variable les résultats de requête sont affectés.  
   
- Un ensemble de résultats XML ne peut être associé qu'à une variable de type de données `String` ou `Object`. Si la variable a la `String` de type de données, la tâche d’exécution SQL retourne une chaîne et la source XML peuvent consommer les données XML. Si la variable a la `Object` type de données, la tâche d’exécution SQL retourne un objet de modèle DOM (Document Object).  
+ Un ensemble de résultats XML ne peut être associé qu'à une variable de type de données `String` ou `Object`. Si la variable est de type de données `String`, la tâche d'exécution SQL retourne une chaîne et la source XML peut exploiter les données XML. Si la variable est de type de données `Object`, la tâche d'exécution SQL retourne un objet DOM (Document Object Model).  
   
- Un **ensemble de résultats complet** doit correspondre à une variable de la `Object` type de données. Le résultat obtenu est un objet d'ensemble de lignes. Vous pouvez utiliser un conteneur de boucles Foreach pour extraire les valeurs de ligne de table qui sont stockées dans la variable Object dans les variables de package, et utiliser une tâche de script pour écrire dans un fichier les données stockées dans les variables de package. Pour une démonstration de l'utilisation d'un conteneur de boucles Foreach et d'une tâche de script, voir l'exemple CodePlex, [Execute SQL Parameters and Result Sets](http://go.microsoft.com/fwlink/?LinkId=157863)(en anglais), sur msftisprodsamples.codeplex.com.  
+ Un **ensemble de résultats complet** doit correspondre à une variable de la `Object` type de données. Le résultat obtenu est un objet d'ensemble de lignes. Vous pouvez utiliser un conteneur de boucles Foreach pour extraire les valeurs de ligne de table qui sont stockées dans la variable Object dans les variables de package, et utiliser une tâche de script pour écrire dans un fichier les données stockées dans les variables de package. Pour une démonstration de l'utilisation d'un conteneur de boucles Foreach et d'une tâche de script, voir l'exemple CodePlex, [Execute SQL Parameters and Result Sets](https://go.microsoft.com/fwlink/?LinkId=157863)(en anglais), sur msftisprodsamples.codeplex.com.  
   
  Le tableau suivant récapitule les types de données des variables pouvant correspondre à des ensembles de résultats.  
   
 |Type d'ensemble de résultats|Type de données de la variable|Type d'objet|  
 |---------------------|---------------------------|--------------------|  
 |Ligne unique|Tout type compatible avec la colonne de type contenue dans l'ensemble de résultats.|Non applicable|  
-|Ensemble de résultats complet|`Object`|Si la tâche utilise un gestionnaire de connexions natif, y compris les gestionnaires de connexions ADO, OLE DB, Excel et ODBC, l’objet retourné est ADO `Recordset`.<br /><br /> Si la tâche utilise un gestionnaire de connexions managées, telles que la [!INCLUDE[vstecado](../includes/vstecado-md.md)] Gestionnaire de connexions, l’objet retourné est un `System.Data.DataSet`.<br /><br /> Vous pouvez utiliser une tâche de Script pour accéder à la `System.Data.DataSet` de l’objet, comme indiqué dans l’exemple suivant.<br /><br /> `Dim dt As Data.DataTable` <br /> `Dim ds As Data.DataSet = CType(Dts.Variables("Recordset").Value, DataSet)` <br /> `dt = ds.Tables(0)`|  
+|Ensemble de résultats complet|`Object`|Si la tâche utilise un gestionnaire de connexions natif, tel que les gestionnaires de connexions ADO, OLE DB, Excel et ODBC, l'objet retourné est un `Recordset` ADO.<br /><br /> Si la tâche utilise un gestionnaire de connexions managées, tel que le gestionnaire de connexions [!INCLUDE[vstecado](../includes/vstecado-md.md)], l'objet retourné est un `System.Data.DataSet`.<br /><br /> Vous pouvez utiliser une tâche de script pour accéder à l'objet  `System.Data.DataSet`, comme le montre l'exemple suivant.<br /><br /> `Dim dt As Data.DataTable` <br /> `Dim ds As Data.DataSet = CType(Dts.Variables("Recordset").Value, DataSet)` <br /> `dt = ds.Tables(0)`|  
 |XML|`String`|`String`|  
-|XML|`Object`|Si la tâche utilise un gestionnaire de connexions natif, y compris les gestionnaires de connexions ADO, OLE DB, Excel et ODBC, l’objet retourné est un `MSXML6.IXMLDOMDocument`.<br /><br /> Si la tâche utilise un gestionnaire de connexions managées, telles que la [!INCLUDE[vstecado](../includes/vstecado-md.md)] Gestionnaire de connexions, l’objet retourné est un `System.Xml.XmlDocument`.|  
+|XML|`Object`|Si la tâche utilise un gestionnaire de connexions natif, tel que les gestionnaires de connexions ADO, OLE DB, Excel et ODBC, l'objet retourné est un `MSXML6.IXMLDOMDocument`.<br /><br /> Si la tâche utilise un gestionnaire de connexions managées, telles que la [!INCLUDE[vstecado](../includes/vstecado-md.md)] Gestionnaire de connexions, l’objet retourné est un `System.Xml.XmlDocument`.|  
   
  Vous pouvez définir la variable dans l'étendue de la tâche d'exécution SQL ou dans celle du package. Si la variable a l'étendue d'un package, le jeu de résultats est disponible pour les autres tâches et conteneurs figurant dans le package, ainsi que pour les packages exécutés par les tâches d'exécution de package ou d'exécution de package DTS 2000.  
   
@@ -88,13 +88,13 @@ ms.locfileid: "48053365"
   
  Pour plus d'informations sur la définition de ces propriétés dans le concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)] , cliquez sur la rubrique suivante :  
   
--   [Définir les propriétés d’une tâche ou d’un conteneur](../../2014/integration-services/set-the-properties-of-a-task-or-container.md)  
+-   [Définir les propriétés d'une tâche ou d'un conteneur](../../2014/integration-services/set-the-properties-of-a-task-or-container.md)  
   
 ## <a name="related-tasks"></a>Tâches associées  
  [Mapper des ensembles de résultats à des variables dans une tâche d’exécution SQL](control-flow/execute-sql-task.md)  
   
 ## <a name="related-content"></a>Contenu associé  
   
--   Exemple CodePlex, [Execute SQL Parameters and Result Sets](http://go.microsoft.com/fwlink/?LinkId=157863)(en anglais), sur msftisprodsamples.codeplex.com  
+-   Exemple CodePlex, [Execute SQL Parameters and Result Sets](https://go.microsoft.com/fwlink/?LinkId=157863)(en anglais), sur msftisprodsamples.codeplex.com  
   
   

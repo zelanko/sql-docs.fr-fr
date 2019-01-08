@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 dev_langs:
 - VB
@@ -18,25 +16,25 @@ ms.assetid: b8fa110a-2c9c-4f5a-8fe1-305555640e44
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 78dec0807ebcfc025d997b995c7b2c083a1baf02
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dbd4f546a6e09d771577cd5d297e6f1a58175469
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049546"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369911"
 ---
 # <a name="working-with-excel-files-with-the-script-task"></a>Utilisation de fichiers Excel avec la tâche de script
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fournit le gestionnaire de connexions Excel, la source Excel et la destination Excel pour utiliser des données stockées dans des feuilles de calcul au format de fichier [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel. Les techniques décrites dans cette rubrique utilisent la tâche de script pour obtenir des informations sur les bases de données (fichiers de classeur) et tables (feuilles de calcul et plages nommées) Excel disponibles. Ces exemples peuvent être modifiés facilement afin d'utiliser l'une des autres sources de données basées sur des fichiers prises en charge par le fournisseur OLE DB [!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet.  
   
  [Configuration d’un package pour tester les exemples](#configuring)  
   
- [Exemple 1 : vérifier si un fichier Excel existe](#example1)  
+ [Exemple 1 : Vérifier l’existence d’un fichier Excel](#example1)  
   
- [Exemple 2 : vérifier si une table Excel existe](#example2)  
+ [Exemple 2 : Vérifier l’existence d’un tableau Excel](#example2)  
   
- [Exemple 3 : obtenir la liste des fichiers Excel contenus dans un dossier](#example3)  
+ [Exemple 3 : Obtenir la liste des fichiers Excel dans un dossier](#example3)  
   
- [Exemple 4 : obtenir la liste des tables contenues dans un fichier Excel](#example4)  
+ [Exemple 4 : Obtenir la liste des Tables dans un fichier Excel](#example4)  
   
  [Affichage des résultats des exemples](#testing)  
   
@@ -76,7 +74,7 @@ ms.locfileid: "48049546"
   
 5.  Définissez le langage de script par défaut du composant Script en utilisant l’option **Langage de script** dans la page **Général** de la boîte de dialogue **Options**. Pour plus d'informations, consultez [General Page](../general-page-of-integration-services-designers-options.md).  
   
-##  <a name="example1"></a> Description de l’exemple 1 : vérifier si un fichier Excel existe  
+##  <a name="example1"></a> Description de l’exemple 1 : Vérifier l’existence d’un fichier Excel  
  Cet exemple détermine si le fichier de classeur Excel spécifié dans la variable `ExcelFile` existe, puis définit la valeur booléenne de la variable `ExcelFileExists` sur le résultat. Vous pouvez utiliser cette valeur booléenne pour créer une branche dans le flux de travail du package.  
   
 #### <a name="to-configure-this-script-task-example"></a>Pour configurer cet exemple de tâche de script  
@@ -146,7 +144,7 @@ public class ScriptMain
 }  
 ```  
   
-##  <a name="example2"></a> Description de l’exemple 2 : vérifier si une table Excel existe  
+##  <a name="example2"></a> Description de l’exemple 2 : Vérifier l’existence d’un tableau Excel  
  Cet exemple détermine si la feuille de calcul ou la plage nommée Excel spécifiée dans la variable `ExcelTable` existe dans le fichier de classeur Excel spécifié dans la variable `ExcelFile`, puis définit la valeur booléenne de la variable `ExcelTableExists` sur le résultat. Vous pouvez utiliser cette valeur booléenne pour créer une branche dans le flux de travail du package.  
   
 #### <a name="to-configure-this-script-task-example"></a>Pour configurer cet exemple de tâche de script  
@@ -253,7 +251,7 @@ public class ScriptMain
 }  
 ```  
   
-##  <a name="example3"></a> Description de l’exemple 3 : obtenir la liste des fichiers Excel contenus dans un dossier  
+##  <a name="example3"></a> Description de l’exemple 3 : Obtenir la liste des fichiers Excel dans un dossier  
  Cet exemple remplit un tableau à l'aide de la liste des fichiers Excel détectés dans le dossier spécifié dans la valeur de la variable `ExcelFolder`, puis copie le tableau dans la variable `ExcelFiles`. Vous pouvez utiliser l'énumérateur Foreach à partir d'une variable pour parcourir les fichiers inclus dans le tableau.  
   
 #### <a name="to-configure-this-script-task-example"></a>Pour configurer cet exemple de tâche de script  
@@ -325,7 +323,7 @@ public class ScriptMain
 ### <a name="alternate-solution"></a>Autre solution  
  Au lieu d'utiliser une tâche de script pour dresser la liste des fichiers Excel dans un tableau, vous pouvez également utiliser l'énumérateur ForEach File pour parcourir tous les fichiers Excel inclus dans un dossier. Pour plus d’informations, consultez [Effectuer une boucle dans des fichiers et des tables Excel en utilisant un conteneur de boucles Foreach](../control-flow/foreach-loop-container.md).  
   
-##  <a name="example4"></a> Description de l’exemple 4 : obtenir la liste des tables contenues dans un fichier Excel  
+##  <a name="example4"></a> Description de l’exemple 4 : Obtenir la liste des Tables dans un fichier Excel  
  Cet exemple remplit un tableau à l'aide de la liste des feuilles de calcul et plages nommées détectées dans le fichier de classeur Excel spécifié par la valeur de la variable `ExcelFile`, puis copie le tableau dans la variable `ExcelTables`. Vous pouvez utiliser l'énumérateur Foreach à partir d'une variable pour parcourir les tables incluses dans le tableau.  
   
 > [!NOTE]  
@@ -454,7 +452,7 @@ public class ScriptMain
   
          -ou-  
   
-    -   Cliquez sur le bouton de sélection (**...**.) en regard du champ de propriété, puis dans la boîte de dialogue **Sélectionner des variables**, sélectionnez les variables.  
+    -   Cliquez sur le bouton de sélection (**...**) en regard du champ de propriété, puis dans la boîte de dialogue **Sélectionner des variables**, sélectionnez les variables.  
   
 5.  Cliquez sur **Modifier le script** pour ouvrir l’éditeur de script.  
   
@@ -543,7 +541,7 @@ public class ScriptMain
 }  
 ```  
   
-![Icône Integration Services (petite)](../media/dts-16.gif "icône Integration Services (petite)")**rester jusqu'à la Date avec Integration Services** <br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
+![Icône Integration Services (petite)](../media/dts-16.gif "icône Integration Services (petite)")**rester jusqu'à la Date avec Integration Services**<br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Gestionnaire de connexions Excel](../connection-manager/excel-connection-manager.md)   

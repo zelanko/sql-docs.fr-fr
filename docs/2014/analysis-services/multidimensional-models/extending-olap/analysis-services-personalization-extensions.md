@@ -14,12 +14,12 @@ ms.assetid: 0f144059-24e0-40c0-bde4-d48c75e46598
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 90b8f11b303c72eedbf116ae4154ce9d611a401c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d1d563b4cefc2e074c437fa0ab3b66bfea9796fb
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164859"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372221"
 ---
 # <a name="analysis-services-personalization-extensions"></a>Extensions de personnalisation Analysis Services
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] extensions de personnalisation sont le fondement de l’idée d’implémentation d’une architecture de plug-in. Dans une architecture de plug-in, vous pouvez développer dynamiquement des nouveaux objets de cube et de nouvelles fonctionnalités, et les partager facilement avec d'autres développeurs. Par conséquent, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] extensions de personnalisation fournissent les fonctionnalités qui le rend possible d’atteindre les objectifs suivants :  
@@ -43,7 +43,7 @@ ms.locfileid: "48164859"
  Au démarrage du service, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] charge les assemblys requis et détermine les classes qui ont le <xref:Microsoft.AnalysisServices.AdomdServer.PlugInAttribute> attribut personnalisé.  
   
 > [!NOTE]  
->  Le [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] définit des attributs personnalisés comme une façon de décrire votre code et affecter le comportement à l'exécution. Pour plus d’informations, consultez la rubrique «[vue d’ensemble des attributs](http://go.microsoft.com/fwlink/?LinkId=82929), » dans le [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Guide du développeur sur MSDN.  
+>  Le [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] définit des attributs personnalisés comme une façon de décrire votre code et affecter le comportement à l'exécution. Pour plus d’informations, consultez la rubrique «[vue d’ensemble des attributs](https://go.microsoft.com/fwlink/?LinkId=82929), » dans le [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Guide du développeur sur MSDN.  
   
  Pour toutes les classes avec le <xref:Microsoft.AnalysisServices.AdomdServer.PlugInAttribute> attribut personnalisé, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] appelle leurs constructeurs par défaut. Appel de tous les constructeurs au démarrage fournit un emplacement commun à partir duquel générer de nouveaux objets et qui est indépendant de toute activité de l’utilisateur.  
   
@@ -141,10 +141,10 @@ ms.locfileid: "48164859"
  Les commandes CREATE KPI et DROP KPI sont ajoutées à la syntaxe MDX. Les indicateurs de performance clés peuvent être créés dynamiquement à partir de tout script MDX.  
   
 ### <a name="schema-rowsets-extensions"></a>Extensions d'ensembles de lignes de schéma  
- Sur MDSCHEMA_MEMBERS *étendue* colonne est ajoutée. Les valeurs de portée sont les suivantes : MDMEMBER_SCOPE_GLOBAL=1, MDMEMBER_SCOPE_SESSION=2.  
+ Sur MDSCHEMA_MEMBERS *étendue* colonne est ajoutée. Valeurs d’étendue sont les suivantes : MDMEMBER_SCOPE_GLOBAL = 1, MDMEMBER_SCOPE_SESSION = 2.  
   
- Sur MDSCHEMA_SETS *set_evaluation_context* colonne est ajoutée. Les valeurs de contexte d'évaluation du jeu sont les suivantes : MDSET_RESOLUTION_STATIC = 1, MDSET_RESOLUTION_DYNAMIC = 2.  
+ Sur MDSCHEMA_SETS *set_evaluation_context* colonne est ajoutée. Définir le contexte d’évaluation valeurs sont les suivantes : MDSET_RESOLUTION_STATIC = 1, MDSET_RESOLUTION_DYNAMIC = 2.  
   
- Sur MDSCHEMA_KPIS, la colonne de portée est ajoutée. Les valeurs de portée sont les suivantes : MDKPI_SCOPE_GLOBAL=1, MDKPI_SCOPE_SESSION=2.  
+ Sur MDSCHEMA_KPIS, la colonne de portée est ajoutée. Valeurs d’étendue sont les suivantes : MDKPI_SCOPE_GLOBAL = 1, MDKPI_SCOPE_SESSION = 2.  
   
   

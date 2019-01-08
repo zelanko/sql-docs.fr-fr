@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling task [Integration Services], about data profiling
@@ -15,12 +14,12 @@ ms.assetid: 756840e3-aa09-45cd-9951-1a17af4b5925
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9a20b4b2ddaee99a9ce6f2f9efa5ffc5dbbc206a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f656d900051a70998ba00ed54e3e5a2fb545716a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119912"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367091"
 ---
 # <a name="data-profiling-task-and-viewer"></a>Tâche de profilage des données et visionneuse
   La tâche de profilage des données fournit des fonctionnalités de profilage de données à l'intérieur du processus d'extraction, de transformation et de chargement de données. Grâce à la tâche de profilage des données, vous pouvez bénéficier des avantages suivants :  
@@ -49,7 +48,7 @@ ms.locfileid: "48119912"
   
 -   la distribution des valeurs dans la colonne City ;  
   
--   la puissance de la dépendance fonctionnelle de la colonne State sur la colonne Zip (en d'autres termes, un État américain doit toujours être le même pour une valeur de code postal donnée).  
+-   la puissance de la dépendance fonctionnelle de la colonne State sur la colonne Zip (en d’autres termes, un État américain doit toujours être le même pour une valeur de code postal donnée).  
   
  Les statistiques fournies par un profil de données vous donnent les informations nécessaires pour minimiser de manière efficace les problèmes de qualité qui peuvent résulter de l'utilisation des données sources.  
   
@@ -59,17 +58,17 @@ ms.locfileid: "48119912"
  **Étape 1 : Configuration de la tâche de profilage des données**  
  La tâche de profilage des données vous permet de configurer les profils à calculer. Vous exécutez ensuite le package qui contient la tâche de profilage des données pour calculer les profils. La tâche enregistre la sortie du profil au format XML dans un fichier ou une variable de package.  
   
- **Pour plus d’informations :** [Configuration de la tâche de profilage des données](data-profiling-task.md)  
+ **Pour plus d'informations, consultez :** [Configuration de la tâche de profilage des données](data-profiling-task.md)  
   
- **Étape 2 : Vérification des profils calculés par la tâche de profilage des données**  
+ **Étape 2 : Vérification des profils calculés par les tâche de profilage des données**  
  Pour examiner les profils de données calculés par la tâche de profilage des données, vous envoyez la sortie à un fichier, puis vous utilisez la visionneuse du profil des données. Cette visionneuse est un utilitaire autonome qui affiche la sortie du profil, sous forme d'informations résumées et détaillées, avec en option une fonction d'exploration vers le bas.  
   
- **Pour plus d’informations :** [Visionneuse du profil des données](data-profile-viewer.md)  
+ **Pour plus d'informations, consultez :** [Visionneuse du profil des données](data-profile-viewer.md)  
   
 ### <a name="addition-of-conditional-logic-to-the-data-profiling-workflow"></a>Ajout de la logique conditionnelle au flux de travail de profilage des données  
  La tâche de profilage des données n'inclut pas de fonctionnalités intégrées vous permettant d'utiliser la logique conditionnelle pour connecter cette tâche aux tâches en aval basées sur la sortie du profil. Toutefois, vous pouvez ajouter facilement cette logique, avec un minimum de programmation, dans une tâche de script. Par exemple, vous pouvez définir une tâche de script qui effectue une requête XPath sur le fichier de sortie de la tâche de profilage des données. La requête peut déterminer si le pourcentage de valeurs NULL dans une colonne particulière dépasse un certain seuil. Si tel est le cas, vous pouvez interrompre le package et résoudre le problème dans les données sources avant de continuer. Pour plus d’informations, consultez [Incorporer une tâche de profilage des données dans le flux de travail du package](incorporate-a-data-profiling-task-in-package-workflow.md).  
   
 ## <a name="related-content"></a>Contenu associé  
- [Schéma du profileur de données](http://go.microsoft.com/fwlink/?LinkId=251524)  
+ [Schéma du profileur de données](https://go.microsoft.com/fwlink/?LinkId=251524)  
   
   

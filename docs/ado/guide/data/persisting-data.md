@@ -16,21 +16,21 @@ ms.assetid: 21c162ca-2845-4dd8-a49d-e715aba8c461
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c8fc264df4708b5d6c58c8a87861597d299cdca2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b89f05822ee23f5ad62c627b8bc6d67ebe401a2e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47722987"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527630"
 ---
 # <a name="persisting-data"></a>Persistance des données
 Informatique portable (par exemple, à l’aide d’ordinateurs portables) a généré la nécessité pour les applications qui peuvent s’exécuter dans un état connecté et déconnecté. ADO a ajouté la prise en charge pour ce en donnant au développeur la possibilité d’enregistrer un curseur client **Recordset** sur le disque et recharger ultérieurement.  
   
  Il existe plusieurs scénarios dans lesquels vous pouvez utiliser ce type de fonctionnalité, y compris les éléments suivants :  
   
--   **Déplacement :** lors de la création de l’application sur la route, il est essentiel de fournir la possibilité d’apporter des modifications et ajouter de nouveaux enregistrements qui peuvent être reconnectées ultérieurement à la base de données et validées.  
+-   **En déplacement :** Lors de la création de l’application sur la route, il est essentiel de fournir la possibilité d’apporter des modifications et ajouter de nouveaux enregistrements qui peuvent être reconnectées ultérieurement à la base de données et validées.  
   
--   **Rarement mis à jour de recherches :** souvent dans une application, les tables sont utilisées en tant que recherches — par exemple, l’état des tables de taxes. Ils sont rarement mises à jour et sont en lecture seule. Plutôt que de relire ces données à partir du serveur chaque fois que l’application est démarrée, l’application peut simplement charger les données à partir d’un conservé localement **Recordset**.  
+-   **Recherches rarement mis à jour :** Souvent dans une application, les tables sont utilisées en tant que recherches-par exemple, l’état des tables de taxes. Ils sont rarement mises à jour et sont en lecture seule. Plutôt que de relire ces données à partir du serveur chaque fois que l’application est démarrée, l’application peut simplement charger les données à partir d’un conservé localement **Recordset**.  
   
  Dans ADO, pour enregistrer et charger **Recordsets**, utilisez le **Recordset.Save** et **Recordset.Open(,,,adCmdFile)** méthodes sur ADO **Recordset**objet.  
   

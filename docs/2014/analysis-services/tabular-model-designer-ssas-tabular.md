@@ -13,12 +13,12 @@ ms.assetid: 45735c57-2a95-4e45-8994-7242df6c9c5f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 779236a22eee429f6574a202e07eeccffc6b8d1b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 091f6d49c4cccbcba47d50bbde3b395d8ce9d260
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074909"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53364271"
 ---
 # <a name="tabular-model-designer-ssas-tabular"></a>Générateur de modèles tabulaires (SSAS Tabulaire)
   Le générateur de modèles tabulaires fait partie de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], intégré à Microsoft [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2010 ou une version ultérieure, avec les modèles supplémentaires de type de projet spécifiques au développement de solutions de modèles tabulaires professionnelles.  
@@ -36,7 +36,7 @@ ms.locfileid: "48074909"
 ##  <a name="bkmk_benefits"></a> Avantages  
  Lorsque vous installez [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], de nouveaux modèles de projet de création de modèles tabulaires sont ajoutés aux types de projet disponibles. Une fois un nouveau projet de modèle tabulaire créé à l'aide de l'un des modèles, vous pouvez commencer à créer un modèle à l'aide des outils et des assistants du générateur de modèles tabulaires.  
   
- Outres de nouveaux modèles et outils permettant de créer des solutions professionnelles de modèles multidimensionnels et tabulaires, l'environnement [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] fournit des fonctionnalités de débogage et de cycle de vie de projet qui vous permettent de créer des solutions décisionnelles les plus puissantes possibles pour votre organisation. Pour plus d'informations sur [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], consultez [Mise en route de Visual Studio](http://go.microsoft.com/fwlink/?LinkId=206389).  
+ Outres de nouveaux modèles et outils permettant de créer des solutions professionnelles de modèles multidimensionnels et tabulaires, l'environnement [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] fournit des fonctionnalités de débogage et de cycle de vie de projet qui vous permettent de créer des solutions décisionnelles les plus puissantes possibles pour votre organisation. Pour plus d'informations sur [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], consultez [Mise en route de Visual Studio](https://go.microsoft.com/fwlink/?LinkId=206389).  
   
 ##  <a name="bkmk_proj_temp"></a> Modèles de projets  
  Lorsque vous installez [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], les modèles de projet de modèles tabulaires suivants sont ajoutés aux types de projets Business Intelligence :  
@@ -117,16 +117,16 @@ ms.locfileid: "48074909"
   
 ##  <a name="bkmk_vsint"></a> Intégration à Visual Studio  
  **contrôle de code source ;**  
- Les projets Analysis Services s'intègrent au plug-in sélectionné du contrôle de code source. Si vous avez configuré Visual Studio pour utiliser le contrôle de code source, vous pouvez utiliser l'insertion/l'extraction à partir de l'Explorateur de solutions. Pour configurer l'utilisation de Team Foundation Server, consultez [Configurer Visual Studio avec le contrôle de version de Team Foundation](http://msdn.microsoft.com/library/ms253064.aspx). De nombreux plug-ins de contrôle de code source tiers sont également pris en charge.  
+ Les projets Analysis Services s'intègrent au plug-in sélectionné du contrôle de code source. Si vous avez configuré Visual Studio pour utiliser le contrôle de code source, vous pouvez utiliser l'insertion/l'extraction à partir de l'Explorateur de solutions. Pour configurer l'utilisation de Team Foundation Server, consultez [Configurer Visual Studio avec le contrôle de version de Team Foundation](https://msdn.microsoft.com/library/ms253064.aspx). De nombreux plug-ins de contrôle de code source tiers sont également pris en charge.  
   
  **Polices**  
- Les modèles tabulaires utilisent la police d'environnement [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] pour contrôler les polices dans l'affichage. Il peut être nécessaire de modifier cette police si la police par défaut de [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ne dispose pas de tous les caractères Unicode dont vous avez besoin pour votre langage. Pour modifier les polices, cliquez sur le menu **Outils** , puis sur **Options**et sur **Polices et couleurs**.  
+ Les modèles tabulaires utilisent la police d’environnement [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] pour contrôler les polices dans l’affichage. Il peut être nécessaire de modifier cette police si la police par défaut de [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ne dispose pas de tous les caractères Unicode dont vous avez besoin pour votre langage. Pour modifier les polices, cliquez sur le menu **Outils** , puis sur **Options**et sur **Polices et couleurs**.  
   
  **Raccourcis clavier**  
  Les raccourcis clavier Analysis Services peuvent être configurés/remappés via la boîte de dialogue Outils->Options->Clavier. Certains raccourcis globaux de [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] , permettant notamment la génération, l'enregistrement, le débogage, la création d'un nouveau projet, etc. sont pris en charge dans le contexte du générateur de modèles tabulaires. D'autres raccourcis spécifiques du générateur de modèles tabulaires sont présents dans le contexte d'Analysis Services.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Projets de modèles tabulaires &#40;SSAS tabulaire&#41;](tabular-models/tabular-model-projects-ssas-tabular.md)   
- [Propriétés &#40;SSAS tabulaire&#41;](tabular-models/properties-ssas-tabular.md)  
+ [Projets de modèles tabulaires &#40;SSAS Tabulaire&#41;](tabular-models/tabular-model-projects-ssas-tabular.md)   
+ [Propriétés &#40;SSAS Tabulaire&#41;](tabular-models/properties-ssas-tabular.md)  
   
   

@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_deletetracertokenhistory
@@ -17,12 +16,12 @@ ms.assetid: 9ae1be14-0d2f-40b1-9d6e-22d79726abf4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6e9d8a03d44fe33c02064e8b025dc6b24cee5f2a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 70853b86d60eab82feb1fe12b03fabbd61dafb6e
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808467"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211918"
 ---
 # <a name="spdeletetracertokenhistory-transact-sql"></a>sp_deletetracertokenhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,8 +54,8 @@ sp_deletetracertokenhistory [ @publication = ] 'publication'
  [  **@publisher=** ] **'***publisher***'**  
  Le nom du serveur de publication. *serveur de publication* est **sysname**, avec NULL comme valeur par défaut.  
   
-> [!NOTE]  
->  Ce paramètre ne doit être spécifié pour les non -[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les serveurs de publication.  
+> [!NOTE]
+>  Ce paramètre ne doit être spécifié pour les non - [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les serveurs de publication.  
   
  [  **@publisher_db=** ] **'***publisher_db***'**  
  Le nom de la base de données de publication. *publisher_db* est **sysname**, avec NULL comme valeur par défaut. Ce paramètre est ignoré si la procédure stockée est exécutée sur le serveur de publication.  
@@ -73,7 +72,7 @@ sp_deletetracertokenhistory [ @publication = ] 'publication'
   
  ID de jeton de suivi peuvent être déterminées en exécutant [sp_helptracertokens &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md) ou en interrogeant le [MStracer_tokens &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/mstracer-tokens-transact-sql.md) (table système).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Seuls les membres de la **sysadmin** rôle serveur fixe le **db_owner** fixe du rôle de base de données dans la base de données de publication, ou **db_owner** base de données fixe ou  **replmonitor** rôles dans la base de données de distribution peuvent exécuter **sp_deletetracertokenhistory**.  
   
 ## <a name="see-also"></a>Voir aussi  

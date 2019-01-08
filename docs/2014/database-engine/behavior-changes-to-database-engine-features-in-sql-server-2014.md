@@ -15,20 +15,20 @@ ms.assetid: 65eaafa1-9e06-4264-b547-cbee8013c995
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 84c24494797a96670fc6abd5e8fd6fd409b0a705
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a951590c1284f39cb2dfea1f9e97c05a04a3e7ca
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226269"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520371"
 ---
 # <a name="behavior-changes-to-database-engine-features-in-sql-server-2014"></a>Changements de comportement des fonctionnalités du moteur de base de données de SQL Server 2014
   Cette rubrique décrit les changements de comportement dans le [!INCLUDE[ssDE](../includes/ssde-md.md)]. Les modifications de comportement affectent le mode de fonctionnement ou d'interaction des fonctionnalités dans [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] par rapport aux versions précédentes de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
-## <a name="behavior-changes-in-includesssql14includessssql14-mdmd"></a>Changements de comportement dans [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
+## <a name="behavior-changes-in-includesssql14includessssql14-mdmd"></a>Modifications du comportement dans [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
  Dans les versions précédentes de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], les requêtes sur un document XML contenant des chaînes dépassant une certaine longueur (plus de 4020 caractères) peuvent contenir des résultats incorrects. Dans [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], ces requêtes retournent les résultats corrects.  
   
-## <a name="behavior-changes-in-includesssql11includessssql11-mdmd"></a>Changements de comportement dans [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
+## <a name="behavior-changes-in-includesssql11includessssql11-mdmd"></a>Modifications du comportement dans [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
   
 ### <a name="metadata-discovery"></a>Découverte des métadonnées  
  Améliorations dans le [!INCLUDE[ssDE](../includes/ssde-md.md)] compter [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] autoriser SQLDescribeCol obtenir des descriptions plus exactes des résultats attendus de celles retournées par SQLDescribeCol dans les versions précédentes de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [Découverte des métadonnées](../relational-databases/native-client/features/metadata-discovery.md).  
@@ -99,7 +99,7 @@ select geometry::Parse('POLYGON EMPTY').STEnvelope().ToString()
  `Arithmetic overflow error converting expression to data type smallint.`  
   
 ### <a name="sqlcmdexe-behavior-change-in-xml-mode"></a>Changement de comportement de sqlcmd.exe en mode XML  
- Il existe des différences de comportement si vous utilisez sqlcmd.exe avec le mode XML (commande :XML ON) lors de l'exécution de SELECT * from T FOR XML ….  
+ Il existe des changements de comportement si vous utilisez sqlcmd.exe avec le mode XML ( : commande XML ON) lors de l’exécution d’une instruction SELECT * from T FOR XML...  
   
 ### <a name="dbcc-checkident-revised-message"></a>Message modifié par DBCC CHECKIDENT  
  Dans [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], le message retourné par la commande DBCC CHECKIDENT a changé uniquement lorsqu’il est utilisé avec RESEED *new_reseed_value* pour modifier la valeur d’identité actuelle. Le nouveau message est « vérification des informations d’identité : valeur d’identité actuelle '\<valeur d’identité actuelle >'. Exécution de DBCC terminée. Si DBCC vous a adressé des messages d'erreur, contactez l'administrateur système. »  

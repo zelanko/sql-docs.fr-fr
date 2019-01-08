@@ -5,8 +5,7 @@ ms.date: 01/15/2016
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - conflict_
@@ -19,12 +18,12 @@ ms.assetid: 15ddd536-db03-454e-b9b5-36efe1f756d7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c1341b9e9b1f00494c655ed5a91943fadfbd5b76
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dd226aef62c2d05eead5e2b5f72b2f358422025a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47614137"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52808901"
 ---
 # <a name="conflictltschemagtlttablegt-transact-sql"></a>conflict_&lt;schéma&gt;_&lt;table&gt; (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,11 +37,11 @@ ms.locfileid: "47614137"
 |__$originator_id|**Int**|ID du nœud d'où provient la modification conflictuelle Pour obtenir la liste des ID, exécutez [sp_help_peerconflictdetection](../../relational-databases/system-stored-procedures/sp-help-peerconflictdetection-transact-sql.md).|  
 |__$origin_datasource|**Int**|Nœud d'où provient la modification conflictuelle.|  
 |__$tranid|**nvarchar (40)**|Numéro séquentiel dans le journal (LSN) de la modification en conflit appliquée à __$origin_datasource.|  
-|__$conflict_type|**Int**|Type de conflit qui s'est produit, qui peut être l'une des valeurs suivantes :<br /><br /> 1 : Une mise à jour a échoué parce que la ligne locale a été modifiée par une autre mise à jour ou elle a été supprimée puis réinsérée.<br /><br /> 2 : Une mise à jour a échoué parce que la ligne locale a déjà été supprimée.<br /><br /> 3 : Une suppression a échoué parce que la ligne locale a été modifiée par une autre mise à jour ou elle a été supprimée puis réinsérée.<br /><br /> 4 : Une suppression a échoué parce que la ligne locale a déjà été supprimée.<br /><br /> 5 : Une insertion a échoué parce que la ligne locale a déjà été insérée ou a été insérée puis mise à jour.|  
+|__$conflict_type|**Int**|Type de conflit qui s'est produit, qui peut être l'une des valeurs suivantes :<br /><br /> 1 : Une mise à jour a échoué, car la ligne locale a été modifiée par une autre mise à jour ou si elle a été supprimée et puis réinsérée.<br /><br /> 2 : Une mise à jour a échoué, car la ligne locale a déjà été supprimée.<br /><br /> 3: Une suppression a échoué, car la ligne locale a été modifiée par une autre mise à jour ou si elle a été supprimée et puis réinsérée.<br /><br /> 4 : Une suppression a échoué, car la ligne locale a déjà été supprimée.<br /><br /> 5 : Une insertion a échoué parce que la ligne locale a déjà été insérée ou elle a été insérée puis mise à jour.|  
 |__$is_winner|**bit**|Indique si la ligne dans cette table était le vainqueur du conflit, ce qui signifie qu'elle a été appliquée au nœud local.|  
 |__$pre_version|**varbinary (32)**|Version de la base de données d'où provient la modification conflictuelle.|  
-|__$reason_code|**Int**|Code de résolution du conflit. Il peut s'agir de l'une des valeurs suivantes :<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> <br /><br /> Pour plus d’informations, consultez **__ $reason_text**.|  
-|__$reason_text|**nvarchar (720)**|Résolution du conflit. Il peut s'agir de l'une des valeurs suivantes :<br /><br /> Résolu (1)<br /><br /> Non résolu (2)<br /><br /> Inconnu (0)|  
+|__$reason_code|**Int**|Code de résolution du conflit. Peut avoir l'une des valeurs suivantes :<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> <br /><br /> Pour plus d’informations, consultez **__ $reason_text**.|  
+|__$reason_text|**nvarchar (720)**|Résolution du conflit. Peut avoir l'une des valeurs suivantes :<br /><br /> Résolu (1)<br /><br /> Non résolu (2)<br /><br /> Inconnu (0)|  
 |__$update_bitmap|**varbinary (** *n* **)**. La taille varie selon le contenu.|Bitmap qui indique quelles colonnes ont été mises à jour en cas de conflit mise à jour-mise à jour.|  
 |__$inserted_date|**datetime**|Date et heure d'insertion de la ligne en conflit dans cette table.|  
 |__$row_id|**timestamp**|Valeur de version associée à la ligne source du conflit.|  

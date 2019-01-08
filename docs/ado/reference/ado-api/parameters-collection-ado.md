@@ -18,12 +18,12 @@ ms.assetid: 497cae10-3913-422a-9753-dcbb0a639b1b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 28832f7e96ddbb149db5561654d55ef0003551cd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7dbfff2a8db4405e19eb448e7bd7db5c8ac236f8
+ms.sourcegitcommit: 98324d9803edfa52508b6d5d3554614d0350a0b9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47657847"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52321795"
 ---
 # <a name="parameters-collection-ado"></a>Parameters, collection (ADO)
 Contient tous les [paramètre](../../../ado/reference/ado-api/parameter-object.md) objets d’un [commande](../../../ado/reference/ado-api/command-object-ado.md) objet.  
@@ -45,7 +45,7 @@ Contient tous les [paramètre](../../../ado/reference/ado-api/parameter-object.m
   
 2.  Lors de l’appel d’une procédure stockée avec des paramètres et en ajoutant explicitement un paramètre à la **paramètres** collection avec **Append**, le paramètre de retour de sortie/valeur doit être ajouté à la **Paramètres** collection. La valeur de retour doit tout d’abord être ajoutée à la **paramètres** collection. Utilisez **Append** pour ajouter les autres paramètres dans le **paramètres** collection dans l’ordre de définition. Par exemple, la procédure stockée SPWithParam a deux paramètres. Le premier paramètre, *InParam*, est un paramètre d’entrée défini comme adVarChar (20) et le second paramètre, *OutParam*, est un paramètre output défini comme adVarChar (20). Vous pouvez récupérer le paramètre de valeur de retour/sortie par le code suivant.  
   
-    ```  
+    ```vb
     ' Open Connection Conn  
     set ccmd = CreateObject("ADODB.Command")  
     ccmd.Activeconnection= Conn  
@@ -55,7 +55,7 @@ Contient tous les [paramètre](../../../ado/reference/ado-api/parameter-object.m
   
     ccmd.parameters.Append ccmd.CreateParameter(, adInteger, adParamReturnValue, , NULL)   ' return value  
     ccmd.parameters.Append ccmd.CreateParameter("InParam", adVarChar, adParamInput, 20, "hello world")   ' input parameter  
-    ccmd.parameters.Append ccmd.CreateParameter("OutParam", adVarChar, adParamOuput, 20, NULL)   ' output parameter  
+    ccmd.parameters.Append ccmd.CreateParameter("OutParam", adVarChar, adParamOutput, 20, NULL)   ' output parameter  
   
     ccmd.execute()  
   
@@ -66,7 +66,7 @@ Contient tous les [paramètre](../../../ado/reference/ado-api/parameter-object.m
   
 3.  Lors de l’appel d’une procédure stockée avec des paramètres et la configuration des paramètres en appelant le **élément** méthode sur le **paramètres** collection, le paramètre de valeur de retour/sortie de la procédure stockée peut récupérer à partir de la **paramètres** collection. Par exemple, la procédure stockée SPWithParam a deux paramètres. Le premier paramètre, *InParam*, est un paramètre d’entrée défini comme adVarChar (20) et le second paramètre, *OutParam*, est un paramètre output défini comme adVarChar (20). Vous pouvez récupérer le paramètre de valeur de retour/sortie par le code suivant.  
   
-    ```  
+    ```vb
     ' Open Connection Conn  
     set ccmd = CreateObject("ADODB.Command")  
     ccmd.Activeconnection= Conn  

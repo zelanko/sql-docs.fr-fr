@@ -13,12 +13,12 @@ ms.assetid: ab0c09d7-ce2e-487d-a1ed-a4b5adb6cc01
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f415816f935e03b6b533fded2fb00760a101526d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ec58691ab78fdf7c57871805bb095ca48f221da7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100177"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373401"
 ---
 # <a name="implementation-of-child-packages"></a>Implémentation de packages enfants
   Quand vous implémentez un équilibrage de charge avec [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], des packages enfants sont installés sur d’autres serveurs pour tirer parti du temps UC ou serveur disponible. Pour créer et exécuter les packages enfants, les opérations suivantes sont nécessaires :  
@@ -56,7 +56,7 @@ ms.locfileid: "48100177"
   
 -   Exécution du travail individuel de SQL Server Agent sur l’ordinateur distant à l’aide de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], pour vérifier que le package fonctionne.  
   
- Pour plus d’informations sur la résolution des problèmes liés aux packages que vous exécutez à partir des travaux de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent, consultez [Un package SSIS ne s’exécute pas lorsque vous appelez le package SSIS à partir d’une étape de travail de SQL Server Agent](http://support.microsoft.com/kb/918760) dans la Base de connaissances du support technique [!INCLUDE[msCoName](../includes/msconame-md.md)] .  
+ Pour plus d’informations sur la résolution des problèmes liés aux packages que vous exécutez à partir des travaux de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent, consultez [Un package SSIS ne s’exécute pas lorsque vous appelez le package SSIS à partir d’une étape de travail de SQL Server Agent](https://support.microsoft.com/kb/918760) dans la Base de connaissances du support technique [!INCLUDE[msCoName](../includes/msconame-md.md)] .  
   
  SQL Server Agent vérifie l'accès au sous-système pour un proxy et donne accès au proxy à chaque exécution de l'étape de travail.  
   
@@ -68,8 +68,8 @@ ms.locfileid: "48100177"
   
 ## <a name="related-content"></a>Contenu associé  
   
--   Entrée de blog, [SSIS: Accessing variables in a parent package](http://go.microsoft.com/fwlink/?LinkId=257729), sur le site Web consultingblogs.emc.com.  
+-   Entrée de blog, [SSIS : L’accès aux variables dans un package parent](https://go.microsoft.com/fwlink/?LinkId=257729), sur le site Web consultingblogs.emc.com.  
   
--   Entrée de blog, [SSIS: Should you execute child packages in-process or out-of-process?](http://go.microsoft.com/fwlink/?LinkId=220819), sur le site Web consultingblogs.emc.com.  
+-   Entrée de blog, [SSIS : Doit s’exécuter des packages enfants in-process ou out-of-process ? ](https://go.microsoft.com/fwlink/?LinkId=220819), sur le site Web consultingblogs.emc.com.  
   
   

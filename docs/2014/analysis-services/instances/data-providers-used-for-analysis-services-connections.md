@@ -11,12 +11,12 @@ ms.assetid: 128f6dde-409d-4c12-9820-3305bab57b75
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4543c518d1fbc845793e994682df7df1bccc26dc
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 739723a42580c404d0529a6d84d907cf665f8270
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145219"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368511"
 ---
 # <a name="data-providers-used-for-analysis-services-connections"></a>Fournisseurs de données utilisés pour les connexions Analysis Services
   Analysis Services fournit trois fournisseurs de données pour l'accès au serveur et aux données. Toutes les applications qui se connectent à Analysis Services le font à l'aide de l'un de ces fournisseurs. Deux des fournisseurs ADOMD.NET et Analysis Services Management Objects (AMO) sont des fournisseurs de données managés. Le fournisseur OLE DB Analysis Services (DLL MSOLAP) est un fournisseur de données natif.  
@@ -44,12 +44,12 @@ ms.locfileid: "50145219"
   
  Le numéro de la version principale de la version initiale de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] est 12.0.2000.9.  
   
- Pour plus d’informations sur l’obtention des informations de version et de build, consultez [comment déterminer la version et l’édition de SQL Server et ses composants](http://support.microsoft.com/kb/321185).  
+ Pour plus d’informations sur l’obtention des informations de version et de build, consultez [comment déterminer la version et l’édition de SQL Server et ses composants](https://support.microsoft.com/kb/321185).  
   
 ##  <a name="bkmk_LibUpdate"></a> Procédure : déterminer la version des fournisseurs de données Analysis Services  
  Les fournisseurs de données sont installés avec Analysis Services, ainsi que par les applications clientes qui se connectent régulièrement à des bases de données Analysis Services, comme Excel.  
   
- Office 2007 installe les fournisseurs de données SQL Server 2005. Office 2010 installe les fournisseurs de données SQL Server 2008. Office 2013 installe les fournisseurs de données SQL Server 2012. Si vous utilisez plusieurs versions d'Office ou de SQL Server, et que les connexions ou la disponibilité des fonctionnalités ne correspondent pas à vos attentes, vous devrez peut-être installer une version plus récente des fournisseurs de données. Vous pouvez exécuter plusieurs versions principales de chaque fournisseur de données côte à côte sur le même ordinateur.  
+ Office 2007 installe les fournisseurs de données SQL Server 2005. Office 2010 installe les fournisseurs de données SQL Server 2008. Office 2013 installe les fournisseurs de données SQL Server 2012. Si vous utilisez plusieurs versions d'Office ou de SQL Server, et que les connexions ou la disponibilité des fonctionnalités ne correspondent pas à vos attentes, vous devrez peut-être installer une version plus récente des fournisseurs de données. Vous pouvez exécuter plusieurs versions principales de chaque fournisseur de données côte à côte sur le même ordinateur.  
   
 #### <a name="find-the-file-version-of-the-oledb-provider"></a>Rechercher la version de fichier du fournisseur OLEDB  
   
@@ -74,7 +74,7 @@ ms.locfileid: "50145219"
   
 #### <a name="find-the-data-providers-on-the-download-site"></a>Recherche les fournisseurs de données sur le site de téléchargement  
   
-1.  Accédez au [Centre de téléchargement Microsoft](http://go.microsoft.com/fwlink/p/?LinkID=296473).  
+1.  Accédez au [Centre de téléchargement Microsoft](https://go.microsoft.com/fwlink/p/?LinkID=296473).  
   
 2.  Développez **Instructions d’installation**.  
   

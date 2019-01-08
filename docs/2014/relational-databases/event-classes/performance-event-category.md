@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -17,12 +16,12 @@ ms.assetid: 708f3585-d8be-4980-bbff-672d7c59397e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 92b7a43dafcda422784d2b9705eff71eff7fa83b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b7f387145077e5a562279b6c72bc0f7eefadde36
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48064049"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52813441"
 ---
 # <a name="performance-event-category"></a>Performance, catégorie d'événements
   Utilisez les classes d’événements **Performance** pour surveiller les classes d’événements **Showplan** et celles produites par l’exécution des opérateurs du langage de manipulation des données SQL (DML, Data Manipulation Language).  
@@ -31,13 +30,13 @@ ms.locfileid: "48064049"
   
 |Rubrique|Description|  
 |-----------|-----------------|  
-|[Auto Stats, classe d’événements](auto-stats-event-class.md)|Indique qu'une mise à jour automatique des statistiques d'index et de colonne a eu lieu.|  
+|[Classe d'événements Auto Stats](auto-stats-event-class.md)|Indique qu'une mise à jour automatique des statistiques d'index et de colonne a eu lieu.|  
 |[Degree of Parallelism &#40;7.0 Insert&#41;, classe d’événements](degree-of-parallelism-7-0-insert-event-class.md)|Indique que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a exécuté une instruction SELECT, INSERT, UPDATE ou DELETE en utilisant un plan série ou parallèle. Le nombre d'unités centrales utilisées pour effectuer l'opération est également indiqué.|  
-|[Performance Statistics, classe d’événements](performance-statistics-event-class.md)|Contrôle les performances des requêtes exécutées.|  
+|[Classe d'événements Performance Statistics](performance-statistics-event-class.md)|Contrôle les performances des requêtes exécutées.|  
 |[Classe d'événements Showplan All](showplan-all-event-class.md)|Identifie des opérateurs **Showplan** dans une instruction SQL.|  
 |[Classe d'événements Showplan All for Query Compile](showplan-all-for-query-compile-event-class.md)|Affiche des données temporelles de compilation pour des opérateurs **Showplan** .|  
 |[Classe d'événements Showplan Statistics Profile](showplan-statistics-profile-event-class.md)|Affiche le coût estimé d'une requête.|  
-|[Showplan XML, classe d’événements](showplan-xml-event-class.md)|Identifie les opérateurs **Showplan** dans une instruction SQL. La classe d'événements stocke chaque événement sous la forme d'un document XML bien défini.|  
+|[Classe d'événements Showplan XML](showplan-xml-event-class.md)|Identifie les opérateurs **Showplan** dans une instruction SQL. La classe d'événements stocke chaque événement sous la forme d'un document XML bien défini.|  
 |[Classe d'événements Showplan XML for Query Compile](showplan-xml-for-query-compile-event-class.md)|Affiche des données temporelles de compilation pour des opérateurs **Showplan** au format XML.|  
 |[Classe d'événements Showplan XML Statistics Profile](showplan-xml-statistics-profile-event-class.md)|Identifie les opérateurs **Showplan** associés à une instruction SQL. La sortie est un document XML.|  
 |[Classe d'événements SQL:FullTextQuery](sql-fulltextquery-event-class.md)|Indique que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a exécuté une requête de texte intégral.|  

@@ -1,22 +1,24 @@
 ---
-title: Qu’est un pool de données de clusters SQL données volumineuses ? | Microsoft Docs
+title: Quelles sont les pools de données ?
+titleSuffix: SQL Server 2019 big data clusters
 description: Cet article décrit le pool de données dans un cluster de données volumineux de SQL Server 2019.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/01/2018
+ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: bf47aa1734e2b1a849fb8333da9c914ea4244f41
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.custom: seodec18
+ms.openlocfilehash: 088d6681910aad6a02205c812ff0e5a9d7d090ee
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50050762"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030803"
 ---
-# <a name="what-is-a-sql-big-data-clusters-data-pool"></a>Qu’est un pool de données de clusters SQL données volumineuses ?
+# <a name="what-are-data-pools-in-a-sql-server-2019-big-data-cluster"></a>Quelles sont les pools de données dans un cluster de données volumineux de SQL Server 2019 ?
 
-Cet article décrit le rôle de *pools de données SQL Server* dans un cluster de données volumineuses preview SQL Server 2019. Les sections suivantes décrivent l’architecture et les fonctionnalités d’un pool de données SQL.
+Cet article décrit le rôle de *pools de données SQL Server* dans un cluster de données volumineuses de SQL Server 2019 (version préliminaire). Les sections suivantes décrivent l’architecture et les fonctionnalités d’un pool de données SQL.
 
 ## <a name="data-pool-architecture"></a>Architecture de pool de données
 

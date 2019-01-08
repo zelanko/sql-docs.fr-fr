@@ -20,12 +20,12 @@ ms.assetid: f8d6e342-c010-434e-b1cd-f5371fb50a14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ef1336514d876d171cd9d31d8c20171e154f9a2a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1ef74d98102c424a71ac1728d664fddbeac2296c
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47646897"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215598"
 ---
 # <a name="sqlconfigdatasource-function"></a>Fonction SQLConfigDataSource
 **Conformité**  
@@ -66,7 +66,7 @@ BOOL SQLConfigDataSource(
   
  ODBC_REMOVE_SYS_DSN : Supprimer une source de données système.  
   
- ODBC_REMOVE_DEFAULT_DSN : Supprimez la section de spécification de source de données par défaut à partir des informations système. (Elle supprime également la section de spécification de pilote par défaut de l’entrée de fichier Odbcinst.ini dans les informations système. Cela *fréquents* effectue la même fonction que déconseillées **SQLRemoveDefaultDataSource** (fonction).) Lorsque cette option est spécifiée, tous les autres paramètres dans l’appel à **SQLConfigDataSource** doivent être des valeurs null ; s’ils ne sont pas NULL, elles seront ignorées.  
+ ODBC_REMOVE_DEFAULT_DSN : Supprimer la section de spécification de source de données par défaut à partir des informations système. (Elle supprime également la section de spécification de pilote par défaut de l’entrée de fichier Odbcinst.ini dans les informations système. Cela *fréquents* effectue la même fonction que déconseillées **SQLRemoveDefaultDataSource** (fonction).) Lorsque cette option est spécifiée, tous les autres paramètres dans l’appel à **SQLConfigDataSource** doivent être des valeurs null ; s’ils ne sont pas NULL, elles seront ignorées.  
   
  *lpszDriver*  
  [Entrée] Description du pilote (généralement le nom du SGBD associé) présentée aux utilisateurs au lieu du nom de pilote physique.  

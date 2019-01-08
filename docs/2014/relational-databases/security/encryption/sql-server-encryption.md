@@ -14,12 +14,12 @@ ms.assetid: ead0150e-4943-4ad5-84c8-36f85c7278f4
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: f5838d497808e9a251522536a00d590403674eda
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8a9018c43ace6ebbf0a905567bb806b616530a02
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053769"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352188"
 ---
 # <a name="sql-server-encryption"></a>Chiffrement SQL Server
   Le chiffrement est un processus visant à rendre des données inintelligibles à l'aide d'une clé ou d'un mot de passe. Les données sont alors inutiles en l'absence du mot de passe ou de la clé de déchiffrement correspondante. Le chiffrement ne résout pas les problèmes de contrôle d'accès. Toutefois, il améliore la sécurité en limitant les pertes de données même si les contrôles d'accès sont contournés. Par exemple, si l'ordinateur hôte de la base de données est mal configuré et qu'un pirate parvient à se procurer des données sensibles, les données subtilisées seront vraisemblablement inexploitables si elles sont chiffrées.  
@@ -36,7 +36,7 @@ ms.locfileid: "48053769"
  [Choisir un algorithme de chiffrement](choose-an-encryption-algorithm.md)  
  Informations sur la manière de sélectionner un algorithme de chiffrement efficace.  
   
- [Transparent Data Encryption &#40;TDE&#41;](transparent-data-encryption.md)  
+ [Chiffrement transparent des données &#40;TDE&#41;](transparent-data-encryption.md)  
  Informations générales sur la manière de chiffrer des données de façon transparente.  
   
  [SQL Server et clés de chiffrement de base de données &#40;moteur de base de données&#41;](sql-server-and-database-encryption-keys-database-engine.md)  
@@ -62,7 +62,7 @@ ms.locfileid: "48053769"
  Informations sur l'utilisation d'un certificat pour chiffrer des données.  
   
 ## <a name="external-resources"></a>Ressources externes  
- [Microsoft TechNet : SQL Server TechCenter : SQL Server 2005 – Sécurité et protection](http://www.microsoft.com/technet/prodtechnol/sql/2005/library/security.mspx)  
+ [Microsoft TechNet : SQL Server TechCenter : Protection et sécurité de SQL Server 2005](https://www.microsoft.com/technet/prodtechnol/sql/2005/library/security.mspx)  
  Informations à jour sur la sécurité [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ## <a name="see-also"></a>Voir aussi  

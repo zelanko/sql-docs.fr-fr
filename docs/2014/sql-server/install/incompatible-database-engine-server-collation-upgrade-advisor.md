@@ -11,12 +11,12 @@ ms.assetid: 80f499d6-2c90-49eb-a5b3-0bb5b7faaa3b
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: d66e01079a0ab86a1456e53dd310614d3c291267
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d2639f783f862e27041985ac27ff16740b47cbb5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48173411"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356762"
 ---
 # <a name="incompatible-database-engine-server-collation-upgrade-advisor"></a>Classement du serveur du moteur de base de données incompatible (Conseiller de mise à niveau)
   Mise à niveau de l’Assistant a détecté [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] utilise une instance de la [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] qui est configuré pour utiliser un classement du serveur incompatible.  
@@ -44,8 +44,8 @@ ms.locfileid: "48173411"
 ## <a name="corrective-action"></a>Action corrective  
  La propriété de classement du serveur du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ne peut pas être modifiée. Vous ne pouvez pas effectuer une mise à niveau de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Vous devez migrer votre installation de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sur un nouveau serveur qui utilise un classement du serveur compatible. Pour plus d'informations, consultez les documents suivants :  
   
--   [Mettre à niveau et migrer Reporting Services](http://go.microsoft.com/fwlink/?LinkId=233227)  
+-   [Mettre à niveau et migrer Reporting Services](https://go.microsoft.com/fwlink/?LinkId=233227)  
   
--   [Sélection d’un classement SQL Server](http://go.microsoft.com/fwlink/?LinkId=233226)  
+-   [Sélection d’un classement SQL Server](https://go.microsoft.com/fwlink/?LinkId=233226)  
   
   

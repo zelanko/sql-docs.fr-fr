@@ -18,12 +18,12 @@ ms.assetid: 18935cf4-b320-4954-b6c1-e007fcefe358
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 252e3c5f2738b5f3e87632be86ba9f4b6c1cfbc8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 533b096b11ded9c76db81e640c961449a2785330
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782797"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211518"
 ---
 # <a name="xpcmdshell-transact-sql"></a>xp_cmdshell (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ The command(s) completed successfully.
   
  **xp_cmdshell** peut être activé et désactivé à l’aide de la gestion basée sur une stratégie ou en exécutant **sp_configure**. Pour plus d’informations, consultez [Configuration de la surface](../../relational-databases/security/surface-area-configuration.md) et [Server Configuration Option xp_cmdshell](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md).  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  Si **xp_cmdshell** est exécutée dans un lot et retourne une erreur, le lot échoue. Cela représente un changement de comportement. Dans les versions antérieures de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le traitement continue de s’exécuter.  
   
 ## <a name="xpcmdshell-proxy-account"></a>Compte proxy xp_cmdshell  
@@ -84,7 +84,7 @@ EXEC sp_xp_cmdshell_proxy_account 'SHIPPING\KobeR','sdfh%dkc93vcMt0';
   
  Pour plus d’informations, consultez [sp_xp_cmdshell_proxy_account &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-xp-cmdshell-proxy-account-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Étant donné que les utilisateurs malveillants essaient quelquefois d’élever leurs privilèges à l’aide de **xp_cmdshell**, **xp_cmdshell** est désactivée par défaut. Utilisez **sp_configure** ou **gestion basée sur** pour l’activer. Pour plus d’informations, consultez [xp_cmdshell (option de configuration de serveur)](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md).  
   
  Lorsque tout d’abord activé, **xp_cmdshell** nécessite l’autorisation CONTROL SERVER pour exécuter et le processus Windows créé par **xp_cmdshell** a le même contexte de sécurité que le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] compte de service. Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] compte de service a souvent plus d’autorisations que nécessaire pour le travail effectué par le processus créé par **xp_cmdshell**. Pour améliorer la sécurité, l’accès à **xp_cmdshell** doit être limité aux utilisateurs disposant de privilèges élevés.  
@@ -128,7 +128,7 @@ REVERT ;
 EXEC master..xp_cmdshell 'dir *.exe''  
 ```  
   
-### <a name="b-returning-no-output"></a>B. Aucun renvoi d'information en sortie  
+### <a name="b-returning-no-output"></a>b. Aucun renvoi d'information en sortie  
  L'exemple ci-dessous utilise `xp_cmdshell` pour exécuter une chaîne de commande sans retourner les informations en sortie au client.  
   
 ```  

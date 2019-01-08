@@ -1,5 +1,5 @@
 ---
-title: À l’aide d’une Version modifiée de l’analyse des Services de projet du didacticiel | Documents Microsoft
+title: À l’aide d’une Version modifiée de l’analyse des Services de projet du didacticiel | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 93847b7e6cade7d77774603ba1852c16a5a783b7
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 4d3fb90b8823ff8a8585647bf60b87ed4098bc6e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017696"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52401112"
 ---
-# <a name="lesson-4-1---using-a-modified-version-of-the-analysis-services-tutorial-project"></a>Leçon 4-1-à l’aide d’une Version modifiée du projet didacticiel Analysis Services
+# <a name="lesson-4-1---using-a-modified-version-of-the-analysis-services-tutorial-project"></a>Leçon 4-1 : à l’aide d’une Version modifiée du projet didacticiel Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 Les sept dernières leçons de ce didacticiel sont basées sur une version évoluée du projet du didacticiel [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que vous avez créé au cours des trois premières leçons. D’autres tables et calculs nommés ont été ajoutés à la vue de source de données **Adventure Works DW 2012** , des dimensions supplémentaires ont été ajoutées au projet et ces nouvelles dimensions ajoutées au cube [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial. De plus, un deuxième groupe de mesures a été ajouté, qui contient des mesures d'une deuxième table de faits. Ce projet évolué va vous permettre d'apprendre à enrichir en fonctionnalités votre application Business Intelligence sans avoir à répéter ce que vous avez déjà appris.  
@@ -25,15 +25,15 @@ Avant de poursuivre votre apprentissage dans le didacticiel, vous devez téléch
   
 ## <a name="downloading-and-extracting-the-project-file"></a>Téléchargement et extraction du fichier projet  
   
-1.  [Cliquez ici](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks-analysis-services) pour accéder à la page de téléchargement qui fournit les exemples de projets de ce didacticiel. Les projets de didacticiel sont inclus dans le **adventure-works-multidimensionnel-didacticiel-projects.zip** télécharger.  
+1.  [Cliquez ici](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks-analysis-services) pour accéder à la page de téléchargement qui fournit les exemples de projets de ce didacticiel. Les projets de didacticiel sont inclus dans le **adventure-works-multidimensionnelles-didacticiel-projects.zip** télécharger.  
   
-2.  Cliquez sur **adventure-works-multidimensionnel-didacticiel-projects.zip** pour télécharger le package qui contient les projets de ce didacticiel.  
+2.  Cliquez sur **adventure-works-multidimensionnelles-didacticiel-projects.zip** pour télécharger le package qui contient les projets pour ce didacticiel.  
   
     Par défaut, le fichier .zip est enregistré dans le dossier Téléchargements. Vous devez déplacer le fichier .zip vers un emplacement dont le chemin d'accès est plus court (par exemple, créez un dossier C:\Tutorials pour stocker les fichiers).  Vous pouvez ensuite extraire les fichiers contenus dans le fichier .zip. Si vous essayez de décompresser les fichiers dans le dossier Téléchargements, dont le chemin d'accès est long, vous n'obtiendrez que la leçon 1.  
   
 3.  Créez un sous-dossier au niveau ou proche du lecteur racine, par exemple, C:\Tutorial.  
   
-4.  Déplacer le **adventure-works-multidimensionnel-didacticiel-projects.zip** fichier dans le sous-dossier.  
+4.  Déplacer le **adventure-works-multidimensionnelles-didacticiel-projects.zip** fichier dans le sous-dossier.  
   
 5.  Cliquez avec le bouton droit sur le fichier et sélectionnez **Extraire tout**.  
   
@@ -41,9 +41,9 @@ Avant de poursuivre votre apprentissage dans le didacticiel, vous devez téléch
   
 ## <a name="loading-and-processing-the-enhanced-project"></a>Chargement et traitement du projet amélioré  
   
-1.  Dans [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], dans le menu **Fichier** , cliquez sur **Fermer la solution** pour fermer les fichiers que vous n’utiliserez pas.  
+1.  Dans [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], dans le **fichier** menu, cliquez sur **fermer la Solution** pour fermer les fichiers que vous n’utiliserez pas.  
   
-2.  Dans le menu **Fichier**, pointez sur **Ouvrir**, puis cliquez sur **Projet/Solution**.  
+2.  Dans le menu **Fichier** , pointez sur **Ouvrir**, puis cliquez sur **Projet/Solution**.  
   
 3.  Accédez à l'emplacement dans lequel vous avez extrait les fichiers de projet du didacticiel.  
   

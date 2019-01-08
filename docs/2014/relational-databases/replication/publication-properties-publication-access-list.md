@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.newpubwizard.pubproperties.publicationaccesslist.f1
@@ -13,12 +12,12 @@ ms.assetid: 9587bb9e-c66c-4e70-8171-09b943ec2d50
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a9e94541f6c71da9ac40ecd34aacb11d7392b2df
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f9945c45c1747524fe264553fdbabf816e799f17
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224149"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52776841"
 ---
 # <a name="publication-properties-publication-access-list"></a>Propriétés de la publication, Liste d'accès aux publications
   La page **Liste d'accès aux publications** de la boîte de dialogue **Propriétés de la publication** vous permet d'ajouter et de supprimer des informations de connexion, des comptes et des groupes de la liste d'accès aux publications. Cette dernière constitue le mécanisme principal assurant la sécurité du serveur de publication. Lorsque vous créez une publication, la réplication crée une liste d'accès aux publications pour cette première. Cette liste, fonctionnant de la même façon qu'une liste de contrôle d'accès [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, contient une liste d'informations de connexions, de comptes et de groupes bénéficiant de l'autorisation d'accès à la publication.  

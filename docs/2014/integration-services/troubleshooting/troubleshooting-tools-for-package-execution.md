@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Integration Services packages, troubleshooting
@@ -17,12 +16,12 @@ ms.assetid: f18d6ff6-e881-444c-a399-730b52130e7c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 34270698b6035f7646d9482a82746c4ccff09d78
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ca170bbae969db8610e1e0ec6e61e3e68fa905f4
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48132409"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53377631"
 ---
 # <a name="troubleshooting-tools-for-package-execution"></a>Outils de dépannage pour l'exécution des packages
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] intègre des fonctionnalités et des outils que vous pouvez utiliser pour résoudre des problèmes liés aux packages que vous exécutez après les avoir menés à terme et les avoir déployés.  
@@ -55,7 +54,7 @@ ms.locfileid: "48132409"
   
      **Ajouter la description de l’erreur**. Vous pouvez aisément rechercher une description de l'erreur à l'aide d'un composant Script. Pour plus d’informations, consultez [amélioration d’une sortie d’erreur pour le composant Script](../extending-packages-scripting-data-flow-script-component-examples/enhancing-an-error-output-with-the-script-component.md).  
   
-     **Ajoutez le nom de la colonne d’erreur**. La recherche du nom de colonne correspondant à l'ID de colonne enregistré dans la sortie d'erreur n'est pas facile dans le composant Script et exige d'autres étapes. Chaque ID de colonne au sein d'un flux de données est unique dans la tâche de flux de données concernée et demeure dans le package au moment de la conception. L'approche suivante est une solution qui suggère l'ajout du nom de la colonne à la sortie d'erreur. Pour obtenir un exemple montrant comment utiliser cette approche, consultez [Ajout du nom de colonne d’erreur à une sortie d’erreur](http://go.microsoft.com/fwlink/?LinkId=261546) sur dougbert.com.  
+     **Ajoutez le nom de la colonne d’erreur**. La recherche du nom de colonne correspondant à l'ID de colonne enregistré dans la sortie d'erreur n'est pas facile dans le composant Script et exige d'autres étapes. Chaque ID de colonne au sein d'un flux de données est unique dans la tâche de flux de données concernée et demeure dans le package au moment de la conception. L'approche suivante est une solution qui suggère l'ajout du nom de la colonne à la sortie d'erreur. Pour obtenir un exemple montrant comment utiliser cette approche, consultez [Ajout du nom de colonne d’erreur à une sortie d’erreur](https://go.microsoft.com/fwlink/?LinkId=261546) sur dougbert.com.  
   
     1.  **Créer une table de correspondance de noms de colonnes**. Créez une application qui utilise l'API [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pour intervenir de manière itérative dans chaque package enregistré, chaque flux de données au sein du package, chaque objet au sein du flux de données, puis chaque entrée ou sortie dans l'objet du flux de données. L'application doit conserver l'ID de colonne et le nom de chaque colonne dans une table de recherche, ainsi que l'ID de la tâche de flux de données parent et celui du package.  
   
@@ -86,7 +85,7 @@ ms.locfileid: "48132409"
   
     3.  **Si possible, capturez les données sur le nombre de lignes**. Si possible, créez une table séparée pour les informations concernant le nombre de lignes dans laquelle chaque instance d'exécution de package est identifiée par son ExecutionID. Utilisez la transformation de calcul du nombre de lignes pour enregistrer le nombre de lignes dans une série de variables à des étapes critiques du flux de données. À la fin du flux de données, utilisez une tâche d'exécution SQL pour insérer la série de valeurs dans une ligne de la table en vue d'une analyse et d'un rapport ultérieurs.  
   
-     Pour plus d'informations sur cette approche, consultez la section « ETL Auditing and Logging » dans le livre blanc [!INCLUDE[msCoName](../../includes/msconame-md.md)] [Project REAL: Business Intelligence ETL Design Practices](http://go.microsoft.com/fwlink/?LinkId=96602)(en anglais).  
+     Pour plus d’informations sur cette approche, consultez la section « ETL Auditing and Logging » dans le [!INCLUDE[msCoName](../../includes/msconame-md.md)] livre blanc, [Project REAL : Business Intelligence ETL Design Practices](https://go.microsoft.com/fwlink/?LinkId=96602).  
   
 ## <a name="troubleshoot-package-execution-by-using-debug-dump-files"></a>Résoudre les problèmes liés à l'exécution des packages à l'aide de fichiers de vidage du débogage  
  Dans [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], vous pouvez créer des fichiers de vidage du débogage qui fourniront des informations sur l'exécution d'un package. Pour plus d’informations, voir [Generating Dump Files for Package Execution](generating-dump-files-for-package-execution.md).  
@@ -94,12 +93,12 @@ ms.locfileid: "48132409"
 ## <a name="troubleshoot-run-time-validation-issues"></a>Résoudre les problèmes de validation au moment de l'exécution  
  Il est possible, parfois, que vous ne parveniez pas à vous connecter à vos sources de données ou que des parties de votre package ne puissent pas être validées jusqu'à ce que les précédentes tâches du package aient été exécutées. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] vous permettent d'éviter des erreurs de validation susceptibles de survenir dans ces conditions :  
   
--   **Configurez la propriété DelayValidation dans les éléments de package non valides lors du chargement du package**. Vous pouvez définir `DelayValidation` à `True` sur les éléments de package dont la configuration n’est pas valide, afin d’éviter les erreurs de validation lors du chargement du package. Par exemple, vous pouvez disposer d'une tâche Flux de données qui utilise une table de destination qui n'existe pas jusqu'à ce qu'une tâche d'exécution SQL crée la table au moment de l'exécution. Le `DelayValidation` propriété peut être activée au niveau du package ou au niveau des tâches individuelles et des conteneurs inclus dans le package.  
+-   **Configurez la propriété DelayValidation dans les éléments de package non valides lors du chargement du package**. Pour éviter des erreurs de validation lors du chargement du package, vous pouvez affecter à `DelayValidation` la valeur `True` dans des éléments de package dont la configuration n'est pas valide. Par exemple, vous pouvez disposer d'une tâche Flux de données qui utilise une table de destination qui n'existe pas jusqu'à ce qu'une tâche d'exécution SQL crée la table au moment de l'exécution. La propriété `DelayValidation` peut être activée au niveau du package ou au niveau des tâches individuelles et des conteneurs inclus dans le package.  
   
-     Le `DelayValidation` propriété peut être définie sur une tâche de flux de données, mais pas sur les données individuelles des composants de flux. Vous pouvez obtenir un résultat similaire en affectant à la propriété <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> des composants de flux de données individuels la valeur `false`. Toutefois, lorsque la valeur de cette propriété est `false`, le composant n’a pas connaissance des modifications apportées aux métadonnées des sources de données externes. Lorsque la valeur `true`, le <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> propriété peut aider à éviter les problèmes de blocage provoqués par un verrouillage dans la base de données, en particulier lorsque le package utilise des transactions.  
+     La propriété `DelayValidation` peut être définie sur une tâche Flux de données mais pas sur des composants de flux de données individuels. Vous pouvez obtenir un résultat similaire en affectant à la propriété <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> des composants de flux de données individuels la valeur `false`. Néanmoins, si cette propriété affiche la valeur `false`, le composant n'a pas connaissance des modifications apportées aux métadonnées des sources de données externes. Lorsque la valeur `true` est définie, la propriété <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> peut permettre d'éviter des problèmes de blocage provoqués par un verrouillage dans la base de données, surtout lorsque le package utilise des transactions.  
   
 ## <a name="troubleshoot-run-time-permissions-issues"></a>Résoudre les problèmes d'autorisations au moment de l'exécution  
- Si vous rencontrez des erreurs lorsque vous tentez d'exécuter des packages déployés à l'aide de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , il est possible que les comptes employés par ce dernier ne disposent pas des autorisations nécessaires. Pour plus d'informations sur la résolution des problèmes liés aux packages que vous exécutez à partir des travaux de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consultez [Un package SSIS n'est pas exécuté lorsque vous appelez le package SSIS à partir d'une étape de travail de SQL Server Agent](http://support.microsoft.com/kb/918760). Pour plus d’informations sur l’exécution de packages à partir des travaux de l’Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Travaux de l’Agent SQL Server pour les packages](../packages/sql-server-agent-jobs-for-packages.md).  
+ Si vous rencontrez des erreurs lorsque vous tentez d'exécuter des packages déployés à l'aide de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , il est possible que les comptes employés par ce dernier ne disposent pas des autorisations nécessaires. Pour plus d'informations sur la résolution des problèmes liés aux packages que vous exécutez à partir des travaux de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consultez [Un package SSIS n'est pas exécuté lorsque vous appelez le package SSIS à partir d'une étape de travail de SQL Server Agent](https://support.microsoft.com/kb/918760). Pour plus d’informations sur l’exécution de packages à partir des travaux de l’Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Travaux de l’Agent SQL Server pour les packages](../packages/sql-server-agent-jobs-for-packages.md).  
   
  Pour se connecter à des sources de données Excel ou Access, l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requiert un compte doté de l'autorisation de lire, écrire, créer et supprimer des fichiers temporaires dans le dossier spécifié par les variables d'environnement TEMP et TMP.  
   
@@ -111,9 +110,9 @@ ms.locfileid: "48132409"
  Si vous rencontrez une erreur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sans description qui l'accompagne, vous pouvez localiser cette dernière dans le [Guide de référence des erreurs et des messages propres à Integration Services](../integration-services-error-and-message-reference.md) en recherchant l'erreur d'après son numéro. La liste ne comporte actuellement aucune information de dépannage.  
   
 ## <a name="related-tasks"></a>Tâches associées  
- [Configurer une sortie d’erreur dans un composant de flux de données](../configure-an-error-output-in-a-data-flow-component.md)  
+ [Configurer une sortie d'erreur dans un composant de flux de données](../configure-an-error-output-in-a-data-flow-component.md)  
   
 ## <a name="related-content"></a>Contenu associé  
- Entrée de blog, [Ajout du nom de la colonne d'erreur à une sortie d'erreur](http://go.microsoft.com/fwlink/?LinkId=261546)sur dougbert.com.  
+ Entrée de blog, [Ajout du nom de la colonne d'erreur à une sortie d'erreur](https://go.microsoft.com/fwlink/?LinkId=261546)sur dougbert.com.  
   
   

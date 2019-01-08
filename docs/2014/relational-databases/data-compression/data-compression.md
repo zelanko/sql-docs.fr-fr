@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - page compression [Database Engine]
@@ -22,15 +22,15 @@ ms.assetid: 5f33e686-e115-4687-bd39-a00c48646513
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b200fc8b534fad9e33f0b01d97d46d0bece4c988
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c52fa04c46ff41ce67094599a6a2f3f5074e8f03
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204939"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53364181"
 ---
 # <a name="data-compression"></a>Data Compression
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] prend en charge la compression de ligne et de page d’index et les tables rowstore et prend en charge de columnstore et la compression d’archivage columnstore pour les index et les tables columnstore.  
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] prend en charge la compression de page et de ligne pour les tables et les index rowstore, et prend en charge la compression columnstore et d'archivage columnstore pour les tables et les index columnstore.  
   
  Pour les tables et les index rowstore, utilisez la fonctionnalité de compression de données afin de réduire la taille de la base de données. Outre les économies d'espace, la compression des données peut améliorer les performances des charges de travail nécessitant de nombreuses E/S, car les données sont stockées dans beaucoup moins de pages et les requêtes doivent lire moins pages sur le disque. Toutefois, des ressources processeur supplémentaires sont nécessaires sur le serveur de base de données pour compresser et décompresser les données, alors que les données sont échangées avec l'application. La compression des lignes et des pages peut être configurée pour les objets de base de données suivants :  
   
@@ -108,12 +108,12 @@ ms.locfileid: "48204939"
   
 ||  
 |-|  
-|**S'applique à**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] via la [version actuelle](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
+|**S'applique à**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] via la [version actuelle](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
 ### <a name="basics"></a>Principes de base  
  Les tables et les index columnstore sont toujours enregistrés avec la compression columnstore. Limitez encore davantage la taille des données columnstore en configurant une compression supplémentaire appelée compression d'archivage.  Pour exécuter la compression d'archivage, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exécute l'algorithme de compression Microsoft XPRESS sur les données. Ajoutez ou supprimez la compression d'archivage en utilisant les types de compression de données suivants :  
   
--   Utilisez `COLUMNSTORE_ARCHIVE` la compression des données pour compresser les données columnstore avec compression d’archivage.  
+-   Utilisez la compression des données `COLUMNSTORE_ARCHIVE` pour compresser les données columnstore au moyen de la compression d'archivage.  
   
 -   Utilisez la compression des données **COLUMNSTORE** pour décompresser la compression d'archivage. Les données résultantes continuent à être compressées au moyen de la compression columnstore.  
   
@@ -169,7 +169,7 @@ REBUILD PARTITION = ALL WITH (
   
 -   [Sys.indexes &#40;Transact-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-indexes-transact-sql) - le `type` et `type_desc` colonnes incluent CLUSTERED COLUMNSTORE et NONCLUSTERED COLUMNSTORE.  
   
--   [Sys.partitions &#40;Transact-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-partitions-transact-sql) : `data_compression` et `data_compression_desc` colonnes incluent COLUMNSTORE et COLUMNSTORE_ARCHIVE.  
+-   [Sys.partitions &#40;Transact-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-partitions-transact-sql) - le `data_compression` et `data_compression_desc` colonnes incluent COLUMNSTORE et COLUMNSTORE_ARCHIVE.  
   
  La procédure [sp_estimate_data_compression_savings &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql) ne s’applique pas aux index columnstore.  
   
@@ -211,7 +211,7 @@ REBUILD PARTITION = ALL WITH (
      La suppression d'un index cluster HORS CONNEXION est une opération très rapide, car seuls les niveaux supérieurs des index clusters sont supprimés. Lorsqu'un index cluster est supprimé EN LIGNE, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit reconstruire le segment de mémoire deux fois, une fois pour l'étape 1 et une fois pour l'étape 2.  
   
 ## <a name="how-compression-affects-replication"></a>Impact de la compression sur la réplication  
- Lorsque vous utilisez la compression des données avec la réplication, assurez-vous de prendre en compte les considérations suivantes :  
+ Lorsque vous utilisez la compression des données avec la réplication, assurez-vous de prendre en compte les considérations suivantes :  
   
 -   Lorsque l'Agent d'instantané génère le script de schéma initial, le nouveau schéma utilise les mêmes paramètres de compression pour la table et ses index. La compression ne peut être activée simplement sur la table et pas sur l'index.  
   

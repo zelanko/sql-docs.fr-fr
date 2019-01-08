@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 0952390e21d174d4d10e99f53904de4d11be6230
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 595add5d077136c4093776fae8e3a2f7ab04bb26
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47637469"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396172"
 ---
 # <a name="configure-multiple-subnet-always-on-availability-groups-and-failover-cluster-instances"></a>Configurer plusieurs sous-réseaux groupes de disponibilité AlwaysOn et les instances de cluster de basculement
 
@@ -24,7 +24,7 @@ Quand une instance de cluster toujours sur groupe de disponibilité (AG) ou le b
 
 ## <a name="vlan-based-solution"></a>Solution basée sur le réseau local virtuel
  
-**Configuration requise**: solution pour un VLAN-based, chaque serveur impliqué dans un groupe de disponibilité ou une instance FCI a besoin de deux cartes réseau (NIC) pour une disponibilité (un double port de carte réseau serait un point unique de défaillance sur un serveur physique), afin qu’il puisse être attribué des adresses IP sur son sous-réseau natif ainsi que l’autre sur le réseau local virtuel. Il s’agit en plus de tout autre besoin de réseau, telle qu’iSCSI, qui doit également son propre réseau.
+**Configuration requise**: Pour une solution basée sur le réseau local virtuel, chaque serveur impliqué dans un groupe de disponibilité ou une instance FCI a besoin de deux cartes réseau (NIC) pour une disponibilité (un double port de carte réseau serait un point unique de défaillance sur un serveur physique), afin qu’il puisse être attribué des adresses IP sur son sous-réseau natif, ainsi que celui sur le réseau local virtuel. Il s’agit en plus de tout autre besoin de réseau, telle qu’iSCSI, qui doit également son propre réseau.
 
 La création d’adresse IP pour le groupe de disponibilité ou une instance FCI est effectuée sur le réseau local virtuel. Dans l’exemple suivant, le réseau local virtuel possède un sous-réseau de 192.168.3. *x*, de sorte que l’adresse IP créée pour le groupe de disponibilité ou une instance FCI est 192.168.3.104. Aucune opération supplémentaire ne doit être configuré, dans la mesure où il existe une seule adresse IP affectée au groupe de disponibilité ou de l’ICF.
 

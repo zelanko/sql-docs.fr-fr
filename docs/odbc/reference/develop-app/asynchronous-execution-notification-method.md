@@ -11,12 +11,12 @@ ms.assetid: e509dad9-5263-4a10-9a4e-03b84b66b6b3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ec4b197c6c9588194531c2cc29ee1ba79d51fa6e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6aa634f154eb0594c76ae7e65b8d237175a3f92e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669487"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52543406"
 ---
 # <a name="asynchronous-execution-notification-method"></a>Exécution asynchrone (méthode de notification)
 ODBC permet l’exécution asynchrone de connexion et les opérations de l’instruction. Un thread d’application peut appeler une fonction ODBC en mode asynchrone et la fonction peut retourner avant que l’opération est terminée, ce qui permet le thread d’application effectuer d’autres tâches. Dans le Kit de développement Windows 7 pour les opérations de connexion, ou l’instruction asynchrone, une application déterminé que l’opération asynchrone a été terminée à l’aide de la méthode d’interrogation. Pour plus d’informations, consultez [exécution asynchrone (méthode d’interrogation)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md). À compter dans le Kit de développement logiciel Windows 8, vous pouvez déterminer qu’une opération asynchrone est terminée à l’aide de la méthode de notification.  
@@ -35,7 +35,7 @@ ODBC permet l’exécution asynchrone de connexion et les opérations de l’ins
   
  Chaque fois que le modèle de notification est utilisé, le modèle d’interrogation est désactivé. Applications ne doivent pas appeler la fonction d’origine à nouveau. Appelez [sqlcompleteasync, fonction](../../../odbc/reference/syntax/sqlcompleteasync-function.md) pour terminer l’opération asynchrone. Si une application appelle la fonction d’origine à nouveau avant que l’opération asynchrone est terminée, l’appel retourne SQL_ERROR avec SQLSTATE IM017 (l’interrogation est désactivée en Mode de Notification asynchrone).  
   
- Lorsque vous utilisez le modèle de notification, l’application peut appeler **SQLCancel** ou **SQLCancelHandle** pour annuler une opération de connexion ou d’instruction. Si la demande d’annulation est réussie, ODBC retourne SQL_SUCCESS. Ce message n’indique pas que la fonction a été réellement annulée ; Il indique que la demande d’annulation a été traitée. Si la fonction est réellement annulée est dépendant du pilote et la source de données. Lorsqu’une opération est annulée, le Gestionnaire de pilotes signale toujours l’événement. Le Gestionnaire de pilotes retourne SQL_ERROR dans la mémoire tampon de code de retour et de l’état est SQLSTATE HY008 (opération annulée) pour indiquer l’annulation est terminée. Si la fonction terminé son traitement normal, le Gestionnaire de pilotes retourne SQL_SUCCESS ou SQL_SUCCESS_WITH_INFO.  
+ Lorsque vous utilisez le modèle de notification, l’application peut appeler **SQLCancel** ou **SQLCancelHandle** pour annuler une opération de connexion ou d’instruction. Si la demande d’annulation est réussie, ODBC retourne SQL_SUCCESS. Ce message n’indique pas que la fonction a été réellement annulée ; Il indique que la demande d’annulation a été traitée. Si la fonction est réellement annulée est dépendant du pilote et dépend de la source de données. Lorsqu’une opération est annulée, le Gestionnaire de pilotes signale toujours l’événement. Le Gestionnaire de pilotes retourne SQL_ERROR dans la mémoire tampon de code de retour et de l’état est SQLSTATE HY008 (opération annulée) pour indiquer l’annulation est terminée. Si la fonction terminé son traitement normal, le Gestionnaire de pilotes retourne SQL_SUCCESS ou SQL_SUCCESS_WITH_INFO.  
   
 ### <a name="downlevel-behavior"></a>Comportement de niveau inférieur  
  La version du Gestionnaire de pilotes ODBC prenant en charge cette notification sur complète est 3.81 de ODBC.  
@@ -48,7 +48,7 @@ ODBC permet l’exécution asynchrone de connexion et les opérations de l’ins
   
  Une application doit vérifier la version du Gestionnaire de pilotes avant d’utiliser cette fonctionnalité. Sinon, si un pilote mal écrit ne génère pas d’erreur et la version du Gestionnaire de pilotes est antérieur 3.81 d’ODBC, le comportement est indéfini.  
   
-## <a name="use-cases"></a>Cas d'usage  
+## <a name="use-cases"></a>Cas d’usage  
  Cette section montre un cas d’utilisation de l’exécution asynchrone et le mécanisme d’interrogation.  
   
 ### <a name="integrate-data-from-multiple-odbc-sources"></a>Intégrer des données provenant de plusieurs Sources ODBC  

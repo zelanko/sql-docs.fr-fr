@@ -13,12 +13,12 @@ ms.assetid: 19225b4a-ee3f-47cf-8bcc-52699eeda32c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8aab52401c438dc9428e082ab66307d3961a8f0a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 491c0a0084e334cabe7b0eb7648b50aed46a3abc
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122019"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545569"
 ---
 # <a name="for-xml-query-compared-to-nested-for-xml-query"></a>Comparaison de la requête FOR XML et de la requête FOR XML imbriquée
   Cette rubrique compare une requête FOR XML d'un seul niveau à une requête FOR XML imbriquée. L'un des avantages liés à l'utilisation des requêtes FOR XML imbriquées est que vous pouvez spécifier une combinaison de données XML centrées sur l'attribut et centrées sur l'élément pour les résultats de requête. L'exemple suivant en offre une illustration.  
@@ -90,7 +90,7 @@ ORDER BY ProductCategoryID
 FOR XML AUTO, TYPE  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 < ProdCat ProductCategoryID="1" CategoryName="Bikes" />  
@@ -193,9 +193,9 @@ FOR XML AUTO, TYPE
                 ProductName="Mountain-100 Silver, 42" Color="Silver" />  
       <Production.Product ProductID="773"   
                 ProductName="Mountain-100 Silver, 44" Color="Silver" />  
-        …  
+        ...  
     </ProductModel>  
-     …  
+     ...  
 ```  
   
  Si vous supprimez la directive `ELEMENTS` de la requête `FOR XML` imbriquée qui génère les sous-catégories de produits, la totalité du résultat est centrée sur l'attribut. Vous pouvez ensuite écrire cette requête sans imbrication. L'ajout de la directive `ELEMENTS` aboutit à un document XML en partie centré sur l'attribut et en partie centré sur l'élément. Ce résultat ne peut pas être généré par une requête FOR XML d'un seul niveau.  

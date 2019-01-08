@@ -4,26 +4,25 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: scripting
 ms.topic: conceptual
 ms.assetid: ab9212a6-6628-4f08-a38c-d3156e05ddea
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 61dbea86eabc0395b2f314f170aa97c5067880fd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0992e3a956a2b498d92186fa91c0ed4fbddf6102
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163559"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52778521"
 ---
 # <a name="manage-authentication-in-database-engine-powershell"></a>Gérer l'authentification dans le moteur de base de données PowerShell
-  Par défaut, les composants de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell utilisent l'authentification Windows lors de la connexion à une instance du [!INCLUDE[ssDE](../includes/ssde-md.md)]. Vous pouvez utiliser l’authentification SQL Server en définissant un lecteur virtuel PowerShell ou en spécifiant le `–Username` et `–Password` paramètres pour `Invoke-Sqlcmd`.  
+  Par défaut, les composants de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell utilisent l'authentification Windows lors de la connexion à une instance du [!INCLUDE[ssDE](../includes/ssde-md.md)]. Vous pouvez utiliser l'authentification SQL Server en définissant un lecteur virtuel PowerShell ou en spécifiant les paramètres `-Username` et `-Password` pour `Invoke-Sqlcmd`.  
   
 1.  **Avant de commencer :**  [Autorisations](#Permissions)  
   
-2.  **Pour définir l’authentification en utilisant :**  [Un lecteur virtuel](#SQLAuthVirtDrv), [Invoke-Sqlcmd](#SQLAuthInvSqlCmd)  
+2.  **Pour définir l’authentification, à l’aide de :**  [Un lecteur virtuel](#SQLAuthVirtDrv), [Invoke-Sqlcmd](#SQLAuthInvSqlCmd)  
   
 ##  <a name="Permissions"></a> Permissions  
  Toutes les actions que vous pouvez effectuer dans une instance du [!INCLUDE[ssDE](../includes/ssde-md.md)] sont contrôlées par les autorisations accordées aux informations d'identification utilisées pour la connexion à l'instance. Par défaut, le fournisseur et les applets de commande [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilisent le compte Windows sous lequel ils s'exécutent pour établir une connexion via l'authentification Windows au [!INCLUDE[ssDE](../includes/ssde-md.md)].  
@@ -41,7 +40,7 @@ ms.locfileid: "48163559"
   
     3.  Utilise `new-object` pour créer un objet d'informations d'identification.  
   
-    4.  Utilise `new-psdrive` pour créer un lecteur virtuel avec les informations d’identification fournies.  
+    4.  Utilise `new-psdrive` pour créer un lecteur virtuel avec les informations d'identification fournies.  
   
 2.  Appelez la fonction pour créer un lecteur virtuel avec les informations d'identification fournies.  
   
@@ -71,7 +70,7 @@ cd SQLAuth
 ##  <a name="SQLAuthInvSqlCmd"></a> Authentification SQL Server avec Invoke-Sqlcmd  
  **Pour utiliser Invoke-Sqlcmd avec l'authentification SQL Server**  
   
-1.  Utilisez le `–Username` paramètre pour spécifier un ID de connexion et le `–Password` paramètre pour spécifier le mot de passe associé.  
+1.  Utilisez le paramètre de `-Username` pour spécifier un ID de connexion, et le paramètre de `-Password` pour spécifier le mot de passe associé.  
   
 ### <a name="example-invoke-sqlcmd"></a>Exemple (Invoke-Sqlcmd)  
  Cet exemple utilise l'applet de commande read-host pour inviter l'utilisateur à entrer un mot de passe, puis se connecte via l'authentification SQL Server.  
@@ -80,12 +79,12 @@ cd SQLAuth
 ## Prompt the user for their password.  
 $pwd = read-host -AsSecureString -Prompt "Password"  
   
-Invoke-Sqlcmd -Query "SELECT GETDATE() AS TimeOfQuery;" -ServerInstance "MyComputer\MyInstance" –Username “MyLogin” –Password $pwd  
+Invoke-Sqlcmd -Query "SELECT GETDATE() AS TimeOfQuery;" -ServerInstance "MyComputer\MyInstance" -Username "MyLogin" -Password $pwd  
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQL Server PowerShell](sql-server-powershell.md)   
  [fournisseur PowerShell SQL Server](sql-server-powershell-provider.md)   
- [Invoke-Sqlcmd, applet de commande](../database-engine/invoke-sqlcmd-cmdlet.md)  
+ [Invoke-Sqlcmd (applet de commande)](../database-engine/invoke-sqlcmd-cmdlet.md)  
   
   

@@ -1,22 +1,24 @@
 ---
-title: Exporter des modèles d’apprentissage automatique Spark avec MLeap | SQL Server
-description: Exporter des modèles avec MLeap d’apprentissage Spark
-services: SQL Server 2019 Big Data Cluster Spark
-ms.service: SQL Server 2019 Big Data Cluster Spark
+title: Exporter des modèles de Spark ML avec MLeap
+titleSuffix: SQL Server 2019 big data clusters
+description: Découvrez comment exporter des modèles avec MLeap d’apprentissage Spark.
 author: lgongmsft
 ms.author: shivprashant
 ms.reviewer: jroth
-ms.custom: ''
+manager: craigg
+ms.date: 12/06/2018
 ms.topic: conceptual
-ms.date: 10/10/2018
-ms.openlocfilehash: 546e46c6e9c5b2875f817fbf9a5fc3107afeb8a2
-ms.sourcegitcommit: 29760037d0a3cec8b9e342727334cc3d01db82a6
+ms.prod: sql
+ms.custom: seodec18
+ms.openlocfilehash: db6e980441c2037311cf2dc35a8f9de01acb045b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50411846"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211168"
 ---
-# <a name="export-models-using-mleap"></a>Exporter des modèles à l’aide de Mleap
+# <a name="export-spark-machine-learning-models-with-mleap"></a>Exporter des modèles avec MLeap d’apprentissage Spark
+
 Un scénario d’apprentissage classique implique l’apprentissage du modèle sur Spark et la notation en dehors de Spark. Exporter des modèles dans un format portable où il peut être utilisé en dehors de Spark. [MLeap](https://github.com/combust/mleap) est un format d’échange de ce modèle. Il permet à Spark pipelines d’apprentissage et de modèles à exporter en tant que formats portables et utilisé dans n’importe quel système de JVM avec le `Mleap` runtime.
 
 Ce guide explique comment vous pouvez exporter vos modèles de spark à l’aide de Mleap. Les étapes sont résumées ci-dessous et détaillés avec du code dans la section suivante.
@@ -27,8 +29,7 @@ Ce guide explique comment vous pouvez exporter vos modèles de spark à l’aide
 4. Pour valider, nous allons importer le `Mleap` regrouper arrière à nouveau et l’utiliser pour la notation dans Spark.
 
 ## <a name="step-1---start-by-creating-a-spark-model"></a>Étape 1 : démarrer en créant un modèle Spark
-Exécution [modèle de création et formation machine learning avec Spark] (train-and-create-machinelearning-models-with-spark.md) pour créer des ensembles de formation/test et de modèle et rendre persistantes dans le stockage HDFS. Le modèle doit être exporté en tant que `AdultCensus.mml` sous le `spark_ml` directory.
-
+Exécutez [d’apprentissage et de création d’apprentissage de modèle avec Spark](train-and-create-machinelearning-models-with-spark.md) pour créer des ensembles de formation/test et de modèle et rendre persistantes dans le stockage HDFS. Le modèle doit être exporté en tant que `AdultCensus.mml` sous le `spark_ml` directory.
 
 ## <a name="step-2---import-the-trainingtest-data-and-the-model"></a>Étape 2 : importer les données training\test et le modèle
 
@@ -49,7 +50,6 @@ model = PipelineModel.load(model_fs)
 print("Model is " , model)
 print("Model stages", model.stages)
 ```
-
 
 ## <a name="step-3---export-the-model-as-mleap-bundle"></a>Étape 3 : exporter le modèle en tant que `Mleap` bundle
 

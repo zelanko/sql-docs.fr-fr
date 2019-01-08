@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling task [Integration Services], using output in workflow
@@ -13,12 +12,12 @@ ms.assetid: 39a51586-6977-4c45-b80b-0157a54ad510
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 74e2ca64c47aaf1b0388fa0d58a3e76f2ec9d20e
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.openlocfilehash: 54b106ab3f6609ab40acd8fd054d5f3369711665
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49085515"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368691"
 ---
 # <a name="incorporate-a-data-profiling-task-in-package-workflow"></a>Incorporer une tâche de profilage des données dans le flux de travail du package
   Le profilage des données et le nettoyage des données ne sont pas des candidats pour un processus automatisé à leur stade initial. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], la sortie de la tâche de profilage des données doit habituellement faire l’objet d’une analyse visuelle et d’un jugement personnel pour qu’il soit déterminé si les violations signalées sont significatives ou excessives. Même après avoir reconnu des problèmes de qualité des données, un plan soigneusement pensé doit être appliqué pour déterminer la meilleure approche pour le nettoyage.  
@@ -161,7 +160,7 @@ ms.locfileid: "49085515"
     Public Class ScriptMain  
   
       Private FILENAME As String = "C:\ TEMP\DataProfile1.xml"  
-      Private PROFILE_NAMESPACE_URI As String = "http://schemas.microsoft.com/DataDebugger/"  
+      Private PROFILE_NAMESPACE_URI As String = "https://schemas.microsoft.com/DataDebugger/"  
       Private NULLCOUNT_XPATH As String = _  
         "/default:DataProfile/default:DataProfileOutput/default:Profiles" & _  
         "/default:ColumnNullRatioProfile[default:Column[@Name='AddressLine2']]/default:NullCount/text()"  
@@ -216,7 +215,7 @@ ms.locfileid: "49085515"
     {  
   
       private string FILENAME = "C:\\ TEMP\\DataProfile1.xml";  
-      private string PROFILE_NAMESPACE_URI = "http://schemas.microsoft.com/DataDebugger/";  
+      private string PROFILE_NAMESPACE_URI = "https://schemas.microsoft.com/DataDebugger/";  
       private string NULLCOUNT_XPATH = "/default:DataProfile/default:DataProfileOutput/default:Profiles" + "/default:ColumnNullRatioProfile[default:Column[@Name='AddressLine2']]/default:NullCount/text()";  
       private string TABLE_XPATH = "/default:DataProfile/default:DataProfileOutput/default:Profiles" + "/default:ColumnNullRatioProfile[default:Column[@Name='AddressLine2']]/default:Table";  
   
@@ -264,8 +263,8 @@ ms.locfileid: "49085515"
   
 8.  Fermez l'environnement de développement de script, puis l'éditeur de tâche de script.  
   
-#### <a name="alternative-codereading-the-profile-output-from-a-variable"></a>Code alternatif – Lecture de la sortie du profil à partir d'une variable  
- La procédure précédente montre comment charger la sortie de la tâche de profilage des données à partir d’un fichier. Toutefois, une méthode alternative consiste à charger cette sortie à partir d'une variable de package. Pour charger la sortie à partir d'une variable, vous devez apporter les modifications suivantes dans l'exemple de code :  
+#### <a name="alternative-code-reading-the-profile-output-from-a-variable"></a>Code alternatif - Lecture de la sortie du profil à partir d’une variable  
+ La procédure précédente montre comment charger la sortie de la tâche de profilage des données à partir d'un fichier. Toutefois, une méthode alternative consiste à charger cette sortie à partir d'une variable de package. Pour charger la sortie à partir d'une variable, vous devez apporter les modifications suivantes dans l'exemple de code :  
   
 -   Appelez la méthode `LoadXml` de la classe `XmlDocument` à la place de la méthode `Load`.  
   

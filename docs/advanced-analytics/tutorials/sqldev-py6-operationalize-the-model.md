@@ -1,5 +1,5 @@
 ---
-title: Prédire les résultats potentiels à l’aide de modèles de Python (SQL Server Machine Learning) | Microsoft Docs
+title: Prédire les résultats potentiels à l’aide de modèles de Python - SQL Server Machine Learning
 description: Didacticiel montrant comment faire fonctionner le script PYthon incorporé dans SQL Server procédures stockées avec les fonctions T-SQL
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 3d1466fba7c659887578bf349a07968bfb580158
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 9a75c25528003d0133cfd33c3eaddc20a8241692
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51033676"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53644768"
 ---
 # <a name="run-predictions-using-python-embedded-in-a-stored-procedure"></a>Exécuter des prédictions à l’aide de Python incorporé dans une procédure stockée
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -26,8 +26,8 @@ Dans ce scénario, Opérationnalisation signifie du déploiement du modèle en p
 
 Cette leçon illustre deux méthodes pour créer des prédictions basées sur un modèle Python : calcul de score et la notation de ligne par ligne du lot.
 
-- **Notation par lot :** pour fournir plusieurs lignes de données d’entrée, transmettre une requête SELECT en tant qu’argument à la procédure stockée. Le résultat est une table d’observations correspondant aux cas d’entrée.
-- **Calcul de score individuel :** transmettre un ensemble de valeurs de paramètres en tant qu’entrée.  La procédure stockée retourne une seule ligne ou valeur.
+- **Notation de lot :** Pour fournir plusieurs lignes de données d’entrée, transmettre une requête SELECT en tant qu’argument à la procédure stockée. Le résultat est une table d’observations correspondant aux cas d’entrée.
+- **Personne notation :** Transmettre un ensemble de valeurs de paramètres en tant qu’entrée.  La procédure stockée retourne une seule ligne ou valeur.
 
 Tout le code Python que nécessaire pour calculer les scores est fourni dans le cadre des procédures stockées.
 
@@ -48,7 +48,7 @@ Exécute le T-SQL suivant les instructions pour créer les procédures stockées
 
 + La trame de données contenant des entrées est passée à la `predict_proba` fonction du modèle de régression logistique, `mod`. Le `predict_proba` (fonction) (`probArray = mod.predict_proba(X)`) retourne un **float** qui représente la probabilité qu’un pourboire (d’un montant quelconque) va être versé.
 
-```SQL
+```sql
 DROP PROCEDURE IF EXISTS PredictTipSciKitPy;
 GO
 
@@ -92,7 +92,7 @@ GO
 
 Cette procédure stockée utilise les mêmes entrées et crée le même type de résultats en tant que la procédure stockée précédente, mais utilise des fonctions à partir de la **revoscalepy** package fourni avec l’apprentissage de SQL Server.
 
-```SQL
+```sql
 DROP PROCEDURE IF EXISTS PredictTipRxPy;
 GO
 
@@ -142,7 +142,7 @@ En transmettant les arguments à la procédure stockée, vous pouvez sélectionn
 
 1. Pour utiliser le **scikit-Découvrez** pour calculer les scores de modèle, appelez la procédure stockée **PredictTipSciKitPy**, en passant le nom de modèle et de chaîne de requête en tant qu’entrées.
 
-    ```SQL
+    ```sql
     DECLARE @query_string nvarchar(max) -- Specify input query
       SET @query_string='
       select tipped, fare_amount, passenger_count, trip_time_in_secs, trip_distance,
@@ -157,7 +157,7 @@ En transmettant les arguments à la procédure stockée, vous pouvez sélectionn
 
 2. Pour utiliser le **revoscalepy** pour calculer les scores de modèle, appelez la procédure stockée **PredictTipRxPy**, en passant le nom de modèle et de chaîne de requête en tant qu’entrées.
 
-    ```SQL
+    ```sql
     DECLARE @query_string nvarchar(max) -- Specify input query
       SET @query_string='
       select tipped, fare_amount, passenger_count, trip_time_in_secs, trip_distance,
@@ -188,7 +188,7 @@ Les deux procédures stockées créer un score basé sur le modèle de Python.
 
 Prenez une minute pour examiner le code de la procédure stockée qui effectue le calcul de score à l’aide de la **scikit-Découvrez** modèle.
 
-```SQL
+```sql
 DROP PROCEDURE IF EXISTS PredictTipSingleModeSciKitPy;
 GO
 
@@ -255,7 +255,7 @@ GO
 
 La procédure stockée suivante effectue la notation à l’aide du **revoscalepy** modèle.
 
-```SQL
+```sql
 DROP PROCEDURE IF EXISTS PredictTipSingleModeRxPy;
 GO
 
@@ -297,7 +297,7 @@ X = InputDataSet[["passenger_count", "trip_distance", "trip_time_in_secs", "dire
 probArray = rx_predict(mod, X)
 
 probList = []
-prob_list = prob_array["tipped_Pred"].values
+probList = probArray["tipped_Pred"].values
 
 # Create output data frame
 OutputDataSet = pandas.DataFrame(data = probList, columns = ["predictions"])
@@ -335,14 +335,14 @@ Une fois que les procédures stockées ont été créées, il est facile de gén
 
 1. Pour générer une prédiction à l’aide de la **revoscalepy** modèle, exécutez cette instruction :
   
-    ```SQL
+    ```sql
     EXEC [dbo].[PredictTipSingleModeRxPy] 'revoscalepy_model', 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
     ```
 
 2. Pour générer un score à l’aide de la **scikit-Découvrez** modèle, exécutez cette instruction :
 
-    ```SQL
-    EXEC [dbo].[PredictTipSingleModeSciKitPy] 'ScitKit_model', 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
+    ```sql
+    EXEC [dbo].[PredictTipSingleModeSciKitPy] 'SciKit_model', 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
     ```
 
 La sortie à partir de ces deux procédures est une probabilité d’un pourboire pour une course de taxi avec les paramètres spécifiés ou les fonctionnalités.

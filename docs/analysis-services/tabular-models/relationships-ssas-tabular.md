@@ -1,5 +1,5 @@
 ---
-title: Relations | Documents Microsoft
+title: Relations dans les modèles tabulaires Analysis Services | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b704b7e2fdc299006d77e08314d2b16ffd750a0a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 6314331be3a844b86ff8790c8c38abb4c0d3758e
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34045303"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072526"
 ---
 # <a name="relationships"></a>Relations 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -31,17 +31,17 @@ ms.locfileid: "34045303"
 ##  <a name="what"></a> Avantages  
  Une relation est une connexion entre deux tables de données, basée sur une ou plusieurs colonnes dans chaque table. Pour comprendre pourquoi les relations sont utiles, imaginez que vous effectuez le suivi des données des commandes client dans votre entreprise. Vous pouvez effectuer le suivi de toutes les données dans une table individuelle possédant une structure similaire à :  
   
-|CustomerID|Nom|EMail|DiscountRate|OrderID|OrderDate|Product|Quantité|  
+|CustomerID|Créer une vue d’abonnement|EMail|DiscountRate|OrderID|OrderDate|Produit|Quantité|  
 |----------------|----------|-----------|------------------|-------------|---------------|-------------|--------------|  
 |1|Ashton|chris.ashton@contoso.com|.05|256|2010-01-07|Compact Digital|11|  
 |1|Ashton|chris.ashton@contoso.com|.05|255|2010-01-03|SLR Camera|15|  
 |2|Jaworski|michal.jaworski@contoso.com|.10|254|2010-01-03|Budget Movie-Maker|27|  
   
- Cette approche peut fonctionner, mais elle implique le stockage de nombreuses données redondantes, telles que l'adresse de messagerie du client pour chaque commande. Le stockage est bon marché, mais vous devez vous assurer de mettre à jour chaque ligne pour ce client si l'adresse de messagerie change. Une solution à ce problème consiste à fractionner les données en plusieurs tables et à définir des relations entre ces tables. C’est l’approche utilisée dans *bases de données relationnelles* que SQL Server. Par exemple, une base de données que vous importez dans un modèle peut représenter les données des commandes en utilisant trois tables associées :  
+ Cette approche peut fonctionner, mais elle implique le stockage de nombreuses données redondantes, telles que l'adresse de messagerie du client pour chaque commande. Le stockage est bon marché, mais vous devez vous assurer de mettre à jour chaque ligne pour ce client si l'adresse de messagerie change. Une solution à ce problème consiste à fractionner les données en plusieurs tables et à définir des relations entre ces tables. C’est l’approche utilisée dans *bases de données relationnelles* tels que SQL Server. Par exemple, une base de données que vous importez dans un modèle peut représenter les données des commandes en utilisant trois tables associées :  
   
-### <a name="customers"></a>Clients (Customers)  
+### <a name="customers"></a>Customers  
   
-|[CustomerID]|Nom|EMail|  
+|[CustomerID]|Créer une vue d’abonnement|EMail|  
 |--------------------|----------|-----------|  
 |1|Ashton|chris.ashton@contoso.com|  
 |2|Jaworski|michal.jaworski@contoso.com|  
@@ -55,13 +55,13 @@ ms.locfileid: "34045303"
   
 ### <a name="orders"></a>Orders  
   
-|[CustomerID]|OrderID|OrderDate|Product|Quantité|  
+|[CustomerID]|OrderID|OrderDate|Produit|Quantité|  
 |--------------------|-------------|---------------|-------------|--------------|  
 |1|256|2010-01-07|Compact Digital|11|  
 |1|255|2010-01-03|SLR Camera|15|  
 |2|254|2010-01-03|Budget Movie-Maker|27|  
   
- Si vous importez ces tables à partir de la même base de données, l’Assistant Importation de table peut détecter les relations entre les tables en fonction des colonnes qui sont entre [crochets] et reproduire ces relations dans le générateur de modèles. Pour plus d'informations, consultez [« Détection automatique et inférence des relations »](#detection) dans cette rubrique. Si vous importez des tables provenant de plusieurs sources, vous pouvez créer manuellement des relations, comme décrit dans [créer une relation entre deux Tables](../../analysis-services/tabular-models/create-a-relationship-between-two-tables-ssas-tabular.md).  
+ Si vous importez ces tables à partir de la même base de données, l’Assistant Importation de table peut détecter les relations entre les tables en fonction des colonnes qui sont entre [crochets] et reproduire ces relations dans le générateur de modèles. Pour plus d'informations, consultez [« Détection automatique et inférence des relations »](#detection) dans cette rubrique. Si vous importez des tables provenant de plusieurs sources, vous pouvez créer manuellement des relations comme décrit dans [créer une relation entre deux Tables](../../analysis-services/tabular-models/create-a-relationship-between-two-tables-ssas-tabular.md).  
   
 ### <a name="columns-and-keys"></a>Colonnes et clés  
  Les relations sont basées sur les colonnes des tables qui contiennent les mêmes données. Par exemple, les tables Customers et Orders peuvent être associées l'une à l'autre car elles contiennent toutes les deux une colonne qui stocke un ID de client. Dans cet exemple, les noms des colonnes sont les mêmes, mais ce n'est pas nécessaire. L'un deux peut être CustomerID et un autre CustomerNumber, tant que toutes les lignes de la table Orders contiennent un ID qui est également stocké dans la table Customers.  
@@ -95,9 +95,9 @@ ms.locfileid: "34045303"
  Le générateur de modèles présente plusieurs conditions qui doivent être remplies lors de la création de relations :  
   
 ### <a name="single-active-relationship-between-tables"></a>Relation active unique entre des tables  
- Plusieurs relations pourraient générer des dépendances ambiguës entre des tables. Pour créer des calculs exacts, vous avez besoin d'un chemin d'accès unique entre une table et la table suivante. Par conséquent, il ne peut y avoir qu'une seule relation active entre chaque paire de tables. Par exemple, dans AdventureWorks DW 2012, la table DimDate contient une colonne DateKey qui est associée à trois colonnes différentes dans la table FactInternetSales : OrderDate, DueDate et ShipDate. Si vous tentez d'importer ces tables, la première relation est créée avec succès, mais vous recevrez l'erreur suivante sur les relations consécutives qui impliquent la même colonne :  
+ Plusieurs relations pourraient générer des dépendances ambiguës entre des tables. Pour créer des calculs exacts, vous avez besoin d'un chemin d'accès unique entre une table et la table suivante. Par conséquent, il ne peut y avoir qu'une seule relation active entre chaque paire de tables. Par exemple, dans AdventureWorks DW 2012, la table DimDate contient une colonne DateKey qui est associée à trois colonnes différentes dans la table FactInternetSales : OrderDate, DueDate et ShipDate. Si vous tentez d'importer ces tables, la première relation est créée avec succès, mais vous recevrez l'erreur suivante sur les relations consécutives qui impliquent la même colonne :  
   
- \* Relation : table [colonne 1] -> table [colonne 2] - état : erreur - raison : Impossible de créer une relation entre tables \<table 1 > et \<tableau 2 >. Une seule relation directe ou indirecte peut exister entre deux tables.  
+ \* Relation : table [colonne 1] -> table [colonne 2] - état : erreur - raison : Impossible de créer une relation entre tables \<table 1 > et \<table 2 >. Une seule relation directe ou indirecte peut exister entre deux tables.  
   
  Si vous avez deux tables et plusieurs relations entre elles, vous devez importer plusieurs copies de la table qui contient la colonne de recherche et créer une relation entre chaque paire de tables.  
   
@@ -115,7 +115,7 @@ ms.locfileid: "34045303"
  Les valeurs des données dans la colonne de recherche doivent être uniques. En d'autres termes, la colonne ne doit pas contenir de doublons. Dans les modèles tabulaires, les valeurs Null et les chaînes vides sont équivalentes à un espace, qui est une valeur de donnée distincte. Cela signifie que vous ne pouvez pas avoir plusieurs valeurs Null dans la colonne de recherche.  
   
 ### <a name="compatible-data-types"></a>Types de données compatibles  
- Les types de données dans la colonne source et la colonne de recherche doivent être compatibles. Pour plus d’informations sur les types de données, consultez [prise en charge des Types de données](../../analysis-services/tabular-models/data-types-supported-ssas-tabular.md).  
+ Les types de données dans la colonne source et la colonne de recherche doivent être compatibles. Pour plus d’informations sur les types de données, consultez [Types de données pris en charge](../../analysis-services/tabular-models/data-types-supported-ssas-tabular.md).  
   
 ### <a name="composite-keys-and-lookup-columns"></a>Clés composites et colonnes de recherche  
  Vous ne pouvez pas utiliser de clés composites dans un modèle tabulaire ; vous devez toujours avoir une colonne qui identifie de façon unique chaque ligne dans la table. Si vous essayez d'importer des tables qui ont une relation existante basée sur une clé composite, l'Assistant Importation de table ignore cette relation, car elle ne peut pas être créée dans un modèle tabulaire.  
@@ -125,7 +125,7 @@ ms.locfileid: "34045303"
 ###  <a name="bkmk_many_to_many"></a> Many-to-Many relationships  
  Les modèles tabulaires ne prennent pas en charge les relations plusieurs à plusieurs, et vous ne pouvez pas ajouter de *tables de jointure* dans le générateur de modèles. Toutefois, vous pouvez utiliser les fonctions DAX pour modéliser des relations plusieurs à plusieurs.  
   
- Vous pouvez également essayer de configurer un filtre croisé bidirectionnel pour déterminer s’il atteint le même objectif. Parfois, la configuration requise de la relation plusieurs-à-plusieurs peut être satisfaite par le biais des filtres croisés qui persistent un contexte de filtre plusieurs relations entre les tables. Pour plus d’informations, consultez [Filtres croisés bidirectionnels pour modèles tabulaires dans SQL Server 2016 Analysis Services](../../analysis-services/tabular-models/bi-directional-cross-filters-tabular-models-analysis-services.md) .  
+ Vous pouvez également essayer de configurer un filtre croisé bidirectionnel pour déterminer s’il atteint le même objectif. Parfois, la configuration requise de la relation plusieurs-à-plusieurs peut être satisfaite par le biais des filtres croisés qui conserver un contexte de filtre entre plusieurs relations entre les tables. Pour plus d’informations, consultez [Filtres croisés bidirectionnels pour modèles tabulaires dans SQL Server 2016 Analysis Services](../../analysis-services/tabular-models/bi-directional-cross-filters-tabular-models-analysis-services.md) .  
   
 ### <a name="self-joins-and-loops"></a>Jointures réflexives et boucles  
  Les jointures réflexives ne sont pas autorisées dans les tables de modèle tabulaire. Une jointure réflexive est une relation récursive entre une table et elle-même. Les jointures réflexives sont souvent utilisées pour définir des hiérarchies de type parent-enfant. Par exemple, vous pouvez joindre une table Employees à elle-même pour produire une hiérarchie qui indique la chaîne de gestion dans une entreprise.  
@@ -171,7 +171,7 @@ ms.locfileid: "34045303"
   
 ##  <a name="bkmk_related_tasks"></a> Related tasks  
   
-|Rubrique| Description|  
+|Rubrique|Description|  
 |-----------|-----------------|  
 |[Créer une relation entre deux tables](../../analysis-services/tabular-models/create-a-relationship-between-two-tables-ssas-tabular.md)|Décrit comment créer manuellement une relation entre deux tables.|  
 |[Supprimer des relations](../../analysis-services/tabular-models/delete-relationships-ssas-tabular.md)|Décrit comment supprimer une relation et les conséquences de la suppression des relations.|  

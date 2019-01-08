@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - members [Master Data Services], permissions
@@ -14,12 +13,12 @@ ms.assetid: b3880eed-1bf6-4f65-ab23-b08c194cc858
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 4310f16b19fa85012844cc6e0fb71b2dce3ce6f4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a7e762a450a28f1d07e58a0baa6f7f3ff3948681
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111997"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52797039"
 ---
 # <a name="hierarchy-member-permissions-master-data-services"></a>Autorisations des membres de la hiérarchie (Master Data Services)
   Les autorisations des membres de la hiérarchie sont optionnelles et doivent être utilisées uniquement lorsque vous souhaitez qu'un utilisateur ait un accès limité à des membres spécifiques. Si vous n'affectez pas d'autorisations sous l'onglet **Membres de hiérarchie** , les autorisations de l'utilisateur sont basées uniquement sur celles affectées sous l'onglet **Modèles** .  
@@ -37,7 +36,7 @@ ms.locfileid: "48111997"
   
 |Autorisation|Description|  
 |----------------|-----------------|  
-|**Lecture seule**|Les membres sont affichés, mais l'utilisateur ne peut pas les modifier. L'utilisateur ne peut pas non plus déplacer les membres dans les collections ou hiérarchies explicites auxquelles les membres appartiennent.<br /><br /> Remarque : Si vous affectez **en lecture seule** autorisé à **racine**, les membres sous **racine** sont en lecture seule ; toutefois, dans les hiérarchies et collections explicites, l’utilisateur peut déplacer membres à **racine** et ajouter de nouveaux membres à **racine**.|  
+|**Lecture seule**|Les membres sont affichés, mais l'utilisateur ne peut pas les modifier. L'utilisateur ne peut pas non plus déplacer les membres dans les collections ou hiérarchies explicites auxquelles les membres appartiennent.<br /><br /> Remarque : Si vous affectez **en lecture seule** autorisé à **racine**, les membres sous **racine** sont en lecture seule ; toutefois, dans les hiérarchies et collections explicites, l’utilisateur peut déplacer des membres à **Racine** et ajouter de nouveaux membres à **racine**.|  
 |**Update**|Les membres sont affichés et l'utilisateur peut les modifier. L'utilisateur peut également déplacer les membres dans les collections ou hiérarchies explicites auxquelles les membres appartiennent.|  
 |**Refuser**|Les membres ne sont pas affichés.|  
   

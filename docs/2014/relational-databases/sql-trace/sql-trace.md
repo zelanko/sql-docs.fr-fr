@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 ms.assetid: 83c6d1d9-19ce-43fe-be9a-45aaa31f20cb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e0a1091e56ee505731fb9ce0d683975caa9c3d29
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a1dd2e117207f3737f54e2cd0269c51918a199f2
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193189"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823483"
 ---
 # <a name="sql-trace"></a>Trace SQL
   Dans la trace SQL, les événements sont collectés si ce sont des instances de classes d'événements répertoriées dans la définition de la trace. Ces événements peuvent être extraits de la trace par filtrage ou placés dans la file d'attente de leur destination. La destination peut être un fichier ou des objets SMO ( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Object), qui peuvent utiliser les informations de la trace dans les applications gérant [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -74,8 +73,8 @@ ms.locfileid: "48193189"
 |Colonne de données|Numéro de colonne|Description|  
 |-----------------|-------------------|-----------------|  
 |**ApplicationName** <sup>1</sup>|10|Nom de l'application cliente qui a créé la connexion à une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Cette colonne est remplie des valeurs transmises par l'application et non pas du nom du programme.|  
-|**BigintData1**|52|Valeur (`bigint` type de données), qui dépend de la classe d’événements spécifiée dans la trace.|  
-|**BigintData2**|53|Valeur (`bigint` type de données), qui dépend de la classe d’événements spécifiée dans la trace.|  
+|**BigintData1**|52|Valeur (type de données `bigint`), qui dépend de la classe d'événements spécifiée dans la trace.|  
+|**BigintData2**|53|Valeur (type de données `bigint`), qui dépend de la classe d'événements spécifiée dans la trace.|  
 |**Binary Data**|2|Valeur binaire qui dépend de la classe d'événements capturée dans la trace.|  
 |**ClientProcessID** <sup>1</sup>|9|ID affecté par l'ordinateur hôte au processus dans lequel s'exécute l'application cliente. Cette colonne de données est remplie si l'ID du processus du client est fourni par le client.|  
 |**ColumnPermissions**|44|Indique si une autorisation au niveau de la colonne a été définie. Vous pouvez analyser le texte de l'instruction pour déterminer quelles autorisations ont été appliquées à quelles colonnes.|  

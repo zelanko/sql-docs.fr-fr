@@ -15,12 +15,12 @@ ms.assetid: 9b46bcf8-ddaf-4d7d-90a6-80bc19517e9b
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a251b8599ba194a151790c2a781e49c643b00048
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a70bcc9e853908022147ef02e9d2019179c90875
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089029"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545487"
 ---
 # <a name="sql-destination-editor-advanced-page"></a>Éditeur de destination SQL (page Avancé)
   Utilisez la page **Avancé** de la boîte de dialogue **Éditeur de destination SQL** pour spécifier les options avancées pour l’insertion en bloc.  
@@ -56,7 +56,7 @@ ms.locfileid: "48089029"
 >  Effacez la zone de texte dans **l’Éditeur de destination SQL** pour indiquer que vous ne voulez pas assigner de valeur à cette propriété. Utilisez -1 dans la fenêtre **Propriétés** , **l’Éditeur avancé**et le modèle objet.  
   
  **Nombre maximum d'erreurs**  
- Spécifie le nombre d'erreurs au-delà duquel l'insertion en bloc s'arrête. La valeur par défaut de cette propriété est **–1**, ce qui signifie qu’aucune valeur ne lui a été assignée.  
+ Spécifie le nombre d'erreurs au-delà duquel l'insertion en bloc s'arrête. La valeur par défaut de cette propriété est **-1**, ce qui signifie qu’aucune valeur ne lui a été assignée.  
   
 > [!NOTE]  
 >  Effacez la zone de texte dans **l’Éditeur de destination SQL** pour indiquer que vous ne voulez pas assigner de valeur à cette propriété. Utilisez -1 dans la fenêtre **Propriétés** , **l’Éditeur avancé**et le modèle objet.  
@@ -68,9 +68,9 @@ ms.locfileid: "48089029"
  Tapez le nom des colonnes de tri. Chaque colonne peut être triée par ordre croissant ou décroissant. Si vous utilisez plusieurs colonnes de tri, délimitez la liste par des virgules.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Éditeur de Destination SQL &#40;Page Gestionnaire de connexions&#41;](../../2014/integration-services/sql-destination-editor-connection-manager-page.md)   
- [Éditeur de Destination SQL &#40;Page mappages&#41;](../../2014/integration-services/sql-destination-editor-mappings-page.md)   
+ [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Éditeur de destination SQL &#40;page Gestionnaire de connexions&#41;](../../2014/integration-services/sql-destination-editor-connection-manager-page.md)   
+ [Éditeur de destination SQL &#40;page Mappages&#41;](../../2014/integration-services/sql-destination-editor-mappings-page.md)   
  [Charger des données en masse à l’aide de la destination SQL Server](data-flow/bulk-load-data-by-using-the-sql-server-destination.md)  
   
   

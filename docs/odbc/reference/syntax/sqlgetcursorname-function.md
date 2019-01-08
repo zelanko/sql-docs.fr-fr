@@ -20,16 +20,16 @@ ms.assetid: e6e92199-7bb6-447c-8987-049a4c6ce05d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a1316ad29a31872d149201f31d60ede14a8a9051
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: faa88d18a5b682b98a56b6426ba6a94ee4687cab
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855077"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591813"
 ---
 # <a name="sqlgetcursorname-function"></a>SQLGetCursorName Function
 **Conformité**  
- Version introduite : La mise en conformité des normes 1.0 ODBC : ISO 92  
+ Version introduite : Conformité aux normes 1.0 ODBC : ISO 92  
   
  **Résumé**  
  **SQLGetCursorName** retourne le nom de curseur associé à une instruction spécifiée.  
@@ -81,9 +81,9 @@ SQLRETURN SQLGetCursorName(
 |IM001|Pilote ne prend pas en charge cette fonction|Le pilote (DM) associé le *au paramètre StatementHandle* ne prend pas en charge la fonction.|  
   
 ## <a name="comments"></a>Commentaires  
- Noms de curseurs sont utilisés uniquement dans la mise à jour positionnée et supprimer des instructions (par exemple, **mettre à jour** *nom de la table* ... **WHERE CURRENT OF** *nom de curseur*). Pour plus d’informations, consultez [positionné instructions Update et Delete](../../../odbc/reference/develop-app/positioned-update-and-delete-statements.md). Si l’application n’appelle pas **SQLSetCursorName** pour définir un nom de curseur, le pilote génère un nom. Ce nom commence par les lettres SQL_CUR.  
+ Noms de curseurs sont utilisés uniquement dans la mise à jour positionnée et supprimer des instructions (par exemple, **mettre à jour** _nom de la table_ ... **WHERE CURRENT OF** _nom de curseur_). Pour plus d’informations, consultez [positionné instructions Update et Delete](../../../odbc/reference/develop-app/positioned-update-and-delete-statements.md). Si l’application n’appelle pas **SQLSetCursorName** pour définir un nom de curseur, le pilote génère un nom. Ce nom commence par les lettres SQL_CUR.  
   
-> [!NOTE]  
+> [!NOTE]
 >  Dans ODBC 2 *.x*, lorsqu’il n’a aucun curseur ouvert et aucun nom n’avait été défini par un appel à **SQLSetCursorName**, un appel à **SQLGetCursorName** retourné SQLSTATE HY015 (aucun nom de curseur disponible). Dans ODBC 3 *.x*, ce n’est plus true ; quel que soit le moment **SQLGetCursorName** est appelée, le pilote retourne le nom du curseur.  
   
  **SQLGetCursorName** retourne le nom d’un curseur ou non le nom a été créé, explicitement ou implicitement. Un nom de curseur est généré implicitement si **SQLSetCursorName** n’est pas appelée. **SQLSetCursorName** peut être appelée pour renommer un curseur sur une instruction tant que le curseur se trouve dans un état alloué ou préparé.  

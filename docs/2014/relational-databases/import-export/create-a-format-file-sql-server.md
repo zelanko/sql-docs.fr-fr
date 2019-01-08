@@ -12,12 +12,12 @@ ms.assetid: f680b4a0-630f-4052-9c79-d348c1076f7b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fe0eb799d7f3a78d46d38940805f203a91b7b6c3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f9df741090bf896019c6d1c4ede5215982497cb3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183269"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366991"
 ---
 # <a name="create-a-format-file-sql-server"></a>Créer un fichier de format (SQL Server)
   Lorsque vous importez des données en bloc dans une table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou exportez en bloc des données à partir d'une table, utilisez un fichier de format vers un système souple pour l'écriture de fichiers de données nécessitant peu ou pas d'édition pour la conformité aux autres formats de données ou pour la lecture des fichiers de données provenant d'autres logiciels.  
@@ -46,7 +46,7 @@ ms.locfileid: "48183269"
   
 -   A. Création d'un fichier de format non-XML pour des données natives  
   
--   B. Création d'un fichier de format non-XML pour des données de type caractère  
+-   b. Création d'un fichier de format non-XML pour des données de type caractère  
   
 -   C. Création d'un fichier de format non-XML pour des données Unicode natives  
   
@@ -84,7 +84,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -n -f Department-
   
  Pour plus d’informations, consultez [Fichiers de format non-XML &#40;SQL Server&#41;](xml-format-files-sql-server.md).  
   
-#### <a name="b-creating-a-non-xml-format-file-for-character-data"></a>B. Création d'un fichier de format non-XML pour des données de type caractère  
+#### <a name="b-creating-a-non-xml-format-file-for-character-data"></a>b. Création d'un fichier de format non-XML pour des données de type caractère  
  L'exemple suivant crée un fichier de format XML appelé `Department.fmt`et destiné à la table [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]`HumanResources.Department` . Le fichier de format utilise les formats de données de type caractère ainsi qu'un indicateur de fin de champ qui n'est pas défini par défaut (`,`). Le contenu du fichier ainsi généré vous est présenté après la commande.  
   
  La commande **bcp** contient les qualificateurs suivants.  
@@ -147,7 +147,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -w -f Department-
   
 -   A. Création d'un fichier de format XML pour des données de type caractère  
   
--   B. Création d'un fichier de format XML pour des données natives  
+-   b. Création d'un fichier de format XML pour des données natives  
   
  Ces exemples créent la table `HumanResources.Department` dans l'exemple de base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . La table `HumanResources.Department` contient quatre colonnes : `DepartmentID`, `Name`, `GroupName`et `ModifiedDate`.  
   
@@ -163,20 +163,20 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -w -f Department-
 |----------------|-----------------|  
 |**formatnul-f** *fichier_de_format* **-x**|Fichier de format XML.|  
 |**-c**|Données de type caractère.|  
-|**-t** `,`|Virgule (**,**) servant d’indicateur de fin de champ.<br /><br /> Remarque : Si le fichier de données utilise l’indicateur de fin de champ défini par défaut (à savoir`\t`), le commutateur **-t** n’est pas nécessaire.|  
+|**-t** `,`|Virgule (**,**) servant d’indicateur de fin de champ.<br /><br /> Remarque : Si le fichier de données utilise la marque de fin de champ par défaut (`\t`), la **-t** commutateur n’est pas nécessaire.|  
 |**-T**|Spécifie que l'utilitaire **bcp** se connecte à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec une connexion approuvée qui utilise la sécurité intégrée. Si **-T** n’est pas spécifié, vous devez indiquer **-U** et **-P** pour pouvoir vous connecter.|  
   
  Dans la fenêtre d'invite de commandes Windows, tapez la commande `bcp` suivante :  
   
 ```  
-bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-c..xml –t, -T  
+bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-c..xml -t, -T  
 ```  
   
  Le fichier de format généré `Department-c.xml`contient les éléments XML suivants :  
   
 ```  
 <?xml version="1.0"?>  
-<BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
+<BCPFORMAT xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
  <RECORD>  
   <FIELD ID="1" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="7"/>  
   <FIELD ID="2" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="100" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
@@ -194,7 +194,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-
   
  Pour obtenir des informations sur la syntaxe de ce fichier de format, consultez [Fichiers de format XML &#40;SQL Server&#41;](xml-format-files-sql-server.md). Pour plus d’informations sur les données de type caractère, consultez [Utiliser le format caractère pour importer ou exporter des données &#40;SQL Server&#41;](use-character-format-to-import-or-export-data-sql-server.md).  
   
-#### <a name="b-creating-an-xml-format-file-for-native-data"></a>B. Création d'un fichier de format XML pour des données natives  
+#### <a name="b-creating-an-xml-format-file-for-native-data"></a>b. Création d'un fichier de format XML pour des données natives  
  L'exemple suivant crée un fichier de format XML appelé `Department-n.xml`et destiné à la table `HumanResources.Department` . Le fichier de format utilise des types de données natives. Le contenu du fichier ainsi généré vous est présenté après la commande.  
   
  La commande **bcp** contient les qualificateurs suivants.  
@@ -215,7 +215,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -x -f Department-n..
   
 ```  
 <?xml version="1.0"?>  
-<BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
+<BCPFORMAT xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
  <RECORD>  
   <FIELD ID="1" xsi:type="NativeFixed" LENGTH="2"/>  
   <FIELD ID="2" xsi:type="NCharPrefix" PREFIX_LENGTH="2" MAX_LENGTH="100" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
@@ -234,7 +234,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -x -f Department-n..
  Pour obtenir des informations sur la syntaxe de ce fichier de format, consultez [Fichiers de format XML &#40;SQL Server&#41;](xml-format-files-sql-server.md). Pour plus d’informations sur les données de type caractère, consultez [Utiliser le format caractère pour importer ou exporter des données &#40;SQL Server&#41;](use-native-format-to-import-or-export-data-sql-server.md).  
   
 ## <a name="mapping-data-fields-to-table-columns"></a>Mappage des champs de données aux colonnes de table  
- Lorsqu’il est créé par **bcp**, un fichier de format décrit toutes les colonnes de table dans l’ordre. Vous pouvez modifier ce fichier pour réorganiser ou omettre des lignes de la table. Vous pouvez ainsi personnaliser un fichier de format en fonction d'un fichier de données dont les champs ne sont pas mappés directement aux colonnes de table. Pour plus d'informations, consultez les rubriques suivantes :  
+ Lorsqu’il est créé par **bcp**, un fichier de format décrit toutes les colonnes de table dans l’ordre. Vous pouvez modifier ce fichier pour réorganiser ou omettre des lignes de la table. Vous pouvez ainsi personnaliser un fichier de format en fonction d'un fichier de données dont les champs ne sont pas mappés directement aux colonnes de table. Pour plus d’informations, consultez les rubriques suivantes :  
   
 -   [Utiliser un fichier de format pour ignorer une colonne de table &#40;SQL Server&#41;](use-a-format-file-to-skip-a-table-column-sql-server.md)  
   

@@ -20,12 +20,12 @@ ms.assetid: 3b13a4ae-f3df-4523-bd30-b3fdf71e95cf
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6c45471990d3eac42c8805fc9c6ba820a9762627
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fc9d003fc4c1f3b3cd32e8f23fe635d56e48555e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105169"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510902"
 ---
 # <a name="grant-custom-access-to-cell-data-analysis-services"></a>Octroyer un accès personnalisé à des données de cellule (Analysis Services)
   La sécurité de cellule permet d'accorder ou de refuser l'accès à des données de mesure dans un cube. L'illustration ci-dessous montre une combinaison de mesures autorisées et refusées dans un tableau croisé dynamique, quand vous êtes connecté en tant qu'utilisateur dont le rôle autorise uniquement l'accès à certaines mesures. Dans cet exemple, **Reseller Sales Amount** et **Reseller Total Product Cost** sont les seules mesures accessibles avec ce rôle. L'accès à toutes les autres mesures est refusé de manière implicite (les étapes nécessaires pour obtenir ce résultat sont fournies plus bas dans la section suivante, intitulée Autoriser l'accès à des mesures spécifiques).  
@@ -34,9 +34,9 @@ ms.locfileid: "48105169"
   
  Les autorisations de cellules s'appliquent aux données qui figurent à l'intérieur des cellules, et non à leurs métadonnées. Notez que la cellule est encore visible dans les résultats d'une requête et contient la valeur `#N/A` au lieu de sa valeur réelle. Le `#N/A` valeur apparaît dans la cellule, sauf si l’application cliente traduise la valeur ou une autre valeur est spécifiée en définissant la propriété Secured Cell Value dans la chaîne de connexion.  
   
- Pour masquer complètement la cellule, vous devez limiter les membres (dimensions, attributs de dimension et membres d'attributs de dimension) qui sont visibles. Pour plus d’informations, consultez [Grant custom access to dimension data &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md).  
+ Pour masquer complètement la cellule, vous devez limiter les dimensions de membres, les attributs de dimension et les membres d’attribut de dimension-qui sont visibles. Pour plus d’informations, consultez [Octroyer un accès personnalisé à des données de dimension &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md).  
   
- En tant qu'administrateur, vous pouvez spécifier si les membres d'un rôle disposent d'autorisations de lecture, de lecture du contingent ou de lecture/écriture sur les cellules d'un cube. Définir des autorisations sur une cellule est le niveau de sécurité le plus bas autorisé. Avant de commencer à appliquer des autorisations à ce niveau, vous devez par conséquent tenir compte des facteurs suivants :  
+ En tant qu'administrateur, vous pouvez spécifier si les membres d'un rôle disposent d'autorisations de lecture, de lecture du contingent ou de lecture/écriture sur les cellules d'un cube. Définir des autorisations sur une cellule est le niveau de sécurité le plus bas autorisé. Avant de commencer à appliquer des autorisations à ce niveau, vous devez par conséquent tenir compte des facteurs suivants :  
   
 -   La sécurité au niveau de la cellule ne peut pas étendre des droits qui ont été restreints à un niveau supérieur. Exemple : si un rôle refuse l’accès à des données de dimension, la sécurité au niveau de la cellule ne peut pas remplacer le jeu refusé. Un autre exemple : imaginez un rôle avec `Read` autorisation sur un cube et **en lecture/écriture** autorisation sur une cellule de l’autorisation de données de cellule ne sera pas **en lecture/écriture**; il sera `Read`.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "48105169"
 ## <a name="allow-access-to-specific-measures"></a>Autoriser l'accès à des mesures spécifiques  
  Vous pouvez utiliser la sécurité de cellule pour choisir de manière explicite les mesures qui sont disponibles. Une fois que vous avez identifié de manière spécifique les membres qui sont autorisés, toutes les autres mesures deviennent indisponibles. Il s'agit peut-être du scénario le plus simple à implémenter via un script MDX, comme l'illustrent les étapes ci-dessous.  
   
-1.  Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , connectez-vous à l’instance de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], sélectionnez une base de données, ouvrez le dossier **Rôles** , puis cliquez sur un rôle de base de données (ou créez-en un). L’appartenance doit déjà être spécifiée et le rôle doit avoir `Read` accès au cube. Pour plus d’informations, consultez [Grant cube or model permissions &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md) .  
+1.  Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , connectez-vous à l’instance de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], sélectionnez une base de données, ouvrez le dossier **Rôles** , puis cliquez sur un rôle de base de données (ou créez-en un). L'appartenance doit déjà être spécifiée et le rôle doit avoir un accès `Read` au cube. Pour plus d’informations, consultez [Octroyer des autorisations de cube ou de modèle &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md) .  
   
 2.  Dans **Données des cellules**, vérifiez la sélection du cube pour être sûr d'avoir choisi le bon cube, puis sélectionnez **Activer les autorisations de lecture**.  
   
@@ -98,11 +98,11 @@ AND (NOT Measures.CurrentMember IS [Measures].[Reseller Total Product Cost])
  Les autorisations de Lecture/Écriture sur une cellule servent à activer l'écriture différée, à condition que les membres disposent d'autorisations de lecture/écriture sur le cube proprement dit. Les autorisations accordées au niveau des cellules ne peuvent pas être supérieures à celles accordées au niveau du cube. Pour plus d'informations, consultez [Set Partition Writeback](set-partition-writeback.md) .  
   
 ## <a name="see-also"></a>Voir aussi  
- [Générateur MDX &#40;Analysis Services - données multidimensionnelles&#41;](../mdx-builder-analysis-services-multidimensional-data.md)   
- [Le Script MDX de base &#40;MDX&#41;](mdx/the-basic-mdx-script-mdx.md)   
- [Accorder des autorisations de processus &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md)   
- [Accorder des autorisations sur une dimension &#40;Analysis Services&#41;](grant-permissions-on-a-dimension-analysis-services.md)   
- [Octroyer un accès personnalisé aux données de dimension &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md)   
- [Accorder des autorisations de cube ou modèle &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)  
+ [Générateur MDX &#40;Analysis Services - Données multidimensionnelles&#41;](../mdx-builder-analysis-services-multidimensional-data.md)   
+ [Script MDX de base &#40;MDX&#41;](mdx/the-basic-mdx-script-mdx.md)   
+ [Octroyer des autorisations de traitement &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md)   
+ [Octroyer des autorisations sur une dimension &#40;Analysis Services&#41;](grant-permissions-on-a-dimension-analysis-services.md)   
+ [Octroyer un accès personnalisé à des données de dimension &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md)   
+ [Octroyer des autorisations de cube ou de modèle &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)  
   
   

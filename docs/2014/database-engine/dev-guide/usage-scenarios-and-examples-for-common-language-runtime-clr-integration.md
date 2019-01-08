@@ -19,19 +19,19 @@ ms.assetid: 33aac25f-abb4-4f29-af88-4a0dacd80ae7
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8144c1b4008f7c0a7d8280392ee421d5cb0f0a77
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 550483f71344a790225a2d22b1caf09cee16b9f3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48126871"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360471"
 ---
 # <a name="usage-scenarios-and-examples-for-common-language-runtime-clr-integration"></a>Scénarios et exemples d'utilisation pour l'intégration du CLR (Common Language Runtime)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contient des exemples d'applications et de packages, ainsi que de nombreux exemples de code que vous pouvez utiliser pour apprendre à vous servir des fonctionnalités de programmabilité de l'intégration du CLR.  
   
- Pour les projets Visual Studio complètes mise en œuvre de ces exemples et autres documents, visitez [Microsoft SQL Server Community Projects & Samples sur CodePlex](http://go.microsoft.com/fwlink/?LinkID=193935).  
+ Pour les projets Visual Studio complètes mise en œuvre de ces exemples et autres documents, visitez [Microsoft SQL Server Community Projects & Samples sur CodePlex](https://go.microsoft.com/fwlink/?LinkID=193935).  
   
-|Nom   |Description|  
+|Créer une vue d’abonnement|Description|  
 |----------|-----------------|  
 |[Accès au code natif depuis une fonction CLR définie par l’utilisateur](../../../2014/database-engine/dev-guide/accessing-native-code-from-a-clr-udf.md)|Indique comment appeler une fonction dans du code C++ natif (non managé) à partir d'une fonction définie par l'utilisateur dans un assembly de votre base de données.|  
 |[Exemple de paramètre tableau](../../../2014/database-engine/dev-guide/array-parameter-sample.md)|Montre comment créer, mettre à jour ou supprimer un ensemble de lignes dans une base de données en passant un tableau d'informations d'un client à une procédure stockée d'intégration du CLR sur le serveur. Pour cela, un type UDT est utilisé.|  

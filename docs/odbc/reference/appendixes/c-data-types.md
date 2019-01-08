@@ -16,12 +16,12 @@ ms.assetid: b681d260-3dbb-47df-a616-4910d727add7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d1372b868499bc6b903dd7fb6c4022e724870b67
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3f948b50fae0995e16024ac41d8dd891630d1dbe
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782197"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208459"
 ---
 # <a name="c-data-types"></a>Type de données C
 Types de données ODBC C indiquent le type de données de mémoires tampons de C permet de stocker des données dans l’application.  
@@ -109,7 +109,7 @@ struct tagSQL_NUMERIC_STRUCT {
    SQLCHAR precision;  
    SQLSCHAR scale;  
    SQLCHAR sign[g];  
-   SQLCHAR val[SQL_MAX_NUMERIC_LEN];[e], [f]   
+   SQLCHAR val[SQL_MAX_NUMERIC_LEN];[e], [f]   
 } SQL_NUMERIC_STRUCT;  
 ```  
   
@@ -138,7 +138,7 @@ struct tagSQLGUID {
   
  [e] un numéro est stocké dans le *val* champ de la structure SQL_NUMERIC_STRUCT comme un entier à l’échelle, en mode endian peu (l’octet de plus à gauche en cours de l’octet de poids faible). Par exemple, le nombre 10.001 base 10, avec une échelle de 4, est à l’échelle vers un entier de 100010. Comme il s’agit 186AA au format hexadécimal, la valeur dans SQL_NUMERIC_STRUCT serait « AA 86 01 00 00... 00", avec le nombre d’octets défini par le SQL_MAX_NUMERIC_LEN **#define**.  
   
- Pour plus d’informations sur **SQL_NUMERIC_STRUCT**, consultez [HOWTO : récupération des données numériques avec SQL_NUMERIC_STRUCT](retrieve-numeric-data-sql-numeric-struct-kb222831.md).  
+ Pour plus d’informations sur **SQL_NUMERIC_STRUCT**, consultez [HOWTO : Récupération des données numériques avec SQL_NUMERIC_STRUCT](retrieve-numeric-data-sql-numeric-struct-kb222831.md).  
   
  [f] les champs de précision et l’échelle des données SQL_C_NUMERIC tapez areused pour l’entrée à partir d’une application et pour la sortie à partir du pilote à l’application. Lorsque le pilote écrit une valeur numérique dans le SQL_NUMERIC_STRUCT, il utilise sa propre valeur par défaut spécifiques au pilote comme valeur pour le *précision* champ et il utilisera la valeur dans le champ SQL_DESC_SCALE de l’application (de descripteur qui est par défaut 0) pour le *mise à l’échelle* champ. Une application peut fournir ses propres valeurs pour la précision et l’échelle en définissant les champs SQL_DESC_PRECISION et SQL_DESC_SCALE du descripteur d’application.  
   

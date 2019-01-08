@@ -18,12 +18,12 @@ ms.assetid: c12ef6df-58c6-4391-bbbf-683ea874bd81
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7224a4e301565dc1bc6f6968da3477792b8cfc22
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: aaf644b6a8795e9c68e0053eaed0023c4b9299b6
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47781488"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53588403"
 ---
 # <a name="spcolumnsex-transact-sql"></a>sp_columns_ex (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,22 +45,22 @@ sp_columns_ex [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@table_server =** ] **'***serveur_de_la_table***'**  
+ [  **@table_server =** ] **'**_serveur_de_la_table_**'**  
  Nom du serveur lié pour lequel sont retournées les informations de colonne. *serveur_de_la_table* est **sysname**, sans valeur par défaut.  
   
- [  **@table_name =** ] **'***table_name***'**  
+ [  **@table_name =** ] **'**_table_name_**'**  
  Nom de la table pour laquelle sont retournées les informations de colonne. *table_name* est **sysname**, avec NULL comme valeur par défaut.  
   
- [  **@table_schema =** ] **'***table_schema***'**  
+ [  **@table_schema =** ] **'**_table_schema_**'**  
  Nom du schéma de la table pour lequel sont retournées les informations de colonne. *table_schema* est **sysname**, avec NULL comme valeur par défaut.  
   
- [  **@table_catalog =** ] **'***table_catalog***'**  
+ [  **@table_catalog =** ] **'**_table_catalog_**'**  
  Nom du catalogue de la table pour lequel sont retournées les informations de colonne. *table_catalog* est **sysname**, avec NULL comme valeur par défaut.  
   
- [  **@column_name =** ] **'***colonne***'**  
+ [  **@column_name =** ] **'**_colonne_**'**  
  Nom de la colonne de base de données pour laquelle des informations doivent être fournies. *colonne* est **sysname**, avec NULL comme valeur par défaut.  
   
- [  **@ODBCVer =** ] **'***ODBCVer***'**  
+ [  **@ODBCVer =** ] **'**_ODBCVer_**'**  
  Version d'ODBC actuellement utilisée. *ODBCVer* est **int**, avec une valeur par défaut 2. Cela indique ODBC version 2. Les valeurs valides sont 2 ou 3. Consultez la spécification ODBC SQLColumns pour connaître les différences de comportement entre les versions 2 et 3.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
@@ -70,7 +70,7 @@ sp_columns_ex [ @table_server = ] 'table_server'
   
 |Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**TABLE_CAT**|**sysname**|Nom du qualificateur de la table ou de la vue. Divers produits SGBD prennent en charge la dénomination en trois parties pour les tables (*qualificateur ***.*** propriétaire ***.*** nom*). Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cette colonne représente le nom de la base de données. Dans d'autres produits, elle représente le nom du serveur de l'environnement de base de données de la table. Ce champ peut contenir la valeur NULL.|  
+|**TABLE_CAT**|**sysname**|Nom du qualificateur de la table ou de la vue. Divers produits SGBD prennent en charge la dénomination en trois parties pour les tables (_qualificateur_**.** _propriétaire_**.** _nom_). Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cette colonne représente le nom de la base de données. Dans d'autres produits, elle représente le nom du serveur de l'environnement de base de données de la table. Ce champ peut contenir la valeur NULL.|  
 |**TABLE_SCHEM**|**sysname**|Nom du propriétaire de la table ou de la vue. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cette colonne représente le nom de l'utilisateur de base de données qui a créé la table. Ce champ retourne toujours une valeur.|  
 |**TABLE_NAME**|**sysname**|Nom de table ou de vue. Ce champ retourne toujours une valeur.|  
 |**COLUMN_NAME**|**sysname**|Nom de colonne, pour chaque colonne de la **TABLE_NAME** retourné. Ce champ retourne toujours une valeur.|  
@@ -97,7 +97,7 @@ sp_columns_ex [ @table_server = ] 'table_server'
   
  **sp_columns_ex** retourne un résultat vide si le fournisseur OLE DB du serveur lié spécifié ne prend pas en charge l’ensemble de lignes COLUMNS de le **IDBSchemaRowset** interface.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation SELECT sur le schéma.  
   
 ## <a name="remarks"></a>Notes  

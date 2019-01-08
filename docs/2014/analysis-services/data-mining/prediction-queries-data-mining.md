@@ -11,12 +11,12 @@ ms.assetid: e5e6686c-1360-480e-8c0d-8a56204fbed9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 892ea8d21d03eafc21a98ec6799aa840fddf96a1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 935cd8ec3f4e5069807e914e5af20e39b645deb3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094559"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520175"
 ---
 # <a name="prediction-queries-data-mining"></a>Prediction Queries (Data Mining)
   Un projet d'exploration de données type a pour objectif d'utiliser le modèle d'exploration de données pour faire des prédictions. Par exemple, vous pouvez prédire le temps d'inactivité prévu d'un certain cluster de serveurs, ou générer un score qui indique si des segments de clients sont susceptibles de répondre à une campagne de publicité. Pour effectuer toutes ces tâches, vous devez créer une requête de prédiction.  
@@ -59,7 +59,7 @@ ms.locfileid: "48094559"
 ###  <a name="bkmk_PredFunc"></a> Ajout de fonctions de prédiction  
  Outre la prédiction d'une valeur, vous pouvez personnaliser une requête de prédiction en vue de retourner plusieurs types d'informations en rapport avec la prédiction. Par exemple, si la prédiction crée une liste de produits à recommander à un client, vous souhaiterez peut-être également retourner la probabilité de chaque prédiction, afin de pouvoir les classer et présenter uniquement les meilleures recommandations à l'utilisateur.  
   
- Pour cela, vous ajoutez des *fonctions de prédiction* à la requête. Chaque type de modèle ou de requête prend en charge des fonctions spécifiques. Par exemple, les modèles de clustering prennent en charge des fonctions de prédiction spéciales qui fournissent des détails supplémentaires sur les clusters créés par le modèle, tandis que les modèles de série chronologique comportent des fonctions qui calculent les différences au fil du temps. Il existe aussi des fonctions de prédiction générales qui fonctionnent avec la plupart des types de modèles. Pour obtenir la liste des fonctions de prédiction prises en charge dans les différents types de requête, consultez cette rubrique dans la référence DMX : [Fonctions de prédiction générales &#40;DMX&#41;](/sql/dmx/general-prediction-functions-dmx).  
+ Pour cela, vous ajoutez des *fonctions de prédiction* à la requête. Chaque type de modèle ou de requête prend en charge des fonctions spécifiques. Par exemple, les modèles de clustering prennent en charge des fonctions de prédiction spéciales qui fournissent des détails supplémentaires sur les clusters créés par le modèle, tandis que les modèles de série chronologique comportent des fonctions qui calculent les différences au fil du temps. Il existe aussi des fonctions de prédiction générales qui fonctionnent avec la plupart des types de modèles. Pour obtenir la liste des fonctions de prédiction pris en charge dans les différents types de requêtes, consultez cette rubrique dans la référence DMX :  [Fonctions de prédiction générales &#40;DMX&#41;](/sql/dmx/general-prediction-functions-dmx).  
   
 ###  <a name="bkmk_SingletonQuery"></a> Création de requêtes de prédiction singleton  
  Une requête de prédiction singleton est utile lorsque vous souhaitez créer des prédictions rapides en temps réel. Un scénario courant consiste à obtenir des informations à partir d'un client, probablement à l'aide d'un formulaire sur un site Web, puis à soumettre ces données comme entrée à une requête de prédiction singleton. Par exemple, lorsqu'un client choisit un produit dans une liste, vous pouvez utiliser cette sélection comme entrée à une requête qui prédit les meilleurs produits à recommander.  
@@ -67,7 +67,7 @@ ms.locfileid: "48094559"
  Les requêtes de prédiction singleton ne requièrent pas une table séparée qui contient l'entrée. À la place, vous fournissez une ou plusieurs lignes de valeurs comme entrée pour le modèle, et la ou les prédictions sont retournées en temps réel.  
   
 > [!WARNING]  
->  Comme leur nom ne l'indique pas, les requêtes de prédiction singleton ne se contentent pas simplement de créer des prévisions uniques ; vous peuvent générer plusieurs prédictions pour chaque ensemble d'entrées. Pour fournir plusieurs cas d'entrée, créez une instruction SELECT pour chaque cas d'entrée et associez-la à l'opérateur UNION.  
+>  Malgré son nom, les requêtes de prédiction singleton ne faites pas simplement des prédictions uniques-vous pouvez générer plusieurs prédictions pour chaque ensemble d’entrées. Pour fournir plusieurs cas d'entrée, créez une instruction SELECT pour chaque cas d'entrée et associez-la à l'opérateur UNION.  
   
  Lorsque vous créez une requête de prédiction singleton, vous devez fournir les nouvelles données au modèle sous la forme d'une jointure PREDICTION JOIN. Cela signifie que bien que vous n'effectuiez pas le mappage à une table réelle, vous devez vous assurer que les nouvelles données correspondent aux colonnes existantes dans le modèle d'exploration de données. Si les nouvelles colonnes de données et les nouvelles données correspondent exactement, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] mappera les colonnes pour vous. On parle alors d'une jointure *NATURAL PREDICTION JOIN*. Toutefois, si les colonnes ne correspondent pas, ou si les nouvelles données ne contiennent pas les mêmes types et quantités de données que le modèle, vous devez spécifier les colonnes du modèle qui seront mappées aux nouvelles données ou spécifier les valeurs manquantes.  
   
@@ -147,7 +147,7 @@ FROM
  Si votre fournisseur ne peut pas gérer d'ensembles de lignes hiérarchiques, vous pouvez aplatir les résultats en utilisant le mot clé FLATTEN dans la requête de prédiction. Pour plus d’informations et des exemples d’ensembles de lignes aplatis, consultez [SELECT &#40;DMX&#41;](/sql/dmx/select-dmx).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Requêtes de contenu &#40;exploration de données&#41;](content-queries-data-mining.md)   
- [Requêtes de définition de données &#40;exploration de données&#41;](data-definition-queries-data-mining.md)  
+ [Requêtes de contenu &#40;Exploration de données&#41;](content-queries-data-mining.md)   
+ [Requêtes de définition des données &#40;Exploration de données&#41;](data-definition-queries-data-mining.md)  
   
   

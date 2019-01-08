@@ -1,5 +1,5 @@
 ---
-title: Propriétés DAX | Microsoft Docs
+title: Propriétés DAX Analysis Services | Microsoft Docs
 ms.date: 10/03/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,19 +9,19 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 794caf245e0cc3494713991159c5a911a187afae
-ms.sourcegitcommit: 448106b618fe243e418bbfc3daae7aee8d8553d2
+ms.openlocfilehash: 20a6df833f8c525c24abdf3bb51278d0067db951
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48264861"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53071896"
 ---
 # <a name="dax-properties"></a>Propriétés DAX
 [!INCLUDE[ssas-appliesto-sqlas-all](../../includes/ssas-appliesto-sqlas-all.md)]
 
    La section DAX de msmdsrv.ini contient les paramètres utilisés pour contrôler certains comportements de requête dans Analysis Services, telles que la limite supérieure sur le nombre de lignes retournées dans un jeu de résultats de requête DAX.
 
-  Pour les ensembles de lignes volumineux, tels que ceux retournés dans les modèles DirectQuery, la valeur par défaut d’un million de lignes peut être insuffisante. Vous devez ajuster la limite si vous obtenez une erreur indiquant que le jeu de résultats d’une requête pour la source de données externe a dépassé la taille maximale autorisée d’un million de lignes.
+  Pour les ensembles de lignes volumineux, tels que ceux retournés dans les modèles DirectQuery, la valeur par défaut d’un million de lignes peut être insuffisante. Vous saurez que si la limite doit ajuster si vous obtenez cette erreur : « Le jeu de résultats d’une requête pour la source de données externe a dépassé la taille maximale autorisée de « 1000000 » lignes. »
 
 Pour augmenter la limite supérieure, spécifiez le paramètre de configuration **MaxIntermediateRowSize** . Vous devez ajouter manuellement la totalité de l’élément dans la section DAX du fichier de configuration. Le paramètre n’est pas présent dans le fichier tant que vous ne l’y avez pas ajouté.
 
@@ -43,7 +43,7 @@ Pour augmenter la limite supérieure, spécifiez le paramètre de configuration 
 
 ## <a name="property-descriptions"></a>Description des propriétés
 
-Paramètre |Valeur |Description
+Paramètre |Value |Description
 --------|-------|-----------
 MaxIntermediateRowsetSize | 1000000 | Nombre maximal de lignes retournées dans une requête DAX. Ajoutez cette entrée manuellement au fichier msmdsrv.ini et augmentez cette valeur si la valeur par défaut est trop faible.
 PredicateCheckSpoolCardinalityThreshold| 5000 | Propriété avancée que vous ne devez pas modifier, sauf si vous bénéficiez de l’assistance du support technique Microsoft.

@@ -1,20 +1,21 @@
 ---
-title: Débogage et diagnostiquer des Applications Spark sur des clusters de données volumineuses de SQL Server dans le serveur d’historique Spark
-description: Débogage et diagnostiquer des Applications Spark sur des clusters de données volumineuses de SQL Server dans le serveur d’historique Spark
-services: SQL Server 2019 big data cluster spark
-ms.service: SQL Server 2019 big data cluster spark
+title: Débogage/diagnostiquer des Applications Spark
+titleSuffix: SQL Server 2019 big data clusters
+description: Utiliser le serveur d’historique Spark pour déboguer et diagnostiquer des applications Spark en cours d’exécution sur des clusters SQL Server 2019 big data.
 author: jejiang
 ms.author: jejiang
 ms.reviewer: jroth
-ms.custom: ''
+manager: craigg
+ms.date: 12/06/2018
 ms.topic: conceptual
-ms.date: 10/01/2018
-ms.openlocfilehash: 09d22e5d3b55f48ab1873507e6f474f07d842801
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.prod: sql
+ms.custom: seodec18
+ms.openlocfilehash: a9416f774e84d6b458e14aeb28db2ab39ad8543e
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460864"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53029743"
 ---
 # <a name="debug-and-diagnose-spark-applications-on-sql-server-big-data-clusters-in-spark-history-server"></a>Débogage et diagnostiquer des Applications Spark sur des clusters de données volumineuses de SQL Server dans le serveur d’historique Spark
 
@@ -25,7 +26,7 @@ Cet article fournit des conseils sur l’utilisation du serveur d’historique S
 L’expérience utilisateur de Spark historique server à partir de l’open source a été amélioré avec plus d’informations, ce qui inclut les données spécifiques à un projet et visualisation interactive des flux de travail graphique et les données pour le cluster de données volumineux. 
 
 ### <a name="open-the-spark-history-server-web-ui-by-url"></a>Ouvrez le site Web serveur d’historique Spark UI par URL
-Remplacez de serveur d’historique Spark en accédant à l’URL suivante, ouvrez `<Ipaddress>` et `<Port>` avec des informations spécifiques de cluster de données volumineuses. Plus d’informations peuvent être référencés : [cluster de données volumineux de déployer SQL Server](quickstart-big-data-cluster-deploy.md)
+Remplacez de serveur d’historique Spark en accédant à l’URL suivante, ouvrez `<Ipaddress>` et `<Port>` avec des informations spécifiques de cluster de données volumineuses. Plus d’informations peuvent être référencés : [Déployer le cluster de données volumineux de SQL Server](quickstart-big-data-cluster-deploy.md)
 
 ```
 https://<Ipaddress>:<Port>/gateway/default/sparkhistory
@@ -41,31 +42,31 @@ Sélectionnez l’ID de tâche, puis cliquez sur **données** dans le menu de l�
 
 + Vérifier le **entrées**, **sorties**, et **opérations de Table** en sélectionnant les onglets séparément.
 
-    ![Onglets de données](./media/apache-azure-spark-history-server/sparkui-data-tabs.png)
+    ![Onglets de données de serveur d’historique Spark](./media/apache-azure-spark-history-server/sparkui-data-tabs.png)
 
 + Copier toutes les lignes en cliquant sur le bouton **copie**.
 
-    ![Copie des données](./media/apache-azure-spark-history-server/sparkui-data-copy.png)
+    ![Copier toutes les lignes](./media/apache-azure-spark-history-server/sparkui-data-copy.png)
 
 + Enregistrer toutes les données en tant que fichier CSV en cliquant sur le bouton **csv**.
 
-    ![Données de sauvegarde](./media/apache-azure-spark-history-server/sparkui-data-save.png)
+    ![Enregistrer les données au format CSV](./media/apache-azure-spark-history-server/sparkui-data-save.png)
 
 + Recherche en entrant des mots clés dans le champ **recherche**, le résultat de la recherche s’affichent immédiatement.
 
-    ![Recherche de données](./media/apache-azure-spark-history-server/sparkui-data-search.png)
+    ![Faites une recherche avec les mots clés](./media/apache-azure-spark-history-server/sparkui-data-search.png)
 
 + Cliquez sur l’en-tête de colonne pour trier la table, cliquez sur le signe plus pour développer une ligne pour afficher plus de détails ou cliquez sur le signe moins pour réduire une ligne.
 
-    ![Table de données](./media/apache-azure-spark-history-server/sparkui-data-table.png)
+    ![Fonctionnalités de table de données](./media/apache-azure-spark-history-server/sparkui-data-table.png)
 
 + Télécharger un fichier unique en cliquant sur le bouton **télécharger partielle** qui placer à droite, puis le fichier sélectionné est téléchargé vers emplacement local. Si le fichier n’existe pas plus, il s’ouvre un nouvel onglet pour afficher les messages d’erreur.
 
-    ![Ligne de téléchargement de données](./media/apache-azure-spark-history-server/sparkui-data-download-row.png)
+    ![Télécharger une ligne de données](./media/apache-azure-spark-history-server/sparkui-data-download-row.png)
 
 + Copier le chemin d’accès complet ou chemin d’accès relatif en sélectionnant le **copier le chemin complet**, **copier le chemin relatif** qui se développe à partir du menu de téléchargement. Pour les fichiers de stockage azure data lake, **ouvrir dans l’Explorateur de stockage Azure** lancera l’Explorateur de stockage Azure. Et recherchez le dossier exact lors de la connexion.
 
-    ![Chemin d’accès de copie de données](./media/apache-azure-spark-history-server/sparkui-data-copy-path.png)
+    ![Copier un chemin d’accès complet ou relatif](./media/apache-azure-spark-history-server/sparkui-data-copy-path.png)
 
 + Cliquez sur le nombre, le tableau ci-dessous pour naviguer pages quand trop autant de lignes pour afficher dans une page. 
 
@@ -99,11 +100,11 @@ Sélectionnez l’ID de tâche, puis cliquez sur **Graph** dans le menu de l’o
 
 + Lire le travail en cliquant sur le **lecture** bouton et arrêter à tout moment en cliquant sur le bouton Arrêter. La tâche s’affichent dans la couleur à afficher un état différent lors de la lecture :
 
-    + Vert indique une réussite : la tâche est terminée avec succès.
-    + Orange pour tentée : Instances de tâches ayant échoué, mais n’affectent pas le résultat final de la tâche. Ces tâches avaient dupliquer ou réessayez d’instances qui peuvent réussir plus tard.
-    + Bleu pour l’exécution : la tâche est en cours d’exécution.
-    + Blanc pour l’attente ou ignoré : la tâche est en attente d’exécution ou l’étape a ignoré.
-    + Rouge pour le basculement : la tâche a échoué.
+    + Vert indique une réussite : La tâche terminée avec succès.
+    + Orange pour une nouvelle tentative : Instances de tâches ayant échoué, mais n’affectent pas le résultat final de la tâche. Ces tâches avaient dupliquer ou réessayez d’instances qui peuvent réussir plus tard.
+    + Bleu pour l’exécution : La tâche est en cours d’exécution.
+    + Blanc pour l’attente ou ignoré : La tâche est en attente d’exécution, ou l’étape a ignoré.
+    + Échec de rouge pour : La tâche a échoué.
 
     ![échantillon de couleur de graphique, en cours d’exécution](./media/apache-azure-spark-history-server/sparkui-graph-color-running.png)
  
@@ -161,13 +162,13 @@ Sélectionnez l’ID de tâche, puis cliquez sur **diagnostic** dans le menu de 
 ### <a name="data-skew"></a>Décalage des données
 Cliquez sur **d’asymétrie des données** sous l’onglet correspondant décalée de tâches sont affichées selon les paramètres spécifiés. 
 
-+ **Spécifier les paramètres** -la première section affiche les paramètres qui sont utilisés pour détecter le décalage des données. La règle intégrée est : lecture des données de tâche est supérieure à trois fois de la lecture de données moyenne de la tâche, et la lecture de données de tâche sont de plus de 10 Mo. Si vous souhaitez définir vos propres règles pour les tâches décalées, vous pouvez choisir vos paramètres, le **étape incliné**, et **incliner Char** section est actualisée en conséquence. 
++ **Spécifier les paramètres** -la première section affiche les paramètres qui sont utilisés pour détecter le décalage des données. La règle intégrée est : Lecture de données de tâche est supérieure à trois fois de la lecture de données moyenne de la tâche, et la lecture de données de tâche sont de plus de 10 Mo. Si vous souhaitez définir vos propres règles pour les tâches décalées, vous pouvez choisir vos paramètres, le **étape incliné**, et **incliner Char** section est actualisée en conséquence. 
 
 + **Incliné étape** -la seconde section affiche les étapes qui ont faussé tâches répondant aux critères spécifiés ci-dessus. S’il existe plusieurs tâches décalée d’une phase, la table de phase asymétrique affiche uniquement la tâche plus décalée (par exemple, les données plus grandes pour le décalage des données). 
 
     ![Section2 d’asymétrie des données](./media/apache-azure-spark-history-server/sparkui-diagnosis-dataskew-section2.png)
 
-+ **Incliner graphique** – lorsqu’une ligne dans la table intermédiaire décalage est sélectionnée, affichées dans le graphique de décalage plus de distributions de tâche en fonction des données lues et durée d’exécution. Les tâches décalées sont marqués en rouge et les tâches normales sont marquées en bleu. En termes de performances, le graphique affiche uniquement les tâches d’exemple jusqu'à 100. Les détails de la tâche sont affichés dans le volet de droite en bas.
++ **Incliner graphique** : quand une ligne dans la table intermédiaire décalage est sélectionnée, affichées dans le graphique de décalage plus de distributions de tâche en fonction des données lues et durée d’exécution. Les tâches décalées sont marqués en rouge et les tâches normales sont marquées en bleu. En termes de performances, le graphique affiche uniquement les tâches d’exemple jusqu'à 100. Les détails de la tâche sont affichés dans le volet de droite en bas.
 
     ![Section3 d’asymétrie des données](./media/apache-azure-spark-history-server/sparkui-diagnosis-dataskew-section3.png)
 

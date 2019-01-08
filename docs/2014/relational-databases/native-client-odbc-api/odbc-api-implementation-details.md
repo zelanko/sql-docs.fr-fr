@@ -15,17 +15,17 @@ ms.assetid: dca92489-f179-4b1f-997c-adcc46aa17a3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5892aa294983a453c018afc5511cee0f88eff0a0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a8370db6cfcf3d410e563a0134221d0d48da09a8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133407"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369121"
 ---
 # <a name="odbc-api-implementation-details"></a>ODBC API Implementation Details
   Cette section fournit des informations sur les fonctions ODBC qui présentent des comportements spécifiques à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lorsqu'elles sont utilisées avec le pilote ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Toutes les fonctions ODBC ne sont pas documentées ici. Les rubriques individuelles présentent uniquement les problèmes spécifiques à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour une fonction ODBC. Elles ne constituent pas une référence complète pour les fonctions ODBC.  
   
- Le pilote ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client se conforme à la spécification d'ODBC 3.51 et, si vous utilisez le kit de développement logiciel (SDK) Windows 7, avec la spécification ODBC 3.8. Pour obtenir une référence ODBC complète, affichez le [de référence du programmeur ODBC](http://go.microsoft.com/fwlink/?LinkId=45250) en ligne.  
+ Le pilote ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client se conforme à la spécification d'ODBC 3.51 et, si vous utilisez le kit de développement logiciel (SDK) Windows 7, avec la spécification ODBC 3.8. Pour obtenir une référence ODBC complète, affichez le [de référence du programmeur ODBC](https://go.microsoft.com/fwlink/?LinkId=45250) en ligne.  
   
 ## <a name="in-this-section"></a>Dans cette section  
   

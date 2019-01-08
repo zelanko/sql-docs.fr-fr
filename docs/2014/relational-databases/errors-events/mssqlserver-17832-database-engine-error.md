@@ -15,12 +15,12 @@ ms.assetid: bd56ffe4-0855-4ada-8aca-251fbc6ff2ce
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 37ca0222975528efcd722ec3c39f84ca570fc08b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bda6c6038a4bdfce089d8523c2b4655d1b4d2d39
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48186959"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362091"
 ---
 # <a name="mssqlserver17832"></a>MSSQLSERVER_17832
     
@@ -43,7 +43,7 @@ ms.locfileid: "48186959"
   
  Si le jeton a été créé incorrectement ou endommagé pendant la transmission, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne peut pas proposer d'informations supplémentaires sur le problème.  
   
- Lorsque l'utilisateur est membre de nombreux groupes ou possède de nombreuses stratégies, le jeton peut devenir trop volumineux et ne pas les répertorier tous et toutes. Si le jeton dépasse la valeur **MaxTokenSize** du serveur, le client ne parvient pas à se connecter, ce qui génère une erreur réseau générale et l’erreur 17832 peut se produire. Ce problème peut affecter uniquement certains utilisateurs : ceux qui appartiennent à de nombreux groupes ou stratégies. Quand le problème est lié à la valeur **MaxTokenSize** du serveur, l’erreur 17832 mentionnée dans le journal des erreurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est accompagnée d’une erreur dont l’état est 9. Pour plus d’informations sur Kerberos et la valeur **MaxTokenSize**, consultez [KB327825](http://support.microsoft.com/kb/327825).  
+ Lorsque l'utilisateur est membre de nombreux groupes ou possède de nombreuses stratégies, le jeton peut devenir trop volumineux et ne pas les répertorier tous et toutes. Si le jeton dépasse la valeur **MaxTokenSize** du serveur, le client ne parvient pas à se connecter, ce qui génère une erreur réseau générale et l’erreur 17832 peut se produire. Ce problème peut affecter uniquement certains utilisateurs : ceux qui appartiennent à de nombreux groupes ou stratégies. Quand le problème est lié à la valeur **MaxTokenSize** du serveur, l’erreur 17832 mentionnée dans le journal des erreurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est accompagnée d’une erreur dont l’état est 9. Pour plus d’informations sur Kerberos et la valeur **MaxTokenSize**, consultez [KB327825](https://support.microsoft.com/kb/327825).  
   
 ## <a name="user-action"></a>Action de l'utilisateur  
  Pour résoudre ce problème, augmentez la valeur **MaxTokenSize** du serveur à une taille assez importante pour contenir le jeton le plus volumineux de tous les utilisateurs de votre organisation. Pour rechercher la taille de jeton correcte pour votre organisation, envisagez d’utiliser l’application **Tokensz**.   
@@ -51,7 +51,7 @@ ms.locfileid: "48186959"
 > [!CAUTION]  
 >  [!INCLUDE[ssNoteRegistry](../../includes/ssnoteregistry-md.md)]  
   
- **Pour modifier MaxTokenSize****sur l’ordinateur du serveur**   
+ **Pour modifier MaxTokenSize****sur l’ordinateur du serveur**  
   
 1.  Dans le menu **Démarrer** , cliquez sur **Exécuter**.  
   

@@ -16,12 +16,12 @@ ms.assetid: ee95ffdb-5aa1-49a3-beb2-7695b27c3df9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c247ab2681f2ff1b0891c15e0348a088f08e42c1
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: efcd4c4b3dabc82b30d5b0e903dd8937ad3a7ce3
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677578"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590933"
 ---
 # <a name="driver-manager-connection-pooling"></a>Regroupement de connexions du gestionnaire de pilotes
 Le regroupement de connexions permet à une application d’utiliser une connexion à partir d’un pool de connexions qui ne doivent pas être rétablie pour chaque utilisation. Une fois qu’une connexion a été créée et placée dans un pool, une application peut réutiliser cette connexion sans effectuer le processus de connexion complète.  
@@ -30,12 +30,13 @@ Le regroupement de connexions permet à une application d’utiliser une connexi
   
  En plus des gains de performances, l’architecture de regroupement de connexions permet à un environnement et les connexions associées à être utilisé par plusieurs composants dans un processus unique. Cela signifie que les composants autonomes dans le même processus peuvent interagir avec eux sans connaître les unes des autres. Une connexion dans un pool de connexions peut être utilisée à plusieurs reprises par plusieurs composants.  
   
-> [!NOTE]  
+> [!NOTE]
 >  Le regroupement de connexions peut être utilisé par une application ODBC présentant ODBC 2. *x* comportement, à condition que l’application peut appeler *SQLSetEnvAttr*. Lorsque vous utilisez le regroupement de connexions, l’application ne doit pas exécuter les instructions SQL qui modifient la base de données ou le contexte de la base de données, telles que la modification la \< *base de données ** nom*>, ce qui modifie le catalogue utilisé par un source de données.  
-  
+
+
  Un pilote ODBC doit être complètement thread-safe, et les connexions ne doivent pas d’affinité de thread pour prendre en charge le regroupement de connexions. Cela signifie que le pilote est en mesure de gérer un appel sur n’importe quel thread à tout moment et est en mesure de se connecter sur un thread, à utiliser la connexion sur un autre thread et à la déconnexion sur un troisième thread.  
   
- Le pool de connexions est conservé par le Gestionnaire de pilotes. Les connexions sont retirées du pool lorsque l’application appelle **SQLConnect** ou **SQLDriverConnect** et sont retournées au pool lorsque l’application appelle **SQLDisconnect**. La taille du pool augmente dynamiquement, basé sur les allocations de la ressource demandée. Il est réduit selon le délai d’inactivité : si une connexion est inactive pendant une période de temps (il n'a pas été utilisé dans une connexion), il est supprimé à partir du pool. La taille du pool est limitée uniquement par les contraintes de mémoire et les limites sur le serveur.  
+ Le pool de connexions est conservé par le Gestionnaire de pilotes. Les connexions sont retirées du pool lorsque l’application appelle **SQLConnect** ou **SQLDriverConnect** et sont retournées au pool lorsque l’application appelle **SQLDisconnect**. La taille du pool augmente dynamiquement, basé sur les allocations de la ressource demandée. Il est réduit selon le délai d’inactivité : Si une connexion est inactive pendant une période de temps (il n'a pas été utilisé dans une connexion), il est supprimé à partir du pool. La taille du pool est limitée uniquement par les contraintes de mémoire et les limites sur le serveur.  
   
  Le Gestionnaire de pilotes détermine si une connexion spécifique dans un pool doit être utilisée conformément aux arguments passés dans **SQLConnect** ou **SQLDriverConnect**et selon les attributs de connexion définir une fois que la connexion a été allouée.  
   

@@ -1,11 +1,10 @@
 ---
-title: 'Didacticiel : Réplication de données entre serveurs connectés en permanence | Microsoft Docs'
+title: 'Didacticiel : Réplication en continu de données entre serveurs connectés | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - tutorials [SQL Server replication]
@@ -15,20 +14,20 @@ ms.assetid: 7b18a04a-2c3d-4efe-a0bc-c3f92be72fd0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 382a505f8e7c716f3c2ccd8c117468c376ad6b08
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 32b97d456c42eab89511d8f5a9d1924914ea81ca
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094619"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52753921"
 ---
-# <a name="tutorial-replicating-data-between-continuously-connected-servers"></a>Didacticiel : Réplication de données entre serveurs connectés en permanence
+# <a name="tutorial-replicating-data-between-continuously-connected-servers"></a>Didacticiel : Réplication de données entre serveurs connectés en permanence
   La réplication constitue une bonne solution au problème de transfert de données entre serveurs connectés en permanence. À l'aide des Assistants de réplication, vous pouvez aisément configurer et administrer une topologie de réplication. Ce didacticiel vous explique comment configurer une topologie de réplication dans le cas de serveurs connectés en permanence.  
   
 ## <a name="what-you-will-learn"></a>Contenu du didacticiel  
  Ce didacticiel vous explique comment publier des données d'une base de données sur une autre à l'aide de la réplication transactionnelle. La première leçon montre comment utiliser [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pour créer une publication. Les leçons suivantes expliquent comment créer et valider un abonnement et comment mesurer la latence.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  Ce didacticiel est destiné aux utilisateurs qui sont familiers des opérations élémentaires de base de données, mais dont l'expérience en matière de réplication est limitée. Pour suivre ce didacticiel, vous devez avoir terminé le didacticiel précédent, [Préparation du serveur pour la réplication](tutorial-preparing-the-server-for-replication.md).  
   
  Pour utiliser ce didacticiel, les composants suivants doivent être installés sur votre système :  
@@ -49,15 +48,15 @@ ms.locfileid: "48094619"
 > [!NOTE]  
 >  Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], vous devez vous connecter au serveur de publication et à l’Abonné à l’aide d’un identifiant de connexion membre du rôle serveur fixe **sysadmin** .  
   
- **Durée estimée pour effectuer ce didacticiel : 30 minutes.**  
+ **Durée estimée pour effectuer le didacticiel : 30 minutes.**  
   
 ## <a name="lessons-in-this-tutorial"></a>Leçons du didacticiel  
   
--   [Leçon 1 : publication de données à l'aide de la réplication transactionnelle](lesson-1-publishing-data-using-transactional-replication.md)  
+-   [Leçon 1 : Publication de données à l’aide de la réplication transactionnelle](lesson-1-publishing-data-using-transactional-replication.md)  
   
--   [Leçon 2 : Création d'un abonnement à la publication transactionnelle](lesson-2-creating-a-subscription-to-the-transactional-publication.md)  
+-   [Leçon 2 : Création d’un abonnement à la Publication transactionnelle](lesson-2-creating-a-subscription-to-the-transactional-publication.md)  
   
--   [Leçon 3 : Validation de l'abonnement et mesure de la latence](lesson-3-validating-the-subscription-and-measuring-latency.md)  
+-   [Leçon 3 : Validation de l’abonnement et mesure de la latence](lesson-3-validating-the-subscription-and-measuring-latency.md)  
   
  [Démarrer le didacticiel](transactional/transactional-replication.md)  
   

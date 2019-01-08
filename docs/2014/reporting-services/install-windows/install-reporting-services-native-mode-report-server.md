@@ -15,12 +15,12 @@ ms.assetid: 8f25e6dc-b753-400e-9e9a-50f4f35bf6c4
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 9bfbae24063bfa3daa7fbafd1004125e826f6886
-ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
+ms.openlocfilehash: 39f3b68f816594d275f48723865c7497f5352fbb
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48851864"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527707"
 ---
 # <a name="install-reporting-services-native-mode-report-server"></a>Installer le serveur de rapports Reporting Services en mode natif
   Un serveur de rapports en mode natif [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] peut être installé via l'Assistant Installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou à partir de la ligne de commande. Dans l'Assistant Installation, vous pouvez choisir 1) d'installer les fichiers te de configurer le serveur avec les paramètres par défaut ou 2) d'installer uniquement les fichiers et le serveur n'est pas configuré par l'Assistant Installation. Cette rubrique passe en revue *la configuration par défaut pour le mode natif* où le programme d'installation installe et configure une instance de serveur de rapports. Une fois l'installation terminée, le serveur de rapports fonctionne et est opérationnel. Un serveur de rapports en mode natif s'exécute comme serveur d'applications autonome. Le mode natif est le mode serveur par défaut.  
@@ -76,7 +76,7 @@ ms.locfileid: "48851864"
  L'installation de la configuration par défaut ne garantit pas que le serveur de rapports fonctionne après que l'installation est terminée. L'inscription des URL par défaut peut ne pas s'effectuer quand le service démarre. Testez toujours votre installation pour vérifier que le service démarre et s'exécute comme prévu.  
   
 ##  <a name="bkmk_requirements"></a> Spécifications  
- L'option de configuration par défaut utilise les valeurs par défaut pour configurer les paramètres principaux obligatoires pour rendre un serveur de rapports opérationnel. Elle comporte les impératifs suivants :  
+ L'option de configuration par défaut utilise les valeurs par défaut pour configurer les paramètres principaux obligatoires pour rendre un serveur de rapports opérationnel. Elle comporte les impératifs suivants :  
   
 -   Votre matériel doit correspondre aux configurations matérielle et logicielle minimales requises pour l'exécution de Microsoft SQL Server. Pour plus d'informations, consultez [Hardware and Software Requirements for Installing SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  
   
@@ -121,7 +121,7 @@ ms.locfileid: "48851864"
   
     -   **Reporting Services - Natif**.  
   
-    -   **Outils de gestion - De base**. Les outils d'administration ne sont pas nécessaires mais ils sont recommandés, sauf si vous disposez déjà d'une autre installation d'outils d'administration. L’option de configuration par défaut entraîne un serveur de rapports opérationnel mais vous souhaiterez peut-être modifier les options de configuration à une date ultérieure. Certaines options telles que « Mes rapports » sont gérées via [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
+    -   **Outils de gestion - base**. Les outils d'administration ne sont pas nécessaires mais ils sont recommandés, sauf si vous disposez déjà d'une autre installation d'outils d'administration. L’option de configuration par défaut entraîne un serveur de rapports opérationnel mais vous souhaiterez peut-être modifier les options de configuration à une date ultérieure. Certaines options telles que « Mes rapports » sont gérées via [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]  
   
      ![SSRS en mode natif sélectionné lors de la sélection de fonctionnalités](../../../2014/sql-server/install/media/rs-setupfeatureselection-native-withcircles.gif "SSRS en mode natif sélectionné lors de la sélection de fonctionnalités")  
   

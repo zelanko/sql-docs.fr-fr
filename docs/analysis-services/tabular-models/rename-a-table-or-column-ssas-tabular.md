@@ -1,5 +1,5 @@
 ---
-title: Renommer une Table ou colonne | Documents Microsoft
+title: Renommer une table de modèle tabulaire Analysis Services ou une colonne | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 0c8564b7a61a73937bc5f9a207c98fd77c7b1bb7
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 0e5c0173de2ea22e91c0a1f13517a9bcb7c58ed9
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34040103"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072636"
 ---
 # <a name="rename-a-table-or-column"></a>Renommer une table ou une colonne 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -44,18 +44,18 @@ ms.locfileid: "34040103"
   
 -   Caractères de contrôle  
   
--   Les caractères suivants (qui ne sont pas valides dans les noms d’objets Analysis Services) :., ' : / \\*|? & % $! %$!+=()[]5D;{}{}<>  
+-   Les caractères suivants (qui ne sont pas valides dans les noms d’objets Analysis Services) :., ' : / \\*|? & % $! [] de () +={}<>  
   
 -   Mots clés réservés Analysis Services, notamment les opérateurs et les noms de fonction MDX et DMX.  
   
 ## <a name="effect-of-renaming-on-existing-tables-columns-and-calculations"></a>Effet de l'attribution d'un nouveau nom sur les tables existantes, les colonnes et les calculs  
- Chaque fois que vous modifiez le nom d'une table, vous modifiez le nom de l'objet de table sous-jacente, qui peut contenir plusieurs colonnes ou mesures. Toutes les colonnes qui figurent dans la table, ainsi que toutes les relations qui utilisent la table, doivent être mises à jour pour utiliser le nouveau nom dans leurs définitions. Cette mise à jour se produit automatiquement dans la plupart des cas.
+ Chaque fois que vous modifiez le nom d'une table, vous modifiez le nom de l'objet de table sous-jacente, qui peut contenir plusieurs colonnes ou mesures. Toutes les colonnes qui se trouvent dans la table et toutes les relations qui utilisent la table, doivent être mis à jour pour utiliser le nouveau nom dans leurs définitions. Cette mise à jour se produit automatiquement dans la plupart des cas.
   
- Tous les calculs qui utilisent la table renommée, ou qui utilisent des colonnes à partir de la table renommée, doivent également être mises à jour, et les données dérivées de ces calculs doivent être actualisées et recalculées. Selon le nombre de tables et de calculs affectés, cette opération peut prendre quelque temps. Par conséquent, le meilleur moment pour renommer des tables est soit pendant le processus d'importation, soit avant de commencer à générer des relations et des calculs complexes.  
+ Tous les calculs qui utilisent la table renommée, ou qui utilisent des colonnes à partir de la table renommée, doivent également être mis à jour, et les données dérivées de ces calculs doivent être actualisées et recalculées. Selon le nombre de tables et de calculs affectés, cette opération peut prendre quelque temps. Par conséquent, le meilleur moment pour renommer des tables est soit pendant le processus d'importation, soit avant de commencer à générer des relations et des calculs complexes.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Tables et colonnes](../../analysis-services/tabular-models/tables-and-columns-ssas-tabular.md)   
- [Importation à partir de PowerPivot](../../analysis-services/tabular-models/import-from-power-pivot-ssas-tabular.md)   
+ [Importer à partir de Power Pivot](../../analysis-services/tabular-models/import-from-power-pivot-ssas-tabular.md)   
  [Importer depuis Analysis Services](../../analysis-services/tabular-models/import-from-analysis-services-ssas-tabular.md)  
   
   

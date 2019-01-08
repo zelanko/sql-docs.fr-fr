@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 api_name:
 - GetCurrentCertificate Method (SecurityCertificate Class)
@@ -20,12 +18,12 @@ ms.assetid: 987a2671-1801-45c4-93e6-29f883c58720
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 16fb014ffbd940ebf3c3a9572cf891d101eb7204
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e027ece4576907b9543c7fc6eb9cbe161b3c4323
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226539"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365501"
 ---
 # <a name="getcurrentcertificate-method-securitycertificate-class"></a>Méthode GetCurrentCertificate (classe SecurityCertificate)
   Obtient le certificat de sécurité actuel.  
@@ -58,6 +56,6 @@ SHA , SQLInstance
 ## <a name="remarks"></a>Notes  
   
 ## <a name="see-also"></a>Voir aussi  
- [Configuration des bibliothèques réseau et des protocoles réseau du serveur](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [Configuration des bibliothèques réseau et des protocoles réseau du serveur](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_replrestart_TSQL
@@ -17,12 +16,12 @@ ms.assetid: 111b3dbf-92f8-4670-b156-1468c63e4fc1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 53831de41c1f8e171caad7f822b1d30e87698695
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 89336314b0e8eb5534927494734a8d9b816d0ab3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705699"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52794921"
 ---
 # <a name="spreplrestart-transact-sql"></a>sp_replrestart (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ sp_replrestart
 ## <a name="remarks"></a>Notes  
  **sp_replrestart** est utilisé lorsque la valeur de numéro séquentiel séquence de journal le plus élevée sur le serveur de distribution ne correspond pas à la valeur LSN la plus élevée sur le serveur de publication.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Seuls les membres de la **sysadmin** rôle serveur fixe ou **db_owner** rôle de base de données fixe peuvent exécuter **sp_replrestart**.  
   
 ## <a name="see-also"></a>Voir aussi  

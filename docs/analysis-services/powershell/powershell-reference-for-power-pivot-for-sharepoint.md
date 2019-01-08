@@ -1,5 +1,5 @@
 ---
-title: Référence PowerShell pour PowerPivot pour SharePoint | Documents Microsoft
+title: Référence de PowerShell pour Analysis Services Power Pivot pour SharePoint | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 231a7fdeac135743ab38af9fbe4a7c4373c34990
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 9228eb879ed1417b31c95d53783d32acf53bcdb4
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027969"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072406"
 ---
 # <a name="powershell-reference-for-power-pivot-for-sharepoint"></a>Référence PowerShell pour Power Pivot pour SharePoint
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "34027969"
 |[Set-PowerPivotSystemService, applet de commande](../../analysis-services/powershell/set-powerpivotsystemservice-cmdlet.md)|SharePoint 2013 &#124; SharePoint 2016|  
 |[Applet de commande Update-PowerPivotSystemService](../../analysis-services/powershell/update-powerpivotsystemservice-cmdlet.md)|SharePoint 2013 &#124; SharePoint 2016|  
   
- Remarque : Les applets de commande suivantes, qui ne fonctionnent qu’avec SharePoint 2010, ne sont pas prises en charge par [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] .  
+ Remarque : Les applets de commande suivantes ne fonctionnent qu’avec SharePoint 2010, qui [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ne prend pas en charge.  
   
 -   Get-PowerPivotEngineService  
   

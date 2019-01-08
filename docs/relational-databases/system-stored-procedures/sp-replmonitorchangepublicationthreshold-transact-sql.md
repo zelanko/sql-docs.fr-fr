@@ -5,8 +5,7 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_replmonitorchangepublicationthreshold_TSQL
@@ -17,12 +16,12 @@ ms.assetid: 2c3615d8-4a1a-4162-b096-97aefe6ddc16
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0bb8c060963f92ec14d140cf3b8649216fd89bf8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8d557fccc94c6502bb664f8345d1d7a6bd982124
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47850577"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52789331"
 ---
 # <a name="spreplmonitorchangepublicationthreshold-transact-sql"></a>sp_replmonitorchangepublicationthreshold (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +58,7 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
  [ **@publication_type** =] *publication_type*  
  Type de publication. *publication_type* est **int**, et peut prendre l’une des valeurs suivantes.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**0**|Publication transactionnelle.|  
 |**1**|Publication d'instantané.|  
@@ -69,7 +68,7 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
  [ **@metric_id** =] *metric_id*  
  ID de la mesure du seuil de publication en cours de modification. *metric_id* est **int**, avec NULL comme valeur par défaut et peut prendre l’une des valeurs suivantes.  
   
-|Valeur|Nom de la mesure|  
+|Value|Nom de la mesure|  
 |-----------|-----------------|  
 |**1**|**expiration** : contrôle l'expiration imminente des abonnements aux publications transactionnelles.|  
 |**2**|**latency** : contrôle les performances des abonnements aux publications transactionnelles.|  
@@ -99,7 +98,7 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
 ## <a name="remarks"></a>Notes  
  **sp_replmonitorchangepublicationthreshold** est utilisé avec tous les types de réplication.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Seuls les membres de la **db_owner** ou **replmonitor** du rôle fixe de base de données dans la base de données de distribution peuvent exécuter **sp_replmonitorchangepublicationthreshold**.  
   
 ## <a name="see-also"></a>Voir aussi  

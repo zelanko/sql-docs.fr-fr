@@ -22,12 +22,12 @@ ms.assetid: be7ec052-28e2-4558-bc09-8479e5082926
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 0b9aad137958510f623308ef83f5d18c74d02164
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2fe55455a8302f4ca8a2784899211b772f2f09e6
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148929"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213488"
 ---
 # <a name="subscriptions-and-delivery-reporting-services"></a>Abonnements et remise (Reporting Services)
   Un abonnement [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] est une configuration qui remet un rapport à une heure donnée ou en réponse à un événement, et dans un format de fichier que vous définissez. Par exemple, tous les mercredis, enregistrer le rapport MonthlySales.rdl au format de document Microsoft Word sur un partage de fichiers. Vous pouvez utiliser des abonnements pour planifier et automatiser la remise d'un rapport avec un ensemble de valeurs de paramètres de rapport spécifique.  
@@ -38,8 +38,8 @@ ms.locfileid: "48148929"
   
  Les abonnements ne sont pas disponibles dans toutes les éditions de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Pour obtenir une liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], consultez [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
-> [!NOTE]  
->  En commençant par [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] vous pouvez transférer la propriété d’un abonnement par programmation. Aucune interface utilisateur ne permet de transférer la propriété des abonnements. Pour plus d’informations, consultez <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>et [utiliser PowerShell pour la modification et liste Reporting Services Subscription Owners et exécuter un abonnement](manage-subscription-owners-and-run-subscription-powershell.md).  
+> [!NOTE]
+>  Depuis [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], vous pouvez transférer par programme la propriété d'un abonnement. Aucune interface utilisateur ne permet de transférer la propriété des abonnements. Pour plus d’informations, consultez <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>et [utiliser PowerShell pour la modification et liste Reporting Services Subscription Owners et exécuter un abonnement](manage-subscription-owners-and-run-subscription-powershell.md).  
   
  **Dans cette rubrique :**  
   
@@ -103,9 +103,9 @@ ms.locfileid: "48148929"
   
 |Condition requise|Description|  
 |-----------------|-----------------|  
-|Permissions|Vous devez avoir accès au rapport. Avant de pouvoir vous abonner à un rapport, vous devez être autorisé à l'afficher.<br /><br /> Votre attribution de rôle doit inclure la tâche « Gérer les abonnements individuels ».|  
-|Informations d'identification stockées|Pour créer un abonnement, il faut que le rapport utilise des informations d'identification stockées ou qu'il n'en utilise pas du tout pour être en mesure d'extraire les données au moment de l'exécution. Vous ne pouvez pas vous abonner à un rapport configuré pour utiliser les informations d'identification empruntées ou déléguées à partir de l'utilisateur actuel pour vous connecter à une source de données externe. Les informations d'identification stockées peuvent être un compte Windows ou un compte d'utilisateur de base de données. Pour plus d’informations, consultez [Spécifier des informations d’identification et de connexion pour les sources de données de rapport](../report-data/specify-credential-and-connection-information-for-report-data-sources.md).<br /><br /> Vous devez être autorisé à afficher le rapport et à créer des abonnements individuels. L'option**Événements programmés et remise du rapport** doit être activée sur le serveur de rapports. Pour plus d’informations, consultez [créer et gérer des abonnements pour les serveurs de rapports en Mode natif](../create-manage-subscriptions-native-mode-report-servers.md).|  
-|Valeurs dépendantes de l'utilisateur dans un rapport|Pour les abonnements standard uniquement, vous pouvez créer des abonnements à des rapports qui intègrent des informations de compte d'utilisateur dans un filtre ou sous forme de texte qui apparaît dans le rapport. Dans le rapport, le nom de compte d’utilisateur est spécifié via un `User!UserID` expression qui correspond à l’utilisateur actuel. Lorsque vous créez un abonnement, l'utilisateur qui crée l'abonnement est considéré comme l'utilisateur actuel.|  
+|Autorisations|Vous devez avoir accès au rapport. Avant de pouvoir vous abonner à un rapport, vous devez être autorisé à l'afficher.<br /><br /> Votre attribution de rôle doit inclure la tâche « Gérer les abonnements individuels ».|  
+|Informations d'identification stockées|Pour créer un abonnement, il faut que le rapport utilise des informations d'identification stockées ou qu'il n'en utilise pas du tout pour être en mesure d'extraire les données au moment de l'exécution. Vous ne pouvez pas vous abonner à un rapport configuré pour utiliser les informations d'identification empruntées ou déléguées à partir de l'utilisateur actuel pour vous connecter à une source de données externe. Les informations d'identification stockées peuvent être un compte Windows ou un compte d'utilisateur de base de données. Pour plus d’informations, consultez [Spécifier des informations d’identification et de connexion pour les sources de données de rapport](../report-data/specify-credential-and-connection-information-for-report-data-sources.md).<br /><br /> Vous devez être autorisé à afficher le rapport et à créer des abonnements individuels. L'option**Événements programmés et remise du rapport** doit être activée sur le serveur de rapports. Pour plus d’informations, consultez [Créer et gérer des abonnements pour les serveurs de rapports en mode natif](../create-manage-subscriptions-native-mode-report-servers.md).|  
+|Valeurs dépendantes de l'utilisateur dans un rapport|Pour les abonnements standard uniquement, vous pouvez créer des abonnements à des rapports qui intègrent des informations de compte d'utilisateur dans un filtre ou sous forme de texte qui apparaît dans le rapport. Dans le rapport, le nom de compte d'utilisateur est spécifié par le biais d'une expression `User!UserID` qui correspond à l'utilisateur actuel. Lorsque vous créez un abonnement, l'utilisateur qui crée l'abonnement est considéré comme l'utilisateur actuel.|  
 |Aucune sécurité de l'élément de modèle|Vous ne pouvez pas vous abonner à un rapport du Générateur de rapports qui utilise un modèle comme source de données si le modèle contient des paramètres de sécurité de l'élément de modèle. Seuls les rapports qui utilisent la sécurité de l'élément de modèle sont inclus dans cette restriction.|  
 |Valeurs de paramètre|Si le rapport utilise des paramètres, une valeur de paramètre doit être spécifiée avec le rapport lui-même ou dans l'abonnement que vous définissez. Si des valeurs par défaut ont été définies dans le rapport, vous pouvez configurer la valeur de paramètre pour les utiliser.|  
   
@@ -175,7 +175,7 @@ ms.locfileid: "48148929"
  [Créer un abonnement piloté par les données &#40;didacticiel SSRS&#41;](../create-a-data-driven-subscription-ssrs-tutorial.md)   
  [Planifications](schedules.md)   
  [Serveur de rapports Reporting Services &#40;mode natif&#41;](../report-server/reporting-services-report-server-native-mode.md)   
- [Créer et gérer des abonnements pour les serveurs de rapports en Mode natif](../create-manage-subscriptions-native-mode-report-servers.md)   
+ [Créer et gérer des abonnements pour les serveurs de rapports en mode natif](../create-manage-subscriptions-native-mode-report-servers.md)   
  [Analyser les abonnements Reportions Services](monitor-reporting-services-subscriptions.md)  
   
   

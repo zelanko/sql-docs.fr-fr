@@ -16,15 +16,15 @@ ms.assetid: 7221fa4e-ca4a-4d5c-9f93-1b8a4af7b9e8
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: e051e692361ab70d68103186dd24df8b5f7a6082
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8e5167948e456b721ba831bd8a3d637bb7ea3d3b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188549"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52810801"
 ---
 # <a name="row-level-security"></a>Sécurité au niveau des lignes
-  La sécurité au niveau des lignes permet aux clients de contrôler l'accès aux lignes d'une table de base de données en fonction des caractéristiques de l'utilisateur exécutant une requête (appartenance à un groupe ou contexte d'exécution, par exemple). Sécurité de niveau ligne est désormais disponible dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016. Consultez [Sécurité au niveau de la ligne](https://msdn.microsoft.com/library/dn765131.aspx) dans la documentation qui fournit la description actuelle de cette fonctionnalité.  
+  La sécurité au niveau des lignes permet aux clients de contrôler l'accès aux lignes d'une table de base de données en fonction des caractéristiques de l'utilisateur exécutant une requête (appartenance à un groupe ou contexte d'exécution, par exemple). La sécurité au niveau de la ligne est désormais disponible dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016. Consultez [Sécurité au niveau de la ligne](https://msdn.microsoft.com/library/dn765131.aspx) dans la documentation qui fournit la description actuelle de cette fonctionnalité.  
   
 ## <a name="see-also"></a>Voir aussi  
  [CRÉER une stratégie de sécurité &#40;base de données SQL Azure&#41;](/sql/t-sql/statements/create-security-policy-transact-sql)   

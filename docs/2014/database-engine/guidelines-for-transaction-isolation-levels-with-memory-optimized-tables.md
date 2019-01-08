@@ -10,12 +10,12 @@ ms.assetid: e365e9ca-c34b-44ae-840c-10e599fa614f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f990d8fef80320a887c0d333619aae2f1d895aa4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: aced288e62fefe46777993fd46130b8dd65e8d1b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050031"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510024"
 ---
 # <a name="guidelines-for-transaction-isolation-levels-with-memory-optimized-tables"></a>Instructions pour les niveaux d'isolement des transactions sur les tables mémoire optimisées
   Dans de nombreux scénarios, vous devez spécifier le niveau d'isolation de la transaction. L'isolation des transactions pour les tables mémoire optimisées est différente de celle des tables sur disque.  
@@ -56,7 +56,7 @@ ms.locfileid: "48050031"
   
  La garantie fournie par le niveau d'isolation SNAPSHOT (le plus bas niveau d'isolation pris en charge pour les tables mémoire optimisées) inclut les garanties de READ COMMITTED. Chaque instruction dans la transaction lit la même version cohérente de la base de données. Non seulement les lignes sont lues par la transaction validée dans la base de données, mais toutes les opérations de lecture voient l'ensemble des modifications effectuées par le même jeu de transactions.  
   
- **Indication**: si seule la garantie d’isolation READ COMMITTED est nécessaire, utilisez l’isolation SNAPSHOT avec des procédures stockées compilées en mode natif et pour accéder aux tables mémoire optimisées via interprété [!INCLUDE[tsql](../includes/tsql-md.md)].  
+ **Indication**: Si seule la garantie d’isolation READ COMMITTED est nécessaire, utilisez l’isolation SNAPSHOT avec des procédures stockées compilées en mode natif et pour accéder aux tables mémoire optimisées via interprété [!INCLUDE[tsql](../includes/tsql-md.md)].  
   
  Pour les transactions avec validation automatique, le niveau d'isolation READ COMMITTED est mappé implicitement pour les tables mémoire optimisées. Par conséquent, si le paramètre de session TRANSACTION ISOLATION LEVEL est défini sur READ COMMITTED, il n'est pas nécessaire de spécifier le niveau d'isolation par un indicateur de table lors de l'accès aux tables mémoire optimisées.  
   
@@ -80,7 +80,7 @@ BEGIN TRAN
 SELECT * FROM dbo.Customers c with (SNAPSHOT)   
 LEFT JOIN dbo.[Order History] oh   
     ON c.customer_id=oh.customer_id  
-…  
+...  
 COMMIT  
 ```  
   
@@ -91,13 +91,13 @@ COMMIT
   
      Certaines applications peuvent supposer que les lecteurs attendent toujours la validation des enregistreurs, notamment s'il y a une synchronisation entre les deux transactions dans la couche Application.  
   
-     **Indication :** Applications ne peut pas se fier au blocage de comportement. Si une application nécessite une synchronisation entre des transactions simultanées, cette logique peut être implémentée dans la couche application ou au niveau de la base de données, via [sp_getapplock &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-getapplock-transact-sql).  
+     **Indication :** Les applications ne pouvez pas compter sur le comportement de blocage. Si une application nécessite une synchronisation entre des transactions simultanées, cette logique peut être implémentée dans la couche application ou au niveau de la base de données, via [sp_getapplock &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-getapplock-transact-sql).  
   
 -   Dans les transactions qui utilisent l'isolation READ COMMITTED, chaque instruction voit la dernière version des lignes dans la base de données. Par conséquent, les instructions suivantes voient les modifications de l'état de la base de données.  
   
      Interroger une table avec une boucle WHILE jusqu'à ce qu'une nouvelle ligne soit détectée est un exemple de modèle d'application qui utilise cette hypothèse. Avec chaque itération de la boucle, la requête verra les dernières mises à jour dans la base de données.  
   
-     **Indication :** si une application doit interroger une table optimisée en mémoire pour obtenir les lignes les plus récentes écrites dans la table, déplacez la boucle d’interrogation en dehors de l’étendue de la transaction.  
+     **Indication :** Si une application doit interroger une table optimisée en mémoire pour obtenir les lignes les plus récentes écrites dans la table, déplacez la boucle d’interrogation en dehors de l’étendue de la transaction.  
   
      Voici un exemple de modèle d'application qui utilise cette hypothèse. Interroger une table avec une boucle WHILE jusqu'à ce qu'une nouvelle ligne soit détectée. Dans chaque itération de la boucle, la requête accède aux dernières mises à jour dans la base de données.  
   

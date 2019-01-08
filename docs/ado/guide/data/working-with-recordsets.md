@@ -13,15 +13,15 @@ ms.assetid: bdf9a56a-de4a-44de-9111-2f11ab7b16ea
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 39d8a1bdbc3a56cc03710bc6982b708235c47c45
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2378d438c575ad54a89f09c4c9ddcb157c246ffd
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47762427"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52508750"
 ---
 # <a name="working-with-recordsets"></a>Utilisation des recordsets
-Le **Recordset** objet dispose de fonctionnalités intégrées qui permettent de vous réorganiser l’ordre des données dans le jeu de résultats, pour rechercher un enregistrement spécifique en fonction de critères que vous fournissez et d’optimiser ces opérations de recherche à l’aide d’index. Si ces fonctionnalités sont disponibles pour une utilisation dépend du fournisseur et dans certains cas, tels que celui de la [Index](../../../ado/reference/ado-api/index-property.md) propriété — la structure de la source de données.  
+Le **Recordset** objet dispose de fonctionnalités intégrées qui permettent de vous réorganiser l’ordre des données dans le jeu de résultats, pour rechercher un enregistrement spécifique en fonction de critères que vous fournissez et d’optimiser ces opérations de recherche à l’aide d’index. Si ces fonctionnalités sont disponibles pour une utilisation dépend du fournisseur et dans certains cas - tels que celui de la [Index](../../../ado/reference/ado-api/index-property.md) propriété - la structure de la source de données.  
   
 ## <a name="arranging-data"></a>Organisation des données  
  Souvent, le moyen le plus efficace pour trier les données dans votre **Recordset** consiste à spécifier une clause ORDER BY dans la commande SQL utilisée pour renvoyer des résultats. Toutefois, vous devrez peut-être modifier l’ordre des données dans un **Recordset** qui a déjà été créé. Vous pouvez utiliser la **tri** propriété pour définir l’ordre dans les lignes d’un **Recordset** sont parcourus. En outre, le **filtre** propriété détermine les lignes qui sont accessibles lors du parcours des lignes.  
@@ -116,7 +116,7 @@ Le **Recordset** objet dispose de fonctionnalités intégrées qui permettent de
 |--------------|-----------------|  
 |**adFilterAffectedRecords**|Filtres pour afficher uniquement les enregistrements concernés par la dernière **supprimer**, **Resync**, **UpdateBatch**, ou **CancelBatch** appeler.|  
 |**adFilterConflictingRecords**|Filtres pour afficher les enregistrements qui ont échoué la dernière mise à jour par lots.|  
-|**adFilterFetchedRecords**|Filtres pour afficher les enregistrements dans le cache actuel, autrement dit, les résultats du dernier appel pour récupérer les enregistrements à partir de la base de données.|  
+|**adFilterFetchedRecords**|Filtres pour afficher les enregistrements dans le cache actuel - autrement dit, les résultats du dernier appel pour récupérer les enregistrements à partir de la base de données.|  
 |**adFilterNone**|Supprime le filtre en cours et restaure tous les enregistrements pour l’affichage.|  
 |**adFilterPendingRecords**|Filtres pour afficher uniquement les enregistrements qui ont été modifiés, mais qui n’ont pas encore été envoyées au serveur. Applicable uniquement pour le mode de mise à jour par lot.|  
   

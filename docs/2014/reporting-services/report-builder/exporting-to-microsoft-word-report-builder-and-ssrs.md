@@ -11,24 +11,24 @@ ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 0e040fe0b31f9cead8843987199164e45767db82
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dc149e8d8af6b2b5f08d849f3fda261849ff9d8f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224699"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361091"
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>Exportation vers Microsoft Word (Générateur de rapports et SSRS)
-  L’extension de rendu Word restitue les rapports dans le format natif de [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010. Il s'agit du format Office Open XML.  
+  L'extension de rendu Word effectue le rendu de rapports au format natif de [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010. Il s'agit du format Office Open XML.  
   
- Le convertisseur Word est compatible avec [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010, ainsi qu'avec [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 moyennant l'installation préalable du Module de compatibilité pour formats de fichiers [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Word, Excel et PowerPoint. Pour plus d'informations sur le module de compatibilité, consultez [Module de compatibilité pour formats de fichiers Microsoft Office Word, Excel et PowerPoint](http://go.microsoft.com/fwlink/?LinkID=205622).  
+ Le convertisseur Word est compatible avec [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010, ainsi qu'avec [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 moyennant l'installation préalable du Module de compatibilité pour formats de fichiers [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Word, Excel et PowerPoint. Pour plus d'informations sur le module de compatibilité, consultez [Module de compatibilité pour formats de fichiers Microsoft Office Word, Excel et PowerPoint](https://go.microsoft.com/fwlink/?LinkID=205622).  
   
  Le type de contenu des fichiers générés par ce convertisseur est **application/vnd.openxmlformats-officedocument.wordprocessingml.document** et l'extension des fichiers est .docx.  
   
  La version précédente de l'extension de rendu Word, compatible avec [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003, est renommée Word 2003. Seule l'extension de rendu Word est disponible par défaut. Vous devez mettre à jour les fichiers de configuration Reporting Services pour rendre l'extension de rendu Word 2003 disponible. Le type de contenu des fichiers générés par le convertisseur Word 2003 est **application/vnd.ms-word** et l'extension des noms de fichiers est .doc.  
   
 > [!IMPORTANT]  
->  Le [!INCLUDE[ofprword](../../includes/ofprword-md.md)] extension de rendu 2003 est déconseillée. Pour plus d’informations, consultez [déconseillées dans SQL Server Reporting Services dans SQL Server 2014](../deprecated-features-in-sql-server-reporting-services-ssrs.md).  
+>  L'extension de rendu [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 est déconseillée. Pour plus d’informations, consultez [déconseillées dans SQL Server Reporting Services dans SQL Server 2014](../deprecated-features-in-sql-server-reporting-services-ssrs.md).  
   
  Après avoir exporté le rapport dans un document Word, vous pouvez modifier le contenu de votre rapport et concevoir des rapports de style document comme des étiquettes de publipostage, des bons de commande ou des lettres types.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "48224699"
 |Propriétés des éléments de rapport|Description|  
 |-------------------------------|-----------------|  
 |Report Title (titre du rapport)|Titre|  
-|Report.Author|Auteur|  
+|Report.Author|Author|  
 |Report.Description|Commentaires|  
   
 ##  <a name="ReportHeadersFooters"></a> En-têtes et pieds de page  
@@ -77,9 +77,9 @@ ms.locfileid: "48224699"
   
  Cela se produit parce que le convertisseur Word analyse le rapport et recherche les champs pertinents à la pagination tels que **PageNumber** et **TotalPages** et ne gère que des références simples, sans appels à une fonction. Dans ce cas, l'expression appelle la fonction **ToString** . Les deux expressions suivantes sont équivalentes et permettent d'obtenir l'une comme le résultat escompté lorsque vous prévisualisez le rapport dans le Générateur de rapports ou le Concepteur de rapports ou restituez le rapport publié dans le Gestionnaire de rapports ou une bibliothèque SharePoint. Toutefois, le convertisseur Word analyse uniquement la seconde expression et restitue les numéros de page corrects.  
   
--   **Expression complexe :**  l'expression est `="Average Sales " & Avg(Fields!YTDPurchase.Value, "Sales") & " Page Number " & Globals!PageNumber`  
+-   **Expression complexe :**  Expression est `="Average Sales " & Avg(Fields!YTDPurchase.Value, "Sales") & " Page Number " & Globals!PageNumber`  
   
--   **Expression avec séquence de texte :** Texte **Montant moyen des ventes**, et expression,  `=Avg(Fields!YTDPurchase.Value, "Sales)`, et texte, **Numéro de page**, et expression `=Globals!PageNumber`  
+-   **Expression avec séquences de texte :** Texte, **chiffre d’affaires moyen**et expression, `=Avg(Fields!YTDPurchase.Value, "Sales)`et le texte, **numéro de Page**et expression `=Globals!PageNumber`  
   
  Pour éviter ce problème, utilisez plusieurs séquences de texte plutôt qu'une expression complexe lorsque vous utilisez des expressions dans les pieds de page et les en-têtes. Les deux expressions suivantes sont équivalentes. La première est une expression complexe, la seconde utilise des séquences de texte. Le convertisseur Word analyse uniquement la seconde expression avec succès.  
   
@@ -144,7 +144,7 @@ ms.locfileid: "48224699"
 -   Lorsque du texte est exporté vers Word, le texte avec les ornements de police dans certaines polices peut générer des glyphes inattendus ou manquants dans le rapport rendu.  
   
 ##  <a name="WordBenefits"></a> Avantages de l'utilisation du convertisseur Word  
- En plus de rendre les fonctionnalités qui sont nouvelles dans [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010 disponibles pour l’exportation des rapports, les fichiers *.docx des rapports exportés ont tendance à être plus petits. Les rapports exportés à l'aide du convertisseur Word sont généralement beaucoup plus petits que les mêmes rapports exportés à l'aide du convertisseur Word 2003.  
+ En plus de rendre les nouvelles fonctions de [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010 disponibles dans les rapports exportés, les fichiers *.docx des rapports exportés paraissent plus petits. Les rapports exportés à l'aide du convertisseur Word sont généralement beaucoup plus petits que les mêmes rapports exportés à l'aide du convertisseur Word 2003.  
   
 ## <a name="backward-compatibility-of-exported-reports"></a>Compatibilité descendante des rapports exportés  
  Vous pouvez sélectionner un mode de compatibilité Word et définir les options de compatibilité. Le convertisseur Word crée des documents avec le mode de compatibilité activé. En enregistrant de nouveau les documents avec le mode de compatibilité désactivé, il est possible que la mise en page du document soit modifiée.  
@@ -152,11 +152,11 @@ ms.locfileid: "48224699"
  Si vous désactivez le mode de compatibilité, puis enregistrez de nouveau un rapport, la mise en page du rapport peut être modifiée de façon inattendue.  
   
 ##  <a name="AvailabilityWord"></a> Disponibilité du convertisseur Word 2003  
- Dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], le convertisseur Word par défaut est la version qui assure un rendu au format natif de [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010. Il s'agit de l'option **Word** listée dans les menus **Exporter** du Gestionnaire de rapports et de SharePoint. La version antérieure, compatible uniquement avec [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003, est maintenant nommée Word 2003 et est listée dans les menus sous ce nom. L'option de menu **Word 2003** n'est pas visible par défaut ; toutefois, un administrateur peut la rendre visible en mettant à jour le fichier de configuration RSReportServer. Pour exporter des rapports à partir de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] à l'aide du convertisseur Word 2003, vous devez mettre à jour le fichier de configuration RSReportDesigner. Toutefois, le fait de rendre le convertisseur Word 2003 visible ne permet pas d'en disposer dans tous les scénarios. Dans la mesure où le fichier de configuration RSReportServer réside sur le serveur de rapports, les outils ou produits à partir desquels vous exportez les rapports doivent être connectés à un serveur de rapports pour permettre la lecture du fichier de configuration. Si vous utilisez des outils ou produits en mode déconnecté ou en mode local, le fait de rendre le convertisseur Word 2003 visible n'a aucun effet. L'option de menu **Word 2003** demeure inaccessible. Si vous rendez le convertisseur Word 2003 visible dans le fichier de configuration RSReportDesigner, l'option de menu **Word 2003** est toujours disponible dans l'aperçu de rapport [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] .  
+ Dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], le convertisseur Word par défaut est la version qui assure un rendu dans le format natif de [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010. Il s'agit de l'option **Word** listée dans les menus **Exporter** du Gestionnaire de rapports et de SharePoint. La version antérieure, compatible uniquement avec [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003, est maintenant nommée Word 2003 et est listée dans les menus sous ce nom. L'option de menu **Word 2003** n'est pas visible par défaut ; toutefois, un administrateur peut la rendre visible en mettant à jour le fichier de configuration RSReportServer. Pour exporter des rapports à partir de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] à l'aide du convertisseur Word 2003, vous devez mettre à jour le fichier de configuration RSReportDesigner. Toutefois, le fait de rendre le convertisseur Word 2003 visible ne permet pas d'en disposer dans tous les scénarios. Dans la mesure où le fichier de configuration RSReportServer réside sur le serveur de rapports, les outils ou produits à partir desquels vous exportez les rapports doivent être connectés à un serveur de rapports pour permettre la lecture du fichier de configuration. Si vous utilisez des outils ou produits en mode déconnecté ou en mode local, le fait de rendre le convertisseur Word 2003 visible n'a aucun effet. L'option de menu **Word 2003** demeure inaccessible. Si vous rendez le convertisseur Word 2003 visible dans le fichier de configuration RSReportDesigner, l'option de menu **Word 2003** est toujours disponible dans l'aperçu de rapport [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] .  
   
  L'option de menu **Word 2003** n'est jamais visible dans les scénarios suivants :  
   
--   Utilisation du Générateur de rapports en mode déconnecté et affichage de l'aperçu d'un rapport dans le Générateur de rapports. Cela se produit à la fois dans le [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] et les versions autonomes du Générateur de rapports.  
+-   Utilisation du Générateur de rapports en mode déconnecté et affichage de l'aperçu d'un rapport dans le Générateur de rapports. Cela se produit dans les versions [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] et autonome du Générateur de rapports.  
   
 -   Utilisation du composant WebPart Visionneuse de rapports en mode local alors que la batterie de serveurs SharePoint n'est pas intégrée à un serveur de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Pour plus d’informations, consultez [Rapports en mode local et rapports en mode connecté dans la Visionneuse de rapports &#40;Reporting Services en mode SharePoint&#41;](../local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md)  
   
@@ -168,17 +168,17 @@ ms.locfileid: "48224699"
   
 -   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] et affichage de l'aperçu des rapports.  
   
--   Connexion du Générateur de rapports à un serveur de rapports. Cela peut être un [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] ou une version autonome du Générateur de rapports.  
+-   Connexion du Générateur de rapports à un serveur de rapports. Il peut s'agir d'une version [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] ou autonome du Générateur de rapports.  
   
 -   Utilisation du composant WebPart Visionneuse de rapports en mode distant.  
   
- Le code XML suivant affiche les éléments des deux extensions de rendu Word dans les fichiers de configuration RSReportServer et RSReportDesigner :  
+ Le code XML suivant affiche les éléments des deux extensions de rendu Word dans les fichiers de configuration RSReportServer et RSReportDesigner :  
   
  `<Extension Name="WORDOPENXML" Type="Microsoft.ReportingServices.Rendering.WordRenderer.WordOpenXmlRenderer.WordOpenXmlDocumentRenderer,Microsoft.ReportingServices.WordRendering"/>`  
   
  `<Extension Name="WORD" Type="Microsoft.ReportingServices.Rendering.WordRenderer.WordDocumentRenderer,Microsoft.ReportingServices.WordRendering" Visible="false"/>`  
   
- L'extension WORDOPENXML définit le convertisseur Word pour [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010. L'extension WORD définit la version [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003. `Visible = “false”` indique que le convertisseur Word 2003 est masqué. Pour plus d’informations, consultez [fichier de Configuration RSReportServer](../report-server/rsreportserver-config-configuration-file.md) et [fichier de Configuration RSReportDesigner](../report-server/rsreportdesigner-configuration-file.md).  
+ L'extension WORDOPENXML définit le convertisseur Word pour [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010. L'extension WORD définit la version [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003. `Visible = "false"` indique que le convertisseur Word 2003 est masqué. Pour plus d'informations, consultez [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md) et [RSReportDesigner Configuration File](../report-server/rsreportdesigner-configuration-file.md).  
   
 ##  <a name="Differences"></a> Différences entre les convertisseurs de 2003 de Word et de Word  
  Les rapports rendus avec les convertisseurs Word ou Word 2003 peuvent être très facilement confondus. Toutefois, vous pouvez remarquer des différences mineures entre les deux formats Word ou Word 2003.  
@@ -189,7 +189,7 @@ ms.locfileid: "48224699"
 ## <a name="see-also"></a>Voir aussi  
  [Pagination dans Reporting Services &#40;Générateur de rapports et SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Comportements de rendu &#40;Générateur de rapports et SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [Fonctionnalité interactive des différentes Extensions de rendu de rapport &#40;Générateur de rapports et SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
+ [Fonctionnalités interactives des différentes extensions de rendu de rapport &#40;Générateur de rapports et SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
  [Rendu des éléments de rapport &#40;Générateur de rapports et SSRS&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [Tables, matrices et listes &#40;Générateur de rapports et SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   

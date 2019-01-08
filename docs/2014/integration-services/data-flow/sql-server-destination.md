@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.sqlserverdest.f1
@@ -19,21 +18,21 @@ ms.assetid: a0227cd8-6944-4547-87e8-7b2507e26442
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4ad8750547ff9744b525d8d6d234f02f0bb78375
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9c8e1d7c41e2caf1a3e3bc03e8278c21e4fe7b79
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159889"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375721"
 ---
 # <a name="sql-server-destination"></a>Destination SQL Server
   La destination SQL Server se connecte à une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] locale et charge en masse des données dans des tables et des vues [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Vous ne pouvez pas utiliser la destination SQL Server dans des packages ayant accès à une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur un serveur distant. Les packages doivent plutôt utiliser la destination OLE DB. Pour plus d’informations, consultez [OLE DB Destination](ole-db-destination.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Les utilisateurs qui exécutent des packages incluant la destination SQL Server nécessitent l'autorisation « Create global objects » (Créer des objets globaux). Vous pouvez attribuer cette autorisation aux utilisateurs à l’aide de l’outil Stratégie de sécurité locale accessible dans le menu **Outils d’administration** . Si vous recevez un message d'erreur lors de l'exécution d'un package qui utilise la destination SQL Server, assurez-vous que le compte exécutant le package a l'autorisation « Create global objects » (Créer des objets globaux).  
   
 ## <a name="bulk-inserts"></a>Insertions en bloc  
- Si vous tentez d'utiliser la destination SQL Server pour charger en masse des données dans une base de données SQL Server distante, il est possible qu'un message d'erreur semblable au message suivant s'affiche : « Un enregistrement OLE DB est disponible. Source : « Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client » Hresult : 0x80040E14 Description : « Chargement en masse impossible, car l’objet de mappage de fichier SSIS 'Global\DTSQLIMPORT ' n’a pas pu être ouvert. Code d'erreur du système d'exploitation 2 (Le système ne trouve pas le fichier spécifié.). Vérifiez que vous accédez à un serveur local par le biais de la sécurité Windows." »  
+ Si vous tentez d'utiliser la destination SQL Server pour charger en masse des données dans une base de données SQL Server distante, il est possible qu'un message d'erreur semblable au message suivant s'affiche : « Un enregistrement OLE DB est disponible. Source : "Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client" Hresult : 0x80040E14 Description : "Chargement en masse impossible car l'objet de mappage de fichier SSIS 'Global\DTSQLIMPORT ' n'a pas pu être ouvert. Code d'erreur du système d'exploitation 2 (Le système ne trouve pas le fichier spécifié.). Vérifiez que vous accédez à un serveur local par le biais de la sécurité Windows." »  
   
  La destination SQL Server offre la même insertion rapide de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que la tâche d’insertion en bloc ; toutefois, l’utilisation d’une destination SQL Server permet à un package d’appliquer des transformations à des données de colonne avant que les données ne soient chargées dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -92,11 +91,11 @@ ms.locfileid: "48159889"
   
  Pour plus d’informations sur les propriétés définissables dans la boîte de dialogue **Éditeur de destination SQL**, cliquez sur l’une des rubriques suivantes :  
   
--   [Éditeur de Destination SQL &#40;Page Gestionnaire de connexions&#41;](../sql-destination-editor-connection-manager-page.md)  
+-   [Éditeur de destination SQL &#40;page Gestionnaire de connexions&#41;](../sql-destination-editor-connection-manager-page.md)  
   
--   [Éditeur de Destination SQL &#40;Page mappages&#41;](../sql-destination-editor-mappings-page.md)  
+-   [Éditeur de destination SQL &#40;page Mappages&#41;](../sql-destination-editor-mappings-page.md)  
   
--   [Éditeur de Destination SQL &#40;Page avancé&#41;](../sql-destination-editor-advanced-page.md)  
+-   [Éditeur de destination SQL &#40;page Avancé&#41;](../sql-destination-editor-advanced-page.md)  
   
  La boîte de dialogue **Éditeur avancé** reflète les propriétés qui peuvent être définies par programmation. Pour plus d'informations sur les propriétés définissables dans la boîte de dialogue **Éditeur avancé** ou par programmation, cliquez sur l'une des rubriques suivantes :  
   
@@ -112,17 +111,17 @@ ms.locfileid: "48159889"
   
 ## <a name="related-tasks"></a>Tâches associées  
   
--   [Charger des données en masse à l’aide de la destination SQL Server](sql-server-destination.md)  
+-   [Charger des données en masse à l'aide de la destination SQL Server](sql-server-destination.md)  
   
--   [Définir les propriétés d’un composant de flux de données](set-the-properties-of-a-data-flow-component.md)  
+-   [Définir les propriétés d'un composant de flux de données](set-the-properties-of-a-data-flow-component.md)  
   
 ## <a name="related-content"></a>Contenu associé  
   
--   Article technique, [You may get "Unable to prepare the SSIS bulk insert for data insertion" error on UAC enabled systems](http://go.microsoft.com/fwlink/?LinkId=199482)(Vous pouvez obtenir l’erreur « Impossible de préparer l’insertion en bloc SSIS pour l’insertion de données »sur les systèmes UAC), sur support.microsoft.com.  
+-   Article technique, [You may get "Unable to prepare the SSIS bulk insert for data insertion" error on UAC enabled systems](https://go.microsoft.com/fwlink/?LinkId=199482)(Vous pouvez obtenir l’erreur « Impossible de préparer l’insertion en bloc SSIS pour l’insertion de données »sur les systèmes UAC), sur support.microsoft.com.  
   
--   Article technique, [Guide des performances de chargement des données](http://go.microsoft.com/fwlink/?LinkId=233700), sur le site msdn.microsoft.com.  
+-   Article technique, [Guide des performances de chargement des données](https://go.microsoft.com/fwlink/?LinkId=233700), sur le site msdn.microsoft.com.  
   
--   Article technique, [Utilisation de SQL Server Integration Services pour le chargement en masse des données](http://go.microsoft.com/fwlink/?LinkId=233701), sur le site simple-talk.com.  
+-   Article technique, [Utilisation de SQL Server Integration Services pour le chargement en masse des données](https://go.microsoft.com/fwlink/?LinkId=233701), sur le site simple-talk.com.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Flux de données](data-flow.md)  

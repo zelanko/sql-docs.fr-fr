@@ -12,18 +12,18 @@ ms.assetid: 61ba3a27-790e-43bc-b421-e01bf2fdbda6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e0865d7a7fa43db751646d6f9debd19463a7ba23
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dce0abecb352071a22e74cb820408fe5b8851fc3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48153455"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352536"
 ---
 # <a name="csdlbi-attributes-for-report-design"></a>Attributs CSDLBI pour la conception de rapport
-  Cette section décrit les attributs des extensions au CSDL pour la modélisation tabulaire qui affectent la création de requête [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)].  
+  Cette section décrit les attributs des extensions au CSDL pour la modélisation tabulaire qui affectent la création de requête [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] .  
   
 ## <a name="model-attributes"></a>Attributs de modèle  
- Ces attributs sont définis sur un sous-élément d'un élément [EntityContainer](http://msdn.microsoft.com/library/bb399169.aspx) CSDL.  
+ Ces attributs sont définis sur un sous-élément d'un élément [EntityContainer](https://msdn.microsoft.com/library/bb399169.aspx) CSDL.  
   
 |Nom de l'attribut|Type de données|Description|  
 |--------------------|---------------|-----------------|  
@@ -48,7 +48,7 @@ ms.locfileid: "48153455"
 |`DefaultLocation`|MemberRef|Référence à un champ dont la valeur représente l'emplacement par défaut associé à une instance de l'entité. En cas d'omission, le premier champ d'emplacement de l'entité est utilisé, le cas échéant.|  
   
 ## <a name="field-attributes"></a>Attributs de champ  
- Ces attributs sont définis sur un sous-élément d'un élément d'une propriété CSDL ou d'un élément [NavigationProperty](http://msdn.microsoft.com/library/bb387104.aspx) .  
+ Ces attributs sont définis sur un sous-élément d'un élément d'une propriété CSDL ou d'un élément [NavigationProperty](https://msdn.microsoft.com/library/bb387104.aspx) .  
   
 |Nom de l'attribut|Type de données|Description|  
 |--------------------|---------------|-----------------|  
@@ -57,15 +57,15 @@ ms.locfileid: "48153455"
 |`Documentation`|Texte|Texte descriptif pour aider les utilisateurs professionnels à comprendre la signification du champ.|  
 |`Hidden`|Booléen|Indique si le champ doit être affiché. La valeur par défaut est `false`, qui signifie que le champ est affiché.|  
 |`DisplayFolder`|Texte|Nom (chemin d'accès complet) du dossier dans lequel ce champ s'affiche. En cas d'omission, le champ s'affiche à la racine du modèle.|  
-|`ContextualNameRule`|Enum|Valeur qui indique si et comment le nom de la propriété doit être modifié en fonction du contexte dans lequel il est utilisé. Les valeurs possibles sont : `None`, `Role`, `Merge`.|  
-|`Alignment`|Enum|Valeur indiquant comment les valeurs de champ doivent être alignées dans une présentation tabulaire. Les valeurs possibles sont les suivantes : `Default`, `Center`, `Left`, `Right`. En cas d'omission, la valeur par défaut détermine l'alignement selon le type de données du champ.|  
-|`FormatString`|Texte|Chaîne de format .NET indiquant comment la valeur du champ doit être mise en forme par défaut. En cas d'omission, le format suivant est utilisé :<br /><br /> -Champs Datetime : date courte régionale ou « d »<br />-Fonction d’agrégation des champs virgule flottante et champs intégraux avec une valeur par défaut : nombre local ou « n »<br />-Fonction d’agrégation entiers sans valeur par défaut : nombre décimal local ou « d »<br /><br /> Pour tous les autres types de champs, aucune chaîne de format ne s'applique.|  
+|`ContextualNameRule`|Enum|Valeur qui indique si et comment le nom de la propriété doit être modifié en fonction du contexte dans lequel il est utilisé. Les valeurs possibles sont les suivantes : `None`, `Role`, `Merge`.|  
+|`Alignment`|Enum|Valeur indiquant comment les valeurs de champ doivent être alignées dans une présentation tabulaire. Les valeurs possibles sont les suivantes : `Default`, `Center`, `Left`, `Right`. Si omis, la valeur par défaut détermine l’alignement selon le type de données du champ.|  
+|`FormatString`|Texte|Une chaîne de format .NET indiquant comment la valeur du champ doit être mise en forme par défaut. En cas d'omission, le format suivant est utilisé :<br /><br /> -Champs Datetime : date courte régionale ou « d »<br />-Fonction d’agrégation des champs virgule flottante et champs intégraux avec une valeur par défaut : nombre local ou « n »<br />-Fonction d’agrégation entiers sans valeur par défaut : nombre décimal local ou « d »<br /><br /> Pour tous les autres types de champs, aucune chaîne de format ne s'applique.|  
 |`Units`|Texte|Symbole qui est appliqué aux valeurs de champ pour exprimer des unités. En cas d'omission, les unités sont inconnues.|  
-|`Width`|Entier|Largeur par défaut en caractères qui doit être réservée pour afficher les valeurs du champ dans une présentation tabulaire. En ca d'omission, une largeur par défaut est basée sur le type de données du champ.|  
-|`SortDirection`|Enum|Valeur indiquant comment les valeurs de champs sont généralement triées. Les valeurs possibles sont les suivantes : `Default`, `Ascending`, `Descending`. En cas d'omission, la valeur par défaut affecte un ordre de tri basé sur le type de données du champ.|  
+|`Width`|Entier|La largeur par défaut en caractères qui doit être réservée pour afficher les valeurs du champ dans une présentation tabulaire. Si omis, une largeur par défaut est basée sur le type de données.|  
+|`SortDirection`|Enum|Valeur indiquant comment les valeurs de champs sont généralement triées. Les valeurs possibles sont les suivantes : `Default`, `Ascending`, `Descending`. Si omis, la valeur par défaut affecte qu'un ordre de tri est basé sur les données du champ type.|  
 |`IsRightToLeft`|Booléen|Indique si le champ contient du texte qui doit être lu de droite à gauche. En cas d'omission, le paramètre de modèle est utilisé.|  
-|`OrderBy`|MemberRef|Référence à un autre champ du modèle qui définit l'ordre de tri pour les valeurs de ce champ. Les valeurs des deux champs doivent avoir un mappage 1:1 sinon, le comportement de tri n'est pas défini. En cas d'omission, le champ est trié selon sa propre valeur.|  
-|`Contents`|Enum|Énumération qui décrit le sous-type ou le contenu du champ. En cas d'omission, aucun sous-type particulier n'est donné, sauf si le type de données du champ est Binary, auquel cas Image est utilisé. Pour une liste complète des types de contenu pris en charge, consultez la documentation AMO.|  
+|`OrderBy`|MemberRef|Une référence à un autre champ dans le modèle qui définit l’ordre de tri pour les valeurs de ce champ. Les valeurs des deux champs doivent avoir un mappage 1:1 sinon, le comportement de tri n'est pas défini. En cas d'omission, le champ est trié selon sa propre valeur.|  
+|`Contents`|Enum|Énumération qui décrit le sous-type ou le contenu du champ. Si omis, aucun sous-type particulier n’est supposé, sauf si le type de données du champ est Binary, auquel cas Image est utilisé. Pour une liste complète des types de contenu pris en charge, consultez la documentation AMO.|  
 |`DefaultAggregateFunction`|Enum|Valeur qui indique la fonction par défaut, le cas échéant, généralement utilisée pour agréger ce champ. Les valeurs possibles sont les suivantes : `None`, `Sum`, `Average`, `Count`, `Min`, `Max`. En cas d'omission, `Sum` est utilisé pour les champs numériques, `None` pour tous les autres champs.|  
 |`IsSimpleMeasure`|Booléen|Indique si une mesure est simplement un agrégat simple d'un champ numérique. De tels agrégats peuvent être facilement définis dans la requête si nécessaire et doivent donc être omis de la définition du modèle pour améliorer les performances. En cas d'omission, `false` est utilisé.|  
 |`Kpi`<br /><br /> `KpiGoal`<br /><br /> `KpiStatus`|Sous-élément|Indique que l'élément de mesure doit être utilisé comme indicateur de performance clé. Le sous-élément d'indicateur de performance clé utilise les éléments KpiGoal et KpiStauts pour définir l'image et les plages cibles associées.|  

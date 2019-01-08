@@ -12,15 +12,15 @@ ms.assetid: 31176be8-d40e-4f93-8d44-a46e804a3e2d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 74c43a204fbf9b4d65ebe9a03cfdf4194eceb49c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 58e5160065847d5729548702b5f1d65eb31bf694
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089879"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53377681"
 ---
 # <a name="call-stored-procedures-odbc"></a>Appeler des procédures stockées (ODBC)
-  Lorsqu'une instruction SQL appelle une procédure stockée à l'aide de la clause d'échappement ODBC CALL, le pilote Microsoft® SQL Server™ envoie la procédure à SQL Server à l'aide du mécanisme d'appel de procédure stockée distante (RPC). Les demandes RPC, qui contournent une grande partie de l'analyse des instructions et du traitement des paramètres dans SQL Server, sont plus rapides que l'instruction Transact-SQL EXECUTE.  
+  Lorsqu’une instruction SQL appelle une procédure stockée à l’aide de la clause d’échappement ODBC CALL, Microsoft ?? SQL Server ??? pilote envoie la procédure à SQL Server en utilisant le mécanisme d’appel de procédure stockée distante. Les demandes RPC, qui contournent une grande partie de l'analyse des instructions et du traitement des paramètres dans SQL Server, sont plus rapides que l'instruction Transact-SQL EXECUTE.  
   
  Pour un exemple d’application qui illustre cette fonctionnalité, consultez [traiter des Codes de retour et les paramètres de sortie &#40;ODBC&#41;](running-stored-procedures-process-return-codes-and-output-parameters.md).  
   
@@ -32,9 +32,9 @@ ms.locfileid: "48089879"
     {? = CALL procname (?,?)}  
     ```  
   
-2.  Appelez [SQLBindParameter](../native-client-odbc-api/sqlbindparameter.md) pour chaque entrée, entrée/sortie et paramètre de sortie et pour connaître la procédure retourne la valeur (le cas échéant).  
+2.  Appelez [SQLBindParameter](../native-client-odbc-api/sqlbindparameter.md) pour chaque paramètre d'entrée, d'entrée/sortie et de sortie et pour la valeur de retour de la procédure (le cas échéant).  
   
-3.  Exécutez l’instruction avec [SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399).  
+3.  Exécutez l'instruction avec [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399).  
   
 > [!NOTE]  
 >  Si une application soumet une procédure à l'aide de la syntaxe Transact-SQL EXECUTE (par opposition à la séquence d'échappement ODBC CALL), le pilote ODBC de SQL Server passe l'appel de procédure à SQL Server en tant qu'instruction SQL et non en tant qu'appel RPC. Par ailleurs, les paramètres de sortie ne sont pas retournés si l'instruction Transact-SQL EXECUTE est utilisée.  

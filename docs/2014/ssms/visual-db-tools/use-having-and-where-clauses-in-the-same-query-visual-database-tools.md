@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - search criteria [SQL Server], excluding rows
@@ -20,12 +20,12 @@ ms.assetid: 1e07cf56-b4b7-4c49-8ddd-c276812a7148
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 57b266d8b5e825e784a74e25e5801b7bd9f0cc22
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f7aafcd72eff1d21dfe02c8957496398d327cf38
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48221919"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52806571"
 ---
 # <a name="use-having-and-where-clauses-in-the-same-query-visual-database-tools"></a>Utiliser les clauses HAVING et WHERE dans la même requête (Visual Database Tools)
   Il peut arriver que vous souhaitiez exclure des lignes individuelles de groupes (à l'aide d'une clause WHERE) avant d'appliquer une condition aux groupes dans leur ensemble (à l'aide d'une clause HAVING).  
@@ -36,7 +36,7 @@ ms.locfileid: "48221919"
   
 -   La clause HAVING est ensuite appliquée aux lignes du jeu de résultats. Seuls les groupes qui répondent aux conditions HAVING figurent dans le résultat de la requête. Vous ne pouvez appliquer une clause HAVING qu'aux colonnes qui apparaissent également dans la clause GROUP BY ou dans une fonction d'agrégation.  
   
- Imaginons, par exemple, que vous décidiez de joindre les tables `titles` et `publishers` pour créer une requête affichant le prix moyen d'un livre pour un ensemble d'éditeurs. Seul le prix moyen d'un ensemble donné d'éditeurs vous intéresse, en l'occurrence ceux répertoriés en Californie. Par ailleurs, vous ne souhaitez afficher le prix moyen que si ce dernier est supérieur à 10 $.  
+ Imaginons, par exemple, que vous décidiez de joindre les tables `titles` et `publishers` pour créer une requête affichant le prix moyen d'un livre pour un ensemble d'éditeurs. Seul le prix moyen d’un ensemble donné d’éditeurs vous intéresse, en l’occurrence ceux répertoriés en Californie. Par ailleurs, vous ne souhaitez afficher le prix moyen que si ce dernier est supérieur à 10 $.  
   
  Vous définissez la première condition en incluant une clause WHERE qui rejette tous les éditeurs non répertoriés en Californie, avant de calculer les prix moyens. La seconde condition nécessite une clause HAVING dans la mesure où elle est fondée sur les résultats du regroupement et de la synthèse des données. L’instruction SQL obtenue peut se présenter de la manière suivante :  
   

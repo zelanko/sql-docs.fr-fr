@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - administering replication, best practices
@@ -14,17 +13,17 @@ ms.assetid: 850e8a87-b34c-4934-afb5-a1104f118ba8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4b234ec214aeca9993f885cc3b191c89db857d33
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cd6f263e816d74f1fe3f09902c7e806709dd6993
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079279"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823305"
 ---
 # <a name="best-practices-for-replication-administration"></a>Bonnes pratiques en matière d’administration de la réplication
-  Après avoir configuré la réplication, il est important de comprendre en quoi consiste l'administration d'une topologie de réplication. Cette rubrique fournit des indications de base sur les bonnes pratiques dans un certain nombre de domaines, avec des liens sur chaque domaine pour plus d'informations. En plus de suivre les indications suivantes sur les bonnes pratiques présentées dans cette rubrique, il est conseillé de lire la rubrique du forum aux questions afin de vous familiariser avec les questions et les problèmes les plus courants : [Questions fréquentes (FAQ) pour les administrateurs de réplication](frequently-asked-questions-for-replication-administrators.md).  
+  Après avoir configuré la réplication, il est important de comprendre en quoi consiste l'administration d'une topologie de réplication. Cette rubrique fournit des indications de base sur les méthodes conseillées dans un certain nombre de domaines, avec des liens sur chaque domaine pour plus d'informations. En plus de suivre les indications suivantes sur les méthodes conseillées présentées dans cette rubrique, il est conseillé de lire la rubrique du forum aux questions afin de vous familiariser avec les questions et les problèmes les plus courants : [Forum aux Questions sur les administrateurs de réplication](frequently-asked-questions-for-replication-administrators.md).  
   
- Les indications sur les bonnes pratiques sont scindées en deux domaines :  
+ Les indications sur les méthodes conseillées sont scindées en deux domaines :  
   
 -   Les informations suivantes couvrent les méthodes conseillées devant être implémentées pour toutes les topologies de réplication :  
   
@@ -64,7 +63,7 @@ ms.locfileid: "48079279"
  Les bases de données répliquées nécessitent une attention toute particulière en ce qui concerne la sauvegarde et la restauration de données. Pour plus d’informations, consultez [Sauvegarder et restaurer des bases de données répliquées](back-up-and-restore-replicated-databases.md).  
   
 ## <a name="script-the-replication-topology"></a>Créer un script de la topologie de réplication  
- Tous les composants de réplication dans une topologie doivent faire l'objet d'un script et s'intégrer dans un plan de récupération des données en cas de sinistre ; les scripts peuvent également être utilisés pour automatiser des tâches répétitives. Un script contient les procédures stockées système [!INCLUDE[tsql](../../../includes/tsql-md.md)] nécessaires à l'implémentation du ou des composants faisant l'objet d'un script, comme une publication ou un abonnement. Il est possible de créer des scripts à l'aide d'un Assistant (comme l'Assistant Nouvelle publication) ou dans [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] après avoir créé un composant. Vous pouvez afficher, modifier et exécuter le script à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou **sqlcmd**. Les scripts peuvent être stockés avec les fichiers de sauvegarde dans le cas où la topologie de réplication doit être reconfigurée. Pour plus d'informations, voir [Scripting Replication](../scripting-replication.md).  
+ Tous les composants de réplication dans une topologie doivent faire l'objet d'un script et s'intégrer dans un plan de récupération des données en cas de sinistre ; les scripts peuvent également être utilisés pour automatiser des tâches répétitives. Un script contient les procédures stockées système [!INCLUDE[tsql](../../../includes/tsql-md.md)] nécessaires à l'implémentation du ou des composants faisant l'objet d'un script, comme une publication ou un abonnement. Il est possible de créer des scripts à l'aide d'un Assistant (comme l'Assistant Nouvelle publication) ou dans [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] après avoir créé un composant. Vous pouvez afficher, modifier et exécuter le script à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou **sqlcmd**. Les scripts peuvent être stockés avec les fichiers de sauvegarde dans le cas où la topologie de réplication doit être reconfigurée. Pour plus d’informations, voir [Scripting Replication](../scripting-replication.md).  
   
  Le script doit être exécuté à nouveau sur un composant si des modifications de propriétés sont apportées. Si vous utilisez des procédures stockées personnalisées avec la réplication transactionnelle, une copie de chaque procédure doit être stockée avec les scripts ; la copie doit être mise à jour si la procédure change (les procédures sont généralement mises à jour suite à des modifications de schéma ou à des modifications des conditions requises par l'application). Pour plus d’informations sur les procédures personnalisées, consultez [Spécifier le mode de propagation des modifications des articles transactionnels](../transactional/transactional-articles-specify-how-changes-are-propagated.md).  
   
@@ -113,7 +112,7 @@ ms.locfileid: "48079279"
 ## <a name="monitor-the-replication-topology"></a>Analyser la topologie de réplication  
  Une fois la topologie de réplication en place et les seuils et alertes configurées, il est recommandé d'analyser régulièrement la réplication. L'analyse d'une topologie de réplication est un aspect important du déploiement de la réplication. L'activité de la réplication étant distribuée, il est essentiel de faire le suivi de cette activité et des états à travers tous les ordinateurs impliqués dans la réplication. Les outils suivants peuvent être utilisés pour surveiller la réplication :  
   
--   Le Moniteur de réplication est l'outil le plus important d'analyse de réplication, il vous permet d'analyser la santé globale d'une topologie de réplication. Pour plus d'informations, voir [Monitoring Replication](../monitoring-replication.md).  
+-   Le Moniteur de réplication est l'outil le plus important d'analyse de réplication, il vous permet d'analyser la santé globale d'une topologie de réplication. Pour plus d’informations, voir [Monitoring Replication](../monitoring-replication.md).  
   
 -   [!INCLUDE[tsql](../../../includes/tsql-md.md)] et les Replication Management Objects fournissent des interfaces pour l'analyse de réplication. Pour plus d’informations, voir [Monitoring Replication](../monitoring-replication.md).  
   
@@ -128,7 +127,7 @@ ms.locfileid: "48079279"
  Les profils de l'Agent représentent une méthode pratique de configuration des paramètres de l'Agent de réplication. Les paramètres peuvent également être spécifiés sur la ligne de commande de l'Agent, mais il est généralement plus judicieux d'utiliser un profil de l'Agent prédéfini ou de créer un nouveau profil si vous devez modifier la valeur d'un paramètre. Par exemple, si vous utilisez la réplication de fusion et qu'un abonné passe d'une connexion haut débit à une connexion d'accès à distance, envisagez d'utiliser le profil de **liaison lente** pour l'Agent de fusion ; l'ensemble des paramètres de ce profil est mieux adapté à la liaison de communications lentes. Pour plus d'informations, voir [Replication Agent Profiles](../agents/replication-agent-profiles.md).  
   
 ## <a name="adjust-publication-and-distribution-retention-periods-if-necessary"></a>Ajuster les périodes de rétention de publication et de distribution si nécessaire  
- La réplication transactionnelle et la réplication de fusion se servent de périodes de rétention pour déterminer, respectivement, la durée de stockage des transactions dans la base de données de distribution, et la fréquence de synchronisation d'un abonnement. Il est recommandé d'utiliser d'abord les paramètres par défaut, mais pour analyser votre topologie, un réglage des paramètres est nécessaire. Par exemple, dans le cas de la réplication de fusion, la période de rétention de la publication (qui est de 14 jours par défaut) détermine la durée de stockage des métadonnées dans les tables système. Si les abonnements synchronisent toujours tous les cinq jours, envisagez d'ajuster le paramètre à un nombre de jours moins élevé ce qui permettra de réduire les métadonnées et d'offrir de meilleures performances. Pour plus d'informations, voir [Subscription Expiration and Deactivation](../subscription-expiration-and-deactivation.md).  
+ La réplication transactionnelle et la réplication de fusion se servent de périodes de rétention pour déterminer, respectivement, la durée de stockage des transactions dans la base de données de distribution, et la fréquence de synchronisation d'un abonnement. Il est recommandé d'utiliser d'abord les paramètres par défaut, mais pour analyser votre topologie, un réglage des paramètres est nécessaire. Par exemple, dans le cas de la réplication de fusion, la période de rétention de la publication (qui est de 14 jours par défaut) détermine la durée de stockage des métadonnées dans les tables système. Si les abonnements synchronisent toujours tous les cinq jours, envisagez d'ajuster le paramètre à un nombre de jours moins élevé ce qui permettra de réduire les métadonnées et d'offrir de meilleures performances. Pour plus d’informations, voir [Subscription Expiration and Deactivation](../subscription-expiration-and-deactivation.md).  
   
 ## <a name="understand-how-to-modify-publications-if-application-requirements-change"></a>Comprendre comment modifier les publications si les conditions requises par l'application sont modifiées  
  Une fois que vous avez créé une publication, il sera peut-être nécessaire d'ajouter ou de supprimer des articles, ou de modifier les propriétés de la publication ou des articles. La plupart des modifications sont autorisées après qu'une publication ait été créée, mais dans certains cas, il est nécessaire de générer un nouvel instantané pour une publication et/ou de réinitialiser les abonnements à la publication. Pour plus d’informations, consultez [Modifier les propriétés des publications et des articles](../publish/change-publication-and-article-properties.md) et [Ajouter et supprimer des articles de publications existantes](../publish/add-articles-to-and-drop-articles-from-existing-publications.md).  

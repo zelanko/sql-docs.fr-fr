@@ -20,16 +20,16 @@ ms.assetid: 45210682-cfea-4e5d-9951-bcf1cbe10f41
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 02bc4c6d30fc6f8fa9d77e3da5f10664fd5a2704
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6cd0503b9f0169a19179bcee545132279903ea10
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47693897"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207548"
 ---
 # <a name="sqlstatistics-function"></a>Fonction SQLStatistics
 **Conformité**  
- Version introduite : La mise en conformité des normes 1.0 ODBC : ISO 92  
+ Version introduite : Conformité aux normes 1.0 ODBC : ISO 92  
   
  **Résumé**  
  **SQLStatistics** récupère une liste des statistiques sur une seule table et les index associés à la table. Le pilote retourne les informations comme jeu de résultats.  
@@ -148,7 +148,7 @@ SQLRETURN SQLStatistics(
 |TYPE (ODBC 1.0)|7|Smallint non NULL|Type d’informations renvoyées :<br /><br /> SQL_TABLE_STAT indique une statistique pour la table (dans la colonne de cardinalité ou de PAGES).<br /><br /> SQL_INDEX_BTREE indique un index B-Tree.<br /><br /> SQL_INDEX_CLUSTERED indique un index cluster.<br /><br /> SQL_INDEX_CONTENT indique un index de contenu.<br /><br /> SQL_INDEX_HASHED indique un index haché.<br /><br /> SQL_INDEX_OTHER indique un autre type d’index.|  
 |ORDINAL_POSITION (ODBC 1.0)|8|Smallint|Numéro de séquence de colonne dans l’index (à partir de 1) ; La valeur NULL est retournée si le TYPE est SQL_TABLE_STAT.|  
 |COLUMN_NAME (ODBC 1.0)|9|Varchar|Nom de colonne. Si la colonne est basée sur une expression, telles que le salaire + avantages, l’expression est retournée ; Si l’expression ne peut pas être déterminée, une chaîne vide est retournée. La valeur NULL est retournée si le TYPE est SQL_TABLE_STAT.|  
-|ASC_OR_DESC (ODBC 1.0)|10|char (1)|Trier la séquence pour la colonne : « A » pour l’ordre croissant ; « D » pour l’ordre décroissant ; La valeur NULL est retournée si la séquence de tri de la colonne n’est pas pris en charge par la source de données ou si le TYPE est SQL_TABLE_STAT.|  
+|ASC_OR_DESC (ODBC 1.0)|10|char (1)|Ordre de tri pour la colonne : « A » pour l’ordre croissant ; « D » pour l’ordre décroissant ; La valeur NULL est retournée si la séquence de tri de la colonne n’est pas pris en charge par la source de données ou si le TYPE est SQL_TABLE_STAT.|  
 |CARDINALITÉ (ODBC 1.0)|11|Entier|Cardinalité de la table ou un index ; nombre de lignes dans la table si le TYPE est SQL_TABLE_STAT ; nombre de valeurs uniques dans l’index si TYPE n’est pas SQL_TABLE_STAT ; La valeur NULL est retournée si la valeur n’est pas disponible à partir de la source de données.|  
 |PAGES (ODBC 1.0)|12|Entier|Nombre de pages utilisées pour stocker l’index ou la table ; nombre de pages pour la table si le TYPE est SQL_TABLE_STAT ; nombre de pages pour l’index si TYPE n’est pas SQL_TABLE_STAT ; La valeur NULL est retournée si la valeur n’est pas disponible à partir de la source de données ou si non applicable à la source de données.|  
 |FILTER_CONDITION (ODBC 2.0)|13|Varchar|Si l’index est un index filtré, il s’agit de la condition de filtre, tels que les salaires > 30000 ; Si la condition de filtre ne peut pas être déterminée, il s’agit d’une chaîne vide.<br /><br /> NULL si l’index n’est pas un index filtré, il ne peut pas être déterminé si l’index est un index filtré ou le TYPE est SQL_TABLE_STAT.|  

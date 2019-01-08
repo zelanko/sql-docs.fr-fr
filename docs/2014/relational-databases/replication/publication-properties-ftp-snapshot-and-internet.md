@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.newpubwizard.pubproperties.internetsynchronization.f1
@@ -13,12 +12,12 @@ ms.assetid: 8e0198c3-5e4e-418c-9920-78ccbbfc1323
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9fcbf216468fd3d42b00daf41e4c9b7d7d97ea79
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 72d53ea0cf2d1abff25b7b97a1fe66cc9d9646b7
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146765"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52784841"
 ---
 # <a name="publication-properties-ftp-snapshot-and-internet"></a>Propriétés de la publication, Instantané FTP et Internet
   Cette page vous permet de :  
@@ -28,7 +27,7 @@ ms.locfileid: "48146765"
     > [!NOTE]  
     >  Les modifications des paramètres FTP nécessitent de générer un nouvel instantané.  
   
--   Définissez les propriétés de synchronisation Web de la réplication de fusion sur [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et versions ultérieures qui permet de synchroniser les abonnements sur HTTPS (Secure Hypertext Transfer Protocol). Pour utiliser la synchronisation Web, vous devez configurer un serveur IIS ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services). Pour plus d’informations, voir [Web Synchronization for Merge Replication](web-synchronization-for-merge-replication.md).  
+-   Définissez les propriétés de synchronisation Web de la réplication de fusion sur [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et versions ultérieures qui permet de synchroniser les abonnements sur HTTPS (Secure Hypertext Transfer Protocol). Pour utiliser la synchronisation Web, vous devez configurer un serveur IIS ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services). Pour plus d’informations, consultez [Web Synchronization for Merge Replication](web-synchronization-for-merge-replication.md).  
   
 ## <a name="options"></a>Options  
  **Accéder aux fichiers d'instantanés via FTP**  

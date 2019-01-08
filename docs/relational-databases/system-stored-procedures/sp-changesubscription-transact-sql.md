@@ -5,8 +5,7 @@ ms.date: 10/28/2015
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - changesubscription
@@ -19,12 +18,12 @@ ms.assetid: f9d91fe3-47cf-4915-b6bf-14c9c3d8a029
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 91c3b60aedb42c6d249920cb42da021c474faf5d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a293be4b745f30f4ee4a9bff6226e4e2ef80676f
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47640707"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209838"
 ---
 # <a name="spchangesubscription-transact-sql"></a>sp_changesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,25 +49,25 @@ sp_changesubscription [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ **@publication**=] **'***publication***'**  
+ [ **@publication**=] **'**_publication_**'**  
  Nom de la publication à modifier. *publication*est **sysname**, sans valeur par défaut  
   
- [ **@article** =] **'***article***'**  
+ [ **@article** =] **'**_article_**'**  
  Nom de l'article à modifier. *article* est **sysname**, sans valeur par défaut.  
   
- [ **@subscriber** =] **'***abonné***'**  
+ [ **@subscriber** =] **'**_abonné_**'**  
  Nom de l'Abonné. *abonné* est **sysname**, sans valeur par défaut.  
   
- [ **@destination_db** =] **'***destination_db***'**  
+ [ **@destination_db** =] **'**_destination_db_**'**  
  Est le nom de la base de données d’abonnement. *destination_db* est **sysname**, sans valeur par défaut.  
   
- [  **@property=**] **'***propriété***'**  
+ [  **@property=**] **'**_propriété_**'**  
  Propriété à modifier pour l'abonnement donné. *propriété* est **nvarchar (30)**, et peut prendre l’une des valeurs dans la table.  
   
- [  **@value=**] **'***valeur***'**  
+ [  **@value=**] **'**_valeur_**'**  
  Nouvelle valeur pour le texte spécifié *propriété*. *valeur* est **nvarchar (4000)**, et peut prendre l’une des valeurs dans la table.  
   
-|Propriété|Valeur|Description|  
+|Propriété|Value|Description|  
 |--------------|-----------|-----------------|  
 |**distrib_job_login**||Nom de connexion du compte [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows sous lequel l'Agent s'exécute.|  
 |**distrib_job_password**||Mot de passe pour le compte Windows sous lequel l’agent s’exécute.|  
@@ -86,8 +85,8 @@ sp_changesubscription [ @publication = ] 'publication'
 ||**3**|Fournisseur OLE DB|  
 |**memory_optimized**|**bit**|Indique que l’abonnement prend en charge les tables optimisées en mémoire. *memory_optimized* est **bits**, où 1 est égale à true (l’abonnement prend en charge les tables optimisées en mémoire).|  
   
- [  **@publisher =** ] **'***publisher***'**  
- Spécifie un serveur de publication non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *serveur de publication* est **sysname**, avec NULL comme valeur par défaut.  
+ [  **@publisher =** ] **'**_publisher_**'**  
+ Spécifie un non - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serveur de publication. *serveur de publication* est **sysname**, avec NULL comme valeur par défaut.  
   
 > [!NOTE]  
 >  *serveur de publication* ne doit pas être spécifié pour un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serveur de publication.  
@@ -102,7 +101,7 @@ sp_changesubscription [ @publication = ] 'publication'
   
  Après avoir modifié le nom de connexion ou le mot de passe d'un Agent, vous devez arrêter et redémarrer celui-ci avant que la modification prenne effet.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Seuls les membres de la **sysadmin** rôle serveur fixe ou **db_owner** rôle de base de données fixe peuvent exécuter **sp_changesubscription**.  
   
 ## <a name="see-also"></a>Voir aussi  

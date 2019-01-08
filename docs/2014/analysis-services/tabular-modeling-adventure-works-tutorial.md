@@ -11,12 +11,12 @@ ms.assetid: 140d0b43-9455-4907-9827-16564a904268
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 88f72c98977fae3e99f917de8a1b82198779b1ef
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2693bd51da682e9af0133c8400f2cfeacd2737ca
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48083279"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373681"
 ---
 # <a name="tabular-modeling-adventure-works-tutorial"></a>Modélisation tabulaire (didacticiel Adventure Works)
   Ce didacticiel inclut des leçons sur la création d’un modèle tabulaire [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Analysis Services, à l’aide de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
@@ -59,7 +59,7 @@ ms.locfileid: "48083279"
   
 -   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] .  
   
--   Exemple de base de données AdventureWorksDW. Cet exemple de base de données comprend les données nécessaires pour effectuer ce didacticiel. Pour télécharger la base de données, consultez [ http://go.microsoft.com/fwlink/?LinkID=335807 ](http://go.microsoft.com/fwlink/?LinkID=335807).  
+-   Exemple de base de données AdventureWorksDW. Cet exemple de base de données comprend les données nécessaires pour effectuer ce didacticiel. Pour télécharger la base de données, consultez [ https://go.microsoft.com/fwlink/?LinkID=335807 ](https://go.microsoft.com/fwlink/?LinkID=335807).  
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] Excel 2003 ou version ultérieure (pour utiliser la fonctionnalité Analyser dans Excel dans la leçon 11)  
   
@@ -68,20 +68,20 @@ ms.locfileid: "48083279"
   
 |Leçon|Durée estimée|  
 |------------|--------------------------------|  
-|[Leçon 1 : Créer un projet de modèle tabulaire](lesson-1-create-a-new-tabular-model-project.md)|10 minutes|  
+|[Leçon 1 : Créez un projet de modèle tabulaire](lesson-1-create-a-new-tabular-model-project.md)|10 minutes|  
 |[Leçon 2 : Ajouter des données](lesson-2-add-data.md)|20 minutes|  
-|[Leçon 3 : Renommer des colonnes](rename-columns.md)|20 minutes|  
-|[Leçon 4 : Marquer en tant que table de dates](lesson-3-mark-as-date-table.md)|3 minutes|  
-|[Leçon 5 : Créer des relations](lesson-4-create-relationships.md)|10 minutes|  
-|[Leçon 6 : Créer des colonnes calculées](lesson-5-create-calculated-columns.md)|15 minutes|  
-|[Leçon 7 : Créer des mesures](lesson-6-create-measures.md)|30 minutes|  
-|[Leçon 8 : Créer des indicateurs de performance clés](lesson-7-create-key-performance-indicators.md)|15 minutes|  
-|[Leçon 9 : Créer des perspectives](lesson-8-create-perspectives.md)|5 minutes|  
-|[Leçon 10 : Créer des hiérarchies](lesson-9-create-hierarchies.md)|20 minutes|  
-|[Leçon 11 : Créer des partitions](lesson-10-create-partitions.md)|15 minutes|  
-|[Leçon 12 : Créer des rôles](lesson-11-create-roles.md)|15 minutes|  
-|[Leçon 13 : Analyser dans Excel](lesson-12-analyze-in-excel.md)|20 minutes|  
-|[Leçon 14 : Déployer](lesson-13-deploy.md)|5 minutes|  
+|[Leçon 3 : Renommer des colonnes](rename-columns.md)|20 minutes|  
+|[Leçon 4 : Marquer comme Table de dates](lesson-3-mark-as-date-table.md)|3 minutes|  
+|[Leçon 5 : Créer des relations](lesson-4-create-relationships.md)|10 minutes|  
+|[Leçon 6 : Créer des colonnes calculées](lesson-5-create-calculated-columns.md)|15 minutes|  
+|[Leçon 7 : Créer des mesures](lesson-6-create-measures.md)|30 minutes|  
+|[Leçon 8 : Créer des indicateurs de Performance clés](lesson-7-create-key-performance-indicators.md)|15 minutes|  
+|[Leçon 9 : Créer des Perspectives](lesson-8-create-perspectives.md)|5 minutes|  
+|[Leçon 10 : Créer des hiérarchies](lesson-9-create-hierarchies.md)|20 minutes|  
+|[Leçon 11 : Créer des Partitions](lesson-10-create-partitions.md)|15 minutes|  
+|[Leçon 12 : Créer des rôles](lesson-11-create-roles.md)|15 minutes|  
+|[Leçon 13 : Analyser dans Excel](lesson-12-analyze-in-excel.md)|20 minutes|  
+|[Leçon 14 : Déployer](lesson-13-deploy.md)|5 minutes|  
   
 ## <a name="supplemental-lessons"></a>Leçons supplémentaires  
  Ce didacticiel inclut également des [leçons supplémentaires](../tutorials/supplemental-lessons.md). Les rubriques de cette section ne sont pas requises pour suivre ce didacticiel, mais peuvent être utiles pour mieux comprendre les fonctionnalités de création de modèles tabulaires avancées.  
@@ -90,10 +90,10 @@ ms.locfileid: "48083279"
   
 |Leçon|Durée estimée|  
 |------------|--------------------------------|  
-|[Implémentation de la sécurité dynamique à l’aide des filtres de lignes](../tutorials/implement-dynamic-security-by-using-row-filters.md)|30 minutes|  
+|[Implémentation de la sécurité dynamique à l'aide des filtres de lignes](../tutorials/implement-dynamic-security-by-using-row-filters.md)|30 minutes|  
 |[Configurer les propriétés de création de rapports pour les rapports Power View](supplemental-lesson-configure-reporting-properties-for-power-view-reports.md)configurer les propriétés de création de rapports pour les rapports Power View|30 minutes|  
   
 ## <a name="next-step"></a>Étape suivante  
- Pour démarrer le didacticiel, passez à la première leçon : [Leçon 1 : Créer un projet de modèle tabulaire](lesson-1-create-a-new-tabular-model-project.md).  
+ Pour démarrer le didacticiel, passez à la première leçon : [Leçon 1 : Créez un projet de modèle tabulaire](lesson-1-create-a-new-tabular-model-project.md).  
   
   

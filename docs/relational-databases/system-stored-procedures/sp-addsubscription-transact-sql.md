@@ -5,8 +5,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.custom: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_addsubscription
@@ -17,12 +16,12 @@ ms.assetid: 61ddf287-1fa0-4c1a-8657-ced50cebf0e0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 30dbaa3bc31135931fdceecb34ab454a4a46e495
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6a0064787eee6c3ac267b3ababcd9881e794ff2e
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47663527"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206388"
 ---
 # <a name="spaddsubscription-transact-sql"></a>sp_addsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -92,9 +91,9 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @sync_type=] '*sync_type*'  
  Type de synchronisation d'abonnement. *sync_type* est **nvarchar (255)**, et peut prendre l’une des valeurs suivantes :  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
-|none|L'abonnement dispose déjà du schéma et des données initiales destinées aux tables publiées.<br /><br /> Remarque : Cette option est déconseillée. Utilisez plutôt la prise en charge de la réplication uniquement.|  
+|none|L'abonnement dispose déjà du schéma et des données initiales destinées aux tables publiées.<br /><br /> Remarque : Cette option est déconseillée. Utilisez plutôt la prise en charge de la réplication uniquement.|  
 |automatic (valeur par défaut)|Le schéma et les données initiales des tables publiées sont transférés en premier lieu vers l'Abonné.|  
 |replication support only|Fournit une génération automatique au niveau de l'Abonné des procédures stockées personnalisées de l'article et des déclencheurs qui prennent en charge les abonnements de mise à jour, le cas échéant. Considère que l'Abonné dispose déjà du schéma et des données initiales pour les tables publiées. Lors de la configuration d'une topologie de réplication transactionnelle d'égal à égal, veillez à ce que les données de tous les nœuds de la topologie soient identiques. Pour plus d'informations, consultez [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).<br /><br /> *Pas de prise en charge pour les abonnements aux publications non-SQL Server.*|  
 |initialize with backup|Le schéma et les données initiales destinées aux tables publiées proviennent d'une sauvegarde de la base de données de publication. L'abonné est censé avoir accès à une sauvegarde de la base de données de publication. L’emplacement du type de sauvegarde et de support pour la sauvegarde sont spécifiés par *backupdevicename* et *backupdevicetype*. Lors de l'utilisation de cette option, il n'est pas nécessaire de suspendre la topologie de réplication transactionnelle d'égal à égal pendant la configuration.<br /><br /> *Pas de prise en charge pour les abonnements aux publications non-SQL Server.*|  
@@ -106,7 +105,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @status=] '*état*'  
  État de l'abonnement. *état* est **sysname**, avec NULL comme valeur par défaut. Lorsque ce paramètre n'est pas défini explicitement, la réplication lui donne automatiquement l'une des valeurs suivantes.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |active|L'abonnement est initialisé et prêt à accepter des modifications. Cette option est définie lorsque la valeur de *sync_type* est none, initialize with backup ou prise en charge de la réplication uniquement.|  
 |subscribed|L'abonnement doit être initialisé. Cette option est définie lorsque la valeur de *sync_type* est automatique.|  
@@ -120,7 +119,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @update_mode=] '*update_mode*'  
  Est le type de mise à jour. *update_mode* est **nvarchar (30)**, et peut prendre l’une des valeurs suivantes.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |read only (valeur par défaut)|L'abonnement est en lecture seule. Les modifications effectuées chez l'abonné ne sont pas renvoyées au serveur de publication.|  
 |sync tran|Active la prise en charge des abonnements de mise à jour immédiate. Non pris en charge pour les serveurs de publication Oracle.|  
@@ -133,7 +132,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @loopback_detection=] '*détection_de_boucle*'  
  Indique si l'Agent de distribution envoie des transactions à un abonné qui en est l'auteur. *détection_de_boucle* est **nvarchar (5)**, et peut prendre l’une des valeurs suivantes.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |true|L'Agent de distribution n'envoie pas à l'abonné ses propres transactions. Utilisé avec la réplication transactionnelle bidirectionnelle. Pour plus d’informations, voir [Bidirectional Transactional Replication](../../relational-databases/replication/transactional/bidirectional-transactional-replication.md).|  
 |false|L'Agent de distribution renvoie à l'abonné ses propres transactions.|  
@@ -142,7 +141,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @frequency_type=] *frequency_type*  
  Fréquence de planification de la tâche de distribution. *frequency_type* est de type int et peut prendre l’une des valeurs suivantes.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |1|Une fois|  
 |2|À la demande|  
@@ -159,7 +158,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @frequency_relative_interval=] *frequency_relative_interval*  
  Date de l'Agent de distribution. Ce paramètre est utilisé lorsque *frequency_type* a la valeur 32 (fréquence mensuelle relative). *frequency_relative_interval* est **int**, et peut prendre l’une des valeurs suivantes.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |1|Première|  
 |2|Seconde|  
@@ -174,7 +173,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @frequency_subday=] *frequency_subday*  
  Indique, en minutes, la fréquence de replanification pendant la période définie. *frequency_subday* est **int**, et peut prendre l’une des valeurs suivantes.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |1|Une fois|  
 |2|Seconde|  
@@ -231,7 +230,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  [ @publisher=] '*publisher*'  
- Spécifie un non -[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serveur de publication. *serveur de publication* est **sysname**, avec NULL comme valeur par défaut.  
+ Spécifie un non - [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serveur de publication. *serveur de publication* est **sysname**, avec NULL comme valeur par défaut.  
   
 > [!NOTE]  
 >  *serveur de publication* ne doit pas être spécifié pour un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serveur de publication.  
@@ -239,7 +238,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @backupdevicetype=] '*backupdevicetype*'  
  Indique le type d'unité de sauvegarde utilisé lors de l'initialisation d'un Abonné à partir d'une sauvegarde. *backupdevicetype* est **nvarchar (20)**, et peut prendre l’une des valeurs suivantes :  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |logical (valeur par défaut)|L'unité de sauvegarde est une unité logique.|  
 |disk|L'unité de sauvegarde est un lecteur de disque.|  
@@ -269,7 +268,7 @@ sp_addsubscription [ @publication = ] 'publication'
  Spécifie le numéro séquentiel dans le journal auquel un abonnement doit commencer à remettre des modifications à un nœud dans une topologie de réplication transactionnelle d'égal à égal. Utilisé avec un @sync_type valeur Initialize from lsn pour vous assurer que toutes les transactions appropriées sont répliquées vers un nouveau nœud. Pour plus d'informations, consultez [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).  
   
  [ @subscriptionstreams=] *subscriptionstreams*  
- Nombre de connexions autorisées par l'Agent de distribution afin d'appliquer des lots de modifications en parallèle à un Abonné, tout en conservant bon nombre des caractéristiques transactionnelles présentes lors de l'utilisation d'un thread unique. *subscriptionstreams* est **tinyint**, avec NULL comme valeur par défaut. Une plage de valeurs allant de 1 à 64 est prise en charge. Ce paramètre n'est pas pris en charge pour les abonnés non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les serveurs de publication Oracle ou les abonnements d'égal à égal. Chaque fois que des flux d'abonnements sont utilisés, des lignes supplémentaires sont ajoutées au tableau msreplication_subscriptions (1 par flux) avec agent_id défini à NULL.  
+ Nombre de connexions autorisées par l'Agent de distribution afin d'appliquer des lots de modifications en parallèle à un Abonné, tout en conservant bon nombre des caractéristiques transactionnelles présentes lors de l'utilisation d'un thread unique. *subscriptionstreams* est **tinyint**, avec NULL comme valeur par défaut. Une plage de valeurs allant de 1 à 64 est prise en charge. Ce paramètre n’est pas pris en charge pour les non - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les abonnés, les serveurs de publication Oracle ou les abonnements d’égal à égal. Chaque fois que des flux d'abonnements sont utilisés, des lignes supplémentaires sont ajoutées au tableau msreplication_subscriptions (1 par flux) avec agent_id défini à NULL.  
   
 > [!NOTE]  
 >  Les flux d'abonnements ne fonctionnent pas pour les articles configurés pour fournir [!INCLUDE[tsql](../../includes/tsql-md.md)]. Pour utiliser les flux d'abonnements, configurez les articles afin qu'ils fournissent des appels de procédures stockées à la place.  
@@ -277,7 +276,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @subscriber_type=] *subscriber_type*  
  Type d'abonné. *subscriber_type* est **tinyint**, et peut prendre l’une des valeurs suivantes.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |0 (valeur par défaut)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] abonné|  
 |1|Serveur de la source de données ODBC.|  
@@ -311,7 +310,7 @@ sp_addsubscription [ @publication = ] 'publication'
   
  Lors de la sélection des options **sync_type** , *replication support only*, *initialize with backup*ou *initialize from lsn*, l'Agent de lecture du journal doit s'exécuter après l'exécution de **sp_addsubscription**, afin que les scripts d'installation soient écrits dans la base de données de distribution. L'Agent de lecture du journal doit s'exécuter sous un compte membre du rôle serveur fixe **sysadmin** . Lorsque l'option **sync_type** a la valeur *Automatic*, aucune action particulière de l'Agent de lecture du journal n'est requise.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Seuls les membres du rôle serveur fixe sysadmin ou du rôle de base de données fixe db_owner peuvent exécuter sp_addsubscription. Pour les abonnements par extraction de données (pull), les utilisateurs ayant une connexion à la liste d'accès aux publications peuvent exécuter sp_addsubscription.  
   
 ## <a name="example"></a>Exemple  
@@ -320,7 +319,7 @@ sp_addsubscription [ @publication = ] 'publication'
 ## <a name="see-also"></a>Voir aussi  
  [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
  [Créer un abonnement pour un abonné non-SQL Server](../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md)   
- [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
+ [S’abonner aux Publications](../../relational-databases/replication/subscribe-to-publications.md)   
  [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md)   
  [sp_changesubstatus &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubstatus-transact-sql.md)   
  [sp_dropsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)   

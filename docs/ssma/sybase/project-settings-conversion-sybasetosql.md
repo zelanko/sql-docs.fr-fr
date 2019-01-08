@@ -10,12 +10,12 @@ ms.assetid: eeb80fa5-f530-4f21-beee-25f5a4b8ace6
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 5ca907bb6ce3a1f8e298c5ecefa920815cf6a8be
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4d7f290459e1da736605acad941602399ec3ea53
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47712378"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215296"
 ---
 # <a name="project-settings-conversion-sybasetosql"></a>Paramètres du projet (Conversion) (SybaseToSQL)
 La page de Conversion de la **paramètres du projet** boîte de dialogue contient les paramètres qui personnalisent comment SSMA convertit la syntaxe de Sybase Adaptive Server Enterprise (ASE) à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou la syntaxe de SQL Azure.  
@@ -38,9 +38,9 @@ Utilisez ce paramètre pour spécifier le type de message (avertissement ou erre
   
 Lorsque vous sélectionnez un mode de conversion dans le **Mode** boîte, SSMA s’applique le paramètre suivant :  
   
-**Le Mode par défaut/Optimistic :** convertir et marquer avec avertissement  
+**Mode par défaut/optimiste :** Convertir et marquer avec avertissement  
   
-**Mode complet :** marque avec l’erreur  
+**Mode complet :** Marquer avec l’erreur  
   
 **Conversion de l’opérateur LIKE**  
 Spécifie s’il faut convertir comme opérandes pour correspondre au comportement de Sybase ASE. Le point est que Sybase tronque les espaces à droite dans un motif like. La solution de contournement consiste à effectuer un cast de l’expression de droite à un type de données de longueur fixe avec une précision maximale.  
@@ -51,9 +51,9 @@ Spécifie s’il faut convertir comme opérandes pour correspondre au comporteme
   
 Lorsque vous sélectionnez un mode de conversion dans la zone Mode, SSMA s’applique le paramètre suivant :  
   
-**Le Mode par défaut/Optimistic**: conversion Simple  
+**Le Mode par défaut/optimiste**: Conversion simple  
   
-**Mode plein**: effectuer un Cast à longueur fixe  
+**Mode plein**: Effectuer un cast à longueur fixe  
   
 **CONVERSION OU UN CAST DES CHAÎNES VIDES EN TYPES NUMÉRIQUES**  
 Spécifie comment gérer les chaînes vides ou vierges dans des expressions de CAST ou de CONVERT avec un type numérique en tant qu’argument de type de données. Les options suivantes sont disponibles pour ce paramètre :  
@@ -64,22 +64,22 @@ Spécifie comment gérer les chaînes vides ou vierges dans des expressions de C
   
 Lorsque vous sélectionnez un mode de conversion dans la zone Mode, SSMA s’applique le paramètre suivant :  
   
-**Le Mode par défaut/Optimistic**: conversion Simple  
+**Le Mode par défaut/optimiste**: Conversion simple  
   
-**Mode plein**: aucun numérique de chaîne vide  
+**Mode plein**: Chaîne vide en tant que zéro numérique  
   
 **Concaténation de NULL**  
 Ce paramètre spécifie comment convertir la concaténation de chaînes avec la valeur NULL. Les options suivantes peuvent être définies pour ce paramètre particulier :  
   
--   **Retour à la ligne avec la fonction ISNULL :** si cette option est définie, chaque « string_expression » dans la concaténation non constante sera encapsulé avec ISNULL(string_expression) et les valeurs NULL seront remplacées par une chaîne vide.  
+-   **Retour à la ligne avec la fonction ISNULL :** Si cette option est définie, chaque « string_expression » dans la concaténation non constante sera encapsulé avec ISNULL(string_expression) et les valeurs NULL seront remplacées par une chaîne vide.  
   
 -   **Conserver la syntaxe actuelle**  
   
 Lorsque vous sélectionnez un mode de conversion dans le **Mode** boîte, SSMA s’applique le paramètre suivant :  
   
-**Le Mode par défaut/Optimistic :** conserver la syntaxe actuelle  
+**Mode par défaut/optimiste :** Conserver la syntaxe actuelle  
   
-**Mode complet :** encapsuler avec la fonction ISNULL  
+**Mode complet :** Retour à la ligne avec la fonction ISNULL  
   
 **Conversion des chaînes vides**  
 Ce paramètre spécifie comment convertir des chaînes vides. Les options suivantes peuvent être définies pour ce paramètre particulier :  
@@ -92,9 +92,9 @@ Ce paramètre spécifie comment convertir des chaînes vides. Les options suivan
   
 Lorsque vous sélectionnez un mode de conversion dans le **Mode** boîte, SSMA s’applique le paramètre suivant :  
   
-**Le Mode par défaut/Optimistic :** conserver la syntaxe actuelle  
+**Mode par défaut/optimiste :** Conserver la syntaxe actuelle  
   
-**Mode complet :** remplacer toutes les expressions de chaîne avec un espace  
+**Mode complet :** Remplacez toutes les expressions de chaîne par espace  
   
 **Conversion de chaîne binaire CONVERT et CAST**  
 La conversion des valeurs binaires en chiffres permettre retourner des valeurs différentes sur différentes plateformes. Par exemple, sur x86 processeurs, CONVERT (entier, 0 x 00000100) retourne 65536 dans ASE et 256 dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. ASE retourne également des valeurs différentes en fonction de l’ordre d’octet.  
@@ -109,11 +109,11 @@ Utilisez ce paramètre pour contrôler comment convertir de SSMA convertit et le
   
 Lorsque vous sélectionnez un mode de conversion dans le **Mode** boîte, SSMA s’applique le paramètre suivant :  
   
-**Mode par défaut :** convertir et marquer avec avertissement  
+**Mode par défaut :** Convertir et marquer avec avertissement  
   
-**Mode optimiste :** conversion Simple  
+**Mode optimiste :** Conversion simple  
   
-**Mode complet :** convertir et de corriger  
+**Mode complet :** Convertir et de corriger  
   
 **SQL dynamique**  
 Utilisez ce paramètre pour spécifier le type de message (avertissement ou erreur) SSMA affiche dans le volet de sortie ou de la liste d’erreurs lorsqu’il rencontre le code SQL dynamique dans le code de l’ASE.  
@@ -124,9 +124,9 @@ Utilisez ce paramètre pour spécifier le type de message (avertissement ou erre
   
 Lorsque vous sélectionnez un mode de conversion dans le **Mode** boîte, SSMA s’applique le paramètre suivant :  
   
-**Le Mode par défaut/Optimistic :** convertir et marquer avec avertissement  
+**Mode par défaut/optimiste :** Convertir et marquer avec avertissement  
   
-**Mode complet :** marque avec l’erreur  
+**Mode complet :** Marquer avec l’erreur  
   
 **Conversion de vérification d’égalité**  
 Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/ SQL Azure, si le paramètre ANSI_NULLS est activé, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/ SQL Azure retourne UNKNOWN lorsque toute comparaison d’égalité contient une valeur null. Si ANSI_NULLS est désactivée, les comparaisons d’égalité qui contiennent des valeurs null retournent true lorsque la colonne comparée et expression ou deux expressions sont tous deux null. En l’égalité de valeur par défaut (ANSINULL désactivée) Sybase ASE comparaisons se comportent comme [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/ SQL Azure avec ANSI_NULLS OFF.  
@@ -137,12 +137,12 @@ Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/ SQL Azure, si le
   
 Lorsque vous sélectionnez un mode de conversion dans le **Mode** boîte, SSMA s’applique le paramètre suivant :  
   
-**Le Mode par défaut/Optimistic :** conversion Simple  
+**Mode par défaut/optimiste :** Conversion simple  
   
-**Mode complet :** envisagez NULL valeurs  
+**Mode complet :** Prendre en compte les valeurs NULL  
   
 **Chaînes de format**  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/ SQL Azure prend en charge n’est plus le *format_string* argument dans les instructions PRINT et RAISERROR. Le *format_string* variable prise en charge de placer les paramètres remplaçables directement dans la chaîne, puis en remplaçant les paramètres lors de l’exécution. Au lieu de cela, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requiert la chaîne complète en utilisant un littéral de chaîne ou une chaîne générée en utilisant une variable. Pour plus d’informations, consultez le « PRINT ([!INCLUDE[tsql](../../includes/tsql-md.md)]) « rubrique dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la documentation en ligne.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/ SQL Azure prend en charge n’est plus le *format_string* argument dans les instructions PRINT et RAISERROR. Le *format_string* variable prise en charge de placer les paramètres remplaçables directement dans la chaîne, puis en remplaçant les paramètres lors de l’exécution. Au lieu de cela, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requiert la chaîne complète en utilisant un littéral de chaîne ou une chaîne générée en utilisant une variable. Pour plus d’informations, consultez le « PRINT ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) « rubrique dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la documentation en ligne.  
   
 Lorsque SSMA rencontre un *format_string* argument, il peut soit créer une chaîne littérale en utilisant les variables ou créer une nouvelle variable et générer une chaîne à l’aide de cette variable.  
   
@@ -222,9 +222,9 @@ Lorsque SSMA rencontre un *format_string* argument, il peut soit créer une cha�
   
 Lorsque vous sélectionnez un mode de conversion dans le **Mode** boîte, SSMA s’applique le paramètre suivant :  
   
-**Le Mode par défaut/Optimistic :** Créer nouvelle chaîne  
+**Mode par défaut/optimiste :** Créer la nouvelle chaîne  
   
-**Mode complet :** créer une nouvelle variable  
+**Mode complet :** Créer la nouvelle variable  
   
 **Insérer une valeur explicite dans une colonne timestamp**  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/ SQL Azure ne prend pas en charge l’insertion de valeurs explicites dans une colonne timestamp.  
@@ -235,9 +235,9 @@ Lorsque vous sélectionnez un mode de conversion dans le **Mode** boîte, SSMA s
   
 Lorsque vous sélectionnez un mode de conversion dans le **Mode** boîte, SSMA s’applique le paramètre suivant :  
   
-**Le Mode par défaut/Optimistic :** colonne exclure  
+**Mode par défaut/optimiste :** Exclure la colonne  
   
-**Mode complet :** marque avec l’erreur  
+**Mode complet :** Marquer avec l’erreur  
   
 **Les objets temporaires définis dans les procédures de Store**  
 Ce paramètre spécifie si les définitions d’objets temporaires qui apparaissent dans les procédures doivent être stockées dans les métadonnées de la source lors de la conversion.  
@@ -246,9 +246,9 @@ Ce paramètre spécifie si les définitions d’objets temporaires qui apparaiss
   
 -   Sélectionnez **non** si les objets ne doivent pas être stockés.  
   
-**Le Mode par défaut/optimiste :** Oui  
+**Mode par défaut/optimiste :** Oui  
   
-**Mode complet :** non  
+**Mode complet :** Non  
   
 **Conversion de la table proxy**  
 Spécifie si les tables de proxy ASE sont converties en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/ tables de SQL Azure, ou sont pas convertis et le code est marqué avec des commentaires de l’erreur.  
@@ -259,14 +259,14 @@ Spécifie si les tables de proxy ASE sont converties en [!INCLUDE[ssNoVersion](.
   
 Lorsque vous sélectionnez un mode de conversion dans le **Mode** boîte, SSMA s’applique le paramètre suivant :  
   
-**Le Mode par défaut/Optimistic/Full :** marque avec l’erreur  
+**Mode par défaut/optimiste/Full :** Marquer avec l’erreur  
   
 **Nombre de messages de base de RAISERROR**  
 Messages de l’utilisateur ASE sont stockés dans chaque base de données. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] messages de l’utilisateur sont stockées et accessibles par le biais de manière centralisée les **sys.messages** vue de catalogue. En outre les messages de l’utilisateur ASE démarrer à 20000, mais [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] messages d’erreur commencent à 50001.  
   
 Ce paramètre spécifie le numéro à ajouter au numéro de message de l’utilisateur ASE à convertir en un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] message utilisateur. Si votre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a des messages de l’utilisateur dans le **sys.messages** (affichage catalogue), vous devrez peut-être modifier ce nombre sur une valeur plus élevée. Il s’agit donc les numéros de message converti de ne pas sont en conflit avec des numéros de message existant.  
   
-Notez les points suivants :  
+Notez les points suivants :  
   
 -   Messages ASE dans la plage 17000-19999 proviennent de la table système sysmessages et ne sont pas converties.  
   
@@ -282,7 +282,7 @@ Notez les points suivants :
   
 Lorsque vous sélectionnez un mode de conversion dans le **Mode** boîte, SSMA s’applique le paramètre suivant :  
   
-**Le Mode par défaut/optimiste/Full :** 30001  
+**Mode par défaut/optimiste/Full :** 30001  
   
 **Objets système**  
 Utilisez ce paramètre pour spécifier le type de message (avertissement ou erreur) SSMA affiche dans le volet de sortie ou de la liste d’erreurs lorsqu’il rencontre l’utilisation des objets de système d’ASE.  
@@ -293,9 +293,9 @@ Utilisez ce paramètre pour spécifier le type de message (avertissement ou erre
   
 Lorsque vous sélectionnez un mode de conversion dans le **Mode** boîte, SSMA s’applique le paramètre suivant :  
   
-**Le Mode par défaut/Optimistic :** convertir et marquer avec avertissement  
+**Mode par défaut/optimiste :** Convertir et marquer avec avertissement  
   
-**Mode complet :** marque avec l’erreur  
+**Mode complet :** Marquer avec l’erreur  
   
 **Identificateurs non résolues**  
 Utilisez ce paramètre pour spécifier le type de message (avertissement ou erreur) SSMA affiche dans le volet de sortie ou de la liste d’erreurs lorsqu’il ne peut pas résoudre un identificateur.  
@@ -306,9 +306,9 @@ Utilisez ce paramètre pour spécifier le type de message (avertissement ou erre
   
 Lorsque vous sélectionnez un mode de conversion dans le **Mode** boîte, SSMA s’applique le paramètre suivant :  
   
-**Le Mode par défaut/Optimistic :** convertir et marquer avec avertissement  
+**Mode par défaut/optimiste :** Convertir et marquer avec avertissement  
   
-**Mode complet :** marque avec l’erreur  
+**Mode complet :** Marquer avec l’erreur  
   
 ## <a name="system-function-options"></a>Options de fonction système  
 **Fonction CHARINDEX**  
@@ -320,9 +320,9 @@ Dans l’environnement ASE, CHARINDEX retourne NULL uniquement si toutes les exp
   
 Lorsque vous sélectionnez un mode de conversion dans le **Mode** boîte, SSMA s’applique le paramètre suivant :  
   
-**Le Mode par défaut/Optimistic :** conserver la syntaxe actuelle  
+**Mode par défaut/optimiste :** Conserver la syntaxe actuelle  
   
-**Mode complet :** remplacer (fonction)  
+**Mode complet :** Remplacez la fonction  
   
 **Fonction DATALENGTH**  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] / SQL Azure et ASE diffèrent dans la valeur retournée par la fonction DATALENGTH lorsque la valeur est un espace unique. Dans ce cas, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/ SQL Azure retourne 0 et ASE retourne 1.  
@@ -333,9 +333,9 @@ Lorsque vous sélectionnez un mode de conversion dans le **Mode** boîte, SSMA s
   
 Lorsque vous sélectionnez un mode de conversion dans le **Mode** boîte, SSMA s’applique le paramètre suivant :  
   
-**Le Mode par défaut/Optimistic :** conserver la syntaxe actuelle  
+**Mode par défaut/optimiste :** Conserver la syntaxe actuelle  
   
-**Mode complet :** remplacer (fonction)  
+**Mode complet :** Remplacez la fonction  
   
 **INDEX_COL (fonction)**  
 ASE prend en charge facultative *user_id* argument à la fonction INDEX_COL ; Toutefois, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/ SQL Azure ne prend pas en charge cet argument. Si vous utilisez le *user_id* argument, cette fonction ne peut pas être converti en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/ syntaxe de SQL Azure.  
@@ -344,7 +344,7 @@ ASE prend en charge facultative *user_id* argument à la fonction INDEX_COL ; T
   
 -   Pour afficher un message d’erreur chaque fois que INDEX_COL est rencontré, sélectionnez **marque avec l’erreur**. SSMA ne convertira pas de références à la fonction et marque l’instruction avec des commentaires de l’erreur.  
   
-**Le Mode par défaut/Optimistic/Full :** marque avec l’erreur  
+**Mode par défaut/optimiste/Full :** Marquer avec l’erreur  
   
 **Fonction INDEX_COLORDER**  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/ SQL Azure n’a pas d’une fonction du système INDEX_COLORDER.  
@@ -355,7 +355,7 @@ ASE prend en charge facultative *user_id* argument à la fonction INDEX_COL ; T
   
 Lorsque vous sélectionnez un mode de conversion dans le **Mode** boîte, SSMA s’applique le paramètre suivant :  
   
-**Le Mode par défaut/Optimistic/Full :** marque avec l’erreur  
+**Mode par défaut/optimiste/Full :** Marquer avec l’erreur  
   
 **Les fonctions LEFT et RIGHT**  
 Gauche et droite des fonctions dans Sybase se comportent différemment pour le paramètre de longueur négative.  
@@ -366,9 +366,9 @@ Gauche et droite des fonctions dans Sybase se comportent différemment pour le p
   
 Lorsque vous sélectionnez un mode de conversion dans le **Mode** boîte, SSMA s’applique le paramètre suivant :  
   
-**Le Mode par défaut/Optimistic :** conserver la syntaxe actuelle  
+**Mode par défaut/optimiste :** Conserver la syntaxe actuelle  
   
-**Mode complet :** remplacer (fonction)  
+**Mode complet :** Remplacez la fonction  
   
 > [!NOTE]  
 > Si le paramètre de longueur est une valeur littérale et pas une expression complexe, la valeur de longueur est toujours remplacée par la valeur null, quel que soit le paramètre de projet.  
@@ -382,7 +382,7 @@ Lorsque vous sélectionnez un mode de conversion dans le **Mode** boîte, SSMA s
   
 Lorsque vous sélectionnez un mode de conversion dans le **Mode** boîte, SSMA s’applique le paramètre suivant :  
   
-**Le Mode par défaut/Optimistic/Full :** marque avec l’erreur  
+**Mode par défaut/optimiste/Full :** Marquer avec l’erreur  
   
 **Fonction PATINDEX**  
 Spécifie s’il faut convertir la fonction PATINDEX pour correspondre au comportement de Sybase ASE. Le point est que Sybase tronque les espaces à droite dans un modèle de recherche. La solution de contournement consiste à effectuer un cast de l’expression de valeur à une longueur fixe de type avec une précision maximale de données et appliquent la fonction rtrim pour rechercher le modèle.  
@@ -393,9 +393,9 @@ Spécifie s’il faut convertir la fonction PATINDEX pour correspondre au compor
   
 Lorsque vous sélectionnez un mode de conversion dans le **Mode** boîte, SSMA s’applique le paramètre suivant :  
   
-**Le Mode par défaut/Optimistic :** n’utilisez pas  
+**Mode par défaut/optimiste :** À ne pas utiliser  
   
-**Mode complet :** utilisation  
+**Mode complet :** Utiliser  
   
 **REPLICATE (fonction)**  
 La fonction REPLICATE répète une chaîne le nombre de fois spécifié. Dans l’environnement ASE, si vous spécifiez pour répéter la chaîne de zéro fois, le résultat est null. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/ SQL Azure, le résultat est une chaîne vide.  
@@ -406,7 +406,7 @@ La fonction REPLICATE répète une chaîne le nombre de fois spécifié. Dans l�
   
 Lorsque vous sélectionnez un mode de conversion dans le **Mode** boîte, SSMA s’applique le paramètre suivant :  
   
-**Le Mode par défaut/Optimistic Mode/Full :** remplacer (fonction)  
+**Mode de Mode/Full optimiste/par défaut :** Remplacez la fonction  
   
 **TRIM (LTRIM, RTRIM) (fonction)**  
 Ce paramètre spécifie s’il faut remplacer les appels aux fonctions de Trim (LTRIM, RTRIM) avec la syntaxe de fonctions équivalentes Sybase ASE ou conserver la syntaxe actuelle. Les options suivantes sont présentes pour ce paramètre particulier :  
@@ -417,7 +417,7 @@ Ce paramètre spécifie s’il faut remplacer les appels aux fonctions de Trim (
   
 Lorsque vous sélectionnez un mode de conversion dans le **Mode** boîte, SSMA s’applique le paramètre suivant :  
   
-**Le Mode par défaut/Optimistic Mode/Full :** remplacer (fonction)  
+**Mode de Mode/Full optimiste/par défaut :** Remplacez la fonction  
   
 **SUBSTRING (fonction)**  
 Dans l’environnement ASE, la fonction `SUBSTRING(expression, start, length)` retourne la valeur NULL si une valeur de début supérieure au nombre de caractères dans l’expression n’est spécifiée, ou si la longueur est égale à zéro. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/ SQL Azure, l’expression équivalente retourne une chaîne vide.  
@@ -428,9 +428,9 @@ Dans l’environnement ASE, la fonction `SUBSTRING(expression, start, length)` r
   
 Lorsque vous sélectionnez un mode de conversion dans le **Mode** boîte, SSMA s’applique le paramètre suivant :  
   
-**Le Mode par défaut/Optimistic :** conserver la syntaxe actuelle  
+**Mode par défaut/optimiste :** Conserver la syntaxe actuelle  
   
-**Mode complet :** remplacer (fonction)  
+**Mode complet :** Remplacez la fonction  
   
 ## <a name="tables"></a>TABLES  
 **Ajouter une clé primaire**  

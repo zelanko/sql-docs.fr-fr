@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f85c297c7ae8786d5cd387a2f25a81f507425dda
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 2a39742fa8e97e198d54baf73d91534d69a6ee36
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148014"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516673"
 ---
 # <a name="drillthrough-queries-data-mining"></a>Requêtes d'extraction (exploration de données)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "50148014"
   
 -   Extraction des **cas du modèle**  
   
-     L'extraction des cas du modèle est utilisée lorsque vous souhaitez partir d'un schéma spécifique dans le modèle, tel qu'un cluster ou une branche d'un arbre de décision, et afficher des détails sur les cas individuels.  
+     L’extraction des cas du modèle est utilisée lorsque vous souhaitez accéder à partir d’un modèle spécifique dans le modèle, tels que d’un cluster ou une branche d’un arbre de décision- et afficher des détails sur les cas individuels.  
   
 -   Extraction des **cas de structure**  
   

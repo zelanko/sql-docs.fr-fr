@@ -1,6 +1,8 @@
 ---
-title: Explorez les ressources de SQL Azure avec Azure Resource Explorer | Microsoft Docs
-description: Découvrez comment Explorer et gérer le serveur SQL Azure, Azure SQL DB et Azure SQL Managed Instance via Azure Resource Explorer.
+title: Explorez les ressources de SQL Azure avec Azure Resource Explorer
+titleSuffix: Azure Data Studio
+description: Découvrez comment Explorer et gérer le serveur SQL Azure, Azure SQL Database et Azure SQL Managed Instance via Azure Resource Explorer.
+ms.custom: seodec18
 author: yanancai
 ms.author: yanacai
 manager: craigg
@@ -8,14 +10,14 @@ ms.date: 09/24/2018
 ms.topic: quickstart
 ms.prod: sql
 ms.technology: azure-data-studio
-ms.openlocfilehash: 5b969ded699c11414c1822c0cb455ee84dfa212f
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: d202a305468f78cf1890533292570ebb56edff12
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356060"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030113"
 ---
-# <a name="explore-azure-sql-resources-with-azure-resource-explorer"></a>Explorez les ressources de SQL Azure avec Azure Resource Explorer
+# <a name="explore-and-manage-azure-sql-resources-with-azure-resource-explorer"></a>Explorer et gérer les ressources de SQL Azure avec Azure Resource Explorer
 
 Dans ce document, vous découvrez comment vous pouvez Explorer et gérer Azure SQL Server, base de données SQL Azure et les ressources Azure SQL Managed Instance via Azure Resource Explorer dans [!INCLUDE [Azure Data Studio](../includes/name-sos-short.md)].
 

@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 76e9bedbd7807b78288a901d0b2a7674232c7e91
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 188406e99f32b42079b66536db42810222eb2a24
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145984"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516736"
 ---
 # <a name="whats-new-in-sql-server-2017-analysis-services"></a>Quelles sont les nouveautés dans SQL Server 2017 Analysis Services
 [!INCLUDE[ssas-appliesto-sql2017](../includes/ssas-appliesto-sql2017.md)]
@@ -64,7 +64,7 @@ Cette version introduit des indications de codage, une fonctionnalité avancée 
 
 * Codage de hachage est préférable pour les colonnes group by (souvent des valeurs de table de dimension) et les clés étrangères. Colonnes de type chaîne sont toujours hachage encodé.
 
-Colonnes numériques peuvent utiliser une de ces méthodes d’encodage. Lorsque Analysis Services commence à traiter une table, si la table est vide (avec ou sans partitions) ou une opération de traitement de la table entière est effectuée, les exemples de valeurs sont effectuées pour chaque colonne déterminer s’il faut appliquer l’encodage de hachage ou de la valeur numérique . Par défaut, le codage de valeur est choisi lorsque l’exemple de valeurs distinctes dans la colonne est suffisamment grand : sinon codage de hachage fournit généralement une meilleure compression. Il est possible pour Analysis Services modifier la méthode de codage, une fois que la colonne est partiellement traitée en fonction de plus d’informations sur la distribution des données et redémarrer le processus d’encodage ; Toutefois, cela augmente le temps de traitement et est inefficace. Le livre blanc de réglage des performances présente le nouvel encodage plus en détail et explique comment détecter à l’aide de SQL Server Profiler.
+Colonnes numériques peuvent utiliser une de ces méthodes d’encodage. Lorsque Analysis Services commence à traiter une table, si la table est vide (avec ou sans partitions) ou une opération de traitement de la table entière est effectuée, les exemples de valeurs sont effectuées pour chaque colonne déterminer s’il faut appliquer l’encodage de hachage ou de la valeur numérique . Par défaut, le codage de valeur est choisi lorsque l’exemple de valeurs distinctes dans la colonne est suffisamment grand - sinon codage de hachage fournit généralement une meilleure compression. Il est possible pour Analysis Services modifier la méthode de codage, une fois que la colonne est partiellement traitée en fonction de plus d’informations sur la distribution des données et redémarrer le processus d’encodage ; Toutefois, cela augmente le temps de traitement et est inefficace. Le livre blanc de réglage des performances présente le nouvel encodage plus en détail et explique comment détecter à l’aide de SQL Server Profiler.
 
 Indications de codage permettent le Modeleur de spécifier une préférence pour la méthode de codage donnée connaissance préalable de profilage des données et/ou en réponse à la ré-encodage des événements de trace. Dans la mesure où l’agrégation sur les colonnes de hachage encodé est plus lente que sur les colonnes de valeur encodée, l’encodage de valeur peut être spécifié en tant qu’indicateur pour ces colonnes. Il n’est pas garanti que la préférence est appliquée. C’est un indice par opposition à un paramètre. Pour spécifier un indicateur d’encodage, définissez la propriété EncodingHint sur la colonne. Les valeurs possibles sont « Default », « Valeur » et « Hachage ». L’extrait suivant de métadonnées JSON à partir du fichier Model.bim spécifie la valeur d’encodage pour la colonne de montant des ventes.
 

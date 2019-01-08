@@ -16,12 +16,12 @@ ms.assetid: cb325f5d-10ee-4a56-ba28-db0074ab3926
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 61dc56c503e580d90b17b1b04c5e80ea6fb10d70
-ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
+ms.openlocfilehash: dc464988d46d5896b4a925253c8c42916897bcd2
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51571078"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418781"
 ---
 # <a name="localdbstartinstance-function"></a>Fonction LocalDBStartInstance
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -110,10 +110,10 @@ HRESULT LocalDBStartInstance(
   
 |Buffer|buffer_size|Rationale|Action|  
 |------------|-----------------|---------------|------------|  
-|NULL|NULL|L'utilisateur veut démarrer l'instance et n'a pas besoin d'un nom de canal.|Démarre une instance (aucun retour de canal et aucun retour obligatoire de taille de mémoire tampon).|  
+|NULL|NULL|L’utilisateur veut démarrer l’instance et ne doit pas nécessairement un canal nom.|Démarre une instance (aucun retour de canal et aucun retour obligatoire de taille de mémoire tampon).|  
 |NULL|Présent|L'utilisateur demande la taille de la mémoire tampon de sortie. (Dans l'appel suivant l'utilisateur demandera probablement un début réel.)|Retourne une taille de mémoire tampon requise (aucun début et aucun retour de canal). Le résultat est S_OK.|  
 |Présent|NULL|Non autorisé ; entrée incorrecte.|LOCALDB_ERROR_INVALID_PARAMETER est retourné.|  
-|Présent|Présent|L'utilisateur veut démarrer l'instance et a besoin du nom de canal pour s'y connecter après qu'il a été démarré.|Vérifie la taille de la mémoire tampon, démarre l'instance, puis retourne le nom de canal dans la mémoire tampon. <br />L'argument de taille de mémoire tampon retourne la longueur de la chaîne de « server= », sans inclure les zéros de fin.|  
+|Présent|Présent|L'utilisateur veut démarrer l'instance et a besoin du nom de canal pour s'y connecter après qu'il a été démarré.|Vérifie la taille de la mémoire tampon, démarre l'instance, puis retourne le nom de canal dans la mémoire tampon. <br />L’argument de taille de mémoire tampon retourne la longueur de la « server = « chaîne, ne pas y compris les zéros de fin.|  
   
  Pour un exemple de code qui utilise l'API LocalDB, consultez [SQL Server Express LocalDB Reference](../../relational-databases/sql-server-express-localdb-reference.md).  
   

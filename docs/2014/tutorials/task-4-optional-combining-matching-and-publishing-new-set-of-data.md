@@ -1,5 +1,5 @@
 ---
-title: 'Tâche 4 (facultatif) : combinaison, la correspondance et publier un nouvel ensemble de données | Microsoft Docs'
+title: 'Tâche 4 (facultatif) : Combinaison, la correspondance et publier un nouvel ensemble de données | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,15 +13,15 @@ ms.assetid: 13a13f03-b307-4555-8e33-6d98c459d994
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2bfa1c59fb47a859bb680970617a81add871908e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 05c8785427b905138e513ab7134d56def7cdcf4d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061749"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353071"
 ---
-# <a name="task-4-optional-combining-matching-and-publishing-new-set-of-data"></a>Tâche 4 (Facultatif) : Combiner, mettre en correspondance et publier un nouvel ensemble de données
-  Au fil du temps, vous souhaiterez ajouter des données au référentiel MDS. Avant d’ajouter des données, il peut être utile pour comparer les nouvelles données aux données qui sont déjà managées dans MDS, pour vous assurer que vous n’ajoutez pas de données dupliquées ou incorrectes. Dans le complément Master Data Services pour Excel, vous pouvez combiner les données de deux feuilles de calcul et les comparer afin d'identifier et supprimer les doublons, avant de les publier dans MDS. La fonctionnalité de correspondance dans le complément MDS pour Excel utilise la fonctionnalité de correspondance de DQS pour identifier les correspondances de données. Dans cette tâche, vous allez combiner les données de deux feuilles de calcul dans une seule feuille, puis vous allez exercer l'activité de correspondance pour identifier et supprimer les doublons avant la publication dans MDS. Consultez [correspondance de qualité de données dans le complément MDS pour Excel](http://msdn.microsoft.com/library/hh548681.aspx) et [combiner des données](http://msdn.microsoft.com/library/hh548680.aspx) rubriques pour plus d’informations.  
+# <a name="task-4-optional-combining-matching-and-publishing-new-set-of-data"></a>Tâche 4 (facultatif) : Combiner, mettre en correspondance et publier un nouvel ensemble de données
+  Au fil du temps, vous souhaiterez ajouter des données au référentiel MDS. Avant d’ajouter des données, il peut être utile pour comparer les nouvelles données aux données qui sont déjà managées dans MDS, pour vous assurer que vous n’ajoutez pas de données dupliquées ou incorrectes. Dans le complément Master Data Services pour Excel, vous pouvez combiner les données de deux feuilles de calcul et les comparer afin d'identifier et supprimer les doublons, avant de les publier dans MDS. La fonctionnalité de correspondance dans le complément MDS pour Excel utilise la fonctionnalité de correspondance de DQS pour identifier les correspondances de données. Dans cette tâche, vous allez combiner les données de deux feuilles de calcul dans une seule feuille, puis vous allez exercer l'activité de correspondance pour identifier et supprimer les doublons avant la publication dans MDS. Consultez [correspondance de qualité de données dans le complément MDS pour Excel](https://msdn.microsoft.com/library/hh548681.aspx) et [combiner des données](https://msdn.microsoft.com/library/hh548680.aspx) rubriques pour plus d’informations.  
   
 1.  Lancez une nouvelle instance de **Excel**. Cliquez sur **Démarrer**, pointez sur **exécuter**, type **Excel**, puis cliquez sur **OK**.  
   
@@ -33,7 +33,7 @@ ms.locfileid: "48061749"
   
 4.  Vous devez voir le **Explorateur de données Master** volet à droite. Si vous ne voyez pas l’Explorateur de données principale, cliquez sur **afficher l’Explorateur** bouton sur le ruban.  
   
-5.  Dans le **Explorateur de données de référence** fenêtre, sélectionnez **fournisseurs** dans la liste déroulante pour le **modèle**. Vous devez voir que le modèle a une entité : **fournisseur**.  
+5.  Dans le **Explorateur de données de référence** fenêtre, sélectionnez **fournisseurs** dans la liste déroulante pour le **modèle**. Vous remarquerez que le modèle a une entité : **Fournisseur**.  
   
      ![Excel - fenêtre de l’Explorateur de données Master](../../2014/tutorials/media/et-combinematchandpublishnewsod-02.jpg "Excel - fenêtre de l’Explorateur de données Master")  
   
@@ -43,7 +43,7 @@ ms.locfileid: "48061749"
   
 8.  Ouvrez **Suppliers.xls** (le fichier d’origine d’entrée qui est inclus dans les fichiers des didacticiels) de fichiers et de copier toutes les lignes (trois) de la **CombineAndCleanse** feuille de calcul à **Sheet2**.  
   
-9. Revenez à la **fournisseur** feuille dans le **Book 1-Microsoft Excel** (pas le **nettoyées et mises en correspondance la liste des fournisseurs** Excel) qui est connecté à **MDS**.  
+9. Revenez à la **fournisseur** feuille dans le **Book 1 - Microsoft Excel** (pas le **nettoyées et mises en correspondance la liste des fournisseurs** Excel) qui est connecté à **MDS**.  
   
 10. Cliquez sur **données maîtres** sur la barre de menus.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "48061749"
   
 25. Cliquez sur **OK**.  
   
-26. Le processus de correspondance doit identifier un doublon pour le fournisseur avec **Code : S1**.  
+26. Le processus de correspondance doit identifier un doublon pour le fournisseur avec le **Code : S1**.  
   
      ![Excel - résultats de correspondance](../../2014/tutorials/media/et-combinematchandpublishnewsod-08.jpg "Excel - résultats de correspondance")  
   
@@ -111,7 +111,7 @@ ms.locfileid: "48061749"
   
 33. **Tri** la liste par **Code** et recherchez les enregistrements avec **S57** et **S66** en tant que codes. Vous pouvez également utiliser le **filtre** la barre d’outils pour rechercher un enregistrement spécifique dans la liste.  
   
-34. Maintenant, fermez **Book1 – Microsoft Excel** fenêtre sans enregistrer le fichier.  
+34. Maintenant, fermez **Book1 - Microsoft Excel** fenêtre sans enregistrer le fichier.  
   
 ## <a name="next-step"></a>Étape suivante  
  [Tâche 5 : Création d’un attribut basé sur un domaine à partir d’Excel](../../2014/tutorials/task-5-creating-a-domain-based-attribute-from-excel.md)  

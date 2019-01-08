@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5ae69ddf-27c3-467c-9af1-c89ec383f661
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5df2aac01300c006858a84097bf346875f175c82
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 306d810d844140caf0d3ee0e5cfe04fcae55e3fa
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120137"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360001"
 ---
 # <a name="cdc-flow-components"></a>Composants de flux CDC
   Les composants CDC par Attunity destinés aux développeurs SSIS d'aide Microsoft [!INCLUDE[ssISCurrent](../../../includes/ssiscurrent-md.md)] fonctionnent avec la capture de données modifiées (CDC) et réduisent la complexité des packages CDC.  
@@ -47,7 +46,7 @@ ms.locfileid: "49120137"
   
 -   Microsoft [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] pour [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 2008 ou 2010  
   
- Ces versions sont prises en charge sur les systèmes d'exploitation et les plateformes suivants :  
+ Ces versions sont prises en charge sur les systèmes d'exploitation et les plateformes suivants :  
   
 -   Windows Vista 32 bits (x86) et 64 bits (x64) avec Service Pack 2  
   
@@ -205,17 +204,17 @@ ms.locfileid: "49120137"
   
 ## <a name="related-content"></a>Contenu associé  
   
--   Entrée de blog, [CDC in SSIS for SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=242543), sur mattmasson.com.  
+-   Entrée de blog, [CDC in SSIS for SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=242543), sur mattmasson.com.  
   
--   Entrée de blog sur l'installation du service de capture de données modifiées [CDC pour Oracle dans SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=247827), sur blogs.msdn.com  
+-   Entrée de blog sur l'installation du service de capture de données modifiées [CDC pour Oracle dans SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=247827), sur blogs.msdn.com  
   
--   Article technique, [Installation du service de capture de données modifiées Microsoft SQL Server 2012 pour Oracle par Attunity](http://go.microsoft.com/fwlink/?LinkId=252958), sur social.technet.microsoft.com.  
+-   Article technique, [Installation du service de capture de données modifiées Microsoft SQL Server 2012 pour Oracle par Attunity](https://go.microsoft.com/fwlink/?LinkId=252958), sur social.technet.microsoft.com.  
   
--   Article technique, [Résolution des problèmes de configuration dans le service de capture de données modifiées Microsoft SQL Server pour Oracle par Attunity](http://go.microsoft.com/fwlink/?LinkId=252960), sur social.technet.microsoft.com.  
+-   Article technique, [Résolution des problèmes de configuration dans le service de capture de données modifiées Microsoft SQL Server pour Oracle par Attunity](https://go.microsoft.com/fwlink/?LinkId=252960), sur social.technet.microsoft.com.  
   
--   Article technique, [Dépannage des erreurs d'instance du service de capture de données modifiées Microsoft SQL Server pour Oracle par Attunity](http://go.microsoft.com/fwlink/?LinkId=252961), sur social.technet.microsoft.com.  
+-   Article technique, [Dépannage des erreurs d'instance du service de capture de données modifiées Microsoft SQL Server pour Oracle par Attunity](https://go.microsoft.com/fwlink/?LinkId=252961), sur social.technet.microsoft.com.  
   
--   Video, [CDC for Oracle Databases using SQL Server Integration Services 2012 (SQL Server Video)](http://technet.microsoft.com/sqlserver/jj218898), on technet.microsoft.com.  
+-   Video, [CDC for Oracle Databases using SQL Server Integration Services 2012 (SQL Server Video)](https://technet.microsoft.com/sqlserver/jj218898), on technet.microsoft.com.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Tâche de contrôle de capture de données modifiées](../control-flow/cdc-control-task.md)  

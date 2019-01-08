@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - Query Designer [SQL Server], Criteria pane
@@ -18,15 +18,15 @@ ms.assetid: 6291affe-580e-482f-a7ff-45ce3837956a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: be9e057c6e746fa5d058c44a1261388888f69300
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1bbfd7e02b11a9f2a5cc0213c31b453eaa28e446
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078079"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52797911"
 ---
 # <a name="criteria-pane-visual-database-tools"></a>Volet Critères (Visual Database Tools)
-  Ce volet permet d'utiliser une grille similaire à une feuille de calcul pour spécifier des options de requêtes, telles que les colonnes de données à afficher, la façon de trier les résultats et les lignes à sélectionner. Dans le volet Critères, vous pouvez spécifier les éléments suivants :  
+  Ce volet permet d’utiliser une grille similaire à une feuille de calcul pour spécifier des options de requêtes, telles que les colonnes de données à afficher, la façon de trier les résultats et les lignes à sélectionner. Dans le volet Critères, vous pouvez spécifier les éléments suivants :  
   
 -   Les colonnes à afficher et des alias de noms de colonnes.  
   

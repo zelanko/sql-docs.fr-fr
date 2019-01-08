@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: release-landing
 ms.topic: conceptual
 helpviewer_keywords:
 - VIA protocol
@@ -34,12 +33,12 @@ ms.assetid: d686cdf0-d11d-4dba-9ec8-de1a5f189f25
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9d5d292421616d9c3d6043cf792345a8de0d8840
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 27eb70cb687553b11fefae423a7544609836c5c8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135289"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357021"
 ---
 # <a name="discontinued-database-engine-functionality-in-sql-server-2014"></a>Fonctionnalités du moteur de base de données supprimées dans SQL Server 2014
   Cette rubrique décrit les fonctionnalités du [!INCLUDE[ssDE](../includes/ssde-md.md)] qui ne sont plus disponibles dans [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
@@ -69,14 +68,14 @@ ms.locfileid: "48135289"
 |Programmabilité|Objets SQL-DMO (SQL Server Distributed Management Objects)|SMO (SQL Server Management Objects)|  
 |Indicateurs de requête|Indicateur `FASTFIRSTROW`|`OPTION (FAST` *n* `)`.|  
 |Serveurs distants|La possibilité pour les utilisateurs de créer des serveurs distants à l'aide de `sp_addserver` est supprimée. `sp_addserver` avec l'option « locale » reste disponible. Des serveurs distants conservés pendant la mise à niveau ou créés par réplication peuvent être utilisés.|Remplacez les serveurs distants à l'aide de serveurs liés.|  
-|Sécurité|`sp_dropalias`|Remplacez les alias par une combinaison de comptes d'utilisateurs et de rôles de base de données. Utilisez `sp_dropalias` pour supprimer les alias dans les bases de données mis à niveau.|  
+|Sécurité|`sp_dropalias`|Remplacez les alias par une combinaison de comptes d'utilisateurs et de rôles de base de données. Utilisez `sp_dropalias` pour supprimer les alias dans les bases de données mises à niveau.|  
 |Sécurité|Le paramètre de version de **PWDCOMPARE** représentant une valeur à partir d’une connexion antérieure à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000 n’est plus disponible.|None|  
 |Programmabilité de Service Broker dans SMO|Le **Microsoft.SqlServer.Management.Smo.Broker.BrokerPriority** n’est plus la classe implémente le **Microsoft.SqlServer.Management.Smo.IObjectPermission** interface.||  
 |Options définies|`SET DISABLE_DEF_CNST_CHK`|Aucun.|  
 |Tables système|sys.database_principal_aliases|Utilisez des rôles à la place d'alias.|  
 |Transact-SQL|`RAISERROR` dans le format `RAISERROR integer 'string'` est supprimé.|Réécrivez l’instruction à l’aide de cours **RAISERROR (…)**  syntaxe.|  
 |Syntaxe Transact-SQL|`COMPUTE / COMPUTE BY`|Utilisez `ROLLUP`.|  
-|Syntaxe Transact-SQL|Utilisation de **\* =** et **=\***|Utilisez la syntaxe de jointure ANSI. Pour plus d’informations, consultez [FROM (Transact-SQL).](http://msdn.microsoft.com/library/ms177634\(SQL.105\).aspx)|  
+|Syntaxe Transact-SQL|Utilisation de **\* =** et **=\***|Utilisez la syntaxe de jointure ANSI. Pour plus d’informations, consultez [FROM (Transact-SQL).](https://msdn.microsoft.com/library/ms177634\(SQL.105\).aspx)|  
 |XEvents|databases_data_file_size_changed, databases_log_file_size_changed<br /><br /> eventdatabases_log_file_used_size_changed<br /><br /> locks_lock_timeouts_greater_than_0<br /><br /> locks_lock_timeouts|Remplacé par événement database_file_size_change database_file_size_change<br /><br /> événement database_file_size_change<br /><br /> lock_timeout_greater_than_0<br /><br /> lock_timeout|  
   
  **Modifications supplémentaires de XEvent**  

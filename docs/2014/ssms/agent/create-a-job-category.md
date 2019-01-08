@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent jobs, categories
@@ -14,12 +14,12 @@ ms.assetid: e24a6d38-d231-4f64-ab89-2d1ef6f5792c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2a2c9966dfbb270165ea5245fd59e0793d165bdb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3254ae226a0ac955f2cf5b2f39077853ebf3e057
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48127459"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52762781"
 ---
 # <a name="create-a-job-category"></a>Créer une catégorie de travaux
   Cette rubrique explique comment créer une catégorie de travaux dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], de [!INCLUDE[tsql](../../includes/tsql-md.md)] ou de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects.  
@@ -58,7 +58,7 @@ ms.locfileid: "48127459"
   
 8.  Dans la boîte de dialogue **Gérer les catégories de travaux***nom_serveur*, cliquez sur **Actualiser** pour garantir que la nouvelle catégorie de travaux est bien active. Si tout se présente comme prévu, fermez cette boîte de dialogue.  
   
- Pour plus d’informations sur ces boîtes de dialogue, consultez [les catégories de travaux : gérer les catégories de travaux](job-categories-manage-job-categories.md) et [propriétés des catégories de travail et de la nouvelle catégorie de travaux](job-categories-properties-new-job-category.md).  
+ Pour plus d’informations sur ces boîtes de dialogue, consultez [les catégories de travaux : Gérer les catégories de travaux](job-categories-manage-job-categories.md) et [nouvelle catégorie de travaux et les propriétés des catégories de travail](job-categories-properties-new-job-category.md).  
   
  
   
@@ -90,7 +90,7 @@ ms.locfileid: "48127459"
 ##  <a name="SMO"></a> À l’aide de SQL Server Management Objects  
  **Pour créer une catégorie de travail**  
   
- Appelez le `JobCategory` classe à l’aide d’un langage de programmation que vous choisissez, tel que Visual Basic, Visual c# ou PowerShell. Pour obtenir un exemple de code, consultez [Planification des tâches administratives automatiques dans l’Agent SQL Server](sql-server-agent.md).  
+ Appelez la classe `JobCategory` à l'aide d'un langage de programmation que vous choisissez, tel que Visual Basic, Visual C# ou PowerShell. Pour obtenir un exemple de code, consultez [Planification des tâches administratives automatiques dans l’Agent SQL Server](sql-server-agent.md).  
   
  
   

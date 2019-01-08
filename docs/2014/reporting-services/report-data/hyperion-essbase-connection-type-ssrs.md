@@ -11,12 +11,12 @@ ms.assetid: 108a00b6-799f-4066-b796-da59e95c09fd
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: a551b7be49ebcb38221973657658000c38d369a8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f77a0163c40d29dd06f49fc61a816c92d9484e80
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48223939"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374901"
 ---
 # <a name="hyperion-essbase-connection-type-ssrs"></a>Type de connexion Hyperion Essbase (SSRS)
   Pour inclure les données d’une source de données externe [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] dans votre rapport, vous devez avoir un dataset basé sur une source de données de rapport de type [!INCLUDE[extEssbase](../../includes/extessbase-md.md)]. Ce type de source de données intégré est basé sur l’extension de données pour [!INCLUDE[extEssbase](../../includes/extessbase-md.md)], ce qui vous permet de récupérer les données multidimensionnelles d’une source de données externe [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] .  
@@ -62,22 +62,22 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
 ##  <a name="Parameters"></a> Paramètres  
  Pour inclure les paramètres de requête, créez un filtre dans la zone de filtre du concepteur de requêtes et marquez le filtre en tant que paramètre. Pour chaque filtre, un dataset est créé automatiquement afin de fournir les valeurs disponibles. Par défaut, ces datasets n'apparaissent pas dans le volet Données du rapport. Pour plus d’informations, consultez [Afficher des datasets masqués pour les valeurs de paramètres des données multidimensionnelles &#40;Générateur de rapports et SSRS&#41;](show-hidden-datasets-for-parameter-values-multidimensional-data.md).  
   
- Par défaut, chaque paramètre de rapport a le type de données **Texte**. Après avoir créé les paramètres de rapport, vous devrez peut-être modifier les valeurs par défaut. Pour plus d’informations, consultez [Report Parameters &#40;Report Builder and Report Designer&#41;](../report-design/report-parameters-report-builder-and-report-designer.md).  
+ Par défaut, chaque paramètre de rapport a le type de données **Texte**. Après avoir créé les paramètres de rapport, vous devrez peut-être modifier les valeurs par défaut. Pour plus d'informations, consultez [Paramètres de rapport &#40;Générateur de rapports et Concepteur de rapports&#41;](../report-design/report-parameters-report-builder-and-report-designer.md).  
   
   
 ##  <a name="Extended"></a> Propriétés de champ étendues  
- L'extension pour le traitement des données [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] prend en charge les propriétés de champ étendues. Propriétés de champ étendues sont des propriétés en plus de `Value` et `IsMissing` qui sont définies pour un champ de dataset par l’extension de traitement des données. Les propriétés étendues incluent des propriétés prédéfinies et des propriétés personnalisées. Les propriétés prédéfinies sont des propriétés communes à plusieurs sources de données. Les propriétés personnalisées sont uniques à chaque source de données.  
+ L'extension pour le traitement des données [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] prend en charge les propriétés de champ étendues. Les propriétés de champ étendues sont des propriétés complémentaires à `Value` et `IsMissing` qui sont définies pour un champ de dataset par l'extension pour le traitement des données. Les propriétés étendues incluent des propriétés prédéfinies et des propriétés personnalisées. Les propriétés prédéfinies sont des propriétés communes à plusieurs sources de données. Les propriétés personnalisées sont uniques à chaque source de données.  
   
- Les propriétés de champ étendues n'apparaissent pas dans le volet des données de rapport en tant qu'éléments que vous pouvez faire glisser vers votre disposition de rapport. Au lieu de cela, vous faites glisser le champ parent de la propriété sur le rapport et puis vous remplacez la propriété par défaut `Value` à la propriété que vous souhaitez utiliser.  
+ Les propriétés de champ étendues n'apparaissent pas dans le volet des données de rapport en tant qu'éléments que vous pouvez faire glisser vers votre disposition de rapport. À la place, vous faites glisser le champ parent de la propriété sur le rapport, puis vous remplacez la propriété par défaut `Value` par la propriété que vous voulez utiliser.  
   
- Le nom d'une propriété de champ étendue apparaît dans l'info-bulle lorsque vous placez la souris sur un champ dans le volet Métadonnées du concepteur de requêtes. Pour plus d’informations sur le Concepteur de requêtes que vous pouvez utiliser pour Explorer les données sous-jacentes, consultez [Interface utilisateur du Concepteur de requêtes Hyperion Essbase](hyperion-essbase-query-designer-user-interface.md).  
+ Le nom d'une propriété de champ étendue apparaît dans l'info-bulle lorsque vous placez la souris sur un champ dans le volet Métadonnées du concepteur de requêtes. Pour plus d’informations sur le concepteur de requêtes que vous pouvez utiliser pour explorer les données sous-jacentes, consultez [Interface utilisateur du Concepteur de requêtes Hyperion Essbase](hyperion-essbase-query-designer-user-interface.md).  
   
 > [!NOTE]  
 >  Il existe des valeurs pour les propriétés de champ étendues uniquement si elles sont incluses dans l'expression MDX et la source de données fournit ces valeurs lorsque votre rapport s'exécute et récupère les données pour ses datasets. Vous pouvez alors faire référence à ces valeurs de propriété `Field` à partir de n'importe quelle expression en utilisant la syntaxe décrite dans la section suivante. Cependant, dans la mesure où ces champs sont spécifiques à ce fournisseur de données et ne font pas partie du langage de définition de rapport, les modifications que vous apportez à ces valeurs ne sont pas enregistrées avec la définition du rapport.  
   
   
 ### <a name="predefined-field-properties"></a>Propriétés de champ prédéfinies  
- Propriétés prédéfinies de champ qui sont généralement prises en charge par plusieurs fournisseurs de données et qui apparaissent dans la requête MDX sous-jacente d'un dataset de rapport. Par exemple, la propriété de dimension MDX MEMBER_UNIQUE_NAME est mappée à la propriété de champ de dataset de rapport prédéfini `UniqueName`. Pour inclure la valeur de nom unique dans une zone de texte, utilisez l’expression `=Fields!`*\<FieldName>*`.UniqueName`.  
+ Propriétés prédéfinies de champ qui sont généralement prises en charge par plusieurs fournisseurs de données et qui apparaissent dans la requête MDX sous-jacente d'un dataset de rapport. Par exemple, la propriété de dimension MDX MEMBER_UNIQUE_NAME est mappée à la propriété prédéfinie de champ dataset du rapport `UniqueName`. Pour inclure la valeur de nom unique dans une zone de texte, utilisez l’expression `=Fields!`*\<FieldName>*`.UniqueName`.  
   
  Le tableau suivant dresse la liste des propriétés de champ prédéfinies que vous pouvez utiliser pour une source de données [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] .  
   
@@ -87,7 +87,7 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
 |`IsMissing`|`Boolean`|Indique si le champ figure dans le dataset obtenu.|  
 |`FormattedValue`|`String`|Retourne la valeur mise en forme d'un élément clé.<br /><br /> Mappé à partir de FORMATTED_VALUE dans l'expression MDX.|  
 |`BackgroundColor`|`String`|Retourne la couleur d'arrière-plan définie dans la base de données pour le champ.<br /><br /> Mappé à partir de BACK_COLOR dans l'expression MDX.|  
-|`Color`|`String`|Retourne la couleur de premier plan définie dans la base de données pour l'élément.<br /><br /> Mappé à partir de FORE_COLOR dans l'expression MDX.|  
+|`Color`|`String`|Retourne la couleur de premier plan définie dans la base de données pour l'élément.<br /><br /> Mappé à partir de FORE_COLOR dans l'expression MDX.|  
 |`UniqueName`|`String`|Retourne le nom complet d'un niveau.<br /><br /> Mappé à partir de MEMBER_UNIQUE_NAME dans l'expression MDX.|  
   
  Pour plus d’informations sur l’utilisation de champs et de propriétés de champ dans une expression, consultez [Collections intégrées dans les expressions &#40;Générateur de rapports et SSRS&#41;](../report-design/built-in-collections-in-expressions-report-builder.md).  
@@ -108,9 +108,9 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
   
 ##  <a name="Remarks"></a> Notes  
- Certains modes de remise de rapport ne sont pas pris en charge par ce fournisseur de données. La remise des rapports par le biais d'abonnements pilotés par les données n'est pas prise en charge pour cette extension pour le traitement des données. Pour plus d’informations, consultez [Utiliser une source de données externe pour les données des abonnés &#40;abonnement piloté par les données&#41;](../subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md) dans la documentation de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dans la documentation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][en ligne](http://go.microsoft.com/fwlink/?linkid=121312)de.  
+ Certains modes de remise de rapport ne sont pas pris en charge par ce fournisseur de données. La remise des rapports par le biais d'abonnements pilotés par les données n'est pas prise en charge pour cette extension pour le traitement des données. Pour plus d’informations, consultez [Utiliser une source de données externe pour les données des abonnés &#40;abonnement piloté par les données&#41;](../subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md) dans la documentation de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dans la documentation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][en ligne](https://go.microsoft.com/fwlink/?linkid=121312)de.  
   
- Pour plus d’informations, consultez [Using SQL Server 2005 Reporting Services with Hyperion Essbase](http://go.microsoft.com/fwlink/?LinkId=81970).  
+ Pour plus d’informations, consultez [Using SQL Server 2005 Reporting Services with Hyperion Essbase](https://go.microsoft.com/fwlink/?LinkId=81970).  
   
   
 ##  <a name="HowTo"></a> Rubriques de procédures  
@@ -138,10 +138,10 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
  [Collection de champs de dataset &#40;Générateur de rapports et SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)  
  Fournit des informations sur la collection de champs générée par la requête de dataset.  
   
- [Sources de données prises en charge par Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md) dans la section [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de la [documentation en ligne](http://go.microsoft.com/fwlink/?linkid=121312) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ [Sources de données prises en charge par Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md) dans la section [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de la [documentation en ligne](https://go.microsoft.com/fwlink/?linkid=121312) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
  Fournit des informations détaillées sur la prise en charge des plateformes et des versions pour chaque extension de données.  
   
- [Using SQL Server 2005 Reporting Services with Hyperion Essbase](http://go.microsoft.com/fwlink/?LinkId=81970)  
+ [Using SQL Server 2005 Reporting Services with Hyperion Essbase](https://go.microsoft.com/fwlink/?LinkId=81970)  
  Fournit des informations détaillées sur l'utilisation de cette extension de données.  
   
   

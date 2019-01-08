@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
 - logs [SQL Server], full
@@ -18,15 +18,15 @@ ms.assetid: 0f23aa84-475d-40df-bed3-c923f8c1b520
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 75677d897c714828e23205490d68fd2e691b9b39
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2c0dc1566693ad8d8c86d7efe47403248788b076
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084909"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52759511"
 ---
 # <a name="troubleshoot-a-full-transaction-log-sql-server-error-9002"></a>Résoudre les problèmes liés à un journal des transactions saturé (erreur SQL Server 9002)
-  Cette rubrique décrit les réactions possibles et émet quelques suggestions qui vous aideront à éviter cette situation dans le futur. Quand le journal des transactions est saturé, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] émet une erreur 9002. Le journal peut être renseigné lorsque la base de données est en ligne ou en cours de récupération. Si le journal se remplit tandis que la base de données est en ligne, cette dernière reste en ligne et peut uniquement être lue mais pas mise à jour. Si le journal se remplit en cours de récupération, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] marque la base de données comme RESOURCE PENDING. Dans les deux cas, une intervention de l'utilisateur est nécessaire pour libérer de l'espace disque.  
+  Cette rubrique décrit les réactions possibles et émet quelques suggestions qui vous aideront à éviter cette situation dans le futur. Quand le journal des transactions est saturé, le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] émet une erreur 9002. Le journal peut être renseigné lorsque la base de données est en ligne ou en cours de récupération. Si le journal se remplit tandis que la base de données est en ligne, cette dernière reste en ligne et peut uniquement être lue mais pas mise à jour. Si le journal se remplit en cours de récupération, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] marque la base de données comme RESOURCE PENDING. Dans les deux cas, une intervention de l'utilisateur est nécessaire pour libérer de l'espace disque.  
   
 ## <a name="responding-to-a-full-transaction-log"></a>Réagir à un journal des transactions complet  
  La réponse adéquate à un journal des transactions saturé dépend en partie de la ou des conditions qui ont motivé le remplissage du journal. Pour découvrir les raisons qui empêchent de tronquer le journal dans une situation donnée, utilisez les colonnes **log_reuse_wait** et **log_reuse_wait_desc** de l’affichage catalogue **sys.database**. Pour plus d’informations, consultez [sys.databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql). Pour obtenir une description des facteurs susceptibles de retarder la troncation du journal, consultez [Journal des transactions &#40;SQL Server&#41;](the-transaction-log-sql-server.md).  
@@ -51,7 +51,7 @@ ms.locfileid: "48084909"
  Ces solutions sont abordées dans les sections qui suivent. Optez pour une solution adaptée à votre situation.  
   
 ### <a name="backing-up-the-log"></a>Sauvegarde du journal  
- Si vous travaillez en mode de restauration complète ou en mode de récupération utilisant les journaux de transactions et si vous n'avez pas sauvegardé récemment le journal des transactions, la création d'une sauvegarde est ce qui empêche la troncation du journal. Si le journal n’a jamais été sauvegardé, vous devez créer deux sauvegardes du journal pour autoriser le [!INCLUDE[ssDE](../../includes/ssde-md.md)] pour tronquer le journal au point de la dernière sauvegarde. Le fait de tronquer le journal permet de libérer de l'espace pour les nouveaux enregistrements de ce dernier. Pour empêcher le journal de se remplir à nouveau, effectuez les sauvegardes régulièrement.  
+ Si vous travaillez en mode de restauration complète ou en mode de récupération utilisant les journaux de transactions et si vous n'avez pas sauvegardé récemment le journal des transactions, la création d'une sauvegarde est ce qui empêche la troncation du journal. Si le journal n’a jamais été sauvegardé, vous devez créer deux sauvegardes du journal pour autoriser le [!INCLUDE[ssDE](../../includes/ssde-md.md)] à le tronquer à l’endroit exact de la dernière sauvegarde. Le fait de tronquer le journal permet de libérer de l'espace pour les nouveaux enregistrements de ce dernier. Pour empêcher le journal de se remplir à nouveau, effectuez les sauvegardes régulièrement.  
   
  **Pour créer une sauvegarde du journal des transactions**  
   

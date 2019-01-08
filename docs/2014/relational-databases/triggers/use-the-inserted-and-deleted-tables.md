@@ -18,12 +18,12 @@ ms.assetid: ed84567f-7b91-4b44-b5b2-c400bda4590d
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: bc9bb9b663841641c88d61ffce0073de658b334d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9ccc2399f159e3f51753424aa0273d81f428b876
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220940"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52811161"
 ---
 # <a name="use-the-inserted-and-deleted-tables"></a>Utiliser les tables inserted et deleted
   Les instructions de déclenchement DML utilisent deux tables spéciales : la table deleted et la table inserted. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crée et gère automatiquement ces tables. Ces tables temporaires résidant en mémoire servent à tester les effets de certaines modifications de données et à définir des conditions pour les actions de déclencheur DML. Vous ne pouvez pas modifier directement les données contenues dans les tables ou effectuer des opérations DDL (Data Definition Language) sur les tables, telles que CREATE INDEX.  
@@ -55,7 +55,7 @@ ms.locfileid: "48220940"
   
  Les contraintes CHECK pouvant référencer uniquement les colonnes sur lesquelles des contraintes de niveau table ou colonne sont définies, toutes les contraintes entre tables (dans ce cas, des règles de gestion) doivent être définies sous la forme de déclencheurs.  
   
- L'exemple suivant crée un déclencheur DML. Ce déclencheur vérifie que les informations de conditions de crédit du fournisseur sont correctes lors d'une tentative d'insertion d'un nouveau bon de commande dans la table `PurchaseOrderHeader` . Pour obtenir les informations de conditions de crédit du fournisseur correspondant à la commande qui vient d'être insérée, la table `Vendor` doit être référencée et jointe à la table inserted. Si les conditions de crédit sont trop faibles, un message s'affiche et l'insertion n'a pas lieu. Notez que cet exemple n'autorise pas les modifications de données de plusieurs lignes. Pour plus d’informations, consultez [Create DML Triggers to Handle Multiple Rows of Data](../triggers/create-dml-triggers-to-handle-multiple-rows-of-data.md).  
+ L'exemple suivant crée un déclencheur DML. Ce déclencheur vérifie que les informations de conditions de crédit du fournisseur sont correctes lors d'une tentative d'insertion d'un nouveau bon de commande dans la table `PurchaseOrderHeader` . Pour obtenir les informations de conditions de crédit du fournisseur correspondant à la commande qui vient d'être insérée, la table `Vendor` doit être référencée et jointe à la table inserted. Si les conditions de crédit sont trop faibles, un message s'affiche et l'insertion n'a pas lieu. Notez que cet exemple n'autorise pas les modifications de données de plusieurs lignes. Pour plus d’informations, consultez [Créer de déclencheurs DML pour gérer plusieurs lignes de données](../triggers/create-dml-triggers-to-handle-multiple-rows-of-data.md).  
   
  [!code-sql[TriggerDDL#CreateTrigger3](../../snippets/tsql/SQL14/tsql/triggerddl/transact-sql/snippet_create_alter_drop_trigger.sql#createtrigger3)]  
   
@@ -70,7 +70,7 @@ ms.locfileid: "48220940"
   
 -   Les instructions INSERT doivent fournir des valeurs pour toutes les colonnes NOT NULL pour lesquelles aucune contrainte DEFAULT n'est définie.  
   
--   Pour toutes les colonnes sauf calculée, identité ou `timestamp` colonnes de valeurs sont facultatives pour toute colonne acceptant les valeurs NULL ou toute ne null pas la colonne qui a une définition DEFAULT.  
+-   Les valeurs sont facultatives pour toute colonne acceptant des valeurs NULL ou toute colonne NOT NULL avec valeur par défaut (DEFAULT), sous réserve qu'il ne s'agisse pas d'une colonne calculée, identité ou `timestamp`.  
   
  Lorsqu'une instruction INSERT, UPDATE ou DELETE fait référence à une vue possédant un déclencheur INSTEAD OF, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] appelle le déclencheur au lieu d'effectuer une opération directe sur une table. Le déclencheur doit utiliser les informations présentées dans les tables inserted et deleted pour élaborer toute instruction nécessaire à l'implémentation de l'action requise dans les tables de base, même si le format des informations contenues dans les tables inserted et deleted conçues pour la vue diffère de celui des données stockées dans les tables de base.  
   

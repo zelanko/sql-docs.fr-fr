@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - viewing replication properties
@@ -19,12 +18,12 @@ ms.assetid: 27d72ea4-bcb6-48f2-b4aa-eb1410da7efc
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: be9319e64a3bbc2fb74b30d31bada963a78ee884
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 439a2009e6cb5e470ef09d3c766c4349d54ecdb8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114115"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52792290"
 ---
 # <a name="view-and-modify-publication-properties"></a>Afficher et modifier les propriétés d'une publication
   Cette rubrique décrit comment afficher et modifier les propriétés de la publication dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], de [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou d'objets RMO (Replication Management Objects).  
@@ -157,11 +156,11 @@ ms.locfileid: "48114115"
   
 2.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.TransPublication> , définissez les propriétés <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> et <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> pour la publication et définissez la propriété <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> sur la connexion créée à l'étape 1.  
   
-3.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> pour obtenir les propriétés de l'objet. Si cette méthode retourne `false`, soit les propriétés de la publication à l’étape 2 ont été définies de manière incorrecte ou que la publication n’existe pas.  
+3.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> pour obtenir les propriétés de l'objet. Si cette méthode retourne `false`, soit les propriétés de la publication ont été définies de manière incorrecte à l'étape 2, soit la publication n'existe pas.  
   
-4.  (Facultatif) Pour modifier les propriétés, définissez une nouvelle valeur pour l'une des propriétés paramétrables. Utilisez l’opérateur AND logique (`&` dans Microsoft Visual c# et `And` dans Microsoft Visual Basic) pour déterminer si une donnée <xref:Microsoft.SqlServer.Replication.PublicationAttributes> a la valeur pour le <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> propriété. Utilisez l'opérateur OR logique inclusif (`|` en Visual C# et `Or` en Visual Basic) et l'opérateur OR logique exclusif (`^` en Visual C# et `Xor` en Visual Basic) pour modifier les valeurs <xref:Microsoft.SqlServer.Replication.PublicationAttributes> de la propriété <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A>.  
+4.  (Facultatif) Pour modifier les propriétés, définissez une nouvelle valeur pour l'une des propriétés paramétrables. Utilisez l'opérateur AND logique (`&` en Microsoft Visual C# et `And` en Microsoft Visual Basic) pour déterminer si une valeur <xref:Microsoft.SqlServer.Replication.PublicationAttributes> donnée est définie pour la propriété <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A>. Utilisez l'opérateur OR logique inclusif (`|` en Visual C# et `Or` en Visual Basic) et l'opérateur OR logique exclusif (`^` en Visual C# et `Xor` en Visual Basic) pour modifier les valeurs <xref:Microsoft.SqlServer.Replication.PublicationAttributes> de la propriété <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A>.  
   
-5.  (Facultatif) Si vous avez spécifié une valeur de `true` pour <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>, appelez le <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> méthode pour valider les modifications sur le serveur. Si vous avez spécifié une valeur de `false` pour <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> (la valeur par défaut), les modifications sont envoyées au serveur immédiatement.  
+5.  (Facultatif) Si vous avez spécifié la valeur `true` pour <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>, appelez la méthode <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> pour valider les modifications sur le serveur. Si vous avez spécifié la valeur `false` pour <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> (valeur par défaut), les modifications sont envoyées immédiatement au serveur.  
   
 #### <a name="to-view-or-modify-properties-of-a-merge-publication"></a>Pour afficher ou modifier les propriétés d'une publication de fusion  
   
@@ -169,11 +168,11 @@ ms.locfileid: "48114115"
   
 2.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.MergePublication> , définissez les propriétés <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> et <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> pour la publication et définissez la propriété <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> sur la connexion créée à l'étape 1.  
   
-3.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> pour obtenir les propriétés de l'objet. Si cette méthode retourne `false`, soit les propriétés de la publication à l’étape 2 ont été définies de manière incorrecte ou que la publication n’existe pas.  
+3.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> pour obtenir les propriétés de l'objet. Si cette méthode retourne `false`, soit les propriétés de la publication ont été définies de manière incorrecte à l'étape 2, soit la publication n'existe pas.  
   
 4.  (Facultatif) Pour modifier les propriétés, définissez une nouvelle valeur pour l'une des propriétés paramétrables. Utilisez l'opérateur AND logique (`&` en Visual C# et `And` en Visual Basic) pour déterminer si une valeur <xref:Microsoft.SqlServer.Replication.PublicationAttributes> donnée est définie pour la propriété <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A>. Utilisez l'opérateur OR logique inclusif (`|` en Visual C# et `Or` en Visual Basic) et l'opérateur OR logique exclusif (`^` en Visual C# et `Xor` en Visual Basic) pour modifier les valeurs <xref:Microsoft.SqlServer.Replication.PublicationAttributes> de la propriété <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A>.  
   
-5.  (Facultatif) Si vous avez spécifié une valeur de `true` pour <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>, appelez le <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> méthode pour valider les modifications sur le serveur. Si vous avez spécifié une valeur de `false` pour <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> (la valeur par défaut), les modifications sont envoyées au serveur immédiatement.  
+5.  (Facultatif) Si vous avez spécifié la valeur `true` pour <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>, appelez la méthode <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> pour valider les modifications sur le serveur. Si vous avez spécifié la valeur `false` pour <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> (valeur par défaut), les modifications sont envoyées immédiatement au serveur.  
   
 ###  <a name="PShellExample"></a> Exemples (RMO)  
  Cet exemple définit des attributs de publication pour une publication transactionnelle. Les modifications sont mises en cache jusqu'à leur envoi explicite au serveur.  

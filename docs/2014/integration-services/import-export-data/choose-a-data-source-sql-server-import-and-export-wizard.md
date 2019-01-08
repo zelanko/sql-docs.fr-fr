@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.chooseadatasource.f1
@@ -13,19 +12,19 @@ ms.assetid: ebf28a62-dfc1-4b39-9db5-df1919e5fccb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ff54dc41b8a39107c191f8976d22005c80d5f65c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1cff58f58543ae5876840bb7640f9cc11abf793d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48216339"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370271"
 ---
 # <a name="choose-a-data-source-sql-server-import-and-export-wizard"></a>Choisir une source de données (Assistant Importation et Exportation SQL Server)
   Utilisez le **choisir une Source de données** page pour spécifier la source de données que vous souhaitez copier.  
   
- Pour en savoir plus sur cet Assistant, consultez [SQL Server Assistant Importation et exportation](import-and-export-data-with-the-sql-server-import-and-export-wizard.md). Pour en savoir plus sur les options de démarrage de l’Assistant et sur les autorisations requises pour exécuter l’Assistant avec succès, consultez [exécuter le SQL Server Assistant Importation et exportation](start-the-sql-server-import-and-export-wizard.md).  
+ Pour en savoir plus sur cet Assistant, consultez [Assistant Importation et Exportation SQL Server](import-and-export-data-with-the-sql-server-import-and-export-wizard.md). Pour en savoir plus sur les options de démarrage de l’Assistant et sur les autorisations requises pour exécuter l’Assistant avec succès, consultez [exécuter le SQL Server Assistant Importation et exportation](start-the-sql-server-import-and-export-wizard.md).  
   
- L’objectif de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Assistant Importation et exportation consiste à copier des données à partir d’une source vers une destination. L'Assistant peut également créer une base de données de destination et des tables de destination à votre intention. Toutefois, si vous devez copier plusieurs tables ou bases de données, ou autres types d'objets de bases de données, vous devez plutôt utiliser l'Assistant Copie de base de données. Pour plus d'informations, consultez [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md).  
+ La fonction de l'Assistant Importation et Exportation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est de copier des données d'une source vers une destination. L'Assistant peut également créer une base de données de destination et des tables de destination à votre intention. Toutefois, si vous devez copier plusieurs tables ou bases de données, ou autres types d'objets de bases de données, vous devez plutôt utiliser l'Assistant Copie de base de données. Pour plus d'informations, consultez [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md).  
   
 ## <a name="options"></a>Options  
  **Source de données**  
@@ -44,10 +43,10 @@ ms.locfileid: "48216339"
  Spécifiez si le package doit utiliser l'authentification [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows pour la connexion à la base de données. L'authentification Windows est recommandée pour renforcer la sécurité.  
   
  **Utiliser l’authentification SQL Server**  
- Spécifiez si le package doit utiliser [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’authentification pour vous connecter à la base de données. Si vous utilisez l’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vous devez fournir un nom d’utilisateur et un mot de passe.  
+ Spécifiez si le package doit utiliser l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour la connexion à la base de données. Si vous utilisez l’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vous devez fournir un nom d’utilisateur et un mot de passe.  
   
  **Nom d'utilisateur**  
- Spécifiez un nom d’utilisateur pour la connexion de base de données lorsque vous utilisez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’authentification.  
+ Spécifiez un nom d'utilisateur pour la connexion à la base de données lorsque vous utilisez l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  **Mot de passe**  
  Tapez le mot de passe pour la connexion à la base de données quand vous utilisez l’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -68,15 +67,15 @@ ms.locfileid: "48216339"
  Tapez le nom de la base de données source.  
   
  **Sécurité intégrée**  
- Spécifiez `True` pour se connecter en utilisant l’authentification intégrée de Windows, ce qui est recommandée, ou `False` pour se connecter à l’aide de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’authentification. Si vous spécifiez `False`, vous devez entrer un ID d'utilisateur et un mot de passe. La valeur par défaut est `False`.  
+ Spécifiez `True` pour établir la connexion en utilisant l'authentification intégrée de Windows (recommandé) ou `False` pour établir la connexion en utilisant l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si vous spécifiez `False`, vous devez entrer un ID d'utilisateur et un mot de passe. La valeur par défaut est `False`.  
   
  **ID d'utilisateur**  
- Spécifiez un nom d’utilisateur pour la connexion de base de données lorsque vous utilisez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’authentification.  
+ Spécifiez un nom d'utilisateur pour la connexion à la base de données lorsque vous utilisez l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  **Mot de passe**  
  Tapez le mot de passe pour la connexion à la base de données quand vous utilisez l’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Les options supplémentaires fournies lorsque vous sélectionnez ce fournisseur ne sont pas indispensables pour la connexion à la base de données source [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir une description de ces options supplémentaires, consultez la documentation pour le [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] fournisseur de données pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans le [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Kit de développement logiciel.  
+ Les options supplémentaires fournies lorsque vous sélectionnez ce fournisseur ne sont pas indispensables pour la connexion à la base de données source [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour une description de ces options supplémentaires, consultez la documentation du fournisseur de données [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans le Kit de développement logiciel (SDK) [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] .  
   
 ### <a name="data-source--microsoft-excel"></a>Source de données = Microsoft Excel  
   
@@ -113,7 +112,7 @@ ms.locfileid: "48216339"
  Fournissez le mot de passe utilisateur pour la connexion à la base de données lorsqu'un fichier d'informations d'un groupe de travail est associé à la base de données. Cependant, si la base de données est protégée par un seul mot de passe pour tous les utilisateurs, vous devez fournir cette valeur dans la boîte de dialogue **Propriétés des liaisons de données** accessible en cliquant sur **Avancé**.  
   
  **Avancé**  
- Vous pouvez souhaiter spécifier des options avancées, telles que le mot de passe de base de données ou un fichier d’informations de groupe de travail non définis par défaut, à l’aide de la **propriétés des liaisons de données** boîte de dialogue. Pour plus d’informations sur les propriétés du fournisseur OLE DB, effectuez une recherche dans la section accès aux données de la [MSDN library](http://go.microsoft.com/fwlink/?linkid=62553).  
+ Vous pouvez souhaiter spécifier des options avancées, telles que le mot de passe de base de données ou un fichier d’informations de groupe de travail non définis par défaut, à l’aide de la **propriétés des liaisons de données** boîte de dialogue. Pour plus d’informations sur les propriétés du fournisseur OLE DB, effectuez une recherche dans la section accès aux données de la [MSDN library](https://go.microsoft.com/fwlink/?linkid=62553).  
   
 ### <a name="data-source--flat-file-source"></a>Source de données = Source de fichier plat  
  Consultez les rubriques suivantes pour obtenir des informations sur les options d'une source de données dans un fichier plat.  

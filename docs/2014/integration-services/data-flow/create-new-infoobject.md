@@ -4,24 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 3587a633-1c0b-4d63-a22a-6b2b93923c3a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: afb148143e11ca77f87fe071cef165d60f3bdb7f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 17e9b7508317abc2ceb3b6e273c46fdea5a5abb3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070064"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52781252"
 ---
 # <a name="create-new-infoobject"></a>Créer un nouvel InfoObject
   Utilisez la boîte de dialogue **Créer un nouvel InfoObject** pour créer un InfoObject dans le système SAP Netweaver BW.  
   
- Vous pouvez ouvrir la boîte de dialogue **Créer un nouvel InfoObject** à partir de la page **Gestionnaire de connexions** de **l’Éditeur de destination SAP BW**. Pour en savoir plus sur la destination SAP BW, consultez [Destination SAP BW](sap-bw-destination.md).  
+ Vous pouvez ouvrir la boîte de dialogue **Créer un nouvel InfoObject** à partir de la page **Gestionnaire de connexions** de **l’Éditeur de destination SAP BW**. Pour en savoir plus sur la destination SAP BW, consultez [SAP BW Destination](sap-bw-destination.md).  
   
 > [!IMPORTANT]  
 >  La documentation de Microsoft Connector 1.1 pour SAP BW suppose que vous êtes familiarisé avec l'environnement SAP Netweaver BW. Pour plus d'informations sur SAP Netweaver BW, ou sur la configuration des objets et des processus SAP Netweaver BW objets, consultez la documentation SAP.  
@@ -130,7 +129,7 @@ ms.locfileid: "48070064"
  **Type d'InfoObject**  
  Affichez le type de l'InfoObject. Le tableau suivant répertorie les valeurs possibles pour le type.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |CHA|Caractéristiques|  
 |KYF|Chiffres clés|  
@@ -154,7 +153,7 @@ ms.locfileid: "48070064"
  Supprimez l’InfoObject sélectionné de la liste **Attributs** .  
   
 ## <a name="see-also"></a>Voir aussi  
- [Créer un InfoCube pour les données de Transaction](create-infocube-for-transaction-data.md)   
+ [Créer un InfoCube pour les données de transaction](create-infocube-for-transaction-data.md)   
  [Créer un InfoSource](create-infosource.md)   
  [Créer un InfoSource pour les données de transaction](create-infosource-for-transaction-data.md)   
  [Créer un InfoSource pour les données maîtres](create-infosource-for-master-data.md)   

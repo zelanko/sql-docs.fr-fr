@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
 - XML
@@ -15,12 +14,12 @@ ms.assetid: 4973d9ac-20fd-4ac3-bc9f-5d60e39fdb7d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4c81d0dd5ad56db2216143ed847f148467fc2e91
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c30c6a4f746ae9aa81b8c1a71c0e380bdd26df03
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140329"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52815871"
 ---
 # <a name="tuningtimeinmin-element-dta"></a>TuningTimeInMin, élément (Assistant Paramétrage de base de données)
   Spécifie la durée maximale, en minutes, d'une session de paramétrage.  
@@ -41,13 +40,13 @@ ms.locfileid: "48140329"
 |--------------------|-----------------|  
 |**Type de données et longueur**|`unsignedInt`, longueur illimitée.|  
 |**Valeur par défaut**|480 minutes (8 heures).|  
-|**Occurrence**|Requis sauf si une valeur a été spécifiée pour le `NumberOfEvents` élément.|  
+|**Occurrence**|Obligatoire, à moins qu'une valeur n'ait été spécifiée pour l'élément `NumberOfEvents`.|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
   
 |Relation|Éléments|  
 |------------------|--------------|  
-|**Élément parent**|[TuningOptions, élément &#40;DTA&#41;](tuningoptions-element-dta.md)|  
+|**Élément parent**|[Élément TuningOptions &#40;DTA&#41;](tuningoptions-element-dta.md)|  
 |**Éléments enfants**|None|  
   
 ## <a name="example"></a>Exemple  

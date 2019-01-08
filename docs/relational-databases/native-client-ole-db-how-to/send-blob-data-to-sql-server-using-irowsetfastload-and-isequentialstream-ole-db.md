@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 62ca1f527d3a96e4c12e1803d46b85c434344fbb
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c15e8c9ee191dc2829dac12566b0cca9f8c3be13
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675055"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208198"
 ---
 # <a name="send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db"></a>Envoyer des données BLOB vers SQL SERVER en utilisant IROWSETFASTLOAD et ISEQUENTIALSTREAM (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "51675055"
   
  Dans le code source, lorsque vous annulez les marques de commentaire #define USE_ISEQSTREAM, l'exemple utilise ISequentialStream. L’implémentation du flux est définie dans l’exemple et peut envoyer des données BLOB de n’importe quelle taille simplement en modifiant MAX_BLOB. Il n'est pas nécessaire que les données de flux soient ajustées dans la mémoire ou disponibles dans un bloc. Vous appelez ce fournisseur en utilisant IRowsetFastLoad::InsertRow. Passez un pointeur à l'aide d'IRowsetFastLoad::InsertRow vers l'implémentation du flux dans le tampon de données (décalage rgBinding.obValue) avec la quantité de données disponibles à lire dans le flux. Certains fournisseurs peuvent ne pas connaître la longueur des données lorsque la liaison a lieu. Dans ce cas, la longueur peut être omise de la liaison.  
   
- L'exemple n'utilise pas l'interface de flux du fournisseur pour écrire des données dans le fournisseur. À la place, l'exemple passe un pointeur vers l'objet de flux que le fournisseur utilise pour lire les données. En général, les fournisseurs Microsoft (SQLOLEDB et SQLNCLI) lisent les données dans les segments de l'objet de 1024 octets jusqu'à ce que toutes les données aient été traitées. Ni SQLOLEDB ni SQLNCLI n'ont des implémentations complètes pour permettre à l'utilisateur d'écrire des données dans l'objet de flux du fournisseur. Seules les données de longueur nulle peuvent être envoyées par le biais de l'objet de flux du fournisseur.  
+ L’exemple n’utilise pas de l’interface du fournisseur flux pour écrire des données dans le fournisseur. À la place, l'exemple passe un pointeur vers l'objet de flux que le fournisseur utilise pour lire les données. En général, les fournisseurs Microsoft (SQLOLEDB et SQLNCLI) lisent les données dans les segments de l'objet de 1024 octets jusqu'à ce que toutes les données aient été traitées. Ni SQLOLEDB ni SQLNCLI n'ont des implémentations complètes pour permettre à l'utilisateur d'écrire des données dans l'objet de flux du fournisseur. Seules les données de longueur nulle peuvent être envoyées par le biais de l'objet de flux du fournisseur.  
   
  L'objet ISequentialStream implémenté par l'utilisateur peut être utilisé avec des données d'un ensemble de lignes (IRowsetChange::InsertRow, IRowsetChange::SetData) et avec des paramètres en liant un paramètre en tant que DBTYPE_IUNKNOWN.  
   
@@ -41,11 +41,11 @@ ms.locfileid: "51675055"
 >  Lorsque c'est possible, utilisez l'authentification Windows. Si l'authentification Windows n'est pas disponible, invitez les utilisateurs à entrer leurs informations d'identification au moment de l'exécution. Évitez de stocker ces informations dans un fichier. Si vous devez rendre les informations d'identification persistantes, chiffrez-les avec l' [API de chiffrement Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ## <a name="example"></a>Exemple  
- Exécutez la première liste de code ([!INCLUDE[tsql](../../includes/tsql-md.md)])  pour créer la table utilisée par l'application.  
+ Exécutez la première ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) liste pour créer la table utilisée par l’application du code.  
   
  Compilez avec ole32.lib oleaut32.lib et exécutez le code C++ suivant. Cette application vous permet de vous connecter à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par défaut de votre ordinateur. Sur certains systèmes d'exploitation Windows, vous devrez remplacer (localhost) ou (local) par le nom de votre instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour vous connecter à une instance nommée, changez la chaîne de connexion de L"(local)" en L"(local)\\\nom", où nom correspond à l’instance nommée. Par défaut, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express est installé dans une instance nommée. Assurez-vous que votre variable d'environnement INCLUDE inclut le répertoire qui contient sqlncli.h.  
   
- Exécutez la troisième liste de code ([!INCLUDE[tsql](../../includes/tsql-md.md)]) pour supprimer la table utilisée par l'application.  
+ Exécutez la troisième ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) liste pour supprimer la table utilisée par l’application du code.  
   
 ```  
 use master  

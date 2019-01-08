@@ -19,12 +19,12 @@ ms.assetid: 9fab8298-10dc-45a9-9a91-0c8e6d947468
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e5c6b02cba58b35472fc5d0224d7faf9534c332a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 54971b2b71d37ec4b246d982429fac3d6abf5b9a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049489"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52412476"
 ---
 # <a name="create-a-data-source-ssas-multidimensional"></a>Créer une source de données (SSAS Multidimensionnel)
   Dans un modèle multidimensionnel [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , un objet de source de données représente une connexion à la source de données depuis laquelle vous traitez (ou importez) des données. Un modèle multidimensionnel doit contenir au moins un objet de source de données, mais rien ne vous empêche d'en ajouter plus pour combiner des données émanant de plusieurs entrepôts de données. Suivez les instructions de cette rubrique pour créer un objet de source de données pour votre modèle. Pour plus d’informations sur la définition des propriétés de cet objet, consultez [Définir les propriétés de la source de données &#40;SSAS Multidimensionnel&#41;](set-data-source-properties-ssas-multidimensional.md).  
@@ -64,10 +64,10 @@ ms.locfileid: "48049489"
  Après avoir enregistré l'objet de source de données dans votre modèle, la chaîne de connexion et le mot de passe sont chiffrés.  Pour des raisons de sécurité, toutes les traces visibles du mot de passe sont supprimées de la chaîne de connexion lorsque vous l'affichez ensuite dans les outils, le script ou le code.  
   
 > [!NOTE]  
->  Par défaut, [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] n’enregistre pas les mots de passe avec la chaîne de connexion. Si le mot de passe n’est pas enregistré, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] vous invite à le taper si nécessaire. Si vous avez choisi d'enregistrer le mot de passe, ce dernier est stocké dans un format chiffré dans la chaîne de connexion de données. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] chiffre les informations de mot de passe pour les sources de données à l’aide de la clé de chiffrement de la base de données qui contient la source de données. Avec les informations de connexion chiffrées, vous devez utiliser le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour modifier le mot de passe ou le compte de service [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , sinon les informations chiffrées ne peuvent pas être récupérées. Pour plus d'informations, consultez [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md).  
+>  Par défaut, [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] n’enregistre pas les mots de passe avec la chaîne de connexion. Si le mot de passe n’est pas enregistré, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] vous invite à le taper si nécessaire. Si vous avez choisi d'enregistrer le mot de passe, ce dernier est stocké dans un format chiffré dans la chaîne de connexion de données. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] chiffre les informations de mot de passe pour les sources de données à l’aide de la clé de chiffrement de la base de données qui contient la source de données. Avec les informations de connexion chiffrées, vous devez utiliser le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour modifier le mot de passe ou le compte de service [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , sinon les informations chiffrées ne peuvent pas être récupérées. Pour plus d’informations, consultez [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md).  
   
 ### <a name="defining-impersonation-information-for-data-mining-objects"></a>Définition des informations d'emprunt d'identité pour les objets d'exploration de données  
- Les requêtes d'exploration de données peuvent être exécutées dans le contexte du compte de service [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , mais également dans le contexte de l'utilisateur qui soumet la requête ou dans le contexte d'un utilisateur spécifique. Le contexte dans lequel une requête est exécutée peut avoir une incidence sur les résultats de la requête. Pour l’exploration de données `OPENQUERY` type des opérations, vous souhaiterez peut-être la requête d’exploration de données à exécuter dans le contexte de l’utilisateur actuel ou dans le contexte d’un utilisateur spécifique (quel que soit l’utilisateur qui exécute la requête) plutôt que dans le contexte du compte de service. Cela permet d'exécuter la requête avec des informations d'identification de sécurité limitées. Si vous souhaitez que [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] emprunte l’identité de l’utilisateur actuel ou d’un utilisateur spécifique, sélectionnez l’option **Utiliser un nom d’utilisateur et un mot de passe spécifiques** ou **Utiliser les infos d’identification de l’utilisateur actuel** .  
+ Les requêtes d'exploration de données peuvent être exécutées dans le contexte du compte de service [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , mais également dans le contexte de l'utilisateur qui soumet la requête ou dans le contexte d'un utilisateur spécifique. Le contexte dans lequel une requête est exécutée peut avoir une incidence sur les résultats de la requête. Pour les opérations d'exploration de données de type `OPENQUERY`, vous pouvez exécuter la requête d'exploration de données dans le contexte de l'utilisateur actuel ou dans le contexte d'un utilisateur spécifique (quel que soit l'utilisateur qui soumet la requête) plutôt que dans le contexte d'un compte de service. Cela permet d'exécuter la requête avec des informations d'identification de sécurité limitées. Si vous souhaitez que [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] emprunte l’identité de l’utilisateur actuel ou d’un utilisateur spécifique, sélectionnez l’option **Utiliser un nom d’utilisateur et un mot de passe spécifiques** ou **Utiliser les infos d’identification de l’utilisateur actuel** .  
   
 ##  <a name="bkmk_steps"></a> Créer une source de données à l'aide de l'Assistant Source de données  
   
@@ -77,7 +77,7 @@ ms.locfileid: "48049489"
   
 3.  Dans la page **Sélectionner la méthode de définition de la connexion** , choisissez **Créer une source de données basée sur une connexion existante ou nouvelle** , puis cliquez sur **Nouveau** pour ouvrir le **Gestionnaire de connexions**.  
   
-     Les nouvelles connexions sont créées dans le Gestionnaire de connexions. Dans le Gestionnaire de connexions, sélectionnez un fournisseur, puis spécifiez les propriétés de chaîne de connexion utilisées par ce fournisseur pour la connexion aux données sous-jacentes. Les informations exactes nécessaires dépendent du fournisseur, mais ces informations incluent en général un serveur ou une instance de service, des informations pour l'enregistrement dans un journal sur le serveur ou l'instance de service, un nom de base de données ou de fichier, ainsi que d'autres paramètres spécifiques au fournisseur. Pour le reste de cette procédure, nous allons supposer qu'une connexion de base de données SQL Server existe.  
+     Les nouvelles connexions sont créées dans le Gestionnaire de connexions. Dans le Gestionnaire de connexions, sélectionnez un fournisseur, puis spécifiez les propriétés de chaîne de connexion utilisées par ce fournisseur pour la connexion aux données sous-jacentes. Les informations exactes nécessaires dépendent du fournisseur, mais ces informations incluent en général un serveur ou une instance de service, des informations pour l'enregistrement dans un journal sur le serveur ou l'instance de service, un nom de base de données ou de fichier, ainsi que d'autres paramètres spécifiques au fournisseur. Pour le reste de cette procédure, nous supposons une connexion de base de données SQL Server.  
   
 4.  Sélectionnez [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework ou le fournisseur OLE DB natif à utiliser pour la connexion.  
   
@@ -106,7 +106,7 @@ ms.locfileid: "48049489"
   
          La nouvelle connexion apparaît dans le volet **Connexions de données** de la page **Sélectionner la méthode de définition de la connexion** dans l’Assistant Source de données.  
   
-6.  Cliquez sur **Suivant**.  
+6.  Cliquer sur **Suivant**.  
   
 7.  Sous **Informations d’emprunt d’identité**, spécifiez les informations d’identification ou l’identité d’utilisateur Windows qu’Analysis Services utilisera au moment de la connexion à la source de données externe. Si vous utilisez l'authentification de base de données, ces paramètres sont ignorés pour la connexion.  
   
@@ -118,7 +118,7 @@ ms.locfileid: "48049489"
   
      Le compte que vous spécifiez doit disposer d'autorisations en lecture sur la source de données.  
   
-8.  Cliquez sur **Suivant**.  Dans **Fin de l’Assistant**, entrez un nom de source de données ou utilisez le nom par défaut. Le nom par défaut correspond au nom de la base de données spécifiée dans la connexion. Le volet **Aperçu** affiche la chaîne de connexion pour cette nouvelle source de données.  
+8.  Cliquer sur **Suivant**.  Dans **Fin de l’Assistant**, entrez un nom de source de données ou utilisez le nom par défaut. Le nom par défaut correspond au nom de la base de données spécifiée dans la connexion. Le volet **Aperçu** affiche la chaîne de connexion pour cette nouvelle source de données.  
   
 9. Cliquez sur **Terminer**.  La nouvelle source de données apparaît dans le dossier **Sources de données** , dans l’Explorateur de solutions.  
   
@@ -152,13 +152,13 @@ ms.locfileid: "48049489"
  Vous pouvez créer plusieurs objets de source de données pour prendre en charge la connexion à des sources de données supplémentaires. Chaque source de données doit comporter des colonnes pouvant servir à créer des relations.  
   
 > [!NOTE]  
->  Si plusieurs sources de données sont définies et les données sont interrogées à partir de plusieurs sources dans une seule requête, comme pour une dimension en flocon, vous devez définir une source de données qui prend en charge les requêtes distantes à l’aide de `OpenRowset`. Il s'agit généralement d'une source de données Microsoft SQL Server.  
+>  Si plusieurs sources de données sont définies et que les données sont interrogées à partir de plusieurs sources dans une seule requête, notamment pour une dimension en flocon, vous devez définir une source de données qui prend en charge les requêtes distantes à l'aide de `OpenRowset`. Il s'agit généralement d'une source de données Microsoft SQL Server.  
   
  Les spécifications liées à l'utilisation de plusieurs sources de données sont les suivantes :  
   
 -   Désignez une source de données comme source de données principale. La source de données principale est celle utilisée pour créer une vue de source de données.  
   
--   Une source de données principale doit prendre en charge le `OpenRowset` (fonction).  Pour plus d’informations sur cette fonction dans SQL Server, consultez <xref:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlTokenType.OpenRowSet>.  
+-   Une source de données principale doit prendre en charge la fonction `OpenRowset`.  Pour plus d’informations sur cette fonction dans SQL Server, consultez <xref:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlTokenType.OpenRowSet>.  
   
  Utilisez la méthode suivante pour combiner des données provenant de plusieurs sources de données :  
   

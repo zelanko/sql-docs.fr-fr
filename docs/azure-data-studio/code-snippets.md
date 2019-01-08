@@ -1,7 +1,8 @@
 ---
-title: Créer des extraits de code dans Azure Data Studio | Microsoft Docs
+title: Créer des extraits de code réutilisables
+titleSuffix: Azure Data Studio
 description: Découvrez comment créer et utiliser des extraits de code SQL dans Azure Data Studio
-ms.custom: tools|sos
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.reviewer: alayu; sstein
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8bcf50d192b679b250ce6f4baac8f9e0179080ea
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: 0e10b121ffc1afae83b767bcfdfe8e6765f990f4
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49384134"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030263"
 ---
 # <a name="create-and-use-code-snippets-to-quickly-create-transact-sql-t-sql-scripts-in-includename-sosincludesname-sos-shortmd"></a>Créer et utiliser des extraits de code pour créer rapidement des scripts Transact-SQL (T-SQL) dans [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
@@ -51,7 +52,7 @@ Extraits de code défini par l’utilisateur peuvent également être créés.
 
 Vous pouvez définir vos propres extraits de code. Pour ouvrir le fichier d’extrait de code SQL pour la modification :
 
-1. Ouvrir le *Palette de commandes* (**Ctrl + Maj + P**) et le type *capture*et sélectionnez **préférences : extraits de code utilisateur Open**:
+1. Ouvrir le *Palette de commandes* (**Ctrl + Maj + P**) et le type *capture*, puis sélectionnez **préférences : Ouvrir des extraits de code utilisateur**:
 
    ![Remplacez le champ de modèle](media/code-snippets/user-snippets.png)
 

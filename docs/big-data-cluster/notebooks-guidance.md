@@ -1,30 +1,34 @@
 ---
-title: Comment utiliser des blocs-notes en version préliminaire de SQL Server 2019 | Microsoft Docs
-description: ''
+title: Exécuter les notebooks dans Azure Data Studio
+titleSuffix: SQL Server 2019 big data clusters
+description: Cet article explique comment exécuter les blocs-notes Jupyter dans Azure Data Studio conneected vers un cluster de données volumineuses de SQL Server 2019.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 11/06/2018
+ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 9f9db16431cd6c3befbb32383725ec008f5a9081
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+ms.custom: seodec18
+ms.openlocfilehash: af1393b38b297e451903d5a39942a3e878c88ee6
+ms.sourcegitcommit: edf7372cb674179f03a330de5e674824a8b4118f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51221635"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53246608"
 ---
 # <a name="how-to-use-notebooks-in-sql-server-2019-preview"></a>Comment utiliser des blocs-notes en version préliminaire de SQL Server 2019
 
-Cet article décrit comment lancer des blocs-notes Jupyter sur le cluster et commencer à créer vos propres blocs-notes. Il montre également comment envoyer des travaux sur le cluster.
+Cet article décrit comment lancer les blocs-notes Jupyter sur un cluster big data et comment commencer à créer vos propres blocs-notes. Il montre également comment envoyer des travaux sur le cluster.
 
 ## <a name="prerequisites"></a>Prérequis
 
 Pour utiliser des blocs-notes, vous devez installer les conditions préalables suivantes :
 
 - [Un cluster de données volumineux de SQL Server 2019](deployment-guidance.md)
-- [Azure Data Studio](../azure-data-studio/what-is.md)
-- [L’extension de SQL Server 2019 (version préliminaire)](../azure-data-studio/sql-server-2019-extension.md).
+- [Outils de données volumineuses de SQL Server 2019](deploy-big-data-tools.md):
+   - **Azure Data Studio**
+   - **Extension de SQL Server 2019**
+   - **kubectl**
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
@@ -80,7 +84,7 @@ Lorsque vous sélectionnez une de ces noyaux, nous allons installer ce noyau dan
 |Noyau Spark|Pour l’écriture de code Scala à l’aide de calcul Spark à partir du cluster.
 |Noyau Python|Pour l’écriture de code Python pour un développement local.
 
-Le `Attach to` fournit le contexte pour le noyau à attacher. Lorsque vous êtes connecté à la fin de la passerelle HDFS/Spark (Knox) point de la valeur par défaut `Attach to` est ce point de terminaison du cluster.
+Le `Attach to` fournit le contexte pour le noyau à attacher. Lorsque vous êtes connecté à la fin de la passerelle (Knox) HDFS/Spark point de la valeur par défaut `Attach to` est ce point de terminaison du cluster.
 
 ![image8](media/notebooks-guidance/image8.png)
 
@@ -109,11 +113,11 @@ Vous pouvez également afficher les Options « cellule » lorsque vous cliquez
 
 ![Image13](media/notebooks-guidance/image13.png)
 
-Voici les options pour chaque cellule :
+Voici les options pour chaque cellule-
 
 ![Image14](media/notebooks-guidance/image14.png)-
 
-Maintenant, choisissez le noyau Spark dans la liste déroulante pour les noyaux et dans le type de cellule/coller dans :
+Maintenant, choisissez le noyau Spark dans la liste déroulante pour les noyaux et dans la cellule type/collez-
 
 ![Image15](media/notebooks-guidance/image15.png)
 

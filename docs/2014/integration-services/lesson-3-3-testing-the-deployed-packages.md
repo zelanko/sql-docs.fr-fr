@@ -1,24 +1,23 @@
 ---
-title: 'Étape 3 : Test des packages déployés | Microsoft Docs'
+title: 'Étape 3 : Test des Packages déployés | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 9159da3f-c9ca-4015-9e85-3bf4373a1349
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 41107206bbe8fe8948bc6c2fb3d17ea761add869
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 503e73900510285556d3c1743c9ae26a44a18129
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48173049"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356501"
 ---
-# <a name="step-3-testing-the-deployed-packages"></a>Étape 3 : Test des packages déployés
+# <a name="step-3-testing-the-deployed-packages"></a>Étape 3 : Test des packages déployés
   Dans cette tâche, vous allez tester les packages que vous avez déployés vers une instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  Dans d'autres didacticiels [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , vous avez exécuté des packages dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], l'environnement de développement pour [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], à l'aide de l'option **Démarrer le débogage** du menu **Débogage** . Vous allez cette fois exécuter les packages différemment.  
@@ -72,7 +71,7 @@ ms.locfileid: "48173049"
   
 2.  Dans la boîte de dialogue **Se connecter au serveur** , sélectionnez **Moteur de base de données** dans la liste **Type du serveur** , fournissez le nom du serveur sur lequel vous avez installé les packages du didacticiel ou tapez (local) dans la zone **Nom du serveur** , et sélectionnez un mode d’authentification. Si vous utilisez l'authentification SQL Server, vous devez fournir un nom d'utilisateur et un mot de passe.  
   
-3.  Cliquez sur **Se connecter**.  
+3.  Cliquer sur **Se connecter**.  
   
 4.  Dans la fenêtre de requêtes, tapez ou collez l'instruction SQL suivante :  
   
@@ -92,7 +91,7 @@ ms.locfileid: "48173049"
   
 2.  Si vous êtes invité à vous reconnecter, dans la boîte de dialogue **Se connecter au serveur** , sélectionnez **Moteur de base de données** dans la liste **Type du serveur** , fournissez le nom du serveur sur lequel vous avez installé les packages du didacticiel ou tapez (local) dans la zone **Nom du serveur** , et sélectionnez un mode d’authentification. Si vous utilisez l'authentification SQL Server, vous devez fournir un nom d'utilisateur et un mot de passe.  
   
-3.  Cliquez sur **Se connecter**.  
+3.  Cliquer sur **Se connecter**.  
   
 4.  Dans la fenêtre de requêtes, tapez ou collez l'instruction SQL suivante :  
   
@@ -104,7 +103,7 @@ ms.locfileid: "48173049"
   
      La requête retourne 21 lignes de données. Le résultat retourné comprend les lignes provenant du fichier de données XML, orders.xml. Chaque ligne est une synthèse par pays/région ; la ligne répertorie le nom d'un pays/d'une région, le nombre de commandes par pays/région, ainsi que les dates des commandes les plus récentes et les plus anciennes.  
   
-![Icône Integration Services (petite)](media/dts-16.gif "icône Integration Services (petite)")**rester jusqu'à la Date avec Integration Services** <br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
+![Icône Integration Services (petite)](media/dts-16.gif "icône Integration Services (petite)")**rester jusqu'à la Date avec Integration Services**<br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Utilitaire dtexec](packages/dtexec-utility.md)  

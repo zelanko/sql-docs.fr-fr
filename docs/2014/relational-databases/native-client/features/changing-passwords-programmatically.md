@@ -21,33 +21,33 @@ ms.assetid: 624ad949-5fed-4ce5-b319-878549f9487b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 82b31b8a2a1a50b1ee3c9cad37f8f5db5374c6cb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0ec1db8e0f88bea5a02eb54b94a88194882ad9ff
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229919"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370491"
 ---
 # <a name="changing-passwords-programmatically"></a>Modification des mots de passe par programme
   Avant [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], lorsque le mot de passe d'un utilisateur expirait, seul un administrateur pouvait le réinitialiser. À partir de [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client prend en charge la gestion d’expiration de mot de passe par programme, via le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Client fournisseur OLE DB natif et le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pilote ODBC Native Client et via les modifications le **Connexion à SQL Server** boîtes de dialogue.  
   
 > [!NOTE]  
->  Si possible, demandez aux utilisateurs de saisir leurs informations d'identification au moment de l'exécution et éviter de les stocker leurs références dans un format permanent. Si vous devez conserver les informations d’identification, chiffrez-les avec [l’API de chiffrement Win32](http://go.microsoft.com/fwlink/?LinkId=64532). Pour plus d’informations sur l’utilisation des mots de passe, consultez [Mots de passe forts](../../security/strong-passwords.md).  
+>  Si possible, demandez aux utilisateurs de saisir leurs informations d'identification au moment de l'exécution et éviter de les stocker leurs références dans un format permanent. Si vous devez conserver les informations d’identification, chiffrez-les avec [l’API de chiffrement Win32](https://go.microsoft.com/fwlink/?LinkId=64532). Pour plus d’informations sur l’utilisation des mots de passe, consultez [Mots de passe forts](../../security/strong-passwords.md).  
   
 ## <a name="sql-server-login-error-codes"></a>Codes d'erreur des connexions SQL Server  
  Lorsqu'une connexion ne peut pas être établie en raison de problèmes d'authentification, l'un des codes d'erreur SQL Server suivants est disponible pour aider l'application à établir le diagnostic et la récupération.  
   
 |Code d'erreur SQL Server|Message d'erreur|  
 |---------------------------|-------------------|  
-|15113|La connexion a échoué pour l'utilisateur '%.*ls' Motif : échec de la validation du mot de passe. Le compte est verrouillé.|  
-|18463|Échec de l'ouverture de session pour l'utilisateur '%.*ls'. Raison : échec de changement de mot de passe. Impossible d'utiliser le mot de passe pour l'instant.|  
-|18464|Échec de l'ouverture de session pour l'utilisateur '%.*ls'. Raison : échec de changement de mot de passe. Ce mot de passe ne répond pas aux exigences de la stratégie, car il est trop court.|  
-|18465|Échec de l'ouverture de session pour l'utilisateur '%.*ls'. Raison : échec de changement de mot de passe. Ce mot de passe ne répond pas aux exigences de la stratégie, car il est trop long.|  
-|18466|Échec de l'ouverture de session pour l'utilisateur '%.*ls'. Raison : échec de changement de mot de passe. Ce mot de passe ne répond pas aux exigences de la stratégie, car il n'est pas assez complexe.|  
-|18467|Échec de l'ouverture de session pour l'utilisateur '%.*ls'. Raison : échec de changement de mot de passe. Le mot de passe ne répond pas aux exigences de la DLL de filtre de mots de passe.|  
-|18468|Échec de l'ouverture de session pour l'utilisateur '%.*ls'. Raison : échec de changement de mot de passe. Une erreur inattendue s'est produite lors de la validation de mot de passe.|  
-|18487|Échec de l'ouverture de session pour l'utilisateur '%.*ls'. Raison : le mot de passe associé à ce compte a expiré.|  
-|18488|Échec de l'ouverture de session pour l'utilisateur '%.*ls'. Raison : le mot de passe du compte doit être changé.|  
+|15113|Échec de la connexion pour l’utilisateur ' %. * motif %.*ls : Échec de la validation de mot de passe. Le compte est verrouillé.|  
+|18463|Échec de l'ouverture de session pour l'utilisateur '%.*ls'. Motif : Échec de la modification du mot de passe. Impossible d'utiliser le mot de passe pour l'instant.|  
+|18464|Échec de l'ouverture de session pour l'utilisateur '%.*ls'. Motif : Échec de la modification du mot de passe. Ce mot de passe ne répond pas aux exigences de la stratégie, car il est trop court.|  
+|18465|Échec de l'ouverture de session pour l'utilisateur '%.*ls'. Motif : Échec de la modification du mot de passe. Ce mot de passe ne répond pas aux exigences de la stratégie, car il est trop long.|  
+|18466|Échec de l'ouverture de session pour l'utilisateur '%.*ls'. Motif : Échec de la modification du mot de passe. Ce mot de passe ne répond pas aux exigences de la stratégie, car il n'est pas assez complexe.|  
+|18467|Échec de l'ouverture de session pour l'utilisateur '%.*ls'. Motif : Échec de la modification du mot de passe. Le mot de passe ne répond pas aux exigences de la DLL de filtre de mots de passe.|  
+|18468|Échec de l'ouverture de session pour l'utilisateur '%.*ls'. Motif : Échec de la modification du mot de passe. Une erreur inattendue s'est produite lors de la validation de mot de passe.|  
+|18487|Échec de l'ouverture de session pour l'utilisateur '%.*ls'. Motif : Le mot de passe du compte a expiré.|  
+|18488|Échec de l'ouverture de session pour l'utilisateur '%.*ls'. Motif : Le mot de passe du compte doit être modifiée.|  
   
 ## <a name="sql-server-native-client-ole-db-provider"></a>Fournisseur OLE DB SQL Server Native Client  
  Le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Client fournisseur OLE DB natif prend en charge l’expiration du mot de passe via une interface utilisateur et par programme.  

@@ -11,12 +11,12 @@ ms.assetid: 0678bfbc-5d3f-44f4-89c0-13e8e52404da
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e0aec881fd3257a42151338953015a0d88b56ea8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 028d14230f0f48f04bd94f327c1e46c5bee42b56
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063839"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351016"
 ---
 # <a name="discontinued-sql-server-features-in-sql-server-2014"></a>Fonctionnalités SQL Server supprimées dans SQL Server 2014
   Cette rubrique décrit des fonctionnalités qui ne sont plus disponibles dans [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
@@ -36,12 +36,12 @@ ms.locfileid: "48063839"
 ## <a name="discontinued-features-in-sql-server-2008-r2"></a>Fonctionnalités supprimées dans SQL Server 2008 R2  
   
 ### <a name="64-bit-platform-support-in-reporting-services"></a>Support de plate-forme 64 bits dans Reporting Services  
- À compter de [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)], le [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] composant n’est plus prend en charge que les serveurs Itanium qui exécutent Windows Server 2003 ou Windows Server 2003 R2. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] continue à prendre en charge d'autres systèmes d'exploitation 64 bits, notamment Windows Server 2008 et Windows Server 2008 R2 pour les systèmes Itanium. Pour effectuer une mise à niveau vers [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] à partir d'une installation [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] avec [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] sur une édition de système Itanium de Windows Server 2003 ou Windows Server 2003 R2, vous devez commencer par mettre à niveau le système d'exploitation.  
+ À partir de [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)], le composant [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ne prend plus en charge les serveurs Itanium qui exécutent Windows Server 2003 ou Windows Server 2003 R2. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] continue à prendre en charge d'autres systèmes d'exploitation 64 bits, notamment Windows Server 2008 et Windows Server 2008 R2 pour les systèmes Itanium. Pour effectuer une mise à niveau vers [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] à partir d’une installation [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] avec [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] sur une édition de système Itanium de Windows Server 2003 ou Windows Server 2003 R2, vous devez commencer par mettre à niveau le système d’exploitation.  
   
 ## <a name="discontinued-features-in-sql-server-2008"></a>Fonctionnalités supprimées dans SQL Server 2008  
   
 ### <a name="discontinued-sql-dmo-from-sql-server-express-installation"></a>Suppression de l'installation de SQL-DMO à partir de SQL Server Express  
- SQL-DMO pour [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a été supprimé de [!INCLUDE[ssExpressEd10](../includes/ssexpressed10-md.md)]. Nous vous recommandons de modifier le plus tôt possible les applications qui utilisent actuellement cette fonction. Si vous devez prendre en charge SQL-DMO pour [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express, installez les composants de compatibilité descendante de la [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] feature pack à partir du [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=51230). Utilisez [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Objects (SMO) pour les nouveaux travaux de développement.  
+ SQL-DMO pour [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a été supprimé de [!INCLUDE[ssExpressEd10](../includes/ssexpressed10-md.md)]. Nous vous recommandons de modifier le plus tôt possible les applications qui utilisent actuellement cette fonction. Si vous devez prendre en charge SQL-DMO pour [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express, installez les composants de compatibilité descendante de la [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] feature pack à partir du [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkID=51230). Utilisez [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Objects (SMO) pour les nouveaux travaux de développement.  
   
 ### <a name="discontinued-option-for-web-assistant"></a>Suppression de l'option de l'Assistant Web  
  L'option `sp_configure` permettant d'activer l'Assistant Web est supprimée de [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]. Nous vous recommandons d'utiliser [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] à la place.  

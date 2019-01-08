@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: 63701c20-7886-454a-936f-7aea9d042cf7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ab0f2d944e5e0fa3dcf27700b7d543268ce8d299
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8d08322000a92c3870f410652b728de0fc844104
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229939"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52811351"
 ---
 # <a name="data-file-auto-grow-event-class"></a>Data File Auto Grow (classe d'événements)
   La classe d’événements **Data File Auto Grow** indique que le fichier de données a crû automatiquement. Cet événement n'est pas déclenché si le fichier de données a été augmenté de manière explicite par le biais de l'instruction ALTER DATABASE.  
@@ -39,8 +38,8 @@ ms.locfileid: "48229939"
 |**DatabaseName**|**nvarchar**|Nom de la base de données dans laquelle l'instruction de l'utilisateur est exécutée.|35|Oui|  
 |**Duration**|**bigint**|Durée (en millisecondes) requise pour étendre le fichier.|13|Oui|  
 |**EndTime**|**datetime**|Heure de fin de la croissance automatique du fichier de données.|18|Oui|  
-|**EventClass**|**Int**|Type d’événement = 92.|27|non|  
-|**EventSequence**|**Int**|Séquence de la classe d’événements **CursorClose** dans le lot.|51|non|  
+|**EventClass**|**Int**|Type d’événement = 92.|27|Non|  
+|**EventSequence**|**Int**|Séquence de la classe d’événements **CursorClose** dans le lot.|51|Non|  
 |**Nom du fichier**|**nvarchar**|Nom logique du fichier étendu|36|Oui|  
 |**HostName**|**nvarchar**|Nom de l'ordinateur sur lequel le client est exécuté. La colonne de données est remplie si le client fournit le nom de l'hôte. Pour déterminer le nom de l'hôte, utilisez la fonction HOST_NAME.|8|Oui|  
 |**IntegerData**|**Int**|Nombre de pages de 8 kilo-octets (Ko) duquel le fichier a augmenté.|25|Oui|  
@@ -48,7 +47,7 @@ ms.locfileid: "48229939"
 |**LoginName**|**nvarchar**|Nom de la connexion de l'utilisateur (soit la connexion de sécurité [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , soit les informations d'identification de connexion [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows au format DOMAINE\nom_utilisateur).|11|Oui|  
 |**LoginSid**|**image**|Identificateur de sécurité (SID) de l'utilisateur connecté. Vous trouverez ces informations dans l’affichage catalogue **sys.server_principals** . Chaque connexion possède un SID unique au niveau du serveur.|41|Oui|  
 |**NTDomainName**|**nvarchar**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Domaine Windows auquel appartient l'utilisateur.|7|Oui|  
-|**ServerName**|**nvarchar**|Nom de l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracée.|26|non|  
+|**ServerName**|**nvarchar**|Nom de l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracée.|26|Non|  
 |**SessionLoginName**|**nvarchar**|Nom de connexion de l'utilisateur à l'origine de la session. Par exemple, si vous vous connectez à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] au moyen de Login1 et que vous exécutez une commande en tant que Login2, **SessionLoginName** affiche Login1 et **LoginName** affiche Login2. Cette colonne affiche à la fois les connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et Windows.|64|Oui|  
 |**SPID**|**Int**|ID de la session au cours de laquelle l'événement s'est produit.|12|Oui|  
 |**StartTime**|**datetime**|Heure à laquelle a débuté l'événement, si elle est connue.|14|Oui|  

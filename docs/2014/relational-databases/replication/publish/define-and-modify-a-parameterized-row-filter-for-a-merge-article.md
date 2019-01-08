@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/02/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - parameterized filters [SQL Server replication], defining
@@ -19,17 +18,17 @@ ms.assetid: de0482a2-3cc8-4030-8a4a-14364549ac9f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ef51e4b20fb96f76bbcfa8e9f5a2d4dccaa75d42
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 86a96f938a036edf39b3602278f9b6b6d2d46719
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116385"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52771661"
 ---
 # <a name="define-and-modify-a-parameterized-row-filter-for-a-merge-article"></a>Définir et modifier un filtre de lignes paramétrable pour un article de fusion
   Cette rubrique explique comment définir et modifier un filtre de lignes paramétrable dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
- Lorsque vous créez des articles de table, vous pouvez utiliser des filtres de lignes paramétrables. Ces filtres utilisent une clause [WHERE](/sql/t-sql/queries/where-transact-sql) pour sélectionner les données appropriées à publier. Plutôt que de spécifier une valeur littérale dans la clause (comme dans un filtre de lignes statique), vous spécifiez l'une des deux fonctions système suivantes ou les deux : [SUSER_SNAME](/sql/t-sql/functions/suser-sname-transact-sql) et [HOST_NAME](/sql/t-sql/functions/host-name-transact-sql). Pour plus d'informations, consultez [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md).  
+ Lorsque vous créez des articles de table, vous pouvez utiliser des filtres de lignes paramétrables. Ces filtres utilisent une clause [WHERE](/sql/t-sql/queries/where-transact-sql) pour sélectionner les données appropriées à publier. Au lieu de spécifier une valeur littérale dans la clause (comme c'est le cas avec un filtre de lignes statique), vous spécifiez l'une des deux fonctions système suivantes ou les deux : [SUSER_SNAME](/sql/t-sql/functions/suser-sname-transact-sql) et [HOST_NAME](/sql/t-sql/functions/host-name-transact-sql). Pour plus d'informations, voir [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md).  
   
  
   
@@ -61,7 +60,7 @@ ms.locfileid: "48116385"
         SELECT <published_columns> FROM [tableowner].[tablename] WHERE  
         ```  
   
-    -   Le texte par défaut ne peut pas être modifié ; tapez la clause du filtre après le mot clé WHERE en utilisant la syntaxe SQL standard. Un filtrage paramétrable comprend un appel à la fonction système `HOST_NAME()` et/ou `SUSER_SNAME()`, ou bien une fonction définie par l'utilisateur qui référence une de ces fonctions ou les deux. Voici un exemple de clause de filtrage complète pour un filtre de lignes paramétrable :  
+    -   Le texte par défaut ne peut pas être modifié ; tapez la clause du filtre après le mot clé WHERE en utilisant la syntaxe SQL standard. Un filtrage paramétrable comprend un appel à la fonction système `HOST_NAME()` et/ou `SUSER_SNAME()`, ou bien une fonction définie par l'utilisateur qui référence une de ces fonctions ou les deux. Voici un exemple de clause de filtrage complète pour un filtre de lignes paramétrable :  
   
         ```  
         SELECT <published_columns> FROM [HumanResources].[Employee] WHERE LoginID = SUSER_SNAME()  
@@ -83,7 +82,7 @@ ms.locfileid: "48116385"
   
 #### <a name="to-modify-a-parameterized-row-filter"></a>Pour modifier un filtre de lignes paramétrable  
   
-1.  Dans la page **Filtrer les lignes de la table** de l’Assistant Nouvelle publication ou la page **Filtrer les lignes** de la boîte de dialogue **Propriétés de la publication - \<Publication>**, sélectionnez un filtre dans le volet **Tables filtrées**, puis cliquez sur **Modifier**.  
+1.  Dans la page **Filtrer les lignes de la table** de l’Assistant Nouvelle publication ou dans la page **Filtrer les lignes** de la boîte de dialogue **Propriétés de la publication - \<Publication>**, sélectionnez un filtre dans le volet **Tables filtrées**, puis cliquez sur **Modifier**.  
   
 2.  Dans la boîte de dialogue **Modifier le filtre** , modifiez le filtre.  
   
@@ -132,8 +131,8 @@ ms.locfileid: "48116385"
   
 ## <a name="see-also"></a>Voir aussi  
  [Définir et modifier un filtre de jointure entre des articles de fusion](define-and-modify-a-join-filter-between-merge-articles.md)   
- [Modifier les propriétés des publications et des articles](change-publication-and-article-properties.md)   
- [Join Filters](../merge/join-filters.md)   
+ [Changer les propriétés des publications et des articles](change-publication-and-article-properties.md)   
+ [Filtres de jointure](../merge/join-filters.md)   
  [Filtres de lignes paramétrés](../merge/parameterized-filters-parameterized-row-filters.md)  
   
   

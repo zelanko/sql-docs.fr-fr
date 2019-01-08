@@ -1,22 +1,22 @@
 ---
-title: L’appel de Java à partir de SQL | Microsoft Docs
+title: L’appel de Java à partir de SQL - SQL Server Machine Learning Services
 description: Découvrez comment appeler des classes Java à partir de procédures stockées SQL Server à l’aide de l’extension de langage dans SQL Server 2019 de programmation de Java.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/24/2018
+ms.date: 12/07/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 08af5a18b827c783515ecd3b4ba4a802c3472f93
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: 438c1096a933932e08c5cbf21722ba75874bb1dc
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46715041"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53644758"
 ---
-# <a name="how-to-call-java-from-sql-server-2019"></a>L’appel de Java à partir de SQL Server 2019
+# <a name="how-to-call-java-from-sql-server-2019-preview"></a>L’appel de Java à partir de la version préliminaire de SQL Server 2019
 
 Lorsque vous utilisez le [extension de langage Java](extension-java.md), le [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) système, procédure stockée est l’interface utilisée pour appeler le runtime Java. Autorisations sur la base de données s’appliquent à l’exécution de code Java.
 
@@ -33,7 +33,7 @@ Cet article explique les détails d’implémentation des méthodes qui s’exé
 * « params » est utilisé pour transmettre des paramètres à une classe Java. Appel d’une méthode qui requiert des arguments n'est pas pris en charge, ce qui rend les paramètres de la seule façon de passer des valeurs d’argument à votre méthode. 
 
 > [!Note]
-> Cette note reformule prises en charge et non pris en charge des opérations spécifiques à Java dans CTP 2.0.
+> Cette note reformule prises en charge et non pris en charge des opérations spécifiques à Java dans CTP 2.x.
 > * Sur la procédure stockée, les paramètres d’entrée sont pris en charge. Paramètres de sortie ne sont pas.
 > * Diffusion en continu à l’aide du paramètre sp_execute_external_script **@r_rowsPerRead** n’est pas pris en charge.
 > * Partitionnement à l’aide de **@input_data_1_partition_by_columns** n’est pas pris en charge.
@@ -41,7 +41,7 @@ Cet article explique les détails d’implémentation des méthodes qui s’exé
 
 ## <a name="call-spexecuteexternalscript"></a>Appel sp_execute_external_script
 
-Le [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) système, procédure stockée est l’interface utilisée pour appeler le runtime Java. L’exemple suivant montre un sp_execute_external_script à l’aide de l’extension de Java et les paramètres pour spécifier le chemin d’accès, le script et votre code personnalisé.
+Applicable à Windows et Linux, le [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) système, procédure stockée est l’interface utilisée pour appeler le runtime Java. L’exemple suivant montre un sp_execute_external_script à l’aide de l’extension de Java et les paramètres pour spécifier le chemin d’accès, le script et votre code personnalisé.
 
 ```sql
 DECLARE @myClassPath nvarchar(30)
@@ -152,6 +152,8 @@ Cette NullMap doit être rempli avec le nombre attendu de colonnes et lignes que
 ```java
 public static boolean[][] outputNullMap
 ```
+<a name="create-external-library"></a>
+
 
 ## <a name="next-steps"></a>Étapes suivantes
 

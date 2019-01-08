@@ -10,12 +10,12 @@ ms.assetid: afa01165-39e0-4efe-ac0e-664edb8599fd
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: af11bb2283db0561c176fb543ff21c3c04f676d3
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: b4071bee5e13f415be90328bb7ff0b55ff91087c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50100250"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52416392"
 ---
 # <a name="sql-server-managed--backup-to-windows-azure"></a>Gestion de sauvegarde de SQL Server vers Microsoft Azure
   La [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] gère et automatise les sauvegardes SQL Server dans le service de stockage d'objets blob Windows Azure. La stratégie de sauvegarde utilisée par la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] est basée sur la période de rétention et la charge de travail transactionnelle sur la base de données. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] prend en charge la restauration limitée dans le temps pour la période de rétention spécifiée.   
@@ -58,12 +58,12 @@ La [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] peut être ac
   
  **Service de stockage Windows Azure** est utilisé par [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] pour stocker les fichiers de sauvegarde.    Les concepts, la structure et la configuration requise pour créer un compte de stockage Windows Azure est expliqué en détail dans le [Introduction aux Concepts et composants de la clé](sql-server-backup-to-url.md#intorkeyconcepts) section de la **SQL Server Backup to URL** rubrique.  
   
- **Informations d’identification SQL** est utilisé pour stocker les informations requises pour authentifier le compte de stockage Windows Azure. L'objet contenant les informations d'identification SQL stocke le nom du compte et les informations de la clé d'accès. Pour plus d’informations, consultez le [Introduction aux Concepts et composants de la clé](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) section dans le **SQL Server Backup to URL** rubrique. Pour une procédure pas à pas sur la création des informations d’identification SQL pour stocker les informations d’authentification Windows Azure Storage, consultez [leçon 2 : créer des informations d’identification SQL Server](../../tutorials/lesson-2-create-a-sql-server-credential.md).  
+ **Informations d’identification SQL** est utilisé pour stocker les informations requises pour authentifier le compte de stockage Windows Azure. L'objet contenant les informations d'identification SQL stocke le nom du compte et les informations de la clé d'accès. Pour plus d’informations, consultez le [Introduction aux Concepts et composants de la clé](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) section dans le **SQL Server Backup to URL** rubrique. Pour une procédure pas à pas sur la création des informations d’identification SQL pour stocker les informations d’authentification Windows Azure Storage, consultez [leçon 2 : Créer des informations d’identification SQL Server](../../tutorials/lesson-2-create-a-sql-server-credential.md).  
   
 ###  <a name="Concepts_Components"></a> Concepts et composants clés  
  La [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] est une fonctionnalité qui gère les opérations de sauvegarde. Il stocke les métadonnées dans le **msdb** sauvegardes du journal des travaux de système de base de données et utilise pour écrire des transactions et la base de données complète.  
   
-#### <a name="components"></a>Components  
+#### <a name="components"></a>Composants  
  Transact-SQL est l'interface principale utilisée pour interagir avec la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Les procédures stockées système sont utilisées pour activer, configurer et surveiller la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Les fonctions système sont utilisées pour récupérer des paramètres de configuration existants, des valeurs de paramètre et des informations sur le fichier de configuration. Les événements étendus sont utilisés pour exposer des erreurs et des avertissements. Les mécanismes d'alerte sont activés via les travaux SQL Agent et la gestion basées sur des stratégies SQL Server. Voici la liste des objets et la description de leurs fonctionnalités en relation à la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].  
   
  Des applets de commande PowerShell sont également disponibles pour configurer la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. SQL Server Management Studio prend en charge la restauration de sauvegardes créées par la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] à l'aide de la tâche **Restaurer la base de données** .  
@@ -95,7 +95,7 @@ La [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] peut être ac
   
  La [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] nomme le conteneur de stockage Windows Azure en utilisant le nom de l'instance SQL Server pour les bases de données, excepté les bases de données de disponibilité.  Pour les bases de données de disponibilité, le GUID du groupe de disponibilité est utilisé pour nommer le conteneur de stockage Windows Azure.  
   
- Le fichier de sauvegarde des bases de données autres que des bases de données de disponibilité est nommé en utilisant les 40 premiers caractères du nom de la base de données, le GUID de la base de données ‘-‘ et l'horodateur. Le caractère de soulignement est inséré entre les segments comme délimiteurs. L'extension **.bak** est utilisée pour le fichier en cas de sauvegarde complète et l'extension **.log** est utilisée pour les sauvegardes de journal. Pour les bases de données d'un groupe de disponibilité, en plus de la convention d'attribution de noms décrite ci-dessus, le GUID de la base de données du groupe de disponibilité est ajouté après les 40 caractères du nom de la base de données. La valeur du GUID de la base de données du groupe de disponibilité est la valeur de group_database_id dans sys.databases.  
+ Le fichier de sauvegarde des bases de données autres que des bases de données de disponibilité est nommé selon la convention suivante : Le nom est créé en utilisant les 40 premiers caractères du nom de base de données, la base de données GUID sans le '-' et l’horodatage. Le caractère de soulignement est inséré entre les segments comme délimiteurs. L'extension **.bak** est utilisée pour le fichier en cas de sauvegarde complète et l'extension **.log** est utilisée pour les sauvegardes de journal. Pour les bases de données d'un groupe de disponibilité, en plus de la convention d'attribution de noms décrite ci-dessus, le GUID de la base de données du groupe de disponibilité est ajouté après les 40 caractères du nom de la base de données. La valeur du GUID de la base de données du groupe de disponibilité est la valeur de group_database_id dans sys.databases.  
   
  **Sauvegarde de base de données complète :** [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] agent planifie une sauvegarde de base de données complète si une des opérations suivantes est vraie.  
   
@@ -118,7 +118,7 @@ La [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] peut être ac
 -   Lorsque la sauvegarde du journal des transactions traîne derrière une sauvegarde complète de la base de données. Le but est de conserver la séquence de journaux de transactions consécutifs avant la sauvegarde complète.  
   
 #### <a name="retention-period-settings"></a>Paramètres de période de rétention  
- Lorsque vous configurez la sauvegarde, vous devez définir la période de rétention en jours : 1 jour au minimum et 30 jours au maximum.  
+ Lorsque vous configurez la sauvegarde, vous devez définir la période de rétention en jours : 1 jour minimum et 30 jours maximum.  
   
  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] , en fonction des paramètres de la période de rétention, évalue la capacité à restaurer une base de données à un point précis dans le temps au cours de la période de rétention pour déterminer quels sont les fichiers de sauvegarde à conserver et quels sont ceux à supprimer. Le paramètre backup_finish_date de la sauvegarde est utilisé pour déterminer et vérifier la durée spécifiée dans les paramètres de la période de rétention.  
   
@@ -132,19 +132,19 @@ La [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] peut être ac
 ###  <a name="support_limits"></a> Limitations de prise en charge  
  Voici quelques limitations spécifiques à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] :  
   
--   L'agent de [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] prend en charge les sauvegardes complètes de base de données et les sauvegardes de fichier journal uniquement.  La sauvegarde automatique de fichier n'est pas prise en charge.  
+-   L'agent de [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] prend en charge uniquement les sauvegardes de base de données : complète et sauvegardes de fichier journal.  La sauvegarde automatique de fichier n'est pas prise en charge.  
   
 -   Les opérations de la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] sont actuellement prises en charge à l'aide de Transact-SQL. La surveillance et le dépannage peuvent être effectués à l'aide d'événements étendus. La prise en charge de PowerShell et SMO est limitée à la configuration des paramètres par défaut du stockage et de la période de rétention pour une instance de SQL Server, et à la surveillance de l'état de la sauvegarde et de l'état d'intégrité général en fonction des stratégies de gestion basée sur des stratégies SQL Server.  
   
 -   Les bases de données système ne sont pas prises en charge.  
   
--   Le service de stockage Blob Windows Azure est la seule option de stockage de sauvegarde prise en charge. Les sauvegardes sur disque ou sur bande ne sont pas prises en charge.  
+-   Le service de Stockage Blob Windows Azure est la seule option de stockage de sauvegarde prise en charge. Les sauvegardes sur disque ou sur bande ne sont pas prises en charge.  
   
 -   Actuellement, la taille maximale de fichier autorisée pour un objet blob de page dans le Stockage Microsoft Azure est 1 To. Les fichiers de sauvegarde d'une taille supérieure à 1 To échouent. Afin d'éviter cette situation, nous vous recommandons, pour les bases de données de grande taille, d'utiliser la compression et de tester la taille du fichier de sauvegarde avant de configurer la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Pour le test, effectuez une sauvegarde sur un disque local ou une sauvegarde manuelle dans le stockage Windows Azure à l'aide de l'instruction Transact-SQL `BACKUP TO URL`. Pour plus d’informations, consultez [SQL Server Backup to URL](sql-server-backup-to-url.md).  
   
--   Modèles de récupération : seules les bases de données en mode de récupération complète ou en mode de récupération utilisant les journaux de transactions sont prises en charge.  Les bases de données utilisant le mode de récupération simple ne sont pas prises en charge.  
+-   Modes de récupération : seules les bases de données en mode de récupération complète ou en mode de récupération utilisant les journaux de transactions sont prises en charge.  Les bases de données utilisant le mode de récupération simple ne sont pas prises en charge.  
   
--   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] peut avoir d'autres limitations lorsqu'elle est configurée avec d'autres technologies prenant en charge la sauvegarde, la haute disponibilité ou la récupération d'urgence. Pour plus d’informations, consultez [SQL Server Managed Backup pour Windows Azure : interopérabilité et Coexistence](../../database-engine/sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence.md).  
+-   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] peut avoir d'autres limitations lorsqu'elle est configurée avec d'autres technologies prenant en charge la sauvegarde, la haute disponibilité ou la récupération d'urgence. Pour plus d’informations, consultez [SQL Server Managed Backup pour Windows Azure : Interopérabilité et Coexistence](../../database-engine/sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence.md).  
   
 ##  <a name="RelatedTasks"></a> Tâches associées  
   
@@ -152,15 +152,15 @@ La [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] peut être ac
 |-|-|  
 |**Les descriptions des tâches**|**Rubrique**|  
 |Tâches de base telles que la configuration de la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] pour une base de données, ou la configuration des paramètres par défaut au niveau de l'instance, la désactivation de la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] au niveau de l'instance ou de la base de données, l'interruption et la reprise de la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|[Sauvegarde managée SQL Server sur Microsoft Azure : Paramètres de conservation et de stockage](../../database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md)|  
-|**Didacticiel :** instructions étape par étape pour la configuration et la surveillance [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|[Configuration de la sauvegarde managée SQL Server sur Microsoft Azure](enable-sql-server-managed-backup-to-microsoft-azure.md)|  
-|**Didacticiel :** instructions étape par étape pour la configuration et de surveillance [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] pour les bases de données dans le groupe de disponibilité.|[Configuration de la sauvegarde managée de SQL Server sur Microsoft Azure pour les groupes de disponibilité](../../database-engine/setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups.md)|  
+|**Didacticiel :** Instructions pas à pas pour la configuration et la surveillance de la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|[Configuration de la sauvegarde managée SQL Server sur Microsoft Azure](enable-sql-server-managed-backup-to-microsoft-azure.md)|  
+|**Didacticiel :** Instructions pas à pas pour la configuration et la surveillance de la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] pour les bases de données d'un groupe de disponibilité.|[Configuration de la sauvegarde managée de SQL Server sur Microsoft Azure pour les groupes de disponibilité](../../database-engine/setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups.md)|  
 |Outils, concepts et tâches relatifs à la surveillance de la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|[Surveiller la sauvegarde managée SQL Server sur Microsoft Azure](sql-server-managed-backup-to-microsoft-azure.md)|  
 |Outils et étapes pour dépanner la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|[Dépannage de la sauvegarde managée de SQL Server sur Microsoft Azure](../../database-engine/troubleshooting-sql-server-managed-backup-to-windows-azure.md)|  
   
 ## <a name="see-also"></a>Voir aussi  
- [SQL Server Backup and Restore with Windows Azure Blob Storage Service](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)   
+ [Service de stockage d'objets blob Windows Azure](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)   
  [SQL Server Backup to URL](sql-server-backup-to-url.md)   
- [SQL Server sauvegarde managée sur Windows Azure : interopérabilité et Coexistence](../../database-engine/sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence.md)   
+ [Sauvegarde managée SQL Server sur Windows Azure : Interopérabilité et Coexistence](../../database-engine/sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence.md)   
  [Dépannage de la sauvegarde managée de SQL Server sur Microsoft Azure](../../database-engine/troubleshooting-sql-server-managed-backup-to-windows-azure.md)  
   
   

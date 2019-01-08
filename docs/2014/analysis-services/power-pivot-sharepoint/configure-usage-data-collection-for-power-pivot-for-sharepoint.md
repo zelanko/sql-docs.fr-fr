@@ -11,17 +11,17 @@ ms.assetid: 955ca6d6-9d5b-47a4-a87c-59bd23f1bf74
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 12943c96c64c1a5d20ee94c76a9701fc7a983d85
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9f3544ce4297117be11b3ba68821e3b621fbc400
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48083819"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52411276"
 ---
 # <a name="configure-usage-data-collection-for-powerpivot-for-sharepoint"></a>Configurer la collecte des données d'utilisation (PowerPivot pour SharePoint)
   La collecte des données d'utilisation est une fonctionnalité SharePoint au niveau de la batterie de serveurs. Le service PowerPivot pour SharePoint utilise et étend ce système pour fournir des rapports intégrés dans le tableau de bord de gestion PowerPivot qui indiquent la manière dont les données et services PowerPivot sont utilisés. Selon la façon dont vous avez installé votre serveur SharePoint, la collecte des données d'utilisation peut être désactivée pour la batterie de serveurs. Un administrateur de batterie doit activer la journalisation de l'utilisation pour créer les données d'utilisation qui s'affichent dans le tableau de bord de gestion PowerPivot.  
   
- Pour plus d’informations sur les données d’utilisation dans le tableau de bord de gestion PowerPivot, consultez [PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md).  
+ Pour plus d'informations sur les données figurant dans le tableau de bord de gestion PowerPivot, consultez [PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md).  
   
  **Dans cette rubrique :**  
   
@@ -60,7 +60,7 @@ ms.locfileid: "48083819"
     |**Connexions PowerPivot**|L'événement de connexion PowerPivot permet de superviser les connexions serveur PowerPivot établies pour le compte d'un utilisateur.|  
     |**Utilisation des données de chargement PowerPivot**|L'utilisation des données de chargement PowerPivot permet de superviser les demandes qui chargent des données PowerPivot dans la mémoire du serveur. Un événement de chargement est généré pour les fichiers de données PowerPivot chargées à partir d'une base de données de contenu ou du cache.|  
     |**Utilisation des données de déchargement PowerPivot**|L'utilisation des données de déchargement PowerPivot permet de superviser les demandes de déchargement pour une source de données PowerPivot après une période d'inactivité. La mise en cache d'une source de données PowerPivot sur le disque est signalée comme un événement de déchargement.|  
-    |**Utilisation des requêtes PowerPivot**|Utilisation des requêtes PowerPivot permet de superviser les temps de traitement des requêtes pour les données chargées dans un [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] instance.|  
+    |**Utilisation des requêtes PowerPivot**|L'utilisation des requêtes PowerPivot permet de superviser les temps de traitement des requêtes pour les données chargées dans une instance du [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] .|  
   
     > [!NOTE]  
     >  Les opérations d'actualisation des données et d'intégrité des serveurs génèrent également des données d'utilisation, mais aucun événement n'est associé à ces processus.  
@@ -87,9 +87,9 @@ ms.locfileid: "48083819"
 ##  <a name="jobs"></a> Configurer les travaux du minuteur utilisés dans la collecte des données d'utilisation  
  Les données d'intégrité et d'utilisation du serveur PowerPivot sont déplacées vers divers emplacements du système de collecte des données d'utilisation à l'aide de deux travaux du minuteur :  
   
--   Le travail du minuteur « Importation des données d'utilisation de Microsoft SharePoint Foundation » déplace les données d'utilisation PowerPivot vers la base de données d'application de service PowerPivot.  
+-   Le travail du minuteur « Importation Microsoft SharePoint Foundation l’utilisation des données » déplace l’utilisation de PowerPivot à la base d’application de service PowerPivot.  
   
--   Le travail du minuteur pour le traitement du tableau de bord de gestion des données PowerPivot déplace les données vers un classeur PowerPivot qui est la source des données des rapports d'administration intégrés.  
+-   Le « travail du minuteur de traitement de tableau de bord de gestion PowerPivot » les données à un classeur PowerPivot qui est la source de données pour les rapports d’administration intégrés.  
   
  Si vous devez actualiser plus fréquemment les rapports d'administration qui s'affichent dans le tableau de bord de gestion PowerPivot, suivez ces étapes.  
   
@@ -105,7 +105,7 @@ ms.locfileid: "48083819"
   
 6.  Cliquez sur **Exécuter maintenant**.  
   
-7.  Vérifiez les rapports pour consulter les données d'actualisation. Pour plus d’informations, consultez [PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md).  
+7.  Vérifiez les rapports pour consulter les données d'actualisation. Pour plus d'informations, consultez [PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md).  
   
 ##  <a name="confighist"></a> Limiter la durée de conservation de l'historique des données d'utilisation  
  L'historique des données d'utilisation est stocké pour les événements (connexions, chargement, déchargement et traitement des requêtes à la demande) et l'actualisation des données (traitement des données planifié). Bien que les données d'utilisation soient collectées via le système de collecte des données d'utilisation de SharePoint, les données de création de rapports sont déplacées vers une base de données d'application PowerPivot et une base de données de création de rapports pour le stockage à plus long terme. L'historique des données d'utilisation détermine la durée de conservation des données d'utilisation dans les bases de données d'application PowerPivot. La même limite est appliquée systématiquement à tous les types de données d'utilisation stockées dans la même base de données d'application de service PowerPivot.  
@@ -129,7 +129,7 @@ ms.locfileid: "48083819"
  Pour plus d’informations sur comment les données d’utilisation sont collectées et stockées, consultez [PowerPivot Usage Data Collection](power-pivot-usage-data-collection.md).  
   
 ##  <a name="qrh"></a> Définir des catégories de temps de réponse aux requêtes lents, moyens et rapides à des fins de création de rapports  
- Les performances de traitement des requêtes sont mesurées par rapport à des catégories prédéfinies qui définissent un cycle de requête-réponse en fonction de sa durée d'exécution. Les catégories prédéfinies sont les suivantes : Triviale, Rapide, Attendue, Longue et Hors limite. Chaque demande auprès d'un serveur PowerPivot appartient à l'une des catégories en fonction de sa durée d'exécution.  
+ Les performances de traitement des requêtes sont mesurées par rapport à des catégories prédéfinies qui définissent un cycle de requête-réponse en fonction de sa durée d'exécution. Les catégories prédéfinies sont notamment les suivantes : Triviale, Rapide, Attendue, Longue et Hors limite. Chaque demande auprès d'un serveur PowerPivot appartient à l'une des catégories en fonction de sa durée d'exécution.  
   
  Les informations de réponse à une requête sont utilisées dans les rapports d'activité. Dans les rapports, chaque catégorie est utilisée différemment pour révéler de manière plus efficace les tendances des performances du système PowerPivot. Par exemple, les demandes triviales sont totalement exclues, car leur exclusion supprime le bruit dans les données et affiche des tendances plus significatives avec les catégories restantes. Par opposition, les statistiques sur les demandes longues ou hors limite sont les plus importantes dans le rapport afin que les administrateurs ou les propriétaires de classeurs puissent entreprendre l'action corrective sur le champ.  
   

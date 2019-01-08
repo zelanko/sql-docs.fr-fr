@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xevents
 ms.topic: conceptual
 helpviewer_keywords:
 - extended events [SQL Server], using
@@ -14,12 +13,12 @@ ms.assetid: d312a9ff-50ba-4721-baef-50bfd3169d38
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c1e462ad252406c6841bdd4fefa66aa3ff4bb249
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e26bc62f0e6b81b7b4ac8e1361d0a1ac31513ef6
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108739"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52789982"
 ---
 # <a name="extended-events-tools"></a>Outils associés aux événements étendus
   Vous pouvez utiliser les outils suivants pour créer et gérer des sessions d’événements étendus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
@@ -39,7 +38,7 @@ ms.locfileid: "48108739"
 ## <a name="ddl-statements"></a>Instructions DDL  
  Utilisez les instructions DDL suivantes pour créer, modifier et supprimer une session d'événements étendus.  
   
-|Nom   |Description|  
+|Créer une vue d’abonnement|Description|  
 |----------|-----------------|  
 |[CREATE EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-event-session-transact-sql)|Crée un objet de session Événements étendus qui identifie la source des événements, les cibles de la session d'événements et les paramètres de la session d'événements.|  
 |[ALTER EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-event-session-transact-sql)|Démarre ou arrête une session d'événements, ou modifie la configuration d'une session d'événements.|  
@@ -48,7 +47,7 @@ ms.locfileid: "48108739"
 ## <a name="catalog-views"></a>Affichages catalogue  
  Utilisez les affichages catalogue ci-dessous pour obtenir les métadonnées créées lorsque vous créez une session d'événements.  
   
-|Nom   |Description|  
+|Créer une vue d’abonnement|Description|  
 |----------|-----------------|  
 |[sys.server_event_sessions &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-server-event-sessions-transact-sql)|Répertorie toutes les définitions de la session d'événements.|  
 |[sys.server_event_session_actions &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-server-event-session-actions-transact-sql)|Retourne une ligne pour chaque action d'un événement d'une session d'événements.|  
@@ -62,7 +61,7 @@ ms.locfileid: "48108739"
 > [!NOTE]  
 >  Ces vues ne contiennent pas de données de session tant qu'une session n'a pas démarré.  
   
-|Nom   |Description|  
+|Créer une vue d’abonnement|Description|  
 |----------|-----------------|  
 |[sys.dm_os_dispatcher_pools &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-dispatcher-pools-transact-sql)|Retourne des informations sur les pools de répartiteurs de la session.|  
 |[sys.dm_xe_objects &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-objects-transact-sql)|Retourne une ligne pour chaque objet exposé par un package d'événement.|  
@@ -78,7 +77,7 @@ ms.locfileid: "48108739"
 ## <a name="system-tables"></a>Tables système  
  Utilisez les tables système suivantes pour obtenir les informations à propos des équivalents Événements étendus pour les classes d'événements Trace SQL et les colonnes.  
   
-|Nom   |Description|  
+|Créer une vue d’abonnement|Description|  
 |----------|-----------------|  
 |[trace_xe_event_map &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/extended-events-tables-trace-xe-event-map)|Contient une ligne pour chaque événement Événements étendus mappé à une classe d'événements Trace SQL.|  
 |[trace_xe_action_map &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/extended-events-tables-trace-xe-action-map)|Contient une ligne pour chaque action Événements étendus mappée à un ID de colonne Trace SQL.|  

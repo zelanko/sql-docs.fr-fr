@@ -20,22 +20,22 @@ ms.assetid: 0d22eaeb-3c75-47fb-af9a-6f7397e61b9c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 84767e4f0a8da6f39d591aec3ef5da4d4f0e5234
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5296bcbe54aa90badf5e39a2c21287793c03fe83
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706447"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203748"
 ---
 # <a name="sqlfreeconnect-function"></a>SQLFreeConnect, fonction
 **Conformité**  
- Version introduite : La mise en conformité des normes 1.0 ODBC : déconseillé  
+ Version introduite : Conformité aux normes 1.0 ODBC : Déprécié  
   
  **Résumé**  
  Dans ODBC 3 *.x*, la fonction ODBC 2.0 **SQLFreeConnect** a été remplacé par **SQLFreeHandle**. Pour plus d’informations, consultez [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md).  
   
-> [!NOTE]  
->  Pour plus d’informations sur ce que le Gestionnaire de pilotes mappe cette fonction lorsqu’un ODBC 2 *.x* application fonctionne avec un ODBC 3 *.x* pilote, consultez [mappage de fonctions déconseillées](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)dans la section annexe g : pilote instructions pour la compatibilité descendante.  
+> [!NOTE]
+>  Pour plus d’informations sur ce que le Gestionnaire de pilotes mappe cette fonction lorsqu’un ODBC 2 *.x* application fonctionne avec un ODBC 3 *.x* pilote, consultez [mappage de fonctions déconseillées](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)dans l’annexe g : Instructions de pilote pour la compatibilité descendante.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Référence de l’API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   

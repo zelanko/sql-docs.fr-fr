@@ -13,19 +13,19 @@ ms.assetid: 2cdd0568-7799-474b-82fb-65d79df3057c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 29a243c24a36b2e370686c4c51a7ddefe993bd4e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 17252769c0f9347f5f67dbf073a207d827963630
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159663"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53377541"
 ---
 # <a name="install-and-configure-semantic-search"></a>Installer et configurer la recherche sémantique
   Décrit les conditions préalables à une recherche sémantique statistique, ainsi que la procédure d'installation ou de vérification de ces conditions.  
   
 ## <a name="installing-semantic-search"></a>Installation de la recherche sémantique  
   
-###  <a name="HowToCheckInstalled"></a> Procédure : Vérifier si la recherche sémantique est installée.  
+###  <a name="HowToCheckInstalled"></a> Comment : Vérifier si la recherche sémantique est installée  
  Interrogez la propriété **IsFullTextInstalled** de la fonction de métadonnées [SERVERPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/serverproperty-transact-sql).  
   
  Une valeur de retour de 1 indique que la recherche en texte intégral et la recherche sémantique sont installées ; une valeur de retour de 0 indique qu'elles ne le sont pas.  
@@ -43,7 +43,7 @@ GO
 ## <a name="installing-or-removing-the-semantic-language-statistics-database"></a>Installation ou suppression de la base de données des statistiques linguistiques de sémantique  
  La recherche sémantique a une dépendance externe supplémentaire qui est appelée base de données des statistiques linguistiques de sémantique. Cette base de données contient les modèles linguistiques statistiques requis par la recherche sémantique. Une base de données unique des statistiques linguistiques de sémantique contient les modèles linguistiques de toutes les langues prises en charge pour l'indexation sémantique.  
   
-###  <a name="HowToCheckDatabase"></a> Procédure : Vérifier si la base de données de statistiques linguistiques de sémantique est installée  
+###  <a name="HowToCheckDatabase"></a> Comment : Vérifier si la base de données de statistiques linguistiques de sémantique est installée  
  Interrogez l’affichage catalogue [sys.fulltext_semantic_language_statistics_database &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-semantic-language-statistics-database-transact-sql).  
   
  Si la base de données des statistiques linguistiques de sémantique est installée et inscrite pour l'instance, les résultats de la requête contiennent une seule ligne d'informations sur la base de données.  
@@ -61,7 +61,7 @@ GO
   
     -   Localisez le package Windows Installer nommé **SemanticLanguageDatabase.msi** sur le support d'installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Recherchez la version 32 bits ou 64 bits du package selon le système cible. Le nom du dossier contenant identifie la version 32 bits ou 64 bits du fichier ; le nom de fichier lui-même est le même pour les deux versions.  
   
-    -   Téléchargez le package d'installation à partir de la page [Microsoft® SQL Server® 2014 Semantic Language Statistics](http://go.microsoft.com/fwlink/?LinkID=296743) du centre de téléchargement [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .  
+    -   Télécharger le package de programme d’installation à partir de la [Microsoft ?? SQL Server ?? 2014 semantic Language Statistics](https://go.microsoft.com/fwlink/?LinkID=296743) page sur le [!INCLUDE[msCoName](../../../includes/msconame-md.md)] centre de téléchargement.  
   
 2.  Exécutez le package Windows Installer **SemanticLanguageDatabase.msi** pour extraire la base de données et le fichier journal.  
   
@@ -134,7 +134,7 @@ GO
   
 ## <a name="installing-optional-support-for-newer-document-types"></a>Installation de la prise en charge facultative de nouveaux types de documents  
   
-###  <a name="office"></a> Comment : installer les derniers filtres pour Microsoft Office et d’autres Types de documents Microsoft  
- Cette version de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installe les analyseurs lexicaux et les générateurs de formes dérivées [!INCLUDE[msCoName](../../../includes/msconame-md.md)] les plus récents, mais n'installe pas les filtres les plus récents pour les documents [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Office et d'autres types de documents [!INCLUDE[msCoName](../../../includes/msconame-md.md)] . Ces filtres sont nécessaires pour l'indexation des documents créés avec les versions récentes de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Office et d'autres applications [!INCLUDE[msCoName](../../../includes/msconame-md.md)] . Pour télécharger les filtres les plus récents, consultez [Microsoft Office 2010 Filter Packs](http://go.microsoft.com/fwlink/?LinkId=218293).  
+###  <a name="office"></a> Comment : Installer les derniers filtres pour Microsoft Office et d’autres Types de documents Microsoft  
+ Cette version de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installe les analyseurs lexicaux et les générateurs de formes dérivées [!INCLUDE[msCoName](../../../includes/msconame-md.md)] les plus récents, mais n'installe pas les filtres les plus récents pour les documents [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Office et d'autres types de documents [!INCLUDE[msCoName](../../../includes/msconame-md.md)] . Ces filtres sont nécessaires pour l'indexation des documents créés avec les versions récentes de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Office et d'autres applications [!INCLUDE[msCoName](../../../includes/msconame-md.md)] . Pour télécharger les filtres les plus récents, consultez [Microsoft Office 2010 Filter Packs](https://go.microsoft.com/fwlink/?LinkId=218293).  
   
   

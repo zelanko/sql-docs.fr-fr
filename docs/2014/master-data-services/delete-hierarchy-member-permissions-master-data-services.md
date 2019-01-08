@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - deleting member permissions [Master Data Services]
@@ -15,12 +14,12 @@ ms.assetid: 7f22d5e2-70c1-422c-99c2-e995a47d812a
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: ca4e921f5bff1f9870b812958baa63df1caedc32
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b8698d910ad74181a04a851334bddd4d112bbbd4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093719"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52755531"
 ---
 # <a name="delete-hierarchy-member-permissions-master-data-services"></a>Supprimer des autorisations de membre de hiérarchie (Master Data Services)
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], supprimez les autorisations d'objet de modèle pour supprimer toutes les affectations effectuées.  
@@ -30,7 +29,7 @@ ms.locfileid: "48093719"
   
 -   Vous devez avoir l'autorisation d'accéder à la zone fonctionnelle **Autorisations d'accès** .  
   
--   Vous devez être administrateur de modèle. Pour plus d’informations, consultez [Administrators &#40;Master Data Services&#41;](administrators-master-data-services.md).  
+-   Vous devez être administrateur de modèle. Pour plus d’informations, consultez [Administrateurs &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
 ### <a name="to-delete-hierarchy-member-permissions"></a>Pour supprimer des autorisations de membre de hiérarchie  
   
@@ -54,7 +53,7 @@ ms.locfileid: "48093719"
     >  Vous ne pouvez pas supprimer une autorisation d'un utilisateur si elle est héritée d'un groupe. Vous devez supprimer l'autorisation du groupe à la place.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Autorisations des membres de hiérarchie &#40;Master Data Services&#41;](../../2014/master-data-services/hierarchy-member-permissions-master-data-services.md)   
+ [Autorisations des membres de la hiérarchie &#40;Master Data Services&#41;](../../2014/master-data-services/hierarchy-member-permissions-master-data-services.md)   
  [Affecter des autorisations de membre de hiérarchie &#40;Master Data Services&#41;](../../2014/master-data-services/assign-hierarchy-member-permissions-master-data-services.md)  
   
   

@@ -1,18 +1,20 @@
 ---
-title: Comment recevoir des données dans un pool de données SQL Server avec Transact-SQL | Microsoft Docs
+title: Recevoir des données dans un pool de données SQL Server
+titleSuffix: SQL Server 2019 big data clusters
 description: Ce didacticiel montre comment recevoir des données dans le pool de données d’un cluster de données volumineuses de SQL Server 2019 (version préliminaire) avec la procédure stockée de sp_data_pool_table_insert_data.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 11/06/2018
+ms.date: 12/07/2018
 ms.topic: tutorial
 ms.prod: sql
-ms.openlocfilehash: 1f585a354175ff893869cef7f2f47b12fe244634
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+ms.custom: seodec18
+ms.openlocfilehash: 142a2db6bc841947a83ada4dc24c59de4e58df8f
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51221695"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432442"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-transact-sql"></a>Didacticiel : Recevoir des données dans un pool de données SQL Server avec Transact-SQL
 
@@ -30,17 +32,17 @@ Dans ce didacticiel, vous allez découvrir comment :
 
 ## <a id="prereqs"></a> Conditions préalables
 
-* [Déployer un cluster de données volumineuses sur Kubernetes](deployment-guidance.md).
-* [Installer Azure Data Studio et l’extension de SQL Server 2019](deploy-big-data-tools.md).
-* [Charger des exemples de données dans le cluster](#sampledata).
-
-[!INCLUDE [Load sample data](../includes/big-data-cluster-load-sample-data.md)]
+- [Outils de données volumineuses](deploy-big-data-tools.md)
+   - **kubectl**
+   - **Azure Data Studio**
+   - **Extension de SQL Server 2019**
+- [Charger des exemples de données dans votre cluster de données volumineux](tutorial-load-sample-data.md)
 
 ## <a name="create-an-external-table-in-the-data-pool"></a>Créer une table externe dans le pool de données
 
 Les étapes suivantes créent une table externe dans le pool de données nommé **web_clickstream_clicks_data_pool**. Cette table peut ensuite servir en tant qu’emplacement de réception des données dans le cluster de données volumineuses.
 
-1. Dans Azure Data Studio, connectez-vous à l’instance principale de SQL Server de votre cluster big data. Pour plus d’informations, consultez [se connecter à l’instance principale de SQL Server](deploy-big-data-tools.md#master).
+1. Dans Azure Data Studio, connectez-vous à l’instance principale de SQL Server de votre cluster big data. Pour plus d’informations, consultez [se connecter à l’instance principale de SQL Server](connect-to-big-data-cluster.md#master).
 
 1. Double-cliquez sur la connexion dans le **serveurs** fenêtre pour afficher le tableau de bord du serveur pour l’instance principale de SQL Server. Sélectionnez **nouvelle requête**.
 
@@ -66,7 +68,7 @@ Les étapes suivantes créent une table externe dans le pool de données nommé 
       );
    ```
   
-1. Dans CTP 2.1, la création du pool de données est asynchrone, mais il n’existe aucun moyen de déterminer quand il se termine encore. Veuillez patienter deux minutes pour vous assurer que le pool de données est créé avant de continuer.
+1. Dans CTP 2.2, la création du pool de données est asynchrone, mais il n’existe aucun moyen de déterminer quand il se termine encore. Veuillez patienter deux minutes pour vous assurer que le pool de données est créé avant de continuer.
 
 ## <a name="load-data"></a>Charger des données
 

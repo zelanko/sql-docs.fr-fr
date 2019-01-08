@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 3 : concevoir le rapport parent à l’aide de l’Assistant Rapport | Microsoft Docs'
+title: 'Leçon 3 : Concevoir le rapport Parent à l’aide de l’Assistant rapport | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ ms.assetid: 2f69dcd3-cd6d-45a9-a62a-ba6f5f3179d8
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: d2b872449bf553a00b53bcf6153befd68b6053d9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 331d073082ce68f3ad1b58749256c5a177897e07
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219989"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395064"
 ---
-# <a name="lesson-3-design-the-parent-report-using-the-report-wizard"></a>Leçon 3 : concevoir le rapport parent à l'aide de l'Assistant Rapport
+# <a name="lesson-3-design-the-parent-report-using-the-report-wizard"></a>Leçon 3 : Concevoir le rapport Parent à l’aide de l’Assistant rapport
   Après avoir créé une connexion de données et une table de données pour le rapport parent, l'étape suivante consiste à concevoir le rapport parent à l'aide de l'Assistant Rapport dans le Concepteur de rapports. Pour plus d’informations sur le Concepteur de rapports, consultez [Concevoir des rapports à l’aide du Concepteur de rapports &#40;SSRS&#41;](tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md).  
   
 ### <a name="to-design-the-parent-report-using-the-report-wizard"></a>Pour concevoir le rapport parent à l'aide de l'Assistant Rapport  
@@ -31,10 +31,10 @@ ms.locfileid: "48219989"
   
      Cette opération permet de lancer l'Assistant Rapport.  
   
-4.  Sur le **propriétés du Dataset** page, dans le **source de données** boîte, sélectionnez le **DataSet1** que vous avez créé dans [leçon 2 : définir une connexion de données et une Table de données pour Rapport parent](lesson-2-define-a-data-connection-and-data-table-for-parent-report.md).  
+4.  Sur le **propriétés du Dataset** page, dans le **source de données** boîte, sélectionnez le **DataSet1** que vous avez créé dans [leçon 2 : Définir une connexion de données et la Table de données pour le rapport Parent](lesson-2-define-a-data-connection-and-data-table-for-parent-report.md).  
     La zone **Datasets disponibles** est mise à jour automatiquement avec l’objet **DataTable** créé précédemment.  
   
-5.  Cliquez sur **Suivant**.  
+5.  Cliquer sur **Suivant**.  
   
 6.  Dans la page **Organiser les champs** , procédez comme suit :  
   
@@ -44,7 +44,7 @@ ms.locfileid: "48219989"
   
 7.  Cliquez sur **suivant** à deux reprises, puis cliquez sur **Terminer** pour fermer la **Assistant rapport**.  
   
-     Vous venez de créer le fichier .rdlc. Le fichier s'ouvre dans le Concepteur de rapports. Le tableau matriciel que vous avez conçu est maintenant affiché dans l'aire de conception.  
+     Vous avez maintenant créé le fichier .rdlc. Le fichier s'ouvre dans le Concepteur de rapports. Le tableau matriciel que vous avez conçu est maintenant affiché dans l'aire de conception.  
   
 8.  Enregistrez le fichier .rdlc.  
   

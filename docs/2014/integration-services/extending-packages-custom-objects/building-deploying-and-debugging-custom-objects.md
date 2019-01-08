@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 helpviewer_keywords:
 - custom objects [Integration Services]
@@ -14,12 +12,12 @@ ms.assetid: b03685bc-5398-4c3f-901a-1219c1098fbe
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7257973db070b0f06cc48d217f232be2f81efeb8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 22b7d07752c6a9df5f0b100c0d16b78a86125f04
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159709"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362851"
 ---
 # <a name="building-deploying-and-debugging-custom-objects"></a>Génération, déploiement et débogage d'objets personnalisés
   Après avoir écrit le code d'un objet personnalisé pour [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], vous devez générer l'assembly, le déployer, l'intégrer dans le Concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] pour le rendre disponible dans les packages, le tester et le déboguer.  
@@ -61,7 +59,7 @@ ms.locfileid: "48159709"
 ##  <a name="building"></a> Génération de l’assembly  
  Après avoir signé le projet, vous devez générer ou regénérer le projet ou la solution en utilisant les commandes disponibles dans le menu **Générer** de [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Votre solution peut contenir un projet séparé d' interface utilisateur personnalisée, lequel doit également être signé avec un nom fort et peut être généré en même temps.  
   
- La méthode la plus pratique pour effectuer les deux étapes suivantes, à savoir le déploiement de l'assembly et son installation dans le Global Assembly Cache, consiste à écrire le script de ces étapes sous la forme d'un événement post-build dans [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]. Les événements de génération sont disponibles sur la page **Compiler** des propriétés d’un projet [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] et sur la page **Événements de génération** d’un projet C#. Le chemin complet est requis pour les utilitaires d’invite de commandes tels que **gacutil.exe**. Les guillemets sont requis à la fois autour des chemins d'accès qui contiennent des espaces et autour des macros telles que $(TargetPath) qui s'étendent aux chemins d'accès qui contiennent des espaces.  
+ La méthode la plus pratique pour effectuer les deux étapes suivantes, à savoir le déploiement de l’assembly et son installation dans le Global Assembly Cache, consiste à écrire le script de ces étapes sous la forme d’un événement post-build dans [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]. Les événements de génération sont disponibles sur la page **Compiler** des propriétés d’un projet [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] et sur la page **Événements de génération** d’un projet C#. Le chemin complet est requis pour les utilitaires d’invite de commandes tels que **gacutil.exe**. Les guillemets sont requis à la fois autour des chemins d'accès qui contiennent des espaces et autour des macros telles que $(TargetPath) qui s'étendent aux chemins d'accès qui contiennent des espaces.  
   
  Voici un exemple de ligne de commande d'événement après génération pour un module fournisseur d'informations personnalisé :  
   
@@ -153,7 +151,7 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\120\DTS\LogProvide
   
 3.  Revenez au package mis en pause et passez le point d’arrêt, ou cliquez sur **OK** pour fermer le message généré par la tâche de script, puis continuez l’exécution et le débogage du package.  
   
-![Icône Integration Services (petite)](../media/dts-16.gif "icône Integration Services (petite)")**rester jusqu'à la Date avec Integration Services** <br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
+![Icône Integration Services (petite)](../media/dts-16.gif "icône Integration Services (petite)")**rester jusqu'à la Date avec Integration Services**<br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Développement d’objets personnalisés pour Integration Services](developing-custom-objects-for-integration-services.md)   

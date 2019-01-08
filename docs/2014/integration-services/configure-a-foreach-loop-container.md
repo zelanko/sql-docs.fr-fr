@@ -14,12 +14,12 @@ ms.assetid: 519c6f96-5e1f-47d2-b96a-d49946948c25
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9d63a4f168c4a426c06bb00c634f89e328735332
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: eb1e3ca9e8576bf340560c45582c9b01bd453c14
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159759"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529037"
 ---
 # <a name="configure-a-foreach-loop-container"></a>Configurer un conteneur de boucles Foreach
   Cette procédure décrit comment configurer un conteneur de boucles Foreach, notamment les expressions de la propriété au niveau de l'énumérateur et du conteneur.  
@@ -66,7 +66,7 @@ ms.locfileid: "48159759"
   
     -   Pour utiliser l’énumérateur SMO Foreach, sélectionnez une connexion ADO.NET existante ou cliquez sur **Nouvelle connexion** dans la liste **Connexion** , puis tapez la chaîne à utiliser ou cliquez sur **Parcourir**. Si vous cliquez sur **Parcourir**, dans la boîte de dialogue **Sélectionner l’énumération SMO** , sélectionnez le type d’objet à énumérer et le type d’énumération, puis cliquez sur **OK**.  
   
-6.  Si vous le souhaitez, cliquez sur le bouton Parcourir **(…)** dans la zone de texte **Expressions** de la page **Collection** pour créer des expressions qui mettent à jour les valeurs des propriétés. Pour plus d’informations, consultez [Ajouter ou modifier une expression de propriété](expressions/add-or-change-a-property-expression.md).  
+6.  Si vous le souhaitez, cliquez sur le bouton Parcourir **(...)** dans la zone de texte **Expressions** de la page **Collection** pour créer des expressions qui mettent à jour les valeurs des propriétés. Pour plus d’informations, consultez [Ajouter ou modifier une Expression de propriété](expressions/add-or-change-a-property-expression.md).  
   
     > [!NOTE]  
     >  Les propriétés énumérées dans la liste **Propriété** varient en fonction de l’énumérateur.  

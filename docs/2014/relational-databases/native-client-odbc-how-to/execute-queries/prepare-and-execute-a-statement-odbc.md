@@ -13,34 +13,34 @@ ms.assetid: 0adecc63-4da5-486c-bc48-09a004a2fae6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d02a8e22c07c6dedcaae3cb50ad1c453c1273b16
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bcc1f6d1542928d534d31c6d64ef6130c0c7e04b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112869"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359911"
 ---
 # <a name="prepare-and-execute-a-statement-odbc"></a>Préparer et exécuter une instruction (ODBC)
     
 ### <a name="to-prepare-a-statement-once-and-then-execute-it-multiple-times"></a>Pour préparer une instruction une fois, puis l'exécuter plusieurs fois  
   
-1.  Appelez la fonction [SQLPrepare](http://go.microsoft.com/fwlink/?LinkId=59360) pour préparer l'instruction.  
+1.  Appelez la fonction [SQLPrepare](https://go.microsoft.com/fwlink/?LinkId=59360) pour préparer l'instruction.  
   
-2.  Éventuellement, appelez [SQLNumParams](http://go.microsoft.com/fwlink/?LinkId=58404) pour déterminer le nombre de paramètres dans l'instruction préparée.  
+2.  Éventuellement, appelez [SQLNumParams](https://go.microsoft.com/fwlink/?LinkId=58404) pour déterminer le nombre de paramètres dans l'instruction préparée.  
   
 3.  Éventuellement, pour chaque paramètre dans l'instruction préparée :  
   
-    -   Appelez [SQLDescribeParam](../../native-client-odbc-api/sqldescribeparam.md) pour obtenir des informations de paramètre.  
+    -   Appelez [SQLDescribeParam](../../native-client-odbc-api/sqldescribeparam.md) pour obtenir des informations sur les paramètres.  
   
-    -   Liez chaque paramètre à une variable de programme à l’aide de [SQLBindParameter](../../native-client-odbc-api/sqlbindparameter.md). Configurez tous les paramètres de données en cours d'exécution.  
+    -   Liez chaque paramètre à une variable de programme à l'aide de [SQLBindParameter](../../native-client-odbc-api/sqlbindparameter.md). Configurez tous les paramètres de données en cours d'exécution.  
   
 4.  Pour chaque exécution d'une instruction préparée :  
   
     -   Si l'instruction a des marqueurs de paramètres, mettez les valeurs de données dans la mémoire tampon de paramètre lié.  
   
-    -   Appelez [SQLExecute](http://go.microsoft.com/fwlink/?LinkId=58400) pour exécuter l'instruction préparée.  
+    -   Appelez [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) pour exécuter l'instruction préparée.  
   
-    -   Si des paramètres d'entrée de données en cours d'exécution sont utilisés, [SQLExecute](http://go.microsoft.com/fwlink/?LinkId=58400) retourne SQL_NEED_DATA. Envoyez les données par segments à l'aide de [SQLParamData](http://go.microsoft.com/fwlink/?LinkId=58405) et [SQLPutData](../../native-client-odbc-api/sqlputdata.md).  
+    -   Si des paramètres d'entrée de données en cours d'exécution sont utilisés, [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) retourne SQL_NEED_DATA. Envoyez les données par segments à l'aide de [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) et [SQLPutData](../../native-client-odbc-api/sqlputdata.md).  
   
 ### <a name="to-prepare-a-statement-with-column-wise-parameter-binding"></a>Pour préparer une instruction avec la liaison de paramètre selon les colonnes  
   
@@ -56,7 +56,7 @@ ms.locfileid: "48112869"
   
 2.  Appelez SQLPrepare pour préparer l’instruction.  
   
-3.  Éventuellement, appelez [SQLNumParams](http://go.microsoft.com/fwlink/?LinkId=58404) pour déterminer le nombre de paramètres dans l'instruction préparée.  
+3.  Éventuellement, appelez [SQLNumParams](https://go.microsoft.com/fwlink/?LinkId=58404) pour déterminer le nombre de paramètres dans l'instruction préparée.  
   
 4.  Si vous le souhaitez, pour chaque paramètre dans l’instruction préparée, vous devez appeler SQLDescribeParam pour obtenir des informations sur les paramètres.  
   

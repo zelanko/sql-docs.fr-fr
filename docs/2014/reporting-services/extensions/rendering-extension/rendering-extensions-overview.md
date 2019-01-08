@@ -15,15 +15,15 @@ ms.assetid: 909356a0-4709-43e5-b597-33bd9bb22882
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: fd9604fb38d20e03f33623bacb606d1a9d114ae9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2272cffe68db5c4ad417bfdbf81ed45a8d309a17
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092481"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376911"
 ---
 # <a name="rendering-extensions-overview"></a>Vue d'ensemble des extensions de rendu
-  Une extension de rendu est un composant ou un module d'un serveur de rapports qui transforme les données de rapport et les informations de disposition dans un format spécifique au périphérique. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] comprend sept extensions de rendu : HTML, Excel, Word, CSV ou texte, XML, image et PDF. Vous pouvez créer des extensions de rendu supplémentaires pour créer des rapports dans d'autres formats.  
+  Une extension de rendu est un composant ou un module d'un serveur de rapports qui transforme les données de rapport et les informations de disposition dans un format spécifique au périphérique. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] inclut sept extensions de rendu : HTML, Excel, Word, CSV ou texte, XML, Image et PDF. Vous pouvez créer des extensions de rendu supplémentaires pour créer des rapports dans d'autres formats.  
   
 > [!NOTE]  
 >  Pour déterminer quelles extensions de rendu sont disponibles, vous pouvez consulter la liste des extensions installées dans le fichier RSReportServer.config.  
@@ -58,7 +58,7 @@ ms.locfileid: "48092481"
   
  L'écriture d'une extension de rendu personnalisée est difficile. Une extension de rendu doit généralement prendre en charge toutes les combinaisons possibles d'éléments de rapport et nécessite d'implémenter des centaines de classes, interfaces, méthodes et propriétés. Si vous devez effectuer le rendu d'un rapport dans un format qui n'est pas inclus avec [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] et que vous décidez d'écrire votre propre implémentation de code managé d'une extension de rendu, le code de l'extension de rendu doit implémenter l'interface `Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension` que nécessite le serveur de rapports.  
   
- Pour une documentation supplémentaire et des livres blancs sur [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], consultez les ressources techniques les plus récentes sur le [site web Reporting Services](http://go.microsoft.com/fwlink/?LinkId=19951).  
+ Pour une documentation supplémentaire et des livres blancs sur [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], consultez les ressources techniques les plus récentes sur le [site web Reporting Services](https://go.microsoft.com/fwlink/?LinkId=19951).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Implémentation d’une extension de rendu](implementing-a-rendering-extension.md)   

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 api_name:
 - ExpirationDate Property (SecurityCertificate Class)
@@ -20,12 +18,12 @@ ms.assetid: b7fbb9e9-85c1-475b-8e49-7c82fb3740aa
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: b36ad4fac20afd6d67b1832237617be706a57468
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 54a1bed6d43deb132dc4acc125e2948852bf7574
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141781"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363831"
 ---
 # <a name="expirationdate-property-securitycertificate-class"></a>Propriété ExpirationDate (classe SecurityCertificate)
   Obtient la date à laquelle le certificat de sécurité n'est plus en vigueur.  
@@ -48,6 +46,6 @@ object
 ## <a name="remarks"></a>Notes  
   
 ## <a name="see-also"></a>Voir aussi  
- [Configuration des bibliothèques réseau et des protocoles réseau du serveur](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [Configuration des bibliothèques réseau et des protocoles réseau du serveur](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

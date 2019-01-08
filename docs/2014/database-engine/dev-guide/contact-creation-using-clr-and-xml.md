@@ -12,12 +12,12 @@ ms.assetid: b5185c1e-56de-41a8-a9c3-eec663750cde
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 092bc63ac93c58d1a37f7fa52fde4fd9bf1d8486
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 20a59cf2ac94b060c917a4cea2bbbb69dd877120
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48212409"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371351"
 ---
 # <a name="contact-creation-using-clr-and-xml"></a>Création de contacts à l'aide de CLR et XML
   L'exemple Contact pour SQL Server fournit quelques utilitaires pratiques qui forment une couche supplémentaire de fonctionnalités en plus de l'exemple de base de données AdventureWorks2012. Le premier utilitaire crée des enregistrements de contact pour les diverses catégories de personnes impliquées dans la base de données AdventureWorks2012. Les informations de contact sont spécifiées à l'aide de XML et passées à une procédure stockée VB ou basée sur C# afin de créer le code XML et le placer dans les tables appropriées avec la base de données.  
@@ -25,9 +25,9 @@ ms.locfileid: "48212409"
 ## <a name="prerequisites"></a>Prérequis  
  Pour créer et exécuter ce projet, les logiciels suivants doivent être installés :  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. Vous pouvez vous procurer gratuitement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express à partir du site Web [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express Documentation and Samples [(en anglais)](http://go.microsoft.com/fwlink/?LinkId=31046)  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. Vous pouvez vous procurer gratuitement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express à partir du site Web [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express Documentation and Samples [(en anglais)](https://go.microsoft.com/fwlink/?LinkId=31046)  
   
--   Base de données AdventureWorks qui est disponible sur le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] site Web [du Centre pour les développeurs](http://go.microsoft.com/fwlink/?linkid=62796)  
+-   Base de données AdventureWorks qui est disponible sur le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] site Web [du Centre pour les développeurs](https://go.microsoft.com/fwlink/?linkid=62796)  
   
 -   Le Kit de développement logiciel .NET Framework SDK 2.0 ou version ultérieure, ou Microsoft Visual Studio 2005 ou version ultérieure. Vous pouvez vous procurer gratuitement le Kit de développement logiciel .NET Framework SDK.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "48212409"
   
 2.  Si nécessaire, créez un répertoire pour votre exemple. Pour cet exemple, nous utiliserons C:\MySample.  
   
-3.  Dans c:\MySample, créez `Contacts.vb` (pour l'exemple Visual Basic) ou `Contacts.cs` (pour l'exemple C#) et copiez l'exemple de code Visual Basic ou  C# approprié (ci-dessous) dans le fichier.  
+3.  Dans c:\MySample, créez `Contacts.vb` (pour l'exemple Visual Basic) ou `Contacts.cs` (pour l'exemple C#) et copiez l'exemple de code Visual Basic ou  C# approprié (ci-dessous) dans le fichier.  
   
 4.  Compilez l'exemple de code à partir de l'invite de ligne de commande en exécutant l'un des éléments suivants, selon le langage choisi.  
   
@@ -1393,7 +1393,7 @@ GO
 DECLARE @contactID Int;  
 DECLARE @customerID Int;  
   
-EXEC dbo.usp_CreateContact N'<Contact xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactData"><Individual>  
+EXEC dbo.usp_CreateContact N'<Contact xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactData"><Individual>  
 <Title>Dr.</Title>  
 <FirstName>Kim</FirstName>  
 <LastName>Smith</LastName>  
@@ -1401,7 +1401,7 @@ EXEC dbo.usp_CreateContact N'<Contact xmlns="http://schemas.microsoft.com/sqlser
 <PasswordHash>F1AF7A6028F2FEA29292C09603F1C209BB84B518</PasswordHash>  
 <PasswordSalt>2Hdr7Jc=</PasswordSalt>  
 <Demographics>  
-<IndividualSurvey xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/IndividualSurvey">  
+<IndividualSurvey xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/IndividualSurvey">  
 <TotalChildren>2</TotalChildren>  
 <NumberChildrenAtHome>1</NumberChildrenAtHome>  
 </IndividualSurvey>  
@@ -1413,7 +1413,7 @@ PRINT 'Individual Contact ID = ' + CAST(@contactID as varchar(10));
 PRINT 'Individual Customer ID = ' + CAST(@customerID as varchar(10));  
   
 EXEC dbo.usp_CreateContact N'  
-<Contact xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactData"><Store>  
+<Contact xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactData"><Store>  
 <FirstName>Catherine</FirstName>  
 <LastName>Smith</LastName>  
 <EmailAddress>catherine@proseware.com</EmailAddress>  
@@ -1428,7 +1428,7 @@ PRINT 'Store Contact ID = ' + CAST(@contactID as varchar(10));
 PRINT 'Store Customer ID = ' + CAST(@customerID as varchar(10));  
   
 EXEC dbo.usp_CreateContact N'  
-<Contact xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactData"><Vendor>  
+<Contact xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactData"><Vendor>  
 <FirstName>Amy</FirstName>  
 <LastName>Smith</LastName>  
 <EmailAddress>amy@proseware.com</EmailAddress>  
@@ -1443,7 +1443,7 @@ PRINT 'Vendor Contact ID = ' + CAST(@contactID as varchar(10));
 PRINT 'Vendor Customer ID = ' + CAST(@customerID as varchar(10));  
   
 EXEC dbo.usp_CreateContact N'  
-<Contact xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactData"><Employee>  
+<Contact xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactData"><Employee>  
 <FirstName>Ramona</FirstName>  
 <LastName>Smith</LastName>  
 <EmailAddress>ramona@proseware.com</EmailAddress>  

@@ -1,7 +1,8 @@
 ---
-title: Créer et personnaliser les raccourcis clavier dans Azure Data Studio | Microsoft Docs
-description: Découvrez comment créer et personnaliser les raccourcis clavier dans Azure Data Studio.
-ms.custom: tools|sos
+title: Créer et personnaliser les raccourcis clavier
+titleSuffix: Azure Data Studio
+description: Découvrez comment créer et personnaliser les raccourcis clavier dans Azure Data Studio
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3452e2e19d237f8ba5135c723e9971c0932ba61c
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: dd58bb28fe5969fcf0553576d70dd62314f5f974
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356470"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030253"
 ---
 # <a name="keyboard-shortcuts-in-includename-sosincludesname-sosmd"></a>Raccourcis clavier dans [!INCLUDE[name-sos](../includes/name-sos.md)]
 
@@ -28,9 +29,9 @@ Cet article fournit les étapes pour rapidement afficher, modifier et créer des
 
 Pour afficher tous les raccourcis clavier actuellement définis :
 
-Ouvrez l'éditeur des **raccourcis clavier** à partir du menu **Fichier** : **Fichier** > **Préférences** > **Raccourcis clavier** (**[!INCLUDE[name-sos](../includes/name-sos-short.md)]** > **Préférences** > **Raccourcis clavier** sur Mac).
+Ouvrez le **raccourcis clavier** éditeur à partir de la **fichier** menu : **Fichier** > **préférences** > **raccourcis clavier** (**[!INCLUDE[name-sos](../includes/name-sos-short.md)]**  >   **Préférences** > **raccourcis clavier** sur Mac).
 
-En plus d’afficher les combinaisons de touches actuelle, l'éditeur de **Raccourcis clavier** répertorie les commandes disponibles qui n’ont pas de raccourcis clavier définis. Le **raccourcis clavier** éditeur vous permet de modifier, supprimer, réinitialiser et définir de nouvelles combinaisons de touches.  
+Outre l’affichage des combinaisons de touches actuelles, le **raccourcis clavier** éditeur répertorie les commandes disponibles qui n’ont pas de raccourcis clavier définis. Le **raccourcis clavier** éditeur vous permet de modifier, supprimer, réinitialiser et définir de nouvelles combinaisons de touches.  
 
 
 ## <a name="edit-existing-keyboard-shortcuts"></a>Modifier les raccourcis clavier existants
@@ -41,7 +42,7 @@ Pour modifier la combinaison de touches pour un raccourci clavier :
    > [!TIP]
    > Rechercher par clé, par commande, par source, etc. pour retourner tous les raccourcis clavier appropriés.
 
-1. Cliquez avec le bouton droit sur l’entrée souhaitée, puis sélectionnez **Modifier le raccourci clavier**
+1. Cliquez sur l’entrée souhaitée et sélectionnez **liaison de modifier la clé**
 
    ![Modifier le raccourci clavier](media/keyboard-shortcuts/change-keybinding.png)
 
@@ -53,7 +54,7 @@ Pour modifier la combinaison de touches pour un raccourci clavier :
 
 Pour créer de nouveaux raccourcis clavier :
 
-1. Cliquez sur une commande qui n’ont de toute combinaison de touches et sélectionnez **ajouter la combinaison de touches**.
+1. Cliquez sur une commande qui n’a pas une clé de liaison et sélectionnez **liaison d’ajouter une clé**.
 
    ![Créer un raccourci clavier](media/keyboard-shortcuts/add-keybinding.png)
 

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords:
 - traces [SQL Server], replaying
@@ -16,12 +15,12 @@ ms.assetid: 58761a25-a84f-4a90-9c61-97700bc5ad9c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9d4c2bbf0d59cce86debc955d8cf4cefade5ddb0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e91a501a899a6ba2b18790ac2da6e7c45b270b07
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150119"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52809972"
 ---
 # <a name="replay-options-sql-server-profiler"></a>Options de relecture (SQL Server Profiler)
   Avant de relire une trace capturée avec [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], spécifiez les options de relecture dans la boîte de dialogue **Configuration de la relecture** . Pour accéder à cette boîte de dialogue, ouvrez le fichier ou la table de trace de relecture dans [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], puis cliquez sur **Démarrer** dans le menu **Relire**. Pour savoir quelles autorisations sont nécessaires pour relire une trace, consultez [Autorisations nécessaires pour exécuter SQL Server Profiler](sql-server-profiler.md).  
@@ -79,8 +78,8 @@ ms.locfileid: "48150119"
  Le moniteur d'intégrité est un thread d'application qui surveille les processus simulés impliqués dans la relecture d'une trace, et met fin aux processus bloqués au cours de la relecture. Sous l’onglet **Options de relecture avancées** de la boîte de dialogue **Configuration de la relecture** , vous pouvez spécifier combien de temps le moniteur d’intégrité doit attendre (en secondes) avant de mettre fin à un processus bloqué (**Délai d’attente du moniteur d’intégrité**). Si vous affectez à cet intervalle la valeur 0, le moniteur d'intégrité ne met jamais fin aux processus de blocage simulés dans la trace en cours de relecture.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Relire des Traces](replay-traces.md)   
- [Conditions requises pour la relecture](replay-requirements.md)   
- [Considérations sur la relecture des Traces &#40;SQL Server Profiler&#41;](considerations-for-replaying-traces-sql-server-profiler.md)  
+ [Relire des traces](replay-traces.md)   
+ [Conditions préalables à la relecture](replay-requirements.md)   
+ [Considérations sur la relecture des traces &#40;SQL Server Profiler&#41;](considerations-for-replaying-traces-sql-server-profiler.md)  
   
   

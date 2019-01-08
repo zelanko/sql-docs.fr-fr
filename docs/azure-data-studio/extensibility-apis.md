@@ -1,7 +1,8 @@
 ---
-title: API d’extensibilité pour Azure Data Studio | Microsoft Docs
-description: API d’extensibilité pour Azure Data Studio
-ms.custom: tools|sos
+title: API d’extensibilité
+titleSuffix: Azure Data Studio
+description: En savoir plus sur les API d’extensibilité pour Azure Data Studio
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.reviewer: alayu; sstein
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7dae5546b4725a31576d411bd604a4a3d3e27c4e
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: 7a13a171024aecbe39bc7c83f77f109914bc4250
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356110"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53029753"
 ---
 # <a name="azure-data-studio-extensibility-apis"></a>API d’extensibilité Data Studio Azure
 
@@ -41,19 +42,19 @@ ms.locfileid: "49356110"
 ```
 > let connection = sqlops.connection.getCurrentConnection();
 connection: {
-    providerName: ‘MSSQL’,
-    connectionId: ‘d97bb63a-466e-4ef0-ab6f-00cd44721dcc’,
+    providerName: 'MSSQL',
+    connectionId: 'd97bb63a-466e-4ef0-ab6f-00cd44721dcc',
     options: {
-        server: ‘mairvine-sql-server’,
-        user: ‘sa’,
-        authenticationType: ‘sqlLogin’,
-        …
+        server: 'mairvine-sql-server',
+        user: 'sa',
+        authenticationType: 'sqlLogin',
+        ...
     },
-    …
+    ...
 }
 > let credentials = sqlops.connection.getCredentials(connection.connectionId);
 credentials: {
-    password: ‘abc123’
+    password: 'abc123'
 }
 
 ```
@@ -64,7 +65,7 @@ credentials: {
 
 
 ### <a name="top-level-functions"></a>Fonctions de niveau supérieur
-- `getNode(connectionId: string, nodePath?: string): Thenable<sqlops.objectexplorer.ObjectExplorerNode>` Obtenir un nœud de l’Explorateur d’objets correspondant à la connexion donnée et le chemin d’accès. Si aucun chemin d’accès n’est fourni, il retourne le nœud de niveau supérieur pour la connexion donnée. Si cela signifie qu’il n’y a aucun nœud à l’emplacement donné, elle retourne `undefined`. Remarque : Le `nodePath` pour un objet est généré par le serveur principal de Service des outils SQL et qu’il est difficile à construire manuellement. Futures améliorations d’API vous permettra d’obtenir les nœuds en fonction des métadonnées que vous fournissez relatives au nœud, telles que le nom, type et le schéma.
+- `getNode(connectionId: string, nodePath?: string): Thenable<sqlops.objectexplorer.ObjectExplorerNode>` Obtenir un nœud de l’Explorateur d’objets correspondant à la connexion donnée et le chemin d’accès. Si aucun chemin d’accès n’est fourni, il retourne le nœud de niveau supérieur pour la connexion donnée. Si cela signifie qu’il n’y a aucun nœud à l’emplacement donné, elle retourne `undefined`. Remarque : Le `nodePath` pour un objet est généré par le serveur principal de Service des outils SQL et qu’il est difficile à construire manuellement. Futures améliorations d’API vous permettra d’obtenir les nœuds en fonction des métadonnées que vous fournissez relatives au nœud, telles que le nom, type et le schéma.
 
 - `getActiveConnectionNodes(): Thenable<sqlops.objectexplorer.ObjectExplorerNode>` Obtenir tous les nœuds de connexion de l’Explorateur d’objets actifs.
 

@@ -12,12 +12,12 @@ ms.assetid: c686446f-dae1-4b05-a3df-837b3422988d
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6aea5507c008d608b7fcc9e50c7defcdff90924d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dfb00b1cc1a9930f7a374403b40e2c0d793eb090
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190399"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371081"
 ---
 # <a name="set-the-collation-of-user-defined-databases-to-match-those-of-the-master-and-model-databases"></a>Définir le même classement pour les bases de données définies par l'utilisateur que pour les bases de données MASTER ou model
   Cette règle vérifie si les bases de données définies par l'utilisateur sont définies en utilisant un classement de base de données identique à celui de la base de données MASTER ou model.  
@@ -48,9 +48,9 @@ ms.locfileid: "48190399"
   
  [sys.databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)  
   
- [Article 325335 de la Base de connaissances Microsoft](http://go.microsoft.com/fwlink/?linkid=117751)  
+ [Article 325335 de la Base de connaissances Microsoft](https://go.microsoft.com/fwlink/?linkid=117751)  
   
- [Comment : installer SQL Server 2008 à partir de l’invite de commandes](http://go.microsoft.com/fwlink/?LinkId=81585)  
+ [Comment : Installer SQL Server 2008 à partir de l’invite de commandes](https://go.microsoft.com/fwlink/?LinkId=81585)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Contrôler et appliquer les meilleures pratiques à l'aide de la Gestion basée sur des stratégies](../relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md)  

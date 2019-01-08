@@ -11,12 +11,12 @@ ms.assetid: f202a2b7-34e0-43aa-90d5-c9a085a37c32
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d40854ecff0b138fa854103650dda9691be94a41
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: af3b98aab31aeaa3a01b1026eca8b3098ce97bef
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145099"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515974"
 ---
 # <a name="deploy-powerpivot-solutions-to-sharepoint"></a>Déployer des solutions PowerPivot sur SharePoint
   Utilisez les instructions suivantes pour déployer manuellement deux packages de solution qui ajoutent des fonctionnalités PowerPivot à un environnement SharePoint Server 2010. Le déploiement des solutions est une étape indispensable pour configurer PowerPivot pour SharePoint sur un serveur SharePoint 2010. Pour afficher la liste complète des étapes requises, consultez [d’Administration de serveur PowerPivot et de Configuration dans l’Administration centrale](power-pivot-server-administration-and-configuration-in-central-administration.md).  
@@ -27,9 +27,9 @@ ms.locfileid: "48145099"
   
  Cette rubrique contient les sections suivantes :  
   
- [Condition préalable : vérifier que l'application Web utilise l'authentification en mode classique](#bkmk_classic)  
+ [Condition préalable : Vérifier que l’Application Web utilise l’authentification en Mode classique](#bkmk_classic)  
   
- [Étape 1 : déployer la solution de batterie de serveurs](#bkmk_farm)  
+ [Étape 1 : Déployer la Solution de batterie de serveurs](#bkmk_farm)  
   
  [Étape 2 : Déployer la Solution d’Application Web PowerPivot sur l’Administration centrale](#deployCA)  
   
@@ -39,7 +39,7 @@ ms.locfileid: "48145099"
   
  [À propos des Solutions PowerPivot](#intro)  
   
-##  <a name="bkmk_classic"></a> Condition préalable : vérifier que l'application Web utilise l'authentification en mode classique  
+##  <a name="bkmk_classic"></a> Condition préalable : Vérifier que l'application Web utilise l'authentification en mode classique  
  PowerPivot pour SharePoint n'est pris en charge que pour les applications Web qui utilisent l'authentification en mode classique. Pour vérifier si l’application utilise le mode classique, exécutez l’applet de commande PowerShell suivante à partir de la **SharePoint 2010 Management Shell**, en remplaçant `http://<top-level site name>` par le nom de votre site SharePoint :  
   
 ```  
@@ -48,7 +48,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
   
  La valeur de retour devrait être **False**. S’il s’agit **true**, vous ne pouvez pas accéder à des données PowerPivot avec cette application web.  
   
-##  <a name="bkmk_farm"></a> Étape 1 : déployer la solution de batterie de serveurs  
+##  <a name="bkmk_farm"></a> Étape 1 : Déployer la Solution de batterie de serveurs  
  Cette section montre comment déployer des solutions à l'aide de PowerShell, mais vous pouvez également utiliser l'outil de configuration PowerPivot pour effectuer cette tâche. Pour plus d’informations, consultez [configurer ou réparer PowerPivot pour SharePoint 2010 &#40;outil de Configuration PowerPivot&#41;](../configure-repair-powerpivot-sharepoint-2010.md).  
   
  Cette tâche ne doit être effectuée qu'une seule fois, après l'installation de PowerPivot pour SharePoint.  
@@ -58,7 +58,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
 2.  Exécutez l'applet de commande suivante pour ajouter la solution de batterie de serveurs.  
   
     ```  
-    Add-SPSolution –LiteralPath “C:\Program Files\Microsoft SQL Server\110\Tools\PowerPivotTools\ConfigurationTool\Resources\PowerPivotFarm.wsp”  
+    Add-SPSolution -LiteralPath "C:\Program Files\Microsoft SQL Server\110\Tools\PowerPivotTools\ConfigurationTool\Resources\PowerPivotFarm.wsp"  
     ```  
   
      L'applet de commande retourne le nom de la solution, son ID, et Deployed=False. À l'étape suivante, vous déploierez la solution.  
@@ -66,7 +66,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
 3.  Exécutez l'applet de commande suivante pour déployer la solution de batterie de serveurs :  
   
     ```  
-    Install-SPSolution –Identity PowerPivotFarm.wsp –GACDeployment -Force  
+    Install-SPSolution -Identity PowerPivotFarm.wsp -GACDeployment -Force  
     ```  
   
 ##  <a name="deployCA"></a> Étape 2 : Déployer la Solution d’Application Web PowerPivot sur l’Administration centrale  
@@ -83,7 +83,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
 3.  Exécutez l'applet de commande suivante pour ajouter la solution de batterie de serveurs.  
   
     ```  
-    Add-SPSolution –LiteralPath “C:\Program Files\Microsoft SQL Server\110\Tools\PowerPivotTools\ConfigurationTool\Resources\PowerPivotWebApp.wsp”  
+    Add-SPSolution -LiteralPath "C:\Program Files\Microsoft SQL Server\110\Tools\PowerPivotTools\ConfigurationTool\Resources\PowerPivotWebApp.wsp"  
     ```  
   
      L'applet de commande retourne le nom de la solution, son ID, et Deployed=False. À l'étape suivante, vous déploierez la solution.  

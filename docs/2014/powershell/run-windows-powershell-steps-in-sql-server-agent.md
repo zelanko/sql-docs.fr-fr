@@ -4,33 +4,32 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: scripting
 ms.topic: conceptual
 ms.assetid: f25f7549-c9b3-4618-85f2-c9a08adbe0e3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6e87aa1b7fd49681594220f81e447abbadc6716d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 460d66b7e2d4f314db65213819fca1800af2da4f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204239"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52798201"
 ---
 # <a name="run-windows-powershell-steps-in-sql-server-agent"></a>Utiliser Windows PowerShell dans les étapes de travail de l'Agent SQL Server
   Utilisez SQL Server Agent pour exécuter des scripts PowerShell SQL Server à des horaires planifiés.  
   
-1.  **Avant de commencer :**  [Limitations et restrictions](#LimitationsRestrictions)  
+1.  **Avant de commencer :**  [Limitations et Restrictions](#LimitationsRestrictions)  
   
-2.  **Pour exécuter PowerShell à partir de SQL Server Agent, à l'aide de :**  [Étape de travail PowerShell](#PShellJob), [Étape de travail d'invite de commandes](#CmdExecJob)  
+2.  **Pour exécuter PowerShell à partir de SQL Server Agent, à l’aide de :**  [Étape de travail PowerShell](#PShellJob), [étape de travail d’invite de commandes](#CmdExecJob)  
   
 ## <a name="before-you-begin"></a>Avant de commencer  
  Il y a plusieurs types d'étapes de travail de l'Agent [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Chaque type est associé à un sous-système qui implémente un environnement spécifique, tel qu'un agent de réplication ou un environnement d'invite de commandes. Vous pouvez coder les scripts Windows PowerShell, puis utiliser l'Agent [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pour les inclure dans les travaux qui s'exécutent à des heures planifiées ou en réponse à des événements [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Les scripts Windows PowerShell peuvent être exécutés à l'aide d'une étape de travail d'invite de commandes ou d'une étape de travail PowerShell.  
   
 1.  Utilisez une étape du travail PowerShell pour que le sous-système de l'Agent [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] exécute l'utilitaire `sqlps`, qui lance PowerShell 2.0 et importe le module `sqlps`.  
   
-2.  Utilisez une étape de travail d’invite de commandes pour exécuter PowerShell.exe et spécifiez un script qui importe le `sqlps` module.  
+2.  Utilisez une étape du travail d'invite de commandes pour exécuter PowerShell.exe et spécifiez un script qui importe le module `sqlps`.  
   
 ###  <a name="LimitationsRestrictions"></a> Limitations et restrictions  
   

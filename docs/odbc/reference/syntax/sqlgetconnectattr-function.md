@@ -20,21 +20,21 @@ ms.assetid: 2cb4ffa8-19d3-4664-8c2f-6682cdcc3f33
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0d9006d2b1792e66c1f37faa94c9c4b3f9304f3e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4a24ccf58a1cd0f6d0f4fb2fd32dbee79feb896b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764357"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204438"
 ---
 # <a name="sqlgetconnectattr-function"></a>Fonction SQLGetConnectAttr
 **Conformité**  
- Version introduite : Conformité des normes 3.0 de ODBC : ISO 92  
+ Version introduite : Conformité aux normes 3.0 de ODBC : ISO 92  
   
  **Résumé**  
  **SQLGetConnectAttr** retourne le paramètre actuel d’un attribut de connexion.  
   
-> [!NOTE]  
+> [!NOTE]
 >  Pour plus d’informations sur ce que le Gestionnaire de pilotes mappe cette fonction lorsqu’un ODBC 3 *.x* application fonctionne avec un ODBC 2 *.x* pilote, consultez [mappage des fonctions de remplacement pour vers l’arrière Compatibilité des Applications](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md).  
   
 ## <a name="syntax"></a>Syntaxe  

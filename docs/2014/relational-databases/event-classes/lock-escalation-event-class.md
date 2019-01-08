@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -16,12 +15,12 @@ ms.assetid: d253b44c-7600-4afa-a3a7-03cc937c6a4b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bf72cd4c22003fef09805789b7ac9b70fbc42227
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c85b6983cbff901ae39c365503a6ab1ae0fcede1
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190869"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980175"
 ---
 # <a name="lockescalation-event-class"></a>Classe d'événements Lock:Escalation
   La classe d’événements **Lock:Escalation** indique qu’un verrouillage spécifique s’est transformé en verrouillage de plus grande ampleur, comme par exemple un verrou de ligne transformé en verrou d’objet. La classe d'événements Escalation est l'ID d'événement 60.  
@@ -34,9 +33,9 @@ ms.locfileid: "48190869"
 |**ClientProcessID**|`int`|ID affecté par l'ordinateur hôte au processus dans lequel s'exécute l'application cliente. La colonne de données est remplie si le client fournit l'ID du processus client.|9|Oui|  
 |**DatabaseID**|`int`|ID de la base de données dans laquelle le verrou a été obtenu. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] affiche le nom de la base de données si la colonne de données **ServerName** du serveur est capturée dans la trace et que le serveur est disponible. Déterminez la valeur pour une base de données à l'aide de la fonction DB_ID.|3|Oui|  
 |**DatabaseName**|`nvarchar`|Nom de la base de données dans laquelle a eu lieu la promotion.|35|Oui|  
-|**EventClass**|`int`|Type d’événement = 60.|27|non|  
+|**EventClass**|`int`|Type d’événement = 60.|27|Non|  
 |**EventSubClass**|`int`|Cause de l'escalade de verrous :<br /><br /> **0 - LOCK_THRESHOLD** indique que l’instruction a dépassé le seuil de verrou.<br /><br /> **1 - MEMORY_THRESHOLD** indique que l’instruction a dépassé le seuil de la mémoire.|21|Oui|  
-|**EventSequence**|`int`|Séquence d'un événement donné au sein de la demande.|51|non|  
+|**EventSequence**|`int`|Séquence d'un événement donné au sein de la demande.|51|Non|  
 |**GroupID**|`int`|ID du groupe de charges de travail où l'événement Trace SQL se déclenche.|66|Oui|  
 |**HostName**|`nvarchar`|Nom de l'ordinateur sur lequel le client est exécuté. La colonne de données est remplie si le client fournit le nom de l'hôte. Pour déterminer le nom de l'hôte, utilisez la fonction HOST_NAME.|8|Oui|  
 |**IntegerData**|`int`|Nombre de verrous HoBT. Nombre de verrous pour HoBT au moment de l'escalade de verrous.|25|Oui|  
@@ -53,7 +52,7 @@ ms.locfileid: "48190869"
 |**Offset**|`int`|Décalage de départ de l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] .|61|Oui|  
 |**OwnerID**|`int`|1=TRANSACTION<br /><br /> 2=CURSOR<br /><br /> 3=SESSION<br /><br /> 4=SHARED_TRANSACTION_WORKSPACE<br /><br /> 5=EXCLUSIVE_TRANSACTION_WORKSPACE<br /><br /> 6=WAITFOR_QUERY|58|Oui|  
 |**RequestID**|`int`|ID de la demande contenant l'instruction.|49|Oui|  
-|**ServerName**|`nvarchar`|Nom de l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracée.|26|non|  
+|**ServerName**|`nvarchar`|Nom de l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracée.|26|Non|  
 |**SessionLoginName**|`nvarchar`|Nom de connexion de l'utilisateur à l'origine de la session. Par exemple, si vous vous connectez à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] au moyen de Login1 et que vous exécutez une commande en tant que Login2, **SessionLoginName** affiche Login1 et **LoginName** affiche Login2. Cette colonne affiche à la fois les connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et Windows.|64|Oui|  
 |**SPID**|`int`|ID de la session au cours de laquelle l'événement s'est produit.|12|Oui|  
 |**StartTime**|`datetime`|Heure à laquelle a débuté l'événement, si elle est connue.|14|Oui|  
@@ -75,7 +74,7 @@ EXEC sp_trace_setevent @TraceID, 60, 22, 1; -- 22 = ObjectID
 EXEC sp_trace_setevent @TraceID, 60, 25, 1; -- 25 = IntegerData  
 EXEC sp_trace_setevent @TraceID, 60, 55, 1; -- 25 = IntegerData2  
 EXEC sp_trace_setevent @TraceID, 60, 57, 1; -- 57 = Type  
--- Set any filter  byusing sp_trace_setfilter.  
+-- Set any filter  by using sp_trace_setfilter.  
 -- Start the trace.  
 EXEC sp_trace_setstatus @TraceID, 1;  
 GO  

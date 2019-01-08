@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 1 : créer un site web | Microsoft Docs'
+title: 'Leçon 1 : Créer un nouveau Site Web | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,15 +11,15 @@ ms.assetid: 3f226bc8-614e-4dac-9078-3448a83342b5
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 79cb440796801e7557b59d75c07b72ed7fc06f6b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 11fb6cf816a665bb641671cb79b575367e63e63f
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48121279"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52403824"
 ---
-# <a name="lesson-1-create-a-new-web-site"></a>Leçon 1 : créer un nouveau site Web
-  Dans cette leçon vous allez apprendre à créer un projet de site Web à l'aide du modèle de site Web ASP.NET pour Visual C#.  
+# <a name="lesson-1-create-a-new-web-site"></a>Leçon 1 : Créer un nouveau Site Web
+  Dans cette leçon, vous allez apprendre à créer un projet de site web en utilisant le modèle de site web ASP.NET pour Visual C#.  
   
 ### <a name="to-create-a-new-website"></a>Pour créer un nouveau site Web  
   
@@ -34,6 +34,6 @@ ms.locfileid: "48121279"
  Le projet de site Web s'ouvre.  
   
 ## <a name="next-task"></a>Tâche suivante  
- Vous venez de créer un projet de site Web. Vous allez à présent créer une connexion de données et une table de données pour le rapport parent. Consultez [leçon 2 : définir une connexion de données et la Table de données pour le rapport Parent](lesson-2-define-a-data-connection-and-data-table-for-parent-report.md).  
+ Vous avez réussi à créer un projet de site web. Vous allez à présent créer une connexion de données et une table de données pour le rapport parent. Consultez [leçon 2 : Définir une connexion de données et la Table de données pour le rapport Parent](lesson-2-define-a-data-connection-and-data-table-for-parent-report.md).  
   
   

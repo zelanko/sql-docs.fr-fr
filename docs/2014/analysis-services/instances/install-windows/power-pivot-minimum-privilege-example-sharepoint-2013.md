@@ -11,22 +11,22 @@ ms.assetid: c1e09e6c-52d3-48ab-8c70-818d5d775087
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 99ca1f404297c9897fde4c257872c6088d540654
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b79b9c6662b40b860cfacd85d77b09dbfb04117d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193939"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368391"
 ---
 # <a name="example-of-a-minimum-privilege-configuration-for-powerpivot-for-sharepoint-2013"></a>Exemple de configuration avec privilèges minimum pour Power Pivot pour SharePoint 2013
   Cette rubrique décrit un exemple de configuration de PowerPivot pour SharePoint 2013 avec les privilèges minimums. La configuration utilise un compte différent pour chacun des trois composants et chaque compte dispose du niveau minimum de privilèges.  
   
 ## <a name="summary-of-accounts"></a>Récapitulatif des comptes  
- PowerPivot pour SharePoint 2013 prend en charge l'utilisation du compte Service réseau pour le compte de service Analysis Services. Le compte Service réseau n'est pas un scénario pris en charge avec SharePoint 2010. Pour plus d’informations sur les comptes de Service, consultez [configurer les comptes de Service Windows et les autorisations](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) (http://msdn.microsoft.com/library/ms143504.aspx).  
+ PowerPivot pour SharePoint 2013 prend en charge l'utilisation du compte Service réseau pour le compte de service Analysis Services. Le compte Service réseau n'est pas un scénario pris en charge avec SharePoint 2010. Pour plus d’informations sur les comptes de Service, consultez [configurer les comptes de Service Windows et les autorisations](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) (https://msdn.microsoft.com/library/ms143504.aspx).  
   
  Le tableau suivant récapitule les trois comptes utilisés dans cet exemple de configuration avec privilèges minimums.  
   
-|Portée|Nom   |  
+|Portée|Créer une vue d’abonnement|  
 |-----------|----------|  
 |Compte Administrateur SharePoint|**SPAdmin**|  
 |Compte de batterie de serveurs SharePoint|**SPFarm**|  

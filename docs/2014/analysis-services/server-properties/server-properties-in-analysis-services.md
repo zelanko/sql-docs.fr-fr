@@ -19,12 +19,12 @@ ms.assetid: 274b89cd-14ed-4666-bc13-eedf1de51e18
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c531faf5576c8d213026d7d200313b5f59464b3e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0a2f99dc4ba728fb97eac0ced00624fc8c8831e6
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201852"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369731"
 ---
 # <a name="configure-server-properties-in-analysis-services"></a>Configurer les propriétés du serveur dans Analysis Services
   Un administrateur [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] peut modifier les propriétés de configuration par défaut du serveur pour une instance [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Chaque instance a ses propriétés de configuration propres, qui peuvent être définies de façon indépendante des autres instances présentes sur le même serveur.  
@@ -53,9 +53,9 @@ ms.locfileid: "48201852"
   
      La modification des propriétés du serveur est prise en charge uniquement pour les serveurs en mode multidimensionnel et en mode tabulaire. Si vous avez installé [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], utilisez toujours les valeurs par défaut à moins qu'un ingénieur du support technique de Microsoft vous conseille de faire autrement.  
   
-     Pour obtenir de l’aide sur la façon de résoudre les problèmes opérationnels ou de performances au moyen des propriétés du serveur, consultez le [guide des opérations de SQL Server 2008 R2 Analysis Services](http://go.microsoft.com/fwlink/?LinkID=225539).  
+     Pour obtenir de l’aide sur la façon de résoudre les problèmes opérationnels ou de performances au moyen des propriétés du serveur, consultez le [guide des opérations de SQL Server 2008 R2 Analysis Services](https://go.microsoft.com/fwlink/?LinkID=225539).  
   
-     La lecture du livre blanc de Microsoft intitulé [SQL Server 2005 Analysis Services (SSAS) Server Properties](http://go.microsoft.com/fwlink/?LinkID=199102)peut également être utile pour en savoir plus sur les propriétés du serveur (pour la plupart inchangées dans les dernières versions).  
+     La lecture du livre blanc de Microsoft intitulé [SQL Server 2005 Analysis Services (SSAS) Server Properties](https://go.microsoft.com/fwlink/?LinkID=199102)peut également être utile pour en savoir plus sur les propriétés du serveur (pour la plupart inchangées dans les dernières versions).  
   
     > [!NOTE]  
     >  Certaines propriétés ne peuvent être définies que dans le fichier msmdrsrv.ini. Si la propriété qui vous intéresse n'est pas visible même après affichage des propriétés avancées, vous devrez la modifier directement dans le fichier msmdsrv.ini.  
@@ -76,12 +76,12 @@ ms.locfileid: "48201852"
 ##  <a name="bkmk_ref"></a> Référence de propriété de serveur  
  Les propriétés de configuration de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sont importantes pour le réglage précis de votre système. Par exemple, vous pouvez adapter le comportement du journal des requêtes à vos besoins en définissant les propriétés pertinentes.  
   
- Les rubriques suivantes expliquent les différents [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] propriétés de configuration :  
+ Les rubriques suivantes expliquent les diverses propriétés de configuration de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] :  
   
 |Rubrique|Description|  
 |-----------|-----------------|  
 |[Propriétés générales](general-properties.md)|Les propriétés générales sont des propriétés fondamentales et avancées qui définissent notamment le répertoire de données, le répertoire de sauvegarde et d'autres comportements du serveur.|  
-|[Propriétés de l’exploration de données](data-mining-properties.md)|Les propriétés d'exploration de données déterminent les algorithmes d'exploration de données à activer ou à désactiver. Par défaut, tous les algorithmes sont activés.|  
+|[Propriétés de l'exploration de données](data-mining-properties.md)|Les propriétés d'exploration de données déterminent les algorithmes d'exploration de données à activer ou à désactiver. Par défaut, tous les algorithmes sont activés.|  
 |DSO|DSO n'est plus pris en charge. Les propriétés DSO sont ignorées.|  
 |[Propriétés de fonctionnalité](feature-properties.md)|Les propriétés de fonctionnalité se rapportent à des fonctionnalités de produit, le plus souvent de caractère avancé. Il s'agit notamment de propriétés qui contrôlent les liaisons entre les instances de serveur.|  
 |[Propriétés du cache de fichiers](filestore-properties.md)|Les propriétés du stockage de fichiers s'adressent uniquement aux utilisateurs expérimentés. Elles contiennent des paramètres avancés de gestion de la mémoire.|  
@@ -94,7 +94,7 @@ ms.locfileid: "48201852"
 |[Propriétés du pool de threads](thread-pool-properties.md)|Les propriétés du pool de threads contrôlent le nombre de threads que crée le serveur. Il s'agit essentiellement de propriétés avancées.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Gestion d’instances Analysis Services](../instances/analysis-services-instance-management.md)   
+ [Gestion d'instances Analysis Services](../instances/analysis-services-instance-management.md)   
  [Spécification de paramètres de configuration pour le déploiement de solutions](../multidimensional-models/deployment-script-files-solution-deployment-config-settings.md)  
   
   

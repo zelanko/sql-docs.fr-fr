@@ -21,23 +21,23 @@ ms.assetid: e6beaea4-164c-4078-95ae-b9e28b0aefe8
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d1c4d2d5c90f651d1d24dd6fabbaa74213a6fff9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 123f0fcececee98826bf70b929a9857bbaff32dc
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061899"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212008"
 ---
 # <a name="sql-server-configuration-manager"></a>Gestionnaire de configuration SQL Server
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] est un outil qui permet de gérer les services associés à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], de configurer les protocoles réseau utilisés par [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]et de gérer la configuration de la connectivité réseau à partir des ordinateurs clients [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Le Gestionnaire de configuration est un composant logiciel enfichable MMC ( [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console), accessible à partir du menu Démarrer ou qui peut être ajouté dans tout autre affichage [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console. [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console (mmc.exe) utilise le fichier SQLServerManager10.msc du dossier Windows System32 pour ouvrir [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager.  
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Le Gestionnaire de configuration et SQL Server Management Studio utilisent WMI (Window Management Instrumentation) pour afficher et modifier certains paramètres de serveur. WMI offre une méthode unique d'interface avec les appels API qui gèrent les opérations de registre requises par les outils [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Il permet également un contrôle et une manipulation avancés des services SQL sélectionnés du composant logiciel enfichable Gestionnaire de configuration [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Pour plus d’informations sur la configuration des autorisations liées à WMI, consultez [Configurer WMI pour afficher l’état du serveur dans les outils SQL Server](../ssms/configure-wmi-to-show-server-status-in-sql-server-tools.md).  
   
-> [!NOTE]  
+> [!NOTE]
 >  Étant donné que le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] est un composant logiciel enfichable pour le programme [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console et non pas un programme autonome, le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] n’apparaît pas en tant qu’application dans les versions plus récentes de Windows.  
->   
+> 
 >  -   **Windows 10**:  
->          Pour ouvrir [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager, dans le **Page de démarrage**, entrez SQLServerManager12.msc (pour [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]). Pour les versions précédentes de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] remplacez 12 par un nombre plus petit. Cliquez sur SQLServerManager12.msc pour ouvrir le Gestionnaire de Configuration. Pour épingler le Gestionnaire de Configuration pour la Page de démarrage ou de la barre des tâches, cliquez sur SQLServerManager12.msc, puis cliquez sur **ouvrir l’emplacement du fichier**. Dans l’Explorateur de fichiers Windows, cliquez sur SQLServerManager12.msc, puis cliquez sur **épingler au menu Démarrer** ou **épingler à la barre des tâches**.  
+>          Pour ouvrir [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager, dans le **Page de démarrage**, entrez SQLServerManager12.msc (pour [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]). Pour les versions antérieures de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , remplacez 12 par un nombre plus petit. Cliquez sur SQLServerManager12.msc pour ouvrir le Gestionnaire de Configuration. Pour épingler le Gestionnaire de Configuration pour la Page de démarrage ou de la barre des tâches, cliquez sur SQLServerManager12.msc, puis cliquez sur **ouvrir l’emplacement du fichier**. Dans l’Explorateur de fichiers Windows, cliquez sur SQLServerManager12.msc, puis cliquez sur **épingler au menu Démarrer** ou **épingler à la barre des tâches**.  
 > -   **Windows 8**:  
 >          Pour ouvrir [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager, dans le **recherche** icône sous **applications**, type **SQLServerManager\<version > .msc** tels que `SQLServerManager12.msc`, puis appuyez sur **entrée**.  
   
@@ -63,11 +63,11 @@ ms.locfileid: "48061899"
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vous permet de créer ou de supprimer des alias, de modifier l'ordre d'utilisation des protocoles ou d'afficher les propriétés de l'alias d'un serveur, notamment :  
   
--   Alias de serveur — Alias du serveur utilisé pour l'ordinateur auquel le client se connecte.  
+-   Alias de serveur - Alias de serveur utilisé pour l’ordinateur auquel le client se connecte.  
   
--   Protocole — Protocole réseau utilisé pour l'entrée de configuration.  
+-   Protocole - Protocole réseau utilisé pour l’entrée de configuration.  
   
--   Paramètres de connexion — Paramètres associés à l'adresse de connexion pour la configuration du protocole réseau.  
+-   Paramètres de connexion - Paramètres associés à l’adresse de connexion pour la configuration du protocole réseau.  
   
  Le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vous permet également d'afficher des informations sur les instances de cluster de basculement, bien que l'Administrateur de cluster doive être utilisé pour certaines actions comme le démarrage et l'arrêt des services.  
   

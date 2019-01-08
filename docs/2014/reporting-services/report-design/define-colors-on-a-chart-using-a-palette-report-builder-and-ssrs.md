@@ -11,12 +11,12 @@ ms.assetid: d95efc22-5a32-43d4-9bd2-12753e7fd395
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 0db138c140b0f5e51a148a3114ad6f0a7054f8c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 49feffa82a1ae20735a2b9b70982782c3562c9cf
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166949"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370091"
 ---
 # <a name="define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs"></a>Définir les couleurs d'un graphique à l'aide d'une palette (Générateur de rapports et SSRS)
   Vous pouvez modifier la palette de couleurs d'un graphique en sélectionnant une palette prédéfinie ou en définissant une palette personnalisée. Les palettes personnalisées sont spécifiques au rapport.  
@@ -45,11 +45,11 @@ ms.locfileid: "48166949"
   
 3.  Dans le **graphique** section, pour le `Palette` propriété, sélectionnez **personnalisé**.  
   
-4.  Dans la propriété CustomPaletteColors, cliquez sur le bouton Modifier la collection (**…**). L' **Éditeur de collection ReportColorExpression** s'ouvre.  
+4.  Dans la propriété CustomPaletteColors, cliquez sur le bouton Modifier la collection (**...**). L' **Éditeur de collection ReportColorExpression** s'ouvre.  
   
 5.  Cliquez sur **Ajouter** pour ajouter une couleur. Sélectionnez une couleur dans la liste déroulante ou sélectionnez Expression et spécifiez une valeur hexadécimale correspondant à une couleur spécifique, par exemple ff6600 pour l'orange.  
   
-     Pour plus d'informations sur les valeurs hexadécimales, consultez la [table des couleurs](http://go.microsoft.com/fwlink/?linkid=9258) (en anglais) sur MSDN.  
+     Pour plus d'informations sur les valeurs hexadécimales, consultez la [table des couleurs](https://go.microsoft.com/fwlink/?linkid=9258) (en anglais) sur MSDN.  
   
 6.  Cliquez sur **Ajouter** pour ajouter d'autres couleurs à la palette.  
   

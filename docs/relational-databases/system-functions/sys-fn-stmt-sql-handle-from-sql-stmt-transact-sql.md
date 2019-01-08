@@ -14,12 +14,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8f9eddf5cb58b18651acd77afe44758a47b1fd8b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 049fb28c9d49dcfe359363e0be8d78ba8a4bca8d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47602848"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537895"
 ---
 # <a name="sysfnstmtsqlhandlefromsqlstmt-transact-sql"></a>sys.fn_stmt_sql_handle_from_sql_stmt (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -45,15 +45,15 @@ sys.fn_stmt_sql_handle_from_sql_stmt
  *query_param_type*  
  Est le type de paramètre de la requête. *query_param_type* est un **tinyint**. Les valeurs possibles sont :  
   
--   NULL : valeur par défaut est 0  
+-   Valeur NULL : valeur par défaut est 0  
   
--   0 – aucun  
+-   0 - aucun  
   
--   1 – utilisateur  
+-   1 - utilisateur  
   
--   2 – simple  
+-   2 - simple  
   
--   3 – forcé  
+-   3 - forcé  
   
 ## <a name="columns-returned"></a>Colonnes retournées  
  Le tableau suivant répertorie les colonnes que sys.fn_stmt_sql_handle_from_sql_stmt retourne.  
@@ -69,7 +69,7 @@ sys.fn_stmt_sql_handle_from_sql_stmt
   
 ## <a name="remarks"></a>Notes  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite le **EXECUTE** autorisation sur la base de données, et **supprimer** autorisation sur les affichages catalogue du magasin de requête.  
   
 ## <a name="examples"></a>Exemples  

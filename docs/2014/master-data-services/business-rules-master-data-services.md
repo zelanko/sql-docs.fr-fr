@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - business rules [Master Data Services], about business rules
@@ -14,12 +13,12 @@ ms.assetid: a9f9e41a-2461-4845-b947-58b3a205543f
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f32495e2e12ab56ac2adb8ad5686a669714b81dc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 211434d182a0c3fd6da777b8834380a67c4d58c8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074330"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52814591"
 ---
 # <a name="business-rules-master-data-services"></a>Règles d'entreprise (Master Data Services)
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], une règle d'entreprise est une règle qui vous permet de vérifier la qualité et l'exactitude de vos données de référence. Vous pouvez utiliser une règle d'entreprise pour mettre à jour automatiquement vos données, envoyer un message électronique ou démarrer un processus ou un flux de travail d'entreprise.  
@@ -31,7 +30,7 @@ ms.locfileid: "48074330"
   
  Pour utiliser des règles d'entreprise vous devez d'abord les créer et les publier, puis appliquer les règles publiées aux données. Vous pouvez appliquer des règles à des sous-ensembles de données ou à toutes les données d'une version en validant la version. Une version ne peut pas être validée tant que tous les attributs n'ont pas passé la validation de la règle d'entreprise.  
   
- Si un utilisateur tente d'ajouter une valeur d'attribut qui n'a pas passé la validation de la règle d'entreprise, la valeur peut toujours être enregistrée. Vous pouvez examiner et corriger les problèmes de validation qui s'affichent dans [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].  
+ Si un utilisateur tente d’ajouter une valeur d’attribut qui n’a pas passé la validation de la règle d’entreprise, la valeur peut toujours être enregistrée. Vous pouvez examiner et corriger les problèmes de validation qui s'affichent dans [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].  
   
  Lorsque vous créez un package de déploiement de modèle, si vous souhaitez inclure des règles d'entreprise, vous devez inclure les données de la version dans le package.  
   
@@ -72,10 +71,10 @@ ms.locfileid: "48074330"
 |Créer et publier une règle d'entreprise.|[Créer et publier une règle d’entreprise &#40;Master Data Services&#41;](../../2014/master-data-services/create-and-publish-a-business-rule-master-data-services.md)|  
 |Ajouter plusieurs conditions à une règle d'entreprise.|[Ajouter plusieurs conditions à une règle d’entreprise &#40;Master Data Services&#41;](../../2014/master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md)|  
 |Créer une règle d'entreprise pour exiger que des valeurs soient affectées aux attributs.|[Requérir des valeurs d’attribut &#40;Master Data Services&#41;](../../2014/master-data-services/require-attribute-values-master-data-services.md)|  
-|Créer une règle d'entreprise pour entreprendre une action en fonction des modifications apportées aux valeurs d'attribut.|[Initier des Actions en fonction des modifications de valeur d’attribut &#40;Master Data Services&#41;](../../2014/master-data-services/initiate-actions-based-on-attribute-value-changes-master-data-services.md)|  
+|Créer une règle d'entreprise pour entreprendre une action en fonction des modifications apportées aux valeurs d'attribut.|[Initier des actions en fonction de modifications de valeurs d’attribut &#40;Master Data Services&#41;](../../2014/master-data-services/initiate-actions-based-on-attribute-value-changes-master-data-services.md)|  
 |Modifier le nom d'une règle d'entreprise existante.|[Renommer une règle d’entreprise &#40;Master Data Services&#41;](../../2014/master-data-services/change-a-business-rule-name-master-data-services.md)|  
-|Configurer [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] pour envoyer des notifications lorsque les règles d'entreprise sont appliquées.|[Configurer des règles d’entreprise pour envoyer des Notifications &#40;Master Data Services&#41;](../../2014/master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)|  
-|Appliquer des règles d'entreprise à des membres spécifiques.|[Valider des membres spécifiques par rapport aux règles métier &#40;Master Data Services&#41;](../../2014/master-data-services/validate-specific-members-against-business-rules-master-data-services.md)|  
+|Configurer [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] pour envoyer des notifications lorsque les règles d'entreprise sont appliquées.|[Configurer des règles d’entreprise pour envoyer des notifications &#40;Master Data Services&#41;](../../2014/master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)|  
+|Appliquer des règles d'entreprise à des membres spécifiques.|[Valider des membres spécifiques par rapport aux règles d’entreprise &#40;Master Data Services&#41;](../../2014/master-data-services/validate-specific-members-against-business-rules-master-data-services.md)|  
 |Exclure une règle d'entreprise de façon à ne pas l'utiliser.|[Exclure une règle d’entreprise &#40;Master Data Services&#41;](../../2014/master-data-services/exclude-a-business-rule-master-data-services.md)|  
 |Supprimer une règle d'entreprise existante.|[Supprimer une règle d’entreprise &#40;Master Data Services&#41;](../../2014/master-data-services/delete-a-business-rule-master-data-services.md)|  
   

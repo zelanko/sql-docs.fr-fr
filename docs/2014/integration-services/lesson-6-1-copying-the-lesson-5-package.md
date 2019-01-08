@@ -1,25 +1,24 @@
 ---
-title: 'Étape 1 : Copie du package de la leçon 5 | Microsoft Docs'
+title: 'Étape 1 : Copie du Package de la leçon 5 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: a25fcc13-987e-4f3d-8f0c-76f7e6e59920
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 71d12e661036d2ccd227429903c19c273c3c9268
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d3175da6c4f53bd8a829a54180fd6739d2a3e051
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111470"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357852"
 ---
-# <a name="step-1-copying-the-lesson-5-package"></a>Étape 1 : copie du package de la leçon 5
-  Dans cette tâche, vous allez créer une copie du package Lesson 5.dtsx que vous avez créé à la leçon 5. Vous pouvez également ajouter au projet le package final de la leçon 5 inclus avec le didacticiel, puis le copier à la place. Vous allez utiliser cette nouvelle copie tout au long de la leçon 6.  
+# <a name="step-1-copying-the-lesson-5-package"></a>Étape 1 : Copie du Package de la leçon 5
+  Dans cette tâche, vous allez créer une copie du package Lesson 5.dtsx que vous avez créé à la leçon 5. Vous pouvez également ajouter au projet le package final de la leçon 5 inclus avec le didacticiel, puis le copier à la place. Vous allez utiliser cette nouvelle copie tout au long de la leçon 6.  
   
 ### <a name="to-copy-the-lesson-5-package"></a>Pour copier le package de la leçon 5  
   
@@ -49,11 +48,11 @@ ms.locfileid: "48111470"
   
 3.  Dans la boîte de dialogue Ajouter une copie des packages existants, sous Emplacement du package, sélectionnez Système de fichiers.  
   
-4.  Cliquez sur le bouton de navigation (…), accédez à Lesson 5.dtsx sur votre ordinateur, puis cliquez sur **Ouvrir**.  
+4.  Cliquez sur le bouton de navigation (...), accédez à Lesson 5.dtsx sur votre ordinateur, puis cliquez sur **Ouvrir**.  
   
      Pour télécharger tous les packages de leçons de ce didacticiel, procédez comme suit.  
   
-    1.  Accédez à [Exemples de produits Integration Services](http://go.microsoft.com/fwlink/?LinkId=275027)  
+    1.  Accédez à [Exemples de produits Integration Services](https://go.microsoft.com/fwlink/?LinkId=275027)  
   
     2.  Cliquez sur l'onglet **DOWNLOADS** (Téléchargements).  
   
@@ -64,6 +63,6 @@ ms.locfileid: "48111470"
      Après la copie du package de la leçon 5, si vous avez des packages des leçons précédentes dans votre solution, cliquez avec le bouton droit sur chaque package des leçons 1 à 5 et cliquez sur Exclure du projet. Lorsque vous avez terminé, vous devez avoir uniquement la leçon 6.dtsx dans votre solution.  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [Étape 2 : Conversion du projet en modèle de déploiement de projet](lesson-6-2-converting-the-project-to-the-project-deployment-model.md)  
+ [Étape 2 : Convertir le projet dans le modèle de déploiement de projet](lesson-6-2-converting-the-project-to-the-project-deployment-model.md)  
   
   

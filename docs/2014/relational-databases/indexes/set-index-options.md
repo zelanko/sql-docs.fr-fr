@@ -23,12 +23,12 @@ ms.assetid: 7969af33-e94c-41f7-ab89-9d9a2747cd5c
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 429a0d7d29864cb3aeca313f5e69638014ff2887
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a9feaa3be20692b89b0d0568f1ccacc49c992667
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215119"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52408277"
 ---
 # <a name="set-index-options"></a>Définir les options d'index
   Cette rubrique explique comment modifier les propriétés d'un index dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -51,9 +51,9 @@ ms.locfileid: "48215119"
   
 ###  <a name="Restrictions"></a> Limitations et restrictions  
   
--   Les options suivantes sont immédiatement appliquées à l'index à l'aide de la clause SET de l'instruction ALTER INDEX : ALLOW_PAGE_LOCKS, ALLOW_ROW_LOCKS, IGNORE_DUP_KEY et STATISTICS_NORECOMPUTE.  
+-   Les options suivantes sont immédiatement appliquées à l’index à l’aide de la clause SET de l’instruction ALTER INDEX : ALLOW_PAGE_LOCKS, ALLOW_ROW_LOCKS, IGNORE_DUP_KEY et STATISTICS_NORECOMPUTE.  
   
--   Les options suivantes peuvent être définies lorsque vous reconstruisez un index à l'aide de ALTER INDEX REBUILD ou de CREATE INDEX WITH DROP_EXISTING : PAD_INDEX, FILLFACTOR, SORT_IN_TEMPDB, IGNORE_DUP_KEY, STATISTICS_NORECOMPUTE, ONLINE, ALLOW_ROW_LOCKS, ALLOW_PAGE_LOCKS, MAXDOP, and DROP_EXISTING (CREATE INDEX uniquement).  
+-   Les options suivantes peuvent être définies lorsque vous reconstruisez un index à l’aide de ALTER INDEX REBUILD ou CREATE INDEX WITH DROP_EXISTING : Alors que PAD_INDEX, FILLFACTOR, SORT_IN_TEMPDB, IGNORE_DUP_KEY, STATISTICS_NORECOMPUTE, ONLINE, ALLOW_ROW_LOCKS, ALLOW_PAGE_LOCKS, MAXDOP et DROP_EXISTING (CREATE INDEX uniquement).  
   
 ###  <a name="Security"></a> Sécurité  
   
@@ -64,11 +64,11 @@ ms.locfileid: "48215119"
   
 #### <a name="to-modify-the-properties-of-an-index-in-table-designer"></a>Pour modifier les propriétés d'un index dans le Concepteur de tables  
   
-1.  Dans l'Explorateur d'objets, cliquez sur le signe plus (+) pour développer la base de données qui contient la table pour laquelle vous souhaitez modifier les propriétés d'un index.  
+1.  Dans l’Explorateur d’objets, cliquez sur le signe plus (+) pour développer la base de données qui contient la table sur laquelle vous souhaitez modifier les propriétés d’un index.  
   
 2.  Cliquez sur le signe plus (+) pour développer le dossier **Tables** .  
   
-3.  Cliquez avec le bouton droit sur la table pour laquelle vous voulez modifier les propriétés d’un index et sélectionnez **Conception**.  
+3.  Cliquez avec le bouton droit sur la table sur laquelle vous voulez modifier les propriétés d’un index et sélectionnez **Conception**.  
   
 4.  Dans le menu **Concepteur de tables** , cliquez sur **Index/Clés**.  
   
@@ -82,11 +82,11 @@ ms.locfileid: "48215119"
   
 #### <a name="to-modify-the-properties-of-an-index-in-object-explorer"></a>Pour modifier les propriétés d'un index dans l'Explorateur d'objets  
   
-1.  Dans l'Explorateur d'objets, cliquez sur le signe plus (+) pour développer la base de données qui contient la table pour laquelle vous souhaitez modifier les propriétés d'un index.  
+1.  Dans l’Explorateur d’objets, cliquez sur le signe plus (+) pour développer la base de données qui contient la table sur laquelle vous souhaitez modifier les propriétés d’un index.  
   
 2.  Cliquez sur le signe plus (+) pour développer le dossier **Tables** .  
   
-3.  Cliquez sur le signe plus (+) pour développer la table pour laquelle vous souhaitez modifier les propriétés d'un index.  
+3.  Cliquez sur le signe plus (+) pour développer la table sur laquelle vous souhaitez modifier les propriétés d’un index.  
   
 4.  Cliquez sur le signe plus (+) pour développer le dossier **Index** .  
   

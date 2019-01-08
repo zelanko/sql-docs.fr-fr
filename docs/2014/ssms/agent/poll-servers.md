@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - target servers [SQL Server], polling interval
@@ -16,12 +16,12 @@ ms.assetid: 96f5fd43-3edd-4418-9dd0-4d34e618890e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dde632ee5769a43daf29553213533afeac12d804
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ae75dc8af9364a619113d2c38071a441e15351be
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170769"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52774931"
 ---
 # <a name="poll-servers"></a>Interroger des serveurs
   Lorsqu'une administration multiserveur est mise en œuvre, les serveurs cibles contactent périodiquement le serveur maître pour transférer des informations sur les travaux ayant été exécutés et pour télécharger de nouveaux travaux. Le processus de contact du serveur maître se nomme *interrogation de serveur* et intervient selon *une fréquence d’interrogation*spécifique.  

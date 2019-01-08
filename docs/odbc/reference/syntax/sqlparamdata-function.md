@@ -20,16 +20,16 @@ ms.assetid: 68fe010d-9539-4e5b-a260-c8d32423b1db
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7ffba9afd0609bab57cdaa182b650f7bd5a0fb34
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ec0038e0ec6c87dba403bbe62441815dfa6d0251
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47606814"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205178"
 ---
 # <a name="sqlparamdata-function"></a>SQLParamData, fonction
 **Conformité**  
- Version introduite : La mise en conformité des normes 1.0 ODBC : ISO 92  
+ Version introduite : Conformité aux normes 1.0 ODBC : ISO 92  
   
  **Résumé**  
  **SQLParamData** est utilisé conjointement avec **SQLPutData** pour fournir des données de paramètre au moment de l’exécution d’instruction et avec **SQLGetData** pour récupérer des données de paramètre de sortie diffusées en continu.  
@@ -61,7 +61,7 @@ SQLRETURN SQLParamData(
 |01000|Avertissement général|Message d’information spécifiques au pilote. (La fonction retourne SQL_SUCCESS_WITH_INFO.)|  
 |07006|Violation de l’attribut de type de données restreint|La valeur de données identifiée par le *ValueType* argument dans **SQLBindParameter** pour le paramètre dépendant n’a pas pu être converti au type de données identifié par le *ParameterType*argument dans **SQLBindParameter**.<br /><br /> La valeur de données retournée pour un paramètre lié comme SQL_PARAM_INPUT_OUTPUT ou SQL_PARAM_OUTPUT pas pu être convertie au type de données identifié par le *ValueType* argument dans **SQLBindParameter**.<br /><br /> (Si les valeurs de données pour une ou plusieurs lignes n’a pas pu être converties, mais une ou plusieurs lignes ont été retournés avec succès, cette fonction retourne SQL_SUCCESS_WITH_INFO.)|  
 |08S01|Échec de lien de communication|Échec de la liaison de communication entre le pilote et de la source de données à laquelle le pilote a été connecté avant le traitement de la fonction a été exécutée.|  
-|22026|Chaîne de données ou longueur non correspondante|Le type d’information SQL_NEED_LONG_DATA_LEN dans **SQLGetInfo** était « Y », et moins de données a été envoyés pour un paramètre de type long (le type de données a été SQL_LONGVARCHAR, SQL_LONGVARBINARY ou un type de données de spécifique à la source de données de type long) que celle spécifiée avec le *StrLen_or_IndPtr* argument dans **SQLBindParameter**.<br /><br /> Le type d’information SQL_NEED_LONG_DATA_LEN dans **SQLGetInfo** était « Y » et moins de données a été envoyées pour une colonne longue (le type de données a été SQL_LONGVARCHAR, SQL_LONGVARBINARY ou un type de données de spécifique à la source de données de type long) que celle spécifiée dans la mémoire tampon de longueur correspondant à une colonne dans une ligne de données qui a été ajoutées ou mis à jour avec **SQLBulkOperations** ou mis à jour avec **SQLSetPos**.|  
+|22026|Chaîne de données ou longueur non correspondante|Le type d’information SQL_NEED_LONG_DATA_LEN dans **SQLGetInfo** était « Y », et moins de données a été envoyés pour un paramètre de type long (le type de données a été SQL_LONGVARCHAR, SQL_LONGVARBINARY ou un type de données spécifiques à la source de données de type long) que celle spécifiée avec le *StrLen_or_IndPtr* argument dans **SQLBindParameter**.<br /><br /> Le type d’information SQL_NEED_LONG_DATA_LEN dans **SQLGetInfo** était « Y » et moins de données a été envoyées pour une colonne longue (le type de données a été SQL_LONGVARCHAR, SQL_LONGVARBINARY ou un type de données spécifiques à la source de données de type long) que celle spécifiée dans la mémoire tampon de longueur correspondant à une colonne dans une ligne de données qui a été ajoutées ou mis à jour avec **SQLBulkOperations** ou mis à jour avec **SQLSetPos**.|  
 |40001|Échec de la sérialisation|La transaction a été annulée en raison d’un blocage de ressource avec une autre transaction.|  
 |40003|Saisie semi-automatique des instructions inconnue|Échec de la connexion associée lors de l’exécution de cette fonction, et l’état de la transaction ne peut pas être déterminé.|  
 |HY000|Erreur générale|Une erreur s’est produite pour laquelle aucun code SQLSTATE spécifique est survenu et pour lequel aucune SQLSTATE spécifiques à l’implémentation a été défini. Le message d’erreur retourné par **SQLGetDiagRec** dans le  *\*MessageText* tampon décrit l’erreur et sa cause.|  
@@ -82,7 +82,7 @@ SQLRETURN SQLParamData(
   
  Lorsqu’une application appelle **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, ou **SQLSetPos**, le pilote retourne SQL_NEED_ DONNÉES si elle a besoin de données de data-at-execution. Une application appelle ensuite **SQLParamData** pour déterminer les données à envoyer. Si le pilote nécessite des données de paramètre, le pilote retourne dans le  *\*ValuePtrPtr* sortie de la mémoire tampon la valeur de l’application placée dans le tampon de l’ensemble de lignes. L’application peut utiliser cette valeur pour déterminer les données de paramètre demande le pilote. Si le pilote requiert des données de la colonne, le pilote retourne dans le  *\*ValuePtrPtr* mettre en mémoire tampon l’adresse de la colonne a été initialement liée, comme suit :  
   
- *Lié adresse* + *liaison décalage* + ((*numéro de ligne* – 1) x *taille de l’élément*)  
+ *Lié adresse* + *liaison décalage* + ((*numéro de ligne* - 1) x *taille de l’élément*)  
   
  où les variables sont définies comme indiqué dans le tableau suivant.  
   

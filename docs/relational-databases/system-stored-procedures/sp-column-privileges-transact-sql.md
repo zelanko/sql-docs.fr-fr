@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0926afa9cb434f105dfbd817f5c6bac9663fa5d1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c9f8ded0dfc540ab695342fc1765bf53e880ec0e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644148"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538065"
 ---
 # <a name="spcolumnprivileges-transact-sql"></a>sp_column_privileges (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ sp_column_privileges [ @table_name = ] 'table_name'
  Si l'utilisateur actuel possède une table ayant le nom spécifié, ce sont les colonnes de cette table qui sont retournées. Si *table_owner* n’est pas spécifié et l’utilisateur actuel ne possède pas d’une table avec la valeur *table_name*, sp_column privileges recherche une table avec la valeur *table_name* appartenant au propriétaire de la base de données. S'il en existe une, les colonnes de cette table sont retournées.  
   
  [ @table_qualifier=] '*table_qualifier*'  
- Nom du qualificateur de la table. *TABLE_QUALIFIER* est *sysname*, avec NULL comme valeur par défaut. Divers produits SGBD prennent en charge la dénomination en trois parties pour les tables (*qualificateur ***.*** propriétaire ***.*** nom*). Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cette colonne représente le nom de la base de données. Dans d'autres produits, elle représente le nom du serveur de l'environnement de base de données de la table.  
+ Nom du qualificateur de la table. *TABLE_QUALIFIER* est *sysname*, avec NULL comme valeur par défaut. Divers produits SGBD prennent en charge la dénomination en trois parties pour les tables (_qualificateur_**.** _propriétaire_**.** _nom_). Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cette colonne représente le nom de la base de données. Dans d'autres produits, elle représente le nom du serveur de l'environnement de base de données de la table.  
   
  [ @column_name=] '*colonne*'  
  Colonne unique utilisée lorsqu'une seule colonne d'informations de catalogue est obtenue. *colonne* est **nvarchar (** 384 **)**, avec NULL comme valeur par défaut. Si *colonne* est ne pas spécifié, toutes les colonnes sont retournées. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], *colonne* représente le nom de colonne indiqué dans la table sys.columns. *colonne* peut inclure des caractères génériques basés sur les modèles de comparaison du SGBD sous-jacent. Pour assurer une interopérabilité maximale, le client de la passerelle ne doit utiliser que les modèles de comparaison standard ISO (caractères génériques % et _).  
@@ -75,7 +75,7 @@ sp_column_privileges [ @table_name = ] 'table_name'
 ## <a name="remarks"></a>Notes  
  Avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les autorisations sont accordées par l'instruction GRANT et révoquées par l'instruction REVOKE.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation SELECT sur le schéma.  
   
 ## <a name="examples"></a>Exemples  

@@ -14,12 +14,12 @@ ms.assetid: 29fb9f7d-ba65-49fd-9cbc-4c380869de96
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 01149b1f75c78ba5ca6da467abf8955adf41f2f0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 54a38a78f990ff4c2cc48c7277146dd0c2a07ee2
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170399"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354819"
 ---
 # <a name="using-the-winforms-reportviewer-control"></a>Utilisation du contrôle Windows Forms ReportViewer
   Pour consulter des rapports déployés sur un serveur de rapports ou situés sur le système de fichiers local, vous pouvez utiliser le contrôle WinForms ReportViewer afin de les restituer dans une application Windows.  
@@ -42,7 +42,7 @@ ms.locfileid: "48170399"
   
  Une fois le contrôle ajouté au formulaire, la balise active **Tâches ReportViewer** s’affiche et vous invite à sélectionner un rapport.  
   
- Si le rapport que vous souhaitez afficher a été déployé sur un serveur de rapports, sélectionnez l’option **\<Rapport du serveur>** dans la liste déroulante **Choisir un rapport**. Une fois l’option **\<Rapport du serveur>** sélectionnée, deux propriétés supplémentaires apparaissent : **URL de Report Server** et **Chemin d’accès au rapport**. **L’URL de Report Server** correspond à l’adresse du serveur de rapports et le **Chemin d’accès au rapport** correspond au chemin complet au rapport à restituer.  
+ Si le rapport que vous souhaitez afficher a été déployé sur un serveur de rapports, sélectionnez l’option **\<Rapport du serveur>** dans la liste déroulante **Choisir un rapport**. Après le  **\<rapport du serveur >** option est sélectionnée, deux propriétés supplémentaires apparaissent : **Url du serveur de rapports** et **signaler le chemin d’accès**. **L’URL de Report Server** correspond à l’adresse du serveur de rapports et le **Chemin d’accès au rapport** correspond au chemin complet au rapport à restituer.  
   
  ![Sélectionner le rapport du serveur](../../../2014/reporting-services/media/windowsapp-serverreportsettings.png "Sélectionner le rapport du serveur")  
   
@@ -154,7 +154,7 @@ End Class
   
 3.  Accédez à l'emplacement où vous avez installé le projet d'exemples de rapports [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
-     Pour télécharger les exemples de rapports, accédez à [Exemples de rapports AdventureWorks 2012](http://go.microsoft.com/fwlink/?LinkId=404153).  
+     Pour télécharger les exemples de rapports, accédez à [Exemples de rapports AdventureWorks 2012](https://go.microsoft.com/fwlink/?LinkId=404153).  
   
 4.  Sélectionnez le fichier Sales Order Detail.rdl et cliquez sur le bouton **Ajouter**.  
   

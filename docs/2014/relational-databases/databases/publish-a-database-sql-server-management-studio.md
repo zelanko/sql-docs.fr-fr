@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 ms.assetid: 98b2914e-7147-40af-ba7d-87253bbe8bf9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e9bb58b72cb4a4e785c4dc94b448e5e754ac0c80
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b11aa11f942e6f0f801de36c7d15e17cae4141b7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129739"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353279"
 ---
 # <a name="publish-a-database-sql-server-management-studio"></a>Publier une base de données (SQL Server Management Studio)
   Vous pouvez utiliser l' **Assistant Générer et publier des scripts** pour publier une base de données entière ou des objets de base de données individuels sur un fournisseur d'hébergement Web.  
@@ -25,7 +24,7 @@ ms.locfileid: "48129739"
 >  Les fonctionnalités décrites dans cette rubrique étaient fournies par l'Assistant Publication de base de données. La fonctionnalité de publication a été ajoutée à l'Assistant Générer et publier des scripts, et l'Assistant Publication de base de données a été supprimé.  
   
 ## <a name="generate-and-publish-scripts-wizard"></a>Assistant Générer et publier des scripts  
- L'Assistant Générer et publier des scripts peut être utilisé pour publier une base de données ou des objets de base de données sélectionnés sur un fournisseur d'hébergement Web. Un fournisseur d'hébergement Web SQL Server est une interface de connectivité vers un service Web. Le service Web est créé à l'aide du projet Database Publishing Services depuis le SQL Server Hosting Toolkit sur CodePlex. Le service Web permet aux clients de l'hébergeur Web de publier plus facilement leurs bases de données sur le service à l'aide de l'Assistant Générer et publier des scripts. Pour plus d'informations sur le téléchargement du SQL Server Hosting Toolkit, consultez [SQL Server Database Publishing Services](http://go.microsoft.com/fwlink/?LinkId=142025)(en anglais).  
+ L'Assistant Générer et publier des scripts peut être utilisé pour publier une base de données ou des objets de base de données sélectionnés sur un fournisseur d'hébergement Web. Un fournisseur d'hébergement Web SQL Server est une interface de connectivité vers un service Web. Le service Web est créé à l'aide du projet Database Publishing Services depuis le SQL Server Hosting Toolkit sur CodePlex. Le service Web permet aux clients de l'hébergeur Web de publier plus facilement leurs bases de données sur le service à l'aide de l'Assistant Générer et publier des scripts. Pour plus d'informations sur le téléchargement du SQL Server Hosting Toolkit, consultez [SQL Server Database Publishing Services](https://go.microsoft.com/fwlink/?LinkId=142025)(en anglais).  
   
  L'Assistant Générer et publier des scripts peut également être utilisé pour créer un script pour le transfert d'une base de données.  
   

@@ -11,18 +11,18 @@ ms.assetid: 15459396-83c9-48a0-b10a-99ae38768c79
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: cfdec0d2b77b88cff7fad643606ee3da001a67a3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 92abf8eb92301af8dd3bf32d5ac5f6a38b1b5481
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174339"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351268"
 ---
-# <a name="lesson-8-defining-actions"></a>Leçon 8 : Définition des actions
+# <a name="lesson-8-defining-actions"></a>Leçon 8 : Définition des actions
   Dans cette leçon, vous allez apprendre à définir des actions dans votre projet [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Une action est simplement une instruction MDX (Multidimensional Expressions) qui est stockée dans [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] et peut être incorporée dans des applications clientes et démarrée par un utilisateur.  
   
 > [!NOTE]  
->  Les projets achevés de toutes les leçons de ce didacticiel sont disponibles en ligne. Vous pouvez sauter des leçons en utilisant le projet achevé de la leçon précédente comme point de départ. [Cliquez ici](http://go.microsoft.com/fwlink/?LinkID=221866) pour télécharger les exemples de projet de ce didacticiel.  
+>  Les projets achevés de toutes les leçons de ce didacticiel sont disponibles en ligne. Vous pouvez sauter des leçons en utilisant le projet achevé de la leçon précédente comme point de départ. [Cliquez ici](https://go.microsoft.com/fwlink/?LinkID=221866) pour télécharger les exemples de projet de ce didacticiel.  
   
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] prend en charge les types d’actions décrits dans le tableau suivant.  
   
@@ -45,11 +45,11 @@ ms.locfileid: "48174339"
   
  Cette leçon inclut la tâche suivante :  
   
- [Définition et utilisation d’une action d’extraction](lesson-8-1-defining-and-using-a-drillthrough-action.md)  
+ [Définition et utilisation d'une action d'extraction](lesson-8-1-defining-and-using-a-drillthrough-action.md)  
  Dans cette tâche, vous définissez, utilisez puis modifiez une action d'extraction à travers la relation de dimension de fait que vous avez définie antérieurement dans ce didacticiel.  
   
 ## <a name="next-lesson"></a>Leçon suivante  
- [Leçon 9 : Définition de perspectives et de traductions](lesson-9-defining-perspectives-and-translations.md)  
+ [Leçon 9 : Définition de Perspectives et traductions](lesson-9-defining-perspectives-and-translations.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Scénario du didacticiel Analysis Services](analysis-services-tutorial-scenario.md)   

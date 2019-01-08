@@ -10,23 +10,23 @@ ms.assetid: 64dfe192-965c-49d4-a3ea-848fbc5f619f
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 4c7f94672642e0a5d8fa8979dd3972f608519ce5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5258a95b713da0ec1fe526e94ce11c6e5e0b595c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799357"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539153"
 ---
 # <a name="creating-script-files-accesstosql"></a>Création de fichiers de script (AccessToSQL)
 La première étape avant le lancement de l’application de console SSMA consiste à créer le fichier de script et, si nécessaire de créer le fichier de la valeur de la variable et le fichier de connexion de serveur.  
   
 Le fichier de script peut être divisé en trois sections, reportages.., :  
   
-1.  **config :** permet à l’utilisateur définir les paramètres de configuration pour l’application de console.  
+1.  **configuration :** Permet à l’utilisateur définir les paramètres de configuration pour l’application de console.  
   
-2.  **serveurs :** permet à l’utilisateur définir des définitions de serveur de la source/cible. Cela peut également être dans un fichier de connexion de serveur distinct.  
+2.  **serveurs :** Permet à l’utilisateur définir des définitions de serveur de la source/cible. Cela peut également être dans un fichier de connexion de serveur distinct.  
   
-3.  **commandes de script :** permet à l’utilisateur d’exécuter des commandes de flux de travail SSMA.  
+3.  **commandes de script :** Permet à l’utilisateur d’exécuter des commandes de flux de travail SSMA.  
   
 Chaque section est décrite en détail ci-dessous :  
   
@@ -37,13 +37,13 @@ Si un des éléments sont spécifié dans le noeud configuration, elles sont dé
   
 Les options configurables par l’utilisateur sont les suivantes :  
   
-1.  **Fournisseur de fenêtre de sortie :** si l’attribut de messages supprimer est défini sur « true », la commande spécifique messages ne pas s’affichent sur la console. La description des attributs est donnée ci-dessous :  
+1.  **Fournisseur de fenêtre de sortie :** Si l’attribut de messages supprimer est défini sur « true », la commande spécifique messages ne pas s’affichent sur la console. La description des attributs est donnée ci-dessous :  
   
     -   destination : Spécifie si la sortie doit obtenir imprimé à un fichier ou à stdout. Cela a la valeur false par défaut.  
   
-    -   nom de fichier : le chemin d’accès du fichier (facultatif).  
+    -   nom de fichier : Le chemin d’accès du fichier (facultatif).  
   
-    -   supprimer-messages : supprime les messages sur la console. Cela est « false » par défaut.  
+    -   supprimer-messages : Supprime les messages sur la console. Cela est « false » par défaut.  
   
     **Exemple :**  
   
@@ -62,10 +62,10 @@ Les options configurables par l’utilisateur sont les suivantes :
   
     </output-providers>  
     ```  
-    *Ou*  
+    *ou Gestionnaire de configuration*  
   
     ```xml  
-    <…All commands…>  
+    <...All commands...>  
   
       <output-window  
   
@@ -77,10 +77,10 @@ Les options configurables par l’utilisateur sont les suivantes :
   
        />  
   
-    </…All commands…>  
+    </...All commands...>  
     ```  
   
-2.  **Fournisseur de connexion de Migration de données :** qui spécifie le serveur source/cible est à prendre en compte pour la migration de données.  Source-utilisation-last-used indique que le dernier serveur source utilisé est utilisé pour la migration de données. De même cible-utilisation-last-used indique que le dernier serveur cible utilisée est utilisé pour la migration de données. L’utilisateur peut également spécifier le serveur (source ou cible) en utilisant les attributs source ou cible-serveurs.  
+2.  **Fournisseur de connexion de Migration de données :** Qui spécifie le serveur source/cible est à prendre en compte pour la migration de données.  Source-utilisation-last-used indique que le dernier serveur source utilisé est utilisé pour la migration de données. De même cible-utilisation-last-used indique que le dernier serveur cible utilisée est utilisé pour la migration de données. L’utilisateur peut également spécifier le serveur (source ou cible) en utilisant les attributs source ou cible-serveurs.  
   
     Seuls un ou l’autre attribut spécifié permet par exemple :  
   
@@ -99,7 +99,7 @@ Les options configurables par l’utilisateur sont les suivantes :
   
     </output-providers>  
     ```  
-    *Ou*  
+    *ou Gestionnaire de configuration*  
   
     ```xml  
     <migrate-data>  
@@ -132,7 +132,7 @@ Les options configurables par l’utilisateur sont les suivantes :
   
     </output-providers>  
     ```  
-    *Ou*  
+    *ou Gestionnaire de configuration*  
   
     ```xml  
     <!-- Connect to target database -->  
@@ -148,9 +148,9 @@ Les options configurables par l’utilisateur sont les suivantes :
   
     Les modes de reconnexion sont :  
   
-    -   se reconnecter-last-utilisé-serveur : si la connexion n’est pas active, il tente de se reconnecter au dernier serveur utilisé au maximum 5 fois.  
+    -   se reconnecter-last-utilisé-serveur : Si la connexion n’est pas active, il tente de se reconnecter au dernier serveur utilisé au maximum 5 fois.  
   
-    -   générer une erreur : si la connexion n’est pas active, une erreur est générée.  
+    -   générer une-erreur : Si la connexion n’est pas active, une erreur est générée.  
   
     Le mode par défaut est **générer une erreur**.  
   
@@ -165,7 +165,7 @@ Les options configurables par l’utilisateur sont les suivantes :
   
     </output-providers>  
     ```  
-    *Ou*  
+    *ou Gestionnaire de configuration*  
   
     ```xml  
     <!--synchronization-->  
@@ -176,7 +176,7 @@ Les options configurables par l’utilisateur sont les suivantes :
   
     </synchronize-target>  
     ```  
-    *Ou*  
+    *ou Gestionnaire de configuration*  
   
     ```xml  
     <!--data migration-->  
@@ -192,15 +192,15 @@ Les options configurables par l’utilisateur sont les suivantes :
     </migrate-data>  
     ```  
   
-5.  **Fournisseur de remplacement de convertisseur :** Cela permet à l’utilisateur gérer les objets qui sont déjà présents sur la cible de la métabase. Les actions possibles sont les suivantes :  
+5.  **Convertisseur de remplacer le fournisseur :** Cela permet à l’utilisateur gérer les objets qui sont déjà présents sur la cible de la métabase. Les actions possibles sont les suivantes :  
   
-    -   Erreur : la console affiche une erreur et interrompt l’exécution.  
+    -   Erreur : La console affiche une erreur et interrompt l’exécution.  
   
-    -   remplacer : remplace les valeurs d’objet existantes. Cette action est effectuée par défaut.  
+    -   remplacer : Remplace les valeurs d’objet existantes. Cette action est effectuée par défaut.  
   
-    -   Ignorer : la console ignore les objets qui existent déjà sur la base de données  
+    -   Ignorer : La console ignore les objets qui existent déjà sur la base de données  
   
-    -   utilisateur poser : invite l’utilisateur pour l’entrée (« Oui » / « non »)  
+    -   utilisateur poser : Invite l’utilisateur pour l’entrée (« Oui » / « non »)  
   
     **Exemple :**  
   
@@ -211,7 +211,7 @@ Les options configurables par l’utilisateur sont les suivantes :
   
     </output-providers>  
     ```  
-    *Ou*  
+    *ou Gestionnaire de configuration*  
   
     ```xml  
     <convert-schema object-name="ssma.TT1">  
@@ -233,11 +233,11 @@ Les options configurables par l’utilisateur sont les suivantes :
     </output-providers>  
     ```  
   
-7.  **Opération d’arrêt :** pendant l’opération intermédiaire, si l’utilisateur veut arrêter l’opération, puis **« Ctrl + C »** raccourci clavier peut être utilisé. SSMA pour Access Console attendra la fin d’opération et termine l’exécution de la console.  
+7.  **Arrêter l’opération :** Pendant l’opération intermédiaire, si l’utilisateur veut arrêter l’opération, puis **« Ctrl + C »** raccourci clavier peut être utilisé. SSMA pour Access Console attendra la fin d’opération et termine l’exécution de la console.  
   
     Si l’utilisateur souhaite arrêter l’exécution immédiatement, puis, **« Ctrl + C »** raccourci clavier peut être enfoncée à nouveau pour un arrêt soudain de l’application de Console SSMA.  
   
-8.  **Fournisseur de progression :** indique la progression de chaque commande de console. Il est désactivé par défaut. Les attributs de rapport de progression comprennent :  
+8.  **Fournisseur de progression :** Indique la progression de chaque commande de console. Il est désactivé par défaut. Les attributs de rapport de progression comprennent :  
   
     -   inactif  
   
@@ -264,10 +264,10 @@ Les options configurables par l’utilisateur sont les suivantes :
   
     </output-providers>  
     ```  
-    *Ou*  
+    *ou Gestionnaire de configuration*  
   
     ```xml  
-    <…All commands…>  
+    <...All commands...>  
   
       <progress-reporting  
   
@@ -277,22 +277,22 @@ Les options configurables par l’utilisateur sont les suivantes :
   
         report-progress="every-1%|every-2%|every-5%|every-10%|every-20%|off"     (optional)/>  
   
-    </…All commands…>  
+    </...All commands...>  
     ```  
   
-9. **Détail de l’enregistreur d’événements :** jeux de journaux de niveau de détail. Cela correspond à l’option de toutes les catégories dans l’interface utilisateur. Par défaut, le niveau de détail du journal est « erreur ».  
+9. **Détail de l’enregistreur d’événements :** Jeux de connecter un niveau de détail. Cela correspond à l’option de toutes les catégories dans l’interface utilisateur. Par défaut, le niveau de détail du journal est « erreur ».  
   
     Les options au niveau de l’enregistreur d’événements sont les suivantes :  
   
-    -   Erreur irrécupérable : uniquement-erreur irrécupérable sont enregistrés.  
+    -   Erreur irrécupérable : Seuls les messages d’erreur irrécupérable sont enregistrés.  
   
-    -   Erreur : seuls les messages d’erreur et d’erreur irrécupérable sont enregistrés.  
+    -   Erreur : Seuls les messages d’erreur et d’erreur irrécupérable sont enregistrés.  
   
-    -   Avertissement : tous les niveaux à l’exception des messages de débogage et les informations sont enregistrées.  
+    -   Avertissement : Tous les niveaux à l’exception des messages de débogage et les informations sont enregistrées.  
   
-    -   Info : tous les niveaux sauf les messages de débogage sont enregistrés.  
+    -   Info : Tous les niveaux à l’exception des messages de débogage sont enregistrés.  
   
-    -   déboguer : tous les niveaux des messages consignés.  
+    -   Débogage : Tous les niveaux de messages consignés.  
   
     > [!NOTE]  
     > Messages obligatoires sont enregistrés à n’importe quel niveau.  
@@ -306,17 +306,17 @@ Les options configurables par l’utilisateur sont les suivantes :
   
     </output-providers>  
     ```  
-    *Ou*  
+    *ou Gestionnaire de configuration*  
   
     ```xml  
-    <…All commands…>  
+    <...All commands...>  
   
       <log-verbosity level="fatal-error/error/warning/info/debug"/>  
   
-    </…All commands…>  
+    </...All commands...>  
     ```  
   
-10. **Mot de passe chiffré override :** si 'true', le mot de passe de texte en clair spécifiée dans la section de définition de serveur du fichier de connexion du serveur ou dans le fichier de script, substitutions de mot de passe chiffré stocké dans protégé stockage si existe. Si aucun mot de passe n’est spécifié en texte clair, l’utilisateur est invité à entrer le mot de passe.  
+10. **Remplacer le mot de passe chiffré :** Si « true », le mot de passe de texte en clair spécifiée dans la section de définition de serveur du fichier de connexion du serveur ou dans le fichier de script, substitutions de mot de passe chiffré stocké dans la mémoire protégée si existe. Si aucun mot de passe n’est spécifié en texte clair, l’utilisateur est invité à entrer le mot de passe.  
   
     Ici deux arriver :  
   
@@ -336,7 +336,7 @@ Les options configurables par l’utilisateur sont les suivantes :
   
 L’option non configurable est :  
   
--   **Nombre maximal de tentatives de reconnexion :** lorsqu’une connexion établie expire ou s’arrête en raison de défaillance réseau, le serveur est requis pour être reconnectées. Les tentatives de reconnexion sont autorisées à un maximum de **5** nouvelles tentatives après quoi, la console effectue automatiquement la reconnexion. La fonctionnalité de reconnexion automatique réduit vos efforts sur réexécuter le script.  
+-   **Nombre maximal des tentatives de reconnexion :** Lorsqu’une connexion établie expire ou s’arrête en raison d’une défaillance réseau, le serveur est nécessaire pour être reconnectées. Les tentatives de reconnexion sont autorisées à un maximum de **5** nouvelles tentatives après quoi, la console effectue automatiquement la reconnexion. La fonctionnalité de reconnexion automatique réduit vos efforts sur réexécuter le script.  
   
 ## <a name="server-connection-parameters"></a>Paramètres de connexion de serveur  
 Paramètres de connexion de serveur peuvent être définis dans le fichier de script ou dans le fichier de connexion de serveur. Reportez-vous à la [création des fichiers de connexion de serveur &#40;AccessToSQL&#41; ](../../ssma/access/creating-the-server-connection-files-accesstosql.md) section pour plus d’informations.  
@@ -344,7 +344,7 @@ Paramètres de connexion de serveur peuvent être définis dans le fichier de sc
 ## <a name="script-commands"></a>Commandes de script  
 Le fichier de script contient une séquence de commandes de flux de travail de migration au format XML. L’application de console SSMA traite la migration dans l’ordre les commandes apparaissant dans le fichier de script.  
   
-Par exemple, une migration de données standard d’une table spécifique dans une base de données Access suit la hiérarchie de : base de données -&gt; Table.  
+Par exemple, une migration de données standard d’une table spécifique dans une base de données Access suit la hiérarchie de : Base de données -&gt; Table.  
   
 Lorsque toutes les commandes dans le fichier de script sont exécutées avec succès, l’application de console SSMA se termine et retourne le contrôle à l’utilisateur. Le contenu d’un fichier de script est plus ou moins statique avec des informations sur les variables contenues dans un [les fichiers de valeurs de Variable](creating-variable-value-files-accesstosql.md) ou, dans une section distincte du fichier de script pour les valeurs des variables.  
   

@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 98830c2ca88bef278d14d970c5fa3b9102c850d1
-ms.sourcegitcommit: fafb9b5512695b8e3fc2891f9c5e3abd7571d550
+ms.openlocfilehash: aa533b4bd5b46d841b6ca4750f9cef838cc555ba
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50753475"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209418"
 ---
 # <a name="use-date-and-time-types"></a>Utiliser des types de date et d'heure
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,11 +32,11 @@ ms.locfileid: "50753475"
   
  Cet exemple vous permet de vous connecter à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par défaut de votre ordinateur. Pour vous connecter à une instance nommée, modifiez la définition de la source de données ODBC pour spécifier l'instance en utilisant le format suivant : serveur\namedinstance. Par défaut, [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] est installé dans une instance nommée.  
   
- La première liste de code ([!INCLUDE[tsql](../../includes/tsql-md.md)]) crée une table utilisée par cet exemple.  
+ Le premier ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) liste de code crée une table utilisée par cet exemple.  
   
  Compilez la deuxième liste de code (C++) avec odbc32.lib et user32.lib. Assurez-vous que votre variable d'environnement INCLUDE inclut le répertoire qui contient sqlncli.h.  
   
- La troisième liste de code ([!INCLUDE[tsql](../../includes/tsql-md.md)]) supprime la table utilisée par cet exemple.  
+ Le troisième ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) du code supprime la table utilisée par cet exemple.  
   
 ```sql
 use tempdb  

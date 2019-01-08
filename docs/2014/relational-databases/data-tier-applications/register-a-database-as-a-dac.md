@@ -20,19 +20,19 @@ ms.assetid: 08e52aa6-12f3-41dd-a793-14b99a083fd5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c5bf53045abe0f93e2ff1e07ec17d31f7d58248b
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: c0411281173339c46eb629dc6aad757337b3c41c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814072"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52761449"
 ---
 # <a name="register-a-database-as-a-dac"></a>Inscrire une base de données en tant que DAC
   Utilisez le **Assistant d’Application de couche données inscrire** ou un Windows script PowerShell pour générer une définition d’application (DAC) de couche données qui décrit les objets d’une base de données existante et inscrivez la définition de DAC dans le `msdb` base de données système (**master** dans [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]).  
   
--   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
+-   **Avant de commencer :**  [Limitations et Restrictions](#LimitationsRestrictions), [autorisations](#Permissions)  
   
--   **Pour mettre à niveau une DAC, en utilisant :**  [L’Assistant Inscrire l’application de la couche Données](#UsingRegisterDACWizard), [PowerShell](#RegisterDACPowerShell)  
+-   **Pour mettre à niveau une DAC, à l’aide de :**  [L’Assistant inscrire l’Application de couche données](#UsingRegisterDACWizard), [PowerShell](#RegisterDACPowerShell)  
   
 ## <a name="before-you-begin"></a>Avant de commencer  
  Le processus d'inscription crée une définition de la DAC qui définit les objets de la base de données. La combinaison de la définition de la DAC et de la base de données forme une instance DAC. Si vous inscrivez une base de données comme une DAC sur une instance gérée du moteur de base de données, la DAC inscrite est incorporée dans l'utilitaire SQL Server la prochaine fois que le jeu d'éléments de collecte de l'utilitaire est envoyé de l'instance au point de contrôle de l'utilitaire. La DAC sera ensuite présente dans le nœud **Applications de la couche Données déployées** dans l’ [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **Utility Explorer** and reported in the **Applications de la couche Données déployées** details page.  
@@ -76,7 +76,7 @@ ms.locfileid: "51814072"
 ##  <a name="Set_properties"></a> Page Définir les propriétés  
  Utilisez cette page pour spécifier des propriétés au niveau de la DAC telles que le nom de l'application et sa version.  
   
- **Nom de l'application.** -Une chaîne qui spécifie le nom utilisé pour identifier la définition de la DAC, le champ est rempli avec le nom de la base de données.  
+ **Nom de l'application.** - Chaîne qui spécifie le nom utilisé pour identifier la définition de la DAC. Le champ est renseigné avec le nom de la base de données.  
   
  **Version.** - Valeur numérique qui identifie la version de la DAC. La version de la DAC est utilisée dans Visual Studio pour identifier la version de la DAC sur laquelle les développeurs travaillent. Lorsque vous déployez une DAC, la version est stockée dans le `msdb` de base de données et peut être affichée ultérieurement sous le **Applications de couche données** nœud [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
@@ -109,7 +109,7 @@ ms.locfileid: "51814072"
   
  **Annuler** : termine l’Assistant sans inscrire la DAC.  
   
-### <a name="summary"></a>Résumé  
+### <a name="summary"></a>Récapitulatif  
  **Le paramètre suivant sera utilisé pour inscrire votre DAC.** - Affiche un rapport des propriétés et objets qui seront inclus dans la DAC.  
   
  **Enregistrer le rapport** : sélectionnez ce bouton pour enregistrer une copie du rapport de validation dans un fichier HTML. Le dossier par défaut est un dossier **SQL Server Management Studio\DAC Packages** dans le dossier Documents de votre compte Windows.  

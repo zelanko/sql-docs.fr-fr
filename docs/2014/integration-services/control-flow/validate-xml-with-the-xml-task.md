@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - XML validation
@@ -14,21 +13,21 @@ ms.assetid: 224fc025-c21f-4d43-aa9d-5ffac337f9b0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 77ddc157323e7134c9e34ad79de459948635de19
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4c095e939472c4c0bea37ff27da10dd47c9ca3de
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48062092"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360451"
 ---
 # <a name="validate-xml-with-the-xml-task"></a>Validate XML with the XML Task
-  Valider des documents XML et obtenez la sortie d’erreur détaillée en activant le `ValidationDetails` propriété de la tâche XML.  
+  Validez des documents XML et obtenez une sortie d’erreur détaillée en activant la propriété `ValidationDetails` de la tâche XML.  
   
  La capture d’écran ci-après affiche l’ **Éditeur de tâche XML** avec les paramètres requis pour l’exécution d’une validation XML avec une sortie d’erreur détaillée.  
   
  ![Propriétés de la tâche XML dans l’Éditeur de tâche XML](../media/xmltaskproperties.jpg "Propriétés de la tâche XML dans l’Éditeur de tâche XML")  
   
- Avant du `ValidationDetails` propriété n’était disponible, la validation de XML par la tâche XML ne renvoyait qu’un résultat true ou false, sans aucune information sur les erreurs ou leur emplacement. Désormais, lorsque vous définissez `ValidationDetails` sur true, la sortie de fichier contient des informations détaillées sur chaque erreur, notamment le numéro de ligne et la position. Vous pouvez utiliser ces informations pour comprendre, localiser et corriger les erreurs dans les documents XML.  
+ Avant que la propriété `ValidationDetails` ne soit disponible, la validation XML par la tâche XML ne renvoyait qu’un résultat true ou false, sans aucune information sur les erreurs ou leur emplacement. À présent, quand vous définissez `ValidationDetails` sur true, le fichier de sortie contient des informations détaillées sur chaque erreur, notamment le numéro de ligne et la position. Vous pouvez utiliser ces informations pour comprendre, localiser et corriger les erreurs dans les documents XML.  
   
  La fonctionnalité de validation XML s’adapte aisément aux documents XML volumineux et aux nombres d’erreurs élevés. Étant donné que le fichier de sortie proprement dit présente le format XML, vous pouvez exécuter des requêtes sur la sortie et analyser cette dernière. Par exemple, si la sortie contient un grand nombre d’erreurs, vous pouvez regrouper les erreurs en exécutant une requête [!INCLUDE[tsql](../../../includes/tsql-md.md)] , comme décrit dans cette rubrique.  
   
@@ -40,7 +39,7 @@ ms.locfileid: "48062092"
   
 ```xml  
   
-<root xmlns:ns="http://schemas.microsoft.com/xmltools/2002/xmlvalidation">  
+<root xmlns:ns="https://schemas.microsoft.com/xmltools/2002/xmlvalidation">  
     <metadata>  
         <result>true</result>  
         <errors>0</errors>  
@@ -59,7 +58,7 @@ ms.locfileid: "48062092"
   
 ```xml  
   
-<root xmlns:ns="http://schemas.microsoft.com/xmltools/2002/xmlvalidation">  
+<root xmlns:ns="https://schemas.microsoft.com/xmltools/2002/xmlvalidation">  
     <metadata>  
         <result>false</result>  
         <errors>2</errors>  
@@ -89,7 +88,7 @@ FROM OPENROWSET (BULK N'C:\Temp\XMLValidation_2016-02-212T10-41-00.xml', SINGLE_
   
 -- Query # 1, flat list of errors  
 -- convert to relational/rectangular  
-;WITH XMLNAMESPACES ('http://schemas.microsoft.com/xmltools/2002/xmlvalidation' AS ns), rs AS  
+;WITH XMLNAMESPACES ('https://schemas.microsoft.com/xmltools/2002/xmlvalidation' AS ns), rs AS  
 (  
 SELECT col.value('@line','INT') AS line  
      , col.value('@position','INT') AS position  
@@ -97,11 +96,11 @@ SELECT col.value('@line','INT') AS line
 FROM @XML.nodes('/root/messages/error') AS tab(col)  
 )  
 SELECT * FROM rs;  
--- WHERE error LIKE ‘%whatever_string%’  
+-- WHERE error LIKE '%whatever_string%'  
   
 -- Query # 2, count of errors grouped by the error message  
 -- convert to relational/rectangular  
-;WITH XMLNAMESPACES ('http://schemas.microsoft.com/xmltools/2002/xmlvalidation' AS ns), rs AS  
+;WITH XMLNAMESPACES ('https://schemas.microsoft.com/xmltools/2002/xmlvalidation' AS ns), rs AS  
 (  
 SELECT col.value('@line','INT') AS line  
      , col.value('@position','INT') AS position  
@@ -121,6 +120,6 @@ ORDER BY 2 DESC, COALESCE(error, 'Z');
   
 ## <a name="see-also"></a>Voir aussi  
  [Tâche XML](xml-task.md)   
- [Éditeur de tâche XML &#40;Page Général&#41;](../xml-task-editor-general-page.md)  
+ [Éditeur de tâche XML &#40;page Général&#41;](../xml-task-editor-general-page.md)  
   
   

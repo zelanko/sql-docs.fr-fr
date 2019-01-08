@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: 0fc668d4-6244-4fef-b90e-62d2c776cd7c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 69abea91334f53993fec78e2204cee1573afd780
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ac903ecb951e98e29dcd6521f8c9623f8cc62768
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181579"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52754251"
 ---
 # <a name="list-job-category-information"></a>Répertorier les informations de catégorie de travaux
   Comment répertorier les informations de catégorie de travaux dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l’aide de [!INCLUDE[tsql](../../includes/tsql-md.md)] ou SQL Server Management Objects.  
@@ -51,7 +51,7 @@ ms.locfileid: "48181579"
 ##  <a name="SMO"></a> À l’aide de SQL Server Management Objects  
  **Pour répertorier les informations de catégorie de travaux**  
   
- Utilisez la `JobCategory` classe à l’aide d’un langage de programmation que vous choisissez, tel que Visual Basic, Visual c# ou PowerShell... Pour plus d’informations, consultez [SQL Server Management Objects &#40;SMO&#41; Guide de programmation](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md).  
+ Utilisez la classe `JobCategory` dans le langage de programmation de votre choix, par exemple Visual Basic, Visual C# ou PowerShell. Pour plus d’informations, consultez [SQL Server Management Objects &#40;SMO&#41; Guide de programmation](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md).  
   
   
   

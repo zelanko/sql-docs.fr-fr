@@ -18,12 +18,12 @@ ms.assetid: e94b37a1-70ad-46a5-86c0-721892156f7c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a1a61fa55fc9f2b1209d0f7da7f483c0fedce07f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fb2db3e60d416324a413bf9d6eb69f6125bc00b5
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649204"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53588455"
 ---
 # <a name="sysmaildeletelogsp-transact-sql"></a>sysmail_delete_log_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,10 +42,10 @@ sysmail_delete_log_sp  [ [ @logged_before = ] 'logged_before' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ **@logged_before** =] **'***logged_before***'**  
+ [ **@logged_before** =] **'**_logged_before_**'**  
  Supprime les entrées antérieures à la date et l’heure spécifiée par le *logged_before* argument. *logged_before* est **datetime** avec NULL comme valeur par défaut. La valeur NULL correspond à toutes les dates.  
   
- [ **@event_type** =] **'***event_type***'**  
+ [ **@event_type** =] **'**_event_type_**'**  
  Supprime les entrées du type spécifié en tant que journal le *event_type*. *event_type* est **varchar(15)** sans valeur par défaut. Les entrées valides sont **réussite**, **avertissement**, **erreur**, et **d’information**. La valeur NULL correspond à tous les types d'événements.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
@@ -56,7 +56,7 @@ sysmail_delete_log_sp  [ [ @logged_before = ] 'logged_before' ]
   
  La suppression d'entrées dans le journal de la messagerie de base de données n'entraîne pas la suppression d'entrées de messages électroniques dans les tables de la messagerie de base de données. Utilisez [sysmail_delete_mailitems_sp](../../relational-databases/system-stored-procedures/sysmail-delete-mailitems-sp-transact-sql.md) à supprimer du courrier électronique à partir de tables de la messagerie de base de données.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Seuls les membres de la **sysadmin** rôle serveur fixe peut accéder à cette procédure.  
   
 ## <a name="examples"></a>Exemples  
@@ -69,7 +69,7 @@ EXECUTE msdb.dbo.sysmail_delete_log_sp ;
 GO  
 ```  
   
-### <a name="b-deleting-the-oldest-events"></a>B. Suppression des événements les plus anciens  
+### <a name="b-deleting-the-oldest-events"></a>b. Suppression des événements les plus anciens  
  L'exemple suivant supprime les événements du journal de la messagerie de base de données qui sont antérieurs au 9 octobre 2005.  
   
 ```  

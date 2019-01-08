@@ -11,21 +11,21 @@ ms.assetid: 97bc2ce7-af04-4372-ad79-c96b8c3417ab
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: a80e3134fc734f962fa9b082374dc3f9c4a74ba2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 471bfe1a93e76630e6699a2ff07fcf5c6bddc913
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147249"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368601"
 ---
 # <a name="troubleshoot-a-powerpivot-for-sharepoint-installation"></a>Dépanner une installation PowerPivot pour SharePoint
   Si vous obtenez des erreurs au lieu des pages et fonctionnalités attendues, procédez comme indiqué ci-dessous.  
   
 -   Lisez les notes de publication pour SharePoint et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] pour prendre connaissance des solutions de contournement pour les problèmes d'installation connus. Les notes de publication sont fournies avec le support d'installation ou sur le site Microsoft à partir duquel vous avez téléchargé le logiciel.  
   
-    -   [Notes de mise à jour de SQL Server 2014](http://technet.microsoft.com/library/dn169381\(v=sql.15\).aspx).  
+    -   [Notes de mise à jour de SQL Server 2014](https://technet.microsoft.com/library/dn169381\(v=sql.15\).aspx).  
   
--   Consultez la rubrique wiki Technet, [Dépannage des installations de PowerPivot (et autres compléments)](http://social.technet.microsoft.com/wiki/contents/articles/13737.troubleshooting-installations-of-powerpivot-and-other-add-ins.aspx).  
+-   Consultez la rubrique wiki Technet, [Dépannage des installations de PowerPivot (et autres compléments)](https://social.technet.microsoft.com/wiki/contents/articles/13737.troubleshooting-installations-of-powerpivot-and-other-add-ins.aspx).  
   
 ## <a name="issues"></a>Problèmes  
   
@@ -40,6 +40,6 @@ ms.locfileid: "48147249"
   
 4.  Vérifiez que **Fonctionnalité d'intégration PowerPivot pour les collections de sites** est **Activée**.  
   
- Pour d’autres causes de ce problème, consultez [galerie PowerPivot affiche des croix (x) rouge pour les icônes](http://support.microsoft.com/kb/2361559) (http://support.microsoft.com/kb/2361559).  
+ Pour d’autres causes de ce problème, consultez [galerie PowerPivot affiche des croix (x) rouge pour les icônes](https://support.microsoft.com/kb/2361559) (https://support.microsoft.com/kb/2361559).  
   
   

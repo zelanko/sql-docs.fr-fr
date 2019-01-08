@@ -10,18 +10,18 @@ ms.assetid: 9fe06b03-d98c-4337-9f89-54da98f49f9f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 75845ceafbf776eb15a30b3289de97573109c4d8
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 001c489d9abf887495ea83cee00cede1463514ca
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018188"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376661"
 ---
 # <a name="circularstring"></a>CircularString
   Un `CircularString` est une collection de zéro ou plusieurs segments d'arc de cercle continus. Un segment d'arc de cercle est un segment courbé défini par trois points dans un plan à deux dimensions ; le premier point doit être différent du troisième point. Si les trois points d'un segment d'arc de cercle sont colinéaires, le segment d'arc est traité comme un segment de ligne.  
   
 > [!IMPORTANT]  
->  Pour obtenir une description détaillée et des exemples de nouvelles fonctionnalités spatiales introduites dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], y compris le `CircularString` sous-type, téléchargez le livre blanc, [nouvelles fonctionnalités spatiales dans SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=226407).  
+>  Pour obtenir une description détaillée et des exemples de nouvelles fonctionnalités spatiales introduites dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], y compris le `CircularString` sous-type, téléchargez le livre blanc, [nouvelles fonctionnalités spatiales dans SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=226407).  
   
 ## <a name="circularstring-instances"></a>Instances CircularString  
  Le dessin suivant montre des instances `CircularString` valides :  
@@ -66,7 +66,7 @@ DECLARE @g4 geometry = 'CIRCULARSTRING(1 1, 2 2, 2 2)';
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(),@g4.STIsValid();  
 ```  
   
- Une instance `CircularString` doit contenir au moins deux segments d'arc de cercle pour définir un cercle complet. Une instance `CircularString` ne peut pas utiliser un seul segment d'arc de cercle (tel que (1 1, 3 1, 1 1)) pour définir un cercle complet. Utilisez (1 1, 2 2, 3 1, 2 0, 1 1) pour définir le cercle.  
+ Une instance `CircularString` doit contenir au moins deux segments d'arc de cercle pour définir un cercle complet. Une instance `CircularString` ne peut pas utiliser un seul segment d'arc de cercle (tel que (1 1, 3 1, 1 1)) pour définir un cercle complet. Utilisez (1 1, 2 2, 3 1, 2 0, 1 1) pour définir le cercle.  
   
  L'exemple suivant montre des instances CircularString qui ne sont pas valides.  
   
@@ -95,7 +95,7 @@ DECLARE @g geometry;
 SET @g = geometry::Parse('CIRCULARSTRING EMPTY');  
 ```  
   
-### <a name="b-instantiating-a-geometry-instance-using-a-circularstring-with-one-circular-arc-segment"></a>B. Instanciation d'une instance géométrique à l'aide d'un CircularString avec un segment d'arc de cercle  
+### <a name="b-instantiating-a-geometry-instance-using-a-circularstring-with-one-circular-arc-segment"></a>b. Instanciation d'une instance géométrique à l'aide d'un CircularString avec un segment d'arc de cercle  
  L'exemple suivant indique comment créer une instance `CircularString` avec un segment d'arc de cercle unique (demi-cercle) :  
   
 ```tsql  
@@ -133,7 +133,7 @@ SELECT 'Perimeter = ' + CAST(@g.STLength() AS NVARCHAR(10));
 Perimeter = 5.65685  
 ```  
   
- Notez que la valeur de la `CircularString` exemple est proche de 2∏, qui est la réelle circonférence du cercle.  
+ Notez que la valeur de la `CircularString` exemple est proche de 2 ???, qui est la réelle circonférence du cercle.  
   
 ### <a name="d-declaring-and-instantiating-a-geometry-instance-with-a-circularstring-in-the-same-statement"></a>D. Déclaration et instanciation d'une instance géométrique avec un CircularString dans la même instruction  
  Cet extrait de code indique comment déclarer et instancier une instance `geometry` avec un `CircularString` dans la même instruction :  

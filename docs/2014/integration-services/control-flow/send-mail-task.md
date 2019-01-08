@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.sendmailtask.f1
@@ -19,12 +18,12 @@ ms.assetid: fe0b7cbc-fe8e-4fe2-95b4-2953efff5869
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 799fe96b22881af08f1c94b10b44bd0038fa78a9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6f1bcb08da6b28555502bb39658fb2f1fcbacb3b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48064819"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354280"
 ---
 # <a name="send-mail-task"></a>tache Envoyer un message
   La tâche Envoyer un message envoie un message électronique. La tâche Envoyer un message permet à un package d'envoyer des messages en cas de réussite ou d'échec des tâches du flux de travail du package, ou d'envoyer des messages en réponse à un événement déclenché par le package au moment de l'exécution. Par exemple, la tâche peut notifier à un administrateur de base de données la réussite ou l'échec de la tâche de sauvegarde de base de données.  
@@ -70,9 +69,9 @@ ms.locfileid: "48064819"
   
  Pour plus d'informations sur les propriétés définissables dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , cliquez sur l'une des rubriques suivantes :  
   
--   [Éditeur de tache envoyer &#40;Page Général&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Éditeur de tâche Envoyer un message &#40;page Général&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Éditeur de tache envoyer &#40;Page de messagerie&#41;](../send-mail-task-editor-mail-page.md)  
+-   [Éditeur de tâche Envoyer un message &#40;page Courrier&#41;](../send-mail-task-editor-mail-page.md)  
   
 -   [Page Expressions](../expressions/expressions-page.md)  
   
@@ -85,7 +84,7 @@ ms.locfileid: "48064819"
   
 ## <a name="related-content"></a>Contenu associé  
   
--   Article technique [Procédure d'envoi de courrier électronique avec notification de remise en C#](http://go.microsoft.com/fwlink/?LinkId=237625)(Procédure d’envoi d’e-mail avec notification de remise en C#) sur shareourideas.com  
+-   Article technique [Procédure d'envoi de courrier électronique avec notification de remise en C#](https://go.microsoft.com/fwlink/?LinkId=237625)(Procédure d’envoi d’e-mail avec notification de remise en C#) sur shareourideas.com  
   
 ## <a name="see-also"></a>Voir aussi  
  [Tâches Integration Services](integration-services-tasks.md)   

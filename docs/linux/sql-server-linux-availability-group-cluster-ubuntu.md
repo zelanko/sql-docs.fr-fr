@@ -1,21 +1,22 @@
 ---
-title: Configurer le Cluster Ubuntu pour le groupe de disponibilité de SQL Server | Microsoft Docs
-description: ''
+title: Configurer le Cluster Ubuntu pour le groupe de disponibilité de SQL Server
+titleSuffix: SQL Server
+description: En savoir plus sur la création de clusters de groupe de disponibilité pour Ubuntu
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 04/30/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
+ms.custom: sql-linux, seodec18
 ms.technology: linux
 ms.assetid: dd0d6fb9-df0a-41b9-9f22-9b558b2b2233
-ms.openlocfilehash: 33b5631fdf834ea9a998f1dd4ae149dfe4cc6109
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: b8be84952a1f7652fc9e40cf82ce5ca25dfa25f4
+ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658377"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53160617"
 ---
 # <a name="configure-ubuntu-cluster-and-availability-group-resource"></a>Configurer le Cluster d’Ubuntu et les ressources du groupe de disponibilité
 
@@ -97,7 +98,7 @@ sudo systemctl enable pacemaker
 
 1. Supprimer toute configuration de cluster existant à partir de tous les nœuds. 
 
-   En cours d’exécution « sudo apt-get install PC » installe des PC, corosync et pacemaker en même temps et commence à s’exécuter toutes les 3 des services.  Démarrage de corosync génère un modèle de ' / etc/cluster/corosync.conf' fichier.  Pour que les étapes suivantes à réussir ce fichier ne doit pas exister – la solution de contournement consiste donc à arrêter pacemaker / corosync et supprimer ' / etc/cluster/corosync.conf', et ensuite les étapes suivantes terminer avec succès. « pcs cluster destroy » fait la même chose, et vous pouvez l’utiliser comme une étape d’installation initiale du cluster.
+   En cours d’exécution « sudo apt-get install PC » installe des PC, corosync et pacemaker en même temps et commence à s’exécuter toutes les 3 des services.  Démarrage de corosync génère un modèle de ' / etc/cluster/corosync.conf' fichier.  Pour que les étapes suivantes à réussir ce fichier ne doit pas exister - la solution de contournement consiste donc à arrêter pacemaker / corosync et supprimer ' / etc/cluster/corosync.conf', et ensuite les étapes suivantes terminer avec succès. « pcs cluster destroy » fait la même chose, et vous pouvez l’utiliser comme une étape d’installation initiale du cluster.
    
    La commande suivante supprime les fichiers de configuration de cluster existants et arrête tous les services de cluster. Cela détruit définitivement le cluster. Exécutez-le en tant que première étape dans un environnement de préproduction. Notez que « pcs cluster destroy » désactivé le service pacemaker et doit être réactivé. Exécutez la commande suivante sur tous les nœuds.
    
@@ -123,7 +124,7 @@ La commande suivante crée un cluster à trois nœuds. Avant d’exécuter le sc
 
    ```bash
    sudo pcs cluster auth <node1> <node2> <node3> -u hacluster -p <password for hacluster>
-   sudo pcs cluster setup --name <clusterName> <node1> <node2…> <node3>
+   sudo pcs cluster setup --name <clusterName> <node1> <node2...> <node3>
    sudo pcs cluster start --all
    sudo pcs cluster enable --all
    ```

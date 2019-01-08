@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0b2f1bf4cf990c7888088388a8d9c65a45865a9f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1fb79f056e533f4aabacdab5e3467bedce22b696
+ms.sourcegitcommit: e0178cb14954c45575a0bab73dcc7547014d03b3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727117"
+ms.lasthandoff: 12/04/2018
+ms.locfileid: "52860092"
 ---
 # <a name="sysdmexecqueryprofiles-transact-sql"></a>sys.dm_exec_query_profiles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "47727117"
 |last_row_time|**bigint**|Horodatage lors de l'ouverture de la dernière ligne (en millisecondes).|  
 |close_time|**bigint**|Horodatage lors de la fermeture (en millisecondes).|  
 |elapsed_time_ms|**bigint**|Temps total écoulé (en millisecondes) utilisé par les opérations du nœud cible jusqu'à présent.|  
-|cpu_time_ms|**bigint**|Temps processeur total écoulé (en millisecondes) utilisé par les opérations du nœud cible jusqu'à présent.|  
+|cpu_time_ms|**bigint**|Nombre total d’utilisation de temps (en millisecondes) du processeur par les opérations du nœud cible jusqu'à présent.|  
 |database_id|**smallint**|ID de la base de données qui contient l'objet sur lequel les opérations de lecture et d'écriture sont effectuées.|  
 |object_id|**Int**|Identificateur de l'objet sur lequel les opérations de lecture et écriture sont effectuées. Fait référence à sys.objects.object_id.|  
 |index_id|**Int**|Index (le cas échéant) dans lequel l'ensemble de lignes est ouvert.|  
@@ -73,7 +73,7 @@ ms.locfileid: "47727117"
 |segment_read_count|**Int**|Nombre de lectures anticipées de segment jusqu'à présent.|  
 |segment_skip_count|**Int**|Nombre de segments ignorés jusqu'à présent.| 
 |actual_read_row_count|**bigint**|Nombre de lignes lues par un opérateur avant le prédicat résiduel a été appliqué.| 
-|estimated_read_row_count|**bigint**|**S’applique à :** compter [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1. <br/>Nombre de lignes estimé pour être lu par un opérateur avant le prédicat résiduel a été appliqué.|  
+|estimated_read_row_count|**bigint**|**S’applique à :** Compter [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1. <br/>Nombre de lignes estimé pour être lu par un opérateur avant le prédicat résiduel a été appliqué.|  
   
 ## <a name="general-remarks"></a>Remarques d'ordre général  
  Si le nœud du plan de requête n'a pas d'E/S, tous les compteurs d'E/S sont définis sur NULL.  
@@ -84,20 +84,30 @@ ms.locfileid: "47727117"
   
 -   En cas d'analyse parallèle, cette vue de gestion dynamique indique des compteurs pour chaque threads parallèles de l'analyse.
  
- En commençant par [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, les statistiques d’exécution de requête standard infrastructure de profilage existe côte à côte avec une infrastructure de profilage des statistiques d’exécution léger de requête. La nouvelle requête d’exécution statistiques profilage infrastructure réduit considérablement la surcharge de performances de collecte de statistiques de l’exécution de requête par opérateur, comme le nombre réel de lignes. Cette fonctionnalité peut être activée à l’aide de global démarrage [indicateur de trace 7412](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md), ou est activée automatiquement lorsque l’événement étendu query_thread_profile est utilisé.
+En commençant par [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, les statistiques d’exécution de requête standard infrastructure de profilage existe côte à côte avec une infrastructure de profilage des statistiques d’exécution léger de requête. La nouvelle requête d’exécution statistiques profilage infrastructure réduit considérablement la surcharge de performances de collecte de statistiques de l’exécution de requête par opérateur, comme le nombre réel de lignes. Cette fonctionnalité peut être activée à l’aide de global démarrage [indicateur de trace 7412](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md), ou est activée automatiquement lorsque l’événement étendu query_thread_profile est utilisé.
 
 >[!NOTE]
 > Processeur et le temps écoulé ne sont pas pris en charge sous l’infrastructure de profilage de statistiques d’exécution de requêtes simplifié afin de réduire l’impact sur les performances.
 
- SET STATISTICS XML ON et SET STATISTICS PROFILE ON toujours utiliser les statistiques d’exécution de requête hérité infrastructure de profilage.
-  
-## <a name="permissions"></a>Permissions  
+SET STATISTICS XML ON et SET STATISTICS PROFILE ON toujours utiliser les statistiques d’exécution de requête hérité infrastructure de profilage.
+
+Pour activer la sortie dans sys.dm_exec_query_profiles les opérations suivantes :
+
+Dans [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 et versions ultérieures utiliser SET STATISTICS PROFILE ON ou SET STATISTICS XML ON ainsi que la requête en cours d’analyse. Cela permet à l’infrastructure de profilage et produit des résultats dans la vue de gestion dynamique pour la session où la commande SET a été exécutée. Si vous examinez une requête en cours d’exécution à partir d’une application et que vous ne pouvez pas activer les options de SET avec lui, vous pouvez créer un événement étendu à l’aide de l’événement query_post_execution_showplan qui activera l’infrastructure de profilage. 
+
+Dans [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, vous pouvez soit activer [indicateur de trace 7412](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) ou utiliser l’événement étendu query_thread_profile.
+
+>[!NOTE]
+> La requête en cours d’analyse doit démarrer après l’activation de l’infrastructure de profilage. Si la requête est déjà en cours d’exécution, commencer une session d’événements étendus ne produira pas les résultats dans sys.dm_exec_query_profiles.
+
+
+## <a name="permissions"></a>Autorisations  
 
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], nécessite `VIEW SERVER STATE` autorisation.   
 Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], nécessite le `VIEW DATABASE STATE` autorisation dans la base de données.   
    
 ## <a name="examples"></a>Exemples  
- Étape 1 : Connexion à une session dans laquelle vous prévoyez d’exécuter la requête vous analyserez avec sys.dm_exec_query_profiles. Pour configurer la requête pour le profilage utiliser SET STATISTICS PROFILE sur. Exécutez votre requête dans la même session.  
+ Étape 1 : connectez-vous à une session pour laquelle vous voulez exécuter la requête que vous analyserez avec sys.dm_exec_query_profiles. Pour configurer la requête pour le profilage utiliser SET STATISTICS PROFILE sur. Exécutez votre requête dans la même session.  
   
 ```  
 --Configure query for profiling with sys.dm_exec_query_profiles  
@@ -111,7 +121,7 @@ GO
 --Next, run your query in this session, or in any other session if query profiling has been enabled globally 
 ```  
   
- Étape 2 : Se connecter à une deuxième session différente de la session dans laquelle votre requête est en cours d’exécution.  
+ Étape 2 : connectez-vous à une deuxième session différente de la session dans laquelle votre requête s'exécute.  
   
  L'instruction suivante résume l'avancement de la requête en cours d'exécution dans la session 54. Pour ce faire, elle calcule le nombre total de lignes de sortie de tous les threads pour chaque nœud, et compare ce nombre au nombre estimé de lignes de sortie pour ce nœud.  
   

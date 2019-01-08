@@ -1,5 +1,5 @@
 ---
-title: Déployer à partir de SQL Server Data Tools | Documents Microsoft
+title: Déployer des modèles tabulaires Analysis Services à partir de SQL Server Data Tools | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 009c286c105f8088897343f3694c7b3106ca493a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 09d859cf8b5c372b9588266b9210837012396ea6
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34042333"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072136"
 ---
 # <a name="deploy-from-sql-server-data-tools"></a>Déployer à partir de SQL Server Data Tools
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -23,9 +23,9 @@ ms.locfileid: "34042333"
 ##  <a name="bkmk_deploy"></a> Configurer les propriétés Options de déploiement et Serveur de déploiement  
  Avant de déployer votre solution de modèle tabulaire, vous devez spécifier les propriétés Options de déploiement et Serveur de déploiement. Pour plus d’informations sur les propriétés de déploiement et les paramètres, consultez [déploiement de solutions de modèle tabulaire](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md).  
   
-#### <a name="to-configure-options-and-properties"></a>Pour configurer des options et des propriétés  
+#### <a name="to-configure-options-and-properties"></a>Pour configurer les propriétés et les options  
   
-1.  Dans SSDT, dans **l’Explorateur de solutions**, cliquez sur le nom du projet, puis cliquez sur **propriétés**.  
+1.  Dans SSDT, dans **l’Explorateur de solutions**, cliquez sur le nom de projet, puis cliquez sur **propriétés**.  
   
 2.  Dans le  **\<nom du projet > Propriétés** boîte de dialogue, dans **Options de déploiement**, spécifiez les paramètres de propriété si différents des paramètres par défaut.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "34042333"
   
 #### <a name="to-deploy-a-tabular-model"></a>Pour déployer un modèle tabulaire
   
--   Dans SSDT, sur le **générer** menu, cliquez sur **déployer \<nom du projet >**.  
+-   Dans SSDT, sur le **Build** menu, cliquez sur **déployer \<nom_projet >**.  
   
      La boîte de dialogue **Déployer** apparaît et indique l’état du déploiement des métadonnées et du traitement (sauf si la propriété Option de traitement a la valeur Ne pas traiter) de chaque table incluse dans le modèle. Une fois le processus de déploiement est terminé, utilisez SSMS pour vous connecter à l’instance Analysis Services et vérifiez que le nouvel objet de base de données model a été créé ou un client d’application pour se connecter au modèle déployé reporting.  
   

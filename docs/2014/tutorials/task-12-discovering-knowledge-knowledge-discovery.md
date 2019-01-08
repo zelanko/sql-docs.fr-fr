@@ -13,17 +13,17 @@ ms.assetid: dd80a8e6-1e41-4c49-9898-02b1d2505a10
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d38af78e59a88e05fe874e4b4748b1f6f8b5049c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cf933017b77bf8f0c1980c00f8f669d92483a1c6
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167699"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367181"
 ---
-# <a name="task-12-discovering-knowledge-knowledge-discovery"></a>Tâche 12 : Découverte des connaissances
+# <a name="task-12-discovering-knowledge-knowledge-discovery"></a>Tâche 12 : Découverte des connaissances (découverte des connaissances)
   Dans cette tâche, vous allez effectuer la **découverte des connaissances** activité sur **ID du fournisseur** et **Supplier Name** domaines. Dans ce scénario, le processus de découverte des connaissances importe principalement des valeurs pour ces deux domaines.  
   
- Dans ce didacticiel, vous avez commencé à créer une base de connaissances de toutes pièces. Vous pouvez également créer une base de connaissances au moyen d'une activité de découverte des connaissances. Lorsque vous cliquez sur **créer une Base de connaissances** dans la page principale, le client DQS pointe vers une page avec **gestion des domaines** activité sélectionnée pour l’activité. Vous pouvez modifier le **activité** à **découverte des connaissances** et puis dans la page suivante vous pouvez créer des domaines dans le cadre du processus de découverte de connaissances. Consultez [Perform Knowledge Discovery](http://msdn.microsoft.com/library/hh510398.aspx) pour plus d’informations.  
+ Dans ce didacticiel, vous avez commencé à créer une base de connaissances de toutes pièces. Vous pouvez également créer une base de connaissances au moyen d'une activité de découverte des connaissances. Lorsque vous cliquez sur **créer une Base de connaissances** dans la page principale, le client DQS pointe vers une page avec **gestion des domaines** activité sélectionnée pour l’activité. Vous pouvez modifier le **activité** à **découverte des connaissances** et puis dans la page suivante vous pouvez créer des domaines dans le cadre du processus de découverte de connaissances. Consultez [Perform Knowledge Discovery](https://msdn.microsoft.com/library/hh510398.aspx) pour plus d’informations.  
   
 1.  Dans la page principale du Client DQS, dans le **Base de connaissances récente** , cliquez sur **flèche droite** à côté du **fournisseurs** base de connaissances et cliquez sur **connaissances Découverte**. Vous pouvez également cliquer sur **ouvrir la Base de connaissances**, sélectionnez **fournisseurs** à partir de la **liste des bases de connaissances**, sélectionnez **la découverte des connaissances**en tant que **activité** et cliquez sur **suivant**.  
   
@@ -70,6 +70,6 @@ ms.locfileid: "48167699"
      Vous avez terminé la première leçon du didacticiel.  
   
 ## <a name="next-step"></a>Étape suivante  
- [Leçon 2 : Nettoyage des données des fournisseurs avec la base de connaissances Fournisseurs](../../2014/tutorials/lesson-2-cleansing-supplier-data-using-the-suppliers-knowledge-base.md)  
+ [Leçon 2 : Nettoyage des données des fournisseurs à l’aide de la Base de connaissances fournisseurs](../../2014/tutorials/lesson-2-cleansing-supplier-data-using-the-suppliers-knowledge-base.md)  
   
   

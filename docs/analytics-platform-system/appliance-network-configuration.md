@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 341db2791f99d72d293fe00dbf92c1f59df444ca
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: dc0fbd64ac1179cc77e5b8a3cf9f0e5fed73d7fd
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697917"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52403844"
 ---
 # <a name="appliance-network-configuration-for-analytics-platform-system"></a>Configuration du réseau pour l’Analytique Platform System appliance
 L’appliance Analytique Platform System (APS) est créé et configuré avec un ensemble de correctif d’adresses IP dans l’ensemble de tous les serveurs et périphériques applicables à partir de l’usine du fabricant de matériel. Lors de la livraison de l’appliance, l’adresse IP externe (Ethernet) doit être reconfiguré pour répondre aux besoins de centre de données du client spécifique.  

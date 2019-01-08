@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Aggregate transformation [Integration Services]
@@ -24,12 +23,12 @@ ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4a97e86b66efee24757f7f09f04e7016a93417c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5fb7bfa7d068d8ea83fab4c98e6e8f733af7985a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049509"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361471"
 ---
 # <a name="data-flow-performance-features"></a>Fonctionnalités de performances de flux de données
   Cette rubrique offre des suggestions pour éviter les problèmes de performances les plus fréquents lors de la conception de packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Cette rubrique fournit également des informations sur les fonctionnalités et les outils que vous pouvez utiliser pour résoudre des problèmes liés aux performances des packages.  
@@ -73,15 +72,15 @@ ms.locfileid: "48049509"
  N'augmentez pas la taille du tampon au point de déclencher la pagination sur le disque. Cela aurait des effets plus néfastes sur les performances que la non-optimisation de la taille du tampon. Pour déterminer si la pagination est en cours, surveillez le compteur de performances « Mémoires tampon spoulées » dans le composant logiciel enfichable Performance de la console MMC ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console).  
   
 ### <a name="configure-the-package-for-parallel-execution"></a>Configurer le package pour une exécution parallèle  
- L'exécution parallèle améliore les performances sur les ordinateurs dotés de plusieurs processeurs physiques ou logiques. Pour prendre en charge l’exécution parallèle de différentes tâches dans le package, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] utilise deux propriétés : `MaxConcurrentExecutables` et `EngineThreads`.  
+ L'exécution parallèle améliore les performances sur les ordinateurs dotés de plusieurs processeurs physiques ou logiques. Pour prendre en charge l'exécution parallèle de tâches différentes dans le package, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] utilise deux propriétés : `MaxConcurrentExecutables` et `EngineThreads`.  
   
 #### <a name="the-maxconcurrentexcecutables-property"></a>La propriété MaxConcurrentExcecutables  
- Le `MaxConcurrentExecutables` propriété est une propriété du package lui-même. Cette propriété définit le nombre de tâches pouvant s'exécuter simultanément. La valeur par défaut est -1, ce qui correspond au nombre de processeurs physiques ou logiques plus 2.  
+ La propriété `MaxConcurrentExecutables` est une propriété du package lui-même. Cette propriété définit le nombre de tâches pouvant s'exécuter simultanément. La valeur par défaut est -1, ce qui correspond au nombre de processeurs physiques ou logiques plus 2.  
   
- Pour comprendre comment cette propriété fonctionne, imaginez un package composé de trois tâches de flux de données. Si vous définissez `MaxConcurrentExecutables` à 3, les trois tâches de flux de données peuvent s’exécuter simultanément. Toutefois, supposez que chaque tâche de flux de données comporte 10 arborescences d'exécution de la source vers la destination. Le fait d'attribuer à `MaxConcurrentExecutables` la valeur 3 ne garantit pas que les arborescences d'exécution à l'intérieur de chaque tâche de flux de données s'exécuteront en parallèle.  
+ Pour comprendre comment cette propriété fonctionne, imaginez un package composé de trois tâches de flux de données. Si vous attribuez à `MaxConcurrentExecutables` la valeur 3, les trois tâches de flux de données peuvent s'exécuter simultanément. Toutefois, supposez que chaque tâche de flux de données comporte 10 arborescences d'exécution de la source vers la destination. Le fait d'attribuer à `MaxConcurrentExecutables` la valeur 3 ne garantit pas que les arborescences d'exécution à l'intérieur de chaque tâche de flux de données s'exécuteront en parallèle.  
   
 #### <a name="the-enginethreads-property"></a>La propriété EngineThreads  
- La propriété `EngineThreads` est une propriété de chaque tâche de flux de données. Cette propriété définit le nombre de threads que le moteur de flux de données peut créer et exécuter en parallèle. Le `EngineThreads` propriété s’applique aussi aux threads sources que le moteur de flux de données crée pour les sources et les threads de travail que le moteur crée pour les transformations et destinations. Par conséquent, si vous attribuez à `EngineThreads` la valeur 10, le moteur pourra créer jusqu'à dix threads sources et dix threads de travail.  
+ La propriété `EngineThreads` est une propriété de chaque tâche de flux de données. Cette propriété définit le nombre de threads que le moteur de flux de données peut créer et exécuter en parallèle. La propriété `EngineThreads` s'applique aussi bien aux threads sources que le moteur de flux de données crée pour les sources qu'aux threads de travail que le moteur crée pour les transformations et les destinations. Par conséquent, si vous attribuez à `EngineThreads` la valeur 10, le moteur pourra créer jusqu'à dix threads sources et dix threads de travail.  
   
  Pour comprendre comment cette propriété fonctionne, reprenez l'exemple de package composé de trois tâches de flux de données. Chaque tâche de flux de données contient dix arborescences d'exécution de la source vers la destination. Si vous attribuez à EngineThreads la valeur 10 sur chaque tâche de flux de données, les 30 arborescences d'exécution pourront potentiellement s'exécuter simultanément.  
   
@@ -100,14 +99,14 @@ ms.locfileid: "48049509"
  Pour construire une requête, vous pouvez taper la requête ou utiliser le générateur de requêtes.  
   
 > [!NOTE]  
->  Lorsque vous exécutez un package dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], l'onglet Progression du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] affiche une liste d'avertissements, y compris un avertissement pour toutes les colonnes de données qu'une source met à la disposition du flux de données mais qui ne sont pas utilisées ensuite par les composants de flux de données en aval. Vous pouvez utiliser le `RunInOptimizedMode` propriété pour supprimer automatiquement ces colonnes.  
+>  Lorsque vous exécutez un package dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], l'onglet Progression du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] affiche une liste d'avertissements, y compris un avertissement pour toutes les colonnes de données qu'une source met à la disposition du flux de données mais qui ne sont pas utilisées ensuite par les composants de flux de données en aval. Vous pouvez faire appel à la propriété `RunInOptimizedMode` pour supprimer automatiquement ces colonnes.  
   
 #### <a name="avoid-unnecessary-sorting"></a>Suppression des tris non nécessaires  
  Le tri est, par essence, une opération lente et la décision d'éviter un tri inutile peut améliorer les performances du flux de données du package.  
   
- Parfois, les données sources ont déjà été triées avant d'être utilisées par un composant en aval. Ce pré-triage peut avoir lieu soit parce que la requête SELECT utilise une clause ORDER BY, soit parce que les données ont été insérées dans la source par ordre de tri. Pour de telles données sources pré-triées, vous pouvez fournir un indicateur qui précise que les données sont triées afin d'éviter l'utilisation d'une transformation de tri pour satisfaire aux spécifications de tri de certaines transformations en aval. (Par exemple, les transformations de fusion et de jointure de fusion nécessitent des entrées triées). Pour fournir un indicateur qui précise que les données sont triées, vous devez effectuer les tâches suivantes :  
+ Parfois, les données sources ont déjà été triées avant d'être utilisées par un composant en aval. Ce pré-triage peut avoir lieu soit parce que la requête SELECT utilise une clause ORDER BY, soit parce que les données ont été insérées dans la source par ordre de tri. Pour de telles données sources pré-triées, vous pouvez fournir un indicateur qui précise que les données sont triées afin d'éviter l'utilisation d'une transformation de tri pour satisfaire aux spécifications de tri de certaines transformations en aval. (Par exemple, les transformations de fusion et de jointure de fusion nécessitent des entrées triées). Pour fournir un indicateur qui précise que les données sont triées, vous devez effectuer les tâches suivantes :  
   
--   Définir le `IsSorted` propriété sur la sortie d’un composant de flux de données en amont à `True`.  
+-   attribuer à la propriété `IsSorted` sur la sortie d'un composant de flux de données en amont la valeur `True` ;  
   
 -   spécifier les colonnes clés de tri sur lesquelles les données sont triées.  
   
@@ -131,20 +130,20 @@ ms.locfileid: "48049509"
  Si vous devez créer plusieurs agrégations dans un flux de données, songez à créer plusieurs agrégations qui utilisent une transformation d'agrégation au lieu de créer plusieurs transformations. Cette approche améliore les performances lorsqu'une agrégation est un sous-ensemble d'une autre agrégation, car la transformation peut optimiser le stockage interne et analyser une seule fois les données entrantes. Par exemple, si une agrégation utilise une clause GROUP BY et une agrégation AVG, le fait de les combiner en une seule transformation peut améliorer les performances. Toutefois, du fait que la réalisation de plusieurs agrégations au sein d'une transformation d'agrégation sérialise les opérations d'agrégation, il est possible que les performances ne s'améliorent pas lorsque plusieurs agrégations doivent être calculées indépendamment.  
   
 #### <a name="fuzzy-lookup-and-fuzzy-grouping-transformations"></a>Transformations de recherche floue et de regroupement probable  
- Pour plus d'informations sur l'optimisation des performances des transformations de recherche floue et de regroupement probable, consultez le livre blanc [Présentation des transformations Fuzzy Lookup (recherche approximative) et Fuzzy Grouping (regroupement approximatif) dans les services DTS (Data Transformation Services) de SQL Server 2005](http://go.microsoft.com/fwlink/?LinkId=96604).  
+ Pour plus d'informations sur l'optimisation des performances des transformations de recherche floue et de regroupement probable, consultez le livre blanc [Présentation des transformations Fuzzy Lookup (recherche approximative) et Fuzzy Grouping (regroupement approximatif) dans les services DTS (Data Transformation Services) de SQL Server 2005](https://go.microsoft.com/fwlink/?LinkId=96604).  
   
 #### <a name="lookup-transformation"></a>Transformation de recherche  
  Réduisez la taille des données de référence en mémoire en entrant une instruction SELECT qui recherche uniquement les colonnes dont vous avez besoin. Cette approche est plus performante que la sélection d'une table ou d'une vue entière qui retourne une quantité importante de données inutiles.  
   
 #### <a name="merge-join-transformation"></a>transformation de jointure de fusion  
- Vous n’avez plus à configurer la valeur de la `MaxBuffersPerInput` propriété car Microsoft a apporté des modifications qui réduisent le risque que la transformation de jointure de fusion consomme trop de mémoire. Ce problème s'est quelquefois produit lorsque plusieurs entrées de jointure de fusion produisaient des données à des taux irréguliers.  
+ Vous n'avez plus à configurer la valeur de la propriété `MaxBuffersPerInput` car Microsoft a apporté des modifications qui réduisent le risque que la transformation de jointure de fusion consomme de la mémoire en excès. Ce problème s'est quelquefois produit lorsque plusieurs entrées de jointure de fusion produisaient des données à des taux irréguliers.  
   
 #### <a name="slowly-changing-dimension-transformation"></a>Transformation de dimension à variation lente  
  L'Assistant Dimension à variation lente et la transformation de dimension à variation lente sont des outils à caractère général qui répondent aux besoins de la plupart des utilisateurs. Toutefois, le flux de données généré par l'Assistant n'est pas optimisé en termes de performances.  
   
  En général, les composants les plus lents de la transformation de dimension à variation lente sont les transformations de commande OLE DB qui effectuent des mises à jour sur une ligne à la fois. Par conséquent, le moyen le plus efficace pour améliorer les performances de la transformation de dimension à variation lente consiste à remplacer les transformations de commande OLE DB. Vous pouvez remplacer ces transformations par des composants de destination qui enregistrent toutes les lignes à mettre à jour dans une table de transit. Ensuite, vous pouvez ajouter une tâche d'exécution SQL qui effectue une opération UPDATE Transact-SQL basée sur un jeu unique sur toutes les lignes en même temps.  
   
- Les utilisateurs expérimentés peuvent concevoir un flux de données personnalisé pour le traitement des dimensions à variation lente qui est optimisé pour les grandes dimensions. Pour en savoir plus et obtenir un exemple de cette approche, consultez la section « Scénario de dimension Unique » dans le livre blanc [Projet REAL: Pratiques de conception ETL Business Intelligence](http://go.microsoft.com/fwlink/?LinkId=96602).  
+ Les utilisateurs expérimentés peuvent concevoir un flux de données personnalisé pour le traitement des dimensions à variation lente qui est optimisé pour les grandes dimensions. Pour en savoir plus et exemple de cette approche, consultez la section « Unique dimension scenario » dans le livre blanc, [Project REAL : Business Intelligence ETL Design Practices](https://go.microsoft.com/fwlink/?LinkId=96602).  
   
 ### <a name="destinations"></a>Destinations  
  Pour obtenir de meilleures performances avec les destinations, songez à utiliser une destination [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et à tester les performances de la destination.  
@@ -167,38 +166,38 @@ ms.locfileid: "48049509"
 ## <a name="related-content"></a>Contenu associé  
  **Articles et publications de blog**  
   
--   Article technique, [SQL Server 2005 Integration Services : une stratégie pour de meilleures performances](http://go.microsoft.com/fwlink/?LinkId=98899), sur le site technet.microsoft.com  
+-   Article technique, [SQL Server 2005 Integration Services : Une stratégie relative aux performances](https://go.microsoft.com/fwlink/?LinkId=98899), sur technet.microsoft.com  
   
--   Article technique, [Integration Services : techniques de réglage des performances](http://go.microsoft.com/fwlink/?LinkId=98900), sur le site technet.microsoft.com  
+-   Article technique, [Integration Services : Techniques de réglage des performances](https://go.microsoft.com/fwlink/?LinkId=98900), sur technet.microsoft.com  
   
 -   Article technique, [Augmentation du débit de pipelines en fractionnant les transformations synchrones en plusieurs tâches](http://sqlcat.com/technicalnotes/archive/2010/08/18/increasing-throughput-of-pipelines-by-splitting-synchronous-transformations-into-multiple-tasks.aspx), sur le site sqlcat.com  
   
--   Article technique, [Guide des performances de chargement des données](http://go.microsoft.com/fwlink/?LinkId=220816), sur le site msdn.microsoft.com.  
+-   Article technique, [Guide des performances de chargement des données](https://go.microsoft.com/fwlink/?LinkId=220816), sur le site msdn.microsoft.com.  
   
--   Article technique, [Nous avons chargé 1 To en 30 minutes avec SSIS, vous le pouvez aussi](http://go.microsoft.com/fwlink/?LinkId=220817), sur le site msdn.microsoft.com.  
+-   Article technique, [Nous avons chargé 1 To en 30 minutes avec SSIS, vous le pouvez aussi](https://go.microsoft.com/fwlink/?LinkId=220817), sur le site msdn.microsoft.com.  
   
--   Article technique, [Les 10 meilleures pratiques pour SQL Server Integration Services](http://go.microsoft.com/fwlink/?LinkId=220818), sur le site sqlcat.com.  
+-   Article technique, [Les 10 meilleures pratiques pour SQL Server Integration Services](https://go.microsoft.com/fwlink/?LinkId=220818), sur le site sqlcat.com.  
   
--   Article technique et exemple, [« Distributeur de données équilibrées » pour SSIS](http://go.microsoft.com/fwlink/?LinkId=220822), sur le site sqlcat.com.  
+-   Article technique et exemple, [« Distributeur de données équilibrées » pour SSIS](https://go.microsoft.com/fwlink/?LinkId=220822), sur le site sqlcat.com.  
   
--   Publication de blog [Résolution des problèmes de performances des packages SSIS](http://go.microsoft.com/fwlink/?LinkId=238156)sur blogs.msdn.com.  
+-   Publication de blog [Résolution des problèmes de performances des packages SSIS](https://go.microsoft.com/fwlink/?LinkId=238156)sur blogs.msdn.com.  
   
  **Vidéos**  
   
--   Série de vidéos, [Conception et optimisation des performances de vos packages SSIS en entreprise (Série de vidéos SQL)](http://go.microsoft.com/fwlink/?LinkId=400878)  
+-   Série de vidéos, [Conception et optimisation des performances de vos packages SSIS en entreprise (Série de vidéos SQL)](https://go.microsoft.com/fwlink/?LinkId=400878)  
   
--   Vidéo, [Optimisation du flux de données de votre package SSIS en entreprise (Vidéo SQL Server)](http://technet.microsoft.com/sqlserver/ff686901.aspx), sur technet.microsoft.com  
+-   Vidéo, [Optimisation du flux de données de votre package SSIS en entreprise (Vidéo SQL Server)](https://technet.microsoft.com/sqlserver/ff686901.aspx), sur technet.microsoft.com  
   
--   Vidéo, [Présentation des mémoires tampon de flux de données SSIS (Vidéo SQL Server)](http://technet.microsoft.com/sqlserver/ff686905.aspx), sur technet.microsoft.com  
+-   Vidéo, [Présentation des mémoires tampon de flux de données SSIS (Vidéo SQL Server)](https://technet.microsoft.com/sqlserver/ff686905.aspx), sur technet.microsoft.com  
   
--   Vidéo [Modèles de conception des performances de Microsoft SQL Server Integration Services](http://go.microsoft.com/fwlink/?LinkID=233698&clcid=0x409), sur channel9.msdn.com.  
+-   Vidéo [Modèles de conception des performances de Microsoft SQL Server Integration Services](https://go.microsoft.com/fwlink/?LinkID=233698&clcid=0x409), sur channel9.msdn.com.  
   
--   Présentation, [Exploitation par Microsoft IT des améliorations apportées au moteur de flux de données SQL Server 2008 SSIS](http://go.microsoft.com/fwlink/?LinkId=217660), sur le site sqlcat.com.  
+-   Présentation, [Exploitation par Microsoft IT des améliorations apportées au moteur de flux de données SQL Server 2008 SSIS](https://go.microsoft.com/fwlink/?LinkId=217660), sur le site sqlcat.com.  
   
--   Vidéo, [Distributeur de données équilibrées](http://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409), sur technet.microsoft.com.  
+-   Vidéo, [Distributeur de données équilibrées](https://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409), sur technet.microsoft.com.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Outils de dépannage pour le développement de Package](../troubleshooting/troubleshooting-tools-for-package-development.md)   
- [Outils de dépannage pour l’exécution des packages](../troubleshooting/troubleshooting-tools-for-package-execution.md)  
+ [Outils de dépannage pour le développement des packages](../troubleshooting/troubleshooting-tools-for-package-development.md)   
+ [Outils de dépannage pour l'exécution des packages](../troubleshooting/troubleshooting-tools-for-package-execution.md)  
   
   

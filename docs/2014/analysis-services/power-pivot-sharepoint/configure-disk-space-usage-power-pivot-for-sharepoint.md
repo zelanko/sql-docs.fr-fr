@@ -11,12 +11,12 @@ ms.assetid: 201a3fda-f162-45d7-bf39-74dcb92fd0e6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bff9e3f913ee432988bd7a666673e8f27bc4d04e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0ffd00cde83f99f1147a85b06e93e3816fb6e376
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069639"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354514"
 ---
 # <a name="configure-disk-space-usage-powerpivot-for-sharepoint"></a>Configurer l'utilisation de l'espace disque (PowerPivot pour SharePoint)
   Un déploiement PowerPivot pour SharePoint utilise l'espace disque de l'ordinateur hôte pour mettre en cache des bases de données PowerPivot afin d'accélérer les rechargements. Chaque base de données PowerPivot chargée en mémoire est d'abord mise en cache sur disque afin qu'elle puisse être rechargée rapidement par la suite pour de nouvelles interrogations de données. Par défaut, PowerPivot pour SharePoint utilise tout l'espace disque disponible pour mettre en cache ses bases de données, mais peut modifier ce comportement en définissant des propriétés qui limitent la quantité d'espace disque utilisée.  
@@ -51,11 +51,11 @@ ms.locfileid: "48069639"
   
  Au niveau du système, vous pouvez créer des alertes par courrier électronique qui vous informent lorsque l'espace disque est faible. Microsoft System Center inclut une fonctionnalité d'alerte par courrier électronique. Vous pouvez également utiliser le Gestionnaire de ressources du serveur de fichiers, le Planificateur de tâches ou un script PowerShell pour configurer des alertes. Les liens suivants fournissent des informations utiles pour la définition de notifications relatives à l'espace disque insuffisant :  
   
--   [Quelles sont les nouveautés dans le Gestionnaire de ressources du serveur de fichiers](http://technet.microsoft.com/library/hh831746.aspx) (http://technet.microsoft.com/library/hh831746.aspx).  
+-   [Quelles sont les nouveautés dans le Gestionnaire de ressources du serveur de fichiers](https://technet.microsoft.com/library/hh831746.aspx) (https://technet.microsoft.com/library/hh831746.aspx).  
   
--   [Guide pas à pas de File Server Resource Manager pour Windows Server 2008 R2](http://go.microsoft.com/fwlink/?LinkID=204875) (http://go.microsoft.com/fwlink/?LinkID=204875).  
+-   [Guide pas à pas de File Server Resource Manager pour Windows Server 2008 R2](https://go.microsoft.com/fwlink/?LinkID=204875) (https://go.microsoft.com/fwlink/?LinkID=204875).  
   
--   [Définition des alertes d’espace disque faible sur Windows Server 2008](http://go.microsoft.com/fwlink/?LinkID=204870) ( http://go.microsoft.com/fwlink/?LinkID=204870).  
+-   [Définition des alertes d’espace disque faible sur Windows Server 2008](https://go.microsoft.com/fwlink/?LinkID=204870) ( https://go.microsoft.com/fwlink/?LinkID=204870).  
   
 ## <a name="how-to-limit-the-amount-of-disk-space-used-for-storing-cached-files"></a>Comment limiter la quantité d'espace disque utilisée pour le stockage des fichiers mis en cache  
   
@@ -67,7 +67,7 @@ ms.locfileid: "48069639"
   
 3.  Dans Utilisation du disque, attribuez une valeur (en gigaoctets) pour **Espace disque total** pour définir la quantité maximale d’espace utilisé pour la mise en cache. La valeur par défaut est 0, ce qui permet à Analysis Services d'utiliser tout l'espace disque disponible.  
   
-4.  Dans Utilisation du disque, dans le paramètre **Supprimer les bases de données mises en cache au cours des « n » dernières heures** , spécifiez les critères utilisés dernièrement pour vider le cache lorsque l’espace disque atteint la limite maximale.  
+4.  Utilisation des disques, dans le **supprimer mises en cache des bases de données dans des « n » dernières heures** , à spécifier les critères utilisés dernièrement pour vider le cache lorsque l’espace disque atteint la limite maximale.  
   
      La valeur par défaut est de 4 heures, ce qui signifie que toutes les bases de données qui ont été inactives pendant 4 heures ou plus sont supprimées du système de fichiers. Les bases de données inactives mais toujours en mémoire sont déchargées, puis supprimées du système de fichiers.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "48069639"
   
      L'option**Conserver la base de données inactive dans la mémoire** spécifie pendant combien de temps une base de données inactive reste en mémoire pour servir les nouvelles demandes de données. Une base de données active est toujours conservée en mémoire tant que vous l'interrogez ; lorsqu'elle n'est plus active, le système la conserve en mémoire pour une période supplémentaire au cas où ces données seraient interrogées ultérieurement.  
   
-     Étant donné que les bases de données PowerPivot sont d'abord mises en cache, puis chargées en mémoire, les fichiers de base de données consomment immédiatement l'espace disque. Toutefois, tant que la base de données est active (et pendant les 48 heures qui suivent), toutes les demandes sont dirigées en premier vers la base de données en mémoire, en ignorant la base de données mise en cache. Après 48 heures d'inactivité, le fichier est déchargé de la mémoire, mais reste dans le cache où il peut être rechargé rapidement si une nouvelle demande de connexion à ces données est interceptée par l'instance de serveur PowerPivot locale. Les demandes de connexion à une base de données inactive sont servies à partir du cache plutôt qu'à partir de la bibliothèque de contenu, afin de réduire l'impact sur les bases de données de contenus.  
+     Étant donné que les bases de données PowerPivot sont d'abord mises en cache, puis chargées en mémoire, les fichiers de base de données consomment immédiatement l'espace disque. Toutefois, tant que la base de données est active (et pendant les 48 heures qui suivent), toutes les demandes sont dirigées en premier vers la base de données en mémoire, en ignorant la base de données mise en cache. Après 48 heures d'inactivité, le fichier est déchargé de la mémoire, mais reste dans le cache où il peut être rechargé rapidement si une nouvelle demande de connexion à ces données est interceptée par l'instance de serveur PowerPivot locale. Les demandes de connexion à une base de données inactive sont servies à partir du cache plutôt qu'à partir de la bibliothèque de contenu, afin de réduire l'impact sur les bases de données de contenus.  
   
      Il est important de noter que la bibliothèque de contenu est le seul emplacement permanent pour les bases de données PowerPivot. Les copies mises en cache sont utilisées uniquement si la base de données dans la bibliothèque est la même que la copie sur le disque.  
   

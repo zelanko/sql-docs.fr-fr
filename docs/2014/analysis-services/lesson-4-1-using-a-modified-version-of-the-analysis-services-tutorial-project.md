@@ -11,12 +11,12 @@ ms.assetid: 685aa217-de1b-4df2-bf22-095228c40775
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 70b4a8bedc86023c9eaf1304e61573c4840a62bb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 763b1170ad0201c737e06e19c3dac8d58c6712ee
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194709"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368881"
 ---
 # <a name="using-a-modified-version-of-the-analysis-services-tutorial-project"></a>Utilisation d'une version modifiée du projet du didacticiel Analysis Services
   Les sept dernières leçons de ce didacticiel sont basées sur une version évoluée du projet du didacticiel [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que vous avez créé au cours des trois premières leçons. D’autres tables et calculs nommés ont été ajoutés à la vue de source de données **Adventure Works DW 2012** , des dimensions supplémentaires ont été ajoutées au projet et ces nouvelles dimensions ajoutées au cube [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial. De plus, un deuxième groupe de mesures a été ajouté, qui contient des mesures d'une deuxième table de faits. Ce projet évolué va vous permettre d'apprendre à enrichir en fonctionnalités votre application Business Intelligence sans avoir à répéter ce que vous avez déjà appris.  
@@ -25,7 +25,7 @@ ms.locfileid: "48194709"
   
 ## <a name="downloading-and-extracting-the-project-file"></a>Téléchargement et extraction du fichier projet  
   
-1.  [Cliquez ici](http://go.microsoft.com/fwlink/?LinkID=221866) pour accéder à la page de téléchargement qui fournit les exemples de projets de ce didacticiel. Les projets de didacticiel sont inclus dans le téléchargement **Didacticiel Analysis Services SQL Server 2012** .  
+1.  [Cliquez ici](https://go.microsoft.com/fwlink/?LinkID=221866) pour accéder à la page de téléchargement qui fournit les exemples de projets de ce didacticiel. Les projets de didacticiel sont inclus dans le téléchargement **Didacticiel Analysis Services SQL Server 2012** .  
   
 2.  Cliquez sur **Didacticiel Analysis Services SQL Server 2012** pour télécharger le package qui contient les projets pour ce didacticiel.  
   
@@ -41,9 +41,9 @@ ms.locfileid: "48194709"
   
 ## <a name="loading-and-processing-the-enhanced-project"></a>Chargement et traitement du projet amélioré  
   
-1.  Dans [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], dans le menu **Fichier** , cliquez sur **Fermer la solution** pour fermer les fichiers que vous n’utiliserez pas.  
+1.  Dans [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], dans le **fichier** menu, cliquez sur **fermer la Solution** pour fermer les fichiers que vous n’utiliserez pas.  
   
-2.  Dans le menu **Fichier**, pointez sur **Ouvrir**, puis cliquez sur **Projet/Solution**.  
+2.  Dans le menu **Fichier** , pointez sur **Ouvrir**, puis cliquez sur **Projet/Solution**.  
   
 3.  Accédez à l'emplacement dans lequel vous avez extrait les fichiers de projet du didacticiel.  
   
@@ -115,7 +115,7 @@ ms.locfileid: "48194709"
  Le cube **Analysis Services Tutorial** contient maintenant deux groupes de mesures, le groupe de mesure d’origine, basé sur la table **InternetSales** , et un deuxième groupe de mesures basé sur la table **ResellerSales** dans la vue de source de données **Adventure Works DW 2012** .  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [Définition des propriétés d’attribut parent dans une hiérarchie parent-enfant](lesson-4-2-defining-parent-attribute-properties-in-a-parent-child-hierarchy.md) 
+ [Définition des propriétés d'attribut parent dans une hiérarchie parent-enfant](lesson-4-2-defining-parent-attribute-properties-in-a-parent-child-hierarchy.md) 
   
 ## <a name="see-also"></a>Voir aussi  
  [Déploiement d’un projet Analysis Services](../analysis-services/lesson-2-5-deploying-an-analysis-services-project.md)  

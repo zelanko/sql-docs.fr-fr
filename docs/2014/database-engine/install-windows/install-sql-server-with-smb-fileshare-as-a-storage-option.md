@@ -10,12 +10,12 @@ ms.assetid: 8b7810b2-637e-46a3-9fe1-d055898ba639
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3769df724031fb72511c92dca8494a3eb893b6a6
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 5113730b1920fb1cd6ecf305e03614e3de894a8e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018974"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366851"
 ---
 # <a name="install-sql-server-with-smb-fileshare-as-a-storage-option"></a>Installer SQL Server avec le partage de fichiers SMB en tant qu'option de stockage
   À compter de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], les bases de données système (Master, Model, MSDB et TempDB) et les bases de données utilisateur du [!INCLUDE[ssDE](../../includes/ssde-md.md)] peuvent être installées avec le serveur de fichiers SMB (Server Message Block) comme option de stockage. Cela s'applique à la fois aux installations autonomes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et aux installations de cluster de basculement (FCI) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -32,7 +32,7 @@ ms.locfileid: "51018974"
   
 -   \\\NomServeur\NomPartage  
   
- Pour plus d’informations sur Universal Naming Convention, consultez [UNC](http://go.microsoft.com/fwlink/?LinkId=245534) (http://go.microsoft.com/fwlink/?LinkId=245534).  
+ Pour plus d’informations sur Universal Naming Convention, consultez [UNC](https://go.microsoft.com/fwlink/?LinkId=245534) (https://go.microsoft.com/fwlink/?LinkId=245534).  
   
  Le chemin d'accès UNC de bouclage (chemin d'accès UNC dont le nom du serveur est localhost, 127.0.0.1 ou le nom d'ordinateur local) n'est pas pris en charge. Exemple de cas particulier : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisant le cluster du serveur de fichiers qui est hébergé sur le même nœud sur lequel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est en cours d'exécution n'est pas non plus pris en charge. Pour éviter cette situation, il est recommandé de créer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et un cluster de serveur de fichiers sur des clusters Windows distincts.  
   
@@ -63,9 +63,9 @@ ms.locfileid: "51018974"
   
 ### <a name="installation-options"></a>Options d'installation  
   
--   Dans la page « Configuration du moteur de base de données » de l’interface utilisateur de l’installation, sous l’onglet « Répertoires de données », affectez au paramètre « Répertoire de données racine » la valeur «\\\fileserver1\share1\ ».  
+-   Dans la page « Configuration du moteur de base de données » de l’interface utilisateur de l’installation, sous l’onglet « Répertoires de données », affectez au paramètre « Répertoire de données racine » la valeur « \\\fileserver1\share1\" ».  
   
--   Dans l’installation à partir de l’invite de commandes, affectez à « /INSTALLSQLDATADIR » la valeur «\\\fileserver1\share1\ ».  
+-   Dans l’installation à partir de l’invite de commandes, affectez à « /INSTALLSQLDATADIR » la valeur « \\\fileserver1\share1\" ».  
   
      Voici l'exemple de syntaxe qui permet d'installer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur un serveur autonome à l'aide de l'option de partage de fichiers SMB :  
   
@@ -86,14 +86,14 @@ ms.locfileid: "51018974"
   
 |Système d'exploitation|Version de protocole SMB2|Avantages de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |----------------------|---------------------------|-------------------------------------------|  
-|[!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] SP 2|2.0|Performances améliorées par rapport aux versions SMB précédentes.<br /><br /> Durabilité, ce qui aide à la récupération lors de problèmes temporaires du réseau.|  
-|[!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP 1, comprenant Server Core|2.1|Prise en charge de MTU volumineuses, ce qui profite aux transferts de données volumineux, par exemple lors d'opérations de sauvegarde et de restauration SQL. Cette fonction doit être activée par l'utilisateur. Pour plus d’informations sur l’activation de cette fonction, consultez [Nouveautés du protocole SMB](http://go.microsoft.com/fwlink/?LinkID=237319) (http://go.microsoft.com/fwlink/?LinkID=237319).<br /><br /> Améliorations significatives des performances, en particulier pour les charges de travail de style SQL OLTP. Ces améliorations de performances requièrent l'application d'un correctif. Pour plus d’informations sur le correctif logiciel, consultez [cet article](http://go.microsoft.com/fwlink/?LinkId=237320) (http://go.microsoft.com/fwlink/?LinkId=237320).|  
-|[!INCLUDE[win8srv](../../includes/win8srv-md.md)], comprenant Server Core|3|Prise en charge du basculement transparent des partages de fichiers ce qui évite tout temps d'arrêt, sans intervention nécessaire de l'administrateur de la base de données SQL ou l'administrateur du serveur de fichiers dans les configurations de cluster de serveurs de fichiers.<br /><br /> Prise en charge d'E/S dans plusieurs interfaces réseau simultanément, ainsi que tolérance à la défaillance de l'interface réseau.<br /><br /> Prise en charge des interfaces réseau avec fonctions RDMA.<br /><br /> Pour plus d’informations sur ces fonctionnalités et le protocole SMB, consultez [Vue d’ensemble du protocole SMB](http://go.microsoft.com/fwlink/?LinkId=253174) (http://go.microsoft.com/fwlink/?LinkId=253174).<br /><br /> Prise en charge de Scale Out File Server (SoFS) avec disponibilité continue.|  
-|[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2, comprenant Server Core|3.2|Prise en charge du basculement transparent des partages de fichiers ce qui évite tout temps d'arrêt, sans intervention nécessaire de l'administrateur de la base de données SQL ou l'administrateur du serveur de fichiers dans les configurations de cluster de serveurs de fichiers.<br /><br /> Prise en charge d'E/S dans plusieurs interfaces réseau simultanément, ainsi que tolérance à la défaillance de l'interface réseau, à l'aide de SMB Multichannel.<br /><br /> Prise en charge des interfaces réseau avec fonctions RDMA à l'aide de SMB Direct.<br /><br /> Pour plus d’informations sur ces fonctionnalités et le protocole SMB, consultez [Vue d’ensemble du protocole SMB](http://go.microsoft.com/fwlink/?LinkId=253174) (http://go.microsoft.com/fwlink/?LinkId=253174).<br /><br /> Prise en charge de Scale Out File Server (SoFS) avec disponibilité continue.<br /><br /> Optimisé pour les E/S de lecture/écriture de petite taille courantes sur OLTP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br /> MTU (Maximum Transmission Unit) est activé par défaut, ce qui améliore grandement les performances lors des transferts séquentiels de grande taille comme pour l'entrepôt de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et la sauvegarde et la restauration de base de données.|  
+|[!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] SP 2|2|Performances améliorées par rapport aux versions SMB précédentes.<br /><br /> Durabilité, ce qui aide à la récupération lors de problèmes temporaires du réseau.|  
+|[!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP 1, comprenant Server Core|2.1|Prise en charge de MTU volumineuses, ce qui profite aux transferts de données volumineux, par exemple lors d'opérations de sauvegarde et de restauration SQL. Cette fonction doit être activée par l'utilisateur. Pour plus d’informations sur l’activation de cette fonction, consultez [Nouveautés du protocole SMB](https://go.microsoft.com/fwlink/?LinkID=237319) (https://go.microsoft.com/fwlink/?LinkID=237319).<br /><br /> Améliorations significatives des performances, en particulier pour les charges de travail de style SQL OLTP. Ces améliorations de performances requièrent l'application d'un correctif. Pour plus d’informations sur le correctif logiciel, consultez [cet article](https://go.microsoft.com/fwlink/?LinkId=237320) (https://go.microsoft.com/fwlink/?LinkId=237320).|  
+|[!INCLUDE[win8srv](../../includes/win8srv-md.md)], comprenant Server Core|3|Prise en charge du basculement transparent des partages de fichiers ce qui évite tout temps d'arrêt, sans intervention nécessaire de l'administrateur de la base de données SQL ou l'administrateur du serveur de fichiers dans les configurations de cluster de serveurs de fichiers.<br /><br /> Prise en charge d'E/S dans plusieurs interfaces réseau simultanément, ainsi que tolérance à la défaillance de l'interface réseau.<br /><br /> Prise en charge des interfaces réseau avec fonctions RDMA.<br /><br /> Pour plus d’informations sur ces fonctionnalités et le protocole SMB, consultez [Vue d’ensemble du protocole SMB](https://go.microsoft.com/fwlink/?LinkId=253174) (https://go.microsoft.com/fwlink/?LinkId=253174).<br /><br /> Prise en charge de Scale Out File Server (SoFS) avec disponibilité continue.|  
+|[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2, comprenant Server Core|3.2|Prise en charge du basculement transparent des partages de fichiers ce qui évite tout temps d'arrêt, sans intervention nécessaire de l'administrateur de la base de données SQL ou l'administrateur du serveur de fichiers dans les configurations de cluster de serveurs de fichiers.<br /><br /> Prise en charge d'E/S dans plusieurs interfaces réseau simultanément, ainsi que tolérance à la défaillance de l'interface réseau, à l'aide de SMB Multichannel.<br /><br /> Prise en charge des interfaces réseau avec fonctions RDMA à l'aide de SMB Direct.<br /><br /> Pour plus d’informations sur ces fonctionnalités et le protocole SMB, consultez [Vue d’ensemble du protocole SMB](https://go.microsoft.com/fwlink/?LinkId=253174) (https://go.microsoft.com/fwlink/?LinkId=253174).<br /><br /> Prise en charge de Scale Out File Server (SoFS) avec disponibilité continue.<br /><br /> Optimisé pour les E/S de lecture/écriture de petite taille courantes sur OLTP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br /> MTU (Maximum Transmission Unit) est activé par défaut, ce qui améliore grandement les performances lors des transferts séquentiels de grande taille comme pour l'entrepôt de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et la sauvegarde et la restauration de base de données.|  
   
 ## <a name="security-considerations"></a>Considérations relatives à la sécurité  
   
--   Le compte de service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et le compte de service de l'agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doivent disposer des autorisations de partage FULL CONTROL et des autorisations NTFS sur les dossiers de partage SMB. Le compte de service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut être un compte de domaine ou un compte système si un serveur de fichiers SMB est utilisé. Pour plus d’informations sur les autorisations de partage et NTFS, consultez [Autorisations de partage et NTFS sur un serveur de fichiers](http://go.microsoft.com/fwlink/?LinkId=245535) (http://go.microsoft.com/fwlink/?LinkId=245535).  
+-   Le compte de service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et le compte de service de l'agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doivent disposer des autorisations de partage FULL CONTROL et des autorisations NTFS sur les dossiers de partage SMB. Le compte de service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut être un compte de domaine ou un compte système si un serveur de fichiers SMB est utilisé. Pour plus d’informations sur les autorisations de partage et NTFS, consultez [Autorisations de partage et NTFS sur un serveur de fichiers](https://go.microsoft.com/fwlink/?LinkId=245535) (https://go.microsoft.com/fwlink/?LinkId=245535).  
   
     > [!NOTE]  
     >  Les autorisations de partage FULL CONTROL et les autorisations NTFS sur les dossiers de partage SMB doivent être limitées : au compte de service de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , au compte de service de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et aux utilisateurs Windows avec des rôles de serveur admin.  
@@ -110,11 +110,11 @@ ms.locfileid: "51018974"
   
 ## <a name="known-issues"></a>Problèmes connus  
   
--   Après avoir détaché une base de données [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] qui réside sur le stockage attaché au réseau, vous pouvez rencontrer un problème d'autorisations sur la base de données lorsque vous essaierez de lier à nouveau la base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Le problème est décrit dans [cet article de la Base de connaissances](http://go.microsoft.com/fwlink/?LinkId=237321) (http://go.microsoft.com/fwlink/?LinkId=237321). Pour le contourner, consultez la section **Plus d'informations** dans l'article de la Base de connaissances.  
+-   Après avoir détaché une base de données [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] qui réside sur le stockage attaché au réseau, vous pouvez rencontrer un problème d'autorisations sur la base de données lorsque vous essaierez de lier à nouveau la base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Le problème est décrit dans [cet article de la Base de connaissances](https://go.microsoft.com/fwlink/?LinkId=237321) (https://go.microsoft.com/fwlink/?LinkId=237321). Pour le contourner, consultez la section **Plus d'informations** dans l'article de la Base de connaissances.  
   
 -   Certains tiers, tels que NetApp, ne gèrent pas tous les appels d'API SQL Server. Avec ces vous risquez d’obtenir :   
     2015-06-04 13:14:19.97 spid9s erreur : 17053, gravité : 16, état : 1.  
-    2015-06-04 13:14:19.97 spid9s DoDevIoCtlOut() GetOverlappedResult() : erreur de système d’exploitation 1 (fonction incorrecte.) rencontrée.  
+    2015-06-04 13:14:19.97 spid9s DoDevIoCtlOut() GetOverlappedResult() : Erreur de système d’exploitation 1 (fonction incorrecte.) rencontrée.  
   
      Pour NTFS, l'erreur est sans conséquence.  Par contre, pour ReFS, elle peut entraîner une dégradation significative des performances.  
   

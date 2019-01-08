@@ -1,5 +1,5 @@
 ---
-title: Leçon 1 Explorer et visualiser des données à l’aide de Python et T-SQL (SQL Server Machine Learning) | Microsoft Docs
+title: Leçon 1 Explorer et visualiser des données à l’aide de Python et T-SQL - SQL Server Machine Learning
 description: Didacticiel montrant comment intégrer Python dans SQL Server des procédures stockées et fonctions T-SQL
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: cf14409cdb321d2f52196e0793ea092ab9ba2430
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: e92b2e1a5d4d5e1ad6990ffafa1a1cfcfbb9d806
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51030979"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645338"
 ---
 # <a name="explore-and-visualize-the-data"></a>Explorer et visualiser les données
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -77,7 +77,7 @@ La procédure stockée retourne un Python sérialisée `figure` objet en tant qu
     - Le script Python est relativement simple : **matplotlib** `figure` objets sont utilisés pour tracer le graphique histogramme et à nuages de points, et ces objets sont sérialisés à l’aide de la `pickle` bibliothèque.
     - L’objet graphics de Python est sérialisée vers un **pandas** trame de données pour la sortie.
   
-    ```SQL
+    ```sql
     DROP PROCEDURE IF EXISTS PyPlotMatplotlib;
     GO
 
@@ -135,13 +135,13 @@ La procédure stockée retourne un Python sérialisée `figure` objet en tant qu
 
 2. Maintenant, exécutez la procédure stockée sans arguments pour générer un graphique à partir des données codées en dur en tant que la requête d’entrée.
 
-    ```
+    ```sql
     EXEC [dbo].[PyPlotMatplotlib]
     ```
 
 3. Les résultats doivent être quelque chose comme ceci :
   
-    ```
+    ```sql
     plot
     0xFFD8FFE000104A4649...
     0xFFD8FFE000104A4649...

@@ -13,12 +13,12 @@ ms.assetid: d2c145dc-d49a-4f5b-91e6-89a2b0adb4f3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 287392869ef22492f0f3b5ac850ec4ecd58515ec
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 623b0139d70cec0574aaf9b68e37a1ad6f4f9eaf
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084629"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355209"
 ---
 # <a name="filestream-compatibility-with-other-sql-server-features"></a>Compatibilité de FILESTREAM avec d'autres fonctionnalités SQL Server
   Les données FILESTREAM figurant dans le système de fichiers, cette rubrique fournit quelques considérations, indications et limitations relatives à l'utilisation de FILESTREAM avec les fonctionnalités suivantes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
@@ -69,7 +69,7 @@ ms.locfileid: "48084629"
  Une colonne `varbinary(max)` qui a l'attribut FILESTREAM activé sur le serveur de publication peut être répliquée sur un abonné avec ou sans l'attribut FILESTREAM. Spécifiez la façon dont la colonne est répliquée à l’aide de la boîte de dialogue **Propriétés de l’article - \<Article>**, ou du paramètre @schema_option de [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) ou [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql). Les données répliquées sur une colonne `varbinary(max)` qui n'a pas l'attribut FILESTREAM ne doivent pas dépasser la limite de 2 Go pour ce type de données, autrement une erreur d'exécution est générée. Nous vous recommandons de répliquer l’attribut FILESTREAM, sauf si vous répliquez des données vers [!INCLUDE[ssVersion2005](../../includes/ssversion2000-md.md)] abonnés n'est pas pris en charge, quel que soit l’option de schéma spécifié.  
   
 > [!NOTE]  
->  La réplication de grandes valeurs de données à partir d'Abonnés [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] vers [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] est limitée à des valeurs de données de 256 Mo maximum. Pour plus d'informations, consultez [Spécifications de capacité maximale](http://go.microsoft.com/fwlink/?LinkId=103810).  
+>  La réplication de grandes valeurs de données à partir d'Abonnés [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] vers [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] est limitée à des valeurs de données de 256 Mo maximum. Pour plus d'informations, consultez [Spécifications de capacité maximale](https://go.microsoft.com/fwlink/?LinkId=103810).  
   
 ### <a name="considerations-for-transactional-replication"></a>Considérations relatives à la réplication transactionnelle  
  Si vous utilisez des colonnes FILESTREAM dans des tables publiées pour la réplication transactionnelle, notez les considérations suivantes :  
@@ -78,18 +78,18 @@ ms.locfileid: "48084629"
   
 -   L'option max text repl size spécifie la quantité maximale de données qui peuvent être insérées dans une colonne publiée pour la réplication. Cette option peut être utilisée pour contrôler la taille des données FILESTREAM répliquées.  
   
--   Si vous spécifiez l’option de schéma pour répliquer l’attribut FILESTREAM, mais vous filtrez la `uniqueidentifier` colonne requise par FILESTREAM ou que vous spécifiez de ne pas répliquer la contrainte UNIQUE pour la colonne, la réplication ne réplique pas l’objet FILESTREAM attribut. La colonne est répliquée uniquement en tant que colonne `varbinary(max)`.  
+-   Si vous spécifiez l'option de schéma pour répliquer l'attribut FILESTREAM, mais que vous filtrez la colonne `uniqueidentifier` requise par FILESTREAM ou que vous spécifiez qu'il ne faut pas répliquer la contrainte UNIQUE pour la colonne, la réplication ne réplique pas l'attribut FILESTREAM. La colonne est répliquée uniquement en tant que colonne `varbinary(max)`.  
   
 ### <a name="considerations-for-merge-replication"></a>Considérations relatives à la réplication de fusion  
- Si vous utilisez des colonnes FILESTREAM dans des tables publiées pour la réplication de fusion, notez les considérations suivantes :  
+ Si vous utilisez des colonnes FILESTREAM dans des tables publiées pour la réplication de fusion, notez les considérations suivantes :  
   
--   La réplication de fusion et FILESTREAM requièrent une colonne de type de données `uniqueidentifier` pour identifier chaque ligne dans une table. La réplication de fusion ajoute automatiquement une colonne si la table n'en a pas. La réplication de fusion requiert que la propriété ROWGUIDCOL de la colonne soit définie et que la valeur par défaut soit NEWID() ou NEWSEQUENTIALID(). En plus de ces spécifications, FILESTREAM requiert qu'une contrainte UNIQUE soit définie pour la colonne. Ces exigences entraînent les conséquences suivantes :  
+-   La réplication de fusion et FILESTREAM requièrent une colonne de type de données `uniqueidentifier` afin d'identifier chaque ligne dans une table. La réplication de fusion ajoute automatiquement une colonne si la table n'en a pas. La réplication de fusion requiert que la propriété ROWGUIDCOL de la colonne soit définie et que la valeur par défaut soit NEWID() ou NEWSEQUENTIALID(). En plus de ces spécifications, FILESTREAM requiert qu'une contrainte UNIQUE soit définie pour la colonne. Ces exigences entraînent les conséquences suivantes :  
   
     -   Si vous ajoutez une colonne FILESTREAM à une table qui est déjà publiée pour la réplication de fusion, assurez-vous que la colonne `uniqueidentifier` a une contrainte UNIQUE. Si elle n'a pas de contrainte UNIQUE, ajoutez une contrainte nommée à la table dans la base de données de publication. Par défaut, la réplication de fusion publiera cette modification de schéma et elle s'appliquera à chaque base de données d'abonnement.  
   
          Si vous ajoutez une contrainte UNIQUE manuellement comme décrit et que vous souhaitez supprimer la réplication de fusion, vous devez d'abord supprimer la contrainte UNIQUE, sinon la suppression de réplication échouera.  
   
-    -   Par défaut, la réplication de fusion utilise NEWSEQUENTIALID() car ses performances peuvent être supérieures à celles de NEWID(). Si vous ajoutez un `uniqueidentifier` colonne à une table qui sera publiée pour la réplication de fusion, spécifiez NEWSEQUENTIALID() comme valeur par défaut.  
+    -   Par défaut, la réplication de fusion utilise NEWSEQUENTIALID() car ses performances peuvent être supérieures à celles de NEWID(). Si vous ajoutez une colonne `uniqueidentifier` à une table qui sera publiée pour la réplication de fusion, spécifiez NEWSEQUENTIALID() comme valeur par défaut.  
   
 -   La réplication de fusion inclut une optimisation pour répliquer de grands types d'objets. Cette optimisation est contrôlée par le paramètre @stream_blob_columns de [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql). Si vous définissez l'option de schéma de façon à répliquer l'attribut FILESTREAM, la valeur de paramètre @stream_blob_columns a la valeur `true`. Cette optimisation peut être substituée en utilisant [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). Cette procédure stockée vous permet de définir @stream_blob_columns sur `false`. Si vous ajoutez une colonne FILESTREAM à une table qui est déjà publiée pour la réplication de fusion, nous vous recommandons d'affecter la valeur `true` à l'option en utilisant sp_changemergearticle.  
   

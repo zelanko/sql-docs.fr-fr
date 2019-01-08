@@ -17,15 +17,15 @@ ms.assetid: 760ee051-6fd8-48e3-8d2e-82db3ab45e45
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d19bba4a48e47e7fc0f7fff1cc5765b7cfac9bc8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b9a094303b62bf134d750ed1b94c9cd0126e188d
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171709"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52407316"
 ---
 # <a name="profit-chart-analysis-services---data-mining"></a>Graphique des bénéfices (Analysis Services - Exploration de données)
-  Un graphique des bénéfices affiche la rentabilité estimée associée à l'utilisation d'un modèle d'exploration de données. Par exemple, supposons que votre modèle prédit les clients qu'une société doit contacter dans un scénario d'application professionnelle. Dans ce cas, vous devez ajouter au graphique des bénéfices des informations relatives au coût de la campagne de publipostage ciblée. Ensuite, dans le graphique terminé, consultez les bénéfices estimés si les clients sont correctement ciblés, par à rapport à la prise de contact aléatoire avec des clients.  
+  Un graphique des bénéfices affiche la rentabilité estimée associée à l'utilisation d'un modèle d'exploration de données. Par exemple, supposons que votre modèle prédit les clients qu’une entreprise doivent contacter dans un scénario d’entreprise. Dans ce cas, vous devez ajouter au graphique des bénéfices des informations relatives au coût de la campagne de publipostage ciblée. Ensuite, dans le graphique terminé, consultez les bénéfices estimés si les clients sont correctement ciblés, par à rapport à la prise de contact aléatoire avec des clients.  
   
 ## <a name="build-a-profit-chart"></a>Créer un graphique des bénéfices  
  Un graphique des bénéfices est similaire à un graphique de courbes d'élévation. Commencez par créer un graphique de courbes d'élévation, puis ajoutez les informations relatives au coût et aux bénéfices.  
@@ -34,7 +34,7 @@ ms.locfileid: "48171709"
   
  Pour cet exemple, nous avons utilisé le modèle d'arbre de décision de publipostage ciblé. Le modèle identifie les clients qui sont susceptibles d'acheter un vélo. Vous pouvez appliquer le **Graphique des bénéfices** pour déterminer le nombre de clients à cibler pour optimiser vos bénéfices.  
   
- Si vous n’avez pas d’exemple de modèle, vous pouvez en créer un à l’aide du [Didacticiel d’exploration de données de base](../../tutorials/basic-data-mining-tutorial.md).  
+ Si vous n’avez pas l’exemple de modèle, vous pouvez créer à l’aide de la [Basic Data Mining Tutorial](../../tutorials/basic-data-mining-tutorial.md).  
   
 1.  Ouvrez le concepteur Graphique d'analyse de précision de l'exploration de données.  
   
@@ -60,12 +60,12 @@ ms.locfileid: "48171709"
   
      Cette boîte de dialogue vous permet de spécifier les coûts et les bénéfices associés à une campagne de publipostage ciblée. Pour le graphique affiché dans ces exemples, nous avons utilisé les valeurs suivantes :  
   
-    |Paramètre|Valeur|Commentaires|  
+    |Paramètre|Value|Commentaires|  
     |-------------|-----------|--------------|  
     |**Remplissage**|20 000.|Définir la valeur de la population cible totale<br /><br /> Votre base de données peut contenir de nombreux clients, mais pour économiser sur les dépenses de publipostage, vous ne ciblez que les 20 000 clients les plus susceptibles de répondre. Vous pouvez obtenir cette liste lors de l'exécution d'une requête de prédiction et du tri sur la probabilité générée par le modèle prédictif.|  
     |**Coût fixe**|500|Entrez le coût fixe de la configuration d'une campagne de publipostage ciblée pour 20 000 personnes. Cela peut inclure l'impression, ou le coût de configuration d'une campagne de publipostage.|  
     |**Coût individuel**|3|Entrez le coût unitaire de la campagne de publipostage ciblée.<br /><br /> Ce montant sera multiplié par un nombre inférieur ou égal à 20 000, en fonction du nombre de clients que le modèle prédira comme étant des prospects valables.|  
-    |**Revenu par personne**|400|Entrez une valeur qui représente le montant des bénéfices ou des recettes qui peut être attendu d'un résultat réussi. Dans ce cas, nous supposerons que le publipostage d'un catalogue entraîne l'achat d'accessoires ou de vélos d'une valeur moyenne de $400.<br /><br /> Ce montant sera utilisé pour projeter le total des bénéfices associés aux cas à probabilité élevée.|  
+    |**Revenu par personne**|400|Entrez une valeur qui représente le montant des bénéfices ou des recettes qui peut être attendu d'un résultat réussi. Dans ce cas, nous supposerons que le publipostage d’un catalogue entraîne l’achat d’accessoires ou de moyenne de 400 dollars de vélos.<br /><br /> Ce montant sera utilisé pour projeter le total des bénéfices associés aux cas à probabilité élevée.|  
   
 7.  Après avoir défini les paramètres obligatoires, cliquez sur **OK**.  
   
@@ -92,13 +92,13 @@ ms.locfileid: "48171709"
   
 |Rubriques|Liens|  
 |------------|-----------|  
-|Propose une procédure pas à pas permettant de créer un graphique de courbes d'élévation pour le modèle de publipostage ciblé.|[Tutoriel sur l’exploration de données de base](../../tutorials/basic-data-mining-tutorial.md)<br /><br /> [Test de la précision avec des graphiques de courbes d’élévation &#40;didacticiel d’exploration de données de base&#41;](../../tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)|  
+|Propose une procédure pas à pas permettant de créer un graphique de courbes d'élévation pour le modèle de publipostage ciblé.|[Didacticiel sur l'exploration de données de base](../../tutorials/basic-data-mining-tutorial.md)<br /><br /> [Test de la précision à l’aide de graphiques de courbes d’élévation &#40;Didacticiel sur l’exploration de données de base&#41;](../../tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)|  
 |Explique les types de graphique associés.|[Graphique de courbes d’élévation &#40;Analysis Services - Exploration de données&#41;](lift-chart-analysis-services-data-mining.md)<br /><br /> [Matrice de classification &#40;Analysis Services - Exploration de données&#41;](classification-matrix-analysis-services-data-mining.md)<br /><br /> [Nuage de points &#40;Analysis Services - Exploration de données&#41;](scatter-plot-analysis-services-data-mining.md)|  
-|Décrit la validation croisée des modèles d'exploration de données et des structures d'exploration de données.|[La Validation croisée &#40;Analysis Services - Exploration de données&#41;](cross-validation-analysis-services-data-mining.md)|  
-|Décrit les étapes permettant de créer des graphiques de courbes d'élévation et d'autres graphiques d'analyse de précision.|[Test et des tâches de Validation et des procédures &#40;exploration de données&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)|  
+|Décrit la validation croisée des modèles d'exploration de données et des structures d'exploration de données.|[Validation croisée &#40;Analysis Services – Exploration de données&#41;](cross-validation-analysis-services-data-mining.md)|  
+|Décrit les étapes permettant de créer des graphiques de courbes d'élévation et d'autres graphiques d'analyse de précision.|[Tâches de test et validation et procédures &#40;exploration des données&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Test et Validation &#40;exploration de données&#41;](testing-and-validation-data-mining.md)   
- [Test de la précision avec des graphiques de courbes d’élévation &#40;didacticiel d’exploration de données de base&#41;](../../tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)  
+ [Test et validation &#40;exploration de données&#41;](testing-and-validation-data-mining.md)   
+ [Test de la précision à l’aide de graphiques de courbes d’élévation &#40;Didacticiel sur l’exploration de données de base&#41;](../../tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)  
   
   

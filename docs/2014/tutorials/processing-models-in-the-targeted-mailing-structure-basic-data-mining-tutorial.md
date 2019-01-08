@@ -11,12 +11,12 @@ ms.assetid: 9d8233bb-117e-4563-9302-8a5a8ad1fae2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 06e8e220f5ab51a3dbc2ca4248023918879956d4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cba5f339987c42c79c3d982d64d37879a7c3e2d6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101345"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52402574"
 ---
 # <a name="processing-models-in-the-targeted-mailing-structure-basic-data-mining-tutorial"></a>Traitement de modèles dans la structure de publipostage ciblé (Didacticiel sur l'exploration de données de base)
   Avant de pouvoir consulter ou utiliser les modèles d'exploration de données que vous avez créés, vous devez déployer le projet [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] et traiter la structure d'exploration de données et les modèles d'exploration de données.  
@@ -47,7 +47,7 @@ ms.locfileid: "48101345"
 4.  Entrez `12` pour **HoldoutSeed**.  
   
 ## <a name="deploying-and-processing-the-models"></a>Déploiement et traitement des modèles  
- Dans le Concepteur d'exploration de données, vous décidez des objets à traiter, selon l'étendue des modifications apportées à votre modèle ou aux données sous-jacentes :  
+ Dans le Concepteur d’exploration de données, vous pouvez décider quels objets à traiter, selon l’étendue des modifications apportées à votre modèle ou les données sous-jacentes :  
   
  Pour cette tâche, étant donné que les données et les modèles sont nouveaux, vous allez traiter la structure et tous les modèles en même temps.  
   
@@ -72,6 +72,6 @@ ms.locfileid: "48101345"
  [Leçon 4 : Exploration des modèles de publipostage ciblé &#40;didacticiel d’exploration de données de base&#41;](../../2014/tutorials/lesson-4-exploring-the-targeted-mailing-models-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Traitement des exigences et considérations &#40;exploration de données&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
+ [Exigences et considérations concernant le traitement &#40;exploration de données&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
   
   

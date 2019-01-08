@@ -19,12 +19,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fac6931d7645a778bd332f8bc5e1ef3d2f5059ed
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8ae1ad6aabc87d1cf0d7d92da5b97092c23bc02d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629913"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511933"
 ---
 # <a name="bcpbind"></a>bcp_bind
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -122,7 +122,7 @@ bcp_bind(hdbc, szName, 0,
   
  Le *eDataType* paramètre est énuméré par les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] des jetons de type de données dans sqlncli.h, pas les énumérateurs de type de données C ODBC. Par exemple, vous pouvez spécifier un entier à deux octets, type ODBC SQL_C_SHORT, à l'aide du type SQLINT2 propre à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] a introduit la prise en charge des jetons de type de données SQLXML et SQLUDT dans le ***eDataType*** habituellement.  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] a introduit la prise en charge des jetons de type de données SQLXML et SQLUDT dans le **_eDataType_** habituellement.  
  
  Le tableau suivant répertorie les types de données énumérées valides et les types de données ODBC C correspondants.
   
@@ -146,20 +146,20 @@ bcp_bind(hdbc, szName, 0,
 |SQLINT2|short int|  
 |SQLINT4|INT|  
 |SQLINT8|_int64|  
-|SQLINTN|*cbIndicator*<br /> 1: SQLINT1<br /> 2: SQLINT2<br /> 4: SQLINT4<br /> 8: SQLINT8|  
+|SQLINTN|*cbIndicator*<br /> 1 : SQLINT1<br /> 2 : SQLINT2<br /> 4 : SQLINT4<br /> 8 : SQLINT8|  
 |SQLFLT4|FLOAT|  
 |SQLFLT8|FLOAT|  
-|SQLFLTN|*cbIndicator*<br /> 4: SQLFLT4<br /> 8: SQLFLT8|  
+|SQLFLTN|*cbIndicator*<br /> 4 : SQLFLT4<br /> 8 : SQLFLT8|  
 |SQLDECIMALN|SQL_NUMERIC_STRUCT|  
 |SQLNUMERICN|SQL_NUMERIC_STRUCT|  
 |SQLMONEY|DBMONEY|  
 |SQLMONEY4|DBMONEY4|  
-|SQLMONEYN|*cbIndicator*<br /> 4: SQLMONEY4<br /> 8: SQLMONEY|  
+|SQLMONEYN|*cbIndicator*<br /> 4 : SQLMONEY4<br /> 8 : SQLMONEY|  
 |SQLTIMEN|SQL_SS_TIME2_STRUCT|  
 |SQLDATEN|SQL_DATE_STRUCT|  
 |SQLDATETIM4|DBDATETIM4|  
 |SQLDATETIME|DBDATETIME|  
-|SQLDATETIMN|*cbIndicator*<br /> 4: SQLDATETIM4<br /> 8: SQLDATETIME|  
+|SQLDATETIMN|*cbIndicator*<br /> 4 : SQLDATETIM4<br /> 8 : SQLDATETIME|  
 |SQLDATETIME2N|SQL_TIMESTAMP_STRUCT|  
 |SQLDATETIMEOFFSETN|SQL_SS_TIMESTAMPOFFSET_STRUCT|  
 |SQLIMAGE|unsigned char *|  
@@ -177,7 +177,7 @@ bcp_bind(hdbc, szName, 0,
 ## <a name="remarks"></a>Notes  
  Utilisez **bcp_bind** pour un moyen rapide et efficace copier des données à partir d’une variable de programme dans une table de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Appelez [bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) avant d’appeler cette fonction ou toute autre fonction de copie en bloc. Appel **bcp_init** définit le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la table cible pour la copie en bloc. Lors de l’appel **bcp_init** pour une utilisation avec **bcp_bind** et [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md), le **bcp_init** *szDataFile*paramètre, qui indique le fichier de données est définie sur NULL ; le **bcp_init *** eDirection* paramètre a la valeur DB_IN.  
+ Appelez [bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) avant d’appeler cette fonction ou toute autre fonction de copie en bloc. Appel **bcp_init** définit le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la table cible pour la copie en bloc. Lors de l’appel **bcp_init** pour une utilisation avec **bcp_bind** et [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md), le **bcp_init** *szDataFile*paramètre, qui indique le fichier de données est définie sur NULL ; le **bcp_init**_eDirection_ paramètre a la valeur DB_IN.  
   
  Rendre un distinct **bcp_bind** appeler pour chaque colonne dans la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table dans laquelle vous souhaitez copier. Après le nécessaire **bcp_bind** appels ont été apportées, puis appelez **bcp_sendrow** pour envoyer une ligne de données à partir de vos variables de programme à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La reliaison des colonnes n'est pas prise en charge.  
   

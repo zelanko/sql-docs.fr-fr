@@ -15,12 +15,12 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 9801afda1a876f486e7b7042d3dad082c70c99fa
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.openlocfilehash: ceca358e47a2cabbe01e64498d61603717a0d370
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49643817"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52419250"
 ---
 # <a name="configure-settings-for-data-migration-assistant"></a>Configurer les paramètres de l’Assistant Migration des données
 
@@ -40,7 +40,7 @@ Veillez à enregistrer une copie du fichier de configuration d’origine avant d
 
 ## <a name="number-of-databases-to-assess-in-parallel"></a>Nombre de bases de données à évaluer en parallèle
 
-Assistant Migration de données évalue plusieurs bases de données en parallèle. Pendant l’évaluation Data Migration Assistant extrait l’application de la couche données (dacpac) pour comprendre le schéma de base de données. Cette opération peut expirer si plusieurs bases de données sur le même serveur sont évaluées en parallèle. 
+Assistant Migration de données évalue plusieurs bases de données en parallèle. Pendant l’évaluation Data Migration Assistant extrait l’application de la couche données (dacpac) pour comprendre le schéma de base de données. Cette opération peut expirer si plusieurs bases de données sur le même serveur sont évaluées en parallèle. 
 
 À partir de Data Migration Assistant v2.0, vous pouvez contrôler cela en définissant le parallelDatabases valeur de configuration. Valeur par défaut est 8.
 
@@ -70,7 +70,7 @@ En commençant par v2.0 Data Migration Assistant, si vous rencontrez ce problèm
 
 <workflowSettings>
 
-<migration parallelDatabases=”8″ />
+<migration parallelDatabases="8″ />
 
 </workflowSettings>
 
@@ -87,22 +87,22 @@ Pendant l’évaluation, Data Migration Assistant extrait l’application de la 
 
 - commandTimeout
 
-   Ce paramètre définit la propriété IDbCommand.CommandTimeout *secondes*. (Par défaut = 60)
+   Ce paramètre définit la propriété IDbCommand.CommandTimeout *secondes*. (Par défaut = 60)
 
 - databaseLockTimeout
 
-   Ce paramètre équivaut à [verrou définir\_délai d’expiration du délai d’attente\_période](../t-sql/statements/set-lock-timeout-transact-sql.md) dans *millisecondes*. (Par défaut = 5000)
+   Ce paramètre équivaut à [verrou définir\_délai d’expiration du délai d’attente\_période](../t-sql/statements/set-lock-timeout-transact-sql.md) dans *millisecondes*. (Par défaut = 5000)
 
 - maxDataReaderDegreeOfParallelism
 
-  Ce paramètre définit le nombre de connexions de pool de connexion SQL à utiliser. (Par défaut = 8)
+  Ce paramètre définit le nombre de connexions de pool de connexion SQL à utiliser. (Par défaut = 8)
 
 ```
 <advisorGroup>
 
 <advisorSettings>
 
-<dacFx  commandTimeout="60" databaseLockTimeout="5000"
+<dacFx  commandTimeout="60" databaseLockTimeout="5000"
 maxDataReaderDegreeOfParallelism="8"/>
 
 </advisorSettings>
@@ -121,7 +121,7 @@ Avec [SQL Server Stretch Database](https://docs.microsoft.com/sql/sql-server/str
 
 <advisorSettings>
 
-<stretchDBAdvisor  recommendedNumberOfRows="100000" />
+<stretchDBAdvisor  recommendedNumberOfRows="100000" />
 
 </advisorSettings>
 
@@ -136,7 +136,7 @@ Vous pouvez contrôler le [délai de connexion SQL](https://msdn.microsoft.com/l
 ```
 <appSettings>
 
-<add key="ConnectionTimeout" value="15" />
+<add key="ConnectionTimeout" value="15" />
 
 </appSettings>
 ```

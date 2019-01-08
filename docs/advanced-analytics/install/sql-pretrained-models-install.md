@@ -1,5 +1,5 @@
 ---
-title: Installer des modèles d’apprentissage automatique préformé sur SQL Server | Microsoft Docs
+title: Installer PRÉFORMÉE modèles machine learning - SQL Server Machine Learning
 description: Ajouter des modèles préentraînés pour une caractérisation sentiment analysis et l’image à SQL Server 2017 Machine Learning Services (R ou Python) ou SQL Server 2016 R Services.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: b2dfee04a7c0c9c39b7969551a85a49d441f30e5
-ms.sourcegitcommit: 84cc5ed00833279da3adbde9cb6133a4e788ed3f
+ms.openlocfilehash: 901ab45ea727ec03a439f07ac2b4a971c98060f2
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39216830"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645438"
 ---
 # <a name="install-pre-trained-machine-learning-models-on-sql-server"></a>Installer PRÉFORMÉE modèles machine learning sur SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -104,7 +104,7 @@ Vérifiez tout d’abord, pour les nouveaux fichiers dans le [mxlibs dossier](#f
 
 2. Collez le script R suivant à l’invite de commandes.
 
-    ```r
+    ```R
     # Create the data
     CustomerReviews <- data.frame(Review = c(
     "I really did not like the taste of it",
@@ -126,7 +126,7 @@ Vérifiez tout d’abord, pour les nouveaux fichiers dans le [mxlibs dossier](#f
 
 3. Appuyez sur ENTRÉE pour afficher les scores de sentiments. Sortie doit se présenter comme suit :
 
-    ```
+    ```R
     > sentimentScores
                                             Review SentimentScore
     1           I really did not like the taste of it      0.4617899
@@ -168,7 +168,7 @@ Vérifiez tout d’abord, pour les nouveaux fichiers dans le [mxlibs dossier](#f
 
 3. Appuyez sur ENTRÉE pour imprimer les scores. Sortie doit se présenter comme suit :
 
-    ```
+    ```python
     >>> print(sentiment_scores)
                                                 review    scores         eval
     0            I really did not like the taste of it  0.461790         BLAH
@@ -190,7 +190,7 @@ Les liens suivants comportent des procédures pas à pas et des exemples de code
 
   Le modèle préformé pour les images prend en charge la personnalisation d’images que vous fournissez. Pour utiliser le modèle, vous appelez le **featurizeImage** transformer. L’image est chargée, redimensionné et caractérisées par le modèle formé. La sortie de la préapprentissage de réseau de neurones profond est ensuite utilisée pour former un modèle linéaire pour la classification d’images. Pour utiliser ce modèle, toutes les images doivent être redimensionnés pour répondre aux exigences du modèle formé. Par exemple, si vous utilisez un modèle AlexNet, l’image doit être redimensionnée à 227 x 227 px.
 
-+ [Exemple de code : analyse des sentiments à l’aide de texte Préapprentissage](https://github.com/Microsoft/microsoft-r/tree/master/microsoft-ml/Samples/101/BinaryClassification/SimpleSentimentAnalysis)
++ [Exemple de code : Analyse des sentiments à l’aide de texte Préapprentissage](https://github.com/Microsoft/microsoft-r/tree/master/microsoft-ml/Samples/101/BinaryClassification/SimpleSentimentAnalysis)
 
 <a name="bkmk_resources"></a> 
 

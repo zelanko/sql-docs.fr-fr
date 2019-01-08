@@ -15,12 +15,12 @@ ms.assetid: 48cbe18b-1290-4107-8a1c-ec6acd71f73b
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: ee420b28442909af74a17a196ffac653b6089eb5
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: a0f004a2d145356e38816b65fc2cd5c2a1972074
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072323"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362911"
 ---
 # <a name="map-wizard-and-map-layer-wizard-report-builder-and-ssrs"></a>Assistant Carte et Assistant Couche (Générateur de rapports et SSRS)
   L'Assistant Carte et l'Assistant Couche automatisent la tâche de création d'une carte, d'ajout d'une couche ou de modification des options de couche sur une couche existante.  
@@ -32,7 +32,7 @@ ms.locfileid: "49072323"
   
 -   **Source de données spatiales.** Emplacement ou connexion à une source qui fournit des données spatiales, par exemple le nom d’une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et d’une base de données contenant des données spatiales, ou celui d’un fichier de forme ESRI (Environmental Systems Research Institute)  
   
--   **.** Champ de la source de données spatiales contenant des jeux de coordonnées qui spécifient des emplacements.  
+-   **Spatial data.** Champ de la source de données spatiales contenant des jeux de coordonnées qui spécifient des emplacements.  
   
 -   **Données analytiques.** Données analytiques utilisées pour modifier l'affichage du carte, par exemple, les chiffres de ventes annuels des magasins.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "49072323"
   
  Cliquez sur le titre de la page de l'Assistant pour consulter l'aide correspondante. Les pages qui s'affichent varient en fonction de vos choix pour le type de carte, la source de données spatiales et la source de données analytiques.  
   
-1.  [Choisir une source de données spatiales](#SpatialDataSource). Les données spatiales peuvent provenir de la bibliothèque de cartes, d'un fichier de forme ESRI ou des données spatiales d'une base de données relationnelle [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+1.  [Choisir une source de données spatiales](#SpatialDataSource). Les données spatiales peuvent provenir de la bibliothèque de cartes, d'un fichier de forme ESRI ou des données spatiales d'une base de données relationnelle [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
     -   [Que sont les données spatiales ?](#SpatialData)  
   
@@ -79,9 +79,9 @@ ms.locfileid: "49072323"
   
     -   [Quelle est la différence entre une carte simple, une carte à bulles et une carte analytique ?](#MapType)  
   
-    -   **Choisir la visualisation de la carte : polygones**  
+    -   **Choisir la visualisation de la carte : Polygones**  
   
-    -   **Choisir la visualisation de la carte : lignes**  
+    -   **Choisir la visualisation de la carte : Lignes**  
   
     -   **Choisir la visualisation de la carte : Points**  
   
@@ -107,7 +107,7 @@ ms.locfileid: "49072323"
   
  Après avoir ajouté une carte ou une couche et affiché un aperçu du rapport, vous pouvez modifier les options de carte et de couche que vous avez définies dans les Assistants. Pour plus d’informations, consultez [Personnaliser des données et l’affichage d’une carte ou d’une couche &#40;Générateur de rapports et SSRS&#41;](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md).  
   
- Pour plus d’informations sur les cartes, consultez [Cartes &#40;Générateur de rapports et SSRS&#41;](maps-report-builder-and-ssrs.md). Pour obtenir des instructions pas à pas pour ajouter une carte à un rapport, consultez [Didacticiel : Rapport cartographique &#40;Générateur de rapports&#41;](../tutorial-map-report-report-builder.md).  
+ Pour plus d’informations sur les cartes, consultez [Cartes &#40;Générateur de rapports et SSRS&#41;](maps-report-builder-and-ssrs.md). Pour obtenir des instructions pas à pas ajouter un mappage à un rapport, consultez [didacticiel : Rapport cartographique &#40;Générateur de rapports&#41;](../tutorial-map-report-report-builder.md).  
   
  ![Icône de flèche utilisée avec le lien Retour au début](../../2014-toc/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour au début") [Retour au début](#BackToTop)  
   
@@ -139,7 +139,7 @@ ms.locfileid: "49072323"
  Dans le Concepteur de rapports dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], ajoutez le fichier .shp et le fichier .dbf au projet de rapport, puis spécifiez le nom du fichier .shp comme source de données spatiales.  
   
 ###  <a name="GetShapefiles"></a> Où puis-je obtenir des fichiers de forme ESRI ?  
- Les fichiers de forme ESRI sont disponibles sur le Web. Pour plus d’informations, consultez [Rechercher des fichiers de forme ESRI pour une carte](http://go.microsoft.com/fwlink/?linkid=178814).  
+ Les fichiers de forme ESRI sont disponibles sur le Web. Pour plus d’informations, consultez [Rechercher des fichiers de forme ESRI pour une carte](https://go.microsoft.com/fwlink/?linkid=178814).  
   
 ###  <a name="SqlServerSpatial"></a> Qu'est-ce qu'une requête spatiale SQL Server ?  
  Une requête spatiale [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] est une requête de dataset qui spécifie des données de type SQLGeometry ou SQLGeography d'une base de données relationnelle [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
@@ -149,7 +149,7 @@ ms.locfileid: "49072323"
   
  Lorsque vous exécutez la requête dans le concepteur de requêtes, le jeu de résultats affiche une colonne avec des données spatiales affichées sous forme de texte. Par exemple, une ligne peut contenir des données spatiales qui sont un point unique et la ligne suivante peut contenir des données spatiales qui définissent un jeu de points. Chaque ligne devient un élément cartographique. Vous pouvez varier l'affichage de chaque élément cartographique en tant qu'unité indivisible.  
   
- Pour plus d'informations, consultez « Types de données spatiales » dans la [documentation en ligne de SQL Server](http://go.microsoft.com/fwlink/?linkid=120955).  
+ Pour plus d'informations, consultez « Types de données spatiales » dans la [documentation en ligne de SQL Server](https://go.microsoft.com/fwlink/?linkid=120955).  
   
  ![Icône de flèche utilisée avec le lien Retour au début](../../2014-toc/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour au début") [Retour au début](#BackToTop)  
   
@@ -196,9 +196,9 @@ ms.locfileid: "49072323"
   
 -   **Hybride.** Affichez la combinaison des vues **Route** et **Aérien** .  
   
- Pour plus d'informations sur les mosaïques, consultez le [système de mosaïques Bing](http://go.microsoft.com/fwlink/?LinkId=147315). Pour plus d'informations sur l'utilisation de mosaïques Bing dans votre rapport, consultez [Conditions supplémentaires d'utilisation](http://go.microsoft.com/fwlink/?LinkId=151371) et [Déclaration de confidentialité](http://go.microsoft.com/fwlink/?LinkId=151372)(éventuellement en anglais).  
+ Pour plus d'informations sur les mosaïques, consultez le [système de mosaïques Bing](https://go.microsoft.com/fwlink/?LinkId=147315). Pour plus d'informations sur l'utilisation de mosaïques Bing dans votre rapport, consultez [Conditions supplémentaires d'utilisation](https://go.microsoft.com/fwlink/?LinkId=151371) et [Déclaration de confidentialité](https://go.microsoft.com/fwlink/?LinkId=151372)(éventuellement en anglais).  
   
- Pour afficher un arrière-plan de mosaïques en mode Création, vous devez disposer d'un accès Internet. Pour afficher l'arrière-plan de mosaïques dans l'aperçu d'un rapport sur un serveur de rapports, le serveur de rapports doit être configuré pour prendre en charge les mosaïques Bing. Pour plus d’informations, consultez [résoudre les problèmes de rapports : rapports cartographiques &#40;Générateur de rapports et SSRS&#41; ](troubleshoot-reports-map-reports-report-builder-and-ssrs.md) et « Planification de la charge des cartes » dans le [documentation de Reporting Services](http://go.microsoft.com/fwlink/?linkid=121312) dans la documentation en ligne de SQL Server.  
+ Pour afficher un arrière-plan de mosaïques en mode Création, vous devez disposer d'un accès Internet. Pour afficher l'arrière-plan de mosaïques dans l'aperçu d'un rapport sur un serveur de rapports, le serveur de rapports doit être configuré pour prendre en charge les mosaïques Bing. Pour plus d’informations, consultez [résoudre les problèmes de rapports : Mapper des rapports &#40;Générateur de rapports et SSRS&#41; ](troubleshoot-reports-map-reports-report-builder-and-ssrs.md) et « Planification de la charge des cartes » dans le [documentation de Reporting Services](https://go.microsoft.com/fwlink/?linkid=121312) dans la documentation en ligne de SQL Server.  
   
  Pour plus d’informations sur d’autres manières de personnaliser une couche de mosaïques, consultez [Ajouter, modifier ou supprimer une carte ou une couche &#40;Générateur de rapports et SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md).  
   
@@ -271,7 +271,7 @@ ms.locfileid: "49072323"
  ![Icône de flèche utilisée avec le lien Retour au début](../../2014-toc/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour au début") [Retour au début](#BackToTop)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Résoudre les problèmes liés aux rapports : rapports cartographiques &#40;Générateur de rapports et SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)   
+ [Dépanner les rapports : Mapper des rapports &#40;Générateur de rapports et SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)   
  [Planifier un rapport cartographique &#40;Générateur de rapports et SSRS&#41;](plan-a-map-report-report-builder-and-ssrs.md)   
  [Cartes &#40;Générateur de rapports et SSRS&#41;](maps-report-builder-and-ssrs.md)  
   

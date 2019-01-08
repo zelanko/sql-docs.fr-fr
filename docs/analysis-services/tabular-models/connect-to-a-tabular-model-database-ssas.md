@@ -1,5 +1,5 @@
 ---
-title: Se connecter à une base de données de modèle tabulaire | Documents Microsoft
+title: Se connecter à une base de données de modèle tabulaire Analysis Services | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ce70f8ac3e22e31f0420762019c94fc629951a4b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 239559dc7d5bfdabe3a3f9060bc92059982c8dae
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34045293"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072416"
 ---
 # <a name="connect-to-a-tabular-model-database"></a>Se connecter à une base de données de modèle tabulaire  
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  Après avoir généré un modèle tabulaire et l'avoir déployé sur un serveur Analysis Services en mode tabulaire, vous devez définir les autorisations qui le mettent à disposition des applications clientes. Cet article explique comment les autorisations et comment se connecter à une base de données à partir d’applications clientes.  
+  Après avoir généré un modèle tabulaire et l'avoir déployé sur un serveur Analysis Services en mode tabulaire, vous devez définir les autorisations qui le mettent à disposition des applications clientes. Cet article explique comment les autorisations et comment vous connecter à une base de données à partir d’applications clientes.  
   
 > [!NOTE]  
 >  Par défaut, les connexions distantes à Analysis Services ne sont pas disponibles avant d'avoir configuré le pare-feu. Assurez-vous que vous avez ouvert le port approprié si vous configurez une instance par défaut ou nommée pour les connexions clientes. Pour plus d’informations, consultez [Configurer le pare-feu Windows pour autoriser l’accès à Analysis Services](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
@@ -26,7 +26,7 @@ ms.locfileid: "34045293"
 ##  <a name="bkmk_userpermissions"></a> Autorisations de l'utilisateur sur la base de données  
  Les utilisateurs qui se connectent à des bases de données tabulaires doivent appartenir à un rôle de base de données qui spécifie l'accès en lecture.  
   
- Les rôles, et parfois l'appartenance au rôle, sont définis lorsqu'un modèle est créé dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], ou pour les modèles déployés, à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Pour plus d’informations sur la création de rôles à l’aide du Gestionnaire de rôles de [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], consultez [créer et gérer les rôles](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md). Pour plus d’informations sur la création et la gestion des rôles pour un modèle déployé, consultez [des rôles de modèle tabulaire](../../analysis-services/tabular-models/tabular-model-roles-ssas-tabular.md).  
+ Les rôles, et parfois l'appartenance au rôle, sont définis lorsqu'un modèle est créé dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], ou pour les modèles déployés, à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Pour plus d’informations sur la création de rôles à l’aide du Gestionnaire de rôles de [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], consultez [créer et gérer les rôles](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md). Pour plus d’informations sur la création et la gestion des rôles pour un modèle déployé, consultez [rôles de modèles tabulaires](../../analysis-services/tabular-models/tabular-model-roles-ssas-tabular.md).  
   
 > [!CAUTION]  
 >  Le redéploiement d'un projet de modèle tabulaire avec les rôles définis à l'aide du Gestionnaire de rôles de [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] remplace les rôles définis dans un modèle tabulaire déployé.  
@@ -40,7 +40,7 @@ ms.locfileid: "34045293"
   
 1.  Dans l'Administration centrale, ouvrez la page Configurer les comptes de service.  
   
-2.  Sélectionnez le pool d'applications de service utilisé par Excel Services. Il peut s'agir du **Pool d'applications de service. SharePoint Web Services Système** ou d'un pool d'applications personnalisé. Le compte géré utilisé par Excel Services apparaîtra dans la page.  
+2.  Sélectionnez le pool d'applications de service utilisé par Excel Services. Il peut s’agir **Pool d’applications de Service - système des Services Web SharePoint** ou un pool d’applications personnalisées. Le compte géré utilisé par Excel Services apparaîtra dans la page.  
   
      Pour les batteries de serveurs SharePoint qui incluent Reporting Services en mode SharePoint, obtenez également les informations de compte de l'application de service Reporting Services.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "34045293"
   
      L'instance de serveur doit être configurée pour un déploiement tabulaire autonome et doit avoir une règle de trafic entrant qui en autorise l'accès. Pour plus d’informations, consultez [Déterminer le mode serveur d’une instance Analysis Services](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md) et [Configurer le pare-feu Windows pour autoriser l’accès à Analysis Services](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
-4.  Pour les informations d'identification, choisissez **Utiliser l'authentification Windows** si vous disposez d'autorisations de lecture sur la base de données. Sinon, choisissez **Utiliser le nom d'utilisateur et le mot de passe suivants**, puis entrez le nom d'utilisateur et le mot de passe d'un compte Windows disposant des autorisations de base de données. Cliquez sur **Suivant**.  
+4.  Pour les informations d'identification, choisissez **Utiliser l'authentification Windows** si vous disposez d'autorisations de lecture sur la base de données. Sinon, choisissez **Utiliser le nom d'utilisateur et le mot de passe suivants**, puis entrez le nom d'utilisateur et le mot de passe d'un compte Windows disposant des autorisations de base de données. Cliquer sur **Suivant**.  
   
 5.  Sélectionnez la base de données. Si la sélection est valide, un cube représentant un **Modèle** s'affiche pour la base de données. Cliquez sur **Suivant** , puis sur **Terminer**.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "34045293"
   
  Sur SharePoint, cette erreur Microsoft Excel se produit lorsque vous tentez une interaction de données, comme un filtrage des données, dans un tableau croisé dynamique qui utilise des données de modèle. L'erreur se produit parce que vous n'avez pas d'autorisations suffisantes sur le serveur Analysis Services distant. Pour résoudre cette erreur, vous devez avoir des droits d'accès utilisateur sur la base de données. Reportez-vous aux instructions fournies plus haut dans cette rubrique pour accorder à un utilisateur l'accès aux données.  
   
- **Une erreur s'est produite lors de cette opération. Recharger le classeur, puis que vous essayez d’effectuer cette opération.**  
+ **Une erreur s'est produite lors de cette opération. Recharger le classeur, puis essayez d’effectuer cette opération à nouveau.**  
   
  Sur SharePoint, cette erreur Microsoft Excel se produit lorsque vous tentez une interaction de données, comme un filtrage des données, dans un tableau croisé dynamique qui utilise des données de modèle. L'erreur se produit parce qu'Excel Services n'est pas approuvé par l'instance Analysis Services sur laquelle les données de modèle sont déployées. Pour résoudre cette erreur, accordez l'autorisation administrative Excel Services sur l'instance Analysis Services. Reportez-vous aux instructions fournies plus haut dans cette rubrique pour accorder à un administrateur les autorisations. Si l'erreur persiste, relancez le pool d'applications Excel Services.  
   

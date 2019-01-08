@@ -1,5 +1,5 @@
 ---
-title: 'Didacticiel : rapport cartographique (Générateur de rapports) | Microsoft Docs'
+title: 'Didacticiel : Rapport cartographique (Générateur de rapports) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ ms.assetid: 8d831356-7efa-40cc-ae95-383b3eecf833
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 2218fdb184fb4fe67d110b95c42f10f761ef3975
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 43135554b1340b92f4801a0f08e002142b443981
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098849"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359861"
 ---
-# <a name="tutorial-map-report-report-builder"></a>Didacticiel : Rapport cartographique (Générateur de rapports)
+# <a name="tutorial-map-report-report-builder"></a>Didacticiel : Rapport cartographique (Générateur de rapports)
   Ce didacticiel est conçu pour vous aider à découvrir les fonctionnalités cartographiques que vous pouvez utiliser pour afficher des données de rapport sur un arrière-plan géographique.  
   
  Les cartes sont basées sur des données spatiales qui comportent en général des points, des lignes et des polygones. Par exemple, un polygone peut représenter le contour d'un comté, une ligne peut représenter une route, et un point peut représenter l'emplacement d'une ville. Chaque type de données spatiales est affiché sur une couche séparée sous la forme d'un jeu d'éléments cartographiques.  
@@ -63,11 +63,11 @@ ms.locfileid: "48098849"
 10. [Enregistrer le rapport](#Save)  
   
 > [!NOTE]  
->  Dans ce didacticiel, les étapes de l'Assistant sont consolidées sous forme de deux procédures : l'une pour créer le dataset, et l'autre pour créer une table. Pour obtenir des instructions pas à pas sur l’accès à un serveur de rapports, le choix d’une source de données, la création d’un dataset et l’exécution de l’Assistant, consultez le premier didacticiel de cette série : [Didacticiel : création d’un rapport de tableau de base &#40;Générateur de rapports&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+>  Dans ce didacticiel, les étapes de l'Assistant sont consolidées sous forme de deux procédures : l'une pour créer le dataset, et l'autre pour créer une table. Pour obtenir des instructions détaillées sur l’accès à un serveur de rapports, choisissez une source de données, créer un jeu de données et exécuter l’Assistant, consultez le premier didacticiel de cette série : [Didacticiel : Création d’un rapport de tableau de base &#40;Générateur de rapports&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
- Durée estimée pour effectuer ce didacticiel : 30 minutes.  
+ Durée estimée pour effectuer ce didacticiel : 30 minutes  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  Pour plus d’informations sur les spécifications, consultez [Éléments requis pour les didacticiels &#40;Générateur de rapports&#41;](../reporting-services/report-builder-tutorials.md).  
   
 ##  <a name="Map"></a> 1. Créer une carte avec une couche de polygones à partir de l'Assistant Carte  
@@ -94,11 +94,11 @@ ms.locfileid: "48098849"
   
      Le volet Aperçu de la carte affiche la carte des comtés de New York.  
   
-7.  Cliquez sur **Suivant**.  
+7.  Cliquer sur **Suivant**.  
   
 8.  Dans la page **Choisir des options de vue cartographique et de données spatiales** , acceptez les valeurs par défaut. Par défaut, les éléments cartographiques d'une bibliothèque de cartes sont incorporés automatiquement dans la définition de rapport.  
   
-9. Cliquez sur **Suivant**.  
+9. Cliquer sur **Suivant**.  
   
 10. Dans la page **Choisir la visualisation de la carte** , vérifiez que l'option **Carte simple** est sélectionnée et cliquez sur **Suivant**.  
   
@@ -114,7 +114,7 @@ ms.locfileid: "48098849"
   
     -   une légende contenant un titre et une liste d'éléments de 1 à 5 ;  
   
-    -   une échelle de couleurs contenant les valeurs de 0 à 160 et la valeur Aucune couleur ;  
+    -   une échelle de couleurs contenant les valeurs de 0 à 160 et la valeur Aucune couleur ;  
   
     -   une échelle des distances qui affiche les kilomètres (km) et les miles (mi).  
   
@@ -157,7 +157,7 @@ ms.locfileid: "48098849"
   
 5.  Dans la page **Choisir une connexion à une source de données spatiales SQL Server** , sélectionnez une source de données existante ou naviguez jusqu'au serveur de rapports, puis sélectionnez une source de données.  
   
-6.  Cliquez sur **Suivant**.  
+6.  Cliquer sur **Suivant**.  
   
 7.  Dans la page Créer une requête, cliquez sur **Modifier en tant que texte**.  
   
@@ -196,7 +196,7 @@ ms.locfileid: "48098849"
   
      Le jeu de résultats affiche sept colonnes : StoreKey, StoreName, SellingArea, City, County, Sales et SpatialLocation. Ces données représentent un ensemble de magasins de l'État de New York qui vendent des biens de consommation. Chaque ligne du jeu de résultats contient un identificateur de magasin, le nom du magasin, la zone disponible pour l'affichage des produits, la ville et le comté dans lesquels il se trouve, le chiffre d'affaires total et l'emplacement spatial en longitude et en latitude. La surface d'exposition varie entre 455 pieds carrés (environ 42 mètres carrés) et 1 125 pieds carrés (environ 104 mètres carrés).  
   
-10. Cliquez sur **Suivant**.  
+10. Cliquer sur **Suivant**.  
   
      Le dataset de rapport nommé DataSet1 est créé automatiquement. Après avoir terminé l'exécution de l'Assistant, vous pouvez utiliser le volet des données de rapport pour afficher la collection de champs correspondante.  
   
@@ -204,13 +204,13 @@ ms.locfileid: "48098849"
   
      La vue cartographique affiche des cercles pour marquer l'emplacement de chaque magasin.  
   
-12. Cliquez sur **Suivant**.  
+12. Cliquer sur **Suivant**.  
   
 13. Spécifiez un type de carte qui affiche des marqueurs variant en fonction des données analytiques. Dans la page Choisir la visualisation de la carte, cliquez sur **Carte à marqueurs analytique**, puis sur **Suivant**.  
   
 14. Dans la page **Choisir le dataset analytique** , cliquez sur DataSet1. Ce dataset contient à la fois les données analytiques et les données spatiales à afficher sur la nouvelle couche de points.  
   
-15. Cliquez sur **Suivant**.  
+15. Cliquer sur **Suivant**.  
   
 16. Dans la page **Choisir le thème de couleurs et la visualisation des données** , désactivez l'option **Utiliser les couleurs de marqueur pour visualiser les données** , puis sélectionnez l'option **Utiliser les types de marqueur pour visualiser les données**.  
   
@@ -253,7 +253,7 @@ ms.locfileid: "48098849"
   
 5.  Dans **Choisir une connexion à une source de données spatiales SQL Server**, sélectionnez DataSource1, la source de données que vous avez créée dans la première procédure.  
   
-6.  Cliquez sur **Suivant**.  
+6.  Cliquer sur **Suivant**.  
   
 7.  Dans la page **Créer une requête** , cliquez sur **Modifier en tant que texte**. Le concepteur de requêtes bascule en mode texte.  
   
@@ -266,7 +266,7 @@ ms.locfileid: "48098849"
        -73.4728622833178 44.7028831413324)' AS geography) as Route  
     ```  
   
-9. Cliquez sur **Suivant**.  
+9. Cliquer sur **Suivant**.  
   
      Un itinéraire qui relie les trois magasins apparaît sur la carte.  
   
@@ -274,7 +274,7 @@ ms.locfileid: "48098849"
   
      La vue cartographique affiche un itinéraire allant d'un magasin situé dans la partie nord de l'État de New York à un magasin situé dans la partie sud de l'État de New York.  
   
-11. Cliquez sur **Suivant**.  
+11. Cliquer sur **Suivant**.  
   
 12. Dans la page **Choisir la visualisation de la carte** , cliquez sur l'option **Carte linéaire simple**, puis sur **Suivant**.  
   
@@ -581,7 +581,7 @@ ms.locfileid: "48098849"
 ## <a name="next-steps"></a>Étapes suivantes  
  Ceci conclut la procédure pas à pas décrivant comment ajouter une carte à votre rapport.  
   
- Pour plus d’informations, consultez [Maps &#40;Générateur de rapports et SSRS&#41; ](report-design/maps-report-builder-and-ssrs.md) et l’entrée de blog [cartographiques ajustement de données spatiales pour SQL Server Reporting Services](http://go.microsoft.com/fwlink/?LinkId=152771) sur blogs.msdn.com.  
+ Pour plus d’informations, consultez [Maps &#40;Générateur de rapports et SSRS&#41; ](report-design/maps-report-builder-and-ssrs.md) et l’entrée de blog [cartographiques ajustement de données spatiales pour SQL Server Reporting Services](https://go.microsoft.com/fwlink/?LinkId=152771) sur blogs.msdn.com.  
   
  Pour plus de didacticiels, consultez [didacticiels &#40;Générateur de rapports&#41;](report-builder-tutorials.md).  
   

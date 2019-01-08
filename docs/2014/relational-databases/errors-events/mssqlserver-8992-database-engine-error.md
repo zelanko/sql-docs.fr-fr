@@ -12,12 +12,12 @@ ms.assetid: 68467e6a-09d8-478f-8bd9-3bb09453ada3
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 37bc819ab06a960887963b48be70c18e2ce8f656
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8ad75e136c4bef59f24b451b84f03e06d71a32ec
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131939"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362841"
 ---
 # <a name="mssqlserver8992"></a>MSSQLSERVER_8992
     
@@ -30,7 +30,7 @@ ms.locfileid: "48131939"
 |Source de l'événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|DBCC3_CHECK_CATALOG|  
-|Texte du message|Contrôle du message du catalogue ERROR, niveau LEVEL, état STATE : MESSAGE.|  
+|Texte du message|Cocher catalogue Msg au niveau du niveau état état d’erreur : MESSAGE.|  
   
 ## <a name="explanation"></a>Explication  
  DBCC CHECKCATALOG ou DBCC CHECKDB a trouvé une incohérence dans les tables de métadonnées système pour l'objet spécifié. En d'autres termes, il y a une incohérence entre l'ID d'objet enregistré et l'objet spécifié dans le message d'erreur.  
@@ -75,6 +75,6 @@ ms.locfileid: "48131939"
  N'apportez pas de mises à jour manuelles aux tables système. SQL Server ne prend pas en charge les modifications manuelles apportées aux bases de données système. Si vous mettez à jour une table système dans une base de données SQL Server, deux événements (ID 17659 et ID 3859) sont consignés. Pour plus d'informations, consultez l'article 2688307 de la Base de connaissances « L'ID d'événement 17659 et l'ID d'événement 3859 sont consignés lorsque vous mettez à jour des tables système dans une base de données SQL Server ».  
   
 ## <a name="see-also"></a>Voir aussi  
- [L’ID d’événement 17659 et l’ID d’événement 3859 sont consignés lorsque vous mettez à jour des tables système dans une base de données SQL Server](http://support.microsoft.com/kb/2688307/EN-US)  
+ [L’ID d’événement 17659 et l’ID d’événement 3859 sont consignés lorsque vous mettez à jour des tables système dans une base de données SQL Server](https://support.microsoft.com/kb/2688307/EN-US)  
   
   

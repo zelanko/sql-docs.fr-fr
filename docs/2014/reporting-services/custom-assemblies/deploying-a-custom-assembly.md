@@ -17,12 +17,12 @@ ms.assetid: c6674cd8-0de7-4a5a-9e7c-12ffa49f6fd2
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 204e5828442182065c8f31c96b2af15eafa31788
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c4715b7b0b1cf810a2874e41d1f3ad0bed1a2f59
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095959"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356582"
 ---
 # <a name="deploying-a-custom-assembly"></a>Déploiement d'un assembly personnalisé
   Pour déployer un assembly personnalisé dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], placez-le dans les dossiers d’application du Concepteur de rapports et du serveur de rapports. L'autorisation `Execution` dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] est accordée par défaut aux assemblys personnalisés. Pour accorder des privilèges d’assemblys personnalisés supérieurs à l’autorisation Execute, vous devez modifier le fichier de configuration rssrvpolicy.config pour le serveur de rapports et le fichier de configuration rspreviewpolicy.config pour la fenêtre d’aperçu du Concepteur de rapports. Une autre solution consiste à installer votre assembly personnalisé dans le Global Assembly Cache (GAC).  
@@ -64,7 +64,7 @@ ms.locfileid: "48095959"
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Utilisation d’assemblys personnalisés avec des rapports](using-custom-assemblies-with-reports.md)   
- [Utilisation d’assemblys et du Global Assembly Cache](http://go.microsoft.com/fwlink/?LinkId=63912)  
+ [Utilisation d'assemblys personnalisés avec des rapports](using-custom-assemblies-with-reports.md)   
+ [Utilisation d’assemblys et du Global Assembly Cache](https://go.microsoft.com/fwlink/?LinkId=63912)  
   
   

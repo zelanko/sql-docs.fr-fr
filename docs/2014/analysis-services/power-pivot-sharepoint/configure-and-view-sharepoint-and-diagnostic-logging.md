@@ -11,15 +11,15 @@ ms.assetid: 85f62d29-cdc6-45b3-be1f-ff1182939858
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7099282f8fef9d8d029249ba5637eba6fa6bf1f2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6196466246529521f356c193c3e8cc0ee688c197
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188349"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354702"
 ---
 # <a name="configure-and-view-sharepoint-log-files--and-diagnostic-logging-powerpivot-for-sharepoint"></a>Configurer et afficher les fichiers journaux SharePoint et la journalisation des diagnostics (PowerPivot pour SharePoint)
-  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] opérations de serveur, les événements et les messages sont enregistrés dans les fichiers journaux SharePoint. Utilisez les informations de cette rubrique pour configurer les niveaux de journalisation et afficher les informations du fichier journal. Vous pouvez contrôler les événements du serveur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] qui sont enregistrés dans le fichier. Vous pouvez également contrôler la gravité des messages enregistrés. Pour plus d’informations, consultez [Configure Usage Data Collection pour &#40;PowerPivot pour SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md).  
+  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] sont enregistrés dans les fichiers journaux SharePoint. Utilisez les informations de cette rubrique pour configurer les niveaux de journalisation et afficher les informations du fichier journal. Vous pouvez contrôler les événements du serveur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] qui sont enregistrés dans le fichier. Vous pouvez également contrôler la gravité des messages enregistrés. Pour plus d’informations, consultez [Configure Usage Data Collection pour &#40;PowerPivot pour SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md).  
   
  Dans cette rubrique :  
   
@@ -51,7 +51,7 @@ ms.locfileid: "48188349"
   
 4.  Développez la catégorie et sélectionnez des catégories.  
   
-     **Demande de Page application** spécifie les événements déclenchés par l’application de service lors de la localisation un [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] pour le chargement d’une source de données PowerPivot et la communication avec d’autres serveurs dans la batterie de serveurs.  
+     **Demande de page d'application** spécifie les événements déclenchés par l'application de service lors de la recherche d'un [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] pour le chargement d'une source de données PowerPivot et la communication avec d'autres serveurs de la batterie.  
   
      **Traitement des demandes** spécifie les événements déclenchés par des requêtes sur une base de données PowerPivot chargée sur un serveur de la batterie.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "48188349"
   
 -   Pour les erreurs qui fournissent un ID de corrélation, copiez l'ID et utilisez-le comme un terme recherché dans le fichier journal.  
   
--   Recherchez le statut d'erreur « Élevé » ou « Exception ». Recherchez « Service PowerPivot ».  
+-   Recherchez le statut d'erreur « Élevé » ou « Exception ». Recherchez « Service PowerPivot ».  
   
 -   Si vous savez à quel moment l'erreur s'est produite, utilisez les informations d'horodatage pour limiter l'étendue des entrées à parcourir.  
   
@@ -86,7 +86,7 @@ ms.locfileid: "48188349"
   
  Les instructions suivantes incluent des liens vers des visionneuses de journaux ULS SharePoint populaires que vous pouvez télécharger à partir de Codeplex.  
   
-1.  Accédez à la page [Visionneuse de journaux SharePoint](http://sharepointlogviewer.codeplex.com) ou [Visionneuse de journaux ULS SharePoint](http://go.microsoft.com/fwlink/?LinkId=150052) sur le site Codeplex.  
+1.  Accédez à la page [Visionneuse de journaux SharePoint](http://sharepointlogviewer.codeplex.com) ou [Visionneuse de journaux ULS SharePoint](https://go.microsoft.com/fwlink/?LinkId=150052) sur le site Codeplex.  
   
 2.  Cliquez sur l'onglet **Downloads** (Téléchargements).  
   

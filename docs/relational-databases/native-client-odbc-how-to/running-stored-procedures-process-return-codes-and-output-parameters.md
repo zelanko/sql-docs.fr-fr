@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1505166f684d473e5f210e42c55ba6fcac5f13cb
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 79b84888a788c34b9f103e1ae55b2f38d6d87f60
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673262"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210486"
 ---
 # <a name="running-stored-procedures---process-return-codes-and-output-parameters"></a>Exécution de procédures stockées - Traiter les codes de retour et les paramètres de sortie
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -50,11 +50,11 @@ ms.locfileid: "51673262"
   
  Cet exemple vous permet de vous connecter à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par défaut de votre ordinateur. Pour vous connecter à une instance nommée, modifiez la définition de la source de données ODBC pour spécifier l'instance en utilisant le format suivant : serveur\namedinstance. Par défaut, [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] est installé dans une instance nommée.  
   
- La première liste de code ([!INCLUDE[tsql](../../includes/tsql-md.md)]) crée une procédure stockée utilisée par cet exemple.  
+ Le premier ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) liste de code crée une procédure stockée utilisée par cet exemple.  
   
  Compilez la deuxième liste de code (C++)  avec odbc32.lib. Puis, exécutez le programme.  
   
- La troisième liste de code ([!INCLUDE[tsql](../../includes/tsql-md.md)]) supprime la procédure stockée utilisée par cet exemple.  
+ Le troisième ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) du code supprime la procédure stockée utilisée par cet exemple.  
   
 ```  
 use AdventureWorks  

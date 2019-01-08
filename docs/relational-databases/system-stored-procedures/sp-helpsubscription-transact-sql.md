@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_helpsubscription_TSQL
@@ -17,12 +16,12 @@ ms.assetid: ff96bcbf-e2b9-4da8-8515-d80d4ce86c16
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 41a23e9885a2d5bd49d074dc72699601eb08a6d9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 90705da83013de65423aa2984293f8f780194de0
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47850557"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53588933"
 ---
 # <a name="sphelpsubscription-transact-sql"></a>sp_helpsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,26 +43,26 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@publication =** ] **'***publication***'**  
+ [  **@publication =** ] **'**_publication_**'**  
  Nom de la publication associée. *publication* est **sysname**, avec une valeur par défaut **%**, qui retourne toutes les informations d’abonnement pour ce serveur.  
   
- [  **@article=** ] **'***article***'**  
+ [  **@article=** ] **'**_article_**'**  
  Nom de l'article. *article* est **sysname**, avec une valeur par défaut **%**, qui retourne toutes les informations d’abonnement pour les publications sélectionnées et les abonnés. Si **tous les**, qu’une seule entrée est renvoyée pour l’abonnement complet sur une publication.  
   
- [  **@subscriber=** ] **'***abonné***'**  
+ [  **@subscriber=** ] **'**_abonné_**'**  
  Nom de l'Abonné dont vous voulez connaître les informations sur l'abonnement. *abonné* est **sysname**, avec une valeur par défaut **%**, qui retourne toutes les informations d’abonnement pour les publications et articles sélectionnés.  
   
- [  **@destination_db=** ] **'***destination_db***'**  
+ [  **@destination_db=** ] **'**_destination_db_**'**  
  Nom de la base de données de destination. *destination_db* est **sysname**, avec une valeur par défaut **%**.  
   
- [  **@found=** ] **'***trouvé***'** sortie  
+ [  **@found=** ] **'**_trouvé_**'** sortie  
  Indicateur désignant les lignes retournées. *trouvé*est **int** d’un paramètre OUTPUT, avec 23456 comme valeur par défaut.  
   
  **1** indique la publication a été trouvée.  
   
  **0** indique que la publication est introuvable.  
   
- [ **@publisher**=] **'***publisher***'**  
+ [ **@publisher**=] **'**_publisher_**'**  
  Nom du serveur de publication. *serveur de publication* est **sysname**et la valeur par défaut est le nom du serveur actuel.  
   
 > [!NOTE]  
@@ -91,9 +90,9 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 |**dts_package_location**|**Int**|Emplacement du package DTS (si un lot est affecté à l'abonnement). S’il existe un package, une valeur de **0** Spécifie l’emplacement du package à le **distributeur**. La valeur **1** Spécifie le **abonné**.|  
 |**subscriber_security_mode**|**smallint**|Mode de sécurité sur l’abonné, où **1** signifie que l’authentification Windows, et **0** signifie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’authentification.|  
 |**subscriber_login**|**sysname**|Nom de connexion sur l'Abonné.|  
-|**subscriber_password**||Le mot de passe réel de l'Abonné n'est jamais renvoyé. Le résultat est masqué par un «**\*\*\*\*\*\***» chaîne.|  
+|**subscriber_password**||Le mot de passe réel de l'Abonné n'est jamais renvoyé. Le résultat est masqué par un «**&#42;&#42;&#42;&#42;&#42;&#42;**» chaîne.|  
 |**job_login**|**sysname**|Nom du compte Windows sous lequel l'Agent de distribution s'exécute.|  
-|**job_password**||Le mot de passe réel du travail n'est jamais renvoyé. Le résultat est masqué par un «**\*\*\*\*\*\***» chaîne.|  
+|**job_password**||Le mot de passe réel du travail n'est jamais renvoyé. Le résultat est masqué par un «**&#42;&#42;&#42;&#42;&#42;&#42;**» chaîne.|  
 |**distrib_agent_name**|**nvarchar(100)**|Nom du travail de l'Agent qui synchronise l'abonnement.|  
 |**subscriber_type**|**tinyint**|Type d'Abonné, parmi les types suivants :<br /><br /> **0** = abonné SQL Server<br /><br /> **1** = serveur de source de données ODBC<br /><br /> **2** = base de données Microsoft JET (déconseillée)<br /><br /> **3** = fournisseur OLE DB|  
 |**subscriber_provider**|**sysname**|Identificateur de programme unique (PROGID) avec lequel le fournisseur OLE DB de la source de données non-SQL Server est inscrit.|  
@@ -108,7 +107,7 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 ## <a name="remarks"></a>Notes  
  **sp_helpsubscription** est utilisé dans la réplication transactionnelle et d’instantané.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Les autorisations d'exécution reviennent par défaut au rôle **public** . Seules les informations des abonnements qu'ils ont créés sont renvoyées aux utilisateurs. Pour plus d’informations sur tous les abonnements sont renvoyées aux membres de la **sysadmin** rôle serveur fixe sur le serveur de publication ou les membres de la **db_owner** rôle de base de données fixe sur la base de données de publication.  
   
 ## <a name="see-also"></a>Voir aussi  

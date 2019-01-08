@@ -12,12 +12,12 @@ ms.assetid: 9e915268-9628-445b-81c2-b0ebd11e891e
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: adcea3ce2134ddfe33a9a11ba06cce028c8fad51
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 84fcd5451bae28f1817d7cf9b874938436f3d2f4
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210179"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372391"
 ---
 # <a name="udt-utilities"></a>Utilitaires UDT
   L'exemple Utilitaires UDT contient diverses fonctions utilitaires, Celles-ci incluent notamment des fonctions pour afficher les métadonnées d'un assembly dans Transact-SQL, des exemples de fonctions table en continu pour retourner les types dans un assembly sous forme de table, et enfin des fonctions pour retourner les champs, méthodes et propriétés dans un type défini par l'utilisateur. Les technologies illustrées comprennent les fonctions table en continu, les API de réflexion du .NET Framework et l'appel des fonctions table à partir de Transact-SQL.  
@@ -25,9 +25,9 @@ ms.locfileid: "48210179"
 ## <a name="prerequisites"></a>Prérequis  
  Pour créer et exécuter ce projet, les logiciels suivants doivent être installés :  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. Vous pouvez vous procurer gratuitement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express à partir du site Web [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express Documentation and Samples [(en anglais)](http://go.microsoft.com/fwlink/?LinkId=31046)  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. Vous pouvez vous procurer gratuitement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express à partir du site Web [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express Documentation and Samples [(en anglais)](https://go.microsoft.com/fwlink/?LinkId=31046)  
   
--   Base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] qui est disponible sur le site Web [Codeplex](http://go.microsoft.com/fwlink/?linkid=62796)  
+-   Base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] qui est disponible sur le site Web [Codeplex](https://go.microsoft.com/fwlink/?linkid=62796)  
   
 -   Le Kit de développement logiciel .NET Framework SDK 2.0 ou version ultérieure, ou Microsoft Visual Studio 2005 ou version ultérieure. Vous pouvez vous procurer gratuitement le Kit de développement logiciel .NET Framework SDK.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "48210179"
      `GO`  
   
     > [!NOTE]  
-    >  Pour activer le CLR, vous devez avoir `ALTER SETTINGS` autorisation de niveau serveur, qui est implicitement détenue par les membres de la `sysadmin` et `serveradmin` rôles serveur fixes.  
+    >  Pour activer l'intégration du CLR, vous devez disposer de l'autorisation de niveau serveur `ALTER SETTINGS` qui est attribuée implicitement aux membres des rôles serveur fixes `sysadmin` et `serveradmin`.  
   
 -   La base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] doit être installée sur l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que vous utilisez.  
   

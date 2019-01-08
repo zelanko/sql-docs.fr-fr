@@ -11,21 +11,21 @@ ms.assetid: 6ed56d36-18d9-40c2-b51f-f2a4c71d1e73
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 860102dff3b20bd42da048dbd33960c8f936cea1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d8ee32faea8c8390c0ecb1540e6115a3baedfc92
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120251"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357713"
 ---
 # <a name="create-the-ssis-catalog"></a>Créer le catalogue SSIS
-  Après avoir conçu et testé des packages dans [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], vous pouvez déployer les projets qui contiennent les packages sur un serveur [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Avant de pouvoir déployer les projets à la [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , le serveur doit contenir le `SSISDB` catalogue. Le programme d'installation de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] ne crée pas automatiquement le catalogue ; vous devez le créer manuellement à l'aide des instructions suivantes.  
+  Après avoir conçu et testé des packages dans [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], vous pouvez déployer les projets qui contiennent les packages sur un serveur [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Avant de pouvoir déployer des projets sur le serveur [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], celui-ci doit contenir le catalogue `SSISDB`. Le programme d'installation de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] ne crée pas automatiquement le catalogue ; vous devez le créer manuellement à l'aide des instructions suivantes.  
   
  Vous pouvez créer le catalogue SSISDB dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Vous pouvez également créer le catalogue par programmation en utilisant Windows PowerShell.  
   
 ### <a name="to-create-the-ssisdb-catalog-in-sql-server-management-studio"></a>Pour créer le catalogue SSISDB dans SQL Server Management Studio  
   
-1.  Ouvrir [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
+1.  Ouvrez [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
 2.  Connectez-vous au moteur de base de données [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
@@ -41,7 +41,7 @@ ms.locfileid: "48120251"
   
 6.  Entrez un mot de passe, puis cliquez sur **OK**.  
   
-     Le mot de passe protège la clé principale de la base de données utilisée pour le chiffrement des données du catalogue. Enregistrez le mot de passe dans un emplacement sécurisé. Il est également recommandé de sauvegarder la clé principale de base de données. Pour plus d’informations, voir [Sauvegarder une clé primaire de base de données](../relational-databases/security/encryption/back-up-a-database-master-key.md).  
+     Le mot de passe protège la clé principale de la base de données utilisée pour le chiffrement des données du catalogue. Enregistrez le mot de passe dans un emplacement sécurisé. Il est également recommandé de sauvegarder la clé principale de base de données. Pour plus d'informations, consultez [Back Up a Database Master Key](../relational-databases/security/encryption/back-up-a-database-master-key.md).  
   
 ### <a name="to-create-the-ssisdb-catalog-programmatically"></a>Pour créer le catalogue SSISDB par programmation  
   
@@ -69,7 +69,7 @@ ms.locfileid: "48120251"
   
     ```  
   
-     Vous trouverez d’autres exemples d’utilisation de Windows PowerShell et de l’espace de noms <xref:Microsoft.SqlServer.Management.IntegrationServices> dans l’entrée de blog [SSIS et PowerShell dans SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=242539), sur blogs.msdn.com. Pour obtenir une vue d'ensemble de l'espace de noms et des exemples de code, consultez l'entrée de blog, [A Glimpse of the SSIS Catalog Managed Object Model](http://go.microsoft.com/fwlink/?LinkId=254267), sur blogs.msdn.com.  
+     Vous trouverez d’autres exemples d’utilisation de Windows PowerShell et de l’espace de noms <xref:Microsoft.SqlServer.Management.IntegrationServices> dans l’entrée de blog [SSIS et PowerShell dans SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=242539), sur blogs.msdn.com. Pour obtenir une vue d'ensemble de l'espace de noms et des exemples de code, consultez l'entrée de blog, [A Glimpse of the SSIS Catalog Managed Object Model](https://go.microsoft.com/fwlink/?LinkId=254267), sur blogs.msdn.com.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Catalogue SSIS](catalog/ssis-catalog.md)   

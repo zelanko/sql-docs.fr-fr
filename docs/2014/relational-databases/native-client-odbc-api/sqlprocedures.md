@@ -14,12 +14,12 @@ ms.assetid: ec41f017-f5e0-40ef-913a-65d206068631
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: feb5cd9df428ec09441ae1ebe0ff1cb051660754
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b0001f1d6e45e855b884028a595a2b61263c2e58
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203989"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365991"
 ---
 # <a name="sqlprocedures"></a>SQLProcedures
   Toutes les procédures stockées [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retournent une valeur. **SQLProcedures** sql_pt_function pour le jeu de résultats PROCEDURE_TYPE de colonne.  
@@ -31,7 +31,7 @@ ms.locfileid: "48203989"
  **SQLProcedures** retourne des informations sur toutes les procédures dont les noms correspondent *ProcName* et peut être exécutée par l’utilisateur actuel, ou pour lequel l’utilisateur actuel a reçu l’autorisation VIEW DEFINITION.  
   
 ## <a name="see-also"></a>Voir aussi  
- [SQLProcedures, fonction](http://go.microsoft.com/fwlink/?LinkId=59364)   
+ [SQLProcedures, fonction](https://go.microsoft.com/fwlink/?LinkId=59364)   
  [Détails de l’implémentation d’API ODBC](odbc-api-implementation-details.md)  
   
   

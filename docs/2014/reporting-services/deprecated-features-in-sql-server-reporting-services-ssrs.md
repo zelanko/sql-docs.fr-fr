@@ -16,12 +16,12 @@ ms.assetid: 3876c01e-f81d-4cce-9104-5106a8c369e6
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 93d31c4f9f8f712834131136034541bf469e0014
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1fc6c16004ba2a3bba7d11b49a351fcb3fc1641e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119879"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362551"
 ---
 # <a name="deprecated-features-in-sql-server-reporting-services-in-sql-server-2014"></a>Fonctions déconseillées dans SQL Server Reporting Services dans SQL Server 2014
   Cette rubrique décrit les fonctionnalités déconseillées de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Les fonctionnalités sont toujours disponibles dans la version dans laquelle elles sont déconseillées ; toutefois, leur suppression est planifiée dans une version future de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Les fonctions déconseillées ne doivent pas être utilisées dans de nouvelles applications.  
@@ -39,7 +39,7 @@ ms.locfileid: "48119879"
 ##  <a name="bkmk_2014"></a> Fonctions déconseillées dans SQL Server 2014 Reporting Services  
   
 ### <a name="features-not-supported-in-the-next-version-of-sql-server"></a>Fonctionnalités non prises en charge dans la prochaine version de SQL Server  
- Ce qui suit [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fonctionnalités ne sont pas prises en charge dans les **suivant** version de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Évitez d'utiliser ces fonctionnalités dans vos nouveaux développements et modifiez dès que possible les applications qui y ont recours.  
+ Les fonctionnalités suivantes de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ne seront pas prises en charge dans la **prochaine** version de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Évitez d'utiliser ces fonctionnalités dans vos nouveaux développements et modifiez dès que possible les applications qui y ont recours.  
   
 #### <a name="html-rendering-extension-device-information-settings"></a>Paramètres d'informations de périphérique d'extension de rendu HTML  
  Les paramètres d'informations de périphérique suivants pour l'extension de rendu HTML sont déconseillés.  
@@ -62,18 +62,18 @@ ms.locfileid: "48119879"
   
 -   Zoom  
   
- Pour plus d’informations sur l’extension de rendu HTML, consultez [HTML Device Information Settings](html-device-information-settings.md)  
+ Pour plus d'informations sur l'extension de rendu HTML, consultez [HTML Device Information Settings](html-device-information-settings.md)  
   
 #### <a name="microsoft-word-and-microsoft-excel-1997-2003-rendering"></a>Rendu dans Microsoft Word et Microsoft Excel 1997-2003  
- Le[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] extensions de rendu BIFF8 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] signale à le [!INCLUDE[msCoName](../includes/msconame-md.md)] Word et [!INCLUDE[msCoName](../includes/msconame-md.md)] format de fichier d’échange binaire Excel 1997-2003. [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] inclut des extensions qui s’affichent dans le [!INCLUDE[msCoName](../includes/msconame-md.md)] les format Open XML Office 2007-2010.  
+ Les extensions de rendu BIFF8[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] génèrent des rapports [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] au format BIFF (Binary Interchange File Format) pour [!INCLUDE[msCoName](../includes/msconame-md.md)] Word et [!INCLUDE[msCoName](../includes/msconame-md.md)] Excel 1997-2003. [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] inclut des extensions qui s’affichent dans le [!INCLUDE[msCoName](../includes/msconame-md.md)] les format Open XML Office 2007-2010.  
   
 #### <a name="report-definition-language-rdl-2005-and-earlier"></a>Langage RDL (Report Definition Language) version 2005 et antérieures  
  Le langage Report Definition Language (RDL) version 2005 et antérieures est déconseillé. Pour plus d’informations sur le langage RDL, consultez [Report Definition Language &#40;SSRS&#41;](reports/report-definition-language-ssrs.md).  
   
- Pour plus d’informations sur la mise à niveau des rapports, consultez [Upgrade Reports](install-windows/upgrade-reports.md).  
+ Pour plus d'informations sur la mise à niveau des rapports, consultez [Upgrade Reports](install-windows/upgrade-reports.md).  
   
 #### <a name="sql-server-2005-and-earlier-custom-report-items"></a>Éléments de rapport personnalisés SQL Server version 2005 et antérieures  
- Personnalisée des éléments de rapport compilé pour [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 2005 et antérieures sont déconseillés.  
+ Les éléments de rapport personnalisés compilés pour [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] version 2005 et antérieures sont déconseillés.  
   
 #### <a name="reporting-services-snapshots-2005-and-earlier"></a>Instantanés Reporting Services version 2005 et antérieures  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] rendus avec [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 2005 et antérieures sont déconseillés.  
@@ -84,7 +84,7 @@ ms.locfileid: "48119879"
  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] n'inclut pas les outils de création ou mise à jour des modèles de rapport. Pour plus d’informations, consultez [modifications avec rupture dans SQL Server Reporting Services dans SQL Server 2014](breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md).  
   
 #### <a name="deprecated-methods-in-the-web-service-endpoint"></a>Méthodes déconseillées dans le point de terminaison de service Web  
- Les opérations suivantes sont déconseillées dans le <xref:ReportService2010.ReportingService2010> point de terminaison de service Web :  
+ Les opérations suivantes sont déconseillées dans le point de terminaison de service Web <xref:ReportService2010.ReportingService2010> :  
   
 -   <xref:ReportService2010.ReportingService2010.GetProperties%2A>  
   
@@ -93,23 +93,23 @@ ms.locfileid: "48119879"
 #### <a name="sharepoint-web-parts"></a>Composants WebPart de SharePoint  
  Le fichier CAB d'installation **RSWebParts.cab** et les composants WebPart de SharePoint qui peuvent être extraits du fichier CAB, sont déconseillés. Les composants WebPart déconseillés sont Report Explorer (**SPExplorer.dwp**) et Report Viewer (**SPViewer.dwp**).  
   
- Pour plus d'informations sur les composants WebPart déconseillés, consultez [Afficher et explorer des rapports en mode natif à l'aide de composants WebPart SharePoint (SSRS)](http://msdn.microsoft.com/library/ms159772.aspx).  
+ Pour plus d'informations sur les composants WebPart déconseillés, consultez [Afficher et explorer des rapports en mode natif à l'aide de composants WebPart SharePoint (SSRS)](https://msdn.microsoft.com/library/ms159772.aspx).  
   
 ### <a name="features-not-supported-in-a-future-version-of-sql-server"></a>Fonctionnalités non prises en charge dans une future version de SQL Server  
  Les fonctions suivantes du [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] seront prises en charge dans la prochaine version de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], mais seront supprimées dans une version ultérieure. La version spécifique de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] n'a pas été déterminée.  
   
- Ne [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fonctionnalités ont été dépréciées dans [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
+ Aucune fonctionnalité [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] n'a été déconseillée dans [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
 ##  <a name="bkmk_2012sp1"></a> Fonctions déconseillées dans SQL Server 2012 SP1 Reporting Services  
- Cette section décrit [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fonctionnalités déconseillées dans [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)]. Les fonctions suivantes du [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] seront prises en charge dans la prochaine version de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], mais seront supprimées dans une version ultérieure. La version spécifique de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] n'a pas été déterminée.  
+ Cette section décrit les fonctionnalités [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] déconseillées dans [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)]. Les fonctions suivantes du [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] seront prises en charge dans la prochaine version de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], mais seront supprimées dans une version ultérieure. La version spécifique de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] n'a pas été déterminée.  
   
 ### <a name="sharepoint-web-parts"></a>Composants WebPart de SharePoint  
  Le fichier CAB d'installation **RSWebParts.cab** et les composants WebPart de SharePoint qui peuvent être extraits du fichier CAB, sont déconseillés. Les composants WebPart déconseillés sont Report Explorer (**SPExplorer.dwp**) et Report Viewer (**SPViewer.dwp**).  
   
- Pour plus d'informations sur les composants WebPart déconseillés, consultez [Afficher et explorer des rapports en mode natif à l'aide de composants WebPart SharePoint (SSRS)](http://msdn.microsoft.com/library/ms159772.aspx).  
+ Pour plus d'informations sur les composants WebPart déconseillés, consultez [Afficher et explorer des rapports en mode natif à l'aide de composants WebPart SharePoint (SSRS)](https://msdn.microsoft.com/library/ms159772.aspx).  
   
 ##  <a name="bkmk_2012"></a> Fonctions déconseillées dans SQL Server 2012 Reporting Services  
- Cette section décrit [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fonctionnalités déconseillées dans [!INCLUDE[ssSQL11](../includes/sssql11-md.md)].  
+ Cette section décrit les fonctionnalités [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] déconseillées dans [!INCLUDE[ssSQL11](../includes/sssql11-md.md)].  
   
 ### <a name="html-rendering-extension-device-information-settings"></a>Paramètres d'informations de périphérique d'extension de rendu HTML  
  Les paramètres d'informations de périphérique suivants pour l'extension de rendu HTML sont déconseillés.  
@@ -132,18 +132,18 @@ ms.locfileid: "48119879"
   
 -   Zoom  
   
- Pour plus d’informations sur l’extension de rendu HTML, consultez [HTML Device Information Settings](html-device-information-settings.md)  
+ Pour plus d'informations sur l'extension de rendu HTML, consultez [HTML Device Information Settings](html-device-information-settings.md)  
   
 ### <a name="microsoft-word-and-microsoft-excel-1997-2003-rendering"></a>Rendu dans Microsoft Word et Microsoft Excel 1997-2003  
- Le[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] extensions de rendu BIFF8 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] signale à le [!INCLUDE[msCoName](../includes/msconame-md.md)] Word et [!INCLUDE[msCoName](../includes/msconame-md.md)] format de fichier d’échange binaire Excel 1997-2003. [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] inclut des extensions qui s’affichent dans le [!INCLUDE[msCoName](../includes/msconame-md.md)] les format Open XML Office 2007-2010.  
+ Les extensions de rendu BIFF8[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] génèrent des rapports [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] au format BIFF (Binary Interchange File Format) pour [!INCLUDE[msCoName](../includes/msconame-md.md)] Word et [!INCLUDE[msCoName](../includes/msconame-md.md)] Excel 1997-2003. [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] inclut des extensions qui s’affichent dans le [!INCLUDE[msCoName](../includes/msconame-md.md)] les format Open XML Office 2007-2010.  
   
 ### <a name="report-definition-language-rdl-2005-and-earlier"></a>Langage RDL (Report Definition Language) version 2005 et antérieures  
  Le langage Report Definition Language (RDL) version 2005 et antérieures est déconseillé. Pour plus d’informations sur le langage RDL, consultez [Report Definition Language &#40;SSRS&#41;](reports/report-definition-language-ssrs.md).  
   
- Pour plus d’informations sur la mise à niveau des rapports, consultez [Upgrade Reports](install-windows/upgrade-reports.md).  
+ Pour plus d'informations sur la mise à niveau des rapports, consultez [Upgrade Reports](install-windows/upgrade-reports.md).  
   
 ### <a name="sql-server-2005-and-earlier-custom-report-items"></a>Éléments de rapport personnalisés SQL Server version 2005 et antérieures  
- Personnalisée des éléments de rapport compilé pour [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 2005 et antérieures sont déconseillés.  
+ Les éléments de rapport personnalisés compilés pour [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] version 2005 et antérieures sont déconseillés.  
   
 ### <a name="reporting-services-snapshots-2005-and-earlier"></a>Instantanés Reporting Services version 2005 et antérieures  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] rendus avec [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 2005 et antérieures sont déconseillés.  
@@ -154,7 +154,7 @@ ms.locfileid: "48119879"
  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] n'inclut pas les outils de création ou mise à jour des modèles de rapport. Pour plus d’informations, consultez [modifications avec rupture dans SQL Server Reporting Services dans SQL Server 2014](breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md).  
   
 ### <a name="deprecated-methods-in-the-web-service-endpoint"></a>Méthodes déconseillées dans le point de terminaison de service Web  
- Les opérations suivantes sont déconseillées dans le <xref:ReportService2010.ReportingService2010> point de terminaison de service Web :  
+ Les opérations suivantes sont déconseillées dans le point de terminaison de service Web <xref:ReportService2010.ReportingService2010> :  
   
 -   <xref:ReportService2010.ReportingService2010.GetProperties%2A>  
   
@@ -166,7 +166,7 @@ ms.locfileid: "48119879"
 >  SQL Server 2008 R2 étant une mise à niveau de version secondaire de SQL Server 2008, nous vous recommandons d'examiner également le contenu de la section SQL Server 2008.  
   
 ### <a name="report-server-web-service-endpoints"></a>Points de terminaison du service Web Report Server  
- Les services Web <xref:ReportService2005.ReportingService2005> et <xref:ReportService2006.ReportingService2006> ont été déconseillées dans cette version. Ces points de terminaison ont été remplacés par un nouveau point de terminaison : <xref:ReportService2010.ReportingService2010>.  
+ Les services Web <xref:ReportService2005.ReportingService2005> et <xref:ReportService2006.ReportingService2006> ont été déconseillés dans cette version. Ces points de terminaison ont été remplacés par un nouveau point de terminaison : <xref:ReportService2010.ReportingService2010>.  
   
  Le nouveau point de terminaison inclut toutes les fonctionnalités disponibles dans les points de terminaison déconseillés et les nouvelles fonctionnalités présentées dans SQL Server 2008 R2.  
   

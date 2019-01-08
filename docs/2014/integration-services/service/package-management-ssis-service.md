@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Integration Services packages, managing
@@ -25,12 +24,12 @@ ms.assetid: 0261ed9e-3b01-4e37-a9d4-d039c41029b6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: dbe4a733479e23e8630e3bbc043ba5dcbf30c1bf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: beee5a99f345a4f70f31bfec78b4fb6d9280ab0a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091489"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52761284"
 ---
 # <a name="package-management-ssis-service"></a>Gestion de packages (Service SSIS)
   La gestion des packages implique des actions incluant les tâches suivantes :  
@@ -45,7 +44,7 @@ ms.locfileid: "48091489"
 >  Cette rubrique présente le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , un service Windows qui permet de gérer les packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] prend en charge le service pour la compatibilité avec les versions antérieures de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. À compter de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], vous pouvez gérer des objets tels que des packages sur le serveur Integration Services.  
   
 ## <a name="package-store"></a>Magasin de packages  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fournit deux dossiers de niveau supérieur pour accéder à [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages : **Packages en cours d’exécution** et **Packages stockés**. Le dossier **Exécution des packages** répertorie les packages en cours d'exécution sur le serveur. Le dossier **Packages stockés** répertorie les packages enregistrés dans le magasin de packages. Ce sont les seuls packages gérés par le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Le magasin de packages peut comprendre la base de données msdb et/ou les dossiers du système de fichiers répertoriés dans le fichier de configuration du service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Le fichier de configuration indique la base de données msdb et les dossiers du système de fichiers à gérer. Il est possible que vous disposiez également de packages stockés ailleurs dans le système de fichiers qui ne sont pas gérés par le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fournit deux dossiers de niveau supérieur pour l'accès aux packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] : **Exécution de Packages** et **stockées Packages**. Le dossier **Exécution des packages** répertorie les packages en cours d'exécution sur le serveur. Le dossier **Packages stockés** répertorie les packages enregistrés dans le magasin de packages. Ce sont les seuls packages gérés par le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Le magasin de packages peut comprendre la base de données msdb et/ou les dossiers du système de fichiers répertoriés dans le fichier de configuration du service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Le fichier de configuration indique la base de données msdb et les dossiers du système de fichiers à gérer. Il est possible que vous disposiez également de packages stockés ailleurs dans le système de fichiers qui ne sont pas gérés par le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
  Les packages que vous enregistrez dans la base de données msdb sont stockés dans une table nommée sysssispackages. Lorsque vous enregistrez des packages dans la base de données msdb, vous pouvez également les regrouper dans des dossiers logiques. L’usage de dossiers logiques vous permet d’organiser les packages selon leur fonction ou bien de les filtrer dans la table sysssispackages. Vous pouvez créer de nouveaux dossiers logiques à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Par défaut, tous les dossiers logiques que vous ajoutez à la base de données msdb sont inclus automatiquement dans le magasin de packages.  
   
@@ -57,7 +56,7 @@ ms.locfileid: "48091489"
   
  Le dossier **Exécution des packages** ne contient aucun sous-dossier et n'est pas extensible.  
   
- Par défaut, le dossier **Packages stockés** contient deux dossiers : **File System** et **MSDB**. Le dossier **File System** répertorie les packages enregistrés dans le système de fichiers. Le fichier de configuration du service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] indique l'emplacement de ces fichiers. Le dossier par défaut est le dossier Packages, situé dans %Program Files%\Microsoft SQL Server\100\DTS. Le dossier **MSDB** répertorie les packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] enregistrés dans la base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb sur le serveur. La table sysssispackages contient les packages enregistrés dans la base de données msdb.  
+ Par défaut, le **Packages stockés** dossier contient deux dossiers : **Système de fichiers** et **MSDB**. Le dossier **File System** répertorie les packages enregistrés dans le système de fichiers. Le fichier de configuration du service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] indique l'emplacement de ces fichiers. Le dossier par défaut est le dossier Packages, situé dans %Program Files%\Microsoft SQL Server\100\DTS. Le dossier **MSDB** répertorie les packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] enregistrés dans la base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb sur le serveur. La table sysssispackages contient les packages enregistrés dans la base de données msdb.  
   
  Pour visualiser la liste des packages stockés dans le magasin de packages, vous devez ouvrir [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] et vous connecter à [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Pour plus d’informations, consultez [View Integration Services Packages in SQL Server Management Studio &#40;SSIS Service&#41;](../view-integration-services-packages-in-sql-server-management-studio-ssis-service.md).  
   
@@ -71,7 +70,7 @@ ms.locfileid: "48091489"
 ## <a name="managing-package-storage"></a>Gestion du stockage des packages  
  Pour organiser les packages, vous pouvez ajouter des dossiers personnalisés aux dossiers des magasins de packages répertoriés par le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] dans le fichier de configuration. Par défaut, les dossiers racines sont les dossiers **File System** et **MSDB** . Par exemple, vous pouvez choisir d'ajouter au dossier **File System** un dossier **Nettoyage des données** contenant tous les packages utilisés pour nettoyer les données. Vous pouvez ajouter des dossiers personnalisés aux dossiers personnalisés et créer une hiérarchie de dossiers imbriqués répondant à vos besoins. Les dossiers personnalisés peuvent être supprimés et renommés ; cependant, vous ne pouvez pas renommer ou supprimer les dossiers racines spécifiés par le fichier de configuration. Pour mettre à jour les dossiers racines répertoriés par [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , vous devez mettre à jour le fichier de configuration.  
   
- Pour plus d’informations, consultez [Configuring the Integration Services Service &#40;SSIS Service&#41;](../configuring-the-integration-services-service-ssis-service.md).  
+ Pour plus d’informations, consultez [Configuration du service Integration Services &#40;Service SSIS&#41;](../configuring-the-integration-services-service-ssis-service.md).  
   
 ## <a name="importing-and-exporting-packages"></a>Importation et exportation de packages  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Les packages peuvent être enregistrés dans le système de fichiers ou dans la base de données msdb. Vous pouvez copier un package d'un type de stockage à un autre à l'aide de la fonctionnalité d'importation ou d'exportation fournie par [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Vous pouvez également importer un package du même type de stockage et donner un nom différent à ce package, afin de créer une copie du package. L’utilitaire d’invite de commandes **dtutil** (dtutil.exe) permet également d’importer et d’exporter des packages.  
@@ -80,9 +79,9 @@ ms.locfileid: "48091489"
   
 ## <a name="related-tasks"></a>Tâches associées  
   
--   [Importer et exporter des Packages &#40;Service SSIS&#41;](../import-and-export-packages-ssis-service.md)  
+-   [Importer et exporter des packages &#40;service SSIS&#41;](../import-and-export-packages-ssis-service.md)  
   
--   [Vue Packages Integration Services dans SQL Server Management Studio &#40;Service SSIS&#41;](../view-integration-services-packages-in-sql-server-management-studio-ssis-service.md)  
+-   [Afficher les packages Integration Services dans SQL Server Management Studio &#40;Service SSIS&#41;](../view-integration-services-packages-in-sql-server-management-studio-ssis-service.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Service Integration Services &#40;Service SSIS&#41;](integration-services-service-ssis-service.md)  

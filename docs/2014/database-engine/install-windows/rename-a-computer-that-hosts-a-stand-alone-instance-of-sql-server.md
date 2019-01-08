@@ -19,12 +19,12 @@ ms.assetid: bbaf1445-b8a2-4ebf-babe-17d8cf20b037
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e4e8026d5611b2f48ff622dd0b45e21a5f2c9c13
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 1bd9e18d1dfe7226d043a7c8c968999da680da08
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018904"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363851"
 ---
 # <a name="rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server"></a>Renommer un ordinateur qui héberge une instance autonome de SQL Server
   Lorsque vous modifiez le nom de l'ordinateur qui exécute [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le nouveau nom est reconnu au démarrage de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Vous n'avez pas besoin de réexécuter le programme d'installation pour réinitialiser le nom d'ordinateur. À la place, utilisez la procédure suivante pour mettre à jour les métadonnées système qui sont stockées dans sys.servers et signalées par la fonction système @@SERVERNAME. Mettez à jour les métadonnées système pour refléter les modifications opérées dans les noms d’ordinateurs pour les connexions à distance et les applications qui utilisent @@SERVERNAME, ou qui interrogent le nom du serveur à partir de sys.servers.  
@@ -107,7 +107,7 @@ ms.locfileid: "51018904"
   
  **Configurations de serveur lié** - Les configurations de serveur lié seront affectées par l’opération d’attribution d’un nouveau nom à l’ordinateur. Utilisez `sp_addlinkedserver` ou `sp_setnetname` pour mettre à jour les références de nom d'ordinateur. Pour plus d’informations, consultez [sp_addlinkedserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql) ou [sp_setnetname &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-setnetname-transact-sql).  
   
- **Noms d’alias client** - Les alias client qui utilisent des canaux nommés seront affectés par l’opération d’attribution d’un nouveau nom à l’ordinateur. Par exemple, si un alias « PROD_SRVR » a été créé pour désigner SRVR1 et utilise le protocole de canaux nommés, le nom de canal ressemblera à `\\SRVR1\pipe\sql\query`. Après avoir renommé l'ordinateur, le chemin d'accès du canal nommé ne sera plus valide. Pour plus d’informations sur les canaux nommés, consultez [Création d’une chaîne de connexion valide à l’aide de canaux nommés](http://go.microsoft.com/fwlink/?LinkId=111063).  
+ **Noms d’alias client** - Les alias client qui utilisent des canaux nommés seront affectés par l’opération d’attribution d’un nouveau nom à l’ordinateur. Par exemple, si un alias « PROD_SRVR » a été créé pour désigner SRVR1 et utilise le protocole de canaux nommés, le nom de canal ressemblera à `\\SRVR1\pipe\sql\query`. Après avoir renommé l'ordinateur, le chemin d'accès du canal nommé ne sera plus valide. Pour plus d’informations sur les canaux nommés, consultez [Création d’une chaîne de connexion valide à l’aide de canaux nommés](https://go.microsoft.com/fwlink/?LinkId=111063).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Installer SQL Server 2014](../../database-engine/install-windows/install-sql-server.md)  

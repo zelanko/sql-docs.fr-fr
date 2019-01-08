@@ -18,23 +18,23 @@ ms.assetid: c75d0d4b-4008-4e71-9a9d-cee2a566bd3b
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 03971bcd487016fbc1fadc07203ebe2ab73555d2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 40bf5851663840dac27252aa5cdfdadb0e76da93
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163169"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205698"
 ---
 # <a name="transparent-data-encryption-tde"></a>Chiffrement transparent des données (TDE)
   Le*chiffrement transparent des données* (TDE) chiffre les fichiers de données de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] (processus appelé chiffrement des données au repos). Vous pouvez prendre plusieurs précautions pour mieux sécuriser la base de données comme par exemple concevoir un système sécurisé, chiffrer les ressources confidentielles et créer un pare-feu autour des serveurs de base de données. Toutefois, dans un scénario où le support physique (tel que des lecteurs ou des bandes de sauvegarde) est dérobé, une personne malveillante peut simplement restaurer ou attacher la base de données et parcourir les données. Une solution consiste à chiffrer les données sensibles dans la base de données et à protéger les clés utilisées pour chiffrer les données avec un certificat. Cela empêche toute personne qui ne dispose pas des clés d'utiliser les données, mais ce type de protection doit être planifié à l'avance.  
   
  Le chiffrement transparent des données effectue le chiffrement et le déchiffrement d'E/S en temps réel des données et des fichiers journaux. Le chiffrement utilise une clé de chiffrement de base de données (DEK), stockée dans l'enregistrement de démarrage de base de données pour être disponible pendant la récupération. La clé de chiffrement de base de données est une clé symétrique sécurisée à l'aide d'un certificat stocké dans la base de données MASTER du serveur ou une clé asymétrique protégée par un module EKM. Le chiffrement transparent des données protège les données « au repos », autrement dit les fichiers de données et les fichiers journaux. Il permet de se conformer à de nombreuses lois, règles et instructions établies dans différents secteurs professionnels. Cela permet aux développeurs de logiciels de chiffrer des données à l'aide des algorithmes de chiffrement AES et 3DES sans modifier les applications existantes.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  Le chiffrement transparent des données ne permet pas le chiffrement via des canaux de communication. Pour plus d’informations sur le chiffrement des données sur les canaux de communication, consultez [Activer les connexions chiffrées dans le moteur de base de données &#40;Gestionnaire de configuration SQL Server&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
->   
+> 
 >  **Rubriques connexes :**  
->   
+> 
 >  -   [Chiffrement transparent des données avec Azure SQL Database](../../../database-engine/transparent-data-encryption-with-azure-sql-database.md)  
 > -   [Déplacer une base de données protégée par le chiffrement transparent des données vers un autre serveur SQL Server](move-a-tde-protected-database-to-another-sql-server.md)  
 > -   [Activer le chiffrement transparent des données à l’aide de la gestion de clés extensible (EKM)](enable-tde-on-sql-server-using-ekm.md)  
@@ -98,7 +98,7 @@ GO
  Les opérations de chiffrement et de déchiffrement sont planifiées sur des threads d'arrière-plan par [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Vous pouvez consulter l'état de ces opérations à l'aide des affichages catalogue et des vues de gestion dynamique mentionnés dans la liste fournie plus loin dans cette rubrique.  
   
 > [!CAUTION]  
->  Les fichiers de sauvegarde des bases de données pour lesquelles le chiffrement transparent des données est activé sont également chiffrés à l'aide de la clé de chiffrement de base de données. En conséquence, lorsque vous restaurez ces sauvegardes, le certificat qui protège la clé de chiffrement de base de données doit être disponible. Cela signifie qu'en plus de sauvegarder la base de données, vous devez vous assurer que vous conservez des sauvegardes des certificats du serveur pour empêcher toute perte de données. Une perte de données interviendra si le certificat n'est plus disponible. Pour plus d’informations, consultez [SQL Server Certificates and Asymmetric Keys](../sql-server-certificates-and-asymmetric-keys.md).  
+>  Les fichiers de sauvegarde des bases de données pour lesquelles le chiffrement transparent des données est activé sont également chiffrés à l'aide de la clé de chiffrement de base de données. En conséquence, lorsque vous restaurez ces sauvegardes, le certificat qui protège la clé de chiffrement de base de données doit être disponible. Cela signifie qu'en plus de sauvegarder la base de données, vous devez vous assurer que vous conservez des sauvegardes des certificats du serveur pour empêcher toute perte de données. Une perte de données interviendra si le certificat n'est plus disponible. Pour plus d'informations, consultez [SQL Server Certificates and Asymmetric Keys](../sql-server-certificates-and-asymmetric-keys.md).  
   
 ## <a name="commands-and-functions"></a>Commandes et fonctions  
  Les certificats TDE doivent être chiffrés par la clé principale de base de données pour être acceptés par les instructions suivantes. S'ils sont chiffrés uniquement par mot de passe, les instructions les refuseront en tant que chiffreurs.  
@@ -118,13 +118,13 @@ GO
 ## <a name="catalog-views-and-dynamic-management-views"></a>Affichages catalogue et vues de gestion dynamique  
  Le tableau suivant indique les affichages catalogue et les vues de gestion dynamique du chiffrement transparent des données.  
   
-|Affichage catalogue ou vue de gestion dynamique|Fonction|  
+|Affichage catalogue ou vue de gestion dynamique|Objectif|  
 |---------------------------------------------|-------------|  
 |[sys.databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)|Affichage catalogue qui affiche des informations sur la base de données.|  
 |[sys.certificates &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-certificates-transact-sql)|Affichage catalogue qui indique les certificats inclus dans une base de données.|  
 |[sys.dm_database_encryption_keys &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql)|Vue de gestion dynamique qui fournit des informations sur les clés de chiffrement utilisées dans une base de données et sur l'état de chiffrement d'une base de données.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Chaque fonctionnalité et commande TDE requiert des autorisations individuelles, décrites dans les tableaux précédents.  
   
  La consultation des métadonnées impliquées dans le chiffrement transparent des données requiert l'autorisation VIEW DEFINITION sur le certificat.  
@@ -176,7 +176,7 @@ GO
   
 -   Création d'un instantané  
   
- Les opérations ou conditions suivantes empêchent l'exécution des instructions CREATE DATABASE ENCRYPTION KEY, ALTER DATABASE ENCRYPTION KEY, DROP DATABASE ENCRYPTION KEY ou ALTER DATABASE...SET ENCRYPTION :  
+ Les opérations ou conditions suivantes empêchent l'exécution des instructions CREATE DATABASE ENCRYPTION KEY, ALTER DATABASE ENCRYPTION KEY, DROP DATABASE ENCRYPTION KEY ou ALTER DATABASE...SET ENCRYPTION :  
   
 -   La base de données est en lecture seule ou a des groupes de fichiers en lecture seule.  
   

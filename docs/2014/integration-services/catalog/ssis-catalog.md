@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1984802df92929cb4a311f1de8527f764d96d0fa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a9eb4de07ad7bd564578462b053637bb472b22f6
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201339"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353981"
 ---
 # <a name="ssis-catalog"></a>Catalogue SSIS
   Le `SSISDB` catalogue est le point central pour travailler avec [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] projets (SSIS) que vous avez déployés sur le [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server. Ainsi, c'est dans ce catalogue que vous définissez les paramètres de projet et de package, configurez les environnements pour spécifier des valeurs d'exécution pour les packages, exécutez et résolvez les problèmes relatifs aux packages, et gérez les opérations du serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -27,7 +26,7 @@ ms.locfileid: "48201339"
   
  Pour maintenir la base de données `SSISDB`, il est recommandé d'appliquer des stratégies d'entreprise standard pour la gestion des bases de données utilisateur. Pour plus d'informations sur la création de plans de maintenance, consultez [Maintenance Plans](../../relational-databases/maintenance-plans/maintenance-plans.md).  
   
- Le `SSISDB` catalogue et le `SSISDB` prise en charge de la base de données Windows PowerShell. Pour plus d'informations sur l'utilisation de SQL Server avec Windows PowerShell, consultez [SQL Server PowerShell](../../powershell/sql-server-powershell.md). Pour des exemples d'utilisation de Windows PowerShell pour exécuter des tâches telles que le déploiement d'un projet, consultez l'entrée de blog [SSIS et PowerShell dans SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=242539), sur blogs.msdn.com.  
+ Le `SSISDB` catalogue et le `SSISDB` prise en charge de la base de données Windows PowerShell. Pour plus d'informations sur l'utilisation de SQL Server avec Windows PowerShell, consultez [SQL Server PowerShell](../../powershell/sql-server-powershell.md). Pour des exemples d'utilisation de Windows PowerShell pour exécuter des tâches telles que le déploiement d'un projet, consultez l'entrée de blog [SSIS et PowerShell dans SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=242539), sur blogs.msdn.com.  
   
  Pour plus d’informations sur l’affichage des données opérationnelles, consultez [surveillance des exécutions de Package et d’autres opérations](../performance/monitor-running-packages-and-other-operations.md).  
   
@@ -66,7 +65,7 @@ ms.locfileid: "48201339"
 -   La longueur du nom doit être supérieure à 0 et inférieure ou égale à 128.  
   
 ### <a name="parameter"></a>Paramètre  
- Lorsque vous affectez un nom à un paramètre, respectez les règles suivantes :  
+ Lorsque vous affectez un nom à un paramètre, respectez les règles suivantes :  
   
 -   Le premier caractère du nom doit être une lettre, ainsi que défini dans la norme Unicode 2.0, ou un trait de soulignement (_).  
   
@@ -98,7 +97,7 @@ ms.locfileid: "48201339"
  Ce qui suit `SSISDB` propriétés du catalogue définissent comment cette [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se comporte de travail de l’Agent. Vous pouvez afficher et modifier les propriétés à l’aide de la boîte de dialogue **Propriétés du catalogue** ou à l’aide de [catalog.catalog_properties &#40;base de données SSISDB&#41;](/sql/integration-services/system-views/catalog-catalog-properties-ssisdb-database) et [catalog.configure_catalog &#40;base de données SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database).  
   
  **Nettoyer les journaux régulièrement**  
- L’étape de travail pour le nettoyage des opérations s’exécute lorsque cette propriété est définie sur `True`.  
+ L'étape de travail de nettoyage des opérations s'exécute lorsque cette propriété a la valeur `True`.  
   
  **Période de rétention (jours)**  
  Définit l'âge maximal des données opérationnelles autorisées (en jours). Les données plus anciennes sont supprimées.  
@@ -106,7 +105,7 @@ ms.locfileid: "48201339"
  La valeur minimale est de un jour. La valeur maximale est limitée uniquement par la valeur maximale de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `int` données. Pour plus d’informations sur ce type de données, consultez [int, bigint, smallint et tinyint &#40;Transact-SQL&#41;](/sql/t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql).  
   
  **Supprimer régulièrement les anciennes versions**  
- L’étape de travail pour le nettoyage de version de projet s’exécute lorsque cette propriété est définie sur `True`.  
+ L'étape de travail de nettoyage des versions de projet s'exécute lorsque cette propriété a la valeur `True`.  
   
  **Nombre maximal de versions par projet**  
  Définit le nombre de versions d’un projet stockées dans le catalogue. Les versions antérieures des projets sont supprimées.  
@@ -128,7 +127,7 @@ ms.locfileid: "48201339"
   
 -   DES  
   
- Lorsque vous déployez un projet [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], le catalogue chiffre automatiquement les données du package et les valeurs sensibles. Le catalogue déchiffre automatiquement les données lorsque vous les récupérez. Le catalogue SSISDB utilise le `ServerStorage` niveau de protection. Pour plus d'informations, consultez [Access Control for Sensitive Data in Packages](../security/access-control-for-sensitive-data-in-packages.md).  
+ Lorsque vous déployez un projet [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], le catalogue chiffre automatiquement les données du package et les valeurs sensibles. Le catalogue déchiffre automatiquement les données lorsque vous les récupérez. Le catalogue SSISDB utilise le niveau de protection `ServerStorage`. Pour plus d'informations, consultez [Access Control for Sensitive Data in Packages](../security/access-control-for-sensitive-data-in-packages.md).  
   
  La modification de l'algorithme de chiffrement est une opération qui prend du temps. Tout d'abord, le serveur doit utiliser l'algorithme précédemment spécifié pour déchiffrer toutes les valeurs de configuration. Le serveur doit ensuite utiliser le nouvel algorithme pour ré-chiffrer les valeurs. Pendant ce temps, aucune autre opération [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ne peut être effectuée sur le serveur. Ainsi, pour permettre aux opérations [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] de continuer de façon ininterrompue, l’algorithme de chiffrement est une valeur en lecture seule dans la boîte de dialogue dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
@@ -149,7 +148,7 @@ ms.locfileid: "48201339"
 |Nombre maximal de versions par projet|MAX_PROJECT_VERSIONS|  
 |Niveau d'enregistrement par défaut au niveau du serveur|SERVER_LOGGING_LEVEL|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Les projets, les environnements et les packages sont contenus dans des dossiers qui sont des objets sécurisables. Vous pouvez accorder des autorisations à un dossier, notamment l'autorisation de MANAGE_OBJECT_PERMISSIONS. MANAGE_OBJECT_PERMISSIONS vous permet de déléguer l'administration du contenu du dossier à un utilisateur sans avoir à accorder à celui-ci l'appartenance au rôle ssis_admin. Vous pouvez également accorder des autorisations relatives à des projets, des environnements et des opérations. Opérations incluent l’initialisation [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], déploiement de projets, création et démarrage d’exécutions, validation des projets et des packages et la configuration du `SSISDB` catalogue.  
   
  Pour plus d’informations sur les rôles de base de données, consultez [Rôles au niveau de la base de données](../../relational-databases/security/authentication-access/database-level-roles.md).  
@@ -284,10 +283,10 @@ ms.locfileid: "48201339"
   
 ## <a name="related-content"></a>Contenu associé  
   
--   Entrée de blog, [SSIS and PowerShell in SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=242539), sur blogs.msdn.com.  
+-   Entrée de blog, [SSIS and PowerShell in SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=242539), sur blogs.msdn.com.  
   
--   Entrée de blog [Conseils pour le contrôle d'accès du catalogue SSIS](http://go.microsoft.com/fwlink/?LinkId=246669), sur blogs.msdn.com.  
+-   Entrée de blog [Conseils pour le contrôle d'accès du catalogue SSIS](https://go.microsoft.com/fwlink/?LinkId=246669), sur blogs.msdn.com.  
   
--   Entrée de blog, [A Glimpse of the SSIS Catalog Managed Object Model](http://go.microsoft.com/fwlink/?LinkId=254267), sur blogs.msdn.com.  
+-   Entrée de blog, [A Glimpse of the SSIS Catalog Managed Object Model](https://go.microsoft.com/fwlink/?LinkId=254267), sur blogs.msdn.com.  
   
   

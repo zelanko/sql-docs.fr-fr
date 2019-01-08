@@ -1,5 +1,6 @@
 ---
-title: Prise en main de SQL Server sur Ubuntu | Microsoft Docs
+title: Prise en main de SQL Server sur Ubuntu
+titleSuffix: SQL Server
 description: Ce démarrage rapide montre comment installer SQL Server 2017 ou SQL Server 2019 sur Ubuntu et ensuite créer et interroger une base de données avec sqlcmd.
 author: rothja
 ms.author: jroth
@@ -7,17 +8,17 @@ manager: craigg
 ms.date: 07/16/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
+ms.custom: sql-linux, seodec18
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
-ms.openlocfilehash: 917e43dd6a9c78e5199967df58a2d46c4843cf13
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 83f5cdf3f02ffc9a51dfa954347cc57f78e004dd
+ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677944"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53160547"
 ---
-# <a name="quickstart-install-sql-server-and-create-a-database-on-ubuntu"></a>Démarrage rapide : Installer SQL Server et créer une base de données sur Ubuntu
+# <a name="quickstart-install-sql-server-and-create-a-database-on-ubuntu"></a>Démarrage rapide : Installer SQL Server et la création d’une base de données sous Ubuntu
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
@@ -88,7 +89,7 @@ Pour configurer SQL Server sur Ubuntu, exécutez les commandes suivantes dans un
    ```
 
    > [!TIP]
-   > Les éditions suivantes de SQL Server 2017 sont sous licence librement : Evaluation, Developer et Express.
+   > Les éditions suivantes de SQL Server 2017 sont librement concédée sous licence : Evaluation, Developer et Express.
 
    > [!NOTE]
    > Veillez à spécifier un mot de passe fort pour le compte d’administrateur système (longueur minimale de 8 caractères, incluant des majuscules et des minuscules, des chiffres et/ou des caractères spéciaux).
@@ -183,7 +184,7 @@ Utilisez les étapes suivantes pour installer le package **mssql-tools** sur Ubu
    >   sudo apt-get install mssql-tools 
    >   ```
 
-1. **Facultatif**: ajoutez `/opt/mssql-tools/bin/` à votre variable d'environnement de **chemin d’accès** dans un interpréteur de commandes bash.
+1. **Facultatif**: Ajouter `/opt/mssql-tools/bin/` à votre **chemin d’accès** variable d’environnement dans un interpréteur de commandes bash.
 
    Pour rendre **sqlcmd et bcp** accessible à partir de l’interpréteur de commandes pour les sessions de connexion, modifiez votre **chemin d’accès** dans le fichier **~/.bash_profile**  avec la commande suivante :
 

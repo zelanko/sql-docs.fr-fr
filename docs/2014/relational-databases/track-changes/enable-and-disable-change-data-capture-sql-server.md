@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - change data capture [SQL Server], enabling tables
@@ -16,12 +15,12 @@ ms.assetid: b741894f-d267-4b10-adfe-cbc14aa6caeb
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ebbfd8c66737afb03564dee557757f4406a5c5a5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0e4756834e28ad07e42f57235a30e59fd924da22
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057559"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202108"
 ---
 # <a name="enable-and-disable-change-data-capture-sql-server"></a>Activer et désactiver la capture de données modifiées (SQL Server)
   Cette rubrique décrit l'activation et la désactivation de la capture de données modifiées pour une base de données et une table.  
@@ -29,7 +28,7 @@ ms.locfileid: "48057559"
 ## <a name="enable-change-data-capture-for-a-database"></a>Activer la capture des données modifiées pour une base de données  
  Avant qu'une instance de capture puisse être créée pour des tables individuelles, un membre du rôle serveur fixe `sysadmin` doit d'abord activer la base de données pour la capture des données modifiées. Cela se fait en exécutant la procédure stockée [sys.sp_cdc_enable_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql) dans le contexte de la base de données. Pour déterminer si une base de données est déjà activée, interrogez la colonne `is_cdc_enabled` dans l'affichage catalogue `sys.databases`.  
   
- Lorsqu’une base de données est activée pour la capture de données modifiées, le `cdc` schéma, `cdc` utilisateur, les tables de métadonnées et les autres objets système sont créés pour la base de données. Le `cdc` schéma contient les tables de métadonnées de capture de données modifiées et, une fois que les tables sources sont activées pour la capture de données modifiées, les tables de modifications individuelles servent à un référentiel pour les données modifiées. Le `cdc` schéma contient également des fonctions système associées utilisées pour rechercher les données modifiées.  
+ Lorsqu'une base de données est activée pour la capture des données modifiées, le schéma `cdc`, l'utilisateur `cdc`, les tables de métadonnées, ainsi que d'autres objets systèmes sont créés pour la base de données. Le schéma `cdc` contient les tables de métadonnées de capture des données modifiées et, une fois que les tables sources sont activées pour la capture des données modifiées, les tables de modifications individuelles servent de base de données de référentiel pour les données modifiées. Le schéma `cdc` contient également les fonctions système associées utilisées pour rechercher les données modifiées.  
   
  La capture des données modifiées requiert une utilisation exclusive du schéma `cdc` et de l'utilisateur `cdc`. Si un schéma ou un utilisateur de base de données nommé *cdc* existe actuellement dans une base de données, celle-ci ne peut pas être activée pour la capture des données modifiées tant que le schéma et/ou l'utilisateur n'a pas été supprimé ou renommé.  
   
@@ -49,7 +48,7 @@ GO
 ```  
   
 ## <a name="disable-change-data-capture-for-a-database"></a>Désactiver la capture des données modifiées pour une base de données  
- Un membre de la `sysadmin` rôle serveur fixe permettre exécuter la procédure stockée [sys.sp_cdc_disable_db &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql) dans le contexte de base de données pour désactiver la capture de données modifiées pour une base de données. Il n'est pas nécessaire de désactiver individuellement les tables avant de désactiver la base de données. La désactivation de la base de données supprime toutes les métadonnées de capture de données modifiées associées, y compris le `cdc` travaux de capture de données modifiées et schéma et les utilisateurs. Toutefois, tous les rôles de régulation créés par capture de données modifiées ne seront pas supprimés automatiquement et doivent être supprimés explicitement. Pour déterminer si une base de données est activée, interrogez la colonne `is_cdc_enabled` dans l'affichage catalogue sys.databases.  
+ Un membre de la `sysadmin` rôle serveur fixe permettre exécuter la procédure stockée [sys.sp_cdc_disable_db &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql) dans le contexte de base de données pour désactiver la capture de données modifiées pour une base de données. Il n'est pas nécessaire de désactiver individuellement les tables avant de désactiver la base de données. La désactivation de la base de données supprime toutes les métadonnées de capture de données modifiées associées, y compris l'utilisateur et le schéma `cdc`, ainsi que les travaux de capture de données modifiées. Toutefois, tous les rôles de régulation créés par capture de données modifiées ne seront pas supprimés automatiquement et doivent être supprimés explicitement. Pour déterminer si une base de données est activée, interrogez la colonne `is_cdc_enabled` dans l'affichage catalogue sys.databases.  
   
  Si une base de données sur laquelle la capture de données modifiées est activée est supprimée, les travaux de capture de données modifiées sont également et automatiquement supprimés.  
   
@@ -69,7 +68,7 @@ GO
 ```  
   
 ## <a name="enable-change-data-capture-for-a-table"></a>Activer la capture des données modifiées pour une table  
- Une fois une base de données a été activée pour la capture de données modifiées, membres de la `db_owner` rôle de base de données fixe peut créer une instance de capture pour les tables sources individuelles à l’aide de la procédure stockée `sys.sp_cdc_enable_table`. Pour déterminer si une table source a été déjà activée pour la capture des données modifiées, examinez la colonne is_tracked_by_cdc dans l'affichage catalogue `sys.tables`.  
+ Une fois qu'une base de données a été activée pour la capture des données modifiées, les membres du rôle de base de données fixe `db_owner` peuvent créer une instance de capture pour les tables sources individuelles à l'aide de la procédure stockée `sys.sp_cdc_enable_table`. Pour déterminer si une table source a été déjà activée pour la capture des données modifiées, examinez la colonne is_tracked_by_cdc dans l'affichage catalogue `sys.tables`.  
   
  Les options suivantes peuvent être spécifiées lorsque vous créez une instance de capture :  
   
@@ -99,7 +98,7 @@ GO
   
  `A role for controlling access to a change table.`  
   
- L'objectif du rôle nommé consiste à contrôler l'accès aux données modifiées. Le rôle spécifié peut être un rôle serveur fixe existant ou un rôle de base de données. Si le rôle spécifié n'existe pas déjà, un rôle de base de données portant ce nom est automatiquement créé. Les membres du rôle `sysadmin` ou `db_owner` disposent d'un accès complet aux données des tables de modification. Tous les autres utilisateurs doivent disposer de l'autorisation SELECT pour toutes les colonnes capturées de la table source. En outre, quand un rôle est spécifié, les utilisateurs qui ne sont pas membres du `sysadmin` ou `db_owner` rôle doit également être membres du rôle spécifié.  
+ L'objectif du rôle nommé consiste à contrôler l'accès aux données modifiées. Le rôle spécifié peut être un rôle serveur fixe existant ou un rôle de base de données. Si le rôle spécifié n'existe pas déjà, un rôle de base de données portant ce nom est automatiquement créé. Les membres du rôle `sysadmin` ou `db_owner` disposent d'un accès complet aux données des tables de modification. Tous les autres utilisateurs doivent disposer de l'autorisation SELECT pour toutes les colonnes capturées de la table source. De plus, lorsqu'un rôle est spécifié, les utilisateurs qui ne sont pas membres du rôle `sysadmin` or `db_owner` doivent également être membres du rôle spécifié.  
   
  Si vous ne souhaitez pas utiliser de rôle de régulation, affectez explicitement la valeur NULL au paramètre *@role_name* . Consultez le modèle `Enable a Table Without Using a Gating Role` pour obtenir un exemple de l'activation d'une table sans un rôle de régulation.  
   
@@ -142,11 +141,11 @@ EXEC sys.sp_cdc_enable_table
 GO  
 ```  
   
-> [!NOTE]  
+> [!NOTE]
 >  Si la capture de données modifiées est activée sur une table avec une clé primaire existante, et que le paramètre *@index_name* n’est pas utilisé pour identifier un autre index unique, la fonctionnalité de capture de données modifiées utilisera la clé primaire. Les modifications ultérieures à la clé primaire ne seront pas autorisées sans désactivation préalable de la capture de données modifiées pour la table. Cela est vrai, que la prise en charge des requêtes de modifications nettes ait été demandée ou non lors de la configuration de la capture de données. Si une table ne contient pas de clé primaire au moment de son activation pour la capture de données modifiées, tout ajout ultérieur de clé primaire sera ignoré par la capture des données modifiées. Étant donné que la capture de données modifiées n'utilisera pas de clé primaire créée une fois la table activée, la clé et les colonnes clés peuvent être supprimées sans restrictions.  
   
 ## <a name="disable-change-data-capture-for-a-table"></a>Désactiver la capture des données modifiées pour une table  
- Membres de la `db_owner` rôle de base de données fixe peut supprimer une instance de capture pour les tables sources individuelles à l’aide de la procédure stockée `sys.sp_cdc_disable_table`. Pour déterminer si une table source est actuellement activée pour la capture des données modifiées, examinez la colonne `is_tracked_by_cdc` dans l'affichage catalogue `sys.tables`. S'il n'y a pas de tables activées pour la base de données après la désactivation, les travaux de capture de données modifiées sont également supprimés.  
+ Les membres du rôle de base de données fixe `db_owner` peuvent supprimer une instance de capture pour les tables sources individuelles à l'aide de la procédure stockée `sys.sp_cdc_disable_table`. Pour déterminer si une table source est actuellement activée pour la capture des données modifiées, examinez la colonne `is_tracked_by_cdc` dans l'affichage catalogue `sys.tables`. S'il n'y a pas de tables activées pour la base de données après la désactivation, les travaux de capture de données modifiées sont également supprimés.  
   
  Si une table pour laquelle la capture de données modifiées est activée est supprimée, les métadonnées de capture de données modifiées associées à la table sont automatiquement supprimées.  
   

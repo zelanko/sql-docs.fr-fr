@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 60036d26-4797-4872-9a9e-3552841c61be
 ms.custom: sql-linux
-ms.openlocfilehash: f60b16d1fba4e6c6b46615e5a5fd512db20ab854
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3288bb18a4bc8d87b9be1eb8f57bbc66555b9db5
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703797"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52401348"
 ---
 # <a name="walkthrough-for-the-performance-features-of-sql-server-on-linux"></a>Procédure pas à pas pour les fonctionnalités de performances de SQL Server sur Linux
 
@@ -83,7 +83,7 @@ SQL Server fournit des fonctionnalités OLTP en mémoire qui peuvent améliorer 
    GO
    ```
 
-2. Lorsqu'une transaction implique une table sur disque ainsi qu'une table optimisée en mémoire, il est essentiel que la partie de la transaction concernant la table optimisée en mémoire utilise le niveau d’isolation des transactions appelé SNAPSHOT.  Pour appliquer ce niveau d'isolation pour les tables optimisées en mémoire dans une transaction de ce type, exécutez la commande suivante :
+2. Une transaction impliquant une table basée sur disque et une table optimisée en mémoire, il est essentiel que la partie mémoire optimisée de la transaction fonctionne au niveau d’isolation des transactions nommé SNAPSHOT.  Pour appliquer ce niveau d'isolation pour les tables optimisées en mémoire dans une transaction de ce type, exécutez la commande suivante :
 
    ```sql
    ALTER DATABASE CURRENT SET MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT=ON
@@ -159,7 +159,7 @@ SQL Server prend en charge les procédures stockées compilées en mode natif qu
 ### <a name="learn-more-about-in-memory-oltp"></a>En savoir plus sur OLTP en mémoire
 Pour plus d’informations sur l’OLTP en mémoire, consultez les rubriques suivantes :
 
-- [Démarrage rapide 1 : technologies OLTP en mémoire pour accélérer les performances Transact-SQL](../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md)
+- [Démarrage rapide 1 : Technologies OLTP en mémoire pour accélérer les performances Transact-SQL](../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md)
 - [Migration vers OLTP en mémoire](../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)
 - [Table temporaire et variable de table plus rapides à l’aide de l’optimisation en mémoire](../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md)
 - [Surveiller l’utilisation de la mémoire et résoudre les problèmes connexes](../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md)

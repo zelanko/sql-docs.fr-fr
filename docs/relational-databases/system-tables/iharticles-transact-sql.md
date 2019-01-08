@@ -5,8 +5,7 @@ ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - IHarticles
@@ -19,12 +18,12 @@ ms.assetid: 773ef9b7-c993-4629-9516-70c47b9dcf65
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7ae16b2b0a7f38f9d70e77acf7dfb045d50b1042
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cc1a800ff61bde8e4d446462143bf0d333a16fe7
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47738487"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52802611"
 ---
 # <a name="iharticles-transact-sql"></a>IHarticles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ ms.locfileid: "47738487"
 |**status**|**tinyint**|Masque de bits de l'état et des options d'article, qui peut être le résultat OR logique au niveau du bit d'au moins l'une des valeurs suivantes :<br /><br /> **0** ne = aucune propriété supplémentaire.<br /><br /> **1** = actif.<br /><br /> **8** = inclut le nom de colonne dans les instructions INSERT.<br /><br /> **16** = utilise des instructions paramétré.<br /><br /> Par exemple, un article actif utilisant des instructions paramétrables posséderait la valeur 17 dans cette colonne. La valeur 0 signifie que l'article est inactif et qu'aucune propriété supplémentaire n'est définie.|  
 |**type**|**tinyint**|Type d'article :<br /><br /> **1** = article basé sur le journal.|  
 |**upd_cmd**|**nvarchar(255)**|Type de commande de réplication utilisé pour répliquer des mises à jour avec des articles de table. Pour plus d’informations, consultez [Spécifier le mode de propagation des modifications des articles transactionnels](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).|  
-|**schema_option**|**binary(8)**|Bitmap de l'option de génération de schéma d'un article donné, qui peut être le résultat OR logique au niveau du bit d'au moins l'une des valeurs suivantes :<br /><br /> **0 x 00** = disable scripts par l’Agent d’instantané et utilise le CreationScript fourni.<br /><br /> **0 x 01** = génère la création d’objets (CREATE TABLE, CREATE PROCEDURE, etc.).<br /><br /> **0 x 10** = génère un index cluster correspondant.<br /><br /> **0 x 40** = générer des index non-cluster correspondants.<br /><br /> **0 x 80** = inclut l’intégrité référentielle déclarée dans les clés primaires.<br /><br /> **0 x 1000** = réplique le classement au niveau des colonnes. Remarque : Cette option a la valeur par défaut pour les serveurs de publication Oracle permettre les comparaisons respectant la casse.<br /><br /> **0 x 4000** = réplique les clés uniques si défini sur un article de table.<br /><br /> **0 x 8000** = réplique une clé primaire et les clés uniques sur une table de l’article en tant que contraintes à l’aide d’instructions ALTER TABLE.|  
+|**schema_option**|**binary(8)**|Bitmap de l'option de génération de schéma d'un article donné, qui peut être le résultat OR logique au niveau du bit d'au moins l'une des valeurs suivantes :<br /><br /> **0 x 00** = disable scripts par l’Agent d’instantané et utilise le CreationScript fourni.<br /><br /> **0 x 01** = génère la création d’objets (CREATE TABLE, CREATE PROCEDURE, etc.).<br /><br /> **0 x 10** = génère un index cluster correspondant.<br /><br /> **0 x 40** = générer des index non-cluster correspondants.<br /><br /> **0 x 80** = inclut l’intégrité référentielle déclarée dans les clés primaires.<br /><br /> **0 x 1000** = réplique le classement au niveau des colonnes. Remarque : Cette option est définie par défaut pour les serveurs de publication Oracle afin d'activer les comparaisons respectant la casse.<br /><br /> **0 x 4000** = réplique les clés uniques si défini sur un article de table.<br /><br /> **0 x 8000** = réplique une clé primaire et les clés uniques sur une table de l’article en tant que contraintes à l’aide d’instructions ALTER TABLE.|  
 |**dest_owner**|**sysname**|Propriétaire de la table dans la base de données de destination|  
 |**dest_table**|**sysname**|Nom de la table de destination|  
 |**TABLESPACE_NAME**|**nvarchar(255)**|Identifie l'espace disque logique utilisé par la table d'enregistrement de l'article.|  

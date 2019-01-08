@@ -22,12 +22,12 @@ ms.assetid: 947eebd2-3622-479e-8aa6-57c11836e4ec
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 52acf8b0d2ebe628deeac19f994f53d25861452c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 48fafd92104745ac438c212847e9b2976e84db6d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170299"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352688"
 ---
 # <a name="backup-and-restore-of-analysis-services-databases"></a>Sauvegarde et restauration de bases de données Analysis Services
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] inclut la sauvegarde et la restauration afin que vous puissiez récupérer une base de données et ses objets à partir d'une date et heure spécifiques. La sauvegarde et la restauration peuvent également être utiles pour migrer des bases de données vers des serveurs mis à niveau, déplacer des bases de données entre des serveurs ou déployer une base de données sur un serveur de production. Pour la récupération des données, si vous ne possédez pas encore de plan de sauvegarde et si vos données ont de la valeur, vous devez concevoir et mettre en œuvre un plan au plus tôt.  
@@ -36,7 +36,7 @@ ms.locfileid: "48170299"
   
  Pour effectuer une sauvegarde complète incluant des données sources, vous devez sauvegarder la base de données qui contient les données de détail. Spécifiquement, si vous utilisez le mode de stockage de base de données ROLAP ou DirectQuery, les données de détail sont stockées dans une base de données relationnelle SQL Server externe, distincte de la base de données Analysis Services. Sinon, si tous les objets sont tabulaires ou multidimensionnels, la sauvegarde Analysis Services inclut les métadonnées et les données sources.  
   
- L'automatisation de la sauvegarde a comme avantage certain que l'instantané des données sera toujours à jour, comme la fréquence automatisée de sauvegarde le spécifie. Les planificateurs automatisés empêchent tout oubli des sauvegardes. La restauration d'une base de données peut également être automatisée et peut représenter une manière intéressante de répliquer les données, mais assurez-vous de sauvegarder le fichier de clé de chiffrement sur l'instance vers laquelle vous effectuez la réplication. La fonctionnalité de synchronisation est dédiée à la réplication des bases de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , mais uniquement pour les données périmées. Toutes les fonctionnalités mentionnées ici peuvent être implémentées via l'interface utilisateur, à l'aide des commandes XML/A ou s'exécuter par programmation via les objets AMO. Pour plus d'informations sur les stratégies de sauvegarde, consultez [Stratégies de sauvegardes avec SQL Server 2005 Analysis Services](http://go.microsoft.com/fwlink/?LinkId=81888).  
+ L'automatisation de la sauvegarde a comme avantage certain que l'instantané des données sera toujours à jour, comme la fréquence automatisée de sauvegarde le spécifie. Les planificateurs automatisés empêchent tout oubli des sauvegardes. La restauration d'une base de données peut également être automatisée et peut représenter une manière intéressante de répliquer les données, mais assurez-vous de sauvegarder le fichier de clé de chiffrement sur l'instance vers laquelle vous effectuez la réplication. La fonctionnalité de synchronisation est dédiée à la réplication des bases de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , mais uniquement pour les données périmées. Toutes les fonctionnalités mentionnées ici peuvent être implémentées via l'interface utilisateur, à l'aide des commandes XML/A ou s'exécuter par programmation via les objets AMO. Pour plus d'informations sur les stratégies de sauvegarde, consultez [Stratégies de sauvegardes avec SQL Server 2005 Analysis Services](https://go.microsoft.com/fwlink/?LinkId=81888).  
   
  Cette rubrique comprend les sections suivantes :  
   
@@ -106,7 +106,7 @@ ms.locfileid: "48170299"
 > [!NOTE]  
 >  Si un fichier de sauvegarde est chiffré, vous devez fournir le mot de passe spécifié pendant la sauvegarde pour pouvoir utiliser ce fichier dans le but de restaurer une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
- Au cours de la restauration, vous disposez des options suivantes :  
+ Au cours de la restauration, vous disposez des options suivantes :  
   
 -   Vous pouvez restaurer la base de données en utilisant le nom original de la base de données ou vous pouvez spécifier un nouveau nom de base de données.  
   

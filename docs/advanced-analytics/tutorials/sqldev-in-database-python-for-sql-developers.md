@@ -1,5 +1,5 @@
 ---
-title: En base de données analytique de Python pour les développeurs SQL | Microsoft Docs
+title: Didacticiel pour l’analytique de Python dans base de données pour les développeurs SQL - SQL Server Machine Learning
 description: Découvrez comment incorporer le code Python dans les procédures stockées SQL Server et des fonctions T-SQL.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 728ab56a844a6c7a14f5de7e39abc5d38146c85a
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: be4ac6b7f7c156ebeda843e8aa987ab45ef4057d
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560376"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53596680"
 ---
 # <a name="tutorial-in-database-python-analytics-for-sql-developers"></a>Didacticiel : Analytique en base de données Python pour les développeurs SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -40,7 +40,7 @@ Si vous êtes un programmeur SQL vous débutez avec Python ou Python développeu
 
 + [Leçon 1 : Explorer et visualiser les données à l’aide de Python](sqldev-py3-explore-and-visualize-the-data.md)
 
-+ [Leçon 2 : Créer des fonctionnalités de données à l’aide de fonctions SQL personnalisées](sqldev-py4-create-data-features-using-t-sql.md)
++ [Leçon 2 : Créer des caractéristiques de données à l’aide de fonctions SQL personnalisées](sqldev-py4-create-data-features-using-t-sql.md)
 
 + [Leçon 3 : Former et enregistrer un modèle de Python à l’aide de T-SQL](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 

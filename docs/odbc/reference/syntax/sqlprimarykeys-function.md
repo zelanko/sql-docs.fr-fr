@@ -20,16 +20,16 @@ ms.assetid: 3f809b09-3c1b-415e-80c5-a603e8e25d5b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6e041c4152a2f2b02a57164dbe43d62ae54d09d2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 37d6bdb61e23c3a48b54aa7d0e6488122486ffe5
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47619707"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205261"
 ---
 # <a name="sqlprimarykeys-function"></a>Fonction SQLPrimaryKeys
 **Conformité**  
- Version introduite : La mise en conformité des normes 1.0 ODBC : ODBC  
+ Version introduite : Conformité aux normes 1.0 ODBC : ODBC  
   
  **Résumé**  
  **SQLPrimaryKeys** retourne les noms de colonnes qui composent le réplica principal de clé pour une table. Le pilote retourne les informations comme jeu de résultats. Cette fonction ne prend pas en charge le renvoi des clés primaires de plusieurs tables dans un seul appel.  

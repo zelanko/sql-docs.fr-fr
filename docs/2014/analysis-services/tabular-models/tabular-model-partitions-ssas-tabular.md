@@ -13,12 +13,12 @@ ms.assetid: 041c269f-a229-4a41-8794-6ba4b014ef83
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7551cd654fbecf48e4d5bb101531ff412365ee02
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a8cfe346c56b767b2986ea929271a1ee0e601953
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089229"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52417572"
 ---
 # <a name="tabular-model-partitions-ssas-tabular"></a>Partitions de modèle tabulaire (SSAS Tabulaire)
   Les partitions divisent une table en sections logiques. Chaque partition peut ensuite être traitée (actualisée) indépendamment d'autres partitions. Les partitions définies pour un modèle au cours de la création de modèles sont dupliquées dans un modèle déployé. Une fois le déploiement terminé, vous pouvez gérer ces partitions et créer de nouvelles partitions à l'aide de la boîte de dialogue **Partitions** dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou à l'aide d'un script. Les informations fournies dans cette rubrique décrivent des partitions dans une base de données de modèle tabulaire déployée. Pour plus d’informations sur la création et la gestion des partitions lors de la création de modèles, consultez [Partitions &#40;SSAS Tabulaire&#41;](partitions-ssas-tabular.md).  
@@ -36,7 +36,7 @@ ms.locfileid: "48089229"
 ##  <a name="bkmk_benefits"></a> Avantages  
  La création de modèles efficaces fait appel à des partitions permettant d'éliminer tout traitement inutile et la charge qui en résulte au niveau du processeur sur les serveurs Analysis Services, tout en veillant en même temps à ce que les données soient traitées et actualisées suffisamment souvent pour refléter les données les plus récentes des sources de données.  
   
- Par exemple, un modèle tabulaire peut avoir une table des ventes qui inclut des données de ventes pour l'exercice fiscal 2011 et chacun des exercices précédents. La table des ventes du modèle possède les trois partitions suivantes :  
+ Par exemple, un modèle tabulaire peut avoir une table des ventes qui inclut des données de ventes pour l'exercice fiscal 2011 et chacun des exercices précédents. Table des ventes du modèle a trois partitions suivantes :  
   
 |Partition|Données de|  
 |---------------|---------------|  
@@ -48,11 +48,11 @@ ms.locfileid: "48089229"
   
  Il est inutile de traiter les données de la partition Sales2010-2001 de nuit ; toutefois, étant donné que les chiffres des ventes pour les dix exercices fiscaux précédents peuvent néanmoins occasionnellement changer en raison de retours de produit et d'autres ajustements, ils doivent toujours être traités régulièrement. De ce fait, les données de la partition Sales2010-2001 sont traitées sur une base mensuelle. Les données de la partition SalesOld ne changent jamais ; par conséquent, elles sont traitées une fois par an uniquement.  
   
- À l'approche de l'exercice fiscal 2012, une nouvelle partition Sales2012 est ajoutée à la table des ventes du mode. La partition Sales2011 peut ensuite être fusionnée avec la partition Sales2010-2001 et renommée en Sales2011-2002. Les données de l'exercice fiscal 2001 sont éliminées de la nouvelle partition Sales2011-2002 et déplacées vers la partition SalesOld. Toutes les partitions sont ensuite traitées pour refléter les modifications.  
+ Lorsque vous entrez l’exercice fiscal 2012, une nouvelle partition Sales2012 est ajoutée à la table des ventes du mode. La partition Sales2011 peut ensuite être fusionnée avec la partition Sales2010-2001 et renommée en Sales2011-2002. Les données de l'exercice fiscal 2001 sont éliminées de la nouvelle partition Sales2011-2002 et déplacées vers la partition SalesOld. Toutes les partitions sont ensuite traitées pour refléter les modifications.  
   
- La procédure d'implémentation d'une stratégie de partition pour les modèles tabulaires de votre organisation dépend principalement de vos besoins et de vos ressources disponibles pour le traitement des données de modèles.  
+ Façon dont vous implémentez une stratégie de partition pour les modèles tabulaires de votre organisation seront en grande partie dépend de vos besoins de traitement des données de modèle particulier et les ressources disponibles.  
   
-##  <a name="bkmk_permissions"></a> Autorisations  
+##  <a name="bkmk_permissions"></a> Permissions  
  Pour créer, gérer et traiter des partitions dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], vous devez disposer des autorisations appropriées pour Analysis Services définies dans un rôle de sécurité. Chaque rôle de sécurité dispose d'une des autorisations suivantes :  
   
 |Autorisation|Actions|  
@@ -68,7 +68,7 @@ ms.locfileid: "48089229"
   
 |Mode|Description|  
 |----------|-----------------|  
-|Traiter par défaut|Détecte l'état de traitement d'un objet de partition et effectue le traitement nécessaire pour faire passer les objets de partition non traités ou traités partiellement dans un état de traitement complet. Les données des partitions et des tables vides sont chargées ; les hiérarchies, les colonnes calculées et les relations sont créées ou reconstruites.|  
+|Traiter par défaut|Détecte l'état de traitement d'un objet de partition et effectue le traitement nécessaire pour faire passer les objets de partition non traités ou traités partiellement dans un état de traitement complet. Les données des partitions et des tables vides sont chargées ; les hiérarchies, les colonnes calculées et les relations sont créées ou reconstruites.|  
 |Traiter entièrement|Traite un objet de partition et tous les objets qu'il contient. Lorsque la commande Traiter entièrement est exécutée pour un objet qui a déjà été traité, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supprime toutes les données de l'objet, puis traite l'objet. Ce type de traitement est obligatoire lorsqu'une modification structurelle a été apportée à un objet.|  
 |Traiter les données|Chargez les données dans une partition ou une table sans reconstruire les hiérarchies ou les relations ni recalculer les colonnes calculées et les mesures.|  
 |Traiter l'effacement|Supprime toutes les données d'une partition.|  
@@ -78,7 +78,7 @@ ms.locfileid: "48089229"
   
 |Tâche|Description|  
 |----------|-----------------|  
-|[Créer et gérer des Partitions de modèles tabulaires &#40;SSAS tabulaire&#41;](create-and-manage-tabular-model-partitions-ssas-tabular.md)|Explique comment créer et gérer des partitions dans un modèle tabulaire déployé à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|  
-|[Traiter les Partitions de modèle tabulaire &#40;SSAS tabulaire&#41;](process-tabular-model-partitions-ssas-tabular.md)|Explique comment traiter des partitions dans un modèle tabulaire déployé à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|  
+|[Créer et gérer des partitions de modèles tabulaires &#40;SSAS Tabulaire&#41;](create-and-manage-tabular-model-partitions-ssas-tabular.md)|Explique comment créer et gérer des partitions dans un modèle tabulaire déployé à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|  
+|[Traiter les partitions de modèles tabulaires &#40;SSAS Tabulaire&#41;](process-tabular-model-partitions-ssas-tabular.md)|Explique comment traiter des partitions dans un modèle tabulaire déployé à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|  
   
   

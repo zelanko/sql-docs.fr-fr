@@ -18,12 +18,12 @@ ms.assetid: d33b973a-2724-4d4b-aaf7-67675929c392
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b033342e8e6e7d3fb55d51d03705b2168d72209f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1ac666af5ed24d526953dd8aa57c76871d2064f6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785327"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52414486"
 ---
 # <a name="semantickeyphrasetable-transact-sql"></a>semantickeyphrasetable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -87,7 +87,7 @@ SEMANTICKEYPHRASETABLE
   
 ## <a name="security"></a>Sécurité  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Autorisations  
  Requiert des autorisations SELECT sur la table de base sur laquelle les index sémantiques et de recherche en texte intégral ont été créés.  
   
 ## <a name="examples"></a>Exemples  
@@ -107,8 +107,8 @@ ORDER BY KEYP_TBL.score DESC;
   
 ```  
   
-###  <a name="HowToTopDocuments"></a> Exemple 2 : Rechercher des Documents de niveau supérieur qui contiennent une expression clé spécifique  
- L'exemple suivant extrait les 25 documents de niveau supérieur qui contiennent l'expression clé « bracket » dans la colonne Document de la table Production.Document de l'exemple de base de données AdventureWorks. Cet exemple suppose que la colonne est configurée pour l'indexation de texte intégral et sémantique.  
+###  <a name="HowToTopDocuments"></a> Exemple 2 : Rechercher les Documents de niveau supérieur qui contiennent une expression clé spécifique  
+ L’exemple suivant récupère les 25 premiers documents qui contiennent l’expression clé « bracket » dans la colonne Document de la table Production.Document de l’exemple de base de données AdventureWorks. Cet exemple suppose que la colonne est configurée pour l'indexation de texte intégral et sémantique.  
   
 ```sql  
 SELECT TOP (25) DOC_TBL.DocumentID, DOC_TBL.DocumentSummary  

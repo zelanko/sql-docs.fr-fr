@@ -19,12 +19,12 @@ ms.assetid: bd6f958f-cce6-4e79-8a0f-9475da2919ce
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 0ebd18967f892d0f40e5d5b0e3b15e1196935af8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3cbc3a76c1f6e5c67297f44c312fe0497666a9b8
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141839"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505645"
 ---
 # <a name="rsexe-utility-ssrs"></a>Utilitaire RS.exe (SSRS)
   L'utilitaire rs.exe traite le script que vous fournissez dans un fichier d'entrée. Utilisez cet utilitaire pour automatiser les tâches de déploiement et d'administration du serveur de rapports.  
@@ -75,7 +75,7 @@ ms.locfileid: "48141839"
  (Facultatif) Spécifie un compte d'utilisateur utilisé pour se connecter au serveur de rapports. Si `-u` et `-p` sont absents, le compte d'utilisateur Windows actuel est utilisé.  
   
  `-p` *Mot de passe*  
- (Obligatoire si `-u` est spécifié) spécifie le mot de passe à utiliser avec le `-u` argument. Cette valeur respecte la casse.  
+ (Obligatoire si `-u` est spécifié) Spécifie le mot de passe à utiliser avec l'argument `-u`. Cette valeur respecte la casse.  
   
  `-e`  
  (Facultatif) Spécifie le point de terminaison SOAP sur lequel le script devrait s'exécuter. Les valeurs suivantes sont valides :  
@@ -88,16 +88,16 @@ ms.locfileid: "48141839"
   
 -   Exec2005  
   
- Si une valeur n'est pas spécifiée, le point de terminaison Mgmt2005 est utilisé. Pour plus d’informations sur les points de terminaison SOAP, consultez [Report Server Web Service Endpoints](../report-server-web-service/methods/report-server-web-service-endpoints.md).  
+ Si une valeur n'est pas spécifiée, le point de terminaison Mgmt2005 est utilisé. Pour plus d'informations sur les points de terminaison SOAP, consultez [Report Server Web Service Endpoints](../report-server-web-service/methods/report-server-web-service-endpoints.md).  
   
  `-l` *time_out*  
- (Facultatif) Spécifie le délai d'expiration de la connexion au serveur, en secondes. La valeur par défaut est 60 secondes. Si vous ne spécifiez pas de délai d'expiration, la valeur par défaut est utilisée. La valeur `0` indique que la connexion n'arrive jamais à expiration.  
+ (Facultatif) Spécifie le délai d'expiration de la connexion au serveur, en secondes. La valeur par défaut est 60 secondes. Si vous ne spécifiez pas de délai d'expiration, la valeur par défaut est utilisée. La valeur `0` indique que la connexion n'arrive jamais à expiration.  
   
  **-b**  
- (Facultatif) Spécifie que les commandes du fichier script s'exécutent dans un lot. En cas d'échec d'une commande, l'ensemble du lot est annulé. Certaines commandes ne peuvent pas être traitées par lot ; leur exécution se déroule normalement. Seules les exceptions générées qui ne sont pas gérées par le code du script entraînent une annulation. Si le script gère une exception et retourne normalement à partir de `Main`, le lot est validé. Si vous omettez ce paramètre, les commandes s'exécutent sans créer de lot. Pour plus d’informations, consultez [Batching Methods](../report-server-web-service-net-framework-soap-headers/batching-methods.md).  
+ (Facultatif) Spécifie que les commandes du fichier script s'exécutent dans un lot. En cas d'échec d'une commande, l'ensemble du lot est annulé. Certaines commandes ne peuvent pas être traitées par lot ; leur exécution se déroule normalement. Seules les exceptions générées qui ne sont pas gérées par le code du script entraînent une annulation. Si le script gère une exception et si l'exécution se poursuit normalement à partir de `Main`, le traitement est validé. Si vous omettez ce paramètre, les commandes s'exécutent sans créer de lot. Pour plus d’informations, voir [Batching Methods](../report-server-web-service-net-framework-soap-headers/batching-methods.md).  
   
  `-v` *GlobalVar*  
- (Facultatif) Spécifie les variables globales utilisées dans le script. Si le script utilise des variables globales, vous devez spécifier cet argument. La valeur que vous spécifiez doit être une valeur correcte définie dans le fichier .rss pour les variables globales. Vous devez spécifier une variable globale pour chaque argument **–v** .  
+ (Facultatif) Spécifie les variables globales utilisées dans le script. Si le script utilise des variables globales, vous devez spécifier cet argument. La valeur que vous spécifiez doit être une valeur correcte définie dans le fichier .rss pour les variables globales. Vous devez spécifier une variable globale pour chaque argument **-v**.  
   
  L'argument `-v` est spécifié sur la ligne de commande et est utilisé pour configurer la valeur pour une variable globale définie dans votre script au moment de l'exécution. Par exemple, si votre script contient une variable nommée *parentFolder*, vous pouvez spécifier un nom pour ce dossier sur la ligne de commande :  
   
@@ -110,14 +110,14 @@ ms.locfileid: "48141839"
  **-t**  
  (Facultatif) Génère des messages d'erreur dans le journal des traces. Cet argument ne prend pas de valeur. Pour plus d’informations, consultez [Report Server Service Trace Log](../report-server/report-server-service-trace-log.md).  
   
-##  <a name="bkmk_permissions"></a> Autorisations  
+##  <a name="bkmk_permissions"></a> Permissions  
  Pour exécuter l'outil, vous devez avoir l'autorisation de vous connecter à l'instance du serveur de rapports sur laquelle s'exécute le script. Vous pouvez exécuter des scripts pour apporter des modifications à l'ordinateur local ou à un ordinateur distant. Pour apporter des modifications à un serveur de rapports installé sur un ordinateur distant, spécifiez l'ordinateur distant dans l'argument `-s`.  
   
 ##  <a name="bkmk_examples"></a> Exemples  
  L'exemple ci-dessous montre comment spécifier le fichier de script qui contient un script [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET et les méthodes du service Web que vous souhaitez exécuter.  
   
 ```  
-rs –i c:\scriptfiles\script_copycontent.rss -s http://localhost/reportserver  
+rs -i c:\scriptfiles\script_copycontent.rss -s http://localhost/reportserver  
 ```  
   
  Pour obtenir un exemple détaillé, consultez [Sample Reporting Services rs.exe Script to Migrate Content between Report Servers](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
@@ -125,7 +125,7 @@ rs –i c:\scriptfiles\script_copycontent.rss -s http://localhost/reportserver
  Pour obtenir des exemples supplémentaires, consultez [Exécuter un fichier de script Reporting Services](run-a-reporting-services-script-file.md).  
   
 ## <a name="remarks"></a>Notes  
- Vous pouvez créer des scripts pour définir des propriétés système, publier des rapports, etc. Les scripts que vous créez peuvent inclure toutes les méthodes de l'API [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Pour plus d’informations sur les méthodes et propriétés disponibles, consultez [Service Web Report Server](../report-server-web-service/report-server-web-service.md).  
+ Vous pouvez créer des scripts pour définir des propriétés système, publier des rapports, etc. Les scripts que vous créez peuvent inclure toutes les méthodes de l'API [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Pour plus d'informations sur les méthodes et les propriétés disponibles, consultez [Report Server Web Service](../report-server-web-service/report-server-web-service.md).  
   
  Le script doit être écrit en code [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET et stocké dans un fichier texte au format Unicode ou UTF-8, avec l’extension de nom de fichier .rss. Vous ne pouvez pas déboguer les scripts à l’aide de l’utilitaire **rs** . Pour déboguer un script, exécutez le code dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].  
   
@@ -133,9 +133,9 @@ rs –i c:\scriptfiles\script_copycontent.rss -s http://localhost/reportserver
 >  Pour obtenir un exemple détaillé, consultez [Sample Reporting Services rs.exe Script to Migrate Content between Report Servers](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Exécuter un fichier de Script Reporting Services](run-a-reporting-services-script-file.md)   
+ [Exécuter un fichier de script Reporting Services](run-a-reporting-services-script-file.md)   
  [Écrire des scripts pour les tâches d'administration et de déploiement](script-deployment-and-administrative-tasks.md)   
- [Script avec l’utilitaire rs.exe et le Service Web](script-with-the-rs-exe-utility-and-the-web-service.md)   
- [Utilitaires d’invite de commandes de serveur de rapports &#40;SSRS&#41;](report-server-command-prompt-utilities-ssrs.md)  
+ [Écrire des scripts avec l'utilitaire rs.exe et le service Web](script-with-the-rs-exe-utility-and-the-web-service.md)   
+ [Utilitaires d’invite de commandes du serveur de rapports &#40;SSRS&#41;](report-server-command-prompt-utilities-ssrs.md)  
   
   

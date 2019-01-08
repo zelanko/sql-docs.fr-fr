@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - FTP connection manager
@@ -15,19 +14,19 @@ ms.assetid: c4f43455-29ca-44ba-ac7f-ea729b1daf93
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 989049c5371d35d53282f5780dcfc9db13312c7e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5f53d6e82764e11ba56513053d88e23fda0baf92
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188839"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52790341"
 ---
 # <a name="ftp-connection-manager"></a>Gestionnaires de connexion FTP
   Un gestionnaire de connexions FTP permet à un package de se connecter à un serveur FTP (File Transfer Protocol). La tâche FTP incluse dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] utilise ce gestionnaire de connexions.  
   
  Lorsque vous ajoutez un gestionnaire de connexions FTP à un package, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crée un gestionnaire de connexions qui peut être résolu en tant que connexion FTP au moment de l'exécution, définit les propriétés du gestionnaire de connexions et ajoute le gestionnaire de connexions à la collection `Connections` sur le package.  
   
- Le `ConnectionManagerType` propriété du Gestionnaire de connexions est définie sur `FTP`.  
+ La propriété `ConnectionManagerType` du gestionnaire de connexions a pour valeur `FTP`.  
   
  Vous pouvez configurer le gestionnaire de connexions FTP de plusieurs manières :  
   
@@ -56,10 +55,10 @@ ms.locfileid: "48188839"
   
  Pour plus d’informations sur les propriétés que vous pouvez définir dans le Concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , consultez [Éditeur du gestionnaire de connexions FTP](../ftp-connection-manager-editor.md).  
   
- Pour plus d’informations sur la configuration d’un gestionnaire de connexions par programmation, consultez <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> et [Ajout de connexions par programmation](../building-packages-programmatically/adding-connections-programmatically.md).  
+ Pour plus d’informations sur la configuration d’un gestionnaire de connexions par programmation, consultez <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> et [Ajout de connexions par programme](../building-packages-programmatically/adding-connections-programmatically.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Tâche FTP](../control-flow/ftp-task.md)   
- [Integration Services &#40;SSIS&#41; connexions](integration-services-ssis-connections.md)  
+ [Connexions Integration Services &#40;SSIS&#41;](integration-services-ssis-connections.md)  
   
   

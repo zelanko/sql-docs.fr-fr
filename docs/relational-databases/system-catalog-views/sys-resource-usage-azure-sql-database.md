@@ -22,22 +22,22 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 0a79eed306e8920ece4cc6ea1de97352c4706622
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: afab607b547302d3f24f3bb64060757bfa76495a
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47604617"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209908"
 ---
 # <a name="sysresourceusage-azure-sql-database"></a>sys.resource_usage (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
     
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  Cette fonctionnalité est dans un état d'aperçu. N'établissez pas de dépendance sur l'implémentation spécifique de cette fonctionnalité, car elle est susceptible d'être modifiée ou supprimée dans une future version.  
->   
+> 
 >  Dans un état d'aperçu, l'équipe d'exploitation de [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] peut désactiver et activer la collection de données pour cette vue de gestion dynamique (DMV).  
->   
+> 
 >  -   Si elle est activée, la DMV retourne les données actives à mesure qu'elles sont agrégées.  
 > -   Si elle est désactivée, la DMV retourne les données d'historique, qui peuvent être obsolètes.  
   
@@ -50,10 +50,10 @@ ms.locfileid: "47604617"
 |time|**datetime**|Heure (UTC) par incréments d'heures.|  
 |database_name|**nvarchar**|Nom de la base de données utilisateur.|  
 |sku|**nvarchar**|Nom de la SKU. Les valeurs possibles sont les suivantes :<br /><br /> Web<br /><br /> Business<br /><br /> Simple<br /><br /> Standard<br /><br /> Premium|  
-|usage_in_seconds|**Int**|Somme du temps processeur utilisé dans l'heure.<br /><br /> Remarque : Cette colonne est déconseillée pour V11 et V12 ne concerne pas. **Valeur est toujours définie sur 0.**|  
+|usage_in_seconds|**Int**|Somme du temps processeur utilisé dans l'heure.<br /><br /> Remarque : Cette colonne est déconseillée pour V11 et V12 ne concerne pas. **Valeur est toujours définie sur 0.**|  
 |storage_in_megabytes|**decimal**|Taille de stockage maximale pour l'heure, y compris les données de la base de données, index, procédures stockées et métadonnées.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Cette vue est disponible pour tous les rôles d’utilisateur avec des autorisations pour se connecter à virtuel **master** base de données.  
   
   

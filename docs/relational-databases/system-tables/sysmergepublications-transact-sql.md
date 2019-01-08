@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sysmergepublications
@@ -19,12 +18,12 @@ ms.assetid: 7f82c6c3-22d1-47c0-a92b-4d64b98cc455
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d2a7ed15f4c971cdd7489084717f2a11ecd9a2e0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d807b4b62eed46e99fdeaf0225fadb59b26042a8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47790277"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52748422"
 ---
 # <a name="sysmergepublications-transact-sql"></a>sysmergepublications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +66,7 @@ ms.locfileid: "47790277"
 |**allow_synctoalternate**|**bit**|Spécifie si un partenaire de synchronisation différent est autorisé pour se synchroniser avec le serveur de publication. **0** signifie qu’un partenaire de synchronisation n’est pas autorisé.|  
 |**validate_subscriber_info**|**nvarchar(500)**|Donne la liste des fonctions utilisées pour extraire les informations d'Abonné et valider les critères de filtre de lignes paramétrable sur l'Abonné.|  
 |**ad_guidname**|**sysname**|Spécifie si la publication est publiée dans l'annuaire [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory. Un GUID valide indique que la publication est publiée dans Active Directory, et le GUID est l’objet de publication Active Directory **objectGUID**. Si la valeur est NULL, la publication n'est pas publiée dans l'annuaire Active Directory.|  
-|**backward_comp_level**|**Int**|Niveau de compatibilité de base de données. Il peut s'agir de l'une des valeurs suivantes :<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].<br /><br /> **100** = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].|  
+|**backward_comp_level**|**Int**|Niveau de compatibilité de base de données. Peut avoir l'une des valeurs suivantes :<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].<br /><br /> **100** = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].|  
 |**max_concurrent_merge**|**Int**|Le nombre maximal de processus de fusion simultanés autorisés. La valeur **0** pour cette propriété signifie qu’il n’existe aucune limite au nombre de processus de fusion simultanés en cours d’exécution à un moment donné. Cette propriété définit une limite concernant le nombre de processus de fusion simultanés qui peut être exécutée sur une publication de fusion à la fois. Si, au même moment, le nombre de processus d'instantané planifiés dépasse le nombre maximal autorisé, les travaux en excès sont placés dans une file d'attente jusqu'à achèvement d'un processus de fusion en cours.|  
 |**max_concurrent_dynamic_snapshots**|**Int**|Nombre maximal de sessions d'instantanés de données filtrées simultanées autorisées exécutables sur la publication de fusion. Si **0**, il n’existe aucune limite au nombre maximal de sessions d’instantanés de données filtrées simultanées pouvant s’exécuter simultanément sur la publication à un moment donné. Cette propriété permet de définir un nombre maximal de processus d'instantané simultanés exécutables sur une publication de fusion à un moment donné. Si, au même moment, le nombre de processus d'instantané planifiés dépasse le nombre maximal autorisé, les travaux en excès sont placés dans une file d'attente jusqu'à achèvement d'un processus de fusion en cours.|  
 |**use_partition_groups**|**smallint**|Spécifie si la publication utilise des partitions précalculées.|  
@@ -82,7 +81,7 @@ ms.locfileid: "47790277"
 |**snapshot_jobid**|**binary (16)**|Identifie le travail d'Agent qui génère l'instantané lorsque l'Abonné peut initier le processus de génération d'instantané.|  
 |**allow_web_synchronization**|**bit**|Spécifie si la publication est activée pour la synchronisation Web, où **1** signifie que la synchronisation Web est activée pour la publication.|  
 |**web_synchronization_url**|**nvarchar(500)**|Spécifie la valeur par défaut de l'URL Internet utilisée pour la synchronisation Web.|  
-|**allow_partition_realignment**|**bit**|Indique si les suppressions sont envoyées à l'Abonné lorsque la modification de la ligne sur le serveur de publication amène celui-ci à modifier sa partition.<br /><br /> **0** = données à partir d’une ancienne partition demeurent sur l’abonné, où les modifications apportées à ces données sur le serveur de publication ne seront pas répliquées sur l’abonné, mais les modifications apportées sur l’abonné sont répliquées sur le serveur de publication.<br /><br /> **1** = les suppressions à l’abonné pour refléter les résultats d’une modification de partition en supprimant les données qui ne font plus partie de la partition de l’abonné.<br /><br /> Pour plus d’informations, consultez [sp_addmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md).<br /><br /> Remarque : Les données qui demeurent sur l’abonné lorsque cette valeur est **0** doit être traitée comme si elle était en lecture seule ; toutefois, cela n’est pas strictement appliquée par le système de réplication.|  
+|**allow_partition_realignment**|**bit**|Indique si les suppressions sont envoyées à l'Abonné lorsque la modification de la ligne sur le serveur de publication amène celui-ci à modifier sa partition.<br /><br /> **0** = données à partir d’une ancienne partition demeurent sur l’abonné, où les modifications apportées à ces données sur le serveur de publication ne seront pas répliquées sur l’abonné, mais les modifications apportées sur l’abonné sont répliquées sur le serveur de publication.<br /><br /> **1** = les suppressions à l’abonné pour refléter les résultats d’une modification de partition en supprimant les données qui ne font plus partie de la partition de l’abonné.<br /><br /> Pour plus d’informations, consultez [sp_addmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md).<br /><br /> Remarque : Données qui restent sur l’abonné lorsque cette valeur est **0** doit être traitée comme si elle était en lecture seule ; toutefois, cela n’est pas strictement appliquée par le système de réplication.|  
 |**retention_period_unit**|**tinyint**|Définit l’unité utilisée lors de la définition *rétention*, qui peut être une des valeurs suivantes :<br /><br /> **0** = jour.<br /><br /> **1** = semaine.<br /><br /> **2** = mois.<br /><br /> **3** = année.|  
 |**decentralized_conflicts**|**Int**|Indique si les enregistrements en conflit sont stockés dans l'Abonné à l'origine du conflit :<br /><br /> **0** = les enregistrements en conflit ne sont pas stockés sur l’abonné.<br /><br /> **1** = les enregistrements en conflit sont stockés sur l’abonné.|  
 |**generation_leveling_threshold**|**Int**|Indique le nombre de modifications contenues dans une génération. Une génération est une collection de modifications remises à un serveur de publication ou à un Abonné.|  

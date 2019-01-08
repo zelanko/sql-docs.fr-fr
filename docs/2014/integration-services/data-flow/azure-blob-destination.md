@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.afpblobdest.f1
@@ -14,15 +13,15 @@ ms.assetid: 820a1e7a-7182-4c7b-ab56-5b4097a7e042
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5e2927b75a5e7ca441d95a6ce85d64d66f9dabcc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6f114f39d76a5ec764e9bab814123a668a522dbe
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48088483"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52756861"
 ---
 # <a name="azure-blob-destination"></a>Destination d’objet blob Azure
-  Le composant **Destination d’objet blob Azure** permet à un package SSIS d’écrire des données dans un objet blob Azure. Les formats de fichier pris en charge sont CSV et AVRO. Faites glisser le composant **Destination d’objet Blob Azure** au Concepteur de flux de données et double-cliquez dessus pour afficher l’éditeur).  
+  Le composant **Destination d’objet blob Azure** permet à un package SSIS d’écrire des données dans un objet blob Azure. Les formats de fichier pris en charge sont : CSV et AVRO. Faites glisser le composant **Destination d’objet Blob Azure** au Concepteur de flux de données et double-cliquez dessus pour afficher l’éditeur).  
   
 1.  Dans le champ **Gestionnaire de connexions Azure Storage** , spécifiez un gestionnaire de connexions Azure Storage existant ou créez-en un qui fera référence à un compte Azure Storage.  
   

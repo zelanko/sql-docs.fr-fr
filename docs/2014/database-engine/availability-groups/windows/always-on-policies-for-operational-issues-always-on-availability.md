@@ -13,12 +13,12 @@ ms.assetid: afa5289c-641a-4c03-8749-44862384ec5f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e1e4c878004f3cdcc492637d338e8ff6c8d92937
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 815f549cf9ab6dd7fe748c08ae7f32683c9d8551
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104170"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350009"
 ---
 # <a name="always-on-policies-for-operational-issues-with-always-on-availability-groups-sql-server"></a>Stratégies Always On pour les problèmes opérationnels avec des groupes de disponibilité Always On (SQL Server)
   Le modèle d'intégrité [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] évalue un ensemble de stratégies de gestion basées sur des stratégies prédéfinies. Vous pouvez les utiliser pour afficher l'intégrité d'un groupe de disponibilité AlwaysOn et de ses réplicas de disponibilité et bases de données dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
@@ -48,26 +48,26 @@ ms.locfileid: "48104170"
   
 |Nom de stratégie|Problème|Catégorie**<sup>*</sup>**|Facette|  
 |-----------------|-----------|------------------------------|-----------|  
-|État du cluster WSFC|[WSFC cluster service is offline](wsfc-cluster-service-is-offline.md).|Critique|Instance de SQL Server|  
-|État en ligne du groupe de disponibilité|[Availability group is offline](availability-group-is-offline.md).|Critique|Groupe de disponibilité|  
-|Disponibilité du groupe de disponibilité pour le basculement automatique|[Availability group is not ready for automatic failover](availability-group-is-not-ready-for-automatic-failover.md).|Critique|Groupe de disponibilité|  
-|État de synchronisation des données des réplicas de disponibilité|[Some availability replicas are not synchronizing data](some-availability-replicas-are-not-synchronizing-data.md).|Avertissement|Groupe de disponibilité|  
-|État de synchronisation des données de réplicas synchrones|[Some synchronous replicas are not synchronized](some-synchronous-replicas-are-not-synchronized.md).|Avertissement|Groupe de disponibilité|  
-|État du rôle des réplicas de disponibilité|[Some availability replicas do not have a healthy role](some-availability-replicas-do-not-have-a-healthy-role.md).|Avertissement|Groupe de disponibilité|  
-|État de la connexion des réplicas de disponibilité|[Some availability replicas are disconnected](some-availability-replicas-are-disconnected.md).|Avertissement|Groupe de disponibilité|  
-|État du rôle du réplica de disponibilité|[Availability replica does not have a healthy role](availability-replica-does-not-have-a-healthy-role.md).|Critique|réplica de disponibilité|  
-|État de la connexion du réplica de disponibilité|[Availability replica is disconnected](availability-replica-is-disconnected.md).|Critique|Réplica de disponibilité|  
-|État de jointure du réplica de disponibilité|[Le réplica de disponibilité n’est pas joint](availability-replica-is-not-joined.md).|Avertissement|Réplica de disponibilité|  
-|État de synchronisation des données du réplica de disponibilité|[Data synchronization state of some availability database is not healthy](data-synchronization-state-of-some-availability-database-is-not-healthy.md).|Avertissement|Réplica de disponibilité|  
-|État de suspension de la base de données de disponibilité|[Availability database is suspended](availability-database-is-suspended.md).|Avertissement|Base de données de disponibilité|  
-|État de la jointure de la base de données de disponibilité|[Secondary database is not joined](secondary-database-is-not-joined.md).|Avertissement|Base de données de disponibilité|  
-|État de synchronisation des données de la base de données de disponibilité|[Data synchronization state of availability database is not healthy](data-synchronization-state-of-availability-database-is-not-healthy.md).|Avertissement|Base de données de disponibilité|  
+|État du cluster WSFC|[Le service de cluster WSFC est hors connexion](wsfc-cluster-service-is-offline.md).|Critique|Instance de SQL Server|  
+|État en ligne du groupe de disponibilité|[Le groupe de disponibilité est hors connexion](availability-group-is-offline.md).|Critique|Groupe de disponibilité|  
+|Disponibilité du groupe de disponibilité pour le basculement automatique|[Le groupe de disponibilité n’est pas prêt pour le basculement automatique](availability-group-is-not-ready-for-automatic-failover.md).|Critique|Groupe de disponibilité|  
+|État de synchronisation des données des réplicas de disponibilité|[Certains réplicas de disponibilité ne synchronisent pas de données](some-availability-replicas-are-not-synchronizing-data.md).|Warning|Groupe de disponibilité|  
+|État de synchronisation des données de réplicas synchrones|[Certains réplicas synchrones ne sont pas synchronisés](some-synchronous-replicas-are-not-synchronized.md).|Warning|Groupe de disponibilité|  
+|État du rôle des réplicas de disponibilité|[Certains réplicas de disponibilité n’ont pas un rôle sain](some-availability-replicas-do-not-have-a-healthy-role.md).|Warning|Groupe de disponibilité|  
+|État de la connexion des réplicas de disponibilité|[Certains réplicas de disponibilité sont déconnectés](some-availability-replicas-are-disconnected.md).|Warning|Groupe de disponibilité|  
+|État du rôle du réplica de disponibilité|[Le réplica de disponibilité n’a pas un rôle sain](availability-replica-does-not-have-a-healthy-role.md).|Critique|réplica de disponibilité|  
+|État de la connexion du réplica de disponibilité|[Le réplica de disponibilité est déconnecté](availability-replica-is-disconnected.md).|Critique|Réplica de disponibilité|  
+|État de jointure du réplica de disponibilité|[Le réplica de disponibilité n’est pas joint](availability-replica-is-not-joined.md).|Warning|Réplica de disponibilité|  
+|État de synchronisation des données du réplica de disponibilité|[L’état de synchronisation des données d’une base de données de disponibilité n’est pas sain](data-synchronization-state-of-some-availability-database-is-not-healthy.md).|Warning|Réplica de disponibilité|  
+|État de suspension de la base de données de disponibilité|[La base de données de disponibilité est suspendue](availability-database-is-suspended.md).|Warning|Base de données de disponibilité|  
+|État de la jointure de la base de données de disponibilité|[La base de données secondaire n’est pas jointe](secondary-database-is-not-joined.md).|Warning|Base de données de disponibilité|  
+|État de synchronisation des données de la base de données de disponibilité|[L’état de synchronisation des données de la base de données de disponibilité n’est pas sain](data-synchronization-state-of-availability-database-is-not-healthy.md).|Warning|Base de données de disponibilité|  
   
 > [!IMPORTANT]  
 >  **<sup>*</sup>**  Pour les stratégies AlwaysOn, les noms de catégorie sont utilisés comme identificateurs. Modifier le nom d'une catégorie AlwaysOn compromettrait sa fonctionnalité d'évaluation de l'intégrité. Par conséquent, ne modifiez pas les noms des catégories AlwaysOn.  
   
 ##  <a name="Dashboard"></a> Tableau de bord AlwaysOn  
- Le tableau de bord AlwaysOn fournit d'un coup d'œil une vue de l'intégrité d'un groupe de disponibilité. Il inclut les fonctionnalités suivantes :  
+ Le tableau de bord AlwaysOn fournit d'un coup d'œil une vue de l'intégrité d'un groupe de disponibilité. Il inclut les fonctionnalités suivantes :  
   
 -   Vous permet de visualiser facilement les détails d'un groupe de disponibilité donné, ses réplicas de disponibilité et de ses bases de données.  
   
@@ -84,9 +84,9 @@ ms.locfileid: "48104170"
 ##  <a name="ExtendHealthModel"></a> Extension du modèle d’intégrité AlwaysOn  
  L'extension du modèle d'intégrité [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] consiste à créer vos propres stratégies définies par l'utilisateur et à les placer dans certaines catégories en fonction du type d'objet surveillé.  Après que vous avez modifié quelques paramètres, le tableau de bord AlwaysOn évalue automatiquement vos propres stratégies définies par l'utilisateur, ainsi que les stratégies prédéfinies AlwaysOn.  
   
- Une stratégie définie par l'utilisateur peut utiliser les facettes PBM disponibles, notamment celles utilisées par les stratégies prédéfinies AlwaysOn (consultez [Stratégies prédéfinies et problèmes rencontrés](#AlwaysOnPBM), précédemment dans cette rubrique). La facette serveur fournit les propriétés suivantes pour la surveillance [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] santé : (`IsHadrEnabled` et `HadrManagerStatus`). La facette serveur fournit également les propriétés des stratégies suivantes pour la surveillance de la configuration du cluster WSFC : `ClusterQuorumType` et `ClusterQuorumState`.  
+ Une stratégie définie par l'utilisateur peut utiliser les facettes PBM disponibles, notamment celles utilisées par les stratégies prédéfinies AlwaysOn (consultez [Stratégies prédéfinies et problèmes rencontrés](#AlwaysOnPBM), précédemment dans cette rubrique). La facette serveur fournit les propriétés suivantes pour la surveillance de l'intégrité [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] :  (`IsHadrEnabled` et `HadrManagerStatus`). La facette serveur fournit également les propriétés des stratégies suivantes pour la surveillance de la configuration du cluster WSFC : `ClusterQuorumType` et `ClusterQuorumState`.  
   
- Pour plus d'informations, consultez [Modèle d'intégrité AlwaysOn Partie 2 - Extension du modèle d'intégrité](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx) (blog de l'équipe de SQL Server AlwaysOn).  
+ Pour plus d'informations, consultez [Modèle d'intégrité AlwaysOn Partie 2 - Extension du modèle d'intégrité](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx) (blog de l'équipe de SQL Server AlwaysOn).  
   
 ##  <a name="RelatedTasks"></a> Tâches associées  
   
@@ -104,11 +104,11 @@ ms.locfileid: "48104170"
   
 ##  <a name="RelatedContent"></a> Contenu associé  
   
--   [La modèle d’intégrité AlwaysOn partie 1--Architecture du modèle d’intégrité](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)  
+-   [La modèle d’intégrité AlwaysOn partie 1--Architecture du modèle d’intégrité](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)  
   
--   [La modèle d’intégrité AlwaysOn partie 2--Extending the Health Model](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)  
+-   [La modèle d’intégrité AlwaysOn partie 2--Extending the Health Model](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)  
   
--   [Guide de Solutions Microsoft SQL Server AlwaysOn pour une haute disponibilité et récupération d’urgence](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Guide de Solutions Microsoft SQL Server AlwaysOn pour une haute disponibilité et récupération d’urgence](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Groupes de disponibilité AlwaysOn (SQL Server)](always-on-availability-groups-sql-server.md)   

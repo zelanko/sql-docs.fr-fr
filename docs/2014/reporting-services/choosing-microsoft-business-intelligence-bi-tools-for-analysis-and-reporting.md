@@ -1,51 +1,48 @@
 ---
-title: Choix des outils d’analyse et de rapports Microsoft | Microsoft Docs
-ms.custom: ''
-ms.date: 06/13/2017
-ms.prod: sql-server-2014
-ms.reviewer: ''
-ms.technology:
-- reporting-services-native
-ms.topic: conceptual
-ms.assetid: d0e16108-7123-4788-87b3-05db962dbc94
+title: Analyse et création de rapports avec les outils Microsoft business intelligence (BI)
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 63cbcd4defa3840fc7fdb5c80340e5fd1ea1244e
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+manager: kfile
+ms.reviewer: ''
+ms.prod: reporting-services-2014, sql-server-2014
+ms.prod_service: reporting-services-native, reporting-services-sharepoint
+ms.topic: conceptual
+ms.custom: seodec18
+ms.date: 12/14/2018
+ms.openlocfilehash: 519aa33d615c244289fdf53d6cea6684a8a04dce
+ms.sourcegitcommit: 2f5773f4bc02bfff4f2924226ac5651eb0c00924
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099820"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53553141"
 ---
-# <a name="choosing-microsoft-reporting-and-analysis-tools"></a>Choix des outils d'analyse et de rapports Microsoft
+# <a name="analysis-and-reporting-with-microsoft-business-intelligence-bi-tools"></a>Analyse et création de rapports avec les outils Microsoft business intelligence (BI)
+
   Le tableau suivant mappe les charges de travail pour l'analyse et la création de rapports de données aux outils Microsoft BI qui sont le mieux adaptés à ces charges de travail.  
   
  L'objectif est de vous aider à choisir l'outil qui correspond le mieux à vos besoins. Pour plus d'informations sur un produit, cliquez sur le lien correspondant dans la table.  
   
- Pour une vue d’ensemble de ces outils et pour déterminer quels outils sont le mieux adaptés à votre cas, consultez [Introducing Microsoft Business Intelligence (BI) Tools](http://msdn.microsoft.com/library/dn655131.aspx).  
+ Pour obtenir une brève présentation de ces outils et choisir ceux qui vous conviennent le mieux, consultez [Introducing Microsoft Business Intelligence (BI) Tools](https://msdn.microsoft.com/library/dn655131.aspx).  
   
 |Charges de travail|Utilisateur|||Outils BI|||  
 |---------------|----------|-|-|--------------|-|-|  
-|||Excel|**SharePoint**|**SharePoint Online**|**Power BI pour Office 365**|**SQL Server**|  
+|||**Excel**|**SharePoint**|**SharePoint Online**|**Power BI**|**SQL Server**|  
 |**BI en libre-service**|Analyste/Utilisateur final||||||  
-|Découvrir facilement et accéder à des données publiques et d'entreprise||[Power Query](http://go.microsoft.com/fwlink/p/?LinkId=391845)|||[Data Catalog](http://go.microsoft.com/fwlink/p/?LinkId=391855)<br /><br /> [Centre d’administration](http://go.microsoft.com/fwlink/p/?LinkId=391856)||  
-|Créer des modèles de données puissants||[Power Pivot](http://go.microsoft.com/fwlink/p/?LinkId=391846)|||||  
-|Effectuer des analyses prédictives en libre-service||||||[Données des compléments d’exploration de données pour Excel](http://msdn.microsoft.com/library/dn282385\(v=sql.120\).aspx)|  
-|Visualiser et explorer les données||[Power View](http://go.microsoft.com/fwlink/p/?LinkId=391847)<br /><br /> [Power Map](http://go.microsoft.com/fwlink/p/?LinkId=391848)|||||  
-|Poser des questions à l'aide d'un requête en langage naturel|||||[Q & R](http://go.microsoft.com/fwlink/p/?LinkId=391857)||  
-|Accéder à des rapports avec des appareils mobiles||||[HTML 5 (prend en charge l’affichage de fichiers dont la taille est inférieure à 10 Mo)](http://go.microsoft.com/fwlink/p/?LinkId=391853)|[HTML 5 (prend en charge l’affichage < 250 Mo)](http://go.microsoft.com/fwlink/p/?LinkId=391854)<br /><br /> [Power BI pour application de Windows](https://support.office.com/article/Power-BI-for-Windows-app-6e4145b4-e882-4134-a89c-66e54cc5c8eb?ui=en-US&rs=en-US&ad=US)<br /><br /> [application iPad pour Power BI](http://support.powerbi.com/knowledgebase/articles/467172-get-started-with-the-ipad-app-for-power-bi-preview)||  
-|Collaborer et partager|||[Sites SharePoint](http://go.microsoft.com/fwlink/p/?LinkId=391849)|[Sites de l'équipe SharePoint](http://go.microsoft.com/fwlink/p/?LinkId=391850)|[Sites Power BI](http://go.microsoft.com/fwlink/p/?LinkId=391852)||  
+|Découvrir facilement et accéder à des données publiques et d'entreprise||[Power Query](https://go.microsoft.com/fwlink/p/?LinkId=391845)||[Azure Data Catalog](https://azure.microsoft.com/services/data-catalog/)<br /><br />||  
+|Créer des modèles de données puissants||[Power Pivot](https://support.office.com/article/power-pivot-overview-and-learning-f9001958-7901-4caa-ad80-028a6d2432ed?ui=en-US&rs=en-US&ad=US)|||[Power BI Desktop](https://powerbi.microsoft.com/documentation/powerbi-desktop-get-the-desktop/)||  
+|Effectuer des analyses prédictives en libre-service||||||[Données des compléments d’exploration de données pour Excel](../analysis-services/data-mining-client-for-excel-sql-server-data-mining-add-ins.md)|  
+|Visualiser et explorer les données||[Power View](https://go.microsoft.com/fwlink/p/?LinkId=391847)<br /><br /> [Power Map](https://go.microsoft.com/fwlink/p/?LinkId=391848)|||||  
+|Poser des questions à l'aide d'un requête en langage naturel|||||[Q & R](https://docs.microsoft.com/power-bi/consumer/end-user-q-and-a)||  
+|Accéder à des rapports avec des appareils mobiles||||[HTML 5 (prend en charge l’affichage < fichiers 10 Mo)](https://go.microsoft.com/fwlink/p/?LinkId=391853)|[HTML 5 (prend en charge l’affichage < 250 Mo)](https://go.microsoft.com/fwlink/p/?LinkId=391854)<br /><br /> [Application mobile Power BI sur les appareils iOS](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-iphone-app-get-started)<br /><br /> [Application mobile Power BI sur les appareils Android](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-android-app-get-started) <br /><br />[Application mobile Power BI pour Windows 10](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-windows-10-phone-app-get-started)||  
+|Collaborer et partager|||[Sites SharePoint](https://go.microsoft.com/fwlink/p/?LinkId=391849)|[Sites de l'équipe SharePoint](https://go.microsoft.com/fwlink/p/?LinkId=391850)|[Sites Power BI](https://docs.microsoft.com/power-bi/service-how-to-collaborate-distribute-dashboards-reports)||  
 |**BI d'entreprise**|Professionnel de l'informatique||||||  
 |Créer des modèles d'entreprise multidimensionnels/tabulaires||||||[Analysis Services](../analysis-services/analysis-services.md)|  
-|Créer des visualisations de données ad-hoc|||[Power View pour SharePoint](http://go.microsoft.com/fwlink/p/?LinkId=391858)||||  
-|Créer des tableaux de bord|||[Tableaux de bord SharePoint](http://go.microsoft.com/fwlink/p/?LinkId=391859)<br /><br /> [Services PerformancePoint](http://technet.microsoft.com/library/ee424392.aspx)||||  
+|Créer des visualisations de données ad-hoc|||[Power View pour SharePoint](https://go.microsoft.com/fwlink/p/?LinkId=391858)||||  
+|Créer des tableaux de bord|||[Tableaux de bord SharePoint](https://go.microsoft.com/fwlink/p/?LinkId=391859)<br /><br /> [Services PerformancePoint](https://technet.microsoft.com/library/ee424392.aspx)||||  
 |Créer des rapports opérationnels||||||<sup>1</sup> [reporting Services](create-deploy-and-manage-mobile-and-paginated-reports.md)|  
 |Créer des rapports personnalisés et incorporés||||||<sup>1</sup> [reporting Services](create-deploy-and-manage-mobile-and-paginated-reports.md)|  
 |**Analyse avancée**|Données scientifiques||||||  
-|Effectuer des analyses prédictives en libre-service||||||[Données des compléments d’exploration de données pour Excel](http://msdn.microsoft.com/library/dn282385\(v=sql.120\).aspx)|  
-|Utiliser des algorithmes d'exploration de données||||||[Exploration de données dans Analysis Services](http://technet.microsoft.com/library/bb510516\(v=sql.120\).aspx)|  
+|Effectuer des analyses prédictives en libre-service||||||[Données des compléments d’exploration de données pour Excel](https://msdn.microsoft.com/library/dn282385\(v=sql.120\).aspx)|  
+|Utiliser des algorithmes d'exploration de données||||||[Exploration de données dans Analysis Services](https://technet.microsoft.com/library/bb510516\(v=sql.120\).aspx)|  
   
- <sup>1</sup> reporting Services présente un certain nombre de fonctionnalités qui prennent en charge la remise des rapports opérationnels et des rapports personnalisés, tels que les abonnements et les données des alertes.  
-  
-  
+ <sup>1</sup> reporting Services présente un certain nombre de fonctionnalités qui prennent en charge la remise des rapports opérationnels et des rapports personnalisés, tels que les abonnements et les données des alertes.

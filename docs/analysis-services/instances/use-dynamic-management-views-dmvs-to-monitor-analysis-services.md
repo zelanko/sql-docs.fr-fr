@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: d59601d0706b65186ed5f260128c3c44a134d60e
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 24dd1bce8d7433f55ba64eecb1e7a08396b9e548
+ms.sourcegitcommit: 38076f423663bdbb42f325e3d0624264e05beda1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906399"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "52984100"
 ---
 # <a name="dynamic-management-views-dmvs"></a>Vues de gestion dynamique 
 
@@ -93,15 +93,15 @@ WHERE TABLE_TYPE = 'SCHEMA'
 ORDER BY TABLE_NAME ASC  
 ```  
   
-Si une vue DMV n’est pas disponible pour un ensemble de lignes donné, le serveur retourne erreur : `The <schemarowset> request type was not recognized by the server.` toutes les autres erreurs indiquent des problèmes avec la syntaxe.  
+Si une vue DMV n’est pas disponible pour un ensemble de lignes donné, le serveur renvoie des erreurs : `The <schemarowset> request type was not recognized by the server.` Toutes les autres erreurs indiquent des problèmes avec la syntaxe.  
 
 Ensembles de lignes de schéma sont décrites dans les deux protocoles de SQL Server Analysis Services :   
 
-[[MS-SSAS-T] : protocole tabulaire de SQL Server Analysis Services](https://msdn.microsoft.com/library/mt719260) -décrit les ensembles de lignes de schéma pour les modèles tabulaires aux niveaux de compatibilité 1200 et supérieur.
+[[MS-SSAS-T] : SQL Server Analysis Services tabulaire protocole](https://msdn.microsoft.com/library/mt719260) -décrit les ensembles de lignes de schéma pour les modèles tabulaires aux niveaux de compatibilité 1200 et supérieur.
 
 [[MS-SSAS] : SQL Server Analysis Services protocole](https://msdn.microsoft.com/library/ee320606) -décrit les ensembles de lignes de schéma pour les modèles multidimensionnels et les modèles tabulaires aux niveaux de compatibilité 1100 et 1103.
 
-### <a name="rowsets-described-in-the-ms-ssas-t-sql-server-analysis-services-tabular-protocol"></a>Ensembles de lignes décrites dans le [MS-SSAS-T] : protocole tabulaire de SQL Server Analysis Services
+### <a name="rowsets-described-in-the-ms-ssas-t-sql-server-analysis-services-tabular-protocol"></a>Ensembles de lignes décrites dans le [MS-SSAS-T] : SQL Server Analysis Services tabulaire protocole
 
 |Ensemble de lignes  |Description  |
 |---------|---------|
@@ -134,7 +134,7 @@ Ensembles de lignes de schéma sont décrites dans les deux protocoles de SQL Se
 |[TMSCHEMA_TABLES](https://msdn.microsoft.com/library/mt719250)     |   Fournit des informations sur les objets de Table dans le modèle.      |
 |[TMSCHEMA_VARIATIONS](https://msdn.microsoft.com/library/mt825008)|Fournit des informations sur les objets Variation dans chaque colonne.|
 
-### <a name="rowsets-described-in-the-ms-ssas-sql-server-analysis-services-protocol"></a>Ensembles de lignes décrit dans [MS-SSAS] : protocole de SQL Server Analysis Services
+### <a name="rowsets-described-in-the-ms-ssas-sql-server-analysis-services-protocol"></a>Ensembles de lignes décrit dans [MS-SSAS] : Protocole SQL Server Analysis Services
 
 |Ensemble de lignes|Description|  
 |------------|-----------------|  
@@ -172,7 +172,7 @@ Ensembles de lignes de schéma sont décrites dans les deux protocoles de SQL Se
 |[DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS](https://msdn.microsoft.com/library/ee320710)|Retourne des informations sur les segments de colonne utilisé pour stocker des données pour les tables en mémoire.|  
 |[DISCOVER_STORAGE_TABLE_COLUMNS](https://msdn.microsoft.com/library/ee302101)|Contient des informations sur les colonnes utilisées pour représenter les colonnes d’une table en mémoire.|  
 |[DISCOVER_STORAGE_TABLES](https://msdn.microsoft.com/library/ee302014)|Retourne des statistiques sur les tables en mémoire disponibles sur le serveur.|  
-|[DISCOVER_TRACE_COLUMNS]()||  
+|[DISCOVER_TRACE_COLUMNS](https://msdn.microsoft.com/library/ee301342)||  
 |[DISCOVER_TRACE_DEFINITION_PROVIDERINFO](https://msdn.microsoft.com/library/ee301342)|Contient l’ensemble de lignes de schéma DISCOVER_TRACE_COLUMNS.|  
 |[DISCOVER_TRACE_EVENT_CATEGORIES](https://msdn.microsoft.com/library/ee320442)|Contient l’ensemble de lignes de schéma DISCOVER_TRACE_EVENT_CATEGORIES.|  
 |[DISCOVER_TRACES](https://msdn.microsoft.com/library/ee301643)|Contient l’ensemble de lignes du schéma DISCOVER_TRACES.|  

@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f7362e216213bc27efab0fd49f3ded2f15c37bdb
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: d459bafe395a10af75f8c0a721f0a8a08f39b3c6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38050787"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509684"
 ---
 # <a name="running-the-analysis-services-deployment-wizard"></a>Exécution de l'Assistant Déploiement d'Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "38050787"
 -   **À partir de l’invite de commandes** lorsque vous exécutez l’invite de commandes, le [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Assistant de déploiement génère un script de déploiement basé sur les commutateurs que vous utilisez pour exécuter l’Assistant. L'Assistant peut effectuer les opérations suivantes : vous demander une entrée utilisateur et modifier les fichiers d'entrée en fonction de cette entrée, exécuter un déploiement automatisé en mode silencieux en utilisant les fichiers d'entrée tels quels, ou créer un script de déploiement que vous pouvez utiliser ultérieurement.  
   
 ## <a name="running-the-analysis-services-deployment-wizard-interactively"></a>Exécution de l'Assistant Déploiement d'Analysis Services de manière interactive  
- Lorsque vous exécutez l'Assistant Déploiement [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de manière interactive, il lit les valeurs des fichiers d'entrée et affiche ces informations. Vous pouvez modifier ces valeurs d'entrée, telle que la destination du déploiement, les paramètres de configuration, les options de déploiement et les mots de passe des chaînes de connexion, ou les laisser telles quelles. Si vous modifiez les valeurs d’entrée, l’Assistant utilise ces modifications lors de la génération du script de déploiement. Toutefois, il ne modifie pas les valeurs du fichier d'entrée.  
+ Lorsque vous exécutez l'Assistant Déploiement [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de manière interactive, il lit les valeurs des fichiers d'entrée et affiche ces informations. Vous pouvez modifier ces valeurs, notamment d’entrée en tant que destination du déploiement, les paramètres de configuration, les options de déploiement et les mots de passe de connexion chaîne- ou les laisser en l’état. Si vous modifiez les valeurs d’entrée, l’Assistant utilise ces modifications lors de la génération du script de déploiement. Toutefois, il ne modifie pas les valeurs du fichier d'entrée.  
   
 > [!NOTE]  
 >  Pour que l'Assistant Déploiement [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] modifie les valeurs d'entrée, exécutez-le à partir de l'invite de commandes et configurez-le pour fonctionner en mode de fichier de réponses.  
@@ -37,7 +37,7 @@ ms.locfileid: "38050787"
   
 -   Cliquez sur **Démarrer** > **Microsoft SQL Server** > **Assistant déploiement**.  
   
-     —ou—  
+     -ou-  
   
 -   Dans le **projets** dossier de la [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de projet, double-cliquez sur le \<nom_projet > fichier .asdatabase.
     > [!NOTE]  
@@ -73,6 +73,6 @@ ms.locfileid: "38050787"
   
 ## <a name="see-also"></a>Voir aussi  
  [Description du script de déploiement Analysis Services](../../analysis-services/multidimensional-models/understanding-the-analysis-services-deployment-script.md)   
- [Déployer des solutions de modèle à l’aide de l’Assistant Déploiement](../../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md)  
+ [Deploy Model Solutions Using the Deployment Wizard](../../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md)  
   
   

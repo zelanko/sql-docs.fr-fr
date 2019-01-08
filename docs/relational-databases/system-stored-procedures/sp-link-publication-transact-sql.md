@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_link_publication_TSQL
@@ -17,22 +16,22 @@ ms.assetid: 1945ed24-f9f1-4af6-94ca-16d8e864706e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bd0e41f54792978dd2adf8186d88dd4f07c1fa9c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c713b4efcfd37c245f340769a4725b0792d7528b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47683087"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210051"
 ---
 # <a name="splinkpublication-transact-sql"></a>sp_link_publication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Définit les informations de configuration et de sécurité utilisées par les déclencheurs de synchronisation des abonnements avec mise à jour immédiate lors de la connexion au serveur de publication. Cette procédure stockée est exécutée sur la base de données d'abonnement de l'Abonné.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  Lors de la configuration d'un serveur de publication avec un serveur de distribution distant, les valeurs fournies pour tous les paramètres, y compris *job_login* et *job_password*, sont envoyées en texte brut au serveur de distribution. Vous devez chiffrer la connexion entre le serveur de publication et son serveur de distribution distant avant d'exécuter cette procédure stockée. Pour plus d’informations, consultez [Activer des connexions chiffrées dans le moteur de base de données &#40;Gestionnaire de configuration SQL Server&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
-  
-> [!IMPORTANT]  
+> 
+> [!IMPORTANT]
 >  Sous certaines conditions, cette procédure stockée peut échouer si l’abonné est en cours d’exécution [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 1 ou version ultérieure et le serveur de publication exécute une version antérieure. Si la procédure stockée échoue dans ce scénario, mettez à niveau l'Éditeur vers [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 1 ou version ultérieure.  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -63,10 +62,10 @@ sp_link_publication [ @publisher = ] 'publisher'
  [ **@security_mode**=] *security_mode*  
  Mode de sécurité utilisé par l'Abonné pour se connecter à un serveur de publication distant pour la mise à jour immédiate. *security_mode* est **int**, et peut prendre l’une des valeurs suivantes. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
-|**0**|Utilise [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’authentification avec la connexion spécifiée dans cette procédure stockée en tant que *connexion* et *mot de passe*.<br /><br /> Remarque : dans les versions précédentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cette option a été utilisée pour spécifier un appel de procédure distante dynamique (RPC).|  
-|**1**|Utilise le contexte de sécurité (authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou Windows) de l'utilisateur apportant la modification sur l'Abonné.<br /><br /> Remarque : Ce compte doit également exister sur le serveur de publication avec des privilèges suffisants. Lorsque vous utilisez l'authentification Windows, la délégation de compte de sécurité doit être prise en charge.|  
+|**0**|Utilise [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’authentification avec la connexion spécifiée dans cette procédure stockée en tant que *connexion* et *mot de passe*.<br /><br /> Remarque : Dans les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cette option était utilisée pour spécifier un appel de procédure distante dynamique (RPC).|  
+|**1**|Utilise le contexte de sécurité (authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou Windows) de l'utilisateur apportant la modification sur l'Abonné.<br /><br /> Remarque : Ce compte doit également exister sur le serveur de publication et bénéficier de privilèges suffisants. Lorsque vous utilisez l'authentification Windows, la délégation de compte de sécurité doit être prise en charge.|  
 |**2**|Utilise une connexion de serveur lié existante, définie par l’utilisateur créée à l’aide **sp_link_publication**.|  
   
  [ **@login**=] **'***connexion***'**  
@@ -93,7 +92,7 @@ sp_link_publication [ @publisher = ] 'publisher'
 ## <a name="example"></a>Exemple  
  [!code-sql[HowTo#sp_addtranpullsubscriptionagent_failover](../../relational-databases/replication/codesnippet/tsql/sp-link-publication-tran_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Seuls les membres de la **sysadmin** du rôle serveur fixe peuvent exécuter **sp_link_publication**.  
   
 ## <a name="see-also"></a>Voir aussi  

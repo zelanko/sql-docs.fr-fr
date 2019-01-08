@@ -14,12 +14,12 @@ ms.assetid: 9184d344-e96d-4025-ad6f-3f75129746df
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d71677c8fa1908a4fba50f95769802061a0b0da2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 93e3ca09b1d1d20be103db8bbd92aa15e3a1ba5a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187909"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360431"
 ---
 # <a name="define-attribute-relationships"></a>Définir des relations d'attributs
   Dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], les attributs constituent le bloc de construction autour duquel s’articule une dimension. Une dimension contient un ensemble d'attributs organisés en fonction des relations d'attributs.  
@@ -35,12 +35,12 @@ ms.locfileid: "48187909"
 -   Permet la sélection d'agrégats plus efficaces par les algorithmes de conception d'agrégation, à condition que les hiérarchies définies par l'utilisateur aient été définies avec les chemins d'accès de relation.  
   
     > [!NOTE]  
-    >  Pour plus d’informations sur l’importance et les implications de la définition et de la configuration des relations d’attributs, consultez la section relative à l’optimisation des performances des requêtes dans le [Guide des performances SQL Server 2005 Analysis Services](http://go.microsoft.com/fwlink/?LinkId=81621).  
+    >  Pour plus d’informations sur l’importance et les implications en matière de définition et la configuration des relations d’attributs, consultez la section « Optimisation des performances des requêtes », dans le [Guide des performances SQL Server 2005 Analysis Services](https://go.microsoft.com/fwlink/?LinkId=81621).  
   
 ## <a name="attribute-relationship-considerations"></a>Considérations sur les relations d'attributs  
  Lorsque les données sous-jacentes le prennent en charge, il est également conseillé de définir des relations d'attributs uniques entre les attributs. Pour définir des relations d’attributs uniques, utilisez l’onglet **Relations d’attributs** du Concepteur de dimensions.  
   
- Tout attribut qui a une relation sortante doit avoir une clé unique relative à son attribut associé. En d'autres termes, un membre dans un attribut source ne doit identifier qu'un seul membre dans un attribut associé. Considérons par exemple la relation Ville ->Département. Dans cette relation, l'attribut source est Ville et l'attribut associé est Département. L'attribut source représente le côté « plusieurs » et l'attribut associé désigne le côté « un » de la relation plusieurs-à-un. La clé pour l'attribut source serait Ville + Département. Pour plus d’informations, consultez [Créer, modifier ou supprimer une relation d’attribut](attribute-relationships-create-modify-or-delete-relationship.md).  
+ Tout attribut qui a une relation sortante doit avoir une clé unique relative à son attribut associé. En d'autres termes, un membre dans un attribut source ne doit identifier qu'un seul membre dans un attribut associé. Considérons par exemple la relation Ville ->Département. Dans cette relation, l'attribut source est Ville et l'attribut associé est Département. L’attribut source est le côté « plusieurs » et le côté connexe est le côté « un » de la relation plusieurs-à-un. La clé pour l'attribut source serait Ville + Département. Pour plus d’informations, consultez [Créer, modifier ou supprimer une relation d’attribut](attribute-relationships-create-modify-or-delete-relationship.md).  
   
  Pour plus d’informations sur les propriétés d’une relation d’attribut, consultez [Configurer des propriétés de relations d’attributs](attribute-relationships-configure-attribute-properties.md).  
   

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 749afb64-3567-4dc9-8431-783d650c25db
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4ef77f630142cf5b7202a30b928ac6e049584071
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 63f87a7d2897f069f4447437dd3a837d92af18f3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159975"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374746"
 ---
 # <a name="sap-bw-source"></a>Source SAP BW
   La source SAP BW est le composant source de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 pour SAP BW. Ainsi, la source SAP BW extrait des données d'un système SAP Netweaver BW version 7 et met ces données à la disposition du flux de données dans un package [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -41,7 +40,7 @@ ms.locfileid: "48159975"
  La source SAP BW nécessite la présence de certains objets dans le système SAP Netweaver BW pour que la source puisse fonctionner. Si ces objets n'existent pas, vous devez suivre ces étapes pour les créer et les configurer dans le système SAP Netweaver BW.  
   
 > [!NOTE]  
->  Pour plus d'informations sur ces objets et ces étapes de configuration, consultez la documentation de SAP Netweaver BW.  
+>  Pour plus d'informations sur ces objets et ces étapes de configuration, consultez la documentation de SAP Netweaver BW.  
   
 1.  Connectez-vous à SAP Netweaver BW via l'interface GUI SAP, entrez le code de transaction SM59, puis créez une destination RFC :  
   
@@ -107,7 +106,7 @@ ms.locfileid: "48159975"
   
     -   Pour l’option **E - Extraire uniquement** , fournissez l’ID de demande.  
   
--   Spécifiez les règles pour la conversion de chaînes. (Par exemple, convertissez toutes les chaînes selon que le système SAP Netweaver BW est Unicode ou non, ou convertir les chaînes en `varchar` ou `nvarchar`).  
+-   Spécifiez les règles pour la conversion de chaînes. (Par exemple, convertissez toutes les chaînes, selon que le système SAP Netweaver BW est Unicode ou non, ou convertissez toutes les chaînes en `varchar` ou `nvarchar`).  
   
 -   Utilisez les options que vous avez sélectionnées pour afficher un aperçu des données à extraire.  
   
@@ -115,18 +114,18 @@ ms.locfileid: "48159975"
   
  Si vous ne connaissez pas toutes les valeurs requises pour configurer la source, adressez-vous à votre administrateur SAP.  
   
- Pour obtenir la procédure pas à pas qui montre comment configurer et utiliser le gestionnaire de connexions, la source et la destination SAP BW, consultez le livre blanc [Utilisation de SQL Server 2008 Integration Services avec SAP BI 7.0](http://go.microsoft.com/fwlink/?LinkID=137090). Ce livre blanc explique également comment configurer les objets nécessaires dans SAP BW.  
+ Pour obtenir la procédure pas à pas qui montre comment configurer et utiliser le gestionnaire de connexions, la source et la destination SAP BW, consultez le livre blanc [Utilisation de SQL Server 2008 Integration Services avec SAP BI 7.0](https://go.microsoft.com/fwlink/?LinkID=137090). Ce livre blanc explique également comment configurer les objets nécessaires dans SAP BW.  
   
 ### <a name="using-the-ssis-designer-to-configure-the-source"></a>Utilisation du concepteur SSIS pour configurer la source  
  Pour plus d'informations sur les propriétés de la source SAP BW que vous pouvez définir dans le Concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , cliquez sur l'une des rubriques suivantes :  
   
--   [Éditeur de Source SAP BW &#40;Page Gestionnaire de connexions&#41;](sap-bw-source-editor-connection-manager-page.md)  
+-   [Éditeur de source SAP BW &#40;page Gestionnaire de connexions&#41;](sap-bw-source-editor-connection-manager-page.md)  
   
--   [Éditeur de Source SAP BW &#40;Page colonnes&#41;](sap-bw-source-editor-columns-page.md)  
+-   [Éditeur de source SAP BW &#40;page Colonnes&#41;](sap-bw-source-editor-columns-page.md)  
   
--   [Éditeur de Source SAP BW &#40;Page sortie d’erreur&#41;](sap-bw-source-editor-error-output-page.md)  
+-   [Éditeur de source SAP BW &#40;page Sortie d’erreur&#41;](sap-bw-source-editor-error-output-page.md)  
   
--   [Éditeur de Source SAP BW &#40;Page avancé&#41;](sap-bw-source-editor-advanced-page.md)  
+-   [Éditeur de source SAP BW &#40;page Avancé&#41;](sap-bw-source-editor-advanced-page.md)  
   
  Pendant que vous configurez la source SAP BW, vous pouvez également utiliser différentes boîtes de dialogue pour rechercher des objets SAP Netweaver BW ou pour afficher un aperçu des données sources. Pour plus d'informations sur ces boîtes de dialogue, cliquez sur l'une des rubriques suivantes :  
   

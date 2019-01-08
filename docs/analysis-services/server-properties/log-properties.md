@@ -1,4 +1,5 @@
 ---
+title: Propriétés du journal Analysis Services | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 4e76f53329280caa589b2e45c19a967dc7c4e7dc
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: db79a57c3e63cf09f36cd1b9af2d529811b67ea0
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37999341"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53071926"
 ---
 # <a name="log-properties"></a>Propriétés du journal
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -131,7 +132,7 @@ ms.locfileid: "37999341"
  La valeur par défaut de cette propriété est vide, ce qui correspond au nom de fichier par défaut FlightRecorderTraceDef.txt.  
   
 ## <a name="query-log"></a>Journal des requêtes  
- **S'applique à :** Mode serveur multidimensionnel uniquement  
+ **S’applique à :** Mode serveur multidimensionnel uniquement  
   
  **QueryLog\QueryLogFileName**  
  Propriété de type chaîne qui spécifie le nom du fichier journal des requêtes. Cette propriété s'applique uniquement si vous utilisez un fichier sur disque pour l'enregistrement, au lieu d'une table de base de données (comportement par défaut).  
@@ -156,9 +157,6 @@ ms.locfileid: "37999341"
  Propriété booléenne qui spécifie si la table du journal des requêtes doit être créée.  
   
  La valeur par défaut de cette propriété, False, indique que ne serveur ne crée pas automatiquement la table du journal et n'enregistre pas d'événements de requête.  
-  
-> [!NOTE]  
->  Pour plus d’informations sur la configuration du journal des requêtes, consultez [Configuration du journal des requêtes Analysis Services](http://go.microsoft.com/fwlink/?LinkId=81890).  
   
 ## <a name="trace"></a>Trace  
  **Trace\TraceBackgroundDistributionPeriod**  

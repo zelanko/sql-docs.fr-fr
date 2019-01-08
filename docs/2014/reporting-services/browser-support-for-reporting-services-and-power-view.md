@@ -20,17 +20,17 @@ ms.assetid: 48a75bbb-0029-4c43-891d-dc8f4fc0ebe1
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 975c396eb3c0bfa7414e3af4249338d2790754b4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c1f1b4d74d7ad7f34254a5c56c6dafc5fd2fb829
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157039"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350491"
 ---
 # <a name="planning-for-reporting-services-and-power-view-browser-support-reporting-services-2014"></a>Planification de la prise en charge des navigateurs pour Reporting Services et Power View (Reporting Services 2014)
-  Dans [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], vous utilisez un navigateur web pour afficher des rapports et exécuter le Gestionnaire de rapports. Certains navigateurs ne prennent pas en charge toutes les fonctionnalités de rapport. Cette rubrique décrit la prise en charge et la configuration requise pour les fonctionnalités de gestion du Gestionnaire de rapports, l'affichage de rapports, les contrôles de la visionneuse de rapports dans Visual Studio. Elle résume également la disponibilité des fonctionnalités pour les navigateurs pris en charge, les conditions requises pour l'authentification et les conditions requises pour les scripts.  
+  Dans [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)][!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], vous utilisez un navigateur Web pour afficher les rapports et exécuter le Gestionnaire de rapports. Certains navigateurs ne prennent pas en charge toutes les fonctionnalités de rapport. Cette rubrique décrit la prise en charge et la configuration requise pour les fonctionnalités de gestion du Gestionnaire de rapports, l'affichage de rapports, les contrôles de la visionneuse de rapports dans Visual Studio. Elle résume également la disponibilité des fonctionnalités pour les navigateurs pris en charge, les conditions requises pour l'authentification et les conditions requises pour les scripts.  
   
- **[!INCLUDE[applies](../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] en mode SharePoint | [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] en mode natif  
+ **[!INCLUDE[applies](../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] en mode SharePoint | [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] en mode natif  
   
  **Dans cette rubrique :**  
   
@@ -45,23 +45,23 @@ ms.locfileid: "48157039"
 -   [Prise en charge du navigateur pour les contrôles de serveur Web ReportViewer dans Visual Studio](#bkmk_controls)  
   
 ##  <a name="bkmk_powerview"></a> Scénarios de navigateur Power View  
- La liste des navigateurs pris en charge et les versions de navigateur qui [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] prend en charge, varie selon le type de document est ouvert. Les classeurs Excel 2013 et les fichiers «**.rdlx**» utilisent des composants différents.  
+ La liste des navigateurs pris en charge et des versions de navigateur que [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] prend en charge dépend du type de document ouvert. Les classeurs Excel 2013 et «**.rdlx**« fichiers utilisent des composants différents.  
   
 |Type de document|Environnement|Prise en charge des navigateurs|  
 |-------------------|-----------------|---------------------|  
-|Rapport Power View (.RDLX)|**SharePoint Server :** [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] sur [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint mode intégré et l’application web Power View.|Consultez [Power View sur SharePoint Server et Reporting Services en mode intégré SharePoint](#bkmk_powerview_on_SSRS).|  
-|Classeur Excel 2013 avec des feuilles Power View|**SharePoint Server :** [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] dans Excel Services.<br /><br /> **SharePoint Online (Office 365) :** [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] sur Excel Web App.|Consultez [Power View dans Excel Services ou Excel Web App dans SharePoint Online](#bkmk_powerview_on_ExcelServices).|  
+|Rapport Power View (.RDLX)|**SharePoint Server :** [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] en mode intégré SharePoint pour [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] et l'application Web Power View.|Consultez [Power View sur SharePoint Server et Reporting Services en mode intégré SharePoint](#bkmk_powerview_on_SSRS).|  
+|Classeur Excel 2013 avec des feuilles Power View|**SharePoint Server :** [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] dans Excel Services.<br /><br /> **SharePoint Online (Office 365) :** [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] sur Excel Web App.|Consultez [Power View dans Excel Services ou Excel Web App dans SharePoint Online](#bkmk_powerview_on_ExcelServices).|  
   
 ###  <a name="bkmk_powerview_on_SSRS"></a> Power View sur SharePoint Server et Reporting Services SharePoint en Mode intégré  
  Le tableau suivant récapitule les versions de navigateur prises en charge pour [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] lorsqu'un utilisateur ouvre un rapport Power View (.RDLX) sur une batterie de serveurs SharePoint qui possède une application de service [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] et le complément [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] pour SharePoint installé et configuré.  
   
 -   La table s'applique à SharePoint 2010 et SharePoint 2013.  
   
--   Pour plus d’informations sur la prise en charge des navigateurs SharePoint 2013, consultez [planifier la prise en charge des navigateurs dans SharePoint 2013](http://technet.microsoft.com//library/cc263526\(office.15\).aspx) (http://technet.microsoft.com/library/cc263526(office.15).aspx).  
+-   Pour plus d’informations sur la prise en charge des navigateurs SharePoint 2013, consultez [planifier la prise en charge des navigateurs dans SharePoint 2013](https://technet.microsoft.com//library/cc263526\(office.15\).aspx) (https://technet.microsoft.com/library/cc263526(office.15).aspx).  
   
--   Pour plus d’informations sur la prise en charge des navigateurs SharePoint 2010, consultez [planifier la prise en charge des navigateurs (SharePoint Server 2010)](http://technet.microsoft.com/library/cc263526\(office.14\).aspx) (http://technet.microsoft.com/library/cc263526(office.14).aspx).  
+-   Pour plus d’informations sur la prise en charge des navigateurs SharePoint 2010, consultez [planifier la prise en charge des navigateurs (SharePoint Server 2010)](https://technet.microsoft.com/library/cc263526\(office.14\).aspx) (https://technet.microsoft.com/library/cc263526(office.14).aspx).  
   
-|**Navigateur**|**Windows 8 et 8.1**|**Windows 7**|**Windows Server 2012 et 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10.6 – 10.9**|  
+|**Navigateur**|**Windows 8 et 8.1**|**Windows 7**|**Windows Server 2012 et 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10.6-10.9**|  
 |-----------------|---------------------------|-------------------|-----------------------------------------|--------------------------------|-----------------------------|------------------------------|  
 |**Internet Explorer 11 (pour le bureau)**|32 bits, 64 bits|32 bits, 64 bits|32 bits, 64 bits|32 bits, 64 bits|Non pris en charge|Non pris en charge|  
 |**Internet Explorer 10 (pour le bureau)**|32 bits, 64 bits|32 bits, 64 bits|32 bits, 64 bits|32 bits, 64 bits|Non pris en charge|Non pris en charge|  
@@ -77,11 +77,11 @@ ms.locfileid: "48157039"
  [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] ne prend pas en charge les fonctionnalités de navigation InPrivate dans [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer versions 8 et 9. Pour plus d'informations sur la navigation InPrivate, consultez [Qu'est-ce que la navigation InPrivate ?](http://windows.microsoft.com/Windows7/What-is-InPrivate-Browsing) (http://windows.microsoft.com/Windows7/What-is-InPrivate-Browsing).  
   
 ###  <a name="bkmk_powerview_on_ExcelServices"></a> Power View dans Excel Services ou Excel Web App dans SharePoint Online  
- Le tableau suivant récapitule les versions de navigateur pris en charge pour [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] lorsqu’un utilisateur ouvre un classeur Excel 2013 avec des feuilles Power View sur un serveur SharePoint qui exécute Excel Services :  
+ Le tableau suivant récapitule les versions prises en charge du navigateur pour [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] lorsqu'un utilisateur ouvre un classeur Excel 2013 avec des feuilles Power View sur un serveur SharePoint qui exécute Excel Services :  
   
--   Pour plus d’informations sur la prise en charge des navigateurs SharePoint 2013, consultez [planifier la prise en charge des navigateurs dans SharePoint 2013](http://technet.microsoft.com/library/cc263526\(office.15\).aspx) (http://technet.microsoft.com/library/cc263526(office.15).aspx).  
+-   Pour plus d’informations sur la prise en charge des navigateurs SharePoint 2013, consultez [planifier la prise en charge des navigateurs dans SharePoint 2013](https://technet.microsoft.com/library/cc263526\(office.15\).aspx) (https://technet.microsoft.com/library/cc263526(office.15).aspx).  
   
-|**Navigateur**|**Windows 8 et 8.1**|**Windows 7**|**Windows Server 2012 et 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10.6 – 10.9**|  
+|**Navigateur**|**Windows 8 et 8.1**|**Windows 7**|**Windows Server 2012 et 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10.6-10.9**|  
 |-----------------|---------------------------|-------------------|-----------------------------------------|--------------------------------|-----------------------------|------------------------------|  
 |**Internet Explorer 11 (pour le bureau)**|32 bits, 64 bits|32 bits, 64 bits|32 bits, 64 bits|32 bits, 64 bits|Non pris en charge|Non pris en charge|  
 |**Internet Explorer 10 (pour le bureau)**|32 bits, 64 bits|32 bits, 64 bits|32 bits, 64 bits|32 bits, 64 bits|Non pris en charge|Non pris en charge|  
@@ -94,19 +94,19 @@ ms.locfileid: "48157039"
  **(\*)** Chrome cessera de prise en charge de Netscape plug-in API (NPAPI), utilisée par Silverlight. Power View est dépendant de Silverlight.  Pour plus d'informations, consultez [The Final Countdown for NPAPI](http://blog.chromium.org/2014/11/the-final-countdown-for-npapi.html).  
   
 ##  <a name="bkmk_reportmanager"></a> Configuration requise du navigateur Report Manager (mode natif)  
- Voici la liste actuelle des navigateurs pris en charge, vous pouvez utiliser pour exécuter le [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Gestionnaire de rapports pour gérer les rapports et le serveur de rapports en mode natif.  
+ Voici la liste actuelle des navigateurs pris en charge pour exécuter le Gestionnaire de rapports de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] en mode natif et gérer les rapports et le serveur de rapports.  
   
 |Browser|  
 |-------------|  
 |Internet Explorer 7, ou version ultérieure, avec activation des scripts.|  
-|Mozilla Firefox (dernière version commercialisée)|  
+|Mozilla FireFox (dernière version commercialisée)|  
 |Apple Safari (dernière version commercialisée)|  
 |Google Chrome (dernière version commercialisée)|  
   
 ##  <a name="bkmk_reportviewer"></a> Configuration requise du navigateur pour afficher des rapports  
- Voici la liste actuelle des navigateurs et des fonctionnalités pris en charge avec la visionneuse de rapports. La visionneuse de rapports prend en charge l’affichage des rapports à partir de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] rapports manager et les bibliothèques SharePoint.  
+ Voici la liste actuelle des navigateurs et des fonctionnalités pris en charge avec la visionneuse de rapports. La visionneuse de rapports prend en charge les rapports du Gestionnaire de rapports [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] et des bibliothèques SharePoint.  
   
-|**Navigateur**|**Windows 8 et 8.1**|**Windows 7**|**Windows Server 2012 et 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10.6 – 10.9**|**iOS 6 -7 pour iPad**|  
+|**Navigateur**|**Windows 8 et 8.1**|**Windows 7**|**Windows Server 2012 et 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10.6-10.9**|**iOS 6 -7 pour iPad**|  
 |-----------------|---------------------------|-------------------|-----------------------------------------|--------------------------------|-----------------------------|------------------------------|----------------------------|  
 |**Internet Explorer 11 (pour le bureau)**|32 bits, 64 bits|32 bits, 64 bits|32 bits, 64 bits|Non pris en charge|Non pris en charge|Non pris en charge|Non pris en charge|  
 |**Internet Explorer 10 (pour le bureau)**|32 bits, 64 bits|32 bits, 64 bits|32 bits, 64 bits|Non pris en charge|Non pris en charge|Non pris en charge|Non pris en charge|  
@@ -117,7 +117,7 @@ ms.locfileid: "48157039"
 |**Apple Safari (dernière version commercialisée)**|Non pris en charge|Non pris en charge|Non pris en charge|Non pris en charge|Non pris en charge|32 bits, 64 bits|Prise en charge avec des fonctionnalités limitées <sup>(1)</sup>|  
 |**Google Chrome (dernière version commercialisée)**|32 bits|32 bits|32 bits|32 bits|32 bits|Non pris en charge|Non pris en charge|  
   
- **<sup>(1) </sup>**  Les fonctionnalités suivantes sont prises en charge :  
+ **<sup>(1)</sup>**  Les fonctionnalités suivantes sont prises en charge :  
   
 -   Exportez vers des fichiers au format PDF et TIFF.  
   
@@ -125,7 +125,7 @@ ms.locfileid: "48157039"
   
 -   Pour plus d’informations, consultez [vue rapports Reporting Services sur les appareils Microsoft Surface et Apple iOS](../../2014/reporting-services/view-reporting-services-reports-surface-ios-devices.md).  
   
- **Remarque** Si vous accédez à un serveur de rapports à partir d'un ordinateur Macintosh, nous vous recommandons d'utiliser Safari. Si vous utilisez un produit SharePoint intégré avec [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], consultez [planifier la prise en charge du navigateur (Windows SharePoint Services)](http://go.microsoft.com/fwlink/?LinkId=183583).  
+ **Remarque** Si vous accédez à un serveur de rapports à partir d'un ordinateur Macintosh, nous vous recommandons d'utiliser Safari. Si vous utilisez un produit SharePoint intégré à [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], consultez [Planifier la prise en charge des navigateurs (Windows SharePoint Services)](https://go.microsoft.com/fwlink/?LinkId=183583).  
   
 ### <a name="url-access-for-viewing-reports"></a>Accès URL pour afficher des rapports  
  Pour consulter des rapports directement, sans les afficher dans le Gestionnaire de rapports, vous pouvez utiliser l'accès URL pour associer le rapport et la visionneuse de rapports. L'accès URL prend en charge différents navigateurs.  
@@ -142,7 +142,7 @@ ms.locfileid: "48157039"
 |**Internet Explorer**|Negociate, Kerberos, NTLM, Basic|Negotiate|Oui. Les paramètres d'authentification par défaut fonctionnent avec Internet Explorer.|  
 |**Firefox**|NTLM, Basic|NTLM|Oui. Les paramètres d'authentification par défaut fonctionnent avec Firefox.|  
 |**Safari**|Simple|Simple|Oui. Les paramètres d'authentification par défaut fonctionnent avec Safari.|  
-|**Chrome**|Negotiated, NTLM, Basic|Negotiated|Oui. Les paramètres d'authentification par défaut fonctionnent avec Chrome.|  
+|**Chrome**|Negotiated, NTLM, Basic|Negotiated|Oui. Les paramètres d'authentification par défaut fonctionnent avec Chrome.|  
   
 ### <a name="script-requirements"></a>Contraintes liées aux scripts  
  Pour utiliser la visionneuse de rapports, configurez votre navigateur pour exécuter des scripts.  
@@ -169,7 +169,7 @@ ms.locfileid: "48157039"
   
 |||||||||  
 |-|-|-|-|-|-|-|-|  
-|**Navigateur**|**Windows 8** et **Windows 8.1**|**Windows 7**|**Windows Server 2012** et **2012 R2**|**Windows Server 2008** et **2008 R2**|**Windows Server 2003**|**Mac OS X 10.6 – 10.9**|**Remarques**|  
+|**Navigateur**|**Windows 8** et **Windows 8.1**|**Windows 7**|**Windows Server 2012** et **2012 R2**|**Windows Server 2008** et **2008 R2**|**Windows Server 2003**|**Mac OS X 10.6-10.9**|**Remarques**|  
 |**Internet Explorer 11 (pour le bureau**|Oui|Oui|Oui|Non pris en charge|Non pris en charge|Non pris en charge|Internet Explorer prend en charge l'ensemble complet des fonctionnalités ReportViewer.|  
 |**Internet Explorer 10 (pour le bureau)**|Oui|Oui|Oui|Non pris en charge|Non pris en charge|Non pris en charge|Internet Explorer prend en charge l'ensemble complet des fonctionnalités ReportViewer.|  
 |**Internet Explorer 9**|Non pris en charge|Oui|Non pris en charge|Oui|Oui|Oui|Internet Explorer prend en charge l'ensemble complet des fonctionnalités ReportViewer.|  
@@ -191,13 +191,13 @@ ms.locfileid: "48157039"
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">  
 ```  
   
- Pour plus d’informations sur les modes de compatibilité dans Internet Explorer, consultez [définissant la compatibilité des documents](http://go.microsoft.com/fwlink/?LinkId=180380) (http://go.microsoft.com/fwlink/?LinkId=180380).  
+ Pour plus d’informations sur les modes de compatibilité dans Internet Explorer, consultez [définissant la compatibilité des documents](https://go.microsoft.com/fwlink/?LinkId=180380) (https://go.microsoft.com/fwlink/?LinkId=180380).  
   
- Pour plus d’informations sur l’utilisation de contrôles ReportViewer, consultez [déploiement de rapports et des contrôles ReportViewer](http://msdn.microsoft.com/library/ms251723.aspx) (http://msdn.microsoft.com/library/ms251723.aspx).  
+ Pour plus d’informations sur l’utilisation de contrôles ReportViewer, consultez [déploiement de rapports et des contrôles ReportViewer](https://msdn.microsoft.com/library/ms251723.aspx) (https://msdn.microsoft.com/library/ms251723.aspx).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Outils de Reporting Services](tools/reporting-services-tools.md)   
- [Le Gestionnaire de rapports &#40;SSRS en Mode natif&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Visionneuse HTML et la barre d’outils rapport](html-viewer-and-the-report-toolbar.md)   
  [Référence de paramètres d'accès URL](url-access-parameter-reference.md)  
   

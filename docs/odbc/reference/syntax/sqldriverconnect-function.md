@@ -20,16 +20,16 @@ ms.assetid: e299be1d-5c74-4ede-b6a3-430eb189134f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d254fce8d7765c6248c6e060f2a225f595f804f0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d80de6087997b6af0202dafae7576ba442514abf
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47597174"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212388"
 ---
 # <a name="sqldriverconnect-function"></a>Fonction SQLDriverConnect
 **Conformité**  
- Version introduite : La mise en conformité des normes 1.0 ODBC : ODBC  
+ Version introduite : Conformité aux normes 1.0 ODBC : ODBC  
   
  **Résumé**  
  **SQLDriverConnect** est une alternative à **SQLConnect**. Il prend en charge les sources de données qui nécessitent des informations de connexion plus que les trois arguments dans **SQLConnect**, boîtes de dialogue pour inviter l’utilisateur pour toutes les informations de connexion et les sources de données qui ne sont pas définis dans le système plus d’informations.  
@@ -112,7 +112,7 @@ SQLRETURN SQLDriverConnect(
 |08S01|Échec de lien de communication|Échec de la liaison de communication entre le pilote et de la source de données à laquelle le pilote a tenté de se connecter avant le **SQLDriverConnect** traitement de la fonction a été exécutée.|  
 |28000|Spécification d’autorisation non valide|L’identificateur d’utilisateur ou la chaîne d’autorisation ou les deux, comme spécifié dans la chaîne de connexion (*InConnectionString*), a violé les restrictions définies par la source de données.|  
 |HY000|Erreur générale|Une erreur s’est produite pour laquelle aucun code SQLSTATE spécifique est survenu et pour lequel aucune SQLSTATE spécifiques à l’implémentation a été défini. Le message d’erreur retourné par **SQLGetDiagRec** dans le  *\*szMessageText* tampon décrit l’erreur et sa cause.|  
-|HY000|Erreur générale : source de données de fichier non valide|(DM) la chaîne dans **InConnectionString* contenait un mot clé FILEDSN, mais Impossible de trouver le nom du fichier .dsn.|  
+|HY000|Erreur générale : Source de données de fichier non valide|(DM) la chaîne dans **InConnectionString* contenait un mot clé FILEDSN, mais Impossible de trouver le nom du fichier .dsn.|  
 |HY000|Erreur générale : Impossible de créer la mémoire tampon de fichier|(DM) la chaîne dans **InConnectionString* contenait un mot clé FILEDSN, mais le fichier .dsn était illisible.|  
 |HY001|Erreur d’allocation de mémoire|Le Gestionnaire de pilotes n’a pas pu allouer la mémoire requise pour prendre en charge l’exécution ou à l’achèvement de la **SQLDriverConnect** (fonction).<br /><br /> Le pilote n’a pas pu allouer la mémoire requise pour prendre en charge l’exécution ou à l’achèvement de la fonction.|  
 |HY008|Opération annulée|Traitement asynchrone a été activé pour le *ConnectionHandle*. La fonction a été appelée et avant qu’il exécutée avec succès, le [sqlcancelhandle, fonction](../../../odbc/reference/syntax/sqlcancelhandle-function.md) a été appelé sur le *ConnectionHandle*, puis le **SQLDriverConnect** fonction a été appelée à nouveau sur le *ConnectionHandle*.<br /><br /> Ou, **SQLDriverConnect** fonction a été appelée et avant qu’il exécutée avec succès, **SQLCancelHandle** a été appelé sur le *ConnectionHandle* d’un thread différent dans un application multithread.|  
@@ -196,7 +196,7 @@ SQLRETURN SQLDriverConnect(
   
 -   SQL_DRIVER_PROMPT : Si la chaîne de connexion ne contient-elle ni le **pilote**, **DSN**, ou **FILEDSN** mot clé, le Gestionnaire de pilotes affiche la boîte de dialogue Sources de données. Il construit une chaîne de connexion à partir du nom de source de données retourné par la boîte de dialogue et les autres mots clés passés par l’application. Si le nom de source de données retourné par la boîte de dialogue est vide, le Gestionnaire de pilotes spécifie la paire mot clé-valeur DSN = valeur par défaut. (Cette boîte de dialogue s’affiche pas une source de données avec le nom « Default »).  
   
--   SQL_DRIVER_COMPLETE ou SQL_DRIVER_COMPLETE_REQUIRED : si la chaîne de connexion spécifiée par l’application inclut le **DSN** mot clé, le Gestionnaire de pilotes copie la chaîne de connexion spécifiée par l’application. Sinon, elle prend les mêmes actions comme il le fait quand *DriverCompletion* est SQL_DRIVER_PROMPT.  
+-   SQL_DRIVER_COMPLETE ou SQL_DRIVER_COMPLETE_REQUIRED : Si la chaîne de connexion spécifiée par l’application inclut le **DSN** mot clé, le Gestionnaire de pilotes copie la chaîne de connexion spécifiée par l’application. Sinon, elle prend les mêmes actions comme il le fait quand *DriverCompletion* est SQL_DRIVER_PROMPT.  
   
 -   SQL_DRIVER_NOPROMPT : Le Gestionnaire de pilotes copie la chaîne de connexion spécifiée par l’application.  
   
@@ -259,7 +259,7 @@ SQLRETURN SQLDriverConnect(
   
 -   SQL_DRIVER_PROMPT : Le pilote affiche une boîte de dialogue, en utilisant les valeurs des informations système et de la chaîne de connexion (le cas échéant) comme valeurs initiales. Lorsque l’utilisateur quitte la boîte de dialogue, le pilote se connecte à la source de données. Il construit également une chaîne de connexion à partir de la valeur de la **DSN** ou **pilote** mot clé dans \* *InConnectionString* et les informations retournées à partir de la boîte de dialogue. Il place cette chaîne de connexion dans le **OutConnectionString* mémoire tampon.  
   
--   SQL_DRIVER_COMPLETE ou SQL_DRIVER_COMPLETE_REQUIRED : si la chaîne de connexion contient suffisamment d’informations, et cette information est correcte, le pilote se connecte à la source de données et les copies \* *InConnectionString*à \* *OutConnectionString*. Si certaines informations sont manquantes ou incorrectes, le pilote accepte les mêmes actions comme il le fait quand *DriverCompletion* est SQL_DRIVER_PROMPT, sauf que si *DriverCompletion* est SQL_DRIVER_COMPLETE_ REQUIS, le pilote désactive les contrôles pour toute information ne pas obligé de se connecter à la source de données.  
+-   SQL_DRIVER_COMPLETE ou SQL_DRIVER_COMPLETE_REQUIRED : Si la chaîne de connexion contient suffisamment d’informations, et cette information est correcte, le pilote se connecte à la source de données et les copies \* *InConnectionString* à \* *OutConnectionString* . Si certaines informations sont manquantes ou incorrectes, le pilote accepte les mêmes actions comme il le fait quand *DriverCompletion* est SQL_DRIVER_PROMPT, sauf que si *DriverCompletion* est SQL_DRIVER_COMPLETE_ REQUIS, le pilote désactive les contrôles pour toute information ne pas obligé de se connecter à la source de données.  
   
 -   SQL_DRIVER_NOPROMPT : Si la chaîne de connexion contient suffisamment d’informations, le pilote se connecte à la source de données et les copies \* *InConnectionString* à \* *OutConnectionString*. Sinon, le pilote retourne SQL_ERROR pour **SQLDriverConnect**.  
   

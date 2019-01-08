@@ -43,25 +43,25 @@ ms.assetid: 5ee520ba-ec7e-4199-a441-189e9e264b37
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fc5ba07db49ac27ff5f36762abe6c1f1bcfac1d7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7d7c1da71445659d61fa95dc30bc7f128a1e1d40
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192855"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373611"
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>Assistant Générer et publier des scripts
   Vous pouvez utiliser l’ **Assistant Générer et publier des scripts** pour créer des scripts afin de transférer une base de données d’une instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ou de [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]vers une autre. Vous pouvez générer des scripts pour une base de données sur une instance du moteur de base de données dans votre réseau local ou à partir de [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Les scripts générés peuvent être exécutés sur une autre instance du moteur de base de données ou [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Vous pouvez également utiliser l'Assistant pour publier directement le contenu d'une base de données sur un service Web créé à l'aide des Services de publication de base de données. Vous pouvez créer des scripts pour une base de données entière ou les limiter à des objets spécifiques.  
   
-1.  **Avant de commencer :**  [Publication sur un service hébergé](#PubHostSvc), [Autorisations](#Permissions)  
+1.  **Avant de commencer :**  [Publication d’un Service hébergé](#PubHostSvc), [autorisations](#Permissions)  
   
-2.  **Pour générer ou publier un script, à l'aide de :**  [L'Assistant Générer et publier des scripts](#GenPubScriptWiz)  
+2.  **Pour générer ou publier un script, à l’aide de :**  [La générer et publier des Scripts](#GenPubScriptWiz)  
   
 ## <a name="before-you-begin"></a>Avant de commencer  
  Les bases de données source et cible peuvent se trouver sur [!INCLUDE[ssSDS](../../includes/sssds-md.md)]ou sur une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] qui exécute [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou une version ultérieure.  
   
 ###  <a name="PubHostSvc"></a> Publication sur un service hébergé  
- Outre pour la création de scripts, l' **Assistant Générer et publier des scripts** peut être utilisé pour publier une base de données sur un type spécifique de service Web SQL Server hébergé. Le SQL Server Hosting Toolkit fournit des Services de publication de base de données en tant que projet source partagé sur CodePlex. Le projet des Services de publication de base de données peut être utilisé par les fournisseurs d'hébergement Web pour générer un ensemble de services Web permettant aux clients de déployer facilement des bases de données sur le service Web. Pour plus d'informations sur le téléchargement du SQL Server Hosting Toolkit, consultez [SQL Server Database Publishing Services](http://go.microsoft.com/fwlink/?LinkId=142025)(en anglais).  
+ Outre pour la création de scripts, l' **Assistant Générer et publier des scripts** peut être utilisé pour publier une base de données sur un type spécifique de service Web SQL Server hébergé. Le SQL Server Hosting Toolkit fournit des Services de publication de base de données en tant que projet source partagé sur CodePlex. Le projet des Services de publication de base de données peut être utilisé par les fournisseurs d'hébergement Web pour générer un ensemble de services Web permettant aux clients de déployer facilement des bases de données sur le service Web. Pour plus d'informations sur le téléchargement du SQL Server Hosting Toolkit, consultez [SQL Server Database Publishing Services](https://go.microsoft.com/fwlink/?LinkId=142025)(en anglais).  
   
  Pour publier une base de données sur un service d'hébergement Web, sélectionnez l'option **Publier sur le service Web** dans la page de **Définir les options de script** de l'Assistant.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "48192855"
  **Annuler** - Termine l’Assistant sans générer ou publier un script à partir de la base de données.  
   
 ###  <a name="ChooseObjects"></a> Page Sélectionner les objets  
- Utilisez cette page pour choisir les objets que vous souhaitez inclure dans les scripts générés par cet Assistant. Dans la page suivante de l'Assistant, vous aurez la possibilité d'enregistrer ces scripts à l'emplacement de votre choix ou de les utiliser pour publier des objets de base de données sur un fournisseur d'hébergement Web distant sur lequel les [Services de publication de base de données SQL Server](http://go.microsoft.com/fwlink/?LinkId=142025)sont installés.  
+ Utilisez cette page pour choisir les objets que vous souhaitez inclure dans les scripts générés par cet Assistant. Dans la page suivante de l'Assistant, vous aurez la possibilité d'enregistrer ces scripts à l'emplacement de votre choix ou de les utiliser pour publier des objets de base de données sur un fournisseur d'hébergement Web distant sur lequel les [Services de publication de base de données SQL Server](https://go.microsoft.com/fwlink/?LinkId=142025)sont installés.  
   
  **Générer un script pour la base de données entière** - Cliquez sur cette option pour générer des scripts pour tous les objets de la base de données et pour inclure un script pour la base de données elle-même.  
   
@@ -124,11 +124,11 @@ ms.locfileid: "48192855"
   
  **Options** - Si vous souhaitez que l’Assistant enregistre les scripts à l’emplacement de votre choix, sélectionnez **Enregistrer les scripts à un emplacement spécifique**. Vous pourrez exécuter les scripts ultérieurement sur une instance du moteur de base de données ou sur [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Si vous souhaitez que l'Assistant publie vos objets de base de données sur un fournisseur d'hébergement Web distant, sélectionnez **Publier sur le service Web**.  
   
- **Enregistrer les scripts à un emplacement spécifique** - Permet d’enregistrer un ou plusieurs fichiers de script Transact-SQL à un emplacement que vous spécifiez.  
+ **Enregistrer les Scripts à un emplacement spécifique** : enregistrer un ou plusieurs. Fichiers de script Transact-SQL dans un emplacement que vous spécifiez.  
   
 -   **Avancé** - Permet d’afficher la boîte de dialogue **Options de script avancées** dans laquelle vous pouvez sélectionner des options avancées pour générer des scripts.  
   
--   **Enregistrer dans le fichier** - Permet d’enregistrer le script dans un ou plusieurs fichiers .sql. Cliquez sur le bouton**Parcourir**pour spécifier le nom et l’emplacement du fichier. Activez la case à cocher **Remplacer le fichier existant** pour remplacer le fichier s'il en existe déjà un du même nom. Cliquez sur **Fichier unique** ou **Fichier unique par objet** pour spécifier comment les scripts doivent être générés. Cliquez sur **Texte Unicode** ou **Texte ANSI** pour spécifier le type de texte qui doit être utilisé dans le script.  
+-   **Enregistrer dans le fichier** - Permet d’enregistrer le script dans un ou plusieurs fichiers .sql. Cliquez sur le bouton (**...**) pour spécifier le nom et l’emplacement du fichier. Activez la case à cocher **Remplacer le fichier existant** pour remplacer le fichier s'il en existe déjà un du même nom. Cliquez sur **Fichier unique** ou **Fichier unique par objet** pour spécifier comment les scripts doivent être générés. Cliquez sur **Texte Unicode** ou **Texte ANSI** pour spécifier le type de texte qui doit être utilisé dans le script.  
   
 -   **Enregistrer dans le Presse-papiers** - Permet d’enregistrer le script Transact-SQL dans le Presse-papiers.  
   
@@ -149,7 +149,7 @@ ms.locfileid: "48192855"
   
  **Options** - Spécifiez les options avancées en sélectionnant une valeur dans la liste des paramètres disponibles située à droite de chaque option.  
   
- **Général** - Les options suivantes s'appliquent au script entier.  
+ **Général** - Les options suivantes s’appliquent au script entier.  
   
 -   **Remplissage ANSI** -inclut `ANSI PADDING ON` dans le script. La valeur par défaut est **True**.  
   
@@ -191,15 +191,15 @@ ms.locfileid: "48192855"
   
 -   **Script des statistiques** -lorsque la valeur **Script statistiques**, cette option inclut le `CREATE STATISTICS` instruction à recréer des statistiques sur l’objet. L'option **Générer un script des statistiques et des histogrammes** crée également des informations d'histogramme. La valeur par défaut est **Ne pas générer de script des statistiques**. Pour plus d’informations, consultez [CREATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-statistics-transact-sql).  
   
--   **Script USE DATABASE** -ajoute la `USE DATABASE` instruction au script. Pour vous assurer que les objets de base de données sont créés dans la base de données correcte, incluez la `USE DATABASE` instruction. Lorsque le script est censé être utilisé dans une autre base de données, sélectionnez **False** pour omettre la `USE DATABASE` instruction. La valeur par défaut est **True**. Pour plus d’informations, consultez [USE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/use-transact-sql).  
+-   **Script USE DATABASE** -ajoute la `USE DATABASE` instruction au script. Pour vous assurer que les objets de base de données sont créés dans la base de données correcte, incluez l'instruction `USE DATABASE`. Lorsque le script est censé être utilisé dans une autre base de données, sélectionnez **False** pour omettre la `USE DATABASE` instruction. La valeur par défaut est **True**. Pour plus d’informations, consultez [USE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/use-transact-sql).  
   
--   **Types de données à inclure dans le script** - Sélectionne ce qui doit être inclus dans le script : **Données seulement**, **Schéma uniquement** ou les deux. La valeur par défaut est **Schéma uniquement**.  
+-   **Types de données à scripter** -sélectionne ce qui doit être généré : **Uniquement les données**, **Schema only**, ou les deux. La valeur par défaut est **Schéma uniquement**.  
   
  **Options de table/vue** - Les options suivantes s’appliquent uniquement aux scripts des tables et des vues.  
   
 -   **Générer le script de suivi des modifications** - Génère le script de suivi des modifications s’il est activé sur la base de données d’origine ou sur des tables dans la base de données d’origine. La valeur par défaut est **False**. Pour plus d’informations, consultez [À propos du suivi des modifications &#40;SQL Server&#41;](../track-changes/about-change-tracking-sql-server.md).  
   
--   **Script des contraintes check** – Adds `CHECK` contraintes au script. La valeur par défaut est **True**. `CHECK` contraintes nécessitent que les données entrées dans une table satisfassent à certaines conditions spécifiées. Pour plus d’informations, consultez [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md).  
+-   **Script des contraintes check** -ajoute `CHECK` contraintes au script. La valeur par défaut est **True**. Les contraintes `CHECK` exigent que les données entrées dans une table satisfassent à certaines conditions spécifiées. Pour plus d’informations, consultez [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md).  
   
 -   **Générer un script des options de compression de données** - Génère un script des options de compression de données si elles sont configurées sur la base de données d’origine ou sur des tables dans la base de données d’origine. Pour plus d’informations, consultez [Compression de données](../data-compression/data-compression.md). La valeur par défaut est **False**.  
   
@@ -237,7 +237,7 @@ ms.locfileid: "48192855"
   
  **Options** - Spécifiez les options avancées en sélectionnant une valeur dans la liste des paramètres disponibles située à droite de chaque option.  
   
- **Général** - Les options suivantes s'appliquent à la publication entière.  
+ **Général** - Les options suivantes s’appliquent à la publication entière.  
   
 1.  **Convertir les UDDT en types de base** - Lorsque cette option a la valeur **True**, les types de données définis par l’utilisateur (UDDT) sont convertis en types de données de base sous-jacents, ceux-là même qui ont été utilisés pour les créer. Utilisez **True** lorsque l'UDDT n'existe pas dans la base de données où le script s'exécutera. Lorsque cette option a la valeur **False**, les UDDT sont utilisés. La valeur par défaut est **False**.  
   
@@ -261,15 +261,15 @@ ms.locfileid: "48192855"
   
 11. **Liaisons de scripts** - Inclut la liaison pour les objets de règle et les objets par défaut dans le script envoyé au fournisseur pour la publication. La valeur par défaut est **True**. Pour plus d’informations, consultez [CREATE DEFAULT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-default-transact-sql) et [CREATE RULE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-rule-transact-sql).  
   
-12. **Types de données à publier** - Sélectionne ce qui doit être inclus dans le script : **Données seulement**, **Schéma uniquement** ou les deux. La valeur par défaut est **Schéma et données**.  
+12. **Types de données à publier** -sélectionne ce qui doit être généré : **Uniquement les données**, **Schema Only**, ou les deux. La valeur par défaut est **Schéma et données**.  
   
- **Options de publication** - Spécifie s'il faut utiliser des transactions lors de la publication au fournisseur de serveur Web.  
+ **Options de publication** - Spécifie s’il faut utiliser des transactions lors de la publication dans le fournisseur de serveur web.  
   
 1.  **Publier à l’aide d’une transaction** - Utilise les transactions lors de la publication sur un fournisseur d’hébergement web distant. Si la base de données cible ne peut pas terminer la publication, les transactions sont restaurées. La valeur par défaut est **True**.  
   
  **Options de table/vue** - Les options suivantes s’appliquent uniquement aux tables et aux vues.  
   
-1.  **Publier les contraintes check** -inclut la création de `CHECK` contraintes dans le processus de publication. La valeur par défaut est **True**. `CHECK` contraintes nécessitent que les données entrées dans une table satisfassent à certaines conditions spécifiées. Pour plus d’informations, consultez [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md).  
+1.  **Publier les contraintes check** -inclut la création de `CHECK` contraintes dans le processus de publication. La valeur par défaut est **True**. Les contraintes `CHECK` exigent que les données entrées dans une table satisfassent à certaines conditions spécifiées. Pour plus d’informations, consultez [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md).  
   
 2.  **Publier les clés étrangères** - Inclut la création de clés étrangères dans le processus de publication. La valeur par défaut est **True**. Les clés étrangères indiquent et garantissent les relations entre les tables. Pour plus d'informations, consultez [Primary and Foreign Key Constraints](../tables/primary-and-foreign-key-constraints.md).  
   
@@ -338,6 +338,6 @@ ms.locfileid: "48192855"
   
 ## <a name="see-also"></a>Voir aussi  
  [Installation de SMO](../server-management-objects-smo/installing-smo.md)   
- [Copier des bases de données sur d’autres serveurs](../databases/copy-databases-to-other-servers.md)  
+ [Copier des bases de données sur d'autres serveurs](../databases/copy-databases-to-other-servers.md)  
   
   

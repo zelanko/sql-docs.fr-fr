@@ -13,15 +13,15 @@ ms.assetid: 7538a82b-b08b-4c8f-9809-e4ccea16db11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0cdbb90bfbca6994a875a0653ee9d34c8e8ffb9e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d62c0864678e116e30a0673bdf2625d70de0cedd
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47775767"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52501785"
 ---
 # <a name="binding-parameters-odbc"></a>Liaison de paramètres dans ODBC
-Chaque paramètre dans une instruction SQL doit être associé, ou *lié,* à une variable dans l’application avant que l’instruction est exécutée. Lorsque l’application lie une variable à un paramètre, il décrit cette variable, adresse, type de données C et ainsi de suite, pour le pilote. Elle décrit également le paramètre lui-même, SQL data type, précision et ainsi de suite. Le pilote stocke ces informations dans la structure, il tient à jour pour cette instruction et utilise les informations pour extraire la valeur de la variable lorsque l’instruction est exécutée.  
+Chaque paramètre dans une instruction SQL doit être associé, ou *lié,* à une variable dans l’application avant que l’instruction est exécutée. Lorsque l’application lie une variable à un paramètre, il décrit cette variable - adresse, type de données C et ainsi de suite - au pilote. Elle décrit également le paramètre lui-même - type de données SQL, précision et ainsi de suite. Le pilote stocke ces informations dans la structure, il tient à jour pour cette instruction et utilise les informations pour extraire la valeur de la variable lorsque l’instruction est exécutée.  
   
  Paramètres peuvent être liés ou reconnectés à tout moment avant l’exécution d’une instruction. Si un paramètre est liée à nouveau après qu’une instruction est exécutée, la liaison ne s’applique pas jusqu'à ce que l’instruction est exécutée à nouveau. Pour lier un paramètre à une variable différente, une application relie simplement le paramètre avec la nouvelle variable ; la liaison précédente est automatiquement publiée.  
   

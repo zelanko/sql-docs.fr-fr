@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 406b6b6602cb39fc7d4c979d68421e8122220442
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a808c1ece5e7fdecceadd22f881040466c38a9e9
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47653593"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210484"
 ---
 # <a name="send-data-to-a-filestream-column-using-irowsetfastupload-ole-db"></a>Envoyer des données à une colonne FILESTREAM à l'aide d'IRowsetFastUpload (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "47653593"
   
  Lorsque vous exécutez cet exemple, vous devez transmettre le nom d'un serveur, ou un serveur\nom_instance, ainsi qu'une valeur comprise entre 4 Mo (0x400001) et 4 Go (0xFFFFFFFF) indiquant la quantité de données à écrire.  
   
- La quatrième liste de code ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) supprime la base de données créée par cet exemple.  
+ La quatrième ( [!INCLUDE[tsql](../../../includes/tsql-md.md)]) du code supprime la base de données créée par cet exemple.  
   
 ```  
 // ISSHelper.h: interface for the CISSHelper class.  

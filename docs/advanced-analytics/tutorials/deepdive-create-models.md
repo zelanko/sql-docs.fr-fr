@@ -1,51 +1,56 @@
 ---
-title: Créez des modèles R (SQL et R approfondie) | Documents Microsoft
+title: Didacticiel de RevoScaleR de modèles R - de création de SQL Server Machine Learning
+description: Didacticiel pas à pas sur la création d’un modèle en utilisant le langage R sur SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 11/27/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: a2f6e9b23e1592073c1b21bc41e4975ffaf17075
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: 88e2dd9e50ca79136e4082cab30bba4a0e961531
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32446843"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645068"
 ---
-# <a name="create-r-models-sql-and-r-deep-dive"></a>Créez des modèles R (SQL et R approfondie)
+# <a name="create-r-models-sql-server-and-revoscaler-tutorial"></a>Créez des modèles R (didacticiel sur SQL Server et RevoScaleR)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Cet article fait partie du didacticiel de présentation approfondie de science des données, sur l’utilisation de [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) avec SQL Server.
+Cette leçon fait partie de la [RevoScaleR didacticiel](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) sur l’utilisation [fonctions RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) avec SQL Server.
 
-Maintenant que vous avez enrichi les données d’apprentissage, il est temps d’analyser les données en utilisant la régression linéaire. Les modèles linéaires sont un outil important dans le monde de la prédiction analytique et le package **RevoScaleR** de [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] inclut un algorithme évolutif à hautes performances.
+Maintenant que vous avez enrichi les données d’apprentissage, il est temps pour analyser les données à l’aide de la modélisation de régression. Modèles linéaires sont un outil important dans le monde d’analytique prédictive et le **RevoScaleR** package comprend des algorithmes de régression qui peuvent subdiviser la charge de travail et s’exécuter en parallèle.
+
+> [!div class="checklist"]
+> * Créer un modèle de régression linéaire
+> * Créer un modèle de régression logistique
 
 ## <a name="create-a-linear-regression-model"></a>Créer un modèle de régression linéaire
 
-Dans cette étape, vous créez un modèle linéaire simple qui évalue le solde de carte de crédit pour les clients, à l’aide, en tant que variables indépendantes, les valeurs dans le *sexe* et *creditLine* colonnes.
+Dans cette étape, créez un modèle linéaire simple qui estime le solde de carte de crédit pour les clients en utilisant comme variables indépendantes les valeurs dans le *sexe* et *creditLine* colonnes.
   
-Pour ce faire, utilisez le [rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod) (fonction), qui prend en charge des contextes de calcul à distance.
+Pour ce faire, utilisez le [rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod) (fonction), qui prend en charge les contextes de calcul distants.
   
-1. Créez une variable R pour stocker le modèle, puis appelez **rxLinMod**, en passant une formule appropriée.
+1. Créez une variable R pour stocker le modèle, puis appelez **rxLinMod**, en passant une formule qui convient.
   
     ```R
     linModObj <- rxLinMod(balance ~ gender + creditLine,  data = sqlFraudDS)
     ```
   
-2. Pour afficher un résumé des résultats, appelez R standard `summary` fonction sur l’objet de modèle.
+2. Pour afficher un résumé des résultats, appelez le standard de R **Résumé** fonction sur l’objet de modèle.
   
      ```R
      summary(linModObj)
      ```
 
-Vous pouvez penser particulières qu’une fonction R standard, tels que `summary` fonctionne ici, comme dans l’étape précédente, vous définissez le contexte de calcul sur le serveur. Toutefois, même lorsque la fonction **rxLinMod** utilise le contexte de calcul à distance pour créer le modèle, il retourne également un objet qui contient le modèle pour votre station de travail locale et le stocke dans le répertoire partagé.
+Il peut vous paraître étrange qu’une simple fonction R comme **summary** fonctionne ici, puisque dans l’étape précédente, vous avez défini le contexte de calcul sur le serveur. Toutefois, même lorsque la fonction **rxLinMod** utilise le contexte de calcul à distance pour créer le modèle, il retourne également un objet qui contient le modèle pour votre station de travail locale et le stocke dans le répertoire partagé.
 
 Par conséquent, vous pouvez exécuter des commandes R standard sur le modèle comme s’il avait été créé en utilisant le contexte « local ».
 
 **Résultats**
 
-```
+```R
 Linear Regression Results for: balance ~ gender + creditLineData: sqlFraudDS (RxSqlServerData Data Source)
 Dependent variable(s): balance
 Total independent variables: 4 (Including number dropped: 1)
@@ -58,7 +63,7 @@ Estimate Std. Error t value Pr(>|t|) (Intercept)
 gender=Male -88.813 78.360 -1.133 0.257
 gender=Female Dropped Dropped Dropped Dropped
 creditLine 95.379 3.862 24.694 2.22e-16
-Signif. codes: 0  0.001  0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Signif. codes: 0  0.001  0.01 '*' 0.05 '.' 0.1 ' ' 1
 
 Residual standard error: 3812 on 9997 degrees of freedom
 Multiple R-squared: 0.05765
@@ -69,11 +74,11 @@ Condition number: 1.0184
 
 ## <a name="create-a-logistic-regression-model"></a>Créer un modèle de régression logistique
 
-Ensuite, vous créez un modèle de régression logistique qui indique si un client particulier est un risque de fraude. Vous allez utiliser le **RevoScaleR** [rxLogit](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlogit) fonction, les contextes de calcul qui prend en charge l’ajustement des modèles de régression logistique dans à distance.
+Ensuite, créez un modèle de régression logistique qui indique si un client particulier est un risque de fraude. Vous utiliserez le **RevoScaleR** [rxLogit](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlogit) fonction, qui prend en charge l’ajustement des modèles de régression logistique dans à distance des contextes de calcul.
 
-1.  Conservez le contexte de calcul tel quel. Vous continuez aussi à utiliser la même source de données.
+Conservez le contexte de calcul tel quel. Vous allez également continuer à utiliser la même source de données également.
 
-2.  Appelez la fonction **rxLogit** , puis passez la formule nécessaire pour définir le modèle.
+1. Appelez la fonction **rxLogit** , puis passez la formule nécessaire pour définir le modèle.
 
     ```R
     logitObj <- rxLogit(fraudRisk ~ state + gender + cardholder + balance + numTrans + numIntlTrans + creditLine, data = sqlFraudDS, dropFirst = TRUE)
@@ -83,7 +88,7 @@ Ensuite, vous créez un modèle de régression logistique qui indique si un clie
     
     La raison pour laquelle la taille du modèle est si importante est que, dans R (et dans le package **RevoScaleR** ), chaque niveau d’une variable de facteur de catégorie est automatiquement traité comme une variable factice distincte.
   
-3.  Pour afficher un résumé du modèle retourné, appelez R `summary` (fonction).
+2. Pour afficher un résumé du modèle retourné, appelez la fonction R **summary** .
   
     ```R
     summary(logitObj)
@@ -91,7 +96,7 @@ Ensuite, vous créez un modèle de régression logistique qui indique si un clie
   
 **Résultats partiels**
 
-```
+```R
 Logistic Regression Results for: fraudRisk ~ state + gender + cardholder + balance + numTrans + numIntlTrans + creditLine
 Data: sqlFraudDS (RxSqlServerData Data Source)
 Dependent variable(s): fraudRisk
@@ -117,15 +122,12 @@ numTrans              4.950e-02  2.202e-03  22.477 2.22e-16
 numIntlTrans          3.414e-02  5.318e-03   6.420 1.36e-10
 creditLine            1.042e-01  4.705e-03  22.153 2.22e-16
 
-Signif. codes:  0 ‘\*\*\*’ 0.001 ‘\*\*’ 0.01 ‘\*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Signif. codes:  0 '\*\*\*' 0.001 '\*\*' 0.01 '\*' 0.05 '.' 0.1 ' ' 1
 Condition number of final variance-covariance matrix: 3997.308
 Number of iterations: 15
 ```
 
-## <a name="next-step"></a>Étape suivante
+## <a name="next-steps"></a>Étapes suivantes
 
-[Score de nouvelles données](../../advanced-analytics/tutorials/deepdive-score-new-data.md)
-
-## <a name="previous-step"></a>Étape précédente
-
-[Visualiser des données SQL Server à l’aide de R](../../advanced-analytics/tutorials/deepdive-visualize-sql-server-data-using-r.md)
+> [!div class="nextstepaction"]
+> [Affecter un score à de nouvelles données](../../advanced-analytics/tutorials/deepdive-score-new-data.md)

@@ -18,12 +18,12 @@ ms.assetid: 4df02594-4cd1-49a9-8d97-37c44e4d5423
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3d6604a2fb40effa3fd419068ca2e604de4dde3c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fcfbe46b428f3e1dc954b63ab4c5b5b423ded6ef
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47774407"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213478"
 ---
 # <a name="spupdatejobschedule-transact-sql"></a>sp_update_jobschedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,13 +32,13 @@ ms.locfileid: "47774407"
   
  **sp_update_jobschedule** est fourni pour la compatibilité descendante uniquement.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  Pour plus d’informations sur la syntaxe utilisée dans les versions antérieures de Microsoft SQL Server, consultez le Referencefor Transact-SQL Microsoft SQL Server 2000 *.*  
   
 ## <a name="remarks"></a>Notes  
  Il est désormais possible de gérer la planification des travaux indépendamment des travaux. Pour mettre à jour une planification, utilisez **sp_update_schedule**.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Par défaut, les membres du rôle serveur fixe **sysadmin** peuvent exécuter cette procédure stockée. Les autres utilisateurs doivent disposer de l'un des rôles de base de données fixes suivants de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent dans la base de données **msdb** :  
   
 -   **SQLAgentUserRole**  

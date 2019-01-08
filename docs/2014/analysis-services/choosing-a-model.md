@@ -17,17 +17,17 @@ ms.assetid: 444bbf9c-cec8-460e-881d-38784fb146fa
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4cbde25ffc504e2e2c41bcf6b46cde9d464daa7d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6d91e282ebfe0299fd6015530e8af1b6d10e6547
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113289"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400512"
 ---
 # <a name="choosing-a-model"></a>Choix d'un modèle
-  **Algorithme d’exploration de données :** l’exploration de données *algorithme* est un mécanisme qui crée des modèles de données. L'algorithme définit la façon dont les données sont comptées, les relations dérivées et les séquences stockées. La sélection d'un algorithme dépend en partie du type de données à analyser. Par exemple, certains algorithmes peuvent uniquement utiliser des nombres continus, tandis que d'autres peuvent être plus efficaces avec un nombre limité de valeurs distinctes.  
+  **Algorithme d’exploration de données :** L’exploration de données *algorithme* est un mécanisme qui crée des modèles de données. L'algorithme définit la façon dont les données sont comptées, les relations dérivées et les séquences stockées. La sélection d'un algorithme dépend en partie du type de données à analyser. Par exemple, certains algorithmes peuvent uniquement utiliser des nombres continus, tandis que d'autres peuvent être plus efficaces avec un nombre limité de valeurs distinctes.  
   
- **Modèle d’exploration de données :** le résultat d’analyse de données par un algorithme est enregistré dans un *modèle d’exploration de*. Un modèle d'exploration de données est une collection de règles, de statistiques et de schémas. Le *contenu* du modèle d’exploration de données dépend de l’algorithme que vous permettent de traiter les données, mais pouvez inclure les éléments suivants :  
+ **Modèle d’exploration de données :** Le résultat d’analyse de données par un algorithme est enregistré dans un *modèle d’exploration de*. Un modèle d'exploration de données est une collection de règles, de statistiques et de schémas. Le *contenu* du modèle d’exploration de données dépend de l’algorithme que vous permettent de traiter les données, mais pouvez inclure les éléments suivants :  
   
 -   des règles Si-alors qui décrivent la manière dont les produits sont regroupés dans une transaction ;  
   
@@ -39,7 +39,7 @@ ms.locfileid: "48113289"
   
 -   *Nœuds* dans un réseau, connecté par *bords*. Les nœuds représentent des éléments ou des groupes d'éléments. Les arêtes sont notées en fonction de la puissance des relations entre les nœuds.  
   
- **À l’aide du modèle :** une fois que vous avez créé un modèle, vous pouvez utiliser les visionneuses fournies pour l’Explorer, ou vous pouvez créer une requête sur le modèle. Les requêtes peuvent être utilisées pour :  
+ **À l’aide du modèle :** Une fois que vous avez créé un modèle, vous pouvez utiliser les visionneuses fournies pour l’Explorer, ou vous pouvez créer une requête sur le modèle. Les requêtes peuvent être utilisées pour :  
   
 -   Prédire des valeurs futures.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "48113289"
   
  Les algorithmes qu'utilisent les compléments d'exploration de données SQL Server pour Office reposent sur les algorithmes fournis par [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Vous pouvez également utiliser des algorithmes tiers conformes à la spécification OLE DB pour l’exploration de données, si l’instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] à laquelle vous êtes connecté a été configuré pour autoriser des algorithmes tiers.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  Chaque algorithme diffère au niveau des types des données avec lesquels il peut s'exécuter.  
   
 -   Un modèle de régression linéaire ne peut modéliser que des valeurs numériques. Les variables d'entrée et les résultats cibles doivent être des types de nombres continus. Utilisez un arbre de décision ou un modèle d'estimation si vous devez combiner des variables discrètes et continues.  

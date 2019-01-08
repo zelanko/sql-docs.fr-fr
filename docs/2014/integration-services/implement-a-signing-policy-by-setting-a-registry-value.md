@@ -13,12 +13,12 @@ ms.assetid: 64f6966f-2292-401f-acb1-2ccb5aee484a
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2968561d90f1bc45f50f040d7d303b969cc3c3b4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f8daa6582f18d9c5279e7539dd9c3740d90e36d2
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103019"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353198"
 ---
 # <a name="implement-a-signing-policy-by-setting-a-registry-value"></a>Implémenter une stratégie de signature en définissant une valeur du Registre
   Vous pouvez utiliser une valeur du Registre facultative pour gérer la stratégie d'une organisation pour charger des packages signés ou non signés. Si vous utilisez cette valeur du Registre, vous devez créer cette valeur du Registre sur tous les ordinateurs sur lesquels les packages [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] s'exécuteront et sur lesquels vous souhaitez appliquer la stratégie. Une fois la valeur du Registre définie, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] vérifiera les signatures avant de charger les packages.  
@@ -35,7 +35,7 @@ ms.locfileid: "48103019"
   
  Le tableau suivant répertorie les valeurs valides des données DWORD et leur stratégie associée.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |0|Pas de restriction administrative.|  
 |1|Bloquer les signatures non valides.<br /><br /> Ce paramètre ne bloque pas les packages non signés.|  
@@ -43,7 +43,7 @@ ms.locfileid: "48103019"
 |3|Bloquer les signatures non valides et non approuvées et les packages non signés.<br /><br /> Ce paramètre bloque lui aussi les signatures générées automatiquement.|  
   
 > [!NOTE]  
->  Le paramètre recommandé pour `BlockedSignatureStates` est 3. Ce paramètre offre une protection maximale contre des packages non signés ou des signatures non valides ou non approuvées. Néanmoins, ce paramètre recommandé peut ne pas convenir dans tous les cas. Pour plus d’informations sur la signature des ressources numériques, consultez la rubrique[Introduction to Code Signing](http://go.microsoft.com/fwlink/?LinkId=51414)(Introduction à la signature du code) dans MSDN Library.  
+>  Le paramètre recommandé pour `BlockedSignatureStates` est 3. Ce paramètre offre une protection maximale contre des packages non signés ou des signatures non valides ou non approuvées. Néanmoins, ce paramètre recommandé peut ne pas convenir dans tous les cas. Pour plus d’informations sur la signature des ressources numériques, consultez la rubrique[Introduction to Code Signing](https://go.microsoft.com/fwlink/?LinkId=51414)(Introduction à la signature du code) dans MSDN Library.  
   
 ### <a name="to-implement-a-signing-policy-for-packages"></a>Pour implémenter une stratégie de signature pour des packages  
   
@@ -55,7 +55,7 @@ ms.locfileid: "48103019"
   
 4.  Cliquez avec le bouton droit sur **MSDTS**, pointez sur **Nouveau**, puis cliquez sur **Valeur DWORD**.  
   
-5.  Mettre à jour le nom de la nouvelle valeur à `BlockedSignatureStates`.  
+5.  Remplacez le nom de la nouvelle valeur par `BlockedSignatureStates`.  
   
 6.  Avec le bouton droit `BlockedSignatureStates` et cliquez sur **modifier**.  
   

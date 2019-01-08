@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 api_name:
 - SupportAlias Property (ClientNetworkProtocol Class)
@@ -20,12 +18,12 @@ ms.assetid: 1e7a2e87-c356-40a6-a6d9-e492467629f9
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 2bfb677ba05bc5303c706d65dd2dda70eb67d23d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d28ec166f8954b874f98b7f9f441280ab9064f1f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082569"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366471"
 ---
 # <a name="supportalias-property-clientnetworkprotocol-class"></a>Propriété SupportAlias (classe ClientNetworkProtocol)
   Obtient la propriété booléenne qui spécifie si le protocole réseau actuel spécifié par le [setordervalue, méthode (classe ClientNetworkProtocol)](clientnetworkprotocol-class.md) prennent en charge les alias.  
@@ -52,6 +50,6 @@ object
 ## <a name="remarks"></a>Notes  
   
 ## <a name="see-also"></a>Voir aussi  
- [Configurer des protocoles clients](http://technet.microsoft.com/library/ms181035.aspx)  
+ [Configurer des protocoles clients](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

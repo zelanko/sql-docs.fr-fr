@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
-ms.openlocfilehash: bbeeff135edbc333b6ce8b3e20cf5235710f2dc1
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: b5ffda90f0d4b2b85ed29af65da5ea12592e4423
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677678"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979915"
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Configurer un cluster de disque partagé de Red Hat Enterprise Linux pour SQL Server
 
@@ -274,10 +274,10 @@ Pour plus d’informations sur l’utilisation NFS, consultez les ressources sui
    sudo firewall-cmd --reload
    ```
 
-   > Si vous utilisez un autre pare-feu qui n’intègre pas de configuration à haute disponibilité, les ports suivants doivent être ouverts pour permettre à Pacemaker de communiquer avec les autres nœuds du cluster.
+   > Si vous utilisez un autre pare-feu qui n’a pas une configuration de haute disponibilité intégrée, les ports suivants doivent être ouverts pour permettre à être en mesure de communiquer avec d’autres nœuds du cluster Pacemaker
    >
-   > * TCP : ports 2224, 3121, 21064
-   > * UDP : port 5405
+   > * TCP : Ports 2224, 3121, 21064
+   > * UDP : Port 5405
 
 1. Installez les packages Pacemaker sur chaque nœud.
 
@@ -285,7 +285,7 @@ Pour plus d’informations sur l’utilisation NFS, consultez les ressources sui
    sudo yum install pacemaker pcs fence-agents-all resource-agents
    ```
 
-   
+    
 
 2. Définissez le mot de passe pour l’utilisateur par défaut qui est créé pendant l’installation des packages Pacemaker et Corosync. Utilisez le même mot de passe sur les deux nœuds. 
 
@@ -293,7 +293,7 @@ Pour plus d’informations sur l’utilisation NFS, consultez les ressources sui
    sudo passwd hacluster
    ```
 
-   
+    
 
 3. Activez et démarrez le service `pcsd` et Pacemaker. Cela permettra aux nœuds de rejoindre le cluster après le redémarrage. Exécutez la commande suivante sur les deux nœuds.
 
@@ -314,8 +314,8 @@ Pour plus d’informations sur l’utilisation NFS, consultez les ressources sui
 1. Sur l’un des nœuds, créez le cluster.
 
    ```bash
-   sudo pcs cluster auth <nodeName1 nodeName2 …> -u hacluster
-   sudo pcs cluster setup --name <clusterName> <nodeName1 nodeName2 …>
+   sudo pcs cluster auth <nodeName1 nodeName2 ...> -u hacluster
+   sudo pcs cluster setup --name <clusterName> <nodeName1 nodeName2 ...>
    sudo pcs cluster start --all
    ```
 
@@ -330,13 +330,13 @@ Pour plus d’informations sur l’utilisation NFS, consultez les ressources sui
 
 2. Configurer les ressources de cluster pour SQL Server, système de fichiers et les ressources IP virtuels et envoyer la configuration pour le cluster. Vous avez besoin des informations suivantes :
 
-   - **Nom de la ressource SQL Server**: un nom pour la ressource SQL Server en cluster. 
-   - **Flottante nom de ressource IP**: un nom pour la ressource d’adresse IP virtuelle.
-   - **Adresse IP**: l’adresse IP que les clients utiliseront pour se connecter à l’instance en cluster de SQL Server. 
-   - **Nom de ressource de système de fichiers**: un nom pour la ressource de système de fichiers.
-   - **APPAREIL**: chemin d’accès de partage de The NFS
-   - **APPAREIL**: le chemin d’accès local qu’il est monté sur le partage
-   - **fsType**: type de partage de fichier (par exemple, nfs)
+   - **Nom de la ressource SQL Server**: Un nom pour la ressource SQL Server en cluster. 
+   - **Flottante nom de ressource IP**: Un nom pour la ressource d’adresse IP virtuelle.
+   - **Adresse IP**: L’adresse IP que les clients utiliseront pour se connecter à l’instance en cluster de SQL Server. 
+   - **Nom de ressource de système de fichiers**: Un nom pour la ressource de système de fichiers.
+   - **APPAREIL**: Chemin de partage NFS
+   - **APPAREIL**: Le chemin d’accès local qu’il est monté sur le partage
+   - **fsType**: Type de partage de fichier (par exemple, nfs)
 
    Mettre à jour les valeurs à partir du script suivant pour votre environnement. Exécuter sur un nœud pour configurer et démarrer le service en cluster.  
 
@@ -370,7 +370,7 @@ Pour plus d’informations sur l’utilisation NFS, consultez les ressources sui
    sudo pcs status 
    ```
 
-   Les exemples suivants illustrent les résultats quand Pacemaker a correctement démarré une instance en cluster de SQL Server. 
+   Les exemples suivants montre les résultats quand Pacemaker a démarré avec succès une instance en cluster de SQL Server. 
 
    ```
    fs     (ocf::heartbeat:Filesystem):    Started sqlfcivm1

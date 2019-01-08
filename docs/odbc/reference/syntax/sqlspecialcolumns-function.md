@@ -20,16 +20,16 @@ ms.assetid: bb2d9f21-bda0-4e50-a8be-f710db660034
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 52ad6bc3fc84b0d50675b4e0a4e7bb44a6ded1c6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f44ae90a82e778bf8e8564b719aa6b9f0157a05a
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849357"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204368"
 ---
 # <a name="sqlspecialcolumns-function"></a>Fonction SQLSpecialColumns
 **Conformité**  
- Version introduite : La mise en conformité des normes 1.0 ODBC : Open Group  
+ Version introduite : Conformité aux normes 1.0 ODBC : Ouvrir le groupe  
   
  **Résumé**  
  **SQLSpecialColumns** récupère les informations suivantes sur les colonnes dans une table spécifiée :  
@@ -90,14 +90,14 @@ SQLRETURN SQLSpecialColumns(
  *NameLength3*  
  [Entrée] Longueur en caractères de **TableName*.  
   
- *Étendue*  
+ *Portée*  
  [Entrée] Étendue minimale requise de rowid. Rowid retourné peut être étendue supérieure. Doit prendre l'une des valeurs suivantes :  
   
- SQL_SCOPE_CURROW : Rowid est garanti être valide uniquement tout en étant positionné sur cette ligne. Un rowid ultérieure qui utiliserait ne peut pas retourner une ligne si la ligne a été mis à jour ou supprimée par une autre transaction.  
+ SQL_SCOPE_CURROW : Le rowid est garanti être valide uniquement tout en étant positionné sur cette ligne. Un rowid ultérieure qui utiliserait ne peut pas retourner une ligne si la ligne a été mis à jour ou supprimée par une autre transaction.  
   
- SQL_SCOPE_TRANSACTION : Rowid est garanti valide pour la durée de la transaction actuelle.  
+ SQL_SCOPE_TRANSACTION : Le rowid est garanti être valide pour la durée de la transaction actuelle.  
   
- SQL_SCOPE_SESSION : Rowid est garanti valide pendant la durée de la session (sur des limites de transaction).  
+ SQL_SCOPE_SESSION : Le rowid est garanti valide pendant la durée de la session (sur des limites de transaction).  
   
  *Nullable*  
  [Entrée] Détermine s’il faut retourner les colonnes spéciales qui peuvent avoir une valeur NULL. Doit prendre l'une des valeurs suivantes :  
@@ -168,11 +168,11 @@ SQLRETURN SQLSpecialColumns(
 |ÉTENDUE (ODBC 1.0)|1|Smallint|Étendue réelle de l’ID de ligne. Contient l’une des valeurs suivantes :<br /><br /> SQL_SCOPE_CURROW SQL_SCOPE_TRANSACTION SQL_SCOPE_SESSION<br /><br /> La valeur NULL est retournée lorsque *IdentifierType* est SQL_ROWVER. Pour obtenir une description de chaque valeur, consultez la description de *étendue* dans « Syntaxe », plus haut dans cette section.|  
 |COLUMN_NAME (ODBC 1.0)|2|Varchar non NULL|Nom de colonne. Le pilote retourne une chaîne vide pour une colonne qui n’a pas de nom.|  
 |DATA_TYPE (ODBC 1.0)|3|Smallint non NULL|Type de données SQL. Cela peut être un type de données ODBC SQL ou un type de données spécifiques au pilote SQL. Pour obtenir la liste des types de données ODBC SQL valides, consultez [les Types de données SQL](../../../odbc/reference/appendixes/sql-data-types.md). Pour plus d’informations sur les types de données spécifiques au pilote SQL, consultez la documentation du pilote.|  
-|TYPE_NAME (ODBC 1.0)|4|Varchar non NULL|Nom de type de données de dépend de la source de données ; par exemple, « CHAR », « VARCHAR », « Argent », « LONG VARBINARY » ou « CHAR () pour les données BIT ».|  
+|TYPE_NAME (ODBC 1.0)|4|Varchar non NULL|Nom de type de données dépendant de la source de données ; par exemple, « CHAR », « VARCHAR », « Argent », « LONG VARBINARY » ou « CHAR () pour les données BIT ».|  
 |COLUMN_SIZE (ODBC 1.0)|5|Entier|La taille de la colonne sur la source de données. Pour plus d’informations concernant la taille de colonne, consultez [taille de colonne, des chiffres décimaux, transférer la longueur en octets et la taille d’affichage](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md).|  
 |BUFFER_LENGTH (ODBC 1.0)|6|Entier|La longueur en octets de données transférées sur un **SQLGetData** ou **SQLFetch** opération si SQL_C_DEFAULT est spécifié. Pour les données numériques, cette taille peut être différente de la taille des données stockées sur la source de données. Cette valeur est identique à la colonne COLUMN_SIZE pour les données binaires ou caractères. Pour plus d’informations, consultez [taille de colonne, des chiffres décimaux, transférer la longueur en octets et la taille d’affichage](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md).|  
 |DECIMAL_DIGITS (ODBC 1.0)|7|Smallint|Les chiffres décimaux de la colonne sur la source de données. La valeur NULL est retournée pour les types de données où les chiffres décimaux ne sont pas applicables. Pour plus d’informations concernant les chiffres décimaux, consultez [taille de colonne, des chiffres décimaux, transférer la longueur en octets et la taille d’affichage](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md).|  
-|PSEUDO_COLUMN (ODBC 2.0)|8|Smallint|Indique si la colonne est une pseudo-colonne, telles que Oracle ROWID :<br /><br /> SQL_PC_UNKNOWN forme SQL_PC_NOT_PSEUDO SQL_PC_PSEUDO **Remarque :** pour une interopérabilité maximale, pseudo-colonnes ne doivent pas être mis entre guillemets avec l’identificateur de caractère de guillemet retourné par **SQLGetInfo**.|  
+|PSEUDO_COLUMN (ODBC 2.0)|8|Smallint|Indique si la colonne est une pseudo-colonne, telles que Oracle ROWID :<br /><br /> SQL_PC_UNKNOWN forme SQL_PC_NOT_PSEUDO SQL_PC_PSEUDO **Remarque :**  Pour une interopérabilité maximale, pseudo-colonnes ne doivent pas être mis entre guillemets avec l’identificateur de caractère de guillemet retourné par **SQLGetInfo**.|  
   
  Une fois que l’application récupère les valeurs pour SQL_BEST_ROWID, l’application peut utiliser ces valeurs à nouveau cette ligne dans l’étendue définie. Le **sélectionnez** instruction est garantie pour retourner aucune ligne ou une ligne.  
   

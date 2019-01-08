@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a3cffdd8b6040e1740e61043433cc95ca3319f5b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e33dfa78117b68d1cb67baed2aea6bd7f5487e5b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832037"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398122"
 ---
 # <a name="syssequences-transact-sql"></a>sys.sequences (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,19 +39,19 @@ ms.locfileid: "47832037"
 |\<héritée de colonnes >||Hérite de toutes les colonnes de [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).|  
 |**start_value**|**sql_variant non NULL**|Valeur de départ pour l'objet séquence. Si l'objet séquence est redémarré à l'aide d'ALTER SEQUENCE, il redémarrera à cette valeur. Lorsque l’objet séquence cycles il passe à la **minimum_value** ou **maximum_value**, et non le **start_value**.|  
 |**increment**|**sql_variant non NULL**|Valeur utilisée pour incrémenter l'objet séquence après chaque valeur générée.|  
-|**minimum_value**|**sql_variant NULL**|Valeur minimale qui peut être générée par l'objet séquence. Une fois cette valeur est atteinte, l’objet séquence retourne soit une erreur lorsque vous tentez de générer des valeurs plus ou si l’option CYCLE est spécifiée. Si aucun MINVALUE n'a été spécifié, cette colonne retourne la valeur minimale prise en charge par le type de données du générateur de séquence.|  
+|**minimum_value**|**sql_variant NULL**|Valeur minimale qui peut être générée par l'objet séquence. Une fois cette valeur est atteinte, l’objet séquence retourne soit une erreur lorsque vous tentez de générer des valeurs plus ou si l’option CYCLE est spécifiée. Si aucun MINVALUE n’a été spécifiée, cette colonne renvoie la valeur minimale prise en charge par le type de données du Générateur de séquence.|  
 |**maximum_value**|**sql_variant NULL**|Valeur maximale qui peut être générée par l'objet séquence. Une fois cette valeur atteinte, l'objet séquence retourne une erreur lors de la tentative de génération de plus de valeurs ou redémarre si l'option CYCLE est spécifiée. Si aucun MAXVALUE n'a été spécifié, cette colonne retourne la valeur maximale prise en charge par le type de données de l'objet séquence.|  
 |**is_cycling**|**bit pas NULL**|Retourne 0 si NO CYCLE a été spécifié pour l'objet séquence et 1 si CYCLE a été spécifié.|  
 |**is_cached**|**bit pas NULL**|Retourne 0 si NO CACHE a été spécifié pour l'objet séquence et 1 si CACHE a été spécifié.|  
 |**cache_size**|**int NULL**|Retourne la taille de cache spécifiée pour l'objet séquence. Cette colonne contient NULL si la séquence a été créée avec l'option NO CACHE ou si CACHE a été spécifié sans indication de taille de cache. Si la valeur spécifiée par la taille du cache est supérieure au nombre maximal de valeurs qui peuvent être retournées par l'objet séquence, cette taille du cache impossible à obtenir est toujours affichée.|  
-|**system_type_id**|**tinyint non NULL**|ID du type de système pour le type de données de l'objet séquence.|  
+|**system_type_id**|**tinyint non NULL**|ID du type de système de type de données de l’objet séquence.|  
 |**user_type_id**|**int non NULL**|ID du type de données pour l'objet séquence, comme défini par l'utilisateur.|  
-|**Précision**|**tinyint non NULL**|Précision maximale du type de données.|  
-|**Mise à l’échelle**|**tinyint non NULL**|Échelle maximale du type. L'échelle est retournée avec la précision afin de donner des métadonnées complètes aux utilisateurs. L'échelle est toujours de 0 pour les objets séquences car seuls les types entiers sont autorisés.|  
+|**precision**|**tinyint non NULL**|Précision maximale du type de données.|  
+|**scale**|**tinyint non NULL**|Échelle maximale du type. L'échelle est retournée avec la précision afin de donner des métadonnées complètes aux utilisateurs. L'échelle est toujours de 0 pour les objets séquences car seuls les types entiers sont autorisés.|  
 |**Current_value**|**sql_variant non NULL**|La dernière valeur engagée. Autrement dit, la valeur retournée à partir de la dernière exécution de la fonction NEXT VALUE FOR ou la dernière valeur de l’exécution de la **sp_sequence_get_range** procédure. Retourne la valeur START WITH si la séquence n'a jamais été utilisée.|  
 |**is_exhausted**|**bit pas NULL**|0 indique que davantage de valeurs peuvent être générées à partir de la séquence. 1 indique que l'objet séquence a atteint le paramètre MAXVALUE et que la séquence n'est pas définie sur CYCLE. La fonction NEXT VALUE FOR retourne une erreur jusqu'à ce que la séquence soit redémarrée à l'aide d'ALTER SEQUENCE.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et les versions ultérieures, la visibilité des métadonnées dans les affichages catalogue est limitée aux éléments sécurisables qu'un utilisateur détient ou pour lesquels des autorisations lui ont été accordées. Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Voir aussi  

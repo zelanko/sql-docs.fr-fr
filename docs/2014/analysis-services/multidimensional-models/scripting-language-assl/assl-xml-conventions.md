@@ -26,19 +26,19 @@ ms.assetid: bce4edad-4420-41ce-9672-8c00c5c0dec6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4ab537a266924c352466d3b6d2b8364c3498b2b9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cd0a84928e1d5b531119a0a37dbb60d2b9eb3db9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112809"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531407"
 ---
 # <a name="assl-xml-conventions"></a>Conventions ASSL XML
   Le langage de script ASSL (Analysis Services Scripting Language) représente la hiérarchie d'objets comme un ensemble de types d'élément, chacun d'entre eux définissant les éléments enfants qu'il contient.  
   
  Pour représenter la hiérarchie d'objets, ASSL utilise les conventions XML suivantes :  
   
--   Tous les objets et propriétés sont représentés en tant qu'éléments, à l'exception des attributs XML standard tels que « xml:lang ».  
+-   Tous les objets et propriétés sont représentées en tant qu’éléments, à l’exception des attributs XML standard tels que « XML : lang ».  
   
 -   Les noms d’éléments et les valeurs d’énumération suivent la convention d’affectation de noms Microsoft .NET Framework de Pascal sans traits de soulignement de mise en majuscules.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "48112809"
   
  `<Database>`  
   
- `…`  
+ `...`  
   
  `<Dimensions>`  
   
@@ -80,7 +80,7 @@ ms.locfileid: "48112809"
   
  `<Cubes>`  
   
- `<Cube xsi:type=”RegularCube”>`  
+ `<Cube xsi:type="RegularCube">`  
   
  `<Name>Sales</Name>`  
   
@@ -88,7 +88,7 @@ ms.locfileid: "48112809"
   
  `</Cube>`  
   
- `<Cube xsi:type=”VirtualCube”>`  
+ `<Cube xsi:type="VirtualCube">`  
   
  `<Name>SalesAndInventory</Name>`  
   
@@ -123,10 +123,10 @@ ms.locfileid: "48112809"
  Analysis Services utilise les types de données XSD (XML Schema definition language) standard suivants :  
   
  `Int`  
- Valeur entière comprise entre -231 et 231 – 1.  
+ Valeur entière comprise entre-231 et 231-1.  
   
  `Long`  
- Valeur entière comprise entre -263 et 263 – 1.  
+ Valeur entière dans la plage de -263 et 263-1.  
   
  `String`  
  Valeur de chaîne conforme aux règles globales suivantes :  

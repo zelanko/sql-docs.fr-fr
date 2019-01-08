@@ -1,5 +1,5 @@
 ---
-title: Calcul de score en temps réel dans l’apprentissage de SQL Server | Microsoft Docs
+title: Notation à l’aide de la procédure sp_rxPredict stockée - Services de SQL Server Machine Learning en temps réel
 description: Générer des prédictions à l’aide de sp_rxPredict, score des entrées de données par rapport à un modèle préentraîné écrites en R sur SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: dce0928c0675172c503e6783aa25d6cbcaec9b5f
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: def60a6de7d5a6f3641a6de88410543e9e592ba4
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46713512"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645158"
 ---
 # <a name="real-time-scoring-with-sprxpredict-in-sql-server-machine-learning"></a>Notation avec sp_rxPredict dans l’apprentissage de SQL Server en temps réel
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -177,7 +177,7 @@ Vous appelez sp\_rxPredict en tant que vous le feriez pour n’importe quel autr
 
 Étant donné que le format binaire est le même que celui utilisé par la fonction PREDICT, vous pouvez utiliser la table de données et des modèles à partir de l’exemple précédent.
 
-```SQL
+```sql
 DECLARE @irismodel varbinary(max)
 SELECT @irismodel = [native_model_object] from [ml_models]
 WHERE model_name = 'iris.dtree' 

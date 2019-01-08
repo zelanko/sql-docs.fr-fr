@@ -1,5 +1,5 @@
 ---
-title: Générateur de modèles tabulaires dans SQL Server Data Tools | Documents Microsoft
+title: Concepteur de modèle tabulaire Analysis Services dans SQL Server Data Tools | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 98c836650ef00b283718ddf22834f7e4d4a56e0f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 8be4f1f78b444933cc1ad7f4ec4fb71b28bfae1b
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34044843"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072566"
 ---
-# <a name="tabular-model-designer"></a>Générateur de modèles tabulaires
+# <a name="tabular-model-designer"></a>Concepteur de modèle tabulaire
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-Le générateur de modèles tabulaires fait partie de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], intégré à Microsoft [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], qui propose des modèles de type de projet supplémentaires propres au développement de solutions de modèles tabulaires professionnelles.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] peut être téléchargé gratuitement sur Internet. Pour plus d’informations, consultez [Télécharger SSDT (SQL Server Data Tools)](../../ssdt/download-sql-server-data-tools-ssdt.md).    
+Le générateur de modèles tabulaires fait partie de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], intégré à Microsoft [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], qui propose des modèles de type de projet supplémentaires propres au développement de solutions de modèles tabulaires professionnelles.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] peut être téléchargé gratuitement sur Internet. Pour plus d’informations, consultez [Télécharger SSDT (SQL Server Data Tools)](../../ssdt/download-sql-server-data-tools-ssdt.md) .    
   
 ##  <a name="bkmk_benefits"></a> Avantages  
  Lorsque vous installez [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], de nouveaux modèles de projet de création de modèles tabulaires sont ajoutés aux types de projet disponibles. Une fois un nouveau projet de modèle tabulaire créé à l'aide de l'un des modèles, vous pouvez commencer à créer un modèle à l'aide des outils et des assistants du générateur de modèles tabulaires.  
@@ -54,7 +54,7 @@ Le générateur de modèles tabulaires fait partie de [!INCLUDE[ssBIDevStudioFul
  La plupart des tâches de création de modèles peuvent être effectuées dans l'une ou l'autre vue.  
   
 ### <a name="view-code-window"></a>Afficher la fenêtre de Code  
- Vous pouvez visualiser le code associé à un fichier Model.bim en cliquant avec le bouton droit sur le fichier dans l’Explorateur de solutions et en sélectionnant **Afficher le code** . Pour les modèles tabulaires au niveau de compatibilité 1200 et versions ultérieur, la définition du modèle est exprimée en JSON.  
+ Vous pouvez visualiser le code associé à un fichier Model.bim en cliquant avec le bouton droit sur le fichier dans l’Explorateur de solutions et en sélectionnant **Afficher le code** . Pour les modèles tabulaires au niveau de compatibilité 1200 et versions ultérieur, la définition du modèle est exprimée au format JSON.  
   
  Notez que vous devrez disposer d’une version complète de Visual Studio qui fournit l’éditeur JSON. Vous pouvez télécharger et installer l’ [édition gratuite Visual Studio Community](https://www.visualstudio.com/downloads/download-visual-studio-vs.aspx) si vous n’avez pas besoin des fonctions supplémentaires disponibles dans les éditions commerciales.  
   
@@ -66,13 +66,13 @@ Le générateur de modèles tabulaires fait partie de [!INCLUDE[ssBIDevStudioFul
  Pour afficher l'Explorateur de solutions, dans le menu **Affichage** , cliquez sur **Explorateur de solutions**.  
 
 ### <a name="tabular-model-explorer"></a>Explorateur de modèles tabulaires
-  Première disponibles dans la version d’août 2016 (14.0.60812.0) de [SQL Server Data Tools](https://msdn.microsoft.com/mt186501), l’Explorateur de modèles tabulaires vous permet d’atteindre des objets de métadonnées dans les modèles tabulaires.
+  Première disponibles dans la version d’août 2016 (14.0.60812.0) de [SQL Server Data Tools](https://msdn.microsoft.com/mt186501), Explorateur de modèles tabulaires vous permet de naviguer parmi les objets de métadonnées dans les modèles tabulaires.
 
  Pour afficher l’Explorateur de modèles tabulaires, cliquez sur **Afficher** > **Autres fenêtres**, puis cliquez sur l’ **Explorateur de modèles tabulaires**.
    
   ![Explorateur de modèles tabulaires](../../analysis-services/tabular-models/media/tabular-model-explorer.png) 
   
- L’Explorateur de modèles tabulaires organise les objets de métadonnées dans une arborescence qui ressemble le schéma d’un modèle tabulaire. Les sources de données, perspectives, relations, rôles, tables et traductions correspondent à des objets de schéma de niveau supérieur. Il existe quelques exceptions, en particulier les indicateurs de performance clé et les mesures qui techniquement ne sont pas des objets de niveau supérieur, mais des objets enfants des diverses tables du modèle. Cependant, le fait de disposer de conteneurs de niveau supérieur consolidés pour l’ensemble des indicateurs de performance clés et des mesures facilite l’utilisation de ces objets, notamment si votre modèle inclut un très grand nombre de tables. Les mesures sont également répertoriées dans leurs tables parent correspondantes, de sorte que vous ayez une vue claire des relations parent-enfant réelles. Si vous sélectionnez une mesure dans le conteneur de mesures de niveau supérieur, la même mesure est également sélectionnée dans la collection enfant sous sa table et vice versa.  
+ Explorateur de modèles tabulaires organise les objets de métadonnées dans une arborescence qui ressemble étroitement au schéma d’un modèle tabulaire. Les sources de données, perspectives, relations, rôles, tables et traductions correspondent à des objets de schéma de niveau supérieur. Il existe quelques exceptions près, en particulier les indicateurs de performance clés et les mesures qui techniquement ne sont pas des objets de niveau supérieur, mais les objets enfants des diverses tables dans le modèle. Cependant, le fait de disposer de conteneurs de niveau supérieur consolidés pour l’ensemble des indicateurs de performance clés et des mesures facilite l’utilisation de ces objets, notamment si votre modèle inclut un très grand nombre de tables. Les mesures sont également répertoriées dans leurs tables parent correspondantes, de sorte que vous ayez une vue claire des relations parent-enfant réelles. Si vous sélectionnez une mesure dans le conteneur de mesures de niveau supérieur, la même mesure est également sélectionnée dans la collection enfant sous sa table et vice versa.  
  
  Les nœuds d’objet dans l’Explorateur de modèles tabulaires sont liés aux options de menu appropriées qui jusqu’à présent étaient masquées sous les menus Modèle, Table et Colonne dans Visual Studio. Vous pouvez cliquer avec le bouton droit sur un objet pour explorer les options relatives au type d’objet. Tous les types de nœuds d’objet n’ont pas encore de menu contextuel, mais des améliorations ainsi que des options supplémentaires seront intégrées aux prochaines versions. 
 
@@ -83,9 +83,9 @@ Le générateur de modèles tabulaires fait partie de [!INCLUDE[ssBIDevStudioFul
   
 -   Model.bim  
   
--   Table  
+-   Table de charge de travail  
   
--   Colonne  
+-   colonne  
   
 -   Measure  
   

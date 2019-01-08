@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - max-depth annotation
@@ -23,12 +21,12 @@ ms.assetid: 0ffdd57d-dc30-44d9-a8a0-f21cadedb327
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a815a5d5213d4069df6ceda490ee9f4b7e92b279
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 569bbbdec39a37ef7427a195529f26efc9d9b2a3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189149"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52800831"
 ---
 # <a name="specifying-depth-in-recursive-relationships-by-using-sqlmax-depth"></a>Spécification de la profondeur dans les relations récursives à l'aide de sql:max-depth
   Dans les bases de données relationnelles, lorsqu'une table est impliquée dans une relation avec elle-même, on utilise le terme de relation récursive. Par exemple, dans une relation responsable-subalterne, une table qui stocke des enregistrements d'employés est impliquée dans une relation avec elle-même. Dans ce cas, la table d'employés joue un rôle de responsable d'un côté de la relation, et la même table joue un rôle de subalterne de l'autre côté.  
@@ -148,7 +146,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
   
 5.  Créez et utilisez le script de test SQLXML 4.0 (Sqlxml4test.vbs) pour exécuter le modèle. Pour plus d’informations, consultez [à l’aide d’ADO pour exécuter des requêtes SQLXML 4.0](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <?xml version="1.0" encoding="utf-8" ?>   
@@ -231,7 +229,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
 ## <a name="sqlmax-depth-annotation"></a>Annotation sql:max-depth  
  Dans un schéma constitué de relations récursives, la profondeur de récursivité doit être spécifiée explicitement dans le schéma. Cela est nécessaire afin de produire avec succès la requête FOR XML EXPLICIT correspondante qui retourne les résultats demandés.  
   
- Utilisez l'annotation `sql:max-depth` dans le schéma pour spécifier la profondeur de récursivité dans une relation récursive décrite dans le schéma. La valeur de l'annotation `sql:max-depth` est un entier positif (1 à 50) qui indique le nombre de récursivités : une valeur de 1 arrête la récursivité à l'élément pour lequel l'annotation `sql:max-depth` est spécifiée ; une valeur de 2 arrête la récursivité au niveau suivant l'élément auquel `sql:max-depth` est spécifié ; et ainsi de suite.  
+ Utilisez l'annotation `sql:max-depth` dans le schéma pour spécifier la profondeur de récursivité dans une relation récursive décrite dans le schéma. La valeur de la `sql:max-depth` annotation est un entier positif (1 à 50) qui indique le nombre de récursivités :  Une valeur de 1 arrête la récursivité à l’élément pour lequel le `sql:max-depth` annotation est spécifiée ; une valeur de 2 arrête la récursivité au niveau suivant de l’élément auquel `sql:max-depth` est spécifié ; et ainsi de suite.  
   
 > [!NOTE]  
 >  Dans l'implémentation sous-jacente, une requête XPath spécifiée contre un schéma de mappage est convertie en requête SELECT ... FOR XML EXPLICIT. Cette requête nécessite que vous spécifiiez une profondeur de récursivité finie. Plus la valeur que vous spécifiez pour `sql:max-depth` est élevée, plus la requête FOR XML EXPLICIT générée est grande. Cela risque d'allonger la durée de récupération.  

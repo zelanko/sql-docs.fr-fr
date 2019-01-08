@@ -10,12 +10,12 @@ ms.assetid: f551cf6e-1575-4206-9cca-975b5b43a6b8
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 7026828bff099b131556dbffd3d990c695bd5ff2
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: fee221caf91d5d70f291f9351d05a00352e7cc00
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662478"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400043"
 ---
 # <a name="conversion-settings-mysqltosql"></a>Paramètres de conversion (MySQLToSQL)
 Le **'Paramètres'** onglet permet à l’utilisateur définir les paramètres au niveau du nœud. L’onglet seront disponible sur les nœuds de la métabase suivants :  
@@ -67,7 +67,7 @@ Ces paramètres seront disponibles sur le type de nœud de la métabase. Par exe
   
         -   Oui  
   
-        -   non  
+        -   Non  
   
         -   Convertir en fonction des paramètres de projet  
   

@@ -11,20 +11,20 @@ ms.assetid: 92eb21a8-5fc4-4999-ad37-1332ce26431d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: caea636c7c319bfb4db2cc54e062bb00de9bb3b2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c0817db540c9db8f17fbc71da68f43cc68645190
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089644"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52391712"
 ---
-# <a name="lesson-11-create-partitions"></a>Leçon 11 : Créer des partitions
-  Dans cette leçon, vous allez créer des partitions pour diviser la table Internet Sales en parties logiques plus petites pouvant être traitées (actualisées) indépendamment d'autres partitions. Par défaut, chaque table que vous incluez dans votre modèle a une partition qui comprend toutes les lignes et colonnes de la table. Pour la table Internet Sales, nous souhaitons diviser les données par année ; une partition pour tous les cinq ans de la table.  Chaque partition peut ensuite être traitée indépendamment. Pour plus d’informations, consultez [Partitions &#40;SSAS Tabulaire&#41;](tabular-models/partitions-ssas-tabular.md).  
+# <a name="lesson-11-create-partitions"></a>Leçon 11 : Créer des partitions
+  Dans cette leçon, vous allez créer des partitions pour diviser la table Internet Sales en parties logiques plus petites pouvant être traitées (actualisées) indépendamment d'autres partitions. Par défaut, chaque table que vous incluez dans votre modèle comporte une partition qui inclut toutes les colonnes et les lignes de la table. Pour la table Internet Sales, nous souhaitons diviser les données par année ; une seule partition pour chacune des cinq années de la table.  Chaque partition peut ensuite être traitée indépendamment. Pour plus d’informations, consultez [Partitions &#40;SSAS Tabulaire&#41;](tabular-models/partitions-ssas-tabular.md).  
   
- Durée estimée pour effectuer cette leçon : **15 minutes**  
+ Durée estimée pour effectuer cette leçon : **15 minutes**  
   
 ## <a name="prerequisites"></a>Prérequis  
- Cette rubrique fait partie d'un didacticiel de modélisation tabulaire, qui doit être suivi dans l'ordre. Avant d’effectuer les tâches de cette leçon, vous devez avoir terminé la leçon précédente : [Leçon 10 : Créer des hiérarchies](lesson-9-create-hierarchies.md).  
+ Cette rubrique fait partie d'un didacticiel de modélisation tabulaire, qui doit être suivi dans l'ordre. Avant d’effectuer les tâches de cette leçon, vous devez avoir terminé la leçon précédente : [Leçon 10 : Créer des hiérarchies](lesson-9-create-hierarchies.md).  
   
 ## <a name="create-partitions"></a>Créer des partitions  
   
@@ -80,7 +80,7 @@ ms.locfileid: "48089644"
   
 6.  Cliquez sur **Valider**.  
   
-     Notez qu'un avertissement s'affiche indiquant que certaines colonnes ne sont pas présentes dans la source. Il s’agit, car dans [leçon 3 : renommer des colonnes](rename-columns.md), vous avez renommé ces colonnes dans la table Internet Sales dans le modèle soit différent de ces mêmes colonnes au niveau de la source.  
+     Notez qu'un avertissement s'affiche indiquant que certaines colonnes ne sont pas présentes dans la source. Il s’agit, car dans [leçon 3 : Renommer des colonnes](rename-columns.md), vous avez renommé ces colonnes dans la table Internet Sales dans le modèle soit différent de ces mêmes colonnes au niveau de la source.  
   
 #### <a name="to-create-a-partition-for-the-2006-year-in-the-internet-sales-table"></a>Pour créer une partition pour l’année 2006 dans la table Internet Sales  
   
@@ -154,6 +154,6 @@ ms.locfileid: "48089644"
      Le **données processus** boîte de dialogue s’affiche, puis affiche les détails du processus pour chaque partition. Notez qu'un nombre de lignes différent est transféré pour chaque partition. Cela est dû au fait que chaque partition contient uniquement les lignes de l'année spécifiée dans la clause WHERE dans l'instruction SQL. Il n'y a pas de données pour l'année 2010.  
   
 ## <a name="next-steps"></a>Étapes suivantes  
- Pour continuer ce didacticiel, passez à la leçon suivante : [Leçon 12 : Créer des rôles](lesson-11-create-roles.md).  
+ Pour continuer ce didacticiel, passez à la leçon suivante : Leçon : [Leçon 12 : Créer des rôles](lesson-11-create-roles.md).  
   
   

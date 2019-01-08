@@ -15,21 +15,21 @@ ms.assetid: 209d9e22-37fc-418f-8739-83adcf447d3f
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 79eb8344ef875aa76cde5b0ffcc34aa0bf23e1b6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1061ae540d4773ae53560c464d2af568c8e35782
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122369"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589623"
 ---
 # <a name="project-property-pages-dialog-box"></a>Pages de propriétés du projet, boîte de dialogue
-  Utilisez les pages de propriétés du projet pour configurer les propriétés de déploiement d'un projet Report Server. Pour ouvrir cette boîte de dialogue, dans le menu **Projet**, cliquez sur *\<Nom du projet de rapport>***Propriétés**.  
+  Utilisez les pages de propriétés du projet pour configurer les propriétés de déploiement d'un projet Report Server. Pour ouvrir cette boîte de dialogue, dans le menu **Projet**, cliquez sur _\<Nom du projet de rapport>_**Propriétés**.  
   
  Après avoir défini les propriétés de configuration, sélectionnez une configuration dans la liste déroulante **Configurations de solutions** de la barre d’outils.  
   
 ## <a name="options"></a>Options  
  **Configuration**  
- Sélectionnez la configuration à modifier. Initialement, les configurations suivantes sont disponibles : **Debug**, **DebugLocal**et **Release**. La configuration active apparaît d’abord, par exemple, **Active(Débogage)**.  
+ Sélectionnez la configuration à modifier. Initialement, les configurations suivantes sont disponibles : **Déboguer**, **DebugLocal**, et **version**. La configuration active apparaît d’abord, par exemple, **Active(Débogage)**.  
   
  Pour consulter simultanément les propriétés de plusieurs configurations, sélectionnez **Toutes les configurations** ou **Configurations multiples**.  
   
@@ -79,8 +79,8 @@ ms.locfileid: "48122369"
   
 ## <a name="see-also"></a>Voir aussi  
  [Publier des rapports](../publish-reports.md)   
- [Publier un rapport dans une bibliothèque SharePoint](../reports/publish-a-report-to-a-sharepoint-library.md)   
- [Définir les propriétés de déploiement &#40;Reporting Services&#41;](set-deployment-properties-reporting-services.md)   
+ [publier un rapport dans une bibliothèque SharePoint](../reports/publish-a-report-to-a-sharepoint-library.md)   
+ [Définir des propriétés de déploiement &#40;Reporting Services&#41;](set-deployment-properties-reporting-services.md)   
  [Aide sur le concepteur de rapports via la touche F1](report-designer-f1-help.md)  
   
   

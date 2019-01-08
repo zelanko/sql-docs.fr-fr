@@ -20,16 +20,16 @@ ms.assetid: 0451d2f9-0f4f-46ba-b252-670956a52183
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 98fb29265c17970fbcef0f21778d7a9130e52771
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7ac3d24b1213096be20658fb48dbfe9a6d39df8f
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644517"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206968"
 ---
 # <a name="sqlgetfunctions-function"></a>Fonction SQLGetFunctions
 **Conformité**  
- Version introduite : La mise en conformité des normes 1.0 ODBC : ISO 92  
+ Version introduite : Conformité aux normes 1.0 ODBC : ISO 92  
   
  **Résumé**  
  **SQLGetFunctions** retourne les informations si un pilote prend en charge une fonction ODBC spécifique. Cette fonction est implémentée dans le Gestionnaire de pilotes ; elle peut également être implémentée dans les pilotes. Si un pilote implémente **SQLGetFunctions**, le Gestionnaire de pilotes appelle la fonction dans le pilote. Sinon, il exécute la fonction elle-même.  
@@ -83,7 +83,7 @@ SQLRETURN SQLGetFunctions(
 ## <a name="comments"></a>Commentaires  
  **SQLGetFunctions** qui retourne toujours **SQLGetFunctions**, **SQLDataSources**, et **SQLDrivers** sont pris en charge. Pour cela, car ces fonctions sont implémentées dans le Gestionnaire de pilotes. Si la fonction Unicode existe et qu’il mappera une fonction Unicode à la fonction ANSI correspondante si la fonction ANSI existe, le Gestionnaire de pilotes mappera une fonction ANSI à la fonction Unicode correspondante. Pour plus d’informations sur l’utilisation des applications **SQLGetFunctions**, consultez [les niveaux de conformité Interface](../../../odbc/reference/develop-app/interface-conformance-levels.md).  
   
- Voici une liste des valeurs valides pour *FunctionId* pour les fonctions qui sont conformes au niveau – la conformité aux normes ISO 92 :  
+ Voici une liste des valeurs valides pour *FunctionId* pour les fonctions qui sont conformes au niveau de la conformité aux normes ISO 92 :  
   
 |Valeur FunctionId|Valeur FunctionId|  
 |----------|----------|  
@@ -109,14 +109,14 @@ SQLRETURN SQLGetFunctions(
 |SQL_API_SQLGETCURSORNAME|SQL_API_SQLSETSTMTATTR|  
 |SQL_API_SQLGETDATA| |  
   
- Voici une liste des valeurs valides pour *FunctionId* pour les fonctions conforme au niveau de la conformité aux normes – Open Group :  
+ Voici une liste des valeurs valides pour *FunctionId* pour les fonctions conforme au niveau de la conformité aux normes Open Group :  
   
 |Valeur FunctionId|Valeur FunctionId|  
 |-|-|  
 |SQL_API_SQLCOLUMNS|SQL_API_SQLSTATISTICS|  
 |SQL_API_SQLSPECIALCOLUMNS|SQL_API_SQLTABLES|  
   
- Voici une liste des valeurs valides pour *FunctionId* pour les fonctions conforme au niveau de la conformité aux normes – ODBC.  
+ Voici une liste des valeurs valides pour *FunctionId* pour les fonctions conforme au niveau de la conformité aux normes ODBC.  
   
 |Valeur FunctionId|Valeur FunctionId|  
 |-|-|  
@@ -142,7 +142,7 @@ SQLRETURN SQLGetFunctions(
 ## <a name="sqlfuncexists-macro"></a>SQL_FUNC_EXISTS Macro  
  Le SQL_FUNC_EXISTS (*SupportedPtr*, *FunctionID*) macro est utilisée pour déterminer la prise en charge d’ODBC 3 *.x* ou fonctions antérieures après **SQLGetFunctions**  a été appelé avec un *FunctionId* argument de SQL_API_ODBC3_ALL_FUNCTIONS. L’application appelle SQL_FUNC_EXISTS avec la *SupportedPtr* affectée à l’argument le *SupportedPtr* transmis *SQLGetFunctions*et avec le  *FunctionID* affectée à l’argument le **#define** pour la fonction. SQL_FUNC_EXISTS retourne SQL_TRUE si la fonction est prise en charge et SQL_FALSE dans le cas contraire.  
   
-> [!NOTE]  
+> [!NOTE]
 >  Lorsque vous travaillez avec un ODBC 2 *.x* pilote, le 3 ODBC *.x* Gestionnaire de pilotes retourne SQL_TRUE pour **SQLAllocHandle** et **SQLFreeHandle**car **SQLAllocHandle** est mappé à **SQLAllocEnv**, **SQLAllocConnect**, ou **SQLAllocStmt**, et Étant donné que **SQLFreeHandle** est mappé à **SQLFreeEnv**, **SQLFreeConnect**, ou **SQLFreeStmt**. **SQLAllocHandle** ou **SQLFreeHandle** avec un *HandleType* argument de SQL_HANDLE_DESC n'est pas pris en charge, toutefois, même si SQL_TRUE est retourné pour les fonctions, car il n’est pas ODBC 2 *.x* fonction permettant de mapper vers dans ce cas.  
   
 ## <a name="code-example"></a>Exemple de code  

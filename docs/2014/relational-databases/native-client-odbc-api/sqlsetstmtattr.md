@@ -14,12 +14,12 @@ ms.assetid: 799c80fd-c561-4912-8562-9229076dfd19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: edd96f9927a5fe698dd47489beffc738b5456708
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 31493eb8c685fbb31fa21691794740eb2b61219c
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208515"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361283"
 ---
 # <a name="sqlsetstmtattr"></a>SQLSetStmtAttr
   Le pilote ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  Native Client ne prend pas en charge le modèle de curseur mixte (jeu de clés/dynamique). Les tentatives de définir la taille du jeu de clés à l'aide de SQL_ATTR_KEYSET_SIZE échoue si la valeur définie n'est pas égale à 0.  
@@ -64,7 +64,7 @@ ms.locfileid: "48208515"
   
 |*ValuePtr* valeur|Description|  
 |----------------------|-----------------|  
-|SQL_DP_ON|Valeur par défaut. Après avoir appelé [SQLPrepare, fonction](http://go.microsoft.com/fwlink/?LinkId=59360), la préparation de l’instruction est différée jusqu'à ce que **SQLExecute** est appelée ou opération de métapropriété (**SQLDescribeCol** ou **SQLDescribeParam**) est exécutée.|  
+|SQL_DP_ON|Valeur par défaut. Après avoir appelé [SQLPrepare, fonction](https://go.microsoft.com/fwlink/?LinkId=59360), la préparation de l’instruction est différée jusqu'à ce que **SQLExecute** est appelée ou opération de métapropriété (**SQLDescribeCol** ou **SQLDescribeParam**) est exécutée.|  
 |SQL_DP_OFF|L’instruction est préparée dès que **SQLPrepare** est exécutée.|  
   
 ### <a name="sqlsoptssregionalize"></a>SQL_SOPT_SS_REGIONALIZE  
@@ -122,7 +122,7 @@ ms.locfileid: "48208515"
   
  Le type de SQL_SOPT_SS_PARAM_FOCUS est SQLULEN.  
   
- La valeur par défaut est 0, ce qui signifie que ces appels adressent les paramètres qui correspondent aux marqueurs de paramètre dans l'instruction SQL. En cas de définition sur le numéro de paramètre d'un paramètre table, ces appels adressent les colonnes de ce paramètre table. En cas de définition sur une valeur qui n'est pas le numéro de paramètre d'un paramètre table, ces appels retournent l'erreur IM020 : « Le focus de paramètre ne fait pas référence à un paramètre table ».  
+ La valeur par défaut est 0, ce qui signifie que ces appels adressent les paramètres qui correspondent aux marqueurs de paramètre dans l'instruction SQL. En cas de définition sur le numéro de paramètre d'un paramètre table, ces appels adressent les colonnes de ce paramètre table. Lorsque la valeur est une valeur qui n’est pas le numéro de paramètre d’un paramètre table, ces appels retournent l’erreur IM020 : « Focus de paramètre ne fait pas référence à un paramètre table ».  
   
 ### <a name="sqlsoptssnamescope"></a>SQL_SOPT_SS_NAME_SCOPE  
  L'attribut SQL_SOPT_SS_NAME_SCOPE spécifie la portée de nom des appels de fonctions de catalogue suivants. Le jeu de résultats retourné par SQLColumns dépend de la valeur de SQL_SOPT_SS_NAME_SCOPE.  
@@ -146,7 +146,7 @@ ms.locfileid: "48208515"
  Si une fonction de catalogue autre SQLTables, SQLColumns ou SQLPrimaryKeys est appelée lorsque SQL_SOPT_SS_NAME_SCOPE a une valeur autre que SQL_SS_NAME_SCOPE_TABLE, SQL_ERROR est retourné. Un enregistrement de diagnostic est généré avec SQLSTATE HY010 et le message « Erreur de séquence de fonction (SQL_SOPT_SS_NAME_SCOPE n'est pas défini avec la valeur SQL_SS_NAME_SCOPE_TABLE) ».  
   
 ## <a name="see-also"></a>Voir aussi  
- [SQLGetStmtAttr, fonction](http://go.microsoft.com/fwlink/?LinkId=59355)   
+ [SQLGetStmtAttr, fonction](https://go.microsoft.com/fwlink/?LinkId=59355)   
  [Détails de l’implémentation d’API ODBC](odbc-api-implementation-details.md)  
   
   

@@ -12,12 +12,12 @@ ms.assetid: 5ed6f7cd-d9af-4439-9f33-fc935b883d91
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: d9fe261aefff3013f9a97b1a3f8d2b4ce0b1453e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9a67eff74a4c95a851c65b2fb7db959d765bc192
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48052469"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374531"
 ---
 # <a name="new-full-text-catalog-general-page"></a>Nouveau catalogue de texte intégral (page Général)
   Utilisez cette boîte de dialogue pour créer un catalogue de texte intégral.  
@@ -38,7 +38,7 @@ ms.locfileid: "48052469"
  Sélectionnez cette option pour définir le catalogue comme catalogue par défaut pour les nouveaux catalogues de texte intégral.  
   
  **Respect des accents**  
- Indique si le catalogue respecte ou non les signes diacritiques, par exemple le tilde (**~**), l'accent aigu (**´**) ou le tréma (**¨**). Si vous sélectionnez **Non-respect**, les signes diacritiques sont ignorés dans les index de recherche en texte intégral qui sont associés à ce catalogue de texte intégral. Pour plus d’informations sur les marques diacritiques, consultez[DIACRITIQUE](http://go.microsoft.com/fwlink/?LinkId=154091) dans l’Encyclopédie Encarta MSN.  
+ Indique si le catalogue respecte ou non les signes diacritiques, par exemple le tilde (**~**), l'accent aigu (**´**) ou le tréma (**¨**). Si vous sélectionnez **Non-respect**, les signes diacritiques sont ignorés dans les index de recherche en texte intégral qui sont associés à ce catalogue de texte intégral. Pour plus d’informations sur les marques diacritiques, consultez[DIACRITIQUE](https://go.microsoft.com/fwlink/?LinkId=154091) dans l’Encyclopédie Encarta MSN.  
   
 ## <a name="see-also"></a>Voir aussi  
  [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-catalog-transact-sql)  

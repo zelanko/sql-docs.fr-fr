@@ -15,12 +15,12 @@ ms.assetid: f3395c65-0320-47f9-8d83-daaa082d8713
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: aa56e9366fdc60a5b411e19b200706f0404e7312
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2991d6b79c9cbfbd37466484e1c4394b6e0fb804
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209729"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369361"
 ---
 # <a name="lookup-transformation-editor-advanced-page"></a>Éditeur de transformation de recherche (page Avancé)
   La page **Avancé** de la boîte de dialogue **Éditeur de transformation de recherche** permet de configurer la mise en cache partielle et de modifier l’instruction SQL pour la transformation de recherche.  
@@ -44,20 +44,20 @@ ms.locfileid: "48209729"
  Modifiez l'instruction SQL utilisée pour générer le dataset de référence.  
   
 > [!NOTE]  
->  L’instruction SQL facultative que vous spécifiez dans cette page substitue et remplace le nom de table que vous avez spécifié dans la page **Connexion** de **l’Éditeur de transformation de recherche**. Pour plus d’informations, consultez [Lookup Transformation Editor &#40;Connection Page&#41;](../../2014/integration-services/lookup-transformation-editor-connection-page.md).  
+>  L’instruction SQL facultative que vous spécifiez dans cette page substitue et remplace le nom de table que vous avez spécifié dans la page **Connexion** de **l’Éditeur de transformation de recherche**. Pour plus d’informations, consultez [Éditeur de transformation de recherche &#40;page Connexion&#41;](../../2014/integration-services/lookup-transformation-editor-connection-page.md).  
   
  **Définition des paramètres**  
  Mappez les colonnes d’entrée aux paramètres en utilisant la boîte de dialogue **Définition des paramètres de la requête** .  
   
 ## <a name="external-resources"></a>Ressources externes  
- Entrée de blog, [Lookup cache modes](http://go.microsoft.com/fwlink/?LinkId=219518) sur blogs.msdn.com  
+ Entrée de blog, [Lookup cache modes](https://go.microsoft.com/fwlink/?LinkId=219518) sur blogs.msdn.com  
   
 ## <a name="see-also"></a>Voir aussi  
- [Éditeur de Transformation de recherche &#40;Page Général&#41;](general-page-of-integration-services-designers-options.md)   
- [Éditeur de Transformation de recherche &#40;Page de connexion&#41;](../../2014/integration-services/lookup-transformation-editor-connection-page.md)   
+ [Éditeur de transformation de recherche &#40;page Général&#41;](general-page-of-integration-services-designers-options.md)   
+ [Éditeur de transformation de recherche &#40;page Connexion&#41;](../../2014/integration-services/lookup-transformation-editor-connection-page.md)   
  [Éditeur de transformation de recherche &#40;page Colonnes&#41;](../../2014/integration-services/lookup-transformation-editor-columns-page.md)   
- [Éditeur de Transformation de recherche &#40;Page sortie d’erreur&#41;](../../2014/integration-services/lookup-transformation-editor-error-output-page.md)   
- [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Éditeur de transformation de recherche &#40;page Sortie d’erreur&#41;](../../2014/integration-services/lookup-transformation-editor-error-output-page.md)   
+ [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Transformation de recherche floue](data-flow/transformations/fuzzy-lookup-transformation.md)  
   
   

@@ -33,15 +33,15 @@ ms.assetid: f5c9209d-b3f3-4543-b30b-01365a5e7333
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3bb1fc2c37d56750a9ed66442e56dd7f9a22b8cb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 09aaf68c28e9f647f2f682de09e3f681bc3d739f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106959"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368121"
 ---
 # <a name="xml-indexes-sql-server"></a>Index XML (SQL Server)
-  Index XML peuvent être créés sur `xml` colonnes de type de données. L'indexation porte sur les balises, les valeurs et les chemins d'accès rencontrés dans les instances XML de la colonne et contribue à l'optimisation des performances des requêtes. Votre application peut bénéficier d'un index XML dans les situations suivantes :  
+  Des index XML peuvent être créés sur des colonnes de type `xml`. L'indexation porte sur les balises, les valeurs et les chemins d'accès rencontrés dans les instances XML de la colonne et contribue à l'optimisation des performances des requêtes. Votre application peut bénéficier d'un index XML dans les situations suivantes :  
   
 -   Les requêtes portant sur des colonnes XML sont fréquentes dans votre charge de travail. Le coût de la maintenance des index XML au cours de la modification des données doit être pris en compte lors de l'évaluation des avantages.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "48106959"
   
 -   Index XML secondaires  
   
- Le premier index portant sur la colonne de type `xml` est obligatoirement l'index XML primaire. Par le biais de l'index XML primaire, les trois types d'index secondaires suivants sont pris en charge : PATH, VALUE, and PROPERTY. Selon le type de requêtes, ces index secondaires peuvent contribuer à améliorer les performances liées à l'exécution de requêtes.  
+ Le premier index portant sur la colonne de type `xml` est obligatoirement l'index XML primaire. Par le biais de l'index XML primaire, les trois types d'index secondaires suivants sont pris en charge : PATH, VALUE et PROPERTY. Selon le type de requêtes, ces index secondaires peuvent contribuer à améliorer les performances liées à l'exécution de requêtes.  
   
 > [!NOTE]  
 >  Vous ne pouvez pas créer ou modifier d'index XML à moins que les options de base de données ne soient définies correctement pour utiliser le type de données `xml`. Pour plus d’informations, consultez [Utiliser la recherche en texte intégral avec des colonnes XML](use-full-text-search-with-xml-columns.md).  
@@ -61,7 +61,7 @@ ms.locfileid: "48106959"
  Les instances XML sont stockées dans les colonnes de type `xml` sous forme de BLOB (Binary Large Objects, objets volumineux binaires). Ces instances XML peuvent donc être volumineuses et la représentation binaire stockée d'instances de type `xml` peut atteindre jusqu'à 2 Go. Sans index, ces objets sont fragmentés au moment de l'exécution du programme afin d'évaluer une requête, ce qui peut prendre du temps. Examinons, par exemple, la requête suivante :  
   
 ```  
-WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")  
+WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")  
   
 SELECT CatalogDescription.query('  
   /PD:ProductDescription/PD:Summary  
@@ -72,12 +72,12 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
   
  Pour pouvoir sélectionner les instances XML satisfaisant la condition stipulée dans la clause `WHERE` , le BLOB XML se trouvant dans chaque ligne de la table `Production.ProductModel` est fragmenté au moment de l'exécution. L'expression `(/PD:ProductDescription/@ProductModelID[.="19"]`) tirée de la méthode `exist()` est ensuite évaluée. Une telle fragmentation à l'exécution peut être coûteuse selon la taille et le nombre d'instances stockées dans la colonne.  
   
- Si l’interrogation des objets binaires volumineux (BLOB) XML est courant dans votre environnement d’application, il permet d’indexer le `xml` colonnes de type. En contrepartie, le coût associé à la gestion de l'index lors de la modification des données est également à prendre en compte.  
+ Si l'exécution de requêtes sur des BLOB est courante dans l'environnement de votre application, cette méthodologie permet d'indexer les colonnes de type `xml`. En contrepartie, le coût associé à la gestion de l'index lors de la modification des données est également à prendre en compte.  
   
 ## <a name="primary-xml-index"></a>Index XML primaires  
  L'index XML primaire indexe toutes les balises, valeurs et chemins d'accès rencontrés dans les instances XML d'une colonne XML. Pour créer un index XML primaire, la table contenant la colonne XML doit posséder un index cluster portant sur la clé primaire de la table. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise cette clé primaire pour corréler les lignes de l'index XML primaire avec des lignes dans la table qui contient la colonne XML.  
   
- L’index XML primaire est une représentation fragmentée et persistante des objets BLOB XML dans le `xml` colonne de type de données. Pour chacun de ces objets blob XML de la colonne, l'index crée plusieurs lignes de données. Le nombre de lignes dans l'index est presque égal au nombre de nœuds se trouvant dans l'objet blob XML. Lorsqu'une requête extrait l'intégralité de l'instance XML, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit l'instance à partir de la colonne XML. Les requêtes dans des instances XML utilisent l'index XML primaire et peuvent renvoyer des valeurs scalaires ou des sous-arborescences XML en se servant de l'index lui-même.  
+ L'index XML primaire correspond à une représentation fragmentée et persistante des objets blob XML inclus dans la colonne des données de type `xml`. Pour chacun de ces objets blob XML de la colonne, l'index crée plusieurs lignes de données. Le nombre de lignes dans l'index est presque égal au nombre de nœuds se trouvant dans l'objet blob XML. Lorsqu'une requête extrait l'intégralité de l'instance XML, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit l'instance à partir de la colonne XML. Les requêtes dans des instances XML utilisent l'index XML primaire et peuvent renvoyer des valeurs scalaires ou des sous-arborescences XML en se servant de l'index lui-même.  
   
  Chaque ligne stocke les informations suivantes relatives aux nœuds :  
   
@@ -106,7 +106,7 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
  Par exemple, la requête suivante retourne les informations sommaires stockées dans le `CatalogDescription``xml` colonne de type dans le `ProductModel` table. Elle ne renvoie les informations dans la balise <`Summary`> que pour les modèles de produits dont la description de catalogue stocke également la description située dans la balise <`Features`>.  
   
 ```  
-WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")SELECT CatalogDescription.query('  /PD:ProductDescription/PD:Summary') as ResultFROM Production.ProductModelWHERE CatalogDescription.exist ('/PD:ProductDescription/PD:Features') = 1  
+WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")SELECT CatalogDescription.query('  /PD:ProductDescription/PD:Summary') as ResultFROM Production.ProductModelWHERE CatalogDescription.exist ('/PD:ProductDescription/PD:Features') = 1  
 ```  
   
  Concernant l'index XML primaire, au lieu de fragmenter chaque instance d'objet blob XML se trouvant dans la table de base, les lignes de l'index correspondant à chaque objet blob XML sont soumises à des recherches séquentielles pour retrouver l'expression indiquée dans la méthode `exist()`. Si le chemin d'accès est retrouvé dans la colonne Path de l'index, l'élément <`Summary`> ainsi que ses sous-arborescences sont extraits de l'index XML primaire, puis convertis en objet blob XML suite à l'exécution de la méthode `query()`.  
@@ -148,7 +148,7 @@ USE AdventureWorks2012;SELECT InstructionsFROM Production.ProductModel WHERE Pro
  La requête suivante illustre un cas de figure où l'index de type PATH s'avère particulièrement utile :  
   
 ```  
-WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")  
+WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")  
   
 SELECT CatalogDescription.query('  
   /PD:ProductDescription/PD:Summary  
@@ -172,8 +172,8 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
   
 ```  
 WITH XMLNAMESPACES (  
-  'http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactInfo' AS CI,  
-  'http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes' AS ACT)  
+  'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactInfo' AS CI,  
+  'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes' AS ACT)  
   
 SELECT ContactID   
 FROM   Person.Contact  
@@ -190,7 +190,7 @@ WHERE  AdditionalContactInfo.exist('//ACT:telephoneNumber/ACT:number[.="111-111-
  Par exemple, concernant le modèle de produit `19`, la requête suivante extrait les valeurs des attributs `ProductModelID` et `ProductModelName` grâce à la méthode `value()` . Contrairement aux requêtes utilisant les index XML primaires ou tout autre index XML secondaire, l'index PROPERTY peut permettre une exécution plus rapide.  
   
 ```  
-WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")  
+WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")  
   
 SELECT CatalogDescription.value('(/PD:ProductDescription/@ProductModelID)[1]', 'int') as ModelID,  
        CatalogDescription.value('(/PD:ProductDescription/@ProductModelName)[1]', 'varchar(30)') as ModelName          

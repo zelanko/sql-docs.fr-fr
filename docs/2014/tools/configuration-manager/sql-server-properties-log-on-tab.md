@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- configmgr-client
+ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: 405073fc-eaa3-43c6-bf82-2cd58cacc1c3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 48746f150d12342b8ab0c5b95ab6a1164d7b2500
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0bb23beae7bcf8e47166ea205a3ce4e5a72f0493
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48062879"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53364971"
 ---
 # <a name="sql-server-properties-log-on-tab"></a>Propriétés de SQL Server (onglet Ouvrir une session)
   L'onglet **Ouvrir une session** de la boîte de dialogue **Propriétés de SQL Server** permet de spécifier le compte utilisé par le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , de modifier le mot de passe d'un compte, ainsi que de démarrer et d'arrêter ce service. La modification du mot de passe d'un compte prend effet immédiatement.  
@@ -62,7 +61,7 @@ ms.locfileid: "48062879"
  Reprend un service suspendu.  
   
 > [!IMPORTANT]  
->  Par défaut, seuls les membres du groupe des administrateurs locaux peuvent démarrer, arrêter, interrompre, reprendre ou redémarrer un service. Pour accorder aux non-administrateurs la capacité de gérer des services, consultez [Comment accorder aux utilisateurs des droits de gestion des services dans Windows Server 2003](http://support.microsoft.com/kb/325349). (le processus est semblable sur d'autres versions de Windows).  
+>  Par défaut, seuls les membres du groupe des administrateurs locaux peuvent démarrer, arrêter, interrompre, reprendre ou redémarrer un service. Pour accorder aux non-administrateurs la capacité de gérer des services, consultez [Comment accorder aux utilisateurs des droits de gestion des services dans Windows Server 2003](https://support.microsoft.com/kb/325349). (le processus est semblable sur d'autres versions de Windows).  
   
 > [!NOTE]  
 >  Lors du démarrage de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], une erreur WMI contenant l'expression « non implémenté [0x80004001] » peut indiquer que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'est pas installé sur l'ordinateur cible.  

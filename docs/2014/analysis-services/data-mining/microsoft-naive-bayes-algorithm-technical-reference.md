@@ -19,12 +19,12 @@ ms.assetid: a4cd47fe-2127-4930-b18f-3edd17ee9a65
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4121f988d8cdaa22d2249a76aeb542f80fbebd8a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5d69af9ad01e001394836449f97c48b4dae8dab7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086349"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376931"
 ---
 # <a name="microsoft-naive-bayes-algorithm-technical-reference"></a>Références techniques relatives à l'algorithme MNB (Microsoft Naive Bayes)
   L’algorithme MNB ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes) est un algorithme de classification fourni par [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] qui est conçu pour la modélisation prédictive. Cet algorithme calcule la probabilité conditionnelle entre les colonnes d'entrée et les colonnes prédictibles, et suppose que les colonnes sont indépendantes. Naive Bayes tire son nom de cette hypothèse d'indépendance.  
@@ -32,7 +32,7 @@ ms.locfileid: "48086349"
 ## <a name="implementation-of-the-microsoft-naive-bayes-algorithm"></a>Implémentation de l'algorithme MNB (Microsoft Naive Bayes)  
  Cet algorithme est informatiquement moins lourd que d’autres algorithmes [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Ainsi, il est utile pour générer rapidement des modèles d’exploration de données permettant de découvrir les relations entre les colonnes d’entrée et les colonnes prédictibles. L'algorithme prend en considération chaque paire de valeurs d'attribut d'entrée et valeurs d'attribut de sortie.  
   
- La description des propriétés mathématiques du théorème de Bayes n’est pas traitée dans cette documentation. Pour plus d’informations, consultez le document Microsoft Research intitulé [Réseaux bayésiens : connaissance et données statistiques](http://go.microsoft.com/fwlink/?LinkId=207029).  
+ Une description des propriétés mathématiques du théorème de Bayes n’entre pas dans le cadre de cette documentation ; Pour plus d’informations, consultez le document Microsoft Research intitulé [réseaux BAYÉSIENS : La combinaison de connaissance et données statistiques](https://go.microsoft.com/fwlink/?LinkId=207029).  
   
  Pour une description de la façon dont les probabilités dans tous les modèles sont ajustées pour expliquer des valeurs manquantes potentielles, consultez [Valeurs manquantes &#40;Analysis Services - Exploration de données&#41;](missing-values-analysis-services-data-mining.md).  
   
@@ -73,7 +73,7 @@ ms.locfileid: "48086349"
  La valeur par défaut est 0.5.  
   
  *MAXIMUM_STATES*  
- Spécifie le nombre maximal d'états d'attribut que l'algorithme prend en charge. Si le nombre d'états d'un attribut est supérieur au nombre maximal d'états, l'algorithme emploie les états les plus utilisés de l'attribut et traite les autres comme étant manquants.  
+ Spécifie le nombre maximal d'états d'attribut que l'algorithme prend en charge. Si le nombre d’états d’un attribut est supérieur au nombre maximal d’états, l’algorithme utilise les États les plus utilisés de l’attribut et traite les autres États comme étant absents.  
   
  La valeur par défaut est 100.  
   
@@ -82,10 +82,10 @@ ms.locfileid: "48086349"
   
 |Indicateur de modélisation|Description|  
 |-------------------|-----------------|  
-|MODEL_EXISTENCE_ONLY|Signifie que la colonne sera considérée comme ayant deux états possibles : manquant et existant. Une valeur NULL est une valeur manquante.<br /><br /> S'applique à la colonne de modèle d'exploration de données.|  
+|MODEL_EXISTENCE_ONLY|Signifie que la colonne sera considérée comme ayant deux états possibles : Manquant et Existant. Une valeur NULL est une valeur manquante.<br /><br /> S'applique à la colonne de modèle d'exploration de données.|  
 |NOT NULL|Indique que la colonne ne peut pas contenir de valeur Null. Une erreur est générée si Analysis Services rencontre une valeur NULL au cours de l'apprentissage du modèle.<br /><br /> S'applique à la colonne de structure d'exploration de données.|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  Un modèle d'arbre Naive Bayes doit contenir une colonne clé, au moins un attribut prédictible et au moins un attribut d'entrée. Aucun attribut ne peut être continu ; si vos données contiennent des données numériques continues, elles seront ignorées ou discrétisées.  
   
 ### <a name="input-and-predictable-columns"></a>Colonnes d'entrée et prédictibles  
@@ -100,8 +100,8 @@ ms.locfileid: "48086349"
 >  Les types de contenu Cyclique et Trié sont pris en charge, mais l'algorithme les traite comme des valeurs discrètes et n'effectue pas de traitement spécial.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Algorithme Microsoft Naive Bayes](microsoft-naive-bayes-algorithm.md)   
- [Exemples de requête de modèle Naive Bayes](naive-bayes-model-query-examples.md)   
- [Pour les modèles Naive Bayes contenu du modèle d’exploration de données &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)  
+ [Algorithme MNB (Microsoft Naive Bayes)](microsoft-naive-bayes-algorithm.md)   
+ [Naive Bayes Model Query Examples](naive-bayes-model-query-examples.md)   
+ [Contenu du modèle d’exploration de données pour les modèles Naive Bayes &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)  
   
   

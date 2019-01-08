@@ -15,12 +15,12 @@ ms.assetid: d5789450-b668-4753-96c8-6789e955e7ed
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ab9f381706aaf5fe2f87051e1aada23ccf6dea16
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dc229e2bef69069ba1fc5f8cb3077e592d959a55
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668347"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521929"
 ---
 # <a name="explicit-data-type-conversion-function"></a>Fonctions de conversion de types de données explicites
 Conversion de type de données explicite est spécifiée en termes de définitions de type de données SQL.  
@@ -29,7 +29,7 @@ Conversion de type de données explicite est spécifiée en termes de définitio
   
  Le format de la **convertir** fonction est :  
   
- **CONVERTIR (** *value_exp*, *data_type ***)**  
+ **CONVERTIR (** *value_exp*, _data_type_**)**  
   
  La fonction retourne la valeur spécifiée par *value_exp* converti spécifié *data_type*, où *data_type* est un des mots clés suivants :  
   
@@ -65,7 +65,7 @@ Conversion de type de données explicite est spécifiée en termes de définitio
   
  Convertit la sortie de la fonction scalaire CURDATE en une chaîne de caractères.  
   
- Étant donné que ODBC n’impose un type de données pour les valeurs de retour de fonctions scalaires (comme les fonctions sont souvent spécifique à la source de données), applications doivent utiliser la fonction scalaire CONVERT chaque fois que possible de forcer la conversion de type de données.  
+ Étant donné que ODBC n’impose un type de données pour les valeurs de retour de fonctions scalaires (comme les fonctions sont souvent spécifiques à la source de données), applications doivent utiliser la fonction scalaire CONVERT chaque fois que possible de forcer la conversion de type de données.  
   
  Les deux exemples suivants illustrent l’utilisation de la **convertir** (fonction). Ces exemples supposent l’existence d’une table appelée employés, avec une colonne de MATEMP de type SQL_SMALLINT et une colonne EMPNAME de type SQL_CHAR.  
   

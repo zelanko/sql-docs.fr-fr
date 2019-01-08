@@ -20,27 +20,27 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: adbac2ea9036a6c869ed17aceed297ea13d0ec2d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 7b8935bc203c616f88a7e5929bd19e10a41592d3
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663232"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591033"
 ---
 # <a name="domainconstraints-transact-sql"></a>DOMAIN_CONSTRAINTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Retourne une ligne pour chaque type d'alias dans la base de données actuelle, qui a une règle lui étant associée et à laquelle l'utilisateur actuel peut accéder.  
   
- Pour récupérer des informations à partir de ces vues, spécifiez le nom qualifié complet de **INFORMATION_SCHEMA. *** nom_vue*.  
+ Pour récupérer des informations à partir de ces vues, spécifiez le nom qualifié complet de **INFORMATION_SCHEMA.** _nom_vue_.  
   
 |Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**CONSTRAINT_CATALOG**|**nvarchar(** 128 **)**|Base de données dans laquelle se trouve la règle.|  
-|**CONSTRAINT_SCHEMA**|**nvarchar(** 128 **)**|Nom du schéma qui contient la contrainte.<br /><br /> **\*\* Important \* \***  n’utilisez pas les vues INFORMATION_SCHEMA pour déterminer le schéma d’un objet. La seule méthode fiable pour rechercher le schéma d’un objet est d’interroger l’affichage catalogue sys.objects.|  
+|**CONSTRAINT_SCHEMA**|**nvarchar(** 128 **)**|Nom du schéma qui contient la contrainte.<br /><br /> <strong>\*\* Important \* \*</strong>  n’utilisez pas les vues INFORMATION_SCHEMA pour déterminer le schéma d’un objet. La seule méthode fiable pour rechercher le schéma d’un objet est d’interroger l’affichage catalogue sys.objects.|  
 |**CONSTRAINT_NAME**|**sysname**|Nom de la règle.|  
 |**DOMAIN_CATALOG**|**nvarchar(** 128 **)**|Base de données dans laquelle réside le type de données alias.|  
-|**DOMAIN_SCHEMA**|**nvarchar(** 128 **)**|Nom du schéma qui contient le type de données alias.<br /><br /> **\*\* Important \* \***  n’utilisez pas de vues INFORMATION_SCHEMA pour déterminer le schéma d’un type de données. La seule méthode fiable pour rechercher le schéma d'un type est d'utiliser la fonction TYPEPROPERTY.|  
+|**DOMAIN_SCHEMA**|**nvarchar(** 128 **)**|Nom du schéma qui contient le type de données alias.<br /><br /> <strong>\*\* Important \* \*</strong>  n’utilisez pas de vues INFORMATION_SCHEMA pour déterminer le schéma d’un type de données. La seule méthode fiable pour rechercher le schéma d'un type est d'utiliser la fonction TYPEPROPERTY.|  
 |**NOM_DOMAINE**|**sysname**|Type de données alias.|  
 |**IS_DEFERRABLE**|**varchar (** 2 **)**|Indique si la vérification des contraintes peut être différée. Renvoie toujours NO.|  
 |**INITIALLY_DEFERRED**|**varchar (** 2 **)**|Spécifie si la vérification des contraintes est différée au départ. Renvoie toujours NO.|  

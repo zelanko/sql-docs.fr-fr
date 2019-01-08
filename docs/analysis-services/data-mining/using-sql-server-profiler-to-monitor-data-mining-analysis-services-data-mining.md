@@ -1,5 +1,5 @@
 ---
-title: À l’aide de SQL Server Profiler pour contrôler l’exploration de données | Documents Microsoft
+title: À l’aide de SQL Server Profiler pour contrôler l’exploration de données | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a40a02e3fd19ac853c7c4b291bbc3875229c747f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 4ba9720f87cd41849cc118482ffbf4731049e8c9
+ms.sourcegitcommit: 4182a1e8be69373dde2fe778f19cab9cd78e447c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016656"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51818495"
 ---
 # <a name="using-sql-server-profiler-to-monitor-data-mining-analysis-services---data-mining"></a>Utilisation de SQL Server Profiler pour contrôler l'exploration de données (Analysis Services – Exploration de données)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "34016656"
 ## <a name="using-traces-to-monitor-data-mining"></a>Utilisation des suivis pour contrôler l'exploration de données  
  Lorsque vous capturez des informations dans un suivi, vous pouvez spécifier si les informations sont enregistrées dans un fichier ou dans une table sur une instance de SQL Server. Indépendamment de la méthode utilisée pour stocker les données, vous pouvez utiliser SQL Server Profiler pour consulter le suivi et filtrer par événements. Le tableau suivant répertorie certains événements et sous-classes de la trace [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] par défaut qui sont pertinents pour l'exploration de données.  
   
-|EventClass|EventSubclass| Description|  
+|EventClass|EventSubclass|Description|  
 |----------------|-------------------|-----------------|  
 |**Query Begin**<br /><br /> **Query End**|**0 - MDXQuery**|Contient le texte de tous les appels aux procédures stockées [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
 |**Query Begin**<br /><br /> **Query End**|**1 - DMXQuery**|Contient le texte et les résultats des instructions DMX (Data Mining Extensions).|  
@@ -40,7 +40,7 @@ ms.locfileid: "34016656"
  En consultant les instructions de commande dans le journal des traces, vous pouvez également voir la syntaxe des instructions complexes envoyées par le client au serveur [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , notamment les appels aux procédures stockées système. Ces informations peuvent être utiles pour le débogage, ou vous pouvez utiliser des instructions valides comme modèle pour créer de nouvelles requêtes ou de nouveaux modèles de prédiction. Pour obtenir des exemples d’appels de procédure stockée que vous pouvez capturer par l’intermédiaire d’une trace, consultez [Exemples de requêtes de modèle de clustering](../../analysis-services/data-mining/clustering-model-query-examples.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Analyser une instance Analysis Services](../../analysis-services/instances/monitor-an-analysis-services-instance.md)   
+
  [Surveiller Analysis Services avec des événements étendus SQL Server](../../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md)  
   
   

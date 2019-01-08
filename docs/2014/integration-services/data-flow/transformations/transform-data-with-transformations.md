@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - data flow [Integration Services], transformations
@@ -15,19 +14,19 @@ ms.assetid: e1340b6f-ef75-4b14-af6f-823586eff0ed
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b98f377a24604abb1657a8e3a8c2b57024d84c38
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f1243f3cc6e7c8d7cd3ea2078e96e0f3844a8596
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229329"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52767531"
 ---
 # <a name="transform-data-with-transformations"></a>Transformer des données avec des transformations
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] inclut trois types de composants de flux de données : les sources, les transformations et les destinations.  
   
  Le schéma suivant illustre un flux de données simple qui possède une source, deux transformations et une destination.  
   
- ![Flux de données](../../media/mw-dts-08.gif "flux de données")  
+ ![Data flow](../../media/mw-dts-08.gif "Data flow")  
   
  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] Les transformations procurent la fonctionnalité suivante :  
   
@@ -60,9 +59,9 @@ ms.locfileid: "48229329"
 -   [Définir les propriétés d’un composant de flux de données](../set-the-properties-of-a-data-flow-component.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Tâche de flux de données](../../control-flow/data-flow-task.md)   
+ [tâche de flux de données](../../control-flow/data-flow-task.md)   
  [Flux de données](../data-flow.md)   
- [Connecter des composants avec des chemins](../../connect-components-with-paths.md)   
+ [Connecter des composants avec des chemins d’accès](../../connect-components-with-paths.md)   
  [Gestion des erreurs dans les données](../error-handling-in-data.md)   
  [Flux de données](../data-flow.md)  
   

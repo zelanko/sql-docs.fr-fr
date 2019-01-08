@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - administrative tasks [SQL Server]
@@ -15,12 +15,12 @@ ms.assetid: 541ee5ac-2c9f-4b74-b4f0-13b7bd5920b0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: de51673373031fbb81cfdf8b5d6278adc52af3ee
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 790dd7e9199f511f434585c6b6741d0e09ab7d59
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133969"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52812361"
 ---
 # <a name="automated-administration-tasks-sql-server-agent"></a>Tâches d'administration automatisée (Agent SQL Server)
   Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vous permet d'automatiser les tâches administratives. À cet effet, vous pouvez définir les tâches administratives prévisibles, puis les conditions dans lesquelles elles doivent se produire. L'utilisation d'une administration automatisée pour gérer les tâches et les événements de routine permet de gagner du temps afin de le consacrer à d'autres fonctions d'administration.  

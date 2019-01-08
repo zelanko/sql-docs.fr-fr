@@ -13,12 +13,12 @@ ms.assetid: 4bd15e48-0feb-4f95-be91-5df58105dbfb
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6814b581058db6da3848f62ede8ef765d4db66b7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a4a21eccc41f70ab505ed65bb6dd26ffc275a7b4
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189279"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368341"
 ---
 # <a name="lookup-transformation-editor-general-page"></a>Éditeur de transformation de recherche (page Général)
   Utilisez la page **Général** de la boîte de dialogue Éditeur de transformation de recherche pour sélectionner le mode de cache ainsi que le type de connexion et pour spécifier comment gérer les lignes sans entrées correspondantes.  
@@ -49,13 +49,13 @@ ms.locfileid: "48189279"
  Lorsque vous sélectionnez une autre option dans la zone de liste **Spécifier comment gérer les lignes sans entrées correspondantes** , les lignes sont gérées comme des erreurs. L'option **Erreur** de la page **Sortie d'erreur** est disponible.  
   
 ## <a name="external-resources"></a>Ressources externes  
- Entrée de blog, [Lookup cache modes](http://go.microsoft.com/fwlink/?LinkId=219518) sur blogs.msdn.com  
+ Entrée de blog, [Lookup cache modes](https://go.microsoft.com/fwlink/?LinkId=219518) sur blogs.msdn.com  
   
 ## <a name="see-also"></a>Voir aussi  
- [Gestionnaire de connexions du cache](connection-manager/cache-connection-manager.md)   
- [Éditeur de Transformation de recherche &#40;Page de connexion&#41;](../../2014/integration-services/lookup-transformation-editor-connection-page.md)   
+ [Cache Connection Manager](connection-manager/cache-connection-manager.md)   
+ [Éditeur de transformation de recherche &#40;page Connexion&#41;](../../2014/integration-services/lookup-transformation-editor-connection-page.md)   
  [Éditeur de transformation de recherche &#40;page Colonnes&#41;](../../2014/integration-services/lookup-transformation-editor-columns-page.md)   
- [Éditeur de Transformation de recherche &#40;Page avancé&#41;](../../2014/integration-services/lookup-transformation-editor-advanced-page.md)   
- [Éditeur de Transformation de recherche &#40;Page sortie d’erreur&#41;](../../2014/integration-services/lookup-transformation-editor-error-output-page.md)  
+ [Éditeur de transformation de recherche &#40;page Avancé&#41;](../../2014/integration-services/lookup-transformation-editor-advanced-page.md)   
+ [Éditeur de transformation de recherche &#40;page Sortie d’erreur&#41;](../../2014/integration-services/lookup-transformation-editor-error-output-page.md)  
   
   

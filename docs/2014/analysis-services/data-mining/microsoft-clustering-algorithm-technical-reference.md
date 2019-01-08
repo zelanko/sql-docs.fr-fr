@@ -24,19 +24,19 @@ ms.assetid: ec40868a-6dc7-4dfa-aadc-dedf69e555eb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 33f2e8751befd42ee0b92690a17d668ba37a4c9a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3bf6919230c1621d2b81eb41cd715fc1878a90c5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089719"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371521"
 ---
 # <a name="microsoft-clustering-algorithm-technical-reference"></a>Références techniques relatives à l'algorithme de gestion de clusters Microsoft
   Cette section explique l'implémentation de l'algorithme de gestion de clusters [!INCLUDE[msCoName](../../includes/msconame-md.md)] , en particulier les paramètres que vous pouvez utiliser pour contrôler le comportement des modèles de clustering. Vous y trouverez également des informations sur la façon d'améliorer les performances lors de la création et du traitement des modèles de clustering.  
   
  Pour plus d'informations sur l'utilisation des modèles de clustering, consultez les rubriques suivantes :  
   
--   [Contenu du modèle d’exploration de données pour les modèles de Clustering &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
+-   [Contenu du modèle d’exploration de données pour les modèles de clustering &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
   
 -   [Exemples de requêtes de modèle de clustering](clustering-model-query-examples.md)  
   
@@ -64,7 +64,7 @@ ms.locfileid: "48089719"
   
  L'implémentation Microsoft propose deux options : EM évolutif et EM non évolutif. Par défaut, dans la méthode EM évolutif, les 50 000 premiers enregistrements sont utilisés pour ensemencer l'analyse initiale. Si l'opération réussit, le modèle se limite à ces données. Si l'adaptation du modèle échoue avec 50 000 enregistrements, 50 000 autres enregistrements sont lus. Dans la méthode EM non évolutif, le dataset entier est lu quelle que soit sa taille. Cette méthode peut créer des clusters plus précis, mais les besoins en mémoire peuvent être importants. La méthode EM évolutif fonctionnant sur une mémoire tampon locale, le parcours des données s'effectue beaucoup plus rapidement, et l'algorithme utilise beaucoup mieux le cache mémoire du processeur que la méthode EM non évolutif. De plus, la méthode EM évolutif est trois fois plus rapide que la méthode EM non évolutif, même si toutes les données peuvent tenir dans la mémoire principale. Dans la majorité de cas, l'amélioration des performances n'entraîne pas de baisse de la qualité du modèle complet.  
   
- Pour obtenir un rapport technique qui décrit l’implémentation de la méthode EM dans l’algorithme de gestion de clusters [!INCLUDE[msCoName](../../includes/msconame-md.md)] , consultez [Scaling EM (Expectation Maximization) Clustering to Large Databases](http://go.microsoft.com/fwlink/?LinkId=45964).  
+ Pour obtenir un rapport technique qui décrit l’implémentation de la méthode EM dans l’algorithme de gestion de clusters [!INCLUDE[msCoName](../../includes/msconame-md.md)] , consultez [Scaling EM (Expectation Maximization) Clustering to Large Databases](https://go.microsoft.com/fwlink/?LinkId=45964).  
   
 ### <a name="k-means-clustering"></a>Clustering K-means  
  Le clustering K-means est une méthode bien connue d'attribution de l'appartenance au cluster qui repose sur la minimisation des différences entre les éléments d'un cluster et la maximisation de la distance entre les clusters. Le terme « means » dans K-means fait référence au *centroïde* du cluster, c’est-à-dire un point de données choisi arbitrairement puis affiné de manière itérative jusqu’à ce qu’il représente la moyenne vraie de tous les points de données dans le cluster. La lettre « k » fait référence au nombre arbitraire de points qui sont utilisés pour ensemencer le processus de clustering. L'algorithme K-means calcule les distances euclidiennes au carré entre les enregistrements de données dans un cluster et le vecteur qui représente la moyenne du cluster, puis converge vers un jeu final de k clusters lorsque cette somme atteint sa valeur minimale.  
@@ -162,11 +162,11 @@ ms.locfileid: "48089719"
   
 |Indicateur de modélisation|Description|  
 |-------------------|-----------------|  
-|MODEL_EXISTENCE_ONLY|La colonne sera considérée comme ayant deux états possibles : manquante et existante. Une valeur NULL est une valeur manquante.<br /><br /> S'applique à la colonne de modèle d'exploration de données.|  
+|MODEL_EXISTENCE_ONLY|La colonne est considérée comme ayant deux états possibles : Manquant et Existant. Une valeur NULL est une valeur manquante.<br /><br /> S'applique à la colonne de modèle d'exploration de données.|  
 |NOT NULL|La colonne ne peut pas contenir de valeur NULL. Une erreur est générée si Analysis Services rencontre une valeur NULL au cours de l'apprentissage du modèle.<br /><br /> S'applique à la colonne de structure d'exploration de données.|  
   
-## <a name="requirements"></a>Spécifications  
- Un modèle de clustering doit contenir une colonne clé et des colonnes d'entrée. Vous pouvez également définir les colonnes d'entrée comme prédictibles. Colonnes de valeur `Predict Only` ne sont pas utilisées pour générer des clusters. La distribution de ces valeurs dans les clusters est calculée après la création des clusters.  
+## <a name="requirements"></a>Configuration requise  
+ Un modèle de clustering doit contenir une colonne clé et des colonnes d'entrée. Vous pouvez également définir les colonnes d'entrée comme prédictibles. Les colonnes ayant la valeur `Predict Only` ne sont pas utilisées pour générer des clusters. La distribution de ces valeurs dans les clusters est calculée après la création des clusters.  
   
 ### <a name="input-and-predictable-columns"></a>Colonnes d'entrée et prédictibles  
  L’algorithme de gestion de clusters [!INCLUDE[msCoName](../../includes/msconame-md.md)] prend en charge les colonnes d’entrée et les colonnes prédictibles répertoriées dans le tableau suivant. Pour plus d’informations sur la signification des types de contenu en cas d’utilisation dans un modèle d’exploration de données, consultez [Types de contenu &#40;Exploration de données&#41;](content-types-data-mining.md).  
@@ -180,8 +180,8 @@ ms.locfileid: "48089719"
 >  Les types de contenu Cyclique et Trié sont pris en charge, mais l'algorithme les traite comme des valeurs discrètes et n'effectue pas de traitement spécial.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Algorithme Microsoft Clustering](microsoft-clustering-algorithm.md)   
- [Exemples de requêtes modèle de clustering](clustering-model-query-examples.md)   
- [Contenu du modèle d’exploration de données pour les modèles de Clustering &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
+ [Algorithme de gestion de clusters Microsoft](microsoft-clustering-algorithm.md)   
+ [Exemples de requêtes de modèle de clustering](clustering-model-query-examples.md)   
+ [Contenu du modèle d’exploration de données pour les modèles de clustering &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Définir le Type de données d’une colonne | Documents Microsoft
+title: Type de données de colonne dans un modèle tabulaire Analysis Services | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 18aa18d9c9ee7fbc0291d9961e144263053710dd
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 595f2cf0c95cf09241dd2189c380deb3ce7b5760
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34045803"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53071956"
 ---
 # <a name="set-the-data-type-of-a-column"></a>Définir le type de données d'une colonne 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "34045803"
   
  Les types de données suivants sont disponibles dans les modèles sémantiques Business Intelligence :  
   
--   **Texte**  
+-   **Text**  
   
 -   **Nombre décimal**  
   
@@ -73,7 +73,7 @@ ms.locfileid: "34045803"
   
  Si le type de données est pris en charge, mais que le générateur de modèles détecte des valeurs non prises en charge dans le nouveau type de données, vous obtiendrez une autre erreur et devrez corriger les valeurs des données avant de continuer.  
   
- Pour plus d’informations sur les types de données utilisés dans les modèles sémantiques business intelligence, comment ils sont implicitement converti et comment les différents types de données est utilisés dans les formules, consultez [prise en charge des Types de données](../../analysis-services/tabular-models/data-types-supported-ssas-tabular.md).  
+ Pour plus d’informations sur les types de données utilisés dans les modèles sémantiques business intelligence, comment ils sont convertis implicitement et comment les différents types de données est utilisées dans les formules, consultez [Types de données pris en charge](../../analysis-services/tabular-models/data-types-supported-ssas-tabular.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Types de données pris en charge](../../analysis-services/tabular-models/data-types-supported-ssas-tabular.md)  

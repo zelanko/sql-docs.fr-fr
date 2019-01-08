@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: b9b90b8d-241f-4b74-ac14-de7b10ea1821
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b110a029003f4d7a9036022f8c25150840b45e64
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1c23f91f24f2da173280e54a544b00a1b4a6fd09
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219559"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52795631"
 ---
 # <a name="connect-to-a-sql-server-utility"></a>Se connecter à un utilitaire SQL Server
   Avant de vous connecter à un utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vous devez créer un point de contrôle de l’utilitaire (UCP). Pour plus d’informations, consultez [Fonctionnalités et tâches de l’utilitaire SQL Server](sql-server-utility-features-and-tasks.md).  
@@ -40,6 +40,6 @@ ms.locfileid: "48219559"
   
 ## <a name="see-also"></a>Voir aussi  
  [Fonctionnalités et tâches de l'utilitaire SQL Server](sql-server-utility-features-and-tasks.md)   
- [Consulter les résultats d’une stratégie de contrôle d’intégrité des ressources &#40;Utilitaire SQL Server&#41;](view-resource-health-policy-results-sql-server-utility.md)  
+ [Consulter les résultats d’une stratégie de contrôle d’intégrité des ressources &#40;utilitaire SQL Server&#41;](view-resource-health-policy-results-sql-server-utility.md)  
   
   

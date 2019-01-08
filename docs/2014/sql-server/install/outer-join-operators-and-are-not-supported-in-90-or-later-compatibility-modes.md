@@ -16,21 +16,21 @@ ms.assetid: ca4aa11f-1048-411f-9c6c-3d0a8e319f2f
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bc4cab3fac4a49535b2178332b6e355ed95647b7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6d5d9ff66bb078be30fcd6e7d4b43b5e94069be0
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48064899"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591613"
 ---
-# <a name="outer-join-operators--and--are-not-supported-in-90-or-later-compatibility-modes"></a>Les opérateurs de jointure externe *= et =* ne sont pas pris en charge en mode de compatibilité 90 ou ultérieur
-  Conseiller de mise à niveau a détecté l’utilisation d’opérateurs de jointure externe * = et =\*. Ces opérateurs ne sont pas pris en charge en mode de compatibilité 90 ou ultérieur. Lorsque vous effectuez une mise à niveau, les bases de données utilisateur conservent leur mode de compatibilité. Les instructions qui utilisent des opérateurs vont échouer.  
+# <a name="outer-join-operators--and--are-not-supported-in-90-or-later-compatibility-modes"></a>Les opérateurs de jointure externe \*= et =\* ne sont pas pris en charge en mode de compatibilité 90 ou ultérieur
+  Conseiller de mise à niveau a détecté l’utilisation d’opérateurs de jointure externe \*= et =\*. Ces opérateurs ne sont pas pris en charge en mode de compatibilité 90 ou ultérieur. Lorsque vous effectuez une mise à niveau, les bases de données utilisateur conservent leur mode de compatibilité. Les instructions qui utilisent des opérateurs vont échouer.  
   
 ## <a name="component"></a>Composant  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 ## <a name="corrective-action"></a>Action corrective  
- Avant de définir le mode de compatibilité de base de données à 90 ou ultérieur, modifiez les instructions qui utilisent les opérateurs de jointure externe * = et =\* à utiliser les mots clés OUTER JOIN équivalents. L'exemple suivant affiche une requête qui utilise l'opérateur `*=` et une requête équivalente qui utilise les mots clés `LEFT OUTER JOIN`.  
+ Avant de définir le mode de compatibilité de base de données à 90 ou ultérieur, modifiez les instructions qui utilisent les opérateurs de jointure externe \*= et =\* à utiliser les mots clés OUTER JOIN équivalents. L'exemple suivant affiche une requête qui utilise l'opérateur `\*=` et une requête équivalente qui utilise les mots clés `LEFT OUTER JOIN`.  
   
 ```  
 -- This query uses an old-style outer join operator.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.ssms.ispackageprop.general.f1
@@ -14,12 +13,12 @@ ms.assetid: a70acbf4-5f5c-4606-8ce4-8eb3684233de
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9d3bb5f71617371d4ff360242cf3076e73fdbbea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 727c6e221accc9cc0d1ce46a5907a5e450d6e21b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070671"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52813351"
 ---
 # <a name="package-properties-dialog-box"></a>Propriétés du package, boîte de dialogue
   Utilisez la boîte de dialogue **Propriétés du package** pour afficher et gérer les propriétés des packages stockés sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -36,7 +35,7 @@ ms.locfileid: "48070671"
   
 1.  Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], connectez-vous au serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
-     Vous vous connectez à l'instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] qui héberge la base de données SSISDB.  
+     Vous vous connectez à l’instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] qui héberge la base de données SSISDB.  
   
 2.  Dans l'Explorateur d'objets, développez l'arborescence pour afficher le nœud **Integration Services Catalogues** .  
   
@@ -58,7 +57,7 @@ ms.locfileid: "48070671"
  Indique l'ID du package.  
   
  **Point d'entrée**  
- La valeur de `True` indique que le package est démarré directement. La valeur de `False` indique que le package est démarré par un autre package à l’aide de la tâche d’exécution de Package. La valeur par défaut est `True`.  
+ La valeur `True` indique que le package est démarré directement. La valeur `False` indique que le package est démarré par un autre package via la tâche d'exécution du package. La valeur par défaut est `True`.  
   
  Vous définissez cette propriété dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] pour les packages parent et enfant en cliquant avec le bouton droit sur le package dans l’Explorateur de solutions et en sélectionnant **Package de point d’entrée**.  
   
