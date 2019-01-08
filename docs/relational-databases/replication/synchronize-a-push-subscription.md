@@ -16,12 +16,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0a7281c76351a732afeb3516e97cad3712433102
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0ae64c33cc55d45ff28257b9d0b6b6c4c972e370
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47643507"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205678"
 ---
 # <a name="synchronize-a-push-subscription"></a>Synchroniser un abonnement par émission de données
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -208,7 +208,7 @@ REM -- The following command must be supplied without line breaks.
 ##  <a name="RMOProcedure"></a> Utilisation d'objets RMO (Replication Management Objects)  
  Vous pouvez synchroniser des abonnements par envoi de données par programme à l'aide des objets RMO (Replication Management Objects) et gérer l'accès au code pour les fonctionnalités de l'Agent de réplication. Les classes que vous utilisez pour créer un abonnement par envoi de données dépendent du type de publication à laquelle l'abonnement appartient.  
   
-> [!NOTE]  
+> [!NOTE]
 >  Si vous voulez démarrer une synchronisation qui s'exécute de façon autonome sans affecter votre application, démarrez l'agent en mode asynchrone. Toutefois, si vous souhaitez contrôler la sortie de la synchronisation et recevoir les rappels de l'Agent pendant le processus de synchronisation (par exemple, pour afficher une barre de progression), vous devez démarrer l'Agent en mode synchrone. Pour Abonnés [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssExpressEd2005](../../includes/ssexpressed2005-md.md)] , vous devez démarrer l’agent en mode synchrone.  
   
 #### <a name="to-synchronize-a-push-subscription-to-a-snapshot-or-transactional-publication"></a>Pour synchroniser un abonnement par envoi de données vers un instantané ou une publication transactionnelle  
@@ -287,6 +287,6 @@ REM -- The following command must be supplied without line breaks.
 ## <a name="see-also"></a> Voir aussi  
  [Concepts liés à Replication Management Objects](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
  [Synchroniser les données](../../relational-databases/replication/synchronize-data.md)   
- [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)  
+ [Bonnes pratiques en matière de sécurité de la réplication](../../relational-databases/replication/security/replication-security-best-practices.md)  
   
   
