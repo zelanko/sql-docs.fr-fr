@@ -13,12 +13,12 @@ ms.assetid: fe84588b-66a3-4100-a1cf-59b21b7adf01
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: aa283164549ba6c675632b65e40cfe636a0491eb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6225e17feef079fba352b0656fb8fc9d28c86748
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177819"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518978"
 ---
 # <a name="define-database-dimensions"></a>Définir des dimensions de base de données
   Le Concepteur de dimensions dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] permet de configurer une dimension de base de données existante dans un projet ou une base de données [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Le Concepteur de dimensions permet d'effectuer les tâches suivantes :  
@@ -43,8 +43,8 @@ ms.locfileid: "48177819"
   
 |Onglet|Description|  
 |---------|-----------------|  
-|**Structure de la dimension**|Cet onglet vous permet de travailler sur la structure d'une dimension, par exemple pour examiner ou créer le schéma de vue de source de données d'une dimension, pour utiliser des attributs et pour organiser les attributs en hiérarchies définies par l'utilisateur.|  
-|**Relations d'attributs**|Cet onglet permet de créer, de modifier ou de supprimer les relations d'attributs d'une dimension.|  
+|**Structure de la dimension**|Utilisez cet onglet pour travailler avec la structure d’une dimension pour examiner ou créer le schéma de vue de source de données pour une dimension, pour travailler avec des attributs et organiser les attributs en hiérarchies définies par l’utilisateur.|  
+|**Relations d’attributs**|Cet onglet permet de créer, de modifier ou de supprimer les relations d'attributs d'une dimension.|  
 |**Translations**|Cet onglet vous permet d'ajouter et de modifier des traductions de métadonnées de dimensions dans différentes langues.|  
 |**Navigateur**|Cet onglet vous permet d'examiner les membres d'une dimension traitée et les traductions des métadonnées de dimensions.|  
   
@@ -53,7 +53,7 @@ ms.locfileid: "48177819"
  [Référence des propriétés d’attribut de dimension](dimension-attribute-properties-reference.md)  
  Décrit comment définir et configurer un attribut de dimension.  
   
- [Créer des hiérarchies définies par l’utilisateur](user-defined-hierarchies-create.md)  
+ [Créer des hiérarchies définies par l'utilisateur](user-defined-hierarchies-create.md)  
  Décrit comment définir et configurer une hiérarchie définie par l'utilisateur.  
   
  [Définir des relations d’attributs](attribute-relationships-define.md)  

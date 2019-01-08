@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - network protocols [SQL Server], disabling
@@ -21,12 +20,12 @@ ms.assetid: ec5ccb69-61c9-4576-8843-014b976fd46e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 37a5d31f4b4f7bf2ba21489fe917e3b6f4ad27d1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 17b4052b8842225d729bc8de996a7b0649f85a59
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100599"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52640512"
 ---
 # <a name="enable-or-disable-a-server-network-protocol"></a>Activer ou désactiver un protocole réseau de serveur
   Tous les protocoles réseau sont installés par le programme d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , mais ils peuvent être activés ou non. Cette rubrique décrit comment activer ou désactiver un protocole réseau de serveur dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide du gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou de PowerShell. Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] doit être arrêté et redémarré pour que la modification soit prise en compte.  
@@ -67,7 +66,7 @@ ms.locfileid: "48100599"
   
 2.  Démarrez Windows PowerShell 2.0 à partir de la barre des tâches, ou cliquez successivement sur Démarrer, Tous les Programmes, Accessoires, Windows PowerShell, puis Windows PowerShell.  
   
-3.  Importer le **sqlps** module en entrant `Import-Module “sqlps”`  
+3.  Importer le **sqlps** module en entrant `Import-Module "sqlps"`  
   
 4.  Exécutez les instructions suivantes pour activer les protocoles TCP et de canaux nommés. Remplacez `<computer_name>` par le nom de l'ordinateur qui exécute [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si vous configurez une instance nommée, remplacez `MSSQLSERVER` par le nom de cette instance.  
   

@@ -23,12 +23,12 @@ ms.assetid: bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d0949b6fddf1755da48dd7922a4fbda50d4b2787
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 99fd0d558fccab09f0c73ddd47ef5b4b22d303c3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112004"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511497"
 ---
 # <a name="clr-stored-procedures"></a>Procédures stockées du CLR
   Les procédures stockées sont des routines que vous ne pouvez pas utiliser dans des expressions scalaires. Contrairement aux fonctions scalaires, elles peuvent retourner des résultats scalaires et des messages au client, appeler des instructions DDL (Data Definition Language) et DML (Data Manipulation Language) et retourner des paramètres de sortie. Pour plus d’informations sur les avantages de l’intégration du CLR et le choix entre le code managé et [!INCLUDE[tsql](../../includes/tsql-md.md)], consultez [vue d’ensemble de l’intégration du CLR](../../relational-databases/clr-integration/clr-integration-overview.md).  
@@ -45,7 +45,7 @@ ms.locfileid: "48112004"
  Les paramètres passés à une procédure stockée CLR peuvent être de n'importe quel type [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doté d'un équivalent en code managé. Pour que la syntaxe [!INCLUDE[tsql](../../includes/tsql-md.md)] crée la procédure, ces types doivent être spécifiés avec le type [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] natif équivalent le mieux approprié. Pour plus d’informations sur les conversions de type, consultez [mappage des données de paramètre CLR](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md).  
   
 ### <a name="table-valued-parameters"></a>Paramètres table  
- Les paramètres table (types de tables définis par l'utilisateur et passés dans une procédure ou une fonction) offrent un moyen efficace pour passer plusieurs lignes de données au serveur. Paramètres table fournissent des fonctionnalités similaires aux tableaux de paramètres, mais offrent une plus grande flexibilité et une intégration plus étroite avec [!INCLUDE[tsql](../../includes/tsql-md.md)]. Ils sont également susceptibles de générer de meilleures performances. Les paramètres table aident également à réduire le nombre d'allers-retours au serveur. Au lieu d'envoyer plusieurs demandes au serveur, comme avec une liste de paramètres scalaires, les données peuvent être envoyées au serveur en tant que paramètres table. Un type de table défini par l'utilisateur ne peut pas être passé en tant que paramètre table à une fonction ou à une procédure stockée managée s'exécutant dans le processus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ni être retourné à partir de ces dernières. Pour plus d’informations sur les paramètres table, consultez [utiliser les paramètres &#40;moteur de base de données&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md).  
+ Les paramètres table (types de tables définis par l'utilisateur et passés dans une procédure ou une fonction) offrent un moyen efficace pour passer plusieurs lignes de données au serveur. Ils procurent une fonctionnalité semblable aux tableaux de paramètres, mais offrent une meilleure souplesse et une intégration plus étroite à [!INCLUDE[tsql](../../includes/tsql-md.md)]. Ils sont également susceptibles de générer de meilleures performances. Les paramètres table aident également à réduire le nombre d'allers-retours au serveur. Au lieu d'envoyer plusieurs demandes au serveur, comme avec une liste de paramètres scalaires, les données peuvent être envoyées au serveur en tant que paramètres table. Un type de table défini par l'utilisateur ne peut pas être passé en tant que paramètre table à une fonction ou à une procédure stockée managée s'exécutant dans le processus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ni être retourné à partir de ces dernières. Pour plus d’informations sur les paramètres table, consultez [utiliser les paramètres &#40;moteur de base de données&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md).  
   
 ## <a name="returning-results-from-clr-stored-procedures"></a>Retour des résultats des procédures stockées CLR  
  Plusieurs moyens permettent de retourner des informations des procédures stockées [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Il peut s'agir notamment de paramètres de sortie, de résultats sous forme de tableau et de messages.  
@@ -55,7 +55,7 @@ ms.locfileid: "48112004"
   
 ```  
 Imports System.Runtime.InteropServices  
-…  
+...  
 Public Shared Sub PriceSum ( <Out()> ByRef value As SqlInt32)  
 ```  
   

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - jobs [SQL Server Agent], creating
@@ -13,12 +13,12 @@ ms.assetid: 465fb7fc-7622-4252-a178-ea51691c935b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5a6572e856d7aae3732fb45c371ec7f8c62ed335
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 986e38ef42fe1af2aba8ba1625225a336f29158d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181139"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52751311"
 ---
 # <a name="create-jobs"></a>Créer des travaux
   Un travail est constitué d'une série d'opérations spécifiques exécutées de manière séquentielle par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Un travail peut effectuer diverses activités, notamment exécuter des scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] , des applications d'invite de commandes, des scripts Microsoft ActiveX, des packages Integration Services, des commandes et des requêtes Analysis Services ou des tâches de réplication. Les travaux peuvent exécuter des tâches répétitives ou planifiables, et même notifier automatiquement les utilisateurs de l'état d'un travail en déclenchant des alertes, ce qui simplifie de manière significative l'administration de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -35,7 +35,7 @@ ms.locfileid: "48181139"
 |-|-|  
 |**Description**|**Rubrique**|  
 |Explique comment créer un travail de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|[Créer un travail](create-a-job.md)|  
-|Explique comment réattribuer la propriété des travaux de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent à un autre utilisateur.|[Attribuer la propriété d’un travail à d’autres utilisateurs](give-others-ownership-of-a-job.md)|  
+|Explique comment réattribuer la propriété des travaux de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent à un autre utilisateur.|[Give Others Ownership of a Job](give-others-ownership-of-a-job.md)|  
 |Décrit la façon de définir le journal de l'historique des travaux de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|[Configurer le journal d’historique des travaux](set-up-the-job-history-log.md)|  
   
 ## <a name="see-also"></a>Voir aussi  

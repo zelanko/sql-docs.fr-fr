@@ -15,18 +15,18 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: e0d3ee1784653205feb4aa95a80a82d5ac27ec46
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.openlocfilehash: 3c16c87ea79e3c80de9f93bc3571a46d0610b22d
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49643837"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395422"
 ---
 # <a name="upgrade-on-premises-sql-server-to-sql-server-or-sql-server-on-azure-vms-using-the-data-migration-assistant"></a>Mise à niveau de SQL Server sur site vers SQL Server ou SQL Server sur des machines virtuelles Azure à l’aide de l’Assistant Migration des données
 
 Data Migration Assistant fournit des évaluations transparentes de SQL Server en local et mises à niveau vers des versions ultérieures de SQL Server ou des migrations vers SQL Server sur machines virtuelles Azure ou Azure SQL Database.
 
-Cet article fournit des instructions détaillées pour la mise à niveau SQL Server local vers une version ultérieure de SQL Server ou SQL Server sur des machines virtuelles Azure à l’aide de l’Assistant Migration des données.   
+Cet article fournit des instructions détaillées pour la mise à niveau SQL Server local vers une version ultérieure de SQL Server ou SQL Server sur des machines virtuelles Azure à l’aide de l’Assistant Migration des données.   
 
 ## <a name="create-a-new-migration-project"></a>Créer un nouveau projet de migration
 
@@ -50,7 +50,7 @@ Cet article fournit des instructions détaillées pour la mise à niveau SQL Ser
 
 5. Il est recommandé de chiffrer la connexion en sélectionnant **chiffrer la connexion** dans le **propriétés de connexion** section.
 
-6. Cliquez sur **Suivant**.
+6. Cliquer sur **Suivant**.
 
    ![Spécifier la page source et cible](../dma/media/SourceTarget.png)
 
@@ -111,5 +111,5 @@ Vous pouvez surveiller la progression de la migration sur le **afficher les rés
 ## <a name="see-also"></a>Voir aussi
 
 - [Data Migration Assistant (DMA)](../dma/dma-overview.md)
-- [Data Migration Assistant : Paramètres de Configuration](../dma/dma-configurationsettings.md)
+- [Assistant de Migration de données : Paramètres de configuration](../dma/dma-configurationsettings.md)
 - [Assistant de Migration de données : Meilleures pratiques](../dma/dma-bestpractices.md)

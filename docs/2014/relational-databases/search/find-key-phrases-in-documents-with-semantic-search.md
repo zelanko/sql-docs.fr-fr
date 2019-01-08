@@ -12,19 +12,19 @@ ms.assetid: 6ee3676e-ed5d-43ec-aeca-1eed78967111
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fbc48ab864b3492346798042c4c1a340c459a287
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7ead6e45099ef16f8ee7d4935c5f02b528bd5750
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179559"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52406996"
 ---
 # <a name="find-key-phrases-in-documents-with-semantic-search"></a>Rechercher des expressions clés dans les documents avec la recherche sémantique
   Explique comment rechercher des expressions clés dans des documents ou des colonnes de texte configurés pour l'indexation sémantique statistique.  
   
 ##  <a name="BasicsQueryKey"></a> Recherche d’expressions clés dans des Documents  
   
-###  <a name="howtofind"></a> Comment : rechercher des expressions clés dans les Documents avec SEMANTICKEYPHRASETABLE  
+###  <a name="howtofind"></a> Comment : Rechercher des expressions clés dans les Documents avec SEMANTICKEYPHRASETABLE  
  Pour identifier les expressions clés dans des documents spécifiques, ou pour identifier des documents qui contiennent des expressions clés spécifiques, vous pouvez interroger la fonction [semantickeyphrasetable &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/semantickeyphrasetable-transact-sql).  
   
  SEMANTICKEYPHRASETABLE retourne une table avec zéro, une ou plusieurs lignes pour les expressions clés associées aux colonnes de la table spécifiée. Cette fonction d'ensemble de lignes peut uniquement être référencée dans la clause FROM d'une instruction SELECT comme tout nom de table standard.  
@@ -54,8 +54,8 @@ GO
   
  La fonction **SEMANTICKEYPHRASETABLE** récupère efficacement ces résultats en utilisant une recherche d'index au lieu d'une analyse de table.  
   
-###  <a name="HowToTopDocuments"></a> Exemple 2 : Rechercher des Documents de niveau supérieur qui contiennent une expression clé spécifique  
- L'exemple suivant extrait les 25 documents de niveau supérieur qui contiennent l'expression clé « bracket » dans la colonne Document de la table Production.Document de l'exemple de base de données AdventureWorks.  
+###  <a name="HowToTopDocuments"></a> Exemple 2 : Rechercher les Documents de niveau supérieur qui contiennent une expression clé spécifique  
+ L’exemple suivant récupère les 25 premiers documents qui contiennent l’expression clé « bracket » dans la colonne Document de la table Production.Document de l’exemple de base de données AdventureWorks.  
   
 ```tsql  
 SELECT TOP (25) DOC_TBL.DocumentID, DOC_TBL.DocumentSummary  

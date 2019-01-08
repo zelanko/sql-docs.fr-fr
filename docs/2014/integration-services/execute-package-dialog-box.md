@@ -14,12 +14,12 @@ ms.assetid: 4f7a806d-4867-4d1f-bc65-b00c1caee7b6
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a5e90c0ceb79af8834bb2df17ab84943099276bb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 715bcfdda978801bac28e59246aeddc9ab76851e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129879"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418650"
 ---
 # <a name="execute-package-dialog-box"></a>Execute Package Dialog Box
   Utilisez la boîte de dialogue **Exécuter le package** pour exécuter un package stocké sur le serveur [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
@@ -44,7 +44,7 @@ ms.locfileid: "48129879"
   
 1.  Dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], connectez-vous au serveur [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
   
-     Vous vous connectez à l'instance du [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] qui héberge la base de données SSISDB.  
+     Vous vous connectez à l’instance du [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] qui héberge la base de données SSISDB.  
   
 2.  Dans l'Explorateur d'objets, développez l'arborescence pour afficher le nœud **Integration Services Catalogues** .  
   

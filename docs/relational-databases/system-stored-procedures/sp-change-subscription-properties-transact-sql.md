@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_change_subscription_properties_TSQL
@@ -17,12 +16,12 @@ ms.assetid: cf8137f9-f346-4aa1-ae35-91a2d3c16f17
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f87fb9b43b723fa489e42f05f5f4f727bafd18dc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 45aadf2eab3cad31bfc376de59e8cce25126533f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692287"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52785731"
 ---
 # <a name="spchangesubscriptionproperties-transact-sql"></a>sp_change_subscription_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +61,7 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
  [  **@publication_type =** ] *publication_type*  
  Indique le type de réplication de la publication. *publication_type* est **int**, et peut prendre l’une des valeurs suivantes.  
   
-|Valeur|Type de publication|  
+|Value|Type de publication|  
 |-----------|----------------------|  
 |**0**|Transactionnelle|  
 |**1**|Snapshot|  
@@ -71,7 +70,7 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
   
  Le tableau ci-dessous décrit les propriétés des articles et les valeurs de ces propriétés.  
   
-|Propriété|Valeur|Description|  
+|Propriété|Value|Description|  
 |--------------|-----------|-----------------|  
 |**alt_snapshot_folder**||Indique l'emplacement du dossier de remplacement pour l'instantané. Si l'argument est défini à NULL, les fichiers d'instantané sont prélevés à l'emplacement par défaut spécifié par le serveur de publication.|  
 |**distrib_job_login**||Nom de connexion du compte [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows sous lequel l'Agent s'exécute.|  
@@ -81,7 +80,7 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
 |**distributor_security_mode**|**1**|Utilise l'authentification Windows pour la connexion au serveur de distribution.|  
 ||**0**|Utilise l'authentification  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour la connexion au serveur de distribution.|  
 |**argument dts_package_name**||Définit le nom du package DTS (Data Transformation Services) SQL Server 2000. Cette valeur peut être spécifiée seulement s'il s'agit d'une publication transactionnelle ou d'instantané.|  
-|**dts_package_password**||Spécifie le mot de passe du package. *dts_package_password* est **sysname** avec une valeur par défaut NULL, qui indique que la propriété de mot de passe ne doit être modifiée.<br /><br /> Remarque : Un package DTS doit avoir un mot de passe.<br /><br /> Cette valeur peut être spécifiée seulement s'il s'agit d'une publication transactionnelle ou d'instantané.|  
+|**dts_package_password**||Spécifie le mot de passe du package. *dts_package_password* est **sysname** avec une valeur par défaut NULL, qui indique que la propriété de mot de passe ne doit être modifiée.<br /><br /> Remarque : Un package DTS doit avoir un mot de passe.<br /><br /> Cette valeur peut être spécifiée seulement s'il s'agit d'une publication transactionnelle ou d'instantané.|  
 |**dts_package_location**||Emplacement où le package DTS est stocké. Cette valeur peut être spécifiée seulement s'il s'agit d'une publication transactionnelle ou d'instantané.|  
 |**dynamic_snapshot_location**||Spécifie le chemin d'accès au dossier où les fichiers d'instantané sont enregistrés. Cette valeur peut être spécifiée seulement s'il s'agit d'une publication de fusion.|  
 |**ftp_address**||Pour compatibilité descendante uniquement.|  
@@ -92,7 +91,7 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
 |**internet_login**||Connexion que l'Agent de fusion utilise pour se connecter, à l'aide de l'authentification de base, au serveur Web qui héberge la synchronisation Web.|  
 |**internet_password**||Mot de passe qu'utilise l'Agent de fusion lors de la connexion au serveur Web qui héberge la synchronisation Web avec l'authentification de base.|  
 |**internet_security_mode**|**1**|Utilise l'authentification intégrée Windows pour la synchronisation Web. Il est recommandé d'utiliser l'authentification de base pour la synchronisation Web. Pour plus d’informations, consultez [Configurer la synchronisation Web](../../relational-databases/replication/configure-web-synchronization.md).|  
-||**0**|Utiliser l'authentification de base pour la synchronisation Web.<br /><br /> Remarque : La synchronisation Web nécessite une connexion SSL au serveur Web.|  
+||**0**|Utiliser l'authentification de base pour la synchronisation Web.<br /><br /> Remarque : La synchronisation Web nécessite une connexion SSL au serveur Web.|  
 |**internet_timeout**||Délai en secondes avant l'expiration d'une demande de synchronisation Web.|  
 |**internet_url**||URL qui représente l'emplacement de l'écouteur de réplication pour la synchronisation Web.|  
 |**merge_job_login**||Nom de connexion pour le compte Windows sous lequel l’agent s’exécute.|  
@@ -117,7 +116,7 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
   
  Pour les serveurs de publication Oracle, la valeur de *publisher_db* est ignoré, car Oracle n’autorise qu’une base de données par instance du serveur.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Seuls les membres de la **sysadmin** rôle serveur fixe ou **db_owner** rôle de base de données fixe peuvent exécuter **sp_change_subscription_properties**.  
   
 ## <a name="see-also"></a>Voir aussi  

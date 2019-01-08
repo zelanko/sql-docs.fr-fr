@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: b52a9a89-8380-4a02-8a83-dcfb46ae860e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bd05395098a6ce9a4dd23dc2f8dc886fe7273ece
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.openlocfilehash: 0b9460ee16c73d5bf61fdfab1f67a796d5b033c1
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49085067"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52793552"
 ---
 # <a name="create-infosource-for-master-data"></a>Créer un InfoSource pour les données maîtres
   Utilisez la boîte de dialogue **Créer un InfoSource pour les données maîtres** pour créer un nouvel InfoSource pour les données maîtres dans le système SAP Netweaver BW.  
@@ -48,7 +47,7 @@ ms.locfileid: "49085067"
  Après avoir sélectionné un InfoObject, le composant remplit la zone de texte **Nom de l’InfoObject** avec le nom de l’InfoObject sélectionné.  
   
  **Nouveau**  
- Créez un nouvel InfoObject. Cette option ouvre le **créer un nouvel InfoObject** boîte de dialogue dans laquelle vous pouvez créer le nouvel InfoObject. Pour plus d'informations sur cette boîte de dialogue, consultez [Create New InfoObject](create-new-infoobject.md).  
+ Créez un nouvel InfoObject. Cette option ouvre la boîte de dialogue **Créer un nouvel InfoObject** dans laquelle vous pouvez créer l’InfoObject. Pour plus d'informations sur cette boîte de dialogue, consultez [Create New InfoObject](create-new-infoobject.md).  
   
  Après avoir créé un InfoObject, le composant remplit la zone de texte **Nom de l’InfoObject** avec le nom du nouvel InfoObject.  
   

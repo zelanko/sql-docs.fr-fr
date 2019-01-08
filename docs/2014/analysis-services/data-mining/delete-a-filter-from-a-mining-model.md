@@ -13,12 +13,12 @@ ms.assetid: 91220b21-adbc-49a9-b200-8bf0a724eff1
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 02bf9026d14f759b5e5931b132faae3ee0fec1a2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9cb98e29f320a64518c968f3bbc35b590c96a891
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082939"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52508399"
 ---
 # <a name="delete-a-filter-from-a-mining-model"></a>Supprimer un filtre d'un modèle d'exploration de données
   Lorsque vous créez un filtre sur un modèle d'exploration de données, vous pouvez créer des modèles sur un sous-ensemble des données contenues dans la vue de source de données. Les filtres sont également utiles pour tester la précision du modèle sur un sous-ensemble des données d'origine.  
@@ -33,7 +33,7 @@ ms.locfileid: "48082939"
   
 3.  Sélectionnez le modèle et cliquez avec le bouton droit pour ouvrir le menu contextuel.  
   
-     - ou -  
+     -ou-  
   
      Sélectionnez le modèle. Dans le menu **Modèle d'exploration de données** , sélectionnez **Définir le filtre de modèle**.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "48082939"
 -   Dans la boîte de dialogue **Éditeur de filtre** , cliquez avec le bouton droit sur n’importe quelle ligne de la grille et sélectionnez **Supprimer tout**.  
   
 ## <a name="working-with-model-filters-using-the-properties-window"></a>Utilisation des filtres de modèle à l'aide de la fenêtre Propriétés  
- Si vous souhaitez supprimer le filtre entier, vous n'avez pas besoin d'ouvrir les boîtes de dialogue de l'Éditeur de filtre. Les conditions de filtre que vous avez créé sont disponibles dans le `Filter` propriété du modèle d’exploration de données.  
+ Si vous souhaitez supprimer le filtre entier, vous n'avez pas besoin d'ouvrir les boîtes de dialogue de l'Éditeur de filtre. Les conditions de filtre que vous avez créées sont disponibles dans la propriété `Filter` du modèle d'exploration de données.  
   
 > [!NOTE]  
 >  Vous pouvez afficher les propriétés d'un modèle d'exploration de données dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], mais pas dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -60,8 +60,8 @@ ms.locfileid: "48082939"
 3.  Appuyez sur la touche Retour arrière ou Suppr.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Extraire des données de cas à partir d’un modèle d’exploration de données](drill-through-to-case-data-from-a-mining-model.md)   
- [Tâches du modèle d’exploration de données et procédures](mining-model-tasks-and-how-tos.md)   
+ [Extraire des données de cas à partir d'un modèle d'exploration de données](drill-through-to-case-data-from-a-mining-model.md)   
+ [Tâches du modèle d'exploration de données et procédures](mining-model-tasks-and-how-tos.md)   
  [Filtres pour les modèles d’exploration de données &#40;Analysis Services - Exploration de données&#41;](mining-models-analysis-services-data-mining.md)  
   
   

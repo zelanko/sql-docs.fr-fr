@@ -18,19 +18,19 @@ ms.assetid: da846da4-ec19-4a4f-81fb-7d5a2b2bf80a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7c49bbaa5e143f241997e6ff707d84b641c3118a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 924c8f9dca934c81eab74c102509a8d04f66997b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093269"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52517469"
 ---
 # <a name="sql-server-native-client-ole-db"></a>SQL Server Native Client (OLE DB)
   Le fournisseur OLE DB [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client est une API COM de bas niveau qui est utilisée pour accéder aux données. Le fournisseur OLE DB [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client est recommandé pour développer des outils, des utilitaires ou des composants de bas niveau qui ont besoin de performances élevées. Le fournisseur OLE DB [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client est un fournisseur natif de hautes performances qui accède directement au protocole TDS (Tabular Data Stream) [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client fournit la prise en charge OLE DB aux applications qui se connectent à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- Le fournisseur OLE DB [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client est un fournisseur compatible avec OLE DB version 2.0.  
+ Le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Client fournisseur OLE DB natif est le fournisseur OLE DB version 2.0 compatible.  
   
 ## <a name="in-this-section"></a>Dans cette section  
   

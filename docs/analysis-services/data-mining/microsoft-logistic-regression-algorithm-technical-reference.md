@@ -1,5 +1,5 @@
 ---
-title: Référence technique de Microsoft Logistic Regression algorithme | Documents Microsoft
+title: Référence technique de Microsoft Logistic Regression algorithme | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ffe5299530f75706a5d7c348bd39d5cc2e883641
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: a07998d0b0e1fd5b9123c553f650f00e23e22223
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017016"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530180"
 ---
 # <a name="microsoft-logistic-regression-algorithm-technical-reference"></a>Références techniques relatives à l’algorithme MLR (Microsoft Logistic Regression)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "34017016"
   
  L'axe des abscisses (X) contient les valeurs d'une colonne d'entrée. L'axe des ordonnées (Y) contient les probabilités que la colonne prédictible contiendra l'un ou l'autre des états. Le problème de cette méthode est que la régression linéaire ne contraint pas la colonne à avoir une valeur comprise entre 0 et 1, même s'il s'agit des valeurs minimale et maximale de la colonne. Vous pouvez effectuer une régression logistique pour résoudre ce problème. Au lieu de créer une ligne droite, l'analyse de régression logistique crée une courbe en forme de « S » contenant les contraintes de valeur maximale et minimale. Par exemple, le diagramme suivant représente les résultats obtenus en effectuant une régression logistique par rapport aux mêmes données que pour l'exemple précédent.  
   
- ![Données modélisées à l’aide de la régression logistique](../../analysis-services/data-mining/media/logistic-regression.gif "données modélisées à l’aide de la régression logistique")  
+ ![Les données modélisées à l’aide de la régression logistique](../../analysis-services/data-mining/media/logistic-regression.gif "données modélisées à l’aide de la régression logistique")  
   
  Notez que la courbe reste toujours entre la valeur 1 et la valeur 0. Vous pouvez utiliser la régression logistique pour identifier les colonnes d'entrée qui jouent un rôle important dans la détermination de l'état de la colonne prédictible.  
   
@@ -37,13 +37,13 @@ ms.locfileid: "34017016"
 ### <a name="scoring-inputs"></a>Calcul de score des entrées  
  Dans le contexte d’un modèle de réseau neuronal ou de régression logistique, le*ing* désigne le processus de conversion des valeurs présentes dans les données d’un jeu de valeurs qui utilisent la même échelle et qui, par conséquent, peuvent être comparées les unes aux autres. Par exemple, supposons que les entrées pour la plage Income sont comprises entre de 0 à 100 000 et que celles pour [Number of Children] sont comprises entre 0 et 5. Ce processus de conversion vous permet de comparer l’importance de chaque d’entrée indépendamment de la différence des valeurs.  
   
- Pour chaque état qui apparaît dans le jeu d'apprentissage, le modèle génère une entrée. Pour les entrées discrètes ou discrétisées, une entrée supplémentaire est créée pour représenter l'état manquant s'il apparaît au moins une fois dans le jeu d'apprentissage. Pour les entrées continues, deux nœuds d'entrée sont créés au plus : un pour les valeurs manquantes, si elles sont présentes dans les données d'apprentissage, et une entrée pour toutes les valeurs existantes ou non Null. Chaque entrée est mise à l’échelle à un format numérique à l’aide de la méthode de normalisation z-score `(x – μ)\StdDev`.  
+ Pour chaque état qui apparaît dans le jeu d'apprentissage, le modèle génère une entrée. Pour les entrées discrètes ou discrétisées, une entrée supplémentaire est créée pour représenter l'état manquant s'il apparaît au moins une fois dans le jeu d'apprentissage. Pour les entrées continues, deux nœuds d'entrée sont créés au plus : un pour les valeurs manquantes, si elles sont présentes dans les données d'apprentissage, et une entrée pour toutes les valeurs existantes ou non Null. Chaque entrée est mise à l’échelle à un format numérique à l’aide de la méthode de normalisation z-score `(x - μ)\StdDev`.  
   
  Lors de la normalisation z-score, la moyenne (μ) et l'écart type sont obtenus sur le jeu d'apprentissage complet.  
   
  **Valeurs continues**  
   
- La valeur est présente :   `(X – μ)/σ ` (X est la valeur réelle encodée)  
+ Valeur est présente :   `(X - μ)/σ ` (X est la valeur réelle encodée)  
   
  La valeur est absente :    `-   μ/σ `  (mu négatif divisé par sigma)  
   
@@ -53,9 +53,9 @@ ms.locfileid: "34017016"
   
  StdDev  `= sqrt(p\(1-p))`  
   
- La valeur est présente :     `\(1 – μ)/σ` (1 moins mu divisé par sigma)  
+ Valeur est présente :     `\(1 - μ)/σ` (1 moins mu divisé par sigma)  
   
- La valeur est absente :     `(– μ)/σ` (mu négatif divisé par sigma)  
+ La valeur est absente :     `(- μ)/σ` (mu négatif divisé par sigma)  
   
 ### <a name="understanding-logistic-regression-coefficients"></a>Présentation des coefficients de régression logistique  
  La documentation statistique présente différentes méthodes pour effectuer la régression logistique, mais une part importante de toutes ces méthodes évalue l'adéquation du modèle. Un grand nombre de statistiques adéquates ont été proposées, dont des rapports de cotes et des modèles de covariance. La méthode utilisée pour mesurer l'adéquation d'un modèle n'est pas traitée dans cette rubrique ; toutefois, vous pouvez récupérer la valeur des coefficients dans le modèle et les utiliser pour concevoir vos propres mesures d'adéquation.  
@@ -73,9 +73,9 @@ FROM <model name>.CONTENT
 WHERE NODE_TYPE = 23  
 ```  
   
- Pour chaque valeur de sortie, cette requête retourne les coefficients et un ID qui pointe en retour vers le nœud d'entrée associé. Elle retourne également une ligne qui contient la valeur de la sortie et de l'ordonnée à l'origine. Chaque entrée X a son propre coefficient (Ci), mais la table imbriquée contient également un coefficient « libre » (Co), calculé d'après la formule suivante :  
+ Pour chaque valeur de sortie, cette requête retourne les coefficients et un ID qui pointe en retour vers le nœud d'entrée associé. Elle retourne également une ligne qui contient la valeur de la sortie et de l'ordonnée à l'origine. Chaque entrée X a son propre coefficient (Ci), mais la table imbriquée contient également un coefficient « libre » (Co), calculé en fonction de la formule suivante :  
   
- `F(X) = X1*C1 + X2*C2 + … +Xn*Cn + X0`  
+ `F(X) = X1*C1 + X2*C2 + ... +Xn*Cn + X0`  
   
  Activation : `exp(F(X)) / (1 + exp(F(X)) )`  
   
@@ -103,7 +103,7 @@ WHERE NODE_TYPE = 23
  La valeur par défaut est 255.  
   
  MAXIMUM_OUTPUT_ATTRIBUTES  
- Spécifie le nombre d'attributs de sortie que l'algorithme peut traiter avant d'appeler la sélection des fonctionnalités. Attribuez à ce paramètre la valeur 0 pour désactiver la sélection des fonctionnalités.  
+ Spécifie le nombre d'attributs de sortie que l'algorithme peut traiter avant d'appeler la sélection des fonctionnalités. Attribuez à ce paramètre la valeur 0 pour désactiver la sélection des fonctionnalités.  
   
  La valeur par défaut est 255.  
   
@@ -128,25 +128,25 @@ WHERE NODE_TYPE = 23
  S'applique aux colonnes de structure d'exploration de données.  
   
  MODEL_EXISTENCE_ONLY  
- Signifie que la colonne sera considérée comme ayant deux états possibles : **Missing** et **Existing**. Une valeur NULL est une valeur manquante.  
+ Signifie que la colonne sera considérée comme ayant deux états possibles : **Manquant** et **existant**. Une valeur NULL est une valeur manquante.  
   
  S'applique à la colonne de modèle d'exploration de données.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  Un modèle de régression logistique doit contenir une colonne clé, des colonnes d'entrée et au moins une colonne prédictible.  
   
 ### <a name="input-and-predictable-columns"></a>Colonnes d'entrée et prédictibles  
- L’algorithme MLR ([!INCLUDE[msCoName](../../includes/msconame-md.md)] Logistic Regression) prend en charge les types de contenu de colonne d’entrée spécifiques, les types de contenu de colonne prédictible et les indicateurs de modélisation répertoriés dans le tableau suivant. Pour plus d’informations sur la signification des types de contenu utilisés dans un modèle d’exploration de données, consultez [Types de contenu &#40;exploration de données&#41;](../../analysis-services/data-mining/content-types-data-mining.md).  
+ L’algorithme MLR ([!INCLUDE[msCoName](../../includes/msconame-md.md)] Logistic Regression) prend en charge les types de contenu de colonne d’entrée spécifiques, les types de contenu de colonne prédictible et les indicateurs de modélisation répertoriés dans le tableau suivant. Pour plus d’informations sur la signification des types de contenu en cas d’utilisation dans un modèle d’exploration de données, consultez [Types de contenu &#40;Exploration de données&#41;](../../analysis-services/data-mining/content-types-data-mining.md).  
   
-|Colonne|Types de contenu|  
+|colonne|Types de contenu|  
 |------------|-------------------|  
 |Attribut d'entrée|Continu, Discret, Discrétisé, Clé, Table|  
 |Attribut prédictible|Continu, Discret, Discrétisé|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Algorithme Microsoft Logistic Regression](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm.md)   
- [Exemples de requêtes de modèle de régression linéaire](../../analysis-services/data-mining/linear-regression-model-query-examples.md)   
- [Contenu du modèle d’exploration de données pour les modèles de régression logistique & #40 ; Analysis Services - Exploration de données & #41 ;](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md)   
+ [Algorithme MLR (Microsoft Logistic Regression)](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm.md)   
+ [Exemples de requête de modèle de régression linéaire](../../analysis-services/data-mining/linear-regression-model-query-examples.md)   
+ [Contenu du modèle d’exploration de données pour les modèles de régression logistique &#40;Analysis Services – Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md)   
  [Algorithme MNN (Microsoft Neural Network)](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)  
   
   

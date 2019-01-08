@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - subscription views [Master Data Services], creating
@@ -14,12 +13,12 @@ ms.assetid: a5e28961-af16-414a-9845-d2e06aac5214
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 17df4d4f8d311be311907d18ad61cbbce05ea397
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cf14f942857361256febd4329a116c2d349659a0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217591"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52747931"
 ---
 # <a name="create-a-subscription-view-master-data-services"></a>Créer une vue d'abonnement (Master Data Services)
   Créer une vue d’abonnement lorsque vous souhaitez créer une vue de vos données dans le [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] base de données pour une utilisation par des systèmes d’abonnement.  
@@ -29,7 +28,7 @@ ms.locfileid: "48217591"
   
 -   Vous devez avoir l'autorisation d'accéder à la zone fonctionnelle **Gestion de l'intégration** .  
   
--   Vous devez être administrateur de modèle. Pour plus d’informations, consultez [Administrators &#40;Master Data Services&#41;](administrators-master-data-services.md).  
+-   Vous devez être administrateur de modèle. Pour plus d’informations, consultez [Administrateurs &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
 ### <a name="to-create-a-subscription-view"></a>Pour créer une vue d'abonnement  
   
@@ -59,6 +58,6 @@ ms.locfileid: "48217591"
 ## <a name="see-also"></a>Voir aussi  
  [Exportation de données &#40;Master Data Services&#41;](overview-exporting-data-master-data-services.md)   
  [Supprimer une vue d’abonnement &#40;Master Data Services&#41;](delete-a-subscription-view-master-data-services.md)   
- [Créer un indicateur de Version &#40;Master Data Services&#41;](create-a-version-flag-master-data-services.md)  
+ [Créer un indicateur de version &#40;Master Data Services&#41;](create-a-version-flag-master-data-services.md)  
   
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - Resource Governor, enabling
@@ -13,19 +12,19 @@ ms.assetid: 4d17af53-cf11-4ce4-aab4-deda94a49836
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6e3d6ee852f6631014a4407e09f7b41646e9f9cb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5ef8d77de1df31387d33e6577fe84bd5ef9fa680
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48214549"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52806181"
 ---
 # <a name="enable-resource-governor"></a>Activer Resource Governor
-  Le gouverneur de ressources est désactivé par défaut. Vous pouvez activer Resource Governor à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de Transact-SQL.  
+  Resource Governor est désactivé par défaut. Vous pouvez activer Resource Governor à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de Transact-SQL.  
   
--   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
+-   **Avant de commencer :**  [Limitations et Restrictions](#LimitationsRestrictions), [autorisations](#Permissions)  
   
--   **Pour activer Resource Governor, utilisez :**  [Explorateur d’objets](#RGOnObjEx), [Propriétés de Resource Governor](#RGOnProp), [Transact-SQL](#RGOnTSQL)  
+-   **Pour activer le gouverneur de ressources, à l’aide de :**  [Explorateur d’objets](#RGOnObjEx), [propriétés de Resource Governor](#RGOnProp), [Transact-SQL](#RGOnTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
  L'activation de Resource Governor entraîne les résultats suivants :  

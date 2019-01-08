@@ -11,12 +11,12 @@ ms.assetid: 2fdf670a-5237-48fe-813d-97657c5c77d2
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 625aa7736ba6cc9ac4b1b77a65c0be31688d1e37
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 730e9fa68477cbd96261a7036d7a95033db326a8
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183189"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544250"
 ---
 # <a name="formatting-pointers-on-a-gauge-report-builder-and-ssrs"></a>Mise en forme des pointeurs sur une jauge (Générateur de rapports et SSRS)
   Un pointeur de jauge indique la valeur actuelle de la jauge. Par défaut, lorsqu'un champ est ajouté, les valeurs contenues dans le champ sont agrégées en une valeur représentée par le pointeur sur la jauge. Vous pouvez ajouter plusieurs pointeurs à la jauge pour indiquer plusieurs valeurs sur la même échelle ou ajouter plusieurs échelles et un pointeur pour chaque échelle ajoutée. Après avoir ajouté un champ à une jauge, vous devez définir les valeurs maximale et minimale sur l'échelle correspondante pour donner le contexte de la valeur du pointeur. Vous avez également la possibilité de définir des valeurs minimale et maximale sur une plage qui représente une zone critique sur l'échelle.  
@@ -39,11 +39,11 @@ ms.locfileid: "48183189"
 ##  <a name="DisplayingMultiple"></a> Affichage de plusieurs pointeurs sur la jauge  
  Vous pouvez ajouter plusieurs pointeurs à la jauge pour représenter plusieurs valeurs sur la même échelle. Cela peut être utile pour afficher une valeur basse et une valeur haute en même temps. Pour spécifier plusieurs pointeurs sur la jauge pour la même échelle, cliquez avec le bouton droit n’importe où à l’intérieur de la jauge et cliquez sur **Ajouter un pointeur** dans le menu contextuel. Vous pouvez également ajouter une échelle en cliquant avec le bouton droit n’importe où dans la jauge et en cliquant sur **Ajouter une échelle**. Vous pouvez ensuite ajouter un nouveau pointeur, qui sera automatiquement associé à la dernière échelle.  
   
- Lorsque des pointeurs se chevauchent, l'ordre de dessin des pointeurs est déterminé par l'ordre dans lequel ils sont ajoutés à la jauge. Vous ne pouvez pas modifier l'ordre des pointeurs en modifiant l'ordre des champs dans le volet des données. Pour modifier l’ordre de dessin de plusieurs pointeurs, ouvrez le volet Propriétés et cliquez sur **Pointeurs (…)**. Modifiez l'ordre des pointeurs dans la collection de pointeurs.  
+ Lorsque des pointeurs se chevauchent, l'ordre de dessin des pointeurs est déterminé par l'ordre dans lequel ils sont ajoutés à la jauge. Vous ne pouvez pas modifier l'ordre des pointeurs en modifiant l'ordre des champs dans le volet des données. Pour modifier l’ordre de dessin de plusieurs pointeurs, ouvrez le volet Propriétés et cliquez sur **Pointeurs (...)**. Modifiez l'ordre des pointeurs dans la collection de pointeurs.  
   
   
 ##  <a name="SettingGradients"></a> Définition des dégradés sur la base d'une aiguille  
- Vous pouvez spécifier la base d'une aiguille qui peut être dessinée au-dessus ou au-dessous du pointeur sur une jauge radiale uniquement. Tous les styles de base d'aiguille sont dessinés à l'aide de dégradés intégrés qui ne peuvent pas être modifiés. L’exception est le `RoundedDark` style, dans laquelle vous pouvez spécifier une couleur et le style de dégradé.  
+ Vous pouvez spécifier la base d'une aiguille qui peut être dessinée au-dessus ou au-dessous du pointeur sur une jauge radiale uniquement. Tous les styles de base d'aiguille sont dessinés à l'aide de dégradés intégrés qui ne peuvent pas être modifiés. La seule exception est le style `RoundedDark`, qui vous permet de spécifier une couleur et un style de dégradé.  
   
   
 ##  <a name="SettingSnappingInterval"></a> Définition d'un intervalle d'alignement  

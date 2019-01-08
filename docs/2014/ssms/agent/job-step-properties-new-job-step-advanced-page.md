@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql12.ag.job.stepadvanced.f1
@@ -12,14 +12,14 @@ ms.assetid: bdecfd4f-bcd8-4ba2-8ada-fbb636314f40
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1197d23dda2ecd96adaa6cc49625db25851410c2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f0bc24411ebceb0601f00ca659452b55596d869c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176539"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52767211"
 ---
-# <a name="job-step-properties-new-job-step-advanced-page"></a>Propriétés de l’étape du travail : Nouvelle étape du travail (page Avancé)
+# <a name="job-step-properties-new-job-step-advanced-page"></a>Propriétés d’étape de travail : Nouvelle étape du travail (Page avancé)
   Utilisez cette page pour afficher et modifier les propriétés d'une étape de travail de l'Agent [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="options"></a>Options  
@@ -42,7 +42,7 @@ ms.locfileid: "48176539"
  **...**  
  Permet de rechercher le fichier à utiliser comme sortie pour les résultats de l'étape de travail.  
   
- **Afficher**  
+ **Affichage**  
  Dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], ce bouton est désactivé pour l'affichage des fichiers de sortie. Utilisez plutôt le Bloc-Notes pour afficher les fichiers de sortie d'étape de travail.  
   
  **Ajouter la sortie au fichier existant**  
@@ -51,7 +51,7 @@ ms.locfileid: "48176539"
  **Enregistrer un journal dans la table**  
  Consigne la sortie de l'étape de travail dans la table **sysjobstepslogs** de la base de données **msdb** .  
   
- **Afficher**  
+ **Affichage**  
  Quand l'étape de travail a été exécutée au moins une fois, cliquez sur **Afficher** pour afficher sa sortie dans la table.  
   
  **Ajouter la sortie à l'entrée existante dans la table**  
@@ -70,7 +70,7 @@ ms.locfileid: "48176539"
  **...**  
  Permet de rechercher le fichier à utiliser comme sortie pour les résultats de l'étape de travail.  
   
- **Afficher**  
+ **Affichage**  
  Dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], ce bouton est désactivé pour l'affichage des fichiers de sortie. Utilisez plutôt le Bloc-Notes pour afficher les fichiers de sortie d'étape de travail.  
   
  **Ajouter la sortie au fichier existant**  
@@ -79,7 +79,7 @@ ms.locfileid: "48176539"
  **Enregistrer un journal dans la table**  
  Consigne la sortie de l'étape de travail dans la table **sysjobstepslogs** de la base de données **msdb** .  
   
- **Afficher**  
+ **Affichage**  
  Quand l'étape de travail a été exécutée au moins une fois, cliquez sur **Afficher** pour afficher sa sortie dans la table.  
   
  **Ajouter la sortie à l'entrée existante dans la table**  
@@ -95,7 +95,7 @@ ms.locfileid: "48176539"
  **...**  
  Permet de rechercher le fichier à utiliser comme sortie pour les résultats de l'étape de travail.  
   
- **Afficher**  
+ **Affichage**  
  Dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], ce bouton est désactivé pour l'affichage des fichiers de sortie. Utilisez plutôt le Bloc-Notes pour afficher les fichiers de sortie d'étape de travail.  
   
  **Ajouter la sortie au fichier existant**  
@@ -104,7 +104,7 @@ ms.locfileid: "48176539"
  **Enregistrer un journal dans la table**  
  Consigne la sortie de l'étape de travail dans la table **sysjobstepslogs** de la base de données **msdb** .  
   
- **Afficher**  
+ **Affichage**  
  Quand l'étape de travail a été exécutée au moins une fois, cliquez sur **Afficher** pour afficher sa sortie dans la table.  
   
  **Ajouter la sortie à l'entrée existante dans la table**  
@@ -127,7 +127,7 @@ ms.locfileid: "48176539"
  **...**  
  Permet de rechercher le fichier à utiliser comme sortie pour les résultats de l'étape de travail.  
   
- **Afficher**  
+ **Affichage**  
  Dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], ce bouton est désactivé pour l'affichage des fichiers de sortie. Utilisez plutôt le Bloc-Notes pour afficher les fichiers de sortie d'étape de travail.  
   
  **Ajouter la sortie au fichier existant**  
@@ -136,7 +136,7 @@ ms.locfileid: "48176539"
  **Enregistrer un journal dans la table**  
  Consigne la sortie de l'étape de travail dans la table **sysjobstepslogs** de la base de données **msdb** .  
   
- **Afficher**  
+ **Affichage**  
  Quand l'étape de travail a été exécutée au moins une fois, cliquez sur **Afficher** pour afficher sa sortie dans la table.  
   
  **Ajouter la sortie à l'entrée existante dans la table**  

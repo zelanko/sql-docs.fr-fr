@@ -1,5 +1,5 @@
 ---
-title: Enfants (MDX) | Documents Microsoft
+title: Enfants (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: d61eb168b01e9b6d48c4c003ba28d0f977026906
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 03c96a1c90f7ca0a18bd49c371a2ec90582b38f1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740098"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533413"
 ---
 # <a name="children-mdx"></a>Children (MDX)
 
@@ -29,7 +29,7 @@ Member_Expression.Children
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *Argument*  
+ *Member_Expression*  
  Expression MDX (Multidimensional Expressions) valide qui retourne un membre.  
   
 ## <a name="remarks"></a>Notes  
@@ -43,7 +43,7 @@ SELECT [Geography].[Geography].[Country].&[United States].Children ON 0
 FROM [Adventure Works]  
 ```  
   
- L’exemple suivant retourne tous les membres de la **mesures** dimension sur l’axe des colonnes, cela inclut tous les membres calculés et le jeu de tous les enfants de la `[Product].[Model Name]` hiérarchie sur l’axe des lignes à partir d’attributs le **Adventure Works** cube.  
+ L’exemple suivant retourne tous les membres dans le **mesures** dimension sur l’axe des colonnes, cela inclut tous les membres calculés et le jeu de tous les enfants de le `[Product].[Model Name]` hiérarchie sur l’axe des lignes d’attributs à partir de la **Adventure Works** cube.  
   
 ```  
 SELECT  
@@ -56,9 +56,9 @@ FROM
   
 |Version|Historique|  
 |-------------|-------------|  
-|[!INCLUDE[ssBOL2005_R03](../includes/ssbol2005-r03-md.md)]|**Contenu modifié :**<br /> : Mise à jour de la syntaxe et les arguments pour améliorer la clarté.<br /><br /> — Ajout d’exemples mis à jour.|  
+|[!INCLUDE[ssBOL2005_R03](../includes/ssbol2005-r03-md.md)]|**Contenu modifié :**<br /> -Mise à jour de la syntaxe et les arguments pour améliorer la clarté.<br /><br /> -Ajout d’exemples mis à jour.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guide de référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

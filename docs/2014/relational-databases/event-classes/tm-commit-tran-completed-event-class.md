@@ -1,11 +1,10 @@
 ---
-title: 'TM: Commit Tran Completed, classe d’événements | Microsoft Docs'
+title: "Classe d'événements TM: COMMIT Tran Completed, classe d’événements | Microsoft Docs"
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,27 +14,27 @@ ms.assetid: c102de15-f312-42a7-b52a-fc4879cc43aa
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5969b6065f884d81a864f00eb52a5db8c74ef350
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 224bfd47c31c94e19935a97c6ed1cc726e233bb2
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48126479"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52784701"
 ---
-# <a name="tm-commit-tran-completed-event-class"></a>TM: Commit Tran Completed, classe d'événements
-  La classe d'événements TM: Commit Tran Completed indique qu'une demande COMMIT TRANSACTION a été exécutée. La demande a été envoyée à partir du client via l'interface de gestion des transactions. La colonne EventSubClass indique si une nouvelle transaction sera démarrée une fois la transaction actuelle validée.  
+# <a name="tm-commit-tran-completed-event-class"></a>Classe d'événements TM: Commit Tran Completed
+  Le Gestionnaire de transactions : Commit Tran Completed indique qu'une demande COMMIT TRANSACTION a été exécutée. La demande a été envoyée à partir du client via l'interface de gestion des transactions. La colonne EventSubClass indique si une nouvelle transaction sera démarrée une fois la transaction actuelle validée.  
   
-## <a name="tm-commit-tran-completed-event-class-data-columns"></a>Colonnes de la classe d'événements TM: Commit Tran Completed  
+## <a name="tm-commit-tran-completed-event-class-data-columns"></a>Classe d'événements TM: Colonnes de la classe d'événements TM: Commit Tran Completed  
   
 |Nom de la colonne de données|Type de données|Description|ID de la colonne|Oui|  
 |----------------------|---------------|-----------------|---------------|---------|  
 |ApplicationName|`nvarchar`|Nom de l'application cliente qui a créé la connexion à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cette colonne est remplie avec les valeurs passées par l'application plutôt que par le nom affiché du programme.|10|Oui|  
-|ClientProcessID|`int`|ID affecté par l'ordinateur hôte au processus dans lequel s'exécute l'application cliente. Cette colonne de données est remplie si l'ID du processus du client est fourni par le client.|9|Oui|  
+|ClientProcessID|`int`|ID affecté par l'ordinateur hôte au processus dans lequel s'exécute l'application cliente. Cette colonne de données est remplie si l'ID du processus du client est fourni par le client.|9|Oui|  
 |DatabaseID|`int`|ID de la base de données spécifiée par l'instruction de base de données USE ou celui de la base de données par défaut si aucune instruction de base de données USE n'a été spécifiée pour une instance donnée. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] affiche le nom de la base de données si la colonne de données ServerName est capturée dans la trace et que le serveur est disponible. Déterminez la valeur pour une base de données à l'aide de la fonction DB_ID.|3|Oui|  
 |DatabaseName|`nvarchar`|Nom de la base de données dans laquelle l'instruction de l'utilisateur est exécutée.|35|Oui|  
 |Error|`int`|Numéro d'erreur d'un événement donné. Il s'agit souvent du numéro d'erreur stocké dans l'affichage catalogue sys.messages.|31|Oui|  
-|EventClass|`int`|Type d’événement = 186.|27|non|  
-|EventSequence|`int`|Séquence d'un événement donné au sein de la demande.|51|non|  
+|EventClass|`int`|Type d’événement = 186.|27|Non|  
+|EventSequence|`int`|Séquence d'un événement donné au sein de la demande.|51|Non|  
 |EventSubClass|`int`|Type de sous-classe d'événements.<br /><br /> 1=Validation<br /><br /> 2=Commit and Begin|21|Oui|  
 |GroupID|`int`|ID du groupe de charges de travail où l'événement Trace SQL se déclenche.|66|Oui|  
 |HostName|`nvarchar`|Nom de l'ordinateur sur lequel le client est exécuté. La colonne de données est remplie si le client fournit le nom de l'hôte. Pour déterminer le nom de l'hôte, utilisez la fonction HOST_NAME.|8|Oui|  
@@ -45,11 +44,11 @@ ms.locfileid: "48126479"
 |NTDomainName|`nvarchar`|Domaine Windows auquel appartient l'utilisateur.|7|Oui|  
 |NTUserName|`nvarchar`|Nom d'utilisateur Windows.|6|Oui|  
 |RequestID|`int`|ID de la demande contenant l'instruction.|49|Oui|  
-|ServerName|`nvarchar`|Nom de l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracée.|26|non|  
+|ServerName|`nvarchar`|Nom de l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracée.|26|Non|  
 |SessionLoginName|`nvarchar`|Nom de connexion de l'utilisateur à l'origine de la session. Par exemple, si vous vous connectez à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en utilisant le nom Connexion1 et que vous exécutez une instruction en tant que Connexion2, SessionLoginName affiche Connexion1 et LoginName, Connexion2. Cette colonne affiche à la fois les connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et Windows.|64|Oui|  
 |SPID|`int`|ID de la session au cours de laquelle l'événement s'est produit.|12|Oui|  
 |StartTime|`datetime`|Heure à laquelle a débuté l'événement, si elle est connue.|14|Oui|  
-|Réussi|`int`|1 = réussite. 0 = échec (1 signifie la réussite de la vérification d'autorisations et 0 l'échec de cette vérification, par exemple).|23|Oui|  
+|Opération réussie|`int`|1 = réussite. 0 = échec (1 signifie la réussite de la vérification d'autorisations et 0 l'échec de cette vérification, par exemple).|23|Oui|  
 |TextData|`ntext`|Valeur texte qui dépend de la classe d'événements capturée dans la trace.|1|Oui|  
 |TransactionID|`bigint`|ID affecté par le système à la transaction.|4|Oui|  
 |XactSequence|`bigint`|Jeton qui décrit la transaction en cours.|50|Oui|  

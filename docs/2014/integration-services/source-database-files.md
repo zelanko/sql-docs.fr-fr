@@ -13,12 +13,12 @@ ms.assetid: 7dc6bfeb-37c1-45e8-a705-a87564922265
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 277575fdd10231300bcfa6726f35aa648f75d7e5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 42ac066ede8be2af8f08106ed358e63821a92c54
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172799"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533938"
 ---
 # <a name="source-database-files"></a>Fichiers de la base de données source
   Utilisez la boîte de dialogue **Fichiers de la base de données source** pour afficher le nom et l'emplacement des fichiers de la base de données sur le serveur source ou pour spécifier un emplacement de partage de fichiers réseau pour la tâche de transfert de bases de données. Pour plus d’informations sur cette tâche, consultez [Tâche de transfert de bases de données](control-flow/transfer-database-task.md).  
@@ -35,13 +35,13 @@ ms.locfileid: "48172799"
  **Partage de fichiers réseau**  
  Dossier réseau partagé du serveur source à partir duquel les fichiers de base de données seront transférés. Utilisez le **Partage de fichiers réseau** lors du transfert d'une base de données en mode hors connexion en spécifiant **DatabaseOffline** pour **Méthode** dans la page **Bases de données** de la boîte de dialogue **Éditeur de tâche de transfert de bases de données** .  
   
- Entrez l’emplacement du partage de fichiers réseau ou cliquez sur le bouton Parcourir **(…)** pour le rechercher.  
+ Entrez l’emplacement du partage de fichiers réseau ou cliquez sur le bouton Parcourir **(...)** pour le rechercher.  
   
  Lors du transfert d'une base de données en mode hors connexion, les fichiers de base de données sont copiés dans l'emplacement du **Partage de fichiers réseau** sur le serveur source avant d'être transférés sur le serveur de destination.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Éditeur de tâche de base de données de transfert &#40;Page Général&#41;](general-page-of-integration-services-designers-options.md)   
- [Éditeur de tâche de base de données de transfert &#40;Page des bases de données&#41;](../../2014/integration-services/transfer-database-task-editor-databases-page.md)  
+ [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Éditeur de tâche de transfert de bases de données &#40;Page Général&#41;](general-page-of-integration-services-designers-options.md)   
+ [Éditeur de tâche de transfert de bases de données &#40;page Bases de données&#41;](../../2014/integration-services/transfer-database-task-editor-databases-page.md)  
   
   

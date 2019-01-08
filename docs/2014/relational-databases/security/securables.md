@@ -18,17 +18,17 @@ ms.assetid: bfa748f0-70b0-453c-870a-04b7b205b9ff
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: fa9af5a2542581cad1b3a5f4be956cce9651d4f8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7c4a82cfa4d8a82db1e01c49899c3c49c2e01ee9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170179"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532475"
 ---
 # <a name="securables"></a>Éléments sécurisables
   Les éléments sécurisables sont les ressources auxquelles le système d'autorisation du moteur de base de données [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] régule l'accès. Par exemple, une table est un élément sécurisable. Certains éléments sécurisables peuvent être contenus dans d'autres, de façon à créer des hiérarchies imbriquées appelées « étendues », pouvant elles-mêmes être sécurisées. L'étendue de ces éléments sécurisables est constituée par le **serveur**, la **base de données**et le **schéma**.  
   
-## <a name="securable-scope-server"></a>Étendue des éléments sécurisables : serveur  
+## <a name="securable-scope-server"></a>Étendue sécurisable : Serveur  
  Les éléments sécurisables du **serveur** sont les suivants :  
   
 -   Groupe de disponibilité  
@@ -41,7 +41,7 @@ ms.locfileid: "48170179"
   
 -   Base de données  
   
-## <a name="securable-scope-database"></a>Étendue des éléments sécurisables : base de données  
+## <a name="securable-scope-database"></a>Étendue sécurisable : Base de données  
  Les éléments sécurisables de la **base de données** sont les suivants :  
   
 -   Rôle d'application  
@@ -76,14 +76,14 @@ ms.locfileid: "48170179"
   
 -   Utilisateur  
   
-## <a name="securable-scope-schema"></a>Étendue des éléments sécurisables : schéma  
+## <a name="securable-scope-schema"></a>Étendue sécurisable : schéma  
  Les éléments sécurisables du **schéma** sont les suivants :  
   
 -   Type  
   
 -   Collection de schémas XML  
   
--   Objet – La classe d'objet comprend les membres suivants :  
+-   Objet - La classe d’objet comprend les membres suivants :  
   
     -   Agrégat  
   

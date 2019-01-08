@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - logical records [SQL Server replication]
@@ -14,17 +13,17 @@ ms.assetid: f2e55040-ca69-4ccf-97d1-c362e1633f26
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 97678edeeaf9ff749b3dd7a1da9d25044d106ae1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 379357c8598fbdfddedfaa6b3cc5952e2a9119c1
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144609"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52786071"
 ---
 # <a name="detecting-and-resolving-conflicts-in-logical-records"></a>Détection et résolution des conflits dans les enregistrements logiques
   Cette rubrique couvre les différentes combinaisons des approches possibles de détection et de résolution des conflits lors de l'utilisation d'enregistrements logiques. Un conflit se produit dans une réplication de fusion quand un ou plusieurs nœuds modifient les mêmes données, ou quand la réplication de fusion rencontre certains types d'erreurs lors de la réplication de modifications, par exemple une violation de contrainte. Pour plus d'informations sur la détection et la résolution des conflits, consultez [Détection et résolution avancées des conflits de réplication de fusion](advanced-merge-replication-conflict-detection-and-resolution.md).  
   
- Pour spécifier le niveau de suivi et de résolution des conflits pour un article, consultez [Spécifier le niveau de suivi et de résolution des conflits pour des articles de fusion](../publish/specify-the-conflict-tracking-and-resolution-level-for-merge-articles.md).  
+ Pour spécifier le niveau de suivi et de résolution des conflits pour un article, consultez [spécifier le niveau de résolution et de suivi de conflit pour les Articles de fusion](../publish/specify-the-conflict-tracking-and-resolution-level-for-merge-articles.md).  
   
 ## <a name="conflict-detection"></a>Détection des conflits  
  La façon dont les conflits sont détectés pour les enregistrements logiques est déterminée par deux propriétés d'article : **column_tracking** et **logical_record_level_conflict_detection**. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] et les versions ultérieures prennent également en charge la détection au niveau des enregistrements logiques.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
 - database removal [SQL Server], SQL Server Management Studio
@@ -18,12 +17,12 @@ ms.assetid: 1fd8c0f5-03e1-449a-af45-b8cacb479d9c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a98ae854f2608eead7820418eb918fc1ba713aa9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0d0abed3b23b563c6b2620ad93d3f59d58bebd67
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061029"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52789042"
 ---
 # <a name="delete-a-database"></a>Supprimer une base de données
   Cette rubrique explique comment supprimer une base de données définie par l'utilisateur dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -46,7 +45,7 @@ ms.locfileid: "48061029"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Follow Up:**  [After deleting a database](#FollowUp)  
+-   **Suivi :**  [Après la suppression d’une base de données](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
@@ -98,7 +97,7 @@ DROP DATABASE Sales, NewSales ;
 GO  
 ```  
   
-##  <a name="FollowUp"></a> Suivi : Après la suppression d'une base de données  
+##  <a name="FollowUp"></a> Suivi : Après la suppression d’une base de données  
  Sauvegardez la base de données **master** . Si vous devez restaurer la base de données **master** , toutes les bases de données supprimées depuis la dernière sauvegarde de **master** seront encore référencées dans les vues du catalogue système, ce qui risque de générer des messages d'erreur.  
   
 ## <a name="see-also"></a>Voir aussi  

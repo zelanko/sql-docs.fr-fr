@@ -16,12 +16,12 @@ ms.assetid: 25e1fcc5-45d7-4c53-8c79-5493dfaa1c74
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 80b89f52469b2d05bf7f428e4f4b67788b73969b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 529d83451c897359152520aecbece856ef7e6ded
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146169"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538203"
 ---
 # <a name="create-filtered-indexes"></a>Créer des index filtrés
   Cette rubrique explique comment créer un index filtré dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Un index filtré est un index non cluster optimisé convenant tout particulièrement aux requêtes qui effectuent des sélections dans un sous-ensemble de données bien défini. Il utilise un prédicat de filtre pour indexer une partie des lignes de la table. Un index filtré bien conçu peut améliorer les performances des requêtes et réduire les coûts de maintenance et de stockage des index par rapport aux index de table entière.  
@@ -105,17 +105,17 @@ ms.locfileid: "48146169"
   
 3.  Cliquez sur le signe plus (+) pour développer la table sur laquelle vous souhaitez créer un index filtré.  
   
-4.  Cliquez avec le bouton droit sur le dossier **Index** , pointez sur **Nouvel index**, puis sélectionnez **Index non cluster**.  
+4.  Cliquez avec le bouton droit sur le dossier **Index**, pointez sur **Nouvel index**, puis sélectionnez **Index non cluster...**.  
   
 5.  Dans la boîte de dialogue **Nouvel index** , sur la page **Général** , entrez le nom du nouvel index dans la zone **Nom de l'index** .  
   
-6.  Sous **Colonnes clés d'index**, cliquez sur **Ajouter…**.  
+6.  Sous **Colonnes clés d’index**, cliquez sur **Ajouter…**.  
   
 7.  Dans la boîte de dialogue **Sélectionnez les colonnes à partir de***nom_table*, cochez la ou les cases correspondant à la ou aux colonnes de table à ajouter à l’index unique.  
   
 8.  Cliquez sur **OK**.  
   
-9. Sur la page **Filtre** , sous **Expression de filtre**, entrez l'expression SQL que vous utiliserez pour créer l'index filtré.  
+9. Dans la page **Filtre**, sous **Expression de filtre**, entrez l’expression SQL que vous utiliserez pour créer l’index filtré.  
   
 10. Cliquez sur **OK**.  
   
@@ -123,7 +123,7 @@ ms.locfileid: "48146169"
   
 #### <a name="to-create-a-filtered-index"></a>Pour créer un index filtré  
   
-1.  Dans l'**Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   
@@ -165,7 +165,7 @@ ms.locfileid: "48146169"
   
 #### <a name="to-ensure-that-a-filtered-index-is-used-in-a-sql-query"></a>Pour vous assurer qu'un index filtré est utilisé dans une requête SQL  
   
-1.  Dans l'**Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   

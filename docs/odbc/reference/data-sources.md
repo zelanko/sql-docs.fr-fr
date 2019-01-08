@@ -14,17 +14,17 @@ ms.assetid: 4ae44fa2-0b9b-4e19-ab45-c1dc93b68406
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 479cc73538bf94499f2762cca528d2cec72ff3b7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: eb02dd54ea57af668e56fe910ca92830fb09c418
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47675358"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514690"
 ---
 # <a name="data-sources"></a>Sources de données
 Un *source de données* est simplement la source des données. Il peut être un fichier, une base de données sur un système SGBD, ou même un flux de données actives. Les données peuvent être situées sur le même ordinateur que le programme ou sur un autre ordinateur situé sur un réseau. Par exemple, une source de données peut être un SGBD Oracle s’exécutant sur un système d’exploitation OS/2®, accédé par Novell Netware,® ; un SGBD de DB2 d’IBM accessibles via une passerelle ; une collection de fichiers Xbase dans un répertoire du serveur ; ou un fichier de base de données Microsoft® Access local.  
   
- L’objectif d’une source de données consiste à rassembler toutes les informations techniques nécessaires pour accéder aux données, le nom du pilote, adresse réseau, un logiciel réseau et ainsi de suite, en un seul placer et masquez-la par rapport à l’utilisateur. L’utilisateur doit être en mesure de consulter la liste qui inclut les salaires, l’inventaire et le Personnel, choisissez paie à partir de la liste et que l’application de se connecter aux données de paie, tout cela sans savoir où résident les données de paie ou comment l’application a obtenu à celui-ci.  
+ L’objectif d’une source de données consiste à rassembler toutes les informations techniques nécessaires pour accéder aux données - le nom du pilote, adresse réseau, un logiciel réseau et ainsi de suite - dans un emplacement unique et masquez-la par rapport à l’utilisateur. L’utilisateur doit être en mesure de consulter la liste qui inclut les salaires, l’inventaire et le Personnel, choisissez paie à partir de la liste et que l’application de se connecter aux données de paie, tout cela sans savoir où résident les données de paie ou comment l’application a obtenu à celui-ci.  
   
  Le terme *source de données* ne doit pas être confondu avec les termes similaires. Dans ce manuel, *SGBD* ou *base de données* fait référence à un programme de base de données ou d’un moteur. Encore une différence est faite entre *des bases de données bureautiques,* conçu pour s’exécuter sur les ordinateurs personnels et souvent pauvre dans SQL complète et prise en charge de la transaction, et *bases de données de serveur,* conçu pour s’exécuter dans un client / situation de serveur et caractérisée par un moteur de base de données autonome et SQL riche et de prise en charge de la transaction. *Base de données* fait également référence à un regroupement particulier de données, telle qu’une collection de fichiers Xbase dans un répertoire ou d’une base de données sur SQL Server. Il est généralement équivalent au terme de *catalogue,* utilisée ailleurs dans ce manuel ou le terme *qualificateur* dans les versions antérieures d’ODBC.  
   

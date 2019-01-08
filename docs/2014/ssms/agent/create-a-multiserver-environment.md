@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent, multiserver environments
@@ -15,12 +15,12 @@ ms.assetid: edc2b60d-15da-40a1-8ba3-f1d473366ee6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bacf87c25d7949580eb3d366467e1dae9381e8a4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0c5c59a8802597b893110a5f2c26c919c16c8e83
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48115589"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52795613"
 ---
 # <a name="create-a-multiserver-environment"></a>Créer un environnement multiserveur
   L'administration multiserveur nécessite que vous configuriez un serveur maître (MSX) et au moins un serveur cible (TSX). Les travaux qui seront traités sur l'ensemble des serveurs cibles sont d'abord définis sur le serveur maître, puis téléchargés sur les serveurs cibles.  
@@ -37,13 +37,13 @@ ms.locfileid: "48115589"
   
 ||**TSX = 7.0**|**TSX = 8.0 &LT; SP3**|**TSX = 8.0 SP3 ou version ultérieure**|**TSX = 9.0**|**TSX = 10.0**|**TSX = 10.5**|**TSX = 11.0**|  
 |-|--------------------|---------------------------|----------------------------------|--------------------|--------------------|---------------------|---------------------|  
-|**MSX = 7.0**|Oui|Oui|non|non|non|non|non|  
-|**MSX = 8.0 &LT; SP3**|Oui|Oui|non|non|non|non|non|  
-|**MSX = 8.0 SP3 ou version ultérieure**|non|non|Oui|Oui|Oui|Oui|Oui|  
-|**MSX = 9.0**|non|non|non|Oui|Oui|Oui|Oui|  
-|**MSX = 10.0**|non|non|non|non|Oui|Oui|Oui|  
-|**MSX = 10.5**|non|non|non|non|non|Oui|Oui|  
-|**MSX = 11.0**|non|non|non|non|non|non|Oui|  
+|**MSX = 7.0**|Oui|Oui|Non|Non|Non|Non|Non|  
+|**MSX = 8.0 &LT; SP3**|Oui|Oui|Non|Non|Non|Non|Non|  
+|**MSX = 8.0 SP3 ou version ultérieure**|Non|Non|Oui|Oui|Oui|Oui|Oui|  
+|**MSX = 9.0**|Non|Non|Non|Oui|Oui|Oui|Oui|  
+|**MSX = 10.0**|Non|Non|Non|Non|Oui|Oui|Oui|  
+|**MSX = 10.5**|Non|Non|Non|Non|Non|Oui|Oui|  
+|**MSX = 11.0**|Non|Non|Non|Non|Non|Non|Oui|  
   
  Tenez compte des éléments ci-dessous avant de créer un environnement multiserveur :  
   

@@ -5,8 +5,7 @@ ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_addmergesubscription_TSQL
@@ -17,12 +16,12 @@ ms.assetid: a191d817-0132-49ff-93ca-76f13e609b38
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5b319f6065c31a33f30469a73286491c1d641dc3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e1fc809277151ee85608c9ca286185011cf52552
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601117"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52822573"
 ---
 # <a name="spaddmergesubscription-transact-sql"></a>sp_addmergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -81,7 +80,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
  [  **@subscriber_type=**] **'***subscriber_type***'**  
  Type d'abonné. *subscriber_type*est **nvarchar (15)**, et peut prendre l’une des valeurs suivantes.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**local** (valeur par défaut)|Abonné connu uniquement sur le serveur de publication.|  
 |**global**|Abonné connu sur tous les serveurs.|  
@@ -100,7 +99,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
  [  **@frequency_type=**] *frequency_type*  
  Valeur indiquant le moment où l'Agent de fusion est exécuté. *frequency_type* est **int**, et peut prendre l’une des valeurs suivantes.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**1**|Une fois|  
 |**4**|Tous les jours|  
@@ -113,7 +112,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
  [  **@frequency_interval=**] *frequency_interval*  
  Jour(s) où l'Agent de fusion s'exécute. *frequency_interval* est **int**, et peut prendre l’une des valeurs suivantes.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**1**|Dimanche|  
 |**2**|Lundi|  
@@ -130,7 +129,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
  [  **@frequency_relative_interval=**] *frequency_relative_interval*  
  Occurrence de fusion planifiée de l'intervalle de fréquence pour chaque mois. *frequency_relative_interval* est **int**, et peut prendre l’une des valeurs suivantes.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**1**|Première|  
 |**2**|Seconde|  
@@ -145,7 +144,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
  [  **@frequency_subday=**] *frequency_subday*  
  Unité de *frequency_subday_interval*. *frequency_subday* est **int**, et peut prendre l’une des valeurs suivantes.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**1**|Une fois|  
 |**2**|Seconde|  
@@ -209,14 +208,14 @@ sp_addmergesubscription [ @publication= ] 'publication'
 ## <a name="example"></a>Exemple  
  [!code-sql[HowTo#sp_addmergepushsubscriptionagent](../../relational-databases/replication/codesnippet/tsql/sp-addmergesubscription-_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Seuls les membres de la **sysadmin** rôle serveur fixe ou **db_owner** rôle de base de données fixe peuvent exécuter **sp_addmergesubscription**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
  [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
  [Résolution interactive des conflits](../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md)   
- [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
+ [S’abonner aux Publications](../../relational-databases/replication/subscribe-to-publications.md)   
  [sp_changemergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)   
  [sp_dropmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)   
  [sp_helpmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md)  

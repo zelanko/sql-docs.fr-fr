@@ -16,12 +16,12 @@ ms.assetid: 7f3f0949-d791-403a-88e2-54cb1a803dae
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c994b43bda37981d7073d0ee16f32369677e244e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1a0fd00201f782bba8b06ddde8753a86aeb89046
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060409"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535722"
 ---
 # <a name="browsing-a-clustering-model"></a>Exploration d'un modèle de clustering
   Lorsque vous ouvrez un modèle de clustering avec **Parcourir**, le modèle est affiché dans une visionneuse interactive semblable à la visionneuse de clustering dans [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Cette visionneuse vous aide à explorer les clusters qui ont été créés et à comprendre les caractéristiques de cluster. Vous pouvez également comparer des segments individuels avec d'autres segments ou avec la population, et mettre en évidence les différences.  
@@ -121,7 +121,7 @@ ms.locfileid: "48060409"
   
     -   La largeur du losange représente la variance de l'attribut à ce nœud. Par conséquent, un losange plus étroit indique que le nœud peut créer une prédiction plus précise.  
   
-5.  Pour libérer de la place dans le graphique, cliquez sur un cluster, vous n’avez pas besoin afficher immédiatement, puis sélectionnez **masquer la colonne**. Cette opération ne le supprime pas du modèle, mais réduit juste la colonne temporairement.  
+5.  Pour libérer de la place dans le graphique, cliquez sur un cluster, vous n’avez pas besoin afficher immédiatement, puis sélectionnez **masquer la colonne**. Cela ne supprime pas le modèle, mais réduit juste la colonne temporairement.  
   
      Pour afficher les clusters que vous avez masqués, cliquez et faites glisser le bord de la colonne ou sélectionnez le nom du cluster dans la liste, **plus de clusters**.  
   
@@ -145,7 +145,7 @@ ms.locfileid: "48060409"
   
 -   Avec le bouton droit de titre et sélectionnez des colonnes du cluster **extraction pour structurer les données** pour obtenir des informations détaillées sur les membres du cluster qui n’a pas été incluses dans le modèle.  
   
-     Par exemple, si vous définissez le profil de clients, vous pouvez laisser les coordonnées dans les données sous-jacentes (la structure d'exploration de données), mais ne pas les inclure dans le modèle, car elles ne sont pas utiles pour l'analyse. Cependant, une fois que les clients ont été attribués à des clusters, vous pouvez afficher les informations détaillées à l'aide de l'extraction.  
+     Par exemple, si vous profilez les clients, vous pourrez laisser les informations de contact dans les données sous-jacentes (la structure d’exploration de données), mais pas l’inclure dans le modèle, car il n’est pas utile pour l’analyse. Cependant, une fois que les clients ont été attribués à des clusters, vous pouvez afficher les informations détaillées à l'aide de l'extraction.  
   
  [Retour au début](#BKMK_Tabs)  
   
@@ -176,11 +176,11 @@ ms.locfileid: "48060409"
   
 5.  Cliquez sur **copier dans Excel**.  
   
-     Notez que le nouveau graphique des caractéristiques du cluster est ajouté sur sa propre feuille de calcul. Vous pouvez le déplacer sur la même feuille de calcul que l'autre le profil pour faciliter la comparaison, ce que vous allez faire dans l'étape suivante.  
+     Notez que le nouveau graphique des caractéristiques du cluster est ajouté sur sa propre feuille de calcul. Vous pouvez la déplacer sur la feuille de calcul en tant que l’autre profil pour le rendre plus facile de les comparer, ce que vous ferez à l’étape suivante.  
   
  **Conseils**  
   
--   Notez que la caractéristique principale du client dans le cluster des plus de 65 ans est que ces derniers n'achètent pas votre produit ! Si vous souhaitez en connaître la raison, vous pouvez parcourir les clusters et comparer les groupes, ou vous pouvez créer un modèle associé à l'aide d'un algorithme qui se prête à l'exploration des causes et des résultats, par exemple un modèle d'arbre de décision ou un modèle Naïve Bayes.  
+-   Notez que la caractéristique principale du client dans le cluster de plus de 65 ans est que ces derniers n’achètent votre produit ! Si vous souhaitez en connaître la raison, vous pouvez parcourir les clusters et comparer les groupes, ou vous pouvez créer un modèle associé à l'aide d'un algorithme qui se prête à l'exploration des causes et des résultats, par exemple un modèle d'arbre de décision ou un modèle Naïve Bayes.  
   
 -   Si vous voulez obtenir la liste complète des attributs et des probabilités pour ce cluster (ou l'ensemble des clusters), vous pouvez créer une requête. Pour obtenir des exemples de requêtes sur des modèles de clustering, consultez [exemples de requêtes modèle de Clustering](data-mining/clustering-model-query-examples.md).  
   
@@ -205,7 +205,7 @@ ms.locfileid: "48060409"
   
      Notez que, en coulisses, le **Discrimination de Cluster** visionneuse envoie des requêtes complexes pour le serveur d’exploration de données, pour extraire les attributs les plus importants pour établir une distinction entre les deux groupes, ce qui facilite la comparaison deux ensembles de clients.  
   
-2.  Cliquez sur un de le **privilégie...** colonnes.  
+2.  Cliquez sur un de le **privilégie...**  colonnes.  
   
      La barre à la droite de l'attribut et de la liste des valeurs montre les fonctionnalités ou les valeurs qui sont les plus importantes en tant que caractéristique du cluster sélectionné.  
   

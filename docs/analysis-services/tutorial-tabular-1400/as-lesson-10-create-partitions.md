@@ -1,5 +1,5 @@
 ---
-title: 'Leçon du didacticiel Analysis Services 10 : créer des partitions | Microsoft Docs'
+title: 'Analysis Services leçon du didacticiel 10 : Créer des partitions | Microsoft Docs'
 ms.date: 08/27/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile"
-ms.openlocfilehash: b7a4cfcb32023c20e05728a3faac3715278c1019
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: f7b6e5bfd4c533028758f553e5d8c9b2ca21e6f2
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43091327"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52401142"
 ---
 # <a name="create-partitions"></a>Créer des partitions
 
@@ -22,11 +22,11 @@ ms.locfileid: "43091327"
 
 Dans cette leçon, vous créez des partitions pour diviser la table FactInternetSales en sous-parties logiques qui peuvent être traitées (actualisées) indépendamment d’autres partitions. Par défaut, chaque table que vous incluez dans votre modèle comporte une partition, ce qui inclut les colonnes et lignes de toutes les table. Pour la table FactInternetSales, nous souhaitons diviser les données par année ; une seule partition pour chacune des cinq années de la table. Chaque partition peut ensuite être traitée indépendamment. Pour plus d’informations, consultez [Partitions](../tabular-models/partitions-ssas-tabular.md). 
   
-Durée estimée pour effectuer cette leçon : **15 minutes**  
+Durée estimée pour effectuer cette leçon : **15 minutes**  
   
 ## <a name="prerequisites"></a>Prérequis  
 
-Cet article fait partie d’un didacticiel de modélisation tabulaire, qui doit être effectué dans l’ordre. Avant d’effectuer les tâches de cette leçon, vous devez avoir terminé la leçon précédente : [leçon 9 : créer des hiérarchies](../tutorial-tabular-1400/as-lesson-9-create-hierarchies.md).  
+Cet article fait partie d’un didacticiel de modélisation tabulaire, qui doit être effectué dans l’ordre. Avant d’effectuer les tâches de cette leçon, vous devez avoir terminé la leçon précédente : [Leçon 9 : Créer des hiérarchies](../tutorial-tabular-1400/as-lesson-9-create-hierarchies.md).  
   
 ## <a name="create-partitions"></a>Créer des partitions  
   
@@ -117,4 +117,4 @@ Dans le Gestionnaire de Partition, notez que le **dernier traitement** colonne p
   
  ## <a name="whats-next"></a>Quelle est l’étape suivante ?
 
-Accédez à la leçon suivante : [leçon 11 : créer des rôles](../tutorial-tabular-1400/as-lesson-11-create-roles.md). 
+Accédez à la leçon suivante : [Leçon 11 : Créer des rôles](../tutorial-tabular-1400/as-lesson-11-create-roles.md). 

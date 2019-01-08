@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - user-defined types [SQL Server replication]
@@ -42,12 +41,12 @@ ms.assetid: d986032c-3387-4de1-a435-3ec5e82185a2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e50f1c65133a0e33c142962af8e768d1daa5bef8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8cdc2ee8c14e62106775438f932957c69c7c0daa
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227109"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52777131"
 ---
 # <a name="publish-data-and-database-objects"></a>Publier des données et des objets de base de données
   Lors de la création d'une publication, vous choisissez les tables et les autres objets de base de données à publier. Vous pouvez publier les objets de base de données suivants à l'aide de la réplication.  
@@ -56,9 +55,9 @@ ms.locfileid: "48227109"
 |---------------------|--------------------------------------------------------|-----------------------|  
 |Tables|X|X|  
 |Tables partitionnées|X|X|  
-|Procédures stockées – Définition ([!INCLUDE[tsql](../../../includes/tsql-md.md)] et CLR)|X|X|  
-|Procédures stockées – Exécution ([!INCLUDE[tsql](../../../includes/tsql-md.md)] et CLR)|X|non|  
-|Vues|X|X|  
+|Procédures stockées - Définition ([!INCLUDE[tsql](../../../includes/tsql-md.md)] et CLR)|X|X|  
+|Procédures stockées - Exécution ([!INCLUDE[tsql](../../../includes/tsql-md.md)] et CLR)|X|non|  
+|Affichages|X|X|  
 |Vues indexées|X|X|  
 |Vues indexées comme des tables|X|non|  
 |Types définis par l'utilisateur (CLR)|X|X|  
@@ -92,7 +91,7 @@ ms.locfileid: "48227109"
   
 -   [Create a Publication](create-a-publication.md)  
   
--   [Define an Article](define-an-article.md)  
+-   [Définir un article](define-an-article.md)  
   
 -   [Afficher et modifier les propriétés d’une publication](view-and-modify-publication-properties.md)  
   
@@ -124,7 +123,7 @@ ms.locfileid: "48227109"
  La réplication prend en charge la publication de tables et d'index partitionnés. Le niveau de prise en charge dépend du type de réplication utilisé, ainsi que des options que vous spécifiez pour la publication et les articles associés aux tables partitionnées. Pour plus d’informations, consultez [Répliquer des tables et des index partitionnés](replicate-partitioned-tables-and-indexes.md).  
   
 ## <a name="publishing-stored-procedures"></a>Publication de procédures stockées  
- Tous les types de réplication vous permettent de répliquer des définitions de procédure stockée : l'instruction CREATE PROCEDURE est copiée sur chaque Abonné. Dans le cas de procédures stockées CLR (Common Language Runtime), l'assembly associé est également copié. Les modifications des procédures sont répliquées vers les Abonnés ; les modifications des assemblys associés ne le sont pas.  
+ Tous les types de réplication vous permettent de répliquer des définitions de procédure stockée : l'instruction CREATE PROCEDURE est copiée sur chaque Abonné. Dans le cas de procédures stockées CLR (Common Language Runtime), l'assembly associé est également copié. Les modifications des procédures sont répliquées vers les Abonnés ; les modifications des assemblys associés ne le sont pas.  
   
  En plus de répliquer la définition d'une procédure stockée, la réplication transactionnelle vous permet de répliquer l'exécution des procédures stockées. Ceci est particulièrement utile lors de la réplication des résultats de procédures stockées de maintenance qui affectent de gros volumes de données. Pour plus d’informations, consultez [Publishing Stored Procedure Execution in Transactional Replication](../transactional/publishing-stored-procedure-execution-in-transactional-replication.md).  
   
@@ -188,7 +187,7 @@ ms.locfileid: "48227109"
 -   Les fonctions contenant l'indicateur `NOEXPAND` sur des vues indexées ne peuvent pas être publiées dans la même publication que les tables référencées et les vues d'index, en raison de l'ordre dans lequel l'agent de distribution les livre. Pour contourner ce problème, placez la création de la table et de la vue indexée dans une première publication, puis ajoutez les fonctions contenant l'indicateur `NOEXPAND` sur les vues indexées à une seconde publication que vous publierez à la fin de la première publication. Ou bien, créez des scripts pour ces fonctions et exécutez-les à l’aide de la *@post_snapshot_script* paramètre de `sp_addpublication`.  
   
 ### <a name="schemas-and-object-ownership"></a>Schémas et propriété des objets  
- La réplication fonctionne par défaut de la façon suivante dans l'Assistant Nouvelle publication quant aux schémas et à la propriété des objets :  
+ La réplication fonctionne par défaut de la façon suivante dans l'Assistant Nouvelle publication quant aux schémas et à la propriété des objets :  
   
 -   Pour les articles de publications de fusion d'un niveau de compatibilité de 90 ou supérieur, les publications d'instantané et les publications transactionnelles : par défaut, le propriétaire de l'objet sur l'Abonné est le même que le propriétaire de l'objet correspondant sur le serveur de publication. Si les schémas propriétaires des objets n'existent pas sur l'Abonné, ils sont créés automatiquement.  
   

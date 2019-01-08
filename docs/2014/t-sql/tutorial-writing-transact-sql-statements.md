@@ -1,10 +1,10 @@
 ---
-title: 'Tutoriel : Écriture d’instructions Transact-SQL | Microsoft Docs'
+title: 'Didacticiel : Écriture d’instructions Transact-SQL | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: t-sql
 ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL statements, tutorials
@@ -14,14 +14,14 @@ ms.assetid: 2addc9be-67d0-423d-a457-192fe9d7d058
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 9add0b2c75b00a5cf10a1da28c8dd9e30560f716
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 67e09713fdec72313bde6ba81e1cc169467fda0c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061466"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52807581"
 ---
-# <a name="tutorial-writing-transact-sql-statements"></a>Didacticiel : écriture d'instructions Transact-SQL
+# <a name="tutorial-writing-transact-sql-statements"></a>Didacticiel : Écriture d'instructions Transact-SQL
   Bienvenue dans le didacticiel d'écriture d'instructions [!INCLUDE[tsql](../includes/tsql-md.md)] . Ce didacticiel s'adresse aux utilisateurs qui débutent dans l'écriture d'instructions SQL. Il permet aux nouveaux utilisateurs de débuter en passant en revue certaines instructions de base destinées à créer des tables et à insérer des données. Ce didacticiel utilise [!INCLUDE[tsql](../includes/tsql-md.md)], l'implémentation [!INCLUDE[msCoName](../includes/msconame-md.md)] de la norme SQL. Ce didacticiel constitue une brève introduction au langage [!INCLUDE[tsql](../includes/tsql-md.md)] mais ne remplace pas un cours de formation sur [!INCLUDE[tsql](../includes/tsql-md.md)] . Les instructions de ce didacticiel sont volontairement simples et n'ont pas pour objectif de traduire la complexité propre à une base de données de production type.  
   
 > [!NOTE]  
@@ -35,7 +35,7 @@ ms.locfileid: "48061466"
   
  Ce didacticiel est divisé en trois leçons :  
   
- [Leçon 1 : Création des objets de base de données](lesson-1-creating-database-objects.md)  
+ [Leçon 1 : Création d’objets de base de données](lesson-1-creating-database-objects.md)  
  Dans cette leçon, vous allez créer une base de données, créer une table dans la base de données, insérer des données dans la table, mettre à jour et lire les données.  
   
  [Leçon 2 : Configuration des autorisations sur des objets de base de données](lesson-2-configuring-permissions-on-database-objects.md)  
@@ -44,7 +44,7 @@ ms.locfileid: "48061466"
  [Leçon 3 : Suppression des objets de base de données](lesson-3-1-deleting-database-objects.md)  
  Dans cette leçon, vous allez supprimer l'accès aux données, supprimer des données d'une table, supprimer la table, puis supprimer la base de données.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  Pour suivre ce didacticiel jusqu'à la fin, il n'est pas nécessaire de connaître le langage SQL mais vous devez avoir une connaissance de base des concepts propres aux bases de données, tels que les tables. Au cours de ce didacticiel, vous allez créer une base de données et créer un utilisateur Windows. Ces tâches demandent un niveau élevé d'autorisations, c'est pourquoi vous devez vous connecter à l'ordinateur en tant qu'administrateur.  
   
  Les programmes suivants doivent être installés sur votre système :  

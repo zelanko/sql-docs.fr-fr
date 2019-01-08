@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.monitor.snapshotagent.f1
@@ -15,12 +14,12 @@ ms.assetid: b715e621-2cd5-4a15-8f58-a341aa8ef5e4
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ed47e42e4aeb3fbca4c659047ab9f57e62d548cf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a5f9f869c076365a4c1f10a9ffacbf4a3cbae009
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108589"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52777551"
 ---
 # <a name="snapshot-agent"></a>Agent d'instantané
   La boîte de dialogue **Agent d'instantané** affiche des informations détaillées concernant l'Agent d'instantané, notamment son état, son historique, des messages d'information ainsi que tout message d'erreur s'y rapportant.  
@@ -28,7 +27,7 @@ ms.locfileid: "48108589"
 ## <a name="options"></a>Options  
  Sélectionnez les sessions de l'Agent d'instantané à afficher à partir du menu **Affichage** , puis sélectionnez une session particulière dans la grille **Sessions de l'Agent d'instantané**. Des informations détaillées sur cette session s'affichent dans la grille étiquetée **Actions dans la session sélectionnée**. Si la session sélectionnée s'est terminée sur une erreur, la zone de texte étiquetée **Détails de l'erreur ou message de la session sélectionnée** s'affiche également.  
   
- **Afficher**  
+ **Affichage**  
  Permet de sélectionner les sessions de l'Agent d'instantané à afficher.  
   
  **État**  

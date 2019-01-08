@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords:
 - default SQL Server Profiler templates
@@ -18,15 +17,15 @@ ms.assetid: b674e491-dc58-47a1-acdd-7028e9a201fc
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c7fe736aae767d9d3ec434c2f62deac4491e2126
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5cac924e926d03dffb9116e5ce7194bb784d45fe
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084649"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52779591"
 ---
 # <a name="sql-server-profiler-templates"></a>Modèles du Générateur de profils SQL Server
-  Vous pouvez utiliser le [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] pour créer des modèles qui définissent les classes d'événements et les colonnes de données à inclure dans les traces. Après avoir défini et enregistré le modèle, vous pouvez exécuter une trace qui enregistre les données de chaque classe d'événements sélectionnée. Vous pouvez utiliser un modèle sur de nombreuses traces ; le modèle lui-même n'est pas exécuté.  
+  Vous pouvez utiliser le [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] pour créer des modèles qui définissent les classes d'événements et les colonnes de données à inclure dans les traces. Après avoir défini et enregistré le modèle, vous pouvez exécuter une trace qui enregistre les données de chaque classe d'événements sélectionnée. Vous pouvez utiliser un modèle sur de nombreuses traces ; le modèle lui-même n'est pas exécuté.  
   
  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] fournit des modèles de traces prédéfinis qui permettent de configurer aisément les classes d’événements dont vous aurez vraisemblablement besoin pour des traces spécifiques. Le modèle standard, par exemple, permet de créer une trace générique pour enregistrer les connexions, les déconnexions, les traitements terminés et les informations de connexion. Vous pouvez utiliser ce modèle pour exécuter des traces sans modification ou comme point de départ pour d'autres modèles avec des configurations d'événements différents.  
   
@@ -61,7 +60,7 @@ ms.locfileid: "48084649"
 >  Le modèle par défaut est spécifique à un type de serveur donné. Le remplacement du modèle par défaut d'un type de serveur n'affecte pas le modèle par défaut d'un autre type de serveur. Pour plus d’informations sur le paramétrage du modèle par défaut d’un serveur, consultez [Définir les valeurs par défaut des définitions de trace &#40;SQL Server Profiler&#41;](set-trace-definition-defaults-sql-server-profiler.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Créer un modèle de Trace &#40;SQL Server Profiler&#41;](create-a-trace-template-sql-server-profiler.md)   
+ [Créer un modèle de trace &#40;SQL Server Profiler&#41;](create-a-trace-template-sql-server-profiler.md)   
  [Modifier un modèle de trace &#40;SQL Server Profiler&#41;](../../database-engine/modify-a-trace-template-sql-server-profiler.md)   
  [Exporter un modèle de trace &#40;SQL Server Profiler&#41;](export-a-trace-template-sql-server-profiler.md)   
  [Importer un modèle de trace &#40;SQL Server Profiler&#41;](import-a-trace-template-sql-server-profiler.md)  

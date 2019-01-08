@@ -24,12 +24,12 @@ ms.assetid: 76767b20-ef55-49ce-8dc4-e77cb8ff618a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8c6bc03334003438fdefbe7feac1e321d9a2e9bb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c8e9ea6b068f39e9e1e63bb5e9831f977619367f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137489"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545347"
 ---
 # <a name="populate-full-text-indexes"></a>Alimenter des index de recherche en texte intégral
   La création et la maintenance d’un index de recherche en texte intégral impliquent le remplissage de l’index à l’aide d’un processus appelé *alimentation* (également appelé *analyse*).  
@@ -45,12 +45,12 @@ ms.locfileid: "48137489"
 
   
 ### <a name="change-tracking-based-population"></a>Alimentation basée sur le suivi des modifications  
- Vous pouvez éventuellement utiliser le suivi des modifications pour procéder à la gestion d'un index de recherche en texte intégral après son alimentation complète initiale. La surcharge associée au suivi des modifications est réduite, car [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gère une table dans laquelle il suit les modifications apportées à la table de base depuis la dernière alimentation. Lorsque le suivi des modifications est utilisé, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conserve un enregistrement des lignes dans la table de base ou la vue indexée qui ont été modifiés par les mises à jour, suppressions, ou insère. Les modifications apportées aux données via WRITETEXT et UPDATETEXT ne sont pas répercutées dans l'index de recherche en texte intégral et ne sont pas prises en compte par le suivi des modifications.  
+ Vous pouvez éventuellement utiliser le suivi des modifications pour procéder à la gestion d'un index de recherche en texte intégral après son alimentation complète initiale. La surcharge associée au suivi des modifications est réduite, car [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gère une table dans laquelle il suit les modifications apportées à la table de base depuis la dernière alimentation. Lorsque le suivi des modifications est utilisé, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gère un enregistrement des lignes de la table de base ou de la vue indexée ayant été modifiées par des opérations de mise à jour, de suppression ou d'insertion. Les modifications apportées aux données via WRITETEXT et UPDATETEXT ne sont pas répercutées dans l'index de recherche en texte intégral et ne sont pas prises en compte par le suivi des modifications.  
   
 > [!NOTE]  
->  Pour les tables contenant un `timestamp` colonne, vous pouvez utiliser des alimentations incrémentielles.  
+>  Pour les tables qui contiennent une colonne `timestamp`, vous pouvez utiliser des alimentations incrémentielles.  
   
- Lorsque le suivi des modifications est activé pendant la création d’index, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alimente complètement le nouvel index de recherche en texte intégral immédiatement après sa création. Ensuite, les modifications font l'objet d'un suivi et propagées à l'index de recherche en texte intégral. Il existe deux types de suivi des modifications : automatique (option CHANGE_TRACKING AUTO) et manuel (option CHANGE_TRACKING MANUAL). Le suivi des modifications automatique est le comportement par défaut.  
+ Lorsque le suivi des modifications est activé pendant la création d’index, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alimente complètement le nouvel index de recherche en texte intégral juste après sa création. Ensuite, les modifications font l'objet d'un suivi et propagées à l'index de recherche en texte intégral. Il existe deux types de suivi des modifications : automatique (option CHANGE_TRACKING AUTO) et manuel (option CHANGE_TRACKING MANUAL). Le suivi des modifications automatique est le comportement par défaut.  
   
  Le type de suivi des modifications détermine la façon dont l'index de recherche en texte intégral est alimenté, comme expliqué ci-après.  
   
@@ -60,40 +60,40 @@ ms.locfileid: "48137489"
   
      **Pour configurer le suivi des modifications avec alimentation automatique**  
   
-    -   [CREATE FULLTEXT INDEX](/sql/t-sql/statements/create-fulltext-index-transact-sql) … WITH CHANGE_TRACKING AUTO  
+    -   [CREATE FULLTEXT INDEX](/sql/t-sql/statements/create-fulltext-index-transact-sql) ... WITH CHANGE_TRACKING AUTO  
   
-    -   [ALTER FULLTEXT INDEX](/sql/t-sql/statements/alter-fulltext-index-transact-sql) … SET CHANGE_TRACKING AUTO  
+    -   [ALTER FULLTEXT INDEX](/sql/t-sql/statements/alter-fulltext-index-transact-sql) ... SET CHANGE_TRACKING AUTO  
   
      Pour plus d'informations, consultez l'exemple « E. Modification d'un index de recherche en texte intégral pour qu'il utilise le suivi des modifications automatique », présenté ultérieurement dans cette rubrique.  
   
 -   Alimentation manuelle  
   
-     Si vous spécifiez CHANGE_TRACKING MANUAL, le moteur d'indexation et de recherche en texte intégral utilise le remplissage manuel sur l'index de recherche en texte intégral. Une fois le remplissage complet initial terminé, les données modifiées dans la table de base font l'objet d'un suivi. Toutefois, elles ne sont pas propagées à l’index de recherche en texte intégral tant que vous n’exécutez pas une instruction ALTER FULLTEXT INDEX … START UPDATE POPULATION . Vous pouvez utiliser l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour appeler régulièrement cette instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
+     Si vous spécifiez CHANGE_TRACKING MANUAL, le moteur d'indexation et de recherche en texte intégral utilise le remplissage manuel sur l'index de recherche en texte intégral. Une fois le remplissage complet initial terminé, les données modifiées dans la table de base font l'objet d'un suivi. Toutefois, elles ne sont pas propagées à l’index de recherche en texte intégral tant que vous n’exécutez pas une instruction ALTER FULLTEXT INDEX ... START UPDATE POPULATION . Vous pouvez utiliser l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour appeler régulièrement cette instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
      **Pour commencer le suivi des modifications avec remplissage manuel**  
   
-    -   [CREATE FULLTEXT INDEX](/sql/t-sql/statements/create-fulltext-index-transact-sql) … WITH CHANGE_TRACKING MANUAL  
+    -   [CREATE FULLTEXT INDEX](/sql/t-sql/statements/create-fulltext-index-transact-sql) ... WITH CHANGE_TRACKING MANUAL  
   
-    -   [ALTER FULLTEXT INDEX](/sql/t-sql/statements/alter-fulltext-index-transact-sql) … SET CHANGE_TRACKING MANUAL  
+    -   [ALTER FULLTEXT INDEX](/sql/t-sql/statements/alter-fulltext-index-transact-sql) ... SET CHANGE_TRACKING MANUAL  
   
      Pour plus d'informations, consultez l'exemple « C. Création d'un index de recherche en texte intégral avec le suivi des modifications manuel » et l'exemple « D. Exécution d'un remplissage manuel », présentés ultérieurement dans cette rubrique.  
   
  **Pour désactiver le suivi des modifications**  
   
--   [CREATE FULLTEXT INDEX](/sql/t-sql/statements/create-fulltext-index-transact-sql) … WITH CHANGE_TRACKING OFF  
+-   [CREATE FULLTEXT INDEX](/sql/t-sql/statements/create-fulltext-index-transact-sql) ... WITH CHANGE_TRACKING OFF  
   
--   [ALTER FULLTEXT INDEX](/sql/t-sql/statements/alter-fulltext-index-transact-sql) … SET CHANGE_TRACKING OFF  
+-   [ALTER FULLTEXT INDEX](/sql/t-sql/statements/alter-fulltext-index-transact-sql) ... SET CHANGE_TRACKING OFF  
   
 
   
 ### <a name="incremental-timestamp-based-population"></a>Alimentation incrémentielle basée sur un horodateur  
  L'alimentation incrémentielle est un autre mécanisme permettant d'alimenter manuellement un index de recherche en texte intégral. Vous pouvez exécuter une alimentation incrémentielle pour un index de recherche en texte intégral pour lequel CHANGE_TRACKING a la valeur MANUAL ou OFF. Si la première alimentation d'un index de recherche en texte intégral est une alimentation incrémentielle, elle indexe toutes les lignes, ce qui équivaut à une alimentation complète.  
   
- La configuration requise pour le remplissage incrémentiel est que la table indexée doit disposer d’une colonne de la `timestamp` type de données. S'il n'existe pas de colonne de type `timestamp`, l'alimentation incrémentielle ne peut s'effectuer. Une demande d’alimentation incrémentielle dans une table sans un `timestamp` colonne entraîne une alimentation complète. En outre, si des métadonnées concernant l'index de recherche en texte intégral de la table ont été modifiées depuis la dernière alimentation, les demandes d'alimentation incrémentielle sont implémentées comme des alimentations complètes. Cela concerne les modifications de métadonnées provoquées par des modifications de définitions de colonne, d'index ou d'index de recherche en texte intégral.  
+ Pour permettre une alimentation incrémentielle, la table indexée doit disposer d'une colonne dont le type de données est `timestamp`. S'il n'existe pas de colonne de type `timestamp`, l'alimentation incrémentielle ne peut s'effectuer. Une demande d'alimentation incrémentielle dans une table sans colonne de type `timestamp` entraîne une alimentation complète. En outre, si des métadonnées concernant l'index de recherche en texte intégral de la table ont été modifiées depuis la dernière alimentation, les demandes d'alimentation incrémentielle sont implémentées comme des alimentations complètes. Cela concerne les modifications de métadonnées provoquées par des modifications de définitions de colonne, d'index ou d'index de recherche en texte intégral.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise la colonne `timestamp` pour identifier des lignes qui ont été modifiées depuis la dernière alimentation. L'alimentation incrémentielle met alors à jour l'index de recherche en texte intégral avec les lignes ajoutées, supprimées ou modifiées après la dernière alimentation ou pendant l'exécution de cette dernière. Si une table fait l'objet d'un nombre important d'insertions, l'alimentation incrémentielle peut s'avérer plus efficace que l'alimentation manuelle.  
   
- À la fin d'une alimentation, le Moteur d'indexation et de recherche en texte intégral enregistre une nouvelle valeur `timestamp`. Cette valeur est le plus grand `timestamp` valeur rencontrée par l’utilitaire de rassemblement SQL. Cette valeur sera utilisée au démarrage de la prochaine alimentation incrémentielle.  
+ À la fin d'une alimentation, le Moteur d'indexation et de recherche en texte intégral enregistre une nouvelle valeur `timestamp`. Il s'agit de la plus grande valeur `timestamp` rencontrée par l'utilitaire de rassemblement SQL. Cette valeur sera utilisée au démarrage de la prochaine alimentation incrémentielle.  
   
  Pour exécuter une alimentation incrémentielle, exécutez une instruction ALTER FULLTEXT INDEX avec la clause START INCREMENTAL POPULATION.  
   
@@ -123,7 +123,7 @@ GO
   
 ```  
   
-### <a name="b-running-a-full-population-on-table"></a>B. Exécution d'une alimentation complète sur une table  
+### <a name="b-running-a-full-population-on-table"></a>b. Exécution d'une alimentation complète sur une table  
  L'exemple ci-après exécute une alimentation complète sur la table `Production.Document` de l'exemple de base de données `AdventureWorks` .  
   
 ```  
@@ -184,7 +184,7 @@ GO
      Utilisez cette page pour créer ou gérer des planifications pour un travail de l'Agent SQL Server qui démarre une alimentation de table incrémentielle sur la table de base ou la vue indexée de l'index de recherche en texte intégral.  
   
     > [!IMPORTANT]  
-    >  Si la table de base ou la vue ne contient pas une colonne de la `timestamp` de type de données, une alimentation complète est effectuée.  
+    >  Si la table de base ou la vue ne contient pas une colonne du type de données `timestamp`, une alimentation complète est effectuée.  
   
      Les options disponibles sont les suivantes :  
   
@@ -200,7 +200,7 @@ GO
          La boîte de dialogue **Nouvelle planification de la table d’indexation de texte intégral** s’affiche pour vous permettre de modifier la planification.  
   
         > [!NOTE]  
-        >  Pour plus d’informations sur la modification d’un travail, consultez [modifier un travail](../../ssms/agent/modify-a-job.md).  
+        >  Pour plus d’informations sur la modification d’un travail, consultez [Modifier un travail](../../ssms/agent/modify-a-job.md).  
   
     -   Pour supprimer une planification, sélectionnez-la, puis cliquez sur **Supprimer**.  
   

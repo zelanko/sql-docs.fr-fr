@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -17,12 +16,12 @@ ms.assetid: bfc75c5b-7115-49d8-9148-a0c84ee66a9a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e7ab7460d6e94c5bcaffbceb9fe4427e4616d8f3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 076e68de4dc5d4e25f6cabe6b39ac4a61a05033a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050359"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52801101"
 ---
 # <a name="transactions-event-category"></a>Catégorie d'événements Transactions
   Les classes d’événements **Transactions** permettent de surveiller l’état des transactions. Les noms de classes d’événements portant le préfixe **TM:** sont utilisées pour assurer le suivi des opérations liées aux transactions qui sont envoyées à travers l’interface de gestion des transactions.  
@@ -33,16 +32,16 @@ ms.locfileid: "48050359"
 |-----------|-----------------|  
 |[DTCTransaction, classe d’événements](dtctransaction-event-class.md)|Assure le suivi des transactions coordonnées par [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator (MS DTC). Ce sont les transactions distribuées entre plusieurs bases de données ou instances du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].|  
 |[Classe d'événements SQLTransaction](sqltransaction-event-class.md)|Surveille les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] BEGIN TRAN, COMMIT TRAN, SAVE TRAN et ROLLBACK TRAN.|  
-|[Classe d'événements TM: Begin Tran Completed](tm-begin-tran-completed-event-class.md)|Indique qu'une demande BEGIN TRANSACTION est terminée.|  
-|[Classe d'événements TM: Begin Tran Starting](tm-begin-tran-starting-event-class.md)|Indique qu'une demande BEGIN TRANSACTION démarre.|  
-|[Classe d'événements TM: Commit Tran Completed](tm-commit-tran-completed-event-class.md)|Indique qu'une demande COMMIT TRANSACTION est terminée.|  
-|[Classe d'événements TM: Commit Tran Starting](tm-commit-tran-starting-event-class.md)|Indique qu'une demande COMMIT TRANSACTION démarre.|  
-|[Classe d'événements TM: Promote Tran Completed](tm-promote-tran-completed-event-class.md)|Indique qu'une demande PROMOTE TRANSACTION est terminée.|  
-|[Classe d'événements TM: Promote Tran Starting](tm-promote-tran-starting-event-class.md)|Indique qu'une demande PROMOTE TRANSACTION démarre.|  
-|[Classe d'événements TM: Rollback Tran Completed](tm-rollback-tran-completed-event-class.md)|Indique qu'une demande ROLLBACK TRANSACTION est terminée.|  
-|[Classe d'événements TM: Rollback Tran Starting](tm-rollback-tran-starting-event-class.md)|Indique qu'une demande ROLLBACK TRANSACTION démarre.|  
-|[Classe d'événements TM: Save Tran Completed](tm-save-tran-completed-event-class.md)|Indique qu'une demande SAVE TRANSACTION est terminée.|  
-|[Classe d'événements TM: Save Tran Starting](tm-save-tran-starting-event-class.md)|Indique qu'une demande SAVE TRANSACTION démarre.|  
+|[TM : BEGIN Tran Completed, classe d’événements](tm-begin-tran-completed-event-class.md)|Indique qu'une demande BEGIN TRANSACTION est terminée.|  
+|[TM : BEGIN Tran Starting, classe d’événements](tm-begin-tran-starting-event-class.md)|Indique qu'une demande BEGIN TRANSACTION démarre.|  
+|[TM : COMMIT Tran Completed, classe d’événements](tm-commit-tran-completed-event-class.md)|Indique qu'une demande COMMIT TRANSACTION est terminée.|  
+|[TM : COMMIT Tran Starting, classe d’événements](tm-commit-tran-starting-event-class.md)|Indique qu'une demande COMMIT TRANSACTION démarre.|  
+|[TM : Promote Tran Completed, classe d’événements](tm-promote-tran-completed-event-class.md)|Indique qu'une demande PROMOTE TRANSACTION est terminée.|  
+|[TM : Promote Tran Starting, classe d’événements](tm-promote-tran-starting-event-class.md)|Indique qu'une demande PROMOTE TRANSACTION démarre.|  
+|[TM : ROLLBACK Tran Completed, classe d’événements](tm-rollback-tran-completed-event-class.md)|Indique qu'une demande ROLLBACK TRANSACTION est terminée.|  
+|[TM : ROLLBACK Tran Starting (événement classe)](tm-rollback-tran-starting-event-class.md)|Indique qu'une demande ROLLBACK TRANSACTION démarre.|  
+|[TM : Save Tran Completed, classe d’événements](tm-save-tran-completed-event-class.md)|Indique qu'une demande SAVE TRANSACTION est terminée.|  
+|[TM : Save Tran Starting, classe d’événements](tm-save-tran-starting-event-class.md)|Indique qu'une demande SAVE TRANSACTION démarre.|  
 |[Classe d'événements TransactionLog](transactionlog-event-class.md)|Assure le suivi du moment où les transactions sont écrites dans un journal des transactions de la base de données.|  
   
   

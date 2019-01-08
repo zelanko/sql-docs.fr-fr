@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], shortcuts
@@ -20,12 +20,12 @@ ms.assetid: fb4edf3c-71b6-4645-b1d1-ddfdd69f0d7b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a0df572c5e939504222bd0f24884e7b00ac9b075
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1e0f635cc6eb6d985bb75f87583397d6f4c2baa4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183119"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52778171"
 ---
 # <a name="customize-menus-and-shortcut-keys"></a>Personnaliser des menus et des touches de raccourci
   Une touche d’accès rapide vous permet de sélectionner une commande de menu ou un bouton en appuyant sur ALT +*\<lettre unique >*. Par exemple, pour ouvrir le menu **Edition** , appuyez sur Alt+E. Vous pouvez réorganiser et modifier les boutons des barres d’outils, les menus et les commandes de menu dans la boîte de dialogue **Personnaliser** . Les instructions fournies dans cette rubrique permettent de modifier les paramètres à l'aide de la souris ou du clavier uniquement.  

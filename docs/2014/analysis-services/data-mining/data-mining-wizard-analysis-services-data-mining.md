@@ -16,12 +16,12 @@ ms.assetid: d5fea90f-5f38-4639-8851-7707f6606a12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f30b9bbc04e7008a6d5be33e364ef6de7e91edf8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 205c6a3e70e5edfa354681ce70b8a01d93476892
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48223839"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524203"
 ---
 # <a name="data-mining-wizard-analysis-services---data-mining"></a>Assistant Exploration de données (Analysis Services - Exploration de données)
   L’Assistant Exploration de données inclus dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] démarre chaque fois que vous ajoutez une nouvelle structure d’exploration de données à un projet d’exploration de données. L'Assistant vous permet de choisir une source de données et de configurer une vue de source de données qui définit les données à utiliser pour l'analyse, puis vous aide à créer un modèle.  
@@ -55,14 +55,14 @@ ms.locfileid: "48223839"
 ###  <a name="BKMK_Relational"></a> Vs relationnelles. modèles d'exploration de données OLAP  
  L'option importante suivante que vous avez est d'utiliser une source de données relationnelles ou de baser votre modèle sur des données multidimensionnelles (OLAP).  
   
- À ce stade, l'Assistant Exploration de données se divise en deux branches, selon que votre source de données est relationnelle ou dans un cube. Tout le reste excepté le processus de sélection des données est identique (le choix de l'algorithme, la capacité à ajouter un ensemble de données d'exclusion, etc.), mais la sélection de données de cube est un peu plus complexe que d'utiliser des données relationnelles. (Vous obtenez également des options supplémentaires à la fin si vous créez un modèle basé sur un cube.)  
+ À ce stade, l'Assistant Exploration de données se divise en deux branches, selon que votre source de données est relationnelle ou dans un cube. Tout le reste excepté le processus de sélection de données est le même, à savoir le choix de l’algorithme, la possibilité d’ajouter un jeu de données d’exclusion, etc., mais les données de cube en sélectionnant sont un peu plus complexes que l’utilisation de données relationnelles. (Vous obtenez également des options supplémentaires à la fin si vous créez un modèle basé sur un cube.)  
   
  Consultez les rubriques suivantes pour une procédure pas-à-pas de chaque option plus en détail :  
   
  [Créer une structure d’exploration de données relationnelles](create-a-relational-mining-structure.md)  
  Vous guide dans les décisions à prendre lors de la création d'un modèle d'exploration de données relationnel.  
   
- [Créer une structure d’exploration de données OLAP](create-an-olap-mining-structure.md)  
+ [Create an OLAP Mining Structure](create-an-olap-mining-structure.md)  
  Décrit les options supplémentaires et les sélections à effectuer lors de la sélection de données à partir d'un cube OLAP.  
   
 > [!NOTE]  
@@ -83,13 +83,13 @@ ms.locfileid: "48223839"
 ### <a name="additional-features"></a>Fonctionnalités supplémentaires  
  Pour vous aider à choisir les bonnes données, et à configurer correctement les sources de données, l'Assistant Exploration de données fournit les fonctionnalités supplémentaires suivantes :  
   
--   **Détection automatique des types de données**: l’Assistant examine l’unicité et la distribution de valeurs de colonnes, puis recommande le meilleur type de données, et propose un type d’utilisation pour les données. Vous pouvez remplacer ces suggestions en sélectionnant des valeurs dans une liste.  
+-   **Auto - détection des types de données**: L’Assistant examine l’unicité et la distribution des valeurs de colonne et recommandons ensuite le meilleur type de données et suggérer un type d’utilisation pour les données. Vous pouvez remplacer ces suggestions en sélectionnant des valeurs dans une liste.  
   
--   **Suggestions pour les variables**: vous pouvez cliquer sur une boîte de dialogue et démarrer un analyseur qui calcule les corrélations entre les colonnes incluses dans le modèle, et qui détermine si des colonnes sont des prédicteurs probables de l’attribut de résultats, étant donné la configuration du modèle jusqu’à présent. Vous pouvez remplacer ces suggestions en tapant des valeurs différentes.  
+-   **Suggestions pour les variables**: Vous pouvez cliquer sur une boîte de dialogue et démarrer un analyseur qui calcule les corrélations entre les colonnes incluses dans le modèle et détermine si toutes les colonnes sont des PRÉDICTEURS probables de l’attribut de résultat, étant donné la configuration du modèle jusqu'à présent. Vous pouvez remplacer ces suggestions en tapant des valeurs différentes.  
   
--   **Sélection des fonctionnalités**: la plupart des algorithmes détectent automatiquement les colonnes qui sont de bons prédicteurs et les utilisent de préférence. Dans les colonnes qui contiennent trop de valeurs, la *sélection des fonctionnalités* est appliquée pour réduire la cardinalité des données et d’améliorer des chances de trouver un modèle explicite. Vous pouvez affecter le comportement de sélection des fonctionnalités à l'aide de paramètres de modèle.  
+-   **Sélection des fonctionnalités**: La plupart des algorithmes détectent automatiquement les colonnes qui sont de bons PRÉDICTEURS et les utiliseront de préférence. Dans les colonnes qui contiennent trop de valeurs, la *sélection des fonctionnalités* est appliquée pour réduire la cardinalité des données et d’améliorer des chances de trouver un modèle explicite. Vous pouvez affecter le comportement de sélection des fonctionnalités à l'aide de paramètres de modèle.  
   
--   **Découpage automatique de cube en tranches**: si votre modèle d’exploration de données repose sur une source de données OLAP, la possibilité de découper le modèle en tranches à l’aide d’attributs de cube est automatiquement fournie. Cela est pratique pour créer des modèles basés sur des sous-ensembles de données de cube.  
+-   **Découpage automatique de cube**: Si votre modèle d’exploration de données est basé sur une source de données OLAP, la possibilité de découper le modèle en tranches à l’aide des attributs de cube est automatiquement fournie. Cela est pratique pour créer des modèles basés sur des sous-ensembles de données de cube.  
   
 ### <a name="completing-the-wizard"></a>Fin de l'Assistant  
  La dernière étape de l'Assistant consiste à nommer la structure d'exploration de données et le modèle d'exploration de données associé. Selon le type de modèle que vous avez créés, vous pouvez également disposer des options importantes suivantes :  
@@ -113,12 +113,12 @@ ms.locfileid: "48223839"
   
  [Sélection des fonctionnalités &#40;exploration de données&#41;](feature-selection-data-mining.md)  
   
- [Les valeurs manquantes &#40;Analysis Services - Exploration de données&#41;](missing-values-analysis-services-data-mining.md)  
+ [Valeurs manquantes &#40;Analysis Services - Exploration de données&#41;](missing-values-analysis-services-data-mining.md)  
   
  [Extraction sur des modèles d’exploration de données](drillthrough-on-mining-models.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Outils d’exploration de données](data-mining-tools.md)   
- [Solutions d’exploration de données](data-mining-solutions.md)  
+ [Outils d'exploration de données](data-mining-tools.md)   
+ [Solutions d'exploration de données](data-mining-solutions.md)  
   
   

@@ -18,12 +18,12 @@ ms.assetid: bdf054a0-7aba-4e99-a34a-799917376fd5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 52d0aba10c3e01ddd5cbcc709235f4f483907fb3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e1303ca724ef6790ae7bcf218ab8ed0e5da4ed38
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47712613"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509274"
 ---
 # <a name="time-date-and-interval-functions"></a>Fonctions d'heure, de date et d'intervalle
 Le tableau suivant répertorie les fonctions de date et heure sont incluses dans le jeu de fonction scalaire ODBC. Une application peut déterminer les fonctions de date et heure sont pris en charge par un pilote en appelant **SQLGetInfo** avec un *d’informations, tapez* de SQL_TIMEDATE_FUNCTIONS.  
@@ -44,11 +44,11 @@ Le tableau suivant répertorie les fonctions de date et heure sont incluses dans
 |**() CURDATE** (ODBC 1.0)|Retourne la date actuelle.|  
 |**() CURTIME** (ODBC 1.0)|Retourne l'heure locale actuelle.|  
 |**DAYNAME (** *date_exp* **)** (ODBC 2.0)|Retourne une chaîne de caractères contenant le nom spécifique à la source de données de la journée (par exemple, dimanche à samedi ou Dim. à sam pour une source de données qui utilise l’anglais, ou Sonntag à Samstag pour une source de données qui utilise l’allemand) pour la composante jour de *date_exp*.|  
-|**DAYOFMONTH (** *date_exp* **)** (ODBC version 1.0)|Retourne le jour du mois basé sur le champ mois dans *date_exp* en tant qu’entier dans la plage de 1 à 31.|  
+|**DAYOFMONTH (** *date_exp* **)** (ODBC version 1.0)|Retourne le jour du mois basé sur le champ mois dans *date_exp* comme une valeur entière comprise entre 1 et 31.|  
 |**DAYOFWEEK (** *date_exp* **)** (ODBC version 1.0)|Retourne le jour de la semaine basé sur le champ semaine dans *date_exp* en tant qu’entier dans la plage de 1 à 7, où 1 représente le dimanche.|  
 |**DAYOFYEAR (** *date_exp* **)** (ODBC version 1.0)|Retourne le jour de l’année en fonction du champ année de *date_exp* en tant qu’entier dans la plage de 1 à 366.|  
 |**EXTRAIRE (** *extraire le champ FROM* *source d’extraction* **)** (ODBC 3.0)|Retourne le *extraire le champ* partie de la *source d’extraction*. Le *source d’extraction* argument est une expression datetime ou interval. Le *extraire le champ* argument peut être un des mots-clés suivants :<br /><br /> ANNÉE MOIS JOUR HEURE MINUTE SECONDE<br /><br /> La précision de la valeur retournée est défini par l’implémentation. L’échelle est 0, sauf si la seconde est spécifié, auquel cas l’échelle n’est pas inférieure à la précision en fractions de seconde de la *source d’extraction* champ.|  
-|**HEURE (** *time_exp* **)** (ODBC version 1.0)|Retourne l’heure en fonction du champ d’heure dans *time_exp* en tant qu’entier dans la plage de 0 à 23.|  
+|**HEURE (** *time_exp* **)** (ODBC version 1.0)|Retourne l’heure en fonction du champ d’heure dans *time_exp* comme une valeur entière comprise entre 0 et 23.|  
 |**MINUTE (** *time_exp* **)** (ODBC version 1.0)|Retourne la minute basée sur le champ minute dans *time_exp* en tant qu’entier dans la plage de 0 à 59.|  
 |**MOIS (** *date_exp* **)** (ODBC version 1.0)|Retourne le mois en fonction du champ mois dans *date_exp* en tant qu’entier dans la plage de 1 à 12.|  
 |**MONTHNAME (** *date_exp* **)** (ODBC 2.0)|Retourne une chaîne de caractères contenant le nom spécifique à la source de données du mois (par exemple, janvier à décembre ou janvier à décembre pour une source de données qui utilise l’anglais, ou Januar à Dezember pour une source de données qui utilise l’allemand) pour la partie du mois *date_exp*.|  
@@ -57,5 +57,5 @@ Le tableau suivant répertorie les fonctions de date et heure sont incluses dans
 |**DEUXIÈME (** *time_exp* **)** (ODBC version 1.0)|Retourne la seconde basée sur le deuxième champ dans *time_exp* en tant qu’entier dans la plage de 0 à 59.|
 |**TIMESTAMPADD (** *intervalle*, *integer_exp*, *exp_estampille* **)** (ODBC 2.0)|Retourne l’horodateur calculée en ajoutant *integer_exp* intervalles de type *intervalle* à *exp_estampille*. Les valeurs valides de *intervalle* sont les mots clés suivants :<br /><br /> VALEUR<br /><br /> SQL_TSI_SECOND<br /><br /> SQL_TSI_MINUTE<br /><br /> SQL_TSI_MINUTE<br /><br /> SQL_TSI_DAY<br /><br /> SQL_TSI_WEEK<br /><br /> SQL_TSI_MONTH<br /><br /> SQL_TSI_QUARTER<br /><br /> SQL_TSI_YEAR<br /><br /> où en fractions de seconde est exprimées en milliardièmes de seconde. Par exemple, l’instruction SQL suivante retourne le nom de chaque employé et son propre date d’anniversaire d’un an :<br /><br /> `SELECT NAME, {fn  TIMESTAMPADD(SQL_TSI_YEAR, 1, HIRE_DATE)} FROM  EMPLOYEES`<br /><br /> Si *exp_estampille* est une valeur d’heure et *intervalle* spécifie les jours, semaines, mois, trimestres ou années, la partie date de *exp_estampille* est définie sur la date actuelle avant calcul de l’horodatage qui en résulte.<br /><br /> Si *exp_estampille* est une valeur de date et *intervalle* spécifie les fractions de seconde secondes, en secondes, minutes ou heures, la partie heure de *exp_estampille* est définie sur 0 avant calcul de l’horodatage qui en résulte.<br /><br /> Une application détermine les intervalles d’une source de données prend en charge en appelant **SQLGetInfo** avec l’option SQL_TIMEDATE_ADD_INTERVALS.|  
 |**TIMESTAMPDIFF (** *intervalle*, *timestamp_exp1*, *timestamp_exp2* **)** (ODBC 2.0)|Retourne le nombre d’intervalles de type entier *intervalle* par lequel *timestamp_exp2* est supérieur à *timestamp_exp1*. Les valeurs valides de *intervalle* sont les mots clés suivants :<br /><br /> VALEUR<br /><br /> SQL_TSI_SECOND<br /><br /> SQL_TSI_MINUTE<br /><br /> SQL_TSI_MINUTE<br /><br /> SQL_TSI_DAY<br /><br /> SQL_TSI_WEEK<br /><br /> SQL_TSI_MONTH<br /><br /> SQL_TSI_QUARTER<br /><br /> SQL_TSI_YEAR<br /><br /> où en fractions de seconde est exprimées en milliardièmes de seconde. Par exemple, l’instruction SQL suivante retourne le nom de chaque employé et le nombre d’années, qu'il ou elle a été utilisée :<br /><br /> `SELECT NAME, {fn  TIMESTAMPDIFF(SQL_TSI_YEAR, {fn CURDATE()}, HIRE_DATE)} FROM EMPLOYEES`<br /><br /> Si des expressions timestamp sont une valeur d’heure et *intervalle* spécifie les jours, semaines, mois, trimestres ou années, la partie date de cet horodatage est définie sur la date actuelle avant de calculer la différence entre les horodatages.<br /><br /> Si des expressions timestamp sont une valeur de date et *intervalle* spécifie les fractions de seconde secondes, en secondes, minutes ou heures, la partie heure de cet horodatage est définie sur 0 avant de calculer la différence entre les horodatages.<br /><br /> Une application détermine les intervalles d’une source de données prend en charge en appelant **SQLGetInfo** avec l’option SQL_TIMEDATE_DIFF_INTERVALS.|  
-|**SEMAINE (** *date_exp* **)** (ODBC version 1.0)|Retourne la semaine de l’année selon le champ semaine dans *date_exp* en tant qu’entier dans la plage 1 à 53.|  
-|**ANNÉE (** *date_exp* **)** (ODBC version 1.0)|Retourne l’année en fonction du champ année de *date_exp* en tant qu’entier. La plage est la source de données.|
+|**SEMAINE (** *date_exp* **)** (ODBC version 1.0)|Retourne la semaine de l’année selon le champ semaine dans *date_exp* en tant qu’entier dans la plage de 1 à 53.|  
+|**ANNÉE (** *date_exp* **)** (ODBC version 1.0)|Retourne l’année en fonction du champ année de *date_exp* en tant qu’entier. La plage est dépend de la source de données.|

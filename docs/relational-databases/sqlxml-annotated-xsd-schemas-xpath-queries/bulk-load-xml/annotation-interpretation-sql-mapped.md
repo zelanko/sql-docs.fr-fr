@@ -19,16 +19,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 59c9af7037c51490e93352849957ec57bc7e4eb3
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 0f6af7eecb4a77adb4d53440753da1c9b6ef6e1d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662298"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509817"
 ---
 # <a name="annotation-interpretation---sqlmapped"></a>Interprétation des annotations - sql:mapped
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Processus de chargement en masse XML le **sql : mappé** annotation dans le schéma XSD comme prévu : autrement dit, si le schéma de mappage spécifie **sql : mappé = « false »** pour n’importe quel élément ou l’attribut, le chargement en masse XML ne tentez de stocker les données associées dans la colonne correspondante.  
+  Processus de chargement en masse XML le **sql : mappé** annotation dans le schéma XSD comme prévu que, si le schéma de mappage spécifie est **sql : mappé = « false »** pour n’importe quel élément ou l’attribut, le chargement en masse XML ne tentez de stocker les données associées dans la colonne correspondante.  
   
  Chargement en masse XML ignore les éléments et attributs qui ne sont pas mappés (soit, car ils ne sont pas décrits dans le schéma, soit parce qu’ils sont annotés dans le schéma XSD avec **sql : mappé = « false »**). Toutes les données non mappées transitent dans la colonne de dépassement de capacité, si une telle colonne est spécifiée à l’aide de **SQL : Overflow-champ**.  
   

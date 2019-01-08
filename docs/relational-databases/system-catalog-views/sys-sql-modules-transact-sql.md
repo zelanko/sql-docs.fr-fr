@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 59f65e8743dab760b54cec9b088f5feca8d49e0b
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+ms.openlocfilehash: 3fee962111dd6b1316e6740f76f02bf3862745e4
+ms.sourcegitcommit: 9e722cc8d10ecbdb93efc2fc1886fe7b20dbc13c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51221535"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "52282021"
 ---
 # <a name="syssqlmodules-transact-sql"></a>sys.sql_modules (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -46,9 +46,9 @@ ms.locfileid: "51221535"
 |**is_recompiled**|**bit**|Procédure créée avec l'option WITH RECOMPILE.|  
 |**null_on_null_input**|**bit**|Le module a été déclaré pour produire une sortie NULL sur n'importe quelle entrée NULL.|  
 |**execute_as_principal_id**|**Int**|ID du principal de base de données EXECUTE AS.<br /><br /> Valeur NULL par défaut ou dans le cas de l'instruction EXECUTE AS CALLER.<br /><br /> ID du principal spécifié si EXECUTE AS SELF ou EXECUTE AS \<principal >.<br /><br /> -2 = EXECUTE AS OWNER.|  
-|**uses_native_compilation**|**bit**|**S'applique à**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] jusqu'à [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].<br /><br /> 0 = Non compilé en mode natif<br /><br /> 1 = Compilé en mode natif<br /><br /> La valeur par défaut est 0 :|  
-|**is_inlineable**|**bit**|**S’applique aux**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] et versions ultérieures.<br/><br />Indique si le module est inlineable ou non. Inlineability est basée sur les conditions spécifiées [ici](../user-defined-functions/scalar-udf-inlining.md#inlineable-scalar-udfs-requirements).<br /><br /> 0 = non inlineable<br /><br /> 1 = est inlineable. <br /><br /> Pour des UDF scalaires, la valeur sera 1 si l’UDF est inlineable et 0 dans le cas contraire. Il contient toujours la valeur 1 pour les fonctions table inline et 0 pour tous les autres types de module.<br />|  
-|**inline_type**|**bit**|**S’applique aux**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] et versions ultérieures.<br /><br />Indique si l’incorporation (inlining) est activé pour le module actuellement. <br /><br />0 = fonction inline est mis hors tension<br /><br /> 1 = fonction inline est activé.<br /><br /> Pour des UDF scalaires, la valeur est égal à 1 si l’incorporation (inlining) est activé (explicitement ou implicitement). La valeur sera toujours 1 des fonctions table en ligne et la valeur 0 pour les autres types de module.<br />|  
+|**uses_native_compilation**|**bit**|**S'applique à**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] jusqu'à [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].<br /><br /> 0 = Non compilé en mode natif<br /><br /> 1 = Compilé en mode natif<br /><br /> La valeur par défaut est 0.|  
+|**is_inlineable**|**bit**|**S’applique aux**: [!INCLUDE[ssSQL15](../../includes/sssqlv15-md.md)] et versions ultérieures.<br/><br />Indique si le module est inlineable ou non. Inlineability est basée sur les conditions spécifiées [ici](../user-defined-functions/scalar-udf-inlining.md#inlineable-scalar-udfs-requirements).<br /><br /> 0 = non inlineable<br /><br /> 1 = est inlineable. <br /><br /> Pour des UDF scalaires, la valeur sera 1 si l’UDF est inlineable et 0 dans le cas contraire. Il contient toujours la valeur 1 pour les fonctions table inline et 0 pour tous les autres types de module.<br />|  
+|**inline_type**|**bit**|**S’applique aux**: [!INCLUDE[ssSQL15](../../includes/sssqlv15-md.md)] et versions ultérieures.<br /><br />Indique si l’incorporation (inlining) est activé pour le module actuellement. <br /><br />0 = fonction inline est mis hors tension<br /><br /> 1 = fonction inline est activé.<br /><br /> Pour des UDF scalaires, la valeur est égal à 1 si l’incorporation (inlining) est activé (explicitement ou implicitement). La valeur sera toujours 1 des fonctions table en ligne et la valeur 0 pour les autres types de module.<br />|  
 
   
 ## <a name="remarks"></a>Notes  
@@ -56,7 +56,7 @@ ms.locfileid: "51221535"
   
  Ces informations sont également décrites dans [sys.dm_db_uncontained_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="examples"></a>Exemples  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - Replication Monitor, adding and removing Publishers
@@ -13,12 +12,12 @@ ms.assetid: fa36c4b4-bfa5-494e-92e3-07a02d7332c3
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 217069061ea8169c3580e53de1d77462a85e29cd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 484aafea03bb1b053239e9948ac498403b5ac25d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136009"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52788438"
 ---
 # <a name="add-and-remove-publishers-from-replication-monitor"></a>Ajouter et supprimer des serveurs de publication à partir du Moniteur de réplication
   Le serveur à partir duquel vous lancez le moniteur de réplication est automatiquement ajouté au moniteur s'il s'agit d'un serveur de publication. D'autres serveurs de publication peuvent être ajoutés via la boîte de dialogue **Ajouter un serveur de publication** . Après l'ajout d'un serveur de publication, celui-ci est affiché dans le volet gauche du moniteur. Le groupe **Mes serveurs de publication** est inclus par défaut, mais vous pouvez créer de nouveaux groupes pour gérer une ou plusieurs topologies de réplication. Pour plus d’informations sur le démarrage du Moniteur de réplication, consultez [Démarrer le Moniteur de réplication](start-the-replication-monitor.md).  
@@ -49,7 +48,7 @@ ms.locfileid: "48136009"
   
 3.  Dans la boîte de dialogue **Se connecter au serveur** , entrez le nom du serveur de distribution [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] associé au serveur de publication Oracle, puis sélectionnez le type d'authentification. Si vous sélectionnez **Authentification SQL Server**, entrez un nom de connexion et un mot de passe. Les informations d'identification que vous spécifiez sont enregistrées par le moniteur de réplication pour se connecter à ce serveur dans le futur. Le compte Windows ou le nom de connexion SQL Server spécifié doit être un membre du rôle serveur fixe **sysadmin** ou un membre du rôle de base de données fixe **replmonitor** dans la base de données de distribution.  
   
-4.  Cliquez sur **Se connecter**.  
+4.  Cliquer sur **Se connecter**.  
   
 5.  Le nom du serveur de publication et du serveur de distribution sont affichés dans la grille **Démarrer l'analyse du ou des serveurs de publication suivants** .  
   
@@ -67,7 +66,7 @@ ms.locfileid: "48136009"
   
 3.  Dans la boîte de dialogue **Se connecter au serveur** , entrez le nom du serveur de distribution, puis sélectionnez le type d'authentification. Si vous sélectionnez **Authentification SQL Server**, entrez un nom de connexion et un mot de passe. Les informations d'identification que vous spécifiez sont enregistrées par le moniteur de réplication pour se connecter à ce serveur dans le futur. Le compte Windows ou le nom de connexion SQL Server spécifié doit être un membre du rôle serveur fixe **sysadmin** ou un membre du rôle de base de données fixe **replmonitor** dans la base de données de distribution.  
   
-4.  Cliquez sur **Se connecter**.  
+4.  Cliquer sur **Se connecter**.  
   
 5.  Le nom du serveur de distribution et celui de chaque serveur de publication sont affichés dans la grille **Démarrer l'analyse du ou des serveurs de publication suivants** . Si un serveur de publication a déjà été ajouté au moniteur de réplication, il n'apparaît pas dans la grille.  
   

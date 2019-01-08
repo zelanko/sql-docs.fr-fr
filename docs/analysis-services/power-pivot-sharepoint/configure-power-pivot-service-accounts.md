@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 54dc66e30356f3896d7ce509bf83e56a1973c5b2
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 55eb472ef14e980f77a47a2c6989031cebec91e9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38984841"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509551"
 ---
 # <a name="configure-power-pivot-service-accounts"></a>Configuration des comptes de service Power Pivot
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -38,9 +38,9 @@ ms.locfileid: "38984841"
   
  [Spécifications relatives aux comptes et autorisations](#requirements)  
   
- [Dépannage : accorder des autorisations administratives manuellement](#updatemanually)  
+ [Résolution des problèmes : Accorder des autorisations administratives manuellement](#updatemanually)  
   
- [Dépannage : résoudre les erreurs HTTP 503 dues à des mots de passe expirés pour l'Administration centrale ou le service de l'application Web de SharePoint Foundation](#expired)  
+ [Résolution des problèmes : HTTP de résoudre des 503 erreurs dues à des mots de passe expirés pour l’Administration centrale ou le SharePoint Foundation Web Service d’Application](#expired)  
   
 ##  <a name="bkmk_passwordssas"></a> Mettre à jour un mot de passe arrivé à expiration pour une instance de SQL Server Analysis Services (Power Pivot)  
   
@@ -110,12 +110,12 @@ ms.locfileid: "38984841"
   
 |Condition requise|Description|  
 |-----------------|-----------------|  
-|Spécification relative à la configuration|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] est une ressource partagée de la batterie de serveurs qui devient disponible lorsque vous créez une application de service. Le pool d'applications de service doit être spécifié lors de la création de l'application de service. Il peut être spécifié de deux façons, soit à l'aide de l'outil de configuration de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , soit par le biais de commandes PowerShell.<br /><br /> Vous pouvez avoir configuré l'identité du pool d'applications de sorte qu'il s'exécute sous un compte unique. Si ce n'est pas le cas, envisagez de le modifier maintenant de manière à l'exécuter sous un autre compte.|  
+|Spécification relative à la configuration|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] est une ressource partagée de la batterie de serveurs qui devient disponible lorsque vous créez une application de service. Le pool d'applications de service doit être spécifié lors de la création de l'application de service. Il peut être spécifié de deux façons, soit à l'aide de l'outil de configuration de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , soit par le biais de commandes PowerShell.<br /><br /> Vous pouvez avoir configuré l'identité du pool d'applications de sorte qu'il s'exécute sous un compte unique. Mais si vous n’avez pas, envisagez de le modifier maintenant pour s’exécuter sous un compte différent.|  
 |Spécification relative au compte d'utilisateur de domaine|L'identité du pool d'applications doit être un compte d'utilisateur de domaine Windows. Les comptes d'ordinateur intégrés (tels que Service réseau ou Service local) sont interdits.|  
 |Spécifications relatives aux autorisations|Ce compte n'a pas besoin d'autorisations d'administrateur système local sur l'ordinateur. Ce compte doit cependant avoir des autorisations d'administrateur système Analysis Services sur le [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] local installé sur le même ordinateur. Ces autorisations sont accordées automatiquement par le programme d'installation de SQL Server, ou lorsque vous définissez ou modifiez l'identité du pool d'applications dans l'Administration centrale.<br /><br /> Les autorisations d'administration sont nécessaires pour l'envoi de requêtes au [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]. Elles sont également requises pour la surveillance de l'intégrité, la fermeture de sessions inactives et l'écoute des événements de trace.<br /><br /> Le compte doit disposer d'autorisations de connexion, de lecture et d'écriture sur la base de données d'application de service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Ces autorisations sont accordées automatiquement lors de la création de l'application et sont mises à jour automatiquement lorsque vous modifiez des comptes ou des mots de passe dans l'Administration centrale.<br /><br /> L'application de service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] vérifie qu'un utilisateur SharePoint est autorisé à afficher des données avant de récupérer le fichier, mais n'emprunte pas l'identité de l'utilisateur. Il n'existe aucune spécification relative à l'emprunt d'identité.|  
 |Spécifications relatives à la montée en puissance parallèle|Aucun.|  
   
-##  <a name="updatemanually"></a> Dépannage : accorder des autorisations administratives manuellement  
+##  <a name="updatemanually"></a> Résolution des problèmes : Accorder les autorisations administratives manuellement  
  Les autorisations administratives ne peuvent être mises à jour si la personne qui met à jour les informations d'identification n'est pas administrateur local sur l'ordinateur. Vous pouvez alors accorder des autorisations administratives manuellement. Pour ce faire, le plus simple est d'exécuter le travail du minuteur de Configuration [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] dans l'Administration centrale. Avec cette approche, vous pouvez réinitialiser des autorisations pour tous les serveurs [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] de la batterie. Notez que cette approche fonctionne uniquement si le travail du minuteur SharePoint s'exécute à la fois comme administrateur de batterie et comme administrateur local sur l'ordinateur.  
   
 1.  Dans Supervision, cliquez sur **Examiner les définitions de travail**.  
@@ -150,7 +150,7 @@ ms.locfileid: "38984841"
   
 11. Tapez le nom du compte utilisé pour le pool d'applications de service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , puis cliquez sur **OK**.  
   
-##  <a name="expired"></a> Dépannage : résoudre les erreurs HTTP 503 dues à des mots de passe expirés pour l'Administration centrale ou le service de l'application Web de SharePoint Foundation  
+##  <a name="expired"></a> Résolution des problèmes : résoudre les erreurs HTTP 503 dues à des mots de passe expirés pour l'Administration centrale ou le service de l'application web de Microsoft SharePoint Foundation  
  Si le service de l'Administration centrale ou le service Application Web de SharePoint Foundation cesse de fonctionner en raison de la réinitialisation du compte ou de l'expiration du mot de passe, des messages d'erreur HTTP 503 « Service non disponible » s'affichent lors de la tentative d'ouverture de l'Administration centrale de SharePoint ou d'un site SharePoint. Suivez ces étapes pour remettre votre serveur en ligne. Une fois l'Administration centrale disponible, vous pouvez passer à la mise à jour des informations de compte périmées.  
   
 1.  Dans les outils d'administration, cliquez sur **Gestionnaire des services IIS**.  
@@ -159,7 +159,7 @@ ms.locfileid: "38984841"
   
     1.  Cliquez avec le bouton droit sur le nom du pool d’applications et sélectionnez **Paramètres avancés**.  
   
-    2.  Sélectionnez **Identité** et cliquez sur le bouton représentant une ellipse (...) pour ouvrir la boîte de dialogue Identité du pool d'applications.  
+    2.  Sélectionnez **identité** et cliquez sur le... bouton pour ouvrir la boîte de dialogue identité du Pool d’applications.  
   
     3.  Cliquez sur **Définir**.  
   
@@ -181,6 +181,6 @@ ms.locfileid: "38984841"
   
 ## <a name="see-also"></a>Voir aussi  
  [Démarrer ou arrêter un serveur PowerPivot pour SharePoint](../../analysis-services/power-pivot-sharepoint/start-or-stop-a-power-pivot-for-sharepoint-server.md)   
- [Configurer le Power Pivot (Power Pivot pour SharePoint) de compte d’actualisation des données sans assistance](http://msdn.microsoft.com/81401eac-c619-4fad-ad3e-599e7a6f8493)  
+ [Configurer le compte d’actualisation des données PowerPivot sans assistance (PowerPivot pour SharePoint)](http://msdn.microsoft.com/81401eac-c619-4fad-ad3e-599e7a6f8493)  
   
   

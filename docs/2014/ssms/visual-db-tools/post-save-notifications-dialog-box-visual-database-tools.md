@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vdtsql.chm:65546
@@ -14,12 +14,12 @@ ms.assetid: 195dda61-308a-4c94-8f57-1fd01ab1e521
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0e60eaa2ba818d0f22836182acef96f0dfe1dd87
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e4ce89c0a1333a0a9a7a4ee9a801a2969c32a2e6
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48127594"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52810733"
 ---
 # <a name="post-save-notifications-dialog-box-visual-database-tools"></a>Notifications post-enregistrement, boîte de dialogue (Visual Database Tools)
   Cette boîte de dialogue apparaît en cas d'erreurs lors d'une tentative d'enregistrement des modifications apportées à une table. Cette boîte de dialogue énumère les objets qui ont été enregistrés dans la base de données avec succès, les objets qui n'ont pas été enregistrés et les erreurs rencontrées.  

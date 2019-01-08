@@ -14,12 +14,12 @@ ms.assetid: 77f95e0a-0cf2-411a-a792-593f77330fbd
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3eb100042c36d86d604d48e716023dc0c0c4b04c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6c64555e0035de8a06d3bb9227262f4202f73f9a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47679967"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538051"
 ---
 # <a name="records-and-provider-supplied-fields"></a>Enregistrements et champs fournis par le fournisseur
 Quand un [enregistrement](../../../ado/reference/ado-api/record-object-ado.md) objet est ouvert, sa source peut être la ligne actuelle d’ouvert [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md), une URL absolue ou une URL relative en association avec une ouverture [connexion](../../../ado/reference/ado-api/connection-object-ado.md) objet .  
@@ -41,7 +41,7 @@ Quand un [enregistrement](../../../ado/reference/ado-api/record-object-ado.md) o
 ## <a name="special-fields-for-document-source-providers"></a>Les fournisseurs de champs spéciaux pour le Document Source  
  Une classe spéciale de fournisseurs, appelée *fournisseurs de source de document*, gère les dossiers et les documents. Quand un **enregistrement** objet qui représente un document ou un **Recordset** objet représente un dossier de documents, le fournisseur de source de document remplit ces objets avec un ensemble de champs qui décrivent unique caractéristiques du document à la place la valeur réelle de document lui-même. En règle générale, un champ contient une référence à la **Stream** qui représente le document.  
   
- Ces champs constituent une ressource **enregistrement** ou **recordset** et sont répertoriés pour les fournisseurs spécifiques qui les prennent en charge dans [annexe a : fournisseurs](../../../ado/guide/appendixes/appendix-a-providers.md).  
+ Ces champs constituent une ressource **enregistrement** ou **recordset** et sont répertoriés pour les fournisseurs spécifiques qui les prennent en charge dans [annexe a : Fournisseurs](../../../ado/guide/appendixes/appendix-a-providers.md).  
   
  Index de deux constantes le **champs** collection d’une ressource **enregistrement** ou **Recordset** pour extraire une paire de champs couramment utilisés. Le **champ** objet [valeur](../../../ado/reference/ado-api/value-property-ado.md) propriété retourne le contenu souhaité.  
   
@@ -63,7 +63,7 @@ Quand un [enregistrement](../../../ado/reference/ado-api/record-object-ado.md) o
 |RESOURCE_ABSOLUTEPARSENAME|adVarWChar|En lecture seule. Indique l’URL absolue de la ressource, qui est la concaténation de PARENTNAME et PARSENAME.|  
 |PROPRIÉTÉ RESOURCE_ISHIDDEN|adBoolean|True si la ressource est masquée. Aucune ligne n’est retournée, sauf si la commande qui crée l’ensemble de lignes explicitement sélectionne les lignes où la propriété RESOURCE_ISHIDDEN a la valeur True.|  
 |RESOURCE_ISREADONLY|adBoolean|True si la ressource est en lecture seule. Tente d’ouvrir cette ressource avec DBBINDFLAG_WRITE et échoue avec DB_E_READONLY. Cette propriété peut être modifiée même lorsque la ressource n’a été ouverte pour la lecture.|  
-|RESOURCE_CONTENTTYPE|adVarWChar|Indique l’utilisation probable du document, par exemple, un dossier d’avocat. Cela peut correspondre au modèle Office ayant servi à créer le document.|  
+|RESOURCE_CONTENTTYPE|adVarWChar|Indique l’utilisation probable du document-par exemple, un dossier d’avocat. Cela peut correspondre au modèle Office ayant servi à créer le document.|  
 |RESOURCE_CONTENTCLASS|adVarWChar|Indique le type MIME du document, indiquant le format comme «`text/html`».|  
 |RESOURCE_CONTENTLANGUAGE|adVarWChar|Indique la langue dans laquelle le contenu est stocké.|  
 |RESOURCE_CREATIONTIME|adFileTime|En lecture seule. Indique une structure FILETIME qui contient l’heure de que la ressource a été créée. L’heure est signalée dans le format de temps universel coordonné (UTC).|  
@@ -79,4 +79,4 @@ Quand un [enregistrement](../../../ado/reference/ado-api/record-object-ado.md) o
   
 ## <a name="see-also"></a>Voir aussi  
  [Enregistrement objet (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
- [Annexe A : Fournisseurs](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [Annexe a : fournisseurs](../../../ado/guide/appendixes/appendix-a-providers.md)

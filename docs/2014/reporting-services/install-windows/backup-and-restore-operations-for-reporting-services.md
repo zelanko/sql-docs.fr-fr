@@ -20,12 +20,12 @@ ms.assetid: 157bc376-ab72-4c99-8bde-7b12db70843a
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 573ea25fdbb617f079fb71c08057294c5568d95c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dff50034b255ae2b2654f6250cf1c39aad092cb5
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092485"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52390412"
 ---
 # <a name="backup-and-restore-operations-for-reporting-services"></a>Opérations de sauvegarde et de restauration pour Reporting Services
   Cette rubrique offre une vue d'ensemble de tous les fichiers de données utilisés dans une installation [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , et décrit quand et comment les fichiers doivent être sauvegardés. L'élaboration d'un plan de sauvegarde et de restauration des fichiers de base de données du serveur de rapports constitue l'étape la plus importante d'une stratégie de récupération. Cependant, une stratégie de récupération plus complète inclut des sauvegardes des clés de chiffrement, des extensions ou assemblys personnalisés, des fichiers de configuration et des fichiers sources pour les rapports et les modèles.  
@@ -40,9 +40,9 @@ ms.locfileid: "48092485"
   
     -   [Mettre à niveau et migrer Reporting Services](upgrade-and-migrate-reporting-services.md)  
   
-    -   [Migrer une Installation Reporting Services &#40;Mode SharePoint&#41;](migrate-a-reporting-services-installation-sharepoint-mode.md)  
+    -   [Migrer une installation Reporting Services &#40;mode SharePoint&#41;](migrate-a-reporting-services-installation-sharepoint-mode.md)  
   
-    -   [Migrer une Installation Reporting Services &#40;en Mode natif&#41;](migrate-a-reporting-services-installation-native-mode.md)  
+    -   [Faire migrer une installation Reporting Services &#40;mode natif&#41;](migrate-a-reporting-services-installation-native-mode.md)  
   
 ## <a name="backing-up-the-report-server-databases"></a>Sauvegarde des bases de données du serveur de rapports  
  Dans la mesure où un serveur de rapports est un serveur sans état, toutes les données d’application sont stockées dans les bases de données **reportserver** et **reportservertempdb** qui s’exécutent sur une instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . Vous pouvez sauvegarder les bases de données **reportserver** et **reportservertempdb** à l’aide de l’une des méthodes de sauvegarde de bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prises en charge. Les recommandations spécifiques aux bases de données du serveur de rapports sont les suivantes :  
@@ -56,10 +56,10 @@ ms.locfileid: "48092485"
  Pour plus d’informations sur la sauvegarde et la récupération des bases de données relationnelles [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consultez [Sauvegarde et restauration des bases de données SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md).  
   
 > [!IMPORTANT]  
->  Si votre serveur de rapports [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] est en mode SharePoint, vous devez également vous occuper de bases de données supplémentaires, notamment les bases de données de configuration SharePoint et la base de données des alertes [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . En mode SharePoint, trois bases de données sont créées pour chaque application de service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Les bases de données **reportserver**, **reportservertempdb**et **dataalerting** . Pour plus d’informations, consultez [sauvegarde et restauration Applications Reporting Services SharePoint Service](../backup-and-restore-reporting-services-sharepoint-service-applications.md)  
+>  Si votre serveur de rapports [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] est en mode SharePoint, vous devez également vous occuper de bases de données supplémentaires, notamment les bases de données de configuration SharePoint et la base de données des alertes [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . En mode SharePoint, trois bases de données sont créées pour chaque application de service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Les bases de données **reportserver**, **reportservertempdb**et **dataalerting** . Pour plus d’informations, consultez [Applications de service SharePoint de sauvegarde et de restauration Reporting Services](../backup-and-restore-reporting-services-sharepoint-service-applications.md).  
   
 ## <a name="backing-up-the-encryption-keys"></a>Sauvegarde des clés de chiffrement  
- Vous devez sauvegarder les clés de chiffrement lorsque vous configurez pour la première fois une installation [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Vous devez également sauvegarder les clés chaque fois que vous modifiez l'identité des comptes de services ou renommez l'ordinateur. Pour plus d’informations, consultez [Back Up and Restore Reporting Services Encryption Keys](ssrs-encryption-keys-back-up-and-restore-encryption-keys.md). Pour les serveurs de rapports en mode SharePoint, consultez la section « Gestion des clés » de [gérer une Application de Service Reporting Services SharePoint](../manage-a-reporting-services-sharepoint-service-application.md).  
+ Vous devez sauvegarder les clés de chiffrement lorsque vous configurez pour la première fois une installation [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Vous devez également sauvegarder les clés chaque fois que vous modifiez l'identité des comptes de services ou renommez l'ordinateur. Pour plus d’informations, consultez [Back Up and Restore Reporting Services Encryption Keys](ssrs-encryption-keys-back-up-and-restore-encryption-keys.md). Pour les serveurs de rapports en mode SharePoint, consultez la section « Gestion des clés » de l’article [Gérer une application de service Reporting Services SharePoint](../manage-a-reporting-services-sharepoint-service-application.md).  
   
 ## <a name="backing-up-the-configuration-files"></a>Sauvegarde des fichiers de configuration  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] utilise des fichiers de configuration pour stocker les paramètres des applications. Vous devez sauvegarder les fichiers lorsque vous configurez pour la première fois le serveur, puis lorsque vous avez déployé des extensions personnalisées. Les fichiers à sauvegarder sont les suivants :  
@@ -84,11 +84,11 @@ ms.locfileid: "48092485"
  Vérifiez que vous êtes en possession d'une copie de sauvegarde de tous les assemblys et extensions personnalisés que vous utilisez.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Serveur de base de données rapports &#40;SSRS en Mode natif&#41;](../report-server/report-server-database-ssrs-native-mode.md)   
+ [Base de données du serveur de rapports &#40;SSRS en mode natif&#41;](../report-server/report-server-database-ssrs-native-mode.md)   
  [Fichiers de configuration de Reporting Services](../report-server/reporting-services-configuration-files.md)   
- [Utilitaire RSKEYMGMT &#40;SSRS&#41;](../tools/rskeymgmt-utility-ssrs.md)   
+ [Utilitaire rskeymgmt &#40;SSRS&#41;](../tools/rskeymgmt-utility-ssrs.md)   
  [Copier des bases de données avec la sauvegarde et la restauration](../../relational-databases/databases/copy-databases-with-backup-and-restore.md)   
  [Administrer une base de données du serveur de rapports &#40;SSRS en mode natif&#41;](../report-server/administer-a-report-server-database-ssrs-native-mode.md)   
- [Configurer et gérer les clés de chiffrement &#40;Gestionnaire de Configuration de SSRS&#41;](ssrs-encryption-keys-manage-encryption-keys.md)  
+ [Configurer et gérer des clés de chiffrement &#40;Gestionnaire de configuration de SSRS&#41;](ssrs-encryption-keys-manage-encryption-keys.md)  
   
   

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.topic: conceptual
 ms.assetid: e8f1b16b-ea40-4e12-886c-967ebda4e6e4
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8a4c52340cde2aefb73785ee52794cf138c38627
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9c0534bf3a12aa81a9fc84d0e2c4f82a189748a0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145609"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52811201"
 ---
 # <a name="monitor-sql-server-components"></a>Surveiller les composants SQL Server
   La surveillance est importante car [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit un service dans un environnement dynamique. Les données dans l'application sont fluctuantes. Le type d'accès requis par les utilisateurs peut changer. Le mode de connexion des utilisateurs change. Les types des applications accédant à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peuvent même changer, mais [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gère automatiquement les ressources de niveau système, telles que la mémoire et l’espace disque, pour minimiser les paramétrages manuels nécessaires au niveau système. La surveillance permet aux administrateurs d'identifier les tendances de performances afin de déterminer si des modifications s'imposent.  

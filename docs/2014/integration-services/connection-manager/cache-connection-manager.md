@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Cache connection manager
@@ -13,12 +12,12 @@ ms.assetid: bdc92038-3720-4795-8a5c-79b963f2c952
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c0d3513446c930d41ef9163708e60ad063244479
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: aa2c26f086ea67a83308945990375b19164a7d0d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48064279"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52769141"
 ---
 # <a name="cache-connection-manager"></a>Gestionnaire de connexions du cache
   Le gestionnaire de connexions du cache lit des données à partir de la transformation du cache ou d'un fichier cache (.caw) et peut enregistrer les données dans un fichier cache. Les données sont toujours stockées en mémoire que vous configuriez ou non le gestionnaire de connexions du cache pour utiliser un fichier cache.  
@@ -48,7 +47,7 @@ ms.locfileid: "48064279"
   
 -   Mettez à jour le nom du fichier cache au moment de l’exécution en utilisant une expression pour définir la propriété ConnectionString. Pour plus d’informations, consultez [Expressions de propriété dans des packages](../expressions/use-property-expressions-in-packages.md).  
   
- Vous pouvez définir les propriétés par le biais du concepteur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ou par programmation.  
+ Vous pouvez définir des propriétés au moyen du concepteur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ou par programmation.  
   
  Pour plus d’informations sur les propriétés définissables dans le concepteur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , consultez [Éditeur du gestionnaire de connexions du cache](../cache-connection-manager-editor.md).  
   

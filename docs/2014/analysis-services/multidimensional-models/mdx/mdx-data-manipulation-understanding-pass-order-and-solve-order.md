@@ -19,12 +19,12 @@ ms.assetid: 7ed7d4ee-4644-4c5d-99a4-c4b429d0203c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5d8d1797bc1ffdf937e37fb1ffae075691a892ab
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9531b22e8154796f4f36a5b5bca04d510877d0ba
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48083009"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511009"
 ---
 # <a name="understanding-pass-order-and-solve-order-mdx"></a>Présentation des concepts d'ordre de passage et d'ordre de résolution (MDX)
   Lorsqu'un cube est calculé dans le cadre d'un script MDX, il peut subir de nombreuses étapes de calcul, en fonction de l'utilisation de diverses fonctionnalités liées au calcul. Chacune de ces étapes porte le nom de test de calcul.  
@@ -70,7 +70,7 @@ ms.locfileid: "48083009"
 > [!NOTE]  
 >  Vous pouvez exécuter ces requêtes MDX sur l'exemple de base de données multidimensionnelles Adventure Works. Vous pouvez télécharger l’exemple de [modèles multidimensionnels AdventureWorks SQL Server 2012](http://msftdbprodsamples.codeplex.com/releases/view/55330) à partir du site web Codeplex.  
   
-### <a name="query-1differences-in-income-and-expenses"></a>Requête 1—Différences entre les revenus et les dépenses  
+### <a name="query-1-differences-in-income-and-expenses"></a>Requête 1-différences de revenus et les dépenses  
  Pour la première requête MDX, calculez la différence entre les ventes et les coûts pour chaque année en construisant une requête MDX simple semblable à l'exemple suivant :  
   
 ```  
@@ -95,7 +95,7 @@ FROM [Adventure Works]
 |**CY 2008**|$9,770,899.74|$5,721,205.24|  
 |**Year Difference**|($20,160.56)|$2,878.06|  
   
-### <a name="query-2percentage-of-income-after-expenses"></a>Requête 2—Pourcentage de revenus après dépenses  
+### <a name="query-2-percentage-of-income-after-expenses"></a>Requête 2-pourcentage de revenus après dépenses  
  Pour la seconde requête, calculez le pourcentage de revenus après dépenses pour chaque année à l'aide de la requête MDX suivante :  
   
 ```  
@@ -123,10 +123,10 @@ FROM [Adventure Works]
   
  La différence entre les jeux de résultats des deux requêtes provient de la différence d'emplacement du membre calculé. Dans la première requête, le membre calculé fait partie de l'axe ROWS, et non de l'axe COLUMNS illustré dans la deuxième requête. Cette différence d'emplacement devient importante dans la requête suivante, qui combine les deux membres calculés dans une même requête MDX.  
   
-### <a name="query-3combined-year-difference-and-net-income-calculations"></a>Requête 3—Calculs combinés de différence sur l'année et de revenus nets  
- Dans cette dernière requête combinant les deux exemples précédents en une seule requête MDX, l'ordre de résolution devient important en raison des calculs à la fois sur les colonnes et sur les lignes. Pour vous assurer que les calculs sont effectués dans l’ordre approprié, définir l’ordre dans lequel les calculs à l’aide de la `SOLVE_ORDER` mot clé.  
+### <a name="query-3-combined-year-difference-and-net-income-calculations"></a>Interroger la différence de l’année combinées de 3 et les calculs de revenu Net  
+ Dans cette dernière requête combinant les deux exemples précédents en une seule requête MDX, l'ordre de résolution devient important en raison des calculs à la fois sur les colonnes et sur les lignes. Pour vous assurer que les calculs sont effectués dans l'ordre approprié, utilisez le mot clé `SOLVE_ORDER` afin de définir l'ordre des calculs.  
   
- Le mot clé `SOLVE_ORDER` spécifie l'ordre de résolution des membres calculés dans une requête MDX ou une commande `CREATE MEMBER`. Les valeurs entières utilisées avec le `SOLVE_ORDER` mot clé sont relatives, pas besoin pour commencer à zéro et ne le faites pas doivent-ils être consécutives. La valeur indique simplement à la requête MDX de calculer un membre en fonction des valeurs dérivées du calcul des membres ayant une valeur supérieure. Si un membre calculé est défini sans le `SOLVE_ORDER` mot clé, la valeur par défaut de ce membre calculé est zéro.  
+ Le mot clé `SOLVE_ORDER` spécifie l'ordre de résolution des membres calculés dans une requête MDX ou une commande `CREATE MEMBER`. Les valeurs entières utilisées avec le mot clé `SOLVE_ORDER` sont relatives, elles n'ont pas besoin de commencer à zéro et n'ont pas besoin d'être consécutives. La valeur indique simplement à la requête MDX de calculer un membre en fonction des valeurs dérivées du calcul des membres ayant une valeur supérieure. Si un membre calculé est défini sans le mot clé `SOLVE_ORDER`, la valeur par défaut de ce membre calculé est zéro.  
   
  Par exemple, si vous combinez les calculs utilisés dans les deux premiers exemples de requêtes, les deux membres calculés, `Year Difference` et `Profit Margin`, se croisent à une cellule unique dans le dataset des résultats de l'exemple de requête MDX. Seul l’ordre de résolution permet de déterminer la façon dont [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] évaluera cette cellule. Les formules utilisées pour construire cette cellule produiront différents résultats, en fonction de l'ordre de résolution des deux membres calculés.  
   

@@ -9,18 +9,18 @@ ms.assetid: e000a1d8-a049-4542-bfeb-943fd6ab3969
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7783517c21317c8d0a162b869f7d57329d89b15c
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 435786ca85904cc2164ae2a3983163265465d9d1
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018924"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350560"
 ---
 # <a name="curvepolygon"></a>CurvePolygon
   Un `CurvePolygon` est une surface topologiquement fermée définie par un anneau englobant extérieur et zéro ou plusieurs anneaux intérieurs.  
   
 > [!IMPORTANT]  
->  Pour obtenir une description détaillée et des exemples des fonctionnalités spatiales introduites dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], y compris le `CurvePolygon` sous-type, téléchargez le livre blanc, [nouvelles fonctionnalités spatiales dans SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=226407).  
+>  Pour obtenir une description détaillée et des exemples des fonctionnalités spatiales introduites dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], y compris le `CurvePolygon` sous-type, téléchargez le livre blanc, [nouvelles fonctionnalités spatiales dans SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=226407).  
   
  Les critères suivants définissent les attributs d’un `CurvePolygon` instance :  
   
@@ -130,7 +130,7 @@ DECLARE @g geometry;
 SET @g = geometry::Parse('CURVEPOLYGON EMPTY');  
 ```  
   
-### <a name="b-declaring-and-instantiating-a-geometry-instance-with-a-curvepolygon-in-the-same-statement"></a>B. Déclaration et instanciation d'une instance geometry avec un CurvePolygon dans la même instruction  
+### <a name="b-declaring-and-instantiating-a-geometry-instance-with-a-curvepolygon-in-the-same-statement"></a>b. Déclaration et instanciation d'une instance geometry avec un CurvePolygon dans la même instruction  
  Cet extrait de code indique comment déclarer et initialiser une instance geometry avec un `CurvePolygon` dans la même instruction :  
   
 ```tsql  

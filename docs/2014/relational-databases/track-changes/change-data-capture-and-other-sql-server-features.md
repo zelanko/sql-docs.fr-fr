@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - change data capture [SQL Server], other SQL Server features and
@@ -13,12 +12,12 @@ ms.assetid: 7dfcb362-1904-4578-8274-da16681a960e
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 75fa2640cae19ce441c467672c1b66e85bd3c169
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 87fcd7656ff1e86522e4ea398fc49d91acde9a34
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213614"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52747746"
 ---
 # <a name="change-data-capture-and-other-sql-server-features"></a>Capture de données modifiées et autres fonctionnalités de SQL Server
   Cette rubrique décrit comment les fonctionnalités suivantes interagissent avec la capture de données modifiées :  
@@ -64,7 +63,7 @@ ms.locfileid: "48213614"
   
 -   Si une base de données est restaurée sur un autre serveur, par défaut, la capture de données modifiées est désactivée et toutes les métadonnées connexes sont supprimées.  
   
-     Pour conserver la capture de données modifiées, utilisez la `KEEP_CDC` option lors de la restauration de la base de données. Pour plus d'informations sur cette option, consultez [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql).  
+     Pour conserver la fonction de capture de données modifiées, utilisez l'option `KEEP_CDC` lors de la restauration de la base de données. Pour plus d'informations sur cette option, consultez [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql).  
   
 -   Si une base de données est détachée puis attachée au même serveur ou à un autre serveur, la capture de données modifiées reste activée.  
   

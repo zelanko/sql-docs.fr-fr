@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: 44d12e23-146a-42e6-bb38-1f2f6a035bad
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4bb7b67ebbe95181b1b25797051e639fb1b3e4b2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: efc615e9aa873a322ef9a31b2c293e6c5c4793da
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187499"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52795051"
 ---
 # <a name="cursorimplicitconversion-event-class"></a>CursorImplicitConversion (classe d'événements)
   La classe d’événements **CursorImplicitConversion** décrit des événements de conversions implicites de curseur qui se produisent dans les interfaces de programmation d’applications (API) ou les curseurs [!INCLUDE[tsql](../../includes/tsql-md.md)] . Les événements de conversions implicites de curseur se produisent lorsque [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] exécute une instruction Transact-SQL non prise en charge par les curseurs côté serveur du type demandé. Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] renvoie une erreur indiquant que le type du curseur a changé.  
@@ -38,19 +37,19 @@ ms.locfileid: "48187499"
 |**ClientProcessID**|**Int**|ID affecté par l'ordinateur hôte au processus dans lequel s'exécute l'application cliente. La colonne de données est remplie si le client fournit l'ID du processus client.|9|Oui|  
 |**DatabaseID**|**Int**|ID de la base de données spécifiée par l’instruction USE *database* ou ID de la base de données par défaut si aucune instruction USE *database*n’a été émise pour une instance donnée. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] affiche le nom de la base de données si la colonne de données **ServerName** du serveur est capturée dans la trace et que le serveur est disponible. Déterminez la valeur pour une base de données à l'aide de la fonction DB_ID.|3|Oui|  
 |**DatabaseName**|**nvarchar**|Nom de la base de données dans laquelle l'instruction de l'utilisateur est exécutée.|35|Oui|  
-|**EventClass**|**Int**|Type d’événement enregistré = 76.|27|non|  
-|**EventSequence**|**Int**|Séquence de la classe d’événements **CursorClose** dans le lot.|51|non|  
+|**EventClass**|**Int**|Type d’événement enregistré = 76.|27|Non|  
+|**EventSequence**|**Int**|Séquence de la classe d’événements **CursorClose** dans le lot.|51|Non|  
 |**GroupID**|**Int**|ID du groupe de charges de travail où l'événement Trace SQL se déclenche.|66|Oui|  
 |**Handle**|**Int**|Handle de l'objet référencé dans l'événement.|33|Oui|  
 |**HostName**|**nvarchar**|Nom de l'ordinateur sur lequel le client est exécuté. La colonne de données est remplie si le client fournit le nom de l'hôte. Pour déterminer le nom de l'hôte, utilisez la fonction HOST_NAME.|8|Oui|  
-|**IntegerData**|**Int**|Type de curseur demandé. Valeurs possibles :<br /><br /> 1 = Jeu de clés<br /><br /> 2 = Dynamique<br /><br /> 4 = Avant uniquement<br /><br /> 8 = Statique<br /><br /> 16 = Avance rapide|25|non|  
+|**IntegerData**|**Int**|Type de curseur demandé. Valeurs possibles :<br /><br /> 1 = Jeu de clés<br /><br /> 2 = Dynamique<br /><br /> 4 = Avant uniquement<br /><br /> 8 = Statique<br /><br /> 16 = Avance rapide|25|Non|  
 |**IsSystem**|**Int**|Indique si l'événement s'est produit sur un processus système ou sur un processus utilisateur. 1 = système, 0 = utilisateur.|60|Oui|  
 |**LoginName**|**nvarchar**|Nom de la connexion de l'utilisateur (soit la connexion de sécurité [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , soit les informations d'identification de connexion [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows au format DOMAINE\nom_utilisateur).|11|Oui|  
 |**LoginSid**|**image**|Identificateur de sécurité (SID) de l'utilisateur connecté. Vous trouverez ces informations dans l’affichage catalogue **sys.server_principals** . Chaque connexion possède un SID unique au niveau du serveur.|41|Oui|  
 |**NTDomainName**|**nvarchar**|Domaine Windows auquel appartient l'utilisateur.|7|Oui|  
 |**NTUserName**|**nvarchar**|Nom d'utilisateur Windows.|6|Oui|  
 |**RequestID**|**Int**|Identificateur de demande de la conversion implicite.|49|Oui|  
-|**ServerName**|**nvarchar**|Nom de l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracée.|26|non|  
+|**ServerName**|**nvarchar**|Nom de l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracée.|26|Non|  
 |**SessionLoginName**|**nvarchar**|Nom de connexion de l'utilisateur à l'origine de la session. Par exemple, si vous vous connectez à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] au moyen de Login1 et que vous exécutez une commande en tant que Login2, **SessionLoginName** affiche Login1 et **LoginName** affiche Login2. Cette colonne affiche à la fois les connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et Windows.|64|Oui|  
 |**SPID**|**Int**|ID de la session au cours de laquelle l'événement s'est produit.|12|Oui|  
 |**StartTime**|**datetime**|Heure à laquelle a débuté l'événement, si elle est connue.|14|Oui|  

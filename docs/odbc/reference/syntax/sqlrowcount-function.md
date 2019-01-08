@@ -20,16 +20,16 @@ ms.assetid: 61e00a8a-9b3b-45b9-b397-7fe818822416
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cc2ab4b2e97b9e1a83e0b00404010195b08f0dc0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0ab7046e036a6f50f8009a481f92345d7ce12aea
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654925"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502549"
 ---
 # <a name="sqlrowcount-function"></a>SQLRowCount (fonction)
 **Conformité**  
- Version introduite : La mise en conformité des normes 1.0 ODBC : ISO 92  
+ Version introduite : Conformité aux normes 1.0 ODBC : ISO 92  
   
  **Résumé**  
  **SQLRowCount** retourne le nombre de lignes affectées par une **mise à jour**, **insérer**, ou **supprimer** instruction ; une SQL_ADD, SQL_UPDATE_BY_BOOKMARK ou SQL_ Opération DELETE_BY_BOOKMARK dans **SQLBulkOperations**; ou une opération SQL_UPDATE ou SQL_DELETE dans **SQLSetPos**.  

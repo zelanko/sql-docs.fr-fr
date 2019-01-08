@@ -13,12 +13,12 @@ ms.assetid: af24c303-4a41-449b-9c86-d6558a97e839
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 18eef13d999826bb54f9900feed52f41ce614ea9
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: d35db315cebcc6292ca11b1e31f81015238fbcb9
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675688"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617479"
 ---
 # <a name="user-interface-reference-accesstosql"></a>Référence de l’Interface utilisateur (AccessToSQL)
 Cette section inclut des rubriques d’aide pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) pour l’accès.  
@@ -48,7 +48,7 @@ Cette section inclut des rubriques d’aide pour [!INCLUDE[ssNoVersion](../../in
 |[Paramètres du projet (Migration)](https://msdn.microsoft.com/4caebc9c-8680-4b99-a8fa-89c43161c95d)|Utilisez la page de la Migration de la **paramètres du projet** boîte de dialogue pour spécifier la taille de lot de migration, verrouillage de table, la vérification des contraintes, le déclencheur d’insertion se déclencher, identité et manipulation, d’une valeur null et comment gérer les dates qui sont hors de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] plage.|  
 |[Paramètres du projet (Mappage de type)](https://msdn.microsoft.com/b87b9683-abed-4677-8c50-18bdba704655)|Utilisez la page mappage de Type de la **paramètres du projet** boîte de dialogue pour spécifier les mappages de type par défaut pour toutes les bases de données et les objets de base de données dans le projet SSMA.|  
 |[Paramètres du projet (SQL Azure)](https://msdn.microsoft.com/bbb8a204-d0e4-4f0b-9709-271feb1f136e)|Utilisez la page de SQL Azure de la **paramètres du projet** boîte de dialogue pour spécifier le suffixe de la base de données, ainsi que l’intervalle de délai d’attente de pulsation.|  
-|[Enregistrer les métadonnées &#40;AcessToSQL&#41;](../../ssma/access/save-metadata-acesstosql.md)|Le **enregistrer les métadonnées** boîte de dialogue apparaît lorsque vous enregistrez un projet auquel il manque des métadonnées.|  
+|[Enregistrer les métadonnées &#40;AccessToSQL&#41;](../../ssma/access/save-metadata-accesstosql.md)|Le **enregistrer les métadonnées** boîte de dialogue apparaît lorsque vous enregistrez un projet auquel il manque des métadonnées.|  
   
 ## <a name="see-also"></a>Voir aussi  
 [Mise en route avec SQL Server Migration Assistant pour Access &#40;AccessToSQL&#41;](../../ssma/access/getting-started-with-sql-server-migration-assistant-for-access-accesstosql.md)  

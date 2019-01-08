@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:Memory Manager
@@ -13,12 +13,12 @@ ms.assetid: dbf49000-eeb0-4e9c-a361-5092363920dc
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7d9404588bc012b6655216f4faa95659b27612de
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 822cb494b7dce35ea965a2a53cab36785a38bc75
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116221"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52752991"
 ---
 # <a name="sql-server-memory-manager-object"></a>Objet SQLServer:Memory Manager
   L'objet **Gestionnaire de mémoire** de Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit des compteurs permettant de surveiller l'utilisation globale de la mémoire du serveur. La surveillance globale de l'utilisation de la mémoire du serveur afin de mesurer l'activité de l'utilisateur et son exploitation des ressources peut être utile pour détecter les goulots d'étranglement des performances. La surveillance de la mémoire utilisée par une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vous aide à déterminer :  

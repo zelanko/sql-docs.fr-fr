@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vdt.designers.properties.Column.ColumnIdentitySpec
@@ -16,12 +16,12 @@ ms.assetid: e549a2a8-4154-4ec8-b146-614564169b39
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ef49a4bee27339849cd7b2ec0f5d64701804284a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9865425573ae3d9c8f2e16af0da283c5ea684150
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120301"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52757581"
 ---
 # <a name="column-properties-visual-database-tools"></a>Propriétés de la colonne (Visual Database Tools)
   Il existe deux ensembles de propriétés pour les colonnes : un jeu complet que vous pouvez consulter sous l’onglet **Propriétés de la colonne** dans le Concepteur de tables (disponible uniquement pour les bases de données [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) et un sous-ensemble que vous pouvez consulter dans la fenêtre Propriétés à l’aide de l’Explorateur de serveurs.  
@@ -111,7 +111,7 @@ ms.locfileid: "48120301"
  S'étend pour afficher les propriétés restantes.  
   
  **Classement**  
- Affiche le paramètre de classement pour la colonne sélectionnée. Pour modifier ce paramètre, cliquez sur **Classement** , puis sur les points de suspension **(…)** à droite de la valeur.  
+ Affiche le paramètre de classement pour la colonne sélectionnée. Pour modifier ce paramètre, cliquez sur **Classement**, puis sur le bouton de sélection **(…)** à droite de la valeur.  
   
  **Catégorie Spécification de la colonne calculée**  
  Peut être développée pour afficher les propriétés **Formule** et **Est persistant**. Si la colonne est calculée, la formule est également affichée. Pour modifier la formule, développez cette catégorie et modifiez-la dans la propriété **Formule** .  
@@ -126,7 +126,7 @@ ms.locfileid: "48120301"
  Affiche les informations relatives au type de données contenu dans le champ, selon le même format que l'instruction SQL CREATE TABLE. Par exemple, un champ contenant une chaîne de longueur variable d'une longueur maximale de 20 caractères serait représenté comme « varchar(20) ». Pour modifier cette propriété, tapez directement la valeur.  
   
  **Description**  
- Affiche la description de la colonne. Pour afficher la description complète ou pour la modifier, cliquez sur Description, puis sur les points de suspension **(…)** à droite de la propriété.  
+ Affiche la description de la colonne. Pour afficher la description complète ou pour la modifier, cliquez sur Description, puis sur le bouton de sélection **(…)** à droite de la propriété.  
   
  **Catégorie Spécification de texte intégral**  
  Peut être développée pour afficher les propriétés spécifiques aux colonnes de texte intégral.  

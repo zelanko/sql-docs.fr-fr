@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 ms.assetid: 8373bb35-f0f9-4c3c-a53c-dfaa2ce567ac
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 11fb8139c674a165607f08551d6333eff534ebac
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: af7e442c1465ac1f93a134ab00da6a9e31242da4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48158289"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52755491"
 ---
 # <a name="create-a-master-data-services-database"></a>Créer une base de données Master Data Services
   Créez une base de données [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] lorsque vous avez besoin d’une nouvelle base de données pour prendre en charge l’application web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] et le service web [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] .  
@@ -37,7 +36,7 @@ ms.locfileid: "48158289"
   
 ## <a name="next-steps"></a>Étapes suivantes  
   
--   Configurez les paramètres système pour la base de données et l'application Web. Pour plus d’informations, consultez [Paramètres système &#40;Master Data Services&#41;](../system-settings-master-data-services.md).  
+-   Configurez les paramètres système pour la base de données et l'application Web. Pour plus d’informations, consultez [System Settings &#40;Master Data Services&#41;](../system-settings-master-data-services.md) (Paramètres système &#40;Master Data Services&#41;).  
   
 -   Créez une application web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] à associer à cette base de données. Pour plus d’informations, consultez [Créer une application web Master Data Manager &#40;Master Data Services&#41;](create-a-master-data-manager-web-application-master-data-services.md).  
   

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 5bd5581b2842ec5d11cd27a989aa41ddb2cee1de
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e93f85302417674b31de0129650dbb85092f8962
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47661937"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532006"
 ---
 # <a name="configure-failover-cluster-instance---smb---sql-server-on-linux"></a>Configuration d’instance de cluster de basculement - SMB - SQL Server sur Linux
 
@@ -22,7 +22,7 @@ ms.locfileid: "47661937"
 
 Cet article explique comment configurer le stockage SMB pour une instance de cluster de basculement (FCI) sur Linux. 
  
-Dans le monde non Windows, SMB est souvent référencé par le système CIFS (Common Internet File System) et implémenté par le biais de Samba. Dans le monde de Windows, l’accès à un partage SMB est effectuée de cette façon : \\nomserveur\nompartage. Pour les installations de SQL Server basées sur Linux, le partage SMB doit être monté en tant que dossier.
+Dans le monde non Windows, SMB est souvent référencé par le système CIFS (Common Internet File System) et implémenté par le biais de Samba. Dans le monde de Windows, l’accès à un partage SMB s’effectue ainsi : \\NOM_SERVEUR\NOM_PARTAGE. Pour les installations de SQL Server basées sur Linux, le partage SMB doit être monté en tant que dossier.
 
 ## <a name="important-source-and-server-information"></a>Informations importantes sur la source et le serveur
 
@@ -102,7 +102,7 @@ Voici quelques conseils et les notes relatives à l’aide de SMB :
    *    Supprimez les fichiers à partir du répertoire de données SQL Server existant. Vous ne recevrez pas d’accusé de réception en cas de réussite.
  
     ```bash
-    rm – f /var/opt/mssql/data/*
+    rm - f /var/opt/mssql/data/*
     ```
 
    *    Vérifiez que les fichiers ont été supprimés. 
@@ -205,7 +205,7 @@ Voici quelques conseils et les notes relatives à l’aide de SMB :
     mkdir <FolderName>
     ```
 
-    \<Nom_dossier > est le nom du dossier. Le chemin du dossier complet doit être spécifié s'il n'est pas au bon emplacement. L’exemple suivant crée un dossier nommé /var/opt/mssql/userdata.
+    \<Nom_dossier > est le nom du dossier. Chemin d’accès complet du dossier doit être spécifié sinon dans l’emplacement approprié. L’exemple suivant crée un dossier nommé /var/opt/mssql/userdata.
 
     ```bash
     mkdir /var/opt/mssql/userdata

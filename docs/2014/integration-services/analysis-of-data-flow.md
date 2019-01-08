@@ -11,12 +11,12 @@ ms.assetid: 5654cb30-cad2-470c-97b3-59cb331033e5
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e612fefcebd0537d13a4377484bbaddc04d086a0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fa33b840a985cb3053ad8868c3b6153dc53822ad
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48064519"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515819"
 ---
 # <a name="analysis-of-data-flow"></a>Analyse des flux de données
   Vous pouvez utiliser la [catalog.execution_data_statistics](../relational-databases/statistics/statistics.md) `SSISDB` vue pour analyser le flux de données des packages de base de données. Cette vue affiche une ligne à chaque fois qu'un composant de flux de données envoie des données à un composant en aval. Les informations peuvent être utilisées pour mieux comprendre les lignes envoyées à chaque composant.  
@@ -39,9 +39,9 @@ order by source_component_name, destination_component_name
   
 -   **total_rows** - Somme de toutes les lignes envoyées par le composant  
   
--   **wall_clock_time_ms** – Durée d'exécution écoulée totale en millisecondes pour chaque composant  
+-   **wall_clock_time_ms** - Durée d’exécution écoulée totale en millisecondes pour chaque composant  
   
--   **num_rows_per_millisecond** – Nombre de lignes par milliseconde envoyées par chaque composant  
+-   **num_rows_per_millisecond** - Nombre de lignes par milliseconde envoyées par chaque composant  
   
  Le `HAVING` clause est utilisée pour éviter une erreur de division par zéro dans les calculs.  
   
@@ -60,7 +60,7 @@ order by source_component_name desc
 ```  
   
 ## <a name="related-tasks"></a>Tâches associées  
- [Débogage d’un flux de données](troubleshooting/debugging-data-flow.md)  
+ [Débogage d'un flux de données](troubleshooting/debugging-data-flow.md)  
   
  [Outils de dépannage pour l’exécution des packages](troubleshooting/troubleshooting-tools-for-package-execution.md)  
   

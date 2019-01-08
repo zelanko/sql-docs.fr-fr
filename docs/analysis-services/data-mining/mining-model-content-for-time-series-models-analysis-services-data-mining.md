@@ -1,5 +1,5 @@
 ---
-title: Contenu pour les modèles de série chronologique du modèle d’exploration de données (Analysis Services - Exploration de données) | Documents Microsoft
+title: Contenu du modèle pour les modèles de série chronologique d’exploration de données (Analysis Services - Exploration de données) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 4661c13dd33b8b0c329f93297475fc4185fcbe0a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 18013587c8c6eb23989f8f22150b8980d0e5afc1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019546"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513778"
 ---
 # <a name="mining-model-content-for-time-series-models-analysis-services---data-mining"></a>Contenu du modèle d'exploration de données pour les modèles de séries chronologiques (Analysis Services - Exploration de données)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "34019546"
   
  Le diagramme suivant présente un exemple de modèle d'exploration de données de série chronologique qui a été créé avec les paramètres par défaut pour créer un modèle mixte. Afin que vous puissiez comparer plus aisément les différences entre les deux modèles, le modèle ARTXP est affiché ici sur le côté gauche du diagramme et le modèle ARIMA est affiché du côté droit.  Alors qu'ARTXP est une structure en forme d'arbre qui se divise en branches de plus en plus petites, la structure créée par l'algorithme ARIMA ressemble plus à une pyramide construite vers le haut à partir de composants plus petits.  
   
- ![Structure du contenu de modèle pour les modèles de série chronologique](../../analysis-services/data-mining/media/modelcontentstructure-ts.gif "Structure du contenu de modèle pour les modèles de série chronologique")  
+ ![Structure de contenu de modèle pour les modèles de série chronologique](../../analysis-services/data-mining/media/modelcontentstructure-ts.gif "Structure du contenu du modèle pour les modèles de série chronologique")  
   
  Le point important à retenir est que les informations sont organisées de façons complètement différentes dans les arbres ARIMA et ARTXP, et vous devez considérer les deux arbres comme liés uniquement au niveau du nœud racine. Bien que les deux représentations soient présentées dans un seul modèle pour des raisons de commodité, elles doivent être considérées comme deux modèles indépendants. ARTXP représente un arbre réel, mais pas ARIMA.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "34019546"
 -   Le second ensemble de nœuds est intitulé ARIMA et représente les résultats de l'analyse par l'algorithme ARIMA.  
   
 > [!WARNING]  
->  Le nom (Tout) sur l'arbre ARTXP est conservé uniquement à des fins de compatibilité descendante. Avant SQL Server 2008, l'algorithme MTS (Microsoft Time Series) utilisait un seul algorithme pour l'analyse : l'algorithme ARTXP.  
+>  Le nom (Tout) sur l'arbre ARTXP est conservé uniquement à des fins de compatibilité descendante. Avant SQL Server 2008, l'algorithme MTS (Microsoft Time Series) utilisait un seul algorithme pour l'analyse : l'algorithme ARTXP.  
   
  Les sections suivantes expliquent comment les nœuds sont réorganisés dans chacun de ces types de modèle.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "34019546"
 >  Si vous voulez afficher les formules, vous pouvez rechercher la formule de régression complète au niveau du nœud terminal, mais pas dans un nœud intermédiaire ou racine.  
   
 ### <a name="structure-of-an-arima-model"></a>Structure d'un modèle ARIMA  
- L’algorithme ARIMA crée une seule information pour chaque combinaison d’une série de données (telle que **[Region]**) et d’un attribut prédictible (tel que **[Sales Amount]**) : l’équation qui décrit la modification de l’attribut prédictible dans le temps.  
+ L’algorithme ARIMA crée une seule information pour chaque combinaison d’une série de données (tel que **[Région]**) et un attribut prédictible (tel que **[Sales Amount]**)-l’équation qui décrit le modification de l’attribut prédictible dans le temps.  
   
  L'équation de chaque série est dérivée de plusieurs composants, un pour chaque structure périodique trouvée dans les données. Par exemple, si vous avez des données de ventes qui sont collectées tous les mois, l'algorithme peut détecter des structures périodiques mensuelles, trimestrielles ou annuelles.  
   
@@ -97,11 +97,11 @@ ms.locfileid: "34019546"
  NODE_UNIQUE_NAME  
  Nom unique du nœud. Le nœud parent du modèle est toujours nommé **TS**.  
   
- **ARTXP :** chaque nœud est représenté par TS suivi d'une valeur numérique hexadécimale. L'ordre des nœuds est sans importance.  
+ **ARTXP :** Chaque nœud est représenté par TS suivi d’une valeur numérique hexadécimale. L'ordre des nœuds est sans importance.  
   
  Par exemple, les nœuds ARTXP situés directement sous l'arbre TS peuvent être numérotés TS00000001-TS0000000b.  
   
- **ARIMA :** chaque nœud d'un arbre ARIMA est représenté par TA suivi d'une valeur numérique hexadécimale. Les nœuds enfants contiennent le nom unique du nœud parent suivi d'un autre nombre hexadécimal indiquant la séquence dans le nœud.  
+ **ARIMA :** Chaque nœud dans un arbre ARIMA est représenté par TA suivi d’une valeur numérique hexadécimale. Les nœuds enfants contiennent le nom unique du nœud parent suivi d'un autre nombre hexadécimal indiquant la séquence dans le nœud.  
   
  Tous les arbres ARIMA sont exactement la même structure. Chaque racine contient les nœuds et la convention d'affectation des noms illustrés par un exemple dans le tableau suivant :  
   
@@ -117,7 +117,7 @@ ms.locfileid: "34019546"
   
  **ARTXP :**  
   
-|ID du type de nœud| Description|  
+|ID du type de nœud|Description|  
 |------------------|-----------------|  
 |1 (Modèle)|Série chronologique|  
 |3 (Intérieur)|Représente une branche intérieure d'un arbre de série chronologique ARTXP.|  
@@ -126,7 +126,7 @@ ms.locfileid: "34019546"
   
  **ARIMA :**  
   
-|ID du type de nœud| Description|  
+|ID du type de nœud|Description|  
 |------------------|-----------------|  
 |27 (Racine ARIMA)|Nœud supérieur d'un arbre ARIMA.|  
 |28 (Structure périodique ARIMA)|Composant d'un arbre ARIMA qui décrit une structure périodique unique.|  
@@ -138,9 +138,9 @@ ms.locfileid: "34019546"
   
  Cette propriété est principalement utilisée à des fins d'affichage.  
   
- **ARTXP :** contient la condition de division pour le nœud, affichée sous la forme d'une association d'attribut et de plage de valeurs.  
+ **ARTXP :** Contient la condition de division pour le nœud, affiché sous la forme d’une combinaison de l’attribut et la valeur de plage.  
   
- **ARIMA :** Contient la forme abrégée de l'équation ARIMA.  
+ **ARIMA :** Contient la forme abrégée de l’équation ARIMA.  
   
  Pour plus d'informations sur le format de l'équation ARIMA, consultez [Légende d'exploration de données pour la formule ARIMA](#bkmk_ARIMA_2).  
   
@@ -153,33 +153,33 @@ ms.locfileid: "34019546"
  NODE_DESCRIPTION  
  Description, sous forme de texte, des règles, divisions ou formules dans le nœud actuel.  
   
- **ARTXP :** pour plus d'informations, consultez [Fonctionnement de l'arbre ARTXP](#bkmk_ARTXP_1).  
+ **ARTXP :** Pour plus d’informations, consultez [fonctionnement de l’arbre ARTXP](#bkmk_ARTXP_1).  
   
- **ARIMA :** pour plus d'informations, consultez [Fonctionnement de l'arbre ARIMA](#bkmk_ARIMA_1).  
+ **ARIMA :** Pour plus d’informations, consultez [fonctionnement de l’arbre ARIMA](#bkmk_ARIMA_1).  
   
  NODE_RULE  
  Description XML des règles, divisions ou formules dans le nœud actuel.  
   
- **ARTXP :** la valeur NODE_RULE correspond généralement à la valeur NODE_CAPTION.  
+ **ARTXP :** La valeur NODE_RULE correspond généralement à la valeur NODE_CAPTION.  
   
- **ARIMA :** pour plus d'informations, consultez [Fonctionnement de l'arbre ARIMA](#bkmk_ARIMA_1).  
+ **ARIMA :** Pour plus d’informations, consultez [fonctionnement de l’arbre ARIMA](#bkmk_ARIMA_1).  
   
  MARGINAL_RULE  
  Description XML de la division ou du contenu qui est spécifique à ce nœud.  
   
- **ARTXP :** la valeur MARGINAL_RULE correspond généralement à la valeur NODE_DESCRIPTION.  
+ **ARTXP :** La valeur MARGINAL_RULE correspond généralement à la valeur NODE_DESCRIPTION.  
   
- **ARIMA :** toujours vide ; utilisez NODE_RULE à la place.  
+ **ARIMA :** Toujours vide ; Utilisez NODE_RULE à la place.  
   
  NODE_PROBABILITY  
- **ARTXP :** pour les nœuds d’arbre, toujours 1. Pour les nœuds terminaux, probabilité d'atteindre le nœud à partir du nœud racine du modèle.  
+ **ARTXP :** Pour les nœuds d’arbre, toujours 1. Pour les nœuds terminaux, probabilité d'atteindre le nœud à partir du nœud racine du modèle.  
   
- **ARIMA :** toujours 0.  
+ **ARIMA :** Toujours 0.  
   
  MARGINAL_PROBABILITY  
- **ARTXP :** pour les nœuds d’arbre, toujours 1. Pour les nœuds terminaux, probabilité d'atteindre le nœud à partir du nœud parent immédiat.  
+ **ARTXP :** Pour les nœuds d’arbre, toujours 1. Pour les nœuds terminaux, probabilité d'atteindre le nœud à partir du nœud parent immédiat.  
   
- **ARIMA :** toujours 0.  
+ **ARIMA :** Toujours 0.  
   
  NODE_DISTRIBUTION  
  Table qui contient l'histogramme de probabilité du nœud. Dans un modèle de série chronologique, cette table imbriquée contient tous les composants requis pour assembler la formule de régression réelle.  
@@ -193,11 +193,11 @@ ms.locfileid: "34019546"
  NODE_SUPPORT  
  Nombre de cas qui prennent en charge ce nœud.  
   
- **ARTXP :** pour le nœud **(Tout)** , indique le nombre total de tranches de temps incluses dans la branche.  
+ **ARTXP :** Pour le **(All)** nœud, indique le nombre total de tranches de temps incluses dans la branche.  
   
  Pour les nœuds de terminaison, indique le nombre des tranches de temps incluses dans la plage décrite par NODE_CAPTION. Le nombre de tranches de temps dans les nœuds de terminaison s’additionne toujours à la valeur NODE_SUPPORT du nœud **(Tout)** de la branche.  
   
- **ARIMA :** Nombre de cas qui prennent en charge la structure périodique actuelle. La valeur de prise en charge est répétée dans tous les nœuds de la structure périodique actuelle.  
+ **ARIMA :** Nombre de cas qui prennent en charge de la structure périodique actuelle. La valeur de prise en charge est répétée dans tous les nœuds de la structure périodique actuelle.  
   
  MSOLAP_MODEL_COLUMN  
  Attribut prédictible pour la série de données représentée dans le nœud. (Même valeur que pour ATTRIBUTE_NAME.)  
@@ -205,16 +205,16 @@ ms.locfileid: "34019546"
  MSOLAP_NODE_SCORE  
  Valeur numérique qui caractérise la valeur d'information de l'arbre ou de la division.  
   
- **ARTXP :** la valeur est toujours 0.0 pour les nœuds sans division. Pour les nœuds avec division, cette valeur représente le score d'intérêt et pertinence de la division.  
+ **ARTXP :** Valeur est toujours 0.0 pour les nœuds sans division. Pour les nœuds avec division, cette valeur représente le score d'intérêt et pertinence de la division.  
   
  Pour plus d’informations sur ces méthodes de calcul de score, consultez [Sélection des fonctionnalités &#40;exploration de données&#41;](../../analysis-services/data-mining/feature-selection-data-mining.md).  
   
- **ARIMA :** score BIC (Bayesian Information Criterion) du modèle ARIMA. Le même score est défini sur tous les nœuds ARIMA en rapport avec l'équation.  
+ **ARIMA :**  Le score BIC (Bayesian informations Criterion) du modèle ARIMA. Le même score est défini sur tous les nœuds ARIMA en rapport avec l'équation.  
   
  MSOLAP_NODE_SHORT_CAPTION  
- **ARTXP :**  mêmes informations que pour NODE_DESCRIPTION.  
+ **ARTXP :**  Informations de mêmes que pour NODE_DESCRIPTION.  
   
- **ARIMA :** mêmes informations que pour NODE_CAPTION, à savoir forme abrégée de l’équation ARIMA.  
+ **ARIMA :** Mêmes informations que la valeur NODE_CAPTION : autrement dit, la forme abrégée de l’équation ARIMA.  
   
 ##  <a name="bkmk_ARTXP_1"></a> Fonctionnement de l'arbre ARTXP  
  Le modèle ARTXP sépare clairement les zones des données qui sont linéaires des zones des données qui se divisent sur un autre facteur. Chaque fois que les modifications de l'attribut prédictible peuvent être représentées directement sous la forme d'une fonction des variables indépendantes, une formule de régression est calculée pour représenter cette relation  
@@ -223,7 +223,7 @@ ms.locfileid: "34019546"
   
  Pour mieux comprendre ce comportement, vous pouvez examiner le modèle de série chronologique créé dans le [Didacticiel sur l'exploration de données de base](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). Ce modèle, basé sur l'entrepôt de données AdventureWorks, n'utilise pas de données particulièrement complexes. Par conséquent, l'arbre ARTXP comprend peu de divisions. Toutefois, ce modèle relativement simple illustre tout de même trois types de divisions différents :  
   
--   La courbe de tendance [Amount] pour la région Pacific se divise sur la clé de temps. Une division sur la clé de temps signifie qu'il y a une modification de la tendance à un moment donné. La courbe de tendance était linéaire uniquement jusqu'à un certain point, puis la courbe a adopté une forme différente. Par exemple, une série chronologique peut continuer jusqu'au 6 août 2002, et une autre série chronologique démarre après cette date.  
+-   La courbe de tendance [Amount] pour la région Pacific se divise sur la clé de temps. Une division sur la clé de temps signifie qu'il y a une modification de la tendance à un moment donné. La courbe de tendance était linéaire uniquement jusqu'à un certain point, puis la courbe a adopté une forme différente. Par exemple, une série chronologique peut continuer jusqu'au 6 août 2002, et une autre série chronologique démarre après cette date.  
   
 -   La courbe de tendance [Amount] pour la région North America se divise sur une autre variable. Dans le cas présent, la tendance pour North America se divise en fonction de la valeur du même modèle dans la région Europe. En d'autres termes, l'algorithme a détecté que lorsque la valeur pour Europe change, la valeur pour North America A change également.  
   
@@ -247,7 +247,7 @@ ms.locfileid: "34019546"
  La section suivante présente un exemple d'équation et explique la terminologie de base.  
   
 #### <a name="mining-legend-for-an-artxp-formula"></a>Légende d'exploration de données pour une formule ARTXP  
- L'exemple suivant présente la formule ARTXP pour une partie du modèle, telle qu'elle est affichée dans la **légende d'exploration de données**. Pour afficher cette formule, ouvrez le modèle [Prévision] que vous avez créé dans le didacticiel sur l’exploration de données de base dans la Visionneuse de l’algorithme MTS (Microsoft Time Series), cliquez sur l’onglet **Modèle** , sélectionnez l’arbre correspondant à la série de données R250 : Europe.  
+ L'exemple suivant présente la formule ARTXP pour une partie du modèle, telle qu'elle est affichée dans la **légende d'exploration de données**. Pour afficher cette formule, ouvrez le modèle [prévision] que vous avez créé dans le didacticiel d’exploration de données base de données dans la visionneuse Microsoft Time Series, cliquez sur le **modèle** et sélectionnez l’arborescence pour le R250 : Série de données d’Europe.  
   
  Pour afficher l'équation utilisée pour cet exemple, cliquez sur le nœud qui représente la série des dates commençant le 5/7/2003  
   
@@ -367,32 +367,32 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
 ### <a name="time-series-formula-for-arima"></a>Formule de série chronologique pour ARIMA  
  Pour afficher la formule complète pour n'importe quel nœud ARIMA, nous vous recommandons d'utiliser la **légende d'exploration de données** de la [Visionneuse de l'algorithme MTS (Microsoft Time Series)](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md), laquelle présente l'ordre autorégressif, les moyennes mobiles et d'autres éléments de l'équation déjà composés dans un format cohérent.  
   
--   [Afficher la formule d’une série chronologique en mode & #40 ; exploration de données & #41 ;](../../analysis-services/data-mining/view-the-formula-for-a-time-series-model-data-mining.md)  
+-   [Afficher la formule d’un modèle de série chronologique &#40;exploration de données&#41;](../../analysis-services/data-mining/view-the-formula-for-a-time-series-model-data-mining.md)  
   
  Cette section présente un exemple d'équation et explique la terminologie de base.  
   
 ####  <a name="bkmk_ARIMA_2"></a> Légende d'exploration de données pour la formule ARIMA  
- L'exemple suivant présente la formule ARIMA pour une partie du modèle, telle qu'elle est affichée dans la légende d'exploration de données. Pour afficher cette formule, ouvrez le modèle **Prévision** à l’aide de la **Visionneuse de l’algorithme MTS (Microsoft Time Series)**, cliquez sur l’onglet **Modèle** , sélectionnez l’arbre correspondant à la série de données **R250 : Europe** , puis cliquez sur le nœud qui représente la série de dates commençant le 7/5/2003. La légende d'exploration de données compose toutes les constantes dans un format lisible, présenté dans l'exemple suivant :  
+ L'exemple suivant présente la formule ARIMA pour une partie du modèle, telle qu'elle est affichée dans la légende d'exploration de données. Pour afficher cette formule, ouvrez le **Forecasting** modèle à l’aide de la **visionneuse de Microsoft Time Series**, cliquez sur le **modèle** onglet, sélectionnez l’arbre pour le **R250 : Europe** série de données, puis cliquez sur le nœud qui représente la série de date ou après le 7/5/2003. La légende d'exploration de données compose toutes les constantes dans un format lisible, présenté dans l'exemple suivant :  
   
  Équation ARIMA :  
   
 `ARIMA ({1,1},0,{1,1.49791920964142,1.10640053499397,0.888873034670339,-5.05429403071953E-02,-0.905265316720334,-0.961908900643379,-0.649991020901922}) Intercept:56.8888888888889`  
   
- Cette équation est le format ARIMA long, qui inclut les valeurs des coefficients et l'ordonnée à l'origine. La forme abrégée de cette équation serait {1,0,7}, où 1 indique la période sous la forme d’un nombre de tranches de temps, 0 indique l’ordre de différence de terme et 7 indique le nombre de coefficients.  
+ Cette équation est le format ARIMA long, qui inclut les valeurs des coefficients et l'ordonnée à l'origine. La forme abrégée de cette équation serait {1,0,7}, où 1 indique la période sous la forme d’un nombre de tranches de temps, 0 indique l’ordre de différence de terme, et 7 indique le nombre de coefficients.  
   
 > [!NOTE]  
 >  Une constante est calculée par Analysis Services pour calculer la variance, mais la constante elle-même n'est pas affichée n'importe où dans l'interface utilisateur. Toutefois, vous pouvez afficher la variance de n'importe quel point de la série sous la forme d'une fonction de cette constante si vous sélectionnez **Afficher les écarts** dans la vue **Graphique** . L'info-bulle de chaque série de données affiche la variance d'un point prédit spécifique.  
   
 #### <a name="model-content-for-arima-formula"></a>Contenu du modèle pour la formule ARIMA  
- Un modèle ARIMA suit une structure standard, avec des informations différentes contenues dans des nœuds de types différents. Pour afficher le contenu du modèle pour le modèle ARIMA, remplacez la visionneuse par la **Visionneuse de l'arborescence de contenu générique Microsoft**, puis développez le nœud qui a le nom d'attribut **R250 Europe: Quantity**.  
+ Un modèle ARIMA suit une structure standard, avec des informations différentes contenues dans des nœuds de types différents. Pour afficher le contenu du modèle pour le modèle ARIMA, remplacez la visionneuse par la **visionneuse d’arborescence de contenu générique Microsoft**, puis développez le nœud qui a le nom d’attribut **R250 Europe : Quantité**.  
   
  Un modèle ARIMA pour une série de données contient l'équation périodique de base dans quatre formats différents, que vous pouvez choisir en fonction de l'application.  
   
- **NODE_CAPTION :** affiche la forme abrégée de l’équation. La forme abrégée vous indique le nombre de structures périodiques qui sont représentées, ainsi que le nombre de coefficients qu'elles ont. Par exemple, si la forme abrégée de l'équation est `{4,0,6}`, le nœud représente une structure périodique avec 6 coefficients. Si la forme abrégée ressemble à `{2,0,8} x {1,0,0}(4)`, le nœud contient deux structures périodiques.  
+ **NODE_CAPTION :** Affiche la forme abrégée de l’équation. La forme abrégée vous indique le nombre de structures périodiques qui sont représentées, ainsi que le nombre de coefficients qu'elles ont. Par exemple, si la forme abrégée de l'équation est `{4,0,6}`, le nœud représente une structure périodique avec 6 coefficients. Si la forme abrégée ressemble à `{2,0,8} x {1,0,0}(4)`, le nœud contient deux structures périodiques.  
   
- **NODE DESCRIPTION :** affiche le long format de l'équation, qui est également la forme de l'équation qui apparaît dans la **légende d'exploration de données**. La forme longue de l'équation est semblable à la forme abrégée, mais les valeurs réelles des coefficients sont affichées au lieu d'être dénombrées.  
+ **DESCRIPTION DU NŒUD :** Affiche le long format de l’équation, qui est également la forme de l’équation qui apparaît dans le **légende d’exploration de données**. La forme longue de l'équation est semblable à la forme abrégée, mais les valeurs réelles des coefficients sont affichées au lieu d'être dénombrées.  
   
- **NODE_RULE :** affiche une représentation XML de l’équation. En fonction du type de nœud, la représentation XML peut inclure une seule ou plusieurs structures périodiques. Le tableau suivant illustre la façon dont les nœuds XML sont reportés jusqu'aux niveaux supérieurs du modèle ARIMA.  
+ **NODE_RULE :** Affiche une représentation XML de l’équation. En fonction du type de nœud, la représentation XML peut inclure une seule ou plusieurs structures périodiques. Le tableau suivant illustre la façon dont les nœuds XML sont reportés jusqu'aux niveaux supérieurs du modèle ARIMA.  
   
 |Type de nœud|Contenu XML|  
 |---------------|-----------------|  
@@ -401,14 +401,14 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
 |29 (ARIMA autorégressif)|Répertorie les termes d'une structure périodique unique.|  
 |30 (Moyenne mobile ARIMA)|Répertorie les coefficients d'une structure périodique unique.|  
   
- **NODE_DISTRIBUTION :** affiche les termes de l’équation dans une table imbriquée, que vous pouvez interroger pour obtenir des termes spécifiques. La table de distribution du nœud suit la même structure hiérarchique que les règles XML. En d'autres termes, le nœud racine de la série ARIMA (NODE_TYPE = 27) contient la valeur de l'ordonnée à l'origine et les périodicités de l'équation complète, laquelle peut inclure plusieurs périodicités, alors que les nœuds enfants contiennent uniquement des informations spécifiques à une certaine structure périodique ou aux nœuds enfants de cette structure périodique.  
+ **NODE_DISTRIBUTION :** Affiche les termes de l’équation dans une table imbriquée, vous pouvez interroger pour obtenir des termes spécifiques. La table de distribution du nœud suit la même structure hiérarchique que les règles XML. En d'autres termes, le nœud racine de la série ARIMA (NODE_TYPE = 27) contient la valeur de l'ordonnée à l'origine et les périodicités de l'équation complète, laquelle peut inclure plusieurs périodicités, alors que les nœuds enfants contiennent uniquement des informations spécifiques à une certaine structure périodique ou aux nœuds enfants de cette structure périodique.  
   
-|Type de nœud|Attribut|Type de valeur|  
+|Type de nœud|Attribute|Type de valeur|  
 |---------------|---------------|----------------|  
 |27 (Racine ARIMA)|Intercepter<br /><br /> Périodicité|11|  
 |28 (Structure périodique ARIMA)|périodicité<br /><br /> Ordre autorégressif<br /><br /> ordre des différences<br /><br /> Ordre des moyennes mobiles|12<br /><br /> 13<br /><br /> 15<br /><br /> 14|  
 |29 (ARIMA autorégressif)|Coefficient<br /><br /> (complément de coefficient)|7|  
-|30 (Moyenne mobile ARIMA)|Valeur à t<br /><br /> Valeur à t-1<br /><br /> …<br /><br /> Valeur à t-n|7|  
+|30 (Moyenne mobile ARIMA)|Valeur à t<br /><br /> Valeur à t-1<br /><br /> ...<br /><br /> Valeur à t-n|7|  
   
  La valeur de l' *ordre des moyennes mobiles* indique le nombre de moyennes mobiles dans une série. En général, la moyenne mobile est calculée `n-1` fois s'il y a `n` termes dans une série, mais le nombre peut être réduit afin de faciliter le calcul.  
   
@@ -425,17 +425,17 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
   
  Si vous connaissez l'ID du nœud qui contient la série souhaitée, deux options s'offrent à vous pour extraire les composants de l'équation :  
   
--   Format de table imbriquée : utilisez une requête DMX ou une requête via le client OLEDB.  
+-   Format de table imbriquée : Utiliser une requête DMX ou une requête via le client OLEDB.  
   
--   Représentation XML : utilisez une requête XML.  
+-   Représentation sous forme de XML : Utilisez une requête XML.  
   
 ## <a name="remarks"></a>Notes  
  Il peut être difficile de récupérer des informations d'un arbre ARTXP, car les informations relatives à chaque division se trouvent dans un emplacement différent dans l'arbre. Par conséquent, avec un modèle ARTXP, vous devez obtenir toutes les informations, puis procéder à un traitement pour reconstituer la formule complète. L'extraction d'une équation à partir d'un modèle ARIMA est plus simple car la formule est disponible dans l'ensemble de l'arbre. Pour plus d’informations sur la création d’une requête pour récupérer ces informations, consultez [Exemples de requêtes de modèle de série chronologique](../../analysis-services/data-mining/time-series-model-query-examples.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Contenu du modèle d’exploration de données & #40 ; Analysis Services - Exploration de données & #41 ;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
- [Algorithme de série chronologique de Microsoft](../../analysis-services/data-mining/microsoft-time-series-algorithm.md)   
- [Exemples de requête de modèle de série de temps](../../analysis-services/data-mining/time-series-model-query-examples.md)   
+ [Contenu du modèle d’exploration &#40;Analysis Services – Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
+ [Algorithme MTS (Microsoft Time Series)](../../analysis-services/data-mining/microsoft-time-series-algorithm.md)   
+ [Exemples de requêtes de modèle de série chronologique](../../analysis-services/data-mining/time-series-model-query-examples.md)   
  [Informations techniques de référence sur l’algorithme MTS (Microsoft Time Series)](../../analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 'Didacticiel : création d’un rapport principal et d’un rapport d’extraction (Générateur de rapports) | Microsoft Docs'
+title: 'Didacticiel : Création d’une extraction et de rapports principaux (Générateur de rapports) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,19 +11,19 @@ ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 3428c80e86f510b29ffb875bef604293cb1558a1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e12227fa9390b733ad28ec02a5b31c13a4204c26
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093819"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512552"
 ---
-# <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>Didacticiel : création d'un rapport principal et d'un rapport d'extraction (Générateur de rapports)
+# <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>Didacticiel : création d'un rapport principal et d'un rapport d'extraction (Générateur de rapports)
   Ce didacticiel vous apprend comment créer deux types de rapports : un rapport d'extraction et un rapport principal. Les exemples de données de ventes utilisés dans ces rapports sont récupérés d'un cube Analysis Services. L'illustration suivante montre les rapports que vous allez créer.  
   
  ![rs_DrillthroughCubeTutorial](../../2014/tutorials/media/rs-drillthroughcubetutorial.gif "rs_DrillthroughCubeTutorial")  
   
- L'illustration suivante montre la manière dont la valeur de champ, Games and Toys, du rapport principal s'affiche dans le titre du rapport d'extraction. Les données de l'extraction se rapportent à la catégorie de produit Games and Toys.  
+ L’illustration suivante montre comment la valeur du champ, Games and Toys, dans le rapport principal s’affiche dans le titre de l’état de l’extraction. Les données de l'extraction se rapportent à la catégorie de produit Games and Toys.  
   
  ![rs_DrillthroughCubeTutorialParmExpr](../../2014/tutorials/media/rs-drillthroughcubetutorialparmexpr.gif "rs_DrillthroughCubeTutorialParmExpr")  
   
@@ -80,9 +80,9 @@ ms.locfileid: "48093819"
   
 8.  [Exécuter les rapports principal et extraction](#MRunReports)  
   
- Durée estimée pour effectuer ce didacticiel : 30 minutes.  
+ Durée estimée pour effectuer ce didacticiel : 30 minutes  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  Pour suivre ce didacticiel, vous avez besoin d'accéder au cube Contoso Sales. Cette condition s'applique à la fois aux rapports principal et d'extraction. Pour plus d’informations sur les spécifications, consultez [Éléments requis pour les didacticiels &#40;Générateur de rapports&#41;](../reporting-services/report-builder-tutorials.md).  
   
 ##  <a name="DMatrixAndDataset"></a> 1. Créer un rapport d'extraction à partir de l'Assistant Tableau ou matrice  
@@ -130,7 +130,7 @@ ms.locfileid: "48093819"
 10. Cliquez sur **Type d’informations d’identification**.  
   
     > [!NOTE]  
-    >  Selon le mode de configuration des autorisations sur la source de données, vous devrez peut-être modifier les options d'authentification par défaut. Pour plus d’informations, consultez [Security &#40;Report Builder&#41;](report-builder/security-report-builder.md).  
+    >  Selon le mode de configuration des autorisations sur la source de données, vous devrez peut-être modifier les options d'authentification par défaut. Pour plus d’informations, consultez [Sécurité &#40;Générateur de rapports&#41;](report-builder/security-report-builder.md).  
   
 11. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -142,14 +142,14 @@ ms.locfileid: "48093819"
   
 13. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-14. Cliquez sur **Suivant**.  
+14. Cliquer sur **Suivant**.  
   
 ##  <a name="DMDXQuery"></a> 1 b. Créer une requête MDX  
  Dans un rapport, vous pouvez utiliser un dataset partagé qui comprend une requête prédéfinie, ou vous pouvez créer un dataset incorporé utilisable uniquement dans votre rapport. Dans ce didacticiel, vous allez créer un dataset incorporé.  
   
 #### <a name="to-create-query-filters"></a>Pour créer des filtres de requête  
   
-1.  Dans la page **Créer une requête** , dans le volet Métadonnées, cliquez sur le bouton **(…)**.  
+1.  Dans la page **Créer une requête**, dans le volet Métadonnées, cliquez sur le bouton **(...)**.  
   
 2.  Dans la boîte de dialogue **Sélection de cube** , cliquez sur Sales, puis sur **OK**.  
   
@@ -168,7 +168,7 @@ ms.locfileid: "48093819"
   
 5.  Dans la liste d’expression de filtre, développez **All Channel**, cliquez sur **Online**, sur **Reseller**, puis sur **OK**.  
   
-     La requête inclut maintenant un filtre ne comportant que les canaux suivants : Online (en ligne) et Reseller (revendeur).  
+     La requête comporte maintenant un filtre permettant de n'inclure que les canaux suivants : Online et Reseller.  
   
 6.  Développez la dimension Sales Territory, puis faites glisser Sales Territory Group vers la colonne **Hierarchy** , sous **Channel Name**.  
   
@@ -211,7 +211,7 @@ ms.locfileid: "48093819"
   
 6.  Dans la barre d’outils du Concepteur de requêtes, cliquez sur **Exécuter (!)**.  
   
-7.  Cliquez sur **Suivant**.  
+7.  Cliquer sur **Suivant**.  
   
 ##  <a name="DLayout"></a> 1c. Organiser les données dans des groupes  
  Lorsque vous sélectionnez les champs dans lesquels regrouper les données, vous concevez une matrice dont les lignes et les colonnes affichent des données de détail et des données agrégées.  
@@ -237,7 +237,7 @@ ms.locfileid: "48093819"
   
      Les étapes 4 et 5 spécifient les données à afficher dans la matrice.  
   
-6.  Cliquez sur **Suivant**.  
+6.  Cliquer sur **Suivant**.  
   
 ##  <a name="DTotals"></a> 1D. Ajouter des sous-totaux et des totaux  
  Après avoir créé des groupes, vous pouvez ajouter et mettre en forme les lignes dans lesquelles afficher les valeurs d'agrégat des champs. Vous pouvez également afficher toutes les données ou laisser l'utilisateur développer/réduire les données regroupées de manière interactive.  
@@ -248,7 +248,7 @@ ms.locfileid: "48093819"
   
      Le volet Aperçu de l'Assistant affiche une matrice avec quatre lignes.  
   
-2.  Cliquez sur **Suivant**.  
+2.  Cliquer sur **Suivant**.  
   
 ##  <a name="DStyle"></a> 1E. Choisir un style  
  Un style spécifie un style de police, un jeu de couleurs et un style de bordure.  
@@ -436,14 +436,14 @@ ms.locfileid: "48093819"
   
 13. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-14. Cliquez sur **Suivant**.  
+14. Cliquer sur **Suivant**.  
   
 ##  <a name="MMDXQuery"></a> 1 b. Créer une requête MDX  
  À présent, créez un dataset incorporé. Pour ce faire, vous allez utiliser le concepteur de requêtes afin de créer des filtres, des paramètres et des membres calculés, ainsi que le dataset lui-même.  
   
 #### <a name="to-create-query-filters"></a>Pour créer des filtres de requête  
   
-1.  Dans la page **Créer une requête** , dans le volet Métadonnées, dans la section du cube, cliquez sur le bouton de sélection **(…)**.  
+1.  Dans la page **Créer une requête**, dans le volet Métadonnées, dans la section du cube, cliquez sur le bouton de sélection **(...)**.  
   
 2.  Dans la boîte de dialogue **Sélection de cube** , cliquez sur Sales, puis sur **OK**.  
   
@@ -462,7 +462,7 @@ ms.locfileid: "48093819"
   
 5.  Dans la liste Expression de filtre, développez **All Channel**, cliquez sur **Online** et **Reseller**, puis sur **OK**.  
   
-     La requête inclut maintenant un filtre ne comportant que les canaux suivants : Online (en ligne) et Reseller (revendeur).  
+     La requête comporte maintenant un filtre permettant de n'inclure que les canaux suivants : Online et Reseller.  
   
 6.  Développez la dimension Sales Territory, puis faites glisser Sales Territory Group vers la colonne **Hierarchy** , sous **Channel Name**.  
   
@@ -534,7 +534,7 @@ ms.locfileid: "48093819"
   
      Passez en revue le jeu de résultats de la requête.  
   
-6.  Cliquez sur **Suivant**.  
+6.  Cliquer sur **Suivant**.  
   
 ##  <a name="MLayout"></a> 1c. Organiser les données dans des groupes  
  Lorsque vous sélectionnez les champs dans lesquels regrouper des données, vous concevez une matrice dont les lignes et les colonnes affichent des données de détail et des données agrégées.  
@@ -562,9 +562,9 @@ ms.locfileid: "48093819"
   
 1.  Dans la page **Choisir la disposition** , sous **Options**, vérifiez que **Afficher les sous-totaux et les totaux généraux** est sélectionné.  
   
-     Le volet Aperçu de l'Assistant affiche une matrice avec quatre lignes.  Lorsque vous exécutez le rapport, chaque ligne s'affiche de la manière suivante : la première ligne correspond au groupe de colonnes, la seconde ligne aux titres de colonnes, la troisième ligne contient les données de catégories de produits (`[Sum(Net_ QTY)]` et `[Sum(Net_Sales)]`, tandis que la quatrième ligne indique les totaux.  
+     Le volet Aperçu de l'Assistant affiche une matrice avec quatre lignes.  Lorsque vous exécutez le rapport, chaque ligne est affichée de la manière suivante : la première ligne correspond au groupe de colonnes, la seconde ligne aux en-têtes de colonnes, la troisième ligne contient les données de catégories de produits (`[Sum(Net_ QTY)]` et `[Sum(Net_Sales)]`, tandis que la quatrième ligne indique les totaux.  
   
-2.  Cliquez sur **Suivant**.  
+2.  Cliquer sur **Suivant**.  
   
 ##  <a name="MStyle"></a> 1E. Choisir un style  
  Appliquez le style Ardoise au rapport. Il s'agit du même style que celui utilisé par le rapport d'extraction.  
@@ -685,7 +685,7 @@ ms.locfileid: "48093819"
   
 1.  Dans l'aire de conception, cliquez sur **Cliquez pour ajouter un titre**.  
   
-2.  Tapez **2009 Product Category Sales: Online and Reseller Category:**.  
+2.  Type **2009 Product Category Sales : Online and Reseller Category :**.  
   
 3.  Sélectionnez le texte que vous avez tapé.  
   

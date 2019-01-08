@@ -13,25 +13,25 @@ ms.assetid: 5b9b2d93-0798-4bac-bbd3-c657e09d9883
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 06943ba0892799275fa6c1c479f9066d2e34f3e9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 116a9c05069d59e3ae458e232f7451be04411794
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054379"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507866"
 ---
 # <a name="create-a-custom-member-formula-business-intelligence-wizard"></a>Créer une formule de membre personnalisée (Assistant Business Intelligence)
-  Utilisez la page **Créer une formule de membre personnalisée** pour associer des attributs de la dimension spécifiée à des colonnes de formule de membre personnalisée, à savoir des colonnes qui contiennent des instructions MDX (Multidimensional Expressions) qui définissent les valeurs de membre des attributs.  
+  Utilisez le **créer une formule de membre personnalisée** page pour associer des attributs dans la dimension spécifiée avec la formule colonnes-colonnes de membre personnalisée contenant des instructions MDX (Multidimensional Expressions) qui définissent les valeurs de membre pour Cet attribut.  
   
 ## <a name="options"></a>Options  
  **Attribute**  
  Sélectionnez l'attribut à associer à une formule de membre personnalisée.  
   
  **Colonne source**  
- Cliquez sur le bouton Parcourir (**…**) pour ouvrir la boîte de dialogue **Sélectionner une colonne** et sélectionner la colonne de formule de membre personnalisée à associer à l’attribut.  
+ Cliquez sur le bouton de navigation (**...** ) pour ouvrir la **sélectionner une colonne** boîte de dialogue et sélectionnez la colonne de formule de membre personnalisée à associer à l’attribut.  
   
 ## <a name="see-also"></a>Voir aussi  
- [L’Assistant Business Intelligence F1](business-intelligence-wizard-f1-help.md)   
+ [Aide (F1) de l'Assistant Business Intelligence](business-intelligence-wizard-f1-help.md)   
  [Concepteur de cube &#40;Analysis Services - données multidimensionnelles&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Concepteur de dimensions &#40;Analysis Services - données multidimensionnelles&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - default language option
@@ -13,12 +12,12 @@ ms.assetid: c08c26d8-5a62-487e-a4ee-4c529e4f9287
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2ca958583cbdf6fec00d5d507051f10be503abf4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8e22c0edc9c88871c4dee79ba927eb39ea9eab41
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079739"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52641330"
 ---
 # <a name="configure-the-default-language-server-configuration-option"></a>Configurer l'option de configuration de serveur default language
   Cette rubrique explique comment configurer l'option de configuration de serveur **default language** dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. L'option **Langue par défaut** spécifie la langue par défaut pour toutes les connexions nouvellement créées. Pour définir la langue par défaut, spécifiez la valeur **langid** de la langue souhaitée. La valeur **langid** peut être obtenue en interrogeant la vue de compatibilité **sys.syslanguages** .  
@@ -37,7 +36,7 @@ ms.locfileid: "48079739"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Suivi :**  [Après avoir configuré l'option Langue par défaut](#FollowUp)  
+-   **Suivi :**  [Après avoir configuré l’option default language](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
@@ -83,7 +82,7 @@ GO
   
  Pour plus d’informations, consultez [Options de configuration de serveur &#40;SQL Server&#41;](server-configuration-options-sql-server.md).  
   
-##  <a name="FollowUp"></a> Suivi : Après avoir configuré l'option default language  
+##  <a name="FollowUp"></a> Suivi : Après avoir configuré l’option default language  
  Le paramètre prend effet immédiatement sans redémarrage du serveur.  
   
 ## <a name="see-also"></a>Voir aussi  

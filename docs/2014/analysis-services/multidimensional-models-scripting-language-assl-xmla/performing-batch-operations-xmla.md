@@ -21,12 +21,12 @@ ms.assetid: 731c70e5-ed51-46de-bb69-cbf5aea18dda
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 44ffc8084af6917a8df84c5a204df96112441723
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: bca0c74ab978b6f47e68221987777f1818a95b7b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148324"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542583"
 ---
 # <a name="performing-batch-operations-xmla"></a>Exécution d'opérations de traitement par lot (XMLA)
   Vous pouvez utiliser la [Batch](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/batch-element-xmla) commande XML for Analysis (XMLA) pour exécuter plusieurs commandes XMLA à l’aide d’un seul XMLA [Execute](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute) (méthode). Vous pouvez exécuter plusieurs commandes contenues dans la commande `Batch` sous la forme d'une transaction unique ou de plusieurs transactions individuelles pour chaque commande, en série ou en parallèle. Vous pouvez également spécifier des liaisons hors ligne et autres propriétés dans le `Batch` commande pour traiter plusieurs [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objets.  
@@ -35,12 +35,12 @@ ms.locfileid: "50148324"
  La commande `Batch` peut exécuter les commandes selon deux modes :  
   
  **Transactionnelle**  
- Si le `Transaction` attribut de la `Batch` du jeu de commandes sur true, le `Batch` commande exécute toutes les commandes que contient le `Batch` commande dans une transaction unique, un *transactionnelle* batch.  
+ Si le `Transaction` attribut du `Batch` commande est définie sur true, le `Batch` commande exécute toutes les commandes que contient le `Batch` commande dans une seule transaction, un *transactionnelle* batch.  
   
  Si une commande échoue dans un lot transactionnel, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] annule les commandes le `Batch` commande exécutée avant la commande qui a échoué et le `Batch` commande se termine immédiatement. Les commandes contenues dans la commande `Batch` dont l'exécution n'a pas encore eu lieu ne sont pas exécutées. Une fois la commande `Batch` terminée, la commande `Batch` fait état des erreurs qui se sont produites pour la commande ayant échoué.  
   
  **Nontransactional**  
- Si le `Transaction` attribut est défini sur false, le `Batch` commande s’exécute chaque commande contenue par le `Batch` commande dans une transaction distincte — un *non transactionnel* batch. En cas d'échec d'une commande dans un lot non transactionnel, la commande `Batch` continue d'exécuter les commandes venant après la commande qui a échoué. Après avoir tenté d'exécuter toutes les `Batch` commandes contenues dans la commande `Batch`, la commande `Batch` fait état des erreurs qui se sont éventuellement produites.  
+ Si le `Transaction` attribut est défini sur false, le `Batch` commande s’exécute chaque commande contenue par le `Batch` commande dans une transaction distincte *non transactionnel* batch. En cas d'échec d'une commande dans un lot non transactionnel, la commande `Batch` continue d'exécuter les commandes venant après la commande qui a échoué. Après avoir tenté d'exécuter toutes les `Batch` commandes contenues dans la commande `Batch`, la commande `Batch` fait état des erreurs qui se sont éventuellement produites.  
   
  Tous les résultats retournés par les commandes contenues dans une commande `Batch` sont retournés dans l'ordre qui est le leur dans la commande `Batch`. Les résultats retournés par une commande `Batch` varient selon que la commande `Batch` est transactionnelle ou non transactionnelle.  
   

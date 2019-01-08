@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -18,19 +17,19 @@ ms.assetid: 42f85c50-34c9-49ca-955f-af9595e2707f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 11726b01926ef5a7dff7157c901c7cbd73607564
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 31ba88f3bc49d78dc8c68ac77ba6bda90e63aad0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48214755"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52803751"
 ---
 # <a name="objecttype-trace-event-column"></a>Colonne d'événements de trace ObjectType
   La colonne d'événements de trace Object Type est utilisée dans divers événements de trace. Cette rubrique décrit les valeurs admises dans cette colonne, ainsi que leur définition associée.  
   
 ## <a name="object-type-column-values"></a>Valeurs de la colonne Object Type  
   
-|Valeur|Définition|  
+|Value|Définition|  
 |-----------|----------------|  
 |8259|Contrainte CHECK|  
 |8260|Valeur par défaut (contrainte ou autonome)|  

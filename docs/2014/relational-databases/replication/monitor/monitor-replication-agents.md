@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - monitoring performance [SQL Server replication], agents
@@ -20,12 +19,12 @@ ms.assetid: d06ed24f-82d7-4b9e-9e40-cc9780476a71
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b176e84d15daa2471014ebf90a6a72a683cdc29a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1456a3113feb8a32ce9876ef7ef060f96f66910b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107461"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52800731"
 ---
 # <a name="monitor-replication-agents"></a>Surveiller des Agents de réplication
   Le moniteur de réplication de[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] donne une vue systémique de l'activité de réplication, mais il permet aussi de trouver directement des informations sur un agent spécifique. La liste suivante comprend chacun des agents, les onglets du moniteur de réplication sur lesquels ils peuvent être trouvés et un lien vers une rubrique qui explique comment accéder à ces onglets :  
@@ -38,7 +37,7 @@ ms.locfileid: "48107461"
   
     -   Agent de lecture de la file d'attente  
   
-     Accédez aux informations et aux tâches associées à ces agents via les onglets suivants : **Agents** (disponible pour chaque serveur de publication et chaque publication) et **Avertissements** (disponible pour chaque publication). Pour plus d’informations, consultez [Afficher des informations et effectuer des tâches pour les agents de publication &#40;moniteur de réplication&#41;](view-information-and-perform-tasks-for-publication-agents.md).  
+     Accédez aux informations et aux tâches associées à ces agents via les onglets suivants : **Agents** (disponible pour chaque serveur de publication et la publication) et **avertissements** (disponible pour chaque publication). Pour plus d’informations, consultez [Afficher des informations et effectuer des tâches pour les agents de publication &#40;moniteur de réplication&#41;](view-information-and-perform-tasks-for-publication-agents.md).  
   
 -   Les agents suivants sont associés à des abonnements dans le moniteur de réplication :  
   
@@ -46,7 +45,7 @@ ms.locfileid: "48107461"
   
     -   Agent de fusion  
   
-     Accédez aux informations et aux tâches associées à ces agents via les onglets suivants : **Liste de suivi des abonnements** (disponible pour chaque serveur de publication) ou **Tous les abonnements** (disponible pour chaque abonnement). Pour plus d’informations, consultez [Afficher des informations et effectuer des tâches pour les agents d’abonnement &#40;moniteur de réplication&#41;](view-information-and-perform-tasks-for-subscription-agents.md).  
+     Accédez aux informations et aux tâches associées à ces agents via les onglets suivants : **Liste de suivi** (disponible pour chaque serveur de publication) ou le **tous les abonnements** (disponible pour chaque publication). Pour plus d’informations, consultez [Afficher des informations et effectuer des tâches pour les agents d’abonnement &#40;moniteur de réplication&#41;](view-information-and-perform-tasks-for-subscription-agents.md).  
   
 ## <a name="using-sql-server-management-studio-to-monitor-replication-agents"></a>Utiliser SQL Server Management Studio pour surveiller les agents de réplication  
  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] fournit les boîtes de dialogue suivantes pour la surveillance des agents de réplication :  

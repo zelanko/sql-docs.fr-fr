@@ -1,5 +1,5 @@
 ---
-title: Base de données de l’espace de travail dans SQL Server Data Tools | Microsoft Docs
+title: Analysis Services base de données dans SQL Server Data Tools | Microsoft Docs
 ms.date: 09/17/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 8ebea50408a46ea2ac79030228ee06f149cece4c
-ms.sourcegitcommit: aa9d2826e3c451f4699c0e69c9fcc8a2781c6213
+ms.openlocfilehash: b3f9d94d35d5aaa4ea86cf1f1d9dc845b67eaf4f
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45975718"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072266"
 ---
 # <a name="workspace-database"></a>Base de données d’espace de travail
 
@@ -84,7 +84,7 @@ En utilisant les propriétés de base de données d’espace de travail et de se
 |Propriété|Paramètre par défaut|Description|  
 |--------------|---------------------|-----------------|  
 |**Integrated Workspace Mode**|True, False|Si le mode d’espace de travail intégré est activé pour la base de données d’espace de travail quand le projet est créé, cette propriété a la valeur True. Si le mode **Serveur d’espace de travail** est sélectionné quand le projet est créé, cette propriété a la valeur False. | 
-|**Base de données d’espace de travail**|Nom   |Nom de la base de données d’espace de travail. Cette propriété ne peut pas être modifiée quand **Mode d’espace de travail intégré** a la valeur **True**.|  
+|**Base de données d’espace de travail**|Créer une vue d’abonnement|Nom de la base de données d’espace de travail. Cette propriété ne peut pas être modifiée quand **Mode d’espace de travail intégré** a la valeur **True**.|  
 |**Rétention de l'espace de travail**|Décharger de la mémoire|Spécifie comment une base de données d'espace de travail est conservée une fois que le projet de modèle a été fermé. Une base de données d'espace de travail inclut les métadonnées du modèle et des données importées. Dans certains cas, la base de données d'espace de travail peut être très volumineuse et consommer une grande quantité de mémoire. Par défaut, lorsque vous fermez un projet de modèle dans [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], la base de données de l'espace de travail est déchargée de la mémoire. Lors de la modification de ce paramètre, il est important de considérer vos ressources mémoire disponibles ainsi que la fréquence à laquelle vous projetez de travailler sur le projet de modèle. Ce paramètre de propriété a les options suivantes :<br /><br /> **Conserver en mémoire** - Indique de conserver la base de données de l’espace de travail en mémoire une fois un projet de modèle fermé. Cette option consomme davantage de mémoire ; toutefois, lors de l'ouverture d'un projet de modèle dans [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], moins de ressources sont consommées et la base de données de l'espace de travail se charge plus rapidement.<br /><br /> **Décharger de la mémoire** - Indique de conserver la base de données de l’espace de travail sur le disque, mais plus en mémoire, une fois un projet de modèle fermé. Cette option consomme moins de mémoire ; toutefois, lors de l’ouverture d’un projet de modèle dans [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], la base de données de l’espace de travail doit être à nouveau attachée ; des ressources supplémentaires sont consommées et le projet de modèle se charge plus lentement que si la base de données de l’espace de travail est conservée en mémoire. Utilisez cette option lorsque les ressources en mémoire sont limitées ou lorsque vous travaillez sur une base de données d'espace de travail distante.<br /><br /> **Supprimer l’espace de travail** - Indique de supprimer la base de données de l’espace de travail de la mémoire et de ne pas la garder sur le disque une fois le projet de modèle fermé. Cette option consomme moins de mémoire et d’espace de stockage ; toutefois, lors de l’ouverture d’un projet de modèle dans [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], des ressources supplémentaires sont consommées et le projet de modèle se charge plus lentement que si la base de données de l’espace de travail est conservée en mémoire ou sur le disque. Utilisez cette option uniquement si vous travaillez occasionnellement sur les projets de modèle.<br /><br /> Le paramètre par défaut de cette propriété peut être modifié dans la page **Modélisation des données** dans les paramètres **Serveur d’analyse** de la boîte de dialogue Outils\Options. Cette propriété ne peut pas être modifiée quand **Mode d’espace de travail intégré** a la valeur **True**.|  
 |**Workspace Server**|localhost|Cette propriété indique le serveur par défaut qui sera utilisé pour héberger la base de données de l'espace de travail tandis que le projet de modèle est créé dans [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Toutes les instances disponibles d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] qui fonctionnent sur l'ordinateur local sont incluses dans la zone de liste.<br /><br /> Pour spécifier un autre serveur de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (s'exécutant en mode tabulaire), tapez le nom de ce serveur. L'utilisateur connecté doit être un administrateur sur le serveur [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .<br /><br /> Notez qu’il est recommandé de spécifier un serveur local [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] comme serveur d’espace de travail. Pour les bases de données d’espace de travail sur serveur distant, l’importation de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] n’est pas prise en charge, les données ne peuvent pas être sauvegardées localement et l’interface utilisateur peut connaître une latence pendant les requêtes.<br /><br /> Le paramètre par défaut de cette propriété peut être modifié dans la page Modélisation des données dans les paramètres [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de la boîte de dialogue Outils\Options. Cette propriété ne peut pas être modifiée quand **Mode d’espace de travail intégré** a la valeur **True**.|  
   

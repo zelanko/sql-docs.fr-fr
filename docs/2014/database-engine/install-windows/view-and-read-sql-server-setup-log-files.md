@@ -18,12 +18,12 @@ ms.assetid: 9d77af64-9084-4375-908a-d90f99535062
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6017cadea0039613f7e97dc6e78665e47c9e2575
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: d6a81258e87bf2422f3ae5a55afc5eb6429856b2
+ms.sourcegitcommit: 1f10e9df1c523571a8ccaf3e3cb36a26ea59a232
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018504"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "51858654"
 ---
 # <a name="view-and-read-sql-server-setup-log-files"></a>Afficher et lire les fichiers journaux d’installation de SQL Server
   Chaque exécution du programme d’installation crée des fichiers journaux sont créés dans un nouveau dossier de journal horodaté à % ProgramFiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\Log\\. Le format du nom du dossier de journal horodaté est AAAAMMJJ_hhmmss. Lorsque le programme d'installation est exécuté en mode sans assistance, les journaux sont créés à l'emplacement % temp%\sqlsetup*.log. Tous les fichiers du dossier de journal sont archivés dans le fichier Log\*.cab dans leur dossier de journal respectif.  
@@ -141,11 +141,11 @@ ms.locfileid: "51018504"
   
  Types de fichiers journaux MSI :  
   
--   \<Fonctionnalité>_\<Architecture>\_\<Interation>.log  
+-   \<Fonctionnalité>_\<Architecture>\_\<Interaction>.log  
   
--   \<Fonctionnalité>_\<Architecture>\_\<Langue>\_\<Interation>.log  
+-   \<Fonctionnalité>_\<Architecture>\_\<Langue\_\<Interaction>.log  
   
--   \<Fonctionnalité>_\<Architecture>\_\<Interation>\_\<flux_de_travail>.log  
+-   \<Fonctionnalité>_\<Architecture>\_\<Interaction>\_\<FLux_de_travail>.log  
   
 ### <a name="location"></a>Emplacement  
  Les fichiers journaux MSI se trouvent dans % ProgramFiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\Log\\< aaaammjj_hhmm >\\< nom\>. journal.  

@@ -15,12 +15,12 @@ ms.assetid: f21bf8d0-ec5f-4c18-9de0-8875addb927b
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e8f07c94b986c697721188a50e2ec5d478ac0b1b
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: a4ebac7cac4a62dde5c89aa3e37146c78eb79d19
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146855"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535434"
 ---
 # <a name="analysis-services-execute-ddl-task-editor-ddl-page"></a>Éditeur de tâche DDL d'exécution d'Analysis Services (page DDL)
   Utilisez la page **DDL** de la boîte de dialogue **Éditeur de tâche DDL d’exécution d’Analysis Services** pour spécifier une connexion à un projet [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ou à une base de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] et fournir des informations sur la source des instructions de langage de définition de données (DDL).  
@@ -31,12 +31,12 @@ ms.locfileid: "50146855"
  **Connexion**  
  Sélectionnez un projet [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ou un gestionnaire de connexions [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] dans la liste, ou cliquez sur <\<**Nouvelle connexion**> et utilisez la boîte de dialogue **Ajout d’un gestionnaire de connexions Analysis Services** pour créer une connexion.  
   
- **Rubriques connexes :** [Référence de l'interface utilisateur de la boîte de dialogue Ajout d’un gestionnaire de connexions Analysis Services](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md), [Gestionnaire de connexions Analysis Services](connection-manager/analysis-services-connection-manager.md)  
+ **Rubriques connexes :** [Ajout d’Analysis Services de référence de l’interface utilisateur de la boîte de dialogue Gestionnaire de connexions](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md), [Analysis Services Connection Manager](connection-manager/analysis-services-connection-manager.md)  
   
  **SourceType**  
  Spécifiez le type de source des instructions DDL. Cette propriété dispose des options répertoriées dans le tableau suivant :  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**Entrée directe**|Définissez la source de l'instruction DDL enregistrée dans la zone de texte **SourceDirect** . Sélectionnez cette valeur pour afficher l'option dynamique de la section suivante.|  
 |**Connexion de fichiers**|Définissez la source par un fichier qui contient l'instruction DDL. Sélectionnez cette valeur pour afficher l'option dynamique de la section suivante.|  
@@ -46,19 +46,19 @@ ms.locfileid: "50146855"
   
 ### <a name="sourcetype--direct-input"></a>SourceType = Entrée directe  
  **Source**  
- Tapez les instructions DDL ou cliquez sur le bouton représentant des points de suspension **(…)** , puis tapez les instructions dans la boîte de dialogue **Instructions DDL** .  
+ Tapez les instructions DDL ou cliquez sur le bouton représentant des points de suspension **(...)**, puis tapez les instructions dans la boîte de dialogue **Instructions DDL**.  
   
 ### <a name="sourcetype--file-connection"></a>SourceType = Connexion de fichiers  
  **Source**  
  Sélectionnez une connexion de fichiers dans la liste ou cliquez sur <\<**Nouvelle connexion**> et utilisez la boîte de dialogue **Gestionnaire de connexions** de fichiers pour créer une connexion.  
   
- **Rubriques connexes :** [Gestionnaire de connexions de fichiers](connection-manager/file-connection-manager.md)  
+ **Rubriques connexes :** [Gestionnaire de connexions de fichiers](connection-manager/file-connection-manager.md)  
   
 ### <a name="sourcetype--variable"></a>SourceType = Variable  
  **Source**  
  Sélectionnez une variable dans la liste ou cliquez sur \<**Nouvelle variable**> et utilisez la boîte de dialogue **Ajouter une variable** pour créer une variable.  
   
- **Rubriques connexes :** [Variables Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md)  
+ **Rubriques connexes :** [Variables Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   

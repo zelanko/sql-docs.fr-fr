@@ -11,17 +11,17 @@ ms.assetid: 278cf36e-9817-4ee3-842e-dbd149f15273
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d5d3fcc03b588cd5d014a23a291e04ff9c32f205
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 53e9fdb135b46cedaad6e79fa4ff12c06a4c3ea8
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662975"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503951"
 ---
 # <a name="microsoft-open-database-connectivity-odbc"></a>Microsoft ODBC (Open Database Connectivity)
 L’interface de Microsoft Open Database Connectivity (ODBC) est l’interface langage de programmation C qui rend possible pour les applications accéder aux données à partir d’un éventail de systèmes de gestion de base de données (SGBD). ODBC est une interface de bas niveau, hautes performances qui est conçue spécifiquement pour les banques de données relationnelles.  
   
- L’interface ODBC permet d’assurer une interopérabilité maximale, une application peut accéder à divers SGBD via une interface unique. En outre, cette application sera indépendante de tout système SGBD à partir de laquelle il accède aux données. Les utilisateurs de l’application peuvent ajouter des composants logiciels appelés pilotes, de l’interface entre une application et un SGBD spécifique.  
+ L’interface ODBC permet maximale l’interopérabilité, une application peut accéder à divers SGBD via une interface unique. En outre, cette application sera indépendante de tout système SGBD à partir de laquelle il accède aux données. Les utilisateurs de l’application peuvent ajouter des composants logiciels appelés pilotes, de l’interface entre une application et un SGBD spécifique.  
   
 ## <a name="documentation"></a>Documentation  
  [Guide de référence du programmeur ODBC](../odbc/reference/odbc-programmer-s-reference.md)  

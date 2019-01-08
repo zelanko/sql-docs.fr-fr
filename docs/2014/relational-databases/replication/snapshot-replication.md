@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - snapshot replication [SQL Server], about snapshot replication
@@ -14,12 +13,12 @@ ms.assetid: 5d745f22-9c6b-4e11-8c62-bc50e9a8bf38
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: decf1ba66c13e5f0e68dd8e7f897287ec2c1d4b2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ffc03bf3f50c629dc53913959dc01b0a6443edef
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48062239"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52787561"
 ---
 # <a name="snapshot-replication"></a>Réplication d'instantané
   La réplication d'instantané transmet les données telles qu'elles apparaissent à un moment précis, sans contrôler les mises à jour des données. Lors de la synchronisation, l'intégralité de l'instantané est générée et envoyée aux abonnés.  
@@ -27,7 +26,7 @@ ms.locfileid: "48062239"
 > [!NOTE]  
 >  La réplication d'instantané peut être utilisée seule, mais le processus d'instantané (qui crée une copie de tous les objets et données spécifiés par une publication) est également couramment utilisé pour fournir le jeu initial de données et d'objets de base de données pour les publications transactionnelles et de fusion.  
   
- L'utilisation de la réplication d'instantané seule est la plus appropriée quand une ou plusieurs des conditions suivantes sont remplies :  
+ L'utilisation de la réplication d'instantané seule est la plus appropriée quand une ou plusieurs des conditions suivantes sont remplies :  
   
 -   Les données changent peu fréquemment.  
   

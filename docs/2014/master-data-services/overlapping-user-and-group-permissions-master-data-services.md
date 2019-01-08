@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - users [Master Data Services], resolving permissions
@@ -15,12 +14,12 @@ ms.assetid: 31c3cf7d-17d4-4474-b6a7-ffcb9fc45b37
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 0d35c40dd15db4ed9b7cdc7802f3ef306755569d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3f68f367f782a28f062ea807fb0b7680df15c69d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205419"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52799261"
 ---
 # <a name="overlapping-user-and-group-permissions-master-data-services"></a>Chevauchement des autorisations d'accès (Master Data Services)
   Les autorisations d'un utilisateur sont basées sur les :  
@@ -51,7 +50,7 @@ ms.locfileid: "48205419"
   
  Groupe 2 a **en lecture seule** autorisation sur l’entité Product.  
   
- Résultat : l'autorisation effective de l'utilisateur est **Mise à jour** sur l'entité Product.  
+ Résultat : Autorisation effective de l’utilisateur est **mise à jour** sur l’entité Product.  
   
 ## <a name="example-2"></a>Exemple 2  
  ![mds_conc_user_group_ex_2](../../2014/master-data-services/media/mds-conc-user-group-ex-2.gif "mds_conc_user_group_ex_2")  
@@ -64,7 +63,7 @@ ms.locfileid: "48205419"
   
  Groupe 2 a l'autorisation **Refuser** sur l'entité Product.  
   
- Résultat : l'autorisation effective de l'utilisateur est **Refuser** sur l'entité Product.  
+ Résultat : Autorisation effective de l’utilisateur est **Deny** sur l’entité Product.  
   
 ## <a name="example-3"></a>Exemple 3  
  ![mds_conc_user_group_ex_3](../../2014/master-data-services/media/mds-conc-user-group-ex-3.gif "mds_conc_user_group_ex_3")  
@@ -77,7 +76,7 @@ ms.locfileid: "48205419"
   
  Groupe 2 a **en lecture seule** autorisation à un groupe de membres dans un nœud de hiérarchie.  
   
- Résultat : l'autorisation effective de l'utilisateur est **Mise à jour** sur les membres.  
+ Résultat : Autorisation effective de l’utilisateur est **mise à jour** aux membres.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Mode de détermination des autorisations &#40;Master Data Services&#41;](how-permissions-are-determined-master-data-services.md)   

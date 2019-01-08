@@ -1,5 +1,5 @@
 ---
-title: La requête MDX de base (MDX) | Documents Microsoft
+title: La requête MDX de base (MDX) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7f3a1610f19bc99ce063d815f74906f10ddc2c7f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 61975b6b24cda25454d10eb1eeb5b452cad0f1ba
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026606"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529206"
 ---
-# <a name="mdx-query---the-basic-query"></a>Requête MDX - la requête de base
+# <a name="mdx-query---the-basic-query"></a>Requête MDX de base
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-  La requête de base MDX (Multidimensional Expressions) est l'instruction SELECT — la plus utilisée dans MDX. Si vous connaissez la méthode selon laquelle une instruction SELECT MDX doit spécifier un jeu de résultats, la syntaxe de l'instruction SELECT et la manière de créer une requête simple à l'aide de cette instruction, vous disposez alors de connaissances suffisamment solides pour comprendre comment utiliser MDX pour interroger des données multidimensionnelles.  
+  La requête MDX (Multidimensional Expressions) de base est la requête plus fréquemment utilisée de l’instruction SELECT dans une expression MDX. Si vous connaissez la méthode selon laquelle une instruction SELECT MDX doit spécifier un jeu de résultats, la syntaxe de l'instruction SELECT et la manière de créer une requête simple à l'aide de cette instruction, vous disposez alors de connaissances suffisamment solides pour comprendre comment utiliser MDX pour interroger des données multidimensionnelles.  
   
 ## <a name="specifying-a-result-set"></a>Spécification d'un jeu de résultats  
  Dans MDX, l'instruction SELECT permet de spécifier un jeu de résultats doté d'un sous-ensemble de données multidimensionnelles qui ont été retournées à partir d'un cube. Pour spécifier un jeu de résultats, une requête MDX doit renfermer les informations suivantes :  
@@ -35,7 +35,7 @@ ms.locfileid: "34026606"
   
 -   Une clause SELECT qui détermine les axes de requête d'une instruction SELECT MDX. Pour plus d’informations sur la construction d’axes de requête dans une clause SELECT, consultez [Spécification du contenu d’un axe de requête &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-query-axis.md).  
   
--   Une clause FROM qui détermine quel cube sera interrogé. Pour plus d’informations sur la clause FROM, consultez [SELECT Statement &#40;MDX&#41;](../../../mdx/mdx-data-manipulation-select.md).  
+-   Une clause FROM qui détermine quel cube sera interrogé. Pour plus d’informations sur la clause FROM, consultez [Instruction SELECT &#40;MDX&#41;](../../../mdx/mdx-data-manipulation-select.md).  
   
 -   Une clause WHERE facultative qui détermine quels membres ou tuples utiliser sur l'axe de secteur pour limiter les données retournées. Pour plus d’informations sur la construction d’un axe de secteur dans une clause WHERE, consultez [Spécification du contenu d’un axe de secteur &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md).  
   
@@ -54,7 +54,7 @@ FROM <SELECT subcube clause>
 [ <SELECT cell property list clause> ]  
 ```  
   
- L'instruction MDX SELECT prend en charge des éléments de syntaxe facultatifs, tels que le mot clé WITH, l'utilisation de fonctions MDX pour créer des membres calculés pour une inclusion dans un axe ou un axe de secteur, et la possibilité de retourner la valeur de propriétés de cellules spécifiques dans le cadre de la requête. Pour plus d’informations sur l’instruction SELECT MDX, consultez [SELECT Statement &#40;MDX&#41;](../../../mdx/mdx-data-manipulation-select.md).  
+ L'instruction MDX SELECT prend en charge des éléments de syntaxe facultatifs, tels que le mot clé WITH, l'utilisation de fonctions MDX pour créer des membres calculés pour une inclusion dans un axe ou un axe de secteur, et la possibilité de retourner la valeur de propriétés de cellules spécifiques dans le cadre de la requête. Pour plus d’informations sur l’instruction SELECT MDX, consultez [Instruction SELECT &#40;MDX&#41;](../../../mdx/mdx-data-manipulation-select.md).  
   
 ### <a name="comparing-the-syntax-of-the-mdx-select-statement-to-sql"></a>Comparaison de la syntaxe de l'instruction SELECT MDX par rapport à SQL  
  Le format de syntaxe de l'instruction SELECT MDX est semblable à celui de la syntaxe SQL. Il existe toutefois quelques différences fondamentales :  
@@ -103,7 +103,7 @@ WHERE ( [Sales Territory].[Southwest] )
  Pour obtenir d’autres exemples détaillés, consultez [Spécification du contenu d’un axe de requête &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-query-axis.md) et [Spécification du contenu d’un axe de secteur &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Concepts clés dans MDX & #40 ; Analysis Services & #41 ;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
- [Instruction SELECT & #40 ; MDX & #41 ;](../../../mdx/mdx-data-manipulation-select.md)  
+ [Concepts clés dans MDX &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
+ [Instruction SELECT &#40;MDX&#41;](../../../mdx/mdx-data-manipulation-select.md)  
   
   

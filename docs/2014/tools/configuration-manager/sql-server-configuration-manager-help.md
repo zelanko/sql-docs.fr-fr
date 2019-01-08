@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- configmgr-client
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Configuration Manager, help
@@ -13,12 +12,12 @@ ms.assetid: 6e909911-39a6-469b-b22a-3afdfd08a30b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 27d1b5630d1e955c817f7762069ea62981c7a121
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a9968f22db053bf12a28e3e491817a2c3ac23008
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48097829"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52781771"
 ---
 # <a name="sql-server-configuration-manager-help"></a>Aide sur le Gestionnaire de configuration SQL Server
   Le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vous permet de configurer les services [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et la connectivité réseau. Pour créer ou gérer des objets de base de données, configurer la sécurité et écrire des requêtes [!INCLUDE[tsql](../../includes/tsql-md.md)] , utilisez [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Pour plus d'informations sur [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], consultez la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -51,7 +50,7 @@ ms.locfileid: "48097829"
 -   Configurer un protocole réseau [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 > [!NOTE]  
->  Pour vous procurer un didacticiel sommaire sur la manière de configurer les protocoles et de se connecter au [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], consultez [Didacticiel : Mise en route du moteur de base de données](../../relational-databases/tutorial-getting-started-with-the-database-engine.md).  
+>  Pour un court didacticiel sur la façon de configurer les protocoles et de se connecter à la [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], consultez [didacticiel : Mise en route avec le moteur de base de données](../../relational-databases/tutorial-getting-started-with-the-database-engine.md).  
   
 ## <a name="sql-server-native-client-configuration"></a>Configuration de SQL Server Native Client  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se connectent à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l'aide de la bibliothèque réseau [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vous permet de réaliser les tâches suivantes relatives aux applications clientes installées sur cet ordinateur :  
@@ -71,7 +70,7 @@ ms.locfileid: "48097829"
 ## <a name="see-also"></a>Voir aussi  
  [Services SQL Server](../../../2014/tools/configuration-manager/sql-server-services.md)   
  [Configuration du réseau SQL Server](sql-server-network-configuration.md)   
- [Configuration de SQL Native Client 11.0](../../../2014/tools/configuration-manager/sql-native-client-11-0-configuration.md)   
+ [Configuration de SQL Server Native Client 11.0](../../../2014/tools/configuration-manager/sql-native-client-11-0-configuration.md)   
  [Choix d’un protocole réseau](../../../2014/tools/configuration-manager/choosing-a-network-protocol.md)  
   
   

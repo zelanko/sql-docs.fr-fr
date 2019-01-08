@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - attribute groups [Master Data Services]
@@ -14,12 +13,12 @@ ms.assetid: 648b3d0b-e15a-45f9-8292-3a54a072e62c
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: fc220bf012533eefd054529525175377ebcac610
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 73b2409f8e3b5b58be15351e05abd92dfc94ac8b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48228339"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52766741"
 ---
 # <a name="attribute-groups-master-data-services"></a>Groupes d'attributs (Master Data Services)
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], les groupes d’attributs permettent d’organiser les attributs dans une entité. Lorsqu'une entité comporte un grand nombre d'attributs, les groupes d'attributs améliorent la manière dont elle est affichée dans l'application Web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] .  
@@ -49,8 +48,8 @@ ms.locfileid: "48228339"
 |Description de la tâche|Rubrique|  
 |----------------------|-----------|  
 |Créer un groupe d'attributs et y ajouter des attributs.|[Créer un groupe d’attributs &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-attribute-group-master-data-services.md)|  
-|Rendre un groupe d'attributs visible pour les utilisateurs.|[Rendre un groupe d’attributs Visible aux utilisateurs &#40;Master Data Services&#41;](make-an-attribute-group-visible-to-users-master-data-services.md)|  
-|Modifier le nom d'un groupe d'attributs existant.|[Modifier un nom de groupe d’attributs &#40;Master Data Services&#41;](../../2014/master-data-services/change-an-attribute-group-name-master-data-services.md)|  
+|Rendre un groupe d'attributs visible pour les utilisateurs.|[Rendre un groupe d’attributs visible pour les utilisateurs &#40;Master Data Services&#41;](make-an-attribute-group-visible-to-users-master-data-services.md)|  
+|Modifier le nom d'un groupe d'attributs existant.|[Modifier le nom d’un groupe d’attributs &#40;Master Data Services&#41;](../../2014/master-data-services/change-an-attribute-group-name-master-data-services.md)|  
 |Supprimer un groupe d'attributs existant.|[Supprimer un groupe d’attributs &#40;Master Data Services&#41;](../../2014/master-data-services/delete-an-attribute-group-master-data-services.md)|  
   
 ## <a name="related-content"></a>Contenu associé  

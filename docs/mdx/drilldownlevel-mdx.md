@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: fbab3ea6efe0c1e5b896febeef4d1f38877b8965
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: f4bd21ab1463d40b0eb9b83e5686951e43dee885
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145654"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542202"
 ---
 # <a name="drilldownlevel-mdx"></a>DrilldownLevel (MDX)
 
@@ -58,7 +58,7 @@ DrilldownLevel(Set_Expression [,[Level_Expression] ,[Index]] [,INCLUDE_CALC_MEMB
 ## <a name="examples"></a>Exemples  
  Vous pouvez essayer les exemples suivants dans la fenêtre de requête MDX dans SSMS, en utilisant le cube Adventure Works.  
   
- **Exemple 1 : utilisation d’une syntaxe minimale**  
+ **Exemple 1 : montre la syntaxe minimale**  
   
  Le premier exemple montre la syntaxe minimale **DrilldownLevel**. Le seul argument requis est une expression définie. Notez que lorsque vous exécutez cette requête, vous obtenez le parent [All Categories] et les membres du niveau suivant vers le bas : [Accessories], [Bikes], et ainsi de suite. Bien que cet exemple soit simple, il illustre l’objectif de base de la **DrilldownLevel** (fonction), qui est d’Explorer jusqu’au niveau inférieur suivant.  
   
@@ -67,7 +67,7 @@ SELECT DRILLDOWNLEVEL({[Product].[Product Categories]} * {[Sales Territory].[Sal
 FROM [Adventure Works]  
 ```  
   
- Exemple 2 : syntaxe alternative utilisant un niveau d'index explicite  
+ Exemple 2 : syntaxe alternative à l’aide d’un niveau d’index explicite  
   
  Cet exemple montre la syntaxe alternative, où le niveau d'index est spécifié via une expression numérique. Dans ce cas, le niveau d'index est 0. Pour un index de base zéro, il s'agit de l'index de niveau le plus bas.  
   
@@ -79,7 +79,7 @@ FROM [Adventure Works]
   
  Notez que le jeu de résultats est identique à celui de la requête précédente. En règle générale, la définition du niveau d'index n'est pas nécessaire, sauf si vous voulez que l'exploration commence à un niveau spécifique. Réexécutez la requête précédente en définissant la valeur de l'index à 1, puis à 2. Avec la valeur de l'index définie à 1, vous voyez que l'exploration commence au deuxième niveau de la hiérarchie. Avec la valeur de l'index définie à 2, l'exploration commence au troisième niveau de la hiérarchie, le niveau le plus élevé dans cet exemple. Plus l'expression numérique est élevée, plus le niveau de l'index est élevé.  
   
- **Exemple 3 : utilisation d’une expression de niveau**  
+ **Exemple 3 : montre une expression de niveau**  
   
  L'exemple suivant montre comment utiliser une expression de niveau. Pour un jeu qui représente une structure hiérarchique, l'utilisation d'une expression de niveau vous permet de choisir un niveau dans la hiérarchie pour commencer l'exploration.  
   
@@ -98,7 +98,7 @@ SELECT [Measures].[Internet Sales Amount] ON COLUMNS,
 FROM [Adventure Works]  
 ```  
   
- **Exemple 4 : inclusion des membres calculés**  
+ **Exemple 4 - y compris les membres calculés**  
   
  Le dernier exemple montre un membre calculé, qui apparaît en bas du résultat défini lorsque vous ajoutez le **include_calculated_members** indicateur. Notez que l'indicateur est spécifié comme quatrième paramètre.  
   

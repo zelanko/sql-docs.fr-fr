@@ -1,5 +1,5 @@
 ---
-title: DAX dans les modèles tabulaires | Microsoft Docs
+title: DAX dans les modèles tabulaires Analysis Services | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 959189dbc1bae49c15fd23e49b5cdef98973a559
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: e62c50026d391db37beca5844da24eae43f12014
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906499"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072446"
 ---
 # <a name="dax-in-tabular-models"></a>DAX dans les modèles tabulaires 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -42,16 +42,16 @@ ms.locfileid: "48906499"
   
  La raison pour laquelle vous ne pouvez pas voir les résultats (filtrés) du calcul immédiatement tient au fait que le résultat d'une mesure ne peut pas être déterminé sans contexte. Évaluer une mesure requiert une application cliente de création de rapports qui peut fournir le contexte nécessaire pour récupérer les données relatives à chaque cellule, puis évaluer l'expression pour chaque cellule. Ce client peut être un tableau croisé dynamique Excel ou un graphique croisé dynamique, un rapport Power BI ou une requête MDX. Indépendamment du client de création de rapports, une requête distincte est exécutée pour chaque cellule dans les résultats. Autrement dit, chaque combinaison d’en-têtes de lignes et de colonnes dans un tableau croisé dynamique, ou chaque sélection de segments et les filtres dans un rapport Power BI, génère un autre sous-ensemble de données à partir desquelles la mesure est calculée. Par exemple, dans une mesure avec la formule, `Total Sales:=SUM([Sales Amount])`, lorsqu’un utilisateur place la mesure TotalSales dans la fenêtre Values dans un tableau croisé dynamique, et puis place la colonne DimProductCategory à partir d’une table DimProduct dans la fenêtre de filtres, la somme du montant des ventes calculée et affichée pour chaque catégorie de produit.  
   
- Contrairement aux colonnes calculées et aux filtres de lignes, la syntaxe d'une mesure inclut le nom de la mesure précédant la formule. Dans l'exemple qui vient d'être donné, le nom, **Total Sales:** apparaît avant la formule. Après avoir créé une mesure, le nom et sa définition s'affichent dans la liste de champs de l'application cliente de génération de rapports et sont disponibles à tous les utilisateurs du modèle selon les perspectives et les rôles.  
+ Contrairement aux colonnes calculées et les filtres de lignes, la syntaxe pour une mesure inclut le nom de la mesure précède la formule. Dans l'exemple qui vient d'être donné, le nom, **Total Sales:** apparaît avant la formule. Après avoir créé une mesure, le nom et sa définition s'affichent dans la liste de champs de l'application cliente de génération de rapports et sont disponibles à tous les utilisateurs du modèle selon les perspectives et les rôles.  
   
  Pour plus d’informations, consultez [mesures](../../analysis-services/tabular-models/measures-ssas-tabular.md).  
   
 ### <a name="row-filters"></a>Filtres de lignes  
  Les filtres de lignes définissent les lignes d'une table qui sont visibles aux membres d'un rôle donné. Les filtres de lignes peuvent être créés pour chaque table dans un modèle à l'aide de formules DAX. Les filtres de lignes sont créés pour un rôle particulier à l’aide du Gestionnaire de rôles dans SSDT. Filtres de lignes peuvent également être définis pour un modèle déployé à l’aide des propriétés du rôle dans SQL Server Management Studio (SSMS).  
   
- Dans un filtre de lignes, une formule DAX, qui doit générer une valeur booléenne TRUE/FALSE, définit les lignes qui peuvent être retournées par les résultats d'une requête par les membres de ce rôle particulier. Les lignes non incluses dans la formule DAX ne peuvent pas être retournées. Si nous prenons comme exemple les membres du rôle Sales et la table Customers avec la formule DAX suivante, `=Customers[Country] = “USA”`, les membres du rôle Sales peuvent uniquement afficher les données des clients aux États-unis et les agrégats, tels que SUM, sont retournés uniquement pour ces clients.  
+ Dans un filtre de lignes, une formule DAX, qui doit générer une valeur booléenne TRUE/FALSE, définit les lignes qui peuvent être retournées par les résultats d'une requête par les membres de ce rôle particulier. Les lignes non incluses dans la formule DAX ne peuvent pas être retournées. Si nous prenons comme exemple les membres du rôle Sales et la table Customers avec la formule DAX suivante, `=Customers[Country] = "USA"`, les membres du rôle Sales peuvent uniquement afficher les données des clients aux États-unis et les agrégats, tels que SUM, sont retournés uniquement pour ces clients.  
   
- Lorsque vous définissez un filtre de lignes à l'aide d'une formule DAX, vous créez un ensemble de lignes autorisé. Cela interdit pas l'accès à d'autres lignes ; en revanche, elles ne sont pas retournées dans le cadre de l'ensemble de lignes autorisé. D'autres rôles peuvent autoriser l'accès aux lignes exclues par la formule DAX. Si un utilisateur est membre d'un autre rôle, et des filtres de lignes de ce rôle permettent l'accès à cet ensemble de lignes particulier, l'utilisateur peut afficher les données pour cette ligne.  
+ Lorsque vous définissez un filtre de lignes à l'aide d'une formule DAX, vous créez un ensemble de lignes autorisé. Cela interdit pas l'accès à d'autres lignes ; en revanche, elles ne sont pas retournées dans le cadre de l'ensemble de lignes autorisé. D'autres rôles peuvent autoriser l'accès aux lignes exclues par la formule DAX. Si un utilisateur est membre d’un autre rôle, et les filtres de lignes d’un rôle autoriser l’accès à cet ensemble de ligne particulière, l’utilisateur peut afficher des données pour cette ligne.  
   
  Les filtres de lignes s'appliquent aux lignes spécifiées ainsi qu'aux lignes connexes. Lorsqu'une table contient plusieurs relations, les filtres appliquent la sécurité de la relation qui est active. Les filtres de lignes se croisent avec d'autres filtres de ligne définis pour les tables associées.  
   
@@ -70,11 +70,11 @@ ms.locfileid: "48906499"
 |Texte|String|Chaîne de données caractères au format Unicode. Il peut s'agir de chaînes, de nombres ou de dates représentés dans un format texte.|  
 |Date|Date/heure|Dates et heures dans une représentation date-heure acceptée.<br /><br /> Les dates valides sont toutes les dates après le 1er mars 1900.|  
 |Monétaire (Currency)|Monétaire (Currency)|Le type de données devise autorise des valeurs entre -922 337 203 685 477,5808 et 922 337 203 685 477,5807 avec quatre chiffres décimaux à précision fixe.|  
-|Néant|Vide|Le type de données Vide (Blank) de DAX représente et remplace les valeurs Null SQL. Vous pouvez créer une valeur vide à l'aide de la fonction BLANK et tester les valeurs vides à l'aide de la fonction logique ISBLANK.|  
+|N/A|Vide|Le type de données Vide (Blank) de DAX représente et remplace les valeurs Null SQL. Vous pouvez créer une valeur vide à l'aide de la fonction BLANK et tester les valeurs vides à l'aide de la fonction logique ISBLANK.|  
   
  Les modèles tabulaires incluent également le type de données Table comme entrée ou sortie dans de nombreuses fonctions DAX. Par exemple, la fonction FILTER prend une table en entrée et génère en sortie une autre table qui contient uniquement les lignes qui répondent aux conditions de filtre. En associant des fonctions de table à des fonctions d'agrégation, vous pouvez effectuer des calculs complexes sur des jeux de données définis de façon dynamique.  
   
- Bien que les types de données soient généralement définis automatiquement, il est important de comprendre de quelle façon ils s'appliquent, notamment, aux formules DAX. Des erreurs dans les formules ou des résultats inattendus sont notamment dus à l'emploi d'un opérateur spécifique qui ne peut pas être utilisé avec le type de données spécifié dans un argument. Par exemple, la formule `= 1 & 2`, retourne un résultat de chaîne de 12. Toutefois, la formule `= “1” + “2”`retourne un résultat entier de 3.  
+ Bien que les types de données soient généralement définis automatiquement, il est important de comprendre de quelle façon ils s'appliquent, notamment, aux formules DAX. Des erreurs dans les formules ou des résultats inattendus sont notamment dus à l'emploi d'un opérateur spécifique qui ne peut pas être utilisé avec le type de données spécifié dans un argument. Par exemple, la formule `= 1 & 2`, retourne un résultat de chaîne de 12. Toutefois, la formule `= "1" + "2"`retourne un résultat entier de 3.  
   
  Pour plus d’informations sur les types de données dans les modèles tabulaires et les conversions explicites et implicites des types de données dans DAX, consultez [Types de données pris en charge](../../analysis-services/tabular-models/data-types-supported-ssas-tabular.md).  
   
@@ -232,7 +232,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
  Il existe différents types de contexte : *contexte de ligne*, *contexte de requête*et *contexte de filtre*.  
   
 ###  <a name="bkmk_row_context"></a> Contexte de ligne  
- Le*contexte de ligne* peut être considéré comme la « ligne actuelle ». Si vous créez une formule dans une colonne calculée, le contexte de ligne correspondant à cette formule inclut les valeurs de toutes les colonnes dans la ligne actuelle. Si la table est associée à une autre table, le contenu inclut également toutes les valeurs de cette autre table qui sont mises en relation avec la ligne actuelle.  
+ *Contexte de ligne* peut être considéré comme la « ligne actuelle ». Si vous créez une formule dans une colonne calculée, le contexte de ligne correspondant à cette formule inclut les valeurs de toutes les colonnes dans la ligne actuelle. Si la table est associée à une autre table, le contenu inclut également toutes les valeurs de cette autre table qui sont mises en relation avec la ligne actuelle.  
   
  Par exemple, supposons que vous créez une colonne calculée, `=[Freight] + [Tax]`, qui additionne les valeurs de deux colonnes, Freight et Tax, de la même table. Cette formule obtient automatiquement les valeurs de la ligne actuelle uniquement dans les colonnes spécifiées.  
   
@@ -354,7 +354,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
  Le*recalcul* est le processus de mise à jour des résultats des formules afin de refléter toutes les modifications qui leur ont été apportées, ainsi que toutes les modifications des données sous-jacentes. Le recalcul peut affecter les performances des façons suivantes :  
   
--   Les valeurs dans une colonne calculée sont calculées et stockées dans le modèle. Pour mettre à jour les valeurs dans la colonne calculée, vous devez traiter le modèle à l'aide de l'une des trois commandes de traitement – Traiter entièrement, Traiter les données ou Traiter le recalcul. Le résultat de la formule doit toujours être recalculé, pour la colonne entière, chaque fois que vous modifiez la formule.  
+-   Les valeurs dans une colonne calculée sont calculées et stockées dans le modèle. Pour mettre à jour les valeurs dans la colonne calculée, vous devez traiter le modèle à l’aide d’une des trois commandes de traitement - traiter entièrement, traiter les données ou traiter le recalcul. Le résultat de la formule doit toujours être recalculé, pour la colonne entière, chaque fois que vous modifiez la formule.  
   
 -   Les valeurs calculées par des mesures sont dynamiquement évaluées chaque fois qu'un utilisateur ajoute la mesure à un tableau croisé dynamique ou ouvre un rapport. Lorsque l'utilisateur modifie le contexte, les valeurs retournées par la mesure changent. Les résultats de la mesure reflètent toujours les valeurs les plus récentes dans le cache en mémoire.  
   
@@ -367,7 +367,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
  Les erreurs syntactiques sont les plus faciles à résoudre. Elles impliquent en général une virgule ou une parenthèse manquante. Pour obtenir de l’aide sur la syntaxe d’une fonction, consultez [Référence des fonctions DAX](http://msdn.microsoft.com/4dbb28a1-dd1a-4fca-bcd5-e90f74864a7b).  
   
- L'autre type d'erreur se produit lorsque la syntaxe est correcte, mais que la valeur ou la colonne référencée n'a pas de sens dans le contexte de la formule. De telles erreurs sémantiques et de calcul peuvent être provoquées par l'un des problèmes suivants :  
+ L'autre type d'erreur se produit lorsque la syntaxe est correcte, mais que la valeur ou la colonne référencée n'a pas de sens dans le contexte de la formule. De telles erreurs sémantiques et de calcul peuvent être provoquées par l'un des problèmes suivants :  
   
 -   La formule fait référence à une colonne, une table ou une fonction non existante.  
   

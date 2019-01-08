@@ -11,12 +11,12 @@ ms.assetid: 367835aa-9855-4791-a989-b3d08402ad4c
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3ec1406b5259a68eadc821092bea3cccd10e032d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0bd0382906d3ee56055cc026036816af64b55dc6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185819"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52408963"
 ---
 # <a name="configure-the-integration-services-service-as-a-cluster-resource"></a>Configurer le service Integration Services en tant que ressource de cluster
   Pour les clients concluant que les avantages de la configuration du service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] en tant que ressource de cluster compensent les inconvénients, cette section contient les instructions de configuration nécessaires. [!INCLUDE[msCoName](../includes/msconame-md.md)] ne recommande toutefois pas de configurer le service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] en tant que ressource de cluster.  
@@ -79,15 +79,15 @@ ms.locfileid: "48185819"
   
 4.  Dans le menu **Fichier** , pointez sur **Nouveau**, puis cliquez sur **Ressource**.  
   
-5.  Dans la page **Nouvelle ressource** de l'Assistant Ressource, tapez un nom et sélectionnez **Service générique** comme **Type de service**. Ne modifiez pas la valeur de **Groupe**. Cliquez sur **Suivant**.  
+5.  Dans la page **Nouvelle ressource** de l’Assistant Ressource, tapez un nom et sélectionnez **Service générique** comme **Type de service**. Ne modifiez pas la valeur de **Groupe**. Cliquer sur **Suivant**.  
   
-6.  Dans la page **Propriétaires possibles** , ajoutez ou supprimez les nœuds du cluster en tant que propriétaires possibles de la ressource. Cliquez sur **Suivant**.  
+6.  Dans la page **Propriétaires possibles** , ajoutez ou supprimez les nœuds du cluster en tant que propriétaires possibles de la ressource. Cliquer sur **Suivant**.  
   
 7.  Pour ajouter des dépendances, dans la page **Dépendances** , sélectionnez une ressource sous **Ressources disponibles**, puis cliquez sur **Ajouter**. En cas de basculement, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et le disque partagé qui stocke les packages [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] doivent être de nouveau en ligne avant la mise en ligne d' [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Après avoir sélectionné les dépendances, cliquez sur **Suivant**.  
   
      Pour en savoir plus, voir [Add Dependencies to a SQL Server Resource](../sql-server/failover-clusters/windows/add-dependencies-to-a-sql-server-resource.md).  
   
-8.  Sur la page **Paramètres de service générique** , saisissez **MsDtsServer** dans la zone du nom de service. Cliquez sur **Suivant**.  
+8.  Sur la page **Paramètres de service générique** , saisissez **MsDtsServer** dans la zone du nom de service. Cliquer sur **Suivant**.  
   
 9. Dans la page **Réplication du Registre** , cliquez sur **Ajouter** pour ajouter la clé de Registre qui identifie l'emplacement du fichier de configuration du service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Ce fichier doit se trouver sur un disque partagé situé dans le même groupe de ressources que le service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
   
@@ -101,7 +101,7 @@ ms.locfileid: "48185819"
   
 2.  Sur le disque partagé, créez un dossier nommé **Packages** , qui doit servir de magasin de packages. Accordez aux groupes et utilisateurs appropriés des autorisations en écriture et pour répertorier des dossiers sur le nouveau dossier.  
   
-3.  Sur le disque partagé, ouvrez le fichier de configuration dans un éditeur de texte ou XML. Modifiez la valeur de la `ServerName` élément pour le nom du serveur virtuel [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] qui se trouve dans le même groupe de ressources.  
+3.  Sur le disque partagé, ouvrez le fichier de configuration dans un éditeur de texte ou XML. Remplacez la valeur de l'élément `ServerName` par le nom du serveur virtuel [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] qui se trouve dans le même groupe de ressources.  
   
 4.  Modifiez la valeur de la `StorePath` élément vers le chemin d’accès qualifié complet de le **Packages** dossier créé sur le disque partagé à l’étape précédente.  
   

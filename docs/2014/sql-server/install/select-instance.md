@@ -13,12 +13,12 @@ ms.assetid: 79d5989f-2fb1-424b-be50-d89c8e39c51b
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 769ae8cd5abab02fd2ae253e6165ad4d6b89b974
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 87f2ed4ff5bac29d65e9fe6132b2593580aa6639
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182089"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511552"
 ---
 # <a name="select-instance"></a>Sélectionner une instance
   Utilisez la page Sélectionner une instance de l'Assistant Installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour spécifier l'instance de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], ou [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] que vous voulez mettre à niveau vers [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
@@ -28,7 +28,7 @@ ms.locfileid: "48182089"
   
 -   Outils de gestion - Base  
   
--   Outils d'administration – Complets  
+-   Outils de gestion - Complet  
   
 -   Connectivité des outils clients  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - entities [Master Data Services], about entities
@@ -14,12 +13,12 @@ ms.assetid: 0af057d5-6b73-472b-99eb-9f5eb61a9b5b
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 97a3fe9e9552170332e6be0d5cf5a3cb8541fe9b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bb54250b1be15916055dd59a3f2e6d37330d5d93
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072909"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52800911"
 ---
 # <a name="entities-master-data-services"></a>Entités (services de données de référence)
   Les entités sont des objets contenus dans des modèles [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Chaque entité contient des membres, qui correspondent aux lignes de données de référence que vous gérez.  
@@ -50,7 +49,7 @@ ms.locfileid: "48072909"
  Vous pouvez accorder aux utilisateurs l'autorisation d'accès à une entité, y compris aux objets de modèle associés. Pour plus d’informations, consultez [Autorisations d’entité &#40;Master Data Services&#41;](../../2014/master-data-services/entity-permissions-master-data-services.md).  
   
 ## <a name="entity-examples"></a>Exemples d'entités  
- L'exemple suivant montre un entité comportant les attributs suivants : Name, Code, Subcategory, StandardCost, ListPrice et FilePhoto. Ces attributs décrivent les membres. Chaque membre est représenté par une ligne unique de valeurs d'attribut.  
+ L’exemple suivant montre une entité qui possède ces attributs : Nom de Code, Subcategory, StandardCost, ListPrice et FilePhoto. Ces attributs décrivent les membres. Chaque membre est représenté par une ligne unique de valeurs d'attribut.  
   
  ![Table de l’entité Bike Product](../../2014/master-data-services/media/mds-conc-entity-table-w-data.gif "Table de l’entité Bike Product")  
   
@@ -73,7 +72,7 @@ ms.locfileid: "48072909"
   
 ## <a name="related-content"></a>Contenu associé  
   
--   [Modèles (Master Data Services)](../../2014/master-data-services/models-master-data-services.md)  
+-   [Modèles &#40;Master Data Services&#41;](../../2014/master-data-services/models-master-data-services.md)  
   
 -   [Membres &#40;Master Data Services&#41;](../../2014/master-data-services/members-master-data-services.md)  
   

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - XSD schemas [SQLXML], mapping attributes and elements
@@ -28,12 +26,12 @@ ms.assetid: 9a18e92a-6cfb-4a14-993a-663a95aabb63
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 674e47df8f43088f51aacebd0a2e4da0c891443f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 673e96509061f3d4fdc808b4165ff56991baa8ad
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089299"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52793681"
 ---
 # <a name="default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-40"></a>Mappage par défaut d'éléments et d'attributs XSD à des tables et des colonnes (SQLXML 4.0)
   Par défaut, un élément de type complexe dans un schéma annoté XSD est mappé à la table (vue) du même nom dans la base de données spécifiée ; par ailleurs, un élément ou attribut de type simple est mappé à la colonne du même nom dans la table.  
@@ -92,7 +90,7 @@ ms.locfileid: "48089299"
 </ROOT>  
 ```  
   
-### <a name="b-mapping-an-xml-element-to-a-database-column"></a>B. Mappage d'un élément XML à une colonne de base de données  
+### <a name="b-mapping-an-xml-element-to-a-database-column"></a>b. Mappage d'un élément XML à une colonne de base de données  
  Dans cet exemple, le mappage par défaut a lieu également, car aucune annotation n'est utilisée. Le  **\<Person.Contact >** élément est de type complexe et est mappé à la table portant le même nom dans la base de données. Les éléments  **\<FirstName >** et  **\<LastName >** et **EmployeeID** attribut sont de type simple et, par conséquent, sont mappés à la colonnes portant le même nom. La seule différence entre ceci et l'exemple précédent réside dans le fait que les éléments sont utilisés pour le mappage des champs FirstName et LastName.  
   
 ```  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - isolating performance problems [SQL Server]
@@ -19,19 +18,19 @@ ms.assetid: 2eb425cb-9166-4027-ae08-c8fc2d236f44
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 86350dae3a41ffd994110491ab558367866f9bc3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e700f5178a3520fe83f4d896662a8741aa166b9a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48115009"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52810701"
 ---
 # <a name="isolate-performance-problems"></a>Isoler les problèmes de performance
   Il est souvent plus efficace d'utiliser plusieurs outils [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou Microsoft Windows conjointement pour isoler les problèmes de performance de base de données que d'utiliser un seul outil à la fois. Par exemple, la fonctionnalité graphique Plan d'exécution, également appelée plan d'exécution de requêtes, vous aide à reconnaître rapidement les blocages dans une seule requête. Toutefois, vous pouvez reconnaître d'autres problèmes de performance plus facilement si vous utilisez les fonctions de surveillance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et de Windows en même temps.  
   
  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] permet de surveiller et de résoudre les problèmes liés à Transact-SQL et à l’application. Le Moniteur système permet de surveiller les problèmes liés au matériel ou à d'autres aspects du système.  
   
- Vous pouvez surveiller les éléments suivants pour résoudre les problèmes :  
+ Vous pouvez surveiller les éléments suivants pour résoudre les problèmes :  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou les traitements [!INCLUDE[tsql](../../includes/tsql-md.md)] envoyés par les applications des utilisateurs.  
   
@@ -54,6 +53,6 @@ ms.locfileid: "48115009"
   
  [Identifier les goulots d’étranglement](identify-bottlenecks.md)  
   
- [Surveiller l’utilisation de la mémoire](../performance-monitor/monitor-memory-usage.md)  
+ [Surveiller l'utilisation de la mémoire](../performance-monitor/monitor-memory-usage.md)  
   
   

@@ -14,12 +14,12 @@ ms.assetid: c5b33f75-42d4-4598-89e7-94815c142ce6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 87659ab790e7583c23ac9c597603b531734c7b25
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1ba2f28e4f2e66fd642273d06409eb128d219d8b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106459"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52543704"
 ---
 # <a name="forecast-wizard-data-mining-add-ins-for-excel"></a>Assistant Prévisions (Compléments d'exploration de données pour Excel)
   ![Assistant association dans le ruban Exploration de données](media/dmc-forecast.gif "associer l’Assistant dans le ruban Exploration de données")  
@@ -66,8 +66,8 @@ ms.locfileid: "48106459"
   
     -   **Utiliser le modèle temporaire**. Si cette option est sélectionnée, le modèle ne sera pas enregistré sur le serveur. Lorsque vous fermez Excel, les modèles temporaires sont supprimés.  
   
-### <a name="requirements"></a>Spécifications  
- Vos données doivent inclure au moins une colonne pouvant être utilisée en tant que série chronologique. Les valeurs de cette colonne doivent être uniques et continues, c'est-à-dire sans ruptures dans la séquence. Avant d'exécuter l'assistant, triez les données de la colonne de série chronologique par ordre croissant.  
+### <a name="requirements"></a>Configuration requise  
+ Vos données doivent inclure au moins une colonne pouvant être utilisée en tant que série chronologique. Les valeurs de cette colonne doivent être unique et continue : autrement dit, il ne doit y avoir aucun écart. Avant d'exécuter l'assistant, triez les données de la colonne de série chronologique par ordre croissant.  
   
  Si vos données ne contiennent pas de colonne de date ou d'heure, vous pouvez utiliser une série numérique arbitraire ou laisser l'assistant s'en charger. Si vous laissez l'assistant créer la colonne d'ordre de la série, assurez-vous que les autres colonnes sont triées dans l'ordre souhaité avant de démarrer l'assistant.  
   

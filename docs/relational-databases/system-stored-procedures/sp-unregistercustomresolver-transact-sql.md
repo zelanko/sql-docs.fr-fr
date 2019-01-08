@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_unregistercustomresolver_TSQL
@@ -17,12 +16,12 @@ ms.assetid: 08bd20c8-c6be-4be2-be9f-2b5e1d7bee43
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c59cdbda9f5de8282f403fc760de0e407badff31
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 46de29c32442bb2c7672eb7043d10c185327963b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832747"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52783261"
 ---
 # <a name="spunregistercustomresolver-transact-sql"></a>sp_unregistercustomresolver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ sp_unregistercustomresolver [ @article_resolver = ] 'article_resolver'
   
  Utilisez [sp_enumcustomresolvers](../../relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql.md) n’importe quel serveur dans la topologie de réplication pour retourner la liste des modules de logique métier personnalisée inscrits ou des programmes de résolution COM disponibles à la topologie.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Seuls les membres de la **sysadmin** rôle serveur fixe ou **db_owner** rôle de base de données fixe peuvent exécuter **sp_unregistercustomresolver**.  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - unconsumed data
@@ -19,12 +17,12 @@ ms.assetid: 8526998d-b47d-4a32-8dc2-7f50a8d11097
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d07153f80cc1b6dfdc8383e33a8668b63364ad8a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0398092e4565b6b02e6b83e8c892ff91e6611f66
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119509"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52793591"
 ---
 # <a name="retrieving-unconsumed-data-using-the-sqloverflow-field-sqlxml-40"></a>Extraction de données non consommées à l'aide de sql:overflow-field (SQLXML 4.0)
   Lorsque les enregistrements sont insérés dans une base de données à partir d'un document XML à l'aide de la fonction [!INCLUDE[tsql](../../includes/tsql-md.md)] OPENXML, toutes les données non consommées du document XML source peuvent être stockées dans une colonne. Lors de la récupération des données à partir d'une base de données à l'aide des schémas annotés, l'attribut `sql:overflow-field` peut être spécifié pour identifier la colonne de la table où les données de dépassement de capacité sont stockées. Le `sql:overflow-field` attribut peut être spécifié sur  **\<élément >**.  
@@ -62,7 +60,7 @@ INSERT INTO Customers2 VALUES (
 GO  
 ```  
   
- De plus, vous devez créer un répertoire virtuel pour la base de données tempdb et un nom virtuel de modèle du type `template` intitulé "template".  
+ En outre, vous devez créer un répertoire virtuel pour la base de données tempdb- et un nom virtuel du modèle de `template` type intitulé « template ».  
   
  Dans l'exemple suivant, le schéma de mappage extrait les données non consommées stockées dans la colonne AddressOverflow de la table Customers2 :  
   

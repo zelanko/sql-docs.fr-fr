@@ -5,8 +5,7 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_scriptpublicationcustomprocs
@@ -17,12 +16,12 @@ ms.assetid: b06102d5-4284-4834-b126-bc0baea49be5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3c6a24a03e1ac8b4fff3fe4af878f051cf2e35a5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2b57ae49875c07607e153b793c76db31d5dd347b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47815450"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52808641"
 ---
 # <a name="spscriptpublicationcustomprocs-transact-sql"></a>sp_scriptpublicationcustomprocs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +76,7 @@ sp_scriptpublicationcustomprocs [ @publication = ] 'publication_name'
   
  **sp_scriptxupdproc**  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Exécutez autorisation est accordée aux **public**; une vérification procédurale de sécurité est effectuée à l’intérieur de cette procédure stockée pour restreindre l’accès aux membres de la **sysadmin** rôle serveur fixe et **db_ propriétaire** rôle de base de données fixe dans la base de données actuelle.  
   
 ## <a name="see-also"></a>Voir aussi  

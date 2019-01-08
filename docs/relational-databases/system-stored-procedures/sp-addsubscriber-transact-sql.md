@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_addsubscriber
@@ -17,12 +16,12 @@ ms.assetid: b8a584ea-2a26-4936-965b-b84f026e39c0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ec23f8c6fd28ba20522c6a2962d8af0c9f809a9c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ad13c4904270d3162dac8791b7724533e8da6656
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825137"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211748"
 ---
 # <a name="spaddsubscriber-transact-sql"></a>sp_addsubscriber (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +67,7 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
  [  **@type=**] *type*  
  Type d'abonné. *type* est **tinyint**, et peut prendre l’une des valeurs suivantes.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**0** (valeur par défaut)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] abonné|  
 |**1**|Serveur de la source de données ODBC.|  
@@ -111,7 +110,7 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
  [  **@frequency_type=**] *frequency_type*  
  Fréquence de planification de l'Agent de réplication. *frequency_type* est **int**, et peut prendre l’une des valeurs suivantes.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**1**|Une fois|  
 |**2**|À la demande|  
@@ -134,7 +133,7 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
  [  **@frequency_relative_interval=**] *frequency_relative_interval*  
  Date de l'Agent de réplication. Ce paramètre est utilisé lorsque *frequency_type* a la valeur **32** (fréquence mensuelle relative). *frequency_relative_interval* est **int**, et peut prendre l’une des valeurs suivantes.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**1** (par défaut)|Première|  
 |**2**|Seconde|  
@@ -154,7 +153,7 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
  [  **@frequency_subday=**] *frequency_subday*  
  Fréquence de replanification nécessaire pendant la période définie. *frequency_subday* est **int**, et peut prendre l’une des valeurs suivantes.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**1**|Une fois|  
 |**2**|Seconde|  
@@ -207,7 +206,7 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
  Ce paramètre est déconseillé et est fourni pour la compatibilité descendante uniquement définissant *encrypted_password* à n’importe quelle valeur mais **0** entraîne une erreur.  
   
  [ **@publisher**=] **'***publisher***'**  
- Spécifie un serveur de publication non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *serveur de publication* est **sysname**, avec NULL comme valeur par défaut.  
+ Spécifie un non - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serveur de publication. *serveur de publication* est **sysname**, avec NULL comme valeur par défaut.  
   
 > [!NOTE]  
 >  *serveur de publication* ne doit pas être utilisé lors de la publication à partir d’un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serveur de publication.  
@@ -222,7 +221,7 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
   
  **sp_addsubscriber** écrit dans le [MSsubscriber_info](../../relational-databases/system-tables/mssubscriber-info-transact-sql.md) table dans le **distribution** base de données.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Seuls les membres de la **sysadmin** du rôle serveur fixe peuvent exécuter **sp_addsubscriber**.  
   
 ## <a name="see-also"></a>Voir aussi  

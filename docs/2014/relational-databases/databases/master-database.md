@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - master database [SQL Server], about
@@ -14,12 +13,12 @@ ms.assetid: 660e909f-61eb-406b-bbce-8864dd629ba0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fa7cb2ad5c23900bd44aae89e1af6f8478fb2f74
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 767d77eefe8c54fe5a3d584c670cc991b284178e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095863"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52784541"
 ---
 # <a name="master-database"></a>Base de données master
   La base de données **master** contient l’intégralité des informations système relatives à un système [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cela inclut les métadonnées relatives à l'instance, dont les comptes d'ouverture de session, les points de terminaison, les serveurs liés et les paramètres de configuration du système. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les objets système ne sont plus stockés dans la base de données **master** , mais dans la [base de données des ressources](resource-database.md). La base de données **master** enregistre également l'existence de toutes les bases de données et l'emplacement de leurs fichiers, et contient les informations d'initialisation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Par conséquent, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne peut pas démarrer si la base de données **master** n'est pas disponible.  
@@ -39,33 +38,33 @@ ms.locfileid: "48095863"
   
 |Option de base de données|Valeur par défaut|Peut être modifiée|  
 |---------------------|-------------------|---------------------|  
-|ALLOW_SNAPSHOT_ISOLATION|ON|non|  
+|ALLOW_SNAPSHOT_ISOLATION|ON|Non|  
 |ANSI_NULL_DEFAULT|OFF|Oui|  
 |ANSI_NULLS|OFF|Oui|  
 |ANSI_PADDING|OFF|Oui|  
 |ANSI_WARNINGS|OFF|Oui|  
 |ARITHABORT|OFF|Oui|  
-|AUTO_CLOSE|OFF|non|  
+|AUTO_CLOSE|OFF|Non|  
 |AUTO_CREATE_STATISTICS|ON|Oui|  
-|AUTO_SHRINK|OFF|non|  
+|AUTO_SHRINK|OFF|Non|  
 |AUTO_UPDATE_STATISTICS|ON|Oui|  
 |AUTO_UPDATE_STATISTICS_ASYNC|OFF|Oui|  
-|CHANGE_TRACKING|OFF|non|  
+|CHANGE_TRACKING|OFF|Non|  
 |CONCAT_NULL_YIELDS_NULL|OFF|Oui|  
 |CURSOR_CLOSE_ON_COMMIT|OFF|Oui|  
 |CURSOR_DEFAULT|GLOBAL|Oui|  
-|Options de disponibilité de base de données|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|non<br /><br /> non<br /><br /> non|  
+|Options de disponibilité de base de données|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|Non<br /><br /> Non<br /><br /> Non|  
 |DATE_CORRELATION_OPTIMIZATION|OFF|Oui|  
-|DB_CHAINING|ON|non|  
-|ENCRYPTION|OFF|non|  
+|DB_CHAINING|ON|Non|  
+|ENCRYPTION|OFF|Non|  
 |NUMERIC_ROUNDABORT|OFF|Oui|  
 |PAGE_VERIFY|CHECKSUM|Oui|  
 |PARAMETERIZATION|SIMPLE|Oui|  
 |QUOTED_IDENTIFIER|OFF|Oui|  
-|READ_COMMITTED_SNAPSHOT|OFF|non|  
+|READ_COMMITTED_SNAPSHOT|OFF|Non|  
 |RECOVERY|SIMPLE|Oui|  
 |RECURSIVE_TRIGGERS|OFF|Oui|  
-|Options de Service Broker|DISABLE_BROKER|non|  
+|Options de Service Broker|DISABLE_BROKER|Non|  
 |TRUSTWORTHY|OFF|Oui|  
   
  Pour obtenir une description de ces options de base de données, consultez [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql).  
@@ -81,7 +80,7 @@ ms.locfileid: "48095863"
   
 -   création d'un catalogue ou d'un index de texte intégral ;  
   
--   création de déclencheurs sur les tables système de la base de données ;  
+-   création de déclencheurs sur les tables système de la base de données ;  
   
 -   Suppression de la base de données  
   

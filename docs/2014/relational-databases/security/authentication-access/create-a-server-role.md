@@ -16,12 +16,12 @@ ms.assetid: 74f19992-8082-4ed7-92a1-04fe676ee82d
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: d80795317ae9a1d486df2894ab68ee22dfdfc7c2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 05314fe18f555d4d2d3cca161a3b770ec85b4256
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170729"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532132"
 ---
 # <a name="create-a-server-role"></a>Créer un rôle serveur
   Cette rubrique explique comment créer un rôle de serveur dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
@@ -67,15 +67,15 @@ ms.locfileid: "48170729"
   
 2.  Développez le dossier **Sécurité** .  
   
-3.  Cliquez avec le bouton droit sur le dossier **Rôles serveur** , puis sélectionnez **Nouveau rôle serveur**.  
+3.  Cliquez avec le bouton droit sur le dossier **Rôles de serveur**, puis sélectionnez **Nouveau rôle de serveur...**.  
   
-4.  Dans la boîte de dialogue **Nouveau rôle serveur –***nom_rôle_server*, dans la page **Général**, entrez le nom du nouveau rôle serveur dans la zone **Nom du rôle serveur**.  
+4.  Dans le **nouveau rôle de serveur-*** nom_rôle_serveur* boîte de dialogue le **général** page, entrez un nom pour le nouveau rôle de serveur dans le **nom du rôle serveur** boîte.  
   
-5.  Dans la zone **Propriétaire** , entrez le nom du principal de serveur qui détiendra le nouveau rôle. Vous pouvez également cliquer sur les points de suspension **(…)** pour ouvrir la boîte de dialogue **Sélectionner la connexion au serveur ou le rôle serveur** .  
+5.  Dans la zone **Propriétaire** , entrez le nom du principal de serveur qui détiendra le nouveau rôle. Vous pouvez également cliquer sur les points de suspension **(…)** pour ouvrir la boîte de dialogue **Sélectionner la connexion au serveur ou le rôle de serveur**.  
   
 6.  Sous **Éléments sécurisables**, sélectionnez un ou plusieurs éléments sécurisables au niveau du serveur. Lorsqu'un élément sécurisable est sélectionné, ce rôle de serveur peut se voir accorder ou refuser des autorisations sur cet élément sécurisable.  
   
-7.  Dans la zone **Autorisations : explicite** , activez la case à cocher pour accorder, accorder avec transmission des droits, ou refuser une autorisation d'accès à ce rôle serveur pour les éléments sécurisables sélectionnés. Si une autorisation ne peut pas être accordée ou refusée à tous les éléments sécurisables sélectionnés, l'autorisation est représentée sous forme de sélection partielle.  
+7.  Dans le **autorisations : Explicite** , sélectionnez la case à cocher pour accorder, droit d’accorder ou refuser l’autorisation à ce rôle de serveur pour les éléments sécurisables sélectionnés. Si une autorisation ne peut pas être accordée ou refusée à tous les éléments sécurisables sélectionnés, l'autorisation est représentée sous forme de sélection partielle.  
   
 8.  Dans la page **Membres** , utilisez le bouton **Ajouter** pour ajouter des connexions qui représentent des individus ou des groupes au nouveau rôle serveur.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "48170729"
   
 #### <a name="to-create-a-new-server-role"></a>Pour créer un rôle serveur  
   
-1.  Dans l'**Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   

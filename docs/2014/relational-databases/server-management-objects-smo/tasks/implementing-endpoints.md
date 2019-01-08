@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 topic_type:
 - apiref
@@ -16,21 +14,21 @@ ms.assetid: f8674dbb-9bc0-488f-9def-e9e0ce1ddf86
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 17e154743d221cfd4a2070c56634c6364a910afb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 88f1d38f1769659842757d535309c6e42d70a289
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081632"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52807711"
 ---
 # <a name="implementing-endpoints"></a>Implémentation de points de terminaison
-  Un point de terminaison est un service qui peut écouter les requêtes en mode natif. SMO prend en charge différents types de points de terminaison à l’aide de la <xref:Microsoft.SqlServer.Management.Smo.Endpoint> objet. Vous pouvez créer un service de point de terminaison qui gère un type spécifique de charge utile, qui utilise un protocole spécifique, en créant une instance d'un objet <xref:Microsoft.SqlServer.Management.Smo.Endpoint> et en définissant ses propriétés.  
+  Un point de terminaison est un service qui peut écouter les requêtes en mode natif. SMO prend en charge différents types de points de terminaison en utilisant l'objet <xref:Microsoft.SqlServer.Management.Smo.Endpoint>. Vous pouvez créer un service de point de terminaison qui gère un type spécifique de charge utile, qui utilise un protocole spécifique, en créant une instance d'un objet <xref:Microsoft.SqlServer.Management.Smo.Endpoint> et en définissant ses propriétés.  
   
- Le <xref:Microsoft.SqlServer.Management.Smo.Endpoint.EndpointType%2A> propriété de la <xref:Microsoft.SqlServer.Management.Smo.Endpoint> objet peut être utilisé pour spécifier sur des types de charge utile suivants :  
+ La propriété <xref:Microsoft.SqlServer.Management.Smo.Endpoint.EndpointType%2A> de l'objet <xref:Microsoft.SqlServer.Management.Smo.Endpoint> peut être utilisée pour spécifier l'un des types de charge utile suivants :  
   
 -   Mise en miroir de bases de données  
   
--   SOAP (la prise en charge des points de terminaison SOAP est présente dans [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] et les versions antérieures de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)])  
+-   SOAP (la prise en charge des points de terminaison SOAP est présente dans [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] et les versions antérieures de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] )  
   
 -   Service Broker  
   
@@ -42,11 +40,11 @@ ms.locfileid: "48081632"
   
 -   Protocole TCP  
   
- Après avoir précisé le type de charge utile, la charge utile réelle peut être définie en utilisant le <xref:Microsoft.SqlServer.Management.Smo.Endpoint.Payload%2A> propriété d’objet. La propriété d'objet <xref:Microsoft.SqlServer.Management.Smo.Payload> fournit une référence vers un objet de charge utile du type spécifié, dont les propriétés peuvent être modifiées.  
+ Après avoir précisé le type de charge utile, il est possible de définir la charge utile réelle à l'aide de la propriété d'objet <xref:Microsoft.SqlServer.Management.Smo.Endpoint.Payload%2A>. La propriété d'objet <xref:Microsoft.SqlServer.Management.Smo.Payload> fournit une référence vers un objet de charge utile du type spécifié, dont les propriétés peuvent être modifiées.  
   
- Pour l'objet <xref:Microsoft.SqlServer.Management.Smo.DatabaseMirroringPayload>, vous devez spécifier le rôle de mise en miroir et si le chiffrement est activé. Le <xref:Microsoft.SqlServer.Management.Smo.ServiceBrokerPayload> objet requiert des informations sur le transfert de messages, nombre maximal de connexions autorisées et le mode d’authentification. L'objet <xref:Microsoft.SqlServer.Management.Smo.SoapPayloadMethod.%23ctor%2A> requiert la définition de différentes propriétés, notamment la propriété d'objet <xref:Microsoft.SqlServer.Management.Smo.SoapPayloadMethodCollection.Add%2A> qui spécifie les méthodes de charge utile SOAP disponibles pour les clients (procédures stockées et fonctions définies par l'utilisateur).  
+ Pour l'objet <xref:Microsoft.SqlServer.Management.Smo.DatabaseMirroringPayload>, vous devez spécifier le rôle de mise en miroir et si le chiffrement est activé. L'objet <xref:Microsoft.SqlServer.Management.Smo.ServiceBrokerPayload> requiert des informations à propos du transfert de messages, du nombre maximal de connexions autorisé et du mode d'authentification. L'objet <xref:Microsoft.SqlServer.Management.Smo.SoapPayloadMethod.%23ctor%2A> requiert la définition de différentes propriétés, notamment la propriété d'objet <xref:Microsoft.SqlServer.Management.Smo.SoapPayloadMethodCollection.Add%2A> qui spécifie les méthodes de charge utile SOAP disponibles pour les clients (procédures stockées et fonctions définies par l'utilisateur).  
   
- De la même façon, le protocole réel peut être défini à l'aide de la propriété d'objet <xref:Microsoft.SqlServer.Management.Smo.Endpoint.Protocol%2A> qui référence un objet de protocole du type spécifié par propriété <xref:Microsoft.SqlServer.Management.Smo.Endpoint.ProtocolType%2A>. L'objet <xref:Microsoft.SqlServer.Management.Smo.HttpProtocol> requiert une liste d'adresses IP restreintes, ainsi que des informations sur le port, le site Web et l'authentification. Le <xref:Microsoft.SqlServer.Management.Smo.TcpProtocol> objet requiert également une liste d’adresses IP restreintes et les informations de port.  
+ De la même façon, le protocole réel peut être défini à l'aide de la propriété d'objet <xref:Microsoft.SqlServer.Management.Smo.Endpoint.Protocol%2A> qui référence un objet de protocole du type spécifié par propriété <xref:Microsoft.SqlServer.Management.Smo.Endpoint.ProtocolType%2A>. L'objet <xref:Microsoft.SqlServer.Management.Smo.HttpProtocol> requiert une liste d'adresses IP restreintes, ainsi que des informations sur le port, le site Web et l'authentification. L'objet <xref:Microsoft.SqlServer.Management.Smo.TcpProtocol> requiert également une liste d'adresses IP restreintes, ainsi que des informations sur le port.  
   
  Lorsque le point de terminaison a été créé et complètement défini, l'accès peut être accordé, révoqué ou refusé aux utilisateurs, groupes, rôles et ouvertures de session de la base de données.  
   

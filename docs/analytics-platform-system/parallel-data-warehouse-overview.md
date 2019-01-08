@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 99d3317f25af947f042d43fdd64e4cad334ca51f
-ms.sourcegitcommit: 974c95fdda6645b9bc77f1af2d14a6f948fe268a
+ms.openlocfilehash: aaf90124cc7877b633a997a2c4f170057b965028
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37891000"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510930"
 ---
 # <a name="parallel-data-warehouse-components---analytics-platform-system"></a>Composants de l’entrepôt de données - Analytique Platform System en parallèle
 Cet article explique le logiciel de l’appliance et les composants non-appliance logicielle du système de plateforme d’Analytique.  
@@ -40,7 +40,7 @@ To learn more about Analytics Platform System, see:
   
 ![Logiciel de l’entrepôt de données en parallèle](media/parallel-data-warehouse-software.png "logiciel de Parallel Data Warehouse")  
   
-## <a name="sec1"></a>Logiciel d’application : requête de traitement et stockage des données utilisateur  
+## <a name="sec1"></a>Logiciel d’application - requête de traitement et stockage des données utilisateur  
   
 ### <a name="control-node"></a>Nœud de contrôle  
 Moteur MPP  
@@ -153,7 +153,7 @@ SQLCMD est l’outil de ligne de commande de SQL Server pour l’exécution Tran
   
 <!-- MISSING LINKS
 
-If you don’t have SQL Server, you can download this as a standalone package. For more information, see [Install sqlcmd Command-Line Client &#40;SQL Server PDW&#41;](../sqlpdw/install-sqlcmd-command-line-client-sql-server-pdw.md) 
+If you don't have SQL Server, you can download this as a standalone package. For more information, see [Install sqlcmd Command-Line Client &#40;SQL Server PDW&#41;](../sqlpdw/install-sqlcmd-command-line-client-sql-server-pdw.md) 
 --> 
   
 ### <a name="integration-services"></a>Integration Services  

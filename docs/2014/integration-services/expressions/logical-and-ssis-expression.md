@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - '&& (logical AND)'
@@ -15,12 +14,12 @@ ms.assetid: a8cb3517-d5d1-4861-9f04-905c719185ff
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a59545c26427afa1677eca78e4c00263e663dded
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0482db6754777c2501e776a166f4d385e86900a4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065530"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52780191"
 ---
 # <a name="ampamp-logical-and-ssis-expression"></a>&amp;&amp; (AND logique) (expression SSIS)
   Effectue une opération AND logique. L'expression renvoie la valeur TRUE si toutes les conditions s'évaluent à TRUE.  
@@ -42,7 +41,7 @@ boolean_expression1 && boolean_expression2
 ## <a name="remarks"></a>Notes  
  Le tableau suivant indique le résultat de l'opérateur &&.  
   
-|Résultats|Expression|Expression|  
+|Résultat|Expression|Expression|  
 |------------|----------------|----------------|  
 |TRUE|TRUE|TRUE|  
 |FALSE|TRUE|FALSE|  
@@ -65,8 +64,8 @@ StandardCost < @SPrice && ListPrice > @LPrice
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [& &#40;Au niveau du bit AND&#41; &#40;SSIS Expression&#41;](bitwise-and-ssis-expression.md)   
- [Opérateurs et associativité](operator-precedence-and-associativity.md)   
- [Opérateurs &#40;SSIS Expression&#41;](operators-ssis-expression.md)  
+ [& &#40;AND au niveau du bit&#41; &#40;expression SSIS&#41;](bitwise-and-ssis-expression.md)   
+ [Priorités et associativité des opérateurs](operator-precedence-and-associativity.md)   
+ [Opérateurs &#40;expression SSIS&#41;](operators-ssis-expression.md)  
   
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - publications [SQL Server replication], design and performance
@@ -22,12 +21,12 @@ ms.assetid: 895b1ad7-ffb9-4a5c-bda6-e1dfbd56d9bf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5ffc277e43bf48975da92e5463b4e157e266b55b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 465e43422616d5d0202bf31959fab5f56c4f35d8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138188"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52806251"
 ---
 # <a name="enhance-general-replication-performance"></a>Améliorer les performances générales de la réplication
   Vous pouvez améliorer les performances globales de tous les types de réplication de votre application et de votre réseau à l'aide des indications décrites dans cette rubrique :  
@@ -81,9 +80,9 @@ ms.locfileid: "48138188"
   
 -   Limitez l'utilisation des types de données d'objets volumineux (LOB).  
   
-     Les objets volumineux nécessitent plus d'espace de stockage et de traitement que les autres types de données de colonnes. N'incluez pas ces colonnes dans les articles à moins que votre application en ait besoin. Les types de données `text`, `ntext`, et `image` sont déconseillés. Si vous incluez des LOB, nous vous recommandons d’utiliser les types de données `varchar(max)`, `nvarchar(max)`, `varbinary(max)`, respectivement.  
+     Les objets volumineux nécessitent plus d'espace de stockage et de traitement que les autres types de données de colonnes. N'incluez pas ces colonnes dans les articles à moins que votre application en ait besoin. Les types de données `text`, `ntext` et `image` sont déconseillés. Si vous incluez des données de type LOB, il est recommandé d'utiliser respectivement les types de données `varchar(max)`, `nvarchar(max)`, `varbinary(max)`.  
   
-     Dans le cas d'une réplication transactionnelle, envisagez d'utiliser le profil de l'Agent de distribution appelé **Profil de distribution pour le flux OLEDB**. Pour plus d'informations, voir [Replication Agent Profiles](../agents/replication-agent-profiles.md).  
+     Dans le cas d'une réplication transactionnelle, envisagez d'utiliser le profil de l'Agent de distribution appelé **Profil de distribution pour le flux OLEDB**. Pour plus d’informations, voir [Replication Agent Profiles](../agents/replication-agent-profiles.md).  
   
 ## <a name="publication-design"></a>Conception de la publication  
   
@@ -97,7 +96,7 @@ ms.locfileid: "48138188"
   
      Les modifications peuvent être partitionnées en publiant des sous-ensembles de données sur chaque abonné, ou en utilisant une application qui dirige les modifications d'une ligne donnée sur un nœud donné :  
   
-    -   La réplication de fusion prend en charge la publication de sous-ensembles de données à l'aide de paramètres filtrés avec une seule publication. Pour plus d'informations, consultez [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md).  
+    -   La réplication de fusion prend en charge la publication de sous-ensembles de données à l'aide de paramètres filtrés avec une seule publication. Pour plus d’informations, consultez [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md).  
   
     -   La réplication transactionnelle prend en charge la publication de sous-ensembles de données à l'aide de filtres statiques avec plusieurs publications. Pour plus d’informations, consultez [Filtrer des données publiées](../publish/filter-published-data.md).  
   
@@ -153,11 +152,11 @@ ms.locfileid: "48138188"
   
 -   Réduisez les niveaux de détail des Agents de réplication, sauf au cours des test initiaux, de l'analyse ou du débogage.  
   
-     Réduisez le paramètre **–HistoryVerboseLevel** et le paramètre **–OutputVerboseLevel** des Agents de distribution ou de fusion. Cela diminue la quantité de nouvelles lignes insérées pour le suivi de l'historique et des valeurs de sortie de l'Agent. En contrepartie, les messages d'historique antérieurs présentant le même état sont mis à jour à partir des nouvelles informations d'historique. Augmentez les niveaux de commentaire pour les tests, l'analyse et le débogage afin d'obtenir le plus d'informations possibles sur l'activité de l'Agent.  
+     Réduisez le paramètre **-HistoryVerboseLevel** et le paramètre **-OutputVerboseLevel** des Agents de distribution ou de fusion. Cela diminue la quantité de nouvelles lignes insérées pour le suivi de l'historique et des valeurs de sortie de l'Agent. En contrepartie, les messages d'historique antérieurs présentant le même état sont mis à jour à partir des nouvelles informations d'historique. Augmentez les niveaux de commentaire pour les tests, l'analyse et le débogage afin d'obtenir le plus d'informations possibles sur l'activité de l'Agent.  
   
--   Utilisez le paramètre **–MaxBCPThreads** de l’Agent d’instantané, de l’Agent de fusion et de l’Agent de distribution (le nombre de threads spécifié ne doit pas dépasser le nombre de processeurs sur l’ordinateur). Ce paramètre indique le nombre d'opérations de copie en bloc pouvant être effectuées en parallèle lorsque l'instantané est créé et appliqué.  
+-   Utilisez le paramètre **-MaxBCPThreads** de l’Agent d’instantané, de l’Agent de fusion et de l’Agent de distribution (le nombre de threads spécifié ne doit pas dépasser le nombre de processeurs sur l’ordinateur). Ce paramètre indique le nombre d'opérations de copie en bloc pouvant être effectuées en parallèle lorsque l'instantané est créé et appliqué.  
   
--   Utilisez le paramètre **–UseInprocLoader** de l’Agent de distribution et de l’Agent de fusion (il est impossible d’utiliser ce paramètre si des tables publiées comportent des colonnes XML). Ce paramètre entraîne l'utilisation de la commande BULK INSERT par l'Agent lorsque l'instantané est appliqué.  
+-   Utilisez le paramètre **-UseInprocLoader** de l’Agent de distribution et de l’Agent de fusion (il est impossible d’utiliser ce paramètre si des tables publiées comportent des colonnes XML). Ce paramètre entraîne l'utilisation de la commande BULK INSERT par l'Agent lorsque l'instantané est appliqué.  
   
  Les paramètres des agents peuvent être spécifiés dans des profils d'agent et sur la ligne de commande. Pour plus d'informations, consultez :  
   

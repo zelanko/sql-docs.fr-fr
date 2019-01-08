@@ -15,12 +15,12 @@ ms.assetid: b90deb27-0099-4fe7-ba60-726af78f7c18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0e65b458f81e6a09b31d7be2bdffa40547e3c215
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3ee4e94ff48db339bbe5c012f821368306bfb253
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098209"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52406550"
 ---
 # <a name="recompile-a-stored-procedure"></a>Recompiler une procédure stockée
   Cette rubrique explique comment recompiler une procédure stockée dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Il existe trois manières de procéder : `WITH RECOMPILE` option dans la définition de procédure ou lorsque la procédure est appelée, le `RECOMPILE` indicateur de requête sur des instructions, ou en utilisant le `sp_recompile` procédure stockée système. Cette rubrique décrit l’utilisation de l’option WITH RECOMPILE lors de la création d’une définition de procédure et de l’exécution d’une procédure existante. Elle décrit également l’utilisation de la procédure stockée système sp_recompile pour recompiler une procédure existante.  
@@ -41,7 +41,7 @@ ms.locfileid: "48098209"
   
 ###  <a name="Recommendations"></a> Recommandations  
   
--   Lorsqu'une procédure est compilée pour la première fois ou recompilée, son plan de requête est optimisé pour l'état actuel de la base de données et de ses objets. Si une base de données subit des modifications significatives au niveau de ses données ou de sa structure, le fait de recompiler la procédure met à jour et optimise son plan de requête en fonction ces modifications. Cela peut améliorer les performances de traitement de la procédure.  
+-   Quand une procédure est compilée pour la première fois ou recompilée, son plan de requête est optimisé pour l’état actuel de la base de données et de ses objets. Si une base de données subit des modifications significatives au niveau de ses données ou de sa structure, la recompilation de la procédure a pour effet de mettre à jour et d’optimiser son plan de requête en fonction de ces modifications. Les performances de traitement de la procédure peuvent s’en trouver améliorées.  
   
 -   Parfois, la recompilation de procédure doit être forcée, et parfois elle se produit automatiquement. La recompilation automatique se produit chaque fois que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] redémarre. Elle se produit également si une table sous-jacente référencée par la procédure a été modifiée au niveau de sa conception physique.  
   
@@ -103,7 +103,7 @@ AS
   
 3.  Copiez et collez l'exemple suivant dans la fenêtre de requête, puis cliquez sur **Exécuter**. Cet exemple crée une procédure simple qui retourne tous les employés (prénom et nom), leur poste et le nom de leur service à partir d'une vue.  
   
-     Puis, copiez et collez le second exemple de code dans la fenêtre de requête et cliquez sur **Exécuter**. Cela exécute la procédure et recompile son plan de requête.  
+     Puis, copiez et collez le second exemple de code dans la fenêtre de requête et cliquez sur **Exécuter**. La procédure est alors exécutée et son plan de requête recompilé.  
   
 ```tsql  
 USE AdventureWorks2012;  

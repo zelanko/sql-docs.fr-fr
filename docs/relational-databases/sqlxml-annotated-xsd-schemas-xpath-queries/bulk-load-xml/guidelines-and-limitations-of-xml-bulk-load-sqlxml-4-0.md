@@ -15,12 +15,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0b3b9b66ee257cb3d82acb18112ed46d837a3468
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1640ff8c4daab2260253d1104f1f8099d306120a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798564"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512755"
 ---
 # <a name="guidelines-and-limitations-of-xml-bulk-load-sqlxml-40"></a>Règles et limitations du chargement en masse XML (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "47798564"
   
 -   Le système vérifie qu'un document XML est correct, mais ne le valide pas.  
   
-     Le chargement en masse XML vérifie le document XML pour déterminer s'il est correct (c'est-à-dire pour s'assurer que le document XML est conforme aux exigences en matière de syntaxe définies par la recommandation XML 1.0 du World Wide Web Consortium. Si le document n'est pas correct, le chargement en masse XML annule le traitement et retourne une erreur. La seule exception à ceci est lorsque le document est un fragment (par exemple, le document n'a aucun élément racine unique), auquel cas le chargement en masse XML chargera le document.  
+     Chargement en masse XML vérifie le document XML pour déterminer s’il s’agit bien-formées-que, pour vous assurer que le code XML est conforme aux exigences en matière de syntaxe de recommandation de XML 1.0 du World Wide Web Consortium. Si le document n'est pas correct, le chargement en masse XML annule le traitement et retourne une erreur. La seule exception à ceci est lorsque le document est un fragment (par exemple, le document n'a aucun élément racine unique), auquel cas le chargement en masse XML chargera le document.  
   
      Le chargement en masse XML ne valide pas le document par rapport à tout schéma de données XML ou DTD qui est défini ou référencé dans le fichier de données XML. De plus, le chargement en masse XML ne valide pas le fichier de données XML par rapport au schéma de mappage fourni.  
   
@@ -160,7 +160,7 @@ ms.locfileid: "47798564"
   
      Les tables qui sont identifiées dans le schéma de mappage sont créées (la base de données doit exister). Si un ou plusieurs des tables existe déjà dans la base de données, la sgdroptables, propriété détermine si ces tables préexistantes doivent être supprimées et recréées.  
   
--   Si vous spécifiez la propriété SchemaGen (par exemple, SchemaGen = true), les tables sont identifiées dans le schéma de mappage sont créées. Mais SchemaGen ne crée pas de toutes les contraintes (telles que les contraintes PRIMARY KEY/FOREIGN KEY) sur ces tables à une exception près : si les nœuds XML qui constituent la clé primaire dans une relation sont définies comme ayant un type XML de l’ID (autrement dit, **type = « XSD : ID »** pour XSD) et sguseid, de la propriété est définie sur True pour SchemaGen, non seulement les clés primaires sont créés à partir de l’ID tapé des nœuds, mais les relations clé primaire/étrangère clées sont créées à partir de relations de schéma de mappage.  
+-   Si vous spécifiez la propriété SchemaGen (par exemple, SchemaGen = true), les tables sont identifiées dans le schéma de mappage sont créées. Mais SchemaGen ne crée pas de toutes les contraintes (telles que les contraintes PRIMARY KEY/FOREIGN KEY) sur ces tables à une exception près : Si les nœuds XML qui constituent la clé primaire dans une relation sont définies comme ayant un type XML de l’ID (autrement dit, **type = « xsd : ID »** pour XSD) et sguseid, de la propriété est définie sur True pour SchemaGen, non seulement les clés primaires sont créés à partir de l’ID tapé des nœuds, mais les relations clé primaire/étrangère clées sont créées à partir de relations de schéma de mappage.  
   
 -   SchemaGen n’utilise pas les facettes du schéma XSD et les extensions pour générer les données relationnelles [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] schéma.  
   

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 helpviewer_keywords:
 - dependencies [SMO]
@@ -15,12 +13,12 @@ ms.assetid: 13a35511-3987-426b-a3b7-3b2e83900dc7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b58c868536b3f34391dc8db15493c2302a9b6c0a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f10289e099a0c3b6400b71d972c6f749ffb76ff8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179629"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52822453"
 ---
 # <a name="scripting"></a>Création de scripts
   L'écriture de scripts dans SMO est contrôlée par l'objet <xref:Microsoft.SqlServer.Management.Smo.Scripter> et ses objets enfants ou par la méthode `Script` sur des objets individuels. Le <xref:Microsoft.SqlServer.Management.Smo.Scripter> objet contrôle le mappage en dehors des relations de dépendance pour les objets sur une instance de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xevents
 ms.topic: conceptual
 helpviewer_keywords:
 - xe
@@ -15,12 +14,12 @@ ms.assetid: c3c92544-351a-4bce-a06a-1f2a47e494e9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 17062493d2c07e7dfbf1625aad584823953f043d
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 6e589ccad75cea729913b10b6232f61693446595
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120256"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52767521"
 ---
 # <a name="sql-server-extended-events-sessions"></a>Sessions Événements étendus SQL Server
   Une session Événements étendus [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] est créée dans le processus [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui héberge le moteur des Événements étendus. Les aspects suivants d'une session Événements étendus fournissent le contexte nécessaire pour comprendre l'infrastructure des Événements étendus et le processus global qui est en cours :  
@@ -55,11 +54,11 @@ ms.locfileid: "49120256"
   
  Faisant référence à l'illustration précédente, notez les points suivants :  
   
--   Le mappage entre les objets de package et de sessions est plusieurs à plusieurs, ce qui signifie qu’un objet peut apparaître dans plusieurs sessions, et une session peut contenir plusieurs objets.  
+-   Le mappage entre des objets de packages et des sessions est de type plusieurs-à-plusieurs, ce qui signifie qu'un objet peut apparaître dans plusieurs sessions et qu'une session peut contenir plusieurs objets.  
   
 -   Un même événement (Événement 1) ou une même cible (Cible 1) peuvent être activés dans plusieurs sessions.  
   
- Les sessions présentent les caractéristiques suivantes :  
+ Les sessions présentent les caractéristiques suivantes :  
   
 -   Les actions et les prédicats sont liés aux événements session par session. Si l'événement Événement 1 dans la session Session A est lié à l'action Action 1 et au prédicat Prédicat Z, cela n'affecte en aucune façon la possibilité que l'événement Événement 1 dans la session Session B soit lié aux actions Action 2 et Action 3 sans prédicat.  
   
@@ -71,7 +70,7 @@ ms.locfileid: "49120256"
   
  **Suivi de causalité**  
   
- Le suivi de causalité permet d'effectuer le suivi d'un travail sur plusieurs tâches. Lorsque le suivi de causalité est activé, chaque événement déclenché possède un ID d'activité unique sur le système. L'ID d'activité est constitué d'une valeur GUID qui demeure constante sur tous les événements liés à une tâche et d'un numéro de séquence qui est incrémenté chaque fois qu'un événement est déclenché. Lorsqu'une tâche entraîne l'exécution d'une autre tâche pour un même travail, l'ID d'activité de la tâche parent est envoyé à la tâche enfant. La tâche enfant fournit en sortie l'ID d'activité de la tâche parent la première fois qu'elle déclenche un événement.  
+ Le suivi de causalité permet d'effectuer le suivi d'un travail sur plusieurs tâches. Lorsque le suivi de causalité est activé, chaque événement déclenché possède un ID d'activité unique sur le système. L'ID d'activité est constitué d'une valeur GUID qui demeure constante sur tous les événements liés à une tâche et d'un numéro de séquence qui est incrémenté chaque fois qu'un événement est déclenché. Lorsqu'une tâche entraîne l'exécution d'une autre tâche pour un même travail, l'ID d'activité de la tâche parent est envoyé à la tâche enfant. La tâche enfant fournit en sortie l’ID d’activité de la tâche parent la première fois qu’elle déclenche un événement.  
   
  L'architecture des Événements étendus fournit un système flexible qui permet d'utiliser conjointement divers objets pour résoudre des problèmes spécifiques.  
   

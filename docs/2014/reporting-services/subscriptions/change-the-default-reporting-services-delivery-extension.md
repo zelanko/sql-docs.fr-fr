@@ -13,19 +13,19 @@ ms.assetid: 5f6fee72-01bf-4f6c-85d2-7863c46c136b
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 054d67de8b05d7f3b913ade660902c764cab9b08
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 40f80f6a86e8a73241ee681719c684bf2ba39e02
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206829"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52394723"
 ---
 # <a name="change-the-default-reporting-services-delivery-extension"></a>Modification de l’extension de remise par défaut de Reporting Services
   Vous pouvez modifier les paramètres de configuration [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] pour modifier l’extension de remise par défaut qui s’affiche dans la liste **Remis par** d’une page de définition d’abonnement. Par exemple, vous pouvez modifier la configuration afin que, lorsque les utilisateurs créent un nouvel abonnement, la remise par partage de fichiers soit activée par défaut, plutôt que la remise par messagerie électronique. Vous pouvez également modifier l'ordre selon lequel les extensions de remise sont répertoriées dans l'interface utilisateur.  
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] | Mode SharePoint [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]   
   
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] inclut la remise de courrier électronique et de partage de fichiers Windows sont des extensions. Il se peut que votre serveur de rapports possède des extensions de remise supplémentaires si vous avez déployé des extensions personnalisées ou tierces pour la prise en charge d'une remise personnalisée. La disponibilité d'une extension de remise varie selon qu'elle est déployée sur un serveur de rapports.  
+ [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] comprend les extensions de remise par messagerie électronique et de remise par partage de fichiers Windows. Il se peut que votre serveur de rapports possède des extensions de remise supplémentaires si vous avez déployé des extensions personnalisées ou tierces pour la prise en charge d'une remise personnalisée. La disponibilité d'une extension de remise varie selon qu'elle est déployée sur un serveur de rapports.  
   
 ## <a name="default-native-mode-report-server-configuration"></a>Configuration de serveur de rapports en mode natif par défaut  
  L’ordre d’une extension de remise dans la liste **Remis par** du Gestionnaire de rapports dépend de l’ordre des entrées d’extension de remise dans le fichier **RSReportServer.config** . Par exemple, l'image suivante présente la messagerie au début de la liste et elle est sélectionnée par défaut.  
@@ -52,7 +52,7 @@ ms.locfileid: "48206829"
   
 1.  Les étapes de cette procédure modifient la configuration afin que la remise par partage de fichiers soit répertoriée comme la première option dans l'interface utilisateur et soit la sélection par défaut.  
   
-     Ouvrez le fichier RSReportServer.config dans un éditeur de texte. Pour plus d’informations sur le fichier de configuration, consultez [fichier de Configuration RSReportServer](../report-server/rsreportserver-config-configuration-file.md). Une fois la configuration modifiée, l'interface utilisateur doit ressembler à l'image suivante :  
+     Ouvrez le fichier RSReportServer.config dans un éditeur de texte. Pour plus d'informations sur le fichier de configuration, consultez [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md). Une fois la configuration modifiée, l'interface utilisateur doit ressembler à l'image suivante :  
   
      ![liste modifiée des extensions de remise](../media/ssrs-modified-delivery.png "liste modifiée des extensions de remise")  
   
@@ -86,26 +86,26 @@ ms.locfileid: "48206829"
   
      Lors de la lecture de la configuration, l'événement suivant est écrit dans le journal des événements Windows.  
   
-     **ID de l’événement :** 109  
+     **ID d’événement :** 109  
   
-     **Source :** service Windows Report Server (nom de l’instance)  
+     **Source :** Service Windows Report Server (nom de l'instance)  
   
      Le fichier RSReportServer.config a été modifié.  
   
 ## <a name="sharepoint-mode-report-servers"></a>Serveurs de rapports en mode SharePoint  
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Mode SharePoint stocke les informations d’extensions dans les bases de données application de service SharePoint et non dans le fichier RsrReportServer.config. En mode SharePoint, la configuration d'extension de remise est modifiée à l'aide de PowerShell.  
+ [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Le mode SharePoint stocke les informations d’extensions dans les bases de données d’application de service SharePoint et non dans le fichier RsrReportServer.config. En mode SharePoint, la configuration d'extension de remise est modifiée à l'aide de PowerShell.  
   
 #### <a name="configure-the-default-delivery-extension"></a>Configuration de l'extension de remise par défaut  
   
 1.  Ouvrez **SharePoint Management Shell**.  
   
-2.  Vous pouvez ignorer cette étape si vous connaissez déjà le nom de votre [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] application de service. Utilisez la commande PowerShell suivante à la liste le [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] applications dans votre batterie de serveurs SharePoint de service.  
+2.  Vous pouvez ignorer cette étape si vous connaissez déjà le nom de votre application de service [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] . Utilisez la commande PowerShell suivante pour dresser la liste des applications de service [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] présentes dans votre batterie de serveurs SharePoint.  
   
     ```  
     get-sprsserviceapplication | format-list *  
     ```  
   
-3.  Exécutez la commande PowerShell suivante pour vérifier que l’extension de remise par défaut actuelle pour le [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] « ssrsapp » d’application de service.  
+3.  Exécutez la commande PowerShell suivante pour vérifier l’extension de remise par défaut actuelle de l’application de service [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] « ssrsapp ».  
   
     ```  
     $app=get-sprsserviceapplication | where {$_.name -like "ssrsapp*"};Get-SPRSExtension -identity $app | where{$_.ServerDirectivesXML -like "<DefaultDelivery*"} | format-list *  

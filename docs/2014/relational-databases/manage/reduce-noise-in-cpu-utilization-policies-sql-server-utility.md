@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: configuration
 ms.topic: conceptual
 f1_keywords:
 - sql12.SWB.UE.ReduceNoise.F1
@@ -12,12 +12,12 @@ ms.assetid: 94bf4d93-c0ff-4869-bde7-80c24866092e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c9ffda8f90aa8200cb3f49d35b22ff38a144bf06
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ce41c287105f97ce4a9cc0ce92facf9919f7ad33
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193359"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52818240"
 ---
 # <a name="reduce-noise-in-cpu-utilization-policies-sql-server-utility"></a>Réduire le bruit dans les stratégies d'utilisation du processeur (Utilitaire SQL Server)
   Utilisez les stratégies suivantes pour limiter le bruit lors de la création de rapports, ainsi que les violations indésirables, dans les stratégies d'utilisation des ressources de l'utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -48,7 +48,7 @@ ms.locfileid: "48193359"
   
 -   L'intervalle de collecte des données est de 15 minutes. Cette valeur n'est pas configurable.  
   
--   Le seuil inférieur par défaut de la stratégie d'utilisation du processeur est de 0 %. Les options sont comprises entre 0 % et 100 %.  
+-   Le seuil inférieur par défaut de la stratégie d'utilisation du processeur est de 0 %. Les options sont comprises entre 0 % et 100 %.  
   
 -   La période d'évaluation par défaut pour la sous-exploitation du processeur est d'1 semaine. Les options sont comprises entre 1 jour et 1 mois.  
   

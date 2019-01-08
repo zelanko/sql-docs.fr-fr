@@ -19,15 +19,15 @@ ms.assetid: 2085d9fc-828c-453e-82ec-b54ed8347ae5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1fe8a78047be763aecb898a48a882b8f08d3bfb6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: eb61a77aca509393143d4abae98af0a9efb5e888
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47734028"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52407146"
 ---
 # <a name="sysdmoslatchstats-transact-sql"></a>sys.dm_os_latch_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Retourne des informations sur toutes les attentes de verrou interne, organisées par classe.  
   
@@ -38,11 +38,11 @@ ms.locfileid: "47734028"
 |-----------------|---------------|-----------------|  
 |latch_class|**nvarchar(120)**|Nom de la classe de verrou interne.|  
 |waiting_requests_count|**bigint**|Nombre d'attentes pour les verrous internes de cette classe. Ce compteur est incrémenté au début d'une attente de verrou interne.|  
-|wait_time_ms|**bigint**|Temps d'attente total sur les verrous internes de cette classe, en millisecondes.<br /><br /> **Remarque :** cette colonne est mise à jour toutes les cinq minutes pendant une attente de verrou et à la fin de l’attente.|  
+|wait_time_ms|**bigint**|Temps d'attente total sur les verrous internes de cette classe, en millisecondes.<br /><br /> **Remarque :** Cette colonne est mise à jour toutes les cinq minutes pendant une attente de verrou interne et à la fin de l'attente.|  
 |max_wait_time_ms|**bigint**|Durée maximum d'attente d'un objet de mémoire sur ce verrou interne. Si cette valeur est anormalement élevée, cela peut indiquer un blocage interne.|  
 |pdw_node_id|**Int**|**S’applique aux**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L’identificateur pour le nœud se trouvant sur cette distribution.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
 
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], nécessite `VIEW SERVER STATE` autorisation.   
 Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], nécessite le `VIEW DATABASE STATE` autorisation dans la base de données.   
@@ -166,14 +166,14 @@ GO
 |SERVICE_BROKER_MAP_MANAGER|À usage interne uniquement|  
 |SERVICE_BROKER_HOST_NAME|À usage interne uniquement|  
 |SERVICE_BROKER_READ_CACHE|À usage interne uniquement|  
-|SERVICE_BROKER_WAITFOR_MANAGER| Utilisé pour synchroniser un mappage au niveau d’instance des files d’attente waiter. Il existe une file d’attente par tuple d’ID, la Version de base de données et ID de file d’attente de base de données. Sur les verrous de cette classe peut y avoir contention lorsque plusieurs connexions sont : dans un WAITFOR(RECEIVE) attente état ; WAITFOR(RECEIVE) appelant ; dépassement du délai d’attente WAITFOR ; réception d’un message ; validation ou la restauration de la transaction qui contient le WAITFOR(RECEIVE) ; Vous pouvez réduire la contention en réduisant le nombre de threads dans un état d’attente WAITFOR(RECEIVE). |  
+|SERVICE_BROKER_WAITFOR_MANAGER| Utilisé pour synchroniser un mappage au niveau d’instance des files d’attente waiter. Il existe une file d’attente par tuple d’ID, la Version de base de données et ID de file d’attente de base de données. Contention sur les verrous de cette classe peut se produire lorsque le nombre de connexions est : Dans un WAITFOR(RECEIVE) attente état ; WAITFOR(RECEIVE) appelant ; dépassement du délai d’attente WAITFOR ; réception d’un message ; validation ou la restauration de la transaction qui contient le WAITFOR(RECEIVE) ; Vous pouvez réduire la contention en réduisant le nombre de threads dans un état d’attente WAITFOR(RECEIVE). |  
 |SERVICE_BROKER_WAITFOR_TRANSACTION_DATA|À usage interne uniquement|  
 |SERVICE_BROKER_TRANSMISSION_TRANSACTION_DATA|À usage interne uniquement|  
 |SERVICE_BROKER_TRANSPORT|À usage interne uniquement|  
 |SERVICE_BROKER_MIRROR_ROUTE|À usage interne uniquement|  
 |TRACE_ID|À usage interne uniquement|  
 |TRACE_AUDIT_ID|À usage interne uniquement|  
-|TRACE|À usage interne uniquement|  
+|trace|À usage interne uniquement|  
 |TRACE_CONTROLLER|À usage interne uniquement|  
 |TRACE_EVENT_QUEUE|À usage interne uniquement|  
 |TRANSACTION_DISTRIBUTED_MARK|À usage interne uniquement|  

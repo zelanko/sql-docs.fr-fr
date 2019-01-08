@@ -11,12 +11,12 @@ ms.assetid: c14034ef-6e0b-4df5-8072-bfb8d90b3172
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 127e0dbeef729c21c7155d7d3d7edf6f21a444c1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 85d4c4d79dbddd59c3208c28b3fea50c0aa857b7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182419"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514062"
 ---
 # <a name="perform-an-on-demand-evaluation-by-using-registered-servers"></a>Effectuer une évaluation à la demande à l'aide des serveurs inscrits
   Vous pouvez effectuer une évaluation à la demande des stratégies des meilleures pratiques sur une ou plusieurs instances de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à l'aide des serveurs inscrits. Vous pouvez utiliser des groupes de serveurs locaux ou un serveur d'administration centralisée.  
@@ -25,7 +25,7 @@ ms.locfileid: "48182419"
 >  Vous pouvez effectuer une évaluation à la demande des stratégies des meilleures pratiques sur des membres de groupe de serveurs qui exécutent [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] ou une version ultérieure de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Toutefois, vous pouvez recevoir une erreur d'exception si quelques propriétés désignées par une stratégie ne sont pas prises en charge dans [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] ou [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)].  
   
 ## <a name="prerequisites"></a>Prérequis  
- Pour effectuer cette tâche, vous devez avoir configuré une ou plusieurs inscriptions de serveurs dans les serveurs inscrits. Pour plus d'informations, consultez les rubriques suivantes :  
+ Pour effectuer cette tâche, vous devez avoir configuré une ou plusieurs inscriptions de serveurs dans les serveurs inscrits. Pour plus d’informations, consultez les rubriques suivantes :  
   
 -   [Créer ou modifier un groupe de serveurs &#40;SQL Server Management Studio&#41;](../ssms/register-servers/create-or-edit-a-server-group-sql-server-management-studio.md)  
   
@@ -76,7 +76,7 @@ ms.locfileid: "48182419"
 8.  Pour afficher les résultats détaillés pour une stratégie, cliquez sur la stratégie dans le **résultats** table. Le **détails sur les cibles** table affiche les détails pour chaque instance.  
   
 ## <a name="next-lesson"></a>Leçon suivante  
- [Leçon 2 : Évaluer les stratégies de bonnes pratiques de façon planifiée](../../2014/tutorials/lesson-2-evaluate-best-practices-policies-on-a-scheduled-basis.md)  
+ [Leçon 2 : Évaluer les stratégies des meilleures pratiques de manière planifiée](../../2014/tutorials/lesson-2-evaluate-best-practices-policies-on-a-scheduled-basis.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Surveiller et appliquer les bonnes pratiques à l’aide de gestion basée sur des stratégies](../relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md)   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - publications [SQL Server replication], design and performance
@@ -20,12 +19,12 @@ ms.assetid: f929226f-b83d-4900-a07c-a62f64527c7f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 72a781fb802609ed778c46e50459a4253dbb3507
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 82452c5e0d4ddff21870ff341673da6d11b18f40
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48175655"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52772019"
 ---
 # <a name="enhance-merge-replication-performance"></a>Améliorer les performances de réplication de fusion
   Après avoir considéré les conseils en matière de performances qui sont décrits dans la rubrique [Amélioration des performances générales de la réplication](enhance-general-replication-performance.md), considérez ces autres aspects spécifiques à la réplication de fusion.  
@@ -42,7 +41,7 @@ ms.locfileid: "48175655"
   
 -   Envisagez de surnormaliser les tables qui incluent des types de données LOB.  
   
-     Lors d'une synchronisation, l'Agent de fusion peut avoir besoin de lire et de transférer la totalité de la ligne de données à partir d'un serveur de publication ou d'un Abonné. Si la ligne contient des colonnes utilisant des données de type LOB, ce processus peut nécessiter un surcroît d'allocation de mémoire et nuire aux performances, même si ces colonnes peuvent ne pas avoir été mises à jour. Pour limiter la probabilité d'une perte de performance, vous pouvez envisager de placer les colonnes LOB dans une table indépendante en les reliant aux autres données de la ligne avec une relation un-à-un. Les types de données `text`, `ntext`, et `image` sont déconseillés. Si vous incluez des LOB, nous vous recommandons d’utiliser les types de données `varchar(max)`, `nvarchar(max)`, `varbinary(max)`, respectivement.  
+     Lors d'une synchronisation, l'Agent de fusion peut avoir besoin de lire et de transférer la totalité de la ligne de données à partir d'un serveur de publication ou d'un Abonné. Si la ligne contient des colonnes utilisant des données de type LOB, ce processus peut nécessiter un surcroît d'allocation de mémoire et nuire aux performances, même si ces colonnes peuvent ne pas avoir été mises à jour. Pour limiter la probabilité d'une perte de performance, vous pouvez envisager de placer les colonnes LOB dans une table indépendante en les reliant aux autres données de la ligne avec une relation un-à-un. Les types de données `text`, `ntext` et `image` sont déconseillés. Si vous incluez des données de type LOB, il est recommandé d'utiliser respectivement les types de données `varchar(max)`, `nvarchar(max)`, `varbinary(max)`.  
   
 ## <a name="publication-design"></a>Conception de la publication  
   
@@ -64,11 +63,11 @@ ms.locfileid: "48175655"
   
 -   Utilisez des partitions précalculées avec des filtres paramétrés (cette fonctionnalité est utilisée par défaut). Pour plus d’informations, consultez [Optimiser les performances des filtres paramétrés avec des partitions précalculées](../merge/parameterized-filters-optimize-for-precomputed-partitions.md).  
   
-     Les partitions précalculées imposent plusieurs limitations au fonctionnement du filtrage. Si votre application ne peut pas s'adapter à ces limitations, définissez l'option **keep_partition_changes** à **True**, ce qui permet d'obtenir un gain de performances. Pour plus d'informations, consultez [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md).  
+     Les partitions précalculées imposent plusieurs limitations au fonctionnement du filtrage. Si votre application ne peut pas s'adapter à ces limitations, définissez l'option **keep_partition_changes** à **True**, ce qui permet d'obtenir un gain de performances. Pour plus d’informations, voir [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md).  
   
 -   Utilisez des partitions qui ne se chevauchent pas si les données sont filtrées mais pas partagées entre les utilisateurs.  
   
-     La réplication peut optimiser les performances pour les données qui ne sont pas partagées entre des partitions ou des abonnements. Pour plus d'informations, consultez [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md).  
+     La réplication peut optimiser les performances pour les données qui ne sont pas partagées entre des partitions ou des abonnements. Pour plus d'informations, voir [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md).  
   
 -   Ne créez pas de hiérarchies de filtres de jointure complexes.  
   
@@ -101,9 +100,9 @@ ms.locfileid: "48175655"
   
      La mise à niveau de l'Abonné vers [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ou version ultérieure met à niveau l'Agent de fusion utilisé par les abonnements sur cet Abonné. Pour tirer parti des nouvelles fonctionnalités et optimisations des performances, l'Agent de fusion [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ou version ultérieure est obligatoire.  
   
--   Si un abonnement est synchronisé par le biais d’une connexion rapide et si des modifications sont envoyées à partir du serveur de publication et à partir de l’Abonné, utilisez le paramètre **–ParallelUploadDownload** pour l’Agent de fusion.  
+-   Si un abonnement est synchronisé par le biais d’une connexion rapide et si des modifications sont envoyées à partir du serveur de publication et à partir de l’Abonné, utilisez le paramètre **-ParallelUploadDownload** pour l’Agent de fusion.  
   
-     [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] a introduit un nouveau paramètre pour l’Agent de fusion : **–ParallelUploadDownload**. La définition de ce paramètre permet à l'Agent de fusion de traiter en parallèle les modifications chargées vers le serveur de publication et celles qui sont téléchargées vers l'Abonné. Ceci est utile dans les environnements où les volumes sont élevés, avec une bande passante réseau élevée. Les paramètres des agents peuvent être spécifiés dans des profils d'agent et sur la ligne de commande. Pour plus d'informations, consultez :  
+     [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] a introduit un nouveau paramètre pour l’Agent de fusion : **-ParallelUploadDownload**. La définition de ce paramètre permet à l'Agent de fusion de traiter en parallèle les modifications chargées vers le serveur de publication et celles qui sont téléchargées vers l'Abonné. Ceci est utile dans les environnements où les volumes sont élevés, avec une bande passante réseau élevée. Les paramètres des agents peuvent être spécifiés dans des profils d'agent et sur la ligne de commande. Pour plus d'informations, consultez :  
   
     -   [Utiliser des profils d’agent de réplication](../agents/replication-agent-profiles.md)  
   
@@ -129,7 +128,7 @@ ms.locfileid: "48175655"
   
     -   Une valeur par défaut NEWSEQUENTIALID() ou NEWID(). NEWSEQUENTIALID() est recommandée car elle peut améliorer les performances lorsque des modifications sont effectuées et suivies.  
   
-    -   La propriété ROWGUIDCOL définie.  
+    -   La propriété ROWGUIDCOL définie.  
   
     -   un index unique sur la colonne.  
   
@@ -141,7 +140,7 @@ ms.locfileid: "48175655"
   
 -   Réindexez occasionnellement les tables système d'une réplication de fusion  
   
-     Dans le cadre de la gestion d'une réplication de fusion, contrôlez de temps en temps le développement des tables système associées à cette réplication : **MSmerge_contents**, **MSmerge_genhistory**, **MSmerge_tombstone**, **MSmerge_current_partition_mappings**et **MSmerge_past_partition_mappings**. Réindexez périodiquement ces tables. Pour plus d’informations, consultez [Réorganiser et reconstruire des index](../../indexes/reorganize-and-rebuild-indexes.md).  
+     Dans le cadre de la gestion d'une réplication de fusion, contrôlez de temps en temps le développement des tables système associées à cette réplication : **MSmerge_contents**, **MSmerge_genhistory**, et **MSmerge_tombstone**, **MSmerge_current_partition_mappings**, et **MSmerge_ past_partition_mappings**. Réindexez périodiquement ces tables. Pour plus d’informations, consultez [Réorganiser et reconstruire des index](../../indexes/reorganize-and-rebuild-indexes.md).  
   
 -   Analysez les performances de la synchronisation à l'aide de l'onglet **Historique de synchronisation** dans le moniteur de réplication.  
   

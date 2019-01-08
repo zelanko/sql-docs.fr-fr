@@ -12,12 +12,12 @@ ms.assetid: c0b7d7c8-b878-4b7f-8120-d0c6917b583f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 310ab71162dedf64e12ae28c8ffedf3465f1fc14
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 506f074a8693e54bdc51882ab08b19e9ea3e1994
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130899"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52517870"
 ---
 # <a name="connect-to-windows-azure-storage-restore"></a>Se connecter au Stockage Microsoft Azure (Restauration)
   La boîte de dialogue vous permet de spécifier les informations de connexion au compte de stockage Windows Azure pour récupérer les fichiers qui y sont stockés. Après avoir spécifié les informations requises, cliquez sur **Connexion** pour établir la connexion au stockage Windows Azure.  

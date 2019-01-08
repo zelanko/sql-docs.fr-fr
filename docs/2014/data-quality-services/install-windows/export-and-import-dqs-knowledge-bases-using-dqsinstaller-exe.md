@@ -10,12 +10,12 @@ ms.assetid: 8234c63b-a018-4e55-8184-9a6bdf03274d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2e324435b6b67574a111f9cd95671f5b2aa6824d
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 79f3ac8efa0e629ddfd82d5945973c86a661fe75
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032426"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52576788"
 ---
 # <a name="export-and-import-dqs-knowledge-bases-using-dqsinstallerexe"></a>Exporter et importer des bases de connaissances DQS à l'aide de DQSInstaller.exe
   Pour une installation existante de DQS, vous pouvez exporter toutes les bases de connaissances de votre [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] en même temps dans un fichier de sauvegarde DQS (.dqsb), puis utiliser ultérieurement ce fichier .dqsb pour importer toutes les bases de connaissances à la fois vers un autre [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] en exécutant le fichier DQSInstaller.exe à partir de l'invite de commandes. Pour plus d'informations sur l'exécution du fichier DQSInstaller.exe à partir de l'invite de commandes, consultez [Exécuter DQSInstaller.exe à partir d'une invite de commandes](run-dqsinstaller-exe-to-complete-data-quality-server-installation.md#CommandPrompt) dans [Exécuter DQSInstaller.exe pour terminer l'installation du serveur DQS](run-dqsinstaller-exe-to-complete-data-quality-server-installation.md).  
@@ -28,7 +28,7 @@ ms.locfileid: "51032426"
 -   Pour exporter toutes les bases de connaissances d'un [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] dans un fichier de sauvegarde DQS (.dqsb), exécutez DQSInstaller.exe avec le paramètre `exportkbs` à partir de l'invite de commandes, avec le chemin d'accès complet et le nom du fichier dans lequel vous voulez exporter les bases de connaissances. Par exemple, pour exporter toutes les bases de connaissances dans le fichier DQSBackup.dqsb du lecteur C :  
   
     ```  
-    dqsinstaller.exe –exportkbs c:\DQSBackup.dqsb  
+    dqsinstaller.exe -exportkbs c:\DQSBackup.dqsb  
     ```  
   
     > [!NOTE]  
@@ -37,7 +37,7 @@ ms.locfileid: "51032426"
 -   Pour exporter toutes les bases de connaissances dans un fichier de sauvegarde DQS lors de la désinstallation de [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)], exécutez DQSInstaller.exe avec le paramètre `uninstall` à partir de l'invite de commandes, avec le chemin d'accès complet et le nom du fichier dans lequel vous voulez exporter les bases de connaissances. Ainsi, pour exporter toutes les bases de connaissances dans le fichier DQSBackup.dqsb du lecteur C, puis désinstaller [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]:  
   
     ```  
-    dqsinstaller.exe –uninstall c:\DQSBackup.dqsb  
+    dqsinstaller.exe -uninstall c:\DQSBackup.dqsb  
     ```  
   
     > [!NOTE]  
@@ -49,10 +49,10 @@ ms.locfileid: "51032426"
  Exécutez le fichier DQSInstaller.exe avec le paramètre `importkbs` à partir de l'invite de commandes, avec le chemin d'accès complet et le nom du fichier à partir duquel vous souhaitez importer les bases de connaissances. Par exemple, pour importer toutes les bases de connaissances à partir du fichier DQSBackup.dqsb du lecteur C :  
   
 ```  
-dqsinstaller.exe –importkbs c:\DQSBackup.dqsb  
+dqsinstaller.exe -importkbs c:\DQSBackup.dqsb  
 ```  
   
- Si votre [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] contient des bases de connaissances portant le même nom que celles que vous importez, les noms des bases de connaissances importées sont complétés par un trait de soulignement (_) suivi d'une valeur entière en commençant par 1. Par exemple, si le domaine « CompanyName » apparaît deux fois, le nom de domaine importé est « CompanyName_1 ».  
+ Si votre [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] contient des bases de connaissances portant le même nom que celles que vous importez, les noms des bases de connaissances importées sont complétés par un trait de soulignement (_) suivi d'une valeur entière en commençant par 1. Par exemple, si le domaine « CompanyName » apparaît deux fois, le nom de domaine importé est « CompanyName_1 ».  
   
 ## <a name="see-also"></a>Voir aussi  
  [Exécuter DQSInstaller.exe pour terminer l'installation du serveur DQS](run-dqsinstaller-exe-to-complete-data-quality-server-installation.md)   

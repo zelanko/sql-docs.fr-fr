@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - data types [SQL Server replication], non-SQL Server Subscribers
@@ -17,12 +16,12 @@ ms.assetid: 591c0313-82ce-4689-9fc1-73752ff122cf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8a11cdbd373a173fd2709b07ccb860484c0f59eb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e38cc3a111eb68688fcc9c30ef01bb607349afcb
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145149"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52786364"
 ---
 # <a name="oracle-subscribers"></a>Abonnés Oracle
   Depuis [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prend en charge les abonnements par émission de données à Oracle par le biais du fournisseur OLE DB Oracle fourni par Oracle.  
@@ -86,7 +85,7 @@ ms.locfileid: "48145149"
   
     -   vous assurer qu'aucune chaîne vide n'est insérée dans la table publiée en tant que valeurs de colonne ;  
   
-    -   utiliser le paramètre **–SkipErrors** pour l’Agent de distribution s’il vous est possible de recevoir les notifications d’échec dans le journal d’historique de l’Agent de distribution sans interrompre le traitement ; spécifier le code d’erreur Oracle 1400 (**-SkipErrors1400**) ;  
+    -   utiliser le paramètre **–SkipErrors** pour l’Agent de distribution s’il vous est possible de recevoir les notifications d’échec dans le journal d’historique de l’Agent de distribution sans interrompre le traitement ; spécifier le code d’erreur Oracle 1400 (**-SkipErrors1400**) ;  
   
     -   modifier le script de création de table généré, en supprimant l'attribut NOT NULL de toutes les colonnes de caractères ayant des chaînes vides associées, et fournir le script modifié en tant que script de création personnalisé pour l'article en utilisant le paramètre @creation_script de [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql).  
   
@@ -107,7 +106,7 @@ ms.locfileid: "48145149"
 |`date`|DATE|  
 |`datetime`|DATE|  
 |`datetime2(0-7)`|TIMESTAMP(7) pour Oracle 9 et Oracle 10 ; VARCHAR(27) pour Oracle 8|  
-|`datetimeoffset(0-7)`|TIMESTAMP(7) WITH TIME ZONE pour Oracle 9 et Oracle 10 ; VARCHAR(34) pour Oracle 8|  
+|`datetimeoffset(0-7)`|TIMESTAMP(7) WITH TIME ZONE pour Oracle 9 et Oracle 10 ; VARCHAR(34) pour Oracle 8|  
 |`decimal(1-38, 0-38)`|NUMBER(1-38, 0-38)|  
 |`float(53)`|FLOAT|  
 |`float`|FLOAT|  
@@ -128,7 +127,7 @@ ms.locfileid: "48145149"
 |`smalldatetime`|DATE|  
 |`smallint`|NUMBER(5,0)|  
 |`smallmoney`|NUMBER(10,4)|  
-|`sql_variant`|Néant|  
+|`sql_variant`|N/A|  
 |`sysname`|VARCHAR2(128)|  
 |`text`|CLOB|  
 |`time(0-7)`|VARCHAR(16)|  

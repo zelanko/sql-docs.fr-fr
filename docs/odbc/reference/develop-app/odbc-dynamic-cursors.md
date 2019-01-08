@@ -14,12 +14,12 @@ ms.assetid: de709fd3-9eb2-44e1-a2f0-786e2b9602a6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 82df10e6b8effeb040b362dcf466eb173dfce4f9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 64215cff750e39dc78ad1a695bbe553d900f4120
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629677"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541872"
 ---
 # <a name="odbc-dynamic-cursors"></a>Curseurs dynamiques dans ODBC
 Un curseur dynamique est exactement cela : dynamique. Il peut détecter les modifications apportées à l’appartenance, order et les valeurs du jeu de résultats après l’ouverture du curseur. Par exemple, un curseur dynamique extrait deux lignes et une autre application, puis met à jour un de ces lignes et supprime l’autre. Si le curseur dynamique puis tente de récupérer à nouveau ces lignes, elle ne trouvera pas la ligne supprimée mais retournera les nouvelles valeurs pour la ligne mise à jour.  
@@ -41,6 +41,6 @@ SELECT * FROM Customers WHERE (Name > ?) AND (CustID > ?)
    ORDER BY Name, CustID  
 ```  
   
- Cette instruction crée un deuxième jeu de résultats, le premier ensemble de lignes qui est l’ensemble de lignes suivant dans le jeu de résultats d’origine : dans ce cas, l’ensemble de lignes dans la table Customers. Le curseur retourne cet ensemble de lignes à l’application.  
+ Cette instruction crée un deuxième jeu de résultats, le premier ensemble de lignes que qui est l’ensemble de lignes suivant dans le jeu de résultats d’origine - dans ce cas, l’ensemble de lignes dans la table Customers. Le curseur retourne cet ensemble de lignes à l’application.  
   
  Il est intéressant de noter qu’un curseur dynamique implémenté de cette manière crée en fait plusieurs jeux de résultats, ce qui lui permet de détecter les modifications apportées au jeu de résultats d’origine. Jamais l’application détecte l’existence de ces jeux de résultats auxiliaires ; il apparaît simplement comme si le curseur est en mesure de détecter les modifications apportées au jeu de résultats d’origine.

@@ -24,12 +24,12 @@ ms.assetid: d7cd0ec9-334a-4564-bda9-83487b6865cb
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3ac773ea8c68be65a0b60aaff3d542df0b6dc6e7
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 4c95d86b64c28bbf78b111f21de7afd58b44616f
+ms.sourcegitcommit: 1f10e9df1c523571a8ccaf3e3cb36a26ea59a232
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662879"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "51858664"
 ---
 # <a name="flwor-statement-and-iteration-xquery"></a>Instruction et itération FLWOR (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -50,11 +50,11 @@ ms.locfileid: "51662879"
   
 -   Une clause `order by` facultative.  
   
--   Une expression `return`. L'expression de la clause `return` construit le résultat de l'instruction FLWOR.  
+-   Expression `return`. L'expression de la clause `return` construit le résultat de l'instruction FLWOR.  
   
  Par exemple, la requête suivante effectue une itération au sein des éléments <`Step`> au niveau du premier site de fabrication, et renvoie la valeur de chaîne des nœuds <`Step`> :  
   
-```  
+```sql
 declare @x xml  
 set @x='<ManuInstructions ProductModelID="1" ProductModelName="SomeBike" >  
 <Location LocationID="L1" >  
@@ -74,7 +74,7 @@ SELECT @x.query('
 ')  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 Manu step 1 at Loc 1 Manu step 2 at Loc 1 Manu step 3 at Loc 1  
@@ -82,7 +82,7 @@ Manu step 1 at Loc 1 Manu step 2 at Loc 1 Manu step 3 at Loc 1
   
  La requête suivante est très similaire à la précédente, à une exception près : elle porte sur la colonne Instructions, une colonne typée xml, de la table ProductModel. La requête effectue une itération sur toutes les étapes de fabrication, éléments <`step`>, au niveau du premier poste de travail, pour un produit spécifique.  
   
-```  
+```sql
 SELECT Instructions.query('  
    declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
 for $Step in //AWMI:root/AWMI:Location[1]/AWMI:step  
@@ -115,7 +115,7 @@ the aluminum sheet. ....
   
  Voici des exemples d'autres séquences en entrée autorisées :  
   
-```  
+```sql
 declare @x xml  
 set @x=''  
 SELECT @x.query('  
@@ -146,7 +146,7 @@ SELECT @x.query('
   
  Dans la base de données AdventureWorks, les instructions de fabrication stockées dans le **Instructions** colonne de la **Production.ProductModel** table ont la forme suivante :  
   
-```  
+```xml
 <Location LocationID="10" LaborHours="1.2"   
             SetupHours=".2" MachineHours=".1">  
   <step>describes 1st manu step</step>  
@@ -158,11 +158,11 @@ SELECT @x.query('
   
  La requête suivante construit un nouveau code XML où figurent des éléments <`Location`> et où les attributs des postes de travail sont renvoyés comme des éléments enfants :  
   
-```  
+```xml
 <Location>  
    <LocationID>10</LocationID>  
    <LaborHours>1.2</LaborHours>  
-   <SetupHours>.2</SteupHours>  
+   <SetupHours>.2</SetupHours>  
    <MachineHours>.1</MachineHours>  
 </Location>  
 ...  
@@ -170,7 +170,7 @@ SELECT @x.query('
   
  Voici la requête :  
   
-```  
+```sql
 SELECT Instructions.query('  
      declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
         for $WC in /AWMI:root/AWMI:Location  
@@ -196,7 +196,7 @@ where ProductModelID=7
   
  Voici un extrait du résultat :  
   
-```  
+```xml
 <Location>  
   <LocationID>10</LocationID>  
   <LaborHours>2.5</LaborHours>  
@@ -214,7 +214,7 @@ where ProductModelID=7
   
  Dans la base de données [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)], les instructions de fabrication contiennent des informations sur les outils requis et les emplacements où les outils sont utilisés. La requête suivante utilise la clause `let` pour répertorier les outils requis pour construire un modèle de production, ainsi que les emplacements où chaque outil est requis.  
   
-```  
+```sql
 SELECT Instructions.query('  
      declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
         for $T in //AWMI:tool  
@@ -227,11 +227,11 @@ where ProductModelID=7
 ```  
   
 ## <a name="using-the-where-clause"></a>Utilisation de la clause where  
- Vous pouvez utiliser la clause `where` pour filtrer les résultats d'une itération. L'exemple suivant illustre ce concept.  
+ Vous pouvez utiliser le `where` pour filtrer les résultats d’une itération. L'exemple suivant illustre ce concept.  
   
  Dans le cadre de la fabrication d'une bicyclette, le processus de fabrication passe par une série de postes de travail. Chaque poste de travail définit une séquence d'étapes de fabrication. La requête suivante récupère uniquement les postes de travail qui fabriquent un modèle de bicyclette et comportent moins de trois étapes de fabrication, soit moins de trois éléments <`step`>.  
   
-```  
+```sql
 SELECT Instructions.query('  
      declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
 for $WC in /AWMI:root/AWMI:Location  
@@ -251,7 +251,7 @@ where ProductModelID=7
   
 -   L'expression `return` construit le code XML qu'il vous faut d'après les résultats de l'itération.  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <Location LocationID="30"/>   
@@ -270,7 +270,7 @@ where ProductModelID=7
 ## <a name="multiple-variable-binding-in-flwor"></a>Liaison de plusieurs variables dans FLWOR  
  Une seule expression FLWOR peut servir à lier plusieurs variables aux séquences en entrée. Dans l'exemple suivant, la requête est spécifiée sur une variable de type xml non typé. L'expression FLOWR renvoie le premier enfant de l'élément <`Step`> de chaque élément <`Location`>.  
   
-```  
+```sql
 declare @x xml  
 set @x='<ManuInstructions ProductModelID="1" ProductModelName="SomeBike" >  
 <Location LocationID="L1" >  
@@ -302,7 +302,7 @@ SELECT @x.query('
   
 -   `$Loc` est spécifié dans l'expression associée à la variable `$FirstStep`.  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 Manu step 1 at Loc 1   
@@ -311,7 +311,7 @@ Manu step 1 at Loc 2
   
  La requête suivante est similaire, sauf qu’elle est spécifiée sur la colonne Instructions, typée **xml** colonne, de la **ProductModel** table. [Construction XML (XQuery)](../xquery/xml-construction-xquery.md) est utilisé pour générer le code XML que vous souhaitez.  
   
-```  
+```sql
 SELECT Instructions.query('  
      declare default element namespace "https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
 for $WC in /root/Location,  
@@ -335,7 +335,7 @@ WHERE ProductModelID=7
   
  Voici le résultat partiel :  
   
-```  
+```xml
 <Step xmlns=  
     "https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"     
   LocationID="10">  
@@ -360,7 +360,7 @@ WHERE ProductModelID=7
   
  La requête suivante récupère tous les numéros de téléphone existants pour un client spécifique à partir de la colonne AdditionalContactInfo. Les résultats sont triés par numéro de téléphone.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT AdditionalContactInfo.query('  
@@ -380,9 +380,9 @@ WHERE BusinessEntityID=291;
 order by data($a/act:number[1]) descending  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
-```  
+```xml
 <act:telephoneNumber xmlns:act="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">  
   <act:number>333-333-3334</act:number>  
 </act:telephoneNumber>  
@@ -393,7 +393,7 @@ order by data($a/act:number[1]) descending
   
  Au lieu de déclarer les espaces de noms dans le prologue de la requête, vous pouvez les déclarer à l'aide de WITH XMLNAMESPACES.  
   
-```  
+```sql
 WITH XMLNAMESPACES (  
    'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes' AS act,  
    'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactInfo'  AS aci)  
@@ -409,7 +409,7 @@ WHERE BusinessEntityID=291;
   
  Vous pouvez aussi réaliser le tri en fonction de la valeur d'attribut. Par exemple, la requête suivante récupère les éléments <`Location`> nouvellement créés dont les attributs LocationID et LaborHours sont triés dans l'ordre décroissant par l'attribut LaborHours. Par conséquent, les postes de travail enregistrant le plus d'heures de main-d'œuvre sont renvoyés en premier.  
   
-```  
+```sql
 SELECT Instructions.query('  
      declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
 for $WC in /AWMI:root/AWMI:Location   
@@ -424,7 +424,7 @@ FROM Production.ProductModel
 WHERE ProductModelID=7;  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <Location LocationID="60" LaborHours="4"/>  
@@ -437,7 +437,7 @@ WHERE ProductModelID=7;
   
  Dans la requête suivante, les résultats sont triés par le nom d'élément. La requête récupère les spécifications d'un produit particulier dans le catalogue de produits. Les spécifications sont les enfants de l'élément <`Specifications`>.  
   
-```  
+```sql
 SELECT CatalogDescription.query('  
      declare namespace  
  pd="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
@@ -455,9 +455,9 @@ where ProductModelID=19;
   
 -   L'expression `order by (local-name($a))` trie la séquence par la partie locale du nom d'élément.  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
-```  
+```xml
 <Color>Available in most colors</Color>  
 <Material>Almuminum Alloy</Material>  
 <ProductLine>Mountain bike</ProductLine>  
@@ -467,7 +467,7 @@ where ProductModelID=19;
   
  Les nœuds dans lesquels l'expression de tri renvoie une valeur vide sont placés au début de la séquence, comme le montre l'exemple suivant :  
   
-```  
+```sql
 declare @x xml  
 set @x='<root>  
   <Person Name="A" />  
@@ -482,9 +482,9 @@ select @x.query('
 ')  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
-```  
+```xml
 <Person />  
 <Person Name="A" />  
 <Person Name="B" />  
@@ -492,7 +492,7 @@ select @x.query('
   
  Vous pouvez spécifier plusieurs critères de tri, comme le montre l'exemple suivant. Dans cet exemple, la requête trie les éléments <`Employee`> d'abord par Title, puis par les valeurs d'attribut Administrator.  
   
-```  
+```sql
 declare @x xml  
 set @x='<root>  
   <Employee ID="10" Title="Teacher"        Gender="M" />  
@@ -511,9 +511,9 @@ order by $e/@Title ascending, $e/@Gender descending
 ')  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
-```  
+```xml
 <Employee ID="8" Title="Administrator" Gender="M" />  
 <Employee ID="4" Title="Administrator" Gender="F" />  
 <Employee ID="125" Title="Administrator" Gender="F" />  

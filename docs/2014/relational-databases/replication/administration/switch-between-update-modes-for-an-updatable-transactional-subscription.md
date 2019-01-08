@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - transactional replication, updatable subscriptions
@@ -15,12 +14,12 @@ ms.assetid: ab5ebab1-7ee4-41f4-999b-b4f0c420c921
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: dbe5d710c29f8f63a1ee09eab322b23f74dbe2ec
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5ee768eb4e50e4501af204c885916cd14409df2c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057899"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52785191"
 ---
 # <a name="switch-between-update-modes-for-an-updatable-transactional-subscription"></a>Basculer entre les modes de mise à jour d'un abonnement transactionnel pouvant être mis à jour
   Cette rubrique explique comment basculer entre les modes de mise à jour d'un abonnement transactionnel pouvant être mis à jour dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Spécifiez le mode des abonnements pouvant être mis à jour à l'aide de l'Assistant Nouvel abonnement. Pour plus d’informations sur la définition de ce mode lors de l’utilisation de cet Assistant, consultez [Afficher et modifier les propriétés d’un abonnement par extraction](../view-and-modify-pull-subscription-properties.md).  
@@ -50,17 +49,17 @@ ms.locfileid: "48057899"
   
 3.  Cliquez avec le bouton droit sur l'abonnement dont vous voulez définir le mode de mise à jour puis cliquez sur **Définir la méthode de mise à jour**.  
   
-4.  Dans la boîte de dialogue **Définir la méthode de mise à jour - \<Abonné> : \<Base_de_données_d’abonnement>**, sélectionnez **Mise à jour immédiate** ou **Mise à jour en attente**.  
+4.  Dans le **définir la méthode de mise à jour - \<abonné > : \<Base_de_données_abonnement >** boîte de dialogue, sélectionnez **mise à jour immédiate** ou **la mise à jour en file d’attente**.  
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 #### <a name="to-set-the-updating-mode-for-a-pull-subscription"></a>Pour définir le mode de mise à jour d'un abonnement extrait  
   
-1.  Dans la boîte de dialogue **Propriétés de l’abonnement - \<Serveur_de_publication> : \<Base_de_données_de_publication>**, sélectionnez une valeur **Répliquer les modifications immédiatement** ou **Mettre les modifications en file d’attente** pour l’option **Méthode de mise à jour de l’Abonné**.  
+1.  Dans le **Subscription Properties - \<serveur de publication > : \<Base_de_données_publication >** boîte de dialogue, sélectionnez la valeur **répliquer les modifications immédiatement** ou **modifications en file d’attente** pour le **méthode de mise à jour de l’abonné** option.  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
- Pour plus d’informations sur l’accès à la boîte de dialogue **Propriétés de l’abonnement - \<Serveur_de_publication>: \<Base_de_données_de_publication>**, consultez [Afficher et modifier les propriétés d’un abonnement par extraction](../view-and-modify-pull-subscription-properties.md).  
+ Pour plus d’informations sur l’accès à la **Subscription Properties - \<serveur de publication > : \<Base_de_données_publication >** boîte de dialogue, consultez [afficher et modifier les propriétés d’abonnement par extraction](../view-and-modify-pull-subscription-properties.md).  
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   

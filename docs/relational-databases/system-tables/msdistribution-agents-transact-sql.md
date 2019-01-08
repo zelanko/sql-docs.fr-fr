@@ -5,8 +5,7 @@ ms.date: 10/28/2015
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - MSdistribution_agents_TSQL
@@ -19,12 +18,12 @@ ms.assetid: 0e8f0653-1351-41d1-95d2-40f6d5a050ca
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bc908623e3979943214132605a1ab92ceaad657b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 357d0cf774d3e95d700c840f88bb0165bdb9a12f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846627"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52785751"
 ---
 # <a name="msdistributionagents-transact-sql"></a>MSdistribution_agents (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ ms.locfileid: "47846627"
 |**virtual_agent_id**|**Int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**anonymous_agent_id**|**Int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**date_création**|**datetime**|Date et heure de création de l'Agent de distribution ou de l'Agent de fusion|  
-|**queue_id**|**sysname**|Identificateur permettant de localiser la file d'attente pour les abonnements de mise à jour en attente. Pour les abonnements qui ne sont pas en attente, la valeur est NULL. Pour les publications [!INCLUDE[msCoName](../../includes/msconame-md.md)] basées sur Message Queuing, la valeur est un GUID qui identifie de manière unique la file d'attente à utiliser pour l'abonnement. Pour les publications de la file d’attente basée sur SQL Server, la colonne contient la valeur **SQL**.<br /><br /> Remarque : À l’aide [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing a été déconseillée et n’est plus pris en charge.|  
+|**queue_id**|**sysname**|Identificateur permettant de localiser la file d'attente pour les abonnements de mise à jour en attente. Pour les abonnements qui ne sont pas en attente, la valeur est NULL. Pour les publications [!INCLUDE[msCoName](../../includes/msconame-md.md)] basées sur Message Queuing, la valeur est un GUID qui identifie de manière unique la file d'attente à utiliser pour l'abonnement. Pour les publications de la file d’attente basée sur SQL Server, la colonne contient la valeur **SQL**.<br /><br /> Remarque : [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing est déconseillé et n'est plus pris en charge.|  
 |**queue_status**|**Int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**offload_enabled**|**bit**|Indique si l’agent peut être activé à distance.<br /><br /> **0** indique que l’agent ne peut pas être activé à distance.<br /><br /> **1** Spécifie que l’agent sera être activé à distance, sur l’ordinateur distant spécifié dans le *offload_server* propriété.|  
 |**offload_server**|**sysname**|Nom de réseau du serveur à utiliser pour l'activation de l'agent à distance|  

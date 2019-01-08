@@ -11,12 +11,12 @@ ms.assetid: a8410ed2-bb98-4d51-a9eb-b239be1201c2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3940f7c214ab3f9d5d48e83acef5ed2237ceeac3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0001b04a93c1aacfbf2e7701faada815cb6316ac
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206529"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515453"
 ---
 # <a name="creating-predictions-basic-data-mining-tutorial"></a>Création de prédictions (Didacticiel sur l'exploration de données de base)
   Une fois que vous avez testé la précision de vos modèles d’exploration de données et décidé que vous êtes satisfait des résultats, vous pouvez ensuite générer des prédictions à l’aide du Générateur de requêtes de prédiction sur le **prévision de modèle d’exploration de données** onglet dans l’exploration de données Concepteur.  
@@ -157,7 +157,7 @@ ms.locfileid: "48206529"
   
         2.  Tapez le nom de la table dans laquelle seront enregistrés les résultats de la requête.  
   
-        3.  Utilisez l’option **ajouter à la vue DSV**, pour créer la table et l’ajouter à une vue de source de données existante. Cela est utile si vous voulez conserver toutes les tables associées pour un modèle, telles que les données de formation, les données source de prédiction et les résultats de la requête, dans la même vue de source de données.  
+        3.  Utilisez l’option **ajouter à la vue DSV**, pour créer la table et l’ajouter à une vue de source de données existante. Cela est utile si vous souhaitez conserver toutes les tables associées pour un modèle, tels que les données d’apprentissage, de source de données de prédiction et de requête des résultats de la même vue de source de données.  
   
         4.  Utilisez l’option **remplacer si existe**, mettre à jour une table existante avec les derniers résultats.  
   

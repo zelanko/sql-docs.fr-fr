@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - self-documenting packages
@@ -15,12 +14,12 @@ ms.assetid: 48c8ed9a-b10d-490c-9ba7-4b77aa44e3dd
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 948850ca0b7e0849b846f1f33fa00ab01d9e1c7f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ef481e450bb6d2204e7d3a4a043e5bb464eada9f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103639"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52792079"
 ---
 # <a name="use-annotations-in-packages"></a>Utiliser des annotations dans les packages
   Le concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)] propose des annotations que vous pouvez utiliser afin de faire en sorte que les packages s'auto-documentent et soient ainsi plus faciles à comprendre et à gérer. Vous pouvez ajouter des annotations au flux de contrôle, au flux de données et aux surfaces de dessin du gestionnaire d'événements du concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)] . Les annotations peuvent contenir n'importe quel type de texte et sont utiles pour ajouter des étiquettes, des commentaires et autres informations descriptives à un package. Les annotations sont disponibles uniquement au moment de la conception. Par exemple, elles ne sont pas écrites dans les fichiers journaux.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - cdcServ
@@ -13,12 +12,12 @@ ms.assetid: 4fc8edad-e16e-432f-a8ca-75f9a27444f3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c500fc1313fb4f5d6cbf6cd6f8c19a8662069e0e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a44d0a2833add4680636966cea805c19af32f267
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105419"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52756931"
 ---
 # <a name="work-with-cdc-services"></a>Utiliser des services de capture de données modifiées
   Vous pouvez utiliser la console de configuration du service de capture de données modifiées pour créer un service de capture de données modifiées et préparer une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour la capture de données modifiées.  
@@ -41,7 +40,7 @@ ms.locfileid: "48105419"
  La boîte de dialogue Nouveau service de capture de données modifiées Oracle s'ouvre.  
   
 ## <a name="see-also"></a>Voir aussi  
- [L’utilisation des Services de capture de données modifiées](work-with-cdc-services.md)   
- [Créer et modifier un service CDC Oracle](create-and-edit-an-oracle-cdc-service.md)  
+ [Procédure : utiliser des services de capture de données modifiées](work-with-cdc-services.md)   
+ [Créer et modifier un service de capture de données modifiées Oracle](create-and-edit-an-oracle-cdc-service.md)  
   
   

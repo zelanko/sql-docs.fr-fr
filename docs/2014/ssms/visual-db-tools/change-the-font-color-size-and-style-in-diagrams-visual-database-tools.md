@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - database diagrams [SQL Server], changing text size
@@ -14,12 +14,12 @@ ms.assetid: 14de9c19-8bbf-4347-bef5-156499640052
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 599672d0d27657803e9c4c169bf297044d526024
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 0945dd4bd2897cd0dba7425f98700b05237c6b96
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48223049"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52800341"
 ---
 # <a name="change-the-font-color-size-and-style-in-diagrams-visual-database-tools"></a>Modifier la couleur de police, la taille et le style dans les schémas (Visual Database Tools)
   Vous pouvez personnaliser le mode d’affichage du texte dans les diagrammes de base de données en modifiant la couleur de la police, la taille et le style. Les modifications sont appliquées aux nouveaux schémas et à des schémas existants si vous les modifiez.  

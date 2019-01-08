@@ -11,15 +11,15 @@ ms.assetid: 33fa3b75-3257-44e1-919e-3d2ff12accbc
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fccd17f475f1ca48214ff3deb61e5bca4ce89e47
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 020d9dbadc323aa751a90a0b0cbd886ba503d637
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102389"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52536810"
 ---
 # <a name="feature-selection-uninstall"></a>Sélection de composant (Désinstaller)
-  Utilisez la page Sélection de composant — Désinstaller pour sélectionner les fonctionnalités à supprimer de l'instance spécifiée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Utiliser la sélection de fonctionnalités - désinstaller de page pour sélectionner les fonctionnalités à supprimer de l’instance spécifiée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="options"></a>Options  
  Vous pouvez choisir n'importe quelle combinaison de fonctionnalités.  

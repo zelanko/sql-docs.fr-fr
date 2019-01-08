@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.rg.properties_moveworkloadgroup.f1
@@ -16,19 +15,19 @@ ms.assetid: f2068636-6e53-486a-a6fc-c12de2a38424
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7dd9fada1ffac50b11c4384f6ede19eac4ea069a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1c1fedfc0c21d78e73f38b5bfdf084eb37e5311d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112879"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52799670"
 ---
 # <a name="move-a-workload-group"></a>Déplacer un groupe de charge de travail
   Vous pouvez déplacer un groupe de charge de travail de Resource Governor vers un pool de ressources différent à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de Transact-SQL.  
   
--   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
+-   **Avant de commencer :**  [Limitations et Restrictions](#LimitationsRestrictions), [autorisations](#Permissions)  
   
--   **Pour déplacer un groupe de charge de travail, utilisez :**  [SQL Server Management Studio](#MoveWGSSMS), [Transact-SQL](#MoveWGTSQL)  
+-   **Pour déplacer une charge de travail de groupe, à l’aide de :**  [SQL Server Management Studio](#MoveWGSSMS), [Transact-SQL](#MoveWGTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
  Vous ne pouvez pas déplacer un groupe de charge de travail s'il existe une opération en attente de configuration de Resource Governor.  

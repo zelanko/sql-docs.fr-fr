@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - MSpeer_lsns
@@ -19,12 +18,12 @@ ms.assetid: 0ba33907-601b-4c3d-8099-2663f680a161
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2629149db23a03dbb9d06d35cce7dde980f6d747
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 08926758b2d217bde6f858405ebde1c2b38b4d66
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727197"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52796171"
 ---
 # <a name="mspeerlsns-transact-sql"></a>MSpeer_lsns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ ms.locfileid: "47727197"
 |**originator_db_version**|**Int**|Identifie le numéro de version de la base de données d'origine.|  
 |**originator_lsn**|**Int**|Identifie le numéro de séquence d'enregistrement dans la publication d'origine.|  
 |**originator_version**|**Int**|Spécifie le numéro de version du serveur de publication.|  
-|**originator_id**|**smallint**|Identifie chaque nœud dans la topologie pour les besoins de la détection de conflit. Pour plus d'informations, consultez [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).|  
+|**originator_id**|**smallint**|Identifie chaque nœud dans la topologie pour les besoins de la détection de conflit. Pour plus d’informations, voir [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Tables de réplication &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

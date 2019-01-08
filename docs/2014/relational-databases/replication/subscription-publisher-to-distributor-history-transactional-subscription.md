@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.monitor.subscription.pubtodist.tran.f1
@@ -13,12 +12,12 @@ ms.assetid: d5a4c697-1342-49fd-8b7b-b059af32556a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fb3abbdd11cf671203b0a9ebb6e146038b69970f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a7514af7f2b9d76772dd56060c98a4d195afe763
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111995"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52782001"
 ---
 # <a name="subscription-publisher-to-distributor-history-transactional-subscription"></a>Abonnement, Historique du serveur de publication vers le serveur de distribution (abonnement transactionnel)
   L'onglet **Historique du serveur de publication vers le serveur de distribution** affiche des informations détaillées sur l'Agent de lecture du journal, y compris l'état, l'historique, des messages d'information et d'éventuels messages d'erreur.  
@@ -26,7 +25,7 @@ ms.locfileid: "48111995"
 ## <a name="options"></a>Options  
  Dans le menu **Affichage** , sélectionnez les sessions de l'Agent de lecture du journal à afficher. Sélectionnez ensuite une session particulière dans la grille étiquetée **Sessions de l'Agent de lecture du journal**. Des informations détaillées sur cette session s'affichent dans la grille étiquetée **Actions dans la session sélectionnée**. Si la session sélectionnée s'est terminée sur une erreur, la zone de texte étiquetée **Détails de l'erreur ou message de la session sélectionnée** s'affiche également.  
   
- **Afficher**  
+ **Affichage**  
  Sélectionnez les sessions de l'Agent de lecture du journal à afficher. L'Agent de lecture du journal s'exécute généralement en permanence : il se peut donc qu'il n'y ait qu'une session à afficher.  
   
  **État**  

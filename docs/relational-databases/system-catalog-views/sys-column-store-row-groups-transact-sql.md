@@ -20,12 +20,12 @@ ms.assetid: 76e7fef2-d1a4-4272-a2bb-5f5dcd84aedc
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: bff4582f8bf46d094db2a1689ad8c9fd6de92185
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fff57d41e522ae2e002809982bfeb084c28bbbba
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782897"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531660"
 ---
 # <a name="syscolumnstorerowgroups-transact-sql"></a>sys.column_store_row_groups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "47782897"
 |**row_group_id**|**Int**|Numéro de groupe de lignes associé à ce groupe de lignes. Cet ID est unique dans la partition.<br /><br /> -1 = fin d’une table en mémoire.|  
 |**delta_store_hobt_id**|**bigint**|Hobt_id des groupe de lignes ouvert dans le magasin delta.<br /><br /> NULL si le groupe de lignes n’est pas dans le magasin delta.<br /><br /> NULL pour la fin d’une table en mémoire.|  
 |**state**|**tinyint**|Numéro d'ID associé à state_description.<br /><br /> 0 = INVISIBLE<br /><br /> 1 = OPEN<br /><br /> 2 = CLOSED<br /><br /> 3 = COMPRESSED <br /><br /> 4 = OBJET TOMBSTONE|  
-|**state_description**|**nvarchar(60)**|Description de l'état permanent du groupe de lignes :<br /><br /> INVISIBLE – Un segment compressé masqué en cours de génération à partir des données dans une banque delta. Les actions de lecture utiliseront la banque delta jusqu'à ce que le segment compressé masqué soit terminé. Ensuite, le nouveau le segment est rendu visible, et la banque delta source est supprimée.<br /><br /> OPEN - Un groupe de lignes en lecture/écriture qui reçoit des enregistrements. Un groupe de lignes ouvert est toujours au format rowstore et n'a pas été compressé au format columnstore.<br /><br /> CLOSED – Un groupe de lignes qui a été renseigné, mais pas encore compressé par le processus du moteur de tuple.<br /><br /> COMPRESSED – Un groupe de lignes rempli et compressé.|  
+|**state_description**|**nvarchar(60)**|Description de l'état permanent du groupe de lignes :<br /><br /> INVISIBLE - un segment compressé masqué en cours de génération à partir des données dans une banque delta. Les actions de lecture utiliseront la banque delta jusqu'à ce que le segment compressé masqué soit terminé. Ensuite, le nouveau le segment est rendu visible, et la banque delta source est supprimée.<br /><br /> Ouvrez - un groupe de lignes en lecture/écriture qui reçoit des enregistrements. Un groupe de lignes ouvert est toujours au format rowstore et n'a pas été compressé au format columnstore.<br /><br /> FERMÉ - un groupe de lignes qui a été rempli, mais pas encore compressé par le processus du moteur de tuple.<br /><br /> COMPRESSÉ - un groupe de lignes rempli et compressé.|  
 |**total_rows**|**bigint**|Nombre total de lignes stockées physiquement dans le groupe de lignes. Certaines peuvent avoir été supprimées, mais elles sont toujours stockées. Le nombre maximal de lignes d'un groupe de lignes est 1 048 576 (hexadécimal FFFFF).|  
 |**deleted_rows**|**bigint**|Nombre total de lignes marquées comme étant supprimées dans le groupe de lignes. Cette valeur est toujours 0 pour les groupes de lignes DELTA.|  
 |**size_in_bytes**|**bigint**|Taille en octets de toutes les données dans ce groupe de lignes (sans les métadonnées ou les dictionnaires partagés), pour les rowgroups DELTA et COLUMNSTORE.|  
@@ -56,7 +56,7 @@ ms.locfileid: "47782897"
   
  Lorsqu'un groupe de lignes columnstore est rempli, il est compressé, et cesse de recevoir de nouvelles lignes. Lorsque vous supprimez des lignes d'un groupe compressé, elles sont conservées mais sont marquées comme étant supprimées. Les mises à jour dans un groupe compressé sont implémentées comme une suppression du groupe compressé, et une insertion dans un groupe ouvert.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Retourne des informations pour une table si l’utilisateur a **VIEW DEFINITION** autorisation sur la table.  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

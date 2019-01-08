@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - e-mail [SQL Server], status information
@@ -16,19 +15,19 @@ ms.assetid: eb290f24-b52f-46bc-84eb-595afee6a5f3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2783e580fcd255c51bf0764e2edadd0483c63e40
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 73d0cf3a374a7f3dda7797238d2c1702360aa955
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48153375"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52775891"
 ---
 # <a name="check-the-status-of-e-mail-messages-sent-with-database-mail"></a>Vérifier l'état des messages électroniques envoyés avec la messagerie de base de données
   Cette rubrique explique comment vérifier l'état du message électronique envoyé à l'aide de la messagerie de base de données dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 -   **Avant de commencer :**  
   
--   **Pour afficher l’état du message électronique envoyé à l’aide de la messagerie de base de données, utilisez :**  [Transact-SQL](#TsqlProcedure)  
+-   **Pour afficher l’état du message électronique envoyé à l’aide de la messagerie de base de données, à l’aide de :**  [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
  La messagerie de base de données conserve un exemplaire des messages électroniques sortants qu’elle affiche dans les vues **sysmail_allitems**, **sysmail_sentitems**, **sysmail_unsentitems**et **sysmail_faileditems** de la base de données **msdb** . Le programme externe de la messagerie de base de données consigne les activités de l’application dans un journal qu’elle affiche par le biais du journal d’événements des applications Windows et la vue **sysmail_event_log** dans la base de données **msdb** . Pour vérifier l'état d'un message électronique, exécutez une requête sur cette vue. Les messages peuvent présenter quatre états distincts : **sent**(envoyé), **unsent**(non envoyé), **retrying**(nouvel essai) et **failed**(échec).  

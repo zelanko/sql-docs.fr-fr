@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - logical Not (!)
@@ -14,18 +13,18 @@ ms.assetid: d5c4d1e1-7be4-4d25-bcd9-5b6ddb53b3b3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 30d3e56f69335b4dc90f7af31790c3c1e02242de
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9856f1ecb67a00f73782de1a23c361ca35ea83f4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48169115"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52779081"
 ---
 # <a name="-logical-not-ssis-expression"></a>! (Non logique) (expression SSIS)
   Inverse un opérande booléen.  
   
 > [!NOTE]  
->  L'opérateur « ! » ne peut pas être utilisé en combinaison avec d'autres opérateurs. Par exemple, vous ne pouvez pas combiner les opérateurs « ! » et > pour former l'opérateur « !> » .  
+>  L'opérateur « ! » ne peut pas être utilisé en combinaison avec d'autres opérateurs. Par exemple, vous ne pouvez pas combiner les opérateurs « ! » et > pour former l'opérateur « !> » .  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -65,7 +64,7 @@ ms.locfileid: "48169115"
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Opérateurs et associativité](operator-precedence-and-associativity.md)   
- [Opérateurs &#40;SSIS Expression&#41;](operators-ssis-expression.md)  
+ [Priorités et associativité des opérateurs](operator-precedence-and-associativity.md)   
+ [Opérateurs &#40;expression SSIS&#41;](operators-ssis-expression.md)  
   
   

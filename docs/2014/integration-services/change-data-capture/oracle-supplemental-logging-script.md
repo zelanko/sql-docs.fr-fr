@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5e6ee618-b89b-46c7-92ad-4fc5ef7b777a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3736ebcdcf189ab377624b962a119de864130668
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: daa62b343adca72d28da5d83469409ed476a210e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184499"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52782501"
 ---
 # <a name="oracle-supplemental-logging-script"></a>Script de journalisation supplémentaire Oracle
   Cette boîte de dialogue affiche le script Oracle de journalisation supplémentaire.  
@@ -38,7 +37,7 @@ ms.locfileid: "48184499"
  Copie le script dans le Presse-papiers. Lorsque vous serez prêt, vous pourrez coller le script dans n'importe quel emplacement si un administrateur de base de données Oracle (DBA) doit examiner et exécuter le script de journalisation supplémentaire.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Comment gérer une Instance de capture de données modifiées](manage-a-cdc-instance.md)   
- [Gérer une instance CDC](manage-a-cdc-instance.md)  
+ [How to Manage a CDC Instance](manage-a-cdc-instance.md)   
+ [Gérer une instance de capture de données modifiées](manage-a-cdc-instance.md)  
   
   

@@ -16,15 +16,15 @@ ms.assetid: 3c49862b-595d-4fa4-b890-e2e1bde1d74f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b5d62d42eca06775c289e4b81485e0ee7046afbc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d69ba0371f77692f53464cc889ae8204f87d4cd1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077299"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542352"
 ---
 # <a name="change-the-discretization-of-a-column-in-a-mining-model"></a>Modifier la discrétisation d'une colonne dans un modèle d'exploration de données
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] discrétise automatiquement les valeurs, autrement dit, il place les données dans une colonne numérique, dans certains scénarios. Par exemple, si vos données contiennent des données numériques continues et que vous créez un modèle d'arbre de décision, chaque colonne de données continues est intégrée automatiquement, selon la distribution des données. Si vous souhaitez contrôler la discrétisation des données, vous devez modifier les propriétés de la colonne de structure d'exploration de données, qui contrôle l'utilisation des données dans le modèle.  
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] discrétise automatiquement les valeurs-autrement dit, il place les données numérique de colonne dans certains scénarios. Par exemple, si vos données contiennent des données numériques continues et que vous créez un modèle d'arbre de décision, chaque colonne de données continues est intégrée automatiquement, selon la distribution des données. Si vous souhaitez contrôler la discrétisation des données, vous devez modifier les propriétés de la colonne de structure d'exploration de données, qui contrôle l'utilisation des données dans le modèle.  
   
  Pour obtenir des informations générales sur la façon de définir des propriétés dans un modèle d’exploration de données, consultez [Colonnes de modèle d’exploration de données](mining-model-columns.md).  
   

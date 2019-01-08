@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- configmgr-client
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - pipes [SQL Server], connecting to
@@ -15,12 +14,12 @@ ms.assetid: 30fbae62-2f2e-4d36-9c6e-3444fff68781
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6560c3d3181fc85e2344ec72db5d727f0c088bfa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3fe7bb05afc8e0814ddb3d872a810759aae2a678
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073379"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52746842"
 ---
 # <a name="client-protocols---named-pipes-properties-protocol-tab"></a>Protocoles clients - Propriétés de Canaux nommés (onglet Protocole)
   Dans le Gestionnaire de configuration [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , utilisez l'onglet **Protocole** de la boîte de dialogue **Propriétés de Canaux nommés** pour visualiser ou modifier la description du canal par défaut. Pour vous connecter à un autre canal, tapez son nom dans la zone **Canal par défaut** . Pour plus d’informations sur les canaux nommés, consultez [Création d’une chaîne de connexion valide à l’aide de canaux nommés](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-named-pipes.md).  
@@ -35,6 +34,6 @@ ms.locfileid: "48073379"
  Les valeurs possibles sont **Yes** et **No**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Choix d’un protocole réseau](../../../2014/tools/configuration-manager/choosing-a-network-protocol.md)  
+ [Choix d'un protocole réseau](../../../2014/tools/configuration-manager/choosing-a-network-protocol.md)  
   
   

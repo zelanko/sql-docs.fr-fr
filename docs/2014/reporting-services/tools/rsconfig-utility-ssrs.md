@@ -17,12 +17,12 @@ ms.assetid: 84e45a2f-3ca6-4c16-8259-c15ff49d72ad
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: cd33c950d8594d7763bd265c443fabb3604aa8c4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cd0335165c27487433b0130f5e40ecb1846fe7ac
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078469"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505415"
 ---
 # <a name="rsconfig-utility-ssrs"></a>Utilitaire rsconfig (SSRS)
   L’utilitaire **rsconfig.exe** chiffre et stocke des valeurs de connexion et de compte dans le fichier RSReportServer.config. Les valeurs chiffrées incluent les informations de connexion à la base de données du serveur de rapports et les valeurs de compte utilisées pour le traitement des rapports sans assistance.  
@@ -32,13 +32,13 @@ ms.locfileid: "48078469"
 ```  
   
       rsconfig {-?}  
-{–cconnection}  
-{–eunattendedaccount}  
-{–mcomputername}  
-{–iinstancename}  
-{–sservername}  
-{–ddatabasename}  
-{–aauthmethod}  
+{-cconnection}  
+{-eunattendedaccount}  
+{-mcomputername}  
+{-iinstancename}  
+{-sservername}  
+{-ddatabasename}  
+{-aauthmethod}  
 {-uusername}  
 {-ppassword}  
 {-ttrace}  
@@ -49,18 +49,18 @@ ms.locfileid: "48078469"
 |Terme|Facultatif/obligatoire|Définition|  
 |----------|------------------------|----------------|  
 |**-?**|Facultatif.|Affiche la syntaxe des arguments de Rsconfig.exe.|  
-|`-c`|Obligatoire si `-e` argument n’est pas utilisé.|Spécifie la chaîne de connexion, les informations d'identification et les valeurs de source de données utilisées pour connecter un serveur de rapports à la base de données du serveur de rapports.<br /><br /> Cet argument ne prend pas de valeur. Cependant, des arguments supplémentaires doivent être spécifiés avec lui pour fournir l'ensemble des valeurs de connexion requises.<br /><br /> Les arguments que vous pouvez spécifier avec `-c` incluent `-m`, **-s**, `-i`,`-d`,`-a`,`-u`,`-p`, et`-t`.|  
-|`-e`|Obligatoire si `-c` argument n’est pas utilisé.|Spécifie le compte d'exécution de rapport sans assistance.<br /><br /> Cet argument ne prend pas de valeur. Cependant, vous devez inclure des arguments supplémentaires sur la ligne de commande pour spécifier les valeurs qui sont chiffrées dans le fichier de configuration.<br /><br /> Les arguments que vous pouvez spécifier avec `-e` incluent `-u` et `-p`. Vous pouvez également définir `-t`.|  
+|`-c`|Obligatoire si l'argument `-e` n'est pas utilisé.|Spécifie la chaîne de connexion, les informations d'identification et les valeurs de source de données utilisées pour connecter un serveur de rapports à la base de données du serveur de rapports.<br /><br /> Cet argument ne prend pas de valeur. Cependant, des arguments supplémentaires doivent être spécifiés avec lui pour fournir l'ensemble des valeurs de connexion requises.<br /><br /> Les arguments que vous pouvez spécifier avec `-c` incluent `-m`, **-s**, `-i`,`-d`,`-a`,`-u`,`-p`, et`-t`.|  
+|`-e`|Obligatoire si l'argument `-c` n'est pas utilisé.|Spécifie le compte d'exécution de rapport sans assistance.<br /><br /> Cet argument ne prend pas de valeur. Cependant, vous devez inclure des arguments supplémentaires sur la ligne de commande pour spécifier les valeurs qui sont chiffrées dans le fichier de configuration.<br /><br /> Les arguments que vous pouvez spécifier avec `-e` incluent `-u` et `-p`. Vous pouvez également définir `-t`.|  
 |`-m`  *Nom_Ordinateur*|Obligatoire si vous configurez une instance distante du serveur de rapports.|Spécifie le nom de l'ordinateur qui héberge le serveur de rapports. Si cet argument est omis, la valeur par défaut est `localhost`.|  
 |**-s**  *servername*|Obligatoire.|Spécifie l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui héberge la base de données du serveur de rapports.|  
 |`-i`  *nom de l’instance*|Obligatoire si vous utilisez des instances nommées.|Si vous utilisez une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nommée pour héberger la base de données du serveur de rapports, cette valeur spécifie l'instance nommée.|  
 |`-d`  *DatabaseName*|Obligatoire.|Spécifie le nom de la base de données du serveur de rapports.|  
-|`-a`  *méthode d’authentification*|Obligatoire.|Détermine la méthode d'authentification utilisée par le serveur de rapports pour la connexion à la base de données du serveur de rapports. Les valeurs valides sont `Windows` ou `SQL` (cet argument ne respecte pas la casse).<br /><br /> `Windows` spécifie que le serveur de rapports utilise l'authentification Windows.<br /><br /> `SQL` Spécifie que le serveur de rapports utilise l’authentification SQL Server.|  
+|`-a`  *méthode d’authentification*|Obligatoire.|Détermine la méthode d'authentification utilisée par le serveur de rapports pour la connexion à la base de données du serveur de rapports. Les valeurs valides sont `Windows` ou `SQL` (cet argument ne respecte pas la casse).<br /><br /> `Windows` spécifie que le serveur de rapports utilise l'authentification Windows.<br /><br /> `SQL` spécifie que le serveur de rapports utilise l'authentification SQL Server.|  
 |`-u`  *[domaine\\] nom d’utilisateur*|Obligatoire avec `-e` Facultatif avec `-c`.|Spécifie un compte d'utilisateur pour la connexion à la base de données du serveur de rapports ou pour le compte sans assistance.<br /><br /> Pour **rsconfig -e**, cet argument est obligatoire. Il doit être un compte d'utilisateur de domaine.<br /><br /> Pour **rsconfig - c** et `-a SQL`, cet argument doit spécifier un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion.<br /><br /> Pour **rsconfig - c** et `-a Windows`, cet argument doit spécifier un utilisateur de domaine, un compte intégré ou informations d’identification du compte de service. Si vous spécifiez un compte de domaine, spécifiez *domain* et *username* sous la forme *domaine\nom_utilisateur*. Si vous utilisez un compte prédéfini, cet argument est facultatif. Si vous souhaitez utiliser des informations d'identification de compte de service, omettez cet argument.|  
 |`-p`  *Mot de passe*|Obligatoire si `-u` est spécifié.|Définit le mot de passe à utiliser avec l'argument *username* . Vous pouvez affecter une valeur vide à cet argument si le compte n'exige pas de mot de passe. Cette valeur respecte la casse pour les comptes de domaine.|  
 |`-t`|Facultatif.|Envoie des messages d'erreur au journal de suivi. Cet argument ne prend pas de valeur. Pour plus d’informations, consultez [Report Server Service Trace Log](../report-server/report-server-service-trace-log.md).|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Vous devez être un administrateur local sur l'ordinateur hébergeant le serveur de rapports que vous configurez.  
   
 ## <a name="file-location"></a>Emplacement du fichier  
@@ -102,7 +102,7 @@ rsconfig -c -s <SQLSERVERNAME> -d reportserver -a Windows "NT AUTHORITY\SYSTEM"
 ```  
   
 #### <a name="specifying-a-service-account"></a>Spécification d'un compte de service  
- Cet exemple illustre la configuration d'un serveur de rapports pour l'utilisation du compte du service Windows Report Server et le compte du service Web lors de la connexion à une base de données de serveur de rapports local. Notez que `-u` n’est pas utilisé et qu’aucune information de compte n’est spécifiée. Lorsque vous éliminez des valeurs de compte à partir de la commande, l’utilitaire **rsconfig** emploie une sécurité intégrée et le compte de service sous lequel chaque service s’exécute.  
+ Cet exemple illustre la configuration d'un serveur de rapports pour l'utilisation du compte du service Windows Report Server et le compte du service Web lors de la connexion à une base de données de serveur de rapports local. Notez que `-u` n'est pas utilisé et qu'aucune information de compte n'est spécifiée. Lorsque vous éliminez des valeurs de compte à partir de la commande, l’utilitaire **rsconfig** emploie une sécurité intégrée et le compte de service sous lequel chaque service s’exécute.  
   
 ```  
 rsconfig -c -s <SQLSERVERNAME> -d reportserver -a Windows  
@@ -123,12 +123,12 @@ rsconfig -e -m <REMOTECOMPUTERNAME> -s <SQLSERVERNAME> -u <DOMAIN\ACCOUNT> -p <P
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Configurer une connexion de base de données de serveur de rapports &#40;Gestionnaire de Configuration de SSRS&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
- [Configurer le compte d’exécution sans assistance &#40;Gestionnaire de Configuration de SSRS&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
+ [Configurer une connexion à la base de données du serveur de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [Configurer le compte d’exécution sans assistance &#40;Gestionnaire de configuration de SSRS&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
  [Serveur de rapports Reporting Services &#40;mode natif&#41;](../report-server/reporting-services-report-server-native-mode.md)   
  [Stocker des données chiffrées du serveur de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
  [Fichiers de configuration de Reporting Services](../report-server/reporting-services-configuration-files.md)   
- [Utilitaires d’invite de commandes de serveur de rapports &#40;SSRS&#41;](report-server-command-prompt-utilities-ssrs.md)   
+ [Utilitaires d’invite de commandes du serveur de rapports &#40;SSRS&#41;](report-server-command-prompt-utilities-ssrs.md)   
  [Fichier de configuration RSReportServer](../report-server/rsreportserver-config-configuration-file.md)  
   
   

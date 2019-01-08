@@ -33,12 +33,12 @@ ms.assetid: f7da3e92-e407-4f0b-b3a3-f214e442b37d
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 158f71abbe82a3b15b497ea8cbd6e74aec2ed6ae
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 19ea6e9f077b5097b8c5daa6d967a17336553ba7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48216189"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52508449"
 ---
 # <a name="registering-user-defined-types-in-sql-server"></a>Inscription des types définis par l'utilisateur dans SQL Server
   Pour pouvoir utiliser un type défini par l’utilisateur (UDT) dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous devez l’inscrire. L'inscription d'un UDT comprend l'inscription de l'assembly et la création du type dans la base de données dans laquelle vous souhaitez l'utiliser. La portée des UDT se limite à une seule base de données. Ils ne peuvent pas être utilisés dans plusieurs bases de données à moins d'inscrire le même assembly et UDT dans chaque base de données. Une fois l'assembly de l'UDT inscrit et le type créé, vous pouvez utiliser l'UDT dans [!INCLUDE[tsql](../../includes/tsql-md.md)] et dans le code client. Pour plus d’informations, consultez [Types CLR définis par l’utilisateur](clr-user-defined-types.md).  
@@ -83,7 +83,7 @@ WITH PERMISSION_SET = SAFE;
 ```  
 USE AdventureWorks;  
 CREATE ASSEMBLY Point  
-FROM 0xfeac4 … 21ac78  
+FROM 0xfeac4 ... 21ac78  
 ```  
   
 ### <a name="using-create-type"></a>Utilisation de CREATE TYPE  

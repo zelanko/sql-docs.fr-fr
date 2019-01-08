@@ -13,12 +13,12 @@ ms.assetid: 5afe5530-a404-4fa5-af3c-bc7c3ca43ce6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 66099ab0821bcccf399b353207c09b9571130736
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f411018b4a26e878e8f64efff6f17186f84a42fe
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47718657"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52391383"
 ---
 # <a name="spdeletebackupfilesnapshot-transact-sql"></a>sp_delete_backup_file_snapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -33,8 +33,8 @@ ms.locfileid: "47718657"
 ```  
   
 sys.sp_delete_backup_file_snapshot  
-    [ @db_name = ] N’<database_name>  
-    , [ @snapshot_url = ] N’<snapshot_url>  
+    [ @db_name = ] N'<database_name>  
+    , [ @snapshot_url = ] N'<snapshot_url>  
 ```  
   
 ## <a name="arguments"></a>Arguments  
@@ -44,7 +44,7 @@ sys.sp_delete_backup_file_snapshot
  *[ @snapshot_url = ] snapshot_url*  
  L’URL de l’instantané pour être supprimé, fournie sous forme de chaîne Unicode.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l’autorisation ALTER ANY DATABASE.  
   
 ## <a name="see-also"></a>Voir aussi  

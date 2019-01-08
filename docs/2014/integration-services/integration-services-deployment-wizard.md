@@ -13,12 +13,12 @@ ms.assetid: f3d93e13-2d85-47ff-a913-cda4046491c4
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d8a5b2cea7ae8b0166c0190044524941ca28ddca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8f90613d3c8e0204e2861008a5f7be0846eca64a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086295"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535874"
 ---
 # <a name="integration-services-deployment-wizard"></a>Assistant Déploiement d’Integration Services
   L'Assistant Déploiement d'[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] déploie des projets dans le catalogue SSISDB sur une instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à l'aide du modèle de déploiement de projet.  
@@ -27,13 +27,13 @@ ms.locfileid: "48086295"
   
  L'Assistant effectue les quatre étapes ci-après. Cliquez sur **suivant** à passer à l’étape suivante, ou **précédent** pour revenir à l’étape précédente.  
   
-1.  **Sélectionnez Source** – permet de sélectionner le [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] projet que vous souhaitez déployer.  
+1.  **Sélectionnez Source** : sélectionnez le [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] projet que vous souhaitez déployer.  
   
-2.  **Sélectionner la Destination** – sélectionnez la destination du projet.  
+2.  **Sélectionner la Destination** -sélectionner la destination du projet.  
   
-3.  **Révision** – affiche vos sélections.  
+3.  **Révision** -affiche vos sélections.  
   
-4.  **Déployer/résultats** – déploie le projet et affiche les résultats.  
+4.  **Déployer/résultats** - déploie le projet et affiche les résultats.  
   
 ## <a name="select-source"></a>Sélectionner une source  
  Pour déployer un fichier de déploiement de projet que vous avez créé, sélectionnez **fichier de déploiement de projet** et entrez le chemin d’accès du fichier .ispac ou cliquez sur **Parcourir** à trouver dans le [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] dossier du projet. Pour déployer un projet qui réside dans le catalogue [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , sélectionnez **Catalogue Integration Services**, puis entrez le nom du serveur et le chemin d'accès au projet au sein du catalogue.  

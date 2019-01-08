@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 6b0fdb7d-83dd-4392-9011-4ae642c471f1
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: a3f53b46116c05c9b6d51e5bccaa071375f4c36f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0f001d290237bfb111b321800d79ff3c42921e5d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135579"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52810621"
 ---
 # <a name="edit-a-model-deployment-package"></a>Modifier un package de déploiement de modèle
   Cette rubrique explique comment déployer les pièces sélectionnées d'un modèle dans MDS, plutôt qu'un modèle entier. Pour ce faire, vous modifiez un package de modèle MDS à l'aide de l'Éditeur de package de modèle.  
@@ -28,7 +27,7 @@ ms.locfileid: "48135579"
 ## <a name="prerequisites"></a>Prérequis  
  Pour effectuer cette procédure :  
   
--   Vous devez être administrateur de modèle. Pour plus d’informations, consultez [Administrators &#40;Master Data Services&#41;](administrators-master-data-services.md).  
+-   Vous devez être administrateur de modèle. Pour plus d’informations, consultez [Administrateurs &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
 -   Pour que vous puissiez le modifier, un package de modèle doit exister. Pour plus d’informations, consultez [Déploiement de modèles &#40;Master Data Services&#41;](../../2014/master-data-services/deploying-models-master-data-services.md) et [Créer un package de déploiement de modèle à l’aide de l’Assistant](../../2014/master-data-services/create-a-model-deployment-package-by-using-the-wizard.md) ou [Créer un package de déploiement de modèle à l’aide de MDSModelDeploy](../../2014/master-data-services/create-a-model-deployment-package-by-using-mdsmodeldeploy.md).  
   
@@ -38,9 +37,9 @@ ms.locfileid: "48135579"
   
 2.  Exécutez ModelPackageEditor.exe.  
   
-3.  Dans l'assistant Éditeur de package de modèle, cliquez sur **Parcourir**, accédez au dossier contenant vos packages, sélectionnez un package, puis cliquez sur **Ouvrir**. Cliquez sur **Suivant**.  
+3.  Dans l'assistant Éditeur de package de modèle, cliquez sur **Parcourir**, accédez au dossier contenant vos packages, sélectionnez un package, puis cliquez sur **Ouvrir**. Cliquer sur **Suivant**.  
   
-4.  Sélectionnez les entités, hiérarchies dérivées, vues d'abonnements ou règles d'entreprise à déployer. Désélectionnez celles que vous ne souhaitez pas déployer. Cliquez sur **Suivant**.  
+4.  Sélectionnez les entités, hiérarchies dérivées, vues d'abonnements ou règles d'entreprise à déployer. Désélectionnez celles que vous ne souhaitez pas déployer. Cliquer sur **Suivant**.  
   
 5.  Vérifiez la liste des sélections à déployer. Pour effectuer une modification, cliquez sur **Précédent** et répétez l'étape 4.  
   
@@ -52,6 +51,6 @@ ms.locfileid: "48135579"
   
 -   [Déployer un package de déploiement de modèle à l’aide de l’Assistant](../../2014/master-data-services/deploy-a-model-deployment-package-by-using-the-wizard.md)  
   
--   [Déployer un package de déploiement de modèle à l’aide de MDSModelDeploy](../../2014/master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)  
+-   [Déployer un package de déploiement de modèle à l'aide de MDSModelDeploy](../../2014/master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)  
   
   

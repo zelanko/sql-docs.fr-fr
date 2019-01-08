@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
 - Maintenance Plan Design Surface
@@ -13,12 +12,12 @@ ms.assetid: 2ef803ee-a9f8-454a-ad63-fedcbe6838d1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d5906e66db0ab0cee320aed86a90e82b85a8fa73
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 151a7e847d50a84c34eb07f55e5bd4d8e20dcc4d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142877"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52775791"
 ---
 # <a name="create-a-maintenance-plan-maintenance-plan-design-surface"></a>Créer un plan de maintenance (aire de conception de plan de maintenance)
   Cette rubrique explique comment créer un plan de maintenance de serveur unique ou multiserveur à l'aide de l'aire de conception de plan de maintenance de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. L' **Assistant Plan de maintenance** est conseillé pour créer des plans de maintenance de base, tandis que l'aire de conception permet d'utiliser un flux de travail optimisé.  
@@ -161,10 +160,10 @@ ms.locfileid: "48142877"
          Définit la manière dont une contrainte fonctionne entre deux tâches.  
   
          Liste**Opération d’évaluation**    
-         Spécifiez l'opération d'évaluation utilisée par la contrainte de précédence. Les opérations disponibles sont : **Contrainte**, **Expression**, **Expression et contrainte**et **Expression ou contrainte**.  
+         Spécifiez l'opération d'évaluation utilisée par la contrainte de précédence. Ces opérations sont : **Contrainte**, **Expression**, **Expression et contrainte**, et **Expression ou contrainte**.  
   
          Liste**Valeur**   
-         Spécifiez la valeur de contrainte : **Réussite**, **Échec**ou **À l’achèvement**. **Réussite** est la valeur par défaut.  
+         Spécifiez la valeur de contrainte : **Réussite**, **échec**, ou **achèvement**. **Réussite** est la valeur par défaut.  
   
         > [!NOTE]  
         >  La ligne de contrainte de précédence est verte pour **Réussite**, rouge pour **Échec**et bleue pour **À l’achèvement**.  
@@ -200,7 +199,7 @@ ms.locfileid: "48142877"
   
     3.  Dans la boîte de dialogue **Propriétés de connexion** , dans la zone **Nom de la connexion** , entrez le nom de la connexion que vous créez.  
   
-    4.  Sous **Spécifiez les éléments suivants pour vous connecter aux données de SQL Server**, dans la zone **Sélectionnez un serveur ou entrez un nom de serveur** , entrez le nom du serveur SQL à utiliser ou cliquez sur le bouton de sélection **(…)** et sélectionnez un serveur dans la boîte de dialogue **SQL Server** . Si vous sélectionnez un serveur dans la boîte de dialogue **SQL Server** , cliquez sur **OK**.  
+    4.  Sous **Spécifiez les éléments suivants pour vous connecter aux données de SQL Server**, dans la zone **Sélectionnez ou entrez un nom de serveur**, entrez le nom du serveur SQL Server à utiliser ou cliquez sur les points de suspension **(…)** et sélectionnez un serveur dans la boîte de dialogue **SQL Server**. Si vous sélectionnez un serveur dans la boîte de dialogue **SQL Server** , cliquez sur **OK**.  
   
     5.  Sous **Entrez des informations pour vous connecter au serveur**, sélectionnez **Utiliser la sécurité intégrée de Windows NT** ou **Utiliser un nom d'utilisateur et un mot de passe spécifiques**. Si vous choisissez d'utiliser un nom d'utilisateur et un mot de passe spécifiques, entrez ces informations dans les zones **Nom d'utilisateur** et **Mot de passe** , respectivement.  
   
@@ -216,7 +215,7 @@ ms.locfileid: "48142877"
   
         1.  Si vous sélectionnez **Générer un rapport de fichier texte**, sélectionnez **Créer un nouveau fichier** ou **Ajouter au fichier**.  
   
-        2.  En fonction de la sélection ci-dessus, entrez le nom et le chemin complet du nouveau fichier ou du fichier à ajouter dans les zones **Dossier** ou **Nom de fichier** . Vous pouvez également cliquer sur le bouton de sélection **(…)**, puis sélectionner le chemin d’accès au dossier ou le nom de fichier dans les boîtes de dialogue **Localiser le dossier –***nom_serveur* ou **Rechercher les fichiers de base de données –***nom_serveur*.  
+        2.  En fonction de la sélection ci-dessus, entrez le nom et le chemin complet du nouveau fichier ou du fichier à ajouter dans les zones **Dossier** ou **Nom de fichier** . Ou bien, cliquez sur le bouton de sélection **(...)**  et sélectionnez le chemin d’accès pour le nom de fichier ou dossier à partir de la **localiser le dossier-*** nom_serveur* ou **rechercher les fichiers de base de données-*** nom_serveur* boîtes de dialogue.  
   
         3.  Si vous sélectionnez **Envoyer le rapport à un destinataire de messagerie**, dans la liste **Opérateur d'agent** , sélectionnez le destinataire du rapport envoyé par messagerie électronique.  
   
@@ -231,7 +230,7 @@ ms.locfileid: "48142877"
   
 12. Pour consulter les résultats dans la visionneuse du fichier journal, dans **l’Explorateur d’objets**, cliquez avec le bouton droit sur le dossier **Plans de maintenance** ou sur le plan de maintenance spécifique et sélectionnez **Afficher l’historique**.  
   
-     Les options suivantes sont disponibles dans la boîte de dialogue **Visionneuse du fichier journal –***nom_serveur*.  
+     Les options suivantes sont disponibles sur le **visionneuse du fichier journal-*** nom_serveur* boîte de dialogue.  
   
      **Charger le journal**  
      Ouvre une boîte de dialogue dans laquelle vous pouvez spécifier un fichier journal à charger.  

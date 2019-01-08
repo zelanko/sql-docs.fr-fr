@@ -18,12 +18,12 @@ ms.assetid: 98cb6e58-4007-40fc-b048-449fb2e7e6be
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f9f86f83637cbf71dd128dd262ad1621b2d58270
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b79fbbd504f7294835e92401a2210e6acac3c440
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658647"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514024"
 ---
 # <a name="spcolumnprivilegesex-transact-sql"></a>sp_column_privileges_ex (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,19 +44,19 @@ sp_column_privileges_ex [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@table_server =** ] **'***serveur_de_la_table***'**  
+ [  **@table_server =** ] **'**_serveur_de_la_table_**'**  
  Nom du serveur lié pour lequel renvoyer les informations. *serveur_de_la_table* est **sysname**, sans valeur par défaut.  
   
- [  **@table_name =** ] **'***table_name***'**  
+ [  **@table_name =** ] **'**_table_name_**'**  
  Nom de la table qui contient la colonne spécifiée. *table_name* est **sysname**, avec NULL comme valeur par défaut.  
   
- [  **@table_schema =** ] **'***table_schema***'**  
+ [  **@table_schema =** ] **'**_table_schema_**'**  
  Schéma de la table. *table_schema* est **sysname**, avec NULL comme valeur par défaut.  
   
- [  **@table_catalog =** ] **'***table_catalog***'**  
+ [  **@table_catalog =** ] **'**_table_catalog_**'**  
  Est le nom de la base de données dans laquelle le texte spécifié *table_name* réside. *table_catalog* est **sysname**, avec NULL comme valeur par défaut.  
   
- [  **@column_name =** ] **'***column_name***'**  
+ [  **@column_name =** ] **'**_column_name_**'**  
  Nom de la colonne pour laquelle des informations de privilège doivent être fournies. *column_name* est **sysname**, avec une valeur par défaut NULL (tous les courant).  
   
 ## <a name="result-sets"></a>Jeux de résultats  
@@ -64,7 +64,7 @@ sp_column_privileges_ex [ @table_server = ] 'table_server'
   
 |Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**TABLE_CAT**|**sysname**|Nom du qualificateur de table. Divers produits SGBD prennent en charge la dénomination en trois parties pour les tables (*qualificateur ***.*** propriétaire ***.*** nom*). Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cette colonne représente le nom de la base de données. Dans d'autres produits, elle représente le nom du serveur de l'environnement de base de données de la table. Ce champ peut contenir la valeur NULL.|  
+|**TABLE_CAT**|**sysname**|Nom du qualificateur de table. Divers produits SGBD prennent en charge la dénomination en trois parties pour les tables (_qualificateur_**.** _propriétaire_**.** _nom_). Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cette colonne représente le nom de la base de données. Dans d'autres produits, elle représente le nom du serveur de l'environnement de base de données de la table. Ce champ peut contenir la valeur NULL.|  
 |**TABLE_SCHEM**|**sysname**|Nom du propriétaire de la table. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cette colonne représente le nom de l'utilisateur de la base de données qui a créé la table. Ce champ retourne toujours une valeur.|  
 |**TABLE_NAME**|**sysname**|Nom de la table. Ce champ retourne toujours une valeur.|  
 |**COLUMN_NAME**|**sysname**|Nom de colonne, pour chaque colonne de la **TABLE_NAME** retourné. Ce champ retourne toujours une valeur.|  
@@ -73,7 +73,7 @@ sp_column_privileges_ex [ @table_server = ] 'table_server'
 |**PRIVILÈGE**|**varchar(** 32 **)**|L'une des autorisations sur les colonnes disponibles. Les autorisations relatives aux colonnes peuvent prendre l'une des valeurs suivantes (ou d'autres valeurs prises en charge par la source des données si leur implémentation est définie) :<br /><br /> Sélectionnez = **bénéficiaire** peut récupérer des données pour les colonnes.<br /><br /> INSERT = **bénéficiaire** peut fournir des données pour cette colonne lorsque de nouvelles lignes sont insérées (par le **bénéficiaire**) dans la table.<br /><br /> Mise à jour = **bénéficiaire** peut modifier des données existantes dans la colonne.<br /><br /> RÉFÉRENCES = **bénéficiaire** peut référencer une colonne d’une table dans une relation clé primaire/étrangère clé étrangère. Les relations clé primaire/clé étrangère sont définies grâce à des contraintes portant sur les tables.|  
 |**IS_GRANTABLE**|**varchar (** 3 **)**|Indique si le **bénéficiaire** est autorisé à accorder des autorisations à d’autres utilisateurs (souvent appelés « droit d’accorder »). Les valeurs possibles sont YES, NO ou NULL. Une valeur inconnue ou NULL renvoie à une source de données où le « droit d'accorder » ne s'applique pas.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation SELECT sur le schéma.  
   
 ## <a name="examples"></a>Exemples  

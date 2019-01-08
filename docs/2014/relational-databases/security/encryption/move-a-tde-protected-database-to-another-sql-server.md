@@ -13,15 +13,15 @@ ms.assetid: fb420903-df54-4016-bab6-49e6dfbdedc7
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: e255d37a5f6fff65b223d889755bab4cf70d0687
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: 9be3645ec0846970cc7bcaaff237c4864bfe1216
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072273"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544634"
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>Déplacer une base de données protégée par le chiffrement transparent des données vers un autre serveur SQL Server
-  Cette rubrique explique comment protéger une base de données à l’aide du chiffrement transparent des données (TDE), puis déplacer la base de données vers une autre instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à l’aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Le chiffrement transparent des données effectue le chiffrement et le déchiffrement d'E/S en temps réel des données et des fichiers journaux. Le chiffrement utilise une clé de chiffrement de base de données (DEK), stockée dans l'enregistrement de démarrage de base de données pour être disponible pendant la récupération. La clé de chiffrement de base de données est une clé symétrique sécurisée à l'aide d'un certificat stocké dans la base de données `master` du serveur ou une clé asymétrique protégée par un module de gestion de clés extensible.  
+  Cette rubrique explique comment protéger une base de données à l’aide du chiffrement transparent des données (TDE), puis la déplacer vers une autre instance de[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à l’aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Le chiffrement transparent des données effectue le chiffrement et le déchiffrement d'E/S en temps réel des données et des fichiers journaux. Le chiffrement utilise une clé de chiffrement de base de données (DEK), stockée dans l'enregistrement de démarrage de base de données pour être disponible pendant la récupération. La clé de chiffrement de base de données est une clé symétrique sécurisée à l'aide d'un certificat stocké dans la base de données `master` du serveur ou une clé asymétrique protégée par un module de gestion de clés extensible.  
   
  **Dans cette rubrique**  
   
@@ -75,7 +75,7 @@ ms.locfileid: "49072273"
   
 4.  Dans la boîte de dialogue **Nouvelle base de données** , dans la zone **Nom de la base de données** , entrez le nom de la nouvelle base de données.  
   
-5.  Dans la zone **Propriétaire** , entrez le nom du propriétaire de la nouvelle base de données. Vous pouvez également cliquer sur les points de suspension **(…)** pour ouvrir la boîte de dialogue **Sélectionner le propriétaire de la base de données** . Pour plus d'informations sur la création d'une nouvelle base de données, consultez [Create a Database](../../databases/create-a-database.md).  
+5.  Dans la zone **Propriétaire** , entrez le nom du propriétaire de la nouvelle base de données. Vous pouvez également cliquer sur les points de suspension **(…)** pour ouvrir la boîte de dialogue **Sélectionner le propriétaire de la base de données**. Pour plus d'informations sur la création d'une nouvelle base de données, consultez [Create a Database](../../databases/create-a-database.md).  
   
 6.  Dans l'Explorateur d'objets, cliquez sur le signe plus pour développer le dossier **Bases de données** .  
   
@@ -184,14 +184,14 @@ ms.locfileid: "49072273"
      Par défaut, l'opération de détachement conserve tous les catalogues de texte intégral associés à la base de données. Pour les supprimer, décochez la case **Conserver les catalogues de texte intégral** . Cette option s'affiche uniquement lors de la mise à niveau d'une base de données à partir de [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
   
      **État**  
-     Affiche l’un des états suivants : **Prêt** ou **Non prêt**.  
+     Indique un des états suivants : **Prêt** ou **non prêt**.  
   
      **Message**  
      La colonne **Message** peut indiquer des informations sur la base de données, comme suit :  
   
     -   Lorsqu'une base de données est impliquée dans la réplication, l' **État** est **Non prêt** et la colonne **Message** indique **Base de données répliquée**.  
   
-    -   Quand une base de données a une ou plusieurs connexions actives, l’**État** est **Non prêt** et la colonne **Message** indique *<nombre_de_connexions_actives>***Connexion(s) active(s)*, par exemple, **1 connexion(s) active(s)**. Avant de détacher la base de données, vous devez déconnecter toutes les connexions actives en cliquant sur **Supprimer les connexions**.  
+    -   Lorsqu’une base de données a une ou plusieurs connexions actives, le **état** est **non prêt** et **Message** colonne affiche *< nombre_de_connexions_actives > *** (s) active**, par exemple : **1 connexion (s) active**. Avant de détacher la base de données, vous devez déconnecter toutes les connexions actives en cliquant sur **Supprimer les connexions**.  
   
      Pour obtenir plus d'informations sur un message, cliquez sur le texte du lien hypertexte pour ouvrir le Moniteur d'activité.  
   
@@ -205,11 +205,11 @@ ms.locfileid: "49072273"
   
 6.  Recréez le certificat de serveur à l'aide du fichier de sauvegarde du certificat de serveur d'origine. Pour plus d’informations, consultez **Utilisation de Transact-SQL** ci-dessous.  
   
-7.  Dans l’Explorateur d’objets, dans [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], cliquez avec le bouton droit sur le dossier **Bases de données** , puis sélectionnez **Attacher…**.  
+7.  Dans l’Explorateur d’objets, dans [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], cliquez avec le bouton droit sur le dossier **Bases de données** et sélectionnez **Attacher…**.  
   
 8.  Dans la boîte de dialogue **Attacher des bases de données** , sous **Bases de données à attacher**, cliquez sur **Ajouter**.  
   
-9. Dans la boîte de dialogue **Rechercher les fichiers de base de données –***nom_serveur*, sélectionnez le fichier de base de données à attacher au nouveau serveur, puis cliquez sur **OK**.  
+9. Dans le **rechercher les fichiers de base de données-*** nom_serveur* boîte de dialogue, sélectionnez la base de données fichier à attacher au nouveau serveur, puis cliquez sur **OK**.  
   
      Les options suivantes sont disponibles dans la boîte de dialogue **Attacher des bases de données** .  
   
@@ -222,7 +222,7 @@ ms.locfileid: "49072273"
      **Emplacement du fichier MDF**  
      Affiche le chemin d'accès et le nom du fichier MDF sélectionné.  
   
-     **Database Name**  
+     **Nom de la base de données**  
      Affiche le nom de la base de données.  
   
      **Attacher en tant que**  
@@ -238,7 +238,7 @@ ms.locfileid: "49072273"
     |----------|-----------------|-----------------|  
     |(Aucune icône)|(Aucun texte)|L'opération d'attachement n'a pas démarré ou est peut-être en attente pour cet objet. Il s'agit de la valeur par défaut lorsque la boîte de dialogue est ouverte.|  
     |Triangle vert dirigé vers la droite|En cours|L'opération d'attachement a démarré, mais n'est pas terminée.|  
-    |Coche verte|Réussi|L'attachement de l'objet a réussi.|  
+    |Coche verte|Opération réussie|L'attachement de l'objet a réussi.|  
     |Cercle rouge contenant une croix blanche|Error|L'opération d'attachement a rencontré une erreur et ne s'est pas terminée correctement.|  
     |Cercle contenant deux quartiers noirs (à gauche et à droite) et deux quartiers blancs (en haut et en bas)|Arrêté|L'opération d'attachement n'a pas réussi, car l'utilisateur l'a interrompue.|  
     |Cercle contenant une flèche courbe pointant dans le sens inverse des aiguilles d'une montre|Restauré|L'opération d'attachement a réussi, mais a été restaurée en raison d'une erreur lors de l'attachement d'un autre objet.|  
@@ -253,7 +253,7 @@ ms.locfileid: "49072273"
      Supprime le fichier sélectionné de la grille **Bases de données à attacher** .  
   
      **"** *<database_name>* **»détails de la base de données**  
-     Affiche le nom des fichiers à attacher. Pour vérifier ou modifier le nom du chemin d’accès d’un fichier, cliquez sur le bouton **Parcourir** (**…**).  
+     Affiche le nom des fichiers à attacher. Pour vérifier ou changer le nom du chemin d’accès d’un fichier, cliquez sur le bouton **Parcourir** (**...**).  
   
     > [!NOTE]  
     >  Si un fichier n'existe pas, la colonne **Message** affiche « Introuvable ». Si un fichier journal est introuvable, cela signifie qu'il se trouve dans un autre répertoire ou qu'il a été supprimé. Vous devez mettre à jour le chemin d'accès du fichier dans la grille **Détails de la base de données** pour désigner l'emplacement correct ou supprimer le fichier journal de la grille. Si un fichier de données .ndf est introuvable, vous devez mettre à jour son chemin d'accès dans la grille pour désigner l'emplacement correct.  

@@ -16,12 +16,12 @@ ms.assetid: 732f624f-8900-4608-9815-194302d22e8b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f1675e80522feb0c0b2a46a89dfa6e3bba182198
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9e892aed72ba1d74f9bdafc319c71a39546f4402
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47851639"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527663"
 ---
 # <a name="parameterized-commands-with-intervening-compute-commands"></a>Commandes paramétrées avec des commandes COMPUTE intermédiaires
 Une forme paramétrée commande APPEND contient généralement une clause qui crée un parent **Recordset** avec une commande de requête et une autre clause qui crée un enfant **Recordset** avec une commande de requête paramétrable : Autrement dit, une commande contenant un espace réservé de paramètre (un point d’interrogation « ? »). La forme résultant **Recordset** a deux niveaux, dans laquelle le parent occupé par le niveau supérieur et le niveau inférieur occupé par l’enfant.  

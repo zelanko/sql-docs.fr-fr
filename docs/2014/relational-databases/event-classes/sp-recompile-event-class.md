@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: 526c8eae-a07b-4d0e-b91e-8e537835d77d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d92673f3b551076eea675e9a5d909acd5f293337
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f9d894eb3f38248e1f7af2b1f693f87bdfebefa9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060899"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52795667"
 ---
 # <a name="sprecompile-event-class"></a>SP:Recompile, classe d'événements
   La classe d'événements SP:Recompile indique qu'une procédure stockée, un déclencheur ou une fonction définie par l'utilisateur a été compilé. Les recompilations signalées par cette classe d'événements se produisent au niveau de l'instruction.  
@@ -35,8 +34,8 @@ ms.locfileid: "48060899"
 |ClientProcessID|`int`|ID affecté par l'ordinateur hôte au processus dans lequel s'exécute l'application cliente. Cette colonne de données est remplie si le client fournit l'ID du processus.|9|Oui|  
 |DatabaseID|`int`|ID de la base de données dans laquelle la procédure stockée est en cours d'exécution. Déterminez la valeur pour une base de données à l'aide de la fonction DB_ID.|3|Oui|  
 |DatabaseName|`nvarchar`|Nom de la base de données dans laquelle la procédure stockée est en cours d'exécution.|35|Oui|  
-|EventClass|`int`|Type d’événement = 37.|27|non|  
-|EventSequence|`int`|Séquence d'un événement donné au sein de la demande.|51|non|  
+|EventClass|`int`|Type d’événement = 37.|27|Non|  
+|EventSequence|`int`|Séquence d'un événement donné au sein de la demande.|51|Non|  
 |EventSubClass|`int`|Type de sous-classe d'événements. Indique la raison de la recompilation.<br /><br /> 1 = Schéma modifié<br /><br /> 2 = Statistiques modifiées<br /><br /> 3 = Recompiler DNR<br /><br /> 4 = Option Set modifiée<br /><br /> 5 = Table temporaire modifiée<br /><br /> 6 = Ensemble de lignes distant modifié<br /><br /> 7 = Autorisations de recherche modifiées<br /><br /> 8 = Environnement de notification de requête modifié<br /><br /> 9 = Vue MPI modifiée<br /><br /> 10 = Options de curseur modifiées<br /><br /> 11 = Avec option de recompilation|21|Oui|  
 |GroupID|`int`|ID du groupe de charges de travail où l'événement Trace SQL se déclenche.|66|Oui|  
 |HostName|`nvarchar`|Nom de l'ordinateur sur lequel le client est exécuté. La colonne de données est remplie si le client fournit le nom de l'hôte. Pour déterminer le nom de l'hôte, utilisez la fonction HOST_NAME.|8|Oui|  
@@ -52,7 +51,7 @@ ms.locfileid: "48060899"
 |ObjectType|`int`|Valeur représentant le type de l'objet qui intervient dans l'événement. Pour plus d’informations, consultez [Colonne d’événements de trace ObjectType](objecttype-trace-event-column.md).|28|Oui|  
 |Offset|`int`|Décalage de début de l'instruction dans la procédure stockée ou le traitement qui a provoqué la recompilation.|61|Oui|  
 |RequestID|`int`|ID de la demande contenant l'instruction.|49|Oui|  
-|ServerName|`nvarchar`|Nom de l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracée.|26|non|  
+|ServerName|`nvarchar`|Nom de l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracée.|26|Non|  
 |SessionLoginName|`nvarchar`|Nom de connexion de l'utilisateur à l'origine de la session. Par exemple, si vous vous connectez à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en utilisant le nom Connexion1 et que vous exécutez une instruction en tant que Connexion2, SessionLoginName affiche Connexion1 et LoginName, Connexion2. Cette colonne affiche à la fois les connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et Windows.|64|Oui|  
 |SPID|`int`|ID de la session au cours de laquelle l'événement s'est produit.|12|Oui|  
 |SqlHandle|`varbinary`|Hachage 64 bits basé sur le texte d'une requête ad hoc ou sur l'ID de base de données et d'objet d'un objet SQL. Cette valeur peut être passée à sys.dm_exec_sql_text pour récupérer le texte SQL associé.|63|Oui|  

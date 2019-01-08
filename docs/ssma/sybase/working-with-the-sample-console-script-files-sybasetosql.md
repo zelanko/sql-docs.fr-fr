@@ -12,12 +12,12 @@ ms.assetid: ef221118-b442-4ca6-9409-6ee1d9f8d948
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 1c638a220aa423f9e30c1ef0fb746dd56a77d2a2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4a87b213731ac0b8cb1b76eb87b1997f86157c6c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798127"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52411076"
 ---
 # <a name="working-with-the-sample-console-script-files-sybasetosql"></a>Utilisation des exemples de fichiers de script de console (SybaseToSQL)
 Quelques exemples de fichiers ont été fournis, ainsi que le produit pour la référence de l’utilisateur et l’utilisation. Cette section décrit la façon de personnaliser facilement ces scripts en fonction des besoins des utilisateurs finaux.  
@@ -96,7 +96,7 @@ Les fichiers de script de console exemple suivants couvrant différents scénari
   
     **Attribute**  
   
-    `object-name`: Permet de spécifier la base de données source / nom qui nécessite d’être converti de l’objet. Vérifiez que le correspondant `object-type` est modifié en fonction du type d’objet qui est spécifié dans le `object-name`  
+    `object-name`: Spécifiez la base de données source / nom qui nécessite d’être converti de l’objet. Vérifiez que le correspondant `object-type` est modifié en fonction du type d’objet qui est spécifié dans le `object-name`  
   
     **Nom de la commande**  
   

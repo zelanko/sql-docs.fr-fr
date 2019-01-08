@@ -13,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: ff3f6c31389622dc424c42e06bfa78477c70cde2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6b2a17f1fd57b70dbee056e66a76c0416b0a25c1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47769367"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533572"
 ---
 # <a name="sysdmpdwnodes-transact-sql"></a>Sys.dm_pdw_nodes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47769367"
 |Type|**nvarchar(32)**|Type du nœud.|« COMPUTE », « CONTRÔLE », « MANAGEMENT »|  
 |NAME|**nvarchar(32)**|Nom logique du nœud.|N’importe quelle chaîne de longueur appropriée.|  
 |address|**nvarchar(32)**|Adresse IP de ce nœud.|Dans le format [0-255]. 0-255. 0-255. 0-255.|  
-|is_passive|**Int**|Indique si la machine virtuelle en cours d’exécution du nœud est en cours d’exécution sur le serveur affecté ou qu’il a basculé vers le serveur de secours.|0 – machine virtuelle du nœud est en cours d’exécution sur le serveur d’origine.<br /><br /> 1 – machine virtuelle du nœud est en cours d’exécution sur le serveur de secours.|  
+|is_passive|**Int**|Indique si la machine virtuelle en cours d’exécution du nœud est en cours d’exécution sur le serveur affecté ou qu’il a basculé vers le serveur de secours.|0 - machine virtuelle du nœud est en cours d’exécution sur le serveur d’origine.<br /><br /> 1 - machine virtuelle du nœud est en cours d’exécution sur le serveur de secours.|  
 |région|**nvarchar(32)**|La région où le nœud est en cours d’exécution.|'PDW », « HDINSIGHT »|  
   
 ## <a name="see-also"></a>Voir aussi  

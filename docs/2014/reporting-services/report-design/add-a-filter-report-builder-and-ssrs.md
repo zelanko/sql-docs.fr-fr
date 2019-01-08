@@ -11,12 +11,12 @@ ms.assetid: 10ae54e7-0e8a-4dff-995d-05516c51d076
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 1df28dfd9e260f09da8eabcc6613e82e8a720e72
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d258a21fe4e6e0be3f0cf33230d6e8c5928780b1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086889"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516560"
 ---
 # <a name="add-a-filter-report-builder-and-ssrs"></a>Ajouter un filtre (Générateur de rapports et SSRS)
   Ajoutez un filtre à un dataset, une région de données ou un groupe lorsque vous souhaitez inclure ou exclure des valeurs spécifiques pour des calculs ou l'affichage. Les filtres sont appliqués dans un premier temps au moment de l'exécution sur le dataset, puis sur la région de données, puis sur le groupe, dans l'ordre de haut en bas des hiérarchies de groupe. Dans une table, une matrice ou une liste, les filtres des groupes de lignes, des groupes de colonnes et des groupes adjacents sont appliqués indépendamment. Dans un graphique, les filtres des groupes de catégories et des groupes de séries sont appliqués indépendamment.  
@@ -34,7 +34,7 @@ ms.locfileid: "48086889"
   
 1.  Ouvrez un rapport en mode **Conception** .  
   
-2.  Sur l’aire de conception, sélectionnez la région de données, puis cliquez avec le bouton droit sur *\<Propriétés de **région_de_données>***. Pour une jauge, sélectionnez **Propriétés du panneau de jauge**. La boîte de dialogue *\<***Propriétés de région_de_données>** s’ouvre.  
+2.  Sur l’aire de conception, sélectionnez la région de données, puis cliquez avec le bouton droit sur **Properties de** _\<région_de_données>_. Pour une jauge, sélectionnez **Propriétés du panneau de jauge**. La boîte de dialogue **Propriétés de** _\<région_de_données>_ s’ouvre.  
   
     > [!NOTE]  
     >  Dans une région de données de tableau matriciel, cliquez avec le bouton droit sur la cellule d’angle ou sur une poignée de ligne ou de colonne, puis cliquez sur **Propriétés du tableau matriciel**.  
@@ -132,6 +132,6 @@ ms.locfileid: "48086889"
  [Exemples d’expressions &#40;Générateur de rapports et SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Jauges &#40;Générateur de rapports et SSRS&#41;](gauges-report-builder-and-ssrs.md)   
  [Listes &#40;Générateur de rapports et SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [Graphiques &#40;Générateur de rapports et SSRS&#41;](charts-report-builder-and-ssrs.md)  
+ [Graphiques (Générateur de rapports et SSRS)](charts-report-builder-and-ssrs.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 4 : Créer des relations | Microsoft Docs'
+title: 'Leçon 4 : Créer des relations | Microsoft Docs'
 ms.date: 08/22/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,22 +9,22 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: bbddc0966729b93b2e9ac202966dff645c28c32c
-ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
+ms.openlocfilehash: 2cfa28b4fa5575fbdda06ed64f8f52994b596186
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42792029"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52411296"
 ---
-# <a name="lesson-4-create-relationships"></a>Leçon 4 : Créer des relations
+# <a name="lesson-4-create-relationships"></a>Leçon 4 : Créer des relations
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
 Dans cette leçon, vous allez vérifier les relations qui ont été créées automatiquement lorsque vous avez importé des données, et vous allez ajouter de nouvelles relations entre les tables. Une relation est une connexion entre deux tables qui établit le mode de corrélation des données dans les deux tables. Par exemple, la table DimProduct et la table DimProductSubcategory ont une relation basée sur le fait que chaque produit appartient à une sous-catégorie. Pour plus d’informations, consultez [relations](../analysis-services/tabular-models/relationships-ssas-tabular.md).
   
-Durée estimée pour effectuer cette leçon : **10 minutes**  
+Durée estimée pour effectuer cette leçon : **10 minutes**  
   
 ## <a name="prerequisites"></a>Prérequis  
-Cette rubrique fait partie d'un didacticiel de modélisation tabulaire, qui doit être suivi dans l'ordre. Avant d’effectuer les tâches de cette leçon, vous devez avoir terminé la leçon précédente : [leçon 3 : marquer en tant que Table de dates](../analysis-services/lesson-3-mark-as-date-table.md). 
+Cette rubrique fait partie d'un didacticiel de modélisation tabulaire, qui doit être suivi dans l'ordre. Avant d’effectuer les tâches de cette leçon, vous devez avoir terminé la leçon précédente : [Leçon 3 : Marquer en tant que Table de dates](../analysis-services/lesson-3-mark-as-date-table.md). 
   
 ## <a name="review-existing-relationships-and-add-new-relationships"></a>Examiner les relations existantes et ajouter de nouvelles relations  
 Lorsque vous avez importé des données à l’aide de l’Assistant Importation de Table, vous avez obtenu sept tables à partir de la base de données AdventureWorksDW. En règle générale, lorsque vous importez des données à partir d’une source relationnelle, les relations existantes sont importées automatiquement avec les données. Toutefois, avant de poursuivre la création de votre modèle, vous devez vérifier que les relations entre les tables ont été créées correctement. Pour ce didacticiel, vous allez également ajouter trois relations.  
@@ -41,7 +41,7 @@ Lorsque vous avez importé des données à l’aide de l’Assistant Importation
   
 2.  Cliquez sur la ligne pleine entre la **DimCustomer** table et le **DimGeography** table. La ligne pleine entre ces deux tables indique que cette relation est active, c.-à-d. qu'elle est utilisée par défaut lors du calcul des formules DAX.  
   
-    Notez que le **GeographyKey** colonne dans le **DimCustomer** table et le **GeographyKey** colonne dans le **DimGeography** table maintenant à la fois chacun s’affichent dans une zone. Cette émission, qu'il s’agit des colonnes utilisées dans la relation. Les propriétés de la relation apparaissent maintenant aussi dans la fenêtre **Propriétés** .  
+    Notez que le **GeographyKey** colonne dans le **DimCustomer** table et le **GeographyKey** colonne dans le **DimGeography** table maintenant à la fois chacun s’affichent dans une zone. Cette émission, qu'il s’agit des colonnes utilisées dans la relation. Propriétés de la relation apparaissent maintenant aussi dans le **propriétés** fenêtre.  
   
     > [!TIP]  
     > Outre l’utilisation du Générateur de modèles dans la vue de diagramme, vous pouvez également utiliser la boîte de dialogue Gérer les relations pour afficher les relations entre toutes les tables dans un format tabulaire. Avec le bouton droit **relations** dans l’Explorateur de modèles tabulaires, puis cliquez sur **gérer les relations**. La boîte de dialogue Gérer les relations affiche les relations qui ont été créées automatiquement lorsque vous avez importé des données.  
@@ -56,7 +56,7 @@ Lorsque vous avez importé des données à l’aide de l’Assistant Importation
     |Oui|**FactInternetSales [CustomerKey]**|**DimCustomer [CustomerKey]**|  
     |Oui|**FactInternetSales [ProductKey]**|**DimProduct [ProductKey]**|  
   
-    Si une des relations dans le tableau ci-dessus est manquante, vérifiez que votre modèle comprend les tables suivantes : DimCustomer, DimDate, DimGeography, DimProduct, DimProductCategory, DimProductSubcategory et FactInternetSales. Si des tables provenant de la même connexion de source de données sont importées à des moments différents, aucune relation entre ces tables ne sera créée et les relations devront être créées manuellement.  
+    Si une des relations dans le tableau ci-dessus est manquante, vérifiez que votre modèle inclut les tableaux suivants : DimCustomer, DimDate, DimGeography, DimProduct, DimProductCategory, DimProductSubcategory et FactInternetSales. Si des tables provenant de la même connexion de source de données sont importées à des moments différents, aucune relation entre ces tables ne sera créée et les relations devront être créées manuellement.  
 
 ### <a name="take-a-closer-look"></a>Regardez plus en détail
 Dans la vue de diagramme, vous remarquerez une flèche, un astérisque et un nombre sur les lignes qui indiquent la relation entre les tables.
@@ -91,7 +91,7 @@ Dans certains cas, vous devrez peut-être créer des relations supplémentaires 
      ![en tant que-tabulaire-lesson4-newinactive](../analysis-services/media/as-tabular-lesson4-newinactive.png)
   
 ## <a name="whats-next"></a>Quelle est l’étape suivante ?
-Accédez à la leçon suivante : [leçon 5 : créer des colonnes calculées](../analysis-services/lesson-5-create-calculated-columns.md).
+Accédez à la leçon suivante : [Leçon 5 : Créer des colonnes calculées](../analysis-services/lesson-5-create-calculated-columns.md).
   
   
   

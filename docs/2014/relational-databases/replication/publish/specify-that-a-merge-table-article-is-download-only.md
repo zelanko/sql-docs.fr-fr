@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - merge replication [SQL Server replication], download-only articles
@@ -15,12 +14,12 @@ ms.assetid: 14839cec-6dbf-49c2-aa27-56847b09b4db
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 694644e51b134c0063c0162b163b83e94e53354a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5594c811642225336586c8bce040f7f69724cadb
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144999"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52756191"
 ---
 # <a name="specify-that-a-merge-table-article-is-download-only"></a>Spécifier qu'un article de table de fusion est en téléchargement seul
   Cette rubrique explique comment définir un article de table de fusion en téléchargement seul dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Les articles en téléchargement uniquement sont conçus pour les applications dont les données ne sont pas mises à jour au niveau des Abonnés. Pour plus d’informations, consultez [Optimiser les performances de la réplication de fusion avec les articles en téléchargement seul](../merge/optimize-merge-replication-performance-with-download-only-articles.md).  

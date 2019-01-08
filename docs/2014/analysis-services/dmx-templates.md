@@ -11,12 +11,12 @@ ms.assetid: 2a577e52-821d-4bd3-ba35-075a6be285c9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4332d78fef98d653029d0913c6b7da8cfe5a75f0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7e3bee7fa85c98e50fdb940d2dfb23f76f3a462c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48048254"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504695"
 ---
 # <a name="dmx-templates"></a>Modèles DMX
   Les modèles d'exploration de données vous aident à créer rapidement des requêtes sophistiquées. Bien que la syntaxe générale des requêtes DMX soit bien documentée, l'utilisation de modèles facilite leur création car il suffit de cliquer et pointer sur les arguments et les sources de données.  
@@ -29,7 +29,7 @@ ms.locfileid: "48048254"
   
 3.  Dans la page, **sélectionner un modèle**, cliquez sur **avancé**.  
   
-     **Conseil :** si vous vous apprêtez à créer une requête de prédiction sur un modèle, vous pouvez tout d’abord sélectionner le modèle, puis cliquez sur **avancé**, pour préremplir le modèle avec le nom du modèle.  
+     **Conseil :** Si vous vous apprêtez à créer une requête de prédiction sur un modèle, vous pouvez tout d’abord sélectionner le modèle, puis cliquez sur **avancé**, pour préremplir le modèle avec le nom du modèle.  
   
 4.  Dans le **éditeur de requêtes d’avancé d’exploration de données**, cliquez sur **modèles DMX**, puis sélectionnez un modèle.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "48048254"
   
  **Créer**  
   
- Utilisez ces modèles pour créer des modèles ou des structures de données personnalisés. Il n'y a pas de limite aux modèles pris en charge par les Assistants : utilisez tous les algorithmes d'exploration de données pris en charge par l'instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] à laquelle vous êtes connecté, y compris les algorithmes de plug-in.  
+ Utilisez ces modèles pour créer des modèles ou des structures de données personnalisés. Vous n’êtes pas limité aux modèles pris en charge par les Assistants, vous pouvez utiliser n’importe quel algorithme d’exploration de données pris en charge par l’instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] auquel vous êtes connecté, y compris les algorithmes de plug-in.  
   
 -   Modèle de Mining  
   
@@ -123,7 +123,7 @@ ms.locfileid: "48048254"
   
 -   Effectuer l'apprentissage d'une structure d'exploration de données  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  En fonction du modèle vous utilisez, vous pouvez avoir besoin d'autorisations administratives pour accéder au serveur [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] et exécuter la requête.  
   
 ## <a name="see-also"></a>Voir aussi  

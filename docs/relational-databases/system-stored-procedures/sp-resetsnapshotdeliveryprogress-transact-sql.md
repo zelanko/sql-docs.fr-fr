@@ -5,8 +5,7 @@ ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_resetsnapshotdeliveryprogress
@@ -17,12 +16,12 @@ ms.assetid: 5df7d86b-d343-4d9b-88b1-74429ed092e6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9685aa789f0539e9a5720a78ec2180987aac9d4a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ec8d4086d1733d91692565d4d6ff112b8f264d35
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47685637"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52773711"
 ---
 # <a name="spresetsnapshotdeliveryprogress-transact-sql"></a>sp_resetsnapshotdeliveryprogress (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ sp_resetsnapshotdeliveryprogress [ [ @verbose_level = ] verbose_level ]
 ## <a name="remarks"></a>Notes  
  **sp_resetsnapshotdeliveryprogress** supprime toutes les lignes dans le **MSsnapshotdeliveryprogress** table. Elle supprime efficacement toutes les métadonnées laissées sur la base de données d'abonnement par les progressions précédentes des processus de livraison d'instantanés.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Seuls les membres de la **sysadmin** rôle serveur fixe ou le **db_owner** rôle de base de données fixe peuvent exécuter **sp_resetsnapshotdeliveryprogress**.  
   
 ## <a name="see-also"></a>Voir aussi  

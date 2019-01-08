@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xevents
 ms.topic: conceptual
 ms.assetid: 16849e38-d3fb-414d-8dcb-797b5ffce6ee
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ef82f1aafddd60eeaeae3abd7ec65b51e209670f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d44ab9256367ceb9883b55bb9b01ad67e14ded32
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050205"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52801291"
 ---
 # <a name="manage-event-sessions-in-the-object-explorer"></a>Gérer les sessions d'événements dans l'Explorateur d'objets
   Cette rubrique décrit les actions effectuées dans l' **Explorateur d'objets** qui affectent les événements étendus :  
@@ -83,7 +82,7 @@ STATE = STOP
 ## <a name="import-an-extended-events-session-template"></a>Importer un modèle de session d'événements étendus  
  À l'aide de l' **Explorateur d'objets**, vous pouvez importer un modèle pour une session d'événements étendus. Par exemple, vous pouvez souhaiter procéder ainsi pour créer une session a partir d'un modèle qui a été exporté à partir d'une autre instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Pour importer une session événements étendus, vous devez disposer nécessaires `ALTER ANY EVENT SESSION` autorisations.  
+ Pour importer une session d'événements étendus, vous devez disposer des autorisations `ALTER ANY EVENT SESSION` nécessaires.  
   
  Avant d'importer un fichier modèle, vérifiez que le fichier provient d'une source approuvée. Les fichiers modèles doivent être enregistrés dans un emplacement qui utilise le système de fichiers NTFS et où l'accès est limité aux utilisateurs qui sont autorisés à afficher les informations.  
   
@@ -97,7 +96,7 @@ STATE = STOP
   
 4.  Développez la zone déroulante **Modèle** .  
   
-5.  Cliquez sur **\<File From…> Open**, puis recherchez la session (fichier XML) à importer.  
+5.  Cliquez sur **\<File From ...> Open**, puis recherchez la session (fichier XML) à importer.  
   
  La session apparaît sous le nœud **Sessions** . Par défaut, la session n'est pas démarrée.  
   
@@ -120,7 +119,7 @@ STATE = STOP
  Vous pouvez accéder à [!INCLUDE[tsql](../../includes/tsql-md.md)] pour une session d'événements étendus existante en cliquant sur le nom de la session, en sélectionnant **Générer un script de la session en tant que**, puis sélectionnant **Créer vers**.  
   
 ## <a name="delete-an-extended-events-session"></a>Supprimer une session d'événements étendus  
- Vous pouvez supprimer une session d'événements étendus :  
+ Vous pouvez supprimer une session d'événements étendus :  
   
 -   Dans l'Éditeur de requête, à l'aide de `DROP EVENT SESSION`.  
   

@@ -10,23 +10,23 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 9dcc6a90-0add-42c2-815b-862e4e2a21ac
-ms.openlocfilehash: bf1d3b2b494377eb964f4a30ea97a48bd1dfcff7
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.openlocfilehash: 37cd2269d6d8fe413b730a111ad0a5f604ed8994
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51269523"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52408876"
 ---
 # <a name="sql-server-on-linux"></a>SQL Server sur Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 ::: moniker range="= sql-server-2017 || = sqlallproducts-allversions"
-À partir de SQL Server 2017, SQL Server s’exécute sur Linux. C'est le même moteur de base de données que MSSQL Server, avec de nombreuses fonctionnalités et des services équivalents, quel que soit votre système d’exploitation.
+À partir de SQL Server 2017, SQL Server s’exécute sur Linux. Il est le même moteur de base de données SQL Server, avec nombreux services, quel que soit votre système d’exploitation des fonctionnalités similaires.
 ::: moniker-end
 
 ::: moniker range=">= sql-server-ver15 || >= sql-server-linux-ver15"
-Version préliminaire de SQL Server 2019 s’exécute sur Linux. C'est le même moteur de base de données que MSSQL Server, avec de nombreuses fonctionnalités et des services équivalents, quel que soit votre système d’exploitation. Pour en savoir plus sur cette version, consultez [Nouveautés de la version préliminaire de SQL Server 2019 pour Linux](../sql-server/what-s-new-in-sql-server-ver15.md#sqllinux).
+Version préliminaire de SQL Server 2019 s’exécute sur Linux. Il est le même moteur de base de données SQL Server, avec nombreux services, quel que soit votre système d’exploitation des fonctionnalités similaires. Pour en savoir plus sur cette version, consultez [Nouveautés de la version préliminaire de SQL Server 2019 pour Linux](../sql-server/what-s-new-in-sql-server-ver15.md#sqllinux).
 ::: moniker-end
 
 ::: moniker range="= sql-server-2017"

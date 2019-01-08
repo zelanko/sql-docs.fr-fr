@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ed672aedc62c9521fe475589de0a7aa9ac935614
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 715d3b06ed3017a00852f58c618e2ea0b0de24d8
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38984384"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52403344"
 ---
 # <a name="supplemental-lesson---implement-dynamic-security-by-using-row-filters"></a>Leçon supplémentaire - implémenter la sécurité dynamique à l’aide de filtres de lignes
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -23,11 +23,11 @@ Dans cette leçon supplémentaire, vous allez créer un rôle supplémentaire qu
   
 Pour implémenter la sécurité dynamique, vous devez ajouter une table à votre modèle qui contient les noms des utilisateurs Windows qui peuvent créer une connexion au modèle comme source de données et parcourir les objets de modèle et les données. Le modèle que vous allez créer à l'aide de ce didacticiel est dans le contexte d'Adventure Works Corp. Toutefois, pour pouvoir effectuer cette leçon, vous devez ajouter une table qui contient les utilisateurs de votre propre domaine. Vous n'aurez pas besoin de mots de passe pour les noms d'utilisateurs qui seront ajoutés. Pour créer une table EmployeeSecurity, avec un petit groupe d’utilisateurs de votre propre domaine, vous allez utiliser la fonctionnalité Coller, le collage des données d’employé à partir d’une feuille de calcul Excel. Dans la réalité, la table contenant les noms d'utilisateurs à ajouter à un modèle utiliserait une table provenant d'une base de données actuelle comme source de données (une table dimEmployee réelle, par exemple).  
   
-Pour implémenter la sécurité dynamique, vous allez utiliser deux nouvelles fonctions DAX : la [fonction USERNAME (DAX)](http://msdn.microsoft.com/22dddc4b-1648-4c89-8c93-f1151162b93f) et la [fonction LOOKUPVALUE (DAX)](http://msdn.microsoft.com/73a51c4d-131c-4c33-a139-b1342d10caab). Ces fonctions, appliquées dans une formule de filtre de lignes, sont définies dans un nouveau rôle. À l’aide de la fonction LOOKUPVALUE, la formule spécifie une valeur à partir de la table EmployeeSecurity, puis passe cette valeur à la fonction USERNAME, qui spécifie le nom d’utilisateur de l’utilisateur connecté appartient à ce rôle. L'utilisateur peut ensuite parcourir uniquement les données spécifiées par les filtres des lignes du rôle. Dans ce scénario, vous allez spécifier que les commerciaux peuvent uniquement parcourir les données de ventes Internet pour les secteurs de vente dont ils sont membres.  
+Pour implémenter la sécurité dynamique, vous allez utiliser deux nouvelles fonctions DAX : [Fonction USERNAME (DAX)](http://msdn.microsoft.com/22dddc4b-1648-4c89-8c93-f1151162b93f) et [LOOKUPVALUE, fonction (DAX)](http://msdn.microsoft.com/73a51c4d-131c-4c33-a139-b1342d10caab). Ces fonctions, appliquées dans une formule de filtre de lignes, sont définies dans un nouveau rôle. À l’aide de la fonction LOOKUPVALUE, la formule spécifie une valeur à partir de la table EmployeeSecurity, puis passe cette valeur à la fonction USERNAME, qui spécifie le nom d’utilisateur de l’utilisateur connecté appartient à ce rôle. L’utilisateur peut alors parcourir uniquement les données spécifiées par les filtres de lignes du rôle. Dans ce scénario, vous allez spécifier que les commerciaux peuvent uniquement parcourir les données de ventes Internet pour les secteurs de vente dont ils sont membres.  
   
 Pour pouvoir effectuer cette leçon supplémentaire, vous allez accomplir une succession de tâches. Les tâches qui sont propres à ce scénario de modèle tabulaire Adventure Works, et qui ne s'appliqueraient pas forcément à un scénario réel, sont identifiées en conséquence. Chaque tâche inclut des informations supplémentaires qui en décrivent l'objectif.  
   
-Durée estimée pour effectuer cette leçon : **30 minutes**  
+Durée estimée pour effectuer cette leçon : **30 minutes**  
   
 ## <a name="prerequisites"></a>Prérequis  
 Cette leçon supplémentaire fait partie d’un didacticiel de modélisation tabulaire, qui doit être suivi dans l’ordre. Avant d'effectuer les tâches de cette leçon supplémentaire, vous devez avoir terminé toutes les leçons précédentes.  
@@ -41,7 +41,7 @@ Pour implémenter la sécurité dynamique pour ce scénario Adventure Works, vou
   
 2.  Dans la boîte de dialogue **Connexions existantes** , vérifiez que la connexion à la source de données **Adventure Works DB from SQL** est sélectionnée, puis cliquez sur **Ouvrir**.  
   
-    Si la boîte de dialogue Informations d'identification de l'emprunt d'identité s'affiche, tapez les informations d'identification d'emprunt d'identité que vous avez utilisées dans la leçon 2 : Ajouter des données.  
+    Si la boîte de dialogue informations d’identification d’emprunt d’identité s’affiche, tapez les informations d’identification d’emprunt d’identité que vous avez utilisé dans la leçon 2 : Ajouter des données.  
   
 3.  Dans la page **Choisir comment importer les données** , laissez **Sélectionner les données à importer dans une liste de tables et de vues** sélectionné, puis cliquez sur **Suivant**.  
   
@@ -115,7 +115,7 @@ Dans cette tâche, vous allez masquer la table EmployeeSecurity, empêchant de s
 Dans cette tâche, vous allez créer un rôle d'utilisateur. Ce rôle inclut un filtre de lignes définissant les lignes de la table DimSalesTerritory sont visibles aux utilisateurs. Le filtre est ensuite appliqué dans la direction de la relation un-à-plusieurs à toutes les autres tables associées à DimSalesTerritory. Vous allez également appliquer un filtre simple qui sécurise la table EmployeeSecurity entière d’être interrogée par tout utilisateur qui est membre du rôle.  
   
 > [!NOTE]  
-> Le rôle Sales Employees by Territory que vous créez dans cette leçon autorise les membres à parcourir (ou à interroger) uniquement les données de ventes pour le secteur de vente auquel ils appartiennent. Si vous ajoutez un utilisateur en tant que membre pour les employés des ventes par rôle Territory qui existe également comme un membre d’un rôle créé dans [leçon 11 : créer des rôles](../analysis-services/lesson-11-create-roles.md), vous obtiendrez une combinaison d’autorisations. Lorsqu'un utilisateur est membre de plusieurs rôles, les autorisations et les filtres de lignes définis pour chaque rôle se cumulent. Autrement dit, l'utilisateur aura plus d'autorisations déterminées par la combinaison des rôles.  
+> Le rôle Sales Employees by Territory que vous créez dans cette leçon autorise les membres à parcourir (ou à interroger) uniquement les données de ventes pour le secteur de vente auquel ils appartiennent. Si vous ajoutez un utilisateur en tant que membre pour les employés des ventes par rôle Territory qui existe également comme un membre d’un rôle créé dans [leçon 11 : Créer des rôles](../analysis-services/lesson-11-create-roles.md), vous obtiendrez une combinaison d’autorisations. Lorsqu'un utilisateur est membre de plusieurs rôles, les autorisations et les filtres de lignes définis pour chaque rôle se cumulent. Autrement dit, l'utilisateur aura plus d'autorisations déterminées par la combinaison des rôles.  
   
 #### <a name="to-create-a-sales-employees-by-territory-user-role"></a>Pour créer un rôle d'utilisateur Sales Employees by Territory  
   
@@ -186,6 +186,6 @@ Dans cette tâche, vous utiliserez l’analyser dans la fonctionnalité d’Exce
     Cet utilisateur ne peut pas parcourir ou interroger les données des ventes Internet pour les secteurs autres que celui auquel il appartient, car le filtre de lignes défini pour la table Sales Territory dans le rôle d'utilisateur Sales Employees by Territory sécurise efficacement toutes les données associées à d'autres secteurs de vente.  
   
 ## <a name="see-also"></a>Voir aussi  
-[Fonction USERNAME (DAX)](http://msdn.microsoft.com/22dddc4b-1648-4c89-8c93-f1151162b93f)  
-[LOOKUPVALUE, fonction (DAX)](http://msdn.microsoft.com/73a51c4d-131c-4c33-a139-b1342d10caab)  
+[fonction USERNAME (DAX)](http://msdn.microsoft.com/22dddc4b-1648-4c89-8c93-f1151162b93f)  
+[fonction LOOKUPVALUE (DAX)](http://msdn.microsoft.com/73a51c4d-131c-4c33-a139-b1342d10caab)  
 [Fonction CUSTOMDATA (DAX)](http://msdn.microsoft.com/58235ad8-226c-43cc-8a69-5a52ac19dd4e)  

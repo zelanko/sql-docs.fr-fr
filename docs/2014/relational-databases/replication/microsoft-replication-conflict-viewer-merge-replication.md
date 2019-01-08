@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.replconflictviewer.cvmerge.f1
@@ -13,17 +12,17 @@ ms.assetid: bfef5e21-ac04-4bc5-a55e-595421e34923
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5ac6813542099b955b7430309fe6629f6a5648af
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e28a5077057c9a02a3b45de6a88180eab5c87b2b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48156069"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52756231"
 ---
 # <a name="microsoft-replication-conflict-viewer-merge-replication"></a>Outil de résolution des conflits de réplication Microsoft (réplication de fusion)
   L'outil de résolution des conflits de réplication permet d'afficher et de résoudre les conflits qui se sont produits pendant la synchronisation de la réplication. Des conflits ont lieu lorsque les mêmes données sont modifiées sur deux serveurs différents, par exemple sur un Éditeur et un Abonné ou sur deux Abonnés différents. La réplication résout automatiquement les conflits à l'aide du résolveur de conflits sélectionné lors de la création de l'article. Cependant, l'outil de résolution des conflits permet de choisir une résolution différente des conflits lorsque c'est nécessaire. Les conflits suivants peuvent se produire :  
   
--   Conflits de mise à jour. Les conflits de mise à jour se produisent lorsque les mêmes données sont modifiées dans deux emplacements. L'un « gagne », l'autre « perd ». Vous avez le choix entre conserver les données existantes (les gagnantes) et remplacer les données existantes par celles qui sont en conflit (les perdantes), ou fusionner les données gagnantes et perdantes et mettre à jour les données existantes.  
+-   Conflits de mise à jour. Les conflits de mise à jour se produisent lorsque les mêmes données sont modifiées dans deux emplacements. L'un « gagne », l'autre « perd ». Vous avez le choix entre conserver les données existantes (les gagnantes) et remplacer les données existantes par celles qui sont en conflit (les perdantes), ou fusionner les données gagnantes et perdantes et mettre à jour les données existantes.  
   
 -   Conflits d'insertion. Les conflits d'insertion se produisent lorsqu'une ligne est insérée à un emplacement qui ne respecte pas une règle de cohérence des données lorsqu'elles sont fusionnées avec des modifications à d'autres emplacements. Vous avez le choix entre conserver les données existantes (les gagnantes) et remplacer les données existantes par celles qui sont en conflit (les perdantes), ou fusionner les données gagnantes et perdantes et mettre à jour les données existantes.  
   
@@ -72,7 +71,7 @@ ms.locfileid: "48156069"
  Sélectionnez cette option pour afficher les cinq premières colonnes et toute colonne qui comporte des conflits. Cette option est utile lorsque la table comporte de nombreuses colonnes si vous voulez afficher uniquement les colonnes les plus pertinentes pour la résolution du conflit. Les cinq premières colonnes figurent toujours dans cette vue du fait que les champs qui identifient une ligne (par exemple la clé primaire ou les noms des champs) se trouvent souvent parmi les premières colonnes de la table.  
   
  **Informations sur la colonne** (**…**)  
- Affiche les informations sur la colonne : **Nom de la table**, **Nom de la colonne**, **Type de données**et **Valeur de la colonne**. Le champ**Valeur de la colonne** est modifiable à moins que la valeur ne soit affichée en lecture seule.  
+ Affiche les informations sur la colonne : **Nom de la table**, **nom de colonne**, **Type de données**, et **valeur de la colonne**. Le champ**Valeur de la colonne** est modifiable à moins que la valeur ne soit affichée en lecture seule.  
   
  **Soumettre le gagnant**  
  Conserve la ligne que l'outil de résolution des conflits a déterminée gagnante. Vous pouvez modifier la valeur de n'importe quelle colonne qui n'est pas affichée en lecture seule avant de cliquer sur ce bouton.  
@@ -85,6 +84,6 @@ ms.locfileid: "48156069"
   
 ## <a name="see-also"></a>Voir aussi  
  [Afficher et résoudre les conflits de données pour les publications de fusion &#40;SQL Server Management Studio&#41;](view-and-resolve-data-conflicts-for-merge-publications.md)   
- [Détection et résolution des conflits de réplication de fusion avancée](merge/advanced-merge-replication-conflict-detection-and-resolution.md)  
+ [Advanced Merge Replication Conflict Detection and Resolution](merge/advanced-merge-replication-conflict-detection-and-resolution.md)  
   
   

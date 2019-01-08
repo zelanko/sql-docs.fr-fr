@@ -16,12 +16,12 @@ ms.assetid: 084055a3-5fd3-43f3-b620-ac6afab42a3d
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6fbc636a4dcf67b6bdeaa17088405ffe079e50d9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 82e7d14acc5117da28b608e742ad34afa5b652a5
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096959"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52420330"
 ---
 # <a name="consolidated-permissions-master-data-services"></a>Autorisations consolidées (services de données de référence)
   Les autorisations consolidées s'appliquent aux valeurs d'attribut pour tous les membres consolidés d'une entité.  
@@ -41,13 +41,13 @@ ms.locfileid: "48096959"
 |**Refuser**|Les membres consolidés pour l'entité ne sont pas affichés.|  
   
 ## <a name="attribute-permissions"></a>Autorisations d'attribut  
- Les autorisations d'attribut s'appliquent aux valeurs de l'attribut pour l'entité spécifique. Les utilisateurs avec uniquement des autorisations d'attribut ne peuvent pas ajouter ni supprimer des membres.  
+ Les autorisations d’attribut s’appliquent aux valeurs de l’attribut pour l’entité spécifique. Les utilisateurs avec uniquement des autorisations d'attribut ne peuvent pas ajouter ni supprimer des membres.  
   
 |Autorisation|Description|  
 |----------------|-----------------|  
 |**Lecture seule**|L'attribut est affiché, mais l'utilisateur ne peut pas modifier les valeurs d'attribut.|  
 |**Update**|L'attribut est affiché et l'utilisateur peut modifier les valeurs d'attribut.|  
-|**Refuser**|L'attribut n'est pas affiché.<br /><br /> Remarque : vous ne pouvez pas refuser explicitement l’accès aux attributs Name et Code.|  
+|**Refuser**|L'attribut n'est pas affiché.<br /><br /> Remarque : Vous ne pouvez pas refuser explicitement l'accès aux attributs Name et Code.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Affecter des autorisations d’objet de modèle &#40;Master Data Services&#41;](assign-model-object-permissions-master-data-services.md)   

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 ms.assetid: ea1171da-f50e-4f16-bedc-5e468a46477f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d7dbc86ff32e0c9ba6e77558a713cda2598221e0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 67d74db6faf9b40ad323ed2948c2c0a596a63016
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48126119"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52816061"
 ---
 # <a name="install-distributed-replay-from-the-command-prompt"></a>Installer Distributed Replay à partir de l'invite de commandes
   L'installation d'une nouvelle instance de Distributed Replay à partir de l'invite de commandes vous permet de spécifier les composants à installer et la façon dont ils doivent être configurés. L'installation par l'invite de commandes prend en charge l'installation, la réparation, la mise à niveau et la désinstallation des composants Distributed Replay. Lors de l'installation à partir de l'invite de commandes, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge le mode silencieux complet via le paramètre /Q.  
@@ -40,16 +39,16 @@ ms.locfileid: "48126119"
   
 |Paramètre|Description|Valeurs prises en charge|  
 |---------------|-----------------|----------------------|  
-|/CTLRSVCACCOUNT<br /><br /> **Ce paramètre est facultatif**|Compte de service Distributed Replay Controller.|Vérifie le compte et le mot de passe|  
-|/CTLRSVCPASSWORD<br /><br /> **Ce paramètre est facultatif**|Mot de passe du compte de service Distributed Replay Controller.|Vérifie le compte et le mot de passe|  
+|/CTLRSVCACCOUNT<br /><br /> **Facultatif**|Compte de service Distributed Replay Controller.|Vérifie le compte et le mot de passe|  
+|/CTLRSVCPASSWORD<br /><br /> **Facultatif**|Mot de passe du compte de service Distributed Replay Controller.|Vérifie le compte et le mot de passe|  
 |/CTLRSTARTUPTYPE<br /><br /> **Ce paramètre est facultatif**|Type de démarrage pour le compte de service Distributed Replay Controller.|Automatic<br /><br /> Désactivé<br /><br /> Manuel|  
-|/CTLRUSERS<br /><br /> **Ce paramètre est facultatif**|Spécifiez les utilisateurs qui disposent d'autorisations pour le service Distributed Replay Controller.|Ensemble de chaînes de compte d'utilisateur utilisant «   » (espace) comme séparateur<br /><br /> **Important**: lorsque vous configurez le service Distributed Replay Controller, vous pouvez spécifier un ou plusieurs comptes d'utilisateurs qui seront utilisés pour exécuter les services Distributed Replay Client. Vous trouverez ci-dessous la liste des comptes pris en charge :<br /><br /> Compte d'utilisateur de domaine<br /><br /> Compte d'utilisateur local créé par l'utilisateur<br /><br /> Administrateur<br /><br /> Compte virtuel et Compte de service administré (MSA)<br /><br /> Services réseau, Services locaux et Système<br /><br /> <br /><br /> Les comptes de groupe (locaux ou de domaine) et autres comptes intégrés (comme Tout le monde) ne sont pas acceptés.|  
-|/CLTSVCACCOUNT<br /><br /> **Ce paramètre est facultatif**|Compte de service Distributed Replay Client.|Vérifie le compte et le mot de passe|  
-|/CLTSVCPASSWORD<br /><br /> **Ce paramètre est facultatif**|Mot de passe du compte du service Distributed Replay Client.|Vérifie le compte et le mot de passe|  
-|/CLTSTARTUPTYPE<br /><br /> **Ce paramètre est facultatif**|Type de démarrage du compte du service Distributed Replay Client.|Automatic<br /><br /> Désactivé<br /><br /> Manuel|  
-|/CLTCTLRNAME<br /><br /> **Ce paramètre est facultatif**|Nom de l'ordinateur avec lequel le client communique pour le service Distributed Replay Controller.||  
-|/CLTWORKINGDIR<br /><br /> **Ce paramètre est facultatif**|Répertoire de travail du service Distributed Replay Client.|Chemin d'accès valide|  
-|/CLTRESULTDIR<br /><br /> **Ce paramètre est facultatif**|Répertoire des résultats du service Distributed Replay Client.|Chemin d'accès valide|  
+|/CTLRUSERS<br /><br /> **Facultatif**|Spécifiez les utilisateurs qui disposent d'autorisations pour le service Distributed Replay Controller.|Ensemble de compte d’utilisateur à l’aide des chaînes « » (espace) comme séparateur<br /><br /> **Important**: Lorsque vous configurez le service Distributed Replay controller, vous pouvez spécifier un ou plusieurs comptes d’utilisateur qui seront utilisés pour exécuter les services Distributed Replay client. Vous trouverez ci-dessous la liste des comptes pris en charge :<br /><br /> Compte d'utilisateur de domaine<br /><br /> Compte d'utilisateur local créé par l'utilisateur<br /><br /> Administrateur<br /><br /> Compte virtuel et Compte de service administré (MSA)<br /><br /> Services réseau, Services locaux et Système<br /><br /> <br /><br /> Les comptes de groupe (locaux ou de domaine) et autres comptes intégrés (comme Tout le monde) ne sont pas acceptés.|  
+|/CLTSVCACCOUNT<br /><br /> **Facultatif**|Compte de service Distributed Replay Client.|Vérifie le compte et le mot de passe|  
+|/CLTSVCPASSWORD<br /><br /> **Facultatif**|Mot de passe du compte du service Distributed Replay Client.|Vérifie le compte et le mot de passe|  
+|/CLTSTARTUPTYPE<br /><br /> **Facultatif**|Type de démarrage du compte du service Distributed Replay Client.|Automatic<br /><br /> Désactivé<br /><br /> Manuel|  
+|/CLTCTLRNAME<br /><br /> **Facultatif**|Nom de l'ordinateur avec lequel le client communique pour le service Distributed Replay Controller.||  
+|/CLTWORKINGDIR<br /><br /> **Facultatif**|Répertoire de travail du service Distributed Replay Client.|Chemin d'accès valide|  
+|/CLTRESULTDIR<br /><br /> **Facultatif**|Répertoire des résultats du service Distributed Replay Client.|Chemin d'accès valide|  
   
 ### <a name="sample-syntax"></a>Exemple de syntaxe :  
  **Pour installer le composant contrôleur de Distributed Replay**  

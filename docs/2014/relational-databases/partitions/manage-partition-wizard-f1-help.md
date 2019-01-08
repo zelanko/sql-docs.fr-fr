@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: table-view-index
+ms.technology: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.managepartition.getstart.f1
@@ -23,12 +23,12 @@ ms.assetid: e2478d26-dea4-428d-98c5-aad2d2a30da8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e706a867c9192f4b447badc70db46dc4b0abc338
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6a19bfa830b8f57d8df891fb2cfea9435c2716b4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130669"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52781001"
 ---
 # <a name="manage-partition-wizard-f1-help"></a>Aide sur l'Assistant Gestion de partition via la touche F1
   Utilisez l’ **Assistant Gestion de partition** pour gérer et modifier des tables partitionnées existantes via le basculement de partition ou l’implémentation d’un scénario de fenêtre glissante. Cet Assistant peut faciliter la gestion de vos partitions et simplifier la migration régulière de données vers et à partir de vos tables.  
@@ -303,6 +303,6 @@ ms.locfileid: "48130669"
  ![Icône de flèche utilisée avec le lien Retour au début](../../2014-toc/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour au début")[Dans cette section](#Top)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Partitioned Tables and Indexes](partitioned-tables-and-indexes.md)  
+ [Tables et index partitionnés](partitioned-tables-and-indexes.md)  
   
   

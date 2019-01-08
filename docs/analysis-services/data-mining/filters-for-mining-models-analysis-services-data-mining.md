@@ -1,5 +1,5 @@
 ---
-title: Filtres pour les modèles d’exploration de données (Analysis Services - Exploration de données) | Documents Microsoft
+title: Filtres pour les modèles d’exploration de données (Analysis Services - Exploration de données) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 4c678773a77b9411eb1a51dbeb85b5eeb5f08b43
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 81592abc0224b2898b64d834857d23484750b326
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016756"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52410666"
 ---
 # <a name="filters-for-mining-models-analysis-services---data-mining"></a>Filtres pour les modèles d'exploration de données (Analysis Services - Exploration de données)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -54,14 +54,14 @@ ms.locfileid: "34016756"
 ### <a name="creating-filters-on-nested-tables"></a>Création de filtres sur les tables imbriquées  
  Si la vue de source de données contient des tables imbriquées, vous pouvez utiliser la deuxième boîte de dialogue de filtre pour créer des conditions sur les lignes des tables imbriquées.  
   
- Par exemple, si votre table de cas est liée aux clients et que la table imbriquée affiche les produits achetés par un client, vous pouvez créer un filtre pour les clients ayant acquis des articles particuliers, en utilisant la syntaxe suivante dans le filtre de table imbriquée : `[ProductName]=’Water Bottle’ OR ProductName=’Water Bottle Cage'`.  
+ Par exemple, si votre table de cas est liée aux clients et que la table imbriquée affiche les produits achetés par un client, vous pouvez créer un filtre pour les clients ayant acquis des articles particuliers, en utilisant la syntaxe suivante dans le filtre de table imbriquée : `[ProductName]='Water Bottle' OR ProductName='Water Bottle Cage'`.  
   
- Vous pouvez également filtrer sur l’existence d’une valeur particulière de la table imbriquée en utilisant les mots clés **EXISTS** ou **NOT EXISTS** et une sous-requête. Vous pouvez ainsi créer des conditions telles que `EXISTS (SELECT * FROM Products WHERE ProductName=’Water Bottle’)`. L’instruction `EXISTS SELECT(<subquery>)` retourne **true** si la table imbriquée contient au moins une ligne incluant la valeur, `Water Bottle`.  
+ Vous pouvez également filtrer sur l’existence d’une valeur particulière de la table imbriquée en utilisant les mots clés **EXISTS** ou **NOT EXISTS** et une sous-requête. Vous pouvez ainsi créer des conditions telles que `EXISTS (SELECT * FROM Products WHERE ProductName='Water Bottle')`. L’instruction `EXISTS SELECT(<subquery>)` retourne **true** si la table imbriquée contient au moins une ligne incluant la valeur, `Water Bottle`.  
   
- Vous pouvez combiner les conditions de la table de cas et les conditions de la table imbriquée. Par exemple, la syntaxe suivante inclut une condition sur la table de cas (`Age > 30` ), une sous-requête sur la table imbriquée (`EXISTS (SELECT * FROM Products)`) et plusieurs conditions sur la table imbriquée (`WHERE ProductName=’Milk’  AND Quantity>2`).  
+ Vous pouvez combiner les conditions de la table de cas et les conditions de la table imbriquée. Par exemple, la syntaxe suivante inclut une condition sur la table de cas (`Age > 30` ), une sous-requête sur la table imbriquée (`EXISTS (SELECT * FROM Products)`) et plusieurs conditions sur la table imbriquée (`WHERE ProductName='Milk'  AND Quantity>2`).  
   
 ```  
-(Age > 30 AND EXISTS (SELECT * FROM Products WHERE ProductName=’Milk’  AND Quantity>2) )  
+(Age > 30 AND EXISTS (SELECT * FROM Products WHERE ProductName='Milk'  AND Quantity>2) )  
 ```  
   
  Lorsque vous avez terminé de générer le filtre, le texte de filtre est analysé par [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], traduit en expression DMX, puis enregistré avec le modèle.  
@@ -93,7 +93,7 @@ ms.locfileid: "34016756"
 ### <a name="how-can-i-save-a-filter"></a>Comment puis-je enregistrer un filtre ?  
  L'expression de filtre est enregistrée en tant que script stocké avec la table imbriquée ou le modèle d'exploration de données associé. Si vous supprimez le texte de filtre, il ne peut être restauré qu'en recréant manuellement l'expression de filtre. Par conséquent, si vous créez des expressions de filtre complexes, vous devez créer une copie de sauvegarde du texte de filtre.  
   
-### <a name="why-cant-i-see-any-effects-from-the-filter"></a>Pourquoi le filtre n'a aucun effet ?  
+### <a name="why-cant-i-see-any-effects-from-the-filter"></a>Pourquoi ne puis-je pas voir tous les effets du filtre ?  
  Chaque fois que vous changez ou ajoutez une expression de filtre, vous devez retraiter la structure et le modèle avant de pouvoir consulter les résultats du filtre.  
   
 ### <a name="why-do-i-see-filtered-attributes-in-prediction-query-results"></a>Pourquoi y a-t-il des attributs filtrés dans les résultats de la requête de prédiction ?  
@@ -116,6 +116,6 @@ ms.locfileid: "34016756"
   
 ## <a name="see-also"></a>Voir aussi  
  [Syntaxe de filtre de modèle et exemples &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/model-filter-syntax-and-examples-analysis-services-data-mining.md)   
- [Test et Validation & #40 ; exploration de données & #41 ;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
+ [Test et validation &#40;exploration de données&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   

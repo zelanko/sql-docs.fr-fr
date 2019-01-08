@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: table-view-index
+ms.technology: ''
 ms.topic: conceptual
 ms.assetid: 515de63f-dfc5-434d-9adb-f3b5992f745a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 15118d2bec00582a22577230183b486c13bb031d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 56148cca72ca9561219a9ea14025b0bd0f2204b5
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063229"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52753161"
 ---
 # <a name="modify-a-partition-scheme"></a>Modifier un schéma de partition
   Vous pouvez modifier un schéma de partition dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] en désignant un groupe de fichiers destiné à contenir la prochaine partition ajoutée à une table partitionnée à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)]. Pour ce faire, vous affectez la propriété NEXT USED au groupe de fichiers en question. Vous pouvez affecter la propriété NEXT USED à un groupe de fichiers vide ou à un groupe de fichiers qui contient déjà une partition. Autrement dit, un groupe de fichiers peut contenir plusieurs partitions.  

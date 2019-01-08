@@ -13,17 +13,17 @@ ms.assetid: 68323f23-121e-44fc-be85-6f9915d6d3c7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3168cc6e56e7563dae29794219c150face86f584
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9f10fdf70b27f2bcea53ce32a1d64dec65e34893
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161678"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535064"
 ---
 # <a name="attribute-discrimination-tab-mining-model-viewer"></a>Onglet Discrimination d'attribut (Visionneuse de modèle d'exploration de données)
   Utilisez l’onglet **Discrimination d’attribut** pour comparer les états des attributs d’entrée et examiner leur relation avec l’attribut de résultat. Les valeurs d'attribut qui présentent la plus grande différence entre les deux états d'attribut prédictible sélectionnés sont répertoriées en premier.  
   
- **Pour plus d’informations :** [Algorithme MNB (Microsoft Naive Bayes)](data-mining/microsoft-naive-bayes-algorithm.md), [Explorer un modèle à l’aide de la visionneuse de l’algorithme MNB (Microsoft Naive Bayes)](data-mining/browse-a-model-using-the-microsoft-naive-bayes-viewer.md)  
+ **Pour plus d’informations :** [L’algorithme Microsoft Naive Bayes](data-mining/microsoft-naive-bayes-algorithm.md), [Explorer un modèle à l’aide de l’Observateur de Microsoft Naive Bayes](data-mining/browse-a-model-using-the-microsoft-naive-bayes-viewer.md)  
   
 ## <a name="options"></a>Options  
  **Actualiser le contenu de l’Observateur**  
@@ -42,12 +42,12 @@ ms.locfileid: "48161678"
  Choisissez l’état de l’attribut prédictible à comparer à l’état contenu dans **Valeur 2**.  
   
  **Valeur 2**  
- Choisissez l’état de l’attribut prédictible à comparer à l’état contenu dans **Valeur 1**. Vous pouvez également sélectionner **Tous les autres états** pour comparer la valeur dans **Valeur 1** avec son complément, autrement dit toutes les autres valeurs à l’exception de la valeur 1.  
+ Choisissez l’état de l’attribut prédictible à comparer à l’état contenu dans **Valeur 1**. Vous pouvez également sélectionner **tous les autres États** pour comparer la valeur dans **Value 1** avec son complément-autrement dit, toutes les autres valeurs sauf la valeur 1.  
   
  **Scores de discrimination pour \<valeur 1 > et \<valeur 2 >**  
  Le graphique contient les colonnes suivantes, qui décrivent comment l'attribut cible est lié aux états spécifiques de l'attribut d'entrée.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**Attributs**|Attribut d'entrée du modèle d'exploration de données.|  
 |**Valeurs**|État de l’attribut répertorié dans **Attributs**.|  
@@ -56,7 +56,7 @@ ms.locfileid: "48161678"
   
 ## <a name="see-also"></a>Voir aussi  
  [Algorithmes d’exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Visionneuses de modèle d’exploration de données &#40;Concepteur de modèle d’exploration de données&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [Visionneuses de modèles d’exploration de données &#40;Concepteur de modèle d’exploration de données&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Visionneuses de modèle d’exploration de données](data-mining/data-mining-model-viewers.md)  
   
   

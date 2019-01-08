@@ -22,12 +22,12 @@ ms.assetid: de54c059-cb0f-4f66-bd70-8605af05ec4f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 269cc4c9c8459154fd422ed7896304cc3da27db3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 91cba3e301a98c905b157959094a7075b0e3357d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164519"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512773"
 ---
 # <a name="dimension-relationships"></a>Relations de dimension
   L'utilisation d'une dimension définit les relations entre une dimension de cube et les groupes de mesures d'un cube. Une dimension de cube est une instance d'une dimension de base de données qui est utilisée dans un cube spécifique. Un cube peut (et c'est souvent le cas) avoir des dimensions de cube qui ne sont pas directement liées à un groupe de mesures, mais qui peuvent être indirectement liées au groupe de mesures via une autre dimension ou un autre groupe de mesures. Lorsque vous ajoutez un groupe de dimension ou une mesure de base de données à un cube, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tente de déterminer l’utilisation de la dimension en examinant les relations entre les tables de dimension et les tables de faits dans la vue de source de données du cube et en examinant les relations entre les attributs dans les dimensions. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] définit automatiquement les paramètres d'utilisation de la dimension pour les relations qu'il peut détecter.  
@@ -35,7 +35,7 @@ ms.locfileid: "48164519"
  Une relation entre une dimension et un groupe de mesures est constituée des tables de dimension et de faits qui participent à la relation et d'un attribut de granularité qui spécifie la granularité de la dimension dans le groupe de mesures particulier.  
   
 ## <a name="regular-dimension-relationships"></a>Relations de dimension régulières  
- Une relation de dimension régulière entre une dimension de cube et un groupe de mesures existe quand la colonne clé de la dimension est directement jointe avec la table de faits. Cette relation directe est basée sur une relation clé primaire - clé étrangère dans la base de données relationnelle sous-jacente, mais elle peut aussi être basée sur une relation logique définie dans la vue de source de données. Une relation de dimension régulière représente la relation entre des tables de dimension et une table de faits dans une conception de schéma en étoile traditionnelle. Pour plus d’informations sur les relations régulières, consultez [définir une relation régulière et les propriétés de relation régulière](../multidimensional-models/define-a-regular-relationship-and-regular-relationship-properties.md).  
+ Une relation de dimension régulière entre une dimension de cube et un groupe de mesures existe quand la colonne clé de la dimension est directement jointe avec la table de faits. Cette relation directe est basée sur une relation de clé étrangère-clé primaire dans la base de données relationnelle sous-jacente, mais peut également être basée sur une relation logique qui est définie dans la vue de source de données. Une relation de dimension régulière représente la relation entre des tables de dimension et une table de faits dans une conception de schéma en étoile traditionnelle. Pour plus d’informations sur les relations régulières, consultez [définir une relation régulière et les propriétés de relation régulière](../multidimensional-models/define-a-regular-relationship-and-regular-relationship-properties.md).  
   
 ## <a name="reference-dimension-relationships"></a>Relations de dimension de référence  
  Une relation de dimension de référence entre une dimension de cube et un groupe de mesures existe quand la colonne clé de la dimension est indirectement jointe à la table de faits par l'intermédiaire d'une clé d'une autre table de dimension, comme le montre l'illustration suivante.  
@@ -61,7 +61,7 @@ ms.locfileid: "48164519"
   
  ![Colonnes en fait table peut prendre en charge les dimensions](../../../2014/analysis-services/dev-guide/media/as-factdim.gif "colonnes en fait table peut prendre en charge les dimensions")  
   
- La table contient des informations d'attribut non seulement pour chaque ligne d'une commande émise par un revendeur, mais aussi sur la commande elle-même. Les attributs entourés dans le diagramme précédent identifient les informations de la **FactResellerSales** table qui peut être utilisée en tant qu’attributs dans une dimension. Dans ce cas, deux éléments d'informations supplémentaires, le numéro de suivi du transporteur et le numéro du bon de commande émis par le revendeur, sont représentés par les colonnes d'attribut CarrrierTrackingNumber et CustomerPONumber. Ces informations offrent un intérêt : par exemple, les utilisateurs voudront sûrement voir les informations agrégées, telles que le coût total des produits, de toutes les commandes expédiées sous un numéro de suivi. Mais, sans une dimension, il est impossible d'organiser ou d'agréger les données de ces deux attributs.  
+ La table contient des informations d'attribut non seulement pour chaque ligne d'une commande émise par un revendeur, mais aussi sur la commande elle-même. Les attributs entourés dans le diagramme précédent identifient les informations de la **FactResellerSales** table qui peut être utilisée en tant qu’attributs dans une dimension. Dans ce cas, deux éléments d'informations supplémentaires, le numéro de suivi du transporteur et le numéro du bon de commande émis par le revendeur, sont représentés par les colonnes d'attribut CarrrierTrackingNumber et CustomerPONumber. Ces informations sont intéressantes-par exemple, les utilisateurs voudront sûrement voir des informations agrégées, telles que le produit total des coûts, toutes les commandes expédiées sous un numéro de suivi unique. Mais, sans une dimension, il est impossible d'organiser ou d'agréger les données de ces deux attributs.  
   
  Théoriquement, vous pouvez créer une table de dimension qui utilise les mêmes informations de clé que la table FactResellerSales, et transférer les deux autres colonnes d'attribut, CarrierTrackingNumber et CustomerPONumber, vers la table de dimension. Toutefois, vous dupliquez alors une partie significative des données et augmentez inutilement la complexité dans l'entrepôt de données pour juste représenter deux attributs sous la forme d'une dimension distincte.  
   
@@ -86,6 +86,6 @@ ms.locfileid: "48164519"
  Pour plus d’informations sur les relations plusieurs-à-plusieurs, consultez [définir plusieurs à plusieurs relations et plusieurs-à-plusieurs propriétés de relation](../multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Dimensions &#40;Analysis Services - données multidimensionnelles&#41;](../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)  
+ [Dimensions &#40;Analysis Services - Données multidimensionnelles&#41;](../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)  
   
   

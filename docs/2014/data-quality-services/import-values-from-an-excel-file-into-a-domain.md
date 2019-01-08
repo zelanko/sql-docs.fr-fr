@@ -14,12 +14,12 @@ ms.assetid: 04cde693-2043-477f-8417-fcc463ca7195
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6b6da26bc764c8ac3c02b9f6a8972127f9248d56
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: f195461d11b84860ab7fdf5539eca17946894ad3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032065"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507705"
 ---
 # <a name="import-values-from-an-excel-file-into-a-domain"></a>Importer les valeurs d'un fichier Excel dans un domaine
   Cette rubrique décrit comment importer des valeurs à partir d'un fichier Excel vers un champ de [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). L'utilisation d'un fichier Excel pour importer les valeurs de champ dans l'application [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] simplifie le processus de génération de connaissance, et permet d'économiser aussi bien le temps que les efforts. Elle permet aux personnes qui ont une liste de valeurs de données valides dans un fichier Excel ou un fichier texte d'importer ces valeurs dans un domaine. À partir d'un fichier Excel, vous pouvez importer les valeurs de domaine dans un domaine ou des domaines d'une base de connaissances. (Consultez [Importer les domaines d’un fichier Excel dans la découverte des connaissances](../../2014/data-quality-services/import-domains-from-an-excel-file-in-knowledge-discovery.md) pour plus d’informations sur l’importation de domaines dans une base de connaissances.) L'exportation vers un fichier Excel n'est pas prise en charge.  
@@ -62,15 +62,15 @@ ms.locfileid: "51032065"
   
 10. Cliquez sur **OK**. Une barre de progression s'affiche, avec indication sur le nombre de valeurs importées avec succès, le nombre de valeurs non importées et le nombre total de valeurs. Cliquez sur le bouton **Annuler** pour annuler le processus.  
   
-11. Vérifiez que « Importation terminée » s'affiche dans la boîte de dialogue **Importer les valeurs du domaine** . Consultez les valeurs importées avec succès et celles qui ne l'ont pas été. Sont indiqués le nom du fichier et le chemin d'accès du fichier, l'état d'achèvement de l'opération, le nombre de valeurs importées avec succès, le nombre de valeurs non importées et le nombre total de valeurs traitées.  
+11. Vérifiez que « Importation terminée » s’affiche dans la boîte de dialogue **Importer les valeurs du domaine**. Consultez les valeurs importées avec succès et celles qui ne l'ont pas été. Sont indiqués le nom du fichier et le chemin du fichier, l’état d’achèvement de l’opération, le nombre de valeurs importées avec succès, le nombre de valeurs non importées et le nombre total de valeurs traitées.  
   
-12. Pour les valeurs qui n'ont pas été importées avec succès, cliquez sur **Journal** pour afficher la boîte de dialogue **Importer les valeurs du domaine – Valeurs erronées** pour voir pourquoi l'opération d'importation a échoué. La colonne **Valeur erronée** montre les valeurs qui n'ont pas pu être importées à partir d'un fichier Excel dans un domaine et la colonne **Raison** explique pourquoi l'importation a échoué. Cliquez sur **Copier dans le Presse-papiers** pour copier la table **Valeur erronée** dans le presse-papiers, à partir duquel vous pouvez le copier dans un autre programme, tel qu'une feuille de calcul Excel ou un fichier du Bloc-notes. Cliquez sur **OK** pour fermer la boîte de dialogue **Valeurs erronées** .  
+12. Pour les valeurs qui n’ont pas été importées avec succès, cliquez sur **Journal** pour afficher la boîte de dialogue **Importer les valeurs du domaine - Valeurs erronées** pour voir pourquoi l’opération d’importation a échoué. La colonne **Valeur erronée** montre les valeurs qui n'ont pas pu être importées à partir d'un fichier Excel dans un domaine et la colonne **Raison** explique pourquoi l'importation a échoué. Cliquez sur **Copier dans le Presse-papiers** pour copier la table **Valeur erronée** dans le presse-papiers, à partir duquel vous pouvez le copier dans un autre programme, tel qu'une feuille de calcul Excel ou un fichier du Bloc-notes. Cliquez sur **OK** pour fermer la boîte de dialogue **Valeurs erronées** .  
   
 13. Cliquez sur **OK** pour terminer l'opération d'importation et fermer la boîte de dialogue. Lorsque l'importation s'est terminé avec succès, la liste des valeurs du domaine de la page **Valeurs du domaine** est actualisée et inclut les nouvelles valeurs importées. Le filtre est modifié en **Toutes les valeurs** et **Afficher seulement les nouvelles valeurs** est sélectionné. Lorsque **Afficher seulement les nouvelles valeurs** est sélectionné après l'opération d'importation, seules les valeurs importées à partir du fichier Excel s'affichent.  
   
 14. Cliquez **Terminer** pour ajouter les valeurs à la base de connaissances.  
   
-##  <a name="FollowUp"></a> Suivi : Après l'importation des valeurs d'un fichier Excel dans un domaine  
+##  <a name="FollowUp"></a> Suivi : Après l’importation de valeurs à partir d’un fichier Excel dans un domaine  
  Après avoir importé des valeurs dans un domaine, vous pouvez effectuer d'autres tâches de gestion de domaine sur le domaine, vous pouvez exécuter la découverte de connaissances pour ajouter des connaissances au domaine ou vous pouvez ajouter une stratégie correspondante au domaine. Pour plus d’informations, consultez [Effectuer une découverte des connaissances](../../2014/data-quality-services/perform-knowledge-discovery.md), [Gestion d’un domaine](../../2014/data-quality-services/managing-a-domain.md) ou [Créer une stratégie de correspondance](../../2014/data-quality-services/create-a-matching-policy.md).  
   
 ##  <a name="Synonyms"></a> Importation des synonymes  
@@ -97,7 +97,7 @@ ms.locfileid: "51032065"
   
 -   Une valeur qui contredit une règle de domaine est importée comme valeur non valide.  
   
--   Une valeur ne sera pas importée à partir du fichier si la valeur n'est pas du type de données du domaine ou est NULL.  
+-   Une valeur ne sera pas importée à partir du fichier si la valeur n’est pas du type de données du domaine ou est NULL.  
   
 -   Les valeurs sont importées dans l'ordre où elles apparaissent dans le fichier.  
   
@@ -111,7 +111,7 @@ ms.locfileid: "51032065"
   
     -   Le format attendu est que la première colonne correspond aux valeurs de départ et la deuxième colonne et les colonnes suivantes aux synonymes.  
   
-    -   Vous pouvez importer plusieurs synonymes dans la même ligne ou dans des lignes différentes. Par exemple, si vous souhaitez importer « NYC » et « New York » City en tant que synonymes de « New York », vous pouvez importer une seule ligne avec « New York » dans la colonne 1, « NYC » dans la colonne 2, et « New York City » dans la colonne 3 ; ou vous pouvez importer une ligne avec « New York » dans la colonne 1 et « NYC » dans la colonne 2, et une autre ligne avec « New York » dans la colonne 1 et « New York City » dans la colonne 2. Notez que si la valeur « New York » existe déjà dans le domaine, seuls les synonymes seront ajoutés et l'utilisateur ne recevra pas d'erreur pendant l'importation lui indiquant que la valeur existe déjà. Si la première valeur n'existe pas déjà, elle est ajoutée au domaine.  
+    -   Vous pouvez importer plusieurs synonymes dans la même ligne ou dans des lignes différentes. Par exemple, si vous souhaitez importer « NYC » et « New York » City en tant que synonymes de « New York », vous pouvez importer une seule ligne avec « New York » dans la colonne 1, « NYC » dans la colonne 2, et « New York City » dans la colonne 3 ; ou vous pouvez importer une ligne avec « New York » dans la colonne 1 et « NYC » dans la colonne 2, et une autre ligne avec « New York » dans la colonne 1 et « New York City » dans la colonne 2. Notez que si la valeur « New York » existe déjà dans le domaine, seuls les synonymes seront ajoutés et l’utilisateur ne recevra pas d’erreur pendant l’importation lui indiquant que la valeur existe déjà. Si la première valeur n'existe pas déjà, elle est ajoutée au domaine.  
   
  Les règles suivantes s'appliquent au fichier Excel utilisé pour l'importation :  
   

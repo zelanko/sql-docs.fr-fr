@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 64f6d23e30a589c4924925b834b310921d17ba57
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b59b0bdfb2852c20c2f13641682a1adff3547662
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818937"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540782"
 ---
 # <a name="sysdmdbxtpgccyclestats-transact-sql"></a>sys.dm_db_xtp_gc_cycle_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47818937"
   
 -   Générations 1-14 : stockent toutes les transactions avec un horodateur supérieur à la transaction active la plus ancienne. Les versions de ligne ne peuvent pas être récupérées par le garbage collector. Chaque génération peut contenir jusqu'à 16 transactions. 224 (14 * 16) transactions au total peuvent exister dans ces générations.  
   
--   Générations 15 : les transactions restantes avec un horodateur supérieur à la transaction active la plus ancienne vont dans la génération 15. Similairement à la génération 0, il n'y a pas de limite au nombre de transactions dans la génération 15.  
+-   Génération 15 : les transactions restantes avec un horodateur supérieur à la transaction active la plus ancienne vont dans la génération 15. Similairement à la génération 0, il n'y a pas de limite au nombre de transactions dans la génération 15.  
   
  En cas de sollicitation de la mémoire, le thread de garbage collection force la mise à jour de l'indicateur de la transaction active la plus ancienne, ce qui force le garbage collection.  
   
@@ -49,11 +49,11 @@ ms.locfileid: "47818937"
 |cycle_id|**bigint**|Identificateur unique pour le cycle de garbage collection.|  
 |ticks_at_cycle_start|**bigint**|Graduations au démarrage du cycle.|  
 |ticks_at_cycle_end|**bigint**|Graduations à la fin du cycle.|  
-|base_generation|**bigint**|Valeur de génération de base actuelle dans la base de données. Cela représente l'horodateur de la transaction active la plus ancienne utilisé pour identifier les transactions pour le garbage collection. L'ID de la transaction active la plus ancienne est mis à jour par incréments de 16. Par exemple, si les ID de transaction sont 124, 125, 126 … 139, la valeur sera 124. Lorsque vous ajoutez une autre transaction, par exemple 140, la valeur sera 140.|  
+|base_generation|**bigint**|Valeur de génération de base actuelle dans la base de données. Cela représente l'horodateur de la transaction active la plus ancienne utilisé pour identifier les transactions pour le garbage collection. L'ID de la transaction active la plus ancienne est mis à jour par incréments de 16. Par exemple, si vous avez un ID de transaction 124, 125, 126 … 139, la valeur sera 124. Lorsque vous ajoutez une autre transaction, par exemple 140, la valeur sera 140.|  
 |xacts_copied_to_local|**bigint**|Nombre de transactions copiées du pipeline de transactions dans le tableau de génération de la base de données.|  
 |xacts_in_gen_0- xacts_in_gen_15|**bigint**|Nombre de transactions dans chaque génération.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation VIEW DATABASE STATE sur le serveur.  
   
 ## <a name="usage-scenario"></a>Scénario d'utilisation  

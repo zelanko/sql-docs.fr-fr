@@ -16,12 +16,12 @@ ms.assetid: 167ebe77-487d-4ca8-9452-4b2c7d5cb96e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 65af75296064cd33e1c057126754339499f8b93f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6fa11684cc9f35eb662ca41c731f11887e1bce32
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070379"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534044"
 ---
 # <a name="move-an-existing-index-to-a-different-filegroup"></a>Déplacer un index existant dans un autre groupe de fichiers
   Cette rubrique explique comment déplacer un index existant d'un groupe de fichiers à un autre à l'aide de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] en utilisant [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -99,7 +99,7 @@ ms.locfileid: "48070379"
   
 8.  Cliquez sur **OK**.  
   
- Les informations suivantes sont disponibles dans la page **Stockage** de la boîte de dialogue **Propriétés de l’index –** *nom_index* :  
+ Les informations suivantes sont disponibles dans la page **Stockage** de la boîte de dialogue **Propriétés de l’index -** *nom_index* :  
   
  **Groupe de fichiers**  
  Stocke l'index dans le groupe de fichiers spécifié. La liste répertorie uniquement les groupes de fichiers standard (row). Le groupe de fichiers PRIMARY de la base de données est sélectionné par défaut dans la liste.  

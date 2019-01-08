@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 23f30c2cebf7e048a8fb515edf370f4ab858bbff
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: f8874a442897bd5dd887d7e9903777f81824cb46
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147454"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52543533"
 ---
 # <a name="understanding-power-view-for-multidimensional-models"></a>Présentation de Power View pour les modèles multidimensionnels
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -87,7 +87,7 @@ ms.locfileid: "50147454"
  ![Groupe de mesures dans la liste de champs Power View](../../analysis-services/multidimensional-models/media/daxmd-fieldlist-group.gif "groupe de mesures dans la liste de champs Power View")  
   
 ### <a name="measures-as-variants"></a>Mesures en tant que variantes  
- Les mesures des modèles multidimensionnels sont des variantes. Cela signifie que les mesures ne sont pas fortement typées et qu'elles peuvent avoir des types de données différents. Par exemple, dans l'image ci-dessous, la mesure Amount dans le tableau Financial Reporting par défaut correspond au type de données Devise, mais elle comporte également une valeur de chaîne « NA » pour le sous-total de « Statistical Accounts », présentant le type de données de chaîne. Power View reconnaît certaines mesures en tant que variantes et affiche la mise en forme et les valeurs correctes dans les différentes visualisations.  
+ Les mesures des modèles multidimensionnels sont des variantes. Cela signifie que les mesures ne sont pas fortement typées et qu'elles peuvent avoir des types de données différents. Par exemple, dans l’image ci-dessous, la mesure Amount dans le tableau Financial Reporting par défaut est de type de données de devise, mais possède également une valeur de chaîne « NA » pour le sous-total de « Statistical Accounts », ce qui est le type de données String. Power View reconnaît certaines mesures en tant que variantes et affiche la mise en forme et les valeurs correctes dans les différentes visualisations.  
   
  **Mesure en tant que variante**  
   
@@ -97,7 +97,7 @@ ms.locfileid: "50147454"
  Les modèles tabulaires fournissent aux utilisateurs la possibilité de créer des mesures *implicites* , telles qu'un compte, une somme ou une moyenne sur des champs. Pour les modèles multidimensionnels, étant donné que les données d’attribut de dimension sont stockées différemment, interrogation de mesures implicites peut prendre un certain temps. De ce fait, les mesures implicites ne sont pas disponibles dans Power View.  
   
 ## <a name="dimensions-attributes-and-hierarchies"></a>Dimensions, attributs et hiérarchies  
- Les dimensions de cube sont exposées sous forme de tableaux dans les métadonnées tabulaires. Dans la liste de champs Power View, les attributs de dimension sont affichés en tant que colonnes dans les dossiers d'affichage.  Les attributs de dimension dont la propriété AttributeHierarchyEnabled est définie avec la valeur False, par exemple, l'attribut de date de naissance dans la dimension Customer, ou dont la propriété AttributeHierarchyVisible est définie avec la valeur False, n'apparaissent pas dans la liste de champs Power View. Les hiérarchies à plusieurs niveaux ou les hiérarchies d'utilisateurs, par exemple, Customer Geography dans la dimension Customer, sont exposées en tant que hiérarchies dans la liste de champs Power View. Les éléments UnknownMembers cachés d'un attribut de dimension, sont exposés dans les requêtes DAX et dans Power View.  
+ Les dimensions de cube sont exposées sous forme de tableaux dans les métadonnées tabulaires. Dans la liste de champs Power View, les attributs de dimension sont affichés en tant que colonnes dans les dossiers d'affichage.  Attributs de dimension dont la propriété AttributeHierarchyEnabled a la valeur false, par exemple : l'attribut de date de naissance dans la dimension Customer ou la propriété AttributeHierarchyVisible avec la valeur False n'apparaissent pas dans la liste de champs Power View. Les hiérarchies à plusieurs niveaux ou les hiérarchies d'utilisateurs, par exemple, Customer Geography dans la dimension Customer, sont exposées en tant que hiérarchies dans la liste de champs Power View. Les éléments UnknownMembers cachés d'un attribut de dimension, sont exposés dans les requêtes DAX et dans Power View.  
   
  **Dimension, attributs et hiérarchies dans SQL Server Data Tools (SSDT) et dans une liste de champs Power View**  
   
@@ -121,7 +121,7 @@ ms.locfileid: "50147454"
   
  Les membres calculés de hiérarchies d'utilisateurs ne sont pas exposés dans Power View ; toutefois, les utilisateurs finaux sont toujours en mesure de se connecter à un cube contenant des membres calculés sur des hiérarchies d'utilisateurs.  
   
- L'image ci-dessous montre un rapport Power View pour un cube qui contient des membres calculés en fonction du temps sur l'attribut de dimension « Fiscal Date Calculations » dans la dimension de date.  
+ L’illustration ci-dessous montre un rapport Power View pour un cube qui contient des membres calculés time intelligence sur l’attribut de dimension « Fiscal Date Calculations » dans la dimension Date.  
   
  **Rapport Power View avec des membres calculés**  
   
@@ -136,7 +136,7 @@ ms.locfileid: "50147454"
  Les modèles multidimensionnels prennent en charge la sécurité au niveau de la cellule et de la dimension au moyen de rôles. Un utilisateur se connectant à un cube à l'aide de Power View est authentifié et évalué pour connaître les autorisations appropriées. Lorsque la sécurité des dimensions est appliquée, les membres des dimensions respectives ne sont pas vus par l'utilisateur dans Power View ; en revanche, si un utilisateur dispose d'une autorisation de sécurité au niveau de la cellule pour laquelle certaines cellules sont restreintes, il ne peut pas se connecter au cube avec Power View. Dans certains cas, les utilisateurs peuvent voir des données agrégées lorsque des portions de ces données sont calculées à partir de données sécurisées.  
   
 ### <a name="non-aggregatable-attributeshierarchies"></a>Hiérarchies/Attributs ne pouvant faire l'objet d'une agrégation  
- Dans un modèle multidimensionnel, la valeur False peut être définie pour la propriété IsAggregatable des attributs d'une dimension. Cela signifie que l'auteur du modèle a spécifié que les applications clientes ne doivent pas agréger les données entre les hiérarchies (attributs ou à plusieurs niveaux) lorsqu'elles interrogent les données. Dans Power View, cet attribut de dimension est exposé en tant que colonne pour laquelle les sous-totaux ne sont pas disponibles. Dans l'image ci-dessous, vous pouvez voir un exemple d'une hiérarchie ne pouvant faire l'objet d'une agrégation : Accounts. Le niveau le plus élevé de la hiérarchie parent-enfant Accounts ne peut pas faire l'objet d'une agrégation, contrairement aux autres niveaux. Dans une visualisation sous forme de matrice de la hiérarchie Accounts (deux premiers niveaux), vous voyez les sous-totaux pour le niveau 02 d'Accounts, mais pas pour le niveau le plus élevé (01).  
+ Dans un modèle multidimensionnel, la valeur False peut être définie pour la propriété IsAggregatable des attributs d'une dimension. Cela signifie que l'auteur du modèle a spécifié que les applications clientes ne doivent pas agréger les données entre les hiérarchies (attributs ou à plusieurs niveaux) lorsqu'elles interrogent les données. Dans Power View, cet attribut de dimension est exposé en tant que colonne pour laquelle les sous-totaux ne sont pas disponibles. Dans l'image ci-dessous, vous pouvez voir un exemple d'une hiérarchie ne pouvant faire l'objet d'une agrégation : Accounts. Le niveau le plus élevé de la hiérarchie parent-enfant Accounts ne peut pas faire l'objet d'une agrégation, contrairement aux autres niveaux. Dans une visualisation sous forme de matrice de la hiérarchie Accounts (deux premiers niveaux), vous voyez les sous-totaux pour le niveau 02 d'Accounts, mais pas pour le niveau le plus élevé (01).  
   
  **Hiérarchie ne pouvant faire l'objet d'une agrégation dans Power View**  
   
@@ -157,11 +157,11 @@ ms.locfileid: "50147454"
  ![Hiérarchies parent-enfant](../../analysis-services/multidimensional-models/media/daxmd-ssdt-hierarchies.gif "Hiérarchies parent-enfant")  
   
 ## <a name="perspectives-and-translations"></a>Perspectives et traductions  
- Les perspectives sont des vues de cubes dans lesquelles seules certaines dimensions ou seuls certains groupes de mesures sont visibles dans les outils clients. Vous pouvez spécifier un nom de perspective comme valeur pour la propriété de chaîne de connexion Cube. Par exemple, dans la chaîne de connexion suivante, ‘Direct Sales’ est une perspective dans le modèle multidimensionnel :  
+ Les perspectives sont des vues de cubes dans lesquelles seules certaines dimensions ou seuls certains groupes de mesures sont visibles dans les outils clients. Vous pouvez spécifier un nom de perspective comme valeur pour la propriété de chaîne de connexion Cube. Par exemple, dans la chaîne de connexion suivante, 'Direct Sales' est un point de vue dans le modèle multidimensionnel :  
   
  `Data Source=localost;Initial Catalog=AdventureWorksDW-MD;Cube='Direct Sales'`  
   
- Les cubes peuvent disposer de traductions de données et de métadonnées, spécifiées pour différentes langues au sein du modèle. Pour pouvoir voir les traductions (données et métadonnées), vous devez ajouter la propriété facultative « Locale Identifier » à la chaîne de connexion dans le fichier RSDS, comme illustré ci-dessous.  
+ Les cubes peuvent disposer de traductions de données et de métadonnées, spécifiées pour différentes langues au sein du modèle. Pour voir les traductions (données et métadonnées), vous devez ajouter la propriété facultative « Locale Identifier » à la chaîne de connexion dans le fichier RSDS, comme indiqué ci-dessous.  
   
  `Data Source=localost;Initial Catalog=AdventureWorksDW-MD;Cube='Adventure Works'; Locale Identifier=3084`  
   
@@ -177,7 +177,7 @@ ms.locfileid: "50147454"
  ![Épinglé filtre](../../analysis-services/multidimensional-models/media/daxmd-pinnedfilterinpowerview.gif "épinglé filtre")  
   
 ## <a name="unsupported-features"></a>Fonctionnalités non prises en charge  
- **Power View dans Excel 2013** ne prend pas en charge la connexion ni la création de rapports pour les modèles multidimensionnels. Toutefois, **Power View dans Excel 2016** ne prend pas en charge la connexion et la création de rapports pour les modèles multidimensionnels. Pour en savoir plus, voir [Power View et OLAP dans Excel 2016](https://support.office.com/en-us/article/power-view-and-olap-in-excel-2016-ea5ff7a5-ea5f-48d4-aeb0-98c89ab738ac).  
+ **Power View dans Excel 2013** -ne prend pas en charge la connexion et la création de rapports pour les modèles multidimensionnels. Toutefois, **Power View dans Excel 2016** ne prend pas en charge la connexion et la création de rapports pour les modèles multidimensionnels. Pour en savoir plus, voir [Power View et OLAP dans Excel 2016](https://support.office.com/en-us/article/power-view-and-olap-in-excel-2016-ea5ff7a5-ea5f-48d4-aeb0-98c89ab738ac).  
   
  Les**actions** ne sont pas prises en charge dans les rapports Power View ni dans les requêtes DAX portant sur un modèle multidimensionnel.  
   
@@ -186,7 +186,7 @@ ms.locfileid: "50147454"
 > [!NOTE]  
 >  Les actions et les jeux nommés non pris en charge n'empêchent pas les utilisateurs de se connecter et d'explorer les modèles multidimensionnels avec Power View.  
   
- La**sécurité au niveau des cellules** n'est pas prise en charge dans les rapports Power View.  
+ **Sécurité au niveau des cellules** -n’est pas pris en charge dans les rapports Power View.  
   
 ## <a name="csdlbi-annotations"></a>Annotations CSDLBI  
  Les métadonnées de cube multidimensionnelles sont exposées en tant que modèle conceptuel basé sur EDM (Entity Data Model) par les annotations CSDLBI (Conceptual Schema Definition Language avec Business Intelligence).  
@@ -196,13 +196,13 @@ ms.locfileid: "50147454"
  **Exemple de requête DISCOVER_CSDL_METADATA**  
   
 ```  
-<Envelopexmlns=”http://schemas.xmlsoap.org/soap/envelope/”>  
+<Envelopexmlns="http://schemas.xmlsoap.org/soap/envelope/">  
    <Body>  
-      <Discoverxmlns=”urn:schemas-microsoft-com:xml-analysis”>  
+      <Discoverxmlns="urn:schemas-microsoft-com:xml-analysis">  
          <RequestType>DISCOVER_CSDL_METADATA</RequestType>  
          <Restrictions>  
             <RestrictionList>  
-              <CATALOG_NAME>”catalogname”<CATALOG_NAME>  
+              <CATALOG_NAME>"catalogname"<CATALOG_NAME>  
             </RestrictionList>  
          </Restrictions>  
          <Properties>  
@@ -217,7 +217,7 @@ ms.locfileid: "50147454"
   
  La requête DISCOVER_CSDL_METADATA présente les restrictions suivantes :  
   
-|Nom   |Requis|Description|  
+|Créer une vue d’abonnement|Requis|Description|  
 |----------|--------------|-----------------|  
 |CATALOG_NAME|Oui|Nom du catalogue\base de données.|  
 |PERSPECTIVE_NAME|Oui, si le cube contient plusieurs perspectives. Facultatif en présence d'un seul cube ou s'il existe une perspective par défaut.|Nom du cube ou de la perspective dans la base de données multidimensionnelle.|  
@@ -225,7 +225,7 @@ ms.locfileid: "50147454"
   
  Le document CSDL en sortie retourné représente le modèle en tant qu'espace de noms qui contient des entités, des associations et des propriétés.  
   
- Pour plus d’informations sur les annotations CSDLBI pour les modèles tabulaires, consultez [Guide de référence technique pour les annotations BI du langage CSDL](https://docs.microsoft.com/bi-reference/csdl/technical-reference-for-bi-annotations-to-csdl) sur MSDN et [\[MS-CSDLBI\]: Conceptual Schema Definitions File Format with Business Intelligence Annotations](http://msdn.microsoft.com/library/jj161299\(SQL.105\).aspx).  
+ Pour plus d’informations sur les annotations CSDLBI pour les modèles tabulaires, consultez [informations techniques de référence pour les Annotations BI au langage CSDL](https://docs.microsoft.com/bi-reference/csdl/technical-reference-for-bi-annotations-to-csdl) sur MSDN, et [ \[MS-CSDLBI\]: Conceptual Schema Definitions File Format avec Business Intelligence Annotations](http://msdn.microsoft.com/library/jj161299\(SQL.105\).aspx).  
   
 ## <a name="client-help-on-officecom"></a>Aide sur le client sur Office.com  
  Les articles suivants sont fournis sur Office.com pour aider les utilisateurs à en savoir plus sur la manière dont les objets de modèle multidimensionnel apparaissent dans Power View et sur la procédure de création d'un rapport d'exemple :  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: backup-restore
 ms.topic: conceptual
 helpviewer_keywords:
 - full-text search [SQL Server], back up and restore
@@ -19,12 +18,12 @@ ms.assetid: b93e9701-72a0-408e-958c-dc196872c040
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b51404c994bd4a5029bc9e2d592db020747492fb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5a35156a465e521ceea60fa090142836da6a4c1a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057189"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52787831"
 ---
 # <a name="copy-databases-with-backup-and-restore"></a>Copier des bases de données avec la sauvegarde et la restauration
   Dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], vous pouvez créer une base de données en restaurant une sauvegarde d'une base de données utilisateur créée à l'aide de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou version ultérieure. Cependant, les sauvegardes des bases de données **master**, **model** et **msdb** créées avec une version antérieure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne peuvent pas être restaurées par [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Par ailleurs, les sauvegardes [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ne peuvent pas être restaurées par les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -33,7 +32,7 @@ ms.locfileid: "48057189"
 >  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilise un chemin d'accès par défaut différent de celui des versions précédentes. Par conséquent, pour restaurer des sauvegardes d'une base de données créée à l'emplacement par défaut de versions antérieures, vous devez utiliser l'option MOVE. Pour plus d'informations sur le nouveau chemin par défaut, consultez [Emplacements des fichiers pour les instances par défaut et les instances nommées de SQL Server](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md). Pour plus d'informations sur le déplacement des fichiers d'une base de données, consultez la section « Déplacement des fichiers d'une base de données » dans les pages suivantes de cette rubrique.  
   
 ## <a name="general-steps-for-using-backup-and-restore-to-copy-a-database"></a>Étapes générales de l'utilisation de la sauvegarde et de la restauration pour copier une base de données  
- Lorsque vous utilisez la sauvegarde et la restauration pour copier une base de données vers une autre instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les ordinateurs source et de destination peuvent correspondre à n'importe quelle plateforme qui exécute [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Lorsque vous utilisez la sauvegarde et la restauration pour copier une base de données vers une autre instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les ordinateurs source et de destination peuvent correspondre à n'importe quelle plateforme qui exécute [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Voici les étapes de base :  
   
@@ -60,7 +59,7 @@ ms.locfileid: "48057189"
   
     -   Si le fichier existant ne peut pas être remplacé, une erreur de restauration se produit.  
   
- Pour éviter des erreurs et des conséquences inattendues, avant l’opération de restauration, vous pouvez utiliser la [backupfile](/sql/relational-databases/system-tables/backupfile-transact-sql) table d’historique pour déterminer les fichiers journaux et de base de données dans la sauvegarde que vous envisagez de restaurer.  
+ Pour éviter des erreurs et des conséquences inattendues, avant l'opération de restauration, vous pouvez utiliser la table d'historique [backupfile](/sql/relational-databases/system-tables/backupfile-transact-sql) pour identifier la base de données et les fichiers journaux de la sauvegarde que vous envisagez de restaurer.  
   
 ## <a name="moving-the-database-files"></a>Déplacement des fichiers de la base de données  
  Si les fichiers figurant dans la sauvegarde de la base de données ne peuvent pas être restaurés sur l'ordinateur de destination pour les raisons mentionnées précédemment, il est nécessaire de transférer les fichiers vers un nouvel emplacement lors de leur restauration. Exemple :  

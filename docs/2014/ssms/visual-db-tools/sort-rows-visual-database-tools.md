@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - sorting rows [SQL Server]
@@ -13,12 +13,12 @@ ms.assetid: 780ef467-f96e-4373-8235-6dacbedb05a2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2183b8cb96895dc2bbb1308bccd818fb5a04dba5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3235c9a9305e4476214add63f8710ba9de7b4c19
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48156099"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52768595"
 ---
 # <a name="sort-rows-visual-database-tools"></a>Trier des lignes (Visual Database Tools)
   Il est possible de choisir l'ordre des lignes qui apparaîtront dans le résultat d'une requête. C'est-à-dire que vous pouvez indiquer dans quelle colonne, ou dans quel ensemble de colonnes, les valeurs seront triées pour déterminer l'ordre d'affichage des lignes dans le jeu de résultats.  
@@ -64,7 +64,7 @@ ms.locfileid: "48156099"
   
     ```  
   
--   **Vous pouvez trier en fonction des colonnes dérivées** Par exemple, dans l'ensemble des résultats, chaque ligne contiendra le titre d'un livre, les livres les plus rentables à l'unité étant présentés en premier. L'instruction SQL obtenue peut se présenter de la manière suivante :  
+-   **Vous pouvez trier en fonction des colonnes dérivées** Par exemple, dans l’ensemble des résultats, chaque ligne contiendra le titre d’un livre, les livres les plus rentables à l’unité étant présentés en premier. L'instruction SQL obtenue peut se présenter de la manière suivante :  
   
     ```  
     SELECT title, price * royalty / 100 as royalty_per_unit  
@@ -77,7 +77,7 @@ ms.locfileid: "48156099"
   
      Pour calculer une colonne dérivée, vous pouvez utiliser une syntaxe SQL (comme dans l'exemple précédent) ou une fonction définie par l'utilisateur qui retourne une valeur scalaire. Pour plus d'informations sur les fonctions définies par l'utilisateur, consultez la documentation SQL Server.  
   
--   **Vous pouvez trier des lignes groupées** Par exemple, dans l'ensemble des résultats, chaque ligne contiendra une ville et le nombre d'auteurs qui y résident — les villes comprenant le plus grand nombre d'auteurs apparaîtront en premier. L'instruction SQL obtenue peut se présenter de la manière suivante :  
+-   **Vous pouvez trier des lignes groupées** Par exemple, dans l’ensemble des résultats, chaque ligne contiendra une ville et le nombre d’auteurs qui y résident. Les villes comprenant le plus grand nombre d’auteurs seront affichées en premier. L'instruction SQL obtenue peut se présenter de la manière suivante :  
   
     ```  
     SELECT city, state, COUNT(*)  
@@ -89,7 +89,7 @@ ms.locfileid: "48156099"
   
      Remarquez que la requête utilise `state` comme colonne secondaire du tri. De cette manière, si deux états ont le même nombre d'auteurs, vous pouvez les faire apparaître par ordre alphabétique.  
   
--   **Vous pouvez demander un tri en fonction de données internationales** C'est-à-dire que vous pouvez trier une colonne selon des conventions de classement qui diffèrent des conventions utilisées par défaut pour cette colonne. Par exemple, une requête pourrait demander à extraire tous les titres signés par Jaime Patiño. Pour afficher les titres par ordre alphabétique, vous demanderez à appliquer à la colonne des titres une table de classement espagnole. L'instruction SQL obtenue peut se présenter de la manière suivante :  
+-   **Vous pouvez demander un tri en fonction de données internationales** C'est-à-dire que vous pouvez trier une colonne selon des conventions de classement qui diffèrent des conventions utilisées par défaut pour cette colonne. Par exemple, vous pouvez écrire une requête qui Récupère tous les titres de livres par Jaime Pati ?? o. Pour afficher les titres par ordre alphabétique, vous demanderez à appliquer à la colonne des titres une table de classement espagnole. L'instruction SQL obtenue peut se présenter de la manière suivante :  
   
     ```  
     SELECT title  
@@ -105,7 +105,7 @@ ms.locfileid: "48156099"
                 =  titles.title_id   
     WHERE   
          au_fname = 'Jaime' AND   
-         au_lname = 'Patiño'  
+         au_lname = 'Pati??o'  
     ORDER BY   
          title COLLATE SQL_Spanish_Pref_CP1_CI_AS  
     ```  

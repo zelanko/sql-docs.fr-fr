@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - collections [Master Data Services]
@@ -14,12 +13,12 @@ ms.assetid: 5aa1d1e0-b4e5-4897-8e74-01dcf418df73
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 7982f81d5046c0d3c9f23b4357f5b0364603c222
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3533108054d1c65e73f3167d68a05727e95fa2d4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203629"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52792021"
 ---
 # <a name="collections-master-data-services"></a>Collections (services de données de référence)
   Une collection est un groupe de membres feuille et de membres consolidés d'une entité unique. Utilisez des collections lorsque vous n'avez pas besoin d'une hiérarchie complète et que vous souhaitez afficher des regroupements différents de vos membres pour la création de rapports ou l'analyse, ou lorsque vous devez créer une taxonomie.  
@@ -46,8 +45,8 @@ ms.locfileid: "48203629"
 |Description de la tâche|Rubrique|  
 |----------------------|-----------|  
 |Activer une entité pour les hiérarchies explicites et les collections.|[Activer une entité pour les hiérarchies et Collections explicites &#40;Master Data Services&#41;](enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)|  
-|Créer une collection.|[Créer une Collection &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-collection-master-data-services.md)|  
-|Ajouter des membres à une collection existante.|[Ajouter des membres à une Collection &#40;Master Data Services&#41;](../../2014/master-data-services/add-members-to-a-collection-master-data-services.md)|  
+|Créer une collection.|[Créer une collection &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-collection-master-data-services.md)|  
+|Ajouter des membres à une collection existante.|[Ajouter des membres à une collection &#40;Master Data Services&#41;](../../2014/master-data-services/add-members-to-a-collection-master-data-services.md)|  
   
 ## <a name="related-content"></a>Contenu associé  
   

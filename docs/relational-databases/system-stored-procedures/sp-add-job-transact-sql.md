@@ -18,12 +18,12 @@ ms.assetid: 6ca8fe2c-7b1c-4b59-b4c7-e3b7485df274
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1c9b6b7e6118fc23ef821d85ea6d0ac2f040e69b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c6ac15a78e8689e76fc9687a6cd8784eb1fc4dd2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603037"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537870"
 ---
 # <a name="spaddjob-transact-sql"></a>sp_add_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,31 +55,31 @@ sp_add_job [ @job_name = ] 'job_name'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@job_name =** ] **'***nom_travail***'**  
+ [  **@job_name =** ] **'**_nom_travail_**'**  
  Nom du travail. Le nom doit être unique et ne peut pas contenir le pourcentage (**%**) caractères. *job_name*est **nvarchar (128)**, sans valeur par défaut.  
   
  [  **@enabled =** ] *activé*  
  Indique l'état du travail ajouté. *activé*est **tinyint**, avec une valeur par défaut de 1 (activé). Si **0**, le travail n’est pas activé et n’est pas exécuté conformément à sa planification ; Toutefois, il peut être exécuté manuellement.  
   
- [  **@description =** ] **'***description***'**  
+ [  **@description =** ] **'**_description_**'**  
  Description du travail. *Description* est **nvarchar (512)**, avec NULL comme valeur par défaut. Si *description* est n’omis, « Aucune description disponible » est utilisée.  
   
  [  **@start_step_id =** ] *id_de_l*  
  Numéro d'identification de la première étape à exécuter pour le travail. *l’argument id_étape*est **int**, avec 1 comme valeur par défaut.  
   
- [  **@category_name =** ] **'***catégorie***'**  
+ [  **@category_name =** ] **'**_catégorie_**'**  
  Catégorie du travail. *catégorie*est **sysname**, avec NULL comme valeur par défaut.  
   
  [  **@category_id =** ] *code catégorie*  
  Mécanisme qui ne tient pas compte de la langue définie et qui permet de spécifier une catégorie de travail. *code catégorie*est **int**, avec NULL comme valeur par défaut.  
   
- [  **@owner_login_name =** ] **'***connexion***'**  
+ [  **@owner_login_name =** ] **'**_connexion_**'**  
  Nom du compte de connexion propriétaire du travail. *connexion*est **sysname**, avec NULL comme valeur par défaut, qui est interprétée comme le nom de connexion actuel. Seuls les membres de la **sysadmin** rôle serveur fixe peut définir ou modifier la valeur de **@owner_login_name**. Si les utilisateurs qui ne sont pas membres de la **sysadmin** rôle définir ou modifier la valeur de **@owner_login_name**, l’exécution de cette procédure stockée échoue et une erreur est retournée.  
   
  [  **@notify_level_eventlog =** ] *niveau_journal_événements*  
  Valeur indiquant le moment auquel une entrée doit être ajoutée pour ce travail dans le journal des applications Microsoft Windows. *niveau_journal_événements*est **int**, et peut prendre l’une des valeurs suivantes.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**0**|Never|  
 |**1**|Si succès|  
@@ -95,13 +95,13 @@ sp_add_job [ @job_name = ] 'job_name'
  [  **@notify_level_page =** ] *niveau_page*  
  Valeur indiquant à quel moment envoyer une page une fois ce travail achevé. *niveau_page*est **int**, avec une valeur par défaut **0**, qui indique jamais. *niveau_page*utilise les mêmes valeurs que *niveau_journal_événements*.  
   
- [  **@notify_email_operator_name =** ] **'***nom_adresse***'**  
+ [  **@notify_email_operator_name =** ] **'**_nom_adresse_**'**  
  Le nom de la messagerie de la personne à envoyer des messages électroniques lorsque *niveau_courrier_électronique* est atteinte. *nom_adresse* est **sysname**, avec NULL comme valeur par défaut.  
   
- [  **@notify_netsend_operator_name =** ] **'***l’argument adresse_envoi_réseau***'**  
+ [  **@notify_netsend_operator_name =** ] **'**_l’argument adresse_envoi_réseau_**'**  
  Nom de l'opérateur à qui le message réseau est envoyé une fois ce travail exécuté. *l’argument adresse_envoi_réseau*est **sysname**, avec NULL comme valeur par défaut.  
   
- [  **@notify_page_operator_name =** ] **'***nom_page***'**  
+ [  **@notify_page_operator_name =** ] **'**_nom_page_**'**  
  Nom de la personne à qui envoyer un message par radiomessagerie une fois ce travail exécuté. *nom_page*est **sysname**, avec NULL comme valeur par défaut.  
   
  [  **@delete_level =** ] *niveau_suppression*  
@@ -110,7 +110,7 @@ sp_add_job [ @job_name = ] 'job_name'
 > [!NOTE]  
 >  Lorsque *niveau_suppression* est **3**, la tâche est exécutée une seule fois, indépendamment de toute planification définie pour le travail. De plus, si un travail est supprimé, son historique est également supprimé.  
   
- [  **@job_id =** ] *job_id *** sortie**  
+ [  **@job_id =** ] _job_id_**sortie**  
  Numéro d'identification du travail affecté si le travail est correctement créé. *job_id*est une variable output de type **uniqueidentifier**, avec NULL comme valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
@@ -128,7 +128,7 @@ sp_add_job [ @job_name = ] 'job_name'
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] est un outil dont l'interface graphique permet de gérer facilement les travaux. Son utilisation est recommandée pour créer et gérer l'infrastructure des travaux.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Pour exécuter cette procédure stockée, les utilisateurs doivent être un membre de la **sysadmin** rôle serveur fixe, ou disposer de l’un des éléments suivants [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent de base de données fixé, ce qui se trouvent dans le **msdb** base de données :  
   
 -   **SQLAgentUserRole**  
@@ -155,7 +155,7 @@ EXEC dbo.sp_add_job
 GO  
 ```  
   
-### <a name="b-adding-a-job-with-pager-e-mail-and-net-send-information"></a>B. Ajout d'un travail contenant des informations de radiomessagerie, de messagerie électronique et d'envoi réseau  
+### <a name="b-adding-a-job-with-pager-e-mail-and-net-send-information"></a>b. Ajout d'un travail contenant des informations de radiomessagerie, de messagerie électronique et d'envoi réseau  
  Dans l'exemple ci-dessous, un travail appelé `Ad hoc Sales Data Backup` avertit `François Ajenstat` (par radiomessagerie, messagerie électronique ou par message réseau) lorsqu'un travail échoue, et est supprimé une fois exécuté.  
   
 > [!NOTE]  

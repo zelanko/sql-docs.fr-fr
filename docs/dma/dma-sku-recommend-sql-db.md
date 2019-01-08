@@ -15,12 +15,12 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 80d4ff4e6eae3d3e2d997bb4f851326a9caace73
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.openlocfilehash: 6e990d8b3320eafccc3da574476fa66cdf52d8d5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49643997"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544110"
 ---
 # <a name="identify-the-right-azure-sql-database-sku-for-your-on-premises-database"></a>Identifier la référence SKU à base de données SQL Azure appropriée pour votre base de données locale
 
@@ -54,11 +54,11 @@ Vous n’avez pas besoin effectuer cette tâche pour chaque base de données ind
     ![Fichier PowerShell indiqué dans le dossier DMA](../dma/media/dma-sku-recommend-data-collection-file.png)
 
 2. Exécutez le script PowerShell avec les arguments suivants :
-    - **ComputerName**: le nom de l’ordinateur qui héberge vos bases de données.
-    - **OutputFilePath**: le chemin d’accès du fichier de sortie pour enregistrer les compteurs collectés.
-    - **CollectionTimeInSeconds**: la durée pendant laquelle vous souhaitez collecter des données de compteur de performances.
+    - **ComputerName**: Le nom de l’ordinateur qui héberge vos bases de données.
+    - **OutputFilePath**: Chemin d’accès du fichier de sortie pour enregistrer les compteurs collectés.
+    - **CollectionTimeInSeconds**: La durée pendant laquelle vous souhaitez collecter des données de compteur de performances.
       Capturer les compteurs de performance pour au moins 40 minutes obtenir une recommandation éloquent. Plus la durée de la capture, plus précises la recommandation sera.
-    - **DbConnectionString**: chaîne de la connexion qui pointe vers la base de données principale hébergée sur l’ordinateur à partir de laquelle vous collectez des données de compteur de performances.
+    - **DbConnectionString**: La chaîne de connexion pointant vers la base de données principale hébergée sur l’ordinateur à partir de laquelle vous collectez des données de compteur de performances.
      
     Voici un exemple d’appel :
 
@@ -78,30 +78,30 @@ Utiliser le fichier de sortie des compteurs de performances à partir de l’ét
 
 Exécutez le dmacmd.exe avec les arguments suivants :
 
-- **/ Action = SkuRecommendation**: entrez cet argument pour exécuter des évaluations de la référence (SKU).
-- **/ SkuRecommendationInputDataFilePath**: le chemin d’accès au fichier de compteur collectées dans la section précédente.
-- **/ SkuRecommendationTsvOutputResultsFilePath**: le chemin d’accès pour écrire les résultats de sortie au format TSV.
-- **/ SkuRecommendationJsonOutputResultsFilePath**: le chemin d’accès pour écrire les résultats de sortie au format JSON.
-- **/ SkuRecommendationHtmlResultsFilePath**: chemin d’accès pour écrire les résultats de sortie au format HTML.
+- **/ Action = SkuRecommendation**: Entrez cet argument pour exécuter des évaluations de la référence (SKU).
+- **/ SkuRecommendationInputDataFilePath**: Le chemin d’accès au fichier de compteur sont collectées dans la section précédente.
+- **/ SkuRecommendationTsvOutputResultsFilePath**: Le chemin d’accès pour écrire les résultats de sortie au format TSV.
+- **/ SkuRecommendationJsonOutputResultsFilePath**: Le chemin d’accès pour écrire les résultats de sortie au format JSON.
+- **/ SkuRecommendationHtmlResultsFilePath**: Chemin d’accès pour écrire les résultats de sortie au format HTML.
 
 En outre, vous devez choisir l’un des arguments suivants :
 - Empêcher l’actualisation de prix
-    - **/ SkuRecommendationPreventPriceRefresh**: empêche l’actualisation de prix. Utilisez si en cours d’exécution en mode hors connexion.
+    - **/ SkuRecommendationPreventPriceRefresh**: Empêche l’actualisation de prix. Utilisez si en cours d’exécution en mode hors connexion.
 - Obtenir les derniers cours 
-    - **/ SkuRecommendationCurrencyCode**: la devise dans laquelle afficher les prix (par exemple) « USD »).
-    - **/ SkuRecommendationOfferName**: nom de l’offre (par exemple) « MS-AZR - 0003P »). Pour plus d’informations, consultez le [détails de l’offre Microsoft Azure](https://azure.microsoft.com/support/legal/offer-details/) page.
-    - **/ SkuRecommendationRegionName**: nom de la région (par exemple) « WestUS »).
-    - **/ SkuRecommendationSubscriptionId**: l’ID d’abonnement.
-    - **/ AzureAuthenticationTenantId**: le client d’authentification.
-    - **/ AzureAuthenticationClientId**: l’ID client de l’application AAD utilisée pour l’authentification.
+    - **/ SkuRecommendationCurrencyCode**: La devise dans laquelle afficher les prix (par exemple) « USD »).
+    - **/ SkuRecommendationOfferName**: Nom de l’offre (par exemple) « MS-AZR - 0003P »). Pour plus d’informations, consultez le [détails de l’offre Microsoft Azure](https://azure.microsoft.com/support/legal/offer-details/) page.
+    - **/ SkuRecommendationRegionName**: Nom de la région (par exemple) « WestUS »).
+    - **/ SkuRecommendationSubscriptionId**: L'ID de l'abonnement.
+    - **/ AzureAuthenticationTenantId**: Le client d’authentification.
+    - **/ AzureAuthenticationClientId**: L’ID client de l’application AAD utilisée pour l’authentification.
     - L’une des options d’authentification suivantes :
         - Interactif
-            - **AzureAuthenticationInteractiveAuthentication**: la valeur true pour une fenêtre contextuelle d’authentification.
+            - **AzureAuthenticationInteractiveAuthentication**: La valeur true pour une fenêtre contextuelle d’authentification.
         - Basée sur les certificats
-            - **AzureAuthenticationCertificateStoreLocation**: (par exemple, la valeur est l’emplacement du magasin de certificats « CurrentUser »).
-            - **AzureAuthenticationCertificateThumbprint**: la valeur est l’empreinte numérique du certificat.
+            - **AzureAuthenticationCertificateStoreLocation**: (Par exemple, la valeur est l’emplacement du magasin de certificats « CurrentUser »).
+            - **AzureAuthenticationCertificateThumbprint**: La valeur est l’empreinte numérique du certificat.
         - Jeton basé
-            - **AzureAuthenticationToken**: la valeur est le jeton de certificat.
+            - **AzureAuthenticationToken**: Définir sur le jeton de certificat.
 
 Voici certains appels de l’exemple :
 
@@ -135,7 +135,7 @@ Le fichier de sortie TSV contiendra les colonnes affichées dans le graphique su
 
 Une description de chaque colonne suit.
 
-- **DatabaseName** – le nom de votre base de données.
+- **DatabaseName** -le nom de votre base de données.
 - **MetricName** : si une mesure a été exécutée ou non.
 - **MetricType** -niveau de base de données SQL Azure recommandé.
 - **MetricValue** -recommandé de base de données SQL Azure référence (SKU).
@@ -152,11 +152,11 @@ Le fichier HTML contient ces informations dans un format graphique. Vous pouvez 
 Avec seulement quelques clics, vous pouvez utiliser les recommandations de l’étape précédente pour les bases de données cibles approvisionner dans Azure à laquelle vous pouvez migrer vos bases de données. Vous pouvez également modifier les recommandations en mettant à jour le fichier HTML comme suit.
 
 1. Ouvrez le fichier HTML et entrez les informations suivantes :
-    - **ID d’abonnement** : l’ID d’abonnement de l’abonnement Azure auquel vous souhaitez approvisionner les bases de données.
-    - **Région** – la région dans laquelle configurer les bases de données. Assurez-vous que votre abonnement prend en charge de la zone de sélection.
-    - **Groupe de ressources** – le groupe de ressources auquel vous souhaitez déployer les bases de données. Entrez un groupe de ressources existant.
-    - **Nom du serveur** – serveur de la base de données Azure SQL auquel vous souhaitez que les bases de données déployées. Si vous entrez un nom de serveur qui n’existe pas, il sera créé.
-    - **Administrateur Username\Password** – le nom d’utilisateur administrateur de serveur et le mot de passe.
+    - **ID d’abonnement** -l’ID d’abonnement de l’abonnement Azure auquel vous souhaitez approvisionner les bases de données.
+    - **Région** -la région dans laquelle configurer les bases de données. Assurez-vous que votre abonnement prend en charge de la zone de sélection.
+    - **Groupe de ressources** -le groupe de ressources auquel vous souhaitez déployer les bases de données. Entrez un groupe de ressources existant.
+    - **Nom du serveur** -server de la base de données Azure SQL auquel vous souhaitez que les bases de données déployées. Si vous entrez un nom de serveur qui n’existe pas, il sera créé.
+    - **Administrateur Username\Password** -le nom d’utilisateur administrateur de serveur et le mot de passe.
 
 2. Passez en revue les recommandations pour chaque base de données et modifier le niveau tarifaire, niveau et la taille de données max en fonction des besoins de calcul. Veillez à désélectionner les bases de données que vous ne souhaitez pas actuellement à approvisionner.
 

@@ -10,12 +10,12 @@ ms.assetid: a8bad2f1-8fb0-4d14-a978-11a5720e62d6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: dc1899dd230908c8dae87dc5004355c8f56c7d0d
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 5703d15cccb49575d617568fd90f2719603a0a7a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51031307"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52391592"
 ---
 # <a name="open-integration-services-projects-in-data-quality-client"></a>Ouvrir des projets Integration Services dans Data Quality Client
   [!INCLUDE[ssDQSCleansingLong](../includes/ssdqscleansinglong-md.md)] vous permet d'exécuter un projet de nettoyage en mode batch. Toutefois, vous pouvez parfois examiner les résultats de nettoyage dans un package Integration Services de la même façon que vous pouvez examiner les résultats de nettoyage dans l'onglet **Gérer et afficher les résultats** d'une activité de nettoyage dans un projet de qualité des données dans DQS. DQS vous permet d'ouvrir des projets Integration Services dans [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] comme tout autre projet de qualité des données à partir de l'écran **Ouvrir le projet** et d'avoir une expérience de nettoyage interactif des résultats de nettoyage dans un projet Integration Services.  
@@ -48,15 +48,15 @@ ms.locfileid: "51031307"
   
 3.  Dans l'écran **Ouvrir le projet** , vous pouvez identifier un projet Integration Services de l'une des manières suivantes :  
   
-    1.  **Nom du projet** : les projets Integration Services sont répertoriés selon la convention de nommage suivante : « Package.DQS Cleansing_*\<DATE>**\<HEURE>*_{GUID} ». Chaque fois que vous exécutez correctement le même package dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], un nouveau projet est répertorié dans l’écran **Ouvrir le projet** .  
+    1.  **Nom du projet**: Projets Integration Services sont répertoriés à l’aide de la terminologie de dénomination suivante : « Package.DQS Cleansing_*\<DATE > **\<temps >*_ {GUID}. » Chaque fois que vous exécutez correctement le même package dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], un nouveau projet est répertorié dans l’écran **Ouvrir le projet** .  
   
-    2.  **Type de projet**: les projets Integration Services ont **SSIS** comme type de projet dans l'écran **Ouvrir le projet** .  
+    2.  **Type de projet**: Projets Integration Services ont **SSIS** comme type de projet dans le **ouvrir un projet** écran.  
   
      Sélectionnez un projet, puis cliquez sur **Suivant**.  
   
-4.  Le projet Integration Services s'ouvre à l'étape de nettoyage interactif (onglet**Gérer la vue et les résultats** ). Vous pouvez effectuer un nettoyage interactif sur les données dans le projet Integration Services. Pour plus d’informations sur l’onglet **Gérer et afficher les résultats**, consultez [Étape de nettoyage interactif](../../2014/data-quality-services/cleanse-data-using-dqs-internal-knowledge.md#Interactive) dans [Nettoyer des données à l’aide de la base de connaissances DQS &#40interne&#41;](../../2014/data-quality-services/cleanse-data-using-dqs-internal-knowledge.md).  
+4.  Le projet Integration Services s'ouvre à l'étape de nettoyage interactif (onglet**Gérer la vue et les résultats** ). Vous pouvez effectuer un nettoyage interactif sur les données dans le projet Integration Services. Pour plus d’informations sur l’onglet **Gérer et afficher les résultats**, consultez [Étape de nettoyage interactif](../../2014/data-quality-services/cleanse-data-using-dqs-internal-knowledge.md#Interactive) dans [Nettoyer des données à l’aide de la base de connaissances DQS &#40;interne&#41;](../../2014/data-quality-services/cleanse-data-using-dqs-internal-knowledge.md).  
   
-5.  Cliquez sur **Suivant** pour accéder à l'onglet **Exporter** où vous pouvez exporter les données traitées vers l'un des éléments suivants : une nouvelle table dans la base de données SQL Server, un fichier .csv ou un fichier Excel. Pour plus d’informations sur l’onglet **Exporter**, consultez [Étape d’exportation](../../2014/data-quality-services/cleanse-data-using-dqs-internal-knowledge.md#Export) dans [Nettoyer des données à l’aide de la base de connaissances DQS &#40interne&#41;](../../2014/data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)  
+5.  Cliquez sur **Suivant** pour accéder à l'onglet **Exporter** où vous pouvez exporter les données traitées vers l'un des éléments suivants : une nouvelle table dans la base de données SQL Server, un fichier .csv ou un fichier Excel. Pour plus d’informations sur l’onglet **Exporter**, consultez [Étape d’exportation](../../2014/data-quality-services/cleanse-data-using-dqs-internal-knowledge.md#Export) dans [Nettoyer des données à l’aide de la base de connaissances DQS &#40;interne&#41;](../../2014/data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)  
   
 6.  Après l'exportation des données, cliquez sur **Terminer** pour fermer le projet Integration Services.  
   

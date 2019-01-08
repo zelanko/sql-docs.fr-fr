@@ -26,12 +26,12 @@ ms.assetid: 2491422a-4cf5-4b23-b6ab-289222b22ce8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 45ade4f79f2433d6f5841605cbbb8112e6a9b63f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4401eea7e5c5b42c1706095e4c14aee348298bc5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081593"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512782"
 ---
 # <a name="attribute-relationships"></a>Relations d’attributs
   Dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], attributs au sein d’une dimension sont toujours liés directement ou indirectement à l’attribut clé. Quand vous définissez une dimension basée sur un schéma en étoile, c'est-à-dire quand tous les attributs de la dimension sont dérivés de la même table relationnelle, une relation d'attribut est automatiquement définie entre l'attribut clé et chaque attribut non-clé de la dimension. Quand vous définissez une dimension basée sur un schéma en flocon, où les attributs de la dimension sont dérivés de plusieurs tables liées, une relation d'attribut est automatiquement définie comme suit :  
@@ -80,7 +80,7 @@ ms.locfileid: "48081593"
   
 -   l'attribut City en tant que relation d'attribut de l'attribut Customer.  
   
- Pour parcourir les données dans le cube, vous pouvez également créer une hiérarchie définie par l’utilisateur qui ne représente pas une hiérarchie naturelle dans les données (qui est appelée un *ad hoc* ou *reporting* hiérarchie). Par exemple, vous pouvez créer une hiérarchie définie par l'utilisateur basée sur `{Age, Gender}`. Les utilisateurs ne voient aucune différence quant à la façon dont les deux hiérarchies se comportent, bien que la hiérarchie naturelle bénéficie de structures d'agrégation et d'indexation, qui sont cachées à l'utilisateur et qui représentent les relations naturelles de la source de données.  
+ Pour parcourir les données dans le cube, vous pouvez également créer une hiérarchie définie par l’utilisateur qui ne représente pas une hiérarchie naturelle dans les données (qui est appelée un *ad hoc* ou *reporting* hiérarchie). Par exemple, vous pouvez créer une hiérarchie définie par l'utilisateur basée sur `{Age, Gender}`. Les utilisateurs ne voient pas aucune différence dans la façon dont les deux hiérarchies se comportent, bien que la hiérarchie naturelle bénéficie d’agrégation et l’indexation des structures - masqués à partir de l’utilisateur : ce compte pour les relations naturelles de la source de données.  
   
  La propriété `SourceAttribute` d'un niveau détermine l'attribut utilisé pour décrire le niveau. La propriété `KeyColumns` de l'attribut spécifie la colonne de la vue de source de données qui fournit les membres. La propriété `NameColumn` de l'attribut peut spécifier une colonne de nom différente pour les membres.  
   
@@ -95,8 +95,8 @@ ms.locfileid: "48081593"
  Vous pouvez utiliser des requêtes MDX pour extraire des données des relations d'attributs, sous forme de propriétés, avec le mot clé `PROPERTIES` de l'instruction MDX `SELECT`. Pour plus d’informations sur la façon d’utiliser MDX pour récupérer les propriétés de membre, consultez [à l’aide des propriétés de membre &#40;MDX&#41;](../multidimensional-models/mdx/mdx-member-properties.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Attributs et hiérarchies d’attributs](attributes-and-attribute-hierarchies.md)   
- [Dimension Attribute Properties Reference](../multidimensional-models/dimension-attribute-properties-reference.md)   
+ [Attributs et hiérarchies d'attributs](attributes-and-attribute-hierarchies.md)   
+ [Référence des propriétés d’attribut de dimension](../multidimensional-models/dimension-attribute-properties-reference.md)   
  [Hiérarchies utilisateur](user-hierarchies.md)   
  [Propriétés de la hiérarchie utilisateur](user-hierarchies-properties.md)  
   

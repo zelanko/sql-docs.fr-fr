@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.xmltask.f1
@@ -16,12 +15,12 @@ ms.assetid: 9f761846-390e-46d5-9db7-858943d40849
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 06fa137e5be6f664ae40e7c195e88a99bf87e9c9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1b696dd451c5b6f76419e4fb4cb501e2e62bba24
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204189"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52759321"
 ---
 # <a name="xml-task"></a>Tâche XML
   La tâche XML est utilisée pour travailler avec des données XML. À l'aide de cette tâche, un package peut extraire des documents XML, appliquer des opérations aux documents en utilisant des feuilles de style XSLT (Extensible Stylesheet Language Transformations) et des expressions XPath, fusionner plusieurs documents, ou bien valider, comparer et enregistrer les documents mis à jour dans des fichiers et des variables.  
@@ -71,7 +70,7 @@ ms.locfileid: "48204189"
 |Option|Description|  
 |------------|-----------------|  
 |**IgnoreComments**|Valeur indiquant si les nœuds de commentaires sont comparés.|  
-|**IgnoreNamespaces**|Valeur indiquant si les URI (Uniform Resource Identifier) d'espace de noms des noms d'un élément et de son attribut sont comparés. Si cette option est définie sur `true`, deux éléments possédant le même nom local mais un espace de noms différent sont considérés comme identiques.|  
+|**IgnoreNamespaces**|Valeur indiquant si les URI (Uniform Resource Identifier) d'espace de noms des noms d'un élément et de son attribut sont comparés. Si cette option a pour valeur `true`, deux éléments ayant le même nom local mais un espace de noms différent sont considérés comme identiques.|  
 |**IgnorePrefixes**|Valeur indiquant si les préfixes des noms d'élément et d'attribut sont comparés. Si cette option a pour valeur `true,` deux éléments ayant le même nom local mais des URI d'espaces de noms et des préfixes différents sont considérés comme identiques.|  
 |**IgnoreXMLDeclaration**|Valeur indiquant si les déclarations XML sont comparées.|  
 |**IgnoreOrderOfChildElements**|Valeur indiquant si l'ordre des éléments enfants est comparé. Si cette option a pour valeur `true`, les éléments enfants qui diffèrent uniquement par leur position dans la liste des frères sont considérés comme identiques.|  
@@ -94,7 +93,7 @@ ms.locfileid: "48204189"
 ### <a name="validation-operation"></a>Opération de validation  
  L'opération de validation peut être configurée pour utiliser un schéma DTD (Document Type Definition) ou XSD (XML Schema definition).  
   
- Activer `ValidationDetails` pour obtenir la sortie d’erreur détaillée. Pour plus d’informations, consultez [Validate XML with the XML Task](xml-task.md).  
+ Activez `ValidationDetails` pour obtenir une sortie d’erreur détaillée. Pour plus d’informations, consultez [Validate XML with the XML Task](xml-task.md).  
   
 ## <a name="xml-document-encoding"></a>Encodage de document XML  
  La tâche XML prend en charge la fusion de documents Unicode uniquement. Cela signifie que la tâche peut appliquer l'opération de fusion uniquement aux documents ayant un encodage Unicode. L'utilisation d'autres encodages provoquera l'échec de la tâche XML.  
@@ -120,15 +119,15 @@ ms.locfileid: "48204189"
   
  Pour plus d'informations sur les propriétés définissables dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , cliquez sur l'une des rubriques suivantes :  
   
--   [Éditeur de tâche XML &#40;Page Général&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Éditeur de tâche XML &#40;page Général&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Effectuer une validation XML avec la tâche XML](xml-task.md)  
+-   [Validate XML with the XML Task](xml-task.md)  
   
 -   [Page Expressions](../expressions/expressions-page.md)  
   
  Pour plus d'informations sur la définition des propriétés dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , cliquez sur la rubrique suivante :  
   
--   [Définir les propriétés d’une tâche ou d’un conteneur](../set-the-properties-of-a-task-or-container.md)  
+-   [Définir les propriétés d'une tâche ou d'un conteneur](../set-the-properties-of-a-task-or-container.md)  
   
 ## <a name="programmatic-configuration-of-the-xml-task"></a>Configuration par programme de la tâche XML  
  Pour plus d'informations sur la définition par programme de ces propriétés, cliquez sur la rubrique suivante :  
@@ -136,7 +135,7 @@ ms.locfileid: "48204189"
 -   <xref:Microsoft.SqlServer.Dts.Tasks.XMLTask.XMLTask>  
   
 ## <a name="related-tasks"></a>Tâches associées  
- [Définir les propriétés d’une tâche ou d’un conteneur](../set-the-properties-of-a-task-or-container.md)  
+ [Définir les propriétés d'une tâche ou d'un conteneur](../set-the-properties-of-a-task-or-container.md)  
   
 ## <a name="related-content"></a>Contenu associé  
   

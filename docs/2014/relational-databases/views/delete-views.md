@@ -15,12 +15,12 @@ ms.assetid: 6823c7f8-06ca-4bda-8482-7092f03d52a0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9e52ab35b0f75f80a6117995a353b66c320a5294
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b7e727451fb0f9dc7a3d0726a2cb0fa2d6adf997
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085589"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513491"
 ---
 # <a name="delete-views"></a>Supprimer des vues
   Vous pouvez supprimer (ignorer) des vues dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]  
@@ -51,7 +51,7 @@ ms.locfileid: "48085589"
 3.  Dans la boîte de dialogue **Supprimer l'objet** , cliquez sur **OK**.  
   
     > [!IMPORTANT]  
-    >  Cliquez sur **Afficher les dépendances** dans la boîte de dialogue **Supprimer un objet** pour ouvrir la boîte de dialogue *Dépendances de***nom_vue**. Cette opération affiche tous les objets qui dépendent de la vue et tous les objets dont la vue dépend.  
+    >  Cliquez sur **Afficher les dépendances** dans la boîte de dialogue **Supprimer un objet** pour ouvrir la boîte de dialogue _Dépendances de_ **nom_vue**. Cette opération affiche tous les objets qui dépendent de la vue et tous les objets dont la vue dépend.  
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   

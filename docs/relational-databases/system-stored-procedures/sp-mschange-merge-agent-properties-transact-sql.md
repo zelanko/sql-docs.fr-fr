@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_MSchange_merge_agent_properties_TSQL
@@ -17,12 +16,12 @@ ms.assetid: f775fa0f-28c7-4863-89ce-7bcfa1ab8b5e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b87abc026d8d4d2b9275fcd57fc56919be3f5a07
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3ad4b46cbf4c19b637bdc836e5c311321273de63
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47751717"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52769781"
 ---
 # <a name="spmschangemergeagentproperties-transact-sql"></a>sp_MSchange_merge_agent_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +67,7 @@ sp_MSchange_merge_agent_properties [ @publisher = ] 'publisher'
   
  Le tableau ci-dessous décrit les propriétés modifiables de l'Agent de fusion et les limites applicables aux valeurs de ces propriétés.  
   
-|Propriété|Valeur|Description|  
+|Propriété|Value|Description|  
 |--------------|-----------|-----------------|  
 |**description**||Brève description de l'abonnement.|  
 |**merge_job_login**||Nom de connexion du compte [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows sous lequel l'Agent s'exécute.|  
@@ -93,7 +92,7 @@ sp_MSchange_merge_agent_properties [ @publisher = ] 'publisher'
   
  Lorsque le serveur de publication s’exécute sur une instance de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou version ultérieure, vous devez utiliser [sp_changemergesubscription](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md) pour modifier les propriétés d’un travail d’Agent de fusion qui synchronise un abonnement envoyé qui s’exécute sur le serveur de distribution.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Seuls les membres de la **sysadmin** du rôle serveur fixe sur le serveur de distribution peuvent exécuter **sp_MSchange_merge_agent_properties**.  
   
 ## <a name="see-also"></a>Voir aussi  

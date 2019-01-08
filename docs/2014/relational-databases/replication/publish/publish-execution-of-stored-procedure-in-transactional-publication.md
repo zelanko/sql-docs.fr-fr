@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - publishing [SQL Server replication], stored procedure execution
@@ -14,12 +13,12 @@ ms.assetid: 1d3a3525-0bc5-466f-b097-5359dc74432d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ff370a48d3f73f9b451eb90e69b5ce978d2b741c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 07bab8c30c138139dee50b349ac797e5c86fa5c5
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48228729"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52799497"
 ---
 # <a name="publish-the-execution-of-a-stored-procedure-in-a-transactional-publication-sql-server-management-studio"></a>publier l'exécution d'une procédure stockée dans une publication transactionnelle (SQL Server Management Studio)
   Spécifiez que l’exécution d’une procédure stockée (et non sa définition uniquement) doit être publiée dans la boîte de dialogue **Propriétés de l’article - \<Article>**. Cette boîte de dialogue est disponible dans l’Assistant Nouvelle publication et dans la boîte de dialogue **Propriétés de la publication - \<Publication>**. Pour plus d’informations sur l’utilisation de l’Assistant et sur l’accès à la boîte de dialogue, consultez [Créer une publication](create-a-publication.md) et [Afficher et modifier les propriétés d’une publication](view-and-modify-publication-properties.md).  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords:
 - concurrent installations [SQL Server]
@@ -21,12 +20,12 @@ ms.assetid: 93acefa8-bb41-4ccc-b763-7801f51134e0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 080a6c5f9608d71ec0cc6870c1b6af95388cbc52
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ec56d95cdd0550fb15d6a28eca683a8136ffdd6e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154049"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52762732"
 ---
 # <a name="work-with-multiple-versions-and-instances-of-sql-server"></a>Utiliser plusieurs versions et instances de SQL Server
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge plusieurs instances du [!INCLUDE[ssDE](../../includes/ssde-md.md)], d’ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]et de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sur le même ordinateur. Vous pouvez également mettre à niveau des versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ou installer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur un ordinateur où des versions précédentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont déjà installées. Pour connaître les scénarios de mise à niveau pris en charge, consultez [Mises à niveau de la version et de l’édition prises en charge](../../database-engine/install-windows/supported-version-and-edition-upgrades.md).  
@@ -49,7 +48,7 @@ ms.locfileid: "48154049"
 ### <a name="components-shared-by-all-versions-of-includessnoversionincludesssnoversion-mdmd"></a>Composants partagés par toutes les versions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  Certains composants sont partagés par toutes les instances de toutes les versions installées de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Lorsque vous installez des versions différentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] côte à côte sur le même ordinateur, ces composants sont mis à niveau automatiquement vers la version la plus récente. Ces composants sont habituellement désinstallés automatiquement lorsque la dernière instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est désinstallée.  
   
- Exemples : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser et Enregistreur Microsoft VSS [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ Exemples : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Navigateur et Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] enregistreur VSS.  
   
 ### <a name="components-shared-across-all-instances-of-the-same-major-version-of-includessnoversionincludesssnoversion-mdmd"></a>Composants partagés par toutes les instances de la même version principale de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Les versions qui ont le même numéro de version principale partagent certains composants d’une instance à l’autre. Si les composants partagés sont sélectionnés pendant la mise à niveau, les composants existants sont mis à niveau vers la version la plus récente.  
@@ -59,7 +58,7 @@ ms.locfileid: "48154049"
 ### <a name="components-shared-across-minor-versions"></a>Composants partagés par les versions secondaires  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Les versions qui ont le même numéro de version principale.secondaire partagent des composants.  
   
- Exemple : fichiers de support d'installation.  
+ Exemple : .  
   
 ### <a name="components-specific-to-an-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Composants spécifiques à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  Certains composants ou services de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont spécifiques à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ils sont également définis comme étant dépendants de l'instance. Ils partagent la même version que l'instance qui les héberge et sont utilisés exclusivement pour cette instance.  

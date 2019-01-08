@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: backup-restore
 ms.topic: conceptual
 helpviewer_keywords:
 - upgrading databases
@@ -28,12 +27,12 @@ ms.assetid: d0de0639-bc54-464e-98b1-6af22a27eb86
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f3d3850e98bce1031d285388b6f5fbe75737e37b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5eae331b064d83510d657f6f09a819955e6259a0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107335"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52778441"
 ---
 # <a name="database-detach-and-attach-sql-server"></a>Attacher et détacher une base de données (SQL Server)
   Les données et les journaux de transactions d'une base de données peuvent être détachés, puis rattachés à la même instance ou à une autre instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le détachement et l'attachement d'une base de données sont utiles pour transférer la base de données dans une instance différente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur le même ordinateur ou pour la déplacer.  
@@ -93,7 +92,7 @@ ms.locfileid: "48107335"
 > [!NOTE]  
 >  Si le fichier de données primaires attaché est en lecture seule, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] suppose que la base de données est en lecture seule.  
   
- Quand une base de données chiffrée est d’abord attaché à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le propriétaire de la base de données doit ouvrir la clé principale de la base de données en exécutant l’instruction suivante : OPEN MASTER KEY DECRYPTION BY PASSWORD = **' *`password`*'**. Nous vous recommandons d'activer le déchiffrement automatique de la clé principale en exécutant l'instruction suivante : ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY. Pour plus d’informations, consultez [CREATE MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-master-key-transact-sql) et [ALTER MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-master-key-transact-sql).  
+ Quand une base de données chiffrée est d’abord attaché à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le propriétaire de la base de données doit ouvrir la clé principale de la base de données en exécutant l’instruction suivante : OPEN MASTER KEY DÉCHIFFREMENT PAR MOT DE PASSE = **'*`password`*'**. Nous vous recommandons d’activer le déchiffrement automatique de la clé principale en exécutant l’instruction suivante : ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY. Pour plus d’informations, consultez [CREATE MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-master-key-transact-sql) et [ALTER MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-master-key-transact-sql).  
   
  Les conditions requises pour attacher des fichiers journaux dépendent en partie des autorisations de lecture-écriture ou de lecture seule de la base de données. Elles sont exposées ci-dessous.  
   

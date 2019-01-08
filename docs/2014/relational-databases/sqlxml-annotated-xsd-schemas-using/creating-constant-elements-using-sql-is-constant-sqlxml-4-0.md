@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - element does not map [SQLXML]
@@ -20,15 +18,15 @@ ms.assetid: 940eea1b-54f5-445f-b844-c894d9f3941b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 28c95cabd8b2c47aa3d05f51526b3eb0921e4701
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 03e2d3d672d0bfa407a3fb553a1139d30696971e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137299"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52793471"
 ---
 # <a name="creating-constant-elements-using-sqlis-constant-sqlxml-40"></a>Création d'éléments constants à l'aide de sql:is-constant (SQLXML 4.0)
-  Pour spécifier un élément constant, c'est-à-dire un élément du schéma XSD qui n'est mappé à aucune table ou colonne de base de données, vous pouvez utiliser l'annotation `sql:is-constant`. Cette annotation accepte une valeur booléenne (0 = false, 1 = true). Les valeurs acceptables sont 0, 1, true et false. L'annotation `sql:is-constant` peut être spécifiée sur un élément qui n'a pas d'attributs. Si elle est spécifiée sur un élément qui a la valeur true (ou 1), cet élément n'est pas mappé à la base de données mais apparaît néanmoins dans le document XML.  
+  Pour spécifier un élément constant-autrement dit, un élément dans le schéma XSD qui n’est pas mappé à aucune table de base de données ou de la colonne-vous pouvez utiliser le `sql:is-constant` annotation. Cette annotation accepte une valeur booléenne (0 = false, 1 = true). Les valeurs acceptables sont 0, 1, true et false. L'annotation `sql:is-constant` peut être spécifiée sur un élément qui n'a pas d'attributs. Si elle est spécifiée sur un élément qui a la valeur true (ou 1), cet élément n'est pas mappé à la base de données mais apparaît néanmoins dans le document XML.  
   
  L'annotation `sql:is-constant` peut être utilisée pour :  
   

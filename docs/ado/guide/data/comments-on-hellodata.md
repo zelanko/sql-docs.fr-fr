@@ -13,12 +13,12 @@ ms.assetid: a2831d77-7040-4b73-bbae-fe0bf78107ed
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e3086eff0e4a774e7f63e7ff876a9675668d5912
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 632703a1f7817986a6bc192006ef079af20cfb08
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47707877"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527455"
 ---
 # <a name="comments-on-hellodata"></a>Commentaires sur HelloData
 Étapes de l’application HelloData via les opérations de base d’une application ADO typique : obtention, examen, la modification et la mise à jour des données. Lorsque vous démarrez l’application, cliquez sur le premier bouton, **obtenir des données**. Cela exécutera le **GetData** sous-routine.  
@@ -74,4 +74,4 @@ ms.locfileid: "47707877"
  Pour plus d’informations sur la façon de mettre à jour des données, y compris ce qu’il faut faire lorsque les données sur le serveur change lors de votre **Recordset** est déconnecté, consultez [mise à jour et persistance des données](../../../ado/guide/data/updating-and-persisting-data.md).  
   
 ## <a name="formunload"></a>Form_Unload  
- Le **Form_Unload** sous-routine est importante pour plusieurs raisons. Tout d’abord, car il s’agit d’un exemple d’application, Form_Unload nettoie les modifications qui ont été apportées à la base de données avant la fermeture de l’application. Ensuite, le code montre comment une commande peut être exécutée directement à partir d’une ouverture **connexion** objet à l’aide de la **Execute** (méthode). Enfin, il montre un exemple d’exécution d’une requête sans renvoi de ligne (une requête de mise à jour) sur la source de données.
+ Le **Form_Unload** sous-routine est importante pour plusieurs raisons. Tout d’abord, car il s’agit d’un exemple d’application, Form_Unload nettoie les modifications qui ont été apportées à la base de données avant la fermeture de l’application. Ensuite, le code montre comment une commande peut être exécutée directement à partir d’une ouverture **connexion** objet à l’aide de la **Execute** (méthode). Enfin, il montre un exemple d’exécution d’une requête sans renvoi à la ligne (une requête de mise à jour) sur la source de données.

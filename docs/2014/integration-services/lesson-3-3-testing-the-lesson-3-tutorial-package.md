@@ -1,24 +1,23 @@
 ---
-title: 'Étape 3 : Test du package du didacticiel de la leçon 3 | Microsoft Docs'
+title: 'Étape 3 : Test du Package de didacticiel de la leçon 3 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 1096a476-93cf-4474-86f5-27d6357eb380
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c89d07cd3361d8bbb6648a57bbc2c05c167cf38e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ac6cb097990c33564c29dad6918c0b8cc883530d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076509"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52751301"
 ---
-# <a name="step-3-testing-the-lesson-3-tutorial-package"></a>Étape 3 : Test de la leçon 3 du package du didacticiel
+# <a name="step-3-testing-the-lesson-3-tutorial-package"></a>Étape 3 : Test de la leçon 3 du package du didacticiel
   Dans cette tâche, vous allez exécuter le package Lesson 3.dtsx. Lors de l'exécution du package, la fenêtre Journaux d'événements répertorie les entrées inscrites dans le fichier journal. Une fois l'exécution du package terminée, vous allez vérifier le contenu du fichier journal qui a été généré par le fournisseur d'informations.  
   
 ## <a name="checking-the-package-layout"></a>Vérification de la disposition du package  
@@ -47,6 +46,6 @@ ms.locfileid: "48076509"
 -   Bien que la sémantique des informations générées pour le `PipelineExecutionPlan` et `PipelineExecutionTrees` événements sont dépasse le cadre de ce didacticiel, vous pouvez voir que la première ligne mentionne les champs d’informations spécifiés dans le **détails** onglet de le **configurer les journaux SSIS** boîte de dialogue. De plus, vous pouvez vérifier que les deux événements sélectionnés, PipelineExecutionPlan et PipelineExecutionTrees, ont été enregistrés pour chaque itération de la boucle Foreach.  
   
 ## <a name="next-lesson"></a>Leçon suivante  
- [Leçon 4 : Ajout de redirection de flux d’erreurs](../integration-services/lesson-4-add-error-flow-redirection-with-ssis.md)  
+ [Leçon 4 : Ajout de Redirection de flux d’erreurs](../integration-services/lesson-4-add-error-flow-redirection-with-ssis.md)  
   
   

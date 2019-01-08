@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.monitor.publicationinfo.allsubscriptions.snapshot.f1
@@ -13,12 +12,12 @@ ms.assetid: 7ce656c2-6e60-4625-8955-1daff641070c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 86b43caccd6117d7371b201938acc593b6d63da9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 30f407c862bdc0b4cc38b225b9ff6842e8fbcce0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081069"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52776941"
 ---
 # <a name="publication-information-all-subscriptions-snapshot-publication"></a>Informations de publication, Tous les abonnements (Publication d'instantané)
   L'onglet **Tous les abonnements** contient des informations sur tous les abonnements à la publication d'instantané sélectionnée.  
@@ -26,13 +25,13 @@ ms.locfileid: "48081069"
 ## <a name="options"></a>Options  
  Pour plus d'informations et en savoir plus sur les tâches associées à un abonnement, cliquez avec le bouton droit de la souris sur la ligne de l'abonnement, puis cliquez sur une option dans le menu contextuel. Pour modifier la façon dont la grille affiche les données, cliquez avec le bouton droit sur la grille, puis cliquez sur l'une des options suivantes :  
   
--   **Trier**: cette option vous permet d'effectuer un tri sur ou plusieurs colonnes dans la boîte de dialogue **Trier les colonnes** .  
+-   **Tri**: Trier sur une ou plusieurs colonnes dans le **trier les colonnes** boîte de dialogue.  
   
--   **Choisir les colonnes à afficher**: cette option vous permet de sélectionner les colonnes à afficher et l'ordre d'affichage dans la boîte de dialogue **Choisir les colonnes** .  
+-   **Choisissez les colonnes à afficher**: Sélectionner les colonnes à afficher et l’ordre dans lequel les afficher dans le **choisir les colonnes** boîte de dialogue.  
   
--   **Filtre**: cette option vous permet de filtrer les lignes dans la grille selon les valeurs de colonne dans la boîte de dialogue **Paramètres du filtre** .  
+-   **Filtre**: Filtrer des lignes dans la grille en fonction des valeurs de colonne dans la **paramètres de filtre** boîte de dialogue.  
   
--   **Effacer le filtre**: cette option vous permet d'effacer tous les paramètres du filtre pour la grille.  
+-   **Effacer le filtre**: Effacer des paramètres de filtre pour la grille.  
   
  Les paramètres du filtre sont spécifiques à chaque grille. La sélection et le tri des colonnes sont appliqués à toutes les grilles du même type, par exemple la grille de publications pour chaque serveur de publication.  
   
@@ -63,7 +62,7 @@ ms.locfileid: "48081069"
  La valeur d'état **Expire bientôt/Expiré** s'affiche uniquement si un seuil est défini. Pour plus d’informations sur la définition des seuils, consultez [Définir des seuils et des avertissements dans le Moniteur de réplication](monitor/set-thresholds-and-warnings-in-replication-monitor.md).  
   
  **Abonnement**  
- Nom de chaque abonnement, au format : *NomAbonné: NomBaseDonnéesAbonnements*.  
+ Nom de chaque abonnement au format : *NomAbonné : Nombasedonnéesabonnements*.  
   
  **Dernière synchronisation**  
  Heure de la dernière exécution de l'Agent de distribution. Si la synchronisation est en cours, **Opération en cours** s'affiche.  

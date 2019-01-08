@@ -17,12 +17,12 @@ ms.assetid: 71fa6ea4-007c-4c2b-b5af-2cec6ea79b58
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5ebe10a73dfbb5436156518b2a3e4d8388cc84b9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 72e004e6fd41ee74643fc05ec9020e6ac1933e09
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47769343"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208568"
 ---
 # <a name="affected-odbc-components"></a>Composants ODBC affectés
 Compatibilité descendante décrit comment les applications, le Gestionnaire de pilotes et les pilotes sont affectés par l’introduction d’une nouvelle version du Gestionnaire de pilotes. Cela affecte les applications et le pilote lorsqu’ou pour les deux d'entre eux restent dans l’ancienne version. Il existe, par conséquent, trois types de compatibilité descendante à prendre en compte, comme indiqué dans le tableau suivant.  
@@ -33,7 +33,7 @@ Compatibilité descendante décrit comment les applications, le Gestionnaire de 
 |Compatibilité descendante de pilote [1]|3 *.x*|2.*x*|3.*x*|  
 |Compatibilité descendante des applications|3.*x*|3.*x*|2.*x*|  
   
- [1] la compatibilité descendante des pilotes est principalement abordée dans les instructions de pilote annexe g : pour la compatibilité descendante.  
+ [1] la compatibilité descendante des pilotes est principalement abordée dans g : annexe Instructions de pilote pour la compatibilité descendante.  
   
-> [!NOTE]  
->  Une application conforme aux normes, par exemple, une application qui a été écrit conformément aux normes Open Group ou ISO CLI — est garantie pour travailler avec un ODBC 3 *.x* pilote via l’ODBC 3 *.x*Gestionnaire de pilotes. Il est supposé que la fonctionnalité à l’aide de l’application est disponible dans le pilote. Il est également supposé que l’application conforme aux normes a été compilée avec l’ODBC 3 *.x* fichiers d’en-tête.
+> [!NOTE]
+>  Une application conforme aux normes - par exemple, une application qui a été écrit conformément aux normes Open Group ou ISO CLI - est garantie pour travailler avec un ODBC 3 *.x* pilote via l’ODBC 3 *.x*Gestionnaire de pilotes. Il est supposé que la fonctionnalité à l’aide de l’application est disponible dans le pilote. Il est également supposé que l’application conforme aux normes a été compilée avec l’ODBC 3 *.x* fichiers d’en-tête.

@@ -14,12 +14,12 @@ ms.assetid: e8feaca0-7852-422b-895a-319b965d8d9b
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 75de66ef1759cc9e20b98f1f38c9ffa6361d31a0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f8e32b949e6c2868f5478215154df70cdd0e53e9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229689"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519188"
 ---
 # <a name="view-a-sql-server-audit-log"></a>Afficher un journal d'audit SQL Server
   Cette rubrique explique comment afficher un journal d'audit SQL Server dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].  
@@ -49,7 +49,7 @@ ms.locfileid: "48229689"
   
 2.  Développez le dossier **Audits** .  
   
-3.  Cliquez avec le bouton droit sur le journal d’audit que vous souhaitez afficher et sélectionnez **Afficher les journaux d’audit**. Cette opération ouvre la boîte de dialogue **Visionneuse du fichier journal –***nom_serveur*. Pour plus d'informations, consultez [Log File Viewer F1 Help](../../logs/log-file-viewer-f1-help.md).  
+3.  Cliquez avec le bouton droit sur le journal d’audit que vous souhaitez afficher et sélectionnez **Afficher les journaux d’audit**. Cette opération ouvre le **visionneuse du fichier journal-*** nom_serveur* boîte de dialogue. Pour plus d'informations, consultez [Log File Viewer F1 Help](../../logs/log-file-viewer-f1-help.md).  
   
 4.  Lorsque vous avez terminé, cliquez sur **Fermer**.  
   

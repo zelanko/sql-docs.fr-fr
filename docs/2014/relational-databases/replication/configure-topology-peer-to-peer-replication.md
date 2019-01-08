@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.p2pwizard.peers.f1
@@ -13,12 +12,12 @@ ms.assetid: 5377c59f-2e25-4852-a306-c87ae3dca9fd
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5540401d4b0a05c3ebe87742f902e6e16b59498a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 54de95fe39ea6b99139ee040b93160a1a93ff1bf
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208219"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52776461"
 ---
 # <a name="configure-topology-peer-to-peer-replication"></a>Configurer la topologie (réplication d'égal à égal)
   Utilisez la page **Configurer la topologie** pour effectuer des tâches de configuration communes, telles que l'ajout de nouveaux nœuds, la suppression de nœuds et l'ajout de nouvelles connexions entre des nœuds existants. Le nœud que vous avez sélectionné dans la page **Publication** de cet Assistant s'affiche dans l'aire de conception. Pour spécifier des options de configuration, cliquez avec le bouton droit sur un nœud, une connexion ou l'aire de conception.  
@@ -63,7 +62,7 @@ ms.locfileid: "48208219"
   
 ### <a name="options-for-each-node"></a>Options pour chaque nœud  
  **Ajouter une nouvelle connexion homologue**  
- Cette option vous permet d'ajouter une connexion entre deux nœuds. Par exemple, si vous ajoutez une connexion entre un nœud A et un nœud B, la réplication ajoute deux abonnements : le premier autorise le nœud A à recevoir des modifications de la publication au niveau du nœud B, et le second autorise le nœud B à recevoir des modifications de la publication au niveau du nœud A.  
+ Cette option vous permet d'ajouter une connexion entre deux nœuds. Par exemple, si vous ajoutez une connexion entre les nœuds A et B, la réplication ajoute deux abonnements : La première autorise le nœud A à recevoir des modifications de la publication sur le nœud B, et le second autorise le nœud B à recevoir des modifications à partir de la publication sur le nœud A.  
   
  **Supprimer le nœud homologue**  
  Cette option vous permet de supprimer un nœud de la topologie. Par exemple, si vous supprimez le nœud C, la publication au niveau de ce nœud est supprimée. Les abonnements entre le nœud A et le nœud C sont aussi supprimés, de même qu'entre le nœud B et le nœud C. La base de données au niveau du nœud C n'est pas supprimée, et la publication et la distribution ne sont pas désactivées.  

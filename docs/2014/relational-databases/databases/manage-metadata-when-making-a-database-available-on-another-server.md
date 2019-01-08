@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - cross-database queries [SQL Server]
@@ -35,12 +34,12 @@ ms.assetid: 5d98cf2a-9fc2-4610-be72-b422b8682681
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 15b32fd7e81c098c26571254f9017152135406e3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 68f12f498946e7eb230aaab5185973eeb810e7e6
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198499"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52785991"
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server-instance-sql-server"></a>Gérer les métadonnées lors de la mise à disposition d'une base de données sur une autre instance de serveur (SQL Server)
   Cette rubrique concerne les situations suivantes :  
@@ -109,7 +108,7 @@ ms.locfileid: "48198499"
  Pour plus d’informations sur cette fonctionnalité, consultez [Informations d’identification &#40;moteur de base de données&#41;](../security/authentication-access/credentials-database-engine.md).  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utilisent des informations d’identification. Pour connaître les informations d'identification d'un compte proxy, utilisez la table système [sysproxies](/sql/relational-databases/system-tables/dbo-sysproxies-transact-sql) .  
+>  Les comptes proxy de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisent des informations d'identification. Pour connaître les informations d'identification d'un compte proxy, utilisez la table système [sysproxies](/sql/relational-databases/system-tables/dbo-sysproxies-transact-sql) .  
   
  [&#91;Haut&#93;](#information_entities_and_objects)  
   
@@ -135,7 +134,7 @@ ms.locfileid: "48198499"
   
  Pour permettre le déchiffrement automatique de la clé principale de base de données sur une instance de serveur, une copie de cette clé est chiffrée à l'aide de la clé principale du service. Cette copie chiffrée est stockée dans la base de données et dans la base **master**. En général, la copie stockée dans **master** est mise à jour sans avertissement chaque fois que la clé principale est modifiée. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tente tout d'abord de déchiffrer la clé principale de base de données avec la clé principale de service de l'instance. Si ce déchiffrement échoue, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recherche dans la banque d'informations d'identification les informations d'identification de clé principale qui possèdent le même GUID de famille que la base de données pour laquelle la clé principale est requise. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tente ensuite de déchiffrer la clé principale de base de données avec toutes les informations d'identification correspondantes, jusqu'à ce que le déchiffrement réussisse ou qu'il ne reste plus d'informations d'identification. Une clé principale qui n'est pas chiffrée par la clé principale de service doit être ouverte à l'aide de l'instruction OPEN MASTER KEY et d'un mot de passe.  
   
- Lorsqu'une base de données chiffrée est copiée, restaurée ou attachée à une nouvelle instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], une copie de la clé principale de la base de données chiffrée par la clé principale du service n'est pas stockée dans la base **master** sur l'instance du serveur de destination. Sur l'instance du serveur de destination, vous devez ouvrir la clé principale de la base de données. Pour ouvrir la clé principale, exécutez l’instruction suivante : OPEN MASTER KEY DECRYPTION BY PASSWORD **='***mot_de_passe***'**. Nous vous recommandons d'activer alors le déchiffrement automatique de la clé principale de la base de données en exécutant l'instruction suivante : ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY. Cette instruction ALTER MASTER KEY fournit à l'instance du serveur une copie de la clé principale de la base de données qui est chiffrée à l'aide de la clé principale du service. Pour plus d’informations, consultez [OPEN MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/open-master-key-transact-sql) et [ALTER MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-master-key-transact-sql).  
+ Lorsqu'une base de données chiffrée est copiée, restaurée ou attachée à une nouvelle instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], une copie de la clé principale de la base de données chiffrée par la clé principale du service n'est pas stockée dans la base **master** sur l'instance du serveur de destination. Sur l'instance du serveur de destination, vous devez ouvrir la clé principale de la base de données. Pour ouvrir la clé principale, exécutez l'instruction suivante : OPEN MASTER KEY DECRYPTION BY PASSWORD **='***mot de passe***'**. Nous vous recommandons d'activer le déchiffrement automatique de la clé principale de la base de données en exécutant l'instruction suivante : ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY. Cette instruction ALTER MASTER KEY fournit à l'instance du serveur une copie de la clé principale de la base de données qui est chiffrée à l'aide de la clé principale du service. Pour plus d’informations, consultez [OPEN MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/open-master-key-transact-sql) et [ALTER MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-master-key-transact-sql).  
   
  Pour plus d’informations sur l’activation du déchiffrement automatique de la clé principale d’une base de données miroir, consultez [Configurer une base de données miroir chiffrée](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md).  
   
@@ -281,7 +280,7 @@ ms.locfileid: "48198499"
   
  [&#91;Haut&#93;](#information_entities_and_objects)  
   
-##  <a name="permissions"></a> Autorisations  
+##  <a name="permissions"></a> Permissions  
  Les types d'autorisations suivants peuvent être affectés par la mise à disponibilité d'une base de données sur une autre instance de serveur.  
   
 -   Autorisations GRANT, REVOKE ou DENY sur les objets système  

@@ -19,12 +19,12 @@ ms.assetid: e59632f4-3292-419f-9217-ca375749f1a5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cde19779c178b8064e6b20a3ae39bbfb7f5b96f6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 25af20743a98ad674e24cf4ae028185b024697e5
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47847157"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395883"
 ---
 # <a name="sysdmfilestreamfileiohandles-transact-sql"></a>sys.dm_filestream_file_io_handles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "47847157"
   
 |colonne|Type|Description|  
 |------------|----------|-----------------|  
-|**handle_context_address**|**varbinary(8)**|Affiche l'adresse de la structure NSO interne associée au handle du client. Autorise la valeur NULL.|  
+|**handle_context_address**|**varbinary(8)**|Affiche l’adresse de la structure NSO interne associée au handle du client. Autorise la valeur NULL.|  
 |**creation_request_id**|**Int**|Affiche un champ de la requête d'E/S REQ_PRE_CREATE utilisé pour créer ce handle. N'accepte pas la valeur NULL.|  
 |**creation_irp_id**|**Int**|Affiche un champ de la requête d'E/S REQ_PRE_CREATE utilisé pour créer ce handle. N'accepte pas la valeur NULL|  
 |**handle_id**|**Int**|Affiche l'ID unique de ce handle qui est attribué par le pilote. N'accepte pas la valeur NULL.|  
@@ -44,7 +44,7 @@ ms.locfileid: "47847157"
 |**logical_path**|**nvarchar (256)**|Affiche le nom de chemin d'accès logique du fichier ouvert par ce handle. Il s’agit du même chemin d’accès qui est retourné par la **. Chemin d’accès** méthode de **varbinary**(**max**) filestream. Autorise la valeur NULL.|  
 |**chemin physique**|**nvarchar (256)**|Affiche le nom de chemin d'accès NTFS réel du fichier. Il s’agit du même chemin d’accès retourné par la **. PhysicalPathName** méthode de la **varbinary**(**max**) filestream. Il est activé par l'indicateur de suivi 5556. Autorise la valeur NULL.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  requièrent l'autorisation VIEW SERVER STATE sur le serveur.  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - conflict resolution [SQL Server replication], queued updating subscriptions
@@ -15,12 +14,12 @@ ms.assetid: 9977dd75-b0de-4376-9c13-86d80567d8aa
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a4a2f9a8927b5cf6a1a93f66f075a2600c3f98e5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 76f5e18a6555f4facf068dbd68429a770ebd9676
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48052949"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52797441"
 ---
 # <a name="view-data-conflicts-for-transactional-publications-sql-server-management-studio"></a>afficher les conflits de données pour les publications de fusion (SQL Server Management Studio)
   Vous pouvez afficher les conflits pour la réplication transactionnelle d'égal à égal et la réplication transactionnelle avec des abonnements mis à jour en attente dans l'outil de résolution des conflits de réplication de [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Pour plus d’informations sur la détection et la résolution des conflits, consultez [Détection de conflit dans la réplication d’égal à égal](transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md) et [Définir des options de résolution des conflits de mise à jour en attente &#40;SQL Server Management Studio&#41;](publish/set-queued-updating-conflict-resolution-options-sql-server-management-studio.md).  
@@ -57,7 +56,7 @@ ms.locfileid: "48052949"
   
     -   Sélectionner une ou plusieurs lignes dans la grille supérieure puis cliquer sur **Supprimer**, pour supprimer la ligne de la table des métadonnées des conflits.  
   
-    -   Cliquer sur le bouton des propriétés (**…**) pour afficher des informations plus détaillées sur une colonne concernée par un conflit.  
+    -   Cliquer sur le bouton des propriétés (**...**) pour afficher des informations plus détaillées sur une colonne concernée par un conflit.  
   
     -   Sélectionner l'option **Consigner les détails de ce conflit** pour enregistrer les données de conflit dans un journal. Pour spécifier l'emplacement du fichier, pointez sur le menu **Affichage** puis cliquez sur **Options**. Entrez une valeur ou cliquez sur le bouton Parcourir (**...**) pour accéder au fichier approprié. Cliquez sur **OK** pour fermer la boîte de dialogue **Options** .  
   

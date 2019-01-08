@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 ms.assetid: e988f9e8-6801-41d1-8069-726f487244d5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f5a5b305bcf41cdf3f306c3fb15f0f123fd471e6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b66a0c9efc94d648eba2f4d4f8cff779def413fe
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164499"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52788161"
 ---
 # <a name="overview-smo"></a>Vue d'ensemble (objets SMO)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) sont conçus pour la gestion par programme de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Vous pouvez les utiliser pour créer des applications de gestion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] personnalisées. Même si [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] est une application puissante et étendue de gestion de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], une application SMO donnera dans certains cas de meilleurs résultats.  
@@ -26,15 +24,15 @@ ms.locfileid: "48164499"
   
  Le modèle objet SMO étend et remplace le modèle objet DMO (SQL-Distributed Management Objects). Comparé à SQL-DMO, SMO améliore les performances, permet un meilleur contrôle et facilite l'utilisation. La plupart des fonctionnalités du modèle objet SQL-DMO sont incluses dans SMO. De nouvelles classes ont par ailleurs été ajoutées pour prendre en charge de nouvelles fonctionnalités dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le modèle objet est intuitif et utilise autant que possible la terminologie SQL-DMO pour faciliter le transfert de vos compétences.  
   
- Étant donné que SMO est compatible avec [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et versions ultérieures, vous pouvez facilement gérer un environnement multiversion.  
+ Dans la mesure où SMO est compatible avec [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et versions ultérieures, il vous est facile de gérer un environnement multiversion.  
   
  Nouvelles fonctionnalités de SMO :  
   
 -   Modèle objet mis en cache et création d'instance d'objet optimisée. Les objets sont chargés uniquement lorsqu'ils sont spécifiquement référencés. Les propriétés de l'objet ne sont que partiellement chargées à la création de l'objet. Les objets et propriétés restants sont chargées lorsqu'ils sont directement référencés.  
   
--   Exécution groupée des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)]. Les instructions sont groupées pour améliorer les performances réseau.  
+-   Exécution groupée des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] . Les instructions sont groupées pour améliorer les performances réseau.  
   
--   Capture des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)]. Autorise la capture de toute opération dans un script. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] utilise cette fonctionnalité pour écrire une opération au lieu de l'exécuter immédiatement.  
+-   Capture des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] . Autorise la capture de toute opération dans un script. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] utilise cette fonctionnalité pour écrire une opération au lieu de l'exécuter immédiatement.  
   
 -   Gestion des services [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec le fournisseur WMI. Les services [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peuvent être démarrés, arrêtés et suspendus par programme.  
   
@@ -42,33 +40,33 @@ ms.locfileid: "48164499"
   
 -   Utilisation de noms de ressource uniques (URN). Un URN vous permet de créer des instances d'objets SMO et de les référencer.  
   
- SMO représente également de nombreux composants et fonctionnalités introduits dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] sous la forme de nouveaux objets ou propriétés. Ces nouveaux composants et fonctionnalités sont les suivants :  
+ SMO représente également de nombreux composants et fonctionnalités introduits dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]sous la forme de nouveaux objets ou propriétés. Ces nouveaux composants et fonctionnalités sont les suivants :  
   
 -   Partitionnement d'index et de table pour le stockage des données sur un schéma de partition. Pour plus d’informations, consultez [Tables et index partitionnés](../partitions/partitioned-tables-and-indexes.md).  
   
--   Points de terminaison HTTP pour la gestions des requêtes SOAP. Pour plus d’informations, consultez [Implementing Endpoints](tasks/implementing-endpoints.md).  
+-   Points de terminaison HTTP pour la gestions des requêtes SOAP. Pour plus d'informations, consultez [Implementing Endpoints](tasks/implementing-endpoints.md).  
   
--   Isolement d'instantané et contrôle de version de ligne pour plus de concurrence. Pour plus d’informations, consultez [Utilisation du niveau d’isolement d’instantané](../native-client/features/working-with-snapshot-isolation.md).  
+-   Isolement d'instantané et contrôle de version de ligne pour plus de concurrence. Pour plus d'informations, consultez [Working with Snapshot Isolation](../native-client/features/working-with-snapshot-isolation.md).  
   
 -   La collection de schémas XML, les index XML et le type de données XML permettent la validation et le stockage des données XML. Pour plus d’informations, consultez [Collections de schémas XML &#40;SQL Server&#41; ](../xml/xml-schema-collections-sql-server.md) et [à l’aide des schémas XML](tasks/using-xml-schemas.md).  
   
 -   Bases de données d'instantanés pour la création de copies en lecture seule de bases de données.  
   
--   Prise en charge de la communication basée sur des messages par [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Pour plus d’informations, consultez [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md).  
+-   Prise en charge de la communication basée sur des messages par [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Pour plus d'informations, consultez [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md).  
   
--   Prise en charge des synonymes pour les noms d'objets multiples de la base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [synonymes &#40;moteur de base de données&#41;](../synonyms/synonyms-database-engine.md).  
+-   Prise en charge des synonymes pour les noms d'objets multiples de la base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour plus d’informations, consultez [synonymes &#40;moteur de base de données&#41;](../synonyms/synonyms-database-engine.md).  
   
--   La gestion de la messagerie de base de données vous permet de créer des serveurs, des profils et des comptes de messagerie électronique dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [Messagerie de base de données](../database-mail/database-mail.md).  
+-   La gestion de la messagerie de base de données vous permet de créer des serveurs, des profils et des comptes de messagerie électronique dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d'informations, consultez [Database Mail](../database-mail/database-mail.md).  
   
--   Prise en charge des serveurs inscrits pour l'inscription des informations de connexion. Pour plus d’informations, consultez [inscrire les serveurs](../../ssms/register-servers/register-servers.md).  
+-   Prise en charge des serveurs inscrits pour l'inscription des informations de connexion. Pour plus d'informations, consultez [Register Servers](../../ssms/register-servers/register-servers.md).  
   
--   Traçage et relecture des événements [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md), [SQL Trace](../sql-trace/sql-trace.md), [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md), et [événements étendus](../extended-events/extended-events.md).  
+-   Traçage et relecture des événements [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour plus d'informations, consultez [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md), [SQL Trace](../sql-trace/sql-trace.md), [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)et [Extended Events](../extended-events/extended-events.md).  
   
--   Prise en charge des certificats et des clés pour le contrôle de sécurité. Pour plus d’informations, consultez [hiérarchie de chiffrement](../security/encryption/encryption-hierarchy.md).  
+-   Prise en charge des certificats et des clés pour le contrôle de sécurité. Pour plus d'informations, consultez [Encryption Hierarchy](../security/encryption/encryption-hierarchy.md).  
   
 -   Déclencheurs DDL pour l'ajout de fonctionnalités lorsque des événements DDL se produisent. Pour plus d'informations, consultez [DDL Triggers](../triggers/ddl-triggers.md).  
   
- L'espace de noms SMO est <xref:Microsoft.SqlServer.Management.Smo>. SMO est implémenté comme un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] assembly. Cela signifie que le common language runtime à partir de la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] version 2.0 doit être installée avant d’utiliser les objets SMO. Les assembly SMO sont installés par défaut dans le Global Assembly Cache (GAC) avec l'option de Kit de développement logiciel (SDK) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les assemblys se trouvent dans [!INCLUDE[ssSampPathSDK](../../includes/sssamppathsdk-md.md)]. Pour plus d’informations, consultez le [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] documentation.  
+ L'espace de noms SMO est <xref:Microsoft.SqlServer.Management.Smo>. SMO est implémenté en tant qu'assembly [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Cela signifie que le CLR (Common Language Runtime) de la version 2.0 de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] doit être installée avant d'utiliser les objets SMO. Les assembly SMO sont installés par défaut dans le Global Assembly Cache (GAC) avec l'option de Kit de développement logiciel (SDK) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Les assemblys se trouvent dans [!INCLUDE[ssSampPathSDK](../../includes/sssamppathsdk-md.md)]. Pour plus d’informations, consultez le [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] documentation.  
   
 ## <a name="smo-classes"></a>Classes SMO  
  Les classes SMO incluent deux catégories : les classes d'instance et les classes utilitaires.  
@@ -108,7 +106,7 @@ ms.locfileid: "48164499"
   
  **Fournisseur WMI**  
   
- Les objets du fournisseur WMI sont encapsulés par SMO. Le programmeur SMO dispose ainsi d'un modèle objet simple fort similaire aux classes SMO, sans qu'il ait besoin de comprendre le modèle de programmation représenté par l'espace de noms et les détails du fournisseur WMI de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le fournisseur WMI vous permet de configurer les services [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les alias, de même que les bibliothèques réseau client et serveur.  
+ Les objets du fournisseur WMI sont encapsulés par SMO. Le programmeur SMO dispose ainsi d'un modèle objet simple fort similaire aux classes SMO, sans qu'il ait besoin de comprendre le modèle de programmation représenté par l'espace de noms et les détails du fournisseur WMI de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Le fournisseur WMI vous permet de configurer les services [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , les alias, de même que les bibliothèques réseau client et serveur.  
   
  **Création de scripts**  
   
@@ -178,9 +176,9 @@ ms.locfileid: "48164499"
 ## <a name="smo-and-sql-dmo"></a>SMO et SQL-DMO.  
  Le modèle objet SMO remplace SQL-DMO. SMO prend en charge [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et versions ultérieures. Il prend en charge davantage de tâches de gestion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et contient de nombreuses nouvelles fonctionnalités dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. SMO est conçu pour être plus efficace et offrir davantage de contrôle.  
   
- La bibliothèque DMO est un modèle objet COM, alors que SMO est implémenté en tant qu'assembly [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Les composants COM sont des bibliothèques qui fournissent des fonctionnalités réutilisables aux applications et dans la programmation d'applications non managées. Les assemblys [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] fournissent des fonctionnalités réutilisables pour le [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] pour écrire des applications de code managé.  
+ La bibliothèque DMO est un modèle objet COM, alors que SMO est implémenté en tant qu'assembly [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . Les composants COM sont des bibliothèques qui fournissent des fonctionnalités réutilisables aux applications et dans la programmation d'applications non managées. Les assemblys [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] fournissent des fonctionnalités réutilisables pour le [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] pour écrire des applications de code managé.  
   
- Pendant la transition vers la technologie [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], il est possible d'avoir des applications écrites partiellement en code managé et partiellement en code non managé. Le [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] vous permet de créer une interface avec les composants COM, ce qui requiert un assembly PIA (Primary Interop Assembly). Un wrapper d'exécution est requis pour SQL-DMO afin qu'il puisse être appelé à partir d'une application [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].  
+ Pendant la transition vers la technologie [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] , il est possible d'avoir des applications écrites partiellement en code managé et partiellement en code non managé. Le [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] vous permet de créer une interface avec les composants COM, ce qui requiert un assembly PIA (Primary Interop Assembly). Un wrapper d'exécution est requis pour SQL-DMO afin qu'il puisse être appelé à partir d'une application [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].  
   
 ## <a name="see-also"></a>Voir aussi  
  [Concepts liés à Replication Management Objects](../replication/concepts/replication-management-objects-concepts.md)  

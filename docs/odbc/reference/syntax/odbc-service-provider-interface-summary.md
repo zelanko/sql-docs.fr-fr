@@ -11,17 +11,17 @@ ms.assetid: ace6085b-355b-435b-8734-503fc3c12ec2
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e351f08a5e72966c92a7452872532b90e4127964
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d5f3c133b105c905b79589d86952658b6d39f0f6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837467"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52390442"
 ---
 # <a name="odbc-service-provider-interface-summary"></a>Récapitulatif sur l’interface SPI ODBC
 Le tableau suivant décrit les fonctions de l’interface fournisseur de Service ODBC. Pour plus d’informations sur la syntaxe et la sémantique pour chaque fonction, consultez [référence de l’Interface de fournisseur de Service ODBC (SPI)](../../../odbc/reference/syntax/odbc-service-provider-interface-spi-reference.md).  
   
-|Nom de la fonction|Fonction|  
+|Nom de la fonction|Objectif|  
 |-------------------|-------------|  
 |[SQLSetConnectAttrForDbcInfo](../../../odbc/reference/syntax/sqldatasourcetodriver-function.md)|Identique à [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md), mais il définit l’attribut sur le jeton d’informations de connexion à la place de sur le handle de connexion.|  
 |[SQLSetDriverConnectInfo](../../../odbc/reference/syntax/sqldrivertodatasource-function.md)|Définit la chaîne de connexion dans le jeton d’informations de connexion pour l’application [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) appeler.|  

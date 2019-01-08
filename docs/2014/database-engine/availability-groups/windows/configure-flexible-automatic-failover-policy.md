@@ -14,12 +14,12 @@ ms.assetid: 1ed564b4-9835-4245-ae35-9ba67419a4ce
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a2f3c3da8228924a7d4b697865ee729e9b84aff5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b9a063413a665d9e159cb513ea936ab851715ce4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131189"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515405"
 ---
 # <a name="configure-the-flexible-failover-policy-to-control-conditions-for-automatic-failover-always-on-availability-groups"></a>Configurer la stratégie de basculement flexible pour contrôler les conditions du basculement automatique (groupes de disponibilité Always On)
   Cette rubrique explique comment configurer la stratégie de basculement flexible pour un groupe de disponibilité AlwaysOn à l'aide de [!INCLUDE[tsql](../../../includes/tsql-md.md)] ou PowerShell dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Une stratégie de basculement flexible vous offre un contrôle granulaire sur les conditions qui entraînent un basculement automatique d'un groupe de disponibilité. En changeant les conditions d'échec qui déclenchent un basculement automatique et la fréquence des contrôles d'intégrité, vous pouvez augmenter ou diminuer la probabilité d'un basculement automatique pour assurer le contrat de niveau de service relatif à la haute disponibilité.  
@@ -45,7 +45,7 @@ ms.locfileid: "48131189"
   
 ####  <a name="Permissions"></a> Permissions  
   
-|Tâche|Permissions|  
+|Tâche|Autorisations|  
 |----------|-----------------|  
 |Pour configurer la stratégie de basculement flexible pour un nouveau groupe de disponibilité|Requiert l’appartenance au rôle serveur fixe **sysadmin** et l’autorisation de serveur CREATE AVAILABILITY GROUP, l’autorisation ALTER ANY AVAILABILITY GROUP ou l’autorisation CONTROL SERVER.|  
 |Pour modifier la stratégie d'un groupe de disponibilité existant|Requiert l'autorisation ALTER AVAILABILITY GROUP sur le groupe de disponibilité, l'autorisation CONTROL AVAILABILITY GROUP, l'autorisation ALTER ANY AVAILABILITY GROUP ou l'autorisation CONTROL SERVER.|  
@@ -90,13 +90,13 @@ ms.locfileid: "48131189"
 ##  <a name="PowerShellProcedure"></a> Utilisation de PowerShell  
  **Pour configurer la stratégie de basculement flexible**  
   
-1.  Définir par défaut (`cd`) à l’instance de serveur qui héberge le réplica principal.  
+1.  Définissez la valeur par défaut (`cd`) sur l'instance de serveur qui héberge le réplica principal.  
   
 2.  Lorsque vous ajoutez un réplica de disponibilité à un groupe de disponibilité, utilisez l'applet de commande `New-SqlAvailabilityGroup`. Lorsque vous modifiez un réplica de disponibilité existant, utilisez l'applet de commande `Set-SqlAvailabilityGroup`.  
   
     -   Pour définir le niveau de condition de basculement, utilisez le `FailureConditionLevel` *niveau* paramètre, où *niveau* est une des valeurs suivantes :  
   
-        |Valeur|Niveau|Le basculement automatique démarre lorsque…|  
+        |Value|Level|Le basculement automatique démarre lorsque…|  
         |-----------|-----------|-------------------------------------------|  
         |`OnServerDown`|Un|Le serveur est arrêté. Le service SQL Server s'arrête à cause d'un basculement ou d'un redémarrage.|  
         |`OnServerUnresponsive`|Deux|Le serveur ne répond pas. Toutes les conditions qui correspondent à une valeur inférieure sont remplies, le service SQL Server est connecté au cluster et le seuil du délai d'attente de contrôle d'intégrité est dépassé, ou le réplica principal actuel est dans un état d'échec.|  
@@ -125,7 +125,7 @@ ms.locfileid: "48131189"
         ```  
   
 > [!NOTE]  
->  Pour afficher la syntaxe d’une applet de commande, utilisez le `Get-Help` applet de commande dans le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] environnement PowerShell. Pour en savoir plus, voir [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
+>  Pour afficher la syntaxe d'une applet de commande, utilisez l'applet de commande `Get-Help` dans l'environnement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Pour en savoir plus, voir [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
  **Pour configurer et utiliser le fournisseur SQL Server PowerShell**  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - security [SQL Server replication], best practices
@@ -16,12 +15,12 @@ ms.assetid: 1ab2635d-0992-4c99-b17d-041d02ec9a7c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 79ec3f4087f9350b881433877712700e8d89139d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 18a3bed07be7fd035a5011d16c528525685cdfb6
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114424"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52781171"
 ---
 # <a name="replication-security-best-practices"></a>Bonnes pratiques en matière de sécurité de la réplication
   La réplication permet de déplacer des données d'environnements distribués qui englobent tant des intranets sur un domaine unique que des applications accédant à des données entre des domaines non approuvés et sur Internet. Il est important de bien connaître toutes les méthodes de sécurisation des connexions de réplication afin de choisir celle qui répond le mieux à la situation.  

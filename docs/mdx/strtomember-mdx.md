@@ -1,5 +1,5 @@
 ---
-title: StrToMember (MDX) | Documents Microsoft
+title: StrToMember (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,17 +9,17 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 37c76d6e1e7ffe9bc40d785952b5c456ab1fc6fa
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 0c5878a553895dccc3350ddbae9397d5a48c6349
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743048"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531216"
 ---
 # <a name="strtomember-mdx"></a>StrToMember (MDX)
 
 
-  Retourne le membre spécifié par une chaîne au format MDX (Multidimensional Expressions).  
+  Retourne le membre spécifié par une chaîne au format MDX Multidimensional Expressions.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -81,6 +81,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guide de référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

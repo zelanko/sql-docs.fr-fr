@@ -1,11 +1,10 @@
 ---
-title: 'Didacticiel : Préparation du serveur à la réplication | Microsoft Docs'
+title: 'Didacticiel : Préparation du serveur pour la réplication | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], tutorials
@@ -13,14 +12,14 @@ ms.assetid: ce30a095-2975-4387-9377-94a461ac78ee
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8e68be637511fb00774d35b564b0e5ec5979b60d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8e82c71834a2d41a7620f549bc6335fa15df84bf
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48228239"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52813991"
 ---
-# <a name="tutorial-preparing-the-server-for-replication"></a>Didacticiel : Préparation du serveur à la réplication
+# <a name="tutorial-preparing-the-server-for-replication"></a>Didacticiel : Préparation du serveur à la réplication
   Il importe de prévoir la sécurité avant de configurer la topologie de réplication. Ce didacticiel vous explique comment sécuriser au mieux une topologie de réplication et configurer la distribution, première étape de la réplication des données. Ce didacticiel doit être effectué avant les autres didacticiels.  
   
 > [!NOTE]  
@@ -29,22 +28,22 @@ ms.locfileid: "48228239"
 ## <a name="what-you-will-learn"></a>Contenu du didacticiel  
  Dans ce didacticiel, vous allez apprendre à préparer un serveur afin que la réplication puisse s'exécuter de façon sécurisée avec les privilèges minimaux. La première leçon explique comment créer les comptes de service Windows utilisés pour exécuter les agents de réplication. La deuxième leçon montre comment configurer le dossier utilisé pour générer et stocker les instantanés de publication. La troisième leçon vous apprend à configurer la distribution et à définir les autorisations.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  Ce didacticiel est destiné aux utilisateurs qui sont familiers des opérations essentielles de base de données, mais dont l'expérience en matière de réplication est limitée.  
   
  Pour utiliser ce didacticiel, les composants suivants doivent être installés sur votre système :  
   
 -   [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] avec la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Pour des raisons de sécurité, les exemples de bases de données ne sont pas installés par défaut.  
   
- **Durée estimée pour effectuer ce didacticiel : 30 minutes.**  
+ **Durée estimée pour effectuer le didacticiel : 30 minutes.**  
   
 ## <a name="lessons-in-this-tutorial"></a>Leçons du didacticiel  
   
--   [Leçon 1 : Création de comptes Windows pour la réplication](lesson-1-creating-windows-accounts-for-replication.md)  
+-   [Leçon 1 : Windows de création de comptes pour la réplication](lesson-1-creating-windows-accounts-for-replication.md)  
   
--   [Leçon 2 : Préparation du dossier d'instantanés](lesson-2-preparing-the-snapshot-folder.md)  
+-   [Leçon 2 : Préparation du dossier d’instantané](lesson-2-preparing-the-snapshot-folder.md)  
   
--   [Leçon 3 : Configuration de la distribution](lesson-3-configuring-distribution.md)  
+-   [Leçon 3 : Configuration de la Distribution](lesson-3-configuring-distribution.md)  
   
  [Démarrer le didacticiel](lesson-1-creating-windows-accounts-for-replication.md)  
   

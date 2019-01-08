@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
 - comparing data
@@ -19,12 +18,12 @@ ms.assetid: 3c3cb865-7a4d-4d66-98f2-5935e28929fc
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 321bcbc0c07d4de2d5e9a7f930cb21c0995ce79b
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: cb8b8bec38b428ca7b2eea5166867141b34a2405
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169399"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52791911"
 ---
 # <a name="tablediff-utility"></a>tablediff (utilitaire)
   L’utilitaire **tablediff** sert à comparer les données dans deux tables et à identifier une non-convergence. Il est particulièrement utile pour résoudre des problèmes de non-convergence dans une topologie de réplication. Cet utilitaire peut être employé à partir de l'invite de commandes ou dans un fichier de commandes pour effectuer les tâches suivantes :  
@@ -163,9 +162,9 @@ ms.locfileid: "49169399"
   
 ## <a name="return-value"></a>Valeur de retour  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
-|**0**|Réussi|  
+|**0**|Opération réussie|  
 |**1**|Erreur critique|  
 |**2**|Tables différentes|  
   
@@ -211,7 +210,7 @@ ms.locfileid: "49169399"
   
 -   `image`  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Pour comparer les tables, vous avez besoin des autorisations SELECT ALL sur les objets de table comparés.  
   
  Pour utiliser l’option **-et** , vous devez être membre du rôle de base de données fixe db_owner, ou au moins disposer de l’autorisation CREATE TABLE dans la base de données d’abonnement et de l’autorisation ALTER sur le schéma du propriétaire de destination sur le serveur de destination.  

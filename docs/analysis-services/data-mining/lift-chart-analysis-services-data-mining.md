@@ -1,5 +1,5 @@
 ---
-title: Graphique de courbes d’élévation (Analysis Services - Exploration de données) | Documents Microsoft
+title: Graphique de courbes d’élévation (Analysis Services - Exploration de données) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 9a72e7c40719511e8514c38d08cd7cd88a24055f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: cd4c0ea515020067cb7dd5c49b97db69ca6a756c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016406"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52401287"
 ---
 # <a name="lift-chart-analysis-services---data-mining"></a>Graphique de courbes d'élévation (Analysis Services - Exploration de données)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -63,8 +63,8 @@ ms.locfileid: "34016406"
 |Publipostage ciblé global|0.71|47.40%|61.38%|  
 |Publipostage ciblé inférieur à 30|0.85|51.81%|46.62%|  
 |Modèle d'estimation aléatoire||31.00%||  
-|Modèle idéal pour : Publipostage ciblé global||62.48%||  
-|Modèle idéal pour : Publipostage ciblé inférieur à 30||65.28%||  
+|Modèle idéal pour : Publipostage ciblé global||62.48%||  
+|Modèle idéal pour : Publipostage ciblé inférieur à 30||65.28%||  
   
  [Retour au début](#bkmk_Top)  
   
@@ -111,10 +111,10 @@ ms.locfileid: "34016406"
   
  Vous ne pouvez pas afficher les modèles de série chronologique dans un graphique de courbes d'élévation ou un graphique des bénéfices. L’habitude veut que, pour mesurer la précision des prédictions de série chronologique, il convient de réserver une partie des données d’historique et de comparer ces données aux prédictions. Pour plus d’informations, consultez [Algorithme MTS (Microsoft Time Series)](../../analysis-services/data-mining/microsoft-time-series-algorithm.md).  
   
-### <a name="related-content"></a>Contenu connexe  
+### <a name="related-content"></a>Contenu associé  
  [Retour au début](#bkmk_Top)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Test et Validation & #40 ; exploration de données & #41 ;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
+ [Test et validation &#40;exploration de données&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   

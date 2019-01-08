@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 1760256333abad2c6ae32d0aa2a94e1deaebd551
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: ad4f310ce6c0e200d5e658b3d5814131000d0004
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356360"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518493"
 ---
 # <a name="manage-sql-server-always-on-availability-group-kubernetes"></a>Gérer SQL Server Always On Kubernetes du groupe de disponibilité
 
@@ -37,7 +37,7 @@ Pour effectuer un basculement ou déplacer un réplica principal vers un autre n
 
   Mettre à jour le fichier pour votre environnement.
 
-  - Remplacez `<containerName>` par le nom de la cible de groupe de disponibilité attendu.
+  - Remplacez `<containerName>` avec le nom du pod (par exemple, mssql2-0) de la cible de groupe de disponibilité attendu.
   - Si le groupe de disponibilité n’est pas dans le `ag1` espace de noms, remplacez `ag1` avec l’espace de noms.
 
   Ce fichier définit un travail de basculement nommé `manual-failover`.
@@ -63,7 +63,7 @@ Pour effectuer un basculement ou déplacer un réplica principal vers un autre n
   L’exemple suivant retourne l’état de la tâche nommée `manual-failover`.
 
   ```azurecli
-  kubectl describe jobs/manual-failover -–namespace ag1
+  kubectl describe jobs/manual-failover --namespace ag1
   ```
 
 1. Supprimer le travail de basculement manuel. 
@@ -76,7 +76,7 @@ Pour effectuer un basculement ou déplacer un réplica principal vers un autre n
   La commande suivante supprime la tâche.
 
   ```azurecli
-  kubectl delete jobs manual-failover -–namespace ag1
+  kubectl delete jobs manual-failover --namespace ag1
   ```
 
 ## <a name="rotate-credentials"></a>Faire pivoter les informations d’identification
@@ -127,7 +127,7 @@ Effectuez les étapes suivantes pour chaque instance de SQL Server qui a besoin 
 
   Kubernetes met à jour la clé principale et `sa` mot de passe pour une instance de SQL Server dans un groupe de disponibilité.
 
-1. Vérifiez que la tâche est terminée. Exécutez la commande suivante : pour vérifier que la tâche est terminée, exécutez 
+1. Vérifiez que la tâche est terminée. Exécutez la commande suivante : Pour vérifier que la tâche est terminée, exécutez 
 
   ```azcli
   kubectl describe job rotate-creds --namespace ag1

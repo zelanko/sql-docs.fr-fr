@@ -11,39 +11,39 @@ ms.assetid: faec46da-0536-4de3-96f3-83e607c8a8b6
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: d79a4aa606d7e970ddbb9bbe0bb7a36a2948dc57
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 428b9d2a6f56e2910558b41777094f5f915982b7
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701907"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52408946"
 ---
 # <a name="sql-server-express-localdb-reference---instance-apis"></a>Informations de référence sur SQL Server Express LocalDB - API d’instance
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Dans le monde traditionnel SQL Server basé sur les services, différentes instances de SQL Server installées sur un même ordinateur sont physiquement séparées ; autrement dit, chaque instance doit être installée et supprimée séparément, possède un jeu distinct de binaires, et s'exécute sous un processus de service distinct. Le nom de l'instance SQL Server est utilisé pour spécifier l'instance SQL Server à laquelle l'utilisateur souhaite se connecter.  
   
- L'API de l'instance de SQL Server Express LocalDB utilise un modèle simplifié d'instance « allégée ». Bien que les instances LocalDB individuelles soient séparées sur le disque et dans le Registre, elles utilisent le même jeu de binaires LocalDB partagés. De plus, LocalDB n'utilise pas de services ; les instances de LocalDB sont lancées sur demande par des appels d'API d'instance de LocalDB. Dans LocalDB, le nom de l'instance est utilisé pour spécifier les instances de LocalDB avec lesquelles l'utilisateur souhaite travailler.  
+ L’API d’instance de SQL Server Express LocalDB utilise un modèle simplifié d’instance « allégée ». Bien que les instances LocalDB individuelles soient séparées sur le disque et dans le Registre, elles utilisent le même jeu de binaires LocalDB partagés. De plus, LocalDB n'utilise pas de services ; les instances de LocalDB sont lancées sur demande par des appels d'API d'instance de LocalDB. Dans LocalDB, le nom de l'instance est utilisé pour spécifier les instances de LocalDB avec lesquelles l'utilisateur souhaite travailler.  
   
- Une instance de LocalDB est toujours détenue par un seul utilisateur et est visible et accessible uniquement dans le contexte de cet utilisateur, sauf si le partage d'instance est activé.  
+ Une instance de base de données locale est toujours détenue par un utilisateur unique et est visible et accessible uniquement à partir de ce contexte de l’utilisateur, sauf si le partage d’instance est activée.  
   
  Bien que techniquement les instances de LocalDB ne soient pas les mêmes que les instances SQL Server traditionnelles, leur utilisation est similaire. Elles sont appelées *instances* pour souligner cette similarité et à les rendre plus intuitives aux utilisateurs de SQL Server.  
   
  LocalDB prend en charge deux types d'instances : les instances automatiques (AI) et les instances nommées (NI). L'identificateur d'une instance de LocalDB est le nom de l'instance.  
   
 ## <a name="automatic-localdb-instances"></a>Instances automatiques de LocalDB  
- Les instances automatiques de LocalDB sont « publiques » ; elles sont créées et gérées automatiquement pour l'utilisateur et peuvent être utilisées par n'importe quelle application. Il existe une instance automatique de LocalDB pour chaque version de LocalDB installée sur l'ordinateur de l'utilisateur.  
+ Instances automatiques de LocalDB sont « publiques » ; ils sont créés et gérés automatiquement pour l’utilisateur et peut être utilisé par n’importe quelle application. Il existe une instance automatique de base de données locale pour chaque version de base de données locale qui est installé sur l’ordinateur de l’utilisateur.  
   
  Les instances automatiques de LocalDB fournissent la gestion transparente d'instances. L'utilisateur n'a pas besoin de créer l'instance. Cela permet aux utilisateurs d'installer facilement des applications et de migrer vers d'autres ordinateurs. Si la version spécifiée de LocalDB est installée sur l'ordinateur, l'instance automatique de LocalDB pour cette version est également disponible sur cet ordinateur.  
   
 ### <a name="automatic-instance-management"></a>Gestion automatique d'instances  
- Un utilisateur n'a pas besoin de créer une instance automatique de LocalDB. L'instance est immédiatement créée la première fois que l'instance est utilisée, à condition que la version spécifiée de LocalDB soit disponible sur l'ordinateur de l'utilisateur. Du point de vue de l'utilisateur, l'instance automatique est toujours présente si les binaires de LocalDB sont présents.  
+ Un utilisateur n'a pas besoin de créer une instance automatique de LocalDB. L’instance est créée tardivement la première fois que l’instance est utilisé, sous réserve que la version spécifiée de LocalDB est disponible sur l’ordinateur de l’utilisateur. Du point de vue de l’utilisateur, l’instance automatique est toujours présente si les fichiers binaires de LocalDB sont présents.  
   
  D'autres opérations de gestion d'instances, telles que la suppression, le partage et l'annulation du partage, s'exécutent également pour les instances automatiques. En particulier, la suppression d'une instance automatique réinitialise efficacement l'instance, qui sera recréée lors de l'opération suivante de démarrage. La suppression d'une instance automatique peut être requise si les bases de données système sont endommagées.  
   
 ### <a name="automatic-instance-naming-rules"></a>Règles de dénomination d'instance automatique  
  Les instances automatiques de LocalDB ont un modèle particulier pour le nom de l'instance qui appartient à un espace de noms réservé. Cela est nécessaire pour éviter des conflits de noms avec les instances nommées de LocalDB.  
   
- Le nom de l'instance automatique est le numéro de version Release de base de LocalDB précédé d'un caractère « v ». Il ressembler à « v » plus deux nombres avec un point entre eux ; par exemple, v11.0 ou V12.00.  
+ Le nom de l’instance automatique est le numéro de version de base de données locale de ligne de base version précédé par un caractère « v » unique. Cela ressemble à « v » plus deux nombres avec un point entre eux ; par exemple, v11.0 ou V12.00.  
   
  Voici des exemples de noms d'instance automatique non conformes :  
   
@@ -56,7 +56,7 @@ ms.locfileid: "47701907"
 -   v 11.0.1.2 (le numéro de version a plus de deux parties)  
   
 ## <a name="named-localdb-instances"></a>Instances nommées de LocalDB  
- Les instances nommées de LocalDB sont « privées » ; une instance appartient à une seule application qui est chargée de créer et de gérer l'instance. Les instances nommées de LocalDB fournissent l'isolement et améliorent les performances.  
+ Instances nommées de LocalDB sont « privées » ; une instance appartient à une application unique qui est responsable de la création et la gestion de l’instance. Les instances nommées de LocalDB fournissent l'isolement et améliorent les performances.  
   
 ### <a name="named-instance-creation"></a>Création d'instance nommée  
  L'utilisateur doit créer des instances nommées explicitement via l'API de gestion de LocalDB, ou implicitement à l'aide du fichier app.config pour une application managée. Une application managée peut également utiliser l'API.  
@@ -64,9 +64,9 @@ ms.locfileid: "47701907"
  Chaque instance nommée possède une version associée de LocalDB ; autrement dit, elle indique un jeu de binaires de LocalDB. La version de l'instance nommée est définie pendant le processus de création de l'instance.  
   
 ### <a name="named-instance-naming-rules"></a>Règles de dénomination d'instance nommée  
- Un nom d’instance de base de données locale peut posséder jusqu'à un total de 128 caractères (la limite est imposée par le **sysname** type de données). Il s'agit d'une différence importante comparée aux noms d'instances SQL Server traditionnelles, qui sont limités aux noms NetBIOS de 16 caractères ASCII. Cette différence tient du fait que LocalDB traite les bases de données comme des fichiers, ce qui implique par conséquent une sémantique basée sur des fichiers. Cette sémantique est donc intuitive pour que les utilisateurs aient plus de liberté en choisissant les noms d'instances.  
+ Un nom d’instance de base de données locale peut posséder jusqu'à un total de 128 caractères (la limite est imposée par le **sysname** type de données). Il s'agit d'une différence importante comparée aux noms d'instances SQL Server traditionnelles, qui sont limités aux noms NetBIOS de 16 caractères ASCII. La raison de cette différence est que LocalDB traite les bases de données sous forme de fichiers et implique par conséquent sémantique basé sur fichier, afin qu’elle soit intuitive pour les utilisateurs disposent de davantage de liberté dans le choix des noms d’instance.  
   
- Un nom d'instance de LocalDB peut contenir tous les caractères Unicode qui sont valides dans le composant nom de fichier. Caractères non conformes dans un composant de nom de fichier incluent généralement les caractères suivants : caractères ASCII/Unicode 1 31 via, ainsi que les guillemets («), inférieur à (\<), supérieur à (>), barre verticale (|), retour arrière (\b), tabulation (\t), deux-points ( :)), astérisque (*) point d’interrogation ( ?), barre oblique inverse (\\) et de la barre oblique (/). Notez que le caractère Null (\0) est autorisé, car il est utilisé pour la fin de chaîne ; tout caractère qui se trouve après le premier caractère NULL est ignoré.  
+ Un nom d'instance de LocalDB peut contenir tous les caractères Unicode qui sont valides dans le composant nom de fichier. Caractères non conformes dans un composant de nom de fichier incluent généralement les caractères suivants : Les caractères ASCII/Unicode 1 31 via, ainsi que les guillemets («), inférieur à (\<), supérieur à (>), barre verticale (|), retour arrière (\b), tabulation (\t), deux-points ( :)), astérisque (*), point d’interrogation ( ?), barre oblique inverse (\\) et de la barre oblique (/). Notez que le caractère Null (\0) est autorisé, car il est utilisé pour la fin de chaîne ; tout caractère qui se trouve après le premier caractère NULL est ignoré.  
   
 > [!NOTE]  
 >  La liste de caractères non conformes peut dépendre du système d'exploitation et peut changer dans les versions ultérieures.  
@@ -79,7 +79,7 @@ ms.locfileid: "47701907"
  [En-tête et informations de version de la base de données locale SQL Server Express](../../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-header-and-version-information.md)  
  Fournit des informations sur le fichier d'en-tête et les clés de Registre pour rechercher l'API d'instance de LocalDB.  
   
- [Outil de gestion en ligne de commande : SqlLocalDB.exe](../../relational-databases/express-localdb-instance-apis/command-line-management-tool-sqllocaldb-exe.md)  
+ [Outil de gestion de ligne de commande : SqlLocalDB.exe](../../relational-databases/express-localdb-instance-apis/command-line-management-tool-sqllocaldb-exe.md)  
  Décrit SqlLocalDB.exe, un outil de gestion des instances de LocalDB à partir de la ligne de commande.  
   
  [LocalDBCreateInstance, fonction](../../relational-databases/express-localdb-instance-apis/localdbcreateinstance-function.md)  

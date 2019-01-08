@@ -5,8 +5,7 @@ ms.date: 06/15/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_addpublication_snapshot_TSQL
@@ -17,12 +16,12 @@ ms.assetid: 192b6214-df6e-44a3-bdd4-9d933a981619
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b7a56fad97e7716cce4cc52858b6af2b24a6e09a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5061423f267445c681a00bf059bcc793816faf71
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731057"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205408"
 ---
 # <a name="spaddpublicationsnapshot-transact-sql"></a>sp_addpublication_snapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -65,7 +64,7 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
  [  **@frequency_type=**] *frequency_type*  
  Fréquence à laquelle l'Agent d'instantané est exécuté. *frequency_type* est **int**, et peut prendre l’une des valeurs suivantes.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**1**|Une seule fois.|  
 |**4** (valeur par défaut)|Tous les jours.|  
@@ -91,7 +90,7 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
  [  **@frequency_subday=**] *frequency_subday*  
  Unité de *freq_subday_interval*. *frequency_subday* est **int**, et peut prendre l’une des valeurs suivantes.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**1**|Une fois|  
 |**2**|Seconde|  
@@ -123,7 +122,7 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
  Nom d'un travail existant de l'Agent d'instantané si un travail existant est en cours d'utilisation. *snapshot_agent_name* est **nvarchar (100)** avec une valeur par défaut NULL. Ce paramètre est réservé à un usage interne et ne doit pas être spécifié lors de la création d'une nouvelle publication. Si *snapshot_agent_name* est spécifié, puis *job_login* et *job_password* doit être NULL.  
   
  [ **@publisher_security_mode**=] *publisher_security_mode*  
- Mode de sécurité utilisé par l'agent lors de la connexion au serveur de publication. *publisher_security_mode* est **smallint**, avec 1 comme valeur par défaut. **0** spécifie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’authentification, et **1** Spécifie l’authentification Windows. La valeur **0** doit être spécifié pour les non -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les serveurs de publication. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+ Mode de sécurité utilisé par l'agent lors de la connexion au serveur de publication. *publisher_security_mode* est **smallint**, avec 1 comme valeur par défaut. **0** spécifie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’authentification, et **1** Spécifie l’authentification Windows. La valeur **0** doit être spécifié pour les non - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les serveurs de publication. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
  [ **@publisher_login**=] **'***publisher_login***'**  
  Connexion au serveur de publication. *publisher_login* est **sysname**, avec NULL comme valeur par défaut. *publisher_login* doit être spécifié lorsque *publisher_security_mode* est **0**. Si *publisher_login* a la valeur NULL et *publisher_security_mode* est **1**, le compte spécifié dans *job_login* sera utilisé lorsque connexion au serveur de publication.  
@@ -137,8 +136,8 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
  [ **@job_login**=] **'***job_login***'**  
  Est la connexion pour le compte sous lequel l’agent s’exécute. Sur Azure SQL Database Managed Instance, utilisez un compte SQL Server. *job_login* est **nvarchar (257)**, avec NULL comme valeur par défaut. Ce compte est toujours utilisé pour les connexions d’agent au serveur de distribution. Vous devez fournir ce paramètre lorsque vous créez un nouveau travail d'Agent d'instantané.  
   
-> [!NOTE]  
->  Pour les non -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les serveurs de publication, il doit être la même connexion que celui spécifiée dans [sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md).  
+> [!NOTE]
+>  Pour les non - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les serveurs de publication, il doit être la même connexion que celui spécifiée dans [sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md).  
   
  [ **@job_password**=] **'***job_password***'**  
  Mot de passe du compte Windows sous lequel l'Agent s'exécute. *job_password* est **sysname**, sans valeur par défaut. Vous devez fournir ce paramètre lorsque vous créez un nouveau travail d'Agent d'instantané.  
@@ -147,7 +146,7 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
 >  Ne stockez pas les informations d'authentification dans des fichiers de script. Pour améliorer la sécurité, nous vous recommandons de fournir les noms de connexion et les mots de passe au moment de l'exécution.  
   
  [ **@publisher**=] **'***publisher***'**  
- Spécifie un serveur de publication non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *serveur de publication* est **sysname**, avec NULL comme valeur par défaut.  
+ Spécifie un non - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serveur de publication. *serveur de publication* est **sysname**, avec NULL comme valeur par défaut.  
   
 > [!NOTE]  
 >  *serveur de publication* ne doit pas être utilisé lors de la création d’un Agent d’instantané à un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serveur de publication.  
@@ -161,7 +160,7 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
 ## <a name="example"></a>Exemple  
  [!code-sql[HowTo#sp_AddTranPub](../../relational-databases/replication/codesnippet/tsql/sp-addpublication-snapsh_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Seuls les membres de la **sysadmin** rôle serveur fixe ou **db_owner** rôle de base de données fixe peuvent exécuter **sp_addpublication_snapshot**.  
   
 ## <a name="see-also"></a>Voir aussi  

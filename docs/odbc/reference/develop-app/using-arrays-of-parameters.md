@@ -14,12 +14,12 @@ ms.assetid: 5a28be88-e171-4f5b-bf4d-543c4383c869
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d7990c1c8524063c16b44464828900450d5241ad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7ff4a76c38f04c7b9b12842ef800bc8a26a27ed9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47777877"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529330"
 ---
 # <a name="using-arrays-of-parameters"></a>Utilisation de tableaux de paramètres
 Pour utiliser des tableaux de paramètres, l’application appelle **SQLSetStmtAttr** avec un *attribut* argument de SQL_ATTR_PARAMSET_SIZE pour spécifier le nombre de jeux de paramètres. Il appelle **SQLSetStmtAttr** avec un *attribut* argument de SQL_ATTR_PARAMS_PROCESSED_PTR pour spécifier l’adresse d’une variable dans laquelle le pilote peut retourner le nombre de jeux de paramètres traités, erreur y compris des jeux. Il appelle **SQLSetStmtAttr** avec un *attribut* argument de SQL_ATTR_PARAM_STATUS_PTR pour pointer vers un tableau dans lequel retourner les informations d’état pour chaque ligne de valeurs de paramètre. Le pilote stocke ces adresses dans la structure que de l’instruction il tient à jour.  
@@ -35,7 +35,7 @@ Pour utiliser des tableaux de paramètres, l’application appelle **SQLSetStmtA
   
 -   Vérification de la prise en charge des tableaux de paramètres au moment de l’exécution. Un pilote prend en charge les tableaux de paramètres s’il est possible d’affecter à l’attribut d’instruction SQL_ATTR_PARAMSET_SIZE une valeur supérieure à 1. Applications génériques et des applications verticales couramment recherchent prise en charge des tableaux de paramètres en cours d’exécution.  
   
- La disponibilité des nombres de lignes et des jeux de résultats dans l’exécution paramétrable peut être déterminée en appelant **SQLGetInfo** avec les options SQL_PARAM_ARRAY_ROW_COUNTS et SQL_PARAM_ARRAY_SELECTS. Pour **insérer**, **mise à jour**, et **supprimer** instructions, l’option SQL_PARAM_ARRAY_ROW_COUNTS indique si le nombre de lignes individuelles (une pour chaque jeu de paramètres) est disponible (SQL_PARC_BATCH) ou si le nombre de lignes sont ajoutées à un (SQL_PARC_NO_BATCH). Pour **sélectionnez** instructions, l’option SQL_PARAM_ARRAY_SELECTS indique si un jeu de résultats est disponible pour chaque jeu de paramètres (SQL_PAS_BATCH) ou si un jeu de résultats est disponible (SQL_PAS_NO_BATCH). Si le pilote n’autorise pas les instructions de création de jeu de résultats doit être exécuté avec un tableau de paramètres, SQL_PARAM_ARRAY_SELECTS retourne SQL_PAS_NO_SELECT. Il est spécifique à la source de données si les tableaux de paramètres peuvent être utilisés avec d’autres types d’instructions, en particulier parce que l’utilisation de paramètres dans ces instructions serait spécifique à la source de données et suivez pas grammaire SQL ODBC.  
+ La disponibilité des nombres de lignes et des jeux de résultats dans l’exécution paramétrable peut être déterminée en appelant **SQLGetInfo** avec les options SQL_PARAM_ARRAY_ROW_COUNTS et SQL_PARAM_ARRAY_SELECTS. Pour **insérer**, **mise à jour**, et **supprimer** instructions, l’option SQL_PARAM_ARRAY_ROW_COUNTS indique si le nombre de lignes individuelles (une pour chaque jeu de paramètres) est disponible (SQL_PARC_BATCH) ou si le nombre de lignes sont ajoutées à un (SQL_PARC_NO_BATCH). Pour **sélectionnez** instructions, l’option SQL_PARAM_ARRAY_SELECTS indique si un jeu de résultats est disponible pour chaque jeu de paramètres (SQL_PAS_BATCH) ou si un jeu de résultats est disponible (SQL_PAS_NO_BATCH). Si le pilote n’autorise pas les instructions de génération de jeu de résultats doit être exécuté avec un tableau de paramètres, SQL_PARAM_ARRAY_SELECTS retourne SQL_PAS_NO_SELECT. Il est spécifique à la source de données si les tableaux de paramètres peuvent être utilisées avec d’autres types d’instructions, en particulier, car l’utilisation de paramètres dans ces instructions spécifiques à la source de données et suivez pas grammaire SQL ODBC.  
   
  Le tableau vers lequel pointé l’attribut d’instruction SQL_ATTR_PARAM_OPERATION_PTR peut servir à ignorer les lignes de paramètres. Si un élément du tableau est défini sur SQL_PARAM_IGNORE, le jeu de paramètres correspondant à cet élément est exclu de la **SQLExecute** ou **SQLExecDirect** appeler. Du tableau pointé par l’attribut SQL_ATTR_PARAM_OPERATION_PTR est alloué et rempli par l’application et lues par le pilote. Si les lignes extraites sont utilisés comme paramètres d’entrée, les valeurs du tableau d’état de ligne peuvent être utilisées dans le tableau d’opération de paramètres.  
   

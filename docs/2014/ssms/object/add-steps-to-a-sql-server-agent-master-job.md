@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: 9cc1e8ab-7ddc-427b-859e-203aa7e24642
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 17a217c59478061bada89d8875f696b8166cdee2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 18c4af67230726d831c2c192a782135f9afe3743
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177550"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52822683"
 ---
 # <a name="add-steps-to-a-sql-server-agent-master-job"></a>Ajouter des étapes à un travail maître SQL Server Agent
   Cette rubrique explique comment ajouter des étapes à un travail maître SQL Server Agent dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -56,8 +56,8 @@ ms.locfileid: "48177550"
   
 4.  Cliquez avec le bouton droit sur le travail auquel vous voulez ajouter des étapes, puis sélectionnez **Propriétés**.  
   
-5.  Dans la boîte de dialogue **Propriétés du travail –***nom_travail*, sous **Sélectionner une page**, sélectionnez **Étapes**. Pour plus d’informations sur les options disponibles sur cette page, consultez [propriétés du travail : nouveau travail &#40;Page étapes&#41;](../agent/job-properties-new-job-steps-page.md).  
-  
+5.  Dans la boîte de dialogue **Propriétés du travail -**_nom_travail_, sous **Sélectionner une page**, sélectionnez **Étapes**. Pour plus d’informations sur les options disponibles sur cette page, consultez [propriétés du travail : nouveau travail &#40;Page étapes&#41;](../agent/job-properties-new-job-steps-page.md).  
+
 6.  Lorsque vous avez terminé, cliquez sur **OK**.  
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  

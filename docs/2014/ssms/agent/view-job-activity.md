@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - viewing job activity
@@ -15,12 +15,12 @@ ms.assetid: 5c284e5e-7775-435d-ac49-f3f12a27ddc7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d3e7e671ad307223135b02d237aa2d210057a255
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3fc6099fa9f523b351489ce4301596aeb90c1509
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053649"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52782571"
 ---
 # <a name="view-job-activity"></a>Afficher l’activité du travail
   Cette rubrique explique comment afficher l'état d'exécution des travaux de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -48,7 +48,7 @@ ms.locfileid: "48053649"
   
 #### <a name="to-view-job-activity"></a>Pour afficher l'activité des travaux  
   
-1.  Dans **l’Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], puis développez-la.  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], puis développez-la.  
   
 2.  Développez **SQL Server Agent**.  
   

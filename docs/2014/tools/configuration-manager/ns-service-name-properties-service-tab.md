@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- configmgr-client
+ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: 57c6b791-1663-4a01-9de2-cf1bdd8adb2c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2163528b17805e15d2ec3a368a77335d7854a9b5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1042eeefb53b16573fd13eb6f0449eeda4688f3a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187771"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52757661"
 ---
 # <a name="nsltservice-namegt-properties-service-tab"></a>Propriétés de NS$&lt;service name&gt; (onglet Service)
   Ce service est le service [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNS](../../includes/ssns-md.md)] . Les valeurs des propriétés en gris clair ne peuvent pas être modifiées à l'aide de cette application.  
@@ -46,11 +45,11 @@ ms.locfileid: "48187771"
  **Mode de démarrage**  
  Les options disponibles pour ce service sont les suivantes :  
   
--   Manuel : ce service n'est pas automatiquement lancé au démarrage de l'ordinateur. Vous devez démarrer le service à l'aide du Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou d'un autre outil.  
+-   Manuel : Ce service n'est pas automatiquement lancé au démarrage de l'ordinateur. Vous devez démarrer le service à l'aide du Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou d'un autre outil.  
   
--   Automatique : ce service essaie de se lancer au démarrage de cet ordinateur.  
+-   Automatique : ce service essaie de se lancer au démarrage de cet ordinateur.  
   
--   Désactivé : ce service ne peut pas être démarré.  
+-   Désactivé : ce service ne peut pas être démarré.  
   
  **État**  
  Indique si ce service est en cours d'exécution, arrêté ou désactivé.  

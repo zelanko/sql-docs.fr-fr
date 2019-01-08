@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.dtexecui.general.f1
@@ -24,12 +23,12 @@ ms.assetid: 3d71df39-126b-4c8e-bd77-128bbd5b0887
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8745874d47d173160848ea385d0479ccbbfb7173
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 9e01e1c77d67bd19fa01ec1cf07e4e53807651b1
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169320"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52797952"
 ---
 # <a name="execute-package-utility-dtexecui-ui-reference"></a>Référence de l'interface utilisateur de l'utilitaire d'exécution de package (DtExecUI)
   Utilisez l' **Utilitaire d'exécution de package** pour exécuter des packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . L’utilitaire exécute les packages stockés à l’un des trois emplacements suivants : la base de données [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , le magasin de packages [!INCLUDE[ssIS](../../includes/ssis-md.md)] et le système de fichiers. Cette interface utilisateur, qui peut être ouverte à partir de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou en tapant `dtexecui` à l’invite de commandes, est une alternative à l’exécution des packages à l’aide de la **DTExec** outil d’invite de commandes.  
@@ -67,7 +66,7 @@ ms.locfileid: "49169320"
   
 |||  
 |-|-|  
-|Valeur|Description|  
+|Value|Description|  
 |**SQL Server**|Sélectionnez cette option lorsque le package se trouve dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Spécifiez une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et fournissez un nom d'utilisateur et un mot de passe pour l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Chaque nom d’utilisateur et chaque mot de passe ajoutent les options **/USER** *nom_utilisateur* et **/PASSWORD** *mot_de_passe* options to the commet prompt.|  
 |**Système de fichiers**|Sélectionnez cette option lorsque le package se trouve dans le système de fichiers.|  
 |**Magasin de packages SSIS**|Sélectionnez cette option lorsque le package se trouve dans le magasin de packages [!INCLUDE[ssIS](../../includes/ssis-md.md)] .|  
@@ -99,11 +98,11 @@ ms.locfileid: "49169320"
 >  Lorsque c'est possible, utilisez l'authentification Windows.  
   
  **Package**  
- Tapez le nom du package ou cliquez sur le bouton de sélection **(…)** pour identifier l’emplacement d’un package grâce à la boîte de dialogue **Sélectionner un package SSIS** .  
+ Tapez le nom du package ou cliquez sur le bouton de sélection **(...)** pour identifier l’emplacement d’un package grâce à la boîte de dialogue **Sélectionner un package SSIS**.  
   
 #### <a name="package-source--file-system"></a>Source du package = Système de fichiers  
  **Package**  
- Tapez le nom du package ou cliquez sur le bouton qui contient des points de suspension **(…)** pour identifier l’emplacement d’un package grâce à la boîte de dialogue Ouvrir. Par défaut, cette boîte de dialogue répertorie uniquement les fichiers dotés de l'extension .dtsx.  
+ Tapez le nom du package ou cliquez sur le bouton qui contient des points de suspension **(...)** pour identifier l’emplacement d’un package grâce à la boîte de dialogue Ouvrir. Par défaut, cette boîte de dialogue répertorie uniquement les fichiers dotés de l'extension .dtsx.  
   
 #### <a name="package-source--ssis-package-store"></a>Source du package = Magasin de packages SSIS  
  **Server**  
@@ -119,7 +118,7 @@ ms.locfileid: "49169320"
  Cette option est désactivée quand vous exécutez un package stocké dans le **Magasin de packages SSIS**.  
   
  **Package**  
- Tapez le nom du package ou cliquez sur le bouton de sélection **(…)** pour identifier l’emplacement d’un package grâce à la boîte de dialogue **Sélectionner un package SSIS** .  
+ Tapez le nom du package ou cliquez sur le bouton de sélection **(...)** pour identifier l’emplacement d’un package grâce à la boîte de dialogue **Sélectionner un package SSIS**.  
   
 ## <a name="configurations-page"></a>Page Configurations  
  Utilisez la page **Configurations** de la boîte de dialogue **Utilitaire d'exécution de package** pour sélectionner les fichiers de configuration à charger au moment de l'exécution et spécifier l'ordre de chargement.  
@@ -207,7 +206,7 @@ ms.locfileid: "49169320"
  Affiche le fichier de points de contrôle que le package utilise, si vous activez les points de contrôle du package.  
   
  **Parcourir**  
- Cliquez sur le bouton Parcourir **(…)** pour rechercher le fichier de points de contrôle au moyen de la boîte de dialogue **Ouvrir** , si vous activez les points de contrôle du package. Si un fichier de points de contrôle est déjà spécifié, il est remplacé par le fichier sélectionné.  
+ Cliquez sur le bouton Parcourir **(...)** pour rechercher le fichier de points de contrôle au moyen de la boîte de dialogue **Ouvrir**, si vous activez les points de contrôle du package. Si un fichier de points de contrôle est déjà spécifié, il est remplacé par le fichier sélectionné.  
   
  **Substituer les options de redémarrage**  
  Indique s'il faut ignorer les options de redémarrage, si vous activez les points de contrôle du package.  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: scripting
 ms.topic: conceptual
 ms.assetid: d68aca48-d161-45ed-9f4f-14122ed30218
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9e13b3cde8681c4f717f0fa12d7426eea58d0caf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8a5d9f7119730a904dd760f43d001f1a7734f47c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135889"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52752082"
 ---
 # <a name="navigate-sql-server-powershell-paths"></a>Parcourir les chemins PowerShell SQL Server
   Le fournisseur PowerShell du [!INCLUDE[ssDE](../includes/ssde-md.md)] expose le jeu d'objets dans une instance de SQL Server dans une structure similaire à un chemin d'accès de fichier. Vous pouvez utiliser des applets de commande Windows PowerShell pour naviguer jusqu'au chemin d'accès du fournisseur et créer des lecteurs personnalisés pour raccourcir le chemin d'accès que vous devez taper.  
@@ -115,9 +114,9 @@ Get-ChildItem -force
 ## <a name="create-a-custom-drive"></a>Créer un lecteur personnalisé  
  **Créer et utiliser un lecteur personnalisé**  
   
-1.  Utilisez `New-PSDrive` pour définir un lecteur personnalisé. Utilisez le `Root` paramètre pour spécifier le chemin d’accès qui est représenté par le nom du lecteur personnalisé.  
+1.  Utilisez `New-PSDrive` pour définir un lecteur personnalisé. Utilisez le paramètre `Root` pour spécifier le chemin d'accès représenté par le nom du lecteur personnalisé.  
   
-2.  Référencer le nom du lecteur personnalisé dans les cmdlets de navigation de chemin d’accès tel que `Set-Location`.  
+2.  Faites référence au nom du lecteur personnalisé dans les applets de commande de navigation de chemin d'accès telles que `Set-Location`.  
   
 ### <a name="custom-drive-example-powershell"></a>Exemple de lecteur personnalisé (PowerShell)  
  Cet exemple crée un lecteur virtuel nommé AWDB qui mappe au nœud pour une copie déployée de l’exemple de base de données AdventureWorks2012. Le lecteur virtuel est ensuite utilisé pour naviguer jusqu'à une table dans la base de données.  

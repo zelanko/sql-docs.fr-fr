@@ -4,20 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: ea3aa222-538d-485f-99dc-01eb02cdcfea
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f2a73bd30ab72cc293f8cbd0dcebc2b123d6538e
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 40bd2c5735b68a165bcdff4a26069505994dbd85
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51031807"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52818751"
 ---
-# <a name="options-environment-fonts-and-colors-page"></a>Options (Environnement - Page Polices et couleurs)
+# <a name="options-environment-fonts-and-colors-page"></a>Options (environnement : Page polices et couleurs)
   La boîte de dialogue **Options** vous permet de définir un modèle personnalisé de polices et de couleurs pour différents éléments de l’interface utilisateur dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Dans le menu **Outils** , cliquez sur **Options** , développez le dossier **Environnement** et sélectionnez **Polices et couleurs**.  
   
  Les modifications apportées à un modèle de couleurs ne sont pas prises en compte lors de la session au cours de laquelle vous avez effectué ces changements. Vous pouvez évaluer les changements de couleurs en ouvrant une autre instance de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] et en reproduisant les conditions dans lesquelles vous souhaitez appliquer ces modifications.  
@@ -29,8 +29,8 @@ ms.locfileid: "51031807"
 |Terme|Définition|  
 |----------|----------------|  
 |Éditeur de texte|Les modifications apportées aux paramètres d'affichage du style, de la taille et de la couleur des polices dans l'éditeur de texte influencent la présentation du texte dans l'éditeur de texte par défaut. Les documents ouverts dans un éditeur de texte en dehors de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ne sont pas affectés par ces paramètres.|  
-|Imprimante|Les modifications apportées aux paramètres d'affichage du style, de la taille et de la couleur des polices de l'imprimante influencent la présentation du texte sur les documents imprimés.<br /><br /> Conseil : En fonction des besoins, vous pouvez sélectionner une police par défaut différente pour l’impression que celle utilisée pour l’affichage dans l’éditeur de texte. Cela peut être utile lors de l'impression de code contenant des caractères codés sur un octet et sur deux octets.|  
-|[Toutes les fenêtres Outil de texte **]**|Les modifications apportées aux paramètres d'affichage du style, de la taille et de la couleur des polices pour cet élément influencent la présentation du texte dans les fenêtres Outils disposant de volets de sortie dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], par exemple les fenêtres Sortie, Résultats de texte, et ainsi de suite.<br /><br /> Remarque : Les modifications apportées au texte des éléments [Toutes les fenêtres Outil de texte] ne sont pas prises en compte lors de la session au cours de laquelle vous avez effectué les changements. Vous pouvez évaluer le résultat obtenu du fait des modifications apportées en ouvrant une autre instance de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|  
+|Imprimante|Les modifications apportées aux paramètres d'affichage du style, de la taille et de la couleur des polices de l'imprimante influencent la présentation du texte sur les documents imprimés.<br /><br /> Conseil : Vous pouvez si nécessaire sélectionner pour l'impression une police par défaut autre que celle utilisée pour l'affichage dans l'éditeur de texte. Cela peut être utile lors de l'impression de code contenant des caractères codés sur un octet et sur deux octets.|  
+|[Toutes les fenêtres Outil de texte **]**|Les modifications apportées aux paramètres d'affichage du style, de la taille et de la couleur des polices pour cet élément influencent la présentation du texte dans les fenêtres Outils disposant de volets de sortie dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], par exemple les fenêtres Sortie, Résultats de texte, et ainsi de suite.<br /><br /> Remarque : Modifications apportées au texte des éléments de [tous les Windows outil de texte] ne prennent pas d’effet pendant la session où vous les apportez. Vous pouvez évaluer le résultat obtenu du fait des modifications apportées en ouvrant une autre instance de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|  
 |Fenêtre Résultats de la recherche|Les modifications apportées aux paramètres d’affichage du style, de la taille et de la couleur des polices pour cet élément influencent la présentation du texte dans la fenêtre Résultats de la recherche.|  
 |Fenêtre Sortie|Les modifications apportées aux paramètres d'affichage du style, de la taille et de la couleur des polices pour cet élément influencent la présentation du texte dans les fenêtres Sortie.|  
 |Résultats de grille|Les modifications apportées aux paramètres d’affichage du style, de la taille et de la couleur des polices pour cet élément influencent la présentation du texte dans les fenêtres **Résultats de grille** .|  
@@ -55,9 +55,9 @@ ms.locfileid: "51031807"
   
  Voici quelques-uns des éléments affichés.  
   
--   Marge des indicateurs : marge à gauche de l'éditeur de code où sont affichés les points d'arrêt et les icônes de signet.  
+-   Marge des indicateurs : marge à gauche de l'éditeur de code où sont affichés les points d'arrêt et les icônes de signet.  
   
--   Réduction du texte : bloc de texte ou de code que vous pouvez faire apparaître ou masquer dans l’éditeur de code (XML uniquement).  
+-   Réduction du texte : Un bloc de texte ou du code pouvant être insérée dans et hors de l’affichage dans l’éditeur de code (XML uniquement).  
   
  **Premier plan**  
  Répertorie les couleurs disponibles pour le premier plan de l’élément sélectionné dans **Éléments affichés**. Dans la mesure où certains éléments sont liés entre eux, veillez à conserver un modèle d'affichage cohérent. Par exemple, si vous changez la couleur de premier plan du texte, la couleur de premier plan des éléments tels que Chaîne est également modifiée.  
@@ -82,6 +82,6 @@ ms.locfileid: "51031807"
   
 ## <a name="see-also"></a>Voir aussi  
  [Codage en couleurs dans les éditeurs de requête](../../relational-databases/scripting/color-coding-in-query-editors.md)   
- [Options &#40;éditeur de texte : onglet Éditeur et Page barre d’état&#41;](../../database-engine/options-text-editor-editor-tab-and-status-bar-page.md)  
+ [Options &#40;éditeur de texte : Onglet Éditeur et Page barre d’état&#41;](../../database-engine/options-text-editor-editor-tab-and-status-bar-page.md)  
   
   

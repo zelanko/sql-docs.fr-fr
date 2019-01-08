@@ -1,11 +1,10 @@
 ---
-title: '? : (Conditionnel) (expression SSIS) | Microsoft Docs'
+title: '? : (Conditionnel) (Expression SSIS) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - conditional operator (?:)
@@ -14,14 +13,14 @@ ms.assetid: d38e6890-7338-4ce0-a837-2dbb41823a37
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4d1713e75acf4ad8e76cfdf309ede46523690b4b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f644dc95d5c137c8ee1cdb5ecf8b0e2659e28e40
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197259"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52811191"
 ---
-# <a name="--conditional-ssis-expression"></a>? : (Conditionnel) (expression SSIS)
+# <a name="--conditional-ssis-expression"></a>? : (Conditionnel) (Expression SSIS)
   Renvoie une des deux expressions selon l'évaluation d'une expression booléenne. Si l'expression booléenne donne la valeur TRUE, la première expression est évaluée et le résultat est le résultat de l'expression. Si l'expression booléenne donne la valeur FALSE, la deuxième expression est évaluée et son résultat est le résultat de l'expression.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -58,9 +57,9 @@ boolean_expression?expression1:expression2
   
 -   **Numérique** : *expression1* et *expression2* doivent toutes deux être d’un type de données numériques. L'intersection des types de données doit être de type de données numérique, comme le spécifient les règles relatives aux conversions numériques implicites effectuées par l'évaluateur d'expression. L'intersection des deux types de données numériques ne peut pas être NULL. Pour plus d’informations, consultez [Types de données Integration Services dans les expressions](integration-services-data-types-in-expressions.md).  
   
--   **Chaîne** : *expression1* et *expression2* doivent toutes deux être d’un type de données chaîne : DT_STR ou DT_WSTR. Les deux expressions peuvent avoir une valeur de types de données chaîne différents. Le résultat a le type de données DT_WSTR et une longueur équivalente à celle de l'argument le plus long.  
+-   **Chaîne** à la fois *expression1* et *expression2* doit être un type de données chaîne : DT_STR ou DT_WSTR. Les deux expressions peuvent avoir une valeur de types de données chaîne différents. Le résultat a le type de données DT_WSTR et une longueur équivalente à celle de l'argument le plus long.  
   
--   **Date, Heure ou Date/Heure** : *expression1* et *expression2* doivent toutes deux correspondre à un des types de données suivants : DT_DBDATE, DT_DATE, DT_DBTIME, DT_DBTIME2, DT_DBTIMESTAMP, DT_DBTIMESTAMP2, DT_DBTIMESTAPMOFFSET ou DT_FILETIME.  
+-   **Date, heure ou Date/heure** à la fois *expression1* et *expression2* doit correspondre à un des types de données suivants : DT_DBDATE, DT_DATE, DT_DBTIME, DT_DBTIME2, DT_DBTIMESTAMP, DT_DBTIMESTAMP2, DT_DBTIMESTAPMOFFSET ou DT_FILETIME.  
   
     > [!NOTE]  
     >  Le système ne prend pas en charge les comparaisons entre une expression qui correspond à un type de données heure et une expression qui correspond à un type de données date ou date/heure. Le système génère alors une erreur.  
@@ -99,7 +98,7 @@ ListPrice < 350.00 ? ListPrice * .2 : ListPrice * .1
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Opérateurs et associativité](operator-precedence-and-associativity.md)   
- [Opérateurs &#40;SSIS Expression&#41;](operators-ssis-expression.md)  
+ [Priorités et associativité des opérateurs](operator-precedence-and-associativity.md)   
+ [Opérateurs &#40;expression SSIS&#41;](operators-ssis-expression.md)  
   
   

@@ -13,19 +13,19 @@ ms.assetid: cb3fd9a6-39a2-4e9c-9157-619bf3db9951
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c3055a222133eb7427aab7dc32ef42bb2796e5c1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: efd73d5b433deeb21b1f3469882a3f0e5dbe7c2b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48088789"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53349884"
 ---
 # <a name="configure-cluster-quorum-nodeweight-settings"></a>Configurer les paramètres NodeWeight pour un quorum de cluster
   Cette rubrique explique comment configurer les paramètres NodeWeight pour un nœud membre dans un cluster de clustering de basculement Windows Server (WSFC). Les paramètres NodeWeight sont utilisés pendant le vote du quorum pour prendre en charge les scénarios de récupération d'urgence et de sous-réseaux multiples pour [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] et les instances de cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
--   **Avant de commencer :**  [Conditions préalables](#Prerequisites), [Sécurité](#Security)  
+-   **Avant de commencer :**  [Conditions préalables](#Prerequisites), [sécurité](#Security)  
   
--   **Pour afficher les paramètres NodeWeight du quorum avec :** [Utilisation de PowerShell](#PowerShellProcedure), [Utilisation de Cluster.exe](#CommandPromptProcedure)  
+-   **Pour afficher les paramètres NodeWeight du quorum avec :** [À l’aide de Powershell](#PowerShellProcedure), [à l’aide de Cluster.exe](#CommandPromptProcedure)  
   
 -   [Contenu connexe](#RelatedContent)  
   
@@ -37,7 +37,7 @@ ms.locfileid: "48088789"
 > [!IMPORTANT]  
 >  Pour utiliser les paramètres NodeWeight, le correctif logiciel suivant doit être appliqué à tous les serveurs dans le cluster WSFC :  
 >   
->  [KB2494036](http://support.microsoft.com/kb/2494036): un correctif est disponible pour vous permettre de configurer un nœud de cluster qui n'a pas de votes de quorum dans [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] et dans [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]  
+>  [KB2494036](https://support.microsoft.com/kb/2494036): un correctif est disponible pour vous permettre de configurer un nœud de cluster qui n'a pas de votes de quorum dans [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] et dans [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]  
   
 > [!TIP]  
 >  Si ce correctif logiciel n'est pas installé, les exemples de cette rubrique retournent des valeurs vides ou NULL pour NodeWeight.  
@@ -58,12 +58,12 @@ ms.locfileid: "48088789"
 4.  Générez la sortie des propriétés du nœud de cluster dans un format lisible.  
   
 ### <a name="example-powershell"></a>Exemple (PowerShell)  
- L'exemple suivant modifie le paramètre NodeWeight pour supprimer le vote du quorum pour le nœud « AlwaysOnSrv1 », puis génère les paramètres pour tous les nœuds du cluster.  
+ L’exemple suivant modifie le paramètre NodeWeight pour supprimer le vote du quorum pour le nœud « AlwaysOnSrv1 », puis génère les paramètres pour tous les nœuds du cluster.  
   
 ```powershell  
 Import-Module FailoverClusters  
   
-$node = “AlwaysOnSrv1”  
+$node = "AlwaysOnSrv1"  
 (Get-ClusterNode $node).NodeWeight = 0  
   
 $cluster = (Get-ClusterNode $node).Cluster  
@@ -75,7 +75,7 @@ $nodes | Format-Table -property NodeName, State, NodeWeight
 ##  <a name="CommandPromptProcedure"></a> Utilisation de Cluster.exe  
   
 > [!NOTE]  
->  L'utilitaire cluster.exe est déconseillé dans [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] .  Utilisez PowerShell avec le clustering de basculement pour le développement futur.  L'utilitaire cluster.exe sera supprimé dans la prochaine version de Windows Server. Pour plus d'informations, consultez [Mappage des commandes Cluster.exe aux applets de commande Windows PowerShell pour les clusters de basculement](http://technet.microsoft.com/library/ee619744\(WS.10\).aspx).  
+>  L'utilitaire cluster.exe est déconseillé dans [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] .  Utilisez PowerShell avec le clustering de basculement pour le développement futur.  L'utilitaire cluster.exe sera supprimé dans la prochaine version de Windows Server. Pour plus d'informations, consultez [Mappage des commandes Cluster.exe aux applets de commande Windows PowerShell pour les clusters de basculement](https://technet.microsoft.com/library/ee619744\(WS.10\).aspx).  
   
 ##### <a name="to-configure-nodeweight-settings"></a>Pour configurer les paramètres NodeWeight  
   
@@ -84,7 +84,7 @@ $nodes | Format-Table -property NodeName, State, NodeWeight
 2.  Utilisez **cluster.exe** pour définir les valeurs `NodeWeight` .  
   
 ### <a name="example-clusterexe"></a>Exemple (Cluster.exe)  
- L'exemple suivant modifie la valeur NodeWeight pour supprimer le vote du quorum pour le nœud « AlwaysOnSrv1 » dans le cluster « Cluster001 ».  
+ L’exemple suivant modifie la valeur NodeWeight pour supprimer le vote du quorum pour le nœud « AlwaysOnSrv1 » dans le cluster « Cluster001 ».  
   
 ```ms-dos  
 cluster.exe Cluster001 node AlwaysOnSrv1 /prop NodeWeight=0  
@@ -92,13 +92,13 @@ cluster.exe Cluster001 node AlwaysOnSrv1 /prop NodeWeight=0
   
 ##  <a name="RelatedContent"></a> Contenu associé  
   
--   [Afficher les événements et journaux pour un cluster de basculement](http://technet.microsoft.com/library/cc772342\(WS.10\).aspx)  
+-   [Afficher les événements et journaux pour un cluster de basculement](https://technet.microsoft.com/library/cc772342\(WS.10\).aspx)  
   
--   [Applets de commande de cluster de basculement Get-ClusterLog](http://technet.microsoft.com/library/ee461045.aspx)  
+-   [Applets de commande de cluster de basculement Get-ClusterLog](https://technet.microsoft.com/library/ee461045.aspx)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Modes de quorum WSFC et configuration de vote &#40;SQL Server&#41;](wsfc-quorum-modes-and-voting-configuration-sql-server.md)   
  [Afficher les paramètres NodeWeight pour le quorum de cluster](view-cluster-quorum-nodeweight-settings.md)   
- [Applets de commande de cluster de basculement dans Windows PowerShell répertoriées par tâche](http://technet.microsoft.com/library/ee619761\(WS.10\).aspx)  
+ [Applets de commande de cluster de basculement dans Windows PowerShell répertoriées par tâche](https://technet.microsoft.com/library/ee619761\(WS.10\).aspx)  
   
   

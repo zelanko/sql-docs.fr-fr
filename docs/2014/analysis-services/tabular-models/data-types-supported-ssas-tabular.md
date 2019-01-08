@@ -11,12 +11,12 @@ ms.assetid: 92993f7b-7243-4aec-906d-0b0379798242
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 083eff2195b0c8099ec4fdfb80e7224e1d42d135
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ed99b26641b6d87fa6fe3bf07f47c21eacb96d89
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086899"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52405474"
 ---
 # <a name="data-types-supported-ssas-tabular"></a>Types de données pris en charge (SSAS Tabulaire)
   Cet article décrit les types de données qui peuvent être utilisés dans des modèles tabulaires et aborde la conversion implicite de types de données lorsque des données sont calculées ou utilisées dans une formule DAX (Data Analysis Expressions).  
@@ -45,19 +45,19 @@ ms.locfileid: "48086899"
 |Texte|String|Chaîne de données caractères au format Unicode. Il peut s'agir de chaînes, de nombres ou de dates représentés dans un format texte.|  
 |Date|Date/heure|Dates et heures dans une représentation date-heure acceptée.<br /><br /> Les dates valides sont toutes les dates après le 1er mars 1900.|  
 |Monétaire (Currency)|Monétaire (Currency)|Le type de données devise autorise des valeurs entre -922 337 203 685 477,5808 et 922 337 203 685 477,5807 avec quatre chiffres décimaux à précision fixe.|  
-|Néant|Vide|Le type de données Vide (Blank) de DAX représente et remplace les valeurs Null SQL. Vous pouvez créer une valeur vide à l'aide de la fonction BLANK et tester les valeurs vides à l'aide de la fonction logique ISBLANK.|  
+|N/A|Vide|Le type de données Vide (Blank) de DAX représente et remplace les valeurs Null SQL. Vous pouvez créer une valeur vide à l'aide de la fonction BLANK et tester les valeurs vides à l'aide de la fonction logique ISBLANK.|  
   
  <sup>1</sup> les formules DAX ne prennent pas en charge les types de données qui sont plus petits que ceux répertoriés dans le tableau.  
   
  <sup>2</sup> si vous tentez d’importer des données présentant de très grandes valeurs numériques, l’importation peut échouer avec l’erreur suivante :  
   
- Erreur de base de données en mémoire : le '\<nom de colonne >' colonne de la «\<nom de la table >' table contient une valeur, ' 1.7976931348623157E + 308', qui n’est pas pris en charge. L'opération a été annulée.  
+ Erreur de base de données en mémoire : Le '\<nom de colonne >' colonne de la «\<nom de la table >' table contient une valeur, ' 1.7976931348623157E + 308', qui n’est pas pris en charge. L'opération a été annulée.  
   
  Cette erreur se produit parce que le générateur de modèles utilise cette valeur pour représenter des valeurs Null. Les valeurs de la liste suivante sont des synonymes de la valeur NULL indiquée précédemment :  
   
 ||  
 |-|  
-|Valeur|  
+|Value|  
 |9223372036854775807|  
 |-9223372036854775808|  
 |1.7976931348623158e+308|  
@@ -76,7 +76,7 @@ ms.locfileid: "48086899"
   
  Si les données de la colonne que vous spécifiez comme argument sont incompatibles avec le type de données requis par la fonction, DAX, dans de nombreux cas, retourne une erreur. Toutefois, DAX essaie chaque fois que possible de convertir implicitement les données dans le type de données requis. Exemple :  
   
--   Vous pouvez taper un nombre, par exemple « 123 », comme une chaîne. DAX analysera la chaîne et tentera pour la spécifier comme un type de données de nombre.  
+-   Vous pouvez taper un nombre, par exemple « 123 », sous forme de chaîne. DAX analysera la chaîne et tentera pour la spécifier comme un type de données de nombre.  
   
 -   Vous pouvez ajouter TRUE + 1 et obtenir le résultat 2, parce que TRUE est converti implicitement en nombre 1 et que l'opération 1+1 est effectuée.  
   
@@ -149,13 +149,13 @@ ms.locfileid: "48086899"
   
  Les expressions DAX suivantes illustrent ce comportement :  
   
- `=IF(FALSE()>"true","Expression is true", "Expression is false")`, retourne `"Expression is true"`  
+ `=IF(FALSE()>"true","Expression is true", "Expression is false")` retourne `"Expression is true"`.  
   
- `=IF("12">12,"Expression is true", "Expression is false")`, retourne `"Expression is true"`  
+ `=IF("12">12,"Expression is true", "Expression is false")` retourne `"Expression is true"`.  
   
- `=IF("12"=12,"Expression is true", "Expression is false")`, retourne `"Expression is false"`  
+ `=IF("12"=12,"Expression is true", "Expression is false")` retourne `"Expression is false"`.  
   
- Les conversions sont effectuées implicitement pour les types numérique ou date/heure comme décrit dans le tableau suivant :  
+ Les conversions sont effectuées implicitement pour les types numérique ou date/heure comme décrit dans le tableau suivant :  
   
 ||||||  
 |-|-|-|-|-|  
@@ -187,12 +187,12 @@ ms.locfileid: "48086899"
 |TRUE OR BLANK|TRUE|TRUE|  
 |TRUE AND BLANK|FALSE|TRUE|  
 |BLANK OR BLANK|Vide|Error|  
-|BLANK AND BLANK|BLANK|Error|  
+|BLANK AND BLANK|Vide|Error|  
   
  Pour plus d’informations sur la façon dont une fonction ou un opérateur spécifique gèrent les valeurs vides, voir les rubriques relatives à la fonction DAX concernée dans la section [Référence des fonctions DAX](https://msdn.microsoft.com/library/ee634396.aspx).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Sources de données &#40;SSAS tabulaire&#41;](../data-sources-ssas-tabular.md)   
- [Importer des données &#40;SSAS tabulaire&#41;](../import-data-ssas-tabular.md)  
+ [Sources de données &#40;SSAS Tabulaire&#41;](../data-sources-ssas-tabular.md)   
+ [Importer des données &#40;SSAS Tabulaire&#41;](../import-data-ssas-tabular.md)  
   
   

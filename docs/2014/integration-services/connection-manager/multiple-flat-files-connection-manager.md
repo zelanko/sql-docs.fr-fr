@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Multiple Flat Files connection manager
@@ -18,21 +17,21 @@ ms.assetid: 31fc3f7a-d323-44f5-a907-1fa3de66631a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e9c9bd0573a3a6fa8211324066e86446b85ec0f6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 575bf85a81557e7a0a974dd1fc2210e58f34bde0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185659"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52790531"
 ---
 # <a name="multiple-flat-files-connection-manager"></a>Gestionnaire de connexions de fichiers plats multiples
   Un gestionnaire de connexions de fichiers plats multiples permet à un package d'accéder aux données de plusieurs fichiers plats. Par exemple, une source de fichier plat peut utiliser un gestionnaire de connexions de fichiers plats multiples lorsque la tâche de flux de données se trouve dans un conteneur de boucles (conteneur de boucles For, par exemple). Dans chaque boucle du conteneur, la source de fichier plat charge les données à partir du nom de fichier suivant fourni par le gestionnaire de connexions de fichiers plats multiples.  
   
  Lorsque vous ajoutez un gestionnaire de connexions de fichiers plats multiples à un package, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crée une connexion de gestionnaire qui sera converti en une connexion de fichiers plats multiples au moment de l’exécution, définit les propriétés sur le Gestionnaire de connexions de fichiers plats multiples, et Ajoute le Gestionnaire de connexions de fichiers plats multiples à la `Connections` collection du package.  
   
- Le `ConnectionManagerType` propriété du Gestionnaire de connexions est définie sur `MULTIFLATFILE`.  
+ La propriété `ConnectionManagerType` du gestionnaire de connexions a pour valeur `MULTIFLATFILE`.  
   
- Vous pouvez configurer un gestionnaire de connexions de fichiers plats multiples de plusieurs manières :  
+ Vous pouvez configurer un gestionnaire de connexions de fichiers plats multiples de plusieurs manières :  
   
 -   Spécifiez les fichiers, paramètres régionaux et pages de codes à utiliser. Les paramètres régionaux sont utilisés pour interpréter les données spécifiques à un pays comme les dates, tandis que la page de codes est utilisée pour convertir les données chaînes au format Unicode.  
   
@@ -63,19 +62,19 @@ ms.locfileid: "48185659"
   
  Pour plus d'informations sur les propriétés définissables dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , cliquez sur l'une des rubriques suivantes :  
   
--   [Éditeur du Gestionnaire de connexions de fichiers plats multiples &#40;Page Général&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Éditeur du gestionnaire de connexions de fichiers plats multiples &#40;page Général&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Éditeur du Gestionnaire de connexions de fichiers plats multiples &#40;Page colonnes&#41;](../multiple-flat-files-connection-manager-editor-columns-page.md)  
+-   [Éditeur du gestionnaire de connexions de fichiers plats multiples &#40;page Colonnes&#41;](../multiple-flat-files-connection-manager-editor-columns-page.md)  
   
--   [Éditeur du Gestionnaire de connexions de fichiers plats multiples &#40;Page avancé&#41;](../multiple-flat-files-connection-manager-editor-advanced-page.md)  
+-   [Éditeur du gestionnaire de connexions de fichiers plats multiples &#40;page Avancé&#41;](../multiple-flat-files-connection-manager-editor-advanced-page.md)  
   
--   [Éditeur du Gestionnaire de connexions de fichiers plats multiples &#40;afficher un aperçu de la Page&#41;](../multiple-flat-files-connection-manager-editor-preview-page.md)  
+-   [Éditeur du gestionnaire de connexions de fichiers plats multiples &#40;page Aperçu&#41;](../multiple-flat-files-connection-manager-editor-preview-page.md)  
   
  Pour plus d’informations sur la configuration d’un gestionnaire de connexions par programmation, consultez <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> et [Ajout de connexions par programmation](../building-packages-programmatically/adding-connections-programmatically.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Source de fichier plat](../data-flow/flat-file-source.md)   
+ [Source du fichier plat](../data-flow/flat-file-source.md)   
  [Destination de fichier plat](../data-flow/flat-file-destination.md)   
- [Integration Services &#40;SSIS&#41; connexions](integration-services-ssis-connections.md)  
+ [Connexions Integration Services &#40;SSIS&#41;](integration-services-ssis-connections.md)  
   
   

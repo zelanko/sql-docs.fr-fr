@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5f8103e48da5c0059cfc977f862ebd8fc0839fb9
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 8827614f494702d4e738d336e96cd96b92f949d1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661058"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514313"
 ---
 # <a name="sysdmdbindexoperationalstats-transact-sql"></a>sys.dm_db_index_operational_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -86,7 +86,7 @@ sys.dm_db_index_operational_stats (
 |**database_id**|**smallint**|ID de la base de données.|    
 |**object_id**|**Int**|ID de la table ou de la vue.|    
 |**index_id**|**Int**|ID de l'index ou du segment de mémoire.<br /><br /> 0 = Segment de mémoire|    
-|**hobt_id**|**bigint**|**S’applique à**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu’à la [version actuelle](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> ID du segment de données ou de l’ensemble de lignes B-tree qui assure le suivi des données internes pour un index columnstore.<br /><br /> NULL : ce n’est pas un ensemble de lignes columnstore interne.<br /><br /> Pour plus d’informations, consultez [sys.internal_partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)|    
+|**hobt_id**|**bigint**|**S’applique à**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu’à la [version actuelle](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> ID du segment de données ou de l’ensemble de lignes B-tree qui assure le suivi des données internes pour un index columnstore.<br /><br /> NULL - ce n’est pas un ensemble de lignes columnstore interne.<br /><br /> Pour plus d’informations, consultez [sys.internal_partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)|    
 |**partition_number**|**Int**|Numéro de partition (basé sur la valeur 1) au sein de l'index ou du segment de mémoire.|    
 |**leaf_insert_count**|**bigint**|Nombre cumulatif d'insertions de niveau feuille.|    
 |**leaf_delete_count**|**bigint**|Nombre cumulatif de suppressions de niveau feuille. leaf_delete_count est incrémenté uniquement pour les enregistrements supprimés ne sont pas marqués comme fantôme tout d’abord. Pour les enregistrements supprimés sont tout d’abord, dédoublés **leaf_ghost_count** est incrémenté à la place.|    
@@ -183,7 +183,7 @@ sys.dm_db_index_operational_stats (
 ## <a name="using-system-functions-to-specify-parameter-values"></a>Utilisation de fonctions système pour spécifier des valeurs de paramètres    
  Vous pouvez utiliser la [!INCLUDE[tsql](../../includes/tsql-md.md)] fonctions [DB_ID](../../t-sql/functions/db-id-transact-sql.md) et [OBJECT_ID](../../t-sql/functions/object-id-transact-sql.md) pour spécifier une valeur pour le *database_id* et *object_id* paramètres. Toutefois, la transmission de valeurs non valides à ces fonctions peut entraîner des résultats imprévisibles. Vérifiez systématiquement qu'un ID valide est retourné lorsque vous utilisez DB_ID ou OBJECT_ID. Pour plus d’informations, consultez la section Notes dans [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md).    
     
-## <a name="permissions"></a>Permissions    
+## <a name="permissions"></a>Autorisations    
  Les autorisations suivantes sont nécessaires :    
     
 -   Autorisation CONTROL sur l'objet spécifié dans la base de données    
@@ -227,7 +227,7 @@ GO
     
 ```    
     
-### <a name="b-returning-information-for-all-tables-and-indexes"></a>B. Retour d'informations sur toutes les tables et tous les index    
+### <a name="b-returning-information-for-all-tables-and-indexes"></a>b. Retour d'informations sur toutes les tables et tous les index    
  L'exemple suivant retourne des informations concernant toutes les tables et tous les index compris dans l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. L’exécution de cette requête nécessite l’autorisation VIEW SERVER STATE.    
     
 ```    

@@ -15,12 +15,12 @@ ms.assetid: 7b44c0d7-d8fa-4491-8836-0899f621d3a8
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0cd386cad85726707f1ce3ea9f7931bda4e66c25
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1c9018dcf8ae02d939f7ba3bc29d46231ef39d1f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140499"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545547"
 ---
 # <a name="save-copy-of-package"></a>Enregistrer une copie du package
   La boîte de dialogue **Enregistrer une copie du package**, accessible dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], permet d’enregistrer la copie d’un package [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] vers un emplacement différent et éventuellement de modifier le niveau de protection du package.  
@@ -54,15 +54,15 @@ ms.locfileid: "48140499"
  Si vous utilisez l’authentification [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , entrez un mot de passe.  
   
  **Chemin d'accès au package**  
- Tapez le chemin du package ou cliquez sur le bouton Parcourir **(…)** pour rechercher le dossier dans lequel stocker le package.  
+ Tapez le chemin d’accès de package, ou cliquez sur le bouton de navigation **(...)**  bouton, puis recherchez le dossier dans lequel stocker le package.  
   
  **Niveau de protection**  
- Cliquez sur le bouton Parcourir **(…)** et mettez à jour le niveau de protection dans la boîte de dialogue **Niveau de protection du package** . Pour plus d’informations, consultez [Boîte de dialogue Niveau de protection du package](../../2014/integration-services/package-and-project-protection-level-dialog-box.md).  
+ Cliquez sur le bouton de navigation **(...)**  bouton et mettre à jour le niveau de protection dans le **niveau de Protection du Package** boîte de dialogue. Pour plus d’informations, consultez [Boîte de dialogue Niveau de protection du package](../../2014/integration-services/package-and-project-protection-level-dialog-box.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence de l’interface utilisateur de la boîte de dialogue Importation Package](../../2014/integration-services/import-package-dialog-box-ui-reference.md)   
- [Exporter la référence de l’interface utilisateur de la boîte de dialogue Package](../../2014/integration-services/export-package-dialog-box-ui-reference.md)   
+ [Référence de l'interface utilisateur de la boîte de dialogue Importer un package](../../2014/integration-services/import-package-dialog-box-ui-reference.md)   
+ [Référence de l'interface utilisateur de la boîte de dialogue Exporter un package](../../2014/integration-services/export-package-dialog-box-ui-reference.md)   
  [Enregistrer des packages](save-packages.md)   
- [Importer et exporter des Packages &#40;Service SSIS&#41;](../../2014/integration-services/import-and-export-packages-ssis-service.md)  
+ [Importer et exporter des packages &#40;service SSIS&#41;](../../2014/integration-services/import-and-export-packages-ssis-service.md)  
   
   

@@ -16,12 +16,12 @@ ms.assetid: 3d0ff48d-fef5-4c01-bb1d-a583e6269b66
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7a6b77f61c8eadd8ef58d9eb475aaeb3faf88c57
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5ba05cb9079514750cf087149bae476efe0d8d41
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47661857"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510759"
 ---
 # <a name="relative-and-absolute-scrolling"></a>Défilement relatif et absolu
 La plupart des options de défilement dans **SQLFetchScroll** positionner le curseur par rapport à la position actuelle ou à une position absolue. **SQLFetchScroll** prend en charge l’extraction de la suivante, précédente, première et dernière ensembles de lignes, comme l’extraction bien comme étant relatif (extraire l’ensemble de lignes *n* lignes à partir du début de l’ensemble de lignes actuel) et absolu extraction (fetch le démarrage de l’ensemble de lignes à la ligne *n*). Si *n* est négatif dans une extraction absolue, les lignes sont comptées à partir de la fin du jeu de résultats. Par conséquent, une extraction absolue de ligne -1 équivaut à l’extraction de l’ensemble de lignes qui commence par la dernière ligne du jeu de résultats.  
@@ -34,7 +34,7 @@ La plupart des options de défilement dans **SQLFetchScroll** positionner le cur
 |--------------------------|-------------------------------------|  
 |Page précédente|SQL_FETCH_PRIOR|  
 |Pg. suiv|SQL_FETCH_NEXT|  
-|Ligne précédente|SQL_FETCH_RELATIVE avec *FetchOffset* égale à – 1|  
+|Ligne précédente|SQL_FETCH_RELATIVE avec *FetchOffset* égal à -1|  
 |Ligne suivante|SQL_FETCH_RELATIVE avec *FetchOffset* égal à 1|  
 |Case de défilement en haut|SQL_FETCH_FIRST|  
 |Case de défilement en bas|SQL_FETCH_LAST|  

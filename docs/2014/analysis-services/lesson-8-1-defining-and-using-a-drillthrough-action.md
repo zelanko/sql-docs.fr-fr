@@ -11,12 +11,12 @@ ms.assetid: 3765f865-2b93-44be-b290-28e3815d5ecb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 13738a9a4e533ac8a9882724aa1b9c9f12e3048f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 606fe679f4cc58a627b2d2978b52d9865da741c1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090679"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545313"
 ---
 # <a name="defining-and-using-a-drillthrough-action"></a>Définition et utilisation d'une action d'extraction
   Le dimensionnement des données de fait par une dimension de fait sans filtrage correct des données retournées par la requête peut ralentir les performances des requêtes. Pour éviter ceci, vous pouvez définir une action d'extraction qui restreint le nombre total de lignes retournées. Cela améliorera considérablement les performances des requêtes.  
@@ -55,7 +55,7 @@ ms.locfileid: "48090679"
   
 8.  Dans le **nombre maximal de lignes** , tapez `10`.  
   
-9. Dans le **légende** , tapez `Drillthrough to Order Details…`.  
+9. Dans le **légende** , tapez `Drillthrough to Order Details...`.  
   
      Ces paramètres limitent le nombre de lignes retournées et spécifient la légende qui apparaît dans le menu de l'application cliente. L’image suivante montre ces paramètres dans la zone **Propriétés supplémentaires** .  
   
@@ -144,7 +144,7 @@ ms.locfileid: "48090679"
      ![Les commandes expédiées à Adam Powell](../../2014/tutorials/media/l8-action8.gif "commandes expédiées à Adam Powell")  
   
 ## <a name="next-lesson"></a>Leçon suivante  
- [Leçon 9 : Définition de perspectives et de traductions](../analysis-services/lesson-9-defining-perspectives-and-translations.md)  
+ [Leçon 9 : Définition de Perspectives et traductions](../analysis-services/lesson-9-defining-perspectives-and-translations.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Actions &#40;Analysis Services - données multidimensionnelles&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md)   

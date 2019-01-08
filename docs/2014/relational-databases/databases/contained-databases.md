@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - contained database
@@ -16,12 +15,12 @@ ms.assetid: 36af59d7-ce96-4a02-8598-ffdd78cdc948
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ed3c5436a8c3a922ea1a118714c1b429dcc9f286
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: ee9d1c22a216024f388d30978dbb62be933425cb
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49461074"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52822513"
 ---
 # <a name="contained-databases"></a>Bases de données autonomes
   Une *base de données autonome* est une base de données qui est isolée d'autres bases de données et de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui héberge cette base de données.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] aide l'utilisateur à isoler sa base de données de l'instance de 4 manières différentes.  

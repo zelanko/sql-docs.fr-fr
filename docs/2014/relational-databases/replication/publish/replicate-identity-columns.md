@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 10/04/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - identities [SQL Server replication]
@@ -18,12 +17,12 @@ ms.assetid: eb2f23a8-7ec2-48af-9361-0e3cb87ebaf7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e47126e626c76f25d6c376a3c4247e2caf6de9f0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e89bfac90a0658c8f5ba839632451187ffa9760d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089849"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52810951"
 ---
 # <a name="replicate-identity-columns"></a>Répliquer des colonnes d'identité
   Quand vous attribuez la propriété IDENTITY à une colonne, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] génère automatiquement des numéros séquentiels pour les nouvelles lignes insérées dans la table contenant la colonne d'identité. Pour plus d’informations, consultez [IDENTITY &#40;propriété&#41; &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql-identity-property). Les colonnes d'identité devant être incluses comme composantes de la clé primaire, il est important d'éviter les valeurs dupliquées dans les colonnes d'identité. Pour utiliser des colonnes d'identité dans une topologie de réplication qui a des mises à jour sur plusieurs nœuds, chaque nœud de cette topologie de réplication doit avoir une plage différente de valeurs d'identité, de façon à ce qu'il n'y ait pas de valeurs dupliquées.  
@@ -57,13 +56,13 @@ ms.locfileid: "48089849"
  Si le serveur de publication épuise sa plage d'identité après une insertion, il peut automatiquement attribuer une nouvelle plage si l'insertion a été effectuée par un membre du rôle de base de données fixe **db_owner** . Si l’insertion a été effectuée par un utilisateur qui ne fait pas partie de ce rôle, l’Agent de lecture du journal, l’Agent de fusion ou un utilisateur qui est membre du rôle **db_owner** doit exécuter [sp_adjustpublisheridentityrange &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adjustpublisheridentityrange-transact-sql). Pour les publications transactionnelles, l'Agent de lecture du journal doit être en cours d'exécution pour allouer automatiquement une nouvelle plage (la configuration par défaut est que l'agent s'exécute en continu).  
   
 > [!WARNING]  
->  Pendant l'insertion d'un lot volumineux, le déclencheur de réplication n'est exécuté qu'une seule fois, et non pour chaque ligne de l'insertion. Cela peut entraîner un échec de l’instruction insert, si une plage d’identités est épuisée pendant une insertion importante, telle qu’un `INSERT INTO` instruction.  
+>  Pendant l'insertion d'un lot volumineux, le déclencheur de réplication n'est exécuté qu'une seule fois, et non pour chaque ligne de l'insertion. Cela peut entraîner un échec de l'instruction d'insertion si une plage d'identités est épuisée pendant une insertion importante, telle qu'une instruction `INSERT INTO`.  
   
 |Type de données|Plage|  
 |---------------|-----------|  
 |`tinyint`|Non pris en charge pour la gestion automatique|  
-|`smallint`|-2^15 (-32 768) à 2^15-1 (32 767)|  
-|`int`|-2^31 (-2 147 483 648) à 2^31-1 (2 147 483 647)|  
+|`smallint`|-2^15 (-32 768) à 2^15-1 (32 767)|  
+|`int`|-2^31 (-2 147 483 648) à 2^31-1 (2 147 483 647)|  
 |`bigint`|-2^63 (-9 223 372 036 854 775 808) à 2^63-1 (9 223 372 036 854 775 807)|  
 |`decimal` et `numeric`|-10^38+1 à 10^38-1|  
   
@@ -99,7 +98,7 @@ ms.locfileid: "48089849"
  Par exemple, vous pouvez spécifier 10 000 pour **@pub_identity_range**, 1 000 pour **@identity_range** (en faisant l'hypothèse d'un nombre moins élevé de mises à jour sur l'Abonné) et 80 pour cent pour **@threshold**. Après 800 insertions sur un Abonné (80 pour cent de 1 000), un Abonné se voit attribuer une nouvelle plage. Après 8 000 insertions sur l'Abonné, le serveur de publication se voit attribuer une nouvelle plage. Quand une nouvelle plage est attribuée, il y aura une interruption dans les valeurs de plage d'identités de la  table. La spécification d'un seuil plus élevé donne des interruptions plus courtes, mais le système tolère moins les pannes : si l'agent de distribution ne peut pas être exécuté pour une raison quelconque, un abonné peut tomber plus facilement à court d'identités.  
   
 ## <a name="assigning-ranges-for-manual-identity-range-management"></a>Attribution de plages pour la gestion manuelle des plages d'identité  
- Si vous spécifiez une gestion manuelle des plages d'identité, vous devez vérifier que le serveur de publication et que chaque Abonné utilisent des plages d'identités différentes. Par exemple, supposons une table sur le serveur de publication avec une colonne d'identité définié en tant que `IDENTITY(1,1)`: la colonne d'identité commence à 1 et elle est incrémentée de 1 chaque fois qu'une ligne est insérée. Si la table sur le serveur de publication a 5 000 lignes et que vous vous attendez à un accroissement de la table au cours de la durée de vie de l'application, le serveur de publication peut utiliser la plage 1 à 10 000. Étant donnés deux Abonnés, l'Abonné A peut utiliser la plage 10 001 à 20 000 et l'Abonné B peut utiliser la plage 20 001 à 30 000.  
+ Si vous spécifiez une gestion manuelle des plages d'identité, vous devez vérifier que le serveur de publication et que chaque Abonné utilisent des plages d'identités différentes. Par exemple, supposons une table sur le serveur de publication avec une colonne d'identité définié en tant que `IDENTITY(1,1)`: la colonne d'identité commence à 1 et elle est incrémentée de 1 chaque fois qu'une ligne est insérée. Si la table sur le serveur de publication a 5 000 lignes et que vous vous attendez à un accroissement de la table au cours de la durée de vie de l'application, le serveur de publication peut utiliser la plage 1 à 10 000. Étant donnés deux Abonnés, l’Abonné A peut utiliser la plage 10 001 à 20 000 et l’Abonné B peut utiliser la plage 20 001 à 30 000.  
   
  Après qu'un Abonné ait été initialisé avec un instantané ou via un autre moyen, exécutez DBCC CHECKIDENT pour attribuer un point de départ pour sa plage d'identités. Par exemple, sur l'Abonné A, vous pouvez exécuter `DBCC CHECKIDENT('<TableName>','reseed',10001)`. Sur l'Abonné B, vous pouvez exécuter `CHECKIDENT('<TableName>','reseed',20001)`.  
   

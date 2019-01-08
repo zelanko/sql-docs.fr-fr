@@ -1,5 +1,5 @@
 ---
-title: Créer une Source de données (SSAS multidimensionnel) | Documents Microsoft
+title: Créer une Source de données (SSAS multidimensionnel) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: c461f38e7e2d0cf43cf206fee0c474f6fd74d35a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 2d22e4b3b9c53aa02a7666c929fcba25d2c17ced
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027046"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52410316"
 ---
 # <a name="create-a-data-source-ssas-multidimensional"></a>Créer une source de données (SSAS Multidimensionnel)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "34027046"
   
 3.  Dans la page **Sélectionner la méthode de définition de la connexion** , choisissez **Créer une source de données basée sur une connexion existante ou nouvelle** , puis cliquez sur **Nouveau** pour ouvrir le **Gestionnaire de connexions**.  
   
-     Les nouvelles connexions sont créées dans le Gestionnaire de connexions. Dans le Gestionnaire de connexions, sélectionnez un fournisseur, puis spécifiez les propriétés de chaîne de connexion utilisées par ce fournisseur pour la connexion aux données sous-jacentes. Les informations exactes nécessaires dépendent du fournisseur, mais ces informations incluent en général un serveur ou une instance de service, des informations pour l'enregistrement dans un journal sur le serveur ou l'instance de service, un nom de base de données ou de fichier, ainsi que d'autres paramètres spécifiques au fournisseur. Pour le reste de cette procédure, nous allons supposer qu'une connexion de base de données SQL Server existe.  
+     Les nouvelles connexions sont créées dans le Gestionnaire de connexions. Dans le Gestionnaire de connexions, sélectionnez un fournisseur, puis spécifiez les propriétés de chaîne de connexion utilisées par ce fournisseur pour la connexion aux données sous-jacentes. Les informations exactes nécessaires dépendent du fournisseur, mais ces informations incluent en général un serveur ou une instance de service, des informations pour l'enregistrement dans un journal sur le serveur ou l'instance de service, un nom de base de données ou de fichier, ainsi que d'autres paramètres spécifiques au fournisseur. Pour le reste de cette procédure, nous supposons une connexion de base de données SQL Server.  
   
 4.  Sélectionnez [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework ou le fournisseur OLE DB natif à utiliser pour la connexion.  
   
@@ -97,7 +97,7 @@ ms.locfileid: "34027046"
   
          La nouvelle connexion apparaît dans le volet **Connexions de données** de la page **Sélectionner la méthode de définition de la connexion** dans l’Assistant Source de données.  
   
-6.  Cliquez sur **Suivant**.  
+6.  Cliquer sur **Suivant**.  
   
 7.  Sous **Informations d’emprunt d’identité**, spécifiez les informations d’identification ou l’identité d’utilisateur Windows qu’Analysis Services utilisera au moment de la connexion à la source de données externe. Si vous utilisez l'authentification de base de données, ces paramètres sont ignorés pour la connexion.  
   
@@ -109,7 +109,7 @@ ms.locfileid: "34027046"
   
      Le compte que vous spécifiez doit disposer d'autorisations en lecture sur la source de données.  
   
-8.  Cliquez sur **Suivant**.  Dans **Fin de l’Assistant**, entrez un nom de source de données ou utilisez le nom par défaut. Le nom par défaut correspond au nom de la base de données spécifiée dans la connexion. Le volet **Aperçu** affiche la chaîne de connexion pour cette nouvelle source de données.  
+8.  Cliquer sur **Suivant**.  Dans **Fin de l’Assistant**, entrez un nom de source de données ou utilisez le nom par défaut. Le nom par défaut correspond au nom de la base de données spécifiée dans la connexion. Le volet **Aperçu** affiche la chaîne de connexion pour cette nouvelle source de données.  
   
 9. Cliquez sur **Terminer**.  La nouvelle source de données apparaît dans le dossier **Sources de données** , dans l’Explorateur de solutions.  
   

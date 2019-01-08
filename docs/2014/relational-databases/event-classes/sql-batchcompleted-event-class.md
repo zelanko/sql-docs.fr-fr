@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: 1be023e8-7a98-4400-b9e7-b24f6a3fc5ca
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0091d695d1083efec18e39a52fd0f1714af6c417
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 94127112d214ba976e3b517bdf91a7d6b26b2d1e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075151"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52766360"
 ---
 # <a name="sqlbatchcompleted-event-class"></a>SQL:BatchCompleted, classe d'événements
   La classe d'événements SQL:BatchCompleted indique que le lot [!INCLUDE[tsql](../../includes/tsql-md.md)] est exécuté.  
@@ -37,8 +36,8 @@ ms.locfileid: "48075151"
 |Duration|`bigint`|Temps (en microsecondes) pris par l'événement.|13|Oui|  
 |EndTime|`datetime`|Heure de fin de l'événement. Cette colonne n'est pas remplie pour les classes d'événements de démarrage, comme SQL:BatchStarting ou SP:Starting.|15|Oui|  
 |Error|`int`|Numéro d'erreur de l'événement.<br /><br /> 0=OK<br /><br /> 1=Erreur<br /><br /> 2=Abandon|31|Oui|  
-|EventClass|`int`|Type d’événement = 12.|27|non|  
-|EventSequence|`int`|Séquence d'un événement donné au sein de la demande.|51|non|  
+|EventClass|`int`|Type d’événement = 12.|27|Non|  
+|EventSequence|`int`|Séquence d'un événement donné au sein de la demande.|51|Non|  
 |GroupID|`int`|ID du groupe de charges de travail où l'événement Trace SQL se déclenche.|66|Oui|  
 |HostName|`nvarchar`|Nom de l'ordinateur sur lequel le client est exécuté. Cette colonne de données est remplie si le nom de l'hôte est fourni par le client. Pour déterminer le nom de l'hôte, utilisez la fonction HOST_NAME.|8|Oui|  
 |IsSystem|`int`|Indique si l'événement s'est produit sur un processus système ou sur un processus utilisateur. 1 = système, 0 = utilisateur.|60|Oui|  
@@ -49,7 +48,7 @@ ms.locfileid: "48075151"
 |Reads|`bigint`|Nombre d'E/S de lecture des pages générées par le traitement du traitement.|16|Oui|  
 |RequestID|`int`|ID de la demande contenant l'instruction.|49|Oui|  
 |RowCounts|`bigint`|Nombre de lignes affectées par un événement.|48|Oui|  
-|ServerName|`nvarchar`|Nom de l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracée.|26|non|  
+|ServerName|`nvarchar`|Nom de l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracée.|26|Non|  
 |SessionLoginName|`nvarchar`|Nom de connexion de l'utilisateur à l'origine de la session. Par exemple, si vous vous connectez à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en utilisant le nom Connexion1 et que vous exécutez une instruction en tant que Connexion2, SessionLoginName affiche Connexion1 et LoginName, Connexion2. Cette colonne affiche à la fois les connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et Windows.|64|Oui|  
 |SPID|`int`|ID de la session au cours de laquelle l'événement s'est produit.|12|Oui|  
 |StartTime|`datetime`|Heure à laquelle a débuté l'événement, si elle est connue.|14|Oui|  

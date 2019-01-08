@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: eb29b28c-3159-41ec-b3d7-fce5b2f2be55
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6843e2f2d818789a791ba12c78e5aa42a086a15d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 847de27624db305e8fc47c81de69a8e77dbf84cb
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224779"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52754761"
 ---
 # <a name="xml-source-custom-properties"></a>Propriétés personnalisées des sources XML
   La source XML comporte des propriétés personnalisées et les propriétés communes à l'ensemble des composants de flux de données.  

@@ -14,12 +14,12 @@ ms.assetid: 85962ad6-d840-4bc6-905e-c667c3276944
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 50dd31c343150362f1124d9476c526216c675fda
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f9ca50a030fef65c9de02bc93dcd970df2686b0a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196989"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52420390"
 ---
 # <a name="connect-to-a-data-mining-server"></a>Connexion à un serveur d'exploration de données
   ![Bouton connexions](media/misc-connection.gif "bouton connexions")  
@@ -68,7 +68,7 @@ ms.locfileid: "48196989"
   
  **J’ai perdu ma connexion ; perdu tout votre travail ?**  
   
- Si vous fermez la connexion au serveur, les résultats et les données ne sont pas perdus, car ils sont stockés dans Excel. Toutefois, si vous avez créé des modèles temporaires, ces modèles sont supprimés du serveur après un court laps de temps. Ainsi, si vous perdez la connexion de façon temporaire, il est possible que les modèles ne soient pas supprimés.  
+ Si vous fermez la connexion au serveur, les résultats et les données ne sont pas perdus, car ils sont stockés dans Excel. Toutefois, si vous avez créé des modèles temporaires, ces modèles sont supprimés du serveur après un court laps de temps. Par conséquent, si vous perdez temporairement la connexion, un certain temps les modèles ne soient pas supprimés.  
   
  Les données ou les résultats qui ont été générés ne seront pas perdus, car tous les rapports et tables sont enregistrés dans Excel.  
   
@@ -108,7 +108,7 @@ ms.locfileid: "48196989"
   
 2.  Consultez le journal des activités de connexion, puis recherchez le modèle en examinant les colonnes et les sorties prévisibles (par exemple).  
   
-     Utilisateurs expérimentés : Si vous êtes familiarisé avec DMX ou XMLA, copiez les instructions dans un fichier en vue d'une utilisation ultérieure.  
+     Utilisateurs expérimentés : Si vous êtes familiarisé avec DMX ou XMLA, vous pouvez copier les instructions dans un fichier pour une utilisation ultérieure.  
   
 3.  Lorsque vous avez trouvé le nom du modèle temporaire et de structure, ouvrez **gérer le modèle** et sélectionnez le modèle.  
   

@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 8b70cb96a7ed5f0b7df229a0d5de59e14a4e6f77
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 33618c019e59c044e681c45130130adc79d53122
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38983691"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52414836"
 ---
 # <a name="data-types-supported-in-tabular-models"></a>Types de données pris en charge dans les modèles tabulaires
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -37,17 +37,17 @@ Lorsque vous importez des données ou utilisez une valeur dans une formule, mêm
 |Texte|String|Chaîne de données caractères au format Unicode. Peut être des chaînes, nombres ou dates représentés dans un format de texte.|  
 |Date|Date/heure|Dates et heures dans une représentation date-heure acceptée.<br /><br /> Les dates valides sont toutes les dates après le 1er mars 1900.|  
 |Monétaire (Currency)|Monétaire (Currency)|Le type de données devise autorise des valeurs entre -922 337 203 685 477,5808 et 922 337 203 685 477,5807 avec quatre chiffres décimaux à précision fixe.|  
-|Néant|Vide|Le type de données Vide (Blank) de DAX représente et remplace les valeurs Null SQL. Vous pouvez créer une valeur vide à l'aide de la fonction BLANK et tester les valeurs vides à l'aide de la fonction logique ISBLANK.|  
+|N/A|Vide|Le type de données Vide (Blank) de DAX représente et remplace les valeurs Null SQL. Vous pouvez créer une valeur vide à l'aide de la fonction BLANK et tester les valeurs vides à l'aide de la fonction logique ISBLANK.|  
   
  \* Si vous tentez d’importer des données qui a de grandes valeurs numériques, l’importation peut échouer avec l’erreur suivante :  
   
- Erreur de base de données en mémoire : le '\<nom de colonne >' colonne de la «\<nom de la table >' table contient une valeur, ' 1.7976931348623157E + 308', qui n’est pas pris en charge. L’opération a été annulée.  
+ Erreur de base de données en mémoire : Le '\<nom de colonne >' colonne de la «\<nom de la table >' table contient une valeur, ' 1.7976931348623157E + 308', qui n’est pas pris en charge. L’opération a été annulée.  
   
  Cette erreur se produit parce que le générateur de modèles utilise cette valeur pour représenter des valeurs Null. Les valeurs de la liste suivante sont des synonymes de la valeur NULL indiquée précédemment :  
   
 ||  
 |-|  
-|Valeur|  
+|Value|  
 |9223372036854775807|  
 |-9223372036854775808|  
 |1.7976931348623158e+308|  
@@ -67,7 +67,7 @@ Lorsque vous importez des données ou utilisez une valeur dans une formule, mêm
   
  Si les données dans la colonne que vous spécifiez en tant qu’argument sont incompatibles avec le type de données requis par la fonction, dans nombreux cas, DAX retourne une erreur. Toutefois, dans la mesure du possible DAX tente implicitement convertir les données pour le type de données requis. Exemple :  
   
--   Vous pouvez taper un nombre, par exemple « 123 », comme une chaîne. DAX analyse la chaîne et tentera de le spécifier en tant que type de données number.  
+-   Vous pouvez taper un nombre, par exemple « 123 », sous forme de chaîne. DAX analyse la chaîne et tentera de le spécifier en tant que type de données number.  
   
 -   Vous pouvez ajouter TRUE + 1 et obtenir le résultat 2, parce que TRUE est converti implicitement en nombre 1 et que l'opération 1+1 est effectuée.  
   
@@ -155,7 +155,7 @@ Seul un jeu limité de combinaisons de type de données mixte pour les opératio
 |TRUE OR BLANK|TRUE|TRUE|  
 |TRUE AND BLANK|FALSE|TRUE|  
 |BLANK OR BLANK|Vide|Error|  
-|BLANK AND BLANK|BLANK|Error|  
+|BLANK AND BLANK|Vide|Error|  
   
  Pour plus d’informations sur la façon dont une fonction ou un opérateur spécifique gèrent les valeurs vides, voir les rubriques relatives à la fonction DAX concernée dans la section [Référence des fonctions DAX](http://msdn.microsoft.com/4dbb28a1-dd1a-4fca-bcd5-e90f74864a7b).  
   

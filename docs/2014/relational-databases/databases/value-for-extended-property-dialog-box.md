@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.common.value.f1
@@ -16,12 +15,12 @@ ms.assetid: cf0ba215-cf83-48e0-bd98-a8ddc8810eab
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 923c6e9b1a5fec47433cbfcaddef236c9761c6a0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7ac8dd7682ecfe8df3b317bba578bca8358b9b11
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057449"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52783559"
 ---
 # <a name="value-for-extended-property-dialog-box"></a>Valeur de la propriété étendue (boîte de dialogue)
   Utilisez la boîte de dialogue **Valeur de**  *\<nom de propriété* pour entrer ou afficher une valeur. Il s'agit d'une boîte de dialogue commune qui peut être ouverte à partir de plusieurs emplacements.  

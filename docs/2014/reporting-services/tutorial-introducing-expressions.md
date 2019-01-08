@@ -1,5 +1,5 @@
 ---
-title: 'Didacticiel : introduction aux expressions | Microsoft Docs'
+title: 'Didacticiel : Introduction aux Expressions | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 73bcce5c157ad412fabb677302eeddbd40a8b54e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 096a0678ccb86c232d4eaca792aa143379710fea
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075849"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52399333"
 ---
-# <a name="tutorial-introducing-expressions"></a>Didacticiel : introduction aux expressions
+# <a name="tutorial-introducing-expressions"></a>Didacticiel : Introduction aux Expressions
   Les expressions vous permettent de créer des rapports puissants et flexibles. Ce didacticiel vous apprend à créer et implémenter des expressions qui utilisent des fonctions et des opérateurs communs. Vous utiliserez le **Expression** boîte de dialogue pour écrire des expressions qui concatènent des valeurs de nom, recherchent des valeurs dans un dataset distinct, afficher des images différentes en fonction des valeurs de champ et ainsi de suite.  
   
  Le rapport est un rapport en barres avec des lignes en couleur alternées de lignes blanches. Le rapport inclut un paramètre de sélection de couleur pour les lignes non blanches.  
@@ -54,9 +54,9 @@ ms.locfileid: "48075849"
   
 -   [Enregistrer le rapport](#Save)  
   
- Durée estimée pour effectuer ce didacticiel : 30 minutes.  
+ Durée estimée pour effectuer ce didacticiel : 30 minutes  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  Pour plus d’informations sur les spécifications, consultez [Éléments requis pour les didacticiels &#40;Générateur de rapports&#41;](../reporting-services/report-builder-tutorials.md).  
   
 ##  <a name="Setup"></a> 1. Créer un rapport de tableau et un dataset à partir de l'Assistant Tableau ou matrice  
@@ -66,7 +66,7 @@ ms.locfileid: "48075849"
 >  Dans ce didacticiel, la requête contient les valeurs de données, afin qu'il ne soit pas nécessaire de disposer d'une source de données externe. Cela rend la requête assez longue. Dans un environnement métier, une requête ne contient pas les données. Ceci est nécessaire à des fins de formation uniquement.  
   
 > [!NOTE]  
->  Dans ce didacticiel, les étapes de l'Assistant sont consolidées en une seule procédure. Pour obtenir des instructions pas à pas sur l’accès à un serveur de rapports, le choix d’une source de données et la création d’un dataset, consultez le premier didacticiel de cette série : [Didacticiel : création d’un rapport de tableau de base &#40;Générateur de rapports&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+>  Dans ce didacticiel, les étapes de l'Assistant sont consolidées en une seule procédure. Pour obtenir des instructions détaillées sur l’accès à un serveur de rapports, choisissez une source de données et créer un jeu de données, consultez le premier didacticiel de cette série : [Didacticiel : Création d’un rapport de tableau de base &#40;Générateur de rapports&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 #### <a name="to-create-a-new-table-report"></a>Pour créer un nouveau rapport de tableau  
   
@@ -86,11 +86,11 @@ ms.locfileid: "48075849"
   
 4.  Dans la page **Choisir un dataset** , cliquez sur **Créer un dataset**.  
   
-5.  Cliquez sur **Suivant**.  
+5.  Cliquer sur **Suivant**.  
   
 6.  Dans la page **Choisir une connexion à une source de données**, sélectionnez une source de données de type **SQL Server**. Sélectionnez une source de données dans la liste ou naviguez jusqu'au serveur de rapports pour en sélectionner une.  
   
-7.  Cliquez sur **Suivant**.  
+7.  Cliquer sur **Suivant**.  
   
 8.  Dans la page **Créer une requête** , cliquez sur **Modifier en tant que texte**.  
   
@@ -124,9 +124,9 @@ ms.locfileid: "48075849"
   
      La requête spécifie les noms de colonne, notamment la date de naissance, le prénom, le nom, l'État ou la province, l'identifiant de pays/région, le sexe et les achats de l'année en cours jusqu'à ce jour.  
   
-10. Dans la barre d’outils du Concepteur de requêtes, cliquez sur **Exécuter** (**!**). Le jeu de résultats affiche 20 lignes de données et comprend les colonnes suivantes : FirstName, LastName, StateProvince, CountryRegionID, Gender, YTDPurcharse et LastPurchase.  
+10. Dans la barre d’outils du Concepteur de requêtes, cliquez sur **Exécuter** (**!**). Le jeu de résultats affiche 20 lignes de données et inclut les colonnes suivantes : FirstName, LastName, StateProvince, CountryRegionID, Gender, Ytdpurcharse et LastPurchase.  
   
-11. Cliquez sur **Suivant**.  
+11. Cliquer sur **Suivant**.  
   
 12. Dans la page **Organiser les champs** , faites glisser les champs suivants, dans l’ordre spécifié, de la liste **Champs disponibles** vers la liste **Valeurs** .  
   
@@ -151,7 +151,7 @@ ms.locfileid: "48075849"
   
      L'agrégat Sum n'est plus appliqué à YTDPurchase.  
   
-15. Cliquez sur **Suivant**.  
+15. Cliquer sur **Suivant**.  
   
 16. Dans la page **Choisir la disposition**, cliquez sur **Suivant**.  
   
@@ -343,7 +343,7 @@ ms.locfileid: "48075849"
   
 #### <a name="to-look-up-values-in-the-countryregion-dataset"></a>Pour rechercher des valeurs dans le dataset CountryRegion  
   
-1.  Cliquez sur le titre de la colonne **Country Region ID** et supprimez le texte : ID.  
+1.  Cliquez sur le **Country Region ID** titre de colonne et supprimez le texte : ID.  
   
 2.  Cliquez avec le bouton droit sur la cellule de données pour la colonne **Country Region** et cliquez sur **Expression**.  
   
@@ -372,7 +372,7 @@ ms.locfileid: "48075849"
 11. Cliquez sur **Exécuter** pour afficher un aperçu du rapport.  
   
 ##  <a name="Count"></a> 6. Compter les jours depuis le dernier achat  
- Ajoutez une colonne puis utilisez la fonction **Now** ou la variable globale intégrée `ExecutionTime` pour calculer le nombre de jours écoulés depuis les derniers achats d’une personne.  
+ Ajouter une colonne, puis utiliser le **maintenant** (fonction) ou le `ExecutionTime` variable globale intégrée pour calculer le nombre de jours écoulés depuis une personne dernière achats.  
   
 #### <a name="to-add-the-days-ago-column"></a>Pour ajouter la colonne Days Ago  
   
@@ -418,9 +418,9 @@ ms.locfileid: "48075849"
 17. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ##  <a name="Indicator"></a> 7. Utiliser un indicateur pour afficher la comparaison des ventes  
- Ajoutez une nouvelle colonne et utiliser un indicateur pour afficher si les achats de l'année en cours à ce jour (YTD) d'une personne sont au-dessus ou en-dessous de la moyenne des achats YTD. La fonction **Round** supprime les décimales des valeurs.  
+ Ajouter une nouvelle colonne et utiliser un indicateur pour indiquer si les achats year-to-date (YTD) d’une personne sont au-dessus ou au-dessous de la moyenne des qu'achats YTD. La fonction **Round** supprime les décimales des valeurs.  
   
- La configuration de l'indicateur et de ses états nécessite plusieurs étapes. Si vous le souhaitez, vous pouvez avancer dans la procédure « Pour configurer l’indicateur » et copier/coller les expressions complétées à partir de ce didacticiel dans la boîte de dialogue **Expression**.  
+ La configuration de l'indicateur et de ses états nécessite plusieurs étapes. Si vous le souhaitez dans la procédure « pour configurer l’indicateur », vous pouvez passer directement et copier/coller les expressions complétées à partir de ce didacticiel dans le **Expression** boîte de dialogue.  
   
 #### <a name="to-add-the--or---avg-sales-column"></a>Pour ajouter la colonne + or - AVG Sales  
   
@@ -522,7 +522,7 @@ ms.locfileid: "48075849"
   
 38. Cliquez sur **Exécuter** pour afficher un aperçu du rapport.  
   
-##  <a name="GreenBar"></a> 8. Transformer le rapport en rapport « bicolore »  
+##  <a name="GreenBar"></a> 8. Rendre le rapport « Bicolore » de rapports  
  Utilisez un paramètre pour spécifier la couleur à appliquer aux lignes alternées dans le rapport, pour en faire un rapport en barres.  
   
 #### <a name="to-add-a-parameter"></a>Pour ajouter un paramètre  
@@ -543,9 +543,9 @@ ms.locfileid: "48075849"
   
 7.  Cliquez sur **Ajouter**.  
   
-8.  Dans la zone **Étiquette**, tapez **Yellow**.  
+8.  Dans le **étiquette** , tapez : **Jaune**  
   
-9. Dans la zone **Valeur**, tapez **Yellow**.  
+9. Dans la zone **Valeur** , tapez **Yellow**.  
   
 10. Cliquez sur **Ajouter**.  
   
@@ -601,7 +601,7 @@ ms.locfileid: "48075849"
   
 15. Si le curseur ne se trouve pas déjà immédiatement après `Count(`, placez-le à cet endroit.  
   
-16. Supprimez la parenthèse de gauche puis tapez **,“Expressions”)**  
+16. Supprimez la parenthèse de gauche et tapez **, « Expressions »)**  
   
     > [!NOTE]  
     >  Expressions est le nom du dataset dans lequel sont comptées les lignes de données.  
@@ -621,7 +621,7 @@ ms.locfileid: "48075849"
   
 22. Si le curseur ne se trouve pas déjà immédiatement après `Parameters!RowColor.Value`, placez-le à cet endroit.  
   
-23. Tapez **, “White”)**  
+23. Tapez **, « White »)**  
   
      Expression complétée : `=IIf(RunningValue(Fields!FirstName.Value,Count, "Expressions") Mod 2 =0, Parameters!RowColor.Value, "White")`  
   
@@ -708,7 +708,7 @@ ms.locfileid: "48075849"
  [Expressions &#40;Générateur de rapports et SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md)   
  [Exemples d’expressions &#40;Générateur de rapports et SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md)   
  [Indicateurs &#40;Générateur de rapports et SSRS&#41;](report-design/indicators-report-builder-and-ssrs.md)   
- [Images, zones de texte, Rectangles et lignes &#40;Générateur de rapports et SSRS&#41;](report-design/rectangles-and-lines-report-builder-and-ssrs.md)   
+ [Images, zones de texte, rectangles et lignes &#40;Générateur de rapports et SSRS&#41;](report-design/rectangles-and-lines-report-builder-and-ssrs.md)   
  [Tables &#40;Générateur de rapports et SSRS&#41;](report-design/tables-report-builder-and-ssrs.md)   
  [Ajouter des données à un rapport &#40;Générateur de rapports et SSRS&#41;](report-data/report-datasets-ssrs.md)  
   

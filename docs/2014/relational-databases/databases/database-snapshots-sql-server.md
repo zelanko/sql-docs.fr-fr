@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - static database views
@@ -19,12 +18,12 @@ ms.assetid: 00179314-f23e-47cb-a35c-da6f180f86d3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 475a631c3155d116ef0530992503d3f7fd7cbfc2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d15db702cb196842a5ddba25dbc3fa9cc18df5f9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213919"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52774401"
 ---
 # <a name="database-snapshots-sql-server"></a>Instantanés de base de données (SQL Server)
   Une capture instantanée de base de données est une vue statique en lecture seule d’une base de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (la *base de données source*). Au moment de sa création, l'instantané de base de données est cohérent au niveau transactionnel avec la base de données source. Un instantané de base de données réside toujours sur la même instance de serveur que sa base de données source. Lorsque la base de données source est mise à jour, l'instantané de base de données est mis à jour. Par conséquent, plus l'existence d'un instantané de base de données est longue, plus la probabilité qu'il épuise son espace disque disponible est élevée.  
@@ -178,7 +177,7 @@ ms.locfileid: "48213919"
   
 -   Un instantané hérite des contraintes de sécurité de sa base de données source au moment de la création de l'instantané. Compte tenu que les instantanés sont en lecture seule, les autorisations héritées ne peuvent pas être modifiées, et les modifications d'autorisations apportées à la source ne seront pas répercutées dans les instantanés existants.  
   
--   Un instantané reflète toujours l'état de groupes de fichiers au moment de la création de l'instantané : les groupes de fichiers en ligne demeurent en ligne et les groupes de fichiers hors connexion demeurent hors connexion. Pour plus d'informations, consultez « Instantanés de base de données avec des groupes de fichiers hors ligne », plus loin dans cette rubrique.  
+-   Un instantané reflète toujours l'état de groupes de fichiers au moment de la création de l'instantané : les groupes de fichiers en ligne demeurent en ligne et les groupes de fichiers hors connexion demeurent hors connexion. Pour plus d'informations, consultez « Instantanés de base de données avec des groupes de fichiers hors ligne », plus loin dans cette rubrique.  
   
 -   Si une base de données source se voit affecter l'état RECOVERY_PENDING, ses instantanés peuvent devenir inaccessibles. Toutefois, lorsque le problème affectant la base de données source a été résolu, ses instantanés sont à nouveau accessibles.  
   

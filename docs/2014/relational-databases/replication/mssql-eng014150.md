@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - MSSQL_ENG014150 error
@@ -13,12 +12,12 @@ ms.assetid: c3dd3109-abf3-4b38-a4e9-ef48d0235656
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 032651d75eb4210005765f82adbb4d504ee2a316
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 15f4c7759404c0c904f17819f0a8eb750588777e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136819"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52758911"
 ---
 # <a name="mssqleng014150"></a>MSSQL_ENG014150
     
@@ -31,7 +30,7 @@ ms.locfileid: "48136819"
 |Source de l'événement|MSSQLSERVER|  
 |Composant|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
 |Nom symbolique||  
-|Texte du message|Réplication-%s : réussite de l'agent %s. %s|  
+|Texte du message|Réplication-%s : réussite de l'agent %s. %s|  
   
 ## <a name="explanation"></a>Explication  
  Ce message indique qu'un agent de réplication s'est correctement exécuté. La réplication utilise les agents suivants :  
@@ -58,6 +57,6 @@ ms.locfileid: "48136819"
  [Agent de lecture du journal de réplication](agents/replication-log-reader-agent.md)   
  [Agent de fusion de réplication](agents/replication-merge-agent.md)   
  [Agent de lecture de la file d’attente de réplication](agents/replication-queue-reader-agent.md)   
- [Replication Snapshot Agent](agents/replication-snapshot-agent.md)  
+ [Agent d'instantané de réplication](agents/replication-snapshot-agent.md)  
   
   

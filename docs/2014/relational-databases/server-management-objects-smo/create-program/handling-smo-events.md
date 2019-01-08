@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 helpviewer_keywords:
 - events [SMO]
@@ -17,12 +15,12 @@ ms.assetid: b4f120dd-ba78-46ff-99c5-e47effac8544
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c361fdec050240ae004b553f1b31a5abef094957
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d0d309103880a369a88952e19b252fc15693fdd4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098229"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52807471"
 ---
 # <a name="handling-smo-events"></a>Gestion des événements SMO
   Il existe des types d'événement de serveur auxquels il est possible de s'abonner en utilisant un gestionnaire d'événements et l'objet <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  

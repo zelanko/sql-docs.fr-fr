@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [SQL Server replication], synchronizing
@@ -16,12 +15,12 @@ ms.assetid: 97f2535b-ec19-4973-823d-bcf3d5aa0216
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9b4ee585d23cceaf15acc6c904ce783f21e9f08d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9bfbb62c58efea29df26cb9fc6e632bc4e2b3642
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087529"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52788675"
 ---
 # <a name="specify-synchronization-schedules"></a>Spécifier des planifications de synchronisation
   Cette rubrique explique comment spécifier des planifications de synchronisation dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], de [!INCLUDE[tsql](../../includes/tsql-md.md)]ou d'objets RMO (Replication Management Objects). Lorsque vous créez un abonnement, vous pouvez définir une planification de synchronisation qui contrôle à quel moment l'agent de réplication de l'abonnement s'exécute. Si aucun paramètre de planification n'est spécifié, l'abonnement utilise la planification par défaut.  
@@ -327,7 +326,7 @@ ms.locfileid: "48087529"
   
 ## <a name="see-also"></a>Voir aussi  
  [Replication Security Best Practices](security/replication-security-best-practices.md)   
- [Subscribe to Publications](subscribe-to-publications.md)   
+ [S’abonner aux Publications](subscribe-to-publications.md)   
  [Synchroniser un abonnement par émission de données](synchronize-a-push-subscription.md)   
  [Synchroniser un abonnement par extraction](synchronize-a-pull-subscription.md)   
  [Synchroniser les données](synchronize-data.md)  

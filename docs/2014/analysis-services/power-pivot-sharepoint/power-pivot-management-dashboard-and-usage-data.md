@@ -11,12 +11,12 @@ ms.assetid: 541c8b1f-c6c2-423d-a97d-65c379967e0c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 825bc3d35a0080933c73853a05bf1a6dd9ed3df8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f9a2172bdefebdbfd327d8d253e32cd63c254d8e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069711"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52419871"
 ---
 # <a name="powerpivot-management-dashboard-and-usage-data"></a>Tableau de bord de gestion PowerPivot et données d'utilisation
   Le tableau de bord de gestion PowerPivot est une collection de rapports et de composants WebPart prédéfinis dans l'Administration centrale de SharePoint, qui vous aident à administrer un déploiement de SQL Server PowerPivot pour SharePoint. Le tableau de bord de gestion fournit des informations sur l'intégrité du serveur, l'activité du classeur et l'actualisation des données. Le tableau de bord utilise les données issues de la collecte des données d'utilisation de SharePoint.  
@@ -45,7 +45,7 @@ ms.locfileid: "48069711"
 |Actions|Contient des liens vers d'autres pages de l'Administration centrale, notamment l'application de service actuelle, une liste des applications de service et la journalisation de l'utilisation.|  
 |Activité du classeur - Graphique|Crée des rapports sur la fréquence des accès aux données. Vous pouvez connaître le nombre de connexions aux sources des données PowerPivot établies chaque jour ou chaque semaine.|  
 |Activité du classeur - Liste|Crée des rapports sur la fréquence des accès aux données. Vous pouvez connaître le nombre de connexions aux sources des données PowerPivot établies chaque jour ou chaque semaine.|  
-|Actualisation des données - Activité récente|Crée des rapports sur l'état des travaux d'actualisation des données, y compris ceux dont l'exécution a échoué. Ce rapport fournit un affichage composite des opérations d'actualisation des données au niveau de l'application. Les administrateurs peuvent d'un coup d'œil voir le nombre de travaux d'actualisation des données définis pour l'application de service PowerPivot dans son intégralité.|  
+|Actualisation des données - Activité récente|Crée des rapports sur l'état des travaux d'actualisation des données, y compris ceux dont l'exécution a échoué. Ce rapport fournit un affichage composite des opérations d'actualisation des données au niveau de l'application. Les administrateurs peuvent d'un coup d'œil voir le nombre de travaux d'actualisation des données définis pour l'application de service PowerPivot dans son intégralité.|  
 |Actualisation des données - Défaillances récentes|Répertorie les classeurs PowerPivot pour lesquels l'actualisation des données n'a pas abouti.|  
 |Rapports|Contient des liens vers des rapports que vous pouvez ouvrir dans Excel.|  
   
@@ -82,7 +82,7 @@ ms.locfileid: "48069711"
   
 -   [Configurer la collecte de données d’utilisation pour &#40;PowerPivot pour SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)  
   
- Pour capturer des données sur le système du serveur PowerPivot, vérifiez que la messagerie d'événements, l'historique d'actualisation des données et les autres historiques d'utilisation sont activés pour chaque application de service PowerPivot. Les données sur le serveur et l'utilisation collectées lors du fonctionnement normal du serveur constituent la source de données utilisée dans le modèle de données interne. **Remarque :** si vous désactivez les historiques d'événements ou d'utilisation, les rapports composites seront incomplets ou erronés.  
+ Pour capturer des données sur le système du serveur PowerPivot, vérifiez que la messagerie d'événements, l'historique d'actualisation des données et les autres historiques d'utilisation sont activés pour chaque application de service PowerPivot. Les données sur le serveur et l'utilisation collectées lors du fonctionnement normal du serveur constituent la source de données utilisée dans le modèle de données interne. **Remarque :** Si vous désactivez les historiques d'événements ou d'utilisation, les rapports composites seront incomplets ou erronés.  
   
 ##  <a name="edit"></a> Modifier le tableau de bord PowerPivot  
  Si vous avez des compétences en matière de développement ou de personnalisation de tableaux de bord, vous pouvez modifier le tableau de bord pour y inclure de nouveaux composants WebPart. Vous avez également la possibilité de modifier les propriétés des composants WebPart inclus dans le tableau de bord.  
@@ -93,7 +93,7 @@ ms.locfileid: "48069711"
  Pour vous aider à prendre en main la génération de rapports personnalisés, le tableau de bord de gestion PowerPivot propose un fichier Office Data Connection (.odc) pour la connexion au classeur source. Par exemple, vous pouvez utiliser le fichier .odc dans Excel pour créer des rapports supplémentaires.  
   
 > [!NOTE]  
->  Modifiez le fichier pour éviter l'erreur suivante lors de la tentative d'utilisation du fichier .odc dans Excel : « Échec de l'initialisation de la source de données ». Le fichier .odc généré automatiquement inclut un paramètre qui n'est pas pris en charge par le fournisseur OLE DB MSOLAP. Les instructions suivantes fournissent la solution de contournement permettant de supprimer ces paramètres.  
+>  Modifiez le fichier pour éviter l'erreur suivante lors de la tentative d'utilisation du fichier .odc dans Excel : « Échec de l'initialisation de la source de données ». Le fichier .odc généré automatiquement inclut un paramètre qui n'est pas pris en charge par le fournisseur OLE DB MSOLAP. Les instructions suivantes fournissent la solution de contournement permettant de supprimer ces paramètres.  
   
  Vous devez être administrateur de batterie de serveurs ou de service pour générer des rapports basés sur le classeur PowerPivot dans l'Administration centrale.  
   
@@ -125,7 +125,7 @@ ms.locfileid: "48069711"
   
     7.  Entrez un nom pour la connexion, puis cliquez sur **Suivant**.  
   
-    8.  Dans Spécifier la requête MDX, cliquez sur **Conception** pour ouvrir le concepteur de requêtes MDX afin d'assembler les données avec lesquelles vous souhaitez travailler. **Si vous voyez le message d'erreur** « Le nom de propriété Mode Édition n'est pas correctement mis en forme », vérifiez que vous modifiez le fichier .ODC.  
+    8.  Dans spécifier la requête MDX, cliquez sur **conception** pour ouvrir le Concepteur de requêtes MDX pour assembler les données que vous souhaitez travailler avec **si vous voyez le message d’erreur** « le nom de la propriété Mode édition n’est pas formaté correctement. », vérifiez vous modifications le. Fichier ODC.  
   
     9. Cliquez sur **OK** , puis sur **Terminer**.  
   

@@ -19,12 +19,12 @@ ms.assetid: 9d1efde6-8fa4-42ac-80e5-37456ffebd0b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 145bfe599fa0117b689a002d47807eca217ba7bc
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 39fc70d04635008cf00a9c8e02ef0bae97af1cbf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51669088"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540289"
 ---
 # <a name="spfilestreamforcegarbagecollection-transact-sql"></a>sp_filestream_force_garbage_collection (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ sp_filestream_force_garbage_collection
 ```  
   
 ## <a name="arguments"></a>Arguments  
- **@dbname** = *database_name ***'**  
+ **@dbname** = _database_name_**'**  
  Représente le nom de la base de données dans laquelle exécuter le garbage collector.  
   
 > [!NOTE]  
@@ -56,13 +56,13 @@ sp_filestream_force_garbage_collection
   
 |||  
 |-|-|  
-|Valeur|Description|  
+|Value|Description|  
 |0|Réussite de l'opération|  
 |1|Échec de l'opération|  
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |*file_name*|Indique le nom de conteneur FILESTREAM|  
 |*num_collected_items*|Indique le nombre d'éléments FILESTREAM (fichiers/répertoires) qui ont été récupérés par le garbage collector (supprimés) dans ce conteneur.|  
@@ -83,7 +83,7 @@ En raison d’opérations de la phase 2, la procédure stockée doit être exéc
 Garbage Collection (GC) s’appuie sur la troncation du journal. Si les fichiers ont été récemment supprimés sur une base de données à l’aide du mode de récupération complète, elles ne sont donc GC-ed uniquement après une sauvegarde de journal de ces parties de journaux de transaction est effectuée et la partie du journal est marqué comme inactive. Sur une base de données à l’aide du mode de récupération Simple, une troncation de journal se produit après un `CHECKPOINT` a été émis par rapport à la base de données.  
 
 
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle de base de données db_owner.  
   
 ## <a name="examples"></a>Exemples  
@@ -97,7 +97,7 @@ GO
 EXEC sp_filestream_force_garbage_collection @dbname = N'FSDB';  
 ```  
   
-### <a name="b-specifying-a-container"></a>B. Spécification d'un conteneur  
+### <a name="b-specifying-a-container"></a>b. Spécification d'un conteneur  
   
 ```sql  
 USE FSDB;  

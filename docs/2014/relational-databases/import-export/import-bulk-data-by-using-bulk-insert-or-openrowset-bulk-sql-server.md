@@ -21,18 +21,18 @@ ms.assetid: 18a64236-0285-46ea-8929-6ee9bcc020b9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 528f05021626fe22543f8ddcd3ed06215d618b42
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1dec3a2821e2b92d431680b49e37a7b9819887b2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177476"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505551"
 ---
 # <a name="import-bulk-data-by-using-bulk-insert-or-openrowsetbulk-sql-server"></a>Importer des données en bloc à l’aide de BULK INSERT ou OPENROWSET(BULK...) (SQL Server)
-  Cette rubrique fournit une vue d'ensemble de l'utilisation de l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] BULK INSERT et de l'instruction INSERT...SELECT * FROM OPENROWSET(BULK...) destinées à l'importation en bloc de données à partir d'un fichier de données dans une table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cette rubrique décrit aussi des règles de sécurité relatives à l'utilisation de BULK INSERT et OPENROWSET(BULK…), et l'utilisation de ces méthodes pour l'importation en bloc à partir d'une source de données distante.  
+  Cette rubrique fournit une vue d'ensemble de l'utilisation de l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] BULK INSERT et de l'instruction INSERT...SELECT * FROM OPENROWSET(BULK...) destinées à l'importation en bloc de données à partir d'un fichier de données dans une table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cette rubrique décrit aussi des règles de sécurité relatives à l’utilisation de BULK INSERT et OPENROWSET(BULK...), et l’utilisation de ces méthodes pour l’importation en bloc à partir d’une source de données distante.  
   
 > [!NOTE]  
->  Lorsque vous utilisez BULK INSERT ou OPENROWSET(BULK…), il est important de comprendre la manière dont la version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gère l'emprunt d'identité. Pour plus d'informations, consultez « Considérations sur la sécurité» plus loin dans cette rubrique.  
+>  Quand vous utilisez BULK INSERT ou OPENROWSET(BULK...), il est important de comprendre la manière dont la version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gère l’emprunt d’identité. Pour plus d'informations, consultez « Considérations sur la sécurité» plus loin dans cette rubrique.  
   
 ## <a name="bulk-insert-statement"></a>Instruction BULK INSERT  
  BULK INSERT charge les données d'un fichier de données dans une table. Cette fonctionnalité est similaire à celle fournie par l’option **in** de la commande **bcp** , mais le fichier de données est lu par le processus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour obtenir une description de la syntaxe BULK INSERT, consultez [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql).  
@@ -64,10 +64,10 @@ ms.locfileid: "48177476"
   
 -   [Utiliser un fichier de format pour mapper les colonnes d’une table sur les champs d’un fichier de données &#40;SQL Server&#41;](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
-## <a name="openrowsetbulk-function"></a>Fonction OPENROWSET(BULK…)  
- Le fournisseur d'ensembles de lignes en bloc OPENROWSET est accessible en appelant la fonction OPENROWSET et en spécifiant l'option BULK. La fonction OPENROWSET(BULK…) vous permet d'accéder aux données distantes en vous connectant à une source de données distante (un fichier de données) par l'intermédiaire d'un fournisseur OLE DB.  
+## <a name="openrowsetbulk-function"></a>OPENROWSET(BULK...) Fonction  
+ Le fournisseur d'ensembles de lignes en bloc OPENROWSET est accessible en appelant la fonction OPENROWSET et en spécifiant l'option BULK. La fonction OPENROWSET(BULK...) vous permet d’accéder aux données distantes en vous connectant à une source de données distante (un fichier de données) par l’intermédiaire d’un fournisseur OLE DB.  
   
- Pour importer en bloc des données, appelez OPENROWSET(BULK…) à partir d'une clause SELECT…FROM dans une instruction INSERT. La syntaxe de base pour l'importation en bloc de données est la suivante :  
+ Pour importer en bloc des données, appelez OPENROWSET(BULK...) à partir d’une clause SELECT...FROM dans une instruction INSERT. La syntaxe de base pour l'importation en bloc de données est la suivante :  
   
  INSERT ... SELECT * FROM OPENROWSET(BULK...)  
   

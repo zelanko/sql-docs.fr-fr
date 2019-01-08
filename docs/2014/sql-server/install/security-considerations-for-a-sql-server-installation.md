@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords:
 - firewall systems [SQL Server]
@@ -27,12 +26,12 @@ ms.assetid: cf96155f-30a8-48b7-8d6b-24ce90dafdc7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c486dfe6e1d41d18274bb5825c3ed63dc4598a0b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: eec38b5ecc524f0d3decd02c0832efd1909e8f00
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093589"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52762911"
 ---
 # <a name="security-considerations-for-a-sql-server-installation"></a>Considérations sur la sécurité pour une installation SQL Server
   La sécurité est importante pour chaque produit et chaque activité. En respectant les recommandations les plus simples, vous pouvez éviter de nombreuses failles de sécurité. Cette rubrique traite des recommandations qu'il est conseillé de prendre en considération en matière de sécurité avant d'installer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et après l'avoir installé [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Des conseils en matière de sécurité concernant des fonctionnalités spécifiques sont inclus dans les rubriques de référence de ces fonctionnalités.  
@@ -144,7 +143,7 @@ ms.locfileid: "48093589"
   
  **Mots de passe forts**  
   
--   Attribuez toujours un mot de passe fort pour le `sa` compte.  
+-   Affectez toujours un mot de passe fort au compte `sa`.  
   
 -   Toujours activez la vérification de la stratégie de mot de passe pour vérifier la robustesse et l'expiration du mot de passe.  
   

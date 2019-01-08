@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
 - Policy-Based Management, evaluate policy
@@ -12,12 +12,12 @@ ms.assetid: bea09522-ff47-4037-ab55-a98ea7c10099
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2a3f5d6d9e79e963063cdd3a2fa18973a445fe41
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f7652f9ebacf5e673738c4144878870eb156d944
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48191519"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52780941"
 ---
 # <a name="evaluate-a-policy-based-management-policy-on-a-schedule"></a>Évaluer une stratégie de gestion basée sur des stratégies sur une planification
   Cette rubrique explique comment évaluer une stratégie de gestion basée sur des stratégies sur une planification dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -53,7 +53,7 @@ ms.locfileid: "48191519"
   
 5.  Cliquez avec le bouton droit sur la stratégie dont vous voulez évaluer une planification, puis sélectionnez **Propriétés**.  
   
-6.  Dans la boîte de dialogue **Ouvrir une stratégie –***nom_stratégie*, dans la liste **Mode d’évaluation**, sélectionnez **Selon la planification**.  
+6.  Dans la boîte de dialogue **Ouvrir une stratégie -***nom_stratégie*, dans la liste **Mode d’évaluation**, sélectionnez **Selon la planification**.  
   
 7.  Sous **Planification**, cliquez sur **Choisir** pour spécifier une planification existante ou sur **Nouveau** pour créer une planification.  
   

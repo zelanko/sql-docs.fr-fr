@@ -1,7 +1,7 @@
 ---
 title: Sys.query_context_settings (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/22/2016
+ms.date: 11/29/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -21,15 +21,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: de36098ec2c2792e45724cdb023897b1482ac9cf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8ccf638687f5022554abd6b3cf8e57445858ae4a
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47638487"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52710650"
 ---
 # <a name="sysquerycontextsettings-transact-sql"></a>Sys.query_context_settings (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   Contient des informations sur la sémantique qui affecte les paramètres de contexte associés à une requête. Il existe un nombre de paramètres de contexte disponibles dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui influencent la sémantique de requête (en définissant le résultat correct de la requête). Le même texte de requête compilé avec différents paramètres peut produire des résultats différents (selon les données sous-jacentes).  
   
@@ -40,7 +40,7 @@ ms.locfileid: "47638487"
 |**ID_langue**|**smallint**|L’id de la langue. Pour plus d’informations, consultez [sys.syslanguages &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md).|  
 |**date_format**|**smallint**|Le format de date. Pour plus d’informations, consultez [SET DATEFORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/set-dateformat-transact-sql.md).|  
 |**date_first**|**tinyint**|La première valeur de date. Pour plus d’informations, consultez [SET DATEFIRST &#40;Transact-SQL&#41;](../../t-sql/statements/set-datefirst-transact-sql.md).|  
-|**status**|**varbinary(2)**|Champ de masque de bits qui indique le type de requête ou contexte dans lequel la requête a été exécutée. <br />Valeur de colonne peut être de combinaison de plusieurs indicateurs (exprimée au format hexadécimal) :<br /><br /> 0 x 0 – requêtes classiques (aucun des indicateurs spécifiques)<br /><br /> 0 x 1 - requête exécutée via une des procédures stockées d’API curseur<br /><br /> 0 x 2 : requête de notification<br /><br /> 0 x 4 – requête interne<br /><br /> 0 x 8 – automatique de la requête paramétrable sans paramétrage universels<br /><br /> 0 x 10 – extraction de curseur Actualiser la requête<br /><br /> 0 x 20 - requête qui est utilisé dans les demandes de mise à jour de curseur<br /><br /> 0 x 40 - jeu de résultats initial est retournée lorsqu’un curseur est ouvert (Fetch de curseur automatique)<br /><br /> 0 x 80 – requête chiffrée<br /><br /> 0 x 100 – requête dans le contexte du prédicat de sécurité de niveau ligne|  
+|**status**|**varbinary(2)**|Champ de masque de bits qui indique le type de requête ou contexte dans lequel la requête a été exécutée. <br />Valeur de colonne peut être de combinaison de plusieurs indicateurs (exprimée au format hexadécimal) :<br /><br /> 0 x 0 – requêtes classiques (aucun des indicateurs spécifiques)<br /><br /> 0 x 1 - requête exécutée via une des procédures stockées d’API curseur<br /><br /> 0 x 2 - requête de notification<br /><br /> 0 x 4 - requête interne<br /><br /> 0 x 8 - requête paramétrable automatique sans paramétrage universelle<br /><br /> 0 x 10 - extraction de curseur refresh query<br /><br /> 0 x 20 - requête qui est utilisé dans les demandes de mise à jour de curseur<br /><br /> 0 x 40 - jeu de résultats initial est retournée lorsqu’un curseur est ouvert (Fetch de curseur automatique)<br /><br /> 0 x 80 - requête chiffrée<br /><br /> 0 x 100 - requête dans le contexte du prédicat de sécurité de niveau ligne|  
 |**required_cursor_options**|**Int**|Options de curseur spécifiées par l'utilisateur (type de curseur par exemple).|  
 |**acceptable_cursor_options**|**Int**|Options de curseur dans lesquelles [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut convertir implicitement afin de prendre en charge l'exécution de l'instruction.|  
 |**merge_action_type**|**smallint**|Le type de plan d’exécution de déclencheur utilisé comme résultat d’une **fusion** instruction.<br /><br /> 0 indique un plan de non-déclencheur, un plan de déclencheur qui ne s’exécute pas en tant que le résultat d’une **fusion** instruction ou un plan de déclencheur qui s’exécute en tant que le résultat d’un **fusion** instruction qui spécifie uniquement une **Supprimer** action.<br /><br /> 1 indique un **insérer** plan de déclencheur qui s’exécute en tant que le résultat d’une **fusion** instruction.<br /><br /> 2 indique un **mise à jour** plan de déclencheur qui s’exécute en tant que le résultat d’une **fusion** instruction.<br /><br /> 3 indique un **supprimer** plan de déclencheur qui s’exécute en tant que le résultat d’une **fusion** instruction contenant un correspondant **insérer** ou **mise à jour** action.<br /><br /> <br /><br /> Pour les déclencheurs imbriqués exécutés par des actions en cascade, cette valeur est l’action de la **fusion** instruction qui a provoqué la cascade.|  
@@ -48,7 +48,7 @@ ms.locfileid: "47638487"
 |**is_replication_specific**|**bit**|Utilisé pour la réplication.|  
 |**is_contained**|**varbinary(1)**|1 indique une relation contenant-contenu de la base de données.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite le **VIEW DATABASE STATE** autorisation.  
   
 ## <a name="see-also"></a>Voir aussi  

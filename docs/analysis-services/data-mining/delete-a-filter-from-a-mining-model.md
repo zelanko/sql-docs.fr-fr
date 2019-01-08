@@ -1,5 +1,5 @@
 ---
-title: Supprimer un filtre d’un modèle d’exploration de données | Documents Microsoft
+title: Supprimer un filtre d’un modèle d’exploration de données | Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: fb3897d851c398b9703bf9514fc36cf30922727d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 66293cf1be2ced3106e2966a930639c12330a660
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014396"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545662"
 ---
 # <a name="delete-a-filter-from-a-mining-model"></a>Supprimer un filtre d'un modèle d'exploration de données
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "34014396"
   
 3.  Sélectionnez le modèle et cliquez avec le bouton droit pour ouvrir le menu contextuel.  
   
-     - ou -  
+     -ou-  
   
      Sélectionnez le modèle. Dans le menu **Modèle d'exploration de données** , sélectionnez **Définir le filtre de modèle**.  
   
@@ -57,8 +57,8 @@ ms.locfileid: "34014396"
 3.  Appuyez sur la touche Retour arrière ou Suppr.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Extraction des données de cas à partir d’un modèle d’exploration de données](../../analysis-services/data-mining/drill-through-to-case-data-from-a-mining-model.md)   
- [Tâches liées aux modèles d’exploration de données et procédures](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
- [Filtres pour les modèles d’exploration de données & #40 ; Analysis Services - Exploration de données & #41 ;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)  
+ [Extraire des données de cas à partir d'un modèle d'exploration de données](../../analysis-services/data-mining/drill-through-to-case-data-from-a-mining-model.md)   
+ [Tâches du modèle d'exploration de données et procédures](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
+ [Filtres pour les modèles d’exploration de données &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)  
   
   

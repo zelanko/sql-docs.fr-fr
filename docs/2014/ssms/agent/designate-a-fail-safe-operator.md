@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent jobs, operators
@@ -15,12 +15,12 @@ ms.assetid: 0f4eb513-5c0a-4523-974e-e85c1deeb57f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fbfc4b20c774becb45570c6ec00c1427a1a87be2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 54ec71df8efab1f60bfb7a5b9af448705e349d28
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210559"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52760751"
 ---
 # <a name="designate-a-fail-safe-operator"></a>Désigner un opérateur de prévention de défaillance
   Un opérateur de prévention de défaillance est un utilisateur qui reçoit l'alerte si l'opérateur désigné n'est pas joignable. Cette rubrique explique comment définir un opérateur de prévention de défaillance qui recevra les notifications d’alertes de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -59,14 +59,14 @@ ms.locfileid: "48210559"
 1.  Dans **l’Explorateur d’objets** , cliquez sur le signe plus pour développer le serveur qui contient l’opérateur de SQL Server Agent que vous souhaitez désigner comme opérateur de prévention de défaillance.  
   
 2.  Cliquez avec le bouton droit sur **SQL Server Agent** , puis sélectionnez **Propriétés**.  
-  
-3.  Dans la boîte de dialogue **Propriétés de SQL Server Agent –***nom_serveur*, sous **Sélectionner une page**, sélectionnez **Système d’alerte**.  
-  
+
+3.  Dans le **propriétés de l’Agent SQL Server -**_nom_serveur_ boîte de dialogue **sélectionner une page**, sélectionnez **système d’alerte**.  
+ 
 4.  Sous **Opérateur de prévention de défaillance**, sélectionnez **Activer l’opérateur de prévention de défaillance**.  
   
 5.  Dans la liste **Opérateur** , sélectionnez l’opérateur que vous souhaitez définir comme opérateur de prévention de défaillance.  
   
-6.  Cochez tout ou partie des cases suivantes pour spécifier comment l’opérateur doit être informé : **Messagerie électronique**, **Radiomessagerie**ou **NET SEND**.  
+6.  Sélectionnez tout ou partie des cases à cocher suivantes pour spécifier comment l'opérateur sera informé : **Messagerie**, **radiomessagerie**, ou **Net send**.  
   
 7.  Lorsque vous avez terminé, cliquez sur **OK**.  
   

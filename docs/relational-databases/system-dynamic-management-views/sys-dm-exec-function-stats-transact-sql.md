@@ -19,19 +19,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d3c4b57cd20addca8091bfef2bf3ecaf6e157817
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6c0064e35be2ab514e93b9119f7994849cf50cc4
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47844667"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409736"
 ---
 # <a name="sysdmexecfunctionstats-transact-sql"></a>Sys.dm_exec_function_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   Retourne les statistiques de performances pour les fonctions de mise en cache des agrégats. La vue retourne une ligne pour chaque plan de la fonction mise en cache, et la durée de vie de la ligne est aussi longtemps que la fonction est mis en cache. Lorsqu’une fonction est supprimée du cache, la ligne correspondante est éliminée de cette vue. À ce stade, un événement de trace SQL de statistiques de performances est déclenché similaire à **sys.dm_exec_query_stats**. Retourne des informations sur les fonctions scalaires, y compris les fonctions en mémoire et fonctions scalaires CLR. Ne retourne pas d’informations sur les fonctions table.  
   
- Dans [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], les vues de gestion dynamique ne peuvent pas exposer des informations qui ont un impact sur la relation contenant-contenu de la base de données, ou exposer des informations concernant d'autres bases de données auxquelles l'utilisateur a accès. Pour éviter d'exposer ces informations, chaque ligne contenant des données qui n'appartient pas au locataire connecté est filtrée.  
+ Dans [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], les vues de gestion dynamique ne peuvent pas exposer des informations qui ont un impact sur la relation contenant-contenu de la base de données, ou exposer des informations concernant d'autres bases de données auxquelles l'utilisateur a accès. Pour éviter d’exposer ces informations, chaque ligne qui contient les données qui n’appartient pas au locataire connecté est filtrée.  
   
 > [!NOTE]
 > Une requête initiale de **sys.dm_exec_function_stats** peut produire des résultats inexacts s’il existe une charge de travail en cours d’exécution sur le serveur. Des résultats plus précis peuvent être déterminés en réexécutant la requête.  
@@ -41,8 +41,8 @@ ms.locfileid: "47844667"
 |-----------------|---------------|-----------------|  
 |**database_id**|**Int**|ID de base de données dans lequel la fonction réside.|  
 |**object_id**|**Int**|Numéro d’identification de la fonction.|  
-|**type**|**char(2)**|Type de l’objet : FN = les fonctions scalaires|  
-|**type_desc**|**nvarchar(60)**|Description du type d’objet : SQL_SCALAR_FUNCTION|  
+|**type**|**char(2)**|Type de l'objet :   FN = les fonctions scalaires|  
+|**type_desc**|**nvarchar(60)**|Description du type d'objet : SQL_SCALAR_FUNCTION|  
 |**sql_handle**|**varbinary(64)**|Cela peut être utilisé pour mettre en corrélation avec des requêtes de **sys.dm_exec_query_stats** qui ont été exécutées à partir de cette fonction.|  
 |**plan_handle**|**varbinary(64)**|Identificateur du plan en mémoire. Cet identificateur est temporaire et il reste constant uniquement tant que le plan est dans le cache. Cette valeur peut être utilisée avec le **sys.dm_exec_cached_plans** vue de gestion dynamique.<br /><br /> Sera toujours 0 x 000 lorsqu’une table d’une mémoire optimisée de requêtes de fonction compilée en mode natif.|  
 |**cached_time**|**datetime**|Heure à laquelle la fonction a été ajoutée au cache.|  
@@ -69,7 +69,7 @@ ms.locfileid: "47844667"
 |**min_elapsed_time**|**bigint**|Temps minimal écoulé, en microsecondes, pour tout terminé l’exécution de cette fonction.|  
 |**max_elapsed_time**|**bigint**|Temps maximal écoulé, en microsecondes, pour tout terminé l’exécution de cette fonction.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
 
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], nécessite `VIEW SERVER STATE` autorisation.   
 Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], nécessite le `VIEW DATABASE STATE` autorisation dans la base de données.   

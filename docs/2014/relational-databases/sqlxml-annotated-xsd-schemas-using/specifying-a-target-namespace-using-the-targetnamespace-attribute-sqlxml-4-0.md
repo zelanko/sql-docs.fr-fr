@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - namespaces [SQLXML], annotated XSD schemas
@@ -21,12 +19,12 @@ ms.assetid: f3df9877-6672-4444-8245-2670063c9310
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 40739c6aa044b4ae632b38e26fe8776451673103
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d297b8516cb09db317ba835b49fe41b3e13be9e3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125059"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52793581"
 ---
 # <a name="specifying-a-target-namespace-using-the-targetnamespace-attribute-sqlxml-40"></a>Spécification d'un espace de noms cible à l'aide de l'attribut targetNamespace (SQLXML 4.0)
   Dans l’écriture de schémas XSD, vous pouvez utiliser le langage XSD **targetNamespace** attribut pour spécifier un espace de noms cible. Cette rubrique décrit comment le langage XSD **targetNamespace**, **elementFormDefault**, et **attributeFormDefault** les attributs fonctionnent, comment elles affectent l’instance XML généré, et comment les requêtes XPath sont spécifiées avec les espaces de noms.  

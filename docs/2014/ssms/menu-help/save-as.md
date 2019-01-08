@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vs.saveas
@@ -14,12 +14,12 @@ ms.assetid: 61347757-f5a3-481d-8b05-1fed086629b6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4862c346e29eceb38712d0062c4f3f4865afabe1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 16376e7c1be1e22968846e7cbfbfc361fa8bb16e
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116789"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203405"
 ---
 # <a name="save-as"></a>Enregistrer sous
   Utilisez cette boîte de dialogue pour enregistrer une instance de l'élément en cours à l'emplacement spécifié et dans un format de fichier spécifique. Pour afficher cette boîte de dialogue, cliquez sur **enregistrer**  *\<fichier >* **comme** sur le **fichier** menu (où  *\<fichier >* est le nom de l’élément actuel), ou appuyez sur ALT + F, A dans l’éditeur de Code.  
@@ -31,8 +31,8 @@ ms.locfileid: "48116789"
  **Nom de fichier**  
  Utilisez cette option pour afficher le nom de fichier actuel, changer le nom de fichier ou filtrer les fichiers et les dossiers qui sont affichés. Pour filtrer les fichiers et les dossiers affichés, entrez un nom de fichier complet ou partiel sur lequel doit s'effectuer le filtrage. Vous pouvez utiliser l'astérisque (`*`) comme caractère générique.  
   
-> [!TIP]  
->  Pour afficher des fichiers qui se trouvent sur le web ou sur un réseau, entrez une URL ou un chemin réseau dans la zone **Nom de fichier** . Par exemple, « http://mywebsite » affiche les fichiers disponibles à l’emplacement « monsiteweb », tandis que «\\\monserveur\partage » affiche les fichiers disponibles à l’emplacement « partage » sur « monserveur ».  
+> [!TIP]
+>  Pour afficher des fichiers qui se trouvent sur le web ou sur un réseau, entrez une URL ou un chemin réseau dans la zone **Nom de fichier** . Par exemple, « <http://mywebsite> » affiche les fichiers disponibles à l’emplacement « monsiteweb », tandis que «\\\monserveur\partage » affiche les fichiers disponibles à l’emplacement « partage » sur « monserveur ».  
   
  **Enregistrer en tant que**  
  Utilisez cette option pour choisir un nouveau type de fichier pour l'élément sélectionné. Les types de fichiers proposés représentent tous les types de fichiers disponibles dans lesquels l'élément sélectionné peut être converti.  

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - server performance [SQL Server], objects for monitoring
@@ -30,12 +30,12 @@ ms.assetid: bcd731b1-3c4e-4086-b58a-af7a3af904ad
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0678c741387e6b9e3a252d03fcebad8dcb5e5a52
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: de0e30a3d0b7daf014753c225ca34bf7a1b0cd17
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133029"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52753591"
 ---
 # <a name="use-sql-server-objects"></a>Utiliser des objets SQL Server
   Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit des objets et des compteurs qui peuvent être utilisés par le Moniteur système pour surveiller l'activité des ordinateurs exécutant une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Un objet peut être n'importe quelle ressource [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , telle qu'un verrou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou un processus Windows. Chaque objet contient un ou plusieurs compteurs qui déterminent divers aspects de l'objet à surveiller. Par exemple, l’objet **SQL Server Locks** contient des compteurs appelés **Nombre d’interblocages/s** et **Dépassement du délai d’attente des verrous/s**.  
@@ -105,13 +105,13 @@ ms.locfileid: "48133029"
 |[SQLServer:Locks](sql-server-locks-object.md)|Fournit des informations sur les demandes de verrous individuelles émises par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], comme les dépassements du délai d'attente des verrous et les interblocages. Cet objet peut avoir plusieurs instances.|  
 |[SQLServer:Memory Manager](sql-server-memory-manager-object.md)|Fournit des informations sur l'utilisation de la mémoire de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , comme le nombre total de structures de verrous actuellement allouées.|  
 |[SQLServer:Plan Cache](sql-server-plan-cache-object.md)|Fournit des informations sur le cache de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisé pour stocker des objets tels que les procédures stockées, les déclencheurs et les plans de requête.|  
-|[SQLServer : Statistiques des pools de ressources](sql-server-resource-pool-stats-object.md)|Fournit des informations à propos des statistiques du pool de ressources de Resource Governor.|  
+|[SQLServer: Statistiques des pools de ressources](sql-server-resource-pool-stats-object.md)|Fournit des informations à propos des statistiques du pool de ressources de Resource Governor.|  
 |[SQLServer:SQL Errors](sql-server-sql-errors-object.md)|Fournit des informations sur les erreurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |[SQLServer:SQL Statistics](sql-server-sql-statistics-object.md)|Fournit des informations sur les aspects des requêtes [!INCLUDE[tsql](../../includes/tsql-md.md)] , comme le nombre de lots d'instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] reçus par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[SQLServer:Transactions](sql-server-transactions-object.md)|Fournit des informations sur les transactions actives dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], telles que le nombre total de transactions et le nombre de transactions d'instantané.|  
 |[SQLServer:User Settable](sql-server-user-settable-object.md)|Réalise une surveillance personnalisée. Chaque compteur peut être une procédure stockée personnalisée ou toute instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] qui renvoie une valeur à surveiller.|  
-|[SQLServer:Wait Statistics](sql-server-wait-statistics-object.md)|Fournit des informations sur les attentes.|  
-|[SQLServer : Statistiques des groupes de charges de travail](sql-server-workload-group-stats-object.md)|Fournit des informations à propos des statistiques du groupe de charges de travail de Resource Governor.|  
+|[SQLServer: Statistiques d’attente](sql-server-wait-statistics-object.md)|Fournit des informations sur les attentes.|  
+|[SQLServer: Statistiques des groupes de charges de travail](sql-server-workload-group-stats-object.md)|Fournit des informations à propos des statistiques du groupe de charges de travail de Resource Governor.|  
   
 ##  <a name="SQLServerReplicationPOs"></a> Objets de performance de la réplication de SQL Server  
  Le tableau suivant répertorie les objets de performance fournis pour la réplication [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  

@@ -18,17 +18,17 @@ ms.assetid: 3ec89119-7314-43ef-9e91-12e72bb63d62
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 86ddad2fe62bcd84c55cd97d3765dc898db8e39f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3647937630b259d60670cc470bbd1014dd288404
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108249"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513341"
 ---
 # <a name="use-the-sqlcmd-utility"></a>Utiliser l'utilitaire sqlcmd
   L'utilitaire `sqlcmd` est un utilitaire de ligne de commande destiné à l'exécution ad hoc et interactive des instructions et des scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] et à l'automatisation des tâches de script [!INCLUDE[tsql](../../includes/tsql-md.md)]. Pour utiliser `sqlcmd` de façon interactive ou pour créer des fichiers de script destinés à être exécutés avec `sqlcmd`, les utilisateurs doivent connaître [!INCLUDE[tsql](../../includes/tsql-md.md)]. L'utilitaire `sqlcmd` est généralement utilisé des façons suivantes :  
   
--   Les utilisateurs entrent les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] de façon interactive comme s'ils travaillaient à partir de l'invite de commandes. Les résultats s'affichent dans l'invite de commandes. Pour ouvrir une fenêtre d'invite de commandes, cliquez sur **Démarrer**, sur **Tous les programmes**, pointez sur **Accessoires**, puis cliquez sur **Invite de commandes**. À l’invite de commandes, tapez `sqlcmd` suivie d’une liste d’options que vous souhaitez. Pour obtenir la liste complète des options qui sont pris en charge par `sqlcmd`, consultez [utilitaire sqlcmd](../../tools/sqlcmd-utility.md).  
+-   Les utilisateurs entrent les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] de façon interactive comme s'ils travaillaient à partir de l'invite de commandes. Les résultats s'affichent dans l'invite de commandes. Pour ouvrir une fenêtre d'invite de commandes, cliquez sur **Démarrer**, sur **Tous les programmes**, pointez sur **Accessoires**, puis cliquez sur **Invite de commandes**. À l'invite de commandes, tapez `sqlcmd` suivi d'une liste des options de votre choix. Pour obtenir la liste complète des options qui sont pris en charge par `sqlcmd`, consultez [utilitaire sqlcmd](../../tools/sqlcmd-utility.md).  
   
 -   Les utilisateurs soumettent un travail `sqlcmd` soit en spécifiant une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] unique à exécuter, soit en indiquant à l'utilitaire un fichier texte contenant les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] à exécuter. Le résultat est généralement généré dans un fichier texte, mais il peut aussi être affiché dans l'invite de commandes.  
   
@@ -110,9 +110,9 @@ ms.locfileid: "48108249"
   
  Lorsque la commande est exécutée sans fichiers ou requêtes d'entrée, `sqlcmd` se connecte à l'instance spécifiée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et affiche ensuite une nouvelle ligne comportant un `1>` suivi d'un trait de soulignement clignotant, appelé invite `sqlcmd`. Le `1` signifie qu'il s'agit de la première ligne d'une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] et l'invite `sqlcmd` représente le point à partir duquel l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] commencera lorsque vous la taperez.  
   
- À l'invite `sqlcmd`, vous pouvez taper à la fois des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] et des commandes `sqlcmd`, telles que `GO` et `EXIT`. Chaque instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] est placée dans une mémoire tampon, appelée cache d'instruction. Ces instructions sont envoyées à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] après avoir tapé le `GO` de commandes et appuyez sur ENTRÉE. Pour quitter `sqlcmd`, type `EXIT` ou `QUIT` au début d’une nouvelle ligne.  
+ À l'invite `sqlcmd`, vous pouvez taper à la fois des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] et des commandes `sqlcmd`, telles que `GO` et `EXIT`. Chaque instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] est placée dans une mémoire tampon, appelée cache d'instruction. Ces instructions sont envoyées à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dès lors que vous avez tapé la commande `GO` et appuyé sur la touche ENTRÉE. Pour quitter `sqlcmd`, type `EXIT` ou `QUIT` au début d’une nouvelle ligne.  
   
- Pour effacer le cache d’instruction, tapez `:RESET`. Tapant `^C` provoque `sqlcmd` pour quitter. `^C` peut également être utilisé pour arrêter l'exécution du cache d'instruction après la saisie d'une commande `GO`.  
+ Pour effacer le cache d'instruction, tapez `:RESET`. Tapant `^C` provoque `sqlcmd` pour quitter. `^C` peut également être utilisé pour arrêter l'exécution du cache d'instruction après la saisie d'une commande `GO`.  
   
  [!INCLUDE[tsql](../../includes/tsql-md.md)] qui sont entrés dans une session interactive peuvent être modifiées en entrant le **: ED** commande et le `sqlcmd` invite. L'éditeur s'ouvre et après avoir modifié l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] et refermé l'éditeur, l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] révisée s'affiche dans la fenêtre de commandes. Entrez `GO` pour exécuter révisée [!INCLUDE[tsql](../../includes/tsql-md.md)] instruction.  
   
@@ -151,7 +151,7 @@ ms.locfileid: "48108249"
   
  Cela signifie que le dossier `C:\` est le dossier en cours et que si vous spécifiez un nom de fichier, Windows recherchera le fichier dans ce dossier.  
   
- Type `sqlcmd` pour se connecter à l’instance par défaut de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur l’ordinateur local et le contenu de l’invite de commandes sera fenêtre :  
+ Tapez `sqlcmd` pour vous connecter à l'instance par défaut de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] située sur l'ordinateur local. Le contenu de la fenêtre d'invite de commandes sera alors :  
   
  `C:\>sqlcmd`  
   
@@ -251,7 +251,7 @@ ms.locfileid: "48108249"
   
  `(3 rows affected)`  
   
-### <a name="b-using-sqlcmd-with-a-dedicated-administrative-connection"></a>B. Utilisation de sqlcmd avec une connexion d'administration dédiée  
+### <a name="b-using-sqlcmd-with-a-dedicated-administrative-connection"></a>b. Utilisation de sqlcmd avec une connexion d'administration dédiée  
  Dans l'exemple suivant, `sqlcmd` permet de se connecter à un serveur ayant un problème de blocage à l'aide de la connexion administrateur dédiée.  
   
  `C:\>sqlcmd -S ServerName -A`  
@@ -485,7 +485,7 @@ ms.locfileid: "48108249"
   
 -   Le commutateur -N est utilisé par le client pour demander une connexion chiffrée. Cette option est équivalente à l'option ADO.net `ENCRYPT = true`.  
   
--   Le commutateur –C est utilisé par le client pour le configurer de façon à approuver implicitement le certificat de serveur sans pour autant le valider. Cette option est équivalente à l'option ADO.net `TRUSTSERVERCERTIFICATE = true`.  
+-   Le commutateur -C est utilisé par le client pour le configurer de façon à approuver implicitement le certificat de serveur sans pour autant le valider. Cette option est équivalente à l'option ADO.net `TRUSTSERVERCERTIFICATE = true`.  
   
  Le service [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ne prend pas en charge toutes les options `SET` disponibles sur une instance SQL Server. Les options suivantes provoquent une erreur lorsque l'option `SET` correspondante est définie sur `ON` ou `OFF`:  
   
@@ -511,21 +511,21 @@ ms.locfileid: "48108249"
  Connexion à l'aide des informations d'identification Windows et d'une communication chiffrée :  
   
 ```  
-SQLCMD –E –N  
+SQLCMD -E -N  
   
 ```  
   
  Connexion à l'aide des informations d'identification Windows et d'un certificat de serveur de confiance :  
   
 ```  
-SQLCMD –E –C  
+SQLCMD -E -C  
   
 ```  
   
  Connexion à l'aide des informations d'identification Windows, d'une communication chiffrée et d'un certificat de serveur de confiance :  
   
 ```  
-SQLCMD –E –N –C  
+SQLCMD -E -N -C  
   
 ```  
   
@@ -534,28 +534,28 @@ SQLCMD –E –N –C
  Connexion à l'aide des informations d'identification Windows, d'une communication chiffrée et d'un certificat de serveur de confiance :  
   
 ```  
-SQLCMD –E  
+SQLCMD -E  
   
 ```  
   
  Connexion à l'aide des informations d'identification Windows, d'une communication chiffrée et d'un certificat de serveur de confiance :  
   
 ```  
-SQLCMD –E –N  
+SQLCMD -E -N  
   
 ```  
   
  Connexion à l'aide des informations d'identification Windows, d'une communication chiffrée et d'un certificat de serveur de confiance :  
   
 ```  
-SQLCMD –E –T  
+SQLCMD -E -T  
   
 ```  
   
- Connexion à l'aide des informations d'identification Windows, d'une communication chiffrée et d'un certificat de serveur de confiance :  
+ Connexion à l'aide des informations d'identification Windows, d'une communication chiffrée et d'un certificat de serveur de confiance :  
   
 ```  
-SQLCMD –E –N –C  
+SQLCMD -E -N -C  
   
 ```  
   

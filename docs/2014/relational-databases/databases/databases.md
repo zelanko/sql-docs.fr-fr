@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - data warehouse [SQL Server]
@@ -15,15 +14,15 @@ ms.assetid: 316eea58-81b8-4bf3-a1fc-801946740e94
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 81efd94cf4b625a5f0584b3769d236c14b4ca3e9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 366a09bce079023f59f38682b51a7a5858671fcc
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48214839"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52816291"
 ---
 # <a name="databases"></a>Bases de données
-  Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , une base de données est constituée d'une collection de tables qui renferment un ensemble spécifique de données structurées. Une table se compose de lignes, également appelées enregistrements ou tuples, et de colonnes, également appelées attributs. Chaque colonne d'une table est conçue pour stocker un certain type d'informations, par exemple, des données, des noms, des valeurs monétaires ou des nombres.  
+  Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], une base de données est constituée d'une collection de tables qui renferment un ensemble spécifique de données structurées. Une table se compose de lignes, également appelées enregistrements ou tuples, et de colonnes, également appelées attributs. Chaque colonne d'une table est conçue pour stocker un certain type d'informations, par exemple, des données, des noms, des valeurs monétaires ou des nombres.  
   
 ## <a name="basic-information-about-databases"></a>Informations générales sur les bases de données  
  Une ou plusieurs instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peuvent être installées sur un ordinateur. Chaque instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut contenir une ou plusieurs bases de données.  Dans une base de données, il existe un ou plusieurs groupes d'appropriation d'objets appelés schémas. Chaque schéma contient divers objets de base de données tels que des tables, des vues et des procédures stockées. Certains objets, tels que les certificats et les clés asymétriques, sont présents dans une base de données, mais pas dans un schéma. Pour plus d’informations sur la création de tables, consultez [Tables](../tables/tables.md).  

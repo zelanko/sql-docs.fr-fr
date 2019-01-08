@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - heterogeneous database replication, non-SQL Server Publishers
@@ -16,12 +15,12 @@ ms.assetid: 08a160a6-33be-46b5-bc7b-d53180d8bdf1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: dcf0a38f9dedcae80badaa0ca7ba2462b1b808c9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 19db106c43007259754bace7f0e9d2938ad9cf1e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190759"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52752571"
 ---
 # <a name="non-sql-server-publishers"></a>Serveurs de publications non-SQL Server
   La publication de données provenant de sources non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vous permet de regrouper des données dans [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] peut s'abonner à des données transactionnelles ou à des données d'instantané à partir d'une base de données Oracle. Pour plus d’informations sur la publication à partir d’Oracle, consultez [Présentation de la publication Oracle](oracle-publishing-overview.md).  

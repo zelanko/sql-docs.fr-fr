@@ -18,12 +18,12 @@ ms.assetid: db80f152-e8af-4303-95b6-3a3a7b664374
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3d999de2caaf75334271ca3c4886c4424d6151f0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 37426d47f2385e02b5469e9c2572aef12a0f6963
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681157"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510506"
 ---
 # <a name="spdenylogin-transact-sql"></a>sp_denylogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ sp_denylogin [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@loginame =** ] **' *** connexion* **'**  
+ [  **@loginame =** ] **'**_connexion_ **'**  
  Nom d'un utilisateur ou d'un groupe Windows. *connexion* est **sysname**, sans valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
@@ -54,7 +54,7 @@ sp_denylogin [ @loginame = ] 'login'
   
  **sp_denylogin** ne peut pas être exécutée dans une transaction définie par l’utilisateur.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle serveur fixe **sysadmin** .  
   
 ## <a name="examples"></a>Exemples  

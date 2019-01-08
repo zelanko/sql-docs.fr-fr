@@ -13,12 +13,12 @@ ms.assetid: 59440510-2d76-41dc-9b55-edc15259f9da
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ca7b73e08941d42ceccd1ff3dab04a686b120d98
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 40e802ac33c7aa9b97267a725b20eb0d2f00dbb1
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201399"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52410356"
 ---
 # <a name="create-a-calculated-column-ssas-tabular"></a>Créer une colonne calculée (SSAS Tabulaire)
   Les colonnes calculées permettent d'ajouter de nouvelles données à votre modèle. Au lieu de coller ou importer des valeurs dans la colonne, vous créez une formule DAX qui définit les valeurs de niveau de ligne de la colonne. Les valeurs de chaque ligne d'une colonne calculée sont calculées et remplies lorsque vous créez une formule non valide puis cliquez sur ENTRÉE. La colonne calculée peut ensuite être ajoutée à une application de création de rapports ou d'analyse, comme toute autre colonne de données. Cette rubrique décrit comment créer une nouvelle colonne calculée à l'aide de la barre de formule DAX dans le générateur de modèles.  
@@ -47,7 +47,7 @@ ms.locfileid: "48201399"
 >  Vous pouvez utiliser la saisie semi-automatique des formules DAX au milieu d'une formule existante avec les fonctions imbriquées. Le texte immédiatement avant le point d'insertion est utilisé pour afficher des valeurs dans la liste déroulante, et tout le texte après le point d'insertion reste inchangé.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Colonnes calculées &#40;SSAS tabulaire&#41;](ssas-calculated-columns.md)   
- [Mesures &#40;SSAS tabulaire&#41;](measures-ssas-tabular.md)  
+ [Colonnes calculées &#40;SSAS Tabulaire&#41;](ssas-calculated-columns.md)   
+ [Mesures &#40;SSAS Tabulaire&#41;](measures-ssas-tabular.md)  
   
   

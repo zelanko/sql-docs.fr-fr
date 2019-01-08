@@ -13,12 +13,12 @@ ms.assetid: cef118a5-a7ce-4bfa-8b9d-c81996284cfc
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 12df16f62110cf41e4228326ab642924a7b61f80
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 8330702d8c886cc9197dcd944878c3f794780205
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018314"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52536919"
 ---
 # <a name="upgrade-to-sql-server-2014-using-the-installation-wizard-setup"></a>Effectuer une mise à niveau vers SQL Server 2014 à l'aide de l'Assistant Installation (programme d'installation)
   L'Assistant Installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit une arborescence de fonctionnalités unique pour mettre à niveau les composants [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Vous pouvez également installer [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] côte à côte avec une version antérieure ou migrer les bases de données et les paramètres de configuration existants à partir d'une version antérieure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et les appliquer à une instance de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -89,15 +89,15 @@ ms.locfileid: "51018314"
   
 12. Dans la page Configuration de l'instance, spécifiez l'ID d'instance pour l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-     **ID d'instance** — Par défaut, le nom de l'instance est utilisé comme ID d'instance. Il permet d'identifier les répertoires d'installation et les clés de Registre de votre instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Tel est le cas pour les instances par défaut et les instances nommées. Pour une instance par défaut, le nom de l'instance et l'ID d'instance sont MSSQLSERVER. Pour utiliser un ID d’instance non défini par défaut, indiquez une valeur dans la zone de texte **ID d’instance** .  
+     **ID d’instance** : Par défaut, le nom de l’instance est utilisé comme ID d’instance. Il permet d'identifier les répertoires d'installation et les clés de Registre de votre instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Tel est le cas pour les instances par défaut et les instances nommées. Pour une instance par défaut, le nom de l'instance et l'ID d'instance sont MSSQLSERVER. Pour utiliser un ID d’instance non défini par défaut, indiquez une valeur dans la zone de texte **ID d’instance** .  
   
      Tous les Service Packs et mises à niveau [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'appliqueront à chaque composant d'une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-     **Instances installées**  — La grille affichera les instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui se trouvent sur l'ordinateur où le programme d'installation s'exécute. Si une instance par défaut est déjà installée sur l'ordinateur, vous devez installer une instance nommée de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+     **Instances installées** - La grille affichera les instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui se trouvent sur l’ordinateur où le programme d’installation s’exécute. Si une instance par défaut est déjà installée sur l'ordinateur, vous devez installer une instance nommée de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 13. Le flux de travail du reste de cette rubrique dépend des fonctionnalités que vous avez spécifiées pour votre installation. Il est possible que les pages ne soient pas toutes visibles, en fonction de vos sélections.  
   
-14. Dans la page Configuration du serveur — Comptes de service, les comptes de service par défaut s'affichent pour les services [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Les services réels configurés dans cette page dépendent des fonctionnalités que vous mettez à niveau.  
+14. Dans la page Configuration du serveur - Comptes de service, les comptes de service par défaut s’affichent pour les services [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les services réels configurés dans cette page dépendent des fonctionnalités que vous mettez à niveau.  
   
      Les informations d'authentification et de connexion sont transférées à partir de l'instance antérieure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Vous pouvez attribuer le même compte de connexion à tous les services [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou configurer chaque compte de service individuellement. Vous pouvez également spécifier si les services démarrent automatiquement, sont démarrés manuellement ou sont désactivés. [!INCLUDE[msCoName](../../includes/msconame-md.md)] vous recommande de configurer les comptes de service individuellement afin de fournir des privilèges moindres pour chaque service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour effectuer leurs tâches. Pour plus d’informations, consultez [Configurer les comptes de service Windows et les autorisations](../configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
@@ -122,11 +122,11 @@ ms.locfileid: "51018314"
 ## <a name="next-steps"></a>Étapes suivantes  
  Après avoir effectué la mise à niveau vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], effectuez les tâches suivantes :  
   
--   **Inscrire vos serveurs** — La mise à niveau entraîne la suppression des paramètres du Registre pour l'instance antérieure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Après la mise à niveau, vous devez réinscrire vos serveurs.  
+-   **Inscrire vos serveurs** - La mise à niveau entraîne la suppression des paramètres du Registre pour l’instance antérieure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Après la mise à niveau, vous devez réinscrire vos serveurs.  
   
--   **Mettre à jour les statistiques** — Afin d'optimiser les performances des requêtes, il est recommandé de mettre à jour les statistiques sur toutes les bases de données après une mise à niveau. Utilisez la procédure stockée `sp_updatestats` pour mettre à jour les statistiques des tables définies par l'utilisateur dans les bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   **Mettre à jour les statistiques** - Afin d’optimiser les performances des requêtes, il est recommandé de mettre à jour les statistiques sur toutes les bases de données après une mise à niveau. Utilisez la procédure stockée `sp_updatestats` pour mettre à jour les statistiques des tables définies par l'utilisateur dans les bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   **Configurer votre nouvelle installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** — Pour réduire la surface d’exposition vulnérable aux attaques d’un système, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installe et active de manière sélective les services et fonctionnalités clés. Pour plus d'informations sur la configuration de la surface d'exposition, consultez le fichier Lisezmoi de cette version.  
+-   **Configurer votre nouvelle installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** - Pour réduire la surface d’exposition vulnérable aux attaques d’un système, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installe et active de manière sélective les services et fonctionnalités clés. Pour plus d'informations sur la configuration de la surface d'exposition, consultez le fichier Lisezmoi de cette version.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Mise à niveau vers SQL Server 2014](upgrade-sql-server.md)   

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - mapping XDR types to XPath types [SQLXML]
@@ -29,12 +27,12 @@ ms.assetid: a90374bf-406f-4384-ba81-59478017db68
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 78c7890449a68770d6c6a14a100af061b1394040
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b490a0f4876f911923ed0429f33d332b96768792
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054749"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52796413"
 ---
 # <a name="xpath-data-types-sqlxml-40"></a>Types de données XPath (SQLXML 4.0)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], XPath et XML Schema (XSD) sont dotés de types de données très différents. Par exemple, XPath n'affiche aucun type de données integer ou date tandis que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et XSD en possèdent un grand nombre. XSD utilise une précision à la nanoseconde pour les valeurs temporelles ; [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] affiche au maximum une précision de 1/300ème de seconde. Par conséquent, le mappage d'un type de données à un autre n'est pas toujours possible. Pour plus d’informations sur le mappage [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] des types de données aux types de données XSD, consultez [forçages de Type de données et de l’Annotation SQL : DataType &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-using/data-type-coercions-and-the-sql-datatype-annotation-sqlxml-4-0.md).  
@@ -65,7 +63,7 @@ ms.locfileid: "48054749"
 |Ni l'un ni l'autre n'est un élément node-set.|Convertissez les deux opérandes en type `number`, puis comparez-les.|Convertissez les deux opérandes en un type commun, puis comparez-les. Convertissez en type `boolean` si l'une des valeurs est de type `boolean`, en `number` si l'une des valeurs est de type `number` ; sinon, effectuez une conversion en type `string`.|  
   
 > [!NOTE]  
->  Parce que les opérateurs relationnels XPath convertissent toujours leurs opérandes en `number`, les comparaisons de valeurs `string` ne sont pas possibles. Pour inclure des comparaisons de date, SQL Server 2000 propose la variante suivante par rapport à la recommandation XPath : lorsqu'un opérateur relationnel compare une valeur `string` à une autre valeur `string`, un élément node-set à une valeur `string`, ou deux éléments node-set à valeur de chaîne entre eux, une comparaison de la valeur `string` (et non une comparaison de `number`) a lieu.  
+>  Parce que les opérateurs relationnels XPath convertissent toujours leurs opérandes en `number`, les comparaisons de valeurs `string` ne sont pas possibles. Pour inclure des comparaisons de date, SQL Server 2000 offre cette variation à la spécification XPath : Lorsqu’un opérateur relationnel compare une `string` à un `string`, un node-set à une `string`, ou un valeur de chaîne node-set à une valeur de chaîne-collection de nœuds, un `string` comparaison (pas un `number` comparaison) est effectuée.  
   
 ## <a name="node-set-conversions"></a>Conversions des éléments node-set  
  Les conversions des éléments node-set ne sont pas toujours intuitives. Un élément node-set est converti en type `string` par extraction de la valeur de chaîne du premier nœud du jeu uniquement. Pour être converti en type `number`, un élément node-set est d'abord converti en type `string`, puis le type `string` est converti en type `number`. Pour convertir un élément node-set en type `boolean`, vous devez d'abord le tester pour vérifier s'il existe.  
@@ -89,12 +87,12 @@ ms.locfileid: "48054749"
   
 |Type de données XDR|Équivalent<br /><br /> Type de données XPath|Conversion SQL Server utilisée|  
 |-------------------|------------------------------------|--------------------------------|  
-|Nonebin.base64bin.hex|Néant|NoneEmployeeID|  
+|Nonebin.base64bin.hex|N/A|NoneEmployeeID|  
 |boolean|boolean|CONVERT(bit, EmployeeID)|  
 |number, int, float,i1, i2, i4, i8,r4, r8ui1, ui2, ui4, ui8|nombre|CONVERT(float(53), EmployeeID)|  
 |id, idref, idrefsentity, entities, enumerationnotation, nmtoken, nmtokens, chardate, Timedate, Time.tz, string, uri, uuid|chaîne|CONVERT(nvarchar(4000), EmployeeID, 126)|  
 |fixed14.4|N/A (aucun type de données XPath n'équivaut au type de données XDR fixed14.4)|CONVERT(money, EmployeeID)|  
-|Date|chaîne|LEFT(CONVERT(nvarchar(4000), EmployeeID, 126), 10)|  
+|date|chaîne|LEFT(CONVERT(nvarchar(4000), EmployeeID, 126), 10)|  
 |time<br /><br /> time.tz|chaîne|SUBSTRING(CONVERT(nvarchar(4000), EmployeeID, 126), 1 + CHARINDEX(N'T', CONVERT(nvarchar(4000), EmployeeID, 126)), 24)|  
   
  Les conversions de date et d’heure sont conçues pour fonctionner si la valeur est stockée dans la base de données à l’aide de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `datetime` type de données ou un `string`. Notez que le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `datetime` type de données n’utilise pas `timezone` et a une précision moins importante que le code XML `time` type de données. Pour inclure le type de données `timezone` ou apporter une précision supplémentaire, stockez les données dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec un type `string`.  
@@ -149,7 +147,7 @@ CONVERT(float(CONVERT(money, m)) + CONVERT(float(53), 3) = CONVERT(float(53), 3)
   
  Le préfixe  « E - » est ajouté à la chaîne et le résultat est ensuite comparé avec `N'E-1'`.  
   
-### <a name="b-perform-several-data-type-conversions-in-an-xpath-query"></a>B. Effectuer plusieurs conversions de types de données dans une requête XPath.  
+### <a name="b-perform-several-data-type-conversions-in-an-xpath-query"></a>b. Effectuer plusieurs conversions de types de données dans une requête XPath.  
  Examinez la requête XPath suivante définie par rapport à un schéma XSD annoté : `OrderDetail[@UnitPrice * @OrderQty > 98]`  
   
  Cette requête XPath retourne tous les  **\<OrderDetail >** éléments satisfaisant le prédicat `@UnitPrice * @OrderQty > 98`. Si le **UnitPrice** est annoté avec un `fixed14.4` de type de données dans le schéma annoté, ce prédicat équivaut à l’expression SQL :  

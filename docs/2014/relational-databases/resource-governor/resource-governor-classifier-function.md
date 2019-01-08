@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - Resource Governor, classifier function
@@ -16,12 +15,12 @@ ms.assetid: 64c25012-7068-476f-afa2-0b4f3adde9a4
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fb9dfa664078e14f1daa8223379829b3d6b337ea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 32962186ac6fdf7b0cc18801d635e9b5ef9f5d22
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190901"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52807871"
 ---
 # <a name="resource-governor-classifier-function"></a>Fonction classifieur du gouverneur de ressources
   Le processus de classification de Resource Governor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] affecte les sessions entrantes à un groupe de charge de travail en fonction des caractéristiques de la session. Vous pouvez adapter la logique de classification en entrant une fonction définie par l'utilisateur, appelée fonction classifieur.  

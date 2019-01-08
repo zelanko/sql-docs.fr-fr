@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - databases [SQL Server], files
@@ -33,12 +32,12 @@ ms.assetid: 9ca11918-480d-4838-9198-cec221ef6ad0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 780bfc2f1a9c1654f913995a84460f85e19d386a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3d75dee637a5579ca3f189e14333fbf9356623d0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205465"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52790111"
 ---
 # <a name="database-files-and-filegroups"></a>Groupes de fichiers et fichiers de base de données
   Chaque base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] possède au moins deux fichiers de système d'exploitation : un fichier de données et un fichier journal. Les fichiers de données contiennent des données et des objets tels que des tables, des index, des procédures stockées et des vues. Les fichiers journaux contiennent les informations nécessaires pour récupérer toutes les transactions de la base de données. Les fichiers de données peuvent être regroupés dans des groupes de fichiers à des fins d'allocation et d'administration.  
@@ -48,7 +47,7 @@ ms.locfileid: "48205465"
   
 |Fichier|Description|  
 |----------|-----------------|  
-|Principal|Le fichier de données primaire contient les informations de démarrage de la base de données, et il pointe vers les autres fichiers de la base de données. Les objets et les données utilisateur peuvent être stockés dans ce fichier ou dans des fichiers de données secondaires. Chaque base de données comprend un fichier de données primaire. L'extension de fichier recommandée est .mdf.|  
+|Principale|Le fichier de données primaire contient les informations de démarrage de la base de données, et il pointe vers les autres fichiers de la base de données. Les objets et les données utilisateur peuvent être stockés dans ce fichier ou dans des fichiers de données secondaires. Chaque base de données comprend un fichier de données primaire. L'extension de fichier recommandée est .mdf.|  
 |Secondary|Les fichiers de données secondaires sont facultatifs, définis par l'utilisateur, et ils stockent les données utilisateur. Les fichiers secondaires peuvent être utilisés pour répartir des données sur plusieurs disques en plaçant chaque fichier sur un lecteur de disque distinct. En outre, si la taille d'une base de données excède la taille maximale autorisée pour un fichier Windows, vous pouvez avoir recours aux fichiers secondaires afin que la base de données puisse continuer à croître.<br /><br /> L'extension de fichier recommandée est .ndf.|  
 |Journal des transactions|Les fichiers journaux des transactions contiennent les informations du journal qui sont utilisées pour la restauration de la base de données. Chaque base de données doit posséder au moins un fichier journal. L'extension de fichier recommandée pour les journaux des transactions est .ldf.|  
   
@@ -65,7 +64,7 @@ ms.locfileid: "48205465"
   
 |Groupe de fichiers|Description|  
 |---------------|-----------------|  
-|Principal|Groupe de fichiers qui contient le fichier primaire. Toutes les tables système sont allouées au groupe de fichiers primaire.|  
+|Principale|Groupe de fichiers qui contient le fichier primaire. Toutes les tables système sont allouées au groupe de fichiers primaire.|  
 |Définie par l'utilisateur|Groupe de fichiers créé par l'utilisateur lorsque celui-ci crée la base de données ou lorsqu'il la modifie ultérieurement.|  
   
 ### <a name="default-filegroup"></a>Groupe de fichiers par défaut  

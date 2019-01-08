@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords:
 - templates [SQL Server], traces
@@ -15,12 +14,12 @@ ms.assetid: 5aa5f400-4aba-4081-9ed4-62cf38828438
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a9a8a4c8d766954f8095ef9eb139367211209ac1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f4fcc8f39f668422189780f89da0935f21444173
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081585"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52763821"
 ---
 # <a name="export-a-trace-template-sql-server-profiler"></a>Exporter un modèle de trace (SQL Server Profiler)
   Cette rubrique décrit comment exporter un modèle de trace existant à enregistrer comme fichier modèle (.tdf) à l'aide du [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Lorsque vous exportez un modèle de trace et que vous l'enregistrez en tant que fichier, vous pouvez utiliser ce modèle avec une autre instance du [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
@@ -36,7 +35,7 @@ ms.locfileid: "48081585"
 3.  Entrez un nom pour le fichier modèle exporté, puis cliquez sur **Enregistrer**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Créer un modèle de Trace &#40;SQL Server Profiler&#41;](create-a-trace-template-sql-server-profiler.md)   
+ [Créer un modèle de trace &#40;SQL Server Profiler&#41;](create-a-trace-template-sql-server-profiler.md)   
  [Modifier un modèle de trace &#40;SQL Server Profiler&#41;](../../database-engine/modify-a-trace-template-sql-server-profiler.md)   
  [Dériver un modèle à partir d’une trace en cours d’exécution &#40;SQL Server Profiler&#41;](derive-a-template-from-a-running-trace-sql-server-profiler.md)   
  [Dériver un modèle à partir d’un fichier de trace ou d’une table de trace &#40;SQL Server Profiler&#41;](derive-a-template-from-a-trace-file-or-trace-table-sql-server-profiler.md)   

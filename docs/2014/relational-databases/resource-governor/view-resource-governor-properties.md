@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.rg.properties.f1
@@ -15,19 +14,19 @@ ms.assetid: de3510df-f792-4a9d-80fa-f198fd36cdc8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4a3e2caa3c2b89ead6ee109ea13fa6783cc61dab
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c1093297892ea2e03cb9583a1e5c40a1c2a85b19
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116409"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52781262"
 ---
 # <a name="view-resource-governor-properties"></a>Afficher les propriétés du gouverneur de ressources
   Vous pouvez créer ou configurer des entités de Resource Governor, telles que des pools de ressources et des groupes de charge de travail, en utilisant la page Propriétés de Resource Governor dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 1.  **Avant de commencer :**  [Autorisations](#Permissions)  
   
-2.  **Pour afficher les propriétés du gouverneur de ressources, avec :**  [Page Propriétés du gouverneur de ressources](#ViewRGProp)  
+2.  **Pour afficher les propriétés du gouverneur de ressources à l’aide de :**  [Page de propriétés de Resource Governor](#ViewRGProp)  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
  Outre la consultation des propriétés des entités de Resource Governor, vous pouvez effectuer plusieurs tâches de configuration à l'aide de la page **ropriétés de Resource Governor** . Pour plus d'informations, consultez ces rubriques :  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - signing packages [Integration Services]
@@ -17,12 +16,12 @@ ms.assetid: a433fbef-1853-4740-9d5e-8a32bc4ffbb2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f8a94f52f72f91a465adcb4fba1d9a6e8c95375d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8e1bf17207e57f8488e10c6b37cc7fa876d511b4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073499"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52798911"
 ---
 # <a name="identify-the-source-of-packages-with-digital-signatures"></a>Identifier la source de packages à l'aide de signatures numériques
   Il est possible de signer un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] avec un certificat numérique pour identifier sa source. Après avoir signé un package avec un certificat numérique, vous pouvez utiliser [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pour vérifier la signature numérique avant de charger le package. Pour vérifier la signature à l’aide d’ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , vous devez définir une option dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ou dans l’utilitaire **dtexec** (dtexec.exe), ou définir une valeur de Registre facultative.  
@@ -44,7 +43,7 @@ ms.locfileid: "48073499"
 >  La valeur de Registre **BlockedSignatureStates** facultative peut spécifier un paramètre plus restrictif que l’option de signature numérique définie dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ou au niveau de la ligne de commande **dtexec** . Dans cette situation, le paramètre du Registre plus restrictif a priorité sur les autres paramètres.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Integration Services &#40;SSIS&#41; Packages](../integration-services-ssis-packages.md)   
+ [Packages Integration Services &#40;SSIS&#41;](../integration-services-ssis-packages.md)   
  [Vue d’ensemble de la sécurité &#40;Integration Services&#41;](security-overview-integration-services.md)  
   
   

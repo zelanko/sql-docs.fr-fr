@@ -19,12 +19,12 @@ ms.assetid: f2e6dcc9-978f-4c2c-bafe-36c330247fd0
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: e322ca0ed99c5c5b84c764cf0d89e2f365b6ed31
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2163b7a264fc782cb1f05e98d0400dbd751c8b85
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48221289"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502909"
 ---
 # <a name="generatedatabaserightsscript-method-wmi-msreportserverconfigurationsetting"></a>Méthode GenerateDatabaseRightsScript (WMI MSReportServer_ConfigurationSetting)
   Génère un script SQL pouvant être utilisé pour accorder des droits d'utilisateur à la base de données du serveur de rapports et à d'autres bases de données requises pour l'exécution d'un serveur de rapports. Il est prévu que l'appelant se connecte au serveur de base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et exécute le script.  
@@ -72,7 +72,7 @@ out Int32 HRESULT);
   
  Lorsque *IsWindowsUser* a la valeur `true`, le script généré accorde des droits de connexion à l’utilisateur pour le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], définition de la base de données de serveur de rapports, ainsi que la base de données par défaut accorde la **RSExec** rôle sur la base de données de serveur de rapports, la base de données du serveur de rapports temporaire, la base de données master et la base de données système MSDB.  
   
- Lorsque *IsWindowsUser* est défini sur `true`, la méthode accepte les SID Windows standard comme entrée. Lorsqu'un nom de compte de service ou un SID Windows standard est fourni, il est converti en une chaîne de nom d'utilisateur. Si la base de données est locale, le compte est converti en la représentation localisée correcte du compte. Si la base de données est distante, le compte est représenté en tant que compte de l'ordinateur.  
+ Lorsque *IsWindowsUser* est défini sur `true`, la méthode accepte les SID Windows standard comme entrée. Lorsqu'un nom de compte de service ou un SID Windows standard est fourni, il est converti en une chaîne de nom d'utilisateur. Si la base de données est locale, le compte est converti en la représentation localisée correcte du compte. Si la base de données est distante, le compte est représenté en tant que compte de l’ordinateur.  
   
  Le tableau suivant répertorie les comptes qui sont convertis et indique leur représentation distante.  
   
@@ -89,15 +89,15 @@ out Int32 HRESULT);
   
  Dans [!INCLUDE[win2kfamily](../../includes/win2kfamily-md.md)], si vous utilisez un compte intégré et que la base de données du serveur de rapports est distante, une erreur est retournée.  
   
- Si le `LocalService` compte intégré est spécifié et que la base de données de serveur de rapports est distante, une erreur est retournée.  
+ Si le compte intégré `LocalService` est spécifié et que la base de données du serveur de rapports est distante, une erreur est retournée.  
   
  Quand *IsWindowsUser* a la valeur true et qu’il est nécessaire de convertir la valeur indiquée dans *UserName* , le fournisseur WMI détermine si la base de données du serveur de rapports réside sur le même ordinateur ou sur un ordinateur distant. Pour déterminer si l’installation est locale, le fournisseur WMI évalue la propriété DatabaseServerName par rapport à la liste de valeurs suivante. Si une correspondance est trouvée, la base de données est locale. Dans le cas contraire, elle est distante. La casse n'est pas prise en compte lors de la comparaison.  
   
 |Valeur de DatabaseServerName|Exemple|  
 |---------------------------------|-------------|  
-|“.”||  
-|“(local)”||  
-|“LOCAL”||  
+|"."||  
+|"(local)"||  
+|"LOCAL"||  
 |localhost||  
 |\<Nom ordinateur>|labtest14|  
 |\<FQDN_ordinateur>|example.redmond.microsoft.com|  
@@ -113,7 +113,7 @@ out Int32 HRESULT);
   
  Le script généré prend en charge [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 et [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Espace de noms :** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  

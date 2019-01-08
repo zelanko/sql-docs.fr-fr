@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 2d8eb879d23a344e5de6bad3c9fb6042fdadb3e7
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: ad3d0d06016fe8684cacaf73286b229a423aa7c6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37985395"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533660"
 ---
 # <a name="clusterdistance-dmx"></a>ClusterDistance (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -37,15 +37,15 @@ ClusterDistance([<ClusterID expression>])
 ## <a name="remarks"></a>Notes  
  Le **ClusterDistance** fonction retourne la distance entre le cas d’entrée et le cluster qui a la probabilité la plus élevée pour que les cas d’entrée.  
   
- En cas de clustering K-Means, puisque les cas ne peuvent appartenir qu'à un seul cluster, avec un poids d'appartenance de 1, la distance de cluster est toujours 0. Toutefois, dans le cas de K-Means, chaque cluster est supposé avoir un centroïde. Vous pouvez obtenir la valeur du centroïde en interrogeant ou en parcourant la table imbriquée NODE_DISTRIBUTION dans le contenu du modèle d'exploration de données. Pour plus d’informations, consultez [Mining Model Content for Clustering Models &#40;Analysis Services - Data Mining&#41;](../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md).  
+ En cas de clustering K-Means, puisque les cas ne peuvent appartenir qu'à un seul cluster, avec un poids d'appartenance de 1, la distance de cluster est toujours 0. Toutefois, dans le cas de K-Means, chaque cluster est supposé avoir un centroïde. Vous pouvez obtenir la valeur du centroïde en interrogeant ou en parcourant la table imbriquée NODE_DISTRIBUTION dans le contenu du modèle d'exploration de données. Pour plus d’informations, consultez [Contenu du modèle d’exploration de données pour les modèles de clustering &#40;Analysis Services - Exploration de données&#41;](../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md).  
   
  Dans le cas de la méthode de clustering EM, tous les points à l'intérieur du cluster sont considérés comme ayant la même probabilité ; il n'ya donc pas, par définition, de centroïde pour le cluster par conception. La valeur de **ClusterDistance** entre un cas particulier et un cluster particulier *N* est calculé comme suit :  
   
- ClusterDistance(N) =1–(membershipWeight(N))  
+ ClusterDistance(N) =1-(membershipWeight(N))  
   
  - ou -  
   
- ClusterDistance(N) = 1 – ClusterProbability (N))  
+ ClusterDistance(N) = 1-ClusterProbability (N))  
   
 ## <a name="related-prediction-functions"></a>Fonctions de prédiction connexes  
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fournit les fonctions supplémentaires suivantes permettant d'interroger des modèles de clustering :  
@@ -58,7 +58,7 @@ ClusterDistance([<ClusterID expression>])
   
 -   Utilisez le [PredictCaseLikelihood &#40;DMX&#41; ](../dmx/predictcaselikelihood-dmx.md) fonction pour retourner une mesure comprise entre 0 et 1 qui indique la probabilité un cas d’entrée est d’exister compte tenu du modèle appris par l’algorithme.  
   
-## <a name="example1-obtaining-cluster-distance-to-the-most-likely-cluster"></a>Exemple 1 : obtention de la distance de cluster au cluster le plus probable  
+## <a name="example1-obtaining-cluster-distance-to-the-most-likely-cluster"></a>Exemple 1 : Obtention de la Distance de Cluster à Cluster le plus probable  
  L'exemple suivant retourne la distance séparant le cas spécifié du cluster auquel il est le plus susceptible d'appartenir.  
   
 ```  
@@ -88,7 +88,7 @@ NATURAL PREDICTION JOIN
 |--------------|  
 |Cluster 6|  
   
-## <a name="example2-obtaining-distance-to-a-specified-cluster"></a>Exemple 2 : obtention de la distance à un cluster spécifié  
+## <a name="example2-obtaining-distance-to-a-specified-cluster"></a>Exemple 2 : Obtention de la Distance à un Cluster spécifié  
  La syntaxe suivante utilise l'ensemble de lignes du schéma Content du modèle d'exploration de données pour retourner la liste des ID et légendes de nœud des clusters du modèle. Vous pouvez ensuite utiliser la légende du nœud en tant qu’argument d’identificateur de cluster dans le **ClusterDistance** (fonction).  
   
 ```  
@@ -129,6 +129,6 @@ NATURAL PREDICTION JOIN
  [Cluster &#40;DMX&#41;](../dmx/cluster-dmx.md)   
  [Data Mining Extensions &#40;DMX&#41; référence de fonction](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Fonctions &#40;DMX&#41;](../dmx/functions-dmx.md)   
- [Contenu du modèle d’exploration de données pour les modèles de Clustering &#40;Analysis Services - Exploration de données&#41;](../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
+ [Contenu du modèle d’exploration de données pour les modèles de clustering &#40;Analysis Services - Exploration de données&#41;](../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
   
   

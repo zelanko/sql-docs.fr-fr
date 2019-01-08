@@ -1,5 +1,5 @@
 ---
-title: Définition d’une relation plusieurs-à-plusieurs | Documents Microsoft
+title: Définition d’une relation plusieurs-à-plusieurs | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 487b61512e1dbd784b9b63eb0c3efdf1f98281ec
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: c2541637af690395bb52c86a604ed7b37bd3fb00
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019626"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518025"
 ---
-# <a name="lesson-5-3---defining-a-many-to-many-relationship"></a>Leçon 5-3-définir une relation plusieurs-à-plusieurs
+# <a name="lesson-5-3---defining-a-many-to-many-relationship"></a>Leçon 5-3 : définition d’une relation plusieurs-à-plusieurs
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 Lorsque vous définissez une dimension, chaque fait est joint généralement à un et un seul membre de dimension, tandis qu'un même membre de dimension peut être associé à plusieurs faits différents. Par exemple, chaque client peut avoir plusieurs commandes mais chaque commande se rapporte à un seul client. Dans la terminologie des bases de données relationnelles, on parle de *relation un-à-plusieurs*. Cependant, un seul fait peut parfois être joint à plusieurs membres de dimension. Dans la terminologie des bases de données relationnelles, on parle de *relation plusieurs-à-plusieurs*. Par exemple, l'achat d'un client peut être motivé par plusieurs raisons et un même motif d'achat peut être associé à plusieurs achats. Une table de jointure sert à définir les motifs de vente relatifs à chaque achat. Une dimension Sales Reason créée à partir de relations de ce type aura par conséquent plusieurs membres associés à une seule transaction de vente. Les dimensions plusieurs-à-plusieurs étendent le modèle dimensionnel au-delà du schéma en étoile classique et prend en charge les analyses complexes lorsque les dimensions ne sont pas reliées directement à une table de faits.  
@@ -26,7 +26,7 @@ Dans [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], les relations p
 Dans une dimension plusieurs à plusieurs, les valeurs sont des sommes distinctes, ce qui signifie qu'elles ne s'agrègent pas plus d'une fois au membre Tous.  
   
 > [!NOTE]  
-> Afin de prendre en charge une relation de dimensions plusieurs-à-plusieurs, il est nécessaire de définir une relation clé primaire-clé étrangère dans la vue de source de données entre toutes les tables impliquées. Si vous ne procédez pas ainsi, vous ne pourrez pas sélectionner le groupe de mesures intermédiaire correct pour établir la relation sous l’onglet **Utilisation de la dimension** du Concepteur de cube.  
+> Pour prendre en charge une relation de dimension plusieurs-à-plusieurs, une relation de clé étrangère-clé primaire doit être définie dans la vue de source de données entre toutes les tables qui sont impliquées. Si vous ne procédez pas ainsi, vous ne pourrez pas sélectionner le groupe de mesures intermédiaire correct pour établir la relation sous l’onglet **Utilisation de la dimension** du Concepteur de cube.  
   
 Pour plus d’informations, consultez [Relations de dimension](../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)et [Définir une relation plusieurs à plusieurs et les propriétés d’une relation plusieurs à plusieurs](../analysis-services/multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md).  
   
@@ -44,7 +44,7 @@ Au cours des tâches de cette rubrique, vous allez définir la dimension Sales R
   
 5.  Dans la boîte de dialogue **Ajouter/supprimer des tables** , ajoutez la table **DimSalesReason** et la table **FactInternetSalesReason** à la liste **Objets inclus** , puis cliquez sur **OK**.  
   
-    Notez que les relations clé primaire-clé étrangère entre les tables impliquées sont établies automatiquement, car ces relations sont définies dans la base de données relationnelles sous-jacente. Si ces relations n'étaient pas définies dans la base de données relationnelles, il vous faudrait les définir dans la vue de source de données.  
+    Notez que les relations de clé étrangère-clé primaires entre les tables impliquées sont établies automatiquement, car ces relations sont définies dans la base de données relationnelle sous-jacente. Si ces relations n'étaient pas définies dans la base de données relationnelles, il vous faudrait les définir dans la vue de source de données.  
   
 6.  Dans le menu **Format** , pointez sur **Disposition automatique**, puis cliquez sur **Diagramme**.  
   
@@ -80,7 +80,7 @@ Au cours des tâches de cette rubrique, vous allez définir la dimension Sales R
   
 5.  Sélectionnez **Internet Sales Reason Count** et vérifiez les propriétés de cette mesure dans la fenêtre des propriétés.  
   
-    Notez que la propriété **AggregateFunction** de cette mesure est définie comme **Count** , et non **Sum**. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]Choisissez **nombre** , car le type de données sous-jacent est un type de données chaîne. Les deux autres colonnes dans la table de faits sous-jacente n'ont pas été sélectionnées en tant que mesures car [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] a détecté qu'il s'agissait de clés numériques et non de mesures en tant que telles. Pour plus d’informations, consultez [Définir le comportement semi-additif](../analysis-services/multidimensional-models/define-semiadditive-behavior.md).  
+    Notez que la propriété **AggregateFunction** de cette mesure est définie comme **Count** , et non **Sum**. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] a choisi **Count** , car le type de données sous-jacent est un type chaîne. Les deux autres colonnes dans la table de faits sous-jacente n'ont pas été sélectionnées en tant que mesures car [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] a détecté qu'il s'agissait de clés numériques et non de mesures en tant que telles. Pour plus d’informations, consultez [Définir le comportement semi-additif](../analysis-services/multidimensional-models/define-semiadditive-behavior.md).  
   
 6.  Dans la fenêtre des propriétés, remplacez la propriété **Visible** de la mesure **Internet Sales Reason Count** par **False**.  
   
@@ -88,7 +88,7 @@ Au cours des tâches de cette rubrique, vous allez définir la dimension Sales R
   
     L’illustration suivante montre les propriétés de la mesure **Internet Sales Reason Count** .  
   
-    ![Les propriétés pour la mesure Internet Sales Reason Count](../analysis-services/media/l5-many-to-many-2.gif "propriétés pour la mesure Internet Sales Reason Count")  
+    ![Propriétés de mesure de Internet Sales Reason Count](../analysis-services/media/l5-many-to-many-2.gif "propriétés pour les mesures Internet Sales Reason Count")  
   
 ## <a name="defining-the-many-to-many-dimension"></a>Définition d'une dimension plusieurs-à-plusieurs  
   
@@ -106,7 +106,7 @@ Au cours des tâches de cette rubrique, vous allez définir la dimension Sales R
   
 7.  Dans la liste **Colonne de nom** , sélectionnez **SalesReasonName**.  
   
-8.  Cliquez sur **Suivant**.  
+8.  Cliquer sur **Suivant**.  
   
 9. Dans la page **Sélectionner les attributs de la dimension** , l’attribut **Sales Reason Key** est sélectionné automatiquement car c’est l’attribut de clé. Cochez la case à côté de l’attribut **Sales Reason Reason Type** , remplacez son nom par **Sales Reason Type**, puis cliquez sur **Suivant**.  
   
@@ -171,10 +171,10 @@ Au cours des tâches de cette rubrique, vous allez définir la dimension Sales R
     ![Données et filtrer les volets du Concepteur de Cube](../analysis-services/media/l5-many-to-many-5.gif "données et filtrer les volets du Concepteur de Cube")  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
-[Définir la granularité des dimensions dans un groupe de mesures](../analysis-services/lesson-5-4-defining-dimension-granularity-within-a-measure-group.md)  
+[Définition de la granularité des dimensions dans un groupe de mesures](../analysis-services/lesson-5-4-defining-dimension-granularity-within-a-measure-group.md)  
   
 ## <a name="see-also"></a>Voir aussi  
-[Utiliser des diagrammes dans le Concepteur de vue de Source de données & #40 ; Analysis Services & #41 ;](../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
+[Utiliser des diagrammes dans un concepteur de vues de sources de données &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
 [Relations de dimension](../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)  
 [Définir une relation plusieurs à plusieurs et les propriétés d’une relation plusieurs à plusieurs](../analysis-services/multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md)  
   

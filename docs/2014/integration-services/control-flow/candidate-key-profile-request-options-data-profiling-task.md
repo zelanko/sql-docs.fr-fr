@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
@@ -13,12 +12,12 @@ ms.assetid: 8632dbc4-4394-4dc7-b19c-f9adeb21ba52
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 78fb82daf907173befd246799686433a6eab3b43
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 64975d3e249db13a956f6300d340ac77dfc29db8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190819"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52767151"
 ---
 # <a name="candidate-key-profile-request-options-data-profiling-task"></a>Options Demande de profil de clé candidate (tâche de profilage des données)
   Utilisez le volet **Propriétés de la demande** de la page **Demandes de profil** pour définir les options de la **Demande de profil de clé candidate** sélectionnée dans le volet Demandes. Un profil de clé candidate signale si une colonne ou un ensemble de colonnes est une clé, ou une clé approximative, pour la table sélectionnée. Ce profil peut également vous aider à identifier des problèmes dans vos données tels que des valeurs en double dans une colonne clé potentielle.  
@@ -93,7 +92,7 @@ ms.locfileid: "48190819"
 > [!NOTE]  
 >  Quand vous utilisez un caractère générique **(\*)** pour **ColumnName**, l’option **CompareOptions** est en lecture seule et est définie sur le paramètre **Par défaut**.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**Default**|Trie et compare des données d'après le classement de la colonne dans la table source.|  
 |**BinarySort**|Trie et compare les données en fonction des modèles binaires définis pour chaque caractère. L'ordre de tri binaire respecte la casse et les accents. Il s'agit aussi de l'ordre de tri le plus rapide.|  
@@ -101,7 +100,7 @@ ms.locfileid: "48190819"
   
  Si vous sélectionnez **DictionarySort**, vous pouvez également sélectionner toutes les combinaisons d’options répertoriées dans le tableau suivant. Par défaut, aucune de ces options supplémentaires n'est sélectionnée.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**IgnoreCase**|Indique si la comparaison fait la distinction entre les lettres majuscules et minuscules. Si cette option est définie, la comparaison de chaînes ignore la casse. Par exemple, « ABC » est alors identique à « abc ».|  
 |**IgnoreNonSpace**|Indique si la comparaison fait la distinction entre les caractères avec espace et les caractères diacritiques. Si cette option est définie, la comparaison ignore les caractères diacritiques. Par exemple, « å » est identique à « a ».|  
@@ -116,7 +115,7 @@ ms.locfileid: "48190819"
  **ThresholdSetting**  
  Cette propriété dispose des options répertoriées dans le tableau suivant. La valeur par défaut de cette propriété est **Spécifié**.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**Aucun**|Aucun seuil n’est spécifié. La puissance de la clé est signalée, quelle que soit sa valeur.|  
 |**Spécifié**|Un seuil est spécifié dans **KeyStrengthThreshold**. La puissance de clé est précisée uniquement si elle est supérieure au seuil.|  
@@ -129,7 +128,7 @@ ms.locfileid: "48190819"
  Spécifiez le nombre maximal de violations de clé candidate à signaler dans la sortie. La valeur par défaut de cette propriété est 100. Cette option est désactivée quand **Exact** est sélectionné en tant que valeur **KeyStrengthThresholdSetting**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Éditeur de tâche de profilage des données &#40;Page Général&#41;](../general-page-of-integration-services-designers-options.md)   
+ [Éditeur de tâche de profilage de données &#40;page Général&#41;](../general-page-of-integration-services-designers-options.md)   
  [Formulaire de profil rapide de table simple &#40;tâche de profilage des données&#41;](single-table-quick-profile-form-data-profiling-task.md)  
   
   

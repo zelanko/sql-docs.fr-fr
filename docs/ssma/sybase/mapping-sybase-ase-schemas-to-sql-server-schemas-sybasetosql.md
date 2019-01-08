@@ -12,12 +12,12 @@ ms.assetid: 2c927003-c49d-4fe1-8e3e-5b2899166268
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: ae3f3363c8cedee988f55875fab5d15e58114238
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2a27b2e7c915a1ac13050d0ed188002cd42746c8
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843297"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400432"
 ---
 # <a name="mapping-sybase-ase-schemas-to-sql-server-schemas-sybasetosql"></a>Mappage de schémas Sybase ASE à des schémas SQL Server (SybaseToSQL)
 Dans Sybase Adaptive Server Enterprise (ASE), chaque base de données a un ou plusieurs schémas. Par défaut, SSMA migre tous les objets dans une base de données et le schéma à la même base de données et le même schéma dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure. Toutefois, vous pouvez personnaliser le mappage entre l’ASE et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou des bases de données SQL Azure et des schémas.  
@@ -52,7 +52,7 @@ Vous pouvez mapper la base de données source vers une base de données cible. P
   
 -   Mappage à SQL Azure  
   
-Vous pouvez mapper la base de données source à la base de données SQL Azure cibles connectés ou à n’importe quel schéma dans la base de données SQL Azure cibles connectés. Si vous mappez la source de schéma à aucun schéma n’existent pas sous la base de données connectée cible, vous serez invité avec un message **« schéma n’existe pas dans les métadonnées de la cible. Il est créé pendant la synchronisation. Voulez-vous continuer ? »** Cliquez sur Oui.  
+Vous pouvez mapper la base de données source à la base de données SQL Azure cibles connectés ou à n’importe quel schéma dans la base de données SQL Azure cibles connectés. Si vous mappez la source de schéma à aucun schéma n’existent pas sous la base de données connectée cible, vous serez invité avec un message **« schéma n’existe pas dans les métadonnées de la cible. Il est créé pendant la synchronisation. Voulez-vous continuer ? "** Cliquez sur Oui.  
   
 ## <a name="reverting-to-the-default-database-and-schema"></a>Retour à la base de données par défaut et le schéma  
 Si vous personnalisez le mappage entre un schéma de l’ASE et un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou schéma de SQL Azure, vous pouvez rétablir le mappage vers les valeurs par défaut.  

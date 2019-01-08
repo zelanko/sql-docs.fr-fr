@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - roles [SQL Server], SQL Server Agent
@@ -19,12 +19,12 @@ ms.assetid: 719ce56b-d6b2-414a-88a8-f43b725ebc79
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a94f0a88442051597a845623c26e4cc9fe782d31
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dcb939b8eb04fafce163a395b05eb0e272977283
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168759"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52773771"
 ---
 # <a name="sql-server-agent-fixed-database-roles"></a>Rôles de base de données fixes de SQL Server Agent
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] possède les rôles fixes de base de données **msdb** suivants, qui permettent aux administrateurs de contrôler plus précisément l’accès à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Les rôles sont classés ci-après selon leurs privilèges d'accès, du moins privilégié au plus privilégié :  
@@ -50,10 +50,10 @@ ms.locfileid: "48168759"
   
 |Action|Opérateurs|Travaux locaux<br /><br /> (travaux lui appartenant uniquement)|Calendriers de travaux<br /><br /> (planifications lui appartenant uniquement)|Proxys|  
 |------------|---------------|----------------------------------------|------------------------------------------------|-------------|  
-|Créer/modifier/supprimer|non|Oui <sup>1</sup>|Oui|non|  
+|Créer/modifier/supprimer|Non|Oui <sup>1</sup>|Oui|Non|  
 |Afficher la liste (énumérer)|Oui <sup>2</sup>|Oui|Oui|Oui <sup>3</sup>|  
-|Activer/désactiver|non|Oui|Oui|Non applicable|  
-|Afficher les propriétés|non|Oui|Oui|non|  
+|Activer/désactiver|Non|Oui|Oui|Non applicable|  
+|Afficher les propriétés|Non|Oui|Oui|Non|  
 |Exécuter/arrêter/démarrer|Non applicable|Oui|Non applicable|Non applicable|  
 |Afficher l’historique des travaux|Non applicable|Oui|Non applicable|Non applicable|  
 |Supprimer l'historique des travaux|Non applicable|Ne <sup>4</sup>|Non applicable|Non applicable|  
@@ -77,14 +77,14 @@ ms.locfileid: "48168759"
   
 |Action|Opérateurs|Travaux locaux|Travaux multiserveur|Calendriers de travaux|Proxys|  
 |------------|---------------|----------------|----------------------|-------------------|-------------|  
-|Créer/modifier/supprimer|non|Oui <sup>1</sup> (travaux lui appartenant uniquement)|non|Oui (planifications lui appartenant uniquement)|non|  
+|Créer/modifier/supprimer|Non|Oui <sup>1</sup> (travaux lui appartenant uniquement)|Non|Oui (planifications lui appartenant uniquement)|Non|  
 |Afficher la liste (énumérer)|Oui <sup>2</sup>|Oui|Oui|Oui|Oui <sup>3</sup>|  
-|Activer/désactiver|non|Oui (travaux lui appartenant uniquement)|non|Oui (planifications lui appartenant uniquement)|Non applicable|  
-|Afficher les propriétés|non|Oui|Oui|Oui|non|  
-|Modifier les propriétés|non|Oui (travaux lui appartenant uniquement)|non|Oui (planifications lui appartenant uniquement)|non|  
-|Exécuter/arrêter/démarrer|Non applicable|Oui (travaux lui appartenant uniquement)|non|Non applicable|Non applicable|  
+|Activer/désactiver|Non|Oui (travaux lui appartenant uniquement)|Non|Oui (planifications lui appartenant uniquement)|Non applicable|  
+|Afficher les propriétés|Non|Oui|Oui|Oui|Non|  
+|Modifier les propriétés|Non|Oui (travaux lui appartenant uniquement)|Non|Oui (planifications lui appartenant uniquement)|Non|  
+|Exécuter/arrêter/démarrer|Non applicable|Oui (travaux lui appartenant uniquement)|Non|Non applicable|Non applicable|  
 |Afficher l’historique des travaux|Non applicable|Oui|Oui|Non applicable|Non applicable|  
-|Supprimer l'historique des travaux|Non applicable|Ne <sup>4</sup>|non|Non applicable|Non applicable|  
+|Supprimer l'historique des travaux|Non applicable|Ne <sup>4</sup>|Non|Non applicable|Non applicable|  
 |Attacher/détacher|Non applicable|Non applicable|Non applicable|Oui (planifications lui appartenant uniquement)|Non applicable|  
   
  <sup>1</sup> ne pouvez pas modifier l’appartenance des travaux.  
@@ -109,14 +109,14 @@ ms.locfileid: "48168759"
   
 |Action|Alertes|Opérateurs|Travaux locaux|Travaux multiserveur|Calendriers de travaux|Proxys|  
 |------------|------------|---------------|----------------|----------------------|-------------------|-------------|  
-|Créer/modifier/supprimer|non|non|Oui <sup>2</sup> (travaux lui appartenant uniquement)|non|Oui (planifications lui appartenant uniquement)|non|  
+|Créer/modifier/supprimer|Non|Non|Oui <sup>2</sup> (travaux lui appartenant uniquement)|Non|Oui (planifications lui appartenant uniquement)|Non|  
 |Afficher la liste (énumérer)|Oui|Oui <sup>1</sup>|Oui|Oui|Oui|Oui|  
-|Activer/désactiver|non|non|Oui <sup>3</sup>|non|Oui <sup>4</sup>|Non applicable|  
+|Activer/désactiver|Non|Non|Oui <sup>3</sup>|Non|Oui <sup>4</sup>|Non applicable|  
 |Afficher les propriétés|Oui|Oui|Oui|Oui|Oui|Oui|  
-|Modifier les propriétés|non|non|Oui (travaux lui appartenant uniquement)|non|Oui (planifications lui appartenant uniquement)|non|  
-|Exécuter/arrêter/démarrer|Non applicable|Non applicable|Oui|non|Non applicable|Non applicable|  
+|Modifier les propriétés|Non|Non|Oui (travaux lui appartenant uniquement)|Non|Oui (planifications lui appartenant uniquement)|Non|  
+|Exécuter/arrêter/démarrer|Non applicable|Non applicable|Oui|Non|Non applicable|Non applicable|  
 |Afficher l’historique des travaux|Non applicable|Non applicable|Oui|Oui|Non applicable|Non applicable|  
-|Supprimer l'historique des travaux|Non applicable|Non applicable|Oui|non|Non applicable|Non applicable|  
+|Supprimer l'historique des travaux|Non applicable|Non applicable|Oui|Non|Non applicable|Non applicable|  
 |Attacher/détacher|Non applicable|Non applicable|Non applicable|Non applicable|Oui (planifications lui appartenant uniquement)|Non applicable|  
   
  <sup>1</sup> pouvez obtenir la liste des opérateurs disponibles pour une utilisation dans **sp_notify_operator** et **propriétés du travail** boîte de dialogue de Management Studio.  

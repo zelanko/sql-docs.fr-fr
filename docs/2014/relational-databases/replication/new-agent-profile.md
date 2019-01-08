@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.profiles.newperfprofile.f1
@@ -15,12 +14,12 @@ ms.assetid: ebf59330-a421-45a5-9020-0484a96852bc
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f817afb2364728b93718f9dc5831b501f681d9f0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 12fc3e7e7b67b9f02f2a9744d4af2af175ce0812
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070609"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52780291"
 ---
 # <a name="new-agent-profile"></a>Nouveau profil de l'Agent
   Utilisez la boîte de dialogue **Nouveau profil de l'Agent** pour créer un profil. Les nouveaux profils sont toujours dérivés de profils existants, mais il n'est pas possible de les modifier pour répondre aux besoins des applications. Lorsqu'un profil est créé, vous pouvez l'appliquer à des travaux de l'agent existants ou à venir dans la boîte de dialogue **Profils de l'Agent** . Vous pouvez modifier les valeurs de paramètre de l’agent dans la boîte de dialogue \<Propriétés de **Nom_Profil_Agent>**.  

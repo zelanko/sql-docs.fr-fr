@@ -1,5 +1,5 @@
 ---
-title: Parcourir un modèle à l’aide de la visionneuse de règles Microsoft Association | Documents Microsoft
+title: Explorer un modèle à l’aide de la visionneuse de règles d’Association de Microsoft | Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 8eeedec727fe33b577b7bd382a8b69371428e563
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: bc244667df41f625084c9d436d30652491e4b3dc
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014766"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503073"
 ---
 # <a name="browse-a-model-using-the-microsoft-association-rules-viewer"></a>Explorer un modèle à l'aide de la visionneuse de l'algorithme MAR (Microsoft Association Rules)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "34014766"
 > [!NOTE]  
 >  La visionneuse de l'arborescence de contenu générique [!INCLUDE[msCoName](../../includes/msconame-md.md)] permet de consulter des informations détaillées relatives aux équations utilisées dans le modèle et les motifs découverts. Pour plus d’informations, consultez [Explorer un modèle à l’aide de la visionneuse de l’arborescence de contenu générique Microsoft](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md) ou [Visionneuse de l’arborescence de contenu générique Microsoft &#40;exploration de données&#41;](http://msdn.microsoft.com/library/751b4393-f6fd-48c1-bcef-bdca589ce34c).  
   
- Pour plus d’informations sur la création, l’exploration et l’utilisation d’un modèle d’exploration de données Association, consultez [Leçon 3 : Génération d’un scénario de panier d’achat &#40;Didacticiel d’exploration de données intermédiaire&#41;](http://msdn.microsoft.com/library/651eef38-772e-4d97-af51-075b1b27fc5a).  
+ Pour une procédure pas à pas montrant comment créer, Explorer et utiliser un modèle d’exploration de données d’association, consultez [leçon 3 : Génération d’un scénario de panier &#40;didacticiel d’exploration de données intermédiaire&#41;](http://msdn.microsoft.com/library/651eef38-772e-4d97-af51-075b1b27fc5a).  
   
 ##  <a name="BKMK_ViewerTabs"></a> Onglets de la visionneuse  
  Lorsque vous parcourez un modèle d'exploration de données dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], le modèle s'affiche sous l'onglet **Visionneuse de modèle d'exploration de données** du Concepteur d'exploration de données, à l'aide de la visionneuse appropriée pour ce modèle. La Visionneuse de l'algorithme MAR ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules) contient les onglets suivants :  
@@ -43,7 +43,7 @@ ms.locfileid: "34014766"
  Chaque onglet contient la case à cocher **Afficher le nom long** qui vous permet d'afficher ou de masquer, dans la règle ou le jeu d'éléments, la table d'où provient le jeu d'éléments.  
   
 ###  <a name="BKMK_Itemsets"></a> Jeux d'éléments  
- L'onglet **Jeux d'éléments** affiche la liste des jeux d'éléments que le modèle a identifiés comme apparaissant fréquemment ensemble. L'onglet contient une grille comportant les colonnes suivantes : **Prise en charge**, **Taille**et **Jeu d'éléments**. Pour plus d'informations sur la prise en charge, consultez [Microsoft Association Algorithm](../../analysis-services/data-mining/microsoft-association-algorithm.md). La colonne **Taille** affiche le nombre d'éléments présents dans le jeu d'éléments. La colonne **Jeu d'éléments** affiche le jeu d'éléments actuel que le modèle a découvert. Vous pouvez contrôler le format du jeu d'éléments à l'aide de la liste **Afficher** , en choisissant parmi les options suivantes :  
+ L'onglet **Jeux d'éléments** affiche la liste des jeux d'éléments que le modèle a identifiés comme apparaissant fréquemment ensemble. L'onglet contient une grille comportant les colonnes suivantes : **Prise en charge**, **taille**, et **jeu d’éléments**. Pour plus d'informations sur la prise en charge, consultez [Microsoft Association Algorithm](../../analysis-services/data-mining/microsoft-association-algorithm.md). La colonne **Taille** affiche le nombre d'éléments présents dans le jeu d'éléments. La colonne **Jeu d'éléments** affiche le jeu d'éléments actuel que le modèle a découvert. Vous pouvez contrôler le format du jeu d'éléments à l'aide de la liste **Afficher** , en choisissant parmi les options suivantes :  
   
 -   **Afficher le nom et la valeur de l'attribut**  
   
@@ -58,7 +58,7 @@ ms.locfileid: "34014766"
  [Retour au début](#BKMK_ViewerTabs)  
   
 ###  <a name="BKMK_Rules"></a> Règles  
- L'onglet **Règles** affiche les règles découvertes par l'algorithme d'association. L'onglet **Règles** comprend une grille qui contient les colonnes suivantes : **Probabilité**, **Importance**et **Règle**. La probabilité indique la probabilité du résultat d'une règle. L'importance sert à mesurer l'utilité d'une règle. Même si la probabilité d'une règle est élevée, son utilité peut être sans importance. La colonne Importance permet de préciser ce point. Par exemple, si tous les jeux d'éléments contiennent un état spécifique d'un attribut, une règle prédisant l'état est insignifiante même si sa probabilité est très élevée. Plus l'importance est élevée, plus la règle est importante.  
+ L'onglet **Règles** affiche les règles découvertes par l'algorithme d'association. Le **règles** onglet comprend une grille qui contient les colonnes suivantes : **Probabilité**, **Importance**, et **règle**. La probabilité indique la probabilité du résultat d'une règle. L'importance sert à mesurer l'utilité d'une règle. Même si la probabilité d'une règle est élevée, son utilité peut être sans importance. La colonne Importance permet de préciser ce point. Par exemple, si tous les jeux d'éléments contiennent un état spécifique d'un attribut, une règle prédisant l'état est insignifiante même si sa probabilité est très élevée. Plus l'importance est élevée, plus la règle est importante.  
   
  Vous pouvez utiliser les options **Probabilité minimale** et **Importance minimale** pour effectuer un filtrage des règles, similaire au filtrage que vous pouvez effectuer sous l'onglet **Jeux d'éléments** . Vous pouvez également utiliser **Filtrer la règle** pour filtrer une règle en fonction des états d'attribut qu'elle contient.  
   
@@ -67,17 +67,17 @@ ms.locfileid: "34014766"
  [Retour au début](#BKMK_ViewerTabs)  
   
 ###  <a name="BKMK_Dependency"></a> Réseau de dépendances  
- L'onglet **Réseau de dépendances** contient une visionneuse du réseau de dépendances. Chaque nœud figurant dans la visionneuse représente un élément, par exemple « state = WA ». La flèche entre les nœuds représente l'association entre les éléments. Le sens de la flèche détermine l'association entre les éléments conformément aux règles découvertes par l'algorithme. Par exemple, si la visionneuse contient les trois éléments A, B et C, et que C est prédit par A et B, lorsque vous sélectionnez le nœud C, deux flèches pointent vers ce nœud : A vers C et B vers C.  
+ L'onglet **Réseau de dépendances** contient une visionneuse du réseau de dépendances. Chaque nœud figurant dans la visionneuse représente un élément, par exemple « state = WA ». La flèche entre les nœuds représente l'association entre les éléments. Le sens de la flèche détermine l'association entre les éléments conformément aux règles découvertes par l'algorithme. Par exemple, si la visionneuse contient les trois éléments A, B et C et C sont prédit par A et B, si vous sélectionnez le nœud C, deux flèches pointent vers le nœud C - A à C et B à C.  
   
  Le curseur situé à gauche de la visionneuse agit comme un filtre lié à la probabilité des règles. Si vous déplacez le curseur vers le bas, seuls les liens les plus forts sont affichés.  
   
  [Retour au début](#BKMK_ViewerTabs)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Algorithme Microsoft Association](../../analysis-services/data-mining/microsoft-association-algorithm.md)   
- [Tâches de la visionneuse modèle d’exploration de données et de procédures](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
- [Tâches de la visionneuse modèle d’exploration de données et de procédures](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
- [Outils d’exploration de données](../../analysis-services/data-mining/data-mining-tools.md)   
+ [Microsoft Association Algorithm](../../analysis-services/data-mining/microsoft-association-algorithm.md)   
+ [Tâches de la visionneuse de modèle d'exploration de données et procédures](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
+ [Tâches de la visionneuse de modèle d'exploration de données et procédures](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
+ [Outils d'exploration de données](../../analysis-services/data-mining/data-mining-tools.md)   
  [Visionneuses de modèle d’exploration de données](../../analysis-services/data-mining/data-mining-model-viewers.md)  
   
   

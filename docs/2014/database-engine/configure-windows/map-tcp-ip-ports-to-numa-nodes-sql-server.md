@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - NUMA
@@ -21,12 +20,12 @@ ms.assetid: 07727642-0266-4cbc-8c55-3c367e4458ca
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d8b4b63ffb3ee47ed72e0dfe3190fe4231eca5d6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 138e5743e18ba6e39aa55aaec6931413dd21175b
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184669"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52640170"
 ---
 # <a name="map-tcp-ip-ports-to-numa-nodes-sql-server"></a>Mapper les ports TCP/IP aux nœuds NUMA (SQL Server)
   Cette rubrique explique comment mapper des ports TCP/IP à des nœuds NUMA (Non-Uniform Memory Access) à l'aide du Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Au démarrage, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] écrit les informations relatives aux nœuds dans le journal des erreurs.  
@@ -53,7 +52,7 @@ ms.locfileid: "48184669"
   
 2.  Dans le volet de détails, double-cliquez sur **TCP/IP**.  
   
-3.  Sous l'onglet **Adresses IP** , dans la zone **Port TCP** de la section correspondant à l'adresse IP à configurer, ajoutez l'identificateur du nœud NUMA entre crochets, après le numéro de port. Par exemple, pour le port TCP 1500 et les nœuds 0, 2 et 5, utilisez `1500[37]`, ou `1500[0x25]`.  
+3.  Sous l'onglet **Adresses IP** , dans la zone **Port TCP** de la section correspondant à l'adresse IP à configurer, ajoutez l'identificateur du nœud NUMA entre crochets, après le numéro de port. Par exemple, pour le port TCP 1500 et les nœuds 0, 2 et 5, utilisez `1500[37]` ou `1500[0x25]`.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Configurer SQL Server pour utiliser Soft-NUMA &#40;SQL Server&#41;](soft-numa-sql-server.md)  

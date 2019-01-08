@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.maint.shrink.f1
@@ -17,12 +16,12 @@ ms.assetid: a9874cac-cded-4145-9c38-8aafd267dbee
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5bfbe4f8250749935a950d8eedf5bf95cfb78e82
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6f96e45cdf5f94e3e8b71514e1bb3e7ed4d99cfb
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213569"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52786391"
 ---
 # <a name="shrink-database-task-maintenance-plan"></a>Tâche Réduire la base de données (Plan de maintenance)
   Utilisez la boîte de dialogue **Tâche Réduire la base de données** pour créer une tâche qui tente de réduire la taille des bases de données sélectionnées. Utilisez les options ci-dessous pour déterminer la quantité d'espace inutilisé à conserver dans la base de données après sa réduction (plus le pourcentage est élevé, moins la base la base de données sera réduite). La valeur est calculée à partir du pourcentage des données effectivement présentes dans la base de données. Par exemple, une base de données de 100 Mo qui contiendrait 60 Mo de données et 40 Mo d'espace libre, avec un pourcentage d'espace libre de 50 %, pourrait conduire à 60 Mo de données et 30 Mo d'espace libre (en effet, 50 % de 60 Mo font 30 Mo). Seul l'espace supplémentaire de la base de données est éliminé. Les valeurs valides sont comprises entre 0 et 100.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transferdatabasetask.f1
@@ -15,12 +14,12 @@ ms.assetid: b9a2e460-cdbc-458f-8df8-06b8b2de3d67
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8b07bc36ebf3ca16bac2a2134d1054d850c19886
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: da6fd76284caf53ff6a3d46d1bbfd0f514615c2e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203359"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52805551"
 ---
 # <a name="transfer-database-task"></a>Tâche de transfert de bases de données
   La tâche de transfert de bases de données transfère une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entre deux instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Contrairement aux autres tâches qui ne transfèrent les objets [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qu'en les copiant, la tâche de transfert de base de données peut copier ou déplacer une base de données. Cette tâche peut également servir à copier une base de données sur le même serveur.  
@@ -39,7 +38,7 @@ ms.locfileid: "48203359"
 ## <a name="execution-value"></a>Valeur d'exécution  
  La valeur d'exécution, définie dans la propriété `ExecutionValue` de la tâche, renvoie la valeur 1, car contrairement aux autres tâches de transfert, la tâche de transfert de bases de données ne peut transférer qu'une seule base de données.  
   
- En affectant une variable définie par l’utilisateur à la `ExecValueVariable` propriété de la tâche de transfert de base de données, informations sur le transfert de message d’erreur peut être rendue disponible aux autres objets dans le package. Pour plus d’informations, consultez [Variables Integration Services &#40;SSIS&#41;](../integration-services-ssis-variables.md) et [Utiliser des variables dans des packages](../use-variables-in-packages.md).  
+ En affectant une variable définie par l'utilisateur à la propriété `ExecValueVariable` de la tâche de transfert de bases de données, les informations sur le transfert de messages d'erreur peuvent être rendues disponibles aux autres objets du package. Pour plus d’informations, consultez [Variables Integration Services &#40;SSIS&#41;](../integration-services-ssis-variables.md) et [Utiliser des variables dans des packages](../use-variables-in-packages.md).  
   
 ## <a name="log-entries"></a>Entrées du journal  
  La tâche de transfert de bases de données comporte les entrées de journal personnalisées suivantes :  
@@ -50,7 +49,7 @@ ms.locfileid: "48203359"
   
 -   SourceDB    Cette entrée du journal indique le nom de la base de données transférée.  
   
- En outre, une entrée de journal pour le `OnInformation` événement est écrite lorsque la base de données de destination est remplacée.  
+ En outre, une entrée de journal pour l'événement `OnInformation` est écrite lorsque la base de données de destination est remplacée.  
   
 ## <a name="security-and-permissions"></a>Sécurité et autorisations  
  Pour transférer une base de données à l'aide du mode hors connexion, l'utilisateur qui exécute le package doit être un membre du rôle de serveur sysadmin.  
@@ -72,15 +71,15 @@ ms.locfileid: "48203359"
   
  Pour plus d'informations sur les propriétés définissables dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , cliquez sur l'une des rubriques suivantes :  
   
--   [Éditeur de tâche de base de données de transfert &#40;Page Général&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Éditeur de tâche de transfert de bases de données &#40;page Général&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Éditeur de tâche de base de données de transfert &#40;Page des bases de données&#41;](../transfer-database-task-editor-databases-page.md)  
+-   [Éditeur de tâche de transfert de bases de données &#40;page Bases de données&#41;](../transfer-database-task-editor-databases-page.md)  
   
 -   [Page Expressions](../expressions/expressions-page.md)  
   
  Pour plus d'informations sur la définition de ces propriétés dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , cliquez sur la rubrique suivante :  
   
--   [Définir les propriétés d’une tâche ou d’un conteneur](../set-the-properties-of-a-task-or-container.md)  
+-   [Définir les propriétés d'une tâche ou d'un conteneur](../set-the-properties-of-a-task-or-container.md)  
   
 ## <a name="programmatic-configuration-of-the-transfer-database-task"></a>Configuration par programmation de la tâche de transfert de bases de données  
  Pour plus d'informations sur la définition par programme de ces propriétés, cliquez sur la rubrique suivante :  

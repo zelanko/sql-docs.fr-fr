@@ -18,12 +18,12 @@ ms.assetid: 9140ecc1-d912-4d76-ae70-e2a857da6d44
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4b5b6861d1dcd4a9e516fbbf9d1ef22af7ea881d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 158635a13a60d652da3b78408db6cbb9d74ffd86
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698107"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617559"
 ---
 # <a name="restorehistory-transact-sql"></a>restorehistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "47698107"
 |Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**restore_history_id**|**Int**|Numéro d'identification unique de chaque opération de restauration Identité, clé primaire.|  
-|**restore_date**|**datetime**|Date et heure de fin de l'opération de restauration. Sa valeur peut être NULL.|  
+|**restore_date**|**datetime**|Date et heure de début de l’opération de restauration. Sa valeur peut être NULL.|  
 |**destination_database_name**|**nvarchar(128)**|Nom de la base de données de destination à utiliser pour l'opération de restauration. Sa valeur peut être NULL.|  
 |**user_name**|**nvarchar(128)**|Nom de l'utilisateur qui a exécuté l'opération de restauration. Sa valeur peut être NULL.|  
 |**backup_set_id**|**Int**|Numéro d'identification unique identifiant le jeu de sauvegarde en cours de restauration. Références **backupset (backup_set_id)**.|  

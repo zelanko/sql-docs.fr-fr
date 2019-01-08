@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: d9203e58-40ba-4712-a918-2c34a5d396d7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a9a2ef095189ca4505248865a6b9a8a99c86243d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 909db99964faaf2fc3aec8196db929bf61fc7c09
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200865"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52808061"
 ---
 # <a name="lockcancel-event-class"></a>Classe d'événements Lock:Cancel
   La classe d’événements **Lock:Cancel** indique que l’acquisition d’un verrou sur une ressource a été annulée, par exemple à cause de l’annulation d’une requête.  
@@ -36,8 +35,8 @@ ms.locfileid: "48200865"
 |**DatabaseName**|`nvarchar`|Nom de la base de données où l'acquisition de verrou a été tentée.|35|Oui|  
 |**Duration**|`bigint`|Délai (en microsecondes) entre l'émission de la demande de verrou et l'annulation du verrou.|13|Oui|  
 |**EndTime**|`datetime`|Heure de fin de l'événement.|15|Oui|  
-|**EventClass**|`int`|Type d’événement = 26.|27|non|  
-|**EventSequence**|`int`|Séquence d'un événement donné au sein de la demande.|51|non|  
+|**EventClass**|`int`|Type d’événement = 26.|27|Non|  
+|**EventSequence**|`int`|Séquence d'un événement donné au sein de la demande.|51|Non|  
 |**GroupID**|`int`|ID du groupe de charges de travail où l'événement Trace SQL se déclenche.|66|Oui|  
 |**HostName**|`nvarchar`|Nom de l'ordinateur sur lequel le client est exécuté. Cette colonne de données est remplie si le nom de l'hôte est fourni par le client. Pour déterminer le nom de l'hôte, utilisez la fonction HOST_NAME.|8|Oui|  
 |**IntegerData2**|`int`|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|55|Oui|  
@@ -51,7 +50,7 @@ ms.locfileid: "48200865"
 |**ObjectID2**|`bigint`|ID de l'entité ou de l'objet associé, s'il est disponible et applicable.|56|Oui|  
 |**OwnerID**|`int`|1=TRANSACTION<br /><br /> 2=CURSOR<br /><br /> 3=SESSION<br /><br /> 4=SHARED_TRANSACTION_WORKSPACE<br /><br /> 5=EXCLUSIVE_TRANSACTION_WORKSPACE|58|Oui|  
 |**RequestID**|`int`|ID de la demande contenant l'instruction.|49|Oui|  
-|**ServerName**|`nvarchar`|Nom de l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracée.|26|non|  
+|**ServerName**|`nvarchar`|Nom de l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracée.|26|Non|  
 |**SessionLoginName**|`nvarchar`|Nom de connexion de l'utilisateur à l'origine de la session. Par exemple, si vous vous connectez à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] au moyen de Login1 et que vous exécutez une commande en tant que Login2, **SessionLoginName** affiche Login1 et **LoginName** affiche Login2. Cette colonne affiche à la fois les connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et Windows.|64|Oui|  
 |**SPID**|`int`|ID de la session au cours de laquelle l'événement s'est produit.|12|Oui|  
 |**StartTime**|`datetime`|Heure à laquelle a débuté l'événement, si disponible.|14|Oui|  

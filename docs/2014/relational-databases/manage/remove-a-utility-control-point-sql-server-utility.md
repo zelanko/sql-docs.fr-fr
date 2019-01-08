@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: c048a416-900e-4c77-8243-e0f0d8b94068
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 719e50f8423a320abfb2476402cc437e1f2520a7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 46f440aa6b40d8a2e0ff48c59818b722073b1628
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229569"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52767581"
 ---
 # <a name="remove-a-utility-control-point-sql-server-utility"></a>Supprimer un point de contrôle de l'utilitaire (utilitaire SQL Server)
   Cette rubrique explique comment supprimer un point de contrôle de l'utilitaire (UCP) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -46,7 +46,7 @@ ms.locfileid: "48229569"
 ###  <a name="Security"></a> Sécurité  
   
 ####  <a name="Permissions"></a> Permissions  
- Cette procédure doit être exécutée par un utilisateur avec `sysadmin` autorisations ; les mêmes autorisations requises pour créer un UCP.  
+ Cette procédure doit être exécutée par un utilisateur disposant d'autorisations `sysadmin` ; les mêmes autorisations sont requises pour créer un point de contrôle de l'utilitaire.  
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   

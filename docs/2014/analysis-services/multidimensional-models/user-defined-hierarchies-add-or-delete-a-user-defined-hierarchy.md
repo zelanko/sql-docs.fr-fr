@@ -17,12 +17,12 @@ ms.assetid: 953818b4-9543-4c01-bb20-1d45ec6dfb91
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 79c6f928f8f3931960dcfa7ee72b8b3f237cf1e8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 08531e4b0ecfcda02fa1dd1e2c3125b557e41cb7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183979"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514513"
 ---
 # <a name="add-or-delete-a-user-defined-hierarchy"></a>Ajouter ou supprimer une hiérarchie définie par l'utilisateur
   Vous pouvez ajouter ou supprimer une hiérarchie définie par l’utilisateur dans une dimension sous l’onglet **Structure de dimension** du Concepteur de dimensions dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
@@ -54,16 +54,16 @@ ms.locfileid: "48183979"
   
 -   Sous l’onglet **Structure de dimension** , cliquez sur la hiérarchie définie par l’utilisateur que vous souhaitez supprimer dans le volet **Hiérarchies** . Dans la barre d’outils, cliquez sur **Supprimer**.  
   
-     — ou —  
+     - ou -  
   
 -   Cliquez avec le bouton droit sur la hiérarchie définie par l’utilisateur que vous souhaitez supprimer dans le volet **Hiérarchies** , puis cliquez sur **Supprimer**.  
   
-     — ou —  
+     - ou -  
   
 -   Faites glisser la hiérarchie définie par l'utilisateur hors de l'aire de conception.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Hiérarchies utilisateur](../multidimensional-models-olap-logical-dimension-objects/user-hierarchies.md)   
- [Créer des hiérarchies définies par l’utilisateur](user-defined-hierarchies-create.md)  
+ [Créer des hiérarchies définies par l'utilisateur](user-defined-hierarchies-create.md)  
   
   

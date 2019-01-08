@@ -10,12 +10,12 @@ ms.assetid: bc14a072-8949-4ee0-a4b4-ada55fe8df5c
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: fadb1ba3a38c8379417ad04581adaec956e4ecd3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0bc3c92067d1fd8240cc17db03de7dac409a0123
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670317"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52414406"
 ---
 # <a name="connect-to-sql-server-db2tosql"></a>Se connecter à SQL Server (DB2ToSQL)
 Utilisez le **se connecter à SQL Server** boîte de dialogue se connecter à l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que vous souhaitez migrer vers. Pour accéder à la **se connecter à SQL Server** boîte de dialogue le **fichier** menu, cliquez sur **se connecter à SQL Server**.  

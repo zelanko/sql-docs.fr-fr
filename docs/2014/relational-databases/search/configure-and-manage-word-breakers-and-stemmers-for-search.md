@@ -20,12 +20,12 @@ ms.assetid: d4bdd16b-a2db-4101-a946-583d1c674229
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0804fedde52ad335197c142b897afab8743f45b2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8be3cc7da791b9ea5f950d83bd0f570ca42e686f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48199445"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505843"
 ---
 # <a name="configure-and-manage-word-breakers-and-stemmers-for-search"></a>Configurer et gérer les analyseurs lexicaux et générateurs de formes dérivées pour la recherche
   Ils effectuent une analyse linguistique de l'ensemble des données indexées en texte intégral. Elle implique la recherche des limites de mots (coupure de mots) et la conjugaison des verbes (outil de conjugaison). Les analyseurs lexicaux et les générateurs de formes dérivées sont spécifiques à la langue, et les règles de l'analyse linguistique diffèrent selon les langues. Pour une langue donnée, un *analyseur lexical* identifie des mots individuels en déterminant l’emplacement des limites de mots d’après les règles lexicales de cette langue. Chaque mot (également appelé *jeton*) est inséré dans l’index de recherche en texte intégral dans une représentation compressée afin de réduire sa taille. Le *générateur de formes dérivées* génère des formes flexionnelles d’un mot particulier selon les règles spécifiques d’une langue (par exemple, « running », « ran » et « runner » constituent différentes formes du mot « run »).  
@@ -33,14 +33,14 @@ ms.locfileid: "48199445"
  L'utilisation d'analyseurs lexicaux spécifiques aux langues permet d'obtenir des termes plus précis pour chaque langue. Quand il existe un analyseur lexical pour une famille de langues, et non pour une sous-langue spécifique, la langue principale est utilisée. Par exemple, l'analyseur lexical en français gère le texte écrit en français canadien. Si aucun analyseur lexical n'est disponible pour une langue particulière, l'analyseur lexical en langue neutre est utilisé. Avec l'analyseur lexical en langue neutre, les mots sont décomposés en caractères neutres tels que des espaces et des signes de ponctuation.  
   
 ##  <a name="register"></a> Inscription d’analyseurs lexicaux  
- Pour utiliser les analyseurs lexicaux d'une langue, vous devez les inscrire. Pour les analyseurs lexicaux inscrits, les ressources linguistiques associées (générateurs de formes dérivées, mots parasites [mots vides] et fichiers de dictionnaire des synonymes) deviennent également disponibles pour des opérations d'indexation et d'interrogation de texte intégral. Pour consulter la liste des langues dont les analyseurs lexicaux sont actuellement inscrits auprès de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], utilisez l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] suivante :  
+ Pour utiliser les analyseurs lexicaux d'une langue, vous devez les inscrire. Pour les analyseurs lexicaux inscrits, associées linguistiques ressources-générateurs de formes dérivées, mots parasites (mots vides) et les fichiers de dictionnaire des synonymes-deviennent également disponibles pour l’indexation et interrogation des opérations de texte intégral. Pour consulter la liste des langues dont les analyseurs lexicaux sont actuellement inscrits auprès de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], utilisez l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] suivante :  
   
  SELECT * FROM sys.fulltext_languages  
   
  Si vous ajoutez, supprimez ou modifiez un analyseur lexical, vous devez actualiser la liste des identificateurs de paramètres régionaux Microsoft Windows pris en charge pour l'indexation et les requêtes de texte intégral. Pour plus d’informations, consultez [Afficher ou modifier des filtres et des analyseurs lexicaux inscrits](view-or-change-registered-filters-and-word-breakers.md).  
   
 ##  <a name="default"></a> Définition de l’Option de langue de texte intégral par défaut  
- Pour une version localisée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le programme d’installation définit le `default full-text language` option à la langue du serveur s’il existe une correspondance appropriée. Pour obtenir une version non localisée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la `default full-text language` option est l’anglaise.  
+ Pour une version localisée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le programme d’installation définit le `default full-text language` option à la langue du serveur s’il existe une correspondance appropriée. Pour une version non localisée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], l'anglais est la valeur affectée par défaut à l'option `default full-text language`.  
   
  Lorsque vous créez ou modifié un index de recherche en texte intégral, vous devez spécifier une langue différente pour chaque colonne indexée de texte intégral. Si aucune langue n'est spécifiée pour une colonne, la valeur par défaut est déterminée par l'option de configuration `default full-text language`.  
   

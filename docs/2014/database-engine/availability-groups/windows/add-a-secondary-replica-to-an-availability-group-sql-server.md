@@ -13,12 +13,12 @@ ms.assetid: 6669dcce-85f9-495f-aadf-7f62cff4a9da
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6a60675d4d934c91be3ae8150cd865f404443d27
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7605f4e5fd2fd6601cf1d132b438187edeeb29fb
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219959"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525848"
 ---
 # <a name="add-a-secondary-replica-to-an-availability-group-sql-server"></a>Ajouter un réplica secondaire à un groupe de disponibilité (SQL Server)
   Cette rubrique explique comment ajouter un réplica secondaire à un groupe de disponibilité AlwaysOn existant à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], de [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou de PowerShell dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
@@ -115,13 +115,13 @@ ms.locfileid: "48219959"
     ```  
   
     > [!NOTE]  
-    >  Pour afficher la syntaxe d’une applet de commande, utilisez le `Get-Help` applet de commande dans le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] environnement PowerShell. Pour en savoir plus, voir [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
+    >  Pour afficher la syntaxe d'une applet de commande, utilisez l'applet de commande `Get-Help` dans l'environnement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Pour en savoir plus, voir [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
  **Pour configurer et utiliser le fournisseur SQL Server PowerShell**  
   
 -   [Fournisseur SQL Server PowerShell](../../../powershell/sql-server-powershell-provider.md)  
   
-##  <a name="FollowUp"></a> Suivi : Après avoir ajouté un réplica secondaire  
+##  <a name="FollowUp"></a> Suivi : Après avoir ajouté un réplica secondaire  
  Pour ajouter un réplica pour un groupe de disponibilité existant, vous devez effectuer les étapes suivantes :  
   
 1.  Connectez-vous à l'instance de serveur qui va héberger le nouveau réplica secondaire.  

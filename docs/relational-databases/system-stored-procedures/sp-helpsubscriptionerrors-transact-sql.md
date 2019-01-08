@@ -5,8 +5,7 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_helpsubscriptionerrors_TSQL
@@ -17,12 +16,12 @@ ms.assetid: 01c8bc21-939e-490d-8cc8-219c068be31e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7c9d7e23c97c7fb3411c01e16544f37bb2573e27
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f98790bbf68309eef561662a6eb0be9f1da34971
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47741627"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52818801"
 ---
 # <a name="sphelpsubscriptionerrors-transact-sql"></a>sp_helpsubscriptionerrors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -79,7 +78,7 @@ sp_helpsubscriptionerrors [ @publisher = ] 'publisher'
 ## <a name="remarks"></a>Notes  
  **sp_helpsubscriptionerrors** est utilisé avec la réplication transactionnelle et de capture instantanée.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Seuls les membres de la **sysadmin** rôle serveur fixe ou **db_owner** rôle de base de données fixe peuvent exécuter **sp_helpsubscriptionerrors**.  
   
 ## <a name="see-also"></a>Voir aussi  

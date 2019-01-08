@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - starting SQL Server, single-user mode
@@ -14,12 +13,12 @@ ms.assetid: 72eb4fc1-7af4-4ec6-9e02-11a69e02748e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: aeb0e1c28885e8611c1ae57a21a05c1265b6349c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 245ae929b9a267f06b675b9380760f3db6067d1c
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090149"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52640890"
 ---
 # <a name="start-sql-server-in-single-user-mode"></a>Démarrer SQL Server en mode mono-utilisateur
   Dans certaines circonstances, vous devrez peut-être démarrer une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en mode mono-utilisateur à l’aide de **startup option -m.** Vous pouvez par exemple vouloir modifier les options de configuration du serveur ou rétablir une base de données master ou une autre base de données système endommagées. Les deux actions requièrent le démarrage d'une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en mode mono-utilisateur.  
@@ -47,7 +46,7 @@ ms.locfileid: "48090149"
   
  Pour contourner le problème, utilisez la procédure suivante :  
   
-1.  Supprimez le paramètre de démarrage –m des Propriétés avancées [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+1.  Supprimez le paramètre de démarrage -m des propriétés avancées [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 2.  Mettez la ressource [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hors connexion.  
   
@@ -56,14 +55,14 @@ ms.locfileid: "48090149"
   
 4.  Vérifiez dans la console de l'administrateur de cluster ou de gestion de cluster de basculement que la ressource [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est encore hors connexion.  
   
-5.  Connectez-vous maintenant à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en utilisant la commande suivante et exécutez l’opération nécessaire : SQLCMD -E -S\<nom_serveur>.  
+5.  Se connecter à la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] maintenant en utilisant la commande suivante et exécutez l’opération nécessaire : SQLCMD-e-s\<nom_serveur >.  
   
 6.  Une fois que l'opération est terminée, fermez l'invite de commandes et remettez les ressources SQL et d'autres ressources en ligne via la console de l'administrateur de cluster.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Démarrer, arrêter ou suspendre le service SQL Server Agent](../../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md)   
  [Connexion de diagnostic pour les administrateurs de base de données](diagnostic-connection-for-database-administrators.md)   
- [Utilitaire sqlcmd](../../tools/sqlcmd-utility.md)   
+ [sqlcmd Utility](../../tools/sqlcmd-utility.md)   
  [CHECKPOINT &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/checkpoint-transact-sql)   
  [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)   
  [Options de démarrage du service moteur de base de données](database-engine-service-startup-options.md)  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - monitoring performance [SQL Server replication], Replication Monitor
@@ -20,12 +19,12 @@ ms.assetid: f212397d-1bfd-496b-a246-668952891d09
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2dd079ec5abc9ef0ef8600f882236d44dd45b1b0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c84d808b84a70ae9d70eff308351ff1e7f3df8e0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086489"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52815571"
 ---
 # <a name="monitor-performance-with-replication-monitor"></a>Analyser les performances avec le Moniteur de réplication
   Le moniteur de réplication de[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vous permet d'analyser les performances de la réplication transactionnelle et de la réplication de fusion via les fonctionnalités suivantes :  
@@ -76,7 +75,7 @@ ms.locfileid: "48086489"
   
     |Excellent|Bonne|Correcte|Médiocre|Critique|  
     |---------------|----------|----------|----------|--------------|  
-    |0 – 34%|35 – 59%|60 – 84%|85 – 99%|100% +|  
+    |0 - 34 %|35 - 59 %|60 - 84 %|85 - 99 %|100% +|  
   
 -   Pour la réplication de fusion, la qualité des performances est indépendante des seuils (le seuil de traitement des lignes détermine si la valeur **Critique pour les performances** est affichée dans la colonne **État** ). La qualité des performances est déterminée en comparant la performance d'abonnements individuels à la performance historique moyenne des abonnements à la publication avec le même type de connexion (d'accès distant ou LAN). Le moniteur de réplication affiche une valeur après cinq synchronisations avec au moins 50 modifications chacune via le même type de connexion. S'il y a eu moins de cinq synchronisations comprenant 50 modifications ou plus ou que la synchronisation la plus récente inclut moins de 50 modifications, il n'affiche pas de valeur.  
   
@@ -84,7 +83,7 @@ ms.locfileid: "48086489"
   
     |Excellent|Bonne|Correcte|Médiocre|  
     |---------------|----------|----------|----------|  
-    |151+%|76 – 150%|26 – 75%|0 – 25%|  
+    |151+%|76 - 150 %|26 - 75 %|0 - 25 %|  
   
  Pour plus d’informations, consultez [Afficher des informations et effectuer des tâches pour un abonnement &#40;moniteur de réplication&#41;](view-information-and-perform-tasks-for-a-subscription-replication-monitor.md).  
   
@@ -99,6 +98,6 @@ ms.locfileid: "48086489"
   
 ## <a name="see-also"></a>Voir aussi  
  [Surveillance de la réplication](../monitoring-replication.md)   
- [Définir des seuils et des avertissements dans le moniteur de réplication](set-thresholds-and-warnings-in-replication-monitor.md)  
+ [Set Thresholds and Warnings in Replication Monitor](set-thresholds-and-warnings-in-replication-monitor.md)  
   
   

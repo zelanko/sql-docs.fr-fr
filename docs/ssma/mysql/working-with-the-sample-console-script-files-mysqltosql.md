@@ -12,12 +12,12 @@ ms.assetid: 7e6aaa8a-5f5c-414d-9fb8-21e56b9ffaef
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 809284aa24a1a549c5f3d2c349e5935d8ca5503d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7d00385c7346d7602719326dbe700f7cd44c63fd
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47805117"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52411046"
 ---
 # <a name="working-with-the-sample-console-script-files-mysqltosql"></a>Utilisation des fichiers de Script de Console exemple (MySQLToSQL)
 Quelques exemples de fichiers ont été fournis, ainsi que le produit pour la référence de l’utilisateur et l’utilisation. Cette section décrit la façon de personnaliser facilement ces scripts en fonction des besoins des utilisateurs finaux.  
@@ -43,11 +43,11 @@ Les fichiers de script de console exemple suivants couvrant différents scénari
   
     -   Pour plus d’informations sur la connexion au serveur source et cible, consultez [création des fichiers de connexion de serveur &#40;MySQLToSQL&#41; ](../../ssma/mysql/creating-the-server-connection-files-mysqltosql.md) .  
   
--   **VariableValueFileSample.xml :** toutes les variables qui ont été utilisés dans la console de l’exemple des fichiers de script et `ServersConnectionFileSample.xml` ont été assemblés dans ce fichier. Pour exécuter les exemples de scripts de console que l’utilisateur doit simplement remplacer la variable exemple valeurs avec l’utilisateur ceux définis et passer ce fichier comme un argument de ligne de commande supplémentaires, ainsi que le fichier de script.  
+-   **VariableValueFileSample.xml :** Toutes les variables qui ont été utilisés dans la console de l’exemple des fichiers de script et `ServersConnectionFileSample.xml` ont été assemblés dans ce fichier. Pour exécuter les exemples de scripts de console que l’utilisateur doit simplement remplacer la variable exemple valeurs avec l’utilisateur ceux définis et passer ce fichier comme un argument de ligne de commande supplémentaires, ainsi que le fichier de script.  
   
     Pour plus d’informations sur le fichier de valeurs variables, consultez [création de fichiers de valeur Variable &#40;MySQLToSQL&#41;](../../ssma/mysql/creating-variable-value-files-mysqltosql.md).  
   
--   **AssessmentReportGenerationSample.xml :** cet exemple permet à l’utilisateur Générer un rapport d’évaluation xml qui peut être utilisé par l’utilisateur pour l’analyse avant de commencer à convertir et migrer des données.  
+-   **AssessmentReportGenerationSample.xml :** Cet exemple permet à l’utilisateur Générer un rapport d’évaluation xml qui peut être utilisé par l’utilisateur pour l’analyse avant de commencer à convertir et migrer des données.  
   
     Dans le `generate-assessment-report` l’utilisateur doit obligatoirement modifier la valeur de la variable de commande (reportez-vous **VariableValueFileSample.xml**) dans le `object-name` attribut le nom de base de données est en cours d’utilisation par l’utilisateur. Selon le type d’objet spécifié, le `object-type` valeur devra également être modifié.  
   
@@ -96,7 +96,7 @@ Les fichiers de script de console exemple suivants couvrant différents scénari
   
     **Attribute**  
   
-    `object-name`: Permet de spécifier la base de données source / nom qui nécessite d’être converti de l’objet. Vérifiez que le correspondant `object-type` est modifié en fonction du type d’objet qui est spécifié dans le `object-name`  
+    `object-name`: Spécifiez la base de données source / nom qui nécessite d’être converti de l’objet. Vérifiez que le correspondant `object-type` est modifié en fonction du type d’objet qui est spécifié dans le `object-name`  
   
     **Nom de la commande**  
   

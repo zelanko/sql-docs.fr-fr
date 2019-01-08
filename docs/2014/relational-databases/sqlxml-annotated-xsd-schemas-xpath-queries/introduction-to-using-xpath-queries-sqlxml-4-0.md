@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - XPath queries [SQLXML], about XPath queries
@@ -16,12 +14,12 @@ ms.assetid: 01050a8e-0ccc-4a02-a4eb-b48be5c3f4f3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bf30ab6a58648a24e82e96eed7a39c23a3605fe8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 775e9ac76d6c3b16d2c9ba6ce688a2a3dfbf48d6
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184769"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52753371"
 ---
 # <a name="introduction-to-using-xpath-queries-sqlxml-40"></a>Introduction à l'utilisation des requêtes XPath (SQLXML 4.0)
   Une requête XPath (XML Path Language) peut être spécifiée dans le cadre d'une URL ou dans un modèle. Le schéma de mappage détermine la structure de ce fragment résultant et les valeurs sont extraites de la base de données. Ce processus est conceptuellement semblable à la création de vues à l'aide de l'instruction CREATE VIEW et à l'écriture de requêtes SQL dans ces vues.  

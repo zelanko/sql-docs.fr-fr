@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: table-view-index
 ms.topic: conceptual
 helpviewer_keywords:
 - sparse columns, described
@@ -15,12 +14,12 @@ ms.assetid: ea7ddb87-f50b-46b6-9f5a-acab222a2ede
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 975cd41f544f38a5ded070396fce5df644e6048c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1e98485d0a1887b2ac24da20d8b8a672c0060591
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107205"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52798931"
 ---
 # <a name="use-sparse-columns"></a>Utiliser des colonnes éparses
   Les colonnes éparses sont des colonnes ordinaires qui ont un stockage optimisé pour les valeurs NULL. Les colonnes éparses réduisent l'espace nécessaire pour les valeurs NULL, en échange d'une augmentation du coût d'extraction des valeurs autres que NULL. Envisagez d'utiliser des colonnes éparses lorsque l'espace économisé est d'au moins 20 à 40 pour cent. Les colonnes éparses et les jeux de colonnes sont définis à l'aide des instructions [CREATE TABLE](/sql/t-sql/statements/create-table-transact-sql) ou [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql) .  
@@ -44,7 +43,7 @@ ms.locfileid: "48107205"
   
 -   Les affichages catalogue pour une table qui a des colonnes éparses sont les mêmes que pour une table ordinaire. L'affichage catalogue sys.columns contient une ligne pour chaque colonne de la table et inclut un jeu de colonnes s'il y en a un de défini.  
   
--   Les colonnes éparses sont une propriété de la couche de stockage plutôt que de la table logique. Par conséquent, une instruction SELECT.INTO ne copie pas sur la propriété de colonne éparse dans une nouvelle table.  
+-   Les colonnes éparses sont une propriété de la couche de stockage plutôt que de la table logique. Par conséquent, une instruction SELECT...INTO ne copie pas la propriété de colonne éparse dans une nouvelle table.  
   
 -   La fonction COLUMNS_UPDATED renvoie une valeur `varbinary` pour indiquer toutes les colonnes qui ont été mises à jour pendant une action DML. Les bits retournés par la fonction COLUMNS_UPDATED sont les suivants :  
   
@@ -86,7 +85,7 @@ ms.locfileid: "48107205"
 |`uniqueidentifier`|16|20|43%|  
 |`date`|3|7|69%|  
   
- **Types de données dont la longueur dépend de la précision**  
+ **Types de données de longueur dépendante de la précision**  
   
 |Type de données|Octets non alloués|Octets alloués|Pourcentage NULL|  
 |---------------|---------------------|------------------|---------------------|  
@@ -100,7 +99,7 @@ ms.locfileid: "48107205"
 |`decimal/numeric(38,s)`|17|21|42%|  
 |`vardecimal(p,s)`|Utilisez le type `decimal` comme évaluation pessimiste.|||  
   
- **Types de données dont la longueur dépend des données**  
+ **Types de données de longueur dépendante des données**  
   
 |Type de données|Octets non alloués|Octets alloués|Pourcentage NULL|  
 |---------------|---------------------|------------------|---------------------|  
@@ -116,12 +115,12 @@ ms.locfileid: "48107205"
 ## <a name="in-memory-overhead-required-for-updates-to-sparse-columns"></a>Charge en mémoire requise pour les mises à jour de colonnes éparses  
  Lorsque vous concevez des tables comportant des colonnes éparses, gardez à l'esprit qu'une charge supplémentaire de 2 octets est requise pour chaque colonne éparse non Null dans la table lorsqu'une ligne est mise à jour. Conséquemment à cette exigence de mémoire supplémentaire, les mises à jour peuvent échouer de façon inattendue avec l'erreur 576 lorsque la taille totale de la ligne, y compris sa charge de mémoire, dépasse 8019 et qu'aucune colonne ne peut être sortie de la ligne.  
   
- Prenons l'exemple d'une table contenant 600 colonnes éparses de type bigint. S'il y a 571 colonnes non Null, alors la taille totale sur le disque est de 571 * 12 = 6852 octets. Après l'ajout de la charge de ligne supplémentaire et de l'en-tête de colonne éparse, ce chiffre augmente pour atteindre 6895 octets environ. La page dispose toujours d'environ 1124 octets disponibles sur le disque. Cela peut donner l'impression que des colonnes supplémentaires peuvent être mises à jour sans problème. Cependant, pendant la mise à jour, une charge supplémentaire en mémoire équivalente à 2\*le nombre de colonnes éparses non Null est requise. Dans cet exemple, en incluant la charge supplémentaire (2 \* 571 = 1142 octets) la taille de la ligne sur le disque atteint environ 8037 octets. Cette valeur dépasse la taille de ligne autorisée maximale de 8019 octets. Étant donné que toutes les colonnes ont un type de données de longueur fixe, elles ne peuvent pas être sorties de la ligne. En conséquence, la mise à jour échoue avec l'erreur 576.  
+ Prenons l'exemple d'une table contenant 600 colonnes éparses de type bigint. S'il y a 571 colonnes non Null, alors la taille totale sur le disque est de 571 * 12 = 6852 octets. Après l'ajout de la charge de ligne supplémentaire et de l'en-tête de colonne éparse, ce chiffre augmente pour atteindre 6895 octets environ. La page dispose toujours d'environ 1124 octets disponibles sur le disque. Cela peut donner l'impression que des colonnes supplémentaires peuvent être mises à jour sans problème. Cependant, pendant la mise à jour, une charge supplémentaire en mémoire équivalente à 2\*le nombre de colonnes éparses non Null est requise. Dans cet exemple, en incluant la charge supplémentaire (2 \* 571 = 1 142 octets), la taille de la ligne sur le disque atteint environ 8 037 octets. Cette valeur dépasse la taille de ligne autorisée maximale de 8019 octets. Étant donné que toutes les colonnes ont un type de données de longueur fixe, elles ne peuvent pas être sorties de la ligne. En conséquence, la mise à jour échoue avec l'erreur 576.  
   
 ## <a name="restrictions-for-using-sparse-columns"></a>Restrictions relatives à l'utilisation des colonnes éparses  
  Les colonnes éparses peuvent contenir n'importe quel type de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ; en outre, elles se comportent comme n'importe quelle autre colonne avec les restrictions suivantes :  
   
--   Une colonne éparse doit être nullable et ne peut pas avoir les propriétés ROWGUIDCOL ou IDENTITY. Une colonne éparse ne peut pas être de types de données suivants : `text`, `ntext`, `image`, `timestamp`, type de données défini par l’utilisateur, `geometry`, ou `geography`; ni avoir l’attribut FILESTREAM.  
+-   Une colonne éparse doit être nullable et ne peut pas avoir les propriétés ROWGUIDCOL ou IDENTITY. Une colonne éparse ne peut pas être des types de données suivants : `text`, `ntext`, `image`, `timestamp`, type de données défini par l'utilisateur, `geometry` ou `geography` ; ni avoir l'attribut FILESTREAM.  
   
 -   Une colonne éparse ne peut pas avoir de valeur par défaut.  
   

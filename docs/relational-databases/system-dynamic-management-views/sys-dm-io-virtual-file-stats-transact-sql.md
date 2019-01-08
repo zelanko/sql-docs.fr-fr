@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d55d63b9cfbf501750522f3f5d0ca68757ae1ab3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fc6511c6a0999dfd366c87fcfa18630614215efa
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47741857"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52407296"
 ---
 # <a name="sysdmiovirtualfilestats-transact-sql"></a>sys.dm_io_virtual_file_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -58,7 +58,7 @@ sys.dm_pdw_nodes_io_virtual_file_stats
 
  *database_id* | VALEUR NULL
 
- **S’APPLIQUE À :** SQL Server (à partir de 2008), Azure SQL Database
+ **S’APPLIQUE À :** SQL Server (à partir de 2008), base de données SQL Azure
 
  ID de la base de données. *database_id* est de type int, sans valeur par défaut. Les entrées autorisées sont l'ID d'une base de données ou la valeur NULL. Lorsque vous spécifiez la valeur NULL, toutes les bases de données de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont renvoyées.  
   
@@ -66,7 +66,7 @@ sys.dm_pdw_nodes_io_virtual_file_stats
   
 *FILE_ID* | VALEUR NULL
 
-**S’APPLIQUE À :** SQL Server (à partir de 2008), Azure SQL Database
+**S’APPLIQUE À :** SQL Server (à partir de 2008), base de données SQL Azure
  
 ID du fichier. *FILE_ID* est de type int, sans valeur par défaut. Les entrées autorisées sont l'ID d'un fichier ou la valeur NULL. Lorsque vous spécifiez la valeur NULL, tous les fichiers de la base de données sont renvoyés.  
   
@@ -94,7 +94,7 @@ ID du fichier. *FILE_ID* est de type int, sans valeur par défaut. Les entrées 
 |**pdw_node_id**|**Int**|**S’applique à** : [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]</br></br>Identificateur du nœud pour la distribution.
  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert l'autorisation VIEW SERVER STATE. Pour plus d’informations, consultez [fonctions et vues de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
   
 ## <a name="examples"></a>Exemples  
@@ -110,13 +110,13 @@ SELECT * FROM sys.dm_io_virtual_file_stats(DB_ID(N'AdventureWorks2012'), 2);
 GO  
 ```  
   
-### <a name="b-return-statistics-for-file-in-tempdb"></a>B. Retourner des statistiques pour le fichier dans tempdb
+### <a name="b-return-statistics-for-file-in-tempdb"></a>b. Retourner des statistiques pour le fichier dans tempdb
 
-**S’applique à :** Azure SQL Data Warehouse
+**S’applique à :** Azure SQL Data Warehouse.
 
 ```sql
 SELECT * FROM sys.dm_pdw_nodes_io_virtual_file_stats 
-WHERE database_name = ‘tempdb’ AND file_id = 2;
+WHERE database_name = 'tempdb' AND file_id = 2;
 
 ```
 

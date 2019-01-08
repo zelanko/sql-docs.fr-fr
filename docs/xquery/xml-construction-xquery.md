@@ -22,12 +22,12 @@ ms.assetid: a6330b74-4e52-42a4-91ca-3f440b3223cf
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 58a7f5c5702123ae6be475b1cb377b2f8a9c52fc
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 3ca45caed31d31b1614947cbcbf3fbf6c4c27273
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657538"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515368"
 ---
 # <a name="xml-construction-xquery"></a>Construction XML (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -79,7 +79,7 @@ This is product model catalog description.
 </ProductModel>  
 ```  
   
- Bien que la construction d'éléments à partir d'expressions constantes, comme dans cet exemple, soit utile, la véritable puissance de cette fonctionnalité du langage XQuery réside dans la possibilité de construire un document XML qui extrait dynamiquement des données d'une base de données. Vous pouvez utiliser des accolades pour spécifier les expressions de requête. Dans le document XML obtenu, l'expression est remplacée par sa valeur. Par exemple, la requête suivante construit un élément <`NewRoot`> avec un élément enfant (<`e`>). La valeur de l’élément <`e`> est calculée en spécifiant une expression de chemin d’accès à l’intérieur des accolades (« {...} }").  
+ Bien que la construction d'éléments à partir d'expressions constantes, comme dans cet exemple, soit utile, la véritable puissance de cette fonctionnalité du langage XQuery réside dans la possibilité de construire un document XML qui extrait dynamiquement des données d'une base de données. Vous pouvez utiliser des accolades pour spécifier les expressions de requête. Dans le document XML obtenu, l'expression est remplacée par sa valeur. Par exemple, la requête suivante construit un élément <`NewRoot`> avec un élément enfant (<`e`>). La valeur de l’élément <`e`> est calculée en spécifiant une expression de chemin d’accès à l’intérieur des accolades (« {...} »).  
   
 ```sql
 DECLARE @x xml;  
@@ -89,7 +89,7 @@ SELECT @x.query('<NewRoot><e> { /root } </e></NewRoot>');
   
  Les accolades font office de jetons de commutation de contexte et basculent la requête de la construction du document XML vers sa propre évaluation. Dans ce cas, l'expression de chemin d'accès XQuery entre les accolades, `/root`, est évaluée et les résultats lui sont substitués.  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```xml
 <NewRoot>  
@@ -112,7 +112,7 @@ SET @y = (SELECT @x.query('
 SELECT @y;  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```xml
 <NewRoot>  
@@ -131,7 +131,7 @@ SET @y = (SELECT @x.query('
 SELECT @y;  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```xml
 <NewRoot> Hello, I can use { and  } as part of my text</NewRoot>  
@@ -150,7 +150,7 @@ FROM Production.ProductModel
 WHERE ProductModelID=7;  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```xml
 <FirstLocation>  
@@ -253,7 +253,7 @@ SET @y = (SELECT @x.query('<NewRoot attr="{ data(/root) }" ></NewRoot>'));
 SELECT @y;  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```xml
 <NewRoot attr="5" />  
@@ -278,7 +278,7 @@ where ProductModelID=7;
   
 ```xml
 <FirstLocation LocationID="10" SetupHours="0.5" >  
-  <AWMI:step …   
+  <AWMI:step ...   
   </AWMI:step>  
   ...  
 </FirstLocation>  
@@ -309,7 +309,7 @@ where ProductModelID=7;
         SELECT @x.query( '<a attr="{''Item'', data(/x)}"/>' )   
         ```  
   
-         Voici le résultat obtenu :  
+         Voici le résultat obtenu :  
   
         ```xml
         <a attr="Item 5" />  
@@ -323,7 +323,7 @@ where ProductModelID=7;
   
          Dans ce cas, aucun espace n'est ajouté entre les deux valeurs de chaîne. Si vous souhaitez un espace entre les deux valeurs, vous devez le fournir explicitement.  
   
-         Voici le résultat obtenu :  
+         Voici le résultat obtenu :  
   
         ```xml
         <a attr="Item5" />  
@@ -351,7 +351,7 @@ where ProductModelID=7;
     SELECT @x.query( '<a attr="{''Item'', data(/x)}"/>' )   
     ```  
   
-     Voici le résultat obtenu :  
+     Voici le résultat obtenu :  
   
     ```xml
     <a attr="Item 5" />  
@@ -393,7 +393,7 @@ select @x.query( '
   </a>' )   
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```xml
 <a xmlns="a">  
@@ -412,7 +412,7 @@ select @x.query( '
   </x:a>' )  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```xml
 <x:a xmlns:x="a">  
@@ -474,7 +474,7 @@ select @x.query( '
  Dans la construction de l'élément <`b`>, l'attribut de déclaration d'espace de noms est spécifié avec une chaîne vide en guise de valeur. Cette opération annule la déclaration de l'espace de noms par défaut déclaré dans le parent.  
   
 
-Voici le résultat obtenu :  
+Voici le résultat obtenu :  
 
 ```xml
 <a xmlns="a">  
@@ -524,7 +524,7 @@ test
   
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```xml
 -- result  

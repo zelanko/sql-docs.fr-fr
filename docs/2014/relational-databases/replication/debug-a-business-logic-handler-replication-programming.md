@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -18,12 +17,12 @@ ms.assetid: edd0d17a-0e9c-4c28-8395-a7d47e8ce3d6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f8bc3dd8ccacf4348002f0a9ca45a63632f7cb08
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 019ff508b10859cae2388636e9189292b498e251
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148559"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52761511"
 ---
 # <a name="debug-a-business-logic-handler-replication-programming"></a>Déboguer un gestionnaire de logique métier (programmation de la réplication)
   Utilisez un gestionnaire de logique métier pour appeler une logique métier personnalisée lorsqu'un abonnement de fusion est synchronisé. Pour plus d’informations, consultez [Exécuter la logique pendant la synchronisation de fusion](merge/execute-business-logic-during-merge-synchronization.md).  
@@ -36,11 +35,11 @@ ms.locfileid: "48148559"
   
 2.  Créez et inscrivez un gestionnaire de logique métier. Pour plus d’informations, voir [Implémenter un gestionnaire de logique métier pour un article de fusion](implement-a-business-logic-handler-for-a-merge-article.md).  
   
-3.  Créez un projet Replication Management Objects dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio qui démarre par programme l'Agent de fusion de façon synchrone. Pour plus d’informations, consultez [Synchroniser un abonnement par extraction (pull)](synchronize-a-pull-subscription.md).  
+3.  Créez un projet Replication Management Objects dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio qui démarre par programme l'Agent de fusion de façon synchrone. Pour plus d’informations, voir [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md).  
   
 4.  Définissez un point d'arrêt dans le code du gestionnaire de logique métier, soit dans la méthode en cours de débogage, soit dans le constructeur de classe. Pour plus d'informations sur les méthodes qui peuvent être implémentées dans un gestionnaire de logique métier, consultez la rubrique sur les méthodes <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> .  
   
-5.  Construisez le gestionnaire de logique métier en mode débogage et déployez l'assembly et le fichier de symboles de débogage (.pdb) dans l'emplacement inscrit à l'étape 1.  
+5.  Construisez le gestionnaire de logique métier en mode débogage et déployez l'assembly et le fichier de symboles de débogage (.pdb) dans l'emplacement inscrit à l'étape 1.  
   
     > [!NOTE]  
     >  Pour simplifier le débogage, créez une solution Visual Studio .NET unique qui contient à la fois le projet de gestionnaire de logique métier et le projet qui synchronise l'abonnement. Dans ce cas, définissez le projet de synchronisation comme projet de démarrage et configurez l'environnement de génération pour déployer l'assembly de logique métier dans l'emplacement inscrit à l'étape 1 au cours du débogage.  

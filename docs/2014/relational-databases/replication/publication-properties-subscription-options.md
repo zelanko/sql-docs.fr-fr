@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.newpubwizard.pubproperties.subscriptionoptions.f1
@@ -13,12 +12,12 @@ ms.assetid: 31abd605-b273-419d-86df-d0ecf539a507
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2c36b2de74fd93c36da61e186a1bb3a6a56382d9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9c630646aa81ebaeccf49f729299394419b7099a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48080519"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52753851"
 ---
 # <a name="publication-properties-subscription-options"></a>Propriétés de la publication, Options d'abonnement
   La page **Options d'abonnement** de la boîte de dialogue **Propriétés de la publication** vous permet d'afficher et de définir les propriétés de niveau de publication associées aux abonnements. Les propriétés sont regroupées selon les catégories suivantes :  
@@ -64,7 +63,7 @@ ms.locfileid: "48080519"
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et versions ultérieures uniquement. Détermine s'il est nécessaire d'autoriser l'utilisation de fichiers de sauvegarde pour initialiser les abonnements. Pour plus d’informations, consultez [Initialiser un abonnement transactionnel sans instantané](initialize-a-transactional-subscription-without-a-snapshot.md).  
   
  **Autoriser les abonnés non-SQL Server**  
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et versions ultérieures uniquement. Détermine si la publication prend en charge les abonnés non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Si cette option est définie sur **True** , les autres propriétés de publication prennent également en charge les abonnés non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cette option est en lecture seule si des abonnements existent. Elle ne peut avoir la valeur **True** si l'option **Autoriser les abonnements mis à jour immédiatement**, **Autoriser les abonnements mis à jour en attente**ou **Autoriser les abonnements d'égal à égal** a la valeur **True**. Pour plus d’informations, voir [Non-SQL Server Subscribers](non-sql/non-sql-server-subscribers.md).  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et versions ultérieures uniquement. Détermine si la publication prend en charge les abonnés non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Si cette option est définie sur **True** , les autres propriétés de publication prennent également en charge les abonnés non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cette option est en lecture seule si des abonnements existent. Elle ne peut avoir la valeur **True** si l'option **Autoriser les abonnements mis à jour immédiatement**, **Autoriser les abonnements mis à jour en attente**ou **Autoriser les abonnements d'égal à égal** a la valeur **True**. Pour plus d’informations, consultez [Non-SQL Server Subscribers](non-sql/non-sql-server-subscribers.md).  
   
 ### <a name="data-transformation"></a>Transformation des données  
  **Autoriser les transformations de données**  
@@ -85,7 +84,7 @@ ms.locfileid: "48080519"
   
 ### <a name="updatable-subscriptions"></a>Abonnements pouvant être mis à jour  
  **Autoriser les abonnements mis à jour immédiatement**  
- Détermine si les modifications de données de l'abonné peuvent être immédiatement répliquées sur le serveur de publication. Cette option est en lecture seule. Vous pouvez uniquement activer la mise à jour d'abonnement lors de la création d'une publication. Pour plus d’informations, voir [Updatable Subscriptions for Transactional Replication](transactional/updatable-subscriptions-for-transactional-replication.md).  
+ Détermine si les modifications de données de l'abonné peuvent être immédiatement répliquées sur le serveur de publication. Cette option est en lecture seule. Vous pouvez uniquement activer la mise à jour d'abonnement lors de la création d'une publication. Pour plus d’informations, consultez [Updatable Subscriptions for Transactional Replication](transactional/updatable-subscriptions-for-transactional-replication.md).  
   
  **Autoriser les abonnements mis à jour en attente**  
  Détermine si les modifications de données de l'abonné peuvent être mises en file d'attente et répliquées ultérieurement sur le serveur de publication. Cette option est en lecture seule. Vous pouvez uniquement activer la mise à jour d'abonnement lors de la création d'une publication. Pour plus d’informations, voir [Updatable Subscriptions for Transactional Replication](transactional/updatable-subscriptions-for-transactional-replication.md).  
@@ -107,7 +106,7 @@ ms.locfileid: "48080519"
   
 ### <a name="filtering"></a>Filtrage  
  **Autoriser les filtres paramétrés**  
- Dépend du fait qu'une publication utilise ou non des filtres paramétrés. Cette option est toujours en lecture seule. Pour plus d'informations, consultez [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md).  
+ Dépend du fait qu'une publication utilise ou non des filtres paramétrés. Cette option est toujours en lecture seule. Pour plus d’informations, consultez [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md).  
   
  **Valider les abonnés**  
  Détermine les fonctions à utiliser lors de la confirmation qu'un abonné dispose de la partition de données correcte. Séparez les valeurs multiples par des virgules. Pour plus d’informations, consultez [Valider des informations de partition pour un Abonné de fusion](validate-partition-information-for-a-merge-subscriber.md).  
@@ -116,7 +115,7 @@ ms.locfileid: "48080519"
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et versions ultérieures uniquement. Détermine s'il est nécessaire d'optimiser la synchronisation en calculant à l'avance l'appartenance des lignes de données aux partitions. La valeur par défaut de ce paramètre est **True** si la publication répond aux critères des partitions précalculées. Pour plus d’informations, consultez [Optimiser les performances des filtres paramétrés avec des partitions précalculées](merge/parameterized-filters-optimize-for-precomputed-partitions.md).  
   
  **Optimiser la synchronisation**  
- Détermine s'il est nécessaire d'optimiser le traitement de la fusion en stockant des métadonnées supplémentaires pour chaque abonné. Cette optimisation a été remplacée par les partitions précalculées. L'option **Optimiser la synchronisation** est uniquement pertinente si le paramètre **Précalculer les partitions** a la valeur **False**. Pour plus d'informations, consultez [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md).  
+ Détermine s'il est nécessaire d'optimiser le traitement de la fusion en stockant des métadonnées supplémentaires pour chaque abonné. Cette optimisation a été remplacée par les partitions précalculées. L'option **Optimiser la synchronisation** est uniquement pertinente si le paramètre **Précalculer les partitions** a la valeur **False**. Pour plus d'informations, voir [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md).  
   
 ### <a name="merge-processes"></a>Processus de fusion  
  **Limiter les processus simultanés**  

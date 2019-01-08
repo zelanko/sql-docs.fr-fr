@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - XPath queries [SQLXML], location paths
@@ -17,12 +15,12 @@ ms.assetid: f46c30bf-1e24-4435-9ac2-f8ba43a8ff94
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d70223df27f8f75c6e3a4d354d8f57f9ee8f150a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7450810f45d81dd1530699677a80a052840ed867
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48124980"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52806001"
 ---
 # <a name="specifying-a-node-test-in-the-location-path-sqlxml-40"></a>Spécification d'un test de nœud dans le chemin d'accès d'emplacement (SQLXML 4.0)
   Un test de nœud spécifie le type de nœud sélectionné par le niveau d'emplacement. Chaque axe (`child`, `parent`, `attribute` ou `self`) possède un type de nœud principal. Pour le `attribute` axe, le type de nœud principal est  **\<attribut >**. Pour le `parent`, `child`, et `self` axes, le type de nœud principal est  **\<élément >**.  
@@ -35,7 +33,7 @@ ms.locfileid: "48124980"
   
  Dans cet exemple, `child` est l'axe et `Customer` est le test de nœud. Le type de nœud principal pour le `child` axe est  **\<élément >**. Par conséquent, le test de nœud est TRUE si le  **\<client >** nœud est un  **\<élément >** nœud. Si le nœud de contexte n’a pas  **\<client >** enfants, un ensemble de nœuds vide est retourné.  
   
-## <a name="node-test-example-2"></a>Test de nœud : exemple 2  
+## <a name="node-test-example-2"></a>Test de nœud : Exemple 2  
  Le chemin d’accès de l’emplacement `attribute::CustomerID` sélectionne le **CustomerID** attribut du nœud de contexte.  
   
  Dans l’exemple, `attribute` est l’axe et `CustomerID` est le test de nœud. Le type de nœud principal de le `attribute` axe est  **\<attribut >**. Par conséquent, le test de nœud est TRUE si **CustomerID** est un  **\<attribut >** nœud. Si le nœud de contexte n’a pas **CustomerID**, un ensemble de nœuds vide est retourné.  

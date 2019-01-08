@@ -11,15 +11,15 @@ ms.assetid: 34b1e95a-a80e-4aca-9201-abde47f2ca74
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: da5cd273a0bfc00e86a6290777376fb6d1d30c6d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 72feb645258f7e1521f3f0380ca9de42b85a1192
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107669"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52522762"
 ---
 # <a name="create-an-extended-events-session"></a>Créer une session d'événements étendus
-  Vous pouvez créer une session d'événements étendus à l'aide de l'éditeur de requête, ou vous pouvez créer une session dans l'Explorateur d'objets. Dans l'Explorateur d'objets, les événements étendus fournissent deux interfaces utilisateur que vous pouvez utiliser pour créer, modifier et afficher des données de session d'événements : un assistant qui vous guide tout au long du processus de création de la session d'événements et une interface utilisateur de nouvelle session qui fournit des options de configuration plus avancées. Vous pouvez créer des sessions d'événements étendus pour diagnostiquer le suivi SQL Server, qui vous permet de résoudre des problèmes tels que :  
+  Vous pouvez créer une session d'événements étendus à l'aide de l'éditeur de requête, ou vous pouvez créer une session dans l'Explorateur d'objets. Dans l’Explorateur d’objets, les événements étendus fournissent deux interfaces utilisateur que vous pouvez utiliser pour créer, modifier et afficher les données de session d’événement : un Assistant qui vous guide à travers le processus de création d’événements session et une nouvelle interface utilisateur de Session qui fournit des options de configuration plus avancées. Vous pouvez créer des sessions d'événements étendus pour diagnostiquer le suivi SQL Server, qui vous permet de résoudre des problèmes tels que :  
   
 -   Rechercher les requêtes les plus onéreuses  
   

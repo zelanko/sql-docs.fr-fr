@@ -10,12 +10,12 @@ ms.assetid: 5d84b51a-ec17-4c5c-b80e-9e994fc8ae80
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 17461cb9fcde8e37118a275512b332085beb5313
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 40420db76ee8ce5b1fcf1d085a78d7b17690105d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112119"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538594"
 ---
 # <a name="cross-container-transactions"></a>Transactions entre conteneurs
   Les transactions entre conteneurs sont des transactions utilisateur implicites ou explicites qui incluent des appels aux procédures stockées compilées en mode natif ou des opérations sur des tables mémoire optimisées.  
@@ -37,13 +37,13 @@ set transaction isolation level serializable
 go  
   
 begin transaction  
- ……  
+ ......  
   set transaction isolation level repeatable read  
   
   insert t3 select * from t1 join t2 on t1.id=t2.id  
   
   set transaction isolation level serializable  
- ……  
+ ......  
 commit  
 ```  
   
@@ -54,11 +54,11 @@ set transaction isolation level read committed
 go  
   
 begin transaction  
- ……  
+ ......  
   
   insert t3 select * from t1 (serializable) join t2 (snapshot) on t1.id=t2.id  
   
-  ……  
+  ......  
 commit  
 ```  
   
@@ -80,7 +80,7 @@ commit
  La cohérence transactionnelle pour un ensemble de lectures vérifie si toutes les versions de ligne lues comprennent les mises à jour du même ensemble de transactions précisément.  
   
  La stabilité garantit que le système permet à la transaction T de lire les données.  
- La stabilité détermine si les lectures des transactions sont renouvelables, c'est-à-dire si les lectures renouvelées retournent les mêmes lignes et versions de ligne.  
+ La stabilité détermine si les lectures des transactions sont renouvelables. c'est-à-dire si les lectures renouvelées retournent les mêmes lignes et versions de ligne.  
   
  Certaines garanties font référence à l'heure de fin logique de la transaction. En général, l'heure de fin logique est l'heure à laquelle la transaction est validée dans la base de données. Si la transaction accède à des tables mémoire optimisées, l'heure de fin logique correspond techniquement au début de la phase de validation. (Pour plus d’informations, consultez la discussion de durée de vie de transaction dans [Transactions dans les Tables optimisées en mémoire](../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
   

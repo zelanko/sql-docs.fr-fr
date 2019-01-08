@@ -13,12 +13,12 @@ ms.assetid: 16485608-d3b9-49ee-8baa-948038cdd7ec
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e4036705b86b26e1f39bd42578c991014096f113
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c68ec29c2461cb7ffddfdbd2792e1a1a191076b2
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089989"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52416650"
 ---
 # <a name="slice-source-cube-data-mining-wizard"></a>Découper le cube source (Assistant Exploration de données)
   Utilisez la boîte de dialogue **Découper le cube source** afin de limiter les données utilisées pour effectuer l'apprentissage du modèle. Généralement, un cube contient les données relatives à plusieurs dimensions et attributs différents, tels que tous les magasins, toutes les régions et tous les produits. Il n'est pas pratique d'effectuer l'apprentissage d'un modèle sur des combinaisons illimitées d'attributs. C'est pourquoi, vous utilisez cette boîte de dialogue pour choisir un ensemble spécifique à utiliser dans l'apprentissage d'un modèle.  
@@ -29,16 +29,16 @@ ms.locfileid: "48089989"
   
 -   [Définissez la propriété Slice de Partition &#40;Analysis Services&#41;](multidimensional-models/set-the-partition-slice-property-analysis-services.md)  
   
--   [Créer et gérer une Partition locale &#40;Analysis Services&#41;](multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)  
+-   [Créer et gérer une partition locale &#40;Analysis Services&#41;](multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)  
   
 > [!NOTE]  
 >  Notez que les fonctions MDX dynamiques (telles que [Generate &#40;MDX&#41;](/sql/mdx/generate-mdx) ou [Except &#40;MDX&#41;](/sql/mdx/except-mdx-function)) ne sont pas prises en charge dans la propriété Slice des partitions. Vous devez définir la tranche à l'aide de tuples explicites ou de références à des membres.  
 >   
 >  Par exemple, au lieu d’utiliser [: &#40;plage&#41; &#40;MDX&#41; ](/sql/mdx/range-mdx) pour définir une plage, vous devez énumérer chaque membre par année spécifique.  
 >   
->  Si vous devez définir une tranche complexe, nous vous recommandons de définir les tuples de la tranche en utilisant un script XMLA Alter. Ensuite, vous pouvez utiliser l’outil de ligne de commande ascmd ou la SSIS [Analysis Services Execute DDL Task](../integration-services/control-flow/analysis-services-execute-ddl-task.md) pour exécuter le script et créer le jeu de membres spécifié juste avant de traiter la partition.  
+>  Si vous devez définir une tranche complexe, nous vous recommandons de définir les tuples de la tranche en utilisant un script XMLA Alter. Ensuite, vous pouvez utiliser l'outil en ligne de commande ascmd ou la [Analysis Services Execute DDL Task](../integration-services/control-flow/analysis-services-execute-ddl-task.md) SSIS pour exécuter le script et créer le jeu de membres spécifié juste avant de traiter la partition.  
   
- **Pour plus d’informations :** [Assistant Exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Créer une structure d’exploration de données relationnelle](data-mining/create-a-relational-mining-structure.md)  
+ **Pour plus d’informations :** [Assistant exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [créer une Structure d’exploration de données relationnelles](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>Options  
  **Dimension**  
@@ -52,7 +52,7 @@ ms.locfileid: "48089989"
  **Opérateur**  
  Sélectionner l'opérateur à utiliser lors de la création une expression de tranche.  
   
- Par exemple, si vous choisissiez la hiérarchie Geography, vous devez sélectionner l'opérateur =, puis entrez « Europe » comme filtre, pour obtenir les données du cube pour l'Europe uniquement.  
+ Par exemple, si vous avez choisi la hiérarchie Geography, vous pouvez sélectionner l’opérateur =, puis entrez « Europe » comme filtre, pour obtenir des données de cube pour l’Europe uniquement.  
   
  **Expression de filtre**  
  Entrez une expression à utiliser comme critère lors du filtrage du cube sur la dimension sélectionnée.  

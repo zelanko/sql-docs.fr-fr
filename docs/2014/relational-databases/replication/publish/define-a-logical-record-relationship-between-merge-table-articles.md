@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/30/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - merge replication logical records [SQL Server replication]
@@ -15,12 +14,12 @@ ms.assetid: ff847b3a-c6b0-4eaf-b225-2ffc899c5558
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e350687f69ea8e6a8ab70f5fa2eb5a1552058525
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0c1c5be804f60fa57b677a418c19d8aadee23f22
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069919"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52780451"
 ---
 # <a name="define-a-logical-record-relationship-between-merge-table-articles"></a>Définir une relation d'enregistrement logique entre des articles de table de fusion
   Cette rubrique explique comment définir une relation d'enregistrement logique entre des articles de table de fusion dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou d'objets RMO (Replication Management Objects).  
@@ -116,7 +115,7 @@ ms.locfileid: "48069919"
     > [!NOTE]  
     >  Si aucun filtre de jointure n'est pas utilisé, la direction de la relation entre les deux articles n'est pas importante.  
   
-5.  Répétez l'étape 2 pour chaque relation d'enregistrement logique restante dans la publication.  
+5.  Répétez l'étape 2 pour chaque relation d'enregistrement logique restante dans la publication.  
   
 #### <a name="to-change-conflict-detection-and-resolution-for-logical-records"></a>Pour modifier la détection et la résolution des conflits pour les enregistrements logiques  
   
@@ -134,7 +133,7 @@ ms.locfileid: "48069919"
   
 #### <a name="to-remove-a-logical-record-relationship"></a>Pour supprimer une relation d'enregistrements logiques  
   
-1.  Dans la base de données de publication sur le serveur de publication, exécutez la requête suivante afin que des informations sur toutes les relations d'enregistrements logiques définies pour la publication spécifiée soient retournées :  
+1.  Dans la base de données de publication sur le serveur de publication, exécutez la requête suivante afin que des informations sur toutes les relations d'enregistrements logiques définies pour la publication spécifiée soient retournées :  
   
      [!code-sql[HowTo#sp_ReturnMergeLogicalRecords](../../../snippets/tsql/SQL15/replication/howto/tsql/createlogicalrecordpub.sql#sp_returnmergelogicalrecords)]  
   
@@ -161,7 +160,7 @@ ms.locfileid: "48069919"
   
 2.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.MergePublication> , définissez les propriétés <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> et <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> pour la publication et définissez la propriété <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> sur la connexion créée à l'étape 1.  
   
-3.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> pour obtenir les propriétés de l'objet. Si cette méthode retourne `false`, soit les propriétés de la publication à l’étape 2 ont été définies de manière incorrecte ou que la publication n’existe pas.  
+3.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> pour obtenir les propriétés de l'objet. Si cette méthode retourne `false`, soit les propriétés de la publication ont été définies de manière incorrecte à l'étape 2, soit la publication n'existe pas.  
   
 4.  Si la propriété <xref:Microsoft.SqlServer.Replication.MergePublication.PartitionGroupsOption%2A> a la valeur <xref:Microsoft.SqlServer.Replication.PartitionGroupsOption.False>, affectez-lui la valeur <xref:Microsoft.SqlServer.Replication.PartitionGroupsOption.True>.  
   

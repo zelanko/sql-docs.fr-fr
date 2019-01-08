@@ -28,12 +28,12 @@ ms.assetid: b035b2e0-ab1e-4a37-bff7-a42d1e914bac
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: f61ad0448df247678be1479b8f28ebb8828796a9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6df57894c700391685d26f68b75791dfe916b729
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211829"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511891"
 ---
 # <a name="formatting-the-legend-on-a-chart-report-builder-and-ssrs"></a>Mise en forme de la légende sur un graphique (Générateur de rapports et SSRS)
   La légende du graphique contient des descriptions pour chaque catégorie d'un graphique. Une légende contient toujours un ou plusieurs éléments de légende. Chaque élément de légende consiste en une zone colorée qui représente les séries et une chaîne de texte qui décrit ces dernières, comme indiqué dans l'illustration ci-dessous.  
@@ -50,14 +50,14 @@ ms.locfileid: "48211829"
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="ordering-legend-items-in-the-legend"></a>Ordre des éléments de légende dans la légende  
- Les séries sont ordonnées dans la légende d'après l'ordre dans lequel le moteur de traitement [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] les traite. Vous pouvez modifier cet ordre en modifiant l'ordre des champs dans la zone de dépôt des champs de données. Si vous utilisez un regroupement de séries, les données de série sont inconnues jusqu'au traitement. Vous ne disposez donc d'aucun moyen pour réordonner ces éléments. Les modifications peuvent être vues dans l'Aperçu. Pour plus d’informations sur le regroupement de séries, consultez [graphiques &#40;Générateur de rapports et SSRS&#41;](charts-report-builder-and-ssrs.md).  
+ Les séries sont ordonnées dans la légende d'après l'ordre dans lequel le moteur de traitement [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] les traite. Vous pouvez modifier cet ordre en modifiant l'ordre des champs dans la zone de dépôt des champs de données. Si vous utilisez un regroupement de séries, les données de série sont inconnues jusqu'au traitement. Vous ne disposez donc d'aucun moyen pour réordonner ces éléments. Les modifications peuvent être vues dans l'Aperçu. Pour plus d’informations sur le regroupement de séries, consultez [Graphiques &#40;Générateur de rapports et SSRS&#41;](charts-report-builder-and-ssrs.md).  
   
- Vous pouvez masquer l'affichage des séries dans la légende. Si vous utilisez un regroupement de séries, toutes les séries en rapport avec le champ de données seront masquées. Pour plus d’informations, consultez [masquer des éléments de légende sur le graphique &#40;Générateur de rapports et SSRS&#41;](chart-legend-hide-items-report-builder.md).  
+ Vous pouvez masquer l'affichage des séries dans la légende. Si vous utilisez un regroupement de séries, toutes les séries en rapport avec le champ de données seront masquées. Pour plus d’informations, consultez [Masquer des éléments de légende dans le graphique &#40;Générateur de rapports et SSRS&#41;](chart-legend-hide-items-report-builder.md).  
   
 ## <a name="changing-the-text-or-color-of-a-legend-item-in-the-legend"></a>Modification du texte ou de la couleur d'un élément de légende dans la légende  
- Lorsqu'un champ est placé dans la zone de dépôt du champ de données d'un graphique, un élément de légende contenant le nom de ce champ est automatiquement généré. Par défaut, le texte de chaque élément de légende est tiré du nom du champ de données. Chaque élément de légende est relié à une série individuelle sur le graphique, à l'exception des graphiques à base de formes, pour lesquels la légende est reliée à des points de données individuels et non à des séries individuelles. Lorsqu'un groupe de catégories est défini sur un graphique à base de formes, le texte de chaque élément de légende est tiré de la représentation de chaîne du groupe de catégories. Vous pouvez spécifier un texte d'étiquette personnalisé pour les graphiques à secteurs, en anneau ou en entonnoir afin d'afficher des informations autres que l'étiquette du groupe de catégories pour chaque point de données de la légende. Pour ce faire, sélectionnez la légende et spécifiez le texte de la légende dans la boîte de dialogue **Propriétés de la série** ou la propriété **LegendText** du volet Propriétés. Pour plus d’informations, consultez [modifier le texte d’un élément de légende &#40;Générateur de rapports et SSRS&#41;](chart-legend-change-item-text-report-builder.md).  
+ Lorsqu'un champ est placé dans la zone de dépôt du champ de données d'un graphique, un élément de légende contenant le nom de ce champ est automatiquement généré. Par défaut, le texte de chaque élément de légende est tiré du nom du champ de données. Chaque élément de légende est relié à une série individuelle sur le graphique, à l'exception des graphiques à base de formes, pour lesquels la légende est reliée à des points de données individuels et non à des séries individuelles. Lorsqu'un groupe de catégories est défini sur un graphique à base de formes, le texte de chaque élément de légende est tiré de la représentation de chaîne du groupe de catégories. Vous pouvez spécifier un texte d'étiquette personnalisé pour les graphiques à secteurs, en anneau ou en entonnoir afin d'afficher des informations autres que l'étiquette du groupe de catégories pour chaque point de données de la légende. Pour ce faire, sélectionnez la légende et spécifiez le texte de la légende dans la boîte de dialogue **Propriétés de la série** ou la propriété **LegendText** du volet Propriétés. Pour plus d’informations, consultez [Modifier le texte d’un élément de légende &#40;Générateur de rapports et SSRS&#41;](chart-legend-change-item-text-report-builder.md).  
   
- Vous pouvez également spécifier des mots clés spécifiques au graphique et respectant la casse pour les attributs communément référencés dans la propriété **LegendText** ou dans la boîte de dialogue **Propriétés de la série** . Le contrôle de graphique remplace ces mots clés au moment de l'exécution par leur représentation de données. Cette approche est utile pour les graphiques à bases de formes car vous êtes en mesure d'afficher les informations relatives à des points de données spécifiques. Pour plus d’informations, consultez [mise en forme des Points de données sur un graphique &#40;Générateur de rapports et SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md).  
+ Vous pouvez également spécifier des mots clés spécifiques au graphique et respectant la casse pour les attributs communément référencés dans la propriété **LegendText** ou dans la boîte de dialogue **Propriétés de la série** . Le contrôle de graphique remplace ces mots clés au moment de l'exécution par leur représentation de données. Cette approche est utile pour les graphiques à bases de formes car vous êtes en mesure d'afficher les informations relatives à des points de données spécifiques. Pour plus d’informations, consultez [Mise en forme des points de données sur un graphique &#40;Générateur de rapports et SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md).  
   
  La zone colorée affichée pour chaque élément de légende est héritée de la couleur de remplissage de la série correspondante. Si vous souhaitez modifier la couleur affichée dans un élément de légende, vous devez modifier la couleur de la série correspondante. Pour plus d’informations, consultez [Mise en forme des couleurs des séries d’un graphique &#40;Générateur de rapports et SSRS&#41;](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md).  
   
@@ -70,7 +70,7 @@ ms.locfileid: "48211829"
  Vous ne pouvez pas faire glisser la légende à l'intérieur ou à l'extérieur de la zone de graphique. Si vous souhaitez placer la légende à l’intérieur de la zone de graphique, dans la boîte de dialogue **Propriétés de la légende** , sous **Ancrage**, sélectionnez **Par défaut** dans la liste déroulante et désactivez l’option **Afficher la légende en dehors de la zone de graphique** . En plaçant la légende à l'intérieur de la zone de graphique, vous pouvez agrandir l'espace pour les points de données sur le graphique. Toutefois, selon le dataset, cela peut provoquer un chevauchement de la légende et de certains points de données sur la zone de graphique et rendre la lecture du graphique plus difficile.  
   
 ## <a name="displaying-legend-items-horizontally"></a>Affichage horizontal des éléments de légende  
- Par défaut, la légende est mise en forme sous la forme d'une liste d'une ou de plusieurs lignes contenant chacune un élément de légende. La zone de légende s'étend pour s'adapter au nombre d'éléments de légende. Si la légende ne peut pas s'étendre, des points de suspension (…) sont affichés. Selon le style de légende spécifié, la légende peut s'étendre verticalement ou horizontalement. Vous pouvez modifier le style de disposition dans la boîte de dialogue **Propriétés de la légende** ou modifier l'espace alloué pour afficher tous les éléments de légende.  
+ Par défaut, la légende est mise en forme sous la forme d'une liste d'une ou de plusieurs lignes contenant chacune un élément de légende. La zone de légende s'étend pour s'adapter au nombre d'éléments de légende. Si la légende ne peut pas s’étendre, des points de suspension (...) sont affichés. Selon le style de légende spécifié, la légende peut s'étendre verticalement ou horizontalement. Vous pouvez modifier le style de disposition dans la boîte de dialogue **Propriétés de la légende** ou modifier l'espace alloué pour afficher tous les éléments de légende.  
   
  Pour afficher la légende horizontalement, ancrez la légende en haut ou en bas du graphique. La légende s'étend ainsi horizontalement. Vous pouvez également affecter la valeur **Ligne** ou **Tableau large**à la propriété Layout. Définissez la propriété MaxAutoSize dans le volet Propriétés pour contrôler l’espace vertical alloué à la légende quand elle est ancrée en haut ou en bas de la zone de graphique.  
   
@@ -80,12 +80,12 @@ ms.locfileid: "48211829"
  Par défaut, le texte de légende n'est pas optimisé pour s'ajuster à la zone de légende. Pour que le texte de légende s’adapte automatiquement à l’espace alloué, la valeur est la propriété AutoFitTextDisabled `False` et définir une taille de police minimale pour la propriété MinFontSize à la plus petite taille de police que vous jugez est présentable et toujours autoriser les éléments de légende optimisation.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Boîte de dialogue Propriétés de légende, général &#40;Générateur de rapports et SSRS&#41;](../legend-properties-dialog-box-general-report-builder-and-ssrs.md)   
+ [Boîte de dialogue Propriétés de la légende, Général &#40;Générateur de rapports et SSRS&#41;](../legend-properties-dialog-box-general-report-builder-and-ssrs.md)   
  [Modifier le texte d’un élément de légende &#40;Générateur de rapports et SSRS&#41;](chart-legend-change-item-text-report-builder.md)   
  [Mise en forme d’un graphique &#40;Générateur de rapports et SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
- [Mise en forme des couleurs des séries sur un graphique &#40;Générateur de rapports et SSRS&#41;](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
+ [Mise en forme des couleurs des séries d’un graphique &#40;Générateur de rapports et SSRS&#41;](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
  [Graphiques &#40;Générateur de rapports et SSRS&#41;](charts-report-builder-and-ssrs.md)   
- [Masquer des éléments de légende sur le graphique &#40;Générateur de rapports et SSRS&#41;](chart-legend-hide-items-report-builder.md)   
- [Définir les couleurs d’un graphique à l’aide d’une Palette &#40;Générateur de rapports et SSRS&#41;](define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)  
+ [Masquer des éléments de légende dans le graphique &#40;Générateur de rapports et SSRS&#41;](chart-legend-hide-items-report-builder.md)   
+ [Définir les couleurs d’un graphique à l’aide d’une palette &#40;Générateur de rapports et SSRS&#41;](define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)  
   
   

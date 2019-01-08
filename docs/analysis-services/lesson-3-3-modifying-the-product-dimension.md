@@ -1,5 +1,5 @@
 ---
-title: Modification de la Dimension de produit | Documents Microsoft
+title: Modification de la Dimension de produit | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b35f1712af9d501ff35a92cecb0eeea068d9aac0
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 6fd0617d5c3d79ae0cf2eb7021f730a8062bd969
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019566"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525845"
 ---
-# <a name="lesson-3-3---modifying-the-product-dimension"></a>Leçon 3-3-modification de la Dimension de produit
+# <a name="lesson-3-3---modifying-the-product-dimension"></a>Leçon 3-3 : modification de la Dimension Product
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 Au cours des tâches de cette rubrique, vous allez utiliser un calcul nommé pour fournir des noms plus descriptifs pour les lignes de produits, définir une hiérarchie dans la dimension Product et spécifier le nom de membre (All) pour la hiérarchie. Vous regroupez également les attributs dans des dossiers d'affichage.  
@@ -58,7 +58,7 @@ Vous pouvez ajouter un calcul nommé à une table dans une vue de source de donn
   
 2.  Dans le volet **Attributs** de l’onglet **Structure de dimension** , sélectionnez **Product Line**.  
   
-3.  Dans la fenêtre Propriétés à droite de l’écran, cliquez sur le champ de propriété **NameColumn** en bas de la fenêtre, puis cliquez sur le bouton de navigation (**…**) pour ouvrir la boîte de dialogue **Colonne de nom** . (Il peut être nécessaire de cliquer sur l’onglet **Propriétés** à droite de l’écran pour ouvrir la fenêtre Propriétés.)  
+3.  Dans la fenêtre de propriétés sur le côté droit de l’écran, cliquez sur le **NameColumn** propriété champ en bas de la fenêtre, puis cliquez sur le bouton de navigation (**...** ) pour ouvrir la **colonne nom** boîte de dialogue. (Il peut être nécessaire de cliquer sur l’onglet **Propriétés** à droite de l’écran pour ouvrir la fenêtre Propriétés.)  
   
 4.  Sélectionnez **ProductLineName** dans le bas de la liste **Colonne source** , puis cliquez sur **OK**.  
   
@@ -66,7 +66,7 @@ Vous pouvez ajouter un calcul nommé à une table dans une vue de source de donn
   
 5.  Dans le volet **Attributs** de l’onglet **Structure de dimension** , sélectionnez **Product Key**.  
   
-6.  Dans la fenêtre Propriétés, cliquez dans le champ de propriété **NameColumn** puis cliquez sur le bouton de navigation (**…**) pour ouvrir la boîte de dialogue **Colonne de nom** .  
+6.  Dans la fenêtre Propriétés, cliquez sur le **NameColumn** propriété champ, puis cliquez sur le bouton de navigation (**...** ) pour ouvrir la **colonne nom** boîte de dialogue.  
   
 7.  Sélectionnez **EnglishProductName** dans la liste **Colonne source** , puis cliquez sur **OK**.  
   
@@ -183,7 +183,7 @@ Si les données sous-jacentes le prennent en charge, il est également conseill�
 [Modification de la dimension Date](../analysis-services/lesson-3-4-modifying-the-date-dimension.md)  
   
 ## <a name="see-also"></a>Voir aussi  
-[Définir des calculs nommés dans une vue de Source de données & #40 ; Analysis Services & #41 ;](../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
+[Définir des calculs nommés dans une vue de source de données &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
 [Créer des hiérarchies définies par l'utilisateur](../analysis-services/multidimensional-models/user-defined-hierarchies-create.md)  
 [Configurer le niveau &#40;Tous&#41; des hiérarchies d’attributs](../analysis-services/multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
   

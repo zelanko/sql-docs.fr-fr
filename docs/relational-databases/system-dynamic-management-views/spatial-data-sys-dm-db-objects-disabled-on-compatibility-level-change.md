@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 028c3a2fe26d448373fcb9c4a00d2916a1bb34e5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fece91698147ef11496855985f27ea81f84f62a5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726757"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537943"
 ---
 # <a name="spatial-data---sysdmdbobjectsdisabledoncompatibilitylevelchange"></a>Données spatiales - sys.dm_db_objects_disabled_on_compatibility_level_change
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -107,18 +107,18 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
   
 -   **Geography :: BufferWithTolerance**  
   
--   **Geography :: analyser**  
+-   **Geography :: Analyser**  
   
 -   **Geography :: réduire**  
   
 ### <a name="behavior-of-the-disabled-objects"></a>Comportement des objets désactivés  
  **Index**  
   
- Si l’index cluster est désactivé, ou si un index non cluster est forcé, l’erreur suivante est levée : « le processeur de requêtes ne peut pas créer de plan car l’index ' %. \*%.*ls sur la table ou la vue ' %. \*%.*ls est désactivé. » Pour réactiver ces objets, reconstruisez les index après mise à niveau en appelant **ALTER INDEX ON... RECONSTRUIRE**.  
+ Si l'index cluster est désactivé, ou si un index non cluster est forcé, l'erreur suivante est générée : « Le processeur de requêtes ne peut pas créer de plan car l’index ' %. \*%.*ls sur la table ou la vue ' %. \*%.*ls est désactivé. » Pour réactiver ces objets, reconstruisez les index après mise à niveau en appelant **ALTER INDEX ON... REBUILD**.  
   
  **Segments de mémoire**  
   
- Si une table avec un segment désactivé est utilisée, l'erreur suivante est levée. Pour réactiver ces objets, reconstruisez après mise à niveau en appelant **ALTER INDEX ON tous les... RECONSTRUIRE**.  
+ Si une table avec un segment désactivé est utilisée, l'erreur suivante est levée. Pour réactiver ces objets, reconstruisez après mise à niveau en appelant **ALTER INDEX ON tous les... REBUILD**.  
   
 ```  
 // ErrorNumber: 8674  
@@ -135,7 +135,7 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
   
  **Contraintes de validation et les clés étrangères**  
   
- Les contraintes de validation et les clés étrangères désactivées ne déclenchent pas d'erreur. Toutefois, les contraintes ne sont pas appliquées lorsque des lignes sont modifiées. Pour réactiver ces objets, vérifiez les contraintes après la mise à niveau en appelant **ALTER TABLE... CONTRAINTE de validation**.  
+ Les contraintes de validation et les clés étrangères désactivées ne déclenchent pas d'erreur. Toutefois, les contraintes ne sont pas appliquées lorsque des lignes sont modifiées. Pour réactiver ces objets, vérifiez les contraintes après la mise à niveau en appelant **ALTER TABLE... CONTRAINTE DE VALIDATION**.  
   
  **Colonnes calculées persistantes**  
   
@@ -143,7 +143,7 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
   
 ## <a name="security"></a>Sécurité  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Autorisations  
  Requiert l'autorisation VIEW DATABASE STATE.  
   
 ## <a name="example"></a>Exemple  

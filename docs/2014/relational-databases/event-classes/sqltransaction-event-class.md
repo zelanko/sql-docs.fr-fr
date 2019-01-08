@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: 4e175aa3-4f3d-4b23-a423-4a7a1bd4e84e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 17dcca9345ce273e53b58d7dc8237a448f2c957e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: de5a49853f08541cd617afb20273820f956ee660
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098969"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52774391"
 ---
 # <a name="sqltransaction-event-class"></a>SQLTransaction, classe d'événements
   La classe d'événements SQLTransaction permet de surveiller le début et la fin des transactions, notamment lorsque vous testez des applications, des déclencheurs ou des procédures stockées.  
@@ -35,8 +34,8 @@ ms.locfileid: "48098969"
 |DatabaseName|`nvarchar`|Nom de la base de données dans laquelle l'instruction de l'utilisateur est exécutée.|35|Oui|  
 |Duration|`bigint`|Temps (en microsecondes) pris par l'événement.|13|Oui|  
 |EndTime|`datetime`|Heure de fin de l'événement.|15|Oui|  
-|EventClass|`int`|Type d’événement = 50.|27|non|  
-|EventSequence|`int`|Séquence d'un événement donné au sein de la demande.|51|non|  
+|EventClass|`int`|Type d’événement = 50.|27|Non|  
+|EventSequence|`int`|Séquence d'un événement donné au sein de la demande.|51|Non|  
 |EventSubClass|`int`|Type de sous-classe d'événements.<br /><br /> 0=Début<br /><br /> 1=Validation<br /><br /> 2=Annulation<br /><br /> 3=Point d'enregistrement|21|Oui|  
 |GroupID|`int`|ID du groupe de charges de travail où l'événement Trace SQL se déclenche.|66|Oui|  
 |HostName|`nvarchar`|Nom de l'ordinateur sur lequel le client est exécuté. La colonne de données est remplie si le client fournit le nom de l'hôte. Pour déterminer le nom de l'hôte, utilisez la fonction HOST_NAME.|8|Oui|  
@@ -48,7 +47,7 @@ ms.locfileid: "48098969"
 |NTUserName|`nvarchar`|Nom d'utilisateur Windows.|6|Oui|  
 |ObjectName|`nvarchar`|Nom de l'objet référencé.|34|Oui|  
 |RequestID|`int`|ID de la demande contenant l'instruction.|49|Oui|  
-|ServerName|`nvarchar`|Nom de l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracée.|26|non|  
+|ServerName|`nvarchar`|Nom de l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracée.|26|Non|  
 |SessionLoginName|`nvarchar`|Nom de connexion de l'utilisateur à l'origine de la session. Par exemple, si vous vous connectez à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en utilisant le nom Connexion1 et que vous exécutez une instruction en tant que Connexion2, SessionLoginName affiche Connexion1 et LoginName, Connexion2. Cette colonne affiche à la fois les connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et Windows.|64|Oui|  
 |SPID|`int`|ID de la session au cours de laquelle l'événement s'est produit.|12|Oui|  
 |StartTime|`datetime`|Heure à laquelle a débuté l'événement, si elle est connue.|14|Oui|  

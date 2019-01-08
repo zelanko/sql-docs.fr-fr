@@ -5,8 +5,7 @@ ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_dropsubscription
@@ -17,12 +16,12 @@ ms.assetid: 7551f345-5510-4684-ab53-f9057249d13a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0a8af8a4fc4572389bfaca7d1c678de8ec95641e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 08e25ee6f2de589c3d7367c140bd0ea63d4cec1e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47687477"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52812966"
 ---
 # <a name="spdropsubscription-transact-sql"></a>sp_dropsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,22 +43,22 @@ sp_dropsubscription [ [ @publication= ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@publication=** ] **'***publication***'**  
+ [  **@publication=** ] **'**_publication_**'**  
  Nom de la publication associée. *publication* est **sysname**, avec NULL comme valeur par défaut. Si **tous les**, tous les abonnements pour toutes les publications de l’abonné spécifié seront annulés. *publication* est un paramètre obligatoire.  
   
- [  **@article=** ] **'***article***'**  
+ [  **@article=** ] **'**_article_**'**  
  Nom de l'article. *article* est **sysname**, avec NULL comme valeur par défaut. Si **tous les**, spécifié d’abonnements à tous les articles pour chaque publication et abonné sont supprimés. Utilisez **tous les** pour les publications qui autorisent immédiates mis à jour.  
   
- [  **@subscriber=** ] **' ***s’abonner*r**' **  
+ [  **@subscriber=** ] **'**_subscribe_r **'**  
  Nom de l'Abonné dont les abonnements seront supprimés. *abonné* est **sysname**, sans valeur par défaut. Si **tous les**, tous les abonnements pour tous les abonnés sont supprimés.  
   
- [  **@destination_db=** ] **'***destination_db***'**  
+ [  **@destination_db=** ] **'**_destination_db_**'**  
  Nom de la base de données de destination. *destination_db* est **sysname**, avec NULL comme valeur par défaut. Si la valeur est NULL, tous les abonnements de cet Abonné seront supprimés.  
   
  [  **@ignore_distributor =** ] *ignore_distributor*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [  **@reserved=** ] **'***réservé***'**  
+ [  **@reserved=** ] **'**_réservé_**'**  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
@@ -73,7 +72,7 @@ sp_dropsubscription [ [ @publication= ] 'publication' ]
 ## <a name="example"></a>Exemple  
  [!code-sql[HowTo#sp_droptransubscription](../../relational-databases/replication/codesnippet/tsql/sp-dropsubscription-tran_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Seuls les membres de la **sysadmin** rôle serveur fixe le **db_owner** rôle de base de données fixe ou de l’utilisateur qui a créé l’abonnement peut exécuter **sp_dropsubscription**.  
   
 ## <a name="see-also"></a>Voir aussi  

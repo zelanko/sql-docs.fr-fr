@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent jobs, categories
@@ -15,12 +15,12 @@ ms.assetid: 6a18f7f0-eb50-485f-a9c7-df31ae0f994e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f956a6f87142a9b9bae2d8398d69e3fd3ae08c9c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f309bf2f339347c6d29000b45bdaab602b3bd752
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106169"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52760731"
 ---
 # <a name="change-the-membership-of-a-job-category"></a>Modifier l'appartenance d'une catégorie de travaux
   Cette rubrique explique comment modifier l'appartenance de la catégorie de travaux dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], de [!INCLUDE[tsql](../../includes/tsql-md.md)]ou de SQL Server Management Objects.  
@@ -89,6 +89,6 @@ ms.locfileid: "48106169"
 ##  <a name="SMO"></a> À l’aide de SQL Server Management Objects  
  **Pour modifier l'appartenance d'une catégorie de travaux**  
   
- Utilisez la `JobCategory` classe à l’aide d’un langage de programmation que vous choisissez, tel que Visual Basic, Visual c# ou PowerShell.  
+ Utilisez la classe `JobCategory` à l'aide d'un langage de programmation que vous choisissez, tel que Visual Basic, Visual C# ou PowerShell.  
   
   

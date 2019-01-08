@@ -18,12 +18,12 @@ ms.assetid: 06a776e6-296c-4ec7-9fa5-0794709ccb17
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 66714f9f401c8a5061b1cff2d316555d5e9a71bc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 914a1f0eb36ad0da4076f487d1771a8dfd23bfb1
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093339"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52807251"
 ---
 # <a name="limit-search-results-with-rank"></a>Limiter les résultats de la recherche avec RANK
   Les fonctions [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) et [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) retournent une colonne appelée RANK qui contient des valeurs ordinales comprises entre 0 et 1000 (valeurs de classement). Ces valeurs servent à établir le rang des lignes retournées en fonction de leur correspondance par rapport aux critères de sélection. Les valeurs de classement indiquent uniquement un ordre relatif de pertinence pour les lignes du jeu de résultats. Une valeur inférieure indique une pertinence plus faible. Les valeurs réelles sont sans importance et sont généralement différentes d'une exécution de requête à une autre.  
@@ -37,7 +37,7 @@ ms.locfileid: "48093339"
   
 ##  <a name="examples"></a> Exemples d'utilisation de RANK pour limiter les résultats de la recherche  
   
-### <a name="example-a-searching-for-only-the-top-three-matches"></a>Exemple A : recherche des trois premières correspondances uniquement  
+### <a name="example-a-searching-for-only-the-top-three-matches"></a>Exemple A : Recherche uniquement les trois premières correspondances  
  L'exemple suivant utilise CONTAINSTABLE pour retourner uniquement les trois premières correspondances.  
   
 ```  
@@ -68,7 +68,7 @@ RANK        Address                          City
 ```  
   
   
-### <a name="example-b-searching-for-the-top-ten-matches"></a>Exemple B : recherche des dix premières correspondances  
+### <a name="example-b-searching-for-the-top-ten-matches"></a>Exemple B : Recherche des dix premières correspondances  
  L'exemple suivant utilise CONTAINSTABLE pour retourner la description des 5 premiers produits dont la colonne `Description` contient les mots « aluminum » à proximité du mot « light » ou « lightweight ».  
   
 ```  
@@ -141,9 +141,9 @@ GO
 ### <a name="rank-computation-issues"></a>Problèmes de calcul de rang  
  Le processus de calcul du rang dépend d'un certain nombre de facteurs.  Les analyseurs lexicaux des diverses langues créent des jetons de texte de manière différente. Par exemple, la chaîne « après-midi » peut être décomposée en « après » « midi » par un analyseur lexical et en « après-midi » par un autre. En d'autres termes, la correspondance et le classement varient en fonction de la langue spécifiée, car les mots sont différents et la longueur du document l'est également. La différence de longueur d'un document peut affecter le classement pour toutes les requêtes.  
   
- Les statistiques telles que `IndexRowCount` peut varier énormément. Par exemple, si un catalogue a 2 milliards de lignes dans l'index principal, un nouveau document est indexé dans un index intermédiaire en mémoire ; par ailleurs, les rangs de ce document qui sont basés sur le nombre de documents dans l'index en mémoire peuvent être incorrects par rapport aux rangs des documents de l'index principal. Par conséquent, lorsqu'un remplissage entraîne l'indexation ou la réindexation d'un grand nombre de lignes, il est recommandé de fusionner les index dans un index principal via l'instruction ALTER FULLTEXT CATALOG ... Instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] REORGANIZE. Le Moteur d'indexation et de recherche en texte intégral fusionne automatiquement les index en fonction de paramètres tels que le nombre et la taille des index intermédiaires.  
+ Les statistiques telles que `IndexRowCount` peuvent fortement varier. Par exemple, si un catalogue a 2 milliards de lignes dans l'index principal, un nouveau document est indexé dans un index intermédiaire en mémoire ; par ailleurs, les rangs de ce document qui sont basés sur le nombre de documents dans l'index en mémoire peuvent être incorrects par rapport aux rangs des documents de l'index principal. Par conséquent, lorsqu'un remplissage entraîne l'indexation ou la réindexation d'un grand nombre de lignes, il est recommandé de fusionner les index dans un index principal via l'instruction ALTER FULLTEXT CATALOG ... Instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] REORGANIZE. Le Moteur d'indexation et de recherche en texte intégral fusionne automatiquement les index en fonction de paramètres tels que le nombre et la taille des index intermédiaires.  
   
- Les valeurs `MaxOccurrence` sont normalisées sous forme de 32 plages individuelles. Par exemple, un document de 50 mots est traité de la même façon qu'un document de 100 mots. Vous trouverez ci-dessous le tableau de normalisation utilisé. Dans la mesure où les documents ont une longueur comprise dans la plage située entre les valeurs adjacentes 32 et 128 du tableau, ils sont effectivement traités comme s'ils avaient le même nombre de mots, c'est-à-dire 128 (32 < `docLength` <= 128).  
+ Les valeurs `MaxOccurrence` sont normalisées sous forme de 32 plages individuelles. Par exemple, un document de 50 mots est traité de la même façon qu'un document de 100 mots. Vous trouverez ci-dessous le tableau de normalisation utilisé. Dans la mesure où les documents ont une longueur comprise dans la plage située entre les valeurs adjacentes 32 et 128 du tableau, ils sont effectivement traités comme s'ils avaient le même nombre de mots, c'est-à-dire 128 (32 < `docLength` <= 128).  
   
 ```  
 { 16, 32, 128, 256, 512, 725, 1024, 1450, 2048, 2896, 4096, 5792, 8192, 11585,   
@@ -176,9 +176,9 @@ Rank = min( MaxQueryRank, HitCount * 16 * StatisticalWeight / MaxOccurrence )
 ```  
 ContainsRank = same formula used for CONTAINSTABLE ranking of a single term (above).  
 Weight = the weight specified in the query for each term. Default weight is 1.  
-WeightedSum = Σ[key=1 to n] ContainsRankKey * WeightKey  
-Rank =  ( MaxQueryRank * WeightedSum ) / ( ( Σ[key=1 to n] ContainsRankKey^2 )   
-      + ( Σ[key=1 to n] WeightKey^2 ) - ( WeightedSum ) )  
+WeightedSum = ??[key=1 to n] ContainsRankKey * WeightKey  
+Rank =  ( MaxQueryRank * WeightedSum ) / ( ( ??[key=1 to n] ContainsRankKey^2 )   
+      + ( ??[key=1 to n] WeightKey^2 ) - ( WeightedSum ) )  
   
 ```  
   
@@ -187,14 +187,14 @@ Rank =  ( MaxQueryRank * WeightedSum ) / ( ( Σ[key=1 to n] ContainsRankKey^2 )
  Le classement de[FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) est basé sur la formule de classement OKAPI BM25. Les requêtes FREETEXTTABLE ajoutent des mots à la requête via une génération flexionnelle (formes flexionnelles des mots de la requête d'origine) ; ces mots sont traités comme des mots distincts, sans relation particulière avec les mots à partir desquels ils ont été générés. Les synonymes générés à partir de la fonctionnalité du dictionnaire des synonymes sont traités comme des termes distincts, de même pondération. Chaque mot de la requête contribue au rang.  
   
 ```  
-Rank = Σ[Terms in Query] w ( ( ( k1 + 1 ) tf ) / ( K + tf ) ) * ( ( k3 + 1 ) qtf / ( k3 + qtf ) ) )  
+Rank = ??[Terms in Query] w ( ( ( k1 + 1 ) tf ) / ( K + tf ) ) * ( ( k3 + 1 ) qtf / ( k3 + qtf ) ) )  
 Where:   
 w is the Robertson-Sparck Jones weight.   
 In simplified form, w is defined as:   
-w = log10 ( ( ( r + 0.5 ) * ( N – R + r + 0.5 ) ) / ( ( R – r + 0.5 ) * ( n – r + 0.5 ) )  
+w = log10 ( ( ( r + 0.5 ) * ( N - R + r + 0.5 ) ) / ( ( R - r + 0.5 ) * ( n - r + 0.5 ) )  
 N is the number of indexed rows for the property being queried.   
 n is the number of rows containing the word.   
-K is ( k1 * ( ( 1 – b ) + ( b * dl / avdl ) ) ).   
+K is ( k1 * ( ( 1 - b ) + ( b * dl / avdl ) ) ).   
 dl is the property length, in word occurrences.   
 avdl is the average length of the property being queried, in word occurrences.   
 k1, b, and k3 are the constants 1.2, 0.75, and 8.0, respectively.   

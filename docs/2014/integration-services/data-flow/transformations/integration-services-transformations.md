@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - transformations [Integration Services], listed
@@ -22,12 +21,12 @@ ms.assetid: c70c4f6e-82dd-4948-b923-fd5193f67f7e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 288eb3b2e8e8b86d27c50efdaf6a1f6a2754e91d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 76157486751a08d17cf46de312f63e6e41dc3cb1
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140717"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52785231"
 ---
 # <a name="integration-services-transformations"></a>Transformations Integration Services
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] Les transformations sont les composants du flux de données d’un package qui agrègent, fusionnent, distribuent et modifient des données. Les transformations peuvent également effectuer des opérations de recherche et générer des échantillons de dataset. Cette section décrit les transformations incluses dans [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] et explique leur fonctionnement.  
@@ -51,7 +50,7 @@ ms.locfileid: "48140717"
 |Transformation|Description|  
 |--------------------|-----------------|  
 |[Transformation de la table de caractères](character-map-transformation.md)|Transformation qui applique des fonctions de chaîne à des données de caractères.|  
-|[Transformation de copie de colonnes](copy-column-transformation.md)|Transformation qui ajoute des copies de colonnes d'entrée à la sortie de transformation.|  
+|[Transformation Copie de colonnes](copy-column-transformation.md)|Transformation qui ajoute des copies de colonnes d'entrée à la sortie de transformation.|  
 |[Transformation de conversion de données](data-conversion-transformation.md)|Transformation qui convertit le type de données d'une colonne en un type de données différent.|  
 |[Transformation de colonne dérivée](derived-column-transformation.md)|Transformation qui remplit des colonnes avec les résultats d'expressions.|  
 |[Transformation d'exportation de colonne](export-column-transformation.md)|Transformation qui insère des données dans un fichier à partir d'un flux de données.|  
@@ -66,10 +65,10 @@ ms.locfileid: "48140717"
 |--------------------|-----------------|  
 |[Transformation d'agrégation](aggregate-transformation.md)|Transformation qui effectue des agrégations telles que AVERAGE, SUM et COUNT.|  
 |[Transformation de tri](sort-transformation.md)|Transformation qui trie des données.|  
-|[Transformation d’échantillonnage par pourcentage](percentage-sampling-transformation.md)|Transformation qui crée un échantillon de jeu de données avec un pourcentage spécifiant la taille d'échantillonnage.|  
-|[Transformation d’échantillonnage de lignes](row-sampling-transformation.md)|Transformation qui crée un échantillon de jeu de données en spécifiant le nombre de lignes de l'échantillon.|  
+|[Transformation de l'échantillonnage du pourcentage](percentage-sampling-transformation.md)|Transformation qui crée un échantillon de jeu de données avec un pourcentage spécifiant la taille d'échantillonnage.|  
+|[Transformation d'échantillonnage de lignes](row-sampling-transformation.md)|Transformation qui crée un échantillon de jeu de données en spécifiant le nombre de lignes de l'échantillon.|  
 |[Transformation de tableau croisé dynamique](pivot-transformation.md)|Transformation qui crée une version moins normalisée d'une table normalisée.|  
-|[Transformation UnPivot](unpivot-transformation.md)|Transformation qui crée une version plus normalisée d'une table non normalisée.|  
+|[Transformation Unpivot](unpivot-transformation.md)|Transformation qui crée une version plus normalisée d'une table non normalisée.|  
   
 ## <a name="split-and-join-transformations"></a>Transformations de fractionnement et de jointure  
  Les transformations suivantes distribuent des lignes vers différentes sorties, créent des copies des entrées de transformation, joignent plusieurs entrées en une même entrée et effectuent des opérations de recherche.  

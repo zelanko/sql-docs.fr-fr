@@ -21,12 +21,12 @@ ms.assetid: 6feb051d-77ae-4c93-818a-849fe518d1d4
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: aa27ea82c70cd1ffa65ce2b1d04376257abd8964
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c22074e686f9dff1d988d7453c0c546fa6e049b5
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47715989"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52399933"
 ---
 # <a name="sysfncdcmaptimetolsn-transact-sql"></a>sys.fn_cdc_map_time_to_lsn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +78,7 @@ sys.fn_cdc_map_time_to_lsn ( '<relational_operator>', tracking_time )
   
  L'opérateur relationnel '`smallest greater than`' est utilisé pour limiter les modifications à celles qui ont été effectuées après minuit le jour précédent. Si plusieurs entrées avec différentes valeurs LSN partage le **tran_end_time** valeur identifiée comme limite inférieure dans le [cdc.lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) table, la fonction retournera la valeur LSN la vérification toutes les entrées sont incluses. Pour la limite supérieure, l’opérateur relationnel '`largest less than or equal to`' permet de s’assurer que la plage comprend toutes les entrées pour le jour, y compris ceux qui ont minuit comme leurs **tran_end_time** valeur. Si plusieurs entrées avec différentes valeurs LSN partage le **tran_end_time** valeur identifiée comme limite supérieure, la fonction retournera le LSN la plus élevée qui garantit que toutes les entrées sont incluses.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle **public** .  
   
 ## <a name="examples"></a>Exemples  

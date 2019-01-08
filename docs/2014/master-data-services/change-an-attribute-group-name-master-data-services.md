@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - attribute groups [Master Data Services], changing name
@@ -13,12 +12,12 @@ ms.assetid: 79510fcf-4c83-4426-bdd4-15b4170ecfbd
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: baff749af3e0cc745342787b5d5ab73d7f7f6e1e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f6cc706bb7e4852e37f473378d519c813001a96d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48139498"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52768121"
 ---
 # <a name="change-an-attribute-group-name-master-data-services"></a>Modifier le nom d'un groupe d'attributs (Master Data Services)
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], vous pouvez modifier le nom d'un groupe d'attributs.  
@@ -28,7 +27,7 @@ ms.locfileid: "48139498"
   
 -   Vous devez avoir l'autorisation d'accéder à la zone fonctionnelle **Administration de système** .  
   
--   Vous devez être administrateur de modèle. Pour plus d’informations, consultez [Administrators &#40;Master Data Services&#41;](administrators-master-data-services.md).  
+-   Vous devez être administrateur de modèle. Pour plus d’informations, consultez [Administrateurs &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
 ### <a name="to-change-an-attribute-group-name"></a>Pour modifier le nom d'un groupe d'attributs  
   

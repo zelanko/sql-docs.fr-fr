@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
-f1_keywords:
-- vs.lookin
 ms.assetid: 2eaba888-68b2-4bc1-8f62-e96e710c3db9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0010ab5333237eac6504986f0ac8a042d861e712
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6c76fc0d5247d2a9f07fcf97677ac1f24b9635e5
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095149"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328609"
 ---
 # <a name="choose-search-folders-dialog-box-visual-studio"></a>Boîte de dialogue Choisir des dossiers de recherche (Visual Studio)
   Cette boîte de dialogue vous permet d'assembler, d'enregistrer et de réviser vos propres jeux de dossiers de recherche nommés et de spécifier l'ordre de la recherche. Pour afficher cette boîte de dialogue, cliquez sur le bouton **Parcourir (...)** en regard de la liste déroulante **Regarder dans** sous les onglets Rechercher dans les fichiers ou Remplacer dans les fichiers de la fenêtre Rechercher et remplacer.  
@@ -56,5 +54,3 @@ ms.locfileid: "48095149"
   
  **Appliquer**  
  Enregistrez le jeu de dossiers de recherche figurant dans la liste **Dossiers sélectionnés** en tant que jeu de dossiers nommé. Ce jeu de dossiers peut ensuite être sélectionné dans le champ **Regarder dans** de tous les onglets de la fenêtre **Rechercher et remplacer** . Cette commande ferme la boîte de dialogue Choisir des dossiers de recherche.  
-  
-  

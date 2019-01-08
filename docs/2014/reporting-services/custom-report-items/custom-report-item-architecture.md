@@ -14,15 +14,15 @@ ms.assetid: 2a88ea46-c9f8-4dd7-aad1-16de11da4f06
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: ee6af3d8a448a85818693a24b05eec2699b5f4fd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3d75fed63f44e0371b81fbd7309a0a3f826543b5
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082069"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52401052"
 ---
 # <a name="custom-report-item-architecture"></a>Architecture des éléments de rapports personnalisés
-  Un élément de rapport personnalisé est une extension au langage RDL (Report Definition Language) qui permet aux développeurs d'ajouter des fonctionnalités qui ne sont pas prises en charge en mode natif au langage RDL ou d'étendre les fonctionnalités de contrôles existants. Un élément de rapport personnalisé comprend deux composants principaux : le composant d'exécution et le composant de conception. Ces composants sont implémentés en tant qu'assemblys [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] et peuvent être écrits dans n'importe quel langage conforme CLS.  
+  Un élément de rapport personnalisé est une extension du langage RDL (Report Definition Language) qui permet aux développeurs d’ajouter des fonctionnalités qui ne sont pas prises en charge en mode natif dans le langage RDL ou d’étendre les fonctionnalités de contrôles existants. Un élément de rapport personnalisé comprend deux composants principaux : le composant d'exécution et le composant de conception. Ces composants sont implémentés en tant qu'assemblys [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] et peuvent être écrits dans n'importe quel langage conforme CLS.  
   
 ## <a name="the-run-time-component"></a>Composant d’exécution  
  Le composant d'exécution pour un élément de rapport personnalisé est appelé par le processeur de rapports au moment de l'exécution. Le composant d'exécution accepte les données passées par le processeur de rapports au moment de l'exécution, traite ces données, puis retourne une image contenant l'élément de rapport personnalisé rendu.  
@@ -37,6 +37,6 @@ ms.locfileid: "48082069"
 ## <a name="see-also"></a>Voir aussi  
  [Création d’un composant d’exécution d’éléments de rapport personnalisé](../custom-report-items/creating-a-custom-report-item-run-time-component.md)   
  [Création d’un composant au moment de la conception d’éléments de rapport personnalisé](../custom-report-items/creating-a-custom-report-item-design-time-component.md)   
- [Procédure : déployer un élément de rapport personnalisé](../custom-report-items/how-to-deploy-a-custom-report-item.md)  
+ [Comment : Déployer un élément de rapport personnalisé](../custom-report-items/how-to-deploy-a-custom-report-item.md)  
   
   

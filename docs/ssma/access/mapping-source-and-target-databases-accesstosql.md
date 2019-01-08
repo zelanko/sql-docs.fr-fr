@@ -18,12 +18,12 @@ ms.assetid: 69bee937-7b2c-49ee-8866-7518c683fad4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: b504b0bbf443a35778e4af63bbaed56b8593cf78
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d2be7854240a52edd8f3308ea92e3ea7eb25924f
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845717"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52407936"
 ---
 # <a name="mapping-source-and-target-databases-accesstosql"></a>Source de mappage et de bases de données cibles (AccessToSQL)
 Lorsque vous vous connectez à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure, vous devez spécifier une base de données cible pour la migration. Si vous avez plusieurs bases de données Access vous pouvez les mapper à plusieurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bases de données (ou schémas) ou à plusieurs schémas sous la base de données SQL Azure connecté.  
@@ -58,7 +58,7 @@ Vous pouvez mapper la base de données source vers une base de données cible. P
   
 -   Mappage à SQL Azure  
   
-Vous pouvez mapper la base de données source vers la cible connectée [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de données ou à n’importe quel schéma dans la cible connectée [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de données. Si vous mappez la source de schéma à aucun schéma n’existent pas sous la base de données connectée cible, vous serez invité avec un message **« schéma n’existe pas dans les métadonnées de la cible. Il est créé pendant la synchronisation. Voulez-vous continuer ? »** Cliquez sur Oui.  
+Vous pouvez mapper la base de données source vers la cible connectée [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de données ou à n’importe quel schéma dans la cible connectée [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de données. Si vous mappez la source de schéma à aucun schéma n’existent pas sous la base de données connectée cible, vous serez invité avec un message **« schéma n’existe pas dans les métadonnées de la cible. Il est créé pendant la synchronisation. Voulez-vous continuer ? "** Cliquez sur Oui.  
   
 ## <a name="reverting-to-your-initial-database-and-schema"></a>Retour à votre base de données initiale et le schéma  
 Si vous personnalisez le mappage entre une base de données Access et un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou base de données SQL Azure et le schéma, vous pouvez rétablir le mappage à la base de données que vous avez spécifié lorsque vous connecté à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure.  

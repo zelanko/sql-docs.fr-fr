@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: ac9ed573-c84d-444c-81fb-923a6240c1ef
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ebc8777030cd198503bd9f40ba758e3068762255
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 36d9be6a759e2684602a20ed0c493818d5fe4cc4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181923"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52775601"
 ---
 # <a name="audit-add-db-user-event-class"></a>Audit Add DB User (classe d'événements)
   La classe d’événements **Audit Add DB User** est générée lorsqu’une connexion est ajoutée ou supprimée comme utilisateur de base de données dans une base de données. Cette classe d’événements est utilisée avec les procédures stockées **sp_grantdbaccess**, **sp_revokedbaccess**, **sp_adduser**et **sp_dropuser** .  
@@ -32,13 +31,13 @@ ms.locfileid: "48181923"
 |Nom de la colonne de données|Type de données|Description|ID de la colonne|Filtrable|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**ApplicationName**|**nvarchar**|Nom de l'application cliente qui a créé la connexion à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cette colonne est remplie avec les valeurs passées par l'application plutôt que par le nom affiché du programme.|10|Oui|  
-|**ClientProcessID**|**Int**|ID affecté par l'ordinateur hôte au processus dans lequel s'exécute l'application cliente. Cette colonne de données est remplie si l'ID du processus du client est fourni par le client.|9|Oui|  
+|**ClientProcessID**|**Int**|ID affecté par l'ordinateur hôte au processus dans lequel s'exécute l'application cliente. Cette colonne de données est remplie si l'ID du processus du client est fourni par le client.|9|Oui|  
 |**ColumnPermissions**|**Int**|Indicateur de la définition éventuelle d'une autorisation au niveau de la colonne. Analysez le texte de l’instruction pour identifier les autorisations qui ont été appliquées aux colonnes.|44|Oui|  
 |**DatabaseID**|**Int**|ID de la base de données spécifiée par l'instruction USE *database* ou celui de la base de données par défaut si aucune instruction USE *database* n'a été spécifiée pour une instance donnée. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] affiche le nom de la base de données si la colonne de données **ServerName** du serveur est capturée dans la trace et que le serveur est disponible. Déterminez la valeur pour une base de données à l'aide de la fonction DB_ID.|3|Oui|  
 |**DatabaseName**|**nvarchar**|Nom de la base de données où le nom d'utilisateur est ajouté ou supprimé.|35|Oui|  
 |**DBUserName**|**nvarchar**|Nom d'utilisateur de l'émetteur dans la base de données.|40|Oui|  
-|**EventClass**|**Int**|Type d’événement = 109.|27|non|  
-|**EventSequence**|**Int**|Séquence d'un événement donné au sein de la demande.|51|non|  
+|**EventClass**|**Int**|Type d’événement = 109.|27|Non|  
+|**EventSequence**|**Int**|Séquence d'un événement donné au sein de la demande.|51|Non|  
 |**EventSubClass**|**Int**|Type de sous-classe d'événements.<br /><br /> 1=Ajout<br /><br /> 2=Suppression<br /><br /> 3=Octroi d'accès à la base de données<br /><br /> 4=Suppression de l'accès à la base de données|21|Oui|  
 |**HostName**|**nvarchar**|Nom de l'ordinateur sur lequel le client est exécuté. Cette colonne de données est remplie si le nom de l'hôte est fourni par le client. Pour déterminer le nom de l'hôte, utilisez la fonction HOST_NAME.|8|Oui|  
 |**IsSystem**|**Int**|Indique si l'événement s'est produit sur un processus système ou sur un processus utilisateur. 1 = système, 0 = utilisateur.|60|Oui|  

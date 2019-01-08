@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: configuration
 ms.topic: conceptual
 f1_keywords:
 - SQL12.SWB.makemanaged.agentaccount.F1
@@ -20,15 +20,15 @@ ms.assetid: a801c619-611b-4e82-a8d8-d1e01691b7a1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 382b2212ef32e47b0045285ad497f2d476099c79
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 98350d5d68990fdf31d42bacff2fc2ebb77c116b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152729"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52762481"
 ---
 # <a name="enroll-an-instance-of-sql-server-sql-server-utility"></a>Inscrire une instance de SQL Server (utilitaire SQL Server)
-  Inscrivez une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans un utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] existant pour surveiller ses performances et sa configuration comme une instance gérée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le point de contrôle de l'utilitaire (UCP) recueille des informations sur la configuration et les performances des instances gérées de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] toutes les 15 minutes. Ces informations sont stockées dans l'entrepôt de données de gestion de l'utilitaire (UMDW) sur l'UCP ; le nom de fichier UMDW est sysutility_mdw. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont comparées aux stratégies afin d'aider à identifier les opportunités de consolidation et les goulots d'étranglement de performances.  
+  Inscrivez une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans un utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] existant pour surveiller ses performances et sa configuration comme une instance gérée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le point de contrôle de l'utilitaire (UCP) recueille des informations sur la configuration et les performances des instances gérées de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] toutes les 15 minutes. Ces informations sont stockées dans l'entrepôt de données de gestion de l'utilitaire (UMDW) sur l'UCP ; le nom de fichier UMDW est sysutility_mdw. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont comparées aux stratégies afin d'aider à identifier les opportunités de consolidation et les goulots d'étranglement de performances.  
   
  Dans cette version, l'UCP et toutes les instances gérées de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doivent respecter les conditions suivantes :  
   
@@ -87,7 +87,7 @@ ms.locfileid: "48152729"
 -   [Inscription de l'instance de SQL Server](#Enrolling)  
   
 ##  <a name="Welcome"></a> Introduction à l'Assistant d'inscription d'instance  
- Pour lancer l’Assistant, développez l’arborescence de l’Explorateur de l’utilitaire sur un point de contrôle d’utilitaire, cliquez avec le bouton droit sur **Instances managées**et sélectionnez **Ajouter une instance managée…**.  
+ Pour lancer l’Assistant, développez l’arborescence de l’Explorateur de l’utilitaire sur un point de contrôle d’utilitaire, cliquez avec le bouton droit sur **Instances gérées** et sélectionnez **Ajouter une instance gérée…**.  
   
  Pour continuer, cliquez sur **Suivant**.  
   
@@ -145,9 +145,9 @@ ms.locfileid: "48152729"
   
  Paramètres de l'instance gérée :  
   
--   Nom de l'instance de SQL Server: ComputerName\InstanceName  
+-   Nom de l’Instance SQL Server : Nom_ordinateur\nom_instance  
   
--   Compte de jeu d'éléments de collecte de l'utilitaire : DomainName\UserName  
+-   Collecte de l’utilitaire définir le compte : Nomdomaine\nomutilisateur  
   
  Pour continuer, cliquez sur **Suivant**.  
   
@@ -169,12 +169,12 @@ ms.locfileid: "48152729"
 >   
 >  Une exception s'est produite lors de l'exécution d'une instruction ou d'un lot Transact-SQL ou lot. (Microsoft.SqlServer.ConnectionInfo)  
 >   
->  Informations supplémentaires : Impossible d’obtenir des informations sur l’utilisateur ou le groupe Windows NT « \<Nom_Domaine\Nom_Compte> », code d’erreur 0x5. (Microsoft SQL Server, erreur : 15404)  
+>  Informations supplémentaires :  Impossible d’obtenir des informations sur l’utilisateur ou groupe Windows NT '\<DomainName\AccountName >', code d’erreur 0 x 5. (Microsoft SQL Server, erreur : 18456). » 15404)  
 >   
 >  Pour plus d’informations sur la résolution de ce problème, consultez [Résolution des problèmes liés à l’utilitaire SQL Server](../../database-engine/troubleshoot-the-sql-server-utility.md).  
   
 > [!IMPORTANT]  
->  Ne modifiez pas les propriétés du jeu d'éléments de collecte « Informations sur l'utilitaire » sur une instance managée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], et n'activez pas ou ne désactivez pas manuellement la collecte de données, car la collecte de données est contrôlée par un travail d'agent Utilitaire.  
+>  Ne modifiez pas les propriétés du jeu d’éléments de collecte « Informations sur l’utilitaire » sur une instance gérée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], et n’activez pas ou ne désactivez pas manuellement la collecte de données, car la collecte de données est contrôlée par un travail d’agent Utilitaire.  
   
  Après avoir effectué l'Assistant Inscription d'instance, cliquez sur le nœud **Instances gérées** dans le volet **Navigation de l'Explorateur de l'utilitaire** dans SSMS. Les instances inscrites de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont affichées en mode Liste dans le volet **Contenu de l'Explorateur de l'utilitaire** .  
   

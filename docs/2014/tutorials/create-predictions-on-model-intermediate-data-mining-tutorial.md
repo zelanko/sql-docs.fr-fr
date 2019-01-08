@@ -11,12 +11,12 @@ ms.assetid: 94a8d4f9-a76a-49c5-9785-917010359511
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 26a0aae710b18350c9ef62166e004f702eb88c7e
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 0b67ad103cee685ebcbc5455340df9e4d7890e15
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146548"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529229"
 ---
 # <a name="creating-predictions-on-a-sequence-clustering-model-intermediate-data-mining-tutorial"></a>Création de prédictions sur un modèle Sequence Clustering (Didacticiel intermédiaire sur l'exploration de données)
   Une fois que vous comprenez le modèle sequence clustering mieux parcouru dans la visionneuse, vous pouvez créer des requêtes de prédiction à l’aide du Générateur de requêtes de prédiction sur le **prévision de modèle d’exploration de données** onglet dans le Concepteur d’exploration de données. Pour créer une prédiction, commencez par sélectionner le modèle Sequence Clustering, puis sélectionnez les données d'entrée. Pour les entrées, vous pouvez utiliser une source de données externe, ou vous pouvez générer une requête singleton et fournir des valeurs dans une boîte de dialogue.  
@@ -196,7 +196,7 @@ NATURAL PREDICTION JOIN
  Vous avez terminé le didacticiel sur les modèles Sequence Clustering.  
   
 ## <a name="next-steps"></a>Étapes suivantes  
- Si vous avez terminé toutes les sections dans le [didacticiel d’exploration de données intermédiaire &#40;Analysis Services - Exploration de données&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md), l’étape suivante consiste à apprendre à utiliser les instructions des Extensions DMX (Data Mining) pour générer des modèles et générer des prédictions. Pour plus d’informations, consultez [création et interrogation de modèles d’exploration de données avec DMX : didacticiels &#40;Analysis Services - Exploration de données&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md).  
+ Si vous avez terminé toutes les sections dans le [didacticiel d’exploration de données intermédiaire &#40;Analysis Services - Exploration de données&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md), l’étape suivante consiste à apprendre à utiliser les instructions des Extensions DMX (Data Mining) pour générer des modèles et générer des prédictions. Pour plus d’informations, consultez [création et interrogation de modèles d’exploration de données avec DMX : Didacticiels &#40;Analysis Services - Exploration de données&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md).  
   
  Si vous maîtrisez les concepts de la programmation, vous pouvez utiliser également des objets AMO (Analysis Management Objects) pour utiliser par programme des objets d'exploration de données. Pour plus d’informations, consultez [Classes d’exploration de données AMO](https://docs.microsoft.com/bi-reference/amo/amo-data-mining-classes).  
   

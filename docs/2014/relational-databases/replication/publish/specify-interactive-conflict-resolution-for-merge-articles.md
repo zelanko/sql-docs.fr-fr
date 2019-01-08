@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - merge replication conflict resolution [SQL Server replication], interactive resolvers
@@ -16,12 +15,12 @@ ms.assetid: e298dea0-b5ef-4907-a745-cfad9793653f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 80f3817de3ff8242d24dfc0e1ca507f186e05508
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 710db513395aa5a9c51df55b54bafbdc425ecb5d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205299"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52749292"
 ---
 # <a name="specify-interactive-conflict-resolution-for-merge-articles"></a>Spécifier la résolution interactive des conflits pour les articles de fusion
   Cette rubrique explique comment spécifier la résolution interactive des conflits pour les articles de fusion dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
@@ -64,7 +63,7 @@ ms.locfileid: "48205299"
   
 #### <a name="to-specify-that-a-subscription-should-use-interactive-conflict-resolution"></a>Pour spécifier qu'un abonnement doit utiliser la résolution de conflits interactive  
   
-1.  Dans la boîte de dialogue **Propriétés de l’abonnement - \<Abonné> : \<Base_de_données_abonnement>**, affectez la valeur **True** à l’option **Résoudre les conflits interactivement**. Pour plus d'informations sur l'accès à cette boîte de dialogue, consultez [View and Modify Push Subscription Properties](../view-and-modify-push-subscription-properties.md) et [View and Modify Pull Subscription Properties](../view-and-modify-pull-subscription-properties.md).  
+1.  Dans le **Subscription Properties - \<abonné > : \<Base_de_données_abonnement >** boîte de dialogue, spécifiez une valeur de **True** pour le **résoudre les conflits interactivement** option. Pour plus d'informations sur l'accès à cette boîte de dialogue, consultez [View and Modify Push Subscription Properties](../view-and-modify-push-subscription-properties.md) et [View and Modify Pull Subscription Properties](../view-and-modify-pull-subscription-properties.md).  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   

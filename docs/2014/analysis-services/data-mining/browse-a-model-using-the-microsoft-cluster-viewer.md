@@ -23,12 +23,12 @@ ms.assetid: 591fe30b-d88f-4a71-94d4-4a3907fc275d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 185e9a154a7eb51ff15ce1b45bfd82dc2e36adf0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 78172be64641195f787e0e807149b4995c3b5805
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087769"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530582"
 ---
 # <a name="browse-a-model-using-the-microsoft-cluster-viewer"></a>Explorer un modèle à l’aide de Microsoft Sequence Cluster
   Le composant [!INCLUDE[msCoName](../../includes/msconame-md.md)] Cluster Viewer de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] affiche les modèles d'exploration de données qui sont générés à l'aide de l'algorithme MC ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering). L'algorithme MC ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering) est un algorithme de segmentation conçu pour explorer les données afin d'identifier d'éventuelles anomalies et de créer des prédictions. Pour plus d’informations sur cet algorithme, consultez [Microsoft Clustering Algorithm](microsoft-clustering-algorithm.md).  
@@ -50,7 +50,7 @@ ms.locfileid: "48087769"
 ###  <a name="BKMK_Diagram"></a> Diagramme de cluster  
  L'onglet **Diagramme de cluster** du composant [!INCLUDE[msCoName](../../includes/msconame-md.md)] Cluster Viewer affiche tous les clusters se trouvant dans un modèle d'exploration de données. L'ombrage de la ligne reliant un cluster à un autre représente le niveau de similarité des clusters. Si l'ombrage est clair ou inexistant, les clusters ne sont pas très similaires. Plus la ligne est sombre, plus la similarité des liens est grande. Vous pouvez modifier le nombre de lignes affichées par la visionneuse à l'aide du curseur situé à droite des clusters. Si vous déplacez le curseur vers le bas, seuls les liens les plus forts sont affichés.  
   
- Par défaut, l'ombre représente le remplissage du cluster. À l’aide des options **Variable d’ombrage** et **État** , vous pouvez sélectionner la paire attribut-état que l’ombrage représente. Plus l'ombrage est sombre, plus la distribution d'attribut est grande pour un état spécifique. Inversement, plus l'ombrage est clair, plus la distribution diminue.  
+ Par défaut, l'ombre représente le remplissage du cluster. À l’aide de la **variable d’ombrage** et **état** options, vous pouvez sélectionner l’attribut et paire d’état de l’ombrage représente. Plus l'ombrage est sombre, plus la distribution d'attribut est grande pour un état spécifique. Inversement, plus l'ombrage est clair, plus la distribution diminue.  
   
  Pour renommer un cluster, cliquez avec le bouton droit sur son nœud et sélectionnez **Renommer le cluster**. Le nouveau nom est enregistré sur le serveur.  
   
@@ -80,10 +80,10 @@ ms.locfileid: "48087769"
  [Retour au début](#BKMK_ViewerTabs)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Algorithme Microsoft Clustering](microsoft-clustering-algorithm.md)   
- [Tâches de la visionneuse modèle d’exploration de données et de procédures](mining-model-viewer-tasks-and-how-tos.md)   
- [Tâches de la visionneuse modèle d’exploration de données et de procédures](mining-model-viewer-tasks-and-how-tos.md)   
- [Outils d’exploration de données](data-mining-tools.md)   
+ [Microsoft Clustering Algorithm](microsoft-clustering-algorithm.md)   
+ [Tâches de la visionneuse de modèle d'exploration de données et procédures](mining-model-viewer-tasks-and-how-tos.md)   
+ [Tâches de la visionneuse de modèle d'exploration de données et procédures](mining-model-viewer-tasks-and-how-tos.md)   
+ [Outils d'exploration de données](data-mining-tools.md)   
  [Visionneuses de modèle d’exploration de données](data-mining-model-viewers.md)  
   
   

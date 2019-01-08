@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],specifying interval
@@ -13,15 +12,15 @@ ms.assetid: 17899078-8ba3-4f40-8769-e9837dc3ec60
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ecf61c3a073e43dc8ee5b385bf3d84a96d79332a
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 2fd8083c7043d5aeb7259e6a284b28ae66c82a02
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49119837"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52756961"
 ---
 # <a name="specify-an-interval-of-change-data"></a>Spécifier un intervalle de données modifiées
-  Dans le flux de contrôle d'un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] qui effectue un chargement incrémentiel des données modifiées, la première tâche consiste à calculer les points de terminaison de l'intervalle de modification. Ces points de terminaison sont des valeurs `datetime` qui seront stockées dans des variables de package pour une utilisation ultérieure dans le package.  
+  Dans le flux de contrôle d’un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] qui effectue un charge incrémentielle de données modifiées, la première tâche consiste à calculer les points de terminaison de l’intervalle de modification. Ces points de terminaison sont des valeurs `datetime` qui seront stockées dans des variables de package pour une utilisation ultérieure dans le package.  
   
 > [!NOTE]  
 >  Pour obtenir une description du processus d’ensemble de la conception du flux de contrôle, consultez [Capture de données modifiées &#40;SSIS&#41;](change-data-capture-ssis.md).  
@@ -101,12 +100,12 @@ ms.locfileid: "49119837"
 3.  Dans la page **Ensemble de résultats** de **Éditeur de tâche d’exécution de requêtes SQL**, mappez le résultat d’ExtractStartTime à la variable de package ExtractStartTime, et le résultat d’ExtractEndTime à la variable de package ExtractEndTime.  
   
     > [!NOTE]  
-    >  Lorsque vous utilisez une expression pour définir la valeur d’une [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] variable, l’expression est évaluée chaque fois que la valeur de la variable est accessible.  
+    >  Quand vous utilisez une expression pour définir la valeur d’une variable [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , l’expression est évaluée chaque fois que la valeur de la variable fait l’objet d’un accès.  
   
 ## <a name="next-step"></a>Étape suivante  
  Une fois que vous avez calculé le point de départ et le point de fin pour une plage de modifications, l'étape suivante consiste à déterminer si les données modifiées sont prêtes.  
   
- **Rubrique suivante :** [Déterminer si les données modifiées sont prêtes](determine-whether-the-change-data-is-ready.md)  
+ **Rubrique suivante :** [Déterminer si les données modifiées sont prêtes](determine-whether-the-change-data-is-ready.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Utiliser des variables dans des packages](../use-variables-in-packages.md)   

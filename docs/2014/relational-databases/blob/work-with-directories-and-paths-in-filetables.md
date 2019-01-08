@@ -12,17 +12,17 @@ ms.assetid: f1e45900-bea0-4f6f-924e-c11e1f98ab62
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 321c452c816f765642d14142a64ab88f5ecb9cdf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: aa4fd0543c45e26f305506280bccce1f83107e55
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198789"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393292"
 ---
 # <a name="work-with-directories-and-paths-in-filetables"></a>Travailler avec des répertoires et des chemins d'accès dans FileTables
   Décrit la structure de répertoires dans laquelle les fichiers sont stockés dans FileTables.  
   
-##  <a name="HowToDirectories"></a> Procédure : travailler avec des répertoires et des chemins d'accès dans FileTables  
+##  <a name="HowToDirectories"></a> Comment : Travailler avec des répertoires et des chemins d'accès dans FileTables  
  Vous pouvez utiliser les trois fonctions suivantes pour travailler avec des répertoires FileTable dans [!INCLUDE[tsql](../../includes/tsql-md.md)]:  
   
 |Pour obtenir ce résultat|Utilisez cette fonction|  
@@ -31,7 +31,7 @@ ms.locfileid: "48198789"
 |Obtenir un chemin d'accès UNC absolu ou relatif pour un fichier ou répertoire d'un FileTable.|[GetFileNamespacePath &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/getfilenamespacepath-transact-sql)|  
 |Obtenir la valeur d'ID de localisateur de chemin d'accès pour le fichier ou le répertoire spécifié d'un FileTable, en spécifiant le chemin d'accès.|[GetPathLocator &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/getpathlocator-transact-sql)|  
   
-##  <a name="BestPracticeRelativePaths"></a> Procédure : utiliser des chemins d'accès relatifs pour du code portable  
+##  <a name="BestPracticeRelativePaths"></a> Comment : Utiliser des chemins d'accès relatifs pour du code portable  
  Pour garder le code et les applications indépendantes de l'ordinateur actuel et de la base de données, évitez d'écrire du code qui contient des chemins d'accès de fichier absolus. Au lieu de cela, récupérez le chemin d’accès complet d’un fichier au moment de l’exécution en utilisant les fonctions [FileTableRootPath &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/filetablerootpath-transact-sql) et [GetFileNamespacePath &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/getfilenamespacepath-transact-sql) ensemble, comme illustré dans l’exemple suivant. Par défaut, la fonction `GetFileNamespacePath` retourne le chemin d'accès relatif du fichier sous le chemin d'accès racine de la base de données.  
   
 ```tsql  
@@ -73,7 +73,7 @@ GO
   
  `\\<machine>\<instance-level FILESTREAM share>\<database-level directory>\<FileTable directory>\`  
   
- Cette hiérarchie de répertoires forme la racine de l'espace de noms de fichiers du FileTable. Sous cette hiérarchie de répertoires, les données FILESTREAM pour le FileTable sont stockées en tant que fichiers, et comme sous-répertoires qui peuvent également contenir des fichiers et des sous-répertoires.  
+ Cette hiérarchie de répertoires forme la racine de l’espace de noms de fichiers du FileTable. Sous cette hiérarchie de répertoires, les données FILESTREAM pour le FileTable sont stockées en tant que fichiers, et comme sous-répertoires qui peuvent également contenir des fichiers et des sous-répertoires.  
   
  Il est important de se souvenir que la hiérarchie de répertoires créée sous le partage FILESTREAM au niveau de l'instance est une hiérarchie de répertoires virtuels. Cette hiérarchie est stockée dans la base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et n'est pas représentée physiquement dans le système de fichiers NTFS. Toutes les opérations qui accèdent à des fichiers et des répertoires sous le partage FILESTREAM et dans le FileTables qu'il contient sont interceptées et gérées par un composant de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] incorporé dans le système de fichiers.  
   

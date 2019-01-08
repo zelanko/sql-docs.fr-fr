@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dimensionprocessingdest.f1
@@ -18,19 +17,19 @@ ms.assetid: 4c49bb95-7259-42f4-a785-bb6aaf5f8566
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3cd8b33e330a2edd9d6c93cb9ab00c68783ae5bc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b8b3e0e7b353ad37aeb3ce87e39bdfc52d2cbcb0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135419"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52749461"
 ---
 # <a name="dimension-processing-destination"></a>Destination de traitement de dimension
   La destination de traitement de dimension charge et traite une dimension [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Pour plus d’informations sur les dimensions, consultez [Dimensions &#40;Analysis Services - Données multidimensionnelles&#41;](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md).  
   
  La destination de traitement de dimension regroupe les fonctionnalités suivantes :  
   
--   options permettant de choisir entre un traitement incrémentiel, un traitement complet ou un traitement de mise à jour ;  
+-   options permettant de choisir entre un traitement incrémentiel, un traitement complet ou un traitement de mise à jour ;  
   
 -   configuration d'erreur, permettant de spécifier si le traitement de dimension ignore les erreurs ou s'arrête après un nombre spécifique d'erreurs ;  
   
@@ -47,11 +46,11 @@ ms.locfileid: "48135419"
   
  Pour plus d’informations sur les propriétés définissables dans la boîte de dialogue **Éditeur de destination de traitement de dimension** , cliquez sur l’une des rubriques suivantes :  
   
--   [Éditeur de Destination de traitement de dimension &#40;Page Gestionnaire de connexions&#41;](../dimension-processing-destination-editor-connection-manager-page.md)  
+-   [Éditeur de destination de traitement de dimension &#40;page Gestionnaire de connexions&#41;](../dimension-processing-destination-editor-connection-manager-page.md)  
   
--   [Éditeur de Destination de traitement de dimension &#40;Page mappages&#41;](../dimension-processing-destination-editor-mappings-page.md)  
+-   [Éditeur de destination de traitement de dimension &#40;page Mappages&#41;](../dimension-processing-destination-editor-mappings-page.md)  
   
--   [Éditeur de Destination de traitement de dimension &#40;Page avancé&#41;](../dimension-processing-destination-editor-advanced-page.md)  
+-   [Éditeur de destination de traitement de dimension &#40;page Avancé&#41;](../dimension-processing-destination-editor-advanced-page.md)  
   
  La boîte de dialogue **Éditeur avancé** reflète les propriétés qui peuvent être définies par programmation. Pour plus d’informations sur les propriétés définissables dans la boîte de dialogue **Éditeur avancé** ou par programmation, cliquez sur l’une des rubriques suivantes :  
   

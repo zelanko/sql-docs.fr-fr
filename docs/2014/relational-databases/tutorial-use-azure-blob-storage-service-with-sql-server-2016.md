@@ -1,24 +1,23 @@
 ---
-title: 'Didacticiel : Fichiers de données du serveur SQL dans le service de stockage Windows Azure | Microsoft Docs'
+title: 'Didacticiel : Fichiers de données SQL Server dans le service de stockage Windows Azure | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 ms.assetid: e69be67d-da1c-41ae-8c9a-6b12c8c2fb61
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b30ee8f664f88f0fcd59a3801c1aa612926d1dad
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e3d33209cd6dfe261a5deced345adac70b46961f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095479"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52810971"
 ---
-# <a name="tutorial-sql-server-data-files-in-windows-azure-storage-service"></a>Didacticiel : fichiers de données SQL Server dans le service de Stockage Microsoft Azure
+# <a name="tutorial-sql-server-data-files-in-windows-azure-storage-service"></a>Didacticiel : fichiers de données SQL Server dans le service de Stockage Microsoft Azure
   Bienvenue dans le didacticiel Fichiers de données SQL Server dans le service de Stockage Microsoft Azure. Ce didacticiel explique comment stocker directement des fichiers de données SQL Server dans le service de stockage d'objets blob Windows Azure.  
   
  La prise en charge de l'intégration de SQL Server au service de stockage d'objets blob Windows Azure est une amélioration de SQL Server 2014. Pour une vue d’ensemble des fonctionnalités et des avantages offerts par cette fonctionnalité, consultez [fichiers de données SQL Server dans Windows Azure](databases/sql-server-data-files-in-microsoft-azure.md).  
@@ -28,7 +27,7 @@ ms.locfileid: "48095479"
   
  Ce didacticiel est divisé en neuf leçons :  
   
- **[Leçon 1 : Créer le conteneur et le compte de stockage Azure Windows](../tutorials/lesson-1-create-windows-azure-storage-account-and-container.md)**  
+ **[Leçon 1 : Créez un conteneur et le compte de stockage Azure Windows](../tutorials/lesson-1-create-windows-azure-storage-account-and-container.md)**  
  Dans cette leçon, vous allez créer un compte de Stockage Microsoft Azure et un conteneur.  
   
  **[Leçon 2. Créer une stratégie sur le conteneur et générer une Signature d’accès partagé &#40;SAS&#41; clé](lesson-1-create-stored-access-policy-and-shared-access-signature.md)**  

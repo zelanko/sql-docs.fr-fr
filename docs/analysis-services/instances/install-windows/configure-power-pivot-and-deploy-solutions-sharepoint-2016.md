@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e464a6863a45bc654b3874a5ea86945b9041c7aa
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: f5b8d0b377be4282bdbdef8805b8e8683cb59cbe
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38984061"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400013"
 ---
 # <a name="configure-power-pivot-and-deploy-solutions-sharepoint-2016"></a>Configurer PowerPivot et déployer des solutions (SharePoint 2016)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -29,29 +29,29 @@ ms.locfileid: "38984061"
  Pour plus d’informations sur l’installation de la [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] pour l’outil de Configuration de SharePoint 2016, consultez [installer ou désinstaller le PowerPivot pour SharePoint Add-in (SharePoint 2016)](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2016.md).  
   
 ##  <a name="bkmk_run_configuration_tool"></a> Exécuter Configuration de PowerPivot pour SharePoint 2016  
- **Remarque :** pour effectuer les étapes suivantes, vous devez être administrateur de batterie de serveurs. Si un message d'erreur semblable au suivant s'affiche :  
+ **Remarque :** Pour effectuer les étapes suivantes, vous devez être un administrateur de batterie de serveurs. Si un message d'erreur semblable au suivant s'affiche :  
   
--   « L'utilisateur n'est pas un administrateur de batterie de serveurs. Traitez les échecs de validation et réessayez. »  
+-   « L’utilisateur n’est pas un administrateur de batterie de serveurs. Traitez les échecs de validation et réessayez. »  
   
  Connectez-vous avec le compte qui a installé SharePoint ou configurez le compte d'installation en tant qu'administrateur principal du site Administration centrale de SharePoint.  
   
 1.  Dans le menu **Démarrer** , cliquez sur **Tous les programmes**, puis sélectionnez [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)], **Outils de configuration**puis **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] pour SharePoint 2016**. l’outil n’est répertorié que si [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] pour SharePoint est installé sur le serveur local.  
   
-2.  Sélectionnez **configurer ou réparer [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] pour SharePoint** , puis sélectionnez **OK**.  
+2.  Sélectionnez **Configurer ou réparer [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] pour SharePoint**, puis **OK**.  
   
 3.  l’outil vérifie l’état actuel de [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] et exécute les étapes nécessaires pour terminer la configuration. Affichez la fenêtre en plein écran. Vous devez voir une barre d'icônes en bas de la fenêtre qui comprend les commandes **Valider**, **Exécuter**et **Quitter** .  
   
 4.  Dans l'onglet **Paramètres** :  
   
-    1.  **Nom d'utilisateur de compte par défaut**: entrez un compte d'utilisateur de domaine pour le compte par défaut. Ce compte servira à approvisionner des services, notamment le pool d’applications du service [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] . Ne spécifiez pas un compte intégré tel que Service réseau ou Système local. L'outil bloque les configurations qui spécifient des comptes intégrés.  
+    1.  **Par défaut le nom d’utilisateur du compte**: Entrez un compte d’utilisateur de domaine pour le compte par défaut. Ce compte servira à approvisionner des services, notamment le pool d’applications du service [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] . Ne spécifiez pas un compte intégré tel que Service réseau ou Système local. L'outil bloque les configurations qui spécifient des comptes intégrés.  
   
-    2.  **Serveur de base de données**: vous pouvez utiliser le moteur de base de données SQL Server pris en charge pour la batterie de serveurs SharePoint.  
+    2.  **Serveur de base de données**: Vous pouvez utiliser le moteur de base de données SQL Server est prise en charge pour la batterie de serveurs SharePoint.  
   
-    3.  **Phrase secrète**: entrez une phrase secrète. Si vous créez une batterie de serveurs SharePoint, la phrase secrète est utilisée chaque fois que vous ajoutez un serveur ou une application à la batterie de serveurs SharePoint. Si la batterie existe déjà, entrez la phrase secrète qui vous permet d'ajouter une application de serveur à la batterie.  
+    3.  **Phrase secrète**: Entrez une phrase secrète. Si vous créez une batterie de serveurs SharePoint, la phrase secrète est utilisée chaque fois que vous ajoutez un serveur ou une application à la batterie de serveurs SharePoint. Si la batterie existe déjà, entrez la phrase secrète qui vous permet d'ajouter une application de serveur à la batterie.  
   
-    4.  Cliquez sur **Créer une collection de sites** dans la fenêtre de gauche. Notez l' **URL du site** afin de pouvoir y faire référence dans les étapes ultérieures. Si le serveur SharePoint n'est pas déjà configuré, l'Assistant de configuration définit par défaut l'application Web et les URL de collection de sites sur la racine de `http://[ServerName]`. Pour modifier les valeurs par défaut, examinez les pages suivantes dans la fenêtre de gauche : **Créer une application Web par défaut** et **Déployer une solution d'application Web**.  
+    4.  Cliquez sur **Créer une collection de sites** dans la fenêtre de gauche. Notez l' **URL du site** afin de pouvoir y faire référence dans les étapes ultérieures. Si le serveur SharePoint n'est pas déjà configuré, l'Assistant de configuration définit par défaut l'application Web et les URL de collection de sites sur la racine de `http://[ServerName]`. Pour modifier les valeurs par défaut passez en revue les pages suivantes dans la fenêtre de gauche : **Créer une application Web par défaut** et **déployer la Solution Application Web**  
   
-5.  Éventuellement, examinez les valeurs d'entrée restantes utilisées pour effectuer chaque action. Cliquez sur chaque action dans la fenêtre à gauche pour afficher et passer en revue les détails de l'action. Pour plus d’informations sur chacune d’elles, consultez la section Valeurs d’entrée utilisées pour configurer le serveur dans [Configurer ou réparer Power Pivot pour SharePoint 2010 (outil de configuration de PowerPivot)](http://msdn.microsoft.com/d61f49c5-efaa-4455-98f2-8c293fa50046) dans cette rubrique.  
+5.  Éventuellement, examinez les valeurs d'entrée restantes utilisées pour effectuer chaque action. Cliquez sur chaque action dans la fenêtre à gauche pour afficher et passer en revue les détails de l'action. Pour plus d’informations sur chacune d’elles, consultez la section « valeurs d’entrée utilisées pour configurer le serveur dans [configurer ou réparer Power Pivot pour SharePoint 2010 (outil de Configuration Power Pivot)](http://msdn.microsoft.com/d61f49c5-efaa-4455-98f2-8c293fa50046) dans cette rubrique.  
   
 6.  Éventuellement, supprimez toutes les actions que vous ne souhaitez pas traiter à ce stade. Par exemple, si vous souhaitez configurer le Service Banque d’informations sécurisé ultérieurement, cliquez sur **Configurer le Service Banque d’informations sécurisé**, puis désactivez la case à cocher **Inclure cette action dans la liste des tâches**.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "38984061"
   
 1.  Dans Administration centrale, sous Paramètres système, sélectionnez **Gérer les services sur le serveur**.  
   
-2.  Vérifiez que **SQL Server [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] système Service** est démarré.  
+2.  Vérifiez que le **Service système [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] SQL Server** est démarré.  
   
  **Fonctionnalités de la batterie de serveurs :**  
   

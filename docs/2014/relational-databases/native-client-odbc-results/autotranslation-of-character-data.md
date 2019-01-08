@@ -22,17 +22,17 @@ ms.assetid: 86a8adda-c5ad-477f-870f-cb370c39ee13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bc96c78af702a2239b517b4fbde78f6926b8490a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5182ab1a72caac4181e50df2199f3e0457d3aaac
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076699"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52806591"
 ---
 # <a name="autotranslation-of-character-data"></a>Traduction automatique de données caractères
   Les données de caractères, tels que ANSI caractères variables déclarées avec SQL_C_CHAR ou les données stockées dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’aide de la **char**, **varchar**, ou **texte** pouvez des types de données, représentent uniquement un nombre limité de caractères. Les données caractères stockées à l'aide d'un octet par caractère ne peuvent représenter que 256 caractères. Les valeurs stockées dans les variables SQL_C_CHAR sont interprétées à l'aide de la page de codes ANSI (ACP) de l'ordinateur client. Les valeurs stockées à l’aide de **char**, **varchar**, ou **texte** des types de données sur le serveur sont évaluées à l’aide de la page de codes ANSI du serveur.  
   
- Si le serveur et le client ont la même page de codes ANSI, ils peuvent sans peine interpréter les valeurs stockées dans SQL_C_CHAR, **char**, **varchar**, ou **texte** objets. Si le serveur et le client ont des pages de codes ANSI différentes, alors que les données SQL_C_CHAR du client peuvent être interprétées comme un caractère différent sur le serveur s’il est utilisé dans **char**, **varchar**, ou **texte** colonnes, variables ou paramètres. Par exemple, un octet de caractère contenant la valeur 0xA5 est interprété comme le caractère Ñ sur un ordinateur à l’aide de la page de code 437 et est interprété comme l’yen (¥) sur un ordinateur exécutant la page de codes 1252.  
+ Si le serveur et le client ont la même page de codes ANSI, ils peuvent sans peine interpréter les valeurs stockées dans SQL_C_CHAR, **char**, **varchar**, ou **texte** objets. Si le serveur et le client ont des pages de codes ANSI différentes, alors que les données SQL_C_CHAR du client peuvent être interprétées comme un caractère différent sur le serveur s’il est utilisé dans **char**, **varchar**, ou **texte** colonnes, variables ou paramètres. Par exemple, un octet de caractère contenant la valeur 0xA5 est interprété comme le caractère ?? sur un ordinateur à l’aide de code page 437 et est interprété comme l’yen signer ( ?) sur un ordinateur exécutant la page de codes 1252.  
   
  Les données Unicode sont stockées à l'aide de deux octets par caractère. Tous les caractères étendus étant couverts par la spécification Unicode, tous les caractères Unicode sont interprétés de la même façon par tous les ordinateurs.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "48076699"
   
  Étant donné que toutes ces conversions sont effectuées par le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’exécution de pilote ODBC Native Client sur le client, la page de codes ANSI du serveur doit être une des pages de codes installées sur l’ordinateur client.  
   
- Le fait d'effectuer les conversions de caractères via Unicode garantit une conversion correcte de tous les caractères qui existent dans les deux pages de codes. Si, toutefois, un caractère existe dans une page de codes mais pas dans une autre, le caractère ne peut pas être représenté dans la page de codes cible. Par exemple, la page de codes 1252 a le symbole de marque déposée (®), tandis que la page de codes 437 ne l'a pas.  
+ Le fait d'effectuer les conversions de caractères via Unicode garantit une conversion correcte de tous les caractères qui existent dans les deux pages de codes. Si, toutefois, un caractère existe dans une page de codes mais pas dans une autre, le caractère ne peut pas être représenté dans la page de codes cible. Par exemple, la page de codes 1252 a le symbole de marque déposée ( ?), contrairement à la page de codes 437.  
   
  Le paramètre AutoTranslate n'a aucun effet sur ces conversions :  
   

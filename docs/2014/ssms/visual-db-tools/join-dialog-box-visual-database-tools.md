@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vdt.ppg.joinline
@@ -13,15 +13,15 @@ ms.assetid: 0d9516bb-4ad3-4fcf-bb77-93474dea698f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8314b283bbb28752e98e5c7e34e2f1625cf8827b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e266d398debd65a8a03f73d7f8726899c97b7e13
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087059"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52781631"
 ---
 # <a name="join-dialog-box-visual-database-tools"></a>Boîte de dialogue Joindre (Visual Database Tools)
-  Utilisez cette boîte de dialogue afin de spécifier des options de jointure de tables. Pour accéder à cette boîte de dialogue, sélectionnez une ligne de jointure dans le volet **Design** . Ensuite, dans la fenêtre **Propriétés** , cliquez sur **Condition et type de jointure**, puis sur le bouton de sélection **(…)** qui s’affiche à droite de la propriété.  
+  Utilisez cette boîte de dialogue afin de spécifier des options de jointure de tables. Pour accéder à cette boîte de dialogue, sélectionnez une ligne de jointure dans le volet **Design** . Ensuite, dans la fenêtre **Propriétés**, cliquez sur **Condition et type de jointure**, puis sur le bouton de sélection **(…)** qui s’affiche à droite de la propriété.  
   
  Par défaut, les tables connexes sont jointes par une jointure interne qui crée un jeu de résultats à partir des lignes contenant des informations correspondantes dans les colonnes de jointure. Les options de la boîte de dialogue **Joindre** vous permettent de définir une jointure basée sur un opérateur différent et de définir une jointure externe.  
   
@@ -31,8 +31,8 @@ ms.locfileid: "48087059"
   
 |**Terme**|**Définition**|  
 |--------------|--------------------|  
-|**Table**|Noms des tables ou des objets table impliqués dans la jointure. Les noms des tables sont affichés ici à titre d'information et ne peuvent pas être modifiés.|  
-|**Colonne**|Noms des colonnes utilisées pour joindre les tables. L'opérateur dans la liste Opérateur définit la relation entre les données présentes dans les colonnes. Les noms des colonnes sont affichés ici à titre d'information et ne peuvent pas être modifiés.|  
+|**Table**|Noms des tables ou des objets table impliqués dans la jointure. Les noms des tables sont affichés ici à titre d’information et ne peuvent pas être modifiés.|  
+|**Colonne**|Noms des colonnes utilisées pour joindre les tables. L'opérateur dans la liste Opérateur définit la relation entre les données présentes dans les colonnes. Les noms des colonnes sont affichés ici à titre d’information et ne peuvent pas être modifiés.|  
 |**Opérateur**|Spécifiez l'opérateur utilisé pour mettre en relation les colonnes de jointure. Pour spécifier un opérateur autre que le signe (=), sélectionnez-le dans la liste. Lorsque vous fermez la page de propriétés, l'opérateur sélectionné apparaît dans le graphique en forme de losange de la ligne de jointure, comme dans l'illustration suivante :<br /><br /> ![Icône Visual Database Tools](../../database-engine/media//dv3wbii.gif "Icône Visual Database Tools")|  
 |**Toutes les lignes de \<table1 >**|Spécifie que toutes les lignes de la table de gauche apparaissent dans la sortie, y compris s'il n'existe aucune correspondance dans la table de droite. Les colonnes auxquelles ne correspond aucune donnée dans la table de droite apparaissent avec la valeur NULL. Choisir cette option équivaut à spécifier LEFT OUTER JOIN dans l'instruction SQL.|  
 |**Toutes les lignes de \<table2 >**|Spécifie que toutes les lignes de la table de droite apparaissent dans la sortie, y compris s'il n'existe aucune correspondance dans la table de gauche. Les colonnes auxquelles ne correspond aucune donnée dans la table de gauche apparaissent avec la valeur NULL. Choisir cette option équivaut à spécifier RIGHT OUTER JOIN dans l'instruction SQL.|  

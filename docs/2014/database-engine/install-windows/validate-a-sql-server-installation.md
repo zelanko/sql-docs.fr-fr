@@ -12,12 +12,12 @@ ms.assetid: 1689af50-d2b8-4aa6-8f27-cc7127157fc8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0473a30a3c32b83a312aea92705f3f8e6e0b4dab
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 34e4c29cb28f76c930f1f04152528ca1a8a89dfc
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018124"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52415690"
 ---
 # <a name="validate-a-sql-server-installation"></a>Valider une installation de SQL Server
   Le rapport de découverte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut être utilisé pour vérifier la version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et les fonctionnalités [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installées sur l'ordinateur. Le **installé [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rapport de découverte des fonctionnalités** affiche un rapport de tous les [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], et [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] produits et des fonctionnalités offertes par sont installés sur le serveur local. Le rapport de découverte des fonctionnalités [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est disponible sur la page **Outils** du Centre d'installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

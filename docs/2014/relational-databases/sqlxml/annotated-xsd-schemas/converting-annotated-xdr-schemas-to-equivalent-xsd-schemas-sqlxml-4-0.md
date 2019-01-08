@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - annotated XDR schemas, converting schemas
@@ -20,12 +18,12 @@ ms.assetid: 151c94a8-66d3-4c46-a5ff-a22df456940a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e3e1331c63c119365de8d5862af3db223ce60e72
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ce9e49aa31dea2a08283fdea1829f6565ad52fa4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157779"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52822313"
 ---
 # <a name="converting-annotated-xdr-schemas-to-equivalent-xsd-schemas-sqlxml-40"></a>Conversion de schémas XDR annotés en schémas XSD équivalents (SQLXML 4.0)
   Le langage XSD (XML Schema Definition) est le successeur du langage de définition de schéma XDR (XML-Data Reduced). Avec l'introduction de la prise en charge du langage XSD dans [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0, les nouveaux schémas annotés sont donc supposés être créés à l'aide de ce langage XSD. SQLXML 4.0 inclut un outil de conversion XDR vers XSD conçu pour vous aider à convertir vos schémas XDR annotés en schémas XSD équivalents.  

@@ -1,5 +1,5 @@
 ---
-title: À l’aide des données de Table imbriquée comme entrée pour un graphique de précision | Documents Microsoft
+title: À l’aide des données de Table imbriquée comme entrée pour un graphique de précision | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 68ab3e189bcf0637003f4ddae41e5f0209988241
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: d4217962e6bb899cbf2a838c5214eb35bb576be0
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015676"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505311"
 ---
 # <a name="using-nested-table-data-as-an-input-for-an-accuracy-chart"></a>Utilisation des données de table imbriquée comme entrée pour un graphique d'analyse de précision
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "34015676"
   
 3.  Dans **Sélectionner le jeu de données à utiliser pour le graphique d’analyse de précision**, sélectionnez l’option **Spécifier un autre jeu de données**.  
   
-4.  Cliquez sur le bouton Parcourir **(…)** pour choisir le jeu de données externes dans une liste de vues de source de données sur le serveur actuel.  
+4.  Cliquez sur le bouton Parcourir **(...)**  pour choisir le jeu de données externes dans la liste des vues de sources de données sur le serveur actuel.  
   
 5.  Cliquez sur **Sélectionner la table de cas**. Dans la boîte de dialogue **Sélectionner une table** , sélectionnez la table dans la vue de source de données contenant les données de cas, puis cliquez sur **OK**.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "34015676"
      Si vous devez modifier la relation entre la table imbriquée et la table de cas, cliquez sur **Modifier la jointure** pour ouvrir la boîte de dialogue **Créer une relation** .  
   
 ## <a name="see-also"></a>Voir aussi  
- [Choisir et mapper le modèle de données de test](../../analysis-services/data-mining/choose-and-map-model-testing-data.md)   
- [Appliquer des filtres pour modéliser les données de test](../../analysis-services/data-mining/apply-filters-to-model-testing-data.md)  
+ [Choisir et mapper les données de test du modèle](../../analysis-services/data-mining/choose-and-map-model-testing-data.md)   
+ [Appliquer des filtres aux données de test du modèle](../../analysis-services/data-mining/apply-filters-to-model-testing-data.md)  
   
   

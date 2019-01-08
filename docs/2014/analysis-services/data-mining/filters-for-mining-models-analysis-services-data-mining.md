@@ -17,12 +17,12 @@ ms.assetid: 0f29c19c-4be3-4bc7-ab60-f4130a10d59c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bb95e8bf7237fcf7ebae4321d14de690ebd0b2c2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 213768938a4fb9497fcbebad15f1dc4b84e1dba9
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142709"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395942"
 ---
 # <a name="filters-for-mining-models-analysis-services---data-mining"></a>Filtres pour les modèles d'exploration de données (Analysis Services - Exploration de données)
   Le filtrage de modèle basé sur les données est utile pour créer des modèles d'exploration de données qui utilisent les sous-ensembles de données d'une structure d'exploration de données. Le filtrage offre une certaine souplesse lorsque vous concevez vos structures d'exploration de données et sources de données, car vous pouvez créer une structure d'exploration de données unique basée sur une vue détaillée de la source de données. Vous pouvez créer ensuite des filtres pour utiliser uniquement une partie de ces données à des fins de formation et de test de divers modèles, au lieu de générer une structure différente et un modèle associé pour chaque sous-ensemble de données.  
@@ -51,24 +51,24 @@ ms.locfileid: "48142709"
 ### <a name="creating-model-filters-using-data-mining-designer"></a>Création des filtres de modèle à l'aide du Concepteur d'exploration de données  
  Vous filtrez un modèle dans le Concepteur d'exploration de données en modifiant la propriété `Filter` du modèle d'exploration de données. Vous pouvez taper directement une expression de filtre dans le volet **Propriétés** ou ouvrir une boîte de dialogue de filtre pour créer des conditions.  
   
- Il existe deux boîtes de dialogue de filtre. La première permet de créer des conditions appliquées à la table de cas. Si la source de données contient plusieurs tables, sélectionnez d'abord une table, puis sélectionnez une colonne et spécifiez les opérateurs et les conditions qui s'appliquent à cette colonne. Vous pouvez lier plusieurs conditions à l’aide de `AND` / `OR` opérateurs. Les opérateurs disponibles pour définir les valeurs varient selon que la colonne contient des valeurs discrètes ou continues. Par exemple, avec les valeurs continues, vous pouvez utiliser `greater than` et `less than` opérateurs. Toutefois, vous pouvez utiliser uniquement les opérateurs `= (equal to)`, `!= (not equal to)` et `is null` avec les valeurs discrètes.  
+ Il existe deux boîtes de dialogue de filtre. La première permet de créer des conditions appliquées à la table de cas. Si la source de données contient plusieurs tables, sélectionnez d'abord une table, puis sélectionnez une colonne et spécifiez les opérateurs et les conditions qui s'appliquent à cette colonne. Vous pouvez lier plusieurs conditions à l’aide de `AND` / `OR` opérateurs. Les opérateurs disponibles pour définir les valeurs varient selon que la colonne contient des valeurs discrètes ou continues. Par exemple, vous pouvez utiliser les opérateurs `greater than` et `less than` avec les valeurs continues. Toutefois, vous pouvez utiliser uniquement les opérateurs `= (equal to)`, `!= (not equal to)` et `is null` avec les valeurs discrètes.  
   
 > [!NOTE]  
->  Le `LIKE` mot clé n’est pas pris en charge. Si vous souhaitez inclure plusieurs attributs discrets, vous devez créer des conditions séparées et les lier avec l'opérateur `OR`.  
+>  Le mot clé `LIKE` n'est pas pris en charge. Si vous souhaitez inclure plusieurs attributs discrets, vous devez créer des conditions séparées et les lier avec l'opérateur `OR`.  
   
  Si les conditions sont complexes, vous pouvez choisir la deuxième boîte de dialogue de filtre pour utiliser une table à la fois. Lorsque vous fermez la deuxième boîte de dialogue de filtre, l'expression est évaluée, puis associée aux conditions de filtrage qui ont été définies sur d'autres colonnes de la table de cas.  
   
 ### <a name="creating-filters-on-nested-tables"></a>Création de filtres sur les tables imbriquées  
  Si la vue de source de données contient des tables imbriquées, vous pouvez utiliser la deuxième boîte de dialogue de filtre pour créer des conditions sur les lignes des tables imbriquées.  
   
- Par exemple, si votre table de cas est liée aux clients et que la table imbriquée affiche les produits achetés par un client, vous pouvez créer un filtre pour les clients ayant acquis des articles particuliers, en utilisant la syntaxe suivante dans le filtre de table imbriquée : `[ProductName]=’Water Bottle’ OR ProductName=’Water Bottle Cage'`.  
+ Par exemple, si votre table de cas est liée aux clients et que la table imbriquée affiche les produits achetés par un client, vous pouvez créer un filtre pour les clients ayant acquis des articles particuliers, en utilisant la syntaxe suivante dans le filtre de table imbriquée : `[ProductName]='Water Bottle' OR ProductName='Water Bottle Cage'`.  
   
- Vous pouvez également filtrer sur l’existence d’une valeur particulière dans la table imbriquée à l’aide de la `EXISTS` ou `NOT EXISTS` mots clés et une sous-requête. Vous pouvez ainsi créer des conditions telles que `EXISTS (SELECT * FROM Products WHERE ProductName=’Water Bottle’)`. L'instruction `EXISTS SELECT(<subquery>)` retourne `true` si la table imbriquée contient au moins une ligne incluant la valeur `Water Bottle`.  
+ Vous pouvez également filtrer sur l'existence d'une valeur particulière de la table imbriquée en utilisant les mots clés `EXISTS` ou `NOT EXISTS` et une sous-requête. Vous pouvez ainsi créer des conditions telles que `EXISTS (SELECT * FROM Products WHERE ProductName='Water Bottle')`. L'instruction `EXISTS SELECT(<subquery>)` retourne `true` si la table imbriquée contient au moins une ligne incluant la valeur `Water Bottle`.  
   
- Vous pouvez combiner les conditions de la table de cas et les conditions de la table imbriquée. Par exemple, la syntaxe suivante inclut une condition sur la table de cas (`Age > 30` ), une sous-requête sur la table imbriquée (`EXISTS (SELECT * FROM Products)`) et plusieurs conditions sur la table imbriquée (`WHERE ProductName=’Milk’  AND Quantity>2`).  
+ Vous pouvez combiner les conditions de la table de cas et les conditions de la table imbriquée. Par exemple, la syntaxe suivante inclut une condition sur la table de cas (`Age > 30` ), une sous-requête sur la table imbriquée (`EXISTS (SELECT * FROM Products)`) et plusieurs conditions sur la table imbriquée (`WHERE ProductName='Milk'  AND Quantity>2`).  
   
 ```  
-(Age > 30 AND EXISTS (SELECT * FROM Products WHERE ProductName=’Milk’  AND Quantity>2) )  
+(Age > 30 AND EXISTS (SELECT * FROM Products WHERE ProductName='Milk'  AND Quantity>2) )  
 ```  
   
  Lorsque vous avez terminé de générer le filtre, le texte de filtre est analysé par [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], traduit en expression DMX, puis enregistré avec le modèle.  
@@ -100,7 +100,7 @@ ms.locfileid: "48142709"
 ### <a name="how-can-i-save-a-filter"></a>Comment puis-je enregistrer un filtre ?  
  L'expression de filtre est enregistrée en tant que script stocké avec la table imbriquée ou le modèle d'exploration de données associé. Si vous supprimez le texte de filtre, il ne peut être restauré qu'en recréant manuellement l'expression de filtre. Par conséquent, si vous créez des expressions de filtre complexes, vous devez créer une copie de sauvegarde du texte de filtre.  
   
-### <a name="why-cant-i-see-any-effects-from-the-filter"></a>Pourquoi le filtre n'a aucun effet ?  
+### <a name="why-cant-i-see-any-effects-from-the-filter"></a>Pourquoi ne puis-je pas voir tous les effets du filtre ?  
  Chaque fois que vous changez ou ajoutez une expression de filtre, vous devez retraiter la structure et le modèle avant de pouvoir consulter les résultats du filtre.  
   
 ### <a name="why-do-i-see-filtered-attributes-in-prediction-query-results"></a>Pourquoi y a-t-il des attributs filtrés dans les résultats de la requête de prédiction ?  
@@ -122,7 +122,7 @@ ms.locfileid: "48142709"
  Pour plus d’informations sur l’utilisation des filtres de modèle lorsque vous testez un modèle d’exploration de données, consultez [Choisir un type de graphique d’analyse de précision et définir des options de graphique](choose-an-accuracy-chart-type-and-set-chart-options.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Syntaxe de filtre et des exemples de modèle &#40;Analysis Services - Exploration de données&#41;](model-filter-syntax-and-examples-analysis-services-data-mining.md)   
- [Test et Validation &#40;exploration de données&#41;](testing-and-validation-data-mining.md)  
+ [Syntaxe de filtre de modèle et exemples &#40;Analysis Services - Exploration de données&#41;](model-filter-syntax-and-examples-analysis-services-data-mining.md)   
+ [Test et validation &#40;exploration de données&#41;](testing-and-validation-data-mining.md)  
   
   

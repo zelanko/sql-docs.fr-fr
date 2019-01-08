@@ -13,14 +13,14 @@ ms.assetid: 8603ea91-2ec4-40b6-8070-4f824332f5d3
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 584ba08e49efaf0dc3a8de2a1fa8fd34ac20bfe3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d0a4532b99c63a778c8c6751471b2a30e0ff7186
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113273"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52390502"
 ---
-# <a name="task-4-creating-an-ssis-project-using-sql-server-data-tools"></a>Tâche 4 (Facultatif) : Création d'un projet SSIS à l'aide de SQL Server Data Tools
+# <a name="task-4-creating-an-ssis-project-using-sql-server-data-tools"></a>Tâche 4 : Création d'un projet SSIS à l'aide de SQL Server Data Tools
   Dans cette tâche, vous créez un projet SSIS à l’aide de **SQL Server Data Tools** pour automatiser le nettoyage et la correspondance des données des fournisseurs.  
   
 1.  Lancez **SQL Server Data Tools**. Cliquez sur Démarrer, pointez sur **tous les programmes**, développez **Microsoft SQL Server 2012**, puis cliquez sur **SQL Server Data Tools**.  
@@ -42,6 +42,6 @@ ms.locfileid: "48113273"
 7.  Type **CleanseAndCurate.dtsx** et appuyez sur **entrée**. Assurez-vous que le **extension** reste **.dtsx**.  
   
 ## <a name="next-step"></a>Étape suivante  
- [Tâche 5 : Ajout d’une tâche de flux de données](task-5-adding-data-flow-task.md)  
+ [Tâche 5 : Ajout de tâche de flux de données](task-5-adding-data-flow-task.md)  
   
   

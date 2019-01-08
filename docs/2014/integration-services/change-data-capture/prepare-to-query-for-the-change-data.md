@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],preparing query
@@ -13,12 +12,12 @@ ms.assetid: 9ea2db7a-3dca-4bbf-9903-cccd2d494b5f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 79d862aa5fa2327a6b88ff1936d92e1c3f45f090
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 831e44cb232dea7f0730c73d360cd787f3895878
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48173249"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52756991"
 ---
 # <a name="prepare-to-query-for-the-change-data"></a>Préparer la recherche des données modifiées
   Dans le flux de contrôle d'un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] qui effectue un chargement incrémentiel des données modifiées, la troisième et dernière tâche consiste à préparer la recherche des données modifiées et à ajouter une tâche de flux de données.  
@@ -125,7 +124,7 @@ ms.locfileid: "48173249"
   
         ```  
   
-5.  Laissez la ligne de code qui retourne par défaut `DtsExecResult.Success` à partir de l’exécution du script.  
+5.  Laissez la ligne de code par défaut qui retourne `DtsExecResult.Success` suite à l'exécution du script.  
   
 6.  Fermez l’environnement de développement de script et **l’Éditeur de tâche de script**.  
   
@@ -171,7 +170,7 @@ ms.locfileid: "48173249"
         ```  
   
         > [!NOTE]  
-        >  Le `else` clause dans cet exemple génère une requête pour le chargement initial des données modifiées en passant une valeur null pour la date et l’heure. Cet exemple ne s'applique pas au scénario selon lequel des modifications qui ont été apportées avant l'activation de la capture de données modifiées doivent aussi être téléchargées dans l'entrepôt de données.  
+        >  La clause `else` dans cet exemple génère une requête pour le chargement initial des données modifiées en passant une valeur Null pour la date et l'heure de début. Cet exemple ne s'applique pas au scénario selon lequel des modifications qui ont été apportées avant l'activation de la capture de données modifiées doivent aussi être téléchargées dans l'entrepôt de données.  
   
 3.  Dans la page **Mappage de paramètre** de **l’Éditeur de tâche d’exécution de requêtes SQL**, effectuez le mappage suivant :  
   
@@ -199,6 +198,6 @@ ms.locfileid: "48173249"
 ## <a name="next-step"></a>Étape suivante  
  Une fois que vous avez préparé la chaîne de requête et configuré la tâche de flux de données, l'étape suivante consiste à créer la fonction table qui récupèrera les données modifiées de la base de données.  
   
- **Rubrique suivante :** [Créer la fonction de récupération des données modifiées](create-the-function-to-retrieve-the-change-data.md)  
+ **Rubrique suivante :** [Créer la fonction de récupération des données modifiées](create-the-function-to-retrieve-the-change-data.md)  
   
   

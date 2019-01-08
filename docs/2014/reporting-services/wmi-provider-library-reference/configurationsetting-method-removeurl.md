@@ -13,12 +13,12 @@ ms.assetid: 3d98bd97-e152-48ce-ab1c-bd2c4f8b7fe9
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: e6736f0d05de76abbd230892c1b6ab8c23fc625e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c9ab7dc3ea75201bd011b85f80169d50e2ba0d37
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053029"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518889"
 ---
 # <a name="removeurl-method-wmi-msreportserverconfigurationsetting"></a>Méthode RemoveURL (WMI MSReportServer_ConfigurationSetting)
   Supprime une URL réservée pour le serveur de rapports. Si plusieurs URL doivent être supprimées, elles doivent l'être l'une après l'autre en appelant cette API.  
@@ -58,13 +58,13 @@ public void RemoveURL(string Application, string UrlString, int Lcid,
 ## <a name="remarks"></a>Notes  
  *UrlString* n’inclut pas le nom du répertoire virtuel. La [méthode SetVirtualDirectory &#40;WMI MSReportServer_ConfigurationSetting&#41;](configurationsetting-method-setvirtualdirectory.md) est fournie à cet effet.  
   
- Avant d’appeler le [ReserveURL](configurationsetting-method-reserveurl.md) (méthode), vous devez fournir une valeur pour la propriété de configuration VirtualDirectory pour le *Application* paramètre. Utilisez la [méthode SetVirtualDirectory &#40;WMI MSReportServer_ConfigurationSetting&#41;](configurationsetting-method-setvirtualdirectory.md) pour définir la propriété VirtualDirectory.  
+ Avant d’appeler la méthode [ReserveURL](configurationsetting-method-reserveurl.md) , vous devez fournir une valeur pour la propriété de configuration VirtualDirectory du paramètre *Application* . Utilisez la [méthode SetVirtualDirectory &#40;WMI MSReportServer_ConfigurationSetting&#41;](configurationsetting-method-setvirtualdirectory.md) pour définir la propriété VirtualDirectory.  
   
  Si un certificat SSL a été fourni par [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] et qu'aucune autre URL n'en a besoin, il est supprimé.  
   
  Cette méthode entraîne un recyclage et un arrêt forcés de tous les domaines d'application autres que de configuration au cours de cette opération ; les domaines d'application sont redémarrés une fois cette opération terminée.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Espace de noms :** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -5,8 +5,7 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_configure_peerconflictdetection_TSQL
@@ -17,17 +16,17 @@ ms.assetid: 45117cb2-3247-433f-ba3d-7fa19514b1c3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4d2952862abcb00d40593b8acfe6448232b2afb8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a0a3ac1096ff14577ba72157118dcef4e1b03e70
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669417"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52773701"
 ---
 # <a name="spconfigurepeerconflictdetection-transact-sql"></a>sp_configure_peerconflictdetection (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Configure la détection de conflit pour une publication impliquée dans une topologie de réplication transactionnelle d'égal à égal. Pour plus d'informations, consultez [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md). Cette procédure stockée est exécutée sur le serveur de publication dans la base de données de publication.  
+  Configure la détection de conflit pour une publication impliquée dans une topologie de réplication transactionnelle d'égal à égal. Pour plus d’informations, voir [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md). Cette procédure stockée est exécutée sur le serveur de publication dans la base de données de publication.  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,7 +51,7 @@ sp_configure_peerconflictdetection [ @publication = ] 'publication'
  [ @action=] '*action*'  
  Spécifie s'il faut activer ou désactiver la détection de conflit pour une publication. *action* est **nvarchar (5)**, et peut prendre l’une des valeurs suivantes.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**enable**|Active la détection de conflit pour une publication.|  
 |**disable**|Désactive la détection de conflit pour une publication.|  
@@ -82,12 +81,12 @@ sp_configure_peerconflictdetection [ @publication = ] 'publication'
 ## <a name="remarks"></a>Notes  
  sp_configure_peerconflictdetection est utilisé dans la réplication transactionnelle d'égal à égal. Pour utiliser la détection de conflit, tous les nœuds doivent exécuter [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou versions ultérieures et la détection doivent être activée pour tous les nœuds.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert l'appartenance au rôle serveur fixe sysadmin ou au rôle de base de données fixe db_owner.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Détection de conflit dans la réplication d’égal à égal](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)   
- [Réplication transactionnelle d’égal à égal](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)   
+ [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)   
  [Procédures stockées de réplication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

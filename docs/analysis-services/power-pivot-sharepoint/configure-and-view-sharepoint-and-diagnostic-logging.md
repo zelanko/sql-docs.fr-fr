@@ -1,5 +1,5 @@
 ---
-title: Configurer et afficher SharePoint et la journalisation des Diagnostics | Documents Microsoft
+title: Configurer et afficher SharePoint et la journalisation des Diagnostics | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 9d36c65115f1ad786340ec8a4058bd20c52cb6a1
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: e2df09cb9bf167c0af28c240ff69f8666cce01a6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027216"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52410416"
 ---
 # <a name="configure-and-view-sharepoint-and-diagnostic-logging"></a>Configurer et afficher SharePoint et la journalisation des Diagnostics
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -76,7 +76,7 @@ ms.locfileid: "34027216"
   
 -   Pour les erreurs qui fournissent un ID de corrélation, copiez l'ID et utilisez-le comme un terme recherché dans le fichier journal.  
   
--   Recherchez le statut d'erreur « Élevé » ou « Exception ». Recherche de « Service[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] ».  
+-   Recherchez le statut d'erreur « Élevé » ou « Exception ». Recherchez «[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] Service ».  
   
 -   Si vous savez à quel moment l'erreur s'est produite, utilisez les informations d'horodatage pour limiter l'étendue des entrées à parcourir.  
   
@@ -116,17 +116,17 @@ ms.locfileid: "34027216"
 #### <a name="entries-for-power-pivot-services"></a>Entrées pour les services Power Pivot  
  Le tableau suivant décrit les entrées d'opérations de serveur [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] susceptibles de se trouver dans un fichier journal SharePoint.  
   
-|Traiter|Domaine|Catégorie|Niveau|Boîte de|Détails|  
+|Traiter|Domaine|Catégorie|Level|Boîte de|Détails|  
 |-------------|----------|--------------|-----------|-------------|-------------|  
 |w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] |Utilisation|Commentaires|There are no current request statistics, nothing to log.|À intervalles prédéfinis, le service fournit les statistiques de réponse aux requêtes en tant qu'événement d'utilisation au système de collecte des données d'utilisation. Ce message indique qu'il n'existe aucune statistique sur les requêtes à signaler.|  
 |w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] Service|Web frontal|Commentaires|Démarrage de localiser un serveur d’applications pour la source de données =\<*chemin d’accès*>|Lorsqu'il reçoit une demande de connexion, le service [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] identifie un [!INCLUDE[ssGeminiSrv_md](../../includes/ssgeminisrv-md.md)] disponible pour gérer la demande. Si la batterie de serveurs ne contient qu'un seul serveur, le serveur local accepte toujours la demande.|  
 |w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] Service|Web frontal|Commentaires|Locating the application server succeeded.|La requête a été allouée à une application de service [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] .|  
-|w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] Service|Web frontal|Commentaires|Demande de redirection pour la \< *PowerPivotdata source*> à la [!INCLUDE[ssGeminiSrv_md](../../includes/ssgeminisrv-md.md)].|La demande a été envoyée au [!INCLUDE[ssGeminiSrv_md](../../includes/ssgeminisrv-md.md)].|  
+|w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] Service|Web frontal|Commentaires|Demande de redirection pour la \< *Redirecting source*> à la [!INCLUDE[ssGeminiSrv_md](../../includes/ssgeminisrv-md.md)].|La demande a été envoyée au [!INCLUDE[ssGeminiSrv_md](../../includes/ssgeminisrv-md.md)].|  
 |w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] |Traitement des demandes|Commentaires|Demande de redirection pour le nom d’utilisateur\<*utilisateur SharePoint*> à la base de données|Une connexion avec emprunt d'identité à la source de données [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] a été créée au nom de l'utilisateur SharePoint.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Collecte des données d’utilisation Power Pivot](../../analysis-services/power-pivot-sharepoint/power-pivot-usage-data-collection.md)   
  [Afficher et lire les fichiers journaux d’installation de SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)   
- [Configurer la collecte des données d’utilisation &#40;PowerPivot pour SharePoint](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md)  
+ [Configurer la collecte des données d’utilisation &#40;PowerPivot pour SharePoint)](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md)  
   
   

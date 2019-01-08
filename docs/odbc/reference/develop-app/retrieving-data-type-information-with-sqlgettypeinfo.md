@@ -18,19 +18,19 @@ ms.assetid: d4f8b152-ab9e-4d05-a720-d10a08a6df81
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 44c1edaadc1a30dd27556c52bb7dc7a8f297ae48
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c69113e4bb5457cb997f832179e5c1aab2841d82
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645917"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518866"
 ---
 # <a name="retrieving-data-type-information-with-sqlgettypeinfo"></a>Récupération des informations sur les types de données avec SQLGetTypeInfo
 Étant donné que les mappages de types de données SQL sous-jacente aux identificateurs de type ODBC sont approximatifs, ODBC fournit une fonction (**SQLGetTypeInfo**) via lequel un pilote peut complètement décrivent chaque type de données SQL dans la source de données. Cette fonction retourne un jeu de résultats, chaque ligne qui décrit les caractéristiques d’un type de données unique, telles que nom ou identificateur de type, précision, échelle, possibilité de valeur null.  
   
  Ces informations sont généralement utilisées par les applications génériques qui lui permet de créer et modifier des tables. Ce applications appellent **SQLGetTypeInfo** pour récupérer les informations de type de données et puis de les présenter tout ou partie de celui-ci à l’utilisateur. De telles applications doivent être conscient de deux choses :  
   
--   Plusieurs types de données SQL peut mapper à un identificateur de type unique, ce qui peut rendre difficile de déterminer le type de données à utiliser. Pour résoudre ce problème, le jeu de résultats est tout d’abord classé par identificateur de type et ensuite par proximité à la définition de l’identificateur de type. En outre, les types de données : source de données sont prioritaires sur les types de données définis par l’utilisateur. Par exemple, supposons qu’une source de données définit les types de données entier et compteur pour être identiques, à ceci près que le compteur est à incrémentation automatique. Supposons également que le type défini par l’utilisateur WHOLENUM est un synonyme d’entier. Chacun de ces types est mappé à SQL_INTEGER. Dans le **SQLGetTypeInfo** jeu de résultats, entier s’affiche tout d’abord, suivie de WHOLENUM et ensuite de compteur. WHOLENUM apparaît après entier, car il est défini par l’utilisateur, mais avant de compteur, car il plus étroitement correspond à la définition de la SQL_INTEGER type identificateur.  
+-   Plusieurs types de données SQL peut mapper à un identificateur de type unique, ce qui peut rendre difficile de déterminer le type de données à utiliser. Pour résoudre ce problème, le jeu de résultats est tout d’abord classé par identificateur de type et ensuite par proximité à la définition de l’identificateur de type. En outre, les types de données source de données sont prioritaires sur les types de données définis par l’utilisateur. Par exemple, supposons qu’une source de données définit les types de données entier et compteur pour être identiques, à ceci près que le compteur est à incrémentation automatique. Supposons également que le type défini par l’utilisateur WHOLENUM est un synonyme d’entier. Chacun de ces types est mappé à SQL_INTEGER. Dans le **SQLGetTypeInfo** jeu de résultats, entier s’affiche tout d’abord, suivie de WHOLENUM et ensuite de compteur. WHOLENUM apparaît après entier, car il est défini par l’utilisateur, mais avant de compteur, car il plus étroitement correspond à la définition de la SQL_INTEGER type identificateur.  
   
 -   ODBC ne définit pas de noms de types de données pour une utilisation dans **CREATE TABLE** et **ALTER TABLE** instructions. Au lieu de cela, l’application doit utiliser le nom retourné dans la colonne TYPE_NAME du jeu de résultats retourné par **SQLGetTypeInfo**. La raison en est que bien que la plupart des SQL ne varie pas beaucoup dans le SGBD, les noms de types de données varient considérablement. Plutôt que de forcer les pilotes pour analyser les instructions SQL et remplacez les noms de types de données standard avec des noms de types de données propres au SGBD, ODBC requiert des applications à utiliser les noms propres au SGBD en premier lieu.  
   

@@ -12,12 +12,12 @@ ms.assetid: 4bf12058-0534-42ca-a5ba-b1c23b24d90f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 92569bd943801a5a8c45947a7fdee65192b398ad
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1aea946703b9ebe06c32fcc25044a3b68326625e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152755"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398132"
 ---
 # <a name="large-clr-user-defined-types-ole-db"></a>Types CLR volumineux définis par l'utilisateur (OLE DB)
   Cette rubrique traite des modifications apportées à OLE DB dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client pour prendre en charge les types définis par l'utilisateur (UDT) du CLR (Common Language Runtime) volumineux.  
@@ -29,7 +29,7 @@ ms.locfileid: "48152755"
   
  Le tableau suivant montre le mappage des types de données dans les paramètres et les ensembles de lignes :  
   
-|Type de données SQL Server|Type de données OLE DB|Disposition en mémoire|Valeur|  
+|Type de données SQL Server|Type de données OLE DB|Disposition en mémoire|Value|  
 |--------------------------|----------------------|-------------------|-----------|  
 |UDT CLR|DBTYPE_UDT|BYTE[](tableau d’octets\)|132 (oledb.h)|  
   
@@ -118,13 +118,13 @@ ms.locfileid: "48152755"
 |Type de données de liaison|UDT vers serveur|Non-UDT vers serveur|UDT à partir du serveur|Non-UDT à partir du serveur|  
 |----------------------|-------------------|------------------------|---------------------|--------------------------|  
 |DBTYPE_UDT|Pris en charge (5)|Erreur (1)|Pris en charge (5)|Erreur (4)|  
-|DBTYPE_BYTES|Pris en charge (5)|Néant|Pris en charge (5)|Néant|  
-|DBTYPE_WSTR|Pris en charge (2), (5)|Néant|Pris en charge (3), (5), (6)|Néant|  
-|DBTYPE_BSTR|Pris en charge (2), (5)|Néant|Pris en charge (3), (5)|Néant|  
-|DBTYPE_STR|Pris en charge (2), (5)|Néant|Pris en charge (3), (5)|Néant|  
-|DBTYPE_IUNKNOWN|Pris en charge (6)|Néant|Pris en charge (6)|Néant|  
-|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|Pris en charge (5)|Néant|Pris en charge (3), (5)|Néant|  
-|DBTYPE_VARIANT (VT_BSTR)|Pris en charge (2), (5)|Néant|Néant|Néant|  
+|DBTYPE_BYTES|Pris en charge (5)|N/A|Pris en charge (5)|N/A|  
+|DBTYPE_WSTR|Pris en charge (2), (5)|N/A|Pris en charge (3), (5), (6)|N/A|  
+|DBTYPE_BSTR|Pris en charge (2), (5)|N/A|Pris en charge (3), (5)|N/A|  
+|DBTYPE_STR|Pris en charge (2), (5)|N/A|Pris en charge (3), (5)|N/A|  
+|DBTYPE_IUNKNOWN|Pris en charge (6)|N/A|Pris en charge (6)|N/A|  
+|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|Pris en charge (5)|N/A|Pris en charge (3), (5)|N/A|  
+|DBTYPE_VARIANT (VT_BSTR)|Pris en charge (2), (5)|N/A|N/A|N/A|  
   
 ### <a name="key-to-symbols"></a>Liste des symboles  
   

@@ -1,24 +1,23 @@
 ---
-title: 'Étape 6 : Ajout et configuration des transformations de recherche | Microsoft Docs'
+title: 'Étape 6 : Ajout et configuration des Transformations de recherche | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5c59f723-9707-4407-80ae-f05f483cf65f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c2bcdfc80c056b9d9a29df4195e136d5b00d31f2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 756c6ce9c57b314ddd9f9e821df7c391af5fa84a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206779"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52805794"
 ---
-# <a name="step-6-adding-and-configuring-the-lookup-transformations"></a>Étape 6 : Ajout et configuration des transformations de recherche
+# <a name="step-6-adding-and-configuring-the-lookup-transformations"></a>Étape 6 : Ajout et configuration des transformations de recherche
   Une fois que vous avez configuré la source de fichier plat pour extraire les données du fichier source, la tâche suivante consiste à définir les transformations de recherche nécessaires pour obtenir les valeurs de **CurrencyKey** et **DateKey**. Une transformation de recherche effectue une recherche en joignant les données dans la colonne d'entrée spécifiée à une colonne dans un dataset de référence. Le dataset de référence peut être une table ou une vue existante, une nouvelle table ou le résultat d'une instruction SQL. Dans ce didacticiel, la transformation de recherche utilise un gestionnaire de connexions OLE DB pour se connecter à la base de données qui contient les données servant de source au jeu de données de référence.  
   
 > [!NOTE]  
@@ -132,9 +131,9 @@ ms.locfileid: "48206779"
 12. Dans la fenêtre Propriétés, vérifiez que le `LocaleID` propriété est définie sur **anglais (États-Unis)** et **DefaultCodePage** propriété est définie sur **1252**.  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [Étape 7 : Ajout et configuration de la destination OLE DB](lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
+ [Étape 7 : Ajout et configuration de la Destination OLE DB](lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Transformation de recherche](data-flow/transformations/lookup-transformation.md)  
+ [Lookup Transformation](data-flow/transformations/lookup-transformation.md)  
   
   

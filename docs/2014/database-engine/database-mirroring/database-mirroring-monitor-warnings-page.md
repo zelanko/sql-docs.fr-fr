@@ -12,12 +12,12 @@ ms.assetid: 01936122-961d-436b-ba3c-5f79fefe5469
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 56720ad795fb6df4de3c4cca72b9634d6fb6cf96
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: deee5ba0d402dce6c2c0c5779c676ac7b42a926a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213209"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520323"
 ---
 # <a name="database-mirroring-monitor-warnings-page"></a>Moniteur de mise en miroir de bases de données (Page Avertissements)
   Affiche une liste, accessible en lecture seule, d'avertissements pris en charge lors d'événements de mise en miroir de bases de données, ainsi que les valeurs de seuil spécifiées pour les avertissements, si disponible.  
@@ -30,10 +30,10 @@ ms.locfileid: "48213209"
  **Avertissement**  
  Les avertissements pour lesquels vous pouvez définir un seuil sont les suivants :  
   
-|Avertissement|Seuil|  
+|Warning|Seuil|  
 |-------------|---------------|  
 |**Avertir si le journal non envoyé dépasse le seuil**|Spécifie le nombre de kilo-octets (Ko) de journal non envoyé qui génère un avertissement sur l'instance de serveur principal. Cet avertissement permet de mesurer le risque de perte de données en termes de Ko et s'avère particulièrement approprié en mode hautes performances. Toutefois, l'avertissement est également approprié en mode haute sécurité lorsque la mise en miroir est interrompue ou suspendue en raison de la déconnexion des partenaires.|  
-|**Avertir si le journal non restauré dépasse le seuil**|Spécifie le nombre de kilo-octets (Ko) de journal non restauré qui génère un avertissement sur l'instance de serveur miroir. Cet avertissement permet de mesurer le temps de basculement en kilo-octets. Le*temps de basculement* est principalement constitué du temps nécessaire à l'ancien serveur miroir pour restaurer par progression tout journal demeuré dans sa file d'attente de restauration par progression et d'un court laps de temps supplémentaire.<br /><br /> Remarque : pour un basculement automatique, le temps nécessaire au système pour remarquer l’erreur ne dépend pas du temps de basculement.<br /><br /> Pour en savoir plus, voir [Estimer l’interruption de service au cours d’un basculement de rôle &#40;mise en miroir de bases de données&#41;](estimate-the-interruption-of-service-during-role-switching-database-mirroring.md).|  
+|**Avertir si le journal non restauré dépasse le seuil**|Spécifie le nombre de kilo-octets (Ko) de journal non restauré qui génère un avertissement sur l'instance de serveur miroir. Cet avertissement permet de mesurer le temps de basculement en kilo-octets. Le*temps de basculement* est principalement constitué du temps nécessaire à l'ancien serveur miroir pour restaurer par progression tout journal demeuré dans sa file d'attente de restauration par progression et d'un court laps de temps supplémentaire.<br /><br /> Remarque : Pour un basculement automatique, le temps nécessaire au système pour remarquer l'erreur dépend du temps de basculement.<br /><br /> Pour en savoir plus, voir [Estimer l’interruption de service au cours d’un basculement de rôle &#40;mise en miroir de bases de données&#41;](estimate-the-interruption-of-service-during-role-switching-database-mirroring.md).|  
 |**Avertir si la durée de vie de la plus ancienne transaction non envoyée dépasse le seuil**|Spécifie le nombre de minutes de transactions pouvant s'accumuler dans la file d'attente d'envoi avant qu'un avertissement ne soit généré sur l'instance de serveur principal. Cet avertissement permet de mesurer le risque de perte de données en termes de durée et s'avère particulièrement approprié en mode hautes performances. Toutefois, l'avertissement est également approprié en mode haute sécurité lorsque la mise en miroir est interrompue ou suspendue en raison de la déconnexion des partenaires.|  
 |**Avertir si le temps de traitement de validation de miroir dépasse le seuil**|Spécifie, en millisecondes, le délai moyen par transaction au terme duquel un avertissement est généré sur le serveur principal. Ce délai correspond au temps de traitement pendant lequel l'instance de serveur principal attend que l'instance de serveur miroir écrive l'enregistrement du journal de transaction dans la file d'attente de restauration par progression. Cette valeur est utile uniquement en mode haute sécurité.|  
   
@@ -48,7 +48,7 @@ ms.locfileid: "48213209"
  Pour plus d'informations, consultez la section « Remarques » plus loin dans cette rubrique.  
   
 ## <a name="remarks"></a>Notes  
- Si aucune information n’est actuellement disponible pour une instance de serveur, le texte affiché dans les cellules de la colonne **Seuil à** correspondante apparaît en filigrane sur un fond gris. Si le moniteur n’est pas connecté à l’instance de serveur, chaque cellule de la grille affiche le texte **Non connecté à** *<nom_système>* ou **Non connecté à** *<nom_système>***\\***<nom_instance>*, selon qu’il s’agit de l’instance par défaut ou d’une instance nommée. Si le moniteur est en attente de retour d’une requête, chaque cellule de la grille affiche le texte **Attente de données** dans chaque cellule.  
+ Si aucune information n’est actuellement disponible pour une instance de serveur, le texte affiché dans les cellules de la colonne **Seuil à** correspondante apparaît en filigrane sur un fond gris. Si le moniteur n’est pas connecté à l’instance de serveur, chaque cellule de la grille affiche le texte **Non connecté à** *<nom_système>* ou **Non connecté à** *<nom_système>***\\***<nom_instance>*, selon qu’il s’agit de l’instance par défaut ou d’une instance nommée. Si le moniteur est en attente de retour d’une requête, chaque cellule de la grille affiche le texte **Attente de données...**.  
   
  Quand des informations sont disponibles, la cellule correspondant à chaque avertissement affiche une valeur de seuil spécifique (ainsi qu’une unité de mesure) ou le texte **Non activé**.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "48213209"
 |**Avertir si la durée de vie de la plus ancienne transaction non envoyée dépasse le seuil**|Transaction non envoyée la plus ancienne|32044|  
 |**Avertir si le temps de traitement de validation de miroir dépasse le seuil**|Charge de validation par le serveur miroir|32045|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Pour un accès complet, nécessite l’appartenance au rôle serveur fixe **sysadmin** . Seuls les membres de **sysadmin** peuvent configurer et afficher des seuils d’avertissement pour les mesures de performances clés.  
   
  L’appartenance au rôle **dbm_monitor** vous permet de consulter uniquement la ligne d’état la plus récente dans la page **Avertissements** .  

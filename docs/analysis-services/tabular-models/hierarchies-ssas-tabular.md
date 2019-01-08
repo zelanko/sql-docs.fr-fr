@@ -1,5 +1,5 @@
 ---
-title: Hiérarchies | Documents Microsoft
+title: Hiérarchies dans les modèles tabulaires Analysis Services | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e6ce881fb0b423744316027faeec7210ae76f296
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: d4e16aa049dbebd6a5d3d9e7f996748cabb3c236
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34043543"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072296"
 ---
 # <a name="hierarchies"></a>Hierarchies
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -23,9 +23,9 @@ ms.locfileid: "34043543"
 ##  <a name="bkmk_benefits"></a> Avantages  
  Les tables peuvent inclure des dizaines, voire des centaines de colonnes avec des noms de colonne inhabituels sans ordre apparent. Cela peut entraîner une apparence non ordonnée dans les listes de champs de clients de création de rapports, ce qui complique la tâche des utilisateurs qui recherchent et souhaitent inclure des données dans un rapport. Les hiérarchies peuvent fournir une vue simple et intuitive d'une structure de données autrement plus complexe.  
   
- Par exemple, dans un tableau de dates, vous pouvez créer une hiérarchie de calendrier. « Année civile » est utilisé comme niveau parent de premier niveau, avec « Mois », « Semaine » et « Jour » inclus comme niveaux enfants (Année civile->Mois->Semaine->Jour). Cette hiérarchie montre une relation logique entre « Année civile » et « Jour ». Un utilisateur client peut ensuite sélectionner l'année civile d'une liste de champs pour inclure tous les niveaux dans un tableau croisé dynamique, ou développer la hiérarchie, puis sélectionner uniquement les niveaux particuliers à inclure dans le tableau croisé dynamique.  
+ Par exemple, dans un tableau de dates, vous pouvez créer une hiérarchie de calendrier. « Année civile » est utilisé comme niveau parent de premier niveau, avec « Mois », « Semaine » et « Jour » inclus comme niveaux enfants (Année civile->Mois->Semaine->Jour). Cette hiérarchie montre une relation logique entre « Année civile » et « Jour ». Un utilisateur client peut ensuite sélectionner l'année civile d'une liste de champs pour inclure tous les niveaux dans un tableau croisé dynamique, ou développer la hiérarchie, puis sélectionner uniquement les niveaux particuliers à inclure dans le tableau croisé dynamique.  
   
- Chaque niveau dans une hiérarchie étant une représentation d'une colonne dans une table, le niveau peut être renommé. Bien que cette opération ne concerne pas seulement les hiérarchies (toute colonne peut être renommée dans un modèle tabulaire), renommer les niveaux de la hiérarchie peut permettre aux utilisateurs de rechercher et d’inclure plus facilement des niveaux dans un rapport. Renommer un niveau ne renomme pas la colonne qu'il référence ; cela rend simplement le niveau plus identifiable. Dans notre hiérarchie Année civile, par exemple, dans la table de date de la vue de données, les colonnes CalendarYear, CalendarMonth, CalendarWeek et CalendarDay ont été renommées en Année civile, Mois, Semaine et Jour de manière à les rendre plus facilement identifiables. Renommer des niveaux présente un autre avantage, celui d'assurer la cohérence dans les rapports, étant donné que les utilisateurs seront moins souvent amenés à modifier les noms de colonnes pour les rendre plus lisibles dans les tableaux croisés dynamiques, les graphiques, etc.  
+ Chaque niveau dans une hiérarchie étant une représentation d'une colonne dans une table, le niveau peut être renommé. Bien que cette opération ne concerne pas seulement les hiérarchies (toute colonne peut être renommée dans un modèle tabulaire), renommer les niveaux de la hiérarchie peut permettre aux utilisateurs de rechercher et d’inclure plus facilement des niveaux dans un rapport. Renommer un niveau ne renomme pas la colonne qu'il référence ; cela rend simplement le niveau plus identifiable. Dans notre exemple de hiérarchie année civile, dans la table de dates dans la vue de données, les colonnes : CalendarYear, CalendarMonth, CalendarWeek et CalendarDay ont été renommés pour l’année civile, mois, semaine et jour pour les rendre plus facilement identifiable. Renommer des niveaux présente un autre avantage, celui d'assurer la cohérence dans les rapports, étant donné que les utilisateurs seront moins souvent amenés à modifier les noms de colonnes pour les rendre plus lisibles dans les tableaux croisés dynamiques, les graphiques, etc.  
   
  Les hiérarchies peuvent être incluses dans des perspectives. Les perspectives définissent des sous-ensembles visualisables d'un modèle et des points de vue du modèle focalisés sur un domaine d'activité ou sur une application. Par exemple, une perspective peut fournir aux utilisateurs une liste visuelle (hiérarchie) d'éléments de données requis pour des exigences de création de rapports spécifiques. Pour plus d’informations, consultez [Perspectives](../../analysis-services/tabular-models/perspectives-ssas-tabular.md).  
   
@@ -44,7 +44,7 @@ ms.locfileid: "34043543"
   
 ##  <a name="bkmk_related_tasks"></a> Related tasks  
   
-|Tâche| Description|  
+|Tâche|Description|  
 |----------|-----------------|  
 |[Créer et gérer des hiérarchies](../../analysis-services/tabular-models/create-and-manage-hierarchies-ssas-tabular.md)|Décrit comment créer et gérer des hiérarchies à l'aide du générateur de modèles dans la vue de diagramme.|  
   

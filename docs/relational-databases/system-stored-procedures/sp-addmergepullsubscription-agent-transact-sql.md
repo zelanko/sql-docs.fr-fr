@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_addmergepullsubscription_agent
@@ -17,12 +16,12 @@ ms.assetid: a2f4b086-078d-49b5-8971-8a1e3f6a6feb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: abd4893368069217003ca9fa5a6f4dca9e4229de
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: ba75dc83e8fb4ce5a9ad31876b2b2592b22b7197
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51681367"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52791781"
 ---
 # <a name="spaddmergepullsubscriptionagent-transact-sql"></a>sp_addmergepullsubscription_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -169,7 +168,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
  [  **@frequency_type =** ] *frequency_type*  
  Fréquence de planification de l'Agent de fusion. *frequency_type* est **int**, et peut prendre l’une des valeurs suivantes.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**1**|Une fois|  
 |**2**|À la demande|  
@@ -187,7 +186,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
  [  **@frequency_interval =** ] *frequency_interval*  
  Jour(s) où l'Agent de fusion s'exécute. *frequency_interval* est **int**, et peut prendre l’une des valeurs suivantes.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**1**|Dimanche|  
 |**2**|Lundi|  
@@ -204,7 +203,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
  [  **@frequency_relative_interval =** ] *frequency_relative_interval*  
  Date de l'Agent de fusion. Ce paramètre est utilisé lorsque *frequency_type* a la valeur **32** (fréquence mensuelle relative). *frequency_relative_interval* est **int**, et peut prendre l’une des valeurs suivantes.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**1**|Première|  
 |**2**|Seconde|  
@@ -219,7 +218,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
  [  **@frequency_subday =** ] *frequency_subday*  
  Fréquence de replanification nécessaire pendant la période définie. *frequency_subday* est **int**, et peut prendre l’une des valeurs suivantes.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**1**|Une fois|  
 |**2**|Seconde|  
@@ -314,7 +313,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
  [  **@internet_security_mode =** ] *internet_security_mode*  
  Méthode d'authentification utilisée par l'Agent de fusion pour se connecter au serveur Web pendant la synchronisation Web à l'aide du protocole HTTPS. *internet_security_mode* est **int** et peut prendre l’une des valeurs suivantes.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**0**|L'authentification de base est utilisée.|  
 |**1** (par défaut)|L'authentification intégrée de Windows est utilisée.|  
@@ -348,7 +347,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 ## <a name="example"></a>Exemple  
  [!code-sql[HowTo#sp_addmergepullsubscriptionagent](../../relational-databases/replication/codesnippet/tsql/sp-addmergepullsubscript_1_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Seuls les membres de la **sysadmin** rôle serveur fixe ou **db_owner** rôle de base de données fixe peuvent exécuter **sp_addmergepullsubscription_agent**.  
   
 ## <a name="see-also"></a>Voir aussi  

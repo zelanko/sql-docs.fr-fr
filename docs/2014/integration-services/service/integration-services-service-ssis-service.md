@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services service, about Integration Services service
@@ -17,17 +16,17 @@ ms.assetid: 2c785b3b-4a0c-4df7-b5cd-23756dc87842
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4f2c1f5f17f55244787bf4f79949008be79088fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cfbbf84cf084ae96e123c14e659ebeb30c12ac42
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119419"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52800771"
 ---
 # <a name="integration-services-service-ssis-service"></a>Service Integration Services (Service SSIS)
   Les rubriques de cette section décrivent le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , un service Windows de gestion des packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Ce service n'est pas obligatoire pour créer, enregistrer et exécuter des packages Integration Services. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] prend en charge le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pour la compatibilité avec les versions antérieures de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
- À compter de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] stocke des objets, des paramètres et des données opérationnelles dans la base de données `SSISDB` pour les projets que vous avez déployés sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] à l'aide du modèle de déploiement de projet. Le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , qui est une instance du moteur de base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , héberge la base de données. Pour plus d’informations sur la base de données, consultez [Catalogue SSIS](../catalog/ssis-catalog.md). Pour plus d’informations sur le déploiement de projets sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , consultez [Déployer des projets sur le serveur Integration Services](../deploy-projects-to-integration-services-server.md).  
+ À compter de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] stocke les objets, les paramètres et les données opérationnelles dans le `SSISDB` base de données pour les projets que vous avez déployés sur le [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] serveur à l’aide du modèle de déploiement de projet. Le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , qui est une instance du moteur de base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , héberge la base de données. Pour plus d’informations sur la base de données, consultez [Catalogue SSIS](../catalog/ssis-catalog.md). Pour plus d’informations sur le déploiement de projets sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , consultez [Déployer des projets sur le serveur Integration Services](../deploy-projects-to-integration-services-server.md).  
   
 ## <a name="management-capabilities"></a>Fonctionnalités de gestion  
  Le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] est un service Windows pour la gestion des packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] n'est disponible que dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -59,7 +58,7 @@ ms.locfileid: "48119419"
   
 ## <a name="related-tasks"></a>Tâches associées  
   
--   [Définir les propriétés du service Integration Services](../set-the-properties-of-the-integration-services-service.md)  
+-   [définir les propriétés du service Integration Services](../set-the-properties-of-the-integration-services-service.md)  
   
 -   [Afficher les événements du service Integration Services](../view-events-for-the-integration-services-service.md)  
   

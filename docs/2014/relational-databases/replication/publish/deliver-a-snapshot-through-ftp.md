@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - snapshots [SQL Server replication], FTP snapshots
@@ -15,12 +14,12 @@ ms.assetid: 99872c4f-40ce-4405-8fd4-44052d3bd827
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9f5ae5a48b7ace7d0c8e9fffe1e5993bfd232da8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2e3422e1fc41069bcb1f5f88c841212b5415cacd
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192579"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52777561"
 ---
 # <a name="deliver-a-snapshot-through-ftp"></a>Remettre un instantané via FTP
   Cette rubrique explique comment remettre un instantané via FTP dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
@@ -140,11 +139,11 @@ ms.locfileid: "48192579"
   
 1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql). Affectez l'une des valeurs suivantes à **@property** et une nouvelle valeur de ce paramètre à **@value**:  
   
-    -   `ftp_address` -l’adresse du serveur FTP utilisé pour remettre l’instantané.  
+    -   `ftp_address` - l'adresse du serveur FTP utilisé pour remettre l'instantané.  
   
-    -   `ftp_port` -le port utilisé par le serveur FTP.  
+    -   `ftp_port` - le port utilisé par le serveur FTP.  
   
-    -   `ftp_subdirectory` -le sous-répertoire du répertoire FTP par défaut utilisé pour l’instantané FTP.  
+    -   `ftp_subdirectory` - le sous-répertoire du répertoire FTP par défaut utilisé pour l'instantané FTP.  
   
     -   `ftp_login` - une connexion utilisée pour la connexion au serveur FTP.  
   
@@ -158,11 +157,11 @@ ms.locfileid: "48192579"
   
 1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql). Affectez l'une des valeurs suivantes à **@property** et une nouvelle valeur de ce paramètre à **@value**:  
   
-    -   `ftp_address` -l’adresse du serveur FTP utilisé pour remettre l’instantané.  
+    -   `ftp_address` - l'adresse du serveur FTP utilisé pour remettre l'instantané.  
   
-    -   `ftp_port` -le port utilisé par le serveur FTP.  
+    -   `ftp_port` - le port utilisé par le serveur FTP.  
   
-    -   `ftp_subdirectory` -le sous-répertoire du répertoire FTP par défaut utilisé pour l’instantané FTP.  
+    -   `ftp_subdirectory` - le sous-répertoire du répertoire FTP par défaut utilisé pour l'instantané FTP.  
   
     -   `ftp_login` - une connexion utilisée pour la connexion au serveur FTP.  
   
@@ -186,7 +185,7 @@ ms.locfileid: "48192579"
 ## <a name="see-also"></a>Voir aussi  
  [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)   
  [Transférer des instantanés via FTP](../transfer-snapshots-through-ftp.md)   
- [Modifier les propriétés des publications et des articles](change-publication-and-article-properties.md)   
+ [Changer les propriétés des publications et des articles](change-publication-and-article-properties.md)   
  [Initialiser un abonnement avec un instantané](../initialize-a-subscription-with-a-snapshot.md)  
   
   

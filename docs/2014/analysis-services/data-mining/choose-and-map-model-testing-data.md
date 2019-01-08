@@ -16,12 +16,12 @@ ms.assetid: be0d9f20-40c3-4dac-81da-281cfe724126
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 641ec96632e2976ea56f1607b2076d4d01734523
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ac7a8f813aa884cc4267c73fbcedc88eecfb0a36
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166352"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542300"
 ---
 # <a name="choose-and-map-model-testing-data"></a>Choisir et mapper les données de test du modèle
   Pour créer un graphique d’analyse de précision dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vous devez choisir les données à utiliser pour tester le modèle et mapper les données au modèle.  
@@ -76,7 +76,7 @@ ms.locfileid: "48166352"
   
 3.  Dans **Sélection d’entrée** , sous **Sélectionner le jeu de données à utiliser pour le graphique d’analyse de précision**, sélectionnez **Spécifier un autre jeu de données**.  
   
-4.  Cliquez sur le bouton Parcourir **(…)** pour ouvrir une boîte de dialogue et créer la définition du jeu de données externe.  
+4.  Cliquez sur le bouton Parcourir **(...)**  pour ouvrir une boîte de dialogue et créer la définition du jeu de données externe.  
   
 5.  Dans la boîte de dialogue **Sélectionner la structure d’exploration de données** , sélectionnez la structure d’exploration de données qui contient les modèles à utiliser, puis cliquez sur **OK**.  
   
@@ -100,7 +100,7 @@ ms.locfileid: "48166352"
   
 4.  Dans **Sélectionner le jeu de données à utiliser pour le graphique d’analyse de précision**, sélectionnez l’option **Spécifier un autre jeu de données**.  
   
-5.  Cliquez sur le bouton Parcourir **(…)** pour ouvrir une boîte de dialogue et créer la définition de la source de données externe.  
+5.  Cliquez sur le bouton Parcourir **(...)**  pour ouvrir une boîte de dialogue et créer la définition de la source de données externe.  
   
 6.  Dans la boîte de dialogue **Spécifier le mappage des colonnes** , cliquez sur **Sélectionner la table de cas**.  
   
@@ -121,6 +121,6 @@ ms.locfileid: "48166352"
      Les nouveaux mappages de colonnes sont affichés dans la boîte de dialogue **Spécifier le mappage des colonnes** . Pour supprimer un mappage, sélectionnez la ligne située entre les colonnes, puis appuyez sur la touche Suppr. Pour créer une connexion, sélectionnez une colonne dans la table **Structure d’exploration de données** , puis faites-la glisser vers la colonne correspondante de la table **Sélectionner une ou plusieurs tables d’entrée** .  
   
 ## <a name="see-also"></a>Voir aussi  
- [Test et des tâches de Validation et des procédures &#40;exploration de données&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)  
+ [Tâches de test et validation et procédures &#40;exploration des données&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)  
   
   

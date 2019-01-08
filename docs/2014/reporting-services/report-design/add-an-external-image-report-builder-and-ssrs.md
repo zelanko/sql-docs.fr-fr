@@ -11,12 +11,12 @@ ms.assetid: 81fd4a1f-79a9-4967-86d6-6229413c0995
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 24186d0caa92b983f17b12c2f317d450af8be2bb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bbe37d01a3e503d5ffb9aa9dc326d19bb9360d63
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081869"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506938"
 ---
 # <a name="add-an-external-image-report-builder-and-ssrs"></a>Ajouter une image externe (Générateur de rapports et SSRS)
   Les images externes peuvent se trouver sur un serveur de rapports en mode natif ou en mode intégré SharePoint, ou sur un autre site Web. Lorsque vous incluez des images externes dans votre rapport, vous devez vous assurer que l'image existe et que le lecteur du rapport a les autorisations nécessaires pour y accéder. Pour plus d’informations, consultez [Images &#40;Générateur de rapports et SSRS&#41;](images-report-builder-and-ssrs.md).  
@@ -36,9 +36,9 @@ ms.locfileid: "48081869"
   
 5.  Dans **Sélectionner la source de l’image**, sélectionnez **Externe**.  
   
-     Pour une image située sur un serveur de rapports en mode natif, tapez le chemin d’accès relatif de l’image dans la zone **Utiliser cette image** , par exemple ../images/image1.jpg.  
+     Pour une image située sur un serveur de rapports en mode natif, tapez le chemin relatif de l’image dans la zone **Utiliser cette image**, par exemple ../images/image1.jpg.  
   
-     Pour une image située sur un serveur de rapports en mode intégré SharePoint, ou sur un autre site web, tapez une URL complète pointant vers l’image dans la zone **Utiliser cette image**, par exemple http://\<nom_serveur_SharePoint>/\<site>/Documents/images/image1.jpg.  
+     Pour une image sur un serveur de rapports en mode intégré SharePoint, ou un autre site Web, tapez une URL complète vers l’image dans le **utiliser cette image** boîte-par exemple, http://\<Nom_serveur_sharepoint > /\<site > / Documents/images/image1.jpg.  
   
      Pour plus d’informations, consultez [Spécification de chemins d’accès à des éléments externes &#40;Générateur de rapports et SSRS&#41;](specifying-paths-to-external-items-report-builder-and-ssrs.md).  
   
@@ -47,7 +47,7 @@ ms.locfileid: "48081869"
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
- [Incorporer une Image dans un rapport &#40;Générateur de rapports et SSRS&#41;](embed-an-image-in-a-report-report-builder-and-ssrs.md)   
+ [Incorporer une image dans un rapport &#40;Générateur de rapports et SSRS&#41;](embed-an-image-in-a-report-report-builder-and-ssrs.md)   
  [Ajouter une image d’arrière-plan &#40;Générateur de rapports et SSRS&#41;](add-a-background-image-report-builder-and-ssrs.md)   
  [Boîte de dialogue Propriétés de l’image, Général &#40;Générateur de rapports et SSRS&#41;](../image-properties-dialog-box-general-report-builder-and-ssrs.md)  
   

@@ -4,24 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 2a6dc531-85ca-43c5-a65f-3ad3f7d537c4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 37ef852cea67ee021cee7dd182dc4a11132abcea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d491467d16b34207ab74f6ec4d892747e26165e4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201259"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52802041"
 ---
 # <a name="sap-bw-source-editor-connection-manager-page"></a>Éditeur de source SAP BW (page Gestionnaire de connexions)
   Utilisez la page **Gestionnaire de connexions** de **l’Éditeur de source SAP BW** pour sélectionner le gestionnaire de connexions SAP BW pour la source SAP BW. Sur cette page, sélectionnez également le mode d'exécution et les paramètres pour extraire les données du système SAP Netweaver BW.  
   
- Pour en savoir plus sur le composant source SAP BW de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 pour SAP BW, consultez [Source SAP BW](sap-bw-source.md).  
+ Pour en savoir plus sur le composant source SAP BW de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 pour SAP BW, consultez [SAP BW Source](sap-bw-source.md).  
   
 > [!IMPORTANT]  
 >  La documentation de Microsoft Connector 1.1 pour SAP BW suppose que vous êtes familiarisé avec l'environnement SAP Netweaver BW. Pour plus d'informations sur SAP Netweaver BW, ou sur la configuration des objets et des processus SAP Netweaver BW objets, consultez la documentation SAP.  
@@ -77,7 +76,7 @@ ms.locfileid: "48201259"
   
 ### <a name="execution-mode--p---trigger-process-chain"></a>Mode d'exécution = P - Déclencher une chaîne de processus  
   
-#### <a name="rfc-destination-options"></a>Options de la destination RFC  
+#### <a name="rfc-destination-options"></a>Options de la destination RFC  
  Vous n'avez pas à connaître ni à entrer ces valeurs à l'avance. Utilisez le bouton **Rechercher** pour rechercher et sélectionner la destination RFC appropriée. Après avoir sélectionné une destination RFC, le composant entre les valeurs appropriées pour ces options.  
   
  **Hôte de passerelle**  
@@ -123,7 +122,7 @@ ms.locfileid: "48201259"
  Entrez l'ID de demande qui est associé à l'extraction.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Éditeur de Source SAP BW &#40;Page colonnes&#41;](sap-bw-source-editor-columns-page.md)   
+ [Éditeur de source SAP BW &#40;page Colonnes&#41;](sap-bw-source-editor-columns-page.md)   
  [Éditeur de source SAP BW &#40;page Sortie d’erreur&#41;](sap-bw-source-editor-error-output-page.md)   
  [Éditeur de source SAP BW &#40;page Avancé&#41;](sap-bw-source-editor-advanced-page.md)   
  [Aide (F1) sur Microsoft Connector 1.1 pour SAP BW](../microsoft-connector-for-sap-bw-f1-help.md)  

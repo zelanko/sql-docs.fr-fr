@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 5088f627aee3b9e570b4b4c43e46a42853165193
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 3247bf2ca459f013131b21a25278bcc6e5d10b9a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148430"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544556"
 ---
 # <a name="move-an-analysis-services-database"></a>Déplacer une base de données Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "50148430"
   
 1.  Localisez la base de données à déplacer dans le volet gauche ou droit de SSMS.  
   
-2.  Cliquez avec le bouton droit sur la base de données et choisissez **Détacher...**  
+2.  Avec le bouton droit sur la base de données, puis sélectionnez **détachement...**  
   
 3.  Attribuez un mot de passe à la base de données à détacher, puis cliquez sur **OK** pour exécuter la commande de détachement.  
   
@@ -47,9 +47,9 @@ ms.locfileid: "50148430"
   
 5.  Recherchez le dossier **Bases de données** dans le volet gauche ou droit de SSMS.  
   
-6.  Cliquez avec le bouton droit sur le dossier **Bases de données** et sélectionnez **Attacher...**  
+6.  Avec le bouton droit sur le **bases de données** dossier et sélectionnez **attacher...**  
   
-7.  Dans la zone de texte **dossier** , tapez le nouvel emplacement du dossier de base de données. Vous pouvez également utiliser le bouton Parcourir (**...**) pour rechercher le dossier de base de données.  
+7.  Dans la zone de texte **dossier** , tapez le nouvel emplacement du dossier de base de données. Vous pouvez également utiliser le bouton Parcourir (**...** ) pour rechercher le dossier de base de données.  
   
 8.  Sélectionnez le mode **lecture/écriture** pour la base de données.  
   

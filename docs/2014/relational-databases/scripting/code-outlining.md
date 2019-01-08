@@ -14,12 +14,12 @@ ms.assetid: 556c7dfe-7bc8-4cab-a36f-2b753a05d3f1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1368cc570439259b7353f074ba1ecfe2744f006d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c109b96192112a914b06748654c5a7e1510569e0
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060809"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541826"
 ---
 # <a name="code-outlining"></a>Mise en relief du code
   Vous pouvez utiliser la fonctionnalité mode Plan dans les éditeurs de requête [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] pour masquer le code de manière sélective lorsque vous modifiez des requêtes. Cela permet d'afficher plus facilement le code sur lequel vous travaillez, surtout dans les fichiers de requête volumineux.  
@@ -41,7 +41,7 @@ ms.locfileid: "48060809"
   
  ![Code XML avec nœud interne masqué](../../database-engine/media/editoutlinexmlinnercol.gif "Code XML avec nœud interne masqué")  
   
- Lorsque vous déplacez le pointeur sur la zone qui possède les trois points (…), le code de la région réduite apparaît dans une info-bulle, comme affiché dans l'illustration suivante.  
+ Lorsque vous déplacez le pointeur sur la zone qui contient les trois points (…), le code de la région réduite apparaît dans une info-bulle, comme affiché dans l’illustration suivante.  
   
  ![Code XML avec info-bulle montrant le code masqué](../../database-engine/media/editoutlinexmlmouse.gif "Code XML avec info-bulle montrant le code masqué")  
   

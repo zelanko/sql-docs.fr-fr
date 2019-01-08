@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/24/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 2bf94fb04bd6f96de019c7e8543b8a626cebe439
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: c5b9a1eddf8bf06a9d9e5b59754b2c6a34b94267
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699116"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524467"
 ---
 # <a name="antivirus-software-for-analytics-platform-system"></a>Logiciel antivirus pour l’Analytique Platform System
 Si votre centre de données requiert un logiciel antivirus, utilisez ces instructions pour installer un logiciel antivirus sur le système de plateforme d’Analytique. Nous vous recommandons de ne pas installer un logiciel antivirus, sauf si elle est une exigence stricte de votre centre de données.  
@@ -46,13 +46,13 @@ Pour installer le logiciel antivirus sur les hôtes physiques, exclure la liste 
 ## <a name="exclusion-list-for-virtual-machines-vms"></a>Liste d’exclusion pour les Machines virtuelles (VM)  
 Pour installer le logiciel antivirus sur les machines virtuelles, exclure la liste suivante des répertoires et fichiers. Ils ne doivent pas être analysés par le logiciel antivirus.  
   
-***PDW_region*-CTL01**  
+**_PDW_region_-CTL01**  
   
 -   C:\windows\cluster\  
   
 -   G:\  
   
-***appliance_domain *-AD01** et ***appliance_domain *-AD02**  
+**_appliance_domain_-AD01** et  **_appliance_domain_-AD02**  
   
 -   Aucune restriction  
   
@@ -62,15 +62,15 @@ Pour installer le logiciel antivirus sur les machines virtuelles, exclure la lis
   
 -   G:\  
   
-***appliance_domain*-VMM**  
+**_appliance_domain_- VMM**  
   
 -   Aucune restriction  
   
-***appliance_domain*-WDS**  
+**_appliance_domain_- WDS**  
   
 -   Aucune restriction  
   
-***appliance_domain*-ISCSI01**  
+**_appliance_domain_-ISCSI01**  
   
 -   C:\iscsitarget  
   

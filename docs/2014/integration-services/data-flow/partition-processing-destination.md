@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.partitionprocessingdest.f1
@@ -17,12 +16,12 @@ ms.assetid: 36c592ff-3f78-4a58-b496-31c1c8eee131
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3405133c121901344de0bda7a6291dcdf150a2b7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 57c40f85bf372538db22ae3fceb9106b2cccbab0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140509"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52773143"
 ---
 # <a name="partition-processing-destination"></a>Destination de traitement de partition
   La destination de traitement de partition charge et traite une partition [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Pour plus d’informations sur les partitions, consultez [Partitions &#40;Analysis Services - Données multidimensionnelles&#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md).  
@@ -49,11 +48,11 @@ ms.locfileid: "48140509"
   
  Pour plus d’informations sur les propriétés pouvant être définies dans la boîte de dialogue **Éditeur de destination de traitement de partition** , cliquez sur l’une des rubriques suivantes :  
   
--   [Éditeur de Destination de traitement de partition &#40;Page Gestionnaire de connexions&#41;](../partition-processing-destination-editor-connection-manager-page.md)  
+-   [Éditeur de destination de traitement de partition &#40;page Gestionnaire de connexions&#41;](../partition-processing-destination-editor-connection-manager-page.md)  
   
--   [Éditeur de Destination de traitement de partition &#40;Page mappages&#41;](../partition-processing-destination-editor-mappings-page.md)  
+-   [Éditeur de destination de traitement de partition &#40;page Mappages&#41;](../partition-processing-destination-editor-mappings-page.md)  
   
--   [Éditeur de Destination de traitement de partition &#40;Page avancé&#41;](../partition-processing-destination-editor-advanced-page.md)  
+-   [Éditeur de destination de traitement de partition &#40;page Avancé&#41;](../partition-processing-destination-editor-advanced-page.md)  
   
  La boîte de dialogue **Éditeur avancé** reflète les propriétés qui peuvent être définies par programmation. Pour plus d'informations sur les propriétés définissables dans la boîte de dialogue **Éditeur avancé** ou par programmation, cliquez sur l'une des rubriques suivantes :  
   

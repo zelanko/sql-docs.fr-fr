@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - contained database, collations
@@ -13,12 +12,12 @@ ms.assetid: 4b44f6b9-2359-452f-8bb1-5520f2528483
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6b0772ac03110b21912671b7e7651a1b0ede2903
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8bb735093eb7b2e41e1822facca6c03ace45a911
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48055989"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52789701"
 ---
 # <a name="contained-database-collations"></a>Classements de base de données autonome
   Diverses propriétés affectent l'ordre de tri et la sémantique d'égalité des données textuelles, notamment le respect de la casse, le respect des accents et la langue de base utilisée. Ces qualités sont exprimées à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par le choix du classement des données. Pour une explication plus approfondie des classements eux-mêmes, consultez [Prise en charge d’Unicode et du classement](../collations/collation-and-unicode-support.md).  
@@ -28,7 +27,7 @@ ms.locfileid: "48055989"
  Cette rubrique apporte des éclaircissements sur le contenu de la modification et indique où celle-ci peut entraîner des problèmes.  
   
 ## <a name="non-contained-databases"></a>Bases de données sans relation contenant-contenu  
- Toutes les bases de données ont un classement par défaut (qui peut être défini lors de la création ou de la modification d'une base de données). Ce classement est utilisé pour toutes les métadonnées de la base de données, et comme valeur par défaut de toutes les colonnes de chaîne dans la base de données. Les utilisateurs peuvent choisir un classement différent pour une colonne particulière à l’aide de la `COLLATE` clause.  
+ Toutes les bases de données ont un classement par défaut (qui peut être défini lors de la création ou de la modification d'une base de données). Ce classement est utilisé pour toutes les métadonnées de la base de données, et comme valeur par défaut de toutes les colonnes de chaîne dans la base de données. Les utilisateurs peuvent choisir un classement différent pour une colonne particulière à l'aide de la clause `COLLATE`.  
   
 ### <a name="example-1"></a>Exemple 1  
  Par exemple, supposons que nous travaillons à Beijing et que nous utilisons un classement chinois :  
@@ -107,12 +106,12 @@ JOIN #T2
 CREATE FUNCTION f(@x INT) RETURNS INT  
 AS BEGIN   
       DECLARE @I INT = 1  
-      DECLARE @İ INT = 2  
+      DECLARE @?? INT = 2  
       RETURN @x * @i  
 END;  
 ```  
   
- C'est une fonction assez particulière. Dans un classement respectant la casse, le @i dans la clause return ne peut pas être lié un autre @I ni à @İ. Dans un classement Latin1_General sans respect de la casse, @i est lié à @I, et la fonction retourne 1. Mais dans un classement turc sans respect de la casse, @i est lié à @İ et la fonction retourne 2. Cela peut causer des dégâts dans une base de données qui se déplace entre des instances aux classements différents.  
+ C'est une fonction assez particulière. Dans un classement respectant la casse, le @i dans la clause return ne peut pas lier à soit @I ou @??. Dans un classement Latin1_General sans respect de la casse, @i est lié à @I, et la fonction retourne 1. Mais dans un classement turc non-respect de la casse, @i lie à @??, et la fonction retourne 2. Cela peut causer des dégâts dans une base de données qui se déplace entre des instances aux classements différents.  
   
 ## <a name="contained-databases"></a>Bases de données autonomes  
  Comme un objectif de la conception de bases de données autonomes est de les rendre autonomes, la dépendance de l'instance et des classements de `tempdb` doit être supprimée. Pour cela, les bases de données autonomes présentent le concept de classement de catalogue. Le classement de catalogue est utilisé pour les métadonnées système et les objets transitoires. Des informations complémentaires sont fournies ci-dessous.  
@@ -121,7 +120,7 @@ END;
   
  Le classement de base de données est conservé, mais est utilisé uniquement comme classement par défaut des données utilisateur. Par défaut, le classement de base de données est égal au classement de base de données de modèle, mais peut être modifié par l’utilisateur via un `CREATE` ou `ALTER DATABASE` commande en tant que bases de données sans relation contenant contenu.  
   
- Un nouveau mot clé, `CATALOG_DEFAULT`, est disponible dans la clause `COLLATE`. Il est utilisé comme un raccourci du classement actuel de métadonnées à la fois dans les bases de données autonomes et non autonomes. Autrement dit, dans une base de données sans relation contenant contenu `CATALOG_DEFAULT` retournera le classement de base de données actuel, puisque les métadonnées sont assemblées dans le classement de base de données. Dans une base de données autonome, ces deux valeurs peuvent être différentes, puisque l'utilisateur peut modifier le classement de base de données afin qu'il ne corresponde pas au classement de catalogue.  
+ Un nouveau mot clé, `CATALOG_DEFAULT`, est disponible dans la clause `COLLATE`. Il est utilisé comme un raccourci du classement actuel de métadonnées à la fois dans les bases de données autonomes et non autonomes. Autrement dit, dans une base de données non autonome, `CATALOG_DEFAULT` retourne le classement de base de données actuel, puisque les métadonnées sont assemblées dans le classement de base de données. Dans une base de données autonome, ces deux valeurs peuvent être différentes, puisque l'utilisateur peut modifier le classement de base de données afin qu'il ne corresponde pas au classement de catalogue.  
   
  Le comportement de différents objets dans les bases de données autonomes ou non autonomes est résumé dans ce tableau :  
   
@@ -152,11 +151,11 @@ JOIN #T2
  Cela fonctionne parce que `T1_txt` et `T2_txt` sont assemblés dans le classement de base de données de la base de données autonome.  
   
 ## <a name="crossing-between-contained-and-uncontained-contexts"></a>Passer d'un contexte à relation contenant-contenu à un contexte sans relation contenant-contenu  
- Tant qu'une session dans une base de données autonome reste contenue, elle doit rester dans la base de données à laquelle elle s'est connectée. Dans ce cas, le comportement est très simple. Mais si une session passe d'un contexte à relation contenant-contenu à un contexte sans relation contenant-contenu, le comportement devient plus complexe, puisque deux ensembles de règles doivent être liés. Cela peut se produire dans une base de données partiellement relation contenant-contenu, dans la mesure où un utilisateur peut `USE` à une autre base de données. Dans ce cas, la différence des règles de classement est gérée selon le principe suivant.  
+ Tant qu'une session dans une base de données autonome reste contenue, elle doit rester dans la base de données à laquelle elle s'est connectée. Dans ce cas, le comportement est très simple. Mais si une session passe d'un contexte à relation contenant-contenu à un contexte sans relation contenant-contenu, le comportement devient plus complexe, puisque deux ensembles de règles doivent être liés. Cela peut arriver dans une base de données partiellement autonome, puisqu'un utilisateur peut exécuter une opération `USE` sur une autre base de données. Dans ce cas, la différence des règles de classement est gérée selon le principe suivant.  
   
 -   Le comportement du classement d'un lot est déterminé par la base de données dans laquelle commence le lot.  
   
- Notez que cette décision est prise avant l’émission d’une commande, y compris une initiale `USE`. Autrement dit, si un lot commence dans une base de données de relation contenant-contenu, mais la première commande est un `USE` sur une base de données sans relation contenant contenu, le comportement du classement à relation contenant-contenu sera toujours être utilisé pour le lot. En conséquence, une référence à une variable, par exemple, peut donner plusieurs résultats possibles :  
+ Notez que cette décision est prise avant l'émission d'une commande, notamment la commande `USE`initiale. Autrement dit, si un lot commence dans une base de données autonome, mais que la première commande est un `USE` sur une base de données non autonome, le comportement du classement autonome sera toujours utilisé pour le lot. En conséquence, une référence à une variable, par exemple, peut donner plusieurs résultats possibles :  
   
 -   La référence peut trouver exactement une correspondance. Dans ce cas, la référence fonctionnera sans erreur.  
   
@@ -164,7 +163,7 @@ JOIN #T2
   
 -   La référence peut trouver plusieurs correspondances qui étaient distinctes à l'origine. Cela génère également une erreur.  
   
- Illustrons ceci par quelques exemples. Pour ces exemples, nous supposons une base de données partiellement autonome, nommée `MyCDB`, dont le classement de base de données est défini sur le classement par défaut, **Latin1_General_100_CI_AS_WS_KS_SC**. Nous partons du principe que le classement d’instance est `Latin1_General_100_CS_AS_WS_KS_SC`. Les deux classements diffèrent uniquement en fonction du respect de la casse.  
+ Illustrons ceci par quelques exemples. Pour ces exemples, nous supposons une base de données partiellement autonome, nommée `MyCDB`, dont le classement de base de données est défini sur le classement par défaut, **Latin1_General_100_CI_AS_WS_KS_SC**. Nous supposons que le classement d'instance est `Latin1_General_100_CS_AS_WS_KS_SC`. Les deux classements diffèrent uniquement en fonction du respect de la casse.  
   
 ### <a name="example-1"></a>Exemple 1  
  L'exemple suivant illustre le cas où la référence trouve exactement une correspondance.  

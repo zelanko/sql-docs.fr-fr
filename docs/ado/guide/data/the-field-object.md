@@ -13,12 +13,12 @@ ms.assetid: 7d1c4ad5-4be3-42ab-b516-e7133ca300bc
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fc75b9a7ab93e3157d6594be15c0b2cc36456415
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e152c3147ab7c316494c6891424c0a7c8173f002
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726157"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516532"
 ---
 # <a name="the-field-object"></a>Field, objet
 Chaque **champ** objet correspond généralement à une colonne dans une table de base de données. Toutefois, un **champ** peut également représenter un pointeur vers un autre **Recordset**, appelé un chapitre. Exceptions, telles que les colonnes de chapitres, seront abordées plus loin dans ce guide.  
@@ -44,7 +44,7 @@ Chaque **champ** objet correspond généralement à une colonne dans une table d
  Résoudre les différences dans les valeurs de champ au cours de la mise à jour par lot à l’aide de la **OriginalValue** et **UnderlyingValue** si le fournisseur prend en charge les mises à jour par lots, les propriétés.  
   
 ## <a name="describing-a-field"></a>Description d’un champ  
- Les rubriques suivantes abordent les propriétés de la [champ](../../../ado/reference/ado-api/field-object.md) objet qui représentent des informations qui décrivent le **champ** objet lui-même, autrement dit, les métadonnées relatives au champ. Ces informations peuvent être utilisées pour déterminer une bonne partie du schéma de la **Recordset**. Ces propriétés incluent **Type**, **DefinedSize** et **ActualSize**, **nom**, et **NumericScale**et **précision**.  
+ Les rubriques suivantes abordent les propriétés de la [champ](../../../ado/reference/ado-api/field-object.md) objet qui représentent des informations qui décrivent le **champ** objet proprement dit : autrement dit, les métadonnées relatives au champ. Ces informations peuvent être utilisées pour déterminer une bonne partie du schéma de la **Recordset**. Ces propriétés incluent **Type**, **DefinedSize** et **ActualSize**, **nom**, et **NumericScale**et **précision**.  
   
 ### <a name="discovering-the-data-type"></a>Découvrir le Type de données  
  Le **Type** propriété indique le type de données du champ. Le type de données constantes énumérées qui sont pris en charge par ADO sont décrites dans [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) dans le *de référence du programmeur ADO*.  

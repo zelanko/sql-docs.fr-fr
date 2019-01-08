@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_validate_replica_hosts_as_publishers_TSQL
@@ -17,12 +16,12 @@ ms.assetid: 45001fc9-2dbd-463c-af1d-aa8982d8c813
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9143c5c681ed9e992a06ccad6be4511c23be37b5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cdbfcad1bb03e88d335c8acddc1ff7eb8c75b2eb
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47639692"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52791581"
 ---
 # <a name="spvalidatereplicahostsaspublishers-transact-sql"></a>sp_validate_replica_hosts_as_publishers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -69,11 +68,11 @@ sp_validate_replica_hosts_as_publishers
 >   
 >  Msg 21899, Niveau 11, État 1, Procédure **sp_hadr_verify_subscribers_at_publisher**, Ligne 109  
 >   
->  La requête au serveur de publication redirigé 'MyReplicaHostName' pour déterminer s'il y a des entrées sysserver pour les abonnés du serveur de publication d'origine 'MyOriginalPublisher' a échoué avec l'erreur '976', message d'erreur 'Erreur 976, Niveau 14, État 1, Message : La base de données cible, 'MyPublishedDB', participe à un groupe de disponibilité et n'est actuellement pas accessible pour les requêtes. Le déplacement des données est alors suspendu ou le réplica de disponibilité n'est pas activé pour l'accès en lecture. Pour autoriser l'accès en lecture seule à cette base de données et à d'autres dans le groupe de disponibilité, activez l'accès en lecture sur un ou plusieurs réplicas de disponibilité secondaires dans le groupe.  Pour plus d’informations, consultez l’instruction **ALTER AVAILABILITY GROUP** dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+>  La requête au serveur de publication redirigé 'MyReplicaHostName' pour déterminer s’il existe des entrées sysserver pour les abonnés du serveur de publication d’origine 'MyOriginalPublisher' a échoué avec l’erreur '976', message d’erreur ' erreur 976, niveau 14, état 1, Message : La base de données cible, 'MyPublishedDB', fait partie d’un groupe de disponibilité et n’est actuellement pas accessible pour les requêtes. Le déplacement des données est alors suspendu ou le réplica de disponibilité n'est pas activé pour l'accès en lecture. Pour autoriser l'accès en lecture seule à cette base de données et à d'autres dans le groupe de disponibilité, activez l'accès en lecture sur un ou plusieurs réplicas de disponibilité secondaires dans le groupe.  Pour plus d’informations, consultez l’instruction **ALTER AVAILABILITY GROUP** dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
 >   
 >  Une ou plusieurs erreurs de validation de serveur de publication ont été rencontrées pour l'hôte de réplica 'MyReplicaHostName'.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  L’appelant doit être un membre de la **sysadmin** rôle serveur fixe le **db_owner** rôle de base de données fixe pour la base de données de distribution ou un membre d’une liste d’accès à une publication définie associé à la base de données du serveur de publication.  
   
 ## <a name="see-also"></a>Voir aussi  

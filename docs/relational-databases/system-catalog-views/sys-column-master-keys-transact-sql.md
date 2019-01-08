@@ -26,12 +26,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: af9802fbf1568e7ce9d15882a29b96bbe0ad1762
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1cb1740bdb0ae26d91e2a9ad9e2becb69d3b2810
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711007"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518721"
 ---
 # <a name="syscolumnmasterkeys-transact-sql"></a>sys.column_master_keys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -44,14 +44,14 @@ ms.locfileid: "47711007"
 |**column_master_key_id**|**Int**|ID de la clé principale de colonne.|  
 |**create_date**|**datetime**|Date de que création de la clé principale de colonne.|  
 |**modify_date**|**datetime**|Date de que dernière modification de la clé principale de colonne.|  
-|**key_store_provider_name**|**sysname**|Nom du fournisseur pour le magasin de clés principales de colonne qui contient la clé CMK. Valeurs autorisées sont :<br /><br /> MSSQL_CERTIFICATE_STORE – si le magasin de clés principales de colonne est un Store de certificat.<br /><br /> Défini par l’utilisateur valeur, si le magasin de clés principales de colonne est d’un type personnalisé.|  
+|**key_store_provider_name**|**sysname**|Nom du fournisseur pour le magasin de clés principales de colonne qui contient la clé CMK. Valeurs autorisées sont :<br /><br /> MSSQL_CERTIFICATE_STORE - si le magasin de clés principales de colonne est un Store de certificat.<br /><br /> Défini par l’utilisateur valeur, si le magasin de clés principales de colonne est d’un type personnalisé.|  
 |**key_path**|**nvarchar(4000)**|Un chemin de spécifiques aux magasins de clé principale de colonne de la clé. Le format du chemin d’accès varie selon le type de magasin de clé principale de colonne. Exemple :<br /><br /> `'CurrentUser/Personal/'<thumbprint>`<br /><br /> Pour un magasin de clés principales de colonne personnalisée, le développeur est chargé de définir un chemin de clé est pour le magasin de clés principales de colonne personnalisée.|  
-|**allow_enclave_computations**|**bit**|Indique si la clé principale de colonne est enclave compatibles, (si les clés de chiffrement de colonne, chiffrées avec cette clé principale, peuvent être utilisés pour effectuer des calculs à l’intérieur d’enclaves sécurisés côté serveur). Pour plus d’informations, consultez [Always Encrypted avec enclaves sécurisés](../../relational-databases/security/encryption/always-encrypted-enclaves.md).|  
+|**allow_enclave_computations**|**bit**|Indique si la clé principale de colonne est enclave compatibles, (si les clés de chiffrement de colonne, chiffrées avec cette clé principale, peuvent être utilisés pour effectuer des calculs à l’intérieur d’enclaves sécurisés côté serveur). Pour plus d’informations, consultez [Always Encrypted avec enclaves sécurisées](../../relational-databases/security/encryption/always-encrypted-enclaves.md).|  
 |**signature**|**varbinary(max)**|Une signature numérique du **key_path** et **allow_enclave_computations**, généré à l’aide de la clé principale de colonne, référencée par **key_path**.|
 
 
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite le **VIEW ANY COLUMN MASTER KEY** autorisation.  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

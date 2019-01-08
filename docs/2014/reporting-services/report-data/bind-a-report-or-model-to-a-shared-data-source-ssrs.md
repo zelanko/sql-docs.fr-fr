@@ -14,12 +14,12 @@ ms.assetid: 23cc15f2-2883-48e2-bc6c-fa0ab61a2e21
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: a5f45b4f453780b1c3a0f87d6ec898650ffd8037
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ca6d2e98bc631a675aee3d4968103c9981775019
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100349"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521769"
 ---
 # <a name="bind-a-report-or-model-to-a-shared-data-source-ssrs"></a>Lier un rapport ou un modèle à une source de données partagée (SSRS)
   Dans certaines situations, par exemple si vous déplacez un rapport ou un modèle d'un serveur test vers un serveur de production, vous pouvez envisager d'enregistrer le fichier sur votre ordinateur local puis de le télécharger sur un autre serveur de rapports. Si vous téléchargez le rapport ou le modèle sur le nouveau serveur, vous devez le lier de nouveau à une source de données partagée stockée sur le nouveau serveur de rapports. Si vous ne liez pas de nouveau le rapport ou le modèle, celui-ci ne fonctionnera pas correctement en cas d'accès à partir du nouveau serveur de rapports.  
@@ -55,7 +55,7 @@ ms.locfileid: "48100349"
   
 5.  Dans la zone **Type de connexion** , vérifiez que **Source de données partagée** est activée.  
   
-6.  Dans la zone **Lien de source de données** , cliquez sur le bouton (...).  
+6.  Dans la zone **Lien de source de données**, cliquez sur le bouton de sélection (...).  
   
 7.  Localisez la source de données que vous souhaitez utiliser.  
   
@@ -66,10 +66,10 @@ ms.locfileid: "48100349"
 10. Cliquez sur **Fermer**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Télécharger un fichier ou un rapport &#40;le Gestionnaire de rapports&#41;](../reports/upload-a-file-or-report-report-manager.md)   
+ [Télécharger un fichier ou un rapport &#40;Gestionnaire de rapports&#41;](../reports/upload-a-file-or-report-report-manager.md)   
  [Télécharger des documents vers une bibliothèque SharePoint &#40;Reporting Services en mode SharePoint&#41;](../upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md)   
- [Créer et gérer des Sources de données partagées &#40;Reporting Services dans SharePoint Mode intégré&#41;](../create-manage-shared-data-sources-reporting-services-sharepoint-integrated-mode.md)   
- [Créer, supprimer ou modifier une Source de données partagée &#40;le Gestionnaire de rapports&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
+ [Créer et gérer des sources de données partagées &#40;Reporting Services en mode intégré SharePoint&#41;](../create-manage-shared-data-sources-reporting-services-sharepoint-integrated-mode.md)   
+ [Créer, supprimer ou modifier une source de données partagée &#40;Gestionnaire de rapports&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
  [Connexions de données, Sources de données et chaînes de connexion dans Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
  [Sources de données prises en charge par Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)  
   
