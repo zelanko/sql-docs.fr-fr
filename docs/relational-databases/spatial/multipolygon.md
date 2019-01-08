@@ -14,12 +14,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dc6314ac1c24aa545e3f5c44749b755bf7e7174b
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: a40bf0e7f3758ca048f78f59177b7fc80a5e94ca
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018954"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979285"
 ---
 # <a name="multipolygon"></a>MultiPolygon
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -43,21 +43,21 @@ ms.locfileid: "51018954"
   
 -   Toutes les instances comprenant l’instance **MultiPolygon** sont des instances **Polygon** acceptées. Pour plus d’informations sur les instances **Polygon** acceptées, consultez [Polygon](../../relational-databases/spatial/polygon.md).  
   
- Les exemples suivants illustrent des instances **MultiPolygon** acceptées.  
+Les exemples suivants illustrent des instances **MultiPolygon** acceptées.  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'MULTIPOLYGON EMPTY';  
 DECLARE @g2 geometry = 'MULTIPOLYGON(((1 1, 1 -1, -1 -1, -1 1, 1 1)),((1 1, 3 1, 3 3, 1 3, 1 1)))';  
 DECLARE @g3 geometry = 'MULTIPOLYGON(((2 2, 2 -2, -2 -2, -2 2, 2 2)),((1 1, 3 1, 3 3, 1 3, 1 1)))';  
 ```  
   
- L'exemple suivant illustre une instance MultiPolygon qui lève une exception `System.FormatException`.  
+L'exemple suivant illustre une instance MultiPolygon qui lève une exception `System.FormatException`.  
   
-```  
+```sql  
 DECLARE @g geometry = 'MULTIPOLYGON(((1 1, 1 -1, -1 -1, -1 1, 1 1)),((1 1, 3 1, 3 3)))';  
 ```  
   
- La deuxième instance du MultiPolygon est une instance LineString et non une instance Polygon acceptée.  
+La deuxième instance du MultiPolygon est une instance LineString et non une instance Polygon acceptée.  
   
 ### <a name="valid-instances"></a>Instances valides  
  Les instances **MultiPolygon** sont valides s’il s’agit d’instances **MultiPolygon** vides ou si elles respectent les critères suivants.  
@@ -66,29 +66,31 @@ DECLARE @g geometry = 'MULTIPOLYGON(((1 1, 1 -1, -1 -1, -1 1, 1 1)),((1 1, 3 1, 
   
 2.  Aucune des instances **Polygon** comprenant l’instance **MultiPolygon** n’en chevauche une autre.  
   
- L’exemple suivant illustre deux instances **MultiPolygon** valides et une instance **MultiPolygon** non valide.  
+L’exemple suivant illustre deux instances **MultiPolygon** valides et une instance **MultiPolygon** non valide.  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'MULTIPOLYGON EMPTY';  
 DECLARE @g2 geometry = 'MULTIPOLYGON(((1 1, 1 -1, -1 -1, -1 1, 1 1)),((1 1, 3 1, 3 3, 1 3, 1 1)))';  
 DECLARE @g3 geometry = 'MULTIPOLYGON(((2 2, 2 -2, -2 -2, -2 2, 2 2)),((1 1, 3 1, 3 3, 1 3, 1 1)))';  
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid();  
 ```  
   
- `@g2` est valide, car les deux instances **Polygon** se touchent uniquement à un point tangent. `@g3` n’est pas valide, car les intérieurs des deux instances **Polygon** se chevauchent.  
+`@g2` est valide, car les deux instances **Polygon** se touchent uniquement à un point tangent. `@g3` n’est pas valide, car les intérieurs des deux instances **Polygon** se chevauchent.  
   
 ## <a name="examples"></a>Exemples  
- L’exemple suivant illustre la création d’une instance `geometry``MultiPolygon` et retourne l’entrée WKT (well-known text) du deuxième composant.  
+### <a name="example-a"></a>Exemple A.
+L’exemple suivant illustre la création d’une instance `geometry``MultiPolygon` et retourne l’entrée WKT (well-known text) du deuxième composant.  
   
-```  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::Parse('MULTIPOLYGON(((0 0, 0 3, 3 3, 3 0, 0 0), (1 1, 1 2, 2 1, 1 1)), ((9 9, 9 10, 10 9, 9 9)))');  
 SELECT @g.STGeometryN(2).STAsText();  
 ```  
   
- Cet exemple instancie une instance `MultiPolygon` vide.  
+## <a name="example-b"></a>Exemple B.
+Cet exemple instancie une instance `MultiPolygon` vide.  
   
-```  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::Parse('MULTIPOLYGON EMPTY');  
 ```  
